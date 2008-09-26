@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-0.9.8.ebuild,v 1.5 2008/09/26 11:20:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-0.9.8.ebuild,v 1.6 2008/09/26 11:23:03 aballier Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ src_install() {
 	if [[ $PV == *_p* ]]; then
 		cd Ketchup* 2>/dev/null	# nightly snapshots unpack into a directory
 	else
-		cd ${S}
+		cd "${S}"
 	fi
 
 	dobin ./ketchup || die "could not install script"
