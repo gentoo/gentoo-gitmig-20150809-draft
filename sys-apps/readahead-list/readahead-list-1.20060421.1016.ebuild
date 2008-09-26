@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-1.20060421.1016.ebuild,v 1.5 2008/04/12 16:58:11 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-1.20060421.1016.ebuild,v 1.6 2008/09/26 14:56:40 loki_val Exp $
+
+inherit base
 
 DESCRIPTION="Preloads files into the page cache to accelerate program loading."
 HOMEPAGE="http://www.orbis-terrarum.net"
@@ -15,6 +17,8 @@ IUSE="doc"
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 		virtual/os-headers"
+
+PATCHES=( "${FILESDIR}/${P}-gcc-4.3.patch" )
 
 src_compile() {
 	econf --sbindir=/sbin || die "econf failed"
