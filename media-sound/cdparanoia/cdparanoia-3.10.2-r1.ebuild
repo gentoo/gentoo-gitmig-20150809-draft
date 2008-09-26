@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2.ebuild,v 1.1 2008/09/21 21:42:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r1.ebuild,v 1.1 2008/09/26 07:14:07 loki_val Exp $
 
-inherit autotools eutils flag-o-matic libtool toolchain-funcs versionator
+inherit base autotools eutils flag-o-matic libtool toolchain-funcs versionator
 
 MY_P=${PN}-III-$(get_version_component_range 2-3)
 
@@ -17,13 +17,15 @@ IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+PATCHES=(	"${FILESDIR}/${PN}-3.10.2-use-destdir.patch"
+		"${FILESDIR}/${PN}-3.10.2-Makefile.in.patch"
+		"${FILESDIR}/${P}-gcc43.patch"	)
 
-	epatch \
-		"${FILESDIR}"/${PN}-3.10.2-use-destdir.patch \
-		"${FILESDIR}"/${PN}-3.10.2-Makefile.in.patch
+
+
+src_unpack() {
+	base_src_unpack
+	cd "${S}"
 
 	mv configure.guess config.guess
 	mv configure.sub config.sub
