@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.65 2008/09/07 13:50:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.66 2008/09/26 21:11:22 serkan Exp $
+
+  26 Sep 2008; Serkan Kaba <serkan@gentoo.org> java-gnome-4.0.7.ebuild:
+  Add check for x11-libs/cairo:svg USE flag to fix bug #238560 reported by
+  Jon Phillips <994phij@gmail.com>. Thanks to Kenneth Prugh
+  <ken69267@gentoo.org> for help.
 
   07 Sep 2008; Markus Meier <maekke@gentoo.org> java-gnome-4.0.7.ebuild:
   amd64/x86 stable, bug #236275

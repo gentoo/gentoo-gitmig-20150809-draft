@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.7.ebuild,v 1.3 2008/09/07 13:50:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.7.ebuild,v 1.4 2008/09/26 21:11:22 serkan Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source"
@@ -30,6 +30,16 @@ DEPEND="${RDEPEND}
 
 # Needs X11
 RESTRICT="test"
+
+pkg_setup() {
+        if ! built_with_use x11-libs/cairo svg; then
+                echo
+                eerror "x11-libs/cairo has not been built with svg support."
+                eerror "Please re-emerge cairo with the svg use-flag enabled."
+                die "missing svg flag for x11-libs/cairo"
+        fi
+        java-pkg-2_pkg_setup
+}
 
 src_compile() {
 	# Handwritten in perl so not using econf
