@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.2-r2.ebuild,v 1.1 2008/09/26 11:30:28 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.2-r2.ebuild,v 1.2 2008/09/26 13:03:44 loki_val Exp $
 
 EAPI=2
 
@@ -25,6 +25,8 @@ IUSE="+dbus debug +gtk +qt4 +gstreamer"
 # is broken, though, I've hacked it to depend only on xulrunner-1.9, to avoid
 # mid-air symbol collisions. A giant bonanza of automagic is what it takes to get
 # this to work. I say blah. Blocking spidermonkey to avoid incorrect linking.
+
+#BIG DANGLING NOTE: This fails with gcc <4.2.
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
