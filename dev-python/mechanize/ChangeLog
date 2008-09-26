@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mechanize
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.7 2008/09/25 23:49:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.8 2008/09/26 12:57:35 coldwind Exp $
+
+  26 Sep 2008; Santiago M. Mola <coldwind@gentoo.org>
+  mechanize-0.1.7b.ebuild:
+  amd64 stable wrt bug #235445
 
   25 Sep 2008; Brent Baude <ranger@gentoo.org> mechanize-0.1.7b.ebuild:
   stable ppc, bug 235445
