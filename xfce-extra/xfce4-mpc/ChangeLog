@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-mpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc/ChangeLog,v 1.10 2008/09/21 17:00:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc/ChangeLog,v 1.11 2008/09/26 11:36:40 aballier Exp $
+
+  26 Sep 2008; Alexis Ballier <aballier@gentoo.org> xfce4-mpc-0.3.3.ebuild:
+  keyword ~ppc64, working fine on a PowerMac 970
 
   21 Sep 2008; Christoph Mende <angelos@gentoo.org> -xfce4-mpc-0.3.2.ebuild:
   Removed old
