@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.542 2008/09/21 23:29:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.543 2008/09/26 08:00:12 zmedico Exp $
+
+*portage-2.2_rc10 (26 Sep 2008)
+
+  26 Sep 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc10.ebuild:
+  2.2_rc10 bump. This includes support for EAPI 2 which is identical to
+  EAPI 2_pre3. This also fixes bug #230975 (problem importing selinux
+  module). Bug #210077 tracks all bugs fixed since 2.1.5.x.
 
 *portage-2.2_rc9 (21 Sep 2008)
 
