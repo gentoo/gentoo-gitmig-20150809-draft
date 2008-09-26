@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/xfce4-battery-0.5.1.ebuild,v 1.1 2008/09/08 16:20:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/xfce4-battery-0.5.1.ebuild,v 1.2 2008/09/26 13:48:37 angelos Exp $
 
-inherit autotools eutils xfce44
+inherit eutils xfce44
 
 xfce44
 
