@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.2-r2.ebuild,v 1.2 2008/09/26 13:03:44 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.2-r2.ebuild,v 1.3 2008/09/26 13:52:39 loki_val Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ RDEPEND="x11-libs/libX11
 	>=dev-libs/libxml2-2.6.32
 	sys-libs/zlib
 	net-libs/xulrunner:1.9
-	!dev-lang/spidermonkey
+	!!dev-lang/spidermonkey
 
 	dbus? ( sys-apps/dbus )
 
