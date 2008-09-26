@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.23 2006/10/24 22:47:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.24 2008/09/26 18:36:04 zmedico Exp $
 
 inherit eutils games
 
@@ -12,6 +12,7 @@ LICENSE="Q2EULA"
 SLOT="0"
 KEYWORDS="~alpha amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="videos"
+PROPERTIES="interactive"
 
 DEPEND="app-arch/unzip"
 RDEPEND=""

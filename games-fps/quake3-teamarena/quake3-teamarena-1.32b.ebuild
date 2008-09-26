@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.6 2007/03/12 15:00:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.7 2008/09/26 18:42:52 zmedico Exp $
 
 inherit eutils games
 
@@ -12,6 +12,7 @@ LICENSE="Q3AEULA"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE="cdinstall"
+PROPERTIES="cdinstall? ( interactive )"
 
 RDEPEND="|| (
 	games-fps/quake3

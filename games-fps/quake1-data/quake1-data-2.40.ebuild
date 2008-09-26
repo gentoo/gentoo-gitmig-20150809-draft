@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.13 2006/10/24 22:46:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.14 2008/09/26 18:33:10 zmedico Exp $
 
 # TODO: if installing off of the 1.01 cd, need to fetch the
 #       quake shareware and use that pak0
@@ -17,6 +17,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
+PROPERTIES="interactive"
 
 DEPEND="app-arch/lha"
 RDEPEND=""

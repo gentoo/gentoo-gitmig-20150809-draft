@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake2-data
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/ChangeLog,v 1.13 2007/02/22 00:01:00 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/ChangeLog,v 1.14 2008/09/26 18:36:04 zmedico Exp $
+
+  26 Sep 2008; Zac Medico <zmedico@gentoo.org> quake2-data-3.20.ebuild:
+  Set PROPERTIES=interactive since src_unpack() calls cdrom_get_cds().
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

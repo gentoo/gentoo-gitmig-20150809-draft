@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake3-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/ChangeLog,v 1.10 2008/05/17 15:56:30 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/ChangeLog,v 1.11 2008/09/26 18:39:23 zmedico Exp $
+
+  26 Sep 2008; Zac Medico <zmedico@gentoo.org> quake3-data-1.32b.ebuild:
+  Set PROPERTIES=interactive since src_unpack() calls cdrom_get_cds().
 
   17 May 2008; Tobias Klausmann <klausman@gentoo.org>
   quake3-data-1.32b.ebuild:

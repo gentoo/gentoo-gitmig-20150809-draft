@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-teamarena
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/ChangeLog,v 1.6 2007/03/12 15:00:33 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/ChangeLog,v 1.7 2008/09/26 18:42:52 zmedico Exp $
+
+  26 Sep 2008; Zac Medico <zmedico@gentoo.org>
+  quake3-teamarena-1.32b.ebuild:
+  Set PROPERTIES=interactive since src_unpack() calls cdrom_get_cds().
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org>
   quake3-teamarena-1.32b.ebuild:

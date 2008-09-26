@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.13 2008/05/17 15:56:30 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.14 2008/09/26 18:39:23 zmedico Exp $
 
 inherit eutils games
 
@@ -12,6 +12,7 @@ LICENSE="Q3AEULA"
 SLOT="0"
 KEYWORDS="~alpha amd64 ppc x86 ~x86-fbsd"
 IUSE="cdinstall"
+PROPERTIES="cdinstall? ( interactive )"
 
 RDEPEND=""
 
