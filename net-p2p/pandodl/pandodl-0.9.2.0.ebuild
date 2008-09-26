@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pandodl/pandodl-0.9.2.0.ebuild,v 1.2 2008/01/28 12:57:51 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pandodl/pandodl-0.9.2.0.ebuild,v 1.3 2008/09/26 17:42:30 zmedico Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="Pando-EULA"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
-
+PROPERTIES="interactive"
 RESTRICT="strip"
 
 DEPEND=""
