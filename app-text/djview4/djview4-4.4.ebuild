@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.4.ebuild,v 1.1 2008/08/25 22:06:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.4.ebuild,v 1.2 2008/09/26 11:40:10 aballier Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://djvu.sourceforge.net/djview4.html"
 SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="debug"
 RDEPEND=">=app-text/djvu-3.5.19
 	|| ( ( x11-libs/qt-gui x11-libs/qt-core ) >=x11-libs/qt-4.1.1:4 )"
