@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/dot2tex-2.8.2.ebuild,v 1.2 2008/06/14 10:18:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/dot2tex-2.8.4.ebuild,v 1.1 2008/09/26 11:27:18 aballier Exp $
 
 inherit distutils
 
