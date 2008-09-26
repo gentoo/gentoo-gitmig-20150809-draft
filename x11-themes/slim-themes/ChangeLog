@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/slim-themes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.8 2008/08/29 21:48:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.9 2008/09/26 10:45:20 aballier Exp $
+
+  26 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  slim-themes-1.2.3a.ebuild:
+  keyword ~ppc64, working fine on a PowerMac 970
 
   29 Aug 2008; Markus Meier <maekke@gentoo.org> slim-themes-1.2.3a.ebuild:
   amd64/x86 stable, bug #209540
