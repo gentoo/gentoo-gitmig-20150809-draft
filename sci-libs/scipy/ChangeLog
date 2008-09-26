@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.32 2008/07/03 12:13:23 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.33 2008/09/26 20:09:59 bicatali Exp $
+
+  26 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  scipy-0.6.0-r4.ebuild:
+  Changed blas/atlas configuration to match newer numpy (should be still
+  compatible with numpy-1.0.4 too. Disabled magic fortran flags detection
 
   03 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org>
   +files/scipy-0.6.0-implicit.patch, scipy-0.6.0-r4.ebuild:
