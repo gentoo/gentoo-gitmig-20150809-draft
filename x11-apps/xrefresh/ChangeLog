@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xrefresh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrefresh/ChangeLog,v 1.18 2008/09/24 10:35:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrefresh/ChangeLog,v 1.19 2008/09/26 12:56:41 jer Exp $
+
+  26 Sep 2008; Jeroen Roovers <jer@gentoo.org> xrefresh-1.0.2.ebuild:
+  Marked ~hppa (bug #237411).
 
   24 Sep 2008; Alexis Ballier <aballier@gentoo.org> xrefresh-1.0.2.ebuild:
   keyword ~x86-fbsd
