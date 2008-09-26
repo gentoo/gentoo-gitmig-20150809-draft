@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/gnome-python-base-2.22.2.ebuild,v 1.1 2008/09/22 08:04:36 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-base/gnome-python-base-2.22.3.ebuild,v 1.1 2008/09/26 09:58:46 leio Exp $
 
 inherit versionator eutils gnome2
 
