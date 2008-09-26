@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-5.5.3.ebuild,v 1.3 2007/12/01 13:14:08 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation-tools/vmware-workstation-tools-5.5.3.ebuild,v 1.4 2008/09/26 17:19:00 zmedico Exp $
 
 inherit eutils vmware
 
@@ -12,6 +12,7 @@ LICENSE="vmware"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="X"
+PROPERTIES="interactive"
 RESTRICT=""
 
 RDEPEND="sys-apps/pciutils"
