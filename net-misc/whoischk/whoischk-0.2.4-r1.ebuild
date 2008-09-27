@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/whoischk-0.2.4-r1.ebuild,v 1.5 2008/03/27 23:33:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whoischk/whoischk-0.2.4-r1.ebuild,v 1.6 2008/09/27 15:58:45 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.afterdark.org.uk/whoischk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ia64 x86"
+KEYWORDS="amd64 arm hppa ia64 x86"
 IUSE=""
 
 RDEPEND="app-shells/bash
