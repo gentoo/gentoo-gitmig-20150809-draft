@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/v86d
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.23 2008/09/21 19:33:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.24 2008/09/27 20:02:32 spock Exp $
+
+  27 Sep 2008; Michał Januszewski <spock@gentoo.org>
+  +files/v86d-0.1.8-concurrent-make.patch, v86d-0.1.8.ebuild:
+  Fix concurrent build of v86d (bugs #238506, #238714).
 
 *v86d-0.1.8 (21 Sep 2008)
 
