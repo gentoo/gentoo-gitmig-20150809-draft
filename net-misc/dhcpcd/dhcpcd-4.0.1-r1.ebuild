@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.1-r1.ebuild,v 1.1 2008/09/25 08:21:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.1-r1.ebuild,v 1.2 2008/09/27 09:56:55 nixnut Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://roy.marples.name/dhcpcd"
 SRC_URI="http://roy.marples.name/${PN}/${MY_P}.tar.bz2"
 LICENSE="BSD-2"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 
 SLOT="0"
 IUSE="+compat zeroconf"
