@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/svnmailer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svnmailer/ChangeLog,v 1.6 2008/05/28 19:12:39 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svnmailer/ChangeLog,v 1.7 2008/09/27 13:48:16 betelgeuse Exp $
+
+  27 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
+  -svnmailer-1.0.8.ebuild, -svnmailer-1.0.8-r1.ebuild:
+  Remove old ebuilds.
 
   28 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrew Ross (aross) from metadata.xml (as per #139633). Assigning
