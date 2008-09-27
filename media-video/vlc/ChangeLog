@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.388 2008/09/27 07:52:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.389 2008/09/27 14:42:47 fmccor Exp $
+
+  27 Sep 2008; Ferris McCormick <fmccor@gentoo.org> vlc-0.9.3.ebuild:
+  Add back ~sparc --- Bug #237813.
 
   27 Sep 2008; Alexis Ballier <aballier@gentoo.org> -vlc-0.9.1.ebuild:
   remove unused version
