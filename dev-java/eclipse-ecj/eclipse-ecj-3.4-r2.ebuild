@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.4-r2.ebuild,v 1.2 2008/09/17 21:53:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.4-r2.ebuild,v 1.3 2008/09/27 11:53:45 betelgeuse Exp $
 
 inherit java-pkg-2
 
@@ -58,8 +58,10 @@ src_compile() {
 	if use gcj ; then
 		local gccbin="$(gcc-config -B $(ls -1r /etc/env.d/gcc/${CHOST}-* | head -1) || die)"
 		local gcj="${gccbin}/gcj"
-		javac="${gcj} -C"
+		javac="${gcj} -C -encoding ISO-8859-1"
 		jar="${gccbin}/gjar"
+		[[ -x ${jar} ]] || jar="${gccbin}/fastjar"
+		[[ -x ${jar} ]] || die "No jar found for gcc"
 		java="${gccbin}/gij"
 	else
 		javac_opts="$(java-pkg_javac-args) -encoding ISO-8859-1"
