@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.8-r1.ebuild,v 1.6 2008/07/14 20:34:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.8-r1.ebuild,v 1.7 2008/09/27 16:45:45 armin76 Exp $
 
 inherit multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 S="${S}/make/linux"
