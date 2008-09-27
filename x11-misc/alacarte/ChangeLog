@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.58 2008/09/25 15:10:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.59 2008/09/27 16:00:31 eva Exp $
+
+*alacarte-0.11.6 (27 Sep 2008)
+
+  27 Sep 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -alacarte-0.11.3-r1.ebuild, +alacarte-0.11.6.ebuild:
+  bump to 0.11.6. Updated translations. Use of more theme icons.
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org> alacarte-0.11.5.ebuild:
   Stable for HPPA (bug #236971).
