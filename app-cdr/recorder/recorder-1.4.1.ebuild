@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/recorder-1.4.1.ebuild,v 1.2 2008/09/17 23:54:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/recorder-1.4.1.ebuild,v 1.3 2008/09/27 02:53:40 yngwin Exp $
 
 inherit fdo-mime
 
@@ -35,13 +35,12 @@ src_unpack() {
 	local MY_NLS=""
 	if use nls; then
 		for ling in ${LINGUAS}; do
-			for lang in ${LANGS}; do
-				if [[ $ling==$lang ]]; then
-					MY_NLS="${MY_NLS} ${ling}"
-				fi
-			done
+			if has $ling ${LANGS}; then
+				MY_NLS="${MY_NLS} ${ling}"
+			fi
 		done
 	fi
+	echo "Using $MY_NLS translations"
 	sed -i -e "s:ar cs es fr pt_BR ru it nl:${MY_NLS}:" Makefile
 }
 

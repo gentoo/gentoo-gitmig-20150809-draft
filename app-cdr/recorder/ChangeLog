@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/recorder
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/ChangeLog,v 1.2 2008/09/17 23:54:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/ChangeLog,v 1.3 2008/09/27 02:53:40 yngwin Exp $
+
+  27 Sep 2008; Ben de Groot <yngwin@gentoo.org> recorder-1.4.1.ebuild:
+  Another go at linguas fix
 
   17 Sep 2008; Ben de Groot <yngwin@gentoo.org> recorder-1.4.1.ebuild:
   Fixing linguas logic. Fixes bug 237962.
