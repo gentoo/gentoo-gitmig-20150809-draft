@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.27 2008/07/31 16:16:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.28 2008/09/27 03:46:55 nerdboy Exp $
+
+*gpsdrive-2.10_pre5 (26 Sep 2008)
+
+  26 Sep 2008; Steve Arnold <nerdboy@gentoo.org>
+  +files/gpsdrive-drawmarkers-remove.patch, +gpsdrive-2.10_pre5.ebuild:
+  Updated ebuild for more recent version (closes bug #97208) with new mapnik
+  support (also closes bug #94334).
 
   31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
