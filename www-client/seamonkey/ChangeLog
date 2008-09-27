@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.157 2008/09/27 13:59:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.158 2008/09/27 17:15:58 armin76 Exp $
+
+  27 Sep 2008; Raúl Porcel <armin76@gentoo.org> -seamonkey-1.1.7.ebuild,
+  seamonkey-1.1.12.ebuild:
+  alpha/arm/ia64/sparc/x86 stable wrt #238535, remove old
 
   27 Sep 2008; Jeroen Roovers <jer@gentoo.org> seamonkey-1.1.12.ebuild:
   Stable for HPPA (bug #238535).
