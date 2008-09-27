@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svnmailer/svnmailer-1.0.8-r2.ebuild,v 1.1 2008/04/06 13:41:20 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svnmailer/svnmailer-1.0.8-r2.ebuild,v 1.2 2008/09/27 13:49:44 betelgeuse Exp $
+
+EAPI=2
 
 inherit distutils eutils
 
@@ -15,20 +17,10 @@ LICENSE="Apache-2.0"
 
 DEPEND=">=dev-lang/python-2.3"
 RDEPEND="${DEPEND}
-	dev-util/subversion
+	dev-util/subversion[python]
 	virtual/mta"
 
 DOCS="CHANGES NOTICE CREDITS"
-
-pkg_setup() {
-	if ! built_with_use dev-util/subversion python ; then
-		eerror "This package requires dev-util/subversion to be built with python support."
-		eerror "Please enable the python USE flag and remerge subversion."
-		elog "USE flags can be enabled globally in /etc/make.conf,"
-		elog "or for specific packages in /etc/portage/package.use."
-		die "dev-utils/subversion was built without python support"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}

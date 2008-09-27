@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gambas
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.50 2008/09/14 21:54:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.51 2008/09/27 13:46:58 betelgeuse Exp $
+
+  27 Sep 2008; Petteri Räty <betelgeuse@gentoo.org> gambas-2.8.2.ebuild:
+  Use EAPI 2 use dependencies instead of built_with_use.
 
   14 Sep 2008; Jeremy Olexa <darkside@gentoo.org> -files/Makefile.am-0.97a,
   -files/Makefile.am-1.0_rc2, -files/gambas-1.0.6-configure-CFLAGS.patch,
@@ -98,7 +101,7 @@
   gambas-1.0.6.ebuild, gambas-1.0.10.ebuild:
   slot change in preparation for gambas-2 (on genones request)
 
-*gambas-1.0.9 (14 Aug 2005)
+*gambas-1.0.10 (14 Aug 2005)
 
   14 Aug 2005; Marius Mauch <genone@gentoo.org> gambas-1.0.6.ebuild,
   +gambas-1.0.10.ebuild:
@@ -193,7 +196,7 @@
   +gambas-0.95.ebuild:
   version bump
 
-*gambas-0.94 (05 Jul 2004)
+*gambas-0.94a (05 Jul 2004)
 
   05 Jul 2004; Marius Mauch <genone@gentoo.org> +files/WebHome.html,
   +files/non-symlink-0.94.patch, -gambas-0.94.ebuild, +gambas-0.94a.ebuild:

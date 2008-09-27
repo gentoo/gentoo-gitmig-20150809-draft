@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.8.2.ebuild,v 1.2 2008/09/14 18:21:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.8.2.ebuild,v 1.3 2008/09/27 13:46:58 betelgeuse Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit autotools eutils fdo-mime qt3 multilib toolchain-funcs
 
@@ -18,7 +18,6 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="bzip2 corba curl debug doc examples firebird gtk kde mysql odbc opengl pcre pdf postgres qt3 sdl smtp sqlite sqlite3 svg v4l xml zlib"
 
-DEPEND=""
 RDEPEND="bzip2?	( >=app-arch/bzip2-1.0.5 )
 	corba?	( >=net-misc/omniORB-4.1.0 )
 	curl?	( >=net-misc/curl-7.15.5-r1 )
@@ -39,14 +38,13 @@ RDEPEND="bzip2?	( >=app-arch/bzip2-1.0.5 )
 	svg?	( >=gnome-base/librsvg-2.16.1-r2 )
 	v4l?	( >=media-libs/libpng-1.2.26 >=media-libs/jpeg-6b-r8 )
 	xml?	( >=dev-libs/libxml2-2.6.31 >=dev-libs/libxslt-1.1.22 )
-	zlib?	( >=sys-libs/zlib-1.2.3-r1 )"
+	zlib?	( >=sys-libs/zlib-1.2.3-r1 )
+	sys-devel/gcc[libffi]"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	built_with_use sys-devel/gcc libffi \
-	|| die "gcc needs to be build with the USE flag libffi"
-
 	# ImageProvider implementers, see .component files for more info
 	if ! { use qt3 || use gtk || use sdl; } ; then
 	use pdf && die "PDF support depends on Qt, GTK or SDL being enabled"
@@ -78,7 +76,7 @@ pkg_setup() {
 	fi
 }
 
-my_reduce_eautoreconf () {
+my_reduce_eautoreconf() {
 	sed -i -e "/^\(AC\|GB\)_CONFIG_SUBDIRS(${1}[,)]/d" \
 	configure.ac \
 	|| die "my_reduce_eautoreconf: sed on configure.ac failed with ${1}"
@@ -88,7 +86,7 @@ my_reduce_eautoreconf () {
 	|| die "my_reduce_eautoreconf: sed on Makefile.am failed with ${1}"
 }
 
-my_examine_components () {
+my_examine_components() {
 	local comp="gb.*/src/*.component gb.*/src/*/*.component main/lib/*/*.component comp/src/*/.component"
 
 	# Examine app/src/gambas2/CComponent.class for more info
