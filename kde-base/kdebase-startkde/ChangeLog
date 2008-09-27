@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.125 2008/09/13 23:57:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.126 2008/09/27 18:02:17 cryos Exp $
+
+*kdebase-startkde-3.5.10-r1 (27 Sep 2008)
+
+  27 Sep 2008; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/kdebase-startkde-3.5-gentoo.patch,
+  +kdebase-startkde-3.5.10-r1.ebuild:
+  Tweak the PATH, ROOTHPATH and XDG_DATA_DIRS variables, thanks to Matthias
+  Dahl <ua_bugz_gentoo@mortal-soul.de> in bug 237718. Also tweaked KDEDIRS
+  to remove /usr as this was never used.
 
 *kdebase-startkde-3.5.10 (13 Sep 2008)
 
