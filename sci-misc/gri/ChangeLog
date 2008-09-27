@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/gri
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.22 2008/08/24 17:29:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.23 2008/09/27 11:01:32 markusle Exp $
+
+*gri-2.12.18 (27 Sep 2008)
+
+  27 Sep 2008; Markus Dittrich <markusle@gentoo.org> +gri-2.12.18.ebuild:
+  Version bump.
 
   24 Aug 2008; Ulrich Mueller <ulm@gentoo.org> -gri-2.12.14.ebuild,
   gri-2.12.16-r1.ebuild, gri-2.12.17.ebuild:
