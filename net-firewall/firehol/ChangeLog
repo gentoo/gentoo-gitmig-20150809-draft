@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.36 2008/05/28 19:18:28 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.37 2008/09/27 13:37:48 betelgeuse Exp $
+
+  27 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
+  firehol-1.256-r1.ebuild:
+  Use EAPI 2 use dependencies instead of built_with_use.
 
   28 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Dominik Stadler (centic) from metadata.xml (as per #40994).
@@ -171,15 +175,15 @@
   14 Oct 2003; Martin Holzer <mholzer@gentoo.org> firehol-1.159.ebuild:
   Version bumped. closes #31052.
 
-*firehol-1.120 (06 April 2003)
+*firehol-1.120 (06 Apr 2003)
 
-  06 April 2003; Sascha Schwabbauer <cybersystem@gentoo.org> firehol-1.120.ebuild, files/digest-firehol-1.120 :
+  06 Apr 2003; Sascha Schwabbauer <cybersystem@gentoo.org> firehol-1.120.ebuild, files/digest-firehol-1.120 :
 
   Version bump, again thanks to Maik Schreiber <blizzy@blizzy.de> in bug #18837
 
-*firehol-1.91 (05 April 2003)
+*firehol-1.91 (05 Apr 2003)
 
-  05 April 2003; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, firehol-1.91.ebuild, files/digest-firehol-1.91 :
+  05 Apr 2003; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, firehol-1.91.ebuild, files/digest-firehol-1.91 :
 
   Initial commit, made by Maik Schreiber <blizzy@blizzy.de> in bug #18808
 

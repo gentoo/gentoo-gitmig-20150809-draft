@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.256-r1.ebuild,v 1.2 2007/11/06 10:22:03 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.256-r1.ebuild,v 1.3 2008/09/27 13:37:48 betelgeuse Exp $
+
+EAPI=2
 
 inherit eutils linux-info
 
@@ -15,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="sys-apps/iproute2"
 RDEPEND="net-firewall/iptables
-	sys-apps/iproute2
+	sys-apps/iproute2[-minimal]
 	virtual/modutils
 	|| (
 		net-misc/wget
@@ -25,15 +27,6 @@ RDEPEND="net-firewall/iptables
 #S="${WORKDIR}/${PN}-1.226"
 
 pkg_setup() {
-	# Bug 81600 fail if iproute2 is built with minimal
-	if built_with_use sys-apps/iproute2 minimal; then
-		eerror "Firehol requires iproute2 to be emerged without"
-		eerror "the USE-Flag \"minimal\"."
-		eerror "Re-emerge iproute2 with"
-		eerror "USE=\"-minimal\" emerge sys-apps/iproute2"
-		die "sys-apps/iproute2 without USE=\"minimal\" needed"
-	fi
-
 	# perform checks for kernel config from eclass linux-info
 	# for now we just print warnings as I am not sure if these
 	# are required always...
