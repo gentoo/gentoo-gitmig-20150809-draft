@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.9.ebuild,v 1.1 2008/04/22 13:57:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.9.ebuild,v 1.2 2008/09/27 12:28:26 betelgeuse Exp $
 
+EAPI=2
 JAVA_PKG_IUSE="source"
 
 inherit eutils autotools java-pkg-2
@@ -23,12 +24,12 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 #
 IUSE="xmldoclet"
 
-# Refused to emerge with sun-jdk-1.3* complaining about wanting a bigger stack size
-DEPEND=">=dev-java/antlr-2.7.1
-		>=virtual/jdk-1.4"
-
 RDEPEND=">=virtual/jre-1.4
-		>=dev-java/antlr-2.7.1"
+		>=dev-java/antlr-2.7.1[java]"
+
+# Refused to emerge with sun-jdk-1.3* complaining about wanting a bigger stack size
+DEPEND="${RDEPEND}
+		>=virtual/jdk-1.4"
 
 src_unpack() {
 	unpack ${A}
@@ -62,7 +63,7 @@ src_install() {
 	done
 
 	dobin "${FILESDIR}"/gjdoc
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README || die
 
 	cd "${S}"/docs
 	emake DESTDIR="${D}" install || die "Failed to install documentation"
