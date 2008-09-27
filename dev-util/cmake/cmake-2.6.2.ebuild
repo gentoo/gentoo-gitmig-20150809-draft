@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.6.0.ebuild,v 1.1 2008/05/08 15:53:11 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.6.2.ebuild,v 1.1 2008/09/27 16:15:44 cryos Exp $
 
-inherit elisp-common toolchain-funcs eutils versionator qt3 flag-o-matic
+EAPI="1"
+
+inherit elisp-common toolchain-funcs eutils versionator flag-o-matic
 
 MY_PV="${PV/rc/RC-}"
 MY_P="${PN}-$(replace_version_separator 3 - ${MY_PV})"
@@ -14,13 +16,16 @@ SRC_URI="http://www.cmake.org/files/v$(get_version_component_range 1-2)/${MY_P}.
 LICENSE="CMake"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="emacs vim-syntax"
+IUSE="emacs qt4 vim-syntax"
 
 DEPEND=">=net-misc/curl-7.16.4
 	>=dev-libs/expat-2.0.1
 	>=dev-libs/libxml2-2.6.28
 	>=dev-libs/xmlrpc-c-1.06.09
 	emacs? ( virtual/emacs )
+	qt4? ( || ( ( x11-libs/qt-core:4
+			x11-libs/qt-gui:4 )
+		>=x11-libs/qt-4.3:4 ) )
 	vim-syntax? ( || (
 		app-editors/vim
 		app-editors/gvim ) )"
@@ -28,6 +33,8 @@ RDEPEND="${DEPEND}"
 
 SITEFILE="50${PN}-gentoo.el"
 VIMFILE="${PN}.vim"
+
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	if ! built_with_use -o dev-libs/xmlrpc-c curl libwww; then
@@ -55,12 +62,31 @@ src_compile() {
 
 	tc-export CC CXX LD
 
+	local qt_arg
+	if use qt4; then
+		qt_arg="--qt-gui"
+	else
+		qt_arg="--no-qt-gui"
+	fi
+
+	local par_arg
+	echo $MAKEOPTS | egrep -o '(\-j|\-\-jobs)(=?|[[:space:]]*)[[:digit:]]+' > /dev/null
+	if [ $? -eq 0 ]; then
+		par_arg=$(echo $MAKEOPTS | egrep -o '(\-j|\-\-jobs)(=?|[[:space:]]*)[[:digit:]]+' | egrep -o '[[:digit:]]+')
+		par_arg="--parallel=${par_arg}"
+	else
+		par_arg="--parallel=1"
+	fi
+
 	./bootstrap \
 		--system-libs \
 		--prefix=/usr \
 		--docdir=/share/doc/${PF} \
 		--datadir=/share/${PN} \
-		--mandir=/share/man || die "./bootstrap failed"
+		--mandir=/share/man \
+		"$qt_arg" \
+		"$par_arg" || die "./bootstrap failed"
+
 	emake || die "emake failed."
 	if use emacs; then
 		elisp-compile Docs/cmake-mode.el || die "elisp compile failed"
