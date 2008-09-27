@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/analog
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.34 2007/02/21 19:33:56 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.35 2008/09/27 13:29:25 betelgeuse Exp $
+
+*analog-6.0-r1 (27 Sep 2008)
+
+  27 Sep 2008; Petteri Räty <betelgeuse@gentoo.org> +analog-6.0-r1.ebuild:
+  Use EAPI 2 use dependencies instead of built_with_use.
 
   21 Feb 2007; <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
