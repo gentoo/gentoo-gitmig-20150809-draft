@@ -1,0 +1,11 @@
+--- configure.old	2008-09-27 01:43:55.000000000 -0400
++++ configure	2008-09-27 01:44:12.000000000 -0400
+@@ -1840,7 +1840,7 @@
+ 		print CONFIG "CCACHE=$ccache\n";
+ 	}
+ 	
+-	print CONFIG "CC=$cc -g -Wall -fPIC $jni_include -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -DGTK_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DG_DISABLE_DEPRECATED -Werror-implicit-function-declaration -Wfatal-errors\n";
++	print CONFIG "CC=$cc -g -Wall -fPIC $jni_include -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -Werror-implicit-function-declaration -Wfatal-errors\n";
+ 	print CONFIG "CC_CMD=GCC      \n";
+ 	print CONFIG "LINK=$cc -g -shared -Wall -fPIC\n";
+ 	print CONFIG "LINK_CMD=LINK     \n";

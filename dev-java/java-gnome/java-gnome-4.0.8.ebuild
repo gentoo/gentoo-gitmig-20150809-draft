@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.8.ebuild,v 1.1 2008/08/18 01:51:57 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.8.ebuild,v 1.2 2008/09/27 06:23:31 ken69267 Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source"
@@ -36,6 +36,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-disable-doc-snapshots.patch"
+	epatch "${FILESDIR}/${P}-deprecated.patch"
 }
 
 src_compile() {
