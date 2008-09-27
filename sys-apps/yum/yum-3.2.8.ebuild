@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-3.2.8.ebuild,v 1.5 2008/05/29 18:04:58 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-3.2.8.ebuild,v 1.6 2008/09/27 13:41:29 betelgeuse Exp $
 
+EAPI=2
 NEED_PYTHON=1
 inherit python eutils multilib
 
@@ -14,25 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.5
-	app-arch/rpm
+RDEPEND=">=dev-lang/python-2.5[sqlite]
+	app-arch/rpm[python]
 	dev-python/sqlitecachec
 	dev-python/celementtree
-	dev-libs/libxml2
+	dev-libs/libxml2[python]
 	dev-python/urlgrabber"
-
-pkg_setup() {
-	_built_with_use() {
-		local pkg=$1 ; shift
-		if ! built_with_use ${pkg} "$@" ; then
-			eerror "You need to install ${pkg} with USE='$*'"
-			die "re-emerge ${pkg} with USE='$*'"
-		fi
-	}
-	_built_with_use dev-libs/libxml2 python
-	_built_with_use dev-lang/python sqlite
-	_built_with_use app-arch/rpm python
-}
 
 src_install() {
 	python_version
