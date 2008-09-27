@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.7 2008/09/24 08:30:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.8 2008/09/27 12:49:32 fmccor Exp $
+
+  27 Sep 2008; Ferris McCormick <fmccor@gentoo.org> libkate-0.2.0.ebuild:
+  Add ~sparc for testing.  Part of Bug #237813 and now needed for vlc.
 
   24 Sep 2008; Alexis Ballier <aballier@gentoo.org> libkate-0.2.0.ebuild:
   keyword ~x86-fbsd
