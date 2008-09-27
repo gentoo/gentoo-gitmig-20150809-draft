@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.7.ebuild,v 1.5 2008/09/27 13:59:06 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.7-r1.ebuild,v 1.1 2008/09/27 13:59:06 serkan Exp $
 
-EAPI=1
+EAPI=2
 JAVA_PKG_IUSE="doc examples source"
 
 inherit eutils versionator java-pkg-2
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnome/sources/${PN}/$(get_version_component_range 1-2)/${P}.ta
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="4.0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.12.13
@@ -21,7 +21,8 @@ RDEPEND=">=dev-libs/glib-2.12.13
 		>=gnome-base/libglade-2.6.1
 		>=gnome-base/libgnome-2.18.0
 		>=gnome-base/gnome-desktop-2.18.0
-		>=virtual/jre-1.5"
+		>=virtual/jre-1.5
+		>=x11-libs/cairo-1.6.4[svg]"
 DEPEND="${RDEPEND}
 		dev-java/junit:0
 		dev-lang/python
@@ -30,16 +31,6 @@ DEPEND="${RDEPEND}
 
 # Needs X11
 RESTRICT="test"
-
-pkg_setup() {
-	if ! built_with_use x11-libs/cairo svg; then
-		echo
-		eerror "x11-libs/cairo has not been built with svg support."
-		eerror "Please re-emerge cairo with the svg use-flag enabled."
-		die "missing svg flag for x11-libs/cairo"
-	fi
-	java-pkg-2_pkg_setup
-}
 
 src_compile() {
 	# Handwritten in perl so not using econf

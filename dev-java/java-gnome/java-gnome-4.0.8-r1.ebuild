@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.8.ebuild,v 1.2 2008/09/27 06:23:31 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.8-r1.ebuild,v 1.1 2008/09/27 13:59:06 serkan Exp $
 
-EAPI=1
+EAPI=2
 JAVA_PKG_IUSE="doc examples source"
 
 inherit eutils versionator java-pkg-2
@@ -21,7 +21,8 @@ RDEPEND=">=dev-libs/glib-2.12.13
 		>=gnome-base/libglade-2.6.1
 		>=gnome-base/libgnome-2.18.0
 		>=gnome-base/gnome-desktop-2.18.0
-		>=virtual/jre-1.5"
+		>=virtual/jre-1.5
+		>=x11-libs/cairo-1.6.4[svg]"
 DEPEND="${RDEPEND}
 		dev-java/junit:0
 		dev-lang/python

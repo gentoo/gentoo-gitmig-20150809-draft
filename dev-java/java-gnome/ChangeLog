@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.67 2008/09/27 06:23:31 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.68 2008/09/27 13:59:06 serkan Exp $
+
+*java-gnome-4.0.8-r1 (27 Sep 2008)
+*java-gnome-4.0.7-r1 (27 Sep 2008)
+
+  27 Sep 2008; Serkan Kaba <serkan@gentoo.org> java-gnome-4.0.7.ebuild,
+  +java-gnome-4.0.7-r1.ebuild, -java-gnome-4.0.8.ebuild,
+  +java-gnome-4.0.8-r1.ebuild:
+  Use EAPI 2 use deps for x11-libs/cairo:svg. Restrict cairo dependency. Fix
+  indentation.
 
   27 Sep 2008; Kenneth Prugh <ken69267@gentoo.org>
   +files/java-gnome-4.0.8-deprecated.patch, java-gnome-4.0.8.ebuild:
