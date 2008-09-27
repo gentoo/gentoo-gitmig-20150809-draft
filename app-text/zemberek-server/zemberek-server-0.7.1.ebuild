@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zemberek-server/zemberek-server-0.7.1.ebuild,v 1.4 2008/07/26 10:37:46 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zemberek-server/zemberek-server-0.7.1.ebuild,v 1.5 2008/09/27 12:29:33 serkan Exp $
 
-EAPI=1
+EAPI=2
 inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="A Turkish spell checker server based on Zemberek NLP library"
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 S="${WORKDIR}"
 IUSE=""
 
-CDEPEND="dev-java/zemberek
+CDEPEND="dev-java/zemberek[linguas_tr]
 	 dev-java/dbus-java
 	 dev-java/mina-core"
 
@@ -27,12 +27,6 @@ DEPEND="${CDEPEND}
 	>=virtual/jdk-1.5"
 
 EANT_BUILD_TARGET="dist"
-
-pkg_setup() {
-	! built_with_use dev-java/zemberek linguas_tr \
-	&& die "Zemberek should be built with Turkish language support"
-	java-pkg-2_pkg_setup
-}
 
 src_unpack() {
 	unpack ${A}
