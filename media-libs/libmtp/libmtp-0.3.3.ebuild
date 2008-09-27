@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-0.3.3.ebuild,v 1.1 2008/09/26 16:20:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-0.3.3.ebuild,v 1.2 2008/09/27 00:34:44 mr_bones_ Exp $
 
 DESCRIPTION="An implementation of Microsoft's Media Transfer Protocol (MTP)."
 HOMEPAGE="http://libmtp.sourceforge.net"
@@ -19,7 +19,6 @@ src_compile() {
 	econf --enable-shared --disable-static || die "econf failed"
 	emake || die "emake failed"
 }
-
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
