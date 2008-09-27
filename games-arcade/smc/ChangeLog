@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/smc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.9 2008/06/25 18:51:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.10 2008/09/27 17:46:02 nyhm Exp $
+
+*smc-1.6 (27 Sep 2008)
+
+  27 Sep 2008; Tristan Heaven <nyhm@gentoo.org> +smc-1.6.ebuild:
+  Version bump
 
   25 Jun 2008; nixnut <nixnut@gentoo.org> smc-1.5.ebuild:
   Stable on ppc wrt bug 229121
