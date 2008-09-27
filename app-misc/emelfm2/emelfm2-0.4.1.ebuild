@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.4.1.ebuild,v 1.1 2008/09/27 02:18:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.4.1.ebuild,v 1.2 2008/09/27 02:34:45 yngwin Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -11,13 +11,16 @@ SRC_URI="http://${PN}.net/rel/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acl unicode fam"
+IUSE="acl fam hal unicode"
 
 RESTRICT="test"
 
 RDEPEND=">=x11-libs/gtk+-2.12
 	fam? ( virtual/fam )
-	acl? ( sys-apps/acl )"
+	acl? ( sys-apps/acl )
+	hal? ( sys-apps/hal
+		sys-apps/dbus
+		dev-libs/dbus-glib )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -32,7 +35,7 @@ src_unpack() {
 
 src_compile() {
 	# These options need >=x11-libs/gtk-2.12 which we depend upon
-	local myconf="USE_LATEST=1 WITH_TRANSPARENCY=1"
+	local myconf="USE_LATEST=1 WITH_TRANSPARENCY=1 PREFIX=/usr"
 
 	if use acl; then
 		myconf="${myconf} WITH_ACL=1"
@@ -50,6 +53,10 @@ src_compile() {
 		fi
 	else
 		myconf="${myconf} USE_FAM=0"
+	fi
+
+	if use hal; then
+		myconf="${myconf} WITH_HAL=1"
 	fi
 
 	tc-export CC
