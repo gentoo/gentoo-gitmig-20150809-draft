@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.3-r1.ebuild,v 1.2 2008/05/23 21:02:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.3-r1.ebuild,v 1.3 2008/09/27 20:54:16 spock Exp $
 
-inherit linux-info
+inherit eutils linux-info
 
 DESCRIPTION="A daemon to run x86 code in an emulated environment."
 HOMEPAGE="http://dev.gentoo.org/~spock/projects/uvesafb/"
@@ -25,6 +25,12 @@ pkg_setup() {
 		die "Kernel not patched with uvesafb."
 	fi
 	linux-info_pkg_setup
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-0.1.8-concurrent-make.patch"
 }
 
 src_compile() {
