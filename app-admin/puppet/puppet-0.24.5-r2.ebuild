@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.5-r2.ebuild,v 1.1 2008/09/24 14:49:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.5-r2.ebuild,v 1.2 2008/09/27 10:40:26 bluebird Exp $
 
 inherit elisp-common eutils ruby
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="emacs ldap rrdtool vim-syntax"
 #KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 DEPEND="emacs? ( virtual/emacs )
 	>=dev-ruby/facter-1.1.0"
