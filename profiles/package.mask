@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9013 2008/09/27 00:30:23 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9014 2008/09/27 22:02:57 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Gilles Dartiguelongue <eva@gentoo.org> (27 Sep 2008)
+# GNOME 2.24 mask being (and related)
+>=net-irc/xchat-0.24.0
+# GNOME 2.24 mask end
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (26 Sep 2008)
 # temporarily mask to prevent things from breaking
