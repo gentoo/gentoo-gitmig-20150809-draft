@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/libgail-gnome
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.91 2007/11/29 06:14:05 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.92 2008/09/27 16:40:18 eva Exp $
+
+*libgail-gnome-1.20.1 (27 Sep 2008)
+
+  27 Sep 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgail-gnome-1.18.0.ebuild, +libgail-gnome-1.20.1.ebuild:
+  bump to 1.20.1, fix a symbol conflict with dprintf.
 
   29 Nov 2007; Jeroen Roovers <jer@gentoo.org> libgail-gnome-1.20.0.ebuild:
   Stable for HPPA (bug #199740).
