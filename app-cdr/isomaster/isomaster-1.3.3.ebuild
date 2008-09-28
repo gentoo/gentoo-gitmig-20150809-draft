@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.1.ebuild,v 1.1 2008/02/14 17:01:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.3.ebuild,v 1.1 2008/09/28 11:10:13 loki_val Exp $
 
 inherit toolchain-funcs
 
