@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.6.2_pre01247.ebuild,v 1.2 2008/09/21 06:17:35 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.6.2_pre01261.ebuild,v 1.1 2008/09/28 03:13:15 omp Exp $
 
 inherit eutils
 # used for epause
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="audacious bmpx debug hddtemp ipv6 mpd nano-syntax nvidia rss truetype vim-syntax smapi wifi X"
+IUSE="audacious bmpx debug hddtemp ipv6 moc mpd nano-syntax nvidia rss truetype vim-syntax smapi wifi X"
 
 DEPEND_COMMON="
 	virtual/libc
@@ -84,6 +84,7 @@ src_compile() {
 		$(use_enable bmpx) \
 		$(use_enable debug) \
 		$(use_enable hddtemp ) \
+		$(use_enable moc) \
 		$(use_enable mpd) \
 		$(use_enable nvidia) \
 		$(use_enable rss) \
