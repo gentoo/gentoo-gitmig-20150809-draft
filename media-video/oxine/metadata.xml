@@ -5,7 +5,4 @@
   <maintainer>
     <email>media-video@gentoo.org</email>
   </maintainer>
-  <use>
-    <flag name="polling">Enables support to automatically check the drive for a new disc</flag>
-  </use>
 </pkgmetadata>
