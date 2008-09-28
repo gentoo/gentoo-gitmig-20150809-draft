@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.96.10.ebuild,v 1.1 2008/09/28 17:07:06 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.96.10.ebuild,v 1.2 2008/09/28 22:40:18 mr_bones_ Exp $
 
 NAME=Coccinella
 DESCRIPTION="Jabber Client With a Built-in Whiteboard and VoIP (jingle)"
@@ -29,7 +29,7 @@ src_install () {
 	fperms 0755 /opt/coccinella/Coccinella.tcl
 	dosym /opt/coccinella/Coccinella.tcl /opt/bin/coccinella
 	dodoc CHANGES README.txt READMEs/*
-	
+
 	for x in 64 32 16 ; do
 		src=/opt/coccinella/themes/Crystal/icons/${x}x${x}/coccinella.png
 		dir=/usr/share/icons/hicolor/${x}x${x}/apps
@@ -38,7 +38,7 @@ src_install () {
 		unset src
 		unset dir
 	done
-	
+
 	make_desktop_entry "coccinella" "Coccinella IM Client"
 }
 
