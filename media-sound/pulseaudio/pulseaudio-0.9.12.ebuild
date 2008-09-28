@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.12.ebuild,v 1.1 2008/09/12 15:53:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.12.ebuild,v 1.2 2008/09/28 10:15:17 aballier Exp $
 
 EAPI=1
 
@@ -49,7 +49,7 @@ DEPEND="${RDEPEND}
 	X? ( x11-proto/xproto )
 	dev-libs/libatomic_ops
 	dev-util/pkgconfig
-	dev-util/unifdef"
+	|| ( dev-util/unifdef sys-freebsd/freebsd-ubin )"
 
 # alsa-utils dep is for the alsasound init.d script (see bug #155707)
 # bluez-utils dep is for the bluetooth init.d script
@@ -130,11 +130,11 @@ src_install() {
 		use "$1" && echo "-D$define" || echo "-U$define"
 	}
 
-	unifdef "${FILESDIR}/pulseaudio.init.d-4" \
-		$(use_define hal) \
+	unifdef $(use_define hal) \
 		$(use_define avahi) \
 		$(use_define alsa) \
 		$(use_define bluetooth) \
+		"${FILESDIR}/pulseaudio.init.d-4" \
 		> "${T}/pulseaudio"
 	doinitd "${T}/pulseaudio"
 
