@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.49 2008/09/27 09:54:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.50 2008/09/28 12:42:06 maekke Exp $
+
+  28 Sep 2008; Markus Meier <maekke@gentoo.org> qu-prolog-8.6.ebuild:
+  x86 stable, bug #238330
 
   27 Sep 2008; nixnut <nixnut@gentoo.org> qu-prolog-8.6.ebuild:
   Stable on ppc wrt bug 238330
