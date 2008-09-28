@@ -6,5 +6,9 @@
 		<email>angelos@gentoo.org</email>
 		<name>Christoph Mende</name>
 	</maintainer>
+	<use>
+		<flag name='cover'>Enable cover art fetching</flag>
+		<flag name='lyrics'>Enable lyric fetching</flag>
+	</use>
 </pkgmetadata>
 
