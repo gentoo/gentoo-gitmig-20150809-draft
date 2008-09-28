@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/khmer/khmer-5.0.ebuild,v 1.2 2008/09/28 14:11:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/khmer/khmer-5.0.ebuild,v 1.3 2008/09/28 14:28:57 maekke Exp $
 
 inherit font
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/khmer/All_KhmerOS_${PV}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
