@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.38 2008/09/26 16:42:03 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.39 2008/09/28 09:49:33 armin76 Exp $
+
+  28 Sep 2008; Raúl Porcel <armin76@gentoo.org> smplayer-0.6.2-r1.ebuild:
+  alpha/sparc/x86 stable wrt #238788
 
 *smplayer-0.6.3 (26 Sep 2008)
 
