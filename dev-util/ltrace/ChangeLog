@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ltrace
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.48 2008/09/21 09:36:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.49 2008/09/28 20:27:07 armin76 Exp $
+
+  28 Sep 2008; Raúl Porcel <armin76@gentoo.org> ltrace-0.5.3.1.ebuild:
+  Add ~arm wrt #225275
 
 *ltrace-0.5.3.1 (21 Sep 2008)
 
