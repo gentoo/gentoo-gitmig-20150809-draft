@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.572 2008/09/08 10:11:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.573 2008/09/28 15:12:47 armin76 Exp $
+
+  28 Sep 2008; Raúl Porcel <armin76@gentoo.org> xine-lib-1.1.15-r1.ebuild:
+  arm stable wrt #211464
 
   08 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   -files/xine-lib-1.1.14-metadata-bugfix.patch, -xine-lib-1.1.13.ebuild,
