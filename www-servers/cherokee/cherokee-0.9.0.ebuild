@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.5.6.ebuild,v 1.4 2006/12/27 06:06:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.9.0.ebuild,v 1.1 2008/09/28 17:16:23 bass Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -14,33 +14,16 @@ HOMEPAGE="http://www.cherokee-project.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="ipv6 ssl gnutls static pam coverpage threads kernel_linux"
+IUSE="ipv6 ssl gnutls static pam coverpage threads kernel_linux admin"
 
 RDEPEND=">=sys-libs/zlib-1.1.4-r1
 	ssl? (
 		gnutls? ( net-libs/gnutls )
 		!gnutls? ( dev-libs/openssl )
 	)
-	pam? ( virtual/pam )"
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
-
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-epoll-crosscompile.patch"
-	epatch "${FILESDIR}/${P}-sendfile-crosscompile.patch"
-	epatch "${FILESDIR}/${P}-gnutls-pkgconfig.patch"
-	epatch "${FILESDIR}/${P}-replace-with-sed.patch"
-
-	AT_M4DIR="m4" eautoreconf
-
-	# use cherokee user/group
-	sed -i -e 's|^#\(User \).*$|\1cherokee|' \
-		   -e 's|^#\(Group \).*$|\1cherokee|' "${S}/cherokee.conf.sample.pre" || \
-		   die "sed cherokee.conf failed"
-}
+	pam? ( virtual/pam )
+	admin? ( dev-lang/python )"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	local myconf
@@ -80,6 +63,9 @@ src_compile() {
 		--disable-dependency-tracking \
 		--enable-os-string="Gentoo ${os}" \
 		--with-wwwroot=/var/www/localhost/htdocs \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
 		|| die "configure failed"
 
 	emake || die "emake failed"
@@ -90,14 +76,31 @@ src_install () {
 	dodoc AUTHORS ChangeLog TODO
 
 	newpamd pam.d_cherokee ${PN} || die "newpamd failed"
-	newinitd "${FILESDIR}/${PN}-initd-0.5.6" ${PN} || die "newinitd failed"
+	newinitd "${FILESDIR}/${PN}-initd-0.6" ${PN} || die "newinitd failed"
+
+	dodir /usr/share/doc/${PF}/contrib
+	insinto /usr/share/${PF}/contrib
+	doins contrib/05to06.py
+	doins contrib/06to07.py
 
 	keepdir /etc/cherokee/mods-enabled /etc/cherokee/sites-enabled /var/www/localhost/htdocs
 
 	use coverpage || rm -rf "${D}"/var/www/localhost/htdocs/{index.html,images}
+	use admin || rm -rf "${D}"/usr/sbin/admin "${D}"/usr/share/cherokee/admin
+
 }
 
 pkg_postinst() {
 	enewgroup cherokee
 	enewuser cherokee -1 -1 /var/www/localhost cherokee
+
+	if use admin ; then
+		echo  ""
+		elog "Just run 'cherokee-admin' and go to: http://localhost:9090"
+		echo  ""
+	else
+		echo  ""
+		elog "Try USE=admin if you want a easy way to configure cherokee."
+		echo  ""
+	fi
 }
