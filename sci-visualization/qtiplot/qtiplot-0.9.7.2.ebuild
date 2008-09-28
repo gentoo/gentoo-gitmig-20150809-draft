@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.2.ebuild,v 1.1 2008/09/25 14:29:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.2.ebuild,v 1.2 2008/09/28 10:40:33 markusle Exp $
 
 EAPI="1"
 inherit eutils multilib qt4 fdo-mime python
@@ -26,7 +26,7 @@ CDEPEND=">=x11-libs/qwt-5.1
 	x11-libs/qt-qt3support:4
 	x11-libs/qt-assistant:4
 	>=dev-cpp/muParser-1.28
-	dev-libs/boost
+	>=dev-libs/boost-1.35.0
 	!bindist? ( sci-libs/gsl )
 	bindist? ( <sci-libs/gsl-1.10 )"
 
