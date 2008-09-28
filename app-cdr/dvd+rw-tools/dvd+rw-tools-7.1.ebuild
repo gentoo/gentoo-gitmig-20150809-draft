@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-7.1.ebuild,v 1.10 2008/07/08 17:10:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-7.1.ebuild,v 1.11 2008/09/28 09:12:22 loki_val Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,11 +25,11 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) CXX=$(tc-getCXX) || die
+	emake SHELL=/bin/bash CC=$(tc-getCC) CXX=$(tc-getCXX) || die
 }
 
 src_install() {
-	einstall || die
+	emake SHELL=/bin/bash prefix="${D}/usr" install || die
 	dohtml index.html
 }
 
