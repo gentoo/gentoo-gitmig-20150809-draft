@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.40 2008/08/05 01:52:10 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.41 2008/09/28 14:55:49 maekke Exp $
+
+  28 Sep 2008; Markus Meier <maekke@gentoo.org> qtcurve-0.59.5.ebuild:
+  amd64/x86 stable, bug #238598
 
 *qtcurve-0.59.5 (05 Aug 2008)
 
