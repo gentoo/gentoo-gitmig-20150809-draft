@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9018 2008/09/28 04:08:36 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9019 2008/09/28 18:48:31 leio Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -43,16 +43,6 @@
 # Christian Parpart <trapni@gentoo.org> (25 Sep 2008)
 # for testing/experienced users only
 >=sys-fs/zfs-fuse-9999
-
-# Mart Raudsepp <leio@gentoo.org> (25 Sep 2008)
-# Temporarily masked for build testing library users first
-# and to get gtk+, gail and libgnomeui to ~arch at the same
-# time for a clean migration on upgrade
->=dev-libs/glib-2.18
->=x11-libs/gtk+-2.14
->=gnome-base/gail-1000
->=dev-util/intltool-0.40
->=gnome-base/libgnomeui-2.24
 
 # Robin H. Johnson <robbat2@gentoo.org> (25 Sep 2008)
 # Mainly intended for BSD world. Has multiple interface support.
