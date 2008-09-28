@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.206 2008/09/27 23:57:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.207 2008/09/28 00:23:05 loki_val Exp $
+
+  28 Sep 2008; Peter Alfredsen <loki_val@gentoo.org>
+  cdrtools-2.01.01_alpha50.ebuild:
+  Restrict to -j1, parallel make may fail. :-(
 
 *cdrtools-2.01.01_alpha50 (27 Sep 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha50.ebuild,v 1.1 2008/09/27 23:57:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha50.ebuild,v 1.2 2008/09/28 00:23:05 loki_val Exp $
 
 inherit multilib eutils toolchain-funcs flag-o-matic
 
@@ -68,7 +68,8 @@ src_compile() {
 			ewarn "cdrtools with unicode in USE. unicode flag will be ignored."
 		fi
 	fi
-	emake CC="$(tc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
+	#Parallel make bug
+	emake -j1 CC="$(tc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
 }
 
 src_install() {
