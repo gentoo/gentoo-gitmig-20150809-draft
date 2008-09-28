@@ -1,9 +1,6 @@
 # ChangeLog for dev-python/clientform
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/ChangeLog,v 1.21 2008/09/28 12:36:08 maekke Exp $
-
-  28 Sep 2008; Markus Meier <maekke@gentoo.org> ChangeLog:
-  x86 stable, bug #235445
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/ChangeLog,v 1.22 2008/09/28 12:41:00 maekke Exp $
 
   22 Sep 2007; nixnut <nixnut@gentoo.org> clientform-0.2.7.ebuild:
   Stable on ppc wrt bug 191489
