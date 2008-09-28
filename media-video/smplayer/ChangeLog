@@ -1,9 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.40 2008/09/28 13:11:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.41 2008/09/28 13:35:19 jer Exp $
 
   28 Sep 2008; Jeroen Roovers <jer@gentoo.org> smplayer-0.6.2-r1.ebuild:
-  Stable for HPPA (bug #238788 ).
+  Stable for HPPA (bug #238788).
 
   28 Sep 2008; Raúl Porcel <armin76@gentoo.org> smplayer-0.6.2-r1.ebuild:
   alpha/sparc/x86 stable wrt #238788
