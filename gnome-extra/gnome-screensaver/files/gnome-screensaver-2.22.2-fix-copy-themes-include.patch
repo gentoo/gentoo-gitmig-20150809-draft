@@ -1,0 +1,22 @@
+Retrieved from http://svn.gnome.org/viewvc/gnome-screensaver/trunk/src/copy-theme-dialog.c?r1=1357&r2=1462&view=patch
+Fixes build compatibility against gtk+-2.14
+
+--- trunk/src/copy-theme-dialog.c	2008/01/31 03:10:09	1357
++++ trunk/src/copy-theme-dialog.c	2008/07/03 13:17:17	1462
+@@ -21,12 +21,14 @@
+ # include "config.h"
+ #endif
+ 
++#include <sys/stat.h>
++#include <limits.h>
++#include <string.h>
++
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+ #include <gio/gio.h>
+-#include <limits.h>
+-#include <string.h>
+ 
+ #include "copy-theme-dialog.h"
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.22.2.ebuild,v 1.6 2008/09/25 15:04:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.22.2.ebuild,v 1.7 2008/09/28 08:13:01 leio Exp $
 
 inherit eutils gnome2
 
@@ -69,6 +69,9 @@ src_unpack() {
 
 	# fix bug #201019
 	epatch "${FILESDIR}/${PN}-2.20.0-fix-gamma.patch"
+
+	# Fix compatibility with gtk+-2.14
+	epatch "${FILESDIR}/${P}-fix-copy-themes-include.patch"
 }
 
 src_install() {
