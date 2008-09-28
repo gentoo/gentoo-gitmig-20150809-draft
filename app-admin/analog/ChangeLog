@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.36 2008/09/27 20:41:46 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.37 2008/09/28 12:07:10 gentoofan23 Exp $
+
+  28 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org> analog-6.0.ebuild:
+  stable amd64, bug 238859
 
   27 Sep 2008; Ferris McCormick <fmccor@gentoo.org> analog-6.0.ebuild:
   Sparc stable --- Bug #238859 --- been around almost 3 years now.
