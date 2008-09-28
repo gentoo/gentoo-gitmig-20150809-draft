@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.14.3.ebuild,v 1.1 2008/09/25 10:05:31 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.14.3.ebuild,v 1.2 2008/09/28 10:36:40 leio Exp $
 
 WANT_AUTOMAKE="1.7"
 
@@ -74,6 +74,9 @@ src_unpack() {
 
 	# Workaround adobe flash infinite loop. Patch from http://bugzilla.gnome.org/show_bug.cgi?id=463773#c11
 	epatch "${FILESDIR}/${PN}-2.12.0-flash-workaround.patch"
+
+	# ...
+	epatch "${FILESDIR}/${P}-limit-gtksignal-includes.patch"
 
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2
