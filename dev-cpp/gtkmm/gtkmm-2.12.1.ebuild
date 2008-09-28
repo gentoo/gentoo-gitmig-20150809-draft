@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.12.1.ebuild,v 1.11 2008/07/10 15:16:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.12.1.ebuild,v 1.12 2008/09/28 14:00:23 leio Exp $
 
 inherit gnome2 autotools
 
@@ -29,4 +29,11 @@ pkg_setup() {
 			$(use_enable doc docs) \
 			$(use_enable examples)
 			$(use_enable examples demos)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Fix build with gtk+-2.14
+	epatch "${FILESDIR}/${PN}-2.12.7-gtk2_14-compatibility.patch"
 }

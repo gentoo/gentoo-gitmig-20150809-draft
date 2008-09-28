@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.12.7.ebuild,v 1.7 2008/08/12 19:32:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.12.7.ebuild,v 1.8 2008/09/28 14:00:23 leio Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="C++ interface for GTK+2"
 HOMEPAGE="http://www.gtkmm.org"
@@ -33,6 +33,9 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+
+	# Fix build with gtk+-2.14
+	epatch "${FILESDIR}/${P}-gtk2_14-compatibility.patch"
 
 	if ! use test; then
 		# don't waste time building tests
