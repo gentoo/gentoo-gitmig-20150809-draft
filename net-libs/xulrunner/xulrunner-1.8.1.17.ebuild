@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.17.ebuild,v 1.4 2008/09/27 10:17:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.17.ebuild,v 1.5 2008/09/28 13:14:58 maekke Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}-source.tar.bz2
 
 SLOT="1.8"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=sys-libs/zlib-1.1.4
