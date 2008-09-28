@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.62 2008/09/22 20:44:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.63 2008/09/28 09:45:19 armin76 Exp $
+
+  28 Sep 2008; Raúl Porcel <armin76@gentoo.org> gpac-0.4.4-r1.ebuild:
+  alpha/sparc/x86 stable wrt #237032
 
   22 Sep 2008; Alexis Ballier <aballier@gentoo.org> gpac-0.4.4-r1.ebuild:
   bump patchset to include a patch to fix build with latest ffmpeg
