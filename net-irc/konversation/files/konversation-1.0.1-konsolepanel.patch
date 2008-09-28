@@ -1,4 +1,4 @@
---- /var/tmp/portage/net-irc/konversation-1.0.1-r2/work/konversation-1.0.1/konversation/src/konsolepanel.h	2006-10-06 18:43:29.000000000 +0200
+--- konversation~/src/konsolepanel.h	2006-10-06 18:43:29.000000000 +0200
 +++ konversation/src/konsolepanel.h	2007-08-16 16:25:09.000000000 +0200
 @@ -13,8 +13,10 @@
  #define KONSOLE_PANEL_H
@@ -20,7 +20,7 @@
      signals:
          void closeView(ChatWindow* view);
  
---- /var/tmp/portage/net-irc/konversation-1.0.1-r2/work/konversation-1.0.1/konversation/src/konsolepanel.cpp	2006-10-06 18:43:29.000000000 +0200
+--- konversation~/src/konsolepanel.cpp	2006-10-06 18:43:29.000000000 +0200
 +++ konversation/src/konsolepanel.cpp	2007-08-16 16:25:09.000000000 +0200
 @@ -9,15 +9,16 @@
    Copyright (C) 2003 Mickael Marchand <marchand@kde.org>

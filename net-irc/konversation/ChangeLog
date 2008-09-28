@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/konversation
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.69 2008/08/10 23:43:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.70 2008/09/28 15:51:55 keytoaster Exp $
+
+  28 Sep 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  files/konversation-1.0.1-konsolepanel.patch:
+  Removing absolute paths in patch, bug #238713
 
 *konversation-1.1 (10 Aug 2008)
 
