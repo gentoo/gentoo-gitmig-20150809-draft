@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/pyaim-t-0.8a.ebuild,v 1.4 2008/05/29 17:38:14 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/pyaim-t-0.8a.ebuild,v 1.5 2008/09/28 12:34:07 gentoofan23 Exp $
 
 NEED_PYTHON=2.3
 
@@ -12,7 +12,7 @@ SRC_URI="http://pyaimt.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="webinterface"
 
 DEPEND="net-im/jabber-base"
