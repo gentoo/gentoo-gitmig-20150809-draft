@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.9 2008/09/28 16:19:06 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.10 2008/09/28 18:52:16 jmbsvicetto Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -21,7 +21,15 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 
 DEPEND=">=dev-util/cmake-2.4.6"
 
-EXPORT_FUNCTIONS src_configure src_compile src_test src_install
+case ${EAPI} in
+	2)
+		EXPORT_FUNCTIONS src_configure src_compile src_test src_install
+		;;
+	*)
+		EXPORT_FUNCTIONS src_compile src_test src_install
+		;;
+esac
+
 
 # Internal function use by cmake-utils_use_with and cmake-utils_use_enable
 _use_me_now() {
@@ -90,7 +98,7 @@ cmake-utils_src_configure() {
 # eapi and based on it configure or only compile
 cmake-utils_src_compile() {
 	case ${EAPI} in
-		2 | 2_pre3 | 2_pre2 | 2_pre1)
+		2)
 		;;
 	*)
 		cmake-utils_src_configure
