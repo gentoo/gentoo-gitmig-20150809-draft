@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha50.ebuild,v 1.2 2008/09/28 00:23:05 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha50.ebuild,v 1.3 2008/09/28 00:28:13 loki_val Exp $
 
 inherit multilib eutils toolchain-funcs flag-o-matic
 
@@ -76,7 +76,7 @@ src_install() {
 	emake INS_BASE="${D}/usr/" install
 	#These symlinks are for compat with cdrkit.
 	dosym schily /usr/include/scsilib
-	dosym ../../scg /usr/include/schily/scg
+	dosym ../scg /usr/include/schily/scg
 }
 
 pkg_postinst() {
