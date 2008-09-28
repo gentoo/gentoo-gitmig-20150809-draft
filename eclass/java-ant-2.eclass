@@ -14,7 +14,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.38 2008/07/07 16:54:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.39 2008/09/28 15:47:48 caster Exp $
 
 inherit java-utils-2
 
@@ -63,7 +63,7 @@ fi
 
 # We need some tools from javatoolkit. We also need portage 2.1 for phase hooks
 # and ant dependencies constructed above
-DEPEND=">=dev-java/javatoolkit-0.2.0-r1 ${JAVA_PKG_PORTAGE_DEP} ${JAVA_ANT_E_DEPEND}"
+DEPEND=">=dev-java/javatoolkit-0.3.0-r2 ${JAVA_PKG_PORTAGE_DEP} ${JAVA_ANT_E_DEPEND}"
 
 # ------------------------------------------------------------------------------
 # @global JAVA_PKG_BSFIX
