@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.20 2008/07/21 09:35:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.21 2008/09/29 14:10:06 bicatali Exp $
+
+  29 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org> -ginac-1.4.1.ebuild,
+  ginac-1.4.3.ebuild:
+  Better doc installation, removed older 1.4.1 version
 
   21 Jul 2008; Sébastien Fabbro <bicatali@gentoo.org> ginac-1.4.3.ebuild:
   Added dev-texlive/fontsrecommended as a dependency when doc flag is
