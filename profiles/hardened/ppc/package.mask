@@ -1,6 +1,9 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.13 2008/09/29 02:46:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.14 2008/09/29 19:14:37 corsair Exp $
+
+# needs >=sys-devel/gcc-4.2
+sys-libs/libfreevec
 
 # Mart Raudsepp <leio@gentoo.org> (07 Sep 2008)
 # The Great GNOME 2.22 Mask (tm) #218794
