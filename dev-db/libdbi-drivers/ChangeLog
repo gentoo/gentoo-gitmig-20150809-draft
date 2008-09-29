@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/libdbi-drivers
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.26 2008/05/21 15:54:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.27 2008/09/29 02:41:13 robbat2 Exp $
+
+*libdbi-drivers-0.8.3 (29 Sep 2008)
+
+  29 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +libdbi-drivers-0.8.3.ebuild:
+  Version bump per bug #237993.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   libdbi-drivers-0.7.1-r1.ebuild, libdbi-drivers-0.8.0.ebuild,
