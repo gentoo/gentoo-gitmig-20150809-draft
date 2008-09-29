@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.2.0.ebuild,v 1.2 2008/09/28 21:31:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.2.0.ebuild,v 1.3 2008/09/29 23:55:45 jer Exp $
 
 NEED_PYTHON=2.4
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 
 IUSE="lapack test"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~sparc ~x86"
 LICENSE="BSD"
 
 # whatever LDFLAGS set will break linking
