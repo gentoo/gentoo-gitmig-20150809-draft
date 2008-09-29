@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.1-r1.ebuild,v 1.9 2008/05/21 15:54:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.1-r1.ebuild,v 1.10 2008/09/29 02:47:33 robbat2 Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SLOT=0
 
 src_unpack() {
 	unpack ${A}
-	EPATCH_OPTS="-p1 -d${S}" epatch ${FILESDIR}/${P}-oci8.diff
+	EPATCH_OPTS="-p1 -d${S}" epatch "${FILESDIR}"/${P}-oci8.diff
 }
 
 src_compile() {
@@ -51,6 +51,6 @@ src_compile() {
 }
 
 src_install () {
-	emake install DESTDIR=${D} || die "make install failed"
-	dodoc AUTHORS ChangeLog COPYING NEWS README README.osx TODO
+	emake install DESTDIR="${D}" || die "make install failed"
+	dodoc AUTHORS ChangeLog NEWS README README.osx TODO
 }
