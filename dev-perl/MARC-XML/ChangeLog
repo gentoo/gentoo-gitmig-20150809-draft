@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/MARC-XML
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-XML/ChangeLog,v 1.1 2008/09/29 02:07:52 robbat2 Exp $
+
+*MARC-XML-0.88 (29 Sep 2008)
+
+  29 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +MARC-XML-0.88.ebuild:
+  New ebuild by Robin H. Johnson <robbat2@gentoo.org>. Dependancy for
+  OpenSRF/Evergreen.
+

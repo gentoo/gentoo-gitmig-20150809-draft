@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Class-DBI-AbstractSearch
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-AbstractSearch/ChangeLog,v 1.1 2008/09/29 02:06:41 robbat2 Exp $
+
+*Class-DBI-AbstractSearch-0.07 (29 Sep 2008)
+
+  29 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +Class-DBI-AbstractSearch-0.07.ebuild:
+  New ebuild by Robin H. Johnson <robbat2@gentoo.org>. Dependancy for
+  OpenSRF/Evergreen.
+
