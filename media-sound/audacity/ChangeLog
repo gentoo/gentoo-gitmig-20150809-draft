@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.104 2008/08/30 14:25:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.105 2008/09/29 05:49:43 flameeyes Exp $
+
+*audacity-1.3.5-r1 (29 Sep 2008)
+
+  29 Sep 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +audacity-1.3.5-r1.ebuild:
+  Add a new revision using EAPI=2 and USE dependencies.
 
   30 Aug 2008; Brent Baude <ranger@gentoo.org> audacity-1.3.5.ebuild:
   stable ppc, bug 231497
