@@ -1,9 +1,9 @@
 # Copyright 2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/package.mask,v 1.1 2008/09/07 02:20:41 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/package.mask,v 1.2 2008/09/29 02:46:53 vapier Exp $
 
 # Mart Raudsepp <leio@gentoo.org> (07 Sep 2008)
-# The Great GNOME 2.22 Mask (tm)
+# The Great GNOME 2.22 Mask (tm) #218794
 # Will be unmasked when everything is keyworded.
 >=app-accessibility/dasher-4.7
 >=app-accessibility/gnome-mag-0.15.0

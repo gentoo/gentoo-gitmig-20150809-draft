@@ -1,9 +1,9 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.12 2008/09/12 15:51:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.13 2008/09/29 02:46:56 vapier Exp $
 
 # Mart Raudsepp <leio@gentoo.org> (07 Sep 2008)
-# The Great GNOME 2.22 Mask (tm)
+# The Great GNOME 2.22 Mask (tm) #218794
 # Will be unmasked when everything is keyworded.
 >=app-accessibility/dasher-4.7
 >=app-accessibility/gnome-mag-0.15.0

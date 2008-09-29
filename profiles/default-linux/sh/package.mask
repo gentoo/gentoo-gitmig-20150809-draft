@@ -1,5 +1,5 @@
 # Mart Raudsepp <leio@gentoo.org> (22 Aug 2008)
-# The Great GNOME 2.22 Mask (tm)
+# The Great GNOME 2.22 Mask (tm) #218794
 >=gnome-base/libgtop-2.22
 >=x11-themes/gtk-engines-2.14
 >=gnome-base/libbonobo-2.22
