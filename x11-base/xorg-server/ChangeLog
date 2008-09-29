@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.355 2008/09/24 13:39:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.356 2008/09/29 18:47:53 dberkholz Exp $
+
+*xorg-server-1.5.1 (29 Sep 2008)
+
+  29 Sep 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.5.1/0001-only-build-dri2-when-DRI2-is-enabled.patch,
+  +xorg-server-1.5.1.ebuild:
+  (#238841) Version bump. (#236900) Re-enable XTrap and Record extensions
+  except when USE=minimal.
 
   24 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   xorg-server-1.5.0.ebuild:
