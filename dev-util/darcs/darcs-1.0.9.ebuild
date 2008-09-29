@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.9.ebuild,v 1.13 2008/06/17 00:19:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.9.ebuild,v 1.14 2008/09/29 21:56:33 kolmodin Exp $
 
 inherit base autotools eutils
 
@@ -17,7 +17,6 @@ IUSE="doc"
 
 DEPEND=">=net-misc/curl-7.10.2
 	>=dev-lang/ghc-6.2.2
-	<dev-lang/ghc-6.8
 	=dev-haskell/quickcheck-1*
 	dev-haskell/mtl
 	dev-haskell/html
@@ -43,7 +42,13 @@ pkg_setup() {
 src_unpack() {
 	base_src_unpack
 
+	# For GHC 6.8* compatibility, make sure
+	#  * the new openFd/fdToHandle API is found
+	#  * to use the containers package, if it exists
+	# Works with all GHC versions
 	cd "${S}"
+	epatch "${FILESDIR}/${PN}-1.1.0pre1-ghc68.patch"
+
 	epatch "${FILESDIR}/${P}-bashcomp.patch"
 
 	# If we're going to use the CFLAGS with GHC's -optc flag then we'd better
