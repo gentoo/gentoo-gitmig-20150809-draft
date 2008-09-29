@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.0.2.ebuild,v 1.2 2008/07/27 01:04:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.0.2.ebuild,v 1.3 2008/09/29 02:31:48 vapier Exp $
 
 EAPI="1"
 inherit cmake-utils eutils flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+clucene debug doc elibc_FreeBSD"
 RESTRICT="test"
 

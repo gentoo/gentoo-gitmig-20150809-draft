@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.8 2008/08/06 11:06:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.9 2008/09/29 02:31:48 vapier Exp $
+
+  29 Sep 2008; Mike Frysinger <vapier@gentoo.org> soprano-2.0.2.ebuild:
+  Add ~ppc love.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
