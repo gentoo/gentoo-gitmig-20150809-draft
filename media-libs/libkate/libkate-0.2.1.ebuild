@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.2.0.ebuild,v 1.3 2008/09/27 12:49:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.2.1.ebuild,v 1.1 2008/09/29 18:25:20 aballier Exp $
+
+inherit eutils autotools
 
 DESCRIPTION="Codec for karaoke and text encapsulation for Ogg"
 HOMEPAGE="http://code.google.com/p/libkate/"
@@ -16,7 +18,20 @@ RDEPEND="media-libs/libogg
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/flex
-	sys-devel/bison"
+	sys-devel/bison
+	doc? ( app-doc/doxygen )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-doc.patch"
+	eautoreconf
+}
+
+src_compile() {
+	econf $(use_enable doc)
+	emake || die "emake failed"
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"

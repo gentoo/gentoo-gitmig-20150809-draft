@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libkate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.8 2008/09/27 12:49:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.9 2008/09/29 18:25:20 aballier Exp $
+
+*libkate-0.2.1 (29 Sep 2008)
+
+  29 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/libkate-0.2.1-doc.patch, -libkate-0.2.0.ebuild,
+  +libkate-0.2.1.ebuild:
+  version bump and fix build without doxygen, bug #238858
 
   27 Sep 2008; Ferris McCormick <fmccor@gentoo.org> libkate-0.2.0.ebuild:
   Add ~sparc for testing.  Part of Bug #237813 and now needed for vlc.
