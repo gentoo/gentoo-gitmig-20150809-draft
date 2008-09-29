@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1905 2008/09/28 20:08:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1906 2008/09/29 06:47:08 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Sep 2008; Peter Volkov <pva@gentoo.org> package.mask:
+  Unmasking mediawiki-1.13.0 as broken ebuild was removed from the tree.
 
   28 Sep 2008; Peter Volkov <pva@gentoo.org> package.mask:
   Masked =www-apps/mediawiki-1.13.0, broken, bug #236411
