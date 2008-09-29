@@ -1,27 +1,25 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.1.1.ebuild,v 1.1 2008/01/22 16:24:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.1.2-r1.ebuild,v 1.1 2008/09/29 07:00:22 pva Exp $
 
 inherit eutils webapp depend.php
 
-IUSE="bundled-adodb"
 MY_P=mantis-${PV}
 
 DESCRIPTION="PHP/MySQL/Web based bugtracking system"
 HOMEPAGE="http://www.mantisbt.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-S=${WORKDIR}/${MY_P}
-
+LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
+IUSE=""
 
 RDEPEND="
 	virtual/httpd-php
 	virtual/httpd-cgi
-	!bundled-adodb? ( dev-php/adodb )
-"
+	dev-php/adodb"
 
-LICENSE="GPL-2"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	webapp_pkg_setup
@@ -33,13 +31,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	if ! use bundled-adodb ; then
-		sed -i -e \
-			"s:require_once( 'adodb/adodb.inc.php' );:require_once( \$t_core_dir . 'adodb/adodb.inc.php' );:" \
-			"${S}"/core/database_api.php
-	else
-		rm -r "${S}"/core/adodb/
-	fi
+	rm -r "${S}"/core/adodb/ # We use external adodb
+	epatch "${FILESDIR}"/${P}-svn-5369:5587.patch
 }
 
 src_install() {

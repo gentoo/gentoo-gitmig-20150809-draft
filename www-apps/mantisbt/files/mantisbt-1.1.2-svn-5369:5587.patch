@@ -1,0 +1,319 @@
+Index: doc/ChangeLog
+===================================================================
+--- doc/ChangeLog	(revision 5369)
++++ doc/ChangeLog	(revision 5587)
+@@ -2,6 +2,8 @@
+ 
+ 2008.06.17  -  1.1.2
+ ====================
++This release focused on fixing few security issues; also includes assorted fixes for translations, usability and compatibility (most notably, with postgres) and a nasty memory leak on the string API causing incomplete rendering of pages. All users are advised to upgrade.
++
+ - 0008974: [security] XSS Vulnerability in filters (thraxisp) - closed.
+ - 0008975: [security] CSRF Vulnerabilities in user_create (jreese) - closed.
+ - 0008976: [security] Remote Code Execution in adm_config (giallu) - closed.
+Index: config_defaults_inc.php
+===================================================================
+--- config_defaults_inc.php	(revision 5369)
++++ config_defaults_inc.php	(revision 5587)
+@@ -149,6 +149,9 @@
+ 	#   'memcached' -> Memcached storage sessions
+ 	$g_session_handler = 'php';
+ 
++	# Session save path.  If false, uses default value as set by session handler.
++	$g_session_save_path = false;
++
+ 	#############################
+ 	# Configuration Settings
+ 	#############################
+@@ -1938,4 +1941,4 @@
+ 	
+ 	# The twitter account password.
+ 	$g_twitter_password = '';
+-?>
++
+Index: bug_graph_bystatus.php
+===================================================================
+--- bug_graph_bystatus.php	(revision 5369)
++++ bug_graph_bystatus.php	(revision 5587)
+@@ -148,6 +148,8 @@
+ 	}
+ 	
+     ksort($t_view_status);
++    $t_label_string = lang_get('orct'); //use the (open/resolved/closed/total) label
++    $t_label_strings = explode('/', substr($t_label_string, 1, strlen($t_label_string)-2));
+     
+     // add headers for table
+     if ($f_show_as_table) {
+@@ -159,9 +161,9 @@
+     	html_body_begin();
+ 	    echo '<table class="width100"><tr><td></td>';
+         if ($f_summary) {
+-            echo '<th>' . lang_get_defaulted('open') . '</th>';
+-            echo '<th>' . lang_get_defaulted('resolved') . '</th>';
+-            echo '<th>' . lang_get_defaulted('closed') . '</th>';
++            echo '<th>' . $t_label_strings[0] . '</th>';
++            echo '<th>' . $t_label_strings[1] . '</th>';
++            echo '<th>' . $t_label_strings[2] . '</th>';
+         } else {
+             foreach ( $t_view_status as $t_status => $t_label ) {
+                 echo '<th>'.$t_label.' ('.$t_status.')</th>';
+@@ -176,9 +178,9 @@
+ 	$t_labels = array();
+ 	$i = 0;
+     if ($f_summary) {
+-        $t_labels[++$i] = lang_get_defaulted('open');
+-        $t_labels[++$i] = lang_get_defaulted('resolved');
+-        $t_labels[++$i] = lang_get_defaulted('closed');
++        $t_labels[++$i] = $t_label_strings[0];
++        $t_labels[++$i] = $t_label_strings[1];
++        $t_labels[++$i] = $t_label_strings[2];
+     } else {
+         foreach ( $t_view_status as $t_status => $t_label ) {
+             $t_labels[++$i] = isset($t_status_labels[$t_status]) ? $t_status_labels[$t_status] : lang_get_defaulted($t_label);
+@@ -228,6 +230,6 @@
+     	html_body_end();
+     	html_end();
+     } else {
+-	    graph_bydate( $t_metrics, $t_labels, lang_get( 'by_category' ), $f_width, $f_width * $t_ar );
++	    graph_bydate( $t_metrics, $t_labels, lang_get( 'by_status' ), $f_width, $f_width * $t_ar );
+ 	}
+ ?>
+\ No newline at end of file
+Index: manage_user_prune.php
+===================================================================
+--- manage_user_prune.php	(revision 5369)
++++ manage_user_prune.php	(revision 5587)
+@@ -1,4 +1,4 @@
+-2<?php
++<?php
+ # Mantis - a php based bugtracking system
+ 
+ # Copyright (C) 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
+Index: manage_proj_edit_page.php
+===================================================================
+--- manage_proj_edit_page.php	(revision 5369)
++++ manage_proj_edit_page.php	(revision 5587)
+@@ -527,7 +527,8 @@
+ 				<td class="center">
+ 				<?php
+ 					# You need global permissions to edit custom field defs
+-					print_button( "manage_proj_custom_field_remove.php?field_id={$t_field_id}&amp;project_id={$f_project_id}", lang_get( 'remove_link' ) );
++					$t_remove_token = form_security_param( 'manage_proj_custom_field_remove' );
++					print_button( "manage_proj_custom_field_remove.php?field_id={$t_field_id}&amp;project_id={$f_project_id}$t_remove_token", lang_get( 'remove_link' ) );
+ 				?>
+ 				</td>
+ 			</tr>
+Index: core/bug_api.php
+===================================================================
+--- core/bug_api.php	(revision 5369)
++++ core/bug_api.php	(revision 5587)
+@@ -1264,9 +1264,6 @@
+ 					# the relationship type is already set. Nothing to do
+ 				}
+ 				else if ( $t_id_relationship > 0 ) {
+-					# there is already a relationship between them -> we have to update it and not to add a new one
+-					helper_ensure_confirmed( lang_get( 'replace_relationship_sure_msg' ), lang_get( 'replace_relationship_button' ) );
+-
+ 					# Update the relationship
+ 					relationship_update( $t_id_relationship, $p_bug_id, $p_duplicate_id, BUG_DUPLICATE );
+ 
+Index: core/print_api.php
+===================================================================
+--- core/print_api.php	(revision 5369)
++++ core/print_api.php	(revision 5587)
+@@ -304,7 +304,7 @@
+ 		?>
+ 		<input type="hidden" id="tag_separator" value="<?php echo config_get( 'tag_separator' ) ?>" />
+ 		<input type="text" name="tag_string" id="tag_string" size="40" value="<?php echo string_attribute( $p_string ) ?>" />
+-		<select <?php echo helper_get_tab_index() ?> name="tag_select" id="tag_select">
++		<select <?php echo helper_get_tab_index() ?> name="tag_select" id="tag_select" onchange="tag_string_append( this.options[ this.selectedIndex ].text );">
+ 			<?php print_tag_option_list( $p_bug_id ); ?>
+ 		</select>
+ 		<?php
+@@ -334,7 +334,7 @@
+ 
+ 		echo '<option value="0">',lang_get( 'tag_existing' ),'</option>';
+ 		while ( $row = db_fetch_array( $result ) ) {
+-			echo '<option value="',$row['id'],'" onclick="tag_string_append(\'',$row['name'],'\')">',$row['name'],'</option>';
++			echo '<option value="',$row['id'],'">',$row['name'],'</option>';
+ 		}
+ 	}
+ 
+Index: core/user_api.php
+===================================================================
+--- core/user_api.php	(revision 5369)
++++ core/user_api.php	(revision 5587)
+@@ -655,10 +655,22 @@
+ 		} else {
+ 			$t_default_image = config_get( 'default_avatar' );
+ 			$t_size = 80;
+-			$t_avatar_url = "http://www.gravatar.com/avatar.php?gravatar_id=" . md5( $t_email ) .
+-				"&amp;default=" . urlencode( $t_default_image ) .
+-				"&amp;size=" . $t_size .
+-				"&amp;rating=G";
++
++			$t_use_ssl = false;
++			if ( isset( $_SERVER['HTTPS'] ) && ( strtolower( $_SERVER['HTTPS'] ) != 'off' ) ) {
++				$t_use_ssl = true;
++			}
++
++			if ( !$t_use_ssl ) {
++				$t_gravatar_domain = 'http://www.gravatar.com/';
++			} else {
++				$t_gravatar_domain = 'https://secure.gravatar.com/';
++			}
++
++			$t_avatar_url = $t_gravatar_domain . 'avatar.php?gravatar_id=' . md5( $t_email ) .
++				'&amp;default=' . urlencode( $t_default_image ) .
++				'&amp;size=' . $t_size .
++				'&amp;rating=G';
+ 			$t_result = array( $t_avatar_url, $t_size, $t_size );
+ 		}
+ 
+Index: core/bugnote_api.php
+===================================================================
+--- core/bugnote_api.php	(revision 5369)
++++ core/bugnote_api.php	(revision 5587)
+@@ -99,7 +99,7 @@
+ 	# Add a bugnote to a bug
+ 	#
+ 	# return the ID of the new bugnote
+-	function bugnote_add ( $p_bug_id, $p_bugnote_text, $p_time_tracking = '0:00', $p_private = false, $p_type = 0, $p_attr = '', $p_user_id = null ) {
++	function bugnote_add ( $p_bug_id, $p_bugnote_text, $p_time_tracking = '0:00', $p_private = false, $p_type = 0, $p_attr = '', $p_user_id = null, $p_send_email = TRUE ) {
+ 		$c_bug_id            	= db_prepare_int( $p_bug_id );
+ 		$c_bugnote_text      	= db_prepare_string( $p_bugnote_text );
+ 		$c_time_tracking	= db_prepare_time( $p_time_tracking );
+Index: core/session_api.php
+===================================================================
+--- core/session_api.php	(revision 5369)
++++ core/session_api.php	(revision 5587)
+@@ -49,6 +49,15 @@
+  */
+ class MantisPHPSession extends MantisSession {
+ 	function __construct() {
++		$t_session_save_path = config_get_global( 'session_save_path' );
++		if ( $t_session_save_path ) {
++			session_save_path( $t_session_save_path );
++		}
++
++		session_cache_limiter( 'private_no_expire' );
++		if ( isset( $_SERVER['HTTPS'] ) && ( strtolower( $_SERVER['HTTPS'] ) != 'off' ) ) {
++			session_set_cookie_params( 0, config_get( 'cookie_path' ), config_get( 'cookie_domain' ), true, true );
++		}
+ 		session_start();
+ 		$this->id = session_id();
+ 	}
+Index: core/string_api.php
+===================================================================
+--- core/string_api.php	(revision 5369)
++++ core/string_api.php	(revision 5587)
+@@ -306,7 +306,7 @@
+ 		if ( !isset( $string_process_bug_link_callback[$p_include_anchor][$p_detail_info][$p_fqdn] ) ) {
+ 			if ($p_include_anchor) {
+ 				$string_process_bug_link_callback[$p_include_anchor][$p_detail_info][$p_fqdn] = create_function('$p_array','
+-										if (bug_exists( (int)$p_array[2] ) ) { 
++										if ( bug_exists( (int)$p_array[2] ) && access_has_bug_level( VIEWER, (int)$p_array[2] ) ) {
+ 											return $p_array[1] . string_get_bug_view_link( (int)$p_array[2], null, ' . ($p_detail_info ? 'true' : 'false') . ', ' . ($p_fqdn ? 'true' : 'false') . ');
+ 										} else {    	
+ 											return $p_array[0];
+Index: bug_update.php
+===================================================================
+--- bug_update.php	(revision 5369)
++++ bug_update.php	(revision 5587)
+@@ -31,8 +31,6 @@
+ 	require_once( $t_core_path.'bugnote_api.php' );
+ 	require_once( $t_core_path.'custom_field_api.php' );
+ 
+-	form_security_validate( 'bug_update' );
+-
+ 	$f_bug_id = gpc_get_int( 'bug_id' );
+ 	$f_update_mode = gpc_get_bool( 'update_mode', FALSE ); # set if called from generic update page
+ 	$f_new_status	= gpc_get_int( 'status', bug_get_field( $f_bug_id, 'status' ) );
+@@ -140,6 +138,8 @@
+ 		}
+ 	}
+ 
++	form_security_validate( 'bug_update' );
++
+ 	$t_notify = true;
+ 	$t_bug_note_set = false;
+ 	if ( ( $t_old_bug_status != $t_bug_data->status ) && ( FALSE == $f_update_mode ) ) {
+Index: manage_config_work_threshold_page.php
+===================================================================
+--- manage_config_work_threshold_page.php	(revision 5369)
++++ manage_config_work_threshold_page.php	(revision 5587)
+@@ -322,6 +322,7 @@
+ 	
+ 	if ( $t_show_submit && ( 0 < count( $t_overrides ) ) ) {
+         echo "<div class=\"right\"><form name=\"threshold_config_action\" method=\"post\" action=\"manage_config_revert.php\">\n";
++		echo form_security_field( 'manage_config_revert' );
+         echo "<input name=\"revert\" type=\"hidden\" value=\"" . implode( ',', $t_overrides ) . "\"></input>";
+         echo "<input name=\"project\" type=\"hidden\" value=\"$t_project_id\"></input>";
+         echo "<input name=\"return\" type=\"hidden\" value=\"" . $_SERVER['PHP_SELF'] ."\"></input>";
+Index: adm_config_set.php
+===================================================================
+--- adm_config_set.php	(revision 5369)
++++ adm_config_set.php	(revision 5587)
+@@ -81,7 +81,7 @@
+ 		# 2. simple arrays with the form: array( a, b, c, d )
+ 		# 3. associative arrays with the form: array( a=>1, b=>2, c=>3, d=>4 )
+ 		$t_full_string = trim( $f_value );
+-		if ( preg_match('/array\((.*)\)/', $t_full_string, $t_match ) === 1 ) {
++		if ( preg_match('/array[\s]*\((.*)\)/', $t_full_string, $t_match ) === 1 ) {
+ 			// we have an array here
+ 			$t_values = split( ',', trim( $t_match[1] ) );
+ 			foreach ( $t_values as $key => $value ) {
+Index: roadmap_page.php
+===================================================================
+--- roadmap_page.php	(revision 5369)
++++ roadmap_page.php	(revision 5587)
+@@ -195,7 +195,7 @@
+ 				$t_issue_id = $t_issue_ids[$k];
+ 				$t_issue_parent = $t_issue_parents[$k];
+ 				
+-				if ( in_array( $t_issue_id, $t_cycle_ids ) || in_array( $t_parent_id, $t_cycle_ids ) ) {
++				if ( in_array( $t_issue_id, $t_cycle_ids ) || in_array( $t_issue_parent, $t_cycle_ids ) ) {
+ 					$t_cycle = true;
+ 				} else {
+ 					$t_cycle = false;
+Index: core.php
+===================================================================
+--- core.php	(revision 5369)
++++ core.php	(revision 5587)
+@@ -144,15 +144,33 @@
+ 	# OPENED ANYWHERE ELSE.
+ 	require_once( $t_core_path.'database_api.php' );
+ 
++	# Basic browser detection
++	$t_user_agent = $_SERVER['HTTP_USER_AGENT'];
++
++	$t_browser_name = 'Normal';
++	if ( strpos( $t_user_agent, 'MSIE' ) ) {
++		$t_browser_name = 'IE';
++	}
++
+ 	# Headers to prevent caching
+ 	#  with option to bypass if running from script
+ 	global $g_bypass_headers, $g_allow_browser_cache;
+ 	if ( !isset( $g_bypass_headers ) && !headers_sent() ) {
+-		if ( ! isset( $g_allow_browser_cache ) ) {
+-			header( 'Pragma: no-cache' );
++
++		if ( isset( $g_allow_browser_cache ) ) {
++			switch ( $t_browser_name ) {
++			case 'IE':
++				header( 'Cache-Control: private, proxy-revalidate' );
++				break;
++			default:
++				header( 'Cache-Control: private, must-revalidate' );
++				break;
++			}
++
++		} else {
+ 			header( 'Cache-Control: no-store, no-cache, must-revalidate' );
+-			header( 'Cache-Control: post-check=0, pre-check=0', false );
+ 		}
++
+ 		header( 'Expires: ' . gmdate( 'D, d M Y H:i:s \G\M\T', time() ) );
+ 
+ 		# SEND USER-DEFINED HEADERS
