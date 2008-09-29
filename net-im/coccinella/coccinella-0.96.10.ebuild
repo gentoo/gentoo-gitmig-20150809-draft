@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.96.10.ebuild,v 1.2 2008/09/28 22:40:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/coccinella/coccinella-0.96.10.ebuild,v 1.3 2008/09/29 03:58:24 mr_bones_ Exp $
+
+inherit eutils
 
 NAME=Coccinella
 DESCRIPTION="Jabber Client With a Built-in Whiteboard and VoIP (jingle)"
 HOMEPAGE="http://www.thecoccinella.org/"
 SRC_URI="mirror://sourceforge/coccinella/${NAME}-${PV}Src.tar.gz"
-
-inherit eutils
 
 LICENSE="GPL-3"
 SLOT="0"
