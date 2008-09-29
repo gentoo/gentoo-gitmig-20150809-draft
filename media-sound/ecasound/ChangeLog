@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ecasound
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.48 2008/09/29 05:55:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.49 2008/09/29 09:05:39 flameeyes Exp $
+
+  29 Sep 2008; Diego Pettenò <flameeyes@gentoo.org>
+  ecasound-2.5.2-r1.ebuild:
+  Avoid double econf run with EAPI=2.
 
 *ecasound-2.5.2-r1 (29 Sep 2008)
 

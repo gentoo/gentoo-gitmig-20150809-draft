@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.5.2-r1.ebuild,v 1.1 2008/09/29 05:55:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.5.2-r1.ebuild,v 1.2 2008/09/29 09:05:39 flameeyes Exp $
 
 EAPI=2
 
@@ -30,7 +30,7 @@ DEPEND="python? ( dev-lang/python )
 	sndfile? ( media-libs/libsndfile )
 	sys-libs/readline"
 
-src_compile() {
+src_configure() {
 	local PYConf
 
 	if use python; then
@@ -56,8 +56,6 @@ src_compile() {
 		--with-largefile \
 		--enable-sys-readline \
 		${PYConf} || die "econf failed"
-
-	emake || die "emake failed"
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.8-r1.ebuild,v 1.1 2008/09/29 05:58:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.8-r1.ebuild,v 1.2 2008/09/29 09:06:11 flameeyes Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use alsa; then
@@ -55,8 +55,6 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_with readline) \
 		${myconf} || die "./configure failed"
-
-	emake || die "make failed"
 }
 
 src_install() {
