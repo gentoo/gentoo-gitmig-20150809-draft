@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/stella
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.31 2008/07/24 17:53:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.32 2008/09/29 16:24:20 mr_bones_ Exp $
+
+  29 Sep 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  files/stella-2.6.1-gcc43.patch:
+  additional gcc43 patching from Tomáš Chvátal via bug #238829
 
   24 Jul 2008; Raúl Porcel <armin76@gentoo.org> stella-2.6.1.ebuild:
   x86 stable wrt #232223
