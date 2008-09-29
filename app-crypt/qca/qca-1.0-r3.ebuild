@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r3.ebuild,v 1.8 2008/09/28 12:38:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r3.ebuild,v 1.9 2008/09/29 18:00:31 jmbsvicetto Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="x11-libs/qt:3"
-RDEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
