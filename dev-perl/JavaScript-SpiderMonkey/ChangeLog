@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/JavaScript-SpiderMonkey
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JavaScript-SpiderMonkey/ChangeLog,v 1.1 2008/09/29 01:52:55 robbat2 Exp $
+
+*JavaScript-SpiderMonkey-0.19 (29 Sep 2008)
+
+  29 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +JavaScript-SpiderMonkey-0.19.ebuild:
+  Add JavaScript-SpiderMonkey. Dependancy for OpenSRF/Evergreen.
+
