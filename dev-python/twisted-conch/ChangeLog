@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.34 2008/08/24 11:26:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.35 2008/09/29 18:41:48 jer Exp $
+
+  29 Sep 2008; Jeroen Roovers <jer@gentoo.org> twisted-conch-8.1.0.ebuild:
+  Marked ~hppa (bug #234894).
 
   24 Aug 2008; Markus Rothe <corsair@gentoo.org> twisted-conch-8.1.0.ebuild:
   Stable on ppc64; bug #231675
