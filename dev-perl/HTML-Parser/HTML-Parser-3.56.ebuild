@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.56.ebuild,v 1.11 2008/09/29 07:45:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.56.ebuild,v 1.12 2008/09/29 07:52:32 tove Exp $
 
 MODULE_AUTHOR=GAAS
 inherit perl-module
@@ -10,9 +10,12 @@ DESCRIPTION="Parse <HEAD> section of HTML documents"
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE=""
+IUSE="test"
 
-DEPEND=">=dev-perl/HTML-Tagset-3.03
+RDEPEND=">=dev-perl/HTML-Tagset-3.03
 	dev-lang/perl"
+DEPEND="${RDEPEND}
+	test? ( dev-perl/Test-Pod )"
 
+SRC_TEST=do
 mydoc="ANNOUNCEMENT TODO"
