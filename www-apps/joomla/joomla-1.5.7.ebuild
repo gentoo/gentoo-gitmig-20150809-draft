@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.5.7.ebuild,v 1.1 2008/09/21 13:24:28 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.5.7.ebuild,v 1.2 2008/09/29 12:13:02 wrobel Exp $
 
 inherit webapp depend.php
 
@@ -16,6 +16,9 @@ need_httpd_cgi
 need_php_httpd
 
 S="${WORKDIR}"
+
+DEPEND="${DEPEND}
+	app-arch/unzip"
 
 pkg_setup () {
 	webapp_pkg_setup

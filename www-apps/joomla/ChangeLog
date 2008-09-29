@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.24 2008/09/21 13:24:28 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.25 2008/09/29 12:13:02 wrobel Exp $
+
+  29 Sep 2008; wrobel@gentoo.org joomla-1.5.7.ebuild:
+  www-apps/joomla-1.5.7 lacks dependency on app-arch/unzip (#238790)
 
 *joomla-1.5.7 (21 Sep 2008)
 
