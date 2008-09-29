@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.154 2008/09/29 07:38:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.155 2008/09/29 09:15:51 armin76 Exp $
+
+  29 Sep 2008; Raúl Porcel <armin76@gentoo.org> gallery-1.5.9.ebuild,
+  gallery-2.2.6.ebuild:
+  alpha/sparc/x86 stable wrt #238113
 
 *gallery-2.2.6 (29 Sep 2008)
 *gallery-1.5.9 (29 Sep 2008)

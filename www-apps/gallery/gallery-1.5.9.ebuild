@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.9.ebuild,v 1.1 2008/09/29 07:38:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-1.5.9.ebuild,v 1.2 2008/09/29 09:15:51 armin76 Exp $
 
 inherit webapp depend.php confutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gallery.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ~ppc sparc x86"
 IUSE="imagemagick netpbm unzip zip"
 
 RDEPEND="media-libs/jpeg
