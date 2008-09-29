@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.59.5.ebuild,v 1.3 2008/09/28 14:55:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.59.5.ebuild,v 1.4 2008/09/29 18:34:49 bluebird Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SRC_URI="http://home.freeuk.com/cpdrummond/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt:3"

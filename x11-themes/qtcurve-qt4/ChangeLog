@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.43 2008/09/29 16:17:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.44 2008/09/29 18:37:50 bluebird Exp $
+
+  29 Sep 2008; Friedrich Oslage <bluebird@gentoo.org>
+  qtcurve-qt4-0.59.6.ebuild:
+  Stable on sparc, bug #238598
 
   29 Sep 2008; Ben de Groot <yngwin@gentoo.org> qtcurve-qt4-0.59.6.ebuild:
   Adjusting kwin dep to >=4.1.0 instead of slot, as kde-testing overlay is
