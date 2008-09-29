@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-0.9.ebuild,v 1.1 2008/09/29 04:13:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-0.9.ebuild,v 1.2 2008/09/29 14:46:47 mr_bones_ Exp $
 
 inherit eutils multilib flag-o-matic apache-module
 
@@ -104,7 +104,7 @@ pkg_config() {
 	einfo "Using Jabber server at ${JABBER_SERVER}:${JABBER_PORT}"
 	einfo "Adding 'osrf' and 'router' users with password ${PASSWORD}"
 	cd "${ROOT}"/usr/share/doc/${PF}/examples
-	for user in osrf router ; do 
+	for user in osrf router ; do
 		perl register.pl ${JABBER_SERVER} ${JABBER_PORT} ${user} ${PASSWORD} \
 			|| die "Failed to add $user user to server"
 	done
