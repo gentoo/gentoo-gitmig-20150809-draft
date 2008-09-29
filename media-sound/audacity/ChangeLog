@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.105 2008/09/29 05:49:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.106 2008/09/29 08:28:51 aballier Exp $
+
+  29 Sep 2008; Alexis Ballier <aballier@gentoo.org>
+  audacity-1.3.5-r1.ebuild:
+  Call econf at src_configure with EAPI-2
 
 *audacity-1.3.5-r1 (29 Sep 2008)
 

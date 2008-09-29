@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.5-r1.ebuild,v 1.1 2008/09/29 05:49:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.5-r1.ebuild,v 1.2 2008/09/29 08:28:51 aballier Exp $
 
 EAPI=2
 
@@ -62,7 +62,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	WX_GTK_VER="2.8"
 	need-wxwidgets unicode
 
@@ -80,8 +80,6 @@ src_compile() {
 		$(use_with libsamplerate) \
 		$(use_with alsa) \
 		$(use_with jack)
-
-	emake || die
 }
 
 src_install() {
