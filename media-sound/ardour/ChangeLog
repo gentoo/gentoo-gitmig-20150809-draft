@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.79 2008/08/05 23:25:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.80 2008/09/29 05:40:14 flameeyes Exp $
+
+*ardour-2.5-r1 (29 Sep 2008)
+
+  29 Sep 2008; Diego Pettenò <flameeyes@gentoo.org> +ardour-2.5-r1.ebuild:
+  Add a new revision using EAPI=2 and USE dependencies.
 
   05 Aug 2008; Alexis Ballier <aballier@gentoo.org> ardour-2.5.ebuild:
   bump scons dep to latest available, will hopefuly fix bug #225695
