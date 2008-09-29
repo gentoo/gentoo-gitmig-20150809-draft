@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.110 2008/09/01 07:47:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.111 2008/09/29 06:38:47 pva Exp $
+
+*mediawiki-1.13.1 (29 Sep 2008)
+
+  29 Sep 2008; Peter Volkov <pva@gentoo.org> +files/postinstall-1.13-en.txt,
+  +files/postupgrade-1.13-en.txt, -mediawiki-1.11.1.ebuild,
+  -mediawiki-1.13.0.ebuild, +mediawiki-1.13.1.ebuild:
+  Version bump, remove old/broken. Should install all files, bug #236411,
+  thank Dan Johnston for report. Dropped access_restrict patch - let
+  administrator decide what to restrict, fixes bug #236872, thank Michael
+  Mair-Keimberger for report.
 
 *mediawiki-1.13.0 (01 Sep 2008)
 
