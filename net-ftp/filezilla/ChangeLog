@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.18 2008/09/21 18:58:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.19 2008/09/29 15:24:09 voyageur Exp $
+
+*filezilla-3.1.3.1 (29 Sep 2008)
+
+  29 Sep 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +filezilla-3.1.3.1.ebuild:
+  Version bump, fixes download speedlimits
 
 *filezilla-3.1.3 (21 Sep 2008)
 
