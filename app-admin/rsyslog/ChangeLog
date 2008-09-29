@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.14 2008/08/22 17:09:17 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.15 2008/09/29 12:03:18 dev-zero Exp $
+
+*rsyslog-3.21.4 (29 Sep 2008)
+*rsyslog-3.18.4 (29 Sep 2008)
+
+  29 Sep 2008; Tiziano Müller <dev-zero@gentoo.org> -rsyslog-3.18.3.ebuild,
+  +rsyslog-3.18.4.ebuild, -rsyslog-3.21.3.ebuild, +rsyslog-3.21.4.ebuild:
+  Version bump for stable and devel branch (changelog says we don't want
+  3.18.3 stable, so dropping it)
 
 *rsyslog-3.21.3 (22 Aug 2008)
 *rsyslog-3.18.3 (22 Aug 2008)
