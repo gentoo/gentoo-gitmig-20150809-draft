@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.6 2008/08/24 19:19:01 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.7 2008/09/29 12:48:18 gentoofan23 Exp $
+
+  29 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org> pms-99999999.ebuild:
+  Add ~amd64 keyword
 
   24 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml:
   Picking up maintainership
