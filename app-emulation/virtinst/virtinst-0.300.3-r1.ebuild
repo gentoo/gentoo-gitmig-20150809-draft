@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-0.300.3-r1.ebuild,v 1.1 2008/08/11 15:14:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/virtinst-0.300.3-r1.ebuild,v 1.2 2008/09/29 12:36:32 dev-zero Exp $
 
 inherit distutils eutils rpm
 
@@ -31,6 +31,6 @@ pkg_postinst() {
 	elog "Please select the following os-type/-variant if you want virtio_net and/or virtio_blk support:"
 	elog "|  os   |     variant    |  virtio_net | virtio_blk |"
 	elog "| linux |  gentoostable  |     yes     |     no     |"
-	elog "| linux | gentoounstable |     yes     |     no     |"
+	elog "| linux | gentoounstable |     yes     |     yes    |"
 	elog "| linux |   ubuntuHardy  |     yes     |     no     |"
 }

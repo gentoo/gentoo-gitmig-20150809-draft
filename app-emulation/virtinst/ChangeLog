@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.6 2008/08/11 15:14:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.7 2008/09/29 12:36:32 dev-zero Exp $
+
+  29 Sep 2008; Tiziano Müller <dev-zero@gentoo.org>
+  virtinst-0.300.3-r1.ebuild:
+  Fixed typo
 
 *virtinst-0.300.3-r1 (11 Aug 2008)
 
