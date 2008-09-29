@@ -10,13 +10,13 @@ depend() {
 }
 
 checkconfig() {
-	if [[ ! -d "${PUPPETMASTER_PID_DIR}" ]] ; then
+	if [ ! -d "${PUPPETMASTER_PID_DIR}" ] ; then
 		eerror "Please make sure PUPPETMASTER_PID_DIR is defined and points to a existing directory"
 		return 1
 	fi
 
 	local site_manifest="/etc/puppet/manifests/site.pp"
-	[[ -n "${PUPPETMASTER_MANIFEST}" ]] && site_manifest="${PUPPETMASTER_MANIFEST}"
+	[ -n "${PUPPETMASTER_MANIFEST}" ] && site_manifest="${PUPPETMASTER_MANIFEST}"
 
 	if [ ! -f "${site_manifest}" ] ; then
 		eerror "Please create ${site_manifest} before running puppet"
@@ -30,9 +30,9 @@ start() {
 	checkconfig || return $?
 
 	local options=""
-	[[ -n "${PUPPETMASTER_MANIFEST}" ]]   && options="${options} --manifest=${PUPPETMASTER_MANIFEST}"
-	[[ -n "${PUPPETMASTER_LOG}" ]]        && options="${options} --logdest=${PUPPETMASTER_LOG}"
-	[[ -n "${PUPPETMASTER_EXTRA_OPTS}" ]] && options="${options} ${PUPPETMASTER_EXTRA_OPTS}"
+	[ -n "${PUPPETMASTER_MANIFEST}" ]   && options="${options} --manifest=${PUPPETMASTER_MANIFEST}"
+	[ -n "${PUPPETMASTER_LOG}" ]        && options="${options} --logdest=${PUPPETMASTER_LOG}"
+	[ -n "${PUPPETMASTER_EXTRA_OPTS}" ] && options="${options} ${PUPPETMASTER_EXTRA_OPTS}"
 
 	ebegin "Starting puppetmaster"
 	start-stop-daemon --start --quiet \

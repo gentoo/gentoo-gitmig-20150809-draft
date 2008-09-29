@@ -8,7 +8,7 @@ depend() {
 }
 
 checkconfig() {
-	if [[ ! -d "${PUPPET_PID_DIR}" ]] ; then
+	if [ ! -d "${PUPPET_PID_DIR}" ] ; then
 		eerror "Please make sure PUPPET_PID_DIR is defined and points to a existing directory"
 		return 1
 	fi
@@ -20,7 +20,7 @@ start() {
 	checkconfig || return $?
 
 	local options=""
-	[[ -n "${PUPPET_EXTRA_OPTS}" ]] && options="${options} ${PUPPET_EXTRA_OPTS}"
+	[ -n "${PUPPET_EXTRA_OPTS}" ] && options="${options} ${PUPPET_EXTRA_OPTS}"
 
 	ebegin "Starting puppet"
 	start-stop-daemon --start --quiet \
