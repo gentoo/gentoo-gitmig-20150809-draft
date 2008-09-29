@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/frozen-bubble
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.28 2008/02/29 18:46:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.29 2008/09/29 17:44:40 mr_bones_ Exp $
+
+  29 Sep 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  frozen-bubble-2.1.0.ebuild:
+  better icon handling with modified patch from Pacho Ramos (bug #238966)
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> ChangeLog:
   Remove icon extension from desktop entry to match Icon Theme Specification.

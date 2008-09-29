@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.1.0.ebuild,v 1.5 2008/02/29 18:46:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.1.0.ebuild,v 1.6 2008/09/29 17:44:40 mr_bones_ Exp $
 
-inherit eutils multilib perl-module games
+inherit gnome2-utils perl-module games
 
 DESCRIPTION="A Puzzle Bubble clone written in perl (now with network support)"
 HOMEPAGE="http://www.frozen-bubble.org/"
@@ -51,12 +51,31 @@ src_unpack() {
 }
 
 src_install() {
+	local res
+
 	emake DESTDIR="${D}" install || die "make install failed"
 	dosed /usr/games/bin/frozen-bubble
 	dodoc AUTHORS NEWS README TIPS
-	newicon icons/frozen-bubble-icon-48x48.png ${PN}.png
-	make_desktop_entry ${PN} ${PN} ${PN}
+	for res in 16x16 32x32 48x48 64x64 ; do
+		insinto /usr/share/icons/hicolor/${res}/apps
+		newins icons/frozen-bubble-icon-${res}.png ${PN}.png
+	done
+	make_desktop_entry ${PN} Frozen-Bubble ${PN}
 
 	fixlocalpod
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	games_pkg_preinst
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
