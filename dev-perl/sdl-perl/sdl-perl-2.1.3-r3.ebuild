@@ -1,12 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.3-r3.ebuild,v 1.8 2007/11/10 19:19:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.3-r3.ebuild,v 1.9 2008/09/30 16:00:57 tove Exp $
 
+MODULE_AUTHOR=DGOEHRIG
+MY_P=SDL_Perl-${PV}
 inherit perl-module eutils
 
 DESCRIPTION="SDL binding for perl"
 HOMEPAGE="http://sdl.perl.org/"
-SRC_URI="http://search.cpan.org/CPAN/authors/id/D/DG/DGOEHRIG/SDL_Perl-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,29 +18,23 @@ IUSE="truetype mpeg"
 # access to your /dev/{snd,sound} devices.
 #SRC_TEST="do"
 
-DEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2.6
 	>=media-libs/sdl-mixer-1.2.5
 	>=media-libs/sdl-image-1.2.2
 	>=media-libs/sdl-gfx-2.0.3
 	>=media-libs/sdl-net-1.2.4
-	>=dev-perl/module-build-0.28
-	dev-perl/ExtUtils-CBuilder
 	mpeg? ( media-libs/smpeg )
 	truetype? ( >=media-libs/sdl-ttf-2.0.5 )
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-perl/ExtUtils-CBuilder
+	>=dev-perl/module-build-0.28"
 
-S=${WORKDIR}/SDL_Perl-${PV}
+S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	if has_version '>=dev-perl/module-build-0.28' ; then
-		epatch "${FILESDIR}"/sdl-2.1.3.build.patch
-	fi
-	epatch "${FILESDIR}"/sdl-perl-2.1.3-gfxPie.patch
-}
+PATCHES=("${FILESDIR}"/sdl-2.1.3.build.patch
+	"${FILESDIR}"/sdl-perl-2.1.3-gfxPie.patch )
 
 src_install() {
 	perl-module_src_install
