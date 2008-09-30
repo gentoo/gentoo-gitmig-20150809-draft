@@ -28,3 +28,8 @@ x11-themes/qtcurve-qt4 kde
 # does not work with ffmpeg new headers yet
 <net-www/gnash-0.8.3 ffmpeg
 
+
+# Steve Dibb <beandog@gentoo.org> (29 Sept 2008)
+# Arch-specific use flags, unmasked in their profiles
+# See bug 234629
+media-video/mplayer real cpudetection win32codecs custom-cpuopts
