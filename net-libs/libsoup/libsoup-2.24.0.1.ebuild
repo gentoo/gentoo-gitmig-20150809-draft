@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.4.0.ebuild,v 1.1 2008/03/12 20:20:19 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.24.0.1.ebuild,v 1.1 2008/09/30 06:43:23 leio Exp $
 
 inherit gnome2
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="2.4"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="doc ssl"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="debug doc ssl"
 
 RDEPEND=">=dev-libs/glib-2.15.3
 		 >=dev-libs/libxml2-2
@@ -22,5 +22,10 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	G2CONF="$(use_enable ssl)"
+	# Do NOT build with --disable-debug/--enable-debug=no
+	if use debug ; then
+		G2CONF="${G2CONF} --enable-debug=yes"
+	fi
+
+	G2CONF="${G2CONF} $(use_enable ssl)"
 }
