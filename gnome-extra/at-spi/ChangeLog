@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.171 2008/09/25 16:10:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.172 2008/09/30 22:46:43 leio Exp $
+
+*at-spi-1.24.0 (30 Sep 2008)
+
+  30 Sep 2008; Mart Raudsepp <leio@gentoo.org>
+  -files/at-spi-1.18.0-ior-leak.patch,
+  -files/at-spi-1.18.1-focus-tracker-leak.patch,
+  -files/at-spi-1.18.1-tests.patch, -at-spi-1.18.1-r1.ebuild,
+  -at-spi-1.22.0.ebuild, +at-spi-1.24.0.ebuild:
+  New version with small changes. Remove old
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org> at-spi-1.22.1.ebuild:
   Stable for HPPA (bug #236971).

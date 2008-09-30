@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.22.0.ebuild,v 1.3 2008/05/29 17:01:51 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.24.0.ebuild,v 1.1 2008/09/30 22:46:43 leio Exp $
 
-inherit virtualx autotools eutils gnome2 python
+inherit autotools eutils gnome2 python virtualx
 
 DESCRIPTION="The Gnome Accessibility Toolkit"
 HOMEPAGE="http://developer.gnome.org/projects/gap/"
@@ -17,6 +17,7 @@ RDEPEND=">=dev-libs/atk-1.17
 	>=gnome-base/gail-1.9.0
 	>=gnome-base/libbonobo-1.107
 	>=gnome-base/orbit-2
+	>=gnome-base/gconf-2
 	dev-libs/popt
 
 	x11-libs/libICE
@@ -27,7 +28,7 @@ RDEPEND=">=dev-libs/atk-1.17
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
-	>=dev-util/intltool-0.35
+	>=dev-util/intltool-0.40
 	doc? ( >=dev-util/gtk-doc-1 )
 
 	x11-libs/libXt
