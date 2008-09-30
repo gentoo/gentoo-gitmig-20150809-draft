@@ -5,7 +5,6 @@
 >=gnome-base/libbonobo-2.22
 >=x11-libs/libwnck-2.22
 >=x11-themes/gnome-backgrounds-2.22
->=gnome-base/gail-1.22
 >=gnome-base/gnome-menus-2.22
 >=dev-python/pygtksourceview-2.2.0
 >=gnome-base/gconf-2.22

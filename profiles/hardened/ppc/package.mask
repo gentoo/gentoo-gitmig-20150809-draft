@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.14 2008/09/29 19:14:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.15 2008/09/30 08:29:00 leio Exp $
 
 # needs >=sys-devel/gcc-4.2
 sys-libs/libfreevec
@@ -16,7 +16,6 @@ sys-libs/libfreevec
 >=gnome-base/libbonobo-2.22
 >=x11-libs/libwnck-2.22
 >=x11-themes/gnome-backgrounds-2.22
->=gnome-base/gail-1.22
 >=app-text/rarian-0.8
 >=gnome-base/gnome-menus-2.22
 >=dev-python/pygtksourceview-2.2.0
