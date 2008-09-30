@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/glimmer-3.02.ebuild,v 1.2 2008/09/07 14:36:17 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/glimmer-3.02.ebuild,v 1.3 2008/09/30 20:21:46 darkside Exp $
 
 inherit versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.cbcb.umd.edu/software/${PN}/${PN}${MY_PV}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
 RDEPEND=""
