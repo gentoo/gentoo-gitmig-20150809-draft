@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/Sys-Statistics-Linux-0.36.ebuild,v 1.1 2008/07/18 15:15:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/Sys-Statistics-Linux-0.40.ebuild,v 1.1 2008/09/30 06:00:37 tove Exp $
 
 MODULE_AUTHOR=BLOONIX
 inherit perl-module
