@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.90 2008/09/30 06:05:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.91 2008/09/30 08:35:52 robbat2 Exp $
+
+  30 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  DBD-mysql-4.00.8.ebuild:
+  Make the ebuild even slimmer with a suggestion from tove to the eclass.
 
   30 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
   -files/mysql-5.0-new_bit_type.patch, -files/makemaker.patch,
