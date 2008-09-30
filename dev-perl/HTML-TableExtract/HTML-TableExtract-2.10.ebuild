@@ -1,12 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/HTML-TableExtract-2.10.ebuild,v 1.9 2007/04/16 06:04:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/HTML-TableExtract-2.10.ebuild,v 1.10 2008/09/30 13:47:28 tove Exp $
 
+MODULE_AUTHOR=MSISK
 inherit perl-module
 
 DESCRIPTION="The Perl Table-Extract Module"
-SRC_URI="mirror://cpan/authors/id/M/MS/MSISK/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-module/HTML/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
