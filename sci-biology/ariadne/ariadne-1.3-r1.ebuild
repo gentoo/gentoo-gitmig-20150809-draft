@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3-r1.ebuild,v 1.6 2007/03/25 01:44:48 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3-r1.ebuild,v 1.7 2008/09/30 20:20:33 darkside Exp $
 
 inherit toolchain-funcs eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.well.ox.ac.uk/${PN}/${P}.tar.Z"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 
 DEPEND=">=sci-biology/ncbi-tools-20041020-r1"
 
