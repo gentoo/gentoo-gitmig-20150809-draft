@@ -1,6 +1,19 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.32 2008/06/18 09:18:03 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.33 2008/09/30 14:44:27 ikelos Exp $
+
+*vmware-modules-1.0.0.22 (30 Sep 2008)
+
+  30 Sep 2008; Mike Auty <ikelos@gentoo.org>
+  +files/1.0.0.20-vmblock-2.6.26-1.patch,
+  +files/1.0.0.20-vmblock-2.6.26-2.patch,
+  +files/1.0.0.20-vmmon-2.6.26.patch,
+  +files/1.0.0.22-makefile-kernel-dir.patch,
+  +files/1.0.0.20-vmnet-2.6.26.patch, -vmware-modules-1.0.0.11-r1.ebuild,
+  -vmware-modules-1.0.0.13-r1.ebuild, vmware-modules-1.0.0.20.ebuild,
+  +vmware-modules-1.0.0.22.ebuild:
+  Remove old unused versions, fix up 1.0.0.20 bugs and put in a new version
+  for workstation 6.0.5 and player 2.0.5.
 
   18 Jun 2008; Mike Auty <ikelos@gentoo.org>
   +files/1.0.0.20-makefile-kernel-dir.patch, vmware-modules-1.0.0.20.ebuild:
