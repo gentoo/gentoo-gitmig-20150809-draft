@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.92 2008/09/30 23:23:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.93 2008/09/30 23:25:00 robbat2 Exp $
+
+  30 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  DBD-mysql-2.9007.ebuild:
+  Drop to mips to ~mips again.
 
   30 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
   +DBD-mysql-2.9007.ebuild:
