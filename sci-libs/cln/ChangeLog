@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.26 2008/09/30 12:58:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.27 2008/09/30 13:51:54 fmccor Exp $
+
+  30 Sep 2008; Ferris McCormick <fmccor@gentoo.org> cln-1.2.2.ebuild:
+  Sparc stable --- Bug #238444 --- Works fine now, thanks Sébastien.
 
   30 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/cln-1.2.2-docs.patch, +files/cln-1.2.2-examples.patch,
