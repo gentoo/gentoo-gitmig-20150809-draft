@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.155 2008/09/30 00:53:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.156 2008/09/30 12:02:36 flameeyes Exp $
+
+  30 Sep 2008; Diego Pettenò <flameeyes@gentoo.org>
+  2007.0/no-multilib/package.mask:
+  Mask sunstudioexpress on non-multilib profiles.
 
   30 Sep 2008; Steve Dibb <beandog@gentoo.org> package.use.mask:
   Fix p.use.mask for amd64 mplayer, bug 234629

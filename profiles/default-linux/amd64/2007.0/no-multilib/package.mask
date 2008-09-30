@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.40 2008/09/12 23:52:02 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.41 2008/09/30 12:02:37 flameeyes Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -59,6 +59,7 @@ dev-lang/anubis
 dev-lang/icc
 dev-lang/idb
 dev-lang/ifc
+dev-lang/sunstudioexpress
 dev-perl/Archive-Rar
 dev-util/dialogblocks
 dev-util/helpblocks
