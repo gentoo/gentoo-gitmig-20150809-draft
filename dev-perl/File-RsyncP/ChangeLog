@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-RsyncP
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/ChangeLog,v 1.21 2008/07/30 16:37:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/ChangeLog,v 1.22 2008/09/30 12:59:07 tove Exp $
+
+  30 Sep 2008; Torsten Veller <tove@gentoo.org> -File-RsyncP-0.52.ebuild,
+  -File-RsyncP-0.64.ebuild, File-RsyncP-0.68.ebuild:
+  Cleanup
 
   30 Jul 2008; Brent Baude <ranger@gentoo.org> File-RsyncP-0.68.ebuild:
   Marking File-RsyncP-0.68 ~ppc64 for bug 233384
