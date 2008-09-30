@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.136 2008/09/24 22:22:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.137 2008/09/30 23:43:55 fmccor Exp $
+
+  30 Sep 2008; Ferris McCormick <fmccor@gentoo.org>
+  gentoolkit-0.2.4.2.ebuild:
+  Sparc stable early at developer request --- Bug #170220 --- there haven't
+  been any problems seen.
 
   24 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   gentoolkit-0.2.4.2.ebuild:
