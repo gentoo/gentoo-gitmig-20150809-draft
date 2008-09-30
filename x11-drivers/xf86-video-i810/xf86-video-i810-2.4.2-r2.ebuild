@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.4.2-r1.ebuild,v 1.2 2008/09/30 09:55:10 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.4.2-r2.ebuild,v 1.1 2008/09/30 09:55:10 remi Exp $
 
 # Must be before x-modular eclass is inherited
 # Enable snapshot to get the man page in the right place
@@ -38,6 +38,7 @@ CONFIGURE_OPTIONS="$(use_enable dri)"
 
 PATCHES=(
 "${FILESDIR}/${P}-0001-Don-t-allocate-a-pipe-for-hotplug-detection.patch"
+"${FILESDIR}/${P}-0002-Disable-render-standby.patch"
 )
 
 pkg_setup() {
