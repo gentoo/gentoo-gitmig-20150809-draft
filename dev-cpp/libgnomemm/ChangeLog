@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomemm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.74 2008/08/12 19:33:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.75 2008/09/30 17:29:17 jer Exp $
+
+  30 Sep 2008; Jeroen Roovers <jer@gentoo.org> libgnomemm-2.22.0.ebuild:
+  Stable for HPPA (bug #229709).
 
   12 Aug 2008; Raúl Porcel <armin76@gentoo.org> libgnomemm-2.22.0.ebuild:
   alpha/ia64/sparc stable wrt #229709
