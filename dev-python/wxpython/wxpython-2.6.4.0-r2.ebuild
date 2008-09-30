@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r2.ebuild,v 1.5 2008/09/28 13:21:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.4.0-r2.ebuild,v 1.6 2008/09/30 11:16:56 armin76 Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.bz2"
 
 LICENSE="wxWinLL-3"
 SLOT="2.6"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
 IUSE="opengl unicode"
 
 RDEPEND=">=dev-lang/python-2.1
