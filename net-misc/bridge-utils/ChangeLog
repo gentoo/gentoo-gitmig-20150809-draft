@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.49 2008/09/30 06:48:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.50 2008/09/30 20:03:04 darkside Exp $
+
+  30 Sep 2008; Jeremy Olexa <darkside@gentoo.org> bridge-utils-1.4.ebuild:
+  amd64 stable, bug #239119
 
   30 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
   bridge-utils-1.2.ebuild, bridge-utils-1.4.ebuild:
