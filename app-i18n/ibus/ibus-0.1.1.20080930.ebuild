@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-0.1.1.20080917.ebuild,v 1.2 2008/09/20 00:17:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-0.1.1.20080930.ebuild,v 1.1 2008/09/30 15:02:50 matsuu Exp $
 
 EAPI="1"
 inherit multilib
@@ -24,6 +24,7 @@ RDEPEND=">=dev-libs/glib-2
 		)
 		>=x11-libs/qt-4.4:4
 	) )
+	app-text/iso-codes
 	x11-libs/libX11
 	>=dev-lang/python-2.5
 	nls? ( virtual/libintl )"
