@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Sphinx-Search
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sphinx-Search/ChangeLog,v 1.1 2008/04/19 18:49:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sphinx-Search/ChangeLog,v 1.2 2008/09/30 06:29:54 robbat2 Exp $
+
+*Sphinx-Search-0.12 (30 Sep 2008)
+
+  30 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +Sphinx-Search-0.12.ebuild:
+  Version bump.
 
 *Sphinx-Search-0.11 (19 Apr 2008)
 

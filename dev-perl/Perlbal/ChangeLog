@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Perlbal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perlbal/ChangeLog,v 1.8 2008/07/06 19:37:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perlbal/ChangeLog,v 1.9 2008/09/30 06:29:02 robbat2 Exp $
+
+*Perlbal-1.72 (30 Sep 2008)
+
+  30 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> +Perlbal-1.72.ebuild:
+  Version bump.
 
   06 Jul 2008; Robin H. Johnson <robbat2@gentoo.org> Perlbal-1.58.ebuild,
   Perlbal-1.59.ebuild, Perlbal-1.60.ebuild, Perlbal-1.70.ebuild:
