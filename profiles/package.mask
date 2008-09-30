@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9030 2008/09/30 20:16:57 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9031 2008/09/30 22:13:51 leio Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -699,12 +699,6 @@ sys-auth/pam_sha512
 # buggy, causes browser crashes on certain sites (www.nvidia.com), also see
 # bug #233484
 =net-www/nspluginwrapper-1.1.0
-
-# Doug Goldstein <cardoe@gentoo.org> (30 Jul 2008)
-# mask development version
->=media-libs/swfdec-0.7.0
->=net-www/swfdec-mozilla-0.7.0
->=gnome-extra/swfdec-gnome-2.23
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (28 Jul 2008)
 # These are masked for removal.  Please leave this mask in place, even after the
