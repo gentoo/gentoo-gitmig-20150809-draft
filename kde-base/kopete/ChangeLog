@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.156 2008/09/13 23:59:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.157 2008/09/30 03:10:37 dirtyepic Exp $
+
+  30 Sep 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/kopete-3.5.10-gcc43.patch, kopete-3.5.10.ebuild:
+  Fix GCC 4.3 build error w/ USE="jingle". Patch from devsk in bug #223535.
 
 *kopete-3.5.10 (13 Sep 2008)
 
