@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9029 2008/09/30 20:01:46 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9030 2008/09/30 20:16:57 ikelos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -801,11 +801,6 @@ app-doc/linuxfromscratch-text
 # Masked for security bug #226079.
 <=www-client/opera-9.27
 
-# Mike Auty <ikelos@gentoo.org> (15 Jun 2008)
-# (#224637) No longer supported upstream and
-# subject to multiple GLSAs.  Masked for removal in 30 days.
-=app-emulation/vmware-workstation-4.5.3.19414-r7
-
 # Krzysiek Pawlik <nelchael@gentoo.org> (12 Jun 2008)
 # Testing new version.
 >=dev-java/hessian-3.0.20
@@ -932,14 +927,6 @@ dev-lisp/stumpwm-cvs
 # Ulrich Mueller <ulm@gentoo.org> (27 Apr 2008)
 # CVS snapshot, bug 219449.
 ~app-emacs/navi2ch-1.7.5_p20080325
-
-# Mike Auty <ikelos@gentoo.org> (26 Apr 2008)
-# Masking all app-emulation/vmware-workstation-tools packages
-# in favour of app-emulation/open-vm-tools
-=app-emulation/vmware-workstation-tools-4.5.3-r1
-=app-emulation/vmware-workstation-tools-5.5.1-r2
-=app-emulation/vmware-workstation-tools-5.5.2
-=app-emulation/vmware-workstation-tools-5.5.3
 
 # Markus Ullmann <jokey@gentoo.org> (21 Apr 2008)
 # mask beta version
