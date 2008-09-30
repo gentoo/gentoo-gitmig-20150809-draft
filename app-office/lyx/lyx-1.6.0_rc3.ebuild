@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.0_rc1.ebuild,v 1.1 2008/08/05 16:45:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.0_rc3.ebuild,v 1.1 2008/09/30 16:14:58 aballier Exp $
 
 EAPI=1
 
 inherit qt4 eutils flag-o-matic font toolchain-funcs
 
 #MY_P="${P/_}"
-MY_P="lyx-1.6.0rc1"
+MY_P="lyx-1.6.0rc3"
 
 S="${WORKDIR}/${MY_P}"
 FONT_S="${S}/lib/fonts"
@@ -15,8 +15,8 @@ FONT_SUFFIX="ttf"
 DESCRIPTION="WYSIWYM frontend for LaTeX, DocBook, etc."
 HOMEPAGE="http://www.lyx.org/"
 #SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2 #for stable release
-#SRC_URI="ftp://ftp.devel.lyx.org/pub/lyx/pre/${MY_P}.tar.bz2 #for preleases
-SRC_URI="http://www.lyx.org/~jamatos/lyx-1.6/${MY_P}.tar.bz2
+#SRC_URI="http://www.lyx.org/~jamatos/lyx-1.6/${MY_P}.tar.bz2 #for betas
+SRC_URI="ftp://ftp.devel.lyx.org/pub/lyx/pre/${MY_P}.tar.bz2
 	linguas_he? (
 		http://cs.haifa.ac.il/~dekelts/lyx/files/hebrew.bind
 		http://cs.haifa.ac.il/~dekelts/lyx/files/preferences
@@ -28,7 +28,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cups debug nls latex monolithic-build html rtf dot docbook"
 RESTRICT="test"
 
-LANGS="ca cs de es eu fi fr gl he hu it ja ko nb nn pl pt ro ru tr zh_CN zh_TW"
+LANGS="ar ca cs de en es eu fi fr gl he hu it ja ko nb nn pl pt ro ru tr uk zh_CN zh_TW"
 for X in ${LANGS}; do
 	IUSE="${IUSE} linguas_${X}"
 done
@@ -49,7 +49,8 @@ COMMONDEPEND="|| ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 )
 	virtual/aspell-dict
 	>=dev-lang/python-2.3.4
 	media-libs/fontconfig
-	media-libs/freetype"
+	media-libs/freetype
+	>=dev-libs/boost-1.34"
 
 RDEPEND="${COMMONDEPEND}
 	media-gfx/imagemagick
@@ -79,8 +80,7 @@ RDEPEND="${COMMONDEPEND}
 
 DEPEND="${COMMONDEPEND}
 	x11-proto/xproto
-	nls? ( sys-devel/gettext )
-	>=dev-libs/boost-1.34"
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	tc-export CXX
