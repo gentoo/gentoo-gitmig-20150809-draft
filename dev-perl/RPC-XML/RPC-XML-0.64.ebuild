@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.61.ebuild,v 1.1 2008/09/17 07:12:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.64.ebuild,v 1.1 2008/09/30 06:23:57 tove Exp $
 
 MODULE_AUTHOR=RJRAY
 inherit perl-module
@@ -10,15 +10,18 @@ DESCRIPTION="An implementation of XML-RPC"
 SLOT="0"
 LICENSE="|| ( Artistic-2 LGPL-2.1 )"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE=""
+IUSE="test"
 
-#SRC_TEST="do"
+SRC_TEST="do"
 
-DEPEND=">=dev-perl/libwww-perl-5.801
+RDEPEND=">=dev-perl/libwww-perl-5.801
 	>=dev-perl/XML-LibXML-1.58
 	>=dev-perl/XML-Parser-2.31
 	dev-perl/net-server
 	dev-lang/perl"
+DEPEND="${RDEPEND}
+	test? ( dev-perl/Test-Pod
+		dev-perl/Test-Pod-Coverage )"
 
 pkg_postinst() {
 	perl-module_pkg_postinst
