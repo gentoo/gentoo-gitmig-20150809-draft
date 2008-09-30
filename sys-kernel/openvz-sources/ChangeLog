@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.95 2008/09/30 07:30:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.96 2008/09/30 16:41:49 pva Exp $
+
+*openvz-sources-2.6.24.006.2 (30 Sep 2008)
+
+  30 Sep 2008; Peter Volkov <pva@gentoo.org>
+  -files/openvz-sources-2.6.24.005.1-CONFIG_SYSVIPC-build-fix.patch,
+  -openvz-sources-2.6.24.004.1.ebuild, -openvz-sources-2.6.24.005.1.ebuild,
+  +openvz-sources-2.6.24.006.2.ebuild:
+  Version bump, removed old development kernels.
 
   30 Sep 2008; Peter Volkov <pva@gentoo.org>
   openvz-sources-2.6.18.028.056.1.ebuild:
