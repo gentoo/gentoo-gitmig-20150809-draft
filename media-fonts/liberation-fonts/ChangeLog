@@ -1,6 +1,6 @@
 # ChangeLog for media-fonts/liberation-fonts-ttf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.1 2008/09/30 00:47:30 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.2 2008/09/30 02:08:50 je_fro Exp $
 
 *liberation-fonts-1.04 (30 Sep 2008)
 *liberation-fonts-1.03 (30 Sep 2008)
@@ -9,6 +9,7 @@
   +metadata.xml, +liberation-fonts-1.03.ebuild,
   +liberation-fonts-1.04.ebuild:
   Moved from liberation-fonts-ttf and added latest version.
+  Thanks to Pacho Ramos on bug #236420.
 
   24 Feb 2008; Raúl Porcel <armin76@gentoo.org>
   liberation-fonts-ttf-3-r1.ebuild:
