@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/sunstudioexpress
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sunstudioexpress/ChangeLog,v 1.1 2008/09/30 12:08:07 flameeyes Exp $
+
+*sunstudioexpress-2008.07.24 (30 Sep 2008)
+
+  30 Sep 2008; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +sunstudioexpress-2008.07.24.ebuild:
+  Initial import of the Sun Studio Express compiler suite.
+
