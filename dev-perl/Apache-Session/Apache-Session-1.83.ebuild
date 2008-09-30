@@ -1,17 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/Apache-Session-1.83.ebuild,v 1.5 2007/11/10 11:52:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/Apache-Session-1.83.ebuild,v 1.6 2008/09/30 07:56:04 tove Exp $
 
+MODULE_AUTHOR=CHORNY
 inherit perl-module
-IUSE=""
 
 DESCRIPTION="Perl module for Apache::Session"
-SRC_URI="mirror://cpan/authors/id/C/CH/CHORNY/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~chorny/"
 
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+IUSE=""
 
 DEPEND="dev-perl/Test-Deep
 	virtual/perl-Digest-MD5

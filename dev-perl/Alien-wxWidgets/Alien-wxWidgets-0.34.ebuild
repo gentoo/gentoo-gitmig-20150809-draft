@@ -1,15 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.34.ebuild,v 1.1 2008/04/28 23:21:08 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.34.ebuild,v 1.2 2008/09/30 07:52:27 tove Exp $
 
+MODULE_AUTHOR=MBARBON
 inherit perl-module wxwidgets
 
-MY_P=Alien-wxWidgets-${PV}
-S=${WORKDIR}/${MY_P}
-
 DESCRIPTION="Building, finding and using wxWidgets binaries"
-SRC_URI="mirror://cpan/authors/id/M/MB/MBARBON/${MY_P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~mbarbon/${P}/"
+
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~amd64 ~ia64 ~x86"
@@ -34,6 +31,6 @@ perl-module_src_prep() {
 	fi
 
 	echo no | perl Build.PL --installdirs=vendor \
-		--destdir=${D} \
+		--destdir="${D}" \
 		--libdoc= || die "perl Build.PL has failed!"
 }
