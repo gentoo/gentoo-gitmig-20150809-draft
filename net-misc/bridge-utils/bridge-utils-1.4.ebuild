@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.4.ebuild,v 1.2 2008/09/28 09:34:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.4.ebuild,v 1.3 2008/09/30 06:48:15 robbat2 Exp $
 
 inherit toolchain-funcs eutils autotools
 
@@ -47,6 +47,6 @@ src_install () {
 }
 
 pkg_postinst () {
-	ewarn "This package no longer provides a seperate init script."
+	ewarn "This package no longer provides a separate init script."
 	ewarn "Please utilize the new bridge support in baselayout."
 }

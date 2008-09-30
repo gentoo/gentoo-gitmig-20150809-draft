@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.2.ebuild,v 1.11 2008/06/05 17:48:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.2.ebuild,v 1.12 2008/09/30 06:48:15 robbat2 Exp $
 
 # I think you want CONFIG_BRIDGE in your kernel to use this ;)
 
@@ -45,6 +45,6 @@ src_install () {
 }
 
 pkg_postinst () {
-	ewarn "This package no longer provides a seperate init script."
+	ewarn "This package no longer provides a separate init script."
 	ewarn "Please utilize the new bridge support in baselayout."
 }
