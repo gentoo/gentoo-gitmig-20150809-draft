@@ -1,6 +1,40 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.56 2008/07/03 13:51:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.57 2008/09/30 16:00:24 ikelos Exp $
+
+*vmware-player-2.0.5.109488 (30 Sep 2008)
+*vmware-player-1.0.8.108000 (30 Sep 2008)
+
+  30 Sep 2008; Mike Auty <ikelos@gentoo.org>
+  -files/1.0.6.80404/000_all_initd-location.patch,
+  -files/1.0.6.80404/001_all_fix-permissions.patch,
+  -files/1.0.6.80404/002_all_pagebreak-detection-fix.patch,
+  -files/1.0.6.80404/004_all_do-not-build-modules.patch,
+  -files/1.0.6.80404/007_all_use-modprobe-over-insmod.patch,
+  -files/1.0.6.80404/009_all_init.d-modules-warning.patch,
+  +files/1.0.8.108000/000_all_initd-location.patch,
+  +files/1.0.8.108000/001_all_fix-permissions.patch,
+  +files/1.0.8.108000/002_all_pagebreak-detection-fix.patch,
+  +files/1.0.8.108000/004_all_do-not-build-modules.patch,
+  +files/1.0.8.108000/007_all_use-modprobe-over-insmod.patch,
+  +files/1.0.8.108000/009_all_init.d-modules-warning.patch,
+  -files/2.0.3.80004/000_all_initd-location.patch,
+  -files/2.0.3.80004/001_all_fix-permissions.patch,
+  -files/2.0.3.80004/002_all_pagebreak-detection-fix.patch,
+  -files/2.0.3.80004/004_all_do-not-build-modules.patch,
+  -files/2.0.3.80004/007_all_use-modprobe-over-insmod.patch,
+  -files/2.0.3.80004/009_all_init.d-modules-warning.patch,
+  -files/2.0.3.80004/011_all_legit-modules-only.patch,
+  +files/2.0.5.109488/000_all_initd-location.patch,
+  +files/2.0.5.109488/001_all_fix-permissions.patch,
+  +files/2.0.5.109488/002_all_pagebreak-detection-fix.patch,
+  +files/2.0.5.109488/004_all_do-not-build-modules.patch,
+  +files/2.0.5.109488/007_all_use-modprobe-over-insmod.patch,
+  +files/2.0.5.109488/009_all_init.d-modules-warning.patch,
+  +files/2.0.5.109488/011_all_legit-modules-only.patch,
+  -vmware-player-1.0.6.80404.ebuild, +vmware-player-1.0.8.108000.ebuild,
+  -vmware-player-2.0.3.80004.ebuild, +vmware-player-2.0.5.109488.ebuild:
+  Version bump 1.0.8 and 2.0.5.
 
   03 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
   vmware-player-1.0.7.91707.ebuild:
