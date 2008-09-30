@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.20.ebuild,v 1.3 2008/09/30 14:44:27 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.20.ebuild,v 1.4 2008/09/30 17:00:53 mr_bones_ Exp $
 
 KEYWORDS="~amd64 ~x86"
 VMWARE_VER="VME_V604" # THIS VALUE IS JUST A PLACE HOLDER
@@ -23,7 +23,6 @@ kernel_check() {
 	fi
 	eend $?
 }
-
 
 src_unpack() {
 	kernel_check
