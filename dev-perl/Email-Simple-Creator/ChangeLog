@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Email-Simple-Creator
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple-Creator/ChangeLog,v 1.16 2007/12/17 17:50:16 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple-Creator/ChangeLog,v 1.17 2008/09/30 12:42:29 tove Exp $
+
+*Email-Simple-Creator-1.424 (30 Sep 2008)
+
+  30 Sep 2008; Torsten Veller <tove@gentoo.org>
+  -Email-Simple-Creator-1.41.ebuild, -Email-Simple-Creator-1.42.0.ebuild,
+  +Email-Simple-Creator-1.424.ebuild:
+  Version bump. Cleanup
 
   17 Dec 2007; Samuli Suominen <drac@gentoo.org>
   Email-Simple-Creator-1.422.ebuild:
