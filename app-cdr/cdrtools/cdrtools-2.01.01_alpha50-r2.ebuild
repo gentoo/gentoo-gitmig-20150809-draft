@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha50-r1.ebuild,v 1.1 2008/09/28 13:47:01 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha50-r2.ebuild,v 1.1 2008/09/30 23:03:13 loki_val Exp $
 
 inherit multilib eutils toolchain-funcs flag-o-matic
 
@@ -40,6 +40,10 @@ src_unpack() {
 	sed -i -e "s:\(^INSDIR=\t\t\)lib:\1$(get_libdir):" \
 		$(grep -l -r '^INSDIR.\+lib\(/siconv\)\?$' .) \
 		|| die "404 on multilib-sed"
+
+	sed -i -e "s:\(^INSDIR=\t\t\)\(etc/default\):\1../\2:" \
+		$(grep -l -r '^INSDIR.\+default' .) \
+		|| die "404 on etc sed"
 
 	#Remove profiled make files
 	rm -f $(find . -name '*_p.mk')
