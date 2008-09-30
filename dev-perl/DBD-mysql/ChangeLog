@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.88 2008/07/30 00:49:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.89 2008/09/30 06:02:38 robbat2 Exp $
+
+*DBD-mysql-4.00.8 (30 Sep 2008)
+
+  30 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +DBD-mysql-4.00.8.ebuild:
+  Version bump, cleanup to use auto-calc in perl-module better.
 
   30 Jul 2008; Robin H. Johnson <robbat2@gentoo.org>
   DBD-mysql-4.00.4-r1.ebuild:
