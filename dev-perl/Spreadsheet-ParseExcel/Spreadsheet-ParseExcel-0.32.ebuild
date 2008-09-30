@@ -1,12 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/Spreadsheet-ParseExcel-0.32.ebuild,v 1.5 2007/11/10 14:34:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/Spreadsheet-ParseExcel-0.32.ebuild,v 1.6 2008/09/30 14:52:10 tove Exp $
 
+MODULE_AUTHOR=SZABGAB
 inherit perl-module
 
 DESCRIPTION="Get information from Excel file"
-HOMEPAGE="http://search.cpan.org/~szabgab/"
-SRC_URI="mirror://cpan/authors/id/S/SZ/SZABGAB/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"

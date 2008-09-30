@@ -1,12 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/SQL-Statement-1.15.ebuild,v 1.8 2007/07/10 23:33:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/SQL-Statement-1.15.ebuild,v 1.9 2008/09/30 14:49:47 tove Exp $
 
+MODULE_AUTHOR=JZUCKER
 inherit perl-module
 
 DESCRIPTION="Small SQL parser and engine"
-SRC_URI="mirror://cpan/authors/id/J/JZ/JZUCKER/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-authors/id/J/JZ/JZUCKER/${P}.readme"
 
 IUSE=""
 SLOT="0"
