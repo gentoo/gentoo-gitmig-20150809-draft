@@ -1,21 +1,22 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DomainKeys/Mail-DomainKeys-1.0.ebuild,v 1.4 2007/11/10 13:56:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DomainKeys/Mail-DomainKeys-1.0.ebuild,v 1.5 2008/09/30 14:21:40 tove Exp $
 
+MODULE_AUTHOR=ANTHONYU
 inherit perl-module
 
 DESCRIPTION="A perl implementation of DomainKeys"
-HOMEPAGE="http://search.cpan.org/~anthonyu/${P}"
-SRC_URI="mirror://cpan/authors/id/A/AN/ANTHONYU/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 sparc x86"
 IUSE="test"
+
 SRC_TEST="do"
 
-DEPEND=">=dev-perl/Net-DNS-0.34
+RDEPEND=">=dev-perl/Net-DNS-0.34
 	dev-perl/MailTools
 	dev-perl/Crypt-OpenSSL-RSA
-	test? ( dev-perl/Email-Address )
 	dev-lang/perl"
+DEPEND="${RDEPEND}
+	test? ( dev-perl/Email-Address )"
