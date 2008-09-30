@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-3.0.16.ebuild,v 1.7 2008/09/30 11:02:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-3.0.17.ebuild,v 1.1 2008/09/30 11:02:51 tove Exp $
 
 MODULE_AUTHOR=TMTM
 MY_P="${PN}-v${PV}"
@@ -12,7 +12,7 @@ DESCRIPTION="Simple Database Abstraction"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 # Tests aren't possible since they require interaction with the DB's
