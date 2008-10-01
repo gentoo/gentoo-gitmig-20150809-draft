@@ -1,5 +1,9 @@
 ### THIS FILE IS ONLY FOR PACKAGES MASKED ON BOTH 64-BIT AND 32-BIT USERLAND!!!
 
+# 01 Oct 2008   Brent Baude <ranger@gentoo.org>
+# # Masking battery USE for bug 238770
+battery
+
 # Unmask the flag which corresponds to ARCH.
 -ppc64
 

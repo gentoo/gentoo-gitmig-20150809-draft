@@ -1,3 +1,8 @@
+# 01 Oct 2008   Brent Baude <ranger@gentoo.org>
+# # Masking battery USE for bug 238770
+battery
+
+
 # Unmask the "ibm" USE flag on ppc64
 -ibm
 
