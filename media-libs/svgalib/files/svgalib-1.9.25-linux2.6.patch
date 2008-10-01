@@ -5,6 +5,7 @@
 	- use module_param() for 2.6.x and MODULE_PARM() for all others
 	- dont declare all_devices as static since it is exported
 	- dont include <linux/config.h> as the build system does it for us
+	- in lrmi, map old flag names to new names for versions >= 2.6.26
 
 --- svgalib/kernel/svgalib_helper/Makefile
 +++ svgalib/kernel/svgalib_helper/Makefile
@@ -207,4 +208,70 @@
 +
 +MODULE_PARM_DESC(debug, "Debug output level.");
  MODULE_PARM_DESC(all_devices, "Give access to all PCI devices, regardless of class.");
+
+
+--- svgalib/src/lrmi.6.c
++++ svgalib/src/lrmi.6.c
+@@ -169,6 +169,13 @@ LRMI_free_real(void *m)
+ 		}
+ 	}
  
++#ifndef TF_MASK
++#define TF_MASK X86_EFLAGS_TF
++#define IF_MASK X86_EFLAGS_IF
++#define IOPL_MASK X86_EFLAGS_IOPL
++#define VIF_MASK X86_EFLAGS_VIF
++#define VIP_MASK X86_EFLAGS_VIP
++#endif
+ 
+ #define DEFAULT_VM86_FLAGS 	(IF_MASK | IOPL_MASK)
+ #define DEFAULT_STACK_SIZE 	0x1000
+--- svgalib/src/lrmi.9.c
++++ svgalib/src/lrmi.9.c
+@@ -206,6 +206,13 @@ LRMI_free_real(void *m)
+ 
+ 
+ #if defined(__linux__)
++#ifndef TF_MASK
++#define TF_MASK X86_EFLAGS_TF
++#define IF_MASK X86_EFLAGS_IF
++#define IOPL_MASK X86_EFLAGS_IOPL
++#define VIF_MASK X86_EFLAGS_VIF
++#define VIP_MASK X86_EFLAGS_VIP
++#endif
+ #define DEFAULT_VM86_FLAGS 	(IF_MASK | IOPL_MASK)
+ #elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
+ #define DEFAULT_VM86_FLAGS  (PSL_I | PSL_IOPL)
+--- svgalib/lrmi-0.6m/lrmi.c
++++ svgalib/lrmi-0.6m/lrmi.c
+@@ -170,6 +170,14 @@ LRMI_free_real(void *m)
+ 	}
+ 
+ 
++#ifndef TF_MASK
++#define TF_MASK X86_EFLAGS_TF
++#define IF_MASK X86_EFLAGS_IF
++#define IOPL_MASK X86_EFLAGS_IOPL
++#define VIF_MASK X86_EFLAGS_VIF
++#define VIP_MASK X86_EFLAGS_VIP
++#endif
++
+ #define DEFAULT_VM86_FLAGS 	(IF_MASK | IOPL_MASK)
+ #define DEFAULT_STACK_SIZE 	0x1000
+ #define RETURN_TO_32_INT 	255
+--- svgalib/lrmi-0.9/lrmi.c
++++ svgalib/lrmi-0.9/lrmi.c
+@@ -203,6 +203,13 @@ LRMI_free_real(void *m)
+ 
+ 
+ #if defined(__linux__)
++#ifndef TF_MASK
++#define TF_MASK X86_EFLAGS_TF
++#define IF_MASK X86_EFLAGS_IF
++#define IOPL_MASK X86_EFLAGS_IOPL
++#define VIF_MASK X86_EFLAGS_VIF
++#define VIP_MASK X86_EFLAGS_VIP
++#endif
+ #define DEFAULT_VM86_FLAGS 	(IF_MASK | IOPL_MASK)
+ #elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
+ #define DEFAULT_VM86_FLAGS  (PSL_I | PSL_IOPL)

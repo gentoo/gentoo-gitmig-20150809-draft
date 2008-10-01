@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.79 2008/08/16 14:36:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.80 2008/10/01 19:17:23 wormo Exp $
+
+  02 Oct 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  files/svgalib-1.9.25-linux2.6.patch:
+  Add lrmi patch to compile with kernels >= 2.6.26 (bug #235401, 
+  fix posted by reporter pyrophobicman in related bug #235495)
 
   16 Aug 2008; Mike Frysinger <vapier@gentoo.org>
   files/svgalib-1.9.25-linux2.6.patch:
