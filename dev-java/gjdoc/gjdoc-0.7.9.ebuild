@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.9.ebuild,v 1.2 2008/09/27 12:28:26 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.9.ebuild,v 1.3 2008/10/01 14:01:48 betelgeuse Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="source"
@@ -39,7 +39,7 @@ src_unpack() {
 	AT_M4DIR="m4" eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	# I think that configure will do --enable-native if it finds gcj
 	# so we'll disable it explicitly
 	local myc="--with-antlr-jar=$(java-pkg_getjar antlr antlr.jar) --disable-native"
@@ -52,8 +52,10 @@ src_compile() {
 	JAVA="java" JAVAC="javac $(java-pkg_javac-args)" \
 		econf ${myc} \
 		$(use_enable xmldoclet) || die "econf failed"
+}
 
-	emake || die "emake failed"
+src_compile() {
+	default # Don't use from java-pkg-2
 }
 
 src_install() {
