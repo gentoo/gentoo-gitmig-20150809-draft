@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.253 2008/10/01 14:47:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.254 2008/10/01 22:03:21 cardoe Exp $
+
+*mythtv-0.21_p18501 (01 Oct 2008)
+
+  01 Oct 2008; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.21_p18501.ebuild:
+  EAPI=2 USE depends. fix mythshutdown wakeup date issue. Improvements to
+  h264 decoder. Fix for previously-shown with xmltv. UTF8 fix for UPnP.
+  French DVB-T freq added. Fix for EITScan stopping. Fix potential segfault
+  in mythbackend. Fix for index out of range issue.
 
 *mythtv-0.22_alpha18528 (01 Oct 2008)
 
