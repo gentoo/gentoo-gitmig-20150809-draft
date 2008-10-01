@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.113 2008/10/01 15:23:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.114 2008/10/01 15:43:55 betelgeuse Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -2731,7 +2731,7 @@ is-java-strict() {
 	return $?
 }
 
-[[ "${EAPI}" = "2" ]] && EXPORT_FUNCTIONS src_prepare
+EXPORT_FUNCTIONS src_prepare
 
 # ------------------------------------------------------------------------------
 # @eclass-end
