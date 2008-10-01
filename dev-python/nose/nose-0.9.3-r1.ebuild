@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.9.3-r1.ebuild,v 1.4 2008/08/01 17:59:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.9.3-r1.ebuild,v 1.5 2008/10/01 09:04:12 armin76 Exp $
 
 NEED_PYTHON=2.2
 
 inherit distutils eutils
 
-KEYWORDS="amd64 ~ia64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~sparc x86"
 
 DESCRIPTION="An alternate test discovery and running process for unittest."
 HOMEPAGE="http://somethingaboutorange.com/mrl/projects/nose/"
