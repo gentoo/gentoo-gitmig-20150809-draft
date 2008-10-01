@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.8.2.ebuild,v 1.3 2008/09/27 13:46:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.8.2.ebuild,v 1.4 2008/10/01 17:35:45 betelgeuse Exp $
 
 EAPI="2"
 
@@ -101,10 +101,7 @@ my_examine_components() {
 	einfo
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	if { ! use qt3; } && use gtk; then
 	ebegin "Applying sed no-Qt-use-GTK-workaround-patch (EXPERIMENTAL)"
 	# Gentoo-specific patch/workaround
@@ -204,7 +201,7 @@ src_unpack() {
 	eautoreconf || die "eautoreconf failed"
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	local myconf_main
 	local myconf_qt
@@ -255,12 +252,9 @@ src_compile() {
 	myconf_xml="$(use_enable xml xslt)"
 
 	econf --config-cache \
-	${myconf} ${myconf_main} ${myconf_qt} ${myconf_xml} \
-	$(use_enable debug) --disable-profiling \
-	--docdir=/usr/share/doc/${PF} --htmldir=/usr/share/doc/${PF}/html \
-	|| die "econf failed"
-
-	emake || die "emake failed"
+		${myconf} ${myconf_main} ${myconf_qt} ${myconf_xml} \
+		$(use_enable debug) --disable-profiling \
+		--docdir=/usr/share/doc/${PF} --htmldir=/usr/share/doc/${PF}/html
 }
 
 my_dekstop_and_icon () {
