@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.138 2008/10/01 11:51:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.139 2008/10/01 12:47:16 darkside Exp $
+
+  01 Oct 2008; Jeremy Olexa <darkside@gentoo.org> gentoolkit-0.2.4.2.ebuild:
+  amd64 stable, bug #170220
 
   01 Oct 2008; Jeroen Roovers <jer@gentoo.org> gentoolkit-0.2.4.2.ebuild:
   Stable for HPPA (bug #170220).
