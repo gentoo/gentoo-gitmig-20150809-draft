@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.7-r1.ebuild,v 1.1 2008/09/27 13:59:06 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.7-r1.ebuild,v 1.2 2008/10/01 11:35:00 serkan Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source"
@@ -32,10 +32,12 @@ DEPEND="${RDEPEND}
 # Needs X11
 RESTRICT="test"
 
-src_compile() {
+src_configure() {
 	# Handwritten in perl so not using econf
 	./configure --prefix=/usr || die
+}
 
+src_compile() {
 	# Fails parallel build in case GCJ is detected
 	# See https://bugs.gentoo.org/show_bug.cgi?id=200550
 	emake -j1 || die "Compilation of java-gnome failed"
