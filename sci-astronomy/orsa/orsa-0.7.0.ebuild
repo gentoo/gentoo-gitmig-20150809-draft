@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.7.0.ebuild,v 1.3 2008/07/27 22:18:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.7.0.ebuild,v 1.4 2008/10/01 15:20:50 fmccor Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="opengl qt3 mpi ginac cln gsl fftw xinerama threads static"
 
 DEPEND=">=sys-libs/readline-4.2

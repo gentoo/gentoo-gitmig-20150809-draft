@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/orsa
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.17 2008/08/06 12:47:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.18 2008/10/01 15:20:50 fmccor Exp $
+
+  01 Oct 2008; Ferris McCormick <fmccor@gentoo.org> orsa-0.7.0.ebuild:
+  Add ~sparc keyword for testing.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
