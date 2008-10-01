@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.4.ebuild,v 1.1 2008/10/01 18:37:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.4.ebuild,v 1.2 2008/10/01 18:58:20 yngwin Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -54,6 +54,9 @@ src_configure() {
 
 src_compile() {
 	emake || die "make failed"
+
+	# don't pre-strip
+	sed -i "/strip/d" src/Makefile || die 'sed failed'
 }
 
 src_install() {
