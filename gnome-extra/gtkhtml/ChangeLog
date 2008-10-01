@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.165 2008/09/25 14:41:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.166 2008/10/01 12:42:51 loki_val Exp $
+
+  01 Oct 2008; Peter Alfredsen <loki_val@gentoo.org>
+  files/gtkhtml-3.12.3-allow-deprecated.patch:
+  Update allow-deprecated patch to play nice with gtk-2.14.3.
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org> gtkhtml-3.18.3.ebuild:
   Stable for HPPA (bug #236971).
