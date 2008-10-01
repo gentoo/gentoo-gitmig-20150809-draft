@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.6.0-r2.ebuild,v 1.7 2008/10/01 14:43:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.6.0-r2.ebuild,v 1.8 2008/10/01 15:39:01 loki_val Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -26,8 +26,17 @@ RDEPEND=">=media-libs/freetype-2.1.4
 	>=dev-libs/expat-1.95.3"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( app-text/docbook-sgml-utils )"
+	doc? (	app-text/docbook-sgml-utils
+		=app-text/docbook-sgml-dtd-3.1*	)"
 PDEPEND="app-admin/eselect-fontconfig"
+
+pkg_setup() {
+	#To get docbook2pdf
+	if use doc && ! built_with_use app-text/docbook-sgml-utils jadetex
+	then
+		die "For this package to be built with the doc use flag, app-text/docbook-sgml-utils must be built with the jadetex use flag"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -75,7 +84,7 @@ src_install() {
 
 	if use doc; then
 		doman doc/Fc*.3
-		dohtml doc/fontconfig-devel.html doc
+		dohtml doc/fontconfig-devel.html
 		dodoc doc/fontconfig-devel.{txt,pdf}
 	fi
 
