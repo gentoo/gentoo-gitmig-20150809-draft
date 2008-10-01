@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.47 2008/09/28 10:19:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.48 2008/10/01 09:35:06 loki_val Exp $
+
+  01 Oct 2008; Peter Alfredsen <loki_val@gentoo.org> -brasero-0.8.0.ebuild,
+  -brasero-0.8.1.ebuild, brasero-0.8.2.ebuild:
+  Fix bug 239151. That damn GTK_DISABLE_DEPRECATED got us again.
 
 *brasero-0.8.2 (28 Sep 2008)
 
