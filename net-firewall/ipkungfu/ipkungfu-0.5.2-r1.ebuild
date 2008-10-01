@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ipkungfu-0.5.2-r1.ebuild,v 1.9 2007/10/28 13:11:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ipkungfu-0.5.2-r1.ebuild,v 1.10 2008/10/01 18:11:52 bangert Exp $
 
 inherit eutils
 
@@ -23,10 +23,10 @@ src_unpack() {
 
 	# Patch ipkungfu to load the right module for ip_nat_ftp
 	# Fixes bug #42443.  Thanks to George L. Emigh <george@georgelemigh.com>
-	cd ${WORKDIR}/${P} && epatch ${FILESDIR}/nat_ftp.patch
+	cd "${WORKDIR}"/${P} && epatch "${FILESDIR}"/nat_ftp.patch
 
 	# man page comes bzip2'd, so bunzip2 it.
-	cd ${WORKDIR}/${P}/files
+	cd "${WORKDIR}"/${P}/files
 	bunzip2 ipkungfu.8.bz2
 }
 
@@ -39,7 +39,7 @@ src_install() {
 	dosbin ipkungfu
 
 	# Install Gentoo init script
-	newinitd ${FILESDIR}/ipkungfu.init ipkungfu
+	newinitd "${FILESDIR}"/ipkungfu.init ipkungfu
 
 	# Install config files into /etc
 	dodir /etc/ipkungfu
