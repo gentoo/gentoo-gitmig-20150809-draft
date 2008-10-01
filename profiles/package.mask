@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9031 2008/09/30 22:13:51 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9032 2008/10/01 13:28:01 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -46,7 +46,6 @@ dev-lisp/abcl-cvs
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (26 Sep 2008)
 # temporarily mask to prevent things from breaking
->=x11-libs/cairo-1.8.0
 >=x11-libs/pango-1.22.0
 >=app-text/poppler-0.9.2
 >=app-text/poppler-bindings-0.9.2
