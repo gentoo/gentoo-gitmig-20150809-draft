@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3907 2008/10/01 20:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3908 2008/10/01 21:44:08 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2521,6 +2521,8 @@ x11-libs/cairo:glitz - Build with glitz support, which replaces some software re
 x11-libs/cairo:opengl - When used along with USE=glitz, enables glitz-glx usage. Requires hardware OpenGL support
 x11-libs/fltk:noxft - Disables xft; use for non-english characters
 x11-libs/gtkmathview:t1lib - Enable media-libs/t1lib support
+x11-libs/libmatchbox:pango - Enable x11-libs/pango support
+x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management
 x11-libs/openmotif:xft - Build OpenMotif with support for XFT font renderer (x11-libs/libXft)
 x11-libs/qt:glib - Enable dev-libs/glib eventloop support
 x11-libs/qt:immqt - Enable binary incompatible version of immodule for Qt
@@ -2535,3 +2537,76 @@ x11-libs/qt-sql:qt3support - Enable the Qt3Support libraries for Qt4
 x11-libs/wxGTK:gnome -  Use gnome-base/libgnomeprintui for printing tasks. 
 x11-libs/wxGTK:gstreamer -  Enable the wxMediaCtrl class for playing audio and video through gstreamer. 
 x11-libs/wxGTK:sdl -  Use Simple Directmedia Layer (media-libs/libsdl) for audio. 
+x11-misc/adesklets:ctrlmenu - force CTRL to be pressed to fire context menu
+x11-misc/notification-daemon-xfce:xfce - Enable integration in XFCE desktop
+x11-misc/openclipart:gzip - Compresses clip art using gzip
+x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
+x11-misc/x11vnc:system-libvncserver - Build x11vnc against the system libvncserver (experimental)
+x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
+x11-misc/xscreensaver:new-login - Enables New Login button using gdmflexiserver (gnome-base/gdm)
+x11-misc/zim:screenshot - Enable screenshot support (using media-gfx/scrot)
+x11-misc/zim:trayicon - Enable support for trayicon
+x11-plugins/bfm:gkrellm - Enable building of app-admin/gkrellm module
+x11-plugins/gkrellm-plugins:audacious - Enable the audacious plugin x11-plugins/gkrellmms
+x11-plugins/gkrellmbups:nut - Enable monitoring Network-UPS via sys-power/nut
+x11-plugins/purple-plugin_pack:talkfilters - Enable support for app-text/talklfilters
+x11-plugins/wmhdplop:gkrellm - Enable building of app-admin/gkrellm module
+x11-plugins/wmsysmon:high-ints - Enable support for monitoring 24 interrupts. Useful on SMP machines
+x11-terms/aterm:background - Enable background image support via media-libs/libafterimage
+x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
+x11-terms/eterm:escreen - Enable built-in app-misc/screen support
+x11-terms/eterm:etwin - Enable twin support
+x11-terms/hanterm:utempter - Records user logins. Useful on multi-user systems
+x11-terms/mlterm:scim - Enable scim support
+x11-terms/mlterm:uim - Enable uim support
+x11-terms/mrxvt:menubar - Enable mrxvt menubar
+x11-terms/mrxvt:utempter - REcords user logins. Useful on multi-user systems
+x11-terms/rxvt:linuxkeys - Define LINUX_KEYS (changes Home/End key)
+x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
+x11-terms/rxvt-unicode:afterimage - Enable support for media-libs/libafterimage 
+x11-terms/rxvt-unicode:iso14755 - Enable ISO-14755 support
+x11-terms/xterm:paste64 - Enable support for bracketed paste mode
+x11-terms/xterm:toolbar - Enable the xterm toolbar to be built
+x11-themes/gentoo-artwork:grub - Install extra sys-boot/grub themes
+x11-themes/gentoo-artwork:icons - Install icons
+x11-themes/gentoo-artwork:lilo - Install extra sys-boot/lilo themes
+x11-themes/gentoo-artwork:pixmaps - Install pixmaps
+x11-themes/gtk-engines-qt:gnome - Enable proper theming of buttons in gnome toolbars (as opposed to just plain gtk+ toolbars)
+x11-themes/gtk-engines-qtcurve:firefox3 - Install GUI theme tweaks for version 3 of www-client/mozilla-firefox
+x11-themes/gtk-engines-qtcurve:mozilla - Install GUI theme tweaks for mozilla based browsers, including version 2 of www-client/mozilla-firefox
+x11-themes/qtcurve-qt4:kde - Enable KDE4 support. This adds a QtCurve configuration module to KDE's SystemSettings.
+x11-themes/redhat-artwork:audacious - Install media-sound/audacious theme
+x11-themes/redhat-artwork:cursors - Install Bluecurve cursors
+x11-themes/redhat-artwork:gdm - Install Bluecurve gnome-base/gdm theme
+x11-themes/redhat-artwork:icons - Install Bluecurve icons
+x11-themes/redhat-artwork:kdm - Install Bluecurve kde-base/kdm theme
+x11-themes/redhat-artwork:nautilus - Install Bluecurve gnome-base/nautilus icons
+x11-themes/skinenigmang-logos:dxr3 - Install logos for lower osd color depth on dxr3 cards
+x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
+x11-wm/fluxbox:disableslit - Disables the fluxbox slit (or dock)
+x11-wm/fluxbox:disabletoolbar - Disables the fluxbox toolbar
+x11-wm/fluxbox:slit - Enables the fluxbox slit (or dock)
+x11-wm/fluxbox:toolbar - Enables the fluxbox toolbar
+x11-wm/fvwm:gtk2-perl - Enable GTK2 Perl bindings
+x11-wm/fvwm:netpbm - Enable NetPBM support (used by FvwmScript-ScreenDump)
+x11-wm/fvwm:rplay - Enable rplay support
+x11-wm/fvwm:stroke - Mouse Gesture support
+x11-wm/matchbox-desktop:dnotify - Use the linux kernel directory notification feature.
+x11-wm/matchbox-panel:dnotify - Use the linux kernel directory notification feature.
+x11-wm/matchbox-panel:lowres - Optimize for low resolution screens.
+x11-wm/sawfish:pango - Enable pango support
+x11-wm/stumpwm:clisp - Use CLISP for the runtime
+x11-wm/stumpwm:sbcl - Use SBCL for the runtime
+x11-wm/stumpwm-cvs:clisp - Use CLISP for the runtime
+x11-wm/stumpwm-cvs:sbcl - Use SBCL for the runtime
+x11-wm/vtwm:rplay - Enable rplay support, needed for sound.
+x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
+x11-wm/windowmaker:vdesktop - Enable dynamic virtual desktop (conflicts with software that works on the edges of the screen)
+xfce-base/thunar:trash-plugin - Build Trash plug-in for panel
+xfce-base/xfce-utils:lock - Enable screen locking
+xfce-base/xfce4-extras:battery - Meta pulls in xfce-extra/xfce4-battery depend
+xfce-base/xfce4-extras:cpufreq - Meta pulls in xfce-extra/xfce4-cpu-freq depend
+xfce-base/xfdesktop:file-icons - Build support for application launchers using xfce-base/thunar and libexo
+xfce-base/xfdesktop:menu-plugin - Build Menu plug-in for panel
+xfce-extra/thunar-thumbnailers:grace - Enable support for sci-visualization/grace thumbnails
+xfce-extra/xfce4-mpc:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
