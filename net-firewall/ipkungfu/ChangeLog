@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipkungfu
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ChangeLog,v 1.16 2008/10/01 11:07:54 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipkungfu/ChangeLog,v 1.17 2008/10/01 15:31:03 bangert Exp $
+
+  01 Oct 2008; Thilo Bangert <bangert@gentoo.org> -ipkungfu-0.5.0.ebuild,
+  -ipkungfu-0.5.2.ebuild, -ipkungfu-0.6.0.ebuild:
+  remove old versions
 
 *ipkungfu-0.6.1 (01 Oct 2008)
 
