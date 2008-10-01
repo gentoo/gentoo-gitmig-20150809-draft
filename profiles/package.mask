@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9032 2008/10/01 13:28:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9033 2008/10/01 19:13:34 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (01 Oct 2008)
+# Masked for brokenness. Last release 4 years ago. There are plenty
+# alternatives. Pending removal in 30 days. Bug 226007
+x11-misc/obpager
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (29 Sep 2008)
 # Masked for testing.
