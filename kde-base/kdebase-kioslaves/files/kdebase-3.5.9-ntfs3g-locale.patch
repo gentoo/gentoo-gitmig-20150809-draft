@@ -1,0 +1,31 @@
+Index: kioslave/media/mediamanager/halbackend.cpp
+===================================================================
+--- kioslave/media/mediamanager/halbackend.cpp	(revision 864099)
++++ kioslave/media/mediamanager/halbackend.cpp	(working copy)
+@@ -849,6 +849,14 @@
+         result << tmp;
+     }
+ 
++    if (valids.contains("locale") && fstype == "ntfs-3g")
++    {
++        char *cType;
++        if ( (cType = getenv("LC_ALL")) || (cType = getenv("LC_CTYPE")) || (cType = getenv("LANG")) ) {
++            result << QString("locale=%1").arg(cType);
++        }
++    }
++
+     if (valids.contains("utf8"))
+     {
+         value = config.readBoolEntry("utf8", true);
+@@ -1149,6 +1157,11 @@
+     if (valids["quiet"] == "true")
+         soptions << "quiet";
+ 
++    if (valids.contains("locale"))
++    {
++        soptions << QString("locale=%1").arg(valids["locale"]);
++    }
++
+     if (valids["utf8"] == "true")
+         soptions << "utf8";
+ 
