@@ -14,7 +14,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.39 2008/09/28 15:47:48 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-ant-2.eclass,v 1.40 2008/10/01 15:23:17 betelgeuse Exp $
 
 inherit java-utils-2
 
@@ -127,6 +127,24 @@ JAVA_ANT_CLASSPATH_TAGS="javac xjavac"
 #
 # default: off
 # ------------------------------------------------------------------------------
+
+[[ "${EAPI}" == "2" ]] && EXPORT_FUNCTIONS src_configure
+
+# ------------------------------------------------------------------------------
+# @eclass-src_configure
+#
+# src_configure rewrites the build.xml files
+# ------------------------------------------------------------------------------
+java-ant-2_src_configure() {
+	# eant will call us unless called by Portage
+	[[ -e "${T}/java-ant-2_src_configure-run" ]] && return
+
+	[[ "${JAVA_ANT_IGNORE_SYSTEM_CLASSES}" ]] \
+		&& java-ant_ignore-system-classes "${S}/build.xml"
+
+	java-ant_bsfix
+	touch "${T}/java-ant-2_src_configure-run"
+} 
 
 # ------------------------------------------------------------------------------
 # @private java-ant_bsfix
