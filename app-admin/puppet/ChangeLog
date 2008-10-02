@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.25 2008/09/29 12:48:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.26 2008/10/02 17:06:06 matsuu Exp $
+
+*puppet-0.24.5-r3 (02 Oct 2008)
+
+  02 Oct 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/puppet-0.24.5-eix-0.14.0.patch, +puppet-0.24.5-r3.ebuild:
+  Fixed rrdtool dependency, bug #238568. Fixed to work with
+  >=app-portage/eix-0.14.0.
 
   29 Sep 2008; Tiziano Müller <dev-zero@gentoo.org> files/puppet.init,
   files/puppetmaster.init:
