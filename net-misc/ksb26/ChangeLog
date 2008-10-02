@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ksb26
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ChangeLog,v 1.9 2008/09/18 20:34:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksb26/ChangeLog,v 1.10 2008/10/02 16:58:07 ranger Exp $
+
+  02 Oct 2008; Brent Baude <ranger@gentoo.org> ksb26-0.0.4.ebuild:
+  stable ppc, bug 237251
 
   18 Sep 2008; Raúl Porcel <armin76@gentoo.org> ksb26-0.0.4.ebuild:
   x86 stable wrt #237251
