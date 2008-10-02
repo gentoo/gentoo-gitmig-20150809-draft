@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>kde</herd>
-  <use>
-    <flag name="akode">Support for the aKode audio-decoding frame-work.</flag>
-    <flag name="ktts">Enable KDE Text To Speech modules</flag>
-  </use>
+<use>
+	<flag name="akode">Support for the aKode audio-decoding frame-work.</flag>
+	<flag name="ktts">Enable KDE Text To Speech modules</flag>
+	<flag name="phonon">Enable support for the KDE multimedia API</flag>
+</use>
+<herd>kde</herd>
 </pkgmetadata>
