@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-blacklist/openssl-blacklist-0.4.1.ebuild,v 1.2 2008/07/28 06:52:41 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-blacklist/openssl-blacklist-0.4.1.ebuild,v 1.3 2008/10/02 18:16:52 jer Exp $
 
 DESCRIPTION="Detection of weak ssl keys produced by certain debian versions between 2006 and 2008"
 HOMEPAGE="https://launchpad.net/ubuntu/+source/openssl-blacklist/"
 SRC_URI="mirror://debian/pool/main/o/${PN}/${PN}_${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa x86 ~x86-fbsd"
 IUSE=""
 DEPEND="dev-lang/python"
 S="${WORKDIR}/trunk"
