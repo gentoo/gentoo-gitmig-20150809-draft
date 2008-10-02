@@ -1,8 +1,8 @@
 # Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.ebuild,v 1.1 2008/09/15 15:09:14 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.ebuild,v 1.2 2008/10/02 18:55:36 iluxa Exp $
 
-inherit eutils flag-o-matic autotools
+inherit eutils flag-o-matic autotools multilib
 
 IUSE="fltk odbc doc sqlite3 excel postgres aspell"
 
@@ -45,6 +45,8 @@ src_unpack() {
 	check_use excel    EXCEL
 
 	sed -r -i -e 's|SET \(LIBRARY_TYPE STATIC\)|SET \(LIBRARY_TYPE SHARED\)|' src/CMakeLists.txt
+	sed -i -e "s:DESTINATION lib:DESTINATION $(get_libdir):g" src/CMakeLists.txt \
+	|| die "Multilib sed failed"
 
 	cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr ${SPTK_OPTIONS} .  || die "Configuration Failed"
 }
