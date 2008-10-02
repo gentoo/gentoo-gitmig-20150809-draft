@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.6 2008/10/02 10:16:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.7 2008/10/02 18:15:13 aballier Exp $
+
+  02 Oct 2008; Alexis Ballier <aballier@gentoo.org> luatex-0.30.0.ebuild:
+  Switch to eapi-2 and make use of use-deps and the new phases.
 
 *luatex-0.30.0 (02 Oct 2008)
 

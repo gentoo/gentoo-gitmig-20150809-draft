@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.30.0.ebuild,v 1.1 2008/10/02 10:16:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.30.0.ebuild,v 1.2 2008/10/02 18:15:13 aballier Exp $
+
+EAPI="2"
 
 inherit libtool multilib eutils toolchain-funcs
 
@@ -16,7 +18,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~x86 ~x86-fbsd"
 IUSE="doc"
 
-RDEPEND="dev-tex/mplib
+RDEPEND="dev-tex/mplib[lua]
 	dev-libs/zziplib
 	media-libs/libpng
 	app-text/poppler
@@ -26,22 +28,12 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}-beta-${PV}/src"
 
-pkg_setup() {
-	if ! built_with_use dev-tex/mplib lua ; then
-		eerror "You need to build dev-tex/mplib with the lua useflag"
-		eerror "${PN} requires mplib's lua bindings."
-		die "Please install dev-tex/mplib with the lua useflag"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	elibtoolize
 }
 
-src_compile() {
+src_configure() {
 	tc-export CC CXX AR RANLIB
 	export NATIVE='.'
 	mkdir -p "${WORKDIR}/${PN}-beta-${PV}/build"
@@ -92,7 +84,9 @@ src_compile() {
 		--disable-largefile \
 		--with-system-zlib \
 		--with-system-pnglib
+}
 
+src_compile() {
 	cd "${WORKDIR}/${PN}-beta-${PV}/build/texk/web2c"
 	emake \
 		LIBMPLIBDEP="/usr/$(get_libdir)/libmplib/mplib.la" \
