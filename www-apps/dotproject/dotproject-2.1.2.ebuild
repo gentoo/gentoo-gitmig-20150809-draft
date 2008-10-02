@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/dotproject-2.1.1.ebuild,v 1.2 2008/02/22 16:44:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/dotproject-2.1.2.ebuild,v 1.1 2008/10/02 04:44:43 wrobel Exp $
 
 inherit webapp depend.php
 

@@ -1,7 +1,17 @@
-Installation instructions are at
-http://docs.dotproject.net/index.php/Installing_dotProject
+You will need to provide a database for your dotproject installation.
 
-Installing/Upgrading, the quick way: point your browser to the install directory
-	http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/install
+This assumes you have some knowledge of MySQL, and already have it
+installed and configured. If not, please refer to the Gentoo MySQL
+guide at the following URL:
 
-Note the default username/passwd: admin / passwd
+http://www.gentoo.org/doc/en/mysql-howto.xml
+
+Once you have a database ready all you need to do is to go to this 
+location
+
+http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/install
+
+and provide the credentials required for the database access.
+
+Note the administrator password dotproject will provide and after
+logging in with these credentials you can start to use the application.
