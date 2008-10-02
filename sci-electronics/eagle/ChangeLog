@@ -1,6 +1,15 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.13 2008/07/17 00:12:09 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.14 2008/10/02 02:43:17 nixphoeni Exp $
+
+*eagle-5.2.0 (02 Oct 2008)
+
+  02 Oct 2008; Joe Sapp <nixphoeni@gentoo.org> -eagle-4.16_p1.ebuild,
+  eagle-5.1.0.ebuild, +eagle-5.2.0.ebuild:
+  Revision bump. Also modified the warning at the end of installation to be
+  a little more severe per UPDATE_en.
+  Thanks to Alex <nabrozidhs@gmail.com> on bug #235380 for notifying me.
+  Cleaned up old ebuilds a little too.
 
   17 Jul 2008; Joe Sapp <nixphoeni@gentoo.org> ChangeLog:
   Revised ebuild for eagle version 5, which uses a new packaging system and
