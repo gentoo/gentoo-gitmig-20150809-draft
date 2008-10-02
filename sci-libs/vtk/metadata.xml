@@ -8,6 +8,8 @@
   <name>Markus Dittrich</name>
 </maintainer>
 <use>
-  <flag name='patented'>Build patented classes</flag>
+	<flag name='patented'>Build patented classes</flag>
+	<flag name='boost'>Add support for boost</flag>
+	<flag name='cg'>Use nvidia's cg shaders</flag>
 </use>
 </pkgmetadata>
