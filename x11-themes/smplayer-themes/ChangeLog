@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/smplayer-themes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/ChangeLog,v 1.13 2008/09/28 14:41:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-themes/ChangeLog,v 1.14 2008/10/02 17:07:04 ranger Exp $
+
+  02 Oct 2008; Brent Baude <ranger@gentoo.org>
+  smplayer-themes-0.1.16.ebuild:
+  stable ppc, bug 238794
 
   28 Sep 2008; Markus Meier <maekke@gentoo.org>
   smplayer-themes-0.1.16.ebuild:
