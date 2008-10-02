@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/malsync/malsync-2.2.0.ebuild,v 1.7 2007/09/17 18:45:23 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/malsync/malsync-2.2.0.ebuild,v 1.8 2008/10/02 02:27:29 darkside Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tomw.org/malsync/${MY_P}.src.tar.gz"
 
 LICENSE="MPL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="~app-pda/pilot-link-0.11.8
