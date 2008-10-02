@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.6.0-r2.ebuild,v 1.8 2008/10/01 15:39:01 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.6.0-r2.ebuild,v 1.9 2008/10/02 14:58:37 loki_val Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -32,7 +32,10 @@ PDEPEND="app-admin/eselect-fontconfig"
 
 pkg_setup() {
 	#To get docbook2pdf
-	if use doc && ! built_with_use app-text/docbook-sgml-utils jadetex
+	if use doc && !	{	built_with_use --missing false app-text/docbook-sgml-utils jadetex \
+				|| \
+				built_with_use --missing false app-text/docbook-sgml-utils tetex;
+			}
 	then
 		die "For this package to be built with the doc use flag, app-text/docbook-sgml-utils must be built with the jadetex use flag"
 	fi
