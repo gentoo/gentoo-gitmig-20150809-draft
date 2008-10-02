@@ -1,10 +1,12 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.98 2008/10/02 23:21:26 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.99 2008/10/02 23:57:00 jmbsvicetto Exp $
 
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +files/fix_includes_install.patch:
   Added a missing patch file.
+
+*libkonq-4.1.2 (02 Oct 2008)
 
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml +libkonq-4.1.2.ebuild:
