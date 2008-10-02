@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.337 2008/10/01 17:53:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.338 2008/10/02 04:13:30 wrobel Exp $
+
+  02 Oct 2008; wrobel@gentoo.org -phpmyadmin-2.11.9.1.ebuild:
+  Removed insecure phpmyadmin-2.11.9.1 (sec issue #238592).
 
   01 Oct 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   phpmyadmin-2.11.9.2.ebuild:
