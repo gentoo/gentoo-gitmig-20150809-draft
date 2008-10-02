@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3923 2008/10/02 12:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3924 2008/10/02 22:07:59 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1392,6 +1392,7 @@ media-tv/mythtv:lirc - Adds LIRC support directly to MythTV allowing for built i
 media-tv/mythtv:mmx - Builds ffmpeg's codec libraries with mmx support.
 media-tv/mythtv:opengl - Builds MythTV with support for using OpenGL as the output painter rather then Qt3 built in painter.
 media-tv/mythtv:perl - Builds the perl bindings for MythTV. Allows you to write scripts in Perl to control your MythTV setup or communicate with it.
+media-tv/mythtv:tiff - Add support for tiff loading and rendering which is only used by media-plugins/mythgallery
 media-tv/mythtv:video_cards_i810 - When combined with the xvmc USE flag, enables Intel specific XvMC extension usage.
 media-tv/mythtv:video_cards_nvidia - When combined with the xvmc USE flag, enables NVIDIA specific XvMC extension usage.
 media-tv/mythtv:video_cards_via - When combined with the xvmc USE flag, enables VIA specific XvMC extension usage.
