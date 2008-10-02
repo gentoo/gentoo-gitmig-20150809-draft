@@ -77,6 +77,8 @@
 	<flag name="perl">Builds the perl bindings for MythTV. Allows you to write
 		scripts in Perl to control your MythTV setup or communicate with
 		it.</flag>
+	<flag name='tiff'>Add support for tiff loading and rendering which is only
+		used by <pkg>media-plugins/mythgallery</pkg></flag>
 	<flag name="xvmc">Instructs MythTV to use XvMC for it's video output. By
 		default, this will use the generic XvMC wrapper unless a specific video
 		card driver is enabled via their VIDEO_CARDS USE flags.</flag>

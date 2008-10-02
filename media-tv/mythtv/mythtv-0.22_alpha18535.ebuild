@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha18528.ebuild,v 1.3 2008/10/02 22:02:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha18535.ebuild,v 1.1 2008/10/02 22:02:35 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -75,9 +75,7 @@ pkg_setup() {
 	usermod -a -G ${MYTHTV_GROUPS} mythtv
 }
 
-src_unpack() {
-	subversion_src_unpack
-
+src_prepare() {
 	# upstream wants the revision number in their version.cpp
 	# since the subversion.eclass strips out the .svn directory
 	# svnversion in MythTV's build doesn't work

@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.255 2008/10/02 14:49:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.256 2008/10/02 22:02:35 cardoe Exp $
+
+*mythtv-0.22_alpha18535 (02 Oct 2008)
+
+  02 Oct 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml,
+  mythtv-0.22_alpha18528.ebuild, +mythtv-0.22_alpha18535.ebuild:
+  Qt's tiff support is only required to be present if we expect MythTV to
+  render tiff images for MythGallery. Adding USE flag at the request of a
+  user. stuartm/gbee provided details.
 
   02 Oct 2008; Doug Goldstein <cardoe@gentoo.org>
   mythtv-0.20.2_p15634.ebuild, mythtv-0.21_p17637.ebuild,
