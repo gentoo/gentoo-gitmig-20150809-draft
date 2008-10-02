@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/anki
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.1 2008/10/02 23:13:39 hncaldwell Exp $
+
+*anki-0.9.8.1 (02 Oct 2008)
+
+  02 Oct 2008; Heath Caldwell (hncaldwell) <hncaldwell@csupomona.edu>
+  +metadata.xml, +anki-0.9.8.1.ebuild:
+  New ebuild for anki. Ebuild written by me. Fixes bug #214472.
+
