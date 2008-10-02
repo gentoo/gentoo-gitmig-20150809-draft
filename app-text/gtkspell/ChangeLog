@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.64 2008/09/26 16:49:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.65 2008/10/02 21:41:19 eva Exp $
+
+*gtkspell-2.0.14 (02 Oct 2008)
+
+  02 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gtkspell-2.0.11-enchant.patch, -files/gtkspell-2.0.11-nonls.patch,
+  -gtkspell-2.0.11-r1.ebuild, +gtkspell-2.0.14.ebuild:
+  Version bump to 2.0.14.
 
   26 Sep 2008; Jeroen Roovers <jer@gentoo.org> gtkspell-2.0.13.ebuild:
   Stable for HPPA (bug #238182).
