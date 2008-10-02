@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3912 2008/10/02 06:07:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3913 2008/10/02 06:47:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -928,12 +928,18 @@ kde-base/akregator:kontact - Enable support for the KDE personal information man
 kde-base/ark:archive - Enable support for a variety of archive formats through libarchive
 kde-base/ark:zip - Enable zip support through LibZip
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
-kde-base/dolphin:semantic-desktop - Semantic desktop allows for storage of digital information and its metadata to allow the user to express his personal mental models, making all information become intuitively accessible
+kde-base/dolphin:semantic-desktop -  Semantic desktop allows for storage of digital information and its metadata to allow the user to express his personal mental models, making all information become intuitively accessible 
+kde-base/gwenview:kipi - Support for the KDE Image Plugin Interface.
+kde-base/gwenview:semantic-desktop -  Semantic desktop allows for storage of digital information and its metadata to allow the user to express his personal mental models, making all information become intuitively accessible 
 kde-base/juk:akode - Support for the aKode audio-decoding frame-work
 kde-base/juk:tunepimp - Provide MusicBrainz tagging in Juk
-kde-base/kaddressbook:gnokii - Address synchronization with mobile phones via Gnokii
+kde-base/kaddressbook:gnokii - Address synchronization with mobile phones via app-mobilephone/gnokii
+kde-base/kaddressbook:kontact - Enable support for the KDE personal information manager
+kde-base/kalgebra:plasma - Build optional plasma widgets that require kde-base/libplasma.
 kde-base/kalzium:cviewer - Enable Kalzium compound viewer
+kde-base/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-base/kalzium:solver - Enable the equation solver
+kde-base/kate:plasma - Build optional kde-base/plasma widgets
 kde-base/kbugbuster:kcal - Support for kcal (calendar) format
 kde-base/kcontrol:logitech-mouse - Build the Control Center module to configure logitech mice
 kde-base/kdeadmin-meta:lilo - Install lilo-config, a frontend for the lilo boot loader
