@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/lmms-0.4.0_rc2.ebuild,v 1.1 2008/09/23 21:00:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/lmms-0.4.0_rc2.ebuild,v 1.2 2008/10/02 17:58:43 aballier Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils cmake-utils
 
@@ -20,8 +20,8 @@ IUSE="alsa debug fftw fluidsynth jack ogg pch portaudio pulseaudio sdl stk vst"
 
 RDEPEND="|| ( (
 				x11-libs/qt-core
-				x11-libs/qt-gui
-			) >=x11-libs/qt-4.3.0:4 )
+				x11-libs/qt-gui[accessibility]
+			) >=x11-libs/qt-4.3.0:4[accessibility] )
 	>=media-libs/libsndfile-1.0.11
 	media-libs/libsamplerate
 	alsa? ( media-libs/alsa-lib )
@@ -43,7 +43,7 @@ S="${WORKDIR}/${MY_P}"
 
 DOCS="README AUTHORS ChangeLog TODO"
 
-src_compile() {
+src_configure() {
 	mycmakeargs="${mycmakeargs}
 		-DWANT_SYSTEM_SR=TRUE
 		-DWANT_CAPS=TRUE
@@ -60,5 +60,5 @@ src_compile() {
 		$(cmake-utils_use_want fluidsynth SF2)
 		$(cmake-utils_use_want pch PCH)"
 
-	cmake-utils_src_compile
+	cmake-utils_src_configure
 }

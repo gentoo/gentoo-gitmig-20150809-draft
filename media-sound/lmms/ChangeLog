@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lmms
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.2 2008/09/23 21:00:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.3 2008/10/02 17:58:43 aballier Exp $
+
+  02 Oct 2008; Alexis Ballier <aballier@gentoo.org> lmms-0.4.0_rc2.ebuild:
+  We need qt4 with the accessibility useflag turned on, bug #239294, fix by
+  Thomas 'gimpel' Kuther
 
 *lmms-0.4.0_rc2 (23 Sep 2008)
 
