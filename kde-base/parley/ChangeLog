@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.11 2008/06/09 15:22:56 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.12 2008/10/02 11:09:53 jmbsvicetto Exp $
+
+*parley-4.1.2 (02 Oct 2008)
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, +parley-4.1.2.ebuild:
+  Add kde-4.1.2 into the tree from the kde-testing overlay.
 
   09 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> -parley-4.0.2.ebuild,
   -parley-4.0.3.ebuild:

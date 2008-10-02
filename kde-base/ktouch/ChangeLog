@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.101 2008/09/14 00:00:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.102 2008/10/02 10:21:22 jmbsvicetto Exp $
+
+*ktouch-4.1.2 (02 Oct 2008)
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ktouch-4.1.2.ebuild:
+  Add kde-4.1.2 into the tree from the kde-testing overlay.
 
 *ktouch-3.5.10 (13 Sep 2008)
 

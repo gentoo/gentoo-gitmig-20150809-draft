@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.91 2008/09/13 23:58:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.92 2008/10/02 08:24:57 jmbsvicetto Exp $
+
+*kdf-4.1.2 (02 Oct 2008)
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +kdf-4.1.2.ebuild:
+  Add kde-4.1.2 into the tree from the kde-testing overlay.
 
 *kdf-3.5.10 (13 Sep 2008)
 

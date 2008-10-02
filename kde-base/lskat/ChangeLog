@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/lskat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lskat/ChangeLog,v 1.94 2008/09/14 00:00:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lskat/ChangeLog,v 1.95 2008/10/02 11:02:19 jmbsvicetto Exp $
+
+*lskat-4.1.2 (02 Oct 2008)
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +lskat-4.1.2.ebuild:
+  Add kde-4.1.2 into the tree from the kde-testing overlay.
 
 *lskat-3.5.10 (13 Sep 2008)
 

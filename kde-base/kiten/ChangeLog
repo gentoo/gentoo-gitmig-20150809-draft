@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kiten
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.93 2008/09/13 23:58:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.94 2008/10/02 08:55:31 jmbsvicetto Exp $
+
+*kiten-4.1.2 (02 Oct 2008)
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +kiten-4.1.2.ebuild:
+  Add kde-4.1.2 into the tree from the kde-testing overlay.
 
 *kiten-3.5.10 (13 Sep 2008)
 

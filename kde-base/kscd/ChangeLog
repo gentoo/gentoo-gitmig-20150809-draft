@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kscd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.99 2008/09/13 23:59:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.100 2008/10/02 09:55:09 jmbsvicetto Exp $
+
+*kscd-4.1.2 (02 Oct 2008)
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +kscd-4.1.2.ebuild:
+  Add kde-4.1.2 into the tree from the kde-testing overlay.
 
 *kscd-3.5.10 (13 Sep 2008)
 

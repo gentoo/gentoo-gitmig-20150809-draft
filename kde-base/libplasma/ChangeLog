@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/libplasma
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasma/ChangeLog,v 1.10 2008/06/09 14:57:25 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasma/ChangeLog,v 1.11 2008/10/02 10:57:42 jmbsvicetto Exp $
+
+*libplasma-4.1.2 (02 Oct 2008)
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +libplasma-4.1.2.ebuild:
+  Add kde-4.1.2 into the tree from the kde-testing overlay.
 
   09 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -libplasma-4.0.2.ebuild, -libplasma-4.0.3.ebuild:

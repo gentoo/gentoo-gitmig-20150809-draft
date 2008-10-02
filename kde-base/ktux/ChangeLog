@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.90 2008/09/14 00:00:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.91 2008/10/02 10:26:45 jmbsvicetto Exp $
+
+*ktux-4.1.2 (02 Oct 2008)
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ktux-4.1.2.ebuild:
+  Add kde-4.1.2 into the tree from the kde-testing overlay.
 
 *ktux-3.5.10 (13 Sep 2008)
 

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk-scripts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.80 2008/09/13 23:58:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.81 2008/10/02 08:16:54 jmbsvicetto Exp $
+
+*kdesdk-scripts-4.1.2 (02 Oct 2008)
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +kdesdk-scripts-4.1.2.ebuild:
+  Add kde-4.1.2 into the tree from the kde-testing overlay.
 
 *kdesdk-scripts-3.5.10 (13 Sep 2008)
 
