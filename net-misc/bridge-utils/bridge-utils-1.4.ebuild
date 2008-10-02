@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.4.ebuild,v 1.5 2008/09/30 21:22:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.4.ebuild,v 1.6 2008/10/02 16:54:50 ranger Exp $
 
 inherit toolchain-funcs eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/bridge/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 hppa ~ia64 ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/os-headers"
