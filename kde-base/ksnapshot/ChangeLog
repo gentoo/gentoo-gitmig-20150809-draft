@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksnapshot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.94 2008/10/02 10:01:08 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksnapshot/ChangeLog,v 1.95 2008/10/02 18:41:27 keytoaster Exp $
+
+  02 Oct 2008; Tobias Heinlein <keytoaster@gentoo.org> Manifest:
+  Fixing Manifests for the new kdegraphics tarballs which was changed
+  last-minute.
 
 *ksnapshot-4.1.2 (02 Oct 2008)
 
