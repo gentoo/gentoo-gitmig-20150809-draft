@@ -1,10 +1,10 @@
 # ChangeLog for net-www/nspluginwrapper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.19 2008/10/02 03:16:56 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.20 2008/10/02 03:19:56 chutzpah Exp $
 
 *nspluginwrapper-1.1.0-r1 (02 Oct 2008)
 
-  02 Oct 2008; Patrick McLean <chutz@gentoo.org>
+  02 Oct 2008; Patrick McLean <chutzpah@gentoo.org>
   +files/nspluginwrapper-1.1.0-quiet-64bit-plugin-warnings.patch,
   +files/nspluginwrapper-1.1.0-windowless-crash.patch,
   nspluginwrapper-1.0.0.ebuild, -nspluginwrapper-1.1.0.ebuild,
