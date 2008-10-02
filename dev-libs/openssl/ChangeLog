@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.270 2008/10/02 12:14:55 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.271 2008/10/02 16:11:48 fmccor Exp $
+
+  02 Oct 2008; Ferris McCormick <fmccor@gentoo.org>
+  openssl-0.9.8h-r1.ebuild:
+  Sparc stable --- Bug #239301 --- looks good and all tests successful.
 
   02 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org>
   openssl-0.9.8h-r1.ebuild:
