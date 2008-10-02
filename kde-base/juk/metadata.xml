@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>kde</herd>
-  <use>
-    <flag name="akode">Support for the aKode audio-decoding frame-work</flag>
-    <flag name="tunepimp">Provide MusicBrainz tagging in Juk</flag>
-  </use>
+<use>
+	<flag name="akode">Support for the aKode audio-decoding frame-work</flag>
+	<flag name="tunepimp">Provide MusicBrainz tagging in Juk</flag>
+</use>
+<herd>kde</herd>
 </pkgmetadata>

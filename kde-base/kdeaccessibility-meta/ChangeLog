@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.95 2008/09/13 23:57:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.96 2008/10/02 07:07:12 jmbsvicetto Exp $
+
+*kdeaccessibility-meta-4.1.2 (02 Oct 2008)
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +kdeaccessibility-meta-4.1.2.ebuild:
+  Add kde-4.1.2 into the tree from the kde-testing overlay.
 
 *kdeaccessibility-meta-3.5.10 (13 Sep 2008)
 
