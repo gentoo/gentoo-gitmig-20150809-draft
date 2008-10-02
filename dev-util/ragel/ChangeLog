@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.15 2008/10/01 11:40:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.16 2008/10/02 19:11:55 flameeyes Exp $
+
+  02 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> ragel-6.2.ebuild,
+  ragel-6.3.ebuild:
+  Update HOMEPAGE/SRC_URI after move.
 
 *ragel-6.3 (01 Oct 2008)
 

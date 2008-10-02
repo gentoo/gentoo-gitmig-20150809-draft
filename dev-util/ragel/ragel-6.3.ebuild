@@ -1,14 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.3.ebuild,v 1.1 2008/10/01 11:40:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.3.ebuild,v 1.2 2008/10/02 19:11:55 flameeyes Exp $
 
 EAPI=2
 
 inherit eutils
 
 DESCRIPTION="Compiles finite state machines from regular languages into executable code."
-HOMEPAGE="http://www.cs.queensu.ca/~thurston/ragel/"
-SRC_URI="http://www.cs.queensu.ca/~thurston/ragel/${P}.tar.gz"
+HOMEPAGE="http://www.complang.org/ragel/"
+SRC_URI="http://www.complang.org/ragel/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
