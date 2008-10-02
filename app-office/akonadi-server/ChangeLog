@@ -1,0 +1,8 @@
+# ChangeLog for app-office/akonadi-server
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.1 2008/10/02 05:01:16 jmbsvicetto Exp $
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ChangeLog:
+  Add kde-4.1.2 into the tree from the kde-testing overlay.
+
