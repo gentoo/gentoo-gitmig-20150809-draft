@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3916 2008/10/02 09:07:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3917 2008/10/02 09:27:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -964,6 +964,8 @@ kde-base/kjots:kontact - Enable support for the KDE personal information manager
 kde-base/kmail:kontact - Enable support for the KDE personal information manager
 kde-base/kmail:nepomuk - Enable desktop-wide tagging support
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
+kde-base/knode:kontact - Enable support for the KDE personal information manager
+kde-base/knotes:kontact - Enable support for the KDE personal information manager
 kde-base/kopete:addbookmarks - Builds Add Bookmarks plugin
 kde-base/kopete:alias - Builds Alias plugin
 kde-base/kopete:autoreplace - Builds Auto-Replace plugin
