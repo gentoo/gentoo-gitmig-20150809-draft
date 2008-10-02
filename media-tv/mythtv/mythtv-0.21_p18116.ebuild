@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p18116.ebuild,v 1.1 2008/08/12 03:28:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p18116.ebuild,v 1.2 2008/10/02 14:49:08 cardoe Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python confutils
@@ -72,8 +72,7 @@ pkg_setup() {
 		elog "the NVIDIA 4, 5, 6 & 7 series cards."
 	fi
 
-	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS} \
-		|| die "Problem adding mythtv user"
+	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS}
 	usermod -a -G ${MYTHTV_GROUPS} mythtv
 }
 

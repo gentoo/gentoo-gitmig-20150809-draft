@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p15634.ebuild,v 1.5 2008/07/27 21:44:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p15634.ebuild,v 1.6 2008/10/02 14:49:08 cardoe Exp $
 
 EAPI=1
 
@@ -300,7 +300,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS} || die "Problem adding mythtv user"
+	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS}
 	usermod -a -G ${MYTHTV_GROUPS} mythtv
 
 	export CONFIG_PROTECT="${CONFIG_PROTECT} ${ROOT}/home/mythtv/"
