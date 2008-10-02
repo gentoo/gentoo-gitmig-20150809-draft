@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.214 2008/10/02 11:55:16 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.215 2008/10/02 17:00:53 ranger Exp $
+
+  02 Oct 2008; Brent Baude <ranger@gentoo.org> dhcpcd-4.0.2.ebuild:
+  Marking dhcpcd-4.0.2 ppc64 and ppc for bug 238731
 
   02 Oct 2008; Ferris McCormick <fmccor@gentoo.org> dhcpcd-4.0.2.ebuild:
   Sparc stable --- Bug #238731 --- Immediate stable because of missed problems
