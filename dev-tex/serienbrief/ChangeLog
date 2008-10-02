@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/serienbrief
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/ChangeLog,v 1.6 2008/09/05 05:55:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/ChangeLog,v 1.7 2008/10/02 18:57:01 aballier Exp $
+
+*serienbrief-0.2.1 (02 Oct 2008)
+
+  02 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  +serienbrief-0.2.1.ebuild:
+  version bump by Tobias Leupold <tobias.leupold@web.de>, bug #238491
 
   05 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   serienbrief-0.2-r2.ebuild:
