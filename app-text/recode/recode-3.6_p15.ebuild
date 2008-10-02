@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6_p15.ebuild,v 1.1 2008/09/25 11:18:05 loki_val Exp $
-
-WANT_AUTOMAKE="1.4"
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6_p15.ebuild,v 1.2 2008/10/02 08:58:17 flameeyes Exp $
 
 inherit autotools eutils libtool toolchain-funcs
 
@@ -34,6 +32,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${MY_P}-ppc-macos.diff
 	cp lib/error.c lib/xstrdup.c src/ || die "file copy failed"
 
+	# Remove old libtool macros
+	rm "${S}"/acinclude.m4
+
+	eautoreconf
 	elibtoolize
 }
 
