@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/phonon
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.1 2008/10/02 05:16:17 jmbsvicetto Exp $
+
+*phonon-4.2.0 (02 Oct 2008)
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +metadata.xml, +phonon-4.2.0.ebuild:
+  media-sound
+
