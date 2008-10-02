@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.5 2008/09/30 17:28:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.6 2008/10/02 10:16:49 aballier Exp $
+
+*luatex-0.30.0 (02 Oct 2008)
+
+  02 Oct 2008; Alexis Ballier <aballier@gentoo.org> +luatex-0.30.0.ebuild:
+  version bump
 
   30 Sep 2008; Alexis Ballier <aballier@gentoo.org> luatex-0.29.0.ebuild:
   bump patchset to stop using xpdfVersion, it's not there anymore in latest
