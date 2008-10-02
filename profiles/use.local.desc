@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3925 2008/10/02 23:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3926 2008/10/02 23:47:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2213,6 +2213,8 @@ sci-libs/plplot:jadetex - Add support for app-text/jadetex (for processing tex f
 sci-libs/plplot:octave - Support for sci-mathematics/octave bindings 
 sci-libs/scipy:sandbox - Adds experimental scipy sandbox modules
 sci-libs/scipy:umfpack - Adds support for sparse solving with sci-libs/umfpack
+sci-libs/vtk:boost - Add support for boost
+sci-libs/vtk:cg - Use nvidia's cg shaders
 sci-libs/vtk:patented - Build patented classes
 sci-mathematics/coq:ide - Build the Coq IDE, a clone of proof general using dev-ml/lablgtk
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation)
