@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.0.0.ebuild,v 1.1 2008/07/05 23:52:53 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.0.0.ebuild,v 1.2 2008/10/02 03:16:56 chutzpah Exp $
 
 inherit eutils nsplugins flag-o-matic multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gibix.net/projects/nspluginwrapper/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2

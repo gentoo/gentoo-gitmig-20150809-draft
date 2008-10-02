@@ -1,0 +1,37 @@
+2008-09-30  Gwenole Beauchesne  <gb.public@free.fr>
+
+	* src/npw-rpc (do_send_NPSetWindowCallbackStruct): Check for
+	NULL visual.
+	* src/npw-viewer.c (create_window_attributes): Get system
+	visual when we are passed a 0 visual ID.
+
+Index: src/npw-viewer.c
+===================================================================
+--- src/npw-viewer.c	(revision 645)
++++ src/npw-viewer.c	(revision 646)
+@@ -358,7 +358,11 @@
+ {
+   if (ws_info == NULL)
+ 	return -1;
+-  GdkVisual *gdk_visual = gdkx_visual_get((uintptr_t)ws_info->visual);
++  GdkVisual *gdk_visual;
++  if (ws_info->visual)
++	gdk_visual = gdkx_visual_get((uintptr_t)ws_info->visual);
++  else
++	gdk_visual = gdk_visual_get_system();
+   if (gdk_visual == NULL) {
+ 	npw_printf("ERROR: could not reconstruct XVisual from visualID\n");
+ 	return -2;
+Index: src/npw-rpc.c
+===================================================================
+--- src/npw-rpc.c	(revision 645)
++++ src/npw-rpc.c	(revision 646)
+@@ -381,7 +381,7 @@
+ 	  return error;
+ 	if ((error = rpc_message_send_int32(message, ws_info->type)) < 0)
+ 	  return error;
+-	if ((error = rpc_message_send_uint32(message, XVisualIDFromVisual(ws_info->visual))) < 0)
++	if ((error = rpc_message_send_uint32(message, ws_info->visual ? XVisualIDFromVisual(ws_info->visual) : 0)) < 0)
+ 	  return error;
+ 	if ((error = rpc_message_send_uint32(message, ws_info->colormap)) < 0)
+ 	  return error;
