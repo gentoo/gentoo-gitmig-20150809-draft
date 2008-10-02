@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.43 2008/10/02 05:40:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.44 2008/10/02 18:20:38 jer Exp $
+
+  02 Oct 2008; Jeroen Roovers <jer@gentoo.org> Geo-IP-1.33.ebuild:
+  Stable for HPPA too.
 
 *Geo-IP-1.35 (02 Oct 2008)
 
