@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r4.ebuild,v 1.2 2008/06/15 20:04:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r4.ebuild,v 1.3 2008/10/02 18:37:32 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -48,21 +48,35 @@ VDR_CONFD_FILE="${FILESDIR}/${PV}/confd"
 VDR_RCADDON_FILE="${FILESDIR}/${PV}/rc-addon.sh"
 
 pkg_setup() {
+	local error=0
 
 	if use projectx && [[ ! -d /usr/share/java-config-2 ]] ; then
 		echo
 		eerror "ProjectX need an upgraded version of your Java install"
 		eerror "Please upgrade your Java/Java-config install"
 		einfo "http://www.gentoo.org/proj/en/java/java-upgrade.xml"
-		die "ProjectX need an upgrade of Java/Java-config"
 		echo
+		error=1
 	fi
 
 	if ! built_with_use media-libs/gd png truetype jpeg ; then
 		echo
 		eerror "Please recompile media-libs/gd with"
 		eerror "USE=\"png truetype jpeg\""
-		die "media-libs/gd need png jpeg and truetype support"
+		echo
+		error=1
+	fi
+
+	if ! built_with_use media-video/mjpegtools png ; then
+		echo
+		eerror "Please recompile media-video/mjpegtools with"
+		eerror "USE=\"png\""
+		echo
+		error=1
+	fi
+
+	if [[ $error != 0 ]]; then
+		die "Requirements not satisfied"
 	fi
 
 	vdr-plugin_pkg_setup
