@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.2.1.ebuild,v 1.1 2008/09/29 18:25:20 aballier Exp $
-
-inherit eutils autotools
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.2.2.ebuild,v 1.1 2008/10/02 09:23:48 aballier Exp $
 
 DESCRIPTION="Codec for karaoke and text encapsulation for Ogg"
 HOMEPAGE="http://code.google.com/p/libkate/"
@@ -21,22 +19,12 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	doc? ( app-doc/doxygen )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-doc.patch"
-	eautoreconf
-}
-
 src_compile() {
-	econf $(use_enable doc)
+	econf $(use_enable doc) --docdir=/usr/share/doc/${PF}
 	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog README
-	# Remove useless doc
-	rm -rf "${D}/usr/share/doc/${PN}"
-	use doc && dohtml -r doc/html/*
 }
