@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/malsync
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/malsync/ChangeLog,v 1.7 2007/09/17 18:45:23 philantrop Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/malsync/ChangeLog,v 1.8 2008/10/02 02:29:53 darkside Exp $
+
+  02 Oct 2008; Jeremy Olexa <darkside@gentoo.org> malsync-2.2.0.ebuild:
+  remove ~amd64 support wrt bug #194203. dead project, doesn't work on amd64
 
   17 Sep 2007; Wulf C. Krueger <philantrop@gentoo.org> malsync-2.2.0.ebuild:
   Changed pilot-link dependency to 0.11.8 as it doesn't compile with newer
