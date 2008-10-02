@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1914 2008/10/01 19:13:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1915 2008/10/02 01:10:37 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  desc/linguas.desc:
+  Added lb locale.
 
   01 Oct 2008; Ben de Groot <yngwin@gentoo.org> package.mask:
   Masking x11-misc/obpager to be removed (bug 226007)
