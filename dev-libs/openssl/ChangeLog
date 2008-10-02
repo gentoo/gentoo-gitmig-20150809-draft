@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.272 2008/10/02 16:38:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.273 2008/10/02 16:41:25 ranger Exp $
+
+  02 Oct 2008; Brent Baude <ranger@gentoo.org> openssl-0.9.8h-r1.ebuild:
+  stable ppc, bug 239301
 
   02 Oct 2008; Brent Baude <ranger@gentoo.org> openssl-0.9.8h-r1.ebuild:
   stable ppc64, bug 239301
