@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.213 2008/10/01 20:51:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.214 2008/10/02 11:55:16 fmccor Exp $
+
+  02 Oct 2008; Ferris McCormick <fmccor@gentoo.org> dhcpcd-4.0.2.ebuild:
+  Sparc stable --- Bug #238731 --- Immediate stable because of missed problems
+  with previous.
 
 *dhcpcd-4.0.2 (01 Oct 2008)
 
