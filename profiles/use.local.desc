@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3919 2008/10/02 10:07:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3920 2008/10/02 10:27:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -993,6 +993,7 @@ kde-base/korganizer:kontact - Enable support for the KDE personal information ma
 kde-base/kstars:fits - Enable support for the FITS image format through cfitsio
 kde-base/kstars:nova - Enable support for libnova.
 kde-base/kstars:sbig - Enable support for SBIG.
+kde-base/ktimetracker:kontact - Enable support for the KDE personal information manager
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kttsd:ktts - Enable KDE Text To Speech modules
 kde-base/kwin:captury - Enable the 'Capture'-plugin in kwin
