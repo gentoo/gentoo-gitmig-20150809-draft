@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9034 2008/10/01 22:20:02 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9035 2008/10/02 04:28:35 wrobel Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Gunnar Wrobel <wrobel@gentoo.org> 023 Oct 2008)
+# Masked due to security issues.
+# https://bugs.gentoo.org/show_bug.cgi?id=236518
+www-apps/dotproject
 
 # Tobias Heinlein <keytoaster@gentoo.org> (02 Oct 2008)
 # KDE 4.1.2 ebuilds from the kde overlay are going to enter the tree.

@@ -1,11 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1916 2008/10/02 01:13:09 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1917 2008/10/02 04:28:35 wrobel Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
+  02 Oct 2008; Gunnar Wrobel <wrobel@gentoo.org> package.mask:
+  Masking www-apps/dotproject for security reasons (bug #236518)
+  
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> use.desc:
   Added description for the kdeprefix use flag.
 
