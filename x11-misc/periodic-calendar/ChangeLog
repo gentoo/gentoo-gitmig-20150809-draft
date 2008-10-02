@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/periodic-calendar
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/periodic-calendar/ChangeLog,v 1.7 2008/06/30 12:33:59 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/periodic-calendar/ChangeLog,v 1.8 2008/10/02 03:05:01 darkside Exp $
+
+*periodic-calendar-2.2 (02 Oct 2008)
+
+  02 Oct 2008; Jeremy Olexa <darkside@gentoo.org>
+  +periodic-calendar-2.2.ebuild:
+  (non maintainer commit) version bump x11-misc/periodic-calendar to fix bug
+  #214415
 
   30 Jun 2008; Rémi Cardona <remi@gentoo.org> periodic-calendar-1.3.ebuild,
   periodic-calendar-2.1.ebuild:
