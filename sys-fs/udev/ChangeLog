@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.409 2008/09/13 12:54:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.410 2008/10/02 22:10:42 zzam Exp $
+
+*udev-129 (02 Oct 2008)
+
+  02 Oct 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-129-fix-without-logging.diff, +udev-129.ebuild:
+  Version bumped. Needed a patch for compiling with --without-logging. This
+  version should fix issues with detecting raid-partitions, related to
+  missing large-file-support.
 
 *udev-128 (13 Sep 2008)
 
