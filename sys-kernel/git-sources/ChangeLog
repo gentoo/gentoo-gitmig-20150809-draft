@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.355 2008/10/03 12:40:45 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.356 2008/10/03 17:38:30 mpagano Exp $
+
+  03 Oct 2008; Mike Pagano <mpagano@gentoo.org>
+  git-sources-2.6.27_rc8-r5.ebuild:
+  Updating warn message for e1000e bug.
 
 *git-sources-2.6.27_rc8-r5 (03 Oct 2008)
 
