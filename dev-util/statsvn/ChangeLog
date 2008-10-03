@@ -1,0 +1,12 @@
+# ChangeLog for dev-util/statsvn
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/statsvn/ChangeLog,v 1.1 2008/10/03 21:44:32 serkan Exp $
+
+*statsvn-0.4.1 (03 Oct 2008)
+
+  03 Oct 2008; Serkan Kaba <serkan@gentoo.org>
+  +files/statsvn-0.4.1-build.xml.patch,
+  +files/statsvn-0.4.1-fixstatcvsusage.patch, +metadata.xml,
+  +statsvn-0.4.1.ebuild:
+  Initial version. Fixes bug #156048.
+
