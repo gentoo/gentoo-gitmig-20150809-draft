@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/libXvMC-1.0.4.ebuild,v 1.11 2007/08/07 13:17:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/libXvMC-1.0.4.ebuild,v 1.12 2008/10/03 14:29:48 cardoe Exp $
 
 # Must be before x-modular eclass is inherited
 # SNAPSHOT="yes"
@@ -17,3 +17,4 @@ RDEPEND="x11-libs/libX11
 	x11-proto/videoproto
 	x11-proto/xproto"
 DEPEND="${RDEPEND}"
+PDEPEND="app-admin/eselect-xvmc"

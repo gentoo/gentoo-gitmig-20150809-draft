@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXvMC
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.39 2008/01/31 04:29:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.40 2008/10/03 14:29:48 cardoe Exp $
+
+  03 Oct 2008; Doug Goldstein <cardoe@gentoo.org> libXvMC-1.0.4.ebuild:
+  add app-admin/eselect-xvmc as a PDEPEND for assistance in configuring this
+  library
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -libXvMC-1.0.2.ebuild:
