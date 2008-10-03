@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.91.ebuild,v 1.1 2008/04/08 21:28:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.91.ebuild,v 1.2 2008/10/03 06:29:16 aballier Exp $
 
 inherit eutils
 
@@ -16,14 +16,15 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 RESTRICT="test"
 
-RDEPEND=">=dev-lang/ocaml-3.09"
 # With use doc we need a latex compiler to generate manual.ps
 # hevea is used for manual.html
 # manual.tex needs fullpage.sty
-DEPEND="${RDEPEND}
+DEPEND=">=dev-lang/ocaml-3.09
 	doc? ( virtual/latex-base
 	|| ( dev-texlive/texlive-latexextra app-text/tetex app-text/ptex )
 		dev-tex/hevea )"
+# We need tex-base for bibtex but also some bibtex styles, so we use latex-base
+RDEPEND="virtual/latex-base"
 
 src_unpack() {
 	unpack ${A}

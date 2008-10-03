@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/bibtex2html
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.13 2008/04/13 18:22:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.14 2008/10/03 06:29:16 aballier Exp $
+
+  03 Oct 2008; Alexis Ballier <aballier@gentoo.org> bibtex2html-1.80.ebuild,
+  bibtex2html-1.91.ebuild:
+  rdepend on latex-base for bibtex and some bibtex styles, bug #239352
 
   13 Apr 2008; Alexis Ballier <aballier@gentoo.org>
   -bibtex2html-1.70.ebuild, -bibtex2html-1.88.ebuild:
