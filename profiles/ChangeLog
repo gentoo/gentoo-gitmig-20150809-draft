@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1919 2008/10/03 03:44:45 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1920 2008/10/03 17:09:21 mpagano Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Oct 2008; Mike Pagano <mpagano@gentoo.org> package.mask:
+  Removing mask for git-sources >git5
 
   03 Oct 2008; Chris PeBenito <pebenito@gentoo.org>
   default-linux/mips/package.mask, default/linux/package.mask,
