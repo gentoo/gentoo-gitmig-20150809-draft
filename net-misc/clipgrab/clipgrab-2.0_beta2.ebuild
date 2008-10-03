@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/clipgrab-2.0_beta2.ebuild,v 1.1 2008/08/31 03:38:48 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/clipgrab-2.0_beta2.ebuild,v 1.2 2008/10/03 13:05:21 bluebird Exp $
 
 inherit qt4 versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.de/download/${PN}-${MY_PV}_src.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="sparc ~x86"
 IUSE="debug"
 
 DEPEND="=x11-libs/qt-4*"
