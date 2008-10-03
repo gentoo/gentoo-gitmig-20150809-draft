@@ -7,6 +7,10 @@
     <email>flameeyes@gentoo.org</email>
     <name>Diego Pettenò</name>
   </maintainer>
+  <maintainer>
+    <email>gentoofan23@gentoo.org</email>
+	<name>Thomas Anderson</name>
+  </maintainer>
   <use>
     <flag name="mp4">
       Build the TagLib plugin for writing tags in Mp4 container files
