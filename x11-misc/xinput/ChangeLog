@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xinput
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/ChangeLog,v 1.15 2008/09/26 12:59:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xinput/ChangeLog,v 1.16 2008/10/03 08:49:41 armin76 Exp $
+
+  03 Oct 2008; Raúl Porcel <armin76@gentoo.org> xinput-1.3.0.ebuild:
+  Add ~ia64 wrt #237411
 
   26 Sep 2008; Jeroen Roovers <jer@gentoo.org> xinput-1.3.0.ebuild:
   Marked ~hppa (bug #237411).
