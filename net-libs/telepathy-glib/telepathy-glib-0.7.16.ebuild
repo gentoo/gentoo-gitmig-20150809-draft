@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.7.13.ebuild,v 1.1 2008/07/29 19:25:17 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.7.16.ebuild,v 1.1 2008/10/03 17:46:18 coldwind Exp $
 
-DESCRIPTION="GLib binding for the Telepathy D-Bus protocol."
+DESCRIPTION="GLib bindings for the Telepathy D-Bus protocol."
 HOMEPAGE="http://telepathy.freedesktop.org"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
@@ -11,14 +11,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc"
 
-RDEPEND=">=dev-libs/glib-2.10
+RDEPEND=">=dev-libs/glib-2.16
 	>=dev-libs/dbus-glib-0.73
 	>=dev-lang/python-2.3"
 
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	>=dev-util/pkgconfig-0.21
-	doc? ( >=dev-util/gtk-doc-1.5 )"
+	doc? ( >=dev-util/gtk-doc-1.10 )"
 
 src_compile() {
 	econf \
