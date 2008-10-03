@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-xvmc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.8 2008/07/22 19:22:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.9 2008/10/03 14:26:46 cardoe Exp $
+
+  03 Oct 2008; Doug Goldstein <cardoe@gentoo.org> eselect-xvmc-0.1.ebuild:
+  no reason why any of these arches aren't done for bug #231779
 
   22 Jul 2008; Markus Rothe <corsair@gentoo.org> eselect-xvmc-0.1.ebuild:
   Stable on ppc64; bug #231779
