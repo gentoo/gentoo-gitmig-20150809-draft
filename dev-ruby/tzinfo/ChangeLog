@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.13 2008/10/03 18:51:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.14 2008/10/03 23:34:01 fmccor Exp $
+
+  03 Oct 2008; Ferris McCormick <fmccor@gentoo.org> tzinfo-0.3.8.ebuild:
+  Sparc stable, Bug #239465.
 
 *tzinfo-0.3.10 (03 Oct 2008)
 
