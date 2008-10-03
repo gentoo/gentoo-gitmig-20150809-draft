@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/qca-ossl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.13 2008/09/20 10:05:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/ChangeLog,v 1.14 2008/10/03 22:32:39 loki_val Exp $
+
+  03 Oct 2008; Peter Alfredsen <loki_val@gentoo.org>
+  files/qca-ossl-openssl-0.9.8i.patch qca-ossl-2.0.0_beta3.ebuild:
+  Fix compilation failure w/ openssl-0.9.8i by commenting out some ifdeffed
+  code. Bug 239449.
 
   20 Sep 2008; Raúl Porcel <armin76@gentoo.org>
   qca-ossl-2.0.0_beta3.ebuild:
