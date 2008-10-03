@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.0.16.ebuild,v 1.1 2008/10/03 03:31:56 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.0.16.ebuild,v 1.2 2008/10/03 03:37:23 pebenito Exp $
 
 IUSE="debug"
 
@@ -25,13 +25,11 @@ RDEPEND="=sys-libs/libsemanage-${SEMNG_VER}*"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
 
 	[ ! -z "${BUGFIX_PATCH}" ] && epatch "${BUGFIX_PATCH}"
 }
 
 src_compile() {
-	cd ${S}
 	emake YACC="bison -y" || die
 }
 
@@ -39,7 +37,8 @@ src_install() {
 	make DESTDIR="${D}" install
 
 	if useq debug; then
-		dobin ${S}/test/{dismod,dispol}
+		dobin "${S}/test/dismod"
+		dobin "${S}/test/dispol"
 	fi
 }
 
