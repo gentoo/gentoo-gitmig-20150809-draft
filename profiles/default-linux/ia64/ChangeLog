@@ -1,6 +1,9 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.54 2008/08/10 16:02:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.55 2008/10/03 09:00:50 armin76 Exp $
+
+  03 Oct 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Mask some video cards which we can't test
 
   10 Aug 2008; Raúl Porcel <armin76@gentoo.org> use.mask:
   Unmask hddtemp USE-flag
