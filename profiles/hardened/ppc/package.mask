@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.15 2008/09/30 08:29:00 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.16 2008/10/03 03:44:47 pebenito Exp $
 
 # needs >=sys-devel/gcc-4.2
 sys-libs/libfreevec
@@ -121,6 +121,7 @@ games-strategy/ufo-ai
 >=sys-libs/libsemanage-1.6.17
 >=sys-apps/policycoreutils-1.30.30
 >=sys-apps/checkpolicy-1.30.12
+dev-python/sepolgen
 sec-policy/selinux-acpi
 >=sec-policy/selinux-apache-20060101
 >=sec-policy/selinux-arpwatch-20060101

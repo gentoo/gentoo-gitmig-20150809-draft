@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1918 2008/10/02 16:50:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1919 2008/10/03 03:44:45 pebenito Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Oct 2008; Chris PeBenito <pebenito@gentoo.org>
+  default-linux/mips/package.mask, default/linux/package.mask,
+  hardened/ppc/package.mask:
+  Mask dev-python/sepolgen on profiles that also mask libselinux.
 
   02 Oct 2008; Peter Alfredsen <loki_val@gentoo.org> thirdpartymirrors:
   Remove broken ftp.du.se mirror from kde mirrors list and add a couple

@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.mask,v 1.17 2008/05/16 02:47:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.mask,v 1.18 2008/10/03 03:44:46 pebenito Exp $
 
 # Unmask =mozilla-thunderbird-1.5* until 2.0 is keyworded and stabilized
 -=mail-client/mozilla-thunderbird-1.5*
@@ -35,6 +35,7 @@ sys-devel/gcc-mips64
 >=sys-libs/libsemanage-1.6.17
 >=sys-apps/policycoreutils-1.30.30
 >=sys-apps/checkpolicy-1.30.12
+dev-python/sepolgen
 sec-policy/selinux-acpi
 >=sec-policy/selinux-apache-20060101
 >=sec-policy/selinux-arpwatch-20060101

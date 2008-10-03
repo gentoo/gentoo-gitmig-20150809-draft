@@ -1,6 +1,6 @@
 # Copyright 2007-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.mask,v 1.1 2008/04/01 17:40:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.mask,v 1.2 2008/10/03 03:44:46 pebenito Exp $
 
 # Shouldn't be merging these SELinux packages on this profile
 # but this keeps repoman happy since they require >=glibc-2.4
@@ -9,6 +9,7 @@
 >=sys-libs/libsemanage-1.6.17
 >=sys-apps/policycoreutils-1.30.30
 >=sys-apps/checkpolicy-1.30.12
+dev-python/sepolgen
 sec-policy/selinux-acpi
 >=sec-policy/selinux-apache-20060101
 >=sec-policy/selinux-arpwatch-20060101
