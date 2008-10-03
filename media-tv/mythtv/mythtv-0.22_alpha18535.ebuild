@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha18535.ebuild,v 1.2 2008/10/03 14:46:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha18535.ebuild,v 1.3 2008/10/03 21:13:40 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -11,7 +11,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia"
 IUSE="alsa altivec autostart debug directv dvb dvd \
-fftw ieee1394 jack lcd lirc mmx opengl perl python \
+fftw ieee1394 jack lcd lirc mmx perl python \
 tiff xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
@@ -23,8 +23,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	x11-libs/libXrandr
 	x11-libs/libXxf86vm
 	x11-libs/qt-core:4[qt3support]
-	tiff? ( x11-libs/qt-gui:4[qt3support,tiff] )
-	!tiff? ( x11-libs/qt-gui:4[qt3support] )
+	x11-libs/qt-gui:4[qt3support,tiff?]
 	x11-libs/qt-sql:4[qt3support,mysql]
 	x11-libs/qt-opengl:4[qt3support]
 	x11-libs/qt-webkit:4
@@ -60,8 +59,6 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 MYTHTV_GROUPS="video,audio,tty,uucp"
 
 pkg_setup() {
-	die "Don't use me yet"
-
 	einfo "This ebuild now uses a heavily stripped down version of your CFLAGS"
 
 	if use xvmc && use video_cards_nvidia; then
