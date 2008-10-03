@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.11.0.ebuild,v 1.2 2008/09/15 20:26:42 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.11.0.ebuild,v 1.3 2008/10/03 19:43:00 bluebird Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-lang/tcl-8.3.3
 #	crypt? ( >=dev-tcltk/tclgpgme-1.0 )
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 SLOT="0"
 
 src_compile() {
