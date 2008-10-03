@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gimmix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/ChangeLog,v 1.14 2008/09/28 14:33:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/ChangeLog,v 1.15 2008/10/03 12:44:10 bluebird Exp $
+
+  03 Oct 2008; Friedrich Oslage <bluebird@gentoo.org> gimmix-0.5.0.ebuild:
+  Add ~sparc keyword, bug #238946
 
 *gimmix-0.5.0 (28 Sep 2008)
 
