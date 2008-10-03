@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.143 2008/10/02 16:53:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.144 2008/10/03 13:19:33 aballier Exp $
+
+  03 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  gentoolkit-0.2.4.2.ebuild:
+  unkeyword x86-fbsd, revdep-rebuild doesn't work, bug #236214
 
   02 Oct 2008; Brent Baude <ranger@gentoo.org> gentoolkit-0.2.4.2.ebuild:
   stable ppc, bug 170220
