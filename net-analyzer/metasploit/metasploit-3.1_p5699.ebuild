@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5539.ebuild,v 1.1 2008/06/25 15:32:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5699.ebuild,v 1.1 2008/10/03 12:15:27 pva Exp $
 
 MY_P=${PN/metasploit/framework}-${PV}
 
@@ -25,7 +25,10 @@ SLOT="3"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="gtk sqlite sqlite3 postgres httpd"
 
+# blocker on ruby-1.8.7:
+# http://spool.metasploit.com/pipermail/framework/2008-September/003671.html
 RDEPEND="dev-lang/ruby
+	!>=dev-lang/ruby-1.8.7
 	gtk? ( dev-ruby/ruby-libglade2 )
 	httpd? ( =dev-ruby/rails-1.2* )
 	sqlite? ( dev-ruby/sqlite-ruby
@@ -41,6 +44,10 @@ S=${WORKDIR}/${MY_P}
 src_compile() {
 	sed -i -e "s/RAILS_GEM_VERSION = '1.2.2'/RAILS_GEM_VERSION = '1.2'/" \
 		data/msfweb/config/environment.rb || die "sed failed"
+	# NOTE: this sed and *not* removing documentation/LICENSE fixes bug #238137
+	sed -i \
+		"s#\(self\.license = File.read(File.join(\).*#\1'/usr/share/doc/${PF}/documentation/LICENSE'))#" \
+			lib/msf/ui/gtk2/about.rb
 }
 
 src_install() {
@@ -54,7 +61,6 @@ src_install() {
 	cp -R "${S}"/* "${D}"/usr/lib/${PN}${SLOT} || die "Copy files failed"
 	rm -Rf "${D}"/usr/lib/${PN}${SLOT}/documentation "${D}"/usr/lib/${PN}${SLOT}/README
 
-	rm "${S}"/documentation/LICENSE
 	dodir /usr/share/doc/${PF}
 	cp -R "${S}"/{documentation,README} "${D}"/usr/share/doc/${PF}
 

@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.39 2008/09/25 12:52:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.40 2008/10/03 12:15:27 pva Exp $
+
+*metasploit-3.1_p5699 (03 Oct 2008)
+
+  03 Oct 2008; Peter Volkov <pva@gentoo.org> -metasploit-3.1_p5539.ebuild,
+  metasploit-3.1_p5662.ebuild, +metasploit-3.1_p5699.ebuild:
+  Revert back previous change: now we point at https again (better security
+  and found cause of certificate confirmation request), bug #238529. Fixed
+  crash in msfgui3 about dialog, bug #238137, thank Chad A. Simmons for
+  report and hints on how to fix this.
 
   25 Sep 2008; Peter Volkov <pva@gentoo.org> metasploit-3.1_p5662.ebuild:
   Changed svn URL to point on non SSL enabled server to avoid manual
