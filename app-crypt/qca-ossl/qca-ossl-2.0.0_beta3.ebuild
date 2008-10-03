@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/qca-ossl-2.0.0_beta3.ebuild,v 1.13 2008/09/20 10:05:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-ossl/qca-ossl-2.0.0_beta3.ebuild,v 1.14 2008/10/03 22:29:30 loki_val Exp $
 
-inherit eutils qt4
+inherit base eutils qt4
 
 MY_P="${P/_/-}"
 QCA_VER="${PV%.*}"
@@ -21,6 +21,8 @@ DEPEND=">=app-crypt/qca-${QCA_VER}
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+PATCHES=( "${FILESDIR}/${PN}-openssl-0.9.8i.patch" )
 
 pkg_setup() {
 	if use debug && ! built_with_use ">=app-crypt/qca-${QCA_VER}" debug; then
@@ -45,6 +47,7 @@ src_compile() {
 		|| die "configure failed"
 
 	eqmake4 ${PN}.pro
+	sed -i -e '/strip/d' Makefile || die "sed failed"
 	emake || die "emake failed"
 }
 
