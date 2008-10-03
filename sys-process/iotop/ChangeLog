@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.7 2008/08/13 11:10:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.8 2008/10/03 14:30:41 jer Exp $
+
+  03 Oct 2008; Jeroen Roovers <jer@gentoo.org> iotop-0.2.1.ebuild:
+  Marked ~hppa too.
 
   13 Aug 2008; Raúl Porcel <armin76@gentoo.org> iotop-0.2.1.ebuild:
   x86 stable wrt #234482
