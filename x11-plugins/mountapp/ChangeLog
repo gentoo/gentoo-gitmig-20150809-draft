@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/mountapp
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/mountapp/ChangeLog,v 1.8 2007/02/21 23:31:04 jokey Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/mountapp/ChangeLog,v 1.9 2008/10/04 15:25:45 betelgeuse Exp $
+
+  04 Oct 2008; Petteri Räty <betelgeuse@gentoo.org> mountapp-3.0.ebuild:
+  Add missing X11 deps. Fixes bug #204566.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
