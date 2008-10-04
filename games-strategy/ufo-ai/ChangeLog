@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/ufo-ai
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.19 2008/08/24 14:56:35 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.20 2008/10/04 19:46:06 tupone Exp $
+
+*ufo-ai-2.2.1 (04 Oct 2008)
+
+  04 Oct 2008; <tupone@gentoo.org> +files/ufo-ai-2.2.1-gentoo.patch,
+  +ufo-ai-2.2.1.ebuild:
+  Version bump to 2.2.1 Bug #206145 by Jaak Ristioja
 
   24 Aug 2008; Tupone Alfredo <tupone@gentoo.org>
   +files/ufo-ai-2.1.1-dprintf.patch, ufo-ai-2.1.1-r1.ebuild:
