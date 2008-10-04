@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/yacc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.18 2007/05/15 09:10:31 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.19 2008/10/04 18:57:18 rbu Exp $
+
+*yacc-1.9.1-r4 (04 Oct 2008)
+
+  04 Oct 2008; Robert Buchholz <rbu@gentoo.org>
+  +files/yacc-1.9.1-CVE-2008-3196.patch, +yacc-1.9.1-r4.ebuild:
+  Fix stack access error (security bug #232005).
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
