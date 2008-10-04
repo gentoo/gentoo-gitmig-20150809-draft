@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.15 2008/08/28 08:36:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.16 2008/10/04 14:01:35 maekke Exp $
+
+  04 Oct 2008; Markus Meier <maekke@gentoo.org>
+  iscsitarget-0.4.16_p162.ebuild:
+  amd64/x86 stable, bug #230889
 
   28 Aug 2008; Diego Pettenò <flameeyes@gentoo.org>
   iscsitarget-0.4.16_p162.ebuild:
