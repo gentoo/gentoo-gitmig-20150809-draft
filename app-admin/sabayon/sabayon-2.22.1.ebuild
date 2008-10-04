@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.22.1.ebuild,v 1.1 2008/09/27 17:22:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.22.1.ebuild,v 1.2 2008/10/04 19:46:57 leio Exp $
 
 inherit gnome2 eutils python multilib
 #pam
@@ -15,7 +15,7 @@ IUSE=""
 
 # Unfortunately the configure.ac is wildly insufficient, so dependencies have
 # to be got from the RPM .spec file...
-DEPEND="dev-lang/python
+COMMON_DEPEND="dev-lang/python
 	>=x11-libs/gtk+-2.6.0
 	>=dev-python/pygtk-2.5.3
 	x11-libs/pango
@@ -23,12 +23,15 @@ DEPEND="dev-lang/python
 	x11-base/xorg-server"
 
 #	virtual/pam
-RDEPEND="${DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	dev-python/pyxdg
 	dev-libs/libxml2
 	>=gnome-base/gconf-2.8.1
 	>=dev-python/gnome-python-2.6.0
 	x11-libs/gksu"
+
+DEPEND="${COMMON_DEPEND}
+	>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog ISSUES NEWS README TODO"
 
