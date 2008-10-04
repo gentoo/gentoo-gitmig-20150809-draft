@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/tmsnc-0.3.2-r1.ebuild,v 1.1 2008/10/04 19:05:58 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/tmsnc-0.3.2-r1.ebuild,v 1.2 2008/10/04 19:09:38 rbu Exp $
+
+inherit eutils
 
 DESCRIPTION="TMSNC is a textbased MSN client written in C."
 HOMEPAGE="http://tmsnc.sourceforge.net/"
