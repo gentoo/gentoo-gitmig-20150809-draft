@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libkdcraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/ChangeLog,v 1.13 2008/09/06 13:01:04 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/ChangeLog,v 1.14 2008/10/04 16:39:21 jmbsvicetto Exp $
+
+*libkdcraw-0.1.4-r1 (04 Oct 2008)
+
+  04 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -libkdcraw-0.1.4.ebuild, +libkdcraw-0.1.4-r1.ebuild:
+  Bumped libkdcraw to force the reinstall under /usr/kde/3.5 and to fix bug
+  239282. Thanks to Jan Kundrát(jkt).
 
   06 Sep 2008; Timo Gurr <tgurr@gentoo.org> libkdcraw-0.1.4.ebuild:
   Hard depend on media-libs/lcms, fixing bug #222127.

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/libkdcraw-0.1.4.ebuild,v 1.2 2008/09/06 13:01:04 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/libkdcraw-0.1.4-r1.ebuild,v 1.1 2008/10/04 16:39:21 jmbsvicetto Exp $
 
 inherit kde
 
