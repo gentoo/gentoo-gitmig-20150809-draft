@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pdftex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.5 2008/09/30 17:15:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.6 2008/10/04 01:46:56 ranger Exp $
+
+  04 Oct 2008; Brent Baude <ranger@gentoo.org> pdftex-1.40.9.ebuild:
+  Marking pdftex-1.40.9 ~ppc for bug 237202
 
   30 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   +files/pdftex-1.40.9-xpdfversion.patch, pdftex-1.40.9.ebuild:
