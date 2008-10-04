@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkexiv2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.2 2008/10/02 18:42:02 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.3 2008/10/04 16:55:54 jmbsvicetto Exp $
+
+  04 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  libkexiv2-4.1.2.ebuild:
+  Updated libkexiv2 block to <=media-libs/libkexiv2-0.1.7 to fix bug 239282.
+  Thanks to Jan Kundrát(jkt).
 
   02 Oct 2008; Tobias Heinlein <keytoaster@gentoo.org> Manifest:
   Fixing Manifests for the new kdegraphics tarballs which was changed
