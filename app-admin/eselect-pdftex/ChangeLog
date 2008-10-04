@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-pdftex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pdftex/ChangeLog,v 1.4 2008/09/24 18:48:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pdftex/ChangeLog,v 1.5 2008/10/04 01:47:25 ranger Exp $
+
+  04 Oct 2008; Brent Baude <ranger@gentoo.org> eselect-pdftex-0.1.ebuild:
+  Marking eselect-pdftex-0.1 ~ppc for bug 237202
 
   24 Sep 2008; Raúl Porcel <armin76@gentoo.org> eselect-pdftex-0.1.ebuild:
   Add ~alpha/~ia64 wrt #237202
