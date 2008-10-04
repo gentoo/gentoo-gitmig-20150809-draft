@@ -63,3 +63,10 @@ sys-cluster/openmpi pbs
 # elf -> dev-libs/elfutils is too tight to the gnu libc
 # rpm could be masked but we have rpm 5 keyworded even if it's still masked.
 net-analyzer/net-snmp elf
+
+
+# Alexis Ballier <aballier@gentoo.org> (4 Oct 2008)
+# clisp doesn't build out of the box but can be fixed, xindy's way of building
+# its clisp module is confused by gmake vs bsdmake, mask it until we can
+# properly keyword xindy.
+app-text/texlive xindy
