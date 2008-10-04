@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.8 2008/04/22 08:21:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.9 2008/10/04 10:33:09 markusle Exp $
+
+*gts-20081607 (03 Oct 2008)
+
+  03 Oct 2008; Markus Dittrich <markusle@gentoo.org> +gts-20081607.ebuild:
+  Version bump to newer development snapshot.
 
   22 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> gts-0.7.4.ebuild,
   gts-0.7.6.ebuild:
