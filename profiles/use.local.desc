@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3928 2008/10/04 07:47:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3929 2008/10/04 09:07:39 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1263,13 +1263,13 @@ media-sound/alsa-driver:midi - Build the sequencer (midi) modules
 media-sound/alsa-tools:midi - Build the sequencer (midi) utilities
 media-sound/alsa-utils:midi - Build the sequencer (midi) utilities
 media-sound/amarok:amazon - Enable support for downloading covers from amazon.com
-media-sound/amarok:daap - Enable support for DAAP Music Sharing
+media-sound/amarok:daap -  Enable the scripts for music sharing through DAAP. This flag adds dependencies on www-servers/mongrel to allow sharing of the Amarok music collection through DAAP protocol. Please note that turning this flag off has no effect on DAAP browsing. 
 media-sound/amarok:ifp - Enable support for iRiver devices access through libifp
-media-sound/amarok:mp4 - Enable write support for tags in MP4 files (M4A). The resulting Amarok copy is not redistributable.
+media-sound/amarok:mp4 -  Build the TagLib plugin for writing tags in Mp4 container files (m4a). Please note that by enabling this USE flag, the resulting package will not be redistributable, as it links to media-libs/libmp4v2, distributed under a GPL-incompatible license. 
 media-sound/amarok:mtp - Enable support for libMTP (Plays4Sure) devices access through libmtp
 media-sound/amarok:njb - Enable support for NJB (Creative) devices access through libnjb
 media-sound/amarok:python -  Install the Amarok scripts written in Python, depending on dev-python/PyQt. At the moment the only script installed by this flag is the webcontrol script. 
-media-sound/amarok:real - Build with real/helix player support
+media-sound/amarok:real -  Build the Helix engine for Amarok, linked against media-video/realplayer. This is an alternative engine to the xine one, which supports a different set of formats. Only available for x86 architecture as it uses the binary version of RealPlayer. Plase note that by enabling this USE flag, the resulting package will not be redistributable, as it links to the non-GPL compatible RealPlayer. 
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
 media-sound/aqualung:cdda - Enables libcdda cd audio playback support
 media-sound/aqualung:loop-playback - Enable adjustable loop playback support
