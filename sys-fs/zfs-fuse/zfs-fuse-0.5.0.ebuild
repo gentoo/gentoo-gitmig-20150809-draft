@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/zfs-fuse-0.5.0.ebuild,v 1.1 2008/09/25 17:03:20 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/zfs-fuse-0.5.0.ebuild,v 1.2 2008/10/04 03:54:34 trapni Exp $
 
 IUSE="doc debug"
 
@@ -64,7 +64,7 @@ src_install() {
 	keepdir /var/run/zfs || die
 	fowners daemon.disk /var/run/zfs || die
 
-	cd "${WORKDIR}/trunk" || die
+	cd "${WORKDIR}/${P}" || die
 
 	dodoc CHANGES || die
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs-fuse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.7 2008/09/25 17:03:20 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-fuse/ChangeLog,v 1.8 2008/10/04 03:54:34 trapni Exp $
+
+  04 Oct 2008; Christian Parpart <trapni@gentoo.org> zfs-fuse-0.5.0.ebuild:
+  fixed install-bug noticed in #237924. thanks for testing
 
 *zfs-fuse-0.5.0 (25 Sep 2008)
 
