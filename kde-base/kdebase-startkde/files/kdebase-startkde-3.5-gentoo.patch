@@ -6,7 +6,7 @@
  
 +# Gentoo: setup environment, filter other slotted KDE installs from PATH
 +_KDEDIR=@REPLACE_PREFIX@
-+export KDEDIRS=${_KDEDIR}:/usr:/usr/local
++#export KDEDIRS=${_KDEDIR}:/usr:/usr/local
 +export PATH=${_KDEDIR}/bin:$(echo ${PATH} | sed 's/$/:/g;s#/usr/kde/[^/]*/s\?bin/\?:##g;s/:$//g')
 +export ROOTPATH=${_KDEDIR}/sbin:${_KDEDIR}/bin:$(echo ${PATH} | sed 's/$/:/g;s#/usr/kde/[^/]*/s\?bin/\?:##g;s/:$//g')
 +export LDPATH=@REPLACE_LIBS@:${LDPATH}
