@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.9.ebuild,v 1.1 2008/05/31 12:47:31 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.9.ebuild,v 1.2 2008/10/04 17:49:49 mabi Exp $
 
-inherit mono multilib
+inherit autotools mono multilib
 
 DESCRIPTION="Documentation for mono's .Net class library"
 HOMEPAGE="http://www.go-mono.com"
@@ -39,11 +39,11 @@ src_unpack() {
 			${S}/monodoc.pc.in                             \
 		|| die "sed failed"
 
-		aclocal || die "aclocal failed"
-		automake || die "automake failed"
+		eautoreconf
 	fi
+
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 }
