@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libipoddevice
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.20 2008/08/02 21:08:11 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.21 2008/10/04 22:08:28 loki_val Exp $
+
+  04 Oct 2008; Peter Alfredsen <loki_val@gentoo.org>
+  libipoddevice-0.5.3.ebuild:
+  Fix compile bug 239693. Thanks to Evil Compile Person
+  <bugs@dev.gentooexperimental.org>.
 
   02 Aug 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/libipoddevice-0.5.3-libsgutils2.patch, libipoddevice-0.5.3.ebuild:
