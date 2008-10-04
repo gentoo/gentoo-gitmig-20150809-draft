@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.169 2008/10/04 02:00:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.170 2008/10/04 12:34:08 ranger Exp $
+
+  04 Oct 2008; Brent Baude <ranger@gentoo.org> openbox-3.4.7.2.ebuild:
+  stable ppc64, bug 231450
 
   04 Oct 2008; Brent Baude <ranger@gentoo.org> openbox-3.4.7.2.ebuild:
   stable ppc, bug 231450
