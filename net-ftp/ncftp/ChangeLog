@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.81 2008/10/03 14:40:01 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.82 2008/10/04 17:29:55 maekke Exp $
+
+  04 Oct 2008; Markus Meier <maekke@gentoo.org> ncftp-3.2.2-r1.ebuild:
+  x86 stable, bug #239102
 
   03 Oct 2008; Friedrich Oslage <bluebird@gentoo.org> ncftp-3.2.2-r1.ebuild:
   Stable on sparc, bug #239102
