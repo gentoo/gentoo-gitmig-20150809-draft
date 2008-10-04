@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.9.ebuild,v 1.1 2008/10/04 00:29:57 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.9.ebuild,v 1.2 2008/10/04 09:38:55 spock Exp $
 
-inherit eutils linux-info multilib
+inherit linux-info multilib
 
 DESCRIPTION="A daemon to run x86 code in an emulated environment."
 HOMEPAGE="http://dev.gentoo.org/~spock/projects/uvesafb/"
@@ -28,12 +28,12 @@ pkg_setup() {
 }
 
 src_compile() {
-	./configure --with-klibc $(use_with debug) $(use_with x86emu)
-	make KDIR="${KV_DIR}" || die
+	./configure --with-klibc $(use_with debug) $(use_with x86emu) || die
+	emake KDIR="${KV_DIR}" || die
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	dodoc README ChangeLog
 

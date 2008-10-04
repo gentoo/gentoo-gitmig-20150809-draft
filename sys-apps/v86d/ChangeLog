@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/v86d
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.26 2008/10/04 00:29:57 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.27 2008/10/04 09:38:55 spock Exp $
+
+  04 Oct 2008; Michał Januszewski <spock@gentoo.org> v86d-0.1.9.ebuild:
+  Remove unused inherits, use emake instead of make.
 
 *v86d-0.1.9 (04 Oct 2008)
 
