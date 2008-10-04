@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.129 2008/10/04 20:39:36 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.130 2008/10/04 21:41:18 cryos Exp $
+
+*kdebase-startkde-4.1.2-r1 (04 Oct 2008)
+
+  04 Oct 2008; Marcus D. Hanwell <cryos@gentoo.org>
+  files/gentoo-startkde4.patch, +kdebase-startkde-4.1.2-r1.ebuild:
+  Fixed some problems in the startkde script and removed KDEDIR from it - no
+  longer required.
 
 *kdebase-startkde-3.5.10-r3 (04 Oct 2008)
 

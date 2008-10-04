@@ -4,12 +4,12 @@
  # because we still need to do some cleanup.
  trap 'echo GOT SIGHUP' HUP
  
-+export KDEDIR=@REPLACE_PREFIX@
-+export PATH=${KDEDIR}/bin:$(echo ${PATH} | sed 's/$/:/g;s#/usr/kde/[^/]*/s\?bin/\?:##g;s/:$//g')
-+export ROOTPATH=${KDEDIR}/sbin:${KDEDIR}/bin:$(echo ${PATH} | sed 's/$/:/g;s#/usr/kde/[^/]*/s\?bin/\?:##g;s/:$//g')
++_KDEDIR=@REPLACE_PREFIX@
++export PATH=${_KDEDIR}/bin:$(echo ${PATH} | sed 's/$/:/g;s#/usr/kde/[^/]*/s\?bin/\?:##g;s/:$//g')
++export ROOTPATH=${_KDEDIR}/sbin:${_KDEDIR}/bin:$(echo ${PATH} | sed 's/$/:/g;s#/usr/kde/[^/]*/s\?bin/\?:##g;s/:$//g')
 +@REPLACE_LDPATH@
-+export STRIGI_PLUGIN_PATH="${KDEDIR}/@REPLACE_LIBDIR@/strigi:${STRIGI_PLUGIN_PATH}"
-+export XDG_DATA_DIRS=${KDEDIR}/share:$(echo ${XDG_DATA_DIRS} | sed 's/$/:/g;s#/usr/kde/[^/]*/share/\?:##g;s/:$//g')
++export STRIGI_PLUGIN_PATH="${_KDEDIR}/@REPLACE_LIBDIR@/strigi:${STRIGI_PLUGIN_PATH}"
++export XDG_DATA_DIRS=${_KDEDIR}/share:$(echo ${XDG_DATA_DIRS} | sed 's/$/:/g;s#/usr/kde/[^/]*/share/\?:##g;s/:$//g')
 +
 +if [ -z "$HOME" ]; then
 +	xmessage "HOME is unset. Your user config seems to be broken. Aborting."
@@ -19,14 +19,14 @@
 +# Gentoo: handle the possible home directory layout for config directory
 +# Note that we change the default KDEHOME in kdelibs to .kde4 or .kde${SLOT}
 +# for -kdeprefix and +kdeprefix respectively.
-+if [ "${KDEDIR}" == "/usr" ]; then
++if [ "${_KDEDIR}" == "/usr" ]; then
 +	# If the directory doesn't exist make it
 +	[ -e "${HOME}/.kde4" ] || mkdir "$HOME/.kde4"
 +else
 +	# Use multiple directories based upon the KDE directory
-+	[ -e "$HOME/.kde$(basename $KDEDIR)" ] || mkdir "$HOME/.kde$(basename $KDEDIR)"
-+	if [ ! -d "$HOME/.kde$(basename $KDEDIR)" ]; then
-+		xmessage "$HOME/.kde$(basename $KDEDIR) exists but is not a dir. Aborting."
++	[ -e "$HOME/.kde$(basename $_KDEDIR)" ] || mkdir "$HOME/.kde$(basename $_KDEDIR)"
++	if [ ! -d "$HOME/.kde$(basename $_KDEDIR)" ]; then
++		xmessage "$HOME/.kde$(basename $_KDEDIR) exists but is not a dir. Aborting."
 +		exit 1
 +	fi
 +fi
@@ -39,7 +39,7 @@
  done
  
 +# Gentoo part for FHS installs
-+if [ "${KDEDIR}" == "/usr" ]; then
++if [ "${_KDEDIR}" == "/usr" ]; then
 +  for file in "/etc/kde/startup/"*.sh; do
 +    test -r "${file}" && . "${file}"
 +  done
@@ -53,7 +53,7 @@
  done
  
 +# Gentoo part for FHS installs
-+if [ "${KDEDIR}" == "/usr" ]; then
++if [ "${_KDEDIR}" == "/usr" ]; then
 +  for file in "/etc/kde/shutdown/"*.sh; do
 +    test -r "${file}" && . "${file}"
 +  done
