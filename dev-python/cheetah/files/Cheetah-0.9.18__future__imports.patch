@@ -1,0 +1,58 @@
+diff -Naur Cheetah-0.9.18-orig/src/NameMapper.py Cheetah-0.9.18/src/NameMapper.py
+--- Cheetah-0.9.18-orig/src/NameMapper.py	2008-09-08 12:53:08.000000000 +0000
++++ Cheetah-0.9.18/src/NameMapper.py	2008-09-08 13:07:57.000000000 +0000
+@@ -1,6 +1,12 @@
+ #!/usr/bin/env python
+ # $Id: Cheetah-0.9.18__future__imports.patch,v 1.1 2008/10/04 17:28:51 neurogeek Exp $
+ 
++from __future__ import generators
++import types
++from types import StringType, InstanceType, ClassType, TypeType
++from pprint import pformat
++import inspect
++
+ """This module supports Cheetah's optional NameMapper syntax.
+ 
+ Overview
+@@ -143,12 +149,6 @@
+              "\nChuck Esterbrook <echuck@mindspring.com>"
+ __revision__ = "$Revision: 1.1 $"[11:-2]
+ 
+-from __future__ import generators
+-import types
+-from types import StringType, InstanceType, ClassType, TypeType
+-from pprint import pformat
+-import inspect
+-
+ _INCLUDE_NAMESPACE_REPR_IN_NOTFOUND_EXCEPTIONS = False
+ _ALLOW_WRAPPING_OF_NOTFOUND_EXCEPTIONS = True
+ __all__ = ['NotFound',
+diff -Naur Cheetah-0.9.18-orig/src/Tests/NameMapper.py Cheetah-0.9.18/src/Tests/NameMapper.py
+--- Cheetah-0.9.18-orig/src/Tests/NameMapper.py	2008-09-08 12:53:08.000000000 +0000
++++ Cheetah-0.9.18/src/Tests/NameMapper.py	2008-09-08 13:03:27.000000000 +0000
+@@ -1,5 +1,12 @@
+ #!/usr/bin/env python
+ # $Id: Cheetah-0.9.18__future__imports.patch,v 1.1 2008/10/04 17:28:51 neurogeek Exp $
++
++from __future__ import generators
++import sys
++import types
++import os
++import os.path
++
+ """NameMapper Tests
+ 
+ Meta-Data
+@@ -12,12 +19,6 @@
+ __author__ = "Tavis Rudd <tavis@damnsimple.com>"
+ __revision__ = "$Revision: 1.1 $"[11:-2]
+ 
+-from __future__ import generators
+-import sys
+-import types
+-import os
+-import os.path
+-
+ import unittest_local_copy as unittest
+ from Cheetah.NameMapper import NotFound, valueForKey, \
+      valueForName, valueFromSearchList, valueFromFrame, valueFromFrameOrSearchList
