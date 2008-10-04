@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.11.ebuild,v 1.2 2008/10/04 18:52:39 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.11.ebuild,v 1.3 2008/10/04 18:57:53 mabi Exp $
 
 inherit eutils
 
@@ -13,13 +13,13 @@ LICENSE="GPL-2"
 IUSE=""
 
 # guile-lib for srfi-34, srfi-35
-DEPEND="dev-scheme/guile
+RDEPEND="dev-scheme/guile
 	=dev-libs/glib-2*
 	dev-libs/libffi
-	dev-scheme/guile-lib
-	dev-util/pkgconfig"
+	dev-scheme/guile-lib"
 
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	if has_version =dev-scheme/guile-1.8*; then
