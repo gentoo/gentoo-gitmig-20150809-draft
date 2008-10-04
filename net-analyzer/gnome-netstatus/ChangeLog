@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/gnome-netstatus
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.69 2007/07/24 14:25:47 dang Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.70 2008/10/04 21:04:23 eva Exp $
+
+  04 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/gnome-netstatus-2.12.0-gnome-doc-utils.patch,
+  -gnome-netstatus-2.12.0.ebuild, gnome-netstatus-2.12.1.ebuild:
+  Added dependency on scrollkeeper, bug #239673.
 
   24 Jul 2007; Daniel Gryniewicz <dang@gentoo.org>
   -files/gnome-netstatus-2.10.0-amd64.patch,
