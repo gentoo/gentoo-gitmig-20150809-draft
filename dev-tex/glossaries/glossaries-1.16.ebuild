@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-1.16.ebuild,v 1.4 2008/09/23 20:58:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-1.16.ebuild,v 1.5 2008/10/04 01:42:18 ranger Exp $
 
 inherit latex-package
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.zip"
 
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND="dev-lang/perl
