@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.15 2008/07/15 06:10:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.16 2008/10/04 00:07:45 fmccor Exp $
+
+  04 Oct 2008; Ferris McCormick <fmccor@gentoo.org> xhtml-3000.0.2.1.ebuild:
+  Sparc stable --- Bug #230919 and Bug #239368.
 
   15 Jul 2008; Jeroen Roovers <jer@gentoo.org> xhtml-2006.9.13.ebuild,
   xhtml-3000.0.2.ebuild, xhtml-3000.0.2.1.ebuild:
