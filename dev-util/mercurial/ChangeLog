@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.81 2008/10/04 17:49:03 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.82 2008/10/04 18:23:01 ranger Exp $
+
+  04 Oct 2008; Brent Baude <ranger@gentoo.org> mercurial-1.0.2.ebuild:
+  Marking mercurial-1.0.2 ppc64 and ppc for bug 239055
 
   04 Oct 2008; Robert Buchholz <rbu@gentoo.org> mercurial-1.0.2.ebuild:
   Make tests run with Python 2.5 and FEATURES=userpriv, a patch by Lourdes
