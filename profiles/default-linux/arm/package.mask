@@ -2,7 +2,6 @@
 # The Great GNOME 2.22 Mask (tm) #218794
 >=gnome-base/libgtop-2.22
 >=x11-themes/gtk-engines-2.14
->=gnome-base/libbonobo-2.22
 >=x11-libs/libwnck-2.22
 >=x11-themes/gnome-backgrounds-2.22
 >=gnome-base/gnome-menus-2.22
@@ -20,7 +19,6 @@
 >=gnome-base/gnome-vfs-2.22
 >=gnome-base/libgnome-2.22
 >=app-editors/gedit-2.22
->=gnome-base/libbonoboui-2.22
 >=gnome-base/libgnomekbd-2.21
 >=gnome-extra/gconf-editor-2.22
 >=dev-python/gnome-python-2.22

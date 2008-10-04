@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.mask,v 1.5 2008/09/30 08:28:55 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.mask,v 1.6 2008/10/04 15:28:08 leio Exp $
 
 ### THIS FILE IS ONLY FOR PACKAGES MASKED ON BOTH 64-BIT AND 32-BIT USERLAND!!!
 
@@ -15,7 +15,6 @@
 >=app-crypt/seahorse-2.22
 >=gnome-base/libgtop-2.22
 >=x11-themes/gtk-engines-2.14
->=gnome-base/libbonobo-2.22
 >=x11-libs/libwnck-2.22
 >=x11-themes/gnome-backgrounds-2.22
 >=app-text/rarian-0.8
@@ -36,7 +35,6 @@
 >=gnome-base/libgnome-2.22
 dev-libs/libgweather
 >=app-editors/gedit-2.22
->=gnome-base/libbonoboui-2.22
 >=gnome-base/libgnomekbd-2.21
 >=gnome-extra/gconf-editor-2.22
 >=media-sound/sound-juicer-2.22

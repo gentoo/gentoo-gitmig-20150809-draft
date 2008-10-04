@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.16 2008/10/03 03:44:47 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.17 2008/10/04 15:28:13 leio Exp $
 
 # needs >=sys-devel/gcc-4.2
 sys-libs/libfreevec
@@ -13,7 +13,6 @@ sys-libs/libfreevec
 >=app-crypt/seahorse-2.22
 >=gnome-base/libgtop-2.22
 >=x11-themes/gtk-engines-2.14
->=gnome-base/libbonobo-2.22
 >=x11-libs/libwnck-2.22
 >=x11-themes/gnome-backgrounds-2.22
 >=app-text/rarian-0.8
@@ -34,7 +33,6 @@ sys-libs/libfreevec
 >=gnome-base/libgnome-2.22
 dev-libs/libgweather
 >=app-editors/gedit-2.22
->=gnome-base/libbonoboui-2.22
 >=gnome-base/libgnomekbd-2.21
 >=gnome-extra/gconf-editor-2.22
 >=media-sound/sound-juicer-2.22

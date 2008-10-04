@@ -9,7 +9,6 @@
 >=app-crypt/seahorse-2.22
 >=gnome-base/libgtop-2.22
 >=x11-themes/gtk-engines-2.14
->=gnome-base/libbonobo-2.22
 >=x11-libs/libwnck-2.22
 >=x11-themes/gnome-backgrounds-2.22
 >=app-text/rarian-0.8
@@ -30,7 +29,6 @@
 >=gnome-base/libgnome-2.22
 dev-libs/libgweather
 >=app-editors/gedit-2.22
->=gnome-base/libbonoboui-2.22
 >=gnome-base/libgnomekbd-2.21
 >=gnome-extra/gconf-editor-2.22
 >=media-sound/sound-juicer-2.22
