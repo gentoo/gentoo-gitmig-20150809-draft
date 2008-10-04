@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/art-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.56 2008/03/12 13:28:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.57 2008/10/04 18:48:34 mabi Exp $
+
+  04 Oct 2008; Matti Bickel <mabi@gentoo.org> art-sharp-2.16.0.ebuild:
+  fix bug #216421
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Peter Johanson (latexer, #206688) from metadata.xml.
