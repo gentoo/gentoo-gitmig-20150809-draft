@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.63 2008/09/21 21:23:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.64 2008/10/04 15:33:26 betelgeuse Exp $
+
+  04 Oct 2008; Petteri Räty <betelgeuse@gentoo.org> -grass-6.2.0-r1.ebuild:
+  Delete old version. Fixes bug #204785.
 
   21 Sep 2008; Steve Arnold <nerdboy@gentoo.org> grass-6.3.0.ebuild:
   Updated for bug #237495 (forces python when wxwindows is enabled).
