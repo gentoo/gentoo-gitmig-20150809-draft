@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sys-Statistics-Linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/ChangeLog,v 1.23 2008/10/02 05:36:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/ChangeLog,v 1.24 2008/10/04 15:02:24 gentoofan23 Exp $
+
+  04 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  Sys-Statistics-Linux-0.34.ebuild:
+  Readding amd64 stable keyword, previous stable keywords dropped accidentally
 
 *Sys-Statistics-Linux-0.41 (02 Oct 2008)
 
