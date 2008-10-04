@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.79 2008/09/19 02:01:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.80 2008/10/04 15:30:07 keytoaster Exp $
+
+  04 Oct 2008; Tobias Heinlein <keytoaster@gentoo.org>
+  mercurial-1.0.2.ebuild:
+  amd64 stable wrt security bug 239055
 
 *mercurial-1.0.2 (19 Sep 2008)
 
