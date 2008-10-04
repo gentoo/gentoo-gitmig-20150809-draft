@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-cairo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/ChangeLog,v 1.3 2008/08/18 04:19:53 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-cairo/ChangeLog,v 1.4 2008/10/04 19:04:08 mabi Exp $
+
+  04 Oct 2008; Matti Bickel <mabi@gentoo.org> guile-cairo-1.4.0.ebuild:
+  fix bug #206220
 
   18 Aug 2008; Panagiotis Christopoulos <pchrist@gentoo.org>
   guile-cairo-1.3.90.ebuild, guile-cairo-1.4.0.ebuild:
