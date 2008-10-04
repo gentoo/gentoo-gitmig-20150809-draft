@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-slovenian
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-slovenian/ChangeLog,v 1.5 2008/09/23 20:49:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-slovenian/ChangeLog,v 1.6 2008/10/04 01:36:00 ranger Exp $
+
+  04 Oct 2008; Brent Baude <ranger@gentoo.org>
+  texlive-documentation-slovenian-2008.ebuild:
+  Marking texlive-documentation-slovenian-2008 ~ppc for bug 237202
 
   23 Sep 2008; Raúl Porcel <armin76@gentoo.org>
   texlive-documentation-slovenian-2008.ebuild:
