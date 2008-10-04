@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.116 2008/10/04 12:54:37 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.117 2008/10/04 13:00:58 killerfox Exp $
+
+  04 Oct 2008; René Nussbaumer <killerfox@gentoo.org>
+  -rxvt-unicode-9.05-r1.ebuild:
+  Remove borked 256 color version. This actually reverts the changes of yngwin.
 
 *rxvt-unicode-9.05-r2 (04 Oct 2008)
 
