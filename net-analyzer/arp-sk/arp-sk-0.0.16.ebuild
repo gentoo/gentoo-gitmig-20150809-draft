@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16.ebuild,v 1.4 2006/12/28 12:02:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16.ebuild,v 1.5 2008/10/04 00:54:09 darkside Exp $
 
 DESCRIPTION="A swiss knife tool for ARP"
 HOMEPAGE="http://sid.rstack.org/arp-sk/"
@@ -8,7 +8,7 @@ SRC_URI="http://sid.rstack.org/arp-sk/files/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 DEPEND=">=net-libs/libnet-1.1"
 
