@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.95 2008/10/04 16:55:50 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.96 2008/10/04 18:07:38 armin76 Exp $
+
+  04 Oct 2008; Raúl Porcel <armin76@gentoo.org> darcs-2.0.2.ebuild:
+  alpha/ia64 stable wrt #239368
 
 *darcs-2.1.0_pre3 (04 Oct 2008)
 
