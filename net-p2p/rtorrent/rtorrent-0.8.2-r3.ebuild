@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.2-r3.ebuild,v 1.9 2008/09/16 07:12:36 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.2-r3.ebuild,v 1.10 2008/10/04 23:44:24 loki_val Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -13,11 +13,13 @@ SLOT="0"
 KEYWORDS="amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug ipv6 xmlrpc"
 
-DEPEND=">=net-libs/libtorrent-0.12.${PV##*.}
+RDEPEND=">=net-libs/libtorrent-0.12.${PV##*.}
 	>=dev-libs/libsigc++-2
 	>=net-misc/curl-7.18
 	sys-libs/ncurses
 	xmlrpc? ( dev-libs/xmlrpc-c )"
+DEPEND="${RDEPEND}
+        dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
