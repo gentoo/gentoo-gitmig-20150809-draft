@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1926 2008/10/04 15:28:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1927 2008/10/04 15:43:41 rbu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Oct 2008; Robert Buchholz <rbu@gentoo.org> package.mask:
+  Purge removed packages and ebuilds from p.mask
 
   04 Oct 2008; Mart Raudsepp <leio@gentoo.org> arch/arm/package.mask,
   arch/powerpc/ppc32/package.mask, arch/powerpc/ppc64/package.mask,
