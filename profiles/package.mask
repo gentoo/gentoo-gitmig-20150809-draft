@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9042 2008/10/04 14:08:37 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9043 2008/10/04 15:14:46 rbu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1695,10 +1695,6 @@ net-wireless/iwlwifi
 # dbus. Removal in 30 days unless someone else takes this
 # package and fixes the problems.
 kde-misc/kdbus
-
-# Roy Marples <uberlord@gentoo.org> (29 Jun 2007)
-# Masked due to several connectivity issues.
->=net-wireless/wpa_supplicant-0.6.0
 
 # Jurek Bartuszek <jurek@gentoo.org> (23 Jun 2007)
 # Beta versions, testing required

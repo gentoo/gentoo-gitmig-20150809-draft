@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1924 2008/10/04 14:08:37 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1925 2008/10/04 15:14:46 rbu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Oct 2008; Robert Buchholz <rbu@gentoo.org> package.mask:
+  Remove wpa_supplicant 0.6 mask, issues reported earlier are probably fixed
+  by now (bug #235282).
 
   04 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   package.mask:
