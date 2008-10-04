@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.2.1.ebuild,v 1.3 2008/07/03 02:10:48 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.2.1.ebuild,v 1.4 2008/10/04 18:30:34 rbu Exp $
 
 inherit gnome2 autotools
 DESCRIPTION="Xournal is an application for notetaking, sketching, and keeping a journal using a stylus."
@@ -20,6 +20,8 @@ DEPEND="${DEPEND}
 	>=gnome-base/libgnomeprintui-2.2"
 RDEPEND="${DEPEND}
 	pdf? ( app-text/poppler virtual/ghostscript )"
+DEPEND="${DEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
