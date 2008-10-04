@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/alut-2.1.0.0.ebuild,v 1.3 2008/07/06 20:23:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/alut-2.1.0.0.ebuild,v 1.4 2008/10/04 19:50:41 fmccor Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -14,7 +14,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~sparc x86"
+KEYWORDS="amd64 sparc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.4
