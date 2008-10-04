@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.43 2008/09/30 03:08:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.44 2008/10/04 15:13:46 ranger Exp $
+
+  04 Oct 2008; Brent Baude <ranger@gentoo.org> qtcurve-0.59.5.ebuild:
+  Keywording qtcurve-0.59.5 ppc64 and ~ppc for bug 238598
 
   30 Sep 2008; Jeroen Roovers <jer@gentoo.org> qtcurve-0.59.5.ebuild:
   Stable for HPPA (bug #238598).
