@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.1 2007/12/17 17:50:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.2 2008/10/04 15:30:16 loki_val Exp $
 
 inherit eutils
 
@@ -13,9 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-libs/glib-2.2.0
+RDEPEND=">=dev-libs/glib-2.2.0
 	>=x11-libs/gtk+-2.4.0
 	|| ( app-shells/bash app-shells/zsh )"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install () {
 	make DESTDIR=${D} install || die "install failed"

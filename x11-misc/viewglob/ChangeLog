@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/viewglob
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.10 2007/12/17 17:50:20 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.11 2008/10/04 15:30:16 loki_val Exp $
+
+  04 Oct 2008; Peter Alfredsen <loki_val@gentoo.org> viewglob-2.0.4.ebuild:
+  Fix pkg-config deps, bug 204966. Blame Evil Compile Person
+  <bugs@dev.gentooexperimental.org>
 
 *viewglob-2.0.4 (17 Dec 2007)
 
