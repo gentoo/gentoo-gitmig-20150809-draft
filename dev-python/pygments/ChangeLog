@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.20 2008/10/04 17:27:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.21 2008/10/04 18:02:25 armin76 Exp $
+
+  04 Oct 2008; Raúl Porcel <armin76@gentoo.org> pygments-0.10.ebuild:
+  alpha/ia64/sparc stable wrt #239537
 
   04 Oct 2008; Markus Meier <maekke@gentoo.org> pygments-0.10.ebuild:
   x86 stable, bug #239537
