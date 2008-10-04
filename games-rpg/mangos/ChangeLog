@@ -1,0 +1,11 @@
+# ChangeLog for games-rpg/mangos
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mangos/ChangeLog,v 1.1 2008/10/04 07:38:26 trapni Exp $
+
+*mangos-9999 (04 Oct 2008)
+
+  04 Oct 2008; Christian Parpart <trapni@gentoo.org>
+  +files/9999/mangos-realmd, +files/9999/mangos-worldd, +metadata.xml,
+  +mangos-9999.ebuild:
+  initial import
+
