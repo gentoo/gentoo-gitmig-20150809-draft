@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.29.0.ebuild,v 1.5 2008/09/30 17:28:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.29.0.ebuild,v 1.6 2008/10/04 01:40:17 ranger Exp $
 
 inherit libtool multilib eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://foundry.supelec.fr/frs/download.php/664/${PN}-beta-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="dev-tex/mplib
