@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bridge-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.52 2008/10/02 16:54:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.53 2008/10/04 15:22:15 armin76 Exp $
+
+  04 Oct 2008; Raúl Porcel <armin76@gentoo.org> bridge-utils-1.4.ebuild:
+  ia64/x86 stable wrt #239119
 
   02 Oct 2008; Brent Baude <ranger@gentoo.org> bridge-utils-1.4.ebuild:
   stable ppc, bug 239119
