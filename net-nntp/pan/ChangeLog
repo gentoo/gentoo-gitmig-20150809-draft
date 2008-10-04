@@ -1,6 +1,15 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.71 2008/10/03 13:23:13 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.72 2008/10/04 11:11:38 eva Exp $
+
+  04 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/pan-0.14.2.91-gcc4-2.patch,
+  -files/pan-0.14.2-update-desktop-file.patch, -pan-0.14.2.ebuild,
+  -pan-0.14.2.91-r2.ebuild, -pan-0.14.2.91-r3.ebuild, -pan-0.132-r1.ebuild,
+  -pan-0.132-r2.ebuild, pan-0.132-r3.ebuild, pan-0.133.ebuild,
+  pan-9999.ebuild:
+  Fix deps on gmime since it is now slotted, bug #239412. remove old
+  revisions.
 
   03 Oct 2008; Friedrich Oslage <bluebird@gentoo.org> pan-0.133.ebuild:
   Stable on sparc, bug #239378

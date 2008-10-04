@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.133.ebuild,v 1.5 2008/10/03 13:23:13 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.133.ebuild,v 1.6 2008/10/04 11:11:38 eva Exp $
 
 DESCRIPTION="A newsreader for the Gnome2 desktop"
 HOMEPAGE="http://pan.rebelbase.com/"
@@ -14,7 +14,7 @@ IUSE="spell"
 RDEPEND=">=dev-libs/glib-2.4.0
 	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/libpcre-5.0
-	>=dev-libs/gmime-2.1.9
+	=dev-libs/gmime-2.2*
 	spell? ( >=app-text/gtkspell-2.0.7 )"
 
 DEPEND="${RDEPEND}
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_compile() {
-	econf $(use_with spell gtkspell) || die "econf failed"
+	econf $(use_with spell gtkspell)
 	emake || die "emake failed"
 }
 
