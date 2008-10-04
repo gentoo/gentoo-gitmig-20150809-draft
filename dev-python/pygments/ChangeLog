@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.18 2008/10/04 16:22:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.19 2008/10/04 16:23:38 ranger Exp $
+
+  04 Oct 2008; Brent Baude <ranger@gentoo.org> pygments-0.10.ebuild:
+  stable ppc64, bug 239537
 
   04 Oct 2008; Brent Baude <ranger@gentoo.org> pygments-0.10.ebuild:
   stable ppc, bug 239537
