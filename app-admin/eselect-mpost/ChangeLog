@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-mpost
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mpost/ChangeLog,v 1.5 2008/09/26 11:10:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mpost/ChangeLog,v 1.6 2008/10/04 01:46:38 ranger Exp $
+
+  04 Oct 2008; Brent Baude <ranger@gentoo.org> eselect-mpost-0.1.ebuild:
+  Marking eselect-mpost-0.1 ~ppc for bug 237202
 
   26 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   eselect-mpost-0.1.ebuild:
