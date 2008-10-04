@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-chan_misdn
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_misdn/ChangeLog,v 1.5 2007/02/22 02:06:11 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_misdn/ChangeLog,v 1.6 2008/10/04 01:24:56 darkside Exp $
+
+  04 Oct 2008; Jeremy Olexa <darkside@gentoo.org>
+  asterisk-chan_misdn-0.3.0.ebuild:
+  add ~amd64 kw, bug #196778
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
