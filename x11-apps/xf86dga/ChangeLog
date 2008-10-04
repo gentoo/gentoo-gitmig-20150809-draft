@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xf86dga
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/ChangeLog,v 1.22 2008/10/03 08:42:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/ChangeLog,v 1.23 2008/10/04 15:58:17 corsair Exp $
+
+  04 Oct 2008; Markus Rothe <corsair@gentoo.org> xf86dga-1.0.2.ebuild:
+  Added ~ppc
 
   03 Oct 2008; Raúl Porcel <armin76@gentoo.org> xf86dga-1.0.2.ebuild:
   Add ~ia64 wrt #237411
