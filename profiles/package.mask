@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9040 2008/10/04 08:42:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9041 2008/10/04 11:05:15 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -29,14 +29,14 @@
 
 #--- END OF EXAMPLES ---
 
+# Gilles Dartiguelongue <eva@gentoo.org> (04 Oct 2008)
+# Masked until dependencies are fixed to deal with slots
+# see bug #239412 for more info
+=dev-libs/gmime-2.4.1
+
 # Christian Parpart <trapni@gentoo.org> (04 Oct 2008)
 # for testing/experienced users only
 >=games-rpg/mangos-9999
-
-# Rémi Cardona <remi@gentoo.org> (03 Oct 2008)
-# Masked due to wrong deps, Gilles/eva will fix those when he can
-# see bug #239412 for more info
-=net-nntp/pan-0.133
 
 # Gunnar Wrobel <wrobel@gentoo.org> 023 Oct 2008)
 # Masked due to security issues.
