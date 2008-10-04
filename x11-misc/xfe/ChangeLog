@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xfe
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.48 2007/11/21 18:21:11 nixnut Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.49 2008/10/04 12:01:45 mabi Exp $
+
+*xfe-1.19.2 (04 Oct 2008)
+
+  04 Oct 2008; Matti Bickel <mabi@gentoo.org> +xfe-1.19.2.ebuild:
+  version bump, use EAPI 2 for use deps
 
   21 Nov 2007; nixnut <nixnut@gentoo.org> xfe-1.04.ebuild:
   Stable on ppc wrt bug 198932
