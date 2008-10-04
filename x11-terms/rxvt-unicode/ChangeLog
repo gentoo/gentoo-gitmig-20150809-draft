@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.118 2008/10/04 13:03:15 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.119 2008/10/04 13:14:33 killerfox Exp $
+
+  04 Oct 2008; René Nussbaumer <killerfox@gentoo.org>
+  rxvt-unicode-9.05.ebuild:
+  Stable on ppc. See bug #232610.
 
   04 Oct 2008; René Nussbaumer <killerfox@gentoo.org> metadata.xml:
   Modify metadata.xml to reflect USE flag changes
