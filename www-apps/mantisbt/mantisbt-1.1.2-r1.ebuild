@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.1.2-r1.ebuild,v 1.3 2008/10/01 20:50:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.1.2-r1.ebuild,v 1.4 2008/10/04 17:24:48 pva Exp $
 
 inherit eutils webapp depend.php
 
@@ -47,4 +47,12 @@ src_install() {
 	webapp_configfile ${MY_HTDOCSDIR}/config_inc.php
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en-1.0.0.txt
 	webapp_src_install
+}
+
+pkg_postinst() {
+	webapp_pkg_postinst
+	elog "Note, that this branch of mantisbt does not work with PostgreSQL."
+	elog "If really need mantisbt to work with PostgreSQL you'll have to"
+	elog "install it manually from upstream svn repository:"
+	elog "https://sourceforge.net/svn/?group_id=14963"
 }
