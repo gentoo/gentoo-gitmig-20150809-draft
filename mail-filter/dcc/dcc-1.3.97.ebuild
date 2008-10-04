@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.97.ebuild,v 1.1 2008/09/30 07:15:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.97.ebuild,v 1.2 2008/10/04 11:45:11 bluebird Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rhyolite.com/anti-spam/dcc/source/old/${PN}-${PV}.tar.Z"
 
 LICENSE="DCC"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="ipv6 rrdtool milter"
 
 RDEPEND="dev-lang/perl
