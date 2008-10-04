@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20071210.ebuild,v 1.11 2008/02/11 13:47:43 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20071210.ebuild,v 1.12 2008/10/04 21:42:19 loki_val Exp $
 
 inherit eutils
 
@@ -22,6 +22,8 @@ RDEPEND="gif? ( >=media-libs/giflib-4.1.0-r1 )
 	truetype? ( >=media-libs/freetype-2.1.4 )
 	svg? ( >=dev-libs/libxml2-2.6.7 )
 	unicode? ( >=media-libs/libuninameslist-030713 )
+	x11-libs/libXi
+	x11-proto/inputproto
 	!media-gfx/pfaedit"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
