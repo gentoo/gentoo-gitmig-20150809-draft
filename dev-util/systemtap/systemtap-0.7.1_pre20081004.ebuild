@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.7.1_pre20081004.ebuild,v 1.1 2008/10/04 16:49:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.7.1_pre20081004.ebuild,v 1.2 2008/10/04 16:55:37 swegener Exp $
 
 inherit linux-info eutils
 
@@ -9,11 +9,11 @@ HOMEPAGE="http://sourceware.org/systemtap/"
 if [[ ${PV} = *_pre* ]] # is this a snaphot?
 then
 	# see configure.ac to get the version of the snapshot
-	SRC_URI="ftp://sources.redhat.com/pub/${PN}/snapshots/${PN}-${PV/*_pre/}.tar.bz2
+	SRC_URI="http://sources.redhat.com/${PN}/ftp/snapshots/${PN}-${PV/*_pre/}.tar.bz2
 		mirror://gentoo/${PN}-${PV/*_pre/}.tar.bz2" # upstream only keeps four snapshot distfiles around
 	S="${WORKDIR}"/src
 else
-	SRC_URI="ftp://sources.redhat.com/pub/${PN}/releases/${P}.tar.gz"
+	SRC_URI="http://sources.redhat.com/${PN}/ftp/releases/${P}.tar.gz"
 	# use default S for releases
 fi
 

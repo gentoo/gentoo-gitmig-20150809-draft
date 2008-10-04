@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.71 2008/10/04 16:49:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.72 2008/10/04 16:55:37 swegener Exp $
+
+  04 Oct 2008; Sven Wegener <swegener@gentoo.org> systemtap-0.7.ebuild,
+  systemtap-0.7.1_pre20080830.ebuild, systemtap-0.7.1_pre20081004.ebuild:
+  Change download location to http.
 
 *systemtap-0.7.1_pre20081004 (04 Oct 2008)
 
