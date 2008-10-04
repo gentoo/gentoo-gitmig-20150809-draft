@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-wijesekera
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wijesekera/ChangeLog,v 1.1 2008/05/02 15:41:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wijesekera/ChangeLog,v 1.2 2008/10/04 19:07:02 gentoofan23 Exp $
+
+  04 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  scim-wijesekera-0.3.3.ebuild:
+  Fix pkgconfig build failures, bug 239619
 
 *scim-wijesekera-0.3.3 (02 May 2008)
 
