@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.2.4.ebuild,v 1.6 2007/08/24 20:36:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.2.4.ebuild,v 1.7 2008/10/04 18:08:17 mabi Exp $
 
 inherit mono multilib
 
@@ -26,17 +26,17 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Install all our .dlls under $(libdir), not $(prefix)/lib
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e 's:$(prefix)/lib:$(libdir):'             \
-			${S}/engine/Makefile.am                        \
+			"${S}"/engine/Makefile.am                        \
 		|| die "sed failed"
 
 		sed -i -e 's:libdir=@prefix@/lib:libdir=@libdir@:' \
 			-i -e 's:${prefix}/lib:${libdir}:'             \
-			${S}/monodoc.pc.in                             \
+			"${S}"/monodoc.pc.in                             \
 		|| die "sed failed"
 
 		aclocal || die "aclocal failed"

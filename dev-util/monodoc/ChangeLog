@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodoc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.72 2008/10/04 18:01:10 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/ChangeLog,v 1.73 2008/10/04 18:08:17 mabi Exp $
+
+  04 Oct 2008; Matti Bickel <mabi@gentoo.org> monodoc-1.2.4.ebuild,
+  monodoc-1.9.ebuild:
+  fixing minor quoting issues
 
   04 Oct 2008; Matti Bickel <mabi@gentoo.org> -monodoc-1.1.13.ebuild,
   -monodoc-1.1.18.ebuild, -monodoc-1.2.1.ebuild, -monodoc-1.2.3.ebuild,
