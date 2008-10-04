@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libecwj2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/ChangeLog,v 1.2 2007/01/10 14:10:09 djay Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libecwj2/ChangeLog,v 1.3 2008/10/04 00:57:46 darkside Exp $
+
+  04 Oct 2008; Jeremy Olexa <darkside@gentoo.org> libecwj2-3.3.ebuild:
+  add ~amd64, bug #239177
 
   10 Jan 2007; <djay@gentoo.org> libecwj2-3.3.ebuild:
   Correct the PKG_URL syntaxe
