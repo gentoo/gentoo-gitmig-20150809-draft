@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.25.ebuild,v 1.9 2008/09/23 21:05:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.25.ebuild,v 1.10 2008/10/04 01:44:36 ranger Exp $
 
 inherit latex-package
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.zip"
 HOMEPAGE="http://www.tei-c.org.uk/Software/passivetex/"
 LICENSE="freedist"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 
