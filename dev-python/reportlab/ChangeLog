@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.49 2008/07/17 18:59:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.50 2008/10/04 16:24:38 neurogeek Exp $
+
+*reportlab-2.2 (04 Oct 2008)
+
+  04 Oct 2008; Jesus Rivero <neurogeek@gentoo.org>
+  +files/reportlab-2.2_qa_msg.patch, +reportlab-2.2.ebuild:
+  Version bump. Closes bug #238205, thanks to Pedro Romano
+  <pmcnr72@gmail.com> for the ebuild
 
   17 Jul 2008; Alexis Ballier <aballier@gentoo.org> reportlab-2.1.ebuild:
   keyword ~x86-fbsd
