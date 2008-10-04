@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/drascula-1.0.ebuild,v 1.1 2008/09/16 00:17:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/drascula-1.0.ebuild,v 1.2 2008/10/04 00:59:34 darkside Exp $
 
 EAPI=1
 inherit eutils games
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/scummvm/drascula-${PV}.zip
 
 LICENSE="drascula"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+audio linguas_es linguas_de linguas_fr linguas_it"
 
 RDEPEND=">=games-engines/scummvm-0.12.0"
