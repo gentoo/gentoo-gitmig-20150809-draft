@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9041 2008/10/04 11:05:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9042 2008/10/04 14:08:37 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -45,7 +45,8 @@ www-apps/dotproject
 
 # Tobias Heinlein <keytoaster@gentoo.org> (02 Oct 2008)
 # KDE 4.1.2 ebuilds from the kde overlay are going to enter the tree.
-# Masked to avoid problems on sync.
+# Masked to avoid problems on sync. Currently fixing some kde3 / kde4
+# mixing issues before unmasking.
 =app-misc/strigi-0.5.11
 =app-office/akonadi-server-1.0.0
 =dev-libs/soprano-2.1
@@ -301,7 +302,7 @@ www-apps/dotproject
 =kde-misc/lancelot-menu-1.0.3
 =kde-misc/plasmoids-0.2
 =kde-misc/powerdevil-1.2.0
-=kde-misc/yakuake-2.9.3
+=kde-misc/yakuake-2.9.4
 =media-gfx/digikam-0.10.0_beta2-r1
 =media-sound/amarok-1.90
 =media-sound/phonon-4.2.0
