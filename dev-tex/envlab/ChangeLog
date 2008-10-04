@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/envlab
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.16 2008/09/23 20:55:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.17 2008/10/04 01:37:46 ranger Exp $
+
+  04 Oct 2008; Brent Baude <ranger@gentoo.org> envlab-1.2-r1.ebuild:
+  Marking envlab-1.2-r1 ~ppc for bug 237202
 
   23 Sep 2008; Raúl Porcel <armin76@gentoo.org> envlab-1.2-r1.ebuild:
   Add ~alpha/~ia64 wrt #237202
