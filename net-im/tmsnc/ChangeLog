@@ -1,6 +1,13 @@
 # ChangeLog for net-im/tmsnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/ChangeLog,v 1.16 2008/08/05 18:06:33 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tmsnc/ChangeLog,v 1.17 2008/10/04 19:05:58 rbu Exp $
+
+*tmsnc-0.3.2-r1 (04 Oct 2008)
+
+  04 Oct 2008; Robert Buchholz <rbu@gentoo.org>
+  +files/tmsnc-UBX-buffer-overflow-CVE-2008-2828.patch,
+  +tmsnc-0.3.2-r1.ebuild:
+  Fix stack based buffer overflow (security bug #229157)
 
   05 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml:
   Add USE flag description to metadata as per GLEP 56.
