@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.599 2008/10/03 09:07:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.600 2008/10/04 16:20:18 corsair Exp $
+
+  04 Oct 2008; Markus Rothe <corsair@gentoo.org> xorg-x11-7.4.ebuild:
+  Added ~ppc
 
   03 Oct 2008; Raúl Porcel <armin76@gentoo.org> xorg-x11-7.4.ebuild:
   Add ~ia64 wrt #237411
