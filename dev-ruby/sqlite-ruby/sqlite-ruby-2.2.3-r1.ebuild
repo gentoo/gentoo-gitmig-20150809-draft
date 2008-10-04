@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/sqlite-ruby-2.2.3-r1.ebuild,v 1.15 2008/05/12 09:55:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/sqlite-ruby-2.2.3-r1.ebuild,v 1.16 2008/10/04 08:18:52 graaff Exp $
 
 inherit ruby gems
 
@@ -16,5 +16,5 @@ KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
 SLOT="0"
 IUSE=""
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18"
 DEPEND="=dev-db/sqlite-2*"
