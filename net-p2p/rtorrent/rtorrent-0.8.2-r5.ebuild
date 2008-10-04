@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.2-r5.ebuild,v 1.6 2008/09/27 12:05:05 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.2-r5.ebuild,v 1.7 2008/10/04 12:59:09 ranger Exp $
 
 inherit eutils autotools toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://libtorrent.rakshasa.no/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug ipv6 xmlrpc"
 
 DEPEND=">=net-libs/libtorrent-0.12.${PV##*.}
