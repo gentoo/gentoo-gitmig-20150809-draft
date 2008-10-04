@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.122 2008/09/18 07:52:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.123 2008/10/04 11:51:15 pva Exp $
+
+  04 Oct 2008; Peter Volkov <pva@gentoo.org> metadata.xml,
+  wireshark-1.1.0.ebuild:
+  Change c-ares USE flag to ares, as other packages already USE ares.
 
   18 Sep 2008; Peter Volkov <pva@gentoo.org> wireshark-1.1.0.ebuild:
   Fixed dependency on c-ares and configuration.

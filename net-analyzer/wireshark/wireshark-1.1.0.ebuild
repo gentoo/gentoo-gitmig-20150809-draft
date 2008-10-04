@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.1.0.ebuild,v 1.2 2008/09/18 07:52:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.1.0.ebuild,v 1.3 2008/10/04 11:51:15 pva Exp $
 
 EAPI=1
 WANT_AUTOMAKE="1.9"
@@ -18,7 +18,7 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="adns gtk ipv6 lua portaudio gnutls c-ares gcrypt zlib kerberos threads profile smi +pcap pcre +caps selinux"
+IUSE="adns gtk ipv6 lua portaudio gnutls ares gcrypt zlib kerberos threads profile smi +pcap pcre +caps selinux"
 
 RDEPEND="zlib? ( sys-libs/zlib )
 	smi? ( net-libs/libsmi )
@@ -32,8 +32,8 @@ RDEPEND="zlib? ( sys-libs/zlib )
 	pcap? ( net-libs/libpcap )
 	pcre? ( dev-libs/libpcre )
 	caps? ( sys-libs/libcap )
-	c-ares? ( >=net-dns/c-ares-1.5 )
-	!c-ares? ( adns? ( net-libs/adns ) )
+	ares? ( >=net-dns/c-ares-1.5 )
+	!ares? ( adns? ( net-libs/adns ) )
 	kerberos? ( virtual/krb5 )
 	portaudio? ( media-libs/portaudio )
 	lua? ( >=dev-lang/lua-5.1 )
@@ -52,11 +52,12 @@ pkg_setup() {
 		ewarn "only command line utils are available"
 	fi
 
-	if use c-ares && use adns; then
-		einfo "c-ares supersedes adns resolver. Using c-ares."
-		myconf="$(use_with c-ares) --without-adns"
+	if use ares && use adns; then
+		einfo "You asked for both, ares and adns, but we can use only one of them."
+		einfo "c-ares supersedes adns resolver thus using c-ares (ares USE flag)."
+		myconf="$(use_with ares c-ares) --without-adns"
 	else
-		myconf="$(use_with adns) $(use_with c-ares)"
+		myconf="$(use_with adns) $(use_with ares c-ares)"
 	fi
 
 	# Add group for users allowed to sniff.
