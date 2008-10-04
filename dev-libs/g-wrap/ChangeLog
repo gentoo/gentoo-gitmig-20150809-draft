@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.60 2008/07/03 16:24:53 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.61 2008/10/04 18:52:39 mabi Exp $
+
+  04 Oct 2008; Matti Bickel <mabi@gentoo.org> g-wrap-1.9.11.ebuild:
+  fix bug #216403
 
 *g-wrap-1.9.11 (03 Jul 2008)
 
