@@ -1,7 +1,11 @@
 # this is a list of USE flags
 # that should not be used on PPC64
 # Tom Gall <tgall@gentoo.org> manages this list
-
+#
+# Brent Baude <ranger@gentoo.org> (3 Oct 2008)
+# Masking xindy use flag for ppc64
+xindy
+#
 # 25 Feb 2008  Brent Baude <ranger@gentoo.org>
 # Masking xmlrpc use flag because xmlrpc-c does not compile
 # bug 209138

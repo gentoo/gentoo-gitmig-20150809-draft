@@ -1,5 +1,9 @@
 ### THIS FILE IS ONLY FOR PACKAGES MASKED ON BOTH 64-BIT AND 32-BIT USERLAND!!!
 
+# Brent Baude <ranger@gentoo.org> (3 Oct 2008)
+# Masking xindy use flag for ppc64
+xindy
+
 # 01 Oct 2008   Brent Baude <ranger@gentoo.org>
 # # Masking battery USE for bug 238770
 battery
