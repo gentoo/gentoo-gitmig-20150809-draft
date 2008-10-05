@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.2-r1.ebuild,v 1.1 2008/02/24 19:01:51 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.6.2-r1.ebuild,v 1.2 2008/10/05 11:57:02 spock Exp $
 
 inherit flag-o-matic
 
@@ -56,7 +56,7 @@ src_compile() {
 	filter-flags -fPIC
 
 	emake 	HOST_CFLAGS="${CFLAGS}" \
-		TARGET_SCREEN_LIB=${scrnlib} || die
+		TARGET_SCREEN_LIB=${scrnlib} compilation="debug" || die
 }
 
 src_install() {
