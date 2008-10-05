@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.3.ebuild,v 1.8 2008/10/04 22:08:28 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.3.ebuild,v 1.9 2008/10/05 09:44:00 loki_val Exp $
 
 inherit base autotools
 
@@ -18,8 +18,8 @@ RDEPEND=">=dev-libs/dbus-glib-0.71
 	sys-apps/pmount
 	virtual/eject
 	>=gnome-base/libgtop-2.12
-	>=sys-apps/sg3_utils-1.20"
-	gnome-base/gnome-common
+	>=sys-apps/sg3_utils-1.20
+	gnome-base/gnome-common"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
