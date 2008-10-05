@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.61 2008/09/15 19:34:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.62 2008/10/05 21:01:33 vapier Exp $
+
+*cryptsetup-1.0.6-r2 (05 Oct 2008)
+
+  05 Oct 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/1.0.6-dmcrypt.confd, +files/1.0.6-r2-dm-crypt-start.sh,
+  +cryptsetup-1.0.6-r2.ebuild:
+  Do not bang directly on /dev/console so we dont break when running under X
+  or something.
 
   15 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
   cryptsetup-1.0.6-r1.ebuild:
