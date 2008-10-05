@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.13.ebuild,v 1.1 2008/10/02 21:13:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.13-r1.ebuild,v 1.1 2008/10/05 20:22:00 eva Exp $
 
 inherit libtool
 
@@ -23,7 +23,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --disable-lynx
+	econf --disable-lynx --localstatedir=/var
 	emake || die "emake failed"
 
 	if use doc ; then
