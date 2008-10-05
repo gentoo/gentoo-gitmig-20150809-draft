@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/domi/domi-20060816.ebuild,v 1.1 2008/10/01 18:47:54 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/domi/domi-20060816.ebuild,v 1.2 2008/10/05 17:43:22 bangert Exp $
 
 inherit eutils
 DESCRIPTION="Scripts for building Xen domains"
@@ -27,6 +27,8 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	sed -i -e 's:/dev/loop\$:/dev/loop/\$:' "${S}"/domi
+	cd "${S}"
+	epatch "${FILESDIR}"/fix_install_links.patch
 }
 
 src_install() {
