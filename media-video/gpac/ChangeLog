@@ -1,6 +1,16 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.64 2008/10/04 12:52:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.65 2008/10/05 12:48:02 aballier Exp $
+
+  05 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/gpac-0.4.2-DESTDIR.patch, -files/gpac-0.4.2-bsd.patch,
+  -files/gpac-0.4.2-configure-ogg.patch,
+  -files/gpac-0.4.2-ffmpeg-errno.patch,
+  -files/gpac-0.4.2-ffmpeg-snapshots-compat.patch,
+  -files/gpac-0.4.2-nostrip.patch, -files/gpac-0.4.2-soname.patch,
+  -files/gpac-0.4.2-static-defs.patch, -gpac-0.4.2-r1.ebuild,
+  -gpac-0.4.4.ebuild:
+  remove old
 
   04 Oct 2008; Brent Baude <ranger@gentoo.org> gpac-0.4.4-r1.ebuild:
   stable ppc64, bug 237032
