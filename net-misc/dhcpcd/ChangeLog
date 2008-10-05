@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.219 2008/10/05 09:50:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.220 2008/10/05 13:59:55 klausman Exp $
+
+  05 Oct 2008; Tobias Klausmann <klausman@gentoo.org> dhcpcd-4.0.2.ebuild:
+  Stable on alpha, bug #238731
 
   05 Oct 2008; Raúl Porcel <armin76@gentoo.org> dhcpcd-4.0.2.ebuild:
   ia64 stable wrt #238731
