@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.24 2008/07/14 06:03:15 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.25 2008/10/05 16:25:57 remi Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -213,6 +213,8 @@ src_unpack() {
 			cd "${MY_PROJROOT}" && rm -f Imakefile Makefile
 			ln -sf "${MY_PROJROOT}"/extensions "${MY_PROJROOT}"/X11/extensions
 			ln -sf "${S}"/lib "${S}"/usr/X11R6/lib
+
+			cd "${WORKDIR}"
 	    eend 0
 	fi
 
