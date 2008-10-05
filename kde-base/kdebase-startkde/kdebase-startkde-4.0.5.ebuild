@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.0.5.ebuild,v 1.1 2008/06/05 21:29:11 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.0.5.ebuild,v 1.2 2008/10/05 02:41:16 jmbsvicetto Exp $
 
 EAPI="1"
 
@@ -42,7 +42,7 @@ KMEXTRACTONLY="startkde.cmake
 	kdm/"
 KMCOMPILEONLY="kdm/kfrontend/sessions/"
 
-PATCHES="${FILESDIR}/gentoo-startkde.patch"
+PATCHES=( "${FILESDIR}/gentoo-startkde.patch" )
 
 src_compile() {
 	# Patch the startkde script to setup the environment for KDE 4.0

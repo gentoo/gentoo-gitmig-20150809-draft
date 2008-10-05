@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.1.2-r1.ebuild,v 1.1 2008/10/04 21:41:18 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.1.2-r1.ebuild,v 1.2 2008/10/05 02:41:16 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -66,7 +66,7 @@ src_configure() {
 	# Complete LDPATH
 	sed -e "s#@REPLACE_LIBDIR@#$(get_libdir)#" \
 		-i "${S}/startkde.cmake" || die "Sed for REPLACE_LIBDIR failed."
-	
+
 	# Now fix the prefix
 	sed -e "s#@REPLACE_PREFIX@#${KDEDIR}#" \
 		-i "${S}/startkde.cmake" || die "Sed for REPLACE_PREFIX failed."

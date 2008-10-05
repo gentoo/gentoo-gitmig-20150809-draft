@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.130 2008/10/04 21:41:18 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.131 2008/10/05 02:41:16 jmbsvicetto Exp $
+
+  05 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> Manifest:
+  Fixed manifests, whitespace and PATCHES.
 
 *kdebase-startkde-4.1.2-r1 (04 Oct 2008)
 
