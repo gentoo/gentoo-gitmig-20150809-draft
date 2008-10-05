@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.72 2008/10/04 11:11:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.73 2008/10/05 14:19:31 klausman Exp $
+
+  05 Oct 2008; Tobias Klausmann <klausman@gentoo.org> pan-0.133.ebuild:
+  Stable on alpha, bug #239378
 
   04 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -files/pan-0.14.2.91-gcc4-2.patch,
