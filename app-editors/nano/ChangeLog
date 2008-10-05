@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.206 2008/10/05 17:52:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.207 2008/10/05 20:13:50 vapier Exp $
+
+*nano-2.1.6-r1 (05 Oct 2008)
+
+  05 Oct 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/nano-2.1.6-cut-paste-segv.patch, +nano-2.1.6-r1.ebuild:
+  Add fix from upstream for segv when cutting & pasting between files.
 
 *nano-2.1.6 (05 Oct 2008)
 
