@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9044 2008/10/04 15:43:41 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9045 2008/10/05 00:52:17 hawking Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ali Polatel <hawking@gentoo.org> (05 Oct 2008)
+# Masked until packages that don't work with it are fixed.
+# see bug #230205 for more info
+>=dev-lang/python-2.6
 
 # Gilles Dartiguelongue <eva@gentoo.org> (04 Oct 2008)
 # Masked until dependencies are fixed to deal with slots
