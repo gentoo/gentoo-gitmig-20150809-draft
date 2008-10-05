@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.2_pre20070226.ebuild,v 1.8 2007/10/10 07:20:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.2_pre20070226.ebuild,v 1.9 2008/10/05 11:31:50 flameeyes Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -20,6 +20,9 @@ DEPEND="X? ( x11-libs/libX11
 	png? ( =media-libs/libpng-1.2* )"
 
 RDEPEND="${DEPEND}"
+
+DEPEND="${DEPEND}
+	app-text/texi2html"
 
 src_unpack() {
 	unpack ${A}
