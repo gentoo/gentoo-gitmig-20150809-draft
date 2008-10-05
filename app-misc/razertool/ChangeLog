@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/razertool
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/ChangeLog,v 1.2 2008/08/28 19:12:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/ChangeLog,v 1.3 2008/10/05 13:22:00 gentoofan23 Exp $
+
+  05 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  razertool-0.0.7.ebuild:
+  Add missing pkconfig dependency, bug #239614
 
   28 Aug 2008; Bernard Cafarelli <voyageur@gentoo.org>
   razertool-0.0.7.ebuild:

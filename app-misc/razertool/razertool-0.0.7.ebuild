@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/razertool-0.0.7.ebuild,v 1.2 2008/08/28 19:12:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/razertool/razertool-0.0.7.ebuild,v 1.3 2008/10/05 13:22:00 gentoofan23 Exp $
 
 inherit eutils
 
@@ -13,12 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk hal"
 
-DEPEND=">=dev-libs/libusb-0.1.12
+RDEPEND=">=dev-libs/libusb-0.1.12
 	hal? ( >=sys-apps/hal-0.5.7 )
 	gtk? (
 		>=gnome-base/librsvg-2.0
 		>=x11-libs/cairo-1.0.0
 		>=x11-libs/gtk+-2.8.0 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
