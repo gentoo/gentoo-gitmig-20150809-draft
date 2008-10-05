@@ -1,14 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-0.1.1.20080901.ebuild,v 1.1 2008/09/06 03:24:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-0.1.1.20081004.ebuild,v 1.1 2008/10/05 05:00:46 matsuu Exp $
 
 inherit eutils
 
-PYDB_TAR="pinyin-database-0.1.10.5.tar.bz2"
+PYDB_TAR="pinyin-database-0.1.10.6.tar.bz2"
 DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/ibus/"
 SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz
-	http://scim-python.googlecode.com/files/${PYDB_TAR}"
+	http://ibus.googlecode.com/files/${PYDB_TAR}"
 
 LICENSE="GPL-2"
 SLOT="0"
