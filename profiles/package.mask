@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9045 2008/10/05 00:52:17 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9046 2008/10/05 02:56:48 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -113,7 +113,7 @@ www-apps/dotproject
 =kde-base/kdebase-data-4.1.2
 =kde-base/kdebase-kioslaves-4.1.2
 =kde-base/kdebase-meta-4.1.2
-=kde-base/kdebase-startkde-4.1.2
+~kde-base/kdebase-startkde-4.1.2
 =kde-base/kdebugdialog-4.1.2
 =kde-base/kdeedu-meta-4.1.2
 =kde-base/kdegames-meta-4.1.2
