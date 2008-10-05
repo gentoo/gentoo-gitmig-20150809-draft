@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-11.0.3-r1.ebuild,v 1.5 2008/04/15 04:17:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/jmol-11.0.3-r1.ebuild,v 1.6 2008/10/05 19:12:36 betelgeuse Exp $
 
+EAPI=1
 WEBAPP_OPTIONAL="yes"
 
 inherit eutils webapp java-pkg-2 java-ant-2
@@ -17,10 +18,10 @@ IUSE="client-only vhosts"
 WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
 
-COMMON_DEP="dev-java/commons-cli
-	dev-java/itext
-	sci-libs/jmol-acme
-	sci-libs/vecmath-objectclub"
+COMMON_DEP="dev-java/commons-cli:1
+	dev-java/itext:0
+	sci-libs/jmol-acme:0
+	sci-libs/vecmath-objectclub:0"
 
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"

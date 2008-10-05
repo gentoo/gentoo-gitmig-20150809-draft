@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/jmol
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.8 2008/08/06 15:38:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.9 2008/10/05 19:12:36 betelgeuse Exp $
+
+  05 Oct 2008; Petteri Räty <betelgeuse@gentoo.org> jmol-11.0.3-r1.ebuild:
+  Add slot deps.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
