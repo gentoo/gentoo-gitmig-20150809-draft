@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5699.ebuild,v 1.1 2008/10/03 12:15:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.1_p5699-r1.ebuild,v 1.1 2008/10/05 10:47:27 pva Exp $
 
 MY_P=${PN/metasploit/framework}-${PV}
 
@@ -44,15 +44,13 @@ S=${WORKDIR}/${MY_P}
 src_compile() {
 	sed -i -e "s/RAILS_GEM_VERSION = '1.2.2'/RAILS_GEM_VERSION = '1.2'/" \
 		data/msfweb/config/environment.rb || die "sed failed"
-	# NOTE: this sed and *not* removing documentation/LICENSE fixes bug #238137
 	sed -i \
-		"s#\(self\.license = File.read(File.join(\).*#\1'/usr/share/doc/${PF}/documentation/LICENSE'))#" \
-			lib/msf/ui/gtk2/about.rb
+		's#http://metasploit3.com/msf/support#http://metasploit.com/framework/support#' \
+				lib/msf/ui/gtk2/app.rb
 }
 
 src_install() {
 	if [[ "${SRC_URI}" != "" ]] ; then
-		# remove the subversion directories
 		find "${S}" -type d -name ".svn" -print0 | xargs -0 -n1 rm -R
 	fi
 
@@ -61,8 +59,10 @@ src_install() {
 	cp -R "${S}"/* "${D}"/usr/lib/${PN}${SLOT} || die "Copy files failed"
 	rm -Rf "${D}"/usr/lib/${PN}${SLOT}/documentation "${D}"/usr/lib/${PN}${SLOT}/README
 
+	# do not remove LICENSE, bug #238137
 	dodir /usr/share/doc/${PF}
 	cp -R "${S}"/{documentation,README} "${D}"/usr/share/doc/${PF}
+	dosym /usr/share/doc/${PF}/documentation /usr/lib/${PN}${SLOT}/documentation
 
 	dodir /usr/bin/
 	for file in `ls msf*`; do

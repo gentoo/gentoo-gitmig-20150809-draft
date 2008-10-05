@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.40 2008/10/03 12:15:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.41 2008/10/05 10:47:27 pva Exp $
+
+*metasploit-3.1_p5699-r1 (05 Oct 2008)
+
+  05 Oct 2008; Peter Volkov <pva@gentoo.org> -metasploit-3.1_p5699.ebuild,
+  +metasploit-3.1_p5699-r1.ebuild:
+  Fixed remaining issue with Online link at msfgui3 and added symlink
+  instead of sed to make about dialog happy, bug #238137.
 
 *metasploit-3.1_p5699 (03 Oct 2008)
 
