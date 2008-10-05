@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.0.ebuild,v 1.1 2008/09/17 08:00:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.0.ebuild,v 1.2 2008/10/05 17:46:40 aballier Exp $
 
 NEED_PYTHON=2.4.4
 
-inherit distutils
+inherit distutils python
 
 DESCRIPTION="Quod Libet is a GTK+-based audio player written in Python."
 HOMEPAGE="http://code.google.com/p/${PN}/"
@@ -101,6 +101,13 @@ src_install() {
 
 	DDOCS="CHANGELOG KNOWN_BUGS MAINTAINERS PKG-INFO CONTRIBUTORS TODO NEWS"
 	DDOCS="${DDOCS} Change* MANIFEST* README* AUTHORS"
+
+	python_version
+	for ext in png svg; do
+		for prog in quodlibet exfalso; do
+			dosym /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/images/${prog}.${ext} /usr/share/pixmaps/${prog}.${ext}
+		done
+	done
 
 	for doc in ${DDOCS}; do
 		[ -s "$doc" ] && dodoc $doc

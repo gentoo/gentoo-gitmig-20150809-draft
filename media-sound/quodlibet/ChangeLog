@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.57 2008/09/17 08:00:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.58 2008/10/05 17:46:40 aballier Exp $
+
+  05 Oct 2008; Alexis Ballier <aballier@gentoo.org> quodlibet-2.0.ebuild:
+  Symlink icons to /usr/share/pixmaps so that they appear in desktop menus.
+  By Joshua Rich <joshua.rich@gmail.com>, bug #239094
 
 *quodlibet-2.0 (17 Sep 2008)
 
