@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.05-r2.ebuild,v 1.1 2008/10/04 12:54:37 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.05-r2.ebuild,v 1.2 2008/10/05 08:46:19 killerfox Exp $
 
 inherit autotools flag-o-matic
 
@@ -56,17 +56,17 @@ src_unpack() {
 }
 
 src_compile() {
-	myconf=''
+	local myconf=''
 
 	use iso14755 || myconf='--disable-iso14755'
-	use xterm-color || myconf="$myconf --enable-xterm-colors=256"
+	use xterm-color && myconf="$myconf --enable-xterm-colors=256"
 
 	econf --enable-everything \
 		$(use_enable truetype xft) \
 		$(use_enable afterimage) \
 		$(use_enable perl) \
 		--disable-text-blink \
-		${myconf} || die
+		${myconf}
 
 	emake || die
 
