@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/vmoconv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/ChangeLog,v 1.5 2008/06/20 23:05:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/ChangeLog,v 1.6 2008/10/05 22:44:34 flameeyes Exp $
+
+  05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  files/vmoconv-1.0-glibc28.patch:
+  Extend patch to actually build with glibc 2.8. Closes bug #239611.
 
   20 Jun 2008; Alin Năstac <mrness@gentoo.org>
   +files/vmoconv-1.0-glibc28.patch, vmoconv-1.0.ebuild:
