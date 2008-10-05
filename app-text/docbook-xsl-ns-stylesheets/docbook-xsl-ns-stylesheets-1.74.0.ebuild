@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-ns-stylesheets/docbook-xsl-ns-stylesheets-1.74.0.ebuild,v 1.1 2008/09/22 14:15:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-ns-stylesheets/docbook-xsl-ns-stylesheets-1.74.0.ebuild,v 1.2 2008/10/05 10:10:49 flameeyes Exp $
 
 DESCRIPTION="XSL Stylesheets for Docbook"
 HOMEPAGE="http://wiki.docbook.org/topic/DocBookXslStylesheets"
@@ -12,6 +12,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 DEPEND="dev-libs/libxml2
+	dev-libs/libxslt
 	>=app-text/build-docbook-catalog-1.4"
 
 S=${WORKDIR}/docbook-xsl-ns-${PV}
