@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/egads/egads-0.9.5.ebuild,v 1.8 2008/02/08 02:05:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/egads/egads-0.9.5.ebuild,v 1.9 2008/10/05 17:50:28 flameeyes Exp $
+
+inherit multilib
 
 DESCRIPTION="Entropy Gathering And Distribution System"
 HOMEPAGE="http://www.securesoftware.com/download_${PN}.htm"
