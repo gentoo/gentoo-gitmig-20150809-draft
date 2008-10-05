@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gnome-themes-extras
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.54 2008/09/25 16:17:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.55 2008/10/05 21:07:57 eva Exp $
+
+*gnome-themes-extras-2.22.0-r1 (05 Oct 2008)
+
+  05 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gnome-themes-extras-2.22.0-darklooks.patch,
+  gnome-themes-extras-2.22.0.ebuild, +gnome-themes-extras-2.22.0-r1.ebuild:
+  bump to 2.22.0-r1, Fix tooltips references, bug #238138. Respect LINGUAS,
+  bug #182086.
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org>
   gnome-themes-extras-2.22.0.ebuild:
