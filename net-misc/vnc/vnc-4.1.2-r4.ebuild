@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.14 2008/08/27 20:36:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r4.ebuild,v 1.15 2008/10/05 20:55:14 armin76 Exp $
 
 inherit eutils toolchain-funcs multilib autotools
 
 XSERVER_VERSION="1.3.0.0"
-PATCH="${P}-r4-patches-0.4"
+PATCH="${P}-r4-patches-0.5"
 
 MY_P="vnc-4_1_2-unixsrc"
 DESCRIPTION="Remote desktop viewer display system"
@@ -51,6 +51,7 @@ DEPEND="${RDEPEND}
 		x11-proto/fixesproto
 		x11-proto/fontsproto
 		x11-proto/randrproto
+		~x11-proto/renderproto-0.9.2
 		x11-proto/resourceproto
 		x11-proto/scrnsaverproto
 		x11-proto/trapproto
