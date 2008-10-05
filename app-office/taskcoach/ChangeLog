@@ -1,6 +1,10 @@
 # ChangeLog for app-office/taskcoach
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.11 2008/09/30 09:48:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.12 2008/10/05 20:02:02 caster Exp $
+
+  05 Oct 2008; Vlastimil Babka <caster@gentoo.org> taskcoach-0.70.3.ebuild,
+  taskcoach-0.70.4.ebuild:
+  Put wxpython also to DEPEND, bug #240099.
 
 *taskcoach-0.70.4 (30 Sep 2008)
 
