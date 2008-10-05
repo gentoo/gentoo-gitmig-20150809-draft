@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.3.ebuild,v 1.2 2008/09/29 02:45:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.3.ebuild,v 1.3 2008/10/05 21:12:19 flameeyes Exp $
 
 inherit eutils autotools multilib
 
@@ -11,6 +11,7 @@ LICENSE="LGPL-2.1"
 RDEPEND="virtual/libc"
 DEPEND=">=sys-apps/sed-4
 		dev-util/pkgconfig
+		app-text/openjade
 		${RDEPEND}"
 PDEPEND=">=dev-db/libdbi-drivers-0.8.3"
 IUSE=""
