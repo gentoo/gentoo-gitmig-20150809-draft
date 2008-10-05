@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.389 2008/09/27 14:42:47 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.390 2008/10/05 17:21:29 klausman Exp $
+
+  05 Oct 2008; Tobias Klausmann <klausman@gentoo.org> vlc-0.9.3.ebuild:
+  Keyworded on alpha, bug #237813
 
   27 Sep 2008; Ferris McCormick <fmccor@gentoo.org> vlc-0.9.3.ebuild:
   Add back ~sparc --- Bug #237813.
