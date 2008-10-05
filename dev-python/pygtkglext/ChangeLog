@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtkglext
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.38 2008/10/05 13:17:31 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.39 2008/10/05 22:23:09 eva Exp $
+
+  05 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  pygtkglext-1.1.0.ebuild:
+  Make examples optional, fix bug #111508.
 
   05 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org>
   pygtkglext-1.1.0.ebuild:

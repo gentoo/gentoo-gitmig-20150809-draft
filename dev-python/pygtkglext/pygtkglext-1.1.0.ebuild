@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0.ebuild,v 1.19 2008/10/05 13:17:31 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0.ebuild,v 1.20 2008/10/05 22:23:09 eva Exp $
 
 NEED_PYTHON="2.3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gtkglext/${P}.tar.bz2"
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE=""
+IUSE="examples"
 
 RDEPEND=">=dev-python/pygtk-2.8
 	>=dev-libs/glib-2.0
@@ -37,8 +37,10 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README AUTHORS ChangeLog
 
-	insinto /usr/share/doc/${PF}/examples
-	doins examples/*.{py,png}
+	if use examples; then
+		insinto /usr/share/doc/${PF}/examples
+		doins examples/*.{py,png}
+	fi
 }
 
 pkg_postinst() {
