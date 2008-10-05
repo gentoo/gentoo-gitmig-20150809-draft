@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.17 2007/11/27 10:14:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.18 2008/10/05 11:24:12 aballier Exp $
 
 WANT_AUTOMAKE="1.7"
 WANT_AUTOCONF="2.5"
@@ -102,7 +102,9 @@ RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 
 DEPEND="${RDEPEND}
 	dvb? ( media-tv/linuxtv-dvb-headers )
-	x11-proto/videoproto"
+	x11-proto/videoproto
+	x11-proto/xf86vidmodeproto
+	x11-proto/xf86dgaproto"
 
 FONT_S="${S}/font"
 FONT_SUFFIX="pcf.gz"

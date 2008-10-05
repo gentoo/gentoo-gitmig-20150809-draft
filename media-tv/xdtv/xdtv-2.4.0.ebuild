@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.8 2008/09/22 20:08:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.9 2008/10/05 11:24:12 aballier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs autotools
 
@@ -60,6 +60,8 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/videoproto
 	x11-proto/xproto
 	x11-proto/xextproto
+	x11-proto/xf86dgaproto
+	x11-proto/xf86vidmodeproto
 	x11-apps/bdftopcf
 	x11-apps/mkfontdir
 	x11-apps/mkfontscale
