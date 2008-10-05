@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-dep-check
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-dep-check/ChangeLog,v 1.2 2008/07/19 07:06:09 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-dep-check/ChangeLog,v 1.3 2008/10/05 10:36:19 betelgeuse Exp $
+
+*java-dep-check-0.2 (05 Oct 2008)
+
+  05 Oct 2008; Petteri Räty <betelgeuse@gentoo.org> +files/Main-0.2.java,
+  +java-dep-check-0.2.ebuild:
+  Fully asm based, doesn't report virtuals with VM providers and handles
+  directory entries in package.env CLASSPATHs.
 
   19 Jul 2008; Serkan Kaba <serkan@gentoo.org> java-dep-check-0.1.ebuild:
   Add ~amd64 keyword.
