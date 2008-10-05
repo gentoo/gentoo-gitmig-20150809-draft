@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jax-ws-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws-tools/ChangeLog,v 1.7 2008/05/11 13:41:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws-tools/ChangeLog,v 1.8 2008/10/05 11:27:52 betelgeuse Exp $
+
+*jax-ws-tools-2.0.1-r1 (05 Oct 2008)
+
+  05 Oct 2008; Petteri Räty <betelgeuse@gentoo.org>
+  +files/jax-ws-tools-2.0.1-remove-unused-saaj-import.patch,
+  +jax-ws-tools-2.0.1-r1.ebuild:
+  Remove unneeded dependencies and use slot deps.
 
   11 May 2008; Markus Meier <maekke@gentoo.org> jax-ws-tools-2.0.1.ebuild:
   amd64 stable, bug #214778
