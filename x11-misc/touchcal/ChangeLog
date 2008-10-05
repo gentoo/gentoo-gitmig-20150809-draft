@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/touchcal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.4 2008/09/03 15:21:22 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.5 2008/10/05 10:13:48 flameeyes Exp $
+
+  05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> touchcal-0.31.ebuild:
+  Fix obvious typo in src_install.
 
   03 Sep 2008; Robert Buchholz <rbu@gentoo.org> touchcal-0.31.ebuild:
   Keyword ~x86, set empty IUSE (bug #224351)
