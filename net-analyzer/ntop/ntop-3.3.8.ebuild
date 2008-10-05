@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.ebuild,v 1.7 2008/07/04 23:44:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.8.ebuild,v 1.1 2008/10/05 13:08:44 mrness Exp $
 
 inherit eutils autotools
 
@@ -11,27 +11,28 @@ SRC_URI="mirror://sourceforge/ntop/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="ipv6 nls ssl tcpd zlib"
-#IUSE="ipv6 nls snmp ssl tcpd zlib"
+IUSE="ipv6 nls ssl tcpd"
+#snmp support is disabled
 
 #snmp? ( net-analyzer/net-snmp )
 COMMON_DEPEND="sys-apps/gawk
-	>=sys-libs/gdbm-1.8.0
+	dev-lang/perl
+	sys-libs/gdbm
 	net-libs/libpcap
-	>=media-libs/gd-2.0.22
-	>=media-libs/libpng-1.2.5
+	media-libs/gd
+	media-libs/libpng
 	net-analyzer/rrdtool
-	ssl? ( >=dev-libs/openssl-0.9.6 )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r4 )
-	zlib? ( sys-libs/zlib )"
+	ssl? ( dev-libs/openssl )
+	tcpd? ( sys-apps/tcp-wrappers )
+	sys-libs/zlib"
 DEPEND="${COMMON_DEPEND}
 	>=sys-devel/libtool-1.4"
 
 # Needed by xmldumpPlugin - couldn't get it to work
 #	dev-libs/gdome2
 #	>=dev-libs/glib-2"
-
 RDEPEND="${COMMON_DEPEND}
+	media-fonts/corefonts
 	media-gfx/graphviz"
 
 pkg_setup() {
@@ -62,15 +63,12 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+
 	cd "${S}"
-	epatch "${FILESDIR}"/globals-core.c.diff
-	epatch "${FILESDIR}"/${P}-build.patch
-	# remove local libtool garbage injected by upstream #220819
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 	cat acinclude.m4.in acinclude.m4.ntop > acinclude.m4
 	eautoreconf
-
-	sed -i \
-		-e "s@/usr/local/bin/dot@/usr/bin/dot@" report.c || die "sed failed"
+	touch libtool.m4.in
 }
 
 src_compile() {
@@ -86,9 +84,8 @@ src_compile() {
 	econf \
 		$(use_enable ipv6) \
 		$(use_enable nls i18n) \
-		$(use_with ssl) $(use_enable ssl sslv3) $(use_enable ssl sslwatchdog) \
-		$(use_with tcpd) \
-		$(use_with zlib) \
+		$(use_with ssl) $(use_enable ssl sslwatchdog) \
+		$(use_with tcpd tcpwrapper) \
 		--with-rrd-home=/usr/lib \
 		--disable-snmp \
 		|| die "configure problem"
@@ -97,6 +94,7 @@ src_compile() {
 }
 
 src_install() {
+	LC_ALL=C # apparently doesn't work with some locales (#191576 and #205382)
 	emake DESTDIR="${D}" install || die "install problem"
 
 	keepdir /var/lib/ntop

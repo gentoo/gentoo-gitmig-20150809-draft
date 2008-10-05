@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.65 2008/07/05 15:03:09 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.66 2008/10/05 13:08:44 mrness Exp $
+
+*ntop-3.3.8 (05 Oct 2008)
+
+  05 Oct 2008; Alin Năstac <mrness@gentoo.org>
+  +files/ntop-3.3.8-gentoo.patch, -files/ntop-3.3-build.patch,
+  files/ntop-initd, -ntop-3.3.ebuild, +ntop-3.3.8.ebuild:
+  Version bump. Fix QA warnings (#237812). Add corefonts run-time dependency
+  (#231705).
 
   05 Jul 2008; Peter Alfredsen <loki_val@gentoo.org> ntop-3.3.6.ebuild:
   Fix for libtool-2.2, bug #230853.

@@ -17,7 +17,8 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting ntop"
-	LC_ALL=C # apparently doesn't work with some locales (#191576 and #205382)
+	export LC_ALL=C # apparently doesn't work with some locales (#191576 and #205382)
+	export GDFONTPATH=/usr/share/fonts/corefonts # apparently the only font that works (#231705)
 	start-stop-daemon --start --exec /usr/bin/ntop -- -d -L ${NTOP_OPTS}
 	eend $?
 }
