@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sud/sud-1.3.ebuild,v 1.5 2008/06/16 14:23:17 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sud/sud-1.3.ebuild,v 1.6 2008/10/05 14:21:35 lu_zero Exp $
 
-inherit eutils
+EAPI=2
+
+inherit eutils flag-o-matic
 
 DESCRIPTION="a daemon to execute processes with special (and customizable) privileges in a nosuid environment."
 HOMEPAGE="http://s0ftpj.org/projects/sud/index.htm"
@@ -13,8 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	sed -i -e \
 		's:chmod 500 $(sbindir)/ilogin:chmod 500 $(DESTDIR)$(sbindir)/ilogin:' \
 		"${S}"/login/Makefile.in || die "sed failed."
@@ -24,6 +25,11 @@ src_unpack() {
 	sed -i -e \
 		's:chmod 500 $(sbindir)/sud:chmod 500 $(DESTDIR)$(sbindir)/sud:' \
 		"${S}"/sud/Makefile.in || die "sed failed."
+}
+
+src_configure() {
+	append-flags -D_GNU_SOURCE
+	default_src_configure
 }
 
 src_install() {
