@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/nasty
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nasty/ChangeLog,v 1.4 2006/10/21 16:53:12 squinky86 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nasty/ChangeLog,v 1.5 2008/10/05 13:12:45 flameeyes Exp $
+
+  05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> nasty-0.6-r1.ebuild:
+  Fix up ebuild: fix typo in DEPEND (which broke dependencies) and die on
+  make or dobin failure.
 
   21 Oct 2006; Jon Hood <squinky86@gentoo.org> nasty-0.6-r1.ebuild:
   Add ~amd64, bug #122599.
