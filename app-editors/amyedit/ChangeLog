@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/amyedit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/ChangeLog,v 1.18 2008/08/30 17:07:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/ChangeLog,v 1.19 2008/10/05 21:39:32 aballier Exp $
+
+  05 Oct 2008; Alexis Ballier <aballier@gentoo.org> amyedit-1.0-r1.ebuild:
+  Add missing intltool dep for bug #239632
 
   30 Aug 2008; Alexis Ballier <aballier@gentoo.org>
   +files/amyedit-1.0-signal.patch, amyedit-1.0-r1.ebuild:

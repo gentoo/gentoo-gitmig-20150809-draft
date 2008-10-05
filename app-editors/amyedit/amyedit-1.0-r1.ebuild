@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/amyedit-1.0-r1.ebuild,v 1.3 2008/08/30 17:07:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/amyedit-1.0-r1.ebuild,v 1.4 2008/10/05 21:39:32 aballier Exp $
 
 inherit eutils autotools
 
@@ -17,6 +17,7 @@ RDEPEND=">=dev-cpp/gtkmm-2.6
 	=x11-libs/gtksourceview-1*
 	app-text/aspell"
 DEPEND="${RDEPEND}
+	dev-util/intltool
 	dev-util/pkgconfig"
 
 src_unpack() {
