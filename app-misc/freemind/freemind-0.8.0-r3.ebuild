@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0-r3.ebuild,v 1.6 2008/02/29 17:46:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.8.0-r3.ebuild,v 1.7 2008/10/05 13:35:01 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -13,22 +13,17 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="doc"
-# FIXME doesn't like compiling with Java 1.6 for some reason
-DEPEND="|| (
-		=virtual/jdk-1.5*
-		=virtual/jdk-1.4*
-	)
-	dev-java/ant-core
+DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	# patch for JDK 1.6 (see bug #109678)
-	epatch ${FILESDIR}/${P}-source.patch
+	epatch "${FILESDIR}/${P}-source.patch"
 }
 
 src_compile() {
@@ -44,14 +39,14 @@ src_install() {
 
 	java-pkg_regjar /opt/${PN}/lib/${PN}.jar
 
-	cp -R ${S}/doc ${D}/opt/${PN}
+	cp -R "${S}/doc" "${D}/opt/${PN}"
 	use doc && java-pkg_dojavadoc doc/javadoc
 
 	into /opt
 	java-pkg_dolauncher ${PN} --pwd /opt/${PN} --jar /opt/${PN}/lib/${PN}.jar
 
-	mv ${S}/images/FreeMindWindowIcon.png ${S}/images/freemind.png
-	doicon ${S}/images/freemind.png
+	mv "${S}/images/FreeMindWindowIcon.png" "${S}/images/freemind.png"
+	doicon "${S}/images/freemind.png"
 
 	make_desktop_entry freemind Freemind freemind Utility
 }
