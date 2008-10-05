@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.42 2008/06/25 19:46:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.43 2008/10/05 15:22:09 truedfx Exp $
+
+*fpc-2.2.2 (05 Oct 2008)
+*fpc-2.2.0-r1 (05 Oct 2008)
+
+  05 Oct 2008; Harald van Dĳk <truedfx@gentoo.org>
+  +files/fpc-2.2.0-unneeded-symbols.patch,
+  +files/fpc-2.2.2-unneeded-symbols.patch, +fpc-2.2.0-r1.ebuild,
+  +fpc-2.2.2.ebuild:
+  Version bump (bug #234981 by Mihai Moldovan)
+  Drop references to functions removed from gtk (bug #239264 by Renato Caldas)
 
   25 Jun 2008; nixnut <nixnut@gentoo.org> fpc-2.2.0.ebuild:
   Stable on ppc wrt bug 194646
