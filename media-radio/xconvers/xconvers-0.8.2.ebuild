@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/xconvers-0.8.2.ebuild,v 1.9 2008/02/29 19:55:42 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/xconvers-0.8.2.ebuild,v 1.10 2008/10/05 21:14:40 loki_val Exp $
 
 inherit eutils
 
@@ -13,9 +13,12 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	x11-libs/libXi
-	>=x11-libs/gtk+-1.2.0"
+	=x11-libs/gtk+-1.2*"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf || die "configure failed"
