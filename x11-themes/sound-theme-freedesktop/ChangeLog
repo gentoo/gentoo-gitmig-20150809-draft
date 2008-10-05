@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/sound-theme-freedesktop
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sound-theme-freedesktop/ChangeLog,v 1.1 2008/10/05 05:23:12 leio Exp $
+
+*sound-theme-freedesktop-0 (05 Oct 2008)
+
+  05 Oct 2008; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
+  +sound-theme-freedesktop-0.ebuild:
+  Initial import - default freedesktop.org sound theme package
+
