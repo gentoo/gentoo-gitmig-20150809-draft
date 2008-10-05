@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.2.0.ebuild,v 1.1 2008/10/02 23:37:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.2.0-r1.ebuild,v 1.1 2008/10/05 16:42:02 markusle Exp $
 
 EAPI="1"
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4
@@ -68,6 +68,15 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-tcl-install.patch
+	sed -e "s:@VTK_TCL_LIBRARY_DIR@:/usr/$(get_libdir):" \
+		-i Wrapping/Tcl/pkgIndex.tcl.in \
+		|| die "Failed to fix tcl pkgIndex file"
+}
+
 src_compile() {
 	# gcc versions 3.2.x seem to have sse-related bugs that are
 	# triggered by VTK when compiling for pentium3/4
@@ -85,6 +94,7 @@ src_compile() {
 
 	# build list of config variable define's to pass to cmake
 	local CMAKE_VARIABLES=""
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_PACKAGE_DIR:PATH=/$(get_libdir)/${PN}-${SPV}"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_SKIP_RPATH:BOOL=YES"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_DIR:PATH=${S}"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_LIB_DIR:PATH=/$(get_libdir)/"
