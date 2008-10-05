@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/AnyEvent-4.2.3.4.ebuild,v 1.1 2008/10/02 05:56:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/AnyEvent-4.3.ebuild,v 1.1 2008/10/05 13:36:51 tove Exp $
 
 inherit versionator
 
