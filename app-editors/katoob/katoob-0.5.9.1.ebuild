@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.5.9.1.ebuild,v 1.2 2008/05/21 12:21:14 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.5.9.1.ebuild,v 1.3 2008/10/05 16:36:38 remi Exp $
 
 inherit eutils gnome2
 
@@ -15,6 +15,7 @@ IUSE="bidi bzip2 cups dbus debug highlight spell"
 
 RDEPEND=">=dev-cpp/gtkmm-2.6
 	>=dev-libs/glib-2
+	net-misc/curl
 	spell? ( app-text/aspell )
 	bidi? ( dev-libs/fribidi )
 	cups? (

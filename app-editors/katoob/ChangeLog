@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/katoob
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.23 2008/07/28 19:37:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.24 2008/10/05 16:36:38 remi Exp $
+
+  05 Oct 2008; Rémi Cardona <remi@gentoo.org> katoob-0.5.9.1.ebuild:
+  add missing dep on curl (fixes bug #239631)
 
   28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
