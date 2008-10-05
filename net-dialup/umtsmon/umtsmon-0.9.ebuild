@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/umtsmon-0.8.ebuild,v 1.3 2008/10/05 09:11:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/umtsmon-0.9.ebuild,v 1.1 2008/10/05 09:11:19 mrness Exp $
 
 EAPI=1
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 # for i18n support
 # Supported languages and translated documentation
 # Be sure all languages are prefixed with a single space!
-MY_AVAILABLE_LINGUAS=" nl de pt_PT pt_BR"
+MY_AVAILABLE_LINGUAS=" de es it nb_NO nl pl pt_PT pt_BR"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 src_compile() {
