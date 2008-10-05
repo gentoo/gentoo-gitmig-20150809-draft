@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.69 2008/10/01 11:35:00 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.70 2008/10/05 11:06:46 serkan Exp $
+
+*java-gnome-4.0.8-r2 (05 Oct 2008)
+*java-gnome-4.0.7-r3 (05 Oct 2008)
+*java-gnome-4.0.7-r2 (05 Oct 2008)
+
+  05 Oct 2008; Serkan Kaba <serkan@gentoo.org>
+  +files/java-gnome-gtk-214.patch, -java-gnome-4.0.7-r1.ebuild,
+  +java-gnome-4.0.7-r2.ebuild, +java-gnome-4.0.7-r3.ebuild,
+  -java-gnome-4.0.8-r1.ebuild, +java-gnome-4.0.8-r2.ebuild:
+  Add patch to fix a crasher but with gtk+-2.14.
 
   01 Oct 2008; Serkan Kaba <serkan@gentoo.org> java-gnome-4.0.7-r1.ebuild,
   java-gnome-4.0.8-r1.ebuild:
