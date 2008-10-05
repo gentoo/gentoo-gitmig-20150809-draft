@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.902.ebuild,v 1.3 2008/06/22 22:45:14 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.902.ebuild,v 1.4 2008/10/05 17:14:30 remi Exp $
 
 XDPVER="-1"
 IUSE="debug dri"
@@ -18,6 +18,7 @@ DEPEND="${RDEPEND}
 	x11-libs/libX11
 	x11-libs/libXv
 	x11-libs/libXvMC
+	x11-proto/randrproto
 	x11-proto/videoproto
 	x11-proto/xextproto
 	x11-proto/xproto
