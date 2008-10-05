@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtkglext
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.37 2008/08/19 10:17:19 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.38 2008/10/05 13:17:31 gentoofan23 Exp $
+
+  05 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  pygtkglext-1.1.0.ebuild:
+  Add missing pkconfig dependency, bug #233072
 
   19 Aug 2008; Ali Polatel <hawking@gentoo.org> -files/1.0.1-gtk28.patch,
   -files/pygtkglext-1.0.1-gentoo.diff, -pygtkglext-1.0.1.ebuild,
