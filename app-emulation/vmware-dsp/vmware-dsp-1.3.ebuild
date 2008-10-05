@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-dsp/vmware-dsp-1.3.ebuild,v 1.4 2007/07/13 00:36:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-dsp/vmware-dsp-1.3.ebuild,v 1.5 2008/10/05 16:45:56 flameeyes Exp $
 
 inherit eutils multilib
 
@@ -29,6 +29,7 @@ RDEPEND="sys-libs/glibc
 	x86? (
 		esd? ( media-sound/esound )
 		arts? ( kde-base/arts ) )"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 

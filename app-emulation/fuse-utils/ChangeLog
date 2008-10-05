@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/fuse-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.5 2008/08/23 18:23:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.6 2008/10/05 16:44:01 flameeyes Exp $
+
+  05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  fuse-utils-0.9.0-r2.ebuild:
+  Fix build-time dependencies.
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> fuse-utils-0.9.0-r2.ebuild:
   add ~amd64, bug #228359

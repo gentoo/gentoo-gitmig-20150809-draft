@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/fuse-utils-0.9.0-r2.ebuild,v 1.2 2008/08/23 18:23:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/fuse-utils-0.9.0-r2.ebuild,v 1.3 2008/10/05 16:44:01 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -13,10 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="audiofile"
 
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
 RDEPEND=">=app-emulation/libspectrum-0.4.0
 	audiofile? ( >=media-libs/audiofile-0.2.3 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
