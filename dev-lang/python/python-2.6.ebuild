@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.2-r6.ebuild,v 1.3 2008/09/14 14:01:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.ebuild,v 1.1 2008/10/05 00:55:31 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -9,7 +9,7 @@
 
 EAPI=1
 
-inherit eutils autotools flag-o-matic python multilib versionator toolchain-funcs alternatives libtool
+inherit eutils autotools flag-o-matic python multilib versionator toolchain-funcs libtool
 
 # we need this so that we don't depends on python.eclass
 PYVER_MAJOR=$(get_major_version)
@@ -21,25 +21,25 @@ S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Python is an interpreted, interactive, object-oriented programming language."
 HOMEPAGE="http://www.python.org/"
-SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
-	mirror://gentoo/python-gentoo-patches-${PV}-r6.tar.bz2"
+SRC_URI="http://www.python.org/ftp/python/2.6/${MY_P}.tar.bz2
+	mirror://gentoo/python-gentoo-patches-${PV}.tar.bz2"
 
 LICENSE="PSF-2.2"
-SLOT="2.5"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+SLOT="2.6"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="ncurses gdbm ssl readline tk berkdb bootstrap ipv6 build ucs2 sqlite doc +threads examples elibc_uclibc wininst"
 
 # NOTE: dev-python/{elementtree,celementtree,pysqlite,ctypes,cjkcodecs}
 #       do not conflict with the ones in python proper. - liquidx
 
-DEPEND=">=sys-libs/zlib-1.1.3
+DEPEND=">=app-admin/eselect-python-20080630
+	>=sys-libs/zlib-1.1.3
 	!build? (
 		sqlite? ( >=dev-db/sqlite-3 )
 		tk? ( >=dev-lang/tk-8.0 )
 		ncurses? ( >=sys-libs/ncurses-5.2
 					readline? ( >=sys-libs/readline-4.1 ) )
-		berkdb? ( || ( sys-libs/db:4.5 sys-libs/db:4.4 sys-libs/db:4.3
-					sys-libs/db:4.2 ) )
+		berkdb? ( >=sys-libs/db-3.1 )
 		gdbm? ( sys-libs/gdbm )
 		ssl? ( dev-libs/openssl )
 		doc? ( dev-python/python-docs:2.5 )
@@ -59,7 +59,7 @@ src_unpack() {
 	if tc-is-cross-compiler ; then
 		[[ $(python -V 2>&1) != "Python ${PV}" ]] && \
 			die "Crosscompiling requires the same host and build versions."
-		epatch "${FILESDIR}"/python-2.4.4-test-cross.patch
+		epatch "${FILESDIR}"/python-2.6-test-cross.patch
 	else
 		rm "${WORKDIR}/${PV}"/*_all_crosscompile.patch
 	fi
@@ -100,7 +100,7 @@ src_configure() {
 		use gdbm     || disable="${disable} gdbm"
 		use ncurses  || disable="${disable} _curses _curses_panel"
 		use readline || disable="${disable} readline"
-		use sqlite   || disable="${disable} _sqlite3"
+		use sqlite   || disable="${disable} sqlite3"
 		use ssl      || export PYTHON_DISABLE_SSL=1
 		use tk       || disable="${disable} _tkinter"
 		export PYTHON_DISABLE_MODULES="${disable}"
@@ -119,11 +119,6 @@ src_compile() {
 	if is-flag -O3; then
 	   is-flag -fstack-protector-all && replace-flags -O3 -O2
 	   use hardened && replace-flags -O3 -O2
-	fi
-
-	# See #228905
-	if [[ $(gcc-major-version) -ge 4 ]]; then
-		append-flags -fwrapv
 	fi
 
 	export OPT="${CFLAGS}"
@@ -183,6 +178,7 @@ src_install() {
 	mv "${D}"/usr/bin/python${PYVER}-config "${D}"/usr/bin/python-config-${PYVER}
 
 	# Fix slotted collisions
+	mv "${D}"/usr/bin/2to3 "${D}"/usr/bin/2to3-${PYVER}
 	mv "${D}"/usr/bin/pydoc "${D}"/usr/bin/pydoc${PYVER}
 	mv "${D}"/usr/bin/idle "${D}"/usr/bin/idle${PYVER}
 	mv "${D}"/usr/share/man/man1/python.1 \
@@ -223,15 +219,7 @@ src_install() {
 }
 
 pkg_postrm() {
-	local mansuffix=$(ecompress --suffix)
-	python_makesym
-	alternatives_auto_makesym "/usr/bin/idle" "idle[0-9].[0-9]"
-	alternatives_auto_makesym "/usr/bin/pydoc" "pydoc[0-9].[0-9]"
-	alternatives_auto_makesym "/usr/bin/python-config" \
-								"python-config-[0-9].[0-9]"
-
-	alternatives_auto_makesym "/usr/share/man/man1/python.1${mansuffix}" \
-								"python[0-9].[0-9].1${mansuffix}"
+	eselect python update --ignore 3.0
 
 	python_mod_cleanup /usr/lib/python${PYVER}
 	[[ "$(get_libdir)" == "lib" ]] || \
@@ -240,17 +228,10 @@ pkg_postrm() {
 
 pkg_postinst() {
 	local myroot
-	myroot=$(echo $ROOT | sed 's:/$::')
-	local mansuffix=$(ecompress --suffix)
+	myroot="$(echo "${ROOT}" | sed 's:/$::')"
 
-	python_makesym
-	alternatives_auto_makesym "/usr/bin/idle" "idle[0-9].[0-9]"
-	alternatives_auto_makesym "/usr/bin/pydoc" "pydoc[0-9].[0-9]"
-	alternatives_auto_makesym "/usr/bin/python-config" \
-								"python-config-[0-9].[0-9]"
-
-	alternatives_auto_makesym "/usr/share/man/man1/python.1${mansuffix}" \
-								"python[0-9].[0-9].1${mansuffix}"
+	eselect python update --ignore 3.0
+	python_version
 
 	python_mod_optimize
 	python_mod_optimize -x "(site-packages|test)" \
@@ -258,31 +239,6 @@ pkg_postinst() {
 	[[ "$(get_libdir)" == "lib" ]] || \
 		python_mod_optimize -x "(site-packages|test)" \
 							/usr/$(get_libdir)/python${PYVER}
-
-	# workaround possible python-upgrade-breaks-portage situation
-	if [ ! -f ${myroot}/usr/lib/portage/pym/portage.py ]; then
-		if [ -f ${myroot}/usr/lib/python2.3/site-packages/portage.py ]; then
-			einfo "Working around possible python-portage upgrade breakage"
-			mkdir -p ${myroot}/usr/lib/portage/pym
-			cp ${myroot}/usr/lib/python2.4/site-packages/{portage,xpak,output,cvstree,getbinpkg,emergehelp,dispatch_conf}.py ${myroot}/usr/lib/portage/pym
-			python_mod_optimize /usr/lib/portage/pym
-		fi
-	fi
-
-	echo
-	ewarn
-	ewarn "If you have just upgraded from an older version of python you will"
-	ewarn "need to run:"
-	ewarn
-	ewarn "/usr/sbin/python-updater"
-	ewarn
-	ewarn "This will automatically rebuild all the python dependent modules"
-	ewarn "to run with python-${PYVER}."
-	ewarn
-	ewarn "Your original Python is still installed and can be accessed via"
-	ewarn "/usr/bin/python2.x."
-	ewarn
-	ebeep 5
 }
 
 src_test() {
@@ -297,7 +253,7 @@ src_test() {
 
 	#skip all tests that fail during emerge but pass without emerge:
 	#(See bug# 67970)
-	local skip_tests="distutils global mimetools minidom mmap posix pyexpat sax strptime subprocess syntax tcl time urllib urllib2 webbrowser xml_etree"
+	local skip_tests="distutils global httpservers mimetools minidom mmap posix pyexpat sax strptime subprocess syntax tcl time urllib urllib2 webbrowser xml_etree"
 
 	# test_pow fails on alpha.
 	# http://bugs.python.org/issue756093
