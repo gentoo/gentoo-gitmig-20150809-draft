@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/g15stats-1.0.ebuild,v 1.2 2008/08/14 13:59:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/g15stats-1.0.ebuild,v 1.3 2008/10/05 17:52:47 flameeyes Exp $
 
 DESCRIPTION="A simple message/alert client for G15daemon"
 HOMEPAGE="http://g15daemon.sourceforge.net/"
@@ -17,7 +17,7 @@ RDEPEND=">=app-misc/g15daemon-1.9.0
 	sys-libs/zlib
 	gnome-base/libgtop"
 
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_compile() {
