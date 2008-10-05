@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.7.3.ebuild,v 1.6 2008/08/17 20:41:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.7.3.ebuild,v 1.7 2008/10/05 10:33:16 aballier Exp $
 
 EAPI=1
 
@@ -27,6 +27,7 @@ RDEPEND=">=dev-lang/ocaml-3.10.0
 DEPEND="${RDEPEND}
 	|| ( ( dev-texlive/texlive-pstricks dev-texlive/texlive-pictures ) app-text/tetex app-text/ptex )
 	x11-proto/xineramaproto
+	dev-ml/findlib
 	dev-tex/hevea"
 
 DOCS="README TODO"
