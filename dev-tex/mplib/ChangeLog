@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/mplib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mplib/ChangeLog,v 1.6 2008/10/04 01:39:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mplib/ChangeLog,v 1.7 2008/10/05 19:51:16 jer Exp $
+
+  05 Oct 2008; Jeroen Roovers <jer@gentoo.org> mplib-1.091.ebuild:
+  Marked ~hppa (bug #237202).
 
   04 Oct 2008; Brent Baude <ranger@gentoo.org> mplib-1.091.ebuild:
   Marking mplib-1.091 ~ppc for bug 237202
