@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.2.5.ebuild,v 1.3 2008/04/15 21:39:32 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.2.5.ebuild,v 1.4 2008/10/05 22:17:10 flameeyes Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE="doc"
 SLOT="0"
 
 RDEPEND=">=dev-games/wfmath-0.3.2"
-DEPEND="${REDEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_unpack() {
