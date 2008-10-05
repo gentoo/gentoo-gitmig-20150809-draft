@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libcanberra
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.1 2008/10/05 06:37:11 leio Exp $
+
+*libcanberra-0.9 (05 Oct 2008)
+
+  05 Oct 2008; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
+  +libcanberra-0.9.ebuild:
+  Initial import of libcanberra - a portable sound event library for
+  generating event sounds on free desktops.
+
