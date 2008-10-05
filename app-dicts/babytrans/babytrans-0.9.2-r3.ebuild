@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/babytrans-0.9.2-r3.ebuild,v 1.9 2008/06/28 23:02:41 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans/babytrans-0.9.2-r3.ebuild,v 1.10 2008/10/05 13:37:46 flameeyes Exp $
 
 inherit eutils
 
@@ -12,8 +12,9 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
-RDEPEND="=x11-libs/gtk+-1.2*
-	=dev-libs/glib-1.2*
+DEPEND="=x11-libs/gtk+-1.2*
+	=dev-libs/glib-1.2*"
+RDEPEND="${DEPEND}
 	app-dicts/babytrans-en"
 
 src_unpack() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/dictd-vera-1.12.ebuild,v 1.9 2007/08/25 16:32:24 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/dictd-vera-1.12.ebuild,v 1.10 2008/10/05 13:39:36 flameeyes Exp $
 
 pkg_dte="December 2003"
 
@@ -14,7 +14,8 @@ SLOT="0"
 LICENSE="FDL-1.1"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 
-RDEPEND=">=app-text/dictd-1.5.5"
+DEPEND=">=app-text/dictd-1.5.5"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/vera-${PV}
 
@@ -29,7 +30,7 @@ src_compile () {
 	sed '1,2!s/^/   /' vera. > vera || die
 	cat vera1>>vera || die
 	/usr/bin/dictfmt -f -u http://home.snafu.de/ohei \
-	    -s "V.E.R.A. -- Virtual Entity of Relevant Acronyms (${pkg_dte})" \
+		-s "V.E.R.A. -- Virtual Entity of Relevant Acronyms (${pkg_dte})" \
 	   vera   <vera || die
 	/usr/bin/dictzip -v vera.dict || die
 }
