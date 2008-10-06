@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.20.2.ebuild,v 1.10 2008/08/28 20:24:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.20.2.ebuild,v 1.11 2008/10/06 21:18:39 eva Exp $
 
 inherit gnome2
 
@@ -24,7 +24,6 @@ RDEPEND=">=x11-libs/gtk+-2.11.6
 	>=gnome-base/gnome-desktop-2.10
 	>=x11-themes/gnome-icon-theme-2.19.1
 	>=x11-misc/shared-mime-info-0.20
-	>=gnome-base/gnome-common-2.12.0
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	jpeg? (
 		>=media-libs/libexif-0.6.14
@@ -40,6 +39,7 @@ RDEPEND=">=x11-libs/gtk+-2.11.6
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
+	>=gnome-base/gnome-common-2.12.0
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.17"
 
