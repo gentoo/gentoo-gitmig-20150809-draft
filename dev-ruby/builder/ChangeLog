@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.26 2008/10/06 23:55:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.27 2008/10/06 23:56:21 ranger Exp $
+
+  06 Oct 2008; Brent Baude <ranger@gentoo.org> builder-2.1.2.ebuild:
+  stable ppc64, bug 240297
 
   06 Oct 2008; Brent Baude <ranger@gentoo.org> builder-2.1.2.ebuild:
   stable ppc, bug 240297
