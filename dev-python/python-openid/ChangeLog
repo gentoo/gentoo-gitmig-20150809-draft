@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/python-openid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.8 2008/06/25 10:35:27 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.9 2008/10/06 16:40:05 hawking Exp $
+
+*python-openid-2.2.1 (06 Oct 2008)
+
+  06 Oct 2008; Ali Polatel <hawking@gentoo.org>
+  -python-openid-1.2.0-r1.ebuild, -python-openid-2.1.1.ebuild,
+  -python-openid-2.2.0.ebuild, +python-openid-2.2.1.ebuild:
+  Version bump. Drop old.
 
 *python-openid-2.2.0 (25 Jun 2008)
 
