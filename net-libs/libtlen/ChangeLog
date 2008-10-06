@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtlen
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/ChangeLog,v 1.13 2008/10/05 12:28:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/ChangeLog,v 1.14 2008/10/06 05:01:32 jer Exp $
+
+  06 Oct 2008; Jeroen Roovers <jer@gentoo.org> libtlen-20031114.ebuild,
+  libtlen-20060309.ebuild:
+  Removed ~hppa (bug #239858).
 
   05 Oct 2008; Ferris McCormick <fmccor@gentoo.org> libtlen-20060309.ebuild:
   Sparc stable, Bug #239858.
