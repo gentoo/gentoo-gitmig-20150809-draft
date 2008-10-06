@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-2.1.2.ebuild,v 1.1 2007/11/04 07:42:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-2.1.2.ebuild,v 1.2 2008/10/06 21:32:35 maekke Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://rubyforge.org/projects/builder/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.2"
