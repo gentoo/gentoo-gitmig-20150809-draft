@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygame
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.51 2008/08/19 12:33:30 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.52 2008/10/06 09:35:38 flameeyes Exp $
+
+  06 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> pygame-1.8.1.ebuild:
+  Fix build-time dependencies.
 
 *pygame-1.8.1 (19 Aug 2008)
 

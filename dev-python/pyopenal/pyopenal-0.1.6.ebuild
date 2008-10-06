@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/pyopenal-0.1.6.ebuild,v 1.7 2007/01/06 12:19:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/pyopenal-0.1.6.ebuild,v 1.8 2008/10/06 09:37:48 flameeyes Exp $
 
 inherit distutils eutils
 
@@ -20,6 +20,7 @@ RDEPEND=">=dev-lang/python-2.2.2
 	>=dev-python/pyogg-1.1
 	media-libs/openal
 	media-libs/freealut"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.8.1.ebuild,v 1.1 2008/08/19 12:33:30 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.8.1.ebuild,v 1.2 2008/10/06 09:35:38 flameeyes Exp $
 
 inherit distutils multilib eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=media-libs/libsdl-1.2.5
 	>=media-libs/sdl-mixer-1.2.4
 	dev-python/numpy
 	>=media-libs/smpeg-0.4.4-r1"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
 S=${WORKDIR}/${P}release
