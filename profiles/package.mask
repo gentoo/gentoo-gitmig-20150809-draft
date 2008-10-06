@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9050 2008/10/06 15:31:52 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9051 2008/10/06 16:22:34 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -819,13 +819,6 @@ games-fps/tremulous
 # Tiziano Müller <dev-zero@gentoo.org> (16 Aug 2008)
 # mask live ebuild (no bundled sqlalchemy anymore)
 =media-video/griffith-9999
-
-# Markus Meier <maekke@gentoo.org> (16 Aug 2008)
-# mask hugin-0.7.0_rc2 and deps for testing
-media-libs/libpano13
-media-gfx/autopano-sift-C
->=media-gfx/enblend-3.0_p20080807
->=media-gfx/hugin-0.7.0_rc2
 
 # Tiziano Müller <dev-zero@gentoo.org> (16 Aug 2008)
 # Masked for testing
