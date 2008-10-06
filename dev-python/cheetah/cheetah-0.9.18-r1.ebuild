@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-0.9.18-r1.ebuild,v 1.1 2008/10/04 17:28:50 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-0.9.18-r1.ebuild,v 1.2 2008/10/06 04:49:39 neurogeek Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ LICENSE="PSF-2.2"
 IUSE=""
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 SLOT="0"
-DEPEND=">=dev-lang/python-2.2"
+DEPEND="virtual/python"
 S=${WORKDIR}/${MY_P}
 
 PYTHON_MODNAME="Cheetah"
