@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.3.ebuild,v 1.12 2008/04/21 17:13:30 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.12.3.ebuild,v 1.13 2008/10/06 21:14:05 eva Exp $
 EAPI="1"
 
 inherit db-use eutils flag-o-matic gnome2 autotools
@@ -27,7 +27,6 @@ RDEPEND=">=x11-libs/gtk+-2.10
 		>=dev-libs/nss-3.9 )
 	>=gnome-base/libgnomeui-2
 	>=net-libs/libsoup-2.2.91:2.2
-	>=gnome-base/gnome-common-2
 	sys-libs/zlib
 	=sys-libs/db-4*
 	ldap? ( >=net-nds/openldap-2.0 )
@@ -37,6 +36,7 @@ RDEPEND=">=x11-libs/gtk+-2.10
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35.5
+	>=gnome-base/gnome-common-2
 	doc? ( >=dev-util/gtk-doc-1.4 )"
 
 DOCS="ChangeLog MAINTAINERS NEWS TODO"
