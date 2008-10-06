@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.12.0.ebuild,v 1.4 2008/09/01 07:47:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.12.1.ebuild,v 1.1 2008/10/06 04:47:11 pva Exp $
 
 EAPI="1"
 inherit webapp depend.php versionator eutils
@@ -57,7 +57,7 @@ src_unpack() {
 #	epatch ${FILESDIR}/jobindexlength-mysql.patch
 
 	if use restrict ; then
-		epatch "${FILESDIR}/access_restrict_${PV}.patch"
+		epatch "${FILESDIR}/access_restrict_1.12.0.patch"
 	fi
 }
 
