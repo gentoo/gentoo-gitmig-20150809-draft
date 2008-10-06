@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sunstudioexpress/sunstudioexpress-2008.07.24.ebuild,v 1.1 2008/09/30 12:08:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sunstudioexpress/sunstudioexpress-2008.07.24.ebuild,v 1.2 2008/10/06 08:13:25 flameeyes Exp $
 
 inherit versionator
 
@@ -11,7 +11,7 @@ MY_P="${MY_PN}-linux-x86-${MY_PV}${MY_TAG}"
 
 DESCRIPTION="Sun Studio Express Compilers for Linux"
 HOMEPAGE="http://developers.sun.com/sunstudio/downloads/express/index.jsp"
-RESTRICT="fetch"
+RESTRICT="fetch strip"
 SRC_URI="${MY_P}.sh"
 
 LICENSE="SunStudioExpress LGPL-2 BSD as-is"
