@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.43 2008/10/05 15:22:09 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.44 2008/10/06 19:21:23 truedfx Exp $
+
+  06 Oct 2008; Harald van Dĳk <truedfx@gentoo.org> fpc-2.2.2.ebuild:
+  Don't look for bootstrap compiler in the wrong path on ppc/sparc (#240303
+  by Konrad Karczewski)
 
 *fpc-2.2.2 (05 Oct 2008)
 *fpc-2.2.0-r1 (05 Oct 2008)
