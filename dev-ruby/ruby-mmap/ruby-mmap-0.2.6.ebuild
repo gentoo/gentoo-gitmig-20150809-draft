@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mmap/ruby-mmap-0.2.6.ebuild,v 1.2 2007/09/18 17:14:18 rbrown Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mmap/ruby-mmap-0.2.6.ebuild,v 1.3 2008/10/06 10:09:25 flameeyes Exp $
 
 inherit ruby
 
@@ -22,7 +22,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 
-	if built_with_use dev-lang/ruby cjk; then
+	if built_with_use --missing false dev-lang/ruby cjk; then
 		cd "${S}"
 		epatch "${FILESDIR}/${P}-oniguruma_rb_reg_regsub.patch"
 	fi
