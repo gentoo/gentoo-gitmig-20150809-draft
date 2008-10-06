@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubypants
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/ChangeLog,v 1.3 2008/05/14 00:52:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/ChangeLog,v 1.4 2008/10/06 20:27:03 maekke Exp $
+
+  06 Oct 2008; Markus Meier <maekke@gentoo.org> rubypants-0.2.0.ebuild:
+  amd64/x86 stable, bug #239468
 
   14 May 2008; Diego Pettenò <flameeyes@gentoo.org> rubypants-0.2.0.ebuild:
   Add ~amd64 keyword.
