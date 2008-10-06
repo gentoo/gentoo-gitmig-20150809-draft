@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.9 2008/10/05 19:51:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.10 2008/10/06 08:06:28 aballier Exp $
+
+  06 Oct 2008; Alexis Ballier <aballier@gentoo.org> luatex-0.30.0.ebuild:
+  Push ~ppc to 0.30.0 too
 
   05 Oct 2008; Jeroen Roovers <jer@gentoo.org> luatex-0.30.0.ebuild:
   Marked ~hppa (bug #237202).
