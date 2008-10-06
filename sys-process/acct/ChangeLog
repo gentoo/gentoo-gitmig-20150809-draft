@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/acct
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.13 2007/11/29 07:19:45 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.14 2008/10/06 23:35:01 robbat2 Exp $
+
+*acct-6.3.5-r3 (06 Oct 2008)
+
+  06 Oct 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/acct.rc6-6.3.5-r3, +acct-6.3.5-r3.ebuild:
+  Lots of other distros have moved the accton binary over to /sbin, jump in
+  the fire as well so that bootchart can be used when /usr is on a different
+  partition, as reported in bug #239748.
 
   29 Nov 2007; Christian Faulhammer <opfer@gentoo.org> acct-6.3.5-r2.ebuild:
   stable x86
