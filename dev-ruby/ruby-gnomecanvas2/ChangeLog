@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnomecanvas2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.39 2008/03/28 06:42:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.40 2008/10/06 14:09:56 graaff Exp $
+
+  06 Oct 2008; Hans de Graaff <graaff@gentoo.org>
+  ruby-gnomecanvas2-0.16.0.ebuild:
+  Fix dependencies and add missing pkgconfig dependency, #239728.
 
   28 Mar 2008; Hans de Graaff <graaff@gentoo.org>
   -files/ruby-gnomecanvas2-0.12.0-GnomeCanvasPathDef.patch,
