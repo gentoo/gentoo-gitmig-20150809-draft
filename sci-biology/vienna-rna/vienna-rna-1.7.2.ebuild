@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.7.2.ebuild,v 1.1 2008/08/29 01:21:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.7.2.ebuild,v 1.2 2008/10/06 22:34:27 markusle Exp $
 
-inherit toolchain-funcs multilib eutils versionator
+inherit toolchain-funcs multilib eutils versionator autotools
 
 DESCRIPTION="The Vienna RNA Package - RNA secondary structure prediction and comparison"
 LICENSE="vienna-rna"
@@ -23,6 +23,13 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.6.5-c-fixes.patch
 	epatch "${FILESDIR}"/${P}-gcc4.3.patch
+	epatch "${FILESDIR}"/${P}-LDFLAGS.patch
+	epatch "${FILESDIR}"/${P}-disable-gd.patch
+	eautoreconf
+
+	# we need a separate eautoreconf in RNAforester
+	cd RNAforester
+	eautoreconf
 }
 
 src_compile() {
@@ -36,8 +43,13 @@ src_compile() {
 	cd "${S}"/Readseq
 	sed -e "s:CC=cc:CC=$(tc-getCC):" -e "s:CFLAGS=:CFLAGS=${CFLAGS}:" \
 		-i Makefile || die "Failed patching readseq Makefile."
-	make || die "Failed to compile readseq."
+	emake || die "Failed to compile readseq."
 	# TODO: Add (optional?) support for the NCBI toolkit.
+}
+
+src_test() {
+	cd "${S}"/Perl && emake check || die "Perl tests failed"
+	cd "${S}"/Readseq && emake test || die "Readseq tests failed"
 }
 
 src_install() {

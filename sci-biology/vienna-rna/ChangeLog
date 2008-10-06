@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/vienna-rna
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.17 2008/08/29 01:21:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.18 2008/10/06 22:34:27 markusle Exp $
+
+  06 Oct 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/vienna-rna-1.7.2-LDFLAGS.patch,
+  +files/vienna-rna-1.7.2-disable-gd.patch, vienna-rna-1.7.2.ebuild:
+  Fixed ignored LDFLAGS issues and bogus detection of GD support. Also
+  enabled the tests that come with the package.
 
 *vienna-rna-1.7.2 (28 Aug 2008)
 
