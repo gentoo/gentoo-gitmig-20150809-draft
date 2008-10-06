@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.23 2007/11/04 07:42:57 graaff Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.24 2008/10/06 16:14:05 graaff Exp $
+
+  06 Oct 2008; Hans de Graaff <graaff@gentoo.org> -builder-2.0.0.ebuild:
+  Remove old version
 
 *builder-2.1.2 (04 Nov 2007)
 
