@@ -1,6 +1,19 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.46 2008/03/12 09:47:31 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.47 2008/10/06 19:38:01 pva Exp $
+
+*chkrootkit-0.48 (06 Oct 2008)
+
+  06 Oct 2008; Peter Volkov <pva@gentoo.org>
+  -files/chkrootkit-0.44-coreutils-static-falsepositive.patch,
+  -files/chkrootkit-0.45-makefile.diff,
+  -files/chkrootkit-0.46-add-missing-includes.diff,
+  +files/chkrootkit-0.48-shell-history-anomalies.diff,
+  -chkrootkit-0.44-r1.ebuild, -chkrootkit-0.45.ebuild,
+  -chkrootkit-0.46a.ebuild, +chkrootkit-0.48.ebuild:
+  Version bump, thank Alon Bar-Lev and Alex Efros for work, bug #205419.
+  Fixed shell history anomalies, bug #226067, thank Horst Prote for report
+  and fix. Remove old.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Robert Clark (hyakuhei, #154737) from metadata.xml.
