@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.ebuild,v 1.1 2008/10/05 00:55:31 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6-r1.ebuild,v 1.1 2008/10/06 12:15:23 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -132,10 +132,6 @@ src_compile() {
 		&& myconf="${myconf} --enable-unicode=ucs2" \
 		|| myconf="${myconf} --enable-unicode=ucs4"
 
-	use threads \
-		&& myconf="${myconf} --with-threads" \
-		|| myconf="${myconf} --without-threads"
-
 	src_configure
 
 	if tc-is-cross-compiler ; then
@@ -162,18 +158,19 @@ src_compile() {
 	econf \
 		--with-fpectl \
 		--enable-shared \
-		`use_enable ipv6` \
+		$(use_enable ipv6) \
+		$(use_with threads) \
 		--infodir='${prefix}'/share/info \
 		--mandir='${prefix}'/share/man \
 		--with-libc='' \
-		${myconf} || die
+		${myconf}
 	emake || die "Parallel make failed"
 }
 
 src_install() {
 	dodir /usr
 	src_configure
-	make DESTDIR="${D}" altinstall maninstall || die
+	emake DESTDIR="${D}" altinstall maninstall || die
 
 	mv "${D}"/usr/bin/python${PYVER}-config "${D}"/usr/bin/python-config-${PYVER}
 
@@ -210,8 +207,8 @@ src_install() {
 	doins "${S}"/Makefile.pre.in
 
 	if use examples ; then
-		mkdir -p "${D}"/usr/share/doc/${P}/examples
-		cp -r "${S}"/Tools "${D}"/usr/share/doc/${P}/examples
+		insinto /usr/share/doc/${PF}/examples
+		doins -r "${S}"/Tools || die "doins failed"
 	fi
 
 	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT}
@@ -220,10 +217,7 @@ src_install() {
 
 pkg_postrm() {
 	eselect python update --ignore 3.0
-
-	python_mod_cleanup /usr/lib/python${PYVER}
-	[[ "$(get_libdir)" == "lib" ]] || \
-		python_mod_cleanup /usr/$(get_libdir)/python${PYVER}
+	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}
 }
 
 pkg_postinst() {
@@ -233,12 +227,8 @@ pkg_postinst() {
 	eselect python update --ignore 3.0
 	python_version
 
-	python_mod_optimize
 	python_mod_optimize -x "(site-packages|test)" \
-						/usr/lib/python${PYVER}
-	[[ "$(get_libdir)" == "lib" ]] || \
-		python_mod_optimize -x "(site-packages|test)" \
-							/usr/$(get_libdir)/python${PYVER}
+						/usr/$(get_libdir)/python${PYVER}
 }
 
 src_test() {
