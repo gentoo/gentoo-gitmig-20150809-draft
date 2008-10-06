@@ -1,6 +1,12 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.74 2008/10/06 20:23:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.75 2008/10/06 20:45:56 eva Exp $
+
+  06 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/pan-0.132-CVE-2008-2363.patch, -files/pan-0.132-gcc43-fixes.patch,
+  -files/pan-0.132-glib-compat.patch,
+  -files/load-pixbuf-in-1024-byte-chunks.diff, -pan-0.132-r3.ebuild:
+  clean up old revisions.
 
   06 Oct 2008; Markus Meier <maekke@gentoo.org> pan-0.133.ebuild:
   amd64/x86 stable, bug #239378
