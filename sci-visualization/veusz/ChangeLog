@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/veusz
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.9 2008/08/06 18:57:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.10 2008/10/06 06:00:35 grozin Exp $
+
+*veusz-1.1 (06 Oct 2008)
+
+  06 Oct 2008; Andrey Grozin <grozin@gentoo.org> +veusz-1.1.ebuild:
+  Version bump
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
