@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.5-r1.ebuild,v 1.2 2008/09/15 00:35:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.5-r4.ebuild,v 1.1 2008/10/06 16:30:22 matsuu Exp $
 
 inherit elisp-common eutils ruby
 
@@ -10,21 +10,42 @@ SRC_URI="http://reductivelabs.com/downloads/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="emacs vim-syntax"
+IUSE="emacs ldap rrdtool vim-syntax"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="emacs? ( virtual/emacs )"
+DEPEND="emacs? ( virtual/emacs )
+	>=dev-ruby/facter-1.1.0"
 RDEPEND="${DEPEND}
-	>=dev-ruby/facter-1.3.5
-	>=app-portage/eix-0.9.4"
+	>=app-portage/eix-0.9.4
+	ldap? ( dev-ruby/ruby-ldap )
+	rrdtool? (
+		|| (
+			>=net-analyzer/rrdtool-1.2.23
+			dev-ruby/ruby-rrd
+		)
+	)"
+#	|| (
+#		www-servers/webrick
+#		www-servers/mongrel
+#	)
+#	dev-ruby/diff-lcs
+#	dev-ruby/rails
+#	dev-ruby/ruby-shadow
 
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ruby19"
 
 SITEFILE="50${PN}-mode-gentoo.el"
 
 pkg_setup() {
 	built_with_use virtual/ruby ipv6 || \
 		die "Ruby must be built with ipv6 support, otherwise puppet will not be able to run"
+
+	if use rrdtool && \
+		has_version '>=net-analyzer/rrdtool-1.2.23' && \
+		! built_with_use '>=net-analyzer/rrdtool-1.2.23' ruby
+	then
+		die "net-analyzer/rrdtool must be built with ruby USE flag."
+	fi
 
 	enewgroup puppet
 	enewuser puppet -1 -1 /var/lib/puppet puppet
@@ -35,6 +56,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-0.24.2-gentoo.patch"
+	epatch "${FILESDIR}/${P}-eix-0.14.0.patch"
 }
 
 src_compile() {
@@ -52,7 +74,8 @@ src_install() {
 	#
 	#doinitd conf/gentoo/init.d/puppetmaster
 	newinitd "${FILESDIR}"/puppetmaster.init puppetmaster
-	doconfd conf/gentoo/conf.d/puppetmaster
+	#doconfd conf/gentoo/conf.d/puppetmaster
+	newconfd "${FILESDIR}"/puppetmaster.confd puppetmaster
 	#doinitd conf/gentoo/init.d/puppet
 	newinitd "${FILESDIR}"/puppet.init puppet
 	doconfd conf/gentoo/conf.d/puppet
@@ -74,6 +97,10 @@ src_install() {
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 
+	if use ldap ; then
+		insinto /etc/openldap/schema; doins ext/ldap/puppet.schema
+	fi
+
 	if use vim-syntax ; then
 		insinto /usr/share/vim/vimfiles/syntax; doins ext/vim/syntax/puppet.vim
 		insinto /usr/share/vim/vimfiles/ftdetect; doins	ext/vim/ftdetect/puppet.vim
@@ -81,9 +108,9 @@ src_install() {
 
 	# ext and examples files
 	for f in $(find ext examples -type f) ; do
-		docinto $(dirname ${f})
-		dodoc ${f}
+		docinto "$(dirname ${f})"; dodoc "${f}"
 	done
+	docinto conf; dodoc conf/namespaceauth.conf
 }
 
 pkg_postinst() {
