@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.227 2008/10/06 17:51:13 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.228 2008/10/06 20:39:13 maekke Exp $
+
+  06 Oct 2008; Markus Meier <maekke@gentoo.org> ppp-2.4.4-r21.ebuild:
+  amd64/x86 stable, bug #239851
 
   06 Oct 2008; Friedrich Oslage <bluebird@gentoo.org> ppp-2.4.4-r21.ebuild:
   Stable on sparc, bug #239851
