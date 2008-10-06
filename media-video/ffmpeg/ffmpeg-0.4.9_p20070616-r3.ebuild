@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070616-r3.ebuild,v 1.2 2008/10/04 19:36:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070616-r3.ebuild,v 1.3 2008/10/06 07:33:54 jer Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="aac altivec amr debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss
 	test theora threads truetype v4l x264 xvid network zlib sdl X"
 
@@ -44,7 +44,7 @@ DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
 
 src_unpack() {
 	unpack ${A} || die
-	cd ${S}
+	cd "${S}"
 
 	#Append -DBROKEN_RELOCATIONS to build for bug 179872.
 	#Pretty please fix me if you can.
@@ -57,7 +57,7 @@ src_unpack() {
 	sed -i s:\#define\ HAVE_X11:\#define\ HAVE_LINUX: ffplay.c
 
 	# .pc files contain wrong libdir path
-	epatch ${FILESDIR}/${PN}-libdir-2007.patch
+	epatch "${FILESDIR}"/${PN}-libdir-2007.patch
 	sed -i -e "s:GENTOOLIBDIR:$(get_libdir):" configure
 
 	# Make it use pic always since we don't need textrels
@@ -135,7 +135,7 @@ src_compile() {
 		fi
 	fi
 
-	cd ${S}
+	cd "${S}"
 	./configure \
 		--prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
@@ -150,7 +150,7 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 LDCONFIG=true DESTDIR=${D} install || die "Install Failed"
+	emake -j1 LDCONFIG=true DESTDIR="${D}" install || die "Install Failed"
 
 	use doc && emake -j1 documentation
 	dodoc Changelog README INSTALL
@@ -159,7 +159,7 @@ src_install() {
 
 # Never die for now...
 src_test() {
-	cd ${S}/tests
+	cd "${S}"/tests
 	for t in "codectest libavtest test-server" ; do
 		make ${t} || ewarn "Some tests in ${t} failed"
 	done
