@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.3.ebuild,v 1.6 2008/05/20 15:26:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.3.ebuild,v 1.7 2008/10/06 17:13:50 truedfx Exp $
 
 # detect cvs snapshots; fex. 1.3_p20040120
 [[ $PV == *_p[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
@@ -43,6 +43,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/libtool.patch
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
+	epatch "${FILESDIR}"/${P}-cflags.patch
 
 	if (( snapshot )); then
 		eautoreconf
