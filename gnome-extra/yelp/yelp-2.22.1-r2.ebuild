@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.22.1-r2.ebuild,v 1.2 2008/09/25 16:45:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.22.1-r2.ebuild,v 1.3 2008/10/06 20:29:59 eva Exp $
 
 inherit eutils autotools gnome2
 
@@ -35,7 +35,8 @@ RDEPEND=">=gnome-base/gconf-2
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.9"
+	>=dev-util/pkgconfig-0.9
+	gnome-base/gnome-common"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
