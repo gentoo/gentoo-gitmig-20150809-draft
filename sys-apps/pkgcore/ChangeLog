@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.66 2008/09/03 20:55:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.67 2008/10/06 23:20:57 jmbsvicetto Exp $
+
+*pkgcore-0.4.7.9 (06 Oct 2008)
+
+  06 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +pkgcore-0.4.7.9.ebuild:
+  Bumped pkgcore to the 0.4.7.9 release as requested by Brian Harring
+  (ferringb).
 
 *pkgcore-0.4.7.8 (03 Sep 2008)
 
