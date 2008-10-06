@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.8.ebuild,v 1.1 2008/07/05 10:01:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.8.ebuild,v 1.2 2008/10/06 16:10:39 hawking Exp $
 
 inherit distutils eutils
 
@@ -13,9 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
-DEPEND="virtual/python"
-RDEPEND="sci-visualization/gnuplot
+DEPEND="virtual/python
 	dev-python/numpy"
+RDEPEND="sci-visualization/gnuplot
+	${DEPEND}"
 
 PYTHON_MODNAME="Gnuplot"
 
