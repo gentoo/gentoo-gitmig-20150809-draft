@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.1 2008/06/07 12:51:16 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.2 2008/10/06 18:42:46 pythonhead Exp $
 
 ESVN_REPO_URI="http://code.djangoproject.com/svn/django/trunk/"
 
@@ -10,7 +10,7 @@ DESCRIPTION="high-level python web framework"
 HOMEPAGE="http://www.djangoproject.com/"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="doc examples mysql postgres sqlite test"
 
 RDEPEND="dev-python/imaging
