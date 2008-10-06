@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.15.2.ebuild,v 1.1 2008/08/16 10:08:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.16.0.ebuild,v 1.1 2008/10/06 16:09:21 dev-zero Exp $
+
+EAPI="2"
 
 MY_P="aria2c-${PV/_p/+}"
 
@@ -10,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
-IUSE="ares bittorrent expat gnutls metalink nls ssl test"
+IUSE="ares bittorrent expat gnutls metalink nls sqlite3 ssl test"
 
 CDEPEND="sys-libs/zlib
 	ssl? (
@@ -21,7 +23,8 @@ CDEPEND="sys-libs/zlib
 	metalink? (
 		!expat? ( >=dev-libs/libxml2-2.6.26 )
 		expat? ( dev-libs/expat )
-	)"
+	)
+	sqlite3? ( dev-db/sqlite:3 )"
 DEPEND="${CDEPEND}
 	nls? ( sys-devel/gettext )
 	test? ( >=dev-util/cppunit-1.12.0 )"
@@ -30,14 +33,11 @@ RDEPEND="${CDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i -e "s|/tmp|${T}|" test/*.cc || die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	use ssl && \
 		myconf="${myconf} $(use_with gnutls) $(use_with !gnutls openssl)"
 
@@ -47,19 +47,21 @@ src_compile() {
 	# - links only against libxml2 and libexpat when metalink is enabled
 	# - always enable gzip/http compression since zlib should always be anyway
 	# - always enable epoll since we can assume kernel 2.6.x
+	# - other options for threads: solaris, pth, win32
 	econf \
 		--enable-epoll \
+		--enable-threads=posix \
 		--with-libz \
 		$(use_enable nls) \
 		$(use_enable metalink) \
 		$(use_with expat libexpat) \
 		$(use_with !expat libxml2) \
+		$(use_with sqlite3) \
 		$(use_enable bittorrent) \
 		--without-ares \
 		$(use_with ares libcares) \
 		${myconf} \
 		|| die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
@@ -69,3 +71,4 @@ src_install() {
 	dodoc ChangeLog README AUTHORS TODO NEWS
 	dohtml README.html doc/aria2c.1.html
 }
+
