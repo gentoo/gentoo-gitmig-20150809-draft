@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.15-r1.ebuild,v 1.9 2008/09/28 15:12:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.15-r1.ebuild,v 1.10 2008/10/06 22:03:02 aballier Exp $
 
 EAPI=1
 
@@ -90,6 +90,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "$FILESDIR"/${P}-libmpeg2-vis.patch
 	epatch "$FILESDIR"/${P}-buffer_h_ansi.patch
+	epatch "$FILESDIR"/${P}-ffmpeg.patch
 }
 
 src_compile() {
