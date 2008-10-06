@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gruff
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.18 2008/03/17 07:13:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.19 2008/10/06 16:08:32 graaff Exp $
+
+*gruff-0.3.4 (06 Oct 2008)
+
+  06 Oct 2008; Hans de Graaff <graaff@gentoo.org> +gruff-0.3.4.ebuild:
+  Version bump with minor bugfixes
 
 *gruff-0.3.1 (17 Mar 2008)
 
