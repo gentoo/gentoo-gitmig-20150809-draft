@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.59 2008/10/06 15:08:38 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.60 2008/10/06 15:27:05 wschlich Exp $
+
+  06 Oct 2008; Wolfram Schlich <wschlich@gentoo.org> -htop-0.8-r1.ebuild:
+  removed old version
 
 *htop-0.8.1 (06 Oct 2008)
 
