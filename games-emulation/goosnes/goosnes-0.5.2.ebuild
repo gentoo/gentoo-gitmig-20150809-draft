@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/goosnes/goosnes-0.5.2.ebuild,v 1.12 2007/09/30 22:10:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/goosnes/goosnes-0.5.2.ebuild,v 1.13 2008/10/06 16:50:18 flameeyes Exp $
 
 inherit autotools eutils games
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND="dev-libs/libxml2
 	>=x11-libs/gtk+-2
 	games-emulation/snes9x"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_unpack() {
