@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.5.ebuild,v 1.4 2008/06/09 14:38:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.2.5.ebuild,v 1.5 2008/10/06 18:53:12 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -62,7 +62,7 @@ src_unpack() {
 		unpack ${A}
 	fi
 	cd "${S}"
-	epatch "${FILESDIR}"/9999/*.patch
+	epatch "${FILESDIR}"/0.2.5/*.patch
 }
 
 src_compile() {

@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.41 2008/10/06 16:56:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.42 2008/10/06 18:53:12 cardoe Exp $
+
+  06 Oct 2008; Doug Goldstein <cardoe@gentoo.org>
+  +files/0.2.5/0002-useful-functions.patch, +files/0.2.5/0003-KV.patch,
+  files/9999/0002-useful-functions.patch, +files/0.2.5/0001-msg-style.patch,
+  -openrc-0.2.2.ebuild, -openrc-0.2.3.ebuild, -openrc-0.2.4.ebuild,
+  -openrc-0.2.4-r1.ebuild, openrc-0.2.5.ebuild:
+  create 0.2.5 patch directory and copy current patches there. Use that
+  directory for 0.2.5. Update live ebuild 0002 patch to current patch as the
+  original one doesn't apply. bug #238904. Remove outdated versions.
 
 *openrc-0.3.0 (06 Oct 2008)
 
