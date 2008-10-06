@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.40 2008/06/09 14:38:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.41 2008/10/06 16:56:50 cardoe Exp $
+
+*openrc-0.3.0 (06 Oct 2008)
+
+  06 Oct 2008; Doug Goldstein <cardoe@gentoo.org>
+  +files/0.3.0/0001-Fix-a-segfault-when-profile.env-does-not-exist.patch,
+  +files/0.3.0/0002-kenv-is-not-always-available.patch,
+  +files/0.3.0/0004-add-a-softlevel-function-to-the-API-so-people-dont.patch
+  ,
+  +files/0.3.0/0003-This-reverts-commit-0e2f160c95b15e95f3885e3f5a3670ec.pat
+  ch, +files/0.3.0/0005-add-back-KV_-funcs.patch, +openrc-0.3.0.ebuild:
+  version bump. forward port patches from 0.2.x and include some upstream
+  fixes
 
   09 Jun 2008; Doug Goldstein <cardoe@gentoo.org> openrc-0.2.5.ebuild,
   openrc-9999.ebuild:
