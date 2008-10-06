@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20080717.ebuild,v 1.2 2008/07/18 10:34:24 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20080717.ebuild,v 1.3 2008/10/06 22:25:52 aballier Exp $
 
-inherit autotools multilib
+inherit autotools multilib eutils
 
 DESCRIPTION="Cinelerra - Professional Video Editor - Unofficial CVS-version"
 HOMEPAGE="http://www.cinelerra.org/"
@@ -59,6 +59,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${PN}-ffmpeg.patch"
 	AT_M4DIR="m4" eautoreconf
 }
 
