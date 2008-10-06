@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/kawa
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.8 2008/03/30 20:28:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.9 2008/10/06 16:58:28 pchrist Exp $
+
+  06 Oct 2008; Panagiotis Christopoulos <pchrist@gentoo.org>
+  -kawa-1.6.97.ebuild, -kawa-1.7.ebuild, -kawa-1.8.ebuild:
+  Cleaning up kawa's directory, removing old versions which use gen1 java
+  eclasses. Caster's request :)
 
   30 Mar 2008; Markus Meier <maekke@gentoo.org> kawa-1.9.1.ebuild:
   x86 stable, bug #214609
