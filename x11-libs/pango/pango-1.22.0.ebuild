@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.22.0.ebuild,v 1.1 2008/09/30 20:49:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.22.0.ebuild,v 1.2 2008/10/06 07:00:36 leio Exp $
 
 inherit eutils gnome2 multilib
 
@@ -12,8 +12,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="X debug doc"
 
-# glib-2.16.3 dependency instead of 2.14 ensures Unicode 5.1 support on the system
-RDEPEND=">=dev-libs/glib-2.16.3
+RDEPEND=">=dev-libs/glib-2.17.3
 		 >=media-libs/fontconfig-1.0.1
 		 >=media-libs/freetype-2
 		 >=x11-libs/cairo-1.7.6
@@ -54,8 +53,6 @@ src_unpack() {
 	if multilib_enabled ; then
 		epatch "${FILESDIR}/${PN}-1.2.5-lib64.patch"
 	fi
-
-	epunt_cxx
 }
 
 src_install() {
