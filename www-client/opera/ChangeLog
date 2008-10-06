@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.288 2008/10/02 03:02:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.289 2008/10/06 16:58:28 jer Exp $
+
+*opera-9.60_pre2444 (06 Oct 2008)
+
+  06 Oct 2008; Jeroen Roovers <jer@gentoo.org> files/opera-gentoo.patch,
+  opera-9.60_pre2440.ebuild, +opera-9.60_pre2444.ebuild:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/2008/10/04/opera-9-6-rc-2>. Remove
+  sed scripts and improve gentoo patch thanks to Pacho Ramos (bug #239365).
 
   02 Oct 2008; Jeroen Roovers <jer@gentoo.org> -opera-9.60_pre2405.ebuild,
   -opera-9.60_pre2410.ebuild, -opera-9.60_pre2415.ebuild:

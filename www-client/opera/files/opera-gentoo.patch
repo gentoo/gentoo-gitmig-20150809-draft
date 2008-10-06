@@ -8,8 +8,8 @@
 +{
 +	if test -e /etc/gentoo-release ; then
 +		for res in 16x16 22x22 32x32 48x48 ; do
-+			mkdir -p /usr/share/icons/hicolor/${res}/apps
-+			cp usr/share/icons/hicolor/${res}/apps/opera.png /usr/share/icons/hicolor/${res}/apps
++			mkdir -p ${D}/usr/share/icons/hicolor/${res}/apps
++			cp usr/share/icons/hicolor/${res}/apps/opera.png ${D}/usr/share/icons/hicolor/${res}/apps
 +		done
 +		mkdir -p ${D}/usr/share/applications
 +		generate_desktop ${D}/usr/share/applications xdg

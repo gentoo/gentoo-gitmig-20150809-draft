@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.60_pre2440.ebuild,v 1.2 2008/10/06 16:58:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.60_pre2444.ebuild,v 1.1 2008/10/06 16:58:28 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -23,7 +23,7 @@ for MY_LINGUA in ${MY_LINGUAS}; do
 	IUSE="${IUSE} linguas_${MY_LINGUA/-/_}"
 done
 
-O_SUFF="2440"
+O_SUFF="2444"
 O_P="${PN}-9.60-${O_SUFF}"
 O_URI="http://snapshot.opera.com/unix/snapshot-${O_SUFF}/"
 
