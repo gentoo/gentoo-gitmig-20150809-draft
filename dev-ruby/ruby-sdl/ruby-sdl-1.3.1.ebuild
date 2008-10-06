@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-1.3.1.ebuild,v 1.1 2007/10/18 19:55:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-1.3.1.ebuild,v 1.2 2008/10/06 10:09:56 flameeyes Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ RDEPEND="virtual/ruby
 	mixer? ( >=media-libs/sdl-mixer-1.2.4 )
 	mpeg? ( >=media-libs/smpeg-0.4.4-r1 )
 	sge? ( media-libs/sge )"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	ruby extconf.rb || die "extconf.rb failed"
