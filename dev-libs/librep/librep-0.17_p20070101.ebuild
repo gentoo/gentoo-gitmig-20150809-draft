@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17_p20070101.ebuild,v 1.5 2008/08/21 19:43:18 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17_p20070101.ebuild,v 1.6 2008/10/06 19:31:53 truedfx Exp $
 
 MY_P=${P%_*}
 
@@ -34,6 +34,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-libtool.patch
 	epatch "${FILESDIR}"/rep_file_fdopen.patch
 	epatch "${FILESDIR}"/${P}-disable-elisp.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 	eautoreconf || die "eautoreconf failed"
 }
 
