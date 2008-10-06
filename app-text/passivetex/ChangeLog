@@ -1,6 +1,9 @@
 # ChangeLog for app-text/passivetex
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.21 2008/10/04 01:44:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/ChangeLog,v 1.22 2008/10/06 04:47:40 jer Exp $
+
+  06 Oct 2008; Jeroen Roovers <jer@gentoo.org> passivetex-1.25.ebuild:
+  Marked ~hppa (bug #237202).
 
   04 Oct 2008; Brent Baude <ranger@gentoo.org> passivetex-1.25.ebuild:
   Marking passivetex-1.25 ~ppc for bug 237202
