@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9049 2008/10/06 11:18:14 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9050 2008/10/06 15:31:52 tester Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Olivier Crete <tester@gentoo.org> (06 Oct 2008)
+# Masked for removal, upstream dead (bug #240045)
+net-im/tmsnc
 
 # Alexis Ballier <aballier@gentoo.org> (06 Oct 2008)
 # API changes, the only reverse dep fails to build against it.
