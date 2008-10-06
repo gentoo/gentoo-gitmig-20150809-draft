@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-ldap
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.23 2007/11/07 10:32:14 graaff Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.24 2008/10/06 10:07:39 flameeyes Exp $
+
+  06 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> ruby-ldap-0.9.7.ebuild:
+  Use -j1 during install or install will fail.
 
 *ruby-ldap-0.9.7 (07 Nov 2007)
 
