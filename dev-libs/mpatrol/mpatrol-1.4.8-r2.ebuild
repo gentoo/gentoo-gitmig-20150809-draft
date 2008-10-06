@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r2.ebuild,v 1.2 2007/07/12 02:25:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r2.ebuild,v 1.3 2008/10/06 08:24:48 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,21 +30,23 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-textrel-fix.patch || die "patching failed"
 
 	sed -i \
-	    -e 's:#define MP_SYMBOL_LIBS , MP_LIBNAME(bfd), MP_LIBNAME(iberty):#define MP_SYMBOL_LIBS , MP_LIBNAME(bfd):' config.h \
-	        || die "sed config.h failed"
+		-e 's:#define MP_SYMBOL_LIBS , MP_LIBNAME(bfd), MP_LIBNAME(iberty):#define MP_SYMBOL_LIBS , MP_LIBNAME(bfd):' config.h \
+			|| die "sed config.h failed"
 
 	cd ${S}/build/unix
 	sed -i \
-	    -e 's:^OFLAGS.= -O3:OFLAGS = ${OPT_FLAGS}:' Makefile \
-	        || die "sed Makefile for CFLAGS failed"
+		-e 's:^OFLAGS.= -O3:OFLAGS = ${OPT_FLAGS}:' Makefile \
+			|| die "sed Makefile for CFLAGS failed"
 
 	sed -i \
-	    -e 's:$(LD) $(LDFLAGS) -o $@ $(SHARED_MPTOBJS):$(LD) $(LDFLAGS) -liberty -o $@ $(SHARED_MPTOBJS):' Makefile \
-	        || die "sed Makefile for fixing -libiberty failed"
+		-e 's:$(LD) $(LDFLAGS) -o $@ $(SHARED_MPTOBJS):$(LD) $(LDFLAGS) -liberty -o $@ $(SHARED_MPTOBJS):' Makefile \
+			|| die "sed Makefile for fixing -libiberty failed"
 
-	use X && sed -i \
-		    -e 's:^GUISUP.= false:GUISUP = true:' Makefile \
+	if use X; then
+		sed -i \
+			-e 's:^GUISUP.= false:GUISUP = true:' Makefile \
 			|| die "sed Makefile for GUISUP failed"
+	fi
 
 }
 
