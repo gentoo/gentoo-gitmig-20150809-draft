@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gconf2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.36 2008/04/07 05:23:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.37 2008/10/06 14:36:36 graaff Exp $
+
+  06 Oct 2008; Hans de Graaff <graaff@gentoo.org> ruby-gconf2-0.16.0.ebuild:
+  Add missing pkgconfig dependency, #239578
 
   07 Apr 2008; Hans de Graaff <graaff@gentoo.org>
   -ruby-gconf2-0.12.0.ebuild, -ruby-gconf2-0.15.0.ebuild:
