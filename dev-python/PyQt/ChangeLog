@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.105 2008/05/13 08:52:27 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.106 2008/10/06 16:24:03 hawking Exp $
+
+  06 Oct 2008; Ali Polatel <hawking@gentoo.org>
+  -files/PyQt-3.14.1-examples.diff,
+  -files/PyQt-3.14.1-python-2.5-compat.diff, -PyQt-3.14.1-r1.ebuild,
+  -PyQt-3.14.1-r2.ebuild, -PyQt-3.17.ebuild, -PyQt-3.17.2.ebuild:
+  Drop old.
 
   13 May 2008; Ali Polatel <hawking@gentoo.org> PyQt-3.14.1-r1.ebuild,
   PyQt-3.14.1-r2.ebuild, PyQt-3.17.ebuild, PyQt-3.17.2.ebuild,
