@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20080717-r1.ebuild,v 1.1 2008/07/17 21:10:39 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20081006.ebuild,v 1.1 2008/10/06 12:49:02 hawking Exp $
 
 inherit eutils vim-plugin
 
@@ -27,9 +27,6 @@ src_unpack() {
 			eend $?
 		done
 	fi
-
-	# Backported patch from svn
-	epatch "${FILESDIR}"/${P}-metadata-order.patch
 }
 
 pkg_postinst() {
