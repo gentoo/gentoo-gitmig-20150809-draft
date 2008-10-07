@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1934 2008/10/06 19:54:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1935 2008/10/07 05:56:43 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Oct 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  Mask new x264 snapshot
 
   06 Oct 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   remove vntex masks, its gone
