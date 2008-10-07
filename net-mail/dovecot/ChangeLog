@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.178 2008/10/06 14:44:17 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.179 2008/10/07 07:30:11 wschlich Exp $
+
+*dovecot-1.1.4-r1 (07 Oct 2008)
+
+  07 Oct 2008; Wolfram Schlich <wschlich@gentoo.org>
+  +files/dovecot-1.1.4-expire.patch, -dovecot-1.1.4.ebuild,
+  +dovecot-1.1.4-r1.ebuild:
+  add patch for expire plugin crash, removed old version
 
 *dovecot-1.1.4 (06 Oct 2008)
 
