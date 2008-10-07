@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.65 2008/09/02 09:43:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.66 2008/10/07 09:13:13 bicatali Exp $
+
+  07 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org> icc-10.1.018.ebuild:
+  Fixed for limits.h inclusion on amd64, bug #239313
 
 *icc-10.1.018 (02 Sep 2008)
 

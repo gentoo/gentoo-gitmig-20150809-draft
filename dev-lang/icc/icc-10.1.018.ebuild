@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.018.ebuild,v 1.1 2008/09/02 09:43:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.1.018.ebuild,v 1.2 2008/10/07 09:13:13 bicatali Exp $
 
 inherit rpm eutils check-reqs
 
@@ -75,10 +75,12 @@ src_unpack() {
 		cat <<-EOF >>"${S}"/${INSTALL_DIR}/bin/icc.cfg
 		-D__amd64=__x86_64
 		-D__amd64__=__x86_64__
+		-idirafter /usr/include/linux
 		EOF
 		cat <<-EOF >>"${S}"/${INSTALL_DIR}/bin/icpc.cfg
 		-D__amd64=__x86_64
 		-D__amd64__=__x86_64__
+		-idirafter /usr/include/linux
 		EOF
 	fi
 }
