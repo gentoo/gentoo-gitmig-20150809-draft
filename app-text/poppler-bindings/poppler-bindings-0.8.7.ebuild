@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.8.7.ebuild,v 1.6 2008/10/07 12:09:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.8.7.ebuild,v 1.7 2008/10/07 23:11:24 loki_val Exp $
 
 EAPI="1"
 
@@ -45,11 +45,11 @@ src_unpack(){
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/poppler-0.6-bindings.patch
+	sed -i \
+		-e 's:$(top_builddir)/poppler/libpoppler.la:-lpoppler:' \
+		$(find . -name 'Makefile.am' ) || die "404"
 
 	AT_M4DIR="m4" eautoreconf
-	cd poppler
-	ln -s /usr/lib/libpoppler.la
 }
 
 src_compile() {
