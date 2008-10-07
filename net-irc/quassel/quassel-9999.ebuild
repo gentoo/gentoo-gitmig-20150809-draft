@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.9 2008/09/28 19:12:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.10 2008/10/07 20:37:45 jokey Exp $
 
 EAPI=1
 
@@ -27,8 +27,11 @@ RDEPEND="x11-libs/qt-core:4
 			x11-libs/qt-sql:4
 			x11-libs/qt-script:4
 		)
-		X? ( x11-libs/qt-gui:4 )
-		dbus? ( x11-libs/qt-dbus )
+		X? (
+			x11-libs/qt-gui:4
+			x11-libs/qt-webkit:4
+		)
+		dbus? ( x11-libs/qt-dbus:4 )
 		ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6"
@@ -63,6 +66,7 @@ src_compile() {
 	local mycmakeargs="
 		$(cmake-utils_use_want server CORE)
 		$(cmake-utils_use_want X QTCLIENT)
+		$(cmake-utils_use_with X WEBKIT)
 		$(cmake-utils_use_with dbus DBUS)
 		$(cmake-utils_use_with ssl OPENSSL)
 		-DLINGUAS="${MY_LANGUAGES}"
