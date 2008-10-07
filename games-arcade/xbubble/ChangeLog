@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xbubble
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/ChangeLog,v 1.10 2007/03/14 22:07:11 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/ChangeLog,v 1.11 2008/10/07 16:05:08 mr_bones_ Exp $
+
+  07 Oct 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/xbubble-0.5.8-locale.patch, xbubble-0.5.8.ebuild:
+  fix building with USE=nls, CFLAGS=-O0 (bug #240306)
 
   14 Mar 2007; Tristan Heaven <nyhm@gentoo.org> xbubble-0.5.8.ebuild:
   Install menu entry, bug #160260
