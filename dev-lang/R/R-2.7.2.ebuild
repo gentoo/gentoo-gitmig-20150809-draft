@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.2.ebuild,v 1.1 2008/08/27 23:01:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.2.ebuild,v 1.2 2008/10/07 09:42:00 bicatali Exp $
 
-inherit fortran flag-o-matic bash-completion
+inherit fortran flag-o-matic bash-completion versionator
 
 DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
@@ -126,7 +126,10 @@ src_compile() {
 		emake info pdf || die "emake docs failed"
 	fi
 
-	emake -j1 -C src/nmath/standalone || die "emake math library failed"
+	RMATH_V=0.0.0
+	emake -j1 -C src/nmath/standalone \
+		libRmath_la_LDFLAGS=-Wl,-soname,libRmath.so.${RMATH_V} \
+		|| die "emake math library failed"
 }
 
 src_install() {
@@ -142,6 +145,12 @@ src_install() {
 		-C src/nmath/standalone \
 		DESTDIR="${D}" install \
 		|| die "emake install math library failed"
+
+	local mv=$(get_major_version ${RMATH_V})
+	mv  "${D}"/usr/$(get_libdir)/libRmath.so \
+		"${D}"/usr/$(get_libdir)/libRmath.so.${RMATH_V}
+	dosym libRmath.so.${RMATH_V} /usr/$(get_libdir)/libRmath.so.${mv}
+	dosym libRmath.so.${mv} /usr/$(get_libdir)/libRmath.so
 
 	# env file
 	cat > 99R <<-EOF
