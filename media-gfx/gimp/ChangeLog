@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.261 2008/10/07 02:54:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.262 2008/10/07 13:34:22 nixnut Exp $
+
+  07 Oct 2008; nixnut <nixnut@gentoo.org> gimp-2.4.6.ebuild:
+  Stable on ppc wrt bug 239923
 
   07 Oct 2008; Jeroen Roovers <jer@gentoo.org> gimp-2.4.6.ebuild:
   Stable for HPPA (bug #239923).
