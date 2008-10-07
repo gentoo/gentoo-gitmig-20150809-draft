@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6-r1.ebuild,v 1.1 2008/10/06 12:15:23 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6-r2.ebuild,v 1.1 2008/10/07 23:04:02 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
 #   in dev-lang/python. It _WILL_ stop people installing from
 #   Gentoo 1.4 images.
 
-EAPI=1
+EAPI=2
 
 inherit eutils autotools flag-o-matic python multilib versionator toolchain-funcs libtool
 
@@ -52,9 +52,8 @@ DEPEND=">=app-admin/eselect-python-20080630
 PDEPEND="${DEPEND} app-admin/python-updater"
 PROVIDE="virtual/python"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	default
 
 	if tc-is-cross-compiler ; then
 		[[ $(python -V 2>&1) != "Python ${PV}" ]] && \
@@ -72,7 +71,7 @@ src_unpack() {
 		Makefile.pre.in \
 		Modules/Setup.dist \
 		Modules/getpath.c \
-		setup.py || die
+		setup.py || die "sed failed to replace @@GENTOO_LIBDIR@@"
 
 	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
 	# PLEASE LEAVE THIS FIX FOR NEXT VERSIONS AS IT'S A CRITICAL FIX !!!
@@ -105,21 +104,6 @@ src_configure() {
 		use tk       || disable="${disable} _tkinter"
 		export PYTHON_DISABLE_MODULES="${disable}"
 	fi
-	einfo "Disabled modules: $PYTHON_DISABLE_MODULES"
-}
-
-src_compile() {
-	filter-flags -malign-double
-
-	# Seems to no longer be necessary
-	#[ "${ARCH}" = "amd64" ] && append-flags -fPIC
-	[ "${ARCH}" = "alpha" ] && append-flags -fPIC
-
-	# http://bugs.gentoo.org/show_bug.cgi?id=50309
-	if is-flag -O3; then
-	   is-flag -fstack-protector-all && replace-flags -O3 -O2
-	   use hardened && replace-flags -O3 -O2
-	fi
 
 	export OPT="${CFLAGS}"
 
@@ -132,7 +116,17 @@ src_compile() {
 		&& myconf="${myconf} --enable-unicode=ucs2" \
 		|| myconf="${myconf} --enable-unicode=ucs4"
 
-	src_configure
+	filter-flags -malign-double
+
+	# Seems to no longer be necessary
+	#[ "${ARCH}" = "amd64" ] && append-flags -fPIC
+	[ "${ARCH}" = "alpha" ] && append-flags -fPIC
+
+	# http://bugs.gentoo.org/show_bug.cgi?id=50309
+	if is-flag -O3; then
+	   is-flag -fstack-protector-all && replace-flags -O3 -O2
+	   use hardened && replace-flags -O3 -O2
+	fi
 
 	if tc-is-cross-compiler ; then
 		OPT="-O1" CFLAGS="" LDFLAGS="" CC="" \
@@ -144,7 +138,7 @@ src_compile() {
 		sed -i \
 			-e '/^HOSTPYTHON/s:=.*:=./hostpython:' \
 			-e '/^HOSTPGEN/s:=.*:=./Parser/hostpgen:' \
-			Makefile.pre.in || die
+			Makefile.pre.in || die "sed failed"
 	fi
 
 	# export CXX so it ends up in /usr/lib/python2.x/config/Makefile
@@ -164,12 +158,10 @@ src_compile() {
 		--mandir='${prefix}'/share/man \
 		--with-libc='' \
 		${myconf}
-	emake || die "Parallel make failed"
 }
 
 src_install() {
 	dodir /usr
-	src_configure
 	emake DESTDIR="${D}" altinstall maninstall || die
 
 	mv "${D}"/usr/bin/python${PYVER}-config "${D}"/usr/bin/python-config-${PYVER}
@@ -221,9 +213,6 @@ pkg_postrm() {
 }
 
 pkg_postinst() {
-	local myroot
-	myroot="$(echo "${ROOT}" | sed 's:/$::')"
-
 	eselect python update --ignore 3.0
 	python_version
 
