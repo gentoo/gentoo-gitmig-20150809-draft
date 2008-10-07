@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.136 2008/09/30 00:54:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.137 2008/10/07 01:52:21 beandog Exp $
+
+  07 Oct 2008; Steve Dibb <beandog@gentoo.org> package.use.mask:
+  Unmask dxr3 use flag for media-video/mplayer
 
   30 Sep 2008; Steve Dibb <beandog@gentoo.org> package.use.mask:
   Fix p.use.mask for x86 mplayer, bug 234629
