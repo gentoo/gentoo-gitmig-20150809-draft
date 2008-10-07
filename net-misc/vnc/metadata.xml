@@ -7,5 +7,6 @@
   </maintainer>
   <use>
     <flag name="server">Build VNC server</flag>
+    <flag name="xorgmodule">Build the Xorg module</flag>
   </use>
 </pkgmetadata>
