@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.1 2008/09/24 16:32:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.2 2008/10/07 18:57:53 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
@@ -140,6 +140,10 @@ src_unpack() {
 				;;
 	esac
 	MKL_LIBDIR=${MKL_DIR}/lib/${MKL_ARCH}
+	# fix env scripts
+	sed -i \
+		-e "s:${S}:${MKL_DIR}:g" \
+		tools/environment/*sh || die "sed support file failed"
 }
 
 src_compile() {
@@ -305,10 +309,12 @@ src_install() {
 	mkl_make_profiles
 
 	# install env variables
-	local env_file=35mkl
-	echo "LDPATH=${MKL_LIBDIR}" > ${env_file}
-	echo "MANPATH=${MKL_DIR}/man" >> ${env_file}
-	doenvd ${env_file} || die "doenvd failed"
+	cat > 35mkl <<-EOF
+		MKLROOT=${MKL_DIR}
+		LDPATH=${MKL_LIBDIR}
+		MANPATH=${MKL_DIR}/man
+	EOF
+	doenvd 35mkl || die "doenvd failed"
 }
 
 pkg_postinst() {
