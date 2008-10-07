@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p27725.ebuild,v 1.1 2008/10/07 01:56:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p27725-r1.ebuild,v 1.1 2008/10/07 14:43:15 beandog Exp $
 
 EAPI="1"
 
@@ -205,6 +205,9 @@ src_unpack() {
 	use svga && unpack "svgalib_helper-${SVGV}-mplayer.tar.bz2"
 
 	cd "${S}"
+
+	# Fix x264 compilation, bug 240347
+	epatch "${FILESDIR}/mplayer-1.0_rc2_p27725-libx264.patch"
 
 	# Set version #
 	sed -i s/UNKNOWN/${MPLAYER_REVISION}/ "${S}/version.sh"
