@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-0.1.1.20081006.ebuild,v 1.1 2008/10/06 16:56:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-0.1.1.20081006.ebuild,v 1.2 2008/10/07 16:09:16 matsuu Exp $
 
 EAPI="1"
-inherit multilib
+inherit eutils multilib
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -35,7 +35,10 @@ RDEPEND="${RDEPEND}
 	dev-python/pygtk
 	>=dev-python/dbus-python-0.83
 	dev-python/pyxdg
-	dev-python/gconf-python"
+	|| (
+		dev-python/gconf-python
+		dev-python/gnome-python
+	)"
 
 pkg_setup() {
 	# An arch specific config directory is used on multilib systems
@@ -57,9 +60,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "This package is very experimental, please report your bug to"
-	ewarn "http://ibus.googlecode.com/issues/list"
-	elog
 	elog "To use ibus, you should:"
 	elog "1. Get input engines from sunrise overlay."
 	elog "   Run \"emerge -s ibus-\" in your favorite terminal"
@@ -71,10 +71,10 @@ pkg_postinst() {
 	elog "   export GTK_IM_MODULE=\"ibus\""
 	elog "   export QT_IM_MODULE=\"ibus\""
 	elog "   ibus &"
-	elog
+
 	if ! use qt4; then
 		ewarn "Missing qt4 use flag, ibus will not work in qt4 applications."
-		ebeep 3
+		ebeep 5
 	fi
 	elog
 
