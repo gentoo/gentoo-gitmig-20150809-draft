@@ -32,4 +32,4 @@ x11-themes/qtcurve-qt4 kde
 # Steve Dibb <beandog@gentoo.org> (29 Sept 2008)
 # Arch-specific use flags, unmasked in their profiles
 # See bug 234629
-media-video/mplayer real cpudetection win32codecs custom-cpuopts
+media-video/mplayer real cpudetection win32codecs custom-cpuopts dxr3
