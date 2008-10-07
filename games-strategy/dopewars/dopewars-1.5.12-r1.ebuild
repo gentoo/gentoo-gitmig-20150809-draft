@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12-r1.ebuild,v 1.4 2008/05/12 18:45:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12-r1.ebuild,v 1.5 2008/10/07 16:28:35 mr_bones_ Exp $
 
 inherit games
 
@@ -23,6 +23,7 @@ RDEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )
 		media-libs/sdl-mixer
 	)"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
