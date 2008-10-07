@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.0.2.ebuild,v 1.1 2008/10/07 10:13:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.0.2.ebuild,v 1.2 2008/10/07 11:07:05 robbat2 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -61,4 +61,7 @@ src_install() {
 		elog "Providing a backwards compatibility non-compressed pci.ids"
 		gzip -d <"${sharedir}"/pci.ids.gz >"${sharedir}"/pci.ids
 	fi
+
+	newinitd "${FILESDIR}"/init.d-pciparm pciparm
+	newconfd "${FILESDIR}"/conf.d-pciparm pciparm
 }

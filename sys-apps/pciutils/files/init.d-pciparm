@@ -1,0 +1,76 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/files/init.d-pciparm,v 1.1 2008/10/07 11:07:09 robbat2 Exp $
+
+depend() {
+	before bootmisc hdparm
+	after localmount
+}
+
+checkconfig() {
+	if [ ! -f /etc/conf.d/pciparm ]; then
+		ewarn "/etc/conf.d/pciparm does not exist, skipping"
+		return 1
+	fi
+
+	if [ -z "${PCIPARM_ALL}" -a -z "${PCIPARM_BUS_0}" -a  -z "${PCIPARM_VENDOR_0}" ]; then
+		ewarn "None of PCIPARM_ALL, PCIPARM_BUS_* or PCIPARM_VENDOR_* set in /etc/conf.d/pciparm"
+		return 1
+	fi
+}
+
+do_setpci() {
+	#ewarn "do_setpci: /usr/sbin/setpci $SETPCI_OPT $@"
+	SWITCH=$1
+	case "$SWITCH" in
+		-d) DESC="(vendor)" ;;
+		-s) DESC="(bus)" ;;
+		*) eerror "Unknown setpci type!" ; return 1 ;;
+	esac
+	shift
+	SPEC_ID=$1
+	shift
+	if [[ -z "$SPEC_ID" ]]; then
+		eerror "Missing device specifier!"
+		return 1
+	fi
+	if [[ -z "$@" ]]; then
+		eerror "Missing configuration to set for $DESC $SPEC_ID!"
+		return 1
+	fi
+	ebegin "Setting PCI params for $DESC $SPEC_ID to $@"
+	/usr/sbin/setpci $SETPCI_OPT $SWITCH $SPEC_ID "$@"
+	eend $?
+	SWITCH=""
+	SPEC_ID=""
+}
+
+start() {
+	if get_bootparam "nopciparm" ; then
+		ewarn "Skipping pciparm init as requested in kernel cmdline"
+		return 0
+	fi
+
+	checkconfig || return 1
+	
+	if [ -n "$PCIPARM_ALL" ]; then
+		do_setpci -d '*:*' $PCIPARM_ALL
+	fi
+
+	SEQ_BUS=0
+	while true; do
+		BUS_OPT=`eval echo '$'PCIPARM_BUS_${SEQ_BUS}`
+		[[ -z "$BUS_OPT" ]] && break
+		do_setpci -s $BUS_OPT
+		SEQ_BUS=$(($SEQ_BUS+1))
+	done
+
+	SEQ_VENDOR=0
+	while true; do
+		VENDOR_OPT=`eval echo '$'PCIPARM_VENDOR_${SEQ_VENDOR}`
+		[[ -z "$VENDOR_OPT" ]] && break
+		do_setpci -d $VENDOR_OPT
+		SEQ_VENDOR=$(($SEQ_VENDOR+1))
+	done
+}
