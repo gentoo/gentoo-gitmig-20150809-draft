@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.65 2008/09/13 06:19:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.66 2008/10/07 14:57:44 beandog Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -175,6 +175,7 @@ media-fonts/acroread-asianfonts
 media-gfx/grender
 media-gfx/maya
 media-gfx/picasa
+media-libs/realcodecs
 media-libs/win32codecs
 media-sound/peercast
 media-sound/shoutcast-server-bin

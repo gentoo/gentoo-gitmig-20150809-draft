@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.11 2008/09/30 12:02:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.12 2008/10/07 15:00:15 beandog Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -176,6 +176,7 @@ media-fonts/acroread-asianfonts
 media-gfx/grender
 media-gfx/maya
 media-gfx/picasa
+media-libs/realcodecs
 media-libs/win32codecs
 media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
