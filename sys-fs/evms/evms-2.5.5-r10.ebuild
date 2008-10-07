@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.9 2008/04/19 23:10:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.10 2008/10/07 07:45:59 loki_val Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs autotools linux-info
 
@@ -51,6 +51,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	sed -i \
+		-e 's:--- /root/aclocal.m4.old:--- root/aclocal.m4.old:' \
+		"${WORKDIR}"/patches/51_all_2.5.5-glib_dep.patch || die "404"
 
 	EPATCH_SOURCE="${WORKDIR}/patches"
 	EPATCH_SUFFIX="patch"

@@ -1,4 +1,4 @@
---- /root/aclocal.m4.old	2006-10-21 18:51:30.000000000 +0200
+--- root/aclocal.m4.old	2006-10-21 18:51:30.000000000 +0200
 +++ aclocal.m4	2006-10-21 20:48:07.000000000 +0200
 @@ -495,8 +495,8 @@
  	AC_MSG_NOTICE([     not building text-mode ... requires ncurses library])

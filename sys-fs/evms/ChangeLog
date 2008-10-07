@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.90 2008/09/08 08:59:49 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.91 2008/10/07 07:45:59 loki_val Exp $
+
+  07 Oct 2008; Peter Alfredsen <loki_val@gentoo.org>
+  files/evms-2.5.5-glib_dep.patch, evms-2.5.5-r10.ebuild:
+  Fix bug 238685. Eutils eclass changed to disallow patching with -p0 when
+  the patch contained absolute paths, which caused the build to fail on
+  recently synced systems.
 
   08 Sep 2008; Tiziano Müller <dev-zero@gentoo.org> -evms-2.5.5-r6.ebuild,
   -evms-2.5.5-r7.ebuild, -evms-2.5.5-r9.ebuild:
