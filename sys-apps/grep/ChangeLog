@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.76 2008/10/07 09:01:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.77 2008/10/07 09:02:28 robbat2 Exp $
+
+  07 Oct 2008; Robin H. Johnson <robbat2@gentoo.org> -grep-2.5.3.ebuild:
+  Remove badly broken baseline 2.5.3.
 
 *grep-2.5.3-r1 (07 Oct 2008)
 
