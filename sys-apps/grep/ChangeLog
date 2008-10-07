@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.75 2008/09/19 21:28:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.76 2008/10/07 09:01:39 robbat2 Exp $
+
+*grep-2.5.3-r1 (07 Oct 2008)
+
+  07 Oct 2008; Robin H. Johnson <robbat2@gentoo.org> +grep-2.5.3-r1.ebuild:
+  Fix bug #238235. This is a very important upgrade for anybody using the
+  2.5.3-r0, which breaks grep -i in UTF-8 environments.
 
   19 Sep 2008; Mike Frysinger <vapier@gentoo.org> grep-2.5.3.ebuild:
   Apply Debian patchset to fix "-o -i" failures.
