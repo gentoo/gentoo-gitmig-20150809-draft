@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.3-r1.ebuild,v 1.1 2008/10/07 09:01:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.3-r1.ebuild,v 1.2 2008/10/07 09:39:19 loki_val Exp $
 
 inherit flag-o-matic eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_MULTI_MSG="Applying Debian patchset (${DEB_VER}) ..." \
 	epatch ${P}~dfsg/debian/patches/
-
+	epatch "${FILESDIR}"/${P}-yesno-test-fix.patch
 	use static && append-ldflags -static
 }
 
