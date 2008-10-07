@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.900.1-r2.ebuild,v 1.1 2008/10/04 18:36:24 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.900.1-r2.ebuild,v 1.2 2008/10/07 08:36:02 phosphan Exp $
 
 inherit libtool eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ece.uvic.ca/~mdadams/jasper/"
 SRC_URI="http://www.ece.uvic.ca/~mdadams/jasper/software/jasper-${PV}.zip
 	mirror://gentoo/${P}-CVE-2008-3520+1+2.patch.bz2"
 
-LICENSE="JasPer"
+LICENSE="JasPer2.0"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="opengl jpeg"
