@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/libclxclient-3.6.1.ebuild,v 1.1 2008/04/19 13:49:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/libclxclient-3.6.1.ebuild,v 1.2 2008/10/07 23:04:44 flameeyes Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -21,6 +21,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXft
 	>=media-libs/freetype-2
 	>=media-libs/libclthreads-2.4.0"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
