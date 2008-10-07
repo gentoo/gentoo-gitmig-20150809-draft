@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20080725.ebuild,v 1.1 2008/08/30 11:27:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20080725.ebuild,v 1.2 2008/10/07 17:01:37 markusle Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -15,8 +15,7 @@ KEYWORDS="~ppc ~x86 ~amd64"
 IUSE=""
 # Can't do libf2c dependent on whether <gcc-4 is selected for the build,
 # so we must always require it
-RDEPEND="x11-libs/libX11
-	dev-libs/libf2c"
+RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}"
 
@@ -36,13 +35,6 @@ src_unpack() {
 }
 
 src_compile() {
-	local F2C
-	# Needs signal_ and system_, which g77 and libf2c provide,
-	# but gfortran does not
-	if [[ ${FORTRANC} != g77 ]]; then
-		F2C="-lf2c"
-	fi
-
 	# easy to ICE, at least on gcc 4.3
 	strip-flags
 

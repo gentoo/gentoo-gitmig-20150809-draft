@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/platon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.14 2008/08/30 11:27:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/ChangeLog,v 1.15 2008/10/07 17:01:38 markusle Exp $
+
+  07 Oct 2008; Markus Dittrich <markusle@gentoo.org> platon-20080725.ebuild:
+  Removed linking against -lf2c with gfortran since platon misbehaves
+  otherwise (fixes bug #240238). Thanks much to Honza Macháček
+  <Hloupy.Honza@centrum.cz> for his suggested improvements.
 
 *platon-20080725 (30 Aug 2008)
 
