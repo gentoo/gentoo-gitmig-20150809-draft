@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.25.ebuild,v 1.11 2008/10/06 04:47:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/passivetex/passivetex-1.25.ebuild,v 1.12 2008/10/07 05:45:18 aballier Exp $
 
 inherit latex-package
 
@@ -9,7 +9,7 @@ DESCRIPTION="A namespace-aware XML parser written in Tex"
 # Taken from: http://www.tei-c.org.uk/Software/passivetex/${PN}.zip
 SRC_URI="mirror://gentoo/${P}.zip"
 HOMEPAGE="http://www.tei-c.org.uk/Software/passivetex/"
-LICENSE="freedist"
+LICENSE="MIT"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 SLOT="0"
@@ -28,6 +28,6 @@ src_install() {
 	insinto ${TEXMF}/tex/xmltex/passivetex
 	doins *.sty *.xmt
 
-	dodoc README.passivetex LICENSE index.xml
+	dodoc README.passivetex index.xml
 	dohtml index.html
 }
