@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kimagemapeditor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.87 2008/09/13 23:58:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.88 2008/10/07 01:35:11 jmbsvicetto Exp $
+
+*kimagemapeditor-4.1.2 (07 Oct 2008)
+
+  07 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +kimagemapeditor-4.1.2.ebuild:
+  Added kimagemapeditor-4.1.2 from the kde-testing overlay. Thanks to Alexey
+  'alexxy' Shvetsov.
 
 *kimagemapeditor-3.5.10 (13 Sep 2008)
 
