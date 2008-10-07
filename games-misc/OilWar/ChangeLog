@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/OilWar
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/OilWar/ChangeLog,v 1.8 2007/05/23 06:08:16 tupone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/OilWar/ChangeLog,v 1.9 2008/10/07 17:21:27 mr_bones_ Exp $
+
+  07 Oct 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  OilWar-1.2.1-r1.ebuild:
+  avoid parallel make install failure (bug #239711); tidy
 
 *OilWar-1.2.1-r1 (23 May 2007)
 

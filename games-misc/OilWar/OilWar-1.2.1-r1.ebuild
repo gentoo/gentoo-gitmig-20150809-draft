@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/OilWar/OilWar-1.2.1-r1.ebuild,v 1.2 2007/05/23 11:39:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/OilWar/OilWar-1.2.1-r1.ebuild,v 1.3 2008/10/07 17:21:27 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -19,9 +19,15 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 	cd "${S}"
-	sed -i '/^datafiledir/s:/games/:/:' Makefile.in || die "sed failed"
+	sed -i \
+		-e '/^CXXCOMPILE/s:$(CPPFLAGS):$(SDL_CFLAGS):' \
+		-e '/^datafiledir/s:/games/:/:' \
+		-e '/install-data-am:/s:\\::' \
+		-e '/install-data-local$/d' \
+		Makefile.in \
+		|| die "sed failed"
 }
 
 src_compile() {
@@ -34,5 +40,6 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry oilwar ${PN}
+	fperms 664 "${GAMES_STATEDIR}/oilwar.scores"
 	prepgamesdirs
 }
