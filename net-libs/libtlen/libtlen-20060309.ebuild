@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/libtlen-20060309.ebuild,v 1.6 2008/10/06 20:43:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/libtlen-20060309.ebuild,v 1.7 2008/10/07 12:41:42 nixnut Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -11,7 +11,7 @@ DESCRIPTION="Support library for Tlen IMS"
 HOMEPAGE="http://tleenx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tleenx/${P}.tar.gz"
 
-KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~mips ppc sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="doc"
