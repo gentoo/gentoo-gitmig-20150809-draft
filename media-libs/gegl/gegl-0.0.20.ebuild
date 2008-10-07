@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.20.ebuild,v 1.1 2008/10/07 22:12:50 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.20.ebuild,v 1.2 2008/10/07 22:43:32 hanno Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gimp.org/pub/${PN}/0.0/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-3 LGPL-3 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="cairo debug doc ffmpeg gtk jpeg openexr sdl svg"
 
