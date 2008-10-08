@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.1.ebuild,v 1.1 2008/09/09 21:22:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.1.ebuild,v 1.2 2008/10/08 12:19:04 rbu Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -131,7 +131,12 @@ kernel_check() {
 				else
 					einfo "....[INET6_XFRM_MODE_BEET] IPv6: IPsec BEET mode is enabled :-)"
 				fi
-			fi
+				if ! { linux_chkconfig_present CRYPTO_NULL; }; then
+					ewarn "[CRYPTO_NULL] Crypto: NULL algorithm is NOT enabled"
+				else
+					einfo "....[CRYPTO_NULL] Cyrpto: Crypto NULL algorithm enabled :-)"
+				fi
+fi
 			# }}}
 
 			eend $?

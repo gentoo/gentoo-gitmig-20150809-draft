@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipsec-tools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.63 2008/09/09 21:22:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.64 2008/10/08 12:19:04 rbu Exp $
+
+  08 Oct 2008; Robert Buchholz <rbu@gentoo.org> ipsec-tools-0.7.1.ebuild:
+  Patch by Roy Marples: ipsec-tools should check for NULL crypto in kernel
+  (bug #223319)
 
 *ipsec-tools-0.7.1 (09 Sep 2008)
 
