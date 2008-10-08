@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.4 2008/05/02 16:10:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.5 2008/10/08 18:55:16 maekke Exp $
+
+inherit eutils
 
 DESCRIPTION="A slim GTK-based image browser"
 HOMEPAGE="http://gimmage.berlios.de/"
@@ -18,6 +20,12 @@ RDEPEND="dev-cpp/cairomm
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
 	econf $(use_enable debug) || die "econf failed"
