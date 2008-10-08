@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.20.ebuild,v 1.2 2008/10/07 22:43:32 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.20.ebuild,v 1.3 2008/10/08 09:27:27 hanno Exp $
 
 inherit eutils
 
@@ -15,14 +15,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE="cairo debug doc ffmpeg gtk jpeg openexr sdl svg"
 
 DEPEND=">=media-libs/babl-0.0.20
-	>=dev-libs/glib-2.14.1
+	>=dev-libs/glib-2.18.0
 	>=dev-lang/lua-5.1.0
 	media-libs/libpng
 	cairo? ( x11-libs/cairo )
 	doc? ( app-text/asciidoc
 		app-text/enscript
 		media-gfx/graphviz )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
 	gtk? ( >=x11-libs/gtk+-2.8.6
 		x11-libs/pango )
 	jpeg? ( media-libs/jpeg )
