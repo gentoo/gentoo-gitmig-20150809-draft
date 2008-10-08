@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gtk-recordmydesktop/gtk-recordmydesktop-0.3.7.2.ebuild,v 1.3 2008/05/18 00:45:49 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gtk-recordmydesktop/gtk-recordmydesktop-0.3.7.2.ebuild,v 1.4 2008/10/08 10:11:31 flameeyes Exp $
 
 DESCRIPTION="GTK interface for RecordMyDesktop"
 HOMEPAGE="http://recordmydesktop.iovar.org/"
@@ -20,6 +20,7 @@ RESTRICT="test"
 RDEPEND=">=x11-libs/gtk+-2.10.0
 	>=dev-python/pygtk-2
 	>=media-video/recordmydesktop-0.3.4"
+DEPEND="${RDEPEND}"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"

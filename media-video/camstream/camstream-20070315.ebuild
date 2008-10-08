@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.8 2008/06/21 11:57:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.9 2008/10/08 10:06:45 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -17,6 +17,7 @@ IUSE="doc mmx"
 
 RDEPEND="=x11-libs/qt-3*
 		media-libs/alsa-lib"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
