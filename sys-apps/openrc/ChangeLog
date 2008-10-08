@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.42 2008/10/06 18:53:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.43 2008/10/08 16:19:11 cardoe Exp $
+
+*openrc-0.3.0-r1 (08 Oct 2008)
+
+  08 Oct 2008; Doug Goldstein <cardoe@gentoo.org>
+  -files/openrc-0.2.4-start-nodep.patch,
+  +files/0.3.0/0006-Fix-tests-Gentoo-240350.patch,
+  +files/0.3.0/0007-Fix-utmp-permissions-Gentoo-240437.patch,
+  +files/0.3.0/0008-Clean-up-warnings-regarding-printf.patch,
+  -openrc-0.3.0.ebuild, +openrc-0.3.0-r1.ebuild:
+  fix bugs #240350, #240437. Fix printf warnings. Remove dead patch.
 
   06 Oct 2008; Doug Goldstein <cardoe@gentoo.org>
   +files/0.2.5/0002-useful-functions.patch, +files/0.2.5/0003-KV.patch,

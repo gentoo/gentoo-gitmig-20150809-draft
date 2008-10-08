@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.3.0.ebuild,v 1.1 2008/10/06 16:56:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.3.0-r1.ebuild,v 1.1 2008/10/08 16:19:11 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
