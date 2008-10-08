@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.1 2008/09/17 18:29:56 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.2 2008/10/08 15:49:28 bicatali Exp $
+
+  08 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  foolscap-0.3.1.ebuild:
+  Added ~x86
 
 *foolscap-0.3.1 (17 Sep 2008)
 
