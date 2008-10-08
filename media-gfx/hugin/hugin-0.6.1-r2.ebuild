@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.6.1-r2.ebuild,v 1.6 2008/05/02 11:46:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.6.1-r2.ebuild,v 1.7 2008/10/08 18:40:16 maekke Exp $
 
 inherit wxwidgets eutils autotools libtool
 
@@ -15,6 +15,7 @@ IUSE="unicode debug enblend sift"
 DEPEND="app-arch/zip
 		>=media-libs/libpano12-2.8.4
 		>=dev-libs/boost-1.30.0
+		x11-libs/gtk+
 		=x11-libs/wxGTK-2.6*
 		sys-libs/zlib
 		media-libs/libpng

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.47 2008/10/06 19:10:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.48 2008/10/08 18:40:16 maekke Exp $
+
+  08 Oct 2008; Markus Meier <maekke@gentoo.org> hugin-0.6.1-r2.ebuild:
+  add missing x11-libs/gtk+ dep, bug #239698
 
   06 Oct 2008; Markus Meier <maekke@gentoo.org> hugin-0.7.0-r1.ebuild:
   fix broken dep on dev-libs/boost, thanks to voyageur and Betelgeuse
