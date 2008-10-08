@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/panda3d-1.5.2.ebuild,v 1.1 2008/08/30 15:52:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/panda3d/panda3d-1.5.2.ebuild,v 1.2 2008/10/08 09:48:50 flameeyes Exp $
 
 inherit eutils python
 
@@ -24,7 +24,8 @@ DEPEND="doc? ( dev-python/epydoc )
 		ssl? ( dev-libs/openssl )
 		tiff? ( media-libs/tiff )
 		truetype? ( media-libs/freetype )
-		zlib? ( sys-libs/zlib )"
+		zlib? ( sys-libs/zlib )
+		virtual/opengl"
 
 use_no() {
 	local UWORD="$2"
