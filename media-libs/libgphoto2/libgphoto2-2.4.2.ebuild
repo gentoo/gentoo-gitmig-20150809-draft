@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.2.ebuild,v 1.1 2008/08/04 22:02:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.2.ebuild,v 1.2 2008/10/08 20:50:41 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -47,6 +47,8 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-devel/libtool
 	doc? ( app-doc/doxygen )"
+# FIXME: gtk-doc is broken
+#		>=dev-util/gtk-doc-1.10 )"
 
 RDEPEND="${RDEPEND}
 	!<sys-fs/udev-114"
@@ -69,6 +71,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	epatch "${FILESDIR}"/${PN}-2.4.0-rpm.patch
 
 	# Fix pkgconfig file when USE="-exif"
@@ -114,11 +117,16 @@ src_compile() {
 		--with-rpmbuild=/bin/true \
 		--disable-docs \
 		udevscriptdir=/lib/udev \
-		GTKDOC=/bin/true \
-		${myconf} || die "econf failed"
-# FIXME:		$(use_enable doc docs) \
+		${myconf}
+
+# FIXME: gtk-doc is currently broken
+#		$(use_enable doc docs)
 
 	emake || die "make failed"
+
+	if use doc; then
+		doxygen doc/Doxyfile || die "Documentation generation failed"
+	fi
 }
 
 src_install() {
