@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.393 2008/10/08 06:50:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.394 2008/10/08 06:52:41 aballier Exp $
+
+  08 Oct 2008; Alexis Ballier <aballier@gentoo.org> -vlc-0.9.3.ebuild:
+  remove old
 
   08 Oct 2008; Alexis Ballier <aballier@gentoo.org> vlc-0.9.4.ebuild:
   Add qt4 built with use checks for png useflag when using the qt4
