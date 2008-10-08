@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/scapy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.19 2008/08/30 19:34:07 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.20 2008/10/08 08:15:56 rbu Exp $
+
+*scapy-2.0.0.10 (08 Oct 2008)
+
+  08 Oct 2008; Robert Buchholz <rbu@gentoo.org> +scapy-2.0.0.10.ebuild:
+  Version bump, most notable feature: Integration of scapy6.
 
 *scapy-2.0.0.6 (30 Aug 2008)
 
