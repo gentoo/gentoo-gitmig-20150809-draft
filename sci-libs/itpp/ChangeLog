@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.82 2008/07/30 22:24:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.83 2008/10/08 22:50:58 markusle Exp $
+
+*itpp-4.0.6 (08 Oct 2008)
+
+  08 Oct 2008; Markus Dittrich <markusle@gentoo.org> +itpp-4.0.6.ebuild:
+  Version bump.
 
 *itpp-4.0.5 (30 Jul 2008)
 
