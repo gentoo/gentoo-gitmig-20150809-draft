@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.243 2008/09/20 16:11:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.244 2008/10/09 19:39:20 gengor Exp $
+
+*hardened-sources-2.6.25-r8 (09 Oct 2008)
+
+  09 Oct 2008; Gordon Malm <gengor@gentoo.org>
+  -hardened-sources-2.6.25-r4.ebuild, -hardened-sources-2.6.25-r5.ebuild,
+  -hardened-sources-2.6.25-r6.ebuild, +hardened-sources-2.6.25-r8.ebuild:
+  Update to genpatches-11 and Linux 2.6.25.18. Remove old versions.
 
   20 Sep 2008; nixnut <nixnut@gentoo.org> hardened-sources-2.6.25-r7.ebuild:
   Stable on ppc
