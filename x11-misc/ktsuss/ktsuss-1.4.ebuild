@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ktsuss-1.4.ebuild,v 1.2 2008/10/09 14:10:52 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ktsuss-1.4.ebuild,v 1.3 2008/10/09 14:15:54 darkside Exp $
 
 DESCRIPTION="ktsuss: keep the su simple, stupid. Graphical version of su written
 in C and GTK+ 2"
@@ -15,7 +15,7 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2.12.11
 	>=dev-libs/glib-2.16.5"
 DEPEND="dev-util/pkgconfig
-	${RDPEND}"
+	${RDEPEND}"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
