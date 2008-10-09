@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.5 2008/10/09 00:54:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.6 2008/10/09 21:10:36 hanno Exp $
+
+  09 Oct 2008; Hanno Boeck <hanno@gentoo.org> gegl-0.0.20.ebuild:
+  Fix ffmpeg, raise gtk+-dep, run eautoreconf, thanks to Francisco Javier.
 
   09 Oct 2008; Hanno Boeck <hanno@gentoo.org> gegl-0.0.20.ebuild:
   Add mmx and sse use flags, raise gtk+ dep.

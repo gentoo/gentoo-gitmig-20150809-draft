@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.20.ebuild,v 1.5 2008/10/09 00:54:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.20.ebuild,v 1.6 2008/10/09 21:10:36 hanno Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A graph based image processing framework"
 HOMEPAGE="http://www.gegl.org/"
@@ -23,7 +23,7 @@ DEPEND=">=media-libs/babl-0.0.20
 		app-text/enscript
 		media-gfx/graphviz )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
-	gtk? ( >=x11-libs/gtk+-2.12.0
+	gtk? ( >=x11-libs/gtk+-2.14.0
 		x11-libs/pango )
 	jpeg? ( media-libs/jpeg )
 	openexr? ( media-libs/openexr )
@@ -35,6 +35,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/gegl-18-configure-ac.patch" || die
 	epatch "${FILESDIR}/gegl-0.0.18-newffmpeg.diff" || die
+
+	eautoreconf
 }
 
 src_compile() {
@@ -45,7 +47,7 @@ src_compile() {
 		$(use_enable doc enscript) \
 		$(use_enable doc graphviz) \
 		$(use_enable doc workshop) \
-		$(use_enable ffmpeg) \
+		$(use_with ffmpeg libavcodec) \
 		$(use_enable gtk) \
 		$(use_enable gtk pango) \
 		$(use_with jpeg libjpeg) \
