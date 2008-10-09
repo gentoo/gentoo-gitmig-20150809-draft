@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.11.ebuild,v 1.7 2007/10/12 16:02:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-2.2.11.ebuild,v 1.8 2008/10/09 22:29:36 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -15,6 +15,7 @@ IUSE="novideo noaudio debug"
 
 RDEPEND="~dev-libs/pwlib-1.10.$((${PV##*.}-1))
 	>=media-video/ffmpeg-0.4.7"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
