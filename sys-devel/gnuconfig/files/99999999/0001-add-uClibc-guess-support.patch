@@ -1,6 +1,19 @@
---- config.guess
-+++ config.guess
-@@ -141,2 +141,19 @@
+From eeb92c3a61926ee07325efb48f1d72bad0e9c751 Mon Sep 17 00:00:00 2001
+From: Mike Frysinger <vapier@gentoo.org>
+Date: Thu, 9 Oct 2008 15:51:09 -0400
+Subject: [PATCH] add uClibc guess support
+
+---
+ config.guess |   77 ++++++++++++++++++++++++++++++++++++----------------------
+ 1 files changed, 48 insertions(+), 29 deletions(-)
+
+diff --git a/config.guess b/config.guess
+index f0f0d36..202f698 100755
+--- a/config.guess
++++ b/config.guess
+@@ -139,6 +139,23 @@ UNAME_RELEASE=`(uname -r) 2>/dev/null` || UNAME_RELEASE=unknown
+ UNAME_SYSTEM=`(uname -s) 2>/dev/null`  || UNAME_SYSTEM=unknown
+ UNAME_VERSION=`(uname -v) 2>/dev/null` || UNAME_VERSION=unknown
  
 +if [ "${UNAME_SYSTEM}" = "Linux" ] ; then
 +	eval $set_cc_for_build
@@ -20,7 +33,11 @@
 +fi
 +
  # Note: order is significant - the case branches are not exclusive.
-@@ -842,5 +859,5 @@
+ 
+ case "${UNAME_MACHINE}:${UNAME_SYSTEM}:${UNAME_RELEASE}:${UNAME_VERSION}" in
+@@ -840,31 +857,31 @@ EOF
+ 	if echo __ARM_EABI__ | $CC_FOR_BUILD -E - 2>/dev/null \
+ 	    | grep -q __ARM_EABI__
  	then
 -	    echo ${UNAME_MACHINE}-unknown-linux-gnu
 +	    echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
@@ -28,7 +45,7 @@
 -	    echo ${UNAME_MACHINE}-unknown-linux-gnueabi
 +	    echo ${UNAME_MACHINE}-unknown-linux-${LIBC}eabi
  	fi
-@@ -848,21 +865,21 @@
+ 	exit ;;
      avr32*:Linux:*:*)
 -	echo ${UNAME_MACHINE}-unknown-linux-gnu
 +	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
@@ -57,12 +74,20 @@
 -	echo ${UNAME_MACHINE}-unknown-linux-gnu
 +	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
  	exit ;;
-@@ -889,3 +906,3 @@
+     mips:Linux:*:*)
+ 	eval $set_cc_for_build
+@@ -887,7 +904,7 @@ EOF
+ 		s: ::g
+ 		p
  	    }'`"
 -	test x"${CPU}" != x && { echo "${CPU}-unknown-linux-gnu"; exit; }
 +	test x"${CPU}" != x && { echo "${CPU}-unknown-linux-${LIBC}"; exit; }
  	;;
-@@ -912,12 +929,12 @@
+     mips64:Linux:*:*)
+ 	eval $set_cc_for_build
+@@ -910,16 +927,16 @@ EOF
+ 		s: ::g
+ 		p
  	    }'`"
 -	test x"${CPU}" != x && { echo "${CPU}-unknown-linux-gnu"; exit; }
 +	test x"${CPU}" != x && { echo "${CPU}-unknown-linux-${LIBC}"; exit; }
@@ -79,14 +104,22 @@
 -	echo powerpc64-unknown-linux-gnu
 +	echo powerpc64-unknown-linux-${LIBC}
  	exit ;;
-@@ -934,4 +951,4 @@
+     alpha:Linux:*:*)
+ 	case `sed -n '/^cpu model/s/^.*: \(.*\)/\1/p' < /proc/cpuinfo` in
+@@ -932,8 +949,8 @@ EOF
+ 	  EV68*) UNAME_MACHINE=alphaev68 ;;
+         esac
  	objdump --private-headers /bin/sh | grep ld.so.1 >/dev/null
 -	if test "$?" = 0 ; then LIBC="libc1" ; else LIBC="" ; fi
 -	echo ${UNAME_MACHINE}-unknown-linux-gnu${LIBC}
 +	if test "$?" = 0 ; then LIBC="gnulibc1" ; fi
 +	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
  	exit ;;
-@@ -940,5 +957,5 @@
+     padre:Linux:*:*)
+ 	echo sparc-unknown-linux-gnu
+@@ -941,34 +958,34 @@ EOF
+     parisc:Linux:*:* | hppa:Linux:*:*)
+ 	# Look for CPU level
  	case `grep '^cpu[^a-z]*:' /proc/cpuinfo 2>/dev/null | cut -d' ' -f2` in
 -	  PA7*) echo hppa1.1-unknown-linux-gnu ;;
 -	  PA8*) echo hppa2.0-unknown-linux-gnu ;;
@@ -95,12 +128,14 @@
 +	  PA8*) echo hppa2.0-unknown-linux-${LIBC} ;;
 +	  *)    echo hppa-unknown-linux-${LIBC} ;;
  	esac
-@@ -946,3 +963,3 @@
+ 	exit ;;
      parisc64:Linux:*:* | hppa64:Linux:*:*)
 -	echo hppa64-unknown-linux-gnu
 +	echo hppa64-unknown-linux-${LIBC}
  	exit ;;
-@@ -952,18 +969,18 @@
+     s390:Linux:*:* | s390x:Linux:*:*)
+ 	echo ${UNAME_MACHINE}-ibm-linux
+ 	exit ;;
      sh64*:Linux:*:*)
 -    	echo ${UNAME_MACHINE}-unknown-linux-gnu
 +    	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
@@ -125,7 +160,11 @@
 -    	echo ${UNAME_MACHINE}-unknown-linux-gnu
 +    	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
  	exit ;;
-@@ -982,9 +999,9 @@
+     i*86:Linux:*:*)
+ 	# The BFD linker knows what the default object file format is, so
+@@ -983,17 +1000,19 @@ EOF
+ 				    p'`
+         case "$ld_supported_targets" in
  	  elf32-i386)
 -		TENTATIVE="${UNAME_MACHINE}-pc-linux-gnu"
 +		TENTATIVE="${UNAME_MACHINE}-pc-linux-${LIBC}"
@@ -134,11 +173,8 @@
 -		echo "${UNAME_MACHINE}-pc-linux-gnuaout"
 +		echo "${UNAME_MACHINE}-pc-linux-${LIBC}aout"
  		exit ;;
- 	  coff-i386)
--		echo "${UNAME_MACHINE}-pc-linux-gnucoff"
-+		echo "${UNAME_MACHINE}-pc-linux-${LIBC}coff"
- 		exit ;;
-@@ -993,5 +1010,7 @@
+ 	  "")
+ 		# Either a pre-BFD a.out linker (linux-gnuoldld) or
  		# one that does not give us useful --help.
 -		echo "${UNAME_MACHINE}-pc-linux-gnuoldld"
 +		echo "${UNAME_MACHINE}-pc-linux-${LIBC}oldld"
@@ -147,3 +183,8 @@
 +	# This should get integrated into the C code below, but now we hack
 +	if [ "$LIBC" != "gnu" ] ; then echo "$TENTATIVE" && exit 0 ; fi
  	# Determine whether the default compiler is a.out or elf
+ 	eval $set_cc_for_build
+ 	sed 's/^	//' << EOF >$dummy.c
+-- 
+1.6.0.1
+
