@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/lrmi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/ChangeLog,v 1.19 2008/08/23 12:47:22 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/ChangeLog,v 1.20 2008/10/09 20:35:19 maekke Exp $
+
+  09 Oct 2008; Markus Meier <maekke@gentoo.org> lrmi-0.10-r1.ebuild:
+  x86 stable, bug #239857
 
   23 Aug 2008; Michał Januszewski <spock@gentoo.org> -lrmi-0.6.ebuild,
   -lrmi-0.7.ebuild, -lrmi-0.9.ebuild, -lrmi-0.10.ebuild:
