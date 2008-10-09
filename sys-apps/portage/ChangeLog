@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.545 2008/10/09 16:59:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.546 2008/10/09 21:34:41 zmedico Exp $
+
+*portage-2.2_rc12 (09 Oct 2008)
+
+  09 Oct 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc12.ebuild:
+  2.2_rc12 bump. This fixes bugs #239272 (unhandled InvalidAtom
+  exception), #239529 (regression in doins -r on symlinks to directories),
+  #239560 (insecure search path for python -c), #240022 (condensed
+  @preserved-rebuild message), and #240684 (undefined default function
+  during src_prepare). Bug #210077 tracks all bugs fixed since 2.1.5.x.
+
+  09 Oct 2008; Zac Medico <zmedico@gentoo.org> -portage-2.2_rc8.ebuild,
+  -portage-2.2_rc9.ebuild:
+  Remove old.
+
+  09 Oct 2008; Zac Medico <zmedico@gentoo.org> portage-2.1.4.5.ebuild,
+  -files/portage-2.1.4.5.patch:
+  Update to use patch from mirrors instead of $FILESDIR.
 
 *portage-2.1.4.5 (09 Oct 2008)
 

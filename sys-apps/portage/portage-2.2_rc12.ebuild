@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc8.ebuild,v 1.2 2008/09/05 23:43:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc12.ebuild,v 1.1 2008/10/09 21:34:41 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -63,12 +63,6 @@ fi
 
 S="${WORKDIR}"/${PN}-${TARBALL_PV}
 S_PL="${WORKDIR}"/${PN}-${PV_PL}
-
-pkg_setup() {
-	MINOR_UPGRADE=$(has_version '>=sys-apps/portage-2.2_alpha' && echo true)
-	WORLD_MIGRATION_UPGRADE=$(has_version '<=sys-apps/portage-2.2_pre5' && echo true)
-	NEEDED_REBUILD_UPGRADE=$(has_version '<=sys-apps/portage-2.2_pre7' && echo true)
-}
 
 src_unpack() {
 	unpack ${A}
@@ -225,6 +219,24 @@ pkg_preinst() {
 	if [ -f "${ROOT}/etc/make.globals" ]; then
 		rm "${ROOT}/etc/make.globals"
 	fi
+
+	has_version ">=${CATEGORY}/${PN}-2.2_alpha"
+	MINOR_UPGRADE=$?
+
+	has_version "<=${CATEGORY}/${PN}-2.2_pre5"
+	WORLD_MIGRATION_UPGRADE=$?
+
+	has_version "<=${CATEGORY}/${PN}-2.2_pre7"
+	NEEDED_REBUILD_UPGRADE=$?
+
+	has_version "<${CATEGORY}/${PN}-2.2_alpha"
+	ADD_SYSTEM_TO_WORLD=$?
+
+	if [ $ADD_SYSTEM_TO_WORLD != 0 -a "$ROOT" != / ] && \
+		! has_version "${CATEGORY}/${PN}" ; then
+		# building stage 1
+		ADD_SYSTEM_TO_WORLD=0
+	fi
 }
 
 pkg_postinst() {
@@ -232,14 +244,20 @@ pkg_postinst() {
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
-	if [ -n "${WORLD_MIGRATION_UPGRADE}" ]; then
+	if [ $ADD_SYSTEM_TO_WORLD = 0 ] && \
+		[ ! -e "$ROOT"var/lib/portage/world_sets ] ; then
+		einfo "adding @system to world_sets for backward compatibility"
+		echo @system > "$ROOT"var/lib/portage/world_sets
+	fi
+
+	if [ $WORLD_MIGRATION_UPGRADE = 0 ] ; then
 		einfo "moving set references from the worldfile into world_sets"
 		cd "${ROOT}/var/lib/portage/"
 		grep "^@" world >> world_sets
 		sed -i -e '/^@/d' world
 	fi
 
-	if [ -n "${NEEDED_REBUILD_UPGRADE}" ]; then
+	if [ $NEEDED_REBUILD_UPGRADE = 0 ] ; then
 		einfo "rebuilding NEEDED.ELF.2 files"
 		for cpv in "${ROOT}/var/db/pkg"/*/*; do
 			if [ -f "${cpv}/NEEDED" ]; then
@@ -263,7 +281,7 @@ pkg_postinst() {
 	elog "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
 	elog
 
-	if [ -z "${MINOR_UPGRADE}" ]; then
+	if [ $MINOR_UPGRADE = 0 ] ; then
 		elog "If you're upgrading from a pre-2.2 version of portage you might"
 		elog "want to remerge world (emerge -e world) to take full advantage"
 		elog "of some of the new features in 2.2."

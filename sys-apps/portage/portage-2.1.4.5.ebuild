@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4.5.ebuild,v 1.1 2008/10/09 16:59:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4.5.ebuild,v 1.2 2008/10/09 21:34:41 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -41,7 +41,7 @@ SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 	${SRC_ARCHIVES}/${PN}-man-pl-${PV_PL}.tar.bz2 )"
 
-PATCHVER="2.1.4.4"
+PATCHVER="${PV}"
 if [ -n "${PATCHVER}" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
 	${SRC_ARCHIVES}/${PN}-${PATCHVER}.patch.bz2"
@@ -69,7 +69,6 @@ src_unpack() {
 		cd "${S}"
 		epatch "${WORKDIR}/${PN}-${PATCHVER}.patch"
 	fi
-	epatch "$FILESDIR"/portage-2.1.4.5.patch
 	einfo "Setting portage.VERSION to ${PVR} ..."
 	sed -i "s/^VERSION=.*/VERSION=\"${PVR}\"/" pym/portage.py || \
 		die "Failed to patch portage.VERSION"
