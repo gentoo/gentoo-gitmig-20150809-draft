@@ -1,0 +1,11 @@
+# ChangeLog for games-arcade/tecnoballz
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tecnoballz/ChangeLog,v 1.1 2008/10/09 20:42:44 tupone Exp $
+
+*tecnoballz-0.92 (09 Oct 2008)
+
+  09 Oct 2008; <tupone@gentoo.org> +files/tecnoballz-0.92-automake.patch,
+  +files/tecnoballz-0.92-gcc43.patch, +metadata.xml,
+  +tecnoballz-0.92.ebuild:
+  New package. Request bug #70447 by Mr. Bones. <mr_bones_@gentoo.org>
+
