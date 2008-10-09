@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/traceproto
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceproto/ChangeLog,v 1.6 2007/03/22 14:43:13 vanquirius Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceproto/ChangeLog,v 1.7 2008/10/09 20:40:58 flameeyes Exp $
+
+  09 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  traceproto-1.1.2_beta1.ebuild:
+  Fix build dependencies.
 
   22 Mar 2007; Marcelo Goes <vanquirius@gentoo.org> traceproto-1.1.1.ebuild,
   traceproto-1.1.2_beta1.ebuild:

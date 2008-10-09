@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceproto/traceproto-1.1.2_beta1.ebuild,v 1.2 2007/03/22 14:43:13 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceproto/traceproto-1.1.2_beta1.ebuild,v 1.3 2008/10/09 20:40:58 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -19,6 +19,7 @@ RDEPEND=">=net-libs/libnet-1.1.0
 	net-libs/libpcap
 	ncurses? ( sys-libs/ncurses )
 	debug? ( dev-libs/dmalloc )"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
