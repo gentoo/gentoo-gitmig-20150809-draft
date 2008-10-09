@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.0.1.ebuild,v 1.2 2008/10/07 12:50:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.0.1.ebuild,v 1.3 2008/10/09 20:37:21 maekke Exp $
 
 NEED_PYTHON=2.2
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.cheetahtemplate.org/"
 SRC_URI="mirror://sourceforge/cheetahtemplate/${MY_P}.tar.gz"
 LICENSE="PSF-2.2"
 IUSE=""
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc x86"
 SLOT="0"
 
 DEPEND="dev-python/setuptools"
