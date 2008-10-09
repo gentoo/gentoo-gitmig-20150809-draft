@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha17733.ebuild,v 1.3 2008/10/03 14:46:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha17733.ebuild,v 1.4 2008/10/09 20:52:54 cardoe Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -66,7 +66,7 @@ pkg_setup() {
 	if use xvmc && use video_cards_nvidia; then
 		elog
 		elog "For NVIDIA based cards, the XvMC renderer only works on"
-		elog "the NVIDIA 4, 5, 6 & & series cards."
+		elog "the NVIDIA 4, 5, 6 & 7 series cards."
 	fi
 
 	enewuser mythtv -1 /bin/bash /home/mythtv ${MYTHTV_GROUPS}
