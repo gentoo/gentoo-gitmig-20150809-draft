@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.60.ebuild,v 1.2 2008/10/08 15:53:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.60.ebuild,v 1.3 2008/10/09 04:41:12 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -32,10 +32,10 @@ SRC_URI="
 	qt-static? (
 		qt3-static? (
 			amd64? (
-				ia32? ( ${O_URI}linux${O_FTP}i386/shared/${P}.gcc4-static-qt3.i386.tar.bz2 )
+				ia32? ( ${O_URI}linux${O_FTP}i386/static/${P}.gcc4-static-qt3.i386.tar.bz2 )
 				!ia32? ( ${O_URI}linux${O_FTP}x86_64/${P}.gcc4-shared-qt3.x86_64.tar.bz2 )
 			)
-			x86? ( ${O_URI}linux${O_FTP}i386/shared/${P}.gcc4-static-qt3.i386.tar.bz2 )
+			x86? ( ${O_URI}linux${O_FTP}i386/static/${P}.gcc4-static-qt3.i386.tar.bz2 )
 		)
 		!qt3-static? (
 			amd64? (
