@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.3-r1.ebuild,v 1.1 2008/09/29 22:07:21 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.3-r2.ebuild,v 1.1 2008/10/09 05:21:54 darkside Exp $
 
 inherit distutils eutils
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
+DEPEND="dev-lang/python"
 RDEPEND="dev-python/dbus-python
 	dev-python/pygtk
 	|| (
@@ -25,12 +26,17 @@ RDEPEND="dev-python/dbus-python
 	|| (
 		sys-apps/ethtool
 		sys-apps/net-tools
-	)"
+	)
+	|| ( x11-misc/ktsuss x11-libs/gksu kde-base/kdesu )
+	${DEPEND}"
 
 src_unpack() {
 	distutils_src_unpack
 	# patch to install new man page - submitted upstream
 	epatch "${FILESDIR}/${P}-wicd-client-manpage.patch"
+	
+	# discussing with upstream
+	sed -i 's/gksu/gksudo/' wicd/{misc,gui}.py
 
 }
 
