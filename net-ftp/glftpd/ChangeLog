@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/glftpd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.18 2008/05/31 05:23:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/ChangeLog,v 1.19 2008/10/09 21:07:10 flameeyes Exp $
+
+  09 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> glftpd-2.01.ebuild:
+  Restrict stripping -- binary only package.
 
   31 May 2008; Mike Frysinger <vapier@gentoo.org> files/glftpd.xinetd.d:
   Dont both listing cert path in xinetd as it should be handled in the glftpd
