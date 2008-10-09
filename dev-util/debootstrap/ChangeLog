@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.73 2008/09/27 10:04:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.74 2008/10/09 04:48:02 jer Exp $
+
+  09 Oct 2008; Jeroen Roovers <jer@gentoo.org> -debootstrap-1.0.9.ebuild:
+  Remove old.
 
   27 Sep 2008; nixnut <nixnut@gentoo.org> debootstrap-1.0.10.ebuild:
   Stable on ppc wrt bug 235550
