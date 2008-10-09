@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.141 2008/06/30 07:53:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.142 2008/10/09 21:23:39 flameeyes Exp $
+
+  09 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> sudo-1.7.0_rc2.ebuild:
+  Add cyrus-sasl to dependencies (fixes bug #240618).
 
 *sudo-1.6.9_p17 (30 Jun 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.0_rc2.ebuild,v 1.1 2008/06/12 10:52:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.0_rc2.ebuild,v 1.2 2008/10/09 21:23:39 flameeyes Exp $
 
 inherit eutils pam confutils
 
@@ -25,7 +25,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~spa
 IUSE="pam skey offensive ldap selinux"
 
 DEPEND="pam? ( virtual/pam )
-	ldap? ( >=net-nds/openldap-2.1.30-r1 )
+	ldap? (
+		>=net-nds/openldap-2.1.30-r1
+		dev-libs/cyrus-sasl
+	)
 	skey? ( >=sys-auth/skey-1.1.5-r1 )
 	virtual/editor
 	virtual/mta"
@@ -33,7 +36,7 @@ RDEPEND="selinux? ( sec-policy/selinux-sudo )
 	ldap? ( dev-lang/perl )
 	pam? ( sys-auth/pambase )
 	${DEPEND}"
-DEPEND="${RDEPEND} sys-devel/bison"
+DEPEND="${DEPEND} sys-devel/bison"
 
 S=${WORKDIR}/${MY_P}
 
