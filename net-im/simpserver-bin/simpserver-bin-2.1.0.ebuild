@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/simpserver-bin/simpserver-bin-2.1.0.ebuild,v 1.2 2007/05/06 12:02:06 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/simpserver-bin/simpserver-bin-2.1.0.ebuild,v 1.3 2008/10/09 21:08:17 flameeyes Exp $
 
 MY_PN=${PN/-bin/}
 MY_P="${MY_PN}-${PV}"
@@ -14,6 +14,8 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 SLOT="0"
 S=${WORKDIR}/simp
+
+RESTRICT="strip"
 
 src_compile() {
 	einfo "Binary distribution.  No compilation required."
