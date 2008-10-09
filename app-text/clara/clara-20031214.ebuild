@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/clara/clara-20031214.ebuild,v 1.17 2008/10/05 22:30:44 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/clara/clara-20031214.ebuild,v 1.18 2008/10/09 15:21:53 spock Exp $
 
 DESCRIPTION="An OCR (Optical Character Recognition) program"
 SRC_URI="http://www.geocities.com/claraocr/clara-20031214.tar.gz"
@@ -13,13 +13,8 @@ IUSE=""
 
 DEPEND="x11-libs/libX11"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e "s/CFLAGS = \(.*\)/CFLAGS = ${CFLAGS} \1/" Makefile
-}
-
 src_compile() {
+	sed -i -e "s/CFLAGS = \(.*\)/CFLAGS = ${CFLAGS} \1/" Makefile
 	emake || die
 	emake doc || die
 }
