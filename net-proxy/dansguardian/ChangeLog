@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.36 2008/08/23 02:52:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.37 2008/10/09 20:07:27 mrness Exp $
+
+*dansguardian-2.10 (09 Oct 2008)
+
+  09 Oct 2008; Alin Năstac <mrness@gentoo.org>
+  -files/dansguardian-2.9.9.4-gentoo.patch,
+  -dansguardian-2.9.9.4_beta.ebuild, +dansguardian-2.10.ebuild:
+  Version bump (#240686).
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
