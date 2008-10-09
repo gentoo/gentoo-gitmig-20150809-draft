@@ -6,4 +6,7 @@
   <email>jurek@gentoo.org</email>
   <name>Jurek Bartuszek</name>
 </maintainer>
+	<use>
+		<flag name='vim'>Install vim plugin allowing to paste from vim by :Wklej</flag>
+	</use>
 </pkgmetadata>
