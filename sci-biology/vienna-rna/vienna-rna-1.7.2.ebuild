@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.7.2.ebuild,v 1.2 2008/10/06 22:34:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.7.2.ebuild,v 1.3 2008/10/09 13:03:30 markusle Exp $
 
-inherit toolchain-funcs multilib eutils versionator autotools
+inherit toolchain-funcs multilib eutils versionator autotools perl-module
 
 DESCRIPTION="The Vienna RNA Package - RNA secondary structure prediction and comparison"
 LICENSE="vienna-rna"
@@ -63,4 +63,7 @@ src_install() {
 	newdoc Readseq/Readme README.readseq && \
 		newdoc Readseq/Formats Formats.readseq \
 		|| die "Installing readseq Readme failed."
+
+	# remove perlocal.pod to avoid file collisions (see #240358)
+	fixlocalpod || die "Failed to remove perlocal.pod"
 }
