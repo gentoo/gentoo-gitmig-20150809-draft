@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.20.ebuild,v 1.4 2008/10/08 09:29:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.20.ebuild,v 1.5 2008/10/09 00:54:59 hanno Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="|| ( GPL-3 LGPL-3 )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="cairo debug doc ffmpeg gtk jpeg openexr sdl svg"
+IUSE="cairo debug doc ffmpeg gtk jpeg mmx openexr sdl sse svg"
 
 DEPEND=">=media-libs/babl-0.0.20
 	>=dev-libs/glib-2.18.0
@@ -23,7 +23,7 @@ DEPEND=">=media-libs/babl-0.0.20
 		app-text/enscript
 		media-gfx/graphviz )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
-	gtk? ( >=x11-libs/gtk+-2.8.6
+	gtk? ( >=x11-libs/gtk+-2.12.0
 		x11-libs/pango )
 	jpeg? ( media-libs/jpeg )
 	openexr? ( media-libs/openexr )
@@ -49,8 +49,10 @@ src_compile() {
 		$(use_enable gtk) \
 		$(use_enable gtk pango) \
 		$(use_with jpeg libjpeg) \
+		$(use_enable mmx) \
 		$(use_enable openexr) \
 		$(use_enable sdl) \
+		$(use_enable sse) \
 		$(use_enable svg) \
 		|| die "econf failed"
 	env GEGL_SWAP="${WORKDIR}" emake || die "emake failed"
