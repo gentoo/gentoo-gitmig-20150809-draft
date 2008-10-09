@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/stardict-freedict-tur-eng
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-tur-eng/ChangeLog,v 1.1 2008/10/09 19:17:24 serkan Exp $
+
+*stardict-freedict-tur-eng-2.4.2 (09 Oct 2008)
+
+  09 Oct 2008; Serkan Kaba <serkan@gentoo.org> +metadata.xml,
+  +stardict-freedict-tur-eng-2.4.2.ebuild:
+  Add Turkish to English stardict dictionary.
+
