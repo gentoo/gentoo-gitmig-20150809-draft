@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/padevchooser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.12 2008/08/02 20:28:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.13 2008/10/09 21:36:43 flameeyes Exp $
+
+*padevchooser-0.9.3-r1 (09 Oct 2008)
+
+  09 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +padevchooser-0.9.3-r1.ebuild:
+  Update to EAPI=2 and USE deps.
 
   02 Aug 2008; Petteri Räty <betelgeuse@gentoo.org>
   padevchooser-0.9.3.ebuild:
