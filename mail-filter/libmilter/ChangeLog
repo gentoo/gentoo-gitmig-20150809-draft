@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libmilter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.13 2008/10/04 14:08:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.14 2008/10/09 09:40:32 armin76 Exp $
+
+  09 Oct 2008; Raúl Porcel <armin76@gentoo.org> libmilter-8.14.3.ebuild:
+  Add ~alpha/~ia64 wrt #239121
 
   04 Oct 2008; Jeroen Roovers <jer@gentoo.org> libmilter-8.14.3.ebuild:
   Marked ~hppa (bug #239121).
