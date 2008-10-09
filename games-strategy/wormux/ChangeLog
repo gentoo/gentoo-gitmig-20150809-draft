@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/wormux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.24 2008/09/20 13:12:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.25 2008/10/09 06:03:40 nyhm Exp $
+
+  09 Oct 2008; Tristan Heaven <nyhm@gentoo.org> wormux-0.8.ebuild,
+  wormux-0.8.1.ebuild:
+  Add media-libs/libpng dependency, bug #239704
 
   20 Sep 2008; Markus Meier <maekke@gentoo.org> wormux-0.8.ebuild:
   x86 stable, bug #232703

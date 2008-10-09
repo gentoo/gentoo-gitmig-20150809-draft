@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.8.1.ebuild,v 1.1 2008/09/17 19:29:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.8.1.ebuild,v 1.2 2008/10/09 06:03:40 nyhm Exp $
 
 inherit autotools eutils games
 
@@ -19,6 +19,7 @@ RDEPEND="media-libs/libsdl
 	media-libs/sdl-ttf
 	media-libs/sdl-net
 	media-libs/sdl-gfx
+	media-libs/libpng
 	net-misc/curl
 	media-fonts/dejavu
 	>=dev-cpp/libxmlpp-2.6
