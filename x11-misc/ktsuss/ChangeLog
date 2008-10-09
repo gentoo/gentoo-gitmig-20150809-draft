@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/ktsuss
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.1 2008/10/09 05:06:39 darkside Exp $
+
+*ktsuss-1.4 (09 Oct 2008)
+
+  09 Oct 2008; Jeremy Olexa <darkside@gentoo.org> +metadata.xml,
+  +ktsuss-1.4.ebuild:
+  Initial commit of x11-misc/ktsuss, a small gtk+ su frontend
+
