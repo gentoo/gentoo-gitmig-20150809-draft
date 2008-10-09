@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ri-li/ri-li-2.0.1.ebuild,v 1.4 2008/06/24 10:07:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ri-li/ri-li-2.0.1.ebuild,v 1.5 2008/10/09 05:45:23 nyhm Exp $
 
-inherit eutils games
+inherit autotools eutils games
 
 DESCRIPTION="Drive a toy wood engine and collect all the coaches"
 HOMEPAGE="http://ri-li.sourceforge.net/"
@@ -22,13 +22,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	eautoreconf
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	rm -f "${D}${GAMES_DATADIR}/Ri-li/"*ebuild
-	doicon "${D}${GAMES_DATADIR}/Ri-li/"*png
-	dodoc AUTHORS ChangeLog NEWS README
-	make_desktop_entry Ri_li Ri-li Ri-li-icon-48x48
+	newicon data/Ri-li-icon-48x48.png ${PN}.png
+	make_desktop_entry Ri_li Ri-li
+	dodoc AUTHORS NEWS README
 	prepgamesdirs
 }
