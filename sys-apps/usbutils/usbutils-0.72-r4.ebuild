@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.72-r4.ebuild,v 1.10 2007/11/19 07:16:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.72-r4.ebuild,v 1.11 2008/10/10 09:00:39 robbat2 Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-f
 IUSE="network-cron"
 
 DEPEND="dev-libs/libusb"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

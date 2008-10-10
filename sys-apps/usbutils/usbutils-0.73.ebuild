@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.73.ebuild,v 1.12 2008/06/22 15:26:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.73.ebuild,v 1.13 2008/10/10 09:00:39 robbat2 Exp $
 
 inherit eutils autotools
 
@@ -15,6 +15,7 @@ IUSE="network-cron zlib"
 
 DEPEND="dev-libs/libusb"
 		# zlib? ( sys-libs/zlib )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

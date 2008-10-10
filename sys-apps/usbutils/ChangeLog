@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.73 2008/08/23 06:26:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.74 2008/10/10 09:00:39 robbat2 Exp $
+
+  10 Oct 2008; Robin H. Johnson <robbat2@gentoo.org>
+  usbutils-0.71-r1.ebuild, usbutils-0.72-r4.ebuild, usbutils-0.73.ebuild:
+  Bug #240642, make picky users happy with explicit RDEPEND="${DEPEND}".
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
