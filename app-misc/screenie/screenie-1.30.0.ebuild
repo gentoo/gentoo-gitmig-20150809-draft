@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/screenie-1.30.0.ebuild,v 1.6 2008/09/18 14:14:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/screenie-1.30.0.ebuild,v 1.7 2008/10/10 13:53:58 hawking Exp $
 
-DESCRIPTION="Screenie is a small and lightweight GNU screen(1) frontend that is designed to be a session handler that simplifies the process of administrating detached jobs by providing an interactive menu."
+DESCRIPTION="screen(1) frontend that is designed to be a session handler"
 HOMEPAGE="http://pubwww.hsz-t.ch/~mgloor/screenie.html"
 SRC_URI="http://pubwww.hsz-t.ch/~mgloor/data/${P}.tar.bz2"
 
