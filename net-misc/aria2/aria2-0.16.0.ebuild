@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.16.0.ebuild,v 1.1 2008/10/06 16:09:21 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.16.0.ebuild,v 1.2 2008/10/10 13:24:17 dev-zero Exp $
 
 EAPI="2"
+
+inherit eutils
 
 MY_P="aria2c-${PV/_p/+}"
 
@@ -34,6 +36,7 @@ RDEPEND="${CDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	epatch "${FILESDIR}/${PV}-missing_includes.patch"
 	sed -i -e "s|/tmp|${T}|" test/*.cc || die "sed failed"
 }
 

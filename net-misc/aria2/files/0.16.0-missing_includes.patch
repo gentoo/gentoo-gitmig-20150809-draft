@@ -1,0 +1,21 @@
+diff -Naur aria2c-0.16.0.orig/src/BtRuntime.h aria2c-0.16.0/src/BtRuntime.h
+--- aria2c-0.16.0.orig/src/BtRuntime.h	2008-10-10 14:25:15.000000000 +0200
++++ aria2c-0.16.0/src/BtRuntime.h	2008-10-10 14:41:46.000000000 +0200
+@@ -45,7 +45,7 @@
+   uint64_t uploadLengthAtStartup;
+   uint16_t port;
+   bool halt;
+-  unsigned int connections;
++  size_t connections;
+   bool _ready;
+ 
+   static const unsigned int MIN_PEERS = 40;
+@@ -81,7 +81,7 @@
+     this->halt = halt;
+   }
+ 
+-  unsigned int getConnections() const { return connections; }
++  size_t getConnections() const { return connections; }
+ 
+   void increaseConnections() { connections++; }
+ 
