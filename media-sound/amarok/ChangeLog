@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.285 2008/10/10 03:35:26 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.286 2008/10/10 12:55:33 gentoofan23 Exp $
+
+  10 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org> amarok-1.90.ebuild:
+  Amarok needs sqlite[threadsafe], adding it.
 
 *amarok-1.90 (10 Oct 2008)
 

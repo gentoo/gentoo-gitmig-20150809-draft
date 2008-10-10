@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.90.ebuild,v 1.1 2008/10/10 03:35:26 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.90.ebuild,v 1.2 2008/10/10 12:55:33 gentoofan23 Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
 
 DEPEND="
 	>=app-misc/strigi-0.5.7
-	dev-db/sqlite:3
+	dev-db/sqlite:3[threadsafe]
 	kde-base/kdelibs:${SLOT}
 	kde-base/libplasma:${SLOT}
 	>=media-libs/taglib-1.5
