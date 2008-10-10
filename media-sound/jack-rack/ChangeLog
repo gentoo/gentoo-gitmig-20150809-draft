@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.32 2008/04/14 18:12:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.33 2008/10/10 12:26:17 flameeyes Exp $
+
+*jack-rack-1.4.7-r1 (10 Oct 2008)
+
+  10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +jack-rack-1.4.7-r1.ebuild:
+  Update to EAPI=2 and USE deps.
 
 *jack-rack-1.4.7 (14 Apr 2008)
 
