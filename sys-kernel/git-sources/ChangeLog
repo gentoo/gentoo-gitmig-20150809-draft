@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.362 2008/10/09 10:20:17 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.363 2008/10/10 00:56:46 mpagano Exp $
+
+  10 Oct 2008; Mike Pagano <mpagano@gentoo.org>
+  -git-sources-2.6.27_rc8.ebuild, -git-sources-2.6.27_rc8-r1.ebuild,
+  -git-sources-2.6.27_rc8-r2.ebuild, -git-sources-2.6.27_rc8-r3.ebuild,
+  -git-sources-2.6.27_rc8-r4.ebuild, -git-sources-2.6.27_rc8-r5.ebuild:
+  Remove version with bad e1000e driver that could harm hardware
 
 *git-sources-2.6.27_rc9-r2 (09 Oct 2008)
 
