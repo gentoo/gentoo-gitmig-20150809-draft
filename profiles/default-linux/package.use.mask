@@ -20,14 +20,9 @@ sys-libs/glibc hardened
 games-fps/doom-data doomsday
 games-fps/freedoom doomsday
 
-# Ben de Groot <yngwin@gentoo.org> (10 Jun 2008)
-# use.masking for as long as kde4 is p.masked, see bug 225197
-x11-themes/qtcurve-qt4 kde
-
 # Ben de Groot <yngwin@gentoo.org> (22 Jun 2008)
 # does not work with ffmpeg new headers yet
 <net-www/gnash-0.8.3 ffmpeg
-
 
 # Steve Dibb <beandog@gentoo.org> (29 Sept 2008)
 # Arch-specific use flags, unmasked in their profiles

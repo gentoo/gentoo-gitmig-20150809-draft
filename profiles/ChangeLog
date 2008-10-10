@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1939 2008/10/10 14:29:13 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1940 2008/10/10 19:01:03 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Oct 2008; Ben de Groot <yngwin@gentoo.org>
+  default-bsd/package.use.mask, default-linux/package.use.mask,
+  default/linux/package.use.mask, hardened/package.use.mask:
+  Removing use.mask of x11-themes/qtcurve-qt4 kde, as kde-4.1.2 is now
+  unmasked.
 
   10 Oct 2008; Marcus D. Hanwell <cryos@gentoo.org> package.mask:
   Unmasked KDE 4.1.2 and associated dependencies/extras at long last. Sorry
