@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0-r1.ebuild,v 1.6 2008/05/22 01:26:28 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.6.0-r1.ebuild,v 1.7 2008/10/10 17:53:49 bicatali Exp $
 
 inherit autotools eutils
 
@@ -53,18 +53,22 @@ src_unpack() {
 		s:\(#define\) \(CHOLMOD_CONFIG_H\)\n:\1 \2\n\1 NPARTITION 1\n:}' \
 		Include/cholmod_config.h
 	fi
-
 	eautoreconf
 }
 
 src_compile() {
 	local lapack_libs=no
-	use supernodal && lapack_libs=$(pkg-config --libs lapack)
+	local blas_libs=no
+	if use supernodal; then
+		blas_libs=$(pkg-config --libs blas)
+		lapack_libs=$(pkg-config --libs lapack)
+	fi
 	econf \
+		--with-blas="${blas_libs}" \
 		--with-lapack="${lapack_libs}" \
 		$(use_enable supernodal mod-supernodal) \
 		$(use_enable !minimal mod-modify) \
-		$(use_enable !minimal mod-matrix-ops) \
+		$(use_enable !minimal mod-matrixops) \
 		$(use_enable metis mod-partition) \
 		|| die "econf failed"
 	emake || die "emake failed"
