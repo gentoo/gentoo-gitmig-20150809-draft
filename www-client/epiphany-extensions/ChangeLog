@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.93 2008/10/06 06:37:24 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.94 2008/10/10 11:43:57 armin76 Exp $
+
+  10 Oct 2008; Raúl Porcel <armin76@gentoo.org>
+  epiphany-extensions-2.24.0.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #239847
 
 *epiphany-extensions-2.24.0 (06 Oct 2008)
 
