@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.8.ebuild,v 1.2 2008/08/01 19:19:33 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.9.ebuild,v 1.1 2008/10/10 19:38:50 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -8,7 +8,7 @@ MY_P=${P/_}
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org/"
-SRC_URI="http://ftp.easysw.com/pub/cups/{PV}/${MY_P}-source.tar.bz2"
+SRC_URI="http://ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -166,8 +166,7 @@ src_compile() {
 		--enable-libpaper \
 		--enable-threads \
 		--disable-pdftops \
-		${myconf} \
-		|| die "econf failed"
+		${myconf}
 
 	# install in /usr/libexec always, instead of using /usr/lib/cups, as that
 	# makes more sense when facing multilib support.

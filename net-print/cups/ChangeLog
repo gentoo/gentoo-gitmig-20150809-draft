@@ -1,6 +1,21 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.327 2008/09/24 05:49:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.328 2008/10/10 19:38:50 tgurr Exp $
+
+*cups-1.3.9 (10 Oct 2008)
+*cups-1.3.8-r2 (10 Oct 2008)
+
+  10 Oct 2008; Timo Gurr <tgurr@gentoo.org>
+  +files/cups-1.3.8-CVE-2008-3639.patch,
+  +files/cups-1.3.8-CVE-2008-3640.patch,
+  +files/cups-1.3.8-CVE-2008-3641.patch, +files/cups-1.3.8-str2924.patch,
+  cups-1.2.12-r4.ebuild, -cups-1.2.12-r7.ebuild, cups-1.2.12-r8.ebuild,
+  -cups-1.3.7-r1.ebuild, -cups-1.3.8.ebuild, +cups-1.3.8-r2.ebuild,
+  +cups-1.3.9.ebuild:
+  Bump CUPS to new version 1.3.9 and revision 1.3.8-r2 to address some
+  security issues, bug #238976 and fix the broken desktop file, bug #236706
+  (Thanks to Pacho Ramos). Remove keywords on 1.2.12 to prevent users from
+  installing a unsecure CUPS version.
 
   24 Sep 2008; Jeroen Roovers <jer@gentoo.org> cups-1.3.8-r1.ebuild:
   Stable for HPPA (bug #235907).
