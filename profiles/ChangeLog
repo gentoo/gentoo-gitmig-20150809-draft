@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1938 2008/10/10 01:00:39 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1939 2008/10/10 14:29:13 cryos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Oct 2008; Marcus D. Hanwell <cryos@gentoo.org> package.mask:
+  Unmasked KDE 4.1.2 and associated dependencies/extras at long last. Sorry
+  about the delay!
 
   10 Oct 2008; Mike Pagano <mpagano@gentoo.org> package.mask:
   All versions of kernel that could damage e1000e hardware removed from tree.
