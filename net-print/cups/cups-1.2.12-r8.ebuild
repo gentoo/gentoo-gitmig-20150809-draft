@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r8.ebuild,v 1.10 2008/10/10 19:38:50 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.12-r8.ebuild,v 1.11 2008/10/10 20:26:35 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/cups/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="arm m68k s390 sh"
+KEYWORDS="~arm ~m68k ~s390 ~sh"
 IUSE="ldap ssl slp pam php samba nls dbus tiff png ppds jpeg X"
 
 DEP="pam? ( virtual/pam )
