@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.3.ebuild,v 1.1 2008/09/29 02:41:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.3.ebuild,v 1.2 2008/10/10 00:32:18 robbat2 Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_PV="${PV}-1"
 MY_P="${PN}-${MY_PV}"
@@ -16,12 +16,20 @@ DEPEND=">=dev-db/libdbi-0.8.3
 		postgres? ( virtual/postgresql-server )
 		sqlite? ( <dev-db/sqlite-3 )
 		sqlite3? ( >=dev-db/sqlite-3 )
-		!bindist? ( firebird? ( dev-db/firebird ) )"
+		!bindist? ( firebird? ( dev-db/firebird ) )
+		doc? ( app-text/openjade )"
 
-IUSE="mysql postgres sqlite oci8 firebird sqlite3 bindist"
+IUSE="mysql postgres sqlite oci8 firebird sqlite3 bindist doc"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 SLOT=0
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}"/${PN}-0.8.3-doc-build-fix.patch
+	cd "${S}"
+	eautoreconf
+}
 
 pkg_setup() {
 	local drivers=""
@@ -66,7 +74,7 @@ src_compile() {
 		myconf="${myconf} --with-oracle-dir=${ORACLE_HOME} --with-oracle"
 	fi
 
-	econf ${myconf} || die "econf failed"
+	econf $(use_enable doc docs) ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
