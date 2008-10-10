@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/edonkey/edonkey-1.3.0.ebuild,v 1.3 2008/04/13 21:51:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/edonkey/edonkey-1.3.0.ebuild,v 1.4 2008/10/10 10:53:00 flameeyes Exp $
 
 DESCRIPTION="Overnet is the successor of eDonkey2000 that allows you to share files with millions of other people across the globe."
 HOMEPAGE="http://www.overnet.com"
@@ -12,6 +12,8 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 S="${WORKDIR}"
+
+RESTRICT="strip"
 
 src_compile() {
 	einfo "Distributed in binary.  No compilation required."

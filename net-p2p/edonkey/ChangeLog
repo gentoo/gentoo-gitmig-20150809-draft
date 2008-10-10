@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/edonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/edonkey/ChangeLog,v 1.5 2008/04/13 21:51:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/edonkey/ChangeLog,v 1.6 2008/10/10 10:53:00 flameeyes Exp $
+
+  10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> edonkey-1.3.0.ebuild:
+  Restrict stripping -- binary only package.
 
   13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> edonkey-1.3.0.ebuild:
   Remove DEPEND on virtual/libc.

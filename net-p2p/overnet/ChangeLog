@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/overnet
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/ChangeLog,v 1.18 2008/04/13 21:50:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/ChangeLog,v 1.19 2008/10/10 10:54:25 flameeyes Exp $
+
+  10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> overnet-1.3.0.ebuild:
+  Restrict stripping -- binary only package.
 
   13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> overnet-1.3.0.ebuild:
   Remove DEPEND on virtual/libc.
