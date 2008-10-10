@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.43 2008/10/10 20:55:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.44 2008/10/10 22:06:35 flameeyes Exp $
+
+  10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> pcb-20080202.ebuild:
+  XML-Parser is unneeded, thanks leio.
 
   10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> pcb-20080202.ebuild:
   Fix build dependencies.
