@@ -1,28 +1,5 @@
 Don't strip - bug #240764
 
---- configure.orig	2004-01-01 20:18:14.000000000 +0100
-+++ configure	2008-10-10 13:09:09.000000000 +0200
-@@ -551,7 +551,7 @@
- # Check whether --enable-debug or --disable-debug was given.
- if test "${enable_debug+set}" = set; then
-   enableval="$enable_debug"
--  CFLAGS="$CFLAGS -O2 -Wall -g"
-+#  CFLAGS="$CFLAGS -O2 -Wall -g"
- CPPFLAGS="$CPPFLAGS -DDEBUG"
- LDFLAGS="$LDFLAGS"
- fi
-@@ -560,8 +560,9 @@
- if test "${enable_optim+set}" = set; then
-   enableval="$enable_optim"
-   if test "x$enable_debug" != "xyes" ; then
--  CFLAGS="$CFLAGS -O3 -fomit-frame-pointer -g0"
--  LDFLAGS="$LDFLAGS -s"
-+#  CFLAGS="$CFLAGS -O3 -fomit-frame-pointer -g0"
-+#  LDFLAGS="$LDFLAGS -s"
-+  true
- else
-   echo "configure: warning: enable-optim and enable-debug are incompatible -- disabling optimizations" 1>&2
- fi
 --- Makefile.in.orig	2002-09-19 02:00:40.000000000 +0200
 +++ Makefile.in	2008-10-10 13:17:39.000000000 +0200
 @@ -66,7 +66,7 @@
