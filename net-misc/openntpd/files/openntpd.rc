@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/files/openntpd.rc,v 1.6 2008/06/08 21:48:13 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/files/openntpd.rc,v 1.7 2008/10/10 09:40:10 bangert Exp $
 
 depend() {
 	need net
@@ -36,6 +36,6 @@ start() {
 
 stop() {
 	ebegin "Stopping ntpd"
-	start-stop-daemon --stop --name ntpd --user root
+	start-stop-daemon --stop --exec /usr/sbin/ntpd --name ntpd --user root
 	eend $? "Failed to stop openntpd"
 }
