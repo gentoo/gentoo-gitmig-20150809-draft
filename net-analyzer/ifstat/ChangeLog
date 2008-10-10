@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ifstat
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.19 2007/08/30 03:02:00 jer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.20 2008/10/10 11:20:01 jer Exp $
+
+  10 Oct 2008; Jeroen Roovers <jer@gentoo.org>
+  +files/ifstat-1.1-strip_and_cflags.patch, ifstat-1.1.ebuild:
+  Do not strip (bug #240764).
 
   30 Aug 2007; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Pick up maintainership.

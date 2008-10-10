@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ifstat-1.1.ebuild,v 1.12 2006/03/05 20:39:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ifstat-1.1.ebuild,v 1.13 2008/10/10 11:20:01 jer Exp $
+
+inherit eutils
 
 IUSE="snmp"
 
@@ -15,9 +17,12 @@ KEYWORDS="sparc x86 amd64 ppc64 hppa ppc"
 DEPEND="virtual/libc
 	snmp? ( >=net-analyzer/net-snmp-5.0 )"
 
-src_compile() {
-	econf || die
-	make || die
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-strip_and_cflags.patch
 }
 
 src_install () {
