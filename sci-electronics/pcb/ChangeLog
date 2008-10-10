@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.42 2008/08/06 15:45:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.43 2008/10/10 20:55:31 flameeyes Exp $
+
+  10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> pcb-20080202.ebuild:
+  Fix build dependencies.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
