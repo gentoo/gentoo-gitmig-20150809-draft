@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.65 2008/08/14 20:58:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.66 2008/10/10 12:56:32 flameeyes Exp $
+
+*hydrogen-0.9.3-r4 (10 Oct 2008)
+
+  10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +hydrogen-0.9.3-r4.ebuild:
+  Update to EAPI=2 and USE deps.
 
   14 Aug 2008; Alexis Ballier <aballier@gentoo.org>
   +files/hydrogen-0.9.3-gcc43noalsa.patch, hydrogen-0.9.3-r3.ebuild:
