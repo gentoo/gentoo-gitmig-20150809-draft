@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tecnoballz/tecnoballz-0.92.ebuild,v 1.1 2008/10/09 20:42:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tecnoballz/tecnoballz-0.92.ebuild,v 1.2 2008/10/10 19:33:19 nyhm Exp $
 
 inherit eutils autotools games
 
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}download/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl
