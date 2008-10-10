@@ -1,10 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.91.4.ebuild,v 1.1 2008/06/26 11:26:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.91.4.ebuild,v 1.2 2008/10/10 08:44:05 bicatali Exp $
 
 NEED_PYTHON=2.3
-
-inherit eutils distutils
+WX_GTK_VER=2.8
+EAPI=1
+inherit eutils distutils wxwidgets
 
 DOC_PV=0.91.2svn
 
@@ -24,7 +25,7 @@ DEPEND="dev-python/numpy
 	dev-python/pytz
 	dev-python/python-dateutil
 	gtk? ( dev-python/pygtk )
-	wxwindows? ( dev-python/wxpython )"
+	wxwindows? ( dev-python/wxpython:2.8 )"
 
 RDEPEND="${DEPEND}
 	|| ( media-fonts/ttf-bitstream-vera media-fonts/dejavu )
