@@ -1,9 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.1.0.ebuild,v 1.3 2008/10/04 11:51:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.1.1.ebuild,v 1.1 2008/10/10 19:14:20 pva Exp $
 
 EAPI=1
-WANT_AUTOMAKE="1.9"
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
@@ -13,29 +12,28 @@ HOMEPAGE="http://www.wireshark.org/"
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && {
 SRC_URI="http://www.wireshark.org/download/prerelease/${PN}-${PV/_rc/pre}.tar.gz";
 S=${WORKDIR}/${PN}-${PV/_rc/pre} ; } || \
-SRC_URI="http://www.wireshark.org/download/src/all-versions/${P}.tar.gz"
+SRC_URI="http://www.wireshark.org/download/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="adns gtk ipv6 lua portaudio gnutls ares gcrypt zlib kerberos threads profile smi +pcap pcre +caps selinux"
+IUSE="adns +gtk ipv6 lua portaudio gnutls ares gcrypt zlib kerberos threads profile smi +pcap pcre +caps selinux"
 
-RDEPEND="zlib? ( sys-libs/zlib )
+RDEPEND=">=dev-libs/glib-2.4.0:2
+	zlib? ( sys-libs/zlib )
 	smi? ( net-libs/libsmi )
-	gtk? ( >=dev-libs/glib-2.0.4
-		=x11-libs/gtk+-2*
+	gtk? ( >=x11-libs/gtk+-2.4.0:2
 		x11-libs/pango
 		dev-libs/atk )
-	!gtk? ( =dev-libs/glib-1.2* )
 	gnutls? ( net-libs/gnutls )
 	gcrypt? ( dev-libs/libgcrypt )
 	pcap? ( net-libs/libpcap )
 	pcre? ( dev-libs/libpcre )
 	caps? ( sys-libs/libcap )
-	ares? ( >=net-dns/c-ares-1.5 )
-	!ares? ( adns? ( net-libs/adns ) )
 	kerberos? ( virtual/krb5 )
 	portaudio? ( media-libs/portaudio )
+	ares? ( >=net-dns/c-ares-1.5 )
+	!ares? ( adns? ( net-libs/adns ) )
 	lua? ( >=dev-lang/lua-5.1 )
 	selinux? ( sec-policy/selinux-wireshark )"
 
@@ -48,7 +46,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if ! use gtk; then
-		ewarn "USE=-gtk will mean no gui called wireshark will be created and"
+		ewarn "USE=-gtk will means no gui called wireshark will be created and"
 		ewarn "only command line utils are available"
 	fi
 
@@ -67,13 +65,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	# Try to drop --as-needed patches for 1.0.1. All problems are supposed to be
-	# fixed there...
-	cd "${S}"
-	#epatch "${FILESDIR}"/${PN}-0.99.7-asneeded.patch
-	epatch "${FILESDIR}"/${P}-as-needed.patch
-
-	# again our hardened toolchain bug...
+	# our hardened toolchain bug...
 	cd "${S}"/epan
 	epatch "${FILESDIR}"/wireshark-except-double-free.diff
 
@@ -98,13 +90,6 @@ src_compile() {
 	# profile and -fomit-frame-pointer are incompatible, bug #215806
 	use profile && filter-flags -fomit-frame-pointer
 
-	if use gtk; then
-		einfo "Building with gtk support"
-	else
-		einfo "Building without gtk support"
-		myconf="${myconf} --disable-wireshark"
-	fi
-
 	# Workaround bug #213705. If krb5-config --libs has -lcrypto then pass
 	# --with-ssl to ./configure. (Mimics code from acinclude.m4).
 	if use kerberos; then
@@ -114,11 +99,10 @@ src_compile() {
 	fi
 
 	# dumpcap requires libcap, setuid-install requires dumpcap
-	econf $(use_enable gtk gtk2) \
+	econf $(use_enable gtk wireshark) \
 		$(use_enable profile profile-build) \
 		$(use_with gnutls) \
 		$(use_with gcrypt) \
-		$(use_enable gtk wireshark) \
 		$(use_enable ipv6) \
 		$(use_enable threads) \
 		$(use_with lua) \
@@ -148,15 +132,15 @@ src_install() {
 	doins wiretap/wtap.h
 
 	# FAQ is not required as is installed from help/faq.txt
-	dodoc AUTHORS ChangeLog NEWS README{,bsd,linux,macos,vmware} doc/randpkt.txt
+	dodoc AUTHORS ChangeLog NEWS README{,.bsd,.linux,.macos,.vmware} doc/randpkt.txt
 
-	if use gtk ; then
-		insinto /usr/share/icons/hicolor/16x16/apps
-		newins image/hi16-app-wireshark.png wireshark.png
-		insinto /usr/share/icons/hicolor/32x32/apps
-		newins image/hi32-app-wireshark.png wireshark.png
-		insinto /usr/share/icons/hicolor/48x48/apps
-		newins image/hi48-app-wireshark.png wireshark.png
+	if use gtk; then
+		for c in hi lo; do
+			for d in 16 32 48; do
+				insinto /usr/share/icons/${c}color/${d}x${d}/apps
+				newins image/${c}${d}-app-wireshark.png wireshark.png
+			done
+		done
 		insinto /usr/share/applications
 		doins wireshark.desktop
 	fi
