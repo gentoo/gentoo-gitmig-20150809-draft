@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gtk-gamess/gtk-gamess-2.00.ebuild,v 1.4 2008/05/11 18:42:04 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gtk-gamess/gtk-gamess-2.00.ebuild,v 1.5 2008/10/10 20:41:05 flameeyes Exp $
 
 DESCRIPTION="GTK-GAMESS is a graphical frontend for GAMESS, a General Atomic and Molecular Electronic Structure System"
 HOMEPAGE="http://sourceforge.net/projects/gtk-gamess/"
@@ -18,6 +18,8 @@ RDEPEND=">=gnome-base/libglade-2.4
 	>=x11-libs/gtk+-2.6
 	dev-libs/libxml2
 	sci-chemistry/gamess"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
 
