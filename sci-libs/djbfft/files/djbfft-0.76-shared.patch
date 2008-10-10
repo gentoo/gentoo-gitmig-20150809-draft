@@ -79,7 +79,7 @@
 +	*) echo '  ranlib "$$main"' ;; \
 +	esac; \
 +	echo 'else'; \
-+	echo '  exec `head -1 conf-ld` -shared -o "$$main" $${1+"$$@"}'; \
++	echo '  exec `head -1 conf-ld` -shared -Wl,-soname,libdjbfft.so.0.7.6 -o "$$main" $${1+"$$@"}'; \
 +	echo 'fi'; \
  	) > makelib
  	chmod 755 makelib
