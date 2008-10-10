@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.284 2008/10/04 08:49:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.285 2008/10/10 03:35:26 jmbsvicetto Exp $
+
+*amarok-1.90 (10 Oct 2008)
+
+  10 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-1.90.ebuild:
+  Bumped amarok to version 1.90. Version 1.92 will remain masked in the
+  ovelay due to the dep in mysql[embedded].
 
   04 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Remove duplicate flags from metadata. Some were alreay well explained in
