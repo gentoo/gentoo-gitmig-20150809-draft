@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.22 2008/06/25 02:59:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.23 2008/10/10 08:14:28 robbat2 Exp $
+
+  10 Oct 2008; Robin H. Johnson <robbat2@gentoo.org>
+  suite3270-3.2.20.ebuild, suite3270-3.3.2_p1.ebuild,
+  suite3270-3.3.4_p6.ebuild, suite3270-3.3.5_p8.ebuild,
+  suite3270-3.3.6.ebuild, suite3270-3.3.7.ebuild, suite3270-3.3.7_p5.ebuild:
+  Bug #233058, add x11-misc/xbitmaps thanks to Jesse Farinacci
+  <jieryn@gmail.com>.
 
 *suite3270-3.3.7_p5 (25 Jun 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.7_p5.ebuild,v 1.1 2008/06/25 02:59:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/suite3270-3.3.7_p5.ebuild,v 1.2 2008/10/10 08:14:28 robbat2 Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ RDEPEND="X? ( x11-libs/libX11
 
 DEPEND="${RDEPEND}
 		X? ( x11-misc/imake
+			 x11-misc/xbitmaps
 			 x11-proto/xproto
 			 app-text/rman
 			 x11-apps/mkfontdir
