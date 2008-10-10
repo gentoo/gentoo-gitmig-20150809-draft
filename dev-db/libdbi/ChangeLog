@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/libdbi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.22 2008/10/05 21:12:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.23 2008/10/10 00:24:46 robbat2 Exp $
+
+  10 Oct 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/libdbi-0.8.3-doc-build-fix.patch, libdbi-0.8.3.ebuild:
+  Make documentation build properly optional instead of dependant on system
+  contents.
 
   05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> libdbi-0.8.3.ebuild:
   Fix build-time dependencies.
