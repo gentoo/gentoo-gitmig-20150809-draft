@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.27.ebuild,v 1.1 2008/06/29 18:46:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/straw-0.27.ebuild,v 1.2 2008/10/10 10:41:44 flameeyes Exp $
 
 inherit gnome2 python distutils virtualx
 
@@ -25,6 +25,8 @@ RDEPEND="${DEPEND}
 	dev-python/gnome-python-extras
 	dev-python/dbus-python
 	!ppc? ( >=dev-python/adns-python-1.0.0 )"
+DEPEND="${DEPEND}
+	dev-util/intltool"
 
 # dev-python/gnome-python-extras provides gtkhtml2 python module
 

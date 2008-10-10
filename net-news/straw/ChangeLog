@@ -1,6 +1,9 @@
 # ChangeLog for net-news/straw
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.10 2008/06/29 18:46:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/straw/ChangeLog,v 1.11 2008/10/10 10:41:44 flameeyes Exp $
+
+  10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> straw-0.27.ebuild:
+  Fix build dependencies.
 
 *straw-0.27 (29 Jun 2008)
 
