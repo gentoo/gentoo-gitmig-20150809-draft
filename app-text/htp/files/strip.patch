@@ -1,0 +1,11 @@
+--- src/Makefile.orig	2008-10-11 21:58:25.000000000 +0200
++++ src/Makefile	2008-10-11 21:58:35.000000000 +0200
+@@ -33,7 +33,7 @@
+ 
+ install-bin: $(MAINEXE)
+ 	mkdir -p $(bindir)
+-	$(INSTALL) -s $(MAINEXE) $(bindir)
++	$(INSTALL) $(MAINEXE) $(bindir)
+ 
+ #
+ # explicit dependency: final executable

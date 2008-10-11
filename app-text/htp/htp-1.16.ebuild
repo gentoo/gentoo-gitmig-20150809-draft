@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htp/htp-1.16.ebuild,v 1.1 2008/09/10 08:33:39 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htp/htp-1.16.ebuild,v 1.2 2008/10/11 20:05:24 wrobel Exp $
 
 inherit distutils eutils
 
@@ -23,6 +23,8 @@ src_unpack() {
 	cd "${S}"
 	# Patch to remove meta-generator tag with "ego-gratifying Easter egg":
 	epatch "${FILESDIR}/easteregg.patch"
+	# Fix for #240110
+	epatch "${FILESDIR}/strip.patch"
 }
 
 src_compile() {

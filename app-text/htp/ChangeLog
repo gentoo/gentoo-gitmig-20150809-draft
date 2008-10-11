@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htp
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htp/ChangeLog,v 1.8 2008/09/10 08:33:39 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htp/ChangeLog,v 1.9 2008/10/11 20:05:24 wrobel Exp $
+
+  11 Oct 2008; Gunnar Wrobel <wrobel@gentoo.org> +files/strip.patch,
+  htp-1.16.ebuild:
+  Fix for #240110.
 
 *htp-1.16 (10 Sep 2008)
 
