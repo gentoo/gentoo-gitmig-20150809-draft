@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.545 2008/10/06 23:24:09 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.546 2008/10/11 15:03:50 mpagano Exp $
+
+*gentoo-sources-2.6.26-r2 (11 Oct 2008)
+
+  11 Oct 2008; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.26-r2.ebuild:
+  Includes linux 2.6.26.3, 2.6.26.4, 2.6.26.5, 2.6.26.6 and a missing
+  capability security patch in drivers/net/wan/sbni.c.
 
 *gentoo-sources-2.6.25-r9 (06 Oct 2008)
 
