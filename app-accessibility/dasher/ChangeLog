@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.131 2008/09/25 16:03:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.132 2008/10/11 14:17:00 eva Exp $
+
+*dasher-4.9.0 (11 Oct 2008)
+
+  11 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org> +dasher-4.9.0.ebuild:
+  New version for GNOME 2.24. Integration of gentoo patches and HIG work.
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org> dasher-4.7.3.ebuild:
   Stable for HPPA (bug #236971).
