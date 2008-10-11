@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.4 2008/05/28 21:24:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.5 2008/10/11 18:41:56 flameeyes Exp $
 
 inherit eutils versionator multilib autotools
 
@@ -34,7 +34,7 @@ S="${WORKDIR}/${MY_P}"
 
 db_getver() {
 	local DBPKG
-	DBPKG="$(best_version '>=sys-libs/db-4*')"
+	DBPKG="$(best_version '>=sys-libs/db-4')"
 	echo "${DBPKG//sys-libs\/db-}"
 }
 
