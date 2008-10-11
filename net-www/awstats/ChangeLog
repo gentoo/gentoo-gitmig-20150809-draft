@@ -1,6 +1,11 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.61 2008/02/19 15:40:48 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.62 2008/10/11 18:33:50 wrobel Exp $
+
+*awstats-6.9 (11 Oct 2008)
+
+  11 Oct 2008; Gunnar Wrobel <wrobel@gentoo.org> +awstats-6.9.ebuild:
+  Added awstats-6.9 in response to sec issue #235225.
 
   19 Feb 2008; Benedikt Böhm <hollow@gentoo.org>
   -files/awstats-6.5-CVE-2006-2237-CVE-2006-1945.diff,
