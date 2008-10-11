@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.122 2008/10/11 11:55:30 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.123 2008/10/11 15:55:52 jer Exp $
+
+  11 Oct 2008; Jeroen Roovers <jer@gentoo.org> strace-4.5.18.ebuild:
+  Stable for HPPA (bug #241168).
 
   11 Oct 2008; Friedrich Oslage <bluebird@gentoo.org> strace-4.5.18.ebuild:
   Stable on sparc, bug #241168
