@@ -20,6 +20,12 @@ sys-libs/glibc hardened
 games-fps/doom-data doomsday
 games-fps/freedoom doomsday
 
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (11 Oct 2008)
+# We can't remove this until kde4 is marked stable
+# Ben de Groot <yngwin@gentoo.org> (10 Jun 2008)
+# use.masking for as long as kde4 is p.masked, see bug 225197
+x11-themes/qtcurve-qt4 kde
+
 # Ben de Groot <yngwin@gentoo.org> (22 Jun 2008)
 # does not work with ffmpeg new headers yet
 <net-www/gnash-0.8.3 ffmpeg
