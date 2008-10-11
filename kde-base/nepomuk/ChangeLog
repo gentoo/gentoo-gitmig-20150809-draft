@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/nepomuk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.11 2008/10/02 11:05:24 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.12 2008/10/11 21:19:48 jmbsvicetto Exp $
+
+  11 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  nepomuk-4.1.2.ebuild:
+  Added a dep on kdelibs[semantic-desktop].
 
 *nepomuk-4.1.2 (02 Oct 2008)
 

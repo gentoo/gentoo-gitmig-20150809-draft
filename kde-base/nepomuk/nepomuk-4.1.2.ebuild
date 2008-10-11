@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/nepomuk-4.1.2.ebuild,v 1.1 2008/10/02 11:05:24 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/nepomuk-4.1.2.ebuild,v 1.2 2008/10/11 21:19:48 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -17,4 +17,5 @@ IUSE="debug"
 DEPEND=">=app-misc/strigi-0.5.10[qt4]
 	dev-cpp/clucene
 	>=dev-libs/soprano-2.0.98[clucene]"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	kde-base/kdelibs[semantic-desktop]"
