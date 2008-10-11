@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.147 2008/10/08 21:04:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.148 2008/10/11 02:47:47 robbat2 Exp $
+
+  11 Oct 2008; Robin H. Johnson <robbat2@gentoo.org> files/init.d-pciparm:
+  Cleanup init script more.
 
   08 Oct 2008; Robin H. Johnson <robbat2@gentoo.org> files/init.d-pciparm:
   Simplify pciparm init code based partially on old suggestions from
