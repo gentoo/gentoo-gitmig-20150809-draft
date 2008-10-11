@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.15 2008/09/25 14:04:11 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.16 2008/10/11 22:59:04 flameeyes Exp $
+
+  11 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> qscintilla-2.3.ebuild:
+  Fix build dependencies.
 
 *qscintilla-2.3 (25 Sep 2008)
 

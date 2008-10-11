@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.3.ebuild,v 1.1 2008/09/25 14:04:11 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.3.ebuild,v 1.2 2008/10/11 22:59:04 flameeyes Exp $
 
 EAPI=1
 inherit eutils toolchain-funcs multilib
@@ -22,6 +22,7 @@ RDEPEND="qt4? ( || ( x11-libs/qt-gui:4
 		=x11-libs/qt-4.3*:4 )
 	)
 	!qt4? ( x11-libs/qt:3 )"
+DEPEND="${RDEPEND}"
 # dev-python/PyQt needs qscintilla to build and qscintilla's python bindings
 # need dev-python/PyQt, bug 199543
 PDEPEND="python? ( dev-python/qscintilla-python )"
