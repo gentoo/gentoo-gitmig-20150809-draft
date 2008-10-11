@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.13 2008/08/14 08:13:48 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.14 2008/10/11 03:50:12 keri Exp $
+
+  11 Oct 2008; <keri@gentoo.org> files/xsb-3.1-configure.patch:
+  Fix configure to ignore interprolog with USE=-java. Closes #240209
 
   14 Aug 2008; <keri@gentoo.org> xsb-3.1.ebuild:
   Fix up interprolog and mt options. Closes #234192.

@@ -1,5 +1,5 @@
 --- XSB.orig/build/configure.in	2007-08-23 07:21:23.000000000 +1200
-+++ XSB/build/configure.in	2007-11-24 19:54:25.000000000 +1300
++++ XSB/build/configure.in	2008-10-11 16:43:56.000000000 +1300
 @@ -366,9 +366,9 @@
  dnl prefix given by the user. The prefix variable will later get
  dnl the <xsb-version> subdirectory added in.
@@ -175,6 +175,15 @@
      if test "${java_support}" != "yes"; then
          echo "Interprolog not supported due to failure to find Java"
          with_interprolog=""
+@@ -1286,7 +1289,7 @@
+ INTERPROLOGSRC=""
+ INTERPROLOGOBJ=""
+ 
+-if test "${with_interprolog+set}" = "set"; then
++if test "${with_interprolog}" = "yes"; then
+     AC_DEFINE(XSB_INTERPROLOG)
+     with_interprolog=yes
+     INTERPROLOGSRC="interprolog_callback.c"
 @@ -1304,14 +1307,14 @@
  if test "${enable_profile}" = "yes"; then
      AC_DEFINE(DEBUG)
