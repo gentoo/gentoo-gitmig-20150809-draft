@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1-r1.ebuild,v 1.9 2007/07/22 04:13:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1-r1.ebuild,v 1.10 2008/10/11 23:11:45 flameeyes Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -23,9 +23,9 @@ RDEPEND="X? (
 		python? ( >=dev-lang/python-2.4.3-r1 )
 		perl? ( >=dev-lang/perl-5.8.2 )
 		fontconfig? ( >=media-libs/fontconfig-2.3.2-r1 )
-		>=media-libs/imlib2-1.2.0-r2
 		>=x11-apps/xwininfo-1.0.2
 	)
+	>=media-libs/imlib2-1.2.0-r2
 	>=sys-apps/sed-4.1.4-r1
 	>=sys-apps/coreutils-5.94-r1
 	>=sys-process/procps-3.2.6"
