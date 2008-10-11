@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.25 2008/08/23 04:59:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.26 2008/10/11 20:28:07 wrobel Exp $
+
+*viewvc-1.0.6 (11 Oct 2008)
+
+  11 Oct 2008; Gunnar Wrobel <wrobel@gentoo.org> +viewvc-1.0.6.ebuild:
+  Added viewvc-1.0.6 (#238077).
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
