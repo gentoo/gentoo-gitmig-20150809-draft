@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-2.4.0.ebuild,v 1.4 2008/03/09 00:25:11 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/gimp-help-2.4.2.ebuild,v 1.1 2008/10/11 19:28:21 pva Exp $
 
-inherit eutils autotools
+inherit eutils
 
 DESCRIPTION="GNU Image Manipulation Program help files"
 HOMEPAGE="http://docs.gimp.org/"
@@ -17,7 +17,7 @@ IUSE=""
 # Only *not* outdated translations (see, configure.ac) are listed.
 # On update do not forgive to check quickreference/Makefile.am for
 # QUICKREFERENCE_ALL_LINGUAS. LANGS should include that langs too.
-LANGS="de en es fr it ko nl no ru sv"
+LANGS="de en es fr it ko nl no pl ru sv"
 
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
@@ -26,16 +26,7 @@ done
 DEPEND="=app-text/docbook-xml-dtd-4.3*
 		dev-libs/libxml2
 		dev-libs/libxslt"
-RDEPEND="=media-gfx/gimp-2.4*"
-
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-skip-linguas-images.patch
-	epatch "${FILESDIR}"/${P}-quickreference-linguas.patch
-	eautoreconf
-}
+RDEPEND=">=media-gfx/gimp-2.4"
 
 src_compile() {
 	local ALL_LINGUAS=""
@@ -50,11 +41,10 @@ src_compile() {
 		--disable-network \
 		|| die "econf failed"
 
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-
 	dodoc AUTHORS ChangeLog HACKING NEWS README TERMINOLOGY
 }
