@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.6-r1.ebuild,v 1.6 2008/09/07 18:49:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.6-r1.ebuild,v 1.7 2008/10/11 23:01:21 eva Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -15,7 +15,7 @@ IUSE="applet debug deskbar gnome gsf gstreamer gtk hal jpeg pdf xine kernel_linu
 
 RDEPEND=">=dev-libs/glib-2.14.0
 		 >=x11-libs/pango-1.0.0
-		 >=dev-libs/gmime-2.1.0
+		 =dev-libs/gmime-2.2*
 		 >=dev-libs/dbus-glib-0.71
 		 >=media-libs/libpng-1.2
 		 >=dev-libs/libxml2-2.6
