@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.10.2.ebuild,v 1.3 2008/08/10 19:11:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.10.2.ebuild,v 1.4 2008/10/11 22:57:56 eva Exp $
 
 inherit gnome2 mono eutils
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-lang/mono-1.2
 		 >=gnome-base/gnome-panel-2.8.2
 		 >=gnome-base/libgnomeprint-2.2
 		 >=gnome-base/libgnomeprintui-2.2
-		 eds? ( dev-libs/gmime )
+		 eds? ( =dev-libs/gmime-2.2* )
 		 galago? ( =dev-dotnet/galago-sharp-0.5* )"
 DEPEND="${RDEPEND}
 		  dev-libs/libxml2
