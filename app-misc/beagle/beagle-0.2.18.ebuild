@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.18.ebuild,v 1.8 2008/05/13 07:48:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.18.ebuild,v 1.9 2008/10/11 22:54:52 eva Exp $
 
 EAPI=1
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-lang/mono-1.1.18
 	app-arch/zip
 	sys-devel/gettext
 	>=x11-libs/gtk+-2.6
-	>=dev-libs/gmime-2.2.1
+	=dev-libs/gmime-2.2*
 	>=dev-dotnet/gtk-sharp-2.8
 	>=gnome-base/librsvg-2
 	>=media-libs/libexif-0.6

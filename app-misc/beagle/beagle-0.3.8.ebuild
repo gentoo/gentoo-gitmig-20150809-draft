@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.8.ebuild,v 1.1 2008/09/06 12:13:12 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.8.ebuild,v 1.2 2008/10/11 22:54:52 eva Exp $
 
 EAPI=1
 
@@ -20,7 +20,7 @@ RDEPEND="
 	app-arch/zip
 	sys-devel/gettext
 	x11-misc/shared-mime-info
-	>=dev-libs/gmime-2.2.1
+	=dev-libs/gmime-2.2*
 	>=dev-libs/libxml2-2.6.19
 	>=dev-db/sqlite-3.3.1
 	>=dev-dotnet/dbus-sharp-0.6.0
