@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1942 2008/10/11 19:05:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1943 2008/10/11 22:01:11 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  info_pkgs:
+  Added cmake to info_pkgs to get the cmake version on emerge --info output.
 
   11 Oct 2008; Ben de Groot <yngwin@gentoo.org>
   default-linux/package.use.mask, default/linux/package.use.mask,
