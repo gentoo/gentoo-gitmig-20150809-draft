@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pdb2pqr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.13 2008/10/11 11:19:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.14 2008/10/11 11:23:45 markusle Exp $
+
+  11 Oct 2008; Markus Dittrich <markusle@gentoo.org> pdb2pqr-1.1.2.ebuild:
+  Added numpy dependency to stable ebuild as well (see bug #241178).
 
   11 Oct 2008; Markus Dittrich <markusle@gentoo.org>
   +files/pdb2pqr-1.3.0-ldflags.patch, pdb2pqr-1.3.0.ebuild:
