@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1943 2008/10/11 22:01:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1944 2008/10/11 23:11:36 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  package.mask:
+  remove dev-libs/gmime mask since deps are now slot aware, bug #239412.
 
   11 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   info_pkgs:
