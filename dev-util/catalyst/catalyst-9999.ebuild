@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.5 2008/06/12 23:54:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.6 2008/10/11 03:01:54 robbat2 Exp $
 
 # catalyst-9999         -> latest SVN
 # catalyst-9999.REV     -> use SVN REV
@@ -9,10 +9,10 @@
 if [[ ${PV} == 9999* ]]
 then
 	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
-	ESVN_REPO_URI="svn://anonsvn.gentoo.org/catalyst/trunk"
-	inherit subversion eutils multilib
+	EGIT_REPO_URI="git://git.wolf31o2.org/projs/catalyst.git"
+	inherit git eutils multilib
 	SRC_URI=""
-	S=${WORKDIR}/trunk
+	S="${WORKDIR}"
 else
 	inherit eutils multilib
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
@@ -55,7 +55,7 @@ pkg_setup() {
 
 src_unpack() {
 	if [[ ${PV} == 9999* ]] ; then
-		subversion_src_unpack
+		git_src_unpack
 	else
 		unpack ${A}
 		cd "${S}"
