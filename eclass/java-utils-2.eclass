@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.116 2008/10/10 20:11:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.117 2008/10/11 21:07:13 caster Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -36,8 +36,6 @@ IUSE="elibc_FreeBSD"
 
 # Make sure we use java-config-2
 export WANT_JAVA_CONFIG="2"
-
-[[ "${EAPI:-0}" == "2" ]] && EXPORT_FUNCTIONS src_prepare
 
 # -----------------------------------------------------------------------------
 # @variable-external WANT_ANT_TASKS
@@ -1808,6 +1806,7 @@ ejunit() {
 # @eclass-src_prepare
 #
 # src_prepare Searches for bundled jars
+# Don't call directly, but via java-pkg-2_src_prepare!
 # ------------------------------------------------------------------------------
 
 java-utils-2_src_prepare() {
