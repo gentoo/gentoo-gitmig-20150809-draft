@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.16 2008/09/24 02:11:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.17 2008/10/11 18:41:09 flameeyes Exp $
+
+  11 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  mtd-utils-20080907.ebuild:
+  Fix build dependencies.
 
   24 Sep 2008; Robin H. Johnson <robbat2@gentoo.org>
   +files/mtd-utils-fixup.patch, mtd-utils-20080907.ebuild:

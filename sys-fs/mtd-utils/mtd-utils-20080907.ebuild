@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20080907.ebuild,v 1.2 2008/09/24 02:11:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-20080907.ebuild,v 1.3 2008/10/11 18:41:09 flameeyes Exp $
 
 inherit toolchain-funcs eutils
 
@@ -20,7 +20,7 @@ RDEPEND="!sys-fs/mtd
 	sys-libs/zlib"
 # ACL is only required for the <sys/acl.h> header file to build mkfs.jffs2
 # And ACL brings in Attr as well.
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	xattr? ( sys-apps/acl )"
 
 S=${WORKDIR}/${PN}
