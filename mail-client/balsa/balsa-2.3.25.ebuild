@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.3.25.ebuild,v 1.1 2008/07/14 12:06:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.3.25.ebuild,v 1.2 2008/10/11 23:04:37 eva Exp $
 
 inherit gnome2
 
@@ -16,7 +16,7 @@ IUSE="crypt doc gtkhtml gtkspell kerberos ldap libnotify rubrica sqlite ssl xfac
 
 RDEPEND=">=dev-libs/glib-2.14
 		 >=x11-libs/gtk+-2.10
-		 >=dev-libs/gmime-2.1.9
+		 =dev-libs/gmime-2.2*
 		 >=net-libs/libesmtp-1.0.3
 		 >=gnome-base/orbit-2
 		 >=gnome-base/libbonobo-2.0
