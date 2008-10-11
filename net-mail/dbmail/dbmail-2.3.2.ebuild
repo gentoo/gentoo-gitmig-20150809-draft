@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.3.2.ebuild,v 1.7 2008/08/06 20:05:32 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.3.2.ebuild,v 1.8 2008/10/11 23:07:47 eva Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ DEPEND="ssl? ( dev-libs/openssl )
 	app-text/asciidoc
 	app-text/xmlto
 	sys-libs/zlib
-	>=dev-libs/gmime-2.1.18
+	=dev-libs/gmime-2.2*
 	>=dev-libs/glib-2.8
 	>=app-crypt/mhash-0.9.9-r1"
 
