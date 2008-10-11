@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/xman-1.0.2.ebuild,v 1.10 2008/03/24 14:13:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/xman-1.0.2.ebuild,v 1.11 2008/10/11 22:27:05 flameeyes Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -12,7 +12,8 @@ DESCRIPTION="Manual page display program for the X Window System"
 KEYWORDS="amd64 arm ~mips ~ppc ppc64 s390 sh ~sparc x86"
 IUSE="xprint"
 
-RDEPEND="xprint? ( x11-libs/libXprintUtil )"
+RDEPEND="xprint? ( x11-libs/libXprintUtil )
+	x11-libs/libXaw"
 DEPEND="${RDEPEND}"
 
 CONFIGURE_OPTIONS="$(use_enable xprint)"
