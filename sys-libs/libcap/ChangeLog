@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.69 2008/10/12 14:00:56 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.70 2008/10/12 14:30:13 nixnut Exp $
+
+  12 Oct 2008; nixnut <nixnut@gentoo.org> libcap-2.11.ebuild:
+  Stable on ppc wrt bug 240290
 
   12 Oct 2008; Friedrich Oslage <bluebird@gentoo.org> libcap-2.11.ebuild:
   Stable on sparc, bug #240290
