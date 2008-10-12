@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.25 2008/09/02 23:32:35 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.26 2008/10/12 01:49:49 nerdboy Exp $
 
 EAPI=1
 
@@ -18,7 +18,13 @@ IUSE="doc qt3 latex unicode"
 
 RDEPEND=">=media-gfx/graphviz-2.6
 	qt3? ( x11-libs/qt:3 )
-	latex? ( virtual/latex-base )
+	latex? ( || (
+		( app-text/texlive-core
+		dev-texlive/texlive-latexrecommended
+		dev-texlive/texlive-genericrecommended
+		dev-texlive/texlive-fontsrecommended )
+		( app-text/tetex ) )
+		)
 	virtual/ghostscript"
 DEPEND=">=sys-apps/sed-4
 	${RDEPEND}"
