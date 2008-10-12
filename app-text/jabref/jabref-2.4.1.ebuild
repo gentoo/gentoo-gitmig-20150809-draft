@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.4.1.ebuild,v 1.1 2008/10/11 22:06:17 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.4.1.ebuild,v 1.2 2008/10/12 09:26:25 caster Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/JabRef-${MY_PV}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 CDEPEND="dev-java/spin:0
