@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.73 2008/09/25 16:13:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.74 2008/10/12 20:43:20 eva Exp $
+
+*evolution-exchange-2.22.3-r2 (12 Oct 2008)
+
+  12 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/evolution-exchange-2.22.3-exchange-contact.patch,
+  -evolution-exchange-2.22.0.ebuild, -evolution-exchange-2.22.3.ebuild,
+  +evolution-exchange-2.22.3-r2.ebuild:
+  Fix exchange contacts tracking, upstream bug #546934.
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org>
   evolution-exchange-2.22.3-r1.ebuild:

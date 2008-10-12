@@ -1,0 +1,76 @@
+---
+
+    # Fix exchange contacts tracking, upstream bug #546934
+    #epatch "${FILESDIR}"/${P}-exchange-contact.patch
+
+
+At http://bugzilla.gnome.org/show_bug.cgi?id=546934
+
+e_book_backend_exchange_get_changes() (and therefore e_book_get_changes() with
+an Exchange address book) has three different problems:
+
+* The list of collected changes in ctx->changes is never returned to the caller.
+  Instead the list is leaked when freeing the context.
+* For deleted items, an empty vcard with the UID set should be returned.
+  Instead find_deleted_ids() stores the UID directly.
+* find_deleted_ids() is a callback for g_hash_table_foreach() and modifies
+  the hash that is iterated over. That's a big no-no! The effect is that the
+  iteration is stopped prematurely, leading to incorrect change tracking.
+  g_hash_table_foreach_remove() and its XML wrapper function have to be used
+  instead.
+
+Index: addressbook/e-book-backend-exchange.c
+===================================================================
+--- addressbook/e-book-backend-exchange.c	(revision 1709)
++++ addressbook/e-book-backend-exchange.c	(working copy)
+@@ -2042,17 +2042,29 @@
+ 	CORBA_free (change);
+ }
+ 
+-static void
++static gboolean
+ find_deleted_ids (const char *id, const char *vcard, gpointer user_data)
+ {
+ 	EBookBackendExchangeChangeContext *ctx = user_data;
++	gboolean remove = FALSE;
+ 
+ 	if (!g_hash_table_lookup (ctx->seen_ids, id)) {
+-		ctx->changes = g_list_prepend (
+-			ctx->changes,
+-			e_book_backend_change_delete_new (id));
+-		e_xmlhash_remove (ctx->ehash, id);
++		char *vcard = NULL;
++		EContact *contact = e_contact_new ();
++		if (contact) {
++			e_contact_set (contact, E_CONTACT_UID, id);
++			vcard = e_vcard_to_string (E_VCARD (contact), EVC_FORMAT_VCARD_30);
++			if (vcard) {
++				ctx->changes = g_list_prepend (
++							       ctx->changes,
++							       e_book_backend_change_delete_new (vcard));
++				g_free (vcard);
++			}
++			g_object_unref (contact);
++		}
++		remove = TRUE;
+ 	}
++	return remove;
+ }
+ 
+ static EBookBackendSyncStatus
+@@ -2135,9 +2147,14 @@
+ 			g_list_foreach (ctx->changes, free_change, NULL);
+ 			ctx->changes = NULL;
+ 		} else {
+-			e_xmlhash_foreach_key (ctx->ehash, find_deleted_ids, ctx);
++			e_xmlhash_foreach_key_remove (ctx->ehash, find_deleted_ids, ctx);
+ 			e_xmlhash_write (ctx->ehash);
+ 		}
++
++		/* transfer ownership of result to caller before cleaning up */
++		*changes = ctx->changes;
++		ctx->changes = NULL;
++
+   		e_xmlhash_destroy (ctx->ehash);
+ 		g_hash_table_destroy (ctx->seen_ids);
+ 		g_free (ctx);
