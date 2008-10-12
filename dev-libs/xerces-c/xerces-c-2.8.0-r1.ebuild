@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.8.0-r1.ebuild,v 1.2 2008/08/09 08:45:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.8.0-r1.ebuild,v 1.3 2008/10/12 14:19:16 nixnut Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://apache/xerces/c/sources/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc icu libwww +threads elibc_Darwin elibc_FreeBSD xqilla"
 
 RDEPEND="icu? ( <dev-libs/icu-3.8 )
