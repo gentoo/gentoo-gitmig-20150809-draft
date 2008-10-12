@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gscanbus
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gscanbus/ChangeLog,v 1.9 2008/05/06 14:08:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gscanbus/ChangeLog,v 1.10 2008/10/12 18:23:21 armin76 Exp $
+
+  12 Oct 2008; Raúl Porcel <armin76@gentoo.org> gscanbus-0.7.1.ebuild:
+  sparc/x86 stable
 
   06 May 2008; Samuli Suominen <drac@gentoo.org> gscanbus-0.7.1.ebuild:
   Use berlios mirrors://
