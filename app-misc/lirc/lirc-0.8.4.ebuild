@@ -1,64 +1,78 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r8.ebuild,v 1.16 2008/10/12 19:55:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.4.ebuild,v 1.1 2008/10/12 19:55:53 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
 DESCRIPTION="decode and send infra-red signals of many commonly used remote controls"
-HOMEPAGE="http://www.lirc.org"
+HOMEPAGE="http://www.lirc.org/"
 
-SLOT="0"
+MY_P=${PN}-${PV/_/}
+
+if [[ "${PV/_pre/}" = "${PV}" ]]; then
+	SRC_URI="mirror://sourceforge/lirc/${MY_P}.tar.bz2"
+else
+	SRC_URI="http://lirc.sourceforge.net/software/snapshots/${MY_P}.tar.bz2"
+fi
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc X hardware-carrier transmitter"
-KEYWORDS="amd64 ppc ppc64 x86"
-SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
 
-S="${WORKDIR}/${P/_pre/pre}"
+S="${WORKDIR}/${MY_P}"
 
+RDEPEND="
+	X? (
+		x11-libs/libX11
+		x11-libs/libSM
+		x11-libs/libICE
+	)
+	lirc_devices_alsa_usb? ( media-libs/alsa-lib )
+	lirc_devices_audio? ( media-libs/portaudio )
+	lirc_devices_irman? ( media-libs/libirman )"
+
+# This are drivers with names matching the
+# parameter --with-driver=NAME
 IUSE_LIRC_DEVICES_DIRECT="
-	all userspace act200l act220l
-	adaptec alsa_usb animax atilibusb
+	all userspace accent act200l act220l
+	adaptec alsa_usb animax asusdh atilibusb
 	atiusb audio audio_alsa avermedia avermedia_vdomate
 	avermedia98 bestbuy bestbuy2 breakoutbox
-	bte bw6130 caraca chronos cmdir com1 com2 com3 com4
+	bte bw6130 caraca chronos cmdir
 	cph06x creative creative_infracd
 	devinput digimatrix dsp dvico ea65
 	exaudio flyvideo gvbctv5pci hauppauge
 	hauppauge_dvb hercules_smarttv_stereo
-	igorplugusb imon imon_pad imon_rsc
+	igorplugusb imon imon_knob imon_lcd imon_pad imon_rsc
 	irdeo irdeo_remote irman irreal it87
 	knc_one kworld leadtek_0007 leadtek_0010
 	leadtek_pvr2000 livedrive_midi
-	livedrive_seq logitech lpt1 lpt2 mceusb
+	livedrive_seq logitech macmini mceusb
 	mceusb2 mediafocusI mouseremote
 	mouseremote_ps2 mp3anywhere nslu2
 	packard_bell parallel pcmak pcmak_usb
 	pctv pixelview_bt878 pixelview_pak
 	pixelview_pro provideo realmagic
-	remotemaster sa1100 sasem serial
+	remotemaster sa1100 sasem sb0540 serial
 	silitek sir slinke streamzap tekram
-	tekram_bt829 tira tvbox udp uirt2
-	uirt2_raw"
+	tekram_bt829 tira ttusbir tuxbox tvbox udp uirt2
+	uirt2_raw usb_uirt_raw usbx
+	irlink commandir ite8709 samsung"
 
+# drivers that need special handling and
+# must have another name specified for
+# parameter --with-driver=NAME
 IUSE_LIRC_DEVICES_SPECIAL="
 	imon_pad2keys serial_igor_cesko
 	remote_wonder_plus xboxusb usbirboy inputlirc"
 
 IUSE_LIRC_DEVICES="${IUSE_LIRC_DEVICES_DIRECT} ${IUSE_LIRC_DEVICES_SPECIAL}"
 
-RDEPEND="virtual/libc
-	sys-apps/coreutils
-	X? ( x11-libs/libX11
-		x11-libs/libSM
-		x11-libs/libICE )
-	lirc_devices_alsa_usb? ( media-libs/alsa-lib )
-	lirc_devices_audio? ( media-libs/portaudio )
-	lirc_devices_irman? ( media-libs/libirman )"
-
 #device-driver which use libusb
 LIBUSB_USED_BY_DEV="
-	all atiusb sasem igorplugusb imon imon_pad imon_pad2keys
-	imon_rsc streamzap mceusb mceusb2 xboxusb"
+	all atilibusb sasem igorplugusb imon imon_lcd imon_pad imon_pad2keys
+	imon_rsc streamzap mceusb mceusb2 xboxusb irlink commandir"
 
 for dev in ${LIBUSB_USED_BY_DEV}; do
 	RDEPEND="${RDEPEND} lirc_devices_${dev}? ( dev-libs/libusb )"
@@ -94,19 +108,24 @@ add_device() {
 	fi
 
 	local dev="${1}"
-	local desc="${2}"
-	[[ -z ${desc} ]] && desc="device ${dev}"
+	local desc="device ${dev}"
+	if [[ -n "${2}" ]]; then
+		desc="${2}"
+	fi
 
 	elog "Compiling support for ${desc}"
 	MY_OPTS="${MY_OPTS} --with-driver=${dev}"
 }
 
 pkg_setup() {
+
+	CONFIG_CHECK="MODULES MODULE_UNLOAD"
+
 	linux-mod_pkg_setup
 
 	# set default configure options
 	MY_OPTS=""
-	LIRC_DRIVER_DEVICE="/dev/lirc/0"
+	LIRC_DRIVER_DEVICE="/dev/lirc0"
 
 	if use lirc_devices_all; then
 		# compile in drivers for a lot of devices
@@ -131,11 +150,12 @@ pkg_setup() {
 
 		if use lirc_devices_imon_pad2keys; then
 			add_device imon_pad "device imon_pad (with converting pad input to keyspresses)"
+			ewarn "You need to set the option pad2keys_active=1"
+			ewarn "when loading the module lirc_imon"
 		fi
 
 		if use lirc_devices_xboxusb; then
 			add_device atiusb "device xboxusb"
-			NEED_XBOX_PATCH=1
 		fi
 
 		if use lirc_devices_usbirboy; then
@@ -147,7 +167,6 @@ pkg_setup() {
 			if [[ "${PROFILE_ARCH}" == "xbox" ]]; then
 				# on xbox: use special driver
 				add_device atiusb "device xboxusb"
-				NEED_XBOX_PATCH=1
 			else
 				# no driver requested
 				elog
@@ -207,83 +226,79 @@ pkg_setup() {
 
 	einfo
 	einfo "lirc-configure-opts: ${MY_OPTS}"
-	elog "Setting default lirc-device to ${LIRC_DRIVER_DEVICE}"
+	elog  "Setting default lirc-device to ${LIRC_DRIVER_DEVICE}"
 
 	filter-flags -Wl,-O1
+
+	# force non-parallel make, Bug 196134
+	MAKEOPTS="${MAKEOPTS} -j1"
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Apply kernel compatibility patches
-	epatch "${FILESDIR}"/${P}-kernel-2.6.16.diff
-	epatch "${FILESDIR}"/${P}-kernel-2.6.17.diff
-	epatch "${FILESDIR}"/${P}-kernel-2.6.18.diff
-	epatch "${FILESDIR}"/${P}-kernel-2.6.19.diff
-
-	# Fix an overflow when opening too many client-connections
-	epatch "${FILESDIR}"/${P}-too-many-connections-overflow.diff
-
-	# Fix a sandbox violation while checking which cc to use for Kernel 2.6.19
-	# and newer
-	epatch "${FILESDIR}"/${P}-sandbox-fix.diff
-
-	# Work with udev-094 and greater
-	epatch "${FILESDIR}"/${PN}-udev-094.diff
-
-	# Bugfix for i2c-driver in combination with newer ivtv and Kernel 2.6.17
-	epatch "${FILESDIR}"/${P}-i2c-kernel-2.6.17.diff
-
-	# Wrong config-filename for LIRC_DEVICES=pixelview_bt878
-	epatch "${FILESDIR}"/${P}-conf-pixelview_bt878.diff
+	# Rip out dos CRLF
+	edos2unix contrib/lirc.rules
 
 	# Apply patches needed for some special device-types
-	[[ ${NEED_XBOX_PATCH:-0} == 1 ]] && epatch "${FILESDIR}"/lirc-0.8.0pre4-xbox-remote.diff
-	use lirc_devices_imon_pad2keys && epatch "${FILESDIR}"/${P}-imon-pad2keys.patch
-	use lirc_devices_remote_wonder_plus && epatch "${FILESDIR}"/lirc-remotewonderplus.patch
+	epatch "${FILESDIR}"/${P}-imon-pad2keys.patch
+	use lirc_devices_remote_wonder_plus && epatch "${FILESDIR}"/lirc-0.8.3_pre1-remotewonderplus.patch
 
 	# remove parallel driver on SMP systems
 	if linux_chkconfig_present SMP ; then
-		sed -i -e "s:lirc_parallel::" drivers/Makefile.in
+		sed -i -e "s:lirc_parallel\.o::" drivers/lirc_parallel/Makefile.am
+	fi
+
+	# Bug #187418
+	if kernel_is ge 2 6 22 ; then
+		ewarn "Disabling lirc_gpio driver as it does no longer work Kernel 2.6.22+"
+		sed -i -e "s:lirc_gpio\.o::" drivers/lirc_gpio/Makefile.am
 	fi
 
 	# respect CFLAGS
-	sed -i -e 's:CFLAGS="-O2:CFLAGS=""\n#CFLAGS="-O2:' configure.in
+	sed -i -e 's:CFLAGS="-O2:CFLAGS=""\n#CFLAGS="-O2:' configure.ac
 
 	# setting default device-node
-	sed -i -e '/#define LIRC_DRIVER_DEVICE/d' acconfig.h
+	local f
+	for f in configure.ac acconfig.h; do
+		[[ -f "$f" ]] && sed -i -e '/#define LIRC_DRIVER_DEVICE/d' "$f"
+	done
 	echo "#define LIRC_DRIVER_DEVICE \"${LIRC_DRIVER_DEVICE}\"" >> acconfig.h
 
-	eautoreconf || die "autoreconf failed"
+	eautoreconf
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
-	newinitd "${FILESDIR}"/lircd lircd
+	newinitd "${FILESDIR}"/lircd-0.8.3 lircd
 	newinitd "${FILESDIR}"/lircmd lircmd
-	newconfd "${FILESDIR}"/lircd.conf lircd
+	newconfd "${FILESDIR}"/lircd.conf.2 lircd
 
-	insinto /etc/modules.d/
-	newins "${FILESDIR}"/modulesd.lirc lirc
+	insinto /etc/modprobe.d/
+	newins "${FILESDIR}"/modprobed.lirc lirc
 
 	newinitd "${FILESDIR}"/irexec-initd irexec
 	newconfd "${FILESDIR}"/irexec-confd irexec
-
-	insinto /etc/udev/rules.d/;
-	newins "${S}"/contrib/lirc.rules 10-lirc.rules
 
 	if use doc ; then
 		dohtml doc/html/*.html
 		insinto /usr/share/doc/${PF}/images
 		doins doc/images/*
 	fi
+
+	insinto /usr/share/lirc/remotes
+	doins -r remotes/*
 }
 
 pkg_preinst() {
 	linux-mod_pkg_preinst
-	[[ -f "${ROOT}/etc/lircd.conf" ]] && cp ${ROOT}/etc/lircd.conf ${D}/etc
+
+	# stop portage from deleting this file
+	if [[ -f ${ROOT}/etc/lircd.conf && ! -f ${D}/etc/lircd.conf ]]; then
+		cp "${ROOT}"/etc/lircd.conf "${D}"/etc/lircd.conf
+	fi
 }
 
 pkg_postinst() {
@@ -292,4 +307,18 @@ pkg_postinst() {
 	elog "The lirc Linux Infrared Remote Control Package has been"
 	elog "merged, please read the documentation at http://www.lirc.org"
 	echo
+
+	if kernel_is ge 2 6 22 ; then
+		# Bug #187418
+		ewarn
+		ewarn "The lirc_gpio driver will not work with Kernels 2.6.22+"
+		ewarn "You need to switch over to /dev/input/event? if you need gpio"
+		ewarn "This device can than then be used via lirc's dev/input driver."
+		ewarn
+	fi
+
+	elog
+	elog "lirc now uses normal config-protection for lircd.conf."
+	elog "If you need any other lircd.conf you may have a look at"
+	elog "the directory /usr/share/lirc/remotes"
 }
