@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10.ebuild,v 1.1 2008/10/09 20:07:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10-r1.ebuild,v 1.1 2008/10/12 11:36:33 mrness Exp $
 
 DESCRIPTION="Web content filtering via proxy"
 HOMEPAGE="http://dansguardian.org"
@@ -39,6 +39,8 @@ pkg_setup() {
 src_compile() {
 	local myconf="--with-logdir=/var/log/dansguardian
 		--with-piddir=/var/run
+		--docdir=/usr/share/doc/${PF}
+		--htmldir=/usr/share/doc/${PF}/html
 		$(use_enable pcre)
 		$(use_enable ntlm)
 		--enable-fancydm
@@ -62,6 +64,11 @@ src_compile() {
 
 src_install() {
 	make "DESTDIR=${D}" install || die "make install failed"
+	
+	# Move html documents to html dir
+	mkdir "${D}"/usr/share/doc/${PF}/html \
+		&& mv "${D}"/usr/share/doc/${PF}/*.html "${D}"/usr/share/doc/${PF}/html \
+		|| die "no html docs found in docdir"
 
 	# Copying init script
 	newinitd "${FILESDIR}/dansguardian.init" dansguardian
