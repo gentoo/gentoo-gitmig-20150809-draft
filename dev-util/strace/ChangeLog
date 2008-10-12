@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.124 2008/10/11 18:52:43 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.125 2008/10/12 14:08:32 nixnut Exp $
+
+  12 Oct 2008; nixnut <nixnut@gentoo.org> strace-4.5.18.ebuild:
+  Stable on ppc wrt bug 241168
 
   11 Oct 2008; Richard Freeman <rich0@gentoo.org> strace-4.5.18.ebuild:
   amd64 stable - 241168
