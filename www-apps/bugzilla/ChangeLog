@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.120 2008/10/12 15:12:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.121 2008/10/12 15:37:55 bluebird Exp $
+
+  12 Oct 2008; Friedrich Oslage <bluebird@gentoo.org>
+  bugzilla-2.22.5.ebuild, bugzilla-3.0.5.ebuild:
+  Stable on sparc, security bug #239564
 
   12 Oct 2008; Markus Meier <maekke@gentoo.org> bugzilla-2.22.5.ebuild,
   bugzilla-3.0.5.ebuild:
