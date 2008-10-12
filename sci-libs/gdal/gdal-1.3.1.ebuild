@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.16 2008/05/21 19:01:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.17 2008/10/12 02:38:16 nerdboy Exp $
 
 inherit eutils libtool distutils toolchain-funcs
 
@@ -99,7 +99,8 @@ src_compile() {
 	fi
 
 	# Fix doc path just in case
-	sed -i -e "s:@exec_prefix@/doc:/usr/share/doc/${PF}/html:g" GDALmake.opt.in
+	sed -i -e "s:@exec_prefix@/doc:/usr/share/doc/${PF}/html:g" \
+	    GDALmake.opt.in || die "sed gdalmake.opt failed"
 
 	econf ${pkg_conf} ${use_conf} || die "econf failed"
 	# parallel makes fail on the ogr stuff (C++, what can I say?)

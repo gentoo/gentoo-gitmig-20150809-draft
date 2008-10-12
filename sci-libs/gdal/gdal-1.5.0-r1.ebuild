@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.0-r1.ebuild,v 1.4 2008/05/21 19:01:41 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.0-r1.ebuild,v 1.5 2008/10/12 02:38:16 nerdboy Exp $
 
 WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils perl-module toolchain-funcs
@@ -122,7 +122,8 @@ src_compile() {
 	fi
 
 	# Fix doc path just in case
-	sed -i -e "s:@exec_prefix@/doc:/usr/share/doc/${PF}/html:g" GDALmake.opt.in
+	sed -i -e "s:@exec_prefix@/doc:/usr/share/doc/${PF}/html:g" \
+	    GDALmake.opt.in || die "sed gdalmake.opt failed"
 
 	econf ${pkg_conf} ${use_conf} || die "econf failed"
 
@@ -132,9 +133,9 @@ src_compile() {
 
 	if useq python; then
 	    sed -i -e "s#library_dirs = #library_dirs = /usr/$(get_libdir):#g" \
-		swig/python/setup.cfg
+		swig/python/setup.cfg || die "sed python setup.cfg failed"
 	    sed -i -e "s:$(DESTDIR)$(prefix):$(DESTDIR)$(INST_PREFIX):g" \
-		swig/python/GNUmakefile
+		swig/python/GNUmakefile || die "sed python GNUmakefile failed"
 	fi
 
 	if useq perl ; then
