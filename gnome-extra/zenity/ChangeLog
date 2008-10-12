@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.155 2008/09/25 14:48:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.156 2008/10/12 21:05:58 eva Exp $
+
+*zenity-2.24.0 (12 Oct 2008)
+
+  12 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org> +zenity-2.24.0.ebuild:
+  New version for GNOME 2.24. Mostly translation updates.
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org> zenity-2.22.1.ebuild:
   Stable for HPPA (bug #236971).
