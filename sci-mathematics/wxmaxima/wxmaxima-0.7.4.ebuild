@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.4.ebuild,v 1.6 2008/04/19 09:46:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.4.ebuild,v 1.7 2008/10/12 11:06:08 markusle Exp $
 
 WX_GTK_VER="2.8"
 inherit eutils autotools wxwidgets fdo-mime
@@ -38,7 +38,7 @@ src_compile () {
 		--enable-dnd \
 		--enable-printing \
 		--with-wx-config=${WX_CONFIG} \
-		$(use_unicode unicode-glyphs) \
+		$(use_enable unicode unicode-glyphs) \
 		|| die "econf failed"
 
 	emake || die "emake failed"
