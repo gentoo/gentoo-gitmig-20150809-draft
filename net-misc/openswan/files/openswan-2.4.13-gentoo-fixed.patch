@@ -19,6 +19,18 @@ diff -ur openswan-2.4.13.orig/Makefile.inc openswan-2.4.13/Makefile.inc
  EXAMPLECONFDIR=${DESTDIR}${FINALEXAMPLECONFDIR}
  
  FINALDOCDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/openswan
+diff -Nru openswan-2.4.13.orig/programs/Makefile openswan-2.4.13/programs/Makefile
+--- openswan-2.4.13.orig/programs/Makefile	2006-10-27 14:47:07.000000000 +0000
++++ openswan-2.4.13/programs/Makefile	2008-10-12 16:12:31.000000000 +0000
+@@ -24,7 +24,7 @@
+ SUBDIRS+=_realsetup _secretcensor _startklips _updown _updown_x509
+ SUBDIRS+=auto barf verify ipsec look manual newhostkey ranbits secrets
+ SUBDIRS+=rsasigkey setup showdefaults showhostkey calcgoo mailkey
+-SUBDIRS+=ikeping examples livetest
++SUBDIRS+=ikeping examples
+ 
+ ifeq ($(USE_LWRES),true)
+ SUBDIRS+=lwdnsq
 diff -ur openswan-2.4.13.orig/programs/_confread/_confread.in openswan-2.4.13/programs/_confread/_confread.in
 --- openswan-2.4.13.orig/programs/_confread/_confread.in	2006-04-12 19:55:42.000000000 +0000
 +++ openswan-2.4.13/programs/_confread/_confread.in	2008-08-16 09:56:57.000000000 +0000
