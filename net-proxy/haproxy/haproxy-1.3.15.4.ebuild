@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.14.4.ebuild,v 1.1 2008/05/15 22:18:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.15.4.ebuild,v 1.1 2008/10/12 08:17:10 mrness Exp $
 
-inherit linux-info versionator
+inherit versionator
 
 DESCRIPTION="A TCP/HTTP reverse proxy for high availability environments"
 HOMEPAGE="http://haproxy.1wt.eu"
@@ -13,11 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="pcre"
 
-DEPEND="pcre? ( >=dev-libs/libpcre-6.3 )"
+DEPEND="pcre? ( dev-libs/libpcre )"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	local ARGS="TARGET=linux${KV_MAJOR}${KV_MINOR}"
+	local ARGS="TARGET=linux26"
 	use pcre && ARGS="${ARGS} REGEX=pcre"
 	emake ADDINC="${CFLAGS}" LDFLAGS="${LDFLAGS}" ${ARGS}
 }
