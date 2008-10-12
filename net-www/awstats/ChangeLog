@@ -1,6 +1,9 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.63 2008/10/12 15:05:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.64 2008/10/12 16:02:06 armin76 Exp $
+
+  12 Oct 2008; Raúl Porcel <armin76@gentoo.org> awstats-6.9.ebuild:
+  alpha stable wrt #235225
 
   12 Oct 2008; Markus Meier <maekke@gentoo.org> awstats-6.9.ebuild:
   amd64/x86 stable, bug #235225
