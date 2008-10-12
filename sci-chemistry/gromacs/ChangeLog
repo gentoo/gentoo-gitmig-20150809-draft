@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.30 2008/10/06 02:32:20 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.31 2008/10/12 18:55:36 je_fro Exp $
+
+*gromacs-4.0 (12 Oct 2008)
+
+  12 Oct 2008; Jeff Gardner <je_fro@gentoo.org> +gromacs-4.0.ebuild:
+  Latest version, closing bug #241474 thanks to Alexey Shvetsov
 
   06 Oct 2008; Jeff Gardner <je_fro@gentoo.org> ChangeLog, Manifest:
   Fixing changelog to reflect addition of gromacs-3.3.3.ebuild
