@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/koctave
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.13 2008/07/15 13:16:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.14 2008/10/12 11:54:21 markusle Exp $
+
+  12 Oct 2008; Markus Dittrich <markusle@gentoo.org> koctave-0.65-r1.ebuild:
+  Added slot dependencies for kde-3.5 to make sure we don't pull in kde-4.
 
   15 Jul 2008; Markus Dittrich <markusle@gentoo.org>
   +files/koctave-0.65-desktop-entry-fix.patch, koctave-0.65-r1.ebuild:
