@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.24 2008/10/10 08:17:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.25 2008/10/12 14:12:02 nixnut Exp $
+
+  12 Oct 2008; nixnut <nixnut@gentoo.org> suite3270-3.3.7_p5.ebuild:
+  Stable on ppc wrt bug 240972
 
 *suite3270-3.3.7_p8 (10 Oct 2008)
 
