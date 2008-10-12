@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemulator/qemulator-0.5.ebuild,v 1.1 2007/09/18 08:14:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemulator/qemulator-0.5.ebuild,v 1.2 2008/10/12 16:51:37 lu_zero Exp $
 
 inherit eutils python
 
@@ -18,11 +18,11 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=dev-python/pygtk-2.8.6
-		 >=app-emulation/qemu-0.8.1"
+		 >=app-emulation/qemu-softmmu-0.8.1"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack(){
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	#for good directory
