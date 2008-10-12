@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0-r1.ebuild,v 1.2 2008/06/29 14:41:01 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0-r1.ebuild,v 1.3 2008/10/12 22:45:33 gentoofan23 Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic autotools
@@ -45,6 +45,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-addoptionalsamples.patch
 	epatch "${FILESDIR}"/${P}-cvcapffmpegundefinedsymbols.patch
 	epatch "${FILESDIR}"/${P}-ffmpeg-0.4.9_p20080326.patch
+	epatch "${FILESDIR}"/${P}-swiginvalidlinkingoptions.patch
 
 	eautoreconf || die "eautoreconf failed"
 }
