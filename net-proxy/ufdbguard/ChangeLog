@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/ufdbguard
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.3 2007/10/23 12:33:51 bass Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.4 2008/10/12 08:03:18 mrness Exp $
+
+  12 Oct 2008; Alin Năstac <mrness@gentoo.org> ufdbguard-1.13.ebuild:
+  Remove squid run-time dependency (#241212).
 
   23 Oct 2007; J. Alberto Suárez López <bass@gentoo.org> ChangeLog:
   Version bump

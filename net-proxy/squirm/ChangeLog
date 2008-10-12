@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squirm
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/ChangeLog,v 1.5 2007/04/11 13:55:44 mrness Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/ChangeLog,v 1.6 2008/10/12 08:05:06 mrness Exp $
+
+  12 Oct 2008; Alin Năstac <mrness@gentoo.org> squirm-1.23.ebuild:
+  Remove squid run-time dependency (#241212).
 
   11 Apr 2007; Alin Năstac <mrness@gentoo.org> squirm-1.23.ebuild:
   Simplify postinst info messages. Fix pre-stripped QA warning.
