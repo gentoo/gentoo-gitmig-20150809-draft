@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.10-r2.ebuild,v 1.1 2008/09/28 17:24:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.10-r4.ebuild,v 1.1 2008/10/12 00:56:08 cryos Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -16,18 +16,18 @@ IUSE=""
 # kdesktop, kicker etc are started because they put files in $KDEDIR/share/autostart
 # and so in theory they aren't strictly necessary deps.
 RDEPEND="x11-apps/xmessage
-		x11-apps/xsetroot
-		x11-apps/xset
-		x11-apps/xrandr
-		x11-apps/mkfontdir
-		x11-apps/xprop
->=kde-base/kdesktop-${PV}:${SLOT}
->=kde-base/kcminit-${PV}:${SLOT}
->=kde-base/ksmserver-${PV}:${SLOT}
->=kde-base/kwin-${PV}:${SLOT}
->=kde-base/kpersonalizer-${PV}:${SLOT}
->=kde-base/kreadconfig-${PV}:${SLOT}
->=kde-base/ksplashml-${PV}:${SLOT}"
+	x11-apps/xsetroot
+	x11-apps/xset
+	x11-apps/xrandr
+	x11-apps/mkfontdir
+	x11-apps/xprop
+	>=kde-base/kdesktop-${PV}:${SLOT}
+	>=kde-base/kcminit-${PV}:${SLOT}
+	>=kde-base/ksmserver-${PV}:${SLOT}
+	>=kde-base/kwin-${PV}:${SLOT}
+	>=kde-base/kpersonalizer-${PV}:${SLOT}
+	>=kde-base/kreadconfig-${PV}:${SLOT}
+	>=kde-base/ksplashml-${PV}:${SLOT}"
 
 PATCHES=( "${FILESDIR}/${PN}-3.5-gentoo.patch" )
 

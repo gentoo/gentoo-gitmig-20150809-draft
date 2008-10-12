@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.544 2008/10/07 12:21:26 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.545 2008/10/12 00:59:15 cryos Exp $
+
+*kdelibs-3.5.10-r2 (12 Oct 2008)
+
+  12 Oct 2008; Marcus D. Hanwell <cryos@gentoo.org> -kdelibs-3.5.10.ebuild,
+  +kdelibs-3.5.10-r2.ebuild:
+  Moving kdeglobals to kdelibs for non-KDE users using KDE apps.
 
 *kdelibs-3.5.10-r1 (07 Oct 2008)
 

@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.131 2008/10/05 02:41:16 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.132 2008/10/12 00:56:08 cryos Exp $
+
+*kdebase-startkde-3.5.10-r4 (12 Oct 2008)
+
+  12 Oct 2008; Marcus D. Hanwell <cryos@gentoo.org>
+  -kdebase-startkde-3.5.10.ebuild, -kdebase-startkde-3.5.10-r2.ebuild,
+  +kdebase-startkde-3.5.10-r4.ebuild:
+  Moving kdeglobals to kdelibs for non-KDE users using KDE apps.
 
   05 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> Manifest:
   Fixed manifests, whitespace and PATCHES.

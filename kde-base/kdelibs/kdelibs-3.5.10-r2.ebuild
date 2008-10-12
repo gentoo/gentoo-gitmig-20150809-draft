@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10.ebuild,v 1.3 2008/09/15 14:42:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r2.ebuild,v 1.1 2008/10/12 00:59:15 cryos Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils multilib
@@ -74,7 +74,8 @@ DEPEND="${RDEPEND}
 
 RDEPEND="${RDEPEND}
 	x11-apps/rgb
-	x11-apps/iceauth"
+	x11-apps/iceauth
+	!<=kde-base/kdebase-startkde-3.5.10-r3"
 
 PDEPEND="avahi? ( kde-misc/kdnssd-avahi )
 	bindist? ( kde-misc/kdnssd-avahi )"
@@ -199,21 +200,40 @@ src_install() {
 		libdirs="${libdirs}:${PREFIX}/${libdir}"
 	done
 
-	# KDE implies that the install path ist listed first in KDEDIRS and the user
+	# KDE implies that the install path is listed first in KDEDIRS and the user
 	# directory (implicitly added) to be the last entry. Doing otherwise breaks
 	# certain functionality. Do not break this (once again *sigh*), but read the code.
+	# KDE saves the installed path implicitly and so this is not needed, /usr
+	# is set in ${PREFIX}/share/config/kdeglobals and so KDEDIRS is not needed.
 	cat <<EOF > "${D}"/etc/env.d/45kdepaths-${SLOT} # number goes down with version upgrade
 PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${libdirs:1}
 MANPATH=${PREFIX}/share/man
 CONFIG_PROTECT="${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown /usr/share/config"
-KDEDIRS="${PREFIX}:/usr:/usr/local"
 #KDE_IS_PRELINKED=1
 # Excessive flushing to disk as in releases before KDE 3.5.10. Usually you don't want that.
 #KDE_EXTRA_FSYNC=1
 XDG_DATA_DIRS="/usr/share:${PREFIX}/share:/usr/local/share"
 COLON_SEPARATED="XDG_DATA_DIRS"
+EOF
+
+	# kdeglobals needed to make third party apps installed in /usr work
+	# Moved from kdebase-startkde-3.5.10-r3
+	cat <<EOF > "${D}/${PREFIX}/share/config/kdeglobals"
+[Directories][\$i]
+dir_lib=/usr/$(get_libdir)
+dir_apps=/usr/share/applnk
+dir_data=/usr/share/apps
+dir_icon=/usr/share/icons
+dir_module=/usr/$(get_libdir)/kde3
+dir_config=/usr/share/config
+dir_kcfg=/usr/share/config.kcfg
+dir_exe=/usr/bin
+dir_mime=/usr/share/mimelnk
+dir_services=/usr/share/services
+dir_servicetypes=/usr/share/servicetypes
+dir_templates=/usr/share/templates
 EOF
 
 	# Install shell script to run KDE 3 applications from outside of the KDE 3 desktop
