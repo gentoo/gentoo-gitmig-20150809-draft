@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-0.13.1.ebuild,v 1.3 2008/06/08 03:50:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-0.13.1.ebuild,v 1.4 2008/10/12 00:12:49 chainsaw Exp $
 
 DESCRIPTION="A high quality IRC client which uses a multitude of interfaces"
 HOMEPAGE="http://www.nenolod.net/conspire/"
@@ -9,7 +9,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 IUSE="python gnutls ipv6 nls mmx socks5"
-DEPEND="nls? ( dev-util/intltool )"
+DEPEND="nls? ( dev-util/intltool )
+	dev-util/pkgconfig"
 RDEPEND=">=dev-libs/libmowgli-0.6.0
 	>=x11-libs/gtk+-2.10
 	>=dev-libs/glib-2.14
