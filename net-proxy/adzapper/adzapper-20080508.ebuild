@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/adzapper-20080508.ebuild,v 1.1 2008/07/12 23:04:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/adzapper-20080508.ebuild,v 1.2 2008/10/12 07:45:57 mrness Exp $
 
 MY_P=${P/zapper/zap}
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND="dev-lang/perl
-	net-proxy/squid"
+RDEPEND="dev-lang/perl"
 
 S="${WORKDIR}/adzap"
 

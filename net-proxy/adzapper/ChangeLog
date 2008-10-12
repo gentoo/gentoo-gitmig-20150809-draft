@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/adzapper
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.53 2008/08/08 21:08:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.54 2008/10/12 07:45:57 mrness Exp $
+
+  12 Oct 2008; Alin Năstac <mrness@gentoo.org> -adzapper-20070317.ebuild,
+  -adzapper-20071023.ebuild, adzapper-20080508.ebuild:
+  Remove obsolete versions. Remove squid run-time dependency (#241212).
 
   08 Aug 2008; Steve Dibb <beandog@gentoo.org> adzapper-20071120.ebuild:
   amd64 stable, bug 231642
