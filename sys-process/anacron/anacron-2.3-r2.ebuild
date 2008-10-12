@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/anacron-2.3-r2.ebuild,v 1.2 2005/10/01 17:56:22 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/anacron-2.3-r2.ebuild,v 1.3 2008/10/12 07:30:26 bangert Exp $
 
 inherit eutils
 
@@ -14,14 +14,15 @@ KEYWORDS="x86 ppc amd64"
 IUSE=""
 
 DEPEND="virtual/libc
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	sys-process/cronbase"
 RDEPEND="virtual/mta
 	virtual/cron"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-compile-fix-from-debian.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-compile-fix-from-debian.patch
 	sed -i "s:^CFLAGS =:CFLAGS = $CFLAGS:" Makefile
 }
 
@@ -36,15 +37,15 @@ src_install() {
 
 	doman anacrontab.5 anacron.8
 
-	newinitd ${FILESDIR}/anacron.rc6 anacron
+	newinitd "${FILESDIR}"/anacron.rc6 anacron
 
-	dodoc ChangeLog COPYING README TODO
+	dodoc ChangeLog README TODO
 
 	insinto /usr/sbin
 	insopts -o root -g root -m 0750 ; doins anacron
 
 	insinto /etc
-	doins ${FILESDIR}/anacrontab
+	doins "${FILESDIR}"/anacrontab
 }
 
 pkg_postinst() {
