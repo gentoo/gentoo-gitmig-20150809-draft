@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.26 2008/10/12 15:21:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.27 2008/10/12 15:58:51 bluebird Exp $
+
+  12 Oct 2008; Friedrich Oslage <bluebird@gentoo.org>
+  suite3270-3.3.7_p5.ebuild:
+  Stable on sparc, bug #240972
 
   12 Oct 2008; Markus Meier <maekke@gentoo.org> suite3270-3.3.7_p5.ebuild:
   amd64/x86 stable, bug #240972
