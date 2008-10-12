@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.5.1.ebuild,v 1.1 2008/06/24 17:20:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.5.1.ebuild,v 1.2 2008/10/12 11:24:55 markusle Exp $
 
 inherit eutils flag-o-matic gnome2 kde-functions autotools
+
+EAPI="1"
 
 DESCRIPTION="OpenGL 3D space simulator"
 HOMEPAGE="http://www.shatters.net/celestia/"
@@ -27,7 +29,7 @@ RDEPEND="virtual/glu
 		>=x11-libs/gtkglext-1.0
 		>=gnome-base/libgnomeui-2.0
 	) )
-	kde?  ( !gnome? ( >=kde-base/kdelibs-3.0.5 ) )
+	kde?  ( !gnome? ( kde-base/kdelibs:3.5 ) )
 	!gtk? ( !gnome? ( !kde? ( virtual/glut ) ) )
 	arts? ( kde-base/arts )
 	lua? ( >=dev-lang/lua-5.0 )
