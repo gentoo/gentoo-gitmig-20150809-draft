@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/istack-commons-runtime
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.7 2008/03/28 17:50:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.8 2008/10/12 21:22:10 serkan Exp $
+
+*istack-commons-runtime-20070122-r1 (12 Oct 2008)
+
+  12 Oct 2008; Serkan Kaba <serkan@gentoo.org>
+  +istack-commons-runtime-20070122-r1.ebuild:
+  Migrate to jaf virtual.
 
   28 Mar 2008; nixnut <nixnut@gentoo.org>
   istack-commons-runtime-20070122.ebuild:
