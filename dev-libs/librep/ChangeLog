@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.51 2008/10/06 19:31:53 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.52 2008/10/12 12:25:49 ulm Exp $
+
+  12 Oct 2008; Ulrich Mueller <ulm@gentoo.org> librep-0.17_p20070101.ebuild:
+  Specify name of Emacs site-init file explicitely.
 
   06 Oct 2008; Harald van Dĳk <truedfx@gentoo.org>
   +files/librep-0.17_p20070101-ldflags.patch, librep-0.17_p20070101.ebuild:

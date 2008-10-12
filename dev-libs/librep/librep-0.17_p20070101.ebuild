@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17_p20070101.ebuild,v 1.6 2008/10/06 19:31:53 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17_p20070101.ebuild,v 1.7 2008/10/12 12:25:49 ulm Exp $
 
 MY_P=${P%_*}
 
@@ -60,7 +60,7 @@ src_install() {
 
 	if use emacs; then
 		elisp-install ${PN} rep-debugger.{el,elc} || die "elisp-install failed"
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
+		elisp-site-file-install "${FILESDIR}/50${PN}-gentoo.el" \
 			|| die "elisp-site-file-install failed"
 	fi
 }
