@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.189 2008/10/06 21:14:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.190 2008/10/12 16:29:01 eva Exp $
+
+*evolution-data-server-2.22.3-r1 (12 Oct 2008)
+
+  12 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/evolution-data-server-2.22.3-mail-cleanup-delay.patch,
+  +files/evolution-data-server-2.22.3-timezone-western.patch,
+  +evolution-data-server-2.22.3-r1.ebuild:
+  bump to 2.22.3-r1, backport upstream bug fixes announced on distributor
+  list.
 
   06 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
   evolution-data-server-1.12.3.ebuild:
