@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.546 2008/10/11 15:03:50 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.547 2008/10/12 21:31:54 mpagano Exp $
+
+*gentoo-sources-2.6.27 (12 Oct 2008)
+
+  12 Oct 2008; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.27.ebuild:
+  Version bump to 2.6.27 which includes a bump of squashfs to 3.4, the alpha
+  unaligned access patch, the fbcondecor patch and the patch for bad block
+  relocation support for LiveCD users.
 
 *gentoo-sources-2.6.26-r2 (11 Oct 2008)
 
