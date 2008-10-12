@@ -1,6 +1,21 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.84 2008/08/31 11:29:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.85 2008/10/12 09:08:55 mrness Exp $
+
+*freeradius-2.1.1 (12 Oct 2008)
+
+  12 Oct 2008; Alin Năstac <mrness@gentoo.org>
+  -files/freeradius-2.0.3-check-radiusd.patch,
+  -files/freeradius-2.0.3-ssl.patch,
+  -files/freeradius-2.0.3-versionless-la-files.patch,
+  -files/freeradius-2.0.4-gnu-source.patch,
+  -files/freeradius-2.0.4-ssl.patch,
+  -files/freeradius-2.0.4-versionless-la-files.patch,
+  +files/freeradius-2.1.1-qafixes.patch, +files/freeradius-2.1.1-ssl.patch,
+  +files/freeradius-2.1.1-versionless-la-files.patch,
+  -freeradius-2.0.3.ebuild, -freeradius-2.0.4-r1.ebuild,
+  +freeradius-2.1.1.ebuild:
+  Version bump.
 
   31 Aug 2008; Alin Năstac <mrness@gentoo.org> metadata.xml:
   Update udpfromto USE flag description (#235688).

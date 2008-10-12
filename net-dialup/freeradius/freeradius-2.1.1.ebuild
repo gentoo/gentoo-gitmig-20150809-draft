@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.0.3.ebuild,v 1.3 2008/05/21 18:53:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.1.ebuild,v 1.1 2008/10/12 09:08:55 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
-inherit eutils multilib autotools pam
+inherit eutils multilib pam
 
 DESCRIPTION="Highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${PN}-server-${PV}.tar.gz"
@@ -49,7 +49,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-versionless-la-files.patch"
 	epatch "${FILESDIR}/${P}-ssl.patch"
-	epatch "${FILESDIR}/${P}-check-radiusd.patch"
+	epatch "${FILESDIR}/${P}-qafixes.patch"
 
 	cd "${S}"
 
@@ -85,8 +85,6 @@ src_unpack() {
 		rm -rf src/modules/rlm_sql/drivers/rlm_sql_firebird
 		sed -i -e '/rlm_sql_firebird/d' src/modules/rlm_sql/stable
 	fi
-
-	eautoconf || die "eautoconf failed"
 }
 
 src_compile() {
@@ -104,7 +102,7 @@ src_compile() {
 		myconf="${myconf} --enable-heimdal-krb5"
 	fi
 
-	econf --disable-ltdl-install \
+	econf --disable-ltdl-install --with-system-libtool \
 		 --localstatedir=/var ${myconf} || die "econf failed"
 
 	make || die "make failed"
@@ -135,6 +133,6 @@ src_install() {
 
 	rm "${D}/usr/sbin/rc.radiusd"
 
-	newinitd "${FILESDIR}/radius.init" radiusd
+	newinitd "${FILESDIR}/radius.init-r1" radiusd
 	newconfd "${FILESDIR}/radius.conf" radiusd
 }
