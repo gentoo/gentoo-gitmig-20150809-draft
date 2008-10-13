@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/qvortaro
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/qvortaro/ChangeLog,v 1.9 2008/07/27 19:20:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/qvortaro/ChangeLog,v 1.10 2008/10/13 18:39:55 bangert Exp $
+
+  13 Oct 2008; Thilo Bangert <bangert@gentoo.org> qvortaro-0.3.0.ebuild,
+  qvortaro-0.3.1.ebuild:
+  use mirror:// (bug #218657), fix quoting, remove redundant cd ${S}
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qvortaro-0.3.0.ebuild,
   qvortaro-0.3.1.ebuild:
