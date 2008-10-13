@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.90.ebuild,v 1.2 2008/10/10 12:55:33 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.90.ebuild,v 1.3 2008/10/13 13:19:52 gentoofan23 Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ DEPEND="
 	mp3tunes? ( net-misc/curl
 		    dev-libs/libxml2 )
 	mp4? ( media-libs/libmp4v2 )
-	mtp? ( >=media-libs/libmtp-0.1.1 )
+	mtp? ( >=media-libs/libmtp-0.3.3 )
 	mysql? ( >=virtual/mysql-4.0 )
 	njb? ( >=media-libs/libnjb-2.2.4 )
 	opengl? ( virtual/opengl )
