@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.22.0.ebuild,v 1.1 2008/03/26 00:14:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.22.1-r1.ebuild,v 1.1 2008/10/13 21:26:52 eva Exp $
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Tools aimed to make easy the administration of UNIX systems"
 HOMEPAGE="http://www.gnome.org/projects/gst/"
@@ -10,9 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/gst/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nfs samba"
-
-# TODO: policykit seems to be an option but has no configure switch
+IUSE="nfs policykit samba"
 
 RDEPEND="
 	>=dev-libs/liboobs-2.21.3
@@ -23,7 +21,8 @@ RDEPEND="
 	>=gnome-base/nautilus-2.9.90
 	sys-libs/cracklib
 	nfs? ( net-fs/nfs-utils )
-	samba? ( >=net-fs/samba-3 )"
+	samba? ( >=net-fs/samba-3 )
+	policykit? ( >=sys-auth/policykit-0.5 )"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
@@ -34,7 +33,23 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README TODO"
 
 pkg_setup() {
+	G2CONF="${G2CONF} $(use_enable policykit polkit)"
+
 	if ! use nfs && ! use samba; then
 		G2CONF="${G2CONF} --disable-shares"
 	fi
+
+	if use policykit && ! built_with_use app-admin/system-tools-backends policykit; then
+		eerror "app-admin/system-tools-backends was not built with USE='policykit'"
+		die "Please rebuild app-admin/system-tools-backends with policykit support"
+	fi
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Fix automagic policykit detection
+	epatch "${FILESDIR}/${P}-automagic-polkit.patch"
+
+	eautoreconf
 }
