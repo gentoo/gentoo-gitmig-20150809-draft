@@ -1,6 +1,13 @@
 # ChangeLog for app-office/taskcoach
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.13 2008/10/12 10:55:56 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.14 2008/10/13 22:26:36 caster Exp $
+
+*taskcoach-0.71.1 (13 Oct 2008)
+
+  13 Oct 2008; Vlastimil Babka <caster@gentoo.org> -taskcoach-0.71.0.ebuild,
+  +taskcoach-0.71.1.ebuild:
+  Version bump, bug fixes. Works on amd64 again, funambol synchronization
+  not supported there though.
 
 *taskcoach-0.71.0 (12 Oct 2008)
 
