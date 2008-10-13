@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.8.2-r1.ebuild,v 1.1 2008/08/13 04:36:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.8.2-r2.ebuild,v 1.1 2008/10/13 10:51:30 pva Exp $
 
 inherit versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -31,6 +31,7 @@ src_unpack() {
 		-e "s,^INITDIR:=.*,INITDIR:=/usr/share/doc/${PF}," \
 		-e "s,^SYSCONFIGDIR:=.*,SYSCONFIGDIR:=/usr/share/doc/${PF}," \
 		-e "s,^LIBDIR:=.*,LIBDIR:=/$(get_libdir)/\$(PROGNAME)," Makefile
+	sed -i -e "s/^CFLAGS:=/CFLAGS+=/" Makefile
 	sed -i -e "s,^CC:=.*,CC:=$(tc-getCC)," Makefile
 }
 
