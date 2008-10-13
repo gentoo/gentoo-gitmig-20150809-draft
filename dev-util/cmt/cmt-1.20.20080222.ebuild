@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.20.20080222.ebuild,v 1.1 2008/04/04 11:09:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.20.20080222.ebuild,v 1.2 2008/10/13 22:09:40 bicatali Exp $
 
 inherit elisp-common toolchain-funcs versionator
 
@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="emacs java doc"
 
-DEPEND=""
-RDEPEND="emacs? ( virtual/emacs )
+DEPEND="emacs? ( virtual/emacs )"
+RDEPEND="${DEPEND}
 	java? ( virtual/jdk )"
 
 S="${WORKDIR}/CMT/${CMT_PV}"
@@ -35,6 +35,10 @@ src_compile() {
 	cd "${S}"
 	mv src/demo .
 	rm -f ${CMTBIN}/*.o
+
+	if use emacs; then
+		elisp-compile doc/cmt-mode.el || die
+	fi
 }
 
 src_install() {
@@ -72,9 +76,10 @@ src_install() {
 		doins -r demo || die "doins demo failed"
 	fi
 
-	use emacs && \
-		elisp-site-file-install \
-		doc/cmt-mode.el "${FILESDIR}"/80cmt-mode-gentoo.el
+	if use emacs; then
+		elisp-install ${PN} doc/cmt-mode.{el,elc} || die
+		elisp-site-file-install "${FILESDIR}"/80cmt-mode-gentoo.el || die
+	fi
 }
 
 pkg_postinst () {

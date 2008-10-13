@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/ChangeLog,v 1.4 2008/09/09 00:06:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/ChangeLog,v 1.5 2008/10/13 22:09:40 bicatali Exp $
+
+  13 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/80cmt-mode-gentoo.el, cmt-1.20.20080222.ebuild:
+  Fixed emacs site file and emacs file installation, thanks to ulm, closing
+  bug #241588.
 
   09 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -cmt-1.20.20070720.ebuild:
