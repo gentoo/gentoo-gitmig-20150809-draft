@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.89 2008/10/12 18:26:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.90 2008/10/13 23:38:44 rich0 Exp $
+
+  13 Oct 2008; Richard Freeman <rich0@gentoo.org> lm_sensors-2.10.7.ebuild:
+  amd64 stable - 241646
 
   12 Oct 2008; Raúl Porcel <armin76@gentoo.org> lm_sensors-2.10.7.ebuild:
   alpha/x86 stable
