@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.018.ebuild,v 1.1 2008/09/02 09:45:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/idb/idb-10.1.018.ebuild,v 1.2 2008/10/13 22:15:44 bicatali Exp $
 
 inherit rpm elisp-common
 
@@ -33,7 +33,8 @@ DEPEND=""
 RDEPEND="virtual/libstdc++
 	x11-libs/libXft
 	x11-libs/libXt
-	dev-libs/libxml2"
+	dev-libs/libxml2
+	emacs? ( virtual/emacs )"
 
 src_unpack() {
 	unpack ${A}
@@ -68,8 +69,10 @@ src_install() {
 		MANPATH=${instdir}/man
 	EOF
 	doenvd 06idb || die "installing env file failed"
-	use emacs && \
-		elisp-site-file-install "${S}"${instdir}/bin/*.el
+	if use emacs; then
+		elisp-install ${PN} "${S}"${instdir}/bin/*.el || die
+		elisp-site-file-install "${FILESDIR}"/50${PN}-gentoo.el || die
+	fi
 }
 
 pkg_postinst () {
