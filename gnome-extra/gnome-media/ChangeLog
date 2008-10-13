@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.179 2008/09/25 15:31:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.180 2008/10/13 02:00:04 leio Exp $
+
+*gnome-media-2.24.0.1 (13 Oct 2008)
+
+  13 Oct 2008; Mart Raudsepp <leio@gentoo.org> +gnome-media-2.24.0.1.ebuild:
+  New major version for GNOME-2.24. UI changes to the volume control dialog,
+  cddb-slave2 is no longer built (file a bug if you actually need it), and
+  more
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org> gnome-media-2.22.0.ebuild:
   Stable for HPPA (bug #236971).
