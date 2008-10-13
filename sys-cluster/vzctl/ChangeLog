@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.56 2008/07/28 20:58:31 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.57 2008/10/13 09:25:59 pva Exp $
+
+*vzctl-3.0.22-r10 (13 Oct 2008)
+
+  13 Oct 2008; Peter Volkov <pva@gentoo.org>
+  +files/vzctl-3.0.22-scripts-openrc.patch, +vzctl-3.0.22-r10.ebuild:
+  Made scripts openvz compatible. Skipped revisions to have possibility to
+  put major updates (e.g. security) without this changes applied.
 
   28 Jul 2008; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
   Update metadata.xml to include USE flag descriptions. Entries taken from
