@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/libkdcraw-4.1.2.ebuild,v 1.2 2008/10/04 16:45:28 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/libkdcraw-4.1.2.ebuild,v 1.3 2008/10/13 00:57:02 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	!<media-libs/libkdcraw-0.1.4
+	!<=media-libs/libkdcraw-0.1.4
 	media-libs/jpeg
 	media-libs/lcms
 "

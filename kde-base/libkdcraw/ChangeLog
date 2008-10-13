@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.3 2008/10/04 16:45:28 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.4 2008/10/13 00:57:02 jmbsvicetto Exp $
+
+  13 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  libkdcraw-4.1.2.ebuild:
+  Fixed dep block to include 0.1.4. Thanks to Roie Kerstein for reporting
+  the error. Fixes bug 241658.
 
   04 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   libkdcraw-4.1.2.ebuild:
