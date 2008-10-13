@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.20 2008/07/27 19:21:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.21 2008/10/13 18:41:54 bangert Exp $
 
 EAPI=1
 
 inherit qt3
 
 DESCRIPTION="graphical documentation browser for Unix/X11"
-SRC_URI="http://download.berlios.de/dox/${P}.tar.gz"
+SRC_URI="mirror://berlios/dox/${P}.tar.gz"
 HOMEPAGE="http://dox.berlios.de/"
 
 SLOT="0"

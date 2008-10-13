@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/dox
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.13 2008/07/27 19:21:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.14 2008/10/13 18:41:54 bangert Exp $
+
+  13 Oct 2008; Thilo Bangert <bangert@gentoo.org> dox-1.1.ebuild:
+  use mirror:// (bug #218657)
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> dox-1.1.ebuild:
   QA: Get rid of deprecated qt_min_version().
