@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/system-tools-backends
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.47 2008/03/23 13:03:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.48 2008/10/13 21:27:11 eva Exp $
+
+*system-tools-backends-2.6.0-r1 (13 Oct 2008)
+
+  13 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/system-tools-backends-2.6.0-automagic-polkit.patch,
+  +files/system-tools-backends-2.6.0-services.patch,
+  +files/system-tools-backends-2.6.0-users.patch,
+  -system-tools-backends-2.4.1-r1.ebuild,
+  -system-tools-backends-2.6.0.ebuild,
+  +system-tools-backends-2.6.0-r1.ebuild, metadata.xml:
+  bump to 2.6.0-r1. Integrate patch from bug #214265, thanks to Jeremy
+  Guitton and fix policykit automagic dependency.
 
 *system-tools-backends-2.6.0 (23 Mar 2008)
 
