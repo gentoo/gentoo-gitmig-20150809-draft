@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.17 2008/07/18 18:11:01 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.18 2008/10/13 15:21:22 flameeyes Exp $
+
+*libxml-0.8.3 (13 Oct 2008)
+
+  13 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> +libxml-0.8.3.ebuild:
+  Version bump.
 
   18 Jul 2008; Santiago M. Mola <coldwind@gentoo.org> libxml-0.5.4.ebuild:
   amd64 stable wrt bug #231811
