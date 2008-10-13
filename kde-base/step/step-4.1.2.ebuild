@@ -1,10 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/step-4.1.2.ebuild,v 1.1 2008/10/02 11:21:08 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/step-4.1.2.ebuild,v 1.2 2008/10/13 17:47:04 jmbsvicetto Exp $
 
 EAPI="2"
 
 KMNAME=kdeedu
+OPENGL_REQUIRED="always"
 inherit kde4-meta
 
 DESCRIPTION="The KDE physics simulator"
