@@ -1,5 +1,5 @@
 --- lib/rcscripts/net.modules.d/iwconfig	(revision 1770)
-+++ /lib/rccscripts/net.modules.d/iwconfig	(working copy)
++++ lib/rcscripts/net.modules.d/iwconfig	(working copy)
 @@ -832,7 +832,7 @@
  		[[ ${unique_ap} != no ]] && iwconfig_strip_associated ${iface}
  

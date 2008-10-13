@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout-vserver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.43 2008/03/14 20:23:35 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/ChangeLog,v 1.44 2008/10/13 10:12:52 pva Exp $
+
+  13 Oct 2008; Peter Volkov <pva@gentoo.org>
+  files/baselayout-vserver-1.11.14-iwconfig.patch:
+  Fixed broken patch, bug #238588, thank Tom Penndorf for report and fix.
 
   14 Mar 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   fix metadata
