@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7b-r3.ebuild,v 1.1 2008/08/19 07:23:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.7b-r3.ebuild,v 1.2 2008/10/13 08:43:28 pva Exp $
 
-inherit eutils webapp depend.apache depend.php
+inherit eutils webapp depend.php
 
 # Support for _p* in version.
 MY_P=${P/_p*/}
@@ -24,16 +24,15 @@ fi
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="snmp"
+IUSE="snmp doc"
 
 DEPEND=""
 
-want_apache
 need_php_cli
+need_httpd_cgi
 need_php_httpd
 
-RDEPEND="!apache2? ( www-servers/lighttpd )
-	snmp? ( net-analyzer/net-snmp )
+RDEPEND="snmp? ( net-analyzer/net-snmp )
 	net-analyzer/rrdtool
 	dev-php/adodb
 	virtual/mysql
@@ -62,15 +61,14 @@ pkg_setup() {
 	require_php_with_use cli mysql xml session pcre sockets
 }
 
-src_compile() {
-	einfo "Nothing to compile."
-}
+src_compile() { :; }
 
 src_install() {
 	webapp_src_preinst
 
 	rm LICENSE README
-	dodoc docs/{CHANGELOG,CONTRIB,INSTALL,README,REQUIREMENTS,UPGRADE}
+	dodoc docs/{CHANGELOG,CONTRIB,INSTALL,README,REQUIREMENTS,UPGRADE,text/manual.txt}
+	use doc && dohtml -r docs/html/
 	rm -rf docs
 	rm -rf lib/adodb
 
