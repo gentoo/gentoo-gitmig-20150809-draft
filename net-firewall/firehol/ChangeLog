@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.37 2008/09/27 13:37:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.38 2008/10/13 00:54:38 gengor Exp $
+
+*firehol-1.273 (13 Oct 2008)
+
+  13 Oct 2008; Gordon Malm <gengor@gentoo.org> +firehol-1.273.ebuild:
+  Version bump.  Thanks to Syed Amer Gilani and Kerin Millar in bug #233787.
 
   27 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
   firehol-1.256-r1.ebuild:
