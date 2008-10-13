@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/kvkbd
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvkbd/ChangeLog,v 1.1 2008/10/13 18:50:16 yngwin Exp $
+
+*kvkbd-0.5 (13 Oct 2008)
+
+  13 Oct 2008; Ben de Groot <yngwin@gentoo.org> +files/gcc43-fix.patch,
+  +metadata.xml, +kvkbd-0.5.ebuild:
+  Initial commit. Ebuild by me, based on contributions by Jiri Tyr in bug
+  174054.
+
