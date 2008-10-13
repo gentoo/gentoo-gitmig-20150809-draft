@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.11.ebuild,v 1.1 2008/10/09 22:01:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.11.ebuild,v 1.2 2008/10/13 21:59:33 mrness Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -10,7 +10,7 @@ inherit eutils multilib autotools
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20081009.tar.gz"
+	mirror://gentoo/${P}-patches-20081013.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -30,6 +30,7 @@ src_unpack() {
 
 	cd "${S}" || die "source dir not found"
 	epatch "${WORKDIR}/patch/${P}-link-libcap.patch"
+	epatch "${WORKDIR}/patch/${P}-ipv6.patch"
 
 	# Classless prefixes for BGP - http://hasso.linux.ee/doku.php/english:network:quagga
 	use bgpclassless && epatch "${WORKDIR}/patch/ht-20040304-classless-bgp_adapted.patch"
