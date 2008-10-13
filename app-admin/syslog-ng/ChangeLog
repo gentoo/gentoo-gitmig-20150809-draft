@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.187 2008/10/13 13:35:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.188 2008/10/13 23:40:45 mr_bones_ Exp $
+
+  13 Oct 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  syslog-ng-2.1.1.ebuild:
+  fix up magic sql support
 
 *syslog-ng-2.1.1 (13 Oct 2008)
 
