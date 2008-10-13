@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-timezonedb/pecl-timezonedb-2007.10.ebuild,v 1.2 2007/12/22 18:52:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-timezonedb/pecl-timezonedb-2008.8.ebuild,v 1.1 2008/10/13 15:52:58 hoffie Exp $
 
 PHP_EXT_NAME="timezonedb"
 PHP_EXT_INI="yes"
