@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/arptables-0.0.3.3-r1.ebuild,v 1.4 2007/12/16 10:56:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arptables/arptables-0.0.3.3-r1.ebuild,v 1.5 2008/10/13 11:13:26 pva Exp $
 
 inherit versionator eutils
 
@@ -18,13 +18,14 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	emake CC="$(tc-getCC)" COPT_FLAGS="${CFLAGS}" || die "make failed"
+	# -O0 does not work and at least -O2 is required, bug #240752
+	emake CC="$(tc-getCC)" COPT_FLAGS="-O2 ${CFLAGS//-O0/-O2}" || die "make failed"
 	sed -ie 's:__EXEC_PATH__:/sbin:g' arptables-save arptables-restore \
 		|| die "sed failed"
 }
 
 src_install() {
 	into /
-	dosbin arptables arptables-restore arptables-save
+	dosbin arptables arptables-restore arptables-save || die
 	doman arptables.8
 }
