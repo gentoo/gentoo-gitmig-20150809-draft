@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.74 2008/09/07 01:48:58 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.75 2008/10/13 22:55:27 opfer Exp $
+
+*gramps-3.0.2 (13 Oct 2008)
+
+  13 Oct 2008; Christian Faulhammer <opfer@gentoo.org> +gramps-3.0.2.ebuild:
+  version bump, bug 239457; fixes lots of small things
 
   07 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   gramps-3.0.1-r1.ebuild:
