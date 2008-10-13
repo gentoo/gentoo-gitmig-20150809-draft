@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-menu-icons
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-menu-icons/ChangeLog,v 1.10 2008/10/02 07:57:04 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-menu-icons/ChangeLog,v 1.11 2008/10/13 13:43:28 gentoofan23 Exp $
+
+  13 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  kde-menu-icons-4.1.2.ebuild:
+  We don't want to extract kmenuedit as it's not in this tarball.
 
 *kde-menu-icons-4.1.2 (02 Oct 2008)
 
