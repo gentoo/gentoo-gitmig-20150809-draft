@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.8.1.ebuild,v 1.10 2008/02/29 19:04:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.8.1.ebuild,v 1.11 2008/10/13 17:10:02 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -45,7 +45,12 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -C Linux OPTIMIZE="${CFLAGS}" || die "emake failed"
+	local CPU=i386
+
+	if use amd64; then
+		CPU=x86_64
+	fi
+	emake -C Linux OPTIMIZE="${CFLAGS}" CPU="${CPU}" || die "emake failed"
 }
 
 src_install() {
