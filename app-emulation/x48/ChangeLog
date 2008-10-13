@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/x48
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.15 2007/12/25 15:37:11 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.16 2008/10/13 18:51:39 bangert Exp $
+
+  13 Oct 2008; Thilo Bangert <bangert@gentoo.org> x48-0.4.3.ebuild,
+  x48-0.4.3-r1.ebuild:
+  use mirror:// (bug #218657), fix quoting, cleanup install
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471. Assigning to

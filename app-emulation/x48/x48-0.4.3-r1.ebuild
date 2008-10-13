@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3-r1.ebuild,v 1.16 2007/07/22 09:40:43 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3-r1.ebuild,v 1.17 2008/10/13 18:51:39 bangert Exp $
 
 inherit eutils
 
 DESCRIPTION="HP48 Calculator Emulator"
 HOMEPAGE="http://x48.berlios.de/"
-SRC_URI="http://download.berlios.de/x48/${P}.tar.gz
+SRC_URI="mirror://berlios/x48/${P}.tar.gz
 	http://www.hpcalc.org/hp48/pc/emulators/sxrom-j.zip
 	http://www.hpcalc.org/hp48/pc/emulators/gxrom-r.zip"
 LICENSE="|| ( ( GPL-2 free-noncomm ) GPL-2 )"
@@ -32,20 +32,20 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${S}/src/checkrom ${S}/src/dump2rom ${S}/src/mkcard ${S}/src/x48
+	dobin src/checkrom src/dump2rom src/mkcard src/x48
 
-	newman ${S}/src/x48.man x48.1
+	newman src/x48.man x48.1
 
 	dodir /usr/lib/X11/app-defaults
 	insinto /usr/lib/X11/app-defaults/
-	newins ${S}/src/X48.ad X48
+	newins src/X48.ad X48
 
 	dodir /usr/share/hp48
 	insinto /usr/share/hp48
-	doins ${WORKDIR}/gxrom-r ${WORKDIR}/sxrom-j
+	doins "${WORKDIR}"/gxrom-r "${WORKDIR}"/sxrom-j
 
-	dodoc ${S}/doc/CARDS.doc ${S}/doc/ROMDump.doc
-	dodoc ${S}/romdump/ROMDump ${S}/romdump/ROMDump.s
+	dodoc doc/CARDS.doc doc/ROMDump.doc
+	dodoc romdump/ROMDump romdump/ROMDump.s
 }
 
 pkg_postinst() {
