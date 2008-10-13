@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.38 2008/09/23 07:17:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.39 2008/10/13 23:39:01 matsuu Exp $
+
+*awesome-3.0-r1 (13 Oct 2008)
+
+  13 Oct 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/awesome-3.0-gentoo.patch, +awesome-3.0-r1.ebuild:
+  Fixed dependency.
 
   23 Sep 2008; Markus Rothe <corsair@gentoo.org> awesome-3.0.ebuild:
   Added ~ppc
