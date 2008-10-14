@@ -1,14 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ruby-gtkmozembed-0.16.0.ebuild,v 1.7 2008/05/15 20:47:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ruby-gtkmozembed-0.16.0.ebuild,v 1.8 2008/10/14 12:45:51 graaff Exp $
 
 inherit ruby ruby-gnome2
 
 DESCRIPTION="Ruby/GTK bindings for Mozilla"
 KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
-IUSE="seamonkey"
+IUSE="firefox seamonkey xulrunner"
 USE_RUBY="ruby18 ruby19"
-DEPEND="seamonkey? ( >=www-client/seamonkey-1.0 )"
+DEPEND="xulrunner? ( =net-libs/xulrunner-1.8* )
+	!xulrunner? ( firefox? ( =www-client/mozilla-firefox-2* ) )
+	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )"
 RDEPEND="${DEPEND}
 	>=dev-ruby/ruby-glib2-${PV}
 	>=dev-ruby/ruby-pango-${PV}
