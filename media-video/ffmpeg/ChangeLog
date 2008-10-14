@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.228 2008/10/14 09:09:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.229 2008/10/14 09:39:39 aballier Exp $
+
+  14 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  ffmpeg-0.4.9_p20081014.ebuild:
+  Broaden libdc1394 dep as it works with v2 too, by Fabio Correa
+  <facorread@gmail.com>, bug #237687
 
   14 Oct 2008; Alexis Ballier <aballier@gentoo.org>
   ffmpeg-0.4.9_p20070616.ebuild, ffmpeg-0.4.9_p20070616-r1.ebuild,
