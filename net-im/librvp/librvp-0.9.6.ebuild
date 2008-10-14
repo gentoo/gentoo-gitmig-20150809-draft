@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/librvp/librvp-0.9.6.ebuild,v 1.4 2007/12/08 16:27:57 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/librvp/librvp-0.9.6.ebuild,v 1.5 2008/10/14 01:29:13 darkside Exp $
 
 inherit multilib
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="net-im/pidgin"
+RDEPEND="net-im/pidgin"
+DEPEND="dev-util/pkgconfig
+	${RDEPEND}"
 
 src_compile() {
 
