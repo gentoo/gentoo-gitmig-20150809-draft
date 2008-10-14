@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.4.ebuild,v 1.6 2008/10/04 16:20:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.4.ebuild,v 1.7 2008/10/14 18:06:24 dberkholz Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ RDEPEND="!<=x11-base/xorg-x11-6.9"
 
 # Server
 RDEPEND="${RDEPEND}
-	>=x11-base/xorg-server-1.5.0"
+	>=x11-base/xorg-server-1.5.2"
 
 # Applications
 RDEPEND="${RDEPEND}
@@ -98,7 +98,7 @@ RDEPEND="${RDEPEND}
 	>=x11-libs/libfontenc-1.0.4
 	>=x11-libs/libpciaccess-0.10.3
 	>=x11-libs/libxkbfile-1.0.5
-	>=x11-libs/xtrans-1.2.1
+	>=x11-libs/xtrans-1.2.2
 	"
 
 # Protocol headers
@@ -192,9 +192,8 @@ RDEPEND="${RDEPEND}
 # Documentation
 RDEPEND="${RDEPEND}
 	>=app-doc/xorg-sgml-doctools-1.2
+	>=app-doc/xorg-docs-1.4
 	"
-# Not released yet
-#	>=app-doc/xorg-docs-1.5.0
 
 DEPEND="${RDEPEND}"
 
