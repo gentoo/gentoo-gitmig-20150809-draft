@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.26-r1.ebuild,v 1.10 2008/10/14 07:08:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.26-r1.ebuild,v 1.11 2008/10/14 07:09:18 robbat2 Exp $
 
 inherit eutils
 
@@ -20,9 +20,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-libexec.patch
-	epatch ${FILESDIR}/${P}-coreutils-tail-n-fix.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-libexec.patch
+	epatch "${FILESDIR}"/${P}-coreutils-tail-n-fix.patch
 
 	sed -i \
 		-e "/^CC/ { s/$/ ${CFLAGS}/g }" \
