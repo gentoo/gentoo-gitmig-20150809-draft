@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.24 2008/07/17 08:02:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.25 2008/10/14 16:34:14 aballier Exp $
+
+  14 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  ffmpeg2theora-0.21.ebuild:
+  check for vhook useflag on ffmpeg
 
   17 Jul 2008; Alexis Ballier <aballier@gentoo.org>
   ffmpeg2theora-0.19.ebuild, ffmpeg2theora-0.20.ebuild,

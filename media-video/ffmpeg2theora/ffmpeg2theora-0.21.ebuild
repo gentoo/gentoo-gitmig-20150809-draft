@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.21.ebuild,v 1.2 2008/07/17 08:02:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.21.ebuild,v 1.3 2008/10/14 16:34:14 aballier Exp $
 
 inherit eutils
 
@@ -28,6 +28,10 @@ pkg_setup() {
 	if ! built_with_use media-libs/libtheora encode; then
 		eerror "${fail}"
 		die "${fail}"
+	fi
+	if ! built_with_use --missing true media-video/ffmpeg vhook; then
+		eerror "${PN} requires ffmpeg to be built with the vhook useflag."
+		die "Please reinstall media-video/ffmpeg with the vhook useflag enabled"
 	fi
 }
 
