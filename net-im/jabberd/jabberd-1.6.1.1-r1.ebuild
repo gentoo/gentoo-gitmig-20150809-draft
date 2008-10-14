@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.6 2008/08/25 13:08:29 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.7 2008/10/14 19:10:55 gentoofan23 Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit autotools eutils
@@ -46,6 +46,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-sandbox.patch"
 	epatch "${FILESDIR}/${P}-parallel-make.patch"
 	epatch "${FILESDIR}/${P}-undefineddebug.patch"
+	epatch "${FILESDIR}/${P}-libtool2.2.patch"
 
 	eautoreconf || die "Reconfiguring autotools failed!"
 }
