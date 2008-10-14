@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/arm-fdisk-3.0.6.ebuild,v 1.7 2008/03/16 08:35:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/arm-fdisk/arm-fdisk-3.0.6.ebuild,v 1.8 2008/10/14 15:17:32 flameeyes Exp $
 
 inherit eutils
 
@@ -21,11 +21,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}"/acorn-fdisk_${PV}-${DEB_VER}.diff
-	sed -i \
-		-e "s:-O2 -Wall -g:${CFLAGS}:" \
-		-e "s:-O2 -Wall -I.. -g:${CFLAGS} -I..:" \
-		-e '/^STRIP/s:strip:true:' \
-		$(find . -name Makefile)
+
+	find "${S}" -name Makefile -print0 | xargs -0 \
+		sed -i \
+		-e "s:-O2 -Wall\( -g\)\?::" \
+		-e "/^CFLAGS/s:=:+=:" \
+		-e '/^STRIP/s:strip:true:'
 }
 
 src_install() {
