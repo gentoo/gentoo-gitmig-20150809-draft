@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/graphlcd-base
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.20 2008/07/31 16:22:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.21 2008/10/14 13:32:11 rbu Exp $
+
+  14 Oct 2008; Robert Buchholz <rbu@gentoo.org> graphlcd-base-0.1.5.ebuild,
+  graphlcd-base-0.1.5-r1.ebuild:
+  Use berlios mirror URI, bug #218657
 
   31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
