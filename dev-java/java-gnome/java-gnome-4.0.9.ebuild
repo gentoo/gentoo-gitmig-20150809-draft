@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.9.ebuild,v 1.1 2008/10/13 18:50:38 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.9.ebuild,v 1.2 2008/10/14 00:56:24 ken69267 Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source"
 
-inherit eutils versionator java-pkg-2
+inherit eutils versionator java-pkg-2 multilib
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
@@ -39,7 +39,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	# Handwritten in perl so not using econf
-	./configure prefix=/usr libdir=/usr/lib/${PN}-${SLOT} jardir=/usr/share/${PN}-${SLOT}/lib|| die
+	./configure prefix=/usr libdir=/usr/$(get_libdir)/${PN}-${SLOT} jardir=/usr/share/${PN}-${SLOT}/lib || die
 }
 
 src_compile() {
