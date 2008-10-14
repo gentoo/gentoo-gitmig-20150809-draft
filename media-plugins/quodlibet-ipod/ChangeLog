@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/quodlibet-ipod
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-ipod/ChangeLog,v 1.6 2007/04/28 16:33:00 swegener Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-ipod/ChangeLog,v 1.7 2008/10/14 16:21:11 flameeyes Exp $
+
+*quodlibet-ipod-0.4-r1 (14 Oct 2008)
+
+  14 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +quodlibet-ipod-0.4-r1.ebuild:
+  Add a revision using EAPI 2 to depend on libgpod with python bindings.
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> quodlibet-ipod-0.4.ebuild:
   Drop dodir from dodir/*into combination.
