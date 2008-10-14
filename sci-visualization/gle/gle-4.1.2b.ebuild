@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.1.2b.ebuild,v 1.3 2008/08/28 19:19:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/gle-4.1.2b.ebuild,v 1.4 2008/10/14 11:42:37 grozin Exp $
 
 EAPI=1
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/glx/${MY_P}-src.zip
 	vim-syntax? ( http://glx.sourceforge.net/downloads/vim_gle.zip )"
 
 SLOT="0"
-LICENSE="BSD"
+LICENSE="BSD emacs? ( GPL-2 )"
 KEYWORDS="~amd64 ~x86"
 
 IUSE="X qt4 jpeg png tiff doc emacs vim-syntax"
@@ -41,18 +41,27 @@ RDEPEND="${CDEPEND}
 
 S="${WORKDIR}"/gle4
 
+src_unpack() {
+	unpack ${A}
+	if use emacs; then
+		cp "${DISTDIR}"/gle-emacs.el gle-mode.el || die "cp gle-mode.el failed"
+		epatch "${FILESDIR}"/${P}-emacs.patch
+	fi
+}
+
 src_compile() {
-	local qtconf="--without-qt"
-	use qt4 && qtconf="--with-qt=/usr"
-	econf \
+	econf $(use_with qt4 qt /usr) \
 		$(use_with X x) \
 		$(use_with jpeg) \
 		$(use_with png) \
-		$(use_with tiff) \
-		${qtconf} || die "econf failed"
+		$(use_with tiff)
 
 	# emake failed in src/gui (probably qmake stuff)
 	emake -j1 || die "emake failed"
+
+	if use emacs; then
+		elisp-compile "${WORKDIR}"/gle-mode.el || die
+	fi
 }
 
 src_install() {
@@ -62,19 +71,19 @@ src_install() {
 
 	if use qt4; then
 		newicon src/gui/images/gle_icon.png gle.png
-q		make_desktop_entry qgle GLE gle
+		make_desktop_entry qgle GLE gle
 		newdoc src/gui/readme.txt gui_readme.txt
 	fi
 
-	if use doc ; then
+	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins "${DISTDIR}"/GLE-${DOC_VERSION}-manual.pdf \
 			"${DISTDIR}"/GLEusersguide.pdf
 	fi
 
-	if use emacs ; then
-		elisp-site-file-install "${DISTDIR}"/gle-emacs.el gle-mode.el
-		elisp-site-file-install "${FILESDIR}"/64gle-gentoo.el
+	if use emacs; then
+		elisp-install ${PN} "${WORKDIR}"/gle-mode.{el,elc} || die
+		elisp-site-file-install "${FILESDIR}"/64gle-gentoo.el || die
 	fi
 
 	if use vim-syntax ; then
