@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.26-r3.ebuild,v 1.1 2008/10/12 20:37:26 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.26-r4.ebuild,v 1.1 2008/10/14 16:23:13 gengor Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -9,7 +9,7 @@ K_GENPATCHES_VER="3"
 inherit kernel-2
 detect_version
 
-HGPV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-4"
+HGPV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-5"
 HGPV_URI="http://dev.gentoo.org/~gengor/distfiles/${CATEGORY}/${PN}/hardened-patches-${HGPV}.extras.tar.bz2
 	mirror://gentoo/hardened-patches-${HGPV}.extras.tar.bz2"
 SRC_URI="${KERNEL_URI} ${HGPV_URI} ${GENPATCHES_URI} ${ARCH_URI}"
