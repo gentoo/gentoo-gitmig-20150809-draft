@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.333 2008/09/03 18:09:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.334 2008/10/14 08:59:42 robbat2 Exp $
+
+*openldap-2.3.43-r1 (14 Oct 2008)
+
+  14 Oct 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/openldap-2.3.37-libldap_r.patch, +openldap-2.3.43-r1.ebuild:
+  Bug #189817, fix linking of libldap_r with as-needed.
 
 *openldap-2.4.11 (03 Sep 2008)
 
