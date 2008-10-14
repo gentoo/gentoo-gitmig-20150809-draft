@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.16.1.ebuild,v 1.1 2008/09/25 12:01:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.16.1.ebuild,v 1.2 2008/10/14 23:23:51 angelos Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-libs/glib-2.10:2
 	dev-perl/XML-Parser
 	dev-util/gob
 	>=gnome-base/libglade-2.3
-	>=media-libs/libmpd-0.16.0
+	>=media-libs/libmpd-0.16.1
 	net-misc/curl
 	>=x11-libs/gtk+-2.12:2
 	session? ( x11-libs/libSM )"
