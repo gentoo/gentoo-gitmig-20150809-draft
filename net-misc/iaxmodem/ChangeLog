@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/iaxmodem
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iaxmodem/ChangeLog,v 1.1 2008/10/14 23:53:38 sbriesen Exp $
+
+*iaxmodem-1.1.1 (14 Oct 2008)
+
+  14 Oct 2008; Stefan Briesenick <sbriesen@gentoo.org> +files/iaxmodem.cfg,
+  +files/iaxmodem.confd, +files/iaxmodem.initd, +files/iaxmodem.logrotated,
+  +metadata.xml, +iaxmodem-1.1.1.ebuild:
+  initial commit, solving bug# 169151.
+
