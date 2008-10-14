@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/memprof-0.6.ebuild,v 1.1 2007/03/05 20:43:28 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/memprof-0.6.ebuild,v 1.2 2008/10/14 02:07:45 darkside Exp $
 
 inherit gnome2 eutils
 
@@ -16,8 +16,7 @@ IUSE=""
 DEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/gconf-1.2
 	>=gnome-base/libgnomeui-2
-	>=gnome-base/libglade-2
-	sys-devel/libtool"
+	>=gnome-base/libglade-2"
 
 RDEPEND="${DEPEND}
 	sys-devel/gettext"
