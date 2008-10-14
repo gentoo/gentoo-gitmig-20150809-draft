@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssistats
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.18 2008/02/27 11:15:00 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.19 2008/10/14 22:28:20 cla Exp $
+
+  14 Oct 2008; Dawid Węgliński <cla@gentoo.org> irssistats-0.75.ebuild:
+  Respect LDFLAGS, thanks to darksiide@g.o
 
   27 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
   irssistats-0.75.ebuild:

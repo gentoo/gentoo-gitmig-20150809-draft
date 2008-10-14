@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/irssistats-0.75.ebuild,v 1.4 2008/02/27 11:15:00 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/irssistats-0.75.ebuild,v 1.5 2008/10/14 22:28:20 cla Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND=""
 
 src_compile() {
-	$(tc-getCC) -o irssistats ${CFLAGS} irssistats.c || die "compile failed"
+	$(tc-getCC) -o irssistats ${CFLAGS} ${LDFLAGS} irssistats.c || die "compile failed"
 }
 
 src_install() {
