@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/pekwm-themes-hewphoria
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/pekwm-themes-hewphoria/ChangeLog,v 1.4 2008/09/22 12:15:03 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pekwm-themes-hewphoria/ChangeLog,v 1.5 2008/10/14 20:10:36 yngwin Exp $
+
+  14 Oct 2008; Ben de Groot <yngwin@gentoo.org>
+  pekwm-themes-hewphoria-20080404.ebuild,
+  pekwm-themes-hewphoria-20080921.ebuild:
+  Change src_uri to new location
 
 *pekwm-themes-hewphoria-20080921 (22 Sep 2008)
 
