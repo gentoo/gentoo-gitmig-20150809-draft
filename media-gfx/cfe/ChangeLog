@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/cfe
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cfe/ChangeLog,v 1.3 2007/02/09 07:50:00 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cfe/ChangeLog,v 1.4 2008/10/14 16:31:06 flameeyes Exp $
+
+  14 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> cfe-0.12.ebuild:
+  Fix cflags handling by avoiding resetting them (rather than modifying the
+  configure script). Die if the dobin fails.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
