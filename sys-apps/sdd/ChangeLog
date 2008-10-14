@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdd/ChangeLog,v 1.7 2008/06/20 21:39:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdd/ChangeLog,v 1.8 2008/10/14 18:49:20 swegener Exp $
+
+  14 Oct 2008; Sven Wegener <swegener@gentoo.org> sdd-1.52.ebuild:
+  Respect CFLAGS, bug #242004.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

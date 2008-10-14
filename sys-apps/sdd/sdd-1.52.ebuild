@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdd/sdd-1.52.ebuild,v 1.5 2008/06/20 21:39:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdd/sdd-1.52.ebuild,v 1.6 2008/10/14 18:49:20 swegener Exp $
 
 DESCRIPTION="A fast and enhanced 'dd' replacement for UNIX"
 HOMEPAGE="http://ftp.berlios.de/pub/sdd/"
@@ -13,7 +13,7 @@ DEPEND=""
 
 src_compile() {
 	# Can't use default src_compile, because ./configure will bail out
-	emake || die "emake failed"
+	emake COPTOPT="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
