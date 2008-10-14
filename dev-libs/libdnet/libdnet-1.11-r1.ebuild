@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.11-r1.ebuild,v 1.8 2007/10/05 08:14:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.11-r1.ebuild,v 1.9 2008/10/14 12:21:25 pva Exp $
 
 #WANT_AUTOMAKE=1.6
 inherit eutils autotools
@@ -19,9 +19,6 @@ src_unpack() {
 	cd "${S}"
 	sed -i 's/suite_free(s);//' test/check/*.c || die "sed failed"
 	epatch "${FILESDIR}"/${PN}-1.10-gcc4.diff
-	# Without libtoolze --force build with --disable-static produce libraries
-	# without .so extension and applications does not see library.
-	libtoolize --force
 	AT_M4DIR="config"
 	eautoreconf
 }
