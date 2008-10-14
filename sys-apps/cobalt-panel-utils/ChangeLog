@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/cobalt-panel-utils
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cobalt-panel-utils/ChangeLog,v 1.6 2007/03/19 00:01:16 kloeri Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cobalt-panel-utils/ChangeLog,v 1.7 2008/10/14 02:03:19 darkside Exp $
+
+  14 Oct 2008; Jeremy Olexa <darkside@gentoo.org>
+  -cobalt-panel-utils-1.0.0.ebuild, cobalt-panel-utils-1.0.1.ebuild,
+  cobalt-panel-utils-1.0.2.ebuild:
+  (non maintainer commit) remove old. QA cleanup. move autoconf out of RDEPEND
+  for sys-apps/cobalt-panel-utils, bug #221561
 
   18 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove plasmaroo from metadata.xml due to retirement.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cobalt-panel-utils/cobalt-panel-utils-1.0.1.ebuild,v 1.1 2005/05/14 23:10:12 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cobalt-panel-utils/cobalt-panel-utils-1.0.1.ebuild,v 1.2 2008/10/14 02:03:19 darkside Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="sys-devel/gettext
+RDEPEND="sys-devel/gettext"
+DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 
 src_compile() {
@@ -22,8 +23,9 @@ src_compile() {
 
 src_install() {
 	into /
-	dosbin	${S}/lcd-flash ${S}/lcd-getip ${S}/lcd-swrite ${S}/lcd-write ${S}/lcd-yesno \
-		${S}/lcd-setcursor ${S}/iflink ${S}/iflinkstatus ${S}/readbutton
+	dosbin	"${S}"/lcd-flash "${S}"/lcd-getip "${S}"/lcd-swrite \
+	"${S}"/lcd-write "${S}"/lcd-yesno "${S}"/lcd-setcursor "${S}"/iflink \
+	"${S}"/iflinkstatus "${S}"/readbutton || die "dosbin failed"
 
 	dodoc doc/README* doc/CREDITS
 	doman doc/man/*.1
