@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.231 2008/10/14 11:37:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.232 2008/10/14 16:12:07 jer Exp $
+
+  14 Oct 2008; Jeroen Roovers <jer@gentoo.org>
+  +files/ffmpeg-0.4.9_p20080326-hppa.patch, ffmpeg-0.4.9_p20080326.ebuild:
+  Build PIC on HPPA (bug #241124).
 
   14 Oct 2008; Alexis Ballier <aballier@gentoo.org>
   ffmpeg-0.4.9_p20081014.ebuild:

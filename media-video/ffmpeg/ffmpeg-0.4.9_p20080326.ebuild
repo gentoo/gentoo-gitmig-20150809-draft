@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20080326.ebuild,v 1.4 2008/10/14 09:09:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20080326.ebuild,v 1.5 2008/10/14 16:12:07 jer Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -60,6 +60,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-shared-gcc4.1.patch"
 	# disable non pic safe asm, bug #172877, bug #172845 and dupes
 	# epatch "${FILESDIR}/${PN}-0.4.9_p20070330-asmpic.patch"
+
+	# HPPA (parisc) needs PIC (bug #241124):
+	epatch "${FILESDIR}"/${P}-hppa.patch
 }
 
 src_compile() {
