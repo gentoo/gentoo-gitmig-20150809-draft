@@ -1,14 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.65_rc1.ebuild,v 1.2 2007/06/24 17:48:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.65_rc1.ebuild,v 1.3 2008/10/14 02:47:36 darkside Exp $
 
 inherit eutils toolchain-funcs
 
-MY_PV=${PV/_/}
 DESCRIPTION="scripting language to modify ELF binaries"
 HOMEPAGE="http://elfsh.segfault.net/"
-SRC_URI="mirror://gentoo/elfsh-${MY_PV}.tgz"
-#http://elfsh.segfault.net/files/elfsh-${MY_PV}-portable.tgz
+SRC_URI="mirror://gentoo/${P}.zip"
+#http://www.eresi-project.org/browser/tags/elfsh_0_65rc1
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,9 +15,12 @@ KEYWORDS=""
 IUSE="readline"
 
 DEPEND=">=dev-libs/expat-1.95
-	readline? ( sys-libs/readline )"
+	readline? ( sys-libs/readline )
+	app-arch/unzip
+	dev-libs/libhash"
+RDEPEND=""
 
-S=${WORKDIR}/${PN}-${MY_PV}
+S="${WORKDIR}/tags/elfsh_0_65rc1"
 
 src_unpack() {
 	unpack ${A}
@@ -29,6 +31,7 @@ src_unpack() {
 		-e "/^LDFLAGS/s:=:=${LDFLAGS} :" \
 		$(find -name Makefile) \
 		|| die
+	chmod +x configure
 }
 
 src_compile() {
