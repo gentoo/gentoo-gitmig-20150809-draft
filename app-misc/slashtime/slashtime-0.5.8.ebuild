@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/slashtime-0.5.6.ebuild,v 1.1 2008/08/18 02:16:05 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/slashtime-0.5.8.ebuild,v 1.1 2008/10/14 02:58:35 ken69267 Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="source"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMMON_DEP=">=dev-java/java-gnome-4.0.8:4.0"
+COMMON_DEP=">=dev-java/java-gnome-4.0.9:4.0"
 
 DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEP}"
@@ -38,7 +38,7 @@ src_install() {
 	rm -r "${D}"/usr/share/java/
 	rm "${D}"/usr/bin/slashtime
 
-	java-pkg_register-dependency java-gnome-4.0 gtk-4.0.jar
+	java-pkg_register-dependency java-gnome-4.0 gtk.jar
 	java-pkg_dojar tmp/${PN}.jar
 	java-pkg_dolauncher ${PN} --main slashtime.client.Master \
 		--pwd /usr
