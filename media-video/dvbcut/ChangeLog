@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvbcut
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.14 2008/09/22 20:32:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.15 2008/10/14 16:27:41 aballier Exp $
+
+  14 Oct 2008; Alexis Ballier <aballier@gentoo.org> dvbcut-0.5.4-r1.ebuild:
+  a52 useflag is no more in ffmpeg, add a --missing true option to
+  built_with_use
 
   22 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   +files/dvbcut-0.5.4-lavc.patch, dvbcut-0.5.4-r1.ebuild:

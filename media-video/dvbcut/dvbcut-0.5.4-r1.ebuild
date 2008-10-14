@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.5.4-r1.ebuild,v 1.6 2008/09/22 20:32:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.5.4-r1.ebuild,v 1.7 2008/10/14 16:27:41 aballier Exp $
 
 EAPI=1
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	dev-util/scons"
 
 pkg_setup() {
-	 if ! built_with_use media-video/ffmpeg a52; then
+	 if ! built_with_use --missing true media-video/ffmpeg a52; then
 	 	eerror "This package requires media-video/ffmpeg compiled with A/52 (a.k.a. AC-3) support."
 		eerror "Please reemerge media-video/ffmpeg with USE=\"a52\"."
 		die "Please reemerge media-video/ffmpeg with USE=\"a52\"."
