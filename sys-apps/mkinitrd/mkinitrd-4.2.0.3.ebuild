@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/mkinitrd-4.2.0.3.ebuild,v 1.2 2005/08/29 01:56:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/mkinitrd-4.2.0.3.ebuild,v 1.3 2008/10/14 15:28:49 flameeyes Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Tools for creating initrd images"
 HOMEPAGE="http://www.redhat.com/"
@@ -24,16 +24,15 @@ src_unpack() {
 	# bug 29694 -- Change vgwrapper to static vgscan and vgchange
 	epatch "${FILESDIR}"/mkinitrd-lvm_statics.diff
 	sed -i \
-		-e "/^CFLAGS/s: -Werror : ${CFLAGS} :" \
-		-e "/^LDFLAGS/s:$: ${LDFLAGS}:" \
+		-e '/^CFLAGS/s: -Werror::' \
+		-e '/^CFLAGS/s: -g::' \
+		-e '/^CFLAGS/s:=:+=:' \
 		grubby/Makefile nash/Makefile
 }
 
 src_compile() {
-	cd "${S}"/nash
-	emake || die "nash compile failed."
-	cd "${S}"/grubby
-	emake || die "grubby compile failed."
+	emake CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}" -C nash || die "nash compile failed."
+	emake CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}" -C grubby|| die "grubby compile failed."
 }
 
 src_install() {
