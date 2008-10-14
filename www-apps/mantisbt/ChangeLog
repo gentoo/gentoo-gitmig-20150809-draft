@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.64 2008/10/04 17:24:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.65 2008/10/14 11:55:08 pva Exp $
+
+*mantisbt-1.1.3 (14 Oct 2008)
+
+  14 Oct 2008; Peter Volkov <pva@gentoo.org> +mantisbt-1.1.3.ebuild:
+  Version bump.
 
   04 Oct 2008; Peter Volkov <pva@gentoo.org> -mantisbt-1.1.2.ebuild,
   mantisbt-1.1.2-r1.ebuild:
