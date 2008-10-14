@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2-r1.ebuild,v 1.2 2008/09/04 12:39:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2-r1.ebuild,v 1.3 2008/10/14 09:30:11 robbat2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -39,11 +39,11 @@ src_unpack() {
 src_compile() {
 	append-ldflags -s
 	filter-ldflags -Wl,--as-needed --as-needed
-	if use zlib
-	then
-		append-ldflags -lz
-	elif built_with_use --missing false sys-apps/pciutils zlib
-	then
+	if use zlib ; then
+		sed -i \
+			-e '/^LIBS=/s,-lpci,-lz -lpci,g' \
+			Makefile
+	elif built_with_use --missing false sys-apps/pciutils zlib ; then
 		die "You need to build with USE=zlib to match sys-apps/pcituils"
 	fi
 	emake LDFLAGS="${LDFLAGS}" OPT="${CFLAGS}" CC="$(tc-getCC)" || die "emake failed"
