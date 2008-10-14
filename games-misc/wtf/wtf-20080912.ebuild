@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/wtf-20080912.ebuild,v 1.2 2008/10/14 03:38:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/wtf-20080912.ebuild,v 1.3 2008/10/14 08:49:29 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentooexperimental.org/~darkside/distfiles/${PN}/${P}.tar.bz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="!games-misc/bsd-games"
