@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/libdbi-drivers
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.30 2008/10/12 13:55:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.31 2008/10/14 03:11:12 robbat2 Exp $
+
+  14 Oct 2008; Robin H. Johnson <robbat2@gentoo.org>
+  libdbi-drivers-0.8.1-r1.ebuild, libdbi-drivers-0.8.1-r2.ebuild,
+  libdbi-drivers-0.8.3.ebuild:
+  Disable interactive tests better.
 
   12 Oct 2008; nixnut <nixnut@gentoo.org> libdbi-drivers-0.8.1-r2.ebuild:
   Stable on ppc wrt bug 240974
