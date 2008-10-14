@@ -1,11 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20081014.ebuild,v 1.3 2008/10/14 09:39:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20081014.ebuild,v 1.4 2008/10/14 09:53:16 aballier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
+FFMPEG_SVN_REV="15615"
+
 DESCRIPTION="Complete solution to record, convert and stream audio and video.
-Includes libavcodec. svn revision 15615"
+Includes libavcodec. svn revision ${FFMPEG_SVN_REV}"
 HOMEPAGE="http://ffmpeg.org/"
 MY_P=${P/_/-}
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
@@ -49,6 +51,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-shared-gcc4.1.patch"
+
+	# Set version #
+	# Any better idea? We can't do much more as we use an exported svn snapshot.
+	sed -i s/UNKNOWN/SVN-r${FFMPEG_SVN_REV}/ "${S}/version.sh"
 }
 
 src_compile() {
