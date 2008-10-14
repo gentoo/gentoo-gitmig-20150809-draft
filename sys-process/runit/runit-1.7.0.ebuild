@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-1.7.0.ebuild,v 1.7 2008/05/12 15:56:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-1.7.0.ebuild,v 1.8 2008/10/14 15:00:28 flameeyes Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -23,14 +23,15 @@ src_unpack() {
 
 	# we either build everything or nothing static
 	sed -i -e 's:-static: :' src/Makefile
-	use static && append-ldflags -static
-
-	echo "$(tc-getCC) ${CFLAGS}"  > src/conf-cc
-	echo "$(tc-getCC) ${LDFLAGS}" > src/conf-ld
 }
 
 src_compile() {
 	cd src
+	use static && append-ldflags -static
+
+	echo "$(tc-getCC) ${CFLAGS}"  > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
+
 	emake || die "make failed"
 }
 
