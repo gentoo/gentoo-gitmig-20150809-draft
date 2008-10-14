@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/checkpassword-0.90-r3.ebuild,v 1.1 2008/04/06 17:13:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/checkpassword-0.90-r3.ebuild,v 1.2 2008/10/14 07:24:53 robbat2 Exp $
 
 inherit eutils fixheadtails flag-o-matic qmail
 
@@ -23,10 +23,10 @@ src_unpack() {
 	ht_fix_file Makefile print-cc.sh
 
 	use static && append-ldflags -static
-	qmail_set_cc
 }
 
 src_compile() {
+	qmail_set_cc
 	make || die
 }
 

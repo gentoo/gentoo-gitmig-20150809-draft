@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/checkpassword
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/ChangeLog,v 1.22 2008/04/06 17:13:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/ChangeLog,v 1.23 2008/10/14 07:24:53 robbat2 Exp $
+
+  14 Oct 2008; Robin H. Johnson <robbat2@gentoo.org>
+  checkpassword-0.90-r2.ebuild, checkpassword-0.90-r3.ebuild:
+  Fix bug #241040.
 
 *checkpassword-0.90-r3 (06 Apr 2008)
 

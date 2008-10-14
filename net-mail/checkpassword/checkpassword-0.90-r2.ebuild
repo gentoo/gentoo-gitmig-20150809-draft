@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/checkpassword-0.90-r2.ebuild,v 1.4 2006/10/21 19:45:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/checkpassword-0.90-r2.ebuild,v 1.5 2008/10/14 07:24:53 robbat2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -20,11 +20,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-head-1.patch
 
 	use static && append-ldflags -static
-	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 }
 
 src_compile() {
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	make || die "Error in make"
 }
 
