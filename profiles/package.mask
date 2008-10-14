@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9072 2008/10/14 08:43:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9073 2008/10/14 09:39:00 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Volkov <pva@gentoo.org> (13 Oct 2008)
+# Does not work with sys-apps/net-tools inside container
+# Trying to resolve issue inside openrc
+>=sys-cluster/vzctl-3.0.22-r10
 
 # Michael Sterrett <mr_bones_@gentoo.org> (13 Oct 2008)
 # Maintainer mask of known broken version.
