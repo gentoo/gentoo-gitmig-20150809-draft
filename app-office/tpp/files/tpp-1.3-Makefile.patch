@@ -11,7 +11,7 @@ diff -urN tpp-1.3.orig/Makefile tpp-1.3/Makefile
 -MANPATH = $(prefix)/share/man/man1
 +prefix=/usr
 +INSPATH= $(DESTDIR)$(prefix)/bin/
-+DOCPATH = $(DESTDIR)$(prefix)/share/doc/tpp
++DOCPATH = $(DESTDIR)$(prefix)/share/doc/tpp-1.3
 +MANPATH = $(DESTDIR)$(prefix)/share/man/man1
  
  all:
