@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/powerdevil
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/powerdevil/ChangeLog,v 1.1 2008/10/14 23:07:01 jmbsvicetto Exp $
+
+*powerdevil-1.2.0 (14 Oct 2008)
+
+  14 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +metadata.xml, +powerdevil-1.2.0.ebuild:
+  Added powerdevil to the tree from the kde-testing overlay. Thanks to
+  Tomáš Chvátal <tomas.chvatal@gmail.com> for the ebuild.
+
