@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.6.1.ebuild,v 1.2 2007/12/04 03:50:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.6.1.ebuild,v 1.3 2008/10/14 22:34:49 dirtyepic Exp $
 
-inherit eutils python
+inherit eutils python multilib
 
 DESCRIPTION="Python GUI RAD development tool."
 HOMEPAGE="http://boa-constructor.sourceforge.net/"
@@ -25,7 +25,7 @@ src_compile() {
 
 src_install() {
 	python_version
-	local boadir="/usr/lib/python${PYVER}/site-packages/boa"
+	local boadir="/usr/$(get_libdir)/python${PYVER}/site-packages/boa"
 
 	local dir
 	for dir in $(find . -type d)
