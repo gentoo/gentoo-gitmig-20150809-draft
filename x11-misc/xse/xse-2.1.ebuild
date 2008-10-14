@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.1.ebuild,v 1.10 2008/06/17 03:19:26 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xse/xse-2.1.ebuild,v 1.11 2008/10/14 01:39:40 darkside Exp $
 
 inherit eutils
 
@@ -11,12 +11,14 @@ LICENSE="X11"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
-DEPEND="x11-misc/imake
-	x11-libs/libXt
+
+RDEPEND="x11-libs/libXt
 	x11-misc/gccmakedep
 	app-text/rman
 	x11-libs/libXaw
 	x11-libs/libXp"
+DEPEND="${RDEPEND}
+	x11-misc/imake"
 
 src_compile() {
 	xmkmf -a &> /dev/null || die
