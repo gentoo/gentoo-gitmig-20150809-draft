@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylibpcap
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.18 2008/07/15 19:57:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibpcap/ChangeLog,v 1.19 2008/10/14 03:56:38 neurogeek Exp $
+
+*pylibpcap-0.6.2 (14 Oct 2008)
+
+  14 Oct 2008; Jesus Rivero <neurogeek@gentoo.org> +pylibpcap-0.6.2.ebuild:
+  Version bump. Closes bug #240850
 
   15 Jul 2008; Jeroen Roovers <jer@gentoo.org> pylibpcap-0.5.1.ebuild:
   Marked ~hppa too.
