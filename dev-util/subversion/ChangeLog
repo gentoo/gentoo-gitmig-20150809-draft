@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.326 2008/10/14 20:11:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.327 2008/10/14 20:17:12 ranger Exp $
+
+  14 Oct 2008; Brent Baude <ranger@gentoo.org> subversion-1.5.2.ebuild:
+  stable ppc, bug 241584
 
   14 Oct 2008; Brent Baude <ranger@gentoo.org> subversion-1.5.2.ebuild:
   stable ppc64, bug 241584
