@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4-r1.ebuild,v 1.10 2006/11/23 21:50:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4-r1.ebuild,v 1.11 2008/10/14 02:17:22 darkside Exp $
 
 inherit gnome.org
 
@@ -12,14 +12,15 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha ~amd64 ppc sparc x86"
 
-DEPEND="=dev-libs/glib-1.2*
+RDEPEND="=dev-libs/glib-1.2*"
+DEPEND="${RDEPEND}
 	dev-util/gtk-doc"
 
 src_unpack() {
 	unpack ${A}
 
 	# fix header include, needed for abiword
-	cd ${S}/libole2
+	cd "${S}"/libole2
 	mv ms-ole.h ms-ole.h.old
 	sed -e "s:glib.h:glib-1.2/glib.h:" ms-ole.h.old > ms-ole.h
 }
@@ -31,13 +32,13 @@ src_compile() {
 
 src_install() {
 	# prevent executing gtkdoc-fixxref - sandbox violations
-	cd ${S}/doc
+	cd "${S}"/doc
 	mv Makefile Makefile.orig
 	sed 's/gtkdoc-fixxref.*/\\/' Makefile.orig > Makefile
 
-	cd ${S}
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
+	cd "${S}"
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS README* TODO
 }
 
 pkg_postinst() {
