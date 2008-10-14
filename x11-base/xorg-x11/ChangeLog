@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.601 2008/10/14 18:06:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.602 2008/10/14 18:09:33 dberkholz Exp $
+
+  14 Oct 2008; Donnie Berkholz <dberkholz@gentoo.org>; xorg-x11-7.2.ebuild:
+  Drop to ~mips to avoid warnings.
 
   14 Oct 2008; Donnie Berkholz <dberkholz@gentoo.org>; xorg-x11-7.4.ebuild:
   Pull in latest xorg-server (1.5.2) and xtrans (1.2.2). xorg-docs didn't
