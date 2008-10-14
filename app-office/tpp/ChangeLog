@@ -1,6 +1,9 @@
 # ChangeLog for app-office/tpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tpp/ChangeLog,v 1.8 2008/08/03 12:46:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tpp/ChangeLog,v 1.9 2008/10/14 12:08:49 graaff Exp $
+
+  14 Oct 2008; Hans de Graaff <graaff@gentoo.org> -tpp-1.1.1.ebuild:
+  Remove old version
 
   03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
