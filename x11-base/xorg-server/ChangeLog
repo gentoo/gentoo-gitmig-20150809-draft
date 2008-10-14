@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.358 2008/10/14 17:15:42 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.359 2008/10/14 17:46:28 dberkholz Exp $
+
+  14 Oct 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.5.2.ebuild:
+  Update a few dependencies. Require at least evdev 2.0.6, mutouch 1.2.1,
+  xtrans 1.2.2.
 
 *xorg-server-1.5.2 (14 Oct 2008)
 
