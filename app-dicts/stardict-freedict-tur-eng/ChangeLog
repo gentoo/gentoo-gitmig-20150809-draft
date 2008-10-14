@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-freedict-tur-eng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-tur-eng/ChangeLog,v 1.1 2008/10/09 19:17:24 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-tur-eng/ChangeLog,v 1.2 2008/10/14 08:52:45 armin76 Exp $
+
+  14 Oct 2008; Raúl Porcel <armin76@gentoo.org>
+  stardict-freedict-tur-eng-2.4.2.ebuild:
+  Add ~sparc/~x86 wrt #240736
 
 *stardict-freedict-tur-eng-2.4.2 (09 Oct 2008)
 
