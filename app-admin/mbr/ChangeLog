@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/mbr
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/ChangeLog,v 1.13 2008/01/28 14:25:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/ChangeLog,v 1.14 2008/10/14 01:52:22 darkside Exp $
+
+  14 Oct 2008; Jeremy Olexa <darkside@gentoo.org> mbr-1.1.10.ebuild:
+  (non maintainer commit) pull bin86 out of RDEPEND on app-admin/mbr, since it
+  is not needed at runtime
 
   28 Jan 2008; Raúl Porcel <armin76@gentoo.org> -mbr-1.1.5.ebuild,
   -mbr-1.1.9.ebuild, mbr-1.1.10.ebuild:
