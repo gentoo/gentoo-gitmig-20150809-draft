@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.3.1.ebuild,v 1.8 2008/10/14 06:01:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4-r1.ebuild,v 1.1 2008/10/14 06:01:11 pva Exp $
 
 inherit linux-mod
 
 MY_P=${PN/-ng/}-${PV}
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}"/${MY_P}
 
 DESCRIPTION="Next Generation driver for Atheros based IEEE 802.11a/b/g wireless LAN cards"
 HOMEPAGE="http://www.madwifi.org/"
@@ -14,25 +14,25 @@ SRC_URI="mirror://sourceforge/madwifi/madwifi-${PV}.tar.bz2"
 LICENSE="atheros-hal
 	|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="injection"
 
-DEPEND="app-arch/sharutils"
 RDEPEND="!net-wireless/madwifi-old
 		net-wireless/wireless-tools
 		~net-wireless/madwifi-ng-tools-${PV}"
 
-CONFIG_CHECK="CRYPTO WIRELESS_EXT SYSCTL"
+CONFIG_CHECK="CRYPTO WIRELESS_EXT SYSCTL KMOD"
 ERROR_CRYPTO="${P} requires Cryptographic API support (CONFIG_CRYPTO)."
 ERROR_WIRELESS_EXT="${P} requires CONFIG_WIRELESS_EXT selected by Wireless LAN drivers (non-hamradio) & Wireless Extensions"
 ERROR_SYSCTL="${P} requires Sysctl support (CONFIG_SYSCTL)."
+ERROR_KMOD="${F} requires CONFIG_KMOD to be set to y or m"
 BUILD_TARGETS="all"
 MODULESD_ATH_PCI_DOCS="README"
 
 pkg_setup() {
 	linux-mod_pkg_setup
 
-	MODULE_NAMES="ath_hal(net:"${S}"/ath_hal)
+	MODULE_NAMES='ath_hal(net:"${S}"/ath_hal)
 				wlan(net:"${S}"/net80211)
 				wlan_acl(net:"${S}"/net80211)
 				wlan_ccmp(net:"${S}"/net80211)
@@ -44,7 +44,8 @@ pkg_setup() {
 				ath_rate_amrr(net:"${S}"/ath_rate/amrr)
 				ath_rate_onoe(net:"${S}"/ath_rate/onoe)
 				ath_rate_sample(net:"${S}"/ath_rate/sample)
-				ath_pci(net:"${S}"/ath)"
+				ath_rate_minstrel(net:"${S}"/ath_rate/minstrel)
+				ath_pci(net:"${S}"/ath)'
 
 	BUILD_PARAMS="KERNELPATH=${KV_OUT_DIR}"
 }
@@ -53,13 +54,17 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-0.9.3-uudecode-gcda-fix.patch"
-	if use injection; then epatch "${FILESDIR}/${PN}-r1886.patch"; fi
-	for dir in ath ath_hal net80211 ath_rate ath_rate/amrr ath_rate/onoe ath_rate/sample; do
+	epatch "${FILESDIR}"/${PN}-0.9.3-uudecode-gcda-fix.patch
+	if use injection; then epatch "${FILESDIR}"/${PN}-r1886.patch; fi
+	for dir in ath ath_hal net80211 ath_rate ath_rate/amrr ath_rate/minstrel ath_rate/onoe ath_rate/sample; do
 		convert_to_m "${S}"/${dir}/Makefile
 	done
-
-	kernel_is ge 2 6 22 && epatch "${FILESDIR}"/madwifi-2.6.22.patch
+	epatch "${FILESDIR}"/madwifi-dfs-ieee80211-skb-update.patch
+	# Workaround our build system, bug #232099 (bug #237618 describes details)
+	touch Module.symvers
+	for ms in ath net80211 ath_hal ath_rate/{amrr,minstrel,onoe,sample}; do
+		ln -s "${S}"/Module.symvers ${ms}
+	done
 }
 
 src_install() {
@@ -83,4 +88,11 @@ pkg_postinst() {
 	einfo "As of net-wireless/madwifi-ng-0.9.3 rate control module selection is done at"
 	einfo "module load time via the 'ratectl' module parameter. USE flags amrr and onoe"
 	einfo "no longer serve any purpose."
+
+	elog "Please note: This release is based off of 0.9.3.3 and NOT trunk."
+	elog "# No AR5007 support in this release;"
+	elog "experimental support is available for i386 (32bit) in #1679"
+	elog "# No AR5008 support in this release; support is available in trunk "
+	elog "No, we will not apply the patch from 1679, if you must, please do so
+	in an overlay on your system. That is upstreams ticket 1679, not Gentoo's."
 }

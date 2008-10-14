@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.59 2008/09/13 18:57:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.60 2008/10/14 06:01:11 pva Exp $
+
+*madwifi-ng-0.9.4-r1 (14 Oct 2008)
+
+  14 Oct 2008; Peter Volkov <pva@gentoo.org> +madwifi-ng-0.9.4-r1.ebuild:
+  Added workaround for unresolved symbols if CONFIG_MODVERSIONS is set, bug
+  #232099.
 
   13 Sep 2008; Peter Volkov <pva@gentoo.org> madwifi-ng-0.9.4.ebuild:
   Removed app-arch/sharutils from DEPEND as madwifi-ng builds fine without
