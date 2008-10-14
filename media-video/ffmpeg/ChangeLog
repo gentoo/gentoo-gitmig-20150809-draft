@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.230 2008/10/14 09:53:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.231 2008/10/14 11:37:22 aballier Exp $
+
+  14 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  ffmpeg-0.4.9_p20081014.ebuild:
+  Give the configure the --cpu option based on CFLAGS; if it is unknown it
+  will not hurt because the configure script will warn and ignore it. This
+  helps getting better support for given cpu, like using CMOV on i686 and
+  later. Bug #172723.
 
   14 Oct 2008; Alexis Ballier <aballier@gentoo.org>
   ffmpeg-0.4.9_p20081014.ebuild:

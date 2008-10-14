@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20081014.ebuild,v 1.4 2008/10/14 09:53:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20081014.ebuild,v 1.5 2008/10/14 11:37:22 aballier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -127,6 +127,20 @@ src_compile() {
 	if gcc-specs-pie ; then
 		myconf="${myconf} --disable-mmx --disable-mmx2"
 	fi
+
+	# Try to get cpu type based on CFLAGS.
+	# Bug #172723
+	# We need to do this so that features of that CPU will be better used
+	# If they contain an unknown CPU it will not hurt since ffmpeg's configure
+	# will just ignore it.
+	local mymarch=$(get-flag march)
+	local mymcpu=$(get-flag mcpu)
+	local mymtune=$(get-flag mtune)
+	for i in $mymarch $mymcpu $mymtune ; do
+		myconf="${myconf} --cpu=$i"
+		break
+	done
+
 
 	# video hooking support. replaced by libavfilter, probably needs to be
 	# dropped at some point.
