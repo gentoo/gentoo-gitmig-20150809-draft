@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.22.ebuild,v 1.13 2008/02/01 10:15:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/sloccount-2.22.ebuild,v 1.14 2008/10/14 07:08:21 robbat2 Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall PREFIX=${D}/usr || die
+	einstall PREFIX="${D}/usr" DOC_DIR="${D}/usr/share/doc/${PF}/" || die
 	prepalldocs
 	dohtml *html
 }
