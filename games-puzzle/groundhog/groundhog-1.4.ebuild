@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.20 2008/05/15 13:32:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.21 2008/10/14 18:20:22 mr_bones_ Exp $
 
 inherit eutils autotools games
 
@@ -18,6 +18,7 @@ IUSE="nls"
 RDEPEND="=x11-libs/gtk+-2*
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
