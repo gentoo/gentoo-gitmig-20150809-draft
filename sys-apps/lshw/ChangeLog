@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lshw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.74 2008/10/14 19:59:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/ChangeLog,v 1.75 2008/10/14 20:00:38 ranger Exp $
+
+  14 Oct 2008; Brent Baude <ranger@gentoo.org> lshw-02.13b.ebuild:
+  stable ppc, bug 241642
 
   14 Oct 2008; Brent Baude <ranger@gentoo.org> lshw-02.13b.ebuild:
   stable ppc64, bug 241642
