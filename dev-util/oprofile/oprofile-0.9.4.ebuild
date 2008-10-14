@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.4.ebuild,v 1.4 2008/09/06 17:32:32 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.4.ebuild,v 1.5 2008/10/14 19:23:03 spock Exp $
 
 EAPI=1
 
@@ -69,7 +69,7 @@ src_install() {
 	local myinst=""
 
 	myinst="${myinst} MODINSTALLDIR=${D}/lib/modules/${KV_FULL}"
-	make DESTDIR="${D}" ${myinst} install || die "make install failed"
+	make DESTDIR="${D}" ${myinst} htmldir="/usr/share/doc/${PF}" install || die "make install failed"
 
 	dodoc ChangeLog* README TODO
 }
