@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.4.6.ebuild,v 1.7 2008/10/08 20:37:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.4.6.ebuild,v 1.8 2008/10/14 20:25:54 ranger Exp $
 
 inherit gnome2 fdo-mime flag-o-matic multilib python eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gimp/v2.4/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 -mips ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 -mips ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="alsa aalib altivec curl dbus debug doc exif gtkhtml gnome hal lcms mmx mng pdf png python smp sse svg tiff wmf"
 # jpeg temporarily removed, disabling jpeg requires upstream fix which will come in 2.5
