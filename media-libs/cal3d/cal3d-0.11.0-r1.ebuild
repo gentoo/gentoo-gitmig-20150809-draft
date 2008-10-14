@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0-r1.ebuild,v 1.7 2008/05/09 22:50:51 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0-r1.ebuild,v 1.8 2008/10/14 02:13:01 darkside Exp $
 
 inherit eutils autotools
 
@@ -17,6 +17,7 @@ DEPEND="doc? (
 		app-doc/doxygen
 		app-text/docbook-sgml-utils
 	)"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
