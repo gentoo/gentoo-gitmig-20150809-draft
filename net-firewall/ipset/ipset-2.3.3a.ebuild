@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.3.3a.ebuild,v 1.1 2008/08/14 00:06:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.3.3a.ebuild,v 1.2 2008/10/14 07:21:01 robbat2 Exp $
 
-inherit eutils versionator toolchain-funcs linux-mod
+inherit eutils versionator toolchain-funcs linux-mod linux-info
 
 DESCRIPTION="IPset tool for iptables, successor to ippool."
 HOMEPAGE="http://ipset.netfilter.org/"
@@ -45,7 +45,19 @@ src_unpack() {
 }
 
 pkg_setup() {
-	#use modules && \
+	get_version
+
+	modules=0
+	msg=''
+	if linux_chkconfig_builtin "MODULES" ; then
+		modules=1
+		msg="Modular kernel detected, will build kernel modules"
+	else
+		msg="Nonmodular kernel detected, will not build kernel modules"
+	fi
+	einfo "${msg}"
+
+	[[ $modules -eq 1 ]] && \
 		linux-mod_pkg_setup
 	myconf="${myconf} PREFIX="
 	myconf="${myconf} LIBDIR=/$(get_libdir)"
@@ -59,22 +71,22 @@ src_compile() {
 	einfo "Building userspace"
 	emake CC="$(tc-getCC)" COPT_FLAGS="${CFLAGS}" ${myconf} binaries || die "failed to build"
 
-	#if use modules; then
+	if [[ $modules -eq 1 ]]; then
 		einfo "Building kernel modules"
 		cd "${S}/kernel"
 		export KERNELDIR="${KERNEL_DIR}"
 		linux-mod_src_compile || die "failed to build modules"
-	#fi
+	fi
 }
 
 src_install() {
 	einfo "Installing userspace"
 	emake DESTDIR="${D}" ${myconf} binaries_install || die "failed to package"
 
-	#if use modules; then
+	if [[ $modules -eq 1 ]]; then
 		einfo "Installing kernel modules"
 		cd "${S}/kernel"
 		export KERNELDIR="${KERNEL_DIR}"
 		linux-mod_src_install
-	#fi
+	fi
 }

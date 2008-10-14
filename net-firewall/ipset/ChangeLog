@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.17 2008/08/14 00:06:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.18 2008/10/14 07:21:01 robbat2 Exp $
+
+  14 Oct 2008; Robin H. Johnson <robbat2@gentoo.org> ipset-2.3.3a.ebuild:
+  Bug #236138, allow building with non-modular kernels.
 
 *ipset-2.3.3a (14 Aug 2008)
 
