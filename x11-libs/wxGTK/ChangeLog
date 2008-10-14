@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.197 2008/10/14 18:36:14 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.198 2008/10/14 19:11:44 fmccor Exp $
+
+  14 Oct 2008; Ferris McCormick <fmccor@gentoo.org> wxGTK-2.6.4.0-r4.ebuild:
+  Sparc stable --- the rest of Bug #242088 on sparc.
 
   14 Oct 2008; Ferris McCormick <fmccor@gentoo.org> wxGTK-2.8.7.1-r2.ebuild:
   Sparc stable --- Bug #242088 --- it's been around forever.
