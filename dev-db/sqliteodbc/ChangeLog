@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/sqliteodbc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.7 2008/04/21 17:06:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.8 2008/10/14 03:15:04 darkside Exp $
+
+*sqliteodbc-0.79 (14 Oct 2008)
+
+  14 Oct 2008; Jeremy Olexa <darkside@gentoo.org>
+  -files/sqliteodbc-0.64-gentoo.patch, +files/sqliteodbc-0.77-iodbc.patch,
+  -sqliteodbc-0.64.ebuild, -sqliteodbc-0.64-r1.ebuild,
+  -sqliteodbc-0.70.ebuild, +sqliteodbc-0.79.ebuild:
+  (non maintainer commit) remove old, broke versions. Add new version from
+  Ingo Bormuth in bug #162180
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
