@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/nvram-wakeup-0.97_p863.ebuild,v 1.4 2007/03/03 06:27:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvram-wakeup/nvram-wakeup-0.97_p863.ebuild,v 1.5 2008/10/14 15:05:13 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -33,7 +33,7 @@ src_unpack() {
 	# Need to be careful with CFLAGS since this could eat your bios
 	strip-flags
 	sed -i \
-		-e "s:-O2 -Wall -Wstrict-prototypes -g -mcpu=i686:${CFLAGS}:" \
+		-e "s:= -O2 -Wall -Wstrict-prototypes -g -mcpu=i686:+=:" \
 		Makefile || die "setting CFLAGS"
 }
 
