@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.4.2.ebuild,v 1.5 2008/04/21 14:42:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.5.3.ebuild,v 1.1 2008/10/14 23:40:19 angelos Exp $
 
 inherit distutils
 
@@ -9,15 +9,16 @@ HOMEPAGE="http://sonata.berlios.de/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="amd64 ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 SLOT="0"
-IUSE="taglib lyrics dbus"
+IUSE="dbus lyrics taglib"
 
 RDEPEND=">=virtual/python-2.4
 	>=dev-python/pygtk-2.10
-	taglib? ( >=dev-python/tagpy-0.93 )
+	>=dev-python/python-mpd-0.2.0
 	dbus? ( dev-python/dbus-python )
-	lyrics? ( dev-python/zsi )"
+	lyrics? ( dev-python/zsi )
+	taglib? ( >=dev-python/tagpy-0.93 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
