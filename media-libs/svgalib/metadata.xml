@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>svgalib</herd>
+  <herd>no-herd</herd>
   <use>
     <flag name="no-helper">Do not build the helper kernel module</flag>
   </use>
