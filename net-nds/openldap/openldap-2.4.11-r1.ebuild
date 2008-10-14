@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.11-r1.ebuild,v 1.1 2008/10/14 09:18:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.11-r1.ebuild,v 1.2 2008/10/14 10:08:38 robbat2 Exp $
 
 EAPI="1"
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs
@@ -288,7 +288,7 @@ src_compile() {
 
 			emake \
 				DEFS="-DDO_SAMBA -DDO_KRB5" \
-				KRB5_INC="-I/usr/include/heimdal" \
+				KRB5_INC="$(krb5-config --cflags)" \
 				CC=$(tc-getCC) \
 				|| die "emake smbk5pwd failed"
 		fi
@@ -297,15 +297,24 @@ src_compile() {
 			cd "${S}/contrib/slapd-modules/passwd"
 			einfo "Building contrib-module: pw-kerberos"
 			$(tc-getCC) -shared \
-				-I../../../include ${CFLAGS} -DHAVE_KRB5 -fPIC \
-				${LDFLAGS} -o pw-kerberos.so kerberos.c || die "building pw-kerberos failed"
+				-I../../../include \
+				${CFLAGS} \
+				$(krb5-config --cflags) \
+				-DHAVE_KRB5 -fPIC \
+				${LDFLAGS} \
+				-o pw-kerberos.so \
+				kerberos.c || die "building pw-kerberos failed"
 		fi
 		# We could build pw-radius if GNURadius would install radlib.h
 		cd "${S}/contrib/slapd-modules/passwd"
 		einfo "Building contrib-module: pw-netscape"
 		$(tc-getCC) -shared \
-			-I../../../include ${CFLAGS} -fPIC \
-			${LDFLAGS} -o pw-netscape.so netscape.c || die "building pw-netscape failed"
+			-I../../../include \
+			${CFLAGS} \
+			-fPIC \
+			${LDFLAGS} \
+			-o pw-netscape.so \
+			netscape.c || die "building pw-netscape failed"
 
 		build_contrib_module "addpartial" "addpartial-overlay.c" "addpartial-overlay"
 		build_contrib_module "allop" "allop.c" "overlay-allop"

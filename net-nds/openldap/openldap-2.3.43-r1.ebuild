@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.43-r1.ebuild,v 1.1 2008/10/14 08:59:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.43-r1.ebuild,v 1.2 2008/10/14 10:08:38 robbat2 Exp $
 
 EAPI="1"
 
@@ -327,6 +327,7 @@ src_compile() {
 			einfo "Building contributed pw-kerberos"
 			cd "${S}"/contrib/slapd-modules/passwd/ && \
 			${CC} -shared -I../../../include ${CFLAGS} -fPIC \
+			$(krb5-config --cflags) \
 			-DHAVE_KRB5 -o pw-kerberos.so kerberos.c || \
 			die "failed to compile kerberos password module"
 		fi
@@ -345,7 +346,7 @@ src_compile() {
 			local mydef
 			local mykrb5inc
 			mydef="-DDO_SAMBA -DDO_KRB5"
-			mykrb5inc="-I/usr/include/heimdal/"
+			mykrb5inc="$(krb5-config --cflags)"
 			cd "${S}"/contrib/slapd-modules/smbk5pwd && \
 			libexecdir="/usr/$(get_libdir)/openldap" \
 			DEFS="${mydef}" KRB5_INC="${mykrb5inc}" emake || \
