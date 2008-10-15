@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/x86/use.mask,v 1.4 2006/10/08 10:56:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/x86/use.mask,v 1.5 2008/10/15 13:41:23 aballier Exp $
 
 -3dnow
 -3dnowext
@@ -21,3 +21,8 @@
 
 # Diablo Latte and Caffe (JRE and JDK) works here
 -java
+
+# Petteri Räty <betelgeuse@gentoo.org>
+# No java6 for fbsd 6.2
+java6
+

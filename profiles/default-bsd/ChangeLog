@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.39 2008/10/15 13:30:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.40 2008/10/15 13:41:23 aballier Exp $
+
+  15 Oct 2008; Alexis Ballier <aballier@gentoo.org> fbsd/6.2/x86/use.mask,
+  use.mask:
+  move java6 mask to 6.2 x86 profile
 
   15 Oct 2008; Alexis Ballier <aballier@gentoo.org> fbsd/6.2/package.mask:
   Mask Diablo JDK/JRE 1.6 on 6.2 profiles as we have FreeBSD 7 ebuilds only
