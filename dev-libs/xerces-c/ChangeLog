@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.64 2008/10/12 14:19:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.65 2008/10/15 10:22:58 dev-zero Exp $
+
+*xerces-c-3.0.0 (15 Oct 2008)
+
+  15 Oct 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -xerces-c-3.0.0_beta2.ebuild, +xerces-c-3.0.0.ebuild:
+  Version bump (bug #240424).
 
   12 Oct 2008; nixnut <nixnut@gentoo.org> xerces-c-2.8.0-r1.ebuild:
   Stable on ppc wrt bug 241500

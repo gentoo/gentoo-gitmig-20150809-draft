@@ -1,16 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-3.0.0_beta2.ebuild,v 1.1 2008/07/26 19:08:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-3.0.0.ebuild,v 1.1 2008/10/15 10:22:58 dev-zero Exp $
 
 EAPI="1"
 
 inherit eutils
 
-MY_P=${PN}-${PV/_beta/.b}
-
 DESCRIPTION="A validating XML parser written in a portable subset of C++."
 HOMEPAGE="http://xerces.apache.org/xerces-c/"
-SRC_URI="http://people.apache.org/builds/xerces/c/${MY_P}.tar.gz"
+SRC_URI="mirror://apache/xerces/c/sources/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -24,7 +22,7 @@ RDEPEND="icu? ( <dev-libs/icu-3.8 )
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${P}
 
 pkg_setup() {
 	export ICUROOT="/usr"
@@ -95,7 +93,5 @@ src_install () {
 		dohtml -r doc/html/*
 	fi
 
-	dodoc STATUS credits.txt version.incl
-	dohtml Readme.html
-
+	dodoc CREDITS KEYS NOTICE README version.incl
 }
