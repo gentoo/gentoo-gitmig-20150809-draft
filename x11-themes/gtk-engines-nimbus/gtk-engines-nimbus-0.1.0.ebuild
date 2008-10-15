@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.1.0.ebuild,v 1.2 2008/10/05 10:07:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.1.0.ebuild,v 1.3 2008/10/15 22:15:45 flameeyes Exp $
 
-inherit libtool autotools gnome2-utils eutils
+inherit libtool gnome2-utils eutils
 
 MY_PN=nimbus
 MY_P=${MY_PN}-${PV}
