@@ -1,6 +1,12 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.111 2008/02/29 20:11:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.112 2008/10/15 12:04:36 flameeyes Exp $
+
+*dvdrip-0.98.8-r3 (15 Oct 2008)
+
+  15 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +dvdrip-0.98.8-r3.ebuild:
+  Add an EAPI=2 revision with USE deps on transcode and gtk+.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> dvdrip-0.98.2-r1.ebuild,
   dvdrip-0.98.6.ebuild, dvdrip-0.98.7.ebuild, dvdrip-0.98.8.ebuild,
