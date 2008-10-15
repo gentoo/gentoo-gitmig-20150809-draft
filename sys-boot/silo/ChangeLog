@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/silo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.41 2008/08/18 22:44:47 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.42 2008/10/15 22:10:36 bluebird Exp $
+
+  15 Oct 2008; Friedrich Oslage <bluebird@gentoo.org> silo-1.4.14.ebuild:
+  Stable on sparc
 
   18 Aug 2008; <bluebird@gentoo.org> files/gcc-4.3-compile.patch:
   Fix building with gcc-4.3 (again)

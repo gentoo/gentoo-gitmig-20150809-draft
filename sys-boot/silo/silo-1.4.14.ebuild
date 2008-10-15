@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14.ebuild,v 1.1 2008/08/06 19:13:53 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.14.ebuild,v 1.2 2008/10/15 22:10:36 bluebird Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://git.kernel.org/?p=linux/kernel/git/bcollins/silo.git;a=summary"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* ~sparc"
+KEYWORDS="-* sparc"
 IUSE="hardened"
 
 PROVIDE="virtual/bootloader"
