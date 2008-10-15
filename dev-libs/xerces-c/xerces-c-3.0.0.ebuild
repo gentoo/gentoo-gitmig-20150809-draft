@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-3.0.0.ebuild,v 1.1 2008/10/15 10:22:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-3.0.0.ebuild,v 1.2 2008/10/15 10:47:23 dev-zero Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="curl debug doc iconv icu libwww +threads elibc_Darwin elibc_FreeBSD"
 
-RDEPEND="icu? ( <dev-libs/icu-3.8 )
+RDEPEND="icu? ( dev-libs/icu )
 	curl? ( net-misc/curl )
 	libwww? ( net-libs/libwww )
 	virtual/libiconv"
@@ -33,10 +33,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# disable building broken samples
 	sed -i \
 		-e 's|src tests samples|src tests|' \
