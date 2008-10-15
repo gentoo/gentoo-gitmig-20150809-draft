@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.5-r3.ebuild,v 1.1 2008/08/08 20:36:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.5-r3.ebuild,v 1.2 2008/10/15 11:09:44 loki_val Exp $
 
 inherit kde eutils
 
@@ -49,7 +49,8 @@ DEPEND="${DEPEND}
 need-kde 3.5
 
 PATCHES=(	"${FILESDIR}/k3b-1.0.5-desktop-entry.diff"
-		"${FILESDIR}/k3b-1.0.5-ffmpeg-0.4.9_p20080326-API.patch"	)
+		"${FILESDIR}/k3b-1.0.5-ffmpeg-0.4.9_p20080326-API.patch"
+		"${FILESDIR}/k3b-1.0.5-ffmpeg-0.4.9_p20081014-API.patch"	)
 
 I18N="${PN}-i18n-${PV}"
 
