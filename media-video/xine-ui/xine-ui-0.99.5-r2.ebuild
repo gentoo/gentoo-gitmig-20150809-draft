@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5-r2.ebuild,v 1.1 2008/10/15 11:51:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.5-r2.ebuild,v 1.2 2008/10/15 12:01:34 flameeyes Exp $
 
 EAPI=2
 
@@ -45,16 +45,14 @@ DEPEND="${RDEPEND}
 		xinerama? ( x11-proto/xineramaproto ) )
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-new_libcaca_api.patch"
 	AT_M4DIR="m4" eautoreconf
+
+	rm misc/xine-bugreport
 }
 
-src_compile() {
-	rm misc/xine-bugreport
-
+src_configure() {
 	econf \
 		$(use_enable lirc) \
 		$(use_enable nls) \
@@ -68,7 +66,6 @@ src_compile() {
 		$(use_with readline) \
 		--without-ncurses \
 		|| die "econf failed."
-	emake || die "emake failed."
 }
 
 src_install() {
