@@ -1,6 +1,13 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.163 2008/08/17 14:03:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.164 2008/10/15 11:51:46 flameeyes Exp $
+
+*xine-ui-0.99.5-r2 (15 Oct 2008)
+
+  15 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +xine-ui-0.99.5-r2.ebuild:
+  Add an EAPI=2 revision with USE deps on xine-lib support for aalib and
+  libcaca.
 
   17 Aug 2008; Alexis Ballier <aballier@gentoo.org> -xine-ui-0.99.5.ebuild:
   remove old
