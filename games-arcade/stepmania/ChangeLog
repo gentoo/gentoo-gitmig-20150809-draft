@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/stepmania
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.23 2008/07/29 19:01:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.24 2008/10/15 15:58:09 loki_val Exp $
+
+  15 Oct 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/stepmania-3.9-newerffmpeg.diff, stepmania-3.9.ebuild:
+  Fix for ffmpeg 20081014. Bug 242054.
 
   29 Jul 2008; Samuli Suominen <drac@gentoo.org> stepmania-3.9.ebuild:
   Bump ffmpeg dep. for last change to 0.4.9_p20080326 wrt #232364.
