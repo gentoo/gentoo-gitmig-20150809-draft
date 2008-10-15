@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-3.2_p2.ebuild,v 1.3 2008/06/28 09:13:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-3.2_p2.ebuild,v 1.4 2008/10/15 03:05:19 jer Exp $
 
 inherit toolchain-funcs
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/squashfs${PV/_p/-r}/squashfs-tools
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i "s:-O2:${CFLAGS}:" Makefile
+	sed -i 's:-O2:$(CFLAGS):' Makefile
 }
 
 src_compile() {

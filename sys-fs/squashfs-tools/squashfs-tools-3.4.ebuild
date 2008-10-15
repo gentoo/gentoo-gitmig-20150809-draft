@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-3.4.ebuild,v 1.1 2008/08/28 03:36:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-3.4.ebuild,v 1.2 2008/10/15 03:05:19 jer Exp $
 
 inherit toolchain-funcs
 
@@ -22,8 +22,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i \
-		-e "s:-O2:${CFLAGS}:" \
-		-e 's:$(CC):$(CC) ${LDFLAGS}:' \
+		-e 's:-O2:$(CFLAGS):' \
+		-e 's:$(CC):$(CC) $(LDFLAGS):' \
 		Makefile || die "sed failed"
 }
 
