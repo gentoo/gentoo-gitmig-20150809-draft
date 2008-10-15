@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.1.0-r1.ebuild,v 1.1 2008/10/02 03:16:56 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.1.2.ebuild,v 1.1 2008/10/15 15:56:48 chutzpah Exp $
 
 inherit eutils nsplugins multilib
 
@@ -24,11 +24,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# should fix some crashing
-	epatch "${FILESDIR}/${P}-windowless-crash.patch"
-
 	# bug #238403
-	epatch "${FILESDIR}/${P}-quiet-64bit-plugin-warnings.patch"
+	epatch "${FILESDIR}/${PN}-1.1.0-quiet-64bit-plugin-warnings.patch"
 }
 
 src_compile() {
