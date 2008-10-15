@@ -1,0 +1,10 @@
+# ChangeLog for app-text/tabler
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tabler/ChangeLog,v 1.1 2008/10/15 17:07:16 hncaldwell Exp $
+
+*tabler-2 (15 Oct 2008)
+
+  15 Oct 2008; Heath Caldwell (hncaldwell) <hncaldwell@csupomona.edu>
+  +metadata.xml, +tabler-2.ebuild:
+  New ebuild for tabler. Ebuild written by me. Fixes bug #185943.
+
