@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.40 2008/10/15 13:41:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.41 2008/10/15 14:02:05 aballier Exp $
+
+  15 Oct 2008; Alexis Ballier <aballier@gentoo.org> fbsd/6.2/package.mask:
+  mask virtual/jdk and jre 1.6 on 6.2 profiles for future keywording
 
   15 Oct 2008; Alexis Ballier <aballier@gentoo.org> fbsd/6.2/x86/use.mask,
   use.mask:
