@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.5.ebuild,v 1.1 2008/10/14 14:31:57 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.5.ebuild,v 1.2 2008/10/15 08:18:14 loki_val Exp $
 
 inherit flag-o-matic eutils base
 
@@ -50,16 +50,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# Restrictions taken from the mplayer ebuild
-	# See bug #64262 for more info
-	# let's play the filtration game!
-	filter-flags -fPIE -fPIC -fstack-protector -fforce-addr -momit-leaf-frame-pointer -msse2 -msse3 -falign-functions -fweb
-	# ugly optimizations cause MPlayer to cry on x86 systems!
-	if use x86 ; then
-		replace-flags -O0 -O2
-		replace-flags -O3 -O2
-	fi
-
+	append-flags -fno-strict-aliasing
 	econf --with-system-ffmpeg
 	emake || die "emake failed."
 }
