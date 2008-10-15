@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.550 2008/10/15 02:16:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.551 2008/10/15 20:30:19 armin76 Exp $
+
+  15 Oct 2008; Raúl Porcel <armin76@gentoo.org>
+  gentoo-sources-2.6.27.ebuild:
+  Add ~ia64/~sparc
 
   15 Oct 2008; Jeroen Roovers <jer@gentoo.org> gentoo-sources-2.6.27.ebuild:
   Marked ~hppa too.
