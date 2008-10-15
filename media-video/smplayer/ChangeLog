@@ -1,6 +1,10 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.43 2008/09/28 16:15:16 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.44 2008/10/15 17:06:02 yngwin Exp $
+
+  15 Oct 2008; Ben de Groot <yngwin@gentoo.org> smplayer-0.6.3.ebuild:
+  Turn off console message flooding unless USE=debug, as suggested by
+  Michael Perlov in bug 239486.
 
   28 Sep 2008; Ben de Groot <yngwin@gentoo.org> smplayer-0.6.2-r1.ebuild,
   smplayer-0.6.3.ebuild:
