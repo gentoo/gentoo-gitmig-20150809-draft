@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.72 2008/06/10 21:10:46 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.73 2008/10/15 21:14:00 jmbsvicetto Exp $
+
+*krusader-2.0.0_beta1 (15 Oct 2008)
+
+  15 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +krusader-2.0.0_beta1.ebuild:
+  Added krusader-2.0.0_beta1 from the kde-testing overlay. Thanks to Tomáš
+  Chvátal <tomas.chvatal@gmail.com> for the update.
 
   10 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -krusader-1.80.0.ebuild, -krusader-1.80.0-r1.ebuild:
