@@ -1,0 +1,21 @@
+Re-enable the embedded video; Patch ported from this commit:
+
+commit 9c26b8e2a04468aa4b4a158f072d760a991932db
+Author: Rémi Denis-Courmont <rdenis@simphalempin.com>
+Date:   Thu Oct 9 23:06:21 2008 +0300
+
+    Enable embedded video with Qt >= 4.3 - hopefully fixes #2136
+
+Index: vlc-0.9.4/modules/gui/qt4/qt4.cpp
+===================================================================
+--- vlc-0.9.4.orig/modules/gui/qt4/qt4.cpp
++++ vlc-0.9.4/modules/gui/qt4/qt4.cpp
+@@ -213,7 +213,7 @@ vlc_module_begin();
+ 
+         set_callbacks( OpenDialogs, Close );
+ 
+-#ifdef WIN32
++#if !defined (Q_WS_X11) || HAS_QT43
+     add_submodule();
+         set_capability( "vout window", 50 );
+         set_callbacks( WindowOpen, WindowClose );
