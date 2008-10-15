@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xfractint
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.52 2008/09/14 11:45:32 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.53 2008/10/15 17:26:46 spock Exp $
+
+*xfractint-20.04_p09 (15 Oct 2008)
+
+  15 Oct 2008; Michał Januszewski <spock@gentoo.org>
+  +xfractint-20.04_p09.ebuild:
+  Version bump. Fix the new ebuild so that it respects the user's CFLAGS
+  (bug #241550).
 
   14 Sep 2008; Friedrich Oslage <bluebird@gentoo.org>
   xfractint-20.04_p07.ebuild:
