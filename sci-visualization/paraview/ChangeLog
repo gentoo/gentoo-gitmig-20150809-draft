@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.24 2008/07/30 21:47:18 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.25 2008/10/15 22:28:43 markusle Exp $
+
+  15 Oct 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/paraview-3.3_pre20080514-hdf5.patch,
+  files/paraview-3.3_pre20080514-gcc4.3.patch,
+  paraview-3.3_pre20080514.ebuild:
+  Added patch to fix issues due to changed API in >=hdf5-1.6.7 
+  (fixes bug #242184). Also updated gcc-4 patch.
 
   29 Jul 2008; Markus Dittrich <markusle@gentoo.org>
   paraview-3.3_pre20080514.ebuild:
