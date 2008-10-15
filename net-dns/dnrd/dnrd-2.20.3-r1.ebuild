@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/dnrd-2.20.3.ebuild,v 1.1 2007/03/22 12:52:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/dnrd-2.20.3-r1.ebuild,v 1.1 2008/10/15 10:20:11 armin76 Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="A caching DNS proxy server"
 HOMEPAGE="http://dnrd.sourceforge.net/"
@@ -13,17 +13,25 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 DEPEND=""
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-docdir.patch
+	eautoreconf
+}
+
 src_compile() {
 	econf \
-	$(use_enable debug) \
-	--disable-dependency-tracking \
-	|| die "configuration failed"
+		$(use_enable debug) \
+		--disable-dependency-tracking \
+		--docdir=/usr/share/doc/${PF} \
+		|| die
 
-	emake || die "Make failed"
+	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	keepdir /etc/dnrd
 	doinitd ${FILESDIR}/dnrd

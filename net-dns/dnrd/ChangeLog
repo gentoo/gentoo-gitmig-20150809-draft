@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnrd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.13 2007/03/22 12:52:32 armin76 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnrd/ChangeLog,v 1.14 2008/10/15 10:20:11 armin76 Exp $
+
+*dnrd-2.20.3-r1 (15 Oct 2008)
+
+  15 Oct 2008; Raúl Porcel <armin76@gentoo.org>
+  +files/dnrd-2.20.3-docdir.patch, -dnrd-2.20.3.ebuild,
+  +dnrd-2.20.3-r1.ebuild:
+  New revision bump for bug #241294
 
 *dnrd-2.20.3 (22 Mar 2007)
 
