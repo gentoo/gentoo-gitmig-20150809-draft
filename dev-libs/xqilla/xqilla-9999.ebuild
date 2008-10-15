@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-9999.ebuild,v 1.1 2008/08/15 08:59:50 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-9999.ebuild,v 1.2 2008/10/15 10:27:42 dev-zero Exp $
 
 ESVN_REPO_URI="http://xqilla.svn.sourceforge.net/svnroot/xqilla/trunk/xqilla"
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug doc faxpp htmltidy"
 
 RDEPEND="faxpp? ( dev-libs/faxpp )
-	>=dev-libs/xerces-c-3.0.0_beta2
+	>=dev-libs/xerces-c-3.0.0
 	htmltidy? ( app-text/htmltidy )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
