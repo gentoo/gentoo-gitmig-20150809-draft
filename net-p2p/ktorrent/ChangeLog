@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.87 2008/07/17 19:11:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.88 2008/10/15 00:38:42 jmbsvicetto Exp $
+
+*ktorrent-3.1.3 (15 Oct 2008)
+
+  15 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, +ktorrent-3.1.3.ebuild:
+  Added ktorrent ebuild from the kde-testing overlay. Thanks to Tomáš
+  Chvátal <tomas.chvatal@gmail.com> for the bump.
 
   17 Jul 2008; Markus Rothe <corsair@gentoo.org> ktorrent-2.2.7.ebuild:
   Stable on ppc64; bug #231630
