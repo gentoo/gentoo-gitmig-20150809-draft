@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1956 2008/10/15 10:30:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1957 2008/10/15 15:54:46 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Oct 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask ocaml 3.11.0 beta
 
   15 Oct 2008; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Dropped mask for xerces-c since it's not beta anymore. Happy breaking\!
