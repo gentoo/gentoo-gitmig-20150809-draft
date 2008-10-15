@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.13.2.ebuild,v 1.1 2008/06/30 14:46:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.13.2.ebuild,v 1.2 2008/10/15 00:01:01 angelos Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ pkg_setup() {
 		die "Missing libOggFLAC library."
 	fi
 
-	enewuser mpd "" "" "/var/lib/mpd" audio || die "problem adding user mpd"
+	enewuser mpd "" "" "/var/lib/mpd" audio
 }
 
 src_unpack() {

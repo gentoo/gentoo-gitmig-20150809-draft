@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.124 2008/07/22 01:32:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.125 2008/10/15 00:01:01 angelos Exp $
+
+*mpd-0.14.0_pre20081015 (14 Oct 2008)
+
+  14 Oct 2008; Christoph Mende <angelos@gentoo.org> files/mpd.rc,
+  mpd-0.13.0.ebuild, mpd-0.13.1.ebuild, mpd-0.13.2.ebuild,
+  -mpd-0.14.0_pre20080204.ebuild, -mpd-0.14.0_pre20080630.ebuild,
+  +mpd-0.14.0_pre20081015.ebuild:
+  Removed old, new snapshot, removed die calls from enewuser (bug 237292)
+  and removed --no-create-db from the init script (bug 241840)
 
   22 Jul 2008; Jeremy Olexa <darkside@gentoo.org> Manifest:
   re-manifest distfile for mpd-0.14.0_pre20080204 with Chainsaw's permission
