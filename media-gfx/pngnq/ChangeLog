@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pngnq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/ChangeLog,v 1.2 2008/08/29 22:10:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/ChangeLog,v 1.3 2008/10/16 00:28:37 hanno Exp $
+
+  16 Oct 2008; Hanno Boeck <hanno@gentoo.org> +files/pngnq-0.5-cflags.diff,
+  pngnq-0.5.ebuild:
+  Respect CFLAGS and LDFLAGS.
 
   29 Aug 2008; Markus Meier <maekke@gentoo.org> pngnq-0.5.ebuild:
   amd64/x86 stable, bug #236047
