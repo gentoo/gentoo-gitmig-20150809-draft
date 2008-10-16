@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7s.ebuild,v 1.2 2008/07/08 03:07:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7s.ebuild,v 1.3 2008/10/16 14:01:23 markusle Exp $
 
 inherit toolchain-funcs fortran
 
@@ -25,7 +25,10 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${NAME}_${PV}"
 
 src_compile() {
-	cd "${S}"
+	# some source files have lines that extend
+	# beyond 72 characters causing problems with
+	# gcc-4.1.2 without the below
+	FFLAGS="${FFLAGS} -ffixed-line-length-132"
 
 	# fix Makefile to honor user's CFLAGS/FFLAGS
 	sed -e "s:gcc:$(tc-getCC):" \

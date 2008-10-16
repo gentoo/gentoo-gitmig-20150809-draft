@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/raster3d
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.15 2008/07/08 03:07:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.16 2008/10/16 14:01:23 markusle Exp $
+
+  16 Oct 2008; Markus Dittrich <markusle@gentoo.org> raster3d-2.7s.ebuild, raster3d-2.7d.ebuild:
+  Added -ffixed-line-length-132 to FFLAGS to avoid gcc-4.1.2 errors 
+  due to lines extending beyond 72 characters (fixes bug #242232).
 
   08 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>; raster3d-2.7s.ebuild:
   Keyword ~amd64.
