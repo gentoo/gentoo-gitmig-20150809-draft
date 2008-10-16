@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.1-r2.ebuild,v 1.4 2008/10/14 03:11:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.1-r2.ebuild,v 1.5 2008/10/16 18:34:47 maekke Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND=">=dev-db/libdbi-0.8.0
 		!bindist? ( firebird? ( dev-db/firebird ) )"
 
 IUSE="mysql postgres sqlite oci8 firebird sqlite3 bindist"
-KEYWORDS="~amd64 ~hppa ppc ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ppc ~sparc x86"
 SLOT=0
 
 src_unpack() {
