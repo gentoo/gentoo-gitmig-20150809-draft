@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.7.4-r2.ebuild,v 1.1 2008/09/14 09:14:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.7.4-r2.ebuild,v 1.2 2008/10/16 19:09:01 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -21,7 +21,7 @@ SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="pam ldap samba sasl nis ssl snmp selinux logrotate \
+IUSE="pam ldap samba sasl kerberos nis ssl snmp selinux logrotate \
 	mysql postgres sqlite \
 	qos zero-penalty-hit \
 	pf-transparent ipf-transparent \
@@ -29,6 +29,7 @@ IUSE="pam ldap samba sasl nis ssl snmp selinux logrotate \
 
 DEPEND="pam? ( virtual/pam )
 	ldap? ( net-nds/openldap )
+	kerberos? ( || ( app-crypt/mit-krb5 app-crypt/heimdal ) )
 	ssl? ( dev-libs/openssl )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( sec-policy/selinux-squid )
@@ -85,6 +86,9 @@ src_compile() {
 	local ntlm_helpers="fakeauth"
 	use samba && ntlm_helpers="SMB,${ntlm_helpers}"
 
+	local negotiate_helpers=
+	use kerberos && local negotiate_helpers="squid_kerb_auth"
+
 	local myconf=""
 
 	# Support for uclibc #61175
@@ -123,6 +127,7 @@ src_compile() {
 		--enable-basic-auth-helpers="${basic_modules}" \
 		--enable-external-acl-helpers="${ext_helpers}" \
 		--enable-ntlm-auth-helpers="${ntlm_helpers}" \
+		--enable-negotiate-auth-helpers="${negotiate_helpers}" \
 		--enable-ident-lookups \
 		--enable-useragent-log \
 		--enable-cache-digests \

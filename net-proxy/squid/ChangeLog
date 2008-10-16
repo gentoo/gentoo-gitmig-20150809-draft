@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.203 2008/09/14 09:14:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.204 2008/10/16 19:09:01 mrness Exp $
+
+  16 Oct 2008; Alin Năstac <mrness@gentoo.org> squid-2.7.4-r2.ebuild,
+  squid-3.0.9.ebuild:
+  Add kerberos support (#242060).
 
 *squid-3.0.9 (14 Sep 2008)
 *squid-2.7.4-r2 (14 Sep 2008)
