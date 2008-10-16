@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-2.3.4.ebuild,v 1.3 2008/10/14 20:28:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-2.3.4.ebuild,v 1.4 2008/10/16 20:29:26 maekke Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://awesome.naquadah.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc gtk"
 
 RDEPEND=">=dev-libs/confuse-2.6
