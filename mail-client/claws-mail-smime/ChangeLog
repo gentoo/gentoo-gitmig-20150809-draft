@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail-smime
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/ChangeLog,v 1.28 2008/08/06 18:29:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/ChangeLog,v 1.29 2008/10/16 17:50:03 opfer Exp $
+
+  16 Oct 2008; Christian Faulhammer <opfer@gentoo.org>
+  claws-mail-smime-0.7.5.ebuild, claws-mail-smime-0.7.6.ebuild:
+  block mail-client/claws-mail >=3.6.0 as smime plugin is included there and
+  will lead to file collisions
 
   06 Aug 2008; Ferris McCormick <fmccor@gentoo.org>
   claws-mail-smime-0.7.6.ebuild:

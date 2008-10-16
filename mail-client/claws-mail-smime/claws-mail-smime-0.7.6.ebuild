@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/claws-mail-smime-0.7.6.ebuild,v 1.3 2008/08/06 18:29:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-smime/claws-mail-smime-0.7.6.ebuild,v 1.4 2008/10/16 17:50:03 opfer Exp $
 
 MY_P="${P#claws-mail-}"
 
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 RDEPEND=">=mail-client/claws-mail-3.5.0
-		>=app-crypt/gpgme-1.1.1"
+	!>=mail-client/claws-mail-3.6.0
+	>=app-crypt/gpgme-1.1.1"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
