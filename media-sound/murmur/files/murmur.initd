@@ -1,0 +1,36 @@
+#!/sbin/runscript
+
+opts="reload"
+
+depend() {
+	need dbus localmount net
+	use logger
+	after bootmisc mysql
+}
+
+start() {
+	ebegin "Starting Murmur"
+	start-stop-daemon --start --pidfile "${MURMUR_PID}" \
+		--user "${MURMUR_USER}" --env HOME="${MURMUR_HOME}" \
+		--exec /usr/bin/murmurd -- -ini "${MURMUR_CONF}"
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Murmur"
+	start-stop-daemon --stop --pidfile "${MURMUR_PID}" \
+		--exec /usr/bin/murmurd
+	eend $?
+}
+
+reload() {
+	if [ ! -f "${MURMUR_PID}" ]; then
+		eerror "Murmur is not running"
+	return 1
+	fi
+	ebegin "Reloading Murmur"
+	start-stop-daemon --stop --oknodo --signal HUP --pidfile "${MURMUR_PID}" \
+		--exec /usr/bin/murmurd
+	eend $?
+}
+

@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.5 2008/03/15 17:47:55 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.6 2008/10/16 22:42:35 tgurr Exp $
+
+*murmur-1.1.6 (16 Oct 2008)
+
+  16 Oct 2008; Timo Gurr <tgurr@gentoo.org> files/murmur.confd,
+  +files/murmur.initd, +files/murmur.logrotate, -files/murmur.rc,
+  metadata.xml, -murmur-0.9.4.ebuild, -murmur-0.9.4-r1.ebuild,
+  +murmur-1.1.6.ebuild:
+  Version bump, fixing bug #207627 (Thanks to every single person
+  participating). Remove old.
 
   15 Mar 2008; Timothy Redaelli <drizzt@gentoo.org> metadata.xml:
   Drop maintainership
