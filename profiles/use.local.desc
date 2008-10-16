@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3959 2008/10/15 21:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3960 2008/10/16 01:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -706,6 +706,7 @@ dev-python/PyQt4:qt3support - enable the Qt3Support libraries for Qt4
 dev-python/cgkit:3ds - Enable support for importing 3D Studio models
 dev-python/dap:server - Enable OpenDAP server support
 dev-python/docutils:glep - Install support for GLEPs
+dev-python/ipython:smp - Enables support for multiprocessors
 dev-python/kaa-base:tls - SSL/TLS support via dev-python/tlslite
 dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
 dev-python/nose:twisted - install nose.twistedtools to integrate tests with twisted
