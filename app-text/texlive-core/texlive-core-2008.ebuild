@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2008.ebuild,v 1.4 2008/10/06 19:56:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2008.ebuild,v 1.5 2008/10/16 09:29:23 aballier Exp $
 
 EAPI=1
 
@@ -124,6 +124,7 @@ src_compile() {
 		--without-luatex \
 		--without-dvi2tty \
 		--without-vlna \
+		--disable-largefile \
 		--enable-shared \
 		$(use_with X x) \
 
