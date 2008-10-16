@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9085 2008/10/16 21:51:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9086 2008/10/16 22:47:38 tgurr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1128,7 +1128,6 @@ dev-lang/entity
 # Timothy Redaelli <drizzt@gentoo.org> (23 Dec 2007)
 # Masked for testing
 >media-sound/mumble-1.0.0
->media-sound/murmur-1.0.0
 
 # Ulrich Mueller <ulm@gentoo.org> (21 Dec 2007)
 # Christian Faulhammer <opfer@gentoo.org>
