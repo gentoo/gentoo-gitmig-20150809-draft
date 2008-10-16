@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.3 2008/10/15 23:16:58 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.4 2008/10/16 12:03:35 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -8,9 +8,9 @@ EAPI="1"
 
 inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib
 
-IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap mono nsplugin odk opengl pam templates"
+IUSE="cups dbus debug eds gnome gstreamer gtk kde ldap mono nsplugin odk opengl pam templates"
 
-MY_PV="3.0.0.3.4"
+MY_PV="3.0.0.3.5"
 PATCHLEVEL="OOO300"
 SRC="OOo_${PV}_src"
 MST="ooo300-m9"
@@ -43,7 +43,7 @@ SRC_URI="${DEVPATH}-artwork.tar.bz2
 	http://download.go-oo.org/SRC680/extras-3.tar.bz2
 	http://download.go-oo.org/SRC680/biblio.tar.bz2
 	http://download.go-oo.org/SRC680/lp_solve_5.5.0.12_source.tar.gz
-	http://download.go-oo.org/DEV300/scsolver.2008-09-30.tar.bz2
+	http://download.go-oo.org/DEV300/scsolver.2008-10-07.tar.bz2
 	http://download.go-oo.org/SRC680/libwps-0.1.2.tar.gz
 	http://download.go-oo.org/SRC680/libwpg-0.1.3.tar.gz"
 

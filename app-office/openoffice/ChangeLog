@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.424 2008/10/15 23:16:58 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.425 2008/10/16 12:03:35 suka Exp $
+
+  16 Oct 2008; Andreas Proschofsky <suka@gentoo.org>
+  files/gentoo-3.0.0.diff, openoffice-3.0.0.ebuild:
+  Bump the patchset to ooo-build 3.0.0.3.5, this fixes a bunch of bugs. Most
+  notably the quickstarter is working again.
 
   15 Oct 2008; Friedrich Oslage <bluebird@gentoo.org>
   openoffice-3.0.0.ebuild:
