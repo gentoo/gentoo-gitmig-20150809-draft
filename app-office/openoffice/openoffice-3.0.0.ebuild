@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.4 2008/10/16 12:03:35 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.5 2008/10/16 19:51:57 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -203,10 +203,20 @@ pkg_setup() {
 
 	if use kde; then
 		ewarn " Please note that this version of OpenOffice.org will NOT build "
-		ewarn " if you have KDE 4.1.x installed without kdeprefix. "
+		ewarn " if you have kde-base/kdelibs or kde-base/kdepimlibs 4.1.x installed "
+		ewarn " without kdeprefix"
+		ewarn
 		ewarn " Until this is resolved, either disable the kde-use-flag or "
 		ewarn " rebuild KDE with USE='kdeprefix'. "
 		ewarn
+
+		if has_version kde-base/kdelibs:4.1; then
+			built_with_use kde-base/kdelibs:4.1 kdeprefix || die "rebuild kde-4.1 with USE='kdeprefix'"
+		fi
+
+		if has_version kde-base/kdepimlibs:4.1; then
+			built_with_use kde-base/kdepimlibs:4.1 kdeprefix || die "rebuild kde-4.1 with USE='kdeprefix'"
+		fi
 	fi
 
 	if use nsplugin; then
