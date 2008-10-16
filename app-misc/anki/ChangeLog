@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.1 2008/10/02 23:13:39 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.2 2008/10/16 17:54:59 hncaldwell Exp $
+
+*anki-0.9.8.5 (16 Oct 2008)
+
+  16 Oct 2008; Heath Caldwell (hncaldwell) <hncaldwell@csupomona.edu>
+  metadata.xml, +anki-0.9.8.5.ebuild:
+  Version bump. Changed to furigana use flag for furigana support. Fixed
+  pysqlite dependency. Using setup.py for install. Removed psyco
+  recommendation (it is no longer used).
 
 *anki-0.9.8.1 (02 Oct 2008)
 
