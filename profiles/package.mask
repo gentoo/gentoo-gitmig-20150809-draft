@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9078 2008/10/16 05:21:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9079 2008/10/16 16:28:08 opfer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,25 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Faulhammer <opfer@gentoo.org> (16 Oct 2008)
+# Masked, so people won't get freaked out by broken dependency
+# chains.  Will get removed as soon as all are bumped
+=mail-client/claws-mail-3.6.1
+=mail-client/claws-mail-acpi-notifier-1.0.18
+=mail-client/claws-mail-att-remover-1.0.9
+=mail-client/claws-mail-attachwarner-0.2.14
+=mail-client/claws-mail-cachesaver-0.10.8
+=mail-client/claws-mail-gtkhtml2-0.21
+=mail-client/claws-mail-mailmbox-1.14.2
+=mail-client/claws-mail-newmail-0.0.14
+=mail-client/claws-mail-notification-0.19
+=mail-client/claws-mail-perl-0.9.14
+=mail-client/claws-mail-rssyl-0.22
+=mail-client/claws-mail-vcalendar-2.0.2
+mail-client/claws-mail-archive
+mail-client/claws-mail-spam-report
+mail-client/claws-mail-tnef-parse
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (15 Oct 2008)
 # Beta release

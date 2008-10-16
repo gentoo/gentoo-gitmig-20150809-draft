@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1959 2008/10/16 05:21:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1960 2008/10/16 16:28:07 opfer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Oct 2008; <fauli@gentoo.org> package.mask:
+  mask Claws Mail 3.6.1 and all corresponding plugins so users won't freak
+  out about broken dependency chains
 
   16 Oct 2008; Markus Meier <maekke@gentoo.org> package.mask:
   add media-gfx/blender-2.48-r2 to the media-video/ffmpeg-0.4.9_p20081014
