@@ -1,6 +1,15 @@
 # ChangeLog for mail-filter/dkim-milter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/ChangeLog,v 1.24 2008/08/23 05:47:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/ChangeLog,v 1.25 2008/10/16 19:35:35 mrness Exp $
+
+*dkim-milter-2.7.2 (16 Oct 2008)
+
+  16 Oct 2008; Alin Năstac <mrness@gentoo.org>
+  -files/dkim-milter-2.5.5-gentoo.patch,
+  -files/dkim-milter-2.6.0-gentoo.patch,
+  +files/dkim-milter-2.7.2-gentoo.patch, -dkim-milter-2.5.5.ebuild,
+  -dkim-milter-2.6.0.ebuild, +dkim-milter-2.7.2.ebuild:
+  Version bump (#242164).
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

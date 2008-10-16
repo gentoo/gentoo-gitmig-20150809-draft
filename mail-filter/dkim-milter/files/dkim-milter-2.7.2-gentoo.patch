@@ -1,5 +1,6 @@
---- dkim-milter-2.5.5.orig/devtools/Site/site.config.m4	2008-06-08 12:47:04.000000000 +0300
-+++ dkim-milter-2.5.5/devtools/Site/site.config.m4	2008-06-08 12:47:37.000000000 +0300
+diff -Nru dkim-milter-2.7.2.orig/devtools/Site/site.config.m4 dkim-milter-2.7.2/devtools/Site/site.config.m4
+--- dkim-milter-2.7.2.orig/devtools/Site/site.config.m4	2008-10-16 19:27:01.000000000 +0000
++++ dkim-milter-2.7.2/devtools/Site/site.config.m4	2008-10-16 19:27:42.000000000 +0000
 @@ -11,7 +11,10 @@
  dnl If you are encountering coredumps and want to be able to analyze them
  dnl using something like "gdb", enable this next line by deleting the "dnl"
@@ -48,9 +49,10 @@
  dnl APPENDDEF(`confENVDEF', `-D_FFR_VBR ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_ZTAGS ')
  
---- dkim-milter-2.5.5.orig/dkim-filter/dkim-filter.conf.sample	2008-03-05 00:50:22.000000000 +0200
-+++ dkim-milter-2.5.5/dkim-filter/dkim-filter.conf.sample	2008-06-08 12:47:37.000000000 +0300
-@@ -37,13 +37,6 @@
+diff -Nru dkim-milter-2.7.2.orig/dkim-filter/dkim-filter.conf.sample dkim-milter-2.7.2/dkim-filter/dkim-filter.conf.sample
+--- dkim-milter-2.7.2.orig/dkim-filter/dkim-filter.conf.sample	2008-09-02 20:43:04.000000000 +0000
++++ dkim-milter-2.7.2/dkim-filter/dkim-filter.conf.sample	2008-10-16 19:27:42.000000000 +0000
+@@ -74,13 +74,6 @@
  
  # AutoRestartRate	n/tu
  
@@ -64,16 +66,24 @@
  ##  BodyLengths { yes | no }
  ##  	default "no"
  ##
-@@ -91,7 +84,7 @@
+@@ -129,7 +122,7 @@
  ##  Specify for which domain(s) signing should be done.  No default; must
  ##  be specified for signing.
  
 -Domain			example.com
 +Domain			my-domain.com
  
- ##  ExternalIgnoreList filename
+ ##  DontSignMailTo	addrlist
+ ##  	default (none)
+@@ -160,14 +153,14 @@
+ ##  hosts from which mail should be signed rather than verified.
+ ##  Automatically contains 127.0.0.1.  See man page for file format.
+ 
+-# InternalHosts		filename
++# InternalHosts		/etc/mail/dkim-filter/internalhosts
+ 
+ ##  KeyFile filename
  ##
-@@ -113,7 +106,7 @@
  ##  Specifies the path to the private key to use when signing.  Ignored if
  ##  Keylist is set.  No default; must be specified for signing.
  
@@ -82,25 +92,16 @@
  
  ##  KeyList filename
  ##
-@@ -130,7 +123,7 @@
+@@ -184,7 +177,7 @@
  ##  as the beginning of a comment.  See dkim-filter.conf(5) for more
  ##  information.
  
 -# KeyList		/var/db/dkim/keylist
 +# KeyList		/etc/mail/dkim-filter/keylist
  
- ##  InternalHosts filename
+ ##  LocalADSP filename
  ##
-@@ -138,7 +131,7 @@
- ##  hosts from which mail should be signed rather than verified.
- ##  Automatically contains 127.0.0.1.  See man page for file format.
- 
--# InternalHosts		filename
-+# InternalHosts		/etc/mail/dkim-filter/internalhosts
- 
- ##  MacroList macro[=value][,...]
- ##
-@@ -228,22 +221,6 @@
+@@ -309,22 +302,6 @@
  
  # PeerList		filename
  
@@ -123,25 +124,25 @@
  ##  Quarantine { yes | no }
  ##  	default "no"
  ##
-@@ -318,7 +295,7 @@
+@@ -437,7 +414,7 @@
  ##  inet:port			to listen on all interfaces
  ##  local:/path/to/socket	to listen on a UNIX domain socket
  
 -Socket			inet:port@localhost
 +Socket			local:/var/run/dkim-filter/dkim-filter.sock
  
- ##  SubDomains { yes | no }
+ ##  StrictTestMode { yes | no }
  ##  	default "no"
-@@ -359,7 +336,7 @@
+@@ -496,7 +473,7 @@
  ##  The system has its own default which will be used (usually 022).
  ##  See the umask(2) man page for more information.
  
 -# UMask			022
 +UMask			002
  
- ##  UseASPDiscard { yes | no }
- ##  	default "no"
-@@ -376,7 +353,7 @@
+ ##  Userid userid
+ ##  	default (none)
+@@ -504,7 +481,7 @@
  ##  Change to user "userid" before starting normal operation?  May include
  ##  a group ID as well, separated from the userid by a colon.
  
@@ -150,7 +151,7 @@
  
  ##  X-Header { yes | no }
  ##  	default "no"
-@@ -385,3 +362,10 @@
+@@ -513,3 +490,10 @@
  ##  messages it has processed.
  
  # X-Header		No
