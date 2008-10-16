@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.25 2008/07/04 18:51:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.26 2008/10/16 09:21:53 flameeyes Exp $
+
+*rcairo-1.8.0 (16 Oct 2008)
+
+  16 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> +rcairo-1.8.0.ebuild:
+  Version bump, use gem.
 
 *rcairo-1.6.2 (04 Jul 2008)
 
