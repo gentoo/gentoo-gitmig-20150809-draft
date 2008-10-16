@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.135 2008/09/24 19:54:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.136 2008/10/16 21:41:10 yngwin Exp $
+
+  16 Oct 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/avidemux-2.4.3-x264.patch, avidemux-2.4.3.ebuild:
+  Adding patch for newer x264 from upstream. Thanks to Tim Harder in bug
+  240446.
 
   24 Sep 2008; Ben de Groot <yngwin@gentoo.org> -avidemux-2.4.ebuild,
   avidemux-2.4.1.ebuild, -avidemux-2.4.2.ebuild, avidemux-2.4.3.ebuild:

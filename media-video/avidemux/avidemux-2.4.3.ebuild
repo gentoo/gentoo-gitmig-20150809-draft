@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.3.ebuild,v 1.2 2008/09/24 19:54:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.3.ebuild,v 1.3 2008/10/16 21:41:10 yngwin Exp $
 
 EAPI="1"
 
@@ -67,6 +67,8 @@ src_unpack() {
 	# TODO. Needs to be reported upstream.
 	epatch "${FILESDIR}"/${PN}-2.4-libdca.patch
 	epatch "${FILESDIR}"/${PN}-2.4-i18n.patch
+	# Upstream patch for newer x264
+	epatch "${FILESDIR}"/${P}-x264.patch
 }
 
 src_compile() {
