@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sil-padauk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-padauk/ChangeLog,v 1.5 2008/10/14 20:47:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-padauk/ChangeLog,v 1.6 2008/10/16 10:06:31 armin76 Exp $
+
+  16 Oct 2008; Raúl Porcel <armin76@gentoo.org> sil-padauk-2.4.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #241722
 
   14 Oct 2008; Brent Baude <ranger@gentoo.org> sil-padauk-2.4.ebuild:
   stable ppc, bug 241722
