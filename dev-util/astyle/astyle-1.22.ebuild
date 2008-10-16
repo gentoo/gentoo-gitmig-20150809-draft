@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.22.ebuild,v 1.4 2008/10/16 06:02:44 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.22.ebuild,v 1.5 2008/10/16 06:34:01 zmedico Exp $
 
-inherit eutils java-pkg-2 java-pkg-opt-2 toolchain-funcs
+inherit eutils java-pkg-opt-2 toolchain-funcs
 
 DESCRIPTION="Artistic Style is a reindenter and reformatter of C++, C and Java source code"
 HOMEPAGE="http://astyle.sourceforge.net/"
@@ -22,7 +22,7 @@ S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	if use java ; then
-	    java-pkg-2_pkg_setup
+	    java-pkg-opt-2_pkg_setup
 
 	    if use x86; then
 		jvmarch=i386
