@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.5 2008/05/16 21:34:23 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.6 2008/10/16 19:51:09 tupone Exp $
+
+*sdlmame-0.127 (16 Oct 2008)
+
+  16 Oct 2008; <tupone@gentoo.org> +sdlmame-0.127.ebuild:
+  Version bump. Bug #232233 by Alessio Cassibba (X-Drum)
 
 *sdlmame-0.125 (16 May 2008)
 
