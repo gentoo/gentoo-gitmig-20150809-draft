@@ -1,6 +1,13 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.27 2008/07/12 09:05:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.28 2008/10/16 20:59:26 aballier Exp $
+
+*kdenlive-0.7_beta1 (16 Oct 2008)
+
+  16 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  +kdenlive-0.7_beta1.ebuild:
+  Version bump, thanks to Tomáš Chvátal and for the ebuild and
+  jmbsvicetto for the help on the missing kdebase-data dep. Bug #241712.
 
   12 Jul 2008; Alexis Ballier <aballier@gentoo.org> kdenlive-0.5.ebuild:
   Check for xml useflag on mlt, thanks to Flyser <hoacha@quantentunnel.de>,
