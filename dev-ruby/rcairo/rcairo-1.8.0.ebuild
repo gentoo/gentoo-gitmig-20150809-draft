@@ -1,10 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.8.0.ebuild,v 1.1 2008/10/16 09:21:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.8.0.ebuild,v 1.2 2008/10/16 09:22:47 flameeyes Exp $
 
 inherit gems
 
 MY_P=${P/rcairo/cairo}
+
+IUSE=""
 
 DESCRIPTION="Ruby bindings for cairo"
 HOMEPAGE="http://cairographics.org/rcairo/"
