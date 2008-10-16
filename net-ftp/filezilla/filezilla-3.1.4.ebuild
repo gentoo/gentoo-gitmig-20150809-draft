@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.1.4.ebuild,v 1.1 2008/10/15 15:38:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.1.4.ebuild,v 1.2 2008/10/16 07:47:16 voyageur Exp $
 
 WX_GTK_VER="2.8"
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="net-dns/libidn
-	>=x11-libs/wxGTK-2.8.6
+	>=x11-libs/wxGTK-2.8.9
 	>=app-admin/eselect-wxwidgets-0.7-r1"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.4
