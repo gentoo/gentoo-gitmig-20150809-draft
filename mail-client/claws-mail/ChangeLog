@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.86 2008/08/23 01:37:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.87 2008/10/16 18:17:25 opfer Exp $
+
+*claws-mail-3.6.1 (16 Oct 2008)
+
+  16 Oct 2008; Christian Faulhammer <opfer@gentoo.org>
+  +claws-mail-3.6.1.ebuild:
+  version bump for bug 239927: raise minimum version for net-libs/libetpan,
+  remove support for OpenSSL but leave USE=ssl intact (use GnuTLS, too)
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
