@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9081 2008/10/16 19:42:29 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9082 2008/10/16 20:03:02 suka Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -539,10 +539,6 @@ www-apps/phpcollab
 # www-client/opera snapshots are masked. Please read
 # http://my.opera.com/desktopteam/blog/
 =www-client/opera-9.60_pre*
-
-# Andreas Proschofsky <suka@gentoo.org> (22 Aug 2008)
-# Beta release, still got some issues
->=app-office/openoffice-3.0.0_beta2
 
 # Ricardo Mendoza <ricmm@gentoo.org> (21 Aug 2008)
 # Beta driver, masking corresponding nvidia-settings
