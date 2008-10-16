@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48-r1.ebuild,v 1.1 2008/10/16 05:27:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48-r1.ebuild,v 1.2 2008/10/16 18:30:17 maekke Exp $
 
 EAPI="2"
 
@@ -57,6 +57,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/blender-2.44-scriptsdir.patch
 	epatch "${FILESDIR}"/blender-2.46-ffmpeg.patch
 	epatch "${FILESDIR}"/blender-2.46-cve-2008-1103-1.patch
+	epatch "${FILESDIR}"/${P}-ffmpeg-20081014.patch
 }
 
 src_configure() {
