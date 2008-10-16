@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.6.3.ebuild,v 1.9 2008/10/16 06:30:26 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.6.3.ebuild,v 1.10 2008/10/16 17:29:33 mueli Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
@@ -92,8 +92,8 @@ src_install() {
 	newinitd "${FILESDIR}"/mit-krb5kdc.initd mit-krb5kdc
 
 	insinto /etc
-	newins "${D}/usr/share/doc/${PF}/examples/krb5.conf krb5.conf.example"
-	newins "${D}/usr/share/doc/${PF}/examples/kdc.conf kdc.conf.example"
+	newins "${D}/usr/share/doc/${PF}/examples/krb5.conf" krb5.conf.example
+	newins "${D}/usr/share/doc/${PF}/examples/kdc.conf" kdc.conf.example
 }
 
 pkg_postinst() {
