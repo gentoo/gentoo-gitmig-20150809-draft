@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9079 2008/10/16 16:28:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9080 2008/10/16 18:32:26 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -90,7 +90,6 @@ dev-java/gnu-jaxp
 >=media-video/x264-encoder-0.0.20081006
 >=media-video/ffmpeg-0.4.9_p20081014
 =media-plugins/gst-plugins-ffmpeg-0.10.5*
-=media-gfx/blender-2.48-r2
 
 
 # Olivier Crete <tester@gentoo.org> (06 Oct 2008)
