@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26.ebuild,v 1.1 2008/10/15 20:52:34 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26.ebuild,v 1.2 2008/10/17 19:13:56 truedfx Exp $
 
 inherit eutils
 
@@ -74,7 +74,7 @@ src_install() {
 	|| die "Unable to copy files!"
 
 	dosym ../share/lazarus/startlazarus /usr/bin/startlazarus
-	dosym ../lazarus/images/mainicon.xpm /usr/share/pixmaps/lazarus.xpm
+	dosym ../lazarus/images/ide_icon48x48.png /usr/share/pixmaps/lazarus.png
 
 	make_desktop_entry startlazarus "Lazarus IDE" "lazarus" || die "Failed making desktop entry!"
 }
