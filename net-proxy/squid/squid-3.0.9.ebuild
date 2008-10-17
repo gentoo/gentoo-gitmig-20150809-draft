@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.9.ebuild,v 1.2 2008/10/16 19:09:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.9.ebuild,v 1.3 2008/10/17 20:19:38 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -69,6 +69,7 @@ src_unpack() {
 	cd "${S}" || die "source dir not found"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	use zero-penalty-hit && epatch "${FILESDIR}"/${P}-zph.patch
+	has_version app-crypt/mit-krb5 || epatch "${FILESDIR}"/${P}-heimdal.patch
 
 	eautoreconf
 }
