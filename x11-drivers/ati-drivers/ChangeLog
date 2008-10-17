@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.126 2008/09/29 23:24:49 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.127 2008/10/17 03:36:12 je_fro Exp $
+
+*ati-drivers-8.542 (17 Oct 2008)
+
+  17 Oct 2008; Jeff Gardner <je_fro@gentoo.org> +ati-drivers-8.542.ebuild:
+  Latest version, thanks to Josh Saddler, closing bug #239248.
 
 *ati-drivers-8.532 (29 Sep 2008)
 
