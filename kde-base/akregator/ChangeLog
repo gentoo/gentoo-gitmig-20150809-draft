@@ -1,9 +1,9 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.102 2008/10/17 18:24:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.103 2008/10/17 18:25:40 maekke Exp $
 
   17 Oct 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
-  kcontact USE-flag is global now
+  kontact USE-flag is global now
 
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml, +akregator-4.1.2.ebuild:
