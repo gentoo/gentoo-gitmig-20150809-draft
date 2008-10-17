@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6.ebuild,v 1.1 2008/09/12 21:13:56 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6-r1.ebuild,v 1.1 2008/10/17 18:39:20 opfer Exp $
 
 EAPI=1
 
@@ -37,6 +37,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}_fix-menu-language.patch"
 	# Missing gnome icons
 	epatch "${FILESDIR}/${P}_missing-icons.patch"
+	cd "${S}/po"
+	epatch "${FILESDIR}/${P}_url-crash.patch"
 }
 
 src_compile() {
