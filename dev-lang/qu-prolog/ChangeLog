@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.50 2008/09/28 12:42:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.51 2008/10/17 22:37:26 keri Exp $
+
+  17 Oct 2008; <keri@gentoo.org> -files/qu-prolog-8.3-configure.patch,
+  -files/qu-prolog-8.3-debug.patch, -files/qu-prolog-8.3-gcc4.patch,
+  -files/qu-prolog-8.3-portage.patch, -files/qu-prolog-8.5-gcc4.3.patch,
+  -files/qu-prolog-8.5-portage.patch, -qu-prolog-8.3.ebuild,
+  -qu-prolog-8.5.ebuild:
+  Remove old versions.
 
   28 Sep 2008; Markus Meier <maekke@gentoo.org> qu-prolog-8.6.ebuild:
   x86 stable, bug #238330
