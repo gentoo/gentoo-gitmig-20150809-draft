@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3965 2008/10/17 19:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3966 2008/10/17 19:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -520,7 +520,6 @@ dev-java/ant-tasks:resolver - Enable Apache Resolver Ant tasks
 dev-java/antlr:script - Install a script to run antlr
 dev-java/avalon-logkit:javamail - Enable support for javamail
 dev-java/avalon-logkit:jms - Enable support for JMS (Java Message Service)
-dev-java/bsh:bsf - Enable support for Apache Bean Scripting Framework
 dev-java/commons-collections:test-framework - Install the test framework
 dev-java/commons-logging:avalon-framework - Add optional support for avalon-framework
 dev-java/commons-logging:avalon-logkit - Add optional support for avalon-logkit
@@ -535,7 +534,6 @@ dev-java/fop:jimi - Enable jimi support
 dev-java/gjdoc:xmldoclet - Also build support for the xml doclet that generates output in xml instead of the traditional html javadoc.
 dev-java/gnu-classpath:dssi - Enable the DSSI midi synthesizer provider
 dev-java/gnu-classpath:gconf - Enable the GConf based util.peers backend
-dev-java/groovy:bsf - Enable support for Apache Bean Scripting Framework
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
 dev-java/itext:rtf - Build and provide libraries for rich text format
 dev-java/itext:rups - Build and provide GUI for Reading/Updating PDF Syntax
@@ -546,7 +544,6 @@ dev-java/jdbc-mysql:c3p0 - Enable c3p0 support
 dev-java/jdbc-mysql:log4j - Enable log4 support
 dev-java/jdbc-oracle-bin:dms - Enable support for the Oracle Dynamic Monitoring Service
 dev-java/jdbc-oracle-bin:ons - Enable support for the Oracle Notification Services (ONS) deamon
-dev-java/jruby:bsf - Enable support for Apache Bean Scripting Framework
 dev-java/jython:servletapi - Add optional support for servlet-api
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
