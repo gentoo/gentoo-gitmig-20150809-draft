@@ -1,10 +1,10 @@
 # ChangeLog for dev-util/confix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/ChangeLog,v 1.4 2008/10/17 09:12:48 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/ChangeLog,v 1.5 2008/10/17 09:51:27 mduft Exp $
 
 *confix-2.1.0-r1 (17 Oct 2008)
 
-  17 Oct 2008; Markus Duft <markus.duft@salomon.at>
+  17 Oct 2008; Markus Duft <mduft@gentoo.org>
   +files/2.1.0/private-headers.patch, +confix-2.1.0-r1.ebuild:
   add patch to enable private header files in confix-built packages
 
