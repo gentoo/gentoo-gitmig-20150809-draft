@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.542.ebuild,v 1.2 2008/10/17 03:40:59 je_fro Exp $
 
 IUSE="acpi debug"
 

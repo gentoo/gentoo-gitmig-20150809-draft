@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.127 2008/10/17 03:36:12 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.128 2008/10/17 03:40:59 je_fro Exp $
+
+  17 Oct 2008; Jeff Gardner <je_fro@gentoo.org> ati-drivers-8.542.ebuild:
+  Fix malformed header
 
 *ati-drivers-8.542 (17 Oct 2008)
 
