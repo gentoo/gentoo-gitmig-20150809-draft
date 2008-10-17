@@ -5,7 +5,4 @@
   <email>calchan@gentoo.org</email>
   <name>Denis Dupeyron</name>
 </maintainer>
-<use>
-	<flag name='smp'>Enable multicore/multiprocessor support</flag>
-</use>
 </pkgmetadata>
