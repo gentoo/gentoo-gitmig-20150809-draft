@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.59 2008/09/16 20:09:04 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.60 2008/10/17 21:46:20 serkan Exp $
+
+*emul-linux-x86-java-1.6.0.10 (17 Oct 2008)
+
+  17 Oct 2008; Serkan Kaba <serkan@gentoo.org>
+  +emul-linux-x86-java-1.6.0.10.ebuild:
+  Version bump with several changes and improvements. Visit
+  http://java.sun.com/javase/6/webnotes/6u10.html for more info.
 
   16 Sep 2008; Serkan Kaba <serkan@gentoo.org>
   emul-linux-x86-java-1.5.0.15.ebuild, emul-linux-x86-java-1.5.0.16.ebuild,
