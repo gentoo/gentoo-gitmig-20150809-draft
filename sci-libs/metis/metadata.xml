@@ -11,7 +11,5 @@
 </longdescription>
 <use>
   <flag name='int64'>Build the 64 bits integer library (metis >=5 only)</flag>
-  <flag name='openmp'>Build support for the OpenMP, needs openmp capable
-    compiler</flag>
 </use>
 </pkgmetadata>

@@ -19,8 +19,5 @@
   <flag name='ifc'>Fetch and install acml compiled with Intel Fortran Compiler
     (<pkg>dev-lang/ifc</pkg>)</flag>
   <flag name='int64'>Install the 64 bits integer library</flag>
-  <flag name='openmp'>Install the OpenMP parallel computing library as well
-    (needs <pkg>dev-lang/ifc</pkg> or gfortran (<pkg>sys-devel/gcc</pkg>)
-    &gt;= 4.2)</flag>
 </use>
 </pkgmetadata>
