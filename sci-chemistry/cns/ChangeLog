@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/cns
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.12 2008/08/20 19:13:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/ChangeLog,v 1.13 2008/10/17 18:41:31 maekke Exp $
+
+  17 Oct 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
+  openmp USE-flag is global now
 
   20 Aug 2008; Donnie Berkholz <dberkholz@gentoo.org>; cns-1.2.1.ebuild:
   Only append -fopenmp to FFLAGS, not all compiler flags.
