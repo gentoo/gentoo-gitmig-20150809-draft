@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.124 2008/10/10 19:14:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.125 2008/10/17 10:15:20 pva Exp $
+
+  17 Oct 2008; Peter Volkov <pva@gentoo.org>
+  +files/wireshark-1.1.1--as-needed.patch,
+  +files/wireshark-1.1.1-misc-warnings.patch, wireshark-1.1.1.ebuild:
+  Fixed build issue with --as-needed and lua enabled. Fixed build issues with
+  -ftracer, bug #239941, thank Thomas Pegeot for report.
 
 *wireshark-1.1.1 (10 Oct 2008)
 

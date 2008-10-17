@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.1.1.ebuild,v 1.1 2008/10/10 19:14:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.1.1.ebuild,v 1.2 2008/10/17 10:15:20 pva Exp $
 
 EAPI=1
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
@@ -67,9 +67,12 @@ src_unpack() {
 
 	# our hardened toolchain bug...
 	cd "${S}"/epan
-	epatch "${FILESDIR}"/wireshark-except-double-free.diff
+	epatch "${FILESDIR}/wireshark-except-double-free.diff"
 
 	cd "${S}"
+	epatch "${FILESDIR}/${P}-misc-warnings.patch"
+	# made dependent on lua as generally dissectors shouldn't depend on wiretap
+	use lua && epatch "${FILESDIR}/${P}--as-needed.patch"
 	eautoreconf
 }
 
