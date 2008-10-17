@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-killer/quake1-killer-2.2z.ebuild,v 1.4 2005/11/05 22:48:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-killer/quake1-killer-2.2z.ebuild,v 1.5 2008/10/17 16:26:37 mr_bones_ Exp $
 
 inherit games
 
 DESCRIPTION="The Killer Quake Patch"
-HOMEPAGE="http://kqp.mpog.com/ http://www.planetquake.com/qca/reviews/patch143.htm"
+HOMEPAGE="http://kqp.horoy.com/"
 SRC_URI="http://www.gamers.org/pub/idgames2/quakec/compilations/kqp220z.zip
 	mirror://gentoo/kqp220z.zip"
 
