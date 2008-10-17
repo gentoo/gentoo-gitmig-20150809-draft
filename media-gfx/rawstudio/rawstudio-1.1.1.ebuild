@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-1.1.ebuild,v 1.2 2008/10/04 14:33:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-1.1.1.ebuild,v 1.1 2008/10/17 16:32:21 maekke Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-desktop-entry-and-pixmaps-directory.patch
+	epatch "${FILESDIR}"/${PN}-1.1-desktop-entry-and-pixmaps-directory.patch
 }
 
 src_compile() {
