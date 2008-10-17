@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/kmldonkey
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.32 2008/06/24 23:30:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.33 2008/10/17 19:03:57 maekke Exp $
+
+  17 Oct 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
+  plasma USE-flag is global now
 
 *kmldonkey-0.11 (24 Jun 2008)
 
