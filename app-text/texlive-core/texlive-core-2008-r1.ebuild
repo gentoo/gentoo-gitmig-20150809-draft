@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2008-r1.ebuild,v 1.1 2008/10/16 09:38:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2008-r1.ebuild,v 1.2 2008/10/17 19:46:15 aballier Exp $
 
 EAPI=1
 
@@ -172,7 +172,7 @@ src_install() {
 	cd "${S}/texk"
 	dodoc ChangeLog README || die "failed to install texk docs"
 
-	docinto kpathesa
+	docinto kpathsea
 	cd "${S}/texk/kpathsea"
 	dodoc BUGS ChangeLog NEWS PROJECTS README || die "failed to install kpathsea docs"
 

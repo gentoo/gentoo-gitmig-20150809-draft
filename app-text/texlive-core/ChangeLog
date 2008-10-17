@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.76 2008/10/16 09:38:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.77 2008/10/17 19:46:15 aballier Exp $
+
+  17 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  texlive-core-2008-r1.ebuild:
+  Install doc into kpathsea not kpathesa (typo) thanks ulm for noticing this
 
 *texlive-core-2008-r1 (16 Oct 2008)
 
