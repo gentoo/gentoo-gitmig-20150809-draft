@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.90 2008/10/02 09:22:51 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.91 2008/10/17 18:33:05 maekke Exp $
+
+  17 Oct 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
+  kontact USE-flag is global now
 
 *knotes-4.1.2 (02 Oct 2008)
 
