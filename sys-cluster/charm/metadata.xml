@@ -8,7 +8,6 @@
 	<herd>sci</herd>
 	<use>
 		<flag name='cmkopt'>Enable CMK optimisation</flag>
-		<flag name='smp'>Enable direct SMP support using shared memory</flag>
 		<flag name='tcp'>Use TCP (instead of UPD) for socket communication</flag>
 	</use>
 </pkgmetadata>
