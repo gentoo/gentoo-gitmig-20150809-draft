@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3963 2008/10/17 18:27:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3964 2008/10/17 18:47:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -948,7 +948,6 @@ kde-base/gwenview:semantic-desktop -  Semantic desktop allows for storage of dig
 kde-base/juk:akode - Support for the aKode audio-decoding frame-work
 kde-base/juk:tunepimp - Provide MusicBrainz tagging in Juk
 kde-base/kaddressbook:gnokii - Address synchronization with mobile phones via app-mobilephone/gnokii
-kde-base/kaddressbook:kontact - Enable support for the KDE personal information manager
 kde-base/kalgebra:plasma - Build optional plasma widgets that require kde-base/libplasma.
 kde-base/kalzium:cviewer - Enable Kalzium compound viewer
 kde-base/kalzium:editor - Enable the embedded molecule editor/viewer
@@ -974,12 +973,8 @@ kde-base/kdeutils-meta:floppy - Install kfloppy to format and create DOS or ext2
 kde-base/kdvi:kpathsea - Enable integration with kpathsea search library (TeX related)
 kde-base/kget:plasma - Build optional kde-base/plasma widgets
 kde-base/kig:kig-scripting - Support Python scripting
-kde-base/kjots:kontact - Enable support for the KDE personal information manager
-kde-base/kmail:kontact - Enable support for the KDE personal information manager
 kde-base/kmail:nepomuk - Enable desktop-wide tagging support
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
-kde-base/knode:kontact - Enable support for the KDE personal information manager
-kde-base/knotes:kontact - Enable support for the KDE personal information manager
 kde-base/kopete:addbookmarks - Enable the addbookmarks plugin
 kde-base/kopete:alias - Enable the alias plugin
 kde-base/kopete:autoreplace - Enable the autoreplace plugin
@@ -1011,11 +1006,9 @@ kde-base/kopete:urlpicpreview - plugin to allow users to send photos through URL
 kde-base/kopete:webpresence - Enable the webpresence plugin
 kde-base/kopete:winpopup - Enable support for the winpopup plugin
 kde-base/kopete:xslt - Enable xslt support
-kde-base/korganizer:kontact - Enable support for the KDE personal information manager
 kde-base/kstars:fits - Enable support for the FITS image format through cfitsio
 kde-base/kstars:nova - Enable support for libnova.
 kde-base/kstars:sbig - Enable support for SBIG.
-kde-base/ktimetracker:kontact - Enable support for the KDE personal information manager
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kttsd:ktts - Enable KDE Text To Speech modules
 kde-base/kttsd:phonon - Enable support for the KDE multimedia API
@@ -1158,7 +1151,6 @@ media-gfx/asymptote:boehm-gc -  Enables using the Boehm-Demers-Weiser conservati
 media-gfx/asymptote:sigsegv -  Enables using dev-libs/libsigsegv 
 media-gfx/autotrace:flash -  Adds support for creating SWF files using Ming 
 media-gfx/blender:blender-game -  Adds game engine support to blender 
-media-gfx/blender:openmp -  build support for the OpenMP (support parallel computing), requires >=sys-devel/gcc-4.2 built with USE="openmp" 
 media-gfx/blender:player -  Enable blender player 
 media-gfx/blender:verse -  Adds verse clustering features to blender 
 media-gfx/comix:rar -  Pulls app-arch/unrar for rar file support 
@@ -1176,7 +1168,6 @@ media-gfx/imagemagick:corefonts -  pull in media-fonts/corefonts, which is requi
 media-gfx/imagemagick:fpx -  enable media-libs/libfpx support 
 media-gfx/imagemagick:gs -  enable ghostscript support 
 media-gfx/imagemagick:hdri -  enable High Dynamic Range Images formats 
-media-gfx/imagemagick:openmp -  build support for the OpenMP (support parallel computing), requires sys-devel/gcc-4.3 built with USE="openmp" 
 media-gfx/imagemagick:q32 -  set quantum depth to 32 
 media-gfx/imagemagick:q8 -  set quantum depth to 8 
 media-gfx/inkscape:dia -  pull in app-office/dia for dia import extension 
@@ -2187,7 +2178,6 @@ sci-biology/hmmer:pvm - Add support for parallel virtual machine (sys-cluster/pv
 sci-biology/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program
 sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities
 sci-chemistry/caver:pymol - Install the PyMol plugin (sci-chemistry/pymol) 
-sci-chemistry/cns:openmp - Build support for the OpenMP (support parallel computing)
 sci-chemistry/coot:new-interface - Build with the experimental GTK+-2 interface instead of GTK+-1
 sci-chemistry/eden:double-precision - More precise calculations at the expense of speed
 sci-chemistry/ghemical:gamess - Add GAMESS interface for QM/MM (sci-chemistry/gamess)
@@ -2224,12 +2214,10 @@ sci-geosciences/mapserver:proj - Enable sci-libs/proj library support (geographi
 sci-libs/acml:gfortran - Fetch and install acml compiled with GNU gfortran
 sci-libs/acml:ifc - Fetch and install acml compiled with Intel Fortran Compiler (dev-lang/ifc)
 sci-libs/acml:int64 - Install the 64 bits integer library
-sci-libs/acml:openmp - Install the OpenMP parallel computing library as well (needs dev-lang/ifc or gfortran (sys-devel/gcc) >= 4.2)
 sci-libs/blas-goto:int64 - Build the 64 bits integer library
 sci-libs/cholmod:metis - Enable the Partition module to cholmod using metis (sci-libs/metis, sci-libs/parmetis)
 sci-libs/cholmod:supernodal - Enable the Supernodal module (needs virtual/lapack)
 sci-libs/fftw:float - Link default library to single precision instead of double (symlinks only and fftw-2.1)
-sci-libs/fftw:openmp - Build support for the OpenMP parallel computing library. Needs OpenMP capable compiler (e.g. gcc >= 4.2)
 sci-libs/gdal:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-libs/gdal:geos - Add support for geometry engine (sci-libs/geos 
 sci-libs/gdal:gml - Enable support for dev-libs/xerces-c API
@@ -2244,7 +2232,6 @@ sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calcul
 sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations
 sci-libs/libsvm:tools - Install support tools
 sci-libs/metis:int64 - Build the 64 bits integer library (metis >=5 only)
-sci-libs/metis:openmp - Build support for the OpenMP, needs openmp capable compiler
 sci-libs/mkl:fortran95 - Installs the BLAS/LAPACK FORTRAN95 static libraries
 sci-libs/mkl:int64 - Installs the 64 bits integer libraries
 sci-libs/mkl:serial - Installs the serial (as non-threaded) libraries
