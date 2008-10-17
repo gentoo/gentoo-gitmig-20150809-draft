@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.402 2008/10/17 18:18:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.403 2008/10/17 18:22:53 maekke Exp $
 
 # Keep them sorted
 
@@ -168,7 +168,7 @@ jingle - Enables voice calls for jabber
 joystick - Add support for joysticks in all packages
 jpeg - Adds JPEG image support
 jpeg2k - Support for JPEG 2000, a wavelet-based image compression format
-kcontact - Enable support for the KDE personal information manager (kde-base/kdepim*)
+kontact - Enable support for the KDE personal information manager (kde-base/kdepim*)
 kde - Adds support for kde-base/kde (K Desktop Enviroment)
 kdeenablefinal - EXPERIMENTAL: KDE ebuilds will use the enable-final flag, yielding compilation speedups at the cost of heavy mem usage and potentially causing problems. We strongly discourage setting this
 kdehiddenvisibility - Makes KDE symbols hidden by default, requires GCC 4.1 (experimental)
