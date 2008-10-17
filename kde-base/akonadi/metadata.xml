@@ -3,7 +3,6 @@
 <pkgmetadata>
 <use>
 	<flag name="nepomuk">Enable desktop-wide tagging support</flag>
-	<flag name="plasma">Build optional kde-base/plasma widgets</flag>
 </use>
 <herd>kde</herd>
 </pkgmetadata>
