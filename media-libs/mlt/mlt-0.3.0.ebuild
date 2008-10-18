@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.3.0.ebuild,v 1.1 2008/09/21 11:43:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.3.0.ebuild,v 1.2 2008/10/18 08:37:09 aballier Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="dv xml jack gtk sdl vorbis sox quicktime mmx lame xine lame ogg theora
 xine ffmpeg libsamplerate qt3"
 
-DEPEND="ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20070616-r3 )
+DEPEND="ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
 	dv?	( >=media-libs/libdv-0.104 )
 	xml?	( >=dev-libs/libxml2-2.5 )
 	ogg?	( >=media-libs/libogg-1.1.3 )

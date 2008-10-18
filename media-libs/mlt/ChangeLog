@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.27 2008/09/21 11:43:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.28 2008/10/18 08:37:09 aballier Exp $
+
+  18 Oct 2008; Alexis Ballier <aballier@gentoo.org> mlt-0.3.0.ebuild:
+  bump ffmpeg dep, bug #242422
 
 *mlt-0.3.0 (21 Sep 2008)
 
