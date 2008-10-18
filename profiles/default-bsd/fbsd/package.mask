@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.22 2008/10/04 15:28:09 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.23 2008/10/18 19:27:29 leio Exp $
 
 # As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
 # used to limit usage of unsupported packages.
@@ -23,7 +23,6 @@
 >=x11-wm/metacity-2.22
 >=gnome-extra/gucharmap-2.22
 >=gnome-extra/gcalctool-5.22
->=x11-themes/gnome-icon-theme-2.22
 >=x11-themes/gnome-themes-2.22
 >=gnome-extra/zenity-2.22
 >=gnome-extra/at-spi-1.21
