@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/wxglade
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.49 2008/10/18 16:43:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/ChangeLog,v 1.50 2008/10/18 19:23:57 fmccor Exp $
+
+  18 Oct 2008; Ferris McCormick <fmccor@gentoo.org> wxglade-0.6.3.ebuild:
+  Sparc stable, Bug #242114.
 
   18 Oct 2008; nixnut <nixnut@gentoo.org> wxglade-0.6.3.ebuild:
   Stable on ppc wrt bug 242114
