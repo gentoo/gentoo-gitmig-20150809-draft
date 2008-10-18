@@ -1,7 +1,7 @@
-From b22ab25991aba5ad71f26a68ea3b9366ac63ef4a Mon Sep 17 00:00:00 2001
+From 8918c50440de301887af8006f2dc72d64adf9f9c Mon Sep 17 00:00:00 2001
 From: Remi Cardona <remi@gentoo.org>
-Date: Sat, 18 Oct 2008 01:01:23 +0200
-Subject: [PATCH] force LANG=C when running awk due to unintended errors with some locales
+Date: Sat, 18 Oct 2008 12:23:51 +0200
+Subject: [PATCH] force LC_ALL=C when running awk
 MIME-Version: 1.0
 Content-Type: text/plain; charset=utf-8
 Content-Transfer-Encoding: 8bit
@@ -14,14 +14,14 @@ modelines2c.awk. Execept that with a Turkish locale
 tolower("Interlaced") is not "interlaced" but "ınterlaced", which the
 rest of the script fails to understand.
 
-This patch forces LANG=C when running the awk script to always get the
+This patch forces LC_ALL=C when running the awk script to always get the
 intended latin en_US alphabet.
 ---
  hw/xfree86/common/Makefile.am |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
 diff --git a/hw/xfree86/common/Makefile.am b/hw/xfree86/common/Makefile.am
-index 0f44075..7f422c2 100644
+index 0f44075..723973a 100644
 --- a/hw/xfree86/common/Makefile.am
 +++ b/hw/xfree86/common/Makefile.am
 @@ -24,7 +24,7 @@ BUSSOURCES = xf86isaBus.c xf86pciBus.c xf86fbBus.c xf86noBus.c $(SBUS_SOURCES)
@@ -29,7 +29,7 @@ index 0f44075..7f422c2 100644
  
  xf86DefModeSet.c: $(srcdir)/modeline2c.awk $(MODEDEFSOURCES)
 -	cat $(MODEDEFSOURCES) | $(AWK) -f $(srcdir)/modeline2c.awk > $@
-+	cat $(MODEDEFSOURCES) | LANG=C $(AWK) -f $(srcdir)/modeline2c.awk > $@
++	cat $(MODEDEFSOURCES) | LC_ALL=C $(AWK) -f $(srcdir)/modeline2c.awk > $@
  
  BUILT_SOURCES = xf86DefModeSet.c
  
