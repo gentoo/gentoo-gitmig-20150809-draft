@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/nvidia-cuda-sdk
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.1 2008/10/18 21:07:43 spock Exp $
+
+*nvidia-cuda-sdk-2.02.0807.1535 (18 Oct 2008)
+
+  18 Oct 2008; Michał Januszewski <spock@gentoo.org>
+  +files/nvidia-cuda-sdk-2.02.0807.1535-make_cpp_fix.patch, +metadata.xml,
+  +nvidia-cuda-sdk-2.02.0807.1535.ebuild:
+  Initial commit.
+
