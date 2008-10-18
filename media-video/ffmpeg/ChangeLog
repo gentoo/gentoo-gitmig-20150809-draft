@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.233 2008/10/18 10:08:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.234 2008/10/18 22:35:19 loki_val Exp $
+
+  18 Oct 2008; Peter Alfredsen <loki_val@gentoo.org>
+  ffmpeg-0.4.9_p20080326.ebuild:
+  Fixup 20080326 dependency on x264 to be <0.0.20081006.
 
   18 Oct 2008; Alexis Ballier <aballier@gentoo.org>
   ffmpeg-0.4.9_p20081014.ebuild:
