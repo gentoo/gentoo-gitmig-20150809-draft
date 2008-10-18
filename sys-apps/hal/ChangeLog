@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.252 2008/09/21 12:54:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.253 2008/10/18 14:32:41 ranger Exp $
+
+  18 Oct 2008; Brent Baude <ranger@gentoo.org> hal-0.5.11-r1.ebuild:
+  Marking hal-0.5.11-r1 ppc because nixnut said so
 
   21 Sep 2008; nixnut <nixnut@gentoo.org> hal-0.5.11-r1.ebuild,
   hal-0.5.11-r2.ebuild, hal-0.5.11-r3.ebuild:
