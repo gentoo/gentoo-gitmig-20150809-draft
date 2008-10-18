@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/cistronradius
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/ChangeLog,v 1.17 2007/03/19 13:11:26 kloeri Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/ChangeLog,v 1.18 2008/10/18 07:15:40 mrness Exp $
+
+  18 Oct 2008; Alin Năstac <mrness@gentoo.org> cistronradius-1.6.8.ebuild:
+  Pass Makefile parameters through emake command line (#240872).
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove pfeifer from metadata.xml due to retirement.

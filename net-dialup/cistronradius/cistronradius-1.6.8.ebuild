@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.8.ebuild,v 1.3 2006/09/21 12:38:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.8.ebuild,v 1.4 2008/10/18 07:15:40 mrness Exp $
 
 inherit eutils
 
@@ -21,16 +21,18 @@ S="${WORKDIR}/radiusd-cistron-${PV}/src"
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}/${P}-gcc41.patch"
 	cd "${S}"
-	sed -i -e "s:/usr/local:/usr:g" \
-		-e "s:-Wall -g:${CFLAGS}:g" Makefile
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 	sed -i -e "s:SHAREDIR/::g" ../raddb/dictionary
 	mv checkrad.pl checkrad
 }
 
 src_compile() {
-	emake || die "make failed"
+	emake \
+	    CFLAGS="${CFLAGS}" LDFLAGS=${LDFLAGS} \
+	    BINDIR=/usr/bin SBINDIR=/usr/sbin \
+	    MANDIR=/usr/share/man SHAREDIR=/usr/share/radius \
+	    || die "make failed"
 }
 
 src_install() {
