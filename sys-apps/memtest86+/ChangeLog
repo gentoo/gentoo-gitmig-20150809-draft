@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.43 2008/10/04 14:18:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.44 2008/10/18 17:25:16 spock Exp $
+
+  18 Oct 2008; Michał Januszewski <spock@gentoo.org>
+  -files/memtest86+-1.50-hardened.patch,
+  -files/memtest86+-1.70-hardcoded_cc.patch,
+  -files/memtest86+-2.00-hardcoded_cc.patch, -memtest86+-1.65.ebuild,
+  -memtest86+-1.70.ebuild, -memtest86+-2.00.ebuild:
+  Remove old ebuilds.
 
   04 Oct 2008; Markus Meier <maekke@gentoo.org> memtest86+-2.01.ebuild:
   amd64/x86 stable, bug #239307
