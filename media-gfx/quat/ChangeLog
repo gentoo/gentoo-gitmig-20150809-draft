@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/quat
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/quat/ChangeLog,v 1.8 2008/08/23 17:46:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/quat/ChangeLog,v 1.9 2008/10/18 18:20:28 nixnut Exp $
+
+  18 Oct 2008; nixnut <nixnut@gentoo.org> quat-1.20.ebuild:
+  Stable on ppc wrt bug 242590
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> quat-1.20.ebuild:
   add ~amd64, bug #201966
