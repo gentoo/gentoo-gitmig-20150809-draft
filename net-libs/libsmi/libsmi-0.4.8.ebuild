@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/libsmi-0.4.8.ebuild,v 1.2 2008/10/17 20:25:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/libsmi-0.4.8.ebuild,v 1.3 2008/10/18 14:11:31 ranger Exp $
 
 DESCRIPTION="A Library to Access SMI MIB Information"
 SRC_URI="ftp://ftp.ibr.cs.tu-bs.de/pub/local/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.ibr.cs.tu-bs.de/projects/libsmi"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 src_test() {
