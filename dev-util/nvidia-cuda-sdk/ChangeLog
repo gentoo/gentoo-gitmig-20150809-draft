@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.1 2008/10/18 21:07:43 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.2 2008/10/18 21:17:08 spock Exp $
+
+  18 Oct 2008; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-sdk-2.02.0807.1535.ebuild:
+  Fix the DESCRIPTION field in the ebuild. Remove a spurious RESTRICT.
 
 *nvidia-cuda-sdk-2.02.0807.1535 (18 Oct 2008)
 
