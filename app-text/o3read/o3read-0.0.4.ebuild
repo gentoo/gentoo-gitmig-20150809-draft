@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/o3read/o3read-0.0.4.ebuild,v 1.6 2008/08/09 16:25:32 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/o3read/o3read-0.0.4.ebuild,v 1.7 2008/10/18 15:06:48 nixnut Exp $
 
 DESCRIPTION="Converts OpenOffice formats to text or HTML."
 HOMEPAGE="http://siag.nu/o3read/"
@@ -8,7 +8,7 @@ SRC_URI="http://siag.nu/pub/o3read/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
