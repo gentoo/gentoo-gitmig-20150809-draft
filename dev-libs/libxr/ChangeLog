@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libxr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxr/ChangeLog,v 1.4 2008/09/22 10:31:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxr/ChangeLog,v 1.5 2008/10/18 03:24:23 flameeyes Exp $
+
+*libxr-0.9.97 (18 Oct 2008)
+
+  18 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  +libxr-0.9.97.ebuild:
+  Version bump, append myself as maintainer.
 
   22 Sep 2008; Diego Pettenò <flameeyes@gentoo.org> libxr-0.9.96.ebuild:
   Add ~x86 keywording.
