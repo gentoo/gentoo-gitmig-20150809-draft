@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2008-r1.ebuild,v 1.3 2008/10/18 07:48:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2008-r1.ebuild,v 1.4 2008/10/18 08:09:06 aballier Exp $
 
 EAPI=1
 
@@ -84,6 +84,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# Too many regexps use A-Z a-z constructs, what causes problems with locales
+	# that don't have the same alphabetical order than ascii. Bug #242430
+	# So we set LC_ALL to C in order to avoid problems.
+	export LC_ALL=C
 	tc-export CC CXX AR
 	econf \
 		--bindir=/usr/bin \
