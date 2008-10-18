@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.152 2008/10/11 22:52:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.153 2008/10/18 22:52:10 ranger Exp $
+
+  18 Oct 2008; Brent Baude <ranger@gentoo.org>
+  sound-juicer-2.22.0-r1.ebuild:
+  Marking sound-juicer-2.22.0-r1 ppc stable for bug 236971
 
 *sound-juicer-2.24.0 (11 Oct 2008)
 
