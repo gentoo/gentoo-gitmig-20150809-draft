@@ -1,7 +1,7 @@
-diff -Nru xc-4.3.2.orig/Makefile xc-4.3.2/Makefile
---- xc-4.3.2.orig/Makefile	2006-09-23 19:41:03.000000000 +0300
-+++ xc-4.3.2/Makefile	2006-09-23 19:41:29.560470750 +0300
-@@ -5,6 +5,8 @@
+diff -ur xc-4.3.2.orig/Makefile xc-4.3.2/Makefile
+--- xc-4.3.2.orig/Makefile	1996-11-24 06:56:14.000000000 +0000
++++ xc-4.3.2/Makefile	2008-10-18 09:06:12.000000000 +0000
+@@ -5,21 +5,23 @@
  
  SHELL	= /bin/sh
  
@@ -10,9 +10,14 @@ diff -Nru xc-4.3.2.orig/Makefile xc-4.3.2/Makefile
  #WARN 	= -Wall -ansi -pedantic -Wshadow -Wmissing-prototypes
  
  #machine = -m486
-@@ -14,12 +16,12 @@
+-CC	= gcc 
+-GCCOPT	= -pipe -O2 -fno-strength-reduce -fomit-frame-pointer $(machine) 
++#CC	= gcc 
++GCCOPT	= -fno-strength-reduce 
+ #GCCOPT	= -O -g
  CDEFS	= -D_POSIX_SOURCE=1
- CFLAGS	= $(WARN) $(CDEFS) $(GCCOPT)
+-CFLAGS	= $(WARN) $(CDEFS) $(GCCOPT)
++CFLAGS	+= $(WARN) $(CDEFS) $(GCCOPT)
  
 -prefix	= /usr/local
 +prefix	= /usr
@@ -26,6 +31,24 @@ diff -Nru xc-4.3.2.orig/Makefile xc-4.3.2/Makefile
  binown	= -o root -g root 
  
  export CC CFLAGS manown binown
+@@ -37,7 +39,7 @@
+ # 	gs -sDEVICE=ljet4 -dNOPAUSE -sOutputFile=$@ $<
+ 
+ INSTALL	= install
+-LDFLAGS	= -ltermcap editline/libedit.a
++LIBS	= -lncurses editline/libedit.a
+ NROFF 	= groff -mandoc
+ 
+ # defines for use with cextract under Linux
+@@ -56,7 +58,7 @@
+ 	@echo "Now you may execute 'make install'"
+ 
+ xc:	$(OBJS) eline
+-	$(CC) $(CFLAGS) $(OBJS) -o xc $(LDFLAGS) 
++	$(CC) $(LDFLAGS) $(OBJS) -o xc $(LIBS) 
+ 
+ uninstall:
+ 	rm -f $(bindir)/xc $(mandir)/xc.1 $(catdir)/xc.1.*
 @@ -64,10 +66,10 @@
  
  install: ./bin/xc ./bin/crc xc.1 crc.1
@@ -49,9 +72,9 @@ diff -Nru xc-4.3.2.orig/Makefile xc-4.3.2/Makefile
  
  #########################################
  ##  mostly unused stuff below here ... ##
-diff -Nru xc-4.3.2.orig/xcsubs.c xc-4.3.2/xcsubs.c
---- xc-4.3.2.orig/xcsubs.c	2006-09-23 19:41:03.000000000 +0300
-+++ xc-4.3.2/xcsubs.c	2006-09-23 19:41:19.711855250 +0300
+diff -ur xc-4.3.2.orig/xcsubs.c xc-4.3.2/xcsubs.c
+--- xc-4.3.2.orig/xcsubs.c	1996-09-21 08:22:17.000000000 +0000
++++ xc-4.3.2/xcsubs.c	2008-10-18 09:04:32.000000000 +0000
 @@ -23,7 +23,7 @@
  	 *tgetstr(), *tgoto();
  int	LI,	/* One less than screen length in termcap entry */
