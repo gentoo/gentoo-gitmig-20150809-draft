@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/live
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.99 2008/10/12 15:44:15 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.100 2008/10/18 07:10:09 jer Exp $
+
+  18 Oct 2008; Jeroen Roovers <jer@gentoo.org> live-2008.09.02.ebuild:
+  Stable for HPPA (bug #240457).
 
   12 Oct 2008; Friedrich Oslage <bluebird@gentoo.org>
   live-2008.09.02.ebuild:
