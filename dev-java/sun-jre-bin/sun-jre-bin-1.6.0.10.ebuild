@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.10.ebuild,v 1.1 2008/10/17 21:51:54 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.10.ebuild,v 1.2 2008/10/18 06:14:35 serkan Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -87,7 +87,7 @@ src_install() {
 
 		if use x86 ; then
 			install_mozilla_plugin /opt/${P}/plugin/i386/$plugin_dir/libjavaplugin_oji.so
-			install_mozilla_plugin /opt/${P}/jre/lib/i386/libnpjp2.so plugin2
+			install_mozilla_plugin /opt/${P}/lib/i386/libnpjp2.so plugin2
 		else
 			eerror "No plugin available for amd64 arch"
 		fi
