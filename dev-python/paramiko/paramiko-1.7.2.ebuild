@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.7.2.ebuild,v 1.5 2008/02/15 16:58:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.7.2.ebuild,v 1.6 2008/10/18 14:06:06 nixnut Exp $
 
 NEED_PYTHON=2.3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.lag.net/paramiko/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 hppa ia64 ~ppc sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ia64 ppc sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND=">=dev-python/pycrypto-1.9_alpha6"
