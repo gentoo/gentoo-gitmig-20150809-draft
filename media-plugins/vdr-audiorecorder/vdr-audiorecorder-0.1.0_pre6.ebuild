@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/vdr-audiorecorder-0.1.0_pre6.ebuild,v 1.5 2008/04/21 10:56:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-audiorecorder/vdr-audiorecorder-0.1.0_pre6.ebuild,v 1.6 2008/10/18 09:35:15 aballier Exp $
 
 inherit vdr-plugin
 
@@ -24,7 +24,8 @@ DEPEND=">=media-video/vdr-1.3.31
 
 RDEPEND="${DEPEND}"
 
-PATCHES=("${FILESDIR}/${P}-vdr-1.5.0.diff")
+PATCHES=("${FILESDIR}/${P}-vdr-1.5.0.diff"
+	"${FILESDIR}/${P}-avcodec52.patch" )
 
 src_unpack() {
 	vdr-plugin_src_unpack
