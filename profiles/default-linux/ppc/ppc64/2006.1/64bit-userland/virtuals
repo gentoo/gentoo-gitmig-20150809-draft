@@ -1,5 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2006.1/64bit-userland/virtuals,v 1.2 2006/09/13 19:47:10 nichoj Exp $
-
-virtual/bootloader     sys-boot/yaboot-static
