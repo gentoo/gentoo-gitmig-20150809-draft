@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.6.3.ebuild,v 1.4 2008/10/16 20:15:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.6.3.ebuild,v 1.5 2008/10/18 16:43:18 nixnut Exp $
 
 inherit python multilib eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://wxglade.sourceforge.net/"
 SRC_URI="mirror://sourceforge/wxglade/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 S="${WORKDIR}/${MY_P}"
 DEPEND=">=dev-lang/python-2.3
