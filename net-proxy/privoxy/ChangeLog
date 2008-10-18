@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.39 2008/09/07 10:33:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.40 2008/10/18 13:54:51 nixnut Exp $
+
+  18 Oct 2008; nixnut <nixnut@gentoo.org> privoxy-3.0.10.ebuild:
+  Stable on ppc wrt bug 242542
 
 *privoxy-3.0.10 (07 Sep 2008)
 
