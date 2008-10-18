@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r9.ebuild,v 1.6 2008/03/30 12:03:40 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r9.ebuild,v 1.7 2008/10/18 09:55:33 aballier Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -34,6 +34,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/patches-${PV}/fix-osd.patch
 	epatch "${FILESDIR}"/patches-${PV}/hangcheck.diff
 	epatch "${FILESDIR}"/patches-${PV}/new-ffmpeg-extern-c.diff
+	epatch "${FILESDIR}"/patches-${PV}/lavc.patch
 
 	sed -e "s:char \*indents:const char \*indents:" -i showindex.cpp
 
