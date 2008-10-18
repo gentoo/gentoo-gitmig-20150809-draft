@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/line6usb-0.7.3.ebuild,v 1.2 2008/03/21 15:35:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/line6usb-0.7.3.ebuild,v 1.3 2008/10/18 06:16:23 nerdboy Exp $
 
 inherit linux-mod eutils multilib linux-info
 
@@ -39,9 +39,10 @@ src_unpack() {
 	cd "${S}"
 	convert_to_m Makefile
 
-	sed -i -e "s:\$\(shell uname -r\):${KV_FULL}:g" \
-	    Makefile || die "sed failed!"
-	sed -i -e "s:\$\(shell pwd\):${S}:g" \
+	sed -i \
+	    -e "s:/lib/modules/\$(shell uname -r)/build:${KERNEL_DIR}:g" \
+	    -e "s:\$(shell uname -r):${KV_FULL}:g" \
+	    -e "s:\$(shell pwd):${S}:g" \
 	    Makefile || die "sed failed!"
 }
 
