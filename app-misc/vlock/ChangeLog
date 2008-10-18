@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/vlock
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.31 2008/10/14 20:41:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.32 2008/10/18 10:04:02 pva Exp $
+
+*vlock-2.2.2-r2 (18 Oct 2008)
+
+  18 Oct 2008; Peter Volkov <pva@gentoo.org>
+  +files/vlock-2.2.2-asneeded.patch, +files/vlock-2.2.2-test_process.patch,
+  +vlock-2.2.2-r2.ebuild:
+  Fixed vlock tests, bug #241878, thank Dustin Polke for this work.
 
   14 Oct 2008; Brent Baude <ranger@gentoo.org> vlock-2.2.2-r1.ebuild:
   stable ppc, bug 241732
