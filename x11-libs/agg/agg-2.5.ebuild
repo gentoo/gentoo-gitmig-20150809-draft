@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5.ebuild,v 1.10 2008/08/07 07:11:01 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5.ebuild,v 1.11 2008/10/18 14:45:06 loki_val Exp $
 
 inherit eutils autotools
 
@@ -23,6 +23,9 @@ DEPEND="media-libs/libsdl
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	sed -r -i \
+		-e 's:^(.*)  -L@.*:\1:' \
+		src/platform/X11/Makefile.am || die "404"
 	eautoreconf
 }
 
