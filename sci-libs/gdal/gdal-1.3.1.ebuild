@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.17 2008/10/12 02:38:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.3.1.ebuild,v 1.18 2008/10/18 19:08:36 nerdboy Exp $
 
 inherit eutils libtool distutils toolchain-funcs
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ppc ppc64 sparc x86"
 # need to get these arches updated on several libs first
 #KEYWORDS="~alpha ~hppa"
 
-DEPEND=">=sys-libs/zlib-1.1.4
+RDEPEND=">=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7.0
 	sci-libs/libgeotiff
 	jpeg? ( media-libs/jpeg )
@@ -36,7 +36,9 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	jpeg2k? ( media-libs/jasper )
 	odbc?   ( dev-db/unixODBC )
 	geos?   ( >=sci-libs/geos-2.2.1 )
-	sqlite? ( >=dev-db/sqlite-3 )
+	sqlite? ( >=dev-db/sqlite-3 )"
+
+DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {

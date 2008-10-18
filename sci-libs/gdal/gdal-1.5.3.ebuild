@@ -1,12 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.2.ebuild,v 1.3 2008/10/18 19:08:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.5.3.ebuild,v 1.1 2008/10/18 19:08:36 nerdboy Exp $
 
 WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils perl-module toolchain-funcs
-
-IUSE="curl debug doc fits geos gif gml hdf hdf5 jpeg jpeg2k mysql \
-netcdf odbc png ogdi perl postgres python ruby sqlite threads"
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
 HOMEPAGE="http://www.gdal.org/"
@@ -14,9 +11,12 @@ SRC_URI="http://download.osgeo.org/gdal/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 # need to get these arches updated on several libs first
 #KEYWORDS="~alpha ~hppa"
+
+IUSE="curl debug doc ecwj2k fits geos gif gml hdf hdf5 jpeg jpeg2k mysql \
+netcdf odbc png ogdi perl postgres python ruby sqlite threads"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7.0
@@ -39,7 +39,11 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	    netcdf? ( sci-libs/netcdf )
 	    hdf? ( sci-libs/hdf )
 	)
-	jpeg2k? ( media-libs/jasper )
+	|| (
+	    jpeg2k? ( media-libs/jasper )
+	    ecwj2k? ( !media-libs/lcms
+		    sci-libs/libecwj2 )
+	)
 	mysql? ( virtual/mysql )
 	odbc?   ( dev-db/unixODBC )
 	geos?   ( >=sci-libs/geos-2.2.1 )
