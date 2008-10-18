@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.80 2008/09/25 16:44:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.81 2008/10/18 23:03:37 ranger Exp $
+
+  18 Oct 2008; Brent Baude <ranger@gentoo.org>
+  gnome-python-extras-2.19.1-r2.ebuild:
+  Marking gnome-python-extras-2.19.1-r2 ppc stable for bug 236971
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org>
   gnome-python-extras-2.19.1-r2.ebuild:
