@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/files/init.d-preload,v 1.1 2008/10/18 02:20:48 darkside Exp $
+
+depend() {
+	after xdm
+}
+
+restart() {
+    ebegin "Reloading config for preload"
+    killall -SIGHUP /usr/sbin/preload
+    eend $?
+}
+ 
+start() {
+	ebegin "Starting preload"
+	start-stop-daemon --start --quiet --exec /usr/sbin/preload -- \
+    --logfile ${PRELOAD_LOGFILE} -V ${PRELOAD_VERBOSITY} -n ${PRELOAD_NICE}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping preload"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/preload
+	eend $?
+}
+
+         
+

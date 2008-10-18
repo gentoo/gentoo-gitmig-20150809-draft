@@ -1,0 +1,12 @@
+# Copyright 1999-2008 Gentoo Foundation
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/files/conf.d-preload,v 1.1 2008/10/18 02:20:48 darkside Exp $
+# preload configuration file
+
+## verbosity.  0-9, Default is 4.
+PRELOAD_VERBOSITY="4"
+
+## set this for niceness. Default is 15
+PRELOAD_NICE="15"
+
+## log file
+PRELOAD_LOGFILE="/var/log/preload.log"
