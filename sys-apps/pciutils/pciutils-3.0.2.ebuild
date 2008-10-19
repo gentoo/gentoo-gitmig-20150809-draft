@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.0.2.ebuild,v 1.2 2008/10/07 11:07:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.0.2.ebuild,v 1.3 2008/10/19 11:11:29 robbat2 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -48,6 +48,7 @@ src_install() {
 	pemake DESTDIR="${D}" install install-lib || die
 	dosbin pcimodules || die
 	newman pcimodules.man pcimodules.8
+	dodoc ChangeLog README TODO
 
 	if use network-cron ; then
 		exeinto /etc/cron.monthly
