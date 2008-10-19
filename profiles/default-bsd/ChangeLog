@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.42 2008/10/18 19:27:27 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.43 2008/10/19 09:45:33 aballier Exp $
+
+  19 Oct 2008; Alexis Ballier <aballier@gentoo.org> fbsd/6.2/x86/use.mask:
+  x86 has ssse3 even on bsd
 
   18 Oct 2008; Mart Raudsepp <leio@gentoo.org> fbsd/package.mask:
   Unmask >=gnome-icon-theme-2.22 to fix deptree after 2.20 got keyword

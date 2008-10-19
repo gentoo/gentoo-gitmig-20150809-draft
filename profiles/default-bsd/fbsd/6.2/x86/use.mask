@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/x86/use.mask,v 1.5 2008/10/15 13:41:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/x86/use.mask,v 1.6 2008/10/19 09:45:33 aballier Exp $
 
 -3dnow
 -3dnowext
@@ -8,6 +8,7 @@
 -mmxext
 -sse
 -sse2
+-ssse3
 -win32codecs
 
 # nvidia drivers works on x86
