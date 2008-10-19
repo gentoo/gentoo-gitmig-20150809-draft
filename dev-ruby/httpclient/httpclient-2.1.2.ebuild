@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.1.2.ebuild,v 1.6 2008/10/15 11:30:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/httpclient-2.1.2.ebuild,v 1.7 2008/10/19 13:59:57 gentoofan23 Exp $
 
 inherit ruby
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dev.ctor.org/http-access2/"
 SRC_URI="http://dev.ctor.org/download/${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 USE_RUBY="1.8"
 
