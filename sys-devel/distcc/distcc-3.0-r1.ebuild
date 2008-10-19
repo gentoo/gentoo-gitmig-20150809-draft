@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.0.ebuild,v 1.1 2008/10/18 16:21:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.0-r1.ebuild,v 1.1 2008/10/19 14:45:22 matsuu Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -52,6 +52,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-svn617.patch"
 }
 
 src_compile() {
