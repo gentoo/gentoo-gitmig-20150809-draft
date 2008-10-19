@@ -12,8 +12,9 @@
     <flag name="corba">Enables corba interface support.</flag>
     <flag name="daap">Enables DAAP shares services discovery support.</flag>
     <flag name="dc1394">Enables IIDC cameras support.</flag>
-	<flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
+    <flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
     <flag name="fluidsynth">Enables Fluidsynth MIDI software synthesis (with external sound fonts).</flag>
+    <flag name="gnome">Adds support for GNOME's filesystem abstraction layer, <pkg>gnome-base/gnome-vfs</pkg>. This flag is not GUI-related.</flag>
     <flag name="httpd">Enables a web based interface for vlc.</flag>
     <flag name="id3tag">Enables id3tag metadata reader plugin.</flag>
     <flag name="kate">Adds support for Ogg Kate subtitles via libkate.</flag>
@@ -22,6 +23,7 @@
     <flag name="live">Enables LIVE.com support.</flag>
     <flag name="optimisememory">Enable optimisation for memory rather than performance.</flag>
     <flag name="pvr">Enables PVR cards access module.</flag>
+    <flag name="qt4" restrict="&gt;=media-video/vlc-0.9">Builds a <pkg>x11-libs/qt</pkg> based frontend. It is now the most up-to-date graphical interface available.</flag>
     <flag name="remoteosd">Enables RemoteOSD plugin (VNC client as video filter).</flag>
     <flag name="rtsp">Enables real audio and RTSP modules.</flag>
     <flag name="schroedinger">Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).</flag>
@@ -33,7 +35,8 @@
     <flag name="upnp">Enables support for Intel UPnP stack.</flag>
     <flag name="vcdx">Enables VCD with navigation via libvcdinfo (depends on cdio)</flag>
     <flag name="vlm">New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.</flag>
-	<flag name="zvbi">Enables support for teletext subtitles via the zvbi
-		library.</flag>
+    <flag name="wxwindows" restrict="&lt;=media-video/vlc-0.8.6">Builds a <pkg>x11-libs/wxGTK</pkg> based frontend. This interface is no longer maintained.</flag>
+    <flag name="X">Enables support for, e.g., fullscreen mode via the X Window System. By itself, this flag does not build a graphical interface.</flag>
+    <flag name="zvbi">Enables support for teletext subtitles via the zvbi library.</flag>
   </use>
 </pkgmetadata>

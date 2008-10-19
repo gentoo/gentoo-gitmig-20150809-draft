@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.396 2008/10/19 09:39:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.397 2008/10/19 13:58:42 aballier Exp $
+
+  19 Oct 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  Improve useflag descriptions, by Douglas Anderson
+  <douglasjanderson@gmail.com>, bug #242584
 
   19 Oct 2008; Markus Rothe <corsair@gentoo.org> vlc-0.9.4-r1.ebuild:
   Added ~ppc/~ppc64
