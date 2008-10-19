@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/totem-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/ChangeLog,v 1.1 2008/09/14 17:04:25 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/ChangeLog,v 1.2 2008/10/19 21:01:44 eva Exp $
+
+*totem-python-2.24.0 (19 Oct 2008)
+
+  19 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +totem-python-2.24.0.ebuild:
+  New version for GNOME 2.24.
 
 *totem-python-2.22.0 (14 Sep 2008)
 
