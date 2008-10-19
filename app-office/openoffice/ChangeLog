@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.430 2008/10/19 10:07:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.431 2008/10/19 17:22:17 suka Exp $
+
+  19 Oct 2008; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.0.0.ebuild:
+  Add warning about the quickstarter only being built when 'gtk' or 'gnome'
+  use flag is specified
 
   19 Oct 2008; Andreas Proschofsky <suka@gentoo.org>
   openoffice-3.0.0.ebuild:

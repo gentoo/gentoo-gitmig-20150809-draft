@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.9 2008/10/19 10:07:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.10 2008/10/19 17:22:17 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -182,6 +182,12 @@ pkg_setup() {
 		ewarn " of the OpenOffice.org functionality being disabled. "
 		ewarn " If something you need does not work for you, rebuild with "
 		ewarn " java in your USE-flags. "
+		ewarn
+	fi
+
+	if use !gtk && use !gnome; then
+		ewarn " If you want the OpenOffice.org systray quickstarter to work "
+		ewarn " activate either the 'gtk' or 'gnome' use flags. "
 		ewarn
 	fi
 
