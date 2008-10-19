@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/qbzr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/ChangeLog,v 1.1 2008/10/03 14:01:04 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/ChangeLog,v 1.2 2008/10/19 09:14:50 pva Exp $
+
+*qbzr-0.9.4 (19 Oct 2008)
+
+  19 Oct 2008; Peter Volkov <pva@gentoo.org> +qbzr-0.9.4.ebuild:
+  Version bump.
 
 *qbzr-0.9.3 (03 Oct 2008)
 
