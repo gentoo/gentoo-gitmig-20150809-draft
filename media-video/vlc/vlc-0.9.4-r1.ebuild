@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.4-r1.ebuild,v 1.2 2008/10/19 09:39:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.4-r1.ebuild,v 1.3 2008/10/19 14:14:38 aballier Exp $
 
 EAPI="1"
 
@@ -192,7 +192,12 @@ pkg_setup() {
 	vlc_use_needs bidi truetype
 	vlc_use_force remoteosd libgcrypt
 	vlc_use_needs fontconfig truetype
-	( use qt4 || use skins ) && QT4_BUILT_WITH_USE_CHECK="png" qt4_pkg_setup
+	if ( use qt4 || use skins ) ; then
+		QT4_BUILT_WITH_USE_CHECK="png" qt4_pkg_setup
+	else
+		ewarn "You have disabled the qt4 useflag, ${PN} will not have any"
+		ewarn "graphical interface. Maybe that is not what you want..."
+	fi
 }
 
 src_unpack() {
