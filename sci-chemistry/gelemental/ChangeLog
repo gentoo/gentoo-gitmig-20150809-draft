@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gelemental
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/ChangeLog,v 1.2 2008/04/10 06:17:34 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/ChangeLog,v 1.3 2008/10/19 14:26:38 markusle Exp $
+
+  19 Oct 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/gelemental-1.2.0-gcc4.3.patch, gelemental-1.2.0.ebuild:
+  Fixed gcc-4.3 issues (see bug #239567). Thanks much to David Sveningsson
+  <eXt@sidvind.com> for the patch.
 
   10 Apr 2008; Dawid Węgliński <cla@gentoo.org> gelemental-1.2.0.ebuild:
   Add ~x86 love (bug #217013)

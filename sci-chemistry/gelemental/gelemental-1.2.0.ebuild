@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/gelemental-1.2.0.ebuild,v 1.2 2008/04/10 06:17:34 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/gelemental-1.2.0.ebuild,v 1.3 2008/10/19 14:26:38 markusle Exp $
 
-inherit fdo-mime gnome2-utils
+inherit fdo-mime gnome2-utils eutils
 
 DESCRIPTION="a periodic table viewer that provides detailed information on the
 chemical elements."
@@ -21,6 +21,12 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/intltool
 	doc? ( app-doc/doxygen )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.3.patch
+}
 
 src_compile() {
 	econf --disable-dependency-tracking $(use_enable doc api-docs)
