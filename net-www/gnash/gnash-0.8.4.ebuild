@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.4.ebuild,v 1.1 2008/10/19 11:49:10 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.4.ebuild,v 1.2 2008/10/19 20:47:04 loki_val Exp $
 
 EAPI=1
 
@@ -147,6 +147,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.8.3-boost-dynamic-link.patch
+	if has_version '<sys-devel/libtool-2'
+	then
+		sed -i \
+			-e '/libltdl\/Makefile/d' configure.ac	\
+			|| die "Sedding configure.ac failed."
+	fi
 	eautoreconf
 }
 
