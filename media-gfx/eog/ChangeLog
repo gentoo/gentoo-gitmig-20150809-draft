@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.213 2008/10/18 22:48:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.214 2008/10/19 18:57:26 eva Exp $
+
+*eog-2.24.0 (19 Oct 2008)
+
+  19 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/eog-2.24.0-unrecognized-chunks.patch, +eog-2.24.0.ebuild,
+  metadata.xml:
+  New version for GNOME 2.24. Mostly bug fixes, plugins' API now has a
+  gtk-doc documentation, uses gio/gvfs.
 
   18 Oct 2008; Brent Baude <ranger@gentoo.org> eog-2.22.3-r1.ebuild:
   Marking eog-2.22.3-r1 ppc stable for bug 236971
