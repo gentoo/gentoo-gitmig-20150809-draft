@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.429 2008/10/18 20:31:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.430 2008/10/19 10:07:53 suka Exp $
+
+  19 Oct 2008; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.0.0.ebuild:
+  Remove useless check for l10n
 
   18 Oct 2008; Markus Meier <maekke@gentoo.org> openoffice-3.0.0.ebuild:
   amd64/x86 stable, bug #235824

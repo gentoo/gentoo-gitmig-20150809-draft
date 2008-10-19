@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.8 2008/10/18 20:31:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.9 2008/10/19 10:07:53 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -57,10 +57,6 @@ LANGS="${LANGS1} en en_US"
 
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
-done
-
-for Y in ${LANGS1} ; do
-	SRC_URI="${SRC_URI} linguas_${Y}? ( ${DEVPATH}-l10n.tar.bz2 )"
 done
 
 HOMEPAGE="http://go-oo.org"
