@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.7 2008/05/29 17:03:11 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.8 2008/10/19 11:18:27 eva Exp $
 
-inherit autotools gnome2 python
+inherit gnome2 python
 
 DESCRIPTION="Fully customisable dock-like window navigator."
 HOMEPAGE="http://launchpad.net/awn"
@@ -18,7 +18,10 @@ IUSE="doc gnome xfce"
 # Replace gnome-vfs with gvfs when unmasked
 #		gnome-base/gvfs
 
-RDEPEND="dev-python/elementtree
+RDEPEND="
+	|| (
+		>=dev-lang/python-2.5
+		dev-python/elementtree )
 	dev-python/pygtk
 	dev-python/pycairo
 	dev-python/pyxdg
@@ -50,6 +53,15 @@ src_unpack() {
 	# Disable pyc compiling.
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
+
+	echo "awn-manager/awnLauncherEditor.py" >> po/POTFILES.in
+	echo "awn-manager/launcher-editor.glade" >> po/POTFILES.in
+	echo "data/awn.schemas.in" >> po/POTFILES.in
+	echo "libawn/egg/eggdesktopfile.c" >> po/POTFILES.in
+	echo "awn-manager/awnLauncherEditor.py" >> po/POTFILES.in
+	echo "awn-manager/launcher-editor.glade" >> po/POTFILES.in
+	echo "data/awn.schemas.in" >> po/POTFILES.in
+	echo "libawn/egg/eggdesktopfile.c" >> po/POTFILES.in
 }
 
 src_compile() {
@@ -63,9 +75,7 @@ src_compile() {
 	econf $(use_enable gnome gconf ) \
 		$(use_enable doc gtk-doc) \
 		--disable-vala \
-		${myconf} \
-		|| die "econf failed"
-
+		${myconf}
 #		$(use_enable vala) \
 
 	emake || die "emake failed"
