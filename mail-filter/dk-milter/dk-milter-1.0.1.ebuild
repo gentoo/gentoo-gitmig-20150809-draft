@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-0.6.0.ebuild,v 1.3 2008/01/29 18:33:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-1.0.1.ebuild,v 1.1 2008/10/19 12:38:45 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -61,7 +61,7 @@ src_install() {
 	doman */*.8
 
 	# some people like docs
-	dodoc RELEASE_NOTES *.txt
+	dodoc README RELEASE_NOTES KNOWNBUGS *.txt
 }
 
 pkg_postinst() {
