@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.0.0.ebuild,v 1.4 2008/10/19 17:06:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.0.0.ebuild,v 1.5 2008/10/19 18:25:14 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -111,6 +111,11 @@ src_unpack() {
 		done
 	done
 
+	# Unpack provided dictionaries, unless there is a better solution...
+	rpm_unpack "${S}/openoffice.org3-dict-en-${MY_PV3}.${OOARCH}.rpm"
+	rpm_unpack "${S}/openoffice.org3-dict-es-${MY_PV3}.${OOARCH}.rpm"
+	rpm_unpack "${S}/openoffice.org3-dict-fr-${MY_PV3}.${OOARCH}.rpm"
+
 }
 
 src_install () {
@@ -173,6 +178,10 @@ pkg_postinst() {
 	elog " dictionaries. Please install them manually through the Extensions "
 	elog " Manager (Tools > Extensions Manager) or use the source based "
 	elog " package instead. "
+	elog
+	elog " Dictionaries for english, french and spanish are provided in "
+	elog " /usr/$(get_libdir)/openoffice/share/extension/install "
+	elog " Other dictionaries can be found at Suns extension site. "
 	elog
 
 	ewarn " Please note that this release of OpenOffice.org uses a "

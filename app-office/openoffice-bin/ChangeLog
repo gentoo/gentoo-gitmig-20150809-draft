@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.205 2008/10/19 17:06:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.206 2008/10/19 18:25:14 suka Exp $
+
+  19 Oct 2008; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-bin-3.0.0.ebuild:
+  Install dictionaries for english, french and spanish, tell the users where
+  to find them, see bug #242312
 
   19 Oct 2008; Andreas Proschofsky <suka@gentoo.org>
   openoffice-bin-3.0.0.ebuild:
