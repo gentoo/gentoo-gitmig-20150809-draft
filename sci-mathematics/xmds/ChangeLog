@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/xmds
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/ChangeLog,v 1.7 2008/09/10 21:14:32 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/xmds/ChangeLog,v 1.8 2008/10/19 14:59:41 maekke Exp $
+
+  19 Oct 2008; Markus Meier <maekke@gentoo.org> xmds-1.6.6.ebuild:
+  amd64/x86 stable, bug #242600
 
 *xmds-1.6.6 (10 Sep 2008)
 
