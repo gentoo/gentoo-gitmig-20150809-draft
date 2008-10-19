@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nsis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.24 2008/08/22 03:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/ChangeLog,v 1.25 2008/10/19 12:15:43 mrness Exp $
+
+*nsis-2.40 (19 Oct 2008)
+
+  19 Oct 2008; Alin Năstac <mrness@gentoo.org> +nsis-2.40.ebuild:
+  Version bump.
 
   22 Aug 2008; Mike Frysinger <vapier@gentoo.org> nsis-2.39.ebuild:
   Add USE=doc to disable generation/installation of extraneous docs.
