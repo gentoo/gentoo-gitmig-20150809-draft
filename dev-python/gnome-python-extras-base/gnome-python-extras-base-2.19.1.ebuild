@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.19.1.ebuild,v 1.1 2008/10/16 22:46:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.19.1.ebuild,v 1.2 2008/10/19 22:57:25 eva Exp $
 
 inherit versionator eutils autotools gnome2
 
@@ -29,6 +29,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
+DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README"
+
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-allbindings"
 }
@@ -36,7 +38,7 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
+	epatch "${WORKDIR}/${MY_PN}-${PV}-split.patch"
 	eautoreconf
 }
 
