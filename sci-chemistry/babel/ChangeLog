@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/babel
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/ChangeLog,v 1.5 2007/04/28 16:43:58 swegener Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/babel/ChangeLog,v 1.6 2008/10/19 14:53:11 markusle Exp $
+
+*babel-1.6-r1 (19 Oct 2008)
+
+  19 Oct 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/babel-1.6-makefile.patch, babel-1.6.ebuild, +babel-1.6-r1.ebuild:
+  Added new and significantly cleaned up revision which also fixes
+  pre-stripping and LDFLAGS issues (see bug #241184).
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> babel-1.6.ebuild:
   Fix *initd, *confd and *envd calls (#17388, #174266)
