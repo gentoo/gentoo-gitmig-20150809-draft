@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.3.ebuild,v 1.7 2008/10/19 11:49:10 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.4.ebuild,v 1.1 2008/10/19 11:49:10 loki_val Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="+agg -cairo dbus -fbcon -ffmpeg +gstreamer +gtk +kde +nsplugin -opengl -qt3 -sdl test video_cards_i810"
+IUSE="+agg -cairo dbus -fbcon -ffmpeg +gstreamer +gtk +kde +nsplugin -opengl -qt3 -sdl video_cards_i810"
 
 RDEPEND="
 	agg? ( >=x11-libs/agg-2.5 )
@@ -55,11 +55,10 @@ RDEPEND="
 	media-libs/jpeg
 	media-libs/libpng
 	net-misc/curl
-
 	ffmpeg? (
 		!gstreamer? (
 			media-libs/libsdl
-			=media-video/ffmpeg-0.4.9_p20080326
+			>=media-video/ffmpeg-0.4.9_p20080326
 		)
 	)
 
@@ -77,10 +76,10 @@ RDEPEND="
 	sys-devel/libtool
 	"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	test? ( dev-util/dejagnu
-		media-gfx/swftools
-		>=media-libs/ming-0.4.0_beta5 )"
+	dev-util/pkgconfig"
+
+#Tests currently not functional. Compilation fails. Use youtube instead.
+RESTRICT="test"
 
 pkg_setup() {
 	if use !gtk && use !kde && use !fbcon && use !qt3
@@ -147,11 +146,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i \
-		-e 's,config.h,gnashconfig.h,' \
-		./extensions/dbus/dbus_ext.h || die
-	epatch "${FILESDIR}"/${P}-boost-dynamic-link.patch
-	epatch "${FILESDIR}"/${P}-libtool-2.2.patch
+	epatch "${FILESDIR}"/${PN}-0.8.3-boost-dynamic-link.patch
 	eautoreconf
 }
 
@@ -159,9 +154,9 @@ src_compile() {
 	local myconf
 
 	if use nsplugin ; then
-		myconf="${myconf} --enable-nsapi --with-npapi-plugindir=/opt/netscape/plugins"
+		myconf="${myconf} --enable-npapi --with-npapi-plugindir=/opt/netscape/plugins"
 	else
-		myconf="${myconf} --disable-nsapi"
+		myconf="${myconf} --disable-npapi"
 	fi
 
 #Select renderer.
@@ -208,14 +203,19 @@ src_compile() {
 	fi
 
 	econf \
-		$(use_enable video_cards_i810 i810-lod-bias) \
-		--enable-gui=${guis} \
-		--with-extensions=${extensions} \
-		--with-ffmpeg-incl=/usr/include \
-		--with-kde-pluginprefix=${KDEDIR} \
-		--without-included-ltdl \
-		--with-ltdl-include=/usr/include \
-		--with-ltdl-lib=/usr/lib \
+		$(use_enable video_cards_i810 i810-lod-bias)	\
+		--disable-testsuite				\
+		--enable-shared					\
+		--disable-allstatic				\
+		--enable-sdkinstall				\
+		--enable-gui=${guis}				\
+		--enable-extensions=${extensions}		\
+		--with-ffmpeg-incl=/usr/include			\
+		--with-kde-pluginprefix=${KDEDIR}		\
+		--without-included-ltdl				\
+		--with-ltdl-include=/usr/include		\
+		--with-ltdl-lib=/usr/$(get_libdir)		\
+		--with-plugins-install=system			\
 		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
@@ -247,32 +247,12 @@ src_install() {
 		popd &> /dev/null
 	fi
 
-	use test && dodoc testsuite/TESTRESULTS.txt
-
 	dodoc AUTHORS ChangeLog* NEWS README
+
 }
 
 pkg_postinst() {
 	ewarn "BETA"
 	ewarn "gnash is still in heavy development"
 	ewarn "please report gnash bugs upstream to the gnash devs"
-	if use test
-	then
-		ewarn	"Test results can be found in /usr/share/doc/${PF}/TESTRESULTS.txt"
-		ewarn	"Currently \"acceptable\" failing tests:"
-		ewarn	"Unexpected failures follow:"
-		ewarn	" --=[ ./actionscript.all ]=--"
-		ewarn	"FAIL: astests-v5-Runner: expected: 584 obtained: 64 [./Date.as:549]"
-		ewarn	"FAIL: astests-v5-Runner: expected: 0 obtained: 8 [./Date.as:550]"
-		ewarn	"FAIL: astests-v5-Runner: expected: 4 obtained: 45 [./Date.as:551]"
-		ewarn	"FAIL: astests-v6-Runner: expected: 584 obtained: 64 [./Date.as:549]"
-		ewarn	"FAIL: astests-v6-Runner: expected: 0 obtained: 8 [./Date.as:550]"
-		ewarn	"FAIL: astests-v6-Runner: expected: 4 obtained: 45 [./Date.as:551]"
-		ewarn	"FAIL: astests-v7-Runner: expected: 584 obtained: 64 [./Date.as:549]"
-		ewarn	"FAIL: astests-v7-Runner: expected: 0 obtained: 8 [./Date.as:550]"
-		ewarn	"FAIL: astests-v7-Runner: expected: 4 obtained: 45 [./Date.as:551]"
-		ewarn	"FAIL: astests-v8-Runner: expected: 584 obtained: 64 [./Date.as:549]"
-		ewarn	"FAIL: astests-v8-Runner: expected: 0 obtained: 8 [./Date.as:550]"
-		ewarn	"FAIL: astests-v8-Runner: expected: 4 obtained: 45 [./Date.as:551]"
-	fi
 }

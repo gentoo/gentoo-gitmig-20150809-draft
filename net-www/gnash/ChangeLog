@@ -1,6 +1,14 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.63 2008/10/12 16:05:34 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.64 2008/10/19 11:49:10 loki_val Exp $
+
+*gnash-0.8.4 (19 Oct 2008)
+
+  19 Oct 2008; Peter Alfredsen <loki_val@gentoo.org> gnash-0.8.3.ebuild,
+  +gnash-0.8.4.ebuild:
+  Fix bug 242656 by restricting 0.8.3 to ffmpeg 20080326. Bump to 0.8.4, bug
+  241874, thanks to Mounir Lamouri. This version works much better than
+  0.8.3, but tests fail to compile.
 
   12 Oct 2008; Friedrich Oslage <bluebird@gentoo.org> gnash-0.8.3.ebuild:
   Drop ~sparc keyword, until bug #240470 is fixed
