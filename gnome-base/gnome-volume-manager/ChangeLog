@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-volume-manager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.112 2008/09/25 14:52:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.113 2008/10/19 10:09:54 eva Exp $
+
+  19 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  -gnome-volume-manager-2.17.0.ebuild,
+  gnome-volume-manager-2.17.0-r1.ebuild,
+  -gnome-volume-manager-2.22.1.ebuild, gnome-volume-manager-2.22.5.ebuild:
+  Add consolekit use flag per bug #242384. Fix some repoman warnings.
+  Clean up old revisions.
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org>
   gnome-volume-manager-2.22.5.ebuild:
