@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48-r1.ebuild,v 1.3 2008/10/19 14:15:04 maekke Exp $
-
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48-r1.ebuild,v 1.4 2008/10/19 21:32:27 maekke Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -52,15 +50,16 @@ blend_with() {
 	fi
 }
 
-src_prepare() {
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
 	epatch "${FILESDIR}"/blender-2.37-dirs.patch
 	epatch "${FILESDIR}"/blender-2.44-scriptsdir.patch
 	epatch "${FILESDIR}"/blender-2.46-ffmpeg.patch
 	epatch "${FILESDIR}"/blender-2.46-cve-2008-1103-1.patch
 	epatch "${FILESDIR}"/${P}-ffmpeg-20081014.patch
-}
 
-src_configure() {
 	if use ffmpeg ; then
 #		cd "${S}"/extern
 #		rm -rf ffmpeg libmp3lame x264
@@ -87,7 +86,9 @@ src_configure() {
 		echo "WITH_BF_OPENMP=0" >> "${S}"/user-config.py
 		elog "disabling openmp"
 	fi
+}
 
+src_compile() {
 	for arg in \
 			'blender-game gameengine' \
 			'ffmpeg' \
@@ -100,9 +101,7 @@ src_configure() {
 			'verse' ; do
 		blend_with ${arg}
 	done
-}
 
-src_compile() {
 	# scons uses -l differently -> remove it
 	scons ${MAKEOPTS/-l[0-9]} || die \
 	"!!! Please add ${S}/scons.config when filing bugs reports to bugs.gentoo.org"
