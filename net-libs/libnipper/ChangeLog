@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnipper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnipper/ChangeLog,v 1.2 2008/09/05 20:41:01 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnipper/ChangeLog,v 1.3 2008/10/19 17:51:12 ikelos Exp $
+
+*libnipper-0.12.2 (19 Oct 2008)
+
+  19 Oct 2008; Mike Auty <ikelos@gentoo.org> +libnipper-0.12.2.ebuild:
+  Bump libnipper, fixes some minor bugs.
 
 *libnipper-0.12.1 (05 Sep 2008)
 
