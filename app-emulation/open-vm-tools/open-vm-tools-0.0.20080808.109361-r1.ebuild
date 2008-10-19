@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20080808.109361.ebuild,v 1.1 2008/08/30 20:04:43 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20080808.109361-r1.ebuild,v 1.1 2008/10/19 13:06:00 ikelos Exp $
 
 inherit pam eutils linux-mod versionator
 
@@ -114,8 +114,8 @@ src_install() {
 
 	if use X;
 	then
-		insinto /etc/X11/xinit/xinitrc.d
-		doins "${FILESDIR}/10-vmware-tools"
+		exeinto /etc/X11/xinit/xinitrc.d
+		doexe "${FILESDIR}/10-vmware-tools"
 
 		elog "To be able to use the drag'n'drop feature of VMware for file"
 		elog "exchange, you need to do this:"
