@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.129 2008/10/17 15:24:47 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.130 2008/10/19 08:08:19 je_fro Exp $
+
+  19 Oct 2008; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
+  Fix to check for UNUSED_SYMBOLS.
 
   17 Oct 2008; Jeff Gardner <je_fro@gentoo.org>
   +files/8.542/ati-drivers-2.6.27.patch, ati-drivers-8.542.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.542.ebuild,v 1.3 2008/10/17 15:24:47 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.542.ebuild,v 1.4 2008/10/19 08:08:19 je_fro Exp $
 
 IUSE="acpi debug"
 
@@ -78,7 +78,7 @@ pkg_setup() {
 		die "${P} is not compatible with RCU Preemption (bug #223281), please disable it"
 	fi
 
-	if ! linux_chkconfig_present UNUSED_SYMBOLS; then
+	if kernel_is ge 2 6 26 && ! linux_chkconfig_present UNUSED_SYMBOLS; then
 			ewarn "You have to Enable unused/obsolete exported symbols in Kernel hacking section of kernel config for fglrx to load"
 	fi
 
