@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9091 2008/10/19 22:01:47 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9092 2008/10/19 23:05:59 leio Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mart Raudsepp <leio@gentoo.org> (20 Oct 2008)
+# Does not work well compared to 2.22, at least not without
+# gnome-settings-daemon-2.24
+>=gnome-extra/bug-buddy-2.24
 
 # Rémi Cardona <remi@gentoo.org> (19 Oct 2008)
 # pre-release, masked for testing
