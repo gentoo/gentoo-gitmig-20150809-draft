@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.0.0.ebuild,v 1.2 2008/10/17 20:30:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-3.0.0.ebuild,v 1.3 2008/10/19 16:24:29 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -145,7 +145,7 @@ src_install () {
 		dosym ${INSTDIR}/program/s${app} /usr/bin/oo${app}
 	done
 
-	dosym ${INSTDIR}/program/spadmin.bin /usr/bin/ooffice-printeradmin
+	dosym ${INSTDIR}/program/spadmin /usr/bin/ooffice-printeradmin
 	dosym ${INSTDIR}/program/soffice /usr/bin/soffice
 
 	rm -f ${INSTDIR}/basis-link || die
