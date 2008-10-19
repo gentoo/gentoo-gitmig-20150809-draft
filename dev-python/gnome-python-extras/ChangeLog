@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.81 2008/10/18 23:03:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.82 2008/10/19 20:36:03 eva Exp $
+
+*gnome-python-extras-2.19.1-r3 (19 Oct 2008)
+
+  19 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-python-extras-2.19.1-r3.ebuild:
+  Initial import of split gnome-python-extras. This is a meta ebuild that is
+  functionally identical to the original, monolithic ebuild.
 
   18 Oct 2008; Brent Baude <ranger@gentoo.org>
   gnome-python-extras-2.19.1-r2.ebuild:
