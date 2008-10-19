@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygtksourceview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.15 2008/09/25 15:01:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.16 2008/10/19 21:00:00 eva Exp $
+
+*pygtksourceview-2.4.0 (19 Oct 2008)
+
+  19 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +pygtksourceview-2.4.0.ebuild:
+  New version for GNOME 2.24. Drop gnome-vfs dependency and requires new
+  gtksourceview-2.3.
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org> pygtksourceview-2.2.0.ebuild:
   Stable for HPPA (bug #236971).
