@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.25 2008/10/19 14:34:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.26 2008/10/19 15:02:22 maekke Exp $
+
+  19 Oct 2008; Markus Meier <maekke@gentoo.org> ufraw-0.13-r1.ebuild:
+  amd64/x86 stable, bug #242644
 
 *ufraw-0.14.1 (19 Oct 2008)
 
