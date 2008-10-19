@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.10 2008/10/19 17:22:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.11 2008/10/19 17:31:18 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -111,6 +111,7 @@ RDEPEND="java? ( >=virtual/jre-1.5 )
 
 DEPEND="${COMMON_DEPEND}
 	x11-libs/libXrender
+	x11-libs/libXtst
 	x11-proto/printproto
 	x11-proto/xextproto
 	x11-proto/xproto
