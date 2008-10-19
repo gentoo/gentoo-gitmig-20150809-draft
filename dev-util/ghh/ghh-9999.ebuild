@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ghh/ghh-9999.ebuild,v 1.1 2008/01/14 02:43:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ghh/ghh-9999.ebuild,v 1.2 2008/10/19 23:54:01 vapier Exp $
 
 EGIT_REPO_URI="http://jean-francois.richard.name/ghh.git"
 inherit git autotools
@@ -18,6 +18,7 @@ RDEPEND="=x11-libs/gtk+-2*
 	=dev-libs/glib-2*
 	=gnome-base/libgnome-2*
 	app-text/gnome-doc-utils
+	app-text/asciidoc
 	dev-util/git
 	dev-lang/python"
 DEPEND="${RDEPEND}
