@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.397 2008/10/19 13:58:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.398 2008/10/19 14:00:24 aballier Exp $
+
+  19 Oct 2008; Alexis Ballier <aballier@gentoo.org> -vlc-0.9.0_beta3.ebuild,
+  -vlc-0.9.4.ebuild:
+  remove old
 
   19 Oct 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   Improve useflag descriptions, by Douglas Anderson
