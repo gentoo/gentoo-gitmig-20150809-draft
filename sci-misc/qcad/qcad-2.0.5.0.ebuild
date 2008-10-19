@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.5.0.ebuild,v 1.1 2008/09/26 13:18:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.5.0.ebuild,v 1.2 2008/10/19 14:05:46 markusle Exp $
 
 inherit kde-functions eutils
 
@@ -85,7 +85,7 @@ src_install () {
 	dobin qcad || die "Failed to install qcad wrapper"
 
 	insinto /usr/share/${P}
-	doins -r patterns examples fonts qm  \
+	doins -r patterns fonts qm  \
 		|| die "Failed to install support files"
 
 	doicon src/xpm/${PN}.xpm
