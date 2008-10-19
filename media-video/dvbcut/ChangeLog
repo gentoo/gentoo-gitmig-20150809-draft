@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvbcut
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.15 2008/10/14 16:27:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.16 2008/10/19 17:29:14 aballier Exp $
+
+  19 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/dvbcut-0.5.4-scons.patch, dvbcut-0.5.4-r1.ebuild:
+  Add a patch by Daniel Pielmeier <daniel.pielmeier@googlemail.com> to fix
+  build when /usr/local does not exist. Bug #230095
 
   14 Oct 2008; Alexis Ballier <aballier@gentoo.org> dvbcut-0.5.4-r1.ebuild:
   a52 useflag is no more in ffmpeg, add a --missing true option to
