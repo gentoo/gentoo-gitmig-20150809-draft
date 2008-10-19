@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48.ebuild,v 1.1 2008/10/16 05:27:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48.ebuild,v 1.2 2008/10/19 14:15:04 maekke Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -113,6 +113,7 @@ src_compile() {
 src_install() {
 	exeinto /usr/bin/
 	doexe "${WORKDIR}"/install/linux2/blender
+	use player && doexe "${WORKDIR}"/install/linux2/blenderplayer
 
 	dodir /usr/share/${PN}
 
