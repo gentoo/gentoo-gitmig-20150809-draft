@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.28 2008/10/16 20:59:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.29 2008/10/19 13:45:38 aballier Exp $
+
+  19 Oct 2008; Alexis Ballier <aballier@gentoo.org> kdenlive-0.5.ebuild:
+  adjust deps for 0.5 version that only works with mlt < 0.3
 
 *kdenlive-0.7_beta1 (16 Oct 2008)
 
