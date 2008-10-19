@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.107 2008/10/19 22:15:50 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.108 2008/10/19 22:33:44 remi Exp $
+
+  19 Oct 2008; Rémi Cardona <remi@gentoo.org>
+  -files/xf86-video-i810-2.4.1-0001-Fix-reverted-LVDS-bios-capability-dword-
+  definition.patch, -xf86-video-i810-2.4.0.ebuild,
+  -xf86-video-i810-2.4.1.ebuild, -xf86-video-i810-2.4.1-r1.ebuild,
+  -xf86-video-i810-2.4.2.ebuild, -xf86-video-i810-2.4.2-r1.ebuild:
+  remove old cruft
 
 *xf86-video-i810-2.4.2-r3 (19 Oct 2008)
 
