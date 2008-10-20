@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Compress-Base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Base/ChangeLog,v 1.36 2008/09/05 08:21:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Base/ChangeLog,v 1.37 2008/10/20 22:48:59 bluebird Exp $
+
+  20 Oct 2008; Friedrich Oslage <bluebird@gentoo.org>
+  IO-Compress-Base-2.015.ebuild:
+  Stable on sparc, security bug #192989
 
 *IO-Compress-Base-2.015 (05 Sep 2008)
 
