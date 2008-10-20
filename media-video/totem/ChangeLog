@@ -1,6 +1,12 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.223 2008/10/05 21:28:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.224 2008/10/20 20:45:14 eva Exp $
+
+*totem-2.24.2 (20 Oct 2008)
+
+  20 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org> +totem-2.24.2.ebuild:
+  New version for GNOME 2.24. Migrated to GIO, lots of small bug fixes and
+  nsplugins mozilla implementation independant.
 
   05 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org> totem-2.18.3.ebuild,
   -totem-2.22.1.ebuild, -totem-2.22.2.ebuild:
