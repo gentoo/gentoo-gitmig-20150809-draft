@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.39 2008/08/11 17:46:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.40 2008/10/20 16:05:14 vapier Exp $
+
+*cpufrequtils-005 (20 Oct 2008)
+
+  20 Oct 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/cpufrequtils-conf.d-005, +files/cpufrequtils-init.d-005,
+  +cpufrequtils-005.ebuild:
+  Version bump #228701 by Dennis Schridde and a more flexible init.d script
+  by me #182049 by Jakub Zawadzki.
 
 *cpufrequtils-002-r4 (11 Aug 2008)
 

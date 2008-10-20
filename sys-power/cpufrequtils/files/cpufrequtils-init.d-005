@@ -1,0 +1,16 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/files/cpufrequtils-init.d-005,v 1.1 2008/10/20 16:05:14 vapier Exp $
+
+start() {
+	ebegin "Running cpufreq-set ${START_OPTS}"
+	cpufreq-set ${START_OPTS}
+	eend $?
+}
+
+start() {
+	ebegin "Running cpufreq-set ${START_OPTS}"
+	cpufreq-set ${STOP_OPTS}
+	eend $?
+}
