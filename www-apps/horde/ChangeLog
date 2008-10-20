@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.76 2008/10/02 04:15:07 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.77 2008/10/20 00:05:23 vapier Exp $
+
+*horde-3.3 (20 Oct 2008)
+
+  20 Oct 2008; Mike Frysinger <vapier@gentoo.org> +horde-3.3.ebuild:
+  Version bump.
 
   02 Oct 2008; wrobel@gentoo.org -horde-3.1.8.ebuild:
   Removed insecure horde-3.1.8 (#237362).
