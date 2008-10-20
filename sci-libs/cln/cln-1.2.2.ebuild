@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.2.2.ebuild,v 1.5 2008/10/08 21:18:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.2.2.ebuild,v 1.6 2008/10/20 21:35:37 bicatali Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -31,6 +31,8 @@ src_compile () {
 	# -Os causes segmentation faults (see bug #174576)
 	# checked for 1.2.1, gcc-4.2.3
 	replace-flags -Os -O2
+	# ftracer buggy bug #237451
+	filter-flags -ftracer
 	use sparc && append-cppflags "-DNO_ASM"
 	econf  \
 		--libdir=/usr/$(get_libdir) \
