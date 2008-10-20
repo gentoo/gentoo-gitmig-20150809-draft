@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.4.ebuild,v 1.3 2008/10/20 04:18:08 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.4.ebuild,v 1.4 2008/10/20 05:18:09 loki_val Exp $
 
 EAPI=1
 
@@ -52,8 +52,8 @@ RDEPEND="
 	) ) ) ) )
 	dev-libs/libxml2
 	sys-libs/zlib
-	media-libs/giflib
 	media-libs/jpeg
+	media-libs/giflib
 	media-libs/libpng
 	net-misc/curl
 	ffmpeg? (
@@ -151,7 +151,7 @@ src_unpack() {
 	if has_version '<sys-devel/libtool-2'
 	then
 		sed -i \
-			-e '/libltdl\/Makefile/d' configure.ac	\
+			-e 's:libltdl.*Makefile::' configure.ac	\
 			|| die "Sedding configure.ac failed."
 	fi
 	eautoreconf
@@ -193,7 +193,7 @@ src_compile() {
 #Select which extensions to build.
 	local	extensions="FILEIO" \
 		extension=""
-	for extension in dbus-DBUS gtk-GTK2 test-DEJAGNU
+	for extension in dbus-DBUS gtk-GTK2
 	do
 		use ${extension%-*} && extensions="${extensions},${extension#*-}"
 	done

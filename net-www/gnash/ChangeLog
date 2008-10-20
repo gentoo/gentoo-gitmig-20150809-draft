@@ -1,6 +1,9 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.66 2008/10/20 04:18:08 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.67 2008/10/20 05:18:09 loki_val Exp $
+
+  20 Oct 2008; Peter Alfredsen <loki_val@gentoo.org> gnash-0.8.4.ebuild:
+  Fixup mysterious sed failure.
 
   20 Oct 2008; Peter Alfredsen <loki_val@gentoo.org> gnash-0.8.4.ebuild:
   Add giflib as a dep. Bug 242840.
