@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/xvidcap
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.43 2008/07/17 08:04:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.44 2008/10/20 22:55:10 yngwin Exp $
+
+*xvidcap-1.1.7 (20 Oct 2008)
+
+  20 Oct 2008; Ben de Groot <yngwin@gentoo.org>
+  -xvidcap-1.1.7_rc1.ebuild, +files/xvidcap-1.1.7-ffmpeg-headers.patch,
+  +files/xvidcap-1.1.7-ffmpeg-trellis.patch, +xvidcap-1.1.7.ebuild:
+  Version bump. New patches added for newer ffmpeg issues, thanks to Vasily
+  Shmelev in bug 242680 and Filipe Sousa in bug 234383. Fixes bugs 232590,
+  234383, 242678 and 242680. Remove rc version.
 
   17 Jul 2008; Alexis Ballier <aballier@gentoo.org> xvidcap-1.1.6-r2.ebuild:
   Fix deps wrt ffmpeg: 0.4.9_p20070616-r3 to -r20 doesn't have swscaler, -r1

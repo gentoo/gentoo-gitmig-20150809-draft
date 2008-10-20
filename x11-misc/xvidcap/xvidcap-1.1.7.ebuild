@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.7_rc1.ebuild,v 1.2 2008/06/29 07:48:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.7.ebuild,v 1.1 2008/10/20 22:55:10 yngwin Exp $
 
 GCONF_DEBUG="no"
 
 inherit eutils autotools gnome2
 
 MY_P=${P/_rc/rc}
-DESCRIPTION="Screen capture utility enabling you to create videos of your desktop for illustration or documentation purposes."
+DESCRIPTION="Screen capture utility to create videos of your desktop for documentation purposes"
 HOMEPAGE="http://xvidcap.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
@@ -29,14 +29,15 @@ DEPEND="${RDEPEND}
 	dev-perl/XML-Parser
 	app-text/gnome-doc-utils"
 
-S=${WORKDIR}/${PN}-1.1.6
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-ffmpeg.patch
-	epatch "${FILESDIR}"/${P}-new-ffmpeg-headers.patch
+	epatch "${FILESDIR}"/${P}-ffmpeg-headers.patch
+	# bug 242680
+	epatch "${FILESDIR}"/${P}-ffmpeg-trellis.patch
 	eautoreconf
+	# bug 242678
+	intltoolize --force || die "intltoolize failed"
 }
 
 src_compile() {
@@ -52,4 +53,7 @@ src_install() {
 	# Almost like bug #58322 but directory name changed.
 	rm -rf "${D}"/usr/share/doc/${PN}
 	dodoc AUTHORS ChangeLog README TODO.tasks
+
+	# Optional. See also bug 232590.
+	elog "For previewing the captured movie you should install media-video/mplayer"
 }
