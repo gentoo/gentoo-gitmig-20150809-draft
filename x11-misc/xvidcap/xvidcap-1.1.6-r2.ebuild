@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.6-r2.ebuild,v 1.5 2008/07/17 08:04:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.6-r2.ebuild,v 1.6 2008/10/20 23:10:43 yngwin Exp $
 
 GCONF_DEBUG="no"
 
@@ -18,6 +18,7 @@ IUSE="mp3 theora"
 RDEPEND=">=x11-libs/gtk+-2.6
 	gnome-base/libglade
 	>=media-video/ffmpeg-0.4.9_p20070616-r20
+	<media-video/ffmpeg-0.4.9_p20080101
 	mp3? ( media-sound/lame )
 	theora? ( media-libs/libtheora )"
 DEPEND="${RDEPEND}
@@ -32,6 +33,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-ffmpeg.patch
+	eautoreconf
+	intltoolize --force || die "intltoolize failed!"
 }
 
 src_compile() {
