@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.11 2008/10/19 17:31:18 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.12 2008/10/20 10:10:39 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -296,7 +296,6 @@ src_unpack() {
 	echo "`use_enable ldap`" >> ${CONFFILE}
 	echo "`use_enable opengl`" >> ${CONFFILE}
 	echo "`use_with ldap openldap`" >> ${CONFFILE}
-	echo "`use_with templates sun-templates`" >> ${CONFFILE}
 	echo "`use_enable debug crashdump`" >> ${CONFFILE}
 	echo "`use_enable debug strip-solver`" >> ${CONFFILE}
 
@@ -356,6 +355,7 @@ src_compile() {
 		`use_enable odk` \
 		`use_enable pam` \
 		`use_with java` \
+		`use_with templates sun-templates` \
 		--disable-access \
 		--disable-post-install-scripts \
 		--enable-extensions \
