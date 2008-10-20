@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.27 2008/10/12 15:58:51 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.28 2008/10/20 04:25:04 robbat2 Exp $
+
+*suite3270-3.3.8 (20 Oct 2008)
+
+  20 Oct 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +suite3270-3.3.8.ebuild:
+  Bug #241970: version bump - Lots of changes in CJK code.
 
   12 Oct 2008; Friedrich Oslage <bluebird@gentoo.org>
   suite3270-3.3.7_p5.ebuild:
