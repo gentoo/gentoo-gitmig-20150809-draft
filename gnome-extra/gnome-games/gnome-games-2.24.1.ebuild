@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.24.0.ebuild,v 1.1 2008/10/20 00:49:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.24.1.ebuild,v 1.1 2008/10/20 23:28:00 leio Exp $
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
