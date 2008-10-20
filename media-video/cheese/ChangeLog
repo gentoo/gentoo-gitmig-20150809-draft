@@ -1,6 +1,16 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.6 2008/08/10 12:35:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.7 2008/10/20 21:09:10 eva Exp $
+
+*cheese-2.24.1 (20 Oct 2008)
+
+  20 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/cheese-2.22.0-strcmp-device-name.patch,
+  -files/cheese-2.22.0-webcam-caps.patch, -cheese-2.22.0.ebuild,
+  -cheese-2.22.1.ebuild, -cheese-2.22.2.ebuild, +cheese-2.24.1.ebuild:
+  New version for GNOME 2.24. Lots of small improvments, fullscreen mode,
+  changed default storage directory to a more visible place, dbus
+  interface... Clean up old revisions.
 
   10 Aug 2008; Markus Meier <maekke@gentoo.org> cheese-2.22.3.ebuild:
   x86 stable, bug #229709
