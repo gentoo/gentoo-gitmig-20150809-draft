@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/preload
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/ChangeLog,v 1.2 2008/10/19 23:48:26 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/ChangeLog,v 1.3 2008/10/20 18:58:10 darkside Exp $
+
+*preload-0.6.3-r1 (20 Oct 2008)
+
+  20 Oct 2008; Jeremy Olexa <darkside@gentoo.org> files/conf.d-preload,
+  files/init.d-preload, -preload-0.6.3.ebuild, +preload-0.6.3-r1.ebuild:
+  Minor bump for sys-apps/preload to improve init/conf scripts and remove
+  unused etc file
 
   19 Oct 2008; Dawid Węgliński <cla@gentoo.org> preload-0.6.3.ebuild:
   Add ~x86 keyword (bug #242554)

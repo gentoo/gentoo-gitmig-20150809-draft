@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/preload-0.6.3.ebuild,v 1.2 2008/10/19 23:48:26 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/preload-0.6.3-r1.ebuild,v 1.1 2008/10/20 18:58:10 darkside Exp $
 
 DESCRIPTION="Adaptive readahead daemon."
 HOMEPAGE="http://sourceforge.net/projects/preload"
@@ -23,6 +23,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 	rm -rf "${D}/etc/rc.d" || die "rm rc.d failed"
+	rm -rf "${D}/etc/sysconfig" || die "rm sysconfig failed"
 	newinitd "${FILESDIR}/init.d-preload" preload || die "initd failed"
 	newconfd "${FILESDIR}/conf.d-preload" preload || die "confd failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
