@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/tp_smapi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.27 2008/09/22 20:20:25 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.28 2008/10/20 08:35:22 welp Exp $
+
+*tp_smapi-0.39 (20 Oct 2008)
+
+  20 Oct 2008; <welp@gentoo.org> +tp_smapi-0.39.ebuild:
+  Bump to 0.39; Bug 239033
 
   22 Sep 2008; Hanno Boeck <hanno@gentoo.org>
   +files/thinkpad_ec_semaphore.patch, tp_smapi-0.37.ebuild:
