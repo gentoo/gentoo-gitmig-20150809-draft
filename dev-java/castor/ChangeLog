@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.49 2008/10/08 20:22:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.50 2008/10/20 23:36:17 betelgeuse Exp $
+
+  20 Oct 2008; Petteri Räty <betelgeuse@gentoo.org>
+  -castor-0.9.9.1-r2.ebuild, -castor-0.9.9.1-r3.ebuild,
+  -castor-0.9.9.1-r4.ebuild:
+  Remove old ebuilds.
 
   08 Oct 2008; Markus Meier <maekke@gentoo.org> castor-0.9.9.1-r5.ebuild:
   amd64/x86 stable, bug #232238
