@@ -1,6 +1,15 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.23 2008/08/06 20:49:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.24 2008/10/20 12:30:00 markusle Exp $
+
+*singular-3.0.4.4 (20 Oct 2008)
+
+  20 Oct 2008; Markus Dittrich <markusle@gentoo.org>
+  -files/singular-3.0.2-gentoo.diff, -files/singular-3.0.3-gentoo.diff,
+  +files/singular-3.0.4.4-nostrip.patch, -singular-3.0.2.1.ebuild,
+  -singular-3.0.3.ebuild, +singular-3.0.4.4.ebuild:
+  Version bump and removed old ebuilds. Also disabled striping of binaries
+  (see bug #241238).
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
