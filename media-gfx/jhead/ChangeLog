@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jhead
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.88 2008/10/19 17:02:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.89 2008/10/20 08:15:15 yoswink Exp $
+
+  20 Oct 2008; Jose Luis Rivero <yoswink@gentoo.org> jhead-2.84.ebuild:
+  alpha stable wrt security #242702
 
   19 Oct 2008; Guy Martin <gmsoft@gentoo.org> jhead-2.84.ebuild:
   hppa stable, #242702
