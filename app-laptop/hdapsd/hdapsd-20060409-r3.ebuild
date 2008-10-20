@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409-r2.ebuild,v 1.1 2008/03/30 22:29:51 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409-r3.ebuild,v 1.1 2008/10/20 08:45:26 welp Exp $
 
 inherit eutils linux-info
 

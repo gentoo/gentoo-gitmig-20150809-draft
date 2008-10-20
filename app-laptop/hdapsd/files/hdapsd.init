@@ -20,7 +20,7 @@ checkconfig() {
 
     # Load the tp_smapi module first
     # This is not a requirement, but it helps hdapsd adaptive mode
-    if [[ ! -e /sys/devices/platorm/smapi ]] ; then
+    if [[ ! -e /sys/devices/platform/smapi ]] ; then
 	modprobe tp_smapi 2>/dev/null
     fi
 	
