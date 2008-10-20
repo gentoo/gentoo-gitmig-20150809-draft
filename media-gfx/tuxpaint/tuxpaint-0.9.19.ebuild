@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.19.ebuild,v 1.1 2008/09/18 19:59:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.19.ebuild,v 1.2 2008/10/20 20:58:39 maekke Exp $
 
 inherit eutils gnome2-utils multilib
 
@@ -33,6 +33,7 @@ src_unpack() {
 
 	# Sanitize the Makefile and correct a few other issues.
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-libpng.patch"
 
 	# Make multilib-strict compliant, see bug #200740
 	sed -i -e "s:/GET_LIBDIR/:/$(get_libdir)/:" Makefile || die "sed failed"
