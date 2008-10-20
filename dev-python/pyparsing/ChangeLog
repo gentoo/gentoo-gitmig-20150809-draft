@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.32 2008/04/20 07:24:11 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.33 2008/10/20 14:10:13 hawking Exp $
+
+*pyparsing-1.5.1 (19 Oct 2008)
+
+  19 Oct 2008; Ali Polatel <hawking@gentoo.org> -pyparsing-1.4.10.ebuild,
+  -pyparsing-1.4.11.ebuild, +pyparsing-1.5.1.ebuild:
+  Version bump. Drop old.
 
 *pyparsing-1.4.11 (20 Apr 2008)
 
