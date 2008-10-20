@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/powerman-2.2.ebuild,v 1.1 2008/09/12 18:14:52 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/powerman-2.2.ebuild,v 1.2 2008/10/20 15:08:34 weaver Exp $
 
 EAPI="1"
 
@@ -11,7 +11,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="+httppower +genders"
-DEPEND="sys-devel/bison"
+DEPEND="sys-devel/bison
+		httppower? ( net-misc/curl )"
 RDEPEND=">=sys-libs/freeipmi-0.2.3"
 
 src_compile() {

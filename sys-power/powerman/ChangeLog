@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powerman
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/ChangeLog,v 1.3 2008/09/12 18:14:52 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/ChangeLog,v 1.4 2008/10/20 15:08:34 weaver Exp $
+
+  20 Oct 2008; weaver <weaver@gentoo.org> powerman-2.2.ebuild:
+  Add curl dep per bug 241424, thanks to flameeyes
 
 *powerman-2.2 (12 Sep 2008)
 
