@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4-r1.ebuild,v 1.1 2008/10/14 06:01:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4-r1.ebuild,v 1.2 2008/10/20 03:11:19 pva Exp $
 
 inherit linux-mod
 
@@ -54,16 +54,17 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-0.9.3-uudecode-gcda-fix.patch
+	epatch "${FILESDIR}/${PN}-0.9.3-uudecode-gcda-fix.patch"
 	if use injection; then epatch "${FILESDIR}"/${PN}-r1886.patch; fi
 	for dir in ath ath_hal net80211 ath_rate ath_rate/amrr ath_rate/minstrel ath_rate/onoe ath_rate/sample; do
-		convert_to_m "${S}"/${dir}/Makefile
+		convert_to_m "${S}/${dir}/Makefile"
 	done
-	epatch "${FILESDIR}"/madwifi-dfs-ieee80211-skb-update.patch
+	epatch "${FILESDIR}/madwifi-dfs-ieee80211-skb-update.patch"
+	kernel_is ge 2 6 27 && epatch "${FILESDIR}/${P}-2.6.27-r3811.patch"
 	# Workaround our build system, bug #232099 (bug #237618 describes details)
 	touch Module.symvers
 	for ms in ath net80211 ath_hal ath_rate/{amrr,minstrel,onoe,sample}; do
-		ln -s "${S}"/Module.symvers ${ms}
+		ln -s "${S}/Module.symvers" "${ms}"
 	done
 }
 
