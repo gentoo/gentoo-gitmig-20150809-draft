@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3972 2008/10/19 19:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3973 2008/10/20 22:07:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -912,6 +912,7 @@ gnome-base/gvfs:cdda - Enables Compact Disc Digital Audio (standard audio CDs) s
 gnome-base/gvfs:fuse - Enables fuse mount points in $HOME/.gvfs for legacy application access
 gnome-base/nautilus:beagle - Enables support for searching using the Beagle (app-misc/beagle) desktop search tool
 gnome-base/nautilus:tracker - Enables support for searching using the Tracker (app-misc/tracker) search tool
+gnome-base/nautilus:xmp - Adds support for XMP metadata
 gnome-extra/avant-window-navigator:xfce - Enables support for the XFCE 4 desktop environment
 gnome-extra/gnome-do-plugins:amarok - Enables the Amarok (media-sound/amarok) plugin
 gnome-extra/gnome-games:artworkextra - Installs extra artwork for various games
