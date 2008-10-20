@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.4.3.ebuild,v 1.4 2008/09/29 14:10:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.4.3.ebuild,v 1.5 2008/10/20 21:34:16 bicatali Exp $
 
-inherit eutils
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="C++ library and tools for symbolic calculations"
 SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/GiNaC/${P}.tar.bz2"
@@ -23,7 +23,10 @@ DEPEND="${RDEPEND}
 				app-text/ptex ) )"
 
 src_compile() {
-	econf || die "econf failed"
+	[[ $(tc-getCXX) == *g++ ]] && \
+		[[  $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] && \
+		replace-flags -O? -O1
+	econf
 	emake || die "emake failed"
 	if use doc; then
 		# need to run twice to get the references right (you know, latex)
