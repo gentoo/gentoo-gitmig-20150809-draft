@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Archive-Tar
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.95 2008/10/20 17:43:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.96 2008/10/20 23:10:49 bluebird Exp $
+
+  20 Oct 2008; Friedrich Oslage <bluebird@gentoo.org>
+  Archive-Tar-1.40.ebuild:
+  Keyworded and stable for sparc, security bug #192989
 
 *Archive-Tar-1.40 (20 Oct 2008)
 
