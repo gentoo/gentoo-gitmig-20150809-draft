@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/preload
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/ChangeLog,v 1.3 2008/10/20 18:58:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/ChangeLog,v 1.4 2008/10/20 22:58:40 darkside Exp $
+
+*preload-0.6.3-r2 (20 Oct 2008)
+
+  20 Oct 2008; Jeremy Olexa <darkside@gentoo.org>
+  +files/preload-0.6.3-conf.patch, files/conf.d-preload,
+  +preload-0.6.3-r2.ebuild:
+  sys-apps/preload add patch by Pacho Ramos to include files in /opt or /lib32
+  to be preloaded, bug #242580. One minor conf file tweak.
 
 *preload-0.6.3-r1 (20 Oct 2008)
 

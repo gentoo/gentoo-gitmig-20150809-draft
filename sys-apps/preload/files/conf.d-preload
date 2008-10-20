@@ -1,5 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/files/conf.d-preload,v 1.2 2008/10/20 18:58:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/files/conf.d-preload,v 1.3 2008/10/20 22:58:41 darkside Exp $
 # preload configuration file
 
 # verbosity.  0-9, Default is 4.
@@ -9,8 +9,7 @@ PRELOAD_VERBOSITY="4"
 PRELOAD_NICE="15"
 
 # log file (default is /var/log/preload.log )
-# Empty means default location.
-#PRELOAD_LOGFILE="/var/log/preload.log"
+PRELOAD_LOGFILE="/var/log/preload.log"
 
 # prelaod state file (default is /var/lib/preload/preload.state ) 
 # Empty means no state is saved.
