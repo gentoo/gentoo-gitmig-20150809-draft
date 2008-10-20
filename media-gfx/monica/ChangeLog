@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/monica
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/ChangeLog,v 1.1 2007/11/15 09:11:33 robbat2 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/ChangeLog,v 1.2 2008/10/20 23:18:38 robbat2 Exp $
+
+*monica-3.7 (20 Oct 2008)
+
+  20 Oct 2008; Robin H. Johnson <robbat2@gentoo.org> +monica-3.7.ebuild:
+  Bug #242920, version bump.
 
 *monica-3.6 (15 Nov 2007)
 
