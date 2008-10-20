@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Compress-Zlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Zlib/ChangeLog,v 1.35 2008/09/05 08:22:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Zlib/ChangeLog,v 1.36 2008/10/20 23:03:06 bluebird Exp $
+
+  20 Oct 2008; Friedrich Oslage <bluebird@gentoo.org>
+  IO-Compress-Zlib-2.015.ebuild:
+  Stable on sparc, security bug #192989
 
 *IO-Compress-Zlib-2.015 (05 Sep 2008)
 
