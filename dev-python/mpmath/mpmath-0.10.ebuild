@@ -1,20 +1,21 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.8.ebuild,v 1.1 2008/07/08 04:10:15 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.10.ebuild,v 1.1 2008/10/20 10:55:21 grozin Exp $
 
 NEED_PYTHON=2.4
 inherit distutils
 
 DESCRIPTION="A python library for arbitrary-precision floating-point arithmetic"
-HOMEPAGE="http://code.google.com/p/mpmath/"
+HOMEPAGE="http://code.google.com/p/${PN}/"
 SRC_URI="http://mpmath.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc examples test"
+IUSE="doc examples gmp test"
 
 DEPEND="doc? ( dev-python/sphinx )
+	gmp? ( dev-python/gmpy )
 	test? ( dev-python/py )"
 
 src_install() {
