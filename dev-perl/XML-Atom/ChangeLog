@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Atom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Atom/ChangeLog,v 1.1 2008/08/01 14:28:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Atom/ChangeLog,v 1.2 2008/10/20 16:07:19 tove Exp $
+
+  20 Oct 2008; Torsten Veller <tove@gentoo.org> XML-Atom-0.28.ebuild:
+  Add dev-perl/libwww-perl to DEPEND
 
 *XML-Atom-0.28 (01 Aug 2008)
 
