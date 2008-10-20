@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.1 2008/06/16 19:29:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.2 2008/10/20 18:54:42 graaff Exp $
+
+*rack-0.4.0 (20 Oct 2008)
+
+  20 Oct 2008; Hans de Graaff <graaff@gentoo.org> rack-0.2.0.ebuild,
+  +rack-0.4.0.ebuild:
+  Version bump. Works only with ruby 1.8.
 
   16 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> +ChangeLog,
   +rack-0.2.0.ebuild:
