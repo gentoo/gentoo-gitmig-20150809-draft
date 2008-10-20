@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.81 2008/10/14 17:24:29 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.82 2008/10/20 00:00:20 vapier Exp $
+
+  20 Oct 2008; Mike Frysinger <vapier@gentoo.org>
+  files/svgalib-1.9.25-build.patch:
+  Dont strip GL libs #242076.
 
   14 Oct 2008; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   there is no svgalib herd - changing to no-herd

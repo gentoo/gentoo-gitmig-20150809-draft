@@ -2,8 +2,6 @@ fix up build
 
 dont strip the binary as portage will take care of it
 
---- Makefile.cfg
-+++ Makefile.cfg
 --- svgalib-1.9.25/Makefile.cfg
 +++ svgalib-1.9.25/Makefile.cfg
 @@ -44,7 +44,7 @@ CONFDIR = $(SRCDIR)/src/config
@@ -42,6 +40,17 @@ dont strip the binary as portage will take care of it
  
  installstaticlib: static
  	@echo Installing static libraries in $(libdir).
+--- svgalib-1.9.25/gl/Makefile
++++ svgalib-1.9.25/gl/Makefile
+@@ -29,7 +29,7 @@ all:	libvgagl.a
+ .PHONY: all clean dep
+ 
+ libvgagl.so.$(VERSION): $(MODULES)
+-	$(CC) -s -shared -Wl,-soname,libvgagl.so.$(MAJOR_VER) -o libvgagl.so.$(VERSION) \
++	$(CC) -shared -Wl,-soname,libvgagl.so.$(MAJOR_VER) -o libvgagl.so.$(VERSION) \
+ 	  $(MODULES)
+ 
+ libvgagl.a: $(MODULES)
 --- svgalib-1.9.25/threeDKit/Makefile
 +++ svgalib-1.9.25/threeDKit/Makefile
 @@ -58,7 +58,6 @@
