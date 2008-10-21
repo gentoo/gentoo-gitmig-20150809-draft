@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.128 2008/10/21 14:08:40 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.129 2008/10/21 17:27:16 corsair Exp $
+
+  21 Oct 2008; Markus Rothe <corsair@gentoo.org> wireshark-1.0.4.ebuild:
+  Stable on ppc64; bug #242996
 
   21 Oct 2008; Ferris McCormick <fmccor@gentoo.org> wireshark-1.0.4.ebuild:
   Sparc stable --- Security Bug #242996 --- appears to work fine.
