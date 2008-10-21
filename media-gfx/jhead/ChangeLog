@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jhead
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.90 2008/10/20 12:52:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.91 2008/10/21 17:25:21 corsair Exp $
+
+  21 Oct 2008; Markus Rothe <corsair@gentoo.org> jhead-2.84.ebuild:
+  Stable on ppc64; bug #242702
 
   20 Oct 2008; Ferris McCormick <fmccor@gentoo.org> jhead-2.84.ebuild:
   Sparc stable, Security Bug #242702.
