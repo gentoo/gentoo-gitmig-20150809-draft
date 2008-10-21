@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.14.0.ebuild,v 1.2 2008/07/12 00:21:13 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.14.0.ebuild,v 1.3 2008/10/21 17:28:23 hawking Exp $
 
 inherit distutils eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 DEPEND=">=dev-python/logilab-common-0.21.0
-		>=dev-python/astng-0.17.0
+		>=dev-python/astng-0.17.2
 		tk? ( >=dev-lang/tk-8.4.9 )"
 
 DOCS="doc/*.txt"
