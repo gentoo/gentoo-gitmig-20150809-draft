@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/phlib/phlib-1.20.ebuild,v 1.4 2004/07/02 04:53:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/phlib/phlib-1.20.ebuild,v 1.5 2008/10/21 14:07:00 loki_val Exp $
+
+inherit eutils
 
 DESCRIPTION="phlib is a collection of support functions and classes used by Goldwater and the DGEE"
 HOMEPAGE="http://www.nfluid.com/"
@@ -16,14 +18,18 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	sed -i s/cflags/CFLAGS/ ${S}/configure
+	cd "${S}"
+	sed -i s/cflags/CFLAGS/ configure
+	epatch "${FILESDIR}/${PN}-types.patch"
+	epatch "${FILESDIR}/${PN}-soname.patch"
 }
 
 src_compile() {
+	CFLAGS="${CFLAGS} -fPIC -Wall"
 	econf || die "econf failed"
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	einstall || die "einstall failed"
+	emake -j1 DESTDIR="${D}" install || die "install failed"
 }
