@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tapestry/tapestry-3.0.4.ebuild,v 1.2 2007/08/26 14:22:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tapestry/tapestry-3.0.4.ebuild,v 1.3 2008/10/21 20:48:35 betelgeuse Exp $
 
+EAPI=1
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
@@ -15,17 +16,17 @@ SLOT="3.0"
 KEYWORDS="~x86 ~amd64"
 
 COMMON_DEP="
-	>=dev-java/servletapi-2.4
-	>=dev-java/commons-lang-2.1
-	dev-java/commons-logging
-	dev-java/commons-codec
-	dev-java/commons-digester
-	dev-java/commons-fileupload
-	>=dev-java/commons-beanutils-1.7
-	dev-java/bsf
-	=dev-java/jakarta-oro-2.0*
-	=dev-java/javassist-2.6*
-	>=dev-java/ognl-2.6.9"
+	dev-java/servletapi:2.4
+	dev-java/commons-lang:2.1
+	dev-java/commons-logging:0
+	dev-java/commons-codec:0
+	dev-java/commons-digester:0
+	dev-java/commons-fileupload:0
+	dev-java/commons-beanutils:1.7
+	dev-java/bsf:2.3
+	dev-java/jakarta-oro:2.0
+	dev-java/javassist:2
+	dev-java/ognl:2.6"
 
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
