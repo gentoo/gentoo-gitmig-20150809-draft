@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.15 2008/08/07 08:58:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.16 2008/10/21 11:49:25 bicatali Exp $
+
+*plplot-5.9.0 (21 Oct 2008)
+
+  21 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/plplot-5.9.0-cmake.patch, +files/plplot-5.9.0-pdftex.patch,
+  +files/plplot-5.9.0-python.patch, metadata.xml, +plplot-5.9.0.ebuild:
+  Version bump. Major new features and completely reworked ebuild. Tested
+  with many options, but not all combinations. Thanks for markusle and
+  Joshua Rich for their initial work.
 
   07 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
