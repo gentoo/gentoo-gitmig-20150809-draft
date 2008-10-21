@@ -1,0 +1,166 @@
+--- glest_game/ai/ai_interface.cpp.old	2008-10-20 22:06:57.000000000 +0200
++++ glest_game/ai/ai_interface.cpp	2008-10-20 22:09:19.000000000 +0200
+@@ -48,7 +48,9 @@
+ 
+ 	//clear log file
+ 	if(logLevel>0){
+-		FILE *f= fopen(getLogFilename().c_str(), "wt");
++		char path[PATH_MAX];
++		snprintf(path, PATH_MAX, "%s/.glest/%s", getenv("HOME"), getLogFilename().c_str());
++		FILE *f= fopen(path, "wt");
+ 		if(f==NULL){
+ 			throw runtime_error("Can't open file: "+getLogFilename());
+ 		}
+@@ -71,7 +73,9 @@
+ 		string logString= "(" + intToStr(factionIndex) + ") " + s;
+ 
+ 		//print log to file
+-		FILE *f= fopen(getLogFilename().c_str(), "at");
++		char path[PATH_MAX];
++		snprintf(path, PATH_MAX, "%s/.glest/%s", getenv("HOME"), getLogFilename().c_str());
++		FILE *f= fopen(path, "at");
+ 		if(f==NULL){
+ 			throw runtime_error("Can't open file: "+getLogFilename());
+ 		}
+--- glest_game/game/game.cpp.old	2008-10-19 14:28:24.000000000 +0200
++++ glest_game/game/game.cpp	2008-10-19 14:28:51.000000000 +0200
+@@ -11,6 +11,8 @@
+ 
+ #include "game.h"
+ 
++#include <limits.h>
++
+ #include "config.h"
+ #include "renderer.h"
+ #include "particle_renderer.h"
+@@ -400,9 +400,10 @@
+ 		}
+ 		else if(key=='E'){
+ 			for(int i=0; i<100; ++i){
+-				string path= "screens/screen" + intToStr(i) + ".tga";
++				char path[PATH_MAX];
++				snprintf(path, PATH_MAX, "%s/.glest/screens/screen%d.tga", getenv("HOME"), i);
+ 				
+-				FILE *f= fopen(path.c_str(), "rb");
++				FILE *f= fopen(path, "rb");
+ 				if(f==NULL){
+ 					Renderer::getInstance().saveScreen(path);
+ 					break;
+--- glest_game/main/main.cpp.old	2008-10-18 22:03:33.000000000 +0200
++++ glest_game/main/main.cpp	2008-10-18 22:05:22.000000000 +0200
+@@ -13,6 +13,7 @@
+ 
+ #include <string>
+ #include <cstdlib>
++#include <sys/stat.h>
+ 
+ #include "game.h"
+ #include "main_menu.h"
+@@ -38,7 +38,9 @@
+ class ExceptionHandler: public PlatformExceptionHandler{
+ public:
+ 	virtual void handle(string description, void *address){
+-		FILE *f= fopen("crash.txt", "at");
++		char path[PATH_MAX];
++		snprintf(path, PATH_MAX, "%s/.glest/crash.txt", getenv("HOME"));
++		FILE *f= fopen(path, "at");
+ 		if(f!=NULL){
+ 			time_t t= time(NULL);
+ 			char *timeString= asctime(localtime(&t));
+@@ -130,6 +130,17 @@
+ // =====================================================
+ 
+ int glestMain(int argc, char** argv){
++	if (!getenv("HOME"))
++		throw runtime_error("HOME external variable is not set");
++
++	char path[PATH_MAX];
++	snprintf(path, PATH_MAX, "%s/.glest", getenv("HOME"));
++	mkdir(path, 0750);
++
++	snprintf(path, PATH_MAX, "%s/.glest/screens", getenv("HOME"));
++	mkdir(path, 0750);
++
++	chdir("@GENTOO_DATADIR@");
+ 
+ 	MainWindow *mainWindow= NULL;
+ 	Program *program= NULL;
+--- glest_game/main/program.cpp.old	2008-10-20 22:11:29.000000000 +0200
++++ glest_game/main/program.cpp	2008-10-20 22:12:16.000000000 +0200
+@@ -197,8 +197,10 @@
+ 	updateCameraTimer.init(GameConstants::cameraFps, maxTimes);
+ 
+     //log start
++    	char path[PATH_MAX];
++	snprintf(path, PATH_MAX, "%s/.glest/glest.log", getenv("HOME"));
+ 	Logger &logger= Logger::getInstance();
+-	logger.setFile("glest.log");
++	logger.setFile(path);
+ 	logger.clear();
+ 
+ 	//lang
+--- shared_lib/sources/util/leak_dumper.cpp.old	2008-10-21 22:35:33.000000000 +0200
++++ shared_lib/sources/util/leak_dumper.cpp	2008-10-21 22:36:28.000000000 +0200
+@@ -52,7 +52,9 @@
+ }
+ 
+ AllocRegistry::~AllocRegistry(){
+-	dump("leak_dump.log");
++	char path[PATH_MAX];
++	snprintf(path, PATH_MAX, "%s/.glest/leak_dump.log", getenv("HOME"));
++	dump(path);
+ }
+ 
+ void AllocRegistry::allocate(AllocInfo info){
+--- shared_lib/sources/util/properties.cpp.old	2008-10-19 14:37:19.000000000 +0200
++++ shared_lib/sources/util/properties.cpp	2008-10-19 14:37:49.000000000 +0200
+@@ -13,6 +13,9 @@
+ 
+ #include <fstream>
+ #include <stdexcept>
++#include <limits.h>
++#include <stdlib.h>
++#include <string.h>
+
+ #include "conversion.h"
+ #include "leak_dumper.h"
+@@ -33,9 +33,13 @@
+ 
+ 	this->path= path;
+ 
+-	fileStream.open(path.c_str(), ios_base::in);
++	char str[PATH_MAX];
++	snprintf(str, PATH_MAX, "%s/.glest/%s", getenv("HOME"), path.c_str());
++	fileStream.open(str, ios_base::in);
+ 	if(fileStream.fail()){
+-		throw runtime_error("Can't open propertyMap file: " + path);
++		fileStream.open(path.c_str(), ios_base::in); // use defaults
++		if(fileStream.fail())
++			throw runtime_error("Can't open propertyMap file: " + path);
+ 	}
+ 
+ 	propertyMap.clear();
+@@ -71,7 +75,9 @@
+ void Properties::save(const string &path){
+ 	ofstream fileStream;
+ 
+-	fileStream.open(path.c_str(), ios_base::out | ios_base::trunc);
++	char str[PATH_MAX];
++	snprintf(str, PATH_MAX, "%s/.glest/%s", getenv("HOME"), path.c_str());
++	fileStream.open(str, ios_base::out | ios_base::trunc);
+ 
+ 	fileStream << "; === propertyMap File === \n";	
+ 	fileStream << '\n';
+--- shared_lib/sources/util/profiler.cpp.old	2008-10-21 22:38:11.000000000 +0200
++++ shared_lib/sources/util/profiler.cpp	2008-10-21 22:38:50.000000000 +0200
+@@ -71,7 +71,9 @@
+ Profiler::~Profiler(){
+ 	rootSection->stop();
+ 
+-	FILE *f= fopen("profiler.log", "w");
++	char path[PATH_MAX];
++	snprintf(path, PATH_MAX, "%s/.glest/profiler.log", getenv("HOME"));
++	FILE *f= fopen(path, "w");
+ 	if(f==NULL)
+ 		throw runtime_error("Can not open file: profiler.log");
+ 

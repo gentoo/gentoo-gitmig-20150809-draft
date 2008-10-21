@@ -1,0 +1,31 @@
+--- shared_lib/sources/platform/posix/socket.cpp.old	2008-10-19 13:45:33.000000000 +0200
++++ shared_lib/sources/platform/posix/socket.cpp	2008-10-19 13:48:42.000000000 +0200
+@@ -8,6 +8,8 @@
+ 
+ #include "socket.h"
+ 
++#include <stdlib.h>
++#include <string.h>
+ #include <stdexcept>
+ #include <sstream>
+ #if defined(HAVE_SYS_IOCTL_H)
+--- shared_lib/sources/util/conversion.cpp.old	2008-10-19 14:12:55.000000000 +0200
++++ shared_lib/sources/util/conversion.cpp	2008-10-19 14:13:49.000000000 +0200
+@@ -13,6 +13,7 @@
+ 
+ #include <stdexcept>
+ #include <cstdio>
++#include <stdlib.h>
+ 
+ #include "leak_dumper.h"
+ 
+--- shared_lib/sources/util/util.cpp.old	2008-10-19 14:20:17.000000000 +0200
++++ shared_lib/sources/util/util.cpp	2008-10-19 14:21:07.000000000 +0200
+@@ -14,6 +14,7 @@
+ #include <ctime>
+ #include <cassert>
+ #include <stdexcept>
++#include <string.h>
+ 
+ #include "leak_dumper.h"
+ 
