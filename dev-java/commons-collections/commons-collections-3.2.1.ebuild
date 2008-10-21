@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.2.1.ebuild,v 1.2 2008/06/23 09:43:33 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.2.1.ebuild,v 1.3 2008/10/21 10:32:00 fordfrog Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -45,7 +45,7 @@ src_test() {
 src_install() {
 	java-pkg_newjar build/${P}.jar ${PN}.jar
 	use test-framework && \
-		java-pkg_newjar build/${PN}-testframework-3.2.jar \
+		java-pkg_newjar build/${PN}-testframework-${PV}.jar \
 			${PN}-testframework.jar
 
 	dodoc README.txt || die

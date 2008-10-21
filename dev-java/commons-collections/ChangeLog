@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.49 2008/10/20 23:45:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.50 2008/10/21 10:32:00 fordfrog Exp $
+
+  21 Oct 2008; Miroslav Šulc <fordfrog@gentoo.org>
+  commons-collections-3.2.1.ebuild:
+  Fixed installation of commons-collections-testframework jar
 
   23 Jun 2008; Alistair Bush <ali_bush@gentoo.org>
   commons-collections-3.2-r1.ebuild, commons-collections-3.2.1.ebuild:
