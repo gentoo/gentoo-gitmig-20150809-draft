@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.12-r1.ebuild,v 1.1 2008/10/09 21:38:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.12-r1.ebuild,v 1.2 2008/10/21 00:05:52 betelgeuse Exp $
 
 EAPI=2
 
@@ -46,6 +46,7 @@ RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libXau x11-libs/libXdmcp )
 	|| ( sys-apps/openrc >=sys-apps/baselayout-2.0_rc5 )
 	>=sys-devel/libtool-1.5.24" # it's a valid RDEPEND, libltdl.so is used
 DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.62
 	X? ( x11-proto/xproto )
 	dev-libs/libatomic_ops
 	dev-util/pkgconfig
