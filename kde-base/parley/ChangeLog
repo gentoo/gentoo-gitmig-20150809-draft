@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.13 2008/10/17 19:01:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.14 2008/10/21 11:33:24 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -parley-4.0.4.ebuild, -parley-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
   17 Oct 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
   plasma USE-flag is global now

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/secpolicy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/ChangeLog,v 1.72 2008/09/14 00:00:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/ChangeLog,v 1.73 2008/10/21 11:34:07 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -secpolicy-4.0.4.ebuild, -secpolicy-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
 *secpolicy-3.5.10 (13 Sep 2008)
 

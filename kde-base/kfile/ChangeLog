@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kfile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.10 2008/10/02 08:31:49 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.11 2008/10/21 11:03:17 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -kfile-4.0.4.ebuild, -kfile-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
 *kfile-4.1.2 (02 Oct 2008)
 

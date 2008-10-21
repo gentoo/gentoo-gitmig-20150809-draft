@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kjots
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.91 2008/10/17 18:29:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.92 2008/10/21 11:08:44 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -kjots-4.0.4.ebuild, -kjots-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
   17 Oct 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
   kontact USE-flag is global now

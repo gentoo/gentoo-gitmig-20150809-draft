@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/strigi-analyzer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/strigi-analyzer/ChangeLog,v 1.10 2008/06/09 15:35:18 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/strigi-analyzer/ChangeLog,v 1.11 2008/10/21 11:34:51 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -strigi-analyzer-4.0.4.ebuild, -strigi-analyzer-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
   09 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -strigi-analyzer-4.0.2.ebuild, -strigi-analyzer-4.0.3.ebuild:

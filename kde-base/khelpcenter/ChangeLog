@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.102 2008/10/02 08:43:13 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.103 2008/10/21 11:06:20 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -khelpcenter-4.0.4.ebuild, -khelpcenter-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
 *khelpcenter-4.1.2 (02 Oct 2008)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/phonon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon/ChangeLog,v 1.10 2008/06/09 15:23:45 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon/ChangeLog,v 1.11 2008/10/21 11:33:39 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -phonon-4.0.4.ebuild, -phonon-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
   09 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org> -phonon-4.0.2.ebuild,
   -phonon-4.0.3.ebuild:

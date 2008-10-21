@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.101 2008/10/02 08:47:01 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.102 2008/10/21 11:06:53 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -kig-4.0.4.ebuild, -kig-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
 *kig-4.1.2 (02 Oct 2008)
 

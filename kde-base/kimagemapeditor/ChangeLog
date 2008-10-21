@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kimagemapeditor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.88 2008/10/07 01:35:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.89 2008/10/21 11:07:09 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -kimagemapeditor-4.0.4.ebuild, -kimagemapeditor-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
 *kimagemapeditor-4.1.2 (07 Oct 2008)
 

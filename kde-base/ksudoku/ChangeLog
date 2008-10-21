@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksudoku
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.13 2008/10/02 10:10:44 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.14 2008/10/21 11:22:53 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -ksudoku-4.0.4.ebuild, -ksudoku-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
 *ksudoku-4.1.2 (02 Oct 2008)
 

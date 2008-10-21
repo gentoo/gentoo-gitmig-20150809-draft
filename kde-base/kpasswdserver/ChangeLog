@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpasswdserver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.10 2008/10/02 09:41:34 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.11 2008/10/21 11:16:36 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -kpasswdserver-4.0.4.ebuild, -kpasswdserver-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
 *kpasswdserver-4.1.2 (02 Oct 2008)
 
