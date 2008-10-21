@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9096 2008/10/20 21:54:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9097 2008/10/21 07:29:00 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (21 Oct 2008)
+# Masked for removal in 30 days
+# Old and unneeded or deprecated packages
+dev-perl/VCP-autrijus
+dev-perl/PodToHTML
+dev-perl/FileHandle-Deluxe
+dev-perl/FileHandle-Rollback
+dev-perl/Audio-Tools
 
 # Robin H. Johnson <robbat2@gentoo.org> (20 Oct 2008)
 # Masked for removal in 30 days (see bugs #120220, #137998, #170782) 

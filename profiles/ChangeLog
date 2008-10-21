@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1980 2008/10/20 21:54:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1981 2008/10/21 07:29:00 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Oct 2008; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask dev-perl/VCP-autrijus, dev-perl/PodToHTML,
+  dev-perl/FileHandle-Deluxe, dev-perl/FileHandle-Rollback,
+  dev-perl/Audio-Tools
 
   20 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   update package.mask for GNOME 2.24. (include nautilus)
