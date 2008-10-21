@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.1.ebuild,v 1.7 2007/10/16 19:32:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-1.0.1.ebuild,v 1.8 2008/10/21 21:35:26 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -13,7 +13,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="fbcon"
 RDEPEND="|| ( >=sys-fs/udev-103 sys-apps/hotplug )"
 DEPEND="app-arch/unzip"
-PDEPEND="=media-tv/pvr-firmware-20070217"
+PDEPEND=">=media-tv/ivtv-firmware-20070217"
 
 pkg_setup() {
 
