@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.10.ebuild,v 1.2 2008/06/10 18:41:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.2.10.ebuild,v 1.3 2008/10/21 15:02:12 loki_val Exp $
 
-inherit eutils
+inherit base eutils
 
 DESCRIPTION="A mail notification program"
 HOMEPAGE="http://gnubiff.sourceforge.net/"
@@ -23,6 +23,7 @@ RDEPEND=">=x11-libs/gtk+-2.4
 	x11-proto/xproto"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+PATCHES="${FILESDIR}/${P}-gcc43.patch"
 
 src_compile() {
 	econf $(use_enable debug) \
