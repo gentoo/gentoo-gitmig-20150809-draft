@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyflakes
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.5 2007/05/31 20:47:04 lucass Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.6 2008/10/21 21:18:43 hoffie Exp $
+
+  21 Oct 2008; Christian Hoffmann <hoffie@gentoo.org> pyflakes-0.2.1.ebuild:
+  fixing HOMEPAGE (upstream apparently moved to trac)
 
   31 May 2007; Lukasz Strzygowski <lucass@gentoo.org> pyflakes-0.2.1.ebuild:
   Marked ~amd64.
