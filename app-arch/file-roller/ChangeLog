@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.242 2008/10/06 02:48:43 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.243 2008/10/21 22:26:24 leio Exp $
+
+*file-roller-2.24.1 (21 Oct 2008)
+
+  21 Oct 2008; Mart Raudsepp <leio@gentoo.org> -file-roller-2.24.0.ebuild,
+  +file-roller-2.24.1.ebuild:
+  New bug fix release. Correct GUI spacings in dialogs, properly working
+  remote filesystem archive opening support, bug fixes, translation updates
 
 *file-roller-2.24.0 (06 Oct 2008)
 
