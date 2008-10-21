@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r4.ebuild,v 1.3 2008/06/14 10:17:56 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r4.ebuild,v 1.4 2008/10/21 19:27:54 opfer Exp $
 
 inherit eutils multilib rpm
 
@@ -45,7 +45,7 @@ pkg_setup() {
 
 pkg_nofetch() {
 	einfo "Please download ${A} yourself from www.citrix.com"
-	einfo "http://www.citrix.co.uk/English/SS/downloads/details.asp?dID=2755&downloadID=3323&pID=186"
+	einfo "ftp://www.citrix.co.uk/English/SS/downloads/details.asp?dID=2755&downloadID=3323&pID=186"
 	einfo "and place it in ${DISTDIR}"
 }
 
