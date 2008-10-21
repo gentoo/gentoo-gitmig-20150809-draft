@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-1.0.0.ebuild,v 1.2 2008/10/19 14:39:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-1.0.0.ebuild,v 1.3 2008/10/21 18:32:11 armin76 Exp $
 
 NEED_PYTHON="1.5.2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.scons.org/"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DOCS="RELEASE.txt CHANGES.txt LICENSE.txt"
