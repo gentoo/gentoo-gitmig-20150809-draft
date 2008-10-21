@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p18501.ebuild,v 1.4 2008/10/21 17:43:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p18812.ebuild,v 1.1 2008/10/21 17:43:01 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python confutils
