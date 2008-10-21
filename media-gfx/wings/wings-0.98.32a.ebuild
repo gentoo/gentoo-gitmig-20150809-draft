@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/wings-0.98.32a.ebuild,v 1.6 2008/09/21 13:25:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/wings-0.98.32a.ebuild,v 1.7 2008/10/21 13:58:22 george Exp $
 
 inherit multilib eutils
 
@@ -34,10 +34,10 @@ src_install() {
 
 	find -name 'Makefile*' -exec rm -f '{}' \;
 	for subdir in e3d ebin icons plugins plugins_src src fonts ; do
-		cp -r ${subdir} ${D}/${WINGS_PATH}/ || die
+		cp -r ${subdir} "${D}/${WINGS_PATH}"/ || die
 	done
 
 	dosym ${WINGS_PATH} ${ERL_PATH}/${PN}
-	newbin ${FILESDIR}/wings.sh wings
+	newbin "${FILESDIR}"/wings.sh wings
 	dodoc AUTHORS README
 }

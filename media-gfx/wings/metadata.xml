@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>graphics</herd>
-<maintainer>
-  <email>george@gentoo.org</email>
-</maintainer>
 <longdescription>
 Wings 3D is a polygon mesh modeler inspired by Nendo and 
 Mirai from Izware.
