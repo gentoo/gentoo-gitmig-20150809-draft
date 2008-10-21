@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.362 2008/10/18 10:34:56 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.363 2008/10/21 14:19:58 remi Exp $
+
+  21 Oct 2008; Rémi Cardona <remi@gentoo.org> xorg-server-1.5.2.ebuild:
+  patch has been sent upstream, updating ebuild to reflect that
 
   18 Oct 2008; Rémi Cardona <remi@gentoo.org>
   -files/1.5.2-force-LANG-C-when-running-awk-due-to-unintended-erro.patch,
