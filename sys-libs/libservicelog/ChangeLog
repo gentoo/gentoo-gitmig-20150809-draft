@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/libservicelog
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libservicelog/ChangeLog,v 1.1 2008/10/21 20:08:03 ranger Exp $
+
+*libservicelog-1.0.1 (21 Oct 2008)
+
+  21 Oct 2008; Brent Baude <ranger@gentoo.org>
+  +files/libservicelog-1.0.1.patch.gz, +libservicelog-1.0.1.ebuild:
+  Initial check-in of libservicelog
+
