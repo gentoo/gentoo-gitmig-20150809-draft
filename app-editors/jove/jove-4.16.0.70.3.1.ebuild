@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.1.ebuild,v 1.1 2008/10/05 11:38:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.1.ebuild,v 1.2 2008/10/21 21:53:09 ulm Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -33,11 +33,9 @@ src_unpack() {
 		-e "s:-ltermcap:-lncurses:" \
 		-e "s:^OPTFLAGS =.*:OPTFLAGS = ${CFLAGS}:" \
 		Makefile
-#		-e 's:^SYSDEFS =.*:SYSDEFS="-DSYSVR4 -D_XOPEN_SOURCE=500":' \
 }
 
 src_compile() {
-	local myconf
 	if use unix98 ; then
 		emake SYSDEFS="-DSYSVR4 -D_XOPEN_SOURCE=500" || die
 	else
