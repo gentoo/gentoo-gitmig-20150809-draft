@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.59 2008/05/19 23:41:14 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.60 2008/10/21 00:21:46 yngwin Exp $
+
+  21 Oct 2008; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Taking ownership, in preparation for adding dillo-2.0
 
   19 May 2008; Harald van Dĳk <truedfx@gentoo.org>
   +files/dillo-ac_subst.patch, dillo-0.8.6.ebuild:
