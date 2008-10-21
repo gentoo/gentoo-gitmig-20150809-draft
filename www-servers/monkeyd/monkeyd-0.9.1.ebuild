@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.1.ebuild,v 1.9 2008/06/28 19:12:54 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.1.ebuild,v 1.10 2008/10/21 19:30:54 bangert Exp $
 
-inherit toolchain-funcs depend.php
+inherit eutils toolchain-funcs depend.php
 
 WEBROOT=/var/www/localhost
 
@@ -27,6 +27,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/monkeyd-dont-strip-configure.patch"
 	sed -i '/install -m 755 bin\/banana/d' configure || die "sed banana"
 }
 

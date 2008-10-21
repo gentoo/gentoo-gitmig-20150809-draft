@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.18 2008/06/28 19:12:54 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.19 2008/10/21 19:30:54 bangert Exp $
+
+  21 Oct 2008; Thilo Bangert <bangert@gentoo.org>
+  +files/monkeyd-dont-strip-configure.patch, monkeyd-0.9.1.ebuild,
+  monkeyd-0.9.2.ebuild:
+  dont pre-strip binaries - bug #241456
 
 *monkeyd-0.9.2 (28 Jun 2008)
 
