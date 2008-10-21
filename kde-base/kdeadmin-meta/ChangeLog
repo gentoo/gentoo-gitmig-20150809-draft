@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeadmin-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.100 2008/10/02 07:09:22 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.101 2008/10/21 09:39:17 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -kdeadmin-meta-4.0.4.ebuild, -kdeadmin-meta-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
 *kdeadmin-meta-4.1.2 (02 Oct 2008)
 

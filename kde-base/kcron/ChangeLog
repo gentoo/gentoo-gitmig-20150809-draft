@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcron
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.91 2008/10/02 07:01:19 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.92 2008/10/21 09:35:29 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -kcron-4.0.4.ebuild, -kcron-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
 *kcron-4.1.2 (02 Oct 2008)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kapptemplate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.75 2008/10/02 06:40:09 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapptemplate/ChangeLog,v 1.76 2008/10/21 09:23:27 jmbsvicetto Exp $
+
+  21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -kapptemplate-4.0.4.ebuild, -kapptemplate-4.0.5.ebuild:
+  Removing KDE-4.0.X packages now that 4.1.2 was put in the tree.
 
 *kapptemplate-4.1.2 (02 Oct 2008)
 
