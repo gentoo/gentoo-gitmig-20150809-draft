@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-73.ebuild,v 1.2 2008/08/23 00:26:31 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-77.ebuild,v 1.1 2008/10/21 01:01:55 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
 # Patchset git repo is at http://github.com/dang/kvm-patches/tree/master
-PATCHSET="kvm-patches-20080822"
+PATCHSET="kvm-patches-20081020"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://gentoo/${PATCHSET}.tar.gz"
 
@@ -40,6 +40,7 @@ DEPEND="${RDEPEND}
 QA_TEXTRELS="usr/bin/kvm"
 
 pkg_setup() {
+	linux-info_pkg_setup
 	if use havekernel && use modules ; then
 		ewarn "You have the 'havekernel' and 'modules' use flags enabled."
 		ewarn "'havekernel' trumps 'modules'; the kvm modules will not"
@@ -49,17 +50,24 @@ pkg_setup() {
 		ewarn "You have the 'havekernel' use flag set.  This means you"
 		ewarn "must ensure you have a compatible kernel on your own."
 	elif use modules ; then
+		if ! linux_chkconfig_present KVM; then
+			eerror "KVM now needs CONFIG_KVM built into your kernel, even"
+			eerror "if you're using the external modules from this package."
+			eerror "Please enable KVM support in your kernel, found at:"
+			eerror
+			eerror "  Virtualization"
+			eerror "    Kernel-based Virtual Machine (KVM) support"
+			eerror
+			die "KVM support not detected!"
+		fi
 		BUILD_TARGETS="all"
 		MODULE_NAMES="kvm(kvm:${S}/kernel:${S}/kernel/x86)"
 		MODULE_NAMES="${MODULE_NAMES} kvm-intel(kvm:${S}/kernel:${S}/kernel/x86)"
 		MODULE_NAMES="${MODULE_NAMES} kvm-amd(kvm:${S}/kernel:${S}/kernel/x86)"
 		linux-mod_pkg_setup
-	elif kernel_is lt 2 6 22; then
-		eerror "the kvm in your kernel requires an older version of"
-		eerror "kvm as shown in :"
-		eerror "  http://kvm.qumranet.com/kvmwiki/Downloads"
-		eerror "Either upgrade your kernel, or enable the 'modules'"
-		eerror "USE flag."
+	elif kernel_is lt 2 6 25; then
+		eerror "This version of KVM requres a host kernel of 2.6.25 or higher."
+		eerror "Either upgrade your kernel, or enable the 'modules' USE flag."
 		die "kvm version not compatible"
 	elif ! linux_chkconfig_present KVM; then
 		eerror "Please enable KVM support in your kernel, found at:"
@@ -89,16 +97,10 @@ src_unpack() {
 	# avoid strip
 	sed -i 's/$(INSTALL) -m 755 -s/$(INSTALL) -m 755/' qemu/Makefile
 
-	epatch \
-		"${WORKDIR}/${PATCHSET}"/kvm-45-qemu-configure.patch \
-		"${WORKDIR}/${PATCHSET}"/kvm-61-qemu-kvm.patch \
-		"${WORKDIR}/${PATCHSET}"/kvm-57-qemu-kvm-cmdline.patch \
-		"${WORKDIR}/${PATCHSET}"/kvm-68-libkvm-no-kernel.patch \
-		"${WORKDIR}/${PATCHSET}"/kvm-69-qemu-ifup_ifdown.patch \
-		"${WORKDIR}/${PATCHSET}"/kvm-70-block-rw-range-check.patch \
-		"${WORKDIR}/${PATCHSET}"/kvm-73-qemu-no-blobs.patch \
-		"${WORKDIR}/${PATCHSET}"/kvm-73-qemu-kvm-doc.patch \
-		"${WORKDIR}/${PATCHSET}"/kvm-73-kernel-longmode.patch
+	# apply patchset
+	EPATCH_SOURCE="${WORKDIR}/${PATCHSET}"
+	EPATCH_SUFFIX="patch"
+	epatch
 }
 
 src_compile() {

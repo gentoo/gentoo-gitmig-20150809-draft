@@ -1,6 +1,39 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.17 2008/09/15 14:14:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.18 2008/10/21 01:01:55 dang Exp $
+
+*kvm-77 (21 Oct 2008)
+
+  21 Oct 2008; Daniel Gryniewicz <dang@gentoo.org> -kvm-73.ebuild,
+  +kvm-77.ebuild:
+  Bump kvm to 77
+
+  - 2 important changes from a user's point of view:
+
+  - The minimum version of the kernel for non-module installs is now
+
+  2.6.25.
+
+  - If you're building the modules, you need to have CONFIG_KVM enabled
+
+  in your kernel. This is because a type is not defined unless
+
+  CONFIG_KVM is set, and the compat code won't kick in unless you're
+
+  building completely outside the kernel tree (which we're not). - Important
+  upstream changes:
+
+  - Faster disk emulation
+
+  - Better handling of >4G of RAM
+
+  - Improved VNC
+
+  - Improved USB
+
+  - live migration fixes
+
+  - Speed improvements on 2.6.27+ hosts
 
   15 Sep 2008; Daniel Gryniewicz <dang@gentoo.org> -kvm-71-r2.ebuild,
   -kvm-72.ebuild, -kvm-72-r1.ebuild:
