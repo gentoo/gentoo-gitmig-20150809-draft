@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-77.ebuild,v 1.1 2008/10/21 01:01:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-77.ebuild,v 1.2 2008/10/21 01:08:55 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
+
+EAPI="1"
 
 # Patchset git repo is at http://github.com/dang/kvm-patches/tree/master
 PATCHSET="kvm-patches-20081020"
@@ -16,7 +18,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 # Add bios back when it builds again
-IUSE="alsa esd gnutls havekernel modules ncurses pulseaudio sdl test vde"
+IUSE="alsa esd gnutls havekernel +modules ncurses pulseaudio sdl test vde"
 RESTRICT="test"
 
 RDEPEND="sys-libs/zlib
