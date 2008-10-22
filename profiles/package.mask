@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9103 2008/10/22 13:29:44 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9104 2008/10/22 15:08:11 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,10 +28,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Rémi Cardona <remi@gentoo.org> (22 Oct 2008)
-# getting ready for pkgmove DO NOT USE YET!
-x11-drivers/xf86-video-intel
 
 # Ben de Groot <yngwin@gentoo.org> (22 Oct 2008)
 # Depends on hard-masked x11-libs/fltk:2
@@ -73,6 +69,7 @@ app-portage/genflags
 # Rémi Cardona <remi@gentoo.org> (19 Oct 2008)
 # pre-release, masked for testing
 =x11-drivers/xf86-video-i810-2.4.98*
+=x11-drivers/xf86-video-intel-2.4.98*
 
 # MATSUU Takuto <matsuu@gentoo.org> (18 Oct 2008)
 # Masked for testing.
@@ -104,6 +101,7 @@ net-mail/qmail-vmailmgr
 # Old versions, those are no longer maintained and
 # should not be used, use 2.x instead
 <x11-drivers/xf86-video-i810-2.0.0
+<x11-drivers/xf86-video-intel-2.0.0
 
 # Serkan Kaba <serkan@gentoo.org> (09 Oct 2008)
 # Masked for removal in 30 days (see bug #240734)
