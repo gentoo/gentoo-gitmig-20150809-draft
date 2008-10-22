@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.130 2008/10/21 23:00:46 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.131 2008/10/22 00:12:18 leio Exp $
+
+  22 Oct 2008; Mart Raudsepp <leio@gentoo.org> gtk-engines-2.16.1.ebuild:
+  Remove USE=static and disable static libraries always. gtk-engines only
+  ships dynamic modules that gtk+ dynamically opens, which does not work
+  with static libraries.
 
 *gtk-engines-2.16.1 (21 Oct 2008)
 
