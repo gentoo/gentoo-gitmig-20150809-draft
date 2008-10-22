@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.5 2008/06/27 16:48:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.6 2008/10/22 15:42:26 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -63,7 +63,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_glint
 	video_cards_i128
 	video_cards_i740
-	video_cards_i810
+	video_cards_intel
 	video_cards_impact
 	video_cards_imstt
 	video_cards_mach64
@@ -228,7 +228,7 @@ PDEPEND="
 		video_cards_glint? ( >=x11-drivers/xf86-video-glint-1.1.1 )
 		video_cards_i128? ( >=x11-drivers/xf86-video-i128-1.2.0 )
 		video_cards_i740? ( >=x11-drivers/xf86-video-i740-1.1.0 )
-		video_cards_i810? ( >=x11-drivers/xf86-video-i810-1.6.0 )
+		video_cards_intel? ( >=x11-drivers/xf86-video-intel-1.6.0 )
 		video_cards_impact? ( >=x11-drivers/xf86-video-impact-0.2.0 )
 		video_cards_imstt? ( >=x11-drivers/xf86-video-imstt-1.1.0 )
 		video_cards_mach64? ( >=x11-drivers/xf86-video-mach64-6.8.0 )
