@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.2.ebuild,v 1.7 2008/01/10 22:22:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.2.ebuild,v 1.8 2008/10/22 11:46:03 fordfrog Exp $
 
+EAPI="1"
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
@@ -16,21 +17,21 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
 RDEPEND=">=virtual/jre-1.4
-	>=dev-java/poi-2.0
-	=dev-java/junit-3.8*
-	>=dev-java/ant-core-1.6
-	dev-java/commons-logging
-	>=dev-java/commons-lang-2.1
-	dev-java/commons-collections"
+	>=dev-java/poi-2.0:0
+	>=dev-java/junit-3.8:0
+	>=dev-java/ant-core-1.6:0
+	dev-java/commons-logging:0
+	>=dev-java/commons-lang-2.1:2.1
+	dev-java/commons-collections:0"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	cp ${FILESDIR}/build.xml build.xml
+	cd "${S}"
+	cp "${FILESDIR}"/build.xml build.xml
 
-	cd ${S}/lib || die
+	cd "${S}"/lib || die
 	#rm -v *.jar
 	java-pkg_jar-from poi
 	java-pkg_jar-from junit

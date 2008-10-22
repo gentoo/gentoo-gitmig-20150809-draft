@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/dbunit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.16 2008/01/10 22:22:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.17 2008/10/22 11:46:03 fordfrog Exp $
+
+  22 Oct 2008; Miroslav Šulc <fordfrog@gentoo.org> dbunit-2.2.ebuild:
+  Migrated to EAPI-1 and restricted to dev-java/poi:0 because of
+  incompatibility with dev-java/poi-3.2
 
   10 Jan 2008; Vlastimil Babka <caster@gentoo.org> dbunit-2.2.ebuild:
   Restrict junit dependency.
