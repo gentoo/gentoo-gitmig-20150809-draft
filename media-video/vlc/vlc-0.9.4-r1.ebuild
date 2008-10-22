@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.4-r1.ebuild,v 1.3 2008/10/19 14:14:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.4-r1.ebuild,v 1.4 2008/10/22 03:41:00 aballier Exp $
 
 EAPI="1"
 
@@ -331,10 +331,6 @@ src_compile () {
 		$(vlc_use_enable_force vlm vlm sout) \
 		$(vlc_use_enable_force skins skins2 qt4) \
 		$(vlc_use_enable_force remoteosd remoteosd libgcrypt)
-
-	if [[ $(gcc-major-version) == 2 ]]; then
-		sed -i -e s:"-fomit-frame-pointer":: vlc-config || die "-fomit-frame-pointer patching failed"
-	fi
 
 	emake || die "make of VLC failed"
 }
