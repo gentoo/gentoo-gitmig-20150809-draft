@@ -1,0 +1,27 @@
+From 55678c64bc6e3ed613ea6db14c105c18a0cf28ce Mon Sep 17 00:00:00 2001
+From: Dave Airlie <airlied@linux.ie>
+Date: Tue, 1 Jul 2008 18:51:18 +1000
+Subject: [PATCH] intel: fix drm check.
+
+The -mm check is broken now that 2.3.1 is out.. make it 2.4.0, to be fixed
+with GEM etc.
+---
+ configure.ac |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index af87299..2dabd4f 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -201,7 +201,7 @@ if test "$DRI" = yes; then
+         PKG_CHECK_MODULES(DRI, [libdrm xf86driproto glproto])
+         AC_DEFINE(XF86DRI,1,[Enable DRI driver support])
+         AC_DEFINE(XF86DRI_DEVEL,1,[Enable developmental DRI driver support])
+-	PKG_CHECK_MODULES(DRI_MM, [libdrm >= 2.3.1],[DRI_MM=yes], [DRI_MM=no])
++	PKG_CHECK_MODULES(DRI_MM, [libdrm >= 2.4.0],[DRI_MM=yes], [DRI_MM=no])
+ 	if test "x$DRI_MM" = xyes; then
+ 		AC_DEFINE(XF86DRI_MM,1,[Extended DRI memory management])
+ 	fi
+-- 
+1.5.5.4
+
