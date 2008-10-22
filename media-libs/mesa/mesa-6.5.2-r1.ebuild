@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.2-r1.ebuild,v 1.20 2008/06/27 10:11:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.2-r1.ebuild,v 1.21 2008/10/22 15:43:18 remi Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -16,7 +16,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE_VIDEO_CARDS="
-	video_cards_i810
+	video_cards_intel
 	video_cards_mach64
 	video_cards_mga
 	video_cards_none
@@ -140,7 +140,7 @@ src_unpack() {
 	fi
 
 	# Configurable DRI drivers
-	if use video_cards_i810; then
+	if use video_cards_intel; then
 		add_drivers i810 i915 i915tex i965
 	fi
 	if use video_cards_mach64; then

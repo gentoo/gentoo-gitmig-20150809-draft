@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.2_rc1.ebuild,v 1.3 2008/09/14 19:53:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.2_rc1.ebuild,v 1.4 2008/10/22 15:43:18 remi Exp $
 
 GIT=
 if [[ ${PV} = 9999* ]]; then
@@ -28,7 +28,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE_VIDEO_CARDS="
-	video_cards_i810
+	video_cards_intel
 	video_cards_mach64
 	video_cards_mga
 	video_cards_none
@@ -130,7 +130,7 @@ src_compile() {
 
 	# Configurable DRI drivers
 	driver_enable swrast
-	driver_enable video_cards_i810 i810 i915 i965
+	driver_enable video_cards_intel i810 i915 i965
 	driver_enable video_cards_mach64 mach64
 	driver_enable video_cards_mga mga
 	driver_enable video_cards_r128 r128
