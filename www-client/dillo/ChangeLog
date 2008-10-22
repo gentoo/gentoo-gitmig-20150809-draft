@@ -1,6 +1,13 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.60 2008/10/21 00:21:46 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.61 2008/10/22 00:45:25 yngwin Exp $
+
+*dillo-2.0 (22 Oct 2008)
+
+  22 Oct 2008; Ben de Groot <yngwin@gentoo.org> +files/dillo.png,
+  +files/dillo2-inbuf.patch, +dillo-2.0.ebuild:
+  Adding dillo-2.0, with thanks to Hans Hohenfeld in bug #242774 and the
+  4nykey overlay. Dropping keywords, as this is a port from GTK1 to FLTK2.
 
   21 Oct 2008; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Taking ownership, in preparation for adding dillo-2.0
@@ -400,11 +407,11 @@
 
   11 Dec 2002; Brad Cowan <bcowan@gentoo.org> dillo-0.6.6-r3.ebuild,
   files/digest-dillo-0.6.6-r3:
-  
+
   Changed ebuild to use eutils to patch using epatch.
-    
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *dillo-0.6.6-r1 (16 Aug 2002)
 
   16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> dillo-0.6.6-r1.ebuild :
@@ -413,14 +420,14 @@
   applied:
 
   scaling: http://pigeond.net/dillo/  (try adding in your ~/.dillorc: panel_size=stack)
-  
+
   gzip'd html support: http://twirl.mcc.ac.uk/dillo/dillo_gzip.html
 
   embeddable dillo, local browsing, full window startup and command line
   enhancements: http://melvin.hadasht.free.fr/home/dillo/sylpheed/
 
   alternative icons: http://dillo.cipsga.org.br/Icons/
-  
+
 *dillo-0.6.6 (30 May 2002)
 
   14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> dillo-0.6.6.ebuild :
@@ -453,7 +460,7 @@
 *dillo-0.6.4 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
