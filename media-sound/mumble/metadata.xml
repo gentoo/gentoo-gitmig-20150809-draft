@@ -8,4 +8,7 @@
 <longdescription lang="en">
 Mumble is a low-latency, high quality voice chat software primarily intended for use while gaming.
 </longdescription>
+<use>
+	<flag name='speech'>Enables text-to-speech support in Mumble.</flag>
+</use>
 </pkgmetadata>
