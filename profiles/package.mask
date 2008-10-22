@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9099 2008/10/21 18:10:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9100 2008/10/22 00:36:19 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (22 Oct 2008)
+# Depends on hard-masked x11-libs/fltk:2
+~www-client/dillo-2.0
 
 # Daniel Gryniewicz <dang@gentoo.org> (21 Oct 2008)
 # Forgot to upload patches.  Masked until mirrors sync
