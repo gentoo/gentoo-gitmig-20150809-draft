@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3976 2008/10/22 22:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.3977 2008/10/22 23:27:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1332,6 +1332,7 @@ media-sound/mpfc:cdaudio - Enable cd audio playback support
 media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123:3dnowext - Enable 3dnowext cpu instructions
 media-sound/mpg123:network - Enable network support (http streams / webradio)
+media-sound/mumble:speech - Enables text-to-speech support in Mumble.
 media-sound/murmur:logrotate - Use app-admin/logrotate for rotating logs
 media-sound/musepack-tools:16bit - Higher quality sound output using dithering and noise-shaping
 media-sound/ncmpc:clock-screen - Enable clock screen
