@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1983 2008/10/22 00:36:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1984 2008/10/22 10:23:14 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Oct 2008; Rémi Cardona <remi@gentoo.org> package.mask:
+  libdrm should be safe now, and xf86-video-i810-2.4.0 is no longer in
+  portage
 
   22 Oct 2008; Ben de Groot <yngwin@gentoo.org> package.mask:
   Masking www-client/dillo-2.0 because it depends on hard-masked
