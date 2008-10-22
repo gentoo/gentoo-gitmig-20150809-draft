@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p15634.ebuild,v 1.6 2008/10/02 14:49:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20.2_p15634.ebuild,v 1.7 2008/10/22 15:41:35 remi Exp $
 
 EAPI=1
 
@@ -10,7 +10,7 @@ DESCRIPTION="Homebrew PVR project"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
-IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
+IUSE_VIDEO_CARDS="video_cards_intel video_cards_nvidia video_cards_via"
 
 IUSE="alsa altivec autostart backendonly crciprec dbox2 debug directv dts dvb dvd freebox frontendonly hdhomerun ieee1394 ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
 
@@ -26,7 +26,7 @@ RDEPEND=">=media-libs/freetype-2.0
 		x11-libs/libXvMC
 		video_cards_nvidia? ( x11-drivers/nvidia-drivers )
 		video_cards_via? ( x11-drivers/xf86-video-via )
-		video_cards_i810? ( x11-drivers/xf86-video-i810 )
+		video_cards_intel? ( x11-drivers/xf86-video-intel )
 	)
 	x11-libs/qt:3
 	virtual/mysql
@@ -80,7 +80,7 @@ pkg_setup() {
 		echo
 	fi
 
-	if use xvmc && ! ( use video_cards_i810 || use video_cards_nvidia || use video_cards_via ); then
+	if use xvmc && ! ( use video_cards_intel || use video_cards_nvidia || use video_cards_via ); then
 		echo
 		eerror "You enabled the XvMC USE flag but did not configure VIDEO_CARDS with either"
 		eerror "an nVidia, Intel i810, or VIA video card."
