@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1987 2008/10/22 15:08:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.1988 2008/10/22 15:45:26 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Oct 2008; Rémi Cardona <remi@gentoo.org> updates/3Q-2008:
+  pkgmove from xf86-video-i810 to xf86-video-intel
 
   22 Oct 2008; Rémi Cardona <remi@gentoo.org> package.mask:
   remove xf86-video-intel from p.mask
