@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Authen-Htpasswd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-Htpasswd/ChangeLog,v 1.1 2008/09/07 13:33:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-Htpasswd/ChangeLog,v 1.2 2008/10/22 09:17:02 tove Exp $
+
+*Authen-Htpasswd-0.16.1 (22 Oct 2008)
+
+  22 Oct 2008; Torsten Veller <tove@gentoo.org>
+  +Authen-Htpasswd-0.16.1.ebuild:
+  Version bump
 
 *Authen-Htpasswd-0.16 (07 Sep 2008)
 
