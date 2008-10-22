@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.61 2008/10/22 00:45:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.62 2008/10/22 15:02:07 yngwin Exp $
+
+  22 Oct 2008; Ben de Groot <yngwin@gentoo.org> dillo-2.0.ebuild:
+  Do not die when doc useflag is disabled.
 
 *dillo-2.0 (22 Oct 2008)
 

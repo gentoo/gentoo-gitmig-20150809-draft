@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.0.ebuild,v 1.1 2008/10/22 00:45:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.0.ebuild,v 1.2 2008/10/22 15:02:07 yngwin Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -46,7 +46,9 @@ src_install() {
 	dodir /etc
 	emake DESTDIR="${D}" install || die "install failed"
 
-	use doc && dohtml html/* || die "install documentation failed"
+	if use doc; then
+		dohtml html/* || die "install documentation failed"
+	fi
 	dodoc AUTHORS ChangeLog README NEWS
 	docinto doc
 	dodoc doc/*.txt doc/README
