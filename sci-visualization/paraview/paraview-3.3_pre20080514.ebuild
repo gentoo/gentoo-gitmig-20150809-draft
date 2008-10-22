@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.3_pre20080514.ebuild,v 1.5 2008/10/15 22:28:43 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.3_pre20080514.ebuild,v 1.6 2008/10/22 15:24:11 markusle Exp $
 
 EAPI="1"
 
@@ -63,7 +63,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc4.3.patch
 	epatch "${FILESDIR}"/${P}-qt4.4.patch
 	epatch "${FILESDIR}"/${PN}-3.2.1-openmpi.patch
-	epatch "${FILESDIR}"/${P}-hdf5.patch
+	use hdf5 && epatch "${FILESDIR}"/${P}-hdf5.patch
 	epatch "${DISTDIR}"/${P}-OpenFOAM-1.5.patch.bz2
 
 	# rename paraview's assistant wrapper
