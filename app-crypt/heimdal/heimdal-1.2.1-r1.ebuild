@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r1.ebuild,v 1.1 2008/08/19 10:01:12 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r1.ebuild,v 1.2 2008/10/22 07:56:39 mueli Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -58,12 +58,9 @@ src_unpack() {
 	elog ""
 	elog "Heimdal is still under development in gentoo and you might"
 	elog "find problems with dependencies to virtual/krb5. Nevertheless"
-	elog "it's still usable. For more information visit:"
+	elog "it's still usable. Please report bugs!"
 	elog ""
-	elog "    http://bugs.gentoo.org/show_bug.cgi?id=185899"
-	elog ""
-	elog "I can also recommend to use our kerberos overlay at:"
-	elog ""
+	elog "There is also a development overlay at: (not for productive use)"
 	elog "    git://git.overlays.gentoo.org/proj/kerberos.git"
 	elog ""
 }

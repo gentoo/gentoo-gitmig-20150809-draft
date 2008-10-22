@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.124 2008/08/19 10:01:12 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.125 2008/10/22 07:56:39 mueli Exp $
+
+  22 Oct 2008; Michael Hammer <mueli@gentoo.org> heimdal-1.2.1-r1.ebuild:
+  changed elog message due to bug close
 
 *heimdal-1.2.1-r1 (19 Aug 2008)
 
