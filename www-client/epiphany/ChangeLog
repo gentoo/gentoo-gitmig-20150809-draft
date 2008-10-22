@@ -1,6 +1,13 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.172 2008/10/10 11:43:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.173 2008/10/22 22:16:43 eva Exp $
+
+*epiphany-2.24.1-r10 (22 Oct 2008)
+*epiphany-2.24.1 (22 Oct 2008)
+
+  22 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +epiphany-2.24.1.ebuild, +epiphany-2.24.1-r10.ebuild:
+  bump to 2.24.1, bug fixes.
 
   10 Oct 2008; Raúl Porcel <armin76@gentoo.org> epiphany-2.24.0.1.ebuild:
   Add ~alpha/~ia64/~sparc wrt #239847
