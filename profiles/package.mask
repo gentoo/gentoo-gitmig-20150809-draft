@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9104 2008/10/22 15:08:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9105 2008/10/22 23:26:55 tgurr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1146,10 +1146,6 @@ dev-php5/php-java-bridge
 # Abandonware. Masked for removal.
 net-misc/fsh
 dev-lang/entity
-
-# Timothy Redaelli <drizzt@gentoo.org> (23 Dec 2007)
-# Masked for testing
->media-sound/mumble-1.0.0
 
 # Ulrich Mueller <ulm@gentoo.org> (21 Dec 2007)
 # Christian Faulhammer <opfer@gentoo.org>
