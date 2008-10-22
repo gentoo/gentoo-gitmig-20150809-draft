@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Package-Constants
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Package-Constants/ChangeLog,v 1.4 2008/10/21 17:00:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Package-Constants/ChangeLog,v 1.5 2008/10/22 19:32:23 gmsoft Exp $
+
+  22 Oct 2008; Guy Martin <gmsoft@gentoo.org> Package-Constants-0.01.ebuild:
+  hppa stable, #192989
 
   21 Oct 2008; Markus Rothe <corsair@gentoo.org>
   Package-Constants-0.01.ebuild:
