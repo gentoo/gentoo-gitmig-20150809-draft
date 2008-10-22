@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.53 2008/10/22 12:17:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.54 2008/10/22 14:15:56 george Exp $
+
+  22 Oct 2008; George Shapovalov <george@gentoo.org> kdesvn-1.0.4.ebuild:
+  added LINGUAS support, thanks to Theo Chatzimichos (#238245) for
+  suggestion
 
 *kdesvn-1.0.4 (21 Oct 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.0.4.ebuild,v 1.1 2008/10/22 12:17:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.0.4.ebuild,v 1.2 2008/10/22 14:15:56 george Exp $
 
 inherit qt3 kde-functions versionator
 
@@ -23,13 +23,23 @@ DEPEND="${RDEPEND}
 
 need-kde 3.3
 
+LANGS="ca cs de es fr gl it ja lt nl pa ru sv"
+
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
+
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
+
+	cd "${WORKDIR}/${P}/po"
+	for X in ${LANGS} ; do
+		use linguas_${X} || rm -f "${X}."*
+	done
 
 	# this seems to be again necessary
 	sed -i -e "s:\${APR_CPP_FLAGS}:\${APR_CPP_FLAGS} \"-DQT_THREAD_SUPPORT\":" \
-		CMakeLists.txt || die "QT_THREAD_SUPPORT sed failed"
+		"${S}"/CMakeLists.txt || die "QT_THREAD_SUPPORT sed failed"
 }
 
 src_compile() {
