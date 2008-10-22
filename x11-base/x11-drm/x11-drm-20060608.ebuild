@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.14 2008/09/13 01:12:14 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.15 2008/10/22 16:12:49 remi Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -8,7 +8,7 @@ WANT_AUTOMAKE="1.7"
 inherit eutils x11 linux-mod autotools
 
 IUSE_VIDEO_CARDS="
-	video_cards_i810
+	video_cards_intel
 	video_cards_mach64
 	video_cards_mga
 	video_cards_nv
@@ -181,7 +181,7 @@ set_vidcards() {
 	VIDCARDS=""
 
 	if [[ -n "${VIDEO_CARDS}" ]]; then
-		use video_cards_i810 && \
+		use video_cards_intel && \
 			VIDCARDS="${VIDCARDS} i810.${KV_OBJ} i830.${KV_OBJ} i915.${KV_OBJ}"
 		use video_cards_mach64 && \
 			VIDCARDS="${VIDCARDS} mach64.${KV_OBJ}"
