@@ -1,11 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.4.98.0.ebuild,v 1.1 2008/10/22 13:55:23 remi Exp $
-
-# Must be before x-modular eclass is inherited
-# Enable snapshot to get the man page in the right place
-# This should be fixed with a XDP patch later
-XDPVER=-1
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.4.98.0.ebuild,v 1.2 2008/10/22 15:17:16 remi Exp $
 
 inherit x-modular
 
