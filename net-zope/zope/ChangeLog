@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.141 2008/07/08 06:30:50 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.142 2008/10/22 19:31:55 tupone Exp $
+
+  22 Oct 2008; <tupone@gentoo.org> -files/i18n-1.0.0.patch,
+  -files/2.9/zope-2.9.4_logerror.patch, -zope-2.9.3.ebuild:
+  Removing version 2.9.3 vulnerable to CVE-2007-0240: Hotfix for cross-site
+  scripting vulnerability
 
   08 Jul 2008; Tupone Alfredo <tupone@gentoo.org>
   -files/2.7.8/i18n-1.0.0.patch, -files/2.6.4/zope.confd,
