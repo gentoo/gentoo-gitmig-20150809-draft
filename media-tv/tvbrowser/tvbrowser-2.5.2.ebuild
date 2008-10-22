@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.2.ebuild,v 1.7 2008/01/10 22:42:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.5.2.ebuild,v 1.8 2008/10/22 12:20:52 fordfrog Exp $
 
+EAPI="1"
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 JAVA_PKG_IUSE="doc source"
@@ -20,27 +21,27 @@ KEYWORDS="~x86 ~amd64"
 
 RDEPEND="
 	>=virtual/jre-1.5
-	x11-libs/libXt
-	x11-libs/libSM
-	x11-libs/libICE
-	x11-libs/libXext
-	x11-libs/libXtst
-	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXdmcp
-	=dev-java/junit-3.8*
-	dev-java/commons-net
-	>=dev-java/jgoodies-forms-1.0.7
-	>=dev-java/jgoodies-looks-2.0
-	>=dev-java/bsh-2.0_beta1
-	>=dev-java/skinlf-6.7
-	dev-java/l2fprod-common
-	>=dev-java/poi-2.5.1
-	>=dev-java/xerces-2.8"
+	x11-libs/libXt:0
+	x11-libs/libSM:0
+	x11-libs/libICE:0
+	x11-libs/libXext:0
+	x11-libs/libXtst:0
+	x11-libs/libX11:0
+	x11-libs/libXau:0
+	x11-libs/libXdmcp:0
+	>=dev-java/junit-3.8:0
+	dev-java/commons-net:0
+	>=dev-java/jgoodies-forms-1.0.7:0
+	>=dev-java/jgoodies-looks-2.0:2.0
+	>=dev-java/bsh-2.0_beta1:0
+	>=dev-java/skinlf-6.7:0
+	dev-java/l2fprod-common:0
+	>=dev-java/poi-2.5.1:0
+	>=dev-java/xerces-2.8:2"
 
 DEPEND=">=virtual/jdk-1.5
 	${RDEPEND}
-	app-arch/unzip"
+	app-arch/unzip:0"
 
 LICENSE="GPL-2"
 

@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.6.2.ebuild,v 1.3 2008/01/14 00:31:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.6.2.ebuild,v 1.4 2008/10/22 12:20:52 fordfrog Exp $
 
+EAPI="1"
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2 autotools flag-o-matic
@@ -58,28 +59,28 @@ KEYWORDS="~x86 ~amd64"
 # use local jar files
 
 RDEPEND=">=virtual/jre-1.5
-	x11-libs/libXt
-	x11-libs/libSM
-	x11-libs/libICE
-	x11-libs/libXext
-	x11-libs/libXtst
-	x11-libs/libX11
-	x11-libs/libXau
-	x11-libs/libXdmcp
-	dev-java/junit
-	dev-java/commons-net
-	>=dev-java/jgoodies-forms-1.1.0
-	>=dev-java/jgoodies-looks-2.0
-	dev-java/bsh
-	dev-java/l2fprod-common
-	>=dev-java/jakarta-oro-2.0
-	>=dev-java/poi-2.5.1
-	>=dev-java/xerces-2.8"
+	x11-libs/libXt:0
+	x11-libs/libSM:0
+	x11-libs/libICE:0
+	x11-libs/libXext:0
+	x11-libs/libXtst:0
+	x11-libs/libX11:0
+	x11-libs/libXau:0
+	x11-libs/libXdmcp:0
+	dev-java/junit:0
+	dev-java/commons-net:0
+	>=dev-java/jgoodies-forms-1.1.0:0
+	>=dev-java/jgoodies-looks-2.0:2.0
+	dev-java/bsh:0
+	dev-java/l2fprod-common:0
+	>=dev-java/jakarta-oro-2.0:2.0
+	>=dev-java/poi-2.5.1:0
+	>=dev-java/xerces-2.8:2"
 
 DEPEND=">=virtual/jdk-1.5
 	${RDEPEND}
-	app-arch/unzip
-	source? ( app-arch/zip )"
+	app-arch/unzip:0
+	source? ( app-arch/zip:0 )"
 
 LICENSE="GPL-2"
 
