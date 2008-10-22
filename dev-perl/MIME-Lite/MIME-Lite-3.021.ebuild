@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/MIME-Lite-3.021.ebuild,v 1.1 2008/10/22 10:22:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/MIME-Lite-3.021.ebuild,v 1.2 2008/10/22 14:37:38 tove Exp $
 
 MODULE_AUTHOR=RJBS
-inherit perl-module
+inherit perl-module eutils
 
 DESCRIPTION="low-calorie MIME generator"
 
@@ -18,6 +18,11 @@ DEPEND="dev-lang/perl
 	dev-perl/MailTools"
 
 #SRC_TEST=do
+src_unpack(){
+	perl-module_src_unpack
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-no_sendmail.patch"
+}
 
 src_install(){
 	perl-module_src_install
