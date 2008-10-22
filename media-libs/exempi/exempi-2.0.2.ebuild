@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/exempi-2.0.2.ebuild,v 1.1 2008/10/11 22:30:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/exempi-2.0.2.ebuild,v 1.2 2008/10/22 22:37:30 eva Exp $
 
 inherit autotools eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 	# don't waste time on autoreconf for those who don't want to run unit tests
 	if use test; then
 		epatch "${FILESDIR}/${PN}-1.99.9-boost.m4.BOOST_FIND_LIB.patch"
-		AT_M4DIR="m4" eautoreconf
+		eautoreconf
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/exempi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.1 2008/10/11 22:30:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.2 2008/10/22 22:37:30 eva Exp $
+
+  22 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/exempi-1.99.9-boost.m4.BOOST_FIND_LIB.patch, exempi-2.0.2.ebuild:
+  add missing patch, bug #243024.
 
 *exempi-2.0.2 (11 Oct 2008)
 
