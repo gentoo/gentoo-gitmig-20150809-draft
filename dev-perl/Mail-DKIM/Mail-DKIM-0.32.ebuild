@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/Mail-DKIM-0.32.ebuild,v 1.1 2008/10/22 11:18:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/Mail-DKIM-0.32.ebuild,v 1.2 2008/10/22 11:27:56 tove Exp $
 
 MODULE_AUTHOR=JASLONG
 inherit perl-module
@@ -24,7 +24,7 @@ SRC_TEST="do"
 src_test(){
 	# disable online tests
 	for test in policy verifier ; do
-		mv ${S}/t/${test}.t{,.disable}
+		mv "${S}"/t/${test}.t{,.disable}
 	done
 	perl-module_src_test
 }
