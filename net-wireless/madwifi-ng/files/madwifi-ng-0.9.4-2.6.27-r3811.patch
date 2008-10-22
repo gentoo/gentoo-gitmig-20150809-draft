@@ -1,14 +1,14 @@
-Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
-===================================================================
---- /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c (revision 3080)
-+++ /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c (revision 3811)
-@@ -1552,4 +1552,5 @@
+=== modified file 'net80211/ieee80211_wireless.c'
+--- net80211/ieee80211_wireless.c	2008-10-22 18:13:35 +0000
++++ net80211/ieee80211_wireless.c	2008-10-22 18:13:41 +0000
+@@ -1551,11 +1551,19 @@
+ 
  struct iwscanreq {		/* XXX: right place for this declaration? */
  	struct ieee80211vap *vap;
 +	struct iw_request_info *info;
  	char *current_ev;
  	char *end_buf;
-@@ -1557,4 +1558,11 @@
+ 	int mode;
  };
  
 +#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 27) && !defined(IW_REQUEST_FLAG_COMPAT)
@@ -20,7 +20,9 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +#endif
  static int
  giwscan_cb(void *arg, const struct ieee80211_scan_entry *se)
-@@ -1591,5 +1599,6 @@
+ {
+@@ -1590,7 +1598,8 @@
+ 		IEEE80211_ADDR_COPY(iwe.u.ap_addr.sa_data, se->se_macaddr);
  	else
  		IEEE80211_ADDR_COPY(iwe.u.ap_addr.sa_data, se->se_bssid);
 -	current_ev = iwe_stream_add_event(current_ev, end_buf, &iwe, IW_EV_ADDR_LEN);
@@ -28,7 +30,9 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +					&iwe, IW_EV_ADDR_LEN);
  
  	/* We ran out of space in the buffer. */
-@@ -1604,9 +1613,9 @@
+ 	if (last_ev == current_ev)
+@@ -1603,11 +1612,11 @@
+ 	if (vap->iv_opmode == IEEE80211_M_HOSTAP) {
  		iwe.u.data.length = vap->iv_des_nssid > 0 ?
  			vap->iv_des_ssid[0].len : 0;
 -		current_ev = iwe_stream_add_point(current_ev,
@@ -40,7 +44,9 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +		current_ev = iwe_stream_add_point(req->info, current_ev,
  			end_buf, &iwe, (char *) se->se_ssid+2);
  	}
-@@ -1622,6 +1631,6 @@
+ 
+@@ -1621,8 +1630,8 @@
+ 		iwe.cmd = SIOCGIWMODE;
  		iwe.u.mode = se->se_capinfo & IEEE80211_CAPINFO_ESS ?
  			IW_MODE_MASTER : IW_MODE_ADHOC;
 -		current_ev = iwe_stream_add_event(current_ev,
@@ -49,7 +55,9 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +				end_buf, &iwe, IW_EV_UINT_LEN);
  
  		/* We ran out of space in the buffer. */
-@@ -1635,6 +1644,6 @@
+ 		if (last_ev == current_ev)
+@@ -1634,8 +1643,8 @@
+ 	iwe.cmd = SIOCGIWFREQ;
  	iwe.u.freq.m = se->se_chan->ic_freq * 100000;
  	iwe.u.freq.e = 1;
 -	current_ev = iwe_stream_add_event(current_ev,
@@ -58,7 +66,9 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +			end_buf, &iwe, IW_EV_FREQ_LEN);
  
  	/* We ran out of space in the buffer. */
-@@ -1646,6 +1655,6 @@
+ 	if (last_ev == current_ev)
+@@ -1645,8 +1654,8 @@
+ 	last_ev = current_ev;
  	iwe.cmd = IWEVQUAL;
  	set_quality(&iwe.u.qual, se->se_rssi, ATH_DEFAULT_NOISE);
 -	current_ev = iwe_stream_add_event(current_ev,
@@ -67,7 +77,9 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +			end_buf, &iwe, IW_EV_QUAL_LEN);
  
  	/* We ran out of space in the buffer */
-@@ -1661,5 +1670,6 @@
+ 	if (last_ev == current_ev)
+@@ -1660,7 +1669,8 @@
+ 	else
  		iwe.u.data.flags = IW_ENCODE_DISABLED;
  	iwe.u.data.length = 0;
 -	current_ev = iwe_stream_add_point(current_ev, end_buf, &iwe, "");
@@ -75,14 +87,16 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +					end_buf, &iwe, "");
  
  	/* We ran out of space in the buffer. */
-@@ -1670,5 +1680,5 @@
+ 	if (last_ev == current_ev)
+@@ -1669,28 +1679,28 @@
+ 	memset(&iwe, 0, sizeof(iwe));
  	last_ev = current_ev;
  	iwe.cmd = SIOCGIWRATE;
 -	current_val = current_ev + IW_EV_LCP_LEN;
 +	current_val = current_ev + iwe_stream_lcp_len(req->info);
  	/* NB: not sorted, does it matter? */
  	for (j = 0; j < se->se_rates[1]; j++) {
-@@ -1676,7 +1686,7 @@
+ 		int r = se->se_rates[2 + j] & IEEE80211_RATE_VAL;
  		if (r != 0) {
  			iwe.u.bitrate.value = r * (1000000 / 2);
 -			current_val = iwe_stream_add_value(current_ev,
@@ -93,7 +107,8 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +					&iwe, IW_EV_PARAM_LEN);
  		}
  	}
-@@ -1685,11 +1695,11 @@
+ 	for (j = 0; j < se->se_xrates[1]; j++) {
+ 		int r = se->se_xrates[2+j] & IEEE80211_RATE_VAL;
  		if (r != 0) {
  			iwe.u.bitrate.value = r * (1000000 / 2);
 -			current_val = iwe_stream_add_value(current_ev,
@@ -109,7 +124,9 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +	if ((current_val - current_ev) > iwe_stream_lcp_len(req->info)) {
  		current_ev = current_val;
  	} else {
-@@ -1705,5 +1715,6 @@
+ 	  /* We ran out of space in the buffer. */
+@@ -1704,7 +1714,8 @@
+ 	iwe.cmd = IWEVCUSTOM;
  	snprintf(buf, sizeof(buf), "bcn_int=%d", se->se_intval);
  	iwe.u.data.length = strlen(buf);
 -	current_ev = iwe_stream_add_point(current_ev, end_buf, &iwe, buf);
@@ -117,7 +134,9 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +					end_buf, &iwe, buf);
  
  	/* We ran out of space in the buffer. */
-@@ -1729,6 +1740,6 @@
+ 	if (last_ev == current_ev)
+@@ -1728,8 +1739,8 @@
+ 				rsn_leader, sizeof(rsn_leader) - 1);
  #endif
  		if (iwe.u.data.length != 0) {
 -			current_ev = iwe_stream_add_point(current_ev, end_buf,
@@ -126,7 +145,9 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +					current_ev, end_buf, &iwe, buf);
  			
  			/* We ran out of space in the buffer */
-@@ -1755,6 +1766,6 @@
+ 			if (last_ev == current_ev)
+@@ -1754,8 +1765,8 @@
+ 			wpa_leader, sizeof(wpa_leader) - 1);
  #endif
  		if (iwe.u.data.length != 0) {
 -			current_ev = iwe_stream_add_point(current_ev, end_buf,
@@ -135,7 +156,9 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +					current_ev, end_buf, &iwe, buf);
  			
  			/* We ran out of space in the buffer. */
-@@ -1774,6 +1785,6 @@
+ 			if (last_ev == current_ev)
+@@ -1773,8 +1784,8 @@
+ 			se->se_wme_ie, se->se_wme_ie[1] + 2,
  			wme_leader, sizeof(wme_leader) - 1);
  		if (iwe.u.data.length != 0) {
 -			current_ev = iwe_stream_add_point(current_ev, end_buf,
@@ -144,7 +167,9 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +					current_ev, end_buf, &iwe, buf);
  
  			/* We ran out of space in the buffer. */
-@@ -1792,6 +1803,6 @@
+ 			if (last_ev == current_ev)
+@@ -1791,8 +1802,8 @@
+ 			se->se_ath_ie, se->se_ath_ie[1] + 2,
  			ath_leader, sizeof(ath_leader) - 1);
  		if (iwe.u.data.length != 0) {
 -			current_ev = iwe_stream_add_point(current_ev, end_buf,
@@ -153,9 +178,13 @@ Index: /madwifi/branches/madwifi-0.9.4/net80211/ieee80211_wireless.c
 +					current_ev, end_buf, &iwe, buf);
  
  			/* We ran out of space in the buffer. */
-@@ -1816,4 +1827,5 @@
+ 			if (last_ev == current_ev)
+@@ -1815,6 +1826,7 @@
+ 	int res = 0;
  
  	req.vap = vap;
 +	req.info = info;
  	req.current_ev = extra;
  	if (data->length == 0) {
+ 	  req.end_buf = extra + IW_SCAN_MAX_DATA;
+

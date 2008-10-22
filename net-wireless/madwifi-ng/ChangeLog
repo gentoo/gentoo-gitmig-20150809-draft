@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.61 2008/10/20 03:11:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.62 2008/10/22 18:25:42 pva Exp $
+
+  22 Oct 2008; Peter Volkov <pva@gentoo.org>
+  files/madwifi-ng-0.9.4-2.6.27-r3811.patch:
+  Updated patch to make it workable with all sys-devel/patch versions.
 
   20 Oct 2008; Peter Volkov <pva@gentoo.org>
   +files/madwifi-ng-0.9.4-2.6.27-r3811.patch, madwifi-ng-0.9.4-r1.ebuild:
