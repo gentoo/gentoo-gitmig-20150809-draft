@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/yacc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.19 2008/10/04 18:57:18 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.20 2008/10/22 19:32:13 fmccor Exp $
+
+  22 Oct 2008; Ferris McCormick <fmccor@gentoo.org> yacc-1.9.1-r4.ebuild:
+  Sparc stable, part of Security Bug #232005.
 
 *yacc-1.9.1-r4 (04 Oct 2008)
 
