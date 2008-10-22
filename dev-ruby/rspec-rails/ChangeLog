@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/rspec-rails
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.1 2008/10/22 07:45:02 graaff Exp $
+
+*rspec-rails-1.1.9 (22 Oct 2008)
+
+  22 Oct 2008; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
+  +rspec-rails-1.1.9.ebuild:
+  Initial import.
+
