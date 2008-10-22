@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.0.ebuild,v 1.1 2008/10/21 11:49:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.0.ebuild,v 1.2 2008/10/22 19:00:28 bicatali Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -13,8 +13,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ada doc examples fortran fortran95 gd gnome java jpeg gif latex
-	octave pdf perl png python qhull svga tcl threads tk truetype wxwindows X"
+IUSE="ada doc examples fortran gd gnome java jpeg latex	octave pdf perl
+	png python qhull svga tcl threads tk truetype wxwindows X"
 
 RDEPEND="ada? ( virtual/gnat )
 	java? ( >=virtual/jre-1.5 )
@@ -53,9 +53,8 @@ DEPEND="${RDEPEND}
 	qhull? ( media-libs/qhull )"
 
 pkg_setup() {
-	FORTRAN="gfortran ifc g77"
-	use fortran95 && FORTRAN="gfortran ifc"
-	if use fortran || use fortran95; then
+	if use fortran; then
+		FORTRAN="gfortran ifc g77"
 		fortran_pkg_setup
 	fi
 	export FC=${FORTRANC} F77=${FORTRANC}
@@ -116,7 +115,6 @@ src_configure() {
 		$(cmake-utils_has truetype FREETYPE)
 		$(cmake-utils_use_enable ada ada)
 		$(cmake-utils_use_enable fortran f77)
-		$(cmake-utils_use_enable fortran95 f95)
 		$(cmake-utils_use_enable java java)
 		$(cmake-utils_use_enable gnome gnome2)
 		$(cmake-utils_use_enable octave octave)
@@ -130,6 +128,9 @@ src_configure() {
 		$(cmake-utils_pld pdf pdf)
 		$(cmake-utils_pld latex pstex)
 		$(cmake-utils_pld svga linuxvga)"
+
+	use fortran && [[ ${FORTRANC} != g77 ]] && \
+		mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable fortran f95)"
 
 	use truetype && mycmakeargs="${mycmakeargs}
 		-DPL_FREETYPE_FONT_PATH:PATH=/usr/share/fonts/freefont-ttf"
