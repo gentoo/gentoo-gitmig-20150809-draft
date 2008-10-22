@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.15 2008/09/21 00:12:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.16 2008/10/22 14:49:29 remi Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -167,6 +167,7 @@ video_cards_newport
 video_cards_chips
 video_cards_apm
 video_cards_i810
+video_cards_intel
 video_cards_nv
 video_cards_vesa
 video_cards_vga

@@ -1,5 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.5 2008/09/26 13:15:24 jer Exp $
+# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.6 2008/10/22 14:49:28 remi Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Unmask the flag which corresponds to ARCH.
@@ -94,6 +94,7 @@ video_cards_i128
 video_cards_i740
 video_cards_i810
 video_cards_imstt
+video_cards_intel
 video_cards_mach64
 video_cards_mga
 video_cards_neomagic
