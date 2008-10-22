@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Mail-DKIM
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.18 2008/09/15 11:32:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.19 2008/10/22 11:18:22 tove Exp $
+
+*Mail-DKIM-0.32 (22 Oct 2008)
+
+  22 Oct 2008; Torsten Veller <tove@gentoo.org> Mail-DKIM-0.31.ebuild,
+  +Mail-DKIM-0.32.ebuild:
+  Version bump. Disable online tests. DEPEND on
+  >=dev-perl/Crypt-OpenSSL-RSA-0.24 (#217370). Remove dev-perl/Error from
+  DEPEND (#217368).
 
   15 Sep 2008; Torsten Veller <tove@gentoo.org> -Mail-DKIM-0.18.ebuild,
   -Mail-DKIM-0.19.ebuild, -Mail-DKIM-0.22.ebuild, -Mail-DKIM-0.23.ebuild,
