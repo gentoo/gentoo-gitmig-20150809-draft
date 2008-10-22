@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/wormux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.25 2008/10/09 06:03:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.26 2008/10/22 19:45:49 mr_bones_ Exp $
+
+*wormux-0.8.2 (22 Oct 2008)
+
+  22 Oct 2008; Michael Sterrett <mr_bones_@gentoo.org> +wormux-0.8.2.ebuild:
+  version bump
 
   09 Oct 2008; Tristan Heaven <nyhm@gentoo.org> wormux-0.8.ebuild,
   wormux-0.8.1.ebuild:
