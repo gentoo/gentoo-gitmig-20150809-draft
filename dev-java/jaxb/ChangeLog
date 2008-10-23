@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb/ChangeLog,v 1.7 2008/07/19 00:15:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb/ChangeLog,v 1.8 2008/10/23 20:08:24 maekke Exp $
+
+  23 Oct 2008; Markus Meier <maekke@gentoo.org> jaxb-2.1.2-r1.ebuild:
+  amd64/x86 stable, bug #243130
 
 *jaxb-2.1.2-r1 (19 Jul 2008)
 

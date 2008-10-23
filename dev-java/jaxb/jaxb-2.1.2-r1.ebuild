@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb/jaxb-2.1.2-r1.ebuild,v 1.1 2008/07/19 00:15:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb/jaxb-2.1.2-r1.ebuild,v 1.2 2008/10/23 20:08:24 maekke Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -14,7 +14,7 @@ SRC_URI="https://jaxb.dev.java.net/${PV}/${MY_P}.jar"
 
 LICENSE="CDDL"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEP="
