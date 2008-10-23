@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-0.1.1.20081006.ebuild,v 1.2 2008/10/07 16:09:16 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-0.1.1.20081023.ebuild,v 1.1 2008/10/23 22:57:30 matsuu Exp $
 
 EAPI="1"
-inherit eutils multilib
+inherit autotools eutils multilib python
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -35,6 +35,7 @@ RDEPEND="${RDEPEND}
 	dev-python/pygtk
 	>=dev-python/dbus-python-0.83
 	dev-python/pyxdg
+	x11-misc/notification-daemon
 	|| (
 		dev-python/gconf-python
 		dev-python/gnome-python
@@ -44,6 +45,15 @@ pkg_setup() {
 	# An arch specific config directory is used on multilib systems
 	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
 	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	mv py-compile py-compile.orig || die
+	ln -s "$(type -P true)" py-compile || die
+	sed -i -e '/QMAKE/s/$/ "CONFIG+=nostrip"/' client/qt4/Makefile.am || die
+	eautoreconf
 }
 
 src_compile() {
@@ -60,6 +70,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	local qt_im_module="xim"
+	use qt4 && qt_im_module="ibus"
+
 	elog "To use ibus, you should:"
 	elog "1. Get input engines from sunrise overlay."
 	elog "   Run \"emerge -s ibus-\" in your favorite terminal"
@@ -69,22 +82,18 @@ pkg_postinst() {
 	elog
 	elog "   export XMODIFIERS=\"@im=ibus\""
 	elog "   export GTK_IM_MODULE=\"ibus\""
-	elog "   export QT_IM_MODULE=\"ibus\""
+	elog "   export QT_IM_MODULE=\"${qt_im_module}\""
 	elog "   ibus &"
 
-	if ! use qt4; then
-		ewarn "Missing qt4 use flag, ibus will not work in qt4 applications."
-		ebeep 5
-	fi
-	elog
-
-	if [ -x /usr/bin/gtk-query-immodules-2.0 ] ; then
+	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-query-immodules-2.0 ] && \
 		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
-	fi
+
+	python_mod_optimize /usr/share/${PN}
 }
 
 pkg_postrm() {
-	if [ -x /usr/bin/gtk-query-immodules-2.0 ] ; then
+	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-query-immodules-2.0 ] && \
 		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
-	fi
+
+	python_mod_cleanup /usr/share/${PN}
 }
