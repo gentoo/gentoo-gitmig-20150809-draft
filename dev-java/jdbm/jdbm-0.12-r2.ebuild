@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/jdbm-0.12-r2.ebuild,v 1.1 2008/08/03 22:12:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/jdbm-0.12-r2.ebuild,v 1.2 2008/10/23 21:40:21 maekke Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 
 LICENSE="BSD"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 # Needs to depend on 1.3 because this uses assert
 # so we need -source 1.3 here.
