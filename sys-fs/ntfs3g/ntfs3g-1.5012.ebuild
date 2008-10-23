@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.2712.ebuild,v 1.1 2008/07/13 16:27:31 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.5012.ebuild,v 1.1 2008/10/23 14:23:59 chutzpah Exp $
 
 MY_PN="${PN/3g/-3g}"
 MY_P="${MY_PN}-${PV}"
@@ -30,6 +30,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
+
 	prepalldocs
 	dodoc AUTHORS ChangeLog CREDITS
 
