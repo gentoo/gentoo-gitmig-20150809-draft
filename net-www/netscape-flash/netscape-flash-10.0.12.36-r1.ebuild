@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-10.0.12.36-r1.ebuild,v 1.2 2008/10/18 16:21:11 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-10.0.12.36-r1.ebuild,v 1.3 2008/10/23 18:25:19 maekke Exp $
 
 inherit nsplugins rpm
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.adobe.com/"
 IUSE=""
 SLOT="0"
 
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 LICENSE="AdobeFlash-10"
 RESTRICT="strip mirror"
 
