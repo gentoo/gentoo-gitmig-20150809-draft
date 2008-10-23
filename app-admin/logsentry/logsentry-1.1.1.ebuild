@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.26 2007/01/24 14:32:04 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.27 2008/10/23 02:03:11 flameeyes Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="automatically monitor system logs and mail security violations on a periodic basis"
 # Seems that the project has been discontinued by CISCO?
@@ -33,7 +35,7 @@ src_install() {
 		-e "s:/usr/local/bin:${D}/usr/bin:" \
 		-e "s:/usr/local/etc:${D}/etc/logcheck:" \
 		Makefile || die "sed Makefile failed"
-	make CFLAGS="${CFLAGS}" linux || die
+	make CC="$(tc-getCC)" CFLAGS="${CFLAGS}" linux || die
 
 	dodoc README* CHANGES CREDITS
 	dodoc systems/linux/README.*
