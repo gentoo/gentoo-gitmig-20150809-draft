@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.61 2008/10/23 04:04:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.62 2008/10/23 04:29:56 robbat2 Exp $
+
+*openttd-0.6.3 (23 Oct 2008)
+
+  23 Oct 2008; Robin H. Johnson <robbat2@gentoo.org> +files/install.patch,
+  +files/libiconv.patch, +files/menu_name.patch, +openttd-0.6.3.ebuild:
+  Version bump per bug 233929.
 
   23 Oct 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Missing USE descriptions.
