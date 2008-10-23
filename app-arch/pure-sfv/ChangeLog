@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pure-sfv
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.10 2007/02/21 20:00:40 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.11 2008/10/23 02:43:22 flameeyes Exp $
+
+  23 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> pure-sfv-0.3.ebuild:
+  Respect CC.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
