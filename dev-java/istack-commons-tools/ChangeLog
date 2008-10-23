@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/istack-commons-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-tools/ChangeLog,v 1.7 2008/07/18 23:24:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-tools/ChangeLog,v 1.8 2008/10/23 19:48:29 maekke Exp $
+
+  23 Oct 2008; Markus Meier <maekke@gentoo.org>
+  istack-commons-tools-20070122-r1.ebuild:
+  amd64/x86 stable, bug #243124
 
 *istack-commons-tools-20070122-r1 (18 Jul 2008)
 
