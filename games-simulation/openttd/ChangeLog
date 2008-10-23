@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.60 2008/05/29 06:21:44 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.61 2008/10/23 04:04:29 robbat2 Exp $
+
+  23 Oct 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
+  Missing USE descriptions.
 
   29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Lars Weiler (Pylon) from metadata.xml (as per #215644).
