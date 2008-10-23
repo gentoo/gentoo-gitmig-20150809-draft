@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.51 2008/10/09 19:19:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.52 2008/10/23 18:50:58 pva Exp $
+
+*drupal-6.6 (23 Oct 2008)
+*drupal-5.12 (23 Oct 2008)
+
+  23 Oct 2008; Peter Volkov <pva@gentoo.org> -drupal-5.11.ebuild,
+  +drupal-5.12.ebuild, -drupal-6.5.ebuild, +drupal-6.6.ebuild:
+  Version bump, fixes number of vulnerabilities. Removed old, vulnerable.
 
 *drupal-6.5 (09 Oct 2008)
 *drupal-5.11 (09 Oct 2008)
