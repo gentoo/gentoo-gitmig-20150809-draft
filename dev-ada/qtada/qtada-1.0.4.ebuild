@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/qtada/qtada-1.0.4.ebuild,v 1.1 2008/08/23 20:13:40 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/qtada/qtada-1.0.4.ebuild,v 1.2 2008/10/23 14:17:58 george Exp $
 
 # We only need gnat.eclass for a few vars and helper functions.
 # We will not use src_* functions though.
@@ -21,6 +21,7 @@ KEYWORDS="~x86 ~amd64"
 RDEPEND="=dev-lang/gnat-gpl-4.1.3.2007*
 	dev-ada/asis-gpl
 	>=x11-libs/qt-core-4.4.1
+	>=x11-libs/qt-sql-4.4.1
 	>=x11-libs/qt-gui-4.4.1"
 
 DEPEND="${RDEPEND}"
@@ -35,9 +36,9 @@ pkg_setup() {
 		ewarn "This version of qtada can only be compiled with gnat-gpl-4.1"
 		die   "Please switch to  gnat-gpl-4.1 and try again"
 	fi
-#	if ! built_with_use ">=x11-libs/qt-4.0" accessibility ; then
-#		die "Rebuild qt-4 with USE=accessibility"
-#	fi
+	if ! built_with_use "x11-libs/qt-gui" accessibility ; then
+		die "Please rebuild qt-gui with USE=accessibility"
+	fi
 }
 
 # As this version of qtada only compiles with gnat-gpl-4.1 and we already
