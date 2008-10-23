@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9-r2.ebuild,v 1.4 2008/10/23 18:23:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9-r2.ebuild,v 1.5 2008/10/23 18:34:49 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://sources.isc.org/devel/tools/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 sparc x86"
 IUSE=""
 
 
