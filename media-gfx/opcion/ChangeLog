@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/opcion
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/ChangeLog,v 1.14 2008/08/21 10:18:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opcion/ChangeLog,v 1.15 2008/10/23 05:38:11 darkside Exp $
+
+  23 Oct 2008; Jeremy Olexa <darkside@gentoo.org> opcion-1.1.1-r2.ebuild:
+  amd64 stable, bug 241726
 
 *opcion-1.1.1-r2 (21 Aug 2008)
 
