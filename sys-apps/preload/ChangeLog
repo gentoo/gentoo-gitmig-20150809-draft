@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/preload
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/ChangeLog,v 1.4 2008/10/20 22:58:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/ChangeLog,v 1.5 2008/10/23 15:16:14 darkside Exp $
+
+*preload-0.6.3-r3 (23 Oct 2008)
+
+  23 Oct 2008; Jeremy Olexa <darkside@gentoo.org> files/conf.d-preload,
+  files/init.d-preload, -preload-0.6.3-r2.ebuild, +preload-0.6.3-r3.ebuild:
+  Remove restart() block from init script. It doesn't do anything on openrc
+  (bug #241884) and it causes warnings on baselayout-1 (bug #242578) due to
+  poor implementation on my part. We really don't need a restart because a
+  stop/start is just as good. Also modify init/conf scripts to better handle
+  'default' values.
 
 *preload-0.6.3-r2 (20 Oct 2008)
 
