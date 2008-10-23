@@ -5,7 +5,7 @@
  
  cpulimit:	cpulimit.c
 -	gcc -o cpulimit cpulimit.c -lrt -Wall -O2
-+	$(CC) -o cpulimit cpulimit.c -lrt $(CFLAGS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o cpulimit cpulimit.c -lrt
  
  clean:
  	rm -f *~ cpulimit
