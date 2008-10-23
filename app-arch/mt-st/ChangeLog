@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/mt-st
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.26 2007/08/16 10:51:37 gmsoft Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.27 2008/10/23 02:42:32 flameeyes Exp $
+
+  23 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> mt-st-0.9b.ebuild:
+  Respect CFLAGS, LDFLAGS and CC.
 
   16 Aug 2007; Guy Martin <gmsoft@gentoo.org> mt-st-0.9b.ebuild:
   Stable on hppa

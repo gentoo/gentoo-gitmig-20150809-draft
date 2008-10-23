@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/mt-st-0.9b.ebuild,v 1.8 2007/08/16 10:51:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/mt-st-0.9b.ebuild,v 1.9 2008/10/23 02:42:32 flameeyes Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Enhanced mt command for Linux, supporting Linux 2.4 ioctls"
 HOMEPAGE="http://www.gnu.org/software/tar/"
@@ -25,7 +25,8 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	# Builds straight from .c to final binary
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} ${LDFLAGS}" || die
 }
 
 src_install() {
