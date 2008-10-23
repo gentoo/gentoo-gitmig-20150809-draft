@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.89 2008/10/21 11:55:42 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.90 2008/10/23 23:17:12 jmbsvicetto Exp $
+
+*ktorrent-3.1.4 (23 Oct 2008)
+
+  23 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ktorrent-3.1.4.ebuild:
+  Bumped ktorrent to 3.1.4 as requested by Ioannis Aslanidis (deathwing00).
+  Thanks to Tomáš Chvátal <tomas.chvatal@gmail.com> for doing the
+  testing.
 
   21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -ktorrent-3.0.0.ebuild, -ktorrent-3.0.1.ebuild, -ktorrent-3.0.2.ebuild,
