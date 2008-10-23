@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Compress-Base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Base/ChangeLog,v 1.40 2008/10/22 19:17:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Compress-Base/ChangeLog,v 1.41 2008/10/23 11:25:12 armin76 Exp $
+
+  23 Oct 2008; Raúl Porcel <armin76@gentoo.org>
+  IO-Compress-Base-2.015.ebuild:
+  alpha/ia64/x86 stable wrt #192989
 
   22 Oct 2008; Guy Martin <gmsoft@gentoo.org> IO-Compress-Base-2.015.ebuild:
   hppa stable, #192989
