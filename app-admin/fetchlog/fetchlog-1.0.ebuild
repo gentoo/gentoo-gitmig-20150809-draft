@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/fetchlog-1.0.ebuild,v 1.7 2007/01/24 14:13:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/fetchlog-1.0.ebuild,v 1.8 2008/10/23 02:02:02 flameeyes Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Displays the last new messages of a logfile"
 HOMEPAGE="http://fetchlog.sourceforge.net/"
@@ -11,7 +13,7 @@ KEYWORDS="amd64 ppc x86"
 
 IUSE="snmp"
 
-DEPEND="snmp? (
+RDEPEND="snmp? (
 	>=dev-perl/Net-SNMP-4.0.1-r2
 	>=net-analyzer/net-snmp-5.0.6
 	)"
@@ -27,7 +29,8 @@ pkg_preinst() {
 }
 
 src_compile() {
-	emake || die
+	# Links the .c file straight to the binary
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} ${LDFLAGS}" || die
 }
 
 src_install() {
