@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1-r2.ebuild,v 1.5 2007/06/23 15:57:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1-r2.ebuild,v 1.6 2008/10/23 16:55:07 joker Exp $
 
-inherit fixheadtails autotools eutils
+inherit fixheadtails autotools eutils toolchain-funcs
 
 DESCRIPTION="A flexible and fast logfile colorizer"
 HOMEPAGE="http://bonehunter.rulez.org/software/ccze/"
@@ -19,7 +19,7 @@ DEPEND="dev-libs/libpcre"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}"/ccze-fbsd.patch || die "epatch ccze-fbsd.patch failed"
 	epatch "${FILESDIR}"/ccze-segfault.patch || die "epatch ccze-segfault.patch"
@@ -33,6 +33,13 @@ src_unpack() {
 	eautoreconf
 
 	ht_fix_file Rules.mk.in
+}
+
+src_compile() {
+	# Bug #243314
+	tc-export CC
+	econf || die
+	emake || die
 }
 
 src_install() {
