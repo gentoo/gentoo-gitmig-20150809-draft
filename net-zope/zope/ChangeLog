@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.142 2008/10/22 19:31:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.143 2008/10/23 20:57:00 fmccor Exp $
+
+  23 Oct 2008; Ferris McCormick <fmccor@gentoo.org> zope-2.10.6.ebuild:
+  Sparc stable, Bug #243270, which see.
 
   22 Oct 2008; <tupone@gentoo.org> -files/i18n-1.0.0.patch,
   -files/2.9/zope-2.9.4_logerror.patch, -zope-2.9.3.ebuild:
