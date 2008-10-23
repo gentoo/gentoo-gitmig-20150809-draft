@@ -7,7 +7,7 @@ diff -u longrun.old/Makefile longrun/Makefile
  
  longrun: longrun.c
 -	gcc -DLOCALEDIR=\"$(LOCALEDIR)\" -g -O2 -W -Wall -o longrun longrun.c
-+	gcc -DLOCALEDIR=\"$(LOCALEDIR)\" $(CFLAGS) -W -Wall -o longrun longrun.c
++	$(CC) $(CFLAGS) $(LDFLAGS) -DLOCALEDIR=\"$(LOCALEDIR)\" -W -Wall -o longrun longrun.c
  
  README: longrun.1
  	groff -Tascii -man longrun.1 | col -bx > README

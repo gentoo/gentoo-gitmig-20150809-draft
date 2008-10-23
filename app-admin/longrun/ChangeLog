@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/longrun
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.17 2007/03/27 16:11:44 betelgeuse Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.18 2008/10/23 02:05:45 flameeyes Exp $
+
+  23 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  files/0.9-makefile_cflags.patch, longrun-0.9-r3.ebuild:
+  Respect LDFLAGS, respect CC.
 
   27 Mar 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   longrun-0.9-r3.ebuild:

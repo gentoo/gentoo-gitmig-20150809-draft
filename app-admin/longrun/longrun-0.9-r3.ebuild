@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r3.ebuild,v 1.4 2007/03/27 16:11:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r3.ebuild,v 1.5 2008/10/23 02:05:45 flameeyes Exp $
 
-inherit eutils linux-info
+inherit eutils linux-info toolchain-funcs
 
 DESCRIPTION="A utility to control Transmeta's Crusoe and Efficeon processors"
 HOMEPAGE="http://freshmeat.net/projects/longrun/"
@@ -41,6 +41,10 @@ src_unpack() {
 	cd ${S}
 	epatch "${DISTDIR}/${DEBIAN_PATCH}"
 	epatch "${FILESDIR}/${PV}-makefile_cflags.patch"
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
