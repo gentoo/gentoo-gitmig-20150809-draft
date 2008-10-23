@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.8 2007/12/24 10:07:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.9 2008/10/23 02:25:36 flameeyes Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="suid, sgid file and directory checking"
 SRC_URI="http://www.phunnypharm.org/pub/sxid/${P/-/_}.tar.gz"
@@ -25,6 +27,7 @@ src_compile() {
 	sed -i s/bindir/sbindir/g Makefile.in
 	cd ..
 
+	tc-export CC
 	econf || die "econf failed"
 	emake || die
 }
