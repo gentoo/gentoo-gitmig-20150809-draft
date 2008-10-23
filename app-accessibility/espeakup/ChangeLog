@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/espeakup
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.3 2008/10/23 13:27:28 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.4 2008/10/23 13:29:36 williamh Exp $
+
+  23 Oct 2008; William Hubbs <williamh@gentoo.org> -espeakup-0.2.ebuild:
+  Removed old version.
 
 *espeakup-0.4 (23 Oct 2008)
 
