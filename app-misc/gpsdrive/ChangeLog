@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.28 2008/09/27 03:46:55 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.29 2008/10/23 04:46:57 nerdboy Exp $
+
+  23 Oct 2008; Steve Arnold <nerdboy@gentoo.org> gpsdrive-2.10_pre5.ebuild:
+  Updated with fix for bug #238959 and mysql example config.
 
 *gpsdrive-2.10_pre5 (26 Sep 2008)
 

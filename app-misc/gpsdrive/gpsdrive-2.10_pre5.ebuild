@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre5.ebuild,v 1.2 2008/09/28 22:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre5.ebuild,v 1.3 2008/10/23 04:46:57 nerdboy Exp $
 
 inherit cmake-utils eutils fdo-mime
 
@@ -51,9 +51,9 @@ src_unpack() {
 	# aren't implemented yet AFAICT; temporarily disabled.
 	epatch "${FILESDIR}"/${PN}-drawmarkers-remove.patch
 	# Update mapnik font path...
-	use mapnik && sed -i -e "s:truetype/ttf-dejavu:dejavu:g" \
+	use mapnik && ( sed -i -e "s:truetype/ttf-dejavu:dejavu:g" \
 	    tests/{gpsdriverc,gpsdriverc-in,gpsdriverc-pre} \
-	    src/gpsdrive_config.c || die "sed failed"
+	    src/gpsdrive_config.c || die "sed failed" )
 	# Fix desktop file...
 	sed -i -e "s:gpsicon:/usr/share/gpsdrive/pixmaps/gpsicon.png:g" \
 	    -e "s:Graphics;Network;Geography:Application;Geography;GPS:g" \
@@ -73,7 +73,11 @@ src_install() {
 	cmake-utils_src_install
 	dodoc AUTHORS Changelog NEWS README
 	newdoc data/mysql/my.cnf my.cnf.example
-	use mapnik && dodoc Documentation/install-mapnik-osm.txt
+	if use mapnik ; then
+	    dodoc Documentation/install-mapnik-osm.txt
+	else
+	    rm -f "${D}"usr/bin/{gpsdrive_mapnik_gentiles.py,gpsdrive-update-mapnik-poitypes.pl}
+	fi
 	use doc && dodoc \
 	    Documentation/{FAQ.gpsdrive,CREDITS,GPS-receivers,LEEME,NMEA.txt,TODO,README*}
 }
@@ -90,8 +94,8 @@ pkg_postinst() {
 	elog "This version also now depends on the gpsd package, and"
 	elog "specific devices are supported there.  Start gpsd first,"
 	elog "otherwise gpsdrive will only run in simulation mode (which"
-	elog "is sometimes handy for downloading maps for another"
-	elog "location)."
+	elog "is handy for downloading maps for another location, but"
+	elog "not much else)."
 	elog
 }
 
