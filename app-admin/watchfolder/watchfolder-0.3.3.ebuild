@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/watchfolder-0.3.3.ebuild,v 1.4 2006/03/19 21:39:53 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/watchfolder-0.3.3.ebuild,v 1.5 2008/10/23 02:36:02 flameeyes Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Watches directories and processes files, similar to the watchfolder option of Acrobat Distiller."
 HOMEPAGE="http://freshmeat.net/projects/watchd/"
@@ -23,8 +23,17 @@ src_unpack() {
 	# patch to remove warnings on 64 bit systems
 	epatch ${FILESDIR}/${PV}-64bit.patch || die
 
-	sed -i "3s/OPT=/OPT=${CFLAGS} /" Makefile
+	sed -i \
+		-e '/-c -o/s:OPT:CFLAGS:' \
+		-e 's:(\(LD\)\?OPT):(LDFLAGS) $(CFLAGS):' \
+		-e 's:gcc:$(CC):' \
+		Makefile || die "sed Makefile failed"
 }
+
+src_compile() {
+	emake CC="$(tc-getCC)" || die "emake failed"
+}
+
 
 src_install() {
 	dobin watchd

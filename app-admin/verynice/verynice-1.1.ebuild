@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/verynice-1.1.ebuild,v 1.13 2008/06/16 14:07:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/verynice-1.1.ebuild,v 1.14 2008/10/23 02:33:24 flameeyes Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="A tool for dynamically adjusting the nice-level of processes"
 HOMEPAGE="http://ahab.cnde.iastate.edu/~sdh4/verynice/"
@@ -13,8 +15,15 @@ IUSE=""
 
 S=${WORKDIR}/${PN}
 
+src_unpack() {
+	unpack ${A}
+
+	sed -i -e 's:CFLAGS=:CFLAGS+=:' "${S}"/Makefile \
+		|| die "sed of Makefile failed"
+}
+
 src_compile() {
-	emake RPM_BUILD_ROOT="${D}" PREFIX=/usr || die "emake failed"
+	emake CC="$(tc-getCC)" LINK="$(tc-getCC) ${LDFLAGS}" RPM_BUILD_ROOT="${D}" PREFIX=/usr || die "emake failed"
 }
 
 src_install(){
