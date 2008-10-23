@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.1.2.1.ebuild,v 1.1 2008/05/29 02:33:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.1.2.1.ebuild,v 1.2 2008/10/23 15:08:51 remi Exp $
 
 inherit autotools eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://pm-utils.freedesktop.org/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa debug networkmanager ntp video_cards_i810 video_cards_radeon"
+IUSE="alsa debug networkmanager ntp video_cards_intel video_cards_radeon"
 
 RDEPEND=">=sys-apps/hal-0.5.10
 		 >=sys-apps/dbus-1.0.0
@@ -20,7 +20,7 @@ RDEPEND=">=sys-apps/hal-0.5.10
 		 alsa? ( media-sound/alsa-utils )
 		 networkmanager? ( net-misc/networkmanager )
 		 ntp? ( net-misc/ntp )
-		 !video_cards_i810? ( sys-apps/vbetool )
+		 !video_cards_intel? ( sys-apps/vbetool )
 		 video_cards_radeon? ( app-laptop/radeontool )"
 DEPEND="!sys-power/powermgmt-base
 		app-text/xmlto"

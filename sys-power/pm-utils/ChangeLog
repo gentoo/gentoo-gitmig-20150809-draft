@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.7 2008/08/16 04:12:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.8 2008/10/23 15:08:51 remi Exp $
+
+  23 Oct 2008; Rémi Cardona <remi@gentoo.org> pm-utils-1.1.1.ebuild,
+  pm-utils-1.1.2.1.ebuild:
+  pkgmove from xf86-video-i810 to xf86-video-intel
 
   16 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
