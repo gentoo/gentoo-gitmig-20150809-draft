@@ -1,0 +1,77 @@
+diff -Nuar --exclude '*~' ipset-2.4.2.orig/ipset_iphash.c ipset-2.4.2/ipset_iphash.c
+--- ipset-2.4.2.orig/ipset_iphash.c	2008-10-23 09:03:47.000000000 -0700
++++ ipset-2.4.2/ipset_iphash.c	2008-10-24 14:24:53.665544125 -0700
+@@ -19,6 +19,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <arpa/inet.h>
++#include <limits.h>
+ 
+ #include <linux/netfilter_ipv4/ip_set_iphash.h>
+ 
+diff -Nuar --exclude '*~' ipset-2.4.2.orig/ipset_ipporthash.c ipset-2.4.2/ipset_ipporthash.c
+--- ipset-2.4.2.orig/ipset_ipporthash.c	2008-10-23 09:05:01.000000000 -0700
++++ ipset-2.4.2/ipset_ipporthash.c	2008-10-24 14:24:48.755124578 -0700
+@@ -19,6 +19,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <arpa/inet.h>
++#include <limits.h>
+ 
+ #include <linux/netfilter_ipv4/ip_set_ipporthash.h>
+ 
+diff -Nuar --exclude '*~' ipset-2.4.2.orig/ipset_ipportiphash.c ipset-2.4.2/ipset_ipportiphash.c
+--- ipset-2.4.2.orig/ipset_ipportiphash.c	2008-10-23 09:06:22.000000000 -0700
++++ ipset-2.4.2/ipset_ipportiphash.c	2008-10-24 14:24:36.931696323 -0700
+@@ -19,6 +19,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <arpa/inet.h>
++#include <limits.h>
+ 
+ #include <linux/netfilter_ipv4/ip_set_ipportiphash.h>
+ 
+diff -Nuar --exclude '*~' ipset-2.4.2.orig/ipset_ipportnethash.c ipset-2.4.2/ipset_ipportnethash.c
+--- ipset-2.4.2.orig/ipset_ipportnethash.c	2008-10-23 09:06:31.000000000 -0700
++++ ipset-2.4.2/ipset_ipportnethash.c	2008-10-24 14:24:34.225051888 -0700
+@@ -19,6 +19,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <arpa/inet.h>
++#include <limits.h>
+ 
+ #include <linux/netfilter_ipv4/ip_set_ipportnethash.h>
+ 
+diff -Nuar --exclude '*~' ipset-2.4.2.orig/ipset_iptree.c ipset-2.4.2/ipset_iptree.c
+--- ipset-2.4.2.orig/ipset_iptree.c	2008-10-21 14:57:53.000000000 -0700
++++ ipset-2.4.2/ipset_iptree.c	2008-10-24 14:24:46.035116608 -0700
+@@ -19,6 +19,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <arpa/inet.h>
++#include <limits.h>
+ 
+ #include <linux/netfilter_ipv4/ip_set_iptree.h>
+ #include "ipset.h"
+diff -Nuar --exclude '*~' ipset-2.4.2.orig/ipset_iptreemap.c ipset-2.4.2/ipset_iptreemap.c
+--- ipset-2.4.2.orig/ipset_iptreemap.c	2008-10-21 14:58:23.000000000 -0700
++++ ipset-2.4.2/ipset_iptreemap.c	2008-10-24 14:24:40.226279494 -0700
+@@ -19,6 +19,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <arpa/inet.h>
++#include <limits.h>
+ 
+ #include <linux/netfilter_ipv4/ip_set_iptreemap.h>
+ 
+diff -Nuar --exclude '*~' ipset-2.4.2.orig/ipset_nethash.c ipset-2.4.2/ipset_nethash.c
+--- ipset-2.4.2.orig/ipset_nethash.c	2008-10-23 09:04:32.000000000 -0700
++++ ipset-2.4.2/ipset_nethash.c	2008-10-24 14:24:42.722945849 -0700
+@@ -19,6 +19,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <arpa/inet.h>
++#include <limits.h>
+ 
+ #include <linux/netfilter_ipv4/ip_set_nethash.h>
+ 
