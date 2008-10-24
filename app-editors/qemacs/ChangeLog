@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.37 2008/10/05 11:31:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.38 2008/10/24 17:36:11 ulm Exp $
+
+  24 Oct 2008; Ulrich Mueller <ulm@gentoo.org>
+  qemacs-0.3.2_pre20070226.ebuild:
+  Inherit toolchain-funcs and call econf with --cc option, bug 243572.
 
   05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   qemacs-0.3.2_pre20070226.ebuild:
