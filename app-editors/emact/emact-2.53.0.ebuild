@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/emact-2.53.0.ebuild,v 1.2 2008/08/29 22:12:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/emact-2.53.0.ebuild,v 1.3 2008/10/24 17:24:16 ulm Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="EmACT, a fork of Conroy's MicroEmacs"
 HOMEPAGE="http://www.eligis.com/emacs/"
@@ -21,6 +23,7 @@ DEPEND="sys-libs/ncurses
 RDEPEND="${DEPEND}"
 
 src_compile() {
+	tc-export CC
 	econf $(use_with X x) || die "econf failed"
 	emake || die "emake failed"
 }
