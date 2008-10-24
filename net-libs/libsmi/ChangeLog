@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsmi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.22 2008/10/18 15:06:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.23 2008/10/24 22:41:46 maekke Exp $
+
+  24 Oct 2008; Markus Meier <maekke@gentoo.org> libsmi-0.4.8.ebuild:
+  amd64 stable, bug #242436
 
   18 Oct 2008; Raúl Porcel <armin76@gentoo.org> libsmi-0.4.8.ebuild:
   alpha/ia64/sparc stable wrt #242436
