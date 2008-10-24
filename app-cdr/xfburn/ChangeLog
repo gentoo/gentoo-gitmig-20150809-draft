@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/xfburn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.5 2008/09/21 21:43:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.6 2008/10/24 22:55:32 maekke Exp $
+
+  24 Oct 2008; Markus Meier <maekke@gentoo.org> xfburn-0.3.2.ebuild:
+  x86 stable, bug #242710
 
   21 Sep 2008; Christoph Mende <angelos@gentoo.org>
   +files/xfburn-disable-hal.patch, -xfburn-0.3.0.ebuild,
