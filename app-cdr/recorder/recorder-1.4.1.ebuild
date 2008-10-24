@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/recorder-1.4.1.ebuild,v 1.3 2008/09/27 02:53:40 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/recorder-1.4.1.ebuild,v 1.4 2008/10/24 20:47:50 pvdabeel Exp $
 
 inherit fdo-mime
 
@@ -10,7 +10,7 @@ SRC_URI="http://recorder.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dvdr mp3 nls ogg vcd"
 
 LANGS="ar cs es fr pt_BR ru it nl"
