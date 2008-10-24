@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.16.4.ebuild,v 1.8 2007/10/08 08:45:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.16.4.ebuild,v 1.9 2008/10/24 11:16:32 armin76 Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://pycurl.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 hppa ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="examples"
 
 DEPEND=">=net-misc/curl-7.16.2"
