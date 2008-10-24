@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/iptraf
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.67 2007/11/06 17:26:07 corsair Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.68 2008/10/24 15:23:57 pva Exp $
+
+*iptraf-3.0.0-r5 (24 Oct 2008)
+
+  24 Oct 2008; Peter Volkov <pva@gentoo.org> +files/iptraf-3.0.0-vlan.patch,
+  -iptraf-3.0.0-r3.ebuild, +iptraf-3.0.0-r5.ebuild:
+  Fixes ability to listen on vlan interfaces, bug #231745, thank Tomas Vasek
+  for report and Ross Dougherty for actual tests. Removed old.
 
   06 Nov 2007; Markus Rothe <corsair@gentoo.org> iptraf-3.0.0-r4.ebuild:
   Stable on ppc64; bug #197609
