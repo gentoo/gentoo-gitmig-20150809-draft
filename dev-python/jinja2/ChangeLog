@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/jinja2
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.1 2008/10/24 05:40:29 neurogeek Exp $
+
+*jinja2-2.0 (24 Oct 2008)
+
+  24 Oct 2008; Jesus Rivero <neurogeek@gentoo.org>
+  +files/jinja2-2.0_no_docs.patch, +metadata.xml, +jinja2-2.0.ebuild:
+  Initial commit. Bug #237036
+
