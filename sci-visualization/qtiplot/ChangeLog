@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.35 2008/10/13 22:26:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.36 2008/10/24 22:50:43 markusle Exp $
+
+*qtiplot-0.9.7.3 (24 Oct 2008)
+
+  24 Oct 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/qtiplot-0.9.7.3-pro.patch, +files/qtiplot-0.9.7.3-qwt3d.patch,
+  +qtiplot-0.9.7.3.ebuild:
+  Version bump (fixes bug #243430).
 
   13 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org>
   qtiplot-0.9.7.2.ebuild:
