@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.13 2008/10/20 18:27:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.14 2008/10/24 10:15:51 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
 EAPI="1"
 
-inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib
+inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
 IUSE="cups dbus debug eds gnome gstreamer gtk kde ldap mono nsplugin odk opengl pam templates"
 
@@ -324,15 +324,13 @@ src_compile() {
 	filter-flags "-fstack-protector"
 	filter-flags "-fstack-protector-all"
 	filter-flags "-ftracer"
-
-	if has_version <=sys-devel/gcc-3.4.7 ; then
-		use hardened || filter-flags "-fforce-addr"
-		is-flag -fomit-frame-pointer && append-flags "-momit-leaf-frame-pointer"
-	else
-		filter-flags "-fforce-addr"
-	fi
+	filter-flags "-fforce-addr"
 
 	filter-flags "-O[s2-9]"
+
+	if [[ $(gcc-major-version) -lt 4 ]]; then
+		replace-flags "-fomit-frame-pointer" "-momit-leaf-frame-pointer"
+	fi
 
 	# Build with NVidia cards breaks otherwise
 	use opengl && append-flags "-DGL_GLEXT_PROTOTYPES"
