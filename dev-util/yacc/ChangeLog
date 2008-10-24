@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/yacc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.23 2008/10/24 09:04:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.24 2008/10/24 21:52:43 jer Exp $
+
+  24 Oct 2008; Jeroen Roovers <jer@gentoo.org> yacc-1.9.1-r4.ebuild:
+  Stable for HPPA (bug #232005).
 
   24 Oct 2008; Raúl Porcel <armin76@gentoo.org> yacc-1.9.1-r4.ebuild:
   alpha/ia64 stable wrt #232005
