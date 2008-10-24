@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.60.ebuild,v 1.5 2008/10/11 18:00:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.60.ebuild,v 1.6 2008/10/24 20:52:55 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -242,7 +242,7 @@ pkg_postinst() {
 		elog "$ sysctl kern.ipc.shm_allow_removed=1"
 	fi
 
-	elog "The Opera betas may still have issues with plugins, notably"
+	elog "The current Opera builds may still have issues with plugins, notably"
 	elog "net-www/netscape-flash. See also https://bugs.gentoo.org/198162"
 }
 

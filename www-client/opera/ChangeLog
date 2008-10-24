@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.298 2008/10/24 17:53:43 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.299 2008/10/24 20:52:55 jer Exp $
+
+  24 Oct 2008; Jeroen Roovers <jer@gentoo.org> opera-9.60.ebuild,
+  opera-9.61.ebuild:
+  Improve plugin warning message to reflect version's status.
 
   24 Oct 2008; Tobias Heinlein <keytoaster@gentoo.org> opera-9.61.ebuild:
   amd64 stable, security bug #243060
