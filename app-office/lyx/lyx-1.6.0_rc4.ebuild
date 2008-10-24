@@ -1,13 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.0_rc2.ebuild,v 1.2 2008/08/29 19:55:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.0_rc4.ebuild,v 1.1 2008/10/24 08:39:40 aballier Exp $
 
 EAPI=1
 
 inherit qt4 eutils flag-o-matic font toolchain-funcs
 
-#MY_P="${P/_}"
-MY_P="lyx-1.6.0rc2"
+MY_P="${P/_}"
 
 S="${WORKDIR}/${MY_P}"
 FONT_S="${S}/lib/fonts"
