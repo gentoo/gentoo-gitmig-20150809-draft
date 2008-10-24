@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.27_rc9.ebuild,v 1.1 2008/10/07 01:38:42 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.28_rc1.ebuild,v 1.1 2008/10/24 12:09:44 mpagano Exp $
 
 UNIPATCH_STRICTORDER="yes"
 K_NOUSENAME="yes"
@@ -26,9 +26,6 @@ experimental nature. If you have any issues, try a matching vanilla-sources
 ebuild -- if the problem is not there, please contact the upstream kernel
 developers at http://bugme.osdl.org and on the linux-kernel mailing list to
 report the problem so it can be fixed in time for the next kernel release."
-
-K_EXTRAEWARN="If your system utilizes the e1000e driver DO NOT install and run
-any kernel < 2.6.27_rc8.  See bug #238489 for more information"
 
 pkg_postinst() {
 	postinst_sources
