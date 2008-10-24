@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/logsurfer+-1.7.ebuild,v 1.1 2006/12/30 01:06:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/logsurfer+-1.7.ebuild,v 1.2 2008/10/24 21:07:35 maekke Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://kerryt.orcon.net.nz/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 src_compile() {
