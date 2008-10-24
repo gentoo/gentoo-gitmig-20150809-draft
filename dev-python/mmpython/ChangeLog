@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mmpython
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.26 2006/11/01 09:53:31 mattepiu Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.27 2008/10/24 17:55:06 flameeyes Exp $
+
+  24 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> mmpython-0.4.10.ebuild:
+  Fix dependencies.
 
 *mmpython-0.4.10 (01 Nov 2006)
 
