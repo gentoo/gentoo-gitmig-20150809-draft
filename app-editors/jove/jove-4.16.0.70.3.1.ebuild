@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.1.ebuild,v 1.2 2008/10/21 21:53:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.1.ebuild,v 1.3 2008/10/24 06:23:50 ulm Exp $
 
-inherit eutils flag-o-matic versionator
+inherit eutils flag-o-matic toolchain-funcs versionator
 
 MY_P=${PN}_$(get_version_component_range 1-4)
 MY_DIFFP=${MY_P}-$(get_version_component_range 5-6)
@@ -36,6 +36,8 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
+
 	if use unix98 ; then
 		emake SYSDEFS="-DSYSVR4 -D_XOPEN_SOURCE=500" || die
 	else
@@ -48,10 +50,11 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	# parallel install fails
+	emake -j1 DESTDIR="${D}" install || die
 
 	if use X ; then
-		make DESTDIR="${D}" \
+		emake -j1 DESTDIR="${D}" \
 			XJOVEHOME="${D}"/usr \
 			MANDIR="${D}"/usr/share/man/man1 \
 			installxjove || die
