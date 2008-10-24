@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.9 2008/10/22 14:49:29 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.10 2008/10/24 15:42:01 kumba Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -338,3 +338,4 @@ ladspa
 -ip27
 -ip28
 -ip30
+-fixed-point

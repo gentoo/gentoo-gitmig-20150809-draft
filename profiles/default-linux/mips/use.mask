@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.111 2008/10/22 14:49:30 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.112 2008/10/24 15:42:01 kumba Exp $
 
 # Ilya A. Volynets-Evenbakh <iluxa@gentoo.org> (20 Jun 2008)
 # Mask out postgres use flags, as it's not currently working on MIPS
@@ -337,3 +337,7 @@ kerberos
 # mask ladspa USE
 # [22:30] <beandog> mips: plz to mask ladspa use flag
 ladspa
+
+# Unmask the fixed-point support, used by gcc-4.3.x, incase
+# anyone needs it.
+-fixed-point
