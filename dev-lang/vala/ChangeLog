@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/vala
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.1 2008/10/24 12:44:55 remi Exp $
+
+*vala-0.4.0 (24 Oct 2008)
+
+  24 Oct 2008; Rémi Cardona <remi@gentoo.org> +metadata.xml,
+  +vala-0.4.0.ebuild:
+  initial portage version, original ebuild taken from sunrise
+
