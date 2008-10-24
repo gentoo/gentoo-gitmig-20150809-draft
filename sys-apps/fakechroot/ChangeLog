@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakechroot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.4 2008/10/23 05:37:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.5 2008/10/24 22:53:34 maekke Exp $
+
+  24 Oct 2008; Markus Meier <maekke@gentoo.org> fakechroot-2.8.ebuild:
+  x86 stable, bug #242602
 
   23 Oct 2008; Jeremy Olexa <darkside@gentoo.org> fakechroot-2.8.ebuild:
   amd64 stable, bug 242602
