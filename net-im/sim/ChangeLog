@@ -1,6 +1,9 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.92 2008/08/05 18:00:14 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.93 2008/10/24 21:25:33 maekke Exp $
+
+  24 Oct 2008; Markus Meier <maekke@gentoo.org> sim-0.9.4.3-r3.ebuild:
+  amd64/x86 stable, bug #243488
 
   05 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml:
   Add USE flag description to metadata as per GLEP 56.
