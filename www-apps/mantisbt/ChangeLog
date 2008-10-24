@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.71 2008/10/20 20:06:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.72 2008/10/24 08:56:15 pva Exp $
+
+*mantisbt-1.1.4-r2 (24 Oct 2008)
+
+  24 Oct 2008; Peter Volkov <pva@gentoo.org>
+  +files/mantisbt-1.1.4-r5687:5688.patch, -files/mantis-1.1.4-r5702.patch,
+  -mantisbt-1.1.4-r1.ebuild, +mantisbt-1.1.4-r2.ebuild:
+  Further fixes from upstream, reset password should work now, bug #243360,
+  thank Marek Królikowski for report.
 
 *mantisbt-1.1.4-r1 (20 Oct 2008)
 

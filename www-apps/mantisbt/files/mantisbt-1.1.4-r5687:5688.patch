@@ -1,9 +1,14 @@
 Index: lang/strings_english.txt
 ===================================================================
 --- lang/strings_english.txt	(revision 5688)
-+++ lang/strings_english.txt	(working copy)
-@@ -301,6 +301,7 @@
- $MANTIS_ERROR[ERROR_SESSION_VAR_NOT_FOUND] = 'Session variable \'%s\' not found.';
++++ lang/strings_english.txt	(revision 5719)
+@@ -298,9 +298,11 @@
+ $MANTIS_ERROR[ERROR_TAG_ALREADY_ATTACHED] = 'That tag already attached to that bug.';
+ $MANTIS_ERROR[ERROR_TOKEN_NOT_FOUND] = 'Token could not be found.';
+ $MANTIS_ERROR[ERROR_SESSION_HANDLER_INVALID] = 'Invalid session handler.';
+-$MANTIS_ERROR[ERROR_SESSION_VAR_NOT_FOUND] = 'Session variable \'%s\' not found.';
++$MANTIS_ERROR[ERROR_SESSION_VAR_NOT_FOUND] = 'Session variable "%s" not found.';
++$MANTIS_ERROR[ERROR_SESSION_NOT_VALID] = 'Your session has become invalidated.';
  $MANTIS_ERROR[ERROR_FORM_TOKEN_INVALID] = 'Invalid form security token.  Did you submit the form twice by accident?';
  $MANTIS_ERROR[ERROR_INVALID_REQUEST_METHOD] = 'This page cannot be accessed using this method.';
 +$MANTIS_ERROR[ERROR_INVALID_SORT_FIELD] = 'Invalid sort field.';
@@ -13,7 +18,7 @@ Index: lang/strings_english.txt
 Index: account_page.php
 ===================================================================
 --- account_page.php	(revision 5688)
-+++ account_page.php	(working copy)
++++ account_page.php	(revision 5719)
 @@ -94,6 +94,9 @@
  <div align="center">
  <form method="post" action="account_update.php">
@@ -27,7 +32,7 @@ Index: account_page.php
 Index: core/utility_api.php
 ===================================================================
 --- core/utility_api.php	(revision 5688)
-+++ core/utility_api.php	(working copy)
++++ core/utility_api.php	(revision 5719)
 @@ -192,10 +192,20 @@
  			$t_factor = 1;
  		}
@@ -54,7 +59,7 @@ Index: core/utility_api.php
 Index: core/session_api.php
 ===================================================================
 --- core/session_api.php	(revision 5688)
-+++ core/session_api.php	(working copy)
++++ core/session_api.php	(revision 5719)
 @@ -48,7 +48,7 @@
   * to PHP's session.* settings in 'php.ini'.
   */
@@ -76,9 +81,11 @@ Index: core/session_api.php
  		session_start();
  		$this->id = session_id();
  	}
-@@ -103,12 +108,12 @@
+@@ -102,13 +107,14 @@
+ 
  /**
   * Initialize the appropriate session handler.
++ * @param string Session ID
   */
 -function session_init() {
 +function session_init( $p_session_id=null ) {
@@ -91,7 +98,50 @@ Index: core/session_api.php
  			break;
  
  		case 'adodb':
-@@ -190,4 +195,11 @@
+@@ -119,9 +125,42 @@
+ 			trigger_error( ERROR_SESSION_HANDLER_INVALID, ERROR );
+ 			break;
+ 	}
++
++	session_validate( $g_session );
+ }
+ 
+ /**
++ * Validate the legitimacy of a session.
++ * Checks may include last-known IP address, or more.
++ * Triggers an error when the session is invalid.
++ * @param object Session object
++ */
++function session_validate( $p_session ) {
++	$t_user_ip = '';
++	if ( isset( $_SERVER['REMOTE_ADDR'] ) ) {
++		$t_user_ip = trim( $_SERVER['REMOTE_ADDR'] );
++	}
++
++	if ( is_null( $t_last_ip = $p_session->get( 'last_ip', null ) ) ) {
++		# First session usage
++		$p_session->set( 'last_ip', $t_user_ip );
++
++	} else {
++		# Check a continued session request
++		if ( $t_user_ip != $t_last_ip ) {
++			session_clean();
++
++			trigger_error( ERROR_SESSION_NOT_VALID, WARNING );
++
++			$t_url = config_get_global( 'path' ) . config_get_global( 'default_home_page' );
++			echo "\t<meta http-equiv=\"Refresh\" content=\"4;URL=$t_url\" />\n";
++
++			die();
++		}
++	}
++}
++
++/**
+  * Get arbitrary data from the session.
+  * @param string Session variable name
+  * @param mixed Default value
+@@ -190,4 +229,11 @@
  
  
  ##### Initialize the session
@@ -107,7 +157,7 @@ Index: core/session_api.php
 Index: core/constant_inc.php
 ===================================================================
 --- core/constant_inc.php	(revision 5688)
-+++ core/constant_inc.php	(working copy)
++++ core/constant_inc.php	(revision 5719)
 @@ -195,6 +195,7 @@
  	define( 'ERROR_HANDLER_ACCESS_TOO_LOW',				17 );
  	define( 'ERROR_PAGE_REDIRECTION',				18 );
@@ -116,22 +166,35 @@ Index: core/constant_inc.php
  
  	# ERROR_CONFIG_*
  	define( 'ERROR_CONFIG_OPT_NOT_FOUND',			100 );
+@@ -326,6 +327,7 @@
+ 	# ERROR_SESSION_*
+ 	define ( 'ERROR_SESSION_HANDLER_INVALID', 2700);
+ 	define ( 'ERROR_SESSION_VAR_NOT_FOUND',   2701);
++	define ( 'ERROR_SESSION_NOT_VALID',	      2702);
+ 
+ 	# ERROR_FORM_*
+ 	define ( 'ERROR_FORM_TOKEN_INVALID',	2800 );
+@@ -422,4 +424,3 @@
+ 	define( 'SPONSORSHIP_REQUESTED',      1 );
+ 	define( 'SPONSORSHIP_PAID',           2 );
+ 
+-?>
 Index: verify.php
 ===================================================================
 --- verify.php	(revision 5688)
-+++ verify.php	(working copy)
-@@ -42,6 +42,11 @@
++++ verify.php	(revision 5719)
+@@ -40,6 +40,11 @@
+ 	# force logout on the current user if already authenticated
+ 	if( auth_is_user_authenticated() ) {
  		auth_logout();
++
++		# (Re)initialize session
++		session_regenerate_id();
++		session_init();
++		$g_session_pass_id = ON;
  	}
  
-+	# (Re)initialize session
-+	session_regenerate_id()
-+	session_init( session_id() );
-+	$g_session_pass_id = ON;
-+
  	$t_calculated_confirm_hash = auth_generate_confirm_hash( $f_user_id );
- 
- 	if ( $f_confirm_hash != $t_calculated_confirm_hash ) {
 @@ -49,7 +54,6 @@
  	}
  
@@ -149,7 +212,7 @@ Index: verify.php
 Index: core.php
 ===================================================================
 --- core.php	(revision 5688)
-+++ core.php	(working copy)
++++ core.php	(revision 5719)
 @@ -145,7 +145,7 @@
  	require_once( $t_core_path.'database_api.php' );
  
