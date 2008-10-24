@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.27-r1.ebuild,v 1.1 2008/10/23 12:59:50 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.27-r1.ebuild,v 1.2 2008/10/24 00:49:32 mpagano Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -15,9 +15,6 @@ HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches"
 
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}"
-
-K_EXTRAEWARN="The e1000e driver is this kernel version is non-functional but
-will not damage your hardware. See bug #238489 for more information"
 
 pkg_postinst() {
 	kernel-2_pkg_postinst

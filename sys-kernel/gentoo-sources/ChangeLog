@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.552 2008/10/23 12:59:50 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.553 2008/10/24 00:49:32 mpagano Exp $
+
+  24 Oct 2008; Mike Pagano <mpagano@gentoo.org>
+  gentoo-sources-2.6.27-r1.ebuild:
+  Remove e1000e warning
 
 *gentoo-sources-2.6.27-r1 (23 Oct 2008)
 
