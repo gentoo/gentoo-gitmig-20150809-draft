@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/preload
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/ChangeLog,v 1.5 2008/10/23 15:16:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/ChangeLog,v 1.6 2008/10/24 01:38:43 darkside Exp $
+
+*preload-0.6.3-r4 (24 Oct 2008)
+
+  24 Oct 2008; Jeremy Olexa <darkside@gentoo.org>
+  +files/preload-0.6.3-forking-children.patch,
+  +files/preload-0.6.3-nice-segfault.patch,
+  +files/preload-0.6.3-overlapping-io-bursts.patch, files/conf.d-preload,
+  files/init.d-preload, -preload-0.6.3-r1.ebuild, -preload-0.6.3-r3.ebuild,
+  +preload-0.6.3-r4.ebuild:
+  init script now supports ionice'ing. New patches to improve/optimize
+  behavior. Thanks to Kai Krakow for patches and hints. Downgraded ebuild to
+  eapi-0 to allow people to get these important chagnes
 
 *preload-0.6.3-r3 (23 Oct 2008)
 

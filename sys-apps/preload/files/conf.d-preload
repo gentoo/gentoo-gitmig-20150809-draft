@@ -1,5 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/files/conf.d-preload,v 1.4 2008/10/23 15:16:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/preload/files/conf.d-preload,v 1.5 2008/10/24 01:38:43 darkside Exp $
 # preload configuration file
 
 # verbosity.  0-9, Default is 4.
@@ -16,6 +16,5 @@
 # Empty (commented out) means no state is saved.
 PRELOAD_STATEFILE="/var/lib/preload/preload.state"
 
-## Not supported in Gentoo yet. Patches to init script welcome. ##
 # Option to call ionice with.  Leave empty to skip ionice.
 #IONICE_OPTS="-c3"
