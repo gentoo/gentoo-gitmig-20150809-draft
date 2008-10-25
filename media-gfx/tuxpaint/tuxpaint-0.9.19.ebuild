@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.19.ebuild,v 1.3 2008/10/21 20:25:04 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.19.ebuild,v 1.4 2008/10/25 13:14:14 maekke Exp $
 
-inherit eutils gnome2-utils multilib
+inherit eutils gnome2-utils multilib toolchain-funcs
 
 DESCRIPTION="Drawing program designed for young children"
 HOMEPAGE="http://www.tuxpaint.org/"
@@ -34,6 +34,7 @@ src_unpack() {
 	# Sanitize the Makefile and correct a few other issues.
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-libpng.patch"
+	epatch "${FILESDIR}/${P}-strip.patch"
 
 	# Make multilib-strict compliant, see bug #200740
 	sed -i -e "s:/GET_LIBDIR/:/$(get_libdir)/:" Makefile || die "sed failed"
@@ -46,7 +47,7 @@ src_compile() {
 	use svg || myopts="${myopts} nosvg"
 
 	# emake may break things
-	make ${myopts} || die "Compilation failed"
+	make CC="$(tc-getCC)" ${myopts} || die "Compilation failed"
 }
 
 src_install () {
