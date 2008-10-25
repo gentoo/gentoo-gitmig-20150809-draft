@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/i810switch
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/ChangeLog,v 1.17 2007/10/13 18:39:18 cedk Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/ChangeLog,v 1.18 2008/10/25 20:16:14 cedk Exp $
+
+  25 Oct 2008; Cédric Krier <cedk@gentoo.org> -i810switch-0.6.2.ebuild,
+  i810switch-0.6.5.ebuild, -i810switch-0.6.5-r1.ebuild,
+  i810switch-0.6.5-r2.ebuild:
+  Fix CC for bug #243648, fix unquoted variable and remove old
 
 *i810switch-0.6.5-r2 (13 Oct 2007)
 

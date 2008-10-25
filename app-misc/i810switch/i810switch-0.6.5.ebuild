@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/i810switch-0.6.5.ebuild,v 1.2 2006/01/17 18:47:21 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/i810switch-0.6.5.ebuild,v 1.3 2008/10/25 20:16:14 cedk Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="A utility for switching the LCD and external VGA displays on and off"
 HOMEPAGE="http://www16.plala.or.jp/mano-a-mano/i810switch.html"
@@ -15,10 +17,10 @@ DEPEND="virtual/libc"
 RDEPEND="sys-apps/pciutils"
 
 src_compile() {
-	emake || die "compile failed"
+	emake CC=$(tc-getCC) || die "compile failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog README TODO
 }

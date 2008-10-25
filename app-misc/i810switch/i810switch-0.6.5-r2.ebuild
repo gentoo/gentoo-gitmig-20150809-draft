@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/i810switch-0.6.5-r2.ebuild,v 1.1 2007/10/13 18:39:18 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/i810switch-0.6.5-r2.ebuild,v 1.2 2008/10/25 20:16:14 cedk Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A utility for switching the LCD and external VGA displays on and off"
 HOMEPAGE="http://www16.plala.or.jp/mano-a-mano/i810switch.html"
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake CC=$(tc-getCC) || die "emake failed"
 }
 
 src_install() {
