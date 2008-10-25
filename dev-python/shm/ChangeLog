@@ -1,11 +1,11 @@
 # ChangeLog for dev-python/shm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shm/ChangeLog,v 1.3 2008/10/25 20:50:15 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shm/ChangeLog,v 1.4 2008/10/25 20:58:04 pvdabeel Exp $
 
 *shm-1.2.2 (07 Jun 2008)
  
   25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> shm-1.2.2.ebuild:
-  Keyworded ~ppc. Closes bug #238010
+  Keyworded ~ppc64. Closes bug #238010
 
 
   07 Jun 2008; Luca Longinotti <chtekk@gentoo.org> -shm-1.2.1.ebuild,
