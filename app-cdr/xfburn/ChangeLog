@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/xfburn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.6 2008/10/24 22:55:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.7 2008/10/25 16:05:28 nixnut Exp $
+
+  25 Oct 2008; nixnut <nixnut@gentoo.org> xfburn-0.3.2.ebuild:
+  Stable on ppc wrt bug 242710
 
   24 Oct 2008; Markus Meier <maekke@gentoo.org> xfburn-0.3.2.ebuild:
   x86 stable, bug #242710
