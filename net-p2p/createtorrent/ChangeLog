@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/createtorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/createtorrent/ChangeLog,v 1.5 2008/06/05 06:15:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/createtorrent/ChangeLog,v 1.6 2008/10/25 21:42:12 pvdabeel Exp $
 
 *createtorrent-1.1.4 (05 Jun 2008)
+
+  25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> createtorrent-1.1.4.ebuild:
+  Keyworded ~ppc. Closes bug #229799
 
   05 Jun 2008; Peter Volkov <pva@gentoo.org> +createtorrent-1.1.4.ebuild:
   Version bump, as reported by me :), bug #224775.
