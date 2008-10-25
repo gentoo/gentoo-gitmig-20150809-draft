@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_wsgi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.5 2008/07/31 17:53:48 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.6 2008/10/25 14:49:25 hollow Exp $
+
+*mod_wsgi-2.3 (25 Oct 2008)
+
+  25 Oct 2008; Benedikt Böhm <hollow@gentoo.org> -mod_wsgi-1.0.ebuild,
+  -mod_wsgi-2.0.ebuild, +mod_wsgi-2.3.ebuild:
+  version bump wrt #240246
 
 *mod_wsgi-2.1 (31 Jul 2008)
 
