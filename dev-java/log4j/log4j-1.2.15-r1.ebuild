@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.15-r1.ebuild,v 1.2 2008/10/23 19:05:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.15-r1.ebuild,v 1.3 2008/10/25 16:58:40 nixnut Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc javamail jms jmx source"
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/logging/${PN}/${PV}/${MY_P}.tar.gz"
 HOMEPAGE="http://logging.apache.org/log4j/"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 # jikes support disabled: bug #108819
 IUSE="doc javamail jms jmx source"
 
