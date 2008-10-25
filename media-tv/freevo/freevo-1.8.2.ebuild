@@ -1,47 +1,61 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.7.3.ebuild,v 1.2 2007/11/27 11:14:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.8.2.ebuild,v 1.1 2008/10/25 15:39:53 rbu Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Digital video jukebox (PVR, DVR)."
 HOMEPAGE="http://www.freevo.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-IUSE="dvd lirc matrox minimal mixer nls sqlite tv X directfb fbcon doc"
+IUSE="directfb cdparanoia doc dvd encode fbcon gphoto2 jpeg lame lirc matrox mixer nls snes sqlite tv tvtime vorbis xine xmame X"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND=">=dev-python/pygame-1.5.6
-	>=dev-python/pyxml-0.8.2
-	>=dev-python/imaging-1.1.3
-	=dev-python/twisted-2.4*
-	=dev-python/twisted-web-0.6*
-	>=media-video/mplayer-0.92
-	>=media-libs/freetype-2.1.4
+# TODO: We could also use dev-libs/libxml2 when
+# built with USE=python alternatively to pyxml
+RDEPEND="dev-python/pygame
+	dev-python/pyxml
+	dev-python/elementtree
+	dev-python/imaging
+	dev-python/beautifulsoup
+	>=dev-python/twisted-2.5
+	>=dev-python/twisted-web-0.6
+
+	>=dev-python/kaa-base-0.4.0
+	>=dev-python/kaa-metadata-0.7.3
+	>=dev-python/kaa-imlib2-0.2.3
+
+	media-video/mplayer
 	>=media-libs/libsdl-1.2.5
-	>=sys-apps/sed-4
-	>=dev-python/elementtree-1.2.6
-	>=dev-python/beautifulsoup-3.0
-	>=dev-python/kaa-base-0.1.3
-	>=dev-python/kaa-metadata-0.6.1
-	>=dev-python/kaa-imlib2-0.2.1
-	dvd? ( >=media-video/xine-ui-0.9.22 >=media-video/lsdvd-0.10 )
-	tv? ( media-tv/tvtime !minimal? ( media-tv/xmltv ) )
-	mixer? ( media-sound/aumix )
-	matrox? ( >=media-video/matroxset-0.3 )
+
+	cdparanoia? ( media-sound/cdparanoia )
+	dvd? ( >=media-video/lsdvd-0.10
+		encode? ( media-video/dvdbackup ) )
+	flac? ( media-libs/flac )
+	gphoto2? ( media-libs/libgphoto2 )
+	jpeg? ( media-libs/jpeg )
+	lame? ( media-sound/lame )
 	lirc? ( app-misc/lirc >=dev-python/pylirc-0.0.3 )
-	sqlite? ( ~dev-python/pysqlite-1.0.1 )"
+	matrox? ( >=media-video/matroxset-0.3 )
+	mixer? ( media-sound/aumix )
+	snes? ( || ( games-emulation/zsnes games-emulation/snes9x ) )
+	sqlite? ( ~dev-python/pysqlite-1.0.1 )
+	tv? (	media-tv/xmltv
+		tvtime? ( media-tv/tvtime ) )
+	xine? ( media-video/xine-ui )
+	vorbis? ( media-sound/vorbis-tools )
+	xmame? ( games-emulation/xmame )"
 
 pkg_setup() {
 	if use directfb ; then
-		use dvd && ! (built_with_use media-libs/xine-lib directfb) \
+		use dvd && ! built_with_use media-libs/xine-lib directfb \
 			&& ewarn "media-libs/xine-lib was not built with directfb support"
-		! (built_with_use media-video/mplayer directfb) \
+		! built_with_use media-video/mplayer directfb \
 			&& ewarn "media-video/mplayer was not built with directfb support"
-		if ! (built_with_use media-libs/libsdl directfb) ; then
+		if ! built_with_use media-libs/libsdl directfb ; then
 			eerror "media-libs/libsdl was not built with directdb support"
 			eerror "Please re-emerge libsdl with the directfb use flag"
 			die "directfb use flag specified but no support in libsdl and others"
@@ -49,18 +63,18 @@ pkg_setup() {
 	fi
 
 	if use fbcon ; then
-		use dvd && ! (built_with_use media-libs/xine-lib fbcon) \
+		use dvd && ! built_with_use media-libs/xine-lib fbcon \
 			&& ewarn "media-libs/xine-lib was not built with fbcon support"
-		! (built_with_use media-video/mplayer fbcon) \
+		! built_with_use media-video/mplayer fbcon \
 			&& ewarn "media-video/mplayer was not built with fbcon support"
-		if ! (built_with_use media-libs/libsdl fbcon) ; then
+		if ! built_with_use media-libs/libsdl fbcon ; then
 			eerror "media-libs/libsdl was not built with fbcon support"
 			eerror "Please re-emerge libsdl with the fbcon use flag"
 			die "fbcon use flag specified but no support in media-libs/libsdl and others"
 		fi
 	fi
 
-	if ! (use X || use directfb || use fbcon || use matrox) ; then
+	if ! { use X || use directfb || use fbcon || use matrox ; } ; then
 		echo
 		ewarn "WARNING - no video support specified in USE flags."
 		ewarn "Please be sure that media-libs/libsdl supports whatever video"
@@ -68,11 +82,15 @@ pkg_setup() {
 		echo
 	fi
 
-	if ! (     (built_with_use  media-libs/sdl-image jpeg) \
-		&& (built_with_use  media-libs/sdl-image png ) ) ; then
+	if ! built_with_use -a media-libs/sdl-image jpeg png ; then
 		eerror "media-libs/sdl-image needs more image format support (USE=\"png jpeg\")"
 		die "re-emerge media-libs/sdl-image with the given USE flags"
 	fi
+}
+
+src_unpack() {
+	distutils_src_unpack
+	epatch "${FILESDIR}"/${P}-mplayerargs.patch
 }
 
 src_install() {
@@ -100,12 +118,12 @@ src_install() {
 	fi
 
 	exeinto /usr/bin
-	newexe "${FILESDIR}/freevo.boot" freevoboot
+	newexe "${FILESDIR}"/${P}.boot freevoboot
 	newconfd "${FILESDIR}/freevo.conf" freevo
 
 	rm -rf "${D}/usr/share/doc"
 
-	dodoc ChangeLog FAQ INSTALL PKG-INFO README TODO \
+	dodoc ChangeLog FAQ RELEASE_NOTES README TODO \
 		Docs/{CREDITS,NOTES,*.txt,plugins/*.txt}
 	use doc &&
 		cp -r Docs/{installation,html,plugin_writing} "${D}/usr/share/doc/${PF}"
@@ -137,14 +155,17 @@ pkg_postinst() {
 	einfo "/etc/freevo/local_conf.py before starting Freevo."
 	einfo "To rebuild freevo.conf with different parameters,"
 	einfo "please run:"
-	einfo "    freevo setup"
+	einfo "  # freevo setup"
+
+	ewarn "To update from existing installations, please run"
+	ewarn "  # freevo convert_config /etc/freevo/local_conf.py -w"
+	ewarn "If you are using the recordserver, be sure to"
+	ewarn "read the RELEASE_NOTES in /usr/share/doc/${P}"
 
 	echo
-	ewarn "The way of starting Freevo for freevo-only-systems has changed"
-	ewarn "and does not require Freevo to run as root anymore."
-	ewarn "Please use freevoboot, a wrapper to be run as a user."
-	ewarn "Configuration is still in /etc/conf.d/freevo"
-	ewarn "and you can always start freevo directly."
+	einfo "To build a freevo-only system, please use the freevoboot"
+	einfo "wrapper to be run it as a user. It can be configured in /etc/conf.d/freevo"
+
 	if use X ; then
 		echo
 		ewarn "If you're using a Freevo-only system with X, you'll need"
@@ -153,7 +174,7 @@ pkg_postinst() {
 		ewarn "at boot, please use /etc/conf.d/freevo"
 		echo
 		ewarn "Should you decide to personalize your freevo.desktop"
-		ewarn "session, keep the definition for '/usr/bin/freevoboot starx'"
+		ewarn "session, keep the definition for '/usr/bin/freevoboot startx'"
 	else
 		echo
 		ewarn "If you want Freevo to start automatically,you'll need"
