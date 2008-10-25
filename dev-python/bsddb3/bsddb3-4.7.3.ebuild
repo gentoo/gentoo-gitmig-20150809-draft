@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.7.3.ebuild,v 1.1 2008/10/25 16:03:38 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.7.3.ebuild,v 1.2 2008/10/25 17:48:22 hawking Exp $
 
 EAPI="1"
 
@@ -16,13 +16,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
-RDEPEND="sys-libs/db:4.6"
+RDEPEND=">=sys-libs/db-4.6"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	doc? ( dev-python/sphinx )"
 
 src_compile() {
-	DB_VER="4.6"
+	local DB_VER
+	if has_version sys-libs/db:4.7; then
+		DB_VER="4.7"
+	else
+		DB_VER="4.6"
+	fi
 
 	sed -i \
 		-e "s/dblib = 'db'/dblib = '$(db_libname ${DB_VER})'/" \
