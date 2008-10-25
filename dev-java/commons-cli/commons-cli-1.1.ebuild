@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.1.ebuild,v 1.3 2008/10/23 18:35:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.1.ebuild,v 1.4 2008/10/25 17:24:35 nixnut Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/commons/cli/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.4"
