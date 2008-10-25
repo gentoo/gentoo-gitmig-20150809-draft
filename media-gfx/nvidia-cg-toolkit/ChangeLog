@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/nvidia-cg-toolkit
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.37 2008/10/16 20:43:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.38 2008/10/25 13:08:56 maekke Exp $
+
+*nvidia-cg-toolkit-2.1.0012 (25 Oct 2008)
+
+  25 Oct 2008; Markus Meier <maekke@gentoo.org>
+  +nvidia-cg-toolkit-2.1.0012.ebuild:
+  version bump by Jean-Marc Hengen in bug #244224
 
   16 Oct 2008; Markus Meier <maekke@gentoo.org>
   -nvidia-cg-toolkit-2.0.0015.ebuild:
