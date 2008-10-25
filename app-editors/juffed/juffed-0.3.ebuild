@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.3.ebuild,v 1.1 2008/08/05 04:53:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.3.ebuild,v 1.2 2008/10/25 22:07:03 pvdabeel Exp $
 
 EAPI=1
 inherit qt4
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/qscintilla-2.1
