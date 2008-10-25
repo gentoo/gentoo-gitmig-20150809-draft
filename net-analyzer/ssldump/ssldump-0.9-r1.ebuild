@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9-r1.ebuild,v 1.2 2008/10/25 13:35:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9-r1.ebuild,v 1.3 2008/10/25 15:34:23 nixnut Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.rtfm.com/ssldump/"
 IUSE="ssl"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 LICENSE="GPL-2"
 
 DEPEND="net-libs/libpcap
