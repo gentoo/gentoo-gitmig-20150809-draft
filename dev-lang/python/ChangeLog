@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.349 2008/10/07 23:04:02 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.350 2008/10/25 15:08:14 hawking Exp $
+
+*python-2.6-r3 (25 Oct 2008)
+
+  25 Oct 2008; Ali Polatel <hawking@gentoo.org> -python-2.6-r2.ebuild,
+  +python-2.6-r3.ebuild:
+  Revbump. Bump eselect-python DEPEND to fix bug 240149. Don't install empty
+  directories.
 
 *python-2.6-r2 (07 Oct 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6-r2.ebuild,v 1.1 2008/10/07 23:04:02 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6-r3.ebuild,v 1.1 2008/10/25 15:08:14 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -32,7 +32,7 @@ IUSE="ncurses gdbm ssl readline tk berkdb bootstrap ipv6 build ucs2 sqlite doc +
 # NOTE: dev-python/{elementtree,celementtree,pysqlite,ctypes,cjkcodecs}
 #       do not conflict with the ones in python proper. - liquidx
 
-DEPEND=">=app-admin/eselect-python-20080630
+DEPEND=">=app-admin/eselect-python-20080925
 	>=sys-libs/zlib-1.1.3
 	!build? (
 		sqlite? ( >=dev-db/sqlite-3 )
@@ -205,6 +205,9 @@ src_install() {
 
 	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT}
 	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT}
+
+	# Installs empty directory.
+	rmdir "${D}"/usr/$(get_libdir)/${PN}${PV}/lib-old
 }
 
 pkg_postrm() {
