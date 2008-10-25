@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md4sum/md4sum-0.02.03.ebuild,v 1.4 2008/06/02 14:26:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md4sum/md4sum-0.02.03.ebuild,v 1.5 2008/10/25 22:22:21 hanno Exp $
+
+inherit eutils
 
 DESCRIPTION="md4 and edonkey hash algorithm tool"
 HOMEPAGE="http://absinth.dyndns.org/linux/c/"
@@ -14,7 +16,7 @@ src_compile() {
 	econf || die "econf failed"
 	sed -i -e "s:CFLAGS=:CFLAGS=${CFLAGS} :g" \
 		-e "s:install -s:install:g" Makefile
-	make LDFLAGS="${LDFLAGS}" || die "emake failed"
+	make LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
