@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/calcurse-2.1.ebuild,v 1.3 2008/10/25 12:58:41 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/calcurse-2.3.ebuild,v 1.1 2008/10/25 12:58:41 cedk Exp $
 
 inherit eutils autotools
 
