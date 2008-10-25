@@ -1,6 +1,13 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.4 2008/07/27 01:01:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.5 2008/10/25 15:53:01 pva Exp $
+
+*kchmviewer-4.0_beta3 (25 Oct 2008)
+
+  25 Oct 2008; Peter Volkov <pva@gentoo.org> -kchmviewer-4.0_beta2.ebuild,
+  +kchmviewer-4.0_beta3.ebuild:
+  Version bump, thank Sven Vogel for report. Seems that bug #222131 is
+  fixed.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org>
   kchmviewer-4.0_beta2.ebuild:
