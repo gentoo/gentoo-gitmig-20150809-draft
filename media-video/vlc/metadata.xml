@@ -20,6 +20,9 @@
     <flag name="kate">Adds support for Ogg Kate subtitles via libkate.</flag>
     <flag name="libass">Enables subtitles support using libass.</flag>
     <flag name="libgcrypt">Enables cryptography support via libgcrypt.</flag>
+    <flag name="libv4l2">Enables Libv4l2 Video4Linux2 support (for conversion
+		from various video formats to standard ones, needed to use v4l2 devices
+		with strange formats).</flag>
     <flag name="live">Enables LIVE.com support.</flag>
     <flag name="optimisememory">Enable optimisation for memory rather than performance.</flag>
     <flag name="pvr">Enables PVR cards access module.</flag>

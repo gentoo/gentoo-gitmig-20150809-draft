@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.400 2008/10/22 03:41:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.401 2008/10/25 00:04:50 aballier Exp $
+
+*vlc-0.9.5 (25 Oct 2008)
+
+  25 Oct 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml,
+  +vlc-0.9.5.ebuild:
+  new upstream release
 
   22 Oct 2008; Alexis Ballier <aballier@gentoo.org> vlc-0.9.4-r1.ebuild:
   vlc checks if the compiler supports fomit-frame-pointer, no need for the
