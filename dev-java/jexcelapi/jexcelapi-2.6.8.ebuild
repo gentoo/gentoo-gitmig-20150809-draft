@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/jexcelapi-2.6.8.ebuild,v 1.2 2008/10/23 21:44:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/jexcelapi-2.6.8.ebuild,v 1.3 2008/10/25 17:12:28 nixnut Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/jexcelapi/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="2.5"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
