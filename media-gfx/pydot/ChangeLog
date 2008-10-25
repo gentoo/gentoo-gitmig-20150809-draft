@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/pydot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.8 2008/06/10 22:25:18 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.9 2008/10/25 12:31:20 cedk Exp $
+
+*pydot-1.0.2-r1 (25 Oct 2008)
+
+  25 Oct 2008; Cédric Krier <cedk@gentoo.org>
+  +files/pydot-1.0.2-setup.patch, -pydot-1.0.2.ebuild,
+  +pydot-1.0.2-r1.ebuild:
+  Fix setup for bug #242066
 
   10 Jun 2008; Cédric Krier <cedk@gentoo.org> pydot-1.0.2.ebuild:
   Fix DEPEND
