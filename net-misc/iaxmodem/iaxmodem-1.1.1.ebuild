@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iaxmodem/iaxmodem-1.1.1.ebuild,v 1.1 2008/10/14 23:53:38 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iaxmodem/iaxmodem-1.1.1.ebuild,v 1.2 2008/10/25 01:29:57 sbriesen Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -37,6 +37,9 @@ src_unpack() {
 	# patch configure (we compile libs for ourself)
 	sed -i -e 's:^\(cd\|./configure\):# \1:g' configure
 	sed -i -e 's:build-libiax build-libspandsp ::g' Makefile.in
+
+	# fix dumb x86_64 libdir handling
+	sed -i -e 's: \(x86_64-\*)\): _DISABLED_\1:g' lib/spandsp/configure
 }
 
 src_compile() {
