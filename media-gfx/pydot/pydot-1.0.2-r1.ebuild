@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/pydot-1.0.2-r1.ebuild,v 1.1 2008/10/25 12:31:20 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/pydot-1.0.2-r1.ebuild,v 1.2 2008/10/25 13:00:02 cedk Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Python bindings for Graphviz"
 HOMEPAGE="http://code.google.com/p/pydot/"
