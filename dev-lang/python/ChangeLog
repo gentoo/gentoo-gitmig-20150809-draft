@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.350 2008/10/25 15:08:14 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.351 2008/10/25 15:33:02 hawking Exp $
+
+  25 Oct 2008; Ali Polatel <hawking@gentoo.org> python-2.5.2-r7.ebuild,
+  python-2.5.2-r8.ebuild, python-2.6-r3.ebuild:
+  Nuke the useless bootstrap USE flag for >=python-2.5. Thanks to Arfrever.
 
 *python-2.6-r3 (25 Oct 2008)
 
