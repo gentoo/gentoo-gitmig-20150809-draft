@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.2.ebuild,v 1.1 2008/09/02 09:13:33 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.2.ebuild,v 1.2 2008/10/25 13:20:22 pvdabeel Exp $
 
 NEED_PYTHON=2.4
 inherit distutils
@@ -11,7 +11,7 @@ SRC_URI="http://sympy.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples gtk imaging ipython latex mathml opengl pdf png test texmacs"
 
 RDEPEND="mathml? ( dev-libs/libxml2

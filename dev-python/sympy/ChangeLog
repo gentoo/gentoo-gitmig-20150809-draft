@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.1 2008/09/02 09:13:33 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.2 2008/10/25 13:20:22 pvdabeel Exp $
 
 *sympy-0.6.2 (02 Sep 2008)
+
+  25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> sympy-0.6.2.ebuild:
+  Keyworded ~ppc. Closes bug #237720
 
   02 Sep 2008; Andrey Grozin <grozin@gentoo.org>
   +files/sympy-0.6.2-sphinx.patch, +metadata.xml, +sympy-0.6.2.ebuild:
