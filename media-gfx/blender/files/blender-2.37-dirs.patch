@@ -10,7 +10,7 @@ diff -ruN blender.orig/source/blender/src/language.c blender/source/blender/src/
 -		strcpy(name, ".blender/.Blanguages");
 +		/* Check the standar location. Takes care of the case 
 +		 * in which the distribution installs blender */
-+		strcpy(name, "/usr/lib/blender/.Blanguages");
++		strcpy(name, "/usr/share/blender/.Blanguages");
  #endif
  		lines= BLI_read_file_as_lines(name);
  
