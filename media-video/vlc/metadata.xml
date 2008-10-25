@@ -3,7 +3,8 @@
 <pkgmetadata>
   <herd>video</herd>
   <maintainer>
-    <email>media-video@gentoo.org</email>
+    <email>aballier@gentoo.org</email>
+    <name>Alexis Ballier</name>
   </maintainer>
   <use>
     <flag name="atmo">Enables support for AtmoLight (homebrew Ambient Lighting Technology)</flag>
