@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.8-r1.ebuild,v 1.3 2008/06/15 15:40:46 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.10.ebuild,v 1.1 2008/10/25 14:40:50 hollow Exp $
 
 inherit flag-o-matic eutils
 
@@ -49,11 +49,8 @@ src_compile() {
 
 	# econf overwrites the stuff from config.layout, so we have to put them into
 	# our myconf line too
-
 	econf \
 		--sbindir=/usr/sbin \
-		--with-perl=/usr/bin/perl \
-		--with-expat=/usr \
 		--with-z=/usr \
 		--with-apr=/usr \
 		--with-apr-util=/usr \
