@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/qimageblitz-0.0.4.ebuild,v 1.2 2008/03/05 21:27:45 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/qimageblitz-0.0.4.ebuild,v 1.3 2008/10/25 12:19:53 pvdabeel Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2 LGPL-2"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 
 IUSE="3dnow altivec debug mmx sse sse2"
