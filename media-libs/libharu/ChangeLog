@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libharu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/ChangeLog,v 1.1 2008/10/21 11:34:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/ChangeLog,v 1.2 2008/10/25 22:33:38 pvdabeel Exp $
 
 *libharu-2.1.0 (21 Oct 2008)
+
+  25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> libharu-2.1.0.ebuild:
+  Keyworded ~ppc. Closes bug #243480
 
   21 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +libharu-2.1.0.ebuild:
