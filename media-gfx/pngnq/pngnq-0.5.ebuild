@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/pngnq-0.5.ebuild,v 1.3 2008/10/16 00:28:37 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/pngnq-0.5.ebuild,v 1.4 2008/10/25 19:15:38 hanno Exp $
 
 inherit eutils
 
@@ -23,6 +23,10 @@ src_unpack() {
 
 	epatch "${DISTDIR}/${P}-makefile.patch"
 	epatch "${FILESDIR}/${P}-cflags.diff"
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
