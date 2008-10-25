@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.2.ebuild,v 1.2 2008/09/19 17:58:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.4.2.ebuild,v 1.3 2008/10/25 21:03:11 vapier Exp $
 
 EAPI="1"
-inherit qt4-build
+inherit qt4-build flag-o-matic toolchain-funcs
 
 DESCRIPTION="The Webkit module for the Qt toolkit."
 HOMEPAGE="http://www.trolltech.com/"
@@ -26,6 +26,12 @@ QCONFIG_DEFINE="QT_WEBKIT"
 # see bug 236781
 QT4_BUILT_WITH_USE_CHECK="${QT4_BUILT_WITH_USE_CHECK}
 	~x11-libs/qt-core-${PV} ssl"
+
+src_unpack() {
+	[[ $(tc-arch) == "ppc64" ]] && append-flags -mminimal-toc #241900
+
+	qt4-build_src_unpack
+}
 
 src_compile() {
 	local myconf

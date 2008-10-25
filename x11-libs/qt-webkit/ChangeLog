@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.13 2008/09/19 17:58:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.14 2008/10/25 21:03:11 vapier Exp $
+
+  25 Oct 2008; Mike Frysinger <vapier@gentoo.org> qt-webkit-4.4.2.ebuild:
+  Add -mminimal-toc to workaround ppc64 compiler issues #241900.
 
   19 Sep 2008; Ben de Groot <yngwin@gentoo.org> qt-webkit-4.4.2.ebuild:
   Add check for qt-core built with use ssl, to fix bug 236781
