@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.1.2.ebuild,v 1.1 2008/10/21 21:05:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.1.2.ebuild,v 1.2 2008/10/25 18:30:18 tupone Exp $
 
 inherit autotools eutils games
 
@@ -27,7 +27,7 @@ RDEPEND="media-libs/libsdl
 	media-libs/libogg
 	media-libs/libvorbis
 	media-libs/openal
-	dev-libs/xerces-c
+	<dev-libs/xerces-c-3.0.0
 	virtual/opengl
 	virtual/glu
 	x11-libs/libX11
