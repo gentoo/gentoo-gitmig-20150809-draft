@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ispell-es-1.10.ebuild,v 1.1 2008/09/15 14:56:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ispell-es-1.10.ebuild,v 1.2 2008/10/25 18:05:30 nixnut Exp $
 
 MY_P="espa~nol-"${PV}
 DESCRIPTION="A Spanish dictionary for ispell"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.datsi.fi.upm.es/~coes/"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ppc ~sparc ~x86"
 
 DEPEND="app-text/ispell"
 
