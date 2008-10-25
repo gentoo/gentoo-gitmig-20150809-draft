@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.9 2008/10/20 20:51:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.10 2008/10/25 22:01:10 vapier Exp $
+
+  25 Oct 2008; Mike Frysinger <vapier@gentoo.org>
+  libpciaccess-0.10.4.ebuild:
+  Add blocker on older xorg-server so that systems get updated automatically
+  rather than hitting a file collision.
 
 *libpciaccess-0.10.4 (20 Oct 2008)
 
