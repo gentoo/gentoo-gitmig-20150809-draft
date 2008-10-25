@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/text-format
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.20 2007/09/21 00:07:34 ranger Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.21 2008/10/25 09:54:00 graaff Exp $
+
+  25 Oct 2008; Hans de Graaff <graaff@gentoo.org> text-format-1.0.0.ebuild:
+  Mark stable for amd64, bug #244214
 
   21 Sep 2007; Brent Baude <ranger@gentoo.org> text-format-1.0.0.ebuild:
   Marking text-format-1.0.0 ~ppc64 for bug 192258
