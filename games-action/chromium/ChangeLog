@@ -1,6 +1,9 @@
 # ChangeLog for games-action/chromium
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.28 2008/07/27 20:17:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.29 2008/10/25 18:18:34 tupone Exp $
+
+  25 Oct 2008; Tupone Alfredo <tupone@gentoo.org> files/0.9.12-gcc43.patch:
+  Fix compilation with gcc-4.3 and not sdl. Bug #227933 by Evil Compile Person
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> chromium-0.9.12-r6.ebuild,
   chromium-0.9.12-r7.ebuild:
