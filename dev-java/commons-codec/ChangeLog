@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-codec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.33 2008/10/23 18:39:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-codec/ChangeLog,v 1.34 2008/10/25 17:25:54 nixnut Exp $
+
+  25 Oct 2008; nixnut <nixnut@gentoo.org> commons-codec-1.3-r2.ebuild:
+  Stable on ppc wrt bug 242962
 
   23 Oct 2008; Markus Meier <maekke@gentoo.org> commons-codec-1.3-r2.ebuild:
   amd64/x86 stable, bug #242962
