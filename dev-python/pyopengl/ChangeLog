@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.22 2008/06/29 10:34:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.23 2008/10/25 15:27:29 hawking Exp $
+
+*pyopengl-3.0.0_beta6 (25 Oct 2008)
+
+  25 Oct 2008; Ali Polatel <hawking@gentoo.org> -pyopengl-2.0.1.09.ebuild,
+  -pyopengl-2.0.1.09-r1.ebuild, -pyopengl-3.0.0_beta1.ebuild,
+  +pyopengl-3.0.0_beta6.ebuild:
+  Version bump. Fix python dependency, bug 242688. Use use dependencies
+  instead of built_with_use. Drop old.
 
   29 Jun 2008; Torsten Veller <tove@gentoo.org> pyopengl-3.0.0_beta1.ebuild:
   Add missing die: || "..." -> || die "..."
