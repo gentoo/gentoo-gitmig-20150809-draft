@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/netcat6
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.9 2007/07/09 16:41:02 jer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.10 2008/10/25 15:33:21 pva Exp $
+
+*netcat6-1.0-r1 (25 Oct 2008)
+
+  25 Oct 2008; Peter Volkov <pva@gentoo.org>
+  +files/netcat6-1.0-unix-sockets.patch, -netcat6-0.5.ebuild,
+  +netcat6-1.0-r1.ebuild:
+  Added patch to make netcat6 listen on unix sockets, bug #235160, thank
+  Georgi Georgiev for this patch. Added bluetooth support. Removed old
+  version.
 
   09 Jul 2007; Jeroen Roovers <jer@gentoo.org> netcat6-1.0.ebuild:
   Stable for HPPA (as informally requested by armin76).
