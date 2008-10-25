@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-6.06b.ebuild,v 1.2 2008/10/13 12:51:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-6.10c.ebuild,v 1.1 2008/10/25 14:38:23 ulm Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
-SITEFILE=51${PN}-gentoo.el
+SITEFILE="51${PN}-gentoo.el"
 
 S="${WORKDIR}/org-${PV}"
 
@@ -31,8 +31,7 @@ src_install() {
 		infodir="${D}/usr/share/info" \
 		install || die "emake install failed"
 
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
-		|| die "elisp-site-file-install failed"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 
 	mv doc/org doc/org.info
 	doinfo doc/org.info || die "doinfo failed"
