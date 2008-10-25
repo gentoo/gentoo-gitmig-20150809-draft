@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.0.1_pre4.ebuild,v 1.5 2008/04/29 11:37:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.0.1_pre4.ebuild,v 1.6 2008/10/25 11:18:13 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -43,6 +43,7 @@ src_unpack() {
 		-e "s:#HAVE_MAGICK:HAVE_MAGICK:"
 
 	has_version ">=media-video/vdr-1.3.37" && epatch "${FILESDIR}/${P}-1.3.37.diff"
+	has_version ">=media-gfx/imagemagick-6.4" && epatch "${FILESDIR}/imagemagick-6.4.x.diff"
 }
 
 src_install() {
