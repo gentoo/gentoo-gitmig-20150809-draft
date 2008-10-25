@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pavucontrol
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.18 2008/10/10 13:07:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.19 2008/10/25 18:19:53 betelgeuse Exp $
+
+  25 Oct 2008; Petteri Räty <betelgeuse@gentoo.org>
+  pavucontrol-0.9.7.ebuild:
+  Add dependency on libcanberra built with the gtk use flag. Fixes bug
+  #241130.
 
 *pavucontrol-0.9.7 (10 Oct 2008)
 

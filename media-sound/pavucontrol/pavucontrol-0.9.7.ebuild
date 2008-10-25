@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-0.9.7.ebuild,v 1.1 2008/10/10 13:07:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-0.9.7.ebuild,v 1.2 2008/10/25 18:19:53 betelgeuse Exp $
 
 EAPI=2
 
@@ -19,7 +19,8 @@ IUSE="nls"
 DEPEND=">=dev-cpp/gtkmm-2.4
 	>=dev-cpp/libglademm-2.4
 	>=dev-libs/libsigc++-2.0
-	>=media-sound/pulseaudio-0.9.7[glib]"
+	>=media-sound/pulseaudio-0.9.7[glib]
+	media-libs/libcanberra[gtk]"
 
 RDEPEND="${DEPEND}
 	x11-themes/gnome-icon-theme"
@@ -38,6 +39,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dohtml -r doc
-	dodoc README
+	dohtml -r doc || die
+	dodoc README || die
 }
