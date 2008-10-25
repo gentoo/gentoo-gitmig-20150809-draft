@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.13 2008/08/15 13:01:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.14 2008/10/25 20:27:26 caleb Exp $
+
+  25 Oct 2008; Caleb Tennis <caleb@gentoo.org> sphinx-0.9.8.ebuild:
+  amd64 stable
 
   15 Aug 2008; Caleb Tennis <caleb@gentoo.org> sphinx-0.9.8.ebuild:
   add test use flag for php

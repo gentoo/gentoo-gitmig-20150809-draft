@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.8.ebuild,v 1.2 2008/08/15 13:01:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.8.ebuild,v 1.3 2008/10/25 20:27:26 caleb Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ RESTRICT="mirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 amd64"
 IUSE="debug mysql postgres stemmer test"
 
 DEPEND="mysql? ( virtual/mysql )
