@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/fakeroot-ng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot-ng/ChangeLog,v 1.1 2008/10/06 21:55:10 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot-ng/ChangeLog,v 1.2 2008/10/25 22:29:11 pvdabeel Exp $
 
 *fakeroot-ng-0.14 (06 Oct 2008)
 
-  06 Oct 2008; Michał Januszewski <spock@gentoo.org> +metadata.xml,
+  25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> fakeroot-ng-0.14.ebuild:
+  Keyworded ~ppc. Closes bug #243392
+
+  06 Oct 2008; MichaÅ Januszewski <spock@gentoo.org> +metadata.xml,
   +fakeroot-ng-0.14.ebuild:
   Initial commit.
 
