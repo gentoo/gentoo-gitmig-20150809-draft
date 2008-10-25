@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.12 2008/09/18 19:22:26 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.13 2008/10/25 14:45:23 hawking Exp $
+
+*eselect-python-20080925 (25 Oct 2008)
+
+  25 Oct 2008; Ali Polatel <hawking@gentoo.org>
+  -eselect-python-20080124.ebuild, -eselect-python-20080620.ebuild,
+  -eselect-python-20080630.ebuild, +eselect-python-20080925.ebuild:
+  Version bump. Fixes bug 240149. Drop old.
 
 *eselect-python-20080630 (18 Sep 2008)
 
