@@ -1,9 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.0-r1.ebuild,v 1.1 2008/10/19 14:45:22 matsuu Exp $
-
-# If you change this in any way please email lisa@gentoo.org and make an
-# entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.0-r2.ebuild,v 1.1 2008/10/25 06:39:17 matsuu Exp $
 
 inherit eutils fdo-mime flag-o-matic multilib toolchain-funcs
 
@@ -14,7 +11,7 @@ SRC_URI="http://distcc.googlecode.com/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi gnome gtk ipv6 selinux"
+IUSE="avahi gnome gtk ipv6 selinux xinetd"
 
 RESTRICT="test"
 
@@ -35,16 +32,10 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	!net-misc/pump
 	>=sys-devel/gcc-config-1.3.1
-	selinux? ( sec-policy/selinux-distcc )"
+	selinux? ( sec-policy/selinux-distcc )
+	xinetd? ( sys-apps/xinetd )"
 
 pkg_setup() {
-	if use ipv6; then
-		ewarn "To use IPv6 you must have IPv6 compiled into your kernel"
-		ewarn "either via a module or compiled code"
-		ewarn "You can recompile without ipv6 with: USE='-ipv6' emerge distcc"
-		epause 5
-	fi
-
 	enewuser distcc 240 -1 -1 daemon
 }
 
@@ -77,15 +68,24 @@ src_install() {
 	dobin "${FILESDIR}/${PV}/distcc-config"
 
 	newinitd "${FILESDIR}/${PV}/init" distccd
-	cp "${FILESDIR}/${PV}/conf" "${T}/conf"
+
+	cp "${FILESDIR}/${PV}/conf" "${T}/distccd"
 	if use avahi; then
-		(
-			echo
-			echo '# Enable zeroconf support in distccd'
-			echo 'DISTCCD_OPTS="${DISTCCD_OPTS} --zeroconf"'
-		) >> "${T}/conf"
+		cat >> "${T}/distccd" <<-EOF
+	
+		# Enable zeroconf support in distccd
+		DISTCCD_OPTS="\${DISTCCD_OPTS} --zeroconf"
+		EOF
 	fi
-	newconfd "${T}/conf" distccd
+	doconfd "${T}/distccd"
+
+	cat > "${T}/02distcc" <<-EOF
+	# This file is managed by distcc-config; use it to change these settings.'
+	DISTCC_LOG=""
+	DCCC_PATH="/usr/$(get_libdir)/distcc/bin"
+	DISTCC_VERBOSE="0"
+	EOF
+	doenvd "${T}/02distcc"
 
 	# create the masquerade directory
 	local DCCC_PATH="/usr/$(get_libdir)/distcc/bin/"
@@ -108,6 +108,11 @@ src_install() {
 	  dosym distccmon-gui /usr/bin/distccmon-gnome
 	fi
 
+	if use xinetd; then
+		insinto /etc/xinetd.d
+		newins "${FILEDIR}/${PV}/xinetd"
+	fi
+
 	rm -rf "${D}/etc/default"
 	rm -f "${D}/etc/distcc/clients.allow"
 	rm -f "${D}/etc/distcc/commands.allow.sh"
@@ -116,19 +121,6 @@ src_install() {
 
 pkg_postinst() {
 	use gnome && fdo-mime_desktop_database_update
-
-	# By now everyone should be using the right envfile
-	if [ "${ROOT}" = "/" ]; then
-		einfo "Installing links to native compilers..."
-		/usr/bin/distcc-config --install
-	else
-		# distcc-config can *almost* handle ROOT installs itself
-		#  but for now, but user must finsh things off
-		elog "*** Installation is not complete ***"
-		elog "You must run the following as root:"
-		elog "  /usr/bin/distcc-config --install"
-		elog "after booting or chrooting into ${ROOT}"
-	fi
 
 	elog
 	elog "Tips on using distcc with Gentoo can be found at"
