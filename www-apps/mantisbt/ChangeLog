@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.72 2008/10/24 08:56:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.73 2008/10/25 13:25:41 maekke Exp $
+
+  25 Oct 2008; Markus Meier <maekke@gentoo.org> mantisbt-1.1.4-r2.ebuild:
+  amd64/x86 stable, bug #242722
 
 *mantisbt-1.1.4-r2 (24 Oct 2008)
 
