@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.91 2008/09/24 12:34:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.92 2008/10/25 14:24:29 nixnut Exp $
+
+  25 Oct 2008; nixnut <nixnut@gentoo.org> geoip-1.4.5.ebuild:
+  Stable on ppc wrt bug 244256
 
 *geoip-1.4.5 (24 Sep 2008)
 
