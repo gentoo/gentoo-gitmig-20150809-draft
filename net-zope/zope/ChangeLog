@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.144 2008/10/24 21:02:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.145 2008/10/25 15:22:26 nixnut Exp $
+
+  25 Oct 2008; nixnut <nixnut@gentoo.org> zope-2.10.6.ebuild:
+  Stable on ppc wrt bug 243270
 
   24 Oct 2008; Markus Meier <maekke@gentoo.org> zope-2.10.6.ebuild:
   amd64/x86 stable, bug #243270
