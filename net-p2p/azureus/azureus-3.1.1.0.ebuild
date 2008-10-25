@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-3.1.1.0.ebuild,v 1.1 2008/08/16 15:48:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-3.1.1.0.ebuild,v 1.2 2008/10/25 21:21:46 pvdabeel Exp $
 
 ###
 ### @Todo The new Azureus gui requires swt built with embedded mozilla support,
@@ -26,7 +26,7 @@ SRC_URI="mirror://sourceforge/azureus/Vuze_${PV}_source.zip"
 LICENSE="GPL-2 BSD"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc ~ppc64"
 IUSE=""
 
 RDEPEND="
@@ -96,6 +96,7 @@ src_compile() {
 	use amd64 && mem="256"
 	use x86   && mem="128"
 	use ppc   && mem="192"
+	use ppc64 && mem="256"
 	export ANT_OPTS="-Xmx${mem}m"
 	java-pkg-2_src_compile
 }

@@ -1,8 +1,11 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.68 2008/08/16 15:48:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.69 2008/10/25 21:21:46 pvdabeel Exp $
 
 *azureus-3.1.1.0 (16 Aug 2008)
+
+  25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> azureus-3.1.1.0.ebuild:
+  Keyworded ~ppc and ~ppc64. Closes bug #237829 
 
   16 Aug 2008; Vlastimil Babka <caster@gentoo.org>
   +files/patches-3.1.1.0/remove-osx-platform.diff,
