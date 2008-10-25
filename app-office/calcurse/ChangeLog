@@ -1,6 +1,10 @@
 # ChangeLog for app-office/calcurse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.5 2008/05/17 15:45:31 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.6 2008/10/25 12:51:23 cedk Exp $
+
+  25 Oct 2008; Cédric Krier <cedk@gentoo.org>
+  +files/calcurse-2.1-cflags.patch, calcurse-2.1.ebuild:
+  Fix CFLAGS for bug #240119 and add missing IUSE
 
 *calcurse-2.1 (17 May 2008)
 

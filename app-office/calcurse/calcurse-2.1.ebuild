@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/calcurse-2.1.ebuild,v 1.1 2008/05/17 15:45:31 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/calcurse-2.1.ebuild,v 1.2 2008/10/25 12:51:23 cedk Exp $
+
+inherit eutils autotools
 
 DESCRIPTION="a text-based personal organizer"
 HOMEPAGE="http://culot.org/calcurse/index.html"
@@ -9,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="linguas_en linguas_fr linguas_de linguas_es linguas_nl"
+IUSE="linguas_en linguas_fr linguas_de linguas_es linguas_it linguas_nl"
 
 DEPEND="sys-libs/ncurses"
 RDEPEND=${DEPEND}
@@ -18,6 +20,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	rm po/LINGUAS
+
+	epatch "${FILESDIR}"/${P}-cflags.patch
+	eautoreconf
 }
 
 src_compile() {
