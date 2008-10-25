@@ -1,12 +1,15 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.7 2008/10/12 22:45:33 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.8 2008/10/25 22:22:51 pvdabeel Exp $
 
   12 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org>
   +files/opencv-1.0.0-swiginvalidlinkingoptions.patch,
   opencv-1.0.0-r1.ebuild:
   Fix problems when SWIG_PYTHON_LIBS was empty, resulting in '-L -o'. Reported
   by Blorby in bug #239563, patch stolen from Exherbo
+
+  25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> opencv-1.0.0-r1.ebuild:
+  Keyworded ~ppc. Closes bug #236085
 
   14 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml:
   Picking up maintainership as current maintainer is inactive.

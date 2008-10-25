@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0-r1.ebuild,v 1.3 2008/10/12 22:45:33 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0-r1.ebuild,v 1.4 2008/10/25 22:22:51 pvdabeel Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic autotools
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}library/${P}.tar.gz"
 ##stuff, same for v4l
 LICENSE="v4l? ( GPL-2 ) xine? ( GPL-2 ) Intel"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug demos examples ffmpeg gtk ieee1394 jpeg jpeg2k openexr png python tiff xine v4l zlib"
 
 COMMON_DEPEND="ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
