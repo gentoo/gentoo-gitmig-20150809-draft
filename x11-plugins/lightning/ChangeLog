@@ -1,8 +1,11 @@
 # ChangeLog for x11-plugins/lightning
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/ChangeLog,v 1.8 2008/09/20 14:54:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/ChangeLog,v 1.9 2008/10/25 21:53:51 pvdabeel Exp $
 
 *lightning-0.9_rc2 (20 Sep 2008)
+
+  25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> lightning-0.9_rc2.ebuild:
+  Keyworded ~ppc. Closes bug #216767
 
   20 Sep 2008; Raúl Porcel <armin76@gentoo.org> +lightning-0.9_rc2.ebuild:
   Version bump
