@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.5.0.ebuild,v 1.1 2008/09/07 22:10:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.6.0.ebuild,v 1.1 2008/10/25 10:54:34 markusle Exp $
 
 inherit eutils fortran
 
