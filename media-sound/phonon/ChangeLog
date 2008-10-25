@@ -1,12 +1,15 @@
 # ChangeLog for media-sound/phonon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.2 2008/10/11 21:42:52 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.3 2008/10/25 14:48:21 pvdabeel Exp $
 
   11 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   phonon-4.2.0.ebuild:
   Bumped gstreamer and gst-plugins-base dep to >=0.10.20.
 
 *phonon-4.2.0 (02 Oct 2008)
+
+  25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> phonon-4.2.0.ebuild:
+  Keyworded ~ppc. Closes bug #244240
 
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +metadata.xml, +phonon-4.2.0.ebuild:
