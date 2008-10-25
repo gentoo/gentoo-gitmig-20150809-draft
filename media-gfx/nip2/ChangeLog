@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/nip2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.10 2008/08/23 10:20:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.11 2008/10/25 12:10:00 maekke Exp $
+
+  25 Oct 2008; Markus Meier <maekke@gentoo.org>
+  +files/nip2-7.14.4-configure.patch, nip2-7.14.4.ebuild:
+  fix file collision for bug #243000
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> -nip2-7.14.3.ebuild:
   old

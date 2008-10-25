@@ -1,8 +1,8 @@
 # Copyright 2003-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.14.4.ebuild,v 1.1 2008/06/28 08:46:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.14.4.ebuild,v 1.2 2008/10/25 12:10:00 maekke Exp $
 
-inherit fdo-mime
+inherit fdo-mime autotools
 
 DESCRIPTION="VIPS Image Processing Graphical User Interface"
 SRC_URI="http://www.vips.ecs.soton.ac.uk/supported/7.14/${P}.tar.gz"
@@ -26,10 +26,17 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	sys-devel/bison"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-configure.patch
+	eautoreconf
+}
+
 src_compile() {
-	local myconf
-	use fftw || myconf="--without-fftw"
-	econf ${myconf} || die "econf failed"
+	econf \
+		--disable-mime-update \
+		$(use_with fftw fftw3) || die
 	emake || die "emake failed"
 }
 
