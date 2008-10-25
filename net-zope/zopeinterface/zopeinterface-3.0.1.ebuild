@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/zopeinterface-3.0.1.ebuild,v 1.21 2006/07/02 20:17:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/zopeinterface-3.0.1.ebuild,v 1.22 2008/10/25 13:58:21 hawking Exp $
 
 inherit distutils
 
 MY_PN="ZopeInterface"
 DESCRIPTION="Standalone Zope interface library"
-HOMEPAGE="http://zope.org/Products/ZopeInterface"
+HOMEPAGE="http://pypi.python.org/pypi/zope.interface/"
 SRC_URI="http://www.zope.org/Products/${MY_PN}/${PV}final/${MY_PN}-${PV}.tgz"
 
 LICENSE="ZPL"
