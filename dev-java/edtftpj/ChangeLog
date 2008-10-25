@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/edtftpj
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.46 2008/10/24 23:07:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.47 2008/10/25 17:30:30 nixnut Exp $
+
+  25 Oct 2008; nixnut <nixnut@gentoo.org> edtftpj-2.0.3.ebuild:
+  Stable on ppc wrt bug 242972
 
   24 Oct 2008; Markus Meier <maekke@gentoo.org> edtftpj-2.0.3.ebuild:
   x86 stable, bug #242972
