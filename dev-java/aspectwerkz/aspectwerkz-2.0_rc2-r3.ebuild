@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r3.ebuild,v 1.3 2008/10/24 23:02:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/aspectwerkz-2.0_rc2-r3.ebuild,v 1.4 2008/10/25 17:23:14 nixnut Exp $
 
 EAPI=1
 # no rewriting required since we patch build.xml to contain target/source
@@ -14,7 +14,7 @@ SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P/_rc/.RC}.zip"
 HOMEPAGE="http://aspectwerkz.codehaus.org"
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 RDEPEND=">=virtual/jre-1.3
 	dev-java/asm:1.5
 	dev-java/concurrent-util:0
