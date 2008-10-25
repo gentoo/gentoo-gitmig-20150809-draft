@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.10 2008/10/02 05:04:42 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.11 2008/10/25 13:11:59 pvdabeel Exp $
 
 *soprano-2.1 (02 Oct 2008)
+
+  25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> soprano-2.1.ebuild:
+  Keyworded ~ppc. Closes bug #244238
 
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml, +soprano-2.1.ebuild:
