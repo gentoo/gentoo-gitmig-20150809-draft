@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.70 2008/10/11 22:57:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.71 2008/10/25 12:15:44 pvdabeel Exp $
+
+  25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> tomboy-0.10.2.ebuild:
+  Keyworded ~ppc. Closes bug #233938
 
   11 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -tomboy-0.8.1-r1.ebuild, -tomboy-0.8.2.ebuild, -tomboy-0.10.0.ebuild,
@@ -13,7 +16,7 @@
   31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
 
-  26 Jul 2008; Olivier Crête <tester@gentoo.org> tomboy-0.10.2.ebuild:
+  26 Jul 2008; Olivier CrÃªte <tester@gentoo.org> tomboy-0.10.2.ebuild:
   Stable on amd64, bug #229709
 
 *tomboy-0.10.2 (04 Jun 2008)
@@ -66,7 +69,7 @@
   tomboy-0.8.1-r1.ebuild:
   ppc stable, bug #189249
 
-  04 Nov 2007; Dawid Węgliński <cla@gentoo.org> tomboy-0.8.1-r1.ebuild:
+  04 Nov 2007; Dawid WÄgliÅski <cla@gentoo.org> tomboy-0.8.1-r1.ebuild:
   Stable on x86 (bug #189249)
 
 *tomboy-0.8.1-r1 (04 Nov 2007)

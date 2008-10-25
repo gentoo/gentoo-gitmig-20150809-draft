@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.10.2.ebuild,v 1.4 2008/10/11 22:57:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.10.2.ebuild,v 1.5 2008/10/25 12:15:44 pvdabeel Exp $
 
 inherit gnome2 mono eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.beatniksoftware.com/tomboy/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 -ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc eds galago"
 
 RDEPEND=">=dev-lang/mono-1.2
