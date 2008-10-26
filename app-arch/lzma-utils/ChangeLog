@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzma-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/ChangeLog,v 1.44 2008/10/26 12:36:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma-utils/ChangeLog,v 1.45 2008/10/26 13:36:59 nixnut Exp $
+
+  26 Oct 2008; nixnut <nixnut@gentoo.org> lzma-utils-4.32.7.ebuild:
+  Stable on ppc wrt bug 241634
 
   26 Oct 2008; Raúl Porcel <armin76@gentoo.org> lzma-utils-4.32.7.ebuild:
   alpha/ia64/sparc/x86 stable wrt #241634
