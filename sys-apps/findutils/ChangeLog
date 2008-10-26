@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.169 2008/10/26 14:58:19 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.170 2008/10/26 22:43:04 jer Exp $
+
+  26 Oct 2008; Jeroen Roovers <jer@gentoo.org> findutils-4.2.33.ebuild,
+  findutils-4.3.13.ebuild, findutils-4.4.0.ebuild:
+  Stable for HPPA (bug #244412, #244414 and #244415).
 
   26 Oct 2008; Ferris McCormick <fmccor@gentoo.org> findutils-4.4.0.ebuild:
   Sparc stable --- Bug #244415 --- everything checks out.
