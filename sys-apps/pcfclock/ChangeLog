@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pcfclock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/ChangeLog,v 1.9 2008/07/14 23:05:54 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcfclock/ChangeLog,v 1.10 2008/10/26 23:36:23 sbriesen Exp $
+
+*pcfclock-0.44-r5 (26 Oct 2008)
+
+  26 Oct 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/pcfclock-0.44-kernel-2.6.27.diff, +pcfclock-0.44-r5.ebuild:
+  revbump to support kernel 2.6.27, solving bug #241126.
 
   14 Jul 2008; Stefan Briesenick <sbriesen@gentoo.org>
   -files/pcfclock-0.44-udev.patch, -pcfclock-0.44-r2.ebuild:
