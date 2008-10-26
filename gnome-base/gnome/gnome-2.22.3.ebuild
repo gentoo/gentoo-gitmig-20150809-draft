@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.22.3.ebuild,v 1.5 2008/09/11 16:36:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.22.3.ebuild,v 1.6 2008/10/26 08:30:52 corsair Exp $
 EAPI="1"
 
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -143,7 +143,7 @@ RDEPEND="
 
 	>=gnome-extra/gnome-screensaver-2.22.2
 	>=x11-misc/alacarte-0.11.5
-	!ppc64? ( >=gnome-extra/gnome-power-manager-2.22.1 )
+	>=gnome-extra/gnome-power-manager-2.22.1
 	>=gnome-base/gnome-volume-manager-2.22.5
 
 	>=net-misc/vinagre-0.5.1

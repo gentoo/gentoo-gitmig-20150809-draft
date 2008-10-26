@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.347 2008/09/25 17:27:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.348 2008/10/26 08:30:52 corsair Exp $
+
+  26 Oct 2008; Markus Rothe <corsair@gentoo.org> gnome-2.22.3.ebuild:
+  Make gnome-power-manager a dependency on ppc64 again. hal got keyworded and
+  so gnome-power-manager got the ~ppc64 keyword again
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org> gnome-2.22.0.ebuild,
   gnome-2.22.1.ebuild, gnome-2.22.2.ebuild:
