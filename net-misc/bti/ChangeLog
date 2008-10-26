@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/bti
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.1 2008/10/26 17:22:26 gregkh Exp $
+
+*bti-007 (26 Oct 2008)
+
+  26 Oct 2008; Greg Kroah-Hartman <gregkh@gentoo.org> +metadata.xml,
+  +bti-007.ebuild:
+  added the bti package (version 007) to the tree
+
