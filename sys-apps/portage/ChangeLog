@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.547 2008/10/26 18:40:07 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.548 2008/10/26 18:55:37 zmedico Exp $
+
+  26 Oct 2008; Zac Medico <zmedico@gentoo.org> -files/manifest221:
+  Bug #238498 - Remove the manifest221 script which is no longer supported.
 
   26 Oct 2008; Zac Medico <zmedico@gentoo.org> -files/2.0.51.22-fixes.patch,
   -portage-2.0.51.22-r3.ebuild:
