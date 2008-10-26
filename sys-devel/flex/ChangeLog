@@ -1,8 +1,8 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.72 2008/10/26 11:38:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.73 2008/10/26 11:52:57 tove Exp $
 
-  26 Oct 2008; Torsten Veller <tove@gentoo.org> ChangeLog:
+  26 Oct 2008; Torsten Veller <tove@gentoo.org> flex-2.5.35.ebuild:
   Stable on x86 (#244417)
 
 *flex-2.5.35 (26 Feb 2008)
