@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.48 2008/10/26 17:34:44 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.49 2008/10/26 17:46:31 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -201,7 +201,7 @@ python_mod_compile() {
 # Example:
 #         python_mod_optimize /usr/share/codegen
 python_mod_optimize() {
-	local mydirs myfiles myroot myopts
+	local myroot mydirs=() myfiles=() myopts=()
 
 	# Check if phase is pkg_postinst()
 	[[ ${EBUILD_PHASE} != postinst ]] &&\
@@ -211,23 +211,29 @@ python_mod_optimize() {
 	myroot="${ROOT%/}"
 
 	# respect ROOT and options passed to compileall.py
-	while [ $# -gt 0 ]; do
+	while (($#)); do
 		case $1 in
 			-l|-f|-q)
-				myopts="${myopts} $1"
+				myopts+=("$1")
 				;;
 			-d|-x)
-				myopts="${myopts} $1 $2"
+				myopts+=("$1" "$2")
 				shift
 				;;
 			-*)
 				ewarn "${FUNCNAME}: Ignoring compile option $1"
 				;;
 			*)
-				[ ! -e "${myroot}/${1}" ] && ewarn "${myroot}/${1} doesn't exist!"
-				[ -d "${myroot}/${1#/}" ] && mydirs="${mydirs} ${myroot}/${1#/}"
-				# Files are passed to python_mod_compile which is ROOT-aware
-				[ -f "${myroot}/${1}" ] && myfiles="${myfiles} ${1}"
+				if [[ -d "${myroot}"/$1 ]]; then
+					mydirs+=("${myroot}/$1")
+				elif [[ -f "${myroot}"/$1 ]]; then
+					# Files are passed to python_mod_compile which is ROOT-aware
+					myfiles+=("$1")
+				elif [[ -e "${myroot}/$1" ]]; then
+					ewarn "${myroot}/$1 is not a file or directory!"
+				else
+					ewarn "${myroot}/$1 doesn't exist!"
+				fi
 				;;
 		esac
 		shift
@@ -241,20 +247,20 @@ python_mod_optimize() {
 	fi
 
 	# set additional opts
-	myopts="${myopts} -q"
+	myopts+=(-q)
 
 	ebegin "Byte compiling python modules for python-${PYVER} .."
-	if [ -n "${mydirs}" ]; then
+	if ((${#mydirs[@]})); then
 		python${PYVER} \
-			${myroot}/usr/$(get_libdir)/python${PYVER}/compileall.py \
-			${myopts} ${mydirs}
+			"${myroot}"/usr/$(get_libdir)/python${PYVER}/compileall.py \
+			"${myopts[@]}" "${mydirs[@]}"
 		python${PYVER} -O \
-			${myroot}/usr/$(get_libdir)/python${PYVER}/compileall.py \
-			${myopts} ${mydirs}
+			"${myroot}"/usr/$(get_libdir)/python${PYVER}/compileall.py \
+			"${myopts[@]}" "${mydirs[@]}"
 	fi
 
-	if [ -n "${myfiles}" ]; then
-		python_mod_compile ${myfiles}
+	if ((${#myfiles[@]})); then
+		python_mod_compile "${myfiles[@]}"
 	fi
 
 	eend $?
