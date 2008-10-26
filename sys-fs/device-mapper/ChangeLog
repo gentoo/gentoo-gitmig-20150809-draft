@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.119 2008/06/28 09:10:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.120 2008/10/26 02:55:25 vapier Exp $
+
+  26 Oct 2008; Mike Frysinger <vapier@gentoo.org>
+  files/device-mapper.rc-1.02.22-r3:
+  Check for /etc/init.d/root rather than /lib/librc.so to avoid multilib
+  issues #229903 by Albin Stjerna.
 
 *device-mapper-1.02.27 (28 Jun 2008)
 
