@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.54 2008/10/25 18:12:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.55 2008/10/26 00:30:20 jer Exp $
+
+  26 Oct 2008; Jeroen Roovers <jer@gentoo.org> fbida-2.07.ebuild:
+  Stable for HPPA (bug #242596).
 
   25 Oct 2008; nixnut <nixnut@gentoo.org> fbida-2.07.ebuild:
   Stable on ppc wrt bug 242596
