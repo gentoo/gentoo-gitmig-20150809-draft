@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.73 2008/10/26 11:52:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.74 2008/10/26 13:51:05 nixnut Exp $
+
+  26 Oct 2008; nixnut <nixnut@gentoo.org> flex-2.5.35.ebuild:
+  Stable on ppc wrt bug 244417
 
   26 Oct 2008; Torsten Veller <tove@gentoo.org> flex-2.5.35.ebuild:
   Stable on x86 (#244417)
