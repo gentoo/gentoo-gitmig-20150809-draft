@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.49 2008/10/26 17:46:31 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.50 2008/10/26 21:21:34 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -278,7 +278,7 @@ python_mod_optimize() {
 #
 # This function should only be run in pkg_postrm()
 python_mod_cleanup() {
-	local SEARCH_PATH myroot
+	local SEARCH_PATH=() myroot src_py
 
 	# Check if phase is pkg_postrm()
 	[[ ${EBUILD_PHASE} != postrm ]] &&\
@@ -287,28 +287,25 @@ python_mod_cleanup() {
 	# strip trailing slash
 	myroot="${ROOT%/}"
 
-	if [ $# -gt 0 ]; then
-		for path in $@; do
-			SEARCH_PATH="${SEARCH_PATH} ${myroot}/${path#/}"
-		done
+	if (($#)); then
+		SEARCH_PATH=("${@#/}")
+		SEARCH_PATH=("${SEARCH_PATH[@]/#/$myroot/}")
 	else
-		for path in ${myroot}/usr/lib*/python*/site-packages; do
-			SEARCH_PATH="${SEARCH_PATH} ${path}"
-		done
+		SEARCH_PATH=("${myroot}"/usr/lib*/python*/site-packages)
 	fi
 
-	for path in ${SEARCH_PATH}; do
+	for path in "${SEARCH_PATH[@]}"; do
 		einfo "Cleaning orphaned Python bytecode from ${path} .."
-		for obj in $(find ${path} -name '*.py[co]'); do
-			src_py="${obj%[co]}"
-			if [ ! -f "${src_py}" ]; then
-				einfo "Purging ${src_py}[co]"
-				rm -f ${src_py}[co]
-			fi
-		done
+		while read -rd ''; do
+			src_py="${REPLY%[co]}"
+			[[ -f "${src_py}" ]] && continue
+			einfo "Purging ${src_py}[co]"
+			rm -f "${src_py}"[co]
+		done < <(find "${path}" -name '*.py[co]' -print0)
+
 		# attempt to remove directories that maybe empty
-		for dir in $(find ${path} -type d | sort -r); do
-			rmdir ${dir} 2>/dev/null
-		done
+		while read -r dir; do
+			rmdir "${dir}" 2>/dev/null
+		done < <(find "${path}" -type d | sort -r)
 	done
 }
