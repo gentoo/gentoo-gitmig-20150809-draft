@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.27.ebuild,v 1.1 2008/06/28 09:10:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/device-mapper-1.02.27.ebuild,v 1.2 2008/10/26 03:03:36 vapier Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -27,8 +27,10 @@ src_unpack() {
 
 src_compile() {
 	econf \
+		--libdir=/$(get_libdir) \
 		--sbindir=/sbin \
 		--enable-dmeventd \
+		--enable-pkgconfig \
 		$(use_enable selinux) \
 		CLDFLAGS="${LDFLAGS}" || die "econf failed"
 	emake || die "compile problem"
@@ -37,24 +39,22 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 
-	# move shared libs to /
-	mv "${D}"/usr/$(get_libdir) "${D}"/ || die "move libdir"
-	dolib.a lib/ioctl/libdevmapper.a || die "dolib.a"
+	dolib.a lib/ioctl/libdevmapper.a || die
 	gen_usr_ldscript libdevmapper.so
+	dolib.a dmeventd/libdevmapper-event.a || die
+	gen_usr_ldscript libdevmapper-event.so
 
 	insinto /etc
-	doins "${FILESDIR}"/dmtab
+	doins "${FILESDIR}"/dmtab || die
 	insinto /lib/rcscripts/addons
-	doins "${FILESDIR}"/dm-start.sh
+	doins "${FILESDIR}"/dm-start.sh || die
 
 	newinitd "${FILESDIR}"/device-mapper.rc-1.02.22-r3 device-mapper || die
 	newconfd "${FILESDIR}"/device-mapper.conf-1.02.22-r3 device-mapper || die
 
 	newinitd "${FILESDIR}"/1.02.22-dmeventd.initd dmeventd || die
-	dolib.a dmeventd/libdevmapper-event.a || die
-	gen_usr_ldscript libdevmapper-event.so
 
-	insinto /etc/udev/rules.d/
+	insinto /etc/udev/rules.d
 	newins "${FILESDIR}"/64-device-mapper.rules-1.02.22-r5 64-device-mapper.rules
 
 	dodoc INSTALL INTRO README VERSION WHATS_NEW
