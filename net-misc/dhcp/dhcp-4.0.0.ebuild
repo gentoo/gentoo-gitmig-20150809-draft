@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.0.0.ebuild,v 1.1 2008/09/04 12:39:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.0.0.ebuild,v 1.2 2008/10/26 03:45:20 vapier Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -15,10 +15,11 @@ SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MY_P}.tar.gz"
 LICENSE="isc-dhcp"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="ipv6 doc selinux kernel_linux"
+IUSE="doc ipv6 selinux kernel_linux vim-syntax"
 
 DEPEND="selinux? ( sec-policy/selinux-dhcp )
-	kernel_linux? ( sys-apps/net-tools )"
+	kernel_linux? ( sys-apps/net-tools )
+	vim-syntax? ( app-vim/dhcpd-syntax )"
 
 PROVIDE="virtual/dhcpc"
 
