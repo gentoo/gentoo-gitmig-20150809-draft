@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.25 2008/08/30 20:31:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.26 2008/10/26 05:24:40 neurogeek Exp $
 
   30 Aug 2008; Markus Meier <maekke@gentoo.org> ldaptor-0.0.43.ebuild:
   readd dropped ~amd64 keyword, bug #235969
@@ -11,6 +11,9 @@
   29 Aug 2008; Ferris McCormick <fmccor@gentoo.org> ldaptor-0.0.43.ebuild:
   Add ~sparc keyword --- Bug #235969 --- Everything fine with USE='web doc
   samba'.
+
+  27 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> ldaptor-0.0.43.ebuild:
+  Added dropped keywords (~alpha, ~amd64, ~ia64 and ~sparc)
 
 *ldaptor-0.0.43 (21 Aug 2008)
 
