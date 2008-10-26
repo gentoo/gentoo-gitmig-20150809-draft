@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/sketch/sketch-0.2.131.ebuild,v 1.1 2008/08/13 12:00:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/sketch/sketch-0.2.141.ebuild,v 1.1 2008/10/26 09:56:41 aballier Exp $
 
 inherit eutils toolchain-funcs
 
