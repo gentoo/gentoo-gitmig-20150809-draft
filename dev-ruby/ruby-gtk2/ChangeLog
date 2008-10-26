@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtk2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.61 2008/10/26 14:39:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.62 2008/10/26 16:21:54 fmccor Exp $
+
+  26 Oct 2008; Ferris McCormick <fmccor@gentoo.org>
+  ruby-gtk2-0.16.0-r4.ebuild:
+  Sparc stable, Bug #244471.
 
   26 Oct 2008; nixnut <nixnut@gentoo.org> ruby-gtk2-0.16.0-r4.ebuild:
   Stable on ppc wrt bug 244471
