@@ -1,4 +1,4 @@
-make -p mean "preen" like all other checkers
+Alias -p "preen" to -a "auto".
 
 http://bugs.gentoo.org/195988
 
@@ -50,17 +50,16 @@ http://bugs.gentoo.org/195988
  		{"cache", required_argument, 0, 'c'},
  		{"override", required_argument, NULL, 'o'},
  		/* Fsck hidden options. */
-@@ -203,6 +205,9 @@
- 		case 'q':
- 			aux_gauge_set_handler(NULL, GT_PROGRESS);
+@@ -190,6 +192,8 @@
+ 		case 'f':
+ 			aal_set_bit(&data->options, FSCK_OPT_FORCE);
  			break;
 +		case 'p':
-+			/* Fall through as preen should fix errors */
-+			mode = RM_FIX;
- 		case 'y':
- 			aal_set_bit(&data->options, FSCK_OPT_YES);
++			/* Fall through to auto, as preen is an alias for -a */
+ 		case 'a':
+ 			aal_set_bit(&data->options, FSCK_OPT_AUTO);
  			break;
-@@ -226,9 +231,6 @@
+@@ -226,9 +230,6 @@
  		case 'l':
  			mode = RM_SHOW_PLUG;
  			break;

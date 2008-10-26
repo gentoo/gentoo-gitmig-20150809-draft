@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/reiser4progs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.34 2008/05/31 17:48:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.35 2008/10/26 07:16:13 vapier Exp $
+
+*reiser4progs-1.0.6-r2 (26 Oct 2008)
+
+  26 Oct 2008; Mike Frysinger <vapier@gentoo.org>
+  files/reiser4progs-1.0.6-preen.patch, -reiser4progs-1.0.6-r1.ebuild,
+  +reiser4progs-1.0.6-r2.ebuild:
+  Fix by Anders Aagaard for -p (preen) operation #237393.
 
 *reiser4progs-1.0.6-r1 (31 May 2008)
 
