@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwcrypt
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwcrypt/ChangeLog,v 1.10 2006/07/05 14:02:17 hattya Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwcrypt/ChangeLog,v 1.11 2008/10/26 15:36:48 hattya Exp $
+
+  26 Oct 2008; Akinori Hattori <hattya@gentoo.org> pwcrypt-1.2.2.ebuild:
+  fixes bug #243322.
 
   07 Sep 2005; Joseph Jezak <josejx@gentoo.org> pwcrypt-1.2.2.ebuild:
   Marked ppc stable for bug #105005.
