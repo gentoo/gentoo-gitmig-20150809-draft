@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/enblend
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.26 2008/10/06 16:24:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.27 2008/10/26 05:42:26 vapier Exp $
+
+  26 Oct 2008; Mike Frysinger <vapier@gentoo.org> enblend-3.2.ebuild:
+  Do not force building with -O3.
 
   06 Oct 2008; Markus Meier <maekke@gentoo.org>
   -enblend-3.0_p20080807.ebuild:

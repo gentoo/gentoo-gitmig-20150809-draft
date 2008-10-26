@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-3.2.ebuild,v 1.2 2008/09/10 19:14:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-3.2.ebuild,v 1.3 2008/10/26 05:42:26 vapier Exp $
 
-inherit eutils autotools
+inherit eutils
 
 DESCRIPTION="Image Blending with Multiresolution Splines"
 HOMEPAGE="http://enblend.sourceforge.net/"
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="
-	>=dev-libs/boost-1.31.0
+DEPEND=">=dev-libs/boost-1.31.0
 	media-libs/lcms
 	media-libs/glew
 	media-libs/plotutils
@@ -36,6 +35,12 @@ pkg_setup() {
 	ewarn "The compilation of enblend needs a lot of RAM. If you have less"
 	ewarn "than 1GB RAM (and swap) you probably won't be able to compile it."
 	ewarn
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i -e 's:-O3::' configure || die
 }
 
 src_install() {
