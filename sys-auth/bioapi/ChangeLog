@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/bioapi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.8 2008/09/06 05:29:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.9 2008/10/26 19:13:05 maekke Exp $
+
+  26 Oct 2008; Markus Meier <maekke@gentoo.org> bioapi-1.2.3-r1.ebuild:
+  amd64/x86 stable, bug #244447
 
 *bioapi-1.2.3-r1 (06 Sep 2008)
 

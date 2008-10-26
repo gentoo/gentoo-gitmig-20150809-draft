@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.3-r1.ebuild,v 1.1 2008/09/06 05:29:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.3-r1.ebuild,v 1.2 2008/10/26 19:13:05 maekke Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://bioapi-linux.googlecode.com/files/${PN}_${PV}.tar.gz"
 
 LICENSE="bioapi"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="qt3"
 
 DEPEND="qt3? ( =x11-libs/qt-3* )"
