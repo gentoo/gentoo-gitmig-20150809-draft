@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.42.0.ebuild,v 1.6 2008/07/27 01:06:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.42.0.ebuild,v 1.7 2008/10/26 10:32:17 aballier Exp $
 
 EAPI=1
 
@@ -26,7 +26,7 @@ RDEPEND="|| ( ( x11-libs/qt-core x11-libs/qt-gui opengl? ( x11-libs/qt-opengl ) 
 	>=media-sound/wavpack-4.40.0
 	>=media-libs/libvorbis-1.1.2
 	>=media-libs/flac-1.1.2
-	lv2? ( media-libs/slv2 )
+	lv2? ( =media-libs/slv2-0.5* )
 	mad? ( media-libs/libmad )
 	lame? ( media-sound/lame )"
 DEPEND="${RDEPEND}
@@ -46,6 +46,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-nojack.patch"
 	epatch "${FILESDIR}/${P}-strictaliasing.patch"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-cmake.patch"
 }
 
 src_compile() {
