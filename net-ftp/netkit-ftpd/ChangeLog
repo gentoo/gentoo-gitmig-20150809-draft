@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/netkit-ftpd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.18 2008/05/11 19:10:29 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.19 2008/10/26 05:44:14 vapier Exp $
+
+*netkit-ftpd-0.17-r8 (26 Oct 2008)
+
+  26 Oct 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/netkit-ftpd-0.17-CVE-2008-4247.patch, +netkit-ftpd-0.17-r8.ebuild:
+  Add fix for CVE-2008-4247 #239047.
 
   11 May 2008; <solar@gentoo.org> +files/netkit-ftpd-0.17-cross.patch,
   netkit-ftpd-0.17-r7.ebuild:
