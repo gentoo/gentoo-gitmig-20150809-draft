@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.46 2008/10/26 17:11:51 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.47 2008/10/26 17:26:18 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -44,7 +44,7 @@ __python_version_extract() {
 	local verstr=$1
 	export PYVER_MAJOR=${verstr:0:1}
 	export PYVER_MINOR=${verstr:2:1}
-	if [ "${verstr:3}x" = ".x" ]; then
+	if [[ ${verstr:3:1} == . ]]; then
 		export PYVER_MICRO=${verstr:4}
 	fi
 	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
@@ -142,11 +142,8 @@ python_tkinter_exists() {
 #             echo "gtk support enabled"
 #         fi
 python_mod_exists() {
-	[ -z "$1" ] && die "${FUNCTION} requires an argument!"
-	if ! python -c "import $1" >/dev/null 2>&1; then
-		return 1
-	fi
-	return 0
+	[[ "$1" ]] && die "${FUNCNAME} requires an argument!"
+	python -c "import $1" >/dev/null 2>&1
 }
 
 # @FUNCTION: python_mod_compile
