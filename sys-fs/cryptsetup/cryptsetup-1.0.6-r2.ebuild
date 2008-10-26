@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.6-r2.ebuild,v 1.1 2008/10/05 21:01:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.0.6-r2.ebuild,v 1.2 2008/10/26 10:50:51 vapier Exp $
 
 inherit linux-info eutils flag-o-matic multilib
 
 DESCRIPTION="Tool to setup encrypted devices with dm-crypt"
-HOMEPAGE="http://luks.endorphin.org/"
+HOMEPAGE="http://luks.endorphin.org/ http://code.google.com/p/cryptsetup/"
 SRC_URI="http://luks.endorphin.org/source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
