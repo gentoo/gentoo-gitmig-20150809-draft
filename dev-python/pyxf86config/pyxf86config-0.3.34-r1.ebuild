@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/pyxf86config-0.3.34-r1.ebuild,v 1.14 2008/08/05 20:03:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/pyxf86config-0.3.34-r1.ebuild,v 1.15 2008/10/26 08:10:08 corsair Exp $
 
 inherit eutils python rpm autotools
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://fedora-dev/development/source/SRPMS/${P}-${RPMREV}.fc${FCVER}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="=dev-libs/glib-2*
