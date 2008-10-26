@@ -2,10 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
-<maintainer>
+<maintainer restrict="imq and l7filter extensions">
 	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
-	<description>imq and l7filter extensions</description>
 </maintainer>
 <longdescription>
   iptables is the userspace command line program used to set up, maintain, and
