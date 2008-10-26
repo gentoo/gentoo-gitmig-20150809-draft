@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.5-r1.ebuild,v 1.4 2007/07/22 06:24:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xmbmon/xmbmon-2.0.5-r1.ebuild,v 1.5 2008/10/26 03:11:48 vapier Exp $
 
 inherit eutils
 
@@ -33,7 +33,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-loopback.patch
 	sed -i \
 		-e "/^CFLAGS=/s/-O3/${CFLAGS}/" \
+		-e '/^LDFLAGS=-s$/d' \
 		Makefile.in || die
+	sed -i \
+		-e '/^[[:space:]]*CC=gcc/s,.*,:;,' \
+		configure || die
 }
 
 src_compile() {
