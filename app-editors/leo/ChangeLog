@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/leo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.10 2008/03/01 11:51:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.11 2008/10/26 23:12:29 hawking Exp $
+
+*leo-4.4.7-r1 (26 Oct 2008)
+
+  26 Oct 2008; Ali Polatel <hawking@gentoo.org> -leo-4.4.7.ebuild,
+  +leo-4.4.7-r1.ebuild:
+  Revbump. Use EAPI=2 and use dependencies.
 
 *leo-4.4.7 (01 Mar 2008)
 
