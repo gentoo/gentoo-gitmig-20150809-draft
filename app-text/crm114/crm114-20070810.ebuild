@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20070810.ebuild,v 1.3 2008/10/26 14:57:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20070810.ebuild,v 1.4 2008/10/26 19:46:33 maekke Exp $
 
 inherit eutils
 IUSE="nls static normalizemime mew mimencode test"
@@ -13,7 +13,7 @@ SRC_URI="http://crm114.sourceforge.net/tarballs/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
 TREVERS="0.7.5"
 
