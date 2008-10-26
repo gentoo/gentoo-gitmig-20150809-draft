@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/slock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.22 2008/07/30 18:41:26 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.23 2008/10/26 22:45:41 jer Exp $
+
+  26 Oct 2008; Jeroen Roovers <jer@gentoo.org> slock-0.9.ebuild:
+  Stable for HPPA (bug #244530).
 
   30 Jul 2008; Cédric Krier <cedk@gentoo.org> -slock-0.7.ebuild:
   Remove old
