@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.20-r1.ebuild,v 1.1 2007/08/02 09:20:20 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.20-r1.ebuild,v 1.2 2008/10/26 06:39:50 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Reiserfs Utilities"
-HOMEPAGE="http://www.namesys.com/"
-SRC_URI="http://www.namesys.com/pub/reiserfsprogs/${P}.tar.gz"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/fs/reiserfs/"
+SRC_URI="http://www.kernel.org/pub/linux/utils/fs/reiserfs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
