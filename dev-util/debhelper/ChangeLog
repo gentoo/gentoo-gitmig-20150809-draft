@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.8 2008/10/25 17:01:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.9 2008/10/26 12:41:29 armin76 Exp $
+
+  26 Oct 2008; Raúl Porcel <armin76@gentoo.org> debhelper-7.0.16.ebuild:
+  alpha/ia64/sparc stable wrt #242932
 
   25 Oct 2008; Jeroen Roovers <jer@gentoo.org> debhelper-7.0.16.ebuild:
   Stable for HPPA (bug #242932).
