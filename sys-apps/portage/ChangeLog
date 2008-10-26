@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.546 2008/10/09 21:34:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.547 2008/10/26 18:40:07 zmedico Exp $
+
+  26 Oct 2008; Zac Medico <zmedico@gentoo.org> -files/2.0.51.22-fixes.patch,
+  -portage-2.0.51.22-r3.ebuild:
+  Bug #239273 - Remove 2.0.51.22-r3 due to lack of EAPI support which
+  renders it useless.
 
 *portage-2.2_rc12 (09 Oct 2008)
 
