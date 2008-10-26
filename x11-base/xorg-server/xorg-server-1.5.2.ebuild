@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.2.ebuild,v 1.6 2008/10/22 15:42:26 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.2.ebuild,v 1.7 2008/10/26 09:25:00 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -280,6 +280,7 @@ GENTOO_PATCHES=(
 # These have been sent upstream
 UPSTREAMED_PATCHES=(
 	"${FILESDIR}/1.5.2-force-LC_ALL-C-when-running-awk.patch"
+	"${FILESDIR}/1.5.2-fix-xvesa-with-new-kernels.patch"
 )
 
 PATCHES=(
