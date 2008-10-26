@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.73 2008/10/16 17:20:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.74 2008/10/26 02:37:04 vapier Exp $
+
+  25 Oct 2008; Mike Frysinger <vapier@gentoo.org> libcap-2.11.ebuild:
+  Add fix for USE=-pam builds by Bruno #242748.
 
   16 Oct 2008; Jeroen Roovers <jer@gentoo.org> libcap-2.11.ebuild:
   Stable for HPPA (bug #240290).
