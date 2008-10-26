@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/netkit-ftpd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.19 2008/10/26 05:44:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.20 2008/10/26 18:39:11 maekke Exp $
+
+  26 Oct 2008; Markus Meier <maekke@gentoo.org> netkit-ftpd-0.17-r8.ebuild:
+  amd64/x86 stable, bug #239047
 
 *netkit-ftpd-0.17-r8 (26 Oct 2008)
 
