@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.109 2008/10/25 17:21:03 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.110 2008/10/26 01:32:06 jer Exp $
+
+  26 Oct 2008; Jeroen Roovers <jer@gentoo.org> libpcap-0.9.8-r2.ebuild:
+  Stable for HPPA (bug #244234).
 
   25 Oct 2008; Ferris McCormick <fmccor@gentoo.org> libpcap-0.9.8-r2.ebuild:
   Sparc stable, Bug #244234.
