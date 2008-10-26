@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.4.ebuild,v 1.2 2008/10/26 08:44:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.4.ebuild,v 1.3 2008/10/26 09:02:47 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -82,7 +82,7 @@ src_install() {
 
 	local f list=""
 	if use !nonfsv4 ; then
-		list="${list} rpc.idmapd"
+		list="${list} rpc.idmapd rpc.pipefs"
 		use kerberos && list="${list} rpc.gssd rpc.svcgssd"
 	fi
 	for f in nfs nfsmount rpc.statd ${list} ; do

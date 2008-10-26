@@ -1,35 +1,17 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/rpc.gssd.initd,v 1.10 2008/08/16 05:16:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/rpc.gssd.initd,v 1.11 2008/10/26 09:02:47 vapier Exp $
 
 [ -e /etc/conf.d/nfs ] && . /etc/conf.d/nfs
 
 depend() {
 	use ypbind net
-	need portmap
+	need portmap rpc.pipefs
 	after quota
 }
 
-mount_pipefs() {
-	# if things are already mounted, let's just return
-	grep -qs "rpc_pipefs /var/lib/nfs/rpc_pipefs" /proc/mounts && return 0
-
-	# if rpc_pipefs is not available, try to load sunrpc for it #219566
-	grep -qs rpc_pipefs /proc/filesystems || modprobe -q sunrpc
-	# if still not available, let's bail
-	grep -qs rpc_pipefs /proc/filesystems || return 1
-
-	# now just do it for kicks
-	mkdir -p /var/lib/nfs/rpc_pipefs
-	ebegin "Mounting RPC pipefs"
-	mount -t rpc_pipefs rpc_pipefs /var/lib/nfs/rpc_pipefs
-	eend $?
-}
-
 start() {
-	mount_pipefs
-
 	ebegin "Starting gssd"
 	start-stop-daemon --start --exec /usr/sbin/rpc.gssd -- ${OPTS_RPC_GSSD}
 	eend $?
