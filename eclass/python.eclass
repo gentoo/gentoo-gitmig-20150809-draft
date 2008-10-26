@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.47 2008/10/26 17:26:18 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.48 2008/10/26 17:34:44 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -156,14 +156,14 @@ python_mod_exists() {
 #         python_mod_compile /usr/lib/python2.3/site-packages/pygoogle.py
 #
 python_mod_compile() {
-	local f myroot
+	local f myroot myfiles=()
 
 	# Check if phase is pkg_postinst()
 	[[ ${EBUILD_PHASE} != postinst ]] &&\
 		die "${FUNCNAME} should only be run in pkg_postinst()"
 
 	# allow compiling for older python versions
-	if [ -n "${PYTHON_OVERRIDE_PYVER}" ]; then
+	if [[ "${PYTHON_OVERRIDE_PYVER}" ]]; then
 		PYVER=${PYTHON_OVERRIDE_PYVER}
 	else
 		python_version
@@ -174,12 +174,12 @@ python_mod_compile() {
 
 	# respect ROOT
 	for f in $@; do
-		[ -f "${myroot}/${f}" ] && myfiles="${myfiles} ${myroot}/${f}"
+		[[ -f "${myroot}/${f}" ]] && myfiles+=("${myroot}/${f}")
 	done
 
-	if [ -n "${myfiles}" ]; then
-		python${PYVER} ${myroot}/usr/$(get_libdir)/python${PYVER}/py_compile.py ${myfiles}
-		python${PYVER} -O ${myroot}/usr/$(get_libdir)/python${PYVER}/py_compile.py ${myfiles}
+	if ((${#myfiles[@]})); then
+		python${PYVER} ${myroot}/usr/$(get_libdir)/python${PYVER}/py_compile.py "${myfiles[@]}"
+		python${PYVER} -O ${myroot}/usr/$(get_libdir)/python${PYVER}/py_compile.py "${myfiles[@]}"
 	else
 		ewarn "No files to compile!"
 	fi
