@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-1.0.1.ebuild,v 1.2 2008/10/26 09:36:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-1.0.1.ebuild,v 1.3 2008/10/26 09:40:30 aballier Exp $
 
 # We inherit distutils to get the pkg_* functions for byte compiling python
 inherit versionator distutils
 
-DESCRIPTION="Command line tool for extracting videos from Youtube, Google Video, Dailymotion, Guba (free) and Stage6 websites"
+DESCRIPTION="Command line tool for extracting videos from various websites"
 HOMEPAGE="http://clive.sourceforge.net/"
 SRC_URI="http://dl.gna.org/clive/$(get_version_component_range 1-2 ${PV}).x/${P}.tar.bz2"
 
