@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.64 2008/08/23 17:24:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.65 2008/10/26 14:46:26 nixnut Exp $
+
+  26 Oct 2008; nixnut <nixnut@gentoo.org> mew-6.1.ebuild:
+  Stable on ppc wrt bug 234592
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> mew-6.1.ebuild:
   amd64 stable, bug #234592
