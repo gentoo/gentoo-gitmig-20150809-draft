@@ -161,3 +161,7 @@ audit
 
 # net-libs/libssh2 currently missing keywords (dragonheart 20080402)
 libssh2
+
+# sys-apps/hal is using these (corsair 20081026)
+dell
+laptop
