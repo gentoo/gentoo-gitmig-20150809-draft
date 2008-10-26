@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/tuxpaint-stamps
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint-stamps/ChangeLog,v 1.17 2008/10/26 14:24:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint-stamps/ChangeLog,v 1.18 2008/10/26 19:23:15 maekke Exp $
+
+  26 Oct 2008; Markus Meier <maekke@gentoo.org>
+  tuxpaint-stamps-20071121.ebuild:
+  amd64/x86 stable, bug #244469
 
   26 Oct 2008; nixnut <nixnut@gentoo.org> tuxpaint-stamps-20071121.ebuild:
   Stable on ppc wrt bug 244469
