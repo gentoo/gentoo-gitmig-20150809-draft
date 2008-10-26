@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.244 2008/10/26 02:16:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.245 2008/10/26 03:16:47 vapier Exp $
+
+  26 Oct 2008; Mike Frysinger <vapier@gentoo.org> files/crypto-loop.initd:
+  Apply POSIX patch #236858.
 
   26 Oct 2008; Mike Frysinger <vapier@gentoo.org> util-linux-2.14.1.ebuild:
   Update loop-aes support #242874 by Fabio Coatti and Lars (Polynomial-C).
