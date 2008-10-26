@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.2-r1.ebuild,v 1.1 2008/10/26 21:39:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.2-r1.ebuild,v 1.2 2008/10/26 21:48:25 vapier Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${P}.tar.bz2
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-glibc.patch
+	epatch "${FILESDIR}"/${P}-no-ldconfig.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch #244431
 
 	local check base=${PORTAGE_CONFIGROOT}/etc/portage/patches

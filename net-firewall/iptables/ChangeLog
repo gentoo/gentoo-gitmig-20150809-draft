@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.180 2008/10/26 21:39:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.181 2008/10/26 21:48:25 vapier Exp $
+
+  26 Oct 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/iptables-1.4.2-no-ldconfig.patch, iptables-1.4.2-r1.ebuild:
+  Do not run ldconfig when installing.
 
 *iptables-1.4.2-r1 (26 Oct 2008)
 
