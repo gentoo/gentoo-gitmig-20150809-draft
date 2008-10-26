@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.50 2008/10/26 21:21:34 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.51 2008/10/26 21:54:32 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -173,7 +173,7 @@ python_mod_compile() {
 	myroot="${ROOT%/}"
 
 	# respect ROOT
-	for f in $@; do
+	for f in "$@"; do
 		[[ -f "${myroot}/${f}" ]] && myfiles+=("${myroot}/${f}")
 	done
 
