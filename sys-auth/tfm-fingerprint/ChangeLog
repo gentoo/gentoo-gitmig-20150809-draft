@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/tfm-fingerprint
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/ChangeLog,v 1.5 2008/05/31 05:21:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/ChangeLog,v 1.6 2008/10/26 19:15:10 maekke Exp $
+
+  26 Oct 2008; Markus Meier <maekke@gentoo.org> tfm-fingerprint-1.0.ebuild:
+  x86 stable, bug #244448
 
   31 May 2008; Mike Frysinger <vapier@gentoo.org>
   tfm-fingerprint-1.0.ebuild:
