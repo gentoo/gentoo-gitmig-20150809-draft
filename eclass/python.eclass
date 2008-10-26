@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.45 2008/09/01 14:11:54 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.46 2008/10/26 17:11:51 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -36,28 +36,6 @@ __python_eclass_test() {
 	echo " PYVER_MINOR: $PYVER_MINOR PYVER_MICRO: $PYVER_MICRO"
 }
 
-# @FUNCTION: python_disable_pyc
-# @DESCRIPTION:
-# Tells python not to automatically recompile modules to .pyc/.pyo
-# even if the timestamps/version stamps don't match. This is done
-# to protect sandbox.
-#
-# note:   supported by >=dev-lang/python-2.2.3-r3 only.
-#
-python_disable_pyc() {
-	export PYTHON_DONTCOMPILE=1
-}
-
-# @FUNCTION: python_enable_pyc
-# @DESCRIPTION:
-# Tells python to automatically recompile modules to .pyc/.pyo if the
-# timestamps/version stamps change
-python_enable_pyc() {
-	unset PYTHON_DONTCOMPILE
-}
-
-python_disable_pyc
-
 # @FUNCTION: python_version
 # @DESCRIPTION:
 # Run without arguments and it will export the version of python
@@ -80,6 +58,38 @@ python_version() {
 	export PYVER_ALL="${tmpstr#Python }"
 	__python_version_extract $PYVER_ALL
 }
+
+# @FUNCTION: python_disable_pyc
+# @DESCRIPTION:
+# Tells python not to automatically recompile modules to .pyc/.pyo
+# even if the timestamps/version stamps don't match. This is done
+# to protect sandbox.
+#
+# note:   supported by >=dev-lang/python-2.2.3-r3 only.
+#
+python_disable_pyc() {
+	python_version
+	if [[ ${PYVER/./,} -ge 2,6 ]]; then
+		export PYTHONDONTWRITEBYTECODE=1
+	else
+		export PYTHON_DONTCOMPILE=1
+	fi
+}
+
+# @FUNCTION: python_enable_pyc
+# @DESCRIPTION:
+# Tells python to automatically recompile modules to .pyc/.pyo if the
+# timestamps/version stamps change
+python_enable_pyc() {
+	python_version
+	if [[ ${PYVER/./,} -ge 2,6 ]]; then
+		unset PYTHONDONTWRITEBYTECODE
+	else
+		unset PYTHON_DONTCOMPILE
+	fi
+}
+
+python_disable_pyc
 
 # @FUNCTION: python_get_libdir
 # @DESCRIPTION:
