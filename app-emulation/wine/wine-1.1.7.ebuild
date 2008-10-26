@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.7.ebuild,v 1.1 2008/10/24 21:33:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.7.ebuild,v 1.2 2008/10/26 00:00:51 vapier Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ SRC_URI="${SRC_URI}
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
-IUSE="alsa cups dbus esd +gecko hal jack jpeg lcms ldap nas ncurses +opengl oss samba scanner xml +X"
+IUSE="alsa cups dbus esd +gecko gnutls hal jack jpeg lcms ldap nas ncurses +opengl oss samba scanner xml +X"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -32,6 +32,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	ncurses? ( >=sys-libs/ncurses-5.2 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	dbus? ( sys-apps/dbus )
+	gnutls? ( net-libs/gnutls )
 	hal? ( sys-apps/hal )
 	X? (
 		x11-libs/libXcursor
@@ -124,6 +125,7 @@ src_compile() {
 	#	$(use_enable amd64 win64)
 	econf \
 		--sysconfdir=/etc/wine \
+		$(use_with gnutls) \
 		$(use_with ncurses curses) \
 		$(use_with opengl) \
 		$(use_with X x) \
