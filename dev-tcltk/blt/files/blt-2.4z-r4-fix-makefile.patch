@@ -1,3 +1,6 @@
+Source: mescalinum
+Upstream: N/A
+Reason: fix broken $DESTDIR support in library/Makefile
 --- library/Makefile.in.orig	2008-10-26 14:30:28.000000000 +0100
 +++ library/Makefile.in	2008-10-26 14:31:40.000000000 +0100
 @@ -45,7 +45,7 @@ all: pkgIndex

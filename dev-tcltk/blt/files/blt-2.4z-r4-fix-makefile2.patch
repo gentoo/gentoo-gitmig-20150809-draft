@@ -1,3 +1,6 @@
+Source: mescalinum
+Upstream: N/A
+Reason: fix broken $DESTDIR support in Makefile
 --- Makefile.in.orig	2008-10-26 14:36:22.000000000 +0100
 +++ Makefile.in	2008-10-26 14:37:04.000000000 +0100
 @@ -47,9 +47,9 @@ install-all:
