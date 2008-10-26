@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.11.ebuild,v 1.7 2008/10/16 17:20:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.11.ebuild,v 1.8 2008/10/26 02:34:18 vapier Exp $
 
 inherit eutils multilib toolchain-funcs pam
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/security/linux-privs/libcap${PV:0:
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="pam"
 
 RDEPEND="sys-apps/attr
@@ -30,8 +30,7 @@ src_unpack() {
 
 src_compile() {
 	tc-export BUILD_CC CC AR RANLIB
-	export PAM_CAP=$(use pam && echo yes || echo no)
-	emake || die
+	emake PAM_CAP=$(use pam && echo yes || echo no) || die
 }
 
 src_install() {
