@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.101 2008/10/26 09:09:19 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.102 2008/10/26 11:20:41 mescalinum Exp $
+
+*tcl-8.4.19 (26 Oct 2008)
+
+  26 Oct 2008; Federico Ferri <mescalinum@gentoo.org> +tcl-8.4.19.ebuild:
+  version bump for 8.4 too
 
 *tcl-8.5.5 (26 Oct 2008)
 
