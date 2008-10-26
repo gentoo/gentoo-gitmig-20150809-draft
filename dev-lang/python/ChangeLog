@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.351 2008/10/25 15:33:02 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.352 2008/10/26 17:14:02 hawking Exp $
+
+*python-2.6-r4 (26 Oct 2008)
+
+  26 Oct 2008; Ali Polatel <hawking@gentoo.org> +python-2.6-r4.ebuild:
+  Revbump. Updated patchset to use PYTHONDONTWRITEBYTECODE instead of
+  PYTHON_DONT_COMPILE.
 
   25 Oct 2008; Ali Polatel <hawking@gentoo.org> python-2.5.2-r7.ebuild,
   python-2.5.2-r8.ebuild, python-2.6-r3.ebuild:

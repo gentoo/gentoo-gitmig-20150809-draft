@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6-r3.ebuild,v 1.2 2008/10/25 15:33:02 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6-r4.ebuild,v 1.1 2008/10/26 17:14:02 hawking Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -22,7 +22,7 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Python is an interpreted, interactive, object-oriented programming language."
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/2.6/${MY_P}.tar.bz2
-	mirror://gentoo/python-gentoo-patches-${PV}.tar.bz2"
+	mirror://gentoo/python-gentoo-patches-${PV}-r1.tar.bz2"
 
 LICENSE="PSF-2.2"
 SLOT="2.6"
@@ -230,8 +230,9 @@ src_test() {
 		return
 	fi
 
-	# PYTHON_DONTCOMPILE=1 breaks test_import
-	unset PYTHON_DONTCOMPILE
+	# Byte compiling should be enabled here.
+	# Otherwise test_import fails.
+	python_enable_pyc
 
 	#skip all tests that fail during emerge but pass without emerge:
 	#(See bug# 67970)
