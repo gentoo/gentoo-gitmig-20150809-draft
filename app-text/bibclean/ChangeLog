@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibclean
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibclean/ChangeLog,v 1.4 2007/03/12 23:44:09 nattfodd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibclean/ChangeLog,v 1.5 2008/10/26 13:55:19 aballier Exp $
+
+  26 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/bibclean-2.11.4-ldflags.patch, bibclean-2.11.4.ebuild:
+  respect ldflags and CC/CXX variables
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
