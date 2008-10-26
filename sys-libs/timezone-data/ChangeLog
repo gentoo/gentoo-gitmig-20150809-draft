@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.153 2008/10/26 10:44:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.154 2008/10/26 12:42:55 armin76 Exp $
+
+  26 Oct 2008; Raúl Porcel <armin76@gentoo.org>
+  timezone-data-2008g-r1.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #244391
 
   26 Oct 2008; Torsten Veller <tove@gentoo.org>
   timezone-data-2008g-r1.ebuild:
