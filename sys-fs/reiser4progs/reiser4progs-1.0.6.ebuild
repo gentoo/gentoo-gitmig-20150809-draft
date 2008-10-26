@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.6.ebuild,v 1.6 2008/05/31 17:35:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.6.ebuild,v 1.7 2008/10/26 06:54:38 vapier Exp $
 
 inherit toolchain-funcs autotools
 
 MY_P=${PN}-${PV/_p/-}
 DESCRIPTION="reiser4progs: mkfs, fsck, etc..."
-HOMEPAGE="http://www.namesys.com/v4/v4.html"
-SRC_URI="ftp://ftp.namesys.com/pub/reiser4progs/${MY_P}.tar.gz"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/fs/reiser4/reiser4progs/"
+SRC_URI="mirror://kernel/linux/utils/fs/reiser4/reiser4progs/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
