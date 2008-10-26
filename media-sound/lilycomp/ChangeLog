@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/lilycomp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilycomp/ChangeLog,v 1.5 2007/06/07 15:13:12 genstef Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilycomp/ChangeLog,v 1.6 2008/10/26 23:40:48 hawking Exp $
+
+*lilycomp-1.0.2-r1 (26 Oct 2008)
+
+  26 Oct 2008; Ali Polatel <hawking@gentoo.org> -lilycomp-1.0.2.ebuild,
+  +lilycomp-1.0.2-r1.ebuild:
+  Revbump. Use EAPI=2 and use dependencies.
 
   07 Jun 2007; Ali Polatel (hawking) <polatel@gmail.com>
   lilycomp-1.0.2.ebuild:
