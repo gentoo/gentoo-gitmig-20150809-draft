@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.43 2008/10/18 14:30:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.44 2008/10/26 08:11:45 corsair Exp $
+
+  26 Oct 2008; Markus Rothe <corsair@gentoo.org> hal-info-20080508.ebuild:
+  Add ~ppc64
 
   18 Oct 2008; Brent Baude <ranger@gentoo.org> hal-info-20080508.ebuild:
   Marking hal-info-20080508 ppc because nixnut said so
