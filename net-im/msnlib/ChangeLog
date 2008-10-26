@@ -1,6 +1,11 @@
 # ChangeLog for net-im/msnlib
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.22 2008/05/29 14:13:51 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.23 2008/10/26 23:44:03 hawking Exp $
+
+*msnlib-3.6-r1 (26 Oct 2008)
+
+  26 Oct 2008; Ali Polatel <hawking@gentoo.org> +msnlib-3.6-r1.ebuild:
+  Revbump. Use EAPI=2 and use dependencies.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> msnlib-3.6.ebuild:
   python_mod_compile is ROOT aware and can take multiple file arguments.
