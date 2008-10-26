@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r2.ebuild,v 1.3 2008/02/09 12:23:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r2.ebuild,v 1.4 2008/10/26 22:58:47 sbriesen Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Yet Another Pager Software (optional with CAPI support)"
 HOMEPAGE="ftp://sunsite.unc.edu/pub/Linux/apps/serialcomm/machines/"
@@ -41,7 +41,7 @@ src_compile() {
 	local myconf=""
 	use lua && myconf="${myconf} LUA=True"
 	use slang && myconf="${myconf} SLANG=True"
-	emake CFLAGS="${CFLAGS}" ${myconf} || die "emake failed"
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" CFLAGS="${CFLAGS}" ${myconf} || die "emake failed"
 }
 
 src_install() {
