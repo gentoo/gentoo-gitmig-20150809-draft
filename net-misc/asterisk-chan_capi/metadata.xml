@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>voip</herd>
-  <use>
-    <flag name="fax">Build chan_capi with fax support</flag>
-  </use>
 </pkgmetadata>

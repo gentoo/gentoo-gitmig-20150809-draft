@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk-chan_capi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/ChangeLog,v 1.9 2008/08/16 16:19:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi/ChangeLog,v 1.10 2008/10/26 22:42:29 sbriesen Exp $
+
+*asterisk-chan_capi-1.1.1 (26 Oct 2008)
+
+  26 Oct 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  -files/chan_capi-0.3.5-gentoo.diff,
+  -files/chan_capi-0.4.0_pre1-fixstable.diff, metadata.xml,
+  -asterisk-chan_capi-0.3.5.ebuild, -asterisk-chan_capi-0.4.0_pre1.ebuild,
+  +asterisk-chan_capi-1.1.1.ebuild:
+  version bump, removing old versions.
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove stkn from metadata.xml (#27693)
