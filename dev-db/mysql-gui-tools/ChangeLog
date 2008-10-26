@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql-gui-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.27 2008/08/17 04:13:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-gui-tools/ChangeLog,v 1.28 2008/10/26 12:18:10 swegener Exp $
+
+  26 Oct 2008; Sven Wegener <swegener@gentoo.org>
+  +files/mysql-gui-tools-5.0_p12-deprecated-gtk+-api.patch,
+  mysql-gui-tools-5.0_p12-r2.ebuild:
+  Add patch to fix use of deprecated gtk+ API, fixes bug #240548.
 
   17 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
   -files/mysql-gui-tools-5.0_p12-workbench-lua.patch,
