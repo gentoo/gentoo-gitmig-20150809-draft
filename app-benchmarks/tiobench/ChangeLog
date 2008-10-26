@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/tiobench
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.14 2006/09/16 17:13:39 swegener Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.15 2008/10/26 12:42:34 swegener Exp $
+
+  26 Oct 2008; Sven Wegener <swegener@gentoo.org> tiobench-0.3.3-r2.ebuild:
+  Fix direct use of gcc, bug #243526.
 
   16 Sep 2006; Sven Wegener <swegener@gentoo.org>
   +files/0.3.3-LDFLAGS.patch, tiobench-0.3.3-r2.ebuild:

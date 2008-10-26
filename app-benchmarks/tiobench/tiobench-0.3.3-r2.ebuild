@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/tiobench-0.3.3-r2.ebuild,v 1.3 2006/09/16 17:13:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/tiobench-0.3.3-r2.ebuild,v 1.4 2008/10/26 12:42:34 swegener Exp $
 
 inherit eutils toolchain-funcs
 
@@ -32,6 +32,7 @@ src_unpack() {
 src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
+		LINK="$(tc-getCC)" \
 		DEFINES="-DLARGEFILES" \
 		CFLAGS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
