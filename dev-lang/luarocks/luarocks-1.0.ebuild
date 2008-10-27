@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luarocks/luarocks-1.0.ebuild,v 1.1 2008/10/22 22:07:20 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luarocks/luarocks-1.0.ebuild,v 1.2 2008/10/27 22:46:47 mr_bones_ Exp $
 
 inherit eutils
 
@@ -46,4 +46,3 @@ src_install() {
 pkg_preinst() {
 	find "${D}" -type f | xargs sed -i -e "s:${D}::g" || die "sed failed"
 }
-
