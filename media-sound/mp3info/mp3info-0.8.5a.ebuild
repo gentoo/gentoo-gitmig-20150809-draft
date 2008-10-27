@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.5a.ebuild,v 1.7 2007/07/25 15:50:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3info/mp3info-0.8.5a.ebuild,v 1.8 2008/10/27 15:02:21 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,12 +15,12 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.6.10 )
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-ldflags.patch"
 }
 
