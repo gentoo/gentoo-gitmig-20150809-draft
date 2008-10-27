@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.2.ebuild,v 1.2 2008/10/07 09:42:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.2.ebuild,v 1.3 2008/10/27 10:32:14 bicatali Exp $
 
 inherit fortran flag-o-matic bash-completion versionator
 
@@ -32,7 +32,9 @@ CDEPEND="dev-lang/perl
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	doc? ( virtual/latex-base
-	  || ( dev-texlive/texlive-fontsrecommended virtual/tetex ) )"
+	  || ( dev-texlive/texlive-fontsrecommended
+		   app-text/tetex
+		   app-text/ptex ) )"
 
 RDEPEND="${CDEPEND}
 	app-arch/unzip
