@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/horde-dimp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-dimp/ChangeLog,v 1.1 2008/08/07 18:24:34 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-dimp/ChangeLog,v 1.2 2008/10/27 21:06:15 wrobel Exp $
+
+*horde-dimp-1.1 (27 Oct 2008)
+
+  27 Oct 2008; Gunnar Wrobel <wrobel@gentoo.org> +horde-dimp-1.1.ebuild:
+  Added horde-dimp-1.1.
 
 *horde-dimp-1.0.1_rc1 (07 Aug 2008)
 *horde-dimp-1.0 (07 Aug 2008)
