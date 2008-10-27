@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.4.ebuild,v 1.2 2008/09/15 22:14:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.4.ebuild,v 1.3 2008/10/27 16:59:41 jokey Exp $
 
 EAPI=1
 
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-util/cvs"
+DEPEND="dev-util/cvs
+	sys-devel/gettext"
 
 S=${WORKDIR}/${MY_P/-src}
 
