@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-battery
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/ChangeLog,v 1.67 2008/09/26 13:48:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-battery/ChangeLog,v 1.68 2008/10/27 04:05:59 darkside Exp $
+
+  27 Oct 2008; Jeremy Olexa <darkside@gentoo.org>
+  xfce4-battery-0.5.1.ebuild:
+  amd64 stable, bug 244583
 
   26 Sep 2008; Christoph Mende <angelos@gentoo.org>
   xfce4-battery-0.5.1.ebuild:
