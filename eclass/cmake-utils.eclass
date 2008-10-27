@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.12 2008/10/27 05:36:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.13 2008/10/27 14:38:38 vapier Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -146,7 +146,7 @@ cmake-utils_src_configureout() {
 _common_configure_code() {
 	local tmp_libdir=$(get_libdir)
 	# CMAKE_BUILD_TYPE only modifies compiler flags, so set to None
-	echo -DCMAKE_BUILD_TYPE=None
+	echo -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE:-None}
 	echo -DCMAKE_C_COMPILER=$(type -P $(tc-getCC))
 	echo -DCMAKE_CXX_COMPILER=$(type -P $(tc-getCXX))
 	echo -DCMAKE_INSTALL_PREFIX=${PREFIX:-/usr}
