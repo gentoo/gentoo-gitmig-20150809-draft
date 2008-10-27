@@ -1,6 +1,6 @@
 # ChangeLog for net-news/yarssr
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/yarssr/ChangeLog,v 1.5 2008/10/25 21:35:49 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/yarssr/ChangeLog,v 1.6 2008/10/27 05:27:48 tove Exp $
 
 *yarssr-0.2.2-r1 (04 Nov 2007)
 
@@ -13,7 +13,7 @@
   Added a patch to fix plain 0.2.2's code injection vulnerability. cf. bug
   197660.
 
-  02 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org> yarssr-0.2.2.ebuild:
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> yarssr-0.2.2.ebuild:
   (QA) RESTRICT clean up.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
