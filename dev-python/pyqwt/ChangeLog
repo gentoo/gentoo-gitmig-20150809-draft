@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyqwt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/ChangeLog,v 1.10 2008/02/23 15:44:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/ChangeLog,v 1.11 2008/10/27 10:50:09 hawking Exp $
+
+  27 Oct 2008; Ali Polatel <hawking@gentoo.org> pyqwt-4.2-r1.ebuild,
+  pyqwt-5.0.1.ebuild:
+  Use python_need_rebuild.
 
   23 Feb 2008; Tiziano Müller <dev-zero@gentoo.org> pyqwt-4.2-r1.ebuild,
   pyqwt-5.0.1.ebuild:

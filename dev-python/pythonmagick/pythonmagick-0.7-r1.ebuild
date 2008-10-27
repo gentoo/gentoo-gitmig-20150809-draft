@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.7-r1.ebuild,v 1.2 2008/07/20 11:38:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.7-r1.ebuild,v 1.3 2008/10/27 10:54:06 hawking Exp $
 
 NEED_PYTHON=2.5
 inherit python multilib toolchain-funcs
@@ -32,6 +32,7 @@ src_compile() {
 }
 
 src_install() {
+	python_need_rebuild
 	emake DESTDIR="${D}" install || die "emake install failed"
 }
 

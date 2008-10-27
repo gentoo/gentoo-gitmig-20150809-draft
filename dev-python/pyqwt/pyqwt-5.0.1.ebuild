@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.0.1.ebuild,v 1.5 2008/02/23 15:44:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.0.1.ebuild,v 1.6 2008/10/27 10:50:09 hawking Exp $
 
 EAPI="1"
 inherit eutils python toolchain-funcs
@@ -51,6 +51,7 @@ src_compile() {
 }
 
 src_install() {
+	python_need_rebuild
 	cd "${S}/configure"
 	emake DESTDIR="${D}" install || die "make install failed"
 
