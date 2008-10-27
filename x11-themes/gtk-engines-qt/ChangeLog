@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.40 2008/08/23 19:41:56 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.41 2008/10/27 17:58:33 scarabeus Exp $
+
+*gtk-engines-qt-1.1 (27 Oct 2008)
+
+  27 Oct 2008; Tomas Chvatal (scarabeus) <scarabeus@gentoo.org>
+  +files/1.1-stdlib.patch, +gtk-engines-qt-1.1.ebuild:
+  Version bump. Fixes bug 213620.
 
   23 Aug 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
   gtk-engines-qt-0.8-r3.ebuild:
