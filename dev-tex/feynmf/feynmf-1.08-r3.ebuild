@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/feynmf-1.08-r3.ebuild,v 1.1 2008/09/01 08:31:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/feynmf-1.08-r3.ebuild,v 1.2 2008/10/27 07:26:47 ulm Exp $
 
 inherit eutils latex-package
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
-DEPEND="|| ( dev-texlive/texlive-metapost virtual/tetex )"
+DEPEND="|| ( dev-texlive/texlive-metapost app-text/tetex app-text/ptex )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"

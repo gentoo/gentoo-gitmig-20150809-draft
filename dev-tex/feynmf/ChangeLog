@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/feynmf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.25 2008/09/01 08:31:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.26 2008/10/27 07:26:47 ulm Exp $
+
+  27 Oct 2008; Ulrich Mueller <ulm@gentoo.org> feynmf-1.08-r2.ebuild,
+  feynmf-1.08-r3.ebuild:
+  Replace the virtual/tetex dependency.
 
 *feynmf-1.08-r3 (01 Sep 2008)
 
