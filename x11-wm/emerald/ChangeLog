@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/emerald
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.16 2008/06/03 01:50:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.17 2008/10/27 01:37:26 jmbsvicetto Exp $
+
+*emerald-0.7.8 (27 Oct 2008)
+
+  27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, +emerald-0.7.8.ebuild:
+  Added compiz-0.7.8 to the tree
 
   03 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org>
   -emerald-0.1.3.ebuild, -emerald-0.1.4.ebuild, -emerald-0.2.1.ebuild:
