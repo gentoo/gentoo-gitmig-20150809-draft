@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.14 2008/10/27 01:49:27 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.15 2008/10/27 02:47:48 darkside Exp $
+
+  27 Oct 2008; Jeremy Olexa <darkside@gentoo.org> wicd-1.5.4.ebuild:
+  net-misc/wicd - reorder deps to get what is generally prefered if none exist
+  on the system already
 
 *wicd-1.5.4 (27 Oct 2008)
 

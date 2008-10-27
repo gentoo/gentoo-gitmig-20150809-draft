@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.4.ebuild,v 1.1 2008/10/27 01:49:27 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.4.ebuild,v 1.2 2008/10/27 02:47:48 darkside Exp $
 
 inherit distutils eutils
 
@@ -17,15 +17,15 @@ DEPEND="dev-lang/python"
 RDEPEND="dev-python/dbus-python
 	dev-python/pygtk
 	|| (
-		net-misc/dhcp
 		net-misc/dhcpcd
+		net-misc/dhcp
 		net-misc/pump
 	)
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	|| (
-		sys-apps/ethtool
 		sys-apps/net-tools
+		sys-apps/ethtool
 	)
 	|| ( x11-misc/ktsuss x11-libs/gksu kde-base/kdesu )
 	${DEPEND}"
