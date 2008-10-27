@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9111 2008/10/26 19:13:09 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9112 2008/10/27 04:29:12 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Frysinger <vapier@gentoo.org> (27 Oct 2008)
+# Does not work with latest DirectFB and ffmpeg #242036
+dev-libs/DirectFB-extra
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (26 Oct 2008)
 # Masked while adding to the tree and pending a final review.
