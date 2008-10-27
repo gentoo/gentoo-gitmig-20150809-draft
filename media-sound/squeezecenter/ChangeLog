@@ -1,10 +1,10 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.30 2008/10/27 18:51:08 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.31 2008/10/27 18:52:44 lavajoe Exp $
 
   27 Oct 2008; Joe Peterson <lavajoe@gentoo.org>
   files/build-perl-modules-gentoo.patch:
-  Fix patch (remove hunk that tried to modify : line) - no version bump
+  Fix patch (remove hunk that tried to modify Id: line) - no version bump
 
 *squeezecenter-7.2.1 (27 Oct 2008)
 
