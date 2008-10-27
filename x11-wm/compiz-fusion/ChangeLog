@@ -1,6 +1,17 @@
 # ChangeLog for x11-wm/compiz-fusion
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz-fusion/ChangeLog,v 1.3 2007/11/01 01:10:01 tester Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz-fusion/ChangeLog,v 1.4 2008/10/27 23:04:05 jmbsvicetto Exp $
+
+  27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, +compiz-fusion-0.7.8.ebuild:
+  Removed the bug reporting warning that was copied from the desktop-effects
+  overlay by mistake.
+
+*compiz-fusion-0.7.8 (27 Oct 2008)
+
+  27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, +compiz-fusion-0.7.8.ebuild:
+  Added compiz-0.7.8 to the tree
 
   01 Nov 2007; Olivier Crête <tester@gentoo.org>
   compiz-fusion-0.6.0.ebuild:

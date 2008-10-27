@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.7.8.ebuild,v 1.1 2008/10/27 01:37:26 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/emerald-0.7.8.ebuild,v 1.2 2008/10/27 23:06:04 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -33,10 +33,4 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-}
-
-pkg_postinst() {
-	ewarn "DO NOT report bugs to Gentoo's bugzilla"
-	einfo "Please report all bugs to #gentoo-desktop-effects"
-	einfo "Thank you on behalf of the Gentoo Desktop-Effects team"
 }

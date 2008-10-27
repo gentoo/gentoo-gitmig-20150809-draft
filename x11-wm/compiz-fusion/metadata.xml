@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<use>
+	<flag name="unsupported">Install the <pkg>x11-plugins/compiz-fusion-plugins-unsupported</pkg> package.</flag>
+</use>
+<herd>desktop-effects</herd>
 <maintainer><email>hanno@gentoo.org</email></maintainer>
+<longdescription lang="en">Python bindings for libcompizconfig.
+</longdescription>
 </pkgmetadata>
+
