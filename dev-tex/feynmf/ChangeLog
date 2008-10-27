@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/feynmf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.26 2008/10/27 07:26:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.27 2008/10/27 12:25:16 fmccor Exp $
+
+  27 Oct 2008; Ferris McCormick <fmccor@gentoo.org> feynmf-1.08-r3.ebuild:
+  Sparc stable, Bug #244594.
 
   27 Oct 2008; Ulrich Mueller <ulm@gentoo.org> feynmf-1.08-r2.ebuild,
   feynmf-1.08-r3.ebuild:
