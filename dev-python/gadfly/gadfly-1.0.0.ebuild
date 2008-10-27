@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gadfly/gadfly-1.0.0.ebuild,v 1.15 2006/07/12 15:21:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gadfly/gadfly-1.0.0.ebuild,v 1.16 2008/10/27 01:15:23 hawking Exp $
+
+inherit python
 
 DESCRIPTION="relational database system implemented in Python"
 HOMEPAGE="http://gadfly.sourceforge.net/"
@@ -20,8 +22,9 @@ src_compile() {
 }
 
 src_install() {
+	python_need_rebuild
 	dodoc *.txt doc/*.txt
-	python setup.py install --root=${D} || die
+	python setup.py install --root="${D}" || die
 	cd kjbuckets
-	python setup.py install --root=${D} || die
+	python setup.py install --root="${D}" || die
 }

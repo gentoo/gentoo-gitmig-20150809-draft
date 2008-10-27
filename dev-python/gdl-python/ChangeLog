@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdl-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.1 2008/10/16 22:48:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.2 2008/10/27 01:21:31 hawking Exp $
+
+  27 Oct 2008; Ali Polatel <hawking@gentoo.org> gdl-python-2.19.1.ebuild:
+  Use python_need_rebuild.
 
 *gdl-python-2.19.1 (16 Oct 2008)
 

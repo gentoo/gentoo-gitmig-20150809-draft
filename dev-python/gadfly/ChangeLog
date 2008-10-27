@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gadfly
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gadfly/ChangeLog,v 1.11 2006/07/12 15:21:01 agriffis Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gadfly/ChangeLog,v 1.12 2008/10/27 01:15:23 hawking Exp $
+
+  27 Oct 2008; Ali Polatel <hawking@gentoo.org> gadfly-1.0.0.ebuild:
+  Use python_need_rebuild.
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org> gadfly-1.0.0.ebuild:
   Mark 1.0.0 stable on ia64
