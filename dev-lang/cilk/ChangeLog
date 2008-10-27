@@ -1,0 +1,14 @@
+# ChangeLog for dev-lang/cilk
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cilk/ChangeLog,v 1.1 2008/10/27 14:41:53 bicatali Exp $
+
+*cilk-5.4.6 (27 Oct 2008)
+
+  27 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +cilk-5.4.6.ebuild:
+  Initial import to the main tree. Only minor modifications from the overlay
+
+  20 Feb 2008; Michał Kiedrowicz (esqualante) <esqualante@o2.pl>
+  +metadata.xml, +cilk-5.4.6.ebuild:
+  New Ebuild for bug #210816 thanks to Tommy[D], Ken69267 and tcunha
+
