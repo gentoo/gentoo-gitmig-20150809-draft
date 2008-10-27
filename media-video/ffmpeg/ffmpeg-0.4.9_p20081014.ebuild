@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20081014.ebuild,v 1.7 2008/10/27 04:20:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20081014.ebuild,v 1.8 2008/10/27 18:30:59 aballier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -151,8 +151,8 @@ src_compile() {
 			--enable-avfilter --enable-avfilter-lavf \
 			--enable-swscale --disable-stripping"
 
-	# cross compile support (FIXME?)
-	tc-is-cross-compiler && myconf="${myconf} --cross-compile --arch=$(tc-arch-kernel)"
+	# cross compile support
+	tc-is-cross-compiler && myconf="${myconf} --enable-cross-compile --arch=$(tc-arch-kernel)"
 
 	# Misc stuff
 	use hardcoded-tables && myconf="${myconf} --enable-hardcoded-tables"

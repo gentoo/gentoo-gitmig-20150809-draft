@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.235 2008/10/27 04:20:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.236 2008/10/27 18:30:59 aballier Exp $
+
+  27 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  ffmpeg-0.4.9_p20081014.ebuild:
+  Fixup crosscompilation, bug #237662
 
   27 Oct 2008; Mike Frysinger <vapier@gentoo.org>
   ffmpeg-0.4.9_p20081014.ebuild:
