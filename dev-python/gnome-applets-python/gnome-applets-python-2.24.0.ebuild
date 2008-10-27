@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-applets-python/gnome-applets-python-2.24.0.ebuild,v 1.1 2008/10/19 20:41:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-applets-python/gnome-applets-python-2.24.0.ebuild,v 1.2 2008/10/27 22:48:00 mr_bones_ Exp $
 
 G_PY_PN="gnome-python-desktop"
 G_PY_BINDINGS="applet"
@@ -19,4 +19,3 @@ RDEPEND=">=gnome-base/gnome-panel-2.13.4
 DEPEND="${RDEPEND}"
 
 EXAMPLES="examples/applet/*"
-

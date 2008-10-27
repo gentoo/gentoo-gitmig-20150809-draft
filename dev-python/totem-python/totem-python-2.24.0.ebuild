@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/totem-python-2.24.0.ebuild,v 1.1 2008/10/19 21:01:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/totem-python-2.24.0.ebuild,v 1.2 2008/10/27 22:51:45 mr_bones_ Exp $
 
 G_PY_PN="gnome-python-desktop"
 G_PY_BINDINGS="totem_plparser"
@@ -17,4 +17,3 @@ RDEPEND=">=media-video/totem-1.4.0
 	>=dev-python/gnome-vfs-python-2.22.1
 	!<dev-python/gnome-python-desktop-2.22.0-r10"
 DEPEND="${RDEPEND}"
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-cd-burner-python/nautilus-cd-burner-python-2.24.0.ebuild,v 1.1 2008/10/19 21:00:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-cd-burner-python/nautilus-cd-burner-python-2.24.0.ebuild,v 1.2 2008/10/27 22:51:27 mr_bones_ Exp $
 
 G_PY_PN="gnome-python-desktop"
 G_PY_BINDINGS="nautilusburn"
@@ -18,4 +18,3 @@ RDEPEND=">=gnome-extra/nautilus-cd-burner-2.15.3
 DEPEND="${RDEPEND}"
 
 EXAMPLES="examples/nautilusburn/*"
-

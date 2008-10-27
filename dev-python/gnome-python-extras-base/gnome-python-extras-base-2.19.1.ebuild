@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.19.1.ebuild,v 1.3 2008/10/25 08:22:30 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/gnome-python-extras-base-2.19.1.ebuild,v 1.4 2008/10/27 22:49:20 mr_bones_ Exp $
 
 inherit versionator eutils autotools gnome2
 
@@ -41,4 +41,3 @@ src_unpack() {
 	epatch "${WORKDIR}/${MY_PN}-${PV}-split.patch"
 	eautoreconf
 }
-

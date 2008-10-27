@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libwnck-python/libwnck-python-2.24.0.ebuild,v 1.1 2008/10/19 20:47:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libwnck-python/libwnck-python-2.24.0.ebuild,v 1.2 2008/10/27 22:50:52 mr_bones_ Exp $
 
 G_PY_PN="gnome-python-desktop"
 G_PY_BINDINGS="wnck"
@@ -18,4 +18,3 @@ RDEPEND=">=x11-libs/libwnck-2.19.3
 DEPEND="${RDEPEND}"
 
 EXAMPLES="examples/wnck_example.py"
-
