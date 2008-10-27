@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/compiz-fusion-plugins-extra
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-extra/ChangeLog,v 1.6 2008/10/27 01:11:27 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-extra/ChangeLog,v 1.7 2008/10/27 22:51:48 jmbsvicetto Exp $
+
+  27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compiz-fusion-plugins-extra-0.7.8.ebuild:
+  Removed the bug reporting warning that was copied from the desktop-effects
+  overlay by mistake.
 
 *compiz-fusion-plugins-extra-0.7.8 (27 Oct 2008)
 
