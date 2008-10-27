@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.7 2008/08/25 20:44:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.8 2008/10/27 19:17:29 jokey Exp $
 
 inherit git eutils
 
@@ -12,12 +12,13 @@ EGIT_PROJECT="midori"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="gvfs sourceview"
+IUSE="nls soup sqlite"
 
 DEPEND="x11-libs/gtk+
 	net-libs/webkit-gtk
-	gvfs? ( gnome-base/gvfs )
-	sourceview? ( x11-libs/gtksourceview )"
+	nls? ( sys-devel/gettext )
+	soup? ( net-libs/libsoup )
+	sqlite? ( dev-db/sqlite )"
 
 pkg_setup() {
 	ewarn "Note: this software is not yet in a too mature status so expect some minor things to break"
