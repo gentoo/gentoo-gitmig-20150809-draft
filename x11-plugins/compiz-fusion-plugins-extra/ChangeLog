@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/compiz-fusion-plugins-extra
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-extra/ChangeLog,v 1.5 2007/10/25 14:02:29 tester Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-extra/ChangeLog,v 1.6 2008/10/27 01:11:27 jmbsvicetto Exp $
+
+*compiz-fusion-plugins-extra-0.7.8 (27 Oct 2008)
+
+  27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, +compiz-fusion-plugins-extra-0.7.8.ebuild:
+  Added compiz-0.7.8 to the tree
 
   25 Oct 2007; Olivier Crête <tester@gentoo.org>
   compiz-fusion-plugins-extra-0.6.0.ebuild:
