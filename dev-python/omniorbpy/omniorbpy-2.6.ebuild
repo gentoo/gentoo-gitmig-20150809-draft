@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.6.ebuild,v 1.8 2008/05/29 16:22:55 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.6.ebuild,v 1.9 2008/10/27 10:04:39 hawking Exp $
 
 inherit eutils python multilib
 
@@ -48,6 +48,7 @@ src_compile() {
 }
 
 src_install() {
+	python_need_rebuild
 	# make files are crap!
 	sed -i -e "s/'prefix[\t ]*:= \/usr'/'prefix := \${DESTDIR}\/usr'/" \
 		mk/beforeauto.mk
