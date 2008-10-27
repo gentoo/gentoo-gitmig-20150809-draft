@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.71 2008/09/29 16:06:20 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.72 2008/10/27 19:06:05 dertobi123 Exp $
+
+*cyrus-imap-admin-2.3.13 (27 Oct 2008)
+
+  27 Oct 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/cyrus-imap-admin-2.3.13-kolab-annotations.patch,
+  +cyrus-imap-admin-2.3.13.ebuild:
+  Version bump
 
   29 Sep 2008; wrobel@gentoo.org
   +files/KOLAB_cyrus-cyradm_Annotations.patch,
