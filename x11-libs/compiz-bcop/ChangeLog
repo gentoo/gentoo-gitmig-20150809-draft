@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/compiz-bcop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/ChangeLog,v 1.5 2008/06/24 02:12:24 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/ChangeLog,v 1.6 2008/10/27 01:07:38 jmbsvicetto Exp $
+
+*compiz-bcop-0.7.8 (27 Oct 2008)
+
+  27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, +compiz-bcop-0.7.8.ebuild:
+  Added compiz-0.7.8 to the tree
 
   24 Jun 2008; Hanno Boeck <hanno@gentoo.org> compiz-bcop-0.6.0.ebuild:
   Add pkgconfig dep.
