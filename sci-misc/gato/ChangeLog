@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/gato
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.10 2008/01/29 15:08:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.11 2008/10/27 12:06:52 bicatali Exp $
+
+  27 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/gato-0.99-python.patch, -files/gato-python2.4-gentoo.patch,
+  -gato-0.99.ebuild, gato-0.99c.ebuild:
+  Switch to EAPI=2 with use dependencies
 
   29 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org> gato-0.99c.ebuild:
   Oops: fixed python dir
