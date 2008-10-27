@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.24 2008/10/26 13:51:06 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.25 2008/10/27 05:26:08 mescalinum Exp $
+
+  27 Oct 2008; Federico Ferri <mescalinum@gentoo.org>
+  +files/blt-2.4z-tcl8.5-fixpkgruntime.patch:
+  forgot to add $FILESDIR/blt-2.4z-tcl8.5-fixpkgruntime.patch
 
 *blt-2.4z-r4 (26 Oct 2008)
 
