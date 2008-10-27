@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.11.1.ebuild,v 1.9 2008/10/26 07:38:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.11.1.ebuild,v 1.10 2008/10/27 02:29:35 vapier Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -150,7 +150,7 @@ src_unpack() {
 	for opt in LOCALE_SUPPORT TFTP FTP{GET,PUT} IPCALC TFTP HUSH \
 		LASH MSH INETD DPKG RPM2CPIO RPM FOLD LOGNAME OD CRONTAB \
 		UUDECODE UUENCODE SULOGIN DC DEBUG_YANK_SUSv2 DEBUG_INIT \
-		DEBUG_CROND_OPTION FEATURE_UDHCP_DEBUG TASKSET
+		DEBUG_CROND_OPTION FEATURE_UDHCP_DEBUG TASKSET INOTIFYD
 	do
 		busybox_config_option n ${opt}
 	done
