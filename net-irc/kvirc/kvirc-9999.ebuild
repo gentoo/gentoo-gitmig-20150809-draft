@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.14 2008/10/26 21:00:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.15 2008/10/27 07:06:47 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,10 +17,8 @@ LICENSE="kvirc"
 SLOT="4"
 KEYWORDS=""
 IUSE="audiofile +crypt +dcc_voice debug doc +gsm +ipc ipv6 kde +nls profile +phonon +ssl +transparency"
-# remove the block on :4.1 kvirc with next sync i wrongly updated slot and now
-# i return it back but someone could install already so this remove collisions.
+
 RDEPEND="
-	!net-irc/kvirc:4.1
 	sys-libs/zlib
 	x11-libs/qt-gui[dbus]
 	x11-libs/qt-webkit
