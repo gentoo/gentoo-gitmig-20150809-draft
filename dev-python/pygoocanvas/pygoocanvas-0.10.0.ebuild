@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/pygoocanvas-0.10.0.ebuild,v 1.1 2008/05/01 18:27:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/pygoocanvas-0.10.0.ebuild,v 1.2 2008/10/27 10:20:59 hawking Exp $
+
+inherit python
 
 DESCRIPTION="GooCanvas python bindings"
 HOMEPAGE="http://developer.berlios.de/projects/pygoocanvas"
@@ -24,6 +26,7 @@ src_compile() {
 }
 
 src_install() {
+	python_need_rebuild
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS
 }

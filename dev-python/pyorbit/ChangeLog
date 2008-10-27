@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyorbit
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.57 2008/05/29 16:31:38 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.58 2008/10/27 10:29:01 hawking Exp $
+
+  27 Oct 2008; Ali Polatel <hawking@gentoo.org> pyorbit-2.14.3.ebuild:
+  Use python_need_rebuild.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> pyorbit-2.14.3.ebuild:
   Made the ebuild multilib-safe.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygoocanvas
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.7 2008/05/01 18:27:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.8 2008/10/27 10:20:59 hawking Exp $
+
+  27 Oct 2008; Ali Polatel <hawking@gentoo.org> pygoocanvas-0.10.0.ebuild:
+  Use python_need_rebuild.
 
 *pygoocanvas-0.10.0 (01 May 2008)
 

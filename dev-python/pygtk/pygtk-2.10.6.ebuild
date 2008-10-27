@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.6.ebuild,v 1.13 2008/03/31 04:21:28 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.6.ebuild,v 1.14 2008/10/27 10:26:06 hawking Exp $
 
 NEED_PYTHON=2.3.5
 
@@ -55,6 +55,7 @@ src_compile() {
 }
 
 src_install() {
+	python_need_rebuild
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog INSTALL MAPPING NEWS README THREADS TODO
 
