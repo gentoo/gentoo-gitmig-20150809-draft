@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.28 2008/10/07 12:57:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.29 2008/10/27 00:50:32 lavajoe Exp $
+
+*squeezecenter-7.2.1 (27 Oct 2008)
+
+  27 Oct 2008; Joe Peterson <lavajoe@gentoo.org>
+  +files/build-perl-modules-gentoo.patch, +squeezecenter-7.2.1.ebuild:
+  Add new version 7.2.1; no longer depend on upstream downloads during perl
+  module builds
 
   07 Oct 2008; nixnut <nixnut@gentoo.org> squeezecenter-7.1.0-r1.ebuild:
   Stable on ppc wrt bug 237373

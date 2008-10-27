@@ -1,0 +1,61 @@
+--- Bin/build-perl-modules.pl.old	2008-10-25 13:59:42.000000000 +0100
++++ Bin/build-perl-modules.pl	2008-10-25 19:28:25.000000000 +0100
+@@ -1,6 +1,6 @@
+ #!/usr/bin/perl -w
+ 
+-# $Id: build-perl-modules-gentoo.patch,v 1.1 2008/10/27 00:50:32 lavajoe Exp $
++# $Id: build-perl-modules-gentoo.patch,v 1.1 2008/10/27 00:50:32 lavajoe Exp $
+ #
+ # This is an installer program for perl modules which are required by SqueezeCenter,
+ # but for which we can't include for every architecture and perl variant.
+@@ -21,7 +21,6 @@
+ 
+ # NOTE: If you change this in a future version of SC, create a new
+ # versioned directory under vendor/src for all files for that version
+-my $SOURCE = 'http://svn.slimdevices.com/repos/slim/vendor/src/7.2';
+ my $dlext  = $Config{'dlext'};
+ 
+ # The list of all the packages needed.
+@@ -197,36 +197,16 @@
+ 		}
+ 	}
+ 
++	# Extract AutoXS::Header as we need that to support the following builds.
++	chdir($pwd) or die "Couldn't change to $pwd : $!";
++	# Include this when performing the following builds.
++	$ENV{'PERL5LIB'} = cwd() . "/AutoXS-Header-0.03/lib";
++
+ 	for my $package (@packages) {
+ 
+ 		chdir($pwd) or die "Couldn't change to $pwd : $!";
+ 
+-		print "\nDownloading $package to: $pwd\n";
+-
+-		# Remove any previous version.
+-		unlink $package;
+-
+-		if ($downloadUsing eq 'lwp') {
+-
+-			LWP::Simple::getstore("$SOURCE/$package?view=auto", $package);
+-
+-		} elsif ($downloadUsing =~ /curl$/) {
+-
+-			`$downloadUsing --silent -o $package $SOURCE/$package?view=auto`;
+-
+-		} else {
+-
+-			`$downloadUsing -q -O $package $SOURCE/$package?view=auto`;
+-		}
+-
+-		unless (-r $package) {
+-			print "Something looks wrong - I couldn't read $pwd/$package, which I just downloaded.\n";
+-		}
+-
+-		print "Uncompressing..\n";
+-		`gzip -d < $package | tar xvf -`;
+-
+-		unlink $package;
++		print "\nBuilding $package\n";
+ 
+ 		# Just the directory name.
+ 		my ($packageDir) = ($package =~ /(\S+?)\.tar\.gz/);
