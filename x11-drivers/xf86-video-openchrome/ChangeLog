@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-openchrome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/ChangeLog,v 1.12 2008/10/05 17:14:30 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/ChangeLog,v 1.13 2008/10/27 15:05:42 jer Exp $
+
+  27 Oct 2008; Jeroen Roovers <jer@gentoo.org>
+  -xf86-video-openchrome-0.2.901.ebuild:
+  Remove old.
 
   05 Oct 2008; Rémi Cardona <remi@gentoo.org>
   xf86-video-openchrome-0.2.901.ebuild,
