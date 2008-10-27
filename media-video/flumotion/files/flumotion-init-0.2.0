@@ -6,7 +6,7 @@ depend() {
 
 start() {
     ebegin "Starting Flumotion"
-    HOME=/usr/share/flumotion start-stop-daemon --start --chuid flumotion:flumotion --exec /usr/sbin/flumotion start 
+    HOME=/usr/share/flumotion start-stop-daemon -o --start --chuid flumotion:flumotion --exec /usr/sbin/flumotion start 
     eend $?
 }
 
