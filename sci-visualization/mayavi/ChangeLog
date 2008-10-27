@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/mayavi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.2 2007/04/27 14:00:05 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.3 2008/10/27 12:08:49 bicatali Exp $
+
+  27 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org> mayavi-1.5.ebuild:
+  Switch to EAPI=2 with use dependencies
 
   27 Apr 2007; Sébastien Fabbro <bicatali@gentoo.org> mayavi-1.5.ebuild:
   slotting 2->1

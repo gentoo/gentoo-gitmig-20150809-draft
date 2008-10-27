@@ -1,9 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-1.5.ebuild,v 1.2 2007/04/27 14:00:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-1.5.ebuild,v 1.3 2008/10/27 12:08:49 bicatali Exp $
 
 NEED_PYTHON=2.3
-
+EAPI=2
 inherit distutils
 
 MY_P=MayaVi-${PV}
@@ -16,29 +16,19 @@ SLOT="1"
 KEYWORDS="~amd64 ~x86"
 
 IUSE="doc examples"
-DEPEND=">=sci-libs/vtk-5"
+DEPEND="dev-lang/python[tk]
+	>=sci-libs/vtk-5[tk,python]"
 RESTRICT="test"
 
-S=${WORKDIR}/${MY_P}
-
-pkg_setup() {
-	python_tkinter_exists
-
-	if ! built_with_use sci-libs/vtk tk python; then
-		eerror "vtk is missing tk or python support."
-		eerror "Please ensure you have the 'tk' and 'python' USE flags"
-		eerror  "enabled for vtk and then re-emerge vtk."
-		die "vtk needs tk and python USE flags"
-	fi
-}
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	distutils_src_install
 	dodoc doc/{README,CREDITS,NEWS,TODO}.txt
 	use doc && dohtml -r doc/guide/*
 	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins -r examples/*
+		insinto /usr/share/doc/${PF}
+		doins -r examples || die
 	fi
 }
 
