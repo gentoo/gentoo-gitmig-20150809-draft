@@ -1,5 +1,9 @@
---- tc/Makefile.old	2008-09-06 15:28:35.862794338 +0200
-+++ tc/Makefile	2008-09-06 16:02:11.043794213 +0200
+respect env LDFLAGS
+
+http://bugs.gentoo.org/236861
+
+--- tc/Makefile
++++ tc/Makefile
 @@ -83,7 +83,7 @@
  	rm -f emp_ematch.yacc.output
  
