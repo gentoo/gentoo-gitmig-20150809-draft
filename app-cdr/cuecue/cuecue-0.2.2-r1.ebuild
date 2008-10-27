@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/cuecue-0.2.2-r1.ebuild,v 1.3 2008/06/16 20:01:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/cuecue-0.2.2-r1.ebuild,v 1.4 2008/10/27 00:30:54 sbriesen Exp $
 
 inherit eutils
 
@@ -16,6 +16,14 @@ IUSE="flac mp3 vorbis"
 DEPEND="mp3? ( media-libs/libmad )
 	flac? ( media-libs/flac )
 	vorbis? ( media-libs/libvorbis media-libs/libogg )"
+
+pkg_setup() {
+	for X in ${IUSE}; do
+		use ${X} && return 0
+	done
+	eerror "You must enable at least one of these USE flags: ${IUSE}"
+	die "no format, no compile! ;-)"
+}
 
 src_unpack() {
 	unpack ${A}
