@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/grub-static
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.14 2008/02/25 22:13:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.15 2008/10/27 10:50:08 robbat2 Exp $
+
+*grub-static-0.97-r6 (27 Oct 2008)
+
+  27 Oct 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +grub-static-0.97-r6.ebuild:
+  Bug #239224, version bump to match current non-static build. See bug for
+  full list of fixes. Beware /boot/grub/splash.xpm.gz sometimes vanishing
+  due to a Portage bug. Make SURE you follow the upgrade instructions or you
+  might end up with a non-booting box.
 
   25 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   grub-static-0.97.ebuild:
