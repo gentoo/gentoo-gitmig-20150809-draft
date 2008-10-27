@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.68 2008/10/24 15:23:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.69 2008/10/27 14:41:54 pva Exp $
+
+  27 Oct 2008; Peter Volkov <pva@gentoo.org> iptraf-3.0.0-r5.ebuild:
+  ~mips keyworded, bug #237773
 
 *iptraf-3.0.0-r5 (24 Oct 2008)
 
