@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.52 2008/10/27 00:17:28 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.53 2008/10/27 12:23:50 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -68,12 +68,8 @@ python_version() {
 # note:   supported by >=dev-lang/python-2.2.3-r3 only.
 #
 python_disable_pyc() {
-	python_version
-	if [[ ${PYVER/./,} -ge 2,6 ]]; then
-		export PYTHONDONTWRITEBYTECODE=1
-	else
-		export PYTHON_DONTCOMPILE=1
-	fi
+	export PYTHONDONTWRITEBYTECODE=1 # For 2.6 and above
+	export PYTHON_DONTCOMPILE=1 # For 2.5 and below
 }
 
 # @FUNCTION: python_enable_pyc
@@ -81,12 +77,8 @@ python_disable_pyc() {
 # Tells python to automatically recompile modules to .pyc/.pyo if the
 # timestamps/version stamps change
 python_enable_pyc() {
-	python_version
-	if [[ ${PYVER/./,} -ge 2,6 ]]; then
-		unset PYTHONDONTWRITEBYTECODE
-	else
-		unset PYTHON_DONTCOMPILE
-	fi
+	unset PYTHONDONTWRITEBYTECODE
+	unset PYTHON_DONTCOMPILE
 }
 
 python_disable_pyc
