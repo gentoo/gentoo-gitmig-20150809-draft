@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/yaps
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.20 2008/10/26 22:58:47 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/ChangeLog,v 1.21 2008/10/27 01:58:52 sbriesen Exp $
+
+*yaps-0.96-r3 (27 Oct 2008)
+
+  27 Oct 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/yaps-0.96-gentoo.diff, +yaps-0.96-r3.ebuild:
+  revision bump to include latest capi enabled yaps.
 
   26 Oct 2008; Stefan Briesenick <sbriesen@gentoo.org> yaps-0.96-r2.ebuild:
   fixed CC/CXX variable handling using tc-getCC/CXX, solving bug #243692.
