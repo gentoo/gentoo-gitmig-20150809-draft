@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.83 2008/10/27 05:20:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.84 2008/10/27 05:22:13 vapier Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -495,8 +495,8 @@ strip_modulenames() {
 linux-mod_src_compile() {
 	debug-print-function ${FUNCNAME} $*
 
-	local modulename libdir srcdir objdir i n myARCH="${ARCH}" myABI="${ABI}"
-	ARCH="$(tc-arch-kernel)"
+	local modulename libdir srcdir objdir i n myABI="${ABI}"
+	set_arch_to_kernel
 	ABI="${KERNEL_ABI}"
 
 	BUILD_TARGETS=${BUILD_TARGETS:-clean module}
@@ -540,7 +540,7 @@ linux-mod_src_compile() {
 		fi
 	done
 
-	ARCH="${myARCH}"
+	set_arch_to_portage
 	ABI="${myABI}"
 }
 
