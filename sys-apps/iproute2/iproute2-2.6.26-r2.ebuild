@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.26-r2.ebuild,v 1.1 2008/09/09 14:35:09 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.26-r2.ebuild,v 1.2 2008/10/27 02:10:47 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -35,8 +35,8 @@ src_unpack() {
 	# build against system headers
 	rm -r include/linux include/netinet #include/ip{,6}tables{,_common}.h include/libiptc
 
-	# fix LDFLAGS usage bug #236861
-	epatch "${FILESDIR}"/${PN}-2.6.26-ldflags.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch #236861
+	epatch "${FILESDIR}"/${P}-linux-2.6.27-API.patch
 
 	local check base=${PORTAGE_CONFIGROOT}/etc/portage/patches
 	for check in {${CATEGORY}/${PF},${CATEGORY}/${P},${CATEGORY}/${PN}}; do
