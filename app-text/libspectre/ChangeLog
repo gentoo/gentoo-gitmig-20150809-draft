@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libspectre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.15 2008/10/05 20:06:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.16 2008/10/27 01:00:32 fmccor Exp $
+
+  27 Oct 2008; Ferris McCormick <fmccor@gentoo.org> libspectre-0.2.1.ebuild:
+  Sparc stable, Bug #244460.
 
   05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   libspectre-0.2.1.ebuild:
