@@ -1,11 +1,14 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.4 2008/09/21 00:11:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.5 2008/10/27 07:17:20 vapier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
 
 # SECTION: Unmask
+
+# Lilo works on amd64, so ...
+-lilo
 
 # 2007/10/09 - Steve Dibb <beandog@gentoo.org>
 # Unmask support for SSSE3 (pni) for media-video/mplayer
