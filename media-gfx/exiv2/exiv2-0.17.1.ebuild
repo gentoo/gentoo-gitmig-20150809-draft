@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.17.1.ebuild,v 1.1 2008/09/01 17:16:21 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.17.1.ebuild,v 1.2 2008/10/27 23:05:23 ranger Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.exiv2.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="doc nls zlib xmp examples unicode"
 IUSE_LINGUAS="de es fi fr pl ru sk"
