@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.30.2.ebuild,v 1.1 2008/10/26 12:27:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.30.2.ebuild,v 1.2 2008/10/27 17:55:43 aballier Exp $
 
 EAPI="2"
 
@@ -34,6 +34,10 @@ src_prepare() {
 }
 
 src_configure() {
+	# Too many regexps use A-Z a-z constructs, what causes problems with locales
+	# that don't have the same alphabetical order than ascii. Bug #244619
+	# So we set LC_ALL to C in order to avoid problems.
+	export LC_ALL=C
 	tc-export CC CXX AR RANLIB
 	export NATIVE='.'
 	mkdir -p "${WORKDIR}/${PN}-beta-${PV}/build"
