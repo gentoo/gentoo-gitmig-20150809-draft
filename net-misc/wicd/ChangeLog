@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.13 2008/10/09 05:21:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.14 2008/10/27 01:49:27 darkside Exp $
+
+*wicd-1.5.4 (27 Oct 2008)
+
+  27 Oct 2008; Jeremy Olexa <darkside@gentoo.org> +wicd-1.5.4.ebuild:
+  From upstream's changelog:
+  1.5.4
+  * misc.Run no longer uses a shell to execute commands
+  * Improved power usage
+  * pm-utils support added
 
 *wicd-1.5.3-r2 (09 Oct 2008)
 
