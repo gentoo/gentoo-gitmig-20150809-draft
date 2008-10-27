@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.11 2008/10/27 05:06:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.12 2008/10/27 05:36:02 vapier Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -85,7 +85,7 @@ cmake-utils_has() { _use_me_now HAVE "$@" ; }
 cmake-utils_src_configure() {
 	debug-print-function $FUNCNAME $*
 
-	if has debug ${IUSE//+} && use debug ; then
+	if ! has debug ${IUSE//+} || ! use debug ; then
 		append-cppflags -DNDEBUG
 	fi
 
