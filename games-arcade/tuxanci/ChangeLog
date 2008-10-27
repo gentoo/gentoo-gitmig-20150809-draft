@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/tuxanci
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/ChangeLog,v 1.1 2008/10/27 07:37:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/ChangeLog,v 1.2 2008/10/27 08:56:52 scarabeus Exp $
+
+  27 Oct 2008; Tomas Chvatal (scarabeus) <scarabeus@gentoo.org>
+  tuxanci-0.21.0.ebuild:
+  Whitespace cleanup in order to look like other game ebuilds. Thx Mr_Bones
 
 *tuxanci-0.21.0 (27 Oct 2008)
 
