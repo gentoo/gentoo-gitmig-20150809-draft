@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/xblockout
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.18 2008/07/22 18:55:08 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.19 2008/10/27 22:42:20 tupone Exp $
+
+*xblockout-1.1.5-r1 (27 Oct 2008)
+
+  27 Oct 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/xblockout-1.1.5-font.patch, +xblockout-1.1.5-r1.ebuild:
+  Fixing font loading problem. Bug #162048 by NorthLite
+  amd64 added again.
 
   22 Jul 2008; Santiago M. Mola <coldwind@gentoo.org>
   xblockout-1.1.5.ebuild:
