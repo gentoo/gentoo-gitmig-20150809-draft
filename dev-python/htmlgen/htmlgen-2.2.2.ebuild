@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/htmlgen-2.2.2.ebuild,v 1.13 2008/08/19 01:11:58 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/htmlgen-2.2.2.ebuild,v 1.14 2008/10/27 09:11:22 hawking Exp $
 
 inherit python
 
@@ -20,6 +20,8 @@ DEPEND="virtual/python
 S="${WORKDIR}/${MY_P}"
 
 src_install() {
+	python_need_rebuild
+
 	# doing this manually because their build scripts suck
 	local files="HTMLgen.py HTMLcolors.py HTMLutil.py HTMLcalendar.py \
 	barchart.py colorcube.py imgsize.py NavLinks.py Formtools.py \

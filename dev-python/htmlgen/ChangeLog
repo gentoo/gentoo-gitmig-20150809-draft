@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/htmlgen
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.10 2008/08/19 01:11:58 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.11 2008/10/27 09:11:22 hawking Exp $
+
+  27 Oct 2008; Ali Polatel <hawking@gentoo.org> htmlgen-2.2.2.ebuild:
+  Use python_need_rebuild.
 
   18 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> htmlgen-2.2.2.ebuild:
   Minor enhancements to the ebuild. Thanks to Necoro <gentoo@necoro.eu>. Bug
