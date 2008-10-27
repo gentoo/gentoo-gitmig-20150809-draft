@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.0-r3.ebuild,v 1.2 2008/10/27 21:29:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.0-r3.ebuild,v 1.3 2008/10/27 21:37:06 matsuu Exp $
 
 inherit eutils fdo-mime flag-o-matic multilib toolchain-funcs
 
@@ -79,7 +79,7 @@ src_install() {
 	cp "${FILESDIR}/${PV}/conf" "${T}/distccd"
 	if use avahi; then
 		cat >> "${T}/distccd" <<-EOF
-	
+
 		# Enable zeroconf support in distccd
 		DISTCCD_OPTS="\${DISTCCD_OPTS} --zeroconf"
 		EOF
@@ -108,10 +108,10 @@ src_install() {
 	fowners distcc:daemon /var/run/distccd
 
 	if use gnome || use gtk; then
-	  einfo "Renaming /usr/bin/distccmon-gnome to /usr/bin/distccmon-gui"
-	  einfo "This is to have a little sensability in naming schemes between distccmon programs"
-	  mv "${D}/usr/bin/distccmon-gnome" "${D}/usr/bin/distccmon-gui" || die
-	  dosym distccmon-gui /usr/bin/distccmon-gnome
+		einfo "Renaming /usr/bin/distccmon-gnome to /usr/bin/distccmon-gui"
+		einfo "This is to have a little sensability in naming schemes between distccmon programs"
+		mv "${D}/usr/bin/distccmon-gnome" "${D}/usr/bin/distccmon-gui" || die
+		dosym distccmon-gui /usr/bin/distccmon-gnome
 	fi
 
 	if use xinetd; then
