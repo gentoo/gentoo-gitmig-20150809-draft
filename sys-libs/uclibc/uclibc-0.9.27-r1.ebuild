@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.30 2008/03/24 19:30:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.31 2008/10/27 06:53:14 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -40,7 +40,7 @@ LICENSE="LGPL-2"
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
 KEYWORDS="-* arm m68k mips ppc sh sparc x86"
-IUSE="build debug hardened ipv6 minimal nls pregen userlocales wordexp"
+IUSE="build debug hardened ipv6 minimal nls pregen userlocales wordexp crosscompile_opts_headers-only"
 RESTRICT="strip"
 
 RDEPEND=""
