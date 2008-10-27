@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.16.0.ebuild,v 1.1 2008/06/09 17:20:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/newlib-1.16.0.ebuild,v 1.2 2008/10/27 06:59:51 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -26,7 +26,7 @@ LICENSE="NEWLIB LIBGLOSS GPL-2"
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
 KEYWORDS="-* ~arm ~hppa ~m68k ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="nls threads unicode"
+IUSE="nls threads unicode crosscompile_opts_headers-only"
 RESTRICT="strip"
 
 DEPEND=""
