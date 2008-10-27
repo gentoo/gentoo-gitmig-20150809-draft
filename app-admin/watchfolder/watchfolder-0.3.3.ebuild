@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/watchfolder-0.3.3.ebuild,v 1.5 2008/10/23 02:36:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/watchfolder-0.3.3.ebuild,v 1.6 2008/10/27 22:45:33 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,7 +33,6 @@ src_unpack() {
 src_compile() {
 	emake CC="$(tc-getCC)" || die "emake failed"
 }
-
 
 src_install() {
 	dobin watchd
