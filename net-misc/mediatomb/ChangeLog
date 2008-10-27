@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.6 2008/10/25 22:02:27 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.7 2008/10/27 05:26:01 tove Exp $
 
   25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> mediatomb-0.11.0.ebuild:
   keyworded ~ppc. Closes bug #219420
@@ -15,13 +15,13 @@
   26 Apr 2008; Markus Meier <maekke@gentoo.org> mediatomb-0.11.0.ebuild:
   add ~x86, bug #217747
 
-  21 Apr 2008; Diego PettenÃ² <flameeyes@gentoo.org>
+  21 Apr 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/mediatomb-0.11.0+curl-7.18.patch, mediatomb-0.11.0.ebuild:
-  Add patch to fix building with curl 7.18, thanks to Åukasz Dudek.
+  Add patch to fix building with curl 7.18, thanks to Łukasz Dudek.
 
 *mediatomb-0.11.0 (27 Mar 2008)
 
-  27 Mar 2008; Diego PettenÃ² <flameeyes@gentoo.org>
+  27 Mar 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/mediatomb-0.11.0-newffmpeg.patch, +files/mediatomb-0.11.0.config,
   +files/mediatomb.confd, +files/mediatomb.initd, +metadata.xml,
   +mediatomb-0.11.0.ebuild:
