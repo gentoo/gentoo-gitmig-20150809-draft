@@ -4,5 +4,5 @@ Type=Application
 Comment=Run several virtual systems on a single host computer
 Exec=VirtualBox
 TryExec=VirtualBox
-Icon=virtualbox
+Icon=virtualbox-ose
 Categories=System;Emulator;

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-2.0.2.ebuild,v 1.2 2008/09/15 22:14:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-2.0.2.ebuild,v 1.3 2008/10/27 17:19:20 jokey Exp $
 
 EAPI=1
 
@@ -20,8 +20,6 @@ RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
 	dev-libs/libIDL
 	>=dev-libs/libxslt-1.1.19
-	dev-libs/xalan-c
-	dev-libs/xerces-c
 	!headless? (
 		qt4? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 ) )
 		x11-libs/libXcursor
@@ -45,6 +43,7 @@ RDEPEND="${RDEPEND}
 	sys-apps/hal"
 
 S=${WORKDIR}/${MY_P/-OSE/}
+MY_LIBDIR="$(get_libdir)"
 
 pkg_setup() {
 	# known problems with gcc 4.3 and the recompiler
@@ -86,8 +85,13 @@ src_unpack() {
 	# Remove shipped binaries (kBuild,yasm), see bug #232775
 	rm -rf kBuild/bin tools
 
-	# Disable things unused or splitted into separate ebuilds
-	cp "${FILESDIR}/${P}-localconfig" LocalConfig.kmk
+	# Disable things unused or splitted into separate ebuilds 
+	cp "${FILESDIR}/${PN}-2-localconfig" LocalConfig.kmk
+
+	# Set the right libdir 
+	sed -i \
+			-e "s/MY_LIBDIR/${MY_LIBDIR}/" LocalConfig.kmk \
+			|| die "LocalConfig.kmk sed failed"
 }
 
 src_compile() {
@@ -132,29 +136,34 @@ src_compile() {
 src_install() {
 	cd "${S}"/out/linux.${ARCH}/release/bin
 
-	# create configuration files
+	# Create configuration files
 	insinto /etc/vbox
-	newins "${FILESDIR}/${P}-config" vbox.cfg
+	newins "${FILESDIR}/${PN}-2-config" vbox.cfg
 	newins "${FILESDIR}/${PN}-interfaces" interfaces
 
-	# symlink binaries to the shipped wrapper
-	exeinto /usr/lib/${PN}
-	newexe "${FILESDIR}/${P}-wrapper" "VBox" || die
-	fowners root:vboxusers /usr/lib/${PN}/VBox
-	fperms 0750 /usr/lib/${PN}/VBox
+	# Set the right libdir
+	sed -i \
+			-e "s/MY_LIBDIR/${MY_LIBDIR}/" \
+			"${D}"/etc/vbox/vbox.cfg || die "vbox.cfg sed failed"
+
+	# Symlink binaries to the shipped wrapper
+	exeinto /usr/${MY_LIBDIR}/${PN}
+	newexe "${FILESDIR}/${PN}-2-wrapper" "VBox" || die
+	fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/VBox
+	fperms 0750 /usr/${MY_LIBDIR}/${PN}/VBox
 	newexe "${S}"/src/VBox/Installer/linux/VBoxAddIF.sh "VBoxAddIF" || die
-	fowners root:vboxusers /usr/lib/${PN}/VBoxAddIF
-	fperms 0750 /usr/lib/${PN}/VBoxAddIF
+	fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/VBoxAddIF
+	fperms 0750 /usr/${MY_LIBDIR}/${PN}/VBoxAddIF
 
-	dosym /usr/lib/${PN}/VBox /usr/bin/VBoxManage
-	dosym /usr/lib/${PN}/VBox /usr/bin/VBoxVRDP
-	dosym /usr/lib/${PN}/VBox /usr/bin/VBoxHeadless
-	dosym /usr/lib/${PN}/VBoxTunctl /usr/bin/VBoxTunctl
-	dosym /usr/lib/${PN}/VBoxAddIF /usr/bin/VBoxAddIF
-	dosym /usr/lib/${PN}/VBoxAddIF /usr/bin/VBoxDeleteIF
+	dosym /usr/${MY_LIBDIR}/${PN}/VBox /usr/bin/VBoxManage
+	dosym /usr/${MY_LIBDIR}/${PN}/VBox /usr/bin/VBoxVRDP
+	dosym /usr/${MY_LIBDIR}/${PN}/VBox /usr/bin/VBoxHeadless
+	dosym /usr/${MY_LIBDIR}/${PN}/VBoxTunctl /usr/bin/VBoxTunctl
+	dosym /usr/${MY_LIBDIR}/${PN}/VBoxAddIF /usr/bin/VBoxAddIF
+	dosym /usr/${MY_LIBDIR}/${PN}/VBoxAddIF /usr/bin/VBoxDeleteIF
 
-	# install binaries and libraries
-	insinto /usr/lib/${PN}
+	# Install binaries and libraries
+	insinto /usr/${MY_LIBDIR}/${PN}
 	doins -r components
 
 	if use sdk; then
@@ -163,42 +172,42 @@ src_install() {
 
 	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl} *so *r0 *gc ; do
 		doins $each
-		fowners root:vboxusers /usr/lib/${PN}/${each}
-		fperms 0750 /usr/lib/${PN}/${each}
+		fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/${each}
+		fperms 0750 /usr/${MY_LIBDIR}/${PN}/${each}
 	done
 
 	if use amd64; then
 		doins VBoxREM2.rel
-		fowners root:vboxusers /usr/lib/${PN}/VBoxREM2.rel
-		fperms 0750 /usr/lib/${PN}/VBoxREM2.rel
+		fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/VBoxREM2.rel
+		fperms 0750 /usr/${MY_LIBDIR}/${PN}/VBoxREM2.rel
 	fi
 
 	if ! use headless; then
 			for each in VBox{SDL,Headless} ; do
 				doins $each
-				fowners root:vboxusers /usr/lib/${PN}/${each}
-				fperms 4750 /usr/lib/${PN}/${each}
-				pax-mark -m "${D}"/usr/lib/${PN}/${each}
+				fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/${each}
+				fperms 4750 /usr/${MY_LIBDIR}/${PN}/${each}
+				pax-mark -m "${D}"/usr/${MY_LIBDIR}/${PN}/${each}
 			done
 
-			dosym /usr/lib/${PN}/VBox /usr/bin/VBoxSDL
+			dosym /usr/${MY_LIBDIR}/${PN}/VBox /usr/bin/VBoxSDL
 
 			if use qt4; then
 				doins VirtualBox
-				fowners root:vboxusers /usr/lib/${PN}/VirtualBox
-				fperms 4750 /usr/lib/${PN}/VirtualBox
-				pax-mark -m "${D}"/usr/lib/${PN}/VirtualBox
+				fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/VirtualBox
+				fperms 4750 /usr/${MY_LIBDIR}/${PN}/VirtualBox
+				pax-mark -m "${D}"/usr/${MY_LIBDIR}/${PN}/VirtualBox
 
-				dosym /usr/lib/${PN}/VBox /usr/bin/VirtualBox
+				dosym /usr/${MY_LIBDIR}/${PN}/VBox /usr/bin/VirtualBox
 			fi
 
 			newicon	"${S}"/src/VBox/Frontends/VirtualBox/images/OSE/VirtualBox_32px.png ${PN}.png
 			domenu "${FILESDIR}"/${PN}.desktop
 	else
 			doins VBoxHeadless
-			fowners root:vboxusers /usr/lib/${PN}/VBoxHeadless
-			fperms 4750 /usr/lib/${PN}/VBoxHeadless
-			pax-mark -m "${D}"/usr/lib/${PN}/VBoxHeadless
+			fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/VBoxHeadless
+			fperms 4750 /usr/${MY_LIBDIR}/${PN}/VBoxHeadless
+			pax-mark -m "${D}"/usr/${MY_LIBDIR}/${PN}/VBoxHeadless
 	fi
 
 	insinto /usr/share/${PN}

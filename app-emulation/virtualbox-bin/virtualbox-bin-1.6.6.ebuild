@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.6.ebuild,v 1.2 2008/09/15 19:52:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.6.ebuild,v 1.3 2008/10/27 17:15:21 jokey Exp $
 
 EAPI=1
 
@@ -88,7 +88,7 @@ src_unpack() {
 src_install() {
 	if ! use headless ; then
 		newicon VBox.png virtualbox.png
-		newmenu "${FILESDIR}"/${PN}.desktop virtualbox.desktop
+		newmenu "${FILESDIR}"/${PN}.desktop ${PN}.desktop
 	fi
 
 	# create virtualbox configurations files
@@ -146,7 +146,7 @@ src_install() {
 	fi
 
 	exeinto /opt/VirtualBox
-	newexe "${FILESDIR}/${PN}-wrapper" "VBox.sh" || die
+	newexe "${FILESDIR}/${PN}-1-wrapper" "VBox.sh" || die
 	fowners root:vboxusers /opt/VirtualBox/VBox.sh
 	fperms 0750 /opt/VirtualBox/VBox.sh
 	fowners root:vboxusers /opt/VirtualBox/VBoxAddIF.sh

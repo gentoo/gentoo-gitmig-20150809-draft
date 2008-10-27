@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-1.6.6.ebuild,v 1.3 2008/10/27 17:19:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-2.0.4.ebuild,v 1.1 2008/10/27 17:19:20 jokey Exp $
 
 EAPI=1
 
-inherit eutils fdo-mime flag-o-matic qt3 toolchain-funcs
+inherit eutils fdo-mime flag-o-matic qt4 toolchain-funcs
 
 MY_P=VirtualBox-${PV}-OSE
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
@@ -14,26 +14,27 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="additions alsa headless pulseaudio +qt3 sdk"
+IUSE="+additions alsa headless pulseaudio python +qt4 sdk"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
 	dev-libs/libIDL
 	>=dev-libs/libxslt-1.1.19
 	!headless? (
-		qt3? ( x11-libs/qt:3 )
+		qt4? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 ) )
 		x11-libs/libXcursor
 		media-libs/libsdl
 		x11-libs/libXt )"
 DEPEND="${RDEPEND}
-	dev-util/kbuild
+	>=dev-util/kbuild-0.1.4
 	>=dev-lang/yasm-0.6.2
 	sys-devel/bin86
 	sys-devel/dev86
 	sys-power/iasl
 	media-libs/libpng
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
-	pulseaudio? ( media-sound/pulseaudio )"
+	pulseaudio? ( media-sound/pulseaudio )
+	python? ( >=dev-lang/python-2.3 )"
 # sys-apps/hal is required at runtime (bug #197541)
 RDEPEND="${RDEPEND}
 	additions? ( ~app-emulation/virtualbox-ose-additions-${PV} )
@@ -42,6 +43,7 @@ RDEPEND="${RDEPEND}
 	sys-apps/hal"
 
 S=${WORKDIR}/${MY_P/-OSE/}
+MY_LIBDIR="$(get_libdir)"
 
 pkg_setup() {
 	# known problems with gcc 4.3 and the recompiler
@@ -60,16 +62,16 @@ pkg_setup() {
 				eerror "Please re-emerge media-libs/libsdl with USE=\"X\"."
 				die "media-libs/libsdl should be compiled with the \"X\" USE flag."
 			fi
-			if ! use qt3; then
+			if ! use qt4; then
 					einfo ""
-					einfo "No USE=\"qt3\" selected, this build will not include"
+					einfo "No USE=\"qt4\" selected, this build will not include"
 					einfo "any Qt frontend."
 					einfo ""
 			fi
 	else
-			if use qt3; then
+			if use qt4; then
 					einfo ""
-					einfo "You selected USE=\"qt3 headless\", defaulting to"
+					einfo "You selected USE=\"headless qt4\", defaulting to"
 					einfo "USE=\"headless\", this build will not include any X11/Qt frontend."
 					einfo ""
 			fi
@@ -83,25 +85,33 @@ src_unpack() {
 	# Remove shipped binaries (kBuild,yasm), see bug #232775
 	rm -rf kBuild/bin tools
 
-	# Don't build things unused or splitted into separate ebuilds (eg: additions)
-	epatch "${FILESDIR}/${P}-remove-unused.patch"
+	# Disable things unused or splitted into separate ebuilds 
+	cp "${FILESDIR}/${PN}-2-localconfig" LocalConfig.kmk
+
+	# Set the right libdir 
+	sed -i \
+			-e "s/MY_LIBDIR/${MY_LIBDIR}/" LocalConfig.kmk \
+			|| die "LocalConfig.kmk sed failed"
 }
 
 src_compile() {
 
 	local myconf
-	# Don't build vboxdrv kernel module
-	myconf="--disable-kmods --disable-qt4"
+	# Don't build vboxdrv kernel module, disable deprecated qt3 support
+	myconf="--disable-kmods --disable-qt3"
 
 	if ! use pulseaudio; then
 			myconf="${myconf} --disable-pulse"
+	fi
+	if ! use python; then
+			myconf="${myconf} --disable-python"
 	fi
 	if ! use alsa; then
 			myconf="${myconf} --disable-alsa"
 	fi
 	if ! use headless; then
-			if ! use qt3; then
-					myconf="${myconf} --disable-qt"
+			if ! use qt4; then
+					myconf="${myconf} --disable-qt4"
 			fi
 	else
 			myconf="${myconf} --build-headless"
@@ -119,68 +129,89 @@ src_compile() {
 		TOOL_GCC3_AS="$(tc-getCC)" TOOL_GCC3_AR="$(tc-getAR)" \
 		TOOL_GCC3_LD="$(tc-getCXX)" TOOL_GCC3_LD_SYSMOD="$(tc-getLD)" \
 		TOOL_GCC3_CFLAGS="${CFLAGS}" TOOL_GCC3_CXXFLAGS="${CXXFLAGS}" \
-		TOOL_YASM_AS=yasm \
+		TOOL_YASM_AS=yasm KBUILD_PATH="${S}/kBuild" \
 		all || die "kmk failed"
 }
 
 src_install() {
 	cd "${S}"/out/linux.${ARCH}/release/bin
 
-	# create virtualbox configurations files
+	# Create configuration files
 	insinto /etc/vbox
-	newins "${FILESDIR}/${PN}-1-config" vbox.cfg
+	newins "${FILESDIR}/${PN}-2-config" vbox.cfg
 	newins "${FILESDIR}/${PN}-interfaces" interfaces
 
-	insinto /opt/VirtualBox
+	# Set the right libdir
+	sed -i \
+			-e "s/MY_LIBDIR/${MY_LIBDIR}/" \
+			"${D}"/etc/vbox/vbox.cfg || die "vbox.cfg sed failed"
+
+	# Symlink binaries to the shipped wrapper
+	exeinto /usr/${MY_LIBDIR}/${PN}
+	newexe "${FILESDIR}/${PN}-2-wrapper" "VBox" || die
+	fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/VBox
+	fperms 0750 /usr/${MY_LIBDIR}/${PN}/VBox
+	newexe "${S}"/src/VBox/Installer/linux/VBoxAddIF.sh "VBoxAddIF" || die
+	fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/VBoxAddIF
+	fperms 0750 /usr/${MY_LIBDIR}/${PN}/VBoxAddIF
+
+	dosym /usr/${MY_LIBDIR}/${PN}/VBox /usr/bin/VBoxManage
+	dosym /usr/${MY_LIBDIR}/${PN}/VBox /usr/bin/VBoxVRDP
+	dosym /usr/${MY_LIBDIR}/${PN}/VBox /usr/bin/VBoxHeadless
+	dosym /usr/${MY_LIBDIR}/${PN}/VBoxTunctl /usr/bin/VBoxTunctl
+	dosym /usr/${MY_LIBDIR}/${PN}/VBoxAddIF /usr/bin/VBoxAddIF
+	dosym /usr/${MY_LIBDIR}/${PN}/VBoxAddIF /usr/bin/VBoxDeleteIF
+
+	# Install binaries and libraries
+	insinto /usr/${MY_LIBDIR}/${PN}
+	doins -r components
+
 	if use sdk; then
 		doins -r sdk
-		fowners root:vboxusers /opt/VirtualBox/sdk/bin/xpidl
-		fperms 0750 /opt/VirtualBox/sdk/bin/xpidl
 	fi
 
-	rm -rf sdk src tst* testcase xpidl SUPInstall SUPUninstall VBox.png \
-	VBoxBFE vditool VBoxSysInfo.sh vboxkeyboard.tar.gz
+	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl} *so *r0 *gc ; do
+		doins $each
+		fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/${each}
+		fperms 0750 /usr/${MY_LIBDIR}/${PN}/${each}
+	done
 
-	doins -r *
+	if use amd64; then
+		doins VBoxREM2.rel
+		fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/VBoxREM2.rel
+		fperms 0750 /usr/${MY_LIBDIR}/${PN}/VBoxREM2.rel
+	fi
 
 	if ! use headless; then
-			for each in VBox{Manage,SDL,SVC,XPCOMIPCD,Tunctl,Headless} ; do
-				fowners root:vboxusers /opt/VirtualBox/${each}
-				fperms 0750 /opt/VirtualBox/${each}
+			for each in VBox{SDL,Headless} ; do
+				doins $each
+				fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/${each}
+				fperms 4750 /usr/${MY_LIBDIR}/${PN}/${each}
+				pax-mark -m "${D}"/usr/${MY_LIBDIR}/${PN}/${each}
 			done
 
-			if use qt3; then
-				fowners root:vboxusers /opt/VirtualBox/VirtualBox
-				fperms 0750 /opt/VirtualBox/VirtualBox
+			dosym /usr/${MY_LIBDIR}/${PN}/VBox /usr/bin/VBoxSDL
 
-				dosym /opt/VirtualBox/VBox.sh /usr/bin/VirtualBox
+			if use qt4; then
+				doins VirtualBox
+				fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/VirtualBox
+				fperms 4750 /usr/${MY_LIBDIR}/${PN}/VirtualBox
+				pax-mark -m "${D}"/usr/${MY_LIBDIR}/${PN}/VirtualBox
+
+				dosym /usr/${MY_LIBDIR}/${PN}/VBox /usr/bin/VirtualBox
 			fi
-
-			dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxSDL
 
 			newicon	"${S}"/src/VBox/Frontends/VirtualBox/images/OSE/VirtualBox_32px.png ${PN}.png
 			domenu "${FILESDIR}"/${PN}.desktop
 	else
-			for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,Headless} ; do
-				fowners root:vboxusers /opt/VirtualBox/${each}
-				fperms 0750 /opt/VirtualBox/${each}
-			done
+			doins VBoxHeadless
+			fowners root:vboxusers /usr/${MY_LIBDIR}/${PN}/VBoxHeadless
+			fperms 4750 /usr/${MY_LIBDIR}/${PN}/VBoxHeadless
+			pax-mark -m "${D}"/usr/${MY_LIBDIR}/${PN}/VBoxHeadless
 	fi
 
-	exeinto /opt/VirtualBox
-	newexe "${FILESDIR}/${PN}-1-wrapper" "VBox.sh" || die
-	fowners root:vboxusers /opt/VirtualBox/VBox.sh
-	fperms 0750 /opt/VirtualBox/VBox.sh
-	newexe "${S}"/src/VBox/Installer/linux/VBoxAddIF.sh "VBoxAddIF.sh" || die
-	fowners root:vboxusers /opt/VirtualBox/VBoxAddIF.sh
-	fperms 0750 /opt/VirtualBox/VBoxAddIF.sh
-
-	dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxManage
-	dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxVRDP
-	dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxHeadless
-	dosym /opt/VirtualBox/VBoxTunctl /usr/bin/VBoxTunctl
-	dosym /opt/VirtualBox/VBoxAddIF.sh /usr/bin/VBoxAddIF
-	dosym /opt/VirtualBox/VBoxAddIF.sh /usr/bin/VBoxDeleteIF
+	insinto /usr/share/${PN}
+	doins -r nls
 }
 
 pkg_postinst() {

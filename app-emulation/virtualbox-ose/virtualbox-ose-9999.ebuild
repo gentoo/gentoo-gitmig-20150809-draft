@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.3 2008/09/15 19:54:48 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.4 2008/10/27 17:19:20 jokey Exp $
 
 EAPI=1
 
@@ -111,12 +111,12 @@ src_install() {
 
 	# create configuration files
 	insinto /etc/vbox
-	newins "${FILESDIR}/${PN}-2.0.2-config" vbox.cfg
+	newins "${FILESDIR}/${PN}-2-config" vbox.cfg
 	newins "${FILESDIR}/${PN}-interfaces" interfaces
 
 	# symlink binaries to the shipped wrapper
 	exeinto /usr/lib/${PN}
-	newexe "${FILESDIR}/${PN}-2.0.2-wrapper" "VBox" || die
+	newexe "${FILESDIR}/${PN}-2-wrapper" "VBox" || die
 	fowners root:vboxusers /usr/lib/${PN}/VBox
 	fperms 0750 /usr/lib/${PN}/VBox
 	newexe "${S}"/src/VBox/Installer/linux/VBoxAddIF.sh "VBoxAddIF" || die

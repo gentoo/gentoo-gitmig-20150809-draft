@@ -1,6 +1,46 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.6 2008/09/15 19:54:48 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.7 2008/10/27 17:19:20 jokey Exp $
+
+*virtualbox-ose-2.0.4 (27 Oct 2008)
+
+  27 Oct 2008; Markus Ullmann <jokey@gentoo.org>
+  -files/virtualbox-ose-1.6.4-fix-missing-makefiles.patch,
+  -files/virtualbox-ose-1.6.4-remove-unused.patch,
+  +files/virtualbox-ose-1-config, +files/virtualbox-ose-1-wrapper,
+  -files/virtualbox-ose-2.0.2-config,
+  -files/virtualbox-ose-2.0.2-localconfig,
+  -files/virtualbox-ose-2.0.2-wrapper, +files/virtualbox-ose-2-config,
+  +files/virtualbox-ose-2-localconfig, +files/virtualbox-ose-2-wrapper,
+  files/virtualbox-ose.desktop, -files/virtualbox-ose-config,
+  -files/virtualbox-ose-wrapper, -virtualbox-ose-1.6.4.ebuild,
+  virtualbox-ose-1.6.6.ebuild, virtualbox-ose-2.0.2.ebuild,
+  +virtualbox-ose-2.0.4.ebuild, virtualbox-ose-9999.ebuild:
+  (Proxy commit) Version bump
+
+  25 Oct 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  -virtualbox-ose-1.6.4.ebuild,
+  -files/virtualbox-ose-1.6.4-fix-missing-makefiles.patch,
+  -files/virtualbox-ose-1.6.4-remove-unused.patch,
+  virtualbox-ose-1.6.6.ebuild, +files/virtualbox-ose-1-config,
+  +files/virtualbox-ose-1-wrapper, virtualbox-ose-2.0.2.ebuild,
+  -files/virtualbox-ose-2.0.2-config,
+  -files/virtualbox-ose-2.0.2-localconfig,
+  -files/virtualbox-ose-2.0.2-wrapper, +virtualbox-ose-2.0.4.ebuild,
+  +files/virtualbox-ose-2-config, +files/virtualbox-ose-2-localconfig,
+  +files/virtualbox-ose-2-wrapper, virtualbox-ose-9999.ebuild,
+  -files/virtualbox-ose-config, -files/virtualbox-ose-wrapper:
+  Version Bump; drop version 1.6.4; remove xalan-c,xerces from RDEPEND wrt
+  #243818
+
+  22 Oct 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  files/virtualbox-ose.desktop:
+  fix icon in virtualbox-ose.desktop  wrt #242714
+
+  24 Sep 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  virtualbox-ose-2.0.2.ebuild, files/virtualbox-ose-2.0.2-config,
+  files/virtualbox-ose-2.0.2-localconfig:
+  fix libdir for amd64 profiles (explicitly pass libdir to kBuild) wrt #238025
 
 *virtualbox-ose-2.0.2 (15 Sep 2008)
 

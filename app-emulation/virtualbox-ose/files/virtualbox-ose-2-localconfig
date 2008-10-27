@@ -28,7 +28,7 @@ KBUILD_MSG_STYLE        := brief
 ## paths, origin, hardening
 VBOX_WITH_HARDENING        := 1
 VBOX_WITH_ORIGIN           :=
-VBOX_PATH_APP_PRIVATE_ARCH := /usr/lib/virtualbox-ose
+VBOX_PATH_APP_PRIVATE_ARCH := /usr/MY_LIBDIR/virtualbox-ose
 VBOX_PATH_SHARED_LIBS      := $(VBOX_PATH_APP_PRIVATE_ARCH)
 VBOX_WITH_RUNPATH          := $(VBOX_PATH_APP_PRIVATE_ARCH)
 VBOX_PATH_APP_PRIVATE      := /usr/share/virtualbox-ose

@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/virtualbox-ose-additions
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.6 2008/09/15 19:53:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.7 2008/10/27 17:17:55 jokey Exp $
+
+*virtualbox-ose-additions-2.0.4 (27 Oct 2008)
+
+  27 Oct 2008; Markus Ullmann <jokey@gentoo.org>
+  -virtualbox-ose-additions-1.6.4.ebuild,
+  +virtualbox-ose-additions-2.0.4.ebuild:
+  (Proxy commit) Version bump
+
+  25 Oct 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  -virtualbox-ose-additions-1.6.4.ebuild,
+  +virtualbox-ose-additions-2.0.4.ebuild:
+  Version Bump; drop version 1.6.4
 
 *virtualbox-ose-additions-2.0.2 (15 Sep 2008)
 
