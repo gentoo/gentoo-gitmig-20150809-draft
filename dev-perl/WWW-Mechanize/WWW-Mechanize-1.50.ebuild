@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.50.ebuild,v 1.1 2008/10/27 11:34:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.50.ebuild,v 1.2 2008/10/27 13:30:10 fmccor Exp $
 
 MODULE_AUTHOR=PETDANCE
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="Handy web browsing in a Perl object"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="test"
 
 # Bug in the tests - improper use of HTTP::Server
