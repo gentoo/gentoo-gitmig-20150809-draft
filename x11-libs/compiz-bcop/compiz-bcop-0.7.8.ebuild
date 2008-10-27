@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/compiz-bcop-0.7.8.ebuild,v 1.1 2008/10/27 01:07:38 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/compiz-bcop-0.7.8.ebuild,v 1.2 2008/10/27 22:44:30 jmbsvicetto Exp $
 
 DESCRIPTION="Compiz Option code Generator"
 HOMEPAGE="http://compiz-fusion.org"
@@ -18,10 +18,4 @@ DEPEND="${RDEPEND}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-}
-
-pkg_postinst() {
-	ewarn "DO NOT report bugs to Gentoo's bugzilla"
-	einfo "Please report all bugs to #gentoo-desktop-effects"
-	einfo "Thank you on behalf of the Gentoo Desktop-Effects team"
 }

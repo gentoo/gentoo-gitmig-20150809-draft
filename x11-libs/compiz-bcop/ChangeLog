@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/compiz-bcop
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/ChangeLog,v 1.6 2008/10/27 01:07:38 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/ChangeLog,v 1.7 2008/10/27 22:44:30 jmbsvicetto Exp $
+
+  27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compiz-bcop-0.7.8.ebuild:
+  Removed the bug reporting warning that was copied from the desktop-effects
+  overlay by mistake.
 
 *compiz-bcop-0.7.8 (27 Oct 2008)
 
