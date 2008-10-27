@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.106 2008/10/26 11:39:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.107 2008/10/27 04:00:14 vapier Exp $
 
 cd /
 umask 0022 #159111
@@ -255,7 +255,7 @@ uninstall() {
 		rm -f /usr/bin/${CTARGET}-${b} /usr/${CTARGET}/bin/${b}
 	done
 	rm -f /usr/${CTARGET}/{sys-include,usr}
-	rm -f /usr/bin/${CTARGET}-{gcc,{c,g}++,cpp,gfortran}
+	rm -f /usr/bin/${CTARGET}-{gcc,{c,g}++,cpp,gfortran,gcov}
 	rmdir /usr/${CTARGET}/{include/asm,include} &> /dev/null
 	for d in /usr/${CTARGET} /usr/lib/gcc{,-lib}/${CTARGET} ; do
 		if [[ ! -d ${d} ]] ; then
