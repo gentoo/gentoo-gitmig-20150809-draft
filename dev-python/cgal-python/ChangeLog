@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/cgal-python
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgal-python/ChangeLog,v 1.1 2008/10/27 15:31:27 bicatali Exp $
+
+*cgal-python-0.9.3 (27 Oct 2008)
+
+  27 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +cgal-python-0.9.3.ebuild:
+  Initial import
+
