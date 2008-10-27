@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.4.4.ebuild,v 1.6 2006/09/18 08:21:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.4.4.ebuild,v 1.7 2008/10/27 06:57:47 vapier Exp $
 
 CHOST="avr"
 CTARGET="avr"
@@ -16,7 +16,7 @@ SRC_URI="http://savannah.nongnu.org/download/avr-libc/${P}.tar.bz2
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ppc64 x86"
-IUSE="doc nls"
+IUSE="doc nls crosscompile_opts_headers-only"
 
 DEPEND=">=sys-devel/crossdev-0.9.1"
 [[ ${CATEGORY/cross-} != ${CATEGORY} ]] \
