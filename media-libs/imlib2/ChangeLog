@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.81 2008/10/26 23:52:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.82 2008/10/27 20:03:07 ranger Exp $
+
+  27 Oct 2008; Brent Baude <ranger@gentoo.org> imlib2-1.4.2.ebuild:
+  Marking imlib2-1.4.2 ppc64 for bug 243850
 
   26 Oct 2008; Jeroen Roovers <jer@gentoo.org> imlib2-1.4.2.ebuild:
   Stable for HPPA (bug #243850).
