@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.6.0a.ebuild,v 1.1 2008/08/30 18:57:31 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.6.0a.ebuild,v 1.2 2008/10/27 18:42:11 jokey Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -105,4 +105,6 @@ pkg_postinst() {
 	ewarn If you are upgrading please have a look at the Wildfire to Openfire Upgrade Guide:
 	ewarn http://wiki.igniterealtime.org/display/WILDFIRE/Wildfire+to+Openfire+Upgrade+Guide
 	ewarn
+	ewarn Also there is a known issue about IQ Packets and connection drops
+	ewarn see http://www.igniterealtime.org/issues/browse/JM-1465 for details
 }
