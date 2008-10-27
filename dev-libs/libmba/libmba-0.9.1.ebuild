@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/libmba-0.9.1.ebuild,v 1.3 2007/07/12 02:25:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/libmba-0.9.1.ebuild,v 1.4 2008/10/27 17:07:00 jokey Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="A library of generic C modules."
 HOMEPAGE="http://www.ioplex.com/~miallen/libmba/"
@@ -22,7 +24,7 @@ src_unpack() {
 
 src_compile() {
 	# Parallel make fails unless mktool is built first
-	emake -j1 mktool || die "Unable to build mktool"
+	emake CC="$(tc-getCC)" -j1 mktool || die "Unable to build mktool"
 
 	# Makefile uses MFLAGS, not CFLAGS
 	# Additional MFLAGS are from Makefile and are required
