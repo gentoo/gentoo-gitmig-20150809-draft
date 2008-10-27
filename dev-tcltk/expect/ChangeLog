@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.47 2008/10/26 12:38:08 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.48 2008/10/27 05:07:08 mescalinum Exp $
+
+  27 Oct 2008; Federico Ferri <mescalinum@gentoo.org> +files/expect.m4:
+  forgot a file in $FILESDIR
 
 *expect-5.44.1 (26 Oct 2008)
 
