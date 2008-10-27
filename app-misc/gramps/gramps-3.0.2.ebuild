@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.2.ebuild,v 1.1 2008/10/13 22:55:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.2.ebuild,v 1.2 2008/10/27 20:13:01 opfer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -46,6 +46,11 @@ src_unpack() {
 	# file system
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
+}
+
+src_install() {
+	python_need_rebuild
+	gnome2_src_install
 }
 
 pkg_postinst() {
