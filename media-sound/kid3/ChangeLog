@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/kid3
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.30 2008/06/11 20:03:08 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.31 2008/10/27 11:52:42 scarabeus Exp $
+
+*kid3-1.1 (27 Oct 2008)
+
+  27 Oct 2008; Tomas Chvatal (scarabeus) <scarabeus@gentoo.org>
+  +kid3-1.1.ebuild:
+  Add kid3-1.1. Enables kde4/qt4 interface based on installed kde version.
+  Currently preffers kde4 over kde3. If someone wants only nonkde interface
+  for QT4 will not work due to forcing dep in Cmake and for QT3 configure
+  violates sandbox.
 
 *kid3-1.0 (11 Jun 2008)
 
