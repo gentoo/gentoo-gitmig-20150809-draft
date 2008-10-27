@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.19.1.ebuild,v 1.1 2008/10/16 22:49:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.19.1.ebuild,v 1.2 2008/10/27 01:04:07 hawking Exp $
 
 # We don't support the egg.recent bindings that are also provided - they are
 # deprecated, have deps we don't really want and there are no users in-tree.
 G_PY_PN="gnome-python-extras"
 G_PY_BINDINGS="eggtray"
 
-inherit gnome-python-common
+inherit gnome-python-common python
 
 PVP="$(get_version_component_range 1-2)"
 SRC_URI="mirror://gnome/sources/${G_PY_PN}/${PVP}/${G_PY_PN}-${PV}.tar.bz2
@@ -29,4 +29,9 @@ src_unpack() {
 
 	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
 	eautoreconf
+}
+
+src_install() {
+	python_need_rebuild
+	gnome-python-common_src_install
 }
