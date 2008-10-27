@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/spamcup
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/ChangeLog,v 1.7 2008/06/14 19:33:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/ChangeLog,v 1.8 2008/10/27 04:58:35 darkside Exp $
+
+  27 Oct 2008; Jeremy Olexa <darkside@gentoo.org> spamcup-1.09.ebuild:
+  net-mail/spamcup - modify dobin call to actually do something, bug #241192
+  and add ~amd64 kw, bug #241170
 
 *spamcup-1.09 (14 Jun 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/spamcup-1.09.ebuild,v 1.1 2008/06/14 19:33:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/spamcup-1.09.ebuild,v 1.2 2008/10/27 04:58:35 darkside Exp $
 
 DESCRIPTION="This script does the same you would do when you report spam with your browser in Spamcop.net."
 HOMEPAGE="http://sourceforge.net/projects/spamcup/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/spamcup/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.8.0
@@ -17,7 +17,7 @@ DEPEND=">=dev-lang/perl-5.8.0
 
 src_install() {
 	dodir /usr/bin
-	dobin spamcup
+	dobin spamcup.pl || die "dobin failed"
 
-	dodoc ChangeLog INSTALL README
+	dodoc ChangeLog INSTALL
 }
