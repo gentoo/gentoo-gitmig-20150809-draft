@@ -1,14 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.200.ebuild,v 1.1 2008/09/21 05:09:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.202.ebuild,v 1.1 2008/10/27 15:12:47 tove Exp $
+
+MODULE_AUTHOR=TSCH
+MY_PN=Gtk2
+MY_P=${MY_PN}-${PV}
+S=${WORKDIR}/${MY_P}
 
 inherit perl-module
 #inherit virtualx
 
-MY_P=Gtk2-${PV}
-S=${WORKDIR}/${MY_P}
 DESCRIPTION="Perl bindings for GTK2"
-SRC_URI="mirror://cpan/authors/id/T/TS/TSCH/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
