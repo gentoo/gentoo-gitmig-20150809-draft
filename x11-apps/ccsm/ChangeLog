@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/ccsm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ChangeLog,v 1.4 2008/02/24 21:23:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ChangeLog,v 1.5 2008/10/27 01:05:28 jmbsvicetto Exp $
+
+*ccsm-0.7.8 (27 Oct 2008)
+
+  27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, +ccsm-0.7.8.ebuild:
+  Added compiz-0.7.8 to the tree
 
   24 Feb 2008; Gilles Dartiguelongue <eva@gentoo.org> ccsm-0.6.0.ebuild:
   use distutils eclass, fix python eclass use, bug #207667
