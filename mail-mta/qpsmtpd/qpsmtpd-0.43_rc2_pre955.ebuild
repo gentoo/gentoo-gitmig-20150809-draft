@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.43_rc2_pre945.ebuild,v 1.2 2008/10/27 18:51:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.43_rc2_pre955.ebuild,v 1.1 2008/10/27 18:51:55 jokey Exp $
 
 inherit eutils subversion
 REVNO=${PV/0.43_rc2_pre}
