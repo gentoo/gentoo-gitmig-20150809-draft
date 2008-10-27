@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23.ebuild,v 1.9 2008/09/20 17:56:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23.ebuild,v 1.10 2008/10/27 07:53:27 ulm Exp $
 
 inherit distutils elisp
 
@@ -14,8 +14,11 @@ SLOT="0"
 KEYWORDS="amd64 arm ~hppa ia64 ppc ppc64 s390 sh x86 ~x86-fbsd"
 IUSE="doc test"
 
+# additional test? dependency is needed for aeguill.sty (bug 232497)
 DEPEND="doc? ( dev-python/docutils virtual/latex-base )
-	test? ( || ( dev-texlive/texlive-langfrench virtual/tetex ) )"
+	test? ( || ( dev-texlive/texlive-langfrench
+			app-text/tetex
+			app-text/ptex ) )"
 RDEPEND=""
 
 SITEFILE=50${PN}-gentoo.el
