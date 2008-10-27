@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.51 2008/10/05 16:42:02 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.52 2008/10/27 14:00:55 markusle Exp $
+
+  27 Oct 2008; Markus Dittrich <markusle@gentoo.org> vtk-5.2.0-r1.ebuild:
+  Attempt to fix sandbox violations (see bug #244378).
 
 *vtk-5.2.0-r1 (05 Oct 2008)
 

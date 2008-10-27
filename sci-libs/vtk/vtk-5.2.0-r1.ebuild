@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.2.0-r1.ebuild,v 1.1 2008/10/05 16:42:02 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.2.0-r1.ebuild,v 1.2 2008/10/27 14:00:55 markusle Exp $
 
 EAPI="1"
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4
@@ -138,6 +138,7 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_PYTHON:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_INCLUDE_PATH:PATH=/usr/include/python${PYVER}"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_LIBRARY:PATH=/usr/$(get_libdir)/libpython${PYVER}.so"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_PYTHON_SETUP_ARGS:STRING=\"--prefix=${D}/usr\""
 	fi
 
 	if use qt3 || use qt4 ; then
