@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-1.0.2-r1.ebuild,v 1.5 2008/09/01 13:01:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-1.0.2-r1.ebuild,v 1.6 2008/10/27 10:33:45 bicatali Exp $
 
 inherit distutils eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ia64 x86"
 IUSE="doc examples"
 
-RDEPEND=">=dev-lang/R-2.6.1
+RDEPEND="dev-lang/R
 	dev-python/numpy"
 DEPEND="${RDEPEND}
 	doc? ( || ( virtual/texi2dvi ) )"
@@ -23,6 +23,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.0_rc3-version-detect.patch
 	epatch "${FILESDIR}"/${PN}-testfiles.patch
 	epatch "${FILESDIR}"/${P}-rpymodule-R-2.7.patch
+	epatch "${FILESDIR}"/${P}-R28.patch
 	# this module should exist only if R was built with USE=lapack
 	if [[ ! -e /usr/$(get_libdir)/R/lib/libRlapack.so ]]; then
 		sed -i \
