@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.51 2008/10/26 21:54:32 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.52 2008/10/27 00:17:28 hawking Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -90,6 +90,14 @@ python_enable_pyc() {
 }
 
 python_disable_pyc
+
+# @FUNCTION: python_need_rebuild
+# @DESCRIPTION: Run without arguments, specifies that the package should be
+# rebuilt after a python upgrade.
+python_need_rebuild() {
+	python_version
+	export PYTHON_NEED_REBUILD=${PYVER}
+}
 
 # @FUNCTION: python_get_libdir
 # @DESCRIPTION:
