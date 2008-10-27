@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.10 2008/09/25 14:05:25 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.11 2008/10/27 11:51:13 hawking Exp $
+
+  27 Oct 2008; Ali Polatel <hawking@gentoo.org>
+  qscintilla-python-2.1.ebuild, qscintilla-python-2.2.ebuild,
+  qscintilla-python-2.3.ebuild:
+  Use python_need_rebuild.
 
 *qscintilla-python-2.3 (25 Sep 2008)
 

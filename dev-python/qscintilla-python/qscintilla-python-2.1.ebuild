@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.1.ebuild,v 1.7 2008/05/12 15:13:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.1.ebuild,v 1.8 2008/10/27 11:51:13 hawking Exp $
 
 inherit eutils python
 
@@ -58,9 +58,10 @@ src_compile() {
 
 	python_version
 	${python} configure.py ${myconf} || die "configure.py failed"
-	emake || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
+	python_need_rebuild
 	emake DESTDIR="${D}" install || die "emake install failed"
 }
