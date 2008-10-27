@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pure-sfv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.11 2008/10/23 02:43:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.12 2008/10/27 18:17:08 flameeyes Exp $
+
+  27 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> pure-sfv-0.3.ebuild:
+  Fix typo.
 
   23 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> pure-sfv-0.3.ebuild:
   Respect CC.
