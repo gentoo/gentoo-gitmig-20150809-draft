@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.2.1.ebuild,v 1.2 2008/10/22 15:17:16 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.2.1.ebuild,v 1.3 2008/10/28 17:19:35 remi Exp $
 
 SNAPSHOT="yes"
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 			>=x11-libs/libdrm-2.2
 			x11-libs/libX11 )"
 
-PATCHES=("${FILESDIR}/${PV}0001-fixup-pciaccess-version-detect.patch")
+PATCHES=("${FILESDIR}/${PV}-0001-fixup-pciaccess-version-detect.patch")
 CONFIGURE_OPTIONS="$(use_enable dri)"
 
 pkg_setup() {
