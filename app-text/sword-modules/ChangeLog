@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sword-modules
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.26 2008/08/02 07:28:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.27 2008/10/28 19:49:56 beandog Exp $
+
+*sword-modules-1 (28 Oct 2008)
+
+  28 Oct 2008; Steve Dibb <beandog@gentoo.org> +sword-modules-1.ebuild,
+  -sword-modules-20041209.ebuild:
+  New virtual for all sword modules
 
   02 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
