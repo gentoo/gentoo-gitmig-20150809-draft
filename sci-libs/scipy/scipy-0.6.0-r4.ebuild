@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.7 2008/09/28 21:39:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.8 2008/10/28 12:51:14 bicatali Exp $
 
 EAPI=1
 NEED_PYTHON=2.3
@@ -18,6 +18,7 @@ IUSE="fftw umfpack sandbox"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 CDEPEND="dev-python/numpy
+	virtual/cblas
 	virtual/lapack
 	fftw? ( sci-libs/fftw:2.1 )
 	umfpack? ( sci-libs/umfpack )
