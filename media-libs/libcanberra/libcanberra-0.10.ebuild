@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.10.ebuild,v 1.1 2008/10/13 20:11:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.10.ebuild,v 1.2 2008/10/28 02:07:34 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -68,4 +68,3 @@ pkg_postinst() {
 #pkg_prerm() {
 #	gnome2_gconf_uninstall
 #}
-
