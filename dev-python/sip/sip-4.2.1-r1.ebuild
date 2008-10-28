@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.2.1-r1.ebuild,v 1.6 2008/09/06 23:43:35 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.2.1-r1.ebuild,v 1.7 2008/10/28 11:56:18 hawking Exp $
 
 inherit distutils
 
@@ -40,6 +40,7 @@ src_compile(){
 }
 
 src_install() {
+	python_need_rebuild
 	make DESTDIR="${D}" install || die "install failed"
 	dodoc ChangeLog NEWS README THANKS TODO
 	if use doc ; then dohtml doc/* ; fi

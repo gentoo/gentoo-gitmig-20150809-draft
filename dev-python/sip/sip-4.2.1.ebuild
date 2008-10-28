@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.2.1.ebuild,v 1.14 2008/09/06 23:43:35 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.2.1.ebuild,v 1.15 2008/10/28 11:56:18 hawking Exp $
 
-inherit distutils
+inherit python multilib
 
 MY_P=${P/"?.?.?_pre"/"snapshot-"}
 MY_P=${MY_P/_/}
@@ -24,7 +24,7 @@ DEPEND="virtual/libc
 	>=dev-lang/python-2.3"
 
 src_compile(){
-	distutils_python_version
+	python_version
 
 	local myconf="-l qt-mt -b /usr/bin -d /usr/$(get_libdir)/python${PYVER}/site-packages -e /usr/include/python${PYVER}"
 	use debug && myconf="${myconf} -u"
@@ -34,6 +34,7 @@ src_compile(){
 }
 
 src_install() {
+	python_need_rebuild
 	make DESTDIR="${D}" install || die "install failed"
 	dodoc ChangeLog NEWS README THANKS TODO
 	if use doc ; then dohtml doc/* ; fi
