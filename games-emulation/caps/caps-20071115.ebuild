@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20071115.ebuild,v 1.2 2008/10/28 05:50:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20071115.ebuild,v 1.3 2008/10/28 16:56:07 tupone Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="Support library that allows third party applications access and use C.A.P.S. images"
 HOMEPAGE="http://www.softpres.org/"
 SRC_URI="mirror://gentoo/ipfdevlib_linux-20060612.tgz
-	amd64? ( ipflib_linux-amd64-${PV}.tgz )
+	amd64? ( mirror://gentoo/ipflib_linux-amd64-${PV}.tgz )
 	doc? ( mirror://gentoo/ipfdoc102a.zip )
 	mirror://gentoo/config_uae_ocs13_512c-512s.zip"
 

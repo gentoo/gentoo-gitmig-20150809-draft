@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/caps
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/ChangeLog,v 1.15 2008/10/28 05:50:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/ChangeLog,v 1.16 2008/10/28 16:56:07 tupone Exp $
+
+  28 Oct 2008; Tupone Alfredo <tupone@gentoo.org> caps-20071115.ebuild:
+  Fix the URI for amd64 specific tgz.
 
   28 Oct 2008; Tupone Alfredo <tupone@gentoo.org> caps-20071115.ebuild:
   Upstream added only amd64 library. Reverting binary of x86 and ppc.
