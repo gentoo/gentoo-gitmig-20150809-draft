@@ -1,10 +1,13 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.158 2008/10/28 18:27:55 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.159 2008/10/28 22:31:29 flameeyes Exp $
 
   28 Oct 2008; Steve Dibb <beandog@gentoo.org> 2007.0/package.use.mask,
   package.use.mask:
   Mask realplayer support for security issues, bug 232999, 240341, etc.
+
+  28 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> package.use.mask:
+  Add gnutls to wine's masked USE flags.
 
   07 Oct 2008; Steve Dibb <beandog@gentoo.org> package.use.mask:
   Unmask dxr3 use flag for media-video/mplayer

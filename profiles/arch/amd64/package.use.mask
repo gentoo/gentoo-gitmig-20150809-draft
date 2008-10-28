@@ -111,7 +111,9 @@ media-video/cinelerra-cvs mmx 3dnow
 # 31 Dec 2007: Peter Weller <welp@gentoo.org>
 # Mask dbus, hal, nas and scanner USE flags;
 # Bug 203680
-app-emulation/wine dbus hal nas scanner
+# 28 Oct 2008: Diego Pettenò <flameeyes@gentoo.org>
+# Mask GnuTLS (not available as 32-bit library)
+app-emulation/wine dbus hal nas scanner gnutls
 
 # missing the necessary linux-headers dep
 >=net-fs/netatalk-2.0.3-r3 xfs
