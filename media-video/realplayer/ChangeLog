@@ -1,6 +1,14 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.73 2008/08/15 18:13:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.74 2008/10/28 19:07:55 beandog Exp $
+
+*realplayer-11.0.1.1056 (28 Oct 2008)
+
+  28 Oct 2008; Steve Dibb <beandog@gentoo.org> -files/10realplayer,
+  +files/realplayer-desktop.patch, -realplayer-11.0.0.4028-r1.ebuild,
+  +realplayer-11.0.1.1056.ebuild:
+  Version bump / manifest fix / evil straight to stable bump because of
+  upstream (hopefully last time), bug 239338; fix desktop entry, bug 236257
 
   15 Aug 2008; Markus Meier <maekke@gentoo.org>
   realplayer-11.0.0.4028-r1.ebuild:

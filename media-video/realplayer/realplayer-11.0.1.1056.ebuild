@@ -1,9 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.0.4028-r1.ebuild,v 1.5 2008/08/15 18:13:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.1.1056.ebuild,v 1.1 2008/10/28 19:07:55 beandog Exp $
 
 inherit nsplugins eutils rpm
 
+EAPI=2
 MY_PN="RealPlayer"
 DESCRIPTION="Real Media Player"
 HOMEPAGE="http://www.real.com/ http://player.helixcommunity.org/"
@@ -66,7 +67,8 @@ pkg_setup() {
 src_unpack() {
 	rpm_src_unpack
 
-	dosed -i -e 's:realplay.png:realplay:' "${S}"/share/realplay.desktop
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-desktop.patch
 }
 
 src_install() {
