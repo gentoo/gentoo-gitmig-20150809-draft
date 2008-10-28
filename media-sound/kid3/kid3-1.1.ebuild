@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.1.ebuild,v 1.1 2008/10/27 11:52:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.1.ebuild,v 1.2 2008/10/28 12:32:08 scarabeus Exp $
 
 EAPI="2"
 
-inherit eutils cmake-utils
+inherit eutils cmake-utils kde-functions
 
 DESCRIPTION="A simple ID3 tag editor for QT/KDE."
 HOMEPAGE="http://kid3.sourceforge.net/"
@@ -49,12 +49,16 @@ src_configure() {
 		# we shall use kde3
 		# Compile fails without taglib, forced on.
 		# Ditto for vorbis, so there you go.
+		set-qtdir 3
+		set-kdedir 3
 		econf \
 			--with-kde \
 			--with-taglib \
 			--without-arts \
 			--with-vorbis \
-			$(use_with flac)
-			$(use_with musicbrainz)
+			$(use_with flac) \
+			$(use_with musicbrainz) \
+			--with-extra-includes=/usr/kde/3.5/include/
+		# there is noone having version older than 3.5 so this is no problem
 	fi
 }
