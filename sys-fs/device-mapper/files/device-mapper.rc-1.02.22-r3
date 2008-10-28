@@ -1,10 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/files/device-mapper.rc-1.02.22-r3,v 1.6 2008/10/26 02:55:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/files/device-mapper.rc-1.02.22-r3,v 1.7 2008/10/28 16:27:40 cardoe Exp $
 
 depend() {
-	if [ -e /etc/init.d/root ] ; then
+	if [ ! -e /etc/init.d/root ] ; then
 		# on baselayout-1 this causes
 		# a dependency loop with checkroot (before *)
 		after modules
@@ -13,7 +13,7 @@ depend() {
 }
 
 start() {
-	if [ -e /etc/init.d/root ] ; then
+	if [ ! -e /etc/init.d/root ] ; then
 		eerror "The ${SVCNAME} init script is written for baselayout-2"
 		eerror "Please do not use it with baselayout-1"
 		return 1
