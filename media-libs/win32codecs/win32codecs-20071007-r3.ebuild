@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20071007-r3.ebuild,v 1.1 2008/10/28 17:49:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20071007-r3.ebuild,v 1.2 2008/10/28 18:34:31 beandog Exp $
 
 inherit multilib
 
@@ -11,12 +11,8 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 IUSE=""
-
 S="${WORKDIR}/all-${PV}"
-
-RESTRICT="strip"
-
-QA_TEXTRELS="usr/$(get_libdir)/win32/vid_*.xa"
+RESTRICT="strip binchecks"
 
 pkg_setup() {
 	# This is a binary x86 package => ABI=x86
@@ -26,8 +22,6 @@ pkg_setup() {
 }
 
 src_install() {
-	cd "${S}"
-
 	# see #83221
 	insopts -m0644
 	dodir /usr/$(get_libdir)/win32
