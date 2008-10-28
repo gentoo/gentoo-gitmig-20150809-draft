@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/wmxkb-1.2.2.ebuild,v 1.6 2007/07/22 04:16:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/wmxkb-1.2.2.ebuild,v 1.7 2008/10/28 11:42:44 s4t4n Exp $
 
 IUSE=""
 
@@ -22,8 +22,12 @@ DEPEND="${RDEPEND}
 	x11-proto/inputproto"
 
 src_install () {
-	make DESTDIR=${D} BINDIR=${D}/usr/bin DOCDIR=${D}/usr/share/doc DATADIR=${D}/usr/share install
+	make DESTDIR="${D}" BINDIR="${D}/usr/bin" DOCDIR="${D}/usr/share/doc" DATADIR="${D}/usr/share" install
+
+	#install binary by hand per bug #242188
+	dobin wmxkb
+
 	dodoc README
-	cd ${WORKDIR}/${P}/doc
+	cd "${WORKDIR}/${P}/doc"
 	dodoc manual_body.html manual_title.html manual.book
 }

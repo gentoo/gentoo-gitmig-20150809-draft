@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmxkb
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/ChangeLog,v 1.9 2007/07/22 04:16:09 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/ChangeLog,v 1.10 2008/10/28 11:42:44 s4t4n Exp $
+
+  28 Oct 2008; Michele Noberasco <s4t4n@gentoo.org>; wmxkb-1.2.2.ebuild:
+  Trivial fix for bug #242188, plus minor QA fixes.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmxkb-1.2.2.ebuild:
   Drop virtual/x11 references.
