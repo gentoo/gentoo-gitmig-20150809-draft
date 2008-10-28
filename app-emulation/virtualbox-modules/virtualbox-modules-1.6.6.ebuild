@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.6.6.ebuild,v 1.2 2008/09/15 19:52:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-1.6.6.ebuild,v 1.3 2008/10/28 18:09:25 jokey Exp $
 
 inherit eutils linux-mod
 
@@ -11,7 +11,7 @@ SRC_URI="http://gentoo.zerodev.it/files/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="!=app-emulation/virtualbox-ose-9999"
