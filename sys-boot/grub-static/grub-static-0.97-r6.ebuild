@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.97-r6.ebuild,v 1.1 2008/10/27 10:50:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/grub-static-0.97-r6.ebuild,v 1.2 2008/10/28 02:12:37 mr_bones_ Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -29,7 +29,7 @@ src_install() {
 #
 # Below this point, everything is also used in grub-static!
 # Please keep in sync!
-# 
+#
 
 setup_boot_dir() {
 	local boot_dir=$1
