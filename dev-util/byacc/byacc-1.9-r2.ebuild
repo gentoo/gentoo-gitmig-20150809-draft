@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9-r2.ebuild,v 1.7 2008/10/27 20:05:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/byacc-1.9-r2.ebuild,v 1.8 2008/10/28 02:05:57 mr_bones_ Exp $
 
 inherit eutils
 
@@ -12,7 +12,6 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 ~s390 sparc x86"
 IUSE=""
-
 
 src_unpack() {
 	unpack ${A}
