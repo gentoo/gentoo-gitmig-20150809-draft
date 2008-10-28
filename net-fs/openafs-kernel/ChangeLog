@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.110 2008/10/27 14:04:02 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.111 2008/10/28 16:28:08 stefaan Exp $
+
+  28 Oct 2008; Stefaan De Roeck <stefaan@gentoo.org>
+  -openafs-kernel-1.4.7_pre2-r1.ebuild, -openafs-kernel-1.4.7_pre3.ebuild,
+  -openafs-kernel-1.4.8_pre2.ebuild:
+  Remove some obsolete ebuilds
 
 *openafs-kernel-1.4.8_pre3 (27 Oct 2008)
 
