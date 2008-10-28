@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.3.ebuild,v 1.1 2008/09/07 16:44:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.3.ebuild,v 1.2 2008/10/28 23:43:12 matsuu Exp $
 
 EAPI=1
 inherit eutils qt3 multilib elisp-common flag-o-matic
@@ -118,7 +118,7 @@ src_compile() {
 		$(use_with qt4 qt4-immodule) \
 		$(use_with truetype xft) \
 		${myconf} || die "econf failed"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 
 	if use emacs; then
 		cd emacs

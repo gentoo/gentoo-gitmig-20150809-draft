@@ -1,14 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.2-r1.ebuild,v 1.2 2008/09/06 04:55:34 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.4.ebuild,v 1.1 2008/10/28 23:43:12 matsuu Exp $
 
-EAPI=1
+EAPI=2
 inherit eutils qt3 multilib elisp-common flag-o-matic
 
-MY_P="${P/_/-}"
 DESCRIPTION="Simple, secure and flexible input method library"
 HOMEPAGE="http://code.google.com/p/uim/"
-SRC_URI="http://uim.googlecode.com/files/${MY_P}.tar.bz2"
+SRC_URI="http://uim.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
@@ -23,7 +22,7 @@ RDEPEND="X? ( x11-libs/libX11
 		x11-libs/libSM
 		x11-libs/libXext
 		x11-libs/libXrender )
-	anthy? ( || ( app-i18n/anthy app-i18n/anthy-ss ) )
+	anthy? ( unicode? ( >=app-i18n/anthy-8622 ) !unicode? ( app-i18n/anthy ) )
 	canna? ( app-i18n/canna )
 	eb? ( dev-libs/eb )
 	emacs? ( virtual/emacs )
@@ -35,7 +34,7 @@ RDEPEND="X? ( x11-libs/libX11
 	ncurses? ( sys-libs/ncurses )
 	nls? ( virtual/libintl )
 	prime? ( app-i18n/prime )
-	qt3? ( x11-libs/qt:3 )
+	qt3? ( || ( x11-libs/qt:3[immqt-bc] x11-libs/qt:3[immqt] ) )
 	qt4? ( || ( x11-libs/qt-core:4 =x11-libs/qt-4.3*:4 ) )
 	!app-i18n/uim-svn
 	!<app-i18n/prime-0.9.4"
@@ -54,17 +53,9 @@ RDEPEND="${RDEPEND}
 	)"
 #		linguas_zh_TW? ( media-fonts/taipeifonts )
 
-S="${WORKDIR}/${MY_P}"
-
 SITEFILE=50${PN}-gentoo.el
 
 pkg_setup() {
-	if use qt3 && ! built_with_use =x11-libs/qt-3* immqt-bc && ! built_with_use =x11-libs/qt-3* immqt; then
-		eerror "To support qt3 in this package is required to have"
-		eerror "=x11-libs/qt-3* compiled with immqt-bc(recommended) or immqt USE flag."
-		die "Please reemerge =x11-libs/qt-3* with USE=\"immqt-bc\" or USE=\"immqt\"."
-
-	fi
 	# An arch specific config directory is used on multilib systems
 	has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
 	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
@@ -121,7 +112,7 @@ src_compile() {
 		$(use_with qt4 qt4-immodule) \
 		$(use_with truetype xft) \
 		${myconf} || die "econf failed"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 
 	if use emacs; then
 		cd emacs
