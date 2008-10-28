@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r4.ebuild,v 1.8 2008/05/19 20:23:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8-r4.ebuild,v 1.9 2008/10/28 23:50:09 yngwin Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -47,7 +47,7 @@ DEPEND="${RDEPEND}
 	immqt-bc? ( x11-proto/xineramaproto )"
 PDEPEND="odbc? ( ~dev-db/qt-unixODBC-$PV )"
 
-S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
+S="${WORKDIR}/qt-x11-${SRCTYPE}-${PV}"
 
 QTBASE=/usr/qt/3
 
@@ -66,7 +66,7 @@ pkg_setup() {
 		ewarn
 	fi
 
-	export QTDIR=${S}
+	export QTDIR="${S}"
 
 	CXX=$(tc-getCXX)
 	if [[ ${CXX/g++/} != ${CXX} ]]; then
@@ -99,45 +99,48 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i -e 's:read acceptance:acceptance=yes:' configure
 
 	# Do not link with -rpath. See bug #75181.
-	find ${S}/mkspecs -name qmake.conf | xargs \
+	find "${S}"/mkspecs -name qmake.conf | xargs \
 		sed -i -e 's:QMAKE_RPATH.*:QMAKE_RPATH =:'
 
 	# Patch for uic includehint errors (aseigo patch)
-	epatch ${FILESDIR}/${P}-uic-fix.patch
+	epatch "${FILESDIR}"/${P}-uic-fix.patch
 
 	# Patch for mysql unload crash (Bug #171883)
-	epatch ${FILESDIR}/${P}-mysql-unload-crash.diff
+	epatch "${FILESDIR}"/${P}-mysql-unload-crash.diff
 
 	# KDE related patches
-	epatch ${FILESDIR}/0001-dnd_optimization.patch
-	epatch ${FILESDIR}/0002-dnd_active_window_fix.patch
-	epatch ${FILESDIR}/0038-dragobject-dont-prefer-unknown.patch
-	epatch ${FILESDIR}/0044-qscrollview-windowactivate-fix.diff
-	epatch ${FILESDIR}/0047-fix-kmenu-widget.diff
-	epatch ${FILESDIR}/0048-qclipboard_hack_80072.patch
+	epatch "${FILESDIR}"/0001-dnd_optimization.patch
+	epatch "${FILESDIR}"/0002-dnd_active_window_fix.patch
+	epatch "${FILESDIR}"/0038-dragobject-dont-prefer-unknown.patch
+	epatch "${FILESDIR}"/0044-qscrollview-windowactivate-fix.diff
+	epatch "${FILESDIR}"/0047-fix-kmenu-widget.diff
+	epatch "${FILESDIR}"/0048-qclipboard_hack_80072.patch
 
 	# possible rce, CVE-2007-3388
-	epatch ${FILESDIR}/0081-format-string-fixes.diff
+	epatch "${FILESDIR}"/0081-format-string-fixes.diff
 
 	# Bug #192472
-	epatch ${FILESDIR}/${P}-unicode-off-by-one.patch
+	epatch "${FILESDIR}"/${P}-unicode-off-by-one.patch
 
 	# ulibc patch (bug #100246)
-	epatch ${FILESDIR}/qt-ulibc.patch
+	epatch "${FILESDIR}"/qt-ulibc.patch
 
 	# xinerama patch: http://ktown.kde.org/~seli/xinerama/
-	epatch "${FILESDIR}/${P}-seli-xinerama.patch"
+	epatch "${FILESDIR}"/${P}-seli-xinerama.patch
 
-	epatch ${FILESDIR}/utf8-bug-qt3.diff
+	epatch "${FILESDIR}"/utf8-bug-qt3.diff
 
 	# Visibility patch, apply only on GCC 4.1 and later for safety
 	# [[ $(gcc-major-version)$(gcc-minor-version) -ge 41 ]] && \
-		epatch "${FILESDIR}/${P}-visibility.patch"
+	epatch "${FILESDIR}"/${P}-visibility.patch
+
+	# Fix configure to correctly pick up gcc version, bug 244732
+	epatch "${FILESDIR}"/${P}-fix-compiler-detection.patch
 
 	if use immqt || use immqt-bc ; then
 		epatch ../${IMMQT_P}.diff
@@ -168,16 +171,16 @@ src_unpack() {
 		   -e "s:\<QMAKE_CXX\>.*=.*:QMAKE_CXX=$(tc-getCXX):" \
 		   -e "s:\<QMAKE_LINK\>.*=.*:QMAKE_LINK=$(tc-getCXX):" \
 		   -e "s:\<QMAKE_LINK_SHLIB\>.*=.*:QMAKE_LINK_SHLIB=$(tc-getCXX):" \
-		${S}/mkspecs/${PLATFORM}/qmake.conf || die
+		"${S}"/mkspecs/${PLATFORM}/qmake.conf || die
 
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e "s:/lib$:/$(get_libdir):" \
-			${S}/mkspecs/${PLATFORM}/qmake.conf || die
+			"${S}"/mkspecs/${PLATFORM}/qmake.conf || die
 	fi
 }
 
 src_compile() {
-	export SYSCONF=${D}${QTBASE}/etc/settings
+	export SYSCONF="${D}${QTBASE}/etc/settings"
 
 	# Let's just allow writing to these directories during Qt emerge
 	# as it makes Qt much happier.
@@ -234,12 +237,12 @@ src_compile() {
 	fi
 
 	# Make the msg2qm utility (not made by default)
-	cd ${S}/tools/msg2qm
+	cd "${S}"/tools/msg2qm
 	../../bin/qmake
 	emake
 
 	# Make the qembed utility (not made by default)
-	cd ${S}/tools/qembed
+	cd "${S}"/tools/qembed
 	../../bin/qmake
 	emake
 
@@ -247,7 +250,7 @@ src_compile() {
 
 src_install() {
 	# binaries
-	into ${QTBASE}
+	into "${QTBASE}"
 	dobin bin/*
 	dobin tools/msg2qm/msg2qm
 	dobin tools/qembed/qembed
@@ -255,10 +258,10 @@ src_install() {
 	# libraries
 	if use ppc-macos; then
 		# dolib is broken on BSD because of missing readlink(1)
-		dodir ${QTBASE}/$(get_libdir)
-		cp -fR lib/*.{dylib,la,a} ${D}/${QTBASE}/$(get_libdir) || die
+		dodir "${QTBASE}"/$(get_libdir)
+		cp -fR lib/*.{dylib,la,a} "${D}/${QTBASE}"/$(get_libdir) || die
 
-		cd ${D}/${QTBASE}/$(get_libdir)
+		cd "${D}/${QTBASE}"/$(get_libdir)
 		for lib in libqt-mt* ; do
 			ln -s ${lib} ${lib/-mt/}
 		done
@@ -266,7 +269,7 @@ src_install() {
 		dolib.so lib/lib{editor,qassistantclient,designercore}.a
 		dolib.so lib/libqt-mt.la
 		dolib.so lib/libqt-mt.so.${PV} lib/libqui.so.1.0.0
-		cd ${D}/${QTBASE}/$(get_libdir)
+		cd "${D}/${QTBASE}"/$(get_libdir)
 
 		for x in libqui.so ; do
 			ln -s $x.1.0.0 $x.1.0
@@ -287,10 +290,10 @@ src_install() {
 	fi
 
 	# plugins
-	cd ${S}
+	cd "${S}"
 	local plugins=$(find plugins -name "lib*.so" -print)
 	for x in ${plugins}; do
-		exeinto ${QTBASE}/$(dirname ${x})
+		exeinto "${QTBASE}"/$(dirname ${x})
 		doexe ${x}
 	done
 
@@ -298,19 +301,19 @@ src_install() {
 	is_final_abi || return 0
 
 	# includes
-	cd ${S}
-	dodir ${QTBASE}/include/private
-	cp include/* ${D}/${QTBASE}/include/
-	cp include/private/* ${D}/${QTBASE}/include/private/
+	cd "${S}"
+	dodir "${QTBASE}"/include/private
+	cp include/* "${D}/${QTBASE}"/include/
+	cp include/private/* "${D}/${QTBASE}"/include/private/
 
 	# prl files
-	sed -i -e "s:${S}:${QTBASE}:g" ${S}/lib/*.prl
-	insinto ${QTBASE}/$(get_libdir)
-	doins ${S}/lib/*.prl
+	sed -i -e "s:${S}:${QTBASE}:g" "${S}"/lib/*.prl
+	insinto "${QTBASE}"/$(get_libdir)
+	doins "${S}"/lib/*.prl
 
 	# pkg-config file
-	insinto ${QTBASE}/$(get_libdir)/pkgconfig
-	doins ${S}/lib/*.pc
+	insinto "${QTBASE}"/$(get_libdir)/pkgconfig
+	doins "${S}"/lib/*.pc
 
 	# List all the multilib libdirs
 	local libdirs
@@ -320,7 +323,7 @@ src_install() {
 
 	# environment variables
 	if use ppc-macos; then
-		cat <<EOF > ${T}/45qt3
+		cat <<EOF > "${T}"/45qt3
 PATH=${QTBASE}/bin
 ROOTPATH=${QTBASE}/bin
 DYLD_LIBRARY_PATH=${libdirs:1}
@@ -329,7 +332,7 @@ MANPATH=${QTBASE}/doc/man
 PKG_CONFIG_PATH=${QTBASE}/$(get_libdir)/pkgconfig
 EOF
 	else
-		cat <<EOF > ${T}/45qt3
+		cat <<EOF > "${T}"/45qt3
 PATH=${QTBASE}/bin
 ROOTPATH=${QTBASE}/bin
 LDPATH=${libdirs:1}
@@ -338,54 +341,54 @@ MANPATH=${QTBASE}/doc/man
 PKG_CONFIG_PATH=${QTBASE}/$(get_libdir)/pkgconfig
 EOF
 	fi
-	cat <<EOF > ${T}/50qtdir3
+	cat <<EOF > "${T}"/50qtdir3
 QTDIR=${QTBASE}
 EOF
 
-	cat <<EOF > ${T}/50-qt3-revdep
+	cat <<EOF > "${T}"/50-qt3-revdep
 SEARCH_DIRS="${QTBASE}"
 EOF
 
 	insinto /etc/revdep-rebuild
-	doins ${T}/50-qt3-revdep
+	doins "${T}"/50-qt3-revdep
 
-	doenvd ${T}/45qt3 ${T}/50qtdir3
+	doenvd "${T}"/45qt3 "${T}"/50qtdir3
 
 	if [ "${SYMLINK_LIB}" = "yes" ]; then
-		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) ${QTBASE}/lib
+		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) "${QTBASE}"/lib
 	fi
 
-	insinto ${QTBASE}/tools/designer
+	insinto "${QTBASE}"/tools/designer
 	doins -r tools/designer/templates
 
-	insinto ${QTBASE}
+	insinto "${QTBASE}"
 	doins -r translations
 
-	keepdir ${QTBASE}/etc/settings
+	keepdir "${QTBASE}"/etc/settings
 
 	if use doc; then
-		insinto ${QTBASE}
-		doins -r ${S}/doc
+		insinto "${QTBASE}"
+		doins -r "${S}"/doc
 	fi
 
 	if use examples; then
-		find ${S}/examples ${S}/tutorial -name Makefile | \
+		find "${S}"/examples "${S}"/tutorial -name Makefile | \
 			xargs sed -i -e "s:${S}:${QTBASE}:g"
 
-		cp -r ${S}/examples ${D}${QTBASE}/
-		cp -r ${S}/tutorial ${D}${QTBASE}/
+		cp -r "${S}"/examples "${D}${QTBASE}"/
+		cp -r "${S}"/tutorial "${D}${QTBASE}"/
 	fi
 
 	# misc build reqs
-	insinto ${QTBASE}/mkspecs
-	doins -r ${S}/mkspecs/${PLATFORM}
+	insinto "${QTBASE}"/mkspecs
+	doins -r "${S}/mkspecs/${PLATFORM}"
 
 	sed -e "s:${S}:${QTBASE}:g" \
-		${S}/.qmake.cache > ${D}${QTBASE}/.qmake.cache
+		"${S}"/.qmake.cache > "${D}${QTBASE}"/.qmake.cache
 
 	dodoc FAQ README README-QT.TXT changes*
 	if use immqt || use immqt-bc ; then
-		dodoc ${S}/README.immodule
+		dodoc "${S}"/README.immodule
 	fi
 }
 

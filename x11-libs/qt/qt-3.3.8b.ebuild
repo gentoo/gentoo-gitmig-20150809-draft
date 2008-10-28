@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8b.ebuild,v 1.1 2008/07/26 21:01:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8b.ebuild,v 1.2 2008/10/28 23:50:09 yngwin Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -130,6 +130,12 @@ src_unpack() {
 	# [[ $(gcc-major-version)$(gcc-minor-version) -ge 41 ]] && \
 		epatch "${FILESDIR}"/qt-3.3.8-visibility.patch
 
+	# Fix configure to correctly pick up gcc version, bug 244732
+	epatch "${FILESDIR}"/qt-3.3.8-fix-compiler-detection.patch
+
+	# Fix CJK script rendering, bug 229567
+	epatch "${FILESDIR}"/qt-3.3.8b-cjk-fix.patch
+
 	if use immqt || use immqt-bc ; then
 		epatch ../${IMMQT_P}.diff
 		sh make-symlinks.sh || die "make symlinks failed"
@@ -165,10 +171,14 @@ src_unpack() {
 		sed -i -e "s:/lib$:/${libdir}:" \
 			"${S}"/mkspecs/${PLATFORM}/qmake.conf || die
 	fi
+
+	sed -i -e "s:CXXFLAGS.*=:CXXFLAGS=${CXXFLAGS} :" \
+		   -e "s:LFLAGS.*=:LFLAGS=${LDFLAGS} :" \
+		"${S}"/qmake/Makefile.unix || die
 }
 
 src_compile() {
-	export SYSCONF="${D}"${QTBASE}/etc/settings
+	export SYSCONF="${D}${QTBASE}"/etc/settings
 
 	# Let's just allow writing to these directories during Qt emerge
 	# as it makes Qt much happier.
