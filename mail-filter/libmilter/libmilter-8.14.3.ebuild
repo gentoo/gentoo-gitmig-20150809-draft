@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-8.14.3.ebuild,v 1.5 2008/10/16 20:17:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-8.14.3.ebuild,v 1.6 2008/10/28 01:37:42 ranger Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.sendmail.org/pub/sendmail/sendmail.${PV}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc64 ~sparc x86"
 IUSE="ipv6 poll"
 
 DEPEND="!mail-mta/sendmail"
