@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.45 2008/05/29 17:15:05 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.46 2008/10/28 06:58:25 aballier Exp $
+
+*exaile-0.2.14 (28 Oct 2008)
+
+  28 Oct 2008; Alexis Ballier <aballier@gentoo.org> +exaile-0.2.14.ebuild:
+  version bump by Andrea Pinazzi <follettoonip@gmail.com>, bug #240738, and
+  convert to EAPI-2 for usedeps
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> exaile-0.2.13.ebuild:
   python_mod_optimize is ROOT aware.
