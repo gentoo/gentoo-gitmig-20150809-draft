@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/pspp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.7 2008/08/06 20:47:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.8 2008/10/28 13:36:24 markusle Exp $
+
+  28 Oct 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/pspp-0.6.0-as-needed.patch, pspp-0.6.0.ebuild:
+  Fixed as-needed issues (see bug #244547).
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
