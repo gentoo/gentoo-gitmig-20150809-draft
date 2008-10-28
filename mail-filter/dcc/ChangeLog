@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dcc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.54 2008/10/09 09:43:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.55 2008/10/28 01:38:18 ranger Exp $
+
+  28 Oct 2008; Brent Baude <ranger@gentoo.org> dcc-1.3.97.ebuild:
+  Marking dcc-1.3.97 ~ppc64 for bug 239121
 
   09 Oct 2008; Raúl Porcel <armin76@gentoo.org> dcc-1.3.97.ebuild:
   Re-add ~alpha/~ia64 wrt #239121
