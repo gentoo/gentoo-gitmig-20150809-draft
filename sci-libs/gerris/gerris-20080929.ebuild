@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-20080929.ebuild,v 1.1 2008/10/04 10:35:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/gerris-20080929.ebuild,v 1.2 2008/10/28 02:11:14 mr_bones_ Exp $
 
 inherit autotools
 
@@ -24,14 +24,12 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}"/${PN}-snapshot-080929
 
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	eautoreconf
 }
-
 
 src_compile() {
 	econf $(use_enable mpi ) \

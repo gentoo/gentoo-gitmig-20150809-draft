@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20081607.ebuild,v 1.1 2008/10/04 10:33:09 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/gts-20081607.ebuild,v 1.2 2008/10/28 02:11:32 mr_bones_ Exp $
 
 inherit eutils
 
@@ -27,7 +27,6 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.7.6-include-fix.patch
 }
-
 
 src_install() {
 	make DESTDIR="${D}" install || die "Install failed"
