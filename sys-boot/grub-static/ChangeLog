@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub-static
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.15 2008/10/27 10:50:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.16 2008/10/28 10:13:07 angelos Exp $
+
+  28 Oct 2008; Christoph Mende <angelos@gentoo.org>
+  grub-static-0.97-r6.ebuild:
+  Added missing inherit eutils, bug 244706
 
 *grub-static-0.97-r6 (27 Oct 2008)
 
