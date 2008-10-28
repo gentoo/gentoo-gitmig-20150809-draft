@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0_alpha3.ebuild,v 1.1 2008/10/24 08:27:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0_alpha3.ebuild,v 1.2 2008/10/28 02:07:13 mr_bones_ Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -167,7 +167,6 @@ pkg_postinst() {
 	fi
 	update_mozilla_launcher_symlinks
 }
-
 
 pkg_postrm() {
 	update_mozilla_launcher_symlinks
