@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.82 2008/10/20 00:00:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.83 2008/10/28 20:09:27 pauldv Exp $
+
+  28 Oct 2008; Paul de Vrieze <pauldv@gentoo.org>
+  files/svgalib-1.9.25-linux2.6.patch:
+  Make svgalib work on 2.6.27. Fixes bug #242342, and thanks to Ed Catmur
+  <ed@catmur.co.uk> in there for providing a patch.
 
   20 Oct 2008; Mike Frysinger <vapier@gentoo.org>
   files/svgalib-1.9.25-build.patch:
