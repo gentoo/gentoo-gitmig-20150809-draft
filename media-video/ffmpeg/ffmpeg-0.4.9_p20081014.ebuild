@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20081014.ebuild,v 1.8 2008/10/27 18:30:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20081014.ebuild,v 1.9 2008/10/28 02:08:33 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -140,7 +140,6 @@ src_compile() {
 		myconf="${myconf} --cpu=$i"
 		break
 	done
-
 
 	# video hooking support. replaced by libavfilter, probably needs to be
 	# dropped at some point.

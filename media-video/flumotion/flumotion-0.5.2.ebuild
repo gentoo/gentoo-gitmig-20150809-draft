@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.5.2.ebuild,v 1.1 2008/10/27 19:49:49 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.5.2.ebuild,v 1.2 2008/10/28 02:08:57 mr_bones_ Exp $
 
 inherit eutils gnome2
 
@@ -101,4 +101,3 @@ pkg_postinst() {
 		chmod -R 755 ${dir}
 	done
 }
-

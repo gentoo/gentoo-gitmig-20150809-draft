@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.24.1.ebuild,v 1.1 2008/10/20 21:09:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.24.1.ebuild,v 1.2 2008/10/28 02:08:12 mr_bones_ Exp $
 
 GCONF_DEBUG="no"
 
@@ -48,4 +48,3 @@ DOCS="AUTHORS ChangeLog NEWS README"
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper --disable-hildon"
 }
-
