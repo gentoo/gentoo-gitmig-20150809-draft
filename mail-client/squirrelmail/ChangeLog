@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.117 2008/10/01 19:00:15 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.118 2008/10/28 00:22:46 ranger Exp $
+
+  28 Oct 2008; Brent Baude <ranger@gentoo.org> squirrelmail-1.4.16.ebuild:
+  Marking squirrelmail-1.4.16 ppc64 for bug 239054
 
 *squirrelmail-1.4.16 (01 Oct 2008)
 
