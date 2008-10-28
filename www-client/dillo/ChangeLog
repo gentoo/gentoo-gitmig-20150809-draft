@@ -1,6 +1,13 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.62 2008/10/22 15:02:07 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.63 2008/10/28 14:56:08 matsuu Exp $
+
+*dillo-0.8.6-r1 (28 Oct 2008)
+
+  28 Oct 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/dillo-0.8.6-gentoo.patch, +dillo-0.8.6-r1.ebuild:
+  Replaced new i18n patch. Added -j1 to emake install cause parallel install
+  borked.
 
   22 Oct 2008; Ben de Groot <yngwin@gentoo.org> dillo-2.0.ebuild:
   Do not die when doc useflag is disabled.
