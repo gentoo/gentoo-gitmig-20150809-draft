@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10-r1.ebuild,v 1.1 2008/10/12 11:36:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10-r1.ebuild,v 1.2 2008/10/28 02:10:57 mr_bones_ Exp $
 
 DESCRIPTION="Web content filtering via proxy"
 HOMEPAGE="http://dansguardian.org"
@@ -64,7 +64,7 @@ src_compile() {
 
 src_install() {
 	make "DESTDIR=${D}" install || die "make install failed"
-	
+
 	# Move html documents to html dir
 	mkdir "${D}"/usr/share/doc/${PF}/html \
 		&& mv "${D}"/usr/share/doc/${PF}/*.html "${D}"/usr/share/doc/${PF}/html \
