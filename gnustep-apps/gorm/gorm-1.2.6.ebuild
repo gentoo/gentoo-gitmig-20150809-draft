@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-1.2.2.ebuild,v 1.1 2008/01/09 12:37:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/gorm-1.2.6.ebuild,v 1.1 2008/10/28 09:54:42 voyageur Exp $
 
 inherit gnustep-2
 
@@ -11,8 +11,9 @@ SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/dev-apps/${P}.tar.gz"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 
-DEPEND=">=gnustep-base/gnustep-gui-0.13.0"
+DEPEND=">=gnustep-base/gnustep-gui-0.13.2"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
