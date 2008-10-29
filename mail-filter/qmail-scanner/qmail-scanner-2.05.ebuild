@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.02-r1.ebuild,v 1.2 2008/10/29 20:17:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.05.ebuild,v 1.1 2008/10/29 20:17:44 tupone Exp $
 
 inherit fixheadtails toolchain-funcs eutils
 
-Q_S_DATE=20080119
+Q_S_DATE=20080728
 DESCRIPTION="E-Mail virus scanner for qmail."
 HOMEPAGE="http://qmail-scanner.sourceforge.net/"
 SRC_URI="mirror://sourceforge/qmail-scanner/${P}.tgz
@@ -14,20 +14,20 @@ IUSE="clamav spamassassin"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="userpriv"
 
-DEPEND=">=dev-lang/perl-5.6.1-r1
-	>=virtual/perl-Time-HiRes-01.20-r2
-	>=net-mail/tnef-1.1.1
-	>=virtual/perl-DB_File-1.803-r2
+DEPEND="dev-lang/perl
+	virtual/perl-Time-HiRes
+	net-mail/tnef
+	virtual/perl-DB_File
 	mail-filter/maildrop
 	virtual/qmail
-	>=app-arch/unzip-5.42-r1
+	app-arch/unzip
 	sys-process/daemontools
 	virtual/antivirus
 	clamav? ( app-antivirus/clamav )
-	spamassassin? ( >=mail-filter/spamassassin-2.64 )"
+	spamassassin? ( mail-filter/spamassassin )"
 
 pkg_setup() {
 	enewgroup qscand 210
