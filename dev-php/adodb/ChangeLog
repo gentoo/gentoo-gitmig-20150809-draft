@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/adodb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.88 2008/08/19 09:33:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/ChangeLog,v 1.89 2008/10/29 11:41:57 pva Exp $
+
+*adodb-5.06 (29 Oct 2008)
+
+  29 Oct 2008; Peter Volkov <pva@gentoo.org> metadata.xml,
+  -adodb-4.94.ebuild, -adodb-4.95a.ebuild, -adodb-4.96.ebuild,
+  -adodb-5.02.ebuild, -adodb-5.04.ebuild, +adodb-5.06.ebuild:
+  Version bump. Removed old, php-4 dependent versions.
 
   19 Aug 2008; Peter Volkov <pva@gentoo.org> adodb-5.04a.ebuild:
   amd64 stable, bug #231723
