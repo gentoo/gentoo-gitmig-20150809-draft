@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/i8kutils
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.15 2007/04/21 23:10:58 tester Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.16 2008/10/29 20:28:43 tester Exp $
+
+*i8kutils-1.25-r1 (29 Oct 2008)
+
+  29 Oct 2008; Olivier Crête <tester@gentoo.org> +files/i8k.init-r1,
+  +i8kutils-1.25-r1.ebuild:
+  Fix init script, fixes bug #216742
 
   21 Apr 2007; Olivier Crête <tester@gentoo.org> i8kutils-1.25.ebuild:
   Use newconfd/newinitd (bug #174266)
