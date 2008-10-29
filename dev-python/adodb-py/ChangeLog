@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/adodb-py
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.22 2007/02/21 18:10:12 lucass Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.23 2008/10/29 12:11:54 pva Exp $
+
+*adodb-py-2.20 (29 Oct 2008)
+
+  29 Oct 2008; Peter Volkov <pva@gentoo.org> metadata.xml,
+  +adodb-py-2.20.ebuild:
+  Version bump, bug #198206, thank Chris Mayo for report.
 
   21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org> Manifest:
   Fixed missing chksums.
