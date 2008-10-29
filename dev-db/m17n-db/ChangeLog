@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/m17n-db
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.31 2008/08/20 16:13:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.32 2008/10/29 17:16:57 matsuu Exp $
+
+*m17n-db-1.5.3 (29 Oct 2008)
+
+  29 Oct 2008; MATSUU Takuto <matsuu@gentoo.org> +m17n-db-1.5.3.ebuild:
+  Version bumped.
 
 *m17n-db-1.5.2 (19 Aug 2008)
 
