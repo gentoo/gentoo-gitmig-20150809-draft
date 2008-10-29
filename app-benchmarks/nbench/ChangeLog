@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/nbench
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/ChangeLog,v 1.15 2007/02/21 20:11:18 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/ChangeLog,v 1.16 2008/10/29 05:31:20 jer Exp $
+
+*nbench-2.2.3 (29 Oct 2008)
+
+  29 Oct 2008; Jeroen Roovers <jer@gentoo.org>
+  +files/nbench-2.2.3-Makefile.patch, metadata.xml, +nbench-2.2.3.ebuild:
+  Pick up maintainership. Version bump. Patch Makefile to use toolchain CC
+  (bug #243520).
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
