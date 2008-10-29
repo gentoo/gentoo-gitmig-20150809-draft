@@ -1,6 +1,15 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.20 2008/07/18 22:53:23 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.21 2008/10/29 20:22:21 serkan Exp $
+
+*jubler-3.9.6 (29 Oct 2008)
+
+  29 Oct 2008; Serkan Kaba <serkan@gentoo.org>
+  +files/jubler-3.9.6-ffmpegfix.patch, +files/jubler-3.9.6.patch,
+  +jubler-3.9.6.ebuild:
+  Version bump that works with newer ffmpeg. Fixes bug #218091, #242946.
+  Thanks to Luca Barbato <lu_zero@gentoo.org>, Alexis Ballier
+  <aballier@gentoo.org> for help.
 
   18 Jul 2008; Petteri Räty <betelgeuse@gentoo.org> jubler-3.4.1.ebuild,
   jubler-3.9.0.ebuild:
