@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/adtool-1.3-r1.ebuild,v 1.4 2008/04/06 14:31:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/adtool-1.3-r1.ebuild,v 1.5 2008/10/29 11:24:51 flameeyes Exp $
 
 WANT_AUTOMAKE="1.7"
 
@@ -23,6 +23,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/adtool-1.3-10-asneeded.patch"
+
+	eautomake
 }
 
 src_compile() {
