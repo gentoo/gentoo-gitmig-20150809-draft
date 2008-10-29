@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.5.ebuild,v 1.8 2008/07/27 00:59:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.5.ebuild,v 1.9 2008/10/29 09:08:27 aballier Exp $
 
 EAPI=1
 
@@ -64,6 +64,7 @@ RDEPEND="|| ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 )
 
 DEPEND="${RDEPEND}
 	x11-proto/xproto
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
