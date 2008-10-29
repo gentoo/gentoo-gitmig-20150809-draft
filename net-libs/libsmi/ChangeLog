@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsmi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.26 2008/10/28 01:46:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.27 2008/10/29 12:56:37 pva Exp $
+
+  29 Oct 2008; Peter Volkov <pva@gentoo.org> -libsmi-0.4.5.ebuild,
+  -libsmi-0.4.7.ebuild:
+  Removed old.
 
   28 Oct 2008; Brent Baude <ranger@gentoo.org> libsmi-0.4.8.ebuild:
   Marking libsmi-0.4.8 ppc64 for bug 242436
