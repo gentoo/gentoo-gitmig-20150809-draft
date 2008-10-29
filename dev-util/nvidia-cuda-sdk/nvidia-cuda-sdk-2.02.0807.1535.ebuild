@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-2.02.0807.1535.ebuild,v 1.2 2008/10/18 21:17:08 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-2.02.0807.1535.ebuild,v 1.3 2008/10/29 21:39:55 spock Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug emulation"
 
 DEPEND="dev-util/nvidia-cuda-toolkit
-	>=x11-drivers/nvidia-drivers-177.73"
+	>=x11-drivers/nvidia-drivers-177.73
+	virtual/glut"
 
 S="${WORKDIR}"
 
