@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nfdump
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.4 2007/09/06 17:41:07 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/ChangeLog,v 1.5 2008/10/29 11:33:21 flameeyes Exp $
+
+  29 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> nfdump-1.5.1.ebuild:
+  Force -j1 during install, see bug #240746.
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -nfdump-1.5.ebuild:
   Cleanup

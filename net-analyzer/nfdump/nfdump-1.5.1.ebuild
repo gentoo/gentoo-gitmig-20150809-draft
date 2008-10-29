@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.5.1.ebuild,v 1.1 2007/03/22 14:47:50 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nfdump/nfdump-1.5.1.ebuild,v 1.2 2008/10/29 11:33:21 flameeyes Exp $
 
 inherit eutils
 
@@ -15,6 +15,12 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="dev-lang/perl"
+
+src_compile() {
+	econf || die "econf failed"
+	# Parallel make issue, see bug #240746
+	emake -j1 || die "emake failed"
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die
