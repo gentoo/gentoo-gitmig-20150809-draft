@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.3.0.ebuild,v 1.5 2008/08/03 21:48:18 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-0.3.0.ebuild,v 1.6 2008/10/29 18:35:16 dang Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -34,7 +34,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 pkg_setup() {
 	if ! built_with_use 'dev-libs/gdl' 'gnome' ; then
 		eerror 'Please build gdl with the gnome useflag.'
-		eerror 'echo "dev-libs/gdl gnome" >> /etc/portage/package.use" ; emerge -1 gdl'
+		eerror 'echo "dev-libs/gdl gnome" >> /etc/portage/package.use ; emerge -1 gdl'
 		die 'gdl built without gnome'
 	fi
 }

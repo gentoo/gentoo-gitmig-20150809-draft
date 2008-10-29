@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gnome-build
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.17 2008/08/03 21:48:18 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.18 2008/10/29 18:35:16 dang Exp $
+
+  29 Oct 2008; Daniel Gryniewicz <dang@gentoo.org> gnome-build-0.1.7.ebuild,
+  gnome-build-0.2.4.ebuild, gnome-build-0.3.0.ebuild:
+  Remove extra quote; bug #241492
 
   03 Aug 2008; Matti Bickel <mabi@gentoo.org> gnome-build-0.3.0.ebuild:
   ~ppc added for bug #204495
