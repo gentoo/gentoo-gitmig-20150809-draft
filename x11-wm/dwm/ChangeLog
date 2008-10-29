@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/dwm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.49 2008/10/27 22:41:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.50 2008/10/29 23:55:52 gentoofan23 Exp $
+
+  29 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org> dwm-5.2.ebuild:
+  stable amd64, bug 244526
 
   27 Oct 2008; Brent Baude <ranger@gentoo.org> dwm-5.2.ebuild:
   stable ppc64, bug 244526
