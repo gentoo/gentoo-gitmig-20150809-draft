@@ -1,11 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.5.1.ebuild,v 1.2 2008/10/28 01:20:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.5.1.ebuild,v 1.3 2008/10/29 13:18:53 aballier Exp $
 
 inherit multilib toolchain-funcs
 
 DESCRIPTION="V4L userspace libraries"
-HOMEPAGE="http://people.atrpms.net/~hdegoede/"
+HOMEPAGE="http://people.atrpms.net/~hdegoede/
+	http://hansdegoede.livejournal.com/3636.html"
 SRC_URI="http://people.atrpms.net/~hdegoede/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
