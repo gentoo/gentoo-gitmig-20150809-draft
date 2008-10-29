@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.12 2008/06/26 10:37:33 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.13 2008/10/29 12:45:26 flameeyes Exp $
+
+  29 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> at-3.1.10.1.ebuild:
+  Force -j1, see bug #244884.
 
   26 Jun 2008; Thilo Bangert <bangert@gentoo.org> at-3.1.8-r11.ebuild,
   at-3.1.8-r12.ebuild, at-3.1.10.1.ebuild:

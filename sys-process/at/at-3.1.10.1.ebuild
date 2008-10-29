@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.10.1.ebuild,v 1.2 2008/06/26 10:37:33 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.10.1.ebuild,v 1.3 2008/10/29 12:45:26 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -40,7 +40,9 @@ src_compile() {
 		--with-daemon_username=at \
 		--with-daemon_groupname=at \
 		|| die "configure failed"
-	emake || die "make failed"
+
+	# Parallel make issues, bug #244884
+	emake -j1 || die "make failed"
 }
 
 src_install() {
