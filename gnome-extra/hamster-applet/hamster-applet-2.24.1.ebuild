@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.24.1.ebuild,v 1.1 2008/10/23 21:57:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.24.1.ebuild,v 1.2 2008/10/29 20:29:04 eva Exp $
 EAPI=1
 
 GCONF_DEBUG="no"
@@ -40,11 +40,10 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	local msg="Rebuild dev-lang/python-2.5 with the sqlite USE flag"
-	if has_version dev-lang/python 2.5; then
-		if ! built_with_use dev-lang/python sqlite; then
-			eerror "${msg}"
-			die "${msg}"
-		fi
+	if has_version ">=dev-lang/python-2.5" && \
+		! built_with_use dev-lang/python sqlite ; then
+		eerror "${msg}"
+		die "${msg}"
 	fi
 }
 
