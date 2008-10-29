@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/datutil/datutil-2.31.ebuild,v 1.2 2007/05/12 17:57:28 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/datutil/datutil-2.31.ebuild,v 1.3 2008/10/29 11:51:12 flameeyes Exp $
 
 inherit toolchain-funcs
 
@@ -27,8 +27,9 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" LD="$(tc-getCC) ${CFLAGS} ${LDFLAGS}" \
-	CFLAGS="${CFLAGS} -Idev" LOGIQX=. EXT= UPX=@#
+	# Parallel make issue, see bug #244879
+	emake -j1 CC="$(tc-getCC)" LD="$(tc-getCC) ${CFLAGS} ${LDFLAGS}" \
+	CFLAGS="${CFLAGS} -Idev" LOGIQX=. EXT= UPX=@# || die "emake failed"
 }
 
 src_install() {
