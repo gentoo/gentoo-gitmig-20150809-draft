@@ -1,6 +1,12 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.74 2008/10/28 19:07:55 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.75 2008/10/29 12:58:10 beandog Exp $
+
+*realplayer-11.0.1.1056-r1 (29 Oct 2008)
+
+  29 Oct 2008; Steve Dibb <beandog@gentoo.org>
+  -realplayer-11.0.1.1056.ebuild, +realplayer-11.0.1.1056-r1.ebuild:
+  Drop EAPI2, bug 244861
 
 *realplayer-11.0.1.1056 (28 Oct 2008)
 
