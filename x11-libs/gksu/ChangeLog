@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.48 2008/05/24 16:13:46 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.49 2008/10/29 19:01:34 dang Exp $
+
+*gksu-2.0.0-r2 (29 Oct 2008)
+
+  29 Oct 2008; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gksu-2.0.0-new-nautilus.patch, +gksu-2.0.0-r2.ebuild:
+  Bump to gksu-2.0.0-r2
+
+  - Fix nautilus extension directory. Bug #241586
 
   24 May 2008; Daniel Gryniewicz <dang@gentoo.org> gksu-2.0.0-r1.ebuild:
   Oops, forgot the dep on gnome-terminal
