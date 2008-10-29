@@ -1,5 +1,5 @@
---- /var/tmp/portage/app-office/plan-1.9/work/plan-1.9/src/Makefile	2008-03-19 03:38:22.000000000 -0500
-+++ Makefile	2008-03-19 03:42:49.000000000 -0500
+--- plan-1.9/src/Makefile.orig	2008-03-19 03:38:22.000000000 -0500
++++ plan-1.9/src/Makefile	2008-03-19 03:42:49.000000000 -0500
 @@ -415,10 +415,10 @@
  	env CF="$(SVR4_C)" L1F="$(SVR4_L1)" L2F="$(SVR4_L2)" MYCC=gcc make all
  
