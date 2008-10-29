@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rusers/netkit-rusers-0.17.ebuild,v 1.2 2006/09/13 08:18:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rusers/netkit-rusers-0.17.ebuild,v 1.3 2008/10/29 11:09:24 flameeyes Exp $
 
 DESCRIPTION="Netkit - rup rpc.rusersd rusers"
 HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
@@ -17,7 +17,8 @@ src_compile() {
 	./configure || die
 	mv MCONFIG MCONFIG.ori
 	sed -e "s:-O2::" -e "s:-Wpointer-arith::" MCONFIG.ori > MCONFIG
-	emake || die
+	# see bug #244867 for parallel make issues
+	emake -j1 || die
 }
 
 src_install() {

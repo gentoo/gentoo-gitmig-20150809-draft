@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-rusers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rusers/ChangeLog,v 1.4 2008/04/21 18:00:23 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rusers/ChangeLog,v 1.5 2008/10/29 11:09:24 flameeyes Exp $
+
+  29 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
+  netkit-rusers-0.17.ebuild:
+  Force -j1, see bug #244867.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
