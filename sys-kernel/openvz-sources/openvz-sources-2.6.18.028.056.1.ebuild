@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.056.1.ebuild,v 1.2 2008/09/30 07:30:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.056.1.ebuild,v 1.3 2008/10/29 15:28:12 pva Exp $
 
 inherit versionator
 
@@ -36,4 +36,5 @@ ${FILESDIR}/openvz-sources-2.6.18.028.057.2-qouta-compat-build.patch
 ${FILESDIR}/openvz-sources-2.6.18.028.057.2-fix-CIFS-build.patch
 ${FILESDIR}/openvz-sources-2.6.18.028.057.2-missed-PATH_MAX-sumversion.c.patch
 ${FILESDIR}/openvz-sources-2.6.18.028.057.2-prevent-gcc-smartness.patch
+${FILESDIR}/openvz-sources-2.6.18.028.056.1-CONFIG_SECCOMP-build.patch
 ${FILESDIR}/${P}-3ware.patch"

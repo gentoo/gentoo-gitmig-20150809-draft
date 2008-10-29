@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.057.2.ebuild,v 1.2 2008/09/24 09:32:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.18.028.059.3.ebuild,v 1.1 2008/10/29 15:28:12 pva Exp $
 
 inherit versionator
 
@@ -27,21 +27,17 @@ IUSE=""
 DESCRIPTION="Full sources including OpenVZ patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 HOMEPAGE="http://www.openvz.org"
 SRC_URI="${KERNEL_URI} ${ARCH_URI}
-	http://download.openvz.org/kernel/branches/rhel5-${CKV}/${OVZ_KERNEL}.${OVZ_REV}/patches/patch-92.1.1.el5.${OVZ_KERNEL}.${OVZ_REV}-combined.gz"
+	http://download.openvz.org/kernel/branches/rhel5-${CKV}/${OVZ_KERNEL}.${OVZ_REV}/patches/patch-92.1.13.el5.${OVZ_KERNEL}.${OVZ_REV}-combined.gz"
 
 UNIPATCH_STRICTORDER=1
-UNIPATCH_LIST="${DISTDIR}/patch-92.1.1.el5.${OVZ_KERNEL}.${OVZ_REV}-combined.gz
-${FILESDIR}/${P}-utimenstat.patch
-${FILESDIR}/${P}-qouta-compat-build.patch
-${FILESDIR}/${P}-fix-build-xfrm.h.patch
-${FILESDIR}/${P}-missed-PATH_MAX-sumversion.c.patch
-${FILESDIR}/${P}-prevent-gcc-smartness.patch
-${FILESDIR}/${P}-fix-CIFS-build.patch
-${FILESDIR}/${P}-another-fix-build-xfrm.h.patch"
+UNIPATCH_LIST="${DISTDIR}/patch-92.1.13.el5.${OVZ_KERNEL}.${OVZ_REV}-combined.gz
+${FILESDIR}/${PN}-2.6.18.028.057.2-utimenstat.patch
+${FILESDIR}/${P}-e1000-build.patch
+${FILESDIR}/${PN}-2.6.18.028.057.2-prevent-gcc-smartness.patch"
 
 K_EXTRAEINFO="This openvz kernel uses RHEL5 patchset instead of vanilla kernel.
 This patchset considered to be more stable and security supported by upstream,
 that why they suggested us to use it. But note: RHEL5 patchset is very fragile
 and fails to build in many configurations so if you have problems use config
 files from openvz team
-http://wiki.openvz.org/Download/kernel/rhel5/028stab057.2"
+http://wiki.openvz.org/Download/kernel/rhel5/028stab059.3"

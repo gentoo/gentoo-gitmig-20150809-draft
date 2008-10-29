@@ -1,6 +1,23 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.98 2008/10/14 08:56:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.99 2008/10/29 15:28:12 pva Exp $
+
+*openvz-sources-2.6.24.006.4 (29 Oct 2008)
+*openvz-sources-2.6.18.028.059.3 (29 Oct 2008)
+
+  29 Oct 2008; Peter Volkov <pva@gentoo.org>
+  +files/openvz-sources-2.6.18.028.056.1-CONFIG_SECCOMP-build.patch,
+  -files/openvz-sources-2.6.18.028.057.2-another-fix-build-xfrm.h.patch,
+  -files/openvz-sources-2.6.18.028.057.2-fix-build-xfrm.h.patch,
+  +files/openvz-sources-2.6.18.028.059.3-e1000-build.patch,
+  -files/openvz-sources-2.6.18-ms-splice-access.patch,
+  -openvz-sources-2.6.18.028.053-r2.ebuild,
+  openvz-sources-2.6.18.028.056.1.ebuild,
+  -openvz-sources-2.6.18.028.057.2.ebuild,
+  +openvz-sources-2.6.18.028.059.3.ebuild,
+  -openvz-sources-2.6.24.006.2.ebuild, +openvz-sources-2.6.24.006.4.ebuild:
+  Bumped rhel5 based (~arch) and 2.6.24 kernels. Fixed build issue if
+  CONFIG_SECCOMP is enabled, bug #242728, thank Balazs Nemeth for report.
 
 *openvz-sources-2.6.26.9999 (14 Oct 2008)
 
