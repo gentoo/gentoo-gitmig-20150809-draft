@@ -1,6 +1,14 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.75 2008/10/29 12:58:10 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.76 2008/10/29 17:32:24 beandog Exp $
+
+*realplayer-11.0.1.1056-r2 (29 Oct 2008)
+
+  29 Oct 2008; Steve Dibb <beandog@gentoo.org>
+  -realplayer-11.0.1.1056-r1.ebuild, +realplayer-11.0.1.1056-r2.ebuild:
+  Final cleanup of realplayer and codecs: codecs in realcodecs package, X11
+  player in this package, dropped X use flag, reverted to unstable because
+  of security issues, bug 240341
 
 *realplayer-11.0.1.1056-r1 (29 Oct 2008)
 

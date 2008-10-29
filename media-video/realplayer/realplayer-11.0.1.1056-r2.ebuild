@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.1.1056-r1.ebuild,v 1.1 2008/10/29 12:58:10 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-11.0.1.1056-r2.ebuild,v 1.1 2008/10/29 17:32:24 beandog Exp $
 
 inherit nsplugins eutils rpm
 
@@ -11,18 +11,19 @@ SRC_URI="http://forms.real.com/real/player/download.html?f=unix/RealPlayer11GOLD
 RESTRICT="mirror strip test"
 LICENSE="HBRL"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
-IUSE="X nsplugin"
-RDEPEND="!amd64? (
-			X? ( >=dev-libs/glib-2
-				>=x11-libs/pango-1.2
-				>=x11-libs/gtk+-2.2 )
-			=virtual/libstdc++-3.3*
-		)
-		amd64? (
-			X? ( app-emulation/emul-linux-x86-gtklibs )
-			app-emulation/emul-linux-x86-compat
-		)"
+KEYWORDS="-* ~amd64 ~x86"
+IUSE="nsplugin"
+RDEPEND="=media-libs/realcodecs-${PV}*
+	x86? (
+		>=dev-libs/glib-2
+		>=x11-libs/pango-1.2
+		>=x11-libs/gtk+-2.2
+		=virtual/libstdc++-3.3*
+	)
+	amd64? (
+		app-emulation/emul-linux-x86-gtklibs
+		app-emulation/emul-linux-x86-compat
+	)"
 
 QA_TEXTRELS="opt/RealPlayer/codecs/raac.so
 	opt/RealPlayer/codecs/colorcvt.so
@@ -73,47 +74,40 @@ src_unpack() {
 src_install() {
 	dodir /opt/${MY_PN}
 
-	fperms 644 codecs/*
-	insinto "/opt/${MY_PN}/codecs"
-	doins codecs/*
-
 	cd "${S}"
 
-	if use X; then
+	rm "${S}/share/distcode"
 
-		rm "${S}/share/distcode"
+	# Make them executable, Bug #233415
+	exeinto "/opt/${MY_PN}/"
+	doexe realplay realplay.bin
 
-		# Make them executable, Bug #233415
-		exeinto "/opt/${MY_PN}/"
-		doexe realplay realplay.bin
+	insinto "/opt/${MY_PN}/"
+	for x in common mozilla plugins share; do
+		doins -r "${S}/${x}"
+	done;
 
-		insinto "/opt/${MY_PN}/"
-		for x in common mozilla plugins share; do
-			doins -r "${S}/${x}"
-		done;
+	domenu "${S}/share/realplay.desktop"
 
-		domenu "${S}/share/realplay.desktop"
+	for res in 16 32 48 192; do
+		insinto /usr/share/icons/hicolor/${res}x${res}/apps
+		newins "${S}/share/icons/realplay_${res}x${res}.png" \
+				realplay.png
+	done
 
-		for res in 16 32 48 192; do
-			insinto /usr/share/icons/hicolor/${res}x${res}/apps
-			newins "${S}/share/icons/realplay_${res}x${res}.png" \
-					realplay.png
-		done
+	# mozilla plugin
+	if use nsplugin ; then
+		exeinto /opt/netscape/plugins
+		doexe "${S}/mozilla/nphelix.so"
+		inst_plugin /opt/netscape/plugins/nphelix.so
 
-		# mozilla plugin
-		if use nsplugin ; then
-			exeinto /opt/netscape/plugins
-			doexe "${S}/mozilla/nphelix.so"
-			inst_plugin /opt/netscape/plugins/nphelix.so
-
-			insinto /opt/netscape/plugins
-			doins "${S}/mozilla/nphelix.xpt"
-			inst_plugin /opt/netscape/plugins/nphelix.xpt
-		fi
-
-		dodir /usr/bin
-		dosym "/opt/${MY_PN}/realplay" /usr/bin/realplay
+		insinto /opt/netscape/plugins
+		doins "${S}/mozilla/nphelix.xpt"
+		inst_plugin /opt/netscape/plugins/nphelix.xpt
 	fi
+
+	dodir /usr/bin
+	dosym "/opt/${MY_PN}/realplay" /usr/bin/realplay
 
 	# Language resources
 	cd "${D}"/opt/RealPlayer/share/locale
