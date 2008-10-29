@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mozart
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.21 2008/08/26 07:33:11 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.22 2008/10/29 11:31:25 flameeyes Exp $
+
+  29 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> mozart-1.4.0.ebuild:
+  Force -j1 during install, see bug #244872.
 
   26 Aug 2008; <keri@gentoo.org> +files/mozart-1.4.0-dss-libpath.patch,
   mozart-1.4.0.ebuild:
