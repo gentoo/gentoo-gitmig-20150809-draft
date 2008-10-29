@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-5.03.ebuild,v 1.6 2008/10/15 17:39:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-5.03.ebuild,v 1.7 2008/10/29 17:27:35 spock Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -35,7 +35,7 @@ src_unpack() {
 
 src_compile() {
 	./configure --prefix="${D}"/usr || die
-	emake CFLAGS="${CFLAGS}" || die
+	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die
 }
 
 src_install() {
