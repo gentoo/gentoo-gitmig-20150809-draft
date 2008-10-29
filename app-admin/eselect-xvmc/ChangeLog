@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-xvmc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.9 2008/10/03 14:26:46 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.10 2008/10/29 14:37:29 cardoe Exp $
+
+*eselect-xvmc-0.2 (29 Oct 2008)
+
+  29 Oct 2008; Doug Goldstein <cardoe@gentoo.org>
+  +files/eselect-xvmc-0.2.eselect, +eselect-xvmc-0.2.ebuild:
+  add support for ATI's XvMC implementation
 
   03 Oct 2008; Doug Goldstein <cardoe@gentoo.org> eselect-xvmc-0.1.ebuild:
   no reason why any of these arches aren't done for bug #231779
