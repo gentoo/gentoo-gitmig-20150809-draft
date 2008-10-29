@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.15 2007/09/07 11:33:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.16 2008/10/29 12:16:43 mueli Exp $
 
 WANT_AUTOMAKE=1.8
 WANT_AUTOCONF=latest
@@ -24,8 +24,7 @@ IUSE="ssl berkdb ipv6 ldap X"
 RDEPEND="ssl? ( dev-libs/openssl )
 	berkdb? ( sys-libs/db )
 	ldap? ( net-nds/openldap )
-	sys-libs/ss
-	sys-libs/com_err
+	|| ( ( >sys-libs/e2fsprogs-libs-1.40.11 ) ( sys-libs/com_err sys-libs/ss ) )
 	sys-libs/cracklib
 	!virtual/krb5"
 DEPEND="${RDEPEND}"
