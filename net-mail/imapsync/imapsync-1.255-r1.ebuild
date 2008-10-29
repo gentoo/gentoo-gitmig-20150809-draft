@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.255-r1.ebuild,v 1.1 2008/07/19 09:35:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.255-r1.ebuild,v 1.2 2008/10/29 08:36:57 tove Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ IUSE=""
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
 	virtual/perl-Digest-MD5
+	dev-perl/DateManip
 	dev-perl/Net-SSLeay
 	virtual/perl-MIME-Base64
 	dev-perl/TermReadKey
