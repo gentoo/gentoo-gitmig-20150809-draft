@@ -1,6 +1,13 @@
 # ChangeLog for games-rpg/rain-slick
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/ChangeLog,v 1.1 2008/05/25 03:42:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/ChangeLog,v 1.2 2008/10/29 18:47:19 vapier Exp $
+
+*rain-slick-2.1 (29 Oct 2008)
+*rain-slick-1.4 (29 Oct 2008)
+
+  29 Oct 2008; Mike Frysinger <vapier@gentoo.org> +rain-slick-1.4.ebuild,
+  +rain-slick-2.1.ebuild:
+  Version bump.
 
 *rain-slick-1.2 (25 May 2008)
 
