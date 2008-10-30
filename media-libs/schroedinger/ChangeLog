@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/schroedinger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.18 2008/10/21 17:17:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.19 2008/10/30 20:04:42 dertobi123 Exp $
+
+  30 Oct 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  schroedinger-1.0.5.ebuild:
+  ppc stable, bug #239130
 
   21 Oct 2008; Markus Rothe <corsair@gentoo.org> schroedinger-1.0.5.ebuild:
   Stable on ppc64; bug #239130
