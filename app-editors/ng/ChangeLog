@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/ng
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ChangeLog,v 1.9 2007/10/10 07:12:42 opfer Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ChangeLog,v 1.10 2008/10/30 15:40:32 matsuu Exp $
+
+*ng-1.5_beta1-r1 (30 Oct 2008)
+
+  30 Oct 2008; MATSUU Takuto <matsuu@gentoo.org> +ng-1.5_beta1-r1.ebuild:
+  Fixed CC variable, bug #243570.
 
   10 Oct 2007; Christian Faulhammer <opfer@gentoo.org> ng-1.5_beta1.ebuild:
   remove PROVIDE=virtual/editor as we have now a new-style virtual
