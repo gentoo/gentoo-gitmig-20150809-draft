@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.9.ebuild,v 1.5 2007/07/22 09:53:17 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.9a-r1.ebuild,v 1.1 2008/10/30 15:27:52 matsuu Exp $
 
-inherit eutils
+inherit eutils multilib toolchain-funcs
 
 IUSE="truetype spell"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://xvnkb.sourceforge.net/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND="x11-libs/libX11
 	truetype? ( virtual/xft )"
 DEPEND="${RDEPEND}
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	local myconf
+
+	tc-export CC
 
 	use spell || myconf="${myconf} --no-spellcheck"
 	use truetype || myconf="${myconf} --no-xft"
@@ -38,13 +40,11 @@ src_install() {
 	dobin tools/xvnkb_ctrl
 
 	dolib xvnkb.so.${PV}
-	dosym /usr/lib/xvnkb.so.${PV} /usr/lib/xvnkb.so
+	dosym xvnkb.so.${PV} /usr/$(get_libdir)/xvnkb.so
 
-	dodoc LICENSE ChangeLog AUTHORS THANKS TODO INSTALL* README* doc/*
-	docinto scripts
-	dodoc scripts/*
-	docinto contrib
-	dodoc contrib/*
+	dodoc ChangeLog AUTHORS THANKS TODO README* doc/*
+	docinto scripts; dodoc scripts/*
+	docinto contrib; dodoc contrib/*
 }
 
 pkg_postinst() {
