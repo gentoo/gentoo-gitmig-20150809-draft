@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/datutil/datutil-2.31.ebuild,v 1.3 2008/10/29 11:51:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/datutil/datutil-2.31.ebuild,v 1.4 2008/10/30 08:21:26 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -22,13 +22,17 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack dutil${PV//.}.zip
-	mkdir -p "${S}"/dev/datlib && cd "${S}"/dev/datlib
+	cd "${S}"
+	mkdir -p dev/datlib
+	cd dev/datlib
 	unpack datlib${DL_PV//.}.zip
 }
 
 src_compile() {
-	# Parallel make issue, see bug #244879
-	emake -j1 CC="$(tc-getCC)" LD="$(tc-getCC) ${CFLAGS} ${LDFLAGS}" \
+	# Parallel make issue, see bug #244879 (so make the dirs first)
+	emake CC="$(tc-getCC)" LD="$(tc-getCC) ${CFLAGS} ${LDFLAGS}" \
+	CFLAGS="${CFLAGS} -Idev" LOGIQX=. EXT= UPX=@# dlmaketree maketree || die "emake failed"
+	emake CC="$(tc-getCC)" LD="$(tc-getCC) ${CFLAGS} ${LDFLAGS}" \
 	CFLAGS="${CFLAGS} -Idev" LOGIQX=. EXT= UPX=@# || die "emake failed"
 }
 
