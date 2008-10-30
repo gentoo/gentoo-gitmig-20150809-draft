@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.0.4.ebuild,v 1.1 2008/10/27 17:15:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.0.4.ebuild,v 1.2 2008/10/30 18:25:19 vapier Exp $
 
 EAPI=1
 
@@ -65,7 +65,7 @@ pkg_nofetch() {
 	else
 		elog "http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_x86.run"
 	fi
-	if use sdk; then
+	if use sdk ; then
 		elog "http://download.virtualbox.org/virtualbox/${PV}/VirtualBoxSDK-${MY_PV}.zip"
 	fi
 	elog ""
@@ -88,7 +88,7 @@ src_unpack() {
 	unpack_makeself ${MY_P}_${ARCH}.run
 	unpack ./VirtualBox.tar.bz2
 
-	if use sdk; then
+	if use sdk ; then
 		unpack VirtualBoxSDK-${MY_PV}.zip
 	fi
 }
@@ -109,15 +109,15 @@ src_install() {
 	doins UserManual.pdf
 
 	if use sdk ; then
-		doins -r sdk
+		doins -r sdk || die
 	fi
 
-	if use additions; then
-		doins -r additions
+	if use additions ; then
+		doins -r additions || die
 	fi
 
-	if use vboxwebsrv; then
-		doins vboxwebsrv
+	if use vboxwebsrv ; then
+		doins vboxwebsrv || die
 		fowners root:vboxusers /opt/VirtualBox/vboxwebsrv
 		fperms 0750 /opt/VirtualBox/vboxwebsrv
 		dosym /opt/VirtualBox/VBox.sh /usr/bin/vboxwebsrv
@@ -143,7 +143,7 @@ src_install() {
 	dosym /opt/VirtualBox/VBoxDDU.so /opt/VirtualBox/components/VBoxDDU.so
 	dosym /opt/VirtualBox/VBoxXPCOM.so /opt/VirtualBox/components/VBoxXPCOM.so
 
-	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl}; do
+	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl} ; do
 		fowners root:vboxusers /opt/VirtualBox/${each}
 		fperms 0750 /opt/VirtualBox/${each}
 		pax-mark -m "${D}"/opt/VirtualBox/${each}
@@ -151,7 +151,7 @@ src_install() {
 
 	if ! use headless ; then
 		# Hardened build: Mark selected binaries set-user-ID-on-execution
-		for each in VBox{SDL,Headless} VirtualBox; do
+		for each in VBox{SDL,Headless} VirtualBox ; do
 			fowners root:vboxusers /opt/VirtualBox/${each}
 			fperms 4511 /opt/VirtualBox/${each}
 			pax-mark -m "${D}"/opt/VirtualBox/${each}
