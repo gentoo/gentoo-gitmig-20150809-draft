@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdesdk-kioslaves
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.92 2008/10/21 10:04:16 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.93 2008/10/30 12:24:53 scarabeus Exp $
+
+*kdesdk-kioslaves-4.1.2-r1 (30 Oct 2008)
+
+  30 Oct 2008; Tomas Chvatal <scarabeus@gentoo.org>
+  -kdesdk-kioslaves-4.1.2.ebuild, +kdesdk-kioslaves-4.1.2-r1.ebuild:
+  Rewrite kdesdk-kioslaves so it actualy works correctly. Also add -r1
+  because it changes path where it installs. #244960
 
   21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -kdesdk-kioslaves-4.0.4.ebuild, -kdesdk-kioslaves-4.0.5.ebuild:
