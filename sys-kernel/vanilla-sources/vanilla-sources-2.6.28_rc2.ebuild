@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.28_rc2.ebuild,v 1.3 2008/10/30 11:38:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.28_rc2.ebuild,v 1.4 2008/10/30 20:46:21 jer Exp $
 
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
@@ -13,7 +13,7 @@ DESCRIPTION="Full sources for the Linux kernel"
 HOMEPAGE="http://www.kernel.org"
 SRC_URI="${KERNEL_URI}"
 
-KEYWORDS="-alpha ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="-alpha -hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 K_EXTRAEWARN="The e1000e driver is this kernel version is non-functional but

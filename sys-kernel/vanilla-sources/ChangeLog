@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.545 2008/10/30 11:38:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.546 2008/10/30 20:46:21 jer Exp $
+
+  30 Oct 2008; Jeroen Roovers <jer@gentoo.org>
+  vanilla-sources-2.6.28_rc2.ebuild:
+  Fix ChangeLog entry. Fails to finish booting on HPPA.
 
   30 Oct 2008; Raúl Porcel <armin76@gentoo.org>
   vanilla-sources-2.6.28_rc2.ebuild:
@@ -12,7 +16,7 @@
 
   29 Oct 2008; Jeroen Roovers <jer@gentoo.org>
   vanilla-sources-2.6.28_rc1.ebuild:
-  Fails to finish booting.
+  Fails to finish booting on HPPA.
 
 *vanilla-sources-2.6.28_rc2 (26 Oct 2008)
 
