@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.1 2008/10/28 21:41:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.2 2008/10/30 15:34:59 markusle Exp $
 
-EAPI="2"
+EAPI="1"
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python qt4
 
@@ -12,7 +12,7 @@ PATCH_V="${MY_PV}_pre20080514"
 DESCRIPTION="ParaView is a powerful scientific data visualization application"
 HOMEPAGE="http://www.paraview.org"
 SRC_URI="mirror://gentoo/${P}.tar.gz
-	mirror://gentoo/${P}-OpenFOAM.patch.bz2"
+	mirror://gentoo/${P}-OpenFOAM-20080728.patch.bz2"
 
 LICENSE="paraview"
 KEYWORDS="~x86 ~amd64"
@@ -21,7 +21,7 @@ IUSE="mpi python hdf5 doc examples threads qt4"
 RDEPEND="hdf5? ( sci-libs/hdf5 )
 	mpi? ( || (
 				sys-cluster/openmpi
-				sys-cluster/mpich2[cxx] ) )
+				sys-cluster/mpich2 ) )
 	python? ( >=dev-lang/python-2.0 )
 	qt4? ( || ( ( x11-libs/qt-gui:4 x11-libs/qt-qt3support:4
 				x11-libs/qt-assistant:4 )
@@ -42,12 +42,18 @@ DEPEND="${RDEPEND}
 		doc? ( app-doc/doxygen )
 		>=dev-util/cmake-2.4.5"
 
-PVLIBDIR="$(get_libdir)/${PN}-${MY_PV}"
+PVLIBDIR="$(get_libdir)/${P}"
 BUILDDIR="${WORKDIR}/build"
 S="${WORKDIR}"/ParaView-${PV}
 
+
 pkg_setup() {
 	use qt4 && qt4_pkg_setup
+	if use mpi && has_version sys-cluster/mpich2; then
+		if ! built_with_use sys-cluster/mpich2 cxx; then
+			die "Please re-emerge sys-cluster/mpich2 with USE=\"cxx\""
+		fi
+	fi
 }
 
 src_unpack() {
@@ -56,7 +62,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-${PATCH_V}-gcc4.3.patch
 	epatch "${FILESDIR}"/${PN}-${PATCH_V}-qt4.4.patch
-	epatch "${DISTDIR}"/${P}-OpenFOAM.patch.bz2
+	epatch "${DISTDIR}"/${P}-OpenFOAM-20080728.patch.bz2
 
 	# rename paraview's assistant wrapper
 	if use qt4; then
@@ -150,12 +156,12 @@ src_install() {
 	if use qt4; then
 		mv "${D}"/usr/bin/assistant "${D}"/usr/bin/paraview-assistant \
 			|| die "Failed to rename assistant wrapper"
-		chmod 0755 "${D}"/usr/$(get_libdir)/${PN}-${MY_PV}/assistant-real \
+		chmod 0755 "${D}"/usr/${PVLIBDIR}/assistant-real \
 			|| die "Failed to change permissions on assistant wrapper"
 	fi
 
 	# add release note for the OpenFOAM-1.5 patch
-	dodoc "${S}"/ReleaseNotes_OpenFOAMReader20080831
+	dodoc "${S}"/ReleaseNotes_OpenFOAMReader20080728
 
 	# set up the environment
 	echo "LDPATH=/usr/${PVLIBDIR}" >> "${T}"/40${PN}
