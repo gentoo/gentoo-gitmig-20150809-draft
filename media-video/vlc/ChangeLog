@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.403 2008/10/28 01:21:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.404 2008/10/30 20:50:37 dertobi123 Exp $
+
+  30 Oct 2008; Tobias Scherbaum <dertobi123@gentoo.org> vlc-0.9.5.ebuild:
+  Added ~ppc, bug #242740
 
   28 Oct 2008; Brent Baude <ranger@gentoo.org> vlc-0.9.5.ebuild:
   Marking vlc-0.9.5 ~ppc64 for bug 242740
