@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-0.21.0.ebuild,v 1.2 2008/10/27 08:56:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-0.21.0.ebuild,v 1.3 2008/10/30 16:46:36 scarabeus Exp $
 
-EAPI="2"
+EAPI="1"
 
 inherit cmake-utils games
 
