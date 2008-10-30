@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.25 2008/09/07 20:03:34 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.26 2008/10/30 19:26:52 jer Exp $
+
+  30 Oct 2008; Jeroen Roovers <jer@gentoo.org> culmus-0.102.ebuild:
+  Marked ~hppa (bug #168331).
 
 *culmus-0.102 (07 Sep 2008)
 
