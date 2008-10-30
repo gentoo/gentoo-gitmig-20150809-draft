@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.27 2008/10/23 21:14:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.28 2008/10/30 08:56:30 aballier Exp $
+
+  30 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  ffmpeg2theora-0.22.ebuild:
+  bump scons dep, thanks to Andrew John Hughes <gnu_andrew@member.fsf.org>
+  for reporting, bug #244913
 
 *ffmpeg2theora-0.22 (22 Oct 2008)
 
