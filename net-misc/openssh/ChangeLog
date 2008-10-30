@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.319 2008/10/30 09:52:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.320 2008/10/30 15:35:19 ranger Exp $
+
+  30 Oct 2008; Brent Baude <ranger@gentoo.org> openssh-5.1_p1-r1.ebuild:
+  Marking openssh-5.1_p1-r1 ppc for bug 231292
 
   30 Oct 2008; Raúl Porcel <armin76@gentoo.org> openssh-5.1_p1-r1.ebuild:
   alpha/ia64/sparc stable #231292
