@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamdyke
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/ChangeLog,v 1.9 2008/08/23 06:03:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/ChangeLog,v 1.10 2008/10/30 21:28:34 tupone Exp $
+
+*spamdyke-4.0.7 (30 Oct 2008)
+
+  30 Oct 2008; Tupone Alfredo <tupone@gentoo.org> +spamdyke-4.0.7.ebuild:
+  Version bump to 4.0.7
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
