@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.154 2008/10/27 15:53:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.155 2008/10/30 10:54:14 armin76 Exp $
+
+  30 Oct 2008; Raúl Porcel <armin76@gentoo.org> sound-juicer-2.24.0.ebuild:
+  Re-add ~ia64/~sparc wrt #241476
 
   27 Oct 2008; Jeroen Roovers <jer@gentoo.org> sound-juicer-2.24.0.ebuild:
   Marked ~hppa (bug #241476).
