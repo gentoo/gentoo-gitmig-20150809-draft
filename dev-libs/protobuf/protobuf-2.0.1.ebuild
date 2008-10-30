@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.0.1.ebuild,v 1.1 2008/09/11 20:16:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.0.1.ebuild,v 1.2 2008/10/30 14:22:14 spock Exp $
 
 inherit eutils distutils python java-pkg-opt-2
 
@@ -53,7 +53,7 @@ src_install() {
 	fi
 
 	if use vim-syntax; then
-		insinto /usr/share/vim/vimfiles
+		insinto /usr/share/vim/vimfiles/syntax
 		doins editors/proto.vim
 	fi
 
