@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-1.0.0.ebuild,v 1.6 2008/10/27 04:12:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-1.0.0.ebuild,v 1.7 2008/10/30 20:03:34 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="mmx debug doc"
 
 DEPEND="doc? ( app-doc/doxygen
