@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.3.7-r1.ebuild,v 1.1 2008/06/15 18:54:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.3.9.ebuild,v 1.1 2008/10/30 21:19:42 eva Exp $
 
 inherit eutils gnome2
 
 DESCRIPTION="Gnome Partition Editor"
 HOMEPAGE="http://gparted.sourceforge.net/"
 
-SRC_URI="mirror://sourceforge/gparted/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,7 +23,9 @@ RDEPEND="${common_depends}
 		kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 		fat? ( sys-fs/dosfstools )
 		ntfs? ( sys-fs/ntfsprogs )
-		hfs? ( sys-fs/hfsutils )
+		hfs? (
+			sys-fs/udev
+			sys-fs/hfsutils )
 		jfs? ( sys-fs/jfsutils )
 		reiserfs? ( sys-fs/reiserfsprogs )
 		reiser4? ( sys-fs/reiser4progs )
@@ -31,13 +33,22 @@ RDEPEND="${common_depends}
 
 DEPEND="${common_depends}
 		>=dev-util/pkgconfig-0.12
-		>=dev-util/intltool-0.35.5"
+		>=dev-util/intltool-0.35.5
+		app-text/scrollkeeper
+		app-text/gnome-doc-utils"
+
+DOCS="AUTHORS NEWS ChangeLog README"
 
 src_unpack() {
 	gnome2_src_unpack
 
-	# HAL is not necessary, bug #220459
-	epatch "${FILESDIR}/${P}-hal-lock.patch"
+	# Revert upstream changes to use gksu inconditionally
+	sed "s:Exec=@gksuprog@ :Exec=:" \
+		-i gparted.desktop.in.in || die "sed 1 failed"
+}
+
+pkg_setup() {
+	G2CONF="${G2CONF} --disable-scrollkeeper GKSUPROG=/bin/true"
 }
 
 src_install() {
