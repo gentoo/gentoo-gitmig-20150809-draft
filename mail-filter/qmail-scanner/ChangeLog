@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/qmail-scanner
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.43 2008/10/29 20:17:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.44 2008/10/30 05:47:08 tupone Exp $
+
+  30 Oct 2008; Tupone Alfredo <tupone@gentoo.org>
+  qmail-scanner-2.02-r1.ebuild:
+  oops. Did not want to stabilize
 
 *qmail-scanner-2.05 (29 Oct 2008)
 
