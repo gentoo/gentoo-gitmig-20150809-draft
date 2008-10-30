@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/xfwm4-themes
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.4 2008/06/22 22:32:34 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.5 2008/10/30 22:12:20 angelos Exp $
+
+*xfwm4-themes-4.4.3 (30 Oct 2008)
+
+  30 Oct 2008; Christoph Mende <angelos@gentoo.org>
+  +xfwm4-themes-4.4.3.ebuild:
+  Xfce-4.4.3 bump
 
   22 Jun 2008; Samuli Suominen <drac@gentoo.org> +xfwm4-themes-4.4.2.ebuild:
   Moved from xfce-extra.
