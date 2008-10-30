@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/realcodecs/realcodecs-11.0.1.1056.ebuild,v 1.1 2008/10/29 17:21:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/realcodecs/realcodecs-11.0.1.1056.ebuild,v 1.2 2008/10/30 20:56:05 zmedico Exp $
 
 inherit eutils rpm multilib
 
@@ -15,7 +15,8 @@ SLOT="0"
 IUSE=""
 RDEPEND=">=media-libs/win32codecs-20071007-r4[real]
 	x86? ( =virtual/libstdc++-3.3* )
-	amd64? ( app-emulation/emul-linux-x86-compat )"
+	amd64? ( app-emulation/emul-linux-x86-compat )
+	!<media-video/realplayer-11.0.1.1056-r2"
 
 S="${WORKDIR}/opt/real/RealPlayer"
 

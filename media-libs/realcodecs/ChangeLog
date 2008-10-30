@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/realcodecs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/realcodecs/ChangeLog,v 1.2 2008/10/29 17:21:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/realcodecs/ChangeLog,v 1.3 2008/10/30 20:56:05 zmedico Exp $
+
+  30 Oct 2008; Zac Medico <zmedico@gentoo.org>
+  realcodecs-11.0.1.1056.ebuild:
+  Bug #244949 - Block <realplayer-11.0.1.1056-r2 due to file collision with
+  /opt/RealPlayer/codecs/*.
 
 *realcodecs-11.0.1.1056 (29 Oct 2008)
 
