@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/tikiwiki
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.61 2008/09/21 13:09:50 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.62 2008/10/30 15:32:02 wrobel Exp $
+
+*tikiwiki-2.2 (30 Oct 2008)
+
+  30 Oct 2008; Gunnar Wrobel <wrobel@gentoo.org> +tikiwiki-2.2.ebuild:
+  Added www-apps/tikiwiki-2.2 (sec issue #243854).
 
   21 Sep 2008; wrobel@gentoo.org -tikiwiki-1.9.10.1.ebuild:
   Removed vulnerable tikiwiki-1.9.10.1 (#213320).
