@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/pythoncad
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/ChangeLog,v 1.1 2007/06/16 17:01:34 cedk Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/pythoncad/ChangeLog,v 1.2 2008/10/30 18:29:49 angelos Exp $
+
+  30 Oct 2008; Christoph Mende <angelos@gentoo.org> pythoncad-1.36.ebuild:
+  Added ~amd64
 
 *pythoncad-1.36 (16 Jun 2007)
 
