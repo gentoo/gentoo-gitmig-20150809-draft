@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.116 2008/08/22 20:03:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.117 2008/10/30 07:53:10 kumba Exp $
+
+*mips-sources-2.6.27.4 (30 Oct 2008)
+
+  30 Oct 2008; Joshua Kinard <kumba@gentoo.org>
+  +mips-sources-2.6.27.4.ebuild:
+  Update mips-sources to 2.6.27.4. Tested on IP27, IP28, IP30, & IP32, but
+  not on IP22 or cobalt systems.
 
   22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
