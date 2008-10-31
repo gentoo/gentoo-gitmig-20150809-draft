@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.103 2008/10/31 07:38:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.104 2008/10/31 07:39:39 graaff Exp $
+
+  31 Oct 2008; Hans de Graaff <graaff@gentoo.org>
+  -rubygems-0.8.11-r6.ebuild, -rubygems-1.0.1.ebuild,
+  -rubygems-1.1.0.ebuild:
+  Remove old versions
 
   31 Oct 2008; Hans de Graaff <graaff@gentoo.org> rubygems-1.2.0.ebuild:
   Install ChangeLog and TODO
