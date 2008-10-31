@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.22 2008/08/30 04:59:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.23 2008/10/31 21:50:39 gmsoft Exp $
+
+  31 Oct 2008; Guy Martin <gmsoft@gentoo.org> libp11-0.2.3.ebuild:
+  hppa stable, #198688
 
 *libp11-0.2.4 (30 Aug 2008)
 
