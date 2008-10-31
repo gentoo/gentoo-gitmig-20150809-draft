@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/acgmake
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/acgmake/ChangeLog,v 1.4 2007/02/08 15:00:09 dsd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/acgmake/ChangeLog,v 1.5 2008/10/31 20:58:37 jsbronder Exp $
+
+  31 Oct 2008; Justin Bronder <jsbronder@gentoo.org> metadata.xml:
+  Taking over as maintainer
 
 *acgmake-1.2-r2 (08 Feb 2007)
 
