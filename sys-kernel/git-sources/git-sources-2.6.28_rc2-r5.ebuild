@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.27-r1.ebuild,v 1.1 2008/10/11 00:45:21 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-2.6.28_rc2-r5.ebuild,v 1.1 2008/10/31 12:16:28 mpagano Exp $
 
 UNIPATCH_STRICTORDER="yes"
 K_NOUSENAME="yes"
@@ -26,11 +26,6 @@ experimental nature. If you have any issues, try a matching vanilla-sources
 ebuild -- if the problem is not there, please contact the upstream kernel
 developers at http://bugme.osdl.org and on the linux-kernel mailing list to
 report the problem so it can be fixed in time for the next kernel release."
-
-K_EXTRAEWARN="This development kernel provides a patch which claims to protect
-against damaging systems using the e1000e driver. If your system uses this
-driver and you have any reservations then DO NOT install and run any 2.6.27
-kernel. See bug #238489 for more information"
 
 pkg_postinst() {
 	postinst_sources
