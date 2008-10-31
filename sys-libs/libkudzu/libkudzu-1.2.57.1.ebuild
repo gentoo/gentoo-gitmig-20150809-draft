@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.2.57.1.ebuild,v 1.10 2008/02/29 01:34:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.2.57.1.ebuild,v 1.11 2008/10/31 16:16:26 jer Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -33,7 +33,7 @@ src_unpack() {
 src_compile() {
 	if use zlib
 	then
-		append-ldflags -lz
+		perl -pi -e 's| -lpci| -lz -lpci|g' Makefile
 	elif built_with_use --missing false sys-apps/pciutils zlib
 	then
 		die "You need to build with USE=zlib to match sys-apps/pcituils"
