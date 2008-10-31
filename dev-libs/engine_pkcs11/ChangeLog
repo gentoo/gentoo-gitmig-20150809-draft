@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/engine_pkcs11
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.19 2008/08/30 05:12:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.20 2008/10/31 21:58:05 gmsoft Exp $
+
+  31 Oct 2008; Guy Martin <gmsoft@gentoo.org> engine_pkcs11-0.1.4.ebuild:
+  hppa stable, #198685
 
 *engine_pkcs11-0.1.5 (30 Aug 2008)
 
