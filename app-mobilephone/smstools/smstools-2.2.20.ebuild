@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/smstools-2.2.20.ebuild,v 1.1 2008/01/14 16:13:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/smstools-2.2.20.ebuild,v 1.2 2008/10/31 15:49:29 chainsaw Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Send and receive short messages through GSM modems"
 HOMEPAGE="http://smstools.meinemullemaus.de/"
@@ -18,11 +18,6 @@ RDEPEND="sys-process/procps
 
 S="${WORKDIR}"/${PN}
 
-pkg_setup() {
-	enewgroup sms
-	enewuser smsd -1 -1 /var/spool/sms sms
-}
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -35,7 +30,12 @@ src_unpack() {
 
 src_compile() {
 	cd src
-	emake || die "emake failed"
+	emake CC="$(tc-getCC)" || die "emake failed"
+}
+
+pkg_preinst() {
+	enewgroup sms
+	enewuser smsd -1 -1 /var/spool/sms sms
 }
 
 src_install() {
@@ -60,5 +60,6 @@ src_install() {
 }
 
 pkg_postinst() {
+	touch /var/log/smsd.log
 	chown -f smsd:sms /var/log/smsd.log
 }
