@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.80 2008/05/10 01:50:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.81 2008/10/31 21:08:57 ulm Exp $
+
+  31 Oct 2008; Ulrich Mueller <ulm@gentoo.org> ptex-3.1.10_p20071203.ebuild,
+  ptex-3.1.10_p20080128.ebuild, ptex-3.1.10_p20080414.ebuild:
+  Remove virtual/tetex, bug 222501.
 
 *ptex-3.1.10_p20080414 (10 May 2008)
 

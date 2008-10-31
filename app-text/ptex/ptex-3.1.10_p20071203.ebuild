@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071203.ebuild,v 1.10 2008/05/10 01:50:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20071203.ebuild,v 1.11 2008/10/31 21:08:57 ulm Exp $
 
 TETEX_PV=3.0_p1
 
@@ -53,9 +53,6 @@ DEPEND="!app-text/tetex
 	)"
 
 S="${WORKDIR}/${PTETEX}"
-
-# Sorry this provides tetex again...
-PROVIDE="virtual/tetex"
 
 src_unpack() {
 	#tetex-3_src_unpack
