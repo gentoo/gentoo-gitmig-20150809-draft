@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/comicthumb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/comicthumb/ChangeLog,v 1.5 2008/07/29 15:09:20 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/comicthumb/ChangeLog,v 1.6 2008/10/31 13:07:56 lack Exp $
+
+  31 Oct 2008; Jim Ramsay <lack@gentoo.org> comicthumb-0.1.ebuild:
+  Added alternative to app-arch/unrar (Bug #244985)
 
   29 Jul 2008; Jim Ramsay <lack@gentoo.org> metadata.xml:
   added USE flag descriptions to metadata.xml

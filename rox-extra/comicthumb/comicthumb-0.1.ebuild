@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/comicthumb/comicthumb-0.1.ebuild,v 1.4 2007/11/16 15:05:52 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/comicthumb/comicthumb-0.1.ebuild,v 1.5 2008/10/31 13:07:56 lack Exp $
 
 ROX_VER="2.1.1"
 ROX_LIB_VER="2.0.2"
@@ -16,7 +16,7 @@ SLOT="0"
 IUSE="rar"
 KEYWORDS="amd64 x86"
 
-RDEPEND="rar? ( app-arch/unrar )
+RDEPEND="rar? ( || ( app-arch/unrar app-arch/rar ) )
 	dev-python/imaging"
 
 APPNAME=${MY_PN}
