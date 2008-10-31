@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/echo-icon-theme
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/echo-icon-theme/ChangeLog,v 1.2 2008/08/16 04:45:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/echo-icon-theme/ChangeLog,v 1.3 2008/10/31 20:43:01 cardoe Exp $
+
+*echo-icon-theme-0.3.89.0_pre20081031 (31 Oct 2008)
+
+  31 Oct 2008; Doug Goldstein <cardoe@gentoo.org>
+  -echo-icon-theme-0.3.89.0_pre20080620.ebuild,
+  +echo-icon-theme-0.3.89.0_pre20081031.ebuild:
+  newer snapshot. fixes bug #244316
 
   24 Jun 2008; Doug Goldstein <cardoe@gentoo.org>
   echo-icon-theme-0.3.89.0_pre20080620.ebuild:

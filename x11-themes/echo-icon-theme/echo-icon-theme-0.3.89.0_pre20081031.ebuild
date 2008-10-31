@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/echo-icon-theme/echo-icon-theme-0.3.89.0_pre20080620.ebuild,v 1.2 2008/08/16 04:45:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/echo-icon-theme/echo-icon-theme-0.3.89.0_pre20081031.ebuild,v 1.1 2008/10/31 20:43:01 cardoe Exp $
 
 inherit eutils gnome2-utils
 
