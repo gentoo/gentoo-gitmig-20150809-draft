@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/porticron
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.1 2008/10/28 12:17:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.2 2008/10/31 08:20:07 hollow Exp $
+
+*porticron-0.2 (31 Oct 2008)
+
+  31 Oct 2008; Benedikt Böhm <hollow@gentoo.org> +files/porticron,
+  +porticron-0.2.ebuild:
+  version bump wrt #244873
 
 *porticron-0.1 (28 Oct 2008)
 
