@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.10.ebuild,v 1.2 2008/10/28 02:07:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.10.ebuild,v 1.3 2008/10/31 02:43:58 jer Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~sparc ~x86"
 IUSE="alsa doc gstreamer gtk pulseaudio"
 
 RDEPEND="media-libs/libvorbis
