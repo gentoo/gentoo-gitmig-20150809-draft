@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/schedtool-1.2.6.ebuild,v 1.2 2006/09/08 17:29:30 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/schedtool/schedtool-1.3.0.ebuild,v 1.1 2008/10/31 21:11:04 dsd Exp $
 
 DESCRIPTION="A tool to query or alter a process' scheduling policy."
 HOMEPAGE="http://freequaos.host.sk/schedtool"
@@ -12,8 +12,8 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	sed -i '/^CFLAGS=/d ; s:/man/:/share/man/:' Makefile
+	cd "${S}"
+	sed -i '/^CFLAGS=/d' Makefile
 }
 
 src_compile() {
@@ -21,6 +21,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTPREFIX=${D}/usr install
-	dodoc BUGS CHANGES INSTALL LICENSE README THANKS TUNING
+	make DESTPREFIX="${D}"/usr install
+	dodoc BUGS CHANGES INSTALL README THANKS TUNING
 }
