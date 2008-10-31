@@ -1,9 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-games/texlive-games-2008.ebuild,v 1.1 2008/09/09 16:27:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-games/texlive-games-2008.ebuild,v 1.2 2008/10/31 14:25:47 aballier Exp $
 
-TEXLIVE_MODULES_DEPS="dev-texlive/texlive-latex
-"
 TEXLIVE_MODULE_CONTENTS="backgammon bridge cchess chess chessboard chessfss egameps go hexgame jeopardy othello psgo sgame skak skaknew sudoku sudokubundle xq xskak collection-games
 "
 TEXLIVE_MODULE_DOC_CONTENTS="backgammon.doc chessboard.doc chessfss.doc egameps.doc hexgame.doc jeopardy.doc othello.doc psgo.doc sgame.doc skak.doc skaknew.doc sudoku.doc sudokubundle.doc xq.doc xskak.doc "
@@ -15,3 +13,6 @@ LICENSE="GPL-2 as-is freedist GPL-1 LPPL-1.3 public-domain "
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
+DEPEND=">=dev-texlive/texlive-latex-2008
+"
+RDEPEND="${DEPEND}"

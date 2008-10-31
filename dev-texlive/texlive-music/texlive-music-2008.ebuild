@@ -1,9 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-music/texlive-music-2008.ebuild,v 1.1 2008/09/09 16:49:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-music/texlive-music-2008.ebuild,v 1.2 2008/10/31 14:44:50 aballier Exp $
 
-TEXLIVE_MODULES_DEPS="dev-texlive/texlive-latex
-"
 TEXLIVE_MODULE_CONTENTS="abc guitar harmony musictex musixlyr musixps musixtex songbook bin-musixflx collection-music
 "
 TEXLIVE_MODULE_DOC_CONTENTS="abc.doc guitar.doc harmony.doc musictex.doc musixlyr.doc musixps.doc musixtex.doc songbook.doc "
@@ -15,3 +13,6 @@ LICENSE="GPL-2 freedist GPL-1 LGPL-2.1 LPPL-1.3 "
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
+DEPEND=">=dev-texlive/texlive-latex-2008
+"
+RDEPEND="${DEPEND}"

@@ -1,9 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarab/texlive-langarab-2008.ebuild,v 1.1 2008/09/09 16:31:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarab/texlive-langarab-2008.ebuild,v 1.2 2008/10/31 14:28:46 aballier Exp $
 
-TEXLIVE_MODULES_DEPS="dev-texlive/texlive-basic
-"
 TEXLIVE_MODULE_CONTENTS="arabi arabtex hyphen-arabic hyphen-farsi collection-langarab
 "
 TEXLIVE_MODULE_DOC_CONTENTS="arabi.doc arabtex.doc "
@@ -15,3 +13,6 @@ LICENSE="GPL-2 LPPL-1.3 "
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
+DEPEND=">=dev-texlive/texlive-basic-2008
+"
+RDEPEND="${DEPEND}"

@@ -1,9 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-slovenian/texlive-documentation-slovenian-2008.ebuild,v 1.7 2008/10/04 15:55:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-slovenian/texlive-documentation-slovenian-2008.ebuild,v 1.8 2008/10/31 14:21:18 aballier Exp $
 
-TEXLIVE_MODULES_DEPS="dev-texlive/texlive-documentation-base
-"
 TEXLIVE_MODULE_CONTENTS="lshort-slovenian collection-documentation-slovenian
 "
 TEXLIVE_MODULE_DOC_CONTENTS="lshort-slovenian.doc "
@@ -15,3 +13,6 @@ LICENSE="GPL-2 GPL-1 "
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
+DEPEND=">=dev-texlive/texlive-documentation-base-2008
+"
+RDEPEND="${DEPEND}"
