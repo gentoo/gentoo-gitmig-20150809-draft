@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gsf-sharp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/ChangeLog,v 1.11 2007/12/25 13:20:27 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/ChangeLog,v 1.12 2008/10/31 20:18:32 dsd Exp $
+
+  31 Oct 2008; Daniel Drake <dsd@gentoo.org> gsf-sharp-0.8.ebuild:
+  Add dependency on pkgconfig, bug #206094
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing joem from metadata.xml as per #69387.
