@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.84 2008/10/27 05:22:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.85 2008/10/31 21:25:56 dsd Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -37,6 +37,20 @@
 #
 # The structure of each MODULE_NAMES entry is as follows:
 # modulename(libdir:srcdir:objdir)
+#
+# modulename = name of the module file excluding the .ko
+# libdir     = place in system modules directory where module is installed:
+# srcdir     = place for ebuild to cd to before running make
+# objdir     = place the .ko and objects are located after make runs
+#
+# To get an idea of how these variables are used, here's a few lines
+# of code from around line 540 in this eclass:
+#		
+#	einfo "Installing ${modulename} module"
+#	cd ${objdir} || die "${objdir} does not exist"
+#	insinto /lib/modules/${KV_FULL}/${libdir}
+#	doins ${modulename}.${KV_OBJ} || die "doins ${modulename}.${KV_OBJ} failed"
+#
 # for example:
 # MODULE_NAMES="module_pci(pci:${S}/pci:${S}) module_usb(usb:${S}/usb:${S})"
 #
