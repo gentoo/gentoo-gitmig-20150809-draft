@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/smstools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.13 2008/10/31 15:49:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.14 2008/10/31 16:28:50 chainsaw Exp $
+
+  31 Oct 2008; <chainsaw@gentoo.org> smstools-2.2.20.ebuild:
+  Update ebuild based on -dev ML feedback by Torsten Veller
+  <ml-en@veller.net>.
+
+  31 Oct 2008; <chainsaw@gentoo.org> -smstools-2.2.9.ebuild,
+  -smstools-2.2.13.ebuild:
+  Remove old ebuilds.
 
   31 Oct 2008; <chainsaw@gentoo.org> smstools-2.2.20.ebuild:
   Respect CC variable, closes bug #243690 by Diego Pettenò
