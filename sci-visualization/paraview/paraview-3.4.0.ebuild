@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.2 2008/10/30 15:34:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.3 2008/10/31 15:47:37 markusle Exp $
 
 EAPI="1"
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python qt4
 
-MY_PV="3.3"
-PATCH_V="${MY_PV}_pre20080514"
+PATCH_V="3.3_pre20080514"
+MAJOR_PV=$(get_version_component_range 1-2)
 
 DESCRIPTION="ParaView is a powerful scientific data visualization application"
 HOMEPAGE="http://www.paraview.org"
@@ -42,7 +42,7 @@ DEPEND="${RDEPEND}
 		doc? ( app-doc/doxygen )
 		>=dev-util/cmake-2.4.5"
 
-PVLIBDIR="$(get_libdir)/${P}"
+PVLIBDIR="$(get_libdir)/${PN}-${MAJOR_PV}"
 BUILDDIR="${WORKDIR}/build"
 S="${WORKDIR}"/ParaView-${PV}
 

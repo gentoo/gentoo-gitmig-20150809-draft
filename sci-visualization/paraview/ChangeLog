@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.28 2008/10/30 15:34:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.29 2008/10/31 15:47:37 markusle Exp $
+
+  31 Oct 2008; Markus Dittrich <markusle@gentoo.org> paraview-3.4.0.ebuild:
+  Switched install location from paraview-3.4.0 to paraview-3.4.
 
   30 Oct 2008; Markus Dittrich <markusle@gentoo.org> paraview-3.4.0.ebuild:
   Fixed wrong installation path and went back to EAPI=1 to ease 
