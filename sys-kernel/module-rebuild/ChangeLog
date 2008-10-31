@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/module-rebuild
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.14 2008/08/07 02:48:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.15 2008/10/31 22:53:43 dsd Exp $
+
+*module-rebuild-0.6 (31 Oct 2008)
+
+  31 Oct 2008; Daniel Drake <dsd@gentoo.org> +files/module-rebuild-0.6,
+  +module-rebuild-0.6.ebuild:
+  Pass --ignore-default-opts to emerge, thanks to Allen Brooker in bug
+  #137056. Add paludis support thanks to Jack Byer in bug #207681. Fix typo
+  in error message thanks to Dan Wallis in bug #238044.
 
   07 Aug 2008; Jeroen Roovers <jer@gentoo.org> module-rebuild-0.5.ebuild:
   Stable for HPPA too.
