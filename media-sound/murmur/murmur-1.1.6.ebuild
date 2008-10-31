@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.1.6.ebuild,v 1.3 2008/10/22 23:34:35 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.1.6.ebuild,v 1.4 2008/10/31 20:25:08 tgurr Exp $
 
 EAPI="2"
 
@@ -16,16 +16,17 @@ SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug logrotate pch"
+IUSE="debug +ice logrotate pch"
 
-RDEPEND="dev-cpp/Ice
-	dev-libs/boost
+RDEPEND="
 	|| ( ( x11-libs/qt-core:4[ssl]
 			x11-libs/qt-dbus:4
 			|| ( x11-libs/qt-sql:4[sqlite] x11-libs/qt-sql:4[mysql] ) )
 		=x11-libs/qt-4.3*:4[dbus,ssl,sqlite3]
 		=x11-libs/qt-4.3*:4[dbus,ssl,mysql] )
-	logrotate? ( app-admin/logrotate )"
+	ice? ( dev-cpp/Ice dev-libs/boost )
+	logrotate? ( app-admin/logrotate )
+"
 
 DEPEND="${RDEPEND}"
 
@@ -46,6 +47,7 @@ src_prepare() {
 
 src_configure() {
 	use debug && conf_add="${conf_add} symbols debug" || conf_add="${conf_add} release"
+	use ice || conf_add="${conf_add} no-ice"
 	use pch || echo "CONFIG-=precompile_header" >> src/mumble.pri
 
 	eqmake4 main.pro -recursive \

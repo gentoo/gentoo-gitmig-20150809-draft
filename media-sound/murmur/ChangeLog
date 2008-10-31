@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.8 2008/10/22 23:34:35 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.9 2008/10/31 20:25:08 tgurr Exp $
+
+  31 Oct 2008; Timo Gurr <tgurr@gentoo.org> files/murmur.initd,
+  metadata.xml, murmur-1.1.6.ebuild:
+  Fix dbus usage in init script and introduce ice USE flag. Thanks Dennis
+  Schridde, Atman and Sascha Jüngling.
 
   22 Oct 2008; Timo Gurr <tgurr@gentoo.org> metadata.xml,
   murmur-1.1.6.ebuild:

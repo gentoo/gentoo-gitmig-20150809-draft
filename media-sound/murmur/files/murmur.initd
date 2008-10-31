@@ -3,8 +3,8 @@
 opts="reload"
 
 depend() {
-	need dbus localmount net
-	use logger
+	need localmount net
+	use dbus logger
 	after bootmisc mysql
 }
 
