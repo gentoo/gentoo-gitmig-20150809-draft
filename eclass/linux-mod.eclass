@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.86 2008/10/31 22:24:55 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.87 2008/10/31 22:31:09 dsd Exp $
 
 # Author(s): John Mylchreest <johnm@gentoo.org>,
 #            Stefan Schweizer <genstef@gentoo.org>
@@ -648,8 +648,8 @@ linux-mod_src_compile() {
 						${BUILD_PARAMS} \
 						${BUILD_TARGETS} " \
 				|| die "Unable to emake HOSTCC="$(tc-getBUILD_CC)" CROSS_COMPILE=${CHOST}- LDFLAGS="$(get_abi_LDFLAGS)" ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS}"
-			touch ${srcdir}/.built
 			cd ${OLDPWD}
+			touch ${srcdir}/.built
 		fi
 	done
 
