@@ -1,6 +1,9 @@
 # ChangeLog for media-video/y4mscaler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/y4mscaler/ChangeLog,v 1.8 2008/10/31 12:12:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/y4mscaler/ChangeLog,v 1.9 2008/10/31 12:14:20 aballier Exp $
+
+  31 Oct 2008; Alexis Ballier <aballier@gentoo.org> y4mscaler-9.0.ebuild:
+  shorten description
 
   31 Oct 2008; Alexis Ballier <aballier@gentoo.org> y4mscaler-9.0.ebuild:
   add missing die calls...
