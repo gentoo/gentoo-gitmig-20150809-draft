@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.61-r1.ebuild,v 1.9 2008/01/23 22:33:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.61-r1.ebuild,v 1.10 2008/10/31 20:13:08 opfer Exp $
 
-inherit autotools elisp-common eutils versionator flag-o-matic
+inherit autotools eutils versionator flag-o-matic
 
 DESCRIPTION="GPL Ghostscript - the most current Ghostscript, AFPL, relicensed"
 HOMEPAGE="http://ghostscript.com/"
