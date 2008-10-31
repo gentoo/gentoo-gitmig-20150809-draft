@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/compizconfig-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/ChangeLog,v 1.6 2008/10/27 22:42:38 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/ChangeLog,v 1.7 2008/10/31 17:23:57 jmbsvicetto Exp $
+
+  31 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed the metadata.xml.
 
   27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   compizconfig-python-0.7.8.ebuild:
