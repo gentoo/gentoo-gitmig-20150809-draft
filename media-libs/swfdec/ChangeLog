@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.53 2008/10/18 22:50:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.54 2008/10/31 20:36:00 cardoe Exp $
+
+*swfdec-0.8.2 (31 Oct 2008)
+
+  31 Oct 2008; Doug Goldstein <cardoe@gentoo.org> -swfdec-0.6.4.ebuild,
+  -swfdec-0.6.6.ebuild, -swfdec-0.6.6-r1.ebuild, +swfdec-0.8.2.ebuild:
+  rev bump. add +gtk to USE since every usage of swfdec currently needs it.
+  remove old versions
 
   18 Oct 2008; Brent Baude <ranger@gentoo.org> swfdec-0.6.8.ebuild:
   Marking swfdec-0.6.8 ppc stable for bug 236971

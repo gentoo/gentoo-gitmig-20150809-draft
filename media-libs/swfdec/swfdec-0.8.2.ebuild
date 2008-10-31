@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.6.6.ebuild,v 1.4 2008/06/02 10:39:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.8.2.ebuild,v 1.1 2008/10/31 20:36:00 cardoe Exp $
 
 EAPI=1
 
-inherit eutils versionator confutils
+inherit eutils versionator
 
 MY_PV=$(get_version_component_range 1-2)
 DESCRIPTION="Macromedia Flash decoding library"
@@ -15,25 +15,20 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
-IUSE="alsa doc ffmpeg gstreamer gtk mad oss pulseaudio"
+IUSE="alsa doc ffmpeg gstreamer +gtk oss pulseaudio"
 
-# For <media-video/ffmpeg-0.4.9_p2008032, see #216978
-RDEPEND=">=dev-libs/glib-2.12
+RDEPEND=">=dev-libs/glib-2.16
 	>=dev-libs/liboil-0.3.1
 	>=x11-libs/pango-1.16.4
 	gtk? (
 		>=x11-libs/gtk+-2.8.0
 		net-libs/libsoup:2.4
 		)
-	>=x11-libs/cairo-1.2
-	ffmpeg? (
-		>=media-video/ffmpeg-0.4.9_p20070330
-		<media-video/ffmpeg-0.4.9_p20080326
-		)
-	mad? ( >=media-libs/libmad-0.15.1b )
+	>=x11-libs/cairo-1.6
 	gstreamer? (
 		>=media-libs/gstreamer-0.10.11
 		>=media-libs/gst-plugins-base-0.10.15
+		ffmpeg? ( media-plugins/gst-plugins-ffmpeg )
 		)
 	alsa? ( >=media-libs/alsa-lib-1.0.12 )
 	pulseaudio? ( media-sound/pulseaudio )"
@@ -42,6 +37,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.6 )"
 
+RESTRICT="test"
+
 pkg_setup() {
 	if use !gtk ; then
 		ewarn "swfdec will be built without swfdec-gtk convenience"
@@ -49,19 +46,26 @@ pkg_setup() {
 		ewarn "swfdec-gnome. Please add 'gtk' to your USE flags"
 		ewarn "unless you really know what you are doing."
 	fi
-	confutils_use_conflict oss alsa pulseaudio
+
+	if use !gstreamer && use ffmpeg; then
+		ewarn
+		ewarn "The 'ffmpeg' USE flag enables video support via gst-plugins-ffmpeg"
+		ewarn "as such it requires the 'gstreamer' USE flag to be enabled."
+	fi
+
+	if use alsa && use pulseaudio; then
+		ewarn
+		ewarn "Pulseaudio and ALSA selected. Selecting mature ALSA backend."
+	fi
 }
 
 src_compile() {
-	local myconf
-	local myaudio
-
-	#--with-audio=[auto/alsa/oss/none]
-	myaudio="none"
-	use oss && myaudio="oss"
-	use pulseaudio && myaudio="pa"
-	use alsa && myaudio="alsa"
-	myconf=" --with-audio=$myaudio"
+	# Backend logic is from configure.ac:
+	# alsa > pulseaudio > oss
+	local audio="none"
+	use oss && audio="oss"
+	use pulseaudio && audio="pulse"
+	use alsa && audio="alsa"
 
 	# bug #216009
 	# avoid writing to /root/.gstreamer-0.10/registry.xml
@@ -72,10 +76,10 @@ src_compile() {
 	econf \
 		$(use_enable doc gtk-doc) \
 		$(use_enable gstreamer) \
-		$(use_enable ffmpeg) \
-		$(use_enable mad) \
 		$(use_enable gtk) \
-		${myconf} || die "configure failed"
+		--disable-ffmpeg \
+		--disable-mad \
+		--with-audio=${audio} || die "configure failed"
 
 	# bug #216284 image tests are not ready yet
 	cat  >test/image/Makefile <<EOF
