@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.39 2008/04/03 11:08:59 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.40 2008/10/31 06:40:42 wrobel Exp $
+
+*otrs-2.3.3 (31 Oct 2008)
+
+  31 Oct 2008; Gunnar Wrobel <wrobel@gentoo.org> -otrs-2.2.2.ebuild,
+  -otrs-2.2.3.ebuild, +otrs-2.3.3.ebuild:
+  Added www-apps/otrs-2.3.3, removed otrs-2.2.2, -2.2.3. (#228607)
 
 *otrs-2.2.6 (03 Apr 2008)
 
