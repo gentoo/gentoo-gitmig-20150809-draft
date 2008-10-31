@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.12-r1.ebuild,v 1.1 2008/07/14 21:06:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.12-r1.ebuild,v 1.2 2008/10/31 21:32:22 robbat2 Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -27,7 +27,9 @@ if [ -n "${PKV_EXTRA}" ]; then
 	PATCH_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/patch-${PKV}.bz2"
 fi
 OKV="${KV_MAJOR}.${KV_MINOR}.${KV_SUB}"
-KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/linux-${OKV}.tar.bz2"
+KERNEL_URI="
+	mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2
+	mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/linux-${OKV}.tar.bz2"
 SRC_URI="
 	mirror://kernel/linux/libs/klibc/${P}.tar.bz2
 	mirror://kernel/linux/libs/klibc/Testing/${P}.tar.bz2
