@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.13.ebuild,v 1.1 2008/10/31 20:57:56 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.13.ebuild,v 1.2 2008/10/31 21:02:40 dsd Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,5 +31,5 @@ src_install () {
 	dosym /sbin/jfs_mkfs /sbin/mkfs.jfs
 	dosym /sbin/jfs_fsck /sbin/fsck.jfs
 
-	dodoc AUTHORS COPYING ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
