@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/dfbsee-0.7.4-r1.ebuild,v 1.3 2007/11/27 12:23:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/dfbsee-0.7.4-r1.ebuild,v 1.4 2008/10/31 11:31:33 aballier Exp $
 
-inherit flag-o-matic eutils
+inherit eutils toolchain-funcs
 
 MY_PN="DFBSee"
 MY_P=${MY_PN}-${PV}
@@ -29,16 +29,11 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-direcfb-0.9.24.patch"
 	epatch "${FILESDIR}/${P}-gcc4.patch"
-}
-
-src_compile() {
-	append-ldflags $(bindnow-flags)
-
-	econf
-	emake || die "make failed"
+	epatch "${FILESDIR}/${P}-standardtypes.patch"
+	tc-export CC
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc README AUTHORS
 }

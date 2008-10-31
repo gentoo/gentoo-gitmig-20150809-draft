@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dfbsee
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/ChangeLog,v 1.10 2007/11/27 12:23:42 zzam Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/ChangeLog,v 1.11 2008/10/31 11:31:33 aballier Exp $
+
+  31 Oct 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/dfbsee-0.7.4-standardtypes.patch, dfbsee-0.7.4-r1.ebuild:
+  Use standard types instead of __ prefixed ones, fixes bug #235783, stop
+  using bindnow-flags, bug #226983, and tc-export CC
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> dfbsee-0.7.4.ebuild,
   dfbsee-0.7.4-r1.ebuild:
