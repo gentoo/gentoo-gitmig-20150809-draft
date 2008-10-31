@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pkcs11-helper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.22 2008/08/30 04:22:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.23 2008/10/31 22:03:31 gmsoft Exp $
+
+  31 Oct 2008; Guy Martin <gmsoft@gentoo.org> pkcs11-helper-1.05.ebuild:
+  hppa stable, #215981
 
 *pkcs11-helper-1.06 (30 Aug 2008)
 
