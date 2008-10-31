@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer><email>hanno@gentoo.org</email></maintainer>
+<use>
+	<flag name="fuse">Enables support for the filesystem in userspace plugin through <pkg>sys-fs/fuse</pkg>.</flag>
+	<flag name="kde4">Compile the kde4 window decorator and add support for <pkg>kde-base/kdebase-startkde:4.1</pkg>.</flag>
+	<flag name="annotate">Build the annotate plugin</flag>
+</use>
+<herd>desktop-effects</herd>
+<longdescription>
+compiz is a compositing window manager that uses 3D graphics acceleration via OpenGL.
+</longdescription>
 </pkgmetadata>
