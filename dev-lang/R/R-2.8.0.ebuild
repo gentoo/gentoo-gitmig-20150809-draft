@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.8.0.ebuild,v 1.1 2008/10/27 10:32:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.8.0.ebuild,v 1.2 2008/10/31 13:05:36 markusle Exp $
 
 EAPI=2
 inherit eutils fortran flag-o-matic bash-completion versionator
@@ -74,6 +74,12 @@ src_prepare() {
 		export R_BROWSER="$(type -p xdg-open)"
 		export R_PDFVIEWER="$(type -p xdg-open)"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-without-X.patch
 }
 
 src_configure() {

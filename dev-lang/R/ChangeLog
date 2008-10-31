@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.140 2008/10/30 10:23:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.141 2008/10/31 13:05:36 markusle Exp $
+
+  31 Oct 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/R-2.8.0-without-X.patch, R-2.8.0.ebuild:
+  Fixed bug in source code preventing building with USE="-X" (see bug
+  #245027). Thanks much to Andrew Savchenko for his patch.
 
   30 Oct 2008; Raúl Porcel <armin76@gentoo.org> R-2.7.2.ebuild:
   alpha/ia64 stable #244621
