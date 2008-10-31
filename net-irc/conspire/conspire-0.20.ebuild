@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-0.20.ebuild,v 1.2 2008/10/12 00:12:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-0.20.ebuild,v 1.3 2008/10/31 13:14:41 chainsaw Exp $
+
+inherit eutils
 
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
@@ -20,6 +22,12 @@ RDEPEND=">=dev-libs/libmowgli-0.6.0
 	x11-libs/libsexy
 	dbus? ( >=dev-libs/dbus-glib-0.60 )
 	python? ( >=dev-lang/python-2.2 )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-de798c3d89ea.diff"
+}
 
 src_compile() {
 	econf \

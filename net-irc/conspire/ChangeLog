@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/conspire
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/ChangeLog,v 1.9 2008/10/12 00:12:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/ChangeLog,v 1.10 2008/10/31 13:14:41 chainsaw Exp $
+
+  31 Oct 2008; <chainsaw@gentoo.org> +files/0.20-de798c3d89ea.diff,
+  conspire-0.20.ebuild:
+  Build fix for recent GTK+ breakage, patch dug up by Kent Fredric
+  <kentfredric@gmail.com>. Closes bug #241498.
 
   12 Oct 2008; <chainsaw@gentoo.org> conspire-0.12.0.ebuild,
   conspire-0.13.1.ebuild, conspire-0.20.ebuild:
