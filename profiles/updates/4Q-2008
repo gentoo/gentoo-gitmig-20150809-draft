@@ -1,1 +1,3 @@
+move media-tv/pvr-firmware media-tv/ivtv-firmware
+move x11-drivers/xf86-video-i810 x11-drivers/xf86-video-intel
 slotmove dev-db/myodbc 0 3.51
