@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/omniorbpy
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.17 2008/10/27 10:04:39 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.18 2008/11/01 22:45:29 caster Exp $
+
+*omniorbpy-3.3 (01 Nov 2008)
+
+  01 Nov 2008; Vlastimil Babka <caster@gentoo.org> omniorbpy-3.0.ebuild,
+  +omniorbpy-3.3.ebuild:
+  Version bump, bug #214308. Also fix file collision with omniORB - bug
+  #166738.
 
   27 Oct 2008; Ali Polatel <hawking@gentoo.org> omniorbpy-2.5.ebuild,
   omniorbpy-2.6.ebuild, omniorbpy-2.7.ebuild, omniorbpy-3.0.ebuild:

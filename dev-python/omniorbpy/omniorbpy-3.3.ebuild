@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-3.0.ebuild,v 1.5 2008/11/01 22:45:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-3.3.ebuild,v 1.1 2008/11/01 22:45:29 caster Exp $
 
 inherit eutils python multilib
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="ssl"
 
-DEPEND=">=net-misc/omniORB-4.0.7
+DEPEND=">=net-misc/omniORB-4.1.3
 	ssl? ( dev-libs/openssl )"
 
 src_unpack() {
@@ -38,13 +38,11 @@ src_compile() {
 	use ssl && MY_CONF="${MY_CONF} --with-openssl=/usr"
 
 	python_version
-	MY_PY=/usr/bin/python${PYVER}
+	MY_PY="/usr/bin/python${PYVER}"
 
-	PYTHON=${MY_PY} econf \
-		--with-omniorb=/usr \
-		${MY_CONF} || die "./configure failed"
+	PYTHON="${MY_PY}" econf --with-omniorb=/usr ${MY_CONF}
 
-	emake || die " make failed"
+	emake || die "make failed"
 }
 
 src_install() {
@@ -63,16 +61,17 @@ src_install() {
 	mv python/dir.mk python/dir.mk_orig
 	awk -v STR="Naming\\\.idl" '{ if (/^[[:space:]]*$/) flag = 0; tmpstr = $0; if (gsub(STR, "", tmpstr)) flag = 1; if (flag) print "#" $0; else print $0; }' python/dir.mk_orig > python/dir.mk
 
-	make DESTDIR="${D}" install || die " install failed"
+	make DESTDIR="${D}" install || die "install failed"
 
-	dodoc COPYING.LIB README README.Python
-	dohtml doc/omniORBpy
-	dodoc doc/omniORBpy.p* # ps,pdf
-	dodoc doc/tex/* # .bib, .tex
+	dodoc COPYING.LIB README.txt README.Python || die
+	dohtml -r doc/omniORBpy || die
+	dodoc doc/omniORBpy.p* || die # ps,pdf
+	dodoc doc/tex/* || die # .bib, .tex
 
 	dodir /usr/share/doc/${P}/examples
 	cp -r examples/* "${D}"/usr/share/doc/${P}/examples
 
+	# bug #166738
 	python_version
 	mv "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/PortableServer.py \
 		"${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/omniorbpy_PortableServer.py
