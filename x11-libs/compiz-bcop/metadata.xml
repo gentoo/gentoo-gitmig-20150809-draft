@@ -2,8 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-effects</herd>
-<maintainer><email>hanno@gentoo.org</email></maintainer>
-<longdescription lang="en">Python bindings for libcompizconfig.
+<longdescription lang="en">
+BCOP is a code generator that provides an easy way to handle plugin options by
+generating parts of the plugin code directly from the xml metadata file. 
 </longdescription>
 </pkgmetadata>
 
