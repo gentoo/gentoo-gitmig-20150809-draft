@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-sl
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-sl/ChangeLog,v 1.2 2007/02/21 20:42:29 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-sl/ChangeLog,v 1.3 2008/11/01 11:34:45 pva Exp $
+
+  01 Nov 2008; Peter Volkov <pva@gentoo.org> ispell-sl-0.5.3.ebuild:
+  Cleanup, fixed multilib.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
