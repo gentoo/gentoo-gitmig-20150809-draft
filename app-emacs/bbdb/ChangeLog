@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/bbdb
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.39 2008/11/01 18:01:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.40 2008/11/01 18:09:12 ulm Exp $
+
+  01 Nov 2008; Ulrich Mueller <ulm@gentoo.org> -bbdb-2.35.ebuild:
+  Remove old.
 
   01 Nov 2008; nixnut <nixnut@gentoo.org> bbdb-2.35-r1.ebuild:
   Stable on ppc wrt bug 244687
