@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/ispell-lt
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ChangeLog,v 1.16 2007/02/21 20:39:46 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ChangeLog,v 1.17 2008/11/01 09:54:17 pva Exp $
+
+*ispell-lt-1.2.1 (01 Nov 2008)
+
+  01 Nov 2008; Peter Volkov <pva@gentoo.org> -ispell-lt-0.5.ebuild,
+  -ispell-lt-1.0.ebuild, ispell-lt-1.1.ebuild, +ispell-lt-1.2.1.ebuild:
+  Version bump. Removed old. Dropped stable mips keyword.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
