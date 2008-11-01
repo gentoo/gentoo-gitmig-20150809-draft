@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.49 2008/11/01 22:09:01 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.50 2008/11/01 22:25:50 loki_val Exp $
+
+  01 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> brasero-0.8.2.ebuild:
+  Fix bug 243190, thanks to Gilles (eva).
 
   01 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> brasero-0.7.1.ebuild,
   brasero-0.8.2.ebuild:
