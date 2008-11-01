@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/ispell-ru
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ChangeLog,v 1.20 2007/02/21 20:42:02 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-ru/ChangeLog,v 1.21 2008/11/01 12:25:31 pva Exp $
+
+*ispell-ru-0.99.8g_p5 (01 Nov 2008)
+
+  01 Nov 2008; Peter Volkov <pva@gentoo.org> -ispell-ru-0.99.6.1.ebuild,
+  -ispell-ru-0.99.6.1-r1.ebuild, ispell-ru-0.99.7.ebuild,
+  +ispell-ru-0.99.8g_p5.ebuild:
+  Version bump, removed old, some cleanup.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
