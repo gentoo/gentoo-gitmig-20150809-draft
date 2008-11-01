@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.101 2008/08/16 15:27:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.102 2008/11/01 12:46:54 robbat2 Exp $
+
+  01 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> grub-0.97-r6.ebuild:
+  Add a magic flag GRUB_STATIC_PACKAGE_BUILDING which along with USE=static
+  -ncurses is used to build grub-static tarballs from now on.
 
   16 Aug 2008; Mike Frysinger <vapier@gentoo.org> grub-1.96.ebuild:
   Require lzo-1 #234182 by Kyle Elbert.

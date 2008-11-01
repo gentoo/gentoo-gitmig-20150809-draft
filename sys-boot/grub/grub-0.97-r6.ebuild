@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r6.ebuild,v 1.8 2008/07/07 08:48:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r6.ebuild,v 1.9 2008/11/01 12:46:54 robbat2 Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -90,7 +90,15 @@ src_compile() {
 	# Per bug 216625, the emul packages do not provide .a libs for performing
 	# suitable static linking
 	if use amd64 && use static ; then
-		die "You must use the grub-static package if you want a static Grub on amd64!"
+		if [ -z "${GRUB_STATIC_PACKAGE_BUILDING}" ]; then
+			die "You must use the grub-static package if you want a static Grub on amd64!"
+		else
+			eerror "You have set GRUB_STATIC_PACKAGE_BUILDING. This"
+			eerror "is specifically intended for building the tarballs for the"
+			eerror "grub-static package via USE='static -ncurses'."
+			eerror "All bets are now off."
+			ebeep 10
+		fi
 	fi
 
 	# build the net-bootable grub first, but only if "netboot" is set
@@ -146,6 +154,12 @@ src_install() {
 	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 	newdoc docs/menu.lst grub.conf.sample
 	dodoc "${FILESDIR}"/grub.conf.gentoo
+	prepalldocs
+
+	[ -n "${GRUB_STATIC_PACKAGE_BUILDING}" ] && \
+		mv \
+		"${D}"/usr/share/doc/${PF} \
+		"${D}"/usr/share/doc/grub-static-${PF/grub-}
 
 	insinto /usr/share/grub
 	doins "${DISTDIR}"/splash.xpm.gz
