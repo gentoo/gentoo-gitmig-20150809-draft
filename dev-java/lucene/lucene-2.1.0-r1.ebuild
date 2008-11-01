@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.1.0-r1.ebuild,v 1.1 2008/01/25 09:52:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.1.0-r1.ebuild,v 1.2 2008/11/01 09:39:23 robbat2 Exp $
 
 JAVA_PKG_IUSE="doc source test"
 JAVA_PKG_BSFIX_ALL="no"
@@ -33,8 +33,7 @@ src_compile() {
 
 src_test() {
 	java-ant_rewrite-classpath common-build.xml
-	local gcp="$(java-pkg_getjars junit)"
-	ANT_TASKS="ant-junit" eant -Dgentoo.classpath="${gcp}" test
+	EANT_GENTOO_CLASSPATH="junit ant-core" ANT_TASKS="ant-junit" eant test
 }
 
 src_install() {

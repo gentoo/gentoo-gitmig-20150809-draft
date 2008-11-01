@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/lucene
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.52 2008/11/01 08:15:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.53 2008/11/01 09:39:23 robbat2 Exp $
+
+  01 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> lucene-1.4.3-r3.ebuild,
+  lucene-1.9.1.ebuild, lucene-2.1.0.ebuild, lucene-2.1.0-r1.ebuild,
+  lucene-2.2.0.ebuild, lucene-2.3.0.ebuild, lucene-2.3.1.ebuild,
+  lucene-2.3.2.ebuild, lucene-2.4.0.ebuild:
+  Finish cleanup of src_test blocks for bug #193362. Every core test (eg,
+  not contrib) now passes, for all versions of lucene.
 
   01 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> lucene-2.2.0.ebuild,
   lucene-2.3.0.ebuild, lucene-2.3.1.ebuild, lucene-2.3.2.ebuild,

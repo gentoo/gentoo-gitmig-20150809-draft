@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.9.1.ebuild,v 1.3 2008/09/07 15:08:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.9.1.ebuild,v 1.4 2008/11/01 09:39:23 robbat2 Exp $
 
 # This ebuild only builds the core of Lucene
 # It does not build any optional component (contributions)
@@ -39,7 +39,8 @@ src_compile() {
 }
 
 src_test() {
-	ANT_TASKS="ant-junit" eant test -Dgentoo.classpath="$(java-pkg_getjars --build-only junit)"
+	java-ant_rewrite-classpath common-build.xml
+	EANT_GENTOO_CLASSPATH="junit ant-core" ANT_TASKS="ant-junit" eant test
 }
 
 src_install() {
