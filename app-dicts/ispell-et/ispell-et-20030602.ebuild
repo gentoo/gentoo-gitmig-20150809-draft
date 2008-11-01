@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-et/ispell-et-20030602.ebuild,v 1.2 2005/07/08 13:34:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-et/ispell-et-20030602.ebuild,v 1.3 2008/11/01 09:06:07 pva Exp $
 
 DESCRIPTION="Estonian dictionary for ispell"
 HOMEPAGE="http://www.meso.ee/~jjpp/speller/"
@@ -15,11 +15,11 @@ IUSE=""
 DEPEND="app-text/ispell"
 RDEPEND=""
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
-	cp ${DISTDIR}/estonian.dict ${S}
-	cp ${DISTDIR}/estonian.aff ${S}
+	cp "${DISTDIR}/estonian.dict" "${S}"
+	cp "${DISTDIR}/estonian.aff" "${S}"
 }
 
 src_compile() {
@@ -28,5 +28,5 @@ src_compile() {
 
 src_install() {
 	insinto /usr/lib/ispell
-	doins estonian.aff estonian.hash
+	doins estonian.aff estonian.hash || die
 }
