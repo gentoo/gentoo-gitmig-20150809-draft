@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-nl/ispell-nl-1.00.ebuild,v 1.2 2008/10/29 22:21:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-nl/ispell-nl-1.00.ebuild,v 1.3 2008/11/01 10:06:02 pva Exp $
 
 inherit multilib
 
@@ -16,11 +16,11 @@ KEYWORDS="amd64 x86"
 DEPEND="app-text/ispell"
 
 src_compile() {
-	/usr/bin/buildhash -s "${S}"/words-nl.ispell "${S}"/dutch.aff "${S}"/dutch.hash \
-		|| die "buildhash failed"
+	/usr/bin/buildhash -s "${S}/words-nl.ispell" "${S}/dutch.aff" \
+				"${S}/dutch.hash" || die "buildhash failed"
 }
 
 src_install () {
 	insinto /usr/$(get_libdir)/ispell
-	doins dutch.aff dutch.hash
+	doins dutch.aff dutch.hash || die
 }
