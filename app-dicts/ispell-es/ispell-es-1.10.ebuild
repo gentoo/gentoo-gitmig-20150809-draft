@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ispell-es-1.10.ebuild,v 1.7 2008/11/01 12:00:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ispell-es-1.10.ebuild,v 1.8 2008/11/01 18:36:58 pva Exp $
 
 inherit multilib
 
@@ -25,6 +25,5 @@ src_compile() {
 src_install () {
 	insinto /usr/$(get_libdir)/ispell
 	doins espa~nol.aff espa~nol.hash || die
-	fperms 444 /usr/lib/ispell/espa~nol.{aff,hash}
 	dodoc LEAME README || die
 }
