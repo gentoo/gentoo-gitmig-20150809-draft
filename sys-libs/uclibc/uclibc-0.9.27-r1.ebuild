@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.31 2008/10/27 06:53:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.32 2008/11/01 07:33:09 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -356,7 +356,7 @@ src_install() {
 
 	local target="install"
 	just_headers && target="install_dev"
-	make PREFIX="${sysroot}" ${target} || die "install failed"
+	emake PREFIX="${sysroot}" ${target} || die "install failed"
 
 	# remove files coming from kernel-headers
 	rm -rf "${D}"${sysroot}/usr/include/{asm,linux,asm-generic}
@@ -373,20 +373,18 @@ src_install() {
 		return 0
 	fi
 
-	if [[ ${CHOST} == *-uclibc ]] ; then
+	if [[ ${CHOST} == *-uclibc* ]] ; then
 		emake PREFIX="${D}" install_utils || die "install-utils failed"
 		dobin extra/scripts/getent
 	fi
 
-	if ! use build ; then
-		dodoc Changelog* README TODO docs/*.txt DEDICATION.mjn3
-		doman debian/*.1
-	fi
+	dodoc Changelog* README TODO docs/*.txt DEDICATION.mjn3
+	doman debian/*.1
 }
 
 pkg_postinst() {
 	[[ ${CTARGET} != ${CHOST} ]] && return 0
-	[[ ${CHOST} != *-uclibc ]] && return 0
+	[[ ${CHOST} != *-uclibc* ]] && return 0
 
 	if [[ ! -e ${ROOT}/etc/TZ ]] ; then
 		ewarn "Please remember to set your timezone in /etc/TZ"

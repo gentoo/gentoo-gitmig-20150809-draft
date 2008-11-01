@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30_rc3.ebuild,v 1.1 2008/10/29 15:35:58 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30_rc3.ebuild,v 1.2 2008/11/01 07:33:09 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -424,8 +424,6 @@ src_install() {
 	just_headers && target="install_headers"
 	emake DESTDIR="${sysroot}" ${target} || die "install failed"
 
-	just_headers && return 0
-
 	save_config .config
 
 	# remove files coming from kernel-headers
@@ -436,20 +434,20 @@ src_install() {
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
 		dosym usr/include /usr/${CTARGET}/sys-include
-		newbin utils/ldconfig.host ${CTARGET}-ldconfig || die
-		newbin utils/ldd.host ${CTARGET}-ldd || die
+		if ! just_headers ; then
+			newbin utils/ldconfig.host ${CTARGET}-ldconfig || die
+			newbin utils/ldd.host ${CTARGET}-ldd || die
+		fi
 		return 0
 	fi
 
 	if [[ ${CHOST} == *-uclibc* ]] ; then
-		make DESTDIR="${D}" install_utils || die "install-utils failed"
+		emake DESTDIR="${D}" install_utils || die "install-utils failed"
 		dobin extra/scripts/getent
 	fi
 
-	if ! use build ; then
-		dodoc Changelog* README TODO docs/*.txt DEDICATION.mjn3
-		doman docs/man/*.[1-9]
-	fi
+	dodoc Changelog* README TODO docs/*.txt DEDICATION.mjn3
+	doman docs/man/*.[1-9]
 }
 
 pkg_postinst() {

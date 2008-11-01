@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3.ebuild,v 1.8 2008/10/27 06:53:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3.ebuild,v 1.9 2008/11/01 07:33:09 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -424,25 +424,25 @@ src_install() {
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
 		dosym usr/include /usr/${CTARGET}/sys-include
-		newbin utils/ldconfig.host ${CTARGET}-ldconfig || die
-		newbin utils/ldd.host ${CTARGET}-ldd || die
+		if ! just_headers ; then
+			newbin utils/ldconfig.host ${CTARGET}-ldconfig || die
+			newbin utils/ldd.host ${CTARGET}-ldd || die
+		fi
 		return 0
 	fi
 
-	if [[ ${CHOST} == *-uclibc ]] ; then
-		make DESTDIR="${D}" install_utils || die "install-utils failed"
+	if [[ ${CHOST} == *-uclibc* ]] ; then
+		emake DESTDIR="${D}" install_utils || die "install-utils failed"
 		dobin extra/scripts/getent
 	fi
 
-	if ! use build ; then
-		dodoc Changelog* README TODO docs/*.txt DEDICATION.mjn3
-		doman docs/man/*.[1-9]
-	fi
+	dodoc Changelog* README TODO docs/*.txt DEDICATION.mjn3
+	doman docs/man/*.[1-9]
 }
 
 pkg_postinst() {
 	[[ ${CTARGET} != ${CHOST} ]] && return 0
-	[[ ${CHOST} != *-uclibc ]] && return 0
+	[[ ${CHOST} != *-uclibc* ]] && return 0
 
 	if [[ ! -e ${ROOT}/etc/TZ ]] ; then
 		ewarn "Please remember to set your timezone in /etc/TZ"
