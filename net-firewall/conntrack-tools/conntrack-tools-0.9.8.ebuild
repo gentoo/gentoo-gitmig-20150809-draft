@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.8.ebuild,v 1.1 2008/10/25 12:16:18 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.8.ebuild,v 1.2 2008/11/01 15:38:32 cedk Exp $
 
 inherit linux-info eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=net-libs/libnfnetlink-0.0.33
-	>=net-libs/libnetfilter_conntrack-0.0.97"
+	>=net-libs/libnetfilter_conntrack-0.0.97
+	>=dev-util/pkgconfig-0.9.0"
 RDEPEND="${DEPEND}
 	!net-firewall/conntrack"
 
