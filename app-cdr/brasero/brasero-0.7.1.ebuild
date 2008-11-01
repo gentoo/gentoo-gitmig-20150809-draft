@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.1.ebuild,v 1.7 2008/07/06 17:20:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.7.1.ebuild,v 1.8 2008/11/01 22:09:01 loki_val Exp $
 
 inherit gnome2
 
@@ -39,7 +39,8 @@ RDEPEND=">=x11-libs/gtk+-2.11.6
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
-	dev-util/intltool"
+	dev-util/intltool
+	gnome-base/gconf"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-caches
