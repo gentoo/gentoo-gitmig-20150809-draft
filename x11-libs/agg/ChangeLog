@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/agg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.13 2008/10/29 22:18:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.14 2008/11/01 17:14:05 nixnut Exp $
+
+  01 Nov 2008; nixnut <nixnut@gentoo.org> agg-2.5.ebuild:
+  Stable on ppc wrt bug 244336
 
   29 Oct 2008; Markus Meier <maekke@gentoo.org> agg-2.5.ebuild:
   amd64/x86 stable, bug #244336
