@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.1.ebuild,v 1.7 2008/10/30 10:23:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.1.ebuild,v 1.8 2008/11/01 17:27:45 nixnut Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://libspectre.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 IUSE="debug doc test"
 
