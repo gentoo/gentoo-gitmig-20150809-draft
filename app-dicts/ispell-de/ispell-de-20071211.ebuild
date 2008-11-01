@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ispell-de-20071211.ebuild,v 1.1 2008/11/01 09:06:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ispell-de-20071211.ebuild,v 1.2 2008/11/01 11:56:19 pva Exp $
+
+inherit multilib
 
 MY_P=igerman98-${PV}
 DESCRIPTION="German and Swiss dictionaries for ispell"
@@ -23,7 +25,7 @@ src_compile() {
 }
 
 src_install () {
-	insinto /usr/lib/ispell
+	insinto /usr/$(get_libdir)/ispell
 	for lang in de_DE de_AT de_CH; do
 		doins ispell/${lang}{.aff,.hash} || die
 	done

@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-es
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ChangeLog,v 1.18 2008/11/01 08:47:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-es/ChangeLog,v 1.19 2008/11/01 12:00:50 pva Exp $
+
+  01 Nov 2008; Peter Volkov <pva@gentoo.org> ispell-es-1.10.ebuild:
+  Fixed multilib.
 
   01 Nov 2008; Peter Volkov <pva@gentoo.org> -ispell-es-1.7.ebuild:
   Remove old.

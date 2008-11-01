@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-1.3.ebuild,v 1.1 2008/11/01 09:47:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-1.3.ebuild,v 1.2 2008/11/01 12:13:38 pva Exp $
 
-inherit eutils
+inherit eutils multilib
 
 MY_P=magyarispell-${PV}
 DESCRIPTION="Hungarian dictionary for Ispell"
@@ -25,11 +25,11 @@ src_compile() {
 }
 
 src_install () {
-	insinto /usr/lib/ispell
+	insinto /usr/$(get_libdir)/ispell
 
 	doins tmp/magyar.aff || die
 	newins tmp/magyar4ispell.hash magyar.hash || die
-	dosym /usr/lib/ispell/magyar.hash /usr/lib/ispell/hungarian.hash
+	dosym /usr/$(get_libdir)/ispell/magyar.hash /usr/$(get_libdir)/ispell/hungarian.hash
 
 	dodoc ChangeLog GYIK README OLVASSEL
 }

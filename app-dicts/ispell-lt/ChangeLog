@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-lt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ChangeLog,v 1.17 2008/11/01 09:54:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ChangeLog,v 1.18 2008/11/01 12:15:45 pva Exp $
+
+  01 Nov 2008; Peter Volkov <pva@gentoo.org> ispell-lt-1.2.1.ebuild:
+  Fixed multilib.
 
 *ispell-lt-1.2.1 (01 Nov 2008)
 

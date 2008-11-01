@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ispell-lt-1.2.1.ebuild,v 1.1 2008/11/01 09:54:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-lt/ispell-lt-1.2.1.ebuild,v 1.2 2008/11/01 12:15:45 pva Exp $
+
+inherit multilib
 
 DESCRIPTION="Lithuanian dictionary for ispell"
 HOMEPAGE="http://files.akl.lt/ispell-lt/"
@@ -19,7 +21,7 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/lib/ispell
+	insinto /usr/$(get_libdir)/ispell
 	doins lietuviu.hash lietuviu.aff || die
 	dodoc README THANKS ChangeLog
 }

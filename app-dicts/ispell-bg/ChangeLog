@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-bg
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-bg/ChangeLog,v 1.6 2008/11/01 08:26:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-bg/ChangeLog,v 1.7 2008/11/01 11:49:57 pva Exp $
+
+  01 Nov 2008; Peter Volkov <pva@gentoo.org> ispell-bg-4.1.ebuild:
+  Fixed multilib.
 
 *ispell-bg-4.1 (01 Nov 2008)
 

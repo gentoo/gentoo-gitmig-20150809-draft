@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-cs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-cs/ChangeLog,v 1.14 2008/11/01 08:32:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-cs/ChangeLog,v 1.15 2008/11/01 11:51:44 pva Exp $
+
+  01 Nov 2008; Peter Volkov <pva@gentoo.org> ispell-cs-20040229.ebuild:
+  Fixed multilib.
 
   01 Nov 2008; Peter Volkov <pva@gentoo.org> ispell-cs-20040229.ebuild:
   Dropped stable mips keyword.

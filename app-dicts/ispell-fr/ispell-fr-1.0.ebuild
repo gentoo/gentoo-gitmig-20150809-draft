@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fr/ispell-fr-1.0.ebuild,v 1.14 2008/11/01 09:18:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fr/ispell-fr-1.0.ebuild,v 1.15 2008/11/01 12:08:15 pva Exp $
+
+inherit multilib
 
 MY_P="Francais-GUTenberg-v${PV}"
 DESCRIPTION="French dictionnary for ispell"
@@ -23,6 +25,6 @@ src_compile() {
 }
 
 src_install () {
-	insinto /usr/lib/ispell
+	insinto /usr/$(get_libdir)/ispell
 	doins francais.aff francais.hash francais-TeX8b.aff francais-TeX8b.hash || die
 }

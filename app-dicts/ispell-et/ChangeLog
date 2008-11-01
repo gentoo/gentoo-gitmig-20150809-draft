@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-et
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-et/ChangeLog,v 1.5 2008/11/01 09:06:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-et/ChangeLog,v 1.6 2008/11/01 12:03:56 pva Exp $
+
+  01 Nov 2008; Peter Volkov <pva@gentoo.org> ispell-et-20030602.ebuild:
+  Fixed multilib.
 
   01 Nov 2008; Peter Volkov <pva@gentoo.org> ispell-et-20030602.ebuild:
   Small cleanups.

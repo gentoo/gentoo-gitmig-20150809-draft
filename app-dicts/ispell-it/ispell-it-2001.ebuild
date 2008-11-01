@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-it/ispell-it-2001.ebuild,v 1.12 2008/11/01 09:45:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-it/ispell-it-2001.ebuild,v 1.13 2008/11/01 12:16:08 pva Exp $
+
+inherit multilib
 
 DESCRIPTION="Loris Palmerini - Italian dictionary for ispell"
 HOMEPAGE="http://members.xoom.virgilio.it/trasforma/ispell/"
@@ -20,7 +22,7 @@ src_compile() {
 }
 
 src_install () {
-	insinto /usr/lib/ispell
+	insinto /usr/$(get_libdir)/ispell
 	doins italian.hash italian.aff || die
 	dodoc collab.txt AUTHORS CAMBI CHANGES DA-FARE.txt FUSIONE.txt
 }
