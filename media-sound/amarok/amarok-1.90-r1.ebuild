@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.90-r1.ebuild,v 1.2 2008/10/13 13:19:52 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.90-r1.ebuild,v 1.3 2008/11/01 14:16:37 scarabeus Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://amarok.kde.org/"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="4.1"
-IUSE="cdaudio daap debug ifp ipod mp3tunes mp4 mtp mysql njb opengl visualization"
+IUSE="cdaudio daap debug ifp mp3tunes mp4 mtp mysql njb opengl visualization"
 SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
 
 # daap are automagic
@@ -29,7 +29,6 @@ DEPEND="
 	cdaudio? ( kde-base/libkcddb:${SLOT}
 		kde-base/libkcompactdisc:${SLOT} )
 	ifp? ( media-libs/libifp )
-	ipod? ( >=media-libs/libgpod-0.4.2 )
 	mp3tunes? ( net-misc/curl
 		    dev-libs/libxml2 )
 	mp4? ( media-libs/libmp4v2 )
@@ -49,12 +48,18 @@ src_configure() {
 	if use debug; then
 		mycmakeargs="${mycmakeargs} -DCMAKE_BUILD_TYPE=debugfull"
 	fi
+	# fix redefinition warnings
+	sed -i \
+		-e 's/ -DQT_WEBKIT//g' \
+		"${S}"/src/scriptengine/generator/generator/CMakeLists.txt \
+		|| die "Removing unnecessary -DQT_WEBKIT failed."
+	# disable ipod bug #245112
 	mycmakeargs="${mycmakeargs}
 		-DCMAKE_INSTALL_PREFIX=${PREFIX}
 		-DUSE_SYSTEM_SQLITE=ON
+		-DWITH_Ipod=OFF
 		$(cmake-utils_use_with cdaudio KdeMultimedia)
 		$(cmake-utils_use_with ifp Ifp)
-		$(cmake-utils_use_with ipod Ipod)
 		$(cmake-utils_use_with mp4 Mp4v2)
 		$(cmake-utils_use_with mtp Mtp)
 		$(cmake-utils_use_with mysql MySQL)

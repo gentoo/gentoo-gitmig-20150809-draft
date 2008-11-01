@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.288 2008/10/13 13:19:52 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.289 2008/11/01 14:16:37 scarabeus Exp $
+
+  01 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
+  -amarok-1.90.ebuild, amarok-1.90-r1.ebuild:
+  Disabling ipod for amarok 1.9 (Bug 245112). Removing gentoofan23 from
+  maintainers.
 
   13 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org> amarok-1.90.ebuild,
   amarok-1.90-r1.ebuild:

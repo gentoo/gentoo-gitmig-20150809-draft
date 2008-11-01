@@ -3,10 +3,6 @@
 <pkgmetadata>
   <herd>kde</herd>
   <herd>sound</herd>
-  <maintainer>
-    <email>gentoofan23@gentoo.org</email>
-	<name>Thomas Anderson</name>
-  </maintainer>
   <use>
     <flag name="amazon">Enable support for downloading covers from amazon.com</flag>
     <flag name="cdaudio">Enable cdaudio functionality</flag>
