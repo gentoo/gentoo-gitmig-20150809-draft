@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.6.ebuild,v 1.1 2008/11/01 08:44:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.6.ebuild,v 1.2 2008/11/01 09:14:21 robbat2 Exp $
 
 inherit perl-app
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jeremy.zawodny.com/mysql/mytop/"
 SRC_URI="http://jeremy.zawodny.com/mysql/mytop/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 SLOT="0"
 IUSE=""
 
@@ -22,5 +22,7 @@ DEPEND="dev-perl/DBD-mysql
 
 src_install() {
 	perl-module_src_install
-	sed -i "s|socket        => '',|socket        => '/var/run/mysqld/mysqld.sock',|g" ${D}/usr/bin/mytop
+	sed -i -r\
+		-e "s|socket( +)=> '',|socket\1=> '/var/run/mysqld/mysqld.sock',|g" \
+		"${D}"/usr/bin/mytop
 }

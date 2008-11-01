@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.16 2006/12/10 17:09:25 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.4.ebuild,v 1.17 2008/11/01 09:14:21 robbat2 Exp $
 
 inherit perl-app
 
@@ -22,5 +22,7 @@ DEPEND="dev-perl/DBD-mysql
 
 src_install() {
 	perl-module_src_install
-	sed -i "s|socket        => '',|socket        => '/var/run/mysqld/mysqld.sock',|g" ${D}/usr/bin/mytop
+	sed -i -r\
+		-e "s|socket( +)=> '',|socket\1=> '/var/run/mysqld/mysqld.sock',|g" \
+		"${D}"/usr/bin/mytop
 }
