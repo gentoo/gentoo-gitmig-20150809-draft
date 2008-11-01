@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.18.0.ebuild,v 1.1 2008/10/31 20:31:03 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.18.0.ebuild,v 1.2 2008/11/01 13:35:47 dsd Exp $
 
 inherit mono gnome.org
 
@@ -27,6 +27,10 @@ src_unpack() {
 		-e 's:^prefix=:exec_prefix=:' \
 		-e 's:prefix)/lib:libdir):' \
 		"${S}"/*.pc.in || die "sed failed."
+
+	# r188 broke TestCal compilation
+	sed -i -e 's/TEST_TARGETS = $(TESTCAL_TARGET)/TEST_TARGETS = /g' \
+		"${S}"/evolution/Makefile.in || die "sed TestCal failed."
 }
 
 src_install() {
