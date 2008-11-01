@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/gri
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.23 2008/09/27 11:01:32 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.24 2008/11/01 15:10:31 markusle Exp $
+
+  01 Nov 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/gri-2.12.18-postscript.patch, gri-2.12.18.ebuild:
+  Added patch to support proper postscript output (see bug #158828). 
+  Thanks much to Sebastiaan for his patch.
 
 *gri-2.12.18 (27 Sep 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.18.ebuild,v 1.1 2008/09/27 11:01:32 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.18.ebuild,v 1.2 2008/11/01 15:10:31 markusle Exp $
 
 inherit eutils elisp-common
 
@@ -21,6 +21,12 @@ DEPEND=">=sci-libs/netcdf-3.5.0
 	emacs? ( virtual/emacs )"
 
 SITEFILE="50gri-gentoo.el"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-postscript.patch
+}
 
 src_compile() {
 	econf || die "econf failed."
