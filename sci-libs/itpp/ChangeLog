@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.84 2008/10/29 12:50:08 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.85 2008/11/01 18:03:49 nixnut Exp $
+
+  01 Nov 2008; nixnut <nixnut@gentoo.org> itpp-4.0.5.ebuild:
+  Stable on ppc wrt bug 244832
 
   29 Oct 2008; Ferris McCormick <fmccor@gentoo.org> itpp-4.0.5.ebuild:
   Sparc stable, Bug #244832.
