@@ -1,0 +1,14 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/ChangeLog,v 1.1 2008/11/01 18:45:59 yuval Exp $
+
+*perl-Math-BigInt-FastCalc-0.19 (01 Nov 2008)
+*perl-Math-BigInt-FastCalc-0.16 (01 Nov 2008)
+*perl-Math-BigInt-FastCalc-0.15 (01 Nov 2008)
+
+  01 Nov 2008; Yuval Yaari <yuval@gentoo.org> +metadata.xml,
+  +perl-Math-BigInt-FastCalc-0.15.ebuild,
+  +perl-Math-BigInt-FastCalc-0.16.ebuild,
+  +perl-Math-BigInt-FastCalc-0.19.ebuild:
+  Adding virtuals for dual-lifed modules that come with perl-5.10
+

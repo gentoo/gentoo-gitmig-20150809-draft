@@ -1,0 +1,13 @@
+# ChangeLog for gentoo-x86/virtual
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.1 2008/11/01 18:45:58 yuval Exp $
+
+*perl-Digest-SHA-5.47 (01 Nov 2008)
+*perl-Digest-SHA-5.46 (01 Nov 2008)
+*perl-Digest-SHA-5.45 (01 Nov 2008)
+
+  01 Nov 2008; Yuval Yaari <yuval@gentoo.org> +metadata.xml,
+  +perl-Digest-SHA-5.45.ebuild, +perl-Digest-SHA-5.46.ebuild,
+  +perl-Digest-SHA-5.47.ebuild:
+  Adding virtuals for dual-lifed modules that come with perl-5.10
+
