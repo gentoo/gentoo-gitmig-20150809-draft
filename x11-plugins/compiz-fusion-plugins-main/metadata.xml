@@ -2,8 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-effects</herd>
-<maintainer><email>hanno@gentoo.org</email></maintainer>
-<longdescription lang="en">Python bindings for libcompizconfig.
+<longdescription lang="en">
+Package with the base compiz-fusion plugins:
+animation, colourfilter, expo, ezoom, jpeg, neg, opacify, put, resizeinfo, ring,
+scaleaddon, shift, snap, text, thumbnail, vpswitch,, wall, winrules, workarounds.
 </longdescription>
 </pkgmetadata>
-

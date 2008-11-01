@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/compiz-fusion-plugins-main
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-main/ChangeLog,v 1.10 2008/11/01 20:17:51 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-main/ChangeLog,v 1.11 2008/11/01 22:57:22 jmbsvicetto Exp $
+
+  01 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed metadata.xml by removing hanno now that he is on the desktop-effects
+  herd and fixing the description.
 
   01 Nov 2008; Hanno Boeck <hanno@gentoo.org>
   +files/compiz-fusion-plugins-main-no-gconf.patch:
