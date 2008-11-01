@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.10 2008/08/17 16:21:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.11 2008/11/01 16:47:41 tester Exp $
 
 inherit eutils libtool
 
@@ -11,10 +11,10 @@ SRC_URI="mirror://sourceforge/gtkpod/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ppc64 ~sparc x86"
-IUSE="gtk python doc test"
+IUSE="gtk python doc test hal"
 
 RDEPEND=">=dev-libs/glib-2.4
-	=sys-apps/hal-0.5*
+	hal? ( =sys-apps/hal-0.5* )
 	sys-apps/sg3_utils
 	gtk? ( >=x11-libs/gtk+-2 )
 	python? ( >=dev-lang/python-2.3
@@ -49,6 +49,7 @@ src_compile() {
 	econf ${myconf} \
 		$(use_enable doc gtk-doc) \
 		$(use_enable gtk gdk-pixbuf) \
+		$(use_with hal hal) \
 		$(use_with python) || die "configure failed"
 
 	emake || die "make failed"
