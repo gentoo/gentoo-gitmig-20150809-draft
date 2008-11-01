@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.6 2008/10/22 15:42:26 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.7 2008/11/01 23:40:59 solar Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -44,6 +44,7 @@ IUSE_INPUT_DEVICES="
 	input_devices_spaceorb
 	input_devices_summa
 	input_devices_tek4957
+	input_devices_tslib
 	input_devices_ur98
 	input_devices_vmmouse
 	input_devices_void
@@ -106,9 +107,10 @@ IUSE_SERVERS="dmx kdrive xorg"
 IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_INPUT_DEVICES}
 	${IUSE_SERVERS}
-	3dfx
+	3dfx tslib
 	dri hal ipv6 minimal nptl sdl xprint"
 RDEPEND="hal? ( sys-apps/hal )
+	tslib? ( x11-libs/tslib )
 	>=x11-libs/libXfont-1.3.1
 	>=x11-libs/xtrans-1.0.4
 	>=x11-libs/libXau-1.0.3
@@ -210,6 +212,7 @@ PDEPEND="
 		input_devices_spaceorb? ( >=x11-drivers/xf86-input-spaceorb-1.1.1 )
 		input_devices_summa? ( >=x11-drivers/xf86-input-summa-1.1.0 )
 		input_devices_tek4957? ( >=x11-drivers/xf86-input-tek4957-1.1.0 )
+		input_devices_tslib? ( x11-drivers/xf86-input-tslib )
 		input_devices_ur98? ( >=x11-drivers/xf86-input-ur98-1.1.0 )
 		input_devices_vmmouse? ( >=x11-drivers/xf86-input-vmmouse-12.4.2 )
 		input_devices_void? ( >=x11-drivers/xf86-input-void-1.1.1 )
@@ -302,6 +305,7 @@ pkg_setup() {
 		$(use_enable ipv6)
 		$(use_enable dmx)
 		$(use_enable kdrive)
+		$(use_enable tslib)
 		$(use_enable !minimal xvfb)
 		$(use_enable !minimal xnest)
 		$(use_enable !minimal install-libxf86config)
