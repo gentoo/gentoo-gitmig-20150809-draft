@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.21.ebuild,v 1.2 2008/10/27 20:15:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.21.ebuild,v 1.3 2008/11/01 18:41:42 nixnut Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/${ALIOTH_NUMBER}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="gtk X"
 
 COMMON_DEPEND="media-libs/alsa-lib
