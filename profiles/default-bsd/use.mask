@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.37 2008/10/15 13:41:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.38 2008/11/01 23:31:49 solar Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -70,9 +70,13 @@ elibc_glibc
 kernel_linux
 userland_GNU
 
+# mask linux touch screen access lib.
+tslib
+
 # Mask Xorg-modular drivers that are Linux-specific
 input_devices_aiptek
 input_devices_evdev
+input_devices_tslib
 input_devices_linuxwacom
 input_devices_synaptics
 input_devices_ur98
