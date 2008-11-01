@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/openhpi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/ChangeLog,v 1.3 2007/02/09 06:09:22 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/ChangeLog,v 1.4 2008/11/01 08:19:05 robbat2 Exp $
+
+*openhpi-2.10.1 (01 Nov 2008)
+
+  01 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> +files/openhpi-confd,
+  +files/openhpi-initd, +openhpi-2.10.1.ebuild:
+  Version bump, per bug #199024. Thanks to Tais M. Hansen
+  <tais.hansen@osd.dk> for scripts.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
