@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.90 2008/11/01 14:56:59 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.91 2008/11/01 23:19:15 dsd Exp $
 
 # Author(s): John Mylchreest <johnm@gentoo.org>,
 #            Stefan Schweizer <genstef@gentoo.org>
@@ -43,7 +43,6 @@
 # @DESCRIPTION:
 # It's a string containing the modules to be built automatically using the default
 # src_compile/src_install. It will only make ${BUILD_TARGETS} once in any directory.
-
 #
 # The structure of each MODULE_NAMES entry is as follows:
 #
@@ -52,9 +51,9 @@
 # where:
 #
 #   modulename = name of the module file excluding the .ko
-#   libdir     = place in system modules directory where module is installed:
-#   srcdir     = place for ebuild to cd to before running make
-#   objdir     = place the .ko and objects are located after make runs
+#   libdir     = place in system modules directory where module is installed (by default it's misc)
+#   srcdir     = place for ebuild to cd to before running make (by default it's ${S})
+#   objdir     = place the .ko and objects are located after make runs (by default it's set to srcdir)
 #
 # To get an idea of how these variables are used, here's a few lines
 # of code from around line 540 in this eclass:
