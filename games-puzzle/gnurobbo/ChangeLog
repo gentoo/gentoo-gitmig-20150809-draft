@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gnurobbo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.5 2008/11/01 02:05:07 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnurobbo/ChangeLog,v 1.6 2008/11/01 17:52:01 nixnut Exp $
+
+  01 Nov 2008; nixnut <nixnut@gentoo.org> gnurobbo-0.57.ebuild:
+  Stable on ppc wrt bug 244915
 
   01 Nov 2008; Jeremy Olexa <darkside@gentoo.org> gnurobbo-0.57.ebuild:
   amd64 stable, bug #244915
