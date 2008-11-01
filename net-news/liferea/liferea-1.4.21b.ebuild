@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.17.ebuild,v 1.2 2008/07/30 22:39:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.21b.ebuild,v 1.1 2008/11/01 17:24:06 dang Exp $
 
-WANT_AUTOMAKE=1.7
+WANT_AUTOMAKE=1.9
 inherit gnome2 eutils autotools
 
 DESCRIPTION="News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds"
@@ -85,7 +85,7 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	epatch "${FILESDIR}"/${P}-xulrunner-1.9.patch
+	epatch "${FILESDIR}"/${PN}-1.4.17-xulrunner-1.9.patch
 
 	intltoolize --force || die "intltoolize failed"
 	eautoreconf
