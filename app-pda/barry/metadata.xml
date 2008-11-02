@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>app-pda</herd>
-<maintainer>
 <longdescription lang="en">
   Barry is an Open Source Linux application that will
   allow synchronization, backup, restore, program 
