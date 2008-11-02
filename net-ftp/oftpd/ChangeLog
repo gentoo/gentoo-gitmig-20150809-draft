@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/oftpd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.23 2007/01/05 14:18:09 beandog Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/ChangeLog,v 1.24 2008/11/02 12:36:44 jmbsvicetto Exp $
+
+  02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, oftpd-0.3.7-r1.ebuild:
+  Removing eradicator as a maintainer since he was retired. Quoted some
+  vars.
 
   05 Jan 2007; Steve Dibb <beandog@gentoo.org> oftpd-0.3.7-r3.ebuild:
   amd64 stable, bug 159178

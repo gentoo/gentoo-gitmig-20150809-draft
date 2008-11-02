@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r1.ebuild,v 1.8 2005/12/04 20:59:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r1.ebuild,v 1.9 2008/11/02 12:36:44 jmbsvicetto Exp $
 
 DESCRIPTION="Secure, small, anonymous only ftpd"
 HOMEPAGE="http://www.time-travellers.org/oftpd"
@@ -25,6 +25,6 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS FAQ NEWS README TODO
 	keepdir /home/ftp
-	newinitd ${FILESDIR}/init.d.oftpd oftpd
-	newconfd ${FILESDIR}/conf.d.oftpd oftpd
+	newinitd "${FILESDIR}/init.d.oftpd" oftpd
+	newconfd "${FILESDIR}/conf.d.oftpd" oftpd
 }
