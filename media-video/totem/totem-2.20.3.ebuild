@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.3.ebuild,v 1.10 2008/06/05 11:56:57 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.20.3.ebuild,v 1.11 2008/11/02 02:17:00 leio Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -88,7 +88,8 @@ RDEPEND=">=dev-libs/glib-2.13.4
 
 DEPEND="${RDEPEND}
 	  x11-proto/xproto
-	  x11-proto/inputproto
+	  x11-proto/xextproto
+	  x11-proto/xf86vidmodeproto
 	  app-text/scrollkeeper
 	  gnome-base/gnome-common
 	  app-text/gnome-doc-utils

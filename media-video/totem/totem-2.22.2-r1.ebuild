@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.22.2-r1.ebuild,v 1.7 2008/08/12 14:11:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.22.2-r1.ebuild,v 1.8 2008/11/02 02:17:00 leio Exp $
 
 inherit autotools eutils gnome2 multilib
 
@@ -61,6 +61,9 @@ RDEPEND=">=dev-libs/glib-2.15
 		 python? ( >=dev-python/pygtk-2.12 >=dev-python/gdata-1 )
 		 tracker? ( >=app-misc/tracker-0.5.3 >=gnome-base/libgnomeui-2 )"
 DEPEND="${RDEPEND}
+		  x11-proto/xproto
+		  x11-proto/xextproto
+		  x11-proto/xf86vidmodeproto
 		  app-text/scrollkeeper
 		  gnome-base/gnome-common
 		  app-text/gnome-doc-utils

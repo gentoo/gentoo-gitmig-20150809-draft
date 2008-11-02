@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.2.ebuild,v 1.2 2008/11/02 00:40:51 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.2.ebuild,v 1.3 2008/11/02 02:17:00 leio Exp $
 
 inherit eutils gnome2 multilib python
 
@@ -56,6 +56,9 @@ RDEPEND=">=dev-libs/glib-2.15
 	python? ( >=dev-python/pygtk-2.12 >=dev-python/gdata-1 )
 	tracker? ( >=app-misc/tracker-0.5.3 >=gnome-base/libgnomeui-2 )"
 DEPEND="${RDEPEND}
+	x11-proto/xproto
+	x11-proto/xextproto
+	x11-proto/xf86vidmodeproto
 	app-text/scrollkeeper
 	gnome-base/gnome-common
 	app-text/gnome-doc-utils
@@ -118,8 +121,8 @@ src_compile() {
 	# FIXME: why does it need write access here, probably need to set up a fake
 	# home in /var/tmp like other pkgs do
 
-	#addpredict "/root/.gconfd"
-	#addpredict "/root/.gconf"
+	addpredict "/root/.gconfd"
+	addpredict "/root/.gconf"
 	addpredict "/root/.gnome2"
 
 	gnome2_src_compile
