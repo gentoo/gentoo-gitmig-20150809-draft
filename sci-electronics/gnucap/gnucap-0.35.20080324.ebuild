@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20080324.ebuild,v 1.2 2008/05/13 07:17:17 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-0.35.20080324.ebuild,v 1.3 2008/11/02 22:31:20 flameeyes Exp $
 
 inherit multilib
 
@@ -45,8 +45,11 @@ src_unpack() {
 			Makefile.in || die "sed failed"
 	fi
 
-	sed -i -e "s:CFLAGS = -O2 -g:CFLAGS +=:" \
-		-e "s:CCFLAGS = \$(CFLAGS):CCFLAGS += \$(CFLAGS):" \
+	sed -i -e 's:CFLAGS = -O2 -g:CPPFLAGS +=:' \
+		-e '/CCFLAGS =/i\CFLAGS += $(CPPFLAGS)' \
+		-e 's:CCFLAGS = $(CFLAGS):CXXFLAGS += $(CPPFLAGS):' \
+		-e 's:LDFLAGS = :LDFLAGS += :' \
+		-e 's:CCFLAGS:CXXFLAGS:' \
 		-e "s:../Gnucap:${S}/src:" \
 		models-*/Make2 || die "sed failed"
 }

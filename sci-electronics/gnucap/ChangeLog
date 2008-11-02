@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gnucap
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.41 2008/05/13 07:17:17 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.42 2008/11/02 22:31:20 flameeyes Exp $
+
+  02 Nov 2008; Diego Pettenò <flameeyes@gentoo.org>
+  gnucap-0.35.20080324.ebuild:
+  Fix handling of CFLAGS/CXXFLAGS/LDFLAGS so that now: LDFLAGS are
+  respected, CXXFLAGS are not mixed with CFLAGS.
 
   13 May 2008; Denis Dupeyron <calchan@gentoo.org> gnucap-0.35.ebuild,
   gnucap-0.35.20070221.ebuild, gnucap-0.35.20070820.ebuild,
