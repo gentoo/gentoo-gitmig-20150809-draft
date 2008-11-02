@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r1.ebuild,v 1.6 2008/06/22 22:10:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r1.ebuild,v 1.7 2008/11/02 14:59:30 loki_val Exp $
 
 inherit autotools eutils fdo-mime
 
@@ -56,6 +56,9 @@ src_unpack() {
 	# Fix po tests
 	epatch "${FILESDIR}/${P}-potfiles.patch"
 
+	# Fix gcc 4.3.x
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+
 	# Remove useless dist check that makes tests fail
 	sed -i "s/\.PHONY:.*/.PHONY:/" Makefile.decl || die "sed failed"
 
@@ -64,6 +67,9 @@ src_unpack() {
 }
 
 src_compile() {
+	#kluge to work-around update-mime-database collision
+	export UPDATE_MIME_DATABASE="/bin/true"
+
 	#for some weird reasons there is no doxer in this release
 	econf $(use_enable debug) \
 		$(use_enable static) \

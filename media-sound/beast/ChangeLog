@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/beast
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.37 2008/06/29 17:46:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.38 2008/11/02 14:59:30 loki_val Exp $
+
+  02 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/beast-0.7.1-gcc43.patch, beast-0.7.1-r1.ebuild:
+  Fix bug 240616 (gcc-4.3), thanks to Francisco José Cañizares Santofimia
+  <telefrancisco@gmail.com> and bug 243000 (update-mime-database collision).
 
   29 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org> -beast-0.7.1.ebuild:
   clean up old broken revision, fix bug #226761.
