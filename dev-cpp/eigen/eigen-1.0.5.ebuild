@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-1.0.5.ebuild,v 1.3 2007/06/27 07:17:12 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-1.0.5.ebuild,v 1.4 2008/11/02 07:01:55 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2-with-exceptions"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-util/cmake-2.4.5"
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	# Install the LICENSE file to make the specific GPL exception obvious.
 	dodoc README LICENSE TODO
 }
