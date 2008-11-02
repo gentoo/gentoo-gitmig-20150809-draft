@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.13 2008/10/20 20:14:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.14 2008/11/02 07:17:21 leio Exp $
+
+*totem-pl-parser-2.24.2 (02 Nov 2008)
+
+  02 Nov 2008; Mart Raudsepp <leio@gentoo.org>
+  -totem-pl-parser-2.24.1.ebuild, +totem-pl-parser-2.24.2.ebuild:
+  Version bump. Fixes M3U parsing in regards to mime types, fixes
+  totem-python regarding a missing symbol export
 
 *totem-pl-parser-2.24.1 (20 Oct 2008)
 

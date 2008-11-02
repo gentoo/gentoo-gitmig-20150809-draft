@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.24.1.ebuild,v 1.1 2008/10/20 20:14:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.24.2.ebuild,v 1.1 2008/11/02 07:17:21 leio Exp $
 
 inherit gnome.org
 
