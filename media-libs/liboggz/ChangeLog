@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/liboggz
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.5 2007/08/22 17:32:58 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.6 2008/11/02 16:53:39 jmbsvicetto Exp $
+
+  02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing zaheerm as a maintainer since he was retired.
 
 *liboggz-0.9.5 (22 Aug 2007)
 

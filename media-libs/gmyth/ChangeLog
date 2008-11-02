@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gmyth
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/ChangeLog,v 1.5 2008/08/08 19:36:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/ChangeLog,v 1.6 2008/11/02 16:56:26 jmbsvicetto Exp $
+
+  02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing zaheerm as a maintainer since he was retired.
 
   08 Aug 2008; Markus Meier <maekke@gentoo.org> gmyth-0.7.ebuild:
   x86 stable, bug #232054
