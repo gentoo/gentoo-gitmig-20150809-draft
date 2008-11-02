@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r3.ebuild,v 1.5 2008/09/12 22:31:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r3.ebuild,v 1.6 2008/11/02 17:12:29 loki_val Exp $
 
 EAPI=1
 
@@ -24,12 +24,8 @@ RDEPEND="media-libs/libexif
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	base_src_unpack
-	cd "${S}"
-	epatch ../autotrace_0.31.1-13.diff
-	epatch "${FILESDIR}"/${P}-swf-output.patch
-}
+PATCHES=(	"${WORKDIR}/autotrace_0.31.1-13.diff"
+		"${FILESDIR}/${P}-swf-output.patch"	)
 
 src_compile() {
 	#Autotrace will autolink to ming if present. Forcing on.
