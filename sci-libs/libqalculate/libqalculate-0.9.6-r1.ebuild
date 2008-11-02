@@ -1,29 +1,27 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.6-r1.ebuild,v 1.4 2008/10/12 15:56:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.6-r1.ebuild,v 1.5 2008/11/02 08:55:52 vapier Exp $
 
 inherit eutils autotools
 
 DESCRIPTION="A modern multi-purpose calculator library"
-LICENSE="GPL-2"
 HOMEPAGE="http://qalculate.sourceforge.net/"
 SRC_URI="mirror://sourceforge/qalculate/${P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 IUSE="readline"
-KEYWORDS="amd64 ppc ~sparc x86"
 
 COMMON_DEPEND=">=sci-libs/cln-1.1
 	dev-libs/libxml2
 	>=dev-libs/glib-2.4
 	sys-libs/zlib
 	readline? ( sys-libs/readline )"
-
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	dev-util/intltool
 	sys-devel/gettext"
-
 RDEPEND="${COMMON_DEPEND}
 	>=sci-visualization/gnuplot-3.7
 	net-misc/wget"
