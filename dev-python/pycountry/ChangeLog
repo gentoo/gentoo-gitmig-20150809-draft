@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycountry
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/ChangeLog,v 1.1 2008/08/16 17:33:18 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/ChangeLog,v 1.2 2008/11/02 07:00:55 jmbsvicetto Exp $
+
+  02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed the broken herd by adding no-herd to metadata.xml.
 
 *pycountry-0.10 (16 Aug 2008)
 
