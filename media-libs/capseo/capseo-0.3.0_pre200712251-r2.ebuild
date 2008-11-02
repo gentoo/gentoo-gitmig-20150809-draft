@@ -1,34 +1,38 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/capseo-0.3.0_pre200712251-r2.ebuild,v 1.1 2008/05/05 09:38:58 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/capseo-0.3.0_pre200712251-r2.ebuild,v 1.2 2008/11/02 07:15:49 vapier Exp $
 
 inherit flag-o-matic multilib
 
 DESCRIPTION="Capseo Video Codec Library"
 HOMEPAGE="http://rm-rf.in/captury/wiki/CapseoCodec"
 SRC_URI="http://upstream.rm-rf.in/captury/captury-${PV}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug theora"
 
 RDEPEND=">=media-libs/libtheora-1.0_alpha6-r1"
-
 DEPEND="${RDEPEND}
-		x86? ( >=dev-lang/yasm-0.4.0 )
-		amd64? ( >=dev-lang/yasm-0.4.0 )
-		dev-util/pkgconfig"
-
-EMULTILIB_PKG="true"
+	x86? ( >=dev-lang/yasm-0.4.0 )
+	amd64? ( >=dev-lang/yasm-0.4.0 )
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/captury-${PV}/${PN}"
+
+EMULTILIB_PKG="true"
 
 src_unpack() {
 	unpack ${A} || die
 
 	cd "${S}"
 	einfo "pwd: $(pwd)"
-	epatch "${FILESDIR}/no-cpsplay.diff" || die
+	epatch "${FILESDIR}/no-cpsplay.diff"
+
+	if [[ ! -f configure ]]; then
+		./autogen.sh || die "autogen.sh failed"
+	fi
 }
 
 src_compile() {
@@ -47,10 +51,6 @@ src_compile() {
 	fi
 
 	cd "${S}" || die
-
-	if [[ ! -f configure ]]; then
-		./autogen.sh || die "autogen.sh failed"
-	fi
 
 	# obviousely in src_install() it is set to "default" on non-multilib hosts,
 	# but isn't in src_compile()

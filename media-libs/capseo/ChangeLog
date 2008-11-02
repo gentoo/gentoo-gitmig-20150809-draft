@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/capseo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/ChangeLog,v 1.7 2008/05/05 09:38:58 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/ChangeLog,v 1.8 2008/11/02 07:15:49 vapier Exp $
+
+  02 Nov 2008; Mike Frysinger <vapier@gentoo.org>
+  capseo-0.3.0_pre200712251-r2.ebuild:
+  Add ppc/ppc64 love for KDE 4.
 
 *capseo-0.3.0_pre200712251-r2 (05 May 2008)
 

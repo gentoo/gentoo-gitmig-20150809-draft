@@ -1,28 +1,29 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaptury/libcaptury-0.3.0_pre200712251-r2.ebuild,v 1.1 2008/10/13 19:55:19 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaptury/libcaptury-0.3.0_pre200712251-r2.ebuild,v 1.2 2008/11/02 07:17:06 vapier Exp $
 
 inherit multilib flag-o-matic
 
 DESCRIPTION="Captury Framework Library"
 HOMEPAGE="http://rm-rf.in/projects/captury/"
 SRC_URI="http://upstream.rm-rf.in./captury/captury-${PV}.tar.bz2"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug multilib"
 
 RDEPEND=">=media-libs/capseo-0.3.0_pre200712251
-		 x11-libs/libX11
-		 x11-libs/libXfixes
-		 virtual/opengl
-		 amd64? ( multilib? (
-		 	app-emulation/emul-linux-x86-xlibs
-		 	app-emulation/emul-linux-x86-medialibs
-		 ) )"
+	x11-libs/libX11
+	x11-libs/libXfixes
+	virtual/opengl
+	amd64? ( multilib? (
+		>=app-emulation/emul-linux-x86-xlibs-20071114
+		app-emulation/emul-linux-x86-medialibs
+	) )"
 
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
+	dev-util/pkgconfig"
 
 EMULTILIB_PKG="true"
 
@@ -35,24 +36,18 @@ pkg_setup() {
 }
 
 setup_env() {
-	LD_LIBRARY_PATH=
-	LDFLAGS=
-
-	# keep backwards compatibility as long as I *have* to.
-	if use amd64 && [[ ${ABI} = "x86" ]]; then
-		if has_version '<app-emulation/emul-linux-x86-xlibs-7.0-r8'; then
-			LDFLAGS="-L/emul/linux/x86/usr/lib"
-			LD_LIBRARY_PATH="/emul/linux/x86/usr/lib"
-		fi
-	fi
-
-	export LDFLAGS
-	export LD_LIBRARY_PATH
-
 	# workaround for users having FEATURES=ccache set, as ccache doesn't, play
 	# nice to multilib builds (see bug 206822)
 	filter-flags -DABI=*
 	append-flags -DABI=${ABI}
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	if [[ ! -f configure ]]; then
+		./autogen.sh || die "autogen.sh failed"
+	fi
 }
 
 src_compile() {
@@ -71,10 +66,6 @@ src_compile() {
 	fi
 
 	cd "${S}"
-
-	if [[ ! -f configure ]]; then
-		./autogen.sh || die "autogen.sh failed"
-	fi
 
 	ABI=${ABI:-default}
 
