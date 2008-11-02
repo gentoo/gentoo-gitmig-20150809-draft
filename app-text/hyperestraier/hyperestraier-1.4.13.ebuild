@@ -1,18 +1,17 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.13.ebuild,v 1.1 2008/02/04 17:28:35 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.13.ebuild,v 1.2 2008/11/02 07:14:01 vapier Exp $
 
 inherit java-pkg-opt-2
-
-IUSE="debug java mecab ruby"
 
 DESCRIPTION="a full-text search system for communities"
 HOMEPAGE="http://hyperestraier.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="debug java mecab ruby"
 
 RDEPEND=">=dev-db/qdbm-1.8.75
 	sys-libs/zlib
@@ -37,8 +36,8 @@ src_unpack() {
 src_compile() {
 
 	econf \
-		`use_enable debug` \
-		`use_enable mecab` \
+		$(use_enable debug) \
+		$(use_enable mecab) \
 		|| die
 	emake || die
 
