@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/graphviz-dot-mode
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/ChangeLog,v 1.5 2007/02/06 13:30:56 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/ChangeLog,v 1.6 2008/11/02 16:30:01 opfer Exp $
+
+*graphviz-dot-mode-0.3.4 (02 Nov 2008)
+
+  02 Nov 2008; Christian Faulhammer <opfer@gentoo.org>
+  +graphviz-dot-mode-0.3.4.ebuild:
+  version bump (to a version from 2005); remove virtual/emacs from DEPEND;
+  revamp some minor details
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
