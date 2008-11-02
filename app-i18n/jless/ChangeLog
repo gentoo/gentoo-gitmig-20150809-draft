@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/jless
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless/ChangeLog,v 1.4 2007/04/09 13:54:32 matsuu Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless/ChangeLog,v 1.5 2008/11/02 16:26:01 matsuu Exp $
+
+*jless-382.262 (02 Nov 2008)
+
+  02 Nov 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/jless-382.262-gentoo.patch, +jless-382.262.ebuild:
+  Fixed HOMEPAGE, LICENSE and DEPEND. Removed pkg_postinst. Added
+  eautoreconf, bug #240008.
 
   09 Apr 2007; MATSUU Takuto <matsuu@gentoo.org> jless-358.254.ebuild,
   jless-382.258.ebuild:
