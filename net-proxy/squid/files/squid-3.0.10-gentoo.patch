@@ -1,6 +1,6 @@
-diff -ur squid-3.0.STABLE8.orig/configure.in squid-3.0.STABLE8/configure.in
---- squid-3.0.STABLE8.orig/configure.in	2008-07-18 10:02:55.000000000 +0000
-+++ squid-3.0.STABLE8/configure.in	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/configure.in squid-3.0.STABLE10/configure.in
+--- squid-3.0.STABLE10.orig/configure.in	2008-10-14 11:22:33.000000000 +0000
++++ squid-3.0.STABLE10/configure.in	2008-11-02 09:54:55.000000000 +0000
 @@ -19,9 +19,9 @@
  PRESET_LDFLAGS="$LDFLAGS"
  
@@ -14,9 +14,9 @@ diff -ur squid-3.0.STABLE8.orig/configure.in squid-3.0.STABLE8/configure.in
  
  dnl Check for GNU cc
  AC_PROG_CC
-diff -ur squid-3.0.STABLE8.orig/helpers/basic_auth/MSNT/confload.c squid-3.0.STABLE8/helpers/basic_auth/MSNT/confload.c
---- squid-3.0.STABLE8.orig/helpers/basic_auth/MSNT/confload.c	2008-07-18 10:02:50.000000000 +0000
-+++ squid-3.0.STABLE8/helpers/basic_auth/MSNT/confload.c	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/helpers/basic_auth/MSNT/confload.c squid-3.0.STABLE10/helpers/basic_auth/MSNT/confload.c
+--- squid-3.0.STABLE10.orig/helpers/basic_auth/MSNT/confload.c	2008-10-14 11:22:26.000000000 +0000
++++ squid-3.0.STABLE10/helpers/basic_auth/MSNT/confload.c	2008-11-02 09:54:55.000000000 +0000
 @@ -27,7 +27,7 @@
  
  /* Path to configuration file */
@@ -26,9 +26,9 @@ diff -ur squid-3.0.STABLE8.orig/helpers/basic_auth/MSNT/confload.c squid-3.0.STA
  #endif
  #define CONFIGFILE   SYSCONFDIR "/msntauth.conf"
  
-diff -ur squid-3.0.STABLE8.orig/helpers/basic_auth/MSNT/msntauth.conf.default squid-3.0.STABLE8/helpers/basic_auth/MSNT/msntauth.conf.default
---- squid-3.0.STABLE8.orig/helpers/basic_auth/MSNT/msntauth.conf.default	2008-07-18 10:02:50.000000000 +0000
-+++ squid-3.0.STABLE8/helpers/basic_auth/MSNT/msntauth.conf.default	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/helpers/basic_auth/MSNT/msntauth.conf.default squid-3.0.STABLE10/helpers/basic_auth/MSNT/msntauth.conf.default
+--- squid-3.0.STABLE10.orig/helpers/basic_auth/MSNT/msntauth.conf.default	2008-10-14 11:22:26.000000000 +0000
++++ squid-3.0.STABLE10/helpers/basic_auth/MSNT/msntauth.conf.default	2008-11-02 09:54:55.000000000 +0000
 @@ -8,6 +8,6 @@
  server other_PDC	other_BDC	otherdomain
  
@@ -38,9 +38,9 @@ diff -ur squid-3.0.STABLE8.orig/helpers/basic_auth/MSNT/msntauth.conf.default sq
 +#denyusers	/etc/squid/msntauth.denyusers
 +#allowusers	/etc/squid/msntauth.allowusers
  
-diff -ur squid-3.0.STABLE8.orig/helpers/basic_auth/SMB/Makefile.am squid-3.0.STABLE8/helpers/basic_auth/SMB/Makefile.am
---- squid-3.0.STABLE8.orig/helpers/basic_auth/SMB/Makefile.am	2008-07-18 10:02:50.000000000 +0000
-+++ squid-3.0.STABLE8/helpers/basic_auth/SMB/Makefile.am	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/helpers/basic_auth/SMB/Makefile.am squid-3.0.STABLE10/helpers/basic_auth/SMB/Makefile.am
+--- squid-3.0.STABLE10.orig/helpers/basic_auth/SMB/Makefile.am	2008-10-14 11:22:28.000000000 +0000
++++ squid-3.0.STABLE10/helpers/basic_auth/SMB/Makefile.am	2008-11-02 09:54:55.000000000 +0000
 @@ -14,7 +14,7 @@
  ## FIXME: autoconf should test for the samba path.
  
@@ -50,9 +50,9 @@ diff -ur squid-3.0.STABLE8.orig/helpers/basic_auth/SMB/Makefile.am squid-3.0.STA
  SMB_AUTH_HELPER_PATH = $(libexecdir)/$(SMB_AUTH_HELPER)
  
  libexec_SCRIPTS	= $(SMB_AUTH_HELPER)
-diff -ur squid-3.0.STABLE8.orig/helpers/basic_auth/SMB/smb_auth.sh squid-3.0.STABLE8/helpers/basic_auth/SMB/smb_auth.sh
---- squid-3.0.STABLE8.orig/helpers/basic_auth/SMB/smb_auth.sh	2008-07-18 10:02:50.000000000 +0000
-+++ squid-3.0.STABLE8/helpers/basic_auth/SMB/smb_auth.sh	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/helpers/basic_auth/SMB/smb_auth.sh squid-3.0.STABLE10/helpers/basic_auth/SMB/smb_auth.sh
+--- squid-3.0.STABLE10.orig/helpers/basic_auth/SMB/smb_auth.sh	2008-10-14 11:22:28.000000000 +0000
++++ squid-3.0.STABLE10/helpers/basic_auth/SMB/smb_auth.sh	2008-11-02 09:54:55.000000000 +0000
 @@ -24,7 +24,7 @@
  read AUTHSHARE
  read AUTHFILE
@@ -71,9 +71,9 @@ diff -ur squid-3.0.STABLE8.orig/helpers/basic_auth/SMB/smb_auth.sh squid-3.0.STA
  echo "Domain controller IP address: $dcip"
  [ -n "$dcip" ] || exit 1
  
-diff -ur squid-3.0.STABLE8.orig/helpers/external_acl/session/squid_session.8 squid-3.0.STABLE8/helpers/external_acl/session/squid_session.8
---- squid-3.0.STABLE8.orig/helpers/external_acl/session/squid_session.8	2008-07-18 10:02:50.000000000 +0000
-+++ squid-3.0.STABLE8/helpers/external_acl/session/squid_session.8	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/helpers/external_acl/session/squid_session.8 squid-3.0.STABLE10/helpers/external_acl/session/squid_session.8
+--- squid-3.0.STABLE10.orig/helpers/external_acl/session/squid_session.8	2008-10-14 11:22:29.000000000 +0000
++++ squid-3.0.STABLE10/helpers/external_acl/session/squid_session.8	2008-11-02 09:54:55.000000000 +0000
 @@ -35,7 +35,7 @@
  .P
  Configuration example using the default automatic mode
@@ -83,9 +83,9 @@ diff -ur squid-3.0.STABLE8.orig/helpers/external_acl/session/squid_session.8 squ
  .IP
  acl session external session
  .IP
-diff -ur squid-3.0.STABLE8.orig/helpers/external_acl/unix_group/squid_unix_group.8 squid-3.0.STABLE8/helpers/external_acl/unix_group/squid_unix_group.8
---- squid-3.0.STABLE8.orig/helpers/external_acl/unix_group/squid_unix_group.8	2008-07-18 10:02:50.000000000 +0000
-+++ squid-3.0.STABLE8/helpers/external_acl/unix_group/squid_unix_group.8	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/helpers/external_acl/unix_group/squid_unix_group.8 squid-3.0.STABLE10/helpers/external_acl/unix_group/squid_unix_group.8
+--- squid-3.0.STABLE10.orig/helpers/external_acl/unix_group/squid_unix_group.8	2008-10-14 11:22:29.000000000 +0000
++++ squid-3.0.STABLE10/helpers/external_acl/unix_group/squid_unix_group.8	2008-11-02 09:54:55.000000000 +0000
 @@ -27,7 +27,7 @@
  This squid.conf example defines two Squid acls. usergroup1 matches users in group1, and usergroup2
  matches users in group2 or group3
@@ -95,9 +95,9 @@ diff -ur squid-3.0.STABLE8.orig/helpers/external_acl/unix_group/squid_unix_group
  .IP
  acl usergroup1 external unix_group group1
  .IP
-diff -ur squid-3.0.STABLE8.orig/src/cf.data.pre squid-3.0.STABLE8/src/cf.data.pre
---- squid-3.0.STABLE8.orig/src/cf.data.pre	2008-07-18 10:02:53.000000000 +0000
-+++ squid-3.0.STABLE8/src/cf.data.pre	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/src/cf.data.pre squid-3.0.STABLE10/src/cf.data.pre
+--- squid-3.0.STABLE10.orig/src/cf.data.pre	2008-10-14 11:22:31.000000000 +0000
++++ squid-3.0.STABLE10/src/cf.data.pre	2008-11-02 09:54:55.000000000 +0000
 @@ -652,6 +652,8 @@
  acl Safe_ports port 488		# gss-http
  acl Safe_ports port 591		# filemaker
@@ -127,7 +127,7 @@ diff -ur squid-3.0.STABLE8.orig/src/cf.data.pre squid-3.0.STABLE8/src/cf.data.pr
  # And finally deny all other access to this proxy
  http_access deny all
  NOCOMMENT_END
-@@ -3249,11 +3257,11 @@
+@@ -3260,11 +3268,11 @@
  
  NAME: cache_mgr
  TYPE: string
@@ -141,7 +141,7 @@ diff -ur squid-3.0.STABLE8.orig/src/cf.data.pre squid-3.0.STABLE8/src/cf.data.pr
  DOC_END
  
  NAME: mail_from
-@@ -5200,6 +5208,9 @@
+@@ -5214,6 +5222,9 @@
  	If you disable this, it will appear as
  
  		X-Forwarded-For: unknown
@@ -151,9 +151,9 @@ diff -ur squid-3.0.STABLE8.orig/src/cf.data.pre squid-3.0.STABLE8/src/cf.data.pr
  DOC_END
  
  NAME: cachemgr_passwd
-diff -ur squid-3.0.STABLE8.orig/src/debug.cc squid-3.0.STABLE8/src/debug.cc
---- squid-3.0.STABLE8.orig/src/debug.cc	2008-07-18 10:02:54.000000000 +0000
-+++ squid-3.0.STABLE8/src/debug.cc	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/src/debug.cc squid-3.0.STABLE10/src/debug.cc
+--- squid-3.0.STABLE10.orig/src/debug.cc	2008-10-14 11:22:32.000000000 +0000
++++ squid-3.0.STABLE10/src/debug.cc	2008-11-02 09:54:55.000000000 +0000
 @@ -465,7 +465,7 @@
  #if HAVE_SYSLOG && defined(LOG_LOCAL4)
  
@@ -163,9 +163,9 @@ diff -ur squid-3.0.STABLE8.orig/src/debug.cc squid-3.0.STABLE8/src/debug.cc
  
  #endif /* HAVE_SYSLOG */
  
-diff -ur squid-3.0.STABLE8.orig/src/defines.h squid-3.0.STABLE8/src/defines.h
---- squid-3.0.STABLE8.orig/src/defines.h	2008-07-18 10:02:54.000000000 +0000
-+++ squid-3.0.STABLE8/src/defines.h	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/src/defines.h squid-3.0.STABLE10/src/defines.h
+--- squid-3.0.STABLE10.orig/src/defines.h	2008-10-14 11:22:32.000000000 +0000
++++ squid-3.0.STABLE10/src/defines.h	2008-11-02 09:54:55.000000000 +0000
 @@ -219,7 +219,7 @@
  
  /* were to look for errors if config path fails */
@@ -175,9 +175,9 @@ diff -ur squid-3.0.STABLE8.orig/src/defines.h squid-3.0.STABLE8/src/defines.h
  #endif
  
  /* handy to determine the #elements in a static array */
-diff -ur squid-3.0.STABLE8.orig/src/main.cc squid-3.0.STABLE8/src/main.cc
---- squid-3.0.STABLE8.orig/src/main.cc	2008-07-18 10:02:54.000000000 +0000
-+++ squid-3.0.STABLE8/src/main.cc	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/src/main.cc squid-3.0.STABLE10/src/main.cc
+--- squid-3.0.STABLE10.orig/src/main.cc	2008-10-14 11:22:32.000000000 +0000
++++ squid-3.0.STABLE10/src/main.cc	2008-11-02 09:54:55.000000000 +0000
 @@ -1486,7 +1486,7 @@
      if (*(argv[0]) == '(')
          return;
@@ -205,9 +205,9 @@ diff -ur squid-3.0.STABLE8.orig/src/main.cc squid-3.0.STABLE8/src/main.cc
  
          syslog(LOG_NOTICE, "Squid Parent: child process %d started", pid);
  
-diff -ur squid-3.0.STABLE8.orig/src/Makefile.am squid-3.0.STABLE8/src/Makefile.am
---- squid-3.0.STABLE8.orig/src/Makefile.am	2008-07-18 10:02:53.000000000 +0000
-+++ squid-3.0.STABLE8/src/Makefile.am	2008-08-01 21:56:22.000000000 +0000
+diff -Nru squid-3.0.STABLE10.orig/src/Makefile.am squid-3.0.STABLE10/src/Makefile.am
+--- squid-3.0.STABLE10.orig/src/Makefile.am	2008-10-14 11:22:31.000000000 +0000
++++ squid-3.0.STABLE10/src/Makefile.am	2008-11-02 09:54:55.000000000 +0000
 @@ -992,12 +992,12 @@
  DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
  DEFAULT_MIME_TABLE	= $(sysconfdir)/mime.conf

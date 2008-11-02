@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.8.ebuild,v 1.2 2008/09/12 16:38:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.10.ebuild,v 1.1 2008/11/02 10:10:10 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -22,13 +22,15 @@ SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 -arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="pam ldap samba sasl nis radius ssl snmp selinux icap-client logrotate \
+IUSE="pam ldap samba sasl kerberos nis radius ssl snmp selinux icap-client logrotate \
+	mysql postgres sqlite \
 	qos zero-penalty-hit \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux"
 
 DEPEND="pam? ( virtual/pam )
 	ldap? ( net-nds/openldap )
+	kerberos? ( || ( app-crypt/mit-krb5 app-crypt/heimdal ) )
 	ssl? ( dev-libs/openssl )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( sec-policy/selinux-squid )
@@ -36,11 +38,22 @@ DEPEND="pam? ( virtual/pam )
 	>=sys-libs/db-4
 	dev-lang/perl"
 RDEPEND="${DEPEND}
-	samba? ( net-fs/samba )"
+	samba? ( net-fs/samba )
+	mysql? ( dev-perl/DBD-mysql )
+	postgres? ( dev-perl/DBD-Pg )
+	sqlite? ( dev-perl/DBD-SQLite )"
 
 S="${WORKDIR}/${S_PP}"
 
 pkg_setup() {
+	if grep -qs '^[[:space:]]*cache_dir[[:space:]]\+coss' "${ROOT}"etc/squid/squid.conf; then
+		eerror "coss store IO has been disabled by upstream due to stability issues!"
+		eerror "If you want to install this version, switch the store type to something else"
+		eerror "before attempting to install this version again."
+
+		die "/etc/squid/squid.conf: cache_dir use a disabled store type"
+	fi
+
 	if use qos; then
 		eerror "qos patch is no longer supported by us!"
 		eerror "Please remove qos from your USE and select zero-penalty-hit flag instead."
@@ -55,7 +68,8 @@ src_unpack() {
 
 	cd "${S}" || die "source dir not found"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	use zero-penalty-hit && epatch "${FILESDIR}"/${P}-adapted-zph.patch
+	use zero-penalty-hit && epatch "${FILESDIR}"/${P}-zph.patch
+	has_version app-crypt/mit-krb5 || epatch "${FILESDIR}"/${P}-heimdal.patch
 
 	eautoreconf
 }
@@ -68,6 +82,9 @@ src_compile() {
 	use sasl && basic_modules="SASL,${basic_modules}"
 	use nis && ! use elibc_uclibc && basic_modules="YP,${basic_modules}"
 	use radius && basic_modules="squid_radius_auth,${basic_modules}"
+	if use mysql || use postgres || use sqlite ; then
+		basic_modules="DB,${basic_modules}"
+	fi
 
 	local ext_helpers="ip_user,session,unix_group"
 	use samba && ext_helpers="wbinfo_group,${ext_helpers}"
@@ -76,14 +93,14 @@ src_compile() {
 	local ntlm_helpers="fakeauth"
 	use samba && ntlm_helpers="SMB,${ntlm_helpers}"
 
+	local negotiate_helpers=
+	use kerberos && local negotiate_helpers="squid_kerb_auth"
+
 	local myconf=""
 
-	# Support for uclibc #61175
-	if use elibc_uclibc; then
-		myconf="${myconf} --enable-storeio=ufs,diskd,aufs,null"
-	else
-		myconf="${myconf} --enable-storeio=ufs,diskd,coss,aufs,null"
-	fi
+	# coss support has been disabled
+	# If it is re-enabled again, make sure you don't enable it for elibc_uclibc (#61175)
+	myconf="${myconf} --enable-storeio=ufs,diskd,aufs,null"
 
 	if use kernel_linux; then
 		myconf="${myconf} --enable-linux-netfilter"
@@ -110,6 +127,7 @@ src_compile() {
 		--enable-basic-auth-helpers="${basic_modules}" \
 		--enable-external-acl-helpers="${ext_helpers}" \
 		--enable-ntlm-auth-helpers="${ntlm_helpers}" \
+		--enable-negotiate-auth-helpers="${negotiate_helpers}" \
 		--enable-useragent-log \
 		--enable-cache-digests \
 		--enable-delay-pools \
