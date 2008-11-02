@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.8.ebuild,v 1.14 2005/08/11 18:26:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.8.ebuild,v 1.15 2008/11/02 12:10:30 jmbsvicetto Exp $
 
 IUSE="nls"
 
@@ -35,11 +35,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	insinto /etc/yp ; doins etc/nicknames
 	# This messes up boot so we remove it
-	rm -d ${D}/bin/ypdomainname
-	rm -d ${D}/bin/nisdomainname
-	rm -d ${D}/bin/domainname
+	rm -d "${D}/bin/ypdomainname"
+	rm -d "${D}/bin/nisdomainname"
+	rm -d "${D}/bin/domainname"
 }

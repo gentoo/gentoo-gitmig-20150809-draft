@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.9.ebuild,v 1.7 2007/07/27 16:34:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.9.ebuild,v 1.8 2008/11/02 12:10:30 jmbsvicetto Exp $
 
 IUSE="nls"
 
@@ -18,8 +18,8 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-2.8-bsd.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-2.8-bsd.patch"
 }
 
 src_compile() {
@@ -43,11 +43,11 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	insinto /etc/yp ; doins etc/nicknames
 	# This messes up boot so we remove it
-	rm -d ${D}/bin/ypdomainname
-	rm -d ${D}/bin/nisdomainname
-	rm -d ${D}/bin/domainname
+	rm -d "${D}/bin/ypdomainname"
+	rm -d "${D}/bin/nisdomainname"
+	rm -d "${D}/bin/domainname"
 }
