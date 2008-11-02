@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pixie
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.45 2007/07/26 15:43:13 eradicator Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/ChangeLog,v 1.46 2008/11/02 06:36:37 jmbsvicetto Exp $
+
+  02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, pixie-2.2.2.ebuild:
+  Removing eradicator as a maintainer since he was retired. Quoted some
+  vars.
 
   26 Jul 2007; Jeremy Huddleston <eradicator@gentoo.org>
   -pixie-2.0.2-r1.ebuild:

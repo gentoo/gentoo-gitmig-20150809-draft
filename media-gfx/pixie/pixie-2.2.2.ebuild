@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.2.ebuild,v 1.6 2007/07/27 03:28:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.2.ebuild,v 1.7 2008/11/02 06:36:37 jmbsvicetto Exp $
 
 inherit eutils multilib autotools
 
@@ -28,12 +28,12 @@ RDEPEND="media-libs/jpeg
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	# Force make to rebuild the shaders since the packaged ones
 	# are not always compiled with the latest version of sdr
-	epatch ${FILESDIR}/${PN}-2.2.1-genshaders.patch
-	rm ${S}/shaders/*.sdr
+	epatch "${FILESDIR}/${PN}-2.2.1-genshaders.patch"
+	rm "${S}/shaders/*.sdr"
 
 	eautoreconf
 }
@@ -54,8 +54,8 @@ src_install() {
 	keepdir /usr/share/Pixie/models
 
 	insinto /usr/share/Pixie/textures
-	doins ${S}/textures/checkers.tif
+	doins "${S}/textures/checkers.tif"
 
 	dodir /usr/share/doc
-	mv ${D}/usr/doc ${D}/usr/share/doc/${PF}
+	mv "${D}/usr/doc" "${D}/usr/share/doc/${PF}"
 }
