@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.57 2008/07/31 19:56:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.58 2008/11/02 12:46:58 mrness Exp $
+
+*gammu-1.21.0 (02 Nov 2008)
+
+  02 Nov 2008; Alin Năstac <mrness@gentoo.org> +gammu-1.21.0.ebuild:
+  Version bump.
 
   31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
