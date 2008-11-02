@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.224 2008/10/20 20:45:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.225 2008/11/02 00:40:51 leio Exp $
+
+  02 Nov 2008; Mart Raudsepp <leio@gentoo.org> totem-2.24.2.ebuild:
+  Re-add ~ia64 ~ppc64 ~sparc and ~x86-fbsd keywords - no reason for them
+  being dropped
 
 *totem-2.24.2 (20 Oct 2008)
 
