@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.3 2008/09/25 06:01:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.4 2008/11/02 02:33:49 nerdboy Exp $
+
+  02 Nov 2008; Steve Arnold <nerdboy@gentoo.org> mapnik-0.5.1.ebuild:
+  Fixed PGSQL linkage issues and other whacked build stuff; added 
+  ogcserver example config.  All input plugins build now.  Postgres
+  dep should be changed to a virtual when ready (postgresql plugin
+  won't build against libpq package).
 
   25 Sep 2008; Steve Arnold <nerdboy@gentoo.org> mapnik-0.5.1.ebuild:
   just forestalling Mr_Bones with a QA fix...
