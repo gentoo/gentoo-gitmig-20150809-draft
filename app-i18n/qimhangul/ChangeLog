@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/qimhangul
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/ChangeLog,v 1.9 2008/09/24 15:31:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qimhangul/ChangeLog,v 1.10 2008/11/02 09:57:36 matsuu Exp $
+
+*qimhangul-0.1.2-r1 (02 Nov 2008)
+
+  02 Nov 2008; MATSUU Takuto <matsuu@gentoo.org> -qimhangul-0.0.3.ebuild,
+  +qimhangul-0.1.2-r1.ebuild:
+  EAPI=2, bug #239625. Removed old version.
 
 *qimhangul-0.1.2 (24 Sep 2008)
 
