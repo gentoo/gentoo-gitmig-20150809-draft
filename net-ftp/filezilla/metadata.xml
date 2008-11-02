@@ -3,15 +3,10 @@
 <pkgmetadata>
 <herd>net-ftp</herd>
 <maintainer>
-<email>jsin@gentoo.org</email>
-<name>Jason Smathers</name>
-</maintainer>
-<maintainer>
-<email>voyageur@gentoo.org</email>
-<name>Bernard Cafarelli</name>
+  <email>voyageur@gentoo.org</email>
+  <name>Bernard Cafarelli</name>
 </maintainer>
 <longdescription lang="en">
-The native linux ftp/sftp client GUI built on wxGTK
+  The native linux ftp/sftp client GUI built on wxGTK
 </longdescription>
 </pkgmetadata>
-
