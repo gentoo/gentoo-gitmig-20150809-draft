@@ -1,6 +1,6 @@
-# ChangeLog for gentoo-x86/virtual
+# ChangeLog for virtual/perl-Module-Build
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.1 2008/11/01 18:46:00 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.2 2008/11/02 11:02:07 swegener Exp $
 
 *perl-Module-Build-0.30 (01 Nov 2008)
 *perl-Module-Build-0.28.08 (01 Nov 2008)

@@ -1,6 +1,6 @@
-# ChangeLog for gentoo-x86/virtual
+# ChangeLog for virtual/perl-Compress-Zlib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Zlib/ChangeLog,v 1.1 2008/11/01 18:45:58 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Zlib/ChangeLog,v 1.2 2008/11/02 10:54:07 swegener Exp $
 
 *perl-Compress-Zlib-2.015 (01 Nov 2008)
 *perl-Compress-Zlib-2.008 (01 Nov 2008)
