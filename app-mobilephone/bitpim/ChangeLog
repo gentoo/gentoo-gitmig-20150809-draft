@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/bitpim
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.26 2008/07/01 18:56:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.27 2008/11/02 18:13:30 mrness Exp $
+
+*bitpim-1.0.6 (02 Nov 2008)
+
+  02 Nov 2008; Alin Năstac <mrness@gentoo.org>
+  +files/bitpim-1.0.6-ffmpeg_quality.patch, +files/bitpim-1.0.6-gcc43.patch,
+  +files/bitpim-1.0.6-gentoo.patch, +files/maketarball,
+  +bitpim-1.0.6.ebuild:
+  Version bump.
 
   01 Jul 2008; Alin Năstac <mrness@gentoo.org>
   +files/bitpim-1.0.5-gcc43.patch, bitpim-1.0.5.ebuild:
