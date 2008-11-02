@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/udns
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.10 2008/11/01 17:02:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.11 2008/11/02 12:41:39 maekke Exp $
+
+  02 Nov 2008; Markus Meier <maekke@gentoo.org> udns-0.0.9.ebuild:
+  amd64/x86 stable, bug #243096
 
   01 Nov 2008; nixnut <nixnut@gentoo.org> udns-0.0.9.ebuild:
   Stable on ppc wrt bug 243096
