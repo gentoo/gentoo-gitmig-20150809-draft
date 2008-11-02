@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.18.ebuild,v 1.7 2007/03/26 08:00:03 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.18.ebuild,v 1.8 2008/11/02 12:25:38 jmbsvicetto Exp $
 
 DESCRIPTION="Network Information Service server"
 HOMEPAGE="http://www.linux-nis.org/nis/"
@@ -23,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 
 	insinto /etc
@@ -31,19 +31,19 @@ src_install() {
 	insinto /var/yp
 	newins etc/securenets securenets.default
 
-	newconfd ${FILESDIR}/ypserv.confd ypserv
-	newconfd ${FILESDIR}/rpc.yppasswdd.confd rpc.yppasswdd
-	newconfd ${FILESDIR}/rpc.ypxfrd.confd rpc.ypxfrd
+	newconfd "${FILESDIR}/ypserv.confd" ypserv
+	newconfd "${FILESDIR}/rpc.yppasswdd.confd" rpc.yppasswdd
+	newconfd "${FILESDIR}/rpc.ypxfrd.confd" rpc.ypxfrd
 
-	newinitd ${FILESDIR}/ypserv ypserv
-	newinitd ${FILESDIR}/rpc.yppasswdd-r1 rpc.yppasswdd
-	newinitd ${FILESDIR}/rpc.ypxfrd rpc.ypxfrd
+	newinitd "${FILESDIR}/ypserv" ypserv
+	newinitd "${FILESDIR}/rpc.yppasswdd-r1" rpc.yppasswdd
+	newinitd "${FILESDIR}/rpc.ypxfrd" rpc.ypxfrd
 
 	# Save the old config into the new package as CONFIG_PROTECT
 	# doesn't work for this package.
-	if [ -f ${ROOT}/var/yp/Makefile ]; then
-		mv ${D}/var/yp/Makefile ${D}/var/yp/Makefile.dist
-		cp ${ROOT}/var/yp/Makefile ${D}/var/yp/Makefile
+	if [ -f "${ROOT}/var/yp/Makefile" ]; then
+		mv "${D}/var/yp/Makefile" "${D}/var/yp/Makefile.dist"
+		cp "${ROOT}/var/yp/Makefile" "${D}/var/yp/Makefile"
 		einfo "As you have a previous /var/yp/Makefile, I have added"
 		einfo "this file into the new package and installed the new"
 		einfo "file as /var/yp/Makefile.dist"
