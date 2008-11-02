@@ -1,21 +1,20 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.2.2.ebuild,v 1.6 2008/10/20 21:35:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.2.2.ebuild,v 1.7 2008/11/02 07:58:05 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
 DESCRIPTION="Class library (C++) for numbers"
-
 HOMEPAGE="http://www.ginac.de/CLN/"
-
-LICENSE="GPL-2"
-SLOT="1"
-KEYWORDS="amd64 ppc sparc x86"
-IUSE="doc examples"
-
 SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gnu/${P}.tar.bz2
 	ftp://ftp.santafe.edu/pub/gnu/${P}.tar.bz2
 	ftp://ftp.ilog.fr/pub/Users/haible/gnu/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="1"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+IUSE="doc examples"
+
 DEPEND="dev-libs/gmp"
 
 src_unpack() {

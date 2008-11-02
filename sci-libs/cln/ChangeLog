@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.29 2008/10/20 21:35:37 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.30 2008/11/02 07:58:05 vapier Exp $
+
+  02 Nov 2008; Mike Frysinger <vapier@gentoo.org> cln-1.2.2.ebuild:
+  Add ppc64 love for KDE 4.
 
   20 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org> cln-1.1.13.ebuild,
   cln-1.2.2.ebuild:
