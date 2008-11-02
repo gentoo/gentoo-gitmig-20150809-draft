@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/yp-tools
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.33 2008/11/02 12:10:30 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.34 2008/11/02 12:59:39 jmbsvicetto Exp $
+
+  02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Whitespace.
 
   02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml, yp-tools-2.8.ebuild:
