@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.1 2008/05/06 08:06:58 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.2 2008/11/02 07:30:45 vapier Exp $
 
 EAPI="1"
 
@@ -11,9 +11,10 @@ MY_P="apache-${P}"
 DESCRIPTION="Library of C++ classes for flexible logging to files, syslog and other destinations"
 HOMEPAGE="http://logging.apache.org/log4cxx/"
 SRC_URI="http://www.apache.org/dist/logging/${PN}/${PV}/${MY_P}.tar.gz"
+
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc iodbc unicode odbc smtp"
 
 RDEPEND="dev-libs/apr:1
@@ -40,6 +41,7 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
 	use smtp && myconf="${myconf} --with-SMTP=libesmtp"
 	if use odbc ; then
 		if use iodbc ; then

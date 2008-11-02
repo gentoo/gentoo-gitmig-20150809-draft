@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cxx
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.25 2008/08/06 10:55:05 ulm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.26 2008/11/02 07:30:45 vapier Exp $
+
+  02 Nov 2008; Mike Frysinger <vapier@gentoo.org> log4cxx-0.10.0.ebuild:
+  Add ppc/ppc64 love for KDE 4.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
