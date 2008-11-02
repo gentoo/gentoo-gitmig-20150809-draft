@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.10 2008/09/26 17:36:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.11 2008/11/02 06:30:42 jmbsvicetto Exp $
 
 inherit rpm eutils versionator
 
@@ -64,7 +64,7 @@ src_unpack() {
 	#unpack myr_maya501_gold_linux_update.tgz
 
 	# rpm_unpack unpacks in ${WORKDIR} no matter what we try... so get it out of the way...
-	cd ${S}
+	cd "${S}"
 	rpm_unpack ${CDROM_ROOT}/${AWCOMMON_RPM} || die
 	rpm_unpack ${CDROM_ROOT}/${AWCOMMON_SERVER_RPM} || die
 	rpm_unpack ${CDROM_ROOT}/${MAYA_RPM} || die
@@ -73,8 +73,8 @@ src_unpack() {
 		rpm_unpack ${CDROM_ROOT}/${MAYA_DOCS_RPM} || die
 
 		if ! use bundled-libs; then
-			rm -rf ${S}/usr/aw/maya6.5/docs/jre || die
-			sed -i -e 's:JAVACMD=\./jre/bin/java:JAVACMD=java:g' ${S}/usr/aw/maya6.5/docs/startDocServer.sh || die
+			rm -rf "${S}/usr/aw/maya6.5/docs/jre" || die
+			sed -i -e 's:JAVACMD=\./jre/bin/java:JAVACMD=java:g' "${S}/usr/aw/maya6.5/docs/startDocServer.sh" || die
 		fi
 	fi
 
@@ -82,42 +82,42 @@ src_unpack() {
 		pushd ${CDROM_ROOT} >& /dev/null
 		[[ -d shaderLibrary ]] || die "Could not locate shaderLibrary on Maya Installation CD."
 
-		tar -c -f - shaderLibrary | (cd ${S}/usr/aw/maya${SLOT}; tar -x -f -) || die "Failed to copy over maya shader library"
+		tar -c -f - shaderLibrary | (cd "${S}/usr/aw/maya${SLOT}"; tar -x -f -) || die "Failed to copy over maya shader library"
 
 		popd >& /dev/null
 	fi
 
 	# Use app-admin/flexlm
-	rm -rf ${S}/usr/COM/{bin/lmutil,etc/lmgrd} || die
+	rm -rf "${S}/usr/COM/{bin/lmutil,etc/lmgrd}" || die
 
 	# Don't need RedHat's init script
-	rm -rf ${S}/etc || die
+	rm -rf "${S}/etc" || die
 
-	mkdir ${S}/insroot || die
-	mv ${S}/usr ${S}/insroot/opt || die
-	rm -rf ${S}/insroot/opt/sbin || die
+	mkdir "${S}/insroot" || die
+	mv "${S}/usr" "${S}/insroot/opt" || die
+	rm -rf "${S}/insroot/opt/sbin" || die
 
-	cp -a ${CDROM_ROOT}/README.html ${S} || die
+	cp -a ${CDROM_ROOT}/README.html "${S}" || die
 
 	# Remove unneeded libs (provided by RDEPEND).
 	if ! use bundled-libs; then
 		#rm -f ${S}/insroot/${AWDIR}/COM/lib/libXm.so.2.1 || die
-		rm -f ${S}/insroot/${MAYADIR}/lib/libgcc_s.so.1 || die
-		rm -f ${S}/insroot/${MAYADIR}/lib/libstdc++.so.5.0.6 || die
+		rm -f "${S}/insroot/${MAYADIR}/lib/libgcc_s.so.1" || die
+		rm -f "${S}/insroot/${MAYADIR}/lib/libstdc++.so.5.0.6" || die
 
 		# We keep this one because of possible C++ ABI changes...
 		# Maya 6.5 was compiled with CXXABI_1.2 (libstdc++.so.5)
 		# rm -f ${S}/insroot/${MAYADIR}/lib/libqt.so.3 || die
 
-		rm -f ${S}/insroot/${MAYADIR}/lib/libXm.so.3 || die
+		rm -f "${S}/insroot/${MAYADIR}/lib/libXm.so.3" || die
 	fi
 }
 
 src_install() {
 	dohtml README.html
 
-	cd ${S}/insroot
-	cp -a . ${D} || die
+	cd "${S}/insroot"
+	cp -a . "${D}" || die
 
 	# We use our own Motif runtime unless USE=bundled-libs
 	#if use bundled-libs; then
@@ -126,7 +126,7 @@ src_install() {
 	#fi
 
 	# SLOT the COM directory to avoid conflicts
-	mv ${D}${AWDIR}/COM ${D}${AWDIR}/COM-${SLOT}
+	mv "${D}${AWDIR}/COM" "${D}${AWDIR}/COM-${SLOT}"
 	dosym COM-${SLOT} ${AWDIR}/COM
 	dosym COM ${AWDIR}/COM2
 	# End rpm -qp --scripts AWCommon-6.3-1.i686.rpm
@@ -165,14 +165,14 @@ src_install() {
 
 	# End rpm -qp --scripts Maya6_5-6.5-253.i686.rpm
 
-	doenvd ${FILESDIR}/50maya
+	doenvd "${FILESDIR}/50maya"
 
 	if use maya-shaderlibrary ; then
 		echo "MAYA_SHADER_LIBRARY_PATH=\"${AWDIR}/maya/shaderLibrary/shaders\"" >> ${D}/etc/env.d/50maya
 	fi
 
 	# Fix permissions
-	find ${D}${AWDIR} -type d -exec chmod 755 {} \;
+	find "${D}${AWDIR}" -type d -exec chmod 755 {} \;
 
 	dosed 's:tail -1: tail -n 1:g' /opt/aw/maya${SLOT}/bin/Maya${SLOT}
 
@@ -183,20 +183,20 @@ src_install() {
 
 pkg_postinst() {
 	# What follows is modified from rpm -qp --scripts Maya6_5-6.5-253.i686.rpm
-	cp ${ROOT}/etc/services ${T}/services.maya_save
-	awk '/mi-ray/ { found++; print ; next } {print} END {if (0==found) print "mi-ray 7003/tcp" }' ${T}/services.maya_save > ${ROOT}/etc/services
+	cp "${ROOT}/etc/services" "${T}/services.maya_save"
+	awk '/mi-ray/ { found++; print ; next } {print} END {if (0==found) print "mi-ray 7003/tcp" }' "${T}/services.maya_save" > "${ROOT}/etc/services"
 
-	cp ${ROOT}/etc/services ${T}/services.maya_save
-	awk '/mi-raysat/ { found++; print ; next } {print} END {if (0==found) print "mi-raysat 7103/tcp" }' ${T}/services.maya_save > ${ROOT}/etc/services
+	cp "${ROOT}/etc/services" "${T}/services.maya_save"
+	awk '/mi-raysat/ { found++; print ; next } {print} END {if (0==found) print "mi-raysat 7103/tcp" }' "${T}/services.maya_save" > "${ROOT}/etc/services"
 
 	# update the magic file
-	if [[ -e ${ROOT}/usr/share/magic ]]; then
-		mv ${ROOT}/usr/share/magic ${T}/magic.rpmsave
-		awk '/Alias.Wavefront Maya files. begin/ {p=1} /Alias.Wavefront Maya files. end/ {p=2} {if (p==2) { p=0} else if (p==0) print }' ${T}/magic.rpmsave > ${ROOT}/usr/share/magic
-		cat ${ROOT}${MAYADIR}/.tmpdata/awmagic >> ${ROOT}/usr/share/magic;
+	if [[ -e "${ROOT}/usr/share/magic" ]]; then
+		mv "${ROOT}/usr/share/magic" "${T}/magic.rpmsave"
+		awk '/Alias.Wavefront Maya files. begin/ {p=1} /Alias.Wavefront Maya files. end/ {p=2} {if (p==2) { p=0} else if (p==0) print }' "${T}/magic.rpmsave" > "${ROOT}/usr/share/magic"
+		cat "${ROOT}${MAYADIR}/.tmpdata/awmagic" >> "${ROOT}/usr/share/magic";
 		# get file to rebuild the cache
 		file -C > /dev/null 2>&1
-		rm -Rf ${ROOT}${MAYADIR}/.tmpdata/awmagic 2>&1 > /dev/null
+		rm -Rf "${ROOT}${MAYADIR}/.tmpdata/awmagic" 2>&1 > /dev/null
 	fi
 	# End rpm -qp --scripts Maya6_5-6.5-253.i686.rpm
 
