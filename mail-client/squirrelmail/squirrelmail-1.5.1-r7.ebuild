@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.5.1-r7.ebuild,v 1.1 2008/01/12 02:40:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.5.1-r7.ebuild,v 1.2 2008/11/02 06:08:11 jmbsvicetto Exp $
 
 IUSE="ldap spell ssl filter mysql postgres nls"
 
@@ -53,21 +53,21 @@ src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	unpack squirrelmail-decode-${DECODING_VER}.tar.bz2
 
-	cd ${S}
-	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-4019.patch
-	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-draft_composesess.patch
-	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-mailto.patch
-	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-mime.patch
-	epatch ${FILESDIR}/squirrelmail-1.5.1-ie-mime.patch
-	epatch ${FILESDIR}/squirrelmail-1.5.1-CVE-2007-1262.patch
-	epatch ${FILESDIR}/squirrelmail-1.5.1-sqimap_get_message.patch
+	cd "${S}"
+	epatch "${FILESDIR}/squirrelmail-1.5.1-CVE-2006-4019.patch"
+	epatch "${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-draft_composesess.patch"
+	epatch "${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-mailto.patch"
+	epatch "${FILESDIR}/squirrelmail-1.5.1-CVE-2006-6142-mime.patch"
+	epatch "${FILESDIR}/squirrelmail-1.5.1-ie-mime.patch"
+	epatch "${FILESDIR}/squirrelmail-1.5.1-CVE-2007-1262.patch"
+	epatch "${FILESDIR}/squirrelmail-1.5.1-sqimap_get_message.patch"
 
 	mv config/config_default.php config/config.php
 
 	sed -i "s:'/var/local/squirrelmail/data':SM_PATH . 'data/':" config/config.php
 
 	# Now do the plugins
-	cd ${S}/plugins
+	cd "${S}"/plugins
 
 	mv fortune/config_default.php fortune/config.php
 	sed -i 's:/usr/games/fortune:/usr/bin/fortune:g' fortune/config.php
@@ -94,7 +94,7 @@ src_unpack() {
 
 	use ldap &&
 		unpack ldapuserdata-${LDAP_USERDATA_VER}.tar.gz &&
-		epatch ${FILESDIR}/ldapuserdata-${LDAP_USERDATA_VER}-gentoo.patch &&
+		epatch "${FILESDIR}/ldapuserdata-${LDAP_USERDATA_VER}-gentoo.patch" &&
 		mv ldapuserdata/config_sample.php ldapuserdata/config.php
 
 	use ssl &&
@@ -104,7 +104,7 @@ src_unpack() {
 		mv show_ssl_link/config.php.sample show_ssl_link/config.php
 
 	use nls &&
-		cd ${S} &&
+		cd "${S}" &&
 		unpack all_locales-${LOCALES_VER}.tar.bz2
 }
 
@@ -118,7 +118,7 @@ src_install() {
 
 	# Copy the app's main files
 	einfo "Installing squirrelmail files."
-	cp -r . ${D}${MY_HTDOCSDIR}
+	cp -r . "${D}${MY_HTDOCSDIR}"
 
 	keepdir ${MY_HTDOCSDIR}/data
 
@@ -129,18 +129,18 @@ src_install() {
 
 	for doc in AUTHORS COPYING ChangeLog INSTALL README ReleaseNotes UPGRADE ; do
 		dodoc ${doc}
-		rm -f ${D}${MY_HTDOCSDIR}/${doc}
+		rm -f "${D}${MY_HTDOCSDIR}/${doc}"
 	done
 
 	for doc in plugins/{README.plugins,*/{INSTALL,README,COPYRIGHTS,CHANGELOG,API,UPGRADE,TODO,README.txt,INSTALL.txt,user_example.txt}} ; do
 		if [[ -f ${doc} ]] ; then
 			docinto $(dirname ${doc})
 			dodoc ${doc}
-			rm -f ${D}${MY_HTDOCSDIR}/${doc}
+			rm -f "${D}${MY_HTDOCSDIR}/${doc}"
 		fi
 	done
 
-	cp ${WORKDIR}/squirrelmail-decode-${DECODING_VER}/*/*.php ${D}${MY_HTDOCSDIR}/functions/decode
+	cp "${WORKDIR}/squirrelmail-decode-${DECODING_VER}/*/*.php" "${D}${MY_HTDOCSDIR}/functions/decode"
 
 	# Identify the configuration files that this app uses
 	for file in config/config.php plugins/*/{config.php,sqspell_config.php,gpg_local_prefs.txt}; do
@@ -165,7 +165,7 @@ src_install() {
 	done
 
 	# add the post-installation instructions
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}/postinstall-en.txt"
 
 	# all done
 	#

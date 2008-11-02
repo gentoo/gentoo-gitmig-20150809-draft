@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.13-r1.ebuild,v 1.1 2008/01/12 02:40:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.13-r1.ebuild,v 1.2 2008/11/02 06:08:11 jmbsvicetto Exp $
 
 IUSE="ldap spell ssl filter mysql postgres nls"
 
@@ -53,14 +53,14 @@ src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	unpack squirrelmail-decode-${DECODING_VER}.tar.bz2
 
-	cd ${S}
+	cd "${S}"
 
 	mv config/config_default.php config/config.php
 
 	sed -i "s:'/var/local/squirrelmail/data/':SM_PATH . 'data/':" config/config.php
 
 	# Now do the plugins
-	cd ${S}/plugins
+	cd "${S}"/plugins
 
 	sed -i 's:/usr/games/fortune:/usr/bin/fortune:g' fortune/setup.php || die "Unable to fix fortunes plugin."
 
@@ -76,7 +76,7 @@ src_unpack() {
 
 	use ldap &&
 		unpack ldapuserdata-${LDAP_USERDATA_VER}.tar.gz &&
-		epatch ${FILESDIR}/ldapuserdata-${LDAP_USERDATA_VER}-gentoo.patch &&
+		epatch "${FILESDIR}/ldapuserdata-${LDAP_USERDATA_VER}-gentoo.patch" &&
 		mv ldapuserdata/config_sample.php ldapuserdata/config.php
 
 	use ssl &&
@@ -86,7 +86,7 @@ src_unpack() {
 		mv show_ssl_link/config.php.sample show_ssl_link/config.php
 
 	use nls &&
-		cd ${S} &&
+		cd "${S}" &&
 		unpack all_locales-${LOCALES_VER}.tar.bz2
 }
 
@@ -159,9 +159,9 @@ src_install() {
 
 	# Copy the app's main files
 	einfo "Installing squirrelmail files."
-	cp -r . ${D}${MY_HTDOCSDIR}
+	cp -r . "${D}${MY_HTDOCSDIR}"
 
-	cp ${WORKDIR}/squirrelmail-decode-${DECODING_VER}/*/*.php ${D}${MY_HTDOCSDIR}/functions/decode
+	cp "${WORKDIR}/squirrelmail-decode-${DECODING_VER}/*/*.php" "${D}${MY_HTDOCSDIR}/functions/decode"
 
 	# Identify the configuration files that this app uses
 	local configs="config/config.php config/config_local.php plugins/retrieveuserdata/config.php"
@@ -189,7 +189,7 @@ src_install() {
 	done
 
 	# add the post-installation instructions
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}/postinstall-en.txt"
 
 	# all done
 	#
