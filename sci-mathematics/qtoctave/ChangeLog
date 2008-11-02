@@ -1,11 +1,11 @@
 # ChangeLog for sci-mathematics/qtoctave
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.2 2008/11/02 16:12:50 markusle Exp $
 
 *qtoctave-0.8.1 (02 Nov 2008)
 
   02 Nov 2008; Markus Dittrich <markusle@gentoo.org> +metadata.xml,
   +qtoctave-0.8.1.ebuild:
   Initial commit (fixes bug #198485). Many thanks go to Juan Aguado
-  <juantxorena@gmail.com> for his ebuilds.
+  <juantxorena@gmail.com> for his help and ebuilds.
 
