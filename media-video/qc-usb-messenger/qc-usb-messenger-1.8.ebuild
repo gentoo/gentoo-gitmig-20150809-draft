@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/qc-usb-messenger-1.8.ebuild,v 1.1 2008/11/02 12:59:43 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/qc-usb-messenger-1.8.ebuild,v 1.2 2008/11/02 13:05:42 coldwind Exp $
 
 inherit eutils linux-mod
 
@@ -17,7 +17,8 @@ CONFIG_CHECK="USB VIDEO_DEV VIDEO_V4L1_COMPAT"
 MODULE_NAMES="qcmessenger(usb:)"
 BUILD_TARGETS="all"
 
-DEPEND="virtual/linux-sources"
+DEPEND="virtual/linux-sources
+	!media-video/qc-usb"
 
 pkg_setup() {
 	ABI=${KERNEL_ABI}
