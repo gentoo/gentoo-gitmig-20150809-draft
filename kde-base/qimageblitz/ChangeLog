@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qimageblitz
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.4 2008/10/25 12:19:53 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.5 2008/11/02 07:36:39 vapier Exp $
+
+  02 Nov 2008; Mike Frysinger <vapier@gentoo.org> qimageblitz-0.0.4.ebuild:
+  Add ppc64 love for KDE 4.
 
   25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> qimageblitz-0.0.4.ebuild:
   Keyworded ~ppc. Closes bug #244176
