@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/mcelog-0.8_pre1.ebuild,v 1.8 2008/02/22 19:41:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/mcelog-0.8_pre1.ebuild,v 1.9 2008/11/02 11:03:53 maekke Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_PV="${PV/_pre1/pre}"
 MY_P="${PN}-${MY_PV}"
@@ -26,17 +26,26 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/${P}-timestamp-mcelog.patch
+
+	cd "${S}"
+	sed -i \
+		-e 's:-g:${CFLAGS}:g' \
+		-e 's:\tgcc:\t$(CC):g' Makefile || die "sed makefile failed"
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
-	dosbin mcelog dbquery
+	dosbin mcelog dbquery || die
 	doman mcelog.8
 
 	exeinto /etc/cron.daily
-	newexe mcelog.cron mcelog
+	newexe mcelog.cron mcelog || die
 
 	insinto /etc/logrotate.d/
-	newins mcelog.logrotate mcelog
+	newins mcelog.logrotate mcelog || die
 
 	dodoc CHANGES README TODO *.pdf
 }
