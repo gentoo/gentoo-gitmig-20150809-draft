@@ -1,6 +1,27 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.548 2008/10/26 18:55:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.549 2008/11/02 00:50:14 zmedico Exp $
+
+*portage-2.2_rc13 (01 Nov 2008)
+
+  01 Nov 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc13.ebuild:
+  2.2_rc13 bump. This fixes bugs #186842 (--verbose to control merge output),
+  #225429 (unneeded preserved libs), #233296 (PROPERTIES=interactive support),
+  #234301 (log pkg_nofetch output), #236609 (TERM=dumb columns calculation),
+  #238957 (unneeded preserved libs), #239015 (never unmerge @installed),
+  #240295 (echo the emake command), #241100 (pty for fetcher display),
+  #241118 (pkg_nofetch with --pretend), #241132 (emerge --info traceback),
+  #241204 (mysterious 'invalid db entry'), #241366 (spurious 'emaint --check
+  world' message), #241906 (regenworld InvalidAtom exception), #242304 (zero-
+  byte manifest DIST entry), #243178 (preserved libs file collisions),
+  #243224 (repoman inherit.autotools warning for git.eclass), #244792 (remove
+  confcache support), #244947 (repoman check for problems in USE deps with
+  masked and forced flags), #244975 (never unmerge portage itself). Bug
+  #210077 tracks all bugs fixed since 2.1.5.x.
+
+  01 Nov 2008; Zac Medico <zmedico@gentoo.org> -portage-2.1.4.4.ebuild,
+  -portage-2.1.5.6.ebuild, -portage-2.2_rc11.ebuild:
+  Remove old versions.
 
   26 Oct 2008; Zac Medico <zmedico@gentoo.org> -files/manifest221:
   Bug #238498 - Remove the manifest221 script which is no longer supported.

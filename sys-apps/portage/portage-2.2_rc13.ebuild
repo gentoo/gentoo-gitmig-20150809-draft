@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc11.ebuild,v 1.1 2008/09/26 16:12:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc13.ebuild,v 1.1 2008/11/02 00:50:14 zmedico Exp $
 
 inherit eutils multilib python
 
