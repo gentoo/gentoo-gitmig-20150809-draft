@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ApE
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.2 2008/07/09 14:07:03 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.3 2008/11/02 07:02:37 jmbsvicetto Exp $
+
+  02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed the broken herd by adding no-herd to metadata.xml.
 
   09 Jul 2008; Jeff Gardner <je_fro@gentoo.org> ApE-1.12.ebuild:
   RESTRICT=mirror, thanks to tove who caught it.
