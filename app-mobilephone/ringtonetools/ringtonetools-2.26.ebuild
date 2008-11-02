@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ringtonetools/ringtonetools-2.26.ebuild,v 1.5 2006/09/24 10:04:34 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/ringtonetools/ringtonetools-2.26.ebuild,v 1.6 2008/11/02 18:47:26 mrness Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="program for creating ringtones and logos for mobile phones"
 HOMEPAGE="http://ringtonetools.mikekohn.net/"
@@ -20,7 +20,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake FLAGS="${CFLAGS}" || die "make failed"
+	emake -j1 FLAGS="${CFLAGS}" LIBS="${LDFLAGS}" CC="$(tc-getCC)" || die "make failed"
 }
 
 src_install() {
