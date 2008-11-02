@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/simpserver-bin/simpserver-bin-2.1.0.ebuild,v 1.3 2008/10/09 21:08:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/simpserver-bin/simpserver-bin-2.1.0.ebuild,v 1.4 2008/11/02 05:45:21 jmbsvicetto Exp $
 
 MY_PN=${PN/-bin/}
 MY_P="${MY_PN}-${PV}"
@@ -30,7 +30,7 @@ src_install () {
 	insinto /etc
 	doins etc/simp.conf
 
-	newinitd ${FILESDIR}/${MY_PN}.rc ${MY_PN}
+	newinitd "${FILESDIR}/${MY_PN}".rc ${MY_PN}
 }
 
 pkg_postinst() {
