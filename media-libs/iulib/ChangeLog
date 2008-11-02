@@ -1,0 +1,10 @@
+# ChangeLog for 
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/iulib/ChangeLog,v 1.1 2008/11/02 06:58:28 vapier Exp $
+
+*iulib-0.3 (02 Nov 2008)
+
+  02 Nov 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/iulib-0.3-install.patch, +iulib-0.3.ebuild:
+  Initial ebuild by me for newer ocropus.
+
