@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>eradicator@gentoo.org</email>
-</maintainer>
-<maintainer>
   <email>mrness@gentoo.org</email>
   <name>Alin Năstac</name>
   <description>Secondary maintainer</description>
