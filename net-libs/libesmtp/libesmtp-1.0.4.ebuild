@@ -1,26 +1,22 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.4.ebuild,v 1.12 2008/02/12 12:14:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.4.ebuild,v 1.13 2008/11/02 07:32:46 vapier Exp $
 
 inherit toolchain-funcs eutils libtool
 
-DESCRIPTION="libESMTP is a library that implements the client side of the SMTP protocol"
-SRC_URI="http://www.stafford.uklinux.net/${PN}/${P}.tar.bz2"
+DESCRIPTION="lib that implements the client side of the SMTP protocol"
 HOMEPAGE="http://www.stafford.uklinux.net/libesmtp/"
+SRC_URI="http://www.stafford.uklinux.net/${PN}/${P}.tar.bz2"
+
 LICENSE="LGPL-2.1 GPL-2"
-
-RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
-DEPEND=">=sys-devel/libtool-1.4.1
-		>=sys-apps/sed-4
-		${RDEPEND}"
-
-IUSE="ssl debug"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
+IUSE="ssl debug"
+
+DEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
 
 src_unpack() {
 	unpack ${A}
-
 	elibtoolize
 }
 
@@ -45,10 +41,8 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-src_install () {
-
-	make DESTDIR="${D}" install || die "make install failed"
+src_install() {
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS INSTALL ChangeLog NEWS Notes README TODO
 	dohtml doc/api.xml
-
 }
