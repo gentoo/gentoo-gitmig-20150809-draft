@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/jfsutils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.43 2008/10/31 20:57:56 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.44 2008/11/02 15:00:31 maekke Exp $
+
+  02 Nov 2008; Markus Meier <maekke@gentoo.org> jfsutils-1.1.12.ebuild:
+  amd64/x86 stable, bug #245096
 
 *jfsutils-1.1.13 (31 Oct 2008)
 
