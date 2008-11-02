@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.0-r3.ebuild,v 1.3 2008/10/27 21:37:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.0-r3.ebuild,v 1.4 2008/11/02 22:24:23 gengor Exp $
 
 inherit eutils fdo-mime flag-o-matic multilib toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://distcc.googlecode.com/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi gnome gtk ipv6 selinux xinetd"
+IUSE="avahi gnome gtk hardened ipv6 selinux xinetd"
 
 RESTRICT="test"
 
@@ -51,6 +51,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-svn617.patch"
 	epatch "${FILESDIR}/${P}-xinetd.patch"
 	sed -i -e "/PATH/s:\$distcc_location:${DCCC_PATH}:" pump.in || die
+
+	# Bugs #120001, #167844 and probably more. See patch for description.
+	use hardened && epatch "${FILESDIR}/distcc-hardened.patch"
 }
 
 src_compile() {

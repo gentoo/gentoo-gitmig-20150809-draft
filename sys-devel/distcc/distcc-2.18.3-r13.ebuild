@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r13.ebuild,v 1.2 2008/08/17 03:24:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r13.ebuild,v 1.3 2008/11/02 22:24:23 gengor Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -17,7 +17,7 @@ SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi gnome gtk selinux ipv6"
+IUSE="avahi gnome gtk hardened selinux ipv6"
 
 COMMON_DEP="dev-libs/popt
 	avahi? ( >=net-dns/avahi-0.6.5 )"
@@ -64,13 +64,16 @@ src_unpack() {
 
 	epatch "${FILESDIR}/distcc-freedesktop.patch"
 	epatch "${FILESDIR}/distcc-create-dir.patch"
-	epatch "${FILESDIR}"/${PN}-march-native.patch
+	epatch "${FILESDIR}/${PN}-march-native.patch"
 
 	rm -v popt/*.c || die
 	if use avahi; then
 		epatch "${DISTDIR}/${PN}-2.18-avahi.patch.bz2"
 		epatch "${FILESDIR}/${PN}-avahi-configure.patch"
 	fi
+
+	# Bugs #120001, #167844 and probably more. See patch for description.
+	use hardened && epatch "${FILESDIR}/distcc-hardened.patch"
 
 	eautoreconf
 }
