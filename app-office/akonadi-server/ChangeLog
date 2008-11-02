@@ -1,6 +1,10 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.4 2008/10/25 12:30:05 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.5 2008/11/02 07:34:06 vapier Exp $
+
+  02 Nov 2008; Mike Frysinger <vapier@gentoo.org>
+  akonadi-server-1.0.0.ebuild:
+  Add ppc64 love for KDE 4.
 
 *akonadi-server-1.0.0 (02 Oct 2008)
 
