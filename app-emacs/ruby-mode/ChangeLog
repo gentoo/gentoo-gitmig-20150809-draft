@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.38 2008/08/27 13:32:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.39 2008/11/02 02:07:07 flameeyes Exp $
+
+*ruby-mode-1.9.1_pre1 (02 Nov 2008)
+
+  02 Nov 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +ruby-mode-1.9.1_pre1.ebuild:
+  Add a new ebuild for the ruby-mode elisp files from the latest version of
+  Ruby (preview).
 
   27 Aug 2008; Ulrich Mueller <ulm@gentoo.org> ruby-mode-1.8.6.ebuild:
   Use eclass default instead of elisp-comp, bug 235442.
