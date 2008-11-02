@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/smsclient-2.0.9a-r1.ebuild,v 1.2 2007/02/03 06:54:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/smsclient-2.0.9a-r1.ebuild,v 1.3 2008/11/02 18:57:14 mrness Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Utility to send SMS messages to mobile phones and pagers."
 HOMEPAGE="http://www.smsclient.org"
@@ -22,7 +22,7 @@ src_unpack() {
 
 src_compile() {
 	rm .configured && ./configure || die "Configure failed"
-	make || die "Make failed"
+	emake CC="$(tc-getCC)" || die "Make failed"
 }
 
 src_install() {

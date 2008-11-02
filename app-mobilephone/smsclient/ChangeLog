@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/smsclient
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/ChangeLog,v 1.7 2007/03/26 09:22:08 mrness Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/ChangeLog,v 1.8 2008/11/02 18:57:14 mrness Exp $
+
+  02 Nov 2008; Alin Năstac <mrness@gentoo.org> smsclient-2.0.9a-r1.ebuild:
+  Respect CC env variable (#243688).
 
   26 Mar 2007; Alin Năstac <mrness@gentoo.org> -smsclient-2.0.9a.ebuild:
   Remove obsolete revision.
