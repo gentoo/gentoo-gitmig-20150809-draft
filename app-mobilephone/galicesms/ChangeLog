@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/galicesms
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/galicesms/ChangeLog,v 1.9 2008/07/14 18:55:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/galicesms/ChangeLog,v 1.10 2008/11/02 18:17:12 mrness Exp $
+
+  02 Nov 2008; Alin Năstac <mrness@gentoo.org> -galicesms-1.61.ebuild:
+  Remove obsolete version.
 
   14 Jul 2008; Alin Năstac <mrness@gentoo.org> galicesms-1.62.ebuild:
   Die if dobin fail.
