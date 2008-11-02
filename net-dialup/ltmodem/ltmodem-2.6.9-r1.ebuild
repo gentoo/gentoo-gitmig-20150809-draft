@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9-r1.ebuild,v 1.2 2008/08/31 16:59:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9-r1.ebuild,v 1.3 2008/11/02 10:26:37 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -46,7 +46,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}"/${P}-kernel-2.6.24.patch
+	epatch "${FILESDIR}"/${P}-kernel-2.6.27.patch
 }
 
 src_install() {

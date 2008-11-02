@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.43 2008/08/31 16:59:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.44 2008/11/02 10:26:37 mrness Exp $
+
+  02 Nov 2008; Alin Năstac <mrness@gentoo.org>
+  -files/ltmodem-2.6.9-kernel-2.6.24.patch,
+  +files/ltmodem-2.6.9-kernel-2.6.27.patch, ltmodem-2.6.9-r1.ebuild:
+  Fix compilation errors when build against kernel 2.6.27, thanks to
+  Aleksandar Topuzovic (#244833).
 
   31 Aug 2008; Alin Năstac <mrness@gentoo.org> ltmodem-2.6.9-r1.ebuild:
   Add AgereSystems-WinModem license (#235484).
