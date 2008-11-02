@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.66 2008/10/22 16:12:49 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.67 2008/11/02 00:02:58 maekke Exp $
+
+  02 Nov 2008; Markus Meier <maekke@gentoo.org> x11-drm-20070314.ebuild:
+  amd64/x86 stable, bug #237876
 
   22 Oct 2008; Rémi Cardona <remi@gentoo.org> x11-drm-20060608.ebuild,
   x11-drm-20060608-r1.ebuild, x11-drm-20070314.ebuild,
