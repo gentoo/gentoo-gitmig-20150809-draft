@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libnova
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.4 2007/11/25 19:52:46 bicatali Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.5 2008/11/02 07:11:28 vapier Exp $
+
+  02 Nov 2008; Mike Frysinger <vapier@gentoo.org> libnova-0.12.1.ebuild:
+  Add ppc/ppc64 love for KDE 4.
 
 *libnova-0.12.1 (25 Nov 2007)
 

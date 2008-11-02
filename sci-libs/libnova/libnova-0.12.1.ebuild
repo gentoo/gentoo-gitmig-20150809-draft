@@ -1,15 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/libnova-0.12.1.ebuild,v 1.1 2007/11/25 19:52:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/libnova-0.12.1.ebuild,v 1.2 2008/11/02 07:11:28 vapier Exp $
 
 inherit eutils autotools flag-o-matic
 
 DESCRIPTION="Celestial Mechanics and Astronomical Calculation Library"
 HOMEPAGE="http://libnova.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
