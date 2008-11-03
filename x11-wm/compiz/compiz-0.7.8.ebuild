@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.7.8.ebuild,v 1.1 2008/10/31 16:48:40 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.7.8.ebuild,v 1.2 2008/11/03 16:12:18 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -134,6 +134,9 @@ src_install() {
 
 pkg_postinst() {
 	use gnome && gnome2_gconf_install
+
+	ewarn "If you update to x11-wm/metacity-2.24 after you install ${P},"
+	ewarn "gtk-window-decorator will crash until you reinstall ${PN} again."
 }
 
 pkg_prerm() {
