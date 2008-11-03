@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-context
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.20 2008/10/31 14:12:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.21 2008/11/03 10:01:50 aballier Exp $
+
+  03 Nov 2008; Alexis Ballier <aballier@gentoo.org>
+  texlive-context-2008.ebuild:
+  We still need to RDEPEND on ruby for the 2008 version...
 
   31 Oct 2008; Alexis Ballier <aballier@gentoo.org>
   texlive-context-2008.ebuild:

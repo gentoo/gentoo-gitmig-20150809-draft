@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2008.ebuild,v 1.2 2008/10/31 14:12:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2008.ebuild,v 1.3 2008/11/03 10:01:50 aballier Exp $
 
 TEXLIVE_MODULE_CONTENTS="context jmn lmextra bin-context context-account context-bnf context-chromato context-construction-plan context-degrade context-french context-letter context-lettrine context-lilypond context-mathsets context-taspresent context-typearea context-vim collection-context
 "
@@ -17,7 +17,8 @@ DEPEND=">=dev-texlive/texlive-metapost-2008
 >=dev-texlive/texlive-basic-2008
 >=dev-texlive/texlive-latex-2008
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND} dev-lang/ruby
+"
 TL_CONTEXT_UNIX_STUBS="context ctxtools exatools luatools makempy mpstools mptopdf mtxrun mtxtools pdftools pdftrimwhite pstopdf rlxtools runtools texexec texfind texfont texshow textools texutil tmftools xmltools"
 TEXLIVE_MODULE_BINSCRIPTS="texmf-dist/scripts/context/ruby/texmfstart.rb"
 for i in ${TL_CONTEXT_UNIX_STUBS} ; do
