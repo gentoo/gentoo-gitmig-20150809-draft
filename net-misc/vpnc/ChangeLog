@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.75 2008/10/16 16:46:39 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.76 2008/11/03 13:02:49 armin76 Exp $
+
+  03 Nov 2008; Raúl Porcel <armin76@gentoo.org> vpnc-0.5.1-r1.ebuild,
+  vpnc-0.5.1_p332.ebuild:
+  Remove resolvconf-gentoo dep, as its p.masked and going to be removed
 
   16 Oct 2008; Christian Faulhammer <opfer@gentoo.org> files/vpnc-2.init:
   source is not POSIX compliant so use the dot instead, thanks to Martin
