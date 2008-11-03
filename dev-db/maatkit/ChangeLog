@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/maatkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.1 2008/10/06 11:34:32 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.2 2008/11/03 17:25:31 wschlich Exp $
+
+*maatkit-2442 (03 Nov 2008)
+
+  03 Nov 2008; Wolfram Schlich <wschlich@gentoo.org> +maatkit-2442.ebuild:
+  version bump
 
 *maatkit-2325 (06 Oct 2008)
 
