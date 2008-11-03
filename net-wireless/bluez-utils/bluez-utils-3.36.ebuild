@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.36.ebuild,v 1.4 2008/08/12 14:19:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.36.ebuild,v 1.5 2008/11/03 06:53:38 dev-zero Exp $
 
 inherit autotools multilib eutils
 
@@ -109,7 +109,10 @@ src_install() {
 	doexe  "${S}/scripts/bluetooth_serial" || die
 
 	insinto /etc/bluetooth
-	doins input/input.conf
+	doins \
+		input/input.conf \
+		audio/audio.conf \
+		network/network.conf
 }
 
 pkg_postinst() {

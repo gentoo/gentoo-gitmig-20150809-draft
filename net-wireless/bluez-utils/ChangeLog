@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.132 2008/08/25 17:34:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.133 2008/11/03 06:53:38 dev-zero Exp $
+
+  03 Nov 2008; Tiziano Müller <dev-zero@gentoo.org>
+  bluez-utils-3.36.ebuild:
+  Adding {audio,network}.conf manually (bug #235194)
 
   25 Aug 2008; nixnut <nixnut@gentoo.org> bluez-utils-3.30.ebuild:
   Stable on ppc wrt bug 224409
