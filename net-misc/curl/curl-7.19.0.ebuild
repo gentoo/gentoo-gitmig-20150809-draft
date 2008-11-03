@@ -1,20 +1,21 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.18.2.ebuild,v 1.8 2008/11/03 22:10:18 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.19.0.ebuild,v 1.1 2008/11/03 22:10:18 lack Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
-inherit libtool autotools
+inherit multilib
 
 #MY_P=${P/_pre/-}
 DESCRIPTION="A Client that groks URLs"
 HOMEPAGE="http://curl.haxx.se/ http://curl.planetmirror.com"
 #SRC_URI="http://cool.haxx.se/curl-daily/${MY_P}.tar.bz2"
-SRC_URI="http://curl.planetmirror.com/download/${P}.tar.bz2"
+#SRC_URI="http://curl.planetmirror.com/download/${P}.tar.bz2"
+SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
 
 LICENSE="MIT X11"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 #IUSE="ssl ipv6 ldap ares gnutls nss idn kerberos test"
 IUSE="ssl ipv6 ldap ares gnutls libssh2 nss idn kerberos test"
 
@@ -45,7 +46,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/curl-7.17.0-strip-ldflags.patch
-	epatch "${FILESDIR}"/curl-7.18.2-nss-threadsafe.patch
 }
 
 src_compile() {
