@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.3 2008/10/31 15:47:37 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.4 2008/11/03 16:41:56 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -45,7 +45,6 @@ DEPEND="${RDEPEND}
 PVLIBDIR="$(get_libdir)/${PN}-${MAJOR_PV}"
 BUILDDIR="${WORKDIR}/build"
 S="${WORKDIR}"/ParaView-${PV}
-
 
 pkg_setup() {
 	use qt4 && qt4_pkg_setup
