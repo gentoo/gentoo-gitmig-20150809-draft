@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2016 2008/11/03 23:29:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2017 2008/11/03 23:47:54 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Nov 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  remove p.mask entry on x11-misc/obpager since it was remvoed from the tree,
+  bug #226007
 
   04 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   add gnome-settings-daemon & gnome-control-center to the GNOME 2.24 mask
