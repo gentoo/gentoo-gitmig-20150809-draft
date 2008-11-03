@@ -1,0 +1,12 @@
+diff -Naur encfs-1.5/encfs/Makefile.in encfs-1.5.new/encfs/Makefile.in
+--- encfs-1.5/encfs/Makefile.in	2008-09-10 07:55:07.000000000 +0200
++++ encfs-1.5.new/encfs/Makefile.in	2008-10-07 17:30:35.467163118 +0200
+@@ -297,7 +297,7 @@
+ KDE_OPTIONS = qtonly
+ ALL_INCLUDES = @RLOG_CFLAGS@ @OPENSSL_CFLAGS@ @BOOST_CPPFLAGS@
+ ALL_LDFLAGS = @RLOG_LIBS@ @OPENSSL_LIBS@ @FUSE_LIBS@ \
+-	@BOOST_SERIALIZATION_LIB@ @BOOST_FILESYSTEM_LIB@ \
++	@BOOST_SERIALIZATION_LIB@ @BOOST_FILESYSTEM_LIB@ @BOOST_SYSTEM_LIB@ \
+ 	$(am__append_2)
+ INCLUDES = $(all_includes) -I../intl
+ AM_CXXFLAGS = -DRLOG_COMPONENT="encfs" $(ALL_INCLUDES) $(am__append_1)
