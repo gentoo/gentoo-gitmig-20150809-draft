@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.12-r1.ebuild,v 1.5 2008/11/01 16:54:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.12-r1.ebuild,v 1.6 2008/11/03 16:39:20 mr_bones_ Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -253,10 +253,10 @@ src_test() {
 				echo "=== $t SKIP"
 			else
 				echo -n "=== $t "
-				./$t </dev/null >/dev/null 
-				rc=$? 
-				if [ $rc -eq 0 ]; then 
-					echo PASS 
+				./$t </dev/null >/dev/null
+				rc=$?
+				if [ $rc -eq 0 ]; then
+					echo PASS
 				else
 					echo FAIL
 					failed=1
