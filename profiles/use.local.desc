@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4002 2008/11/03 06:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4003 2008/11/03 12:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -933,6 +933,8 @@ gnome-extra/nautilus-sendto:thunderbird - Enables support for the Mozilla Thunde
 gnome-extra/sensors-applet:nvidia - Enables support for sensors on NVidia chips
 gnome-extra/yelp:beagle - Enables support for the Beagle (app-misc/beagle) desktop search tool
 gnome-extra/yelp:lzma - Enables support for LZMA compressed info and man pages
+gnustep-apps/cdplayer:preferences - Use gnustep-apps/preferences for preferences setting
+gnustep-apps/cdplayer:systempreferences - Use gnustep-apps/systempreferences for preferences setting
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-cairo:glitz - Build with media-libs/glitz support
