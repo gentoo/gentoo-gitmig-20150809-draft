@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3a.ebuild,v 1.6 2007/12/15 18:33:50 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3a.ebuild,v 1.7 2008/11/03 17:24:41 dragonheart Exp $
 
 #
 # NOTES:
@@ -22,6 +22,7 @@ LICENSE="truecrypt-collective-1.0"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
+RESTRICT="mirror fetch bindist"
 
 RDEPEND="sys-fs/device-mapper"
 DEPEND="virtual/linux-sources
@@ -83,6 +84,10 @@ pkg_postinst() {
 	elog "    Try 'modprobe truecrypt' as root to load the module. "
 	elog " 3. Load the module during boot by listing it in "
 	elog "    '/etc/modules.autoload.d/kernel-2.6' "
+
+	elog "potential legal problems - use at own risk"
+	elog "http://lists.freedesktop.org/archives/distributions/2008-October/000276.html"
+
 }
 
 dmcrypt_check() {

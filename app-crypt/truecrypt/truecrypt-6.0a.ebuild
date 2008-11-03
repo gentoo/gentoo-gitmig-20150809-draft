@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.0a.ebuild,v 1.2 2008/07/09 23:00:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.0a.ebuild,v 1.3 2008/11/03 17:24:42 dragonheart Exp $
 
 inherit eutils toolchain-funcs multilib wxwidgets
 
@@ -13,7 +13,7 @@ LICENSE="truecrypt-collective-1.4"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="X"
-RESTRICT="fetch"
+RESTRICT="mirror fetch bindist"
 
 RDEPEND="sys-fs/fuse
 	=x11-libs/wxGTK-2.8*"
@@ -75,4 +75,9 @@ src_install() {
 	dodoc Readme.txt 'Release/Setup Files/TrueCrypt User Guide.pdf'
 	insinto "/$(get_libdir)/rcscripts/addons"
 	newins "${FILESDIR}/${PN}-stop.sh" "${PN}-stop.sh"
+}
+
+pkg_postinst() {
+	elog "potential legal problems - use at own risk"
+	elog "http://lists.freedesktop.org/archives/distributions/2008-October/000276.html"
 }
