@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9130 2008/11/03 12:34:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9131 2008/11/03 13:05:34 armin76 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -818,11 +818,6 @@ virtual/libffi
 # Not used by anything anymore
 # Masked for removal in 30 days
 dev-dotnet/jscall-sharp
-
-# Raúl Porcel <armin76@gentoo.org> (29 May 2008)
-# resolvconf-gentoo is deprecated, please use
-# net-dns/openresolv, bug #219270
-net-dns/resolvconf-gentoo
 
 # Joe Peterson <lavajoe@gentoo.org> (28 May 2008)
 # Beta 25 is broken - intermittently does not work (bombs out).
