@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.11 2008/04/22 09:44:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.12 2008/11/03 06:38:31 flameeyes Exp $
+
+*freeipmi-0.6.10 (03 Nov 2008)
+
+  03 Nov 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freeipmi-0.6.10+glibc-2.8.patch, +freeipmi-0.6.10.ebuild:
+  Version bump to version 0.6.10, closes bug #245113 by Badalian Slava, and
+  add a patch to build with glibc 2.8, closes bug #241422.
 
 *freeipmi-0.5.6 (22 Apr 2008)
 
