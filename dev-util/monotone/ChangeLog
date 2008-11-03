@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.56 2008/08/30 01:23:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.57 2008/11/03 22:54:47 maekke Exp $
+
+  03 Nov 2008; Markus Meier <maekke@gentoo.org> monotone-0.40.ebuild:
+  amd64/x86 stable, bug #244390
 
   30 Aug 2008; Daniel Black <dragonheart@gentoo.org>
   files/monotone-0.36.initd:
