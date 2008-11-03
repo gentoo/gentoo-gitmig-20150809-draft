@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.39.ebuild,v 1.13 2008/05/29 19:34:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.39.ebuild,v 1.14 2008/11/03 12:58:17 armin76 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -18,7 +18,7 @@ IUSE="dbus isc resolvconf tftp"
 RDEPEND=""
 DEPEND="${RDEPEND}
 	dbus? ( sys-apps/dbus )
-	resolvconf? ( || ( net-dns/openresolv net-dns/resolvconf-gentoo ) )"
+	resolvconf? ( net-dns/openresolv )"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
