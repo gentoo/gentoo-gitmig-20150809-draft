@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20081030_p1336.ebuild,v 1.1 2008/11/01 00:21:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20081103_p0302.ebuild,v 1.1 2008/11/03 09:51:54 aballier Exp $
 
 inherit latex-package toolchain-funcs java-pkg-opt-2
 
