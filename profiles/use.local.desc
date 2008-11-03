@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4001 2008/11/02 16:47:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4002 2008/11/03 06:27:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2484,6 +2484,7 @@ sys-libs/glibc:nptlonly - Disables building the linuxthreads fallback in glibc e
 sys-libs/glibc:userlocales - Build only the locales specified in /etc/locales.build
 sys-libs/libraw1394:juju - Use the new juju firewire stack in the Linux kernel
 sys-libs/libuser:quotas - Enables support for user quotas
+sys-libs/ncurses:ada - Add bindings for the ADA programming language
 sys-libs/ncurses:trace - Enable test trace() support in ncurses calls
 sys-libs/pam:audit - Enable support for sys-process/audit
 sys-libs/uclibc:pregen - Use pregenerated locales
