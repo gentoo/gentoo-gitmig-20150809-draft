@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/simpleagenda-0.27.ebuild,v 1.4 2008/03/08 13:44:34 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/simpleagenda-0.37.ebuild,v 1.1 2008/11/03 11:44:09 voyageur Exp $
 
 inherit eutils gnustep-2
 
@@ -11,9 +11,11 @@ SRC_URI="http://coyote.octets.fr/pub/gnustep/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE=""
 
-DEPEND="dev-libs/libical"
+DEPEND="dev-libs/libical
+	>=virtual/gnustep-back-0.13.0"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_PN}-${PV}
