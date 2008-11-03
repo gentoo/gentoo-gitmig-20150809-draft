@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.1.2.ebuild,v 1.1 2008/10/02 12:08:34 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/kstars-4.1.2.ebuild,v 1.2 2008/11/03 10:42:35 vapier Exp $
 
 EAPI="2"
 
 KMNAME=kdeedu
-inherit kde4-meta
+inherit kde4-meta flag-o-matic toolchain-funcs
 
 DESCRIPTION="KDE Desktop Planetarium"
 KEYWORDS="~amd64 ~x86"
@@ -19,6 +19,12 @@ DEPEND=">=kde-base/libkdeedu-${PV}:${SLOT}
 RDEPEND="${DEPEND}"
 
 PATCHES=("${FILESDIR}/${PN}-4.1.0-destdir.patch")
+
+src_unpack() {
+	[[ $(tc-arch) == "ppc64" ]] && append-flags -mminimal-toc #241900
+
+	kde4-meta_src_unpack
+}
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
