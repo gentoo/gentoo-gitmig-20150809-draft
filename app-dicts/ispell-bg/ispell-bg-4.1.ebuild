@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-bg/ispell-bg-4.1.ebuild,v 1.2 2008/11/01 11:49:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-bg/ispell-bg-4.1.ebuild,v 1.3 2008/11/03 18:25:52 pva Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/bgoffice/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~x86"
 
 DEPEND="app-text/ispell"
 

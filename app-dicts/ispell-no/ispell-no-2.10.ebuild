@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-no/ispell-no-2.10.ebuild,v 1.1 2008/11/01 11:01:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-no/ispell-no-2.10.ebuild,v 1.2 2008/11/03 18:29:00 pva Exp $
 
 inherit multilib versionator
 
@@ -12,7 +12,7 @@ SRC_URI="http://alioth.debian.org/frs/download.php/2359/${MY_PN}-${PV}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~mips ~x86"
 
 DEPEND="app-text/ispell"
 

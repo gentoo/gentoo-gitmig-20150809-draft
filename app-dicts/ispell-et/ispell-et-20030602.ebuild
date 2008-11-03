@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-et/ispell-et-20030602.ebuild,v 1.4 2008/11/01 12:03:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-et/ispell-et-20030602.ebuild,v 1.5 2008/11/03 18:27:47 pva Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.meso.ee/~jjpp/speller/estonian.aff
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~x86"
 IUSE=""
 
 DEPEND="app-text/ispell"
