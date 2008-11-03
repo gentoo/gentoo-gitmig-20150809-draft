@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-0.21.0.ebuild,v 1.3 2008/10/30 16:46:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-0.21.0.ebuild,v 1.4 2008/11/03 13:00:21 scarabeus Exp $
 
 EAPI="1"
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6.0
 	nls? ( sys-devel/gettext )"
 
-src_configure() {
+src_compile() {
 	local mycmakeargs
 	use alsa || mycmakeargs="${mycmakeargs} -DNO_Audio=1"
 	use debug && mycmakeargs="${mycmakeargs} -DDebug=1"
@@ -41,8 +41,9 @@ src_configure() {
 		-DCMAKE_DATA_PATH=${GAMES_DATADIR}
 		-DCMAKE_LOCALE_PATH=${GAMES_DATADIR_BASE}/locale/
 		-DCMAKE_DOC_PATH=${GAMES_DATADIR_BASE}/doc/
-		-DCMAKE_ETC_PATH=${GAMES_SYSCONFDIR} -DLIB_INSTALL_DIR=$(games_get_libdir)"
-	cmake-utils_src_configure
+		-DCMAKE_ETC_PATH=${GAMES_SYSCONFDIR} -DLIB_INSTALL_DIR=$(games_get_libdir)
+		-DCMAKE_BUILD_TYPE=Release"
+	cmake-utils_src_compile
 }
 
 src_install() {
