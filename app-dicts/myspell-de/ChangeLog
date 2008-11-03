@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-de
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.13 2008/11/03 19:37:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.14 2008/11/03 21:44:55 pva Exp $
+
+*myspell-de-20080915-r1 (03 Nov 2008)
+
+  03 Nov 2008; Peter Volkov <pva@gentoo.org> myspell-de-20060316.ebuild,
+  -myspell-de-20080915.ebuild, +myspell-de-20080915-r1.ebuild:
+  Fixed dictionary.lst generation.
 
 *myspell-de-20080915 (03 Nov 2008)
 
