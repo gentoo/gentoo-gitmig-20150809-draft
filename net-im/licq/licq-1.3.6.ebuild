@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.6.ebuild,v 1.1 2008/10/29 16:13:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.6.ebuild,v 1.2 2008/11/03 16:40:49 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -115,4 +115,3 @@ src_install() {
 	# fixes bug #22136 and #149464
 	rm -fR "${D}"/var
 }
-
