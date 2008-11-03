@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/uuidtools
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.1 2008/11/03 01:27:39 flameeyes Exp $
+
+*uuidtools-1.0.4 (03 Nov 2008)
+
+  03 Nov 2008; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +uuidtools-1.0.4.ebuild:
+  Add uuidtools ebuild (if you want to know, my blog uses it.
+
