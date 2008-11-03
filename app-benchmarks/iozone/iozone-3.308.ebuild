@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.281.ebuild,v 1.2 2008/05/03 00:16:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/iozone-3.308.ebuild,v 1.1 2008/11/03 16:42:12 dragonheart Exp $
 
 # TODO
 #        ->   linux-arm            (32bit)   <-
