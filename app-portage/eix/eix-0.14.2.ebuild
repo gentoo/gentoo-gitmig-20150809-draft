@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.14.2.ebuild,v 1.1 2008/10/31 05:51:39 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.14.2.ebuild,v 1.2 2008/11/03 18:35:54 mr_bones_ Exp $
+
+inherit multilib
 
 DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
 HOMEPAGE="http://eix.sourceforge.net"
@@ -16,8 +18,6 @@ RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 DEPEND="${RDEPEND}
 	app-arch/lzma-utils
 	doc? ( dev-python/docutils )"
-
-inherit multilib
 
 src_compile() {
 	econf --with-bzip2 $(use_with sqlite) $(use_with doc rst) \
