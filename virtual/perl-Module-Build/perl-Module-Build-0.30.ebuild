@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/perl-Module-Build-0.30.ebuild,v 1.1 2008/11/01 18:46:00 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/perl-Module-Build-0.30.ebuild,v 1.2 2008/11/03 16:46:45 mr_bones_ Exp $
 
 DESCRIPTION="Build and install Perl modules"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -14,4 +14,3 @@ IUSE=""
 DEPEND=""
 
 RDEPEND="~perl-core/Module-Build-${PV}"
-
