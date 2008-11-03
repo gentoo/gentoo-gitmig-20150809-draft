@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.9.ebuild,v 1.2 2008/10/04 09:38:55 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.9.ebuild,v 1.3 2008/11/03 23:38:43 spock Exp $
 
-inherit linux-info multilib
+inherit eutils linux-info multilib
 
 DESCRIPTION="A daemon to run x86 code in an emulated environment."
 HOMEPAGE="http://dev.gentoo.org/~spock/projects/uvesafb/"
@@ -25,6 +25,12 @@ pkg_setup() {
 		die "Kernel not patched with uvesafb."
 	fi
 	linux-info_pkg_setup
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-prot_write.patch"
 }
 
 src_compile() {

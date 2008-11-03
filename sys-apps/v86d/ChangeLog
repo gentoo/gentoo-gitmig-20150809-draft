@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/v86d
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.28 2008/10/18 17:27:33 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/ChangeLog,v 1.29 2008/11/03 23:38:43 spock Exp $
+
+  03 Nov 2008; Michał Januszewski <spock@gentoo.org>
+  +files/v86d-0.1.9-prot_write.patch, v86d-0.1.9.ebuild:
+  Add a fix for bug #245254.
 
   18 Oct 2008; Michał Januszewski <spock@gentoo.org> -v86d-0.1.5.2.ebuild,
   -v86d-0.1.6.ebuild, -v86d-0.1.7.ebuild, -v86d-0.1.8.ebuild:
