@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.2_p2.ebuild,v 1.6 2008/08/03 16:02:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.2_p2.ebuild,v 1.7 2008/11/03 13:03:41 armin76 Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -25,7 +25,7 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
-	resolvconf? ( || ( net-dns/openresolv net-dns/resolvconf-gentoo ) )"
+	resolvconf? ( net-dns/openresolv )"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
