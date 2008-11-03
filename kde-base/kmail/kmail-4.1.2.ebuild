@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.1.2.ebuild,v 1.1 2008/10/02 09:06:06 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.1.2.ebuild,v 1.2 2008/11/03 17:05:34 vapier Exp $
 
 EAPI="2"
 
 KMNAME=kdepim
-inherit kde4-meta
+inherit kde4-meta flag-o-matic toolchain-funcs
 
 DESCRIPTION="KMail is the email component of Kontact, the integrated personal information manager of KDE."
 KEYWORDS="~amd64 ~x86"
@@ -32,6 +32,12 @@ KMEXTRACTONLY="
 "
 KMEXTRA="${KMEXTRA} plugins/kmail/"
 KMLOADLIBS="libkdepim"
+
+src_unpack() {
+	[[ $(tc-arch) == "ppc64" ]] && append-flags -mminimal-toc #241900
+
+	kde4-meta_src_unpack
+}
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
