@@ -1,6 +1,15 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.70 2008/11/04 20:58:47 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.71 2008/11/04 21:09:44 hkbst Exp $
+
+  04 Nov 2008; Marijn Schouten <hkBst@gentoo.org> -files/360p1.patch,
+  -files/drscheme-301-fPIC.patch, -files/drscheme-301-no-setfont.patch,
+  -files/drscheme-350-fPIC.patch, -files/drscheme-352-destdir.patch,
+  -files/drscheme-360-DESTDIR-3m.patch, -reversion.patch,
+  -drscheme-360-r1.ebuild, -drscheme-360-r2.ebuild, -drscheme-360-r3.ebuild,
+  -drscheme-370.6_p20070725.ebuild, -drscheme-370.6_p20070725-r1.ebuild,
+  -drscheme-371.ebuild, -drscheme-372.ebuild, -drscheme-372-r1.ebuild:
+  big cleanup; remove old cruft
 
 *drscheme-4.1.2 (04 Nov 2008)
 
