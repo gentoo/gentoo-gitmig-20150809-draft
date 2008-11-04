@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.14 2008/09/08 20:07:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.15 2008/11/04 09:27:03 vapier Exp $
+
+  04 Nov 2008; Mike Frysinger <vapier@gentoo.org> serf-0.2.0.ebuild:
+  Add arm/s390/sh love.
 
   08 Sep 2008; Guy Martin <gmsoft@gentoo.org> serf-0.2.0.ebuild:
   hppa stable, #236130
