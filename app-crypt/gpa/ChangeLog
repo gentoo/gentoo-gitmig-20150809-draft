@@ -1,11 +1,11 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.55 2008/11/04 10:07:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.56 2008/11/04 10:08:30 dragonheart Exp $
 
 *gpa-0.8.0 (04 Nov 2008)
 
   04 Nov 2008; Daniel Black <dragonheart@gentoo.org> +gpa-0.8.0.ebuild:
-  version bump as per bug #237858 thanks to Arfrever
+  version bump as per bug #237858 thanks to Arfrever and Christian
 
   01 Sep 2008; Daniel Black <dragonheart@gentoo.org> gpa-0.7.6.ebuild:
   correct path to gnupg helper programs. thanks to Mario/Kristoffer in bug
