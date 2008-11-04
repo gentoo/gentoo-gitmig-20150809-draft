@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/katoob
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.24 2008/10/05 16:36:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.25 2008/11/04 00:32:35 jmbsvicetto Exp $
+
+  04 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, katoob-0.3.8.ebuild:
+  Removing leonardop as a maintainer since he was retired. Quoted a var.
 
   05 Oct 2008; Rémi Cardona <remi@gentoo.org> katoob-0.5.9.1.ebuild:
   add missing dep on curl (fixes bug #239631)
