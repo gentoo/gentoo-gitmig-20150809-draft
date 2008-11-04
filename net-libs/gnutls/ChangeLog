@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.164 2008/11/04 12:53:11 dragonheart Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.165 2008/11/04 21:33:06 vapier Exp $
+
+  04 Nov 2008; Mike Frysinger <vapier@gentoo.org> Manifest:
+  Fix gnutls-2.2.5.tar.bz2 manifest.
 
 *gnutls-2.6.0 (04 Nov 2008)
 
