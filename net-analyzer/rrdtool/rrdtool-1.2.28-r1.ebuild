@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.3.3.ebuild,v 1.1 2008/09/16 18:02:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.28-r1.ebuild,v 1.1 2008/11/04 19:32:17 pva Exp $
 
 inherit eutils flag-o-matic multilib perl-module
 
@@ -10,34 +10,40 @@ SRC_URI="http://oss.oetiker.ch/rrdtool/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc perl python ruby rrdcgi tcl"
 
-# This versions are minimal versions upstream tested with.
-RDEPEND="
-	>=media-libs/libpng-1.2.10
-	>=dev-libs/libxml2-2.6.31
-	>=x11-libs/cairo-1.4.6
-	>=dev-libs/glib-2.12.12
-	>=x11-libs/pango-1.17
-	tcl? ( dev-lang/tcl )
-	perl? ( dev-lang/perl )
-	python? ( dev-lang/python )
-	ruby? ( dev-lang/ruby
-			!dev-ruby/ruby-rrd )"
+RDEPEND="tcl? ( dev-lang/tcl )
+	>=sys-libs/zlib-1.2.1
+	>=media-libs/freetype-2.1.5
+	>=media-libs/libart_lgpl-2.3.16
+	>=media-libs/libpng-1.2.5
+	rrdcgi? ( >=dev-libs/cgilib-0.5 )
+	ruby? ( !dev-ruby/ruby-rrd )"
 
 DEPEND="${RDEPEND}
+	perl? ( dev-lang/perl )
+	python? ( dev-lang/python )
+	ruby? ( dev-lang/ruby )
 	sys-apps/gawk"
 
+TCLVER=""
+
+HTMLDOC_DIR="${PF}/html"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-1.2.15-newstyle-resize.patch"
+	epatch "${FILESDIR}/${P}-revert-font-fix.patch"
+}
+
 pkg_setup() {
-	if ! built_with_use x11-libs/cairo svg; then
-		eerror "${PN} requires x11-libs/cairo to be built with svg USE flag."
-		die "Rebuild x11-libs/cairo with svg USE flag enabled."
-	fi
 	use perl && perl-module_pkg_setup
 }
 
 src_compile() {
+	filter-mfpmath sse
 	filter-flags -ffast-math
 
 	export RRDDOCDIR=/usr/share/doc/${PF}
@@ -49,7 +55,7 @@ src_compile() {
 		$(use_enable perl perl-site-install) \
 		$(use_enable tcl) \
 		$(use_with tcl tcllib /usr/$(get_libdir)) \
-		$(use_enable python)
+		$(use_enable python) || die "econf failed."
 
 	emake || die "make failed"
 }
@@ -72,13 +78,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	use perl && perl-module_pkg_postinst
-	ewarn "rrdtool dump 1.3 does emit completely legal xml. Basically this means that"
-	ewarn "it contains an xml header and a DOCTYPE definition. Unfortunately this"
-	ewarn "causes older versions of rrdtool restore to be unhappy."
-	ewarn
-	ewarn "To restore a new dump with ann old rrdtool restore version, either remove"
-	ewarn "the xml header and the doctype by hand (both on the first line of the dump)"
-	ewarn "or use rrdtool dump --no-header."
 }
 
 pkg_prerm() {
