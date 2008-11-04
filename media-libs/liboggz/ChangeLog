@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liboggz
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.8 2008/11/04 13:14:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.9 2008/11/04 13:17:47 aballier Exp $
+
+  04 Nov 2008; Alexis Ballier <aballier@gentoo.org> liboggz-0.9.5.ebuild:
+  tests need docbook-sgml-utils, bug #233041
 
   04 Nov 2008; Alexis Ballier <aballier@gentoo.org> liboggz-0.9.5.ebuild:
   fixup license, its BSD. Bug #138367.
