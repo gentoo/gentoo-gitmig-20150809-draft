@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.8-r2.ebuild,v 1.2 2008/06/15 12:54:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.8-r2.ebuild,v 1.3 2008/11/04 01:27:16 jmbsvicetto Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -26,23 +26,23 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Remove deprecation flag, soit compiles with >=GTK+-2.4
 	sed -i -e 's:-DGTK_DISABLE_DEPRECATED::g' src/Makefile.am
 
 	# Patch up to install desktop entry correctly
-	epatch ${FILESDIR}/${PN}-1.2.8-desktop.patch
-	epatch ${FILESDIR}/${PN}-1.2.8-desktop-entry.patch
+	epatch "${FILESDIR}/${PN}-1.2.8-desktop.patch"
+	epatch "${FILESDIR}/${PN}-1.2.8-desktop-entry.patch"
 
 	# Prevent prestripping
-	epatch ${FILESDIR}/${PN}-1.2.8-no-strip.patch
+	epatch "${FILESDIR}/${PN}-1.2.8-no-strip.patch"
 
 	eautoreconf
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	# The FAQ and README documents shouldn't be gzip'd, as they need to be
 	# available in plain format when they are called from the `Help' menu.
@@ -59,6 +59,6 @@ pkg_postinst() {
 		ewarn "  http://bugs.gentoo.org/"
 	else
 		einfo "Changing permissions for the gringotts binary."
-		chmod u-s ${ROOT}/usr/bin/gringotts
+		chmod u-s "${ROOT}/usr/bin/gringotts"
 	fi
 }

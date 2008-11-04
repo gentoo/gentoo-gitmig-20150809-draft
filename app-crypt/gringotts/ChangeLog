@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gringotts
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.31 2008/06/27 17:19:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.32 2008/11/04 01:27:16 jmbsvicetto Exp $
+
+  04 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, gringotts-1.2.8-r1.ebuild, gringotts-1.2.8-r2.ebuild:
+  Removing leonardop as a maintainer since he was retired. Quoted some vars.
 
   27 Jun 2008; nixnut <nixnut@gentoo.org> gringotts-1.2.9.ebuild:
   Stable on ppc wrt bug 227169
