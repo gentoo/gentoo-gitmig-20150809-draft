@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/realcodecs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/realcodecs/ChangeLog,v 1.3 2008/10/30 20:56:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/realcodecs/ChangeLog,v 1.4 2008/11/04 00:06:05 beandog Exp $
+
+*realcodecs-11.0.1.1056-r1 (04 Nov 2008)
+
+  04 Nov 2008; Steve Dibb <beandog@gentoo.org>
+  +realcodecs-11.0.1.1056-r1.ebuild:
+  Make win32codecs an optional dependency, in order to play older streams
 
   30 Oct 2008; Zac Medico <zmedico@gentoo.org>
   realcodecs-11.0.1.1056.ebuild:
