@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.0.ebuild,v 1.3 2007/09/13 00:18:48 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.0.ebuild,v 1.4 2008/11/04 01:18:10 jmbsvicetto Exp $
 
 inherit gnome2
 
@@ -40,9 +40,9 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	# The file index.sgml should be distributed with the sources, but
 	# it is not, causing problems. See bug #92784.
-	touch ${S}/doc/html/index.sgml
+	touch "${S}/doc/html/index.sgml"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/gurlchecker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.23 2008/07/15 20:23:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.24 2008/11/04 01:18:10 jmbsvicetto Exp $
+
+  04 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, gurlchecker-0.8.2.ebuild, gurlchecker-0.10.0.ebuild:
+  Removing leonardop as a maintainer since he was retired. Quoted some vars.
 
   15 Jul 2008; Jeroen Roovers <jer@gentoo.org>
   +files/gurlchecker-0.10.2-configure.in-2.patch, gurlchecker-0.10.2.ebuild:
