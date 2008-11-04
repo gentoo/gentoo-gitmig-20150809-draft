@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome</herd>
-<maintainer>
-  <email>leonardop@gentoo.org</email>
-  <name>Leonardo Boshell</name>
-</maintainer>
 <longdescription>
   Workrave is a program that assists in the recovery and prevention
   of Repetitive Strain Injury (RSI). The program frequently alerts
