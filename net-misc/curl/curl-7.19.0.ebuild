@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.19.0.ebuild,v 1.1 2008/11/03 22:10:18 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.19.0.ebuild,v 1.2 2008/11/04 04:49:05 dragonheart Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
-inherit multilib
+inherit multilib eutils
 
 #MY_P=${P/_pre/-}
 DESCRIPTION="A Client that groks URLs"
