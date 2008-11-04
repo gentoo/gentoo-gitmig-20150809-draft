@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.6.5-r1.ebuild,v 1.1 2008/06/29 13:08:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.6.5-r1.ebuild,v 1.2 2008/11/04 13:36:07 dragonheart Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="The Adaptive Communications Environment"
 HOMEPAGE="http://www.cs.wustl.edu/~schmidt/ACE.html"
@@ -25,6 +25,12 @@ DEPEND="${COMMON_DEPEND}
 	X? ( x11-proto/xproto )"
 
 S="${WORKDIR}/ACE_wrappers"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/ace-missing-refcountable-header.patch
+}
 
 src_compile() {
 	export ACE_ROOT="${S}"
