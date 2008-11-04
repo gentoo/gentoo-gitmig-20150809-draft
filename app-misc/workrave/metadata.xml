@@ -9,7 +9,7 @@
   daily limit.
 </longdescription>
 <use>
-  <flag name='distribution'>Enable networking.
+  <flag name="distribution">Enable networking.
     See http://www.workrave.org/features/</flag>
 </use>
 </pkgmetadata>
