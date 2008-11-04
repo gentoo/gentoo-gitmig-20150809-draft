@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gpp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/ChangeLog,v 1.13 2007/03/13 22:36:02 leonardop Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/ChangeLog,v 1.14 2008/11/04 01:46:45 jmbsvicetto Exp $
+
+  04 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing leonardop as a maintainer since he was retired.
 
 *gpp-0.7.0 (13 Mar 2007)
 
