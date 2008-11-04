@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Module-Build
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.1 2008/11/02 07:27:45 tove Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.2 2008/11/04 10:00:44 vapier Exp $
+
+  04 Nov 2008; Mike Frysinger <vapier@gentoo.org>
+  Module-Build-0.28.08.ebuild, Module-Build-0.30.ebuild:
+  Add arm/s390/sh love.
 
 *Module-Build-0.30 (01 Nov 2008)
 *Module-Build-0.28.08 (01 Nov 2008)
