@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.16-r1.ebuild,v 1.6 2007/07/12 04:08:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.16-r1.ebuild,v 1.7 2008/11/04 01:36:57 jmbsvicetto Exp $
 
 inherit eutils gnome2-utils
 
@@ -24,7 +24,7 @@ DEPEND="media-libs/libsdl
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# Sanitize the Makefile and correct a few other issues.

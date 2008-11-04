@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.17-r1.ebuild,v 1.4 2007/12/01 12:10:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.17-r1.ebuild,v 1.5 2008/11/04 01:36:57 jmbsvicetto Exp $
 
 inherit eutils gnome2-utils
 
@@ -27,7 +27,7 @@ DEPEND="media-libs/libsdl
 		x11-libs/cairo )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# Sanitize the Makefile and correct a few other issues.
