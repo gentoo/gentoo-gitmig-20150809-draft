@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.59 2008/10/31 21:38:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.60 2008/11/04 10:40:17 dragonheart Exp $
+
+  04 Nov 2008; Daniel Black <dragonheart@gentoo.org>
+  -files/openct-0.6.11-ifdhandlerv2.patch, -openct-0.6.11-r1.ebuild:
+  purged finally - bug #226713
 
   31 Oct 2008; Guy Martin <gmsoft@gentoo.org> openct-0.6.14.ebuild:
   hppa stable, #162205
