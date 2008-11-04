@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/omegat-1.7.1.ebuild,v 1.2 2008/02/29 17:51:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/omegat-1.8.1.ebuild,v 1.1 2008/11/04 16:17:21 matsuu Exp $
 
 JAVA_PKG_BSFIX_NAME="build.xml build-impl.xml profiler-build-impl.xml"
 inherit eutils java-pkg-2 java-ant-2
