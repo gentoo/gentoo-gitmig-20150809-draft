@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.12 2008/09/24 19:54:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.1.ebuild,v 1.13 2008/11/04 15:35:35 loki_val Exp $
 
 EAPI="1"
 
@@ -38,7 +38,7 @@ RDEPEND="dev-libs/libxml2
 	truetype? ( media-libs/freetype
 		media-libs/fontconfig )
 	vorbis? ( media-libs/libvorbis )
-	x264? ( media-libs/x264 )
+	x264? ( <media-libs/x264-0.0.20081006 )
 	xv? ( x11-libs/libXv )
 	xvid? ( media-libs/xvid )
 	gtk? ( >=x11-libs/gtk+-2
