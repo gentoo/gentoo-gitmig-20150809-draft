@@ -1,6 +1,10 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.30 2008/03/20 20:12:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.31 2008/11/04 01:31:01 jmbsvicetto Exp $
+
+  04 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing leonardop as a maintainer since he was retired.
 
   20 Mar 2008; Gilles Dartiguelongue <eva@gentoo.org> glabels-2.2.2.ebuild:
   add inltoolize call, fix bug #213999
