@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-4.0.0.2.ebuild,v 1.1 2008/11/02 20:19:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-4.0.0.2.ebuild,v 1.2 2008/11/04 12:13:43 caster Exp $
 
 EAPI=2
 
@@ -97,7 +97,7 @@ EANT_GENTOO_CLASSPATH="swt-3.4,bcprov,json-simple,log4j,commons-cli-1"
 src_compile() {
 	local mem
 	use amd64 && mem="256"
-	use x86   && mem="128"
+	use x86   && mem="192"
 	use ppc   && mem="192"
 	use ppc64 && mem="256"
 	export ANT_OPTS="-Xmx${mem}m"
