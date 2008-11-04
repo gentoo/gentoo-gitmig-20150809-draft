@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-25.6.ebuild,v 1.2 2008/08/20 19:17:56 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-25.6.ebuild,v 1.3 2008/11/04 20:06:38 spock Exp $
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -16,11 +16,7 @@ KEYWORDS="-* ~amd64 ~x86"
 # and no static binaries for amd64 in general, we use the dynamically linked
 # ones and try to cover the .so deps with the packages listed in RDEPEND.
 DEPEND=""
-RDEPEND="net-misc/curl
-	dev-libs/openssl
-	|| ( >=sys-libs/e2fsprogs-libs-1.41.0
-		 sys-libs/com_err )
-	virtual/krb5"
+RDEPEND="net-misc/curl"
 
 S="${WORKDIR}"
 I="/opt/gimps"
