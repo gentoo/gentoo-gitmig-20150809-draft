@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smoothgnome/smoothgnome-2.0.4-r1.ebuild,v 1.6 2007/07/11 02:54:47 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smoothgnome/smoothgnome-2.0.4-r1.ebuild,v 1.7 2008/11/04 00:48:58 jmbsvicetto Exp $
 
 inherit gnome2
 
