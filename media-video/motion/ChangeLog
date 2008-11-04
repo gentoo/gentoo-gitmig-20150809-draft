@@ -1,6 +1,10 @@
 # ChangeLog for media-video/motion
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.21 2008/10/14 17:20:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.22 2008/11/04 14:43:56 loki_val Exp $
+
+  04 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> motion-3.2.10.1.ebuild,
+  motion-3.2.11.ebuild:
+  Fix ffmpeg dependencies in preparation for ffmpeg bump.
 
 *motion-3.2.11 (14 Oct 2008)
 

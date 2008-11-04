@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.10.1.ebuild,v 1.2 2008/06/22 11:30:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.10.1.ebuild,v 1.3 2008/11/04 14:43:56 loki_val Exp $
 
 inherit eutils autotools
 
@@ -16,7 +16,7 @@ IUSE="ffmpeg mysql postgres v4l"
 DEPEND="sys-libs/zlib
 	media-libs/jpeg
 	media-video/mjpegtools
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( <media-video/ffmpeg-0.4.9_p20081014 )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-server )"
 
