@@ -1,0 +1,51 @@
+diff -Nur saods9.orig/src/ds9.tcl saods9/src/ds9.tcl
+--- saods9/src/ds9.tcl	2008-04-09 17:35:48.000000000 +0200
++++ saods9.new/src/ds9.tcl	2008-11-03 16:13:55.000000000 +0200
+@@ -68,24 +68,34 @@
+ # initialize, depending on how we are running: choices are zvfs, or wish
+ # for now, its not possible to change the current work directory since
+ # all of the paths are relative
+-if {![catch {package present zvfs}]} {
+-    set ds9(root) "zvfsmntpt"
++if {![catch {package present checkdns}]} {
++    set ds9(root) "/usr/share/ds9"
+ 
+-    source $ds9(root)/tcl8.4/msgcat1.3/msgcat.tcl
+-    source $ds9(root)/tcl8.4/http2.5/http.tcl
++    package require msgcat
++    package require http
+ 
+-    source $ds9(root)/tk8.4/tearoff.tcl
++    
+ 
+-    source $ds9(root)/tcllib1.10/base64/base64.tcl
+-    source $ds9(root)/tcllib1.10/log/log.tcl
+-    source $ds9(root)/tcllib1.10/ftp/ftp.tcl
+-    source $ds9(root)/tcllib1.10/textutil/repeat.tcl
+-    source $ds9(root)/tcllib1.10/textutil/tabify.tcl
++    package require base64
++    package require log
++    package require ftp
++    package require textutil::repeat
++    package require textutil::tabify
+ 
+-    source $ds9(root)/tkcon2.5/tkcon.tcl
++    package require tkcon
+ 
+-    source $ds9(root)/blt2.4/graph.tcl
+-    source $ds9(root)/blt2.4/tabset.tcl
++    package require BLT
++    package require Tktable
++    package require tclxpa
++    package require img::base
++    package require img::jpeg
++    package require img::tiff
++    package require img::png
++    package require img::gif
++    package require img::ppm
++    package require img::bmp
++    package require img::xbm
++    package require img::window
+ 
+     source $ds9(root)/src/source.tcl
+ 

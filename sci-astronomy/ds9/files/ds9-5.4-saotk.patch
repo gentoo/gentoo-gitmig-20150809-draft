@@ -1,0 +1,155 @@
+diff -Nur saods9.orig/saotk/fitsy++/Makefile saods9/saotk/fitsy++/Makefile
+--- saods9.orig/saotk/fitsy++/Makefile	2007-12-28 22:07:11.000000000 +0000
++++ saods9/saotk/fitsy++/Makefile	2008-11-03 23:06:28.000000000 +0000
+@@ -3,8 +3,8 @@
+ 
+ CXXFLAGS = $(CXXOPT) -I. -I.. -I../vector -I../util \
+ 	-I../../include -I$(X11INCLUDE) \
+-	-I../../$(FUNTOOLSDIR)/filter -I../../$(FUNTOOLSDIR)/fitsy \
+-	-I../../$(FUNTOOLSDIR)/util
++	-I/usr/include/funtools/filter -I/usr/include/funtools/fitsy \
++	-I/usr/include/funtools/util -I/usr/include/wcs
+ 
+ SS	= \
+ 	alloc.C \
+diff -Nur saods9.orig/saotk/frame/Makefile saods9/saotk/frame/Makefile
+--- saods9.orig/saotk/frame/Makefile	2008-09-23 20:47:09.000000000 +0100
++++ saods9/saotk/frame/Makefile	2008-11-03 23:11:01.000000000 +0000
+@@ -4,8 +4,7 @@
+ CXXFLAGS = $(CXXOPT) -w \
+ 	-I. -I.. -I../widget -I../vector -I../list -I../fitsy++ -I../util \
+ 	-I../../include -I$(X11INCLUDE) \
+-	-I../../$(FUNTOOLSDIR)/util \
+-	-I../../$(ASTDIR)
++	-I/usr/include/funtools/util
+ 
+ SS	= \
+ 	annulus.C \
+diff -Nur saods9.orig/saotk/util/tkpostscript.h saods9/saotk/util/tkpostscript.h
+--- saods9.orig/saotk/util/tkpostscript.h	2008-02-20 22:26:21.000000000 +0000
++++ saods9/saotk/util/tkpostscript.h	2008-11-04 09:58:00.000000000 +0000
+@@ -4,7 +4,7 @@
+ 
+ // this is copied from tkCanvPs.c
+ 
+-#include "../../tk8.4.18/generic/tkCanvas.h"
++#include </usr/lib/tk8.4/include/generic/tkCanvas.h>
+ 
+ typedef struct TkPostscriptInfo {
+     int x, y, width, height;	/* Area to print, in canvas pixel
+diff -Nur saods9.orig/saotk/widget/ps.h saods9/saotk/widget/ps.h
+--- saods9.orig/saotk/widget/ps.h	2008-01-04 17:29:27.000000000 +0000
++++ saods9/saotk/widget/ps.h	2008-11-04 09:59:00.000000000 +0000
+@@ -13,7 +13,7 @@
+ #include "zlib.h"
+ extern int DebugGZ;
+ 
+-#if defined( __alpha) || defined(__mips64) || defined(__sparcv9) || defined(__M64)
++#if defined( __alpha) || defined(__mips64) || defined(__sparcv9) || defined(__M64) || defined(__LP64__)
+ #define BIT32 int
+ #else
+ #define BIT32 long
+diff -ur saods9.orig/saotk/frame/fitsimage.C saods9/saotk/frame/fitsimage.C
+--- saods9.orig/saotk/frame/fitsimage.C	2007-05-22 20:36:50.000000000 +0200
++++ saods9/saotk/frame/fitsimage.C	2008-11-04 16:36:40.000000000 +0100
+@@ -31,7 +31,99 @@
+ // this is kluge to speed up doug minks wcssubs 'ksearch' routine
+ extern "C" {
+   FitsHead* wcshead = NULL;
+-  char* ksearchh(char*, char*);
++  char* ksearchh(char* hstring, char* keyword)
++  {
++/* Find entry for keyword keyword in FITS header string hstring.
++   (the keyword may have a maximum of eight letters)
++   NULL is returned if the keyword is not found */
++
++/* char *hstring; character string containing fits-style header
++               information in the format <keyword>= <value> {/ <comment>}
++               the default is that each entry is 80 characters long;
++               however, lines may be of arbitrary length terminated by
++               nulls, carriage returns or linefeeds, if packed is true.  */
++/*char *keyword; character string containing the name of the variable
++               to be returned.  ksearch searches for a line beginning
++               with this string.  The string may be a character
++               literal or a character variable terminated by a null
++               or '$'.  it is truncated to 8 characters. */
++{
++    char *loc, *headnext, *headlast, *pval, *lc, *line;
++    int icol, nextchar, lkey, nleft, lhead, lmax;
++
++#ifdef USE_SAOLIB
++       int iel=1, ip=1, nel, np, ier;
++       char *get_fits_head_str();
++
++       if( !use_saolib ){
++#endif
++
++    pval = 0;
++static int lhead0 = 0;
++/* Find current length of header string */
++    if (lhead0)
++       lmax = lhead0;
++    else
++       lmax = 256000;
++    for (lhead = 0; lhead < lmax; lhead++) {
++       if (hstring[lhead] == (char) 0)
++           break;
++       }
++
++/* Search header string for variable name */
++    headlast = hstring + lhead;
++    headnext = hstring;
++    pval = NULL;
++    while (headnext < headlast) {
++       nleft = headlast - headnext;
++       loc = strncsrch (headnext, keyword, nleft);
++
++       /* Exit if keyword is not found */
++       if (loc == NULL) {
++           break;
++           }
++
++       icol = (loc - hstring) % 80;
++       lkey = strlen (keyword);
++       nextchar = (int) *(loc + lkey);
++
++       /* If this is not in the first 8 characters of a line, keep searching */
++       if (icol > 7)
++           headnext = loc + 1;
++
++       /* If parameter name in header is longer, keep searching */
++       else if (nextchar != 61 && nextchar > 32 && nextchar < 127)
++           headnext = loc + 1;
++
++       /* If preceeding characters in line are not blanks, keep searching */
++       else {
++           line = loc - icol;
++           for (lc = line; lc < loc; lc++) {
++               if (*lc != ' ')
++                   headnext = loc + 1;
++               }
++
++       /* Return pointer to start of line if match */
++           if (loc >= headnext) {
++               pval = line;
++               break;
++               }
++           }
++       }
++/* Return pointer to calling program */
++       return (pval);
++
++#ifdef USE_SAOLIB
++       }
++       else {
++           if (get_fits_head_str(keyword,iel,ip,&nel,&np,&ier,hstring) != NULL)
++               return(hstring);
++           else
++               return(NULL);
++           }
++#endif
++}
++}
+ 
+   char* findit(char* cards, char* key)
+   {

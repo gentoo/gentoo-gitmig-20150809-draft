@@ -1,6 +1,17 @@
 # ChangeLog for sci-astronomy/ds9
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.11 2008/04/22 11:04:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.12 2008/11/05 22:20:07 bicatali Exp $
+
+*ds9-5.4 (05 Nov 2008)
+
+  05 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/ds9-5.1-Makefile.patch, -files/ds9-5.1-tk-gif.patch,
+  +files/ds9-5.4-fitsy.patch, +files/ds9-5.4-gcc43.patch,
+  +files/ds9-5.4-htmlwidget.patch, +files/ds9-5.4-main.patch,
+  +files/ds9-5.4-makefile.patch, +files/ds9-5.4-saotk.patch,
+  +files/ds9-5.4-src.patch, +files/make.gentoo, -ds9-5.1.ebuild,
+  +ds9-5.4.ebuild:
+  Version bump. Added a bunch of patches to allow using system libs.
 
   22 Apr 2008; Sébastien Fabbro <bicatali@gentoo.org> ds9-5.2.ebuild:
   Fixed patch location for x86 and a sed function
