@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.3.ebuild,v 1.1 2008/07/15 15:16:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.3.ebuild,v 1.2 2008/11/05 21:56:07 bicatali Exp $
 
-inherit fortran multilib
+inherit fortran eutils
 
 DESCRIPTION="Astronomical World Coordinate System transformations library"
 HOMEPAGE="http://www.atnf.csiro.au/people/mcalabre/WCS/"
@@ -23,8 +23,8 @@ src_install () {
 
 	dobin utils/{HPXcvt,fitshdr,wcsgrid} || die "dobin failed"
 
-	dolib.a C/libwcs-${PV}.a pgsbox/libpgsbox-${PV}.a
-	dolib.so C/libwcs.so.${PV}
+	dolib.a C/libwcs-${PV}.a pgsbox/libpgsbox-${PV}.a || die
+	dolib.so C/libwcs.so.${PV} || die
 	dosym libwcs.so.${PV} /usr/$(get_libdir)/libwcs.so
 	dosym libwcs-${PV}.a /usr/$(get_libdir)/libwcs.a
 	dosym libpgsbox-${PV}.a /usr/$(get_libdir)/libpgsbox.a
