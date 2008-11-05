@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-7.0.2_p8.ebuild,v 1.9 2008/06/14 17:49:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-7.0.2_p8.ebuild,v 1.10 2008/11/05 00:37:56 vapier Exp $
 
 EAPI="1"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.pdflib.com/"
 SRC_URI="http://www.pdflib.com/binaries/${PN/pdf/PDF}/$(delete_all_version_separators ${PV/_*/})/${MY_P}.tar.gz"
 LICENSE="PDFLite"
 SLOT="5"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="+cxx doc java perl python tcl" # ruby
 
 COMMON_DEP="tcl? ( >=dev-lang/tcl-8.2 )
