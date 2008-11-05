@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2021 2008/11/04 14:56:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2022 2008/11/05 14:53:46 angelos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Nov 2008; Christoph Mende <angelos@gentoo.org>
+  arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:
+  Unmasked >=app-emulation/virtualbox-bin-1.6 on no-multilib
 
   04 Nov 2008; Doug Goldstein <cardoe@gentoo.org>
   targets/desktop/make.defaults:
