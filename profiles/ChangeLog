@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2023 2008/11/05 15:31:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2024 2008/11/05 22:31:23 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  grub-0.97-r8 time.
 
   05 Nov 2008; Steve Dibb <beandog@gentoo.org> package.mask:
   Mask realplayer, real codecs for security, upstream issues, bug 245662
