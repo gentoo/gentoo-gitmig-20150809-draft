@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.0.ebuild,v 1.4 2008/10/27 22:47:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.0.ebuild,v 1.5 2008/11/05 01:17:05 fmccor Exp $
 
 EAPI="1"
 inherit bash-completion distutils versionator
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.djangoproject.com/"
 SRC_URI="http://media.djangoproject.com/releases/${PV}/Django-${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc examples mysql postgres sqlite3 test"
 
 RDEPEND="dev-python/imaging
