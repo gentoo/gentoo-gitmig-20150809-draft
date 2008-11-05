@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.30 2008/11/04 21:38:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.31 2008/11/05 17:51:25 opfer Exp $
+
+  05 Nov 2008; Christian Faulhammer <opfer@gentoo.org> -files/mlocate.cron,
+  -mlocate-0.21.ebuild:
+  clean up
 
   04 Nov 2008; Raúl Porcel <armin76@gentoo.org> mlocate-0.21-r1.ebuild:
   sparc stable wrt #244683, thanks to Aaron Mavrinac for testing
