@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.3 2008/06/22 00:04:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.4 2008/11/05 21:49:28 mrness Exp $
 
 inherit eutils perl-module flag-o-matic python
 
@@ -22,6 +22,12 @@ RDEPEND="dev-libs/openobex
 DEPEND="${RDEPEND}
 	swig? ( dev-lang/swig )
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-ruby-libpath.patch
+}
 
 src_compile() {
 	# do not byte-compile python module
