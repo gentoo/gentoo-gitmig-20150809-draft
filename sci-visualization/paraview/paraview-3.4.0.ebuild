@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.4 2008/11/03 16:41:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.5 2008/11/05 23:53:50 markusle Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ MAJOR_PV=$(get_version_component_range 1-2)
 DESCRIPTION="ParaView is a powerful scientific data visualization application"
 HOMEPAGE="http://www.paraview.org"
 SRC_URI="mirror://gentoo/${P}.tar.gz
-	mirror://gentoo/${P}-OpenFOAM-20080728.patch.bz2"
+	mirror://gentoo/${P}-OpenFOAM-48.patch.bz2"
 
 LICENSE="paraview"
 KEYWORDS="~x86 ~amd64"
@@ -61,7 +61,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-${PATCH_V}-gcc4.3.patch
 	epatch "${FILESDIR}"/${PN}-${PATCH_V}-qt4.4.patch
-	epatch "${DISTDIR}"/${P}-OpenFOAM-20080728.patch.bz2
+	epatch "${DISTDIR}"/${P}-OpenFOAM-48.patch.bz2
 
 	# rename paraview's assistant wrapper
 	if use qt4; then
@@ -158,9 +158,6 @@ src_install() {
 		chmod 0755 "${D}"/usr/${PVLIBDIR}/assistant-real \
 			|| die "Failed to change permissions on assistant wrapper"
 	fi
-
-	# add release note for the OpenFOAM-1.5 patch
-	dodoc "${S}"/ReleaseNotes_OpenFOAMReader20080728
 
 	# set up the environment
 	echo "LDPATH=/usr/${PVLIBDIR}" >> "${T}"/40${PN}
