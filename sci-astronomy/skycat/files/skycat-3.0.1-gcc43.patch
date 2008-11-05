@@ -1,3 +1,14 @@
+--- astrotcl/generic/ImageIO.h.orig	2008-11-05 17:57:14.000000000 +0000
++++ astrotcl/generic/ImageIO.h	2008-11-05 17:57:29.000000000 +0000
+@@ -116,7 +116,7 @@
+     double unScaleValue(double d) const {return (d-bzero_)/bscale_;}
+ 
+     // return the size in bytes of a raw image pixel 
+-    int pixelSize() const {return abs(bitpix_)/8;}
++    int pixelSize() const {return fabs(bitpix_)/8;}
+ 
+     // member access
+     int width() const {return width_;}
 --- astrotcl/generic/Fits_IO.h.orig	2006-01-12 16:43:52.000000000 +0000
 +++ astrotcl/generic/Fits_IO.h	2006-09-14 11:34:20.000000000 +0100
 @@ -49,7 +49,7 @@
@@ -255,6 +266,27 @@
      
  protected:
      char name_[100];  // name of application
+--- rtd/generic/histmap.c.orig	2008-11-05 18:02:25.000000000 +0000
++++ rtd/generic/histmap.c	2008-11-05 18:02:53.000000000 +0000
+@@ -17,6 +17,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include "histeq.h"		/* define SubrangeLink, List */
+ 
+ 
+--- rtd/generic/histzero.c.orig	2008-11-05 18:02:31.000000000 +0000
++++ rtd/generic/histzero.c	2008-11-05 18:03:08.000000000 +0000
+@@ -15,6 +15,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include "histeq.h"		/* define SubrangeLink */
+ 
+ static void merge_links();
+
 --- rtd/rtdevt/rtdCLNT.h.orig	2006-01-12 16:40:00.000000000 +0000
 +++ rtd/rtdevt/rtdCLNT.h	2006-09-14 11:51:56.000000000 +0100
 @@ -40,52 +40,52 @@

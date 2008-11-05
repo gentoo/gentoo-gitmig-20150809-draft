@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/skycat-3.0.1.ebuild,v 1.2 2008/06/17 08:57:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/skycat-3.0.2-r1.ebuild,v 1.1 2008/11/05 21:53:39 bicatali Exp $
 
 inherit eutils autotools
 
@@ -24,18 +24,15 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	# fix buggy tcl.m4 for bash3
-	epatch "${FILESDIR}"/${P}-m4.patch
+	epatch "${FILESDIR}"/${PN}-3.0.1-m4.patch
 	# fix old style headers, set as error by new g++
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${PN}-3.0.1-gcc43.patch
 	eautoconf
 }
 
 src_compile() {
-	econf \
-		$(use_enable threads) \
-		|| die "econf failed"
+	econf $(use_enable threads)
 	emake
-	# a second time to make sure every dir passed
 	emake || die "emake failed"
 }
 
@@ -43,7 +40,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README CHANGES VERSION
 	for d in tclutil astrotcl rtd cat skycat; do
-		docinto ${d}
 		for f in README CHANGES VERSION; do
 			newdoc ${f} ${f}.${d}
 		done
