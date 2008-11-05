@@ -1,35 +1,97 @@
---- pgplot.orig/makemake	1999-05-04 15:35:43.000000000 -0700
-+++ pgplot/makemake	2005-12-15 20:48:42.000000000 -0800
-@@ -666,7 +666,7 @@
- # the library don't have to list a slew of other implementation-specific
- # libraries when they link their executables.
+--- makemake.orig	2008-10-29 15:32:12.000000000 +0000
++++ makemake	2008-10-29 20:08:59.000000000 +0000
+@@ -622,7 +622,7 @@
+ # Fortran compiler and compilation flags
  #
--SHARED_LIB_LIBS=$SHARED_LIB_LIBS
-+SHARED_LIB_LIBS=-lpng
+ FCOMPL=$FCOMPL
+-FFLAGC=$FFLAGC
++FFLAGC=$FFLAGC \$(FFLAGS)
+ FFLAGD=$FFLAGD
  #
- # Ranlib command if required
+ # C compiler and compilation flags
+@@ -633,7 +633,7 @@
+ TK_INCL=$TK_INCL
+ RV_INCL=$RV_INCL
+ CCOMPL=$CCOMPL
+-CFLAGC=$CFLAGC -I.
++CFLAGC=$CFLAGC -I. \$(CFLAGS)
+ CFLAGD=$CFLAGD
+ MCOMPL=$MCOMPL
+ MFLAGC=$MFLAGC
+@@ -658,6 +658,8 @@
  #
-@@ -681,7 +681,7 @@
- OBSOLETE_ROUTINES=$OBSOLETE_ROUTINES
- DRIVERS=$DRIV_LIST
- PGDISP_ROUTINES=$PGDISP_ROUTINES
--DEMOS=$DEMOS
-+#DEMOS=$DEMOS
+ SHARED_LIB=$SHARED_LIB
+ SHARED_LD=$SHARED_LD
++SHARED_LD_PGPLOT_OPTS=$SHARED_LD_PGPLOT_OPTS
++SHARED_LD_CPGPLOT_OPTS=$SHARED_LD_CPGPLOT_OPTS
  #
+ # The libraries that the shared PGPLOT library depends upon.
+ # This is for systems that allow one to specify what libraries
+@@ -806,7 +808,8 @@
+ # libraries.
  #-----------------------------------------------------------------------
- # Target "all" makes everything (except the library of obsolete routines)
-@@ -1025,12 +1025,12 @@
+ 
+-lib : libpgplot.a $(SHARED_LIB)
++#lib : libpgplot.a $(SHARED_LIB)
++lib : libpgplot.a
+ 
+ libpgplot.a : $(PG_ROUTINES) $(PG_NON_STANDARD) $(GR_ROUTINES) \
+ 	   $(DISPATCH_ROUTINE) $(DRIVERS) $(SYSTEM_ROUTINES)
+@@ -816,6 +819,16 @@
+ 		$(DRIVERS) $(SYSTEM_ROUTINES) | sort | uniq`
+ 	$(RANLIB) libpgplot.a
+ 
++#shared: $(PG_ROUTINES) $(PG_NON_STANDARD) $(GR_ROUTINES) \
++#	   $(DISPATCH_ROUTINE) $(DRIVERS) $(SYSTEM_ROUTINES)
++#	   $(SHARED_LD)
++
++shared: $(PG_ROUTINES) $(PG_NON_STANDARD) \
++	$(GR_ROUTINES) $(DISPATCH_ROUTINE) $(DRIVERS) $(SYSTEM_ROUTINES)
++	$(SHARED_LD) $(SHARED_LD_PGPLOT_OPTS) `ls $(PG_ROUTINES) \
++	$(PG_NON_STANDARD) $(GR_ROUTINES) $(DISPATCH_ROUTINE) \
++	$(DRIVERS) $(SYSTEM_ROUTINES) | sort | uniq` $(SHARED_LIB_LIBS)
++
+ EOD
+ 
+ # Emit the shared library dependency if requested.
+@@ -824,7 +837,7 @@
+ cat >> makefile << \EOD
+ $(SHARED_LIB): $(PG_ROUTINES) $(PG_NON_STANDARD) \
+ 	$(GR_ROUTINES) $(DISPATCH_ROUTINE) $(DRIVERS) $(SYSTEM_ROUTINES)
+-	$(SHARED_LD) `ls $(PG_ROUTINES) \
++	$(SHARED_LD) $(SHARED_LD_PGPLOT_OPTS) `ls $(PG_ROUTINES) \
+ 	$(PG_NON_STANDARD) $(GR_ROUTINES) $(DISPATCH_ROUTINE) \
+ 	$(DRIVERS) $(SYSTEM_ROUTINES) | sort | uniq` $(SHARED_LIB_LIBS)
+ EOD
+@@ -1025,7 +1038,7 @@
  grivas.o : $(DRVDIR)/gadef.h
  grtv00.o : $(DRVDIR)/imdef.h
  pgxwin.o : $(DRVDIR)/pgxwin.h
 -pndriv.o : ./png.h ./pngconf.h ./zlib.h ./zconf.h
-+pndriv.o :
++pndriv.o : /usr/include/png.h /usr/include/pngconf.h /usr/include/zlib.h /usr/include/zconf.h
  
  x2driv.o figdisp_comm.o: $(DRVDIR)/commands.h
  
+@@ -1039,6 +1052,8 @@
+ 	@echo 'will be needed.'
+ 	@echo ' '
  
--cpg:	libcpgplot.a cpgplot.h cpgdemo 
-+cpg:	libcpgplot.a cpgplot.h
- 	@echo ' '
- 	@echo '*** Finished compilation of the C PGPLOT wrapper library ***'
- 	@echo ' '
++cpg-shared: libcpgplot.so
++
+ pgbind: $(SRC)/cpg/pgbind.c
+ 	$(CCOMPL) $(CFLAGC) $(SRC)/cpg/pgbind.c -o pgbind
+ 
+@@ -1050,6 +1065,13 @@
+ 	$(RANLIB) libcpgplot.a
+ 	rm -f cpg*.o
+ 
++libcpgplot.so: $(PG_SOURCE) pgbind 
++	./pgbind $(PGBIND_FLAGS) -w $(PG_SOURCE)
++	$(CCOMPL) -c $(CFLAGC) cpg*.c
++	rm -f cpg*.c
++	$(SHARED_LD) $(SHARED_LD_CPGPLOT_OPTS) cpg*.o -lpgplot  $(SHARED_LIB_LIBS)
++	rm -f cpg*.o
++
+ cpgdemo: cpgplot.h $(SRC)/cpg/cpgdemo.c libcpgplot.a
+ 	$(CCOMPL) $(CFLAGD) -c -I. $(SRC)/cpg/cpgdemo.c
+ 	$(FCOMPL) -o cpgdemo cpgdemo.o $(CPGPLOT_LIB) $(LIBS)

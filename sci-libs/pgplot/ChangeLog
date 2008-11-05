@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/pgplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.13 2008/06/29 08:07:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.14 2008/11/05 21:50:18 bicatali Exp $
+
+*pgplot-5.2.2-r3 (05 Nov 2008)
+
+  05 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/pgplot-compile-setup.patch, +files/pgplot-headers.patch,
+  files/pgplot-makemake.patch, +pgplot-5.2.2-r3.ebuild:
+  Fix further missing headers, added soname in libcgplot, and as-needed
+  fixes
 
   29 Jun 2008; Torsten Veller <tove@gentoo.org> pgplot-5.2.2-r2.ebuild:
   Add missing die: || "..." -> || die "..."
