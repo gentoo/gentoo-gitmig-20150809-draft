@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.166 2008/11/05 09:50:59 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.167 2008/11/05 10:39:09 dragonheart Exp $
+
+  05 Nov 2008; Daniel Black <dragonheart@gentoo.org> gnutls-2.6.0.ebuild:
+  alternate and much better solution by loki_val
 
   05 Nov 2008; Daniel Black <dragonheart@gentoo.org> gnutls-2.6.0.ebuild:
   minimium libtool version as per bug #245544 thanks to Vasileios and Lars.
