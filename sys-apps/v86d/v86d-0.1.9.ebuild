@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.9.ebuild,v 1.3 2008/11/03 23:38:43 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/v86d/v86d-0.1.9.ebuild,v 1.4 2008/11/05 19:58:27 maekke Exp $
 
 inherit eutils linux-info multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~spock/projects/uvesafb/archive/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug x86emu"
 
 DEPEND="dev-libs/klibc"
