@@ -1,6 +1,14 @@
 # ChangeLog for sci-astronomy/wcstools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.9 2008/06/26 12:19:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.10 2008/11/05 22:00:15 bicatali Exp $
+
+*wcstools-3.7.6 (05 Nov 2008)
+
+  05 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/wcstools-3.7.0-fix-warnings.patch,
+  +files/wcstools-3.7.6-autotools.patch, -wcstools-3.7.1.ebuild,
+  -wcstools-3.7.2.ebuild, +wcstools-3.7.6.ebuild:
+  Version bump. Library name is now wcstools to not conflict with wcslib
 
 *wcstools-3.7.4 (26 Jun 2008)
 
