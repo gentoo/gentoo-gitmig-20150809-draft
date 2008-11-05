@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.16 2008/10/02 19:11:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.17 2008/11/05 13:55:28 lu_zero Exp $
+
+  05 Nov 2008; Luca Barbato <lu_zero@gentoo.org> ragel-6.3.ebuild:
+  Fix vim-syntax path
 
   02 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> ragel-6.2.ebuild,
   ragel-6.3.ebuild:
