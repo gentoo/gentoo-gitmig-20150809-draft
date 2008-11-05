@@ -1,6 +1,9 @@
 # ChangeLog for MIPS profile directory
 # Copyright 2007-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.21 2008/06/20 06:40:55 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.22 2008/11/05 18:05:19 lack Exp $
+
+  05 Nov 2008; Jim Ramsay <lack@gentoo.org> package.use.mask:
+  app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
 
   20 Jun 2008; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org> use.mask:
   Mask out postgresql, since it's not supported by MIPS any more

@@ -1,3 +1,7 @@
+# Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
+# app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
+app-admin/gkrellm ntlm
+
 # As per UberLord's requests
 sys-apps/openrc pam
 

@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.26 2008/06/20 20:01:53 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.27 2008/11/05 18:05:19 lack Exp $
+
+# Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
+# app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
+app-admin/gkrellm ntlm
 
 # Peter Alfredsen <loki_val@gentoo.org> (20 Jun 2008)
 # cppunit is not keyworded, needed by test. Bug 228559.
