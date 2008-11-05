@@ -26,8 +26,3 @@ media-tv/zapping vdr
 # 12 Sep 2008; Gordon Malm <gengor@gentoo.org>
 # x86-specific SIMD/asm, bugs #193022 and #207685
 media-sound/mpg123 mmx 3dnow 3dnowext sse
-
-# Zac Medico <zmedico@gentoo.org> (1 Nov 2008)
-# Bug #244947 - Unmask media-libs/win32codecs[real]
-# to satisfy media-libs/realcodecs dependency.
-media-libs/win32codecs -real
