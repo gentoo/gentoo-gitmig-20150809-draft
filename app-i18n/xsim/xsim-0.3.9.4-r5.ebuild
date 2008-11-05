@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r5.ebuild,v 1.1 2008/09/09 15:03:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r5.ebuild,v 1.2 2008/11/05 20:06:31 maekke Exp $
 
 EAPI="1"
 inherit db-use eutils flag-o-matic kde-functions multilib
@@ -11,7 +11,7 @@ SRC_URI="mirror://berlios/xsim/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug kde"
 
 DEPEND=">=sys-libs/db-4.1

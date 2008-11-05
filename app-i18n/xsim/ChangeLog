@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/xsim
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.17 2008/09/09 15:03:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/ChangeLog,v 1.18 2008/11/05 20:06:31 maekke Exp $
+
+  05 Nov 2008; Markus Meier <maekke@gentoo.org> xsim-0.3.9.4-r5.ebuild:
+  amd64/x86 stable, bug #240053
 
 *xsim-0.3.9.4-r5 (09 Sep 2008)
 
