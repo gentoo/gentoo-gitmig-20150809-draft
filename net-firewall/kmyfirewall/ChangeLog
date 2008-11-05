@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/kmyfirewall
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.38 2008/06/27 21:11:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/kmyfirewall/ChangeLog,v 1.39 2008/11/05 17:24:27 opfer Exp $
+
+  05 Nov 2008; Christian Faulhammer <opfer@gentoo.org>
+  -files/kmyfirewall-0.9.6.2-configure-arts.patch,
+  -kmyfirewall-0.9.6.2-r1.ebuild, -kmyfirewall-1.0.1-r1.ebuild:
+  clean up
 
   27 Jun 2008; Raúl Porcel <armin76@gentoo.org> kmyfirewall-1.1.1.ebuild:
   alpha/sparc stable wrt #229411
