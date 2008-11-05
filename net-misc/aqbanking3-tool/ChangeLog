@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/aqbanking3-tool
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aqbanking3-tool/ChangeLog,v 1.1 2008/11/05 09:04:16 hanno Exp $
+
+*aqbanking3-tool-0.0.20081026 (05 Nov 2008)
+
+  05 Nov 2008; Hanno Boeck <hanno@gentoo.org>
+  +aqbanking3-tool-0.0.20081026.ebuild:
+  Initial commit of aqbanking3-tool, a replacement for the commandline tool
+  that is no longer shipped with aqbanking version 3.0 and above.
+
