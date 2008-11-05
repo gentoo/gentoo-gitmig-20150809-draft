@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/skyutils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.25 2008/07/18 06:02:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.26 2008/11/05 20:56:57 maekke Exp $
+
+  05 Nov 2008; Markus Meier <maekke@gentoo.org> skyutils-2.8-r2.ebuild:
+  amd64/x86 stable, bug #245265
 
 *skyutils-2.8-r2 (18 Jul 2008)
 
