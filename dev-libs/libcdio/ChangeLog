@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.102 2008/08/31 13:33:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.103 2008/11/05 20:54:30 maekke Exp $
+
+  05 Nov 2008; Markus Meier <maekke@gentoo.org> libcdio-0.80.ebuild:
+  amd64/x86 stable, bug #245252
 
   31 Aug 2008; Diego Pettenò <flameeyes@gentoo.org> libcdio-0.80.ebuild:
   Fix linking of libiconv where needed.
