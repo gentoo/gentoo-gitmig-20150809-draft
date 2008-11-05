@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.6.0.ebuild,v 1.1 2008/11/04 12:53:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.6.0.ebuild,v 1.2 2008/11/05 09:50:59 dragonheart Exp $
 
 inherit eutils libtool autotools
 
@@ -32,7 +32,7 @@ RDEPEND="dev-libs/libgpg-error
 	zlib? ( >=sys-libs/zlib-1.1 )
 	!bindist? ( lzo? ( >=dev-libs/lzo-2 ) )"
 DEPEND="${RDEPEND}
-	sys-devel/libtool
+	>=sys-devel/libtool-2.2.4
 	doc? ( dev-util/gtk-doc )
 	nls? ( sys-devel/gettext )"
 
