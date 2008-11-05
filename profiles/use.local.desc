@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4006 2008/11/05 04:27:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4007 2008/11/05 18:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -33,6 +33,12 @@ app-admin/conky:nvidia - enable reading of nvidia card temperature sensors via m
 app-admin/conky:smapi - enable support for smapi
 app-admin/diradm:automount - Support for automount data in LDAP
 app-admin/diradm:irixpasswd - Support for storing separate IRIX passwords
+app-admin/gkrellm:X - Build both the X11 gui (gkrellm) and the server (gkrellmd). Disabling this flag builds the server only.
+app-admin/gkrellm:gnutls - Enable SSL support for mail checking with net-libs/gnutls (overrides 'ssl' USE flag)
+app-admin/gkrellm:hddtemp - Enable monitoring harddrive temperatures via app-admin/hddtemp
+app-admin/gkrellm:lm_sensors - Enable monitoring sensors via sys-apps/lm_sensors
+app-admin/gkrellm:ntlm - Enable NTLM authentication for mail checking with net-libs/libntlm
+app-admin/gkrellm:ssl - Enable SSL support for mail checking with dev-libs/openssl
 app-admin/gnome-system-tools:nfs - Adds support for NFS shares
 app-admin/gnome-system-tools:policykit - Use sys-auth/policykit to gain privileges to change configuration files
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
