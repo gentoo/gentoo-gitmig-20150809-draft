@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2027 2008/11/06 22:26:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2028 2008/11/06 23:37:15 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Add gnome-panel and gnome-applets to GNOME 2.24 mask.
 
   06 Nov 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Remove mask of app-emacs/vm-8.0.11.581 since it was removed from the tree.

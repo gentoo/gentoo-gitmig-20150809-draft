@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9143 2008/11/06 22:26:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9144 2008/11/06 23:37:15 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -188,6 +188,8 @@ app-portage/genflags
 >=gnome-base/nautilus-2.24.0
 >=gnome-base/gnome-settings-daemon-2.24.0
 >=gnome-base/gnome-control-center-2.24.0
+>=gnome-base/gnome-panel-2.24.0
+>=gnome-base/gnome-applets-2.24.0
 # GNOME 2.24 mask end
 
 # Mart Raudsepp <leio@gentoo.org> (20 Oct 2008)
