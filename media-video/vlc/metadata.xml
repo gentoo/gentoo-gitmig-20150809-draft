@@ -37,6 +37,7 @@
     <flag name="stream">Enables vlc to stream video.</flag>
     <flag name="twolame">Enables twolame support (MPEG Audio Layer 2 encoder).</flag>
     <flag name="upnp">Enables support for Intel UPnP stack.</flag>
+    <flag name="vcdinfo">Enables VCD information library support.</flag>
     <flag name="vcdx">Enables VCD with navigation via libvcdinfo (depends on cdio)</flag>
     <flag name="vlm">New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.</flag>
     <flag name="wxwindows" restrict="&lt;=media-video/vlc-0.8.6">Builds a <pkg>x11-libs/wxGTK</pkg> based frontend. This interface is no longer maintained.</flag>
