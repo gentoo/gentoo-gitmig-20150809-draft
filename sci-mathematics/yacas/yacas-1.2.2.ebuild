@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2.ebuild,v 1.2 2008/04/19 09:49:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2.ebuild,v 1.3 2008/11/06 12:07:53 bicatali Exp $
 
 inherit eutils java
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="doc java server"
 
-DEPEND="java? ( virtual/jdk )"
+RDEPEND="java? ( >=virtual/jdk-1.6 )"
+DEPEND="java? ( >=virtual/jre-1.6 )"
 
 src_unpack() {
 	unpack ${A}
@@ -43,7 +44,7 @@ src_install() {
 		insinto /usr/share/${PN}
 		doins yacas.jar hints.txt yacasconsole.html || die "doins java interface failed"
 		echo "#!/bin/sh" > jyacas
-		echo "java -jar /usr/share/${PN}/java.jar" >> jyacas
+		echo "java -jar /usr/share/${PN}/yacas.jar" >> jyacas
 		exeinto /usr/bin
 		doexe jyacas
 	fi
