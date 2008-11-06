@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.5.1.ebuild,v 1.2 2008/10/12 11:24:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.5.1.ebuild,v 1.3 2008/11/06 00:07:30 markusle Exp $
 
 inherit eutils flag-o-matic gnome2 kde-functions autotools
 
@@ -83,6 +83,10 @@ src_unpack() {
 
 	# needed for kde GUI
 	epatch "${FILESDIR}"/${P}-arts.patch
+
+	# needed for proper detection of kde-3.5 in the presence
+	# of kde4
+	epatch "${FILESDIR}"/${P}-kde-3.5.patch
 
 	# remove flags to let the user decide
 	for cf in -O2 -ffast-math \

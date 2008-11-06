@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.42 2008/10/12 11:24:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.43 2008/11/06 00:07:30 markusle Exp $
+
+  05 Nov 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/celestia-1.5.1-kde-3.5.patch, celestia-1.5.1.ebuild:
+  Added patch to properly detect kde-3.5 header files (fixes bug #245219).
 
   12 Oct 2008; Markus Dittrich <markusle@gentoo.org> celestia-1.5.1.ebuild:
   Added slot dependency on kde-3.5 to make sure we don't pull in kde 4
