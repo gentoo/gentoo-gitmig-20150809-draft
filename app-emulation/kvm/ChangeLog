@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.19 2008/10/21 01:08:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.20 2008/11/06 19:20:02 dang Exp $
+
+*kvm-78 (06 Nov 2008)
+
+  06 Nov 2008; Daniel Gryniewicz <dang@gentoo.org> -kvm-74.ebuild,
+  kvm-77.ebuild, +kvm-78.ebuild:
+  Bump to kvm-78
 
   21 Oct 2008; Daniel Gryniewicz <dang@gentoo.org> kvm-77.ebuild:
   Turn on modules by default; that's what most people want
