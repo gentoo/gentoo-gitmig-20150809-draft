@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.0.ebuild,v 1.1 2008/11/05 22:13:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.0.ebuild,v 1.2 2008/11/06 14:44:48 bicatali Exp $
 
 EAPI=2
 inherit eutils
 
 DESCRIPTION="FITS library and utlities for astronomical images"
 HOMEPAGE="http://hea-www.harvard.edu/RD/funtools/"
-SRC_URI="http://hea-www.harvard.edu/saord/download/${PN}/${P}.tar.gz"
+SRC_URI="http://cfa-www.harvard.edu/~john/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
