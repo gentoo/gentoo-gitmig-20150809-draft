@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2025 2008/11/06 00:07:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2026 2008/11/06 15:12:14 lack Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Nov 2008; Jim Ramsay <lack@gentoo.org> package.mask:
+  Unmask flash, as new version 9 is in the tree, and presumably fixed some
+  of the previous security bugs
 
   06 Nov 2008; Zac Medico <zmedico@gentoo.org> arch/amd64/package.use.mask,
   arch/x86/use.mask, default-linux/amd64/package.use.mask,

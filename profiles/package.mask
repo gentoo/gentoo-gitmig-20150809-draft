@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9141 2008/11/05 22:31:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9142 2008/11/06 15:12:14 lack Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -118,12 +118,6 @@ perl-core/version
 # glitch with Qt-4.4.2 that needs to be looked at (bug #243362)
 # Qt-4.3 users should probably be fine.
 =sci-visualization/paraview-3.4.0
-
-# Jim Ramsay <lack@gentoo.org> (27 Oct 2008)
-# Masked for security flaws (Bug #239543), but some users still need it in the
-# tree until all crashing issues are resolved (inasfar as they can actually *be*
-# resolved
-<net-www/netscape-flash-10.0.12.36
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (27 Oct 2008)
 # masked for testing
