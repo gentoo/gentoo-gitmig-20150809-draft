@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.5.1.ebuild,v 1.3 2008/11/06 00:07:30 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.5.1.ebuild,v 1.4 2008/11/06 12:00:17 bicatali Exp $
 
 inherit eutils flag-o-matic gnome2 kde-functions autotools
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="arts cairo gnome gtk kde lua nls pch theora threads"
+IUSE="arts cairo gnome gtk kde lua nls pch theora threads unicode"
 
 RDEPEND="virtual/glu
 	media-libs/jpeg
@@ -103,6 +103,14 @@ src_unpack() {
 		sed -i \
 			-e '/AM_GCONF_SOURCE_2/d' \
 			configure.in || die "sed failed"
+	fi
+	if use unicode; then
+		pushd locale > /dev/null
+		for i in guide_{de,es,fr,it,nl,sv}.cel start_de.cel demo_nl.cel; do
+			iconv -f iso-8859-1 ${i} -t utf8 > ${i}.utf8
+			mv ${i}.utf8 ${i}
+		done
+		popd > /dev/null
 	fi
 
 	eautoreconf
