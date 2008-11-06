@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.3.ebuild,v 1.3 2008/10/15 17:06:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.3.ebuild,v 1.4 2008/11/06 00:35:00 yngwin Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -73,6 +73,8 @@ src_compile() {
 		fi
 		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA."
 	done
+	# install fails when no translation is present (bug 244370)
+	[[ -f *.qm ]] || lrelease ${PN}_en_US.ts
 }
 
 src_install() {
