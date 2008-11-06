@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.18 2008/04/30 11:49:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/2.6/use.mask,v 1.19 2008/11/06 00:07:10 zmedico Exp $
 
 -3dnow
 -3dnowext
@@ -25,7 +25,6 @@ video_cards_newport
 
 # codec support
 -win32codecs
--real
 -x264
 
 # Diego Petteno <flameeyes@gentoo.org> (4 Jan 2007)
