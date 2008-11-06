@@ -1,19 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.2.487-r1.ebuild,v 1.7 2007/12/30 12:07:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.12.ebuild,v 1.1 2008/11/06 22:23:11 ulm Exp $
 
-inherit elisp eutils versionator
-
-VM_PV=$(replace_version_separator 3 '-')
-VM_P=${PN}-${VM_PV}
+inherit elisp eutils
 
 DESCRIPTION="The VM mail reader for Emacs"
 HOMEPAGE="http://www.nongnu.org/viewmail/"
-SRC_URI="http://download.savannah.nongnu.org/releases/viewmail/${VM_P}.tgz"
+SRC_URI="http://download.savannah.nongnu.org/releases/viewmail/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="bbdb ssl"
 
 DEPEND="bbdb? ( app-emacs/bbdb )"
@@ -21,18 +18,19 @@ RDEPEND="${DEPEND}
 	ssl? ( net-misc/stunnel )"
 
 SITEFILE=50${PN}-gentoo.el
-S="${WORKDIR}/${VM_P}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-proper-charset.patch"
-
 	if ! use bbdb; then
 		elog "Excluding vm-pcrisis.el since the \"bbdb\" USE flag is not set."
 		epatch "${FILESDIR}/vm-8.0-no-pcrisis.patch"
 	fi
+
+	# fix vm-version, bug 235563
+	#sed -i -e "/^(defvar vm-version /s/nil/\"${PV}\"/" lisp/vm-version.el \
+	#	|| die "sed failed"
 }
 
 src_compile() {
