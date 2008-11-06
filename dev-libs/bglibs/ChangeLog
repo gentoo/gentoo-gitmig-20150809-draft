@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/bglibs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.46 2008/02/27 03:51:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.47 2008/11/06 08:18:10 robbat2 Exp $
+
+*bglibs-1.104 (06 Nov 2008)
+
+  06 Nov 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/bglibs-1.104-parallel-fix.patch, +bglibs-1.104.ebuild:
+  Version bump, bug #150173, includes parallel compile fixes for
+  longstanding libtool-caused breakage.
 
   27 Feb 2008; Robin H. Johnson <robbat2@gentoo.org> bglibs-1.041.ebuild:
   Add ~ppc64.
