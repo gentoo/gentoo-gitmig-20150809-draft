@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20070912.ebuild,v 1.4 2008/07/09 15:32:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20070912.ebuild,v 1.5 2008/11/06 15:05:15 bicatali Exp $
 
 inherit toolchain-funcs eutils
 
@@ -48,7 +48,8 @@ src_compile() {
 
 src_install () {
 	dolib.a libf2c.a || die "dolib.a failed"
-	dolib libf2c.so || die "dolib failed"
+	dolib libf2c.so.2 || die "dolib failed"
+	dosym libf2c.so.2 /usr/$(get_libdir)/libf2c.so
 	insinto /usr/include
 	doins f2c.h || die "f2c.h install failed"
 	dodoc README Notice || die "doc install failed"

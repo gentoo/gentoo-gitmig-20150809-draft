@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20021004-r1.ebuild,v 1.13 2005/09/10 11:42:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20021004-r1.ebuild,v 1.14 2008/11/06 15:05:15 bicatali Exp $
 
 inherit toolchain-funcs eutils
 
@@ -16,12 +16,12 @@ IUSE=""
 DEPEND="virtual/libc
 	app-arch/unzip"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-shared-object.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-shared-object.patch
 }
 
 src_compile() {
