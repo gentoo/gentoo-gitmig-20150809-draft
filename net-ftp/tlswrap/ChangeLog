@@ -1,12 +1,17 @@
 # ChangeLog for net-ftp/tlswrap
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tlswrap/ChangeLog,v 1.3 2007/12/25 16:21:22 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tlswrap/ChangeLog,v 1.4 2008/11/06 12:42:39 voyageur Exp $
+
+*tlswrap-1.04 (06 Nov 2008)
+
+  06 Nov 2008; Bernard Cafarelli <voyageur@gentoo.org> +tlswrap-1.04.ebuild:
+  Version bump, bug #198923
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing uberlord from metadata.xml as per #199318.
 
   14 Nov 2007; Robin H. Johnson <robbat2@gentoo.org> tlswrap-1.02.ebuild:
-  Fix $Header: /var/cvsroot/gentoo-x86/net-ftp/tlswrap/ChangeLog,v 1.3 2007/12/25 16:21:22 phreak Exp $ string.
+  Fix $Header: /var/cvsroot/gentoo-x86/net-ftp/tlswrap/ChangeLog,v 1.4 2008/11/06 12:42:39 voyageur Exp $ string.
 
 *tlswrap-1.02 (11 Jul 2006)
 
