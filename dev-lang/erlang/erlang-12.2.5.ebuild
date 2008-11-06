@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-12.2.5.ebuild,v 1.1 2008/11/06 20:35:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-12.2.5.ebuild,v 1.2 2008/11/06 20:53:46 opfer Exp $
 
 inherit autotools elisp-common eutils flag-o-matic multilib versionator
 
@@ -51,7 +51,7 @@ src_unpack() {
 		ewarn
 		ewarn "You enabled High performance Erlang. Be aware that this extension"
 		ewarn "can break the compilation in many ways, especially on hardened systems."
-		ewarn "Don't cry, don't file bugs, just disable it! If you have fix, tell us."
+		ewarn "Don't cry, don't file bugs, just disable it! If you have a fix, tell us though on Bugzilla."
 		ewarn
 	fi
 	eautoreconf
