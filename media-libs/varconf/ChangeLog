@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/varconf
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.23 2008/08/30 13:37:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.24 2008/11/06 19:23:26 tupone Exp $
+
+  06 Nov 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/varconf-0.6.5-gcc43.patch, varconf-0.6.5.ebuild:
+  Missing include. Bug #245667 by Sandro Bonazzola
 
   30 Aug 2008; <tupone@gentoo.org> -varconf-0.6.2.ebuild:
   0.6.2 version removed as not used
