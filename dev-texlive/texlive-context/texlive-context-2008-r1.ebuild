@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2008.ebuild,v 1.3 2008/11/03 10:01:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2008-r1.ebuild,v 1.1 2008/11/06 19:55:19 aballier Exp $
 
 TEXLIVE_MODULE_CONTENTS="context jmn lmextra bin-context context-account context-bnf context-chromato context-construction-plan context-degrade context-french context-letter context-lettrine context-lilypond context-mathsets context-taspresent context-typearea context-vim collection-context
 "

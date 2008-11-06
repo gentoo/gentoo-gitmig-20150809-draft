@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/texlive-latexrecommended-2008-r1.ebuild,v 1.5 2008/10/31 14:43:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/texlive-latexrecommended-2008-r2.ebuild,v 1.1 2008/11/06 20:02:25 aballier Exp $
 
 TEXLIVE_MODULE_CONTENTS="anysize  booktabs caption cite citeref cmap crop ctable ec eso-pic euler extsizes fancybox fancyref fancyvrb float fp ifxetex index jknapltx koma-script listings mdwtools memoir microtype ms ntgclass oberdiek pdfpages powerdot psfrag rcs rotating seminar setspace subfig thumbpdf  xkeyval collection-latexrecommended
 "
@@ -21,5 +21,5 @@ DEPEND=">=dev-texlive/texlive-latex-2008
 !=app-text/texlive-core-2007*
 !=dev-texlive/texlive-xetex-2008
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND} "
 TEXLIVE_MODULE_BINSCRIPTS="texmf-dist/scripts/oberdiek/pdfatfi.pl texmf-dist/scripts/thumbpdf/thumbpdf.pl"
