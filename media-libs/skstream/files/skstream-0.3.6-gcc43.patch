@@ -1,0 +1,10 @@
+--- skstream/skstreamconfig.h.in.old	2008-11-06 21:15:03.000000000 +0100
++++ skstream/skstreamconfig.h.in	2008-11-06 21:15:21.000000000 +0100
+@@ -38,6 +38,7 @@
+ #if @SKSTREAM_UNIX_HEADER_FLAG@
+   #include <sys/socket.h>
+   #include <netinet/in.h>
++  #include <cstring>
+ #endif
+ #if @SKSTREAM_BEOS_HEADER_FLAG@
+   #include <net/socket.h>
