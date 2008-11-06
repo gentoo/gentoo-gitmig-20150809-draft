@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.102 2008/11/01 12:46:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.103 2008/11/06 01:28:56 robbat2 Exp $
+
+*grub-0.97-r8 (05 Nov 2008)
+
+  05 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> +grub-0.97-r8.ebuild:
+  Patchset version bump, fixes bugs 220687, 245741, 218611 (maybe), 231684
+  (maybe). In package.mask still, careful testing needed.
 
   01 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> grub-0.97-r6.ebuild:
   Add a magic flag GRUB_STATIC_PACKAGE_BUILDING which along with USE=static
