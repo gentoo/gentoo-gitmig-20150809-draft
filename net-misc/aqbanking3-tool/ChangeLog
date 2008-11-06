@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aqbanking3-tool
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aqbanking3-tool/ChangeLog,v 1.1 2008/11/05 09:04:16 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aqbanking3-tool/ChangeLog,v 1.2 2008/11/06 01:51:50 robbat2 Exp $
+
+  06 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml:
+  Add missing metadata.
 
 *aqbanking3-tool-0.0.20081026 (05 Nov 2008)
 
