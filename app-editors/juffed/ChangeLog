@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/juffed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.5 2008/10/25 22:07:03 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.6 2008/11/06 15:46:52 yngwin Exp $
+
+*juffed-0.4 (06 Nov 2008)
+
+  06 Nov 2008; Ben de Groot <yngwin@gentoo.org> +juffed-0.4.ebuild:
+  Version bump
 
 *juffed-0.3 (05 Aug 2008)
 
