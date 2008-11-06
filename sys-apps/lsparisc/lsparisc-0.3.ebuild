@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsparisc/lsparisc-0.3.ebuild,v 1.3 2007/10/09 08:28:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsparisc/lsparisc-0.3.ebuild,v 1.4 2008/11/06 19:23:37 jer Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Like lspci but for PARISC devices"
 HOMEPAGE="http://packages.debian.org/unstable/utils/lsparisc"
@@ -19,6 +21,11 @@ src_unpack() {
 	cd "${S}"
 
 	sed -e 's|"0.2"|"0.3"|g' -i lsparisc.c
+	epatch "${FILESDIR}"/${P}-compile.patch
+}
+
+src_compile() {
+	emake CC=$(tc-getCC) || die "emake failed"
 }
 
 src_install() {
