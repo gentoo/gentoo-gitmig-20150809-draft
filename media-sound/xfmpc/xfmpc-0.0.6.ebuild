@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/xfmpc-0.0.6.ebuild,v 1.2 2008/05/21 15:18:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/xfmpc-0.0.6.ebuild,v 1.3 2008/11/06 14:36:34 angelos Exp $
 
 inherit fdo-mime
 
@@ -15,6 +15,7 @@ IUSE="debug"
 
 RDEPEND=">=media-libs/libmpd-0.15
 	>=x11-libs/gtk+-2.12
+	x11-themes/hicolor-icon-theme
 	>=xfce-base/libxfcegui4-4.4
 	>=xfce-base/libxfce4util-4.4"
 DEPEND="${RDEPEND}

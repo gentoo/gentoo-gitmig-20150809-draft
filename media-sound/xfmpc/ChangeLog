@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xfmpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.3 2008/09/21 18:08:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.4 2008/11/06 14:36:34 angelos Exp $
+
+  06 Nov 2008; Christoph Mende <angelos@gentoo.org> xfmpc-0.0.6.ebuild,
+  xfmpc-0.0.7.ebuild:
+  Added RDEPEND on hicolor-icon-theme and stable on amd64, bug 244795
 
 *xfmpc-0.0.7 (21 Sep 2008)
 
