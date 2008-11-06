@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.6.ebuild,v 1.1 2008/11/06 00:27:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.6.ebuild,v 1.2 2008/11/06 08:25:24 aballier Exp $
 
 EAPI="1"
 
@@ -207,6 +207,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Make it build with libtool 1.5
+	rm -f m4/lt* m4/libtool.m4
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 	AT_M4DIR="m4 ${WORKDIR}/${PN}-m4" eautoreconf
