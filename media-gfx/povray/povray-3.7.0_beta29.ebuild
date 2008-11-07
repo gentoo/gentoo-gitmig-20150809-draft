@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta25-r1.ebuild,v 1.3 2008/09/12 05:17:50 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_beta29.ebuild,v 1.1 2008/11/07 17:15:41 lavajoe Exp $
 
 inherit eutils autotools flag-o-matic versionator
 
@@ -8,7 +8,7 @@ MY_PV=$(get_version_component_range 1-3)
 MY_MINOR_VER=$(get_version_component_range 4)
 if [ -n "$MY_MINOR_VER" ]; then
 	MY_MINOR_VER=${MY_MINOR_VER/beta/beta.}
-	MY_PV="${MY_PV}.${MY_MINOR_VER}b"
+	MY_PV="${MY_PV}.${MY_MINOR_VER}"
 fi
 
 DESCRIPTION="The Persistence of Vision Raytracer"
@@ -34,7 +34,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+	#epatch "${FILESDIR}"/${P}-gcc43.patch
 
 	# Change some destination directories that cannot be adjusted via configure
 	cp configure.ac configure.ac.orig
@@ -68,6 +68,7 @@ src_compile() {
 		$(use_with svga) \
 		$(use_with tiff) \
 		$(use_with X) \
+		--disable-strip \
 		|| die
 
 	emake || die
@@ -92,4 +93,18 @@ pkg_preinst() {
 			done
 		fi
 	done
+}
+
+pkg_postinst() {
+	ewarn "POV-Ray betas have expiration dates, but these can be extended for up to"
+	ewarn "a year.  If expired, you will get the following error when running povray:"
+	ewarn
+	ewarn "    povray: this pre-release version of POV-Ray for Unix has expired"
+	ewarn
+	ewarn "To extend the license period (a week at a time), you can do"
+	ewarn "something like the following (adjust syntax for your shell):"
+	ewarn
+	ewarn "    export POVRAY_BETA=\`povray --betacode 2>&1\`"
+	ewarn
+	ewarn "You will need to repeat this each time it expires."
 }
