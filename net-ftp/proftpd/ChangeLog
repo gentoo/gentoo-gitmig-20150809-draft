@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.177 2008/11/07 18:14:36 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.178 2008/11/07 18:28:40 hoffie Exp $
+
+*proftpd-1.3.2_rc2-r1 (07 Nov 2008)
+
+  07 Nov 2008; Christian Hoffmann <hoffie@gentoo.org>
+  +proftpd-1.3.2_rc2-r1.ebuild:
+  adding 1.3.2_rc2-r1; this is mainly a copy of 1.3.1, but including the
+  security fix for bug 238762 (intention: don't cause a feature regression
+  for ~arch users)
 
   07 Nov 2008; Christian Hoffmann <hoffie@gentoo.org>
   proftpd-1.3.2_rc2.ebuild:
