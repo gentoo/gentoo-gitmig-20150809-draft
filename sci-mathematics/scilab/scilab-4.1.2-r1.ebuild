@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.1.ebuild,v 1.6 2008/01/09 03:04:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r1.ebuild,v 1.1 2008/11/07 15:17:39 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -45,8 +45,11 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-4.0-makefile.patch
 	epatch "${FILESDIR}"/${PN}-4.1-java-pic.patch
-	epatch "${FILESDIR}"/${PN}-4.1-header-fix.patch
+	epatch "${FILESDIR}"/${P}-header-fix.patch
 	epatch "${FILESDIR}"/${PN}-4.1-examples.patch
+	epatch "${FILESDIR}"/${P}-java-config.patch
+	epatch "${FILESDIR}"/${P}-tmp-fix.patch
+	eautoconf
 
 	sed -e '/^ATLAS_LAPACKBLAS\>/s,=.*,= $(ATLASDIR)/liblapack.so $(ATLASDIR)/libblas.so $(ATLASDIR)/libcblas.so,' \
 		-e 's,$(SCIDIR)/libs/lapack.a,,' \
@@ -112,6 +115,12 @@ src_install() {
 
 	insinto /usr/$(get_libdir)/${P}
 	doins Makefile.incl || die "failed to install Makefile.incl"
+
+	exeinto /usr/$(get_libdir)/${P}
+	doexe libtool || die "failed to install libtool"
+
+	insinto /usr/$(get_libdir)/${P}/config
+	doins config/Makeso.incl || die "failed to install Makeso.incl"
 
 	# The compile and install process causes the work folder
 	# to be registered as the runtime folder in many files.

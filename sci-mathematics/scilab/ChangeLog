@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.43 2008/02/08 23:59:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.44 2008/11/07 15:17:39 markusle Exp $
+
+*scilab-4.1.2-r1 (07 Nov 2008)
+
+  07 Nov 2008; Markus Dittrich <markusle@gentoo.org>
+  +files/scilab-4.1.2-tmp-fix.patch, -scilab-4.1.1.ebuild,
+  -scilab-4.1.2.ebuild, +scilab-4.1.2-r1.ebuild:
+  Added patch for insecure tempfile handling (CVE-2008-4983) (see bug
+  #245922).
 
   08 Feb 2008; Markus Dittrich <markusle@gentoo.org>
   +files/scilab-4.1.2-java-config.patch, scilab-4.1.2.ebuild:
