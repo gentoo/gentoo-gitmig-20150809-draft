@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r5.ebuild,v 1.4 2008/10/21 15:54:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r5.ebuild,v 1.5 2008/11/07 08:43:11 ulm Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/old-gnu/emacs/${P}.tar.gz
 	ftp://ftp.splode.com/pub/users/friedman/emacs/${P}-linux22x-elf-glibc21.diff.gz
 	mirror://gentoo/${P}-patches-3.tar.bz2"
 
-LICENSE="GPL-1 GPL-2 BSD"
+LICENSE="GPL-1 GPL-2 BSD as-is"
 SLOT="18"
 KEYWORDS="x86"
 IUSE="X"
