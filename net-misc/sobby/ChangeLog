@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/sobby
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.14 2008/10/10 10:35:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.15 2008/11/07 19:04:14 humpback Exp $
+
+*sobby-0.4.5 (07 Nov 2008)
+
+  07 Nov 2008; Gustavo Felisberto <humpback@gentoo.org> +sobby-0.4.5.ebuild:
+  Bump.
 
   10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> sobby-0.4.4.ebuild:
   Fix build dependencies.
