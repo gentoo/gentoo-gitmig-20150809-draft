@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.98 2008/11/06 16:55:42 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.99 2008/11/07 04:28:27 jer Exp $
+
+  07 Nov 2008; Jeroen Roovers <jer@gentoo.org> p7zip-4.58.ebuild:
+  Stable for HPPA (bug #236591).
 
   06 Nov 2008; Ferris McCormick <fmccor@gentoo.org> p7zip-4.58.ebuild:
   Sparc stable, Bug #236591.
