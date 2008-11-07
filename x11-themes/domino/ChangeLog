@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/domino
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/domino/ChangeLog,v 1.7 2008/02/19 02:07:56 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/domino/ChangeLog,v 1.8 2008/11/07 23:51:43 scarabeus Exp $
+
+*domino-0.4-r1 (07 Nov 2008)
+
+  07 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> +domino-0.4-r1.ebuild:
+  Fix installation in kde-3.5.10 (due to updates in kdebase-startkde). Now
+  installs into /usr/kde/3.5
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> domino-0.4.ebuild:
   Update kde-base/* dependencies so that KDE 4 doesn't satisfy it. bug 206528.
