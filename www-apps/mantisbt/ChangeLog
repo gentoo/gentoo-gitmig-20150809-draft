@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.74 2008/10/30 19:17:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.75 2008/11/07 12:28:51 pva Exp $
+
+*mantisbt-1.1.4-r3 (07 Nov 2008)
+
+  07 Nov 2008; Peter Volkov <pva@gentoo.org>
+  -files/mantisbt-1.1.2-svn-5369:5587.patch,
+  -files/mantisbt-1.1.3-up-to-r5674.patch, -mantisbt-1.1.3-r1.ebuild,
+  -mantisbt-1.1.4.ebuild, +mantisbt-1.1.4-r3.ebuild:
+  1.1.5 is too close so upstream asked to test this revision to avoid
+  history with previous releases. Please test it! Removed broken versions.
 
   30 Oct 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   mantisbt-1.1.4-r2.ebuild:
