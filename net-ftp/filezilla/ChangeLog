@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.24 2008/11/02 17:13:16 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.25 2008/11/07 16:25:39 coldwind Exp $
+
+  07 Nov 2008; Santiago M. Mola <coldwind@gentoo.org>
+  filezilla-3.1.3.1.ebuild:
+  amd64 stable wrt bug #245385, thanks to Víctor Enríquez
+  <victor.quicksilver@gmail.com>.
 
   02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
