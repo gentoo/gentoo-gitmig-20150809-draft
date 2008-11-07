@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2031 2008/11/07 14:32:28 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2032 2008/11/07 17:21:23 lavajoe Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Nov 2008; Joe Peterson <lavajoe@gentoo.org> package.mask:
+  Remove mask of media-gfx/povray betas - new beta 29 appears improved
 
   07 Nov 2008; Ben de Groot <yngwin@gentoo.org> updates/4Q-2008:
   Move x11-themes/lxappearance to lxde-base/lxappearance

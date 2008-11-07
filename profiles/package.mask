@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9145 2008/11/07 10:56:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9146 2008/11/07 17:21:02 lavajoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -837,11 +837,6 @@ virtual/libffi
 # Not used by anything anymore
 # Masked for removal in 30 days
 dev-dotnet/jscall-sharp
-
-# Joe Peterson <lavajoe@gentoo.org> (28 May 2008)
-# Beta 25 is broken - intermittently does not work (bombs out).
-# Will test new beta (26) and unmask if working.
->=media-gfx/povray-3.7.0_beta
 
 # Rémi Cardona <remi@gentoo.org> (27 Mai 2008)
 # mildly broken, see bug #156583
