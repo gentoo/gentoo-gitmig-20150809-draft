@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.176 2008/11/07 14:56:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.177 2008/11/07 18:14:36 hoffie Exp $
+
+  07 Nov 2008; Christian Hoffmann <hoffie@gentoo.org>
+  proftpd-1.3.2_rc2.ebuild:
+  restoring ~ia64 keyword which I dropped by accident, thanks to Jeroen in
+  bug 238762
 
   07 Nov 2008; Brent Baude <ranger@gentoo.org> proftpd-1.3.2_rc2.ebuild:
   Marking proftpd-1.3.2_rc2 ppc64 and ppc for bug 245230
