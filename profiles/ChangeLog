@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2029 2008/11/07 10:56:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2030 2008/11/07 14:16:13 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Nov 2008; Ben de Groot <yngwin@gentoo.org> categories:
+  Adding lxde-base category
 
   07 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   Unmask grub r8.
