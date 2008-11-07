@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.131 2008/11/07 10:29:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.132 2008/11/07 13:28:51 angelos Exp $
+
+*mpd-0.14_alpha1 (07 Nov 2008)
+
+  07 Nov 2008; Christoph Mende <angelos@gentoo.org> +mpd-0.14_alpha1.ebuild,
+  -mpd-0.14.0_pre20081015.ebuild, -mpd-0.14.0_pre20081103.ebuild:
+  Version bump to alpha1 and remove snapshots so people actually get this
+  update
 
   07 Nov 2008; Raúl Porcel <armin76@gentoo.org> mpd-0.13.2.ebuild:
   sparc stable wrt #242128
