@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.3.ebuild,v 1.3 2008/10/07 06:14:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-0.3.3.ebuild,v 1.4 2008/11/07 18:55:42 tgurr Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils qt4
 
@@ -17,10 +17,8 @@ IUSE="debug"
 DEPEND="|| ( ( x11-libs/qt-core:4
 			x11-libs/qt-gui:4
 			x11-libs/qt-xmlpatterns:4 )
-		>=x11-libs/qt-4.3:4 )"
+		( =x11-libs/qt-4.3*:4[png,zlib] ) )"
 RDEPEND="${DEPEND}"
-
-QT4_BUILT_WITH_USE_CHECK="zlib"
 
 src_compile() {
 	cd "${S}/src"
@@ -35,5 +33,5 @@ src_compile() {
 
 src_install(){
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc changelog todo
+	dodoc changelog todo || die "dodoc failed"
 }
