@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/obby-0.4.6.ebuild,v 1.1 2008/11/07 19:02:18 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/obby-0.4.6-r1.ebuild,v 1.1 2008/11/07 21:15:47 humpback Exp $
 
 DESCRIPTION="Library for collaborative text editing"
 HOMEPAGE="http://gobby.0x539.de/"
@@ -12,14 +12,15 @@ IUSE="avahi ipv6"
 
 DEPEND=">=net-libs/net6-1.3.5
 		>=dev-libs/libsigc++-2.0
-		>=dev-libs/gmp-4.1.4
-		avahi? ( net-dns/avahi )"
+		avahi? ( net-dns/avahi )
+		nls? ( sys-devel/gettext ) "
 RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf \
 		$(use_with avahi zeroconf) \
 		$(use_enable ipv6) \
+		$(use_enable nls) \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
