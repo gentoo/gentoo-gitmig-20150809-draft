@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdecodeqr/libdecodeqr-0.9.3.ebuild,v 1.1 2008/11/07 09:41:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdecodeqr/libdecodeqr-0.9.3.ebuild,v 1.2 2008/11/07 09:44:17 robbat2 Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${P}/src"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
