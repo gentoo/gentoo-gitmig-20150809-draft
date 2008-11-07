@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.1 2008/11/05 21:50:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.2 2008/11/07 12:56:54 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -82,14 +82,15 @@ src_unpack() {
 
 src_compile() {
 	./makemake . linux
-
-	emake all cpg || die "emake failed"
+	einfo "Doing static libs and execs"
+	emake all cpg || die "emake static failed"
 	emake clean
-	einfo "Doing "
+	einfo "Doing shared libs"
 	emake \
 		CFLAGS="${CFLAGS} -fPIC" \
 		FFLAGS="${FFLAGS} -fPIC" \
-		shared cpg-shared || die "emake shared failed"
+		shared cpg-shared \
+		|| die "emake shared failed"
 
 	if use doc; then
 		emake pgplot.html || die "make pgplot.html failed"
@@ -110,7 +111,7 @@ src_test() {
 		# j can also be LATEX CPS...
 		for j in NULL PNG PS CPS LATEX; do
 			local testexe=./test_${j}_${i}
-			echo "./pgdemo${i} <<EOF" > ${testexe}
+			echo "LD_LIBRARY_PATH=. ./pgdemo${i} <<EOF" > ${testexe}
 			echo "/${j}" >> ${testexe}
 			echo "EOF" >> ${testexe}
 			sh ${testexe} || die "test ${i} failed"
@@ -120,20 +121,18 @@ src_test() {
 
 src_install() {
 	insinto /usr/$(get_libdir)/pgplot
-	doins grfont.dat grexec.f *.inc rgb.txt
+	doins grfont.dat grexec.f *.inc rgb.txt || die
 
 	# FORTRAN libs
 	dolib.a libpgplot.a || die "dolib.a failed"
-	dolib.so libpgplot.so.5 || die "dolib.so failed"
-	dosym libpgplot.so.5 /usr/$(get_libdir)/libpgplot.so || die
+	dolib.so libpgplot.so* || die "dolib.so failed"
 	dobin pgxwin_server pgdisp || die "dobin failed"
 
 	# C binding
 	insinto /usr/include
 	doins cpgplot.h || die "doins C binding failed"
 	dolib.a libcpgplot.a || die "dolib.a failed"
-	dolib.so libcpgplot.so.5 || die "dolib C failed"
-	dosym libcpgplot.so.5 /usr/$(get_libdir)/libcpgplot.so || die
+	dolib.so libcpgplot.so* || die "dolib C failed"
 
 	if use motif; then
 		doins XmPgplot.h || die "doins motif failed"
