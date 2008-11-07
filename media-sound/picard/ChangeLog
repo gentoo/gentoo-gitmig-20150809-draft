@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/picard
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.13 2008/08/17 12:31:53 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.14 2008/11/07 11:30:27 coldwind Exp $
+
+*picard-0.10-r1 (07 Nov 2008)
+
+  07 Nov 2008; Santiago M. Mola <coldwind@gentoo.org> -picard-0.10.ebuild,
+  +picard-0.10-r1.ebuild:
+  Install menu entry (bug #235122).
 
 *picard-0.10 (17 Aug 2008)
 

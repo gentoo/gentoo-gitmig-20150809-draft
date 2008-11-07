@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.10.ebuild,v 1.1 2008/08/17 12:31:53 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.10-r1.ebuild,v 1.1 2008/11/07 11:30:27 coldwind Exp $
 
 inherit eutils distutils
 
@@ -66,6 +66,9 @@ src_compile() {
 src_install() {
 	distutils_src_install --disable-autoupdate --skip-build \
 		$(use nls || echo "--disable-locales")
+
+	doicon picard-{16,32}.png
+	domenu picard.desktop
 }
 
 pkg_postinst() {
