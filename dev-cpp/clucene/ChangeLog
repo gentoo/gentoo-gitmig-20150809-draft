@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.12 2008/08/21 19:48:19 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.13 2008/11/07 14:07:50 scarabeus Exp $
+
+*clucene-0.9.21b (07 Nov 2008)
+
+  07 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
+  -clucene-0.9.20.ebuild, +clucene-0.9.21b.ebuild:
+  Version bump. Remove old.
 
   21 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> clucene-0.9.20.ebuild:
   Add ~sparc keyword at user request, bug #234847
