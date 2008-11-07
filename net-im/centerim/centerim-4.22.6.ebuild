@@ -1,10 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.5.ebuild,v 1.7 2008/11/07 23:20:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.6.ebuild,v 1.1 2008/11/07 23:20:28 swegener Exp $
 
-WANT_AUTOMAKE="none"
-
-inherit eutils autotools
+inherit eutils
 
 PROTOCOL_IUSE="aim gadu icq irc jabber lj msn rss yahoo"
 IUSE="${PROTOCOL_IUSE} bidi nls ssl crypt jpeg otr"
@@ -19,7 +17,7 @@ fi
 HOMEPAGE="http://www.centerim.org/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	bidi? ( dev-libs/fribidi )
@@ -89,10 +87,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}"/centerim-4.22.5-libotr-configure.patch
-
-	eautoreconf
 
 	# Don't execute git commands, bug #228151
 	cat >"${S}"/misc/git-version-gen <<-EOF
