@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.041.ebuild,v 1.8 2008/02/27 03:51:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.041.ebuild,v 1.9 2008/11/07 11:01:56 robbat2 Exp $
 
-inherit fixheadtails toolchain-funcs
+inherit fixheadtails toolchain-funcs multilib
 
 DESCRIPTION="Bruce Guenters Libraries Collection"
 HOMEPAGE="http://untroubled.org/bglibs/"
@@ -17,13 +17,13 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	# disable tests as we want them manually
-	sed -e '/^all:/s|selftests||' -i.orig ${S}/Makefile
-	sed -e '/selftests/d' -i.orig ${S}/TARGETS
+	sed -e '/^all:/s|selftests||' -i.orig "${S}"/Makefile
+	sed -e '/selftests/d' -i.orig "${S}"/TARGETS
 }
 
 src_compile() {
 	echo "${D}/usr/bin" > conf-bin
-	echo "${D}/usr/lib/bglibs" > conf-lib
+	echo "${D}/usr/$(get_libdir)/bglibs" > conf-lib
 	echo "${D}/usr/include/bglibs" > conf-include
 	echo "${D}/usr/share/man" > conf-man
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc

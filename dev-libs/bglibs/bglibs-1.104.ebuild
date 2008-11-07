@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.104.ebuild,v 1.1 2008/11/06 08:18:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.104.ebuild,v 1.2 2008/11/07 11:01:56 robbat2 Exp $
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils multilib
 
 DESCRIPTION="Bruce Guenters Libraries Collection"
 HOMEPAGE="http://untroubled.org/bglibs/"
@@ -34,14 +34,14 @@ src_unpack() {
 
 src_compile() {
 	echo "${D}/usr/bin" > conf-bin
-	echo "${D}/usr/lib/bglibs" > conf-lib
+	echo "${D}/usr/$(get_libdir)/bglibs" > conf-lib
 	echo "${D}/usr/include/bglibs" > conf-include
 	echo "${D}/usr/share/man" > conf-man
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	# Fails if we do parallel build of shared+static at the same time
 	emake libs-shared || die
-	emake libs-static || die 
+	emake libs-static || die
 	emake || die
 }
 
