@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.2.ebuild,v 1.2 2008/04/22 11:04:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.2.ebuild,v 1.3 2008/11/07 14:39:08 bicatali Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXdmcp
-	x11-libs/libXau"
+	x11-libs/libXau
+	!x11-libs/xpa"
 DEPEND="${RDEPEND}
 	app-arch/zip"
 

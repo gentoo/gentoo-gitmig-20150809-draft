@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/ds9
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.12 2008/11/05 22:20:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.13 2008/11/07 14:39:08 bicatali Exp $
+
+  07 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org> ds9-5.2.ebuild:
+  Added block for x11-libs/xpa on ds9-5.2
 
 *ds9-5.4 (05 Nov 2008)
 
