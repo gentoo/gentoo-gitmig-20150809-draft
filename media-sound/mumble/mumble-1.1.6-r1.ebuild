@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.1.6.ebuild,v 1.1 2008/10/22 23:14:22 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.1.6-r1.ebuild,v 1.1 2008/11/07 17:05:23 tgurr Exp $
 
 EAPI="2"
 
@@ -17,7 +17,6 @@ IUSE="alsa dbus debug oss portaudio pulseaudio speech"
 
 RDEPEND="dev-libs/boost
 	>=media-libs/speex-1.2_beta3_p2
-	x11-libs/libXevie
 	|| ( ( x11-libs/qt-core:4[ssl]
 			x11-libs/qt-gui:4
 			x11-libs/qt-opengl:4
@@ -41,7 +40,7 @@ src_configure() {
 	use debug && conf_add="${conf_add} symbols debug" || conf_add="${conf_add} release"
 
 	eqmake4 "${S}/main.pro" -recursive \
-		CONFIG+="${conf_add} no-server no-bundled-speex" \
+		CONFIG+="${conf_add} no-server no-bundled-speex no-xevie" \
 		DEFINES+="PLUGIN_PATH=/usr/$(get_libdir)/mumble" \
 		|| die "eqmake4 failed."
 }
