@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317.ebuild,v 1.6 2007/03/15 21:49:56 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317.ebuild,v 1.7 2008/11/07 01:01:03 dberkholz Exp $
 
 inherit autotools eutils fortran
 
@@ -30,8 +30,8 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-autotool.patch
-	epatch ${FILESDIR}/${PV}-gfortran.patch
+	epatch "${FILESDIR}"/${PV}-autotool.patch
+	epatch "${FILESDIR}"/${PV}-gfortran.patch
 
 	sed -i \
 		-e "s:CIFDIR='/usr/local/bin/':CIFDIR='/usr/share/${PN}/':g" \
