@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.305 2008/11/02 16:58:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.306 2008/11/07 03:36:52 jer Exp $
+
+  07 Nov 2008; Jeroen Roovers <jer@gentoo.org> opera-9.62.ebuild:
+  Add x11-libs/libXinerama dependency for USE=qt-static builds (bug
+  #245784).
 
   02 Nov 2008; Jeroen Roovers <jer@gentoo.org> -opera-9.60.ebuild,
   -opera-9.61.ebuild:
