@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.34 2008/10/17 15:23:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.35 2008/11/07 08:35:21 aballier Exp $
+
+*coq-8.1_p4 (07 Nov 2008)
+
+  07 Nov 2008; Alexis Ballier <aballier@gentoo.org> +coq-8.1_p4.ebuild:
+  Version bump by Sigmatador <sigmatador@gmail.com>, bug #245802. Rename the
+  ide useflag to gtk which makes more sense. Some cleanup in the ebuild.
 
 *coq-8.1_p3-r1 (17 Oct 2008)
 
