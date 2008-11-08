@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/f2c
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.20 2007/12/25 14:13:42 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.21 2008/11/08 15:28:43 nixnut Exp $
+
+  08 Nov 2008; nixnut <nixnut@gentoo.org> f2c-20060507.ebuild:
+  Stable on ppc wrt bug 245832
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing kugelfang from metadata.xml as per #46972.
