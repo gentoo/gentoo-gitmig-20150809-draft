@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/obex-data-server-0.4.2.ebuild,v 1.1 2008/11/02 18:30:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/obex-data-server-0.4.2.ebuild,v 1.2 2008/11/08 09:33:47 mrness Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ IUSE="debug"
 RDEPEND="
 	dev-libs/glib:2
 	>=dev-libs/dbus-glib-0.7
-	>=net-wireless/bluez-libs-3.13
+	>=net-wireless/bluez-libs-3.34
 	>=dev-libs/openobex-1.3"
 DEPEND="
 	dev-util/pkgconfig
