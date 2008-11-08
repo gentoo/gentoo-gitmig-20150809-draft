@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfkc/xfkc-0.2.ebuild,v 1.3 2008/11/08 15:19:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfkc/xfkc-0.2.ebuild,v 1.4 2008/11/08 17:09:06 armin76 Exp $
 
 DESCRIPTION="a keyboard layout configuration tool"
 HOMEPAGE="http://gauvain.tuxfamily.org/code/xfkc.html"
@@ -8,7 +8,7 @@ SRC_URI="http://gauvain.tuxfamily.org/code/archive/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug nls"
 
 RDEPEND=">=xfce-base/libxfce4util-4.4
