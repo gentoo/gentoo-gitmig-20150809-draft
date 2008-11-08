@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netpipes
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.5 2007/02/20 01:06:01 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.6 2008/11/08 13:14:40 cedk Exp $
+
+  08 Nov 2008; Cédric Krier <cedk@gentoo.org>
+  +files/netpipes-4.2-string.patch, netpipes-4.2.ebuild:
+  Fix C(XX)FLAGS for bug #241074, add missing quote and add missing string.h
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
