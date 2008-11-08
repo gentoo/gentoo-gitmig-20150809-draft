@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.11.ebuild,v 1.4 2008/11/08 11:36:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.11.ebuild,v 1.5 2008/11/08 18:46:14 maekke Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="cblas"
 
 RDEPEND="app-admin/eselect-cblas
