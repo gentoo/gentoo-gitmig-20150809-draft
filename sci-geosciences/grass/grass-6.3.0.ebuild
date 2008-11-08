@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.4 2008/09/21 21:23:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.5 2008/11/08 22:19:39 nerdboy Exp $
 
 inherit eutils distutils fdo-mime versionator wxwidgets
 
@@ -9,14 +9,14 @@ MY_PVM=$(delete_all_version_separators ${MY_PV})
 MY_PM=${PN}${MY_PVM}
 
 DESCRIPTION="An open-source GIS with raster and vector functionality, as well as 3D vizualization."
-HOMEPAGE="http://grass.itc.it/"
-SRC_URI="http://grass.itc.it/${MY_PM}/source/${P}.tar.gz"
+HOMEPAGE="http://grass.osgeo.org//"
+SRC_URI="http://download.osgeo.org/grass/${MY_PM}/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="6"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="ffmpeg fftw glw gmath jpeg largefile mysql nls odbc opengl png \
+IUSE="ffmpeg fftw gmath jpeg largefile motif mysql nls odbc opengl png \
 postgres python readline sqlite tiff truetype wxwindows X"
 
 RESTRICT="strip"
@@ -36,11 +36,10 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	jpeg? ( media-libs/jpeg )
 	mysql? ( dev-db/mysql )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
-	opengl? ( ( virtual/opengl )
-	    ( x11-libs/openmotif )
-	    glw? ( media-libs/mesa ) )
+	opengl? ( virtual/opengl )
+	motif? ( x11-libs/openmotif )
 	png? ( >=media-libs/libpng-1.2.2 )
-	postgres? ( >=dev-db/postgresql-7.3 )
+	postgres? ( >=dev-db/postgresql-base-8.3 )
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )
 	sqlite? ( dev-db/sqlite )
@@ -98,18 +97,6 @@ pkg_setup() {
 		fi
 	fi
 
-	if use glw && ! use opengl; then
-		ewarn "You set USE='glw -opengl'. GLw support needs OpenGL."
-		ewarn "OpenGL support also requires X."
-		die "Set opengl and X useflags."
-	fi
-
-	if use glw && ! built_with_use media-libs/mesa motif; then
-		ewarn "GRASS GLw/OpenGL support needs mesa with motif headers."
-		ewarn "Please rebuild mesa with motif support."
-		die "Re-emerge mesa with motif."
-	fi
-
 	if use opengl && ! use X; then
 		ewarn "GRASS OpenGL support needs X (will also pull in Tcl/Tk)."
 		die "Please set the X useflag."
@@ -122,7 +109,7 @@ src_unpack() {
 
 	epatch rpm/fedora/grass-readline.patch
 
-	if use opengl; then
+	if ! use opengl; then
 	    epatch "${FILESDIR}"/${P}-html-nonviz.patch
 	fi
 
@@ -141,7 +128,8 @@ src_compile() {
 		--with-includes=/usr/include --with-libs=/usr/$(get_libdir) \
 		--with-proj-includes=/usr/include \
 		--with-proj-libs=/usr/$(get_libdir) \
-		--with-proj-share=/usr/share/proj"
+		--with-proj-share=/usr/share/proj \
+		--without-glw"
 
 	if use X; then
 	    if has_version ">=dev-lang/tcl-8.5"; then
@@ -170,11 +158,8 @@ src_compile() {
 
 	if use opengl; then
 	    myconf="${myconf} --with-opengl --with-opengl-libs=/usr/$(get_libdir)/opengl/xorg-x11/lib"
-	    if use glw; then
-		myconf="${myconf} --with-glw"
-	    fi
 	else
-	    myconf="${myconf} --without-opengl --without-glw"
+	    myconf="${myconf} --without-opengl"
 	fi
 
 	# Should handle either older or latest without intervention;
@@ -219,7 +204,7 @@ src_compile() {
 		$(use_with gmath lapack) \
 		$(use_with jpeg) \
 		$(use_enable largefile) \
-		$(use_with opengl motif) \
+		$(use_with motif) \
 		$(use_with nls) \
 		$(use_with odbc) \
 		$(use_with png) \
@@ -228,13 +213,15 @@ src_compile() {
 		$(use_with tiff) || die "configure failed!"
 
 	if use wxwindows; then
-	    emake -j1
+	    # can't use die here since we need to hack the vdigit build
+	    emake
 	    ln -sf "${LIBGDI}" dist.${CHOST}/lib/libgdi.so \
 		|| die "making libgdi link failed"
 	    cd gui/wxpython/vdigit
+	    # now we're OK
 	    make default -j1 || die "make vdigit failed!"
 	else
-	    emake -j1 || die "make failed!"
+	    emake || die "make failed!"
 	fi
 }
 
