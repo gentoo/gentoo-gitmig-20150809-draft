@@ -1,6 +1,9 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.44 2008/11/07 10:19:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.45 2008/11/08 11:50:30 nixnut Exp $
+
+  08 Nov 2008; nixnut <nixnut@gentoo.org> asciidoc-8.2.6.ebuild:
+  Stable on ppc wrt bug 224743
 
   07 Nov 2008; Raúl Porcel <armin76@gentoo.org> asciidoc-8.2.6.ebuild:
   alpha/ia64 stable wrt #224743
