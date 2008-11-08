@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.549 2008/11/06 18:39:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.550 2008/11/08 11:15:16 armin76 Exp $
+
+*vanilla-sources-2.6.27.5 (08 Nov 2008)
+
+  08 Nov 2008; Raúl Porcel <armin76@gentoo.org>
+  vanilla-sources-2.6.16.62.ebuild, vanilla-sources-2.6.22.19.ebuild,
+  vanilla-sources-2.6.23.17.ebuild, vanilla-sources-2.6.24.7.ebuild,
+  -vanilla-sources-2.6.25.1.ebuild, -vanilla-sources-2.6.25.2.ebuild,
+  -vanilla-sources-2.6.25.3.ebuild, -vanilla-sources-2.6.25.4.ebuild,
+  -vanilla-sources-2.6.25.5.ebuild, -vanilla-sources-2.6.25.6.ebuild,
+  -vanilla-sources-2.6.25.7.ebuild, -vanilla-sources-2.6.25.8.ebuild,
+  -vanilla-sources-2.6.25.10.ebuild, -vanilla-sources-2.6.25.11.ebuild,
+  -vanilla-sources-2.6.25.12.ebuild, -vanilla-sources-2.6.25.13.ebuild,
+  -vanilla-sources-2.6.25.15.ebuild, -vanilla-sources-2.6.25.16.ebuild,
+  -vanilla-sources-2.6.25.17.ebuild, -vanilla-sources-2.6.25.18.ebuild,
+  +vanilla-sources-2.6.27.5.ebuild, vanilla-sources-2.6.28_rc1.ebuild:
+  Version bump, some cleanup
 
   06 Nov 2008; Jeroen Roovers <jer@gentoo.org>
   vanilla-sources-2.6.26.7.ebuild:
