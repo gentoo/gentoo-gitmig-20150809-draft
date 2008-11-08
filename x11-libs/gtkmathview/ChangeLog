@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.29 2008/11/08 12:36:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.30 2008/11/08 17:26:37 armin76 Exp $
+
+  08 Nov 2008; Raúl Porcel <armin76@gentoo.org> gtkmathview-0.8.0.ebuild:
+  alpha/ia64/sparc stable wrt #245303
 
   08 Nov 2008; nixnut <nixnut@gentoo.org> gtkmathview-0.8.0.ebuild:
   Stable on ppc wrt bug 245303
