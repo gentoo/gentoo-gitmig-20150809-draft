@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.47 2008/10/27 01:01:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.48 2008/11/08 19:38:40 armin76 Exp $
+
+  08 Nov 2008; Raúl Porcel <armin76@gentoo.org> sdparm-1.03.ebuild:
+  Fix HOMEPAGE, SRC_URI
 
   27 Oct 2008; Jeroen Roovers <jer@gentoo.org> sdparm-1.03.ebuild:
   Stable for HPPA (bug #241636).
