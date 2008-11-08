@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-bdb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.26 2008/11/06 09:27:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.27 2008/11/08 12:50:30 nixnut Exp $
+
+  08 Nov 2008; nixnut <nixnut@gentoo.org> ruby-bdb-0.6.5.ebuild:
+  Stable on ppc wrt bug 245345
 
   06 Nov 2008; Raúl Porcel <armin76@gentoo.org> ruby-bdb-0.6.5.ebuild:
   ia64 stable wrt #245345
