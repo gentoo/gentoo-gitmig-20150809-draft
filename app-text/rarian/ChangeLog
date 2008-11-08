@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rarian
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.31 2008/11/08 12:07:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.32 2008/11/08 12:58:52 fmccor Exp $
+
+  08 Nov 2008; Ferris McCormick <fmccor@gentoo.org> rarian-0.8.1.ebuild:
+  Sparc stable, Bug #246048.
 
   08 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org> rarian-0.8.1.ebuild:
   remove unneeded line from configure, bug #240564
