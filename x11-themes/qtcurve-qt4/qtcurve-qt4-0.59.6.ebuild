@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.59.6.ebuild,v 1.10 2008/10/11 20:00:40 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.59.6.ebuild,v 1.11 2008/11/08 13:21:36 nixnut Exp $
 
 EAPI="1"
 inherit flag-o-matic cmake-utils
@@ -12,7 +12,7 @@ SRC_URI="http://home.freeuk.com/cpdrummond/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="|| ( x11-libs/qt-gui:4 <x11-libs/qt-4.4:4 )"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.47 2008/10/11 20:00:40 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.48 2008/11/08 13:21:36 nixnut Exp $
+
+  08 Nov 2008; nixnut <nixnut@gentoo.org> qtcurve-qt4-0.59.6.ebuild:
+  Stable on ppc wrt bug 238598
 
 *qtcurve-qt4-0.59.6-r1 (11 Oct 2008)
 
