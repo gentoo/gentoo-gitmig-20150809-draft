@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.38 2008/10/12 11:36:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.39 2008/11/08 14:27:23 nixnut Exp $
+
+  08 Nov 2008; nixnut <nixnut@gentoo.org> dansguardian-2.10-r1.ebuild:
+  Stable on ppc wrt bug 245680
 
 *dansguardian-2.10-r1 (12 Oct 2008)
 
