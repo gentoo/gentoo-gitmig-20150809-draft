@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.5.1.ebuild,v 1.4 2008/11/02 02:33:49 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.5.1.ebuild,v 1.5 2008/11/08 03:16:43 nerdboy Exp $
 
 inherit eutils toolchain-funcs
 
@@ -37,7 +37,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-include-fix.patch
 
-	sed -i -e "s:mapniklibpath + '/fonts':/usr/share/fonts/dejavu/:g" \
+	sed -i -e "s:mapniklibpath + '/fonts':'/usr/share/fonts/dejavu/':g" \
 	    bindings/python/SConscript || die "sed 1 failed"
 	sed -i -e "s:/usr/local:/usr:g" SConstruct \
 	    || die "sed 2 failed"
