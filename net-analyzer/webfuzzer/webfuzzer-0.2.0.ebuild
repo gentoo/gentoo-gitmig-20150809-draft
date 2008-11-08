@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/webfuzzer/webfuzzer-0.2.0.ebuild,v 1.2 2007/11/30 14:35:02 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/webfuzzer/webfuzzer-0.2.0.ebuild,v 1.3 2008/11/08 15:16:59 cedk Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Poor man's web vulnerability scanner"
 HOMEPAGE="http://gunzip.altervista.org/g.php?f=projects"
@@ -17,6 +17,20 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/devel
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -i \
+		-e "s/CFLAGS=-g -O3/CFLAGS+=-g/" \
+		-e "s/CC=/CC?=/" \
+		Makefile || die "sed failed"
+}
+
+src_compile() {
+	emake CC=$(tc-getCC) || die "emake failed"
+}
 
 src_install() {
 	dodoc CHANGES README TODO

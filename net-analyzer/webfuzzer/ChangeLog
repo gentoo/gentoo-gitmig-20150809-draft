@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/webfuzzer
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/webfuzzer/ChangeLog,v 1.2 2007/11/30 14:35:02 coldwind Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/webfuzzer/ChangeLog,v 1.3 2008/11/08 15:16:59 cedk Exp $
+
+  08 Nov 2008; Cédric Krier <cedk@gentoo.org> webfuzzer-0.2.0.ebuild:
+  Fix C(XX)FLAGS and CC for bug #240870
 
   30 Nov 2007; Santiago M. Mola <coldwind@gentoo.org>
   webfuzzer-0.2.0.ebuild:
