@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.20.0-r1.ebuild,v 1.2 2008/07/25 12:22:55 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.20.0-r1.ebuild,v 1.3 2008/11/08 13:16:28 nixnut Exp $
 
 inherit cmake-utils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://dl.cihar.com/gammu/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug bluetooth irda mysql postgres nls"
 
 RDEPEND="bluetooth? ( net-wireless/bluez-libs )

@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.58 2008/11/02 12:46:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.59 2008/11/08 13:16:28 nixnut Exp $
+
+  08 Nov 2008; nixnut <nixnut@gentoo.org> gammu-1.20.0-r1.ebuild:
+  Stable on ppc wrt bug 231597
 
 *gammu-1.21.0 (02 Nov 2008)
 
