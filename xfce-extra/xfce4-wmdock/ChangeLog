@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-wmdock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock/ChangeLog,v 1.8 2008/11/08 15:31:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock/ChangeLog,v 1.9 2008/11/08 15:54:44 angelos Exp $
+
+  08 Nov 2008; Christoph Mende <angelos@gentoo.org>
+  -xfce4-wmdock-0.2.0.ebuild, xfce4-wmdock-0.3.0.ebuild:
+  Removed old and changed to xfce44_panel_plugin
 
   08 Nov 2008; Jeremy Olexa <darkside@gentoo.org> xfce4-wmdock-0.3.0.ebuild:
   amd64 stable, bug 245970
