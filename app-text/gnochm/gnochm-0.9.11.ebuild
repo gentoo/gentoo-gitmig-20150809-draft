@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/gnochm-0.9.11.ebuild,v 1.2 2008/11/05 20:36:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/gnochm-0.9.11.ebuild,v 1.3 2008/11/08 12:16:07 nixnut Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND=">=dev-python/pychm-0.8.4
 		=dev-python/pygtk-2*
