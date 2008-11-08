@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.40 2008/11/05 21:49:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.41 2008/11/08 14:02:45 nixnut Exp $
+
+  08 Nov 2008; nixnut <nixnut@gentoo.org> obexftp-0.22.ebuild:
+  Stable on ppc wrt bug 245455
 
   05 Nov 2008; Alin Năstac <mrness@gentoo.org>
   +files/obexftp-0.22-ruby-libpath.patch, obexftp-0.22.ebuild:
