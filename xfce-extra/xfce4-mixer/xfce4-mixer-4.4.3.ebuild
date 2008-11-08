@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.4.3.ebuild,v 1.2 2008/11/06 21:47:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.4.3.ebuild,v 1.3 2008/11/08 15:24:01 angelos Exp $
 
 EAPI=1
 
@@ -38,8 +38,6 @@ XFCE_CONFIG+=" $(use_enable nls)"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	echo panel-plugin/mixer-prefbox.gob >> po/POTFILES.skip
-	echo src/main.c >> po/POTFILES.skip
 	rm panel-plugin/${PN}.desktop
 }
 
