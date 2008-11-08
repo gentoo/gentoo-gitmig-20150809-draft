@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/zprod-manager
 # Copyright 2003-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.23 2008/06/06 23:28:58 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/ChangeLog,v 1.24 2008/11/08 15:16:49 nixnut Exp $
+
+  08 Nov 2008; nixnut <nixnut@gentoo.org> zprod-manager-0.3.2-r1.ebuild:
+  Stable on ppc wrt bug 245785
 
   06 Jun 2008; Tupone Alfredo <tupone@gentoo.org> zprod-manager-0.3.ebuild:
   Stable on amd64
