@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.35 2008/11/08 15:37:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.36 2008/11/08 19:02:02 maekke Exp $
+
+  08 Nov 2008; Markus Meier <maekke@gentoo.org> libaio-0.3.106-r2.ebuild:
+  amd64/x86 stable, bug #245909
 
   08 Nov 2008; nixnut <nixnut@gentoo.org> libaio-0.3.106-r2.ebuild:
   Stable on ppc wrt bug 245909
