@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/tvbrowser
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.28 2008/10/22 12:20:52 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.29 2008/11/08 18:12:26 zzam Exp $
+
+*tvbrowser-2.7.1 (08 Nov 2008)
+
+  08 Nov 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +tvbrowser-2.7.1.ebuild:
+  Added ebuild from Bug 229087 with some cleanups.
 
   22 Oct 2008; Miroslav Šulc <fordfrog@gentoo.org> tvbrowser-2.5.2.ebuild,
   tvbrowser-2.5.3.ebuild, tvbrowser-2.6.2.ebuild:
