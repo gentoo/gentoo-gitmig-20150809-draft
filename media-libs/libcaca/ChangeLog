@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.65 2008/10/24 09:22:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.66 2008/11/08 14:17:26 nixnut Exp $
+
+  08 Nov 2008; nixnut <nixnut@gentoo.org> libcaca-0.99_beta14.ebuild:
+  Stable on ppc wrt bug 245561
 
   24 Oct 2008; Alexis Ballier <aballier@gentoo.org>
   -files/libcaca-0.99_beta13-gcc-4.3.patch,
