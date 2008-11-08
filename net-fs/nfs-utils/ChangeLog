@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.137 2008/11/02 10:12:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.138 2008/11/08 17:16:57 armin76 Exp $
+
+  08 Nov 2008; Raúl Porcel <armin76@gentoo.org> nfs-utils-1.1.3.ebuild:
+  alpha/ia64 stable wrt #242696
 
   02 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   nfs-utils-1.1.3.ebuild:
