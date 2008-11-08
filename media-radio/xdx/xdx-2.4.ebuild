@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.ebuild,v 1.1 2008/09/11 19:16:36 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.ebuild,v 1.2 2008/11/08 13:40:55 nixnut Exp $
 
 DESCRIPTION="a GTK+ TCP/IP DX-cluster and ON4KST chat client."
 HOMEPAGE="http://www.qsl.net/pg4i/linux/xdx.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.qsl.net/pg4i/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2.12"
