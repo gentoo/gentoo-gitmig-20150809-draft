@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.66 2008/11/08 13:28:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.67 2008/11/08 17:20:17 armin76 Exp $
+
+  08 Nov 2008; Raúl Porcel <armin76@gentoo.org> libmpeg3-1.7.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #241354
 
   08 Nov 2008; nixnut <nixnut@gentoo.org> libmpeg3-1.7.ebuild:
   Stable on ppc wrt bug 241354
