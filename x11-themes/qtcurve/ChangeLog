@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.45 2008/11/08 13:20:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.46 2008/11/08 19:42:00 klausman Exp $
+
+  08 Nov 2008; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
+  Keyworded on alpha, bug #238598
 
   08 Nov 2008; nixnut <nixnut@gentoo.org> qtcurve-0.59.5.ebuild:
   Stable on ppc wrt bug 238598
