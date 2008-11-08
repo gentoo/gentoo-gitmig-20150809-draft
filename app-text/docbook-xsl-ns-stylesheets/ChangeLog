@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-xsl-ns-stylesheets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-ns-stylesheets/ChangeLog,v 1.2 2008/10/05 10:10:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-ns-stylesheets/ChangeLog,v 1.3 2008/11/08 21:13:17 fmccor Exp $
+
+  08 Nov 2008; Ferris McCormick <fmccor@gentoo.org>
+  docbook-xsl-ns-stylesheets-1.74.0.ebuild:
+  Sparc stable, Bug #246090, all tests successful.
 
   05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   docbook-xsl-ns-stylesheets-1.74.0.ebuild:
