@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.68 2008/09/30 17:29:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.69 2008/11/08 23:14:28 eva Exp $
+
+*libgnomeuimm-2.24.0 (08 Nov 2008)
+
+  08 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgnomeuimm-2.20.0.ebuild, -libgnomeuimm-2.20.1.ebuild,
+  +libgnomeuimm-2.24.0.ebuild:
+  New version for GNOME 2.24. Dummy release.
 
   30 Sep 2008; Jeroen Roovers <jer@gentoo.org> libgnomeuimm-2.22.0.ebuild:
   Stable for HPPA (bug #229709).
