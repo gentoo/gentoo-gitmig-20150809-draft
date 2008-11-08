@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.4.4.ebuild,v 1.1 2008/10/20 12:30:00 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.4.4.ebuild,v 1.2 2008/11/08 03:53:08 markusle Exp $
 
-inherit eutils elisp-common flag-o-matic autotools multilib
+inherit eutils elisp-common flag-o-matic autotools multilib versionator
 
 PV_MAJOR=${PV%.*}
 MY_PV=${PV//./-}
@@ -21,17 +21,30 @@ IUSE="doc emacs boost"
 
 DEPEND=">=dev-lang/perl-5.6
 		>=dev-libs/gmp-4.1-r1
-		emacs? ( virtual/emacs )
+		emacs? ( >=virtual/emacs-22 )
 		boost? ( dev-libs/boost )"
 
 S="${WORKDIR}"/${MY_PN}-${MY_PV_MAJOR}
 SITEFILE=60${PN}-gentoo.el
+
+pkg_setup() {
+	# we need at least emacs-22 in order for our emacs patches
+	# to work
+	need_emacs=22
+	have_emacs=$(elisp-emacs-version)
+	if ! version_is_at_least "${need_emacs}" "${have_emacs}"; then
+		eerror "This package needs at least emacs version ${need_emacs}."
+		eerror "Use \"eselect emacs\" to select the active version."
+		die "Emacs version is too low."
+	fi
+}
 
 src_unpack () {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-3.0.4.2-gentoo.diff
 	epatch "${FILESDIR}"/${P}-nostrip.patch
+	epatch "${FILESDIR}"/${P}-emacs-22.patch
 
 	# for some unknown reason this ldflag causes the
 	# build system to choke
