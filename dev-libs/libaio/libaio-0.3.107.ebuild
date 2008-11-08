@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.107.ebuild,v 1.1 2008/11/06 23:51:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.107.ebuild,v 1.2 2008/11/08 13:59:34 vapier Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -24,7 +24,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-sparc.patch
 	epatch "${FILESDIR}"/${P}-install-to-slash.patch
 	epatch "${FILESDIR}"/${PN}-0.3.106-build.patch
-	sed -i "/^libdir=/s:lib$:$(get_libdir):" src/Makefile
+	sed -i "/^libdir=/s:lib$:$(get_libdir):" src/Makefile Makefile
 }
 
 src_compile() {
