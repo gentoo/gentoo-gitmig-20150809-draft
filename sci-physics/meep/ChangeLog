@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/meep
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.6 2008/10/10 11:16:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.7 2008/11/08 19:18:10 maekke Exp $
+
+  08 Nov 2008; Markus Meier <maekke@gentoo.org> meep-0.20.3.ebuild:
+  amd64/x86 stable, bug #245938
 
   10 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/meep-0.10.1-configure.ac.patch, -meep-0.10.1.ebuild:
