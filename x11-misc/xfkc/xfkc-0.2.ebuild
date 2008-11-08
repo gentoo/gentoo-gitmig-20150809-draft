@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfkc/xfkc-0.2.ebuild,v 1.1 2008/06/23 03:43:59 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfkc/xfkc-0.2.ebuild,v 1.2 2008/11/08 15:08:54 angelos Exp $
 
 DESCRIPTION="a keyboard layout configuration tool"
 HOMEPAGE="http://gauvain.tuxfamily.org/code/xfkc.html"
@@ -18,6 +18,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( dev-util/intltool
 		sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	echo xfce-xfkc-settings.desktop.in >> po/POTFILES.skip
+}
 
 src_compile() {
 	econf --disable-dependency-tracking \
