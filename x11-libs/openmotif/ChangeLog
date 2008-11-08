@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.204 2008/11/08 14:19:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.205 2008/11/08 15:43:59 maekke Exp $
+
+  08 Nov 2008; Markus Meier <maekke@gentoo.org> openmotif-2.3.1.1.ebuild:
+  amd64/x86 stable, bug #245635
 
   08 Nov 2008; nixnut <nixnut@gentoo.org> openmotif-2.3.1.1.ebuild:
   Stable on ppc wrt bug 245635
