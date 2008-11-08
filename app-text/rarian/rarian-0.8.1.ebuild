@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.8.1.ebuild,v 1.1 2008/09/01 21:11:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.8.1.ebuild,v 1.2 2008/11/08 12:07:25 eva Exp $
 
 inherit eutils gnome2
 
@@ -25,6 +25,9 @@ src_unpack() {
 	# calling gnome2_omf_fix
 	unpack ${A}
 	cd "${S}"
+
+	# remove unneeded line, bug #240564
+	sed "s/ (foreign dist-bzip2 dist-gzip)//" -i configure || die "sed failed"
 
 	elibtoolize ${ELTCONF}
 }
