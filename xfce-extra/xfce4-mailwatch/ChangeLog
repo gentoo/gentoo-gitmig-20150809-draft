@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-mailwatch
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch/ChangeLog,v 1.18 2008/09/16 13:03:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mailwatch/ChangeLog,v 1.19 2008/11/08 15:29:02 darkside Exp $
+
+  08 Nov 2008; Jeremy Olexa <darkside@gentoo.org>
+  xfce4-mailwatch-1.1.0.ebuild:
+  amd64 stable, bug 245970
 
 *xfce4-mailwatch-1.1.0 (16 Sep 2008)
 
