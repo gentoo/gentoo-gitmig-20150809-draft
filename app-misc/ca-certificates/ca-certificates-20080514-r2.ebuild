@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20080514-r2.ebuild,v 1.7 2008/10/26 13:46:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20080514-r2.ebuild,v 1.8 2008/11/08 09:30:36 robbat2 Exp $
 
 inherit eutils
 
@@ -61,6 +61,8 @@ pkg_postinst() {
 	if [[ $badcerts -eq 1 ]]; then
 		ewarn "You MUST remove the above broken symlinks"
 		ewarn "Otherwise any SSL validation that use the directory may fail!"
+		ewarn "To batch-remove them, run:"
+		ewarn "find -L ${ROOT}etc/ssl/certs/ -type l -exec rm \{} \;"
 	fi
 
 	[[ ${ROOT} != "/" ]] && return 0
