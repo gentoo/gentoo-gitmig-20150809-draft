@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-6.09a.ebuild,v 1.1 2008/10/13 12:51:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-6.11.ebuild,v 1.1 2008/11/08 17:41:40 ulm Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
-SITEFILE=51${PN}-gentoo.el
+SITEFILE="51${PN}-gentoo.el"
 
 S="${WORKDIR}/org-${PV}"
 
