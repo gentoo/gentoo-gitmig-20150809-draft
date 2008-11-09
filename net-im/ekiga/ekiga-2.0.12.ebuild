@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.12.ebuild,v 1.6 2008/09/25 17:17:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.12.ebuild,v 1.7 2008/11/09 01:20:15 eva Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -54,7 +54,8 @@ pkg_setup() {
 		$(use_enable avahi)
 		$(use_enable doc)
 		$(use_enable gnome)
-		--disable-scrollkeeper"
+		--disable-scrollkeeper
+		--disable-schemas-install"
 }
 
 src_unpack() {
