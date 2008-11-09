@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.115 2008/11/09 12:32:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.116 2008/11/09 14:26:05 nixnut Exp $
+
+  09 Nov 2008; nixnut <nixnut@gentoo.org> links-2.2.ebuild:
+  Stable on ppc wrt bug 246109
 
   09 Nov 2008; Markus Meier <maekke@gentoo.org> links-2.2.ebuild:
   amd64/x86 stable, bug #246109
