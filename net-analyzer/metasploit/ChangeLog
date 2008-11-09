@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.42 2008/11/08 20:06:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.43 2008/11/09 12:27:24 maekke Exp $
+
+  09 Nov 2008; Markus Meier <maekke@gentoo.org>
+  metasploit-3.1_p5699-r1.ebuild:
+  amd64/x86 stable, bug #246089
 
   08 Nov 2008; Peter Volkov <pva@gentoo.org> -metasploit-3.1_p5662.ebuild:
   Removed unused.
