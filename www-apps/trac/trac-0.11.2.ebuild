@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.11.ebuild,v 1.4 2008/07/25 19:17:48 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.11.2.ebuild,v 1.1 2008/11/09 09:35:09 wrobel Exp $
 
 inherit distutils webapp
 
@@ -125,12 +125,17 @@ src_install() {
 	# project environments might go in here
 	keepdir /var/lib/trac
 
+	# Use this as the egg-cache for tracd
+	dodir /var/lib/trac/egg-cache
+	keepdir /var/lib/trac/egg-cache
+	fowners tracd:tracd /var/lib/trac/egg-cache
+
 	# documentation
 	cp -r contrib "${D}"/usr/share/doc/${P}/
 
 	# tracd init script
 	newconfd "${FILESDIR}"/tracd.confd tracd
-	newinitd "${FILESDIR}"/tracd.initd tracd
+	newinitd "${FILESDIR}"/tracd.initd.2 tracd
 
 	if use cgi ; then
 		cp cgi-bin/trac.cgi "${D}"/${MY_CGIBINDIR} || die
