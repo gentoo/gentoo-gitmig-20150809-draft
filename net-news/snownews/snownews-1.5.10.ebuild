@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.10.ebuild,v 1.4 2008/11/09 14:23:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.10.ebuild,v 1.5 2008/11/09 14:41:41 cedk Exp $
 
 inherit eutils toolchain-funcs
 
@@ -43,5 +43,5 @@ src_compile() {
 src_install() {
 	emake PREFIX="${D}/usr" install || die "make install failed"
 
-	dodoc AUTHOR CREDITS README README.colors README.de README.patching
+	dodoc AUTHOR CREDITS README README.de README.patching
 }
