@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/judy
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.18 2008/11/03 15:33:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.19 2008/11/09 12:03:06 armin76 Exp $
+
+  09 Nov 2008; Raúl Porcel <armin76@gentoo.org> judy-1.0.4.ebuild:
+  Add ~alpha/~ia64 wrt #245413
 
   03 Nov 2008; Peter Volkov <pva@gentoo.org>
   +files/judy-1.0.4-parallel-make.patch, metadata.xml, -judy-1.0.1.ebuild,
