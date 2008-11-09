@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xfmpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.5 2008/11/07 15:09:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.6 2008/11/09 14:34:32 maekke Exp $
+
+  09 Nov 2008; Markus Meier <maekke@gentoo.org> xfmpc-0.0.7.ebuild:
+  x86 stable, bug #244795
 
   07 Nov 2008; Christoph Mende <angelos@gentoo.org> -xfmpc-0.0.6.ebuild:
   Remove old
