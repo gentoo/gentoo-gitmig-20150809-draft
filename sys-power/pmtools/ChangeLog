@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/pmtools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.8 2008/11/08 13:39:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.9 2008/11/09 13:50:47 nixnut Exp $
+
+  09 Nov 2008; nixnut <nixnut@gentoo.org> pmtools-20071116.ebuild:
+  Stable on ppc wrt bug 236747
 
   08 Nov 2008; Markus Meier <maekke@gentoo.org> pmtools-20071116.ebuild:
   amd64/x86 stable, bug #236747
