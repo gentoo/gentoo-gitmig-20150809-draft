@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.4.ebuild,v 1.3 2008/10/26 09:02:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.4.ebuild,v 1.4 2008/11/09 07:20:35 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -95,10 +95,6 @@ src_install() {
 		dobin tools/rpcgen/rpcgen || die "rpcgen"
 		newdoc tools/rpcgen/README README.rpcgen
 	fi
-}
-
-pkg_preinst() {
-	[[ -s ${ROOT}/etc/exports ]] && rm -f "${D}"/etc/exports
 }
 
 pkg_postinst() {
