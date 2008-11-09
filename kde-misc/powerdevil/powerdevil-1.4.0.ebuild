@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/powerdevil/powerdevil-1.4.0.ebuild,v 1.1 2008/11/07 21:24:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/powerdevil/powerdevil-1.4.0.ebuild,v 1.2 2008/11/09 13:42:08 scarabeus Exp $
 
 EAPI="2"
 
@@ -18,16 +18,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE="htmlhandbook"
 
 DEPEND="kde-base/systemsettings:${SLOT}
-	kde-base/kscreensaver:${SLOT}"
+	kde-base/kscreensaver:${SLOT}
+	>=kde-base/libkworkspace-4.1.2-r1"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/${MY_P}
 
 src_prepare() {
-	# UnixAuth? Works like charm without it...
-	sed -i \
-		-e "s:include(UnixAuth):#include(UnixAuth):g" \
-		ConfigureChecks.cmake || die "failed to remove UnixAuth"
 	if ! use htmlhandbook; then
 		sed -i \
 			-e "s:add_subdirectory(doc):#nada:g" \
