@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/glazedlists
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.13 2008/10/11 22:01:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.14 2008/11/09 10:22:18 caster Exp $
+
+  09 Nov 2008; Vlastimil Babka <caster@gentoo.org> glazedlists-1.7.0.ebuild:
+  Add back missing DESCRIPTION, thanks mr_bones.
 
 *glazedlists-1.7.0 (11 Oct 2008)
 
