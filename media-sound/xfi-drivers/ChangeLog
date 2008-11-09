@@ -1,0 +1,13 @@
+# ChangeLog for media-sound/xfi-drivers
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfi-drivers/ChangeLog,v 1.1 2008/11/09 13:32:05 loki_val Exp $
+
+*xfi-drivers-1.00 (09 Nov 2008)
+
+  09 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> +metadata.xml,
+  +xfi-drivers-1.00.ebuild:
+  Initial commit, ebuild by me. I don't have hardware for this, so anyone
+  who does is free to take over maintaining this. Will be punted when the
+  code has been integrated into upstream kernel. May eat cats, dogs and
+  other pets, use at your own peril.
+
