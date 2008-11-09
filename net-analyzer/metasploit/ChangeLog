@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.43 2008/11/09 12:27:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.44 2008/11/09 14:52:13 nixnut Exp $
+
+  09 Nov 2008; nixnut <nixnut@gentoo.org> metasploit-3.1_p5699-r1.ebuild:
+  Stable on ppc wrt bug 246089
 
   09 Nov 2008; Markus Meier <maekke@gentoo.org>
   metasploit-3.1_p5699-r1.ebuild:
