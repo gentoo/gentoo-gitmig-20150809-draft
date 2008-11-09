@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.56 2008/08/05 21:03:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.57 2008/11/09 08:53:12 angelos Exp $
+
+  09 Nov 2008; Christoph Mende <angelos@gentoo.org> -thunar-0.8.0-r3.ebuild:
+  Removed old
 
   05 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
