@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.10.ebuild,v 1.5 2008/11/09 14:41:41 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/snownews/snownews-1.5.10.ebuild,v 1.6 2008/11/09 23:48:05 tcunha Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://home.kcore.de/~kiza/software/snownews/download/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/libxml2-2.5.6
