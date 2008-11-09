@@ -3,7 +3,6 @@
 <pkgmetadata>
 	<herd>netmon</herd>
 	<maintainer>
-		<email>me@tiagocunha.org</email>
-		<description>Tiago Cunha</description>
+		<email>tcunha@gentoo.org</email>
 	</maintainer>
 </pkgmetadata>
