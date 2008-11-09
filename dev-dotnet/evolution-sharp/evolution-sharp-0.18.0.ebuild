@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.18.0.ebuild,v 1.2 2008/11/01 13:35:47 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.18.0.ebuild,v 1.3 2008/11/09 09:20:00 flameeyes Exp $
 
-inherit mono gnome.org
+inherit mono gnome.org eutils autotools
 
 DESCRIPTION="Mono bindings for Evolution"
 HOMEPAGE="http://www.gnome.org/projects/beagle"
@@ -22,15 +22,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Use correct libdir in pkgconfig files
-	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
-		-e 's:^prefix=:exec_prefix=:' \
-		-e 's:prefix)/lib:libdir):' \
-		"${S}"/*.pc.in || die "sed failed."
+	epatch "${FILESDIR}/${P}-respectlibdir.patch"
 
 	# r188 broke TestCal compilation
 	sed -i -e 's/TEST_TARGETS = $(TESTCAL_TARGET)/TEST_TARGETS = /g' \
-		"${S}"/evolution/Makefile.in || die "sed TestCal failed."
+		"${S}"/evolution/Makefile.am || die "sed TestCal failed."
+
+	eautomake
 }
 
 src_install() {

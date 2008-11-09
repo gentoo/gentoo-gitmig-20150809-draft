@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/evolution-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.28 2008/11/01 13:35:47 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.29 2008/11/09 09:20:00 flameeyes Exp $
+
+  09 Nov 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/evolution-sharp-0.18.0-respectlibdir.patch,
+  evolution-sharp-0.18.0.ebuild:
+  Add a patch to properly respect libdir; before the pkg-config file was
+  updated by the installed files were still in /usr/lib rather than
+  /usr/lib64. Submitted as upstream bug #559977.
 
   01 Nov 2008; Daniel Drake <dsd@gentoo.org> evolution-sharp-0.18.0.ebuild:
   Remove broken TestCal.exe program from compilation
