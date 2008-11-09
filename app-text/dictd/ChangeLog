@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dictd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.50 2008/11/09 12:13:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.51 2008/11/09 13:25:25 nixnut Exp $
+
+  09 Nov 2008; nixnut <nixnut@gentoo.org> dictd-1.10.11-r2.ebuild,
+  dictd-1.10.11-r3.ebuild:
+  Stable on ppc wrt bug 244246
 
   09 Nov 2008; Raúl Porcel <armin76@gentoo.org> dictd-1.10.11-r3.ebuild:
   Add ~alpha/~ia64 wrt #245413
