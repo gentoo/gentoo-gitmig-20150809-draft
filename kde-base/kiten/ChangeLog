@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kiten
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.95 2008/10/21 11:08:28 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.96 2008/11/09 01:59:37 scarabeus Exp $
+
+*kiten-4.1.3 (08 Nov 2008)
+
+  08 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> +kiten-4.1.3.ebuild:
+  Version bump.
 
   21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -kiten-4.0.4.ebuild, -kiten-4.0.5.ebuild:

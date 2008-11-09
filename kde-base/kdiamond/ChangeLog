@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdiamond
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdiamond/ChangeLog,v 1.1 2008/10/02 08:27:22 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdiamond/ChangeLog,v 1.2 2008/11/09 02:30:14 scarabeus Exp $
+
+*kdiamond-4.1.3 (08 Nov 2008)
+
+  08 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> +kdiamond-4.1.3.ebuild:
+  Version bump.
 
 *kdiamond-4.1.2 (02 Oct 2008)
 

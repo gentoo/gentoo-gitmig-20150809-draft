@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.102 2008/10/21 09:20:31 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.103 2008/11/09 00:58:28 scarabeus Exp $
+
+*kalzium-4.1.3 (09 Nov 2008)
+
+  09 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> +kalzium-4.1.3.ebuild:
+  Version bump.
 
   21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -kalzium-4.0.4.ebuild, -kalzium-4.0.5.ebuild:

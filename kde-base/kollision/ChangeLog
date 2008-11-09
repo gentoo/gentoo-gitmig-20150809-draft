@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kollision
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.1 2008/10/02 09:27:34 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.2 2008/11/09 02:47:37 scarabeus Exp $
+
+*kollision-4.1.3 (08 Nov 2008)
+
+  08 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> +kollision-4.1.3.ebuild:
+  Version bump.
 
 *kollision-4.1.2 (02 Oct 2008)
 
