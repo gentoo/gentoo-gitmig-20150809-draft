@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4.ebuild,v 1.1 2008/11/09 07:31:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4.ebuild,v 1.2 2008/11/09 19:03:42 zmedico Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -28,6 +28,7 @@ src_install() {
 
 	# This one is installed by dev-util/yacc
 	mv "${D}"/usr/bin/yacc{,.bison} || die
+	mv "${D}"/usr/share/man/man1/yacc{,.bison}.1 || die
 
 	# We do not need this.
 	rm -r "${D}"/usr/lib* || die
