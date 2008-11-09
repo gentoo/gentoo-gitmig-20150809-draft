@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.22.1.ebuild,v 1.4 2008/07/22 10:31:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/cinepaint-0.22.1.ebuild,v 1.5 2008/11/09 15:06:54 maekke Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -10,7 +10,7 @@ DESCRIPTION="motion picture editing tool used for painting and retouching of mov
 SRC_URI="mirror://sourceforge/cinepaint/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://cinepaint.sourceforge.net/"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 LICENSE="GPL-2"
 IUSE="gutenprint png zlib"
 
