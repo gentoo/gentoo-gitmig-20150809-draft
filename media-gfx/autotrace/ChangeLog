@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/autotrace
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.28 2008/11/02 17:12:29 loki_val Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.29 2008/11/09 08:28:05 vapier Exp $
+
+  09 Nov 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/autotrace-0.31.1-m4.patch, autotrace-0.31.1-r3.ebuild:
+  Add back wrongly dropped m4 patch.
 
   02 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
   -files/autotrace-0.31.1-m4.patch, -files/autotrace-imagemagick.patch,
