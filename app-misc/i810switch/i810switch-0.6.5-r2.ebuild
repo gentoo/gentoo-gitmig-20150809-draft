@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/i810switch-0.6.5-r2.ebuild,v 1.2 2008/10/25 20:16:14 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/i810switch-0.6.5-r2.ebuild,v 1.3 2008/11/09 14:20:07 maekke Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www16.plala.or.jp/mano-a-mano/i810switch/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE=""
 
 DEPEND=""
