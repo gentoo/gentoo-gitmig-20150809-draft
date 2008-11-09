@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/pam_passwdqc-1.0.4.ebuild,v 1.5 2008/02/21 10:57:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_passwdqc/pam_passwdqc-1.0.4.ebuild,v 1.6 2008/11/09 12:18:56 vapier Exp $
 
 inherit pam eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.openwall.com/pam/modules/pam_passwdqc/${P}.tar.gz"
 
 LICENSE="BSD as-is"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~mips ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 arm ~hppa m68k ~mips ppc s390 sh ~sparc x86"
 
 DEPEND="virtual/pam"
 
