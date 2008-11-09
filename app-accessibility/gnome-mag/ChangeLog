@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.143 2008/11/09 11:27:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.144 2008/11/09 18:53:23 armin76 Exp $
+
+  09 Nov 2008; Raúl Porcel <armin76@gentoo.org> gnome-mag-0.15.4.ebuild:
+  alpha/ia64/sparc stable wrt #246049
 
   09 Nov 2008; Markus Meier <maekke@gentoo.org> gnome-mag-0.15.4.ebuild:
   amd64/x86 stable, bug #246049
