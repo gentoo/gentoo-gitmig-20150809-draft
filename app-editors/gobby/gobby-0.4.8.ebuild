@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.8.ebuild,v 1.1 2008/11/07 19:05:56 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.8.ebuild,v 1.2 2008/11/09 03:22:51 mr_bones_ Exp $
 
 EAPI=1
 
@@ -26,7 +26,6 @@ DEPEND="${RDEPEND}
 
 # There's only one test and it needs X
 RESTRICT="test"
-
 
 pkg_setup() {
 	if use avahi && ! built_with_use net-libs/obby avahi ; then
