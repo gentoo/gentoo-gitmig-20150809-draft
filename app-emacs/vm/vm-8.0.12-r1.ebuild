@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.12.ebuild,v 1.1 2008/11/06 22:23:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.12-r1.ebuild,v 1.1 2008/11/09 18:24:02 ulm Exp $
 
 inherit elisp eutils
 
@@ -22,6 +22,9 @@ SITEFILE=50${PN}-gentoo.el
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# add autoload token for vm-decode-postponed-mime-message, bug 246185
+	epatch "${FILESDIR}/${P}-autoload-vm-pine.patch"
 
 	if ! use bbdb; then
 		elog "Excluding vm-pcrisis.el since the \"bbdb\" USE flag is not set."
