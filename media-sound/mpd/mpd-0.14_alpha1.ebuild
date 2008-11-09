@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14_alpha1.ebuild,v 1.1 2008/11/07 13:28:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14_alpha1.ebuild,v 1.2 2008/11/09 08:42:57 angelos Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -14,6 +16,7 @@ KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="aac alsa ao audiofile curl ffmpeg flac icecast iconv ipv6 jack lame libsamplerate mad mikmod musepack ogg oss pulseaudio unicode vorbis wavpack zeroconf"
 
 DEPEND="!sys-cluster/mpich2
+	>=dev-libs/glib-2.4:2
 	aac? ( >=media-libs/faad2-2.0_rc2 )
 	alsa? ( media-sound/alsa-utils )
 	ao? ( >=media-libs/libao-0.8.4 )
@@ -45,8 +48,8 @@ pkg_setup() {
 		die "Missing libOggFLAC library."
 	fi
 
-	if use shoutcast && ! use mad && ! use ogg; then
-		ewarn "USE=shoutcast enabled but mad and ogg disabled,"
+	if use shoutcast && ! use lame && ! use vorbis; then
+		ewarn "USE=shoutcast enabled but lame and vorbis disabled,"
 		ewarn "disabling shoutcast"
 	fi
 
@@ -77,7 +80,7 @@ src_compile() {
 	fi
 
 	if use icecast; then
-		myconf+=" $(use_enable ogg shout_ogg) $(use_enable mad shout_mp3)"
+		myconf+=" $(use_enable vorbis shout_ogg) $(use_enable lame shout_mp3)"
 	else
 		myconf+=" --disable-shout_ogg --disable-shout_mp3"
 	fi
