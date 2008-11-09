@@ -5,3 +5,7 @@ sys-apps/hal laptop
 # Steve Arnold <nerdboy@gentoo.org> (15 Oct 2008)
 # Needs newer java-config, yada yada...
 dev-util/astyle java
+
+# Tobias Klausmann <klausman@gentoo.org> (09 Nov 2008)
+# No hardware to test dxr3  on alpha.
+media-video/mplayer dxr3
