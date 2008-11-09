@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.20_alpha2-r1.ebuild,v 1.1 2007/11/04 18:18:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.20_alpha2-r1.ebuild,v 1.2 2008/11/09 07:26:17 truedfx Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -49,9 +49,12 @@ src_unpack() {
 	unpack ${A}
 
 	if [[ -n ${PVER} ]] ; then
-		cd ${S}
+		cd "${S}"
 		epatch "${WORKDIR}/patch"
 	fi
+
+	cd "${S}"
+	sed -i -e 's/&> libctest.log/>libctest.log 2>\&1/g' configure || die "sed failed" #236868
 
 	cd "${S}/libsandbox"
 	epatch "${FILESDIR}/${PN}-1.2.18.1-open-cloexec.patch"
