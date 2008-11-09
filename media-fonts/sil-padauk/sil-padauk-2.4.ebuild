@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-padauk/sil-padauk-2.4.ebuild,v 1.6 2008/10/27 05:14:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-padauk/sil-padauk-2.4.ebuild,v 1.7 2008/11/09 12:07:29 vapier Exp $
 
 inherit font
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/ttf-${P}.tar.gz"
 
 LICENSE="OFL"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}
