@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libcompizconfig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.9 2008/11/01 20:14:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.10 2008/11/09 15:00:42 flameeyes Exp $
+
+  09 Nov 2008; Diego Pettenò <flameeyes@gentoo.org>
+  libcompizconfig-0.7.8.ebuild:
+  Call eautoreconf or the patch won't have any effect.
 
   01 Nov 2008; Hanno Boeck <hanno@gentoo.org>
   +files/libcompizconfig-undefinedref.patch:
