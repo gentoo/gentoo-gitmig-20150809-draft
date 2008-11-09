@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.7.1.ebuild,v 1.1 2008/11/08 18:12:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.7.1.ebuild,v 1.2 2008/11/09 03:23:46 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 #WANT_ANT_TASKS="ant-junit"
@@ -104,13 +104,12 @@ src_unpack() {
 	# disable running of junit tests, because tvbrowserdataservice.file.ChannelListTest fails always
 	sed -i "${S}"/build.xml -e"s:, test: :"
 
-
 	cd "${S}"/lib || die
 	rm -v commons-net*.jar commons-lang-*.jar looks*.jar \
 		bsh*.jar l2fprod-common-tasks.jar jakarta-oro*.jar skinlf.jar \
 		commons-codec*.jar lucene-core-*.jar stax-*.jar || die
 
-	# missing dependencies commons-compress, TVAnytimeAPI, jRegistryKey, gdata-calendar, 
+	# missing dependencies commons-compress, TVAnytimeAPI, jRegistryKey, gdata-calendar,
 	# gdata-client, jcom, xtvd-lib, jgoodies-forms-1.2.0, opencsv and stax-api
 	# use local jar files for these, and also those in deployment
 	# some are win32/mac only, so we will let tvbrowser build against them (no need to patch stuff out of sources)
