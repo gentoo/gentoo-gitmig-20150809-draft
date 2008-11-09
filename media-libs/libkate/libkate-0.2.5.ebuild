@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.2.5.ebuild,v 1.3 2008/11/06 14:22:53 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.2.5.ebuild,v 1.4 2008/11/09 13:41:51 maekke Exp $
 
 DESCRIPTION="Codec for karaoke and text encapsulation for Ogg"
 HOMEPAGE="http://code.google.com/p/libkate/"
@@ -8,7 +8,7 @@ SRC_URI="http://libkate.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="media-libs/libogg
