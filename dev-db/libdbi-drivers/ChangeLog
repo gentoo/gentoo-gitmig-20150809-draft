@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libdbi-drivers
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.34 2008/11/03 16:57:05 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.35 2008/11/09 11:13:48 armin76 Exp $
+
+  09 Nov 2008; Raúl Porcel <armin76@gentoo.org>
+  libdbi-drivers-0.8.3.ebuild:
+  Add ~alpha/~ia64 wrt #245413
 
   03 Nov 2008; Ferris McCormick <fmccor@gentoo.org>
   libdbi-drivers-0.8.1-r2.ebuild:

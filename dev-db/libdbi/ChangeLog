@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.24 2008/11/03 16:55:51 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.25 2008/11/09 11:14:37 armin76 Exp $
+
+  09 Nov 2008; Raúl Porcel <armin76@gentoo.org> libdbi-0.8.3.ebuild:
+  Add ~alpha/~ia64 wrt #245413
 
   03 Nov 2008; Ferris McCormick <fmccor@gentoo.org> libdbi-0.8.1.ebuild:
   Sparc stable, related to Bug #245413 and to Bug #244246.
