@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.6.3.1.ebuild,v 1.1 2008/11/02 12:08:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.6.3.1.ebuild,v 1.2 2008/11/09 18:01:49 nerdboy Exp $
 
 inherit distutils versionator
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/python
-	>=dev-db/sqlite-3.5.9"
+	>=dev-db/sqlite-3.6.2"
 DEPEND="app-arch/unzip
 	${RDEPEND}"
 
