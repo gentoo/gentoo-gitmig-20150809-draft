@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.40 2008/10/05 10:49:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.41 2008/11/09 13:28:26 nixnut Exp $
+
+  09 Nov 2008; nixnut <nixnut@gentoo.org> analog-6.0.ebuild:
+  Stable on ppc/ppc64 wrt bug 238859
 
   05 Oct 2008; Raúl Porcel <armin76@gentoo.org> analog-6.0.ebuild:
   alpha/arm stable wrt #238859
