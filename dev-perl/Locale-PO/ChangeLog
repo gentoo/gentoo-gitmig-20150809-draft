@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Locale-PO
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.43 2008/09/09 09:20:41 tove Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.44 2008/11/09 11:41:01 vapier Exp $
+
+  09 Nov 2008; Mike Frysinger <vapier@gentoo.org> Locale-PO-0.21.ebuild:
+  Add arm/s390/sh #237147.
 
 *Locale-PO-0.21 (09 Sep 2008)
 
