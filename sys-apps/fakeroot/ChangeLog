@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.43 2008/11/09 12:34:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.44 2008/11/09 13:44:05 nixnut Exp $
+
+  09 Nov 2008; nixnut <nixnut@gentoo.org> fakeroot-1.9.1.ebuild:
+  Stable on ppc wrt bug 246133
 
   09 Nov 2008; Markus Meier <maekke@gentoo.org> fakeroot-1.9.1.ebuild:
   amd64/x86 stable, bug #246133
