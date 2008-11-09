@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/sfftobmp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/ChangeLog,v 1.11 2008/11/08 14:28:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/ChangeLog,v 1.12 2008/11/09 13:31:07 nixnut Exp $
+
+  09 Nov 2008; nixnut <nixnut@gentoo.org> sfftobmp-3.1.1.ebuild:
+  Stable on ppc wrt bug 245436
 
   08 Nov 2008; Markus Meier <maekke@gentoo.org> sfftobmp-3.1.1.ebuild:
   amd64/x86 stable, bug #245436
