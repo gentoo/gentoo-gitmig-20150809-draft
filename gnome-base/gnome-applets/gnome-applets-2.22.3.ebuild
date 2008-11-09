@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.22.3.ebuild,v 1.7 2008/09/25 15:28:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.22.3.ebuild,v 1.8 2008/11/09 01:22:38 eva Exp $
 
 inherit eutils gnome2 python
 
@@ -78,7 +78,9 @@ src_unpack() {
 
 pkg_setup() {
 	G2CONF="${G2CONF}
-		--disable-scrollkeeper --enable-flags
+		--disable-scrollkeeper
+		--disable-schemas-install
+		--enable-flags
 		$(use_with hal)
 		$(use_enable ipv6)"
 
