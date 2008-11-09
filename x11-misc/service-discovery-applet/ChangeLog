@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/service-discovery-applet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/service-discovery-applet/ChangeLog,v 1.8 2008/04/11 19:12:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/service-discovery-applet/ChangeLog,v 1.9 2008/11/09 23:32:11 leio Exp $
+
+*service-discovery-applet-0.4.3-r1 (09 Nov 2008)
+
+  09 Nov 2008; Mart Raudsepp <leio@gentoo.org>
+  service-discovery-applet-0.4.3.ebuild,
+  +service-discovery-applet-0.4.3-r1.ebuild:
+  Remove unnecessary gnome-python-extras dependency and add a revision that
+  uses split gnome-python-desktop dependencies
 
   11 Apr 2008; Sven Wegener <swegener@gentoo.org>
   service-discovery-applet-0.4.3.ebuild:
