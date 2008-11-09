@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.20_alpha2-r1.ebuild,v 1.3 2008/11/09 07:52:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.20_alpha2-r1.ebuild,v 1.4 2008/11/09 08:00:27 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -31,6 +31,12 @@ IUSE=""
 DEPEND=""
 
 EMULTILIB_PKG="true"
+has sandbox_death_notice ${EBUILD_DEATH_HOOKS} || EBUILD_DEATH_HOOKS="${EBUILD_DEATH_HOOKS} sandbox_death_notice"
+
+sandbox_death_notice() {
+	ewarn "If configure failed with a 'cannot run C compiled programs' error, try this:"
+	ewarn "FEATURES=-sandbox emerge sandbox"
+}
 
 src_unpack() {
 	unpack ${A}
@@ -50,13 +56,10 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-
+die
 	filter-lfs-flags #90228
 
 	has_multilib_profile && myconf="--enable-multilib"
-
-	ewarn "If configure fails with a 'cannot run C compiled programs' error, try this:"
-	ewarn "FEATURES=-sandbox emerge sandbox"
 
 	local OABI=${ABI}
 	for ABI in $(get_install_abis) ; do
