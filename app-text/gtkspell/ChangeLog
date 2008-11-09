@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.66 2008/11/09 11:35:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.67 2008/11/09 14:19:47 nixnut Exp $
+
+  09 Nov 2008; nixnut <nixnut@gentoo.org> gtkspell-2.0.14.ebuild:
+  Stable on ppc wrt bug 246054
 
   09 Nov 2008; Markus Meier <maekke@gentoo.org> gtkspell-2.0.14.ebuild:
   amd64/x86 stable, bug #246054
