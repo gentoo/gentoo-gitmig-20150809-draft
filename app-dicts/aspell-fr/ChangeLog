@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-fr
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/ChangeLog,v 1.17 2008/11/01 12:12:52 pva Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-fr/ChangeLog,v 1.18 2008/11/09 11:23:33 vapier Exp $
+
+  09 Nov 2008; Mike Frysinger <vapier@gentoo.org> aspell-fr-0.60.ebuild:
+  Add back arm/s390/sh #204038.
 
   01 Nov 2008; Peter Volkov <pva@gentoo.org> aspell-fr-0.50.3.ebuild,
   aspell-fr-0.60.ebuild:
