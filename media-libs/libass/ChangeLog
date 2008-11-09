@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libass
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.9 2008/11/09 13:40:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.10 2008/11/09 14:26:28 klausman Exp $
+
+  09 Nov 2008; Tobias Klausmann <klausman@gentoo.org> libass-0.9.5.ebuild:
+  Stable on alpha, bug #245774
 
   09 Nov 2008; Markus Meier <maekke@gentoo.org> libass-0.9.5.ebuild:
   amd64/x86 stable, bug #245774
