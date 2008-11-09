@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30_rc3.ebuild,v 1.2 2008/11/01 07:33:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30_rc3.ebuild,v 1.3 2008/11/09 19:42:01 solar Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -388,7 +388,7 @@ setup_locales() {
 src_compile() {
 	cp myconfig .config
 
-	emake headers || die "make headers failed"
+	emake -j1 headers || die "make headers failed"
 	just_headers && return 0
 
 	if use iconv && ! use pregen ; then

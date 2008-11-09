@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.39 2008/11/01 07:33:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.40 2008/11/09 19:42:01 solar Exp $
+
+  09 Nov 2008; <solar@gentoo.org> uclibc-0.9.30_rc3.ebuild:
+  - psm reports headers need -j1 flag
 
   01 Nov 2008; Mike Frysinger <vapier@gentoo.org> uclibc-0.9.27-r1.ebuild,
   uclibc-0.9.28.3.ebuild, uclibc-0.9.28.3-r3.ebuild,
