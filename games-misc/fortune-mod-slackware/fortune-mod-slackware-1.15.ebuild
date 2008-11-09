@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/fortune-mod-slackware-1.15.ebuild,v 1.6 2008/08/04 15:45:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/fortune-mod-slackware-1.15.ebuild,v 1.7 2008/11/09 12:08:32 vapier Exp $
 
 # this ebuild now uses the offensive flag since AOLS
 # is not exactly 'G' rated :)
@@ -12,7 +12,7 @@ SRC_URI="http://fauxascii.com/linux/data/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="offensive"
 
 RDEPEND="games-misc/fortune-mod"
