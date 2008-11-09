@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.10-r1.ebuild,v 1.1 2008/11/07 11:30:27 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.10-r1.ebuild,v 1.2 2008/11/09 11:16:36 maekke Exp $
 
 inherit eutils distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/picard/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="cdaudio ffmpeg nls"
 
 RDEPEND=">=dev-lang/python-2.4
