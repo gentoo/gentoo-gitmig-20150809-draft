@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/geresh/geresh-0.6.3.ebuild,v 1.2 2008/11/04 21:57:34 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/geresh/geresh-0.6.3.ebuild,v 1.3 2008/11/09 14:52:00 maekke Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.typo.co.il/~mooffie/geresh/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="spell"
 
 DEPEND="virtual/libiconv
