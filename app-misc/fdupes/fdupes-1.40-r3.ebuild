@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.40-r3.ebuild,v 1.8 2008/10/27 05:48:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.40-r3.ebuild,v 1.9 2008/11/10 11:37:27 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://netdial.caribe.net/~adrian2/programs/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~ia64 ~mips ppc ~ppc64 s390 sparc x86"
+KEYWORDS="amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sparc x86"
 IUSE="md5sum-external"
 
 DEPEND=""
