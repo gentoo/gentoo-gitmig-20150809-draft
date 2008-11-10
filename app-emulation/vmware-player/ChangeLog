@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.58 2008/11/09 20:23:54 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.59 2008/11/10 10:40:28 ikelos Exp $
+
+  10 Nov 2008; Mike Auty <ikelos@gentoo.org>
+  +files/2.5.0.118166/vmware-player.py.patch,
+  +files/2.5.0.118166/vmware-player-extras.py.patch:
+  Make sure the patches are in place (bug 246252).
 
 *vmware-player-2.5.0.118166 (09 Nov 2008)
 *vmware-player-1.0.9.126128 (09 Nov 2008)
