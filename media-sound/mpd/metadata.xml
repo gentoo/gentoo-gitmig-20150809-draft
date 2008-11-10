@@ -8,5 +8,6 @@
   </maintainer>
   <use>
     <flag name="icecast">Enable support for Icecast2</flag>
+	<flag name="id3">Support for ID3 tags</flag>
   </use>
 </pkgmetadata>
