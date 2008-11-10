@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+	  <email>darkside@gentoo.org</email>
+		<description>Proxy committer</description>
+	</maintainer>
+	<maintainer>
+		<email>tb@forth-ev.de</email>
+		  <description>Proxy maintainer, please CC on bugs</description>
+	</maintainer>
+	<use>
+		<flag name='ftdi'>Enable support for FTDI USB chips</flag>
+		<flag name='hamlib'>Enables support by the Hamlib amateur radio 
+		rig control library to get/set frequency and mode of the  ham radio</flag>
+	</use>
+</pkgmetadata>
