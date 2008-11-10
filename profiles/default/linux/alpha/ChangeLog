@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/alpha profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/ChangeLog,v 1.5 2008/11/09 11:39:30 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/ChangeLog,v 1.6 2008/11/10 11:03:53 armin76 Exp $
+
+  10 Nov 2008; Raúl Porcel <armin76@gentoo.org> -package.use.mask:
+  Punt package.use.mask, this goes to arch/alpha
 
   09 Nov 2008; Tobias Klausmann <klausman@gentoo.org> package.use.mask:
   Mask dxr3 USE flag for mplayer due to lack of hardware for testing
