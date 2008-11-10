@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/xfce4-netload-0.4.0.ebuild,v 1.15 2008/06/23 00:03:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload/xfce4-netload-0.4.0.ebuild,v 1.16 2008/11/10 18:19:49 angelos Exp $
 
 inherit xfce44 eutils autotools
 
@@ -17,6 +17,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 	AT_M4DIR=/usr/share/xfce4/dev-tools/m4macros eautoreconf
+	intltoolize --force
 }
 
 xfce44_goodies_panel_plugin
