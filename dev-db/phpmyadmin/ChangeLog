@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.341 2008/11/09 18:54:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.342 2008/11/10 05:43:40 jer Exp $
+
+  10 Nov 2008; Jeroen Roovers <jer@gentoo.org> phpmyadmin-2.11.9.3.ebuild:
+  Stable for HPPA (bug #244914)
 
   09 Nov 2008; Raúl Porcel <armin76@gentoo.org> phpmyadmin-2.11.9.3.ebuild:
   alpha/sparc stable wrt #244914
