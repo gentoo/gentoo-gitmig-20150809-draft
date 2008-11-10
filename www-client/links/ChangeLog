@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.117 2008/11/09 19:03:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.118 2008/11/10 05:00:13 jer Exp $
+
+  10 Nov 2008; Jeroen Roovers <jer@gentoo.org> links-2.2.ebuild:
+  Stable for HPPA (bug #245981).
 
   09 Nov 2008; Raúl Porcel <armin76@gentoo.org> links-2.2.ebuild:
   alpha/arm/ia64 stable wrt #246109
