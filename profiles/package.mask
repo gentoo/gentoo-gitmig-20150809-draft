@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9157 2008/11/10 15:06:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9158 2008/11/10 17:53:59 angelos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christoph Mende <angelos@gentoo.org> (10 Nov 2008)
+# Masked for removal in 30 days, it's more or less unmaintained,
+# depends on unmaintained pyxfce and doesn't support most current
+# features
+xfce-extra/pynetworkmanager
 
 # Mike Doty <kingtaco@gentoo.org> (9 Nov 2008)
 # Masked for testing
