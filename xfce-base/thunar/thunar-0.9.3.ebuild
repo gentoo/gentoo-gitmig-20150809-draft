@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.9.3.ebuild,v 1.1 2008/11/10 22:03:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-0.9.3.ebuild,v 1.2 2008/11/10 22:35:42 angelos Exp $
 
 EAPI=1
 
@@ -71,8 +71,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-missing-audio-cds-for-volman.patch \
-		"${FILESDIR}"/${P}-fix-defuncts.patch
+	epatch "${FILESDIR}"/${PN}-0.9.0-missing-audio-cds-for-volman.patch \
+		"${FILESDIR}"/${PN}-0.9.0-fix-defuncts.patch
 }
 
 src_test() {
