@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.184 2008/11/09 20:56:55 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.185 2008/11/10 11:00:16 ikelos Exp $
+
+  10 Nov 2008; Mike Auty <ikelos@gentoo.org>
+  vmware-workstation-6.5.0.118166.ebuild:
+  Ensure it dies properly and put in a better check for screen.
 
 *vmware-workstation-6.5.0.118166 (09 Nov 2008)
 *vmware-workstation-5.5.9.126128 (09 Nov 2008)
