@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p27725-r1.ebuild,v 1.8 2008/11/09 11:43:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p27725-r1.ebuild,v 1.9 2008/11/10 11:24:29 armin76 Exp $
 
 EAPI="1"
 
@@ -141,7 +141,7 @@ DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 x86 ~x86-fbsd"
 
 pkg_setup() {
 
