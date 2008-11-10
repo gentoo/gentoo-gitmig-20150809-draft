@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.4-r1.ebuild,v 1.5 2008/11/10 17:19:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.4-r1.ebuild,v 1.6 2008/11/10 19:32:53 angelos Exp $
 
 inherit eutils xfce44 python multilib
 
@@ -15,7 +15,6 @@ IUSE="debug doc hal libnotify python"
 RDEPEND=">=dev-lang/perl-5.6
 	dev-perl/URI
 	>=dev-libs/glib-2.6
-	net-libs/libwww
 	>=x11-libs/gtk+-2.6
 	>=xfce-base/libxfce4util-${XFCE_MASTER_VERSION}
 	>=xfce-base/xfce-mcs-manager-${XFCE_MASTER_VERSION}
@@ -41,6 +40,7 @@ src_unpack() {
 
 	sed -i -e 's:-Werror::g' "${S}"/configure
 	epatch "${FILESDIR}"/${P}-eject.patch
+	epatch "${FILESDIR}"/${P}-remove-libmd5.patch
 }
 
 # See bug 164780 for reference
