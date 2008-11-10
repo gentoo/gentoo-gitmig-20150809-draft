@@ -42,3 +42,5 @@ media-tv/mythtv opengl-xvmc
 # Mask unkeyworded webkit from liferea
 net-news/liferea webkit
 
+# Luca Barbato <lu_zero@gentoo.org> (10 Nov 2008)
+media-video/mplayer -cpudetection -bindist
