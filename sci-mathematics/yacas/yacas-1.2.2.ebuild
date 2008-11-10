@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2.ebuild,v 1.5 2008/11/08 17:20:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2.ebuild,v 1.6 2008/11/10 23:34:22 bicatali Exp $
 
-inherit eutils java
+inherit eutils java-pkg-opt-2
 
 DESCRIPTION="Powerful general purpose computer algebra system"
 HOMEPAGE="http://yacas.sourceforge.net/"
@@ -14,13 +14,14 @@ KEYWORDS="amd64 ppc x86"
 
 IUSE="doc java server"
 
-RDEPEND="java? ( >=virtual/jdk-1.6 )"
-DEPEND="java? ( >=virtual/jre-1.6 )"
+DEPEND="java? ( >=virtual/jdk-1.6 )"
+RDEPEND="java? ( >=virtual/jre-1.6 )"
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
+	cd "${S}" || die
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-makefixes.patch
 }
 
 src_compile() {
@@ -31,7 +32,7 @@ src_compile() {
 		|| die "econf failed"
 	emake || die "emake failed"
 	if use java; then
-		cd JavaYacas
+		cd JavaYacas || die
 		emake -f makefile.yacas || die "emake java interface failed"
 	fi
 }
@@ -40,12 +41,10 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS README TODO || die
 	if use java; then
-		cd JavaYacas
+		cd JavaYacas || die
+		java-pkg_dojar yacas.jar
+		java-pkg_dolauncher jyacas --main net.sf.yacas.YacasConsole
 		insinto /usr/share/${PN}
-		doins yacas.jar hints.txt yacasconsole.html || die "doins java interface failed"
-		echo "#!/bin/sh" > jyacas
-		echo "java -jar /usr/share/${PN}/yacas.jar" >> jyacas
-		exeinto /usr/bin
-		doexe jyacas
+		doins hints.txt yacasconsole.html || die "doins java resources failed"
 	fi
 }
