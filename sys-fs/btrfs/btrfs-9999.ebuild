@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-9999.ebuild,v 1.5 2008/07/29 03:42:26 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-9999.ebuild,v 1.6 2008/11/10 15:45:28 lavajoe Exp $
 
-inherit eutils linux-mod mercurial
+inherit eutils linux-mod git
 
 DESCRIPTION="A checksumming copy-on-write filesystem"
 HOMEPAGE="http://btrfs.wiki.kernel.org/"
@@ -16,7 +16,8 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/kernel-unstable"
+EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-unstable-standalone.git"
+EGIT_BRANCH="master"
 
 pkg_setup()
 {
@@ -26,19 +27,15 @@ pkg_setup()
 	BUILD_PARAMS="KERNELDIR=${KV_OUT_DIR}"
 	MODULE_NAMES="btrfs(fs:${S}/"
 
-	if ! kernel_is 2 6; then
-		eerror "Need a 2.6 kernel to compile against!"
-		die "Need a 2.6 kernel to compile against!"
+	if ! kernel_is gt 2 6 26; then
+		eerror "Need a >=2.6.27 kernel to compile against!"
+		die "Need a >=2.6.27 kernel to compile against!"
 	fi
 
 	if ! linux_chkconfig_present LIBCRC32C; then
 		eerror "You need to enable LIBCRC32C in your kernel!"
 		die "You need to enable LIBCRC32C in your kernel!"
 	fi
-}
-
-src_unpack() {
-	mercurial_fetch http://www.kernel.org/hg/btrfs/kernel-unstable
 }
 
 src_install()

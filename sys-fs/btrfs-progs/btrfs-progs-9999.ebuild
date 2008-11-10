@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.6 2008/08/21 19:03:37 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.7 2008/11/10 15:47:17 lavajoe Exp $
 
-inherit eutils mercurial
+inherit eutils git
 
 DESCRIPTION="Btrfs filesystem utilities"
 HOMEPAGE="http://btrfs.wiki.kernel.org/"
@@ -19,12 +19,8 @@ DEPEND="acl? (
 		)"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/progs-unstable"
-
-src_unpack() {
-	mercurial_fetch http://www.kernel.org/hg/btrfs/progs-unstable
-	cd "${S}"
-}
+EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs-unstable.git"
+EGIT_BRANCH="master"
 
 src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
