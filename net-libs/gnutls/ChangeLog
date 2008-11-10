@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.167 2008/11/05 10:39:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.168 2008/11/10 15:00:56 hoffie Exp $
+
+*gnutls-2.4.1-r1 (10 Nov 2008)
+
+  10 Nov 2008; Christian Hoffmann <hoffie@gentoo.org>
+  +files/gnutls-2.2.5-CVE-2008-4989.patch, +gnutls-2.4.1-r1.ebuild:
+  revision bump to fix security bug 245850 (CVE-2008-4989), straight to
+  stable on alpha amd64 hppa ia64 sparc x86 as tested on the mentioned bug
 
   05 Nov 2008; Daniel Black <dragonheart@gentoo.org> gnutls-2.6.0.ebuild:
   alternate and much better solution by loki_val
