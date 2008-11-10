@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.5.ebuild,v 1.1 2008/11/03 01:58:01 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.5.ebuild,v 1.2 2008/11/10 01:55:48 vanquirius Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-libs/openssl-0.9.7
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-boost-system.patch
+	epatch "${FILESDIR}"/${P}-boost-system-and-as-needed.patch
 }
 
 src_compile() {
