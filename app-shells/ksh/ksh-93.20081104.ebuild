@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20080725.ebuild,v 1.1 2008/10/02 02:59:30 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20081104.ebuild,v 1.1 2008/11/10 23:30:03 darkside Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-RELEASE="2008-07-25"
-LOCALE_RELEASE="2008-07-25"
+RELEASE="2008-11-04"
+LOCALE_RELEASE="2007-11-05"
 INIT_RELEASE="${RELEASE}"
 
 DESCRIPTION="The Original Korn Shell, 1993 revision (ksh93)"
