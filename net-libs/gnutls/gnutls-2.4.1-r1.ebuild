@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.4.1-r1.ebuild,v 1.1 2008/11/10 15:00:56 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.4.1-r1.ebuild,v 1.2 2008/11/10 19:55:29 dragonheart Exp $
 
 inherit libtool eutils
 
@@ -45,7 +45,6 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-2.3.11+gcc-4.3.patch
-	pwd
 	epatch "${FILESDIR}"/gnutls-2.2.5-CVE-2008-4989.patch
 
 	elibtoolize # for sane .so versioning on FreeBSD
