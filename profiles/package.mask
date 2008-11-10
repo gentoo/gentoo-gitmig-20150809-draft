@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9155 2008/11/10 03:30:11 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9156 2008/11/10 13:37:22 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -565,10 +565,6 @@ x11-libs/gtk-server
 virtual/libffi
 >=dev-libs/g-wrap-1.9.11
 >=dev-scheme/guile-gnome-platform-2.16.0
-
-# Alexis Ballier <aballier@gentoo.org> (04 Jun 2008)
-# Beta versions, need testing
->=app-office/lyx-1.6.0_beta
 
 # Peter Alfredsen <loki_val@gentoo.org> (04 Jun 2008)
 # o Fails its own tests in horrendous ways (buuh!)
