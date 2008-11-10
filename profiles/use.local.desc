@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4011 2008/11/10 16:47:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4012 2008/11/10 23:47:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2240,7 +2240,7 @@ sci-libs/gdal:ecwj2k - Enable support for alternate jpeg2k library sci-libs/libe
 sci-libs/gdal:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-libs/gdal:geos - Add support for geometry engine (sci-libs/geos 
 sci-libs/gdal:gml - Enable support for dev-libs/xerces-c C++ API
-sci-libs/gdal:hdf - Add support for the Hierarchical Data Format (sci-libs/hdf)
+sci-libs/gdal:hdf - Add support for the Hierarchical Data Format v. 4 (sci-libs/hdf)
 sci-libs/gdal:ogdi - Enable support for the open geographic datastore interface (sci-libs/ogdi)
 sci-libs/gerris:dx - Enable support for sci-visualization/opendx
 sci-libs/gsl:cblas - Build gsl with external cblas by default (virtual/cblas)
