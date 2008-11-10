@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.104 2008/11/07 10:55:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.105 2008/11/10 14:34:42 vapier Exp $
+
+  10 Nov 2008; Mike Frysinger <vapier@gentoo.org> grub-1.96.ebuild:
+  Drop USE=netboot and fixup DEPEND #234182.
 
   07 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   It does fix bug 218611, and bug 231684 is now an upstream/non-critical
