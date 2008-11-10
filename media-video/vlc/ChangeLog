@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.409 2008/11/09 14:52:39 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.410 2008/11/10 13:48:03 aballier Exp $
+
+  10 Nov 2008; Alexis Ballier <aballier@gentoo.org>
+  -files/0001-Fix-build-with-x264-build-65.patch,
+  -files/embeddedvideo.patch, -vlc-0.9.4-r1.ebuild, -vlc-0.9.5.ebuild:
+  remove unused versions
 
   09 Nov 2008; Tobias Klausmann <klausman@gentoo.org> vlc-0.9.6.ebuild:
   Stable on alpha, bug #245774
