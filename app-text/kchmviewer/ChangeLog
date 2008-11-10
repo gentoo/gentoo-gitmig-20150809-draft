@@ -1,6 +1,13 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.5 2008/10/25 15:53:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.6 2008/11/10 23:43:03 pva Exp $
+
+*kchmviewer-4.0_beta3-r1 (10 Nov 2008)
+
+  10 Nov 2008; Peter Volkov <pva@gentoo.org>
+  +kchmviewer-4.0_beta3-r1.ebuild:
+  Added kde4 support; fixed path to .desktop file, bug #246028, thank
+  Alexandr for the fix. qt3support is not needed any more.
 
 *kchmviewer-4.0_beta3 (25 Oct 2008)
 
