@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.21.5.ebuild,v 1.1 2008/10/06 14:29:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.21.6.ebuild,v 1.1 2008/11/10 14:30:56 dev-zero Exp $
 
 inherit versionator
 
