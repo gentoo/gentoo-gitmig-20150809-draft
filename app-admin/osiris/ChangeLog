@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/osiris
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.16 2008/06/04 16:52:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.17 2008/11/11 03:28:28 darkside Exp $
+
+*osiris-4.2.3 (11 Nov 2008)
+
+  11 Nov 2008; Jeremy Olexa <darkside@gentoo.org> -files/osirisd-4.2.2,
+  -files/osirisd_confd-4.2.2, -files/osirismd-4.2.2,
+  -files/osirismd_confd-4.2.2, -files/osiris-4.2.2-externaldb.patch,
+  +files/osirisd-4.2.3, +files/osirisd_confd-4.2.3, +files/osirismd-4.2.3,
+  +files/osirismd_confd-4.2.3, -osiris-1.5.2.ebuild,
+  -osiris-1.5.2-r1.ebuild, -osiris-4.2.2.ebuild, +osiris-4.2.3.ebuild:
+  (non maintainer commit) Version bump for bug #170498
 
   04 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> osiris-4.2.2.ebuild:
   Use eautoreconf, not the bootstrap script.

@@ -1,25 +1,24 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-4.2.2.ebuild,v 1.5 2008/06/04 16:52:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/osiris-4.2.3.ebuild,v 1.1 2008/11/11 03:28:28 darkside Exp $
 
-inherit eutils autotools
+inherit eutils
 
 DESCRIPTION="File integrity verification system"
 HOMEPAGE="http://osiris.shmoo.com/"
 SRC_URI="http://osiris.shmoo.com/data/${P}.tar.gz
 	http://osiris.shmoo.com/data/modules/mod_uptime.tar.gz
 	http://osiris.shmoo.com/data/modules/mod_dns.tar.gz
-	http://osiris.shmoo.com/data/modules/mod_nvram.tar.gz"
-#	http://osiris.shmoo.com/data/modules/mod_ports.tar.gz"
+	http://osiris.shmoo.com/data/modules/mod_nvram.tar.gz
+	http://osiris.shmoo.com/data/modules/mod_ports.tar.gz"
 
 LICENSE="OSIRIS"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
-#IUSE="noagent console"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.8c
-	=sys-libs/db-4.2*"
+	>=sys-libs/db-4.3"
 
 pkg_setup()
 {
@@ -30,27 +29,20 @@ pkg_setup()
 src_unpack()
 {
 	unpack ${P}.tar.gz
-	epatch "${FILESDIR}"/${P}-externaldb.patch
-	cd "${S}"
-	eautoreconf
 	cd "${WORKDIR}"
 	unpack mod_uptime.tar.gz
 	unpack mod_dns.tar.gz
 	unpack mod_nvram.tar.gz
-#	unpack mod_ports.tar.gz
-#	Add the above modules
+	unpack mod_ports.tar.gz
+	# Add the above modules
 	mv "${S}"/../mod_* "${S}"/src/osirisd/modules/
 }
 
 src_compile()
 {
-	econf --prefix=/var/lib --enable-fancy-cli=yes || die "configure failed."
-#	if  ! use noagent ; then
-		emake agent || die "agent build failed"
-#	fi
-#	if use console ; then
-		emake console || die "management build failed"
-#	fi
+	econf --prefix=/var/lib --enable-fancy-cli=yes
+	emake agent || die "agent build failed"
+	emake console || die "management build failed"
 }
 
 src_install() {
@@ -75,26 +67,22 @@ src_install() {
 	elog "---------------------------------------------------------------------"
 	elog ""
 
-#	if ! use noagent ; then
-		dosbin src/osirisd/osirisd
-		fowners root:0 /usr/sbin/osirisd
-		fperms 0755 /usr/sbin/osirisd
-		newinitd "${FILESDIR}"/osirisd-${PV} osirisd
-		newconfd "${FILESDIR}"/osirisd_confd-${PV} osirisd
-#	fi
+	dosbin src/osirisd/osirisd
+	fowners root:0 /usr/sbin/osirisd
+	fperms 0755 /usr/sbin/osirisd
+	newinitd "${FILESDIR}"/osirisd-${PV} osirisd
+	newconfd "${FILESDIR}"/osirisd_confd-${PV} osirisd
 
-#	if use console; then
-		dosbin src/cli/osiris
-		fowners root:0 /usr/sbin/osiris
-		fperms 0755 /usr/sbin/osiris
+	dosbin src/cli/osiris
+	fowners root:0 /usr/sbin/osiris
+	fperms 0755 /usr/sbin/osiris
 
-		dosbin src/osirismd/osirismd
-		fowners osiris:osiris /usr/sbin/osirismd
-		fperms 4755 /usr/sbin/osirismd
+	dosbin src/osirismd/osirismd
+	fowners osiris:osiris /usr/sbin/osirismd
+	fperms 4755 /usr/sbin/osirismd
 
-		newinitd "${FILESDIR}"/osirismd-${PV} osirismd
-		newconfd "${FILESDIR}"/osirismd_confd-${PV} osirismd
-#	fi
+	newinitd "${FILESDIR}"/osirismd-${PV} osirismd
+	newconfd "${FILESDIR}"/osirismd_confd-${PV} osirismd
 
 	dodir /var/run
 	dodir /var/lib
@@ -102,32 +90,16 @@ src_install() {
 	dodir /var/lib/osiris
 	dodir /var/run/osiris
 	keepdir /var/run/osiris
-#	if use console ; then
-		cp -rf "${S}"/src/configs "${D}"/var/lib/osiris/
-		chown -R osiris:osiris "${D}"/var/lib/osiris/*
-		chmod -R 0750 "${D}"/var/lib/osiris/*
-#	fi
-}
 
-#pkg_postinst()
-#{
-#	if ! use console ; then
-#		elog "By default, the osiris ebuild only installs the agent."
-#		elog "To enable installing the console, please add the 'console' flag"
-#		elog "to your USE variable and re-emerge osiris."
-#	fi
-#}
+	cp -rf "${S}"/src/configs "${D}"/var/lib/osiris/
+	chown -R osiris:osiris "${D}"/var/lib/osiris/*
+	chmod -R 0750 "${D}"/var/lib/osiris/*
+}
 
 pkg_postrm()
 {
-	# PID directory should not clutter the
-	# system
 	rm -rf /var/run/osiris
 
-	# Allow the user to decide if certs,
-	# configs, and other things should
-	# be
-	# removed.
 	elog "The directory /var/lib/osiris will not be removed. You may remove"
 	elog "it manually if you will not be reinstalling osiris at a later time."
 }
