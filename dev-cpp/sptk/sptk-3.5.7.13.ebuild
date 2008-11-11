@@ -1,10 +1,10 @@
 # Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.7.13.ebuild,v 1.3 2008/10/02 18:55:36 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.7.13.ebuild,v 1.4 2008/11/11 09:46:23 iluxa Exp $
 
 inherit eutils flag-o-matic autotools multilib
 
-IUSE="fltk odbc doc sqlite3 excel postgres aspell"
+IUSE="fltk odbc doc sqlite3 excel aspell examples"
 
 DESCRIPTION="C++ user interface toolkit for X with database and Excel support"
 SRC_URI="http://www.sptk.net/sptk-${PV}.tbz2"
@@ -17,7 +17,6 @@ KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc x86"
 RDEPEND="fltk?     ( >=x11-libs/fltk-1.1.6 )
 	odbc?     ( >=dev-db/unixODBC-2.2.6 )
 	sqlite3?  ( >=dev-db/sqlite-3 )
-	postgres? ( >=virtual/postgresql-base-8.0 )
 	aspell?   ( >=app-text/aspell-0.50 )"
 
 DEPEND="${RDEPEND}
@@ -36,8 +35,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	SPTK_OPTIONS="-DNO_POSTGRESQL:BOOLEAN=TRUE"
 	check_use examples EXAMPLES
-	check_use postgres POSTGRESQL
+	#check_use postgres POSTGRESQL
 	check_use sqlite3  SQLITE3
 	check_use odbc     ODBC
 	check_use aspell   ASPELL

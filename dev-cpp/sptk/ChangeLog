@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.42 2008/11/11 09:20:30 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.43 2008/11/11 09:46:23 iluxa Exp $
+
+  11 Nov 2008; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  -sptk-3.5.7.10.ebuild, sptk-3.5.7.13.ebuild:
+  Drop postgresql flag from sptk-3.5.7.13 (it does not work with current
+  stable postgresql version) Add 'examples' flag to IUSE list Remove
+  sptk-3.5.7.10 ebuild
 
 *sptk-3.5.8.6 (11 Nov 2008)
 
