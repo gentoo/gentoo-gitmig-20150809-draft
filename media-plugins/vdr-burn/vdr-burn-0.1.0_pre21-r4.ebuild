@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r4.ebuild,v 1.3 2008/10/02 18:37:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r4.ebuild,v 1.4 2008/11/11 07:43:09 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -13,7 +13,7 @@ DESCRIPTION="VDR: DVD Burn Plugin"
 HOMEPAGE="http://www.xeatre.de/community/burn"
 SRC_URI="http://www.magoa.net/linux/contrib/${MY_P}.tgz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="projectx"
@@ -31,6 +31,7 @@ DEPEND=">=media-video/vdr-1.4
 		>=dev-libs/libcdio-0.71
 		>=dev-libs/boost-1.32.0
 		media-libs/gd"
+
 
 RDEPEND=">=media-video/dvdauthor-0.6.10
 		>=media-video/mjpegtools-1.6.2
@@ -51,27 +52,27 @@ pkg_setup() {
 	local error=0
 
 	if use projectx && [[ ! -d /usr/share/java-config-2 ]] ; then
-		echo
+		eerror
 		eerror "ProjectX need an upgraded version of your Java install"
 		eerror "Please upgrade your Java/Java-config install"
-		einfo "http://www.gentoo.org/proj/en/java/java-upgrade.xml"
-		echo
+		eerror "\thttp://www.gentoo.org/proj/en/java/java-upgrade.xml"
+		eerror
 		error=1
 	fi
 
 	if ! built_with_use media-libs/gd png truetype jpeg ; then
-		echo
+		eerror
 		eerror "Please recompile media-libs/gd with"
 		eerror "USE=\"png truetype jpeg\""
-		echo
+		eerror
 		error=1
 	fi
 
 	if ! built_with_use media-video/mjpegtools png ; then
-		echo
+		eerror
 		eerror "Please recompile media-video/mjpegtools with"
 		eerror "USE=\"png\""
-		echo
+		eerror
 		error=1
 	fi
 
@@ -130,15 +131,15 @@ pkg_postinst() {
 
 	vdr-plugin_pkg_postinst
 
-	echo
+	einfo
 	einfo "This ebuild comes only with the standard template"
 	einfo "'emerge vdr-burn-templates' for more templates"
 	einfo "To change the templates, use the vdr-image plugin"
 
 	if [[ -e ${ROOT}/etc/vdr/reccmds/reccmds.burn.conf ]]; then
-		echo
+		eerror
 		eerror "Please remove the following unneeded file:"
-		einfo "--> /etc/vdr/reccmds/reccmds.burn.conf"
-		echo
+		eerror "\t/etc/vdr/reccmds/reccmds.burn.conf"
+		eerror
 	fi
 }

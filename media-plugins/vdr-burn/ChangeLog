@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.31 2008/10/02 18:37:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.32 2008/11/11 07:43:09 zzam Exp $
+
+  11 Nov 2008; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-burn-0.1.0_pre21-r4.ebuild:
+  Marked stable on x86 for Bug #245870. Improved log-messages a bit.
 
   02 Oct 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-burn-0.1.0_pre21-r4.ebuild:
