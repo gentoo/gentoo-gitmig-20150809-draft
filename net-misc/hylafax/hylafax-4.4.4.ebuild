@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4.ebuild,v 1.1 2008/07/13 23:05:21 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4.ebuild,v 1.2 2008/11/11 01:09:22 nerdboy Exp $
 
 inherit eutils multilib pam toolchain-funcs
 
@@ -87,8 +87,8 @@ src_compile() {
 			--with-PATH_EGETTY=/sbin/mgetty \
 			--with-PATH_VGETTY=/usr/sbin/vgetty"
 	else
+		# GETTY defaults to /sbin/agetty
 		my_conf="${my_conf} \
-			--with-PATH_GETTY=/bin/false \
 			--with-PATH_EGETTY=/bin/false \
 			--with-PATH_VGETTY=/bin/false"
 	fi
