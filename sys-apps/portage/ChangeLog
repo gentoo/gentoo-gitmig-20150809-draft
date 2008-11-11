@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.549 2008/11/02 00:50:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.550 2008/11/11 22:09:04 zmedico Exp $
+
+*portage-2.2_rc14 (11 Nov 2008)
+
+  11 Nov 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc14.ebuild:
+  2.2_rc14 bump. This fixes bugs #243030 (@preserve-rebuild unnecessary
+  packages), #245231 (getdelta.sh deadlock), #245356 (filter POSIXLY_CORRECT
+  from env), #245358 (show ancestors for unsatisfied deps), #245362
+  (preserve-libs inode comparison), #245661 (mask messages depend on dep
+  calc time), #245932 (repoman TypeError with USE deps). Bug #210077 tracks
+  all bugs fixed since 2.1.5.x.
 
 *portage-2.2_rc13 (01 Nov 2008)
 
