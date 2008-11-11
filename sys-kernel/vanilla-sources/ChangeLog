@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.556 2008/11/10 20:00:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.557 2008/11/11 20:07:10 armin76 Exp $
+
+  11 Nov 2008; Raúl Porcel <armin76@gentoo.org>
+  vanilla-sources-2.6.28_rc1.ebuild, vanilla-sources-2.6.28_rc2.ebuild,
+  vanilla-sources-2.6.28_rc3.ebuild, vanilla-sources-2.6.28_rc4.ebuild:
+  Punt warning about e1000, since it was fixed
 
 *vanilla-sources-2.6.26.8 (10 Nov 2008)
 *vanilla-sources-2.6.25.20 (10 Nov 2008)
