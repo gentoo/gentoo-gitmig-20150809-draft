@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/mythflix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythflix/ChangeLog,v 1.19 2008/04/23 18:08:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythflix/ChangeLog,v 1.20 2008/11/11 15:23:17 cardoe Exp $
+
+*mythflix-0.21_p19046 (11 Nov 2008)
+
+  11 Nov 2008; Doug Goldstein <cardoe@gentoo.org>
+  -mythflix-0.21_p16468.ebuild, -mythflix-0.21_p17105.ebuild,
+  +mythflix-0.21_p19046.ebuild:
+  new version to fix file collision in bug #239341. Remove old versions
+  since they will now collide with new MythTVs
 
 *mythflix-0.21_p17105 (23 Apr 2008)
 
