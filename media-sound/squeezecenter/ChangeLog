@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.32 2008/11/11 14:03:15 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.33 2008/11/11 16:29:51 lavajoe Exp $
+
+  11 Nov 2008; Joe Peterson <lavajoe@gentoo.org> files/squeezecenter.conf.d:
+  Add comments to conf file regarding nice setting, etc.
 
   11 Nov 2008; Joe Peterson <lavajoe@gentoo.org> files/squeezecenter.init.d:
   Remove use of sudo and nice in init script; no rev bump
