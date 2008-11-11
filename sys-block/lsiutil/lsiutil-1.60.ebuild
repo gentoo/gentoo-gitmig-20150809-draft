@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/lsiutil/lsiutil-1.52.ebuild,v 1.1 2008/02/01 19:07:32 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/lsiutil/lsiutil-1.60.ebuild,v 1.1 2008/11/11 16:06:13 wschlich Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="LSI Logic Fusion MPT Command Line Interface management tool"
 HOMEPAGE="http://www.lsi.com/"
-SRC_URI="http://www.lsi.com/support/downloads/hbas/fibre_channel/LsiUtil_10502.zip"
+SRC_URI="http://www.lsi.com/DistributionSystem/AssetDocument/support/downloads/hbas/fibre_channel/hardware_drivers/LSIUtil%20Kit_1.60.zip"
 
 LICENSE="LSI"
 SLOT="0"
@@ -32,5 +32,5 @@ src_compile() {
 
 src_install() {
 	dosbin ${PN}/${PN}
-	dodoc "${S}"/LsiUtil_ReadMe.txt "${S}"/LSIUtil_UG.pdf "${S}"/*.TXT
+	dodoc "${S}"/*.txt
 }
