@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.2.0.ebuild,v 1.1 2008/10/02 02:43:17 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.2.0.ebuild,v 1.2 2008/11/11 01:58:31 nixphoeni Exp $
 
 inherit eutils
 
@@ -60,11 +60,11 @@ src_install() {
 	# Install the documentation
 	cd doc
 	dodoc ${DOCS}
+	doman eagle.1
 	# Install extra documentation if requested
 	use doc && dodoc elektro-tutorial.pdf manual_${MY_LANG}.pdf tutorial_${MY_LANG}.pdf
-	doman eagle.1
 	# Remove docs left in INSTALLDIR
-	rm -rf "${D}${INSTALLDIR}/doc/*"
+	rm -rf "${D}${INSTALLDIR}/doc"
 	cd ..
 
 	echo -e "ROOTPATH=${INSTALLDIR}/bin\nPRELINK_PATH_MASK=${INSTALLDIR}" > "${S}/90eagle"
@@ -87,4 +87,5 @@ pkg_postinst() {
 	ewarn "with versions prior to 5.0!"
 	ewarn
 	ewarn "Please read /usr/share/doc/${PF}/UPDATE_${MY_LANG} if you are upgrading from 4.xx."
+
 }
