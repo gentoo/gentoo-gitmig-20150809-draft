@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-78.ebuild,v 1.1 2008/11/06 19:20:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-78.ebuild,v 1.2 2008/11/11 03:10:09 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -117,6 +117,7 @@ src_compile() {
 	use esd && audio_opts="esd $audio_opts"
 	use pulseaudio && audio_opts="pa $audio_opts"
 	use sdl && audio_opts="sdl $audio_opts"
+	use modules && conf_opts="$conf_opts --kerneldir=$KV_DIR"
 	conf_opts="$conf_opts --disable-gcc-check"
 	conf_opts="$conf_opts --prefix=/usr"
 	#conf_opts="$conf_opts --audio-drv-list=\"$audio_opts\""

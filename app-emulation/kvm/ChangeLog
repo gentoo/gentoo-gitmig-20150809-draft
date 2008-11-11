@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.20 2008/11/06 19:20:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.21 2008/11/11 03:10:09 dang Exp $
+
+  11 Nov 2008; Daniel Gryniewicz <dang@gentoo.org> kvm-78.ebuild:
+  Fix kernel build dir. bug #239189
 
 *kvm-78 (06 Nov 2008)
 
