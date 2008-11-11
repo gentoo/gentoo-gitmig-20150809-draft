@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha17733.ebuild,v 1.4 2008/10/09 20:52:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha19054.ebuild,v 1.1 2008/11/11 15:50:51 cardoe Exp $
 
-EAPI=1
+EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
 
 DESCRIPTION="Homebrew PVR project"
@@ -11,8 +11,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia"
 IUSE="alsa altivec autostart debug directv dvb dvd \
-fftw ieee1394 jack lcd lirc mmx opengl perl python \
-x264 xvid xvmc ${IUSE_VIDEO_CARDS}"
+fftw ieee1394 jack lcd lirc mmx perl python \
+tiff xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -22,7 +22,11 @@ RDEPEND=">=media-libs/freetype-2.0
 	x11-libs/libXv
 	x11-libs/libXrandr
 	x11-libs/libXxf86vm
-	>=x11-libs/qt-4.3:4
+	x11-libs/qt-core:4[qt3support]
+	x11-libs/qt-gui:4[qt3support,tiff?]
+	x11-libs/qt-sql:4[qt3support,mysql]
+	x11-libs/qt-opengl:4[qt3support]
+	x11-libs/qt-webkit:4
 	virtual/mysql
 	virtual/opengl
 	virtual/glu
@@ -43,8 +47,6 @@ RDEPEND=">=media-libs/freetype-2.0
 	lirc? ( app-misc/lirc )
 	perl? ( dev-perl/DBD-mysql )
 	python? ( dev-python/mysql-python )
-	x264? ( media-libs/x264 )
-	xvid? ( media-libs/xvid )
 	xvmc? ( x11-libs/libXvMC )"
 
 DEPEND="${RDEPEND}
@@ -57,10 +59,6 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 MYTHTV_GROUPS="video,audio,tty,uucp"
 
 pkg_setup() {
-
-	confutils_require_built_with_all =x11-libs/qt-4* gif jpeg mysql opengl \
-		png tiff
-
 	einfo "This ebuild now uses a heavily stripped down version of your CFLAGS"
 
 	if use xvmc && use video_cards_nvidia; then
@@ -73,9 +71,7 @@ pkg_setup() {
 	usermod -a -G ${MYTHTV_GROUPS} mythtv
 }
 
-src_unpack() {
-	subversion_src_unpack
-
+src_prepare() {
 	# upstream wants the revision number in their version.cpp
 	# since the subversion.eclass strips out the .svn directory
 	# svnversion in MythTV's build doesn't work
@@ -87,7 +83,7 @@ src_unpack() {
 		-i "${S}"/bindings/perl/perl.pro
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--prefix=/usr
 		--mandir=/usr/share/man
 		--libdir-name=$(get_libdir)"
@@ -95,8 +91,6 @@ src_compile() {
 	use altivec || myconf="${myconf} --disable-altivec"
 	use fftw && myconf="${myconf} --enable-libfftw3"
 	use jack || myconf="${myconf} --disable-audio-jack"
-	use x264 && myconf="${myconf} --enable-libx264"
-	use xvid && myconf="${myconf} --enable-libxvid"
 
 	#from bug #220857
 	use xvmc && myconf="${myconf} --enable-xvmc --enable-xvmcw \
@@ -162,7 +156,9 @@ src_compile() {
 	CXXFLAGS=""
 	einfo "Running ./configure ${myconf}"
 	./configure ${myconf} || die "configure died"
+}
 
+src_compile() {
 	eqmake4 mythtv.pro -o "Makefile" || die "eqmake4 failed"
 	emake || die "emake failed"
 
