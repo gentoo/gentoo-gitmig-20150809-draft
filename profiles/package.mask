@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9159 2008/11/10 23:53:06 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9160 2008/11/11 03:38:00 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -58,11 +58,6 @@ xfce-extra/pynetworkmanager
 media-video/realplayer
 media-libs/amd64codecs
 media-libs/realcodecs
-
-# Jeremy Olexa <darkside@gentoo.org> (4 Nov 2008)
-# Does not compile, no maintainer. Broken for over a year.
-# Removed by treecleaners in 60 days, bug #245479
-app-admin/osiris
 
 # Jeremy Olexa <darkside@gentoo.org> (4 Nov 2008)
 # Masked for removal in 60 days by treecleaners. No maintainer, broken package.
