@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nload
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.29 2008/11/05 17:41:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.30 2008/11/11 20:31:31 opfer Exp $
+
+  11 Nov 2008; Christian Faulhammer <opfer@gentoo.org>
+  +files/nload-0.6.0-prevent-stripping.patch:
+  recover patch that has been removed by mistake...sorry to everyone,
+  especially wschlich on bug 246404
 
   05 Nov 2008; Christian Faulhammer <opfer@gentoo.org>
   -files/nload-0.6.0-prevent-stripping.patch,
