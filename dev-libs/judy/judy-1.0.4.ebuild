@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/judy-1.0.4.ebuild,v 1.4 2008/11/09 15:19:40 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/judy-1.0.4.ebuild,v 1.5 2008/11/11 19:39:52 pva Exp $
 
-inherit eutils libtool
+inherit eutils autotools
 
 MY_P=Judy-${PV}
 
@@ -21,8 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-parallel-make.patch"
-	eautomake
-	elibtoolize
+	eautoreconf
 }
 
 src_install() {

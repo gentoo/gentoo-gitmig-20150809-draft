@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/judy
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.20 2008/11/09 15:19:40 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.21 2008/11/11 19:39:52 pva Exp $
+
+  11 Nov 2008; Peter Volkov <pva@gentoo.org> judy-1.0.4.ebuild:
+  Fixed missed inherit and let eautoreconf handle everything, bug #246373,
+  thank Kent Fredric for report and Jeroen Roovers for fast catching this.
 
   09 Nov 2008; Tobias Klausmann <klausman@gentoo.org> judy-1.0.4.ebuild:
   Stable on alpha, bug #244246
