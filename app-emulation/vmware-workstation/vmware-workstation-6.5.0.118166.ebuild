@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.0.118166.ebuild,v 1.3 2008/11/10 11:00:16 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.0.118166.ebuild,v 1.4 2008/11/11 20:22:32 ikelos Exp $
 
 inherit eutils versionator fdo-mime gnome2-utils
 
@@ -22,6 +22,7 @@ SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
 IUSE=""
 RESTRICT="strip fetch binchecks"
+PROPERTIES="interactive"
 
 # vmware-workstation should not use virtual/libc as this is a
 # precompiled binary package thats linked to glibc.
