@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/netkit-bootpd-2.4.ebuild,v 1.6 2007/11/01 21:55:54 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-bootpd/netkit-bootpd-2.4.ebuild,v 1.7 2008/11/11 02:10:40 flameeyes Exp $
 
 inherit eutils
 
@@ -36,9 +36,7 @@ src_install() {
 	dosym bootpef /usr/sbin/in.bootpef
 	dosym bootpgw /usr/sbin/in.bootpgw
 	dosym bootptest /usr/sbin/in.bootptest
-	doman bootpd.8
-	doman bootpef.8
-	doman bootptest.8
+	doman *.8 *.5
 	dodoc README README-linux
 #	newdoc rpc.bootparamd/README README.bootparamd
 }
