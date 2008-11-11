@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/read-edid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.14 2008/05/18 18:53:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.15 2008/11/11 15:10:02 yngwin Exp $
+
+*read-edid-2.0.0 (11 Nov 2008)
+*read-edid-1.4.2 (11 Nov 2008)
+
+  11 Nov 2008; Ben de Groot <yngwin@gentoo.org> metadata.xml,
+  +read-edid-1.4.2.ebuild, +read-edid-2.0.0.ebuild:
+  Adding latest releases. Fixing whitespace in metadata.xml.
 
   18 May 2008; Raúl Porcel <armin76@gentoo.org> read-edid-1.4.1-r1.ebuild:
   alpha stable
@@ -51,7 +58,7 @@
 *read-edid-1.4.1 (18 Jun 2002)
 
   18 Jun 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
