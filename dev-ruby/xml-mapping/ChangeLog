@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/xml-mapping
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-mapping/ChangeLog,v 1.1 2008/11/10 20:42:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-mapping/ChangeLog,v 1.2 2008/11/11 05:26:29 gengor Exp $
+
+  11 Nov 2008; Gordon Malm <gengor@gentoo.org> xml-mapping-0.8.1.ebuild:
+  Add ~x86 keyword.
 
 *xml-mapping-0.8.1 (10 Nov 2008)
 
