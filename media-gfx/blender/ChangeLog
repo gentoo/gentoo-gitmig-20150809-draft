@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.158 2008/11/03 22:22:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.159 2008/11/12 18:15:17 corsair Exp $
+
+  12 Nov 2008; Markus Rothe <corsair@gentoo.org> blender-2.43-r3.ebuild:
+  Stable on ppc64; bug #245310
 
 *blender-2.48a-r3 (03 Nov 2008)
 *blender-2.48a-r2 (03 Nov 2008)
