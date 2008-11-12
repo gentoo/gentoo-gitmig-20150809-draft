@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-1.16.ebuild,v 1.6 2008/10/06 04:38:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-1.16.ebuild,v 1.7 2008/11/12 20:28:24 aballier Exp $
 
 inherit latex-package
 
@@ -18,7 +18,7 @@ IUSE="doc examples"
 
 RDEPEND="dev-lang/perl
 	|| ( dev-texlive/texlive-latexrecommended >=dev-tex/xkeyval-2.5f )
-	|| ( dev-texlive/texlive-latexextra app-text/tetex app-text/ptex )
+	>=dev-texlive/texlive-latexextra-2008
 	"
 DEPEND="${RDEPEND}
 	 app-arch/unzip"
