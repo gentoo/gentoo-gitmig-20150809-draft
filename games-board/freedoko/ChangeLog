@@ -1,6 +1,10 @@
 # ChangeLog for games-board/freedoko
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.6 2008/09/03 08:57:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.7 2008/11/12 19:41:19 tupone Exp $
+
+  12 Nov 2008; Tupone Alfredo <tupone@gentoo.org>
+  +files/freedoko-0.7.3-gcc43.patch, freedoko-0.7.3.ebuild:
+  Fix build with gcc-4.3
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   freedoko-0.7.3.ebuild:

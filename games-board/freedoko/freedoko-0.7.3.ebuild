@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.3.ebuild,v 1.9 2008/09/03 08:57:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.3.ebuild,v 1.10 2008/11/12 19:41:19 tupone Exp $
 
 inherit eutils games
 
@@ -35,6 +35,7 @@ src_unpack() {
 	edos2unix src/Makefile.rules
 	epatch \
 		"${FILESDIR}"/portage-cxx.patch \
+		"${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/Fix_Cardset_Make.patch
 	use !doc && epatch "${FILESDIR}"/nodoc.patch
 	use !net && epatch "${FILESDIR}"/nonet.patch
