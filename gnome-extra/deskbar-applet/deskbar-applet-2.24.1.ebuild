@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.24.1.ebuild,v 1.2 2008/10/24 07:25:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.24.1.ebuild,v 1.3 2008/11/12 11:03:00 leio Exp $
 
 inherit autotools eutils gnome2 python
 
@@ -13,26 +13,27 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="eds spell test"
 
 RDEPEND=">=dev-lang/python-2.4
-		 >=x11-libs/gtk+-2.12
-		 >=dev-python/pygtk-2.12
-		 >=dev-python/pygobject-2.12
-		 >=gnome-base/gnome-desktop-2.10
-		 >=dev-python/dbus-python-0.80.2
-		 >=dev-python/gconf-python-2.22.1
-		 >=dev-python/gnome-vfs-python-2.22.1
-		 >=dev-python/libgnome-python-2.22.1
-		 >=dev-python/gnome-applets-python-2.22.0
-		 >=dev-python/libwnck-python-2.22.0
-		 >=gnome-base/gconf-2
-		 eds? ( >=gnome-extra/evolution-data-server-1.7.92 )
-		 spell? ( >=gnome-extra/gnome-utils-2.16.2 )"
+	>=x11-libs/gtk+-2.12
+	>=dev-python/pygtk-2.12
+	>=dev-python/pygobject-2.12
+	>=gnome-base/gnome-desktop-2.10
+	>=dev-python/dbus-python-0.80.2
+	dev-python/gnome-desktop-python
+	>=dev-python/gconf-python-2.22.1
+	>=dev-python/gnome-vfs-python-2.22.1
+	>=dev-python/libgnome-python-2.22.1
+	>=dev-python/gnome-applets-python-2.22.0
+	>=dev-python/libwnck-python-2.22.0
+	>=gnome-base/gconf-2
+	eds? ( >=gnome-extra/evolution-data-server-1.7.92 )
+	spell? ( >=gnome-extra/gnome-utils-2.16.2 )"
 DEPEND="${RDEPEND}
-		  sys-devel/gettext
-		>=dev-util/intltool-0.35
-		  app-text/scrollkeeper
-		  app-text/gnome-doc-utils
-		  dev-util/pkgconfig
-		test? ( ~app-text/docbook-xml-dtd-4.2 )"
+	sys-devel/gettext
+	>=dev-util/intltool-0.35
+	app-text/scrollkeeper
+	app-text/gnome-doc-utils
+	dev-util/pkgconfig
+	test? ( ~app-text/docbook-xml-dtd-4.2 )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
