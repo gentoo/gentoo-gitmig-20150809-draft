@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2041 2008/11/11 14:28:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2042 2008/11/12 21:49:24 loki_val Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> package.mask:
+  Masking old freetype releases in preparation for removal
 
   11 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   ffmpeg2theora-9999 punted, removing mask entry.
