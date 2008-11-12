@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.128 2008/11/10 09:49:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.129 2008/11/12 05:34:41 josejx Exp $
+
+  12 Nov 2008; Joseph Jezak <josejx@gentoo.org> ntp-4.2.4_p5.ebuild:
+  Marked ppc/ppc64 stable for bug #246242.
 
   10 Nov 2008; Raúl Porcel <armin76@gentoo.org> ntp-4.2.4_p5.ebuild:
   alpha/arm/ia64/sparc/x86 stable wrt #246242
