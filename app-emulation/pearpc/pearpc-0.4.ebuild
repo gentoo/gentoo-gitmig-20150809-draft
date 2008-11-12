@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.10 2008/08/31 05:02:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.11 2008/11/12 06:16:48 josejx Exp $
 
 inherit eutils flag-o-matic linux-info linux-mod
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pearpc/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 ~x86"
+KEYWORDS="-amd64 ~ppc ~x86"
 IUSE="debug jit X sdl"
 
 RDEPEND="sys-apps/net-tools
