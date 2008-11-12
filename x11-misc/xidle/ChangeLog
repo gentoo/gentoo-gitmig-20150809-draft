@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/xidle
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xidle/ChangeLog,v 1.1 2008/11/12 06:57:33 jer Exp $
+
+*xidle-24102005 (12 Nov 2008)
+
+  12 Nov 2008; Jeroen Roovers <jer@gentoo.org>
+  +files/xidle-24102005-dead.patch, +metadata.xml, +xidle-24102005.ebuild:
+  Initial commit. Thanks to Ben Anderson for finding it (bug #241918).
+
