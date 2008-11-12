@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/kpowersave-0.7.3.ebuild,v 1.5 2008/08/11 17:21:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/kpowersave-0.7.3.ebuild,v 1.6 2008/11/12 04:07:54 josejx Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/powersave/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 RDEPEND=">=sys-apps/hal-0.5.4
 	dev-libs/dbus-qt3-old
