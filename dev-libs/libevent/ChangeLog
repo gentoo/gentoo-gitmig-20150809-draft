@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.88 2008/11/12 07:19:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.89 2008/11/12 13:23:52 fmccor Exp $
+
+  12 Nov 2008; Ferris McCormick <fmccor@gentoo.org> libevent-1.4.7.ebuild:
+  Sparc stable --- Bug #246277 --- tests run successfully.
 
   12 Nov 2008; Jeroen Roovers <jer@gentoo.org> libevent-1.4.7.ebuild:
   Stable for HPPA (bug #246277).
