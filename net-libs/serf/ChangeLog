@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.15 2008/11/04 09:27:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.16 2008/11/12 16:03:04 pva Exp $
+
+  12 Nov 2008; Peter Volkov <pva@gentoo.org> serf-0.2.0.ebuild:
+  Added ~mips, bug #212056.
 
   04 Nov 2008; Mike Frysinger <vapier@gentoo.org> serf-0.2.0.ebuild:
   Add arm/s390/sh love.
