@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcliphist
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.11 2008/08/18 13:03:36 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.12 2008/11/12 13:57:22 s4t4n Exp $
+
+  12 Nov 2008; Michele Noberasco <s4t4n@gentoo.org> wmcliphist-0.6-r1.ebuild:
+  x86 stable, bug #246037
 
 *wmcliphist-0.6-1 (18 Aug 2008)
 
