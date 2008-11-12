@@ -1,6 +1,15 @@
 # ChangeLog for app-text/bibus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.7 2008/05/29 15:52:15 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.8 2008/11/12 23:17:35 markusle Exp $
+
+*bibus-1.4.3.1 (12 Nov 2008)
+
+  12 Nov 2008; Markus Dittrich <markusle@gentoo.org>
+  -files/bibus-1.4.0_rc2-install.patch ,
+  -bibus-1.4.0_rc2.ebuild, -bibus-1.2.0.ebuild
+  +files/bibus-1.4.3.1-install.patch, +bibus-1.4.3.1.ebuild:
+  Version bump for openoffice-3 compatibility (see bug #246443). 
+  Thanks much to Attila Tóth for his help and patches.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> bibus-1.2.0.ebuild,
   bibus-1.4.0_rc2.ebuild, bibus-1.4.3.ebuild:

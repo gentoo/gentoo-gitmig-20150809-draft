@@ -1,14 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.4.0_rc2.ebuild,v 1.2 2008/05/29 15:52:15 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.4.3.1.ebuild,v 1.1 2008/11/12 23:17:35 markusle Exp $
 
 inherit python multilib eutils
 
-MY_PV="1.4.0"
-
 DESCRIPTION="Bibliographic and reference management software, integrates with OO.o and MS Word"
 HOMEPAGE="http://bibus-biblio.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}-biblio/${PN}-${MY_PV}rc2.zip"
+SRC_URI="mirror://sourceforge/${PN}-biblio/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86 ~amd64"
@@ -35,16 +33,10 @@ RDEPEND="virtual/ooo
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S="${WORKDIR}/${PN}-${MY_PV}rc2"
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-install.patch
-	sed -e "s:GENTOO-PF:${P}:g" \
-		-e "69aall:\n" \
-		-e "s:\$\(compile\)::" \
-		-i Makefile || die "Failed to patch makefile"
 	sed -e "s:/usr/lib/:/usr/$(get_libdir)/:" \
 		-i Setup/bibus.sh Makefile || die "Failed to fix bibus wrapper"
 }
