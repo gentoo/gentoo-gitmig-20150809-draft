@@ -13,7 +13,7 @@
 +	$(INSTALL) -m 755 SciTE.desktop $(DESTDIR)$(datadir)/applications/
  endif
 -	$(INSTALL) -m 644 -D Sci48M.png $(DESTDIR)$(pixmapdir)/Sci48M.png
-+	$(INSTALL) -m 644 -d $(DESTDIR)$(pixmapdir)/
++	$(INSTALL) -m 755 -d $(DESTDIR)$(pixmapdir)/
 +	$(INSTALL) -m 644 Sci48M.png $(DESTDIR)$(pixmapdir)/Sci48M.png
  endif
  
