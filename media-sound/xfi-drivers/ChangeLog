@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xfi-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfi-drivers/ChangeLog,v 1.1 2008/11/09 13:32:05 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfi-drivers/ChangeLog,v 1.2 2008/11/12 17:24:20 loki_val Exp $
+
+  12 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  xfi-drivers-1.00.ebuild:
+  Be a bit less restrictive, so the same check also works for kernels
+  [2.6.25-2.6.26].
 
 *xfi-drivers-1.00 (09 Nov 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfi-drivers/xfi-drivers-1.00.ebuild,v 1.1 2008/11/09 13:32:05 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfi-drivers/xfi-drivers-1.00.ebuild,v 1.2 2008/11/12 17:24:20 loki_val Exp $
 
 inherit linux-mod
 
@@ -25,7 +25,7 @@ S=${WORKDIR}/${MY_P}
 MODULE_NAMES="ctxfi(sound:${S}:${S})"
 BUILD_TARGETS="all"
 BUILD_PARAMS="$(use debug&&echo DEBUG=y)"
-CONFIG_CHECK="SND SND_DRIVERS SND_PCI SOUND"
+CONFIG_CHECK="SND SOUND"
 
 src_unpack() {
 	unpack ${A}
