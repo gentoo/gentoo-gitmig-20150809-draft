@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libv4l
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.8 2008/11/09 14:25:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/ChangeLog,v 1.9 2008/11/12 18:30:01 aballier Exp $
+
+  12 Nov 2008; Alexis Ballier <aballier@gentoo.org> -libv4l-0.5.1.ebuild:
+  remove old
 
   09 Nov 2008; Tobias Klausmann <klausman@gentoo.org> libv4l-0.5.3.ebuild:
   Stable on alpha, bug #245774
