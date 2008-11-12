@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4.ebuild,v 1.2 2008/11/09 19:03:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4-r1.ebuild,v 1.1 2008/11/12 18:47:10 cardoe Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -16,6 +16,14 @@ IUSE="nls static"
 DEPEND="nls? ( sys-devel/gettext )"
 
 RDEPEND="sys-devel/m4"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# fix compatibility with previous bison releases
+	epatch "${FILESDIR}"/${PN}-2.4.0-compat.patch
+}
 
 src_compile() {
 	use static && append-ldflags -static
