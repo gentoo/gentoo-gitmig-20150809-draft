@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.6 2008/11/08 17:26:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.7 2008/11/12 10:54:24 leio Exp $
 
 inherit eutils
 
@@ -38,19 +38,18 @@ src_unpack() {
 src_compile() {
 	# --disable-popt will build only the library and not the frontend
 	# TFM is needed for SVG, default value is 2
-	econf $(use_enable debug) \
-		  $(use_enable gtk) $(use_enable gtk gmetadom) \
-		  $(use_enable svg) \
-		  $(use_with t1lib) \
-		  --enable-popt \
-		  --enable-libxml2 \
-		  --enable-libxml2-reader \
-		  --enable-ps \
-		  --enable-tfm=2 \
-		  --enable-builder-cache \
-		  --enable-breaks \
-		  --enable-boxml \
-		  || die "configure failed"
+	econf $(use_enable gtk) $(use_enable gtk gmetadom) \
+		$(use_enable svg) \
+		$(use_with t1lib) \
+		--enable-popt \
+		--enable-libxml2 \
+		--enable-libxml2-reader \
+		--enable-ps \
+		--enable-tfm=2 \
+		--enable-builder-cache \
+		--enable-breaks \
+		--enable-boxml \
+		|| die "configure failed"
 	emake || die "make failed"
 }
 
