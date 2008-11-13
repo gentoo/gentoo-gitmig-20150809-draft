@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r1.ebuild,v 1.1 2008/11/13 22:47:23 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r1.ebuild,v 1.2 2008/11/13 22:50:00 sbriesen Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -261,7 +261,7 @@ pkg_config() {
 
 	# create /etc/passwd
 	if [ ! -e "${myhome}/etc/passwd" ]; then
-		( 
+		(
 			echo "root:x:0:0:root:/:/bin/sh"
 			sed -n "s|^\(${myuser}:[^:]*:[^:]*:[^:]*:[^:]*:\).*|\1${mysubdir}:/bin/sh|p" /etc/passwd
 		) > "${myhome}/etc/passwd"
