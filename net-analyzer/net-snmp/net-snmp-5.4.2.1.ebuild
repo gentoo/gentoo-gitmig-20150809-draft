@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1.ebuild,v 1.1 2008/11/13 17:46:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.4.2.1.ebuild,v 1.2 2008/11/13 18:01:30 jer Exp $
 
 inherit fixheadtails flag-o-matic perl-module python autotools
 
@@ -59,8 +59,8 @@ src_unpack() {
 	# snmpconf generates config files with proper selinux context
 	use selinux && epatch "${FILESDIR}"/${PN}-5.1.2-snmpconf-selinux.patch
 
-	# Fix version number to report 5.4.2.1:
-	sed -i -e 's:NetSnmpVersionInfo = "5.4.1":NetSnmpVersionInfo = "5.4.2.1":' snmplib/snmp_version.c
+	# Fix version number:
+	sed -i -e "s:NetSnmpVersionInfo = \".*\":NetSnmpVersionInfo = \"${PV}\":" snmplib/snmp_version.c
 
 	eautoreconf
 
