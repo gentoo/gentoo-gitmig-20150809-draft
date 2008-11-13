@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-2.03.09.ebuild,v 1.1 2008/11/13 19:01:06 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-2.03.09.ebuild,v 1.2 2008/11/13 19:10:59 xmerlin Exp $
 
 inherit eutils linux-mod linux-info versionator
 
@@ -39,7 +39,6 @@ src_unpack() {
 		/\tinstall/s/install/& -m 0644/' \
 		man/Makefile || die "failed patching man pages permission"
 
-#	epatch "${FILESDIR}"/${P}-include.patch || die
 }
 
 src_compile() {

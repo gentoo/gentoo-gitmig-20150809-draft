@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-lib/dlm-lib-2.03.09.ebuild,v 1.1 2008/11/13 19:02:22 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-lib/dlm-lib-2.03.09.ebuild,v 1.2 2008/11/13 19:12:30 xmerlin Exp $
 
 inherit eutils linux-mod linux-info versionator
 
@@ -27,18 +27,6 @@ DEPEND=">=sys-kernel/linux-headers-2.6.24
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}/${PN/-//}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# fix the manual pages have executable bit
-	#sed -i -e '
-	#	/\tinstall -d/s/install/& -m 0755/; t
-	#	/\tinstall/s/install/& -m 0644/' \
-	#	man/Makefile || die "failed patching man pages permission"
-
-}
 
 src_compile() {
 	(cd "${WORKDIR}"/${MY_P};
