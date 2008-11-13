@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.79 2008/09/01 18:04:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.80 2008/11/13 00:39:15 flameeyes Exp $
+
+*alsa-plugins-1.0.18 (13 Nov 2008)
+
+  13 Nov 2008; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsa-plugins-1.0.18-automagic.patch, +alsa-plugins-1.0.18.ebuild:
+  Version bump, remove patches that are fixed upstream, update the automagic
+  patch (pushed upstream), and use EAPI=2 to make sure the rate plugin is
+  enabled in alsa-lib when building resampler plugins (ffmpeg, speex and
+  samplerate USE flags).
 
   01 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
   -alsa-plugins-1.0.13.ebuild, -alsa-plugins-1.0.14_rc1-r1.ebuild,
