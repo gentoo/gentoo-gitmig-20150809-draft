@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.39 2008/11/13 22:50:00 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.40 2008/11/13 23:02:28 sbriesen Exp $
+
+  13 Nov 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  scponly-4.8-r1.ebuild:
+  excluded passwd and unison use-flags for mips, since depending packages
+  are not supported for this architecture yet.
 
   13 Nov 2008; Stefan Briesenick <sbriesen@gentoo.org>
   scponly-4.8-r1.ebuild:

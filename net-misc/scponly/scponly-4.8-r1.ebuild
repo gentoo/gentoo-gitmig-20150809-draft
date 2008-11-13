@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r1.ebuild,v 1.2 2008/11/13 22:50:00 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r1.ebuild,v 1.3 2008/11/13 23:02:28 sbriesen Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -17,9 +17,9 @@ RDEPEND="virtual/libc
 	sys-apps/sed
 	net-misc/openssh
 	quota? ( sys-fs/quota )
-	passwd? ( sys-apps/shadow )
+	!mips? ( passwd? ( sys-apps/shadow ) )
 	rsync? ( net-misc/rsync )
-	unison? ( net-misc/unison )
+	!mips? ( unison? ( net-misc/unison ) )
 	subversion? ( dev-util/subversion )"
 DEPEND="${RDEPEND}"
 
@@ -28,6 +28,14 @@ myhome="/home/${myuser}"
 mysubdir="/pub"
 
 pkg_setup() {
+	if use mips; then
+		if use unison || use passwd; then
+			eerror
+			eerror "unison and passwd use-flags are not supported on mips yet!"
+			die "unsupported use-flags for your arch"
+		fi
+	fi
+
 	if use unison; then
 		if [ ! -e "${ROOT}usr/bin/unison" ]; then
 			eerror
