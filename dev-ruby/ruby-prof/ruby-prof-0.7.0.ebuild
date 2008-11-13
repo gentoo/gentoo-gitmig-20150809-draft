@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.7.0.ebuild,v 1.2 2008/11/13 04:18:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.7.0.ebuild,v 1.3 2008/11/13 13:10:04 flameeyes Exp $
 
 inherit ruby
 
@@ -20,9 +20,15 @@ DEPEND="${RDEPEND}
 
 USE_RUBY="ruby18"
 
-# Tests don't work on 0.7.0 version, but I contacted upstream to get
-# them fixed.
-RESTRICT="test"
+src_unpack() {
+	ruby_src_unpack
+
+	# The thread testing in 0.7.0 and earlier versions is broken, it
+	# has to be tested for the next versions, since upstream is
+	# looking for a solution.
+	rm "${S}"/test/thread_test.rb \
+		|| die "unable to remove the broken test"
+}
 
 src_compile() {
 	cd "${S}/ext"

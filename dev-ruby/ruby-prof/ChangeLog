@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-prof
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.8 2008/11/13 04:18:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.9 2008/11/13 13:10:04 flameeyes Exp $
+
+  13 Nov 2008; Diego Pettenò <flameeyes@gentoo.org> ruby-prof-0.7.0.ebuild:
+  Only disable the thread test instead of restricting tests, upstream is
+  aware of the failure and it's not a regression.
 
   13 Nov 2008; Diego Pettenò <flameeyes@gentoo.org> ruby-prof-0.7.0.ebuild:
   Quote variables to make repoman happy.
