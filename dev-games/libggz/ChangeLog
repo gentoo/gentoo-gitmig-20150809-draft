@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libggz
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.26 2008/10/28 20:30:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.27 2008/11/13 19:46:51 ranger Exp $
+
+  13 Nov 2008; Brent Baude <ranger@gentoo.org> libggz-0.0.14.1.ebuild:
+  Marking libggz-0.0.14.1 ppc64 stable for bug 236971
 
   28 Oct 2008; Brent Baude <ranger@gentoo.org> libggz-0.0.14.1.ebuild:
   Marking libggz-0.0.14.1 ~ppc64 for gnome
