@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9162 2008/11/12 21:49:24 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9163 2008/11/13 00:52:31 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego Pettenò <flameeyes@gentoo.org> (13 Nov 2008)
+# Pre-release versions for 2.6, unsuitable for production use.
+>=app-arch/libarchive-2.5.900
 
 # Peter Alfredsen <loki_val@gentoo.org> (12 Nov 2008)
 # Masking old versions for removal to give adequate warning and
