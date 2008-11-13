@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.132 2008/10/19 23:37:11 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.133 2008/11/13 19:17:55 ranger Exp $
+
+  13 Nov 2008; Brent Baude <ranger@gentoo.org> gconf-editor-2.22.0.ebuild:
+  Marking gconf-editor-2.22.0 ppc64 stable for bug 236971
 
 *gconf-editor-2.24.1 (19 Oct 2008)
 
