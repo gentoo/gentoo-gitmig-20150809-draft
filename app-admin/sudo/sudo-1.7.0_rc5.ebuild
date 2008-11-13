@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.0_rc2.ebuild,v 1.2 2008/10/09 21:23:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.0_rc5.ebuild,v 1.1 2008/11/13 01:46:09 flameeyes Exp $
 
 inherit eutils pam confutils
 
@@ -168,7 +168,7 @@ src_compile() {
 src_install() {
 	emake -j1 DESTDIR="${D}" install || die
 	dodoc ChangeLog HISTORY PORTING README TROUBLESHOOTING \
-		UPGRADE sample.sudoers sample.syslog.conf
+		UPGRADE WHATSNEW sample.sudoers sample.syslog.conf
 
 	if use ldap; then
 		dodoc README.LDAP schema.OpenLDAP
