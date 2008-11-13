@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.1.3.ebuild,v 1.1 2008/11/09 01:04:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.1.3.ebuild,v 1.2 2008/11/13 22:22:25 vapier Exp $
 
 EAPI="2"
 
 KMNAME=kdenetwork
-inherit kde4-meta
+inherit kde4-meta flag-o-matic toolchain-funcs
 
 DESCRIPTION="KDE multi-protocol IM client"
 KEYWORDS="~amd64 ~x86"
@@ -47,6 +47,12 @@ DEPEND="${COMMONDEPEND}
 	x11-proto/scrnsaverproto"
 
 PDEPEND="ssl? ( >=app-crypt/qca-ossl-2.0.0_beta3 )"
+
+src_unpack() {
+	[[ $(tc-arch) == "ppc64" ]] && append-flags -mminimal-toc #241900
+
+	kde4-meta_src_unpack
+}
 
 src_configure() {
 	# Xmms isn't in portage, thus forcefully disabled.
