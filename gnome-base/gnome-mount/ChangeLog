@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-mount
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.48 2008/10/28 20:16:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.49 2008/11/13 19:48:02 ranger Exp $
+
+  13 Nov 2008; Brent Baude <ranger@gentoo.org> gnome-mount-0.6.ebuild:
+  Marking gnome-mount-0.6 ppc64 stable for bug 236971
 
   28 Oct 2008; Brent Baude <ranger@gentoo.org> gnome-mount-0.6.ebuild:
   Marking gnome-mount-0.6 ~ppc64 again b/c hal is now ppc64 stable
