@@ -1,4 +1,6 @@
 #!/sbin/runscript
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 
 depend() {
 	after bluetooth hald
@@ -20,3 +22,5 @@ stop() {
 	eend $?
 	eend 0
 }
+
+# vim:ts=4
