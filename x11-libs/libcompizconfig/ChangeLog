@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libcompizconfig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.10 2008/11/09 15:00:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.11 2008/11/13 12:47:21 flameeyes Exp $
+
+  13 Nov 2008; Diego Pettenò <flameeyes@gentoo.org>
+  libcompizconfig-0.7.8.ebuild:
+  Run intltoolize (and depend on intltool), reported by Mahmoud Hashemi.
 
   09 Nov 2008; Diego Pettenò <flameeyes@gentoo.org>
   libcompizconfig-0.7.8.ebuild:
