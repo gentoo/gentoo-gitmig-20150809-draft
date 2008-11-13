@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/habak-0.2.5.ebuild,v 1.18 2008/11/13 23:28:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/habak-0.2.5.ebuild,v 1.19 2008/11/13 23:41:52 flameeyes Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A simple but powerful tool to set desktop wallpaper"
 HOMEPAGE="http://lubuska.zapto.org/~hoppke/"
@@ -18,6 +18,10 @@ RDEPEND="media-libs/imlib2
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
+# Skip into the src directory so we avoid a recursive make call that
+# is going to break parallel make.
+S="${WORKDIR}/${P}/src"
+
 pkg_setup() {
 	# fix for bug #185144
 	if ! built_with_use media-libs/imlib2 X; then
@@ -27,11 +31,22 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+
+	sed -i \
+		-e '/(LDFLAGS)/s:$: -lImlib2 -lm:' \
+		-e 's:gcc:$(CC):' \
+		"${S}"/Makefile || die "Makefile fixing failed"
+}
+
 src_compile() {
-	emake || die "make failed"
+	emake CC="$(tc-getCC)" ${PN} || die "make failed"
 }
 
 src_install() {
-	dobin habak
-	dodoc ChangeLog README TODO COPYING "${FILESDIR}"/README.en
+	dobin ${PN} || die "dobin failed"
+
+	cd "${WORKDIR}/${P}"
+	dodoc ChangeLog README TODO "${FILESDIR}"/README.en || die "dodoc failed"
 }
