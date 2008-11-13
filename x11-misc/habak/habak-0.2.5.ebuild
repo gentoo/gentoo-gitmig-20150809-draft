@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/habak-0.2.5.ebuild,v 1.17 2008/10/14 12:29:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/habak-0.2.5.ebuild,v 1.18 2008/11/13 23:28:53 flameeyes Exp $
 
 inherit eutils
 
@@ -25,14 +25,6 @@ pkg_setup() {
 		eerror "Please recompile media-libs/imlib2 with USE=X"
 		die "habak needs media-libs/imlib2 built with USE=X"
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# fix for as-needed, bug #141709
-	sed -e 's/gcc $(LDFLAGS) \(.*\)/gcc \1 $(LDFLAGS)/' -i src/Makefile
 }
 
 src_compile() {
