@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.82 2008/11/11 01:09:22 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.83 2008/11/13 04:55:08 darkside Exp $
+
+  13 Nov 2008; Jeremy Olexa <darkside@gentoo.org> hylafax-4.4.4.ebuild:
+  amd64 stable, bug #245190
 
   10 Nov 2008; Steve Arnold <nerdboy@gentoo.org> hylafax-4.4.4.ebuild:
   Updated latest version to allow agetty default when no mgetty is used.
