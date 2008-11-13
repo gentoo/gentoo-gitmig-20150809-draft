@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libchipcard
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.73 2008/11/12 09:13:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.74 2008/11/13 23:44:09 hanno Exp $
+
+*libchipcard-4.2.3 (13 Nov 2008)
+
+  13 Nov 2008; Hanno Boeck <hanno@gentoo.org> +libchipcard-4.2.3.ebuild:
+  Version bump.
 
   12 Nov 2008; Guy Martin <gmsoft@gentoo.org> libchipcard-3.0.4.ebuild:
   hppa stable.
