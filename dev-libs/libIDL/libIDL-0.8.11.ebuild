@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.11.ebuild,v 1.5 2008/11/12 21:11:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.11.ebuild,v 1.6 2008/11/13 20:46:28 dang Exp $
 
 inherit eutils gnome2
 
@@ -23,4 +23,6 @@ DOCS="AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README"
 src_unpack() {
 	gnome2_src_unpack
 	epunt_cxx
+
+	epatch "${FILESDIR}"/${P}-bison-2.4.patch
 }
