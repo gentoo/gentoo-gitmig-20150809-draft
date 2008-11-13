@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/synce-hal-0.2.ebuild,v 1.1 2008/11/13 00:05:09 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/synce-hal-0.2.ebuild,v 1.2 2008/11/13 16:54:54 mescalinum Exp $
 
 DESCRIPTION="SynCE - hal connection manager"
 HOMEPAGE="http://sourceforge.net/projects/synce/"
@@ -17,7 +17,8 @@ DEPEND="sys-apps/hal
 		~app-pda/synce-libsynce-0.12
 		~app-pda/synce-librapi2-0.12
 		~app-pda/synce-librra-0.12"
-RDEPEND="~app-pda/synce-sync-engine-0.12
+RDEPEND="${DEPEND}
+		~app-pda/synce-sync-engine-0.12
 		net-misc/dhcp"
 
 SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
