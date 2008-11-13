@@ -1,13 +1,13 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs-1.0x.rc,v 1.1 2008/03/17 17:30:29 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs2/files/gfs2.rc,v 1.1 2008/11/13 19:19:30 xmerlin Exp $
 
 opts="${opts} mountall"
 
 depend() {
-	local myneed="cluster-manager cluster-locking-manager fenced"
-	local devices="$(awk '!/^#/ && $3 == "gfs" && $4 !~ /noauto/ {print $1 }' /etc/fstab)"
+	local myneed="cman"
+	local devices="$(awk '!/^#/ && $3 == "gfs2" && $4 !~ /noauto/ {print $1 }' /etc/fstab)"
 
 	if [ -n "${devices}" ]; then
 		local device=""
@@ -24,12 +24,11 @@ depend() {
 
 	use dns logger net
 	need ${myneed}
-	provide cluster
 }
 
-mount_gfs_filesystems() {
+mount_gfs2_filesystems() {
 	local remaining=""
-	remaining="$(awk '!/^#/ && $3 == "gfs"  { if ($4 !~ "noauto") print $1 }' /etc/fstab)"
+	remaining="$(awk '!/^#/ && $3 == "gfs2"  { if ($4 !~ "noauto") print $1 }' /etc/fstab)"
 	
 	if [ -n "${remaining}" ]; then
 	
@@ -48,13 +47,14 @@ mount_gfs_filesystems() {
 			einfo "Mounting GFS filesystems"
 			device=""
 			for device in ${remaining_verified}; do
-				local target="$(awk '!/^#/ && $3 == "gfs" && $1 == device { print $2 }' device=${device} /etc/fstab)"
-				local mounted="$(awk '$3 == "gfs" && $1 == device { print $2 }' device=${device} /proc/mounts)"
+				local target="$(awk '!/^#/ && $3 == "gfs2" && $1 == device { print $2 }' device=${device} /etc/fstab)"
+				local mounted="$(awk '$3 == "gfs2" && $1 == device { print $2 }' device=${device} /proc/mounts)"
+				local options="$(awk '!/^#/ && $3 == "gfs2" && $1 == device { print $4 }' device=${device} /etc/fstab)"
 				
 				# mount only filesystems not already mounted
 				if [ -z "${mounted}" ]; then
 					ebegin "--> mounting ${device} on ${target}"
-					mount -t gfs ${device} ${target} >/dev/null
+					mount -t gfs2 ${device} ${target} -o ${options} >/dev/null
 					eend $?
 				else
 					einfo "--> ${device} already mounted on ${target}"
@@ -68,9 +68,9 @@ mount_gfs_filesystems() {
 }
 
 
-umount_gfs_filesystems() {
+umount_gfs2_filesystems() {
 	local sig retry
-	local remaining="$(awk '$3 == "gfs" { print $2 }' /proc/mounts | sort -r)"
+	local remaining="$(awk '$3 == "gfs2" { print $2 }' /proc/mounts | sort -r)"
 
 	if [ -n "${remaining}" ]
 	then
@@ -88,7 +88,7 @@ umount_gfs_filesystems() {
 	                        umount ${remaining} &>/dev/null
 	                        eend $? "Failed to unmount GFS filesystems"
 	                fi
-	                remaining="$(awk '$3 == "gfs" { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
+	                remaining="$(awk '$3 == "gfs2" { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
 	                [ -z "${remaining}" ] && break
 	                /bin/fuser -k -m ${sig} ${remaining} &>/dev/null
 	                sleep 5
@@ -120,44 +120,24 @@ unload_modules() {
 	done
 }
 
-load_gfs_modules() {
-	local modules
-	
-	# detect cluster/locking manager cman+dlm or gulm ?
-	if [ -d /proc/cluster/config/cman ]; then
-		if [ ! -d /proc/cluster/lock_dlm ]; then
-			modules="${modules} lock_dlm"
-		fi
-	else
-		if [ ! -d /proc/cluster/lock_gulm ]; then
-			modules="${modules} lock_gulm"
-		fi
+load_gfs2_modules() {
+	if [ ! -f /proc/fs/gfs2 ]; then
+		load_modules gfs2
 	fi
-	if [ ! -f /proc/fs/gfs ]; then
-		modules="${modules} gfs"
-	fi
-	load_modules ${modules}
 }
 
-unload_gfs_modules() {
-	if [ -f /proc/fs/gfs ]; then
-		modules="gfs lock_harness"
+unload_gfs2_modules() {
+	if [ -f /proc/fs/gfs2 ]; then
+		unload_modules gfs2
 	fi
-	if [ -d /proc/cluster/lock_dlm ]; then
-		modules="${modules} lock_dlm"
-	fi
-	if [ -d /proc/cluster/lock_gulm ]; then
-		modules="${modules} lock_gulm"
-	fi
-	unload_modules ${modules}
 }
 
 mountall() {
-	mount_gfs_filesystems
+	mount_gfs2_filesystems
 }
 
 start() {
-	einfo "Starting gfs cluster:"
+	einfo "Starting gfs2 cluster:"
 	
 	if [ ! -f /etc/ntp.conf ] ; then
 		eerror "Please create /etc/ntp.conf"
@@ -165,14 +145,14 @@ start() {
 		eend 1
 	fi
 	
-	load_gfs_modules
-	mount_gfs_filesystems
+	load_gfs2_modules
+	mount_gfs2_filesystems
 }
 
 stop() {
-	einfo "Stopping gfs cluster:"
+	einfo "Stopping gfs2 cluster:"
 	
-	umount_gfs_filesystems
-	unload_gfs_modules
+	umount_gfs2_filesystems
+	unload_gfs2_modules
 }
 

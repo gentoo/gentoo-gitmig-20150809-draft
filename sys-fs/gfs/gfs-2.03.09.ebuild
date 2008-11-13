@@ -1,9 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-2.02.00.ebuild,v 1.2 2008/03/17 23:12:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-2.03.09.ebuild,v 1.1 2008/11/13 19:17:40 xmerlin Exp $
 
 inherit eutils versionator
 
+CVS_RELEASE="20080323"
 CLUSTER_RELEASE="${PV}"
 MY_P="cluster-${CLUSTER_RELEASE}"
 
@@ -29,14 +30,20 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}/${PN}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+}
+
 src_compile() {
 	(cd "${WORKDIR}"/${MY_P};
 		./configure \
 			--cc=$(tc-getCC) \
 			--cflags="-Wall" \
 			--disable_kernel_check \
-			--release_major="$MAJ_PV" \
-			--release_minor="$MIN_PV" \
+			--somajor="$MAJ_PV" \
+			--sominor="$MIN_PV" \
 	) || die "configure problem"
 
 	# gfs now depeneds on gfs2, due to common mount command.
