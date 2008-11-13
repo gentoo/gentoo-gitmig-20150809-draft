@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2042 2008/11/12 21:49:24 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2043 2008/11/13 15:48:39 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Nov 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  Remove games-simulation/cultivation from p.mask. removed from tree
 
   12 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   Masking old freetype releases in preparation for removal
