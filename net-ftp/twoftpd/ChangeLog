@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/twoftpd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/ChangeLog,v 1.5 2008/01/25 23:03:22 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/ChangeLog,v 1.6 2008/11/13 13:00:27 bangert Exp $
+
+*twoftpd-1.21-r1 (13 Nov 2008)
+
+  13 Nov 2008; Thilo Bangert <bangert@gentoo.org>
+  +files/twoftpd-1.21-disable-TELNET_IAC.patch, metadata.xml,
+  +twoftpd-1.21-r1.ebuild:
+  add breakrfc patch (togglable through USE flag) which enables control
+  symbols in filenames (bug #240512)
 
   25 Jan 2008; Thilo Bangert <bangert@gentoo.org> twoftpd-1.21.ebuild:
   use emake - dont dodoc COPYING

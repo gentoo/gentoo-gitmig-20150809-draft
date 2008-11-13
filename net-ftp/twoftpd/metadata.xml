@@ -10,4 +10,8 @@
 simple, and efficient.  None of the commands can cause execution of other programs,
 and the normal model of execution does a chroot to the logged in user's
 directory immediately after authentication.</longdescription>
+	<use>
+		<flag name='breakrfc'>Break RFC compliance to allow control symbols in
+		filenames (required for some (e.g. cp1251) encodings, use with caution).</flag>
+	</use>
 </pkgmetadata>
