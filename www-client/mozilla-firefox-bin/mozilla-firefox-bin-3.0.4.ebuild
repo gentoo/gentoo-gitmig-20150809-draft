@@ -1,18 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.1_alpha2.ebuild,v 1.4 2008/09/08 16:09:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0.4.ebuild,v 1.1 2008/11/13 10:40:09 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
-#LANGS="af ar be ca cs da de el en-GB en-US es-AR es-ES eu fi fr fy-NL ga-IE gu-IN he hu id it ja ka ko ku lt mk mn nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro ru si sk sl sq sr sv-SE tr uk zh-CN zh-TW"
-#NOSHORTLANGS="en-GB es-AR pt-BR zh-CN"
-
-MY_PN="shiretoko"
-MY_PV="${PV##3.1_}"
-MY_P="${MY_PN}-${MY_PV}"
+LANGS="af ar be bg bn-IN ca cs cy da de el en-GB en-US eo es-AR es-ES eu fi fr fy-NL ga-IE gl gu-IN he hi-IN hu id is it ja ka kn ko ku lt lv mk mn mr nb-NO nl nn-NO oc pa-IN pl pt-BR pt-PT ro ru si sk sl sq sr sv-SE te th tr uk zh-CN zh-TW"
+NOSHORTLANGS="en-GB es-AR pt-BR zh-CN"
 
 DESCRIPTION="Firefox Web Browser"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/shiretoko/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/linux-i686/en-US/firefox-${PV}.tar.bz2"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip"
 
@@ -43,12 +39,10 @@ RDEPEND="x11-libs/libXrender
 	x11-libs/libXmu
 	x86? (
 		>=x11-libs/gtk+-2.2
-		>=media-libs/alsa-lib-1.0.16
 	)
 	amd64? (
 		>=app-emulation/emul-linux-x86-baselibs-1.0
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
-		>=app-emulation/emul-linux-x86-soundlibs-20080418
 		app-emulation/emul-linux-x86-compat
 	)"
 
@@ -86,7 +80,7 @@ linguas() {
 }
 
 src_unpack() {
-	unpack ${MY_P}.tar.bz2
+	unpack firefox-${PV}.tar.bz2
 
 	linguas
 	for X in ${linguas}; do
