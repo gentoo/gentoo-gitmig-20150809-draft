@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-2.03.09.ebuild,v 1.1 2008/11/13 19:03:56 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-2.03.09.ebuild,v 1.2 2008/11/13 23:35:22 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="=sys-cluster/ccs-${CLUSTER_RELEASE}*
-	=sys-cluster/openais-0.82*
+	=sys-cluster/openais-0.80.3*
 	=sys-cluster/dlm-lib-${CLUSTER_RELEASE}*
 	=sys-cluster/cman-lib-${CLUSTER_RELEASE}*
 	dev-perl/Net-Telnet
