@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.110 2008/10/20 19:10:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.111 2008/11/13 19:19:22 ranger Exp $
+
+  13 Nov 2008; Brent Baude <ranger@gentoo.org> vino-2.22.2.ebuild:
+  Marking vino-2.22.2 ppc64 stable for bug 236971
 
 *vino-2.24.1 (20 Oct 2008)
 
