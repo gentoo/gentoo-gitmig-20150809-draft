@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.21 2008/09/25 15:05:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.22 2008/11/13 19:23:18 ranger Exp $
+
+  13 Nov 2008; Brent Baude <ranger@gentoo.org> gtk-vnc-0.3.6.ebuild:
+  Marking gtk-vnc-0.3.6 ppc64 stable for bug 236971
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org> gtk-vnc-0.3.6.ebuild:
   Stable for HPPA (bug #236971).
