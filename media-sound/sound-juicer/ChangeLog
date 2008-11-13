@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.155 2008/10/30 10:54:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.156 2008/11/13 19:35:41 ranger Exp $
+
+  13 Nov 2008; Brent Baude <ranger@gentoo.org>
+  sound-juicer-2.22.0-r1.ebuild:
+  Marking sound-juicer-2.22.0-r1 ppc64 stable for bug 236971
 
   30 Oct 2008; Raúl Porcel <armin76@gentoo.org> sound-juicer-2.24.0.ebuild:
   Re-add ~ia64/~sparc wrt #241476
