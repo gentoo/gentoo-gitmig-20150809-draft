@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/kmldonkey
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.33 2008/10/17 19:03:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.34 2008/11/13 13:45:51 scarabeus Exp $
+
+  13 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> kmldonkey-2.0.2.ebuild:
+  Update kde4 ebuild so it works with current kde.
 
   17 Oct 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
   plasma USE-flag is global now
