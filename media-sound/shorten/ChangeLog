@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/shorten
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/ChangeLog,v 1.19 2007/06/08 17:04:55 aballier Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/ChangeLog,v 1.20 2008/11/13 13:59:03 fmccor Exp $
+
+  13 Nov 2008; Ferris McCormick <fmccor@gentoo.org> shorten-3.6.1.ebuild:
+  Sparc stable --- Bug #246550 --- tests pass and it works for me.
 
   08 Jun 2007; Alexis Ballier <aballier@gentoo.org>
   +files/shorten-tests.patch, shorten-3.6.0.ebuild, shorten-3.6.1.ebuild:
