@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-9999.ebuild,v 1.1 2008/11/11 19:53:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-9999.ebuild,v 1.2 2008/11/13 13:11:46 zzam Exp $
 
 EAPI="1"
 inherit eutils qt4 subversion
@@ -11,7 +11,7 @@ ESVN_REPO_URI="http://svn.berlios.de/svnroot/repos/ttcut/branches/refactor"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) =x11-libs/qt-4.3*:4 )
@@ -38,9 +38,9 @@ src_compile() {
 }
 
 src_install() {
-	dobin TTCut || die "Couldn't install TTCut"
-	make_desktop_entry TTCut TTCut "" "AudioVideo;Video;AudioVideoEditing" || \
-		die "Couldn't make TTCut desktop entry"
+	dobin ttcut || die "Couldn't install ttcut"
+	make_desktop_entry ttcut TTCut "" "AudioVideo;Video;AudioVideoEditing" || \
+		die "Couldn't make ttcut desktop entry"
 
 	dodoc AUTHORS BUGS CHANGELOG \
 		README.DE README.EN TODO || die "Couldn't install documentation"

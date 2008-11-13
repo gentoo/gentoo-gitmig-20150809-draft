@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ttcut
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.18 2008/11/11 19:53:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ChangeLog,v 1.19 2008/11/13 13:11:46 zzam Exp $
+
+  13 Nov 2008; Matthias Schwarzott <zzam@gentoo.org> ttcut-0.19.6-r1.ebuild,
+  ttcut-9999.ebuild:
+  Change name of the binary in live ebuild. The app works on amd64, so
+  keyword it ~amd64.
 
 *ttcut-9999 (11 Nov 2008)
 

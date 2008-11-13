@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r1.ebuild,v 1.8 2008/07/26 21:30:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r1.ebuild,v 1.9 2008/11/13 13:11:46 zzam Exp $
 
 EAPI="1"
 inherit eutils qt4
@@ -10,7 +10,7 @@ HOMEPAGE="http://ttcut.tritime.org/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) =x11-libs/qt-4.3* )
