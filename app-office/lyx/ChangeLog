@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.154 2008/11/10 13:35:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.155 2008/11/13 02:55:33 ranger Exp $
+
+  13 Nov 2008; Brent Baude <ranger@gentoo.org> lyx-1.6.0.ebuild:
+  keyworded ~arch for ppc64, bug 246285
 
   10 Nov 2008; Alexis Ballier <aballier@gentoo.org> lyx-1.6.0.ebuild:
   Drop ppc and ppc64 keywords (bug #246285) in order to unmask 1.6.0
