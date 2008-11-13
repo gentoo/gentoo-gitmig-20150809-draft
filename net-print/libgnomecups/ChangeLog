@@ -1,6 +1,9 @@
 # ChangeLog for net-print/libgnomecups
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.62 2008/09/25 16:17:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.63 2008/11/13 19:42:27 ranger Exp $
+
+  13 Nov 2008; Brent Baude <ranger@gentoo.org> libgnomecups-0.2.3.ebuild:
+  Marking libgnomecups-0.2.3 ppc64 stable for bug 236971
 
   25 Sep 2008; Jeroen Roovers <jer@gentoo.org> libgnomecups-0.2.3.ebuild:
   Stable for HPPA (bug #236971).
