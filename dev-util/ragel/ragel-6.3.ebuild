@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.3.ebuild,v 1.3 2008/11/05 13:55:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.3.ebuild,v 1.4 2008/11/13 03:30:32 flameeyes Exp $
 
 EAPI=2
 
@@ -15,8 +15,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc vim-syntax"
 
-DEPEND="doc? ( virtual/latex-base
-		media-gfx/transfig )"
+DEPEND="
+	doc? (
+		|| (
+			( app-text/texlive-core dev-texlive/texlive-latexextra )
+			app-text/textex
+		)
+		media-gfx/transfig
+	)"
 RDEPEND=""
 
 src_prepare() {

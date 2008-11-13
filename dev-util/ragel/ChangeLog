@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.17 2008/11/05 13:55:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.18 2008/11/13 03:30:32 flameeyes Exp $
+
+  13 Nov 2008; Diego Pettenò <flameeyes@gentoo.org> -ragel-6.2.ebuild,
+  ragel-6.3.ebuild:
+  Remove old version and add proper dependencies for texlive (for doc
+  generation), thanks to Bob Paddock for reporting.
 
   05 Nov 2008; Luca Barbato <lu_zero@gentoo.org> ragel-6.3.ebuild:
   Fix vim-syntax path
