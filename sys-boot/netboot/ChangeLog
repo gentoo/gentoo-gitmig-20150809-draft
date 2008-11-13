@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/netboot
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/netboot/ChangeLog,v 1.5 2007/01/29 08:00:12 dragonheart Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/netboot/ChangeLog,v 1.6 2008/11/13 20:02:53 bangert Exp $
+
+  13 Nov 2008; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  remove superflous whitespace from maintainer
 
 *netboot-0.10.1 (29 Jan 2007)
 
