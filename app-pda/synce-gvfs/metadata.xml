@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>pda</herd>
+<longdescription>
+This is an implementation of a gvfs backend for SynCE. Gvfs is a
+replacement for gnome-vfs, allowing applications to access a
+variety of filesystems in userspace, in this case a Windows
+Mobile device via SynCE.
+</longdescription>
+</pkgmetadata>

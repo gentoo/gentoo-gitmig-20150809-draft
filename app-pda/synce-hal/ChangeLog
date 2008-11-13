@@ -1,0 +1,12 @@
+# ChangeLog for app-pda/synce-hal
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/ChangeLog,v 1.1 2008/11/13 00:05:09 mescalinum Exp $
+
+*synce-hal-0.2 (13 Nov 2008)
+*synce-hal-0.1 (13 Nov 2008)
+
+  13 Nov 2008; Federico Ferri <mescalinum@gentoo.org> +metadata.xml,
+  +synce-hal-0.1.ebuild, +synce-hal-0.2.ebuild:
+  getting synce-0.12 into tree. ebuild coming from synce overlay, reviewed
+  and tested.
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>pda</herd>
+<longdescription>
+The latest flavour of the *dccm communication daemon, you need one
+and only one dccm running. Runned by superuser. Device connects to
+this daemon (to tcp port 5679).  The odccm anounces connection and
+disconnection events. If device requires password, it will
+broadcast "PasswordFlagsChanged" over D-Bus and clients (e.g.
+synce-gnome, synce-engine) will provide odccm the password
+</longdescription>
+</pkgmetadata>

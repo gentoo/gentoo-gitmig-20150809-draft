@@ -1,0 +1,22 @@
+#!/sbin/runscript
+
+depend() {
+	after bluetooth hald
+}
+
+
+start() {
+   	ebegin "Starting Synce"
+	ebegin "    Starting odccm"
+	start-stop-daemon --start --quiet --exec /usr/sbin/odccm
+	eend $?
+	eend 0
+}
+
+stop() {
+	ebegin "Shutting down Synce"
+	ebegin "    Stopping odccm"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/odccm
+	eend $?
+	eend 0
+}
