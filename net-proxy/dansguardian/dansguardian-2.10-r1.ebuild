@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10-r1.ebuild,v 1.4 2008/11/08 15:50:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10-r1.ebuild,v 1.5 2008/11/13 00:42:15 ranger Exp $
 
 DESCRIPTION="Web content filtering via proxy"
 HOMEPAGE="http://dansguardian.org"
@@ -8,7 +8,7 @@ SRC_URI="http://dansguardian.org/downloads/2/Stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE="clamav kaspersky debug ntlm pcre"
 
 RDEPEND="sys-libs/zlib
