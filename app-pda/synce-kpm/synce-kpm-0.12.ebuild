@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kpm/synce-kpm-0.12.ebuild,v 1.1 2008/11/13 00:09:45 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kpm/synce-kpm-0.12.ebuild,v 1.2 2008/11/13 17:02:59 mescalinum Exp $
 
 inherit distutils
 
@@ -24,9 +24,9 @@ DEPEND="dev-python/pygobject
 		~app-pda/synce-librtfcomp-1.1
 		dev-python/PyQt4"
 
-SRC_URI="mirror://sourceforge/synce/synce-kpm-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
 pkg_postinst() {
-	einfo "If you want SynCE-KPM to manage partnerships, please emerge synce-sync-engine"
-	einfo "now.  You can start synce-sync-engine before or after starting SynCE-KPM."
+	elog "If you want SynCE-KPM to manage partnerships, please emerge synce-sync-engine"
+	elog "now.  You can start synce-sync-engine before or after starting SynCE-KPM."
 }
