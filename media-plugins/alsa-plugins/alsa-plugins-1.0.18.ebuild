@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.18.ebuild,v 1.1 2008/11/13 00:39:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.18.ebuild,v 1.2 2008/11/13 12:30:00 flameeyes Exp $
 
 EAPI=2
 
@@ -51,10 +51,10 @@ src_configure() {
 	use debug || append-flags -DNDEBUG
 
 	econf \
-		$(use_with ffmpeg avcodec) \
-		$(use_with jack) \
-		$(use_with libsamplerate samplerate) \
-		$(use_with pulseaudio) \
+		$(use_enable ffmpeg avcodec) \
+		$(use_enable jack) \
+		$(use_enable libsamplerate samplerate) \
+		$(use_enable pulseaudio) \
 		$(use_with speex speex lib) \
 		--disable-dependency-tracking \
 		|| die "econf failed"
