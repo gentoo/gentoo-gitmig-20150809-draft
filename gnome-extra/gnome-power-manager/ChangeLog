@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.98 2008/11/11 15:05:16 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.99 2008/11/13 19:45:58 ranger Exp $
+
+  13 Nov 2008; Brent Baude <ranger@gentoo.org>
+  gnome-power-manager-2.22.1.ebuild:
+  Marking gnome-power-manager-2.22.1 ppc64 stable for bug 236971
 
   11 Nov 2008; Daniel Gryniewicz <dang@gentoo.org>
   gnome-power-manager-2.22.1.ebuild:
