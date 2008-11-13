@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.12.ebuild,v 1.7 2008/11/09 01:20:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.12.ebuild,v 1.8 2008/11/13 19:45:28 ranger Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ekiga.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="avahi dbus doc gnome sdl"
 
 RDEPEND="~dev-libs/pwlib-1.10.$[${PV##*.}-2]
