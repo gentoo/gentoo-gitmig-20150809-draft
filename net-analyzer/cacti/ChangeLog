@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.147 2008/11/01 18:46:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.148 2008/11/13 02:40:55 ranger Exp $
+
+  13 Nov 2008; Brent Baude <ranger@gentoo.org> cacti-0.8.7b-r3.ebuild:
+  stable ppc64, bug 244956
 
   01 Nov 2008; nixnut <nixnut@gentoo.org> cacti-0.8.7b-r3.ebuild:
   Stable on ppc wrt bug 244956
