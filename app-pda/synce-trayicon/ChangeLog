@@ -1,6 +1,15 @@
 # ChangeLog for app-pda/synce-trayicon
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/ChangeLog,v 1.17 2008/05/21 12:48:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/ChangeLog,v 1.18 2008/11/13 06:32:47 mescalinum Exp $
+
+*synce-trayicon-0.12 (13 Nov 2008)
+*synce-trayicon-0.11 (13 Nov 2008)
+
+  13 Nov 2008; Federico Ferri <mescalinum@gentoo.org>
+  +files/automake-1.9.patch, +synce-trayicon-0.11.ebuild,
+  +synce-trayicon-0.12.ebuild:
+  getting synce-0.12 into tree. ebuild coming from synce overlay, reviewed
+  and tested.
 
   21 May 2008; Samuli Suominen <drac@gentoo.org>
   synce-trayicon-0.9.0.ebuild:

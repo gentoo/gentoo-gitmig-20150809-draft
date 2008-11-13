@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/dynamite
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/dynamite/ChangeLog,v 1.11 2007/02/21 22:53:56 peper Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/dynamite/ChangeLog,v 1.12 2008/11/13 06:29:50 mescalinum Exp $
+
+*dynamite-0.1.1 (13 Nov 2008)
+
+  13 Nov 2008; Federico Ferri <mescalinum@gentoo.org>
+  +dynamite-0.1.1.ebuild:
+  getting synce-0.12 into tree. ebuild coming from synce overlay, reviewed
+  and tested.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
