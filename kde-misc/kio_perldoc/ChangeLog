@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kio_perldoc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_perldoc/ChangeLog,v 1.1 2008/06/16 23:58:34 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_perldoc/ChangeLog,v 1.2 2008/11/13 13:59:16 scarabeus Exp $
+
+  13 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> kio_perldoc-0.9.ebuild:
+  Update ebuild, so it works with current kde4.
 
 *kio_perldoc-0.9 (16 Jun 2008)
 
