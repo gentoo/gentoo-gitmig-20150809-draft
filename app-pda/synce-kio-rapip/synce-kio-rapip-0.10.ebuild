@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kio-rapip/synce-kio-rapip-0.10.ebuild,v 1.1 2008/11/13 00:07:29 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kio-rapip/synce-kio-rapip-0.10.ebuild,v 1.2 2008/11/13 16:59:40 mescalinum Exp $
 
 inherit eutils distutils
 
@@ -28,13 +28,13 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc README TODO ChangeLog
 }
 
 pkg_postinst() {
-	einfo "To use, simply open Konqueror, Dolphin, or any other KIO-enabled file"
-	einfo "manager and type in rapip://DEVICENAME/ to the address bar. If you are"
-	einfo "not sure about the name of your device, simply go to rapip:/ which"
-	einfo "will show the first device it finds."
+	elog "To use, simply open Konqueror, Dolphin, or any other KIO-enabled file"
+	elog "manager and type in rapip://DEVICENAME/ to the address bar. If you are"
+	elog "not sure about the name of your device, simply go to rapip:/ which"
+	elog "will show the first device it finds."
 }
