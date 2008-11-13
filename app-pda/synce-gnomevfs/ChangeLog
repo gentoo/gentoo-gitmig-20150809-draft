@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/synce-gnomevfs
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.14 2008/02/10 16:25:42 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/ChangeLog,v 1.15 2008/11/13 06:13:12 mescalinum Exp $
+
+*synce-gnomevfs-0.12 (13 Nov 2008)
+*synce-gnomevfs-0.11.1 (13 Nov 2008)
+
+  13 Nov 2008; Federico Ferri <mescalinum@gentoo.org>
+  +synce-gnomevfs-0.11.1.ebuild, +synce-gnomevfs-0.12.ebuild:
+  getting synce-0.12 into tree. ebuild coming from synce overlay, reviewed
+  and tested.
 
   10 Feb 2008; Wulf C. Krueger <philantrop@gentoo.org>
   synce-gnomevfs-0.9.0.ebuild:

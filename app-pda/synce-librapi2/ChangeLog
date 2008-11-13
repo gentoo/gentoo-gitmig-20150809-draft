@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/synce-librapi2
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.24 2007/10/06 19:23:07 dertobi123 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.25 2008/11/13 06:15:06 mescalinum Exp $
+
+*synce-librapi2-0.12 (13 Nov 2008)
+*synce-librapi2-0.11.1 (13 Nov 2008)
+
+  13 Nov 2008; Federico Ferri <mescalinum@gentoo.org>
+  +synce-librapi2-0.11.1.ebuild, +synce-librapi2-0.12.ebuild:
+  getting synce-0.12 into tree. ebuild coming from synce overlay, reviewed
+  and tested.
 
   06 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   synce-librapi2-0.9.1.ebuild:

@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/synce-serial
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-serial/ChangeLog,v 1.17 2007/02/09 00:47:26 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-serial/ChangeLog,v 1.18 2008/11/13 06:18:49 mescalinum Exp $
+
+*synce-serial-0.11 (13 Nov 2008)
+
+  13 Nov 2008; Federico Ferri <mescalinum@gentoo.org>
+  +synce-serial-0.11.ebuild:
+  getting synce-0.12 into tree. ebuild coming from synce overlay, reviewed
+  and tested.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
