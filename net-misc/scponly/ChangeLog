@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.37 2008/01/23 13:34:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.38 2008/11/13 22:47:23 sbriesen Exp $
+
+*scponly-4.8-r1 (13 Nov 2008)
+
+  13 Nov 2008; Stefan Briesenick <sbriesen@gentoo.org> metadata.xml,
+  +scponly-4.8-r1.ebuild:
+  complete cleanup of ebuild, adding many new use-flags (bug #209579),
+  reworked chroot setup (bug #246514), respect LDFLAGS (bug #209800).
 
   23 Jan 2008; MATSUU Takuto <matsuu@gentoo.org>
   -files/scponly-4.3-getopt.patch, -files/scponly-4.6-helper.patch,
