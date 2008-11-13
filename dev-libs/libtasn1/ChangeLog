@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.73 2008/11/13 17:48:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.74 2008/11/13 18:16:36 dragonheart Exp $
+
+  13 Nov 2008; Daniel Black <dragonheart@gentoo.org> -libtasn1-1.6.ebuild:
+  removed - no longer has libtasn1-config that gnutls (and probably others) need
 
 *libtasn1-1.6 (13 Nov 2008)
 
