@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-2.02.00.ebuild,v 1.4 2008/03/21 22:50:08 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-2.03.09.ebuild,v 1.1 2008/11/13 23:36:42 xmerlin Exp $
 
 inherit eutils linux-mod linux-info versionator
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-DEPEND=">=virtual/linux-sources-2.6.20"
+DEPEND=">=virtual/linux-sources-2.6.27"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}/${PN}"
@@ -56,8 +56,6 @@ src_compile() {
 			--cflags="-Wall" \
 			--kernel_src="${KERNEL_DIR}" \
 			--disable_kernel_check \
-			--release_major="$MAJ_PV" \
-			--release_minor="$MIN_PV" \
 	) || die "configure problem"
 
 	(cd "${S}"/src/gfs;
