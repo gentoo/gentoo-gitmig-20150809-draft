@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-lib/dlm-lib-2.02.00.ebuild,v 1.1 2008/03/17 16:26:21 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-lib/dlm-lib-2.03.09.ebuild,v 1.1 2008/11/13 19:02:22 xmerlin Exp $
 
-inherit eutils versionator
+inherit eutils linux-mod linux-info versionator
 
 CLUSTER_RELEASE="${PV}"
 MY_P="cluster-${CLUSTER_RELEASE}"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=sys-kernel/linux-headers-2.6.23
+DEPEND=">=sys-kernel/linux-headers-2.6.24
 	!sys-cluster/dlm-headers
 	!sys-cluster/dlm-kernel
 	"
@@ -38,7 +38,6 @@ src_unpack() {
 	#	/\tinstall/s/install/& -m 0644/' \
 	#	man/Makefile || die "failed patching man pages permission"
 
-	epatch "${FILESDIR}"/${P}-include.patch || die
 }
 
 src_compile() {
@@ -47,14 +46,15 @@ src_compile() {
 			--cc=$(tc-getCC) \
 			--cflags="-Wall" \
 			--disable_kernel_check \
-			--release_major="$MAJ_PV" \
-			--release_minor="$MIN_PV" \
+			--kernel_src=${KERNEL_DIR} \
+			--somajor="$MAJ_PV" \
+			--sominor="$MIN_PV" \
 			--cmanlibdir=/usr/lib \
 			--cmanincdir=/usr/include \
 	) || die "configure problem"
 
 	#emake clean || die "clean problem"
-	emake || die "compile problem"
+	emake -j1 || die "compile problem"
 }
 
 src_install() {

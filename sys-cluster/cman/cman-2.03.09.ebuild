@@ -1,10 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-2.02.00-r1.ebuild,v 1.1 2008/03/23 16:10:53 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-2.03.09.ebuild,v 1.1 2008/11/13 18:56:17 xmerlin Exp $
 
 inherit eutils versionator
 
-CVS_RELEASE="20080323"
 CLUSTER_RELEASE="${PV}"
 MY_P="cluster-${CLUSTER_RELEASE}"
 
@@ -13,9 +12,7 @@ MIN_PV="$(get_version_component_range 2).$(get_version_component_range 3)"
 
 DESCRIPTION="general-purpose symmetric cluster manager"
 HOMEPAGE="http://sources.redhat.com/cluster/"
-SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz
-	mirror://gentoo/gfs-${PV}-${CVS_RELEASE}-cvs.patch.bz2
-	http://dev.gentoo.org/~xmerlin/gfs/gfs-${PV}-${CVS_RELEASE}-cvs.patch.bz2"
+SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -50,9 +47,6 @@ src_unpack() {
 		/\tinstall/s/install/& -m 0644/' \
 		man/Makefile || die "failed patching man pages permission"
 
-	(cd "${WORKDIR}"/${MY_P};
-		epatch "${WORKDIR}"/gfs-2.02.00-20080323-cvs.patch || die
-	)
 }
 
 src_compile() {
@@ -97,7 +91,7 @@ pkg_postinst() {
 	einfo ""
 	einfo "Please add a cluster.conf in /etc/cluster/"
 	einfo ""
-	einfo "If you want to use cman and dlm 2.0x.00"
+	einfo "If you want to use cman and dlm 2.xx.xx"
 	einfo "with 2.6.20 kernels you have to patch your"
 	einfo "kernel sources with:"
 	einfo "http://dev.gentoo.org/~xmerlin/gfs/dlm-gfs-2.6.20.patch.bz2"
