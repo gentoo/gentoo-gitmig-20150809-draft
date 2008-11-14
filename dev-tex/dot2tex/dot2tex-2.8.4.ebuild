@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/dot2tex-2.8.4.ebuild,v 1.1 2008/09/26 11:27:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/dot2tex-2.8.4.ebuild,v 1.2 2008/11/14 11:00:57 aballier Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dot2tex.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="doc examples"
 
 DEPEND=""
