@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.11.9.3.ebuild,v 1.6 2008/11/14 21:08:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.11.9.3.ebuild,v 1.7 2008/11/14 21:42:48 robbat2 Exp $
 
 inherit eutils webapp depend.php
 
@@ -29,7 +29,7 @@ pkg_setup() {
 		eerror "${PHP_PKG} needs to be re-installed with all of the following"
 		eerror "USE flags enabled:"
 		eerror
-		eerror "ctype pcre session unicode"
+		eerror "crypt ctype pcre session unicode"
 		eerror
 		eerror "as well as any of the following USE flags enabled:"
 		eerror
