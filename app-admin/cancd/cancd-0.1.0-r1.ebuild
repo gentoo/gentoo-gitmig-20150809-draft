@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0-r1.ebuild,v 1.3 2007/01/04 21:31:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0-r1.ebuild,v 1.4 2008/11/14 15:00:41 flameeyes Exp $
 
 inherit eutils
 
@@ -25,12 +25,12 @@ src_unpack() {
 }
 
 src_compile() {
-	emake cancd
+	emake cancd || die "emake failed"
 }
 
 src_install() {
 	into /usr
-	dosbin cancd
+	dosbin cancd || die "dosbin failed"
 	newinitd ${FILESDIR}/cancd-init.d cancd
 	newconfd ${FILESDIR}/cancd-conf.d cancd
 	newinitd ${FILESDIR}/netconsole-init.d netconsole
