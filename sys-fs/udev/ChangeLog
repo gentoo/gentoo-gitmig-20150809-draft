@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.415 2008/11/06 09:13:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.416 2008/11/14 16:49:02 zzam Exp $
+
+*udev-132 (14 Nov 2008)
+
+  14 Nov 2008; Matthias Schwarzott <zzam@gentoo.org> +udev-132.ebuild:
+  Version bumped. Changed minimal version for reliable operation to Kernel
+  2.6.19. Improved code to restart udevd and moved it to an extra function,
+  see Bug #129204 for this.
 
   06 Nov 2008; Matthias Schwarzott <zzam@gentoo.org>
   -files/udev-start-122.sh,
