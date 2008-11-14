@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-pywbxml/synce-pywbxml-0.1.ebuild,v 1.1 2008/11/13 06:37:54 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-pywbxml/synce-pywbxml-0.1.ebuild,v 1.2 2008/11/14 17:27:15 mescalinum Exp $
 
 inherit eutils
 
@@ -19,3 +19,8 @@ MY_P="pywbxml-${PV}"
 SRC_URI="mirror://sourceforge/synce/${MY_P}.tar.gz"
 
 S="${WORKDIR}/${MY_P}"
+
+src_install() {
+	emake DESTDIR="${D}" install || die
+	dodoc ChangeLog NEWS README AUTHORS
+}
