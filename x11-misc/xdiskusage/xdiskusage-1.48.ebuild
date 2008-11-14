@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48.ebuild,v 1.7 2007/08/02 13:26:20 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48.ebuild,v 1.8 2008/11/14 19:04:09 coldwind Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="x11-libs/fltk"
+DEPEND="x11-libs/fltk:1.1"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
