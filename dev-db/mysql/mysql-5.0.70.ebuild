@@ -1,11 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.70.ebuild,v 1.3 2008/11/14 09:24:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.70.ebuild,v 1.4 2008/11/14 09:42:28 robbat2 Exp $
 
 MY_EXTRAS_VER="20080601"
 SERVER_URI="http://mirror.provenscaling.com/mysql/enterprise/source/5.0/${P}.tar.gz"
 
 inherit toolchain-funcs mysql
+# only to make repoman happy. it is really set in the eclass
+IUSE="$IUSE"
 
 # REMEMBER: also update eclass/mysql*.eclass before committing!
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
@@ -18,7 +20,7 @@ EPATCH_EXCLUDE=''
 # and create your own mysql-extras tarball, looking at 000_index.txt
 
 src_test() {
-	emake -j1 check || die "make check failed"
+	emake check || die "make check failed"
 	if ! use "minimal" ; then
 		if [[ $UID -eq 0 ]]; then
 			die "Testing with FEATURES=-userpriv is no longer supported by upstream. Tests MUST be run as non-root."

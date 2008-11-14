@@ -1,11 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.23_alpha20070101-r61.ebuild,v 1.3 2008/03/10 02:58:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.23_alpha20070101-r61.ebuild,v 1.4 2008/11/14 09:42:28 robbat2 Exp $
 
 MY_EXTRAS_VER="latest"
 SERVER_URI="mirror://gentoo/MySQL-${PV%.*}/mysql-${PV//_alpha/-bk-}.tar.bz2"
 
 inherit mysql
+# only to make repoman happy. it is really set in the eclass
+IUSE="$IUSE"
 
 # REMEMBER: also update eclass/mysql*.eclass before committing!
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"

@@ -1,10 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.44-r1.ebuild,v 1.8 2008/05/29 19:36:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.44-r1.ebuild,v 1.9 2008/11/14 09:42:28 robbat2 Exp $
 
 MY_EXTRAS_VER="20070710"
 
 inherit toolchain-funcs mysql
+# only to make repoman happy. it is really set in the eclass
+IUSE="$IUSE"
 
 # REMEMBER: also update eclass/mysql*.eclass before committing!
 KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
