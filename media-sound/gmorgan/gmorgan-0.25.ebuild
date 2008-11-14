@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.25.ebuild,v 1.2 2007/07/06 17:45:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.25.ebuild,v 1.3 2008/11/14 10:18:14 aballier Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -14,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 
-RDEPEND=">=x11-libs/fltk-1.1.2
+RDEPEND=">=x11-libs/fltk-1.1.2:1.1
 	>=media-libs/alsa-lib-0.9.0"
 
 DEPEND="${RDEPEND}

@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.23.ebuild,v 1.5 2006/11/07 17:29:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.23.ebuild,v 1.6 2008/11/14 10:18:14 aballier Exp $
+
+EAPI=1
 
 WANT_AUTOMAKE=1.9
 WANT_AUTOCONF=2.5
@@ -17,7 +19,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 sparc x86"
 
-RDEPEND=">=x11-libs/fltk-1.1.2
+RDEPEND=">=x11-libs/fltk-1.1.2:1.1
 	>=media-libs/alsa-lib-0.9.0"
 
 DEPEND="${RDEPEND}
