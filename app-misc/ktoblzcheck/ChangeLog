@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.58 2008/11/13 23:41:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.59 2008/11/14 13:20:40 fmccor Exp $
+
+  14 Nov 2008; Ferris McCormick <fmccor@gentoo.org> ktoblzcheck-1.17.ebuild:
+  Sparc stable for Bug #245438, test passes but I have no way of using it.
 
 *ktoblzcheck-1.19 (13 Nov 2008)
 
