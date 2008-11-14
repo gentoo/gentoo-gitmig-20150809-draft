@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.2.1-r3.ebuild,v 1.2 2007/10/01 20:04:25 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.2.1-r3.ebuild,v 1.3 2008/11/14 10:45:31 aballier Exp $
+
+EAPI=1
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 #IUSE="oss alsa jack mmx"
 IUSE="oss alsa jack"
 
-DEPEND=">=x11-libs/fltk-1.1.2
+DEPEND=">=x11-libs/fltk-1.1.2:1.1
 	=sci-libs/fftw-3*
 	jack? ( media-sound/jack-audio-connection-kit )
 	>=dev-libs/mini-xml-2.2.1"
