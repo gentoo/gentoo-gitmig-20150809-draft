@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.0.ebuild,v 1.3 2007/08/24 14:21:01 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.0.ebuild,v 1.4 2008/11/14 18:43:38 coldwind Exp $
+
+EAPI=1
 
 inherit eutils games
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/fltk
+RDEPEND="x11-libs/fltk:1.1
 	dev-games/ode
 	media-libs/alsa-lib
 	virtual/opengl
