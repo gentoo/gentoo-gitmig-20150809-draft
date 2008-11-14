@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/files/README.gentoo-r3,v 1.1 2008/07/04 13:33:42 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/files/README.gentoo-r3,v 1.2 2008/11/14 11:07:55 hanno Exp $
 
 Follow these instructions to finish setting up mailman. This file and the
 original ebuild were tweaked by me <lamer@gentoo.org> but were graciously
@@ -131,7 +131,7 @@ like (Derived from, and in part taken from cpanel):
 
 mailman_virtual_router:
 	driver = accept
-	require_files = /var/lib/mailman/lists/${lc::local_part}/config.pck
+	require_files = /var/lib/mailman/lists/${lc::$local_part}/config.pck
 	local_part_suffix_optional
 	local_part_suffix = -admin     : \
 						-bounces   : -bounces+* : \
@@ -158,7 +158,7 @@ http://wiki.exim.org/FAQ/General_Debugging/Q0060 for more information.
 
 This should be modified if you're using the vhosts USE flag, specifically you
 need to modify the location of the config.pck file, to be
-${lc::local_part}-${lc::domain} instead of simply ${lc::local_part}, and for the
+${lc::$local_part}-${lc::$domain} instead of simply ${lc::$local_part}, and for the
 transport you need to change the last part of the command in the same fashion.
 
 Other Helpful things to know...
