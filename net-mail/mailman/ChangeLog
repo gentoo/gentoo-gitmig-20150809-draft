@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.114 2008/08/14 17:23:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.115 2008/11/14 11:07:45 hanno Exp $
+
+  14 Nov 2008; Hanno Boeck <hanno@gentoo.org> files/README.gentoo-r3:
+  Typos in exim doc, thanks to Martin DiViaio in #244545.
 
   14 Aug 2008; nixnut <nixnut@gentoo.org> ChangeLog:
   Stable on ppc wrt bug 233920
