@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyfltk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.5 2008/05/10 09:29:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.6 2008/11/14 17:42:09 coldwind Exp $
+
+  14 Nov 2008; Santiago M. Mola <coldwind@gentoo.org> pyfltk-1.1.2.ebuild:
+  Restrict fltk dependency to SLOT 1.1 (bug #246445).
 
   10 May 2008; nixnut <nixnut@gentoo.org> pyfltk-1.1.2.ebuild:
   Stable on ppc wrt bug 221081

@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.2.ebuild,v 1.5 2008/05/10 09:29:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.2.ebuild,v 1.6 2008/11/14 17:42:09 coldwind Exp $
+
+EAPI=1
 
 inherit eutils distutils
 
@@ -17,9 +19,9 @@ KEYWORDS="amd64 ppc x86"
 IUSE="doc opengl"
 
 DEPEND=">=dev-lang/swig-1.3.29
-	>=x11-libs/fltk-1.1.7"
+	>=x11-libs/fltk-1.1.7:1.1"
 
-RDEPEND=">=x11-libs/fltk-1.1.7"
+RDEPEND=">=x11-libs/fltk-1.1.7:1.1"
 
 S="${WORKDIR}/${MY_P}"
 
