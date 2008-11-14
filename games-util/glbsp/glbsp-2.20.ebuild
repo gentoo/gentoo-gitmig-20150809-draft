@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/glbsp-2.20.ebuild,v 1.2 2008/02/29 19:51:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/glbsp-2.20.ebuild,v 1.3 2008/11/14 18:48:23 coldwind Exp $
+
+EAPI=1
 
 inherit eutils toolchain-funcs versionator
 
@@ -14,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="fltk"
 
-DEPEND="fltk? ( x11-libs/fltk )"
+DEPEND="fltk? ( x11-libs/fltk:1.1 )"
 
 src_unpack() {
 	unpack ${A}
