@@ -109,36 +109,6 @@ index 76d25ef..ecb1cae 100644
  
    case 31:
  
-diff --git a/src/parse-gram.y b/src/parse-gram.y
-index a1740e7..cae4fb7 100644
---- a/src/parse-gram.y
-+++ b/src/parse-gram.y
-@@ -252,11 +252,11 @@
-       code_props_translate_code (&action);
-       gram_scanner_last_string_free ();
-       muscle_code_grow ("initial_action", action.code, @2);
-       code_scanner_last_string_free ();
-     }
--| "%language" STRING		{ language_argmatch ($2, 1, &@1); }
-+| "%language" STRING		{ language_argmatch ($2, grammar_prio, &@1); }
- | "%lex-param" "{...}"		{ add_param ("lex_param", $2, @2); }
- | "%locations"                  { locations_flag = true; }
- | "%name-prefix" STRING         { spec_name_prefix = $2; }
- | "%name-prefix" "=" STRING     { spec_name_prefix = $3; } /* deprecated */
- | "%no-lines"                   { no_lines_flag = true; }
-@@ -298,11 +298,11 @@
-             }
-           strcpy (skeleton_build + dir_length, skeleton_user);
-           skeleton_user = uniqstr_new (skeleton_build);
-           free (skeleton_build);
-         }
--      skeleton_arg (skeleton_user, 1, &@1);
-+      skeleton_arg (skeleton_user, grammar_prio, &@1);
-     }
- | "%token-table"                { token_table_flag = true; }
- | "%verbose"                    { report_flag |= report_states; }
- | "%yacc"                       { yacc_flag = true; }
- | /*FIXME: Err?  What is this horror doing here? */ ";"
 
 From 58bd33b7fc5d13fbd4b61404e1e878ab3b3c16da Mon Sep 17 00:00:00 2001
 From: Joel E. Denny <jdenny@ces.clemson.edu>
