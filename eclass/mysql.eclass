@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.97 2008/10/16 18:48:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.98 2008/11/14 01:46:24 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -352,8 +352,15 @@ configure_40_41_50() {
 	else
 		myconf="${myconf} $(use_with ssl openssl)"
 	fi
-
-	if use berkdb ; then
+	
+	if mysql_version_is_at_least "5.0.60" ; then
+			if use berkdb ; then
+				elog "Berkeley DB support was disabled due to build failures"
+				elog "on multiple arches, go to a version earlier than 5.0.60"
+				elog "if you want it again. Gentoo bug #224067."
+			fi
+			myconf="${myconf} --without-berkeley-db"
+	elif use berkdb ; then
 		# The following fix is due to a bug with bdb on SPARC's. See:
 		# http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
 		# It comes down to non-64-bit safety problems.
