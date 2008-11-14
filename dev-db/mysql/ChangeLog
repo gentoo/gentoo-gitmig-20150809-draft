@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.461 2008/11/14 01:49:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.462 2008/11/14 02:16:25 robbat2 Exp $
+
+  14 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> files/my.cnf-4.0,
+  files/my.cnf-4.1:
+  Another instance for bug #237058.
 
   14 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> files/my.cnf:
   Bug #237058, use innodb_file_per_table by default to avoid innodb massive
