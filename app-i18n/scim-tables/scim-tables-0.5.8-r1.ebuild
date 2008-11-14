@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.8-r1.ebuild,v 1.3 2008/11/13 06:19:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.8-r1.ebuild,v 1.4 2008/11/14 11:29:05 matsuu Exp $
 
 inherit kde-functions eutils base autotools
 
@@ -30,7 +30,7 @@ PATCHES=(
 )
 
 pkg_setup() {
-	if ! built_with_use '>=app-i18n/scim-1.4.0' gtk ; then
+	if ! has_version '>=app-i18n/scim-1.4.7-r2' && ! built_with_use '>=app-i18n/scim-1.4.0' gtk ; then
 		eerror ">=app-i18n/scim-1.4.0 with gtk USE flag is required by ${PF}."
 #		die "Please reemerge >=app-i18n/scim-1.4.0 with USE=\"gtk\"."
 	fi
@@ -50,9 +50,9 @@ src_unpack() {
 
 	cd "${S}"
 	sed -i -e "/^SUBDIRS/s/.*/SUBDIRS = ${use_languages}/g" \
-			tables/Makefile.am || die "sed ${m} failed"
+			tables/Makefile.{am,in} || die "sed ${m} failed"
 
-	eautoreconf
+	AT_NO_RECURSIVE=yes AT_M4DIR=${S}/m4 eautoreconf
 }
 
 src_compile() {
