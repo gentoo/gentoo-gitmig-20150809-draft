@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/l7-protocols
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.55 2008/05/03 09:26:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/ChangeLog,v 1.56 2008/11/14 11:19:29 pva Exp $
+
+*l7-protocols-2008.11.08 (14 Nov 2008)
+
+  14 Nov 2008; Peter Volkov <pva@gentoo.org>
+  +l7-protocols-2008.11.08.ebuild:
+  Version bump, bug #246633, thank cilly for report.
 
 *l7-protocols-2008.04.23 (03 May 2008)
 
