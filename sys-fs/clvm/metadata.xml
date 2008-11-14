@@ -6,7 +6,5 @@
   <email>ha-cluster@gentoo.org</email>
 </maintainer>
 <use>
-	<flag name='nocman'>Allow users to build clvm without cman support and with
-		gulm support</flag>
 </use>
 </pkgmetadata>

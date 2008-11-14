@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/clvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.24 2008/08/22 20:16:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.25 2008/11/14 09:10:43 xmerlin Exp $
+
+*clvm-2.02.36 (14 Nov 2008)
+
+  14 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org> metadata.xml,
+  -clvm-2.01.15.ebuild, -clvm-2.02.09.ebuild, -clvm-2.02.33.ebuild,
+  +clvm-2.02.36.ebuild:
+  Ebuild cleanup, version bump.
+
+  14 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org> metadata.xml,
+  clvm-2.01.15.ebuild, clvm-2.02.09.ebuild:
+  Removed gulm support which is deprecated.
 
   22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

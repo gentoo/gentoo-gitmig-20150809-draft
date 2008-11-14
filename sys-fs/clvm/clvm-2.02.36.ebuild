@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.02.33.ebuild,v 1.2 2008/03/29 15:42:27 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.02.36.ebuild,v 1.1 2008/11/14 09:10:43 xmerlin Exp $
 
 inherit eutils multilib
 
@@ -62,7 +62,11 @@ src_compile() {
 	myconf="${myconf} --with-mirrors=internal"
 	myconf="${myconf} --with-snapshots=internal"
 
-	myconf="${myconf} --with-lvm1=none"
+	if use lvm1 ; then
+		myconf="${myconf} --with-lvm1=${buildmode}"
+	else
+		myconf="${myconf} --with-lvm1=none"
+	fi
 
 	# disable O_DIRECT support on hppa, breaks pv detection (#99532)
 	use hppa && myconf="${myconf} --disable-o_direct"
