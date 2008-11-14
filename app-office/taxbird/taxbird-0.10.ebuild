@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.10.ebuild,v 1.4 2007/09/08 20:06:41 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.10.ebuild,v 1.5 2008/11/14 16:01:15 flameeyes Exp $
 
 inherit eutils fdo-mime flag-o-matic
 
@@ -26,8 +26,6 @@ pkg_setup() {
 		eerror "This package requires dev-scheme/guile with USE=\"discouraged deprecated regex\"."
 		die "Please reemerge dev-scheme/guile with USE=\"discouraged deprecated regex\"."
 	fi
-
-	filter-ldflags -Wl,--as-needed --as-needed
 }
 
 src_compile() {

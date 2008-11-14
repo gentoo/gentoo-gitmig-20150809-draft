@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.11.ebuild,v 1.1 2008/01/23 21:20:22 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.11.ebuild,v 1.2 2008/11/14 16:01:15 flameeyes Exp $
 
-inherit eutils fdo-mime flag-o-matic
+inherit eutils fdo-mime autotools
 
 DESCRIPTION="Taxbird provides a GUI to submit tax forms to the german digital tax project ELSTER."
 HOMEPAGE="http://www.taxbird.de/"
@@ -26,13 +26,15 @@ pkg_setup() {
 		eerror "This package requires dev-scheme/guile with USE=\"discouraged deprecated regex\"."
 		die "Please reemerge dev-scheme/guile with USE=\"discouraged deprecated regex\"."
 	fi
-
-	filter-ldflags -Wl,--as-needed --as-needed
 }
 
-src_compile() {
-	econf || die "Configure failed!"
-	emake || die "Make failed!"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+
+	eautoreconf
 }
 
 src_install() {
