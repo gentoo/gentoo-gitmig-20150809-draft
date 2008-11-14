@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.9.2_p48.ebuild,v 1.1 2008/11/13 06:37:12 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.9.2_p48.ebuild,v 1.2 2008/11/14 17:40:21 mescalinum Exp $
 
 inherit eutils
 
@@ -23,11 +23,11 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-src_compile()
+src_unpack()
 {
+	unpack ${A}
+	cd "${S}"
 	eautoreconf
-	econf || die "Configuration failed"
-	emake || die "Compilation failed"
 }
 
 src_install()
