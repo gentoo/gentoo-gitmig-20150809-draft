@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-2.03.09.ebuild,v 1.1 2008/11/13 23:36:42 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-2.03.09.ebuild,v 1.2 2008/11/14 00:00:30 xmerlin Exp $
 
 inherit eutils linux-mod linux-info versionator
 
@@ -68,7 +68,6 @@ src_install() {
 		emake DESTDIR="${D}" module_dir="${D}"/lib/modules/${KV_FULL} install \
 	) || die "install problem"
 
-	dodoc "${FILESDIR}"/gfs-kernel-locking-symbol.patch || die
 }
 
 pkg_postinst() {
@@ -76,8 +75,5 @@ pkg_postinst() {
 
 	einfo ""
 	einfo "Please remember to re-emerge ${PN} when you upgrade your kernel!"
-	einfo ""
-	einfo "To use this kernel module you have to path your kernel with"
-	einfo "/usr/share/doc/${P}/gfs-kernel-locking-symbol.patch (bug #210495)"
 	einfo ""
 }
