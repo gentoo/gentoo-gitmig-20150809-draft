@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.4-r1.ebuild,v 1.7 2008/11/12 08:07:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.4-r1.ebuild,v 1.8 2008/11/14 01:56:09 darkside Exp $
 
-inherit eutils xfce44 python multilib
+inherit eutils xfce44 python multilib autotools
 
 XFCE_VERSION=4.4.2
 xfce44
@@ -41,6 +41,8 @@ src_unpack() {
 	sed -i -e 's:-Werror::g' "${S}"/configure
 	epatch "${FILESDIR}"/${P}-eject.patch
 	epatch "${FILESDIR}"/${P}-remove-libmd5.patch
+	# eautoreconf would be preferred here but automake fails, bug #246480
+	eautoconf
 }
 
 # See bug 164780 for reference
