@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/gnurobots
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/ChangeLog,v 1.12 2008/04/03 04:52:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/ChangeLog,v 1.13 2008/11/14 15:34:46 tupone Exp $
+
+*gnurobots-1.2.0 (14 Nov 2008)
+
+  14 Nov 2008; <alfredo@gentoo.org> +gnurobots-1.2.0.ebuild:
+  Version bump to 1.2.0 Bug #229293 by Jens-Uwe Peter
 
   03 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org>
   gnurobots-1.0d.ebuild:
