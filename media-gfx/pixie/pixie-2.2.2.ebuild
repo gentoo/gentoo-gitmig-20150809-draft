@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.2.ebuild,v 1.7 2008/11/02 06:36:37 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-2.2.2.ebuild,v 1.8 2008/11/14 19:01:06 coldwind Exp $
+
+EAPI=1
 
 inherit eutils multilib autotools
 
@@ -22,7 +24,7 @@ RDEPEND="media-libs/jpeg
 	 sys-libs/zlib
 	 media-libs/tiff
 	 openexr? ( media-libs/openexr )
-	 fltk? ( x11-libs/fltk )
+	 fltk? ( x11-libs/fltk:1.1 )
 	 X? ( x11-libs/libXext )"
 
 src_unpack() {
