@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.33-r1.ebuild,v 1.2 2008/02/25 00:55:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.33-r1.ebuild,v 1.3 2008/11/14 09:21:53 robbat2 Exp $
 
 inherit eutils multilib
 
@@ -12,12 +12,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="readline static clvm cman gulm lvm1 selinux"
+IUSE="readline static clvm cman lvm1 selinux"
 
 DEPEND=">=sys-fs/device-mapper-1.02.24
 		clvm? ( >=sys-cluster/dlm-1.01.00
-			cman? ( >=sys-cluster/cman-1.01.00 )
-			gulm? ( >=sys-cluster/gulm-1.00.00 ) )"
+			cman? ( >=sys-cluster/cman-1.01.00 ) )"
 
 RDEPEND="${DEPEND}
 	!sys-fs/lvm-user
@@ -76,8 +75,7 @@ src_compile() {
 		# 4-state!
 		local clvmd="none"
 		use cman && clvmd="cman"
-		use gulm && clvmd="${clvmd}gulm"
-		clvmd="${clvmd/cmangulm/all}"
+		#clvmd="${clvmd/cmangulm/all}"
 		myconf="${myconf} --with-clvmd=${clvmd}"
 		myconf="${myconf} --with-pool=${buildmode}"
 	else
