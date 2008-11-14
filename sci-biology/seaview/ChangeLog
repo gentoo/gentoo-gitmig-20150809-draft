@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/seaview
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.25 2008/08/26 15:08:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.26 2008/11/14 19:31:29 ribosome Exp $
+
+  14 Nov 2008; Olivier Fisette <ribosome@gentoo.org>
+  seaview-20071113.ebuild:
+  Restricted dependency to x11-libs/fltk:1.1 (see bug #207107).
 
   26 Aug 2008; Olivier Fisette <ribosome@gentoo.org>
   seaview-20071113.ebuild:

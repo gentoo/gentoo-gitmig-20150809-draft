@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20071113.ebuild,v 1.3 2008/08/26 15:08:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20071113.ebuild,v 1.4 2008/11/14 19:31:29 ribosome Exp $
+
+EAPI="1"
 
 inherit toolchain-funcs multilib
 
@@ -16,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="x11-libs/fltk
+DEPEND="x11-libs/fltk:1.1
 	=media-libs/pdflib-7*
 	sci-biology/clustalw
 	sci-biology/muscle"
