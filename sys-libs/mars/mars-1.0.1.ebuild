@@ -1,14 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/mars/mars-08.06.26.ebuild,v 1.1 2008/08/23 13:27:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/mars/mars-1.0.1.ebuild,v 1.1 2008/11/14 12:06:05 lu_zero Exp $
 
 inherit autotools
 
+MY_P=${P/mars/mars-src}
+
 DESCRIPTION="Multicore Application Runtime System"
 HOMEPAGE="ftp://ftp.infradead.org/pub/Sony-PS3/mars/"
-SRC_URI="ftp://ftp.infradead.org/pub/Sony-PS3/mars/${P}.tar.gz"
+SRC_URI="ftp://ftp.infradead.org/pub/Sony-PS3/mars/1.0.1/${MY_P}.tar.gz"
 
-LICENSE="MARS"
+LICENSE="MIT_Plus MIT"
 SLOT="0"
 KEYWORDS="~ppc64"
 IUSE=""
@@ -16,14 +18,14 @@ IUSE=""
 DEPEND="sys-libs/libspe2"
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}/${MY_P}/core"
+
 src_unpack () {
 	unpack ${A}
 	cd "${S}"
-	# repeat after me: "dummy triplet are bogus"
-	sed -i -e "s:ppu-::" -e "s:spu:spu-elf:g" \
-		-e "s:embedspu-elf:embedspu:" src/mpu/configure.ac || die
-	sed -i -e "s:ppu:${CHOST}:" src/host/configure.ac || die
-	sed -i -e "s:spu/include:spu-elf/include:" include/Makefile.am || die
+	# repeat after me: "dummy tuples are bogus"
+	sed -i -e "s:/spu:/spu-elf:" \
+		   -e "s:--host=spu:--host=spu-elf:" configure.ac
 	eautoreconf
 }
 
@@ -31,7 +33,7 @@ src_compile () {
 	unset CFLAGS
 	unset CXXFLAGS
 	unset CFLAGS_ppc64
-	econf || die
+	econf --with-mars-platform=cell || die
 	emake || die
 }
 
