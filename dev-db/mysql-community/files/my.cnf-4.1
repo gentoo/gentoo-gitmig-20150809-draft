@@ -1,5 +1,5 @@
 # /etc/mysql/my.cnf: The global mysql configuration file.
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/files/my.cnf-4.1,v 1.1 2006/11/23 13:58:06 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/files/my.cnf-4.1,v 1.2 2008/11/14 03:34:01 robbat2 Exp $
 
 # The following options will be passed to all MySQL clients
 [client]
@@ -121,6 +121,7 @@ set-variable = innodb_log_files_in_group=2
 # see the innodb config docs, the other options are not always safe
 innodb_flush_log_at_trx_commit = 1
 innodb_lock_wait_timeout = 50
+innodb_file_per_table
 
 [mysqldump]
 quick
