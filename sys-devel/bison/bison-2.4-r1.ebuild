@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4-r1.ebuild,v 1.1 2008/11/12 18:47:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4-r1.ebuild,v 1.2 2008/11/14 07:54:36 vapier Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -20,9 +20,9 @@ RDEPEND="sys-devel/m4"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# fix compatibility with previous bison releases
-	epatch "${FILESDIR}"/${PN}-2.4.0-compat.patch
+	epatch "${FILESDIR}"/${P}-compat.patch
+	# since we patch sources, update mtimes on docs so we dont regen
+	touch doc/bison.1 doc/bison.info doc/cross-options.texi
 }
 
 src_compile() {
