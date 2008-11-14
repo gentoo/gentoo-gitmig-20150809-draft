@@ -1,12 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.14_beta-r1.ebuild,v 1.2 2007/01/12 18:10:16 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-community/mysql-community-5.1.14_beta-r1.ebuild,v 1.3 2008/11/14 09:43:04 robbat2 Exp $
 
 MY_EXTRAS_VER="20070105"
 SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
 PBXT_VERSION="0.9.73-beta"
 
 inherit mysql
+# only to make repoman happy. it is really set in the eclass
+IUSE="$IUSE"
 
 # REMEMBER: also update eclass/mysql*.eclass before committing!
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
@@ -26,7 +28,7 @@ src_test() {
 		addpredict /this-dir-does-not-exist/t9.MYI
 
 		# mysqladmin start before dir creation
-		mkdir ${S}/mysql-test/var{,/log}
+		mkdir "${S}"/mysql-test/var{,/log}
 
 		if [[ ${UID} -eq 0 ]] ; then
 			mysql_disable_test  "im_cmd_line"          "fail as root"
