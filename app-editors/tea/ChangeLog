@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/tea
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.41 2008/09/05 21:34:37 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.42 2008/11/14 12:26:43 armin76 Exp $
+
+  14 Nov 2008; Raúl Porcel <armin76@gentoo.org> -tea-17.4.1.ebuild,
+  -tea-17.5.0.ebuild, -tea-17.5.1.ebuild, -tea-17.5.4.ebuild,
+  -tea-17.6.0.ebuild, tea-17.6.6.ebuild:
+  x86 stable, remove old
 
   05 Sep 2008; Santiago M. Mola <coldwind@gentoo.org> tea-17.6.3.ebuild:
   amd64 stable wrt bug #219907
