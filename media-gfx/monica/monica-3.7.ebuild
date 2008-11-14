@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/monica-3.7.ebuild,v 1.1 2008/10/20 23:18:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/monica-3.7.ebuild,v 1.2 2008/11/14 20:59:15 robbat2 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
-DEPEND="x11-libs/fltk"
+DEPEND="<x11-libs/fltk-2"
 RDEPEND="x11-apps/xgamma
 		 ${DEPEND}"
 

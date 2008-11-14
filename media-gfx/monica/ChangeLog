@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/monica
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/ChangeLog,v 1.2 2008/10/20 23:18:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/ChangeLog,v 1.3 2008/11/14 20:59:15 robbat2 Exp $
+
+  14 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> monica-3.6.ebuild,
+  monica-3.7.ebuild:
+  Ensure fltk-1 is brought in for Monica.
 
 *monica-3.7 (20 Oct 2008)
 
