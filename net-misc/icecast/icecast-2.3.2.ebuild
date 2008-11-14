@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.2.ebuild,v 1.7 2008/11/12 21:48:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.2.ebuild,v 1.8 2008/11/14 10:22:00 armin76 Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.xiph.org/releases/icecast/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="+speex +ssl +theora +yp"
 
 #Although there is a --with-ogg and --with-orbis configure option, they're
