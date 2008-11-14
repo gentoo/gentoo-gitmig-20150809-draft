@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.11.ebuild,v 1.1 2008/11/13 06:32:47 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.11.ebuild,v 1.2 2008/11/14 17:45:28 mescalinum Exp $
 
 inherit eutils subversion gnome2
 
@@ -25,7 +25,6 @@ DEPEND="sys-apps/dbus
 		~app-pda/synce-librra-0.11.1
 		~app-pda/synce-librapi2-0.11.1"
 
-WANT_AUTOMAKE=1.9
 SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
 src_unpack() {
@@ -45,5 +44,12 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
 	gnome2_icon_cache_update
 }
