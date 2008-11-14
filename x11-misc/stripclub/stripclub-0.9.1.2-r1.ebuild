@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/stripclub-0.9.1.2-r1.ebuild,v 1.2 2007/12/26 22:49:42 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/stripclub-0.9.1.2-r1.ebuild,v 1.3 2008/11/14 19:06:49 coldwind Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -15,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc x86"
 IUSE=""
 
-DEPEND=">=x11-libs/fltk-1.1.4
+DEPEND=">=x11-libs/fltk-1.1.4:1.1
 		>=dev-libs/libpcre-5.0
 		>=media-libs/libpng-1.2.8
 		>=media-libs/jpeg-6b-r4
