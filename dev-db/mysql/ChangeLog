@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.459 2008/08/05 16:30:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.460 2008/11/14 01:06:12 robbat2 Exp $
+
+*mysql-5.0.70 (14 Nov 2008)
+
+  14 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.0.70.ebuild:
+  Version bump using the straight patchset from 5.0.60 to aid security.
+  Later revisions will contain new patches. Please note that
+  FEATURES=usersandbox may cause very weird src_test failures.
 
   05 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
