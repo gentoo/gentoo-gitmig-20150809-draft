@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-2.3.2.ebuild,v 1.3 2008/04/21 03:00:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-2.3.2.ebuild,v 1.4 2008/11/14 01:42:53 robbat2 Exp $
 
 inherit eutils
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=sys-devel/gcc-3"
-RDEPEND="${DEPEND}
-		>=virtual/mysql-4.0"
+RDEPEND=">=virtual/mysql-4.0"
+DEPEND="${RDEPEND}
+		>=sys-devel/gcc-3"
 
 src_unpack() {
 	unpack ${A}
