@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.136 2008/11/01 18:43:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.137 2008/11/14 00:54:09 fmccor Exp $
+
+*tor-0.2.0.31-r1 (14 Nov 2008)
+
+  14 Nov 2008; Ferris McCormick <fmccor@gentoo.org>
+  +files/tor-0.2.0.31-sparc.patch, +tor-0.2.0.31-r1.ebuild:
+  Add new version to address sparc alignment problem, Bug #246483 which see
+  for details.
 
   01 Nov 2008; nixnut <nixnut@gentoo.org> tor-0.2.0.31.ebuild:
   Stable on ppc wrt bug 244679
