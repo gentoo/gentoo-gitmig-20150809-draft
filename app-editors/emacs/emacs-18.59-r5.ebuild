@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r5.ebuild,v 1.5 2008/11/07 08:43:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r5.ebuild,v 1.6 2008/11/14 09:11:43 ulm Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -22,6 +22,11 @@ DEPEND="${RDEPEND}"
 
 MY_BASEDIR="/usr/share/emacs/${PV}"
 MY_LOCKDIR="/var/lib/emacs/lock"
+
+pkg_setup() {
+	use X && built_with_use x11-libs/libX11 xcb \
+		&& die "${P} requires x11-libs/libX11 built with USE=-xcb"
+}
 
 src_unpack() {
 	unpack ${A}
