@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.2.1-r4.ebuild,v 1.2 2008/11/14 10:45:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.2.1-r4.ebuild,v 1.3 2008/11/14 10:50:16 aballier Exp $
 
 EAPI=2
 
@@ -52,7 +52,7 @@ src_compile() {
 #	use portaudio && LINUX_AUDIOOUT=PA
 #	use mmx && ASM_F2I=YES
 
-	cd ${S}/src
+	cd "${S}/src"
 	make \
 		FFTW_VERSION=${FFTW_VERSION} \
 		ASM_F2I=${ASM_F2I} \
@@ -61,16 +61,16 @@ src_compile() {
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		CXX="$(tc-getCXX)" \
 		|| die "compile failed"
-	cd ${S}/ExternalPrograms/Spliter
+	cd "${S}/ExternalPrograms/Spliter"
 	./compile.sh
-	cd ${S}/ExternalPrograms/Controller
+	cd "${S}/ExternalPrograms/Controller"
 	./compile.sh
 }
 
 src_install() {
-	dobin ${S}/src/zynaddsubfx
-	dobin ${S}/ExternalPrograms/Spliter/spliter
-	dobin ${S}/ExternalPrograms/Controller/controller
+	dobin "${S}/src/zynaddsubfx"
+	dobin "${S}/ExternalPrograms/Spliter/spliter"
+	dobin "${S}/ExternalPrograms/Controller/controller"
 	dodoc ChangeLog FAQ.txt HISTORY.txt README.txt ZynAddSubFX.lsm bugs.txt
 
 	for i in "Arpeggios" "Bass" "Brass" "Choir and Voice" "Drums" \
