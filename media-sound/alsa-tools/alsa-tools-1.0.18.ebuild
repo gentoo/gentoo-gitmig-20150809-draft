@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.18.ebuild,v 1.2 2008/11/13 00:00:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.18.ebuild,v 1.3 2008/11/14 03:33:31 flameeyes Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -85,7 +85,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${PN}-1.0.14-asneeded.patch"
 	epatch "${FILESDIR}/${PN}-1.0.18-asneeded.patch"
 
 	for dir in echomixer envy24control rmedigicontrol; do
@@ -94,6 +93,11 @@ src_unpack() {
 		eautomake
 		popd &> /dev/null
 	done
+
+	pushd hdspmixer &> /dev/null
+	sed -i -e '/AM_PATH_GTK/d' configure.in
+	eautoreconf
+	popd &> /dev/null
 
 	elibtoolize
 }
