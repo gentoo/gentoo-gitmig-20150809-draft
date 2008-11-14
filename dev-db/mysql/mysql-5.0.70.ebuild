@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.70.ebuild,v 1.1 2008/11/14 01:06:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.70.ebuild,v 1.2 2008/11/14 02:20:21 robbat2 Exp $
 
 MY_EXTRAS_VER="20080601"
 SERVER_URI="http://mirror.provenscaling.com/mysql/enterprise/source/5.0/${P}.tar.gz"
@@ -18,7 +18,7 @@ EPATCH_EXCLUDE=''
 # and create your own mysql-extras tarball, looking at 000_index.txt
 
 src_test() {
-	make check || die "make check failed"
+	emake -j1 check || die "make check failed"
 	if ! use "minimal" ; then
 		if [[ $UID -eq 0 ]]; then
 			die "Testing with FEATURES=-userpriv is no longer supported by upstream. Tests MUST be run as non-root."
