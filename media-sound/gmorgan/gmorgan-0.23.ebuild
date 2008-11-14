@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.23.ebuild,v 1.6 2008/11/14 10:18:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.23.ebuild,v 1.7 2008/11/14 10:23:38 aballier Exp $
 
 EAPI=1
 
@@ -35,6 +35,6 @@ src_unpack() {
 }
 
 src_install() {
-	make prefix=${D}/usr localedir=${D}/usr/share/locale install || die
+	make prefix="${D}/usr" localedir="${D}/usr/share/locale" install || die
 	dodoc AUTHORS NEWS README
 }

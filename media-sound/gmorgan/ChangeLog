@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gmorgan
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.21 2008/11/14 10:18:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.22 2008/11/14 10:23:38 aballier Exp $
+
+  14 Nov 2008; Alexis Ballier <aballier@gentoo.org> gmorgan-0.22-r1.ebuild,
+  gmorgan-0.23.ebuild, gmorgan-0.25.ebuild, gmorgan-0.25-r1.ebuild:
+  variable quoting
 
   14 Nov 2008; Alexis Ballier <aballier@gentoo.org> gmorgan-0.22-r1.ebuild,
   gmorgan-0.23.ebuild, gmorgan-0.25.ebuild, gmorgan-0.25-r1.ebuild:
