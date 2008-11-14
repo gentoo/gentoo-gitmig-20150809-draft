@@ -1,6 +1,10 @@
 # ChangeLog for app-text/flpsed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.17 2008/10/04 13:57:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.18 2008/11/14 10:01:05 aballier Exp $
+
+  14 Nov 2008; Alexis Ballier <aballier@gentoo.org> -flpsed-0.3.7.ebuild,
+  -flpsed-0.5.0.ebuild:
+  remove old
 
   04 Oct 2008; Markus Meier <maekke@gentoo.org> flpsed-0.5.1.ebuild:
   amd64/x86 stable, bug #226875
