@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.24 2008/11/12 21:06:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.25 2008/11/14 19:42:14 armin76 Exp $
+
+  14 Nov 2008; Raúl Porcel <armin76@gentoo.org> openresolv-2.0.ebuild:
+  alpha/arm/ia64/x86 stable wrt #246537
 
   12 Nov 2008; Ferris McCormick <fmccor@gentoo.org> openresolv-2.0.ebuild:
   Sparc stable and HOMEPAGE, SRC_URI updated, Bug #246537.
