@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.22 2008/11/14 11:59:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.23 2008/11/14 13:56:56 graaff Exp $
 #
 # Author: Rob Cakebread <pythonhead@gentoo.org>
 # Current Maintainer: Ruby Herd <ruby@gentoo.org>
@@ -65,10 +65,10 @@ gems_src_install() {
 	fi
 
 	dodir ${GEMSDIR}
-	
-	local gte13=$(/usr/bin/${ruby_version} -rubygems -e 'puts Gem::RubyGemsVersion >= "1.3.0"')
 
-	if [[ "${gte13}" == "true" ]] ; then 
+	local gte13=$(${RUBY} -rubygems -e 'puts Gem::RubyGemsVersion >= "1.3.0"')
+
+	if [[ "${gte13}" == "true" ]] ; then
 		gem install ${GEM_SRC} --version ${PV} ${myconf} \
 		--local --install-dir "${D}/${GEMSDIR}" --sandbox-fix \
 		|| die "gem (>=1.3.0) install failed"
