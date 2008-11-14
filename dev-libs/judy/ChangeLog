@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/judy
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.22 2008/11/11 20:19:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.23 2008/11/14 12:18:32 armin76 Exp $
+
+  14 Nov 2008; Raúl Porcel <armin76@gentoo.org> judy-1.0.4.ebuild:
+  ia64 stable wrt #244246
 
   11 Nov 2008; Jeroen Roovers <jer@gentoo.org> judy-1.0.4.ebuild:
   Marked ~hppa (bug #245413).
