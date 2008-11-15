@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.41.2.ebuild,v 1.7 2008/11/09 09:48:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.41.2.ebuild,v 1.8 2008/11/15 09:42:00 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -22,7 +22,6 @@ DEPEND="nls? ( sys-devel/gettext )
 src_compile() {
 	export LDCONFIG=/bin/true
 	export CC=$(tc-getCC)
-	export STRIP=/bin/true
 
 	# We want to use the "bsd" libraries while building on Darwin, but while
 	# building on other Gentoo/*BSD we prefer elf-naming scheme.
@@ -37,15 +36,14 @@ src_compile() {
 		$(use_enable !elibc_uclibc tls) \
 		$(use_enable nls) \
 		|| die
-	emake || die
+	emake STRIP=/bin/true || die
 }
 
 src_install() {
 	export LDCONFIG=/bin/true
 	export CC=$(tc-getCC)
-	export STRIP=/bin/true
 
-	emake DESTDIR="${D}" install || die
+	emake STRIP=/bin/true DESTDIR="${D}" install || die
 
 	dodir /$(get_libdir)
 	local lib slib
