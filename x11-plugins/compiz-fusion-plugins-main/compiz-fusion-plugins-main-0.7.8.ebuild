@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-main/compiz-fusion-plugins-main-0.7.8.ebuild,v 1.2 2008/10/27 22:50:39 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-fusion-plugins-main/compiz-fusion-plugins-main-0.7.8.ebuild,v 1.3 2008/11/15 02:11:41 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -14,7 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gnome"
-RESTRICT="mirror"
 
 RDEPEND="
 	>=gnome-base/librsvg-2.14.0
