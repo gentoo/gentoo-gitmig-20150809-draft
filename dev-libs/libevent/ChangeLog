@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.91 2008/11/13 00:41:28 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.92 2008/11/15 17:47:31 armin76 Exp $
+
+  15 Nov 2008; Raúl Porcel <armin76@gentoo.org> libevent-1.4.7.ebuild:
+  alpha/arm/ia64/x86 stable wrt #246277
 
   13 Nov 2008; Thomas Anderson <gentoofan23@gentoo.org>
   libevent-1.4.7.ebuild:
