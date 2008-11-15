@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old/madwifi-old-0.0.1417.20060128.ebuild,v 1.3 2007/08/29 18:54:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old/madwifi-old-0.0.1417.20060128.ebuild,v 1.4 2008/11/15 16:31:48 pva Exp $
 
 inherit linux-mod eutils
 
@@ -8,8 +8,8 @@ MY_P=${PN}-r${PV:4:4}-${PV:9:10}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Driver for Atheros based IEEE 802.11a/b/g wireless LAN cards"
-HOMEPAGE="http://www.madwifi.org/"
-SRC_URI="http://snapshots.madwifi.org/madwifi-old/${MY_P}.tar.gz"
+HOMEPAGE="http://www.madwifi-project.org/"
+SRC_URI="http://snapshots.madwifi-project.org/madwifi-old/${MY_P}.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"

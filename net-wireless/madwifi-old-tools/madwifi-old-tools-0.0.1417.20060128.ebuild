@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old-tools/madwifi-old-tools-0.0.1417.20060128.ebuild,v 1.1 2006/07/09 18:17:58 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old-tools/madwifi-old-tools-0.0.1417.20060128.ebuild,v 1.2 2008/11/15 16:32:31 pva Exp $
 
 inherit toolchain-funcs
 
@@ -8,8 +8,8 @@ MY_P=${PN/-tools/}-r${PV:4:4}-${PV:9:10}
 S=${WORKDIR}/${MY_P}/tools
 
 DESCRIPTION="Tools for configuration of Atheros based IEEE 802.11a/b/g wireless LAN cards"
-HOMEPAGE="http://www.madwifi.org/"
-SRC_URI="http://snapshots.madwifi.org/madwifi-old/${MY_P}.tar.gz"
+HOMEPAGE="http://www.madwifi-project.org/"
+SRC_URI="http://snapshots.madwifi-project.org/madwifi-old/${MY_P}.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"

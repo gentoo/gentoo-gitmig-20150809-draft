@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/madwifi-old
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old/ChangeLog,v 1.6 2008/08/23 05:25:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-old/ChangeLog,v 1.7 2008/11/15 16:31:48 pva Exp $
+
+  15 Nov 2008; Peter Volkov <pva@gentoo.org>
+  madwifi-old-0.0.1417.20060128.ebuild:
+  madwifi.org changed to madwifi-project.org, bug #246289, thank hitachi for
+  report.
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

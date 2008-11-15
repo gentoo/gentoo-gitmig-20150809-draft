@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/madwifi-ng-tools-0.9.3.3.ebuild,v 1.4 2007/10/26 13:52:55 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/madwifi-ng-tools-0.9.3.3.ebuild,v 1.5 2008/11/15 16:30:30 pva Exp $
 
 inherit toolchain-funcs
 
@@ -8,7 +8,7 @@ MY_P=${PN/-ng-tools/}-${PV}
 S=${WORKDIR}/${MY_P}/tools
 
 DESCRIPTION="Next Generation tools for configuration of Atheros based IEEE 802.11a/b/g wireless LAN cards"
-HOMEPAGE="http://www.madwifi.org/"
+HOMEPAGE="http://www.madwifi-project.org/"
 SRC_URI="mirror://sourceforge/madwifi/madwifi-${PV}.tar.bz2"
 
 LICENSE="|| ( BSD GPL-2 )"
