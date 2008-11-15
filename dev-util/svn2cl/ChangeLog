@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/svn2cl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/ChangeLog,v 1.5 2008/11/10 06:50:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/ChangeLog,v 1.6 2008/11/15 12:08:04 maekke Exp $
+
+  15 Nov 2008; Markus Meier <maekke@gentoo.org> svn2cl-0.9.ebuild:
+  amd64/x86 stable, bug #228987
 
 *svn2cl-0.10 (10 Nov 2008)
 
