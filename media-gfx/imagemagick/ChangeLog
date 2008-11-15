@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.310 2008/10/27 23:07:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.311 2008/11/15 07:34:54 pva Exp $
+
+  15 Nov 2008; Peter Volkov <pva@gentoo.org> imagemagick-6.4.4.6-r1.ebuild:
+  ~mips back, bug #242236.
 
   27 Oct 2008; Brent Baude <ranger@gentoo.org> imagemagick-6.4.4.6.ebuild,
   imagemagick-6.4.4.6-r1.ebuild:
