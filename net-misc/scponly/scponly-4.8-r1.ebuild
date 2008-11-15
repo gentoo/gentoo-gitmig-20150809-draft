@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r1.ebuild,v 1.3 2008/11/13 23:02:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r1.ebuild,v 1.4 2008/11/15 16:04:33 sbriesen Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -238,14 +238,18 @@ pkg_config() {
 	for BIN in ${BINARIES}; do
 		einfo "Install ${BIN}"
 		install -o0 -g0 -m0755 -d "${myhome}$(dirname ${BIN})"
-		install "${BIN}" "${myhome}/${BIN}"
+		if [ "${BIN}" = "/bin/passwd" ]; then  # needs suid
+			install -p -o0 -g0 -m04711 "${BIN}" "${myhome}/${BIN}"
+		else
+			install -p -o0 -g0 -m0755 "${BIN}" "${myhome}/${BIN}"
+		fi
 	done
 
 	# install libs
 	for LIB in ${LIB_LIST}; do
 		einfo "Install ${LIB}"
 		install -o0 -g0 -m0755 -d "${myhome}$(dirname ${LIB})"
-		install "${LIB}" "${myhome}/${LIB}"
+		install -p -o0 -g0 -m0755 "${LIB}" "${myhome}/${LIB}"
 	done
 
 	# create ld.so.conf
@@ -282,12 +286,4 @@ pkg_config() {
 			sed -n "s|^\(${myuser}:[^:]*:[^:]*:\).*|\1|p" /etc/group
 		) > "${myhome}/etc/group"
 	fi
-
-	# fix permissions
-	#chown 0:0 "${myhome}"
-	#for DIR in .ssh .unison .subversion; do
-	#	if [ -d "${myhome}/${DIR}" ]; then
-	#		chown 0:0 "${myhome}/${DIR}"
-	#	fi
-	#done
 }

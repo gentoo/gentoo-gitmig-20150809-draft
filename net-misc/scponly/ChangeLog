@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/scponly
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.40 2008/11/13 23:02:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.41 2008/11/15 16:04:33 sbriesen Exp $
+
+  15 Nov 2008; Stefan Briesenick <sbriesen@gentoo.org>
+  scponly-4.8-r1.ebuild:
+  install /bin/passwd as suid
 
   13 Nov 2008; Stefan Briesenick <sbriesen@gentoo.org>
   scponly-4.8-r1.ebuild:
