@@ -1,0 +1,178 @@
+=== modified file 'etc/conf/Makefile.am'
+--- etc/conf/Makefile.am	2008-11-15 09:57:13 +0000
++++ etc/conf/Makefile.am	2008-11-15 10:44:26 +0000
+@@ -18,7 +18,7 @@
+ include $(top_srcdir)/paths.am
+ 
+ VE0CONFIG = 0.conf
+-VECONFIG  = ve-light.conf-sample ve-vps.basic.conf-sample
++VECONFIG  = ve-light.conf-sample ve-vps.basic.conf-sample ve-unlimited.conf-sample
+ 
+ if ARCH_IA64
+ VECONFIG_EXT = .ia64
+
+=== added file 'etc/conf/ve-unlimited.conf-sample.ia64'
+--- etc/conf/ve-unlimited.conf-sample.ia64	1970-01-01 00:00:00 +0000
++++ etc/conf/ve-unlimited.conf-sample.ia64	2008-11-15 10:43:49 +0000
+@@ -0,0 +1,50 @@
++#  Copyright (C) 2000-2008, Parallels, Inc. All rights reserved.
++#
++#  This program is free software; you can redistribute it and/or modify
++#  it under the terms of the GNU General Public License as published by
++#  the Free Software Foundation; either version 2 of the License, or
++#  (at your option) any later version.
++#
++#  This program is distributed in the hope that it will be useful,
++#  but WITHOUT ANY WARRANTY; without even the implied warranty of
++#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++#  GNU General Public License for more details.
++#
++#  You should have received a copy of the GNU General Public License
++#  along with this program; if not, write to the Free Software
++#  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
++#
++
++VERSION="2"
++
++ONBOOT="no"
++
++# UBC parameters (in form of barrier:limit)
++# Primary parameters
++AVNUMPROC="9223372036854775807:9223372036854775807"
++NUMPROC="9223372036854775807:9223372036854775807"
++NUMTCPSOCK="9223372036854775807:9223372036854775807"
++NUMOTHERSOCK="9223372036854775807:9223372036854775807"
++VMGUARPAGES="9223372036854775807:9223372036854775807"
++# Secondary parameters
++KMEMSIZE="9223372036854775807:9223372036854775807"
++TCPSNDBUF="9223372036854775807:9223372036854775807"
++TCPRCVBUF="9223372036854775807:9223372036854775807"
++OTHERSOCKBUF="9223372036854775807:9223372036854775807"
++DGRAMRCVBUF="9223372036854775807:9223372036854775807"
++OOMGUARPAGES="9223372036854775807:9223372036854775807"
++# Auxiliary parameters
++LOCKEDPAGES="9223372036854775807:9223372036854775807"
++SHMPAGES="9223372036854775807:9223372036854775807"
++PRIVVMPAGES="9223372036854775807:9223372036854775807"
++NUMFILE="9223372036854775807:9223372036854775807"
++NUMFLOCK="9223372036854775807:9223372036854775807"
++NUMPTY="9223372036854775807:9223372036854775807"
++NUMSIGINFO="9223372036854775807:9223372036854775807"
++DCACHESIZE="9223372036854775807:9223372036854775807"
++
++PHYSPAGES="9223372036854775807:9223372036854775807"
++NUMIPTENT="9223372036854775807:9223372036854775807"
++
++# Disk quota parameters (in form of softlimit:hardlimit)
++DISK_QUOTA="no"
+
+=== added file 'etc/conf/ve-unlimited.conf-sample.x86'
+--- etc/conf/ve-unlimited.conf-sample.x86	1970-01-01 00:00:00 +0000
++++ etc/conf/ve-unlimited.conf-sample.x86	2008-11-15 10:43:15 +0000
+@@ -0,0 +1,50 @@
++#  Copyright (C) 2000-2008, Parallels, Inc. All rights reserved.
++#
++#  This program is free software; you can redistribute it and/or modify
++#  it under the terms of the GNU General Public License as published by
++#  the Free Software Foundation; either version 2 of the License, or
++#  (at your option) any later version.
++#
++#  This program is distributed in the hope that it will be useful,
++#  but WITHOUT ANY WARRANTY; without even the implied warranty of
++#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++#  GNU General Public License for more details.
++#
++#  You should have received a copy of the GNU General Public License
++#  along with this program; if not, write to the Free Software
++#  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
++#
++
++VERSION="2"
++
++ONBOOT="no"
++
++# UBC parameters (in form of barrier:limit)
++# Primary parameters
++AVNUMPROC="2147483647:2147483647"
++NUMPROC="2147483647:2147483647"
++NUMTCPSOCK="2147483647:2147483647"
++NUMOTHERSOCK="2147483647:2147483647"
++VMGUARPAGES="2147483647:2147483647"
++# Secondary parameters
++KMEMSIZE="2147483647:2147483647"
++TCPSNDBUF="2147483647:2147483647"
++TCPRCVBUF="2147483647:2147483647"
++OTHERSOCKBUF="2147483647:2147483647"
++DGRAMRCVBUF="2147483647:2147483647"
++OOMGUARPAGES="2147483647:2147483647"
++# Auxiliary parameters
++LOCKEDPAGES="2147483647:2147483647"
++SHMPAGES="2147483647:2147483647"
++PRIVVMPAGES="2147483647:2147483647"
++NUMFILE="2147483647:2147483647"
++NUMFLOCK="2147483647:2147483647"
++NUMPTY="2147483647:2147483647"
++NUMSIGINFO="2147483647:2147483647"
++DCACHESIZE="2147483647:2147483647"
++
++PHYSPAGES="2147483647:2147483647"
++NUMIPTENT="2147483647:2147483647"
++
++# Disk quota parameters (in form of softlimit:hardlimit)
++DISK_QUOTA="no"
+
+=== added file 'etc/conf/ve-unlimited.conf-sample.x86_64'
+--- etc/conf/ve-unlimited.conf-sample.x86_64	1970-01-01 00:00:00 +0000
++++ etc/conf/ve-unlimited.conf-sample.x86_64	2008-11-15 10:43:59 +0000
+@@ -0,0 +1,50 @@
++#  Copyright (C) 2000-2008, Parallels, Inc. All rights reserved.
++#
++#  This program is free software; you can redistribute it and/or modify
++#  it under the terms of the GNU General Public License as published by
++#  the Free Software Foundation; either version 2 of the License, or
++#  (at your option) any later version.
++#
++#  This program is distributed in the hope that it will be useful,
++#  but WITHOUT ANY WARRANTY; without even the implied warranty of
++#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++#  GNU General Public License for more details.
++#
++#  You should have received a copy of the GNU General Public License
++#  along with this program; if not, write to the Free Software
++#  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
++#
++
++VERSION="2"
++
++ONBOOT="no"
++
++# UBC parameters (in form of barrier:limit)
++# Primary parameters
++AVNUMPROC="9223372036854775807:9223372036854775807"
++NUMPROC="9223372036854775807:9223372036854775807"
++NUMTCPSOCK="9223372036854775807:9223372036854775807"
++NUMOTHERSOCK="9223372036854775807:9223372036854775807"
++VMGUARPAGES="9223372036854775807:9223372036854775807"
++# Secondary parameters
++KMEMSIZE="9223372036854775807:9223372036854775807"
++TCPSNDBUF="9223372036854775807:9223372036854775807"
++TCPRCVBUF="9223372036854775807:9223372036854775807"
++OTHERSOCKBUF="9223372036854775807:9223372036854775807"
++DGRAMRCVBUF="9223372036854775807:9223372036854775807"
++OOMGUARPAGES="9223372036854775807:9223372036854775807"
++# Auxiliary parameters
++LOCKEDPAGES="9223372036854775807:9223372036854775807"
++SHMPAGES="9223372036854775807:9223372036854775807"
++PRIVVMPAGES="9223372036854775807:9223372036854775807"
++NUMFILE="9223372036854775807:9223372036854775807"
++NUMFLOCK="9223372036854775807:9223372036854775807"
++NUMPTY="9223372036854775807:9223372036854775807"
++NUMSIGINFO="9223372036854775807:9223372036854775807"
++DCACHESIZE="9223372036854775807:9223372036854775807"
++
++PHYSPAGES="9223372036854775807:9223372036854775807"
++NUMIPTENT="9223372036854775807:9223372036854775807"
++
++# Disk quota parameters (in form of softlimit:hardlimit)
++DISK_QUOTA="no"
+
