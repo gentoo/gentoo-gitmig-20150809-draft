@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/compizconfig-python-0.7.8.ebuild,v 1.2 2008/10/27 22:42:38 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/compizconfig-python-0.7.8.ebuild,v 1.3 2008/11/15 01:59:20 jmbsvicetto Exp $
 
 DESCRIPTION="Compizconfig Python Bindings"
 HOMEPAGE="http://compiz-fusion.org"
@@ -10,7 +10,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="mirror"
 
 DEPEND="
 	>=dev-lang/python-2.4
