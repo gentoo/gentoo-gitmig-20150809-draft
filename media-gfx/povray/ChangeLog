@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/povray
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.90 2008/11/14 16:01:18 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.91 2008/11/15 16:36:13 maekke Exp $
+
+  15 Nov 2008; Markus Meier <maekke@gentoo.org> povray-3.6.1-r4.ebuild:
+  amd64/x86 stable, bug #245981
 
   14 Nov 2008; Joe Peterson <lavajoe@gentoo.org>
   povray-3.7.0_beta29-r1.ebuild:
