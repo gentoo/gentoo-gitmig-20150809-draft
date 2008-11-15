@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-pinyin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.29 2008/11/13 06:23:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.30 2008/11/15 17:52:20 armin76 Exp $
+
+  15 Nov 2008; Raúl Porcel <armin76@gentoo.org>
+  scim-pinyin-0.5.91-r2.ebuild:
+  alpha/sparc/x86 stable wrt #245187
 
   13 Nov 2008; Jeremy Olexa <darkside@gentoo.org>
   scim-pinyin-0.5.91-r2.ebuild:
