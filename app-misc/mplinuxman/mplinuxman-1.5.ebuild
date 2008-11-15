@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.5.ebuild,v 1.5 2008/05/17 09:22:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.5.ebuild,v 1.6 2008/11/15 13:25:52 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -40,11 +40,11 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${PN} extra/mp_util/{mputil,mputil_smart}
+	dobin ${PN} extra/mp_util/{mputil,mputil_smart} || die "dobin failed"
 
 	dodir /usr/share/locale/{de,es,fr,ja,nl}/LC_MESSAGES
 
-	DESTDIR="${D}" emake install-po
+	DESTDIR="${D}" emake install-po || die "emake insall-po failed"
 
 	newicon logo.xpm ${PN}.xpm
 	make_desktop_entry ${PN} ${PN} ${PN} "AudioVideo;Audio;GTK;"

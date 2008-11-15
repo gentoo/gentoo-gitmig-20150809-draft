@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/mplinuxman
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/ChangeLog,v 1.14 2008/05/17 09:22:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/ChangeLog,v 1.15 2008/11/15 13:25:52 flameeyes Exp $
+
+  15 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  mplinuxman-1.5.ebuild:
+  Die on dobin failure (since the make process ignores build errors).
 
   17 May 2008; Samuli Suominen <drac@gentoo.org> mplinuxman-1.5.ebuild:
   Use virtual/mpg123.
