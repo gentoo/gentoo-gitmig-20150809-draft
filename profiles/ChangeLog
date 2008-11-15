@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2045 2008/11/14 08:20:37 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2046 2008/11/15 13:38:05 lu_zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Nov 2008; Luca Barbato <lu_zero@gentoo.org> package.mask:
+  Mask recent ati-drivers with 1.5 support
 
   14 Nov 2008; Hanno Boeck <hanno@gentoo.org> package.mask:
   Mask broken libchipcard-4.2.1.
