@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.448 2008/11/14 09:43:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.449 2008/11/15 12:56:58 corsair Exp $
+
+  15 Nov 2008; Markus Rothe <corsair@gentoo.org>
+  mozilla-firefox-2.0.0.18.ebuild:
+  Stable on ppc64; bug #246602
 
   14 Nov 2008; Raúl Porcel <armin76@gentoo.org>
   mozilla-firefox-3.0.4.ebuild:
