@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ipcad
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.28 2007/04/24 19:46:40 welp Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.29 2008/11/15 18:27:08 pva Exp $
+
+  15 Nov 2008; Peter Volkov <pva@gentoo.org>
+  +files/ipcad-3.7-linux-2.6.27.patch, ipcad-3.7.ebuild:
+  amd64 stable. Fixed build issue with >=linux-headers-2.6.27.
 
   24 Apr 2007; Peter Weller <welp@gentoo.org> ipcad-3.7.ebuild:
   Keyworded ~amd64 wrt bug 175728
