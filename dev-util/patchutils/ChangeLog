@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.42 2008/11/13 03:00:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.43 2008/11/15 13:10:55 pva Exp $
+
+  15 Nov 2008; Peter Volkov <pva@gentoo.org> patchutils-0.2.30.ebuild:
+  Dropped mips since we don't have stable branch any more.
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> patchutils-0.2.31.ebuild:
   stable ppc64, bug 246558
