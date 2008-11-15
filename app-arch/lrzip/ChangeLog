@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lrzip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.5 2008/05/08 11:33:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.6 2008/11/15 13:23:50 flameeyes Exp $
+
+  15 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org> lrzip-0.23.ebuild:
+  Add nasm dependency on x86; quote ${D}.
 
 *lrzip-0.23 (08 May 2008)
 

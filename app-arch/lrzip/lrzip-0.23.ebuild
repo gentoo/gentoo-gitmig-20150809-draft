@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/lrzip-0.23.ebuild,v 1.1 2008/05/08 11:33:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/lrzip-0.23.ebuild,v 1.2 2008/11/15 13:23:50 flameeyes Exp $
 
 DESCRIPTION="Long Range ZIP or Lzma RZIP"
 HOMEPAGE="http://ck.kolivas.org/apps/lrzip/README"
@@ -13,9 +13,10 @@ IUSE=""
 
 DEPEND="dev-libs/lzo
 		app-arch/bzip2"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	x86? ( dev-lang/nasm )"
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README
 }
