@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.30 2008/10/28 05:56:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.31 2008/11/15 07:02:53 pva Exp $
+
+  14 Nov 2008; Peter Volkov <pva@gentoo.org> ufraw-0.14.1.ebuild:
+  ~mips added, bug #242236.
 
   28 Oct 2008; Alexis Ballier <aballier@gentoo.org> ufraw-0.14.1.ebuild:
   keyword ~ppc64, working fine on a PowerMac 970
