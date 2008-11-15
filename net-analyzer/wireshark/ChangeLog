@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.132 2008/10/30 05:40:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.133 2008/11/15 17:42:03 dertobi123 Exp $
+
+  15 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  wireshark-1.0.4.ebuild:
+  ppc stable, bug #242996
 
   30 Oct 2008; Peter Volkov <pva@gentoo.org>
   +files/wireshark-1.0.4-zlib-build.patch, wireshark-1.0.4.ebuild:
