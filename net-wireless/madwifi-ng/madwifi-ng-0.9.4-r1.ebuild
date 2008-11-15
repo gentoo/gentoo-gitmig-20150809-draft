@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4-r1.ebuild,v 1.2 2008/10/20 03:11:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4-r1.ebuild,v 1.3 2008/11/15 16:19:47 pva Exp $
 
 inherit linux-mod
 
@@ -8,7 +8,7 @@ MY_P=${PN/-ng/}-${PV}
 S="${WORKDIR}"/${MY_P}
 
 DESCRIPTION="Next Generation driver for Atheros based IEEE 802.11a/b/g wireless LAN cards"
-HOMEPAGE="http://www.madwifi.org/"
+HOMEPAGE="http://www.madwifi-project.org/"
 SRC_URI="mirror://sourceforge/madwifi/madwifi-${PV}.tar.bz2"
 
 LICENSE="atheros-hal
