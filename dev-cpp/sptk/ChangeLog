@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.43 2008/11/11 09:46:23 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.44 2008/11/15 12:09:14 coldwind Exp $
+
+  15 Nov 2008; Santiago M. Mola <coldwind@gentoo.org> sptk-2.3.28.ebuild,
+  sptk-3.5.7.13.ebuild, sptk-3.5.8.ebuild, sptk-3.5.8.4.ebuild,
+  sptk-3.5.8.6.ebuild:
+  Restrict fltk dependency to SLOT 1.1 (bug #246445).
 
   11 Nov 2008; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
   -sptk-3.5.7.10.ebuild, sptk-3.5.7.13.ebuild:
