@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/simple-ccsm/simple-ccsm-0.7.8.ebuild,v 1.1 2008/10/27 22:39:41 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/simple-ccsm/simple-ccsm-0.7.8.ebuild,v 1.2 2008/11/15 02:00:49 jmbsvicetto Exp $
 
 inherit gnome2-utils
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
-RESTRICT="mirror"
 
 DEPEND="~dev-python/compizconfig-python-${PV}
 	>=dev-python/pygtk-2.10
