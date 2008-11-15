@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/conary
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conary/ChangeLog,v 1.23 2008/09/02 06:30:21 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conary/ChangeLog,v 1.24 2008/11/15 14:55:15 flameeyes Exp $
+
+  15 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org> conary-2.0.9.ebuild,
+  conary-2.0.12.ebuild, conary-2.0.21.ebuild, conary-2.0.23.ebuild:
+  Block app-arch/rpm2cpio since they both provide rpcm2cio (and this
+  actually breaks a huge amount of packages).
 
 *conary-2.0.23 (02 Sep 2008)
 
