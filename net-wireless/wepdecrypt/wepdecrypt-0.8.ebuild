@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.6 2007/11/11 06:29:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/wepdecrypt-0.8.ebuild,v 1.7 2008/11/15 21:30:42 dragonheart Exp $
 
 inherit eutils
 
@@ -13,8 +13,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X"
-
-RDEPEND="X? ( >=x11-libs/fltk-1.1.6 )
+EAPI=1
+RDEPEND="X? ( x11-libs/fltk:1.1 )
 	sys-libs/zlib
 	net-libs/libpcap
 	dev-libs/openssl"
@@ -28,7 +28,13 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable X gui) || die "econf failed"
+	# build system is broken and --enabled-gui doesn't work
+	if use X; then
+		econf  || die "econf failed"
+	else
+		econf --disable-gui || die "econf failed"
+	fi
+
 	emake || die "emake failed"
 }
 
