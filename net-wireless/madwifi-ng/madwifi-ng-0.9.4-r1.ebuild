@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4-r1.ebuild,v 1.3 2008/11/15 16:19:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4-r1.ebuild,v 1.4 2008/11/15 16:28:31 pva Exp $
 
 inherit linux-mod
 
@@ -61,11 +61,6 @@ src_unpack() {
 	done
 	epatch "${FILESDIR}/madwifi-dfs-ieee80211-skb-update.patch"
 	kernel_is ge 2 6 27 && epatch "${FILESDIR}/${P}-2.6.27-r3811.patch"
-	# Workaround our build system, bug #232099 (bug #237618 describes details)
-	touch Module.symvers
-	for ms in ath net80211 ath_hal ath_rate/{amrr,minstrel,onoe,sample}; do
-		ln -s "${S}/Module.symvers" "${ms}"
-	done
 }
 
 src_install() {
