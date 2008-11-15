@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/tdfsb-0.0.10.ebuild,v 1.4 2007/10/30 14:49:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/tdfsb-0.0.10.ebuild,v 1.5 2008/11/15 13:42:37 flameeyes Exp $
 
 IUSE=""
 
@@ -23,7 +23,7 @@ src_unpack() {
 }
 
 src_compile() {
-	./compile.sh
+	./compile.sh || die "compile failed"
 }
 
 src_install() {
