@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-3.3.1.ebuild,v 1.3 2008/05/27 20:59:50 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-3.3.1.ebuild,v 1.4 2008/11/15 18:55:33 armin76 Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.zope.org/Products/Zope3/${PV}/Zope-${PV}.tgz"
 
 LICENSE="ZPL"
 SLOT="${PV}"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="=dev-lang/python-2.4*"
