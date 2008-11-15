@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>desktop-effects</herd>
-<maintainer><email>hanno@gentoo.org</email></maintainer>
-<longdescription lang="en">Python bindings for libcompizconfig.
-</longdescription>
+<longdescription lang="en">Libcompizconfig is an alternative configuration system for compiz.</longdescription>
 </pkgmetadata>
-

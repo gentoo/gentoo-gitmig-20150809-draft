@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/compizconfig-backend-kconfig
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/ChangeLog,v 1.8 2008/11/01 23:30:06 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/ChangeLog,v 1.9 2008/11/15 02:08:16 jmbsvicetto Exp $
+
+  15 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-backend-kconfig-0.7.8.ebuild:
+  Removed the mirror restriction that was used for the overlay.
 
   01 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:

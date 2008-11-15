@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/compizconfig-backend-gconf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-gconf/ChangeLog,v 1.7 2008/11/01 23:27:09 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-gconf/ChangeLog,v 1.8 2008/11/15 02:07:08 jmbsvicetto Exp $
+
+  15 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-backend-gconf-0.7.8.ebuild:
+  Removed the mirror restriction that was used for the overlay.
 
   01 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
