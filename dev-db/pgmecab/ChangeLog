@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/pgmecab
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmecab/ChangeLog,v 1.4 2008/11/02 08:55:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmecab/ChangeLog,v 1.5 2008/11/15 00:03:50 matsuu Exp $
+
+*pgmecab-1.1-r3 (15 Nov 2008)
+
+  15 Nov 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/pgmecab-1.1-r3-postgres83.patch, +pgmecab-1.1-r3.ebuild:
+  Fixed to work with old versions, bug #239594.
 
 *pgmecab-1.1-r2 (02 Nov 2008)
 
