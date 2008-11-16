@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.10.1.ebuild,v 1.1 2008/09/29 00:31:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.10.1.ebuild,v 1.2 2008/11/16 14:44:45 flameeyes Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-2.10.1-headers.patch
 	epatch "${FILESDIR}"/${PN}-2.8.18-symlinks.patch #166729
+	epatch "${FILESDIR}"/${P}-parallelmake.patch # Upstream bug #797
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
 		include/builddefs.in \

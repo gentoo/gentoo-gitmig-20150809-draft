@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.103 2008/09/29 00:31:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.104 2008/11/16 14:44:45 flameeyes Exp $
+
+  16 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/xfsprogs-2.10.1-parallelmake.patch, xfsprogs-2.10.1.ebuild:
+  Add a patch to allow parallel make builds, reported upstream.
 
 *xfsprogs-2.10.1 (29 Sep 2008)
 
