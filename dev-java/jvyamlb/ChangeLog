@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jvyamlb
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyamlb/ChangeLog,v 1.1 2008/11/16 15:45:36 fordfrog Exp $
+
+*jvyamlb-0.2.2 (16 Nov 2008)
+
+  16 Nov 2008; Miroslav Šulc <fordfrog@gentoo.org> +metadata.xml,
+  +jvyamlb-0.2.2.ebuild:
+  Added ebuild by Chewi from java-overlay, with some fixes from me
+
