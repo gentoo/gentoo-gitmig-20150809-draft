@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/patchutils-0.2.31.ebuild,v 1.7 2008/11/15 18:55:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/patchutils-0.2.31.ebuild,v 1.8 2008/11/16 17:04:02 jer Exp $
 
 WANT_AUTOMAKE=1.8
 inherit autotools
@@ -11,7 +11,7 @@ SRC_URI="http://cyberelk.net/tim/data/patchutils/stable/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/libc"
