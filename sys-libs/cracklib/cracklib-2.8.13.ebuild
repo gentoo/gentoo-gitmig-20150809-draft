@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.13.ebuild,v 1.1 2008/09/24 04:24:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.13.ebuild,v 1.2 2008/11/16 18:30:32 vapier Exp $
 
-inherit toolchain-funcs multilib
+inherit eutils toolchain-funcs multilib
 
 MY_P=${P/_}
 DESCRIPTION="Password Checking Library"
@@ -25,6 +25,12 @@ pkg_setup() {
 		eerror "Please run: FEATURES=-unmerge-orphans emerge cracklib"
 		die "Please run: FEATURES=-unmerge-orphans emerge cracklib"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-python-linkage.patch #246747
 }
 
 src_compile() {
