@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r3.ebuild,v 1.2 2008/01/11 07:13:53 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jelly/commons-jelly-1.0-r3.ebuild,v 1.3 2008/11/16 13:51:17 caster Exp $
+
+EAPI=1
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -15,20 +17,20 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc test source"
 
 RDEPEND=">=virtual/jre-1.4
-	~java-virtuals/servlet-api-2.3
-	=dev-java/commons-cli-1*
-	dev-java/commons-lang
-	dev-java/commons-discovery
-	dev-java/forehead
-	dev-java/jakarta-jstl
-	dev-java/commons-jexl
-	=dev-java/commons-beanutils-1.6*
-	dev-java/commons-collections
-	=dev-java/dom4j-1*
-	=dev-java/jaxen-1.1*
-	>=dev-java/xerces-2.7
-	=dev-java/junit-3.8*
-	dev-java/commons-logging"
+	java-virtuals/servlet-api:2.3
+	dev-java/commons-cli:1
+	dev-java/commons-lang:0
+	dev-java/commons-discovery:0
+	dev-java/forehead:0
+	dev-java/jakarta-jstl:0
+	dev-java/commons-jexl:1.0
+	dev-java/commons-beanutils:1.6
+	dev-java/commons-collections:0
+	dev-java/dom4j:1
+	dev-java/jaxen:1.1
+	>=dev-java/xerces-2.7:2
+	dev-java/junit:0
+	dev-java/commons-logging:0"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
