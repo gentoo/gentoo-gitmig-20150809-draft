@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.312 2008/11/16 16:13:35 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.313 2008/11/16 16:19:30 maekke Exp $
+
+  16 Nov 2008; Markus Meier <maekke@gentoo.org> imagemagick-6.4.4.6.ebuild,
+  imagemagick-6.4.4.6-r1.ebuild:
+  fix truetype/corefonts logic
 
   16 Nov 2008; Tobias Klausmann <klausman@gentoo.org>
   imagemagick-6.4.4.6.ebuild:
