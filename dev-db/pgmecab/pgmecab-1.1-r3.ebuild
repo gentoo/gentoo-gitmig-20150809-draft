@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmecab/pgmecab-1.1-r3.ebuild,v 1.1 2008/11/15 00:03:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmecab/pgmecab-1.1-r3.ebuild,v 1.2 2008/11/16 06:29:43 matsuu Exp $
 
 inherit eutils versionator
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="app-text/mecab
-	>=virtual/postgresql-server-7.4"
+	>=dev-db/postgresql-server-7.4" # pgmecab requires PGXS
 DEPEND="${RDEPEND}
 	app-admin/eselect-postgresql"
 
