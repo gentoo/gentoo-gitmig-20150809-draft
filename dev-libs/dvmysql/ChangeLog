@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dvmysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/ChangeLog,v 1.13 2008/01/04 08:51:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/ChangeLog,v 1.14 2008/11/16 16:29:09 flameeyes Exp $
+
+  16 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  dvmysql-1.0.2.ebuild:
+  Correct --as-needed filtering and list a bug number for it.
 
 *dvmysql-1.0.2 (04 Jan 2008)
 

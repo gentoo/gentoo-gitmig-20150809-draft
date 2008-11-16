@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.15.5.ebuild,v 1.7 2008/06/29 10:39:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.15.5.ebuild,v 1.8 2008/11/16 16:30:13 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -31,8 +31,8 @@ src_compile() {
 		sed -i -e 's/"ssl"//' configure || die "sed failed"
 	fi
 
-	# problems with openssl
-	filter-ldflags -Wl,--as-needed
+	# Bug #247088
+	append-ldflags -Wl,--no-as-needed
 
 	econf || die "econf failed"
 	emake || die "emake failed"
