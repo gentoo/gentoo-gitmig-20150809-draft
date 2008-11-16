@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.8 2008/11/16 01:06:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.9 2008/11/16 01:24:38 vanquirius Exp $
+
+  16 Nov 2008; Marcelo Goes <vanquirius@gentoo.org> vhba-1.1.0.ebuild:
+  Build against sources in /usr/src/linux instead of /lib/modules/uname -r for
+  bug 241952. Thanks to Diego Petteno <flameeyes at gentoo dot org>.
 
   16 Nov 2008; Marcelo Goes <vanquirius@gentoo.org> vhba-1.1.0.ebuild:
   Remove clean target from BUILD_TARGETS for bug 233910, preventing a compile

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-1.1.0.ebuild,v 1.2 2008/11/16 01:06:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-1.1.0.ebuild,v 1.3 2008/11/16 01:24:38 vanquirius Exp $
 
 inherit linux-info linux-mod eutils
 
@@ -25,6 +25,13 @@ pkg_setup() {
 	check_extra_config
 	BUILD_PARAMS="KERNELDIR=${KV_DIR}"
 	linux-mod_pkg_setup
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i -e "s:/lib/modules/\$(KERNELRELEASE)/build:${KERNEL_DIR}:g" \
+	Makefile || die "sed failed"
 }
 
 src_compile() {
