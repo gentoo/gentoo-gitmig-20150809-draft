@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.6.0.ebuild,v 1.1 2008/11/16 13:56:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.6.0.ebuild,v 1.2 2008/11/16 15:21:27 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,6 +25,8 @@ src_unpack() {
 
 src_compile() {
 	tc-export CC
+
+	# This is were Debian sets -O0:
 	CFLAGS="${CFLAGS} -fno-unit-at-a-time"
 
 	econf || die "econf failed"
