@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.13 2008/10/27 10:54:06 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.14 2008/11/16 16:33:27 flameeyes Exp $
+
+  16 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  pythonmagick-0.7-r1.ebuild:
+  Remove filtering for --as-needed since it wasn't enabled anyway.
 
   27 Oct 2008; Ali Polatel <hawking@gentoo.org> pythonmagick-0.6.ebuild,
   pythonmagick-0.7-r1.ebuild:

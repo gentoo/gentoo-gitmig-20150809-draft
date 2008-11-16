@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.7-r1.ebuild,v 1.3 2008/10/27 10:54:06 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.7-r1.ebuild,v 1.4 2008/11/16 16:33:27 flameeyes Exp $
 
 NEED_PYTHON=2.5
-inherit python multilib toolchain-funcs
+inherit python multilib
 
 MY_PN=PythonMagick
 MY_P=${MY_PN}-${PV}
@@ -25,8 +25,6 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	filter-ldflags -Wl,--as-needed --as-needed
-
 	econf
 	emake || die "emake failed"
 }
