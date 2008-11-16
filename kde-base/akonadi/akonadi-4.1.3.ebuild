@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.1.3.ebuild,v 1.1 2008/11/09 01:08:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.1.3.ebuild,v 1.2 2008/11/16 04:40:13 vapier Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ KMNAME=kdepim
 inherit kde4-meta
 
 DESCRIPTION="An extensible cross-desktop storage service for PIM data and meta data"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 # add when libmapi becomes available with an ebuild
 #exchange
 IUSE="debug +nepomuk +plasma"

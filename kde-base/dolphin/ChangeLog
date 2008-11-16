@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.14 2008/11/09 01:07:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.15 2008/11/16 04:43:14 vapier Exp $
+
+  15 Nov 2008; Mike Frysinger <vapier@gentoo.org> dolphin-4.1.3.ebuild:
+  Add ppc/ppc64 love #244306.
 
 *dolphin-4.1.3 (09 Nov 2008)
 
