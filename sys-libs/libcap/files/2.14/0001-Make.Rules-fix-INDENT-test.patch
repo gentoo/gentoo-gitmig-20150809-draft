@@ -1,0 +1,29 @@
+From 7091483d5fa21d54cac2d7728c1d380bb9def73c Mon Sep 17 00:00:00 2001
+From: Mike Frysinger <vapier@gentoo.org>
+Date: Sun, 16 Nov 2008 15:34:14 -0500
+Subject: [PATCH] Make.Rules: fix INDENT test
+
+The indent variable has a test to see if indent is installed, but the test
+logic is inverted and has a typo in the binary name.
+
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+---
+ Make.Rules |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/Make.Rules b/Make.Rules
+index 6bf1562..4a3d49a 100644
+--- a/Make.Rules
++++ b/Make.Rules
+@@ -64,7 +64,7 @@ INCS=$(topdir)/libcap/include/sys/capability.h
+ LDFLAGS += -L$(topdir)/libcap
+ CFLAGS += -Dlinux $(WARNINGS) $(DEBUG) $(IPATH)
+ PAM_CAP := $(shell if [ -f /usr/include/security/pam_modules.h ]; then echo yes ; else echo no ; fi)
+-INDENT := $(shell if [ -z "$(which ident 2>/dev/null)" ]; then echo "| indent -kr" ; fi)
++INDENT := $(shell if [ -n "$(which indent 2>/dev/null)" ]; then echo "| indent -kr" ; fi)
+ DYNAMIC := $(shell if [ ! -d "$(topdir)/.git" ]; then echo yes; fi)
+ LIBATTR := yes
+ 
+-- 
+1.6.0.3
+

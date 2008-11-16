@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.75 2008/11/16 14:11:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.76 2008/11/16 20:38:56 vapier Exp $
+
+  16 Nov 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/2.14/0001-Make.Rules-fix-INDENT-test.patch:
+  Fix typo in build system for indent test #247080 by Mark Nowiasz.
 
 *libcap-2.14 (16 Nov 2008)
 
