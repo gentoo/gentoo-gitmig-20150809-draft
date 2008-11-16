@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.18_pre20080519.ebuild,v 1.7 2008/07/18 01:59:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.18_pre20080519.ebuild,v 1.8 2008/11/16 23:27:17 hanno Exp $
+
+EAPI=2
 
 inherit python multilib eutils
 
@@ -9,7 +11,8 @@ S=${WORKDIR}/${PN}-0.6
 DESCRIPTION="Interactive X11 vector drawing program"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://www.skencil.org/"
-DEPEND=">=dev-python/imaging-1.1.2-r1
+DEPEND="dev-lang/python[tk]
+	>=dev-python/imaging-1.1.2-r1
 	dev-python/reportlab
 	dev-lang/tk
 	nls? ( sys-devel/gettext )"
@@ -18,10 +21,6 @@ RDEPEND="!elibc_glibc? ( nls? ( sys-devel/gettext ) )
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
-
-pkg_setup() {
-	python_tkinter_exists
-}
 
 src_unpack() {
 	unpack ${A}
