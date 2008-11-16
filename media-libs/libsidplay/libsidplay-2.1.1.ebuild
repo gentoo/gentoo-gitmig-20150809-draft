@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1.ebuild,v 1.13 2006/11/01 15:24:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1.ebuild,v 1.14 2008/11/16 18:30:04 hanno Exp $
 
 inherit libtool eutils
 
@@ -22,9 +22,10 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/libsidplay2-gcc41.patch
-	epatch "${FILESDIR}/${P}-fbsd.patch"
+	cd "${S}"
+	epatch "${FILESDIR}/libsidplay2-gcc41.patch" || die
+	epatch "${FILESDIR}/${P}-fbsd.patch" || die
+	epatch "${FILESDIR}/${P}-gcc43.patch" || die
 
 	elibtoolize
 }
@@ -37,15 +38,15 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 
-	cd ${S}/libsidplay
+	cd "${S}/libsidplay"
 	docinto libsidplay
 	dodoc AUTHORS ChangeLog README TODO
 
-	cd ${S}/libsidutils
+	cd "${S}/libsidutils"
 	docinto libsidutils
 	dodoc AUTHORS ChangeLog README TODO
 
-	cd ${S}/resid
+	cd "${S}/resid"
 	docinto resid
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }

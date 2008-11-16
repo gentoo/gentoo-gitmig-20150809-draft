@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-1.36.57.ebuild,v 1.16 2007/10/15 14:34:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-1.36.57.ebuild,v 1.17 2008/11/16 18:30:04 hanno Exp $
 
 inherit eutils
 
@@ -17,11 +17,11 @@ DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/libsidplay-gcc34.patch
+	cd "${S}"
+	epatch "${FILESDIR}/libsidplay-gcc34.patch"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING DEVELOPER INSTALL
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS DEVELOPER INSTALL
 }
