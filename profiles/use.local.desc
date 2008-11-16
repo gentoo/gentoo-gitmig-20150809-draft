@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4020 2008/11/15 21:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4021 2008/11/16 15:27:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1728,6 +1728,7 @@ net-analyzer/symon:perl - Enables a generic perl symux client
 net-analyzer/symon:symon - Build symon daemon
 net-analyzer/symon:symux - Enables the multiplexer which stores incoming symon streams on disk in RRD files
 net-analyzer/tcpdump:chroot - Enable chrooting when dropping privileges
+net-analyzer/tcpdump:smi - Build with net-libs/libsmi to load MIBs on the fly to decode SNMP packets
 net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via net-libs/libpcapnav
 net-analyzer/wireshark:ares - Use GNU net-dns/c-ares library to resolve DNS names
 net-analyzer/wireshark:gcrypt - Use GNU crypto library (dev-libs/libgcrypt) to decrypt SSL traffic
