@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/music-applet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/ChangeLog,v 1.18 2008/08/17 21:39:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/ChangeLog,v 1.19 2008/11/16 19:01:40 eva Exp $
+
+  16 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  music-applet-2.3.1.ebuild, -music-applet-2.4.1.ebuild,
+  music-applet-2.4.2.ebuild:
+  Remove unused RDEPEND Numeric, bug #246624.
 
 *music-applet-2.4.2 (17 Aug 2008)
 

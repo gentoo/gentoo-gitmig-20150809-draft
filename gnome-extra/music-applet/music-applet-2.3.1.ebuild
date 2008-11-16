@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/music-applet-2.3.1.ebuild,v 1.4 2008/08/09 12:51:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/music-applet/music-applet-2.3.1.ebuild,v 1.5 2008/11/16 19:01:40 eva Exp $
 
 inherit gnome2 python eutils
 
@@ -20,7 +20,6 @@ RDEPEND=">=x11-libs/gtk+-2.6
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/gnome-panel-2
 	>=dev-python/gnome-python-desktop-2.14
-	>=dev-python/numeric-24.2
 	>=dev-python/dbus-python-0.80
 	>=dev-libs/dbus-glib-0.71
 	>=dev-python/pygtk-2.6
