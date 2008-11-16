@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/etherape
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.52 2007/05/24 05:11:54 pva Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.53 2008/11/16 15:43:49 pva Exp $
+
+  16 Nov 2008; Peter Volkov <pva@gentoo.org> etherape-0.9.7-r1.ebuild:
+  Added missing dependency, bug #239675 thank Evil Compile Person for
+  report. Small cleanup.
 
   24 May 2007; <pva@gentoo.org> -etherape-0.9.6-r1.ebuild:
   Cleaning old ebuild.
