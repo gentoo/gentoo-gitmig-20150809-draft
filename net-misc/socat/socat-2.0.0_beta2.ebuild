@@ -1,14 +1,18 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.4.2.0-r1.ebuild,v 1.8 2006/02/07 20:52:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta2.ebuild,v 1.1 2008/11/16 17:04:19 pva Exp $
+
+inherit eutils
 
 DESCRIPTION="Multipurpose relay (SOcket CAT)"
 HOMEPAGE="http://www.dest-unreach.org/socat/"
-SRC_URI="http://www.dest-unreach.org/${PN}/download/${P}.tar.bz2"
+MY_P=${P/_beta/-b}
+S="${WORKDIR}/${MY_P}"
+SRC_URI="http://www.dest-unreach.org/socat/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE="ssl readline ipv6 tcpd"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -16,25 +20,25 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	virtual/libc"
 
-S=${WORKDIR}/socat-${PV:0:3}
-
 src_compile() {
 	econf \
 		$(use_enable ssl openssl) \
 		$(use_enable readline) \
 		$(use_enable ipv6 ip6) \
-		$(use_enable tcpd libwrap) \
-		|| die "econf failed"
+		$(use_enable tcpd libwrap)
 	emake || die
 }
 
+src_test() {
+	TMPDIR="${T}" make test || die 'self test failed'
+}
+
 src_install() {
-	dodir /usr/bin /usr/share/man/man1
 	make install DESTDIR="${D}" || die
 
 	dodoc BUGREPORTS CHANGES DEVELOPMENT EXAMPLES \
-		FAQ FILES PORTING README SECURITY VERSION xio.help
+		FAQ FILES PORTING README SECURITY VERSION
 	docinto examples
 	dodoc *.sh
-	dohtml socat.html
+	dohtml doc/*.html doc/*.css
 }
