@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libprojectm-qt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/ChangeLog,v 1.3 2008/07/17 18:09:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/ChangeLog,v 1.4 2008/11/16 17:40:00 maekke Exp $
+
+  16 Nov 2008; Markus Meier <maekke@gentoo.org>
+  libprojectm-qt-1.1_p3.ebuild, libprojectm-qt-1.2.0.ebuild:
+  add ~x86, bug #246125
 
 *libprojectm-qt-1.2.0 (17 Jul 2008)
 
