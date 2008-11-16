@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.9.ebuild,v 1.8 2007/12/19 02:54:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.9.ebuild,v 1.9 2008/11/16 16:31:39 flameeyes Exp $
 
 inherit common-lisp-common-3 eutils flag-o-matic
 
@@ -123,7 +123,7 @@ src_unpack() {
 src_compile() {
 	local bindir="${WORKDIR}/sbcl-binary"
 
-	filter-ldflags -Wl,--as-needed --as-needed # see Bug #132992
+	append-ldflags -Wl,--no-as-needed # see Bug #132992
 
 	# clear the environment to get rid of non-ASCII strings, see bug 174702
 	# set HOME for paludis
