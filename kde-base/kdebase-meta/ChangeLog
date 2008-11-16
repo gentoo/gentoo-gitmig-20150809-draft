@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.107 2008/11/09 11:57:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.108 2008/11/16 05:00:54 vapier Exp $
+
+  15 Nov 2008; Mike Frysinger <vapier@gentoo.org> kdebase-meta-4.1.3.ebuild:
+  Add ppc/ppc64 love #244306.
 
 *kdebase-meta-4.1.3 (09 Nov 2008)
 
