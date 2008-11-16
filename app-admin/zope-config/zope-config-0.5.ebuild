@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/zope-config-0.5.ebuild,v 1.8 2007/01/24 15:11:32 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/zope-config-0.5.ebuild,v 1.9 2008/11/16 15:11:23 tupone Exp $
 
 DESCRIPTION="A Gentoo Zope multi-Instance configure tool"
 SRC_URI=""
@@ -21,18 +21,18 @@ PDEPEND=">=net-zope/zope-2.7.2-r2"
 
 src_install() {
 	# the script
-	dosbin ${FILESDIR}/0.4/zope-config
-	patch ${D}/usr/sbin/zope-config ${FILESDIR}/${PV}/${P}.patch
+	dosbin "${FILESDIR}"/0.4/zope-config
+	patch "${D}"/usr/sbin/zope-config "${FILESDIR}"/${PV}/${P}.patch
 
 	# config file
 	insinto /etc
-	doins ${FILESDIR}/0.4/zope-config.conf
+	doins "${FILESDIR}"/0.4/zope-config.conf
 	# ensure this directory exists
 	keepdir /var/log/zope
 }
 
 pkg_postinst() {
-	source ${FILESDIR}/0.4/zope-config.conf
+	source "${FILESDIR}"/0.4/zope-config.conf
 	elog "Please note that new instances now log into ${EVENTLOGDIR}"
 	elog "Please see the configuration file /etc/zope-config.conf"
 }
