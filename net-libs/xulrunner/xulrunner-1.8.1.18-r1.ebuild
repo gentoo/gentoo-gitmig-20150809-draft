@@ -1,29 +1,27 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.0.4.ebuild,v 1.1 2008/11/13 19:34:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.18-r1.ebuild,v 1.1 2008/11/16 19:57:42 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib java-pkg-opt-2 python autotools
-PATCH="${PN}-1.9.0.1-patches-0.1"
+inherit flag-o-matic toolchain-funcs eutils makeedit multilib autotools mozconfig-2 java-pkg-opt-2
+PATCH="${PN}-1.8.1.13-patches-0.1"
 
 DESCRIPTION="Mozilla runtime package that can be used to bootstrap XUL+XPCOM applications"
 HOMEPAGE="http://developer.mozilla.org/en/docs/XULRunner"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://dev.gentoo.org/~armin76/dist/${P}.tar.bz2
+SRC_URI="mirror://gentoo/${P}-source.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 -sparc ~x86"
-SLOT="1.9"
+SLOT="1.8"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="java? ( >=virtual/jre-1.4 )
+RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12
-	>=dev-libs/nspr-4.7.1
-	>=app-text/hunspell-1.1.9
-	>=media-libs/lcms-1.17"
+	>=dev-libs/nss-3.11.5
+	>=dev-libs/nspr-4.6.5-r1
+	java? ( >=virtual/jre-1.4 )"
 
 DEPEND="java? ( >=virtual/jdk-1.4 )
 	${RDEPEND}
@@ -54,7 +52,7 @@ pkg_setup(){
 }
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}-source.tar.bz2  ${PATCH}.tar.bz2
 
 	# Apply our patches
 	cd "${S}" || die "cd failed"
@@ -63,13 +61,10 @@ src_unpack() {
 	epatch "${WORKDIR}"/patch
 
 	eautoreconf || die "failed  running eautoreconf"
-
-	# We need to re-patch this because autoreconf overwrites it
-	epatch "${WORKDIR}"/patch/000_flex-configure-LANG.patch
 }
 
 src_compile() {
-	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}-1.9"
+	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 
 	####################################
 	#
@@ -80,30 +75,20 @@ src_compile() {
 	mozconfig_init
 	mozconfig_config
 
-	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
-	mozconfig_annotate '' --disable-mailnews
-	mozconfig_annotate 'broken' --disable-mochitest
-	mozconfig_annotate 'broken' --disable-crashreporter
-	mozconfig_annotate '' --enable-system-hunspell
-	#mozconfig_annotate '' --enable-system-sqlite
+	mozconfig_annotate '' --enable-extensions="default,cookie,permissions,spellcheck"
+	mozconfig_annotate '' --enable-native-uconv
 	mozconfig_annotate '' --enable-image-encoder=all
 	mozconfig_annotate '' --enable-canvas
 	#mozconfig_annotate '' --enable-js-binary
 	mozconfig_annotate '' --enable-embedding-tests
 	mozconfig_annotate '' --with-system-nspr
 	mozconfig_annotate '' --with-system-nss
-	mozconfig_annotate '' --enable-system-lcms
 	mozconfig_annotate '' --with-system-bz2
+	mozconfig_annotate '' --enable-jsd
+	mozconfig_annotate '' --enable-xpctools
 	# Bug 60668: Galeon doesn't build without oji enabled, so enable it
 	# regardless of java setting.
 	mozconfig_annotate '' --enable-oji --enable-mathml
-	mozconfig_annotate 'places' --enable-storage --enable-places --enable-places_bookmarks
-	mozconfig_annotate '' --enable-safe-browsing
-
-	# Other ff-specific settings
-	mozconfig_annotate '' --enable-jsd
-	mozconfig_annotate '' --enable-xpctools
-	mozconfig_annotate '' --disable-libxul
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 
 	#disable java
@@ -139,19 +124,23 @@ src_compile() {
 		"${S}"/config/autoconf.mk \
 		"${S}"/toolkit/content/buildconfig.html
 
+	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
+	# requirements while compiling
+	edit_makefiles
+
 	emake || die "emake failed"
 }
 
 src_install() {
-	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}-1.9"
-
+	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	rm "${D}"/usr/bin/xulrunner
-
-	dodir /usr/bin
-	dosym ${MOZILLA_FIVE_HOME}/xulrunner /usr/bin/xulrunner-1.9
-
+	X_DATE=`date +%Y%m%d`
+	# Add Gentoo package version to preferences - copied from debian rules
+	echo "pref(\"general.useragent.product\",\"Gecko\");" \
+		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
+	echo "pref(\"general.useragent.productSub\",\"${X_DATE}\");" \
+		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
 	# Add vendor
 	echo "pref(\"general.useragent.vendor\",\"Gentoo\");" \
 		>> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/vendor.js
@@ -160,4 +149,19 @@ src_install() {
 	    java-pkg_dojar "${D}"${MOZILLA_FIVE_HOME}/javaxpcom.jar
 	    rm -f "${D}"${MOZILLA_FIVE_HOME}/javaxpcom.jar
 	fi
+
+	# xulrunner registration, the gentoo way
+	insinto /etc/gre.d
+	newins "${FILESDIR}"/${PN}.conf ${PV}.conf
+	sed -i -e \
+		"s|version|${PV}|
+			s|instpath|${MOZILLA_FIVE_HOME}|" \
+		"${D}"/etc/gre.d/${PV}.conf
+}
+
+pkg_postinst() {
+	elog "Please remember to rebuild any packages that you have built"
+	elog "against xulrunner. Some packages might be broken by the upgrade; if this"
+	elog "is the case, please search at http://bugs.gentoo.org and open a new bug"
+	elog "if one does not exist."
 }
