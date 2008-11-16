@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-4.1.3.ebuild,v 1.1 2008/11/09 01:09:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-4.1.3.ebuild,v 1.2 2008/11/16 07:52:31 vapier Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ HOMEPAGE="htts://kde.org/"
 SRC_URI="mirror://kde/stable/${PV}/${KDE_PV}src/extragear/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug htmlhandbook"
 
 RDEPEND="kde-base/konqueror:${SLOT}"

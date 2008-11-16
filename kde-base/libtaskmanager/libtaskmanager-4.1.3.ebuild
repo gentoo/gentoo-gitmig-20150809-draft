@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/libtaskmanager-4.1.3.ebuild,v 1.1 2008/11/09 02:26:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/libtaskmanager-4.1.3.ebuild,v 1.2 2008/11/16 08:21:58 vapier Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ KMMODULE=libs/taskmanager
 inherit kde4-meta
 
 DESCRIPTION="A library that provides basic taskmanager functionality"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug xcomposite"
 
 COMMONDEPEND="

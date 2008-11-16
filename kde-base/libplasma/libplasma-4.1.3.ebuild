@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasma/libplasma-4.1.3.ebuild,v 1.1 2008/11/09 01:39:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasma/libplasma-4.1.3.ebuild,v 1.2 2008/11/16 08:21:39 vapier Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ OPENGL_REQUIRED="optional"
 inherit kde4-meta
 
 DESCRIPTION="Plasma: KDE desktop framework"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug opengl xinerama"
 
 RDEPEND=">=app-misc/strigi-0.5.11[qt4]
