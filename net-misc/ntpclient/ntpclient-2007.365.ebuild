@@ -1,6 +1,6 @@
 # Copyright 2008-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ntpclient-2007.365.ebuild,v 1.1 2008/06/22 06:36:02 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ntpclient-2007.365.ebuild,v 1.2 2008/11/16 16:39:36 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -22,10 +22,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i -e s/'-O2'// Makefile
+	sed -i -e 's/LDFLAGS +=/LDLIBS +=/' Makefile
 }
 
 src_compile() {
-	filter-ldflags -Wl,--as-needed
 	tc-export CC
 	emake || die "emake failed in src_compile"
 }
