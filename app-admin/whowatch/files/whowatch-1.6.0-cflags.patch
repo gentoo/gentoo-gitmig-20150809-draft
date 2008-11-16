@@ -1,0 +1,11 @@
+--- whowatch-1.6.0/src/Makefile.in.orig	2001-04-25 02:57:37.000000000 +0200
++++ whowatch-1.6.0/src/Makefile.in	2008-11-15 15:54:22.000000000 +0100
+@@ -60,7 +60,7 @@
+ whowatch_LDADD = $(LDADD)
+ whowatch_DEPENDENCIES = 
+ whowatch_LDFLAGS = 
+-CFLAGS = @CFLAGS@ -Wall -I. -ggdb
++CFLAGS = @CFLAGS@ -Wall
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+ LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
