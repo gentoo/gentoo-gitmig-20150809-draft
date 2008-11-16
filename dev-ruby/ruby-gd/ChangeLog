@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.17 2007/07/22 06:55:47 graaff Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.18 2008/11/16 09:30:44 graaff Exp $
+
+  16 Nov 2008; Hans de Graaff <graaff@gentoo.org>
+  files/ruby-gd-0.7.4-fix-interlace.patch:
+  Don't use absolute path names in patch
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> -ruby-gd-0.7.4.ebuild,
   ruby-gd-0.7.4-r1.ebuild:
