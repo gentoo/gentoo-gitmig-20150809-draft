@@ -1,0 +1,45 @@
+diff -dPNur meld-1.2/glade2/meldapp.glade meld-1.2-1/glade2/meldapp.glade
+--- meld-1.2/glade2/meldapp.glade	2008-06-20 01:17:32.000000000 +0200
++++ meld-1.2-1/glade2/meldapp.glade	2008-11-14 19:07:20.000000000 +0100
+@@ -1403,8 +1403,40 @@
+                                       <widget class="GtkOptionMenu" id="option_wrap_lines">
+                                         <property name="visible">True</property>
+                                         <property name="can_focus">True</property>
+-                                        <property name="response_id">0</property>
++                                        <property name="history">0</property>
+                                         <signal name="changed" handler="on_option_wrap_lines_changed"/>
++
++                                        <child>
++                                          <widget class="GtkMenu" id="menu1">
++
++                                            <child>
++                                              <widget class="GtkMenuItem" id="menu_wrap_none">
++                                                <property name="visible">True</property>
++                                                <property name="label" translatable="yes">_None</property>
++                                                <property name="use_underline">True</property>
++                                                <signal name="activate" handler="on_wrap_activate" last_modification_time="Wed, 17 Mar 2004 21:30:49 GMT"/>
++                                              </widget>
++                                            </child>
++
++                                            <child>
++                                              <widget class="GtkMenuItem" id="menu_wrap_char">
++                                                <property name="visible">True</property>
++                                                <property name="label" translatable="yes">_Character</property>
++                                                <property name="use_underline">True</property>
++                                                <signal name="activate" handler="on_wrap_activate" last_modification_time="Wed, 17 Mar 2004 21:30:49 GMT"/>
++                                              </widget>
++                                            </child>
++
++                                            <child>
++                                              <widget class="GtkMenuItem" id="menu_wrap_word">
++                                                <property name="visible">True</property>
++                                                <property name="label" translatable="yes">_Word</property>
++                                                <property name="use_underline">True</property>
++                                                <signal name="activate" handler="on_wrap_activate" last_modification_time="Wed, 17 Mar 2004 21:30:49 GMT"/>
++                                              </widget>
++                                            </child>
++                                          </widget>
++                                        </child>
+                                       </widget>
+                                       <packing>
+                                         <property name="expand">False</property>

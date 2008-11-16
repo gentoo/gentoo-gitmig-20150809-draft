@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.85 2008/11/12 21:53:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.86 2008/11/16 19:33:00 eva Exp $
+
+*meld-1.2-r1 (16 Nov 2008)
+
+  16 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/meld-1.2-wrap-list.patch, +meld-1.2-r1.ebuild:
+  Add word-wrap items in glade, bug #246261.
 
   12 Nov 2008; Brent Baude <ranger@gentoo.org> meld-1.2.ebuild:
   stable ppc64, bug 246061
