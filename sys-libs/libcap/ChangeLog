@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.74 2008/10/26 02:37:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.75 2008/11/16 14:11:51 vapier Exp $
+
+*libcap-2.14 (16 Nov 2008)
+
+  16 Nov 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/2.14/0001-cleanup-build-system.patch, +libcap-2.14.ebuild:
+  Version bump #246944 by Arfrever Frehtes Taifersar Arahesis.
 
   25 Oct 2008; Mike Frysinger <vapier@gentoo.org> libcap-2.11.ebuild:
   Add fix for USE=-pam builds by Bruno #242748.
