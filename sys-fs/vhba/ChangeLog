@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.7 2008/08/22 22:07:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.8 2008/11/16 01:06:24 vanquirius Exp $
+
+  16 Nov 2008; Marcelo Goes <vanquirius@gentoo.org> vhba-1.1.0.ebuild:
+  Remove clean target from BUILD_TARGETS for bug 233910, preventing a compile
+  error. Thanks to J. Schmidt <Thrawnsmail at arcor dot de>, Jyrki Launonen
+  <codez_iccd_99 at yahoo dot com>, Felix Meissner <flixxe at googlemail dot
+  com>, Reinhard Kreim <reini at crimer dot de>, haarp <liquitsnake at gmx dot
+  net> and Jesus Guerrero <i92guboj at gentoo dot org>.
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> vhba-1.0.0.ebuild:
   amd64 stable, bug #232566
