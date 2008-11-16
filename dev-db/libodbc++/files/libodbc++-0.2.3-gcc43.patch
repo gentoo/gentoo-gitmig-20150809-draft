@@ -1,0 +1,11 @@
+--- libodbc++-0.2.3/include/odbc++/types.h.orig	2008-06-14 16:39:35.000000000 +0000
++++ libodbc++-0.2.3/include/odbc++/types.h	2008-06-14 16:39:58.000000000 +0000
+@@ -25,6 +25,7 @@
+ #include <odbc++/setup.h>
+ 
+ #include <exception>
++#include <cstring>
+ 
+ #if !defined(ODBCXX_QT)
+ # include <string>
+

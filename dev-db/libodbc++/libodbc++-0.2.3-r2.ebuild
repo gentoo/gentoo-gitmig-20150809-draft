@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r2.ebuild,v 1.5 2006/11/15 10:04:29 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r2.ebuild,v 1.6 2008/11/16 20:44:59 halcy0n Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-std-streamsize.patch
 	epatch "${FILESDIR}"/${P}-doxygen.patch
 	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	epatch "${FILESDIR}"/${P}-typecast.patch
 
 	# Fix configure to use ncurses instead of termcap (bug #103105)
