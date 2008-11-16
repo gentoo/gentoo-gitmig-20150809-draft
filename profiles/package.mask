@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9170 2008/11/16 16:38:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9171 2008/11/16 21:21:41 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matthias Schwarzott <zzam@gentoo.org> (28 Oct 2008)
+# This breaks kernels with older sysfs layout, Bug #246938
+# and some persistent-net setups, Bug #246927, and Bug #246849
+~sys-fs/udev-132
 
 # Peter Volkov <pva@gentoo.org> (16 Nov 2008)
 # This is developemnt version. Why it was not masked from the beginning?

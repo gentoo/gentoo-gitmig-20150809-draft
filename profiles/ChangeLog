@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2049 2008/11/16 16:38:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2050 2008/11/16 21:21:41 zzam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Nov 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Mask udev-132 for Bugs #246849, #246927 and #246938.
 
   16 Nov 2008; Peter Volkov <pva@gentoo.org> package.mask:
   Masking development version of socat.
