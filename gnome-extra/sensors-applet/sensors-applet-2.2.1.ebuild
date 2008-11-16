@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.1.ebuild,v 1.3 2008/05/17 03:10:58 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.1.ebuild,v 1.4 2008/11/16 16:36:55 flameeyes Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -40,5 +40,6 @@ pkg_setup() {
 			$(use_with lm_sensors libsensors) \
 			$(use_enable libnotify)"
 
-	use nvidia && filter-ldflags -Wl,--as-needed
+	# Bug #221817
+	use nvidia && append-ldflags -Wl,--no-as-needed
 }
