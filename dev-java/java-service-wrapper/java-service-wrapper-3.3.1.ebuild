@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.3.1.ebuild,v 1.3 2008/09/07 07:35:33 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.3.1.ebuild,v 1.4 2008/11/16 15:55:46 serkan Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 JAVA_PKG_IUSE="doc source test"
@@ -37,14 +37,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-
-	# TODO file upstream
-
-	use x86 && sed -i -e 's|gcc -O3 -Wall --pedantic|$(CC) $(CFLAGS) -fPIC|g' \
-		"src/c/Makefile-linux-x86-${BITS}.make"
-	use amd64 && sed -i -e 's|gcc -O3 -fPIC -Wall --pedantic|$(CC) $(CFLAGS) -fPIC|g' \
-		"src/c/Makefile-linux-x86-${BITS}.make"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 }
 
 src_compile() {
