@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/beansbinding
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/beansbinding/ChangeLog,v 1.1 2008/11/16 16:28:28 fordfrog Exp $
+
+*beansbinding-1.2.1 (16 Nov 2008)
+
+  16 Nov 2008; Miroslav Šulc <fordfrog@gentoo.org> +metadata.xml,
+  +beansbinding-1.2.1.ebuild:
+  Added ebuild from java-experimental overlay, created by Alistair
+  Bush <alistair@gentoo.org>
+
