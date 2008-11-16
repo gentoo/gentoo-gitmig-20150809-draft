@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.240 2008/11/16 11:56:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.241 2008/11/16 13:03:17 loki_val Exp $
+
+  16 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -files/5.06/01_all_default_settings.patch,
+  -files/5.06/03_all_no_intltool.patch,
+  -files/5.06/02_all_xinerama_function.patch, -xscreensaver-5.05-r1.ebuild,
+  -xscreensaver-5.06.ebuild:
+  Punting old...
 
   16 Nov 2008; Raúl Porcel <armin76@gentoo.org> xscreensaver-5.07.ebuild:
   alpha/arm/ia64/sh/sparc/x86 stable wrt #246717
