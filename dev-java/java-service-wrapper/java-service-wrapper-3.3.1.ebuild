@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.3.1.ebuild,v 1.4 2008/11/16 15:55:46 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-service-wrapper/java-service-wrapper-3.3.1.ebuild,v 1.5 2008/11/16 16:27:25 serkan Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 JAVA_PKG_IUSE="doc source test"
@@ -38,6 +38,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}/${P}-as-needed.patch"
+	#Reported upstream http://sourceforge.net/tracker2/?func=detail&aid=2299391&group_id=39428&atid=425189
 }
 
 src_compile() {
