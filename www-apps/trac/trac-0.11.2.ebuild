@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.11.2.ebuild,v 1.2 2008/11/15 18:22:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.11.2.ebuild,v 1.3 2008/11/16 17:47:23 maekke Exp $
 
 inherit distutils webapp
 
@@ -15,7 +15,7 @@ SRC_URI="http://ftp.edgewall.com/pub/trac/${MY_P}.tar.gz"
 
 IUSE="cgi fastcgi mysql postgres sqlite subversion"
 
-KEYWORDS="~amd64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 
 # doing so because tools, python packages... overlap
 SLOT="0"
