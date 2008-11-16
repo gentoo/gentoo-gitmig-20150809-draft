@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.10.ebuild,v 1.1 2008/06/07 20:28:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.10.ebuild,v 1.2 2008/11/16 13:58:02 flameeyes Exp $
 
 inherit multilib eutils
 
@@ -42,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	emake \
+	emake -j1 \
 		prefix="${D}"/usr \
 		libdir="${D}"usr/$(get_libdir) \
 		install \
