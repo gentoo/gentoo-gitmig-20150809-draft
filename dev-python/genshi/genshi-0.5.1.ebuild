@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.5.1.ebuild,v 1.4 2008/11/15 18:21:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.5.1.ebuild,v 1.5 2008/11/16 17:46:16 maekke Exp $
 
 NEED_PYTHON=2.3
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://genshi.edgewall.org/"
 SRC_URI="ftp://ftp.edgewall.com/pub/genshi/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 IUSE="doc examples"
 
 DEPEND="dev-python/setuptools"
