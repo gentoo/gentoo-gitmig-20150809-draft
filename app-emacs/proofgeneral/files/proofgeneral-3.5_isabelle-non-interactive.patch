@@ -1,5 +1,5 @@
---- /tmp/isabelle-system.el	2006-11-02 21:09:59.000000000 +0100
-+++ isa/isabelle-system.el	2006-11-02 21:10:36.000000000 +0100
+--- a/isa/isabelle-system.el	2006-11-02 21:09:59.000000000 +0100
++++ b/isa/isabelle-system.el	2006-11-02 21:10:36.000000000 +0100
 @@ -64,26 +64,6 @@
  (defvar isatool-not-found nil
    "Non-nil if user has been prompted for `isatool' already and it wasn't found.")
