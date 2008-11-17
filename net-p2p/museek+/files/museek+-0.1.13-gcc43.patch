@@ -1,7 +1,7 @@
 gcc-4.3 compatibility, by Belegdol.
 http://www.museek-plus.org/changeset/743
---- /museek+/trunk/sources/Museek/Museek.cc
-+++ /museek+/trunk/sources/Museek/Museek.cc
+--- a/museek+/trunk/sources/Museek/Museek.cc
++++ b/museek+/trunk/sources/Museek/Museek.cc
 @@ -37,4 +37,5 @@
  #include <queue>
  #include <vector>
@@ -9,8 +9,8 @@ http://www.museek-plus.org/changeset/743
  
  using std::string;
 
---- /museek+/trunk/sources/Museek/DistribManager.cc
-+++ /museek+/trunk/sources/Museek/DistribManager.cc
+--- a/museek+/trunk/sources/Museek/DistribManager.cc
++++ b/museek+/trunk/sources/Museek/DistribManager.cc
 @@ -27,4 +27,6 @@
  #define MULOG_DOMAIN "Museek.DM"
  #include <Muhelp/Mulog.hh>
