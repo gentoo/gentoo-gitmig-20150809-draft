@@ -1,5 +1,5 @@
---- /tmp/kompose-0.5.4/src/komposetaskprefswidget.cpp	2005-07-06 00:32:41.000000000 +0200
-+++ src/komposetaskprefswidget.cpp	2006-03-06 11:27:43.000000000 +0100
+--- a/src/komposetaskprefswidget.cpp	2005-07-06 00:32:41.000000000 +0200
++++ b/src/komposetaskprefswidget.cpp	2006-03-06 11:27:43.000000000 +0100
 @@ -28,7 +28,7 @@
  KomposeTaskPrefsWidget::KomposeTaskPrefsWidget(KomposeTaskWidget *parent, const char *name)
      : QDockArea(Qt::Horizontal , QDockArea::Normal, parent, name)

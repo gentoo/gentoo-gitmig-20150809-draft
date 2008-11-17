@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kompose
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.22 2007/04/24 08:15:53 opfer Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.23 2008/11/17 20:38:24 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/kompose-0.5.4-ktoolbar-patch:
+  Fix patch with absolute paths.
 
   24 Apr 2007; Christian Faulhammer <opfer@gentoo.org> kompose-0.5.4.ebuild:
   stable amd64, bug 175391
