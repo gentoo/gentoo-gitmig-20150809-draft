@@ -1,7 +1,7 @@
 #bug 200508
 
---- /var/tmp/portage/app-misc/lirc-0.8.3_pre1/work/lirc-0.8.3pre1/drivers/lirc_dev/lirc_dev.c	2007-09-27 15:47:20.000000000 -0400
-+++ lirc-0.8.3pre1/drivers/lirc_dev/lirc_dev.c	2007-11-27 11:06:41.000000000 -0500
+--- a/lirc-0.8.3pre1/drivers/lirc_dev/lirc_dev.c	2007-09-27 15:47:20.000000000 -0400
++++ b/lirc-0.8.3pre1/drivers/lirc_dev/lirc_dev.c	2007-11-27 11:06:41.000000000 -0500
 @@ -41,6 +41,7 @@
  #include <linux/fs.h>
  #include <linux/poll.h>

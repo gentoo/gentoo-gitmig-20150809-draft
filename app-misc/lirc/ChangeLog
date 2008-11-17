@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.189 2008/10/12 19:55:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.190 2008/11/17 20:18:05 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/lirc-0.8.3_pre1-kernel-2.6.24.diff:
+  Fix patch with absolute paths.
 
 *lirc-0.8.4 (12 Oct 2008)
 
