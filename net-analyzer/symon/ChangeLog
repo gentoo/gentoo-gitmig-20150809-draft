@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/symon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.4 2008/11/09 21:35:12 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.5 2008/11/17 00:00:46 tcunha Exp $
+
+*symon-2.79-r5 (17 Nov 2008)
+
+  17 Nov 2008; Tiago Cunha <tcunha@gentoo.org> files/symon-init.d,
+  files/symux-init.d, +symon-2.79-r5.ebuild:
+  Improve the init scripts by:
+  - depending on localmount (both daemons need to write to local disks).
+  - starting after bootmisc (both daemons place a pidfile in /var/run).
+  - using the system logger.
+  - introducing the reload option which sends a SIGHUP to the daemons.
+  - removing the quiet flag to avoid hiding useful information.
 
   09 Nov 2008; Tiago Cunha <tcunha@gentoo.org> metadata.xml:
   Update my email address. Thanks pva
