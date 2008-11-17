@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/frox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.14 2008/05/01 13:42:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/ChangeLog,v 1.15 2008/11/17 21:50:43 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/config-0.7.18.patch:
+  Fix patch with absolute paths.
 
   01 May 2008; Daniel Black <dragonheart@gentoo.org> files/frox.rc:
   proper naming in rc script as per bug #219151

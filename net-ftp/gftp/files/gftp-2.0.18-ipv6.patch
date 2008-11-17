@@ -2,8 +2,8 @@
 	* lib/misc.c (gftp_copy_request) - fixes when doing an IPv6 transfer or
 	using ignore PASV address (from (from Aurelien Jarno) (closes GNOME bugzilla #169671)
 
---- /trunk/lib/misc.c	2006/07/20 02:32:58	784
-+++ trunk/lib/misc.c	2006/07/20 02:37:45	785
+--- a/trunk/lib/misc.c	2006/07/20 02:32:58	784
++++ b/trunk/lib/misc.c	2006/07/20 02:37:45	785
 @@ -568,8 +568,24 @@
    newreq->use_proxy = req->use_proxy;
    newreq->logging_function = req->logging_function;

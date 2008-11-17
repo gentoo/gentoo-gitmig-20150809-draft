@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.68 2008/09/24 08:42:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.69 2008/11/17 21:51:07 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/gftp-2.0.18-ipv6.patch:
+  Fix patch with absolute paths.
 
   24 Sep 2008; Alexis Ballier <aballier@gentoo.org> gftp-2.0.18-r6.ebuild:
   keyword ~x86-fbsd thanks to Matt "gfunkmonk" Rinsch <gfunkmonk@gmail.com>,
