@@ -1,5 +1,5 @@
---- configure.in	2003-12-23 10:14:56.000000000 +0100
-+++ /root/configure.in	2004-06-06 02:13:29.182121072 +0200
+--- a/configure.in	2003-12-23 10:14:56.000000000 +0100
++++ b/configure.in	2004-06-06 02:13:29.182121072 +0200
 @@ -71,9 +71,19 @@
  	AC_CHECK_HEADER([altivec.h],
  	    [TRY_CFLAGS="$ARCH_OPT_CFLAGS -maltivec"],

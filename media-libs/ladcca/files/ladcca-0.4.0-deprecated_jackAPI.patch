@@ -1,6 +1,6 @@
 diff -burN ladcca-0.4.0/ladccad/main.c /tmp/ladcca-0.4.0/ladccad/main.c
---- ladcca-0.4.0/ladccad/main.c	2003-10-19 08:42:50.000000000 -0500
-+++ /tmp/ladcca-0.4.0/ladccad/main.c	2005-04-23 23:16:57.486508000 -0500
+--- a/ladcca-0.4.0/ladccad/main.c	2003-10-19 08:42:50.000000000 -0500
++++ b/ladcca-0.4.0/ladccad/main.c	2005-04-23 23:16:57.486508000 -0500
 @@ -109,7 +109,8 @@
          exit (0);
          break;

@@ -1,6 +1,6 @@
 diff -u -ur inventor/doc/man/man1/GNUmakefile /var/tmp/portage/openinventor-2.1.5.10/work/inventor/doc/man/man1/GNUmakefile
---- inventor/doc/man/man1/GNUmakefile	2000-09-18 11:11:13.000000000 +0200
-+++ /var/tmp/portage/openinventor-2.1.5.10/work/inventor/doc/man/man1/GNUmakefile	2005-09-14 15:35:20.000000000 +0200
+--- a/inventor/doc/man/man1/GNUmakefile	2000-09-18 11:11:13.000000000 +0200
++++ b/inventor/doc/man/man1/GNUmakefile	2005-09-14 15:35:20.000000000 +0200
 @@ -11,6 +11,8 @@
  	ivinfo.1 \
  	ivview.1
@@ -12,8 +12,8 @@ diff -u -ur inventor/doc/man/man1/GNUmakefile /var/tmp/portage/openinventor-2.1.
  
  include $(IVCOMMONRULES)
 diff -u -ur inventor/doc/man/man3/GNUmakefile /var/tmp/portage/openinventor-2.1.5.10/work/inventor/doc/man/man3/GNUmakefile
---- inventor/doc/man/man3/GNUmakefile	2000-09-18 11:11:13.000000000 +0200
-+++ /var/tmp/portage/openinventor-2.1.5.10/work/inventor/doc/man/man3/GNUmakefile	2005-09-14 15:35:37.000000000 +0200
+--- a/inventor/doc/man/man3/GNUmakefile	2000-09-18 11:11:13.000000000 +0200
++++ b/inventor/doc/man/man3/GNUmakefile	2005-09-14 15:35:37.000000000 +0200
 @@ -3,7 +3,9 @@
  
  SUBDIRS = ivm
@@ -26,8 +26,8 @@ diff -u -ur inventor/doc/man/man3/GNUmakefile /var/tmp/portage/openinventor-2.1.
  
  COMMONPREF = xxx
 diff -u -ur inventor/make/commondefs /var/tmp/portage/openinventor-2.1.5.10/work/inventor/make/commondefs
---- inventor/make/commondefs	2001-06-16 01:27:00.000000000 +0200
-+++ /var/tmp/portage/openinventor-2.1.5.10/work/inventor/make/commondefs	2005-09-14 15:27:17.000000000 +0200
+--- a/inventor/make/commondefs	2001-06-16 01:27:00.000000000 +0200
++++ b/inventor/make/commondefs	2005-09-14 15:27:17.000000000 +0200
 @@ -65,7 +65,7 @@
  STRIP	= $(TOOLROOT)/usr/bin/strip
  TAG	= $(TOOLROOT)/usr/sbin/tag
