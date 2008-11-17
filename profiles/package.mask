@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9171 2008/11/16 21:21:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9172 2008/11/17 15:58:54 lack Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jim Ramsay <lack@gentoo.org> (17 Nov 2008)
+# The NEW 64-bit version of flash player is alpha, p.mask it until it's a wee
+# bit more tested (Bug #247200)
+=net-www/netscape-flash-10.0.20.7_alpha
 
 # Matthias Schwarzott <zzam@gentoo.org> (28 Oct 2008)
 # This breaks kernels with older sysfs layout, Bug #246938

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2050 2008/11/16 21:21:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2051 2008/11/17 15:58:54 lack Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Nov 2008; Jim Ramsay <lack@gentoo.org> package.mask:
+  The NEW 64-bit version of flash player is alpha, p.mask it until it's a
+  wee bit more tested (Bug #247200)
 
   16 Nov 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
   Mask udev-132 for Bugs #246849, #246927 and #246938.
