@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gnu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.37 2008/10/31 20:26:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.38 2008/11/17 20:27:41 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/ghostscript-CVE-2007-2721.patch:
+  Fix patch with absolute paths.
 
   31 Oct 2008; Christian Faulhammer <opfer@gentoo.org>
   ghostscript-gnu-8.55.ebuild, ghostscript-gnu-8.60.0.ebuild,
