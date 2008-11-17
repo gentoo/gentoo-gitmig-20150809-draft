@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.47 2008/05/10 03:42:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.48 2008/11/17 19:55:33 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org> files/sox.patch:
+  Fix patch to apply.
 
   10 May 2008; Samuli Suominen <drac@gentoo.org> +files/desktop-entry.patch,
   graveman-0.3.12_p5-r1.ebuild:
