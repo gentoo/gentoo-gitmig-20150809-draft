@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.130 2008/11/12 09:30:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.131 2008/11/17 01:58:33 gentoofan23 Exp $
+
+  17 Nov 2008; Thomas Anderson <gentoofan23@gentoo.org> ntp-4.2.4_p5.ebuild:
+  stable amd64, bug 246242
 
   12 Nov 2008; Guy Martin <gmsoft@gentoo.org> ntp-4.2.4_p5.ebuild:
   stable on hppa, #246242
