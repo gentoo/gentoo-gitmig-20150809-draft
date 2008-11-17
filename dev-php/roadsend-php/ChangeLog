@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/roadsend-php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/ChangeLog,v 1.8 2008/06/18 22:30:48 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/ChangeLog,v 1.9 2008/11/17 20:55:51 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/bigloo-3.1a-configsupport.patch:
+  Fix patch with absolute paths.
 
   18 Jun 2008; Panagiotis Christopoulos <pchrist@gentoo.org>
   files/bigloo-3.1a-configsupport.patch:

@@ -1,5 +1,5 @@
---- configure	2008-04-16 17:08:39.000000000 +0300
-+++ /tmp/roadsend/configure	2008-06-19 01:03:00.000000000 +0300
+--- a/configure	2008-04-16 17:08:39.000000000 +0300
++++ b/configure	2008-06-19 01:03:00.000000000 +0300
 @@ -3121,7 +3121,7 @@
  
  # can't figure out how to get this into AC_CHECK_PROG_VER below?
@@ -18,8 +18,8 @@
         ac_prog_version_m="$ac_prog_version, ok"; ac_verc_fail=no;;
      *) ac_prog_version_m="$ac_prog_version, bad"; ac_verc_fail=yes;;
  
---- configure.in	2008-04-16 17:08:39.000000000 +0300
-+++ /tmp/roadsend/configure.in	2008-06-19 01:03:16.000000000 +0300
+--- a/configure.in	2008-04-16 17:08:39.000000000 +0300
++++ b/configure.in	2008-06-19 01:03:16.000000000 +0300
 @@ -26,7 +26,7 @@
  
  # can't figure out how to get this into AC_CHECK_PROG_VER below?
