@@ -1,5 +1,5 @@
---- /usr/share/aclocal/gpgme3.m4	2005-01-18 21:11:24.000000000 -0600
-+++ gpgme/gpgme.m4	2005-05-10 13:35:51.000000000 -0500
+--- a/gpgme/gpgme.m4	2005-01-18 21:11:24.000000000 -0600
++++ b/gpgme/gpgme.m4	2005-05-10 13:35:51.000000000 -0500
 @@ -6,7 +6,7 @@
  dnl               [ACTION-IF-FOUND [, ACTION-IF-NOT-FOUND ]]])
  dnl Test for libgpgme and define GPGME_CFLAGS and GPGME_LIBS
