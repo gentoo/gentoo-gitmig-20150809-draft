@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyds
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.18 2008/02/28 21:53:07 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.19 2008/11/17 20:57:23 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/pyds-0.6.5-py2.3.patch:
+  Fix patch with absolute paths.
 
 *pyds-0.7.3 (28 Feb 2008)
 
