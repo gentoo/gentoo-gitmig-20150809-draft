@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rar
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.56 2008/11/05 03:23:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.57 2008/11/17 01:34:35 gentoofan23 Exp $
+
+  17 Nov 2008; Thomas Anderson <gentoofan23@gentoo.org> rar-3.8.0.ebuild:
+  stable amd64, bug 247118
 
   05 Nov 2008; Jeroen Roovers <jer@gentoo.org> Manifest:
   Fix digest for rar-3.7.1. Thanks to fuxxy on IRC for reporting.
