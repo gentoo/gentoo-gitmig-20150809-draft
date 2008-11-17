@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.67 2008/09/30 17:28:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.68 2008/11/17 22:49:20 eva Exp $
+
+*libgnomecanvasmm-2.23.1 (17 Nov 2008)
+
+  17 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +libgnomecanvasmm-2.23.1.ebuild:
+  New version for GNOME 2.24. Add a new constructor (CanvasAA).
 
   30 Sep 2008; Jeroen Roovers <jer@gentoo.org>
   libgnomecanvasmm-2.22.0.ebuild:
