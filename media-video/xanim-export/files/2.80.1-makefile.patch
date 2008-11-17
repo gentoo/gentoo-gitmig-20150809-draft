@@ -1,5 +1,5 @@
---- /var/tmp/portage/xanim-export-2.80.1-r3/work/xanim_exporting_edition/Makefile	1999-10-28 00:18:23.000000000 -0400
-+++ files/Makefile	2001-06-03 05:54:22.000000000 -0400
+--- a/Makefile	1999-10-28 00:18:23.000000000 -0400
++++ b/Makefile	2001-06-03 05:54:22.000000000 -0400
 @@ -133,7 +135,7 @@
  #
  XA_DLL_DEF = -DXA_DLL -DXA_PRINT
