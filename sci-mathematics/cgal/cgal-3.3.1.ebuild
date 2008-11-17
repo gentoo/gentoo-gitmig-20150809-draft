@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-3.3.1.ebuild,v 1.1 2008/10/27 15:17:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-3.3.1.ebuild,v 1.2 2008/11/17 10:13:00 bicatali Exp $
 
 EAPI=2
 
@@ -19,7 +19,6 @@ IUSE="examples gmp lapack opengl qt3 taucs X zlib"
 
 RDEPEND="dev-libs/boost
 	dev-libs/mpfr
-	gmp? ( dev-libs/gmp )
 	lapack? ( virtual/lapack )
 	opengl? ( virtual/opengl )
 	qt3? ( x11-libs/qt:3 )
@@ -52,9 +51,10 @@ src_configure() {
 		--without-autofind
 		--with-boost
 		--with-boost_program_options
-		--with-mpfr"
+		--with-mpfr
+		--with-gmp
+		--with-gmpxx"
 
-	use gmp    && MYCONF="${MYCONF} --with-gmp --with-gmpxx"
 	use lapack && MYCONF="${MYCONF} --with-gentoolapack"
 	use opengl && MYCONF="${MYCONF} --with-opengl"
 	use taucs  && MYCONF="${MYCONF} --with-gentoolapack --with-taucslapack"
