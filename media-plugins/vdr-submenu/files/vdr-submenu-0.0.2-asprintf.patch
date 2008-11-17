@@ -1,4 +1,3 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
 ## 02_asprintf.dpatch by Tobias Grimm <tg@e-tobi.net>
 ##
 ## All lines beginning with `## DP:' are a description of the patch.
@@ -9,8 +8,8 @@ This patch was extracted from http://e-tobi.net/vdr-experimental/pool/source/vdr
 
 @DPATCH@
 diff -urNad --exclude=CVS --exclude=.svn ./submenu-setup.c /tmp/dpep-work.ho7VxE/vdr-plugin-submenu-0.0.2/submenu-setup.c
---- ./submenu-setup.c	2005-02-03 15:35:49.000000000 +0100
-+++ /tmp/dpep-work.ho7VxE/vdr-plugin-submenu-0.0.2/submenu-setup.c	2005-08-24 00:37:43.000000000 +0200
+--- a/submenu-setup.c	2005-02-03 15:35:49.000000000 +0100
++++ b/submenu-setup.c	2005-08-24 00:37:43.000000000 +0200
 @@ -245,19 +245,25 @@
  void cSubMenuSetup::DrawSubMenu(int level)
  {

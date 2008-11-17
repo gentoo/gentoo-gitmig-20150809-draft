@@ -1,6 +1,6 @@
 diff -ur pvr350-0.0.4pre1/device.c /tmp/pvr350-0.0.4pre1/device.c
---- pvr350-0.0.4pre1/device.c   2005-02-12 21:15:16.000000000 +0200
-+++ /tmp/pvr350-0.0.4pre1/device.c      2006-04-05 09:08:54.000000000 +0300
+--- a/pvr350-0.0.4pre1/device.c   2005-02-12 21:15:16.000000000 +0200
++++ b//pvr350-0.0.4pre1/device.c      2006-04-05 09:08:54.000000000 +0300
 @@ -321,7 +321,11 @@
     streams to find out the aspect ratio that's needed
  */
@@ -14,8 +14,8 @@ diff -ur pvr350-0.0.4pre1/device.c /tmp/pvr350-0.0.4pre1/device.c
         return PlayVideo(Data,Length);
  }
 diff -ur pvr350-0.0.4pre1/device.h /tmp/pvr350-0.0.4pre1/device.h
---- pvr350-0.0.4pre1/device.h   2005-02-12 21:14:25.000000000 +0200
-+++ /tmp/pvr350-0.0.4pre1/device.h      2006-04-05 09:11:46.000000000 +0300
+--- a/pvr350-0.0.4pre1/device.h   2005-02-12 21:14:25.000000000 +0200
++++ b/pvr350-0.0.4pre1/device.h      2006-04-05 09:11:46.000000000 +0300
 @@ -74,8 +74,12 @@
      virtual void StillPicture(const uchar *Data, int Length);
      virtual int PlayVideo(const uchar *Data, int Length);
