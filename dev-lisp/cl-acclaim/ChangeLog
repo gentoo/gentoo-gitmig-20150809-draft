@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-acclaim
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acclaim/ChangeLog,v 1.7 2007/03/03 23:16:13 genone Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acclaim/ChangeLog,v 1.8 2008/11/17 20:31:31 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/0.25-slides-pathname-gentoo.patch:
+  Fix patch with absolute paths.
 
   03 Mar 2007; Marius Mauch <genone@gentoo.org> cl-acclaim-0.25.ebuild,
   cl-acclaim-0.25-r1.ebuild:

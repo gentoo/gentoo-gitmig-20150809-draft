@@ -1,5 +1,5 @@
---- /var/tmp/portage/cl-acclaim-0.24/work/code/acclaim.lisp	2004-06-18 18:47:09.000000000 -0700
-+++ /home/ejohnson/code/acclaim.lisp	2004-10-26 17:29:07.052686752 -0700
+--- a/code/acclaim.lisp	2004-06-18 18:47:09.000000000 -0700
++++ b/code/acclaim.lisp	2004-10-26 17:29:07.052686752 -0700
 @@ -188,8 +188,13 @@
  ;;
  
