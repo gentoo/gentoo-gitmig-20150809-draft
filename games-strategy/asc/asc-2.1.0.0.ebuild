@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.1.0.0.ebuild,v 1.1 2008/04/07 01:43:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.1.0.0.ebuild,v 1.2 2008/11/17 06:33:09 mr_bones_ Exp $
 
 inherit toolchain-funcs flag-o-matic games
 
@@ -36,13 +36,13 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	local f
 
+	unpack ${P}.tar.bz2
 	for f in ${A}
 	do
 		case ${f} in
 		*ogg)
 			cp "${DISTDIR}/${f}" "${S}/data/music" || die "cp music failed"
 			;;
-		*) unpack ${f}
 		esac
 	done
 }
