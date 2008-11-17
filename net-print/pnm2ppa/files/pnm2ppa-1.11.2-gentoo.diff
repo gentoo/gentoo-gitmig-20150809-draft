@@ -72,7 +72,7 @@ diff -ru ./lpd/coloreco.if /var/tmp/portage/pnm2ppa-1.11.2/work/pnm2ppa-1.11pre2
  #------------------dont change below this line----------------------
  gs -sDEVICE=ppmraw -sPAPERSIZE=$PAPER -q -dNOPAUSE -r600 -sOutputFile=- - | \
  $PNM2PPA --eco $PPAOPTS -i - -o -
---- /tmp/lpdsetup       2002-10-29 14:31:18.000000000 +0000
+--- lpd/lpdsetup       2002-10-29 14:31:18.000000000 +0000
 +++ lpd/lpdsetup        2002-10-29 14:31:39.000000000 +0000
 @@ -1,5 +1,5 @@
  #!/bin/sh

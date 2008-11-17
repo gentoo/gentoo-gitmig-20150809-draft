@@ -1,6 +1,6 @@
 diff -Nur kink-0.2.1/work/kink-0.2.1/kink/kink.cpp /tmp/kink-0.2.1/kink/kink.cpp
---- kink-0.2.1/work/kink-0.2.1/kink/kink.cpp	2003-12-14 11:05:03.000000000 +0100
-+++ /tmp/kink-0.2.1/kink/kink.cpp	2004-07-04 18:48:57.000822400 +0200
+--- a/kink-0.2.1/kink/kink.cpp	2003-12-14 11:05:03.000000000 +0100
++++ b/kink-0.2.1/kink/kink.cpp	2004-07-04 18:48:57.000822400 +0200
 @@ -156,7 +156,7 @@
  	listed_devices[listed_count].device_port = port;
  	++listed_count;
