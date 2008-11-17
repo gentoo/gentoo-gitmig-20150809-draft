@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.5 2008/10/28 17:19:35 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.6 2008/11/17 10:57:54 remi Exp $
+
+*xf86-video-intel-2.5.1 (17 Nov 2008)
+*xf86-video-intel-2.4.3 (17 Nov 2008)
+
+  17 Nov 2008; Rémi Cardona <remi@gentoo.org>
+  +files/2.5.1-0001-clean-up-man-page-generation-and-remove-all-traces-o.pat
+  ch, +files/2.4.3-0001-never-enable-DRI_MM-on-this-branch.patch,
+  +xf86-video-intel-2.4.3.ebuild, +xf86-video-intel-2.5.1.ebuild:
+  bump to both 2.4.3 and 2.5.1
 
   28 Oct 2008; Rémi Cardona <remi@gentoo.org>
   xf86-video-intel-2.2.1.ebuild:
