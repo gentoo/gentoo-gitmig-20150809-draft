@@ -1,5 +1,5 @@
---- gccattributes.h	2003-05-24 04:01:12.000000000 +0100
-+++ /usr/local/portage/dev-libs/skalibs/files/skalibs-0.30-gccattributes.h	2003-08-25 20:56:26.000000000 +0100
+--- a/gccattributes.h	2003-05-24 04:01:12.000000000 +0100
++++ b/gccattributes.h	2003-08-25 20:56:26.000000000 +0100
 @@ -5,25 +5,25 @@
  
  #ifdef __GNUC__
