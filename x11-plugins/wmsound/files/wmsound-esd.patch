@@ -1,5 +1,5 @@
---- /home/users/hunter/backups/Imakefile~	2004-02-08 18:54:15.000000000 +0100
-+++ src/Imakefile	2004-02-08 18:54:48.000000000 +0100
+--- a/src/Imakefile~	2004-02-08 18:54:15.000000000 +0100
++++ b/src/Imakefile	2004-02-08 18:54:48.000000000 +0100
 @@ -12,7 +12,7 @@
  #endif
  
@@ -9,30 +9,8 @@
  
  WMSOUNDLIB = -L../lib -lwmsnd -L/usr/local/lib $(ESDLIB)
  
---- /home/users/hunter/backups/Imakefile~	1999-05-02 12:27:29.000000000 +0200
-+++ lib/Imakefile	2004-02-08 19:16:56.000000000 +0100
-@@ -20,7 +20,7 @@
- EXTRA_DEFINES = -DOSS_SOUND
- 
- XCOMM uncomment out the next line if you want to use esd
--XCOMM EXTRA_DEFINES = -DESD
-+EXTRA_DEFINES = -DESD
- 
- XCOMM uncomment out the next line if you want Solaris Support
- XCOMM EXTRA_DEFINES = -DSVR4
---- /home/users/hunter/backups/Imakefile~	1999-05-01 16:52:46.000000000 +0200
-+++ Imakefile	2004-02-08 19:18:47.000000000 +0100
-@@ -1,7 +1,7 @@
- #define IHaveSubdirs
- #define PassCDebugFlags CDEBUGFLAGS="$(CDEBUGFLAGS)"
- 
--PREFIX = /usr/local
-+PREFIX = /usr/
- 
- DESTDIR = $(PREFIX)
- 
---- /home/users/hunter/backups/Imakefile~	2004-02-08 19:19:18.000000000 +0100
-+++ lib/Imakefile	2004-02-08 19:20:04.000000000 +0100
+--- a/lib/Imakefile~	1999-05-02 12:27:29.000000000 +0200
++++ b/lib/Imakefile	2004-02-08 19:16:56.000000000 +0100
 @@ -4,7 +4,7 @@
  HEADER_INST = /include
  
@@ -42,11 +20,34 @@
  
  XCOMM Solaris
  XCOMM STD_INCLUDES = -I/usr/openwin/include -I/usr/local/include
---- /home/users/hunter/backups/Imakefile~	1999-05-01 11:46:31.000000000 +0200
-+++ utils/Imakefile	2004-02-08 19:22:03.000000000 +0100
-@@ -13,8 +13,8 @@
+@@ -20,7 +20,7 @@
+ EXTRA_DEFINES = -DOSS_SOUND
+ 
+ XCOMM uncomment out the next line if you want to use esd
+-XCOMM EXTRA_DEFINES = -DESD
++EXTRA_DEFINES = -DESD
+ 
+ XCOMM uncomment out the next line if you want Solaris Support
+ XCOMM EXTRA_DEFINES = -DSVR4
+--- a/Imakefile~	1999-05-01 16:52:46.000000000 +0200
++++ b/Imakefile	2004-02-08 19:18:47.000000000 +0100
+@@ -1,7 +1,7 @@
+ #define IHaveSubdirs
+ #define PassCDebugFlags CDEBUGFLAGS="$(CDEBUGFLAGS)"
+ 
+-PREFIX = /usr/local
++PREFIX = /usr/
+ 
+ DESTDIR = $(PREFIX)
+ 
+--- a/utils/Imakefile~	1999-05-01 11:46:31.000000000 +0200
++++ b/utils/Imakefile	2004-02-08 19:22:03.000000000 +0100
+@@ -11,10 +11,10 @@
+ #endif
+ 
  XCOMM uncomment out the next line if you want to use esd comment out the line below next line
- XCOMM ESDLIB = -lesd -laudiofile
+-XCOMM ESDLIB = -lesd -laudiofile
++ESDLIB = -lesd -laudiofile
  
 -WMSOUNDLIB = -L../lib -lwmsnd -L/usr/local/lib $(ESDLIB)
 -STD_INCLUDES = -I/usr/local/include -I/usr/X11R6/include
@@ -55,8 +56,8 @@
  DEPLIBS = $(DEPXLIB) 
  
  LOCAL_LIBRARIES += -lPropList $(XLIB) $(WMSOUNDLIB) $(EFENCELIB)
---- /home/users/hunter/backups/Imakefile~	2004-02-08 19:25:30.000000000 +0100
-+++ lib/Imakefile	2004-02-08 19:26:20.000000000 +0100
+--- a/lib/Imakefile~	2004-02-08 19:25:30.000000000 +0100
++++ b/lib/Imakefile	2004-02-08 19:26:20.000000000 +0100
 @@ -9,7 +9,7 @@
  XCOMM Solaris
  XCOMM STD_INCLUDES = -I/usr/openwin/include -I/usr/local/include
@@ -66,14 +67,5 @@
  
  #ifdef USE_HPUX_SOUND_SERVER
   EXTRA_INCLUDES += -I/opt/audio/include
---- /home/users/hunter/backups/Imakefile~	2004-02-08 19:31:16.000000000 +0100
-+++ utils/Imakefile	2004-02-08 19:31:44.000000000 +0100
-@@ -11,7 +11,7 @@
- #endif
- 
- XCOMM uncomment out the next line if you want to use esd comment out the line below next line
--XCOMM ESDLIB = -lesd -laudiofile
-+ESDLIB = -lesd -laudiofile
- 
- WMSOUNDLIB = -L../lib -lwmsnd -L/usr/lib $(ESDLIB)
- STD_INCLUDES = -I/usr/include -I/usr/X11R6/include
+--- a/utils/Imakefile~	2004-02-08 19:31:16.000000000 +0100
++++ b/utils/Imakefile	2004-02-08 19:31:44.000000000 +0100

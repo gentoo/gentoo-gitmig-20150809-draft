@@ -1,6 +1,6 @@
 diff -ur wmcalendar-0.5.0/Src/Makefile /wmcalendar-0.5.0/Src/Makefile
---- wmcalendar-0.5.0/Src/Makefile	2003-07-15 17:19:26.000000000 +0200
-+++ /wmcalendar-0.5.0/Src/Makefile	2003-09-17 08:36:48.000000000 +0200
+--- a/wmcalendar-0.5.0/Src/Makefile	2003-07-15 17:19:26.000000000 +0200
++++ b/wmcalendar-0.5.0/Src/Makefile	2003-09-17 08:36:48.000000000 +0200
 @@ -1,4 +1,7 @@
 -CC     = gcc
 +ifndef CC
