@@ -1,8 +1,8 @@
 Patch taken from http://www.freenac.net/downloads/openvmps.patch
 as mentioned at http://www.freenac.net/phpBB2/viewtopic.php?t=76
 for http://www.securityfocus.com/bid/15072/info
---- log.c	2006-09-08 16:33:01.000000000 +0200
-+++ /root/log.c	2006-10-22 16:32:11.000000000 +0200
+--- a/log.c	2006-09-08 16:33:01.000000000 +0200
++++ b/log.c	2006-10-22 16:32:11.000000000 +0200
 @@ -27,14 +27,14 @@
  			log_opened = 1;
  		}
