@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/vdr-femon-1.2.4.ebuild,v 1.1 2008/03/24 09:58:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/vdr-femon-1.6.3.ebuild,v 1.1 2008/11/17 17:51:13 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -13,4 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.5.7"
+DEPEND=">=media-video/vdr-1.6.0"
+
+src_unpack() {
+	vdr-plugin_src_unpack
+
+	sed -e "s:400:420:" -i femon.c
+}
+

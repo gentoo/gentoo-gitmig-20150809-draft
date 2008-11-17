@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.21_alpha.ebuild,v 1.2 2008/08/11 04:42:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.21_alpha.ebuild,v 1.3 2008/11/17 17:51:13 hd_brummy Exp $
 
 MY_PV="${PV/_alpha/.alpha}"
 MY_P="${PN}-${MY_PV}"
@@ -52,7 +52,9 @@ src_unpack() {
 	sed -i common.c -e "s:void tell:int tell:"
 
 	if has_version ">=media-video/ffmpeg-0.4.9_p20070525" ; then
-		sed -i Makefile -e "s:#HAVE_SWSCALE:HAVE_SWSCALE:"
+		sed -i Makefile -e "s:#HAVE_SWSCALE:HAVE_SWSCALE:" \
+		-e "s:LIBS+=-lswscale:LIBS += -L\$\(FFMDIR\) -lswscale:"
+
 	fi
 
 	has_version ">=media-video/ffmpeg-0.4.9_p20080326" \
@@ -61,8 +63,8 @@ src_unpack() {
 	has_version ">=media-gfx/imagemagick-6.4" \
 	&& epatch "${FILESDIR}/${PN}-0.1.18_alpha-imagemagick-6.4-new_header.diff"
 
-	use directfb && sed -i Makefile \
-		-e "s:#HAVE_DFB = 1:HAVE_DFB = 1:"
+	use !directfb && sed -i Makefile \
+		-e "s:HAVE_DFB = 1:#HAVE_DFB = 1:"
 
 	use graphtft-fe && sed -i Makefile \
 		-e "s:#WITH_X_COMM:WITH_X_COMM:"
