@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.67 2008/11/17 08:26:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.68 2008/11/17 13:55:58 fmccor Exp $
+
+  17 Nov 2008; Ferris McCormick <fmccor@gentoo.org> dropbear-0.51.ebuild:
+  Sparc stable --- Bug #230259.
 
   17 Nov 2008; Jeroen Roovers <jer@gentoo.org> dropbear-0.51.ebuild:
   Stable for HPPA (bug #230259).
