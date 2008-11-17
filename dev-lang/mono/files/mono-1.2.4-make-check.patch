@@ -21,7 +21,7 @@
  		{
  			Encoding.GetEncoding (932).DecoderFallback =
 diff -uar /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/DeflateStreamCas.cs mono-1.2.4/mcs/class/System/Test/System.IO.Compression/DeflateStreamCas.cs
---- /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/DeflateStreamCas.cs	2007-04-25 20:49:34.000000000 +0200
+--- mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/DeflateStreamCas.cs	2007-04-25 20:49:34.000000000 +0200
 +++ mono-1.2.4/mcs/class/System/Test/System.IO.Compression/DeflateStreamCas.cs	2007-06-26 20:26:20.000000000 +0200
 @@ -43,6 +43,7 @@
  	[Category ("CAS")]
@@ -41,7 +41,7 @@ diff -uar /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression
  }
  
 diff -uar /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/DeflateStreamTest.cs mono-1.2.4/mcs/class/System/Test/System.IO.Compression/DeflateStreamTest.cs
---- /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/DeflateStreamTest.cs	2007-04-25 20:49:34.000000000 +0200
+--- mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/DeflateStreamTest.cs	2007-04-25 20:49:34.000000000 +0200
 +++ mono-1.2.4/mcs/class/System/Test/System.IO.Compression/DeflateStreamTest.cs	2007-06-26 20:17:27.000000000 +0200
 @@ -20,6 +20,7 @@
  	[TestFixture]
@@ -61,7 +61,7 @@ diff -uar /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression
  }
  
 diff -uar /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/GZipStreamCas.cs mono-1.2.4/mcs/class/System/Test/System.IO.Compression/GZipStreamCas.cs
---- /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/GZipStreamCas.cs	2007-04-25 20:49:34.000000000 +0200
+--- mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/GZipStreamCas.cs	2007-04-25 20:49:34.000000000 +0200
 +++ mono-1.2.4/mcs/class/System/Test/System.IO.Compression/GZipStreamCas.cs	2007-06-26 20:25:44.000000000 +0200
 @@ -42,7 +42,8 @@
  	[TestFixture]
@@ -82,7 +82,7 @@ diff -uar /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression
  }
  
 diff -uar /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/GzipStreamTest.cs mono-1.2.4/mcs/class/System/Test/System.IO.Compression/GzipStreamTest.cs
---- /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/GzipStreamTest.cs	2007-04-25 20:49:34.000000000 +0200
+--- mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression/GzipStreamTest.cs	2007-04-25 20:49:34.000000000 +0200
 +++ mono-1.2.4/mcs/class/System/Test/System.IO.Compression/GzipStreamTest.cs	2007-06-26 20:26:04.000000000 +0200
 @@ -20,6 +20,7 @@
  	[TestFixture]
@@ -101,7 +101,7 @@ diff -uar /home/koxta/mono-1.2.4-old/mcs/class/System/Test/System.IO.Compression
  }
  
 diff -uar /home/koxta/mono-1.2.4-old/mcs/class/corlib/Test/Microsoft.Win32/RegistryKeyTest.cs mono-1.2.4/mcs/class/corlib/Test/Microsoft.Win32/RegistryKeyTest.cs
---- /home/koxta/mono-1.2.4-old/mcs/class/corlib/Test/Microsoft.Win32/RegistryKeyTest.cs	2007-04-25 20:49:44.000000000 +0200
+--- mono-1.2.4-old/mcs/class/corlib/Test/Microsoft.Win32/RegistryKeyTest.cs	2007-04-25 20:49:44.000000000 +0200
 +++ mono-1.2.4/mcs/class/corlib/Test/Microsoft.Win32/RegistryKeyTest.cs	2007-06-26 20:09:40.000000000 +0200
 @@ -22,6 +22,8 @@
  	[TestFixture]
@@ -202,7 +202,7 @@ diff -uar /home/koxta/mono-1.2.4-old/mcs/class/Mono.Posix/Test/Mono.Unix/UnixUse
  }
  
 diff -uar /home/koxta/mono-1.2.4-old/mcs/class/Mono.Security/Test/Mono.Security/ASN1ConvertTest.cs mono-1.2.4/mcs/class/Mono.Security/Test/Mono.Security/ASN1ConvertTest.cs
---- /home/koxta/mono-1.2.4-old/mcs/class/Mono.Security/Test/Mono.Security/ASN1ConvertTest.cs	2007-04-25 20:50:15.000000000 +0200
+--- mono-1.2.4-old/mcs/class/Mono.Security/Test/Mono.Security/ASN1ConvertTest.cs	2007-04-25 20:50:15.000000000 +0200
 +++ mono-1.2.4/mcs/class/Mono.Security/Test/Mono.Security/ASN1ConvertTest.cs	2007-06-27 00:28:43.000000000 +0200
 @@ -32,6 +32,7 @@
  			}
