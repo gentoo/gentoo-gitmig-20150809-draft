@@ -1,6 +1,6 @@
 diff -Naur /tmp/djbdns-1.05/Makefile djbdns-1.05/Makefile
---- /tmp/djbdns-1.05/Makefile	2003-11-16 20:33:41.000000000 +0100
-+++ djbdns-1.05/Makefile	2003-11-16 20:35:15.000000000 +0100
+--- a/djbdns-1.05/Makefile	2003-11-16 20:33:41.000000000 +0100
++++ b/djbdns-1.05/Makefile	2003-11-16 20:35:15.000000000 +0100
 @@ -31,7 +31,7 @@
  
  auto_home.c: \
