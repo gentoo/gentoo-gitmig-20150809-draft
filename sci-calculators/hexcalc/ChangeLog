@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/hexcalc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/ChangeLog,v 1.8 2007/07/22 07:29:44 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/hexcalc/ChangeLog,v 1.9 2008/11/17 22:05:07 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/hexcalc-order.diff:
+  Fix patch with absolute paths.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; hexcalc-1.11.ebuild,
   hexcalc-1.11-r1.ebuild:
