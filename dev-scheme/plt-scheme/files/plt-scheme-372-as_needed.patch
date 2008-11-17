@@ -1,0 +1,35 @@
+diff -Naur plt-372.orig/src/configure plt-372/src/configure
+--- plt-372.orig/src/configure	2008-06-01 15:25:38.000000000 +0200
++++ plt-372/src/configure	2008-06-01 15:32:21.000000000 +0200
+@@ -5390,6 +5390,7 @@
+   Linux)
+     LIBS="$LIBS -rdynamic"
+     DYN_CFLAGS="-fPIC"
++    LIBMZSCHEME_DEP="-ldl -lm"
+     # PPC: X11 librares are not found
+     case `$UNAME -m` in
+       ppc)
+diff -Naur plt-372.orig/src/mred/Makefile.in plt-372/src/mred/Makefile.in
+--- plt-372.orig/src/mred/Makefile.in	2008-06-01 15:25:37.000000000 +0200
++++ plt-372/src/mred/Makefile.in	2008-06-01 20:33:27.000000000 +0200
+@@ -125,7 +125,7 @@
+ 	$(MREDLINKER) $(MREDLDFLAGS) $(MRSTATIC) -o mred@CGC@ $(MREDOBJECTS) $(MREDLDLIBS) $(MRSTATIC_STUB)
+ 
+ libmred.@LIBSFX@: $(WXLIBSNORM)
+-	$(AR) $(ARFLAGS) libmred.@LIBSFX@ $(WXLIBSNORM) @LIBMRED_DEP@
++	$(AR) $(ARFLAGS) libmred.@LIBSFX@ $(WXLIBSNORM) @LIBMRED_DEP@ @LDFLAGS@ $(LDLIBS)
+ 
+ MRFW = PLT_MrEd.framework/Versions/$(FWVERSION)/PLT_MrEd
+ MRFWRES = PLT_MrEd.framework/Versions/$(FWVERSION)/Resources/PLT_MrEd.rsrc
+diff -Naur plt-372.orig/src/mzscheme/gc2/Makefile.in plt-372/src/mzscheme/gc2/Makefile.in
+--- plt-372.orig/src/mzscheme/gc2/Makefile.in	2008-06-01 15:25:38.000000000 +0200
++++ plt-372/src/mzscheme/gc2/Makefile.in	2008-06-01 20:32:00.000000000 +0200
+@@ -310,7 +310,7 @@
+ EXTRA_OBJS_L = ../src/gmp.@LTO@ @FOREIGN_OBJSLIB_IF_USED@
+ 
+ ../libmzscheme3m.@LIBSFX@: $(OBJS) $(EXTRA_OBJS_T)
+-	$(AR) $(ARFLAGS) ../libmzscheme3m.@LIBSFX@ $(OBJS) $(EXTRA_OBJS_L)
++	$(AR) $(ARFLAGS) ../libmzscheme3m.@LIBSFX@ $(OBJS) $(EXTRA_OBJS_L) @LDFLAGS@ $(LIBS)
+ 	$(RANLIB) ../libmzscheme3m.@LIBSFX@
+ 
+ ../mzscheme@MMM@@NOT_OSX@: main.@LTO@ ../libmzscheme3m.@LIBSFX@
