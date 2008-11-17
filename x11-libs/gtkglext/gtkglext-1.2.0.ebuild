@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.2.0.ebuild,v 1.14 2007/08/15 04:12:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.2.0.ebuild,v 1.15 2008/11/17 18:36:58 dang Exp $
 
 inherit gnome2 autotools
 
@@ -23,3 +23,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog* INSTALL NEWS README* TODO"
+
+pkg_setup() {
+	if ! built_with_use x11-libs/pango X; then
+		eerror "Please re-emerge x11-libs/pango with the X USE flag set"
+		die "needs pango with the X flag set"
+	fi
+}
