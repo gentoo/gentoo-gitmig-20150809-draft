@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/quilt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.37 2008/11/16 21:19:43 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.38 2008/11/17 20:08:58 mpagano Exp $
+
+  17 Nov 2008; Mike Pagano <mpagano@gentoo.org>
+  +files/quilt-0.47-no-graphviz.patch:
+  Adding missing no-graphviz patch for version 0.47
 
 *quilt-0.47 (16 Nov 2008)
 
