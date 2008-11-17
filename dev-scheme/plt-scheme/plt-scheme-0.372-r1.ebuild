@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/plt-scheme-0.372-r1.ebuild,v 1.1 2008/11/17 00:07:29 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/plt-scheme-0.372-r1.ebuild,v 1.2 2008/11/17 10:33:18 pchrist Exp $
 
 inherit eutils latex-package
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.plt-scheme.org/bundles/${MY_PV}/plt/plt-${MY_PV}-src-un
 #"mirror://gentoo/plt-${MY_PV%%_p*}-src-unix.tgz"
 
 DESCRIPTION="DrScheme programming environment. Includes mzscheme."
-HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
+HOMEPAGE="http://www.plt-scheme.org"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
