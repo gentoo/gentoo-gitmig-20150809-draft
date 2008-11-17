@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.27 2008/08/24 11:26:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.28 2008/11/17 20:32:21 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/twisted-lore-0.1.0-which.patch:
+  Fix patch with absolute paths.
 
   24 Aug 2008; Markus Rothe <corsair@gentoo.org> twisted-lore-8.1.0.ebuild:
   Stable on ppc64; bug #231675

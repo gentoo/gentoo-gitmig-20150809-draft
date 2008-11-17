@@ -1,7 +1,7 @@
 Index: /trunk/twisted/lore/latex.py
 ===================================================================
---- /trunk/twisted/lore/latex.py (revision 11450)
-+++ /trunk/twisted/lore/latex.py (revision 13880)
+--- a/trunk/twisted/lore/latex.py (revision 11450)
++++ b/trunk/twisted/lore/latex.py (revision 13880)
 @@ -5,5 +5,5 @@
  
  from twisted.web import microdom, domhelpers
