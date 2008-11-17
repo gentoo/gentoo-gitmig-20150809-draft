@@ -1,6 +1,6 @@
 diff -ru /tmp/sourcenav-5.1.1/Makefile.in ./Makefile.in
---- /tmp/sourcenav-5.1.1/Makefile.in	2002-06-25 19:05:44.000000000 +0100
-+++ ./Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/Makefile.in	2002-06-25 19:05:44.000000000 +0100
++++ b/sourcenav-5.1.1/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -24,6 +24,8 @@
  NOTPARALLEL = .NOTPARALLEL
  $(NOTPARALLEL):
@@ -21,8 +21,8 @@ diff -ru /tmp/sourcenav-5.1.1/Makefile.in ./Makefile.in
  # For any flags above that may contain shell code that varies from one
  # target library to another.  When doing recursive invocations of the
 diff -ru /tmp/sourcenav-5.1.1/itcl/itcl/Makefile.in ./itcl/itcl/Makefile.in
---- /tmp/sourcenav-5.1.1/itcl/itcl/Makefile.in	2001-09-09 20:49:04.000000000 +0100
-+++ ./itcl/itcl/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/itcl/itcl/Makefile.in	2001-09-09 20:49:04.000000000 +0100
++++ b/sourcenav-5.1.1/itcl/itcl/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -272,16 +272,17 @@
  #========================================================================
  
@@ -47,8 +47,8 @@ diff -ru /tmp/sourcenav-5.1.1/itcl/itcl/Makefile.in ./itcl/itcl/Makefile.in
  
  #========================================================================
 diff -ru /tmp/sourcenav-5.1.1/itcl/itk/Makefile.in ./itcl/itk/Makefile.in
---- /tmp/sourcenav-5.1.1/itcl/itk/Makefile.in	2001-09-09 20:49:05.000000000 +0100
-+++ ./itcl/itk/Makefile.in	2002-12-11 20:56:07.000000000 +0000
+--- a/sourcenav-5.1.1/itcl/itk/Makefile.in	2001-09-09 20:49:05.000000000 +0100
++++ b/sourcenav-5.1.1/itcl/itk/Makefile.in	2002-12-11 20:56:07.000000000 +0000
 @@ -267,16 +267,17 @@
  #========================================================================
  
@@ -73,8 +73,8 @@ diff -ru /tmp/sourcenav-5.1.1/itcl/itk/Makefile.in ./itcl/itk/Makefile.in
  
  #========================================================================
 diff -ru /tmp/sourcenav-5.1.1/itcl/iwidgets3.0.0/Makefile.in ./itcl/iwidgets3.0.0/Makefile.in
---- /tmp/sourcenav-5.1.1/itcl/iwidgets3.0.0/Makefile.in	2002-01-11 20:18:03.000000000 +0000
-+++ ./itcl/iwidgets3.0.0/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/itcl/iwidgets3.0.0/Makefile.in	2002-01-11 20:18:03.000000000 +0000
++++ b/sourcenav-5.1.1/itcl/iwidgets3.0.0/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -1,3 +1,5 @@
 +DESTDIR = 
 +
@@ -97,8 +97,8 @@ diff -ru /tmp/sourcenav-5.1.1/itcl/iwidgets3.0.0/Makefile.in ./itcl/iwidgets3.0.
  
  # Directory in which to install the archive libtcl.a:
 diff -ru /tmp/sourcenav-5.1.1/snavigator/Makefile.in ./snavigator/Makefile.in
---- /tmp/sourcenav-5.1.1/snavigator/Makefile.in	2002-05-09 08:54:48.000000000 +0100
-+++ ./snavigator/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/snavigator/Makefile.in	2002-05-09 08:54:48.000000000 +0100
++++ b/sourcenav-5.1.1/snavigator/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -518,7 +518,7 @@
  
  
@@ -109,8 +109,8 @@ diff -ru /tmp/sourcenav-5.1.1/snavigator/Makefile.in ./snavigator/Makefile.in
  	(cd ../tk; $(MAKE) install-libraries)
  	(cd ../tix; $(MAKE) install-libraries)
 diff -ru /tmp/sourcenav-5.1.1/snavigator/bitmaps/Makefile.in ./snavigator/bitmaps/Makefile.in
---- /tmp/sourcenav-5.1.1/snavigator/bitmaps/Makefile.in	2002-04-26 08:14:27.000000000 +0100
-+++ ./snavigator/bitmaps/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/snavigator/bitmaps/Makefile.in	2002-04-26 08:14:27.000000000 +0100
++++ b/sourcenav-5.1.1/snavigator/bitmaps/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -333,8 +333,8 @@
  
  
@@ -123,8 +123,8 @@ diff -ru /tmp/sourcenav-5.1.1/snavigator/bitmaps/Makefile.in ./snavigator/bitmap
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
 diff -ru /tmp/sourcenav-5.1.1/snavigator/db/Makefile.in ./snavigator/db/Makefile.in
---- /tmp/sourcenav-5.1.1/snavigator/db/Makefile.in	2002-04-26 08:14:28.000000000 +0100
-+++ ./snavigator/db/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/snavigator/db/Makefile.in	2002-04-26 08:14:28.000000000 +0100
++++ b/sourcenav-5.1.1/snavigator/db/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -582,8 +582,8 @@
  
  
@@ -137,8 +137,8 @@ diff -ru /tmp/sourcenav-5.1.1/snavigator/db/Makefile.in ./snavigator/db/Makefile
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
 diff -ru /tmp/sourcenav-5.1.1/snavigator/demo/Makefile.in ./snavigator/demo/Makefile.in
---- /tmp/sourcenav-5.1.1/snavigator/demo/Makefile.in	2002-04-26 08:14:28.000000000 +0100
-+++ ./snavigator/demo/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/snavigator/demo/Makefile.in	2002-04-26 08:14:28.000000000 +0100
++++ b/sourcenav-5.1.1/snavigator/demo/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -288,16 +288,16 @@
  
  
@@ -161,8 +161,8 @@ diff -ru /tmp/sourcenav-5.1.1/snavigator/demo/Makefile.in ./snavigator/demo/Make
  	  rm $$p.tar-$$$$ ; \
            ) \
 diff -ru /tmp/sourcenav-5.1.1/snavigator/doc/html/Makefile.in ./snavigator/doc/html/Makefile.in
---- /tmp/sourcenav-5.1.1/snavigator/doc/html/Makefile.in	2002-04-26 08:14:28.000000000 +0100
-+++ ./snavigator/doc/html/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/snavigator/doc/html/Makefile.in	2002-04-26 08:14:28.000000000 +0100
++++ b/sourcenav-5.1.1/snavigator/doc/html/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -333,18 +333,18 @@
  
  
@@ -190,8 +190,8 @@ diff -ru /tmp/sourcenav-5.1.1/snavigator/doc/html/Makefile.in ./snavigator/doc/h
  		rm $$p.tar-$$$$ ;\
  		) \
 diff -ru /tmp/sourcenav-5.1.1/snavigator/packages/Makefile.in ./snavigator/packages/Makefile.in
---- /tmp/sourcenav-5.1.1/snavigator/packages/Makefile.in	2002-04-26 08:14:28.000000000 +0100
-+++ ./snavigator/packages/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/snavigator/packages/Makefile.in	2002-04-26 08:14:28.000000000 +0100
++++ b/sourcenav-5.1.1/snavigator/packages/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -312,8 +312,8 @@
  install-data-local:
  	for i in $(packages); \
@@ -204,8 +204,8 @@ diff -ru /tmp/sourcenav-5.1.1/snavigator/packages/Makefile.in ./snavigator/packa
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
 diff -ru /tmp/sourcenav-5.1.1/snavigator/sdk/Makefile.in ./snavigator/sdk/Makefile.in
---- /tmp/sourcenav-5.1.1/snavigator/sdk/Makefile.in	2002-04-26 08:14:28.000000000 +0100
-+++ ./snavigator/sdk/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/snavigator/sdk/Makefile.in	2002-04-26 08:14:28.000000000 +0100
++++ b/sourcenav-5.1.1/snavigator/sdk/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -412,7 +412,7 @@
  
  
@@ -216,8 +216,8 @@ diff -ru /tmp/sourcenav-5.1.1/snavigator/sdk/Makefile.in ./snavigator/sdk/Makefi
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
 diff -ru /tmp/sourcenav-5.1.1/snavigator/sdk/api/c/Makefile.in ./snavigator/sdk/api/c/Makefile.in
---- /tmp/sourcenav-5.1.1/snavigator/sdk/api/c/Makefile.in	2002-04-26 08:14:28.000000000 +0100
-+++ ./snavigator/sdk/api/c/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/snavigator/sdk/api/c/Makefile.in	2002-04-26 08:14:28.000000000 +0100
++++ b/sourcenav-5.1.1/snavigator/sdk/api/c/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -415,9 +415,9 @@
  
  
@@ -231,8 +231,8 @@ diff -ru /tmp/sourcenav-5.1.1/snavigator/sdk/api/c/Makefile.in ./snavigator/sdk/
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
 diff -ru /tmp/sourcenav-5.1.1/snavigator/snavigator/unix/Makefile.in ./snavigator/snavigator/unix/Makefile.in
---- /tmp/sourcenav-5.1.1/snavigator/snavigator/unix/Makefile.in	2002-04-26 08:14:29.000000000 +0100
-+++ ./snavigator/snavigator/unix/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/snavigator/snavigator/unix/Makefile.in	2002-04-26 08:14:29.000000000 +0100
++++ b/sourcenav-5.1.1/snavigator/snavigator/unix/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -339,7 +339,7 @@
  install-exec-local: $(bindir)/@SN_LAUNCH_SHELL@
  
@@ -243,8 +243,8 @@ diff -ru /tmp/sourcenav-5.1.1/snavigator/snavigator/unix/Makefile.in ./snavigato
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
 diff -ru /tmp/sourcenav-5.1.1/tcl/unix/Makefile.in ./tcl/unix/Makefile.in
---- /tmp/sourcenav-5.1.1/tcl/unix/Makefile.in	2002-01-10 20:17:57.000000000 +0000
-+++ ./tcl/unix/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/tcl/unix/Makefile.in	2002-01-10 20:17:57.000000000 +0000
++++ b/sourcenav-5.1.1/tcl/unix/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -1,3 +1,5 @@
 +DESTDIR = 
 +
@@ -261,8 +261,8 @@ diff -ru /tmp/sourcenav-5.1.1/tcl/unix/Makefile.in ./tcl/unix/Makefile.in
  TCL_LIBRARY =	@datadir@/tcl$(VERSION)
  
 diff -ru /tmp/sourcenav-5.1.1/tcl/win/Makefile.in ./tcl/win/Makefile.in
---- /tmp/sourcenav-5.1.1/tcl/win/Makefile.in	2001-09-10 00:56:10.000000000 +0100
-+++ ./tcl/win/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/tcl/win/Makefile.in	2001-09-10 00:56:10.000000000 +0100
++++ b/sourcenav-5.1.1/tcl/win/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -1,3 +1,5 @@
 +DESTDIR = 
 +
@@ -279,8 +279,8 @@ diff -ru /tmp/sourcenav-5.1.1/tcl/win/Makefile.in ./tcl/win/Makefile.in
  # Directory from which applications will reference the libary of Tcl
  # scripts (note: you can set the TCL_LIBRARY environment variable at
 diff -ru /tmp/sourcenav-5.1.1/tix/unix/Makefile.in ./tix/unix/Makefile.in
---- /tmp/sourcenav-5.1.1/tix/unix/Makefile.in	2002-01-07 09:52:42.000000000 +0000
-+++ ./tix/unix/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/tix/unix/Makefile.in	2002-01-07 09:52:42.000000000 +0000
++++ b/sourcenav-5.1.1/tix/unix/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -1,3 +1,5 @@
 +DESTDIR = 
 +
@@ -327,8 +327,8 @@ diff -ru /tmp/sourcenav-5.1.1/tix/unix/Makefile.in ./tix/unix/Makefile.in
  # Some versions of make, like SGI's, use the following variable to
  # determine which shell to use for executing commands:
 diff -ru /tmp/sourcenav-5.1.1/tix/unix/tk8.0/Makefile.in ./tix/unix/tk8.0/Makefile.in
---- /tmp/sourcenav-5.1.1/tix/unix/tk8.0/Makefile.in	2001-09-09 00:25:55.000000000 +0100
-+++ ./tix/unix/tk8.0/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/tix/unix/tk8.0/Makefile.in	2001-09-09 00:25:55.000000000 +0100
++++ b/sourcenav-5.1.1/tix/unix/tk8.0/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -1,3 +1,5 @@
 +DESTDIR = 
 +
@@ -355,8 +355,8 @@ diff -ru /tmp/sourcenav-5.1.1/tix/unix/tk8.0/Makefile.in ./tix/unix/tk8.0/Makefi
  # To change the compiler switches, for example to change from -O
  # to -g, change the following line:
 diff -ru /tmp/sourcenav-5.1.1/tix/unix/tk8.1/Makefile.in ./tix/unix/tk8.1/Makefile.in
---- /tmp/sourcenav-5.1.1/tix/unix/tk8.1/Makefile.in	2001-09-09 00:25:55.000000000 +0100
-+++ ./tix/unix/tk8.1/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/tix/unix/tk8.1/Makefile.in	2001-09-09 00:25:55.000000000 +0100
++++ b/sourcenav-5.1.1/tix/unix/tk8.1/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -1,3 +1,5 @@
 +DESTDIR = 
 +
@@ -383,8 +383,8 @@ diff -ru /tmp/sourcenav-5.1.1/tix/unix/tk8.1/Makefile.in ./tix/unix/tk8.1/Makefi
  # To change the compiler switches, for example to change from -O
  # to -g, change the following line:
 diff -ru /tmp/sourcenav-5.1.1/tix/unix/tk8.3/Makefile.in ./tix/unix/tk8.3/Makefile.in
---- /tmp/sourcenav-5.1.1/tix/unix/tk8.3/Makefile.in	2002-01-11 23:43:38.000000000 +0000
-+++ ./tix/unix/tk8.3/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/tix/unix/tk8.3/Makefile.in	2002-01-11 23:43:38.000000000 +0000
++++ b/sourcenav-5.1.1/tix/unix/tk8.3/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -1,3 +1,5 @@
 +DESTDIR = 
 +
@@ -411,8 +411,8 @@ diff -ru /tmp/sourcenav-5.1.1/tix/unix/tk8.3/Makefile.in ./tix/unix/tk8.3/Makefi
  # To change the compiler switches, for example to change from -O
  # to -g, change the following line:
 diff -ru /tmp/sourcenav-5.1.1/tix/win/Makefile.in ./tix/win/Makefile.in
---- /tmp/sourcenav-5.1.1/tix/win/Makefile.in	2001-09-13 01:43:23.000000000 +0100
-+++ ./tix/win/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/tix/win/Makefile.in	2001-09-13 01:43:23.000000000 +0100
++++ b/sourcenav-5.1.1/tix/win/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -469,27 +469,27 @@
  # CYGNUS LOCAL: dj - change to autoconf'd directories
  
@@ -449,8 +449,8 @@ diff -ru /tmp/sourcenav-5.1.1/tix/win/Makefile.in ./tix/win/Makefile.in
  INSTALL		=	@SRC_DIR@/install.sh -c
  INSTALL_PROGRAM =	@INSTALL_PROGRAM@
 diff -ru /tmp/sourcenav-5.1.1/tk/unix/Makefile.in ./tk/unix/Makefile.in
---- /tmp/sourcenav-5.1.1/tk/unix/Makefile.in	2002-01-10 20:21:26.000000000 +0000
-+++ ./tk/unix/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/tk/unix/Makefile.in	2002-01-10 20:21:26.000000000 +0000
++++ b/sourcenav-5.1.1/tk/unix/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -1,3 +1,5 @@
 +DESTDIR =
 +
@@ -467,8 +467,8 @@ diff -ru /tmp/sourcenav-5.1.1/tk/unix/Makefile.in ./tk/unix/Makefile.in
  # Directory from which applications will reference the library of Tcl
  # scripts (note: you can set the TK_LIBRARY environment variable at
 diff -ru /tmp/sourcenav-5.1.1/tk/win/Makefile.in ./tk/win/Makefile.in
---- /tmp/sourcenav-5.1.1/tk/win/Makefile.in	2001-09-10 02:16:55.000000000 +0100
-+++ ./tk/win/Makefile.in	2002-12-11 20:55:29.000000000 +0000
+--- a/sourcenav-5.1.1/tk/win/Makefile.in	2001-09-10 02:16:55.000000000 +0100
++++ b/sourcenav-5.1.1/tk/win/Makefile.in	2002-12-11 20:55:29.000000000 +0000
 @@ -1,3 +1,5 @@
 +DESTDIR = 
 +

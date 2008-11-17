@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/sourcenav
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.20 2008/02/10 22:39:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.21 2008/11/17 20:33:05 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/sourcenav-5.1.1-gentoo.diff:
+  Fix patch with absolute paths.
 
   10 Feb 2008; Steve Arnold <nerdboy@gentoo.org>
   +files/sourcenav-5.2_beta2-tk-size.patch, sourcenav-5.2_beta2.ebuild,
