@@ -1,7 +1,7 @@
 http://bugs.gentoo.org/show_bug.cgi?id=226067
 
-*** /usr/sbin/chkrootkit.orig	Thu Jun 12 15:20:01 2008
---- /usr/sbin/chkrootkit	Thu Jun 12 15:28:09 2008
+*** a/chkrootkit	Thu Jun 12 15:20:01 2008
+--- b/chkrootkit	Thu Jun 12 15:28:09 2008
 ***************
 *** 1098,1104 ****
           echo "Warning: \`${files}' file size is zero"
