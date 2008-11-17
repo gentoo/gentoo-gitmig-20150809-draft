@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lufs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.27 2008/06/29 12:20:55 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.28 2008/11/17 22:54:38 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/lufs-0.9.7-enable-gnome-2.patch:
+  Fix patch with absolute paths.
 
   29 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/lufs-0.9.7-gcc43.patch, lufs-0.9.7-r3.ebuild:

@@ -1,6 +1,6 @@
-diff -Nurp /var/tmp/portage/sys-fs/btrfs-0.16/work/btrfs-0.16/compat.h ./compat.h
---- /var/tmp/portage/sys-fs/btrfs-0.16/work/btrfs-0.16/compat.h	2008-08-05 12:13:37.000000000 -0600
-+++ ./compat.h	2008-08-18 10:59:06.974647262 -0600
+diff -Nurp a/compat.h ./compat.h
+--- a/compat.h	2008-08-05 12:13:37.000000000 -0600
++++ b/compat.h	2008-08-18 10:59:06.974647262 -0600
 @@ -1,6 +1,9 @@
  #ifndef _COMPAT_H_
  #define _COMPAT_H_
@@ -11,9 +11,9 @@ diff -Nurp /var/tmp/portage/sys-fs/btrfs-0.16/work/btrfs-0.16/compat.h ./compat.
  
  /*
   * Even if AppArmor isn't enabled, it still has different prototypes.
-diff -Nurp /var/tmp/portage/sys-fs/btrfs-0.16/work/btrfs-0.16/ctree.h ./ctree.h
---- /var/tmp/portage/sys-fs/btrfs-0.16/work/btrfs-0.16/ctree.h	2008-08-05 12:13:37.000000000 -0600
-+++ ./ctree.h	2008-08-18 10:59:07.004646324 -0600
+diff -Nurp a/ctree.h ./ctree.h
+--- a/ctree.h	2008-08-05 12:13:37.000000000 -0600
++++ b/ctree.h	2008-08-18 10:59:07.004646324 -0600
 @@ -1648,7 +1648,7 @@ int btrfs_csum_truncate(struct btrfs_tra
  /* inode.c */
  
@@ -23,9 +23,9 @@ diff -Nurp /var/tmp/portage/sys-fs/btrfs-0.16/work/btrfs-0.16/ctree.h ./ctree.h
  #define ClearPageChecked ClearPageFsMisc
  #define SetPageChecked SetPageFsMisc
  #define PageChecked PageFsMisc
-diff -Nurp /var/tmp/portage/sys-fs/btrfs-0.16/work/btrfs-0.16/extent_io.c ./extent_io.c
---- /var/tmp/portage/sys-fs/btrfs-0.16/work/btrfs-0.16/extent_io.c	2008-08-05 12:13:37.000000000 -0600
-+++ ./extent_io.c	2008-08-18 10:59:07.044650492 -0600
+diff -Nurp a/extent_io.c ./extent_io.c
+--- a/extent_io.c	2008-08-05 12:13:37.000000000 -0600
++++ b/extent_io.c	2008-08-18 10:59:07.044650492 -0600
 @@ -14,6 +14,7 @@
  #include <linux/pagevec.h>
  #include "extent_io.h"

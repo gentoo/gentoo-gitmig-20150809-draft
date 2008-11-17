@@ -1,5 +1,5 @@
-diff -upr -x aclocal.m4 -x Makefile.in -x configure -x '.*' -x autom4te.cache -x kernel /var/tmp/portage/lufs-0.9.7-r1/work/lufs-0.9.7/config.h.in lufs-0.9.7/config.h.in
---- /var/tmp/portage/lufs-0.9.7-r1/work/lufs-0.9.7/config.h.in	2003-10-29 22:48:48.000000000 +0000
+diff -upr -x aclocal.m4 -x Makefile.in -x configure -x '.*' -x autom4te.cache -x kernel lufs-0.9.7.orig/config.h.in lufs-0.9.7/config.h.in
+--- lufs-0.9.7.orig/config.h.in	2003-10-29 22:48:48.000000000 +0000
 +++ lufs-0.9.7/config.h.in	2004-01-13 22:51:00.000000000 +0000
 @@ -9,6 +9,9 @@
  /* Define if libchipcard is present. */
@@ -11,8 +11,8 @@ diff -upr -x aclocal.m4 -x Makefile.in -x configure -x '.*' -x autom4te.cache -x
  /* Define if ssh is found. */
  #undef HAS_SSH
  
-diff -upr -x aclocal.m4 -x Makefile.in -x configure -x '.*' -x autom4te.cache -x kernel /var/tmp/portage/lufs-0.9.7-r1/work/lufs-0.9.7/configure.in lufs-0.9.7/configure.in
---- /var/tmp/portage/lufs-0.9.7-r1/work/lufs-0.9.7/configure.in	2003-10-29 22:40:28.000000000 +0000
+diff -upr -x aclocal.m4 -x Makefile.in -x configure -x '.*' -x autom4te.cache -x kernel lufs-0.9.7.orig/configure.in lufs-0.9.7/configure.in
+--- lufs-0.9.7.orig/configure.in	2003-10-29 22:40:28.000000000 +0000
 +++ lufs-0.9.7/configure.in	2004-01-13 22:50:20.802647656 +0000
 @@ -164,7 +164,9 @@ AC_SUBST(SSHPROG)
  dnl Checking gnome
@@ -41,8 +41,8 @@ diff -upr -x aclocal.m4 -x Makefile.in -x configure -x '.*' -x autom4te.cache -x
  fi
  AC_SUBST(GVFS_LDADD)
  AC_SUBST(GVFS_CFLAGS)
-diff -upr -x aclocal.m4 -x Makefile.in -x configure -x '.*' -x autom4te.cache -x kernel /var/tmp/portage/lufs-0.9.7-r1/work/lufs-0.9.7/filesystems/gvfs/gvfs.cpp lufs-0.9.7/filesystems/gvfs/gvfs.cpp
---- /var/tmp/portage/lufs-0.9.7-r1/work/lufs-0.9.7/filesystems/gvfs/gvfs.cpp	2003-03-08 21:45:29.000000000 +0000
+diff -upr -x aclocal.m4 -x Makefile.in -x configure -x '.*' -x autom4te.cache -x kernel lufs-0.9.7.orig/filesystems/gvfs/gvfs.cpp lufs-0.9.7/filesystems/gvfs/gvfs.cpp
+--- lufs-0.9.7.orig/filesystems/gvfs/gvfs.cpp	2003-03-08 21:45:29.000000000 +0000
 +++ lufs-0.9.7/filesystems/gvfs/gvfs.cpp	2004-01-13 22:55:44.906376400 +0000
 @@ -36,8 +36,13 @@
  #include <lufs/fs.h>

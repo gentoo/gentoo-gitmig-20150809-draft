@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/btrfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/ChangeLog,v 1.14 2008/11/10 15:45:28 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/ChangeLog,v 1.15 2008/11/17 22:53:14 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/btrfs-0.16-new-kernels.patch:
+  Fix patch with absolute paths.
 
   10 Nov 2008; Joe Peterson <lavajoe@gentoo.org> btrfs-9999.ebuild:
   Update live ebuild to use git
