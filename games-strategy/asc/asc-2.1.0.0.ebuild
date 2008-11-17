@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.1.0.0.ebuild,v 1.2 2008/11/17 06:33:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.1.0.0.ebuild,v 1.3 2008/11/17 17:19:50 mr_bones_ Exp $
 
 inherit toolchain-funcs flag-o-matic games
 
@@ -19,6 +19,7 @@ IUSE=""
 RDEPEND="app-arch/bzip2
 	media-libs/jpeg
 	media-libs/libsdl
+	media-libs/libpng
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	media-libs/sdl-sound
