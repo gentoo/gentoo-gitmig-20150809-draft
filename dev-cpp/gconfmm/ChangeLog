@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.67 2008/09/30 17:22:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.68 2008/11/17 22:52:34 eva Exp $
+
+*gconfmm-2.24.0 (17 Nov 2008)
+
+  17 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +gconfmm-2.24.0.ebuild:
+  New version for GNOME 2.24. Added recursive_unset and notify to Client
+  side.
 
   30 Sep 2008; Jeroen Roovers <jer@gentoo.org> gconfmm-2.22.0.ebuild:
   Stable for HPPA (bug #229709).
