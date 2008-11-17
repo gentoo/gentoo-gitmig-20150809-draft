@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/subterfugue
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/subterfugue/ChangeLog,v 1.5 2007/07/05 11:13:38 hawking Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/subterfugue/ChangeLog,v 1.6 2008/11/17 22:52:25 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/subterfugue-0.2.1a-gcc33.patch:
+  Fix patch with absolute paths.
 
   05 Jul 2007; Ali Polatel <hawking@gentoo.org> subterfugue-0.2.1a.ebuild:
   use DOCS, mydoc is deprecated.
