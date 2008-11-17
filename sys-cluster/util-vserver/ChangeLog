@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/util-vserver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.93 2008/08/08 08:40:14 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.94 2008/11/17 22:51:53 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/util-vserver-0.30.215-capget.patch:
+  Fix patch with absolute paths.
 
 *util-vserver-0.30.215-r1 (08 Aug 2008)
 

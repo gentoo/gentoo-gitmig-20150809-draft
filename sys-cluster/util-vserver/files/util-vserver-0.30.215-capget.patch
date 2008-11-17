@@ -1,7 +1,7 @@
 Index: /trunk/src/vserver-info.c
 ===================================================================
---- /trunk/src/vserver-info.c (revision 2589)
-+++ /trunk/src/vserver-info.c (revision 2717)
+--- a/src/vserver-info.c (revision 2589)
++++ b/src/vserver-info.c (revision 2717)
 @@ -186,7 +186,9 @@
  verifyCap()
  {
@@ -46,8 +46,8 @@ Index: /trunk/src/vserver-info.c
      return false;
 Index: /trunk/src/rpm-fake.c
 ===================================================================
---- /trunk/src/rpm-fake.c (revision 2693)
-+++ /trunk/src/rpm-fake.c (revision 2717)
+--- a/src/rpm-fake.c (revision 2693)
++++ b/src/rpm-fake.c (revision 2717)
 @@ -420,20 +420,28 @@
  reduceCapabilities()
  {
@@ -88,8 +88,8 @@ Index: /trunk/src/rpm-fake.c
      exit(wrapper_exit_code);
 Index: /trunk/src/capability-compat.h
 ===================================================================
---- /trunk/src/capability-compat.h (revision 1822)
-+++ /trunk/src/capability-compat.h (revision 2717)
+--- a/src/capability-compat.h (revision 1822)
++++ b/src/capability-compat.h (revision 2717)
 @@ -30,2 +30,10 @@
  
  #endif
