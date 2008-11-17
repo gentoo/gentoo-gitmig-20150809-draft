@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.75 2008/09/30 17:25:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.76 2008/11/17 19:41:01 eva Exp $
+
+*libglademm-2.6.7 (17 Nov 2008)
+
+  17 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -libglademm-2.6.3.ebuild, -libglademm-2.6.5.ebuild,
+  +libglademm-2.6.7.ebuild:
+  Bump to 2.6.7, windows build fixes. Clean up old releases.
 
   30 Sep 2008; Jeroen Roovers <jer@gentoo.org> libglademm-2.6.6.ebuild:
   Stable for HPPA (bug #229709).
