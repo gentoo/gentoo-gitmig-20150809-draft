@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/http-replicator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.22 2008/08/26 18:33:44 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.23 2008/11/17 22:04:15 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/http-replicator-3.0-sighup.patch:
+  Fix patch with absolute paths.
 
   26 Aug 2008; Maurice van der Pot <griffon26@gentoo.org>
   -files/http-replicator-3.0-repcacheman-0.21,
