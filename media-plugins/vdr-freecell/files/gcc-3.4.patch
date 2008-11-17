@@ -8,8 +8,8 @@
 
 @DPATCH@
 diff -urNad /home/chelli/vdr/cvs/vdr/vdr-plugin-freecell/tools/list.h vdr-plugin-freecell/tools/list.h
---- /home/chelli/vdr/cvs/vdr/vdr-plugin-freecell/tools/list.h	2004-02-11 13:33:26.000000000 +0100
-+++ vdr-plugin-freecell/tools/list.h	2004-09-11 16:00:20.000000000 +0200
+--- a/vdr-plugin-freecell/tools/list.h	2004-02-11 13:33:26.000000000 +0100
++++ b/vdr-plugin-freecell/tools/list.h	2004-09-11 16:00:20.000000000 +0200
 @@ -90,22 +90,22 @@
  	T &SetNextCurrent  ();
  	T &SetPrevCurrent  ();
