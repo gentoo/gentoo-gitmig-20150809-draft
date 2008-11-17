@@ -1,6 +1,6 @@
 diff -r -U 2 /tmp/slibo-0.4.4/src/engine.cpp /var/tmp/portage/slibo-0.4.4/work/slibo-0.4.4/src/engine.cpp
---- /tmp/slibo-0.4.4/src/engine.cpp	2003-08-31 18:23:45.000000000 +0200
-+++ /var/tmp/portage/slibo-0.4.4/work/slibo-0.4.4/src/engine.cpp	2004-12-29 19:09:26.941957930 +0100
+--- a/slibo-0.4.4/src/engine.cpp	2003-08-31 18:23:45.000000000 +0200
++++ b/slibo-0.4.4/src/engine.cpp	2004-12-29 19:09:26.941957930 +0100
 @@ -18,4 +18,5 @@
  #include <sys/types.h>
  #include <signal.h>
@@ -15,8 +15,8 @@ diff -r -U 2 /tmp/slibo-0.4.4/src/engine.cpp /var/tmp/portage/slibo-0.4.4/work/s
      int i;
      argv[0] = strdup(fname.latin1());
 diff -r -U 2 /tmp/slibo-0.4.4/src/sliboengine/search.c /var/tmp/portage/slibo-0.4.4/work/slibo-0.4.4/src/sliboengine/search.c
---- /tmp/slibo-0.4.4/src/sliboengine/search.c	2003-08-30 01:45:00.000000000 +0200
-+++ /var/tmp/portage/slibo-0.4.4/work/slibo-0.4.4/src/sliboengine/search.c	2004-12-29 19:07:47.439235741 +0100
+--- a/slibo-0.4.4/src/sliboengine/search.c	2003-08-30 01:45:00.000000000 +0200
++++ b/slibo-0.4.4/src/sliboengine/search.c	2004-12-29 19:07:47.439235741 +0100
 @@ -68,7 +68,7 @@
  FILE *logfile = 0;
  
