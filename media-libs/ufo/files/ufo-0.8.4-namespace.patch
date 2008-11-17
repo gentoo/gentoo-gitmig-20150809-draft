@@ -1,11 +1,11 @@
 diff -Naur /usr/src/ufo-0.8.4/include/ufo/config/stamp-h1 ./include/ufo/config/stamp-h1
---- /usr/src/ufo-0.8.4/include/ufo/config/stamp-h1	1969-12-31 16:00:00.000000000 -0800
-+++ ./include/ufo/config/stamp-h1	2006-08-19 13:34:43.000000000 -0700
+--- a/include/ufo/config/stamp-h1	1969-12-31 16:00:00.000000000 -0800
++++ b/include/ufo/config/stamp-h1	2006-08-19 13:34:43.000000000 -0700
 @@ -0,0 +1 @@
 +timestamp for include/ufo/config/ufo_config_gnu.hpp
 diff -Naur /usr/src/ufo-0.8.4/include/ufo/util/udimension.hpp ./include/ufo/util/udimension.hpp
---- /usr/src/ufo-0.8.4/include/ufo/util/udimension.hpp	2005-09-30 05:36:48.000000000 -0700
-+++ ./include/ufo/util/udimension.hpp	2006-08-19 13:34:40.000000000 -0700
+--- a/include/ufo/util/udimension.hpp	2005-09-30 05:36:48.000000000 -0700
++++ b/include/ufo/util/udimension.hpp	2006-08-19 13:34:40.000000000 -0700
 @@ -32,6 +32,8 @@
  
  #include "uinsets.hpp"
@@ -35,8 +35,8 @@ diff -Naur /usr/src/ufo-0.8.4/include/ufo/util/udimension.hpp ./include/ufo/util
  
  inline void
 diff -Naur /usr/src/ufo-0.8.4/include/ufo/util/urectangle.hpp ./include/ufo/util/urectangle.hpp
---- /usr/src/ufo-0.8.4/include/ufo/util/urectangle.hpp	2005-09-30 05:36:48.000000000 -0700
-+++ ./include/ufo/util/urectangle.hpp	2006-08-19 13:34:40.000000000 -0700
+--- a/include/ufo/util/urectangle.hpp	2005-09-30 05:36:48.000000000 -0700
++++ b/include/ufo/util/urectangle.hpp	2006-08-19 13:34:40.000000000 -0700
 @@ -218,10 +218,10 @@
  {}
  
@@ -117,8 +117,8 @@ diff -Naur /usr/src/ufo-0.8.4/include/ufo/util/urectangle.hpp ./include/ufo/util
  		dest->y = y;
  	}
 diff -Naur /usr/src/ufo-0.8.4/include/ufo/ux/ux_sdl_prototypes.hpp ./include/ufo/ux/ux_sdl_prototypes.hpp
---- /usr/src/ufo-0.8.4/include/ufo/ux/ux_sdl_prototypes.hpp	2005-02-13 09:49:30.000000000 -0800
-+++ ./include/ufo/ux/ux_sdl_prototypes.hpp	2006-08-19 13:34:40.000000000 -0700
+--- a/include/ufo/ux/ux_sdl_prototypes.hpp	2005-02-13 09:49:30.000000000 -0800
++++ b/include/ufo/ux/ux_sdl_prototypes.hpp	2006-08-19 13:34:40.000000000 -0700
 @@ -25,7 +25,7 @@
   * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA *
   ***************************************************************************/
@@ -129,8 +129,8 @@ diff -Naur /usr/src/ufo-0.8.4/include/ufo/ux/ux_sdl_prototypes.hpp ./include/ufo
  
  UFO_SDL_PROC(SDL_Surface *,SDL_SetVideoMode,(int, int,int, Uint32))
 diff -Naur /usr/src/ufo-0.8.4/include/ufo/widgets/uradiobutton.hpp ./include/ufo/widgets/uradiobutton.hpp
---- /usr/src/ufo-0.8.4/include/ufo/widgets/uradiobutton.hpp	2005-05-21 08:19:54.000000000 -0700
-+++ ./include/ufo/widgets/uradiobutton.hpp	2006-08-19 13:34:43.000000000 -0700
+--- a/include/ufo/widgets/uradiobutton.hpp	2005-05-21 08:19:54.000000000 -0700
++++ b/include/ufo/widgets/uradiobutton.hpp	2006-08-19 13:34:43.000000000 -0700
 @@ -48,6 +48,12 @@
  public:
  	URadioButton();
@@ -145,8 +145,8 @@ diff -Naur /usr/src/ufo-0.8.4/include/ufo/widgets/uradiobutton.hpp ./include/ufo
  
  } // namespace ufo
 diff -Naur /usr/src/ufo-0.8.4/src/widgets/upopupmenu.cpp ./src/widgets/upopupmenu.cpp
---- /usr/src/ufo-0.8.4/src/widgets/upopupmenu.cpp	2005-10-11 12:26:17.000000000 -0700
-+++ ./src/widgets/upopupmenu.cpp	2006-08-19 13:31:02.000000000 -0700
+--- a/src/widgets/upopupmenu.cpp	2005-10-11 12:26:17.000000000 -0700
++++ b/src/widgets/upopupmenu.cpp	2006-08-19 13:31:02.000000000 -0700
 @@ -86,7 +86,7 @@
  		/*m_popup->sigPopupAboutToClose().disconnect(m_closeSlot);
  		m_sigMenuAboutToClose(this);
@@ -157,8 +157,8 @@ diff -Naur /usr/src/ufo-0.8.4/src/widgets/upopupmenu.cpp ./src/widgets/upopupmen
  }
  
 diff -Naur /usr/src/ufo-0.8.4/src/xml/uxul.cpp ./src/xml/uxul.cpp
---- /usr/src/ufo-0.8.4/src/xml/uxul.cpp	2005-10-24 09:00:55.000000000 -0700
-+++ ./src/xml/uxul.cpp	2006-08-19 13:31:01.000000000 -0700
+--- a/src/xml/uxul.cpp	2005-10-24 09:00:55.000000000 -0700
++++ b/src/xml/uxul.cpp	2006-08-19 13:31:01.000000000 -0700
 @@ -330,6 +330,11 @@
  		if ("radio" == value) {
  			URadioButton * radioButton = new URadioButton();
