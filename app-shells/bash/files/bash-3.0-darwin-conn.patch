@@ -6,8 +6,8 @@ been started over a net connection is incorrect on Darwin kernels.
 
 http://bugs.gentoo.org/79124
 
---- /lib/sh/netconn.c
-+++ /lib/sh/netconn.c
+--- a/lib/sh/netconn.c
++++ b/lib/sh/netconn.c
 @@ -53,7 +53,8 @@
    l = sizeof(sa);
    rv = getpeername(fd, &sa, &l);
