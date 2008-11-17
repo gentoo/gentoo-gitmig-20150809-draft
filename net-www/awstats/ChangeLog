@@ -1,6 +1,9 @@
 # ChangeLog for net-www/awstats
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.67 2008/11/08 20:19:10 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/ChangeLog,v 1.68 2008/11/17 13:18:53 hollow Exp $
+
+  17 Nov 2008; Benedikt Böhm <hollow@gentoo.org> awstats-6.9.ebuild:
+  add symlinks to awstats.pl and htdocs (bug #220407); fix manifest (bug #246977)
 
   08 Nov 2008; Gunnar Wrobel <wrobel@gentoo.org> -awstats-6.7-r2.ebuild:
   Removed vulnerable awstats-6.7-r2.ebuild (#235225).

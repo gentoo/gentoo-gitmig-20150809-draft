@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.9.ebuild,v 1.5 2008/10/16 18:14:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.9.ebuild,v 1.6 2008/11/17 13:18:53 hollow Exp $
 
 inherit eutils webapp versionator depend.apache
 
@@ -81,23 +81,28 @@ src_install() {
 	doexe "${S}"/wwwroot/classes/*.jar
 
 	# install language files, libraries and plugins
-	mkdir -p "${D}${MY_CGIBINDIR}"
+	dodir "${MY_CGIBINDIR}"
 	for dir in lang lib plugins; do
-		cp -R "${S}/wwwroot/cgi-bin/${dir}" "${D}${MY_CGIBINDIR}"
+		insinto "${MY_CGIBINDIR}"
+		doins -r "${S}"/wwwroot/cgi-bin/${dir}
 	done
 
 	# install the app's www files
-	mkdir -p "${D}${MY_HTDOCSDIR}"
+	dodir "${MY_HTDOCSDIR}"
 	for dir in icon css js; do
-		cp -R "${S}/wwwroot/${dir}" "${D}${MY_HTDOCSDIR}"
+		insinto "${MY_HTDOCSDIR}"
+		doins -r "${S}"/wwwroot/${dir}
 	done
+
+	dodir /usr/share/awstats
+	dosym "${MY_HTDOCSDIR}" /usr/share/awstats/htdocs
 
 	# copy configuration file
 	insinto /etc/awstats
 	doins "${S}"/wwwroot/cgi-bin/awstats.model.conf
 
 	# create the data directory for awstats
-	mkdir -p "${D}/${MY_HOSTROOTDIR}/datadir"
+	dodir "${MY_HOSTROOTDIR}"/datadir
 
 	# install command line tools
 	cd "${S}"/tools
@@ -105,15 +110,16 @@ src_install() {
 		awstats_updateall.pl logresolvemerge.pl \
 		maillogconvert.pl awstats_configure.pl
 	newbin urlaliasbuilder.pl awstats_urlaliasbuilder.pl
+	dosym "${MY_CGIBINDIR}"/awstats.pl /usr/bin/awstats.pl
 
 	webapp_src_install
 
 	# fix perms
 	for dir in lang lib plugins; do
-		chmod 0755 "${D}${MY_CGIBINDIR}/${dir}"
+		fperms 0755 "${MY_CGIBINDIR}"/${dir}
 	done
 	for dir in icon css js; do
-		chmod 0755 "${D}${MY_HTDOCSDIR}/${dir}"
+		fperms 0755 "${MY_HTDOCSDIR}"/${dir}
 	done
 }
 
