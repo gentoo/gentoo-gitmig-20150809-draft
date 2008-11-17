@@ -1,5 +1,5 @@
 --- ogr/ogrsf_frmts/ili/ogrili2layer.cpp	2006-06-08 10:40:06.804746888 +0200
-+++ /home/furai/extProjects/Gdal/gdal_unstable/ogr/ogrsf_frmts/ili/ogrili2layer.cpp	2006-06-08 10:35:53.648232528 +0200
++++ ogr/ogrsf_frmts/ili/ogrili2layer.cpp	2006-06-08 10:35:53.648232528 +0200
 @@ -73,7 +76,6 @@
      poFeatureDefn->SetGeomType( eReqType );
  
