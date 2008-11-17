@@ -1,8 +1,8 @@
 GCC4 fixes, see bug #147388.
 Patch from upstream SVN
 
---- /trunk/drv_SimpleLCD.c (revision 547)
-+++ /trunk/drv_SimpleLCD.c (revision 581)
+--- a/trunk/drv_SimpleLCD.c (revision 547)
++++ b/trunk/drv_SimpleLCD.c (revision 581)
 @@ -199,4 +202,5 @@
  {
      int rows = -1, cols = -1;
@@ -23,8 +23,8 @@ Patch from upstream SVN
  	return -1;
 Index: /trunk/lcd4linux_i2c.h
 ===================================================================
---- /trunk/lcd4linux_i2c.h (revision 562)
-+++ /trunk/lcd4linux_i2c.h (revision 581)
+--- a/trunk/lcd4linux_i2c.h (revision 562)
++++ b/trunk/lcd4linux_i2c.h (revision 581)
 @@ -79,5 +82,5 @@
  /* Transfer num messages.
   */
