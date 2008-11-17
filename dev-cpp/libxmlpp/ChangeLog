@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.77 2008/08/10 10:43:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.78 2008/11/17 19:35:01 eva Exp $
+
+*libxmlpp-2.24.0 (17 Nov 2008)
+
+  17 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +libxmlpp-2.24.0.ebuild:
+  New version for GNOME 2.24. A few new APIs and bug fixes.
 
   10 Aug 2008; Markus Meier <maekke@gentoo.org> ChangeLog:
   x86 stable, bug #229709
