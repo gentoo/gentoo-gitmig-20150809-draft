@@ -1,5 +1,5 @@
---- /tmp/SConscript	2006-12-06 12:09:48.000000000 +0100
-+++ /tmp/gaia-0.1.2/programs/gaia/SConscript	2006-12-06 12:10:17.000000000 +0100
+--- a/gaia-0.1.2/programs/gaia/SConscript	2006-12-06 12:09:48.000000000 +0100
++++ b/gaia-0.1.2/programs/gaia/SConscript	2006-12-06 12:10:17.000000000 +0100
 @@ -27,43 +27,6 @@
  	config = env.Configure(log_file = '/dev/null')
  	config_ok = True

@@ -1,5 +1,5 @@
---- /root/Makefile.linux	2005-06-16 16:23:17.000000000 -0600
-+++ /root/Makefile.linux.mine	2005-06-16 17:21:38.000000000 -0600
+--- a/Makefile.linux	2005-06-16 16:23:17.000000000 -0600
++++ b/Makefile.linux	2005-06-16 17:21:38.000000000 -0600
 @@ -4,8 +4,8 @@
  TARGET = stripclub
  SOURCES = $(wildcard *.cpp)

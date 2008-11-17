@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/mgm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/ChangeLog,v 1.17 2008/05/23 23:16:47 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mgm/ChangeLog,v 1.18 2008/11/17 23:05:05 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/mgm-1.1-gentoo.patch:
+  Fix patch with absolute paths.
 
 *mgm-1.2 (23 May 2008)
 

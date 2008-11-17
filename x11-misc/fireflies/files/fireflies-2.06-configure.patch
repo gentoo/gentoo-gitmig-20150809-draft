@@ -1,5 +1,5 @@
---- /var/tmp/portage/fireflies-2.06/work/fireflies-2.06/configure	2003-06-21 17:04:21.000000000 +0100
-+++ files/configure	2003-11-18 09:43:21.000000000 +0000
+--- a/configure	2003-06-21 17:04:21.000000000 +0100
++++ b/configure	2003-11-18 09:43:21.000000000 +0000
 @@ -2889,8 +2889,8 @@
  #define HAVE_SDL 1
  _ACEOF
