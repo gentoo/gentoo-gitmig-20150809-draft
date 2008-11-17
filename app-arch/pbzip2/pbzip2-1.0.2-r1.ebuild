@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.0.2-r1.ebuild,v 1.8 2008/09/29 01:46:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.0.2-r1.ebuild,v 1.9 2008/11/17 07:21:43 jer Exp $
 
-inherit multilib
+inherit multilib eutils
 
 DESCRIPTION="parallel bzip2 (de)compressor using libbz2"
 HOMEPAGE="http://compression.ca/pbzip2/"
@@ -18,10 +18,12 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e 's:-O3:${CFLAGS}:g' ${P}/Makefile || die
+	sed -e 's:-O3:$(CFLAGS):g' -e 's:g++:$(CXX):g' -i ${P}/Makefile || die
+	epatch "${FILESDIR}"/${P}-uclibc.patch
 }
 
 src_compile() {
+	tc-export CXX
 	if use static ; then
 		cp -f /usr/$(get_libdir)/libbz2.a "${S}"
 		emake pbzip2-static || die "Failed to build"
