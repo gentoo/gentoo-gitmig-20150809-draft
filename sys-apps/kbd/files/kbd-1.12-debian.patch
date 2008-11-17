@@ -1,5 +1,5 @@
-diff -urNad /home/wart/Projects/debian/kbd/new/kbd-1.12/src/loadkeys.y kbd-1.12/src/loadkeys.y
---- /home/wart/Projects/debian/kbd/new/kbd-1.12/src/loadkeys.y	2004-01-27 14:25:50.000000000 +0300
+diff -urNad kbd-1.12.orig/src/loadkeys.y kbd-1.12/src/loadkeys.y
+--- kbd-1.12.orig/src/loadkeys.y	2004-01-27 14:25:50.000000000 +0300
 +++ kbd-1.12/src/loadkeys.y	2004-01-27 14:37:01.000000000 +0300
 @@ -566,7 +566,7 @@
  }
@@ -10,8 +10,8 @@ diff -urNad /home/wart/Projects/debian/kbd/new/kbd-1.12/src/loadkeys.y kbd-1.12/
  extern FILE *findfile(char *fnam, char **dirpath, char **suffixes);
  
  #undef yywrap
-diff -urNad /opt/tmp/kbd-1.12/src/loadunimap.c kbd-1.12/src/loadunimap.c
---- /opt/tmp/kbd-1.12/src/loadunimap.c	2004-08-02 22:57:25.000000000 +0200
+diff -urNad kbd-1.12.orig/src/loadunimap.c kbd-1.12/src/loadunimap.c
+--- kbd-1.12.orig/src/loadunimap.c	2004-08-02 22:57:25.000000000 +0200
 +++ kbd-1.12/src/loadunimap.c	2004-08-02 22:57:44.000000000 +0200
 @@ -28,8 +28,8 @@
  extern char *progname;
@@ -24,8 +24,8 @@ diff -urNad /opt/tmp/kbd-1.12/src/loadunimap.c kbd-1.12/src/loadunimap.c
  
  #ifdef MAIN
  #include "version.h"
-diff -urNad /opt/tmp/kbd-1.12/src/getunimap.c kbd-1.12/src/getunimap.c
---- /opt/tmp/kbd-1.12/src/getunimap.c	2004-08-01 20:33:38.000000000 +0200
+diff -urNad kbd-1.12.orig/src/getunimap.c kbd-1.12/src/getunimap.c
+--- kbd-1.12.orig/src/getunimap.c	2004-08-01 20:33:38.000000000 +0200
 +++ kbd-1.12/src/getunimap.c	2004-08-02 22:45:30.000000000 +0200
 @@ -62,7 +62,7 @@
  		}
@@ -36,8 +36,8 @@ diff -urNad /opt/tmp/kbd-1.12/src/getunimap.c kbd-1.12/src/getunimap.c
  		usage();
  
  	fd = getfd(console);
-diff -urNad /opt/tmp/kbd-1.12/src/loadunimap.c kbd-1.12/src/loadunimap.c
---- /opt/tmp/kbd-1.12/src/loadunimap.c	2004-08-02 22:45:06.000000000 +0200
+diff -urNad kbd-1.12.orig/src/loadunimap.c kbd-1.12/src/loadunimap.c
+--- kbd-1.12.orig/src/loadunimap.c	2004-08-02 22:45:06.000000000 +0200
 +++ kbd-1.12/src/loadunimap.c	2004-08-02 22:46:39.000000000 +0200
 @@ -73,18 +73,18 @@
  		}
@@ -61,8 +61,8 @@ diff -urNad /opt/tmp/kbd-1.12/src/loadunimap.c kbd-1.12/src/loadunimap.c
  		infnam = argv[optind];
  	loadunicodemap(fd, infnam);
  	exit(0);
-diff -urNad /opt/tmp/kbd-1.12/src/showconsolefont.c kbd-1.12/src/showconsolefont.c
---- /opt/tmp/kbd-1.12/src/showconsolefont.c	2004-08-02 22:44:30.000000000 +0200
+diff -urNad kbd-1.12.orig/src/showconsolefont.c kbd-1.12/src/showconsolefont.c
+--- kbd-1.12.orig/src/showconsolefont.c	2004-08-02 22:44:30.000000000 +0200
 +++ kbd-1.12/src/showconsolefont.c	2004-08-02 22:47:07.000000000 +0200
 @@ -135,7 +135,7 @@
  		}

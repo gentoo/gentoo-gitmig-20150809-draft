@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.245 2008/10/26 03:16:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.246 2008/11/17 22:51:27 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/util-linux-2.12q-debian-10cfdisk.patch:
+  Fix patch with absolute paths.
 
   26 Oct 2008; Mike Frysinger <vapier@gentoo.org> files/crypto-loop.initd:
   Apply POSIX patch #236858.

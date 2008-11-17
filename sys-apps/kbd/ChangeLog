@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.76 2008/09/23 07:20:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.77 2008/11/17 22:48:07 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/kbd-1.12-debian.patch:
+  Fix patch with absolute paths.
 
   23 Sep 2008; Markus Rothe <corsair@gentoo.org> kbd-1.14.1-r1.ebuild:
   Stable on ppc

@@ -1,5 +1,5 @@
---- /upstream/trunk/src/newgrp.c	2008/04/16 22:03:43	1975
-+++ upstream/trunk/src/newgrp.c	2008/04/16 22:04:46	1976
+--- a/trunk/src/newgrp.c	2008/04/16 22:03:43	1975
++++ b/trunk/src/newgrp.c	2008/04/16 22:04:46	1976
 @@ -53,6 +53,10 @@
  static char *Prog;
  static int is_newgrp;
