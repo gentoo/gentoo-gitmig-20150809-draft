@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.138 2008/10/18 06:14:35 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.139 2008/11/17 21:42:37 ken69267 Exp $
+
+  17 Nov 2008; Kenneth Prugh <ken69267@gentoo.org>
+  sun-jre-bin-1.6.0.10.ebuild:
+  amd64 stable, bug #246995
 
   18 Oct 2008; Serkan Kaba <serkan@gentoo.org> sun-jre-bin-1.6.0.10.ebuild:
   Fix installation of plugin2 reported by Markus Peloquin
