@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/libtecla-1.6.1.ebuild,v 1.3 2008/10/07 10:36:00 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/libtecla-1.6.1.ebuild,v 1.4 2008/11/17 11:29:17 markusle Exp $
 
 inherit eutils
 
@@ -36,6 +36,6 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "einstall failed"
+	emake -j1 install DESTDIR="${D}" || die "einstall failed"
 	dodoc CHANGES INSTALL PORTING README RELEASE.NOTES
 }
