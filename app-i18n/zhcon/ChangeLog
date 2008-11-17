@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/zhcon
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.13 2008/10/25 11:29:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.14 2008/11/17 19:59:17 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/zhcon-0.2.6.configure.in.patch, files/zhcon-0.2.6.sysconfdir.patch:
+  Fix patch to apply.
 
   25 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Add patches by Zhang Le for fixing bug #240024 (fix curses/gpm search, fix
