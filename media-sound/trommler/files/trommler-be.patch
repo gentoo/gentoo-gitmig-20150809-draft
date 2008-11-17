@@ -1,5 +1,5 @@
---- drummer.c	2004-05-10 22:20:47.000000000 -0400
-+++ /home/jjezak/Trommler/drummer.c	2007-09-07 22:53:57.000000000 -0400
+--- a/drummer.c	2004-05-10 22:20:47.000000000 -0400
++++ b/drummer.c	2007-09-07 22:53:57.000000000 -0400
 @@ -408,6 +408,16 @@
      fseek(fp,0,SEEK_SET);
      DRUM_SAMPLE(drum) = calloc(DRUM_LENGTH(drum),sizeof(INT16));
@@ -17,8 +17,8 @@
      fclose(fp);    
  }
  
---- soundcard.c	2004-05-07 18:18:50.000000000 -0400
-+++ /home/jjezak/Trommler/soundcard.c	2007-09-07 22:53:57.000000000 -0400
+--- a/soundcard.c	2004-05-07 18:18:50.000000000 -0400
++++ b/soundcard.c	2007-09-07 22:53:57.000000000 -0400
 @@ -105,7 +105,11 @@
  }Soundcard =
  {
