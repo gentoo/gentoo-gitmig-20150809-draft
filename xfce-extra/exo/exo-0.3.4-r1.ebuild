@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.4-r1.ebuild,v 1.10 2008/11/17 14:55:55 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.4-r1.ebuild,v 1.11 2008/11/17 15:38:03 darkside Exp $
 
 inherit eutils xfce44 python multilib autotools
 
@@ -29,10 +29,6 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )
 	dev-util/intltool"
 
-XFCE_CONFIG="${XFCE_CONFIG}	$(use_enable python) \
-	$(use_enable libnotify notifications) \
-	$(use_enable hal) --enable-mcs-plugin"
-
 DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS TODO"
 
 # See bug 166568 for reference
@@ -40,11 +36,15 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i -e 's:-Werror::g' "${S}"/configure
-	epatch "${FILESDIR}"/${P}-eject.patch
-	epatch "${FILESDIR}"/${P}-remove-libmd5.patch
+	sed -i -e 's:-Werror::g' "${S}"/configure.in || die "sed failed"
+	epatch "${FILESDIR}"/${P}-eject.patch \
+		"${FILESDIR}"/${P}-remove-libmd5.patch
 	intltoolize --force --copy --automake || die "intltoolize failed."
 	AT_M4DIR=/usr/share/xfce4/dev-tools/m4macros eautoreconf
+
+	XFCE_CONFIG="${XFCE_CONFIG}	$(use_enable python) \
+		$(use_enable libnotify notifications) \
+		$(use_enable hal) --enable-mcs-plugin"
 }
 
 # See bug 164780 for reference
