@@ -20,8 +20,8 @@ http://www.museek-plus.org/changeset/743
  using std::vector;
 
 
---- /museek+/trunk/sources/Museek/PeerManager.hh
-+++ /museek+/trunk/sources/Museek/PeerManager.hh
+--- a/museek+/trunk/sources/Museek/PeerManager.hh
++++ b/museek+/trunk/sources/Museek/PeerManager.hh
 @@ -96,5 +96,5 @@
  	inline void set_uploading(Transfer* uploading) { mUploading = uploading; }
  	
@@ -31,8 +31,8 @@ http://www.museek-plus.org/changeset/743
  	
 
 
---- /museek+/trunk/sources/Museek/TransferManager.cc
-+++ /museek+/trunk/sources/Museek/TransferManager.cc
+--- a/museek+/trunk/sources/Museek/TransferManager.cc
++++ b/museek+/trunk/sources/Museek/TransferManager.cc
 @@ -37,4 +37,5 @@
  #include <vector>
  #include <iostream>
@@ -41,8 +41,8 @@ http://www.museek-plus.org/changeset/743
  using std::string;
 
 
---- /museek+/trunk/sources/Museek/PeerManager.cc
-+++ /museek+/trunk/sources/Museek/PeerManager.cc
+--- a/museek+/trunk/sources/Museek/PeerManager.cc
++++ b/museek+/trunk/sources/Museek/PeerManager.cc
 @@ -33,4 +33,5 @@
  #include <queue>
  #include <vector>
@@ -51,8 +51,8 @@ http://www.museek-plus.org/changeset/743
  using std::string;
 
 
---- /museek+/trunk/sources/Muhelp/string_ext.hh
-+++ /museek+/trunk/sources/Muhelp/string_ext.hh
+--- a/museek+/trunk/sources/Muhelp/string_ext.hh
++++ b/museek+/trunk/sources/Muhelp/string_ext.hh
 @@ -51,4 +51,5 @@
  #include <vector>
  #include <list>
@@ -61,8 +61,8 @@ http://www.museek-plus.org/changeset/743
  // Split a string into a list of strings
 
 
---- /museek+/trunk/sources/Muhelp/Mulog.cc
-+++ /museek+/trunk/sources/Muhelp/Mulog.cc
+--- a/museek+/trunk/sources/Muhelp/Mulog.cc
++++ b/museek+/trunk/sources/Muhelp/Mulog.cc
 @@ -20,4 +20,6 @@
  #include <system.h>
  #include <syslog.h>
@@ -72,8 +72,8 @@ http://www.museek-plus.org/changeset/743
  #include <Muhelp/Mulog.hh>
 
 
---- /museek+/trunk/sources/museekd/main.cc
-+++ /museek+/trunk/sources/museekd/main.cc
+--- a/museek+/trunk/sources/museekd/main.cc
++++ b/museek+/trunk/sources/museekd/main.cc
 @@ -26,4 +26,5 @@
  #include <Muhelp/Mulog.hh>
  #include <fstream>
@@ -82,8 +82,8 @@ http://www.museek-plus.org/changeset/743
  using std::string;
 
 
---- /museek+/trunk/sources/museekd/IfaceConnection.cc
-+++ /museek+/trunk/sources/museekd/IfaceConnection.cc
+--- a/museek+/trunk/sources/museekd/IfaceConnection.cc
++++ b/museek+/trunk/sources/museekd/IfaceConnection.cc
 @@ -29,4 +29,5 @@
  #include <map>
  #include <vector>
@@ -92,8 +92,8 @@ http://www.museek-plus.org/changeset/743
  #define MULOG_DOMAIN "museekd.IL"
 
 
---- /museek+/trunk/sources/Tools/muscan.cc
-+++ /museek+/trunk/sources/Tools/muscan.cc
+--- a/museek+/trunk/sources/Tools/muscan.cc
++++ b/museek+/trunk/sources/Tools/muscan.cc
 @@ -27,4 +27,5 @@
  
  #include <iostream>
@@ -102,8 +102,8 @@ http://www.museek-plus.org/changeset/743
  using std::vector;
 
 
---- /museek+/trunk/sources/Tools/scanner.cc
-+++ /museek+/trunk/sources/Tools/scanner.cc
+--- a/museek+/trunk/sources/Tools/scanner.cc
++++ b/museek+/trunk/sources/Tools/scanner.cc
 @@ -19,4 +19,6 @@
  
  #include <system.h>
@@ -113,8 +113,8 @@ http://www.museek-plus.org/changeset/743
  extern "C" {
 
 
---- /museek+/trunk/sources/Tools/muscand.cc
-+++ /museek+/trunk/sources/Tools/muscand.cc
+--- a/museek+/trunk/sources/Tools/muscand.cc
++++ b/museek+/trunk/sources/Tools/muscand.cc
 @@ -9,4 +9,6 @@
  
  #include <iostream>

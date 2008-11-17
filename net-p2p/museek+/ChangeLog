@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/museek+
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.15 2008/11/17 20:51:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.16 2008/11/17 21:51:44 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/museek+-0.1.13-gcc43.patch:
+  Fix patch with absolute paths.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/museek+-0.1.13-gcc43.patch:
