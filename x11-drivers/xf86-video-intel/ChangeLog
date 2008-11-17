@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.6 2008/11/17 10:57:54 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.7 2008/11/17 11:00:35 remi Exp $
+
+  17 Nov 2008; Rémi Cardona <remi@gentoo.org>
+  -xf86-video-intel-2.2.0.90.ebuild, -xf86-video-intel-2.4.2-r2.ebuild,
+  -xf86-video-intel-2.4.98.0.ebuild:
+  remove older versions
 
 *xf86-video-intel-2.5.1 (17 Nov 2008)
 *xf86-video-intel-2.4.3 (17 Nov 2008)
