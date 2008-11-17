@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-bluefw
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/ChangeLog,v 1.19 2008/06/02 06:18:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/ChangeLog,v 1.20 2008/11/17 23:00:53 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/bluez-bluefw-0.9-kernel2.6.patch:
+  Fix patch with absolute paths.
 
   02 Jun 2008; Jeroen Roovers <jer@gentoo.org> bluez-bluefw-1.0.ebuild:
   Stable for HPPA (bug #224409).
