@@ -1,5 +1,5 @@
---- astyle_main.cpp	2002-03-07 08:22:30.000000000 +0100
-+++ /root/astyle_main.cpp.fixed	2004-02-25 22:05:13.841700600 +0100
+--- a/astyle_main.cpp	2002-03-07 08:22:30.000000000 +0100
++++ b/astyle_main.cppd	2004-02-25 22:05:13.841700600 +0100
 @@ -267,22 +267,22 @@
      {
          manuallySetJavaStyle(formatter);
