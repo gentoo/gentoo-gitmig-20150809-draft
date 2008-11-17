@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.60 2008/11/10 10:56:23 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.61 2008/11/17 11:16:52 ikelos Exp $
+
+  17 Nov 2008; Mike Auty <ikelos@gentoo.org>
+  vmware-player-2.5.0.118166.ebuild:
+  Fix up missing ncurses USE dep, and clarify not-in-screen message.
 
   10 Nov 2008; Mike Auty <ikelos@gentoo.org>
   vmware-player-2.5.0.118166.ebuild:

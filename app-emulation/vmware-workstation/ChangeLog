@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.186 2008/11/11 20:22:32 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.187 2008/11/17 11:18:20 ikelos Exp $
+
+  17 Nov 2008; Mike Auty <ikelos@gentoo.org>
+  vmware-workstation-6.5.0.118166.ebuild:
+  Fix up missing ncurses USE dep, and clarify not-in-screen message.
 
   11 Nov 2008; Mike Auty <ikelos@gentoo.org>
   vmware-workstation-6.5.0.118166.ebuild:

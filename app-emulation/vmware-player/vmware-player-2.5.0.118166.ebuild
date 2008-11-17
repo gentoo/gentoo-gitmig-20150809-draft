@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.0.118166.ebuild,v 1.3 2008/11/10 10:56:23 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.0.118166.ebuild,v 1.4 2008/11/17 11:16:52 ikelos Exp $
 
 inherit eutils versionator fdo-mime gnome2-utils
 
@@ -59,13 +59,13 @@ pkg_setup() {
 		die "VMware workstation only works with gtkmm built with USE=\"accessibility\"."
 	fi
 
-	if ! built_with_use '>=dev-lang/python-2.5' sqlite; then
-		eerror "You need build dev-lang/python with \"sqlite\" USE flag!"
-		die "Please rebuild dev-lang/python with sqlite USE flag!"
+	if ! built_with_use -a '>=dev-lang/python-2.5' sqlite ncurses; then
+		eerror "You need to build dev-lang/python with \"sqlite ncurses\" USE flags!"
+		die "Please rebuild dev-lang/python with sqlite and ncurses USE flags!"
 	fi
 
 	if [ "$(python -c "import curses; curses.setupterm(); print curses.tigetstr('hpa')")" == "None" ]; then
-		die "Please emerge this package using a different terminal"
+		die "Please emerge this package using a different terminal (e.g. not within screen)."
 	fi
 }
 
