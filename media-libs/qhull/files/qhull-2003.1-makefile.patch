@@ -1,5 +1,5 @@
---- Makefile	2001-02-12 03:26:08.000000000 +0100
-+++ /root/Makefile	2005-02-22 22:00:15.077553880 +0100
+--- a/Makefile	2001-02-12 03:26:08.000000000 +0100
++++ b//Makefile	2005-02-22 22:00:15.077553880 +0100
 @@ -78,7 +78,7 @@
  		qh-poly.htm qh-qhull.htm qh-set.htm qh-stat.htm qh-user.htm \
  		qdelau_f.htm qhalf.htm qvoronoi.htm qvoron_f.htm rbox.htm 
