@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cellmodem
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/ChangeLog,v 1.5 2008/06/23 00:02:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/ChangeLog,v 1.6 2008/11/17 15:26:41 darkside Exp $
+
+  17 Nov 2008; Jeremy Olexa <darkside@gentoo.org>
+  xfce4-cellmodem-0.0.5.ebuild:
+  add missing intltoolize call, bug #239651
 
   23 Jun 2008; Samuli Suominen <drac@gentoo.org>
   xfce4-cellmodem-0.0.5.ebuild:

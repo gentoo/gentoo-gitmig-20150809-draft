@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/xfce4-cellmodem-0.0.5.ebuild,v 1.5 2008/06/23 00:02:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/xfce4-cellmodem-0.0.5.ebuild,v 1.6 2008/11/17 15:26:41 darkside Exp $
 
 inherit autotools eutils xfce44
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-asneeded.patch
+	intltoolize --force --copy --automake || die "intltoolize failed."
 	AT_M4DIR=/usr/share/xfce4/dev-tools/m4macros eautoreconf
 }
 
