@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20081006.ebuild,v 1.1 2008/10/07 05:58:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20081006.ebuild,v 1.2 2008/11/17 09:39:38 aballier Exp $
 
 EAPI="1"
 inherit multilib eutils toolchain-funcs versionator
@@ -38,6 +38,7 @@ src_compile() {
 		"--extra-cflags=${CFLAGS}" \
 		"--extra-ldflags=${LDFLAGS}" \
 		"--extra-asflags=${ASFLAGS}" \
+		"--host=${CHOST}" \
 		$(use_enable threads pthread) \
 		${myconf} \
 		--disable-mp4-output \
