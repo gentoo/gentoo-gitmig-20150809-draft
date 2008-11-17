@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.4-r1.ebuild,v 1.9 2008/11/14 15:53:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.4-r1.ebuild,v 1.10 2008/11/17 14:55:55 darkside Exp $
 
 inherit eutils xfce44 python multilib autotools
 
@@ -43,6 +43,7 @@ src_unpack() {
 	sed -i -e 's:-Werror::g' "${S}"/configure
 	epatch "${FILESDIR}"/${P}-eject.patch
 	epatch "${FILESDIR}"/${P}-remove-libmd5.patch
+	intltoolize --force --copy --automake || die "intltoolize failed."
 	AT_M4DIR=/usr/share/xfce4/dev-tools/m4macros eautoreconf
 }
 
