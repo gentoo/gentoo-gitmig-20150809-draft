@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.560 2008/11/12 05:45:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.561 2008/11/17 17:24:35 mpagano Exp $
+
+*gentoo-sources-2.6.27-r3 (17 Nov 2008)
+
+  17 Nov 2008; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.27-r3.ebuild:
+  Version bump. Includes setkey policy breakage fix, IT8720 sensor support,
+  tcp ordering patch, dmi quirk fix, linux patches 2.6.27.5 and 2.6.27.6.
 
   12 Nov 2008; Joseph Jezak <josejx@gentoo.org>
   gentoo-sources-2.6.26-r2.ebuild:
