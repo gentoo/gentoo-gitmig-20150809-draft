@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ippl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.15 2008/09/16 12:08:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.16 2008/11/17 21:50:21 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/ippl-1.4.14-manpage.patch:
+  Fix patch with absolute paths.
 
   16 Sep 2008; Peter Volkov <pva@gentoo.org> ippl-1.4.14-r1.ebuild:
   amd64 stable, removed old.
