@@ -1,5 +1,5 @@
---- /util/knewsd.c	Mon Aug 31 15:40:05 1998
-+++ util/knewsd.c	Thu Aug  1 18:16:04 2002
+--- a/util/knewsd.c	Mon Aug 31 15:40:05 1998
++++ b/util/knewsd.c	Thu Aug  1 18:16:04 2002
 @@ -619,6 +619,7 @@
      FILE	*fp = NULL;
      long	first, last, no;
