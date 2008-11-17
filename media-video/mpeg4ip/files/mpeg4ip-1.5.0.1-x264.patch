@@ -1,5 +1,5 @@
 --- mpeg4ip-1.5.0.1/server/mp4live/video_x264.cpp	2006-05-11 22:23:19.000000000 +0200
-+++ /home/alexis/mpeg4ip/mpeg4ip/server/mp4live/video_x264.cpp	2006-09-29 21:55:42.000000000 +0200
++++ mpeg4ip/server/mp4live/video_x264.cpp	2006-09-29 21:55:42.000000000 +0200
 @@ -32,7 +32,9 @@
  
  static config_index_t CFG_X264_FORCE_BASELINE;
@@ -52,8 +52,8 @@
    m_param.rc.f_rate_tolerance = Profile()->GetFloatValue(CFG_X264_BIT_RATE_TOLERANCE);
    if (Profile()->GetBoolValue(CFG_X264_USE_VBV)) {
      if (Profile()->GetBoolValue(CFG_X264_FORCE_BASELINE)) {
---- mpeg4ip-1.5.0.1/server/mp4live/video_x264.h.old	2006-11-11 20:56:48.000000000 +0100
-+++ mpeg4ip-1.5.0.1/server/mp4live/video_x264.h	2006-11-11 20:57:49.000000000 +0100
+--- a/mpeg4ip-1.5.0.1/server/mp4live/video_x264.h.old	2006-11-11 20:56:48.000000000 +0100
++++ b/mpeg4ip-1.5.0.1/server/mp4live/video_x264.h	2006-11-11 20:57:49.000000000 +0100
 @@ -33,6 +33,10 @@
  }
  #endif
