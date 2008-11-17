@@ -1,6 +1,6 @@
-diff -u glN64/Config_linux.cpp /home/braddabug/mupen64/glN64/Config_linux.cpp
---- glN64/Config_linux.cpp	2005-08-26 14:52:17.000000000 -0500
-+++ /home/braddabug/mupen64/glN64/Config_linux.cpp	2006-12-24 21:56:05.000000000 -0600
+diff -u glN64/Config_linux.cpp b/glN64/Config_linux.cpp
+--- a/glN64/Config_linux.cpp	2005-08-26 14:52:17.000000000 -0500
++++ b/glN64/Config_linux.cpp	2006-12-24 21:56:05.000000000 -0600
 @@ -17,7 +17,7 @@
  static GtkWidget *configWindow = NULL;
  //static GtkWidget *bitdepthCombo[2], *resolutionCombo[2];
@@ -82,9 +82,9 @@ diff -u glN64/Config_linux.cpp /home/braddabug/mupen64/glN64/Config_linux.cpp
  		else if (!strcasecmp( line, "enable fog" ))
  		{
  			OGL.fog = atoi( val );
-diff -u glN64/OpenGL.h /home/braddabug/mupen64/glN64/OpenGL.h
---- glN64/OpenGL.h	2005-08-26 14:52:17.000000000 -0500
-+++ /home/braddabug/mupen64/glN64/OpenGL.h	2006-12-24 21:43:46.000000000 -0600
+diff -u glN64/OpenGL.h b/glN64/OpenGL.h
+--- a/glN64/OpenGL.h	2005-08-26 14:52:17.000000000 -0500
++++ b/glN64/OpenGL.h	2006-12-24 21:43:46.000000000 -0600
 @@ -72,6 +72,7 @@
  	int		maxGeneralCombiners;
  
@@ -93,9 +93,9 @@ diff -u glN64/OpenGL.h /home/braddabug/mupen64/glN64/OpenGL.h
  	BOOL	frameBufferTextures;
  	int		textureBitDepth;
  	float	originAdjust;
-diff -u glN64/Textures.cpp /home/braddabug/mupen64/glN64/Textures.cpp
---- glN64/Textures.cpp	2005-08-26 14:52:17.000000000 -0500
-+++ /home/braddabug/mupen64/glN64/Textures.cpp	2006-12-24 21:57:42.000000000 -0600
+diff -u glN64/Textures.cpp b/glN64/Textures.cpp
+--- a/glN64/Textures.cpp	2005-08-26 14:52:17.000000000 -0500
++++ b/glN64/Textures.cpp	2006-12-24 21:57:42.000000000 -0600
 @@ -748,6 +748,10 @@
  	// Set clamping modes
  	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, texture->clampS ? GL_CLAMP_TO_EDGE : GL_REPEAT );

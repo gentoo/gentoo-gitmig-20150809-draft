@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.26 2007/06/13 21:31:11 nyhm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.27 2008/11/17 21:01:40 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/mupen64-0.5-anisotropic.patch:
+  Fix patch with absolute paths.
 
   13 Jun 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/mupen64-0.5-gcc42.patch, mupen64-0.5-r4.ebuild:
