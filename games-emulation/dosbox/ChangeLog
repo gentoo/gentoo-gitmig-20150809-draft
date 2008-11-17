@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.39 2008/06/13 16:34:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.40 2008/11/17 20:34:37 flameeyes Exp $
+
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/dosbox-0.72+gcc-4.3.patch:
+  Fix patch with absolute paths.
 
   13 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/dosbox-0.72+gcc-4.3.patch, dosbox-0.72.ebuild:
