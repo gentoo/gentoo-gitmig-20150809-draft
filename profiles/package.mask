@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9172 2008/11/17 15:58:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9173 2008/11/17 21:03:52 dertobi123 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -759,11 +759,6 @@ media-sound/lastfmproxy
 # This ebuild will be moved to the java junkyard overlay when Frostwire
 # is unmasked or stabilized.
 net-p2p/limewire
-
-# Mike Doty <kingtaco@gentoo.org> (24 Mar 2008)
-# Masked due to lack of testing and user rewritten ebuild/conf.d/init.d.
-# Use at your own risk.  Bug 196096.
->=sys-block/open-iscsi-2.0.868_rc1
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (11 Mar 2008)
 # masked for testing
