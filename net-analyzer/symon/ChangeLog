@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/symon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.5 2008/11/17 00:00:46 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.6 2008/11/17 00:56:43 tcunha Exp $
+
+  17 Nov 2008; Tiago Cunha <tcunha@gentoo.org> -symon-2.79-r3.ebuild,
+  -symon-2.79-r4.ebuild:
+  Remove old versions
 
 *symon-2.79-r5 (17 Nov 2008)
 
