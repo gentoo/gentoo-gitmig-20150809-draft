@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.17 2008/08/08 06:22:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.18 2008/11/17 20:58:44 dertobi123 Exp $
+
+*open-iscsi-2.0.870 (17 Nov 2008)
+
+  17 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/iscsid-2.0.870.conf.d, +files/iscsid-2.0.870.init.d,
+  +open-iscsi-2.0.870.ebuild:
+  Version bump, thanks to Marcel Pennewiß, Craig and others involved in bug
+  #196096
 
   08 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
