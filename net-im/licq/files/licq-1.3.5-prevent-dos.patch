@@ -1,15 +1,15 @@
 Source: http://www.licq.org/changeset/6146
 Reason: DoS via large number of connections, bug #219708
---- /trunk/licq/include/licq_socket.h
-+++ /trunk/licq/include/licq_socket.h
+--- a/trunk/licq/include/licq_socket.h
++++ b/trunk/licq/include/licq_socket.h
 @@ -251,4 +251,5 @@
    fd_set SocketSet()   {  return m_sSockets.SocketSet(); }
    int LargestSocket()  {  return m_sSockets.Largest(); }
 +  unsigned short Num() {  return m_sSockets.Num(); }
  
  protected:
---- /trunk/licq/src/socket.cpp
-+++ /trunk/licq/src/socket.cpp
+--- a/trunk/licq/src/socket.cpp
++++ b/trunk/licq/src/socket.cpp
 @@ -818,6 +818,24 @@
    socklen_t sizeofSockaddr = sizeof(struct sockaddr_in);
  
@@ -37,8 +37,8 @@ Reason: DoS via large number of connections, bug #219708
 +  }
  }
  
---- /trunk/licq/src/icqd-threads.cpp
-+++ /trunk/licq/src/icqd-threads.cpp
+--- a/trunk/licq/src/icqd-threads.cpp
++++ b/trunk/licq/src/icqd-threads.cpp
 @@ -24,4 +24,5 @@
  #include "gettext.h"
  
@@ -67,8 +67,8 @@ Reason: DoS via large number of connections, bug #219708
 +              }
              }
            }
---- /trunk/licq/src/icqd-chat.cpp
-+++ /trunk/licq/src/icqd-chat.cpp
+--- a/trunk/licq/src/icqd-chat.cpp
++++ b/trunk/licq/src/icqd-chat.cpp
 @@ -24,4 +24,5 @@
  #include "gettext.h"
  
