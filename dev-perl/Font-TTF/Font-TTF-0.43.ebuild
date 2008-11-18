@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/Font-TTF-0.43.ebuild,v 1.6 2008/06/12 18:04:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/Font-TTF-0.43.ebuild,v 1.7 2008/11/18 15:01:49 tove Exp $
 
 inherit perl-module
 
@@ -13,6 +13,6 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 SRC_TEST="do"
 
-DEPEND="dev-perl/Compress-Zlib
+DEPEND="virtual/perl-Compress-Zlib
 	dev-perl/XML-Parser
 	dev-lang/perl"
