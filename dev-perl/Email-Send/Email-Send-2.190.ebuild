@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/Email-Send-2.190.ebuild,v 1.7 2008/01/23 19:13:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/Email-Send-2.190.ebuild,v 1.8 2008/11/18 14:49:44 tove Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
 DEPEND="virtual/perl-Test-Simple
-	>=dev-perl/Module-Pluggable-2.97
+	>=virtual/perl-Module-Pluggable-2.97
 	virtual/perl-Scalar-List-Utils
 	>=dev-perl/Return-Value-1.302
 	virtual/perl-File-Spec

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/Email-Send-2.192.ebuild,v 1.2 2008/09/30 12:28:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/Email-Send-2.192.ebuild,v 1.3 2008/11/18 14:49:44 tove Exp $
 
 MODULE_AUTHOR=RJBS
 inherit perl-module
@@ -13,7 +13,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/perl-Test-Simple
-	>=dev-perl/Module-Pluggable-2.97
+	>=virtual/perl-Module-Pluggable-2.97
 	virtual/perl-Scalar-List-Utils
 	>=dev-perl/Return-Value-1.302
 	virtual/perl-File-Spec
