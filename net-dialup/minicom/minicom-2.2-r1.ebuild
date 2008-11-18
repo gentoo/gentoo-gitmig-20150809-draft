@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.2-r1.ebuild,v 1.13 2007/12/27 09:12:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.2-r1.ebuild,v 1.14 2008/11/18 22:32:03 mrness Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="nls"
 
-COMM0N_DEPEND="sys-libs/ncurses"
+COMMON_DEPEND="sys-libs/ncurses"
 DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )"
 RDEPEND="${COMMON_DEPEND}
