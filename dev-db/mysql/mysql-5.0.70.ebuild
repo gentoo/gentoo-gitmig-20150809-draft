@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.70.ebuild,v 1.7 2008/11/17 06:14:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.70.ebuild,v 1.8 2008/11/18 21:27:17 robbat2 Exp $
 
 MY_EXTRAS_VER="20080601"
 SERVER_URI="http://mirror.provenscaling.com/mysql/enterprise/source/5.0/${P}.tar.gz"
@@ -43,11 +43,11 @@ src_test() {
 			mysql_disable_test "archive_gis" "Totally broken in 5.0.42"
 			;;
 
-			5.0.44|5.0.45|5.0.46|5.0.48|5.0.5[0-7]*)
+			5.0.4[3-9]|5.0.[56]*|5.0.70)
 			[ "$(tc-endian)" == "big" ] && \
 			mysql_disable_test \
 				"archive_gis" \
-				"Broken in 5.0.44-56 on big-endian boxes only"
+				"Broken in 5.0.43-70 on big-endian boxes only"
 			;;
 		esac
 
