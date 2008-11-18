@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9176 2008/11/18 16:28:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9177 2008/11/18 19:59:56 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (18 Nov 2008)
+# ytin hasn't been updated in years.  Use games-mud/tintin instead
+# which is still being maintained.
+games-mud/ytin
 
 # Jim Ramsay <lack@gentoo.org> (17 Nov 2008)
 # The NEW 64-bit version of flash player is alpha, p.mask it until it's a wee
