@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.15 2008/07/27 21:52:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.16 2008/11/18 23:03:55 mr_bones_ Exp $
 
 EAPI=1
 
@@ -46,7 +46,7 @@ src_unpack() {
 
 src_compile() {
 	egamesconf || die
-	emake -j1 || die "emake failed"
+	emake MOC="${QTDIR}"/bin/moc -j1 || die "emake failed"
 }
 
 src_install() {
