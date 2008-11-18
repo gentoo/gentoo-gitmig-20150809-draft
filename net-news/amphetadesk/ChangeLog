@@ -1,6 +1,9 @@
 # ChangeLog for net-news/amphetadesk
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/amphetadesk/ChangeLog,v 1.6 2007/05/15 14:08:03 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/amphetadesk/ChangeLog,v 1.7 2008/11/18 16:18:46 tove Exp $
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org> amphetadesk-0.93.1.ebuild:
+  New virtuals: Compress-Zlib
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
