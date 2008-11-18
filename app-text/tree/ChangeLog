@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.61 2008/11/18 01:45:53 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.62 2008/11/18 15:12:46 fmccor Exp $
+
+  18 Nov 2008; Ferris McCormick <fmccor@gentoo.org> tree-1.5.2.1.ebuild:
+  Sparc stable --- Bug #247293 --- works fine.
 
   18 Nov 2008; <welp@gentoo.org> tree-1.5.2.1.ebuild:
   Stable on amd64; Bug 247293
