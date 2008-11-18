@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Google-SafeBrowsing-Blocklist/Net-Google-SafeBrowsing-Blocklist-1.04.ebuild,v 1.7 2008/07/05 09:38:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Google-SafeBrowsing-Blocklist/Net-Google-SafeBrowsing-Blocklist-1.04.ebuild,v 1.8 2008/11/18 15:19:25 tove Exp $
 
 MODULE_AUTHOR="DANBORN"
 inherit perl-module
@@ -16,7 +16,7 @@ RDEPEND="dev-perl/URI
 		 >=virtual/perl-Math-BigInt-1.87
 		 virtual/perl-DB_File
 		 || (
-			dev-perl/Math-BigInt-FastCalc
+			virtual/perl-Math-BigInt-FastCalc
 			dev-perl/Math-BigInt-GMP
 			)"
 DEPEND="${RDEPEND}
