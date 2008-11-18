@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.21.ebuild,v 1.4 2007/04/22 21:57:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.21.ebuild,v 1.5 2008/11/18 14:20:19 tove Exp $
 
 inherit perl-module wxwidgets
 
@@ -17,10 +17,11 @@ IUSE="unicode"
 
 SRC_TEST="do"
 
-DEPEND="dev-lang/perl
+RDEPEND="dev-lang/perl
 	=x11-libs/wxGTK-2.6*
-	>=dev-perl/module-build-0.26
-	>=dev-perl/Module-Pluggable-3.1-r1"
+	>=virtual/perl-Module-Pluggable-3.1-r1"
+DEPEND="${RDEPEND}
+	virtual/perl-Module-Build"
 
 perl-module_src_prep() {
 	perlinfo
