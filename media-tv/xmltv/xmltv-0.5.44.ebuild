@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.44.ebuild,v 1.15 2007/10/22 10:59:18 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.44.ebuild,v 1.16 2008/11/18 16:17:58 tove Exp $
 
 inherit eutils perl-module
 
@@ -37,7 +37,7 @@ RDEPEND=">=dev-perl/libwww-perl-5.65
 	dev-perl/Lingua-EN-Numbers-Ordinate
 	>=dev-perl/Lingua-Preferred-0.2.4
 	>=dev-perl/Term-ProgressBar-2.03
-	dev-perl/Compress-Zlib
+	virtual/perl-Compress-Zlib
 	dev-perl/Unicode-String
 	dev-perl/TermReadKey
 	>=dev-perl/Class-MethodMaker-2

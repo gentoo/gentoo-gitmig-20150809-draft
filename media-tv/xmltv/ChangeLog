@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.79 2008/03/10 14:56:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.80 2008/11/18 16:17:58 tove Exp $
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org> xmltv-0.5.44.ebuild,
+  xmltv-0.5.46.ebuild, xmltv-0.5.48.ebuild, xmltv-0.5.49.ebuild,
+  xmltv-0.5.50.ebuild:
+  New virtuals: Compress-Zlib
 
   10 Mar 2008; Steve Dibb <beandog@gentoo.org> xmltv-0.5.50.ebuild:
   amd64 stable, bug 205403
