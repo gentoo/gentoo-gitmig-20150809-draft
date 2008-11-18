@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.10 2006/10/09 11:10:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.11 2008/11/18 20:23:12 mr_bones_ Exp $
 
 inherit toolchain-funcs games
 
@@ -19,7 +19,8 @@ IUSE="sdl X svga"
 
 DEPEND="sdl? ( x11-libs/libX11 media-libs/libsdl )
 	X? ( x11-libs/libX11 )
-	svga? ( media-libs/svgalib )"
+	svga? ( media-libs/svgalib )
+	!sdl? ( !X? ( !svga? ( sys-libs/ncurses ) ) )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -38,7 +39,7 @@ src_compile() {
 		LIB="-lvgagl -lvga"
 	else
 		CFLAGS="${CFLAGS} -DCURSESGRAPHX"
-		LIB="-lcurses -ltermcap"
+		LIB="-lcurses"
 	fi
 
 	cd src
