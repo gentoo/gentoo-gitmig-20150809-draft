@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Abstract/Email-Abstract-2.13.4.ebuild,v 1.1 2008/04/29 06:08:09 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Abstract/Email-Abstract-2.13.4.ebuild,v 1.2 2008/11/18 14:46:39 tove Exp $
 
 inherit perl-module versionator
 
@@ -19,7 +19,7 @@ IUSE=""
 SRC_TEST="do"
 SLOT="0"
 
-DEPEND=">=dev-perl/Class-ISA-0.20
+DEPEND=">=virtual/perl-Class-ISA-0.20
 	>=dev-perl/Email-Simple-1.91
-	>=dev-perl/Module-Pluggable-1.5
+	>=virtual/perl-Module-Pluggable-1.5
 	dev-lang/perl"
