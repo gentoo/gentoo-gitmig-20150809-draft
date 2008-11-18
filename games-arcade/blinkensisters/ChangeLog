@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/blinkensisters
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blinkensisters/ChangeLog,v 1.1 2008/01/12 22:22:40 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blinkensisters/ChangeLog,v 1.2 2008/11/18 01:34:58 flameeyes Exp $
+
+  18 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  blinkensisters-0.5.1.ebuild:
+  Add missing cmake dependency.
 
 *blinkensisters-0.5.1 (12 Jan 2008)
 

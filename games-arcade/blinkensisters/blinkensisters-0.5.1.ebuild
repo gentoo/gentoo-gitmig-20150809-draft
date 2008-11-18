@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blinkensisters/blinkensisters-0.5.1.ebuild,v 1.2 2008/09/05 13:27:04 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blinkensisters/blinkensisters-0.5.1.ebuild,v 1.3 2008/11/18 01:34:58 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -13,13 +13,15 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-image
 	media-libs/sdl-net
 	media-libs/sdl-ttf
 	media-libs/libogg
 	media-libs/libvorbis"
+DEPEND="${RDEPEND}
+	dev-util/cmake"
 
 S=${WORKDIR}/${PN}
 
