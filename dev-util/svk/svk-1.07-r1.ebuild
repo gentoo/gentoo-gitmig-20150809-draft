@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.07-r1.ebuild,v 1.2 2007/07/12 01:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.07-r1.ebuild,v 1.3 2008/11/18 16:04:43 tove Exp $
 
 inherit eutils perl-module bash-completion
 
@@ -26,8 +26,8 @@ DEPEND="
 	>=dev-perl/Data-Hierarchy-0.21
 	>=virtual/perl-File-Temp-0.14
 	dev-perl/Clone
-	dev-perl/Pod-Escapes
-	dev-perl/Pod-Simple
+	virtual/perl-Pod-Escapes
+	virtual/perl-Pod-Simple
 	>=dev-perl/PerlIO-via-dynamic-0.11
 	>=dev-perl/PerlIO-via-symlink-0.02
 	dev-perl/IO-Digest
@@ -41,12 +41,12 @@ DEPEND="
 	>=virtual/perl-Getopt-Long-2.34
 	nls? (
 		>=dev-perl/locale-maketext-lexicon-0.42
-		>=dev-perl/Locale-Maketext-Simple-0.12
+		>=virtual/perl-Locale-Maketext-Simple-0.12
 	)
 	pager? ( dev-perl/IO-Pager )
 	svn-mirror? (  >=dev-perl/SVN-Mirror-0.66 )
 	patch? (
-		dev-perl/Compress-Zlib
+		virtual/perl-Compress-Zlib
 		dev-perl/FreezeThaw
 	)
 	crypt? ( app-crypt/gnupg )"
