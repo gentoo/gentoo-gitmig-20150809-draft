@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/kiki
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.13 2008/05/13 16:07:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.14 2008/11/18 22:38:40 mr_bones_ Exp $
+
+  18 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/kiki-1.0.2-gcc43.patch, kiki-1.0.2-r2.ebuild:
+  add gcc43 patch from Nikolay Orlyuk via bug #242576
 
   13 May 2008; Michael Sterrett <mr_bones_@gentoo.org> kiki-1.0.2-r2.ebuild:
   fix deps (bug #221481)
