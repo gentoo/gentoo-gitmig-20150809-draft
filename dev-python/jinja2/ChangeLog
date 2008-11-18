@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.1 2008/10/24 05:40:29 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.2 2008/11/18 04:17:15 darkside Exp $
+
+  18 Nov 2008; Jeremy Olexa <darkside@gentoo.org> jinja2-2.0.ebuild:
+  add ~amd64, bug #246605
 
 *jinja2-2.0 (24 Oct 2008)
 
