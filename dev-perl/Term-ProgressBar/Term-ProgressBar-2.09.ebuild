@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/Term-ProgressBar-2.09.ebuild,v 1.13 2007/01/19 16:05:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/Term-ProgressBar-2.09.ebuild,v 1.14 2008/11/18 15:33:31 tove Exp $
 
 inherit perl-module
 
@@ -19,4 +19,4 @@ RDEPEND="dev-perl/Class-MethodMaker
 	dev-perl/TermReadKey
 	dev-lang/perl"
 DEPEND="${RDEPEND}
-		>=dev-perl/module-build-0.28"
+		>=virtual/perl-Module-Build-0.28"

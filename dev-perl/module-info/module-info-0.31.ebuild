@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/module-info-0.31.ebuild,v 1.9 2008/09/30 15:38:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/module-info-0.31.ebuild,v 1.10 2008/11/18 15:50:45 tove Exp $
 
 MODULE_AUTHOR=MBARBON
 MY_PN=Module-Info
@@ -20,4 +20,4 @@ SRC_TEST="do"
 
 RDEPEND="dev-lang/perl"
 DEPEND="${RDEPEND}
-	dev-perl/module-build"
+	virtual/perl-Module-Build"

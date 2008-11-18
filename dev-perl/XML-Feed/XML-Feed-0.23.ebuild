@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Feed/XML-Feed-0.23.ebuild,v 1.1 2008/10/26 07:50:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Feed/XML-Feed-0.23.ebuild,v 1.2 2008/11/18 15:44:10 tove Exp $
 
 MODULE_AUTHOR=SIMONW
 inherit perl-module
@@ -25,6 +25,6 @@ DEPEND="dev-lang/perl
 	dev-perl/HTML-Parser
 	dev-perl/libwww-perl"
 #DEPEND="${RDEPEND}
-#	dev-perl/module-build"
+#	virtual/perl-Module-Build"
 
 SRC_TEST=do

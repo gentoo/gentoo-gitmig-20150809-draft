@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Swedish/Snowball-Swedish-1.2.ebuild,v 1.7 2008/04/30 15:22:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Swedish/Snowball-Swedish-1.2.ebuild,v 1.8 2008/11/18 15:29:47 tove Exp $
 
 inherit perl-module multilib
 
@@ -17,7 +17,7 @@ SRC_TEST="do"
 
 RDEPEND="dev-lang/perl"
 DEPEND="${RDEPEND}
-	dev-perl/module-build"
+	virtual/perl-Module-Build"
 
 src_install() {
 	perl-module_src_install

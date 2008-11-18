@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-vFile-asData/Text-vFile-asData-0.05.ebuild,v 1.1 2008/09/08 10:45:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-vFile-asData/Text-vFile-asData-0.05.ebuild,v 1.2 2008/11/18 15:40:40 tove Exp $
 
 MODULE_AUTHOR="RCLAMP"
 inherit perl-module
@@ -15,7 +15,7 @@ IUSE="test"
 RDEPEND="dev-lang/perl
 	dev-perl/Class-Accessor-Chained"
 DEPEND="${RDEPEND}
-	dev-perl/module-build
+	virtual/perl-Module-Build
 	test? ( dev-perl/Test-Pod )"
 
 SRC_TEST="do"

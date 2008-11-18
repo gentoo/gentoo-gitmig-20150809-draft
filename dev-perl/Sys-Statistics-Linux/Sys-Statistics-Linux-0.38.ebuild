@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/Sys-Statistics-Linux-0.38.ebuild,v 1.1 2008/09/12 05:24:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/Sys-Statistics-Linux-0.38.ebuild,v 1.2 2008/11/18 15:32:31 tove Exp $
 
 MODULE_AUTHOR=BLOONIX
 inherit perl-module
@@ -16,6 +16,6 @@ SRC_TEST="do"
 RDEPEND="dev-lang/perl
 	dev-perl/UNIVERSAL-require"
 DEPEND="${RDEPEND}
-	dev-perl/module-build
+	virtual/perl-Module-Build
 	test? ( dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage )"

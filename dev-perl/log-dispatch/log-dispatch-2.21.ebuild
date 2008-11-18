@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/log-dispatch-2.21.ebuild,v 1.1 2008/10/31 08:38:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/log-dispatch-2.21.ebuild,v 1.2 2008/11/18 15:49:43 tove Exp $
 
 MODULE_AUTHOR=DROLSKY
 MY_PN=Log-Dispatch
@@ -20,4 +20,4 @@ SRC_TEST="do"
 RDEPEND="dev-perl/Params-Validate
 	dev-lang/perl"
 DEPEND="${RDEPND}
-	>=dev-perl/module-build-0.28"
+	>=virtual/perl-Module-Build-0.28"

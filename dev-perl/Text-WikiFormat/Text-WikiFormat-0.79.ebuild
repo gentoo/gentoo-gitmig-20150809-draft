@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/Text-WikiFormat-0.79.ebuild,v 1.5 2007/11/10 14:58:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/Text-WikiFormat-0.79.ebuild,v 1.6 2008/11/18 15:40:09 tove Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ia64 ~ppc sparc x86"
 
 DEPEND="dev-perl/URI
 	virtual/perl-Scalar-List-Utils
-	>=dev-perl/module-build-0.28
+	>=virtual/perl-Module-Build-0.28
 	dev-lang/perl"
 IUSE=""
 
