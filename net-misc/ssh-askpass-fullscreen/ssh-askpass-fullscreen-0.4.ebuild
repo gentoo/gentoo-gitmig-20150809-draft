@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ssh-askpass-fullscreen-0.4.ebuild,v 1.1 2008/09/05 15:12:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ssh-askpass-fullscreen-0.4.ebuild,v 1.2 2008/11/18 03:45:50 darkside Exp $
 
 DESCRIPTION="A small SSH Askpass replacement written with GTK2."
 HOMEPAGE="https://www.cgabriel.org/software/wiki/SshAskpassFullscreen"
@@ -8,7 +8,7 @@ SRC_URI="http://www.cgabriel.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0
