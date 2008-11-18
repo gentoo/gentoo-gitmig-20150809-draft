@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ktsuss
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.4 2008/10/24 21:34:13 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.5 2008/11/18 03:20:53 darkside Exp $
+
+  18 Nov 2008; Jeremy Olexa <darkside@gentoo.org> ktsuss-1.4.ebuild:
+  amd64 stable, bug #247308
 
   24 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> ktsuss-1.4.ebuild:
   Keyworded ~ppc. Closes bug #240856
