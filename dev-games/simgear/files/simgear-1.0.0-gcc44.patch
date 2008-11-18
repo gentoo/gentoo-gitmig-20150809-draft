@@ -1,0 +1,15 @@
+--- simgear/debug/logstream.hxx~        2008-11-08 16:37:26.000000000 +0000
++++ simgear/debug/logstream.hxx 2008-11-08 16:37:54.000000000 +0000
+@@ -32,9 +32,11 @@
+ #endif
+ 
+ #ifdef SG_HAVE_STD_INCLUDES
++# include <cstdio>
+ # include <streambuf>
+ # include <iostream>
+ #else
++# include <cstdio.h>
+ # include <iostream.h>
+ # include <simgear/sg_traits.hxx>
+ #endif
+

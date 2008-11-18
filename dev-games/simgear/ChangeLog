@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.35 2008/09/20 12:43:49 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.36 2008/11/18 15:47:39 loki_val Exp $
+
+  18 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/simgear-1.0.0-gcc44.patch, simgear-1.0.0.ebuild:
+  Small fix for gcc-4.4 compatibility
 
   20 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
   simgear-1.0.0.ebuild:
