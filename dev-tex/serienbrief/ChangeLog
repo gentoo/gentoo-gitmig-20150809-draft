@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/serienbrief
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/ChangeLog,v 1.7 2008/10/02 18:57:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/ChangeLog,v 1.8 2008/11/18 16:02:25 tove Exp $
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org> serienbrief-0.2-r2.ebuild,
+  serienbrief-0.2.1.ebuild:
+  New virtuals: Term-ANSIColor
 
 *serienbrief-0.2.1 (02 Oct 2008)
 

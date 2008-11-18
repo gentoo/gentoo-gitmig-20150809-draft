@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/serienbrief-0.2.1.ebuild,v 1.1 2008/10/02 18:57:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/serienbrief-0.2.1.ebuild,v 1.2 2008/11/18 16:02:25 tove Exp $
 
 DESCRIPTION="Easy creation of form letters written in LaTeX"
 HOMEPAGE="http://nasauber.de/programme/serienbrief/"
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND=""
 RDEPEND=">=dev-lang/perl-5.8.6
 	virtual/perl-Getopt-Long
-	>=dev-perl/Term-ANSIColor-1.08
+	>=virtual/perl-Term-ANSIColor-1.08
 	>=dev-perl/libintl-perl-1.16
 	virtual/latex-base"
 
