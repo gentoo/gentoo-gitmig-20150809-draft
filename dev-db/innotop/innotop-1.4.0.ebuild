@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/innotop/innotop-1.4.0.ebuild,v 1.1 2007/03/04 16:11:14 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/innotop/innotop-1.4.0.ebuild,v 1.2 2008/11/18 16:00:47 tove Exp $
 
 inherit perl-app
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="dev-perl/DBD-mysql
 	dev-perl/TermReadKey
-	dev-perl/Term-ANSIColor
+	virtual/perl-Term-ANSIColor
 	virtual/perl-Time-HiRes"
 
 src_install() {

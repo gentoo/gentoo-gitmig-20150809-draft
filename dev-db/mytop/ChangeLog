@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mytop
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.17 2008/11/01 09:14:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.18 2008/11/18 16:01:44 tove Exp $
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org> mytop-1.4.ebuild,
+  mytop-1.6.ebuild:
+  New virtuals: Term-ANSIColor
 
   01 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> mytop-1.4.ebuild,
   mytop-1.6.ebuild:
