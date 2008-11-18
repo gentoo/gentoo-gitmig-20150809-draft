@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/gst-plugins-pulse-0.9.7.ebuild,v 1.6 2008/08/07 21:59:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pulse/gst-plugins-pulse-0.9.7.ebuild,v 1.7 2008/11/18 13:22:11 lack Exp $
 
 MY_PN=gst-pulse
 
@@ -14,7 +14,8 @@ KEYWORDS="alpha amd64 sparc x86"
 IUSE=""
 
 RDEPEND=">=media-sound/pulseaudio-${PV}
-	=media-libs/gstreamer-0.10*"
+	=media-libs/gstreamer-0.10*
+	>=media-libs/gst-plugins-base-0.10.20"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
