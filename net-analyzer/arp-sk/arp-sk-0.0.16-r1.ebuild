@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16-r1.ebuild,v 1.1 2008/11/16 14:49:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/arp-sk-0.0.16-r1.ebuild,v 1.2 2008/11/18 04:29:19 darkside Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://sid.rstack.org/arp-sk/files/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 DEPEND=">=net-libs/libnet-1.1"
 
