@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/autodia/autodia-2.03.ebuild,v 1.2 2007/04/23 20:09:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/autodia/autodia-2.03.ebuild,v 1.3 2008/11/18 16:03:02 tove Exp $
 
 inherit perl-app multilib
 
@@ -23,7 +23,7 @@ RDEPEND="dev-lang/perl
 	java? ( dev-perl/Inline-Java )"
 
 DEPEND="${RDEPEND}
-	dev-perl/module-build"
+	virtual/perl-Module-Build"
 
 src_install() {
 	perl-module_src_install
