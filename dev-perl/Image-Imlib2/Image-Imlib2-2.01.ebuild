@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/Image-Imlib2-2.01.ebuild,v 1.2 2008/09/10 18:47:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/Image-Imlib2-2.01.ebuild,v 1.3 2008/11/18 15:08:39 tove Exp $
 
 MODULE_AUTHOR=LBROCARD
 inherit perl-module eutils
@@ -15,7 +15,7 @@ IUSE="test"
 RDEPEND=">=media-libs/imlib2-1
 	dev-lang/perl"
 DEPEND="${RDEPEND}
-	>=dev-perl/module-build-0.28
+	>=virtual/perl-Module-Build-0.28
 	test? ( dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage )"
 
