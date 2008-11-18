@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.60 2008/11/18 05:05:34 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.61 2008/11/18 17:51:36 dertobi123 Exp $
+
+  18 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  ratpoison-1.4.3.ebuild:
+  ppc stable, bug #247131
 
   18 Nov 2008; Jeremy Olexa <darkside@gentoo.org> ratpoison-1.4.3.ebuild:
   amd64 stable, bug #247131
