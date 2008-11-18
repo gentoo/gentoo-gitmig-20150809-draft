@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.3.8-r1.ebuild,v 1.1 2007/10/23 21:57:11 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/assp/assp-1.3.3.8-r1.ebuild,v 1.2 2008/11/18 16:08:57 tove Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="app-arch/unzip"
 RDEPEND="dev-lang/perl
 	dev-perl/Net-DNS
 	dev-perl/File-ReadBackwards
-	dev-perl/Compress-Zlib
+	virtual/perl-Compress-Zlib
 	dev-perl/Email-Valid
 	dev-perl/libwww-perl
 	virtual/perl-Digest-MD5
