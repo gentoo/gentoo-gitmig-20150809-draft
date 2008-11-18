@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.3-r3.ebuild,v 1.9 2008/09/30 16:00:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/sdl-perl-2.1.3-r3.ebuild,v 1.10 2008/11/18 15:51:42 tove Exp $
 
 MODULE_AUTHOR=DGOEHRIG
 MY_P=SDL_Perl-${PV}
@@ -28,8 +28,8 @@ RDEPEND="virtual/opengl
 	truetype? ( >=media-libs/sdl-ttf-2.0.5 )
 	dev-lang/perl"
 DEPEND="${RDEPEND}
-	dev-perl/ExtUtils-CBuilder
-	>=dev-perl/module-build-0.28"
+	virtual/perl-ExtUtils-CBuilder
+	>=virtual/perl-Module-Build-0.28"
 
 S=${WORKDIR}/${MY_P}
 
