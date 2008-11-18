@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TokeParser-Simple/HTML-TokeParser-Simple-3.15.ebuild,v 1.11 2008/04/22 20:04:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TokeParser-Simple/HTML-TokeParser-Simple-3.15.ebuild,v 1.12 2008/11/18 15:06:26 tove Exp $
 
 inherit perl-module
 
@@ -17,6 +17,6 @@ SRC_TEST="do"
 RDEPEND=">=dev-perl/HTML-Parser-3.25
 	dev-lang/perl"
 DEPEND="${RDEPEND}
-	dev-perl/module-build
+	virtual/perl-Module-Build
 	virtual/perl-Test-Simple
 	dev-perl/Sub-Override"

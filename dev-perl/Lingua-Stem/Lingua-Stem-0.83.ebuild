@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/Lingua-Stem-0.83.ebuild,v 1.5 2008/09/30 14:09:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/Lingua-Stem-0.83.ebuild,v 1.6 2008/11/18 15:11:52 tove Exp $
 
 MODULE_AUTHOR=SNOWHARE
 inherit perl-module
@@ -24,5 +24,5 @@ RDEPEND="dev-perl/Snowball-Norwegian
 	dev-perl/Text-German
 	dev-lang/perl"
 
-DEPEND="dev-perl/module-build
+DEPEND="virtual/perl-Module-Build
 	${RDEPEND}"

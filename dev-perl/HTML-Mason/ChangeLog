@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.81 2008/09/15 11:21:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.82 2008/11/18 15:04:48 tove Exp $
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org> HTML-Mason-1.37.ebuild:
+  New virtuals: module-build
 
   15 Sep 2008; Torsten Veller <tove@gentoo.org> -HTML-Mason-1.32.ebuild,
   -HTML-Mason-1.33.ebuild, -HTML-Mason-1.35.ebuild, -HTML-Mason-1.36.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.17.008.ebuild,v 1.12 2008/03/28 09:42:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.17.008.ebuild,v 1.13 2008/11/18 14:52:26 tove Exp $
 
 inherit versionator perl-module
 
@@ -18,7 +18,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86
 IUSE=""
 
 DEPEND="dev-lang/perl
-		dev-perl/module-build"
+		virtual/perl-Module-Build"
 RDEPEND="dev-lang/perl"
 
 SRC_TEST="do"

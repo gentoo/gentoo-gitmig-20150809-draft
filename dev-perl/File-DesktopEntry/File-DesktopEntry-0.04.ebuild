@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/File-DesktopEntry-0.04.ebuild,v 1.3 2008/07/15 19:26:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/File-DesktopEntry-0.04.ebuild,v 1.4 2008/11/18 14:55:11 tove Exp $
 
 MODULE_AUTHOR=PARDUS
 MODULE_SECTION=${PN}
@@ -19,5 +19,5 @@ RDEPEND="dev-lang/perl
 	virtual/perl-File-Spec
 	>=dev-perl/File-BaseDir-0.03"
 DEPEND="${RDEPEND}
-	dev-perl/module-build
+	virtual/perl-Module-Build
 	test? ( virtual/perl-Test-Simple )"

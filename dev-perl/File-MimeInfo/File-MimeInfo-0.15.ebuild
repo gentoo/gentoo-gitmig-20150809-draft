@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/File-MimeInfo-0.15.ebuild,v 1.3 2008/09/30 12:55:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/File-MimeInfo-0.15.ebuild,v 1.4 2008/11/18 14:57:29 tove Exp $
 
 MODULE_AUTHOR=PARDUS
 inherit perl-module
@@ -16,5 +16,5 @@ SRC_TEST="do"
 RDEPEND=">=dev-perl/File-BaseDir-0.03
 	x11-misc/shared-mime-info
 	dev-lang/perl"
-DEPEND="dev-perl/module-build
+DEPEND="virtual/perl-Module-Build
 	${RDEPEND}"

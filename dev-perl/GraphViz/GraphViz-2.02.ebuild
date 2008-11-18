@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/GraphViz-2.02.ebuild,v 1.4 2007/01/15 22:32:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/GraphViz-2.02.ebuild,v 1.5 2008/11/18 15:02:25 tove Exp $
 
 inherit perl-module eutils
 
@@ -15,6 +15,6 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-lang/perl
-	>=dev-perl/module-build-0.28
+	>=virtual/perl-Module-Build-0.28
 	media-gfx/graphviz
 	dev-perl/IPC-Run"
