@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-3.0.17.ebuild,v 1.1 2008/09/30 11:02:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-3.0.17.ebuild,v 1.2 2008/11/18 14:33:04 tove Exp $
 
 MODULE_AUTHOR=TMTM
 MY_P="${PN}-v${PV}"
@@ -26,6 +26,6 @@ DEPEND=">=dev-perl/Class-Data-Inheritable-0.02
 		virtual/perl-Scalar-List-Utils
 		dev-perl/Clone
 		>=dev-perl/Ima-DBI-0.33
-		dev-perl/version
+		virtual/perl-version
 		>=dev-perl/UNIVERSAL-moniker-0.06
 	dev-lang/perl"

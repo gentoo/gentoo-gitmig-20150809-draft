@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-DBI
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.44 2008/09/30 11:02:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.45 2008/11/18 14:33:04 tove Exp $
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org> Class-DBI-3.0.16.ebuild,
+  Class-DBI-3.0.17.ebuild:
+  New virtuals: version
 
 *Class-DBI-3.0.17 (30 Sep 2008)
 
