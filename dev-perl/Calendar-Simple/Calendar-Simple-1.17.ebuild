@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/Calendar-Simple-1.17.ebuild,v 1.4 2007/12/27 14:05:30 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/Calendar-Simple-1.17.ebuild,v 1.5 2008/11/18 14:29:31 tove Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ IUSE="test"
 
 SRC_TEST="do"
 
-DEPEND=">=dev-perl/module-build-0.28
+DEPEND=">=virtual/perl-Module-Build-0.28
 		test? ( dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage )
 		dev-lang/perl"

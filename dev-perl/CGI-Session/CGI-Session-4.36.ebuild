@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/CGI-Session-4.36.ebuild,v 1.1 2008/09/15 07:18:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/CGI-Session-4.36.ebuild,v 1.2 2008/11/18 14:26:03 tove Exp $
 
 inherit perl-module
 
@@ -18,4 +18,4 @@ SRC_TEST="do"
 RDEPEND="virtual/perl-Digest-MD5
 	dev-lang/perl"
 DEPEND="${RDEPEND}
-	dev-perl/module-build"
+	virtual/perl-Module-Build"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Accessor-Chained
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Chained/ChangeLog,v 1.1 2008/09/08 10:36:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor-Chained/ChangeLog,v 1.2 2008/11/18 14:31:05 tove Exp $
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org>
+  Class-Accessor-Chained-0.01.ebuild:
+  New virtuals: module-build
 
 *Class-Accessor-Chained-0.01 (08 Sep 2008)
 

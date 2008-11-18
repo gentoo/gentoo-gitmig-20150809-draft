@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Mail/DateTime-Format-Mail-0.30.ebuild,v 1.13 2007/05/05 17:28:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Mail/DateTime-Format-Mail-0.30.ebuild,v 1.14 2008/11/18 14:41:16 tove Exp $
 
 inherit perl-module
 
@@ -19,4 +19,4 @@ RDEPEND=">=dev-perl/Params-Validate-0.67
 		>=dev-perl/DateTime-0.17
 		dev-lang/perl"
 DEPEND="${RDEPEND}
-		dev-perl/module-build"
+		virtual/perl-Module-Build"

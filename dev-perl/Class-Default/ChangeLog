@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Default
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.41 2008/06/13 16:47:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Default/ChangeLog,v 1.42 2008/11/18 14:34:10 tove Exp $
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org> Class-Default-1.3.ebuild,
+  Class-Default-1.50.ebuild, Class-Default-1.51.ebuild:
+  New virtuals: module-build
 
   13 Jun 2008; Raúl Porcel <armin76@gentoo.org> Class-Default-1.51.ebuild:
   alpha/ia64/sparc/x86 stable

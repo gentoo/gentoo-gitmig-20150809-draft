@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-1.11.ebuild,v 1.14 2007/01/19 21:50:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-1.11.ebuild,v 1.15 2008/11/18 14:37:41 tove Exp $
 
 inherit perl-module
 
@@ -15,4 +15,4 @@ IUSE=""
 
 RDEPEND="dev-lang/perl"
 DEPEND="${RDEPEND}
-	>=dev-perl/module-build-0.28"
+	>=virtual/perl-Module-Build-0.28"

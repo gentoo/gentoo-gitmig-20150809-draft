@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/Devel-StackTrace-1.19.02.ebuild,v 1.1 2008/09/07 06:37:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/Devel-StackTrace-1.19.02.ebuild,v 1.2 2008/11/18 14:45:10 tove Exp $
 
 MODULE_AUTHOR=DROLSKY
 inherit perl-module versionator
@@ -20,7 +20,7 @@ SRC_TEST="do"
 
 RDEPEND="dev-lang/perl
 	virtual/perl-File-Spec"
-DEPEND=">=dev-perl/module-build-0.28
+DEPEND=">=virtual/perl-Module-Build-0.28
 	${RDEPEND}"
 
 OPTIMIZE="$CFLAGS"
