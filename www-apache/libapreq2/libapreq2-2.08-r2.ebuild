@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.08-r2.ebuild,v 1.9 2008/03/22 17:02:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.08-r2.ebuild,v 1.10 2008/11/18 16:21:59 tove Exp $
 
 inherit apache-module perl-module multilib
 
@@ -16,7 +16,7 @@ IUSE="perl"
 DEPEND="${DEPEND}
 	perl? (
 		>=dev-perl/ExtUtils-XSBuilder-0.23
-		dev-perl/version
+		virtual/perl-version
 		>=www-apache/mod_perl-2
 	)"
 RDEPEND="${DEPEND}"
