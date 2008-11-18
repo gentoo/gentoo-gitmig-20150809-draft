@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.3 2008/06/29 15:57:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.4 2008/11/18 16:23:53 tove Exp $
 
 inherit eutils autotools depend.php depend.apache multilib
 
@@ -23,7 +23,7 @@ DEPEND="app-admin/sudo
 	>=media-libs/jpeg-6b
 	net-libs/gnutls
 	>=dev-lang/perl-5.6.0
-	dev-perl/Archive-Tar
+	virtual/perl-Archive-Tar
 	dev-perl/Archive-Zip
 	dev-perl/DateManip
 	dev-perl/DBD-mysql
