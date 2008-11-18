@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.4.1.ebuild,v 1.1 2008/11/16 19:47:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.4.1.ebuild,v 1.2 2008/11/18 17:30:11 pva Exp $
 
 inherit webapp versionator eutils depend.apache depend.php
 
@@ -40,6 +40,8 @@ RDEPEND="${DEPEND}
 
 # Require PHP.
 need_php5
+
+S=${WORKDIR}/${PN}-php4
 
 pkg_setup() {
 	webapp_pkg_setup
