@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.2.1.ebuild,v 1.5 2008/11/18 15:36:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.5.2.1.ebuild,v 1.6 2008/11/18 17:37:48 mr_bones_ Exp $
 
 inherit toolchain-funcs flag-o-matic bash-completion
 
@@ -16,7 +16,9 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i 's:LINUX:__linux__:' tree.c
+	sed -i \
+		-e 's:LINUX:__linux__:' tree.c \
+		|| die "sed failed"
 }
 
 src_compile() {
