@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.2.1308.ebuild,v 1.1 2008/03/11 21:48:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.2.1308.ebuild,v 1.2 2008/11/18 16:20:59 tove Exp $
 
 inherit eutils versionator
 
@@ -25,7 +25,7 @@ RDEPEND=">=media-video/vdr-1.2.6
 	virtual/perl-Getopt-Long
 	virtual/perl-MIME-Base64
 	virtual/perl-Time-HiRes
-	dev-perl/Compress-Zlib
+	virtual/perl-Compress-Zlib
 	dev-perl/Config-Tiny
 	dev-perl/Digest-HMAC
 	dev-perl/Encode-Detect

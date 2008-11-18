@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.6.2.ebuild,v 1.1 2008/06/30 11:17:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.6.2.ebuild,v 1.2 2008/11/18 16:20:05 tove Exp $
 
 inherit eutils
 
@@ -17,9 +17,9 @@ IUSE=""
 
 DEPEND="dev-lang/perl
 	dev-perl/Template-Toolkit
-	>=dev-perl/Compress-Zlib-1.2.2
+	>=virtual/perl-Compress-Zlib-1.2.2
 	media-video/vdr
-	dev-perl/Compress-Zlib
+	virtual/perl-Compress-Zlib
 	dev-perl/Locale-gettext
 	dev-perl/Authen-SASL
 	dev-perl/Digest-HMAC
