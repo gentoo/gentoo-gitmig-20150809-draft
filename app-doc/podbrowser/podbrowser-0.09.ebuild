@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/podbrowser-0.09.ebuild,v 1.5 2006/08/06 18:16:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/podbrowser-0.09.ebuild,v 1.6 2008/11/18 15:54:01 tove Exp $
 
 DESCRIPTION="PodBrowser is a documentation browser for Perl."
 HOMEPAGE="http://jodrell.net/projects/podbrowser"
@@ -16,7 +16,7 @@ RDEPEND="dev-perl/Gtk2-PodViewer
 	dev-perl/gtk2-gladexml
 	dev-perl/gtk2-perl
 	dev-perl/Locale-gettext
-	dev-perl/Pod-Simple
+	virtual/perl-Pod-Simple
 	dev-perl/URI
 	dev-perl/Gtk2-Ex-PodViewer
 	dev-perl/Gtk2-Ex-PrintDialog
