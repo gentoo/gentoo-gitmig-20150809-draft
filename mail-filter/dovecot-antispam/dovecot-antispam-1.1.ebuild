@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-20080227.ebuild,v 1.1 2008/02/27 09:54:22 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-1.1.ebuild,v 1.1 2008/11/18 09:55:21 hollow Exp $
 
 inherit confutils eutils autotools flag-o-matic multilib
 
 DESCRIPTION="A dovecot antispam plugin supporting multiple backends"
 HOMEPAGE="http://johannes.sipsolutions.net/Projects/dovecot-antispam"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://johannes.sipsolutions.net/download/dovecot-antispam/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,8 +17,6 @@ DEPEND="net-mail/dovecot
 	dspam? ( mail-filter/dspam )
 	crm114? ( app-text/crm114 )"
 RDEPEND="${DEPEND}"
-
-S="${WORKDIR}"/${PN}
 
 # we need this to prevent errors from dovecot-config
 top_builddir() {
@@ -41,9 +39,10 @@ src_compile() {
 		die "cannot find dovecot-config"
 
 	echo DOVECOT=${dovecot_incdir} > .config
-	echo DOVECOT_VERSION=1.0 >> .config
 	echo INSTALLDIR=${moduledir}/imap/ >> .config
 	echo PLUGINNAME=antispam >> .config
+	echo USER=root >> .config
+	echo GROUP=root >> .config
 
 	use dspam && echo BACKEND=dspam-exec >> .config
 	use signature-log && echo BACKEND=signature-log >> .config
@@ -61,7 +60,7 @@ src_compile() {
 	emake || die "make failed"
 }
 
-src_install () {
+src_install() {
 	source "${ROOT}"/usr/lib/dovecot/dovecot-config || \
 		die "cannot find dovecot-config"
 
