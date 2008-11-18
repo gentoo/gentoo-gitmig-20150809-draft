@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.6.0.1.ebuild,v 1.4 2008/11/17 21:13:48 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.6.0.1.ebuild,v 1.5 2008/11/18 04:40:12 darkside Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.dest-unreach.org/socat/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ppc sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc sparc ~x86"
 IUSE="ssl readline ipv6 tcpd"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
