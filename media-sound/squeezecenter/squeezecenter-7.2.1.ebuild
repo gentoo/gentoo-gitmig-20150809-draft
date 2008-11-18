@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.2.1.ebuild,v 1.1 2008/10/27 00:50:32 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.2.1.ebuild,v 1.2 2008/11/18 16:15:29 tove Exp $
 
 inherit eutils
 
@@ -34,11 +34,11 @@ SRC_URI="http://www.slimdevices.com/downloads/${SRC_DIR}/${MY_P}.tgz
 	mirror://gentoo/SqueezeCenter-XML-Parser-2.34.tar.gz
 	mirror://gentoo/SqueezeCenter-YAML-Syck-0.64.tar.gz"
 
-# Note: dev-perl/module-build necessary because of SC bug#5882
+# Note: virtual/perl-Module-Build necessary because of SC bug#5882
 # (http://bugs.slimdevices.com/show_bug.cgi?id=5882).
 DEPEND="
 	dev-perl/File-Which
-	dev-perl/module-build
+	virtual/perl-Module-Build
 	virtual/logger
 	virtual/mysql
 	avahi? ( net-dns/avahi )

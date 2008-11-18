@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.1.0-r1.ebuild,v 1.3 2008/10/07 12:57:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.1.0-r1.ebuild,v 1.4 2008/11/18 16:15:29 tove Exp $
 
 inherit eutils
 
@@ -17,11 +17,11 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="lame wavpack musepack alac ogg bonjour flac avahi"
 
-# Note: dev-perl/module-build necessary because of SC bug#5882
+# Note: virtual/perl-Module-Build necessary because of SC bug#5882
 # (http://bugs.slimdevices.com/show_bug.cgi?id=5882).
 DEPEND="
 	dev-perl/File-Which
-	dev-perl/module-build
+	virtual/perl-Module-Build
 	virtual/logger
 	virtual/mysql
 	avahi? ( net-dns/avahi )
