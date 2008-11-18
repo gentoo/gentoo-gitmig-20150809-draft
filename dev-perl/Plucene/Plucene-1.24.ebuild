@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.24.ebuild,v 1.11 2007/01/19 15:27:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.24.ebuild,v 1.12 2008/11/18 15:25:02 tove Exp $
 
 inherit perl-module
 
@@ -16,14 +16,14 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND=">=dev-lang/perl-5.8.4
-		>=dev-perl/module-build-0.28
+		>=virtual/perl-Module-Build-0.28
 		virtual/perl-Memoize
 		dev-perl/Tie-Array-Sorted
 		dev-perl/Encode-compat
 		dev-perl/File-Slurp
 		dev-perl/Class-Virtual
 		dev-perl/Class-Accessor
-		dev-perl/Time-Piece
+		virtual/perl-Time-Piece
 		>=virtual/perl-Test-Harness-2.30
 		>=virtual/perl-Scalar-List-Utils-1.13
 		dev-perl/Lingua-Stem
