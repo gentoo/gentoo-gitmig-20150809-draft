@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.11.3.ebuild,v 1.2 2008/10/27 02:29:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.11.3.ebuild,v 1.3 2008/11/18 00:19:52 vapier Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -124,6 +124,7 @@ src_unpack() {
 	busybox_config_option n BUILD_AT_ONCE
 	busybox_config_option n BUILD_LIBBUSYBOX
 	busybox_config_option n NOMMU
+	busybox_config_option n MONOTONIC_SYSCALL
 
 	# If these are not set and we are using a uclibc/busybox setup
 	# all calls to system() will fail.
