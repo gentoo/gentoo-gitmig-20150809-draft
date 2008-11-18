@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geneweb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.6 2008/07/31 16:14:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.7 2008/11/18 05:14:58 darkside Exp $
+
+  18 Nov 2008; Jeremy Olexa <darkside@gentoo.org> geneweb-5.01-r1.ebuild:
+  amd64 stable, bug #247170
 
   31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
