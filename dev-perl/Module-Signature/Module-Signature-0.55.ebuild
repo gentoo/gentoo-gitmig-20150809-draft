@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.55.ebuild,v 1.5 2007/07/10 23:33:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.55.ebuild,v 1.6 2008/11/18 15:15:16 tove Exp $
 
 inherit perl-module
 
@@ -17,7 +17,7 @@ SRC_TEST="do"
 
 DEPEND="virtual/perl-MIME-Base64
 	dev-perl/PAR-Dist
-		dev-perl/Compress-Zlib
+		virtual/perl-Compress-Zlib
 		dev-perl/crypt-cbc
 		dev-perl/Crypt-DES
 		dev-perl/Crypt-Blowfish

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Signature
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.17 2007/05/05 13:55:26 ian Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.18 2008/11/18 15:15:16 tove Exp $
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org>
+  Module-Signature-0.55.ebuild:
+  New virtuals: Compress-Zlib
 
   05 May 2007; Christian Hartmann <ian@gentoo.org>
   -Module-Signature-0.44.ebuild, -Module-Signature-0.51.ebuild,
