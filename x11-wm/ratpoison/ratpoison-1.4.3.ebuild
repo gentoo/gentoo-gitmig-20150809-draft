@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.3.ebuild,v 1.2 2008/09/15 10:25:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.3.ebuild,v 1.3 2008/11/18 05:05:34 darkside Exp $
 
 inherit elisp-common eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="emacs"
 
 DEPEND="x11-libs/libXinerama
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}/contrib"
-	epatch ${FILESDIR}/ratpoison.el-gentoo.patch
+	epatch "${FILESDIR}/ratpoison.el-gentoo.patch"
 
 	cd "${S}"
 	eautoreconf
