@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.0.ebuild,v 1.2 2008/04/18 19:34:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.0.ebuild,v 1.3 2008/11/18 22:08:05 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -27,6 +27,7 @@ src_unpack() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	rm -f "${D}${GAMES_BINDIR}/Packer"
 	dohtml Readme.html
 	dodoc TODO
 	newicon critter.png ${PN}.png

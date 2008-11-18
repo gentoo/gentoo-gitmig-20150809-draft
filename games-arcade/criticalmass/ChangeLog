@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/criticalmass
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.13 2008/04/18 19:34:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.14 2008/11/18 22:08:05 mr_bones_ Exp $
+
+  18 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  criticalmass-1.0.0.ebuild:
+  don't install build utility program.
 
   18 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/criticalmass-1.0.0-gcc43.patch, criticalmass-1.0.0.ebuild:
