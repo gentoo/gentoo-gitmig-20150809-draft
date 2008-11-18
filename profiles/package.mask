@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9175 2008/11/18 14:17:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9176 2008/11/18 16:28:45 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -123,25 +123,25 @@ app-crypt/truecrypt
 
 # Torsten Veller <tove@gentoo.org> (1 Nov 2008)
 # Adding new dual-lifed modules for perl-5.10
-#dev-perl/Archive-Tar
-#dev-perl/Class-ISA
-#dev-perl/Compress-Raw-Zlib
-#dev-perl/Compress-Zlib
-#dev-perl/Digest-SHA
-#dev-perl/ExtUtils-CBuilder
-#dev-perl/extutils-parsexs
-#dev-perl/IO-Compress-Base
-#dev-perl/IO-Compress-Zlib
-#dev-perl/IO-Zlib
-#dev-perl/Locale-Maketext-Simple
-#dev-perl/Math-BigInt-FastCalc
-#dev-perl/module-build
-#dev-perl/Module-Pluggable
-#dev-perl/Pod-Escapes
-#dev-perl/Pod-Simple
-#dev-perl/Term-ANSIColor
-#dev-perl/Time-Piece
-#dev-perl/version
+dev-perl/Archive-Tar
+dev-perl/Class-ISA
+dev-perl/Compress-Raw-Zlib
+dev-perl/Compress-Zlib
+dev-perl/Digest-SHA
+dev-perl/ExtUtils-CBuilder
+dev-perl/extutils-parsexs
+dev-perl/IO-Compress-Base
+dev-perl/IO-Compress-Zlib
+dev-perl/IO-Zlib
+dev-perl/Locale-Maketext-Simple
+dev-perl/Math-BigInt-FastCalc
+dev-perl/module-build
+dev-perl/Module-Pluggable
+dev-perl/Pod-Escapes
+dev-perl/Pod-Simple
+dev-perl/Term-ANSIColor
+dev-perl/Time-Piece
+dev-perl/version
 ~virtual/perl-Compress-Raw-Zlib-2.008
 ~virtual/perl-Compress-Zlib-2.008
 ~virtual/perl-ExtUtils-CBuilder-0.21
