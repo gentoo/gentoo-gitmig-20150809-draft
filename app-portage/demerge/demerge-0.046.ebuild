@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.046.ebuild,v 1.6 2008/05/16 17:01:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/demerge/demerge-0.046.ebuild,v 1.7 2008/11/18 15:57:52 tove Exp $
 
 DESCRIPTION="demerge - revert to previous installation states"
 HOMEPAGE="http://download.mpsna.de/opensource/demerge/"
@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND="dev-lang/perl
 		>=dev-perl/PortageXS-0.02.06
-		dev-perl/Term-ANSIColor
+		virtual/perl-Term-ANSIColor
 		dev-perl/TermReadKey
 		dev-perl/Shell-EnvImporter"
 RDEPEND="${DEPEND}

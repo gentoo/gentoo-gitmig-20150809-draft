@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/autounmask-0.15.ebuild,v 1.5 2007/05/21 12:24:53 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/autounmask-0.15.ebuild,v 1.6 2008/11/18 15:57:01 tove Exp $
 
 DESCRIPTION="autounmask - Unmasking packages the easy way"
 HOMEPAGE="http://download.iansview.com/gentoo/tools/autounmask/"
@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND="dev-lang/perl
 		>=dev-perl/PortageXS-0.02.06
-		dev-perl/Term-ANSIColor"
+		virtual/perl-Term-ANSIColor"
 RDEPEND="${DEPEND}
 		sys-apps/portage"
 
