@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9174 2008/11/18 13:25:45 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9175 2008/11/18 14:17:07 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -123,44 +123,32 @@ app-crypt/truecrypt
 
 # Torsten Veller <tove@gentoo.org> (1 Nov 2008)
 # Adding new dual-lifed modules for perl-5.10
-virtual/perl-Archive-Tar
-virtual/perl-Class-ISA
-virtual/perl-Compress-Raw-Zlib
-virtual/perl-Compress-Zlib
-virtual/perl-Digest-SHA
-virtual/perl-ExtUtils-CBuilder
-virtual/perl-ExtUtils-ParseXS
-virtual/perl-IO-Compress-Base
-virtual/perl-IO-Compress-Zlib
-virtual/perl-IO-Zlib
-virtual/perl-Locale-Maketext-Simple
-virtual/perl-Math-BigInt-FastCalc
-virtual/perl-Module-Build
-virtual/perl-Module-Pluggable
-virtual/perl-Pod-Escapes
-virtual/perl-Pod-Simple
-virtual/perl-Term-ANSIColor
-virtual/perl-Time-Piece
-virtual/perl-version
-perl-core/Archive-Tar
-perl-core/Class-ISA
-perl-core/Compress-Raw-Zlib
-perl-core/Compress-Zlib
-perl-core/Digest-SHA
-perl-core/ExtUtils-CBuilder
-perl-core/ExtUtils-ParseXS
-perl-core/IO-Compress-Base
-perl-core/IO-Compress-Zlib
-perl-core/IO-Zlib
-perl-core/Locale-Maketext-Simple
-perl-core/Math-BigInt-FastCalc
-perl-core/Module-Build
-perl-core/Module-Pluggable
-perl-core/Pod-Escapes
-perl-core/Pod-Simple
-perl-core/Term-ANSIColor
-perl-core/Time-Piece
-perl-core/version
+#dev-perl/Archive-Tar
+#dev-perl/Class-ISA
+#dev-perl/Compress-Raw-Zlib
+#dev-perl/Compress-Zlib
+#dev-perl/Digest-SHA
+#dev-perl/ExtUtils-CBuilder
+#dev-perl/extutils-parsexs
+#dev-perl/IO-Compress-Base
+#dev-perl/IO-Compress-Zlib
+#dev-perl/IO-Zlib
+#dev-perl/Locale-Maketext-Simple
+#dev-perl/Math-BigInt-FastCalc
+#dev-perl/module-build
+#dev-perl/Module-Pluggable
+#dev-perl/Pod-Escapes
+#dev-perl/Pod-Simple
+#dev-perl/Term-ANSIColor
+#dev-perl/Time-Piece
+#dev-perl/version
+~virtual/perl-Compress-Raw-Zlib-2.008
+~virtual/perl-Compress-Zlib-2.008
+~virtual/perl-ExtUtils-CBuilder-0.21
+~virtual/perl-IO-Compress-Base-2.008
+~virtual/perl-IO-Compress-Zlib-2.008
+~virtual/perl-Math-BigInt-FastCalc-0.16
+~virtual/perl-Time-Piece-1.12
 
 # Matthias Schwarzott <zzam@gentoo.org> (28 Oct 2008)
 # Masked until design of new udev init-script for >openrc-0.3.0
