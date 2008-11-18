@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.0.1.ebuild,v 1.1 2008/07/24 21:59:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.0.3.ebuild,v 1.1 2008/11/18 02:27:01 markusle Exp $
 
 inherit flag-o-matic fortran xemacs-elisp-common
 
@@ -49,10 +49,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-3.0.0-pkg.patch
 	epatch "${FILESDIR}"/${P}-test-fix.patch
-	epatch "${FILESDIR}"/${P}-add_syspath.patch
-	epatch "${FILESDIR}"/${P}-fix_handle_for_plotyy.patch
-	epatch "${FILESDIR}"/${P}-no_helvetica.patch
-	epatch "${FILESDIR}"/${P}-chi2rnd.patch
+	epatch "${FILESDIR}"/${PN}-3.0.1-fix_handle_for_plotyy.patch
+	epatch "${FILESDIR}"/${PN}-3.0.1-no_helvetica.patch
 }
 
 src_compile() {
