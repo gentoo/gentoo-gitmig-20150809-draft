@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.18 2008/11/09 14:26:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.19 2008/11/18 03:14:23 darkside Exp $
+
+  18 Nov 2008; Jeremy Olexa <darkside@gentoo.org> wicd-1.5.3-r2.ebuild,
+  wicd-1.5.4.ebuild:
+  depending on python is silly here because the eclass pulls it in
 
   09 Nov 2008; Markus Meier <maekke@gentoo.org> wicd-1.5.2.ebuild:
   x86 stable, bug #244579
