@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/File-Spec-3.29.ebuild,v 1.1 2008/10/31 08:16:20 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/File-Spec-3.29.ebuild,v 1.2 2008/11/18 14:18:11 tove Exp $
 
 MODULE_AUTHOR=SMUELLER
 MY_PN=PathTools
@@ -18,7 +18,7 @@ SRC_TEST="do"
 
 RDEPEND="dev-lang/perl"
 DEPEND="${RDEPEND}
-	dev-perl/ExtUtils-CBuilder
-	dev-perl/module-build"
+	virtual/perl-ExtUtils-CBuilder
+	virtual/perl-Module-Build"
 
 myconf='INSTALLDIRS=vendor'

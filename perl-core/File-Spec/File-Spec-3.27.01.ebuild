@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/File-Spec-3.27.01.ebuild,v 1.2 2008/11/04 09:43:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/File-Spec-3.27.01.ebuild,v 1.3 2008/11/18 14:18:11 tove Exp $
 
 inherit versionator
 MODULE_AUTHOR=KWILLIAMS
@@ -18,8 +18,8 @@ IUSE=""
 SRC_TEST="do"
 
 RDEPEND="dev-lang/perl
-	dev-perl/ExtUtils-CBuilder"
+	virtual/perl-ExtUtils-CBuilder"
 DEPEND="${RDEPEND}
-	dev-perl/module-build"
+	virtual/perl-Module-Build"
 
 myconf='INSTALLDIRS=vendor'

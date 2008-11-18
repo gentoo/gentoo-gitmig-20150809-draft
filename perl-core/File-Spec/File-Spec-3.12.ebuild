@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/File-Spec-3.12.ebuild,v 1.12 2007/01/19 17:58:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/File-Spec-3.12.ebuild,v 1.13 2008/11/18 14:18:11 tove Exp $
 
 inherit perl-module
 
@@ -19,5 +19,5 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
-		dev-perl/module-build
-		dev-perl/ExtUtils-CBuilder"
+		virtual/perl-Module-Build
+		virtual/perl-ExtUtils-CBuilder"
