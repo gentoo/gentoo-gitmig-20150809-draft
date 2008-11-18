@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/Bio-Das-1.03.ebuild,v 1.2 2007/07/10 23:33:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/Bio-Das-1.03.ebuild,v 1.3 2008/11/18 14:25:06 tove Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 SRC_TEST="do"
 
-DEPEND=">=dev-perl/Compress-Zlib-1.0
+DEPEND=">=virtual/perl-Compress-Zlib-1.0
 	sci-biology/bioperl
 	>=dev-perl/HTML-Parser-3
 	>=dev-perl/libwww-perl-5
