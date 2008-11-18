@@ -1,0 +1,49 @@
+--- configure.ac	2008-11-18 14:09:53.724778996 +0500
++++ configure.ac3	2008-11-18 14:42:30.322032537 +0500
+@@ -167,14 +167,14 @@ dnl ------------------------------------
+ dnl Check for xerces
+ dnl ----------------------------------------
+ if test "$MINGW32" = yes; then
+-  AC_MSG_CHECKING([for Xerces 3.0 experimental version])
+-  AC_EGREP_HEADER([gXercesMajVersion = 3],[xercesc/util/XercesVersion.hpp],
++  AC_MSG_CHECKING([for Xerces 3 version])
++  AC_EGREP_HEADER([XERCES_VERSION_MAJOR 3],[xercesc/util/XercesVersion.hpp],
+       [AC_MSG_RESULT([found])],
+       [AC_MSG_ERROR([not found])])      
+    AC_CHECK_LIB(xerces, main,,[AC_MSG_ERROR([xerces is required to compile Enigma])])
+ else
+-  AC_MSG_CHECKING([for Xerces 3.0 experimental version])
+-  AC_EGREP_HEADER([gXercesMajVersion = 3],[xercesc/util/XercesVersion.hpp],
++  AC_MSG_CHECKING([for Xerces 3 version])
++  AC_EGREP_HEADER([XERCES_VERSION_MAJOR 3],[xercesc/util/XercesVersion.hpp],
+       xerces3exp="yes",
+       xerces3exp="no")      
+   if test "x$xerces3exp" = xyes; then
+--- src/lev/ScoreManager.cc
++++ src/lev/ScoreManager.cc
+@@ -65,15 +65,23 @@
+     class ScoreDomSerFilter : public DOMWriterFilter {
+ #endif
+         public:
++#if _XERCES_VERSION >= 30000
++            virtual DOMNodeFilter::FilterAction acceptNode(const DOMNode *node) const;
++#else
+             virtual short acceptNode(const DOMNode *node) const;
++#endif
+             virtual unsigned long getWhatToShow () const {
+                 return DOMNodeFilter::SHOW_ALL;
+             }
+             virtual void setWhatToShow (unsigned long toShow) {}
+     };
+-    
++   
++#if _XERCES_VERSION >= 30000
++    DOMNodeFilter::FilterAction ScoreDomSerFilter::acceptNode(const DOMNode *node) const {
++#else
+     short ScoreDomSerFilter::acceptNode(const DOMNode *node) const {
+-        if (node->getNodeType () == DOMNode::ELEMENT_NODE &&
++#endif
++	if (node->getNodeType () == DOMNode::ELEMENT_NODE &&
+                  std::string(XMLtoUtf8(node->getNodeName()).c_str()) == "level") {
+             const DOMElement *e = dynamic_cast<const DOMElement *>(node);
+             std::string id = XMLtoUtf8(e->getAttribute(Utf8ToXML("id").x_str())).c_str();

@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.40 2008/08/18 05:47:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.41 2008/11/18 21:14:32 mr_bones_ Exp $
+
+  18 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/enigma-1.01-xerces-c.patch, enigma-1.01.ebuild:
+  add patch for building with xerces-c-3 from Frédéric COIFFIER via bug #242916
 
   18 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> enigma-1.01.ebuild:
   new tarball from upstream for 64-bit support (bug #235076)

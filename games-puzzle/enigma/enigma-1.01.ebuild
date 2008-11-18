@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.01.ebuild,v 1.7 2008/08/18 05:47:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.01.ebuild,v 1.8 2008/11/18 21:14:32 mr_bones_ Exp $
 
 inherit autotools eutils games
 
@@ -30,7 +30,8 @@ src_unpack() {
 	cp /usr/share/gettext/config.rpath .
 	epatch \
 		"${FILESDIR}"/${P}-autotools.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-xerces-c.patch
 	eautoreconf
 }
 
