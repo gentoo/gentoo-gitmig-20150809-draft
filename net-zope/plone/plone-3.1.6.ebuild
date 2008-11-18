@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-3.1.6.ebuild,v 1.2 2008/11/09 13:01:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-3.1.6.ebuild,v 1.3 2008/11/18 18:22:30 dertobi123 Exp $
 
 inherit versionator zproduct
 
@@ -11,7 +11,7 @@ SRC_URI="https://launchpad.net/${PN}/$(get_version_component_range 1-2)/${PV}/+d
 
 LICENSE="GPL-2"
 SLOT="3.0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND="app-admin/zope-config"
