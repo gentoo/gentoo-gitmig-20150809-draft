@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9188 2008/11/19 22:54:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9189 2008/11/19 23:23:28 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -36,6 +36,11 @@
 # Conversion from split ebuilds to monolithic ebuilds.
 # dotnet won't mind, I hope. I contacted them some time ago,
 # but never got an answer, so assuming they're AWOL.
+# Diego E. Pettenò <flameeyes@gentoo.org> (19 Nov 2008)
+# gtk-sharp and glade-sharp I took care of myself, merging them in a
+# monolithic ebuild with USE flag, and having a commodity ebuild for
+# glade-sharp using EAPI=2 until we port the ebuilds using it to the
+# new format.
 >=dev-lang/mono-2
 >=dev-dotnet/libgdiplus-2
 >=dev-util/mono-debugger-2
@@ -43,6 +48,8 @@
 >=dev-util/monodoc-2
 >=dev-lang/mono-basic-2
 >=dev-dotnet/xsp-2
+>=dev-dotnet/gtk-sharp-2.12
+~dev-dotnet/glade-sharp-9999
 
 # Matthias Schwarzott <zzam@gentoo.org> (19 Nov 2008)
 # This ebuild contains intrusive changes
