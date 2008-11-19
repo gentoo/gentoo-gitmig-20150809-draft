@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2058 2008/11/19 15:45:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2059 2008/11/19 17:30:16 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Nov 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask media-sound/workman for removal in 30 days
 
   19 Nov 2008; MATSUU Takuto <matsuu@gentoo.org> package.mask:
   Masked =media-fonts/ja-ipafonts-0.0.20040715 for bug #196340.
