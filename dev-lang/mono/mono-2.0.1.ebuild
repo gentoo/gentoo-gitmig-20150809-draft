@@ -1,64 +1,58 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.2.6-r1.ebuild,v 1.1 2008/01/02 06:13:22 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.0.1.ebuild,v 1.1 2008/11/19 22:34:44 loki_val Exp $
 
-inherit eutils flag-o-matic multilib autotools
+inherit base eutils flag-o-matic multilib autotools
 
 DESCRIPTION="Mono runtime and class libraries, a C# compiler/interpreter"
 HOMEPAGE="http://www.go-mono.com"
-SRC_URI="http://www.go-mono.com/sources/mono/${P}.tar.bz2"
+SRC_URI="ftp://ftp.novell.com/pub/mono/sources/mono/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2 X11 )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="X nptl"
+IUSE=""
 
 RDEPEND="!<dev-dotnet/pnet-0.6.12
-		 >=dev-libs/glib-2.6
-		 nptl? ( >=sys-devel/gcc-3.3.5-r1 )
-		 ppc?	(
-					>=sys-devel/gcc-3.2.3-r4
-					>=sys-libs/glibc-2.3.3_pre20040420
-				)
-		 X? ( >=dev-dotnet/libgdiplus-1.2.4 )"
+		>=dev-libs/glib-2.6
+		=dev-dotnet/libgdiplus-${PV%%.*}*"
 DEPEND="${RDEPEND}
-		  sys-devel/bc
+		sys-devel/bc
 		>=dev-util/pkgconfig-0.19"
 PDEPEND="dev-dotnet/pe-format"
 
-# Parallel build unfriendly
-MAKEOPTS="${MAKEOPTS} -j1"
-
 RESTRICT="test"
+
+#Threading and mimeicon patches from Fedora CVS. Muine patch from Novell.
+
+PATCHES=(	"${FILESDIR}/${PN}-biginteger_overflow.diff"
+		"${FILESDIR}/${PN}-2.0-ppc-threading.patch"
+		"${FILESDIR}/${PN}-2.0-mimeicon.patch"
+		"${FILESDIR}/${P}-fix-wsdl-troubles-with-muine.patch" )
+
 
 function get-memory-total() {
 	cat /proc/meminfo | grep MemTotal | sed -r "s/[^0-9]*([[0-9]+).*/\1/"
 }
 
 src_unpack() {
-	unpack ${A}
+	base_src_unpack
 	cd "${S}"
 
 	# Fix the install path, install into $(libdir)
-	sed -i -e 's:$(prefix)/lib:$(libdir):'                                    \
-		-i -e 's:$(exec_prefix)/lib:$(libdir):'                               \
-		-i -e "s:'mono_libdir=\${exec_prefix}/lib':\"mono_libdir=\$libdir\":" \
-		"${S}"/{scripts,mono/metadata}/Makefile.am "${S}"/configure.in            \
+	sed -i	-e 's:$(prefix)/lib:$(libdir):'						\
+		-e 's:$(exec_prefix)/lib:$(libdir):'					\
+		-e "s:'mono_libdir=\${exec_prefix}/lib':\"mono_libdir=\$libdir\":"	\
+		"${S}"/{scripts,mono/metadata}/Makefile.am "${S}"/configure.in		\
 	|| die "sed failed"
 
-	sed -i -e 's:^libdir.*:libdir=@libdir@:'                                  \
-		-i -e 's:${prefix}/lib/:${libdir}/:g'                                 \
-		"${S}"/{scripts,}/*.pc.in                                               \
+	sed -i	-e 's:^libdir.*:libdir=@libdir@:'					\
+		-e 's:${prefix}/lib/:${libdir}/:g'					\
+		"${S}"/{scripts,}/*.pc.in						\
 	|| die "sed failed"
 
-	# Remove dummy ltconfig and let libtool handle it
-	rm -f "${S}"/libgc/ltconfig
-
-	epatch "${FILESDIR}"/mono-biginteger_overflow.diff
-
-	# Fixes bug #202358, see
-	# https://bugzilla.novell.com/show_bug.cgi?id=349952
-	epatch "${FILESDIR}"/${P}-threads-types-private-prototypes.patch
+	#For libtool-1 compat
+	rm -f lt*.m4 libtool.m4
 
 	einfo "Regenerating the build files, this will take some time..."
 	eautoreconf
@@ -68,16 +62,8 @@ src_compile() {
 	# mono's build system is finiky, strip the flags
 	strip-flags
 
-	# Enable the 2.0 FX, use the system glib and the gc
-	local myconf="--with-preview=yes --with-glib=system --with-gc=included"
-
-	# Threading support
-	if use amd64 || use nptl ; then
-		# force __thread on amd64 (bug #83770)
-		myconf="${myconf} --with-tls=__thread"
-	else
-		myconf="${myconf} --with-tls=pthread"
-	fi
+	#Remove this at your own peril. Mono will barf in unexpected ways.
+	append-flags -fno-strict-aliasing
 
 	# Enable large heaps if memory is more than >=3GB
 	if [[ $(get-memory-total) -ge 3145728 ]] ; then
@@ -87,7 +73,15 @@ src_compile() {
 	# Force the use of monolite mcs to prevent issues with classlibs (bug #118062)
 	touch "${S}"/mcs/build/deps/use-monolite
 
-	econf ${myconf} || die "configure failed"
+	econf	${myconf} \
+		--with-moonlight \
+		--with-preview=yes \
+		--with-glib=system \
+		--with-gc=included \
+		--with-libgdiplus=installed \
+		--with-tls=__thread \
+		--with-ikvm=yes \
+		--with-jit=yes
 	emake EXTERNAL_MCS=false EXTERNAL_MONO=false
 
 	if [[ "$?" -ne "0" ]]; then
