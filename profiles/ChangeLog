@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2055 2008/11/18 21:07:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2056 2008/11/19 06:31:11 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Nov 2008; Torsten Veller <tove@gentoo.org> package.mask:
+  Removed dev-perl/ modules after moving them to perl-core/.
+  Remove masked perl modules from 21 Oct 2008.
 
   18 Nov 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Package mask app-emacs/quilt-el.
