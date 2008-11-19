@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/gtkmozembed-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.1 2008/10/16 22:51:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.2 2008/11/19 16:11:38 dang Exp $
+
+*gtkmozembed-python-2.19.1-r10 (19 Nov 2008)
+
+  19 Nov 2008; Daniel Gryniewicz <dang@gentoo.org>
+  +gtkmozembed-python-2.19.1-r10.ebuild:
+  Add a version depending on xulrunner 1.9
 
 *gtkmozembed-python-2.19.1 (16 Oct 2008)
 
