@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/advancemenu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.27 2008/02/09 12:31:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.28 2008/11/19 05:27:32 mr_bones_ Exp $
+
+  19 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  advancemenu-2.4.13.ebuild:
+  default to sdl if no output is specified (bug #247347)
 
   09 Feb 2008; Samuli Suominen <drac@gentoo.org> advancemenu-2.4.13.ebuild:
   Fix advancemenu to work with slang 2.1.3.

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.13.ebuild,v 1.6 2008/02/09 12:31:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.13.ebuild,v 1.7 2008/11/19 05:27:32 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -19,6 +19,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	sdl? ( media-libs/libsdl )
 	slang? ( >=sys-libs/slang-1.4 )
 	svga? ( >=media-libs/svgalib-1.9 )
+	!sdl? ( !svga? ( !fbcon? ( media-libs/libsdl ) ) )
 	truetype? ( >=media-libs/freetype-2 )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
@@ -41,6 +42,7 @@ src_unpack() {
 
 	use x86 && ln -s $(type -P nasm) "${T}/${CHOST}-nasm"
 	use sdl && ln -s $(type -P sdl-config) "${T}/${CHOST}-sdl-config"
+	use !sdl && use !svga && use !fbcon && ln -s $(type -P sdl-config) "${T}/${CHOST}-sdl-config"
 	use truetype && ln -s $(type -P freetype-config) "${T}/${CHOST}-freetype-config"
 }
 
@@ -58,6 +60,7 @@ src_compile() {
 		$(use_enable slang) \
 		$(use_enable static) \
 		$(use_enable svga svgalib) \
+		$(use !sdl && use !svga && use !fbcon && echo --enable-sdl) \
 		$(use_enable x86 asm) \
 		$(use_enable zlib) \
 		|| die
