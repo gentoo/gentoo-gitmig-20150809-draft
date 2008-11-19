@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.46 2008/11/19 00:03:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.47 2008/11/19 00:04:47 robbat2 Exp $
+
+*radvd-1.2 (19 Nov 2008)
+
+  19 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> +radvd-1.2.ebuild:
+  Version bump.
 
   19 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> radvd-1.1.ebuild:
   Avoid autotools maintainer mode.
