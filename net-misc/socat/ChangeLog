@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.41 2008/11/18 04:40:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.42 2008/11/19 09:40:29 armin76 Exp $
+
+  19 Nov 2008; Raúl Porcel <armin76@gentoo.org> socat-1.6.0.1.ebuild:
+  alpha/ia64/x86 stable wrt #247089
 
   18 Nov 2008; Jeremy Olexa <darkside@gentoo.org> socat-1.6.0.1.ebuild:
   amd64 stable, bug #247089
