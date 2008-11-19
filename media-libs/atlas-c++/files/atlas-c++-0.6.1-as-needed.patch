@@ -1,0 +1,11 @@
+--- Atlas/Net/Makefile.am.old	2008-11-19 15:29:19.000000000 +0100
++++ Atlas/Net/Makefile.am	2008-11-19 15:30:04.000000000 +0100
+@@ -5,6 +5,8 @@
+ 
+ libAtlasNet_0_6_la_LDFLAGS = $(INTERFACE_VERSION)
+ 
++libAtlasNet_0_6_la_LIBADD = ../Codecs/libAtlasCodecs-0.6.la
++
+ libAtlasNetincludedir = $(includedir)/Atlas-C++-0.6/Atlas/Net
+ 
+ libAtlasNet_0_6_la_SOURCES = \
