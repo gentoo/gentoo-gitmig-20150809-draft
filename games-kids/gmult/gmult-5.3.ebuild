@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/gmult-5.3.ebuild,v 1.2 2008/05/02 19:35:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/gmult-5.3.ebuild,v 1.3 2008/11/19 04:31:38 mr_bones_ Exp $
 
 inherit eutils gnome2-utils games
 
@@ -22,6 +22,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	sed -i \
+		-e 's/-pedantic//' \
+		gmult/Makefile.in \
+		|| die "sed failed"
 }
 
 src_compile() {

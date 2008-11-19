@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gmult
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/ChangeLog,v 1.10 2008/05/02 19:35:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/ChangeLog,v 1.11 2008/11/19 04:31:38 mr_bones_ Exp $
+
+  19 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org> gmult-5.3.ebuild:
+  remove -pedantic (bug #247375)
 
   02 May 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/gmult-5.3-gcc43.patch, gmult-5.3.ebuild:
