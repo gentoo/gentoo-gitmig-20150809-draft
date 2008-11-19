@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/gtkmozembed-python-2.19.1-r10.ebuild,v 1.1 2008/11/19 16:11:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/gtkmozembed-python-2.19.1-r10.ebuild,v 1.2 2008/11/19 23:56:02 dang Exp $
 
 EAPI="1"
 
@@ -28,7 +28,7 @@ pkg_setup() {
 	confutils_require_any "firefox" "seamonkey" "xulrunner"
 
 	if use xulrunner; then
-		G2CONF="${G2CONF} --with-gtkmozembed=xulrunner-1.9"
+		G2CONF="${G2CONF} --with-gtkmozembed=xulrunner"
 	elif use firefox; then
 		G2CONF="${G2CONF} --with-gtkmozembed=firefox"
 	elif use seamonkey; then

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gtkmozembed-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.2 2008/11/19 16:11:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.3 2008/11/19 23:56:02 dang Exp $
+
+  19 Nov 2008; Daniel Gryniewicz <dang@gentoo.org>
+  gtkmozembed-python-2.19.1-r10.ebuild:
+  Fix configure option that I borked
 
 *gtkmozembed-python-2.19.1-r10 (19 Nov 2008)
 
