@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/mono-debugger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.16 2008/03/01 23:27:17 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.17 2008/11/19 22:35:58 loki_val Exp $
+
+*mono-debugger-2.0 (19 Nov 2008)
+
+  19 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -mono-debugger-0.50.ebuild, +mono-debugger-2.0.ebuild:
+  Bump for mono-2, remove crufty slag.
 
   01 Mar 2008; Saleem Abdulrasool <compnerd@gentoo.org>
   mono-debugger-0.50.ebuild, mono-debugger-0.60.ebuild:
