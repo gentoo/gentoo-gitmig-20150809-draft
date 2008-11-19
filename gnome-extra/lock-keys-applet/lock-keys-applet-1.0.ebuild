@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/lock-keys-applet/lock-keys-applet-1.0.ebuild,v 1.13 2008/11/19 23:24:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/lock-keys-applet/lock-keys-applet-1.0.ebuild,v 1.14 2008/11/19 23:49:23 eva Exp $
 
 inherit autotools gnome2 eutils
 
@@ -28,6 +28,9 @@ src_unpack() {
 	# remove deprecated definitions, bug #206459
 	# courtesy of ubuntu/debian developers
 	epatch "${FILESDIR}/${P}-gtk-disable-deprecated.patch"
+
+	# Fix intltool tests
+	echo "GNOME_LockKeysApplet.server.in" >> po/POTFILES.in
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautomake
