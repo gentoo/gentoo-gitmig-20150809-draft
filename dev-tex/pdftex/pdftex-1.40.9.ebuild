@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.9.ebuild,v 1.7 2008/10/15 17:38:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.9.ebuild,v 1.8 2008/11/19 00:39:35 fmccor Exp $
 
 inherit libtool toolchain-funcs eutils multilib
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 SRC_URI="http://sarovar.org/download.php/1240/${P}.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=app-text/poppler-0.8
