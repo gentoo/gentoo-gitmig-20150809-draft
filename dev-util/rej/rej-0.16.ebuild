@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rej/rej-0.16.ebuild,v 1.4 2006/01/24 10:29:58 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rej/rej-0.16.ebuild,v 1.5 2008/11/19 18:14:52 jer Exp $
 
 DESCRIPTION="A utility for solving diff/patch rejects"
 HOMEPAGE="http://ftp.suse.com/pub/people/mason/rej/"
@@ -12,7 +12,12 @@ KEYWORDS="x86 ~ppc amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND="dev-lang/perl"
+RDEPEND="
+	dev-lang/perl
+	!app-editors/mp
+	!dev-lang/qu-prolog
+	!dev-util/mpatch
+	"
 
 src_compile() {
 	echo
