@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/ganglia
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.18 2008/08/31 17:38:52 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.19 2008/11/19 17:04:28 jsbronder Exp $
+
+*ganglia-3.1.1 (19 Nov 2008)
+
+  19 Nov 2008; Justin Bronder <jsbronder@gentoo.org>
+  +files/ganglia-3.1.1-ctype-c99.patch,
+  +files/ganglia-3.1.1-multidisk-group.patch, +ganglia-3.1.1.ebuild:
+  Bump sys-cluster/ganglia-3.1.1: adds blocker on dev-db/firebird for #247213,
+  add automatic configuration for the diskusage metric.
 
   31 Aug 2008; Justin Bronder <jsbronder@gentoo.org>
   ganglia-3.1.0-r1.ebuild:
