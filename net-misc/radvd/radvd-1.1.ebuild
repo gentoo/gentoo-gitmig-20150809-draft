@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.1.ebuild,v 1.3 2008/11/18 23:58:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.1.ebuild,v 1.4 2008/11/19 00:03:54 robbat2 Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Linux IPv6 Router Advertisement Daemon"
 HOMEPAGE="http://v6web.litech.org/radvd/"
@@ -30,6 +30,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.1-gnu-source.patch
 	epatch "${FILESDIR}"/${PN}-1.1-parallel-make.patch
+	eautomake
 }
 
 src_compile() {
