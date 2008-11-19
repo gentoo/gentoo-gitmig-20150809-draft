@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6-r1.ebuild,v 1.1 2008/10/17 18:39:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6-r1.ebuild,v 1.2 2008/11/19 09:34:21 opfer Exp $
 
 EAPI=1
 
@@ -24,6 +24,7 @@ RDEPEND="dev-libs/libxml2
 	gnome-base/libglade
 	gnome-base/gconf:2
 	dev-perl/XML-Parser
+	x11-libs/libnotify
 	linguas_hu?	( >=sys-devel/gettext-0.16.1 )"
 
 DEPEND="${RDEPEND}
