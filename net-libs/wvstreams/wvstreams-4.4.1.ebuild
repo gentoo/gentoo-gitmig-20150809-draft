@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.1.ebuild,v 1.2 2008/07/27 22:08:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.4.1.ebuild,v 1.3 2008/11/19 19:30:33 loki_val Exp $
 
 EAPI=1
 
@@ -51,9 +51,16 @@ src_unpack() {
 
 	ht_fix_file "${S}/configure.ac"
 
-	#needed by xplc, as-needed and gnulib patch
 	cd "${S}"
-	eautoreconf || die "eautoreconf failed"
+
+	sed -r -i \
+		-e '/AC_DEFINE.*__EXTENSIONS__/d' \
+		gnulib/m4/extensions.m4
+	sed -i -n \
+		 -e :a -e '1,10!{P;N;D;};N;ba' \
+		 configure.ac
+	#needed by xplc, as-needed and gnulib patch
+	AT_M4DIR="gnulib/m4" eautoreconf || die "eautoreconf failed"
 }
 
 src_compile() {
