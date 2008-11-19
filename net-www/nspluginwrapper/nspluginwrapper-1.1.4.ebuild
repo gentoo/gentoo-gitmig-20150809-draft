@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.1.2.ebuild,v 1.1 2008/10/15 15:56:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.1.4.ebuild,v 1.1 2008/11/19 14:36:36 chutzpah Exp $
 
 inherit eutils nsplugins multilib
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2
+	net-misc/curl
 	app-emulation/emul-linux-x86-xlibs
 	app-emulation/emul-linux-x86-gtklibs
 	|| ( >=sys-apps/util-linux-2.13 sys-apps/setarch )"
