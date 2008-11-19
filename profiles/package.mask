@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9179 2008/11/19 06:31:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9180 2008/11/19 15:31:20 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -299,20 +299,6 @@ gnome-extra/gnome-lirc-properties
 # Peter Volkov <pva@gentoo.org> (17 Sep 2008)
 # Development version, but yet nice :)
 =net-analyzer/wireshark-1.1*
-
-# Jeremy Olexa <darkside@gentoo.org> (13 Sep 2008)
-# Masked for removal in 60 days. Dead upstream, old, no maintainer, based on 2.5
-# kernel, doesn't build with glibc-2.8, bug # 231837, 204671, 226675
-app-admin/powertweak
-
-# Jeremy Olexa <darkside@gentoo.org> (13 Sep 2008)
-# Masked for removal is 60 days. Broke, old, unmaintained. bug # 210689
-x11-base/xdirectfb
-
-# Jeremy Olexa <darkside@gentoo.org> (12 Sep 2008)
-# Masked for removal in 60 days. Broken package, needs love due to automagic
-# deps, missing kernel module, and other issues seen in bug #211702
-app-emulation/sheepshaver
 
 # Jeremy Olexa <darkside@gentoo.org> (12 Sep 2008)
 # Masked for removal in 60 days. Broken in Gentoo for 1.5 years, no maintainer,
