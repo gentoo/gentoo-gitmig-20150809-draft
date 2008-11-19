@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.9.ebuild,v 1.1 2008/05/31 12:51:10 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.9.ebuild,v 1.2 2008/11/19 10:03:42 loki_val Exp $
 
 inherit mono multilib eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/mono-1.0
 		 =dev-dotnet/glade-sharp-2*
 		 =dev-dotnet/gconf-sharp-2*
 		 gtkhtml? ( =dev-dotnet/gtkhtml-sharp-2* )
-		 seamonkey? ( =dev-dotnet/gecko-sharp-0.11* )
+		 seamonkey? ( >=dev-dotnet/gecko-sharp-0.11 )
 		 !seamonkey? ( =dev-dotnet/gtkhtml-sharp-2* )"
 DEPEND="${RDEPEND}
 		  sys-devel/gettext

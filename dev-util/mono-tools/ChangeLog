@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.39 2008/05/31 12:51:10 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.40 2008/11/19 10:03:42 loki_val Exp $
+
+  19 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> mono-tools-1.9.ebuild:
+  fix dep wrt bug 169897
 
 *mono-tools-1.9 (31 May 2008)
 
