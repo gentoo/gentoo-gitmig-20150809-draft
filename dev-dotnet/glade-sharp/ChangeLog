@@ -1,6 +1,14 @@
 # ChangeLog for dev-dotnet/glade-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.59 2008/05/30 23:10:33 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.60 2008/11/19 23:30:19 flameeyes Exp $
+
+*glade-sharp-9999 (19 Nov 2008)
+
+  19 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  +glade-sharp-9999.ebuild:
+  Add a dummy ebuild for glade-sharp that depends on gtk-sharp with the
+  glade USE flag enabled. This allows for a smoother transition from the old
+  split ebuild for the other packages.
 
   30 May 2008; Jurek Bartuszek <jurek@gentoo.org> glade-sharp-1.0.10.ebuild,
   glade-sharp-2.8.2.ebuild, glade-sharp-2.10.0.ebuild:
