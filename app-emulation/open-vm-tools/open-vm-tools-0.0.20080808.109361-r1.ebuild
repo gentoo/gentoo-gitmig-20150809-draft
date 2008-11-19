@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20080808.109361-r1.ebuild,v 1.1 2008/10/19 13:06:00 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20080808.109361-r1.ebuild,v 1.2 2008/11/19 01:34:12 ikelos Exp $
 
 inherit pam eutils linux-mod versionator
 
@@ -74,8 +74,8 @@ pkg_setup() {
 		MODULE_NAMES="${MODULE_NAMES} ${mod}(${MODTARGET}:${S}/${VMWARE_MOD_DIR}/${mod})"
 	done
 
-	ewarn "If you're compiling for a hardened target, please use the hardened"
-	ewarn "toolchain (see bug #200376, comment 18)."
+	ewarn "If you're compiling with a hardened toolchain, please use the hardened"
+	ewarn "gcc profile (see bug #200376, comment 18)."
 
 	enewgroup vmware
 
