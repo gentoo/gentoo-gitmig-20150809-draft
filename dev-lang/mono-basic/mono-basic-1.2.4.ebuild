@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/mono-basic-1.2.4.ebuild,v 1.4 2007/08/03 10:46:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/mono-basic-1.2.4.ebuild,v 1.5 2008/11/19 22:46:49 loki_val Exp $
 
 inherit mono multilib
 
@@ -13,14 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-RDEPEND="=dev-lang/mono-${PV}*"
+RDEPEND="=dev-lang/mono-${PV%.*}*"
 DEPEND="${RDEPEND}"
 
 RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i -e "s|\(mono_libdir=\${exec_prefix}\)/lib|\1/$(get_libdir)|" \
 		configure || die "sed failed"
