@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.2.1.ebuild,v 1.1 2008/02/24 11:03:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.2.3.ebuild,v 1.1 2008/11/19 23:19:11 eva Exp $
 
 inherit eutils gnome2 autotools
 
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.28
+	dev-util/gtk-doc-am
 	doc? ( dev-util/gtk-doc )"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
@@ -38,19 +39,22 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	# Fix missing pkg-config macro (bug 204276)
-	epatch "${FILESDIR}/${P}-pkg-config-macro.patch"
+	# Fix missing pkg-config macro (bug #204276)
+	# https://sourceforge.net/tracker/index.php?func=detail&aid=2316013&group_id=46122&atid=445116
+	epatch "${FILESDIR}/${PN}-2.2.1-pkg-config-macro.patch"
 
-	# drop gtk-doc for eautoreconf
-	use doc || epatch "${FILESDIR}/${P}-drop-gtk-doc.patch"
+	# Intltool tests fixes
+	echo "data/templates/dymo-other-templates.xml" >> po/POTFILES.in
+	echo "libglabels/db.c" >> po/POTFILES.in
 
+	intltoolize --force || die "intltoolize failed"
 	eautoreconf
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	ewarn "This version of ${PN} has a file format change. Files will be"
+	ewarn "As of 2.2.0, glabels had a file format change. Files will be"
 	ewarn "automatically converted to the new format but it is a one way"
 	ewarn "process only. Make backups."
 }
