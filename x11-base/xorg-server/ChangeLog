@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.367 2008/11/02 16:37:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.368 2008/11/19 22:46:27 lu_zero Exp $
+
+  19 Nov 2008; Luca Barbato <lu_zero@gentoo.org> xorg-server-1.5.2.ebuild:
+  ati-drivers now support xorg 1.5
 
   02 Nov 2008; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Tweak tslib flag descrip.
