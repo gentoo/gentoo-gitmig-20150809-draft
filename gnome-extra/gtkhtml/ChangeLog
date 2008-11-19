@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.168 2008/11/13 19:16:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.169 2008/11/19 22:06:39 eva Exp $
+
+*gtkhtml-3.24.1.1 (19 Nov 2008)
+
+  19 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -gtkhtml-3.14.3-r1.ebuild, -gtkhtml-3.18.1.ebuild, -gtkhtml-3.18.2.ebuild,
+  +gtkhtml-3.24.1.1.ebuild:
+  New version for GNOME 2.24. Rewrite of the composer code, we keep the
+  bonobo component until we make sure nothing uses it in the tree anymore.
+  Clean up old revisions.
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> gtkhtml-3.18.3.ebuild:
   Marking gtkhtml-3.18.3 ppc64 stable for bug 236971
