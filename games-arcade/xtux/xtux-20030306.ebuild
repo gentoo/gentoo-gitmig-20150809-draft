@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.14 2008/09/03 15:52:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.15 2008/11/19 06:58:21 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -33,7 +33,11 @@ src_unpack() {
 }
 
 src_compile() {
-	emake DATADIR="${GAMES_DATADIR}/xtux/data" || die "emake failed"
+	# Not parallel-make friendly (bug #247332)
+	emake DATADIR="${GAMES_DATADIR}/xtux/data" common || die "emake failed"
+	emake DATADIR="${GAMES_DATADIR}/xtux/data" ggz    || die "emake failed"
+	emake DATADIR="${GAMES_DATADIR}/xtux/data" server || die "emake failed"
+	emake DATADIR="${GAMES_DATADIR}/xtux/data" client || die "emake failed"
 }
 
 src_install () {

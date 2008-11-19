@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xtux
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/ChangeLog,v 1.11 2008/09/03 02:10:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/ChangeLog,v 1.12 2008/11/19 06:58:21 mr_bones_ Exp $
+
+  19 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org> xtux-20030306.ebuild:
+  work around parallel-make issues (bug #247332)
 
   03 Sep 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/xtux-20030306-particles.patch, xtux-20030306.ebuild:
