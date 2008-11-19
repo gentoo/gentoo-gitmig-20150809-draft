@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2059 2008/11/19 17:30:16 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2060 2008/11/19 19:13:18 zzam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Nov 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Mask udev-133 for intrusive changes. Unmask once they are done and tested.
 
   19 Nov 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask media-sound/workman for removal in 30 days
