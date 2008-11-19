@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2057 2008/11/19 15:31:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2058 2008/11/19 15:45:05 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Nov 2008; MATSUU Takuto <matsuu@gentoo.org> package.mask:
+  Masked =media-fonts/ja-ipafonts-0.0.20040715 for bug #196340.
 
   19 Nov 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   clean up p.mask file after, app-admin/powertweak, x11-base/xdirectfb,
