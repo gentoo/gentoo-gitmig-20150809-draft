@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-133.ebuild,v 1.1 2008/11/19 19:41:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-133.ebuild,v 1.2 2008/11/19 21:20:02 zzam Exp $
 
-inherit eutils flag-o-matic multilib toolchain-funcs versionator autotools
+inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
@@ -87,13 +87,7 @@ src_unpack() {
 		extras/rule_generator/write_*_rules \
 		udev/udev-util.c \
 		udev/udev-rules.c \
-		udev/udevd.c \
-		$(find -name "Makefile.*") || die "sed failed"
-
-	# fix version of volume_id lib
-	sed -e 's/-version-info/-version-number/' -i extras/volume_id/lib/Makefile.am
-
-	eautoreconf
+		udev/udevd.c || die "sed failed"
 }
 
 src_compile() {
@@ -115,6 +109,11 @@ src_compile() {
 src_install() {
 	into /
 	emake DESTDIR="${D}" install || die "make install failed"
+	if [[ "$(get_libdir)" != "lib" ]]; then
+		mkdir -p "${D}/$(get_libdir)"
+		mv "${D}"/lib/* "${D}/$(get_libdir)/"
+		rmdir "${D}"/lib
+	fi
 
 	exeinto "${udev_helper_dir}"
 	newexe "${FILESDIR}"/net-130-r1.sh net.sh	|| die "net.sh not installed properly"
