@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-patch-bay
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/ChangeLog,v 1.27 2008/10/14 16:17:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/ChangeLog,v 1.28 2008/11/19 14:19:14 loki_val Exp $
+
+*alsa-patch-bay-1.0.0-r4 (19 Nov 2008)
+
+  19 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +alsa-patch-bay-1.0.0-r4.ebuild:
+  We can't have gtk UI anymore, gtkmm has bitrotted. Adding revision without
+  gtk use flag. Bug 228471.
 
 *alsa-patch-bay-1.0.0-r3 (14 Oct 2008)
 
