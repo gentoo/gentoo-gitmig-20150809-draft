@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.40 2008/09/20 21:27:16 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.41 2008/11/19 22:28:08 maekke Exp $
+
+  19 Nov 2008; Markus Meier <maekke@gentoo.org> pekwm-0.1.7.ebuild:
+  amd64/x86 stable, bug #245246
 
 *pekwm-0.1.7 (20 Sep 2008)
 
