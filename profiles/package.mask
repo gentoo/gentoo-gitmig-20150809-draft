@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9181 2008/11/19 15:45:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9182 2008/11/19 16:41:14 beandog Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -105,6 +105,7 @@ xfce-extra/pynetworkmanager
 
 # Steve Dibb <beandog@gentoo.org> (5 Nov 2008)
 # Mask realplayer, real codecs for security, upstream issues, bug 245662
+# http://forums.gentoo.org/viewtopic-t-713051.html
 media-video/realplayer
 media-libs/amd64codecs
 media-libs/realcodecs
