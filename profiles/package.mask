@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9186 2008/11/19 21:52:59 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9187 2008/11/19 22:42:20 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -41,6 +41,7 @@
 >=dev-util/mono-debugger-2
 >=dev-util/mono-tools-2
 >=dev-util/monodoc-2
+>=dev-lang/mono-basic-2
 
 # Matthias Schwarzott <zzam@gentoo.org> (19 Nov 2008)
 # This ebuild contains intrusive changes
