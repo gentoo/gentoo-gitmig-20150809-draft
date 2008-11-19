@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.7 2008/11/10 15:47:17 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.8 2008/11/19 15:42:56 lavajoe Exp $
 
 inherit eutils git
 
@@ -37,6 +37,8 @@ src_install() {
 	dosbin btrfs-vol
 	dosbin btrfsctl
 	dosbin btrfsck
+	dosbin btrfstune
+	dosbin btrfs-image
 	# fsck will segfault if invoked at boot, so do not make this link
 	#dosym btrfsck /sbin/fsck.btrfs
 	newsbin debug-tree btrfs-debug-tree
