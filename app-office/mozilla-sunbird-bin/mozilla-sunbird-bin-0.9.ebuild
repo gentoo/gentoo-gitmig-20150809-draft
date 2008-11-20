@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.9.ebuild,v 1.1 2008/09/24 17:00:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.9.ebuild,v 1.2 2008/11/20 19:09:39 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -16,7 +16,7 @@ RESTRICT="strip"
 QA_EXECSTACK="opt/sunbird/extensions/talkback@mozilla.org/components/libqfaservices.so"
 QA_TEXTRELS="opt/sunbird/extensions/talkback@mozilla.org/components/libqfaservices.so"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE=""
