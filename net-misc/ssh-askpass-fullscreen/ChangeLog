@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ssh-askpass-fullscreen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ChangeLog,v 1.4 2008/11/20 10:15:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ChangeLog,v 1.5 2008/11/20 15:56:38 darkside Exp $
+
+*ssh-askpass-fullscreen-0.4-r1 (20 Nov 2008)
+
+  20 Nov 2008; Jeremy Olexa <darkside@gentoo.org>
+  +ssh-askpass-fullscreen-0.4-r1.ebuild:
+  minor additions to respect compiler and CFLAGS. bug #247700, thanks to
+  justin for the patch.
 
   20 Nov 2008; Raúl Porcel <armin76@gentoo.org>
   ssh-askpass-fullscreen-0.4.ebuild:
