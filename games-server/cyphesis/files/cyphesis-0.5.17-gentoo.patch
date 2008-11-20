@@ -1,0 +1,29 @@
+--- configure.ac.old	2007-01-31 23:22:11.000000000 +0100
++++ configure.ac	2007-01-31 23:22:40.000000000 +0100
+@@ -258,26 +258,6 @@
+ libraries required and where to obtain them.])
+     ])
+ 
+-PKG_CHECK_MODULES(AVAHI, avahi-client,
+-    [
+-        CPPFLAGS="$CPPFLAGS $AVAHI_CFLAGS"
+-        MDNS_LIBS="$MDNS_LIBS $AVAHI_LIBS"
+-        AC_DEFINE(HAVE_AVAHI, 1, [Define to 1 if you have avahi libs.])
+-    ],
+-    [
+-        AC_MSG_RESULT([no])
+-        PKG_CHECK_MODULES(HOWL, howl,
+-            [
+-                CPPFLAGS="$CPPFLAGS $HOWL_CFLAGS"
+-                MDNS_LIBS="$MDNS_LIBS $HOWL_LIBS"
+-                AC_DEFINE(HAVE_LIBHOWL, 1, [Define to 1 if you have howl libs.])
+-            ],
+-            [
+-                AC_MSG_RESULT([no])
+-                AC_MSG_NOTICE([Ommiting DNS-SD functionality.])
+-            ])
+-    ])
+-
+ AM_PATH_PSQL(7.1.0,
+     [
+         if test "$PG_CFLAGS" != "-I/usr/include"; then
