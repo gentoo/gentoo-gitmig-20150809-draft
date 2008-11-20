@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.113 2008/08/23 01:50:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.114 2008/11/20 13:26:32 hanno Exp $
+
+  20 Nov 2008; Hanno Boeck <hanno@gentoo.org> +files/courier-init-r2,
+  courier-0.60.0.ebuild:
+  Fix location of webmaild in init script, thanks to Mike Bryce in #225093.
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
