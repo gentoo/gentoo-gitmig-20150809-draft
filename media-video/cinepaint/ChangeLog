@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cinepaint
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.23 2008/11/09 15:06:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.24 2008/11/20 20:26:53 loki_val Exp $
+
+  20 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -cinepaint-0.21.1.ebuild:
+  Old version depping on gtk+-1 removed.
 
   09 Nov 2008; Markus Meier <maekke@gentoo.org> cinepaint-0.22.1.ebuild:
   x86 stable, bug #245562
