@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.12.2.ebuild,v 1.2 2008/11/18 00:19:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.12.2.ebuild,v 1.3 2008/11/20 21:56:26 jer Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -22,7 +22,7 @@ inherit eutils flag-o-matic savedconfig toolchain-funcs
 # (2) Go to the work directory and change the configuration of busybox using its
 #     menuconfig feature.
 #
-#     cd /var/tmp/portage/busybox*/work
+#     cd /var/tmp/portage/busybox*/work/busybox-*
 #     make menuconfig
 #
 # (3) Save your configuration to the default location and copy it to the
