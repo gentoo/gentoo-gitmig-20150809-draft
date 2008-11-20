@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-DKIM
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.19 2008/10/22 11:18:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.20 2008/11/20 16:07:02 jer Exp $
+
+  20 Nov 2008; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  Marked ~hppa too (thanks to LuckyLuke).
 
 *Mail-DKIM-0.32 (22 Oct 2008)
 
