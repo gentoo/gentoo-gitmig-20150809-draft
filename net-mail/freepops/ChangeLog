@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/freepops
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.43 2008/11/06 08:19:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.44 2008/11/20 19:20:07 dragonheart Exp $
+
+  20 Nov 2008; Daniel Black <dragonheart@gentoo.org> freepops-0.2.7.ebuild,
+  freepops-0.2.8.ebuild:
+  debianutils RDEPEND as per bug #247280 thanks monur. USE depend as per EAPI2
+  added to freepops-0.2.8
 
 *freepops-0.2.8 (06 Nov 2008)
 
