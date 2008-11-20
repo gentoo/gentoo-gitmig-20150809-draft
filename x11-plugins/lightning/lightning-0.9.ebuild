@@ -1,19 +1,19 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/lightning-0.8.ebuild,v 1.2 2008/08/26 15:36:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/lightning/lightning-0.9.ebuild,v 1.1 2008/11/20 20:54:32 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozcoreconf mozextension makeedit multilib autotools
 
-SBPATCH="mozilla-sunbird-${PV}-patches-0.1"
+SBPATCH="mozilla-sunbird-0.8-patches-0.1"
 
 DESCRIPTION="Calendar extension for Mozilla Thunderbird."
 HOMEPAGE="http://www.mozilla.org/projects/calendar/lightning/"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${PV}/source/${PN}-sunbird-${PV}-source.tar.bz2
 	mirror://gentoo/${SBPATCH}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE=""
@@ -39,6 +39,9 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"/patch
+
+	# Don't strip
+	sed -i -e 's/STRIP_/#STRIP_/g' calendar/lightning/Makefile.in
 
 	eautoreconf
 }
@@ -108,7 +111,5 @@ src_install() {
 
 	# these files will be picked up by mozilla-launcher -register
 	dodir ${MOZILLA_FIVE_HOME}/{chrome,extensions}.d
-	insinto ${MOZILLA_FIVE_HOME}/chrome.d
-	newins "${S}"/dist/bin/chrome/installed-chrome.txt ${PN}
 	echo "extension,${emid}" > "${D}"${MOZILLA_FIVE_HOME}/extensions.d/${PN}
 }
