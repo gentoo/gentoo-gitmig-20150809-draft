@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Parse-Syslog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/ChangeLog,v 1.12 2008/07/17 18:49:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/ChangeLog,v 1.13 2008/11/20 18:14:01 jer Exp $
+
+  20 Nov 2008; Jeroen Roovers <jer@gentoo.org> Parse-Syslog-1.10.ebuild:
+  Marked ~hppa too (thanks to LuckyLuke).
 
   17 Jul 2008; Raúl Porcel <armin76@gentoo.org> Parse-Syslog-1.10.ebuild:
   alpha/sparc/x86 stable

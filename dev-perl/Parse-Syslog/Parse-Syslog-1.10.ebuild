@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/Parse-Syslog-1.10.ebuild,v 1.2 2008/07/17 18:49:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Syslog/Parse-Syslog-1.10.ebuild,v 1.3 2008/11/20 18:14:01 jer Exp $
 
 inherit perl-module
 DESCRIPTION="Parse::Syslog - Parse Unix syslog files"
@@ -9,7 +9,7 @@ SRC_URI="mirror://cpan/authors/id/D/DS/DSCHWEI/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ~ppc ~ppc64 sparc x86"
 IUSE=""
 SRC_TEST="do"
 
