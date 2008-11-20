@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23.ebuild,v 1.10 2008/10/27 07:53:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23.ebuild,v 1.11 2008/11/20 14:43:51 ulm Exp $
 
 inherit distutils elisp
 
@@ -15,7 +15,14 @@ KEYWORDS="amd64 arm ~hppa ia64 ppc ppc64 s390 sh x86 ~x86-fbsd"
 IUSE="doc test"
 
 # additional test? dependency is needed for aeguill.sty (bug 232497)
-DEPEND="doc? ( dev-python/docutils virtual/latex-base )
+# additional doc? dependencies for multirow.sty and aeguill.sty (bug 247703)
+DEPEND="
+	doc? ( dev-python/docutils
+		virtual/latex-base
+		|| ( ( dev-texlive/texlive-latexextra
+				dev-texlive/texlive-langfrench )
+			app-text/tetex
+			app-text/ptex ) )
 	test? ( || ( dev-texlive/texlive-langfrench
 			app-text/tetex
 			app-text/ptex ) )"

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.36 2008/10/27 07:53:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.37 2008/11/20 14:43:51 ulm Exp $
+
+  20 Nov 2008; Ulrich Mueller <ulm@gentoo.org> pymacs-0.23.ebuild:
+  Additional dependencies with USE=doc for multirow.sty and aeguill.sty,
+  fixes bug 247703.
 
   27 Oct 2008; Ulrich Mueller <ulm@gentoo.org> pymacs-0.23.ebuild:
   Replace virtual/tetex dependency by tetex or ptex, bug 222501.
