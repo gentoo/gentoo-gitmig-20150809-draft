@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9190 2008/11/20 04:27:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9191 2008/11/20 04:34:54 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -1370,11 +1370,6 @@ app-benchmarks/ltp
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
 # zlib interaction is badly broken. See bug #124733.
 =dev-util/cvs-1.12.13*
-
-# Marcelo Goes <vanquirius@gentoo.org> (16 Feb 2006)
-# Lacks needed functionality - someone volunteered to fix it
-# See bug 117898
-net-libs/libpcap-ringbuffer
 
 # Guillaume Destuynder <kang@gentoo.org> (16 Feb 2006)
 # Masked SVN ebuilds
