@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.16.2.ebuild,v 1.1 2008/10/20 19:00:19 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.0.0.ebuild,v 1.1 2008/11/20 09:27:45 dev-zero Exp $
 
 EAPI="2"
 
@@ -21,7 +21,9 @@ CDEPEND="sys-libs/zlib
 		gnutls? ( >=net-libs/gnutls-1.2.9 )
 		!gnutls? ( dev-libs/openssl ) )
 	ares? ( >=net-dns/c-ares-1.3.1 )
-	bittorrent? ( gnutls? ( >=dev-libs/libgcrypt-1.2.0 ) )
+	bittorrent? (
+		gnutls? ( >=net-libs/gnutls-1.2.9 >=dev-libs/libgcrypt-1.2.0 )
+		!gnutls? ( dev-libs/openssl ) )
 	metalink? (
 		!expat? ( >=dev-libs/libxml2-2.6.26 )
 		expat? ( dev-libs/expat )
@@ -36,18 +38,18 @@ RDEPEND="${CDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	sed -i -e "s|/tmp|${T}|" test/*.cc || die "sed failed"
+	sed -i -e "s|/tmp|${T}|" test/*.cc test/*.txt || die "sed failed"
 }
 
 src_configure() {
+	local myconf="--without-gnutls --without-openssl"
 	use ssl && \
-		myconf="${myconf} $(use_with gnutls) $(use_with !gnutls openssl)"
+		myconf="$(use_with gnutls) $(use_with !gnutls openssl)"
 
 	# Note:
-	# - we don't have ares, only libcares
-	# - depends on libgcrypt only when using openssl
+	# - depends on libgcrypt only when using gnutls
 	# - links only against libxml2 and libexpat when metalink is enabled
-	# - always enable gzip/http compression since zlib should always be anyway
+	# - always enable gzip/http compression since zlib should always be available anyway
 	# - always enable epoll since we can assume kernel 2.6.x
 	# - other options for threads: solaris, pth, win32
 	econf \
@@ -60,7 +62,6 @@ src_configure() {
 		$(use_with !expat libxml2) \
 		$(use_with sqlite3) \
 		$(use_enable bittorrent) \
-		--without-ares \
 		$(use_with ares libcares) \
 		${myconf} \
 		|| die "econf failed"
