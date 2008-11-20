@@ -5,6 +5,12 @@
 	<maintainer>
 		<email>cedk@gentoo.org</email>
 		<name>Cédric Krier</name>
+		<description>Primary maintainer</description>
+	</maintainer>
+	<maintainer>
+		<email>wschlich@gentoo.org</email>
+		<name>Wolfram Schlich</name>
+		<description>Secondary maintainer</description>
 	</maintainer>
 	<longdescription lang="en">
 		A set of tools targeted at system administrators. They are conntrack,
@@ -12,4 +18,3 @@
 		daemon.
 	</longdescription>
 </pkgmetadata>
-
