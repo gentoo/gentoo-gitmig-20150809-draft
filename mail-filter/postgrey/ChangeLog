@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.54 2008/08/12 20:40:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.55 2008/11/20 18:20:46 jer Exp $
+
+  20 Nov 2008; Jeroen Roovers <jer@gentoo.org> postgrey-1.32.ebuild:
+  Marked ~hppa too (thanks to LuckyLuke).
 
 *postgrey-1.32 (12 Aug 2008)
 
