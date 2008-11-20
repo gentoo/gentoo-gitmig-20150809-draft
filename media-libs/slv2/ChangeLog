@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/slv2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/ChangeLog,v 1.9 2008/07/09 10:36:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/ChangeLog,v 1.10 2008/11/20 10:14:08 aballier Exp $
+
+*slv2-0.6.1 (20 Nov 2008)
+
+  20 Nov 2008; Alexis Ballier <aballier@gentoo.org> +slv2-0.6.1.ebuild:
+  version bump
 
 *slv2-0.6.0 (09 Jul 2008)
 
