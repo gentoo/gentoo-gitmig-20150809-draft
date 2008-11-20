@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.21 2008/11/20 00:33:59 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.22 2008/11/20 01:09:42 tcunha Exp $
+
+  20 Nov 2008; Tiago Cunha <tcunha@gentoo.org> cutils-1.6-r2.ebuild:
+  - Fix LICENSE.
+  - Fix hardcoded CC (closes bug 243990). Thanks flameeyes
+  - Quoting.
 
   20 Nov 2008; Tiago Cunha <tcunha@gentoo.org> metadata.xml:
   I'll be maintaining this now
