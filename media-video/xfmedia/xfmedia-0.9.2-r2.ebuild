@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/xfmedia-0.9.2-r2.ebuild,v 1.6 2008/11/03 12:37:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/xfmedia-0.9.2-r2.ebuild,v 1.7 2008/11/20 17:00:12 ranger Exp $
 
 inherit eutils fdo-mime gnome2-utils
 
@@ -11,7 +11,7 @@ SRC_URI="http://spuriousinterrupt.org/projects/${PN}/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # do not mark stable, see postinst message.
-KEYWORDS="amd64 ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="dbus debug startup-notification taglib"
 
 RDEPEND="x11-libs/libX11
