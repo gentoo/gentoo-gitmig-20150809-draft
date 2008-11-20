@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.19.1-r1.ebuild,v 1.4 2008/11/02 12:16:21 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.19.1-r1.ebuild,v 1.5 2008/11/20 21:20:36 jer Exp $
 
 MY_P=${PN}-mt-${PV}
 S="${WORKDIR}/${MY_P}"
@@ -33,8 +33,8 @@ src_install() {
 	insinto /etc
 	newins etc/yp.conf yp.conf.example
 
-	newconfd "${FILESDIR}/ypbind.confd-r1 ypbind"
-	newinitd "${FILESDIR}/ypbind.initd ypbind"
+	newconfd "${FILESDIR}/ypbind.confd-r1" ypbind
+	newinitd "${FILESDIR}/ypbind.initd" ypbind
 }
 
 pkg_postinst() {
