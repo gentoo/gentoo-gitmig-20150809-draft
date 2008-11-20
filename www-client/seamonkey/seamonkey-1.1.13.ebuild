@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.13.ebuild,v 1.6 2008/11/16 15:31:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.13.ebuild,v 1.7 2008/11/20 22:07:24 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -217,7 +217,7 @@ src_install() {
 	#
 	####################################
 
-	elog "Installing includes and idl files..."
+	einfo "Installing includes and idl files..."
 	cp -LfR "${S}"/dist/include "${D}"/"${MOZILLA_FIVE_HOME}" || die "cp failed"
 	cp -LfR "${S}"/dist/idl "${D}"/"${MOZILLA_FIVE_HOME}" || die "cp failed"
 
