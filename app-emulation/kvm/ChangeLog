@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.21 2008/11/11 03:10:09 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.22 2008/11/20 16:50:00 dang Exp $
+
+*kvm-79 (19 Nov 2008)
+
+  19 Nov 2008; Daniel Gryniewicz <dang@gentoo.org> +kvm-79.ebuild:
+  Bump to kvm-79
+
+  This is the first release to fully support pci device assignment. You can
+  assign a pci device to qemu on the command line, or hot-plug it in via the
+  monitor. Note that at this time, Linux 2.6.28 is required on the host.
+  Note that, at this time, it requires VT-d hardware support from Intel.
 
   11 Nov 2008; Daniel Gryniewicz <dang@gentoo.org> kvm-78.ebuild:
   Fix kernel build dir. bug #239189
