@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9189 2008/11/19 23:23:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9190 2008/11/20 04:27:54 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Nov 2008)
+# Removed in 60 days by treecleaners, comment on bug #247494
+# 1. lack of users interest - I see zero version bump requests for this package
+# although version currently in the tree more then year and a half old (released
+# 03.03.2007)
+# 2. lack of developers interest it's maintainer-wanted
+# 3. nothing in the tree depends on it
+dev-db/fastdb
 
 # Peter Alfredsen <loki_val@gentoo.org> (19 Nov 2008)
 # Let's see if we can make this break something.
