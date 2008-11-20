@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/apetag
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apetag/ChangeLog,v 1.6 2008/06/29 11:14:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apetag/ChangeLog,v 1.7 2008/11/20 20:37:10 flameeyes Exp $
+
+  20 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org> apetag-1.10.ebuild:
+  Fix sed line, closes bug #246753.
 
   29 Jun 2008; Samuli Suominen <drac@gentoo.org> apetag-1.10.ebuild:
   Restore ~amd64 wrt #227141, thanks to Chad A. Simmons and Pierre
