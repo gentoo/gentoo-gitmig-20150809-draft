@@ -1,0 +1,13 @@
+Bug 245541. Patches imported from upstream SVN introduced a graphics glitch.
+
+
+--- branches/KDE/3.5/kdebase/kicker/taskbar/taskbar.cpp	2008/11/19 00:43:34	886333
++++ branches/KDE/3.5/kdebase/kicker/taskbar/taskbar.cpp	2008/11/19 00:45:13	886334
+@@ -304,6 +304,7 @@
+ 
+     Panner::resizeEvent(e);
+     reLayoutEventually();
++    setViewportBackground();
+ }
+ 
+ void TaskBar::add(Task::Ptr task)
