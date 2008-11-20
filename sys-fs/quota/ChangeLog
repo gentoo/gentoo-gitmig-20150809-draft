@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.34 2008/08/22 22:06:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.35 2008/11/20 00:41:06 vapier Exp $
+
+*quota-3.16 (20 Nov 2008)
+
+  20 Nov 2008; Mike Frysinger <vapier@gentoo.org> +quota-3.16.ebuild:
+  Version bump #247318 by Denis Cheng.
 
   22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
