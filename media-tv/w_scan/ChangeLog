@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/w_scan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.5 2008/04/02 14:38:55 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.6 2008/11/20 19:53:21 coldwind Exp $
+
+*w_scan-20081106 (20 Nov 2008)
+
+  20 Nov 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/w_scan-20081106-build-and-path-fixes.patch,
+  +w_scan-20081106.ebuild:
+  Version bump (bug #246787). Thanks to Richard Li <richardpku at gmail dot
+  com>.
 
 *w_scan-20080105 (02 Apr 2008)
 
