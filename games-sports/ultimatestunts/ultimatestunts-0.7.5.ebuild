@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.7.5.ebuild,v 1.1 2008/06/23 17:30:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.7.5.ebuild,v 1.2 2008/11/20 05:18:00 mr_bones_ Exp $
 
 inherit autotools eutils versionator games
 
@@ -32,7 +32,7 @@ pkg_setup() {
 	if ! built_with_use media-libs/libsdl opengl ; then
 		die "Please emerge libsdl with USE=opengl"
 	fi
-	if ! built_with_use media-libs/openal vorbis ; then
+	if ! built_with_use media-libs/openal --missing true vorbis ; then
 		die "Please emerge openal with USE=vorbis"
 	fi
 }
