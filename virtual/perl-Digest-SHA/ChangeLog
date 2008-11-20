@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Digest-SHA
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.2 2008/11/02 10:54:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.3 2008/11/20 15:49:25 jer Exp $
+
+  20 Nov 2008; Jeroen Roovers <jer@gentoo.org> perl-Digest-SHA-5.47.ebuild:
+  Marked ~hppa too (thanks to LuckyLuke).
 
 *perl-Digest-SHA-5.47 (01 Nov 2008)
 *perl-Digest-SHA-5.46 (01 Nov 2008)
