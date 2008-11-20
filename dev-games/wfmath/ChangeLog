@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/wfmath
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.5 2008/08/20 18:56:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.6 2008/11/20 14:54:13 tupone Exp $
+
+*wfmath-0.3.8 (20 Nov 2008)
+
+  20 Nov 2008; Alfredo Tupone <tupone@gentoo.org> +wfmath-0.3.8.ebuild:
+  Version bump to 0.3.8
 
   20 Aug 2008; Markus Meier <maekke@gentoo.org> wfmath-0.3.7.ebuild:
   amd64/x86 stable, bug #235167
