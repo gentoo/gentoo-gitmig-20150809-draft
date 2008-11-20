@@ -1,10 +1,10 @@
 # ChangeLog for dev-games/mercator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.5 2008/11/19 10:44:11 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/ChangeLog,v 1.6 2008/11/20 10:50:36 tupone Exp $
 
 *mercator-0.2.6 (19 Nov 2008)
 
-  19 Nov 2008; <alfredo@gentoo.org> +mercator-0.2.6.ebuild:
+  19 Nov 2008; Tupone Alfredo <tupone@gentoo.org> +mercator-0.2.6.ebuild:
   Version bump to 0.2.6
 
   05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> mercator-0.2.5.ebuild:
@@ -19,6 +19,6 @@
 
 *mercator-0.2.5 (01 Feb 2007)
 
-  01 Feb 2007; <tupone@gentoo.org> +metadata.xml, +mercator-0.2.5.ebuild:
+  01 Feb 2007; Tupone Alfredo <tupone@gentoo.org> +metadata.xml, +mercator-0.2.5.ebuild:
   New ebuild. Fix partially bug #58213 by Boris Smus
 
