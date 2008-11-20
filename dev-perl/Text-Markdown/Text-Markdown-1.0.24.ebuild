@@ -1,8 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Markdown/Text-Markdown-1.0.21.ebuild,v 1.1 2008/07/30 08:09:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Markdown/Text-Markdown-1.0.24.ebuild,v 1.1 2008/11/20 14:56:28 tove Exp $
 
 MODULE_AUTHOR=BOBTFISH
+#MODULE_A=${P}.tgz
 inherit perl-module
 
 DESCRIPTION="Convert MultiMarkdown syntax to (X)HTML"
@@ -23,6 +24,8 @@ DEPEND="${RDEPEND}
 		dev-perl/List-MoreUtils
 		dev-perl/File-Slurp
 		dev-perl/Test-Exception )"
+#		dev-perl/Test-Pod
+#		dev-perl/Test-Pod-Coverage
 
 SRC_TEST=do
 mydoc="Readme.text Todo"
