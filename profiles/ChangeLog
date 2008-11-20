@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2066 2008/11/20 04:34:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2067 2008/11/20 04:37:58 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Nov 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  clean for non-existant packages
 
   20 Nov 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   clean up p.mask - net-libs/libpcap-ringbuffer was removed from the tree, bug
