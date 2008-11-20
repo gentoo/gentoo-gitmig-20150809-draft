@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unix-Syslog
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/ChangeLog,v 1.17 2008/07/18 15:07:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/ChangeLog,v 1.18 2008/11/20 15:38:04 jer Exp $
+
+  20 Nov 2008; Jeroen Roovers <jer@gentoo.org> Unix-Syslog-1.1.ebuild:
+  Marked ~hppa too (thanks to LuckyLuke).
 
 *Unix-Syslog-1.1 (18 Jul 2008)
 
