@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.45-r1.ebuild,v 1.7 2008/11/20 15:38:52 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.47-r1.ebuild,v 1.1 2008/11/20 15:38:52 mpagano Exp $
 
 inherit bash-completion eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/quilt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="graphviz"
 
 RDEPEND="sys-apps/ed
@@ -36,16 +36,22 @@ src_unpack() {
 
 	# Some tests are somewhat broken while being run from within portage, work
 	# fine if you run them manually
-	rm "${S}"/test/delete.test
+	rm "${S}"/test/delete.test "${S}"/test/mail.test
 }
 
 src_install() {
 	make BUILD_ROOT="${D}" install || die "make install failed"
 
 	rm -rf "${D}"/usr/share/doc/${P}
-	dodoc AUTHORS BUGS TODO quilt.changes doc/README doc/README.MAIL \
-		doc/quilt.pdf doc/sample.quiltrc
+	dodoc AUTHORS TODO quilt.changes doc/README doc/README.MAIL \
+		doc/quilt.pdf
 
 	rm -rf "${D}"/etc/bash_completion.d
 	dobashcompletion bash_completion
+
+	# Remove the compat symlinks
+	rm -rf "${D}"/usr/share/quilt/compat
+
+	# Remove Emacs mode; newer version is in app-emacs/quilt-el, bug 247500
+	rm -rf "${D}"/usr/share/emacs
 }
