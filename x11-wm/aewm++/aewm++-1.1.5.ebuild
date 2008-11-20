@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/aewm++-1.1.5.ebuild,v 1.2 2008/11/19 22:25:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/aewm++-1.1.5.ebuild,v 1.3 2008/11/20 17:48:35 dertobi123 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://frankhale.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
