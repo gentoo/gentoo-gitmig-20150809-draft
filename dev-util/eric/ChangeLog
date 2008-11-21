@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.66 2008/10/23 20:41:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.67 2008/11/21 14:22:30 yngwin Exp $
+
+*eric-4.2.3 (21 Nov 2008)
+
+  21 Nov 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/4.2.3-no-interactive.patch, +eric-4.2.3.ebuild:
+  Version bump, with added es and tr linguas. Patch needed to not let
+  install be interactive, due to minor problem with pyxml.
 
   23 Oct 2008; Peter Alfredsen <loki_val@gentoo.org> eric-3.7.2-r1.ebuild:
   Fix problem where installation would fail but src_install would succeed
