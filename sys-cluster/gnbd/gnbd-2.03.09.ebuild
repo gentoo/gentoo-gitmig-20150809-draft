@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/gnbd-2.03.09.ebuild,v 1.1 2008/11/13 19:07:38 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/gnbd-2.03.09.ebuild,v 1.2 2008/11/21 22:43:36 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -11,7 +11,7 @@ MAJ_PV="$(get_major_version)"
 MIN_PV="$(get_version_component_range 2).$(get_version_component_range 3)"
 
 DESCRIPTION="GFS Network Block Devices"
-HOMEPAGE="http://sources.redhat.com/cluster/"
+HOMEPAGE="http://sources.redhat.com/cluster/wiki/"
 SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"

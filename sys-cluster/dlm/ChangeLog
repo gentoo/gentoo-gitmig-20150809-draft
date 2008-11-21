@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/dlm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.36 2008/11/13 19:10:59 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/ChangeLog,v 1.37 2008/11/21 22:33:03 xmerlin Exp $
+
+  21 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org> dlm-2.03.09.ebuild:
+  Fixed homepage.
 
   13 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org>
   -files/dlm-2.02.00-include.patch, dlm-2.03.09.ebuild:
