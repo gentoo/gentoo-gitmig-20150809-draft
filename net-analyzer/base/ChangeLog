@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/base
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.18 2008/11/19 17:24:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/ChangeLog,v 1.19 2008/11/21 11:43:25 pva Exp $
+
+  21 Nov 2008; Peter Volkov <pva@gentoo.org> base-1.4.1.ebuild:
+  Added dependencies on PEAR-Mail{,_Mime}, bug #247611, thank Dan Coats for
+  report.
 
   19 Nov 2008; Jeroen Roovers <jer@gentoo.org> base-1.4.1.ebuild:
   Fix quoting of WORKDIR.
