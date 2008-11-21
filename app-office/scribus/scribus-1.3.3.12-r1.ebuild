@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.12-r1.ebuild,v 1.4 2008/09/10 22:46:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.3.12-r1.ebuild,v 1.5 2008/11/21 13:30:04 hanno Exp $
 
 EAPI=1
 
@@ -45,8 +45,6 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
-
-	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
 
 	newmenu "${FILESDIR}/${P}.desktop" "${PN}.desktop" || die "domenu failed"
 	doicon scribus/icons/scribusicon.png || die "doicon failed"
