@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/dekorator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dekorator/ChangeLog,v 1.10 2008/11/15 18:34:09 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dekorator/ChangeLog,v 1.11 2008/11/21 23:50:38 gentoofan23 Exp $
+
+  21 Nov 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  dekorator-0.3.ebuild:
+  stable amd64, bug 150665
 
   15 Nov 2008; Marcelo Goes <vanquirius@gentoo.org> dekorator-0.3.ebuild:
   Add dependency on kde-base/kwin-3* for bug 150665. Thanks to Patrick Lauer
