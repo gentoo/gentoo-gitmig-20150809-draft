@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.13 2008/11/21 22:38:56 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r1.ebuild,v 1.14 2008/11/21 22:51:21 keri Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,6 +18,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="debug minimal readline threads"
 
 DEPEND="!dev-libs/mpatrol
+	!dev-util/mono-debugger
 	readline? ( sys-libs/readline )"
 
 S="${WORKDIR}"/${MY_P}
