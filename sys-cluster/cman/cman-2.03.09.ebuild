@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-2.03.09.ebuild,v 1.1 2008/11/13 18:56:17 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-2.03.09.ebuild,v 1.2 2008/11/21 22:27:54 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -11,7 +11,7 @@ MAJ_PV="$(get_major_version)"
 MIN_PV="$(get_version_component_range 2).$(get_version_component_range 3)"
 
 DESCRIPTION="general-purpose symmetric cluster manager"
-HOMEPAGE="http://sources.redhat.com/cluster/"
+HOMEPAGE="http://sources.redhat.com/cluster/wiki/"
 SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -40,6 +40,8 @@ S="${WORKDIR}/${MY_P}/${PN}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}"/cman-2.02.39-bug457107.patch || die
 
 	# fix the manual pages have executable bit
 	sed -i -e '
@@ -90,10 +92,5 @@ src_install() {
 pkg_postinst() {
 	einfo ""
 	einfo "Please add a cluster.conf in /etc/cluster/"
-	einfo ""
-	einfo "If you want to use cman and dlm 2.xx.xx"
-	einfo "with 2.6.20 kernels you have to patch your"
-	einfo "kernel sources with:"
-	einfo "http://dev.gentoo.org/~xmerlin/gfs/dlm-gfs-2.6.20.patch.bz2"
 	einfo ""
 }

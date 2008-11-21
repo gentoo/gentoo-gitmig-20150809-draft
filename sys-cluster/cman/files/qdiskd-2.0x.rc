@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/qdiskd-2.0x.rc,v 1.1 2008/03/17 16:47:11 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/files/qdiskd-2.0x.rc,v 1.2 2008/11/21 22:27:54 xmerlin Exp $
 
 depend() {
 	use net
@@ -10,7 +10,7 @@ depend() {
 
 start() {
 	ebegin "Starting the Quorum Disk Daemon"
-	start-stop-daemon --start --quiet --exec /sbin/qdiskd -- -Q
+	start-stop-daemon --start --quiet --exec /usr/sbin/qdiskd -- -Q
         eend $? "Failed to start qdiskd"
 }
 

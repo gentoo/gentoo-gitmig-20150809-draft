@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/cman
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.41 2008/11/13 18:56:17 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.42 2008/11/21 22:27:54 xmerlin Exp $
+
+  21 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org> files/cman-2.0x.rc,
+  files/qdiskd-2.0x.rc, +files/cman-2.02.39-bug457107.patch,
+  cman-2.03.09.ebuild:
+  Fixed homepage, ebuild cleanup, new cman init, fixed path in qdiskd, added
+  patch for RH bug #457107.
 
 *cman-2.03.09 (13 Nov 2008)
 

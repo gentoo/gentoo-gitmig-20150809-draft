@@ -1,0 +1,12 @@
+--- cluster-2.03.09/cman/daemon/commands.c.orig	2008-11-18 14:59:52.000000000 +0100
++++ cluster-2.03.09/cman/daemon/commands.c	2008-11-18 15:00:27.000000000 +0100
+@@ -1729,8 +1729,7 @@
+ 
+ 	/* Newer nodes 6.1.0 onwards, set the DIRTY flag if they have state. If the new node has been down
+ 	   and has state then we mark it disallowed because we cannot merge stateful nodes */
+-	if ( (msg->flags & NODE_FLAGS_DIRTY && (node->flags & NODE_FLAGS_BEENDOWN)) ||
+-	     (msg->flags & NODE_FLAGS_DIRTY && msg->first_trans && !node->us)) {
++	if ( msg->flags & NODE_FLAGS_DIRTY && (node->flags & NODE_FLAGS_BEENDOWN)) {
+ 		/* Don't duplicate messages */
+ 		if (node->state != NODESTATE_AISONLY) {
+ 			if (cluster_is_quorate) {
