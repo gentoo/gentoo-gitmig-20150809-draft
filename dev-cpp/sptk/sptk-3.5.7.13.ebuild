@@ -1,6 +1,6 @@
 # Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.7.13.ebuild,v 1.5 2008/11/15 12:09:14 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.7.13.ebuild,v 1.6 2008/11/21 00:44:39 gentoofan23 Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.sptk.net"
 
 SLOT="3"
 LICENSE="|| ( BSD )"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~mips ~ppc ~sparc x86"
 
 RDEPEND="fltk?     ( >=x11-libs/fltk-1.1.6:1.1 )
 	odbc?     ( >=dev-db/unixODBC-2.2.6 )
