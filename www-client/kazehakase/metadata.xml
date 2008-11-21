@@ -8,7 +8,7 @@
 	<use>
 		<flag name='hyperestraier'>enable hyperestraier support for full-text
 			search in history</flag>
-		<flag name='webkit'>Use <pkg>net-libs/webkit</pkg> for rendering rather
+		<flag name='webkit'>Use <pkg>net-libs/webkit-gtk</pkg> for rendering rather
 			than <pkg>net-libs/xulrunner</pkg></flag>
 	</use>
 </pkgmetadata>
