@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/gfs2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs2/ChangeLog,v 1.1 2008/11/13 19:19:30 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs2/ChangeLog,v 1.2 2008/11/21 23:02:44 xmerlin Exp $
+
+  22 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org> gfs2-2.03.09.ebuild:
+  Fixed homepage.
 
 *gfs2-2.03.09 (13 Nov 2008)
 
