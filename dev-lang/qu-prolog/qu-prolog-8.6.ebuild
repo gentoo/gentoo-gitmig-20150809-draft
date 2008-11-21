@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.6.ebuild,v 1.5 2008/09/28 12:42:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.6.ebuild,v 1.6 2008/11/21 22:19:22 keri Exp $
 
 EAPI=1
 
@@ -18,6 +18,8 @@ KEYWORDS="-amd64 ppc -ppc64 sparc x86"
 IUSE="debug doc examples qt4 threads"
 
 DEPEND="dev-lang/perl
+	!dev-util/mpatch
+	!dev-util/rej
 	qt4? ( || ( x11-libs/qt-gui:4 >=x11-libs/qt-4.1.0:4 ) )"
 
 S="${WORKDIR}"/${MY_P}
