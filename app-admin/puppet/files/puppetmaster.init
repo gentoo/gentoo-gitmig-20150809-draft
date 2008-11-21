@@ -4,9 +4,7 @@
 
 depend() {
 	need net
-	after slapd
-	before puppet
-	use dns logger
+	use dns logger slapd
 }
 
 checkconfig() {

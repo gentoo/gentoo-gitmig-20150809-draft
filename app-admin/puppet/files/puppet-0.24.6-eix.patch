@@ -1,0 +1,12 @@
+diff -Naur puppet-0.24.6.orig/lib/puppet/provider/package/portage.rb puppet-0.24.6/lib/puppet/provider/package/portage.rb
+--- puppet-0.24.6.orig/lib/puppet/provider/package/portage.rb	2008-10-09 22:51:05.000000000 +0900
++++ puppet-0.24.6/lib/puppet/provider/package/portage.rb	2008-11-22 00:47:35.000000000 +0900
+@@ -12,7 +12,7 @@
+     defaultfor :operatingsystem => :gentoo
+ 
+     def self.instances
+-        result_format = /(\S+) (\S+) \[(?:([0-9.a-zA-Z]+(?:_(?:alpha|beta|pre|rc|p)[0-9]*)*(?:-r[0-9]*)?)(?:\([^\)]+\))?(?:\[([^\]]+)\])?[ ]*)*\] \[(?:(?:\{M\})?(?:\([~*]+\))?([0-9.a-zA-Z]+(?:_(?:alpha|beta|pre|rc|p)[0-9]*)*(?:-r[0-9]*)?)(?:\(([^\)]+)\))?(?:![mf])*(?:\[([^\]]+)\])?)?\] ([\S]*) (.*)/
++        result_format = /(\S+) (\S+) \[(?:([0-9.a-zA-Z]+(?:_(?:alpha|beta|pre|rc|p)[0-9]*)*(?:-r[0-9]*)?)(?:\([^\)]+\))?(?:\[([^\]]+)\])?[ ]*)*\] \[(?:(?:\{M\})?(?:\([~*-]+\))?([0-9.a-zA-Z]+(?:_(?:alpha|beta|pre|rc|p)[0-9]*)*(?:-r[0-9]*)?)(?:\(([^\)]+)\))?(?:\+[ilvs]|![fmpbstuid])*(?:\[([^\]]+)\])?)?\] ([\S]*) (.*)/
+         result_fields = [:category, :name, :ensure, :ensure_overlay, :version_available, :slot, :overlay, :vendor, :description]
+ 
+         search_format = "{installedversionsshort}<category> <name> [<installedversionsshort>] [<best>] <homepage> <description>{}"
