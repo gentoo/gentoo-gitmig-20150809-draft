@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.99.2.ebuild,v 1.1 2008/09/25 08:34:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.5.ebuild,v 1.1 2008/11/21 13:08:25 scarabeus Exp $
 
 EAPI=1
 
@@ -12,14 +12,14 @@ MY_P="${MY_P/_rc/-rc}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A DHCP client"
-HOMEPAGE="http://roy.marples.name/dhcpcd"
-SRC_URI="http://roy.marples.name/${PN}/${MY_P}.tar.bz2"
+HOMEPAGE="http://roy.marples.name/projects/dhcpcd"
+SRC_URI="http://roy.marples.name/downloads/${PN}/${MY_P}.tar.bz2"
 LICENSE="BSD-2"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 
 SLOT="0"
-IUSE="zeroconf"
+IUSE="+compat zeroconf"
 
 DEPEND=""
 PROVIDE="virtual/dhcpc"
@@ -37,7 +37,14 @@ src_unpack() {
 		} >> dhcpcd.conf
 	fi
 
-	epatch "${FILESDIR}"/${PN}-4.99.2-no-empty-clientid.patch
+	if use compat; then
+		elog "dhcpcd-3 command line support enabled"
+		{
+			echo
+			echo "/* User indicated command line compatability */"
+			echo "#define CMDLINE_COMPAT"
+		} >> config.h
+	fi
 }
 
 pkg_setup() {
@@ -75,5 +82,13 @@ pkg_postinst() {
 		elog "failover support you may have configured in your net configuration."
 		elog "This behaviour can be controlled with the -L flag."
 		elog "See the dhcpcd man page for more details."
+	fi
+	if ! use compat; then
+		elog
+		elog "dhcpcd no longer sends a default ClientID for ethernet interfaces."
+		elog "This is so we can re-use the address the kernel DHCP client found."
+		elog "To retain the old behaviour of sending a default ClientID based on the"
+		elog "hardware address for interface, simply add the keyword clientid"
+		elog "to dhcpcd.conf or use commandline parameter -I ''"
 	fi
 }

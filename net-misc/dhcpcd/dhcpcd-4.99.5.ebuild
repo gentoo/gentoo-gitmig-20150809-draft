@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.99.4.ebuild,v 1.1 2008/11/10 11:40:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.99.5.ebuild,v 1.1 2008/11/21 13:08:25 scarabeus Exp $
 
 EAPI=1
 
@@ -36,8 +36,6 @@ src_unpack() {
 			echo "noipv4ll"
 		} >> dhcpcd.conf
 	fi
-
-	epatch "${FILESDIR}"/${PN}-4.99.2-no-empty-clientid.patch
 }
 
 pkg_setup() {
@@ -76,4 +74,13 @@ pkg_postinst() {
 		elog "This behaviour can be controlled with the -L flag."
 		elog "See the dhcpcd man page for more details."
 	fi
+
+	elog
+	elog "Users transfering from 4.0 series should pay attention to removal"
+	elog "of compat useflag. This changes behavior of dhcp in wide manner:"
+	elog "dhcpcd no longer sends a default ClientID for ethernet interfaces."
+	elog "This is so we can re-use the address the kernel DHCP client found."
+	elog "To retain the old behaviour of sending a default ClientID based on the"
+	elog "hardware address for interface, simply add the keyword clientid"
+	elog "to dhcpcd.conf or use commandline parameter -I ''"
 }
