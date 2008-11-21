@@ -1,0 +1,12 @@
+diff -urN spindown-0.2.2.orig/Makefile spindown-0.2.2/Makefile
+--- spindown-0.2.2.orig/Makefile	2008-09-08 14:36:01.000000000 +0200
++++ spindown-0.2.2/Makefile	2008-11-21 18:52:39.011908499 +0100
+@@ -3,7 +3,7 @@
+ VERSION = 0.2.2
+ OBJS = diskset.o disk.o thread.o spindown.o iniparser.o dictionary.o log.o
+ CC = g++
+-CFLAGS =-O1 -pthread
++CFLAGS += -pthread
+ SRC = src/
+ INPARSER = $(SRC)ininiparser3.0b/
+ 
