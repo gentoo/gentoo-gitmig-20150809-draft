@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.206 2008/11/20 21:56:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.207 2008/11/21 00:14:05 matsuu Exp $
+
+*busybox-1.12.2-r1 (21 Nov 2008)
+
+  21 Nov 2008; MATSUU Takuto <matsuu@gentoo.org> +busybox-1.12.2-r1.ebuild:
+  Fixed cross-distcc issue, bug #131316.
 
   20 Nov 2008; Jeroen Roovers <jer@gentoo.org> busybox-1.11.1.ebuild,
   busybox-1.11.3.ebuild, busybox-1.12.0.ebuild, busybox-1.12.1.ebuild,
