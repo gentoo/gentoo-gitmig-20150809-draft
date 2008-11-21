@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.1_rc1.ebuild,v 1.1 2008/11/07 15:36:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.1_rc3.ebuild,v 1.1 2008/11/21 17:21:43 matsuu Exp $
 
-EAPI=2
+EAPI=1
 MY_P="${P/_/-}"
 
 inherit cmake-utils eutils
@@ -22,8 +22,8 @@ RDEPEND=">=dev-lang/lua-5.1
 	dev-libs/libev
 	dev-util/gperf
 	sys-libs/ncurses
-	x11-libs/cairo[xcb]
-	x11-libs/libX11[xcb]
+	x11-libs/cairo
+	x11-libs/libX11
 	>=x11-libs/libxcb-1.1
 	x11-libs/pango
 	>=x11-libs/xcb-util-0.3
@@ -67,6 +67,23 @@ RDEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 DOCS="AUTHORS BUGS PATCHES README STYLE"
+
+pkg_setup() {
+	if ! built_with_use --missing false x11-libs/cairo xcb ; then
+		eerror "Your x11-libs/cairo packagehas been built without xcb support,"
+		eerror "please enable the 'xcb' USE flag and re-emerge x11-libs/cairo."
+		elog "You can enable this USE flag either globally in /etc/make.conf,"
+		elog "or just for specific packages in /etc/portage/package.use."
+		die "x11-libs/cairo missing xcb support"
+	fi
+	if ! built_with_use --missing false x11-libs/libX11 xcb ; then
+		eerror "Your x11-libs/libX11 packagehas been built without xcb support,"
+		eerror "please enable the 'xcb' USE flag and re-emerge x11-libs/libX11."
+		elog "You can enable this USE flag either globally in /etc/make.conf,"
+		elog "or just for specific packages in /etc/portage/package.use."
+		die "x11-libs/libX11 missing xcb support"
+	fi
+}
 
 src_compile() {
 	local myargs="all"
