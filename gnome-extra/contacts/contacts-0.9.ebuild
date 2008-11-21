@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.9.ebuild,v 1.1 2008/07/28 22:57:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/contacts-0.9.ebuild,v 1.2 2008/11/21 21:54:35 eva Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="A small, lightweight addressbook for GNOME"
 HOMEPAGE="http://pimlico-project.org/contacts.html"
@@ -22,4 +22,11 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	G2CONF="$(use_enable dbus)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Fix compilation with USE="-dbus", bug #247519
+	epatch "${FILESDIR}/${P}-dbus.patch"
 }
