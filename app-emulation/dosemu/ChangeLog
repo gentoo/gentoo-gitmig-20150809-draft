@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.48 2008/03/27 21:03:21 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.49 2008/11/21 12:39:15 hanno Exp $
+
+  21 Nov 2008; Hanno Boeck <hanno@gentoo.org> dosemu-1.4.0.1.ebuild:
+  xf86dgaproto is only a build-time dep.
 
 *dosemu-1.4.0.1 (27 Mar 2008)
 
