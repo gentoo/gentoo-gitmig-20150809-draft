@@ -1,6 +1,16 @@
 # ChangeLog for sys-cluster/gnbd-kernel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/ChangeLog,v 1.25 2008/03/21 01:52:13 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/ChangeLog,v 1.26 2008/11/21 22:45:37 xmerlin Exp $
+
+  13 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org>
+  -files/gnbd-kernel-1.03.00-compile-fix-kernel-post-2.6.18.patch,
+  -files/gnbd-kernel-1.04.00-compile-fix-kernel-pre-2.6.19.patch,
+  -files/gnbd-kernel-2.02.00-compile-fix-kernel-pre-2.6.24.diff,
+  -files/gnbd-kernel-remove-devfs-support.patch,
+  -gnbd-kernel-1.02.00-r1.ebuild, -gnbd-kernel-1.03.00.ebuild,
+  -gnbd-kernel-1.04.00.ebuild, -gnbd-kernel-2.02.00.ebuild,
+  +gnbd-kernel-2.03.09.ebuild:
+  Ebuild cleanup, version bump, fixed homepage.
 
   21 Mar 2008; Christian Zoffoli <xmerlin@gentoo.org>
   +files/gnbd-kernel-2.02.00-compile-fix-kernel-pre-2.6.24.diff,
