@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.12.ebuild,v 1.1 2008/11/13 16:31:01 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.12.ebuild,v 1.2 2008/11/21 00:11:37 mescalinum Exp $
 
 inherit eutils distutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND="dev-python/setuptools"
 RDEPEND="dev-python/pygobject
-		dev-python/dbus-python
+		>=dev-python/dbus-python-0.83.0
 		>=app-pda/libopensync-plugin-python-0.22
 		dev-libs/libxml2
 		dev-libs/libxslt
@@ -23,10 +23,6 @@ RDEPEND="dev-python/pygobject
 
 SRC_URI="mirror://sourceforge/synce/sync-engine-${PV}.tar.gz"
 S=${WORKDIR}/sync-engine-${PV}
-
-src_compile() {
-	distutils_src_compile
-}
 
 src_install() {
 	DOCS="CHANGELOG COPYING"
@@ -50,17 +46,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn ""
-	ewarn "IMPORTANT - If you are upgrading from a version earlier than 19-12-2007"
-	ewarn "(earlier than 0.11), please delete the contents of your ~/.synce directory"
-	ewarn "including the partnerships subdirectory, but KEEP config.xml. Then recreate"
-	ewarn "your partnerships. Please see the CHANGELOG for more info."
-	ewarn ""
-	ewarn "config.xml has been renamed to syncengine.conf.xml"
-	ewarn ""
+	elog ""
+	elog "IMPORTANT - If you are upgrading from a version earlier than 19-12-2007"
+	elog "(earlier than 0.11), please delete the contents of your ~/.synce directory"
+	elog "including the partnerships subdirectory, but KEEP config.xml. Then recreate"
+	elog "your partnerships. Please see the CHANGELOG for more info."
+	elog ""
+	elog "config.xml has been renamed to syncengine.conf.xml"
+	elog ""
 
-	einfo "A default configuration file has been installed into"
-	einfo "/usr/share/${PN}/syncengine.conf.xml  The default search path for this file"
+	elog "A default configuration file has been installed into"
+	elog "/usr/share/${PN}/syncengine.conf.xml  The default search path for this file"
 	einfo "is /etc/ then ~/.synce/  You may customise it by copying it to either of"
 	einfo "those locations.  Note you will have to manually migrate your old config.xml"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-sync-engine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/ChangeLog,v 1.1 2008/11/13 16:31:01 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/ChangeLog,v 1.2 2008/11/21 00:11:37 mescalinum Exp $
+
+  21 Nov 2008; Federico Ferri <mescalinum@gentoo.org>
+  synce-sync-engine-0.11.1.ebuild, synce-sync-engine-0.12.ebuild:
+  added >=dbus-python-0.83.0 dep which fixes a RAPIError on some devices
 
 *synce-sync-engine-0.12 (13 Nov 2008)
 *synce-sync-engine-0.11.1 (13 Nov 2008)

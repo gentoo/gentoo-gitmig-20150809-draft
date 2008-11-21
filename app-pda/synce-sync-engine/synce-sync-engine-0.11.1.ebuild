@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.11.1.ebuild,v 1.1 2008/11/13 16:31:01 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.11.1.ebuild,v 1.2 2008/11/21 00:11:37 mescalinum Exp $
 
 inherit eutils distutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND="dev-python/pygobject
-		dev-python/dbus-python
+		>=dev-python/dbus-python-0.83.0
 		>=app-pda/libopensync-plugin-python-0.21
 		dev-libs/libxml2
 		dev-libs/libxslt
@@ -29,10 +29,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-typo.patch"
-}
-
-src_compile() {
-	distutils_src_compile
 }
 
 src_install() {
@@ -53,14 +49,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "IMPORTANT - If you are upgrading from a version earlier than 19-12-2007"
-	ewarn "(earlier than 0.11), please delete the contents of your ~/.synce directory"
-	ewarn "including the partnerships subdirectory, but KEEP config.xml. Then recreate"
-	ewarn "your partnerships. Please see the CHANGELOG for more info"
+	elog "IMPORTANT - If you are upgrading from a version earlier than 19-12-2007"
+	elog "(earlier than 0.11), please delete the contents of your ~/.synce directory"
+	elog "including the partnerships subdirectory, but KEEP config.xml. Then recreate"
+	elog "your partnerships. Please see the CHANGELOG for more info"
 
-	einfo "Plase copy:"
-	einfo "/usr/share/${PN}/config.xml"
-	einfo "to"
-	einfo "~/.synce/ directory"
-	einfo "Change it to fit your needs"
+	elog "Plase copy:"
+	elog "/usr/share/${PN}/config.xml"
+	elog "to"
+	elog "~/.synce/ directory"
+	elog "Change it to fit your needs"
 }
