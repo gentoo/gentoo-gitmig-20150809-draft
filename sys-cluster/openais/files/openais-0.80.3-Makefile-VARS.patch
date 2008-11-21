@@ -1,0 +1,99 @@
+--- openais-0.80.3/Makefile.orig	2008-11-18 19:38:46.000000000 +0100
++++ openais-0.80.3/Makefile	2008-11-18 19:42:08.000000000 +0100
+@@ -29,30 +29,30 @@
+ # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+ # THE POSSIBILITY OF SUCH DAMAGE.
+ 
+-DESTDIR=/usr/local
+-SBINDIR=/usr/sbin
+-INCLUDEDIR=/usr/include/openais
+-INCLUDEDIR_TOTEM=/usr/include/openais/totem
+-INCLUDEDIR_LCR=/usr/include/openais/lcr
+-INCLUDEDIR_SERVICE=/usr/include/openais/service
+-MANDIR=/usr/share/man
++include Makefile.inc
++
++SBINDIR=$(PREFIX)/sbin
++INCLUDEDIR=$(PREFIX)/include/openais
++INCLUDEDIR_TOTEM=$(PREFIX)/include/openais/totem
++INCLUDEDIR_LCR=$(PREFIX)/include/openais/lcr
++INCLUDEDIR_SERVICE=$(PREFIX)/include/openais/service
++MANDIR=$(PREFIX)/share/man
+ ETCDIR=/etc/ais
+-LCRSODIR=/usr/libexec/lcrso
+ ARCH=$(shell uname -m)
+ 
+ ifeq (,$(findstring 64,$(ARCH)))
+-LIBDIR=/usr/lib/openais
++LIBDIR=$(PREFIX)/lib/openais
+ else
+-LIBDIR=/usr/lib64/openais
++LIBDIR=$(PREFIX)/lib64/openais
+ endif
+ ifeq (s390,$(ARCH))
+-LIBDIR=/usr/lib/openais
++LIBDIR=$(PREFIX)/lib/openais
+ endif
+ ifeq (s390x,$(ARCH))
+-LIBDIR=/usr/lib64/openais
++LIBDIR=$(PREFIX)/lib64/openais
+ endif
+ ifeq (ia64,$(ARCH))
+-LIBDIR=/usr/lib/openais
++LIBDIR=$(PREFIX)/lib/openais
+ endif
+ 
+ all:
+@@ -105,29 +105,29 @@
+ 	ln -sf libcfg.so.2.0.0 lib/libcfg.so.2
+ 	ln -sf libtotem_pg.so.2.0.0 exec/libtotem_pg.so.2
+ 
+-	cp -a lib/libais.so $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaAmf.so $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaClm.so $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaCkpt.so $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaEvt.so $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaLck.so $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaMsg.so $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libevs.so $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libcpg.so $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libcfg.so $(DESTDIR)$(LIBDIR)
+-	cp -a exec/libtotem_pg.so $(DESTDIR)$(LIBDIR)
+-
+-	cp -a lib/libais.so.2 $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaAmf.so.2 $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaClm.so.2 $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaCkpt.so.2 $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaEvt.so.2 $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaLck.so.2 $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libSaMsg.so.2 $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libevs.so.2 $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libcpg.so.2 $(DESTDIR)$(LIBDIR)
+-	cp -a lib/libcfg.so.2 $(DESTDIR)$(LIBDIR)
+-	cp -a exec/libtotem_pg.so.2 $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libais.so $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaAmf.so $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaClm.so $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaCkpt.so $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaEvt.so $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaLck.so $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaMsg.so $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libevs.so $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libcpg.so $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libcfg.so $(DESTDIR)$(LIBDIR)
++	$(CP) -a exec/libtotem_pg.so $(DESTDIR)$(LIBDIR)
++
++	$(CP) -a lib/libais.so.2 $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaAmf.so.2 $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaClm.so.2 $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaCkpt.so.2 $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaEvt.so.2 $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaLck.so.2 $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libSaMsg.so.2 $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libevs.so.2 $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libcpg.so.2 $(DESTDIR)$(LIBDIR)
++	$(CP) -a lib/libcfg.so.2 $(DESTDIR)$(LIBDIR)
++	$(CP) -a exec/libtotem_pg.so.2 $(DESTDIR)$(LIBDIR)
+ 
+ 	install -m 755 lib/libais.so.2.* $(DESTDIR)$(LIBDIR)
+ 	install -m 755 lib/libSaAmf.so.2.* $(DESTDIR)$(LIBDIR)

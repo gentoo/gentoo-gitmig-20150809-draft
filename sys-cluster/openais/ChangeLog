@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/openais
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/ChangeLog,v 1.3 2008/03/17 16:02:41 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/ChangeLog,v 1.4 2008/11/21 22:55:48 xmerlin Exp $
+
+*openais-0.80.3-r1 (21 Nov 2008)
+
+  21 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/openais-0.80.3-Makefile.inc-VARS.patch,
+  +files/openais-0.80.3-Makefile-VARS.patch,
+  +files/openais-0.80.3-r1661.patch, -openais-0.80.3.ebuild,
+  +openais-0.80.3-r1.ebuild:
+  openais whitetank updated to r1661.
 
 *openais-0.80.3 (17 Mar 2008)
 

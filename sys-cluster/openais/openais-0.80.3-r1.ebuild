@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-0.80.3.ebuild,v 1.1 2008/03/17 16:02:41 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-0.80.3-r1.ebuild,v 1.1 2008/11/21 22:55:48 xmerlin Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -20,6 +20,16 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-Makefile-ARCH.patch || die
 	epatch "${FILESDIR}"/${P}-Makefile-LIBDIR.patch || die
 	epatch "${FILESDIR}"/${P}-Makefile.inc-FLAGS.patch || die
+
+	epatch "${FILESDIR}"/${P}-Makefile.inc-VARS.patch || die
+	epatch "${FILESDIR}"/${P}-Makefile-VARS.patch || die
+
+	#epatch "${FILESDIR}"/${P}-r1514.patch || die
+	epatch "${FILESDIR}"/${P}-r1661.patch || die
+
+	#epatch "${FILESDIR}"/${P}-r1661-pacemaker-openais.conf.patch || die
+	#epatch "${FILESDIR}"/${P}-r1661-pacemaker.patch || die
+	#epatch "${FILESDIR}"/pacemaker.diff || die
 }
 
 pkg_setup() {

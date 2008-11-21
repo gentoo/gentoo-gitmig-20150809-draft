@@ -1,0 +1,20 @@
+--- openais-0.80.3/Makefile.inc.orig	2008-11-18 19:31:13.000000000 +0100
++++ openais-0.80.3/Makefile.inc	2008-11-18 19:32:11.000000000 +0100
+@@ -29,12 +29,17 @@
+ # THE POSSIBILITY OF SUCH DAMAGE.
+ # Basic OS detection
+ #
++CP=cp
++DESTDIR=
++PREFIX=/usr
+ UNAME=$(shell uname)
++LCRSODIR=$(PREFIX)/libexec/lcrso
+ 
+ ifeq "$(UNAME)" "Linux"
+ 	OPENAIS_COMPAT=LINUX
+ endif
+ ifeq "$(UNAME)" "Darwin"
++	CP=rsync
+ 	OPENAIS_COMPAT=DARWIN
+ endif
+ ifneq "" "$(findstring BSD,$(UNAME))"
