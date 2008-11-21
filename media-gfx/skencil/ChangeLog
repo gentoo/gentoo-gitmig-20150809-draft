@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/skencil
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.37 2008/11/16 23:27:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/ChangeLog,v 1.38 2008/11/21 12:32:58 hanno Exp $
+
+*skencil-0.6.18_pre20080519-r1 (21 Nov 2008)
+
+  21 Nov 2008; Hanno Boeck <hanno@gentoo.org>
+  skencil-0.6.18_pre20080519.ebuild, +skencil-0.6.18_pre20080519-r1.ebuild:
+  Restore ebuild without EAPI=2, add new, unstable-keyworded one with EAPI=2
+  features.
 
   16 Nov 2008; Hanno Boeck <hanno@gentoo.org>
   skencil-0.6.18_pre20080519.ebuild:
