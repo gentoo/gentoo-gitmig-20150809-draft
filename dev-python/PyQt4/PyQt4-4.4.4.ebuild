@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.2.ebuild,v 1.2 2008/05/25 13:05:29 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4.ebuild,v 1.1 2008/11/21 14:19:15 yngwin Exp $
 
 EAPI=1
 
@@ -8,21 +8,21 @@ inherit distutils qt4
 
 MY_P=PyQt-x11-gpl-${PV}
 
-DESCRIPTION="PyQt is a set of Python bindings for the Qt toolkit."
+DESCRIPTION="PyQt is a set of Python bindings for the Qt toolkit"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/"
 SRC_URI="http://www.riverbankcomputing.com/static/Downloads/PyQt4/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus debug doc examples opengl qt3support svg X"
 
-RDEPEND=">=dev-python/sip-4.7.6
-	>=x11-libs/qt-core-4.4.0:4
-	dbus? ( >=x11-libs/qt-dbus-4.4.0:4 )
-	opengl? ( >=x11-libs/qt-opengl-4.4.0:4 )
-	svg? ( >=x11-libs/qt-svg-4.4.0:4 )
-	qt3support? ( >=x11-libs/qt-qt3support-4.4.0:4 )
-	X? ( >=x11-libs/qt-gui-4.4.0:4 )"
+RDEPEND=">=dev-python/sip-4.7.8
+	>=x11-libs/qt-core-4.4.2:4
+	dbus? ( >=x11-libs/qt-dbus-4.4.2:4 )
+	opengl? ( >=x11-libs/qt-opengl-4.4.2:4 )
+	svg? ( >=x11-libs/qt-svg-4.4.2:4 )
+	qt3support? ( >=x11-libs/qt-qt3support-4.4.2:4 )
+	X? ( >=x11-libs/qt-gui-4.4.2:4 )"
 
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
