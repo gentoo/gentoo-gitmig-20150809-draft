@@ -1,0 +1,3 @@
+# CLVMD_CLUSTER_TIMEOUT -- amount of time to wait for cluster quorum.
+
+CLVMD_CLUSTER_TIMEOUT=30

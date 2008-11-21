@@ -1,18 +1,21 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/files/clvmd.rc,v 1.4 2008/03/29 15:42:28 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/files/clvmd.rc,v 1.5 2008/11/21 23:31:44 xmerlin Exp $
 
-CLVM_BIN="/sbin/clvmd"
+[ -x /usr/sbin/clvmd ] && CLVMD_BIN="/usr/sbin/clvmd" || CLVMD_BIN="/sbin/clvmd"
+
+[ -z "$CLVMD_CLUSTER_TIMEOUT" ] && CLVMD_CLUSTER_TIMEOUT=30
+
 VGCHANGE="/sbin/vgchange"
 VGSCAN="/sbin/vgscan"
 VGDISPLAY="/sbin/vgdisplay"
+CLVMD_PIDFILE="/var/run/clvmd.pid"
 
 depend() {
 	use dns logger
 	use net
 	need cman
-	before gfs
 }
 
 load_modules() {
@@ -67,54 +70,39 @@ umount_gfs_filesystems() {
 	fi
 }
 
-start() {
+start_volumes() {
+        ebegin "Scanning LVM volumes"
+        $VGSCAN &>/dev/null
 
-	local module=$(awk '$1 == "dm_mod" { print $1 }' /proc/{modules,devices})
+        ret=$?
 
-	if [ -z "${module}" ]; then
-		load_modules "dm-mod"
-		sleep 1s
-	fi
-
-	ebegin "Starting clvmd"
-	start-stop-daemon --start --quiet --exec ${CLVM_BIN}
-	eend $?
-
-	ebegin "Scanning LVM volumes"
-	${VGSCAN} &>/dev/null
-	eend $?
-	
-	#if [ "$?" -eq 0 ] && [ -x /sbin/vgchange ] && [ -f /etc/lvmtab -o -d /etc/lvm ]
-	#then
-	#	ebegin "Setting up the Logical Volume Manager"
-	#	/sbin/vgchange -aly >/dev/null
-	#	eend $? "Failed to setup the LVM"
-	#fi
-
-	if [ -n "$LVM_VGS" ]
+	if [ "$ret" -eq 5 ]
 	then
-		for vg in $LVM_VGS
-		do
-			ebegin "  Activating VG: ${vg} "
-                        $VGCHANGE -ayl ${vg} >/dev/null
-                        eend $?
-		done
+		einfo "  ...initialization delayed."
+		eend 0
 	else
-		clustervgs=`$VGDISPLAY 2> /dev/null | awk 'BEGIN {RS="VG Name"} {if (/Clustered/) print $1;}'`
-		for vg in $clustervgs; do
-			ebegin "  Activating Clustered VG: ${vg} "
-			$VGCHANGE -ayl ${vg} >/dev/null
-			eend $?
-		done
+		eend 0
+
+		if [ -n "$LVM_VGS" ]
+		then
+			for vg in $LVM_VGS
+			do
+				ebegin "  Activating VG: ${vg} "
+				$VGCHANGE -ayl ${vg} >/dev/null
+				eend $?
+			done
+		else
+			clustervgs=`$VGDISPLAY 2> /dev/null | awk 'BEGIN {RS="VG Name"} {if (/Clustered/) print $1;}'`
+			for vg in $clustervgs; do
+				ebegin "  Activating Clustered VG: ${vg} "
+				$VGCHANGE -ayl ${vg} >/dev/null
+				eend $?
+			done
+		fi
 	fi
 }
 
-stop() {
-	# umount GFS filesystems
-	umount_gfs_filesystems
-
-	sleep 2	
-
+stop_volumes() {
 	if [ -n "$LVM_VGS" ]
 	then
 		for vg in $LVM_VGS
@@ -132,10 +120,40 @@ stop() {
 			eend $?
 		done
 	fi
+}
 
-	ebegin "Stopping clvmd"
-	#start-stop-daemon --stop -s 9 --quiet --exec ${CLVM_BIN} --name clvmd
-	killall -TERM ${CLVM_BIN} >/dev/null
+
+start() {
+	local module=$(awk '$1 == "dm_mod" { print $1 }' /proc/{modules,devices})
+
+	if [ -z "${module}" ]; then
+		load_modules "dm-mod"
+		sleep 1s
+	fi
+
+	ebegin "Starting clvmd ($CLVMD_CLUSTER_TIMEOUT seconds)"
+
+	start-stop-daemon --start --quiet --exec ${CLVMD_BIN} -- -T ${CLVMD_CLUSTER_TIMEOUT}
 	eend $?
 
+	#start_volumes
+}
+
+stop() {
+
+	# umount GFS filesystems
+	umount_gfs_filesystems
+
+	#stop_volumes
+
+	ebegin "Stopping clvmd"
+	#start-stop-daemon --stop -s TERM --quiet --exec ${CLVMD_BIN} --name clvmd
+	killall -TERM ${CLVMD_BIN} >/dev/null
+	eend $?
+
+        #local module=$(awk '$1 == "dm_mod" { print $1 }' /proc/modules)
+
+	#if [[ "$?" -eq 0 && ! -z "${module}" ]]; then
+        #        unload_modules "dm-mod"
+        #fi
 }

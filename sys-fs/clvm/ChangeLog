@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/clvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.25 2008/11/14 09:10:43 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.26 2008/11/21 23:31:43 xmerlin Exp $
+
+*clvm-2.02.39 (22 Nov 2008)
+
+  22 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org>
+  -files/lvm.confd-2.02.28-r2, -files/lvm.rc-2.02.28-r2,
+  -files/clvmd.rc-2.02.33-xm, -files/cluster-locking-built-in.patch,
+  +files/clvmd.confd, files/clvmd.rc, +files/lvm.confd, +files/lvm.rc,
+  files/lvm2-start.sh, files/lvm2-stop.sh, -files/lvm2-start.sh-2.02.33-xm,
+  -files/lvm2-stop.sh-2.02.33-xm, -clvm-2.02.36.ebuild,
+  +clvm-2.02.39.ebuild:
+  Version bump, removed a broken version, new init.
 
 *clvm-2.02.36 (14 Nov 2008)
 

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/files/lvm.rc-2.02.28-r2,v 1.1 2008/03/17 19:15:53 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/files/lvm.rc,v 1.1 2008/11/21 23:31:44 xmerlin Exp $
 
 depend() {
 	if [ -e /lib/librc.so ]; then

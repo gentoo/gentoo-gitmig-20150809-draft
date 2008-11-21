@@ -1,5 +1,5 @@
 # /lib/rcscripts/addons/lvm2-stop.sh
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/files/lvm2-stop.sh,v 1.3 2006/07/13 08:23:55 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/files/lvm2-stop.sh,v 1.4 2008/11/21 23:31:44 xmerlin Exp $
 
 # Stop LVM2
 if [ -x /sbin/vgchange ] && \

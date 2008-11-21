@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.02.36.ebuild,v 1.1 2008/11/14 09:10:43 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.02.39.ebuild,v 1.1 2008/11/21 23:31:43 xmerlin Exp $
 
 inherit eutils multilib
 
@@ -14,9 +14,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="readline static selinux"
+IUSE="readline static selinux nolvmstatic"
 
-DEPEND=">=sys-fs/device-mapper-1.02.24
+DEPEND=">=sys-fs/device-mapper-1.02.27
 	=sys-cluster/dlm-2*
 	=sys-cluster/cman-2*
 	"
@@ -32,7 +32,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/lvm.conf-2.02.33.patch || die
-	epatch "${FILESDIR}"/cluster-locking-built-in.patch || die
+	#epatch "${FILESDIR}"/cluster-locking-built-in.patch || die
 }
 
 src_compile() {
@@ -87,6 +87,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+
 	# TODO: At some point in the future, we need to stop installing the static
 	# as the /sbin/lvm name, and have both variants seperate.
 	if use static; then
@@ -105,11 +106,14 @@ src_install() {
 
 	dodoc README VERSION WHATS_NEW doc/*.{conf,c,txt}
 	insinto /lib/rcscripts/addons
-	newins "${FILESDIR}"/lvm2-start.sh-2.02.33-xm lvm-start.sh || die
-	newins "${FILESDIR}"/lvm2-stop.sh-2.02.33-xm lvm-stop.sh || die
-	newinitd "${FILESDIR}"/lvm.rc-2.02.28-r2 lvm || die
-	newconfd "${FILESDIR}"/lvm.confd-2.02.28-r2 lvm || die
-	newinitd "${FILESDIR}"/clvmd.rc-2.02.33-xm clvmd || die
+	newins "${FILESDIR}"/lvm2-start.sh lvm-start.sh || die
+	newins "${FILESDIR}"/lvm2-stop.sh lvm-stop.sh || die
+
+	newinitd "${FILESDIR}"/lvm.rc lvm || die
+	newconfd "${FILESDIR}"/lvm.confd lvm || die
+
+	newinitd "${FILESDIR}"/clvmd.rc clvmd || die
+	newconfd "${FILESDIR}"/clvmd.confd clvmd || die
 
 	elog ""
 	elog "Rebuild your genkernel initramfs if you are using lvm"
