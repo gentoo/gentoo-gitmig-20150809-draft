@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.18b.ebuild,v 1.5 2008/03/26 17:04:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.18b.ebuild,v 1.6 2008/11/21 22:26:26 keri Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="gtk ncurses nls pcre"
 
 RDEPEND="virtual/libc
+		!dev-util/rej
 		ncurses? ( sys-libs/ncurses )
 		gtk? ( >=x11-libs/gtk+-2 >=x11-libs/pango-1.8.0 )
 		!gtk? ( sys-libs/ncurses )
