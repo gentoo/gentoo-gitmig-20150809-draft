@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/xbase-2.0.0.ebuild,v 1.16 2007/07/05 14:42:16 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/xbase-2.0.0.ebuild,v 1.17 2008/11/21 16:39:24 coldwind Exp $
 
 inherit base
 
@@ -13,10 +13,11 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc"
 
-DEPEND="sys-devel/automake
-	sys-devel/libtool
-	virtual/libc"
-RDEPEND="virtual/libc"
+# !media-tv/linuxtv-dvb-apps (bug #208596)
+RDEPEND="!media-tv/linuxtv-dvb-apps"
+DEPEND="${DEPEND}
+	sys-devel/automake
+	sys-devel/libtool"
 
 src_install() {
 	base_src_install

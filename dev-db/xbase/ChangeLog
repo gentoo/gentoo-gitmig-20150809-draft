@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xbase
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.17 2007/07/05 14:42:16 uberlord Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.18 2008/11/21 16:39:24 coldwind Exp $
+
+  21 Nov 2008; Santiago M. Mola <coldwind@gentoo.org> xbase-2.0.0.ebuild:
+  Block media-tv/linuxtv-dvb-apps, bug #208596.
 
   05 Jul 2007; Roy Marples <uberlord@gentoo.org> xbase-2.0.0.ebuild:
   Keyworded ~x86-fbsd.
