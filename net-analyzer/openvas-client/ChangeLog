@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/openvas-client
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-client/ChangeLog,v 1.4 2008/08/18 11:54:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-client/ChangeLog,v 1.5 2008/11/21 02:31:02 hanno Exp $
+
+  21 Nov 2008; Hanno Boeck <hanno@gentoo.org> openvas-client-1.0.4.ebuild:
+  Add gtk use flag to disable gui.
 
   18 Aug 2008; Peter Volkov <pva@gentoo.org> openvas-client-1.0.4.ebuild:
   Added ~amd64 keyword, thank alexxy for report.
