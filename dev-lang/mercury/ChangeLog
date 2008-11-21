@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.85 2008/09/23 06:17:35 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.86 2008/11/21 22:38:56 keri Exp $
+
+  21 Nov 2008; <keri@gentoo.org> mercury-0.12.2-r3.ebuild,
+  mercury-0.12.2-r4.ebuild, mercury-0.13.1.ebuild, mercury-0.13.1-r1.ebuild,
+  mercury-0.13.1-r2.ebuild:
+  Block dev-libs/mpatrol. Bug #247070.
 
   23 Sep 2008; <keri@gentoo.org> +files/mercury-0.13.1-rebuild-mslice.patch,
   mercury-0.13.1-r2.ebuild:
