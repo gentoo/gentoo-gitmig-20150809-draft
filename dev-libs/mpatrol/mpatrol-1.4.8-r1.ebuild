@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r1.ebuild,v 1.3 2007/03/03 23:08:50 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r1.ebuild,v 1.4 2008/11/21 22:44:12 keri Exp $
 
 IUSE="X"
 
@@ -14,7 +14,8 @@ KEYWORDS="~x86 ~sparc"
 S="${WORKDIR}/${PN}"
 
 # To use X, mpatrol requires Motif
-DEPEND="X? ( x11-libs/openmotif )
+DEPEND="!dev-lang/mercury
+	X? ( x11-libs/openmotif )
 		virtual/libc"
 
 src_unpack() {
