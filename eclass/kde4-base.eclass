@@ -1,6 +1,6 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.16 2008/11/09 22:52:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.17 2008/11/21 17:06:03 jmbsvicetto Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -51,6 +51,7 @@ kde4-base_set_qt_dependencies() {
 
 	# split qt
 	qtdepend="
+		!x11-libs/qt-phonon
 		x11-libs/qt-core:4${qtcore}
 		x11-libs/qt-gui:4${qtgui}
 		x11-libs/qt-qt3support:4${qt3support}
