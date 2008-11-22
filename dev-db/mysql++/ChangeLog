@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.57 2008/11/17 02:05:44 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.58 2008/11/22 17:45:30 maekke Exp $
+
+  22 Nov 2008; Markus Meier <maekke@gentoo.org> mysql++-2.3.2.ebuild:
+  x86 stable, bug #245569
 
   17 Nov 2008; Thomas Anderson <gentoofan23@gentoo.org>
   mysql++-2.3.2.ebuild:
