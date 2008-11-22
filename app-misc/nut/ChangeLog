@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/nut
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.10 2008/05/11 20:53:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.11 2008/11/22 00:10:44 coldwind Exp $
+
+*nut-14.1 (22 Nov 2008)
+
+  22 Nov 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/nut-14.1-build-fixes.patch, +nut-14.1.ebuild:
+  Version bump, use EAPI 2, honor LDFLAGS, fix --as-needed (bug #246904).
 
   11 May 2008; <solar@gentoo.org> nut-12.7.ebuild:
   - Keyworded ~arm/~amd64 and cross-compile love
