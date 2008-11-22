@@ -1,6 +1,16 @@
 # ChangeLog for sys-cluster/fence
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.36 2008/11/21 22:39:29 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.37 2008/11/22 14:12:12 xmerlin Exp $
+
+*fence-2.03.09-r1 (22 Nov 2008)
+
+  22 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/fence-2.03.09-ipmi_fix_help_typo_RH_BZ_210687.patch,
+  +files/fence-2.03.09-ipmi_fix_parameters_RH_BZ_447964.patch,
+  +files/fence-2.03.09-ipmi_fix_shell.patch,
+  +files/fence-2.03.09-ipmi_lan_timeout_adjusted_and_configurable.patch,
+  +fence-2.03.09-r1.ebuild:
+  Merged some IPMI fixes.
 
   21 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org> fence-2.03.09.ebuild:
   Fixed homepage.

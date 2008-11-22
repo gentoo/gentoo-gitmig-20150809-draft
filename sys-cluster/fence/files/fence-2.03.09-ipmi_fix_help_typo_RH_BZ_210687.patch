@@ -1,0 +1,27 @@
+From: Jan Friesse <jfriesse@redhat.com>
+Date: Thu, 20 Nov 2008 11:52:21 +0000 (+0100)
+Subject: fence: fix IPMI typo in help
+X-Git-Url: http://git.fedorahosted.org/git/cluster.git?p=cluster.git;a=commitdiff_plain;h=47514a9ac69f4b6ef0bcd87a2763de24dff12f5d
+
+fence: fix IPMI typo in help
+
+Help contained description of -i option with comment,
+that this option is deprecated and you should use -i. This
+is nice recursion, but there should be -a.
+
+This fixes BZ #210687
+---
+
+diff --git a/fence/agents/ipmilan/ipmilan.c b/fence/agents/ipmilan/ipmilan.c
+index 30d69ee..358274a 100644
+--- a/fence/agents/ipmilan/ipmilan.c
++++ b/fence/agents/ipmilan/ipmilan.c
+@@ -687,7 +687,7 @@ usage_exit(char *pname)
+ printf("usage: %s <options>\n", pname);
+ printf("   -A <authtype>  IPMI Lan Auth type (md5, password, or none)\n");
+ printf("   -a <ipaddr>    IPMI Lan IP to talk to\n");
+-printf("   -i <ipaddr>    IPMI Lan IP to talk to (deprecated, use -i)\n");
++printf("   -i <ipaddr>    IPMI Lan IP to talk to (deprecated, use -a)\n");
+ printf("   -p <password>  Password (if required) to control power on\n"
+        "                  IPMI device\n");
+ printf("   -P             Use Lanplus\n");

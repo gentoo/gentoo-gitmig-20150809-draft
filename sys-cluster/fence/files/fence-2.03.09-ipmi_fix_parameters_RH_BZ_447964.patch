@@ -1,0 +1,100 @@
+From: Jan Friesse <jfriesse@redhat.com>
+Date: Thu, 20 Nov 2008 11:51:20 +0000 (+0100)
+Subject: fence: fix IPMI parameters containing special characters
+X-Git-Url: http://git.fedorahosted.org/git/cluster.git?p=cluster.git;a=commitdiff_plain;h=6c1a7ce96b7712e85d3cb765ca9dd58061d6a25b
+
+fence: fix IPMI parameters containing special characters
+
+IPMI fence agent works by spawn a /bin/sh and ipmitool.
+If host name/password or any other command line argument
+included special shell characters (like $, ", ', ...) shell
+will try to substitute. This is not allowed behaviour and
+this patch fix it.
+
+Should fix BZ #447964
+---
+
+diff --git a/fence/agents/ipmilan/ipmilan.c b/fence/agents/ipmilan/ipmilan.c
+index 117228c..30d69ee 100644
+--- a/fence/agents/ipmilan/ipmilan.c
++++ b/fence/agents/ipmilan/ipmilan.c
+@@ -138,34 +138,73 @@ ipmitool_path(void)
+ }
+ 
+ 
++/** Prepare string for use in sh style environment. This function take source
++  string and prepend/append quote (') to start/end of source string to dest
++  string. Any occurence of quote in source string is replaced by '\'' sequence.
++  Dest string must be preallocated.
++
++  @param dest Destination string
++  @param source Source string
++  @param max_len Maximum length of data written to dest string (including end 0)
++  @return Pointer to start of destination string.
++*/
++char *str_prepare_for_sh(char *dest,char *source,int max_len) {
++  char *dest_p=dest;
++  char *max_dest=dest+max_len;
++
++  if (dest_p+1>=max_dest) {*dest_p=0;return dest;}
++  *dest_p++='\'';
++
++  while (*source) {
++    if (*source=='\'') {
++      if (dest_p+4>=max_dest) {*dest_p=0;return dest;}
++
++      memcpy(dest_p,"'\\''",4);dest_p+=4;
++    } else {
++      if (dest_p+1>=max_dest) {*dest_p=0;return dest;}
++
++      *dest_p++=*source;
++    }
++    source++;
++  }
++
++  if (dest_p+2>=max_dest) {*dest_p=0;return dest;}
++
++  *dest_p++='\'';*dest_p=0;
++
++  return dest;
++}
++
+ static int
+ build_cmd(char *command, size_t cmdlen, struct ipmi *ipmi, int op)
+ {
+ 	char cmd[2048];
+ 	char arg[2048];
++	char tmp[2048];
+ 	int x;
+ 
+ 	/* Store path */
+ 	if (ipmi->i_lanplus) {
+-		snprintf(cmd, sizeof(cmd), "%s -I lanplus -H %s", 
+-				ipmi->i_ipmitool, ipmi->i_host);
++		snprintf(cmd, sizeof(cmd), "%s -I lanplus -H %s",
++				ipmi->i_ipmitool,
++				str_prepare_for_sh(tmp,ipmi->i_host,sizeof(tmp)));
+ 	} else {
+ 		snprintf(cmd, sizeof(cmd), "%s -I lan -H %s", ipmi->i_ipmitool,
+-				ipmi->i_host);
++				str_prepare_for_sh(tmp,ipmi->i_host,sizeof(tmp)));
+ 	}
+ 
+ 	if (ipmi->i_user) {
+-		snprintf(arg, sizeof(arg), " -U %s", ipmi->i_user);
++		snprintf(arg, sizeof(arg), " -U %s", str_prepare_for_sh(tmp,ipmi->i_user,sizeof(tmp)));
+ 		strncat(cmd, arg, sizeof(cmd) - strlen(arg));
+ 	}
+ 
+ 	if (ipmi->i_authtype) {
+-		snprintf(arg, sizeof(arg), " -A %s", ipmi->i_authtype);
++		snprintf(arg, sizeof(arg), " -A %s", str_prepare_for_sh(tmp,ipmi->i_authtype,sizeof(tmp)));
+ 		strncat(cmd, arg, sizeof(cmd) - strlen(arg));
+ 	}
+ 
+ 	if (ipmi->i_password) {
+-		snprintf(arg, sizeof(arg), " -P %s", ipmi->i_password);
++		snprintf(arg, sizeof(arg), " -P %s", str_prepare_for_sh(tmp,ipmi->i_password,sizeof(tmp)));
+ 		strncat(cmd, arg, sizeof(cmd) - strlen(arg));
+ 	} else {
+ 		snprintf(arg, sizeof(arg), " -P ''");

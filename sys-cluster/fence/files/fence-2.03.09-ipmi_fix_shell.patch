@@ -1,0 +1,25 @@
+From: Jan Friesse <jfriesse@redhat.com>
+Date: Thu, 20 Nov 2008 13:39:20 +0000 (+0100)
+Subject: fence: fix IPMI spawn /bin/bash rather than /bin/sh
+X-Git-Url: http://git.fedorahosted.org/git/cluster.git?p=cluster.git;a=commitdiff_plain;h=d57fba422b8c5822bc751cc190277367e42ad597
+
+fence: fix IPMI spawn /bin/bash rather than /bin/sh
+
+It's not guaranteed, that /bin/sh will be symlink to
+shell, which is bash (or ksh) compliant, so it's better
+to use /bin/bash.
+---
+
+diff --git a/fence/agents/ipmilan/expect.c b/fence/agents/ipmilan/expect.c
+index 4156886..fa85bd8 100644
+--- a/fence/agents/ipmilan/expect.c
++++ b/fence/agents/ipmilan/expect.c
+@@ -304,7 +304,7 @@ StartProcess(const char * cmd, int * readfd, int * writefd, int flags)
+ 			sched_setscheduler(0, SCHED_OTHER, &sp);
+ 		}
+ #endif
+-		execlp("/bin/sh", "sh", "-c", cmd, NULL);
++		execlp("/bin/bash", "bash", "-c", cmd, NULL);
+ 		perror("cannot exec shell!");
+ 		exit(1);
+ 
