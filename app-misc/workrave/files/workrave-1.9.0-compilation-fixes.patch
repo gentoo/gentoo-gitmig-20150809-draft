@@ -1,0 +1,46 @@
+Index: frontend/gtkmm/src/Menus.cc
+===================================================================
+--- frontend/gtkmm/src/Menus.cc	(révision 1650)
++++ frontend/gtkmm/src/Menus.cc	(copie de travail)
+@@ -461,7 +461,7 @@
+ #endif
+ }
+ 
+-
++#ifdef HAVE_DISTRIBUTION
+ void
+ Menus::on_network_log_response(int response)
+ {
+@@ -476,6 +476,7 @@
+   // done by gtkmm ??? delete network_log_dialog;
+   network_log_dialog = NULL;
+ }
++#endif
+ 
+ void
+ Menus::on_statistics_response(int response)
+@@ -534,7 +535,11 @@
+       on_menu_network_leave();
+       break;
+     case MENU_COMMAND_NETWORK_LOG:
++#ifdef HAVE_DISTRIBUTION
+       on_menu_network_log(network_log_dialog == NULL);
++#else
++      on_menu_network_log(true);
++#endif
+       break;
+     case MENU_COMMAND_NETWORK_RECONNECT:
+       on_menu_network_reconnect();
+@@ -565,7 +570,12 @@
+           ICore *core = CoreFactory::get_core();
+ 
+           menus[i]->resync(core->get_operation_mode(),
++#ifdef HAVE_DISTRIBUTION
+                            network_log_dialog != NULL);
++#else
++                           false);
++#endif
++
+         }
+     }
+ 

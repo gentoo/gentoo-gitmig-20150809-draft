@@ -1,0 +1,30 @@
+Index: frontend/gtkmm/src/GnomeAppletWindow.cc
+===================================================================
+--- frontend/gtkmm/src/GnomeAppletWindow.cc	(révision 1650)
++++ frontend/gtkmm/src/GnomeAppletWindow.cc	(copie de travail)
+@@ -19,6 +19,8 @@
+ 
+ static const char rcsid[] = "$Id: workrave-1.9.0-gcc43.patch,v 1.1 2008/11/22 14:50:49 eva Exp $";
+ 
++using namespace std;
++
+ #include "preinclude.h"
+ 
+ #ifdef HAVE_CONFIG_H
+@@ -111,10 +113,14 @@
+               applet_orientation =  (Orientation) applet_control->GetOrientation();
+ 
+ #ifndef HAVE_EXERCISES
+-              applet_control->SetMenuActive("/commands/Exercises", false);
++              const std::string exercices_command("/commands/Exercises");
++	      bool exercices_command_status(false);
++              applet_control->SetMenuActive(exercices_command, exercices_command_status);
+ #endif
+ #ifndef HAVE_DISTRIBUTION
+-              applet_control->SetMenuActive("/commands/Network", false);
++              const std::string network_command("/commands/Network");
++	      bool network_command_status(false);
++              applet_control->SetMenuActive(network_command, network_command_status);
+ #endif
+             }
+         }
