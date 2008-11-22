@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc12.ebuild,v 1.1 2008/10/09 21:34:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc15.ebuild,v 1.1 2008/11/22 05:43:45 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -49,13 +49,13 @@ prefix_src_archives() {
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-TARBALL_PV="2.2_rc1"
+TARBALL_PV="2.2_rc15"
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
 		$(prefix_src_archives ${PN}-man-pl-${PV_PL}.tar.bz2) )"
 
-PATCHVER=${PV}
+PATCHVER=
 if [ -n "${PATCHVER}" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PATCHVER}.patch.bz2
 	$(prefix_src_archives ${PN}-${PATCHVER}.patch.bz2)"
@@ -91,7 +91,7 @@ src_compile() {
 		# A name collision between the portage.dbapi class and the
 		# module with the same name triggers an epydoc crash unless
 		# portage.dbapi is excluded from introspection.
-		has_version '>=dev-python/epydoc-3_pre0' && \
+		ROOT=/ has_version '>=dev-python/epydoc-3_pre0' && \
 			epydoc_opts='--exclude-introspect portage\.dbapi'
 		my_modules="$(find "${S}/pym" -name "*.py" \
 			| sed -e 's:/__init__.py$::' -e 's:\.py$::' -e "s:^${S}/pym/::" \

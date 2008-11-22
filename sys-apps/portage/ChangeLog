@@ -1,6 +1,29 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.550 2008/11/11 22:09:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.551 2008/11/22 05:43:45 zmedico Exp $
+
+  21 Nov 2008; Zac Medico <zmedico@gentoo.org> ChangeLog,
+  -portage-2.2_rc12.ebuild, -portage-2.2_rc13.ebuild:
+  Remove old versions and prune old ChangeLog entries.
+
+*portage-2.2_rc15 (21 Nov 2008)
+
+  21 Nov 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc15.ebuild:
+  2.2_rc15 bump. This fixes bugs #173284 (make etc-update ignore hidden
+  dirs), #216190 (don't install file names containing newlines), #236207
+  (fix hardcoded colors), #236683 (handle permission denied for ebuild
+  command), #236714 (handle PortagePackageException for ebuild command),
+  #243022 (handle broken symlinks when merging directories), #244485
+  (document EAPI 2 in ebuild man page), #245716 (ignore 'command not
+  found' from configure scripts), #245779 (document new PKGDIR layout),
+  #246451 (fix @security IndexError), #246667 (allow repoman vcs option
+  customization), #246821 (fix TypeError when PORTAGE_BINHOST is unset),
+  #246853 (send output to stderr consistently for installed masked
+  packages), #247370 (don't lock build dir in --fetchonly mode), #247625
+  (fix PORTAGE_IONICE_COMMAND docs), #247776 (warn if CONFIG_PROTECT is
+  empty), #248053 (fix inappropriate interaction of blockers with || deps),
+  #248059 (handle invalid deps with --depclean). Bug #210077 tracks all
+  bugs fixed since 2.1.5.x.
 
 *portage-2.2_rc14 (11 Nov 2008)
 
@@ -191,231 +214,6 @@
   20 Jun 2008; Marius Mauch <genone@gentoo.org> -portage-2.2_pre7-r1.ebuild,
   -portage-2.2_pre8.ebuild, +portage-2.2_rc1.ebuild:
   First release candidate of portage-2.2
-
-*portage-2.1.5.6 (17 Jun 2008)
-
-  17 Jun 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5.6.ebuild:
-  2.1.5.6 bump. This fixes bug #223417 (random KeyError during merge
-  phase with <python-2.5). Bug #216231 tracks all bugs fixed since
-  2.1.4.x.
-
-  16 Jun 2008; Zac Medico <zmedico@gentoo.org>
-  portage-2.1.5.5.ebuild, portage-2.2_pre7-r1.ebuild,
-  portage-2.2_pre8.ebuild:
-  Bug #223417 - Temporarily bump the python dep to >=python-2.5 for
-  float mtime support. This dep can revert to python-2.4 when bug
-  #223417 is fixed.
-
-*portage-2.1.5.5 (12 Jun 2008)
-
-  12 Jun 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5.5.ebuild:
-  2.1.5.5 bump. This release has support for package contents indexing,
-  to optimize owner lookups for things like `portageq owners`. You may
-  notice an abnormally large amount of disk activity when the package
-  contents are indexed for the first time (triggered after a few merges
-  or when a file collision occurs). There are two new repoman checks
-  called 'inherit.autotools' and 'IUSE.undefined' (bug #224271). A
-  KeyError triggered by ROOT definition in make.conf is fixed. Keyword
-  mask warnings for installed package are suppressed in some more cases
-  (bug #225767). Bug #216231 tracks all bugs fixed since 2.1.4.x.
-
-*portage-2.2_pre8 (10 Jun 2008)
-
-  10 Jun 2008; Marius Mauch <genone@gentoo.org> +portage-2.2_pre8.ebuild:
-  Add another testrelease to fix bugs #223591 and #220671, and to sync
-  features with 2.1
-
-*portage-2.1.5.4 (05 Jun 2008)
-
-  05 Jun 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5.4.ebuild:
-  2.1.5.4 bump. This fixes bug #224713 (unhandled TypeError exception
-  when make.conf is missing). Mask warnings for installed packages (from
-  bug #223447) should be less annoying now since they are triggered less
-  frequently. A bash regular expression inside 'doman' is fixed for
-  compatibility with FreeBSD (regression from 2.1.5.3). Bug #216231
-  tracks all bugs fixed since 2.1.4.x.
-
-*portage-2.2_pre7-r1 (02 Jun 2008)
-
-  02 Jun 2008; Marius Mauch <genone@gentoo.org> -portage-2.2_pre3.ebuild,
-  -portage-2.2_pre5.ebuild, -portage-2.2_pre6.ebuild,
-  -portage-2.2_pre7.ebuild, +portage-2.2_pre7-r1.ebuild:
-  Fix several critical bugs in the NEEDED conversion code, requiring all
-  NEEDED.ELF.2 files to be regenerated.
-
-*portage-2.1.5.3 (01 Jun 2008)
-
-  01 Jun 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5.3.ebuild:
-  2.1.5.3 bump. This fixes bugs #223417 (KeyError in merge phase),
-  #223447 (depclean removes newly installed packages), and #223685
-  (elog messages lost after build failure). Bug #216231 tracks all
-  bugs fixed since 2.1.4.x.
-
-  29 May 2008; Ali Polatel <hawking@gentoo.org> portage-2.2_pre3.ebuild,
-  portage-2.2_pre5.ebuild, portage-2.2_pre6.ebuild, portage-2.2_pre7.ebuild:
-  python_mod_{cleanup,optimize} are ROOT aware.
-
-  23 May 2008; Zac Medico <zmedico@gentoo.org> portage-2.2_pre7.ebuild:
-  Stop building and installing tbz2tool for Bug #220701.
-
-*portage-2.2_pre7 (22 May 2008)
-
-  22 May 2008; Marius Mauch <genone@gentoo.org> +portage-2.2_pre7.ebuild:
-  Adding new (last?) testrelease snapshot, removing bogus notifications
-  about preserved libs.
-
-*portage-2.1.5.2 (20 May 2008)
-
-  20 May 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5.2.ebuild:
-  2.1.5.2 bump. This fixes a regression which prevented sys-apps/portage
-  updates from being promoted to the front of the merge list. There are
-  a few other small fixes, including bug #222623. Bug #216231 tracks all
-  bugs fixed since 2.1.4.x.
-
-*portage-2.1.5 (14 May 2008)
-
-  14 May 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5.ebuild:
-  2.1.5 release. This fixes bugs #220533, #221537, and #221755.
-  Bug #216231 tracks all bugs fixed since 2.1.4.x.
-
-*portage-2.1.5_rc10 (10 May 2008)
-
-  10 May 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc10.ebuild:
-  2.1.5_rc10 bump. This fixes the KeyError reported in bug #221107,
-  comment #4. Also, satisfied blockers are now shown in the merge list
-  in any case when blocking packages will be temporarily installed
-  simultaneously. For Bug #220701, the ebuild no longer installs tbz2tool.
-  Bug #216231 tracks all bugs fixed since 2.1.4.x.
-
-*portage-2.1.5_rc9 (09 May 2008)
-
-  09 May 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc9.ebuild:
-  2.1.5_rc9 bump. This fixes bugs #221053 (enable --skipfirst as a means
-  to bypass digest failures), #221071 (merge list displayed twice), and
-  #221107 (KeyError triggered by blockers). Bug #216231 tracks all bugs
-  fixed since 2.1.4.x.
-
-*portage-2.1.5_rc8 (09 May 2008)
-
-  09 May 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc8.ebuild:
-  2.1.5_rc8 bump. This includes support for having packages that block
-  eachother temporarily installed at the same time, which requires
-  special handling of file collisions. Also fixed are bugs #220341
-  (unnecessary reinstall of multislot packages), #220689 (unnecessary
-  downgrades), #220775 (dodoc calls vecho unsuccessfully), and #220987
-  (UnboundLocalError during dep calculations for alternate ROOT).
-  Bug #216231 tracks all bugs fixed since 2.1.4.x.
-
-*portage-2.1.5_rc7 (06 May 2008)
-
-  06 May 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc7.ebuild:
-  2.1.5_rc7 bump. The most notable bug fixed in this release is #172812.
-  Blockers are now resolved automatically in cases when it makes
-  sense to uninstall a conflicting package. Automatically uninstalled
-  packages are displayed in the merge list, marked "uninstall" and
-  highlighted in red. Other bugs fixed in this release include #172812,
-  #211833, #218854, #219286, #219294, #219369, #219837, #219918, #219957,
-  and #220171. Bug #216231 tracks all bugs fixed since 2.1.4.x.
-
-*portage-2.2_pre6 (05 May 2008)
-
-  05 May 2008; Marius Mauch <genone@gentoo.org> +portage-2.2_pre6.ebuild:
-  New testrelease including rewritten support for FEATURES=preserve-libs and
-  several updates regarding package set handling
-
-*portage-2.1.5_rc6 (21 Apr 2008)
-
-  21 Apr 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc6.ebuild:
-  2.1.5_rc6 bump. The metadata-transfer feature is now disabled by default.
-  This disables the "Updating Portage cache" routine that used to run at
-  the tail end of each `emerge --sync` operation. If you use something like
-  the sqlite module and want to keep all metadata in that format alone
-  (useful for querying), enable FEATURES="metadata-transfer" in make.conf.
-  Also fixed in this release are bugs #218439 (emerge --help formatting)
-  and #218559 (sandbox violations in /var/cache/edb/dep by portage api
-  consumers). Bug #216231 tracks all bugs fixed since 2.1.4.x.
-
-*portage-2.1.5_rc5 (19 Apr 2008)
-
-  19 Apr 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc5.ebuild:
-  2.1.5_rc5 bump. This fixes bug #217905 (broken evaluation of conditionals
-  in SRC_URI), bug #218202 (unwanted spinner output with --nodeps), and
-  also fixes spurious permission adjustments from bug #162542. Bug #216231
-  tracks all bugs fixed since 2.1.4.x.
-
-*portage-2.1.5_rc4 (15 Apr 2008)
-
-  15 Apr 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc4.ebuild:
-  2.1.5_rc4 bump. The dependency resolver now has a feedback mechanism that
-  helps make atom selections more consistent with previous selections that
-  have been added to the graph. This solves some common cases of bug #1343
-  such as the issue with kaffe pulling in an unnecessary jdk slot in bug
-  #163801. Also fixed is bug #217664. Bug #216231 tracks all bugs fixed
-  since 2.1.4.x.
-
-*portage-2.1.5_rc3 (12 Apr 2008)
-
-  12 Apr 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc3.ebuild:
-  2.1.5_rc3 bump. Unlike earlier 2.1.5_rc releases, emerge is now fixed
-  to automatically downgrade masked packages when appropriate (solves a
-  side effect from the fix for bug #197810). Also fixed are bugs #162542,
-  #197905, #215016, #217122, and #217444. Bug #216231 tracks all bugs
-  fixed since 2.1.4.x.
-
-*portage-2.1.5_rc2 (05 Apr 2008)
-
-  05 Apr 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc2.ebuild:
-  2.1.5_rc2 bump for bug #216328 (fix broken --newuse).
-
-*portage-2.1.5_rc1 (04 Apr 2008)
-
-  04 Apr 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.5_rc1.ebuild:
-  2.1.5_rc1 release. In the event that a previously installed package has
-  since been masked, emerge will no longer perform an automatic downgrade
-  as part of a "world" update. You should either unmask such packages or
-  else explicitly re-merge them in order to have them dowgraded to an
-  unmasked version. Bug #216231 tracks all bugs fixed since 2.1.4.x.
-
-*portage-2.2_pre5 (19 Mar 2008)
-
-  19 Mar 2008; Marius Mauch <genone@gentoo.org> -portage-2.2_pre4.ebuild,
-  +portage-2.2_pre5.ebuild:
-  New test release, implementing solutions for bugs #213790, #213592, #212152,
-  #211949 and more.
-
-*portage-2.2_pre4 (09 Mar 2008)
-
-  09 Mar 2008; Marius Mauch <genone@gentoo.org> +portage-2.2_pre4.ebuild:
-  Another prerelease, most important changes are the removal of manifest1 support
-  and a potential data corruption issue with elog messages (bug #212055). 
-  Other minor fixes include bug #212152, bug #97776, bug #211949 and bug #212080.
-
-*portage-2.2_pre3 (28 Feb 2008)
-
-  28 Feb 2008; Marius Mauch <genone@gentoo.org> -portage-2.2_pre2.ebuild,
-  +portage-2.2_pre3.ebuild:
-  Bump 2.2 test release to bring it back in line with 2.1 releases 
-  regarding bugfixes/features. Change epydoc dependency to avoid
-  a traceback during API doc generation with >=epydoc-3.
-
-  15 Feb 2008; Brent Baude <ranger@gentoo.org> portage-2.1.4.4.ebuild:
-  stable ppc64, bug 210031
-
-  14 Feb 2008; nixnut <nixnut@gentoo.org> portage-2.1.4.4.ebuild:
-  Stable on ppc wrt bug 210031
-
-  14 Feb 2008; Santiago M. Mola <coldwind@gentoo.org>
-  portage-2.1.4.4.ebuild:
-  amd64 stable wrt bug #210031
-
-  14 Feb 2008; Jeroen Roovers <jer@gentoo.org> portage-2.1.4.4.ebuild:
-  Stable for HPPA (bug #210031).
-
-  14 Feb 2008; Raúl Porcel <armin76@gentoo.org> portage-2.1.4.4.ebuild:
-  alpha/ia64/sparc stable wrt #210031
-
-  13 Feb 2008; Dawid Węgliński <cla@gentoo.org> portage-2.1.4.4.ebuild:
-  Stable on x86 (bug #210031)
 
 *portage-2.1.4.4 (12 Feb 2008)
 
