@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-6.02-r1.ebuild,v 1.1 2008/11/22 21:31:26 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-6.02-r1.ebuild,v 1.2 2008/11/22 22:04:33 je_fro Exp $
 
 I="/opt/foldingathome"
 
@@ -43,6 +43,9 @@ pkg_postinst() {
 	einfo ""
 	einfo "Please run ${I}/initfolding to configure your client"
 	einfo "and edit /etc/conf.d/foldingathome for options"
+	einfo ""
+	einfo "I encourage you to acquire a username and join team 36480."
+	einfo "http://folding.stanford.edu/English/Download#ntoc2"
 	einfo ""
 }
 

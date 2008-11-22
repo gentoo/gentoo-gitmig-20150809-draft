@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.25 2008/11/22 21:31:26 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.26 2008/11/22 22:04:33 je_fro Exp $
+
+  22 Nov 2008; Jeff Gardner <je_fro@gentoo.org>
+  foldingathome-6.02-r1.ebuild:
+  Add shameless plug for my folding group.
 
 *foldingathome-6.02-r1 (22 Nov 2008)
 
