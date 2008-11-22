@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-3.1_p2.ebuild,v 1.2 2008/05/17 12:31:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-3.1_p2.ebuild,v 1.3 2008/11/22 09:18:20 pva Exp $
 
 inherit autotools kde-functions eutils versionator
 
-MY_P="${PN}-$(replace_version_separator 2 '-')"
-MY_P="${MY_P/p}"
+MY_P=${PN}-$(replace_version_separator 2 '-')
+MY_P=${MY_P/p}
 
 DESCRIPTION="KchmViewer is a feature rich chm file viewer, based on Qt."
 HOMEPAGE="http://www.kchmviewer.net/"
@@ -20,7 +20,7 @@ DEPEND="=x11-libs/qt-3*
 	dev-libs/chmlib
 	kde? ( =kde-base/kdelibs-3.5* )"
 
-S="${WORKDIR}/${PN}-$(get_version_component_range 1-2)"
+S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
 
 pkg_setup() {
 	if use kde; then
@@ -46,8 +46,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# gcc 4.3 compatibility. Fixes bug 218812.
-	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch" #218812
 
 	# broken configure script, assure it doesn't fall back to internal libs
 	echo "# We use the external chmlib!" > lib/chmlib/chm_lib.h
@@ -56,7 +55,10 @@ src_unpack() {
 src_compile() {
 	set-kdedir 3
 
-	econf $(use_with kde) $(use_with arts) || die
+	econf \
+		--includedir=${KDEDIR}/include \
+		$(use_with kde) \
+		$(use_with arts)
 	emake || die
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.6 2008/11/10 23:43:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.7 2008/11/22 09:18:20 pva Exp $
+
+  22 Nov 2008; Peter Volkov <pva@gentoo.org> kchmviewer-3.1_p2.ebuild:
+  Fixed build failure when kde-4 is installed with -kdeprefix, bug #247314,
+  thank Stoian Ivanov for report.
 
 *kchmviewer-4.0_beta3-r1 (10 Nov 2008)
 
