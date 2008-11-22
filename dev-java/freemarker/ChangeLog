@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/freemarker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.22 2008/09/13 10:59:33 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/ChangeLog,v 1.23 2008/11/22 16:32:28 fordfrog Exp $
+
+  22 Nov 2008; Miroslav Šulc <fordfrog@gentoo.org>
+  freemarker-2.3.13.ebuild:
+  freemarker-2.3.13 needs at least jython-2.2 so fixed the dependency
 
   13 Sep 2008; Miroslav Šulc <fordfrog@gentoo.org>
   freemarker-2.3.13.ebuild:

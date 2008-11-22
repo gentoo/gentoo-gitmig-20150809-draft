@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.13.ebuild,v 1.2 2008/09/13 10:59:33 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.13.ebuild,v 1.3 2008/11/22 16:32:28 fordfrog Exp $
 
 EAPI="1"
 JAVA_PKG_IUSE="doc source"
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 COMMON_DEP="dev-java/javacc
-	dev-java/jython
+	>=dev-java/jython-2.2:0
 	java-virtuals/servlet-api:2.3
 	java-virtuals/servlet-api:2.4
 	java-virtuals/servlet-api:2.5
