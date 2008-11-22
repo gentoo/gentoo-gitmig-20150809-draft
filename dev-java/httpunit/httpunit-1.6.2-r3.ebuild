@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/httpunit-1.6.2-r2.ebuild,v 1.1 2008/11/16 16:15:14 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/httpunit-1.6.2-r3.ebuild,v 1.1 2008/11/22 16:50:31 fordfrog Exp $
 
 EAPI="2"
 inherit java-pkg-2 java-ant-2
@@ -18,7 +18,7 @@ IUSE="doc"
 
 CDEPEND="
 	>=dev-java/junit-3.8:0
-	dev-java/rhino:1.5
+	dev-java/rhino:1.6
 	dev-java/jtidy:0
 	java-virtuals/servlet-api:2.3
 	dev-java/xerces:2"
@@ -34,7 +34,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/rhino-fix-${PV}.diff"
 	cd "${S}/jars"
-	java-pkg_jar-from junit,rhino-1.5,xerces-2,jtidy,servlet-api-2.3
+	java-pkg_jar-from junit,rhino-1.6,xerces-2,jtidy,servlet-api-2.3
 }
 
 src_compile() {
