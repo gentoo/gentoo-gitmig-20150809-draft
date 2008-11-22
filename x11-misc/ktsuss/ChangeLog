@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ktsuss
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.5 2008/11/18 03:20:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ChangeLog,v 1.6 2008/11/22 15:22:10 maekke Exp $
+
+  22 Nov 2008; Markus Meier <maekke@gentoo.org> ktsuss-1.4.ebuild:
+  x86 stable, bug #247308
 
   18 Nov 2008; Jeremy Olexa <darkside@gentoo.org> ktsuss-1.4.ebuild:
   amd64 stable, bug #247308
