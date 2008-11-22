@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2073 2008/11/22 19:54:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2074 2008/11/22 22:13:10 loki_val Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> package.mask:
+  Start mono-2 package.mask
 
   22 Nov 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask app-admin/gps for removal in 30 days. bug #173584
