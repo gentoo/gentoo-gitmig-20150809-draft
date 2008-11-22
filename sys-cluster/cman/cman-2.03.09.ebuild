@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-2.03.09.ebuild,v 1.2 2008/11/21 22:27:54 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-2.03.09.ebuild,v 1.3 2008/11/22 00:36:09 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -41,7 +41,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/cman-2.02.39-bug457107.patch || die
+	epatch "${FILESDIR}"/cman-2.02.39-RH_bug_457107.patch || die
+	epatch "${FILESDIR}"/cman-2.02.39-qdisk-fix-block-size-check-RH_bug_470533.patch || die
 
 	# fix the manual pages have executable bit
 	sed -i -e '

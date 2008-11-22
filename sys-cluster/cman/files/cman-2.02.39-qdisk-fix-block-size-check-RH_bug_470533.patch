@@ -1,0 +1,33 @@
+From: Lon Hohberger <lhh@redhat.com>
+Date: Fri, 7 Nov 2008 17:53:51 +0000 (-0500)
+Subject: qdisk: fix block size check
+X-Git-Url: http://git.fedorahosted.org/git/cluster.git?p=cluster.git;a=commitdiff_plain;h=c90643c8824ff2f12e2debc05f32f981facfcbd3
+
+qdisk: fix block size check
+
+When using device="" instead of label="", this check was causing
+qdiskd to incorrectly exit.
+
+Resolves: #470533
+---
+
+diff --git a/cman/qdisk/main.c b/cman/qdisk/main.c
+index 0e27cb7..e26e1fc 100644
+--- a/cman/qdisk/main.c
++++ b/cman/qdisk/main.c
+@@ -1491,12 +1491,12 @@ main(int argc, char **argv)
+ 		}
+ 
+ 		if (qh.qh_version == VERSION_MAGIC_V2 &&
+-                    qh.qh_blksz != rv) {
++		    qh.qh_blksz != qh.qh_kernsz) {
+ 			clulog(LOG_CRIT,
+-			       "Specified device %s does match kernel's "
++			       "Specified device %s does not match kernel's "
+ 			       "reported sector size (%d != %d)\n",
+ 			       ctx.qc_device,
+-			       ctx.qc_disk.d_blksz, rv);
++			       qh.qh_blksz, qh.qh_kernsz);
+ 			check_stop_cman(&ctx);
+ 			goto out;
+ 		}
