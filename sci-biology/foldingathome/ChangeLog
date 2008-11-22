@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/foldingathome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.24 2008/11/22 04:37:22 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/ChangeLog,v 1.25 2008/11/22 21:31:26 je_fro Exp $
+
+*foldingathome-6.02-r1 (22 Nov 2008)
+
+  22 Nov 2008; Jeff Gardner <je_fro@gentoo.org> -foldingathome-6.02.ebuild,
+  +foldingathome-6.02-r1.ebuild:
+  Bumping for init script fix and add back ~x86.
 
   22 Nov 2008; Jeff Gardner <je_fro@gentoo.org> files/6.02/fah-init:
   Changing to use init script from Constantin Baranov on bug #218331

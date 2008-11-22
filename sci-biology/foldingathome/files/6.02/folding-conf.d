@@ -16,6 +16,6 @@
 # But use of other options are not recommended when using the Folding client
 # as a service.
 #
-FOLD_OPTS="-local"
+FOLD_OPTS="-smp"
 PIDFILE=/var/run/folding
 
