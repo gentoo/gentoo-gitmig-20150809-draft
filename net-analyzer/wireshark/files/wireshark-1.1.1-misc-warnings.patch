@@ -132,3 +132,29 @@
    volatile gboolean is_802_2;
    proto_tree *volatile vlan_tree;
  
+=== modified file 'epan/dissectors/packet-scsi.h'
+--- epan/dissectors/packet-scsi.h	2008-11-22 14:42:31 +0000
++++ epan/dissectors/packet-scsi.h	2008-11-22 14:45:00 +0000
+@@ -241,7 +241,7 @@
+  */
+ #define TRY_SCSI_CDB_ALLOC_LEN(pinfo, tvb, offset, length)		\
+     {									\
+-	gboolean short_packet;						\
++	volatile gboolean short_packet;						\
+ 	tvbuff_t *new_tvb;						\
+ 	guint32 end_data_offset=0;					\
+ 									\
+
+=== modified file 'epan/dissectors/packet-x11.c'
+--- epan/dissectors/packet-x11.c	2008-11-22 14:42:31 +0000
++++ epan/dissectors/packet-x11.c	2008-11-22 14:50:41 +0000
+@@ -4066,7 +4066,7 @@
+       conversation_t *conversation;
+       x11_conv_data_t *volatile state;
+       int length;
+-      tvbuff_t *next_tvb;
++      tvbuff_t *volatile next_tvb;
+ 
+       while (tvb_reported_length_remaining(tvb, offset) != 0) {
+ 	    /*
+
