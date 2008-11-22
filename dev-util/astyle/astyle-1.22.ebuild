@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.22.ebuild,v 1.9 2008/10/27 22:52:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/astyle-1.22.ebuild,v 1.10 2008/11/22 23:30:02 maekke Exp $
 
 inherit eutils java-pkg-opt-2 toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/astyle/astyle_${PV}_linux.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc -ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc -ppc64 sparc x86"
 
 IUSE="debug java libs"
 
