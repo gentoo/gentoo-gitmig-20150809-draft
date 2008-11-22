@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5.ebuild,v 1.1 2008/11/21 01:13:48 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r1.ebuild,v 1.1 2008/11/22 18:11:25 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -152,7 +152,7 @@ RDEPEND=">=virtual/jdk-1.5
 #  dev-java/toplink-essentials:0
 
 
-DEPEND="=virtual/jdk-1.5*
+DEPEND=">=virtual/jdk-1.5
 	app-arch/unzip
 	>=dev-java/ant-core-1.7.1_beta2
 	>=dev-java/ant-nodeps-1.7.1
@@ -440,7 +440,7 @@ src_unpack () {
 }
 
 src_compile() {
-	local antflags="-Dstop.when.broken.modules=true"
+	local antflags="-Dstop.when.broken.modules=true -Dpermit.jdk6.builds=true"
 
 	if use debug; then
 		antflags="${antflags} -Dbuild.compiler.debug=true"
@@ -827,7 +827,7 @@ symlink_extjars() {
 
 	if use netbeans_modules_j2ee ; then
 		targetdir="/enterprise5/modules/ext"
-		dosyminstjar ${targetdir} commons-fileupload commons-fileupload commons-fileupload-1.0.jar
+		dosyminstjar ${targetdir} commons-fileupload commons-fileupload.jar commons-fileupload-1.0.jar
 		# glassfish-jspparser-2.0.jar
 		# glassfish-logging-2.0.jar
 		dosyminstjar ${targetdir} httpunit httpunit.jar httpunit-1.6.2.jar

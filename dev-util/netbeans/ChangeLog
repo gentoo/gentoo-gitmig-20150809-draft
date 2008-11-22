@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.87 2008/11/21 01:13:48 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.88 2008/11/22 18:11:25 fordfrog Exp $
+
+*netbeans-6.5-r1 (22 Nov 2008)
+
+  22 Nov 2008; Miroslav Šulc <fordfrog@gentoo.org> -netbeans-6.5.ebuild,
+  +netbeans-6.5-r1.ebuild:
+  netbeans compiles fine even with JDK 1.6 so I dropped the restriction on
+  JDK, also commons-fileupload linking fixed
 
 *netbeans-6.5 (21 Nov 2008)
 
