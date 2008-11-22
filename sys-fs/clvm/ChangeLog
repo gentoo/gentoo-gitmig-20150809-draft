@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/clvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.27 2008/11/21 23:33:15 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/ChangeLog,v 1.28 2008/11/22 01:16:59 xmerlin Exp $
+
+  22 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org> files/clvmd.confd,
+  files/clvmd.rc, clvm-2.02.39.ebuild:
+  Merged an improved init script.
 
   22 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org> clvm-2.02.39.ebuild:
   Removed invalid IUSE.
