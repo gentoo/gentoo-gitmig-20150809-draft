@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.8 2008/11/13 02:58:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0.ebuild,v 1.9 2008/11/22 16:54:44 jer Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://helm.cs.unibo.it/mml-widget/sources/${P}.tar.gz"
 LICENSE="LGPL-3"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="gtk svg t1lib"
 
 RDEPEND=">=dev-libs/glib-2.2.1
