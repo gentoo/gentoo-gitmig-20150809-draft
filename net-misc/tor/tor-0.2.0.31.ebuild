@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.0.31.ebuild,v 1.6 2008/11/14 12:43:56 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.0.31.ebuild,v 1.7 2008/11/22 15:02:04 maekke Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug logrotate"
 
 DEPEND="dev-libs/openssl
