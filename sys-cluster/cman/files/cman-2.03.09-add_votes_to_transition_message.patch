@@ -1,0 +1,63 @@
+From: Christine Caulfield <ccaulfie@redhat.com>
+Date: Thu, 6 Nov 2008 11:53:14 +0000 (+0000)
+Subject: cman: add votes to transition message
+X-Git-Url: http://git.fedorahosted.org/git/cluster.git?p=cluster.git;a=commitdiff_plain;h=2a983d103349d8aa1da2a7332bec334b849b0e3e
+
+cman: add votes to transition message
+
+This uses a previously unused field in this message to help provide
+forward-compatibility with cluster3 systems which need the node votes
+to be provided by the node itself, rather than the global configuration
+system.
+
+Signed-off-by: Christine Caulfield <ccaulfie@redhat.com>
+---
+
+diff --git a/cman/daemon/cnxman-private.h b/cman/daemon/cnxman-private.h
+index 0e433a6..27a3c2e 100644
+--- a/cman/daemon/cnxman-private.h
++++ b/cman/daemon/cnxman-private.h
+@@ -59,7 +59,7 @@ struct cl_transmsg {
+ 	unsigned char cmd;
+ 	unsigned char first_trans;
+ 	uint16_t cluster_id;
+-	int high_nodeid;
++	int votes;
+ 	int expected_votes;
+ 
+ 	unsigned int   major_version;	/* Not backwards compatible */
+diff --git a/cman/daemon/commands.c b/cman/daemon/commands.c
+index 519a10d..00cdb65 100644
+--- a/cman/daemon/commands.c
++++ b/cman/daemon/commands.c
+@@ -1538,7 +1538,7 @@ void send_transition_msg(int last_memb_count, int first_trans)
+ 	P_MEMB("sending TRANSITION message. cluster_name = %s\n", cluster_name);
+ 	msg->cmd = CLUSTER_MSG_TRANSITION;
+ 	msg->first_trans = first_trans;
+-	msg->high_nodeid = get_highest_nodeid();
++	msg->votes = us->votes;
+ 	msg->expected_votes = us->expected_votes;
+ 	msg->cluster_id = cluster_id;
+ 	msg->major_version = CNXMAN_MAJOR_VERSION;
+@@ -1588,7 +1588,7 @@ static void byteswap_internal_message(char *data, int len)
+ 	case CLUSTER_MSG_TRANSITION:
+ 		transmsg = (struct cl_transmsg *)data;
+ 		transmsg->cluster_id = swab16(transmsg->cluster_id);
+-		transmsg->high_nodeid = swab32(transmsg->high_nodeid);
++		transmsg->votes = swab32(transmsg->votes);
+ 		transmsg->expected_votes = swab32(transmsg->expected_votes);
+ 		transmsg->major_version = swab32(transmsg->major_version);
+ 		transmsg->minor_version = swab32(transmsg->minor_version);
+diff --git a/cman/daemon/cnxman-private.h b/cman/daemon/cnxman-private.h
+index 27a3c2e..345242d 100644
+--- a/cman/daemon/cnxman-private.h
++++ b/cman/daemon/cnxman-private.h
+@@ -5,7 +5,7 @@
+ 
+ /* Protocol Version triplet */
+ #define CNXMAN_MAJOR_VERSION 6
+-#define CNXMAN_MINOR_VERSION 1
++#define CNXMAN_MINOR_VERSION 2
+ #define CNXMAN_PATCH_VERSION 0
+ 
+ /* How we announce ourself in console events */

@@ -1,0 +1,49 @@
+From: Christine Caulfield <ccaulfie@redhat.com>
+Date: Wed, 19 Nov 2008 11:16:30 +0000 (+0000)
+Subject: cman: fix signatures of cman_get_privdata & cman_set_privdata
+X-Git-Url: http://git.fedorahosted.org/git/cluster.git?p=cluster.git;a=commitdiff_plain;h=6f11a5cb225a9547a18440e9129410c32aa2be3f
+
+cman: fix signatures of cman_get_privdata & cman_set_privdata
+
+They do NOT take a pointer to a handle.
+
+Signed-off-by: Christine Caulfield <ccaulfie@redhat.com>
+---
+
+diff --git a/cman/lib/libcman.c b/cman/lib/libcman.c
+index cee0147..9465412 100644
+--- a/cman/lib/libcman.c
++++ b/cman/lib/libcman.c
+@@ -346,7 +346,7 @@ int cman_finish(cman_handle_t handle)
+ 	return 0;
+ }
+ 
+-int cman_setprivdata(cman_handle_t *handle, void *privdata)
++int cman_setprivdata(cman_handle_t handle, void *privdata)
+ {
+ 	struct cman_handle *h = (struct cman_handle *)handle;
+ 	VALIDATE_HANDLE(h);
+@@ -355,7 +355,7 @@ int cman_setprivdata(cman_handle_t *handle, void *privdata)
+ 	return 0;
+ }
+ 
+-int cman_getprivdata(cman_handle_t *handle, void **privdata)
++int cman_getprivdata(cman_handle_t handle, void **privdata)
+ {
+ 	struct cman_handle *h = (struct cman_handle *)handle;
+ 	VALIDATE_HANDLE(h);
+diff --git a/cman/lib/libcman.h b/cman/lib/libcman.h
+index 3771176..b4fb4e4 100644
+--- a/cman/lib/libcman.h
++++ b/cman/lib/libcman.h
+@@ -196,8 +196,8 @@ cman_handle_t cman_admin_init(void *privdata);
+ int cman_finish(cman_handle_t handle);
+ 
+ /* Update/retrieve the private data */
+-int cman_setprivdata(cman_handle_t *h, void *privdata);
+-int cman_getprivdata(cman_handle_t *h, void **privdata);
++int cman_setprivdata(cman_handle_t h, void *privdata);
++int cman_getprivdata(cman_handle_t h, void **privdata);
+ 
+ /*
+  * Notification of membership change events. Note that these are sent after

@@ -1,6 +1,19 @@
 # ChangeLog for sys-cluster/cman
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.43 2008/11/22 00:36:09 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/ChangeLog,v 1.44 2008/11/22 13:47:02 xmerlin Exp $
+
+*cman-2.03.09-r1 (22 Nov 2008)
+
+  22 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org>
+  -files/cman-2.02.39-RH_bug_457107.patch,
+  -files/cman-2.02.39-qdisk-fix-block-size-check-RH_bug_470533.patch,
+  +files/cman-2.03.09-RH_bug_457107.patch,
+  +files/cman-2.03.09-add_votes_to_transition_message.patch,
+  +files/cman-2.03.09-fix_signatures_of_cman_get_privdata_and_cman_set_privd
+  ata.patch,
+  +files/cman-2.03.09-qdisk-fix-block-size-check-RH_bug_470533.patch,
+  cman-2.03.09.ebuild, +cman-2.03.09-r1.ebuild:
+  Renamed patches, added some fixes in r1.
 
   22 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org>
   +files/cman-2.02.39-RH_bug_457107.patch,
