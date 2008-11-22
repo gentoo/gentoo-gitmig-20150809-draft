@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-2.0.0.ebuild,v 1.1 2008/03/21 16:11:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-2.0.0.ebuild,v 1.2 2008/11/22 02:09:06 matsuu Exp $
 
 inherit eutils multilib
 
@@ -17,6 +17,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
+PROPERTIES="interactive"
 RESTRICT="strip mirror"
 
 RDEPEND="!app-i18n/atokx2
