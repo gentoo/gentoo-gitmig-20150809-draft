@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.76 2008/11/03 13:02:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.77 2008/11/22 09:53:59 opfer Exp $
+
+  22 Nov 2008; Christian Faulhammer <opfer@gentoo.org> vpnc-0.5.1-r1.ebuild,
+  vpnc-0.5.1_p332.ebuild:
+  don't install COPYING file anymore as reported by coldwind on bug 247935;
+  don't inherit linux-info.eclass anymore; remove die messages
 
   03 Nov 2008; Raúl Porcel <armin76@gentoo.org> vpnc-0.5.1-r1.ebuild,
   vpnc-0.5.1_p332.ebuild:

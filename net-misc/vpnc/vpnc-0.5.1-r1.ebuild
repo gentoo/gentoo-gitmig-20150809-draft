@@ -1,8 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1-r1.ebuild,v 1.7 2008/11/03 13:02:49 armin76 Exp $
-
-inherit linux-info
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.1-r1.ebuild,v 1.8 2008/11/22 09:53:59 opfer Exp $
 
 DESCRIPTION="Free client for Cisco VPN routing software"
 HOMEPAGE="http://www.unix-ag.uni-kl.de/~massar/vpnc/"
@@ -35,16 +33,18 @@ src_compile() {
 	if use hybrid-auth && ! use bindist; then
 		hybridauthopts="OPENSSL_GPL_VIOLATION=-DOPENSSL_GPL_VIOLATION OPENSSLLIBS=-lcrypto"
 	fi
-	emake ${hybridauthopts} || die "emake failed"
+	emake ${hybridauthopts} || die
 }
 
 src_install() {
-	emake PREFIX="/usr" DESTDIR="${D}" install || die "emake install failed"
+	emake PREFIX="/usr" DESTDIR="${D}" install || die
 	dodoc README TODO VERSION
 	keepdir /var/run/vpnc
 	keepdir /etc/vpnc/scripts.d
 	newinitd "${FILESDIR}/vpnc-2.init" vpnc
 	newconfd "${FILESDIR}/vpnc.confd" vpnc
+	# COPYING file resides here, should not be installed
+	rm -rf "${D}"/usr/share/doc/vpnc/
 }
 
 pkg_postinst() {
