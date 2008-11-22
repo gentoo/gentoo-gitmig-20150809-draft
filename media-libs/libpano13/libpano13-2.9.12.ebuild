@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/libpano13-2.9.12.ebuild,v 1.1 2008/08/16 10:58:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/libpano13-2.9.12.ebuild,v 1.2 2008/11/22 23:39:31 maekke Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://panotools.sf.net"
 SRC_URI="mirror://sourceforge/panotools/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="java"
 DEPEND="!media-libs/libpano12
 	media-libs/jpeg
