@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ktsuss-1.4.ebuild,v 1.6 2008/11/22 15:22:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ktsuss/ktsuss-1.4.ebuild,v 1.7 2008/11/22 16:04:42 dertobi123 Exp $
 
 DESCRIPTION="ktsuss: keep the su simple, stupid. Graphical version of su written
 in C and GTK+ 2"
@@ -9,7 +9,7 @@ SRC_URI="mirror://berlios//${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.12.11
