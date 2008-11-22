@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.36 2008/11/20 17:00:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.37 2008/11/22 13:57:41 maekke Exp $
+
+  22 Nov 2008; Markus Meier <maekke@gentoo.org> quota-3.15.ebuild:
+  amd64/x86 stable, bug #247651
 
   20 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org> quota-3.15.ebuild:
   ppc stable, bug #247651
