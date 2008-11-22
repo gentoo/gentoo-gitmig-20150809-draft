@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9198 2008/11/22 18:02:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9199 2008/11/22 19:54:40 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (22 Nov 2008)
+# Masked for removal in 30 days, requested by maintainers. bug #173584
+# Does not compile, old, unmaintained, depends on gtk-1.
+app-admin/gps
 
 # Torsten Veller <tove@gentoo.org> (22 Nov 2008)
 # Enforce downgrade: 3.27.01 replaces 3.2701
