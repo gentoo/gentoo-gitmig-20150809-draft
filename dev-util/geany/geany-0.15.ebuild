@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.15.ebuild,v 1.1 2008/11/21 23:19:41 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.15.ebuild,v 1.2 2008/11/22 21:17:32 loki_val Exp $
 
 EAPI=1
 
@@ -32,6 +32,10 @@ src_compile() {
 	econf --disable-dependency-tracking --enable-the-force \
 		$(use_enable vte)
 	emake || die "emake failed."
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
 }
 
 src_install() {
