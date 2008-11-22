@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.134 2008/11/20 07:59:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.135 2008/11/22 06:08:31 lu_zero Exp $
+
+  22 Nov 2008; Luca Barbato <lu_zero@gentoo.org>
+  ati-drivers-8.552-r2.ebuild:
+  Check for MAGIC_SYSRQ
 
 *ati-drivers-8.552-r2 (19 Nov 2008)
 

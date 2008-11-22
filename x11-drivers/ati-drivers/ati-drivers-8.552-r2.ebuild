@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.552-r2.ebuild,v 1.1 2008/11/19 22:59:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.552-r2.ebuild,v 1.2 2008/11/22 06:08:31 lu_zero Exp $
 
 IUSE="acpi debug"
 
@@ -112,6 +112,11 @@ pkg_setup() {
 		eerror "		[ ] Paravirtualization support (EXPERIMENTAL)"
 		eerror "in 'menuconfig'"
 		die "CONFIG_PARAVIRT enabled"
+	fi
+
+	if ! linux_chkconfig_present MAGIC_SYSRQ; then
+		eerror "You need MAGIC_SYSRQ enabled in order to build ati-drivers"
+		die "CONFIG_MAGIC_SYSRQ disabled"
 	fi
 
 	# Only support xorg-server >=1.5
