@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdcollect
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/ChangeLog,v 1.6 2008/06/06 20:56:32 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcollect/ChangeLog,v 1.7 2008/11/22 22:09:24 loki_val Exp $
+
+  22 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> cdcollect-0.6.0.ebuild:
+  Add support for new gtk-sharp with EAPI-2
 
   06 Jun 2008; Samuli Suominen <drac@gentoo.org> cdcollect-0.6.0.ebuild:
   Moved intltool to DEPEND wrt #221509.
