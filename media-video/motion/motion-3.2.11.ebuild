@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.11.ebuild,v 1.3 2008/11/04 15:31:49 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.11.ebuild,v 1.4 2008/11/22 15:08:54 maekke Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~x86"
 IUSE="ffmpeg mysql postgres v4l"
 
 DEPEND="sys-libs/zlib

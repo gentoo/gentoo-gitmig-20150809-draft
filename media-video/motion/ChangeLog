@@ -1,6 +1,9 @@
 # ChangeLog for media-video/motion
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.23 2008/11/04 15:31:49 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.24 2008/11/22 15:08:54 maekke Exp $
+
+  22 Nov 2008; Markus Meier <maekke@gentoo.org> motion-3.2.11.ebuild:
+  amd64 stable, bug #245527
 
   04 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> motion-3.2.11.ebuild:
   3.2.11 will work with new AND old ffmpeg. Thanks aballier.
