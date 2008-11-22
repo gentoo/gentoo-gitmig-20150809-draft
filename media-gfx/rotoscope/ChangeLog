@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/rotoscope
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rotoscope/ChangeLog,v 1.3 2008/11/20 10:21:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rotoscope/ChangeLog,v 1.4 2008/11/22 17:34:59 maekke Exp $
+
+  22 Nov 2008; Markus Meier <maekke@gentoo.org> rotoscope-0.2.ebuild:
+  amd64 stable, bug #247557
 
   20 Nov 2008; Raúl Porcel <armin76@gentoo.org> rotoscope-0.2.ebuild:
   x86 stable wrt #247557
