@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.28 2008/11/21 17:13:40 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.29 2008/11/22 07:28:20 matsuu Exp $
+
+*puppet-0.24.6-r1 (22 Nov 2008)
+
+  22 Nov 2008; MATSUU Takuto <matsuu@gentoo.org>
+  files/puppet-0.24.6-eix.patch, -puppet-0.24.5-r3.ebuild,
+  -puppet-0.24.6.ebuild, +puppet-0.24.6-r1.ebuild:
+  Fixed dependency. Fixed eix patch. Removed old versions.
 
 *puppet-0.24.6 (21 Nov 2008)
 
