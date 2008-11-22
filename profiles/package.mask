@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9200 2008/11/22 22:13:11 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9201 2008/11/22 23:05:15 bangert Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -294,11 +294,6 @@ app-portage/genflags
 # Michael Sterrett <mr_bones_@gentoo.org> (13 Oct 2008)
 # Maintainer mask of known broken version.
 >=app-admin/syslog-ng-2.1
-
-# Thilo Bangert <bangert@gentoo.org> (12 Oct 2008)
-# Masked for removal in 30 days (see bug #240371)
-# useless meta ebuild - never fully developed
-net-mail/qmail-vmailmgr
 
 # Rémi Cardona <remi@gentoo.org> (11 Oct 2008)
 # Old versions, those are no longer maintained and
