@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-MapUTF8
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/ChangeLog,v 1.21 2008/11/18 15:43:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/ChangeLog,v 1.22 2008/11/22 11:30:59 tove Exp $
+
+  22 Nov 2008; Torsten Veller <tove@gentoo.org> Unicode-MapUTF8-1.11.ebuild:
+  Remove Module-Build from RDEPEND
 
   18 Nov 2008; Torsten Veller <tove@gentoo.org> Unicode-MapUTF8-1.11.ebuild:
   New virtuals: module-build
