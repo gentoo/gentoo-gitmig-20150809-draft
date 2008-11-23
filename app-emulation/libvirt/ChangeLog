@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.17 2008/11/23 21:53:54 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.18 2008/11/23 22:54:37 marineam Exp $
+
+  23 Nov 2008; Michael Marineau <marineam@gentoo.org>
+  libvirt-0.4.4-r2.ebuild, libvirt-0.4.6.ebuild:
+  Fix install path under /var and always enable the server.
 
 *libvirt-0.4.6 (23 Nov 2008)
 *libvirt-0.4.4-r2 (23 Nov 2008)

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.4.4-r2.ebuild,v 1.1 2008/11/23 21:53:54 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.4.4-r2.ebuild,v 1.2 2008/11/23 22:54:37 marineam Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://libvirt.org/sources/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="avahi iscsi lvm kvm openvz parted qemu sasl selinux server xen" #policykit is in package.mask
+IUSE="avahi iscsi lvm kvm openvz parted qemu sasl selinux xen" #policykit is in package.mask
 
 DEPEND="sys-libs/readline
 	sys-libs/ncurses
@@ -21,6 +21,7 @@ DEPEND="sys-libs/readline
 	sys-fs/sysfsutils
 	net-misc/bridge-utils
 	net-analyzer/netcat
+	net-dns/dnsmasq
 	avahi? ( >=net-dns/avahi-0.6 )
 	iscsi? ( sys-block/open-iscsi )
 	kvm? ( app-emulation/kvm )
@@ -30,7 +31,6 @@ DEPEND="sys-libs/readline
 	qemu? ( app-emulation/qemu )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( sys-libs/libselinux )
-	server? ( net-dns/dnsmasq )
 	xen? ( app-emulation/xen-tools app-emulation/xen )
 	"
 	#policykit? ( >=sys-auth/policykit-0.6 )
@@ -77,11 +77,11 @@ src_compile() {
 		$(use_with parted storage-disk) \
 		$(use_with sasl) \
 		$(use_with selinux) \
-		$(use_with server libvirtd) \
 		$(use_with xen) \
 		${my_conf} \
 		--with-remote \
 		--disable-iptables-lokkit \
+		--localstatedir=/var \
 		--with-remote-pid-file=/var/run/libvirtd.pid \
 		|| die "econf failed"
 		#$(use_with policykit) \
@@ -91,8 +91,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	mv "${D}"/usr/share/doc/{${PN}-python*,${P}/python}
-	if use server ; then
-		newinitd "${FILESDIR}"/libvirtd.init libvirtd
-		newconfd "${FILESDIR}"/libvirtd.confd libvirtd
-	fi
+	newinitd "${FILESDIR}"/libvirtd.init libvirtd
+	newconfd "${FILESDIR}"/libvirtd.confd libvirtd
 }
