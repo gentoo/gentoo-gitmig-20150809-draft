@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/bonnie++
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.22 2008/05/02 14:21:50 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.23 2008/11/23 09:56:37 patrick Exp $
+
+*bonnie++-1.94 (23 Nov 2008)
+
+  23 Nov 2008; Patrick Lauer <patrick@gentoo.org>
+  +files/bonnie++-1.94-64bit.patch,
+  +files/bonnie++-1.94-missing_include.patch, +bonnie++-1.94.ebuild:
+  Bump to 1.94
 
   02 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   +files/bonnie++-1.93c-missing_include.patch, bonnie++-1.93c.ebuild:
