@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/ltp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.11 2007/02/21 20:10:51 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.12 2008/11/23 15:00:37 patrick Exp $
+
+*ltp-20081031 (23 Nov 2008)
+
+  23 Nov 2008; Patrick Lauer <patrick@gentoo.org> +ltp-20081031.ebuild:
+  Bumping to newer version.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

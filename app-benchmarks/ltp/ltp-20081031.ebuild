@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20060306.ebuild,v 1.3 2008/11/23 15:00:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20081031.ebuild,v 1.1 2008/11/23 15:00:37 patrick Exp $
 
-inherit eutils portability
+inherit eutils portability flag-o-matic
 
 MY_P="${PN}-full-${PV}"
 S="${WORKDIR}/${MY_P}"
@@ -35,13 +35,13 @@ src_compile() {
 	# TODO: Fix in upstream package
 	append-ldflags -Wl,-z,now
 	# actually build
-	LDFLAGS="${LDFLAGS}" emake || die "emake failed"
+	LDFLAGS="${LDFLAGS}" PREFIX=${D}/opt/blah emake DESTDIR="${D}" || die "emake failed"
 }
 
 src_install() {
 	# avoid creating groups
 	export CREATE=0
-	make install || die "install failed"
+	DESTDIR="${D}" make install || die "install failed"
 	dodir /usr/libexec/ltp/testcases
 
 	treecopy testcases pan/pan runtest ver_linux IDcheck.sh \
