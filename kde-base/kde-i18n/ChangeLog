@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.160 2008/09/13 23:57:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.161 2008/11/23 22:07:06 pva Exp $
+
+  23 Nov 2008; Peter Volkov <pva@gentoo.org> kde-i18n-3.5.9.ebuild,
+  kde-i18n-3.5.10.ebuild:
+  Fixed slot conflict caused by hardcoding automake version, bug #248467.
 
 *kde-i18n-3.5.10 (13 Sep 2008)
 
