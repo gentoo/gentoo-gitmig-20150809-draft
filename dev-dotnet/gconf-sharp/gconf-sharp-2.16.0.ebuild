@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/gconf-sharp-2.16.0.ebuild,v 1.7 2007/07/15 02:54:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/gconf-sharp-2.16.0.ebuild,v 1.8 2008/11/23 20:48:40 loki_val Exp $
 
 GTK_SHARP_TARBALL_PREFIX="gnome-sharp"
 GTK_SHARP_REQUIRED_VERSION="2.10"
@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND="${DEPEND}
 		>=gnome-base/gconf-2.0
-		=dev-dotnet/glade-sharp-2.10*
+		|| ( >=dev-dotnet/gtk-sharp-2.12.6 =dev-dotnet/glade-sharp-2.10* )
 		=dev-dotnet/gnome-sharp-${PV}*
 		=dev-dotnet/art-sharp-${PV}*"
 
@@ -21,6 +21,16 @@ GTK_SHARP_COMPONENT_BUILD="gnome"
 GTK_SHARP_COMPONENT_BUILD_DEPS="art"
 GTK_SHARP_COMPONENT_SLOT="2"
 GTK_SHARP_COMPONENT_SLOT_DEC="-2.0"
+
+pkg_setup() {
+	if has_version '>=dev-dotnet/gtk-sharp-2.12.6'
+	then
+		if ! built_with_use --missing false '>=dev-dotnet/gtk-sharp-2.12.6' 'glade'
+		then
+			die ">=dev-dotnet/gtk-sharp-2.12.6 must be built with useflag 'glade' enabled"
+		fi
+	fi
+}
 
 src_unpack() {
 	gtk-sharp-component_src_unpack
