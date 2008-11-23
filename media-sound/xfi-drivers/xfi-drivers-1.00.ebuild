@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfi-drivers/xfi-drivers-1.00.ebuild,v 1.2 2008/11/12 17:24:20 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfi-drivers/xfi-drivers-1.00.ebuild,v 1.3 2008/11/23 10:37:58 loki_val Exp $
 
 inherit linux-mod
 
@@ -13,7 +13,7 @@ SRC_URI="http://files.creative.com/manualdn/Drivers/AVP/10792/0x0343D29A/${MY_P}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="debug"
 
