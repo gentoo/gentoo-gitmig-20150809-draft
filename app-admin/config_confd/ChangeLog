@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/config_confd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/config_confd/ChangeLog,v 1.2 2007/02/09 07:07:44 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/config_confd/ChangeLog,v 1.3 2008/11/23 18:09:09 patrick Exp $
+
+  23 Nov 2008; Patrick Lauer <patrick@gentoo.org> config_confd-0.0.2.ebuild:
+  Homepage fix, SRC_URI still wrong
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
