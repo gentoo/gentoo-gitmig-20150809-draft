@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-sl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-sl/ChangeLog,v 1.5 2008/11/06 09:32:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-sl/ChangeLog,v 1.6 2008/11/23 17:35:27 jer Exp $
+
+  23 Nov 2008; Jeroen Roovers <jer@gentoo.org> ispell-sl-0.5.3.ebuild:
+  Marked ~hppa (bug #245139).
 
   06 Nov 2008; Raúl Porcel <armin76@gentoo.org> ispell-sl-0.5.3.ebuild:
   Add ~alpha/~sparc wrt #245139

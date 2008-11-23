@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-nl/ispell-nl-1.00.ebuild,v 1.5 2008/11/06 09:30:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-nl/ispell-nl-1.00.ebuild,v 1.6 2008/11/23 17:34:00 jer Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://opentaal.nl"
 SLOT="0"
 LICENSE="LGPL-2.1"
 IUSE=""
-KEYWORDS="~alpha amd64 ~mips ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~mips ~sparc x86"
 
 DEPEND="app-text/ispell"
 
