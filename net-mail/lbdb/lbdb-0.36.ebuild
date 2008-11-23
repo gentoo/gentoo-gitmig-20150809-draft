@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.36.ebuild,v 1.1 2008/07/08 11:57:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.36.ebuild,v 1.2 2008/11/23 08:59:22 tove Exp $
 
-inherit eutils
+inherit versionator eutils
 
 MY_P=${P/-/_}
 DESCRIPTION="Little Brother database"
@@ -29,7 +29,7 @@ src_compile() {
 	if useq evo ; then
 		evoversion=$(best_version mail-client/evolution)
 		evoversion=${evoversion##mail-client/evolution-}
-		evolution_addressbook_export="/usr/libexec/evolution/${evoversion:0:3}/evolution-addressbook-export"
+		evolution_addressbook_export="/usr/libexec/evolution/$(get_version_component_range 1-2 ${evoversion})/evolution-addressbook-export"
 	fi
 
 	econf $(use_with finger) \
