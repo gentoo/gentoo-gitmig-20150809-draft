@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta.ebuild,v 1.10 2008/08/10 20:48:37 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta.ebuild,v 1.11 2008/11/23 17:44:11 patrick Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Festival Text to Speech engine"
-HOMEPAGE="http://www.cstr.ed.ac.uk/"
+HOMEPAGE="http://www.cstr.ed.ac.uk/projects/festival/"
 SITE="http://www.festvox.org/packed/festival/latest"
 MY_P=${PN}-1.96-beta
 SRC_URI="${SITE}/${MY_P}.tar.gz

@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnopernicus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.101 2008/07/17 20:49:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.102 2008/11/23 17:49:10 patrick Exp $
+
+  23 Nov 2008; Patrick Lauer <patrick@gentoo.org> gnopernicus-1.0.7.ebuild:
+  Fixing homepage
 
   17 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-1.0.7.ebuild,v 1.9 2007/01/21 22:23:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-1.0.7.ebuild,v 1.10 2008/11/23 17:49:10 patrick Exp $
 
 inherit gnome2
 
 DESCRIPTION="Software tools for blind and visually impaired"
-HOMEPAGE="http://www.baum.ro/gnopernicus.html"
+HOMEPAGE="http://www.baum.ro/index.php?language=en&pagina=produse&subpag=gnopernicus"
 
 LICENSE="LGPL-2"
 SLOT="1"
