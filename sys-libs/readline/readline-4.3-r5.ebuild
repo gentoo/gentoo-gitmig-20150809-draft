@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.29 2007/07/15 02:08:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.30 2008/11/23 18:27:39 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/readline/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 # We must be certain that we have a bash that is linked
@@ -25,10 +25,9 @@ DEPEND=">=app-shells/bash-2.05b-r2
 src_unpack() {
 	unpack ${P}.tar.gz
 
-	cd ${S}
-	for x in ${PLEVEL//x}
-	do
-		epatch ${DISTDIR}/${PN}${PV/\.}-${x}
+	cd "${S}"
+	for x in ${PLEVEL//x} ; do
+		epatch "${DISTDIR}"/${PN}${PV/\.}-${x}
 	done
 
 	# force ncurses linking #71420
@@ -50,14 +49,14 @@ src_install() {
 	# portage 2.0.50's einstall causes sandbox violations if lib64 is a
 	# directory, since readline's configure automatically sets libdir for you.
 	make DESTDIR="${D}" install || die
-	cd ${S}/shlib
+	cd "${S}"/shlib
 	make DESTDIR="${D}" install || die
 
-	cd ${S}
+	cd "${S}"
 
 	dodir /$(get_libdir)
-	mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
-	rm -f ${D}/$(get_libdir)/*.old
+	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)
+	rm -f "${D}"/$(get_libdir)/*.old
 	# bug #4411
 	gen_usr_ldscript libreadline.so
 	gen_usr_ldscript libhistory.so
@@ -67,7 +66,7 @@ src_install() {
 	# Needed because make install uses ${D} for the link
 	dosym libhistory.so.${PV/a/} /$(get_libdir)/libhistory.so.4
 	dosym libreadline.so.${PV/a/} /$(get_libdir)/libreadline.so.4
-	chmod 755 ${D}/$(get_libdir)/*.${PV/a/}
+	chmod 755 "${D}"/$(get_libdir)/*.${PV/a/}
 
 	dodoc CHANGELOG CHANGES README USAGE
 	docinto ps
