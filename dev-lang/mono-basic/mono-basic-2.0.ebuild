@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/mono-basic-2.0.ebuild,v 1.1 2008/11/19 22:46:49 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/mono-basic-2.0.ebuild,v 1.2 2008/11/23 19:57:28 loki_val Exp $
 
 inherit mono multilib
 
@@ -17,14 +17,6 @@ RDEPEND="=dev-lang/mono-${PV}*"
 DEPEND="${RDEPEND}"
 
 RESTRICT="test"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	sed -i -e "s|\(mono_libdir=\${exec_prefix}\)/lib|\1/$(get_libdir)|" \
-		configure || die "sed failed"
-}
 
 src_compile() {
 	econf || die "configure failed"
