@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.134 2008/08/04 20:12:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.135 2008/11/23 15:29:38 vanquirius Exp $
+
+*snort-2.8.3.1 (23 Nov 2008)
+
+  23 Nov 2008; Marcelo Goes <vanquirius@gentoo.org>
+  +files/snort-2.8.3.1-libnet.patch, +snort-2.8.3.1.ebuild:
+  2.8.3.1 version bump with many changes for bug 245752. Thanks to Jason
+  Wallace <jason.r.wallace at gmail dot com> and Antixrict <antixrict at
+  inbox.lv> for the rewrite. Currently in package.mask for testing.
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe local USE flags for GLEP 56.
