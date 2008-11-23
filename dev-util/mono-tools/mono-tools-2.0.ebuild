@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.0.ebuild,v 1.2 2008/11/23 19:53:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.0.ebuild,v 1.3 2008/11/23 20:34:47 loki_val Exp $
 
 EAPI=2
 
@@ -29,6 +29,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19"
 
 PATCHES=( "${FILESDIR}/${P}-html-renderer-fixes.patch" )
+
+#Fails parallel make.
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
 	base_src_prepare

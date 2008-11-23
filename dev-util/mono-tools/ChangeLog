@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.42 2008/11/23 19:53:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.43 2008/11/23 20:34:47 loki_val Exp $
+
+  23 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> mono-tools-2.0.ebuild:
+  2.0 fails parallel make 'at times'
 
   23 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
   files/mono-tools-2.0-html-renderer-fixes.patch, metadata.xml,
