@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1.ebuild,v 1.2 2008/09/26 18:47:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1.ebuild,v 1.3 2008/11/23 18:07:24 darkside Exp $
 
 inherit toolchain-funcs pam
 
@@ -22,7 +22,6 @@ DEPEND="x11-proto/xproto
 	media-libs/jpeg
 	pam? ( virtual/pam )"
 RDEPEND="${DEPEND}
-	media-fonts/corefonts
 	x11-apps/sessreg"
 
 src_unpack() {

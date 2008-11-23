@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.21 2008/09/26 18:49:28 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.22 2008/11/23 18:07:24 darkside Exp $
+
+  23 Nov 2008; Jeremy Olexa <darkside@gentoo.org> slim-1.3.1.ebuild:
+  remove corefonts from explicit RDEPEND, not needed as seen in bug #215661
 
   26 Sep 2008; Jeremy Olexa <darkside@gentoo.org> slim-1.3.1.ebuild:
   re-add ~ppc64 to 1.3.1, they snuck up on me and added the keyword
