@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/dbench
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.28 2008/04/21 16:32:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.29 2008/11/23 09:46:22 patrick Exp $
+
+*dbench-4.0 (23 Nov 2008)
+
+  23 Nov 2008; Patrick Lauer <patrick@gentoo.org> metadata.xml,
+  +dbench-4.0.ebuild:
+  Bump to 4.0, taking over maintenance.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
