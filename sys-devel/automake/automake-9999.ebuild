@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.1 2007/11/02 06:17:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.2 2008/11/23 14:56:33 vapier Exp $
 
 EGIT_REPO_URI="git://git.savannah.gnu.org/automake.git"
 
