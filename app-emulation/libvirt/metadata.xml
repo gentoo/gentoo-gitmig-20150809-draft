@@ -10,6 +10,10 @@
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>
+	<maintainer>
+		<email>marineam@gentoo.org</email>
+		<name>Michael Marineau</name>
+	</maintainer>
 	<use>
 		<flag name='iscsi'>Add support for iSCSI (Internet SCSI) remote
 			storage</flag>

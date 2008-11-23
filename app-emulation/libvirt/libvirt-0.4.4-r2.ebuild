@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.4.4-r1.ebuild,v 1.1 2008/07/15 17:25:45 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.4.4-r2.ebuild,v 1.1 2008/11/23 21:53:54 marineam Exp $
 
 inherit eutils autotools
 
@@ -45,8 +45,10 @@ src_unpack() {
 	if use kvm && ! use qemu ; then
 		epatch "${FILESDIR}"/"${P}"-binary-paths.patch
 		epatch "${FILESDIR}"/"${P}"-capabilities-kvm-path.patch
-		eautoreconf
 	fi
+
+	epatch "${FILESDIR}"/"${PN}"-0.4.6-parallel-build-fix.patch
+	eautoreconf
 }
 
 pkg_setup() {
@@ -61,7 +63,7 @@ src_compile() {
 	local my_conf=""
 	if use qemu || use kvm ; then
 		my_conf="--with-qemu \
-			$(use_with !qemu qemu-img-path /usr/bin/kvm-img)"
+			$(use_with !qemu qemu-img-name kvm-img)"
 	else
 		my_conf="--without-qemu"
 	fi
