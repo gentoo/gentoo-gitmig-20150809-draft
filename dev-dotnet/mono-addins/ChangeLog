@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/mono-addins
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.11 2008/08/10 19:10:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-addins/ChangeLog,v 1.12 2008/11/23 12:35:44 loki_val Exp $
+
+  23 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -mono-addins-0.2.ebuild, mono-addins-0.3.1.ebuild:
+  Remove libdir fixups, since mono-addins installs no 64-bit code and libdir
+  fixups were causin maintainer mode to be run. Punt 0.2
 
   10 Aug 2008; Markus Meier <maekke@gentoo.org> mono-addins-0.3.ebuild:
   x86 stable, bug #229709
