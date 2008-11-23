@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.0.ebuild,v 1.1 2008/11/19 22:57:41 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.0.ebuild,v 1.2 2008/11/23 20:12:15 loki_val Exp $
 
 inherit mono multilib autotools eutils
 
@@ -26,16 +26,6 @@ pkg_preinst() {
 	enewuser aspnet -1 -1 /tmp aspnet
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	sed -i -e "s:mkinstalldirs) \$(data:mkinstalldirs) \$(DESTDIR)\$(data:" \
-		   -e "s:gif \$(data:gif \$(DESTDIR)\$(data:" \
-	"${S}"/test/2.0/treeview/Makefile.am
-	eautoreconf
-}
-
 src_compile() {
 	econf || die "./configure failed!"
 	emake -j1 || {
@@ -48,17 +38,10 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 
-	sed -i -e "s#/usr/lib/#/usr/$(get_libdir)/#" \
-		"${D}"/usr/bin/xsp{,2} \
-		"${D}"/usr/bin/mod-mono-server{,2} \
-		"${D}"/usr/bin/asp-state{,2} \
-		"${D}"/usr/bin/dbsessmgr{,2} \
-	|| die
-
-	newinitd "${FILESDIR}"/${PV}/xsp.initd xsp
-	newinitd "${FILESDIR}"/${PV}/mod-mono-server.initd mod-mono-server
-	newconfd "${FILESDIR}"/${PV}/xsp.confd xsp
-	newconfd "${FILESDIR}"/${PV}/mod-mono-server.confd mod-mono-server
+	newinitd "${FILESDIR}"/${PV}/xsp.initd xsp || die
+	newinitd "${FILESDIR}"/${PV}/mod-mono-server.initd mod-mono-server || die
+	newconfd "${FILESDIR}"/${PV}/xsp.confd xsp || die
+	newconfd "${FILESDIR}"/${PV}/mod-mono-server.confd mod-mono-server || die
 
 	keepdir /var/run/aspnet
 
