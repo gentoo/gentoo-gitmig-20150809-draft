@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r1.ebuild,v 1.2 2008/11/23 17:05:12 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r1.ebuild,v 1.3 2008/11/23 17:46:03 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -380,7 +380,7 @@ src_unpack () {
 		sed -e "/web\.jspparser\/external\/glassfish-jspparser-2\.0\.jar/d" -i ${tmpfile} || die
 		sed -e "/j2ee\.sun\.appsrv81\/external\/appservapis-2\.0\.58\.3\.jar/d" -i ${tmpfile} || die
 		sed -e "/j2ee\.sun\.appsrv81\/external\/org-netbeans-modules-j2ee-sun-appsrv81\.jar/d" -i ${tmpfile} || die
-		sed -e "/libs\.glassfish_logging\/external\/glassfish-logging-2\.0\.jar" -i ${tmpfile} || die
+		sed -e "/libs\.glassfish_logging\/external\/glassfish-logging-2\.0\.jar/d" -i ${tmpfile} || die
 		sed -e "/spring\.webmvc\/external\/spring-webmvc-2\.5\.jar/d" -i ${tmpfile} || die
 		sed -e "/web\.jsf\/external\/shale-remoting-1\.0\.4\.jar/d" -i ${tmpfile} || die
 		sed -e "/websvc\.restlib\/external\/jsr311-api-doc\.jar/d" -i ${tmpfile} || die
@@ -407,7 +407,7 @@ src_unpack () {
 		sed -e "/mobility\.deployment\.webdav\/external\/jakarta-slide-ant-webdav-2\.1\.jar/d" -i ${tmpfile} || die
 		sed -e "/mobility\.j2meunit\/external\/jmunit4cldc11-1\.2\.1\.jar/d" -i ${tmpfile} || die
 		sed -e "/mobility\.j2meunit\/external\/jmunit4cldc10-1\.2\.1\.jar/d" -i ${tmpfile} || die
-		sed -e "/svg\.perseus\/external/perseus-nb-1\.0\.jar/d" -i ${tmpfile} || die
+		sed -e "/svg\.perseus\/external\/perseus-nb-1\.0\.jar/d" -i ${tmpfile} || die
 		sed -e "/vmd\.components\.midp\/netbeans_midp_components_basic\/dist\/netbeans_midp_components_basic\.jar/d" -i ${tmpfile} || die
 		sed -e "/vmd\.components\.midp\.pda\/netbeans_midp_components_pda\/dist\/netbeans_midp_components_pda\.jar/d" -i ${tmpfile} || die
 		sed -e "/vmd\.components\.midp\.wma\/netbeans_midp_components_wma\/dist\/netbeans_midp_components_wma\.jar/d" -i ${tmpfile} || die
