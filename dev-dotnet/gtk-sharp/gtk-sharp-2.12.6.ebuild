@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.12.6.ebuild,v 1.1 2008/11/19 23:29:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.12.6.ebuild,v 1.2 2008/11/23 21:02:03 loki_val Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnome/sources/${PN}/${PV%.*}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="doc +glade"
+IUSE="+glade"
 
 RDEPEND=">=dev-lang/mono-1.1.9
 		glade? ( >=gnome-base/libglade-2.3.6 )
@@ -21,7 +21,7 @@ RDEPEND=">=dev-lang/mono-1.1.9
 		!<dev-dotnet/glade-sharp-9999"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19
-		doc? ( >=dev-util/monodoc-1.1.8 )"
+		>=dev-util/monodoc-1.1.8"
 
 RESTRICT="test"
 
@@ -31,6 +31,7 @@ src_unpack() {
 
 	# Upstream bug #421063
 	epatch "${FILESDIR}/${PN}-2.12.0-parallelmake.patch"
+	epatch "${FILESDIR}/${PN}-2.12.0-doc-parallelmake.patch"
 	# Upstream bug #443174
 	epatch "${FILESDIR}/${PN}-2.12.0-respect-choices.patch"
 	# Upstream bug #443180
