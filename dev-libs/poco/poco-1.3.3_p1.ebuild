@@ -1,49 +1,49 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.3.2.ebuild,v 1.4 2008/08/25 17:07:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.3.3_p1.ebuild,v 1.1 2008/11/23 10:27:19 dev-zero Exp $
 
-EAPI="1"
+EAPI="2"
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic versionator
+
+MY_P="${P/_}"
+MY_DOCP="${PN}-$(get_version_component_range 1-3)-doc"
 
 DESCRIPTION="C++ class libraries that simplify and accelerate the development of network-centric, portable applications."
 HOMEPAGE="http://pocoproject.org/"
-SRC_URI="mirror://sourceforge/poco/${P}-data.tar.bz2
-	doc? ( mirror://sourceforge/poco/${P}-doc.tar.gz )"
+SRC_URI="mirror://sourceforge/poco/${MY_P}-all.tar.bz2
+	doc? ( mirror://sourceforge/poco/${MY_DOCP}.tar.gz )"
 LICENSE="Boost-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples iodbc odbc sqlite ssl"
+IUSE="doc examples iodbc mysql odbc sqlite ssl"
 
 DEPEND="dev-libs/libpcre
 	dev-libs/expat
+	sys-libs/zlib
+	mysql? ( dev-db/mysql )
 	odbc? ( iodbc? ( dev-db/libiodbc )
 		!iodbc? ( dev-db/unixODBC ) )
 	ssl? ( dev-libs/openssl )
 	sqlite? ( dev-db/sqlite:3 )"
 RDEPEND="${DEPEND}"
 
-# Upstream has three editions: "economic", "with NetSSL" and "with NetSSL and Data"
-# We take the last one and provide useflags for ssl, odbc, sqlite
-S="${WORKDIR}/${P}-data"
+S="${WORKDIR}/${MY_P}-all"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch \
-		"${FILESDIR}/${PV}-missing_includes.patch" \
-		"${FILESDIR}/${PV}-gentoo.patch"
-
+		"${FILESDIR}/${PV}-gentoo.patch" \
+		"${FILESDIR}/${PV}-unbundle_libs.patch"
 }
 
-src_compile() {
-	local targets="all"
-	local odbc="unixodbc"
+src_configure() {
+	targets="all"
+	odbc="unixodbc"
 
 	if use ssl; then
-		targets="${targets} NetSSL_OpenSSL-libexec"
+		targets="${targets} NetSSL_OpenSSL-libexec Crypto-libexec"
 		echo NetSSL_OpenSSL >> components
+		echo Crypto >> components
 	fi
 	if use odbc; then
 		targets="${targets} Data/ODBC-libexec"
@@ -57,18 +57,25 @@ src_compile() {
 		targets="${targets} Data/SQLite-libexec"
 		echo Data/SQLite >> components
 	fi
+	if use mysql; then
+		targets="${targets} Data/MySQL-libexec"
+		echo Data/MySQL >> components
+	fi
 
 	if has test ${FEATURES}; then
 		targets="${targets} cppunit tests"
 		echo CppUnit >> components
-		use ssl && targets="${targets} NetSSL_OpenSSL-tests"
+		use ssl && targets="${targets} NetSSL_OpenSSL-tests Crypto-tests"
 		use odbc && targets="${targets} Data/ODBC-tests"
 		use sqlite && targets="${targets} Data/SQLite-tests"
+		use mysql && targets="${targets} Data/MySQL-tests"
 	fi
 
+	local myconf
+	has test ${FEATURES} || myconf="--no-tests"
 	# not autoconf
 	./configure \
-		--no-samples \
+		--no-samples ${myconf} \
 		--prefix=/usr \
 		|| die "configure failed"
 
@@ -83,7 +90,9 @@ src_compile() {
 		-e "s|LINKFLAGS       = |LINKFLAGS       = ${LDFLAG} |" \
 		-e 's|-O2||g' \
 		build/config/Linux build/config/FreeBSD || die "sed failed"
+}
 
+src_compile() {
 	emake POCO_PREFIX=/usr GENTOO_ODBC="${odbc}" LIBDIR="$(get_libdir)" ${targets} || die "emake failed"
 }
 
@@ -92,7 +101,7 @@ src_install() {
 
 	dodoc CHANGELOG CONTRIBUTORS NEWS README
 
-	use doc && dohtml -r "${WORKDIR}/${P}-doc"/*
+	use doc && dohtml -r "${WORKDIR}/${MY_DOCP}"/*
 
 	if use examples ; then
 		for d in Net XML Data Util NetSSL_OpenSSL Foundation ; do

@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/poco
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.4 2008/08/25 17:07:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.5 2008/11/23 10:27:19 dev-zero Exp $
+
+*poco-1.3.3_p1 (23 Nov 2008)
+
+  23 Nov 2008; Tiziano Müller <dev-zero@gentoo.org>
+  -files/1.3.2-gentoo.patch, +files/1.3.3_p1-gentoo.patch,
+  -files/1.3.2-missing_includes.patch, +files/1.3.3_p1-unbundle_libs.patch,
+  -poco-1.3.2.ebuild, +poco-1.3.3_p1.ebuild:
+  Version bump, unbundled libs (bug #247242). Dropped old version.
 
   25 Aug 2008; Markus Meier <maekke@gentoo.org> poco-1.3.2.ebuild:
   add ~x86, bug #235675
