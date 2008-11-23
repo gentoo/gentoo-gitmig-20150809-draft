@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-20070811.ebuild,v 1.7 2008/02/27 10:43:31 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-20070811.ebuild,v 1.8 2008/11/23 16:36:43 cla Exp $
+
+inherit eutils
 
 DESCRIPTION="Some nice themes for the GDM Greeter"
 S=${WORKDIR}
@@ -86,6 +88,7 @@ src_install() {
 	cd "${D}"/usr/share/gdm/themes
 
 	unpack ${A}
+	epatch "${FILESDIR}"/soft-flower-gdm.diff
 
 	chmod -R ugo=rX *
 }
