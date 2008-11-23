@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.1.ebuild,v 1.1 2008/11/23 13:23:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.1.ebuild,v 1.2 2008/11/23 16:03:12 loki_val Exp $
 
 EAPI=1
 
@@ -96,3 +96,7 @@ pkg_setup() {
 
 }
 
+pkg_postinst() {
+	gnome2_pkg_postinst
+	elog "If banshee segfaults not long after being started, try running gnome-appearance-properties and select a theme."
+}
