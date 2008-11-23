@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.2.ebuild,v 1.8 2008/07/11 07:33:44 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/omni-0.9.2.ebuild,v 1.9 2008/11/23 19:25:07 halcy0n Exp $
 
 WANT_AUTOMAKE="1.6"
 WANT_AUTOCONF="latest"
@@ -31,9 +31,11 @@ IUSE="cups X ppds foomaticdb static doc epson"
 
 src_unpack() {
 	unpack ${P/o/O}.tar.gz
-	cd ${S}
+	cd "${S}"
+	epatch "${FILESDIR}"/Omni-0.9.2-gcc43.patch
 	if use epson; then
 		unpack OmniEpsonVendor-${PV}.tar.gz
+		epatch "${FILESDIR}"/OmniEpsonVendor-0.9.2-gcc43.patch
 	fi
 }
 

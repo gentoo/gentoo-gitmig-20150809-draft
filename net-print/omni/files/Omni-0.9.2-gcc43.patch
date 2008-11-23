@@ -1,0 +1,1692 @@
+Submitted By: Mario Fetka (mario dot fetka at gmail dot com)
+Date: 2008-09-02
+Initial Package Version: 0.9.2
+Origin: me
+Upstream Status: unknown
+Description: make it compile with gcc 4.3
+ 
+diff -Naur Omni-0.9.2.orig/Brother/Brother ESC Blitter.cpp Omni-0.9.2/Brother/Brother ESC Blitter.cpp
+--- Omni-0.9.2.orig/Brother/Brother ESC Blitter.cpp	2004-08-30 14:53:27.000000000 +0000
++++ Omni-0.9.2/Brother/Brother ESC Blitter.cpp	2008-09-02 13:25:54.432004654 +0000
+@@ -19,6 +19,9 @@
+ #include "Brother_ESC_Blitter.hpp"
+ #include "Brother_ESC_Instance.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #include <DeviceOrientation.hpp>
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+diff -Naur Omni-0.9.2.orig/Brother/Brother ESC Instance.cpp Omni-0.9.2/Brother/Brother ESC Instance.cpp
+--- Omni-0.9.2.orig/Brother/Brother ESC Instance.cpp	2004-08-26 19:47:13.000000000 +0000
++++ Omni-0.9.2/Brother/Brother ESC Instance.cpp	2008-09-02 13:25:54.433004991 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/Brother/Brother PCL Blitter.cpp Omni-0.9.2/Brother/Brother PCL Blitter.cpp
+--- Omni-0.9.2.orig/Brother/Brother PCL Blitter.cpp	2004-08-30 14:53:26.000000000 +0000
++++ Omni-0.9.2/Brother/Brother PCL Blitter.cpp	2008-09-02 13:25:54.433004991 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/Brother/Brother PCL Instance.cpp Omni-0.9.2/Brother/Brother PCL Instance.cpp
+--- Omni-0.9.2.orig/Brother/Brother PCL Instance.cpp	2004-08-26 19:47:14.000000000 +0000
++++ Omni-0.9.2/Brother/Brother PCL Instance.cpp	2008-09-02 13:25:54.434003512 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/CUPS/GenerateOmniPPD.cpp Omni-0.9.2/CUPS/GenerateOmniPPD.cpp
+--- Omni-0.9.2.orig/CUPS/GenerateOmniPPD.cpp	2004-06-09 15:19:49.000000000 +0000
++++ Omni-0.9.2/CUPS/GenerateOmniPPD.cpp	2008-09-02 13:25:54.439003798 +0000
+@@ -22,6 +22,7 @@
+ #include <cstdio>
+ #include <cstdlib>
+ #include <iomanip>
++#include <cstring>
+ 
+ #include <cups/cups.h>
+ #include <cups/raster.h>
+diff -Naur Omni-0.9.2.orig/CUPS/GenerateOmniPPDs.cpp Omni-0.9.2/CUPS/GenerateOmniPPDs.cpp
+--- Omni-0.9.2.orig/CUPS/GenerateOmniPPDs.cpp	2004-06-09 15:18:03.000000000 +0000
++++ Omni-0.9.2/CUPS/GenerateOmniPPDs.cpp	2008-09-02 13:25:54.439003798 +0000
+@@ -35,6 +35,9 @@
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ void
+ printUsage (char *pszProgramName)
+ {
+diff -Naur Omni-0.9.2.orig/Canon/Canon BJC-8500 Blitter.cpp Omni-0.9.2/Canon/Canon BJC-8500 Blitter.cpp
+--- Omni-0.9.2.orig/Canon/Canon BJC-8500 Blitter.cpp	2004-08-30 14:53:30.000000000 +0000
++++ Omni-0.9.2/Canon/Canon BJC-8500 Blitter.cpp	2008-09-02 13:25:54.435003639 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ const static bool fTestNoCompression = false;
+diff -Naur Omni-0.9.2.orig/Canon/Canon BJC-8500 Instance.cpp Omni-0.9.2/Canon/Canon BJC-8500 Instance.cpp
+--- Omni-0.9.2.orig/Canon/Canon BJC-8500 Instance.cpp	2004-08-26 19:47:14.000000000 +0000
++++ Omni-0.9.2/Canon/Canon BJC-8500 Instance.cpp	2008-09-02 13:25:54.435003639 +0000
+@@ -21,6 +21,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/Canon/Canon Blitter.cpp Omni-0.9.2/Canon/Canon Blitter.cpp
+--- Omni-0.9.2.orig/Canon/Canon Blitter.cpp	2004-08-30 14:53:28.000000000 +0000
++++ Omni-0.9.2/Canon/Canon Blitter.cpp	2008-09-02 13:25:54.436003556 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ const static bool fTestNoCompression = false;
+diff -Naur Omni-0.9.2.orig/Canon/Canon Instance.cpp Omni-0.9.2/Canon/Canon Instance.cpp
+--- Omni-0.9.2.orig/Canon/Canon Instance.cpp	2004-08-26 19:47:16.000000000 +0000
++++ Omni-0.9.2/Canon/Canon Instance.cpp	2008-09-02 13:25:54.437003404 +0000
+@@ -21,6 +21,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/Canon/Canon S450 Blitter.cpp Omni-0.9.2/Canon/Canon S450 Blitter.cpp
+--- Omni-0.9.2.orig/Canon/Canon S450 Blitter.cpp	2004-08-30 14:53:13.000000000 +0000
++++ Omni-0.9.2/Canon/Canon S450 Blitter.cpp	2008-09-02 13:25:54.437003404 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ const static bool fTestNoCompression = false;
+diff -Naur Omni-0.9.2.orig/Canon/Canon S450 Instance.cpp Omni-0.9.2/Canon/Canon S450 Instance.cpp
+--- Omni-0.9.2.orig/Canon/Canon S450 Instance.cpp	2004-08-26 19:47:00.000000000 +0000
++++ Omni-0.9.2/Canon/Canon S450 Instance.cpp	2008-09-02 13:25:54.438003531 +0000
+@@ -21,6 +21,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/DeviceConnection.cpp Omni-0.9.2/DeviceConnection.cpp
+--- Omni-0.9.2.orig/DeviceConnection.cpp	2003-11-14 18:22:14.000000000 +0000
++++ Omni-0.9.2/DeviceConnection.cpp	2008-09-02 13:25:54.439003798 +0000
+@@ -19,6 +19,9 @@
+ #include "DeviceConnection.hpp"
+ #include "StringResource.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceConnection::
+ DeviceConnection (Device *pDevice,
+                   int     id,
+diff -Naur Omni-0.9.2.orig/DeviceCopies.cpp Omni-0.9.2/DeviceCopies.cpp
+--- Omni-0.9.2.orig/DeviceCopies.cpp	2004-08-26 19:47:29.000000000 +0000
++++ Omni-0.9.2/DeviceCopies.cpp	2008-09-02 13:25:54.440003646 +0000
+@@ -19,6 +19,9 @@
+ #include "DeviceCopies.hpp"
+ #include "JobProperties.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "Copies"
+ };
+diff -Naur Omni-0.9.2.orig/DeviceDither.cpp Omni-0.9.2/DeviceDither.cpp
+--- Omni-0.9.2.orig/DeviceDither.cpp	2003-11-24 22:05:36.000000000 +0000
++++ Omni-0.9.2/DeviceDither.cpp	2008-09-02 13:25:54.440003646 +0000
+@@ -20,6 +20,7 @@
+ #include "PrintDevice.hpp"
+ #include "JobProperties.hpp"
+ 
++#include <cstring>
+ #include <cstdio>
+ #include <cstdlib>
+ #include <fstream>
+diff -Naur Omni-0.9.2.orig/DeviceForm.cpp Omni-0.9.2/DeviceForm.cpp
+--- Omni-0.9.2.orig/DeviceForm.cpp	2004-06-09 15:18:03.000000000 +0000
++++ Omni-0.9.2/DeviceForm.cpp	2008-09-02 13:25:54.441003912 +0000
+@@ -22,6 +22,7 @@
+ #include "JobProperties.hpp"
+ 
+ #include <cstdio>
++#include <cstdlib>
+ #include <cstring>
+ #include <iomanip>
+ 
+diff -Naur Omni-0.9.2.orig/DeviceMedia.cpp Omni-0.9.2/DeviceMedia.cpp
+--- Omni-0.9.2.orig/DeviceMedia.cpp	2004-08-30 14:53:40.000000000 +0000
++++ Omni-0.9.2/DeviceMedia.cpp	2008-09-02 13:25:54.442003551 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <cstdio>
+ #include <cstring>
++#include <cstdlib>
+ 
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "media"
+diff -Naur Omni-0.9.2.orig/DeviceNUp.cpp Omni-0.9.2/DeviceNUp.cpp
+--- Omni-0.9.2.orig/DeviceNUp.cpp	2004-08-30 14:53:33.000000000 +0000
++++ Omni-0.9.2/DeviceNUp.cpp	2008-09-02 13:25:54.442003551 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <cstdio>
+ #include <cstring>
++#include <cstdlib>
+ 
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "NumberUp",
+diff -Naur Omni-0.9.2.orig/DeviceOrientation.cpp Omni-0.9.2/DeviceOrientation.cpp
+--- Omni-0.9.2.orig/DeviceOrientation.cpp	2004-08-30 14:53:21.000000000 +0000
++++ Omni-0.9.2/DeviceOrientation.cpp	2008-09-02 13:25:54.442003551 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <cstdio>
+ #include <cstring>
++#include <cstdlib>
+ 
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "Rotation"
+diff -Naur Omni-0.9.2.orig/DeviceOutputBin.cpp Omni-0.9.2/DeviceOutputBin.cpp
+--- Omni-0.9.2.orig/DeviceOutputBin.cpp	2004-08-30 14:53:16.000000000 +0000
++++ Omni-0.9.2/DeviceOutputBin.cpp	2008-09-02 13:25:54.443003748 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <cstdio>
+ #include <cstring>
++#include <cstdlib>
+ 
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "OutputBin"
+diff -Naur Omni-0.9.2.orig/DevicePrintMode.cpp Omni-0.9.2/DevicePrintMode.cpp
+--- Omni-0.9.2.orig/DevicePrintMode.cpp	2004-08-30 14:53:15.000000000 +0000
++++ Omni-0.9.2/DevicePrintMode.cpp	2008-09-02 13:25:54.443003748 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <cstdio>
+ #include <cstring>
++#include <cstdlib>
+ 
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "printmode"
+diff -Naur Omni-0.9.2.orig/DeviceResolution.cpp Omni-0.9.2/DeviceResolution.cpp
+--- Omni-0.9.2.orig/DeviceResolution.cpp	2004-08-30 14:53:19.000000000 +0000
++++ Omni-0.9.2/DeviceResolution.cpp	2008-09-02 13:25:54.444003945 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <cstdio>
+ #include <cstring>
++#include <cstdlib>
+ 
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "Resolution"
+diff -Naur Omni-0.9.2.orig/DeviceScaling.cpp Omni-0.9.2/DeviceScaling.cpp
+--- Omni-0.9.2.orig/DeviceScaling.cpp	2004-08-30 14:53:09.000000000 +0000
++++ Omni-0.9.2/DeviceScaling.cpp	2008-09-02 13:25:54.444003945 +0000
+@@ -20,6 +20,8 @@
+ #include "JobProperties.hpp"
+ 
+ #include <errno.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "ScalingType",
+diff -Naur Omni-0.9.2.orig/DeviceSheetCollate.cpp Omni-0.9.2/DeviceSheetCollate.cpp
+--- Omni-0.9.2.orig/DeviceSheetCollate.cpp	2004-08-30 14:53:25.000000000 +0000
++++ Omni-0.9.2/DeviceSheetCollate.cpp	2008-09-02 13:25:54.445003792 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <cstdio>
+ #include <cstring>
++#include <cstdlib>
+ 
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "SheetCollate"
+diff -Naur Omni-0.9.2.orig/DeviceSide.cpp Omni-0.9.2/DeviceSide.cpp
+--- Omni-0.9.2.orig/DeviceSide.cpp	2004-08-30 14:53:36.000000000 +0000
++++ Omni-0.9.2/DeviceSide.cpp	2008-09-02 13:25:54.445003792 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <cstdio>
+ #include <cstring>
++#include <cstdlib>
+ 
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "Sides"
+diff -Naur Omni-0.9.2.orig/DeviceStitching.cpp Omni-0.9.2/DeviceStitching.cpp
+--- Omni-0.9.2.orig/DeviceStitching.cpp	2004-08-30 14:53:15.000000000 +0000
++++ Omni-0.9.2/DeviceStitching.cpp	2008-09-02 13:25:54.446003570 +0000
+@@ -19,6 +19,9 @@
+ #include "DeviceStitching.hpp"
+ #include "JobProperties.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "StitchingPosition",
+    "StitchingReferenceEdge",
+diff -Naur Omni-0.9.2.orig/DeviceTester2.cpp Omni-0.9.2/DeviceTester2.cpp
+--- Omni-0.9.2.orig/DeviceTester2.cpp	2003-11-14 18:22:08.000000000 +0000
++++ Omni-0.9.2/DeviceTester2.cpp	2008-09-02 13:25:54.446003570 +0000
+@@ -21,6 +21,9 @@
+ #include "Omni.hpp"
+ #include "JobProperties.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #if 1
+ 
+ int
+diff -Naur Omni-0.9.2.orig/DeviceTester3.cpp Omni-0.9.2/DeviceTester3.cpp
+--- Omni-0.9.2.orig/DeviceTester3.cpp	2003-03-20 22:19:43.000000000 +0000
++++ Omni-0.9.2/DeviceTester3.cpp	2008-09-02 13:25:54.446003570 +0000
+@@ -19,6 +19,9 @@
+ #include "Device.hpp"
+ #include "Omni.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #include <sys/types.h>
+ #include <sys/wait.h>
+ #include <sys/stat.h>
+diff -Naur Omni-0.9.2.orig/DeviceTester4.cpp Omni-0.9.2/DeviceTester4.cpp
+--- Omni-0.9.2.orig/DeviceTester4.cpp	2004-01-26 20:49:08.000000000 +0000
++++ Omni-0.9.2/DeviceTester4.cpp	2008-09-02 13:25:54.447003767 +0000
+@@ -20,6 +20,9 @@
+ #include "Omni.hpp"
+ #include "JobProperties.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ // (source setit "test XMLDevice"; ./DeviceTester4 -sproperties='XMLMasterFile="Test Me.xml"' --driver XMLOmniDevice)
+ 
+ Device *
+diff -Naur Omni-0.9.2.orig/DeviceTester5.cpp Omni-0.9.2/DeviceTester5.cpp
+--- Omni-0.9.2.orig/DeviceTester5.cpp	2003-11-14 18:22:08.000000000 +0000
++++ Omni-0.9.2/DeviceTester5.cpp	2008-09-02 13:25:54.447003767 +0000
+@@ -21,6 +21,9 @@
+ #include <Omni.hpp>
+ #include <JobProperties.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ Device *
+ loadDevice (PSZCRO    pszFullDeviceName,
+             PSZCRO    pszJobProperties,
+diff -Naur Omni-0.9.2.orig/DeviceTray.cpp Omni-0.9.2/DeviceTray.cpp
+--- Omni-0.9.2.orig/DeviceTray.cpp	2004-08-30 14:53:37.000000000 +0000
++++ Omni-0.9.2/DeviceTray.cpp	2008-09-02 13:25:54.447003767 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <cstdio>
+ #include <cstring>
++#include <cstdlib>
+ 
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "InputTray"
+diff -Naur Omni-0.9.2.orig/DeviceTrimming.cpp Omni-0.9.2/DeviceTrimming.cpp
+--- Omni-0.9.2.orig/DeviceTrimming.cpp	2004-08-30 14:53:13.000000000 +0000
++++ Omni-0.9.2/DeviceTrimming.cpp	2008-09-02 13:25:54.448003475 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <cstdio>
+ #include <cstring>
++#include <cstdlib>
+ 
+ static PSZCRO vapszJobPropertyKeys[] = {
+    "Trimming"
+diff -Naur Omni-0.9.2.orig/DitherLibraryExample.cpp Omni-0.9.2/DitherLibraryExample.cpp
+--- Omni-0.9.2.orig/DitherLibraryExample.cpp	2003-11-14 18:22:31.000000000 +0000
++++ Omni-0.9.2/DitherLibraryExample.cpp	2008-09-02 13:25:54.448003475 +0000
+@@ -29,6 +29,8 @@
+ #include "Device.hpp"
+ #include "JobProperties.hpp"
+ 
++#include <cstring>
++
+ class DitherLibraryExample : public DeviceDither
+ {
+ public:
+diff -Naur Omni-0.9.2.orig/Enumeration.cpp Omni-0.9.2/Enumeration.cpp
+--- Omni-0.9.2.orig/Enumeration.cpp	2004-08-26 19:47:25.000000000 +0000
++++ Omni-0.9.2/Enumeration.cpp	2008-09-02 13:25:54.448003475 +0000
+@@ -19,6 +19,9 @@
+ #include "Enumeration.hpp"
+ #include "JobProperties.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ ArrayEnumerator::
+ ArrayEnumerator (int cKeys, PSZCRO *aKeys)
+ {
+diff -Naur Omni-0.9.2.orig/Epson/Epson ESC Blitter.cpp Omni-0.9.2/Epson/Epson ESC Blitter.cpp
+--- Omni-0.9.2.orig/Epson/Epson ESC Blitter.cpp	2004-08-30 14:53:10.000000000 +0000
++++ Omni-0.9.2/Epson/Epson ESC Blitter.cpp	2008-09-02 13:25:54.449003463 +0000
+@@ -19,6 +19,9 @@
+ #include "Epson_ESC_Blitter.hpp"
+ #include "Epson_ESC_Instance.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #include <DeviceOrientation.hpp>
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+diff -Naur Omni-0.9.2.orig/Epson/Epson ESC Instance.cpp Omni-0.9.2/Epson/Epson ESC Instance.cpp
+--- Omni-0.9.2.orig/Epson/Epson ESC Instance.cpp	2004-08-26 19:46:55.000000000 +0000
++++ Omni-0.9.2/Epson/Epson ESC Instance.cpp	2008-09-02 13:25:54.449003463 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/Epson/Epson ESCP2 Blitter.cpp Omni-0.9.2/Epson/Epson ESCP2 Blitter.cpp
+--- Omni-0.9.2.orig/Epson/Epson ESCP2 Blitter.cpp	2004-08-30 14:53:17.000000000 +0000
++++ Omni-0.9.2/Epson/Epson ESCP2 Blitter.cpp	2008-09-02 13:25:54.450003799 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ const static bool fTestNoCompression = false;
+ 
+ int compressEpsonRLE (PBYTE  pbData,
+diff -Naur Omni-0.9.2.orig/Epson/Epson ESCP2 Instance.cpp Omni-0.9.2/Epson/Epson ESCP2 Instance.cpp
+--- Omni-0.9.2.orig/Epson/Epson ESCP2 Instance.cpp	2004-08-26 19:47:04.000000000 +0000
++++ Omni-0.9.2/Epson/Epson ESCP2 Instance.cpp	2008-09-02 13:25:54.451003926 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/Epson/Epson High Res ESCP2 Blitter.cpp Omni-0.9.2/Epson/Epson High Res ESCP2 Blitter.cpp
+--- Omni-0.9.2.orig/Epson/Epson High Res ESCP2 Blitter.cpp	2004-01-26 20:49:25.000000000 +0000
++++ Omni-0.9.2/Epson/Epson High Res ESCP2 Blitter.cpp	2008-09-02 13:25:54.452003774 +0000
+@@ -20,6 +20,9 @@
+ #include "Epson_High_Res_ESCP2_Instance.hpp"
+ #include "DeviceOrientation.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #include <stdio.h>
+ 
+ #define PERF_CHANGE 1
+diff -Naur Omni-0.9.2.orig/Epson/Epson High Res ESCP2 Instance.cpp Omni-0.9.2/Epson/Epson High Res ESCP2 Instance.cpp
+--- Omni-0.9.2.orig/Epson/Epson High Res ESCP2 Instance.cpp	2004-08-26 19:46:59.000000000 +0000
++++ Omni-0.9.2/Epson/Epson High Res ESCP2 Instance.cpp	2008-09-02 13:25:54.453003552 +0000
+@@ -19,6 +19,9 @@
+ #include "Epson_High_Res_ESCP2_Instance.hpp"
+ #include "defines.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #include <iostream>
+ #include <sstream>
+ 
+diff -Naur Omni-0.9.2.orig/Epson/Epson PCL Blitter.cpp Omni-0.9.2/Epson/Epson PCL Blitter.cpp
+--- Omni-0.9.2.orig/Epson/Epson PCL Blitter.cpp	2004-08-30 14:53:10.000000000 +0000
++++ Omni-0.9.2/Epson/Epson PCL Blitter.cpp	2008-09-02 13:25:54.454003679 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/Epson/Epson PCL Instance.cpp Omni-0.9.2/Epson/Epson PCL Instance.cpp
+--- Omni-0.9.2.orig/Epson/Epson PCL Instance.cpp	2004-08-26 19:46:55.000000000 +0000
++++ Omni-0.9.2/Epson/Epson PCL Instance.cpp	2008-09-02 13:25:54.455003876 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/Foomatic/OmniFoomaticGenerator.cpp Omni-0.9.2/Foomatic/OmniFoomaticGenerator.cpp
+--- Omni-0.9.2.orig/Foomatic/OmniFoomaticGenerator.cpp	2004-08-30 16:06:02.000000000 +0000
++++ Omni-0.9.2/Foomatic/OmniFoomaticGenerator.cpp	2008-09-02 13:25:54.456003794 +0000
+@@ -21,6 +21,8 @@
+ #include <unistd.h>
+ #include <sstream>
+ #include <fstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ #include "Device.hpp"
+ #include "Omni.hpp"
+diff -Naur Omni-0.9.2.orig/GhostscriptInterface.cpp Omni-0.9.2/GhostscriptInterface.cpp
+--- Omni-0.9.2.orig/GhostscriptInterface.cpp	2003-11-14 18:22:31.000000000 +0000
++++ Omni-0.9.2/GhostscriptInterface.cpp	2008-09-02 13:25:54.457003083 +0000
+@@ -21,6 +21,8 @@
+ 
+ #include <cstdio>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ /*--------------------------------------------------------------------------------*/
+ /*                          GhostscriptInferfaceInit                              */
+diff -Naur Omni-0.9.2.orig/GplCompression.cpp Omni-0.9.2/GplCompression.cpp
+--- Omni-0.9.2.orig/GplCompression.cpp	2003-03-20 22:20:07.000000000 +0000
++++ Omni-0.9.2/GplCompression.cpp	2008-09-02 13:25:54.458003978 +0000
+@@ -19,6 +19,7 @@
+ #include "GplCompression.hpp"
+ #include "DevicePrintMode.hpp"
+ 
++#include <cstring>
+ #include <cstdlib>
+ 
+ #include <memory>
+diff -Naur Omni-0.9.2.orig/GplDitherInstance.cpp Omni-0.9.2/GplDitherInstance.cpp
+--- Omni-0.9.2.orig/GplDitherInstance.cpp	2003-11-14 18:22:19.000000000 +0000
++++ Omni-0.9.2/GplDitherInstance.cpp	2008-09-02 13:25:54.466003458 +0000
+@@ -20,6 +20,7 @@
+ #include "JobProperties.hpp"
+ 
+ #include <cmath>
++#include <cstring>
+ 
+ #undef  MAX3
+ #define MAX3(a, b, c)                        ((a) > (b) ? ((a) > (c) ? (a) : (c)) : (b) > (c) ? (b) : (c))
+diff -Naur Omni-0.9.2.orig/HP LaserJet/HP LaserJet PCL Blitter.cpp Omni-0.9.2/HP LaserJet/HP LaserJet PCL Blitter.cpp
+--- Omni-0.9.2.orig/HP LaserJet/HP LaserJet PCL Blitter.cpp	2004-08-30 14:53:15.000000000 +0000
++++ Omni-0.9.2/HP LaserJet/HP LaserJet PCL Blitter.cpp	2008-09-02 13:25:54.468003783 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/HP LaserJet/HP LaserJet PCL Instance.cpp Omni-0.9.2/HP LaserJet/HP LaserJet PCL Instance.cpp
+--- Omni-0.9.2.orig/HP LaserJet/HP LaserJet PCL Instance.cpp	2004-08-26 19:47:01.000000000 +0000
++++ Omni-0.9.2/HP LaserJet/HP LaserJet PCL Instance.cpp	2008-09-02 13:25:54.468003783 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/IBM/IBM 5577 Blitter.cpp Omni-0.9.2/IBM/IBM 5577 Blitter.cpp
+--- Omni-0.9.2.orig/IBM/IBM 5577 Blitter.cpp	2004-08-30 14:53:32.000000000 +0000
++++ Omni-0.9.2/IBM/IBM 5577 Blitter.cpp	2008-09-02 13:25:54.469003491 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/IBM/IBM 5577 Instance.cpp Omni-0.9.2/IBM/IBM 5577 Instance.cpp
+--- Omni-0.9.2.orig/IBM/IBM 5577 Instance.cpp	2004-09-01 15:57:58.000000000 +0000
++++ Omni-0.9.2/IBM/IBM 5577 Instance.cpp	2008-09-02 13:25:54.470003129 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/IBM/IBM ESC Blitter.cpp Omni-0.9.2/IBM/IBM ESC Blitter.cpp
+--- Omni-0.9.2.orig/IBM/IBM ESC Blitter.cpp	2004-08-30 14:53:29.000000000 +0000
++++ Omni-0.9.2/IBM/IBM ESC Blitter.cpp	2008-09-02 13:25:54.491004052 +0000
+@@ -23,6 +23,9 @@
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/IBM/IBM ESC Instance.cpp Omni-0.9.2/IBM/IBM ESC Instance.cpp
+--- Omni-0.9.2.orig/IBM/IBM ESC Instance.cpp	2004-08-26 19:47:16.000000000 +0000
++++ Omni-0.9.2/IBM/IBM ESC Instance.cpp	2008-09-02 13:25:54.491004052 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/IBM/IBM PCL Blitter.cpp Omni-0.9.2/IBM/IBM PCL Blitter.cpp
+--- Omni-0.9.2.orig/IBM/IBM PCL Blitter.cpp	2004-08-30 14:53:29.000000000 +0000
++++ Omni-0.9.2/IBM/IBM PCL Blitter.cpp	2008-09-02 13:25:54.493004027 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/IBM/IBM PCL Instance.cpp Omni-0.9.2/IBM/IBM PCL Instance.cpp
+--- Omni-0.9.2.orig/IBM/IBM PCL Instance.cpp	2004-08-26 19:47:16.000000000 +0000
++++ Omni-0.9.2/IBM/IBM PCL Instance.cpp	2008-09-02 13:25:54.494003735 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/IBM/IBM Pages Blitter.cpp Omni-0.9.2/IBM/IBM Pages Blitter.cpp
+--- Omni-0.9.2.orig/IBM/IBM Pages Blitter.cpp	2004-08-30 14:53:36.000000000 +0000
++++ Omni-0.9.2/IBM/IBM Pages Blitter.cpp	2008-09-02 13:25:54.492003551 +0000
+@@ -23,6 +23,9 @@
+ #include "DeviceTray.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/IBM/IBM Pages Instance.cpp Omni-0.9.2/IBM/IBM Pages Instance.cpp
+--- Omni-0.9.2.orig/IBM/IBM Pages Instance.cpp	2004-08-26 19:47:23.000000000 +0000
++++ Omni-0.9.2/IBM/IBM Pages Instance.cpp	2008-09-02 13:25:54.492003551 +0000
+@@ -25,6 +25,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/IBM/IBM RPDL Blitter.cpp Omni-0.9.2/IBM/IBM RPDL Blitter.cpp
+--- Omni-0.9.2.orig/IBM/IBM RPDL Blitter.cpp	2004-08-30 14:53:32.000000000 +0000
++++ Omni-0.9.2/IBM/IBM RPDL Blitter.cpp	2008-09-02 13:25:54.494003735 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/IBM/IBM RPDL Instance.cpp Omni-0.9.2/IBM/IBM RPDL Instance.cpp
+--- Omni-0.9.2.orig/IBM/IBM RPDL Instance.cpp	2004-08-26 19:45:20.000000000 +0000
++++ Omni-0.9.2/IBM/IBM RPDL Instance.cpp	2008-09-02 13:25:54.495004002 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/JobDialog/Tester.cpp Omni-0.9.2/JobDialog/Tester.cpp
+--- Omni-0.9.2.orig/JobDialog/Tester.cpp	2003-11-19 23:41:36.000000000 +0000
++++ Omni-0.9.2/JobDialog/Tester.cpp	2008-09-02 13:25:54.495004002 +0000
+@@ -19,6 +19,8 @@
+ #include <iostream>
+ #include <memory>
+ #include <string>
++#include <cstring>
++#include <cstdlib>
+ 
+ #include "OmniGSInterface.hpp"
+ #include <Omni.hpp>
+diff -Naur Omni-0.9.2.orig/JobProperties.cpp Omni-0.9.2/JobProperties.cpp
+--- Omni-0.9.2.orig/JobProperties.cpp	2004-08-26 19:46:51.000000000 +0000
++++ Omni-0.9.2/JobProperties.cpp	2008-09-02 13:25:54.496003919 +0000
+@@ -21,6 +21,7 @@
+ #include <iostream>
+ #include <sstream>
+ #include <cstdlib>
++#include <cstring>
+ 
+ #define PRINT_VAR(x)   std::cerr << #x " = " << SAFE_PRINT_PSZ(x) << std::endl
+ 
+diff -Naur Omni-0.9.2.orig/KS/KS ESC Blitter.cpp Omni-0.9.2/KS/KS ESC Blitter.cpp
+--- Omni-0.9.2.orig/KS/KS ESC Blitter.cpp	2004-08-30 14:53:20.000000000 +0000
++++ Omni-0.9.2/KS/KS ESC Blitter.cpp	2008-09-02 13:25:54.497003767 +0000
+@@ -23,6 +23,9 @@
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/KS/KS ESC Instance.cpp Omni-0.9.2/KS/KS ESC Instance.cpp
+--- Omni-0.9.2.orig/KS/KS ESC Instance.cpp	2004-08-26 19:47:08.000000000 +0000
++++ Omni-0.9.2/KS/KS ESC Instance.cpp	2008-09-02 13:25:54.497003767 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/Kyocera/Kyocera PCL Blitter.cpp Omni-0.9.2/Kyocera/Kyocera PCL Blitter.cpp
+--- Omni-0.9.2.orig/Kyocera/Kyocera PCL Blitter.cpp	2004-08-30 14:53:26.000000000 +0000
++++ Omni-0.9.2/Kyocera/Kyocera PCL Blitter.cpp	2008-09-02 13:25:54.498003685 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/Kyocera/Kyocera PCL Instance.cpp Omni-0.9.2/Kyocera/Kyocera PCL Instance.cpp
+--- Omni-0.9.2.orig/Kyocera/Kyocera PCL Instance.cpp	2004-08-26 19:47:13.000000000 +0000
++++ Omni-0.9.2/Kyocera/Kyocera PCL Instance.cpp	2008-09-02 13:25:54.499003532 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/MonoDither.cpp Omni-0.9.2/MonoDither.cpp
+--- Omni-0.9.2.orig/MonoDither.cpp	2004-08-30 14:53:36.000000000 +0000
++++ Omni-0.9.2/MonoDither.cpp	2008-09-02 13:25:54.499003532 +0000
+@@ -19,6 +19,8 @@
+ #include "MonoDither.hpp"
+ #include "Device.hpp"
+ 
++#include <cstring>
++
+ // Prebuilt Magic table for halftone ordered dithers - Alternate Set
+ 
+ static BYTE GammaTbl [256] = {
+diff -Naur Omni-0.9.2.orig/Okidata/OkiPos Blitter.cpp Omni-0.9.2/Okidata/OkiPos Blitter.cpp
+--- Omni-0.9.2.orig/Okidata/OkiPos Blitter.cpp	2004-08-30 14:53:41.000000000 +0000
++++ Omni-0.9.2/Okidata/OkiPos Blitter.cpp	2008-09-02 13:25:54.504003679 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/Okidata/OkiPos Instance.cpp Omni-0.9.2/Okidata/OkiPos Instance.cpp
+--- Omni-0.9.2.orig/Okidata/OkiPos Instance.cpp	2004-08-26 19:46:49.000000000 +0000
++++ Omni-0.9.2/Okidata/OkiPos Instance.cpp	2008-09-02 13:25:54.505003946 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/Okidata/Okidata ESC Blitter.cpp Omni-0.9.2/Okidata/Okidata ESC Blitter.cpp
+--- Omni-0.9.2.orig/Okidata/Okidata ESC Blitter.cpp	2004-08-30 14:53:26.000000000 +0000
++++ Omni-0.9.2/Okidata/Okidata ESC Blitter.cpp	2008-09-02 13:25:54.500003799 +0000
+@@ -23,6 +23,9 @@
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/Okidata/Okidata ESC Instance.cpp Omni-0.9.2/Okidata/Okidata ESC Instance.cpp
+--- Omni-0.9.2.orig/Okidata/Okidata ESC Instance.cpp	2004-08-26 19:47:13.000000000 +0000
++++ Omni-0.9.2/Okidata/Okidata ESC Instance.cpp	2008-09-02 13:25:54.500003799 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/Okidata/Okidata ESCP2 Blitter.cpp Omni-0.9.2/Okidata/Okidata ESCP2 Blitter.cpp
+--- Omni-0.9.2.orig/Okidata/Okidata ESCP2 Blitter.cpp	2004-08-30 14:53:35.000000000 +0000
++++ Omni-0.9.2/Okidata/Okidata ESCP2 Blitter.cpp	2008-09-02 13:25:54.501003926 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ const static bool fTestNoCompression = false;
+ 
+ int compressEpsonRLE (PBYTE  pbData,
+diff -Naur Omni-0.9.2.orig/Okidata/Okidata ESCP2 Instance.cpp Omni-0.9.2/Okidata/Okidata ESCP2 Instance.cpp
+--- Omni-0.9.2.orig/Okidata/Okidata ESCP2 Instance.cpp	2004-08-26 19:47:22.000000000 +0000
++++ Omni-0.9.2/Okidata/Okidata ESCP2 Instance.cpp	2008-09-02 13:25:54.502003914 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/Okidata/Okidata PCL Blitter.cpp Omni-0.9.2/Okidata/Okidata PCL Blitter.cpp
+--- Omni-0.9.2.orig/Okidata/Okidata PCL Blitter.cpp	2004-08-30 14:53:25.000000000 +0000
++++ Omni-0.9.2/Okidata/Okidata PCL Blitter.cpp	2008-09-02 13:25:54.502003914 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/Okidata/Okidata PCL Instance.cpp Omni-0.9.2/Okidata/Okidata PCL Instance.cpp
+--- Omni-0.9.2.orig/Okidata/Okidata PCL Instance.cpp	2004-08-26 19:47:13.000000000 +0000
++++ Omni-0.9.2/Okidata/Okidata PCL Instance.cpp	2008-09-02 13:25:54.503003761 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/Omni.cpp Omni-0.9.2/Omni.cpp
+--- Omni-0.9.2.orig/Omni.cpp	2004-08-26 19:46:57.000000000 +0000
++++ Omni-0.9.2/Omni.cpp	2008-09-02 13:25:54.506003724 +0000
+@@ -26,6 +26,7 @@
+ #include <list>
+ #include <set>
+ #include <fstream>
++#include <cstring>
+ 
+ #include <glob.h>
+ #include <signal.h>
+diff -Naur Omni-0.9.2.orig/OmniDevice.cpp Omni-0.9.2/OmniDevice.cpp
+--- Omni-0.9.2.orig/OmniDevice.cpp	2003-03-20 22:20:39.000000000 +0000
++++ Omni-0.9.2/OmniDevice.cpp	2008-09-02 13:25:54.506003724 +0000
+@@ -19,6 +19,8 @@
+ #include "OmniDevice.hpp"
+ 
+ #include <string>
++#include <cstring>
++#include <cstdlib>
+ 
+ OmniDevice::
+ OmniDevice (PSZCRO pszLibraryName,
+diff -Naur Omni-0.9.2.orig/OmniDeviceOptions.cpp Omni-0.9.2/OmniDeviceOptions.cpp
+--- Omni-0.9.2.orig/OmniDeviceOptions.cpp	2004-08-26 19:47:03.000000000 +0000
++++ Omni-0.9.2/OmniDeviceOptions.cpp	2008-09-02 13:25:54.507004130 +0000
+@@ -26,6 +26,7 @@
+ #include <memory>
+ #include <string>
+ #include <list>
++#include <cstring>
+ 
+ #include <glib.h>
+ #include <gmodule.h>
+diff -Naur Omni-0.9.2.orig/OmniDeviceValid.cpp Omni-0.9.2/OmniDeviceValid.cpp
+--- Omni-0.9.2.orig/OmniDeviceValid.cpp	2003-11-14 18:22:36.000000000 +0000
++++ Omni-0.9.2/OmniDeviceValid.cpp	2008-09-02 13:25:54.508003559 +0000
+@@ -18,6 +18,8 @@
+  */
+ #include "Omni.hpp"
+ 
++#include <cstring>
++
+ void
+ printUsage (int argc, char *argv[])
+ {
+diff -Naur Omni-0.9.2.orig/OmniDevices.cpp Omni-0.9.2/OmniDevices.cpp
+--- Omni-0.9.2.orig/OmniDevices.cpp	2003-11-14 18:22:30.000000000 +0000
++++ Omni-0.9.2/OmniDevices.cpp	2008-09-02 13:25:54.507004130 +0000
+@@ -19,6 +19,8 @@
+ #include "Device.hpp"
+ #include "Omni.hpp"
+ 
++#include <cstring>
++
+ #include <glib.h>
+ #include <gmodule.h>
+ 
+diff -Naur Omni-0.9.2.orig/Panasonic/Panasonic ESC Blitter.cpp Omni-0.9.2/Panasonic/Panasonic ESC Blitter.cpp
+--- Omni-0.9.2.orig/Panasonic/Panasonic ESC Blitter.cpp	2004-08-30 14:53:40.000000000 +0000
++++ Omni-0.9.2/Panasonic/Panasonic ESC Blitter.cpp	2008-09-02 13:25:54.509003896 +0000
+@@ -23,6 +23,9 @@
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/Panasonic/Panasonic ESC Instance.cpp Omni-0.9.2/Panasonic/Panasonic ESC Instance.cpp
+--- Omni-0.9.2.orig/Panasonic/Panasonic ESC Instance.cpp	2004-08-26 19:46:49.000000000 +0000
++++ Omni-0.9.2/Panasonic/Panasonic ESC Instance.cpp	2008-09-02 13:25:54.509003896 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/Panasonic/Panasonic ESCP2 Blitter.cpp Omni-0.9.2/Panasonic/Panasonic ESCP2 Blitter.cpp
+--- Omni-0.9.2.orig/Panasonic/Panasonic ESCP2 Blitter.cpp	2004-08-30 14:53:10.000000000 +0000
++++ Omni-0.9.2/Panasonic/Panasonic ESCP2 Blitter.cpp	2008-09-02 13:25:54.510003813 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ const static bool fTestNoCompression = false;
+ 
+ int compressEpsonRLE (PBYTE  pbData,
+diff -Naur Omni-0.9.2.orig/Panasonic/Panasonic ESCP2 Instance.cpp Omni-0.9.2/Panasonic/Panasonic ESCP2 Instance.cpp
+--- Omni-0.9.2.orig/Panasonic/Panasonic ESCP2 Instance.cpp	2004-08-26 19:46:55.000000000 +0000
++++ Omni-0.9.2/Panasonic/Panasonic ESCP2 Instance.cpp	2008-09-02 13:25:54.511003940 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/PrintDevice.cpp Omni-0.9.2/PrintDevice.cpp
+--- Omni-0.9.2.orig/PrintDevice.cpp	2004-08-30 14:53:40.000000000 +0000
++++ Omni-0.9.2/PrintDevice.cpp	2008-09-02 13:25:54.512003858 +0000
+@@ -27,6 +27,7 @@
+ #include <cstdio>
+ #include <fstream>
+ #include <vector>
++#include <cstdlib>
+ 
+ #include <unistd.h>
+ 
+diff -Naur Omni-0.9.2.orig/Star/Star ESC Blitter.cpp Omni-0.9.2/Star/Star ESC Blitter.cpp
+--- Omni-0.9.2.orig/Star/Star ESC Blitter.cpp	2004-08-30 14:53:38.000000000 +0000
++++ Omni-0.9.2/Star/Star ESC Blitter.cpp	2008-09-02 13:25:54.513003706 +0000
+@@ -23,6 +23,9 @@
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/Star/Star ESC Instance.cpp Omni-0.9.2/Star/Star ESC Instance.cpp
+--- Omni-0.9.2.orig/Star/Star ESC Instance.cpp	2004-08-26 19:47:25.000000000 +0000
++++ Omni-0.9.2/Star/Star ESC Instance.cpp	2008-09-02 13:25:54.513003706 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/Star/Star ESCP2 Blitter.cpp Omni-0.9.2/Star/Star ESCP2 Blitter.cpp
+--- Omni-0.9.2.orig/Star/Star ESCP2 Blitter.cpp	2004-08-30 14:53:43.000000000 +0000
++++ Omni-0.9.2/Star/Star ESCP2 Blitter.cpp	2008-09-02 13:25:54.514003833 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ const static bool fTestNoCompression = false;
+ 
+ int compressEpsonRLE (PBYTE  pbData,
+diff -Naur Omni-0.9.2.orig/Star/Star ESCP2 Instance.cpp Omni-0.9.2/Star/Star ESCP2 Instance.cpp
+--- Omni-0.9.2.orig/Star/Star ESCP2 Instance.cpp	2004-08-26 19:46:53.000000000 +0000
++++ Omni-0.9.2/Star/Star ESCP2 Instance.cpp	2008-09-02 13:25:54.515003890 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/StringResourceEn.cpp Omni-0.9.2/StringResourceEn.cpp
+--- Omni-0.9.2.orig/StringResourceEn.cpp	2004-08-26 19:47:02.000000000 +0000
++++ Omni-0.9.2/StringResourceEn.cpp	2008-09-02 13:25:54.516003808 +0000
+@@ -19,6 +19,9 @@
+ #include "Device.hpp"
+ #include "StringResourceEn.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ StringResourceEn::
+ StringResourceEn (StringResource *pFallback)
+ {
+diff -Naur Omni-0.9.2.orig/XMLDevice/Brother_ESC_Blitter.cpp Omni-0.9.2/XMLDevice/Brother_ESC_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Brother_ESC_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Brother_ESC_Blitter.cpp	2008-09-02 13:25:54.518003503 +0000
+@@ -19,6 +19,9 @@
+ #include "Brother_ESC_Blitter.hpp"
+ #include "Brother_ESC_Instance.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #include <DeviceOrientation.hpp>
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+diff -Naur Omni-0.9.2.orig/XMLDevice/Brother_ESC_Instance.cpp Omni-0.9.2/XMLDevice/Brother_ESC_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Brother_ESC_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Brother_ESC_Instance.cpp	2008-09-02 13:25:54.519003700 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Brother_PCL_Blitter.cpp Omni-0.9.2/XMLDevice/Brother_PCL_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Brother_PCL_Blitter.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Brother_PCL_Blitter.cpp	2008-09-02 13:25:54.519003700 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/XMLDevice/Brother_PCL_Instance.cpp Omni-0.9.2/XMLDevice/Brother_PCL_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Brother_PCL_Instance.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Brother_PCL_Instance.cpp	2008-09-02 13:25:54.520003757 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/XMLDevice/Canon_BJC_8500_Blitter.cpp Omni-0.9.2/XMLDevice/Canon_BJC_8500_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Canon_BJC_8500_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Canon_BJC_8500_Blitter.cpp	2008-09-02 13:25:54.521003535 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ const static bool fTestNoCompression = false;
+diff -Naur Omni-0.9.2.orig/XMLDevice/Canon_BJC_8500_Instance.cpp Omni-0.9.2/XMLDevice/Canon_BJC_8500_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Canon_BJC_8500_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Canon_BJC_8500_Instance.cpp	2008-09-02 13:25:54.521003535 +0000
+@@ -21,6 +21,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Canon_Blitter.cpp Omni-0.9.2/XMLDevice/Canon_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Canon_Blitter.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Canon_Blitter.cpp	2008-09-02 13:25:54.522003592 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ const static bool fTestNoCompression = false;
+diff -Naur Omni-0.9.2.orig/XMLDevice/Canon_Instance.cpp Omni-0.9.2/XMLDevice/Canon_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Canon_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Canon_Instance.cpp	2008-09-02 13:25:54.523003789 +0000
+@@ -21,6 +21,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Canon_S450_Blitter.cpp Omni-0.9.2/XMLDevice/Canon_S450_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Canon_S450_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Canon_S450_Blitter.cpp	2008-09-02 13:25:54.524003637 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ const static bool fTestNoCompression = false;
+diff -Naur Omni-0.9.2.orig/XMLDevice/Canon_S450_Instance.cpp Omni-0.9.2/XMLDevice/Canon_S450_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Canon_S450_Instance.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Canon_S450_Instance.cpp	2008-09-02 13:25:54.525003694 +0000
+@@ -21,6 +21,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Epson_ESCP2_Blitter.cpp Omni-0.9.2/XMLDevice/Epson_ESCP2_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Epson_ESCP2_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Epson_ESCP2_Blitter.cpp	2008-09-02 13:25:54.527003739 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ const static bool fTestNoCompression = false;
+ 
+ int compressEpsonRLE (PBYTE  pbData,
+diff -Naur Omni-0.9.2.orig/XMLDevice/Epson_ESCP2_Instance.cpp Omni-0.9.2/XMLDevice/Epson_ESCP2_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Epson_ESCP2_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Epson_ESCP2_Instance.cpp	2008-09-02 13:25:54.527003739 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Epson_ESC_Blitter.cpp Omni-0.9.2/XMLDevice/Epson_ESC_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Epson_ESC_Blitter.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Epson_ESC_Blitter.cpp	2008-09-02 13:25:54.526003612 +0000
+@@ -19,6 +19,9 @@
+ #include "Epson_ESC_Blitter.hpp"
+ #include "Epson_ESC_Instance.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #include <DeviceOrientation.hpp>
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+diff -Naur Omni-0.9.2.orig/XMLDevice/Epson_ESC_Instance.cpp Omni-0.9.2/XMLDevice/Epson_ESC_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Epson_ESC_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Epson_ESC_Instance.cpp	2008-09-02 13:25:54.526003612 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Epson_High_Res_ESCP2_Blitter.cpp Omni-0.9.2/XMLDevice/Epson_High_Res_ESCP2_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Epson_High_Res_ESCP2_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Epson_High_Res_ESCP2_Blitter.cpp	2008-09-02 13:25:54.529003784 +0000
+@@ -20,6 +20,9 @@
+ #include "Epson_High_Res_ESCP2_Instance.hpp"
+ #include "DeviceOrientation.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #include <stdio.h>
+ 
+ #define PERF_CHANGE 1
+diff -Naur Omni-0.9.2.orig/XMLDevice/Epson_High_Res_ESCP2_Instance.cpp Omni-0.9.2/XMLDevice/Epson_High_Res_ESCP2_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Epson_High_Res_ESCP2_Instance.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Epson_High_Res_ESCP2_Instance.cpp	2008-09-02 13:25:54.530003562 +0000
+@@ -19,6 +19,9 @@
+ #include "Epson_High_Res_ESCP2_Instance.hpp"
+ #include "defines.hpp"
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #include <iostream>
+ #include <sstream>
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Epson_PCL_Blitter.cpp Omni-0.9.2/XMLDevice/Epson_PCL_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Epson_PCL_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Epson_PCL_Blitter.cpp	2008-09-02 13:25:54.530003562 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/XMLDevice/Epson_PCL_Instance.cpp Omni-0.9.2/XMLDevice/Epson_PCL_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Epson_PCL_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Epson_PCL_Instance.cpp	2008-09-02 13:25:54.553003901 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/XMLDevice/HP_LaserJet_PCL_Blitter.cpp Omni-0.9.2/XMLDevice/HP_LaserJet_PCL_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/HP_LaserJet_PCL_Blitter.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/HP_LaserJet_PCL_Blitter.cpp	2008-09-02 13:25:54.553003901 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/XMLDevice/HP_LaserJet_PCL_Instance.cpp Omni-0.9.2/XMLDevice/HP_LaserJet_PCL_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/HP_LaserJet_PCL_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/HP_LaserJet_PCL_Instance.cpp	2008-09-02 13:25:54.555003387 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/XMLDevice/IBM_5577_Blitter.cpp Omni-0.9.2/XMLDevice/IBM_5577_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/IBM_5577_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/IBM_5577_Blitter.cpp	2008-09-02 13:25:54.555003387 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/XMLDevice/IBM_5577_Instance.cpp Omni-0.9.2/XMLDevice/IBM_5577_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/IBM_5577_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/IBM_5577_Instance.cpp	2008-09-02 13:25:54.556003863 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/IBM_ESC_Blitter.cpp Omni-0.9.2/XMLDevice/IBM_ESC_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/IBM_ESC_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/IBM_ESC_Blitter.cpp	2008-09-02 13:25:54.557003851 +0000
+@@ -23,6 +23,9 @@
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/XMLDevice/IBM_ESC_Instance.cpp Omni-0.9.2/XMLDevice/IBM_ESC_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/IBM_ESC_Instance.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/IBM_ESC_Instance.cpp	2008-09-02 13:25:54.557003851 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/IBM_PCL_Blitter.cpp Omni-0.9.2/XMLDevice/IBM_PCL_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/IBM_PCL_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/IBM_PCL_Blitter.cpp	2008-09-02 13:25:54.559003546 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/XMLDevice/IBM_PCL_Instance.cpp Omni-0.9.2/XMLDevice/IBM_PCL_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/IBM_PCL_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/IBM_PCL_Instance.cpp	2008-09-02 13:25:54.560003464 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/XMLDevice/IBM_Pages_Blitter.cpp Omni-0.9.2/XMLDevice/IBM_Pages_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/IBM_Pages_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/IBM_Pages_Blitter.cpp	2008-09-02 13:25:54.558003838 +0000
+@@ -23,6 +23,9 @@
+ #include "DeviceTray.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/XMLDevice/IBM_Pages_Instance.cpp Omni-0.9.2/XMLDevice/IBM_Pages_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/IBM_Pages_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/IBM_Pages_Instance.cpp	2008-09-02 13:25:54.558003838 +0000
+@@ -25,6 +25,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/KS_ESC_Blitter.cpp Omni-0.9.2/XMLDevice/KS_ESC_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/KS_ESC_Blitter.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/KS_ESC_Blitter.cpp	2008-09-02 13:25:54.560003464 +0000
+@@ -23,6 +23,9 @@
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/XMLDevice/KS_ESC_Instance.cpp Omni-0.9.2/XMLDevice/KS_ESC_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/KS_ESC_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/KS_ESC_Instance.cpp	2008-09-02 13:25:54.561004010 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Kyocera_PCL_Blitter.cpp Omni-0.9.2/XMLDevice/Kyocera_PCL_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Kyocera_PCL_Blitter.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Kyocera_PCL_Blitter.cpp	2008-09-02 13:25:54.562003788 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/XMLDevice/Kyocera_PCL_Instance.cpp Omni-0.9.2/XMLDevice/Kyocera_PCL_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Kyocera_PCL_Instance.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Kyocera_PCL_Instance.cpp	2008-09-02 13:25:54.562003788 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/XMLDevice/OkiPos_Blitter.cpp Omni-0.9.2/XMLDevice/OkiPos_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/OkiPos_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/OkiPos_Blitter.cpp	2008-09-02 13:25:54.568003992 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/XMLDevice/OkiPos_Instance.cpp Omni-0.9.2/XMLDevice/OkiPos_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/OkiPos_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/OkiPos_Instance.cpp	2008-09-02 13:25:54.568003992 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Okidata_ESCP2_Blitter.cpp Omni-0.9.2/XMLDevice/Okidata_ESCP2_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Okidata_ESCP2_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Okidata_ESCP2_Blitter.cpp	2008-09-02 13:25:54.565003541 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ const static bool fTestNoCompression = false;
+ 
+ int compressEpsonRLE (PBYTE  pbData,
+diff -Naur Omni-0.9.2.orig/XMLDevice/Okidata_ESCP2_Instance.cpp Omni-0.9.2/XMLDevice/Okidata_ESCP2_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Okidata_ESCP2_Instance.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Okidata_ESCP2_Instance.cpp	2008-09-02 13:25:54.565003541 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Okidata_ESC_Blitter.cpp Omni-0.9.2/XMLDevice/Okidata_ESC_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Okidata_ESC_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Okidata_ESC_Blitter.cpp	2008-09-02 13:25:54.563003845 +0000
+@@ -23,6 +23,9 @@
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/XMLDevice/Okidata_ESC_Instance.cpp Omni-0.9.2/XMLDevice/Okidata_ESC_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Okidata_ESC_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Okidata_ESC_Instance.cpp	2008-09-02 13:25:54.564003763 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Okidata_PCL_Blitter.cpp Omni-0.9.2/XMLDevice/Okidata_PCL_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Okidata_PCL_Blitter.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Okidata_PCL_Blitter.cpp	2008-09-02 13:25:54.566003458 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ DeviceBlitter *
+ createBlitter (PrintDevice *pDevice)
+ {
+diff -Naur Omni-0.9.2.orig/XMLDevice/Okidata_PCL_Instance.cpp Omni-0.9.2/XMLDevice/Okidata_PCL_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Okidata_PCL_Instance.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Okidata_PCL_Instance.cpp	2008-09-02 13:25:54.567003446 +0000
+@@ -25,6 +25,8 @@
+ #include <iostream>
+ #include <sstream>
+ #include <stdio.h>
++#include <cstring>
++#include <cstdlib>
+ 
+ DeviceInstance *
+ createInstance (PrintDevice *pDevice)
+diff -Naur Omni-0.9.2.orig/XMLDevice/Panasonic_ESCP2_Blitter.cpp Omni-0.9.2/XMLDevice/Panasonic_ESCP2_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Panasonic_ESCP2_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Panasonic_ESCP2_Blitter.cpp	2008-09-02 13:25:54.570003617 +0000
+@@ -21,6 +21,9 @@
+ #include "DeviceOrientation.hpp"
+ #include <CMYKbitmap.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ const static bool fTestNoCompression = false;
+ 
+ int compressEpsonRLE (PBYTE  pbData,
+diff -Naur Omni-0.9.2.orig/XMLDevice/Panasonic_ESCP2_Instance.cpp Omni-0.9.2/XMLDevice/Panasonic_ESCP2_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Panasonic_ESCP2_Instance.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Panasonic_ESCP2_Instance.cpp	2008-09-02 13:25:54.571003395 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Panasonic_ESC_Blitter.cpp Omni-0.9.2/XMLDevice/Panasonic_ESC_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Panasonic_ESC_Blitter.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Panasonic_ESC_Blitter.cpp	2008-09-02 13:25:54.569003840 +0000
+@@ -23,6 +23,9 @@
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/XMLDevice/Panasonic_ESC_Instance.cpp Omni-0.9.2/XMLDevice/Panasonic_ESC_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Panasonic_ESC_Instance.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Panasonic_ESC_Instance.cpp	2008-09-02 13:25:54.569003840 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/Star_ESC_Blitter.cpp Omni-0.9.2/XMLDevice/Star_ESC_Blitter.cpp
+--- Omni-0.9.2.orig/XMLDevice/Star_ESC_Blitter.cpp	2004-01-26 22:13:07.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Star_ESC_Blitter.cpp	2008-09-02 13:25:54.571003395 +0000
+@@ -23,6 +23,9 @@
+ #include <CMYKbitmap.hpp>
+ #include <defines.hpp>
+ 
++#include <cstring>
++#include <cstdlib>
++
+ #define BUMP_TO_NEXT_MODULUS(n,m) ((((n)+(m)-1)/(m))*(m))
+ 
+ int GrabPrintHeadBand (PBYTE pbBits,
+diff -Naur Omni-0.9.2.orig/XMLDevice/Star_ESC_Instance.cpp Omni-0.9.2/XMLDevice/Star_ESC_Instance.cpp
+--- Omni-0.9.2.orig/XMLDevice/Star_ESC_Instance.cpp	2004-01-26 22:13:08.000000000 +0000
++++ Omni-0.9.2/XMLDevice/Star_ESC_Instance.cpp	2008-09-02 13:25:54.572003872 +0000
+@@ -23,6 +23,8 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
++#include <cstdlib>
+ 
+ const static bool fTestNoCompression = true;
+ 
+diff -Naur Omni-0.9.2.orig/XMLDevice/XMLDevice.hpp Omni-0.9.2/XMLDevice/XMLDevice.hpp
+--- Omni-0.9.2.orig/XMLDevice/XMLDevice.hpp	2004-06-09 15:26:09.000000000 +0000
++++ Omni-0.9.2/XMLDevice/XMLDevice.hpp	2008-09-02 13:25:54.572003872 +0000
+@@ -23,6 +23,8 @@
+ #include <OmniProxy.hpp>
+ 
+ #include <map>
++#include <cstring>
++#include <cstdlib>
+ 
+ #include "XMLInterface.hpp"
+ 
+diff -Naur Omni-0.9.2.orig/test/TestDeviceObjects.cpp Omni-0.9.2/test/TestDeviceObjects.cpp
+--- Omni-0.9.2.orig/test/TestDeviceObjects.cpp	2003-12-19 16:01:22.000000000 +0000
++++ Omni-0.9.2/test/TestDeviceObjects.cpp	2008-09-02 13:25:54.517003725 +0000
+@@ -18,6 +18,8 @@
+  */
+ #include <iostream>
+ #include <set>
++#include <cstring>
++#include <cstdlib>
+ 
+ #include "Device.hpp"
+ #include "Omni.hpp"
+diff -Naur Omni-0.9.2.orig/test/TestGhostscript.cpp Omni-0.9.2/test/TestGhostscript.cpp
+--- Omni-0.9.2.orig/test/TestGhostscript.cpp	2003-12-19 16:01:40.000000000 +0000
++++ Omni-0.9.2/test/TestGhostscript.cpp	2008-09-02 13:25:54.518003503 +0000
+@@ -17,6 +17,8 @@
+  *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+  */
+ #include <iostream>
++#include <cstring>
++#include <cstdlib>
+ 
+ #include <sys/stat.h>
+ 
