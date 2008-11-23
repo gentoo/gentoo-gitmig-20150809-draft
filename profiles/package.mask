@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9202 2008/11/23 13:10:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9203 2008/11/23 13:20:13 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -85,6 +85,7 @@ dev-db/fastdb
 >=dev-dotnet/gtk-sharp-2.12
 ~dev-dotnet/glade-sharp-9999
 >=media-gfx/f-spot-0.5
+>=media-sound/banshee-1.4
 
 # Matthias Schwarzott <zzam@gentoo.org> (19 Nov 2008)
 # This ebuild contains intrusive changes
