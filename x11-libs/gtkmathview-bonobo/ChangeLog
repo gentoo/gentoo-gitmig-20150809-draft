@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtkmathview-bonobo
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview-bonobo/ChangeLog,v 1.7 2007/05/15 14:26:59 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview-bonobo/ChangeLog,v 1.8 2008/11/24 10:16:40 matsuu Exp $
+
+*gtkmathview-bonobo-0.0.4-r1 (24 Nov 2008)
+
+  24 Nov 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/gtkmathview-bonobo-0.0.4-gentoo.patch,
+  -gtkmathview-bonobo-0.0.2.ebuild, +gtkmathview-bonobo-0.0.4-r1.ebuild:
+  Fixed dependency, bug #248539.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
