@@ -1,6 +1,9 @@
 # ChangeLog for media-video/hasciicam
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/hasciicam/ChangeLog,v 1.3 2008/05/13 18:25:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/hasciicam/ChangeLog,v 1.4 2008/11/24 16:15:36 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml, hasciicam-1.0.ebuild:
+  Re-assign to media-video and stabilize for x86.
 
   13 May 2008; Samuli Suominen <drac@gentoo.org> hasciicam-1.0.ebuild:
   amd64 stable
