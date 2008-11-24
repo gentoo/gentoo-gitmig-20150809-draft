@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.0.4.ebuild,v 1.1 2008/11/18 11:05:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.0.4.ebuild,v 1.2 2008/11/24 01:11:19 robbat2 Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -276,7 +276,7 @@ pkg_postinst() {
 		elog "You can disable the emacs USE flag for dev-util/git"
 		elog "if you are using such a version."
 	fi
-	if use subversion && ! built_with_use dev-util/subversion perl ; then
+	if use subversion && ! built_with_use --missing false dev-util/subversion perl ; then
 		ewarn "You must build dev-util/subversion with USE=perl"
 		ewarn "to get the full functionality of git-svn!"
 	fi
