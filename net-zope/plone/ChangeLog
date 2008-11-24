@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/plone
 # Copyright 2003-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.57 2008/11/18 18:22:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.58 2008/11/24 09:00:37 tupone Exp $
+
+  24 Nov 2008; Alfredo Tupone <tupone@gentoo.org> -plone-3.1.1.ebuild,
+  -plone-3.1.2.ebuild:
+  Removing old unstable versions
 
   18 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org> plone-3.1.6.ebuild:
   ppc stable, bug #245786
