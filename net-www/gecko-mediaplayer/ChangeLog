@@ -1,6 +1,9 @@
 # ChangeLog for net-www/gecko-mediaplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gecko-mediaplayer/ChangeLog,v 1.9 2008/07/30 18:13:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gecko-mediaplayer/ChangeLog,v 1.10 2008/11/24 18:25:27 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Re-assign to media-video herd.
 
 *gecko-mediaplayer-0.6.3 (30 Jul 2008)
 
