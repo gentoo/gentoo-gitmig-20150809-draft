@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.43 2008/11/23 20:34:47 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.44 2008/11/24 17:10:33 loki_val Exp $
+
+  24 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> mono-tools-2.0.ebuild:
+  gtkhtml is NOT an optional dependency.
 
   23 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> mono-tools-2.0.ebuild:
   2.0 fails parallel make 'at times'

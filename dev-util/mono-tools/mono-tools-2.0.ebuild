@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.0.ebuild,v 1.3 2008/11/23 20:34:47 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.0.ebuild,v 1.4 2008/11/24 17:10:33 loki_val Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.novell.com/pub/mono/sources/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="webkit xulrunner gtkhtml"
+IUSE="webkit xulrunner"
 
 RDEPEND=">=dev-lang/mono-2.0
 	>=dev-util/monodoc-${PV}
