@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.0.4-r1.ebuild,v 1.3 2008/11/24 01:17:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.0.4-r1.ebuild,v 1.4 2008/11/24 01:20:46 robbat2 Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -288,7 +288,7 @@ showpkgdeps() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
-	if use subversion && ! built_with_use --missing false dev-util/subversion perl ; then
+	if use subversion && has_version dev-util/subversion && ! built_with_use --missing false dev-util/subversion perl ; then
 		ewarn "You must build dev-util/subversion with USE=perl"
 		ewarn "to get the full functionality of git-svn!"
 	fi
