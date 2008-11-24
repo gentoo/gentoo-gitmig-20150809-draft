@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.19 2008/11/08 13:53:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.20 2008/11/24 20:41:35 ranger Exp $
+
+  24 Nov 2008; Brent Baude <ranger@gentoo.org> libisofs-0.6.8.ebuild:
+  Marking libisofs-0.6.8 ppc64 for bug 245272
 
   08 Nov 2008; nixnut <nixnut@gentoo.org> libisofs-0.6.8.ebuild:
   Stable on ppc wrt bug 245272
