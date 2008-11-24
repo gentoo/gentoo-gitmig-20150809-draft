@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9206 2008/11/24 06:04:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9207 2008/11/24 14:50:37 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (24 Nov 2008)
+# Fails to configure in all situations. Just plain broken
+# bug #247677
+=net-libs/wvstreams-4.4.1
 
 # Zac Medico <zmedico@gentoo.org> (24 Nov 2008)
 # In order to ensure that portage-2.1.6 gets sufficient testing,
