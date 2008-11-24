@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23.ebuild,v 1.12 2008/11/24 10:37:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23.ebuild,v 1.13 2008/11/24 11:00:55 ulm Exp $
 
 inherit distutils elisp
 
@@ -12,7 +12,7 @@ SRC_URI="http://pymacs.progiciels-bpi.ca/archives/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm ~hppa ia64 ppc ppc64 s390 sh x86 ~x86-fbsd"
-IUSE="doc test"
+IUSE="doc"
 
 # additional doc? dependencies for multirow.sty and aeguill.sty (bug 247703)
 DEPEND="
