@@ -1,6 +1,10 @@
 # ChangeLog for app-office/osmo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.3 2008/07/24 16:00:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.4 2008/11/24 12:58:39 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Remove my old e-mail drac at gentoo.org from metadata.xml and leave this
+  package for the desktop-misc herd.
 
   24 Jul 2008; Raúl Porcel <armin76@gentoo.org> osmo-0.2.0.ebuild:
   Add ~x86 wrt #232683
