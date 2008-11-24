@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5-r1.ebuild,v 1.1 2008/05/17 00:57:49 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/fbiterm-0.5-r2.ebuild,v 1.1 2008/11/24 16:52:22 matsuu Exp $
 
-inherit autotools eutils flag-o-matic multilib
+inherit autotools eutils multilib
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www-124.ibm.com/linux/projects/iterm/releases/iterm-${PV}.tar.gz
 
 LICENSE="CPL-0.5"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="x11-libs/libXfont
 	>=media-libs/freetype-2
@@ -32,8 +32,6 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags -lfreetype
-	append-ldflags $(bindnow-flags)
 	econf --x-includes=/usr/include \
 		--x-libraries=/usr/$(get_libdir) || die
 	emake || die

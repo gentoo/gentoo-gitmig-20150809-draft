@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/fbiterm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/ChangeLog,v 1.9 2008/05/17 00:57:49 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/ChangeLog,v 1.10 2008/11/24 16:52:22 matsuu Exp $
+
+*fbiterm-0.5-r2 (24 Nov 2008)
+
+  24 Nov 2008; MATSUU Takuto <matsuu@gentoo.org>
+  -files/fbiterm-0.5-gentoo.diff, -files/fbiterm-0.5-r1-gentoo.diff,
+  +files/fbiterm-0.5-r2-gentoo.diff, -fbiterm-0.5.ebuild,
+  -fbiterm-0.5-r1.ebuild, +fbiterm-0.5-r2.ebuild:
+  Removed append-ldflags, bug #226869 and #226951. Removed old versions.
 
 *fbiterm-0.5-r1 (17 May 2008)
 
