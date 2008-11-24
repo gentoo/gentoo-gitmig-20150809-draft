@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/scribes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/ChangeLog,v 1.4 2008/05/29 15:37:32 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scribes/ChangeLog,v 1.5 2008/11/24 13:33:11 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Remove my old e-mail drac at gentoo.org from metadata.xml and leave this
+  package for the desktop-misc herd.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> scribes-0.3.3.3.ebuild:
   python_mod_optimize is ROOT aware.
