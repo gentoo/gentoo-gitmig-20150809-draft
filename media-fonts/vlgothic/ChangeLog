@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/vlgothic
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.33 2008/11/24 00:11:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.34 2008/11/24 01:09:36 matsuu Exp $
+
+  24 Nov 2008; MATSUU Takuto <matsuu@gentoo.org> vlgothic-20071215.ebuild,
+  vlgothic-20081029.ebuild, vlgothic-20081124.ebuild:
+  Added sazanami license, bug #240554.
 
 *vlgothic-20081124 (24 Nov 2008)
 
