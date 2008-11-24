@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.0.ebuild,v 1.3 2008/11/11 23:24:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.0.ebuild,v 1.4 2008/11/24 15:19:50 fmccor Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -11,7 +11,7 @@ SRC_URI="http://www.dillo.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc +gif ipv6 +jpeg +png ssl"
 
 RDEPEND="x11-libs/fltk:2[-cairo,jpeg=,png=]

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.64 2008/11/11 23:24:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.65 2008/11/24 15:19:50 fmccor Exp $
+
+  24 Nov 2008; Ferris McCormick <fmccor@gentoo.org> dillo-2.0.ebuild:
+  Keyword ~sparc for testing, See Bug #242774.
 
   11 Nov 2008; Ben de Groot <yngwin@gentoo.org> dillo-2.0.ebuild:
   Add ~ppc keyword, see https://bugs.gentoo.org/242774#c13
