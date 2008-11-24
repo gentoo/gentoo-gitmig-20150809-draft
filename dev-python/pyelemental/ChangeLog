@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyelemental
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelemental/ChangeLog,v 1.1 2008/03/20 19:57:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelemental/ChangeLog,v 1.2 2008/11/24 17:51:16 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Re-assign to sci-chemistry and python herds.
 
 *pyelemental-1.2.0 (20 Mar 2008)
 
