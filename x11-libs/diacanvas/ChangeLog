@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/diacanvas
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/diacanvas/ChangeLog,v 1.4 2007/02/21 23:54:30 jokey Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/diacanvas/ChangeLog,v 1.5 2008/11/24 13:25:36 eva Exp $
+
+*diacanvas-0.15.4 (24 Nov 2008)
+
+  24 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/diacanvas-0.15.4-python-bindings.patch, +diacanvas-0.15.4.ebuild:
+  Bump to 0.15.4. Close bug #61835 and bug #248536.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
