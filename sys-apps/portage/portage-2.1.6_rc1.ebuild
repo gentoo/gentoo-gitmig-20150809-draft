@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6_rc1.ebuild,v 1.1 2008/11/24 05:56:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6_rc1.ebuild,v 1.2 2008/11/24 18:03:57 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -219,6 +219,8 @@ pkg_preinst() {
 	if [ -f "${ROOT}/etc/make.globals" ]; then
 		rm "${ROOT}/etc/make.globals"
 	fi
+	has_version ">=${CATEGORY}/${PN}-2.2_pre"
+	DOWNGRADE_FROM_2_2=$?
 }
 
 pkg_postinst() {
@@ -230,6 +232,15 @@ pkg_postinst() {
 	elog "For help with using portage please consult the Gentoo Handbook"
 	elog "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
 	elog
+
+	if [ $DOWNGRADE_FROM_2_2 = 0 ] ; then
+		ewarn
+		echo "Since you have downgraded from portage-2.2, do not forget to" \
+		"use revdep-rebuild when appropriate, since the @preserved-rebuild" \
+		"package set is only supported with portage-2.2." | fmt -w 70 | \
+		while read ; do ewarn "$REPLY" ; done
+		ewarn
+	fi
 }
 
 pkg_postrm() {

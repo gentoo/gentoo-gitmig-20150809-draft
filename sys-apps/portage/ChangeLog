@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.553 2008/11/24 07:25:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.554 2008/11/24 18:03:57 zmedico Exp $
+
+  24 Nov 2008; Zac Medico <zmedico@gentoo.org> portage-2.1.6_rc1.ebuild:
+  Add an ewarn message for people downgrading from portage-2.2, reminding
+  them to run revdep-rebuild when appropriate.
 
 *portage-2.1.6_rc1 (23 Nov 2008)
 
@@ -10,7 +14,10 @@
   been removed. In order to ensure that portage-2.1.6 gets sufficient
   testing, portage-2.2 will be masked in package.mask until portage-2.1.6
   has been marked stable. If you would like to continue using portage-2.2
-  then you should unmask it (instead of downgrading to portage-2.1.6).
+  then you should unmask it (instead of downgrading to portage-2.1.6). If
+  you are downgrading from portage-2.2 to portage-2.1.6, do not forget to
+  use revdep-rebuild when appropriate, since the @preserved-rebuild package
+  set is only supported with portage-2.2.
 
 *portage-2.2_rc16 (23 Nov 2008)
 
