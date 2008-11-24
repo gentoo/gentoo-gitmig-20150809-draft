@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.552 2008/11/24 05:56:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.553 2008/11/24 07:25:24 zmedico Exp $
 
 *portage-2.1.6_rc1 (23 Nov 2008)
 
@@ -13,6 +13,7 @@
   then you should unmask it (instead of downgrading to portage-2.1.6).
 
 *portage-2.2_rc16 (23 Nov 2008)
+
   23 Nov 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc16.ebuild:
   2.2_rc16 bump. This fixes regression from bug #245358 which can cause
   an infinite loop and memory leak when an unsatisfied dependency is
