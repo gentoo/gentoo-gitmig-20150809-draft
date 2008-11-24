@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsafe
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/ChangeLog,v 1.8 2007/05/14 06:20:09 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/ChangeLog,v 1.9 2008/11/24 04:10:22 matsuu Exp $
+
+*libsafe-2.0_p16-r2 (24 Nov 2008)
+
+  24 Nov 2008; MATSUU Takuto <matsuu@gentoo.org> +libsafe-2.0_p16-r2.ebuild:
+  Fixed CFLAGS issue, bug #242034. Removed prelude USE flag, bug #248428.
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
