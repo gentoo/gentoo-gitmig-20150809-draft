@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gupnp-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gupnp-tools/ChangeLog,v 1.4 2008/04/24 15:34:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gupnp-tools/ChangeLog,v 1.5 2008/11/24 18:27:12 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Re-assign to net-p2p herd.
 
 *gupnp-tools-0.3 (24 Apr 2008)
 
