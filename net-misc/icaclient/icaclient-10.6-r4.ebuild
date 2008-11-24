@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r4.ebuild,v 1.4 2008/10/21 19:27:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-10.6-r4.ebuild,v 1.5 2008/11/24 11:08:15 opfer Exp $
 
 inherit eutils multilib rpm
 
 DESCRIPTION="ICA Client for Citrix Presentation servers"
 HOMEPAGE="http://www.citrix.com/"
-SRC_URI="http://download2.citrix.com/FILES/en/products/Linux10/ICAClient-${PV}-1.i386.rpm"
+SRC_URI="ftp://download2.citrix.com/FILES/en/products/Linux10/ICAClient-${PV}-1.i386.rpm"
 
 LICENSE="as-is"
 SLOT="0"
@@ -43,15 +43,7 @@ pkg_setup() {
 	has_multilib_profile && ABI="x86"
 }
 
-pkg_nofetch() {
-	einfo "Please download ${A} yourself from www.citrix.com"
-	einfo "ftp://www.citrix.co.uk/English/SS/downloads/details.asp?dID=2755&downloadID=3323&pID=186"
-	einfo "and place it in ${DISTDIR}"
-}
-
 src_unpack() {
-	# You must download ICAClient-10.0-2.i386.rpm
-	# from www.citrix.com and put it in ${DISTDIR}
 	einfo "Unpacking"
 	rpm_src_unpack
 }
