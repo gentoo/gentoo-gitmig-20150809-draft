@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ethstatus-0.4.2-r2.ebuild,v 1.5 2005/07/19 13:04:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ethstatus-0.4.2-r2.ebuild,v 1.6 2008/11/24 09:55:13 s4t4n Exp $
 
 DESCRIPTION="ncurses based utility to display real time statistics about network traffic."
 HOMEPAGE="http://ethstatus.calle69.net/"
@@ -12,6 +12,14 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.4-r1"
+
+src_unpack()
+{
+	unpack ${A}
+
+	#Fix LDFLAGS ordering, see bug #247926
+	sed -i 's/$(LDFLAGS) -o ${BIN} ${SRC}/-o ${BIN} ${SRC} $(LDFLAGS)/' "${S}/Makefile"
+}
 
 src_compile()
 {
