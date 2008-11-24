@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/mono-zeroconf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/ChangeLog,v 1.4 2008/08/31 21:21:57 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/ChangeLog,v 1.5 2008/11/24 00:13:14 loki_val Exp $
+
+*mono-zeroconf-0.8.0 (24 Nov 2008)
+
+  24 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -mono-zeroconf-0.7.5.ebuild, -mono-zeroconf-0.7.6.ebuild,
+  +mono-zeroconf-0.8.0.ebuild:
+  Bump
 
 *mono-zeroconf-0.7.6 (31 Aug 2008)
 
