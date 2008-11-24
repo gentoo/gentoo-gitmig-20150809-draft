@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.303 2008/11/24 01:20:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.304 2008/11/24 01:24:00 robbat2 Exp $
+
+  24 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> git-1.6.0.4-r1.ebuild:
+  Bug #240280, fix to use CFLAGS/LDFLAGS better.
 
   24 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> git-1.5.4.5.ebuild,
   git-1.5.5.3.ebuild, git-1.5.5.3-r1.ebuild, git-1.5.5.4.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.0.4-r1.ebuild,v 1.4 2008/11/24 01:20:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.0.4-r1.ebuild,v 1.5 2008/11/24 01:24:00 robbat2 Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -101,8 +101,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/20081123-git-1.6.0.4-noperl-cvsserver.patch
 
 	sed -i \
-		-e "s:^\(CFLAGS =\).*$:\1 ${CFLAGS} -Wall:" \
-		-e "s:^\(LDFLAGS =\).*$:\1 ${LDFLAGS}:" \
+		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \
+		-e 's:^\(LDFLAGS =\).*$:\1 $(OPTLDFLAGS):' \
 		-e "s:^\(CC = \).*$:\1$(tc-getCC):" \
 		-e "s:^\(AR = \).*$:\1$(tc-getAR):" \
 		Makefile || die "sed failed"
@@ -113,6 +113,8 @@ src_unpack() {
 src_compile() {
 	emake ${MY_MAKEOPTS} \
 		DESTDIR="${D}" \
+		OPTCFLAGS="${CFLAGS}" \
+		OPTLDFLAGS="${LDFLAGS}" \
 		prefix=/usr \
 		htmldir=/usr/share/doc/${PF}/html \
 		|| die "make failed"
@@ -123,6 +125,8 @@ src_compile() {
 	if use perl && use cgi ; then
 		emake ${MY_MAKEOPTS} \
 		DESTDIR="${D}" \
+		OPTCFLAGS="${CFLAGS}" \
+		OPTLDFLAGS="${LDFLAGS}" \
 		prefix=/usr \
 		htmldir=/usr/share/doc/${PF}/html \
 		gitweb/gitweb.cgi || die "make gitweb/gitweb.cgi failed"
@@ -132,6 +136,8 @@ src_compile() {
 src_install() {
 	emake ${MY_MAKEOPTS} \
 		DESTDIR="${D}" \
+		OPTCFLAGS="${CFLAGS}" \
+		OPTLDFLAGS="${LDFLAGS}" \
 		prefix=/usr \
 		htmldir=/usr/share/doc/${PF}/html \
 		install || \
