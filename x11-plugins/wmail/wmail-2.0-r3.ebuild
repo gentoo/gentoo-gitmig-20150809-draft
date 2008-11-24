@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0-r3.ebuild,v 1.5 2007/12/01 12:50:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/wmail-2.0-r3.ebuild,v 1.6 2008/11/24 16:06:18 s4t4n Exp $
 
 inherit eutils
 
@@ -13,7 +13,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="x11-libs/libdockapp"
+RDEPEND="x11-libs/libdockapp"
+
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4.1.4-r1"
 
 src_unpack() {
 	unpack ${A}
@@ -23,6 +26,9 @@ src_unpack() {
 	# make from parsing in maildir format faster, thanks
 	# to Stanislav Kuchar
 	epatch "${FILESDIR}"/${P}.maildir-parse-from.patch
+
+	# fix LDFLAGS ordering, see bug #248620
+	sed -i 's/$(LIBS) -o $@ $^/-o $@ $^ $(LIBS)/' "${S}/src/Makefile.in"
 }
 
 src_compile() {
