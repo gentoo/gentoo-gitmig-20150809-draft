@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sexy-python
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.12 2008/10/28 11:52:20 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.13 2008/11/24 17:53:12 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Re-assign to python herd.
 
   28 Oct 2008; Ali Polatel <hawking@gentoo.org> sexy-python-0.1.9.ebuild:
   Use python_need_rebuild.
