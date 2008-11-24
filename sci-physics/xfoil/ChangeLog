@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/xfoil
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.9 2008/08/23 11:43:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.10 2008/11/24 15:47:11 bicatali Exp $
+
+  24 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/xfoil-6.97-overflow.patch, -xfoil-6.96.ebuild:
+  Fixed patch for overflow, thanks to Joel Soete
 
   23 Aug 2008; Sébastien Fabbro <bicatali@gentoo.org> xfoil-6.97.ebuild:
   Fixed for propagation with fortran compilers and flags, bug #235501
