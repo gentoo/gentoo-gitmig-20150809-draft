@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.21 2008/11/24 20:57:04 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.22 2008/11/24 21:11:12 loki_val Exp $
+
+  24 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  libisofs-0.6.10_p01.ebuild:
+  Prettyfi SRC_URI
 
 *libisofs-0.6.10_p01 (24 Nov 2008)
 
