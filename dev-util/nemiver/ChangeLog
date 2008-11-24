@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/nemiver
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.19 2008/07/31 21:43:03 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.20 2008/11/24 23:50:30 eva Exp $
+
+*nemiver-0.6.4 (24 Nov 2008)
+
+  24 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org> -nemiver-0.5.2.ebuild,
+  -nemiver-0.5.3.ebuild, -nemiver-0.5.4.ebuild, +nemiver-0.6.4.ebuild:
+  Bump to 0.6.4. Clean up old revisions.
 
   31 Jul 2008; Rémi Cardona <remi@gentoo.org> nemiver-0.5.2.ebuild,
   nemiver-0.5.3.ebuild, nemiver-0.5.4.ebuild, nemiver-0.6.1.ebuild:
