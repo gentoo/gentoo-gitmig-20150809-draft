@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc16.ebuild,v 1.1 2008/11/24 05:56:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc16.ebuild,v 1.2 2008/11/24 20:47:40 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -226,8 +226,11 @@ pkg_preinst() {
 	has_version "<=${CATEGORY}/${PN}-2.2_pre5"
 	WORLD_MIGRATION_UPGRADE=$?
 
+	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
+	# assume that the NEEDED.ELF.2 files have already been generated.
 	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
-		! has_version ">=${CATEGORY}/${PN}-2.1.6_rc"
+		! ( [ -e "$ROOT"var/lib/portage/preserved_libs_registry ] && \
+		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" )
 	NEEDED_REBUILD_UPGRADE=$?
 
 	has_version "<${CATEGORY}/${PN}-2.2_alpha"
