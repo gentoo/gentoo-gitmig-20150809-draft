@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.1_p03.ebuild,v 1.1 2008/09/23 11:01:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.1_p03.ebuild,v 1.2 2008/11/24 16:54:16 bicatali Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ PV3=$(get_version_component_range 3 ${PV})
 MY_P=${PN}$(replace_version_separator 3 .)
 
 DESCRIPTION="CERN's detector description and simulation Tool"
-HOMEPAGE="http://www.geant4.org/"
+HOMEPAGE="http://geant4.cern.ch/"
 
 SRC_COM="http://geant4.web.cern.ch/geant4/support/source"
 SRC_URI="${SRC_COM}/${MY_P}.tar.gz"
@@ -110,7 +110,7 @@ src_compile() {
 	use opengl && use motif && export G4VIS_BUILD_OPENGLXM_DRIVER=y
 
 	use geant3              && export G4LIB_BUILD_G3TOG4=y
-	use zlib                && export G4LIB_BUILD_ZLIB=y
+	use zlib                && export G4LIB_USE_ZLIB=y
 	use vrml                && export G4VIS_BUILD_VRML_DRIVER=y \
 							&& export G4VIS_BUILD_VRMLFILE_DRIVER=y
 
