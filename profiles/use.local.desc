@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4031 2008/11/24 01:59:52 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4032 2008/11/24 02:07:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1717,27 +1717,16 @@ net-analyzer/scanlogd:nids - Use net-libs/libnids for packet capturing
 net-analyzer/scanlogd:pcap - Use net-libs/libpcap for packet capturing
 net-analyzer/scapy:pyx - Enable dev-python/pyx support for psdump/pdfdump commands
 net-analyzer/scapy:visual - Enable dev-python/visual support for 3d graphs
-net-analyzer/snort:aruba - Enable Aruba output plugin
-net-analyzer/snort:community-rules - Install community ruleset 
-net-analyzer/snort:decoder-preprocessor-rules - Enable rule actions for deocoder and preprocessor events
-net-analyzer/snort:dynamicplugin - Enable Ability to dynamically load preprocessors, detection engine, and rules lib
-net-analyzer/snort:flexresp - Flexible Responses on hostile connection attempts
-net-analyzer/snort:flexresp2 - NEW Flexible Responses on hostile connection attempts
-net-analyzer/snort:gre - Enable GRE and IP in IP encapsulation support
-net-analyzer/snort:inline - Use the libipq interface for inline snort
-net-analyzer/snort:inline-init-failopen - Enable Fail Open during initialization for Inline Mode (adds pthread support implicitly)
-net-analyzer/snort:linux-smp-stats - Enable statistics reporting through proc
-net-analyzer/snort:memory-cleanup - Enable cleanup of Memory at Snort exit
-net-analyzer/snort:mpls - Enable MPLS support
+net-analyzer/snort:dynamicplugin - Enable ability to dynamically load preprocessors, detection engine, and rules library
+net-analyzer/snort:flexresp - Enable new connection tearing (not recommended)
+net-analyzer/snort:flexresp2 - Enable new connection tearing
+net-analyzer/snort:gre - Enable GRE support
+net-analyzer/snort:inline - Enable snort-inline for accepting packets from net-firewall/iptables, via libipq, rather than net-libs/libpcap.
+net-analyzer/snort:linux-smp-stats - Enable statistics reporting through proc on smp systems
 net-analyzer/snort:perfprofiling - Enable preprocessor and rule performance profiling
-net-analyzer/snort:ppm - Enable packet/rule performance monitor
-net-analyzer/snort:prelude - Enable Prelude Hybrid IDS support
-net-analyzer/snort:react - Intercept and terminate offending HTTP accesses
-net-analyzer/snort:ruleperf - Enable rule option performance changes
+net-analyzer/snort:react - Enable interception and termination of offending HTTP accesses
 net-analyzer/snort:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/snort:snortsam - patches net-analyzer/snort for use with net-analyzer/snortsam
-net-analyzer/snort:stream4udp - Enable UDP session tracking in Stream4
-net-analyzer/snort:targetbased - Enable Target-Based Support in Stream, Frag and Rules (adds pthread support implicitly)
 net-analyzer/snort:timestats - Enable TimeStats functionality
 net-analyzer/symon:perl - Enables a generic perl symux client
 net-analyzer/symon:symon - Build symon daemon
