@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.1.0.ebuild,v 1.1 2008/08/12 12:52:42 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.1.6.ebuild,v 1.1 2008/11/24 12:09:27 bicatali Exp $
 
 EAPI=1
 
@@ -16,8 +16,7 @@ IUSE=""
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
-RDEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 )
-		=x11-libs/qt-4.3*:4 )
+RDEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) >=x11-libs/qt-4.3:4 )
 		virtual/glu"
 DEPEND="${RDEPEND}"
 
@@ -41,16 +40,16 @@ src_compile() {
 }
 
 src_install() {
-	# not working: emake install INSTALL_ROOT="${D}"
+	# not working: emake install INSTALL_ROOT="${D}" || die
 	dobin zhu3d || die
 
 	dodoc {readme,src/changelog}.txt || die
 	dohtml doc/* || die
 
 	insinto /usr/share/${PN}
+	rm -f system/languages/*.ts
 	doins -r work system || die
 
 	doicon system/icons/${PN}.png || die
-	make_desktop_entry ${PN} Zhu3D ${PN} \
-		"Education;Science;Math;Qt"
+	make_desktop_entry ${PN} Zhu3D ${PN} "Education;Science;Math;Qt"
 }
