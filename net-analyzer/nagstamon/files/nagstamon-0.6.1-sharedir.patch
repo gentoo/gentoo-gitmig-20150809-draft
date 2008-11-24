@@ -1,0 +1,15 @@
+--- nagstamon.py.orig	2008-11-24 20:07:57.000000000 +0100
++++ nagstamon.py	2008-11-24 20:23:09.000000000 +0100
+@@ -457,10 +457,9 @@
+         self.copyright = "© 2008 Henri Wahl\nh.wahl@ifw-dresden.de"
+         self.comments = "Nagios status monitor for your desktop"
+         
+-        # get resources directory from environment variable created by /usr/bin/nagstamon stub
+-        # otherwise use actual directory
++        # Set path for resources/ directory
+         if __name__ == "__main__":
+-            self.resources = os.path.normcase(os.getcwd() + "/resources")
++            self.resources = "/usr/share/nagstamon/resources"
+         else:
+             self.resources = os.environ["nagstamon_resources"]
+ 
