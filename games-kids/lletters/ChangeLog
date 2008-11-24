@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/lletters
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.19 2008/04/21 20:09:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.20 2008/11/24 16:26:19 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Re-assign to games herd.
 
   21 Apr 2008; Markus Meier <maekke@gentoo.org> lletters-0.1.95-r2.ebuild:
   x86 stable, bug #218420
