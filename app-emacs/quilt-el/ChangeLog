@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/quilt-el
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.2 2008/11/20 14:54:22 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.3 2008/11/24 20:47:18 ranger Exp $
+
+  24 Nov 2008; Brent Baude <ranger@gentoo.org> quilt-el-0.45.4.ebuild:
+  keyworded ~arch for ppc64, bug 247666
 
   20 Nov 2008; Ferris McCormick <fmccor@gentoo.org> quilt-el-0.45.4.ebuild:
   Keyword for ~sparc, Bug #247666.
