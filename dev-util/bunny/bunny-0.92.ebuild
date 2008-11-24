@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bunny/bunny-0.92.ebuild,v 1.2 2007/11/26 00:25:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bunny/bunny-0.92.ebuild,v 1.3 2008/11/24 16:52:31 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://bunny-the-fuzzer.googlecode.com/files/${P}.tgz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl"
@@ -30,6 +30,6 @@ src_test() {
 }
 
 src_install() {
-	dobin ${PN}-{exec,flow,gcc,main,trace}
+	dobin ${PN}-{exec,flow,gcc,main,trace} || die "dobin failed."
 	dodoc CHANGES README
 }
