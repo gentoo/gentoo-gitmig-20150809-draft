@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/pauker
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.21 2008/07/02 19:08:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.22 2008/11/24 09:17:21 ali_bush Exp $
+
+*pauker-1.8_rc6 (24 Nov 2008)
+
+  24 Nov 2008; Alistair Bush <ali_bush@gentoo.org>
+  +files/pauker_bundledjars.patch, +pauker-1.8_rc6.ebuild:
+  Version Bump.
 
   02 Jul 2008; Brent Baude <ranger@gentoo.org> pauker-1.7.5-r1.ebuild:
   stable ppc, bug 229235
