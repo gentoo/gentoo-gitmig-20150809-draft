@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/tango-icon-theme
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.42 2008/03/21 06:18:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.43 2008/11/24 18:24:02 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Re-assign to freedesktop herd.
 
   21 Mar 2008; Samuli Suominen <drac@gentoo.org>
   -tango-icon-theme-0.8.0.ebuild, tango-icon-theme-0.8.1.ebuild:
