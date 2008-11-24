@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/toilet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/ChangeLog,v 1.7 2008/07/08 01:28:16 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/ChangeLog,v 1.8 2008/11/24 16:40:39 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Rename my old e-mail drac at gentoo.org to ssuominen at gentoo.org.
 
   08 Jul 2008; Javier Villavicencio <the_paya@gentoo.org> toilet-0.1.ebuild:
   Add ~x86-fbsd.
