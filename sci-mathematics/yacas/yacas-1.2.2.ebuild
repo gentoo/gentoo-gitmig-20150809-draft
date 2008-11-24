@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2.ebuild,v 1.6 2008/11/10 23:34:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2.ebuild,v 1.7 2008/11/24 09:40:57 bicatali Exp $
 
 inherit eutils java-pkg-opt-2
 
@@ -33,7 +33,8 @@ src_compile() {
 	emake || die "emake failed"
 	if use java; then
 		cd JavaYacas || die
-		emake -f makefile.yacas || die "emake java interface failed"
+		# -j1 because of file generation dependence
+		emake -j1 -f makefile.yacas || die "emake java interface failed"
 	fi
 }
 
