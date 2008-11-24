@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-4.0.ebuild,v 1.1 2008/11/23 09:46:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-4.0.ebuild,v 1.2 2008/11/24 22:37:04 mr_bones_ Exp $
+
+inherit eutils autotools
 
 DESCRIPTION="Popular filesystem benchmark"
 SRC_URI="ftp://ftp.samba.org/pub/tridge/dbench/${P}.tar.gz"
@@ -9,8 +11,6 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
-
-inherit eutils autotools
 
 src_unpack() {
 	unpack ${A}

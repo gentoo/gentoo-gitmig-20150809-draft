@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/dbench
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.29 2008/11/23 09:46:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.30 2008/11/24 22:37:04 mr_bones_ Exp $
+
+  24 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org> dbench-4.0.ebuild:
+  inherit goes near the top
 
 *dbench-4.0 (23 Nov 2008)
 
