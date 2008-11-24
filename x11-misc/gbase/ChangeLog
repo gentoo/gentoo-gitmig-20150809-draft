@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gbase
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbase/ChangeLog,v 1.1 2008/01/16 12:43:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbase/ChangeLog,v 1.2 2008/11/24 13:16:01 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Remove my old e-mail drac at gentoo.org from metadata.xml and leave this
+  package for the desktop-misc herd.
 
 *gbase-0.5 (16 Jan 2008)
 
