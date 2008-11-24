@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/adaptit
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/adaptit/ChangeLog,v 1.1 2008/11/24 06:00:45 kanaka Exp $
+
+*adaptit-4.0.2 (24 Nov 2008)
+
+  24 Nov 2008; Joel Martin <kanaka@gentoo.org> +metadata.xml,
+  +adaptit-4.0.2.ebuild:
+  First ebuild. Version 4.0.2
+
