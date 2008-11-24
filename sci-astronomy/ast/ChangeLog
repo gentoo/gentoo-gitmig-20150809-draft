@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/ast
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ChangeLog,v 1.1 2008/11/05 22:05:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ChangeLog,v 1.2 2008/11/24 10:12:53 bicatali Exp $
+
+  24 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org> ast-4.6.2.ebuild:
+  Removing installation of empty directories, closing bug #248380
 
 *ast-4.6.2 (05 Nov 2008)
 

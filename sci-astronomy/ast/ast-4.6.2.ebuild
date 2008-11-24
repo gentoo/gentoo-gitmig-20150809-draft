@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ast-4.6.2.ebuild,v 1.1 2008/11/05 22:05:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ast-4.6.2.ebuild,v 1.2 2008/11/24 10:12:53 bicatali Exp $
 
 EAPI=2
 inherit eutils versionator
@@ -34,7 +34,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" \
+		install-exec install-includeHEADERS || die "emake install failed"
 	dodoc ast.news fac_1521_err
 	if use doc; then
 		dodoc *.ps || die "doc install failed"
