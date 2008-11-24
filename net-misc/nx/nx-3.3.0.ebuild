@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.2.0.ebuild,v 1.3 2008/06/05 15:05:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.3.0.ebuild,v 1.1 2008/11/24 14:08:17 voyageur Exp $
 
 inherit autotools eutils multilib
 
@@ -8,19 +8,19 @@ DESCRIPTION="NX compression technology core libraries"
 HOMEPAGE="http://www.nomachine.com/developers.php"
 
 URI_BASE="http://web04.nomachine.com/download/${PV}/sources"
-SRC_NX_X11="nx-X11-$PV-1.tar.gz"
-SRC_NXAGENT="nxagent-$PV-3.tar.gz"
+SRC_NX_X11="nx-X11-$PV-3.tar.gz"
+SRC_NXAGENT="nxagent-$PV-6.tar.gz"
 SRC_NXAUTH="nxauth-$PV-1.tar.gz"
-SRC_NXCOMP="nxcomp-$PV-6.tar.gz"
-SRC_NXCOMPEXT="nxcompext-$PV-1.tar.gz"
-SRC_NXCOMPSHAD="nxcompshad-$PV-1.tar.gz"
-SRC_NXPROXY="nxproxy-$PV-1.tar.gz"
+SRC_NXCOMP="nxcomp-$PV-3.tar.gz"
+SRC_NXCOMPEXT="nxcompext-$PV-2.tar.gz"
+SRC_NXCOMPSHAD="nxcompshad-$PV-2.tar.gz"
+SRC_NXPROXY="nxproxy-$PV-2.tar.gz"
 
 SRC_URI="$URI_BASE/$SRC_NX_X11 $URI_BASE/$SRC_NXAGENT $URI_BASE/$SRC_NXPROXY $URI_BASE/$SRC_NXAUTH $URI_BASE/$SRC_NXCOMPEXT $URI_BASE/$SRC_NXCOMPSHAD $URI_BASE/$SRC_NXCOMP"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="rdesktop vnc"
 
 RDEPEND="x11-libs/libXau
@@ -63,10 +63,11 @@ src_unpack() {
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}"/1.5.0/nx-x11-1.5.0-tmp-exec.patch
 	epatch "${FILESDIR}"/1.5.0/nxcomp-1.5.0-pic.patch
-	epatch "${FILESDIR}"/${PN}-3.1.0-gcc-4.3.patch
+
+	cd "${WORKDIR}"/nxproxy
+	epatch "${FILESDIR}"/${PN}-3.2.0-nxproxy_read_from_stdin.patch
 
 	cd "${WORKDIR}"/nxcomp
-	epatch "${FILESDIR}"/${PN}-2.1.0-deprecated-headers.patch
 	epatch "${FILESDIR}"/${PN}-2.1.0-invalid-options.patch
 	eautoreconf
 }

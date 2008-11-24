@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.33 2008/11/08 16:05:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.34 2008/11/24 14:08:17 voyageur Exp $
+
+*nx-3.3.0 (24 Nov 2008)
+
+  24 Nov 2008; Bernard Cafarelli <voyageur@gentoo.org> -nx-3.1.0-r1.ebuild,
+  -nx-3.2.0.ebuild, -nx-3.2.0-r3.ebuild, -nx-3.2.0-r4.ebuild,
+  +nx-3.3.0.ebuild:
+  3.3.0 version bump, remove old versions
 
   08 Nov 2008; Markus Meier <maekke@gentoo.org> nx-3.2.0-r5.ebuild:
   amd64/x86 stable, bug #245685
