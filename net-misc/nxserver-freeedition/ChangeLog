@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/nxserver-freeedition
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.32 2008/11/21 10:38:50 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.33 2008/11/24 09:49:39 voyageur Exp $
+
+*nxserver-freeedition-3.3.0.8-r1 (24 Nov 2008)
+
+  24 Nov 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/nxserver-3.3.0-dontupdatekeys.patch,
+  -nxserver-freeedition-3.3.0.8.ebuild,
+  +nxserver-freeedition-3.3.0.8-r1.ebuild:
+  Prevent update script from failing and removing default ssh key, bug
+  #248049
 
 *nxserver-freeedition-3.3.0.8 (21 Nov 2008)
 

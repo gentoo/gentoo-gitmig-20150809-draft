@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.3.0.8.ebuild,v 1.1 2008/11/21 10:38:50 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.3.0.8-r1.ebuild,v 1.1 2008/11/24 09:49:39 voyageur Exp $
 
 inherit eutils versionator
 
@@ -37,6 +37,7 @@ src_unpack()
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/nxserver-3.0.0-r4-setup.patch
+	epatch "${FILESDIR}"/nxserver-${MAJOR_PV}-dontupdatekeys.patch
 }
 
 src_install()
