@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.7 2008/09/29 12:36:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.8 2008/11/24 02:20:18 marineam Exp $
+
+*virtinst-0.400.0 (24 Nov 2008)
+
+  24 Nov 2008; Michael Marineau <marineam@gentoo.org>
+  +files/virtinst-0.400.0-virtio26.patch, +virtinst-0.400.0.ebuild:
+  Bump to 0.400.0. Add generic virtio26 guest os variant instead of Gentoo
+  stable/unstable since Gentoo is a moving target.
 
   29 Sep 2008; Tiziano Müller <dev-zero@gentoo.org>
   virtinst-0.300.3-r1.ebuild:
