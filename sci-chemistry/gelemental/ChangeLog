@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gelemental
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/ChangeLog,v 1.3 2008/10/19 14:26:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gelemental/ChangeLog,v 1.4 2008/11/24 17:49:27 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Re-assign to sci-chemistry herd.
 
   19 Oct 2008; Markus Dittrich <markusle@gentoo.org>
   +files/gelemental-1.2.0-gcc4.3.patch, gelemental-1.2.0.ebuild:
