@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.16 2008/10/15 15:58:09 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.17 2008/11/24 16:48:22 ssuominen Exp $
 
 inherit autotools eutils games
 
@@ -10,7 +10,7 @@ DESCRIPTION="An advanced DDR simulator"
 HOMEPAGE="http://www.stepmania.com/stepmania/"
 SRC_URI="mirror://sourceforge/stepmania/StepMania-${MY_PV}-src.tar.gz
 	mirror://sourceforge/stepmania/StepMania-${MY_PV}-linux.tar.gz
-	http://dev.gentoo.org/~drac/${PN}-patches-3.tar.bz2"
+	mirror://gentoo/${PN}-patches-3.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
