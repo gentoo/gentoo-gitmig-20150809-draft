@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9205 2008/11/23 23:49:31 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9206 2008/11/24 06:04:59 zmedico Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Zac Medico <zmedico@gentoo.org> (24 Nov 2008)
+# In order to ensure that portage-2.1.6 gets sufficient testing,
+# portage-2.2 will be masked in package.mask until portage-2.1.6 has
+# been marked stable. If you would like to continue using portage-2.2
+# then you should unmask it (instead of downgrading to portage-2.1.6).
+>=sys-apps/portage-2.2_pre
 
 # Peter Alfredsen <loki_val@gentoo.org> (22 Nov 2008)
 # Packages not building with mono-2

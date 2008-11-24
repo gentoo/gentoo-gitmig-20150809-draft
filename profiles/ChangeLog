@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2081 2008/11/24 01:59:52 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2082 2008/11/24 06:04:59 zmedico Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Nov 2008; Zac Medico <zmedico@gentoo.org> package.mask:
+  Mask portage-2.2 so portage-2.1.6 can get some testing.
 
   24 Nov 2008; Marcelo Goes <vanquirius@gentoo.org> use.local.desc:
   Update net-analyzer/snort local use flags for bug 245752. Thanks to Jason
