@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/vlgothic
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.35 2008/11/24 09:47:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.36 2008/11/24 20:06:42 dertobi123 Exp $
+
+  24 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  vlgothic-20081029.ebuild:
+  ppc stable, bug #248500
 
   24 Nov 2008; Raúl Porcel <armin76@gentoo.org> vlgothic-20081029.ebuild:
   alpha/ia64/sparc/x86 stable wrt #248500
