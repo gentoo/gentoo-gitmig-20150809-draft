@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.1.ebuild,v 1.3 2008/01/27 23:10:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.3.ebuild,v 1.1 2008/11/24 00:07:13 loki_val Exp $
 
 inherit mono
 
