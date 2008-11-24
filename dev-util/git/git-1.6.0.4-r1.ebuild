@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.0.4-r1.ebuild,v 1.2 2008/11/24 01:11:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.0.4-r1.ebuild,v 1.3 2008/11/24 01:17:41 robbat2 Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -54,6 +54,11 @@ pkg_setup() {
 	fi
 	if use webdav && ! use curl ; then
 		ewarn "USE=webdav needs USE=curl. Ignoring"
+	fi
+	if use subversion && has_version dev-util/subversion && built_with_use --missing false dev-util/subversion dso ; then
+		ewarn "Per Gentoo bugs #223747, #238586, when subversion is built"
+		ewarn "with USE=dso, there may be weird crashes in git-svn. You"
+		ewarn "have been warned."
 	fi
 }
 
