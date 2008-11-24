@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gavl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.5 2008/11/24 16:33:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.6 2008/11/24 16:35:02 ssuominen Exp $
+
+  24 Nov 2008; <ssuominen@gentoo.org> -gavl-0.2.7-r2.ebuild,
+  gavl-1.0.0.ebuild:
+  Remove unused version and keyword for ~x86.
 
   24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
   Re-assign to media-video herd.

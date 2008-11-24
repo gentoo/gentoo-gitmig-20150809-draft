@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/gavl-1.0.0.ebuild,v 1.2 2008/05/21 19:14:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/gavl-1.0.0.ebuild,v 1.3 2008/11/24 16:35:02 ssuominen Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gmerlin/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND=""
