@@ -1,6 +1,18 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.333 2008/11/09 21:44:56 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.334 2008/11/25 23:58:46 tgurr Exp $
+
+  25 Nov 2008; Timo Gurr <tgurr@gentoo.org>
+  -files/cups-1.2.12-CVE-2007-4045.patch,
+  -files/cups-1.2.12-CVE-2007-4351.patch,
+  -files/cups-1.2.12-CVE-2007-5849.patch,
+  -files/cups-1.2.12-CVE-2008-0047.patch,
+  -files/cups-1.2.12-CVE-2008-0053.patch,
+  -files/cups-1.2.12-CVE-2008-0882.patch,
+  -files/cups-1.2.12-CVE-2008-1373.patch,
+  -files/cups-1.2.12-CVE-2008-1722.patch, -files/cupsd.init,
+  -cups-1.2.12-r4.ebuild, -cups-1.2.12-r8.ebuild, -cups-1.3.8-r1.ebuild:
+  Remove old and vulnerable versions, finally getting rid of CUPS 1.2.x.
 
   09 Nov 2008; Tobias Klausmann <klausman@gentoo.org> Manifest:
   Fixed manifest for cups-1.3.8-source.tar.bz2
