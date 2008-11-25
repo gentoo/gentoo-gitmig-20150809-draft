@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.3.ebuild,v 1.1 2008/10/27 20:36:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.3.ebuild,v 1.2 2008/11/25 11:03:26 opfer Exp $
 
 NEED_PYTHON="2.5"
 WANT_AUTOCONF="latest"
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="reports"
 
 RDEPEND=">=dev-python/pygtk-2.10.0
-	>=dev-python/gnome-python-2.6
+	|| ( >=dev-python/gnome-python-desktop-2.6 dev-python/libgnome-python )
 	reports? ( media-gfx/graphviz )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
