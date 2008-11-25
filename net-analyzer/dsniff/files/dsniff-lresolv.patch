@@ -1,0 +1,11 @@
+--- dsniff-2.4.old/configure.in	2008-08-01 22:37:54.000000000 +0200
++++ dsniff-2.4/configure.in	2008-08-01 22:45:44.000000000 +0200
+@@ -57,6 +57,8 @@
+ AC_CHECK_LIB(nsl, gethostbyname)
+ dnl XXX - feh, everything except OpenBSD sux.
+ AC_CHECK_LIB(resolv, dn_expand)
++AC_CHECK_LIB(resolv, _dn_expand)
++AC_CHECK_LIB(resolv, __dn_expand)
+ AC_REPLACE_FUNCS(dirname strlcpy strlcat strsep)
+ needmd5=no
+ AC_CHECK_FUNCS(MD5Update, , [needmd5=yes])

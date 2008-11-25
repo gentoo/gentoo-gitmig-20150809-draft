@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.9 2007/08/13 21:20:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.10 2008/11/25 10:05:47 hanno Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit autotools eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A collection of tools for network auditing and penetration testing"
 HOMEPAGE="http://monkey.org/~dugsong/dsniff/"
@@ -47,7 +47,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-httppostfix.patch
 
 	# Allow amd64 compilation
-	append-ldflags -lresolv
+	epatch "${FILESDIR}"/${PN}-lresolv.patch
+
+	eautoreconf
 }
 
 src_compile() {
