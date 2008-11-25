@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.ebuild,v 1.3 2008/09/05 10:48:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.9-r1.ebuild,v 1.1 2008/11/25 14:50:17 armin76 Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
-NSPR_VER="4.7.1"
+NSPR_VER="4.6.8"
 RTM_NAME="NSS_${PV//./_}_RTM"
 DESCRIPTION="Mozilla's Network Security Services library that implements PKI support"
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
@@ -12,11 +12,10 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="utils"
 
-DEPEND=">=dev-libs/nspr-${NSPR_VER}
-	>=dev-db/sqlite-3.5.6"
+DEPEND=">=dev-libs/nspr-${NSPR_VER}"
 
 src_unpack() {
 	unpack ${A}
@@ -39,24 +38,17 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-3.11-config.patch
-	epatch "${FILESDIR}"/${PN}-3.12-config-1.patch
+	epatch "${FILESDIR}"/${PN}-3.11.5-config-1.patch
 	epatch "${FILESDIR}"/${PN}-mips64.patch
-	epatch "${FILESDIR}"/${PN}-fbsd7.patch
 }
 
 src_compile() {
 	strip-flags
-
-	echo > "${T}"/test.c
-	$(tc-getCC) -c "${T}"/test.c -o "${T}"/test.o
-	case $(file "${T}"/test.o) in
-	*64-bit*) export USE_64=1;;
-	*32-bit*) ;;
-	*) die "FAIL";;
-	esac
-
+	if use amd64 || use ppc64 || use ia64 || use s390; then
+		export USE_64=1
+	fi
 	export NSDISTMODE=copy
-	export NSS_USE_SYSTEM_SQLITE=1
+	export NSS_ENABLE_ECC=1
 	cd "${S}"/mozilla/security/coreconf
 	emake -j1 BUILD_OPT=1 XCFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die "coreconf make failed"
 	cd "${S}"/mozilla/security/dbm
@@ -66,7 +58,7 @@ src_compile() {
 }
 
 src_install () {
-	MINOR_VERSION=12
+	MINOR_VERSION=11
 	cd "${S}"/mozilla/security/dist
 
 	# put all *.a files in /usr/lib/nss (because some have conflicting names
@@ -93,8 +85,8 @@ src_install () {
 
 	dodir /usr/bin
 	dodir /usr/$(get_libdir)/pkgconfig
-	cp "${FILESDIR}"/3.12-nss-config.in "${D}"/usr/bin/nss-config
-	cp "${FILESDIR}"/3.12-nss.pc.in "${D}"/usr/$(get_libdir)/pkgconfig/nss.pc
+	cp "${FILESDIR}"/nss-config.in "${D}"/usr/bin/nss-config
+	cp "${FILESDIR}"/nss.pc.in "${D}"/usr/$(get_libdir)/pkgconfig/nss.pc
 	NSS_VMAJOR=`cat ${S}/mozilla/security/nss/lib/nss/nss.h | grep "#define.*NSS_VMAJOR" | awk '{print $3}'`
 	NSS_VMINOR=`cat ${S}/mozilla/security/nss/lib/nss/nss.h | grep "#define.*NSS_VMINOR" | awk '{print $3}'`
 	NSS_VPATCH=`cat ${S}/mozilla/security/nss/lib/nss/nss.h | grep "#define.*NSS_VPATCH" | awk '{print $3}'`
