@@ -1,6 +1,15 @@
 # ChangeLog for sci-physics/mpb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.9 2007/10/26 16:33:44 pbienst Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/ChangeLog,v 1.10 2008/11/25 18:45:52 bicatali Exp $
+
+*mpb-1.4.2-r2 (25 Nov 2008)
+
+  25 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/mpb-1.4.2-autotools.patch, +files/mpb-1.4.2-headers.patch,
+  metadata.xml, -mpb-1.4.2.ebuild, +mpb-1.4.2-r2.ebuild:
+  Added hdf5, doc and examples flags. Many autotools and QA fixes: quotes,
+  compilers, missing headers. Added also mpi versions of hermitian epsilon
+  and inverse symmetry
 
 *mpb-1.4.2-r1 (26 Oct 2007)
 
