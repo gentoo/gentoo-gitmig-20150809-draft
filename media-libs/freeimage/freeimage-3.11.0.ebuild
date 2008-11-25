@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.11.0.ebuild,v 1.1 2008/09/02 00:12:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.11.0.ebuild,v 1.2 2008/11/25 09:17:05 nyhm Exp $
 
 inherit toolchain-funcs multilib
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip
 LICENSE="|| ( GPL-2 FIPL-1.0 )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+IUSE="cxx doc"
 
 DEPEND="app-arch/unzip"
 RDEPEND=""
@@ -32,13 +32,23 @@ src_unpack() {
 		-e "/^INSTALLDIR = /s:/usr/lib:${D}/usr/$(get_libdir):" \
 		-e '/^COMPILERFLAGS =/s:-O3::' \
 		-e "/\$(CC) -s /s: -s : ${LDFLAGS} :" \
-		Makefile.gnu \
+		Makefile.{gnu,fip} \
 		|| die "sed failed"
+}
+
+src_compile() {
+	emake -f Makefile.gnu || die "emake failed"
+	if use cxx ; then
+		emake -f Makefile.fip || die "emake fip failed"
+	fi
 }
 
 src_install() {
 	dodir /usr/include /usr/$(get_libdir)
-	emake install || die "emake install failed"
+	emake -f Makefile.gnu install || die "emake install failed"
+	if use cxx ; then
+		emake -f Makefile.fip install || die "emake install fip failed"
+	fi
 	dodoc README.linux Whatsnew.txt
 	use doc && dodoc "${DISTDIR}"/${MY_P}.pdf
 }

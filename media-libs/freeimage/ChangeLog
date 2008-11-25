@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeimage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/ChangeLog,v 1.5 2008/09/02 00:12:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/ChangeLog,v 1.6 2008/11/25 09:17:05 nyhm Exp $
+
+  25 Nov 2008; Tristan Heaven <nyhm@gentoo.org> freeimage-3.11.0.ebuild:
+  Add cxx USE flag, bug #242888
 
 *freeimage-3.11.0 (02 Sep 2008)
 
