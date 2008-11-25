@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/gconf-sharp-2.16.0.ebuild,v 1.8 2008/11/23 20:48:40 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/gconf-sharp-2.16.0.ebuild,v 1.9 2008/11/25 20:56:30 loki_val Exp $
 
 GTK_SHARP_TARBALL_PREFIX="gnome-sharp"
 GTK_SHARP_REQUIRED_VERSION="2.10"
@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND="${DEPEND}
 		>=gnome-base/gconf-2.0
-		|| ( >=dev-dotnet/gtk-sharp-2.12.6 =dev-dotnet/glade-sharp-2.10* )
+		=dev-dotnet/glade-sharp-2.10*
 		=dev-dotnet/gnome-sharp-${PV}*
 		=dev-dotnet/art-sharp-${PV}*"
 
