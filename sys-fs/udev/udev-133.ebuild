@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-133.ebuild,v 1.4 2008/11/25 18:57:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-133.ebuild,v 1.5 2008/11/25 19:32:53 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -57,9 +57,6 @@ pkg_setup() {
 	fi
 }
 
-# TODO: Can we keep the sources access /lib/udev and just
-#   install the files to /lib64/udev ?
-#   This makes eautoreconf superfluous
 sed_helper_dir() {
 	sed -e "s#/lib/udev#${udev_helper_dir}#" -i "$@"
 }
@@ -102,8 +99,6 @@ src_compile() {
 		--with-libdir-name=$(get_libdir) \
 		--enable-logging \
 		$(use_with selinux)
-
-	# FIXME: logging causes messages about compat rules on boot
 
 	emake || die "compiling udev failed"
 }
