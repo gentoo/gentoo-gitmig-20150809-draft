@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-79.ebuild,v 1.1 2008/11/20 16:50:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-79.ebuild,v 1.2 2008/11/25 14:41:05 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
 EAPI="1"
 
 # Patchset git repo is at http://github.com/dang/kvm-patches/tree/master
-PATCHSET="kvm-patches-20081106"
+PATCHSET="kvm-patches-20081124"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://gentoo/${PATCHSET}.tar.gz"
 
@@ -99,9 +99,6 @@ src_unpack() {
 	# avoid strip
 	sed -i 's/$(INSTALL) -m 755 -s/$(INSTALL) -m 755/' qemu/Makefile
 
-	# XXX dang skip 06_all_block-rw-range-check.patch for now until new tarball
-	# can sync
-	rm "${WORKDIR}/${PATCHSET}/06_all_block-rw-range-check.patch"
 	# apply patchset
 	EPATCH_SOURCE="${WORKDIR}/${PATCHSET}"
 	EPATCH_SUFFIX="patch"

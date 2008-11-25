@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.22 2008/11/20 16:50:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.23 2008/11/25 14:41:05 dang Exp $
+
+  25 Nov 2008; Daniel Gryniewicz <dang@gentoo.org> kvm-79.ebuild:
+  New patch tarball: remove 06, update 02 (bug #248252)
 
 *kvm-79 (19 Nov 2008)
 
