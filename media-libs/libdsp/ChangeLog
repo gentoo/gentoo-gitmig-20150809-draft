@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdsp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/ChangeLog,v 1.7 2007/01/13 19:08:01 dirtyepic Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/ChangeLog,v 1.8 2008/11/25 15:19:29 armin76 Exp $
+
+  25 Nov 2008; Raúl Porcel <armin76@gentoo.org> libdsp-5.0.2.ebuild:
+  x86 stable
 
 *libdsp-5.0.2 (13 Jan 2007)
 
