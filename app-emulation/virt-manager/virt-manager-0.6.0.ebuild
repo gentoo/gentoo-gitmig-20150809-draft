@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.6.0.ebuild,v 1.1 2008/11/24 02:22:12 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.6.0.ebuild,v 1.2 2008/11/25 05:06:50 marineam Exp $
 
 # Stop gnome2.eclass from doing stuff on USE=debug
 GCONF_DEBUG="no"
@@ -22,6 +22,7 @@ RDEPEND=">=dev-python/pygtk-1.99.12
 	>=x11-libs/vte-0.12.2
 	>=net-libs/gtk-vnc-0.3.4
 	dev-python/dbus-python
+	dev-python/gconf-python
 	dev-python/libgnome-python
 	gnome-keyring? ( dev-python/gnome-keyring-python )"
 DEPEND="${RDEPEND}"

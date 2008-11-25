@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.8 2008/11/24 02:22:12 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.9 2008/11/25 05:06:50 marineam Exp $
+
+  25 Nov 2008; Michael Marineau <marineam@gentoo.org>
+  virt-manager-0.6.0.ebuild:
+  gconf-python was left out of the deps by mistake
 
 *virt-manager-0.6.0 (24 Nov 2008)
 
