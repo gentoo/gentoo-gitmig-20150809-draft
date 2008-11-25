@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-1.12.3.ebuild,v 1.2 2005/11/28 12:04:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-1.12.3.ebuild,v 1.3 2008/11/25 07:35:36 nerdboy Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic fortran perl-module toolchain-funcs
 
 IUSE=""
 
@@ -23,53 +23,68 @@ RDEPEND="dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/udunits_customize.patch || die "epatch failed"
+	cd "${S}"
+	sed -i -e "s:\${prefix}/etc:/etc:g" \
+	    -i -e "s:\${prefix}/man:\${prefix}/share/man:g" \
+	    -i -e "s:\${exec_prefix}/lib:\${exec_prefix}/$(get_libdir):g" \
+	    configure || die "sed 1 failed"
 }
 
 src_compile() {
 	export CPPFLAGS="-Df2cFortran -D_POSIX_SOURCE"
+	export CFLAGS="${CFLAGS}"
+	export FC="${FORTRANC}"
+	export CC="$(tc-getCC)"
+	export CXX="$(tc-getCXX)"
+	export LD_MATH="-lm"
+	# This is needed for the perl shared object build
 	append-flags -fPIC
+
 	econf || die "econf failed"
 
-	cd lib
-	emake || die
-	cd ..
+	cd "${S}"/lib
+	    emake || die "emake lib failed"
+	cd "${S}"
 
-	cd perl
-	perl Makefile.PL PREFIX=${D}/usr
-	cd ..
+	cd "${S}"/perl
+	    perl-module_src_prep
+	    perl-module_src_compile
+	cd "${S}"
 
-	emake || die
-	emake test || die
+	# random compile failures with -jN (when N > 1)
+	emake -j1 || die "emake died"
+}
+
+src_test() {
+	make check || die "make test failed"
 }
 
 src_install() {
-	sed "s?/usr?${D}/usr?" Makefile > Makefile.install
-	emake -f Makefile.install install
-
-	dodir /etc /usr/share/man/man3 /usr/share/man/man3f
+	# The configure sucks, and so do the makefiles; this pretty much
+	# needs to be done manually...
+	dobin udunits/udunits
+	dolib.a lib/libudunits.a port/misc/libudport.a
+	doman udunits/udunits.1 lib/udunits.3 perl/udunitsperl.1
 
 	insinto /etc
-	insopts -m 644
 	doins lib/udunits.dat
-
-	insinto /usr/share/man/man3
-	doins lib/udunits.3
+	insinto /usr/include
+	doins lib/{udunits.h,udunits.inc}
+	# doman still doesn't put this in the right place
 	insinto /usr/share/man/man3f
 	doins lib/udunits.3f
+	dodoc README RELEASE_NOTES
 
-	cd perl
-	make PREFIX=${D}/usr install INSTALLSITEMAN1DIR=${D}/usr/share/man/man1
-	cd ..
+	fixlocalpod
+	cd "${S}"/perl
+	    perl-module_src_install
+	cd "${S}"
 
-	find ${D} -type f -a \( -name perllocal.pod -o -name .packlist \
-		-o \( -name '*.bs' -a -empty \) \) -exec rm -f {} ';'
-	find ${D} -type d -depth -exec rmdir {} 2>/dev/null ';'
-
-	chmod -R u+w ${D}/*
-
-	dodoc COPYRIGHT README RELEASE_NOTES VERSION CUSTOMIZE INSTALL
+	# Clean up left-over cruft...  (yes, this is still needed)
+	find "${D}" -type f -a \( -name perllocal.pod -o -name .packlist \
+	    -o \( -name '*.bs' -a -empty \) \) -exec rm -f {} ';'
+	find "${D}" -type d -depth -exec rmdir {} 2>/dev/null ';'
+	chmod -R u+w "${D}"/*
 }
 
 pkg_postinst() {
