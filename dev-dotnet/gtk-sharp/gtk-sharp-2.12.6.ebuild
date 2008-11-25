@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.12.6.ebuild,v 1.2 2008/11/23 21:02:03 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.12.6.ebuild,v 1.3 2008/11/25 00:22:05 loki_val Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils mono autotools
 
@@ -13,31 +13,27 @@ SRC_URI="mirror://gnome/sources/${PN}/${PV%.*}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="+glade"
+IUSE="+glade doc"
 
 RDEPEND=">=dev-lang/mono-1.1.9
 		glade? ( >=gnome-base/libglade-2.3.6 )
 		 >=x11-libs/gtk+-2.12
-		!<dev-dotnet/glade-sharp-9999"
+		!dev-dotnet/glade-sharp"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19
-		>=dev-util/monodoc-1.1.8"
+		doc? ( >=dev-util/monodoc-1.1.8 )"
 
 RESTRICT="test"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 
 	# Upstream bug #421063
 	epatch "${FILESDIR}/${PN}-2.12.0-parallelmake.patch"
 	epatch "${FILESDIR}/${PN}-2.12.0-doc-parallelmake.patch"
-	# Upstream bug #443174
-	epatch "${FILESDIR}/${PN}-2.12.0-respect-choices.patch"
 	# Upstream bug #443180
 	epatch "${FILESDIR}/${PN}-2.12.0-noautomagic.patch"
 
-	# Upsteram bug #443175
+	# Upstream bug #443175
 	sed -i -e ':^CFLAGS=:d' "${S}/configure.in"
 
 	# disable building of samples (#16015)
@@ -46,8 +42,11 @@ src_unpack() {
 	eautoreconf
 }
 
+src_configure() {
+	econf $(use_enable doc monodoc) $(use_enable glade) || die "configure failed"
+}
+
 src_compile() {
-	econf $(use_enable glade) || die "configure failed"
 	LANG=C emake || die
 }
 
