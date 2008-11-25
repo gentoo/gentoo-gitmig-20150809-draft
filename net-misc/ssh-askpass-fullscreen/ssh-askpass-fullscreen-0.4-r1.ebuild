@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ssh-askpass-fullscreen-0.4-r1.ebuild,v 1.1 2008/11/20 15:56:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ssh-askpass-fullscreen-0.4-r1.ebuild,v 1.2 2008/11/25 15:47:15 darkside Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="A small SSH Askpass replacement written with GTK2."
 HOMEPAGE="https://www.cgabriel.org/software/wiki/SshAskpassFullscreen"
@@ -32,8 +34,8 @@ src_compile() {
 }
 
 src_install() {
-	dobin ssh-askpass-fullscreen
-	doenvd "${FILESDIR}"/99ssh_askpass
+	dobin ssh-askpass-fullscreen || die "dobin failed"
+	doenvd "${FILESDIR}"/99ssh_askpass || die "doenvd failed"
 	dodoc README AUTHORS
 	#doman debian/gtk2-ssh-askpass.1
 }
