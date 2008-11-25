@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/subtitleripper-0.3.4-r3.ebuild,v 1.2 2008/04/11 19:18:30 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/subtitleripper-0.3.4-r3.ebuild,v 1.3 2008/11/25 16:15:38 flameeyes Exp $
 
-inherit versionator
+inherit versionator eutils
 
 MY_PV="$(replace_version_separator 2 "-")"
 
@@ -30,6 +30,8 @@ src_unpack() {
 	sed -i -e "s:#include <ppm.h>:#include <netpbm/ppm.h>:g" spudec.c subtitle2pgm.c
 	# we will install the gocrfilters into /usr/share/subtitleripper
 	sed -i -e 's:~/sourceforge/subtitleripper/src/:/usr/share/subtitleripper:' pgm2txt
+
+	epatch "${FILESDIR}/${P}-linkingorder.patch"
 }
 
 src_install () {

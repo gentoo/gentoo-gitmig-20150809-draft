@@ -1,6 +1,11 @@
 # ChangeLog for media-video/subtitleripper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/ChangeLog,v 1.14 2008/04/11 19:18:30 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/ChangeLog,v 1.15 2008/11/25 16:15:38 flameeyes Exp $
+
+  25 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/subtitleripper-0.3.4-linkingorder.patch,
+  subtitleripper-0.3.4-r3.ebuild:
+  Add patch to fix linking order, closes bug #246862.
 
   11 Apr 2008; Ben de Groot <yngwin@gentoo.org>
   subtitleripper-0.3.4-r3.ebuild:
