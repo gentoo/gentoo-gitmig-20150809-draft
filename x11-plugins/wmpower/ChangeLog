@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmpower
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.28 2007/07/22 04:36:18 dberkholz Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.29 2008/11/25 10:57:57 s4t4n Exp $
+
+*wmpower-0.4.3 (25 Nov 2008)
+
+  25 Nov 2008; Michele Noberasco <s4t4n@gentoo.org> wmpower-0.4.3.ebuild:
+  Version bump. Also fixes bug #248648.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; wmpower-0.4.2.ebuild:
   Drop virtual/x11 references.
