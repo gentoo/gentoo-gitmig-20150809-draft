@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-133.ebuild,v 1.3 2008/11/23 20:05:19 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-133.ebuild,v 1.4 2008/11/25 18:57:00 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -70,6 +70,8 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
+	epatch "${FILESDIR}/${P}-silence-physdev-warnings.diff"
+	epatch "${FILESDIR}/${P}-rules-update.diff"
 
 	# Make sure there is no sudden changes to upstream rules file
 	# (more for my own needs than anything else ...)
