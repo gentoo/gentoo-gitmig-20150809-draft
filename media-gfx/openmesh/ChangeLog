@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/openmesh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.7 2008/10/31 21:00:20 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.8 2008/11/25 21:19:52 jsbronder Exp $
+
+*openmesh-1.9.6 (25 Nov 2008)
+
+  25 Nov 2008; Justin Bronder <jsbronder@gentoo.org> +openmesh-1.9.6.ebuild:
+  bump media-gfx/openmesh-1.9.6.  Fixes gcc-4.3 errors, #239756
 
   31 Oct 2008; Justin Bronder <jsbronder@gentoo.org> metadata.xml:
   Taking over as maintainer
