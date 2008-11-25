@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9213 2008/11/25 22:39:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9214 2008/11/25 22:53:19 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -53,6 +53,7 @@ media-sound/cantus
 # Packages not building with mono-2
 # Masked for removal in 60 days.
 app-misc/gnutu
+app-pda/dopi
 
 # Jeremy Olexa <darkside@gentoo.org> (22 Nov 2008)
 # Masked for removal in 30 days, requested by maintainers. bug #173584
