@@ -1,6 +1,6 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.113 2008/10/13 00:35:38 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.114 2008/11/25 02:15:02 cardoe Exp $
 
 *nvidia-drivers-177.80 (13 Oct 2008)
 
@@ -169,16 +169,16 @@
 
 *nvidia-drivers-169.12 (28 Feb 2008)
 
-  28 Feb 2008; Doug Klima <cardoe@gentoo.org> +nvidia-drivers-169.12.ebuild:
+  28 Feb 2008; Doug Goldstein <cardoe@gentoo.org> +nvidia-drivers-169.12.ebuild:
   version bump
 
-  18 Feb 2008; Doug Klima <cardoe@gentoo.org>
+  18 Feb 2008; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-169.09-r1.ebuild:
   revert libwfb.so change requested in bug #202978
 
 *nvidia-drivers-169.09-r1 (15 Feb 2008)
 
-  15 Feb 2008; Doug Klima <cardoe@gentoo.org>
+  15 Feb 2008; Doug Goldstein <cardoe@gentoo.org>
   +nvidia-drivers-169.09-r1.ebuild:
   new ebuild that should fix bug #207298, #207299, #167413, #184593, #188552,
   and #187149. and #202978, depending on the results of the discussion and
@@ -187,34 +187,34 @@
 *nvidia-drivers-96.43.05 (04 Feb 2008)
 *nvidia-drivers-71.86.04 (04 Feb 2008)
 
-  04 Feb 2008; Doug Klima <cardoe@gentoo.org>
+  04 Feb 2008; Doug Goldstein <cardoe@gentoo.org>
   +nvidia-drivers-71.86.04.ebuild, +nvidia-drivers-96.43.05.ebuild:
   new legacy driver releases for newer kernels and X.org servers
 
 *nvidia-drivers-169.09 (22 Jan 2008)
 
-  22 Jan 2008; Doug Klima <cardoe@gentoo.org> nvidia-drivers-169.07.ebuild,
+  22 Jan 2008; Doug Goldstein <cardoe@gentoo.org> nvidia-drivers-169.07.ebuild,
   +nvidia-drivers-169.09.ebuild:
   QA_WX_LOAD addition. new nvidia-drivers version
 
-  22 Jan 2008; Doug Klima <cardoe@gentoo.org> +files/nvidia-169.07,
+  22 Jan 2008; Doug Goldstein <cardoe@gentoo.org> +files/nvidia-169.07,
   nvidia-drivers-169.07.ebuild:
   provide newer /etc/modules.d file
 
 *nvidia-drivers-169.07 (16 Jan 2008)
 
-  16 Jan 2008; Doug Klima <cardoe@gentoo.org> +nvidia-drivers-169.07.ebuild:
+  16 Jan 2008; Doug Goldstein <cardoe@gentoo.org> +nvidia-drivers-169.07.ebuild:
   starting to rewrite the ebuild a bit. commiting masked so people can tinker
 
-  26 Dec 2007; Doug Klima <cardoe@gentoo.org>
+  26 Dec 2007; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-100.14.19.ebuild, nvidia-drivers-100.14.23.ebuild:
   fix patch to nvidia-xconfig on FreeBSD. bug #199761
 
-  21 Dec 2007; Doug Klima <cardoe@gentoo.org>
+  21 Dec 2007; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-drivers-1.0.7185.ebuild, -nvidia-drivers-1.0.9639.ebuild:
   remove old versions
 
-  21 Dec 2007; Doug Klima <cardoe@gentoo.org>
+  21 Dec 2007; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-100.14.19.ebuild, nvidia-drivers-100.14.23.ebuild:
   apply patch only when linux. bug #199759
 
