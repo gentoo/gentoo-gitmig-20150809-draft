@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9211 2008/11/25 16:30:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9212 2008/11/25 19:23:12 lack Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -132,11 +132,6 @@ media-sound/workman
 # ytin hasn't been updated in years.  Use games-mud/tintin instead
 # which is still being maintained.
 games-mud/ytin
-
-# Jim Ramsay <lack@gentoo.org> (17 Nov 2008)
-# The NEW 64-bit version of flash player is alpha, p.mask it until it's a wee
-# bit more tested (Bug #247200)
-=net-www/netscape-flash-10.0.20.7_alpha
 
 # Matthias Schwarzott <zzam@gentoo.org> (28 Oct 2008)
 # This breaks kernels with older sysfs layout, Bug #246938
