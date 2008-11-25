@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.106 2008/10/06 16:24:03 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.107 2008/11/25 23:09:48 yngwin Exp $
+
+*PyQt-3.17.6 (25 Nov 2008)
+
+  25 Nov 2008; Ben de Groot <yngwin@gentoo.org> +PyQt-3.17.6.ebuild:
+  Version bump, fixes bug 248044
 
   06 Oct 2008; Ali Polatel <hawking@gentoo.org>
   -files/PyQt-3.14.1-examples.diff,
@@ -319,7 +324,7 @@
 
   27 Aug 2003; Caleb Tennis <caleb@gentoo.org> PyQt-3.8.ebuild:
   Version bump
-  
+
   31 Jul 2003; Caleb Tennis <caleb@gentoo.org> PyQT-3.7.ebuild:
   Upgrade dep on QScintilla-1.53
 
@@ -342,16 +347,16 @@
   17 Apr 2003; Michele Balistreri <brain@gentoo.org> Changelog  :
 
     Added IUSE flag for policy compliance
-      
+
   17 Apr 2003; Michele Balistreri <brain@gentoo.org> Changelog  :
 
     Marked as stable on x86
-    
+
   12 Apr 2003; Michele Balistreri <brain@gentoo.org> ChangeLog  :
 
     Fix compilation bug with QT 3.1.2 (bug #19008)
 
-    
+
   26 Feb 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   Fix possible sandbox error as per bug #12393.
@@ -364,41 +369,41 @@
   files are like headers for sip-based packages, such as PyQT and PyKDE. This
   closes bug #10060.
 
-*PyQt-3.5 (14 Dec 2002) 
+*PyQt-3.5 (14 Dec 2002)
 
   14 Dec 2002; Bart Verwilst <verwilst@gentoo.org>
 
   New version, + changed license to GPL
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*PyQt-3.4 (18 Sep 2002) 
+
+*PyQt-3.4 (18 Sep 2002)
 
   18 Sep 2002; Sascha Schwabbauer <cybersystem@gentoo.org> :
 
   Added ppc to keywords.
 
-*PyQt-3.4 (17 Sep 2002) 
+*PyQt-3.4 (17 Sep 2002)
 
   17 Sep 2002; Bart Verwilst <verwilst@gentoo.org>
 
-*PyQt-3.3.2 (25 Jul 2002) 
+*PyQt-3.3.2 (25 Jul 2002)
 
   25 Jul 2002; Bart Verwilst <verwilst@gentoo.org>
- 
+
   13 Aug 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
 
   Added "-c" flag to build.py, so the compilation time will be 80% less
   from what it was before. More CPU/MEM usage though during compilation!
 
-*PyQt-3.2.4 (5 Jul 2002) 
+*PyQt-3.2.4 (5 Jul 2002)
 
   05 Jul 2002; Bart Verwilst <verwilst@gentoo.org>
 
 *PyQt-3.0 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
