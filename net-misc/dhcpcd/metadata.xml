@@ -2,8 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>base-system</herd>
+  <maintainer>
+  	<email>welp@gentoo.org</email>
+	<name>Peter Weller</name>
+  </maintainer>
   <longdescription>A DHCP client</longdescription>
-  <longdescription lang="ja">DHCP クライアントです。</longdescription>
+  <longdescription lang="ja">DHCP ã¯ã©ã¤ã¢ã³ãã§ãã</longdescription>
   <use>
     <flag name="compat">Enable commandline compability with dhcpcd-3.x</flag>
     <flag name="vram">Disable DUID due to volatile media, such as a LiveCD</flag>
