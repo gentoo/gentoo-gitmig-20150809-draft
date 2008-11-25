@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.95 2008/10/30 15:06:11 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.96 2008/11/25 22:13:49 dertobi123 Exp $
+
+*wordpress-2.6.5 (25 Nov 2008)
+
+  25 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  -wordpress-2.6.3.ebuild, +wordpress-2.6.5.ebuild:
+  Bumped to 2.6.5 for yet another security issue, see
+  http://wordpress.org/development/2008/11/wordpress-265/ for reference
 
 *wordpress-2.6.3 (30 Oct 2008)
 
