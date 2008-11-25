@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/slashtime-0.5.8-r1.ebuild,v 1.1 2008/10/18 20:25:54 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/slashtime-0.5.9.ebuild,v 1.1 2008/11/25 18:51:47 serkan Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="source"

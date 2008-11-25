@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/slashtime
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.6 2008/10/18 20:25:54 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.7 2008/11/25 18:51:47 serkan Exp $
+
+*slashtime-0.5.9 (25 Nov 2008)
+
+  25 Nov 2008; Serkan Kaba <serkan@gentoo.org>
+  -files/slashtime-0.5.8-jardir-and-symlink.patch,
+  +files/slashtime-0.5.9-jardir-and-symlink.patch,
+  -slashtime-0.5.8-r1.ebuild, +slashtime-0.5.9.ebuild:
+  Version bump. Remove old.
 
 *slashtime-0.5.8-r1 (18 Oct 2008)
 

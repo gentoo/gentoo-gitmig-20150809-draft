@@ -1,0 +1,45 @@
+# Bazaar merge directive format 2 (Bazaar 0.90)
+# revision_id: serkan@gentoo.org-20081125183337-ifvpj401fgsg06c0
+# target_branch: ../slashtime/
+# testament_sha1: 79b7360b8e1df73365cf59d8b1f463389cb83831
+# timestamp: 2008-11-25 20:35:14 +0200
+# base_revision_id: andrew@operationaldynamics.com-20081125121459-\
+#   l71olekszk51uk8r
+# 
+# Begin patch
+=== modified file 'Makefile'
+--- Makefile	2008-11-08 07:44:27 +0000
++++ Makefile	2008-11-25 18:33:37 +0000
+@@ -84,7 +84,7 @@
+ # --------------------------------------------------------------------
+ 
+ install: all \
+-		$(DESTDIR)$(PREFIX)/share/java/slashtime-$(APIVERSION).jar \
++		$(DESTDIR)$(JARDIR)/slashtime-$(APIVERSION).jar \
+ 	 	tmp/stamp/install-pixmaps \
+ 	 	tmp/stamp/install-translations \
+ 		$(DESTDIR)$(PREFIX)/share/applications/slashtime.desktop \
+
+# Begin bundle
+IyBCYXphYXIgcmV2aXNpb24gYnVuZGxlIHY0CiMKQlpoOTFBWSZTWfWKaaoAAdTfgCAwVWP//3//
+/3S////wUAR6vADFQAaAaIk8qeEaYp5IDI0xMgD1PJHpGR6nhRtTJoOMmTQxGJowCMBMIAwE00aZ
+GgGGkahhQZGo08Q0ah6nqDJhHqMIwQABjjJk0MRiaMAjATCAMBNNGmRoBhJIIAE00BTwTTVP0mjN
+QEekaaaPNUbSNPSGAjOtDYTBIKfRyEorPDVnYSggjRhdSh6AnQQZG0xG4G7yD9FMQjQowZ1TlVZa
+WZ3jQg+dJrzCMJhLXaDM51u7qaVufzPU1NeNaBVqKMCmBWGQ2hML6IsREkWUgCiiZ/n6Ahmzcvl5
+mnFcwL8VwVpA3IqA3bGAxhn+mY7KJGh9kZOxBkO+T3ous4Om86sKXUCZTyj/dC1jcOSVBp9gEDhx
+j2nYVhoAYnmckpx3iQOTHK7u6HIlGZ2o+A/0RLZ0J2cMcgJ18rD33mAqC0vyyAbb5nMfuxIBiCRF
+3k/GkrAsMo5C0Dn25AijMSSFOnXE9c81pzYy6bwJAIcHAW0S6Rw0sXX0/2AxQYtW3LENZIaEVMPK
+y3uagmDQFOJwGf1gzUy2hMVlhSTj3k/+Bd411GCOvLUUARKVVECuJUFroyUC+ks0mcoHIVcQIxlN
+D2OnMQJIUkH5ArjLjwCnyNBcbqi0kMRcQLduaESFwXmZXBHQRRHuMfI9rC+LDe01CEsrqDeML5fg
+dPalaAs0JSQG4hjolxZPmtiYR1a3w6ZkZxUBnsaGdpDbkfsJzs2OpXS4Lmx+vS07iZeSLCfYLDn8
+V8kW+gpLwRdDTeDK5cySpxsDU4IDgPDtVA9Kor9u2UWCb+bEPAbsxcOFtIU1SGTrkmx0nliwLrNv
+w0X20Pn7/rh6+TDIaf4yeR3+YMENQF2YIFHUFhIkHF7joH7m0iB8aCEn2IiEsSBmQ3pESHh1suZk
+GsF7OdSaZFPHP4F5QbO4yHMbmPJroHo+chvJTnl40EwSAROkq6Okrf7shsxNzRY5GLHkkuak4GBS
+ohAePMZQj53xOr4U7jXQjxv2i72w6HErajVGBQ15pbrroKTPj4jWQR6cDTbZ1KUKZkHJRFrtrvRL
+6O5kGqAayJI04k4HacL8Nh4ONFByA8Zlv22anBX2k4ECKDGB3O3peSC6W4Dy3HyocyKmLVmudWW5
+kfX7hKbB4E8hYKKo3oppf4ftojCiZkDIq3oLdffZL+HQB20/1pM5xCr1B58ojcvMj9rNPAOF4bAa
+MyLRRB3U1ZfvlLJUc/e9UTqaO2BBGPrnfwIu9UAwZPQMgoP1RmgSoZEXGANkQmYXT7XhtkQX06P+
+7Q2CmANnFBN2IYHI3oKg9nCC2P26LEst0B0VFEAoANmWsIhkKVEhMIZQkga3SnMEzUXUsn9aNFSC
+knpcIeGELQhBhmGWlH5vkG18X9Rn++JYupO4AZJDJiJYPxrawo1BPaX8nFIsQU3UyWbIn2JExVco
+lU5ugTCoQToYUWC6DzAgZdGsNpPZCS07a64LBB56AHIhrZwTG4uqaQyvfWi6N5QXBT/4u5IpwoSH
+rFNNUA==
