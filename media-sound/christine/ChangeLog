@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/christine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/ChangeLog,v 1.2 2008/06/09 15:06:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/ChangeLog,v 1.3 2008/11/25 16:09:08 ssuominen Exp $
+
+  25 Nov 2008; <ssuominen@gentoo.org> christine-0.1.6.ebuild:
+  Add missing deps wrt #243068, thanks to basic at mozdev.org and Jim
+  Ramsay. Play addpredict games.
 
   09 Jun 2008; Raúl Porcel <armin76@gentoo.org> christine-0.1.6.ebuild:
   Add ~sparc/~x86
