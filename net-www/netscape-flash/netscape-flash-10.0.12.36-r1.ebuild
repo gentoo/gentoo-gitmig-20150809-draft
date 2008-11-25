@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-10.0.12.36-r1.ebuild,v 1.3 2008/10/23 18:25:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-10.0.12.36-r1.ebuild,v 1.4 2008/11/25 19:00:42 lack Exp $
 
-inherit nsplugins rpm
+inherit nsplugins
 
 DESCRIPTION="Adobe Flash Player"
 SRC_URI="http://fpdownload.macromedia.com/get/flashplayer/current/flash-plugin-${PV}-release.i386.rpm
