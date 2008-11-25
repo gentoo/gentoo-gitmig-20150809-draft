@@ -19,4 +19,4 @@ diff -ur toilet-0.1.orig/src/Makefile.am toilet-0.1/src/Makefile.am
  toilet_CFLAGS = `pkg-config --cflags cucul`
 -toilet_LDFLAGS = `pkg-config --libs cucul` @GETOPT_LIBS@ @ZLIB_LIBS@
 -
-+toilet_LDADD = -lcucul @GETOPT_LIBS@ @ZLIB_LIBS@
++toilet_LDADD = -lcaca @GETOPT_LIBS@ @ZLIB_LIBS@
