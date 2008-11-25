@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.552-r2.ebuild,v 1.2 2008/11/22 06:08:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.552-r2.ebuild,v 1.3 2008/11/25 09:49:34 lu_zero Exp $
 
 IUSE="acpi debug"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 
 # The portage dep is for COLON_SEPARATED support in env-update.
 # The eselect dep (>=1.0.9) is for COLON_SEPARATED in eselect env update.
-RDEPEND="x11-base/xorg-server
+RDEPEND=">=x11-base/xorg-server-1.5
 	!x11-apps/ati-drivers-extra
 	>=app-admin/eselect-1.0.9
 	app-admin/eselect-opengl
