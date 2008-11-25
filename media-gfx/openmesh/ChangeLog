@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/openmesh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.8 2008/11/25 21:19:52 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.9 2008/11/25 21:21:40 jsbronder Exp $
+
+  25 Nov 2008; Justin Bronder <jsbronder@gentoo.org>
+  -openmesh-1.9.4-r1.ebuild:
+  Cleanup old media-gfx/openmesh version (1.9.4-r1)
 
 *openmesh-1.9.6 (25 Nov 2008)
 
