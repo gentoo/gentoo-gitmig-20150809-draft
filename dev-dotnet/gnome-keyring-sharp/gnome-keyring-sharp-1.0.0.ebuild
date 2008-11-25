@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/gnome-keyring-sharp-1.0.0.ebuild,v 1.1 2008/11/25 13:45:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/gnome-keyring-sharp-1.0.0.ebuild,v 1.2 2008/11/25 13:53:54 loki_val Exp $
 
 EAPI=2
 
@@ -16,9 +16,9 @@ KEYWORDS="~x86 ~amd64"
 IUSE="dbus"
 
 RDEPEND="dev-lang/mono
-	dev-util/monodoc
 	dbus? ( dev-dotnet/dbus-sharp )"
 DEPEND="${RDEPEND}
+	dev-util/monodoc
 	dev-util/pkgconfig"
 
 src_prepare() {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gnome-keyring-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/ChangeLog,v 1.1 2008/11/25 13:45:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/ChangeLog,v 1.2 2008/11/25 13:53:54 loki_val Exp $
+
+  25 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  gnome-keyring-sharp-1.0.0.ebuild:
+  monodoc is a build-time dep.
 
 *gnome-keyring-sharp-1.0.0 (25 Nov 2008)
 
