@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.6.ebuild,v 1.1 2008/11/25 22:19:08 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.0.6.ebuild,v 1.2 2008/11/25 22:57:07 welp Exp $
 
 EAPI=1
 
@@ -59,6 +59,7 @@ src_compile() {
 src_install() {
 	local hooks="50-ntp.conf"
 	use elibc_glibc && hooks="${hooks} 50-yp.conf"
+	use compat && hooks="${hooks} 50-dhcpcd-compat"
 	emake ${MAKE_ARGS} HOOKSCRIPTS="${hooks}" DESTDIR="${D}" install || die
 }
 
