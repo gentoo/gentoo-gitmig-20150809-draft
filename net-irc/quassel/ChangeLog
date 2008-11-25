@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.33 2008/10/26 13:22:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.34 2008/11/25 00:24:42 darkside Exp $
+
+  25 Nov 2008; Jeremy Olexa <darkside@gentoo.org> metadata.xml,
+  quassel-0.3.0.3.ebuild, quassel-9999.ebuild:
+  cosmetic cleanups for bug #248217 by Daniel Pielmeier (billie). Add myself
+  to metadata until jokey is free again
 
 *quassel-0.3.0.3 (26 Oct 2008)
 

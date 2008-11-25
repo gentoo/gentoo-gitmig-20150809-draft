@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.3.0.3.ebuild,v 1.1 2008/10/26 13:22:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.3.0.3.ebuild,v 1.2 2008/11/25 00:24:42 darkside Exp $
 
 EAPI=1
 
@@ -55,22 +55,30 @@ pkg_setup() {
 }
 
 src_compile() {
-	local MY_LANGUAGES=""
-	for ling in ${LINGUAS}; do
-		if has $ling ${LANGS}; then
-			MY_LANGUAGES="${ling} ${MY_LANGUAGES}"
-		fi
-	done
+# Comment this out and invoke _common_configure_code, cmake and cmake-utils_src_make
+# manually until cmake-utils.eclass supports space separated strings as arguments for cmake
+# options. Until now multiple languages are not passed to -DLINGUAS and only the first
+# language is considered.
+#
+#	local mycmakeargs=(
+#		"$(cmake-utils_use_want server CORE)"
+#		"$(cmake-utils_use_want X QTCLIENT)"
+#		"$(cmake-utils_use_with dbus DBUS)"
+#		"$(cmake-utils_use_with ssl OPENSSL)"
+#		"-DLINGUAS=\"${LINGUAS}\""
+#		'-DWANT_MONO=OFF' )
+#
+#	cmake-utils_src_compile
 
-	local mycmakeargs="
-		$(cmake-utils_use_want server CORE)
-		$(cmake-utils_use_want X QTCLIENT)
-		$(cmake-utils_use_with dbus DBUS)
-		$(cmake-utils_use_with ssl OPENSSL)
-		-DLINGUAS="${MY_LANGUAGES}"
-		-DWANT_MONO=OFF"
+	_common_configure_code
 
-	cmake-utils_src_compile
+	cmake -C "${TMPDIR}/gentoo_common_config.cmake" \
+		$(cmake-utils_use_want server CORE) $(cmake-utils_use_want X QTCLIENT) \
+		$(cmake-utils_use_with dbus DBUS) $(cmake-utils_use_with ssl OPENSSL) \
+		-DLINGUAS="${LINGUAS}" -DWANT_MONO=OFF \
+		"${S}" || die "Cmake failed"
+
+	cmake-utils_src_make
 }
 
 src_install() {
