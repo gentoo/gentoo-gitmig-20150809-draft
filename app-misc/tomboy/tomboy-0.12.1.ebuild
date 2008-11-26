@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.12.1.ebuild,v 1.2 2008/11/26 01:05:26 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.12.1.ebuild,v 1.3 2008/11/26 15:31:15 loki_val Exp $
 
 inherit eutils gnome2 mono
 
@@ -16,6 +16,7 @@ RDEPEND=">=dev-lang/mono-1.9
 		 >=dev-dotnet/gtk-sharp-2.10.4
 		 >=dev-dotnet/gconf-sharp-2
 		 >=dev-dotnet/gnome-sharp-2.16.1
+		 >=dev-dotnet/gnome-desktop-sharp-2.16.1
 		 >=dev-dotnet/dbus-sharp-0.4
 		 >=dev-dotnet/dbus-glib-sharp-0.3
 		 >=dev-dotnet/mono-addins-0.3
