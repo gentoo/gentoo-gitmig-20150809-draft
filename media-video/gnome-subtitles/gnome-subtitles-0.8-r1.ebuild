@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-0.8.ebuild,v 1.1 2008/05/30 23:22:24 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-0.8-r1.ebuild,v 1.1 2008/11/26 22:50:26 loki_val Exp $
+
+EAPI=2
 
 inherit mono gnome2
 
@@ -14,11 +16,29 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND=">=dev-lang/mono-1.1
 	>=dev-dotnet/gtk-sharp-2.8
 	>=dev-dotnet/gnome-sharp-2.8
-	>=dev-dotnet/glade-sharp-2.8
+	|| (
+		>=dev-dotnet/gtk-sharp-2.12.6-r1[glade]
+		( >=dev-dotnet/glade-sharp-2.8 >=dev-dotnet/gtk-sharp-2.8 )
+	)
 	>=dev-dotnet/gconf-sharp-2.8
 	>=media-libs/gstreamer-0.10
+	>=media-libs/sublib-0.9
+	>=app-text/gtkspell-2.0
+	>=app-text/enchant-1.3
 	>=media-libs/gst-plugins-base-0.10"
 DEPEND="${RDEPEND}
+	app-text/scrollkeeper
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog CREDITS NEWS README"
+
+#Can be removed in 0.9, upstream say it's fixed in SVN
+MAKEOPTS=${MAKEOPTS} -j1
+
+src_configure() {
+	gnome2_src_configure
+}
+
+src_compile() {
+	default
+}
