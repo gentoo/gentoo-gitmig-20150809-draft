@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9217 2008/11/26 00:17:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9218 2008/11/26 06:26:51 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -125,11 +125,6 @@ dev-dotnet/webkit-sharp
 =dev-dotnet/rsvg-sharp-2.24*
 =dev-dotnet/vte-sharp-2.24*
 =dev-dotnet/wnck-sharp-2.24*
-
-# Matthias Schwarzott <zzam@gentoo.org> (19 Nov 2008)
-# This ebuild contains intrusive changes
-# masked until all changes are tested
-~sys-fs/udev-133
 
 # Jeremy Olexa <darkside@gentoo.org> (19 Nov 2008)
 # Stops playing at random intervals when HAL is used. Unmaintained upstream.
