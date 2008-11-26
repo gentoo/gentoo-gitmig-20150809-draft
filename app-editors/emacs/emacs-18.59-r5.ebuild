@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r5.ebuild,v 1.6 2008/11/14 09:11:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r5.ebuild,v 1.7 2008/11/26 21:14:50 ulm Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -61,7 +61,7 @@ src_compile() {
 	replace-flags -O[3-9] -O2
 	strip-flags
 
-	emake -j1 CC="$(tc-getCC)" CFLAGS="${CFLAGS} -Demacs" || die
+	emake -j"1" CC="$(tc-getCC)" CFLAGS="${CFLAGS} -Demacs" || die
 }
 
 src_install() {
