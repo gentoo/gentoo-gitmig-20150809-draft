@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/notify-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.1 2008/11/25 14:22:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.2 2008/11/26 21:17:17 loki_val Exp $
+
+  26 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/notify-sharp-0.4.0_pre20080912-control-docs.patch,
+  notify-sharp-0.4.0_pre20080912.ebuild:
+  Fix documentation generation, bug 248944.
 
 *notify-sharp-0.4.0_pre20080912 (25 Nov 2008)
 
