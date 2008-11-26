@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.106 2008/10/27 18:52:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.107 2008/11/26 02:20:19 dirtyepic Exp $
+
+*wxpython-2.8.9.1-r2 (26 Nov 2008)
+
+  26 Nov 2008; Ryan Hill <dirtyepic@gentoo.org> -wxpython-2.8.9.1-r1.ebuild,
+  +wxpython-2.8.9.1-r2.ebuild:
+  Fix build options not getting passed to src_compile due to mypyconf being
+  declared locally in src_configure.
 
   27 Oct 2008; Jeroen Roovers <jer@gentoo.org> wxpython-2.8.8.1.ebuild:
   Stable for HPPA (bug #242088).

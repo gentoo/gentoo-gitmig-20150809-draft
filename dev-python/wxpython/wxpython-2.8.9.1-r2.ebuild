@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.9.1-r1.ebuild,v 1.1 2008/10/18 18:35:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.9.1-r2.ebuild,v 1.1 2008/11/26 02:20:19 dirtyepic Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -41,8 +41,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local mypyconf
-
 	need-wxwidgets unicode
 
 	append-flags -fno-strict-aliasing
