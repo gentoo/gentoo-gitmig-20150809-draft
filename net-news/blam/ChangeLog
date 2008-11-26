@@ -1,6 +1,11 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.47 2008/11/25 16:11:26 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.48 2008/11/26 01:09:01 loki_val Exp $
+
+*blam-1.8.6 (26 Nov 2008)
+
+  26 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> +blam-1.8.6.ebuild:
+  Bump for mono-2 masked.
 
   25 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> blam-1.8.4.ebuild:
   Adjust 1.8.4 deps for gtk-sharp-2.12.6
