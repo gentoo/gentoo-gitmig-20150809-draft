@@ -1,7 +1,7 @@
 diff -NrU5 mono-tools-2.0.orig/configure.in mono-tools-2.0/configure.in
---- mono-tools-2.0.orig/configure.in	2008-11-23 20:37:03.000000000 +0100
-+++ mono-tools-2.0/configure.in	2008-11-23 20:38:00.000000000 +0100
-@@ -43,33 +43,49 @@
+--- mono-tools-2.0.orig/configure.in	2008-11-26 18:19:23.000000000 +0100
++++ mono-tools-2.0/configure.in	2008-11-26 18:27:32.000000000 +0100
+@@ -43,33 +43,56 @@
  
  PKG_CHECK_MODULES(GTK_SHARP, gtk-sharp-2.0 glade-sharp-2.0 gnome-sharp-2.0 gconf-sharp-2.0)
  #PKG_CHECK_MODULES(GTK_SHARP, gtk-sharp glade-sharp gconf-sharp)
@@ -18,14 +18,21 @@ diff -NrU5 mono-tools-2.0.orig/configure.in mono-tools-2.0/configure.in
 +		enable_gtkhtml=yes)
 +
 +if test "x$enable_gtkhtml" = "xyes" ; then
-+       PKG_CHECK_MODULES(GTKHTML_SHARP, gtkhtml-sharp-2.0)
-+
++	PKG_CHECK_MODULES([GTKHTML_SHARP],
++			[gtkhtml-sharp-3.14],
++			[CSHARP_FLAGS="-d:GTKHTML_SHARP_3_14"],
++				[
++					PKG_CHECK_MODULES([GTKHTML_SHARP],
++						[gtkhtml-sharp-2.0],
++						[CSHARP_FLAGS=""],
++						[])
++				]
++			)
 +       AC_SUBST(GTKHTML_SHARP_LIBS)
 +       AC_SUBST(CSHARP_FLAGS)
  fi
 -AC_SUBST(GTKHTML_SHARP_LIBS)
 -AC_SUBST(CSHARP_FLAGS)
-+dnl fi
 +
  AM_CONDITIONAL(ENABLE_GTKHTML, test "x$enable_gtkhtml" = "xyes")
  
@@ -69,7 +76,7 @@ diff -NrU5 mono-tools-2.0.orig/configure.in mono-tools-2.0/configure.in
  # PKG_CHECK_MODULES(MONOWEBBROWSER, mono-webbrowser, enable_monowebbrowser=yes, enable_monowebbrowser=no)
  # AC_SUBST(MONOWEBBROWSER_LIBS)
  
-@@ -89,12 +105,12 @@
+@@ -89,12 +112,12 @@
  	fi  
  fi
  MONOWEBBROWSER_LIBS=-r:Mono.WebBrowser
@@ -84,7 +91,7 @@ diff -NrU5 mono-tools-2.0.orig/configure.in mono-tools-2.0/configure.in
  AC_ARG_ENABLE(debug,
  	AC_HELP_STRING([--enable-debug],
  		[Use 'DEBUG' Configuration [default=YES]]),
-@@ -232,11 +248,11 @@
+@@ -232,11 +255,11 @@
  
  echo "---"
  echo "Configuration summary"
@@ -98,8 +105,8 @@ diff -NrU5 mono-tools-2.0.orig/configure.in mono-tools-2.0/configure.in
  echo ""
  echo "      NOTE: if any of the above say 'no' you may install the"
 diff -NrU5 mono-tools-2.0.orig/docbrowser/monodoc.in mono-tools-2.0/docbrowser/monodoc.in
---- mono-tools-2.0.orig/docbrowser/monodoc.in	2008-11-23 20:37:03.000000000 +0100
-+++ mono-tools-2.0/docbrowser/monodoc.in	2008-11-23 20:35:14.000000000 +0100
+--- mono-tools-2.0.orig/docbrowser/monodoc.in	2008-11-26 18:19:23.000000000 +0100
++++ mono-tools-2.0/docbrowser/monodoc.in	2008-11-26 18:19:35.000000000 +0100
 @@ -84,12 +84,14 @@
  elif [ $(which xulrunner 2> /dev/null) ] > /dev/null ; then
      MOZILLA_FIVE_HOME=`getdirectory xulrunner`
