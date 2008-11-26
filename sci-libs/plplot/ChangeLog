@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.17 2008/10/22 19:00:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.18 2008/11/26 21:02:43 dirtyepic Exp $
+
+  26 Nov 2008; Ryan Hill <dirtyepic@gentoo.org> plplot-5.9.0.ebuild:
+  Call wxwidgets_pkg_setup.
 
   22 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org> plplot-5.9.0.ebuild:
   Removed gif flag (not used) and merged fortranrtran and fortran95 flag,

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.0.ebuild,v 1.2 2008/10/22 19:00:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.0.ebuild,v 1.3 2008/11/26 21:02:43 dirtyepic Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -58,6 +58,8 @@ pkg_setup() {
 		fortran_pkg_setup
 	fi
 	export FC=${FORTRANC} F77=${FORTRANC}
+
+	wxwidgets_pkg_setup
 }
 
 src_prepare() {
