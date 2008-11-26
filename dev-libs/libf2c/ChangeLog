@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.30 2008/11/14 19:36:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.31 2008/11/26 16:43:36 ranger Exp $
+
+  26 Nov 2008; Brent Baude <ranger@gentoo.org> libf2c-20070912.ebuild:
+  stable ppc64, bug 245830
 
   14 Nov 2008; Raúl Porcel <armin76@gentoo.org> libf2c-20070912.ebuild:
   alpha/sparc stable wrt #245830
