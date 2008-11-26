@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.90 2008/11/23 17:46:03 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.91 2008/11/26 19:47:07 fordfrog Exp $
+
+  26 Nov 2008; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/6.5/all-visualweb.insync.JspxSerializer.java.patch,
+  netbeans-6.5-r1.ebuild:
+  Fixed bug #248904, also fixed problem with visualweb not being installed
 
   23 Nov 2008; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.5-r1.ebuild:
   Fixed issues introduced by previous update
