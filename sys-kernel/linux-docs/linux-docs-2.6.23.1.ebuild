@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-2.6.23.1.ebuild,v 1.1 2007/11/05 02:50:20 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-2.6.23.1.ebuild,v 1.2 2008/11/26 23:06:25 mpagano Exp $
 
 inherit toolchain-funcs
 
@@ -29,16 +29,23 @@ src_unpack() {
 		-e "s:db2:docbook2:g" \
 		-e "s:/usr/local/man:${D}/usr/share/man:g" \
 		"${S}"/Documentation/DocBook/Makefile
+
+	sed -i \
+		-e "s:\$(Q)\$(MAKE) \$(build)=Documentation\/DocBook \$@:+\$(Q)\$(MAKE) \$(build)=Documentation\/DocBook \$@:" \
+		"${S}"/Makefile
+
+	# fix for arch change i386->x86
+	ln -s "${S}"/arch/i386 "${S}"/arch/x86
 }
 
 src_compile() {
 	local ARCH=$(tc-arch-kernel)
 	unset KBUILD_OUTPUT
 
-	make mandocs || die "make mandocs failed"
+	emake mandocs || die "make mandocs failed"
 
 	if use html; then
-		make htmldocs || die "make htmldocs failed"
+		emake htmldocs || die "make htmldocs failed"
 	fi
 }
 
