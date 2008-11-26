@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/away/away-0.9.5-r1.ebuild,v 1.2 2008/11/26 01:10:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/away/away-0.9.5-r1.ebuild,v 1.3 2008/11/26 10:06:07 armin76 Exp $
 
 inherit pam toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://unbeatenpath.net/software/away/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/pam-0.75"

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/away
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.16 2008/11/26 01:10:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/away/ChangeLog,v 1.17 2008/11/26 10:06:07 armin76 Exp $
+
+  26 Nov 2008; Raúl Porcel <armin76@gentoo.org> away-0.9.5-r1.ebuild:
+  sparc/x86 stable wrt #248842
 
   26 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   away-0.9.5-r1.ebuild:
