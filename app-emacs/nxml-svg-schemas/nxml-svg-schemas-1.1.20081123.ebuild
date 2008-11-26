@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-svg-schemas/nxml-svg-schemas-1.1.20081123.ebuild,v 1.1 2008/11/23 19:33:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-svg-schemas/nxml-svg-schemas-1.1.20081123.ebuild,v 1.2 2008/11/26 10:02:11 armin76 Exp $
 
 inherit elisp
 
@@ -19,7 +19,7 @@ LICENSE="as-is"
 # sophisticated enough.
 SLOT="1.1"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="|| ( >=app-emacs/nxml-mode-20041004-r3 >=virtual/emacs-23 )"
