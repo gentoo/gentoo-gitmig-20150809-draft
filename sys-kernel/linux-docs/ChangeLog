@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-docs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.20 2008/11/26 20:17:05 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.21 2008/11/26 20:56:41 mpagano Exp $
+
+  26 Nov 2008; Mike Pagano <mpagano@gentoo.org> linux-docs-2.6.26.4.ebuild,
+  linux-docs-2.6.27.7.ebuild:
+  sed update and additional parallel make fix. bug #248337
 
   26 Nov 2008; Mike Pagano <mpagano@gentoo.org> linux-docs-2.6.27.7.ebuild:
   Removed unneeded cruft.
