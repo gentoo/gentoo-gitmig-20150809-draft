@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/away/away-0.9.5-r1.ebuild,v 1.1 2008/11/26 01:09:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/away/away-0.9.5-r1.ebuild,v 1.2 2008/11/26 01:10:35 flameeyes Exp $
 
-inherit pam
+inherit pam toolchain-funcs flag-o-matic
 
 DESCRIPTION="Terminal locking program with few additional features"
 HOMEPAGE="http://unbeatenpath.net/software/away/"
@@ -24,7 +24,9 @@ src_unpack() {
 		"${S}"/Makefile || die "Makefile fix failed"
 }
 src_compile() {
-	emake || die
+	append-flags -pthread
+
+	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die
 }
 
 src_install() {
