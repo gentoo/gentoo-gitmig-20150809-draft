@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r2.ebuild,v 1.6 2008/07/13 06:35:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r2.ebuild,v 1.7 2008/11/26 15:26:49 ranger Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/a/arj/${P/-/_}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/libc"
