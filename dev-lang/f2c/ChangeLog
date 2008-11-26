@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/f2c
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.24 2008/11/26 16:49:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.25 2008/11/26 17:02:05 bicatali Exp $
+
+  26 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/f2c-20030320-CAN-2005-0017.patch, -f2c-20030320-r1.ebuild:
+  Removed old and buggy version
 
   26 Nov 2008; Brent Baude <ranger@gentoo.org> f2c-20060507.ebuild:
   stable ppc64, bug 245832
