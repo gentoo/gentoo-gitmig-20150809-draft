@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/gconf-sharp-2.24.0.ebuild,v 1.1 2008/11/26 00:55:54 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/gconf-sharp-2.24.0.ebuild,v 1.2 2008/11/26 10:53:24 loki_val Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~x86-fbsd ~amd64"
 IUSE=""
 
 DEPEND="${DEPEND}
-		>=gnome-base/gconf-2.20
+		>=gnome-base/gconf-2.24
 		>=dev-dotnet/gtk-sharp-2.12.6[glade]
 		>=dev-dotnet/gnome-sharp-${PV}
 		>=dev-dotnet/art-sharp-${PV}"
