@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-0.8-r1.ebuild,v 1.1 2008/11/26 22:50:26 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/gnome-subtitles-0.8-r1.ebuild,v 1.2 2008/11/26 22:55:26 loki_val Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog CREDITS NEWS README"
 
 #Can be removed in 0.9, upstream say it's fixed in SVN
-MAKEOPTS=${MAKEOPTS} -j1
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_configure() {
 	gnome2_src_configure
