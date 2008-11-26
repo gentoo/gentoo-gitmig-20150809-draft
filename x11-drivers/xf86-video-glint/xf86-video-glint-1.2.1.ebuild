@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-glint/xf86-video-glint-1.2.1.ebuild,v 1.1 2008/07/05 06:32:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-glint/xf86-video-glint-1.2.1.ebuild,v 1.2 2008/11/26 23:20:27 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -25,9 +25,3 @@ DEPEND="${RDEPEND}
 			x11-proto/glproto )"
 
 CONFIGURE_OPTIONS="$(use_enable dri)"
-
-pkg_setup() {
-	if use dri && ! built_with_use x11-base/xorg-server dri; then
-		die "Build x11-base/xorg-server with USE=dri."
-	fi
-}

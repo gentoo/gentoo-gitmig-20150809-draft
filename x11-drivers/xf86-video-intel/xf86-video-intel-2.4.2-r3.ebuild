@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.4.2-r3.ebuild,v 1.2 2008/10/22 15:17:16 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.4.2-r3.ebuild,v 1.3 2008/11/26 23:26:27 dberkholz Exp $
 
 SNAPSHOT="yes"
 
@@ -32,9 +32,3 @@ PATCHES=(
 "${FILESDIR}/${PV}-0002-Disable-render-standby.patch"
 "${FILESDIR}/${PV}-0003-never-enable-DRI_MM-on-this-branch.patch"
 )
-
-pkg_setup() {
-	if use dri && ! built_with_use x11-base/xorg-server dri; then
-		die "Build x11-base/xorg-server with USE=dri."
-	fi
-}

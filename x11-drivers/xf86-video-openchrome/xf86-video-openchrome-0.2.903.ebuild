@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.903.ebuild,v 1.3 2008/10/29 22:20:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.903.ebuild,v 1.4 2008/11/26 23:22:29 dberkholz Exp $
 
 XDPVER="-1"
 IUSE="debug dri"
@@ -32,12 +32,6 @@ CONFIGURE_OPTIONS="
 	$(use_enable debug xv-debug)
 	"
 DOCS="ChangeLog NEWS README"
-
-pkg_setup() {
-	if use dri && ! built_with_use x11-base/xorg-server dri; then
-		die "Build x11-base/xorg-server with the 'dri' USE flag."
-	fi
-}
 
 pkg_postinst() {
 	elog "Supported chipsets:"

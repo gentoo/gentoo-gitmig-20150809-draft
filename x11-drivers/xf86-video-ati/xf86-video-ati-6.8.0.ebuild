@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.8.0.ebuild,v 1.2 2008/04/10 07:36:24 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.8.0.ebuild,v 1.3 2008/11/26 23:18:29 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -39,9 +39,3 @@ PATCHES="
 	${FILESDIR}/${PV}/0008-RS6xx-fix-DDC-on-DDIA-output-usually-HDMI-port.patch
 	${FILESDIR}/${PV}/0134-Disable-the-setting-of-HARDWARE_CURSOR_BIT_ORDER_MSB.patch
 	"
-
-pkg_setup() {
-	if use dri && ! built_with_use x11-base/xorg-server dri; then
-		die "Build x11-base/xorg-server with USE=dri."
-	fi
-}

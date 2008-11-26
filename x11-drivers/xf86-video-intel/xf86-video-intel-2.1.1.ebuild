@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.1.1.ebuild,v 1.2 2008/10/22 15:17:16 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.1.1.ebuild,v 1.3 2008/11/26 23:26:27 dberkholz Exp $
 
 inherit x-modular eutils
 
@@ -25,9 +25,3 @@ DEPEND="${RDEPEND}
 
 PATCHES=("${FILESDIR}/${PV}-fix_build_without_dri.patch")
 CONFIGURE_OPTIONS="$(use_enable dri)"
-
-pkg_setup() {
-	if use dri && ! built_with_use x11-base/xorg-server dri; then
-		die "Build x11-base/xorg-server with USE=dri."
-	fi
-}

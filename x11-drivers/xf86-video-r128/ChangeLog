@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-r128
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.1 2008/06/27 05:14:29 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.2 2008/11/26 23:20:56 dberkholz Exp $
+
+  26 Nov 2008; Donnie Berkholz <dberkholz@gentoo.org>;
+  xf86-video-r128-6.8.0.ebuild:
+  The USE=dri check is handled in x-modular.eclass now so it's not
+  duplicated everywhere.
 
 *xf86-video-r128-6.8.0 (27 Jun 2008)
 
