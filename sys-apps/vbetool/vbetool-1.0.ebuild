@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-1.0.ebuild,v 1.3 2008/08/07 21:55:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/vbetool-1.0.ebuild,v 1.4 2008/11/26 00:58:20 flameeyes Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -21,11 +21,10 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	#epatch ${FILESDIR}/${P}-pci-compile-fix.patch
-	sed -i \
-		-e '/vbetool_LDADD/s,$(libdir)/libpci.a,-lpci,' \
-		"${S}/Makefile.am"
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-build.patch
+
 	eautoreconf
 }
 
