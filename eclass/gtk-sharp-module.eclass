@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.2 2008/11/26 00:54:41 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.3 2008/11/26 10:03:42 loki_val Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>, butchered by ikelos, then loki_val.
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -123,21 +123,21 @@ gtk-sharp-module_src_prepare() {
 	# Fixes support with pkgconfig-0.17, #92503.
 	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' \
 			-e ':^CFLAGS=:d' \
-			${S}/configure.in
+			"${S}"/configure.in
 
 	# Fix install data hook, #161093.
 	if [ -f "${S}/sample/gconf/Makefile.am" ]
 	then
 		sed -i -e 's/^install-hook/install-data-hook/' \
-				${S}/sample/gconf/Makefile.am || die
+				"${S}"/sample/gconf/Makefile.am || die
 	fi
 
 	# Disable building samples, #16015.
-	sed -i -e "s:sample::" ${S}/Makefile.am || die
+	sed -i -e "s:sample::" "${S}"/Makefile.am || die
 
 	eautoreconf
 
-	cd ${S}/${GTK_SHARP_MODULE_DIR}
+	cd "${S}"/${GTK_SHARP_MODULE_DIR}
 
 	gtk-sharp-module_fix_files
 }
@@ -161,20 +161,20 @@ gtk-sharp-module_src_configure() {
 		gtk_sharp_conf="${gtk_sharp_conf} --enable-${module} "
 	done
 
-	cd ${S}
+	cd "${S}"
 	econf ${@} ${gtk_sharp_conf} || die "econf failed"
 }
 
 gtk-sharp-module_src_compile() {
 
-	cd ${S}/${GTK_SHARP_MODULE_DIR}
+	cd "${S}"/${GTK_SHARP_MODULE_DIR}
 	LANG=C emake -j1 || die "emake failed"
 }
 
 gtk-sharp-module_src_install() {
 	cd ${GTK_SHARP_MODULE_DIR}
 	LANG=C emake GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package gtk-sharp${GTK_SHARP_SLOT_DEC}" \
-			DESTDIR=${D} install || die "emake install failed"
+			DESTDIR="${D}" install || die "emake install failed"
 }
 
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install
