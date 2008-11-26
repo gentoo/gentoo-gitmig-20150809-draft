@@ -1,6 +1,12 @@
 # ChangeLog for games-sports/bygfoot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.20 2008/07/24 18:23:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.21 2008/11/26 04:29:51 mr_bones_ Exp $
+
+*bygfoot-2.3.0 (26 Nov 2008)
+
+  26 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +bygfoot-2.3.0.ebuild:
+  version bump
 
   24 Jul 2008; Raúl Porcel <armin76@gentoo.org> bygfoot-2.2.1.ebuild:
   x86 stable wrt #232770
