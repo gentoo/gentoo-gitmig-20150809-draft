@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.12.6.ebuild,v 1.3 2008/11/25 00:22:05 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.12.6-r1.ebuild,v 1.1 2008/11/26 22:23:41 loki_val Exp $
 
 EAPI="2"
 
@@ -27,6 +27,8 @@ RESTRICT="test"
 
 src_prepare() {
 
+	#Upstream: https://bugzilla.novell.com/show_bug.cgi?id=$bugno
+
 	# Upstream bug #421063
 	epatch "${FILESDIR}/${PN}-2.12.0-parallelmake.patch"
 	epatch "${FILESDIR}/${PN}-2.12.0-doc-parallelmake.patch"
@@ -35,6 +37,9 @@ src_prepare() {
 
 	# Upstream bug #443175
 	sed -i -e ':^CFLAGS=:d' "${S}/configure.in"
+
+	# Upstream bug 445370
+	epatch "${FILESDIR}/${P}-spinbutton-api-fix.patch"
 
 	# disable building of samples (#16015)
 	sed -i -e "s:sample::" Makefile.am
