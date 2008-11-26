@@ -5,5 +5,6 @@ OBJS := $(patsubst %.c,%.o,$(wildcard *.c))
 
 CFLAGS += -DMAGICISO_IS_SHIT
 
+LDLIBS = -lz
+
 uif2iso: $(OBJS)
-	$(CC) $(LDFLAGS) $^ -o $@ -lz
