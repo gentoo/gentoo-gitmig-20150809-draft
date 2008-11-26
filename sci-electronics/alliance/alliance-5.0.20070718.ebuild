@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20070718.ebuild,v 1.2 2007/12/06 12:44:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/alliance-5.0.20070718.ebuild,v 1.3 2008/11/26 21:59:11 halcy0n Exp $
 
-inherit versionator flag-o-matic rpm
+inherit versionator flag-o-matic rpm eutils
 
 MY_PV=$(replace_version_separator 2 '-' )
 UPSTREAM_VERSION=$(get_version_component_range 1-2)
@@ -22,6 +22,7 @@ S="${WORKDIR}/${PN}-${UPSTREAM_VERSION}"
 src_unpack() {
 	rpm_src_unpack
 	cd "${S}"
+	epatch "${FILESDIR}"/alliance-5.0-gcc43.patch
 
 	# Fix compilation issue
 	sed -i -e "s/private: static void  operator delete/public: static void  operator delete/" nero/src/ADefs.h || die "sed failed"
