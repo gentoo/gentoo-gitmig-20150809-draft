@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/regionset
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/regionset/ChangeLog,v 1.7 2005/04/21 19:38:38 blubb Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/regionset/ChangeLog,v 1.8 2008/11/26 17:50:56 beandog Exp $
+
+  26 Nov 2008; Steve Dibb <beandog@gentoo.org> regionset-0.1.ebuild:
+  Respect CC variable, bug 243666
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> regionset-0.1.ebuild:
   stable on amd64
