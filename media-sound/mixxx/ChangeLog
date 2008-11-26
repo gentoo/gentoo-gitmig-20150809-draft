@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.42 2008/10/10 12:31:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.43 2008/11/26 09:13:05 ssuominen Exp $
+
+  26 Nov 2008; <ssuominen@gentoo.org> mixxx-1.4.2.ebuild:
+  Allow only deprecated portaudio for old version of mixxx.
 
 *mixxx-1.6.0-r1 (10 Oct 2008)
 

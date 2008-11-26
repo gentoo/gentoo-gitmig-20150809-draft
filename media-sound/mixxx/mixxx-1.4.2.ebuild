@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.4.2.ebuild,v 1.9 2008/07/27 21:14:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.4.2.ebuild,v 1.10 2008/11/26 09:13:05 ssuominen Exp $
 
 EAPI=1
 
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/qt:3
 	media-libs/audiofile
 	media-libs/libsndfile
 	media-libs/libsamplerate
-	media-libs/portaudio
+	=media-libs/portaudio-18*
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )"
 DEPEND="${RDEPEND}
