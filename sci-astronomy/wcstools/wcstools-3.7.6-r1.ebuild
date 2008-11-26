@@ -1,25 +1,29 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.7.4.ebuild,v 1.1 2008/06/26 12:19:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.7.6-r1.ebuild,v 1.1 2008/11/26 11:07:39 bicatali Exp $
 
+EAPI=2
 inherit eutils autotools
 
 DESCRIPTION="World Coordinate System library for astronomical FITS images"
 HOMEPAGE="http://tdc-www.harvard.edu/software/wcstools"
 SRC_URI="http://tdc-www.harvard.edu/software/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2 LGPL-2"
+LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.7.0-fix-leaks.patch
-	epatch "${FILESDIR}"/${PN}-3.7.1-autotools.patch
-	sed -i -e 's/3.7.x/${PV}/' configure.ac || die "sed failed"
+	epatch "${FILESDIR}"/${P}-autotools.patch
+	sed -i -e 's/3.7.x/${PV}/' "${S}"/configure.ac || die "sed failed"
 	eautoreconf
+	# avoid colliding with fixdos and getdate (also in autotools patch)
+	sed -i \
+		-e 's/getdate/wcsgetdate/' \
+		-e 's/crlf/wcscrlf/' \
+		wcstools || die
 }
 
 src_test() {
@@ -37,4 +41,11 @@ src_install() {
 	dodoc Readme Programs NEWS libned/NED_client || die "dodoc failed"
 	newdoc libwcs/Readme Readme.libwcs || die "newdoc failed"
 	newdoc libwcs/NEWS NEWS.libwcs || die "newdoc failed"
+}
+
+pkg_postinst() {
+	elog "The following execs have been renamed to avoid colliding"
+	elog "with other packages:"
+	elog " getdate -> wcsgetdate"
+	elog " crlf -> wcscrlf"
 }

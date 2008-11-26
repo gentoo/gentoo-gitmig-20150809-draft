@@ -53,12 +53,12 @@
 +	cphead delwcs delhead edhead fixpix gethead i2f imcat imhead immatch \
 +	imrot imsize imstar imwcs scat sethead addpix getpix setpix sky2xy \
 +	keyhead skycoor subpix xy2sky wcshead conpix gettab newfits getfits \
-+	imstack imextract sumpix remap getcol getdate imfill imsmooth imresize \
-+	fileroot filename filext char2sp sp2char crlf isnum isrange isfits \
++	imstack imextract sumpix remap getcol wcsgetdate imfill imsmooth imresize \
++	fileroot filename filext char2sp sp2char wcscrlf isnum isrange isfits \
 +	simpos nedpos bincat nedname
 +
 +# these ones don't need libwcs
-+crlf_SOURCES = crlf.c
++wcscrlf_SOURCES = crlf.c
 +filename_SOURCES = filename.c
 +fileroot_SOURCES = fileroot.c
 +filext_SOURCES = filext.c
@@ -68,7 +68,7 @@
 +
 +bincat_SOURCES = bincat.c
 +getcol_SOURCES = getcol.c
-+getdate_SOURCES = getdate.c
++wcsgetdate_SOURCES = getdate.c
 +gethead_SOURCES = gethead.c
 +getfits_SOURCES = getfits.c
 +getpix_SOURCES = getpix.c
