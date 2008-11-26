@@ -2,6 +2,15 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>xfce</herd>
+<herd>media-optical</herd>
+	<maintainer>
+		<email>mario@xfce.org></email>
+		<description>Upstream. CC on bugzilla!</description>
+	</maintainer>
+	<maintainer>
+		<email>squisher@xfce.org</email>
+		<description>Upstream. CC on bugzilla!</description>
+	</maintainer>
 <use>
 	<flag name='xfce'>Adds integration with Xfce4 desktop environment</flag>
 </use>
