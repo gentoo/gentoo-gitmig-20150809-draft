@@ -1,7 +1,7 @@
-diff -r -U2 asymptote-1.49.orig/configure.ac asymptote-1.49/configure.ac
---- asymptote-1.49.orig/configure.ac	2008-11-03 14:18:04.000000000 +0600
-+++ asymptote-1.49/configure.ac	2008-11-04 20:20:54.000000000 +0600
-@@ -77,8 +77,14 @@
+diff -r -U2 asymptote-1.52.orig/configure.ac asymptote-1.52/configure.ac
+--- asymptote-1.52.orig/configure.ac	2008-11-25 15:10:32.000000000 +0600
++++ asymptote-1.52/configure.ac	2008-11-27 04:40:24.000000000 +0600
+@@ -80,8 +80,14 @@
  fi
  
 -AC_CHECK_HEADER(fftw3.h,
@@ -18,16 +18,16 @@ diff -r -U2 asymptote-1.49.orig/configure.ac asymptote-1.49/configure.ac
 +fi
  
  GCVERSION=gc-7.1
-@@ -117,5 +123,5 @@
+@@ -120,5 +126,5 @@
        CPPFLAGS_SAVE=$CPPFLAGS
        CPPFLAGS=$CPPFLAGS" $INCL"
 -      AC_CHECK_HEADER(gc.h,
 +      AC_CHECK_HEADER([gc/gc.h],
  	AC_CHECK_LIB([gc],[GC_malloc],[
  	  LIBS=$LIBS"-lgc "
-@@ -183,5 +189,14 @@
- AC_CHECK_LIB([m], [sqrt])
+@@ -187,5 +193,14 @@
  AC_CHECK_LIB([z], [deflate])
+ AC_CHECK_LIB([pthread], [pthread_create])
 -AC_CHECK_LIB([sigsegv], [stackoverflow_install_handler])
 +
 +AC_ARG_WITH(sigsegv,
@@ -41,7 +41,7 @@ diff -r -U2 asymptote-1.49.orig/configure.ac asymptote-1.49/configure.ac
 +fi
  
  AC_CHECK_LIB([readline], [rl_completion_matches],,
-@@ -200,9 +215,15 @@
+@@ -204,9 +219,15 @@
     AC_MSG_WARN([*** Broken rpc headers; XDR support disabled ***]))
  
 -AC_CHECK_HEADER(gsl/gsl_sf.h,
@@ -57,4 +57,4 @@ diff -r -U2 asymptote-1.49.orig/configure.ac asymptote-1.49/configure.ac
       AC_MSG_NOTICE([*** Header file gsl_sf.h not found: will compile without optional special functions. ***]))
 +fi
  
- case "$MACHTYPE" in
+ case "$OSTYPE" in
