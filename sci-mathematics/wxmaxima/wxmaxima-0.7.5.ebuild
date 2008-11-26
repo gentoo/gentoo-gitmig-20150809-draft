@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.5.ebuild,v 1.3 2008/10/12 11:06:08 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.7.5.ebuild,v 1.4 2008/11/26 21:13:57 dirtyepic Exp $
 
 WX_GTK_VER="2.8"
 EAPI="1"
@@ -31,6 +31,7 @@ pkg_setup() {
 		elog "enable the wxwindows USE flag for sci-visualization/gnuplot"
 		epause 5
 	fi
+	wxwidgets_pkg_setup
 }
 
 src_compile () {
