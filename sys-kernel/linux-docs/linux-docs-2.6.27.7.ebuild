@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-2.6.27.7.ebuild,v 1.1 2008/11/26 20:04:51 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-2.6.27.7.ebuild,v 1.2 2008/11/26 20:17:05 mpagano Exp $
 
 inherit toolchain-funcs
 
@@ -31,12 +31,9 @@ src_unpack() {
 		"${S}"/Documentation/DocBook/Makefile
 
 	# fix for parallel build as per bug #248337
-	j=$(echo "$MAKEOPTS" | sed -n -e 's,.*-j\([[:digit:]]\+\).*,\1,p' )
-	if [[ -n "${j}" ]] && (( ${j} > 1 )); then
-		sed -i \
+	sed -i \
 		-e "s:\$(Q)\$(MAKE) \$(build)=Documentation\/DocBook +\$@:\$(Q)\$(MAKE) \$(build)=Documentation\/DocBook \$@:" \
 		"${S}"/Makefile
-	fi
 }
 
 src_compile() {
