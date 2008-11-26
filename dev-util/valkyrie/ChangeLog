@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/valkyrie
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.9 2008/07/27 21:42:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.10 2008/11/26 00:45:04 flameeyes Exp $
+
+  26 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/valkyrie-1.3.0-asneeded.patch, valkyrie-1.3.0.ebuild:
+  Add patch to fix building with --as-needed, closes bug #247251.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> valkyrie-1.2.0.ebuild,
   valkyrie-1.3.0.ebuild:

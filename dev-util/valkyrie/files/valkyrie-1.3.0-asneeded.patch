@@ -1,0 +1,25 @@
+Fix building with --as-needed forced on compiler specs.
+
+From: Diego E. 'Flameeyes' Pettenò <flameeyes@gmail.com>
+
+Libraries to link against need to go at the end of the linking line,
+not at the start, otherwise --as-needed will discard them.
+---
+
+ m4/bnv_have_qt.m4 |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+
+diff --git a/m4/bnv_have_qt.m4 b/m4/bnv_have_qt.m4
+index 3c6daf2..fe58759 100644
+--- a/m4/bnv_have_qt.m4
++++ b/m4/bnv_have_qt.m4
+@@ -316,7 +316,7 @@ EOF
+             echo "configure: could not compile:" >&AC_FD_CC
+             cat bnv_qt_main.$ac_ext >&AC_FD_CC
+           else
+-            bnv_try_4="$CXX $QT_LIBS $LIBS -o bnv_qt_main bnv_qt_main.o moc_bnv_qt_test.o >/dev/null 2>/dev/null"
++            bnv_try_4="$CXX -o bnv_qt_main bnv_qt_main.o moc_bnv_qt_test.o $QT_LIBS $LIBS >/dev/null 2>/dev/null"
+             AC_TRY_EVAL(bnv_try_4)
+             if test x"$ac_status" != x0; then
+               echo "$bnv_err_4" >&AC_FD_CC
