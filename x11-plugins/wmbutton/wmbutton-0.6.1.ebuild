@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.6.1.ebuild,v 1.6 2008/06/26 13:06:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/wmbutton-0.6.1.ebuild,v 1.7 2008/11/25 23:43:55 tcunha Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="branding"
 
 RDEPEND="x11-libs/libX11

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtz
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.17 2008/01/12 13:36:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.18 2008/11/26 00:08:08 tcunha Exp $
+
+  26 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmtz-0.7.ebuild:
+  stable sparc, bug 215651
 
   12 Jan 2008; Samuli Suominen <drac@gentoo.org>
   -files/wmtz-0.7-gcc34.patch, +files/wmtz-0.7.patch, -files/wmtz.c.patch,

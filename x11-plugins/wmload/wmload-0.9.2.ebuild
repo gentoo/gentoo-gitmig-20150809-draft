@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmload/wmload-0.9.2.ebuild,v 1.9 2008/06/29 13:26:03 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmload/wmload-0.9.2.ebuild,v 1.10 2008/11/26 00:01:43 tcunha Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcalc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.18 2008/01/06 14:45:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.19 2008/11/25 23:45:54 tcunha Exp $
+
+  25 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmcalc-0.4.ebuild:
+  stable sparc, bug 215651
 
   06 Jan 2008; Samuli Suominen <drac@gentoo.org>
   -files/wmcalc-0.4-Makefile.patch, wmcalc-0.4.ebuild:

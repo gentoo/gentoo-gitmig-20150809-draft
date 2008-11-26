@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfortune
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/ChangeLog,v 1.10 2008/01/15 08:35:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/ChangeLog,v 1.11 2008/11/25 23:56:53 tcunha Exp $
+
+  25 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmfortune-0.241.ebuild:
+  stable sparc, bug 215651
 
   15 Jan 2008; Samuli Suominen <drac@gentoo.org>
   +files/wmfortune-0.241-stringh.patch, wmfortune-0.241.ebuild:

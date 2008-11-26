@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmbutton
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.15 2008/01/14 13:26:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbutton/ChangeLog,v 1.16 2008/11/25 23:43:55 tcunha Exp $
+
+  25 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmbutton-0.6.1.ebuild:
+  stable sparc, bug 215651
 
   14 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   wmbutton-0.6.1.ebuild:

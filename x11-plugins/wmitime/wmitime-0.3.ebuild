@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/wmitime-0.3.ebuild,v 1.17 2008/06/29 13:55:57 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/wmitime-0.3.ebuild,v 1.18 2008/11/25 23:59:19 tcunha Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.neotokyo.org/illusion/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc ppc64 ~sparc"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext

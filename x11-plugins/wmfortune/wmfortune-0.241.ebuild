@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/wmfortune-0.241.ebuild,v 1.12 2008/01/15 08:35:28 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/wmfortune-0.241.ebuild,v 1.13 2008/11/25 23:56:53 tcunha Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.dockapps.com/download.php/id/128/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="games-misc/fortune-mod

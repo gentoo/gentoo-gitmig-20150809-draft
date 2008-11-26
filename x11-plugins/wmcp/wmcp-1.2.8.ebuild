@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.17 2008/01/06 14:28:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.18 2008/11/25 23:49:59 tcunha Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://linux-sea.tucows.webusenet.com/files/x11/dock/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
