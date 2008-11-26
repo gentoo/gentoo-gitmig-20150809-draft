@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>cpp</herd>
-<maintainer>
-  <email>matsuu@gentoo.org</email>
-</maintainer>
-<longdescription>Poslib is a C++ library for people who want to write applications that make use of the Domain Name System. It consists of a client part, that can be used to send DNS queries, interpret Resource Records, and read master files, among other thins, and a server part which makes writing a DNS server much easier.</longdescription>
-</pkgmetadata>
