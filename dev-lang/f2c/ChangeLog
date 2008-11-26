@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/f2c
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.23 2008/11/14 19:37:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/f2c/ChangeLog,v 1.24 2008/11/26 16:49:44 ranger Exp $
+
+  26 Nov 2008; Brent Baude <ranger@gentoo.org> f2c-20060507.ebuild:
+  stable ppc64, bug 245832
 
   14 Nov 2008; Raúl Porcel <armin76@gentoo.org> f2c-20060507.ebuild:
   alpha/sparc stable wrt #245832
