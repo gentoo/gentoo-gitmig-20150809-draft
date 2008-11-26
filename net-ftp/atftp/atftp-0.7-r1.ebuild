@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7-r1.ebuild,v 1.8 2007/04/08 03:15:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7-r1.ebuild,v 1.9 2008/11/26 22:11:09 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ DEBIAN_A="${PN}_${PV}-${DEBIAN_PV}.diff.gz"
 DESCRIPTION="Advanced TFTP implementation client/server"
 HOMEPAGE="ftp://ftp.mamalinux.com/pub/atftp/"
 SRC_URI="ftp://ftp.mamalinux.com/pub/atftp/${P}.tar.gz
-	http://ftp.debian.org/debian/pool/main/a/${PN}/${DEBIAN_A}"
+	mirror://debian/pool/main/a/${PN}/${DEBIAN_A}"
 
 LICENSE="GPL-2"
 SLOT="0"
