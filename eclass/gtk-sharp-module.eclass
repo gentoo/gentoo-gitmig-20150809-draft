@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.3 2008/11/26 10:03:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.4 2008/11/26 14:03:05 loki_val Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>, butchered by ikelos, then loki_val.
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -168,12 +168,12 @@ gtk-sharp-module_src_configure() {
 gtk-sharp-module_src_compile() {
 
 	cd "${S}"/${GTK_SHARP_MODULE_DIR}
-	LANG=C emake -j1 || die "emake failed"
+	LANG=C emake ${OVERRIDEJOBS} || die "emake failed"
 }
 
 gtk-sharp-module_src_install() {
 	cd ${GTK_SHARP_MODULE_DIR}
-	LANG=C emake GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package gtk-sharp${GTK_SHARP_SLOT_DEC}" \
+	LANG=C emake ${OVERRIDEJOBS} GACUTIL_FLAGS="/root ${D}/usr/$(get_libdir) /gacdir /usr/$(get_libdir) /package gtk-sharp${GTK_SHARP_SLOT_DEC}" \
 			DESTDIR="${D}" install || die "emake install failed"
 }
 
