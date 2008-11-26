@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.28 2008/11/21 04:12:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.29 2008/11/26 16:57:56 ranger Exp $
+
+  26 Nov 2008; Brent Baude <ranger@gentoo.org> openresolv-2.0.ebuild:
+  stable ppc64, bug 246537
 
   21 Nov 2008; Jeroen Roovers <jer@gentoo.org> openresolv-2.0.ebuild:
   Stable for HPPA (bug #246537).
