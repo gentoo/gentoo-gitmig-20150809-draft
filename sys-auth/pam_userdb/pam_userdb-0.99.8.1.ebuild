@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.8.1.ebuild,v 1.4 2007/10/28 20:04:06 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.8.1.ebuild,v 1.5 2008/11/26 22:10:26 flameeyes Exp $
 
 inherit libtool multilib eutils pam toolchain-funcs flag-o-matic
 
@@ -14,7 +14,7 @@ MY_P="Linux-PAM-${PV}"
 HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
 DESCRIPTION="Linux-PAM pam_userdb (Berkeley DB) module"
 
-SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/${MY_P}.tar.bz2
+SRC_URI="mirror://kernel/linux/libs/pam/pre/library/${MY_P}.tar.bz2
 	http://downloads.sleepycat.com/db-${BDB_VER}.tar.gz"
 
 LICENSE="PAM"

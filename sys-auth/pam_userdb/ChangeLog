@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_userdb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.16 2007/10/28 20:04:06 tester Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.17 2008/11/26 22:10:26 flameeyes Exp $
+
+  26 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  pam_userdb-0.99.8.1.ebuild:
+  Use mirror://kernel/.
 
   28 Oct 2007; Olivier Crête <tester@gentoo.org>
   pam_userdb-0.99.8.1.ebuild:
