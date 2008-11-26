@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.12.1.ebuild,v 1.3 2008/11/26 15:31:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.12.1.ebuild,v 1.4 2008/11/26 23:22:53 loki_val Exp $
+
+EAPI=2
 
 inherit eutils gnome2 mono
 
@@ -12,42 +14,37 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc eds galago"
 
-RDEPEND=">=dev-lang/mono-1.9
-		 >=dev-dotnet/gtk-sharp-2.10.4
-		 >=dev-dotnet/gconf-sharp-2
-		 >=dev-dotnet/gnome-sharp-2.16.1
+RDEPEND=">=dev-lang/mono-2
+		 >=dev-dotnet/gtk-sharp-2.12.6-r1
+		 >=dev-dotnet/gconf-sharp-2.24.0
+		 >=dev-dotnet/gnome-sharp-2.24.0
+		 >=dev-dotnet/gnome-panel-sharp-2.24.0
 		 >=dev-dotnet/gnome-desktop-sharp-2.16.1
 		 >=dev-dotnet/dbus-sharp-0.4
 		 >=dev-dotnet/dbus-glib-sharp-0.3
 		 >=dev-dotnet/mono-addins-0.3
-		 >=x11-libs/gtk+-2.10.0
+		 >=x11-libs/gtk+-2.12.0
 		 >=dev-libs/atk-1.2.4
 		 >=gnome-base/gconf-2
 		 >=app-text/gtkspell-2.0.9
-		 >=gnome-base/gnome-panel-2.8.2
-		 eds? ( dev-libs/gmime )
+		 >=gnome-base/gnome-panel-2.24.0
+		 eds? ( dev-libs/gmime[mono] )
 		 galago? ( =dev-dotnet/galago-sharp-0.5* )
-		 >=gnome-base/libgnomeprintui-2.18.3"
+		 >=gnome-base/libgnomeprintui-2.18.3
+		 >=gnome-base/libgnomeprint-2.2"
 DEPEND="${RDEPEND}
-		  dev-libs/libxml2
+		  dev-libs/libxml2[python]
 		  sys-devel/gettext
 		  dev-util/pkgconfig
 		>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
-pkg_setup() {
-	if ! built_with_use 'dev-libs/libxml2' 'python' ; then
-		eerror "Please build libxml2 with the python USE-flag"
-		einfo "echo \"dev-libs/libxml2 python\" >> /etc/portage/package.use"
-		die "dev-libs/libxml2 without python bindings detected"
-	fi
-
-	if use eds && ! built_with_use 'dev-libs/gmime' mono ; then
-		eerror "Please build gmime with the mono USE-flag"
-		einfo "echo \"dev-libs/gmime mono\" >> /etc/portage/package.use"
-		die "gmime without mono support detected"
-	fi
-
+src_configure() {
 	G2CONF="${G2CONF} $(use_enable galago) $(use_enable eds evolution) --with-mono-addins=system"
+	gnome2_src_configure
+}
+
+src_compile() {
+	default
 }
