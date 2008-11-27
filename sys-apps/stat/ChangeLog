@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/stat
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/stat/ChangeLog,v 1.15 2008/09/14 09:05:33 solar Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/stat/ChangeLog,v 1.16 2008/11/27 18:40:38 vapier Exp $
+
+  27 Nov 2008; Mike Frysinger <vapier@gentoo.org> stat-3.3.ebuild:
+  Cleanup ebuild and block coreutils #248312 by Diego E. Pettenò.
 
   14 Sep 2008; <solar@gentoo.org> stat-2.5.ebuild, stat-3.3.ebuild:
   - keyword amd64/~arm. fix QA warning. Make cross compile aware. Remove old
