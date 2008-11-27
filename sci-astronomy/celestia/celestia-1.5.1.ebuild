@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.5.1.ebuild,v 1.6 2008/11/08 14:07:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.5.1.ebuild,v 1.7 2008/11/27 09:54:10 bicatali Exp $
 
 inherit eutils flag-o-matic gnome2 kde-functions autotools
 
@@ -119,8 +119,12 @@ src_unpack() {
 src_compile() {
 
 	if [[ ${CELESTIA_GUI} == kde ]]; then
+		REALHOME="${HOME}"
+		mkdir -p "${T}"/fakehome/.kde
+		mkdir -p "${T}"/fakehome/.qt
+		export HOME="${T}"/fakehome
+		[[ -d ${REALHOME}/.ccache ]] && ln -sf "${REALHOME}/.ccache" "${HOME}/"
 		set-kdedir 3
-		set-qtdir 3
 		export kde_widgetdir="${KDEDIR}/lib/kde3/plugins/designer"
 	fi
 
