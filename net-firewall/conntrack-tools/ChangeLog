@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/conntrack-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.21 2008/11/20 12:06:32 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.22 2008/11/27 18:55:16 ssuominen Exp $
+
+  27 Nov 2008; <ssuominen@gentoo.org> conntrack-tools-0.9.6-r1.ebuild,
+  conntrack-tools-0.9.7-r2.ebuild, conntrack-tools-0.9.8.ebuild:
+  DEPEND and RDEPEND was set entirely wrong way.
 
 *conntrack-tools-0.9.8-r1 (17 Nov 2008)
 
