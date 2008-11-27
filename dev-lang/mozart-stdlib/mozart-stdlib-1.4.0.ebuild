@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart-stdlib/mozart-stdlib-1.4.0.ebuild,v 1.1 2008/07/06 08:08:43 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart-stdlib/mozart-stdlib-1.4.0.ebuild,v 1.2 2008/11/27 05:35:34 keri Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mozart-oz.org/download/mozart-ftp/store/1.4.0-2008-07-02-tar
 LICENSE="Mozart"
 
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="-amd64 ~ppc -ppc64 ~sparc ~x86"
 IUSE="doc"
 
 DEPEND="dev-lang/mozart"
