@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/wterm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.22 2008/05/05 14:19:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.23 2008/11/27 23:09:48 jer Exp $
+
+  27 Nov 2008; Jeroen Roovers <jer@gentoo.org>
+  +files/wterm-6.2.9-strip.patch, wterm-6.2.9-r3.ebuild:
+  Do not strip (bug #222309).
 
   05 May 2008; Brent Baude <ranger@gentoo.org> wterm-6.2.9-r3.ebuild:
   Marking wterm-6.2.9-r3 ppc for bug 219762
