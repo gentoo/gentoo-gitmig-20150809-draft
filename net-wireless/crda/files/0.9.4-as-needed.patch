@@ -1,0 +1,21 @@
+--- crda-0.9.4/Makefile.orig	2008-11-27 14:44:02.000000000 +0000
++++ crda-0.9.4/Makefile	2008-11-27 14:45:59.000000000 +0000
+@@ -35,15 +35,15 @@
+ 
+ crda: keys-ssl.c keys-gcrypt.c reglib.o crda.o
+ 	$(NQ) '  LD  ' $@
+-	$(Q)$(CC) $(CFLAGS) $(LDFLAGS) `pkg-config --libs libnl-1` -o $@ reglib.o crda.o
++	$(Q)$(CC) $(CFLAGS) `pkg-config --libs libnl-1` -o $@ reglib.o crda.o $(LDFLAGS)
+ 
+ regdbdump: keys-ssl.c keys-gcrypt.c reglib.o regdbdump.o
+ 	$(NQ) '  LD  ' $@
+-	$(Q)$(CC) $(CFLAGS) $(LDFLAGS) -o $@ reglib.o regdbdump.o
++	$(Q)$(CC) $(CFLAGS) -o $@ reglib.o regdbdump.o $(LDFLAGS)
+ 
+ intersect: keys-ssl.c keys-gcrypt.c reglib.o intersect.o
+ 	$(NQ) '  LD  ' $@
+-	$(Q)$(CC) $(CFLAGS) $(LDFLAGS) -o $@ reglib.o intersect.o
++	$(Q)$(CC) $(CFLAGS) -o $@ reglib.o intersect.o $(LDFLAGS)
+ 
+ verify: $(REG_BIN) regdbdump
+ 	$(NQ) '  CHK  $(REG_BIN)'
