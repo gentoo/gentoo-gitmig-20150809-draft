@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/g3data
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.3 2007/07/18 02:19:19 cryos Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.4 2008/11/27 18:25:22 bicatali Exp $
+
+  27 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/g3data-1.5.1-makefile.patch, metadata.xml, g3data-1.5.1.ebuild:
+  Removed imlib dependency (bug #249077, thanks Dustin Polke), added
+  pkg-config depend and respect cflags
 
   18 Jul 2007; Marcus D. Hanwell <cryos@gentoo.org> -g3data-1.5.0.ebuild,
   g3data-1.5.1.ebuild:

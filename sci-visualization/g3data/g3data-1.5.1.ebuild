@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/g3data-1.5.1.ebuild,v 1.2 2007/07/18 02:19:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/g3data-1.5.1.ebuild,v 1.3 2008/11/27 18:25:22 bicatali Exp $
+
+inherit eutils
 
 DESCRIPTION="Tool for extracting data from graphs"
 HOMEPAGE="http://www.frantz.fi/software/g3data.php"
@@ -11,10 +13,16 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE="examples"
 
-RDEPEND=">=x11-libs/gtk+-2.6.0
-	media-libs/imlib"
+RDEPEND=">=x11-libs/gtk+-2.6.0"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	~app-text/docbook-sgml-utils-0.6.14"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-makefile.patch
+}
 
 src_compile() {
 	emake || die "emake failed"
@@ -25,8 +33,9 @@ src_install() {
 	doman g3data.1.gz || die "doman failed"
 	dodoc README.SOURCE || die "README.SOURCE not found"
 	if use examples; then
+		docinto examples
 		dodoc README.TEST
-		insinto ${DESTDIR}usr/share/doc/${PF}/
+		insinto /usr/share/doc/${PF}/examples
 		doins test1.png test1.values test2.png test2.values
 	fi
 }

@@ -7,7 +7,7 @@
   </maintainer>
   <longdescription>
     g3data is used for extracting data from graphs. In pubilcations graphs are
-	often included, but the actual data is not. g3data makes the extraction
-	process much easier.
+    often included, but the actual data is not. g3data makes the extraction
+    process much easier.
   </longdescription>
 </pkgmetadata>
