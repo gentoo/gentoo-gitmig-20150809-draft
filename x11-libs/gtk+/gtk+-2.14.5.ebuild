@@ -1,42 +1,43 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.12.9-r2.ebuild,v 1.8 2008/06/07 15:59:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.14.5.ebuild,v 1.1 2008/11/27 02:36:41 leio Exp $
 
 WANT_AUTOMAKE="1.7"
 
-inherit gnome.org flag-o-matic eutils autotools virtualx
+inherit gnome.org flag-o-matic eutils libtool virtualx
 
 DESCRIPTION="Gimp ToolKit +"
 HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
-IUSE="cups debug doc jpeg tiff vim-syntax xinerama"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="cups debug doc jpeg jpeg2k tiff vim-syntax xinerama"
 
 RDEPEND="x11-libs/libXrender
 	x11-libs/libX11
 	x11-libs/libXi
 	x11-libs/libXt
 	x11-libs/libXext
-	x11-libs/libXrandr
+	>=x11-libs/libXrandr-1.2
 	x11-libs/libXcursor
 	x11-libs/libXfixes
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
 	xinerama? ( x11-libs/libXinerama )
-	>=dev-libs/glib-2.13.5
-	>=x11-libs/pango-1.17.3
-	>=dev-libs/atk-1.10.1
-	>=x11-libs/cairo-1.2.0
+	>=dev-libs/glib-2.17.6
+	>=x11-libs/pango-1.20
+	>=dev-libs/atk-1.13
+	>=x11-libs/cairo-1.6
 	media-libs/fontconfig
 	x11-misc/shared-mime-info
 	>=media-libs/libpng-1.2.1
 	cups? ( net-print/cups )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
-	tiff? ( >=media-libs/tiff-3.5.7 )"
+	jpeg2k? ( media-libs/jasper )
+	tiff? ( >=media-libs/tiff-3.5.7 )
+	!<gnome-base/gail-1000"
 DEPEND="${RDEPEND}
-	sys-devel/autoconf
 	>=dev-util/pkgconfig-0.9
 	x11-proto/xextproto
 	x11-proto/xproto
@@ -74,21 +75,8 @@ src_unpack() {
 	# Workaround adobe flash infinite loop. Patch from http://bugzilla.gnome.org/show_bug.cgi?id=463773#c11
 	epatch "${FILESDIR}/${PN}-2.12.0-flash-workaround.patch"
 
-	# OpenOffice.org might hang at startup (on non-gnome env) without this workaround, bug #193513
-	epatch "${FILESDIR}/${PN}-2.12.0-openoffice-freeze-workaround.patch"
-
-	# Firefox print review crash fix, bug #195644
-	epatch "${FILESDIR}/${PN}-2.12.1-firefox-print-preview.patch"
-
-	### Following patches are are cherry-picked from 2.12 branch and will be part of 2.12.10
-	# Fix print dialog crashes in 64bit dialog, best experienced in Eclipse, bug 214863
-	epatch "${FILESDIR}/${P}-print-backend-64bit.patch"
-	# Fix treeview automatic search popup text field window type so it behaves correctly under composite managers
-	epatch "${FILESDIR}/${P}-treeview-search-window-type.patch"
-	# Improve handling of ~ with gtk+ filechooser backend (gtk+ file_chooser_backend chosen in gconf or no gconfd running), bug 215146
-	epatch "${FILESDIR}/${P}-gtk-filesystem-backend-tilde-fix.patch"
-	# Fix fallback icon size in the filechooser. Hopefully improves the icon size inconsistencies since GIO
-	epatch "${FILESDIR}/${P}-filechooser-fix-icon-size.patch"
+	# Don't break inclusion of gtkclist.h, upstream bug 536767
+	epatch "${FILESDIR}/${PN}-2.14.3-limit-gtksignal-includes.patch"
 
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2
@@ -96,20 +84,14 @@ src_unpack() {
 
 	use ppc64 && append-flags -mminimal-toc
 
-	# Fix libtool usage for configure stage, bug #213789
-	epatch "${FILESDIR}/${P}-libtool-2.patch"
-
-	# remember, eautoreconf applies elibtoolize.
-	# if you remove this, you should manually run elibtoolize
-	eautoreconf
-
-	epunt_cxx
+	elibtoolize
 }
 
 src_compile() {
 	# png always on to display icons (foser)
 	local myconf="$(use_enable doc gtk-doc) \
 		$(use_with jpeg libjpeg) \
+		$(use_with jpeg2k libjasper) \
 		$(use_with tiff libtiff) \
 		$(use_enable xinerama) \
 		$(use_enable cups cups auto) \
@@ -121,12 +103,11 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug=yes"
 
 	econf ${myconf} || die "configure failed"
-
 	emake || die "compile failed"
 }
 
 src_test() {
-	Xemake check || die
+	Xemake check || die "tests failed"
 }
 
 src_install() {
