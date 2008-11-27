@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2094 2008/11/26 17:10:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2095 2008/11/27 21:27:31 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Nov 2008; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Remove ncurses-5.7 mask -- just disable berkdb in ebuild.
 
   26 Nov 2008; MATSUU Takuto <matsuu@gentoo.org> package.mask:
   remove posadis mask

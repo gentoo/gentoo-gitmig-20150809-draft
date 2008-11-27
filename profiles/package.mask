@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9220 2008/11/26 17:10:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9221 2008/11/27 21:27:31 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -223,11 +223,6 @@ sys-apps/usbd
 # Daniel Black <dragonheart@gentoo.org> (4 Nov 2008)
 # Legal problems #241650 causing distribution problems #245322 and build problems #237493
 app-crypt/truecrypt
-
-# Jeremy Olexa <darkside@gentoo.org> (3 Nov 2008)
-# Proxy commit for Cardoe, ncurses-5.7 seems broke with USE=berkdb and is
-# causing issues for users, see bug #245370
-=sys-libs/ncurses-5.7
 
 # Daniel Gryniewicz <dang@gentoo.org> (2 Nov 2008)
 # Feed counts and updates seem to be broken
