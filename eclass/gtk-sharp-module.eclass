@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.4 2008/11/26 14:03:05 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.5 2008/11/27 05:24:23 loki_val Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>, butchered by ikelos, then loki_val.
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -35,9 +35,10 @@ HOMEPAGE="http://www.mono-project.com/GtkSharp"
 
 LICENSE="LGPL-2.1"
 
-DEPEND="=dev-dotnet/gtk-sharp-${GTK_SHARP_REQUIRED_VERSION}*
+RDEPEND="=dev-dotnet/gtk-sharp-${GTK_SHARP_REQUIRED_VERSION}*
+	>=dev-lang/mono-2"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
-RDEPEND="=dev-dotnet/gtk-sharp-${GTK_SHARP_REQUIRED_VERSION}*"
 
 RESTRICT="test"
 
