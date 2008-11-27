@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.7.1-r2.ebuild,v 1.4 2008/11/26 16:27:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.7.1-r2.ebuild,v 1.5 2008/11/27 21:59:52 jer Exp $
 
 DESCRIPTION="Abstracts the storage of configuration settings away from applications."
 HOMEPAGE="http://sacredspiral.co.uk/~nenolod/mcs/"
@@ -8,7 +8,7 @@ SRC_URI="http://distfiles.atheme.org/${P}.tgz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~mips ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gnome"
 
 RDEPEND=">=dev-libs/libmowgli-0.6.1
