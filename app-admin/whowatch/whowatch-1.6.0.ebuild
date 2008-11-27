@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.6.0.ebuild,v 1.3 2008/11/27 17:55:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.6.0.ebuild,v 1.4 2008/11/27 17:57:32 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,8 +21,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${WORKDIR}/${P/-/_}a-2.diff
-	epatch ${WORKDIR}/${P}/${P}a/debian/whowatch-1.6.0.patch
+	epatch "${WORKDIR}"/${P/-/_}a-2.diff
+	epatch "${WORKDIR}"/${P}/${P}a/debian/whowatch-1.6.0.patch
 	epatch "${FILESDIR}"/${P}-cflags.patch
 }
 
