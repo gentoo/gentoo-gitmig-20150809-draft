@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libproccpuinfo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.18 2008/10/29 05:48:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.19 2008/11/27 22:39:50 jer Exp $
+
+  27 Nov 2008; Jeroen Roovers <jer@gentoo.org>
+  -libproccpuinfo-0.0.6.1.ebuild, libproccpuinfo-0.0.7.ebuild:
+  Remove old. Do not RDEPEND on sys-devel/flex (bug #221325).
 
   29 Oct 2008; Jeroen Roovers <jer@gentoo.org> libproccpuinfo-0.0.7.ebuild:
   Marked ~hppa too.
