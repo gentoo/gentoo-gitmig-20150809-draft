@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/mopac7
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.16 2008/07/13 20:59:11 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.17 2008/11/27 19:18:22 patrick Exp $
+
+*mopac7-1.14 (27 Nov 2008)
+
+  27 Nov 2008; Patrick Lauer <patrick@gentoo.org> +mopac7-1.14.ebuild:
+  Bump to 1.14 with ok from dberkholz
 
 *mopac7-1.13-r1 (13 Jul 2008)
 
