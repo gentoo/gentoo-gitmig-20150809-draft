@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-mailmbox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.32 2008/10/16 19:31:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.33 2008/11/27 18:15:42 fmccor Exp $
+
+  27 Nov 2008; Ferris McCormick <fmccor@gentoo.org>
+  claws-mail-mailmbox-1.14.2.ebuild:
+  Sparc stable, part of Bug #248760.
 
 *claws-mail-mailmbox-1.14.2 (16 Oct 2008)
 
