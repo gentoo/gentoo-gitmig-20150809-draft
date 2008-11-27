@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/ristretto
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.7 2008/06/28 12:15:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ristretto/ChangeLog,v 1.8 2008/11/27 15:48:54 angelos Exp $
+
+*ristretto-0.0.21 (27 Nov 2008)
+
+  27 Nov 2008; Christoph Mende <angelos@gentoo.org>
+  +ristretto-0.0.21.ebuild:
+  Version bump
 
   27 Jun 2008; Raúl Porcel <armin76@gentoo.org> ristretto-0.0.20.ebuild:
   alpha/ia64/sparc stable wrt #228961
