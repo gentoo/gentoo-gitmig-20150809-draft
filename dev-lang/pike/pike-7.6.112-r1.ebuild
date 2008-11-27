@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.86-r1.ebuild,v 1.11 2008/11/27 23:14:01 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.112-r1.ebuild,v 1.1 2008/11/27 23:14:01 araujo Exp $
 
 DESCRIPTION="Pike programming language and runtime"
 HOMEPAGE="http://pike.ida.liu.se/"
@@ -8,7 +8,7 @@ SRC_URI="http://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="bzip2 debug doc fftw gdbm gtk hardened jpeg kerberos mime mysql opengl pcre pdf scanner sdl ssl svg tiff truetype zlib"
 
 DEPEND="dev-libs/nettle
@@ -77,8 +77,7 @@ src_compile() {
 			$(use_with truetype freetype) \
 			$(use_with zlib) \
 			${myconf} \
-			${EXTRA_ECONF} \
-			" || die
+			" || die "compilation failed"
 
 	if use doc; then
 		PATH="${S}/bin:${PATH}" make doc || die "doc failed"
@@ -95,4 +94,8 @@ src_install() {
 	else
 		make INSTALLARGS="--traditional" buildroot="${D}" install_nodoc || die
 	fi
+	# Installation is a bit broken.. remove the doc sources.
+	rm -rf "${D}/usr/doc"
+	# Install the man pages in the proper location.
+	rm -rf "${D}/usr/man" && doman "${S}/man/pike.1"
 }
