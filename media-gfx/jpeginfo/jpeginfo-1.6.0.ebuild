@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/jpeginfo-1.6.0.ebuild,v 1.14 2008/11/27 21:39:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/jpeginfo-1.6.0.ebuild,v 1.15 2008/11/27 22:18:56 jer Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,11 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 DEPEND=">=media-libs/jpeg-6b"
 
-tc-export CC
+src_compile() {
+	tc-export CC
+	econf || die "econf failed"
+	emake || die "emake failed"
+}
 
 src_install() {
 	make INSTALL_ROOT="${D}" install || die
