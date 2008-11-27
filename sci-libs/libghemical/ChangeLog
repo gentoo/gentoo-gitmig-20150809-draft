@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/libghemical
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/ChangeLog,v 1.17 2008/08/07 07:38:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/ChangeLog,v 1.18 2008/11/27 19:19:26 patrick Exp $
+
+*libghemical-2.98 (27 Nov 2008)
+
+  27 Nov 2008; Patrick Lauer <patrick@gentoo.org> +libghemical-2.98.ebuild:
+  Bump to 2.98
 
   07 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
