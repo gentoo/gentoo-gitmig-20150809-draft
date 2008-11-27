@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ghostwhitecrab-0.9.9.ebuild,v 1.6 2008/04/13 21:50:51 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ghostwhitecrab-0.9.9.ebuild,v 1.7 2008/11/27 11:05:31 armin76 Exp $
 
 inherit eutils versionator
 
@@ -16,6 +16,9 @@ SRC_URI="http://www.ghostwhitecrab.com/crab/${MY_P}.tar.bz2"
 LICENSE="as-is FDL-1.1"
 SLOT="0"
 KEYWORDS="amd64 hppa x86"
+
+DEPEND="!app-misc/geneweb"
+RDEPEND=""
 
 pkg_setup() {
 	enewgroup gwc
