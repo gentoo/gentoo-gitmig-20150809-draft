@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/amule
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.120 2008/08/08 19:55:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.121 2008/11/27 20:45:24 armin76 Exp $
+
+  27 Nov 2008; Raúl Porcel <armin76@gentoo.org> -amule-2.2.1.ebuild,
+  amule-2.2.2.ebuild:
+  Remove make_desktop_entry as its not needed, bug #241676, and fix upnp
+  dependency, bug 247126
 
 *amule-2.2.2 (08 Aug 2008)
 

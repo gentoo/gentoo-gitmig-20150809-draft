@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.2.ebuild,v 1.1 2008/08/08 19:55:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.2.ebuild,v 1.2 2008/11/27 20:45:24 armin76 Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -21,7 +21,7 @@ DEPEND="=x11-libs/wxGTK-2.8*
 		>=sys-libs/zlib-1.2.1
 		stats? ( >=media-libs/gd-2.0.26 )
 		geoip? ( dev-libs/geoip )
-		upnp? ( net-libs/libupnp )
+		upnp? ( >=net-libs/libupnp-1.6.6 )
 		remote? ( >=media-libs/libpng-1.2.0
 		unicode? ( >=media-libs/gd-2.0.26 ) )"
 
@@ -110,6 +110,5 @@ src_install() {
 		if use remote; then
 				newconfd "${FILESDIR}"/amuleweb.confd amuleweb
 				newinitd "${FILESDIR}"/amuleweb.initd amuleweb
-				make_desktop_entry amulegui "aMule Remote" amule "Network;P2P"
 		fi
 }
