@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/jscall-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/ChangeLog,v 1.9 2008/05/30 23:15:00 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/ChangeLog,v 1.10 2008/11/27 18:49:10 ssuominen Exp $
+
+  27 Nov 2008; <ssuominen@gentoo.org> jscall-sharp-0.0.2_pre20061125.ebuild,
+  jscall-sharp-0.0.3_pre20070621.ebuild:
+  Move dev-util/pkgconfig from RDEPEND to DEPEND wrt #224301.
 
   30 May 2008; Jurek Bartuszek <jurek@gentoo.org>
   jscall-sharp-0.0.2_pre20061125.ebuild,

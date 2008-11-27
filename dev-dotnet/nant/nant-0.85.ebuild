@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85.ebuild,v 1.10 2008/06/01 11:21:09 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85.ebuild,v 1.11 2008/11/27 18:42:44 ssuominen Exp $
 
 inherit mono eutils
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=dev-lang/mono-1.2.2.1
-		dev-util/pkgconfig"
-RDEPEND="${DEPEND}"
+RDEPEND=">=dev-lang/mono-1.2.2.1"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 # This build is not parallel build friendly
 MAKEOPTS="${MAKEOPTS} -j1"

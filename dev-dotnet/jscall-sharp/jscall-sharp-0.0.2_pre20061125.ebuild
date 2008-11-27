@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/jscall-sharp-0.0.2_pre20061125.ebuild,v 1.5 2008/05/30 23:15:00 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/jscall-sharp-0.0.2_pre20061125.ebuild,v 1.6 2008/11/27 18:49:10 ssuominen Exp $
 
 inherit mono eutils
 
@@ -13,15 +13,15 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="|| ( =www-client/mozilla-firefox-2*
-			=www-client/seamonkey-1* )
-		>=dev-lang/mono-1.1.9
-		>=dev-dotnet/gtk-sharp-2.4
-		>=dev-dotnet/gecko-sharp-0.10
-		dev-util/pkgconfig"
+RDEPEND="|| ( =www-client/mozilla-firefox-2*
+		=www-client/seamonkey-1* )
+	>=dev-lang/mono-1.1.9
+	>=dev-dotnet/gtk-sharp-2.4
+	>=dev-dotnet/gecko-sharp-0.10"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
