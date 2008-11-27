@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.181 2008/10/26 21:48:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.182 2008/11/27 18:13:59 vapier Exp $
+
+  27 Nov 2008; Mike Frysinger <vapier@gentoo.org> iptables-1.4.2-r1.ebuild:
+  Drop linux-info eclass include #248066 by Laurence Withers.
 
   26 Oct 2008; Mike Frysinger <vapier@gentoo.org>
   +files/iptables-1.4.2-no-ldconfig.patch, iptables-1.4.2-r1.ebuild:
