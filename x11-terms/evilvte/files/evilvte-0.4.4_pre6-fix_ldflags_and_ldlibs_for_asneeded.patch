@@ -1,0 +1,33 @@
+diff -ur evilvte-0.4.4~pre6.orig/configure evilvte-0.4.4~pre6/configure
+--- evilvte-0.4.4~pre6.orig/configure	2008-11-15 12:01:06.000000000 +0200
++++ evilvte-0.4.4~pre6/configure	2008-11-27 08:03:39.000000000 +0200
+@@ -78,7 +78,7 @@
+ echo "deskdir=\$(DESTDIR)$deskdir" >> src/config.o
+ echo "ICON_DIR=$ICON_DIR" >> src/config.o
+ echo "ICON_DIR_INSTALL=\$(DESTDIR)$ICON_DIR" >> src/config.o
+-echo "LDFLAGS=-L/usr/local/lib -lvte -lgtk-x11-2.0" >> src/config.o
++echo "LDLIBS=-L/usr/local/lib -lvte -lgtk-x11-2.0" >> src/config.o
+ echo "PROG=$PROG" >> src/config.o
+ echo "EVILVTE_VERSION=$EVILVTE_VERSION" >> src/config.o
+ echo "SUSE_DETECTED=$SUSE_DETECTED" >> src/config.o
+diff -ur evilvte-0.4.4~pre6.orig/Makefile evilvte-0.4.4~pre6/Makefile
+--- evilvte-0.4.4~pre6.orig/Makefile	2008-11-15 12:01:06.000000000 +0200
++++ evilvte-0.4.4~pre6/Makefile	2008-11-27 08:10:46.000000000 +0200
+@@ -16,7 +16,7 @@
+ 	sh src/evilvte.sh
+ 
+ evilvte: src/evilvte.h $(OBJ)
+-	$(CC) -o $(PROG) $(OBJ) $(LDFLAGS)
++	$(CC) $(LDFLAGS) $(OBJ) $(LDLIBS) -o $(PROG)
+ 
+ strip: all
+ 	strip --remove-section=.comment --remove-section=.note $(PROG)
+@@ -32,7 +32,7 @@
+ misc/evilvte.1:
+ 	sh src/manpage.sh
+ 
+-install: all
++install:
+ 	install -d $(bindir)
+ 	install -m 755 $(PROG) src/showvte $(bindir)
+ 	install -d $(ICON_DIR_INSTALL)

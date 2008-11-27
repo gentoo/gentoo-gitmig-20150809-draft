@@ -1,6 +1,15 @@
 # ChangeLog for x11-terms/evilvte
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.4 2008/11/26 13:42:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.5 2008/11/27 06:14:45 ssuominen Exp $
+
+*evilvte-0.4.4_pre6-r1 (27 Nov 2008)
+
+  27 Nov 2008; <ssuominen@gentoo.org>
+  +files/evilvte-0.4.4_pre6-fix_ldflags_and_ldlibs_for_asneeded.patch,
+  evilvte-0.4.4_pre6.ebuild, +evilvte-0.4.4_pre6-r1.ebuild:
+  Fix ldflags and ldlibs ordering to respect users flags. Install target had
+  all, which caused everything to get rebuilt at install phase which is not
+  desired behavior. Thanks to leio wrt #249050.
 
 *evilvte-0.4.4_pre6 (26 Nov 2008)
 
