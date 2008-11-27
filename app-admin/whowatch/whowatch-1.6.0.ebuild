@@ -1,12 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.6.0.ebuild,v 1.2 2008/11/16 15:21:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.6.0.ebuild,v 1.3 2008/11/27 17:55:38 jer Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="interactive who-like program that displays information about users currently logged on in real time"
 HOMEPAGE="http://wizard.ae.krakow.pl/~mike/"
-SRC_URI="http://wizard.ae.krakow.pl/~mike/download/${P}.tar.gz"
+SRC_URI="
+	http://wizard.ae.krakow.pl/~mike/download/${P}.tar.gz
+	mirror://debian/pool/main/w/whowatch/${P/-/_}a-2.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +21,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-debian.patch
+	epatch ${WORKDIR}/${P/-/_}a-2.diff
+	epatch ${WORKDIR}/${P}/${P}a/debian/whowatch-1.6.0.patch
 	epatch "${FILESDIR}"/${P}-cflags.patch
 }
 
