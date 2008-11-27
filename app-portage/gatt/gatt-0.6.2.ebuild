@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.2.ebuild,v 1.5 2008/11/25 17:55:09 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.2.ebuild,v 1.6 2008/11/27 14:46:14 gentoofan23 Exp $
 
 inherit eutils
 
@@ -40,6 +40,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-0.6.1-nonfataltests.patch"
+	epatch "${FILESDIR}/${PN}-0.6.1-tests.patch"
 }
 
 src_compile() {

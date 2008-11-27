@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.23 2008/11/25 17:55:09 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.24 2008/11/27 14:46:14 gentoofan23 Exp $
+
+  27 Nov 2008; Thomas Anderson <gentoofan23@gentoo.org> gatt-0.6.2.ebuild:
+  Apply 0.6.1-test patch to 0.6.2 as well.
 
   25 Nov 2008; Ferris McCormick <fmccor@gentoo.org> gatt-0.6.2.ebuild:
   Sparc stable, Bug #247464, accepting the invitation in Comment #4.
