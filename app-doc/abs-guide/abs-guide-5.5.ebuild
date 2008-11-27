@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/abs-guide-5.0.ebuild,v 1.10 2007/12/13 03:09:46 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/abs-guide-5.5.ebuild,v 1.1 2008/11/27 23:41:21 dirtyepic Exp $
+
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 
 DESCRIPTION="An advanced reference and a tutorial on bash shell scripting"
 HOMEPAGE="http://www.tldp.org/LDP/abs/html"
@@ -8,12 +10,14 @@ HOMEPAGE="http://www.tldp.org/LDP/abs/html"
 # Upstream likes to repackage the tarball without changing the name.
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
-S="${WORKDIR}"
-
-IUSE=""
-KEYWORDS="alpha amd64 hppa mips ppc sparc x86"
 LICENSE="OPL"
+IUSE=""
 SLOT="0"
+
+DEPEND=""
+RDEPEND=""
+
+S="${WORKDIR}"
 
 src_install() {
 	dodir /usr/share/doc/${P}       || die "dodir failed"
