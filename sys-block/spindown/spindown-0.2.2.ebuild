@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/spindown/spindown-0.2.2.ebuild,v 1.1 2008/11/21 18:20:42 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/spindown/spindown-0.2.2.ebuild,v 1.2 2008/11/27 14:25:25 wschlich Exp $
 
 inherit eutils
 
@@ -42,5 +42,5 @@ pkg_postinst() {
 	elog
 	elog "To start spindownd by default"
 	elog "you should add it to the default runlevel:"
-	elog "  rc-update add spindown default"
+	elog "  rc-update add spindownd default"
 }
