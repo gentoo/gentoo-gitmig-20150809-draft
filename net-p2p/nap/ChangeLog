@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/nap
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.20 2008/04/13 21:43:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.21 2008/11/27 21:43:37 armin76 Exp $
+
+*nap-1.5.4-r1 (27 Nov 2008)
+
+  27 Nov 2008; Raúl Porcel <armin76@gentoo.org> -nap-1.5.4.ebuild,
+  +nap-1.5.4-r1.ebuild:
+  Fix man pages and docs installing, use correct CC, bug #246664
 
   13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org> nap-1.5.4.ebuild:
   Remove RDEPEND on virtual/libc.
