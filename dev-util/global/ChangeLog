@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/global
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.31 2008/08/24 01:38:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.32 2008/11/27 21:53:41 jer Exp $
+
+*global-5.7.3 (27 Nov 2008)
+
+  27 Nov 2008; Jeroen Roovers <jer@gentoo.org> +global-5.7.3.ebuild:
+  Version bump (bug #246495) thanks to Arfrever Frehtes Taifersar Arahesis.
 
   24 Aug 2008; Ulrich Mueller <ulm@gentoo.org> global-5.6.2.ebuild,
   global-5.7.1.ebuild:
