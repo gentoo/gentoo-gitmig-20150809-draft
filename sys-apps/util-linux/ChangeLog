@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.246 2008/11/17 22:51:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.247 2008/11/27 21:05:37 jer Exp $
+
+  27 Nov 2008; Jeroen Roovers <jer@gentoo.org> util-linux-2.14.1.ebuild:
+  Stable for HPPA (bug #249107).
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/util-linux-2.12q-debian-10cfdisk.patch:
