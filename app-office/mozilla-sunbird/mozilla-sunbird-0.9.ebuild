@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.9.ebuild,v 1.3 2008/11/22 13:55:34 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.9.ebuild,v 1.4 2008/11/27 09:49:58 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
 PATCH="${PN}-0.8-patches-0.1"
-LANGS="ca cs da de en-US es-AR es-ES eu fr ga-IE hu is ja ka ko lt nb-NO nl nn-NO pl pt-BR pt-PT ro ru sk sl sv-SE uk zh-CN"
+LANGS="ca cs da de en-US es-AR es-ES eu fr ga-IE hu is it ja ka ko lt nb-NO nl nn-NO pl pt-BR pt-PT ro ru sk sl sv-SE uk zh-CN"
 NOSHORTLANGS="es-AR pt-BR zh-TW"
 
 MY_PN="${PN/mozilla-}"

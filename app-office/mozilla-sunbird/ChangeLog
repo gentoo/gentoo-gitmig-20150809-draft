@@ -1,6 +1,10 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.39 2008/11/22 13:55:34 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.40 2008/11/27 09:49:58 armin76 Exp $
+
+  27 Nov 2008; Raúl Porcel <armin76@gentoo.org>
+  -mozilla-sunbird-0.8.ebuild, mozilla-sunbird-0.9.ebuild:
+  Add missing it langpack, bug #248341
 
   22 Nov 2008; Thomas Anderson <gentoofan23@gentoo.org>
   mozilla-sunbird-0.9.ebuild:
