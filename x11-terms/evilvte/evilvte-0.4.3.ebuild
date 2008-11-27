@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/evilvte-0.4.3.ebuild,v 1.3 2008/08/01 12:06:24 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/evilvte-0.4.3.ebuild,v 1.4 2008/11/27 22:04:44 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.calno.com/${PN}/${P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/vte
