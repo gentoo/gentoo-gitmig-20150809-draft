@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/liboglappth
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/liboglappth/ChangeLog,v 1.2 2008/07/08 07:13:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/liboglappth/ChangeLog,v 1.3 2008/11/27 20:38:35 patrick Exp $
+
+*liboglappth-0.98 (27 Nov 2008)
+
+  27 Nov 2008; Patrick Lauer <patrick@gentoo.org> +liboglappth-0.98.ebuild:
+  Bump to 0.98
 
   08 Jul 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   liboglappth-0.96.ebuild:
