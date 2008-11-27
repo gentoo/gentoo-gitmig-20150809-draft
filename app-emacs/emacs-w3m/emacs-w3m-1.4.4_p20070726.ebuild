@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.4_p20070726.ebuild,v 1.1 2007/07/26 20:18:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.4_p20070726.ebuild,v 1.2 2008/11/27 00:40:05 ulm Exp $
 
 inherit elisp autotools
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="linguas_ja"
 
 DEPEND="virtual/w3m"
 RDEPEND="${DEPEND}"
@@ -26,20 +26,21 @@ src_unpack() {
 	eautoreconf
 }
 
-# This is NOT redundant: elisp.eclass redefines src_compile() from default
 src_compile() {
 	econf || die "econf failed"
-	emake || die "emake failed"
+	emake all-en $(useq linguas_ja && echo all-ja) || die "emake failed"
 }
 
 src_install() {
 	emake lispdir="${D}"/${SITELISP}/${PN} \
 		infodir="${D}"/usr/share/info \
 		ICONDIR="${D}"/usr/share/pixmaps/${PN} \
-		install install-icons || die "emake install failed"
+		install-en $(useq linguas_ja && echo install-ja) install-icons \
+		|| die "emake install failed"
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
-	dodoc ChangeLog* README*
+	dodoc ChangeLog* README
+	use linguas_ja && dodoc BUGS.ja README.ja
 }
 
 pkg_postinst() {
