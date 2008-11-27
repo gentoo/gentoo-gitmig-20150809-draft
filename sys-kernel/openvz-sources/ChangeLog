@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.102 2008/11/24 12:14:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.103 2008/11/27 10:17:54 robbat2 Exp $
 
   24 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> ChangeLog:
   Empty bump to try and make packages.gentoo.org happy again.
