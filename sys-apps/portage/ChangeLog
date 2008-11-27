@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.555 2008/11/24 20:47:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.556 2008/11/27 04:04:47 zmedico Exp $
+
+*portage-2.1.6_rc2 (27 Nov 2008)
+
+  27 Nov 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.6_rc2.ebuild:
+  2.1.6_rc2 bump. This fixes bugs #235642 (merging of hardlinks), #248464
+  (make repoman commit all files at once with git), #248599 (remove
+  remnants of packages sets and preserve-libs), #248603 (disable warning
+  about missing repo_name), #248782 (handle Permission Denied error for
+  PORTAGE_TMPDIR). Bug #216231 tracks all bugs fixed since 2.1.4.x.
+
+  27 Nov 2008; Zac Medico <zmedico@gentoo.org> -portage-2.2_rc14.ebuild,
+  -portage-2.2_rc15.ebuild:
+  Remove old versions.
 
   24 Nov 2008; Zac Medico <zmedico@gentoo.org> portage-2.2_rc16.ebuild:
   If portage-2.1.6 is installed and the preserved_libs_registry exists,
