@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.187 2008/11/17 11:18:20 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.188 2008/11/27 23:45:49 ikelos Exp $
+
+  27 Nov 2008; Mike Auty <ikelos@gentoo.org> files/helpers/vmware-config.sh:
+  Fix up vmware-config.sh helper (bug 246854).
 
   17 Nov 2008; Mike Auty <ikelos@gentoo.org>
   vmware-workstation-6.5.0.118166.ebuild:
