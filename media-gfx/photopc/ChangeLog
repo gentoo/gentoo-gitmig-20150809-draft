@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/photopc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/ChangeLog,v 1.9 2007/05/15 09:55:15 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/ChangeLog,v 1.10 2008/11/27 22:20:05 jer Exp $
+
+  27 Nov 2008; Jeroen Roovers <jer@gentoo.org> photopc-3.05.ebuild:
+  Do not DEPEND on virtual/libc. Do not ignore CC (bug #244162).
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
