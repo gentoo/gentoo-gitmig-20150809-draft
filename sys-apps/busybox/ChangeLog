@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.207 2008/11/21 00:14:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.208 2008/11/27 22:07:50 armin76 Exp $
+
+  27 Nov 2008; Raúl Porcel <armin76@gentoo.org> busybox-1.11.3.ebuild:
+  alpha/arm/ia64/sparc/x86 stable
 
 *busybox-1.12.2-r1 (21 Nov 2008)
 
