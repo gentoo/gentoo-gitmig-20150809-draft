@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtkhtml-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.63 2008/11/26 00:58:11 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.64 2008/11/27 19:01:06 ssuominen Exp $
+
+  27 Nov 2008; <ssuominen@gentoo.org> gtkhtml-sharp-1.0.10.ebuild,
+  gtkhtml-sharp-2.8.2.ebuild, gtkhtml-sharp-2.16.0.ebuild:
+  Move dev-util/pkgconfig from RDEPEND to DEPEND wrt #224301.
 
 *gtkhtml-sharp-2.24.0 (26 Nov 2008)
 
