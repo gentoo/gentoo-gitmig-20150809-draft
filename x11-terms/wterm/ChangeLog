@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/wterm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.23 2008/11/27 23:09:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/ChangeLog,v 1.24 2008/11/27 23:15:04 jer Exp $
+
+  27 Nov 2008; Jeroen Roovers <jer@gentoo.org> -wterm-6.2.9-r2.ebuild,
+  wterm-6.2.9-r3.ebuild:
+  Remove vulnerable version (still bug #219762). Marked ~hppa too.
 
   27 Nov 2008; Jeroen Roovers <jer@gentoo.org>
   +files/wterm-6.2.9-strip.patch, wterm-6.2.9-r3.ebuild:
