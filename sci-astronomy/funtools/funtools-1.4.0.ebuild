@@ -1,13 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.0.ebuild,v 1.2 2008/11/06 14:44:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.0.ebuild,v 1.3 2008/11/27 10:04:09 bicatali Exp $
 
 EAPI=2
 inherit eutils
 
 DESCRIPTION="FITS library and utlities for astronomical images"
 HOMEPAGE="http://hea-www.harvard.edu/RD/funtools/"
-SRC_URI="http://cfa-www.harvard.edu/~john/${PN}/${P}.tar.gz"
+SRC_URI="http://cfa-www.harvard.edu/~john/${PN}/${P}.tar.gz
+		mirror://gentoo/${P}-ds9-5.4.patch.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -20,7 +21,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-ds9-5.4.patch
+	epatch "${WORKDIR}"/${P}-ds9-5.4.patch
 	epatch "${FILESDIR}"/${P}-makefiles.patch
 }
 
