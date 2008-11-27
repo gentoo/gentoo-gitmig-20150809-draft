@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/gtkhotkey-0.2.0.ebuild,v 1.3 2008/11/09 15:28:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/gtkhotkey-0.2.0.ebuild,v 1.4 2008/11/27 18:32:35 serkan Exp $
 
-inherit versionator
+EAPI="2"
+
+inherit versionator eutils autotools
 
 MY_CRV=$(get_version_component_range 1-2)
 
@@ -25,6 +27,11 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35.0
 	sys-devel/gettext"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-buildfixes.patch
+	eautoreconf
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
