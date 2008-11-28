@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.3.ebuild,v 1.2 2008/08/28 09:51:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.3.ebuild,v 1.3 2008/11/28 09:37:05 bicatali Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran autotools versionator
 
@@ -16,7 +16,8 @@ HOMEPAGE="http://math-atlas.sourceforge.net/"
 SRC_URI1="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2"
 SRC_URI2="http://www.netlib.org/${L_PN}/${L_PN}-lite-${L_PV}.tgz"
 SRC_URI="${SRC_URI1} ${SRC_URI2}
-	mirror://gentoo/${MY_PN}-${PV}-shared-libs.patch.bz2"
+	mirror://gentoo/${MY_PN}-${PV}-shared-libs.patch.bz2
+	mirror://gentoo/${L_PN}-reference-${L_PV}-autotools.patch.bz2"
 
 SLOT="0"
 IUSE="doc"
@@ -93,7 +94,7 @@ src_unpack() {
 		|| die "configure failed"
 
 	cd "${S_LAPACK}"
-	epatch "${FILESDIR}"/${L_PN}-reference-${L_PV}-autotools.patch
+	epatch "${WORKDIR}"/${L_PN}-reference-${L_PV}-autotools.patch
 	epatch "${FILESDIR}"/${L_PN}-reference-${L_PV}-test-fix.patch
 	eautoreconf
 
