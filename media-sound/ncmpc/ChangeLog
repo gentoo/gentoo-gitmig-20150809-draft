@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.32 2008/09/22 13:57:13 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.33 2008/11/28 22:17:00 omp Exp $
+
+  28 Nov 2008; David Shakaryan <omp@gentoo.org> -ncmpc-0.11.0.ebuild,
+  -ncmpc-0.11.1.ebuild, -ncmpc-0.11.1-r1.ebuild:
+  Remove older versions.
 
   22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
   Add myself as the maintainer of media-sound/ncmpc.
