@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/obex-data-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.8 2008/11/08 09:33:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.9 2008/11/28 21:35:04 dev-zero Exp $
+
+  28 Nov 2008; Tiziano Müller <dev-zero@gentoo.org>
+  obex-data-server-0.4.2.ebuild:
+  Merged my changes to include additional conditional deps and use
+  net-wireless/bluez instead of net-wireless/bluez-{libs,utils}
 
   08 Nov 2008; Alin Năstac <mrness@gentoo.org>
   obex-data-server-0.4.2.ebuild:
