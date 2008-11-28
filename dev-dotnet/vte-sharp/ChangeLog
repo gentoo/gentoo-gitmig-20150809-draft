@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/vte-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.46 2008/11/26 00:59:44 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.47 2008/11/28 00:25:28 loki_val Exp $
+
+*vte-sharp-2.24.0-r1 (27 Nov 2008)
+
+  27 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -vte-sharp-2.24.0.ebuild, +vte-sharp-2.24.0-r1.ebuild:
+  Bump to fix pkgconfig reporting erroneous --libs.
 
 *vte-sharp-2.24.0 (26 Nov 2008)
 
