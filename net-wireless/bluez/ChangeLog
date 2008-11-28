@@ -1,0 +1,15 @@
+# ChangeLog for net-wireless/bluez
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.1 2008/11/28 21:21:35 dev-zero Exp $
+
+*bluez-4.19 (28 Nov 2008)
+
+  28 Nov 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/bluez-4.18-udev.rules, +files/4.18/bluetooth-conf.d,
+  +files/4.18/conf.d-hidd, +files/bluez-4.18-udev.script,
+  +files/4.18/bluetooth-init.d, +files/4.18/cups-location.patch,
+  +files/4.18/init.d-hidd, +metadata.xml, +bluez-4.19.ebuild:
+  Initial commit, keeping the keywords the same as for bluez-libs/-utils
+  since it's mostly the same. Most patches are taken from bluez-libs/-utils.
+  (bug #236357)
+
