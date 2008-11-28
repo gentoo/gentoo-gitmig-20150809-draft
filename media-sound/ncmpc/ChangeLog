@@ -1,9 +1,6 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.35 2008/11/28 22:47:03 omp Exp $
-
-  28 Nov 2008; David Shakaryan <omp@gentoo.org> ChangeLog:
-  Recommit in order to sign Manifest.
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.36 2008/11/28 22:55:17 omp Exp $
 
 *ncmpc-0.12_beta2 (28 Nov 2008)
 
