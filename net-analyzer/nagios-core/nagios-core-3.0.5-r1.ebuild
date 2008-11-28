@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.5.ebuild,v 1.2 2008/11/28 20:01:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.5-r1.ebuild,v 1.1 2008/11/28 20:27:31 dertobi123 Exp $
 
 EAPI="1"
 
@@ -9,7 +9,8 @@ inherit eutils depend.apache toolchain-funcs
 MY_P=${PN/-core}-${PV}
 DESCRIPTION="Nagios Core - Check daemon, CGIs, docs"
 HOMEPAGE="http://www.nagios.org/"
-SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz
+	mirror://gentoo/${MY_P}-CVE-2008-5028.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -48,6 +49,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${WORKDIR}/${MY_P}-CVE-2008-5028.patch"
 
 	local strip="$(echo '$(MAKE) strip-post-install')"
 	sed -i -e "s:${strip}::" {cgi,base}/Makefile.in || die "sed failed in Makefile.in"
@@ -212,10 +215,6 @@ pkg_postinst() {
 	elog "filesystem. You can fix this by adding nagios into"
 	elog "the group wheel, but this is not recomended."
 	elog
-}
-
-pkg_prerm() {
-	[[ "${ROOT}" == "/" ]] && /etc/init.d/nagios stop
 }
 
 pkg_postinst() {
