@@ -66,3 +66,7 @@ net-analyzer/net-snmp elf
 # its clisp module is confused by gmake vs bsdmake, mask it until we can
 # properly keyword xindy.
 app-text/texlive xindy
+
+# Alexis Ballier <aballier@gentoo.org> (28 Nov 2008)
+# Requires bluez-libs which is linux only
+net-libs/libpcap bluetooth
