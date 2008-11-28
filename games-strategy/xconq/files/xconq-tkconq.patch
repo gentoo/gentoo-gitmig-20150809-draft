@@ -1,5 +1,5 @@
---- a/tkconq.tcl	2000-12-11 19:09:15.000000000 +0100
-+++ b/tkconq.tcl	2006-03-22 23:49:20.000000000 +0100
+--- a/tcltk/tkconq.tcl	2000-12-11 19:09:15.000000000 +0100
++++ b/tcltk/tkconq.tcl	2006-03-22 23:49:20.000000000 +0100
 @@ -472,7 +472,7 @@
  		    -state $variantstate($col2) -variable variantvalue($col2) \
  		    -command [ list set_variant_value_cmd $col2 ]
