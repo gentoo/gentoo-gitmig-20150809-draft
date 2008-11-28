@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.108 2008/10/27 05:57:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.109 2008/11/28 09:21:10 vapier Exp $
 
 cd /
 umask 0022 #159111
@@ -148,6 +148,10 @@ parse_target() {
 		      LCAT="dev-embedded"; LPKG="avr-libc";
 		      GUSE=${GUSE_DISABLE};;
 
+		# due to upstream lameness, build C/C++ at first glance
+		*-cygwin)
+		      GUSE_DISABLE=${GUSE_DISABLE/nocxx};;
+
 		mingw*|*-mingw*)
 		      WITH_DEF_HEADERS="yes";
 		      KCAT="dev-util"; KPKG="w32api";
@@ -197,6 +201,12 @@ parse_target() {
 		*-uclibc*)  LPKG="uclibc";;
 		*-uclinux)  LPKG="uclibc";;
 
+		# Windows targets
+		*-cygwin)
+			LCAT="dev-libs"; LPKG="cygwin";
+			KPKG="[none]";
+			;;
+
 		# Bare metal targets
 		*-newlib|*-elf)
 			LPKG="newlib"
@@ -210,6 +220,8 @@ parse_target() {
 			KPKG="[none]"
 			;;
 	esac
+
+	: ${LPKG=[none]}
 }
 
 setup_portage_vars() {
@@ -329,8 +341,9 @@ GCAT="sys-devel"  ; GPKG="gcc"           ; GVER="" ; GUSE=""
 KCAT="sys-kernel" ; KPKG="linux-headers" ; KVER="" ; KUSE=""
 LCAT="sys-libs"   ; LPKG=""              ; LVER="" ; LUSE=""
 DEFAULT_VER="[latest]"
-GUSE_DISABLE="-boundschecking -d -fortran -gtk -gcj -libffi -mudflap -objc -objc++ -objc-gc -openmp"
+GUSE_DISABLE="-boundschecking -d -fortran -gtk -gcj -libffi -mudflap nocxx -objc -objc++ -objc-gc -openmp"
 GUSE_DISABLE_STAGE_2=${GUSE_DISABLE/-fortran}
+GUSE_DISABLE_STAGE_2=${GUSE_DISABLE_STAGE_2/nocxx}
 WITH_HEADERS="COW"   WITH_DEF_HEADERS="yes" #227065 gcc-4.3+ is a pita w/out headers
 EX_FAST="no"
 EX_GCC="no"
@@ -616,7 +629,7 @@ USE="${KUSE} ${USE}" CROSSCOMPILE_OPTS="headers-only" \
 USE="${LUSE} ${USE}" CROSSCOMPILE_OPTS="headers-only" \
 	doemerge ${LPKG} ${LPKG}-headers
 fi
-USE="${GUSE} ${USE} ${GUSE_DISABLE} nocxx" CROSSCOMPILE_OPTS="bootstrap" \
+USE="${GUSE} ${USE} ${GUSE_DISABLE}" CROSSCOMPILE_OPTS="bootstrap" \
 	doemerge ${GPKG} ${GPKG}-stage1
 
 is_s2 || exit 0
