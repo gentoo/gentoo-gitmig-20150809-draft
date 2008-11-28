@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gaia
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/ChangeLog,v 1.21 2008/11/17 23:04:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gaia/ChangeLog,v 1.22 2008/11/28 12:55:09 fauli Exp $
+
+  28 Nov 2008; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
+  Change my email address
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/gaia-0.1.2-font_inclusion.patch,
