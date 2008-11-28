@@ -9,4 +9,7 @@
 	<longdescription>
 		Client to configure an IPv6 tunnel to freenet6
 	</longdescription>
+	<use>
+		<flag name="radvd">Enable support for <pkg>net-misc/radvd</pkg></flag>
+	</use>
 </pkgmetadata>
