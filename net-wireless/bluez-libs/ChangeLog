@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.108 2008/08/25 17:31:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.109 2008/11/28 21:25:20 dev-zero Exp $
+
+  28 Nov 2008; Tiziano Müller <dev-zero@gentoo.org> bluez-libs-2.22.ebuild,
+  bluez-libs-2.25.ebuild, bluez-libs-3.25.ebuild, bluez-libs-3.27.ebuild,
+  bluez-libs-3.28.ebuild, bluez-libs-3.30.ebuild, bluez-libs-3.32.ebuild,
+  bluez-libs-3.36.ebuild:
+  Added blocker for net-wireless/bluez
 
   25 Aug 2008; nixnut <nixnut@gentoo.org> bluez-libs-3.30.ebuild:
   Stable on ppc wrt bug 224409

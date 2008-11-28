@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.11 2007/05/09 20:20:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.25-r1.ebuild,v 1.12 2008/11/28 21:27:45 dev-zero Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ KEYWORDS="amd64 arm hppa ppc sh sparc x86"
 IUSE="alsa cups dbus gtk pcmcia"
 
 RDEPEND="!net-wireless/bluez-pan
+	!net-wireless/bluez
 	>=net-wireless/bluez-libs-2.25
 	dev-libs/libusb
 	alsa? ( >=media-libs/alsa-lib-1.0.9 )
