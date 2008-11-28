@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13-r1.ebuild,v 1.1 2008/10/16 18:04:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13-r1.ebuild,v 1.2 2008/11/28 20:57:05 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -105,6 +105,11 @@ src_install() {
 		dodir /usr/$(get_libdir)/nagios/plugins
 		exeinto /usr/$(get_libdir)/nagios/plugins
 		doexe "${S}"/contrib/check_nagios_db.pl
+	fi
+
+	if ! use snmp; then
+		rm "${D}"/usr/$(get_libdir)/nagios/plugins/check_if{operstatus,status} \
+			|| die "Failed to remove SNMP check plugins"
 	fi
 
 	mv "${S}"/contrib "${D}"/usr/$(get_libdir)/nagios/plugins/contrib
