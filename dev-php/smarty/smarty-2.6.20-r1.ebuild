@@ -1,16 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.14.ebuild,v 1.10 2007/03/18 15:42:03 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.20-r1.ebuild,v 1.1 2008/11/28 15:55:14 dertobi123 Exp $
 
-inherit php-lib-r1
+inherit php-lib-r1 eutils
 
-KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 MY_P="Smarty-${PV}"
 
 DESCRIPTION="A template engine for PHP."
-HOMEPAGE="http://smarty.php.net/"
-SRC_URI="http://smarty.php.net/distributions/${MY_P}.tar.gz"
+HOMEPAGE="http://www.smarty.net/"
+SRC_URI="http://www.smarty.net/distributions/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="doc"
@@ -23,6 +23,13 @@ S="${WORKDIR}/${MY_P}"
 
 need_php_by_category
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-CVE-2008-4810.patch"
+}
+
 src_install() {
 	dodoc-php BUGS ChangeLog FAQ NEWS QUICK_START README RELEASE_NOTES TODO
 
@@ -34,13 +41,9 @@ pkg_postinst() {
 	elog "To use it in your scripts, either"
 	elog "1. define('SMARTY_DIR', \"/usr/share/php/${PHP_LIB_NAME}/\") in your scripts, or"
 	elog "2. add '/usr/share/php/${PHP_LIB_NAME}/' to the 'include_path' variable in your"
-	elog "php.ini file under /etc/php/SAPI (where SAPI is one of apache-php[45],"
-	elog "cgi-php[45] or cli-php[45])."
+	elog "php.ini file under /etc/php/SAPI (where SAPI is one of apache2-php5,"
+	elog "cgi-php5 or cli-php5)."
 	elog
 	elog "If you're upgrading from a previous version make sure to clear out your"
 	elog "templates_c and cache directories as some include paths have changed!"
-	elog
-	elog "The Smarty include directory has changed in 2.6.12 from /usr/share/php/Smarty/"
-	elog "to /usr/share/php/${PHP_LIB_NAME}/ you will need to change your SMARTY_DIR or"
-	elog "include_path accordingly."
 }

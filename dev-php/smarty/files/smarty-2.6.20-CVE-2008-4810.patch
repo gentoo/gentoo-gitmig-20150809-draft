@@ -1,0 +1,30 @@
+------------------------------------------------------------------------
+r2784 | Uwe.Tews | 2008-09-18 23:03:32 +0200 (Thu, 18 Sep 2008) | 1 line
+
+ - fix  function injection security hole closed (U.Tews)
+------------------------------------------------------------------------
+r2796 | monte.ohrt | 2008-09-22 17:29:16 +0200 (Mon, 22 Sep 2008) | 3 lines
+
+revert patch for secuity hole, update site url
+
+
+------------------------------------------------------------------------
+r2797 | monte.ohrt | 2008-09-22 21:26:32 +0200 (Mon, 22 Sep 2008) | 3 lines
+
+patch for security, php executed in templates
+
+
+------------------------------------------------------------------------
+Index: Smarty_Compiler.class.php
+===================================================================
+--- Smarty-2.6.20.orig/libs/Smarty_Compiler.class.php	(revision 2781)
++++ Smarty-2.6.20/libs/Smarty_Compiler.class.php	(revision 2797)
+@@ -1705,6 +1705,8 @@
+         }
+         // replace double quoted literal string with single quotes
+         $_return = preg_replace('~^"([\s\w]+)"$~',"'\\1'",$_return);
++        // escape dollar sign if not printing a var
++        $_return = preg_replace('~\$(\W)~',"\\\\\$\\1",$_return);
+         return $_return;
+     }
+ 
