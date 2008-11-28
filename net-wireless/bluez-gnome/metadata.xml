@@ -3,6 +3,9 @@
 <pkgmetadata>
 	<herd>mobile</herd>
 	<maintainer>
+		<email>dev-zero@gentoo.org</email>
+	</maintainer>
+	<maintainer>
 		<email>betelgeuse@gentoo.org</email>
 	</maintainer>
 	<maintainer>
