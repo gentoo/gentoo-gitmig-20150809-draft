@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.2.15.ebuild,v 1.2 2008/11/27 19:49:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.2.15.ebuild,v 1.3 2008/11/28 00:06:59 scarabeus Exp $
 
 EAPI="1"
 
@@ -209,9 +209,8 @@ pkg_postinst() {
 	fi
 	echo
 	# Add warning about the new password for the client, bug 121896.
-	elog "If you need to use the graphical client the password is in "
-	elog "/var/lib/${PN}/gui_rpc_auth.cfg which is randomly generated "
-	elog "by ${PN} upon successfully running the gui for the first time."
-	elog "You can change this to something more memorable."
+	elog "If you need to use the graphical client the password is in"
+	elog "/var/lib/${PN}/gui_rpc_auth.cfg which is for first run empty."
+	elog "You should change this to something more secure."
 	echo
 }
