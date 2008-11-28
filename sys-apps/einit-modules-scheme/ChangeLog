@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/einit-modules-scheme
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit-modules-scheme/ChangeLog,v 1.5 2008/06/11 16:35:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit-modules-scheme/ChangeLog,v 1.6 2008/11/28 12:47:57 fauli Exp $
+
+  28 Nov 2008; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
+  Change my email address
 
   11 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   einit-modules-scheme-1.0.0.2.ebuild:

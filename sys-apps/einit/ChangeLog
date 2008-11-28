@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/einit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/ChangeLog,v 1.16 2008/08/23 06:06:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/ChangeLog,v 1.17 2008/11/28 12:45:33 fauli Exp $
+
+  28 Nov 2008; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
+  Change my email address
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
