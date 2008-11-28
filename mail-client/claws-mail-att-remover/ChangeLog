@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-att-remover
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/ChangeLog,v 1.21 2008/11/28 12:41:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-att-remover/ChangeLog,v 1.22 2008/11/28 23:15:49 maekke Exp $
+
+  28 Nov 2008; Markus Meier <maekke@gentoo.org>
+  claws-mail-att-remover-1.0.9.ebuild:
+  amd64/x86 stable, bug #248760
 
   28 Nov 2008; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   Change my email address
