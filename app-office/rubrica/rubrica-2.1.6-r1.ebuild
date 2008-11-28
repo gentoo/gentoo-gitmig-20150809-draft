@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6-r1.ebuild,v 1.2 2008/11/19 09:34:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6-r1.ebuild,v 1.3 2008/11/28 13:30:38 fauli Exp $
 
 EAPI=1
 
@@ -47,7 +47,8 @@ src_compile() {
 
 	# Add Hungarian translation
 	if use linguas_hu; then
-		msgfmt "${FILESDIR}/hu.po" --output-file "po/hu.gmo" || die
+		bunzip2 -c "${FILESDIR}/hu.po.bz2" > "${WORKDIR}"/hu.po
+		msgfmt "${WORKDIR}/hu.po" --output-file "po/hu.gmo" || die
 	fi
 }
 
