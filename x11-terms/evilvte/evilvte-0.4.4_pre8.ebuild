@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/evilvte-0.4.4_pre6-r1.ebuild,v 1.1 2008/11/27 06:14:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/evilvte-0.4.4_pre8.ebuild,v 1.1 2008/11/28 12:16:38 ssuominen Exp $
 
 MY_P=${P/_/\~}
 
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="VTE based, super lightweight terminal emulator"
 HOMEPAGE="http://www.calno.com/evilvte"
@@ -25,8 +25,6 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}"/${P}-fix_ldflags_and_ldlibs_for_asneeded.patch
 
 	if [[ -f /etc/${PN}/config.h ]]; then
 		cp /etc/${PN}/config.h src/ || die "copying config.h failed."
