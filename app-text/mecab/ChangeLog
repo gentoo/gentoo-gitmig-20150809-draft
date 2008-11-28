@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mecab
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.53 2008/11/26 16:14:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.54 2008/11/28 21:37:01 maekke Exp $
+
+  28 Nov 2008; Markus Meier <maekke@gentoo.org> mecab-0.97-r1.ebuild:
+  amd64/x86 stable, bug #245176
 
   26 Nov 2008; Brent Baude <ranger@gentoo.org> mecab-0.97-r1.ebuild:
   Marking mecab-0.97-r1 ppc64 for bug 239980
