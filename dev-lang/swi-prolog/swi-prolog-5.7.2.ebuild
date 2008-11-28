@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.7.2.ebuild,v 1.1 2008/10/28 06:51:59 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.7.2.ebuild,v 1.2 2008/11/28 23:48:01 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
-PATCHSET_VER="0"
+PATCHSET_VER="1"
 
 DESCRIPTION="free, small, and standard compliant Prolog compiler"
 HOMEPAGE="http://www.swi-prolog.org/"
@@ -54,15 +54,9 @@ src_compile() {
 	use hardened && append-flags -fno-unit-at-a-time
 	use debug && append-flags -DO_DEBUG
 
-	local jpltestconf
-	if use java && use test ; then
-		jpltestconf="--with-junit=$(java-config --classpath junit)"
-	fi
-
 	cd "${S}"/src
 	econf \
 		--libdir=/usr/$(get_libdir) \
-		${jpltestconf} \
 		$(use_enable gmp) \
 		$(use_enable readline) \
 		$(use_enable !static shared) \
@@ -72,6 +66,11 @@ src_compile() {
 
 	if ! use minimal ; then
 		einfo "Building SWI-Prolog additional packages"
+
+		local jpltestconf
+		if use java && use test ; then
+			jpltestconf="--with-junit=$(java-config --classpath junit)"
+		fi
 
 		cd "${S}/packages"
 		econf \
@@ -87,6 +86,7 @@ src_compile() {
 			--with-http \
 			--without-jasmine \
 			$(use_with java jpl) \
+			${jpltestconf} \
 			--with-nlp \
 			$(use_with odbc) \
 			--with-pldoc \
