@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netdude
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/ChangeLog,v 1.9 2008/01/05 20:20:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netdude/ChangeLog,v 1.10 2008/11/28 18:38:33 gmsoft Exp $
+
+  28 Nov 2008; Guy Martin <gmsoft@gentoo.org> netdude-0.4.7.ebuild,
+  netdude-0.4.8a.ebuild:
+  replaced make install by einstall, #239796
 
 *netdude-0.4.8a (05 Jan 2008)
 
