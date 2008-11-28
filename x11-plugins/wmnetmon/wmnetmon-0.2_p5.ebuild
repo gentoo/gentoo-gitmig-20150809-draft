@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/wmnetmon-0.2_p5.ebuild,v 1.4 2008/01/21 11:01:04 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/wmnetmon-0.2_p5.ebuild,v 1.5 2008/11/28 18:57:54 tcunha Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.linuks.mine.nu/dockapps/${P/_/}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE="+suid"
 
 RDEPEND="x11-libs/libX11

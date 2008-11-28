@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/wmpiki-0.2.1.ebuild,v 1.7 2007/07/22 04:39:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/wmpiki-0.2.1.ebuild,v 1.8 2008/11/28 19:00:02 tcunha Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://clay.ll.pl/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="ppc sparc x86"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
