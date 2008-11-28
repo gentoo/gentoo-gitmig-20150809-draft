@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.131 2008/11/06 17:54:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.132 2008/11/28 20:01:42 dertobi123 Exp $
+
+  28 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  nagios-core-3.0.5.ebuild:
+  Fix permissions on /var/nagios in postinst..
 
 *nagios-core-3.0.5 (06 Nov 2008)
 
