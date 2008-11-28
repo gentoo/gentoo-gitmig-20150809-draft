@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.216 2008/11/13 19:24:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.217 2008/11/28 02:02:17 leio Exp $
+
+*eog-2.24.2 (28 Nov 2008)
+
+  28 Nov 2008; Mart Raudsepp <leio@gentoo.org>
+  -files/eog-2.24.0-unrecognized-chunks.patch, -eog-2.24.0.ebuild,
+  -eog-2.24.1.ebuild, +eog-2.24.2.ebuild:
+  Version bump for bug fixes and translation updates
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> eog-2.22.3-r1.ebuild:
   Marking eog-2.22.3-r1 ppc64 stable for bug 236971

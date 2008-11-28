@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.24.1.ebuild,v 1.1 2008/10/23 21:14:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.24.2.ebuild,v 1.1 2008/11/28 02:02:17 leio Exp $
 
 inherit eutils gnome2
 
@@ -46,7 +46,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_with exif libjpeg)
 		$(use_with exif libexif)
-		$(use_with dbus dbus-glib-1)
+		$(use_with dbus)
 		$(use_with lcms cms)
 		$(use_enable python)
 		$(use_with xmp)
