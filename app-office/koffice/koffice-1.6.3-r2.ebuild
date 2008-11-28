@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.6.3-r2.ebuild,v 1.7 2007/11/18 08:59:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.6.3-r2.ebuild,v 1.8 2008/11/28 03:29:52 dirtyepic Exp $
 
 inherit kde
 
@@ -60,7 +60,8 @@ need-kde 3.45
 # and for kivio/kiviopart/kiviosdk.
 
 PATCHES="${FILESDIR}/koffice-xpdf-CVE-2007-3387.diff
-		${FILESDIR}/koffice-1.6.3-xpdf2-CVE-2007-4352-5392-5393.diff"
+		${FILESDIR}/koffice-1.6.3-xpdf2-CVE-2007-4352-5392-5393.diff
+		${FILESDIR}/${P}-gcc43.patch"
 
 pkg_setup() {
 	# use opengl &&

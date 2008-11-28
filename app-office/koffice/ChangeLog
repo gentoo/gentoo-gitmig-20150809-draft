@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.241 2007/11/18 08:59:45 dertobi123 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.242 2008/11/28 03:29:52 dirtyepic Exp $
+
+  28 Nov 2008; Ryan Hill <dirtyepic@gentoo.org>
+  +files/koffice-1.6.3-gcc43.patch, koffice-1.6.3-r2.ebuild:
+  Fix building w/ gcc-4.3. Bug #228839.
 
   18 Nov 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   koffice-1.6.3-r2.ebuild:
