@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-1.8.ebuild,v 1.1 2008/11/28 21:32:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-1.8.ebuild,v 1.2 2008/11/28 21:52:57 dev-zero Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Bluetooth helpers for GNOME"
 HOMEPAGE="http://www.bluez.org/"
@@ -34,6 +34,11 @@ G2CONF="--disable-desktop-update
 		--disable-icon-update"
 
 DOCS="AUTHORS README NEWS ChangeLog"
+
+src_unpack() {
+	gnome2_src_unpack
+	epatch "${FILESDIR}/${PV}-ODS-API.patch"
+}
 
 pkg_postinst() {
 	gnome2_pkg_postinst
