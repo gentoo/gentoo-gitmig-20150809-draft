@@ -1,15 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.1.4-r3.ebuild,v 1.1 2008/11/07 12:28:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.1.5.ebuild,v 1.1 2008/11/28 14:47:44 pva Exp $
 
 inherit eutils webapp depend.php
 
-MY_P=mantis-${PV}
-
 DESCRIPTION="PHP/MySQL/Web based bugtracking system"
 HOMEPAGE="http://www.mantisbt.org/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
-	mirror://gentoo/${P}-r5687:5752.patch.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -19,8 +16,6 @@ RDEPEND="
 	virtual/httpd-php
 	virtual/httpd-cgi
 	dev-php/adodb"
-
-S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	webapp_pkg_setup
@@ -32,7 +27,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	rm -r "${S}/core/adodb/" # We use external adodb
-	epatch "${WORKDIR}/${P}-r5687:5752.patch"
+	epatch "${FILESDIR}/${P}-caching.patch"
+	epatch "${FILESDIR}/${P}-extensions.patch"
 }
 
 src_install() {
