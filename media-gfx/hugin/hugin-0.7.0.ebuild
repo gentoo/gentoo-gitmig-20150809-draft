@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0.ebuild,v 1.3 2008/11/26 21:08:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0.ebuild,v 1.4 2008/11/28 18:28:07 maekke Exp $
 
 EAPI="1"
 WX_GTK_VER="2.8"
@@ -19,6 +19,7 @@ DEPEND="
 	app-arch/zip
 	>=dev-libs/boost-1.30.0
 	>=media-gfx/enblend-3.0_p20080807
+	media-gfx/exiv2
 	media-libs/jpeg
 	media-libs/libpano13
 	media-libs/libpng
