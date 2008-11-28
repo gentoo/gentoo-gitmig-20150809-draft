@@ -7,10 +7,16 @@
 		<name>David Shakaryan</name>
 	</maintainer>
 	<use>
-		<flag name="clock-screen">Enable clock screen</flag>
+		<!-- 0.12 -->
+		<flag name="artist-screen">Enable artist screen</flag>
+		<flag name="colors">Enable color support</flag>
+		<flag name="help-screen">Enable the help screen</flag>
 		<flag name="key-screen">Enable key editor screen</flag>
 		<flag name="mouse">Enable curses getmouse support</flag>
-		<flag name="raw-mode">raw terminal mode</flag>
-		<flag name="search-screen">Enable search screen (EXPERIMENTAL)</flag>
+		<flag name="search-screen">Enable search screen</flag>
+		<flag name="song-screen">Enable song viewer screen</flag>
+		<!-- 0.11 -->
+		<flag name="clock-screen">Enable clock screen</flag>
+		<flag name="raw-mode">Raw terminal mode</flag>
 	</use>
 </pkgmetadata>
