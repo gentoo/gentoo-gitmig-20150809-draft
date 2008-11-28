@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30_rc1.ebuild,v 1.3 2008/11/01 07:33:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.ebuild,v 1.1 2008/11/28 20:09:45 solar Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -19,9 +19,9 @@ if [[ ${CTARGET} == ${CHOST} ]] && [[ ${CHOST} != *-uclibc* ]] ; then
 	export CTARGET=${CHOST%%-*}-pc-linux-uclibc
 fi
 
-MY_P=uClibc-0.9.30-rc1
+MY_P=uClibc-0.9.30
 SVN_VER=""
-PATCH_VER="0.1"
+#PATCH_VER="0.1"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://uclibc.org/downloads/${MY_P}.tar.bz2
@@ -41,11 +41,12 @@ IUSE="build uclibc-compat debug hardened iconv ipv6 minimal nls pregen userlocal
 RESTRICT="strip"
 
 RDEPEND=""
-if [[ ${CTARGET} == ${CHOST} ]] ; then
+if [[ -n $CTARGET && ${CTARGET} != ${CHOST} ]]; then
+	DEPEND=""
+	PROVIDE=""
+else
 	DEPEND="virtual/os-headers app-misc/pax-utils"
 	PROVIDE="virtual/libc"
-else
-	DEPEND=""
 fi
 
 S=${WORKDIR}/${MY_P}
@@ -67,7 +68,7 @@ uclibc_endian() {
 	# XXX: this wont work for a toolchain which is bi-endian, but we
 	#      dont have any such thing at the moment, so not a big deal
 	touch "${T}"/endian.s
-	$(tc-getAS) "${T}"/endian.s -o "${T}"/endian.o
+	$(tc-getAS ${CTARGET}) "${T}"/endian.s -o "${T}"/endian.o
 	case $(file "${T}"/endian.o) in
 		*" MSB "*) echo "big";;
 		*" LSB "*) echo "little";;
