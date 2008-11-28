@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rnv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/ChangeLog,v 1.7 2008/10/27 19:14:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/ChangeLog,v 1.8 2008/11/28 00:35:39 fauli Exp $
+
+  28 Nov 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  change my email address
 
   27 Oct 2008; Christian Faulhammer <opfer@gentoo.org>
   -files/rnv-1.7.8-respect-CFLAGS.patch,
