@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.5.ebuild,v 1.3 2008/07/26 07:47:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.5.1.ebuild,v 1.1 2008/11/28 05:18:29 serkan Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2
@@ -29,7 +29,7 @@ DEPEND=">=virtual/jdk-1.5
 src_unpack() {
 	unpack ${A}
 	cd "${S}" || die
-	epatch "${FILESDIR}/${PN}-2.4-jarfixes.patch"
+	epatch "${FILESDIR}/${P}-jarfixes.patch"
 }
 
 src_compile() {

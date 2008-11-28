@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/dbus-java
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/ChangeLog,v 1.3 2008/07/26 07:47:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/ChangeLog,v 1.4 2008/11/28 05:18:29 serkan Exp $
+
+*dbus-java-2.5.1 (28 Nov 2008)
+
+  28 Nov 2008; Serkan Kaba <serkan@gentoo.org>
+  -files/dbus-java-2.4-jarfixes.patch,
+  +files/dbus-java-2.5.1-jarfixes.patch, -dbus-java-2.5.ebuild,
+  +dbus-java-2.5.1.ebuild:
+  Version bump. Remove old.
 
   26 Jul 2008; Markus Rothe <corsair@gentoo.org> dbus-java-2.5.ebuild:
   Added ~ppc; bug #232411
