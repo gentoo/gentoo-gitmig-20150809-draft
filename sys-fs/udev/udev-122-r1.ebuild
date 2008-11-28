@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-122-r1.ebuild,v 1.2 2008/06/15 05:54:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-122-r1.ebuild,v 1.3 2008/11/28 12:51:54 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -334,14 +334,12 @@ pkg_postinst() {
 	# requested in Bug #225033:
 	elog
 	elog "persistent-net does assigning fixed names to network devices."
-	elog "If you have problems with persistent-net rules,"
+	elog "If you have problems with the persistent-net rules,"
 	elog "just delete the rules file"
 	elog "\trm ${ROOT}etc/udev/rules.d/70-persistent-net.rules"
-	elog "and then trigger udev by either running"
-	elog "\tudevadm trigger --subsystem-match=net"
-	elog "or by rebooting."
+	elog "and then reboot."
 	elog
-	elog "This may number your devices in a different way than it is now."
+	elog "This may however number your devices in a different way than they are now."
 
 	if [[ ${ROOT} == / ]]
 	then
