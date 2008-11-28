@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail-gtkhtml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.42 2008/11/25 09:46:10 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.43 2008/11/28 12:44:47 fauli Exp $
+
+  28 Nov 2008; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
+  Change my email address
 
   25 Nov 2008; Christian Faulhammer <opfer@gentoo.org>
   -claws-mail-gtkhtml-0.18.ebuild:
