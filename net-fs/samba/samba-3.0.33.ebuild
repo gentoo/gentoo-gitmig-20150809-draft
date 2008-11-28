@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.33.ebuild,v 1.4 2008/11/28 21:45:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.33.ebuild,v 1.5 2008/11/28 21:46:50 dertobi123 Exp $
 
 inherit autotools eutils pam python multilib versionator confutils
 
@@ -299,7 +299,7 @@ pkg_preinst() {
 	local PRIVATE_SRC=/etc/samba/private
 	if [[ ! -r "${ROOT}/${PRIVATE_DST}/secrets.tdb" \
 		&& -r "${ROOT}/${PRIVATE_SRC}/secrets.tdb" ]] ; then
-		ebegin "Copying ${ROOT}/${PRIVATE_SRC}/* to ${ROOT}/${PRIVATE_DST}/"
+		ebegin "Copying "${ROOT}"/${PRIVATE_SRC}/* to ${ROOT}/${PRIVATE_DST}/"
 			mkdir -p "${D}/${PRIVATE_DST}"
 			cp -pPRf "${ROOT}/${PRIVATE_SRC}"/* "${D}/${PRIVATE_DST}/"
 		eend $?
