@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.16.3.ebuild,v 1.2 2008/09/03 03:03:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.16.3.ebuild,v 1.3 2008/11/29 04:02:07 grozin Exp $
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 AECA"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 # Supported lisps with readline
 SUPP_RL="gcl clisp"
@@ -62,6 +62,8 @@ RDEPEND="${RDEPEND}
 DEPEND="${RDEPEND}
 	sys-apps/texinfo"
 
+TEXMF=/usr/share/texmf-site
+
 pkg_setup() {
 	LISPS=""
 
@@ -87,43 +89,6 @@ pkg_setup() {
 		fi
 		# gcl in the main tree is broken (bug #205803)
 		ewarn "Please use gcl from http://repo.or.cz/w/gentoo-lisp-overlay.git"
-	fi
-
-	# Calculating MAXIMA_TEXMFDIR
-	if use latex; then
-		local TEXMFPATH="$(kpsewhich -var-value=TEXMFSITE)"
-		local TEXMFCONFIGFILE="$(kpsewhich texmf.cnf)"
-
-		if [ -z "${TEXMFPATH}" ]; then
-			eerror "You haven't defined the TEXMFSITE variable in your TeX config."
-			eerror "Please do so in the file ${TEXMFCONFIGFILE:-/var/lib/texmf/web2c/texmf.cnf}"
-			die "Define TEXMFSITE in TeX configuration!"
-		else
-			# go through the colon separated list of directories
-			# (maybe only one) provided in the variable
-			# TEXMFPATH (generated from TEXMFSITE from TeX's config)
-			# and choose only the first entry.
-			# All entries are separated by colons, even when defined
-			# with semi-colons, kpsewhich changes
-			# the output to a generic format, so IFS has to be redefined.
-			local IFS="${IFS}:"
-
-			for strippedpath in ${TEXMFPATH}; do
-				if [ -d ${strippedpath} ]; then
-					MAXIMA_TEXMFDIR="${strippedpath}"
-					break
-				fi
-			done
-
-			# verify if an existing path was chosen to prevent from
-			# installing into the wrong directory
-			if [ -z ${MAXIMA_TEXMFDIR} ]; then
-				eerror "TEXMFSITE does not contain any existing directory."
-				eerror "Please define an existing directory in your TeX config file"
-				eerror "${TEXMFCONFIGFILE:-/var/lib/texmf/web2c/texmf.cnf} or create at least one of the there specified directories"
-				die "TEXMFSITE variable did not contain an existing directory"
-			fi
-		fi
 	fi
 
 	if use X && ! built_with_use sci-visualization/gnuplot gd wxwindows; then
@@ -175,7 +140,7 @@ src_compile() {
 		done
 	fi
 
-	econf ${myconf} || die "econf failed"
+	econf ${myconf}
 	emake || die "emake failed"
 }
 
@@ -187,7 +152,7 @@ src_install() {
 		"Science;Math;Education"
 
 	if use latex; then
-		insinto "${MAXIMA_TEXMFDIR}"/tex/latex/emaxima
+		insinto ${TEXMF}/tex/latex/emaxima
 		doins interfaces/emacs/emaxima/emaxima.sty
 	fi
 
