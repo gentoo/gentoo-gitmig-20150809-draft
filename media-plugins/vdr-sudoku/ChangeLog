@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-sudoku
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sudoku/ChangeLog,v 1.15 2008/11/23 09:41:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sudoku/ChangeLog,v 1.16 2008/11/29 10:52:09 zzam Exp $
+
+*vdr-sudoku-0.3.4 (29 Nov 2008)
+
+  29 Nov 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-sudoku-0.3.4.ebuild:
+  Version bumped.
 
 *vdr-sudoku-0.3.3 (23 Nov 2008)
 
