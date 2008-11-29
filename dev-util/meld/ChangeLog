@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.86 2008/11/16 19:33:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.87 2008/11/29 12:54:03 eva Exp $
+
+*meld-1.2.1 (29 Nov 2008)
+
+  29 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org> +meld-1.2.1.ebuild:
+  Bump to 1.2.1. UI Tweaks, command line enhancements, handles spaces
+  in svn path.
 
 *meld-1.2-r1 (16 Nov 2008)
 
