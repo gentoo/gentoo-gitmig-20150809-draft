@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.472 2008/11/25 22:43:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.473 2008/11/29 02:32:17 robbat2 Exp $
+
+  29 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.70.ebuild:
+  Move the hostname==localhost check from pkg_setup to pkg_config and
+  src_test instead, to enable building in binpkg hosts more easily.
 
   25 Nov 2008; Brent Baude <ranger@gentoo.org> mysql-5.0.70.ebuild:
   Marking mysql-5.0.70 ppc64 for bug 246652

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.70.ebuild,v 1.11 2008/11/25 22:43:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.70.ebuild,v 1.12 2008/11/29 02:32:17 robbat2 Exp $
 
 MY_EXTRAS_VER="20080601"
 SERVER_URI="http://mirror.provenscaling.com/mysql/enterprise/source/5.0/${P}.tar.gz"
@@ -20,6 +20,10 @@ EPATCH_EXCLUDE=''
 # and create your own mysql-extras tarball, looking at 000_index.txt
 
 src_test() {
+	# Bug #213475 - MySQL _will_ object strenously if your machine is named
+	# localhost. Also causes weird failures.
+	[[ "${HOSTNAME}" == "localhost" ]] && die "Your machine must NOT be named localhost"
+
 	emake check || die "make check failed"
 	if ! use "minimal" ; then
 		if [[ $UID -eq 0 ]]; then
