@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/htop
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.63 2008/11/24 10:20:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.64 2008/11/29 18:31:55 wschlich Exp $
+
+*htop-0.8.1-r1 (29 Nov 2008)
+
+  29 Nov 2008; Wolfram Schlich <wschlich@gentoo.org>
+  +files/htop-0.8.1-non-printable-char-filter.patch, metadata.xml,
+  +htop-0.8.1-r1.ebuild:
+  fix bug #245966
 
   24 Nov 2008; Raúl Porcel <armin76@gentoo.org> htop-0.8.1.ebuild:
   ia64/sparc/x86 stable
