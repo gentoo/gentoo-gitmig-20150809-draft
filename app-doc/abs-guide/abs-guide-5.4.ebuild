@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/abs-guide-5.4.ebuild,v 1.2 2008/11/27 23:48:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/abs-guide-5.4.ebuild,v 1.3 2008/11/29 17:14:19 dertobi123 Exp $
 
-KEYWORDS="~alpha ~amd64 hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~mips ppc ~sparc ~x86"
 
 DESCRIPTION="An advanced reference and a tutorial on bash shell scripting"
 HOMEPAGE="http://www.tldp.org/LDP/abs/html"
