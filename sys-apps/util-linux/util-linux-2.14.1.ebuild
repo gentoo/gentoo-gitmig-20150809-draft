@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.14.1.ebuild,v 1.4 2008/11/27 21:05:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.14.1.ebuild,v 1.5 2008/11/29 16:42:56 solar Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils
@@ -22,7 +22,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="crypt loop-aes nls old-linux selinux slang unicode"
+IUSE="crypt loop-aes nls old-linux selinux slang uclibc unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -46,6 +46,7 @@ src_unpack() {
 		use loop-aes && epatch "${WORKDIR}"/util-linux-ng-2.14.1-20081015.diff
 		epatch "${FILESDIR}"/${PN}-2.13.1-no-a.out.patch #221939
 	fi
+	use uclibc && sed -i -e s/versionsort/alphasort/g -e s/strverscmp.h/dirent.h/g mount/lomount.c
 }
 
 src_compile() {
