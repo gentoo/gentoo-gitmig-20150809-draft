@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.4.11.ebuild,v 1.1 2008/09/29 18:04:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.4.12.ebuild,v 1.1 2008/11/29 17:09:29 dertobi123 Exp $
 
 inherit confutils
 
@@ -38,4 +38,16 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" fullinstall || die "emake install failed"
+}
+
+pkg_postinst() {
+	elog "To include the pnp webinterface into your Nagios setup you could use"
+	elog "an Alias in you Apache configuration as follows:"
+
+	elog "\tAlias /nagios/pnp       /usr/share/pnp/"
+	elog "\t<Directory "/usr/share/pnp">"
+	elog "\t\tAllowOverride AuthConfig"
+	elog "\t\tOrder allow,deny"
+	elog "\t\tAllow from all"
+	elog "\t</Directory>"
 }
