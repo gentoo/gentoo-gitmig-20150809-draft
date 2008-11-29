@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mecab
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.54 2008/11/28 21:37:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.55 2008/11/29 18:18:25 dertobi123 Exp $
+
+  29 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  mecab-0.97-r1.ebuild:
+  ppc stable, bug #245176
 
   28 Nov 2008; Markus Meier <maekke@gentoo.org> mecab-0.97-r1.ebuild:
   amd64/x86 stable, bug #245176
