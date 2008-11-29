@@ -1,0 +1,14 @@
+diff -ur Zim-0.27.orig/Build.PL Zim-0.27/Build.PL
+--- Zim-0.27.orig/Build.PL	2008-11-12 22:02:21.000000000 +0200
++++ Zim-0.27/Build.PL	2008-11-29 22:31:42.000000000 +0200
+@@ -202,8 +202,8 @@
+ 	my $mimedir = File::Spec->catdir($sharedir, 'mime');
+ 	my $icon = File::Spec->catfile($sharedir, 'pixmaps', 'zim.png');
+ 	for (
+-		['update-desktop-database'],
+-		['update-mime-database', $mimedir],
++	#	['update-desktop-database'],
++	#	['update-mime-database', $mimedir],
+ 	#	[qw{xdg-icon-resource install --context apps --size 64},
+ 	#		$icon],
+ 		[qw{xdg-icon-resource install --context mimetypes --size 64},
