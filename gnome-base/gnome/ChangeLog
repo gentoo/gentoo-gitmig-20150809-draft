@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.349 2008/11/13 19:38:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.350 2008/11/29 23:11:57 eva Exp $
+
+  29 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org> -gnome-2.22.0.ebuild,
+  -gnome-2.22.1.ebuild:
+  Clean up old revisions.
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> gnome-2.22.3.ebuild:
   Marking gnome-2.22.3 ppc64 stable for bug 236971
