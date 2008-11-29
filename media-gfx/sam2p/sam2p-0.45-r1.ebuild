@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.45-r1.ebuild,v 1.10 2008/11/14 09:15:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/sam2p-0.45-r1.ebuild,v 1.11 2008/11/29 16:05:26 dertobi123 Exp $
 
 inherit toolchain-funcs eutils autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.inf.bme.hu/~pts/sam2p/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="examples gif"
 DEPEND="dev-lang/perl"
 RDEPEND="virtual/libc"
