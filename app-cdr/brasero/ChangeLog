@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.55 2008/11/26 16:38:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.56 2008/11/29 23:25:57 loki_val Exp $
+
+  29 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> brasero-0.8.3.ebuild:
+  Fix bug 249297, thanks to leio for giving me The Talk about
+  DISABLE_DEPRECATED
 
   26 Nov 2008; Brent Baude <ranger@gentoo.org> brasero-0.8.2.ebuild:
   stable ppc64, bug 245273
