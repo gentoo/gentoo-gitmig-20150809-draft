@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<herd>graphics</herd>
+<use>
+	<flag name="bonjour">Adds Bonjour/Zeroconf support.</flag>
+</use>
 </pkgmetadata>

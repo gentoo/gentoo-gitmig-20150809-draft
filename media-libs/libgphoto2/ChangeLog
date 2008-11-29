@@ -1,6 +1,19 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.136 2008/10/08 20:50:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.137 2008/11/29 21:50:48 eva Exp $
+
+*libgphoto2-2.4.3 (29 Nov 2008)
+
+  29 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/libgphoto2-2.1.2-norpm.patch,
+  -files/libgphoto2-2.2.0-includes.patch,
+  -files/libgphoto2-2.2.1-backported-udev-fixes.diff,
+  -files/libgphoto-2.2.1-new-dbus-api.patch,
+  -files/libgphoto2-2.2.1-ngettext.patch, -files/libgphoto2-2.3.1-rpm.patch,
+  -files/libgphoto2-2.3.1-udev-rules-fix3.diff,
+  +files/libgphoto2-2.4.3-automagic.patch, metadata.xml,
+  +libgphoto2-2.4.3.ebuild:
+  Bump to 2.4.3, fix automagic dependencies. Clean up old patches.
 
   08 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
   libgphoto2-2.4.2.ebuild:
