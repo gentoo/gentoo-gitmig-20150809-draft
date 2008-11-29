@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.45 2008/11/21 17:21:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.46 2008/11/29 16:33:52 matsuu Exp $
+
+*awesome-3.1_rc4 (29 Nov 2008)
+
+  29 Nov 2008; MATSUU Takuto <matsuu@gentoo.org> -awesome-3.1_rc2.ebuild,
+  +awesome-3.1_rc4.ebuild:
+  Version bumped. Added x11-misc/habak to RDEPEND.
 
 *awesome-3.1_rc3 (21 Nov 2008)
 

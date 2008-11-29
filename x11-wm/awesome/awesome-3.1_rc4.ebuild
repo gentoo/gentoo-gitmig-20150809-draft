@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.1_rc2.ebuild,v 1.1 2008/11/15 00:49:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.1_rc4.ebuild,v 1.1 2008/11/29 16:33:52 matsuu Exp $
 
 EAPI=1
 MY_P="${P/_/-}"
@@ -51,6 +51,7 @@ RDEPEND="${RDEPEND}
 	)
 	|| (
 		x11-terms/eterm
+		x11-misc/habak
 		x11-wm/windowmaker
 		media-gfx/feh
 		x11-misc/hsetroot
