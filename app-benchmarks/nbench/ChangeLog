@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/nbench
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/ChangeLog,v 1.19 2008/11/29 16:12:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/ChangeLog,v 1.20 2008/11/29 17:39:28 armin76 Exp $
+
+  29 Nov 2008; Raúl Porcel <armin76@gentoo.org> nbench-2.2.3.ebuild:
+  alpha/sparc/x86 stable wrt #249105
 
   29 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org> nbench-2.2.3.ebuild:
   ppc stable, bug #249105
