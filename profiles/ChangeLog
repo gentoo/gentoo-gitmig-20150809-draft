@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2098 2008/11/28 21:49:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2099 2008/11/29 19:20:02 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org> desc/cameras.desc:
+  add description for a new kind of camera.
 
   28 Nov 2008; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   p.masked bluez and bluez-gnome-1.8
