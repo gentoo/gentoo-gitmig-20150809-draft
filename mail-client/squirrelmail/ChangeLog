@@ -1,6 +1,19 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.125 2008/11/02 06:08:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.126 2008/11/29 16:40:19 dertobi123 Exp $
+
+  29 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  -files/squirrelmail-1.5.1-CVE-2006-4019.patch,
+  -files/squirrelmail-1.5.1-CVE-2006-6142-draft_composesess.patch,
+  -files/squirrelmail-1.5.1-CVE-2006-6142-mailto.patch,
+  -files/squirrelmail-1.5.1-CVE-2006-6142-mime.patch,
+  -files/squirrelmail-1.5.1-CVE-2007-1262.patch,
+  -files/squirrelmail-1.5.1-ie-mime.patch,
+  -files/squirrelmail-1.5.1-sqimap_get_message.patch,
+  -files/squirrelmail-gpg-2.1-CVE-2005-1924.patch,
+  -squirrelmail-1.4.10a-r2.ebuild, -squirrelmail-1.4.13-r1.ebuild,
+  -squirrelmail-1.4.15.ebuild, -squirrelmail-1.5.1-r7.ebuild:
+  Cleanup and remove big files from  (#248980)
 
   02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   squirrelmail-1.4.10a-r2.ebuild, squirrelmail-1.4.13-r1.ebuild,
