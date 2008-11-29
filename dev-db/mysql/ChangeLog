@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.474 2008/11/29 04:41:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.475 2008/11/29 12:03:59 robbat2 Exp $
+
+*mysql-5.0.72-r1 (29 Nov 2008)
+*mysql-5.0.70-r1 (29 Nov 2008)
+
+  29 Nov 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +mysql-5.0.70-r1.ebuild, +mysql-5.0.72-r1.ebuild:
+  Bump to add security fixes for bug #240407 (MySQL #27884), #229329 (MySQL
+  #16470).
 
 *mysql-5.0.72 (29 Nov 2008)
 
