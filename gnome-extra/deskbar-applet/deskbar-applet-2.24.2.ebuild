@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.24.2.ebuild,v 1.1 2008/11/24 20:47:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.24.2.ebuild,v 1.2 2008/11/29 20:17:27 eva Exp $
 
 inherit autotools eutils gnome2 python
 
@@ -53,6 +53,9 @@ src_unpack() {
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
+
+	# needed to build on a libtool-1 system, bug #243822
+	rm m4/lt* m4/libtool.m4 ltmain.sh
 
 	AT_M4DIR="m4" eautoreconf
 }
