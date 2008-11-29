@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.473 2008/11/29 02:32:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.474 2008/11/29 04:41:37 robbat2 Exp $
+
+*mysql-5.0.72 (29 Nov 2008)
+
+  29 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.0.72.ebuild:
+  Version bump, but -r1 to follow shortly with patches, just here for
+  debugging.
 
   29 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> mysql-5.0.70.ebuild:
   Move the hostname==localhost check from pkg_setup to pkg_config and
