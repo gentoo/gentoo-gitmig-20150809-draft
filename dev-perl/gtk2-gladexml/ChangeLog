@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gtk2-gladexml
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.38 2008/09/22 16:03:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.39 2008/11/29 12:13:56 ssuominen Exp $
+
+  29 Nov 2008; <ssuominen@gentoo.org> gtk2-gladexml-1.006.ebuild:
+  Move extutils-pkgconfig to DEPEND wrt #223075.
 
   22 Sep 2008; Torsten Veller <tove@gentoo.org> gtk2-gladexml-1.007.ebuild:
   Fix LICENSE

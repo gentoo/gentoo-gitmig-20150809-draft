@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-gconf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.27 2008/09/21 06:23:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.28 2008/11/29 12:21:10 ssuominen Exp $
+
+  29 Nov 2008; <ssuominen@gentoo.org> gnome2-gconf-1.043.ebuild:
+  Move extutils-pkgconfig to DEPEND wrt #223075.
 
 *gnome2-gconf-1.044 (21 Sep 2008)
 
