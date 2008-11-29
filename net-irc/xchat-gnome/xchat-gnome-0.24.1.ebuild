@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.24.1.ebuild,v 1.2 2008/11/21 22:00:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.24.1.ebuild,v 1.3 2008/11/29 22:49:52 eva Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils toolchain-funcs
 
 DESCRIPTION="GNOME frontend for the popular X-Chat IRC client"
 HOMEPAGE="http://xchat-gnome.navi.cx/"
@@ -38,6 +38,13 @@ DEPEND="${RDEPEND}
 # gnome-base/gnome-common is temporarily needed for re-creating configure
 
 pkg_setup() {
+	if [[ $(gcc-major-version) -lt 4 || (
+		$(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 1 || (
+			$(gcc-major-version) -eq 4 && $(gcc-minor-version) -eq 1 && $(gcc-micro-version) -lt 3 ) ) ]]; then
+			ewarn "${P} requires >=sys-devel/gcc-4.1.3 to compile"
+			die "Please select >=sys-devel/gcc-4.1.3"
+	fi
+
 	if use sound && ! built_with_use media-libs/libcanberra gtk; then
 		eerror "You need to rebuild media-libs/libcanberra with gtk support."
 		die "Rebuild media-libs/libcanberra with USE='gtk'"

@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.40 2008/11/21 22:00:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.41 2008/11/29 22:49:52 eva Exp $
+
+  29 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  xchat-gnome-0.24.1.ebuild:
+  Include a check for a recent enough gcc, bug #246990.
 
   21 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -files/0.17-segfault-fix.patch,
