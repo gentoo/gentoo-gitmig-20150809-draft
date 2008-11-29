@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1-r1.ebuild,v 1.3 2008/11/24 20:39:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1-r1.ebuild,v 1.4 2008/11/29 21:24:06 josejx Exp $
 
 inherit toolchain-funcs pam
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc ~x86"
 IUSE="pam"
 
 DEPEND="x11-proto/xproto
