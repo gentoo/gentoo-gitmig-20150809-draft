@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/urlgrabber
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.16 2008/05/13 12:47:00 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.17 2008/11/29 18:37:21 dertobi123 Exp $
+
+  29 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  urlgrabber-3.1.0.ebuild:
+  ppc stable, bug #est
 
 *urlgrabber-3.1.0 (13 May 2008)
 
