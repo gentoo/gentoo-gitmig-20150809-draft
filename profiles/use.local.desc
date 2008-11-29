@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4038 2008/11/29 21:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4039 2008/11/29 22:07:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1221,6 +1221,7 @@ media-libs/libcanberra:gtk - Enables building of gtk+ helper library, gtk+ runti
 media-libs/libcanberra:pulseaudio - Enables PulseAudio sound driver that should be able to support positional event sounds. This is the preferred choice for best sound events experience and picked by default if compiled in and possible to use at runtime.
 media-libs/libdc1394:juju - Use the new juju firewire stack in the Linux kernel
 media-libs/libggi:vis - Enables sparc vis support for libggi
+media-libs/libgphoto2:bonjour - Adds Bonjour/Zeroconf support.
 media-libs/libifp:module - Build kernel module for non-root usage
 media-libs/libsdl:custom-cflags - Allow users to use any CFLAGS they like completely (at their own risk)
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
