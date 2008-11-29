@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.2.ebuild,v 1.4 2008/11/29 12:23:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.3.ebuild,v 1.1 2008/11/29 12:23:19 eva Exp $
 
 inherit eutils gnome2 multilib python
 
