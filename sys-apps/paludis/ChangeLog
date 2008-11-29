@@ -1,11 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.110 2008/11/29 18:19:48 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.111 2008/11/29 18:54:09 gentoofan23 Exp $
 
   29 Nov 2008; Thomas Anderson <gentoofan23@gentoo.org>
   paludis-0.32.0_alpha1.ebuild:
   Remove ChangeLog from dodoc, as it vanished in this release. Reported by
-  Petteri Raty <betelgeuse@gentoo.org>
+  Petteri Räty <betelgeuse@gentoo.org>
 
   26 Nov 2008; Thomas Anderson <gentoofan23@gentoo.org>
   -paludis-0.26.2.ebuild, -paludis-0.28.0.ebuild, -paludis-0.28.1.ebuild,
