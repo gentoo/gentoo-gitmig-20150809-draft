@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.3 2008/10/26 20:05:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.4 2008/11/29 21:02:33 vapier Exp $
 
 ESVN_REPO_URI="http://svn.berlios.de/svnroot/repos/openocd/trunk"
 inherit eutils subversion autotools multilib
@@ -12,11 +12,12 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="ft2232 ftdi parport presto"
+IUSE="ft2232 ftdi parport presto usb"
 RESTRICT="strip" # includes non-native binaries
 
 # libftd2xx is the default because it is reported to work better.
-DEPEND="presto? ( dev-embedded/libftd2xx )
+DEPEND="usb? ( dev-libs/libusb )
+	presto? ( dev-embedded/libftd2xx )
 	ft2232? ( || ( ftdi? ( dev-embedded/libftdi ) dev-embedded/libftd2xx ) )"
 
 pkg_setup() {
@@ -49,8 +50,8 @@ src_compile() {
 		--enable-ep93xx \
 		--enable-at91rm9200 \
 		--enable-gw16012 \
-		--enable-usbprog \
 		--enable-oocd_trace \
+		$(use_enable usb usbprog) \
 		$(use_enable parport parport_giveio) \
 		$(use_enable presto presto_ftd2xx) \
 		$(use ft2232 && use_enable ftdi ft2232_libftdi) \
