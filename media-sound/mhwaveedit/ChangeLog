@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mhwaveedit
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.36 2008/11/26 10:05:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.37 2008/11/29 13:08:44 coldwind Exp $
+
+  29 Nov 2008; Santiago M. Mola <coldwind@gentoo.org>
+  mhwaveedit-1.4.15-r1.ebuild:
+  amd64 stable wrt bug #248854.
 
   26 Nov 2008; Raúl Porcel <armin76@gentoo.org>
   mhwaveedit-1.4.15-r1.ebuild:
