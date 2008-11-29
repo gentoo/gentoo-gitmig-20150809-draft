@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.19.1-r1.ebuild,v 1.1 2008/11/24 12:44:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.19.1-r1.ebuild,v 1.2 2008/11/29 22:04:17 eva Exp $
 
 G_PY_PN="gnome-python-extras"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples"
 
-RDEPEND=">=dev-libs/gdl-0.6.1"
+RDEPEND=">=dev-libs/gdl-2.24.0"
 DEPEND="${RDEPEND}"
 
 EXAMPLES="examples/gdl/*"
