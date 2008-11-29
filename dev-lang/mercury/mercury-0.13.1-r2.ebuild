@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r2.ebuild,v 1.4 2008/11/21 22:51:21 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.1-r2.ebuild,v 1.5 2008/11/29 07:24:30 keri Exp $
 
 inherit eutils flag-o-matic
 
@@ -91,6 +91,7 @@ src_test() {
 	TERM="" \
 	WORKSPACE="${TWS}" \
 	MERCURY_COMPILER="${TWS}"/compiler/mercury_compile \
+	MERCURY_CONFIG_DIR="${TWS}" \
 	MMAKE_DIR="${TWS}"/scripts \
 	MERCURY_DEBUGGER_INIT="${TESTDIR}"/mdbrc \
 	MERCURY_SUPPRESS_STACK_TRACE=yes \
