@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-gtkhtml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.44 2008/11/28 23:19:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.45 2008/11/29 18:30:12 dertobi123 Exp $
+
+  29 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  claws-mail-gtkhtml-0.21.ebuild:
+  ppc stable, bug #248760
 
   28 Nov 2008; Markus Meier <maekke@gentoo.org>
   claws-mail-gtkhtml-0.21.ebuild:
