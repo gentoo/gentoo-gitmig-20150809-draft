@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/libthrowable-1.1.0.ebuild,v 1.7 2008/11/25 17:52:58 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/libthrowable-1.1.0.ebuild,v 1.8 2008/11/29 17:37:45 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ~ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="threads examples"
 
 RDEPEND=""

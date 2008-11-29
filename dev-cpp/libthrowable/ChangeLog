@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libthrowable
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.17 2008/11/25 17:52:58 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libthrowable/ChangeLog,v 1.18 2008/11/29 17:37:45 dertobi123 Exp $
+
+  29 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  libthrowable-1.1.0.ebuild:
+  ppc stable, bug #247464
 
   25 Nov 2008; Ferris McCormick <fmccor@gentoo.org>
   libthrowable-1.1.0.ebuild:
