@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.24.2.ebuild,v 1.1 2008/11/24 20:45:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.24.2.ebuild,v 1.2 2008/11/29 20:10:49 eva Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -69,6 +69,9 @@ src_unpack() {
 	# disable pyc compiling
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
+
+	# needed to build on a libtool-1 system, bug #248788
+	rm m4/lt* m4/libtool.m4 ltmain.sh
 
 	eautoreconf
 }
