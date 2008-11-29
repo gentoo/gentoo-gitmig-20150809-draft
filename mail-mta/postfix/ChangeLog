@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.177 2008/09/03 19:47:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.178 2008/11/29 16:36:12 dertobi123 Exp $
+
+  29 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  -files/postfix-2.0.9-get-FQDN.patch,
+  -files/postfix-2.4.7-CVE-2008-2936.patch,
+  -files/postfix-2.4.7-CVE-2008-2937.patch,
+  -files/postfix-2.5.3-CVE-2008-2936.patch, -files/postfix.rc6.2.2.9,
+  -files/postfix-master.cf.patch, -postfix-2.4.6-r2.ebuild,
+  -postfix-2.4.7-r1.ebuild, -postfix-2.5.3-r1.ebuild:
+  Cleanup and remove big files from  (#248981)
 
   03 Sep 2008; Jeroen Roovers <jer@gentoo.org> postfix-2.5.5.ebuild:
   Stable for HPPA (bug #236453).
