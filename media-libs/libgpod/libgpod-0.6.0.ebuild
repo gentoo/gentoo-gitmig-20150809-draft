@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.11 2008/11/01 16:47:41 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.12 2008/11/30 16:38:47 bluebird Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gtkpod/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE="gtk python doc test hal"
 
 RDEPEND=">=dev-libs/glib-2.4
