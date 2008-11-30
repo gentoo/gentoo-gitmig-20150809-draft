@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9224 2008/11/28 21:49:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9225 2008/11/30 01:23:37 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -152,6 +152,11 @@ dev-dotnet/webkit-sharp
 =dev-dotnet/rsvg-sharp-2.24*
 =dev-dotnet/vte-sharp-2.24*
 =dev-dotnet/wnck-sharp-2.24*
+>=dev-dotnet/ikvm-0.36.0.11
+>=dev-util/monodevelop-1.9
+>=dev-util/monodevelop-java--1.9
+>=dev-util/monodevelop-database-1.9
+>=dev-util/monodevelop-boo-1.9
 
 # Jeremy Olexa <darkside@gentoo.org> (19 Nov 2008)
 # Stops playing at random intervals when HAL is used. Unmaintained upstream.
