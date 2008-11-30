@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdas/mpdas-0.2.2.ebuild,v 1.1 2008/11/24 00:14:10 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdas/mpdas-0.2.3-r1.ebuild,v 1.1 2008/11/30 11:40:56 ssuominen Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="An AudioScrobbler client for MPD written in C++"
 HOMEPAGE="http://50hz.ws/mpdas/"
@@ -16,12 +18,18 @@ RDEPEND="media-libs/libmpd
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+src_compile() {
+	tc-export CXX
+	emake CONFIG="/etc" || die "emake failed."
+}
+
 src_install() {
-	dobin ${PN} || die "dobin failed"
-	dodoc README
+	dobin ${PN} || die "dobin failed."
+	doman ${PN}.1
+	dodoc ChangeLog mpdasrc.example README
 }
 
 pkg_postinst() {
 	elog "For further configuration help consult the README in"
-	elog "/usr/share/doc/${PF}/"
+	elog "/usr/share/doc/${PF}."
 }
