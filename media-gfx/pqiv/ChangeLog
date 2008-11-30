@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pqiv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.14 2008/11/30 18:15:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.15 2008/11/30 18:37:27 ssuominen Exp $
+
+  30 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Add Phillip Berndt, upstream and Gentoo user to metadata.xml.
 
   30 Nov 2008; Markus Meier <maekke@gentoo.org>
   +files/pqiv-0.7.1-as-needed.patch, pqiv-0.7.1.ebuild:
