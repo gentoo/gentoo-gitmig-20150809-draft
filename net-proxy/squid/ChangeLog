@@ -1,6 +1,19 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.212 2008/11/13 00:40:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.213 2008/11/30 19:20:44 mrness Exp $
+
+*squid-3.0.10-r1 (30 Nov 2008)
+*squid-2.7.5-r1 (30 Nov 2008)
+
+  30 Nov 2008; Alin Năstac <mrness@gentoo.org>
+  -files/squid-2.7.3-gentoo.patch, -files/squid-3.0.9-gentoo.patch,
+  -files/squid-3.0.9-heimdal.patch, -files/squid-3.0.9-zph.patch,
+  files/squid.confd, files/squid.initd, files/squid.initd-logrotate,
+  metadata.xml, -squid-2.7.3.ebuild, squid-2.7.4-r2.ebuild,
+  -squid-2.7.5.ebuild, +squid-2.7.5-r1.ebuild, -squid-3.0.9.ebuild,
+  -squid-3.0.10.ebuild, +squid-3.0.10-r1.ebuild:
+  Remove obsolete versions. Remove qos USE flag. Add epoll and kqueue USE
+  flags (#247488). Add init script support for Kerberos keytab file (#242060).
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> squid-2.7.4-r2.ebuild:
   stable ppc64, bug 242386

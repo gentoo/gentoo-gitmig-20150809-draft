@@ -4,15 +4,15 @@
 <herd>net-proxy</herd>
 <longdescription>A full-featured web proxy cache</longdescription>
 <use>
+	<flag name='epoll'>Enables Linux epoll() support</flag>
 	<flag name='icap-client'>Adds ICAP client support</flag>
 	<flag name='ipf-transparent'>Adds transparent proxy support for systems
 		using IP-Filter (only for *bsd)</flag>
 	<flag name='logrotate'>Use <pkg>app-admin/logrotate</pkg> for rotating
 		logs</flag>
+	<flag name='kqueue'>Enables *BSD kqueue() support</flag>
 	<flag name='pf-transparent'>Adds transparent proxy support for systems using
 		PF (only for *bsd)</flag>
-	<flag name='qos'>Adds tcp_outgoing_priority for setting the Qdisc
-		priority</flag>
 	<flag name='zero-penalty-hit'>Add Zero Penalty Hit patch
 		(http://zph.bratcheda.org)</flag>
 </use>
