@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9225 2008/11/30 01:23:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9226 2008/11/30 02:02:40 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -154,7 +154,7 @@ dev-dotnet/webkit-sharp
 =dev-dotnet/wnck-sharp-2.24*
 >=dev-dotnet/ikvm-0.36.0.11
 >=dev-util/monodevelop-1.9
->=dev-util/monodevelop-java--1.9
+>=dev-util/monodevelop-java-1.9
 >=dev-util/monodevelop-database-1.9
 >=dev-util/monodevelop-boo-1.9
 
