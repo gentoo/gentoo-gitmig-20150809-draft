@@ -1,12 +1,21 @@
 # ChangeLog for app-emulation/uade
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.52 2008/11/01 18:37:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.53 2008/11/30 19:32:10 spock Exp $
+
+  30 Nov 2008; Michał Januszewski <spock@gentoo.org>
+  +files/uade-2.12-asneeded.patch, -uade-2.02.ebuild, -uade-2.03.ebuild,
+  -uade-2.07.ebuild, -uade-2.09.ebuild, uade-2.12.ebuild:
+  Add a fix for bug #249239. Remove old ebuilds.
 
   01 Nov 2008; nixnut <nixnut@gentoo.org> uade-2.12.ebuild:
   Stable on ppc wrt bug 242592
 
   19 Oct 2008; Markus Meier <maekke@gentoo.org> uade-2.12.ebuild:
   amd64/x86 stable, bug #242592
+
+  30 Nov 2008; Michał Januszewski <spock@gentoo.org>
+  +files/uade-2.12-asneeded.patch, uade-2.12.ebuild:
+  Add a fix for bug #249239.
 
 *uade-2.12 (07 Sep 2008)
 

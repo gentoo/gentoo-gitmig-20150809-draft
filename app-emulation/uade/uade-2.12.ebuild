@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.12.ebuild,v 1.3 2008/11/01 18:37:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.12.ebuild,v 1.4 2008/11/30 19:32:10 spock Exp $
 
 inherit eutils
 
@@ -18,6 +18,12 @@ RDEPEND="media-libs/libao
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/uade-2.12-asneeded.patch
+}
 
 src_compile() {
 	./configure \
