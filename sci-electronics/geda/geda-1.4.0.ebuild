@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.4.0.ebuild,v 1.6 2008/03/22 09:56:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.4.0.ebuild,v 1.7 2008/11/30 21:05:46 calchan Exp $
 
 inherit eutils versionator
 
@@ -37,6 +37,16 @@ pkg_setup() {
 	else
 		! built_with_use sci-libs/libgeda gd || die "sci-libs/libgeda must be compiled with USE=-gd"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	# Fix security bug #247538 (CVE-2008-5148), thanks to Chitlesh Goorah
+	sed -i \
+		-e 's:TMP=/tmp/\$\$:TMP=$(mktemp):' \
+		-e 's:>/tmp/\$\$:>${TMP}:' \
+		"${S}"/geda-gnetlist-${PV}/scripts/sch2eaglepos.sh \
+		|| die "sed failed"
 }
 
 src_compile() {
