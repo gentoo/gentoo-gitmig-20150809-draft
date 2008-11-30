@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.63 2008/11/17 21:50:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.64 2008/11/30 17:36:42 rbu Exp $
+
+  30 Nov 2008; Robert Buchholz <rbu@gentoo.org>
+  files/mpeg4ip-1.5.0.1-x264.patch:
+  Fix wrong path levels in patch, bug #247826
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/mpeg4ip-1.5.0.1-x264.patch:
