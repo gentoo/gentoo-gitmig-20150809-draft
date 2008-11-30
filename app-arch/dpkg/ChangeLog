@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.77 2008/11/29 17:53:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.78 2008/11/30 16:58:03 maekke Exp $
+
+  30 Nov 2008; Markus Meier <maekke@gentoo.org> dpkg-1.14.22.ebuild:
+  amd64 stable, bug #249063
 
   29 Nov 2008; Raúl Porcel <armin76@gentoo.org> dpkg-1.14.22.ebuild:
   alpha/arm/ia64/sparc/x86 stable wrt #249063
