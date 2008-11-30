@@ -1,0 +1,17 @@
+--- elisp-orig/elisp.texi
++++ elisp/elisp.texi
+@@ -1,8 +1,13 @@
+ \input texinfo  @c -*-texinfo-*-
+ @c %**start of header
+-@setfilename elisp
++@setfilename elisp18.info
+ @settitle GNU Emacs Lisp Reference Manual
+ @c %**end of header
+ 
++@dircategory Emacs
++@direntry
++* Elisp 18: (elisp18).	The Emacs Lisp Reference Manual for Emacs 18.
++@end direntry
++
+ @c ================================================================
+ @c THIS file has the new style title page commands.

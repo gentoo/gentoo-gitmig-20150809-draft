@@ -1,0 +1,153 @@
+--- elisp-orig/display.texi
++++ elisp/display.texi
+@@ -484,5 +484,5 @@
+ 
+ @quotation
+-@strong{Note:} in version 18, this function is named
++@strong{Please note:} in version 18, this function is named
+ @code{blink-paren-hook}, but since it is not called with the standard
+ convention for hooks, it is being renamed to @code{blink-paren-function}
+--- elisp-orig/elisp.texi
++++ elisp/elisp.texi
+@@ -112,5 +112,5 @@
+ @page
+ 
+-@node Top, Introduction, (dir), (dir)
++@node Top, License, (dir), (dir)
+ 
+ @ifinfo
+--- elisp-orig/files.texi
++++ elisp/files.texi
+@@ -189,6 +189,6 @@
+ appended to get an unused name.  See also @ref{Creating Buffers}.
+ 
+-@strong{Note:} @code{create-file-buffer} does @emph{not} associate the
+-new buffer with a file and does not make it the current buffer.
++@strong{Please note:} @code{create-file-buffer} does @emph{not} associate
++the new buffer with a file and does not make it the current buffer.
+ 
+ @example
+--- elisp-orig/help.texi
++++ elisp/help.texi
+@@ -252,6 +252,6 @@
+ @end table
+ 
+-@strong{Note:} each @samp{\} must be doubled when written in a string in
+-Emacs Lisp.
++@strong{Please note:} each @samp{\} must be doubled when written in a
++string in Emacs Lisp.
+ 
+   Here are examples of the special substrings:
+--- elisp-orig/hooks.texi
++++ elisp/hooks.texi
+@@ -12,5 +12,5 @@
+ 
+ @quotation
+-@strong{Note:} in version 19, @code{blink-paren-hook} and
++@strong{Please note:} in version 19, @code{blink-paren-hook} and
+ @code{auto-fill-hook} are renamed to @code{blink-paren-function} and
+ @code{auto-fill-function} respectively, since they are not called by the
+--- elisp-orig/markers.texi
++++ elisp/markers.texi
+@@ -364,6 +364,6 @@
+ The old value of the mark is @emph{not} pushed onto the mark ring.
+ 
+-  @strong{Note:} use this function only if you want the user to see that
+-the mark has moved, and you want the previous mark position to be lost.
++  @strong{Please note:} use this function only if you want the user to see
++that the mark has moved, and you want the previous mark position to be lost.
+ Normally, when a new mark is set, the old one should go on the
+ @code{mark-ring}, which is why most applications should use
+--- elisp-orig/os.texi
++++ elisp/os.texi
+@@ -90,5 +90,5 @@
+ @end defopt
+ 
+-@node Init File, Terminal-Specific, Start-Up Summary, Starting Up
++@node Init File, Terminal-Specific, Start-up Summary, Starting Up
+ @subsection The Init File: @file{.emacs}
+ @cindex init file
+@@ -688,5 +688,5 @@
+ are swapped and the characters @kbd{C-q} and @kbd{C-^} are swapped.
+ After executing this function, typing @kbd{C-\} has all the usual
+-effects of typing @kbd{C-s}, and vice versa.  (@xref{Flow Control} for
++effects of typing @kbd{C-s}, and vice versa.  (@xref{Flow Control}, for
+ more information on this subject.)
+ 
+@@ -743,6 +743,6 @@
+ you will have to start Emacs afresh to make this take effect.
+ 
+-@strong{Note:} In version 19, @code{baud-rate} is a variable so that you
+-can change it conveniently within Emacs.
++@strong{Please note:} In version 19, @code{baud-rate} is a variable so
++that you can change it conveniently within Emacs.
+ @end defun
+ 
+--- elisp-orig/positions.texi
++++ elisp/positions.texi
+@@ -75,5 +75,5 @@
+ current buffer.  This is @code{(1+ (buffer-size))}, unless narrowing is
+ in effect, in which case it is the position of the end of the region
+-that you narrowed to.  (@xref{Narrowing}).
++that you narrowed to.  (@xref{Narrowing}.)
+ @end defun
+ 
+@@ -745,5 +745,5 @@
+ last of @var{forms}, or @code{nil} if no forms were given.
+ 
+-@strong{Note:} it is easy to make a mistake when using
++@strong{Caution:} it is easy to make a mistake when using
+ @code{save-restriction}.  Read the entire description here before you
+ try it.
+--- elisp-orig/processes.texi
++++ elisp/processes.texi
+@@ -90,8 +90,8 @@
+ supplied to @var{program} as separate command line arguments.  Wildcard
+ characters and other shell constructs are not allowed in these strings,
+-since they are passed directly to the specified program.  @strong{Note:}
+-the argument @var{program} contains only the name of the program; it may
+-not contain any command-line arguments.  Such arguments must be provided
+-via @var{args}.
++since they are passed directly to the specified program.
++@strong{Please note:} the argument @var{program} contains only the name
++of the program; it may not contain any command-line arguments.  Such
++arguments must be provided via @var{args}.
+ 
+   The subprocess gets its current directory from the value of
+--- elisp-orig/searching.texi
++++ elisp/searching.texi
+@@ -292,10 +292,10 @@
+ @end table
+ 
+-@strong{Note:} for historical compatibility, special characters are treated as
+-ordinary ones if they are in contexts where their special meanings make no
+-sense.  For example, @samp{*foo} treats @samp{*} as ordinary since there is
+-no preceding expression on which the @samp{*} can act.  It is poor practice
+-to depend on this behavior; better to quote the special character anyway,
+-regardless of where it appears.@refill
++@strong{Please note:} for historical compatibility, special characters
++are treated as ordinary ones if they are in contexts where their special
++meanings make no sense.  For example, @samp{*foo} treats @samp{*} as
++ordinary since there is no preceding expression on which the @samp{*}
++can act.  It is poor practice to depend on this behavior; better to quote
++the special character anyway, regardless of where it appears.@refill
+ 
+ For the most part, @samp{\} followed by any character matches only
+--- elisp-orig/strings.texi
++++ elisp/strings.texi
+@@ -621,5 +621,5 @@
+   The definition of a word is any sequence of consecutive characters
+ that are assigned to the word constituent category in the current syntax
+-table (@xref{Syntax Class Table}).
++table (@pxref{Syntax Class Table}).
+ 
+   When the argument to @code{capitalize} is a character, @code{capitalize}
+--- elisp-orig/variables.texi
++++ elisp/variables.texi
+@@ -425,5 +425,5 @@
+ of @var{symbol} to the result, provided @var{value} is given.
+ 
+-@strong{Note:} don't use @code{defconst} for user option variables in
++Don't use @code{defconst} for user option variables in
+ libraries that are not normally loaded.  The user should be able to
+ specify a value for such a variable in the @file{.emacs} file, so that

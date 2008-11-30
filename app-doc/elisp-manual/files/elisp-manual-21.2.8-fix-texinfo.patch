@@ -1,0 +1,83 @@
+Change all occurences of @strong{Note:} to avoid makeinfo warnings and
+spurious cross references. This is a backport of the following change:
+
+2003-09-26  Richard M. Stallman  <rms@gnu.org>
+
+	* buffers.texi, commands.texi, debugging.texi, eval.texi:
+	* loading.texi, minibuf.texi, text.texi, variables.texi:
+	Avoid @strong{Note:}.
+
+--- elisp-orig/buffers.texi
++++ elisp/buffers.texi
+@@ -107,5 +107,5 @@
+ that, you must use the functions described in @ref{Displaying Buffers}.
+ 
+-  @strong{Note:} Lisp functions that change to a different current buffer
++  @strong{Warning:} Lisp functions that change to a different current buffer
+ should not depend on the command loop to set it back afterwards.
+ Editing commands written in Emacs Lisp can be called from other programs
+--- elisp-orig/commands.texi
++++ elisp/commands.texi
+@@ -2018,5 +2018,5 @@
+ function.
+ 
+-@strong{Note:} Don't bind this variable with @code{let}.  It is often
++@strong{Warning:} Don't bind this variable with @code{let}.  It is often
+ buffer-local, and if you bind it around reading input (which is exactly
+ when you @emph{would} bind it), switching buffers asynchronously while
+--- elisp-orig/debugging.texi
++++ elisp/debugging.texi
+@@ -216,5 +216,5 @@
+ @code{debug-on-entry} always returns @var{function-name}.
+ 
+-@strong{Note:} if you redefine a function after using
++@strong{Warning:} if you redefine a function after using
+ @code{debug-on-entry} on it, the code to enter the debugger is discarded
+ by the redefinition.  In effect, redefining the function cancels
+--- elisp-orig/eval.texi
++++ elisp/eval.texi
+@@ -589,5 +589,5 @@
+ values.  Loading a file also does evaluation (@pxref{Loading}).
+ 
+-  @strong{Note:} it is generally cleaner and more flexible to store a
++  It is generally cleaner and more flexible to store a
+ function in a data structure, and call it with @code{funcall} or
+ @code{apply}, than to store an expression in the data structure and
+--- elisp-orig/loading.texi
++++ elisp/loading.texi
+@@ -149,5 +149,5 @@
+ functions should use @code{read}.
+ 
+-@strong{Note:} Instead of using this variable, it is cleaner to use
++Instead of using this variable, it is cleaner to use
+ another, newer feature: to pass the function as the @var{read-function}
+ argument to @code{eval-region}.  @xref{Eval}.
+--- elisp-orig/minibuf.texi
++++ elisp/minibuf.texi
+@@ -1064,6 +1064,6 @@
+ case, point goes at the beginning of @var{initial}.  The default for
+ @var{initial} is @code{nil}---don't insert any file name.  To see what
+-@var{initial} does, try the command @kbd{C-x C-v}.  @strong{Note:} we
+-recommend using @var{default} rather than @var{initial} in most cases.
++@var{initial} does, try the command @kbd{C-x C-v}.  @strong{Please note:}
++we recommend using @var{default} rather than @var{initial} in most cases.
+ 
+ Here is an example: 
+--- elisp-orig/text.texi
++++ elisp/text.texi
+@@ -3694,5 +3694,5 @@
+ the body of a @code{combine-after-change-calls} form.
+ 
+-@strong{Note:} If the changes you combine occur in widely scattered
++@strong{Warning:} If the changes you combine occur in widely scattered
+ parts of the buffer, this will still work, but it is not advisable,
+ because it may lead to inefficient behavior for some change hook
+--- elisp-orig/variables.texi
++++ elisp/variables.texi
+@@ -1290,5 +1290,5 @@
+ Displays}.
+ 
+-@strong{Note:} Do not use @code{make-local-variable} for a hook
++@strong{Warning:} Do not use @code{make-local-variable} for a hook
+ variable.  Instead, use @code{make-local-hook}.  @xref{Hooks}.
+ @end deffn
