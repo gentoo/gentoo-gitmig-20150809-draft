@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jhead
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.98 2008/11/29 16:56:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/ChangeLog,v 1.99 2008/11/30 17:15:35 maekke Exp $
+
+  30 Nov 2008; Markus Meier <maekke@gentoo.org> jhead-2.84-r1.ebuild:
+  amd64 stable, bug #243238
 
   29 Nov 2008; Raúl Porcel <armin76@gentoo.org> jhead-2.84-r1.ebuild:
   alpha/ia64/sparc/x86 stable wrt #243238
