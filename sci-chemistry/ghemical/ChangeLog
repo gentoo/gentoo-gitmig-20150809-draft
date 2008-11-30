@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/ghemical
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.27 2008/11/27 19:53:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.28 2008/11/30 22:50:27 je_fro Exp $
+
+  30 Nov 2008; Jeff Gardner <je_fro@gentoo.org> +files/ghemical-gcc43.patch,
+  ghemical-2.98.ebuild:
+  Incorporating gcc4.3 fixes
 
 *ghemical-2.98 (27 Nov 2008)
 
