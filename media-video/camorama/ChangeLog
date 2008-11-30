@@ -1,6 +1,13 @@
 # ChangeLog for media-video/camorama
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.17 2008/01/23 19:53:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.18 2008/11/30 11:56:17 eva Exp $
+
+*camorama-0.19-r1 (30 Nov 2008)
+
+  30 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/camorama-0.19-gconf.patch, camorama-0.19.ebuild,
+  +camorama-0.19-r1.ebuild:
+  Bump to 0.19-r1, fix sandbox violation due to gconf, bug #243274.
 
   23 Jan 2008; Markus Meier <maekke@gentoo.org> camorama-0.19.ebuild:
   x86 stable, bug #207195
