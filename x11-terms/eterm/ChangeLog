@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.62 2008/08/21 22:24:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.63 2008/11/30 15:45:51 maekke Exp $
+
+  30 Nov 2008; Markus Meier <maekke@gentoo.org> eterm-0.9.5.ebuild:
+  amd64/x86 stable, bug #249332
 
   21 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
