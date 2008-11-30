@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.2.1.ebuild,v 1.2 2008/07/22 14:23:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.2.1.ebuild,v 1.3 2008/11/30 03:16:37 vapier Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam multilib
 
@@ -41,7 +41,7 @@ src_unpack() {
 	# Support OpenPAM #232586
 	epatch "${FILESDIR}"/${P}+openpam.patch
 
-	eautoreconf
+	eautoconf
 
 	elibtoolize
 	epunt_cxx
