@@ -1,0 +1,31 @@
+--- gentoolkit-0.2.4.2/src/equery/equery	2008-11-27 10:25:21.000000000 -0500
++++ gentoolkit-0.2.4.2/src/equery/equery	2008-11-27 10:29:09.000000000 -0500
+@@ -17,6 +17,7 @@
+ import re
+ import sys
+ import time
++from glob import glob
+ 
+ # portage (output module) and gentoolkit need special path modifications
+ sys.path.insert(0, "/usr/lib/gentoolkit/pym")
+@@ -529,6 +530,20 @@
+ 		except IOError:
+ 			print_warn(5, "Could not load USE flag descriptions from " + ppath(gentoolkit.settings["PORTDIR"] + "/profiles/use.desc"))
+ 
++		# Add USE_EXPANDED variables to usedesc hash -- Bug #238005
++		for descfile in glob(gentoolkit.settings["PORTDIR"]+"/profiles/desc/*.desc"):
++			try:
++				fd = open(descfile)
++				for line in fd.readlines():
++					if line[0] == "#":
++						continue
++					fields = [field.strip() for field in line.split(" - ", 1)]
++					if len(fields) == 2:
++						expanded_useflag = "%s_%s" % (descfile.split("/")[-1][0:-5], fields[0],)
++						usedesc[expanded_useflag] = fields[1]
++			except IOError:
++				print_warn(5, "Could not load USE flag descriptions from " + descfile)
++			
+ 		# Load local USE flag descriptions
+ 		try:
+ 			fd = open(gentoolkit.settings["PORTDIR"]+"/profiles/use.local.desc")

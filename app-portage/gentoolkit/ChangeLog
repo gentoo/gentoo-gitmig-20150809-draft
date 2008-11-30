@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.144 2008/10/03 13:19:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.145 2008/11/30 17:15:33 betelgeuse Exp $
+
+*gentoolkit-0.2.4.2-r1 (30 Nov 2008)
+
+  30 Nov 2008; Petteri Räty <betelgeuse@gentoo.org>
+  +files/equery-0.2.4.2_use_expanded.patch, +gentoolkit-0.2.4.2-r1.ebuild:
+  Add patch to read USE expanded variables from their desc files. Fixes bug
+  #238005. Thanks to Michael A. Smith <michael@smith-li.com>.
 
   03 Oct 2008; Alexis Ballier <aballier@gentoo.org>
   gentoolkit-0.2.4.2.ebuild:
@@ -586,6 +593,7 @@
   are no new bugs.
 
 *gentoolkit-0.2.0_pre10-r1 (31 Oct 2004)
+*gentoolkit-0.2.0_pre8-r1 (31 Oct 2004)
 
   31 Oct 2004; Marius Mauch <genone@gentoo.org>
   +files/qpkg-security-fix-68846.diff, +gentoolkit-0.2.0_pre10-r1.ebuild,
