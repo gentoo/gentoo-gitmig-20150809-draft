@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/exempi-2.0.2.ebuild,v 1.2 2008/10/22 22:37:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/exempi-2.0.2.ebuild,v 1.3 2008/11/30 02:52:00 leio Exp $
 
 inherit autotools eutils
 
@@ -16,9 +16,7 @@ IUSE="examples test"
 RDEPEND="dev-libs/expat
 	virtual/libiconv"
 DEPEND="${RDEPEND}
-	test? (
-		>=dev-libs/boost-1.33.0
-		dev-util/valgrind )"
+	test? ( >=dev-libs/boost-1.33.0 )"
 
 src_unpack() {
 	unpack ${A}
