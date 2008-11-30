@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.3.ebuild,v 1.3 2008/11/28 13:41:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.3.ebuild,v 1.4 2008/11/30 15:19:14 maekke Exp $
 
 NEED_PYTHON="2.5"
 WANT_AUTOCONF="latest"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gramps/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="reports"
 
 RDEPEND=">=dev-python/pygtk-2.10.0
