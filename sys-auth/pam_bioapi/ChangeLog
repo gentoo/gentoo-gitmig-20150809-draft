@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_bioapi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_bioapi/ChangeLog,v 1.6 2008/11/30 00:42:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_bioapi/ChangeLog,v 1.7 2008/11/30 16:16:29 maekke Exp $
+
+  30 Nov 2008; Markus Meier <maekke@gentoo.org> pam_bioapi-0.4.0.ebuild:
+  x86 stable, bug #249330
 
   30 Nov 2008; Mike Frysinger <vapier@gentoo.org>
   +files/pam_bioapi-0.4.0-headers.patch, pam_bioapi-0.4.0.ebuild:
