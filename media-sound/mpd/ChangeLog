@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.135 2008/11/14 11:53:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.136 2008/11/30 19:23:45 angelos Exp $
+
+*mpd-0.14_beta1 (30 Nov 2008)
+
+  30 Nov 2008; Christoph Mende <angelos@gentoo.org> +mpd-0.14_beta1.ebuild:
+  Version bump
 
   14 Nov 2008; Alexis Ballier <aballier@gentoo.org> mpd-0.14_alpha1.ebuild:
   fixup econf call (missing backslash)
