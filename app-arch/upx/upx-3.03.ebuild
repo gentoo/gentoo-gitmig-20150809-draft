@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/upx-3.03.ebuild,v 1.1 2008/04/28 16:47:12 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/upx-3.03.ebuild,v 1.2 2008/11/30 15:04:26 maekke Exp $
 
 DESCRIPTION="Ultimate Packer for eXecutables"
 HOMEPAGE="http://upx.sourceforge.net/"
@@ -12,7 +12,7 @@ SRC_URI="x86? ( http://upx.sourceforge.net/download/${P}-i386_linux.tar.bz2 )
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 RESTRICT="strip"
 
