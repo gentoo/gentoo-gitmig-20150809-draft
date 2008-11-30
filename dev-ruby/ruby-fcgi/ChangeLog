@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-fcgi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.22 2008/11/30 14:19:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ChangeLog,v 1.23 2008/11/30 14:25:15 graaff Exp $
+
+  30 Nov 2008; Hans de Graaff <graaff@gentoo.org> ruby-fcgi-0.8.7.ebuild:
+  Quote variable and mark stable for amd64 per bug 249386.
 
   30 Nov 2008; Hans de Graaff <graaff@gentoo.org> ruby-fcgi-0.8.6.ebuild:
   Ruby 1.6 is no longer supported, and ruby-fcgi is not ready yet for Ruby 1.9.
