@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkate
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.20 2008/11/14 16:32:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.21 2008/11/30 15:11:23 aballier Exp $
+
+*libkate-0.2.7 (30 Nov 2008)
+
+  30 Nov 2008; Alexis Ballier <aballier@gentoo.org> +libkate-0.2.7.ebuild:
+  version bump
 
 *libkate-0.2.6 (14 Nov 2008)
 
