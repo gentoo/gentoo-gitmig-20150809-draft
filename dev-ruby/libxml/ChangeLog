@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.18 2008/10/13 15:21:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.19 2008/11/30 11:52:40 flameeyes Exp $
+
+*libxml-0.9.5 (30 Nov 2008)
+
+  30 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libxml-0.9.5.ebuild:
+  Version bump; use the tarball rather than the gem so that the tests run
+  during src_test. Fix license, it's actually as-is rather than BSD.
 
 *libxml-0.8.3 (13 Oct 2008)
 
