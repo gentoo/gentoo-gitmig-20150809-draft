@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/qalculate-gtk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.27 2008/10/12 16:00:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/ChangeLog,v 1.28 2008/11/30 21:17:43 bluebird Exp $
+
+  30 Nov 2008; Friedrich Oslage <bluebird@gentoo.org>
+  qalculate-gtk-0.9.6-r1.ebuild:
+  Stable on sparc, bug #240516
 
   12 Oct 2008; nixnut <nixnut@gentoo.org> qalculate-gtk-0.9.6-r1.ebuild:
   Stable on ppc wrt bug 240516

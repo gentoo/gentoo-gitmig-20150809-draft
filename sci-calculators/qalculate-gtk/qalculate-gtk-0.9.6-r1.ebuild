@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.6-r1.ebuild,v 1.3 2008/10/12 16:00:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-gtk/qalculate-gtk-0.9.6-r1.ebuild,v 1.4 2008/11/30 21:17:43 bluebird Exp $
 
 inherit eutils autotools gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qalculate/${P}.tar.gz"
 
 SLOT="0"
 IUSE="gnome nls"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND="app-text/scrollkeeper
 	dev-lang/perl
