@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.46 2008/11/30 21:05:46 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.47 2008/11/30 21:24:05 calchan Exp $
+
+*geda-1.4.1 (30 Nov 2008)
+
+  30 Nov 2008; Denis Dupeyron <calchan@gentoo.org> +geda-1.4.1.ebuild:
+  Version bump, bug #249170.
 
   30 Nov 2008; Denis Dupeyron <calchan@gentoo.org> geda-1.4.0.ebuild:
   Fixed security bug #247538 (CVE-2008-5148), thanks to Chitlesh Goorah.
