@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.98.ebuild,v 1.1 2008/11/27 19:19:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/libghemical-2.98.ebuild,v 1.2 2008/11/30 01:00:00 je_fro Exp $
 
 inherit autotools
 
@@ -23,7 +23,7 @@ RDEPEND="mopac7? ( >=sci-chemistry/mopac7-1.13-r1 )
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	eautoreconf
 }
 
