@@ -1,12 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.17 2008/01/22 05:35:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.18 2008/11/30 08:05:44 tupone Exp $
 
 inherit eutils games
 
 DESCRIPTION="A console MUD client scriptable in Perl and Python"
 HOMEPAGE="http://www.andreasen.org/mcl/"
-SRC_URI="http://www.andreasen.org/mcl/dist/${P}-src.tar.gz"
+SRC_URI="http://www.andreasen.org/mcl/dist/${P}-src.tar.gz
+	mirror://gentoo/${P}-inputlines.patch.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,7 +27,7 @@ src_unpack() {
 		"${FILESDIR}"/${P}-gcc34.patch \
 		"${FILESDIR}"/${PV}-dynacomplete.patch \
 		"${FILESDIR}"/${P}-libdir.patch \
-		"${FILESDIR}"/${P}-inputlines.patch \
+		"${WORKDIR}"/${P}-inputlines.patch \
 		"${FILESDIR}"/${P}-gcc42.patch
 
 	sed -i \

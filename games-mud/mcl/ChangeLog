@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/mcl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.17 2008/01/22 05:35:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.18 2008/11/30 08:05:44 tupone Exp $
+
+  30 Nov 2008; Tupone Alfredo <tupone@gentoo.org>
+  -files/mcl-0.53.00-inputlines.patch, mcl-0.53.00.ebuild:
+  Moved a big file from FILESDIR to mirror. Bug #248975 by
+  <flameeyes@gentoo.org>
 
   22 Jan 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/mcl-0.53.00-gcc42.patch, mcl-0.53.00.ebuild:
