@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ruby-fcgi-0.8.7.ebuild,v 1.5 2008/11/30 14:25:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-fcgi/ruby-fcgi-0.8.7.ebuild,v 1.6 2008/11/30 16:32:04 maekke Exp $
 
 inherit ruby
 
@@ -8,7 +8,7 @@ DESCRIPTION="FastCGI library for Ruby"
 HOMEPAGE="http://rubyforge.org/projects/fcgi/"
 SRC_URI="http://rubyforge.org/frs/download.php/11368/${P}.tar.gz"
 
-KEYWORDS="amd64 ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
 LICENSE="Ruby"
 
 DEPEND="dev-libs/fcgi"
