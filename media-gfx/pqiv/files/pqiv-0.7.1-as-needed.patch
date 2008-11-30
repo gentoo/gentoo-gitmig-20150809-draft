@@ -1,0 +1,14 @@
+diff -ru pqiv-0.7.1.orig/Makefile pqiv-0.7.1/Makefile
+--- pqiv-0.7.1.orig/Makefile	2008-11-30 19:07:53.000000000 +0100
++++ pqiv-0.7.1/Makefile	2008-11-30 19:08:49.000000000 +0100
+@@ -13,7 +13,7 @@
+ # pqiv
+ all: pqiv manpage
+ pqiv: 
+-	$(CC) $(CFLAGS) `pkg-config --libs --cflags $(REQUIRED_PACKAGES)` -o qiv $(OPTIONFLAGS) pqiv.c
++	$(CC) $(CFLAGS) `pkg-config --cflags $(REQUIRED_PACKAGES)` $(OPTIONFLAGS) pqiv.c `pkg-config --libs $(REQUIRED_PACKAGES)` -o qiv
+ debug: 
+ 	$(CC) $(CGLAGS) -Wall -ggdb -DDEBUG `pkg-config --libs --cflags $(REQUIRED_PACKAGES)` $(OPTIONFLAGS) -o qiv pqiv.c
+ 
+Only in pqiv-0.7.1: qiv
+Only in pqiv-0.7.1: qiv.1
