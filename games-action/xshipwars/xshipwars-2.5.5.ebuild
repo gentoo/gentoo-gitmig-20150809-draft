@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.5.5.ebuild,v 1.7 2008/03/07 23:57:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-2.5.5.ebuild,v 1.8 2008/11/30 08:01:23 tupone Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -10,7 +10,8 @@ HOMEPAGE="http://wolfpack.twu.net/ShipWars/XShipWars/"
 SRC_URI="http://wolfpack.twu.net/users/wolfpack/${MY_P}.tar.bz2
 	http://wolfpack.twu.net/users/wolfpack/xsw-data-${PV}.tar.bz2
 	http://wolfpack.twu.net/users/wolfpack/stimages-1.11.1.tar.bz2
-	http://wolfpack.twu.net/users/wolfpack/stsounds-1.6.4.tar.bz2"
+	http://wolfpack.twu.net/users/wolfpack/stsounds-1.6.4.tar.bz2
+	mirror://gentoo/${P}-64bit.patch.gz"
 
 LICENSE="GPL-2 xshipwars"
 SLOT="0"
@@ -30,7 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
-	epatch "${FILESDIR}"/${P}-64bit.patch
+	epatch "${WORKDIR}"/${P}-64bit.patch
 	sed -i \
 		-e "/^BINDIR/s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^DATADIR/s:=.*:=${GAMES_DATADIR}:" \

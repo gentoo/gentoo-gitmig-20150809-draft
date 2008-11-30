@@ -1,6 +1,10 @@
 # ChangeLog for games-action/xshipwars
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/ChangeLog,v 1.21 2008/03/07 23:57:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/ChangeLog,v 1.22 2008/11/30 08:01:23 tupone Exp $
+
+  30 Nov 2008; Tupone Alfredo <tupone@gentoo.org>
+  -files/xshipwars-2.5.5-64bit.patch, xshipwars-2.5.5.ebuild:
+  Big file in FILESDIR. Bug #248973 by <flameeyes@gentoo.org>
 
   07 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   xshipwars-2.5.5.ebuild:
