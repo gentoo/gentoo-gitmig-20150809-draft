@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.6 2008/11/08 14:59:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.7 2008/11/30 18:52:53 bluebird Exp $
 
 inherit eutils perl-module flag-o-matic python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/openobex/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~hppa ppc ~sparc x86"
+KEYWORDS="amd64 ~hppa ppc sparc x86"
 IUSE="bluetooth debug perl python ruby swig tcl"
 
 RDEPEND="dev-libs/openobex
