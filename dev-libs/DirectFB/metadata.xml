@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
-  <email>vapier@gentoo.org</email>
-</maintainer>
 <longdescription>
 DirectFB is a thin library that provides hardware graphics acceleration, 
 input device handling and abstraction, integrated windowing system with 
@@ -15,9 +12,7 @@ underlying hardware. DirectFB adds graphical power to embedded systems and
 sets a new standard for graphics under Linux
 </longdescription>
 <use>
-  <flag name='fusion'>Add Multi Application support (fusion kernel device)
-    </flag>
-  <flag name='sysfs'>Add support for the sysfs filesystem (requires Linux-2.6+)
-    </flag>
+  <flag name='fusion'>Add Multi Application support (fusion kernel device)</flag>
+  <flag name='sysfs'>Add support for the sysfs filesystem (requires Linux-2.6+)</flag>
 </use>
 </pkgmetadata>

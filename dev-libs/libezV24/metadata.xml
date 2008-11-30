@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
- <email>vapier@gentoo.org</email>
-</maintainer>
 <longdescription>
 The goal of this library is to provide an easy to use programming interface to
 the serial ports of the Linux system. This release comes with some support for
