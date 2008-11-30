@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.75 2008/11/30 08:33:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.76 2008/11/30 09:05:51 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -45,8 +45,8 @@ if [[ ${PV/9999} != ${PV} ]] ; then
 		inherit cvs
 	else
 		ESVN_URI_APPEND=${ESVN_URI_APPEND:-${PN}}
-		ESVN_PROJECT="enlightenment"
-		ESVN_REPO_URI=${ESVN_SERVER:-${E_LIVE_SERVER_DEFAULT_SVN}}/${ESVN_URI_APPEND}
+		ESVN_PROJECT="enlightenment/${ESVN_SUB_PROJECT}"
+		ESVN_REPO_URI=${ESVN_SERVER:-${E_LIVE_SERVER_DEFAULT_SVN}}/${ESVN_SUB_PROJECT}/${ESVN_URI_APPEND}
 		E_S_APPEND=${ESVN_URI_APPEND}
 		E_LIVE_SOURCE="svn"
 		inherit subversion
