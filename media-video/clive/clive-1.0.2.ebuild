@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-1.0.2.ebuild,v 1.2 2008/11/29 18:37:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/clive-1.0.2.ebuild,v 1.3 2008/11/30 15:25:34 maekke Exp $
 
 # We inherit distutils to get the pkg_* functions for byte compiling python
 inherit versionator distutils
@@ -11,7 +11,7 @@ SRC_URI="http://dl.gna.org/clive/$(get_version_component_range 1-2 ${PV}).x/${P}
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/python-2.4
