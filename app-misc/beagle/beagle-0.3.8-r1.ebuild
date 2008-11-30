@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.8-r1.ebuild,v 1.1 2008/11/22 22:50:32 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.8-r1.ebuild,v 1.2 2008/11/30 14:52:09 loki_val Exp $
 
 EAPI=2
 
@@ -29,12 +29,14 @@ RDEPEND="
 	>=dev-dotnet/gtk-sharp-2.8
 	gtk? ( >=gnome-base/libgnome-2.0
 		>=gnome-base/gnome-vfs-2.0
-		>=dev-dotnet/gtk-sharp-2.10
 		>=x11-libs/gtk+-2.10
 		>=dev-libs/atk-1.2.4
 		>=gnome-base/librsvg-2.0
 		>=dev-dotnet/gconf-sharp-2.4
-		|| ( dev-dotnet/gtk-sharp[glade] >=dev-dotnet/glade-sharp-2.4 )
+		|| (
+			>=dev-dotnet/gtk-sharp-2.12.6[glade]
+			( >=dev-dotnet/gtk-sharp-2.10 >=dev-dotnet/glade-sharp-2.4 )
+		)
 		>=dev-dotnet/gnome-sharp-2.4
 		>=dev-dotnet/gnomevfs-sharp-2.4 )
 	eds? ( >=dev-dotnet/evolution-sharp-0.13.3
