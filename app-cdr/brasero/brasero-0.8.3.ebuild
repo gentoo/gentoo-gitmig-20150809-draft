@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.8.3.ebuild,v 1.3 2008/11/30 00:36:23 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.8.3.ebuild,v 1.4 2008/11/30 09:21:07 loki_val Exp $
 
 EAPI=1
 
@@ -57,8 +57,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	find . -type f -name 'Makefile*' -exec \
-		sed -i -e '/DISABLE_DEPRECATED/d' '{}' \; || die "404"
+	for i in am in
+	do
+		find . -type f -name "Makefile.${type}" -exec \
+			sed -i -e '/DISABLE_DEPRECATED/d' '{}' \; || die "404"
+	done
 }
 
 src_test() {
