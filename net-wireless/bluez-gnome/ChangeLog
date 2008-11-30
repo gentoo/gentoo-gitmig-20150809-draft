@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.34 2008/11/28 21:52:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.35 2008/11/30 16:13:19 bluebird Exp $
+
+  30 Nov 2008; Friedrich Oslage <bluebird@gentoo.org>
+  bluez-gnome-0.28.ebuild:
+  Stable on sparc, bug #230591
 
   28 Nov 2008; Tiziano Müller <dev-zero@gentoo.org>
   +files/1.8-ODS-API.patch, bluez-gnome-1.8.ebuild:
