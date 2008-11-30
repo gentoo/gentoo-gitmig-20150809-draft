@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-opengl
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.22 2008/04/12 12:01:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.23 2008/11/30 15:23:28 graaff Exp $
+
+  30 Nov 2008; Hans de Graaff <graaff@gentoo.org> ruby-opengl-0.60.0.ebuild:
+  Request at least rake 0.7.3 since bug 249173 seems to indicate that this is
+  the minimal version that works correctly.
 
   12 Apr 2008; nixnut <nixnut@gentoo.org> ruby-opengl-0.32g.ebuild:
   Stable on ppc wrt bug 216476
