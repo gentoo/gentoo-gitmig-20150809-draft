@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.110 2008/11/29 18:33:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.111 2008/11/30 15:59:09 bluebird Exp $
+
+  30 Nov 2008; Friedrich Oslage <bluebird@gentoo.org>
+  bluez-libs-3.36.ebuild:
+  Stable on sparc, security bug #230591
 
   29 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   bluez-libs-3.36.ebuild:
