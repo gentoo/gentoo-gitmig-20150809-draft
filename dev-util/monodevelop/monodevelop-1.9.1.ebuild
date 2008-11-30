@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-1.9.1.ebuild,v 1.1 2008/11/30 10:56:38 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-1.9.1.ebuild,v 1.2 2008/11/30 12:06:04 loki_val Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.go-mono.com/sources/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gtksourceview +subversion +gnome"
+IUSE="+subversion +gnome"
 
 RDEPEND=">=dev-lang/mono-1.9
 		 >=dev-util/monodoc-1.9
@@ -24,7 +24,6 @@ RDEPEND=">=dev-lang/mono-1.9
 				>=dev-dotnet/gnomevfs-sharp-2.8
 				>=dev-dotnet/gconf-sharp-2.8
 			)
-		 gtksourceview? ( dev-dotnet/gtksourceview-sharp:2 )
 		 ||	(
 				net-libs/xulrunner
 				www-client/mozilla-firefox
@@ -48,7 +47,7 @@ src_configure() {
 		--disable-update-desktopdb			\
 		--enable-monoextensions				\
 		--enable-versioncontrol				\
-		$(use_enable gtksourceview gtksourceview2)	\
+		--disable-gtksourceview2			\
 		$(use_enable gnome gnomeplatform)		\
 		$(use_enable subversion)			\
 		|| die "configure failed"
