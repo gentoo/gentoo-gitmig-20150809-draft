@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.24.0.ebuild,v 1.1 2008/11/09 00:59:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.24.0.ebuild,v 1.2 2008/11/30 12:10:01 eva Exp $
 
 inherit eutils gnome2
 
@@ -85,7 +85,7 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	if has_version x11-misc/xscreensaver ; then
+	if has_version "<x11-misc/xscreensaver-4.22-r2" ; then
 		ewarn "You have xscreensaver installed, you probably want to disable it."
 		ewarn "To prevent a duplicate screensaver entry in the menu, you need to"
 		ewarn "build xscreensaver with -gnome in the USE flags."
