@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/libflashsupport/libflashsupport-1.2.ebuild,v 1.2 2008/04/26 23:30:28 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/libflashsupport/libflashsupport-1.2.ebuild,v 1.3 2008/11/30 16:17:39 maekke Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="https://svn.revolutionlinux.com/MILLE/XTERM/trunk/libflashsupport/Tarba
 
 LICENSE="Adobe-SourceCode"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 # Note: gnutls overrides 'ssl' if both are set.  If only 'ssl' is set, openssl
 # is used.
