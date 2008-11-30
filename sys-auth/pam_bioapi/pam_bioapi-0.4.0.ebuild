@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_bioapi/pam_bioapi-0.4.0.ebuild,v 1.2 2008/02/27 10:39:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_bioapi/pam_bioapi-0.4.0.ebuild,v 1.3 2008/11/30 00:42:41 vapier Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="PAM interface to bioapi package"
 HOMEPAGE="http://code.google.com/p/pam-bioapi/"
@@ -18,6 +18,12 @@ DEPEND="sys-auth/bioapi
 	dev-db/sqlite"
 RDEPEND="${DEPEND}
 	sys-auth/tfm-fingerprint"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-headers.patch #241322
+}
 
 src_compile() {
 	econf --sbindir=/sbin || die
