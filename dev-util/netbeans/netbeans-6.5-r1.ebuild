@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r1.ebuild,v 1.4 2008/11/26 19:47:07 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r1.ebuild,v 1.5 2008/11/30 01:36:44 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -35,7 +35,7 @@ IUSE_NETBEANS_MODULES="
 	netbeans_modules_soa
 	netbeans_modules_visualweb
 	netbeans_modules_webcommon
-	netbeans_modules_websvccommon
+	+netbeans_modules_websvccommon
 	netbeans_modules_xml"
 IUSE_LINGUAS="
 	linguas_de
