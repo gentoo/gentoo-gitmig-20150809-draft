@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.13 2008/11/30 10:01:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.14 2008/11/30 10:07:20 ssuominen Exp $
 
 WANT_AUTOMAKE="1.4"
 WANT_AUTOCONF="2.5"
@@ -24,5 +24,6 @@ src_unpack() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
+	doman *.1
 	dodoc AUTHORS ChangeLog NEWS README README.takmulti TODO
 }
