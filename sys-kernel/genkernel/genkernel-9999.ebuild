@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.11 2008/11/15 15:48:57 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-9999.ebuild,v 1.12 2008/11/30 00:23:13 agaffney Exp $
 
 # genkernel-9999        -> latest SVN
 # genkernel-9999.REV    -> use SVN REV
@@ -9,7 +9,7 @@
 VERSION_BUSYBOX='1.7.4'
 VERSION_DMAP='1.02.22'
 VERSION_DMRAID='1.0.0.rc14'
-VERSION_E2FSPROGS='1.39'
+VERSION_E2FSPROGS='1.40.9'
 VERSION_LVM='2.02.28'
 VERSION_FUSE='2.7.4'
 VERSION_UNIONFS_FUSE='0.22'
