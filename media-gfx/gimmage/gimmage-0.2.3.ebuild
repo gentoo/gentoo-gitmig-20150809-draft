@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.5 2008/10/08 18:55:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimmage/gimmage-0.2.3.ebuild,v 1.6 2008/11/30 17:51:59 maekke Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A slim GTK-based image browser"
 HOMEPAGE="http://gimmage.berlios.de/"
@@ -25,6 +25,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	eautoreconf
 }
 
 src_compile() {
