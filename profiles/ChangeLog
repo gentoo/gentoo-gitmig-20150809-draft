@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2101 2008/11/30 02:02:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2102 2008/11/30 10:41:37 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Nov 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Package mask app-emacs/emacs-daemon.
 
   30 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   Fix loki_val's package.mask corruption typo.
