@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/mirage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.29 2008/08/24 15:59:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mirage/ChangeLog,v 1.30 2008/11/30 14:43:02 ssuominen Exp $
+
+  30 Nov 2008; <ssuominen@gentoo.org>
+  +files/mirage-0.9.3-stop_cleaning_up.patch, mirage-0.9.3.ebuild:
+  Don't compile in src_install.
 
   24 Aug 2008; Markus Meier <maekke@gentoo.org> -mirage-0.9.1.ebuild:
   old
