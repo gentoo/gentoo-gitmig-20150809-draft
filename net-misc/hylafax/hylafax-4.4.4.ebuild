@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4.ebuild,v 1.4 2008/11/16 17:30:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4.ebuild,v 1.5 2008/11/30 18:57:09 armin76 Exp $
 
 inherit eutils multilib pam toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc sparc x86"
 
 IUSE="jbig pam mgetty html"
 
