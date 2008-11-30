@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.73 2008/09/20 20:35:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.74 2008/11/30 03:18:30 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -82,6 +82,9 @@ IUSE="nls doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND="nls? ( sys-devel/gettext )"
+
+# gettext (via `autopoint`) needs to run cvs #245073
+[[ ${E_STATE} == "live" ]] && DEPEND="${DEPEND} dev-util/cvs"
 
 case ${EURI_STATE:-${E_STATE}} in
 	release) S=${WORKDIR}/${P};;
