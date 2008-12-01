@@ -1,10 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2-r1.ebuild,v 1.5 2008/08/17 15:59:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2-r1.ebuild,v 1.6 2008/12/01 20:36:43 ssuominen Exp $
+
+WANT_AUTOMAKE="1.9"
 
 PATCH_LEVEL=14.1
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="a GTK+ application launcher with nice features such as a history"
 HOMEPAGE="http://packages.qa.debian.org/g/grun.html"
@@ -25,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}"/${PN}_${PV}-${PATCH_LEVEL}.diff
+	eautoreconf
 }
 
 src_compile() {
