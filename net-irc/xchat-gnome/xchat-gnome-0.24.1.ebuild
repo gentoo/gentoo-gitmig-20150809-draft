@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.24.1.ebuild,v 1.3 2008/11/29 22:49:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.24.1.ebuild,v 1.4 2008/12/01 14:14:01 eva Exp $
 
 inherit gnome2 eutils toolchain-funcs
 
@@ -63,6 +63,7 @@ pkg_setup() {
 		$(use_enable ipv6)
 		$(use_enable dbus)
 		$(use_enable nls)
+		$(use_enable sound canberra)
 		$(use_enable libnotify notification)"
 }
 
