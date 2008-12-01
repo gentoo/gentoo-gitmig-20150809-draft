@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.76 2008/12/01 13:11:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.77 2008/12/01 13:29:37 eva Exp $
+
+  01 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org> ChangeLog:
+  Fix Manifest.
 
 *evolution-exchange-2.24.2 (01 Dec 2008)
 
