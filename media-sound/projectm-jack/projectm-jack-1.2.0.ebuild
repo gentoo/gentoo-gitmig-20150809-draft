@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/projectm-jack/projectm-jack-1.2.0.ebuild,v 1.1 2008/07/17 18:10:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/projectm-jack/projectm-jack-1.2.0.ebuild,v 1.2 2008/12/01 09:09:30 ssuominen Exp $
 
 inherit cmake-utils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/projectm/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-sound/jack-audio-connection-kit
