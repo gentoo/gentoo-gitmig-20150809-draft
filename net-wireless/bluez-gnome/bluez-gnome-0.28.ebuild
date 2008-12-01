@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.28.ebuild,v 1.2 2008/11/30 16:13:19 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.28.ebuild,v 1.3 2008/12/01 06:25:32 jer Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa sparc ~x86"
+KEYWORDS="~amd64 hppa sparc ~x86"
 
 IUSE="gnome"
 COMMON_DEPEND=">=dev-libs/glib-2.0

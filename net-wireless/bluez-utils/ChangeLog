@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.135 2008/11/30 16:02:22 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.136 2008/12/01 06:21:40 jer Exp $
+
+  01 Dec 2008; Jeroen Roovers <jer@gentoo.org> bluez-utils-3.36.ebuild:
+  Stable for HPPA (bug #230591).
 
   30 Nov 2008; Friedrich Oslage <bluebird@gentoo.org>
   bluez-utils-3.36.ebuild:
