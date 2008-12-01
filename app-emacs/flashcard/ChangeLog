@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/flashcard
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/flashcard/ChangeLog,v 1.8 2008/02/17 17:08:16 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flashcard/ChangeLog,v 1.9 2008/12/01 19:45:52 tcunha Exp $
+
+  01 Dec 2008; Tiago Cunha <tcunha@gentoo.org> flashcard-2.3.3.ebuild:
+  stable sparc
 
   17 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
   flashcard-2.3.3.ebuild:
