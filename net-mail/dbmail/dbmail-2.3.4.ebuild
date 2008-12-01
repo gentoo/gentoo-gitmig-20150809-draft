@@ -1,18 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.7.ebuild,v 1.7 2008/10/11 23:07:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.3.4.ebuild,v 1.1 2008/12/01 12:38:03 lordvan Exp $
 
 inherit eutils
 
-MY_P="${P/_/-}" # for rcX
+MY_P="${P/_/}" # for rcX
 #MY_P="${P}" # releases
 DESCRIPTION="A mail storage and retrieval daemon that uses MySQL or PostgreSQL as its data store"
 HOMEPAGE="http://www.dbmail.org/"
-SRC_URI="http://www.dbmail.org/download/2.2/${MY_P}.tar.gz"
+SRC_URI="http://www.dbmail.org/download/2.3/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="-x86 -amd64"
 IUSE="ldap mysql postgres sieve sqlite3 ssl static"
 
 DEPEND="ssl? ( dev-libs/openssl )
@@ -26,7 +26,8 @@ DEPEND="ssl? ( dev-libs/openssl )
 	app-text/xmlto
 	sys-libs/zlib
 	=dev-libs/gmime-2.2*
-	>=dev-libs/glib-2.8"
+	>=dev-libs/glib-2.8
+	>=app-crypt/mhash-0.9.9-r1"
 
 S=${WORKDIR}/${P/_/-}
 
@@ -37,6 +38,7 @@ pkg_setup() {
 
 src_compile() {
 	use sqlite3 && myconf="--with-sqlite"
+	if !use postgres && !use mysql && !use sqlite3; then myconf="${myconf} --with-sqlite" ; fi
 	use ldap && myconf=${myconf}" --with-auth-ldap"
 
 	econf \
@@ -105,4 +107,6 @@ pkg_postinst() {
 	elog "dbmail.conf and set it to the correct path"
 	elog "(usually /usr/lib/dbmail or /usr/lib64/dbmail on amd64)"
 	elog "A sample can be found in dbmail.conf.dist after etc-update."
+
+	ewarn "This is a Development release. use at own risk."
 }
