@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/develock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/develock/ChangeLog,v 1.7 2008/06/14 23:24:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/develock/ChangeLog,v 1.8 2008/12/01 19:23:12 tcunha Exp $
+
+  01 Dec 2008; Tiago Cunha <tcunha@gentoo.org> develock-0.35.ebuild:
+  stable sparc
 
   14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> develock-0.35.ebuild:
   Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
