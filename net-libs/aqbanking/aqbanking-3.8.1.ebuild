@@ -1,20 +1,19 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-3.8.1.ebuild,v 1.1 2008/11/13 23:47:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-3.8.1.ebuild,v 1.2 2008/12/01 00:41:55 hanno Exp $
 
 inherit kde-functions
 
 DESCRIPTION="Generic Online Banking Interface"
 HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
-SRC_URI="http://files.hboeck.de/aq//${P}.tar.gz"
+SRC_URI="http://files.hboeck.de/aq/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="chipcard debug geldkarte hbci kde ofx python qt3 yellownet"
+IUSE="chipcard debug hbci kde ofx python qt3"
 DEPEND=">=sys-libs/gwenhywfar-3.4.1
 	>=app-misc/ktoblzcheck-1.14
 	ofx? ( >=dev-libs/libofx-0.8.3 )
-	geldkarte? ( >=sys-libs/libchipcard-4.2.0 )
 	chipcard? ( >=sys-libs/libchipcard-4.2.0 )
 	qt3? ( =x11-libs/qt-3* )
 	kde? ( >=kde-base/kdelibs-3.1.0 )"
@@ -31,9 +30,7 @@ src_compile() {
 
 	local BACKENDS=""
 	use hbci && BACKENDS="aqhbci"
-	use geldkarte && BACKENDS="${BACKENDS} aqgeldkarte"
 	use ofx && BACKENDS="${BACKENDS} aqofxconnect"
-	use yellownet && BACKENDS="${BACKENDS} aqyellownet"
 
 	econf PATH="/usr/qt/3/bin:${PATH}" \
 		$(use_enable debug) \
