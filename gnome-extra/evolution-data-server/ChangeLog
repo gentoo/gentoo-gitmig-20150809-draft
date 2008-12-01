@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.192 2008/11/13 19:26:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.193 2008/12/01 10:41:27 eva Exp $
+
+*evolution-data-server-2.24.2 (01 Dec 2008)
+
+  01 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/evolution-data-server-2.23.6-as-needed.patch,
+  +evolution-data-server-2.24.2.ebuild:
+  New version for GNOME 2.24. Support for Google and WebDAV contacts
+  backend, Quota for IMAP and sqlite on-disk format.
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org>
   evolution-data-server-2.22.3.ebuild:
