@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10-r2.ebuild,v 1.1 2008/12/01 21:08:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10-r2.ebuild,v 1.2 2008/12/01 21:08:54 mrness Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	
+
 	epatch "${FILESDIR}"/${P}-uclibc++.patch
 }
 
