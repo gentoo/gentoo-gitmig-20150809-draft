@@ -1,29 +1,31 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.9.0.ebuild,v 1.6 2008/06/30 20:51:11 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.10-r2.ebuild,v 1.1 2008/12/01 21:19:32 coldwind Exp $
 
 inherit eutils distutils
 
+MY_P="${P/_/}"
 DESCRIPTION="An improved rewrite/port of the Picard Tagger using Qt"
 HOMEPAGE="http://musicbrainz.org/doc/PicardQt"
-SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/picard/${P}.tar.gz"
+SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/picard/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="cdaudio ffmpeg nls"
 
 RDEPEND=">=dev-lang/python-2.4
 	|| ( >=dev-lang/python-2.5 >=dev-python/ctypes-0.9 )
 	>=dev-python/PyQt4-4.2
-	>=media-libs/mutagen-1.9
+	media-libs/mutagen
 	cdaudio? ( >=media-libs/libdiscid-0.1.1 )
-	ffmpeg? ( <media-video/ffmpeg-0.4.9_p20080326
+	ffmpeg? ( media-video/ffmpeg
 		>=media-libs/libofa-0.9.2 )"
 
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS.txt INSTALL.txt NEWS.txt"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if ! use ffmpeg; then
@@ -42,6 +44,15 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	if has_version '>=media-video/ffmpeg-0.4.9_p20080326' ; then
+		epatch "${FILESDIR}"/${PN}-0.10.0_rc1-ffmpeg-headers.patch
+	fi
+	epatch "${FILESDIR}"/${P}-ffmpeg-avcodec_decode_audio2.patch
+}
+
 src_compile() {
 	${python} setup.py config || die "setup.py config failed"
 	if ! use ffmpeg; then
@@ -56,6 +67,9 @@ src_compile() {
 src_install() {
 	distutils_src_install --disable-autoupdate --skip-build \
 		$(use nls || echo "--disable-locales")
+
+	doicon picard-{16,32}.png
+	domenu picard.desktop
 }
 
 pkg_postinst() {

@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/picard
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.15 2008/11/09 11:16:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.16 2008/12/01 21:19:32 coldwind Exp $
+
+*picard-0.10-r2 (01 Dec 2008)
+
+  01 Dec 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/picard-0.10-ffmpeg-avcodec_decode_audio2.patch,
+  -picard-0.9.0.ebuild, +picard-0.10-r2.ebuild:
+  Fix bug #246148, thanks to Markus Rathgeb <maggu2810@web.de>.
 
   09 Nov 2008; Markus Meier <maekke@gentoo.org> picard-0.10-r1.ebuild:
   amd64/x86 stable, bug #245947
