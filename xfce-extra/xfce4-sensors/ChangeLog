@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-sensors
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.37 2008/11/06 19:38:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.38 2008/12/01 21:19:57 angelos Exp $
+
+  01 Dec 2008; Christoph Mende <angelos@gentoo.org>
+  xfce4-sensors-0.10.99.6.ebuild:
+  Removed -no-undefined from src/Makefile.am to fix compilation with forced
+  --as-needed
 
 *xfce4-sensors-0.10.99.6 (06 Nov 2008)
 
