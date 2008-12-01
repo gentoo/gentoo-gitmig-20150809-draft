@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.1_beta4.ebuild,v 1.1 2008/08/09 03:45:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.1_rc2.ebuild,v 1.1 2008/12/01 00:19:14 nyhm Exp $
 
-inherit eutils versionator games
+inherit autotools eutils versionator games
 
 MY_PV=$(get_version_component_range -2)
 DESCRIPTION="3D real-time strategy game"
@@ -35,6 +35,12 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	media-fonts/dejavu"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	eautoreconf
+}
+
 src_compile() {
 	egamesconf \
 		--disable-dependency-tracking \
@@ -51,7 +57,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	rm -f "${D}"/usr/share/doc/${PF}/COPYING
-	prepalldocs
+	rm -f "${D}"/usr/share/doc/${PF}/COPYING*
 	prepgamesdirs
 }
