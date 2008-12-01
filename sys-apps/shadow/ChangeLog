@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.210 2008/11/30 03:16:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.211 2008/12/01 04:08:07 vapier Exp $
+
+  01 Dec 2008; Mike Frysinger <vapier@gentoo.org> shadow-4.1.2.1.ebuild,
+  shadow-4.1.2.2.ebuild:
+  Also run autoheader due to AC_CHECK_DECLS #249403.
 
   30 Nov 2008; Mike Frysinger <vapier@gentoo.org> shadow-4.1.2.1.ebuild,
   shadow-4.1.2.2.ebuild:
