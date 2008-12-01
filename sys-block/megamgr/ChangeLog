@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/megamgr
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megamgr/ChangeLog,v 1.3 2008/07/11 09:10:04 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megamgr/ChangeLog,v 1.4 2008/12/01 16:12:40 wschlich Exp $
+
+*megamgr-5.20-r1 (01 Dec 2008)
+
+  01 Dec 2008; Wolfram Schlich <wschlich@gentoo.org> +files/megamgr-r1,
+  +megamgr-5.20-r1.ebuild:
+  add support for newer kernels (see bug #233295)
 
   11 Jul 2008; Wolfram Schlich <wschlich@gentoo.org> megamgr-5.20.ebuild:
   add multilib check
