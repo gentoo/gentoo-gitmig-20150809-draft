@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-prof
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.9 2008/11/13 13:10:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.10 2008/12/01 09:10:22 flameeyes Exp $
+
+*ruby-prof-0.7.1 (01 Dec 2008)
+
+  01 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/ruby-prof-0.7.1-fix-amd64.patch, +ruby-prof-0.7.1.ebuild:
+  Version bump, with patch to work on x86-64.
 
   13 Nov 2008; Diego Pettenò <flameeyes@gentoo.org> ruby-prof-0.7.0.ebuild:
   Only disable the thread test instead of restricting tests, upstream is
