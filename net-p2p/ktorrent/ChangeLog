@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.94 2008/11/28 21:56:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.95 2008/12/01 22:09:01 bluebird Exp $
+
+  01 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> ktorrent-2.2.8.ebuild:
+  Stable on sparc, security bug #244741
 
   28 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   ktorrent-2.2.8.ebuild:
