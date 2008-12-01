@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Cantus Music Tag Editor
-Comment=Label Music Files
-Exec=cantus_3
-Icon=cantus3.png
-Categories=Application;GTK;AudioVideo;Player;
-Terminal=false
-Type=Application
-Encoding=UTF-8

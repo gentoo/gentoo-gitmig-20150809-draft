@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Cantus Music Tag Editor (Development version)
-Comment=No comment
-Exec=cantus_2
-Icon=/usr/share/pixmaps/cantus.png
-Terminal=false
-MultipleArgs=false
-Type=Application
