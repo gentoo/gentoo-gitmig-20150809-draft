@@ -6,6 +6,9 @@
 		<name>Saleem Abdulrasool</name>
 	</maintainer>
 	<herd>gentopia</herd>
+	<use>
+		<flag name="zsh-completion">Install zsh command completion.</flag>
+	</use>
 	<longdescription lang="en">
 	</longdescription>
 </pkgmetadata>
