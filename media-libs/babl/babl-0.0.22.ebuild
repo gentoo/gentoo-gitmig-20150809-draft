@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.0.22.ebuild,v 1.2 2008/11/21 04:15:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.0.22.ebuild,v 1.3 2008/12/01 21:50:44 ranger Exp $
 
 DESCRIPTION="A dynamic, any to any, pixel format conversion library"
 HOMEPAGE="http://www.gegl.org/babl/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/${PN}/0.0/${P}.tar.bz2"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc64 ~x86"
 IUSE="sse mmx"
 
 DEPEND="virtual/libc"
