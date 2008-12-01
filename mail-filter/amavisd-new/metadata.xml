@@ -7,5 +7,9 @@
 	<flag name='courier'>Add support for usage with courierfilter</flag>
 	<flag name='dkim'>Add optional Yahoo! DomainKey support</flag>
 	<flag name='qmail'>Add support for qmail</flag>
+	<flag name='razor'>Configure mail-filter/razor, a distributed, collaborative
+	spam detection and filtering network for use with amavisd-new</flag>
+	<flag name='spamassassin'>Enable usage of mail-filter/spamassassin for spam
+	protection</flag>
 </use>
 </pkgmetadata>
