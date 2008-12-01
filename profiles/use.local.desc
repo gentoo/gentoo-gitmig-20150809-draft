@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4045 2008/11/30 22:27:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4046 2008/12/01 21:07:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1082,6 +1082,8 @@ mail-filter/MailScanner:spamassassin - Enable usage of mail-filter/spamassassin 
 mail-filter/amavisd-new:courier - Add support for usage with courierfilter
 mail-filter/amavisd-new:dkim - Add optional Yahoo! DomainKey support
 mail-filter/amavisd-new:qmail - Add support for qmail
+mail-filter/amavisd-new:razor - Configure mail-filter/razor, a distributed, collaborative spam detection and filtering network for use with amavisd-new
+mail-filter/amavisd-new:spamassassin - Enable usage of mail-filter/spamassassin for spam protection
 mail-filter/ask:procmail - Adds support for mail-filter/procmail
 mail-filter/assp:spf - Adds support for Sender Policy Framework
 mail-filter/assp:srs - Adds support for Sender Rewriting Scheme
