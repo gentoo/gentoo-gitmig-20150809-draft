@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/judy
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.23 2008/11/14 12:18:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.24 2008/12/01 21:39:34 ranger Exp $
+
+  01 Dec 2008; Brent Baude <ranger@gentoo.org> judy-1.0.4.ebuild:
+  Marking judy-1.0.4 ~ppc64 for bug 244246
 
   14 Nov 2008; Raúl Porcel <armin76@gentoo.org> judy-1.0.4.ebuild:
   ia64 stable wrt #244246
