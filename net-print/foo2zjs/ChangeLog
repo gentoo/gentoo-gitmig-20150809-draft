@@ -1,6 +1,16 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.35 2008/08/27 21:44:28 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.36 2008/12/01 15:41:09 scarabeus Exp $
+
+*foo2zjs-20081129 (29 Nov 2008)
+
+  29 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org>
+  -files/foo2zjs-Makefile-20071105.diff,
+  -files/foo2zjs-udevfwld-20071105.diff,
+  +files/foo2zjs-20081129-Makefile.patch,
+  +files/foo2zjs-20081129-udevfwld.patch, -foo2zjs-20071103.ebuild,
+  +foo2zjs-20081129.ebuild:
+  Version bump. Remove old.
 
   27 Aug 2008; Timo Gurr <tgurr@gentoo.org> foo2zjs-20080225.ebuild:
   Fixed Manifest again, bug #226737. Removed pkg_postinst.

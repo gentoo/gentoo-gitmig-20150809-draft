@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20071103.ebuild,v 1.2 2008/03/14 14:39:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20081129.ebuild,v 1.1 2008/12/01 15:41:09 scarabeus Exp $
 
 inherit eutils
 
@@ -8,10 +8,15 @@ DESCRIPTION="Support for printing to ZjStream-based printers"
 HOMEPAGE="http://foo2zjs.rkkda.com/"
 
 # extracted by http://gentooexperimental.org/~genstef/dist/foo2zjs-helper.sh
-DEVICES=( "hp2600n" "hp1600" "hp1500" "km2530" "km2490" "km2480" "xp6115"
-"km2430" "km2300" "km2200" "kmcpwl" "sa300" "sa2160" "sa3160" "xp6110" "lm500"
-"hp1020" "hp1018" "hp1005" "hp1000" )
+DEVICES=( "hp2600n" "hp1600" "hp1500" "hp1215" "km2530" "km2490" "km2480"
+"xp6115" "km2430" "km2300" "km2200" "kmcpwl" "sa300" "sa315"  "sa2160"
+"sa3160" "xp6110" "lm500" "oki3200" "oki3300" "oki3400" "oki3530" "oki5100"
+"oki5200" "oki5500" "oki5600" "oki5800" "hp1020" "hp1018" "hp1005" "hp1000"
+"hpp1505" "hpp1008" "hpp1007" "hpp1006" "hpp1005" )
+#"sa610" has no file to download
 URIS=(
+"http://foo2hp.rkkda.com/icm/hpclj2600n.tar.gz
+http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
 "http://foo2hp.rkkda.com/icm/hpclj2600n.tar.gz
 http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
 "http://foo2hp.rkkda.com/icm/hpclj2600n.tar.gz
@@ -23,7 +28,7 @@ http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
 "http://foo2lava.rkkda.com/icm/km2530.tar.gz"
 "http://foo2lava.rkkda.com/icm/km2530.tar.gz"
 "http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
-"ftp://ftp.minolta-qms.com/pub/crc/out_going/win/m23dlicc.exe
+"ftp://ftp.minolta-qms.com/pub/crc/out_going/other/m23dlicc.exe
 http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
 "ftp://ftp.minolta-qms.com/pub/crc/out_going/win2000/m22dlicc.exe"
 "ftp://ftp.minolta-qms.com/pub/crc/out_going/windows/cpplxp.exe"
@@ -31,14 +36,30 @@ http://foo2zjs.rkkda.com/icm/km2430.tar.gz"
 "http://foo2qpdl.rkkda.com/icm/samclp300.tar.gz"
 "http://foo2qpdl.rkkda.com/icm/samclp300.tar.gz"
 "http://foo2qpdl.rkkda.com/icm/samclp300.tar.gz"
+"http://foo2qpdl.rkkda.com/icm/samclp300.tar.gz"
 "http://foo2slx.rkkda.com/icm/lexc500.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic3200.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic3400.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic3400.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic3400.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic3200.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic3200.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic5600.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic5600.tar.gz"
+"http://foo2hiperc.rkkda.com/icm/okic5600.tar.gz"
 "http://foo2zjs.rkkda.com/firmware/sihp1020.tar.gz"
 "http://foo2zjs.rkkda.com/firmware/sihp1018.tar.gz"
 "http://foo2zjs.rkkda.com/firmware/sihp1005.tar.gz"
 "http://foo2zjs.rkkda.com/firmware/sihp1000.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihpP1505.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihpP1006.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihpP1005.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihpP1006.tar.gz"
+"http://foo2zjs.rkkda.com/firmware/sihpP1005.tar.gz"
 )
 
-SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.gz"
+
+SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.gz"
 IUSE="cups foomaticdb usb"
 for ((DEV=0; DEV < ${#DEVICES[*]}; DEV++)); do
 	SRC_URI="${SRC_URI} foo2zjs_devices_${DEVICES[DEV]}? ( ${URIS[DEV]} )"
@@ -48,8 +69,10 @@ for ((DEV=0; DEV < ${#DEVICES[*]}; DEV++)); do
 	ALL_END="${ALL_END} )"
 done
 SRC_URI="${SRC_URI}${ALL_BEGIN}${ALL_MIDDLE}${ALL_END}"
-RESTRICT="mirror"
+
 LICENSE="GPL-2"
+# due to those firmwares/icms/etc...
+RESTRICT="mirror"
 SLOT="0"
 DEPEND="app-arch/unzip"
 RDEPEND="cups? ( net-print/cups )
@@ -69,8 +92,8 @@ src_unpack() {
 	done
 
 	cd "${S}"
-	epatch "${FILESDIR}"/foo2zjs-Makefile-20071105.diff
-	epatch "${FILESDIR}"/foo2zjs-udevfwld-20071105.diff
+	epatch "${FILESDIR}"/${P}-Makefile.patch
+	epatch "${FILESDIR}"/${P}-udevfwld.patch
 }
 
 src_compile() {
@@ -101,8 +124,4 @@ src_install() {
 
 	emake DESTDIR="${D}" install install-udev \
 		|| die "emake install failed"
-}
-
-pkg_postinst() {
-	udevcontrol reload_rules
 }
