@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9229 2008/11/30 15:28:06 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9230 2008/12/01 06:26:55 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -60,14 +60,6 @@ net-news/straw
 # Mask non-working version to force their removal.
 <dev-dotnet/gtksourceview-sharp-0.12
 
-# Samuli Suominen <ssuominen@gentoo.org> (25 Nov 2008)
-# Cantus was moved to new upstream, but last modification
-# in subversion is from 2007. Versions we have in tree,
-# all fail on different errors. See bugs 205681 and 247831
-# for example about latest version. Masked for removal
-# in 30 days. Please try maintained media-sound/easytag.
-media-sound/cantus
-
 # Doug Goldstein <cardoe@gentoo.org> (24 Nov 2008)
 # Fails to configure in all situations. Just plain broken
 # bug #247677
@@ -115,12 +107,6 @@ net-im/gnome-jabber
 # 2. lack of developers interest it's maintainer-wanted
 # 3. nothing in the tree depends on it
 dev-db/fastdb
-
-# Jeremy Olexa <darkside@gentoo.org> (19 Nov 2008)
-# Stops playing at random intervals when HAL is used. Unmaintained upstream.
-# Depends on deprecated xview library. Removing with maintainers request in 30
-# days.
-media-sound/workman
 
 # MATSUU Takuto <matsuu@gentoo.org> (19 Nov 2008)
 # Masked for bug #196340

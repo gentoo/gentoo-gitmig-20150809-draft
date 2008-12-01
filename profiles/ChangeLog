@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2105 2008/11/30 21:32:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2106 2008/12/01 06:26:55 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Dec 2008; <ssuominen@gentoo.org> package.mask:
+  Removed media-sound/cantus because it moved to new upstream and there is
+  nothing working out yet. Removed media-sound/workman because it's using
+  deprecated xview library.
 
   30 Nov 2008; Ulrich Mueller <ulm@gentoo.org> updates/4Q-2008:
   Slotmove app-doc/elisp-manual.
