@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/radiusclient-ng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/ChangeLog,v 1.19 2008/05/04 10:29:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient-ng/ChangeLog,v 1.20 2008/12/01 21:20:44 mrness Exp $
+
+  01 Dec 2008; Alin Năstac <mrness@gentoo.org>
+  radiusclient-ng-0.5.6.ebuild:
+  Add net-dialup/radiusclient blocking dependency atom (#247950).
 
   04 May 2008; Peter Volkov <pva@gentoo.org> radiusclient-ng-0.5.6.ebuild:
   Use berlios mirror://, bug #218657, thank Gilles Dartiguelongue for
