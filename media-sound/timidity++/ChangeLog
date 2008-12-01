@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.101 2008/06/27 10:13:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.102 2008/12/01 21:26:32 ranger Exp $
+
+  01 Dec 2008; Brent Baude <ranger@gentoo.org> timidity++-2.13.2-r7.ebuild:
+  stable ppc64, bug 249421
 
   27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> timidity++-2.13.2-r5.ebuild,
   timidity++-2.13.2-r6.ebuild, timidity++-2.13.2-r7.ebuild:
