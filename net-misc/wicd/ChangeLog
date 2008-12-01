@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.19 2008/11/18 03:14:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.20 2008/12/01 13:35:56 darkside Exp $
+
+*wicd-1.5.5 (01 Dec 2008)
+
+  01 Dec 2008; Jeremy Olexa <darkside@gentoo.org> +wicd-1.5.5.ebuild:
+  Version bump, from CHANGES file:
+  1.5.5
+   * Improved Ralink legacy support
+   * Fixed log directory permissions
+   * Improved pm-utils support
 
   18 Nov 2008; Jeremy Olexa <darkside@gentoo.org> wicd-1.5.3-r2.ebuild,
   wicd-1.5.4.ebuild:
