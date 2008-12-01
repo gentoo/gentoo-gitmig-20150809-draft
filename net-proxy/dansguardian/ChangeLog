@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.41 2008/11/13 00:42:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.42 2008/12/01 21:08:01 mrness Exp $
+
+*dansguardian-2.10-r2 (01 Dec 2008)
+
+  01 Dec 2008; Alin Năstac <mrness@gentoo.org>
+  +files/dansguardian-2.10-uclibc++.patch, +dansguardian-2.10-r2.ebuild:
+  Fix broken build when compiled using uclibc++, thanks to Natanael Copa
+  <natanael dot copa at gmail dot com> (#247547).
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> dansguardian-2.10-r1.ebuild:
   stable ppc64, bug 245680
