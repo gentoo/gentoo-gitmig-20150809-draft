@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.69 2008/11/17 21:51:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.70 2008/12/01 03:23:24 leio Exp $
+
+*gftp-2.0.19 (01 Dec 2008)
+
+  01 Dec 2008; Mart Raudsepp <leio@gentoo.org> +gftp-2.0.19.ebuild:
+  Version bump with many changes
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/gftp-2.0.18-ipv6.patch:
