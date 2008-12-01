@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.3 2008/11/30 02:59:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.4 2008/12/01 16:52:10 vapier Exp $
+
+  01 Dec 2008; Mike Frysinger <vapier@gentoo.org> ppl-0.10.ebuild:
+  Fix typo pointed out by Sigmatador.
 
 *ppl-0.10 (30 Nov 2008)
 

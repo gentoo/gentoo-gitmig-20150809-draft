@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10.ebuild,v 1.1 2008/11/30 02:59:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10.ebuild,v 1.2 2008/12/01 16:52:10 vapier Exp $
 
 DESCRIPTION="The Parma Polyhedra Library (PPL) is a modern and reasonably complete library providing numerical abstractions especially targeted at applications in the field of analysis and verification of complex systems"
 HOMEPAGE="http://www.cs.unipr.it/ppl/"
@@ -32,8 +32,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	cd /usr/share/doc/${PF}
+	cd "${D}"/usr/share/doc/${PF}
 	mkdir html
-	mv *-html html/
+	mv *-html html/ || die
 	prepalldocs
 }
