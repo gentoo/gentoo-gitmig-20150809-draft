@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/pidgin-msn-pecan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-msn-pecan/ChangeLog,v 1.4 2008/09/14 22:46:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-msn-pecan/ChangeLog,v 1.5 2008/12/01 14:46:11 voyageur Exp $
+
+*pidgin-msn-pecan-0.0.17 (01 Dec 2008)
+
+  01 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +pidgin-msn-pecan-0.0.17.ebuild:
+  Version bump, adds custom emoticon sending support and independent
+  personal status messages
 
 *pidgin-msn-pecan-0.0.16 (14 Sep 2008)
 
