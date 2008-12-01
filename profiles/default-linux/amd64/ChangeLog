@@ -1,6 +1,25 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.162 2008/12/01 18:37:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.163 2008/12/01 18:48:02 angelos Exp $
+
+  01 Dec 2008; Christoph Mende <angelos@gentoo.org> -2006.0/deprecated,
+  -2006.0/make.defaults, -2006.0/no-multilib/make.defaults,
+  -2006.0/no-multilib/package.mask, -2006.0/no-multilib/package.use.mask,
+  -2006.0/no-multilib/parent, -2006.0/no-multilib/use.mask,
+  -2006.0/no-symlinks/README, -2006.0/no-symlinks/make.defaults,
+  -2006.0/no-symlinks/no-lib32/make.defaults,
+  -2006.0/no-symlinks/no-lib32/package.mask,
+  -2006.0/no-symlinks/no-lib32/parent, -2006.0/no-symlinks/package.mask,
+  -2006.0/no-symlinks/parent, -2006.0/no-symlinks/profile.bashrc,
+  -2006.0/package.mask, -2006.0/packages, -2006.0/parent, -2006.0/use.mask,
+  -2006.1/deprecated, -2006.1/desktop/make.defaults, -2006.1/desktop/parent,
+  -2006.1/desktop/virtuals, -2006.1/make.defaults,
+  -2006.1/no-multilib/make.defaults, -2006.1/no-multilib/package.mask,
+  -2006.1/no-multilib/package.use.mask, -2006.1/no-multilib/parent,
+  -2006.1/no-multilib/use.mask, -2006.1/packages, -2006.1/parent,
+  -2006.1/server/make.defaults, -2006.1/server/parent,
+  -2006.1/server/profile.bashrc:
+  Removed 2006.x profiles
 
   01 Dec 2008; <ssuominen@gentoo.org> 2006.0/no-multilib/package.mask,
   2006.0/no-multilib/package.use.mask, 2006.1/no-multilib/package.mask,

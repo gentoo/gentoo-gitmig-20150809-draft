@@ -1,7 +1,0 @@
-# Apr 28, 2008 Sébastien Fabbro <bicatali@gentoo.org>
-# ifc masked
-sci-libs/acml ifc
-
-# Jul 04, 2008 Thomas Anderson <gentoofan23@gentoo.org>
-# ia32 masked 
-www-client/opera ia32
