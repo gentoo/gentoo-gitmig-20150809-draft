@@ -1,21 +1,52 @@
---- crda-0.9.4/Makefile.orig	2008-11-27 14:44:02.000000000 +0000
-+++ crda-0.9.4/Makefile	2008-11-27 14:45:59.000000000 +0000
-@@ -35,15 +35,15 @@
+Fix building with --as-needed LD flag.
+
+From: Diego E. 'Flameeyes' Pettenò <flameeyes@gmail.com>
+
+When using GNU ld --as-needed option, you need to ensure that the
+order of parameters to the linker is formally correct, with libraries
+coming after the object files. For this reason, don't use LDFLAGS for
+passing the libraries, and make sure that LDLIBS goes at the end of
+the line.
+
+Signed-off-by: Diego E. 'Flameeyes' Pettenò <flameeyes@gmail.com>
+---
+
+ Makefile |   10 +++++-----
+ 1 files changed, 5 insertions(+), 5 deletions(-)
+
+
+diff --git a/Makefile b/Makefile
+index 91c4329..25a92fe 100644
+--- a/Makefile
++++ b/Makefile
+@@ -7,9 +7,9 @@ PUBKEY_DIR=pubkeys
+ 
+ CFLAGS += -Wall -g
+ #CFLAGS += -DUSE_OPENSSL `pkg-config --cflags openssl`
+-#LDFLAGS += `pkg-config --libs openssl`
++#LDLIBS += `pkg-config --libs openssl`
+ CFLAGS += -DUSE_GCRYPT
+-LDFLAGS += -lgcrypt
++LDLIBS += -lgcrypt
+ 
+ MKDIR ?= mkdir -p
+ INSTALL ?= install
+@@ -35,15 +35,15 @@ keys-%.c: utils/key2pub.py $(PUBKEY_DIR)/$(wildcard *.pem)
  
  crda: keys-ssl.c keys-gcrypt.c reglib.o crda.o
  	$(NQ) '  LD  ' $@
 -	$(Q)$(CC) $(CFLAGS) $(LDFLAGS) `pkg-config --libs libnl-1` -o $@ reglib.o crda.o
-+	$(Q)$(CC) $(CFLAGS) `pkg-config --libs libnl-1` -o $@ reglib.o crda.o $(LDFLAGS)
++	$(Q)$(CC) $(CFLAGS) $(LDFLAGS) -o $@ reglib.o crda.o `pkg-config --libs libnl-1` $(LDLIBS)
  
  regdbdump: keys-ssl.c keys-gcrypt.c reglib.o regdbdump.o
  	$(NQ) '  LD  ' $@
 -	$(Q)$(CC) $(CFLAGS) $(LDFLAGS) -o $@ reglib.o regdbdump.o
-+	$(Q)$(CC) $(CFLAGS) -o $@ reglib.o regdbdump.o $(LDFLAGS)
++	$(Q)$(CC) $(CFLAGS) $(LDFLAGS) -o $@ reglib.o regdbdump.o $(LDLIBS)
  
  intersect: keys-ssl.c keys-gcrypt.c reglib.o intersect.o
  	$(NQ) '  LD  ' $@
 -	$(Q)$(CC) $(CFLAGS) $(LDFLAGS) -o $@ reglib.o intersect.o
-+	$(Q)$(CC) $(CFLAGS) -o $@ reglib.o intersect.o $(LDFLAGS)
++	$(Q)$(CC) $(CFLAGS) $(LDFLAGS) -o $@ reglib.o intersect.o $(LDLIBS)
  
  verify: $(REG_BIN) regdbdump
  	$(NQ) '  CHK  $(REG_BIN)'
