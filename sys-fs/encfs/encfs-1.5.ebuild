@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.5.ebuild,v 1.3 2008/11/16 17:31:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.5.ebuild,v 1.4 2008/12/01 20:35:24 bluebird Exp $
 
 inherit eutils
 
@@ -8,9 +8,9 @@ MY_P="${P}-2"
 
 DESCRIPTION="Encrypted Filesystem module for Linux"
 SRC_URI="http://encfs.googlecode.com/files/${MY_P}.tgz"
-HOMEPAGE="http://arg0.net/encfs"
+HOMEPAGE="http://www.arg0.net/encfs"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~sparc x86"
+KEYWORDS="amd64 sparc x86"
 SLOT="0"
 IUSE="nls"
 
