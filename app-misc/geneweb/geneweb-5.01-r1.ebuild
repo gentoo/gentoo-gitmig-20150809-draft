@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-5.01-r1.ebuild,v 1.4 2008/11/22 15:18:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-5.01-r1.ebuild,v 1.5 2008/12/01 09:06:55 tupone Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ KEYWORDS="amd64 x86"
 IUSE="+ocamlopt"
 
 DEPEND="dev-lang/ocaml
-	dev-ml/camlp5"
+	dev-ml/camlp5
+	!net-p2p/ghostwhitecrab"
 
 pkg_setup() {
 	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt
