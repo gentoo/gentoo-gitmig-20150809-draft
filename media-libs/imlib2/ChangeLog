@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.87 2008/12/01 06:56:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.88 2008/12/01 11:12:24 armin76 Exp $
+
+  01 Dec 2008; Raúl Porcel <armin76@gentoo.org> imlib2-1.4.2-r1.ebuild:
+  alpha/arm/ia64/sparc/sh/x86 stable wrt #244808
 
   01 Dec 2008; Jeroen Roovers <jer@gentoo.org> imlib2-1.4.2-r1.ebuild:
   Stable for HPPA (bug #248057).
