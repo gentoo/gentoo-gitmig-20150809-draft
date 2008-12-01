@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.32.0_alpha1.ebuild,v 1.2 2008/11/29 18:19:48 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.32.1.ebuild,v 1.1 2008/12/01 23:18:55 coldwind Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -127,8 +127,8 @@ src_test() {
 
 	# some people don't have userpriv. they also suck.
 	if [[ `id -u` == 0 ]] ; then
-		export PALUDIS_REDUCED_UID=`id -u paludisbuild`
-		export PALUDIS_REDUCED_GID=`id -g paludisbuild`
+		ewarn "Can't currently run tests as root"
+		return
 	fi
 
 	if ! emake check ; then
