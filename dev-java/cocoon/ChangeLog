@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/cocoon
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/ChangeLog,v 1.14 2008/09/13 22:55:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cocoon/ChangeLog,v 1.15 2008/12/01 21:50:17 betelgeuse Exp $
+
+  01 Dec 2008; Petteri Räty <betelgeuse@gentoo.org> cocoon-2.1.11.ebuild:
+  Fix javadoc installation and raise memory limit. Fixes bug #245006. Thanks
+  to Daniel Solano <gentoo@sattvik.com>.
 
   13 Sep 2008; Vlastimil Babka <caster@gentoo.org> -files/cocoon.properties,
   -files/web.xml, -cocoon-2.1.6.ebuild:
