@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-0.9.ebuild,v 1.1 2008/12/01 19:31:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-0.9.ebuild,v 1.2 2008/12/01 19:35:37 ssuominen Exp $
 
 inherit fdo-mime
 
@@ -27,7 +27,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS README
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
 
 pkg_postinst() {
