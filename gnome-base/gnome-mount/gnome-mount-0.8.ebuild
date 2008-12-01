@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8.ebuild,v 1.1 2008/11/27 22:06:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8.ebuild,v 1.2 2008/12/01 22:29:21 eva Exp $
 
 inherit eutils gnome2
 
@@ -40,6 +40,6 @@ src_unpack() {
 
 	use kernel_FreeBSD && epatch "${FILESDIR}/${PN}-0.6-freebsd-schemas.patch"
 
-	# bug #?
+	# Include missing locale.h, bug #176035
 	epatch "${FILESDIR}/${PN}-0.6-include-locale-h.patch"
 }

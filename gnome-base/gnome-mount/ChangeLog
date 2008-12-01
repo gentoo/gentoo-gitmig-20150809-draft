@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-mount
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.50 2008/11/27 22:06:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/ChangeLog,v 1.51 2008/12/01 22:29:21 eva Exp $
+
+  01 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-mount-0.4-r5.ebuild, gnome-mount-0.8.ebuild:
+  Update reference on the patch in 0.8, close bug #176035. remove old
+  revision.
 
 *gnome-mount-0.8 (27 Nov 2008)
 
