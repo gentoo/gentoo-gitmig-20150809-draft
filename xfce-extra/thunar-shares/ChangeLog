@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/thunar-shares
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares/ChangeLog,v 1.1 2008/12/01 20:43:08 angelos Exp $
+
+*thunar-shares-0.16 (01 Dec 2008)
+
+  01 Dec 2008; Christoph Mende <angelos@gentoo.org>
+  +thunar-shares-0.16.ebuild:
+  Initial import, bug 248265
+
