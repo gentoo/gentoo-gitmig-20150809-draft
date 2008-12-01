@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.92 2008/11/30 01:36:44 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.93 2008/12/01 15:21:15 fordfrog Exp $
+
+  01 Dec 2008; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.5-r1.ebuild:
+  Netbeans still depends on com.sun packages so added dependency on
+  java-virtuals/jdk-with-com-sun.
 
   30 Nov 2008; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.5-r1.ebuild:
   Fixed default NETBEANS_MODULES dependency (bug #249204).
