@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.249 2008/11/13 19:37:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.250 2008/12/01 13:03:31 eva Exp $
+
+  01 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org> ChangeLog:
+  New version for GNOME 2.24. Message templates, webdav/google contacts
+  plugin, custom header support while sending mails, enhanced calendar
+  memory usage, sqlite based message summary, bonobo-less composer and quote
+  support.
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> evolution-2.22.3.1.ebuild:
   Marking evolution-2.22.3.1 ppc64 stable for bug 236971
