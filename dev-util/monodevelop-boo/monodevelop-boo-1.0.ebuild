@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-boo/monodevelop-boo-1.0.ebuild,v 1.1 2008/06/01 14:54:12 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-boo/monodevelop-boo-1.0.ebuild,v 1.2 2008/12/01 09:08:55 flameeyes Exp $
 
 inherit autotools eutils mono multilib
 
@@ -24,7 +24,7 @@ MAKEOPTS="-j1 ${MAKEOPTS}"
 
 pkg_setup() {
 	if ! built_with_use dev-util/monodevelop cxx; then
-		eerror "Please re-emerge dev-util/monodeveop with the cxx USE flag set"
+		eerror "Please re-emerge dev-util/monodevelop with the cxx USE flag set"
 		die "monodevelop-boo needs the cxx flag set"
 	fi
 }
