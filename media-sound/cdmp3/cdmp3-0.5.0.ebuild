@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/cdmp3-0.5.0.ebuild,v 1.7 2008/11/30 15:55:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/cdmp3-0.5.0.ebuild,v 1.8 2008/12/02 20:55:41 ranger Exp $
 
 DESCRIPTION="Conveniently rip audio CDs to MP3 or OGG files."
 HOMEPAGE="http://www.roland-riegel.de/cdmp3/index.html"
@@ -8,7 +8,7 @@ SRC_URI="http://www.roland-riegel.de/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
