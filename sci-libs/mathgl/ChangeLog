@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/mathgl
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.1 2008/12/02 16:23:04 grozin Exp $
+
+*mathgl-1.8 (02 Dec 2008)
+
+  02 Dec 2008; Andrey Grozin <grozin@gentoo.org> +metadata.xml,
+  +mathgl-1.8.ebuild:
+  Initial import, based on ebuild in the science overlay
+
