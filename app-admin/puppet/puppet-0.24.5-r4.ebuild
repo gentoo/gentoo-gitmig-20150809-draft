@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.5-r4.ebuild,v 1.1 2008/10/06 16:30:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-0.24.5-r4.ebuild,v 1.2 2008/12/02 16:46:09 matsuu Exp $
 
 inherit elisp-common eutils ruby
 
@@ -39,6 +39,9 @@ SITEFILE="50${PN}-mode-gentoo.el"
 pkg_setup() {
 	built_with_use virtual/ruby ipv6 || \
 		die "Ruby must be built with ipv6 support, otherwise puppet will not be able to run"
+
+	built_with_use virtual/ruby ssl || \
+		die "Ruby must be built with ssl support, otherwise puppet will not be able to run"
 
 	if use rrdtool && \
 		has_version '>=net-analyzer/rrdtool-1.2.23' && \
