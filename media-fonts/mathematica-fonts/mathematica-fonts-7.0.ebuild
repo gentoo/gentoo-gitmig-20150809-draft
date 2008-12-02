@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-7.0.ebuild,v 1.1 2008/12/02 07:59:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-7.0.ebuild,v 1.2 2008/12/02 14:54:11 pva Exp $
 
 inherit font
 
@@ -24,13 +24,19 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo
-	elog "To make Mozilla happy, you should change font.mathfont-family:"
-	elog "1. Enter the URL about:config"
-	elog "2. First, check to see if the pref exists"
-	elog "   If not, right-click and select New > String"
-	elog "   The name of the preference is font.mathfont-family"
-	elog "3. You should set the value to (right-click to modify):"
-	elog "   CMSY10, CMEX10, Mathematica1, Mathematica2, Mathematica4, MT Extra, Standard Symbols L"
-	echo
+	einfo
+	ewarn "Previously we suggested to set fonts in Mozilla or Firefox browsers."
+	ewarn "If you did that, please, revert back since now everything should work"
+	ewarn "out of box and no manual configuration required."
+	einfo
+	elog "To reset open web browser, enter the URL 'about:config', 'Filter' for"
+	elog "'mathfont', and 'Reset' to the default value through the context menu on"
+	elog "the preference."
+	elog
+	elog "Although if you still wish to use this fonts for MathML in web brower, then"
+	elog "set font.mathfont-family to:"
+	elog "Mathematica1, Mathematica2, Mathematica3, Mathematica4, Mathematica5, Mathematica6, Mathematica7"
+	elog
+	elog "Test your fonts at http://www.mozilla.org/projects/mathml/start.xhtml"
+	einfo
 }
