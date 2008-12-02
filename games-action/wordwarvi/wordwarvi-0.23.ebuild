@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/wordwarvi-0.23.ebuild,v 1.1 2008/12/02 21:46:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/wordwarvi-0.23.ebuild,v 1.2 2008/12/02 21:54:16 mr_bones_ Exp $
 
 EAPI=1
 inherit eutils games
@@ -16,7 +16,7 @@ IUSE="vorbis"
 
 RDEPEND="x11-libs/gtk+:2
 	vorbis? ( media-libs/libvorbis
-		>=media-libs/portaudio-0.19 )"
+		>=media-libs/portaudio-19_pre1 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
