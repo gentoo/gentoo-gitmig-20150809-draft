@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/oldstandard
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oldstandard/ChangeLog,v 1.1 2008/12/02 19:59:09 pva Exp $
+
+*oldstandard-2.0.2 (02 Dec 2008)
+
+  02 Dec 2008; Peter Volkov <pva@gentoo.org> +metadata.xml,
+  +oldstandard-2.0.2.ebuild:
+  Initial import, bug #211266, thank Roman V. Prikhodchenko for ebuild.
+
