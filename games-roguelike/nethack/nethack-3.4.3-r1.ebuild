@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.22 2008/06/05 19:55:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.23 2008/12/02 02:56:50 jer Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}-src.tgz"
 
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ppc sparc x86 ~x86-fbsd"
 IUSE="X qt3"
 
 RDEPEND="virtual/libc
