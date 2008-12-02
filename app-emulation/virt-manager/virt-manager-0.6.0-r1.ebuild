@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.6.0.ebuild,v 1.2 2008/11/25 05:06:50 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.6.0-r1.ebuild,v 1.1 2008/12/02 03:38:10 marineam Exp $
 
 # Stop gnome2.eclass from doing stuff on USE=debug
 GCONF_DEBUG="no"
@@ -45,4 +45,10 @@ pkg_setup() {
 		eerror "$msg"
 		die "$msg"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-read-only-fallback.patch"
 }

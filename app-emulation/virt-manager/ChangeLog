@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.9 2008/11/25 05:06:50 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.10 2008/12/02 03:38:10 marineam Exp $
+
+*virt-manager-0.6.0-r1 (02 Dec 2008)
+
+  02 Dec 2008; Michael Marineau <marineam@gentoo.org>
+  +files/virt-manager-0.6.0-read-only-fallback.patch,
+  -virt-manager-0.6.0.ebuild, +virt-manager-0.6.0-r1.ebuild:
+  Add patch to allow user access without policykit.
 
   25 Nov 2008; Michael Marineau <marineam@gentoo.org>
   virt-manager-0.6.0.ebuild:
