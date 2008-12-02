@@ -7,7 +7,3 @@ dev-java/ibm-jre-bin -nsplugin
 
 # needs sys-process/audit which is masked by this profile
 sys-libs/pam audit
-
-# Raúl Porcel <armin76@gentoo.org> (02 Dec 2008)
-media-libs/realcodecs win32codecs
-
