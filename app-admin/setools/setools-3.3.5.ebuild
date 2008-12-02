@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.1.ebuild,v 1.1 2007/08/27 02:50:31 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.5.ebuild,v 1.1 2008/12/02 20:11:13 pebenito Exp $
 
 inherit java-pkg-opt-2
 
@@ -48,8 +48,6 @@ RDEPEND=">=sys-libs/libsepol-1.16.3
 	)"
 
 src_compile() {
-	cd ${S}
-
 	econf \
 		--with-java-prefix=${JAVA_HOME} \
 		--disable-selinux-check \
@@ -60,10 +58,9 @@ src_compile() {
 		$(use_enable X gui) \
 		$(use_enable debug)
 
-	emake || die
+	make || die
 }
 
 src_install() {
-	cd ${S}
-	make DESTDIR=${D} install || die "install failed."
+	make DESTDIR="${D}" install || die "install failed."
 }

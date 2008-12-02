@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/setools
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.56 2008/03/31 23:25:48 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.57 2008/12/02 20:11:13 pebenito Exp $
+
+*setools-3.3.5 (02 Dec 2008)
+
+  02 Dec 2008; Chris PeBenito <pebenito@gentoo.org> setools-2.4.ebuild,
+  -setools-3.3.1.ebuild, -setools-3.3.3.ebuild, +setools-3.3.5.ebuild:
+  New upstream bugfix release for libsepol 2.x additional features.
+  Cleanup old ebuilds.
 
 *setools-3.3.4 (31 Mar 2008)
 
