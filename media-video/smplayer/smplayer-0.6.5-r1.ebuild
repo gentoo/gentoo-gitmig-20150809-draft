@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.4.ebuild,v 1.2 2008/11/06 00:35:00 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.5-r1.ebuild,v 1.1 2008/12/02 13:14:34 yngwin Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -15,7 +15,8 @@ IUSE="debug"
 DEPEND="|| ( x11-libs/qt-gui:4
 			=x11-libs/qt-4.3* )"
 RDEPEND="${DEPEND}
-	>media-video/mplayer-1.0_rc1[png,srt]"
+	|| ( >media-video/mplayer-1.0_rc1[png,srt]
+		>=media-video/mplayer-1.0_rc2_p28058[ass,png] )"
 
 LANGS="bg ca cs de en_US es eu fi fr gl hu it ja ka ko ku mk nl pl pt_BR pt_PT sk sr sv tr zh_CN zh_TW"
 NOLONGLANGS="ar_SY el_GR ro_RO ru_RU sl_SI uk_UA"
@@ -85,4 +86,8 @@ src_install() {
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 	prepalldocs
+
+	einfo "Note that the default configuration files location has changed"
+	einfo "since 0.6.4. You may want to move your existing configuration:"
+	einfo "mv ~/.smplayer ~/.config/smplayer"
 }

@@ -1,6 +1,13 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.48 2008/11/13 20:52:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.49 2008/12/02 13:14:34 yngwin Exp $
+
+*smplayer-0.6.5-r1 (02 Dec 2008)
+
+  02 Dec 2008; Ben de Groot <yngwin@gentoo.org> -smplayer-0.6.3.ebuild,
+  -smplayer-0.6.4.ebuild, +smplayer-0.6.5-r1.ebuild:
+  Change srt useflag to ass useflag for >=media-video/mplayer-1.0_rc2_p28058
+  and remove a couple of old ebuilds. Fixes bug 249588.
 
   13 Nov 2008; Ben de Groot <yngwin@gentoo.org> smplayer-0.6.5.ebuild:
   Add einfo about moved config file location
