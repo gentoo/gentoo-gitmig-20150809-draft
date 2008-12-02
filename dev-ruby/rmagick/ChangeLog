@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.122 2008/11/30 16:48:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.123 2008/12/02 06:55:19 jer Exp $
+
+  02 Dec 2008; Jeroen Roovers <jer@gentoo.org> rmagick-2.6.0.ebuild:
+  Stable for HPPA (bug #249393).
 
   30 Nov 2008; Markus Meier <maekke@gentoo.org> rmagick-1.15.15.ebuild,
   rmagick-2.6.0.ebuild:
