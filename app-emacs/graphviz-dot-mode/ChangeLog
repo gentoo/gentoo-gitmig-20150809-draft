@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/graphviz-dot-mode
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/ChangeLog,v 1.6 2008/11/02 16:30:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/ChangeLog,v 1.7 2008/12/02 07:12:46 ulm Exp $
+
+  02 Dec 2008; Ulrich Mueller <ulm@gentoo.org>
+  files/50graphviz-dot-mode-gentoo.el:
+  Add autoloading to site-init file.
 
 *graphviz-dot-mode-0.3.4 (02 Nov 2008)
 
