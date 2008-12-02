@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2-r1.ebuild,v 1.14 2008/09/24 08:29:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2-r1.ebuild,v 1.15 2008/12/02 20:38:20 ranger Exp $
 
 inherit eutils libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"
 SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 IUSE="oss mmx alsa xv altivec"
 
