@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.6.0-r1.ebuild,v 1.1 2008/10/10 12:31:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.6.0-r1.ebuild,v 1.2 2008/12/02 06:17:27 ssuominen Exp $
 
 EAPI=2
 
@@ -17,7 +17,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="debug djconsole hifieq ladspa recording shout +vinylcontrol"
 
-# TODO. It bundles libs, like samplerate, why?
 RDEPEND="media-libs/mesa
 	media-libs/libmad
 	media-libs/libid3tag
@@ -45,7 +44,7 @@ src_unpack() {
 }
 
 src_configure() {
-	local myconf="optimize=0 ffmpeg=0 script=0 prefix=/usr"
+	myconf="optimize=0 ffmpeg=0 script=0 prefix=/usr"
 
 	use djconsole && myconf+=" djconsole=1" || myconf+=" djconsole=0"
 	use hifieq && myconf+=" hifieq=1" || myconf+=" hifieq=0"
