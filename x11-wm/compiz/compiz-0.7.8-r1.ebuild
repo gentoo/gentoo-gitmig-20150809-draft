@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.7.8.ebuild,v 1.4 2008/12/02 16:46:31 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.7.8-r1.ebuild,v 1.1 2008/12/02 16:46:31 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -54,7 +54,12 @@ DEPEND="
 		)
 		dev-libs/dbus-qt3-old
 	)
-	kde4? (	kde-base/kwin:4.1 )
+	kde4? (
+		|| (
+			kde-base/kwin:4.2
+			kde-base/kwin:live
+		)
+	)
 	svg? (
 		>=gnome-base/librsvg-2.14.0:2
 		>=x11-libs/cairo-1.0
@@ -72,6 +77,7 @@ DEPEND="${DEPEND}
 
 src_prepare() {
 
+	use kde4 &&	epatch "${FILESDIR}/${PN}-framesvg.patch"
 	use gnome || {
 		epatch "${FILESDIR}"/${PN}-no-gconf.patch
 		ln -s "${ROOT}"/usr/share/aclocal/gconf-2.m4 acinclude.m4
