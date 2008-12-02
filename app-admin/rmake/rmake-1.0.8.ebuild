@@ -1,6 +1,6 @@
-# Copyright 2006-2007 Gentoo Foundation
+# Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/rmake-1.0.8.ebuild,v 1.1 2007/04/24 21:24:05 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/rmake-1.0.8.ebuild,v 1.2 2008/12/02 17:14:46 jmbsvicetto Exp $
 
 inherit eutils
 
@@ -22,17 +22,17 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
-	chmod 04755 ${D}/usr/libexec/rmake/chroothelper
-	for x in ${D}/var/{rmake,{log,lib,run}/rmake} ${D}/{etc,srv}/rmake;do
+	make DESTDIR="${D}" install || die "install failed"
+	chmod 04755 "${D}/usr/libexec/rmake/chroothelper"
+	for x in "${D}/var/{rmake,{log,lib,run}/rmake}" "${D}/{etc,srv}/rmake"; do
 		mkdir -p $x
 		chown rmake:rmake $x
 		touch ${x}/.keep
 	done
-	chmod 700 ${D}/var/rmake
+	chmod 700 "${D}/var/rmake"
 	# replace with updstream-provided in next release... see
 	# https://issues.rpath.com/browse/RMK-242
-	doinitd ${FILESDIR}/rmake
+	doinitd "${FILESDIR}/rmake"
 }
 
 pkg_setup() {
