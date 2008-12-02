@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/wmget-0.6.0.ebuild,v 1.8 2008/01/16 01:17:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/wmget-0.6.0.ebuild,v 1.9 2008/12/02 10:42:35 s4t4n Exp $
 
 inherit toolchain-funcs
 
@@ -26,6 +26,9 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	sed -i -e "s:ar rc:$(tc-getAR) rc:" "${S}"/dockapp/Makefile
+
+	#Fix LDFLAGS ordering for bug #248641
+	sed -i 's/$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS) $(DALIB) -o $@/$(CC) $(CFLAGS) $(OBJS) $(DALIB) -o $@ $(LDFLAGS)/' "${S}"/Makefile
 }
 
 src_compile() {
