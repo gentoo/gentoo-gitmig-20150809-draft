@@ -28,7 +28,7 @@
  wmSun.o: wmSun_master.xpm wmSun_mask.xbm 
  wmSun:	$(OBJS) 
 -	$(CC) $(COPTS) $(SYSTEM) -lm -o wmSun $^ $(INCDIR) $(LIBDIR) $(LIBS)
-+	$(CC) $(CFLAGS) -lm -o wmSun $^ $(INCDIR) -L$(LIBDIR) $(LDFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) -o wmSun $^ $(INCDIR) -L$(LIBDIR) $(LDFLAGS) $(LIBS) -lm
  
  clean:
  	for i in $(OBJS) ; do \
