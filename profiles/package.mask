@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9237 2008/12/02 20:22:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9238 2008/12/02 20:35:40 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -29,7 +29,7 @@
 
 #--- END OF EXAMPLES ---
 
-# Samuli Suominen <drac@gentoo.org> (02 Dec 2008)
+# Samuli Suominen <ssuominen@gentoo.org> (02 Dec 2008)
 # Masked by treecleaners for bugs 88334, 244190, 245408 and 245409.
 # Removed in ~60 days.
 x11-libs/xview
