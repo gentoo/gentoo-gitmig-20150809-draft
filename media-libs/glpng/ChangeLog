@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/glpng
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glpng/ChangeLog,v 1.2 2008/12/02 01:30:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glpng/ChangeLog,v 1.3 2008/12/02 13:54:49 scarabeus Exp $
+
+*glpng-1.45-r1 (02 Dec 2008)
+
+  02 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org> -files/Makefile,
+  -glpng-1.45.ebuild, +glpng-1.45-r1.ebuild:
+  Revision bump. Use own created cmakescript instead of patching up
+  Makefile. Get rid of problematic one. Add ppc keyword.
 
   02 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org> files/Makefile:
   Update Makefile and make default LDFLAGS in it.
