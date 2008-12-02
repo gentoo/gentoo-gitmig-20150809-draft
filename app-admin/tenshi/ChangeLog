@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.53 2008/06/11 12:48:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.54 2008/12/02 20:46:54 hncaldwell Exp $
+
+*tenshi-0.10-r3 (02 Dec 2008)
+
+  02 Dec 2008; Heath Caldwell <hncaldwell@gentoo.org>
+  +files/tenshi-0.10-solo-queue-escalation.patch,
+  +files/tenshi-0.10-warn-logfile.patch, metadata.xml,
+  +tenshi-0.10-r3.ebuild:
+  Add tenshi-0.10-r3 with solo-queue-escalation and warn-logfile patches
+  (fixes bug #243082)
 
 *tenshi-0.10-r2 (11 Jun 2008)
 
