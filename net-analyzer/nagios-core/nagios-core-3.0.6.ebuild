@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.5-r1.ebuild,v 1.1 2008/11/28 20:27:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.6.ebuild,v 1.1 2008/12/02 17:48:30 dertobi123 Exp $
 
 EAPI="1"
 
@@ -9,8 +9,7 @@ inherit eutils depend.apache toolchain-funcs
 MY_P=${PN/-core}-${PV}
 DESCRIPTION="Nagios Core - Check daemon, CGIs, docs"
 HOMEPAGE="http://www.nagios.org/"
-SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz
-	mirror://gentoo/${MY_P}-CVE-2008-5028.patch.bz2"
+SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -49,8 +48,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${WORKDIR}/${MY_P}-CVE-2008-5028.patch"
 
 	local strip="$(echo '$(MAKE) strip-post-install')"
 	sed -i -e "s:${strip}::" {cgi,base}/Makefile.in || die "sed failed in Makefile.in"
