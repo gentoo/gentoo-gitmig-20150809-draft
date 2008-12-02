@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9233 2008/12/02 05:47:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9234 2008/12/02 16:43:21 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -28,6 +28,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (02 Dec 2008)
+# Added patch to enable compiz to build with the snapshots for KDE 4.2 /
+# live ebuilds. This revision is masked until 4.2 is added to the tree
+=x11-wm/compiz-0.7.8-r1
 
 # Jeremy Olexa <darkside@gentoo.org> (02 Dec 2008)
 # Pending removal in 60 days. Doesn't work with current stable gcc and dead
