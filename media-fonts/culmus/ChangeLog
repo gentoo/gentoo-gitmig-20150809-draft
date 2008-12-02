@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.27 2008/11/13 02:52:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.28 2008/12/02 19:20:29 pva Exp $
+
+*culmus-0.102-r1 (02 Dec 2008)
+
+  02 Dec 2008; Peter Volkov <pva@gentoo.org> +culmus-0.102-r1.ebuild:
+  Added type1 David fonts, bug #247782, thank Guy Rutenberg for report. Also
+  added anka* fancy fonts.
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> culmus-0.101-r2.ebuild:
   Marking culmus-0.101-r2 ~ppc64 for bug 168331
