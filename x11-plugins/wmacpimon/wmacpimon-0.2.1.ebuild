@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpimon/wmacpimon-0.2.1.ebuild,v 1.7 2008/06/29 13:12:18 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmacpimon/wmacpimon-0.2.1.ebuild,v 1.8 2008/12/02 11:29:52 s4t4n Exp $
 
 inherit eutils
 
@@ -27,6 +27,9 @@ src_unpack() {
 	# wmacpimon.prc to /var/tmp/
 	cd "${S}"
 	epatch "${FILESDIR}"/wmacpimon.c.patch
+
+	# fix LDFLAGS ordering. See bug #248618.
+	epatch "${FILESDIR}"/Makefile.patch
 }
 
 src_compile() {
