@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.4-r1.ebuild,v 1.8 2008/06/04 18:21:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.4-r1.ebuild,v 1.9 2008/12/02 06:09:29 vapier Exp $
 
 inherit eutils autotools
 
@@ -27,7 +27,7 @@ fi
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="escreen etwin minimal mmx sse2 unicode"
+IUSE="escreen minimal mmx sse2 unicode"
 
 DEPEND="x11-libs/libX11
 	x11-libs/libXmu
@@ -38,7 +38,6 @@ DEPEND="x11-libs/libX11
 	x11-proto/xproto
 	>=x11-libs/libast-0.6.1
 	media-libs/imlib2
-	etwin? ( app-misc/twin )
 	escreen? ( app-misc/screen )"
 
 if [[ ${PV} == "9999" ]] ; then
@@ -71,7 +70,6 @@ src_compile() {
 	export TIC="true"
 	econf \
 		$(use_enable escreen) \
-		$(use_enable etwin) \
 		--with-imlib \
 		--enable-trans \
 		$(use_enable mmx) \
