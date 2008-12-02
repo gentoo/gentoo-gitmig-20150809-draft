@@ -1,4 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.112 2008/10/24 15:42:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.113 2008/12/02 17:35:24 ssuominen Exp $
+
+# Samuli Suominen <ssuominen@gentoo.org>
+# # Media cannot be tested for MIPS at the moment.
+mpeg
+portaudio
 
 # Ilya A. Volynets-Evenbakh <iluxa@gentoo.org> (20 Jun 2008)
 # Mask out postgres use flags, as it's not currently working on MIPS
