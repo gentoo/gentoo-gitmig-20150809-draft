@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysrqd/sysrqd-9.ebuild,v 1.2 2007/04/30 20:03:39 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysrqd/sysrqd-9.ebuild,v 1.3 2008/12/02 17:06:04 jmbsvicetto Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,8 +15,8 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-config.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-config.patch"
 }
 
 src_compile() {
@@ -26,7 +26,7 @@ src_compile() {
 src_install() {
 
 	dosbin sysrqd
-	newinitd ${FILESDIR}/sysrqd.init sysrqd
+	newinitd "${FILESDIR}/sysrqd.init sysrqd"
 
 	local bindip='127.0.0.1' secret
 	declare -i secret
