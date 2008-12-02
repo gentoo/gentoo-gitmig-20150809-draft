@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.94 2008/11/30 15:32:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.95 2008/12/02 20:26:24 fauli Exp $
+
+*claws-mail-3.6.1-r1 (02 Dec 2008)
+
+  02 Dec 2008; Christian Faulhammer <fauli@gentoo.org> metadata.xml,
+  +claws-mail-3.6.1-r1.ebuild:
+  until now S/MIME support was built automatically, now it is selectable
+  by USE=smime
 
   30 Nov 2008; Raúl Porcel <armin76@gentoo.org> claws-mail-3.6.1.ebuild:
   alpha stable wrt #248760
