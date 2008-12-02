@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.28 2008/11/17 09:01:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.29 2008/12/02 23:23:21 voyageur Exp $
+
+*filezilla-3.1.6 (02 Dec 2008)
+
+  02 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +filezilla-3.1.6.ebuild:
+  Version bump, automatically refresh remote directory listing if queue
+  finishes successfully, bugfixes
 
 *filezilla-3.1.5.1 (17 Nov 2008)
 
