@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift-C/autopano-sift-C-2.5.0.ebuild,v 1.3 2008/11/22 23:40:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift-C/autopano-sift-C-2.5.0.ebuild,v 1.4 2008/12/02 12:56:11 chainsaw Exp $
 
 inherit cmake-utils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/hugin/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~ppc"
 IUSE=""
 
 DEPEND="
