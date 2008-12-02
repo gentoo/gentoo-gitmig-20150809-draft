@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.2.ebuild,v 1.4 2008/11/29 12:23:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.2.ebuild,v 1.5 2008/12/02 15:58:59 eva Exp $
 
 inherit eutils gnome2 multilib python
 
@@ -123,7 +123,9 @@ src_compile() {
 	# FIXME: why does it need write access here, probably need to set up a fake
 	# home in /var/tmp like other pkgs do
 
-	addpredict "/root/.gnome2"
+	addpredict "$(unset HOME; echo ~)/.gconf"
+	addpredict "$(unset HOME; echo ~)/.gconfd"
+	addpredict "$(unset HOME; echo ~)/.gnome2"
 
 	gnome2_src_compile
 }

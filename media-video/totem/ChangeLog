@@ -1,6 +1,10 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.228 2008/11/29 12:23:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.229 2008/12/02 15:58:59 eva Exp $
+
+  30 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org> totem-2.24.2.ebuild,
+  totem-2.24.3.ebuild:
+  Fix sandbox violation, bug #243040.
 
 *totem-2.24.3 (29 Nov 2008)
 
