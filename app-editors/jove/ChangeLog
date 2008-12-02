@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/jove
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.22 2008/10/24 06:23:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.23 2008/12/02 20:17:37 ssuominen Exp $
+
+  02 Dec 2008; <ssuominen@gentoo.org> jove-4.16.0.70.3.ebuild,
+  jove-4.16.0.70.3.1.ebuild:
+  Remove deprecated XFree86 -time library support, xview, from jove ebuilds
+  wrt #88334.
 
   24 Oct 2008; Ulrich Mueller <ulm@gentoo.org> jove-4.16.0.70.3.1.ebuild:
   Honour CC variable, fixes bug 243562.
