@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.36 2008/12/01 15:41:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.37 2008/12/02 13:03:27 scarabeus Exp $
+
+  02 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org>
+  files/foo2zjs-20081129-Makefile.patch:
+  Fix install when using foomaticdb.
 
 *foo2zjs-20081129 (29 Nov 2008)
 

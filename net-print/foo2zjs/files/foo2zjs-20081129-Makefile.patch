@@ -1,6 +1,6 @@
-diff -urN foo2zjs/icc2ps/Makefile foo2zjs.new/icc2ps/Makefile
---- foo2zjs/icc2ps/Makefile	2007-11-27 22:13:53.000000000 +0100
-+++ foo2zjs.new/icc2ps/Makefile	2008-11-29 19:13:43.000000000 +0100
+diff -urN foo2zjs.orig/icc2ps/Makefile foo2zjs/icc2ps/Makefile
+--- foo2zjs.orig/icc2ps/Makefile	2007-11-27 22:13:53.000000000 +0100
++++ foo2zjs/icc2ps/Makefile	2008-12-02 13:51:12.000000000 +0100
 @@ -1,11 +1,11 @@
  UNAME := $(shell uname)
 -PREFIX=	/usr
@@ -15,9 +15,9 @@ diff -urN foo2zjs/icc2ps/Makefile foo2zjs.new/icc2ps/Makefile
  INSTALL=install
  ifeq ($(UNAME),SunOS)
      INSTALL=/usr/ucb/install
-diff -urN foo2zjs/Makefile foo2zjs.new/Makefile
---- foo2zjs/Makefile	2008-09-23 15:56:20.000000000 +0200
-+++ foo2zjs.new/Makefile	2008-11-29 19:12:42.000000000 +0100
+diff -urN foo2zjs.orig/Makefile foo2zjs/Makefile
+--- foo2zjs.orig/Makefile	2008-09-23 15:56:20.000000000 +0200
++++ foo2zjs/Makefile	2008-12-02 14:00:42.000000000 +0100
 @@ -251,7 +251,7 @@
  endif
  
@@ -45,7 +45,15 @@ diff -urN foo2zjs/Makefile foo2zjs.new/Makefile
  	fi
  	#
  	# Install gamma correction files.  These are just templates,
-@@ -583,6 +584,7 @@
+@@ -570,6 +571,7 @@
+ 	#
+ 	# Remove obsolete foomatic database files from previous versions
+ 	#
++	mkdir -p $(FOODB)/opt/
+ 	rm -f $(FOODB)/opt/foo2zjs-Media.xml
+ 	rm -f $(FOODB)/opt/foo2zjs-PaperSize.xml
+ 	rm -f $(FOODB)/opt/foo2zjs-Source.xml
+@@ -583,6 +585,7 @@
  	# Install current database files
  	#
  	@if [ -d $(FOODB) ]; then \
@@ -53,7 +61,7 @@ diff -urN foo2zjs/Makefile foo2zjs.new/Makefile
  	    for dir in driver printer opt; do \
  		echo install -m 644 foomatic-db/$$dir/*.xml $(FOODB)/$$dir/; \
  		$(INSTALL) -c -m 644 foomatic-db/$$dir/*.xml $(FOODB)/$$dir/; \
-@@ -601,10 +603,10 @@
+@@ -601,10 +604,10 @@
  	#
  	# Clear foomatic cache and rebuild database if needed
  	#
@@ -68,7 +76,7 @@ diff -urN foo2zjs/Makefile foo2zjs.new/Makefile
  	    foomatic-combo-xml -O >overview.xml; \
  	fi
  
-@@ -736,13 +738,6 @@
+@@ -736,13 +739,6 @@
  	    done; \
  	    ppdmgr -u; \
  	elif [ -d $(PPD) ]; then \
@@ -82,7 +90,7 @@ diff -urN foo2zjs/Makefile foo2zjs.new/Makefile
              [ -d $(PPD)/foo2zjs ] || mkdir $(PPD)/foo2zjs; \
  	    cd PPD; \
  	    for ppd in *.ppd; do \
-@@ -789,10 +784,8 @@
+@@ -789,10 +785,8 @@
  	$(INSTALL) -c -m 755 hplj10xx_gui.tcl $(SHAREZJS)
  	
  
@@ -95,7 +103,7 @@ diff -urN foo2zjs/Makefile foo2zjs.new/Makefile
  
  install-hotplug-test:
  	#
-@@ -810,9 +803,6 @@
+@@ -810,9 +804,6 @@
  	#
  
  install-hotplug-prog:
@@ -105,7 +113,7 @@ diff -urN foo2zjs/Makefile foo2zjs.new/Makefile
  	[ -d $(USBDIR) ] || $(INSTALL) -d -m 755 $(USBDIR)/
  	$(INSTALL) -c -m 755 hplj1000 $(USBDIR)/
  	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hplj1005
-@@ -823,15 +813,12 @@
+@@ -823,15 +814,12 @@
  	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hpljP1007
  	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hpljP1008
  	ln -sf $(USBDIR)/hplj1000 $(USBDIR)/hpljP1505
@@ -127,7 +135,7 @@ diff -urN foo2zjs/Makefile foo2zjs.new/Makefile
  
  cups:	FRC
  	if [ -x /etc/init.d/cups ]; then \
-@@ -1223,7 +1210,6 @@
+@@ -1223,7 +1211,6 @@
  	$(INSTALL) -c -m 644 README $(DOCDIR)
  	$(INSTALL) -c -m 644 ChangeLog $(DOCDIR)
  
