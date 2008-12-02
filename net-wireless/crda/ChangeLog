@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.4 2008/12/02 11:09:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.5 2008/12/02 11:47:04 armin76 Exp $
+
+  02 Dec 2008; Raúl Porcel <armin76@gentoo.org> crda-0.9.5.ebuild:
+  Add ~x86 wrt #249606
 
 *crda-0.9.5 (02 Dec 2008)
 
