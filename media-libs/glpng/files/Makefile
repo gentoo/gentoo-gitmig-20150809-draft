@@ -12,6 +12,7 @@ LN?=		/bin/ln
 INSTALL_DATA?=	/bin/cp
 MKDIR?=		/bin/mkdir
 DESTDIR?=	/
+LDFLAGS?=	-Wl
 PREFIX=		${DESTDIR}/usr
 WRKSRC=		/src
 LOCALBASE= ./
