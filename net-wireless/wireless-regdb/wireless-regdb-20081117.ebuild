@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/wireless-regdb-20081117.ebuild,v 1.2 2008/12/02 11:46:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/wireless-regdb-20081117.ebuild,v 1.3 2008/12/02 13:22:53 chainsaw Exp $
 
 MY_P="wireless-regdb-master-${PV:0:4}-${PV:5:2}-${PV:6:2}"
 DESCRIPTION="Binary regulatory database for CRDA"
@@ -9,7 +9,7 @@ SRC_URI="http://wireless.kernel.org/download/wireless-regdb/${MY_P}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 DEPEND="dev-libs/openssl
 	dev-lang/python"
