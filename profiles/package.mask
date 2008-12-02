@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9235 2008/12/02 18:06:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9236 2008/12/02 19:49:07 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -754,7 +754,7 @@ media-sound/lastfmproxy
 =sys-apps/ucspi-tcp-0.88-r17
 =sys-process/daemontools-0.76-r6
 
-# Christian Faulhammer <opfer@gentoo.org> (01 Apr 2008)
+# Christian Faulhammer <fauli@gentoo.org> (01 Apr 2008)
 # Masked for security reasons: bug 215699
 <net-misc/ltsp-5
 
@@ -819,7 +819,7 @@ app-backup/mondo-rescue
 sys-apps/mindi
 sys-apps/mindi-busybox
 
-# Christian Faulhammer <opfer@gentoo.org> (11 Mar 2008)
+# Christian Faulhammer <fauli@gentoo.org> (11 Mar 2008)
 # masked for testing
 =app-portage/gatt-9999
 
@@ -1003,13 +1003,13 @@ net-misc/fsh
 dev-lang/entity
 
 # Ulrich Mueller <ulm@gentoo.org> (21 Dec 2007)
-# Christian Faulhammer <opfer@gentoo.org>
+# Christian Faulhammer <fauli@gentoo.org>
 # CVS snapshots, bug #185106
 =app-emacs/emacs-w3m-1.4.4_p*
 =app-emacs/wanderlust-2.15.5_pre*
 
 # Ulrich Mueller <ulm@gentoo.org> (21 Dec 2007)
-# Christian Faulhammer <opfer@gentoo.org>
+# Christian Faulhammer <fauli@gentoo.org>
 # Live SVN ebuilds
 ~app-emacs/gentoo-syntax-9999
 ~app-emacs/ngnus-9999
