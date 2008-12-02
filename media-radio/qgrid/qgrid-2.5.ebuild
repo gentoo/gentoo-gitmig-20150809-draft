@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qgrid/qgrid-2.5.ebuild,v 1.3 2005/08/11 00:41:07 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qgrid/qgrid-2.5.ebuild,v 1.4 2008/12/02 15:10:22 darkside Exp $
 
 inherit kde
 
@@ -14,3 +14,10 @@ LICENSE="GPL-2"
 IUSE=""
 
 need-kde 3
+
+src_install() {
+	kde_src_install
+
+	rm "${D}"/usr/doc -R
+	dohtml qgrid/docs/en/*
+}
