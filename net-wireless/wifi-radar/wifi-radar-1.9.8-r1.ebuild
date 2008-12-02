@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.8-r1.ebuild,v 1.4 2008/02/29 20:33:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.8-r1.ebuild,v 1.5 2008/12/02 10:22:22 s4t4n Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-python/pygtk-2.6.1
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
+	"cd ${S}"
 	epatch \
 		debian/patches/01atheros.dpatch \
 		debian/patches/02wpa_supp_args.dpatch

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.6-r1.ebuild,v 1.4 2008/02/29 20:33:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.9.ebuild,v 1.1 2008/12/02 10:22:22 s4t4n Exp $
 
 inherit eutils
 
@@ -9,11 +9,19 @@ HOMEPAGE="http://wifi-radar.systemimager.org/"
 SRC_URI="http://wifi-radar.systemimager.org/pub/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="svg"
 
 RDEPEND=">=dev-python/pygtk-2.6.1
-	>=net-wireless/wireless-tools-27-r1"
+	>=net-wireless/wireless-tools-27-r1
+	virtual/dhcpc"
+
+src_unpack()
+{
+	unpack ${A}
+	cd "${S}"
+	epatch debian/patches/01atheros.dpatch
+}
 
 src_install ()
 {
@@ -39,7 +47,11 @@ pkg_postinst()
 	echo
 	einfo "To use wifi-radar with a normal user (with sudo) add:"
 	einfo "%users   ALL = /usr/sbin/wifi-radar"
-	einfo ""
-	einfo "in your /etc/sudoers then launch wifi-radar.sh"
+	einfo "in your /etc/sudoers. Also, find the line saying:"
+	einfo "Defaults      env_reset"
+	einfo "and modify it as follows:"
+	einfo "Defaults      env_keep=DISPLAY"
+	echo
+	einfo "Then launch wifi-radar.sh"
 	echo
 }
