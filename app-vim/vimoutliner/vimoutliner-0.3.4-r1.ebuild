@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/vimoutliner-0.3.4.ebuild,v 1.2 2007/07/11 05:14:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/vimoutliner-0.3.4-r1.ebuild,v 1.1 2008/12/02 22:53:15 lack Exp $
 
 inherit vim-plugin
 
@@ -16,20 +16,21 @@ VIM_PLUGIN_MESSAGES="filetype"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	find ${S} -type f | xargs chmod a+r
+	cd "${S}"
+	sed -i -e '/^if exists/,/endif/d' ftdetect/vo_base.vim
+	find "${S}" -type f | xargs chmod a+r
 }
 
 src_install() {
-	cd ${S}
 	p=/usr/share/vim/vimfiles
 	for d in doc ftdetect ftplugin syntax ; do
 		dodir ${p}/${d}
-		cp -R ${d} ${D}/${p}/
+		cp -R ${d} "${D}"/${p}/
 	done
 
 	dodir ${p}/vimoutliner/plugins
-	cp -R add-ons/plugins ${D}/${p}/vimoutliner/
+	cp -R add-ons/plugins "${D}"/${p}/vimoutliner/
+	cp vimoutlinerrc "${D}"/${p}/
 
 	for d in scripts/* add-ons/scripts/* ; do
 		dobin ${d}
