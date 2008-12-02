@@ -1,6 +1,9 @@
 # ChangeLog for media-video/goggles
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/ChangeLog,v 1.21 2008/01/13 12:04:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/ChangeLog,v 1.22 2008/12/02 20:39:20 ranger Exp $
+
+  02 Dec 2008; Brent Baude <ranger@gentoo.org> goggles-0.9.1.ebuild:
+  Marking goggles-0.9.1 ~ppc64 for bug 249286
 
   13 Jan 2008; Alexis Ballier <aballier@gentoo.org> goggles-0.9.1.ebuild:
   add missing reswrap dep, bug #205571
