@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.6 2008/12/02 13:26:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.7 2008/12/02 17:03:21 ranger Exp $
+
+  02 Dec 2008; Brent Baude <ranger@gentoo.org> crda-0.9.5.ebuild:
+  Marking crda-0.9.5 ~ppc64 for bug 249606
 
   02 Dec 2008; <chainsaw@gentoo.org> crda-0.9.5.ebuild:
   Add ~ppc keyword based on PowerBook6,7 testing by Christian "papillon81"
