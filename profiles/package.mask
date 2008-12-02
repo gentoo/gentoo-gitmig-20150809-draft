@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9239 2008/12/02 20:41:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9240 2008/12/02 23:13:18 mrness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -60,11 +60,6 @@ app-emulation/xcopilot
 # Removed in 30 days at maintainer's request. No interest and doesn't work with
 # newer gcc versions. bug #249308
 kde-misc/kio_perldoc
-
-# Alin Năstac <mrness@gentoo.org> (01 Dec 2008)
-# This program is now part of >=net-dialup/linux-atm-2.5.0
-# To be removed by tree cleaners in 30 days.
-net-misc/br2684ctl
 
 # Ulrich Mueller <ulm@gentoo.org> (30 Nov 2008)
 # Depends on masked Emacs live CVS version; unmask after Emacs 23 release.
