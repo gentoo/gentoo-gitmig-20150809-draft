@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-DKIM
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.21 2008/11/20 16:13:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.22 2008/12/02 23:45:57 ranger Exp $
+
+  02 Dec 2008; Brent Baude <ranger@gentoo.org> Mail-DKIM-0.32.ebuild:
+  Marking Mail-DKIM-0.32 ppc64 for bug 235912
 
   20 Nov 2008; Jeroen Roovers <jer@gentoo.org> Mail-DKIM-0.32.ebuild:
   Marked ~hppa too (thanks to LuckyLuke).
