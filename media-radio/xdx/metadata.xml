@@ -3,7 +3,12 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<name>Default assignee for orphaned packages</name>
+		<email>tb@forth-ev.de</email>
+		<name>Thomas Beierlein</name>
+		<description>Proxy maintainer, please assign bugs</description>
+	</maintainer>
+	<maintainer>
+	  <email>darkside@gentoo.org</email>
+	  <description>Proxy committer, CC on bugs</description>
 	</maintainer>
 </pkgmetadata>

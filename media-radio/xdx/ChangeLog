@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/xdx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.14 2008/11/08 15:33:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.15 2008/12/02 15:26:05 darkside Exp $
+
+  02 Dec 2008; Jeremy Olexa <darkside@gentoo.org> +files/xdx-2.4-gtk.patch,
+  metadata.xml, xdx-2.4.ebuild:
+  fix building with latest gtk+, bug 247951. Add Thomas Beierlein to metadata,
+  he will be maintaining this through me
 
   08 Nov 2008; Markus Meier <maekke@gentoo.org> xdx-2.4.ebuild:
   amd64/x86 stable, bug #245578

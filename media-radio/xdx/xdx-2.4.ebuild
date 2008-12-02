@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.ebuild,v 1.3 2008/11/08 15:33:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.ebuild,v 1.4 2008/12/02 15:26:05 darkside Exp $
+
+inherit eutils
 
 DESCRIPTION="a GTK+ TCP/IP DX-cluster and ON4KST chat client."
 HOMEPAGE="http://www.qsl.net/pg4i/linux/xdx.html"
@@ -15,6 +17,13 @@ RDEPEND=">=x11-libs/gtk+-2.12"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
+
+src_unpack(){
+	unpack ${A}
+	cd "${S}"
+	# fix for deprecated macro in GTK+-2.14 and later
+	epatch "${FILESDIR}"/xdx-2.4-gtk.patch
+}
 
 src_compile() {
 	econf $(use_enable nls)
