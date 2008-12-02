@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.232 2008/12/02 22:38:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.233 2008/12/02 23:07:05 mrness Exp $
+
+  02 Dec 2008; Alin Năstac <mrness@gentoo.org> -ppp-2.4.4-r14.ebuild,
+  -ppp-2.4.4-r15.ebuild:
+  Remove obsolete versions.
 
   02 Dec 2008; Brent Baude <ranger@gentoo.org> ppp-2.4.4-r21.ebuild:
   stable ppc64, bug 239851
