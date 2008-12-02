@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/imaze
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/ChangeLog,v 1.14 2007/02/27 01:28:55 mr_bones_ Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/ChangeLog,v 1.15 2008/12/02 20:11:57 ssuominen Exp $
+
+  02 Dec 2008; <ssuominen@gentoo.org> imaze-1.4.ebuild:
+  Remove deprecated XFree86 -time library support, xview, from imaze ebuild
+  wrt #88334.
 
   27 Feb 2007; Michael Sterrett <mr_bones_@gentoo.org> imaze-1.4.ebuild:
   downgrade ppc to ~ppc because of missing stable x11-libs/xview
