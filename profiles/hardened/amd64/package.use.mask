@@ -10,9 +10,6 @@ dev-java/eclipse-ecj gcj
 # missing the necessary linux-headers dep
 >=net-fs/netatalk-2.0.3-r3 xfs
 
-# Mask X USE flag on app-editors/jove; bug 202690
-app-editors/jove X
-
 # 20 Mar 2008: Petteri Räty <betelgeuse@gentoo.org>
 # jamvm needs ffi on amd64
 # https://bugs.gentoo.org/show_bug.cgi?id=213882

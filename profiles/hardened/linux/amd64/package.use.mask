@@ -9,6 +9,3 @@ dev-java/eclipse-ecj gcj
 
 # missing the necessary linux-headers dep
 >=net-fs/netatalk-2.0.3-r3 xfs
-
-# Mask X USE flag on app-editors/jove; bug 202690
-app-editors/jove X
