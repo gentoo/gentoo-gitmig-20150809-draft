@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdrawer
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.20 2008/01/12 01:13:56 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/ChangeLog,v 1.21 2008/12/02 10:51:54 s4t4n Exp $
+
+  02 Dec 2008; Michele Noberasco <s4t4n@gentoo.org> wmdrawer-0.10.5-r2.ebuild:
+  Fix LDFLAGS ordering per bug #248640. Some generic QA fixes.
 
   12 Jan 2008; Santiago M. Mola <coldwind@gentoo.org>
   wmdrawer-0.10.5-r2.ebuild:

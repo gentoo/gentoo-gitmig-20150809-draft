@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/wmdrawer-0.10.5-r2.ebuild,v 1.6 2008/01/12 01:13:56 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdrawer/wmdrawer-0.10.5-r2.ebuild,v 1.7 2008/12/02 10:51:54 s4t4n Exp $
 
 inherit eutils
 
@@ -24,6 +24,12 @@ src_unpack () {
 
 	# Honour Gentoo CFLAGS
 	sed -i -e "s|-O3|${CFLAGS}|" Makefile || die
+
+	# Fix LDFLAGS ordering per bug #248640
+	sed -i 's/$(CC) $(LDFLAGS) -o $@ $(OBJS)/$(CC) -o $@ $(OBJS) $(LDFLAGS)/' Makefile || die
+
+	# Do not auto-strip binaries
+	sed -i 's/	strip $@//' Makefile || die
 }
 
 src_install() {
