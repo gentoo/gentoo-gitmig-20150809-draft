@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.424 2008/12/02 12:58:38 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.425 2008/12/03 15:31:11 zzam Exp $
+
+*udev-135-r1 (03 Dec 2008)
+
+  03 Dec 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-135-fix-capi.diff, +files/udev-135-rules-update.diff,
+  +udev-135-r1.ebuild:
+  Fix capi device nodes, Bug #249389. Do this by applying upstream patch to
+  the common capi rules and install these. Remove capi from gentoo-specific
+  rules.
 
 *udev-135 (02 Dec 2008)
 
