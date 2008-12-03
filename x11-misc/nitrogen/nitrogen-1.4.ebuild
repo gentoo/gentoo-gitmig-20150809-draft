@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/nitrogen-1.4.ebuild,v 1.1 2008/08/11 13:13:18 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/nitrogen-1.4.ebuild,v 1.2 2008/12/03 19:44:28 omp Exp $
+
+inherit eutils autotools
 
 DESCRIPTION="GTK+ background browser and setter for X."
 HOMEPAGE="http://projects.l3ib.org/nitrogen/"
@@ -17,6 +19,14 @@ RDEPEND=">=dev-cpp/gtkmm-2.10
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	xinerama? ( x11-proto/xineramaproto )"
+
+src_unpack () {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/Makefile-as-needed.patch
+	eautoreconf
+}
 
 src_compile() {
 	econf $(use_enable xinerama) || die "econf failed"
