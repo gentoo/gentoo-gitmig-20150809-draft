@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.103.0.ebuild,v 1.16 2008/01/06 19:28:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.103.0.ebuild,v 1.17 2008/12/03 05:58:09 ssuominen Exp $
 
 inherit flag-o-matic eutils multilib linux-info autotools multilib
 
@@ -13,12 +13,11 @@ SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz netjack? ( mirror://sourceforge
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
-IUSE="altivec alsa caps coreaudio doc debug jack-tmpfs mmx oss portaudio sse netjack cpudetection"
+IUSE="altivec alsa caps coreaudio doc debug jack-tmpfs mmx oss sse netjack cpudetection"
 
 RDEPEND=">=media-libs/libsndfile-1.0.0
 	sys-libs/ncurses
 	caps? ( sys-libs/libcap )
-	portaudio? ( =media-libs/portaudio-18* )
 	alsa? ( >=media-libs/alsa-lib-0.9.1 )
 	netjack? ( media-libs/libsamplerate )
 	!media-sound/jack-cvs"
@@ -97,7 +96,7 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_enable mmx) \
 		$(use_enable oss) \
-		$(use_enable portaudio) \
+		--disable-portaudio \
 		$(use_enable sse) \
 		--with-html-dir=/usr/share/doc/${PF} \
 		--disable-dependency-tracking \
