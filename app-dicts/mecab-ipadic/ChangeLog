@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/mecab-ipadic
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/ChangeLog,v 1.20 2008/11/29 18:16:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/ChangeLog,v 1.21 2008/12/03 14:29:01 ranger Exp $
+
+  03 Dec 2008; Brent Baude <ranger@gentoo.org>
+  mecab-ipadic-2.7.0.20070801.ebuild:
+  Marking mecab-ipadic-2.7.0.20070801 ppc64 for bug 245176
 
   29 Nov 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   mecab-ipadic-2.7.0.20070801.ebuild:
