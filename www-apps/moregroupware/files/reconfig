@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if [ $1 = "start" -o $1 = "install" ]; then
-	chown ${VHOST_SERVER_UID}:${VHOST_SERVER_GID} ${MY_INSTALLDIR}
-else
-	echo $1
-fi
