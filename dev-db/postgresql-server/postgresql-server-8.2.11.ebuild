@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.3.4.ebuild,v 1.1 2008/09/23 12:42:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-8.2.11.ebuild,v 1.1 2008/12/03 19:27:06 caleb Exp $
 
 EAPI="1"
 
@@ -8,7 +8,7 @@ WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="none"
 inherit eutils multilib toolchain-funcs versionator autotools
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
@@ -20,7 +20,7 @@ IUSE_LINGUAS="
 	linguas_hr linguas_hu linguas_it linguas_ko linguas_nb linguas_pl
 	linguas_pt_BR linguas_ro linguas_ru linguas_sk linguas_sl linguas_sv
 	linguas_tr linguas_zh_CN linguas_zh_TW"
-IUSE="doc perl python selinux tcl uuid xml nls kernel_linux ${IUSE_LINGUAS}"
+IUSE="doc perl python selinux tcl xml nls kernel_linux ${IUSE_LINGUAS}"
 
 wanted_languages() {
 	for u in ${IUSE_LINGUAS} ; do
@@ -33,7 +33,6 @@ RDEPEND="~dev-db/postgresql-base-${PV}:${SLOT}
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
 	selinux? ( sec-policy/selinux-postgresql )
 	tcl? ( >=dev-lang/tcl-8 )
-	uuid? ( dev-libs/ossp-uuid )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
@@ -73,10 +72,6 @@ src_compile() {
 		$(use_with perl) \
 		$(use_with python) \
 		$(use_with tcl) \
-		$(use_with xml libxml) \
-		$(use_with xml libxslt) \
-		$(use_with uuid ossp-uuid) \
-		--with-system-tzdata="/usr/share/zoneinfo" \
 		--with-includes="/usr/include/postgresql-${SLOT}/" \
 		"$(built_with_use ~dev-db/postgresql-base-${PV} nls && use_enable nls nls "$(wanted_languages)")" \
 		|| die "configure failed"
@@ -119,7 +114,8 @@ src_install() {
 	newinitd "${FILESDIR}/postgresql.init-${SLOT}" postgresql-${SLOT} || die "Inserting init.d-file failed"
 	newconfd "${FILESDIR}/postgresql.conf-${SLOT}" postgresql-${SLOT} || die "Inserting conf.d-file failed"
 
-	keepdir /var/run/postgresql
+	# Workaround for paludis
+	[ -f "${ROOT}/var/run/postgresql/.keep" ] || keepdir /var/run/postgresql
 	fperms 0770 /var/run/postgresql
 	fowners postgres:postgres /var/run/postgresql
 }
