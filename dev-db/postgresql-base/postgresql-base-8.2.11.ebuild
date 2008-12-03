@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.3.4.ebuild,v 1.2 2008/09/28 22:39:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-8.2.11.ebuild,v 1.1 2008/12/03 19:21:50 caleb Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ WANT_AUTOMAKE="none"
 
 inherit eutils multilib toolchain-funcs versionator autotools
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="PostgreSQL libraries and clients"
 HOMEPAGE="http://www.postgresql.org/"
@@ -78,9 +78,9 @@ src_compile() {
 		--without-tcl \
 		--without-perl \
 		--without-python \
+		--without-libedit \
 		$(use_with readline) \
 		$(use_with kerberos krb5) \
-		$(use_with kerberos gssapi) \
 		"$(use_enable nls nls "$(wanted_languages)")" \
 		$(use_with pam) \
 		$(use_enable pg-intdatetime integer-datetimes ) \
@@ -128,11 +128,11 @@ postgres_symlinks=(
 )
 __EOF__
 
-	cat >"${T}/50postgresql-94-${SLOT}" <<-__EOF__
+	cat >"${T}/50postgresql-95-${SLOT}" <<-__EOF__
 		LDPATH=/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)
 		MANPATH=/usr/share/postgresql-${SLOT}/man
 	__EOF__
-	doenvd "${T}/50postgresql-94-${SLOT}"
+	doenvd "${T}/50postgresql-95-${SLOT}"
 
 	keepdir /etc/postgresql-${SLOT}
 }

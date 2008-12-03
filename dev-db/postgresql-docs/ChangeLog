@@ -1,10 +1,27 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.9 2008/11/01 07:33:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.10 2008/12/03 19:20:23 caleb Exp $
+
+*postgresql-docs-8.2.11 (03 Dec 2008)
+
+  03 Dec 2008; Caleb Tennis <caleb@gentoo.org>
+  +postgresql-docs-8.2.11.ebuild, -postgresql-docs-8.3.4.ebuild,
+  +postgresql-docs-8.3.5.ebuild:
+  version bumps
+
+  11 Nov 2008; Caleb Tennis <caleb@gentoo.org>
+  -postgresql-docs-8.3.4.ebuild, +postgresql-docs-8.3.5.ebuild:
+  version bump
 
   01 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   Fix Manifest corruption that was added by caleb on Sept 25, due to a
   zero-byte postgresql-7.4.19.tar.bz2 on his system.
+
+*postgresql-docs-8.3.5 (11 Nov 2008)
+
+  11 Nov 2008; Caleb Tennis <caleb@gentoo.org>
+  -postgresql-docs-8.3.4.ebuild, +postgresql-docs-8.3.5.ebuild:
+  version bump
 
   28 Sep 2008; Caleb Tennis <caleb@gentoo.org>
   -postgresql-docs-8.2.7.ebuild, -postgresql-docs-8.3.1.ebuild,
