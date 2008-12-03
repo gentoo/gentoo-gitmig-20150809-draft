@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.62 2008/12/02 22:36:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.63 2008/12/03 11:53:21 loki_val Exp $
+
+  03 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  monodevelop-1.9.1.ebuild:
+  Explain about add-ins, bug 249563.
 
   02 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   monodevelop-1.9.1.ebuild:
