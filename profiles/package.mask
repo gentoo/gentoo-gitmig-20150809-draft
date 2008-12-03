@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9242 2008/12/03 10:46:04 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9243 2008/12/03 18:27:57 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked
@@ -328,10 +328,6 @@ app-portage/genflags
 # Does not work with sys-apps/net-tools inside container
 # Trying to resolve issue inside openrc
 >=sys-cluster/vzctl-3.0.22-r10
-
-# Michael Sterrett <mr_bones_@gentoo.org> (13 Oct 2008)
-# Maintainer mask of known broken version.
->=app-admin/syslog-ng-2.1
 
 # Rémi Cardona <remi@gentoo.org> (11 Oct 2008)
 # Old versions, those are no longer maintained and
