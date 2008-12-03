@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.163 2008/12/03 01:11:15 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.164 2008/12/03 14:17:39 ranger Exp $
+
+  03 Dec 2008; Brent Baude <ranger@gentoo.org> gallery-2.3.ebuild:
+  Marking gallery-2.3 ppc64 for bug 213322
 
   03 Dec 2008; Richard Freeman <rich0@gentoo.org> gallery-2.3.ebuild:
   amd64 stable - 213322
