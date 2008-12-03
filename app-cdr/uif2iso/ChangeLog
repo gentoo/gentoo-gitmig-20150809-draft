@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/uif2iso
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/uif2iso/ChangeLog,v 1.4 2008/11/26 00:22:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/uif2iso/ChangeLog,v 1.5 2008/12/03 22:22:06 maekke Exp $
+
+  03 Dec 2008; Markus Meier <maekke@gentoo.org> uif2iso-0.1.4.ebuild:
+  amd64/x86 stable, bug #243482
 
   26 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/0.1.7-Makefile:
