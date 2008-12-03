@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.13-r1.ebuild,v 1.1 2008/10/12 16:39:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.13-r2.ebuild,v 1.1 2008/12/03 23:30:28 mrness Exp $
 
 inherit eutils linux-info
 
@@ -67,11 +67,11 @@ get_make_options() {
 	echo KERNELSRC=\"${KERNEL_DIR}\" \
 		FINALCONFDIR=/etc/ipsec \
 		FINALCONFFILE=/etc/ipsec/ipsec.conf \
-		FINALEXAMPLECONFDIR=/usr/share/doc/${P} \
+		FINALEXAMPLECONFDIR=/usr/share/doc/${PF} \
 		INC_RCDEFAULT=/etc/init.d \
 		INC_USRLOCAL=/usr \
 		INC_MANDIR=share/man \
-		FINALDOCDIR=/usr/share/doc/${P} \
+		FINALDOCDIR=/usr/share/doc/${PF} \
 		DESTDIR=\"${D}\" \
 		USERCOMPILE=\"${CFLAGS}\"
 	if use smartcard ; then

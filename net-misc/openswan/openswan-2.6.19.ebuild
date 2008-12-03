@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.11.ebuild,v 1.3 2008/06/28 21:28:48 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.19.ebuild,v 1.1 2008/12/03 23:30:28 mrness Exp $
 
 inherit eutils linux-info
 
@@ -10,21 +10,28 @@ SRC_URI="http://www.openswan.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
-IUSE="curl ldap smartcard extra-algorithms weak-algorithms"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE="curl ldap smartcard extra-algorithms weak-algorithms nocrypto-algorithms"
 
 COMMON_DEPEND="!net-misc/strongswan
-	>=dev-libs/gmp-4.2.1
+	dev-libs/gmp
+	dev-lang/perl
 	smartcard? ( dev-libs/opensc )
 	curl? ( net-misc/curl )
 	ldap? ( net-nds/openldap )"
 DEPEND="${COMMON_DEPEND}
-	virtual/linux-sources"
+	virtual/linux-sources
+	app-text/xmlto"
 RDEPEND="${COMMON_DEPEND}
 	virtual/logger
 	sys-apps/iproute2"
 
 pkg_setup() {
+	if use nocrypto-algorithms && ! use weak-algorithms; then
+		ewarn "Enabling nocrypto-algorithms USE flag has no effect when"
+		ewarn "weak-algorithms USE flag is disabled"
+	fi
+
 	linux-info_pkg_setup
 
 	if kernel_is 2 6; then
@@ -53,17 +60,20 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${P}-implicit-decl.patch
+	epatch "${FILESDIR}"/${P}-qa-fixes.patch
+
+	find . -regex '.*[.][1-8]' -exec sed -i \
+	    -e s:/usr/local:/usr:g '{}' \; ||
+	    die "failed to replace text in xml docs"
 }
 
 get_make_options() {
 	echo KERNELSRC=\"${KERNEL_DIR}\" \
-		FINALCONFDIR=/etc/ipsec \
+		FINALEXAMPLECONFDIR=/usr/share/doc/${PF} \
 		INC_RCDEFAULT=/etc/init.d \
 		INC_USRLOCAL=/usr \
 		INC_MANDIR=share/man \
-		FINALEXAMPLECONFDIR=/usr/share/doc/${P} \
-		FINALDOCDIR=/usr/share/doc/${P} \
+		FINALDOCDIR=/usr/share/doc/${PF}/html \
 		DESTDIR=\"${D}\" \
 		USERCOMPILE=\"${CFLAGS}\"
 	if use smartcard ; then
@@ -71,11 +81,16 @@ get_make_options() {
 	fi
 	if use extra-algorithms ; then
 		echo USE_EXTRACRYPTO=true
+	else
+		echo USE_EXTRACRYPTO=false
 	fi
 	if use weak-algorithms ; then
 		echo USE_WEAKSTUFF=true
+		if use nocrypto-algorithms; then
+			echo USE_NOCRYPTO=true
+		fi
 	fi
-	echo USE_OE=false # by default, turn off Opportunistic Encryption
+	echo USE_LWRES=false # needs bind9 with lwres support
 	local USETHREADS=false
 	if use curl; then
 		echo USE_LIBCURL=true
@@ -99,27 +114,40 @@ src_install() {
 	emake "$@" \
 		install || die "emake install failed"
 
-	dosym /etc/ipsec/ipsec.d /etc/ipsec.d
-
-	doinitd "${FILESDIR}"/ipsec || die "failed to install init script"
+	newinitd "${FILESDIR}"/ipsec-initd ipsec || die "failed to install init script"
 
 	dodir /var/run/pluto || die "failed to create /var/run/pluto"
 }
 
 pkg_preinst() {
-	# Try to fix previous openswan-2.4.9 blooper (#193824)
-	if [[ "${ROOT}" == / ]] && has_version "=net-misc/openswan-2.4.9" ; then
-		elog "Trying to remove empty {rundir,subsysdir} erroneously created by openswan-2.4.9"
-		local base dir
-		for base in / /root/ /etc/ ; do
-			for dir in rundir subsysdir ; do
-				if [[ -d "${base}${dir}" ]]; then
-					rmdir "${base}${dir}" \
-						&& elog "Empty directory ${base}${dir} has been removed" \
-						|| ewarn "Failed to remove ${base}${dir} (perhaps some other package owns it?)"
-				fi
-			done
+	if has_version "<net-misc/openswan-2.6.14" && pushd "${ROOT}etc/ipsec"; then
+		ewarn "Following files and directories were moved from '${ROOT}etc/ipsec' to '${ROOT}etc':"
+		local i err=0
+		if [ -h "../ipsec.d" ]; then
+			rm "../ipsec.d" || die "failed to remove ../ipsec.d symlink"
+		fi
+		for i in *; do
+			if [ -e "../$i" ]; then
+				eerror "  $i NOT MOVED, ../$i already exists!"
+				err=1
+			elif [ -d "$i" ]; then
+				mv "$i" .. || die "failed to move $i directory"
+				ewarn "  directory $i"
+			elif [ -f "$i" ]; then
+				sed -i -e 's:/etc/ipsec/:/etc/:g' "$i" && \
+					mv "$i" .. && ewarn "  file $i" || \
+					die "failed to move $i file"
+			else
+				eerror "  $i NOT MOVED, it is not a file nor a directory!"
+				err=1
+			fi
 		done
+		popd
+		if [ $err -eq 0 ]; then
+			rmdir "${ROOT}etc/ipsec" || eerror "Failed to remove ${ROOT}etc/ipsec"
+		else
+			ewarn "${ROOT}etc/ipsec is not empty, you will have to remove it yourself"
+		fi
 	fi
 }
 

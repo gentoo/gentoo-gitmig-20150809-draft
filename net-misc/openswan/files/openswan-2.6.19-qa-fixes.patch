@@ -1,0 +1,11 @@
+diff -Nru openswan-2.6.19.orig/programs/pluto/log.c openswan-2.6.19/programs/pluto/log.c
+--- openswan-2.6.19.orig/programs/pluto/log.c	2008-11-25 01:24:56.000000000 +0000
++++ openswan-2.6.19/programs/pluto/log.c	2008-12-03 23:16:18.000000000 +0000
+@@ -55,6 +55,7 @@
+ #include "kernel_alg.h"
+ #include "ike_alg.h"
+ #include "plutoalg.h"
++#include "virtual.h"
+ 
+ #ifndef NO_DB_OPS_STATS
+ #define NO_DB_CONTEXT

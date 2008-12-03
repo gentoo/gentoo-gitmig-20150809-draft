@@ -1,6 +1,23 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.54 2008/10/12 16:39:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.55 2008/12/03 23:30:28 mrness Exp $
+
+*openswan-2.6.19 (03 Dec 2008)
+*openswan-2.4.13-r2 (03 Dec 2008)
+
+  03 Dec 2008; Alin Năstac <mrness@gentoo.org>
+  -files/openswan-2.4.11-gentoo.patch,
+  -files/openswan-2.4.11-implicit-decl.patch,
+  -files/openswan-2.4.12-deprecated-ldap.patch,
+  -files/openswan-2.4.12-gentoo.patch, -files/openswan-2.6.16-gentoo.patch,
+  -files/openswan-2.6.16-qa-fixes.patch,
+  -files/openswan-2.6.16-refine-connection.patch,
+  +files/openswan-2.6.19-gentoo.patch,
+  +files/openswan-2.6.19-qa-fixes.patch, -openswan-2.4.11.ebuild,
+  -openswan-2.4.12.ebuild, -openswan-2.4.13-r1.ebuild,
+  +openswan-2.4.13-r2.ebuild, -openswan-2.6.16.ebuild,
+  openswan-2.6.18.ebuild, +openswan-2.6.19.ebuild:
+  Remove obsolete versions. Correct doc install path (#241976). Version bump.
 
 *openswan-2.6.18 (12 Oct 2008)
 *openswan-2.4.13-r1 (12 Oct 2008)
