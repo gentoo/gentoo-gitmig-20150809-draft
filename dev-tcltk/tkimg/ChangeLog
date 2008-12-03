@@ -1,6 +1,14 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.4 2008/11/05 19:54:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.5 2008/12/03 11:26:01 bicatali Exp $
+
+*tkimg-1.3.20081202 (03 Dec 2008)
+
+  03 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/tkimg-1.3.20081202-systemlibs.patch, -tkimg-1.3.20081104.ebuild,
+  +tkimg-1.3.20081202.ebuild:
+  subversion snapshot bump and removed embedded system libs (patch inspired
+  from fedora)
 
 *tkimg-1.3.20081104 (05 Nov 2008)
 
