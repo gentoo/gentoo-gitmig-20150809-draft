@@ -1,0 +1,11 @@
+--- GormCore/GNUmakefile.preamble.orig	2008-12-03 16:19:40.000000000 +0100
++++ GormCore/GNUmakefile.preamble	2008-12-03 16:19:54.000000000 +0100
+@@ -35,4 +35,6 @@
+ ADDITIONAL_LIB_DIRS += \
+ 	-L../GormLib/$(GNUSTEP_OBJ_DIR) \
+ 	-L../GormObjCHeaderParser/$(GNUSTEP_OBJ_DIR)
+-endif
+\ Pas de fin de ligne à la fin du fichier.
++endif
++
++GormCore_LIBRARIES_DEPEND_UPON += -lGormObjCHeaderParser
