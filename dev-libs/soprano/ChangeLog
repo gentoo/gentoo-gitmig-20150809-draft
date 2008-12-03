@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.12 2008/11/02 07:34:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.13 2008/12/03 17:32:08 scarabeus Exp $
+
+*soprano-2.1.1 (03 Dec 2008)
+
+  03 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org> -soprano-2.1.ebuild,
+  +soprano-2.1.1.ebuild:
+  Version bump, remove problematic one. Per bug #249705.
 
   02 Nov 2008; Mike Frysinger <vapier@gentoo.org> soprano-2.1.ebuild:
   Add ppc64 love for KDE 4.
