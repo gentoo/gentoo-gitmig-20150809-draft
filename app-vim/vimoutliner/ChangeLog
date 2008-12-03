@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/vimoutliner
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/ChangeLog,v 1.15 2008/12/02 22:53:15 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimoutliner/ChangeLog,v 1.16 2008/12/03 20:42:39 lack Exp $
+
+*vimoutliner-0.3.4-r2 (03 Dec 2008)
+
+  03 Dec 2008; Jim Ramsay <lack@gentoo.org> -vimoutliner-0.3.4-r1.ebuild,
+  +vimoutliner-0.3.4-r2.ebuild:
+  Fixed vimoutliner plugin loading, and cleaned up the install to stop using
+  'cp' everywhere
 
 *vimoutliner-0.3.4-r1 (02 Dec 2008)
 
