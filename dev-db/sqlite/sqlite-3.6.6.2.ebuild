@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.2.ebuild,v 1.1 2008/09/15 16:50:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.6.2.ebuild,v 1.1 2008/12/03 19:20:58 scarabeus Exp $
 
 EAPI="1"
 
@@ -8,7 +8,8 @@ inherit versionator eutils flag-o-matic libtool
 
 DESCRIPTION="an SQL Database Engine in a C Library"
 HOMEPAGE="http://www.sqlite.org/"
-DOC_PV=$(replace_all_version_separators _)
+DOC_BASE="$(get_version_component_range 1-3)"
+DOC_PV="$(replace_all_version_separators _ ${DOC_BASE})"
 SRC_URI="http://www.sqlite.org/${P}.tar.gz
 	doc? ( http://www.sqlite.org/${PN}_docs_${DOC_PV}.zip )"
 
@@ -54,8 +55,7 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_enable threadsafe) \
 		$(use_enable threadsafe cross-thread-connections) \
-		$(use_enable tcl) \
-		|| die
+		$(use_enable tcl)
 	emake all || die "emake all failed"
 }
 
@@ -82,6 +82,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "sqlite-3.6.0 is not totally backwards compatible, see"
+	elog "sqlite-3.6.X is not totally backwards compatible, see"
 	elog "http://www.sqlite.org/releaselog/3_6_0.html for full details."
 }
