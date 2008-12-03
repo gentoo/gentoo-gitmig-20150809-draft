@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.123 2008/12/03 06:40:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.124 2008/12/03 06:42:35 graaff Exp $
+
+  03 Dec 2008; Hans de Graaff <graaff@gentoo.org> rails-1.2.6-r1.ebuild:
+  Fix quoting.
 
 *rails-2.2.2-r1 (03 Dec 2008)
 *rails-2.1.2-r1 (03 Dec 2008)

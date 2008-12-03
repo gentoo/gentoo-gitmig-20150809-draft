@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-1.2.6-r1.ebuild,v 1.1 2008/12/03 06:40:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-1.2.6-r1.ebuild,v 1.2 2008/12/03 06:42:35 graaff Exp $
 
 inherit ruby gems
 
@@ -33,9 +33,9 @@ src_install() {
 	gems_src_install
 	# Rename slotted files that may clash so that eselect can handle
 	# them
-	mv ${D}/usr/bin/rails ${D}/usr/bin/rails-${PV}
+	mv "${D}/usr/bin/rails" "${D}/usr/bin/rails-${PV}"
 	sed -i -e "s/>= 0/${PV}/" "${D}/usr/bin/rails-${PV}"
-	mv ${D}/${GEMSDIR}/bin/rails ${D}/${GEMSDIR}/bin/rails-${PV}
+	mv "${D}/${GEMSDIR}/bin/rails" "${D}/${GEMSDIR}/bin/rails-${PV}"
 }
 
 pkg_postinst() {
