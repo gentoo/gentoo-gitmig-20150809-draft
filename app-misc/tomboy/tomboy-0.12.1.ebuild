@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.12.1.ebuild,v 1.5 2008/11/26 23:26:31 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.12.1.ebuild,v 1.6 2008/12/03 11:02:42 loki_val Exp $
 
 EAPI=2
 
@@ -28,7 +28,7 @@ RDEPEND=">=dev-lang/mono-2
 		 >=gnome-base/gconf-2
 		 >=app-text/gtkspell-2.0.9
 		 >=gnome-base/gnome-panel-2.24.0
-		 eds? ( dev-libs/gmime[mono] )
+		 eds? ( dev-libs/gmime:2.4[mono] )
 		 galago? ( =dev-dotnet/galago-sharp-0.5* )
 		 >=gnome-base/libgnomeprintui-2.18.3
 		 >=gnome-base/libgnomeprint-2.2"
@@ -39,6 +39,10 @@ DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
+
+src_prepare() {
+	sed -i -e 's:gmime-sharp:gmime-sharp-2.4:g' configure || die "sed failed"
+}
 
 src_configure() {
 	G2CONF="${G2CONF} $(use_enable galago) $(use_enable eds evolution) --with-mono-addins=system"
