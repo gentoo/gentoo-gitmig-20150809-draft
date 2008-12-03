@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/websvn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.24 2008/11/26 20:09:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.25 2008/12/03 20:12:36 wrobel Exp $
+
+*websvn-2.1.0 (03 Dec 2008)
+
+  03 Dec 2008; Gunnar Wrobel <wrobel@gentoo.org> +websvn-2.1.0.ebuild:
+  Added www-apps/websvn-2.1.0 in response to sec issue #243852.
 
   26 Nov 2008; Brent Baude <ranger@gentoo.org> websvn-2.0.ebuild:
   Added ~ppc and ~ppc64
