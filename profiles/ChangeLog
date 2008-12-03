@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2119 2008/12/03 10:46:04 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2120 2008/12/03 22:29:58 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org> package.mask:
+  ktorrent 3.2_beta added to the mask.
 
   03 Dec 2008; <wrobel@gentoo.org> package.mask:
   www-apps/phpcollab, www-apps/net2ftp, and www-apps/moregroupware were
