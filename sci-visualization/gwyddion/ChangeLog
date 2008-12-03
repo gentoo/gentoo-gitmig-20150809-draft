@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gwyddion
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.13 2008/08/04 13:49:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.14 2008/12/03 12:13:54 bicatali Exp $
+
+  03 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> gwyddion-2.10.ebuild:
+  Added --enable-library-bloat, necessary for as-needed
 
 *gwyddion-2.10 (04 Aug 2008)
 
