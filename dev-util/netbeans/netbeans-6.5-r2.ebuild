@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r1.ebuild,v 1.6 2008/12/01 15:21:15 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r2.ebuild,v 1.1 2008/12/03 12:35:38 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -179,7 +179,6 @@ DEPEND=">=virtual/jdk-1.5
 		>=dev-java/jakarta-oro-2:2.0
 		>=dev-java/javacc-3.2:0
 		>=dev-java/jaxb-2:2
-		>=dev-java/jaxb-tools-2:2
 		>=dev-java/jdbc-mysql-5.1:0
 		>=dev-java/jdbc-postgresql-8.3_p603:0
 		>=dev-java/jsch-0.1.24:0
@@ -225,6 +224,7 @@ DEPEND=">=virtual/jdk-1.5
 # no use flag
 #  >=dev-java/jna-3:0
 # netbeans_modules_ide
+#  >=dev-java/jaxb-tools-2:2
 #  >=dev-java/ini4j-0.2.6:0
 # netbeans_modules_java
 #  >=dev-java/appframework-1:0
@@ -965,7 +965,7 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} fastinfoset fastinfoset.jar FastInfoset.jar
 		# http.jar
 		dosyminstjar ${targetdir} jax-ws-2 jax-ws.jar jaxws-rt.jar
-		dosyminstjar ${targetdir} jaxb-tools-2 jaxb-tools.jar jaxws-tools.jar
+		dosyminstjar ${targetdir} jax-ws-tools-2 jax-ws-tools.jar jaxws-tools.jar
 		# mimepull.jar
 		# resolver.jar
 		dosyminstjar ${targetdir} saaj saaj.jar saaj-impl.jar
