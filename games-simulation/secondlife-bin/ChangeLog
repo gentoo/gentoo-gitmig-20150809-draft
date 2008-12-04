@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/secondlife-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.4 2008/12/01 16:38:00 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.5 2008/12/04 13:55:52 lavajoe Exp $
+
+*secondlife-bin-1.22_rc2 (04 Dec 2008)
+
+  04 Dec 2008; Joe Peterson <lavajoe@gentoo.org>
+  +secondlife-bin-1.22_rc2.ebuild:
+  Add new rc2
 
   01 Dec 2008; Joe Peterson <lavajoe@gentoo.org> metadata.xml:
   Update proxy maintainer email
