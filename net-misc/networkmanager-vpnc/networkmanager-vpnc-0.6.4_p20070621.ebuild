@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.6.4_p20070621.ebuild,v 1.3 2008/03/24 06:55:52 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.6.4_p20070621.ebuild,v 1.4 2008/12/04 23:39:04 scarabeus Exp $
 
 inherit gnome2 eutils autotools
 
@@ -56,11 +56,11 @@ src_unpack () {
 	unpack ${A}
 	cd "${S}"
 	# Gentoo puts vpnc somewhere that the source doesn't expect.
-	epatch ${FILESDIR}/nm-vpnc-path.patch
+	epatch "${FILESDIR}"/nm-vpnc-path.patch
 	# Match the same dbus permissions as NetworkManager
-	epatch ${FILESDIR}/nm-vpnc-dbus_conf.patch
+	epatch "${FILESDIR}"/nm-vpnc-dbus_conf.patch
 
-	epatch "${FILESDIR}/${P}-service-name.patch"
+	epatch "${FILESDIR}"/${P}-service-name.patch
 	eautoreconf
 	intltoolize --force || die "intltoolize failed"
 }
