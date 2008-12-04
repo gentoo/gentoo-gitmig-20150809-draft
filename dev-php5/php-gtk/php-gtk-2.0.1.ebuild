@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.1.ebuild,v 1.1 2008/07/22 14:34:39 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/php-gtk-2.0.1.ebuild,v 1.2 2008/12/04 20:54:08 eva Exp $
 
 EAPI="1"
 
@@ -38,7 +38,7 @@ RDEPEND=">=dev-lang/php-5.1.2
 	>=dev-libs/atk-1.9.0
 	extra? ( >=x11-libs/gtk+extra-2.1.1 )
 	glade? ( >=gnome-base/libglade-2.5.0 )
-	html? ( >=gnome-extra/gtkhtml-3.10.0 )
+	html? ( >=gnome-extra/gtkhtml-3.10.0:3.8 )
 	libsexy? ( >=x11-libs/libsexy-0.1.10 )
 	mozembed? ( >=www-client/mozilla-firefox-1.5.0 )
 	spell? ( >=app-text/gtkspell-2.0.0 )"
