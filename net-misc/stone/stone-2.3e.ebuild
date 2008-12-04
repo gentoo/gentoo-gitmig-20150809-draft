@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/stone-2.3c.ebuild,v 1.1 2008/01/27 16:02:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/stone-2.3e.ebuild,v 1.1 2008/12/04 16:12:38 matsuu Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A simple TCP/IP packet repeater"
 HOMEPAGE="http://www.gcd.org/sengoku/stone/"
@@ -15,22 +15,25 @@ IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )"
 
+S="${WORKDIR}/${PN}-2.3d-2.3.2.7"
+
 src_compile() {
+	local myargs
+
 	if use ssl ; then
-		emake \
-			CC=$(tc-getCC) \
-			CFLAGS="${CFLAGS}" \
-			SSL=/usr \
-			linux-ssl || die
+		myargs="${myconf} SSL=/usr linux-ssl"
 	else
-		emake \
-			CFLAGS="${CFLAGS}" \
-			linux || die
+		myargs="${myconf} linux"
 	fi
+
+	emake \
+		CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS} -D_GNU_SOURCE" \
+		${myargs} || die
 }
 
 src_install() {
 	dobin stone
-	doman stone.1
+	# doman stone.1
 	dodoc README*
 }
