@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/amanith
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/ChangeLog,v 1.5 2008/08/11 22:38:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/ChangeLog,v 1.6 2008/12/04 20:52:48 maekke Exp $
+
+  04 Dec 2008; Markus Meier <maekke@gentoo.org> amanith-0.3-r2.ebuild:
+  fix for bug #247744, do not try to install plugins, when they aren't
+  built.
 
   11 Aug 2008; Ben de Groot <yngwin@gentoo.org> amanith-0.3-r2.ebuild:
   Fix split qt4 deps wrt bug 217161.

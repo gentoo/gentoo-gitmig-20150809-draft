@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r2.ebuild,v 1.2 2008/08/11 22:38:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/amanith-0.3-r2.ebuild,v 1.3 2008/12/04 20:52:48 maekke Exp $
 
 EAPI="1"
 inherit eutils toolchain-funcs qt4
@@ -57,7 +57,10 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so lib/*.so* plugins/*.so* || die
+	dolib.so lib/*.so* || die
+	if use jpeg || use png || use truetype ; then
+		dolib.so plugins/*.so* || die
+	fi
 
 	insinto /usr/include
 	doins -r include/amanith || die
