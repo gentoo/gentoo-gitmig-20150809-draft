@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jove
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.24 2008/12/02 21:37:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/ChangeLog,v 1.25 2008/12/04 22:45:39 maekke Exp $
+
+  04 Dec 2008; Markus Meier <maekke@gentoo.org> jove-4.16.0.70.3.1.ebuild:
+  amd64/x86 stable, bug #249659
 
   02 Dec 2008; Ulrich Mueller <ulm@gentoo.org> jove-4.16.0.70.3.1.ebuild:
   No need for flag-o-matic anymore.

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.1.ebuild,v 1.5 2008/12/02 21:37:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.1.ebuild,v 1.6 2008/12/04 22:45:39 maekke Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://debian/pool/main/j/${PN}/${MY_P}.orig.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="unix98"
 
 RDEPEND="sys-libs/ncurses"
