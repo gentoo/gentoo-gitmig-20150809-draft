@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.45 2008/12/04 05:09:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.46 2008/12/04 22:32:52 maekke Exp $
+
+  04 Dec 2008; Markus Meier <maekke@gentoo.org> mixxx-1.6.0.ebuild:
+  x86 stable, bug #249420
 
   04 Dec 2008; <ssuominen@gentoo.org> +mixxx-1.6.0.ebuild:
   Restore EAPI=1 version of media-sound/mixxx because we need this in

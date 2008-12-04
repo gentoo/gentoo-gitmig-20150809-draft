@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.6.0.ebuild,v 1.3 2008/12/04 05:09:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.6.0.ebuild,v 1.4 2008/12/04 22:32:52 maekke Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="http://downloads.mixxx.org/${MY_P}/${MY_P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="debug djconsole hifieq ladspa recording shout +vinylcontrol"
 
 RDEPEND="media-libs/mesa
