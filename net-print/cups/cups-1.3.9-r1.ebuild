@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.9.ebuild,v 1.1 2008/10/10 19:38:50 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.9-r1.ebuild,v 1.1 2008/12/04 21:42:11 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -99,6 +99,9 @@ src_unpack() {
 
 	# create a missing symlink to allow https printing via IPP, bug #217293
 	epatch "${FILESDIR}/${PN}-1.3.7-backend-https.patch"
+
+	# security bug #249727
+	epatch "${FILESDIR}/${PN}-1.3.9-CVE-2008-5286.patch"
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
