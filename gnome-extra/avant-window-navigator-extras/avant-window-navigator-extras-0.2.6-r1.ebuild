@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6-r1.ebuild,v 1.6 2008/07/14 16:28:13 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.2.6-r1.ebuild,v 1.7 2008/12/04 21:50:23 eva Exp $
 
 inherit autotools eutils gnome2 python
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gnome"
 
-DEPEND="dev-python/pyalsaaudio
+RDEPEND="dev-python/pyalsaaudio
 	dev-python/feedparser
 	gnome? (
 		dev-python/gst-python
@@ -26,7 +26,7 @@ DEPEND="dev-python/pyalsaaudio
 	gnome-extra/avant-window-navigator
 	x11-libs/libsexy
 	x11-libs/libnotify"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS Changelog NEWS README"
 
@@ -42,6 +42,9 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
+	# Fix compilation with USE="xfce", bug #216746
+	epatch "${FILESDIR}/${P}-xfce-build.patch"
+
 	# Apply a fix from awn bzr to make gconf truly conditional.
 	epatch "${FILESDIR}"/${PV}-r346-gconf-conditional.patch
 	eautoreconf
@@ -54,9 +57,8 @@ src_unpack() {
 src_compile() {
 	# Not disabling pymod-checks results in a sandbox access violation.
 	econf --disable-pymod-checks \
-			$(use_with gnome) \
-			$(use_with gnome gconf) \
-			|| die "econf failed"
+		$(use_with gnome) \
+		$(use_with gnome gconf)
 
 	# temp hack to remove problem per bug #214984
 	if ! use gnome && ! use xfce; then
@@ -94,11 +96,11 @@ src_install() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	python_version
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/python${PYVER}/site-packages/awn/extras
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/awn/extras
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
 	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/awn/extras
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/awn/extras
 }
