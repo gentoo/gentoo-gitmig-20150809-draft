@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/avant-window-navigator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.13 2008/10/19 11:18:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.14 2008/12/04 21:50:03 eva Exp $
+
+  04 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  -avant-window-navigator-0.2.1-r1.ebuild,
+  avant-window-navigator-0.2.6-r1.ebuild:
+  Update dependencies. Clean up old revision.
 
   19 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org>
   avant-window-navigator-0.2.6-r1.ebuild:

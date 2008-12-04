@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.8 2008/10/19 11:18:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.9 2008/12/04 21:50:03 eva Exp $
 
 inherit gnome2 python
 
@@ -22,28 +22,29 @@ RDEPEND="
 	|| (
 		>=dev-lang/python-2.5
 		dev-python/elementtree )
-	dev-python/pygtk
+	>=dev-python/pygtk-2
 	dev-python/pycairo
 	dev-python/pyxdg
 	gnome? (
-		gnome-base/gconf
-		gnome-base/gnome-desktop
-		gnome-base/gnome-vfs
-		gnome-base/libgnome
+		>=gnome-base/gconf-2
+		>=gnome-base/gnome-desktop-2
+		>=gnome-base/gnome-vfs-2
+		>=gnome-base/libgnome-2
 	)
-	gnome-base/libglade
-	!gnome? ( !xfce? ( >=dev-libs/glib-2.15.0 ) )
+	>=gnome-base/libglade-2
+	>=dev-libs/glib-2.16.0
 	dev-libs/dbus-glib
 	xfce? ( xfce-base/thunar )
-	x11-libs/gtk+
-	x11-libs/libwnck"
+	>=x11-libs/gtk+-2
+	>=x11-libs/libwnck-2.20"
 
 # vala is not in tree yet
 #	vala? ( dev-lang/vala )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( dev-util/gtk-doc )"
+	>=dev-util/intltool-0.35.5
+	doc? ( >=dev-util/gtk-doc-1.4 )"
 
 DOCS="AUTHORS Changelog NEWS README TODO"
 
