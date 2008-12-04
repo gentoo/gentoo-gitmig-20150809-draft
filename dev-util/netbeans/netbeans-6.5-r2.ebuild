@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r2.ebuild,v 1.1 2008/12/03 12:35:38 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r2.ebuild,v 1.2 2008/12/04 10:43:17 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -546,7 +546,7 @@ src_compile() {
 	fi
 
 	# Fails to compile
-	java-pkg_filter-compiler ecj-3.1 ecj-3.2
+	java-pkg_filter-compiler ecj-3.2 ecj-3.3 ecj-3.4
 
 	# Build the clusters
 	#use netbeans_modules_ruby && addpredict /root/.jruby

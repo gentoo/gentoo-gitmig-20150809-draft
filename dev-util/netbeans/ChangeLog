@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.94 2008/12/03 12:35:38 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.95 2008/12/04 10:43:17 fordfrog Exp $
+
+  04 Dec 2008; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.5-r2.ebuild:
+  Filtered all ecj compilers
 
 *netbeans-6.5-r2 (03 Dec 2008)
 
