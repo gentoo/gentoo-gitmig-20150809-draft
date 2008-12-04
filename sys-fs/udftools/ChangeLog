@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udftools
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.23 2008/12/04 21:20:04 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.24 2008/12/04 21:33:52 dsd Exp $
+
+*udftools-1.0.0b-r9 (04 Dec 2008)
+
+  04 Dec 2008; Daniel Drake <dsd@gentoo.org>
+  +files/udftools-1.0.0b-openflags.patch, +udftools-1.0.0b-r9.ebuild:
+  Fix gcc4.3 compilation failure, patch from Magnus Granberg in bug #232100
 
   04 Dec 2008; Daniel Drake <dsd@gentoo.org> metadata.xml:
   Drop maintainership. I'll still help on bugs, but probably not on a timely
