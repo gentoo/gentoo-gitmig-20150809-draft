@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/graphviz-dot-mode
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/ChangeLog,v 1.7 2008/12/02 07:12:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/ChangeLog,v 1.8 2008/12/04 22:42:17 maekke Exp $
+
+  04 Dec 2008; Markus Meier <maekke@gentoo.org>
+  graphviz-dot-mode-0.3.4.ebuild:
+  amd64/x86 stable, bug #249580
 
   02 Dec 2008; Ulrich Mueller <ulm@gentoo.org>
   files/50graphviz-dot-mode-gentoo.el:
