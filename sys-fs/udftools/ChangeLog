@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udftools
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.22 2008/10/31 20:07:36 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.23 2008/12/04 21:20:04 dsd Exp $
+
+  04 Dec 2008; Daniel Drake <dsd@gentoo.org> metadata.xml:
+  Drop maintainership. I'll still help on bugs, but probably not on a timely
+  fashion. Others are encouraged to commit to or take over this package.
 
 *udftools-1.0.0b-r8 (31 Oct 2008)
 
