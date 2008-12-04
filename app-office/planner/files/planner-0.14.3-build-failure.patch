@@ -1,0 +1,19 @@
+#
+# Gentoo: https://bugs.gentoo.org/show_bug.cgi?id=231823
+# Upstream: http://bugzilla.gnome.org/show_bug.cgi?id=539993
+#
+--- a/libplanner/mrp-sql.c	2008/07/15 01:17:58	1.1
++++ b/libplanner/mrp-sql.c	2008/07/15 01:19:28
+@@ -2405,9 +2405,9 @@ mrp_sql_load_project (MrpStorageSQL *sto
+ }
+ 
+ #define WRITE_ERROR(e,c) \
+-G_STMT_START \
+-g_set_error(e,MRP_ERROR,MRP_ERROR_SAVE_WRITE_FAILED, sql_get_last_error (c)) \
+-G_STMT_END
++G_STMT_START { \
++g_set_error(e,MRP_ERROR,MRP_ERROR_SAVE_WRITE_FAILED, sql_get_last_error (c)); \
++} G_STMT_END
+ 
+ 
+ /*************************

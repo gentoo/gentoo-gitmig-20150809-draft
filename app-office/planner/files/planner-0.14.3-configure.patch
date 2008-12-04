@@ -1,0 +1,76 @@
+#
+# Upstream: https://bugzilla.gnome.org/show_bug.cgi?id=562984
+#
+Index: b/configure.in
+===================================================================
+--- a/configure.in	(révision 940)
++++ b/configure.in	(copie de travail)
+@@ -80,28 +81,40 @@
+ dnl  -----------
+ dnl | Database/GDA check |----------------------------------------------
+ dnl  -----------
+-AC_ARG_ENABLE(database, [  --enable-database=[no/yes]      enable database support [default=no]], enable_database="$enableval", enable_database=no)
++AC_ARG_WITH(database,
++	AS_HELP_STRING([--with-database],
++		[enable database support @<:@default=no@:>@ (auto/no/gda1/gda2/gda3)]),
++	with_database="$withval", with_database=no)
+ 
+-if test "x$enable_database" = "xyes" ; then
++GDA_VER=
++use_gda=no
+ 
+-    PKG_CHECK_MODULES(GDA, libgda-3.0 >= 1.0,
+-    [
+-      GDA_VER=30
+-    ],
+-    [
+-      PKG_CHECK_MODULES(GDA, libgda-2.0 >= 1.0,
+-      [
+-        GDA_VER=20
+-      ],
+-      [
+-        PKG_CHECK_MODULES(GDA, libgda >= 1.0)
+-        GDA_VER=10
+-      ])
+-    ])
+-    use_gda=yes
+-else
+-    use_gda=no
++case "$with_database" in
++auto|yes)
++	PKG_CHECK_MODULES(GDA, libgda-3.0 >= 1.0, [GDA_VER=30],
++		[PKG_CHECK_MODULES(GDA, libgda-2.0 >= 1.0, [GDA_VER=20],
++			[PKG_CHECK_MODULES(GDA, libgda >= 1.0, [GDA_VER=10])
++		])
++	])
++	;;
++*gda3*)
++	PKG_CHECK_MODULES(GDA, libgda-3.0 >= 1.0, [GDA_VER=30])
++	;;
++*gda2*)
++	PKG_CHECK_MODULES(GDA, libgda-2.0 >= 1.0, [GDA_VER=20])
++	;;
++*gda1*)
++	PKG_CHECK_MODULES(GDA, libgda >= 1.0, [GDA_VER=10])
++	;;
++*)
++	use_gda=no
++	;;
++esac
++
++if test x$GDA_VER != x; then
++	use_gda=yes
+ fi
++
+ AC_SUBST(GDA_VER)
+ AM_CONDITIONAL(HAVE_GDA, test x$use_gda = xyes)
+ dnl -----------------------------------------------------------
+@@ -351,7 +364,7 @@
+ echo "Python plugin                : $enable_python_plugin"
+ #echo "Dotnet bindings              : $have_dotnet"
+ echo "Simple priority scheduling   : $use_simple_priority_scheduling"
+-echo "Database/GDA support         : $use_gda"
++echo "Database/GDA support         : $use_gda, $GDA_VER"
+ echo "Evolution Data Server import : $use_eds"
+ echo "Evolution Data Server backend: $use_eds_backend"
+ echo
