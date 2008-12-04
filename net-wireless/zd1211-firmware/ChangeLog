@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/zd1211-firmware
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/ChangeLog,v 1.10 2007/11/03 12:03:19 dsd Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/ChangeLog,v 1.11 2008/12/04 21:18:23 dsd Exp $
+
+  04 Dec 2008; Daniel Drake <dsd@gentoo.org> metadata.xml:
+  Drop maintainership. I'll still help on bugs, but probably not on a timely
+  fashion. Others are encouraged to commit to or take over this package.
 
   03 Nov 2007; Daniel Drake <dsd@gentoo.org> zd1211-firmware-1.4.ebuild:
   Stable on x86 and amd64
