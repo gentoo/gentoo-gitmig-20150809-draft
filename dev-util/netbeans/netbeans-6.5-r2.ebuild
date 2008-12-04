@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r2.ebuild,v 1.2 2008/12/04 10:43:17 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r2.ebuild,v 1.3 2008/12/04 11:57:27 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -249,57 +249,57 @@ pkg_setup() {
 		die
 	fi
 
+	local need_apisupport="0"
+	local need_groovy="0"
+	local need_gsf="0"
+	local need_harness="0"
+	local need_ide="0"
+	local need_j2ee="0"
+	local need_java="0"
+	local need_websvccommon="0"
+	local need_xml="0"
+
 	# direct deps: ide
-	if use netbeans_modules_cnd && ! use netbeans_modules_ide ; then
-		eerror "'cnd' module requires 'ide' module"
-		die
+	if use netbeans_modules_cnd ; then
+		need_ide="1"
 	fi
 
 	# direct deps: gsf, ide, java
-	if use netbeans_modules_groovy && ! ( \
-		use netbeans_modules_gsf && \
-		use netbeans_modules_ide && \
-		use netbeans_modules_java && \
-		use netbeans_modules_websvccommon ) ; then
-		eerror "'groovy' module requires 'gsf', 'ide', 'java' and 'websvccommon' modules"
-		die
+	if use netbeans_modules_groovy ; then
+		need_gsf="1"
+		need_ide="1"
+		need_java="1"
+		need_websvccommon="1"
 	fi
 
 	# direct deps: ide
-	if use netbeans_modules_gsf && ! use netbeans_modules_ide ; then
-		eerror "'gsf' module requires 'ide' module"
-		die
+	if use netbeans_modules_gsf ; then
+		need_ide="1"
 	fi
 
 	# direct deps: gsf, ide, j2ee, java
-	if use netbeans_modules_identity && ! ( \
-		use netbeans_modules_groovy && \
-		use netbeans_modules_gsf && \
-		use netbeans_modules_ide && \
-		use netbeans_modules_j2ee && \
-		use netbeans_modules_java && \
-		use netbeans_modules_websvccommon ) ; then
-		eerror "'identity' module requires 'groovy', 'gsf', 'ide', 'j2ee', 'java' and 'websvccommon'  modules"
-		die
+	if use netbeans_modules_identity ; then
+		need_groovy="1"
+		need_gsf="1"
+		need_ide="1"
+		need_j2ee="1"
+		need_java="1"
+		need_websvccommon="1"
 	fi
 
 	# direct deps: groovy, gsf, ide, java
-	if use netbeans_modules_j2ee && ! ( \
-		use netbeans_modules_groovy && \
-		use netbeans_modules_gsf && \
-		use netbeans_modules_ide && \
-		use netbeans_modules_java && \
-		use netbeans_modules_websvccommon ) ; then
-		eerror "'j2ee' module requires 'groovy', 'gsf', 'ide', 'java' and 'websvccommon' modules"
-		die
+	if use netbeans_modules_j2ee ; then
+		need_groovy="1"
+		need_gsf="1"
+		need_ide="1"
+		need_java="1"
+		need_websvccommon="1"
 	fi
 
 	# direct deps: ide, websvccommon
-	if use netbeans_modules_java && ! ( \
-		use netbeans_modules_ide && \
-		use netbeans_modules_websvccommon ) ; then
-		eerror "'java' module requires 'ide' and 'websvccommon' module"
-		die
+	if use netbeans_modules_java ; then
+		need_ide="1"
+		need_websvccommon="1"
 	fi
 
 	# because of bug http://www.netbeans.org/issues/show_bug.cgi?id=151535 'j2ee' cluster is also
@@ -307,46 +307,38 @@ pkg_setup() {
 	# because of bug http://www.netbeans.org/issues/show_bug.cgi?id=151538 'apisupport' cluster is also
 	# needed to build 'mobility' cluster
 	# direct deps: apisupport, ide, j2ee, java
-	if use netbeans_modules_mobility && ! ( \
-		use netbeans_modules_apisupport && \
-		use netbeans_modules_groovy && \
-		use netbeans_modules_gsf && \
-		use netbeans_modules_harness && \
-		use netbeans_modules_ide && \
-		use netbeans_modules_j2ee && \
-		use netbeans_modules_java && \
-		use netbeans_modules_websvccommon ) ; then
-		eerror "'mobility' module requires 'apisupport', 'groovy', 'gsf', 'harness', 'ide', 'j2ee', 'java' and 'websvccommon' modules"
-		die
+	if use netbeans_modules_mobility ; then
+		need_apisupport="1"
+		need_groovy="1"
+		need_gsf="1"
+		need_harness="1"
+		need_ide="1"
+		need_j2ee="1"
+		need_java="1"
+		need_websvccommon="1"
 	fi
 
 	# direct deps: harness, ide
-	if use netbeans_modules_nb && ! ( \
-		use netbeans_modules_harness && \
-		use netbeans_modules_ide ) ; then
-		eerror "'nb' module requires 'harness' and 'ide' module"
-		die
+	if use netbeans_modules_nb ; then
+		need_harness="1"
+		need_ide="1"
 	fi
 
 	# direct deps: gsf, ide, websvccommon
-	if use netbeans_modules_php && ! ( \
-		use netbeans_modules_gsf && \
-		use netbeans_modules_ide && \
-		use netbeans_modules_websvccommon ) ; then
-		eerror "'php' module requires 'gsf', 'ide' and 'websvccommon' modules"
-		die
+	if use netbeans_modules_php ; then
+		need_gsf="1"
+		need_ide="1"
+		need_websvccommon="1"
 	fi
 
 	# direct deps: gsf, ide, j2ee, java
-	if use netbeans_modules_profiler && ! ( \
-		use netbeans_modules_groovy && \
-		use netbeans_modules_gsf && \
-		use netbeans_modules_ide && \
-		use netbeans_modules_j2ee && \
-		use netbeans_modules_java && \
-		use netbeans_modules_websvccommon ) ; then
-		eerror "'profiler' module requires 'groovy', 'gsf', 'ide', 'j2ee', 'java' and 'websvccommon' modules"
-		die
+	if use netbeans_modules_profiler ; then
+		need_groovy="1"
+		need_gsf="1"
+		need_ide="1"
+		need_j2ee="1"
+		need_java="1"
+		need_websvccommon="1"
 	fi
 
 	# direct deps: gsf, ide
@@ -356,48 +348,56 @@ pkg_setup() {
 	#fi
 
 	# direct deps: gsf, ide, j2ee, java, xml
-	if use netbeans_modules_soa && ! ( \
-		use netbeans_modules_groovy && \
-		use netbeans_modules_gsf && \
-		use netbeans_modules_ide && \
-		use netbeans_modules_j2ee && \
-		use netbeans_modules_java && \
-		use netbeans_modules_websvccommon && \
-		use netbeans_modules_xml ) ; then
-		eerror "'soa' module requires 'groovy', 'gsf', 'ide', 'j2ee', 'java', 'websvccommon' and 'xml' modules"
-		die
+	if use netbeans_modules_soa ; then
+		need_groovy="1"
+		need_gsf="1"
+		need_ide="1"
+		need_j2ee="1"
+		need_java="1"
+		need_websvccommon="1"
+		need_xml="1"
 	fi
 
 	# direct deps: gsf, ide, j2ee, java
-	if use netbeans_modules_visualweb && ! ( \
-		use netbeans_modules_groovy && \
-		use netbeans_modules_gsf && \
-		use netbeans_modules_ide && \
-		use netbeans_modules_j2ee && \
-		use netbeans_modules_java && \
-		use netbeans_modules_websvccommon ) ; then
-		eerror "'visualweb' module requires 'groovy', 'gsf', 'ide', 'j2ee', 'java' and 'websvccommon' modules"
-		die
+	if use netbeans_modules_visualweb ; then
+		need_groovy="1"
+		need_gsf="1"
+		need_ide="1"
+		need_j2ee="1"
+		need_java="1"
+		need_websvccommon="1"
 	fi
 
 	# direct deps: gsf, ide
-	if use netbeans_modules_webcommon && ! ( \
-		use netbeans_modules_gsf && \
-		use netbeans_modules_ide ) ; then
-		eerror "'webcommon' module requires 'gsf' and 'ide' modules"
-		die
+	if use netbeans_modules_webcommon ; then
+		need_gsf="1"
+		need_ide="1"
 	fi
 
 	# direct deps: ide
-	if use netbeans_modules_websvccommon && ! use netbeans_modules_ide ; then
-		eerror "'websvccommon' module requires 'ide' module"
-		die
+	if use netbeans_modules_websvccommon ; then
+		need_ide="1"
 	fi
 
 	# direct deps: ide
-	if use netbeans_modules_xml && ! use netbeans_modules_ide ; then
-		eerror "'xml' module requires 'ide' module"
-		die
+	if use netbeans_modules_xml ; then
+		need_ide="1"
+	fi
+
+	check_use_flag "apisupport" ${need_apisupport}
+	check_use_flag "groovy" ${need_groovy}
+	check_use_flag "gsf" ${need_gsf}
+	check_use_flag "harness" ${need_harness}
+	check_use_flag "ide" ${need_ide}
+	check_use_flag "j2ee" ${need_j2ee}
+	check_use_flag "java" ${need_java}
+	check_use_flag "websvccommon" ${need_websvccommon}
+	check_use_flag "xml" ${need_xml}
+
+	if [ -n "${JAVA_PKG_NB_MISSING_USE_FLAGS}" ] ; then
+		eerror "You need to add these modules to NETBEANS_MODULES because they are needed by modules you have selected"
+		eerror "   Missing NETBEANS_MODULES: ${JAVA_PKG_NB_MISSING_USE_FLAGS}"
+		die "Missing NETBEANS_MODULES"
 	fi
 
 	if ! use netbeans_modules_nb ; then
@@ -1114,4 +1114,21 @@ compile_locale_support() {
 	einfo "Compiling support for '${2}' locale"
 	eant ${1} -Dlocales=${2} -Ddist.dir=../nbbuild/netbeans -Dnbms.dir="" -Dnbms.dist.dir="" \
 		-f l10n/build.xml build
+}
+
+# Checks whether USE flag should be set and outputs error if it is not set
+# Arguments
+# 1 - netbeans module
+# 2 - required status (1 = required)
+check_use_flag() {
+	local module=${1}
+	local required=${2}
+
+	if [ "${required}" == "1" ] ; then
+		if [ -z "${JAVA_PKG_NB_MISSING_USE_FLAGS}" ] ; then
+			JAVA_PKG_NB_MISSING_USE_FLAGS="${module}"
+		else
+			JAVA_PKG_NB_MISSING_USE_FLAGS="${JAVA_PKG_NB_MISSING_USE_FLAGS} ${module}"
+		fi
+	fi
 }
