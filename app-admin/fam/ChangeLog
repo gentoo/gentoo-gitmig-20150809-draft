@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/fam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.50 2008/05/09 01:41:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.51 2008/12/04 23:58:23 dirtyepic Exp $
+
+  04 Dec 2008; Ryan Hill <dirtyepic@gentoo.org> files/fam-2.7.0-gcc43.patch:
+  Expand gcc 4.3 patch to cover NULL not being declared in Interest.h and
+  BTree.h (bug #237953 by robs)
 
   09 May 2008; Mark Loeser <halcy0n@gentoo.org>
   +files/fam-2.7.0-gcc43.patch, fam-2.7.0-r4.ebuild:
