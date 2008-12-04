@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/openmesh
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.9 2008/11/25 21:21:40 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.10 2008/12/04 02:09:10 jsbronder Exp $
+
+*openmesh-1.9.6-r1 (04 Dec 2008)
+
+  04 Dec 2008; Justin Bronder <jsbronder@gentoo.org>
+  +openmesh-1.9.6-r1.ebuild:
+  media-gfx/openmesh revbump. Use EAPI2 for qt opengl use dep, depend on
+  >=acgmake-1.4 (#249643) add missing dep on glut.
 
   25 Nov 2008; Justin Bronder <jsbronder@gentoo.org>
   -openmesh-1.9.4-r1.ebuild:
