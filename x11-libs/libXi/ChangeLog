@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.58 2008/12/04 04:45:21 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.59 2008/12/04 04:46:08 dberkholz Exp $
+
+  04 Dec 2008; Donnie Berkholz <dberkholz@gentoo.org>; libXi-1.2.0.ebuild:
+  Require at least inputproto 1.5.
 
 *libXi-1.2.0 (04 Dec 2008)
 
