@@ -1,6 +1,6 @@
 # Copyright 2000-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5-r2.ebuild,v 1.1 2008/11/16 06:16:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5-r2.ebuild,v 1.2 2008/12/04 16:57:12 matsuu Exp $
 
 inherit kde-functions multilib toolchain-funcs eutils
 
@@ -28,6 +28,8 @@ src_unpack() {
 	# bug #211493
 	epatch "${FILESDIR}/${P}-kde3.patch"
 	sed -i -e "s:/opt/kde3:${KDEDIR}:g" doc/de/index.docbook || die
+	# bug #246223
+	ln -s libscim-kdeutils.so.0.1.0 utils/libscim-kdeutils.so || die
 }
 
 src_compile() {

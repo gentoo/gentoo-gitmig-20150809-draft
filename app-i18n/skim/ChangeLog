@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.59 2008/11/16 06:16:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.60 2008/12/04 16:57:12 matsuu Exp $
+
+  04 Dec 2008; MATSUU Takuto <matsuu@gentoo.org> skim-1.4.5-r2.ebuild:
+  Added symbolic link, bug #246223.
 
 *skim-1.4.5-r2 (16 Nov 2008)
 
