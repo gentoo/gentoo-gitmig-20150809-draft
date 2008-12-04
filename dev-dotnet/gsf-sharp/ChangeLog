@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gsf-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/ChangeLog,v 1.14 2008/12/04 21:15:05 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/ChangeLog,v 1.15 2008/12/04 21:39:54 loki_val Exp $
+
+  04 Dec 2008; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
+  Dotnet herd claims this package
 
   04 Dec 2008; Daniel Drake <dsd@gentoo.org> metadata.xml:
   Drop maintainership. I'll still help on bugs, but probably not on a timely
