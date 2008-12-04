@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/solfege
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.27 2008/09/28 07:21:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.28 2008/12/04 20:48:57 eva Exp $
+
+  04 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org> solfege-3.8.2.ebuild,
+  solfege-3.10.3.ebuild, solfege-3.10.4.ebuild:
+  Replace dependency on gtkhtml by real deps on python packages, bug
+  #247636.
 
 *solfege-3.10.4 (28 Sep 2008)
 

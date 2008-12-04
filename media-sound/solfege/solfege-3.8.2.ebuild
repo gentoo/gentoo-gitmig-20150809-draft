@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.8.2.ebuild,v 1.2 2007/11/24 12:27:10 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.8.2.ebuild,v 1.3 2008/12/04 20:48:57 eva Exp $
 
 inherit python eutils
 
@@ -16,7 +16,8 @@ IUSE="oss"
 RDEPEND=">=dev-lang/python-2.3
 	>=x11-libs/gtk+-2.6
 	>=dev-python/pygtk-2.6
-	>=gnome-extra/gtkhtml-2"
+	>=dev-python/gnome-python-2.20
+	>=dev-python/gnome-python-extras-2.19"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	=dev-lang/swig-1.3*

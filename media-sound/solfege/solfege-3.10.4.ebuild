@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.10.4.ebuild,v 1.1 2008/09/28 07:21:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.10.4.ebuild,v 1.2 2008/12/04 20:48:57 eva Exp $
 
 DESCRIPTION="GNU Solfege is a program written to help you practice ear training."
 HOMEPAGE="http://www.solfege.org"
@@ -11,8 +11,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="oss"
 
+# FIXME: there is probably some missing python deps, please fill bugs.
 RDEPEND=">=dev-python/pygtk-2.6
-	>=gnome-extra/gtkhtml-2"
+	>=dev-python/libgnome-python-2.20
+	>=dev-python/gtkhtml-python-2.19"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	=dev-lang/swig-1.3*
