@@ -1,24 +1,28 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00.ebuild,v 1.4 2008/07/29 10:43:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r2.ebuild,v 1.1 2008/12/04 18:21:21 bicatali Exp $
 
 EAPI=1
-inherit versionator flag-o-matic eutils toolchain-funcs qt4 fortran
+inherit versionator eutils toolchain-funcs qt4 fortran elisp-common
 
-#DOC_PV=$(get_major_version)_$(get_version_component_range 2)
-DOC_PV=5_16
+DOC_PV=$(get_major_version)_$(get_version_component_range 2)
+ROOFIT_DOC_PV=2.07-29
+TMVA_DOC_PV=4
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
-	doc? ( ftp://root.cern.ch/root/doc/Users_Guide_${DOC_PV}.pdf )"
+	doc? ( ftp://root.cern.ch/root/doc/Users_Guide_${DOC_PV}.pdf
+		ftp://root.cern.ch/root/doc/RooFit_Users_Manual_${ROOFIT_DOC_PV}.pdf
+		http://tmva.sourceforge.net/docu/TMVAUsersGuide_v${TMVA_DOC_PV}.pdf )"
+
 HOMEPAGE="http://root.cern.ch/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 
-IUSE="afs cern clarens doc fftw geant4 kerberos ldap +math mysql odbc
-	oracle postgres python ruby qt4 ssl xml xrootd"
+IUSE="afs cern clarens doc emacs fftw geant4 kerberos ldap +math mysql odbc
+	oracle postgres pythia6 pythia8 python +reflex ruby qt4 ssl xml xrootd"
 
 # libafterimage ignored, may be re-install for >=5.20
 # see https://savannah.cern.ch/bugs/?func=detailitem&item_id=30944
@@ -34,26 +38,29 @@ RDEPEND="sys-apps/shadow
 	media-libs/tiff
 	virtual/opengl
 	virtual/glu
-	math? ( >=sci-libs/gsl-1.8 )
 	afs? ( >=net-fs/openafs-1.4.7 )
-	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-server )
+	clarens? ( dev-libs/xmlrpc-c )
+	emacs? ( virtual/emacs )
+	fftw? ( sci-libs/fftw:3.0 )
+	geant4? ( sci-physics/geant:4 )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
+	math? ( >=sci-libs/gsl-1.8 )
+	mysql? ( virtual/mysql )
+	odbc? ( dev-db/libiodbc )
+	oracle? ( dev-db/oracle-instantclient-basic )
+	postgres? ( virtual/postgresql-server )
+	pythia6? ( sci-physics/pythia:6 )
+	pythia8? ( sci-physics/pythia:8 )
+	python? ( dev-lang/python )
 	qt4? ( || ( ( x11-libs/qt-gui:4
 			x11-libs/qt-opengl:4
 			x11-libs/qt-qt3support:4
 			x11-libs/qt-xmlpatterns:4 )
-			=x11-libs/qt-4.3* ) )
-	fftw? ( sci-libs/fftw:3.0 )
-	python? ( dev-lang/python )
+			x11-libs/qt:4 ) )
 	ruby? ( dev-lang/ruby )
 	ssl? ( dev-libs/openssl )
-	xml? ( dev-libs/libxml2 )
-	geant4? ( sci-physics/geant:4 )
-	odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) )
-	oracle? ( dev-db/oracle-instantclient-basic )
-	clarens? ( dev-libs/xmlrpc-c )"
+	xml? ( dev-libs/libxml2 )"
 
 DEPEND="${RDEPEND}
 	cern? ( dev-lang/cfortran )
@@ -66,19 +73,15 @@ QT4_BUILT_WITH_USE_CHECK="qt3support opengl"
 pkg_setup() {
 	elog
 	elog "You may want to build ROOT with these non Gentoo extra packages:"
-	elog "AliEn, castor, Chirp, gfal, gLite, Globus, Monalisa, "
-	elog "PYTHIA, PYTHIA6, SapDB, SRP."
+	elog "AliEn, castor, Chirp, gfal, gLite, Globus, Monalisa, SapDB, SRP."
 	elog "You can use the env variable EXTRA_ECONF variable for this."
 	elog "For example, for SRP, you would set: "
 	elog "EXTRA_ECONF=\"--enable-srp --with-srp-libdir=/usr/$(get_libdir)\""
 	elog
-	epause 5
+	epause 3
 	if use cern; then
 		FORTRAN="gfortran g77 ifc"
 		fortran_pkg_setup
-	else
-		FORTRANC=
-		FFLAGS=
 	fi
 	use qt4 && qt4_pkg_setup
 }
@@ -88,16 +91,44 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-configure.patch
 	epatch "${FILESDIR}"/${P}-pic.patch
-	# use system cfortran
+	epatch "${FILESDIR}"/${P}-ftgl.patch
+	# root bug; reported at https://savannah.cern.ch/bugs/?40816, fixed in svn
+	epatch "${FILESDIR}"/${P}-include-defines-file.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	# various patches from upstream branch
+	epatch "${FILESDIR}"/${P}-upstream.patch
+
 	if use cern; then
-		rm -f include/root/cfortran.h
-		ln -s /usr/include/cfortran.h include/cfortran.h
+		mv montecarlo/eg/inc/cfortran.h{,.orig} || die
+		ln -s /usr/include/cfortran.h montecarlo/eg/inc/cfortran.h || die
 	fi
+	# take a more descriptive name for ruby libs
+	sed -i \
+		-e 's/libRuby/libRubyROOT/g' \
+		bindings/ruby/Module.mk bindings/ruby/src/drr.cxx \
+		|| die "ajusting ruby libname failed"
+
+	# libPythia6 is called libpythia6 in gentoo
+	sed -i -e 's/libPythia6/libpythia6/g' \
+		configure || die "adjusting libpythia6 name failed"
+
+	# flags propagation
+	sed -i \
+		-e "s/^\(EXTRA_CFLAGS.*:=.*\)/\1 ${CFLAGS}/" \
+		-e "s/^\(EXTRA_CXXFLAGS.*:=.*\)/\1 ${CXXFLAGS}/" \
+		-e "s/^\(EXTRA_LDFLAGS.*:=.*\)/\1 ${LDFLAGS}/" \
+		config/Makefile.in \
+		|| die "flag propagation failed"
+	# same in xrootd
+	sed -i \
+		-e "s/-O2/${CXXFLAGS}/g" \
+		net/xrootd/src/xrootd/config/*.rules.* \
+		|| die "flag propagation in xrootd failed"
 }
 
 src_compile() {
 
-	local target
+	local target=
 	if [[ "$(tc-getCXX)" == ic* ]]; then
 		if use amd64; then
 			target=linuxx8664icc
@@ -106,7 +137,7 @@ src_compile() {
 		fi
 	fi
 
-	local myconf
+	local myconf=
 	use postgres && \
 		myconf="${myconf} --with-pgsql-incdir=/usr/include/postgresql"
 
@@ -118,8 +149,18 @@ src_compile() {
 		myconf="${myconf} --with-clhep-incdir=/usr/include" && \
 		myconf="${myconf} --with-g4-libdir=${G4LIB}"
 
-	use odbc && [[ -z $(type -P odbc-config) ]] && \
+	if use odbc; then
+		# doesn't work with unixODBC, see bug #242150
 		myconf="${myconf} --with-odbc-incdir=/usr/include/iodbc"
+	fi
+
+	use pythia6 && \
+		myconf="${myconf} --enable-pythia6" && \
+		myconf="${myconf} --with-pythia6-libdir=/usr/$(get_libdir)"
+
+	use pythia8 && \
+		myconf="${myconf} --enable-pythia8" && \
+		myconf="${myconf} --with-pythia8-incdir=/usr/include/pythia"
 
 	# the configure script is not the standard autotools
 	./configure \
@@ -129,9 +170,6 @@ src_compile() {
 		--libdir=/usr/$(get_libdir)/${PN} \
 		--docdir=/usr/share/doc/${PF} \
 		--with-sys-iconpath=/usr/share/pixmaps \
-		--with-f77="${FORTRANC} ${FFLAGS}" \
-		--with-cc="$(tc-getCC) ${CFLAGS}" \
-		--with-cxx="$(tc-getCXX) ${CXXFLAGS}" \
 		--disable-builtin-afterimage \
 		--disable-builtin-freetype \
 		--disable-builtin-ftgl \
@@ -139,13 +177,11 @@ src_compile() {
 		--disable-builtin-zlib \
 		--enable-asimage \
 		--enable-astiff \
-		--enable-cintex \
 		--enable-exceptions	\
 		--enable-explicitlink \
 		--enable-gdml \
 		--enable-memstat \
 		--enable-opengl \
-		--enable-reflex \
 		--enable-shadowpw \
 		--enable-shared	\
 		--enable-soversion \
@@ -170,6 +206,8 @@ src_compile() {
 		$(use_enable python) \
 		$(use_enable qt4 qt) \
 		$(use_enable qt4 qtgsi) \
+		$(use_enable reflex cintex) \
+		$(use_enable reflex) \
 		$(use_enable ruby) \
 		$(use_enable ssl) \
 		$(use_enable xml) \
@@ -177,20 +215,42 @@ src_compile() {
 		${EXTRA_ECONF} \
 		|| die "configure failed"
 
-	emake || die "emake failed"
+	emake OPT="" || die "emake failed"
 	emake cintdlls || die "emake cintdlls failed"
+	if use emacs; then
+		elisp-compile build/misc/*.el || die "elisp-compile failed"
+	fi
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	echo "LDPATH=/usr/$(get_libdir)/root" > 99root
+	use pythia8 && echo "PYTHIA8=/usr" >> 99root
 	use python && echo "PYTHONPATH=/usr/$(get_libdir)/root" >> 99root
+	use ruby && echo "RUBYLIB=/usr/$(get_libdir)/root" >> 99root
 	doenvd 99root || die "doenvd failed"
 
-	if use doc; then
-		einfo "Installing user's guide and ref manual"
-		insinto /usr/share/doc/${PF}
-		doins "${DISTDIR}"/Users_Guide_${DOC_PV}.pdf \
-			|| die "pdf install failed"
+	# The build system installs Emacs support unconditionally and in the wrong
+	# directory. Remove it and call elisp-install in case of USE=emacs.
+	rm -rf "${D}"/usr/share/emacs
+	if use emacs; then
+		elisp-install ${PN} build/misc/*.{el,elc} || die "elisp-install failed"
 	fi
+
+	if use doc; then
+		einfo "Installing user's guides"
+		insinto /usr/share/doc/${PF}
+		doins \
+			"${DISTDIR}"/Users_Guide_${DOC_PV}.pdf \
+			"${DISTDIR}"/TMVAUsersGuide_v${TMVA_DOC_PV}.pdf \
+			|| die "pdf install failed"
+		if use math; then
+			doins "${DISTDIR}"/RooFit_Users_Manual_${ROOFIT_DOC_PV}.pdf \
+				|| die "math doc install failed"
+		fi
+	fi
+}
+
+pkg_postinst() {
+	use ruby && elog "ROOT Ruby  module is available as libRubyROOT"
 }
