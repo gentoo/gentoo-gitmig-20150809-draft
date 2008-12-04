@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r2.ebuild,v 1.3 2008/12/04 11:57:27 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r2.ebuild,v 1.4 2008/12/04 12:15:51 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -249,15 +249,15 @@ pkg_setup() {
 		die
 	fi
 
-	local need_apisupport="0"
-	local need_groovy="0"
-	local need_gsf="0"
-	local need_harness="0"
-	local need_ide="0"
-	local need_j2ee="0"
-	local need_java="0"
-	local need_websvccommon="0"
-	local need_xml="0"
+	local need_apisupport=""
+	local need_groovy=""
+	local need_gsf=""
+	local need_harness=""
+	local need_ide=""
+	local need_j2ee=""
+	local need_java=""
+	local need_websvccommon=""
+	local need_xml=""
 
 	# direct deps: ide
 	if use netbeans_modules_cnd ; then
@@ -384,19 +384,20 @@ pkg_setup() {
 		need_ide="1"
 	fi
 
-	check_use_flag "apisupport" ${need_apisupport}
-	check_use_flag "groovy" ${need_groovy}
-	check_use_flag "gsf" ${need_gsf}
-	check_use_flag "harness" ${need_harness}
-	check_use_flag "ide" ${need_ide}
-	check_use_flag "j2ee" ${need_j2ee}
-	check_use_flag "java" ${need_java}
-	check_use_flag "websvccommon" ${need_websvccommon}
-	check_use_flag "xml" ${need_xml}
+	local missing=""
+	[ -n "$}need_apisupport}" ] && ! use netbeans_modules_apisupport && missing="${missing} apisupport"
+	[ -n "$}need_groovy}" ] && ! use netbeans_modules_groovy && missing="${missing} groovy"
+	[ -n "$}need_gsf}" ] && ! use netbeans_modules_gsf && missing="${missing} gsf"
+	[ -n "$}need_harness}" ] && ! use netbeans_modules_harness && missing="${missing} harness"
+	[ -n "$}need_ide}" ] && ! use netbeans_modules_ide && missing="${missing} ide"
+	[ -n "$}need_j2ee}" ] && ! use netbeans_modules_j2ee && missing="${missing} j2ee"
+	[ -n "$}need_java}" ] && ! use netbeans_modules_java && missing="${missing} java"
+	[ -n "$}need_websvccommon}" ] && ! use netbeans_modules_websvccommon && missing="${missing} websvccommon"
+	[ -n "$}need_xml}" ] && ! use netbeans_modules_xml && missing="${missing} xml"
 
-	if [ -n "${JAVA_PKG_NB_MISSING_USE_FLAGS}" ] ; then
+	if [ -n "${missing}" ] ; then
 		eerror "You need to add these modules to NETBEANS_MODULES because they are needed by modules you have selected"
-		eerror "   Missing NETBEANS_MODULES: ${JAVA_PKG_NB_MISSING_USE_FLAGS}"
+		eerror "   Missing NETBEANS_MODULES: ${missing}"
 		die "Missing NETBEANS_MODULES"
 	fi
 
@@ -1114,21 +1115,4 @@ compile_locale_support() {
 	einfo "Compiling support for '${2}' locale"
 	eant ${1} -Dlocales=${2} -Ddist.dir=../nbbuild/netbeans -Dnbms.dir="" -Dnbms.dist.dir="" \
 		-f l10n/build.xml build
-}
-
-# Checks whether USE flag should be set and outputs error if it is not set
-# Arguments
-# 1 - netbeans module
-# 2 - required status (1 = required)
-check_use_flag() {
-	local module=${1}
-	local required=${2}
-
-	if [ "${required}" == "1" ] ; then
-		if [ -z "${JAVA_PKG_NB_MISSING_USE_FLAGS}" ] ; then
-			JAVA_PKG_NB_MISSING_USE_FLAGS="${module}"
-		else
-			JAVA_PKG_NB_MISSING_USE_FLAGS="${JAVA_PKG_NB_MISSING_USE_FLAGS} ${module}"
-		fi
-	fi
 }
