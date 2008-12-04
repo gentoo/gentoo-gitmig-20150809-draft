@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.20 2008/12/01 13:35:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.21 2008/12/04 14:10:23 darkside Exp $
+
+*wicd-1.5.6 (04 Dec 2008)
+
+  04 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
+  -files/wicd-1.5.3-wicd-client-manpage.patch, -wicd-1.5.3-r2.ebuild,
+  -wicd-1.5.5.ebuild, +wicd-1.5.6.ebuild:
+  Version bump, from CHANGES file:
+  1.5.6
+   * Wicd will now start if the logging directory is present, but the log isn't
 
 *wicd-1.5.5 (01 Dec 2008)
 

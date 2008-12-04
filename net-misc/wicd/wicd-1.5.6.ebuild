@@ -1,12 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.3-r2.ebuild,v 1.3 2008/11/18 03:14:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.6.ebuild,v 1.1 2008/12/04 14:10:23 darkside Exp $
 
 inherit distutils eutils
 
+MY_P=${P/-/_}
+
 DESCRIPTION="A lightweight wired and wireless network manager for Linux"
 HOMEPAGE="http://wicd.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,27 +19,17 @@ DEPEND=""
 RDEPEND="dev-python/dbus-python
 	dev-python/pygtk
 	|| (
-		net-misc/dhcp
 		net-misc/dhcpcd
+		net-misc/dhcp
 		net-misc/pump
 	)
 	net-wireless/wireless-tools
 	net-wireless/wpa_supplicant
 	|| (
-		sys-apps/ethtool
 		sys-apps/net-tools
+		sys-apps/ethtool
 	)
 	|| ( x11-misc/ktsuss x11-libs/gksu kde-base/kdesu )"
-
-src_unpack() {
-	distutils_src_unpack
-	# patch to install new man page - submitted upstream
-	epatch "${FILESDIR}/${P}-wicd-client-manpage.patch"
-
-	# discussing with upstream
-	sed -i 's/gksu/gksudo/' wicd/{misc,gui}.py
-
-}
 
 src_compile() {
 	${python} ./setup.py configure --no-install-init --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose
