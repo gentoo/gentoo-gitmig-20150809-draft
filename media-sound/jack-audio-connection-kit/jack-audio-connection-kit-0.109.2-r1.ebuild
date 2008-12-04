@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.109.2-r1.ebuild,v 1.4 2008/12/02 06:43:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.109.2-r1.ebuild,v 1.5 2008/12/04 22:20:54 maekke Exp $
 
 inherit flag-o-matic eutils multilib linux-info autotools multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/jackit/${P}.tar.gz netjack? ( mirror://sourceforge
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
 IUSE="altivec alsa caps coreaudio doc debug mmx oss sse netjack cpudetection"
 
 RDEPEND=">=media-libs/libsndfile-1.0.0
