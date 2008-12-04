@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4050 2008/12/03 22:47:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4051 2008/12/04 22:47:53 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -490,6 +490,7 @@ dev-embedded/ponyprog:epiphany - Enable support for www-client/epiphany
 dev-embedded/sdcc:boehm-gc - Enable Hans Boehm's garbage collector (dev-libs/boehm-gc)
 dev-embedded/urjtag:ftdi - Enable support for USB FTDI chips (dev-embedded/libftdi)
 dev-games/cegui:devil - Enable image loading via DevIL
+dev-games/cegui:freeimage - Enable image loading via FreeImage
 dev-games/cegui:irrlicht - Enable the Irrlicht renderer
 dev-games/cegui:xerces-c - Enable the Xerces-C++ XML parser module
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
