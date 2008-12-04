@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdjconsole
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/ChangeLog,v 1.7 2008/08/13 08:02:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdjconsole/ChangeLog,v 1.8 2008/12/04 22:31:59 maekke Exp $
+
+  04 Dec 2008; Markus Meier <maekke@gentoo.org> libdjconsole-0.1.2.ebuild:
+  x86 stable, bug #249420
 
   13 Aug 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   drop maintainance to proaudio herd, its low maintainance anyway
