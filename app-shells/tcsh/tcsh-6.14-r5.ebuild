@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r5.ebuild,v 1.3 2007/07/15 05:23:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r5.ebuild,v 1.4 2008/12/04 20:50:30 grobian Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 	if use catalogs ; then
 		einfo "enabling NLS catalogs support..."
 		sed -i -e "s/#undef NLS_CATALOGS/#define NLS_CATALOGS/" \
-			${WORKDIR}/${MY_P}/config_f.h || die
+			"${WORKDIR}"/${MY_P}/config_f.h || die
 		eend $?
 	fi
 }
