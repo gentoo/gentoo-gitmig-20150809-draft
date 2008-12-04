@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gnomesword
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.30 2008/08/20 01:49:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/ChangeLog,v 1.31 2008/12/04 20:30:11 eva Exp $
+
+  04 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  gnomesword-2.1.7.ebuild:
+  Restrict to one gtkhtml slot, bug #247636.
 
 *gnomesword-2.3.6 (20 Aug 2008)
 *gnomesword-2.3.5 (20 Aug 2008)
