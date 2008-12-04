@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.8.0.ebuild,v 1.1 2008/11/13 22:09:53 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.8.0.ebuild,v 1.2 2008/12/04 19:39:51 ssuominen Exp $
 
 inherit base autotools
 
@@ -11,14 +11,15 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="alsa nls"
+IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2
-	dev-libs/libxml2
+	>=dev-libs/libxml2-2.3.10
 	gnome-base/librsvg
-	media-libs/aubio
+	>=media-libs/aubio-0.3.2
 	=media-libs/portaudio-19*
-	alsa? ( >=media-libs/alsa-lib-0.9 )"
+	>=dev-scheme/guile-1.8
+	>=media-libs/alsa-lib-0.9"
 DEPEND="${RDEPEND}
 	|| ( dev-util/yacc sys-devel/bison )
 	sys-devel/flex
@@ -37,12 +38,15 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --enable-gtk2 --disable-xmltest --disable-alsatest \
-		$(use_enable nls) $(use_enable alsa)
+	econf --enable-gtk2 $(use_enable nls)
 	emake || die "emake failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README*
+}
+
+pkg_postinst() {
+	elog "Suggested packages: media-sound/timidity++."
 }
