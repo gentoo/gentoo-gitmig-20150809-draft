@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r7.ebuild,v 1.5 2008/12/04 22:23:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r7.ebuild,v 1.6 2008/12/04 22:27:56 maekke Exp $
 
 inherit eutils elisp-common
 
@@ -128,7 +128,7 @@ src_install() {
 	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog*
-	dodoc NEWS README* "${FILESDIR}/timidity.cfg"
+	dodoc NEWS README* "${FILESDIR}/timidity.cfg-r1"
 
 	# these are only for the ALSA sequencer mode
 	if use alsa; then
