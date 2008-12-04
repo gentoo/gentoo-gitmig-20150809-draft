@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/libopensync-plugin-irmc-9999.ebuild,v 1.2 2007/11/26 20:20:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/libopensync-plugin-irmc-9999.ebuild,v 1.3 2008/12/04 14:09:03 flameeyes Exp $
 
 inherit eutils cmake-utils subversion
 
@@ -25,7 +25,7 @@ pkg_setup() {
 	if ! use irda && ! use bluetooth; then
 		eerror "${CATEGORY}/${P} without support for bluetooth nor irda is unusable."
 		eerror "Please enable \"bluetooth\" or/and \"irda\" USE flags."
-		die "Please enable \"bluetoot\" or/and \"irda\" USE flags."
+		die "Please enable \"bluetooth\" or/and \"irda\" USE flags."
 	fi
 
 	if use bluetooth && ! built_with_use dev-libs/openobex bluetooth; then
