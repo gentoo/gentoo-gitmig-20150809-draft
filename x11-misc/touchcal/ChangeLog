@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/touchcal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.5 2008/10/05 10:13:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/touchcal/ChangeLog,v 1.6 2008/12/04 21:25:44 dsd Exp $
+
+  04 Dec 2008; Daniel Drake <dsd@gentoo.org> metadata.xml:
+  Drop maintainership. I'll still help on bugs, but probably not on a timely
+  fashion. Others are encouraged to commit to or take over this package.
 
   05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> touchcal-0.31.ebuild:
   Fix obvious typo in src_install.
