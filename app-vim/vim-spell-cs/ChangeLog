@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-cs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-cs/ChangeLog,v 1.6 2007/10/22 15:23:01 cla Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-cs/ChangeLog,v 1.7 2008/12/04 17:51:51 scarabeus Exp $
+
+  04 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org>
+  vim-spell-cs-20061021.ebuild:
+  Add ~amd64 keyword, since it works like charm here.
 
   22 Oct 2007; Dawid Węgliński <cla@gentoo.org>
   vim-spell-cs-20061021.ebuild:
