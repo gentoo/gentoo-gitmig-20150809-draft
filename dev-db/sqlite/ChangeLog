@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.201 2008/12/03 19:20:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.202 2008/12/04 07:24:25 zmedico Exp $
+
+  04 Dec 2008; Zac Medico <zmedico@gentoo.org> sqlite-3.6.6.2.ebuild:
+  Bug #249737 - Fix incorrect path in dohtml call.
 
 *sqlite-3.6.6.2 (03 Dec 2008)
 

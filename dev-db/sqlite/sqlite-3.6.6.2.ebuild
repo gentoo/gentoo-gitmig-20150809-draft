@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.6.2.ebuild,v 1.1 2008/12/03 19:20:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.6.2.ebuild,v 1.2 2008/12/04 07:24:25 zmedico Exp $
 
 EAPI="1"
 
@@ -77,7 +77,7 @@ src_install() {
 	doman sqlite3.1 || die
 
 	if use doc; then
-		dohtml -r "${WORKDIR}"/${PN}_docs_${DOC_PV}/* || die
+		dohtml -r "${WORKDIR}"/${PN}-${DOC_PV}-docs/* || die
 	fi
 }
 
