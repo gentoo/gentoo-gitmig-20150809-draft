@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.16.2.ebuild,v 1.1 2008/12/03 07:39:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/pykde-3.16.2.ebuild,v 1.2 2008/12/04 15:19:27 scarabeus Exp $
 
-inherit kde eutils distutils 
+inherit kde eutils distutils
 
 MY_P="PyKDE-${PV/*_pre/snapshot}"
 MY_P=${MY_P/_/}
@@ -11,7 +11,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="PyKDE is a set of Python bindings for kdelibs."
 HOMEPAGE="http://www.riverbankcomputing.co.uk/pykde/"
 #SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
-SRC_URI="http://www.riverbankcomputing.com/Downloads/PyKDE3/${MY_P}.tar.bz2"
+SRC_URI="http://www.riverbankcomputing.co.uk/static/Downloads/PyKDE3/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"

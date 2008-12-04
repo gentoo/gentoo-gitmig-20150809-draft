@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pykde
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.38 2008/12/03 07:39:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.39 2008/12/04 15:19:27 scarabeus Exp $
+
+  04 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org>
+  -files/PyKDE-3.16.0-sip-4.7.patch, -pykde-3.16.0-r1.ebuild,
+  pykde-3.16.2.ebuild:
+  Update SRC_URI, per bug #249776. Remove old with ugly patching.
 
 *pykde-3.16.2 (03 Dec 2008)
 
