@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libg15
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.21 2008/05/12 14:21:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.22 2008/12/04 14:14:50 chainsaw Exp $
+
+*libg15-1.2.7 (04 Dec 2008)
+
+  04 Dec 2008; <chainsaw@gentoo.org> +libg15-1.2.7.ebuild:
+  Version bump from upstream. If you had random keypress problems on the
+  Y-UW92, this is for you. Closes bug #248828 by Phillip Scholz
+  <zyanklee@gmail.com>.
 
   12 May 2008; Markus Rothe <corsair@gentoo.org> libg15-1.2.5.ebuild:
   Stable on ppc64
