@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r2.ebuild,v 1.4 2008/12/04 12:15:51 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r2.ebuild,v 1.5 2008/12/04 18:40:00 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -385,15 +385,15 @@ pkg_setup() {
 	fi
 
 	local missing=""
-	[ -n "$}need_apisupport}" ] && ! use netbeans_modules_apisupport && missing="${missing} apisupport"
-	[ -n "$}need_groovy}" ] && ! use netbeans_modules_groovy && missing="${missing} groovy"
-	[ -n "$}need_gsf}" ] && ! use netbeans_modules_gsf && missing="${missing} gsf"
-	[ -n "$}need_harness}" ] && ! use netbeans_modules_harness && missing="${missing} harness"
-	[ -n "$}need_ide}" ] && ! use netbeans_modules_ide && missing="${missing} ide"
-	[ -n "$}need_j2ee}" ] && ! use netbeans_modules_j2ee && missing="${missing} j2ee"
-	[ -n "$}need_java}" ] && ! use netbeans_modules_java && missing="${missing} java"
-	[ -n "$}need_websvccommon}" ] && ! use netbeans_modules_websvccommon && missing="${missing} websvccommon"
-	[ -n "$}need_xml}" ] && ! use netbeans_modules_xml && missing="${missing} xml"
+	[ -n "${need_apisupport}" ] && ! use netbeans_modules_apisupport && missing="${missing} apisupport"
+	[ -n "${need_groovy}" ] && ! use netbeans_modules_groovy && missing="${missing} groovy"
+	[ -n "${need_gsf}" ] && ! use netbeans_modules_gsf && missing="${missing} gsf"
+	[ -n "${need_harness}" ] && ! use netbeans_modules_harness && missing="${missing} harness"
+	[ -n "${need_ide}" ] && ! use netbeans_modules_ide && missing="${missing} ide"
+	[ -n "${need_j2ee}" ] && ! use netbeans_modules_j2ee && missing="${missing} j2ee"
+	[ -n "${need_java}" ] && ! use netbeans_modules_java && missing="${missing} java"
+	[ -n "${need_websvccommon}" ] && ! use netbeans_modules_websvccommon && missing="${missing} websvccommon"
+	[ -n "${need_xml}" ] && ! use netbeans_modules_xml && missing="${missing} xml"
 
 	if [ -n "${missing}" ] ; then
 		eerror "You need to add these modules to NETBEANS_MODULES because they are needed by modules you have selected"

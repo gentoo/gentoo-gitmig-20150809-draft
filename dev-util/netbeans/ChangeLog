@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.97 2008/12/04 12:15:51 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.98 2008/12/04 18:40:00 fordfrog Exp $
+
+  04 Dec 2008; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.5-r2.ebuild:
+  Another fix of the check of what modules are missing in netbeans modules
 
   04 Dec 2008; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.5-r2.ebuild:
   Fixed bug in checking of what netbeans modules need to be added
