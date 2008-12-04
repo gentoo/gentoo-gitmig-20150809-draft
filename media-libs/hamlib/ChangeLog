@@ -1,6 +1,20 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.28 2008/06/18 03:16:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.29 2008/12/04 17:58:18 darkside Exp $
+
+*hamlib-1.2.8 (04 Dec 2008)
+
+  04 Dec 2008; Jeremy Olexa <darkside@gentoo.org> metadata.xml,
+  +hamlib-1.2.8.ebuild:
+  Version bump, bug #249714:
+  New features:
+          * Some new rig models supported
+          * New rotator backend
+          * Fixes for a lot of radios
+          * Numerous bindings fixes, esp. for memory channel works
+          * New commands available in rigctl
+          * New rotctld to go with rigctld rig daemon.
+  Added Thomas Beierlein as maintainer, I'll be proxy committer.
 
   18 Jun 2008; Jeremy Olexa <darkside@gentoo.org> -hamlib-1.2.4.ebuild:
   removed old. fixes bug #200597
