@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.3.ebuild,v 1.1 2008/11/29 21:50:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.3.ebuild,v 1.2 2008/12/04 23:17:40 eva Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -88,6 +88,9 @@ src_prepare() {
 
 	# Fix building on alpha, bug #221853 comment #6
 	epatch "${FILESDIR}/gphoto2-ixany.patch"
+
+	# Fix compilation with gcc 4.3, bug #249677
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 
 	# Fix automagic dependencies, bug #242470
 	epatch "${FILESDIR}/${P}-automagic.patch"
