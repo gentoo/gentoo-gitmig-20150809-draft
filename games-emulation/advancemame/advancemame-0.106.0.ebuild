@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.106.0.ebuild,v 1.6 2008/03/10 18:09:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.106.0.ebuild,v 1.7 2008/12/05 16:19:25 nyhm Exp $
 
 inherit eutils flag-o-matic games
 
@@ -11,15 +11,14 @@ SRC_URI="mirror://sourceforge/advancemame/${P}.tar.gz"
 LICENSE="GPL-2 XMAME"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE="alsa expat fbcon oss sdl static svga truetype zlib"
+IUSE="alsa fbcon oss sdl static svga truetype"
 
 # sdl is required (bug #158417)
 RDEPEND="app-arch/unzip
 	app-arch/zip
 	media-libs/libsdl
+	dev-libs/expat
 	alsa? ( media-libs/alsa-lib )
-	expat? ( >=dev-libs/expat-1.95.6 )
-	zlib? ( sys-libs/zlib )
 	truetype? ( media-libs/freetype )
 	svga? ( >=media-libs/svgalib-1.9 )"
 DEPEND="${RDEPEND}
@@ -51,16 +50,16 @@ src_compile() {
 
 	PATH="${PATH}:${T}"
 	egamesconf \
+		--enable-expat \
 		--enable-sdl \
+		--enable-zlib \
 		--disable-slang \
 		$(use_enable alsa) \
-		$(use_enable expat) \
 		$(use_enable fbcon fb) \
 		$(use_enable oss) \
 		$(use_enable static) \
 		$(use_enable svga svgalib) \
 		$(use_enable truetype freetype) \
-		$(use_enable zlib) \
 		$(use_enable x86 asm) \
 		--with-emu=${PN/advance} \
 		|| die
