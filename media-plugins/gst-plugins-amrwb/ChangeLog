@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-amrwb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-amrwb/ChangeLog,v 1.7 2008/08/08 18:00:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-amrwb/ChangeLog,v 1.8 2008/12/05 22:39:02 ssuominen Exp $
+
+*gst-plugins-amrwb-0.10.9 (05 Dec 2008)
+
+  05 Dec 2008; <ssuominen@gentoo.org> +gst-plugins-amrwb-0.10.9.ebuild:
+  Version bump.
 
   08 Aug 2008; Markus Meier <maekke@gentoo.org>
   gst-plugins-amrwb-0.10.7.ebuild:

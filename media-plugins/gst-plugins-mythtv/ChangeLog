@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-mythtv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mythtv/ChangeLog,v 1.3 2008/08/13 09:44:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mythtv/ChangeLog,v 1.4 2008/12/05 22:42:19 ssuominen Exp $
+
+*gst-plugins-mythtv-0.10.9 (05 Dec 2008)
+
+  05 Dec 2008; <ssuominen@gentoo.org> +gst-plugins-mythtv-0.10.9.ebuild:
+  Version bump.
 
   13 Aug 2008; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-mythtv-0.10.6.ebuild:
