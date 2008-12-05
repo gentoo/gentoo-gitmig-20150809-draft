@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.6-r1.ebuild,v 1.1 2008/12/05 20:03:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.6-r1.ebuild,v 1.2 2008/12/05 20:04:22 robbat2 Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="!<dev-lang/python-2.3.6-r2
 	|| ( >=sys-apps/portage-2.1.2 sys-apps/pkgcore sys-apps/paludis )"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-r133-custom-package-manager-command.patch
 }
