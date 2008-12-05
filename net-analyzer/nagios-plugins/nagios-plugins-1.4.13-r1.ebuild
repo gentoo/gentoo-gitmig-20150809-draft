@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13-r1.ebuild,v 1.2 2008/11/28 20:57:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13-r1.ebuild,v 1.3 2008/12/05 19:04:37 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -123,6 +123,8 @@ src_install() {
 	chmod 04710 "${D}"/usr/$(get_libdir)/nagios/plugins/check_icmp \
 		|| die "Failed chmod of ${D}usr/$(get_libdir)/nagios/plugins/check_icmp"
 
+	dosym /usr/$(get_libdir)/nagios/plugins/utils.sh /usr/$(get_libdir)/nagios/plugins/contrib/utils.sh
+	dosym /usr/$(get_libdir)/nagios/plugins/utils.pm /usr/$(get_libdir)/nagios/plugins/contrib/utils.pm
 }
 
 pkg_postinst() {
