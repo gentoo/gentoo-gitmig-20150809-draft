@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.174 2008/04/15 01:18:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.175 2008/12/05 01:09:02 darkside Exp $
+
+*webmin-1.441 (05 Dec 2008)
+
+  05 Dec 2008; Jeremy Olexa <darkside@gentoo.org> +webmin-1.441.ebuild:
+  version bump, bug 219254. ebuild by Christian Ruppert
 
   15 Apr 2008; Steve Dibb <beandog@gentoo.org>
   -files/webmin-1.170-postfix.patch,
