@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/basemap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.9 2008/09/26 14:47:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.10 2008/12/05 12:06:46 bicatali Exp $
+
+  05 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  basemap-0.9.9-r1.ebuild, -basemap-0.99.ebuild, basemap-0.99.1.ebuild:
+  Fixed collision with matplotlib and matplotlib dependency for 0.9.9-r1
 
   26 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
   basemap-0.99.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-0.9.9-r1.ebuild,v 1.1 2008/02/13 14:12:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-0.9.9-r1.ebuild,v 1.2 2008/12/05 12:06:46 bicatali Exp $
 
 inherit eutils distutils
 
@@ -15,7 +15,7 @@ LICENSE="MIT GPL-2"
 
 CDEPEND="sci-libs/shapelib
 	dev-python/numpy
-	>=dev-python/matplotlib-0.90
+	=dev-python/matplotlib-0.91*
 	=sci-libs/geos-2.2.3*"
 
 DEPEND="${CDEPEND}
