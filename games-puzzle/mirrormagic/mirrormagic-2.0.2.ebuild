@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2.ebuild,v 1.18 2007/02/25 15:39:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2.ebuild,v 1.19 2008/12/05 17:32:44 nyhm Exp $
 
-inherit eutils games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="a game like Deflektor (C 64) or Mindbender (Amiga)"
 HOMEPAGE="http://www.artsoft.org/mirrormagic/"
@@ -15,26 +15,32 @@ IUSE="sdl"
 
 RDEPEND="!sdl? ( x11-libs/libX11 )
 	sdl? (
-		>=media-libs/libsdl-1.1
-		>=media-libs/sdl-mixer-1.2.4
-		>=media-libs/sdl-image-1.2.2 )"
+		media-libs/libsdl
+		media-libs/sdl-mixer
+		media-libs/sdl-image
+	)"
 DEPEND="${RDEPEND}
 	!sdl? ( x11-libs/libXt )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}"-gcc41.patch
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+	rm -f ${PN}
 }
 
 src_compile() {
-	local makeopts="X11_PATH=/usr/X11R6 RO_GAME_DIR=${GAMES_DATADIR}/${PN} RW_GAME_DIR=${GAMES_STATEDIR}/${PN}"
-	emake clean || die
-	if use sdl ; then
-		emake ${makeopts} OPTIONS="${CFLAGS}" sdl || die
-	else
-		emake ${makeopts} OPTIONS="${CFLAGS}" x11 || die
-	fi
+	emake \
+		-C src \
+		CC="$(tc-getCC)" \
+		AR="$(tc-getAR)" \
+		RANLIB="$(tc-getRANLIB)" \
+		OPTIONS="${CFLAGS}" \
+		EXTRA_LDFLAGS="${LDFLAGS}" \
+		RO_GAME_DIR="${GAMES_DATADIR}"/${PN} \
+		RW_GAME_DIR="${GAMES_STATEDIR}"/${PN} \
+		TARGET=$(use sdl && echo sdl || echo x11) \
+		|| die "emake failed"
 }
 
 src_install() {
