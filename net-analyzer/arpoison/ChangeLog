@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpoison
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.7 2007/04/24 19:54:40 welp Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/ChangeLog,v 1.8 2008/12/05 00:16:47 darkside Exp $
+
+  05 Dec 2008; Jeremy Olexa <darkside@gentoo.org> arpoison-0.6.ebuild:
+  typo, pointed out by nightmorph
 
   24 Apr 2007; Peter Weller <welp@gentoo.org> arpoison-0.6.ebuild:
   Keyworded ~amd64 wrt bug 175703

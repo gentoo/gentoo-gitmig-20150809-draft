@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/arpoison-0.6.ebuild,v 1.7 2007/04/24 19:54:40 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpoison/arpoison-0.6.ebuild,v 1.8 2008/12/05 00:16:47 darkside Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="A utility to poision ARP caches"
+DESCRIPTION="A utility to poison ARP caches"
 HOMEPAGE="http://arpoison.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
