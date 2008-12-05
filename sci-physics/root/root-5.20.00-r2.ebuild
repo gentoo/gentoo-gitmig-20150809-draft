@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r2.ebuild,v 1.1 2008/12/04 18:21:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r2.ebuild,v 1.2 2008/12/05 17:06:55 bicatali Exp $
 
 EAPI=1
 inherit versionator eutils toolchain-funcs qt4 fortran elisp-common
@@ -97,6 +97,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	# various patches from upstream branch
 	epatch "${FILESDIR}"/${P}-upstream.patch
+
+	# adjust header names only for older ftgl versions
+	if has_version '<media-libs/ftgl-2.1.3_rc5'; then
+		epatch "${FILESDIR}"/${P}-ftgl_header.patch
+	fi
 
 	if use cern; then
 		mv montecarlo/eg/inc/cfortran.h{,.orig} || die

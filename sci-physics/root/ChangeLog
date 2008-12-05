@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.35 2008/12/04 18:21:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.36 2008/12/05 17:06:55 bicatali Exp $
+
+  05 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/root-5.20.00-ftgl_header.patch, root-5.20.00-r2.ebuild:
+  Fixed for older ftgl versions, bug #249885, thanks to Benjamin Bannier
 
 *root-5.20.00-r2 (04 Dec 2008)
 
