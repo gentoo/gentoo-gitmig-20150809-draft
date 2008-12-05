@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/hcluster
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hcluster/ChangeLog,v 1.1 2008/12/05 13:43:06 bicatali Exp $
+
+*hcluster-0.1.9 (05 Dec 2008)
+
+  05 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +hcluster-0.1.9.ebuild:
+  Initial import
+
