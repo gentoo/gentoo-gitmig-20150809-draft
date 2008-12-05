@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25-r1.ebuild,v 1.14 2007/07/02 15:01:42 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25-r1.ebuild,v 1.15 2008/12/05 08:06:31 tupone Exp $
 
 inherit fixheadtails toolchain-funcs eutils
 
@@ -44,8 +44,8 @@ pkg_preinst() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${DISTDIR}/q-s-${PV}st-${Q_S_DATE}.patch.gz
+	cd "${S}"
+	epatch "${DISTDIR}"/q-s-${PV}st-${Q_S_DATE}.patch.gz
 	ht_fix_file autoupdaters/* configure
 
 	EXTRA_VIRII="bagle,beagle,mydoom,sco,maldal,mimail,novarg,shimg,bugler,cissi,cissy,dloade,netsky,qizy"
@@ -114,17 +114,17 @@ src_install () {
 
 	insinto /etc/logrotate.d/
 	insopts -m 644 -o root -g root
-	newins ${FILESDIR}/qmailscanner.logrotate qmail-scanner
+	newins "${FILESDIR}"/qmailscanner.logrotate qmail-scanner
 
 	exeinto /etc/cron.daily/
-	newexe ${FILESDIR}/qmailscanner.cronjob qmail-scanner
+	newexe "${FILESDIR}"/qmailscanner.cronjob qmail-scanner
 
 	# Install documentation
-	dodoc README CHANGES COPYING
+	dodoc README CHANGES
 	dohtml README.html FAQ.php TODO.php configure-options.php manual-install.php perlscanner.php
 
 	docinto contrib
-	cd ${S}/contrib
+	cd "${S}"/contrib
 	dodoc spamc-nice.eml
 	dodoc test-trophie.pl
 	dodoc logrotate.qmailscanner
@@ -148,9 +148,9 @@ pkg_postinst () {
 	touch /var/qmail/bin/qmail-scanner-queue.pl
 
 	# Setup perlscanner + Version Info
-	chmod -s ${ROOT}/var/qmail/bin/qmail-scanner-queue.pl
-	${ROOT}/var/qmail/bin/qmail-scanner-queue -z
-	${ROOT}/var/qmail/bin/qmail-scanner-queue -g
+	chmod -s "${ROOT}"/var/qmail/bin/qmail-scanner-queue.pl
+	"${ROOT}"/var/qmail/bin/qmail-scanner-queue -z
+	"${ROOT}"/var/qmail/bin/qmail-scanner-queue -g
 
 	elog "To activate qmail-scanner, please edit your"
 	elog "/var/qmail/control/conf-common file and set:"
