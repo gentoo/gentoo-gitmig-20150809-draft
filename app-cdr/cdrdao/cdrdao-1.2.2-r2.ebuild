@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2-r2.ebuild,v 1.13 2008/10/27 05:41:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.2-r2.ebuild,v 1.14 2008/12/05 13:23:15 ssuominen Exp $
 
 inherit eutils flag-o-matic eutils
 
@@ -24,7 +24,8 @@ RDEPEND="virtual/cdrtools
 		>=dev-cpp/libgnomeuimm-2.6
 		media-libs/libao )"
 DEPEND="${RDEPEND}
-	pccts? ( >=dev-util/pccts-1.33.24-r1 )"
+	pccts? ( >=dev-util/pccts-1.33.24-r1 )
+	!app-cdr/cue2toc"
 
 src_unpack() {
 	unpack ${A}
