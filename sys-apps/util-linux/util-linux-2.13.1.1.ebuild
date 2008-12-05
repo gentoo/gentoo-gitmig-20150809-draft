@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13.1.1.ebuild,v 1.8 2008/06/07 17:46:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.13.1.1.ebuild,v 1.9 2008/12/05 17:42:19 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux-ng/"
 if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 else
-	SRC_URI="http://www.kernel.org/pub/linux/utils/util-linux-ng/v${PV:0:4}/${MY_P}.tar.bz2
+	SRC_URI="mirror://kernel/linux/utils/util-linux-ng/v${PV:0:4}/${MY_P}.tar.bz2
 		loop-aes? ( http://loop-aes.sourceforge.net/loop-AES/loop-AES-v3.2c.tar.bz2 )"
 fi
 
