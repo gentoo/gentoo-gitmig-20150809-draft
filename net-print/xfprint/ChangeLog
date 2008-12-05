@@ -1,6 +1,9 @@
 # ChangeLog for net-print/xfprint
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.3 2008/10/30 22:13:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.4 2008/12/05 17:30:02 angelos Exp $
+
+  05 Dec 2008; Christoph Mende <angelos@gentoo.org> xfprint-4.4.3.ebuild:
+  Removed unused icon that would collide with vmware-workstation
 
 *xfprint-4.4.3 (30 Oct 2008)
 
