@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ncmpcpp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.2 2008/10/15 16:50:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.3 2008/12/05 22:24:31 yngwin Exp $
+
+*ncmpcpp-0.2.5 (05 Dec 2008)
+
+  05 Dec 2008; Ben de Groot <yngwin@gentoo.org> +ncmpcpp-0.2.5.ebuild:
+  Version bump, and move unicode to eapi-2 style use dep. Add minimal mpd
+  version supported as runtime dependency.
 
 *ncmpcpp-0.2.4 (15 Oct 2008)
 
