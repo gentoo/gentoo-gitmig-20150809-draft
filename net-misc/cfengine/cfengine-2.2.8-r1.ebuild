@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.8-r1.ebuild,v 1.1 2008/12/05 08:17:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.8-r1.ebuild,v 1.2 2008/12/05 08:25:52 robbat2 Exp $
 
 inherit eutils
 
@@ -63,18 +63,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ ! -f "/var/cfengine/ppkeys/localhost.priv" ]
-		then
-		einfo "Generating keys for localhost."
-		/usr/sbin/cfkey
-	fi
-
 	# Copy cfagent into the cfengine tree otherwise cfexecd won't
 	# find it. Most hosts cache their copy of the cfengine
 	# binaries here. This is the default search location for the
 	# binaries.
 
-	cp /usr/sbin/cf{agent,servd,execd} /var/cfengine/bin/
+	cp -f /usr/sbin/cf{agent,servd,execd} "${ROOT}"/var/cfengine/bin/
 
 	einfo
 	einfo "NOTE: The cfportage module has been deprecated in favor of the"
@@ -85,4 +79,18 @@ pkg_postinst() {
 	einfo "To run cfengine out of cron every half hour modify your crontab:"
 	einfo "0,30 * * * *    /usr/sbin/cfexecd -F"
 	einfo
+	
+	elog "You MUST generate the keys for cfengine by running:"
+	elog "emerge --config ${CATEGORY}/${PN}"
+}
+
+pkg_config() {
+	if [ "${ROOT}" == "/" ]; then
+		if [ ! -f "/var/cfengine/ppkeys/localhost.priv" ]; then
+			einfo "Generating keys for localhost."
+			/usr/sbin/cfkey
+		fi
+	else
+		die "cfengine cfkey does not support any value of ROOT other than /."
+	fi
 }
