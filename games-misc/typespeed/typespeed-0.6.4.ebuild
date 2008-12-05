@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.6.4.ebuild,v 1.2 2007/12/06 00:15:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.6.4.ebuild,v 1.3 2008/12/05 17:47:31 nyhm Exp $
 
 inherit autotools eutils toolchain-funcs games
 
@@ -40,7 +40,7 @@ src_compile() {
 		--docdir=/usr/share/doc/${PF} \
 		--disable-dependency-tracking \
 		$(use_enable nls) || die
-	emake || die "emake failed"
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
