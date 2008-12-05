@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.4 2008/10/31 00:31:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.5 2008/12/05 14:48:21 angelos Exp $
+
+  05 Dec 2008; Christoph Mende <angelos@gentoo.org> terminal-0.2.8.3.ebuild:
+  Append -Wno-error, bug 249557
 
   31 Oct 2008; Alexis Ballier <aballier@gentoo.org> terminal-0.2.8.3.ebuild:
   fix obvious typo at econf line that causes failures

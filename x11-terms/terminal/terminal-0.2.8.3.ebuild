@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.2.8.3.ebuild,v 1.2 2008/10/31 00:31:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.2.8.3.ebuild,v 1.3 2008/12/05 14:48:21 angelos Exp $
 
 EAPI=1
 
-inherit fdo-mime gnome2-utils
+inherit fdo-mime gnome2-utils flag-o-matic
 
 MY_P=${P/t/T}
 
@@ -43,6 +43,7 @@ pkg_preinst() {
 }
 
 src_compile() {
+	append-flags -Wno-error
 	econf --disable-dependency-tracking \
 		$(use_enable dbus) \
 		$(use_enable debug) \
