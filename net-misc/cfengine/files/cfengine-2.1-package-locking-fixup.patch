@@ -1,0 +1,19 @@
+commit d0dd5a50066ecb9e4857a7795ceed67832a37dc5
+Author: Robin H. Johnson <robbat2@gentoo.org>
+Date:   Thu Dec 4 23:21:51 2008 -0800
+
+    Fix up locking for packages to avoid collision when the package name, cmp, action are the same, but defines and version are different.
+
+diff --git a/src/do.c b/src/do.c
+index 55fc552..58454f2 100644
+--- a/src/do.c
++++ b/src/do.c
+@@ -2710,7 +2710,7 @@ for (ptr = VPKG; ptr != NULL; ptr=ptr->next)
+       ptr->done = 'y';
+       }
+ 
+-   snprintf(lock,CF_BUFSIZE-1,"%s_%d_%d",ptr->name,ptr->cmp,ptr->action);
++   snprintf(lock,CF_BUFSIZE-1,"%s_%d_%s_%d_%s_%s", ptr->name, ptr->cmp, ptr->ver ?: "" ,ptr->action, ptr->defines ?: "", ptr->elsedef ?: "");
+    
+    if (!GetLock(ASUniqueName("packages"),CanonifyName(lock),ptr->ifelapsed,ptr->expireafter,VUQNAME,CFSTARTTIME))
+       {
