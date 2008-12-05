@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.0.ebuild,v 1.1 2008/12/03 19:16:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.0.ebuild,v 1.2 2008/12/05 15:15:06 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -22,6 +22,7 @@ RDEPEND="dev-games/ode
 	media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf
+	media-libs/sdl-net
 	net-misc/curl
 	virtual/opengl
 	virtual/glu
