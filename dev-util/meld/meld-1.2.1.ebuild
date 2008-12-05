@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.2.1.ebuild,v 1.1 2008/11/29 12:54:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.2.1.ebuild,v 1.2 2008/12/05 19:58:52 ford_prefect Exp $
 
 inherit python gnome2 eutils multilib
 
@@ -15,7 +15,9 @@ IUSE="doc gnome"
 RDEPEND=">=dev-lang/python-2.3
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2
-	>=dev-python/gnome-python-2.6.0
+	>=dev-python/gconf-python-2.22
+	>=dev-python/libgnome-python-2.22
+	>=dev-python/gnome-vfs-python-2.22
 	>=dev-python/pygtk-2.8.0
 	>=dev-python/pyorbit-1.99.0
 	gnome? ( dev-python/gnome-python-desktop )"
