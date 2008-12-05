@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/tlf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.15 2008/06/15 10:11:11 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.16 2008/12/05 10:06:21 armin76 Exp $
+
+  05 Dec 2008; Raúl Porcel <armin76@gentoo.org> tlf-0.9.31.2.ebuild:
+  x86 stable wrt #249491
 
   15 Jun 2008; Tobias Klausmann <klausman@gentoo.org> tlf-0.9.23.ebuild:
   Depends on media-libs/hamlib which can't really be tested (no hardware),
