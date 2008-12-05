@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2126 2008/12/05 11:34:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2127 2008/12/05 13:25:42 rbu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Dec 2008; Robert Buchholz <rbu@gentoo.org> package.mask:
+  Update networkmanager-0.7.0 mask
 
   05 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
   Masked sci-libs/scipy-0.7.0_beta1

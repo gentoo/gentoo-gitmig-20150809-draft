@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9250 2008/12/05 11:34:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9251 2008/12/05 13:25:42 rbu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,7 +36,8 @@
 =sci-libs/scipy-0.7*
 
 # Tomas Chvatal <scarabeus@gentoo.org> (04 Dec 2008)
-# new version, can harm kittens masking for now.
+# new version, needs policykit which is masked
+>=gnome-extra/nm-applet-0.7.0
 >=net-misc/networkmanager-0.7.0
 >=net-misc/networkmanager-vpnc-0.7.0
 >=net-misc/networkmanager-pptp-0.7.0
