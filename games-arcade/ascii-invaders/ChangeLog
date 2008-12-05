@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/ascii-invaders
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ascii-invaders/ChangeLog,v 1.14 2007/04/09 21:46:38 welp Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ascii-invaders/ChangeLog,v 1.15 2008/12/05 18:58:43 nyhm Exp $
+
+  05 Dec 2008; Tristan Heaven <nyhm@gentoo.org> ascii-invaders-0.1b.ebuild:
+  Respect CC and LDFLAGS, bug #244058
 
   09 Apr 2007; Peter Weller <welp@gentoo.org> ascii-invaders-0.1b.ebuild:
   Keyworded ~x86-fbsd wrt bug 173405
