@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/phalanx/phalanx-22.ebuild,v 1.4 2008/07/24 18:05:48 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/phalanx/phalanx-22.ebuild,v 1.5 2008/12/05 18:37:50 nyhm Exp $
 
-inherit games
+inherit toolchain-funcs games
 
 MY_PN="Phalanx"
 MY_PV="XXII"
@@ -22,11 +22,16 @@ S=${WORKDIR}/${MY_P}
 src_compile() {
 	# configure is not used in the project; confs are in Makefile,
 	# and here we override them:
-	local define="-DGNUFUN"
+	local define="-DGNUFUN" myvar
 	for myvar in "PBOOK" "SBOOK" "LEARN" ; do
 		define="${define} -D${myvar}_DIR=\"\\\"${GAMES_DATADIR}/${PN}\\\"\""
 	done
-	emake DEFINES="${define}" CFLAGS="${CFLAGS}" || die "emake failed"
+	emake \
+		DEFINES="${define}" \
+		CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
+		|| die "emake failed"
 }
 
 src_install() {
