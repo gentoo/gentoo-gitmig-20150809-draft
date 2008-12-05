@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.4.ebuild,v 1.3 2008/11/18 03:14:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.4.ebuild,v 1.4 2008/12/05 02:12:29 darkside Exp $
 
 inherit distutils eutils
 
@@ -38,6 +38,7 @@ src_install() {
 	DOCS="CHANGES"
 	distutils_src_install
 	newinitd "${FILESDIR}/wicd-init.d" wicd || die "newinitd failed"
+	keepdir /var/lib/wicd/configurations || die "keepdir failed, critical for this app"
 }
 
 pkg_postinst() {
