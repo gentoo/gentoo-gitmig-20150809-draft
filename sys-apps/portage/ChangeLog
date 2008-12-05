@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.556 2008/11/27 04:04:47 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.557 2008/12/05 01:34:34 zmedico Exp $
+
+*portage-2.1.6_rc3 (04 Dec 2008)
+
+  04 Dec 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.6_rc3.ebuild:
+  2.1.6_rc3 bump. This fixes bug #216231 (confusing SLOT conflict display
+  triggered by USE deps). Bug #216231 tracks all bugs fixed since 2.1.4.x.
+
+*portage-2.2_rc17 (04 Dec 2008)
+
+  04 Dec 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc17.ebuild:
+  2.2_rc17 bump. This fixes bug #249805 (KeyError when displaying preserved
+  libs before emerge exit). This also includes the fixes that are in
+  2.1.6_rc2 and 2.1.6_rc3.
 
 *portage-2.1.6_rc2 (27 Nov 2008)
 
