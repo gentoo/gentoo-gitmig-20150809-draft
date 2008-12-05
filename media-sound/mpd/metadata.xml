@@ -3,11 +3,11 @@
 <pkgmetadata>
   <herd>sound</herd>
   <maintainer>
-    <email>angelos@gentoo.org</email>
-    <name>Christoph Mende</name>
+	<email>angelos@gentoo.org</email>
+	<name>Christoph Mende</name>
   </maintainer>
   <use>
-    <flag name="icecast">Enable support for Icecast2</flag>
+	<flag name="icecast">Enable support for Icecast2</flag>
 	<flag name="id3">Support for ID3 tags</flag>
   </use>
 </pkgmetadata>

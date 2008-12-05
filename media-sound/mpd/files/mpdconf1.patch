@@ -1,0 +1,51 @@
+--- doc/mpdconf.example	2008-12-03 05:01:07.000000000 +0100
++++ doc/mpdconf.example.gentoo	2008-12-05 23:25:32.000000000 +0100
+@@ -1,12 +1,12 @@
+-# An example configuration file for MPD
++# A default Gentoo configuration file for MPD
+ # See the mpd.conf man page for a more detailed description of each parameter.
+ 
+ ######################## REQUIRED PATHS ########################
+-music_directory                 "~/music"
+-playlist_directory              "~/.mpd/playlists"
+-db_file                         "~/.mpd/mpd.db"
+-log_file                        "~/.mpd/mpd.log"
+-error_file                      "~/.mpd/mpd.error"
++music_directory                 "/var/lib/mpd/music"
++playlist_directory              "/var/lib/mpd/playlists"
++db_file                         "/var/lib/mpd/database"
++log_file                        "/var/log/mpd/mpd.log"
++error_file                      "/var/log/mpd/mpd.error.log"
+ #follow_outside_symlinks         "no"
+ #follow_inside_symlinks          "yes"
+ ################################################################
+@@ -17,13 +17,13 @@
+ # If you wish to use mpd --kill to stop MPD, then you must
+ # specify a file here in which to store MPD's process ID.
+ #
+-#pid_file                        "~/.mpd/mpd.pid"
++pid_file                        "/var/run/mpd/mpd.pid"
+ #
+ # If specified, MPD will save its current state (playlist,
+ # current song, playing/paused, etc.) at exit.  This will be
+ # used to restore the session the next time it is run.
+ #
+-#state_file                      "~/.mpd/mpdstate"
++state_file                      "/var/lib/mpd/state"
+ #
+ ################################################################
+ 
+@@ -35,11 +35,11 @@
+ # started by.  If left unspecified, MPD will not drop root
+ # privileges at all (not recommended).
+ #
+-#user                            "nobody"
++user                            "mpd"
+ #
+ # The address and port to listen on.
+ #
+-#bind_to_address                 "any"
++bind_to_address                 "localhost"
+ #port                            "6600"
+ #
+ # Controls the amount of information that is logged.  Can be
