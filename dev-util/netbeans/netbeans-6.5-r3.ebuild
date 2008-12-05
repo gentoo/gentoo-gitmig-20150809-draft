@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r2.ebuild,v 1.5 2008/12/04 18:40:00 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r3.ebuild,v 1.1 2008/12/05 03:14:28 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -108,7 +108,6 @@ RDEPEND=">=virtual/jdk-1.5
 		dev-java/javassist:3
 		dev-java/jax-ws:2
 		dev-java/jax-ws-api:2
-		dev-java/jax-ws-tools:2
 		dev-java/jsr181:0
 		dev-java/jsr250:0
 		dev-java/jsr67:0
@@ -151,7 +150,6 @@ RDEPEND=">=virtual/jdk-1.5
 #  dev-java/hibernate-entitymanager:3.2
 #  dev-java/jdbc2-stdext:0
 #  dev-java/toplink-essentials:0
-
 
 DEPEND=">=virtual/jdk-1.5
 	java-virtuals/jdk-with-com-sun
@@ -410,14 +408,12 @@ pkg_setup() {
 	java-pkg-2_pkg_setup
 }
 
-src_unpack () {
-	unpack ${A}
-
+src_prepare () {
 	epatch "${FILESDIR}"/${SLOT}/nbbuild_build.xml.patch \
 		"${FILESDIR}"/${SLOT}/nbbuild_templates_projectized.xml.patch
 
 	if use netbeans_modules_visualweb ; then
-		cd ${S}/visualweb.insync/src/org/netbeans/modules/visualweb/insync/markup || die
+		cd "${S}"/visualweb.insync/src/org/netbeans/modules/visualweb/insync/markup || die
 		epatch "${FILESDIR}"/${SLOT}/all-visualweb.insync.JspxSerializer.java.patch
 	fi
 
@@ -518,32 +514,19 @@ src_compile() {
 	fi
 
 	local clusters="-Dnb.clusters.list=nb.cluster.platform"
-	use netbeans_modules_apisupport && clusters="${clusters},nb.cluster.apisupport"
-	use netbeans_modules_cnd && clusters="${clusters},nb.cluster.cnd"
-	use netbeans_modules_groovy && clusters="${clusters},nb.cluster.groovy"
-	use netbeans_modules_gsf && clusters="${clusters},nb.cluster.gsf"
-	use netbeans_modules_harness && clusters="${clusters},nb.cluster.harness"
-	use netbeans_modules_ide && clusters="${clusters},nb.cluster.ide"
-	use netbeans_modules_identity && clusters="${clusters},nb.cluster.identity"
-	use netbeans_modules_j2ee && clusters="${clusters},nb.cluster.j2ee"
-	use netbeans_modules_java && clusters="${clusters},nb.cluster.java"
-	use netbeans_modules_mobility && clusters="${clusters},nb.cluster.mobility"
-	use netbeans_modules_nb && clusters="${clusters},nb.cluster.nb"
-	use netbeans_modules_php && clusters="${clusters},nb.cluster.php"
-	use netbeans_modules_profiler && clusters="${clusters},nb.cluster.profiler"
-	#use netbeans_modules_ruby && clusters="${clusters},nb.cluster.ruby"
-	use netbeans_modules_soa && clusters="${clusters},nb.cluster.soa"
-	use netbeans_modules_visualweb && clusters="${clusters},nb.cluster.visualweb"
-	use netbeans_modules_webcommon && clusters="${clusters},nb.cluster.webcommon"
-	use netbeans_modules_websvccommon && clusters="${clusters},nb.cluster.websvccommon"
-	use netbeans_modules_xml && clusters="${clusters},nb.cluster.xml"
+	for netbeans_module in ${IUSE_NETBEANS_MODULES} ; do
+		netbeans_module=${netbeans_module/[+]/}
+		local short_netbeans_module=${netbeans_module/netbeans_modules_/}
+		use ${netbeans_module} && clusters="${clusters},nb.cluster.${short_netbeans_module}"
+	done
+	#TODO use netbeans_modules_ruby && clusters="${clusters},nb.cluster.ruby"
 
 	local build_target=""
 	if use netbeans_modules_nb ; then
 		build_target="build-nozip"
 	else
 		build_target="build-clusters"
-		mkdir -p ${BUILDDESTINATION} || die
+		mkdir -p "${BUILDDESTINATION}" || die
 	fi
 
 	# Fails to compile
@@ -554,18 +537,23 @@ src_compile() {
 	ANT_TASKS="ant-nodeps"
 	ANT_OPTS="-Xmx1g -Djava.awt.headless=true" eant ${antflags} ${clusters} -f nbbuild/build.xml ${build_target}
 
-	use linguas_de && compile_locale_support "${antflags}" de
-	use linguas_es && compile_locale_support "${antflags}" es
-	use linguas_fr && compile_locale_support "${antflags}" fr
-	use linguas_it && compile_locale_support "${antflags}" it
-	use linguas_ja && compile_locale_support "${antflags}" ja
-	use linguas_pl && compile_locale_support "${antflags}" pl
-	use linguas_pt_BR && compile_locale_support "${antflags}" pt_BR
-	use linguas_ru && compile_locale_support "${antflags}" ru
-	use linguas_sq && compile_locale_support "${antflags}" sq
-	use linguas_tr && compile_locale_support "${antflags}" tr
-	use linguas_zh_CN && compile_locale_support "${antflags}" zh_CN
-	use linguas_zh_TW && compile_locale_support "${antflags}" zh_TW
+	local locales=""
+	for lang in ${IUSE_LINGUAS} ; do
+		local mylang=${lang/linguas_/}
+		if use ${lang} ; then
+			if [ -z "${locales}" ] ; then
+				locales="${mylang}"
+			else
+				locales="${locales},${mylang}"
+			fi
+		fi
+	done
+
+	if [ -n "${locales}" ] ; then
+		einfo "Compiling support for locales: ${locales}"
+		eant ${antflags} -Dlocales=${locales} -Ddist.dir=../nbbuild/netbeans -Dnbms.dir="" -Dnbms.dist.dir="" \
+			-f l10n/build.xml build
+	fi
 
 	# Running build-javadoc from the same command line as build-nozip doesn't work
 	# so we must run it separately
@@ -575,7 +563,7 @@ src_compile() {
 
 	# Remove non-Linux binaries
 	einfo "Removing libraries and scripts for different archs..."
-	find ${BUILDDESTINATION} -type f \
+	find "${BUILDDESTINATION}" -type f \
 		-name "*.exe" -o \
 		-name "*.cmd" -o \
 		-name "*.bat" -o \
@@ -583,37 +571,37 @@ src_compile() {
 		| grep -v "/profiler3/" | xargs rm -fv
 
 	if use netbeans_modules_cnd ; then
-		rm -fv ${BUILDDESTINATION}/netbeans/cnd2/bin/*-SunOS-*
-		rm -fv ${BUILDDESTINATION}/netbeans/cnd2/bin/*-Mac_OS_X-*
+		rm -fv "${BUILDDESTINATION}"/netbeans/cnd2/bin/*-SunOS-*
+		rm -fv "${BUILDDESTINATION}"/netbeans/cnd2/bin/*-Mac_OS_X-*
 	fi
 
 	# Removing external stuff. They are api docs from external libs.
-	rm -f ${BUILDDESTINATION}/ide${IDE_VERSION}/docs/*.zip
+	rm -f "${BUILDDESTINATION}"/ide${IDE_VERSION}/docs/*.zip
 
 	# Remove zip files from generated javadocs.
-	rm -f ${BUILDDESTINATION}/javadoc/*.zip
+	rm -f "${BUILDDESTINATION}"/javadoc/*.zip
 
 	# Use the system ant
 	if use netbeans_modules_java ; then
-		cd ${BUILDDESTINATION}/java2/ant || die "Cannot cd to ${BUILDDESTINATION}/java2/ant"
+		cd "${BUILDDESTINATION}"/java2/ant || die "Cannot cd to "${BUILDDESTINATION}"/java2/ant"
 		rm -fr lib
 		rm -fr bin
 	fi
 
 	# Set initial default jdk
-	if [[ -e ${BUILDDESTINATION}/etc/netbeans.conf ]]; then
-		echo "netbeans_jdkhome=\"\$(java-config -O)\"" >> ${BUILDDESTINATION}/etc/netbeans.conf
+	if [[ -e "${BUILDDESTINATION}"/etc/netbeans.conf ]]; then
+		echo "netbeans_jdkhome=\"\$(java-config -O)\"" >> "${BUILDDESTINATION}"/etc/netbeans.conf
 	fi
 
 	# Install Gentoo Netbeans ID
 	# This ID is used to identify our netbeans package while contacting update center
-	mkdir -p  ${BUILDDESTINATION}/nb${SLOT}/config || die
-	echo "NBGNT" > ${BUILDDESTINATION}/nb${SLOT}/config/productid || die "Could not set Gentoo Netbeans ID"
+	mkdir -p  "${BUILDDESTINATION}"/nb${SLOT}/config || die
+	echo "NBGNT" > "${BUILDDESTINATION}"/nb${SLOT}/config/productid || die "Could not set Gentoo Netbeans ID"
 
 	# fix paths per bug# 163483
-	if [[ -e ${BUILDDESTINATION}/bin/netbeans ]]; then
-		sed -i -e 's:"$progdir"/../etc/:/etc/netbeans-6.5/:' ${BUILDDESTINATION}/bin/netbeans
-		sed -i -e 's:"${userdir}"/etc/:/etc/netbeans-6.5/:' ${BUILDDESTINATION}/bin/netbeans
+	if [[ -e "${BUILDDESTINATION}"/bin/netbeans ]]; then
+		sed -i -e 's:"$progdir"/../etc/:/etc/netbeans-6.5/:' "${BUILDDESTINATION}"/bin/netbeans
+		sed -i -e 's:"${userdir}"/etc/:/etc/netbeans-6.5/:' "${BUILDDESTINATION}"/bin/netbeans
 	fi
 }
 
@@ -621,7 +609,7 @@ src_install() {
 	insinto ${DESTINATION}
 
 	einfo "Installing the program..."
-	cd ${BUILDDESTINATION}
+	cd "${BUILDDESTINATION}"
 	doins -r *
 
 	# Remove the build helper files
@@ -632,9 +620,9 @@ src_install() {
 	rm -f "${D}"/${DESTINATION}/build_info
 
 	# Change location of etc files
-	if [[ -e ${BUILDDESTINATION}/etc ]]; then
+	if [[ -e "${BUILDDESTINATION}"/etc ]]; then
 		insinto /etc/${PN}-${SLOT}
-		doins ${BUILDDESTINATION}/etc/*
+		doins "${BUILDDESTINATION}"/etc/*
 		rm -fr "${D}"/${DESTINATION}/etc
 		dosym /etc/${PN}-${SLOT} ${DESTINATION}/etc
 	fi
@@ -966,7 +954,7 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} fastinfoset fastinfoset.jar FastInfoset.jar
 		# http.jar
 		dosyminstjar ${targetdir} jax-ws-2 jax-ws.jar jaxws-rt.jar
-		dosyminstjar ${targetdir} jax-ws-tools-2 jax-ws-tools.jar jaxws-tools.jar
+		#dosyminstjar ${targetdir} jax-ws-tools-2 jax-ws-tools.jar jaxws-tools.jar
 		# mimepull.jar
 		# resolver.jar
 		dosyminstjar ${targetdir} saaj saaj.jar saaj-impl.jar
@@ -1105,14 +1093,4 @@ dosyminstjar() {
 			NB_DOSYMINSTJARFAILED="1"
 		fi
 	fi
-}
-
-# Compiles locale support
-# Arguments
-# 1 - ant flags
-# 2 - locale
-compile_locale_support() {
-	einfo "Compiling support for '${2}' locale"
-	eant ${1} -Dlocales=${2} -Ddist.dir=../nbbuild/netbeans -Dnbms.dir="" -Dnbms.dist.dir="" \
-		-f l10n/build.xml build
 }

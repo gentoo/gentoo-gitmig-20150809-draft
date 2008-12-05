@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.98 2008/12/04 18:40:00 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.99 2008/12/05 03:14:28 fordfrog Exp $
+
+*netbeans-6.5-r3 (05 Dec 2008)
+
+  05 Dec 2008; Miroslav Šulc <fordfrog@gentoo.org> -netbeans-6.5-r2.ebuild,
+  +netbeans-6.5-r3.ebuild:
+  Applied patch from Markus Meier <maekke@gentoo.org>. Building of several
+  localizations is now performed in single run. Fixed bug #249839 (problem
+  with web-service client generation).
 
   04 Dec 2008; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.5-r2.ebuild:
   Another fix of the check of what modules are missing in netbeans modules
