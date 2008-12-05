@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.8-r1.ebuild,v 1.2 2008/12/05 08:25:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.8-r1.ebuild,v 1.3 2008/12/05 08:26:12 robbat2 Exp $
 
 inherit eutils
 
@@ -79,7 +79,7 @@ pkg_postinst() {
 	einfo "To run cfengine out of cron every half hour modify your crontab:"
 	einfo "0,30 * * * *    /usr/sbin/cfexecd -F"
 	einfo
-	
+
 	elog "You MUST generate the keys for cfengine by running:"
 	elog "emerge --config ${CATEGORY}/${PN}"
 }
