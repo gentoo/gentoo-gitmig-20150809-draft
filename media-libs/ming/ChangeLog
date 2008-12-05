@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ming
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.49 2008/10/15 12:34:14 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.50 2008/12/05 18:33:43 zmedico Exp $
+
+  05 Dec 2008; Zac Medico <zmedico@gentoo.org> ming-0.3.0-r1.ebuild:
+  Bug #249762 - Add !media-gfx/swftools blocker due to file collision with
+  /usr/bin/png2swf (ming-0.4.0_rc2 does not install this file).
 
 *ming-0.4.0_rc2 (15 Oct 2008)
 

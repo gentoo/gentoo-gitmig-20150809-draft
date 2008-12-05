@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0-r1.ebuild,v 1.10 2008/11/09 12:03:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0-r1.ebuild,v 1.11 2008/12/05 18:33:43 zmedico Exp $
 
 EAPI=1
 
@@ -22,7 +22,8 @@ RDEPEND="perl? ( dev-lang/perl )
 	media-libs/libpng
 	media-libs/giflib
 	sys-libs/zlib
-	!media-libs/libswf"
+	!media-libs/libswf
+	!media-gfx/swftools"
 DEPEND="${DEPEND}
 	sys-devel/flex"
 
