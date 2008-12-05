@@ -6,4 +6,3 @@ CXXFLAGS="${CFLAGS}"
 PORTAGE_LIBC="uClibc"
 ELIBC=uclibc
 FEATURES="sandbox sfperms strict nodoc noinfo noman autoconfig"
-# Testing commit hooks
