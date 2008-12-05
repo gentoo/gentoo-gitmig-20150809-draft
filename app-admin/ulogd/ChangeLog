@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.50 2008/08/27 04:27:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.51 2008/12/05 00:39:28 darkside Exp $
+
+*ulogd-2.0.0_beta2 (05 Dec 2008)
+
+  05 Dec 2008; Jeremy Olexa <darkside@gentoo.org> metadata.xml,
+  +ulogd-2.0.0_beta2.ebuild:
+  (non-maintainer commit) Version bump for bug 186528. submitted by Martin von
+  Gagern & Christian Ruppert
 
   27 Aug 2008; Jeremy Olexa <darkside@gentoo.org> ulogd-1.23-r2.ebuild:
   (non-maintainer commit) change postgres dep to -base only. Thanks to

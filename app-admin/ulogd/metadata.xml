@@ -9,5 +9,6 @@
 	<use>
 		<flag name='ip-as-string'>Logs IP addresses as stings</flag>
 		<flag name='pcap'>Build the PCAP plugin. Use the <pkg>net-libs/libpcap</pkg> library</flag>
+		<flag name='logrotate'>Install support files for logrotate</flag>
 	</use>
 </pkgmetadata>
