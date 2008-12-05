@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glpng/glpng-1.45-r1.ebuild,v 1.1 2008/12/02 13:54:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glpng/glpng-1.45-r1.ebuild,v 1.2 2008/12/05 20:54:22 scarabeus Exp $
 
 inherit cmake-utils
 
@@ -13,6 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 	media-libs/libpng
 	sys-libs/zlib"
+DEPEND="${RDEPEND}
+	>=dev-util/cmake-2.6.1"
