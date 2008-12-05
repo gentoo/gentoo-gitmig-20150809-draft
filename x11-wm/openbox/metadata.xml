@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>desktop-wm</herd>
+	<herd>lxde</herd>
 	<maintainer>
 		<email>omp@gentoo.org</email>
 		<name>David Shakaryan</name>
