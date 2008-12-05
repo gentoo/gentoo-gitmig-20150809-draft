@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager-pptp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.4 2008/12/04 23:38:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.5 2008/12/05 13:35:18 rbu Exp $
+
+  05 Dec 2008; Robert Buchholz <rbu@gentoo.org> metadata.xml:
+  Add Robert Piasek to metadata
 
 *networkmanager-pptp-0.7.0 (04 Dec 2008)
 

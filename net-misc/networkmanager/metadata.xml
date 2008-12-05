@@ -10,6 +10,10 @@
 		<email>rbu@gentoo.org</email>
 		<name>Robert Buchholz</name>
 	</maintainer>
+        <maintainer>
+                <email>robert.piasek@member.fsf.org</email>
+                <name>Robert Piasek</name>
+        </maintainer>
 	<use>
 		<flag name="dhclient">Use dhclient from <pkg>net-misc/dhcp</pkg> for getting ip.</flag>
 		<flag name="dhcpcd">Use <pkg>net-misc/dhcpcd</pkg> for getting ip.</flag>

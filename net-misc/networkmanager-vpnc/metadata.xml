@@ -2,13 +2,17 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-	<email>rbu@gentoo.org</email>
-	<name>Robert Buchholz</name>
-</maintainer>
-<maintainer>
-	<email>steev@gentoo.org</email>
-	<name>Stephen Klimaszewski</name>
-</maintainer>
+	<maintainer>
+		<email>rbu@gentoo.org</email>
+		<name>Robert Buchholz</name>
+	</maintainer>
+	<maintainer>
+		<email>steev@gentoo.org</email>
+		<name>Stephen Klimaszewski</name>
+	</maintainer>
+        <maintainer>
+                <email>robert.piasek@member.fsf.org</email>
+                <name>Robert Piasek</name>
+        </maintainer>
 </pkgmetadata>
 
