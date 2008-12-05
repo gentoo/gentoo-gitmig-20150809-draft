@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/agda
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.7 2008/07/26 11:37:35 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.8 2008/12/05 16:58:17 bicatali Exp $
+
+*agda-1.0.2-r2 (05 Dec 2008)
+
+  05 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  -agda-1.0.2.ebuild, -agda-1.0.2-r1.ebuild, +agda-1.0.2-r2.ebuild:
+  Emacs and dependencies fixes, thanks to ulm, bug #249360. Removed -j1
+  since parallel building seems to work again.
 
   26 Jul 2008; Markus Dittrich <markusle@gentoo.org>
   +files/agda-1.0.2-upstream-fixes.patch, agda-1.0.2.ebuild,

@@ -1,25 +1,25 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-1.0.2-r1.ebuild,v 1.3 2008/07/26 11:37:35 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-1.0.2-r2.ebuild,v 1.1 2008/12/05 16:58:17 bicatali Exp $
 
 inherit elisp-common eutils
 
 MY_PN="Agda"
 S="${WORKDIR}/${MY_PN}-${PV}"
 
-DESCRIPTION="Agda is a proof assistant in Haskell."
+DESCRIPTION="Proof assistant in Haskell"
 HOMEPAGE="http://unit.aist.go.jp/cvs/Agda/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="emacs"
 
-DEPEND="dev-lang/ghc
-		dev-haskell/mtl
-		emacs? ( virtual/emacs )"
-RDEPEND=""
+RDEPEND="emacs? ( virtual/emacs app-emacs/haskell-mode )"
+DEPEND="${RDEPEND}
+	dev-lang/ghc
+	dev-haskell/mtl"
 
 SITEFILE="50${PN}-gentoo.el"
 
@@ -34,22 +34,21 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --enable-newsyntax || die "./configure failed"
-	emake -j1 || die "make failed"
+	econf --enable-newsyntax
+	emake || die "emake failed"
 	#if use doc ; then
 	#	emake html
 	#fi
 }
 
 src_install() {
-	emake ROOT="${D}" install || die "make install failed"
+	emake -C src ROOT="${D}" install || die "make install failed"
 	dosym /usr/lib/EmacsAgda/bin/emacsagda /usr/bin/emacsagda
-	dosym /usr/bin/emacsagda /usr/bin/agda
+	dosym emacsagda /usr/bin/agda
 
 	if use emacs; then
-		cd "${S}/elisp"
-		elisp-install ${PN} *.el
-		elisp-site-file-install "${FILESDIR}"/${SITEFILE}
+		elisp-install ${PN} elisp/agda-mode.el || die
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 	fi
 }
 
