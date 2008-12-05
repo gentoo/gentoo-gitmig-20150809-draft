@@ -30,3 +30,4 @@ virtual/wine			app-emulation/wine
 virtual/xemacs			app-editors/xemacs
 virtual/utempter 		sys-apps/utempter
 virtual/eject			sys-apps/busybox
+virtual/dev-manager		sys-apps/busybox
