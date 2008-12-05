@@ -1,6 +1,18 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.35 2008/10/28 12:51:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.36 2008/12/05 11:38:02 bicatali Exp $
+
+*scipy-0.7.0_beta1 (05 Dec 2008)
+*scipy-0.6.0-r5 (05 Dec 2008)
+
+  05 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/scipy-0.6.0-implicit.patch,
+  +files/scipy-0.6.0-python-2.6-c_abs.patch, +files/scipy-0.6.0-stsci.patch,
+  +files/scipy-0.7.0_beta1-implicit.patch, +scipy-0.6.0-r5.ebuild,
+  +scipy-0.7.0_beta1.ebuild:
+  Fixed for python-2.6 (bug #245100, thanks Christian Becke for his patch),
+  now installs stsci packages, and beta version bump, still masked for
+  testing only
 
   28 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org>
   scipy-0.6.0-r4.ebuild:
