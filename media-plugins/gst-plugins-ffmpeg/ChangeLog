@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.92 2008/11/10 10:55:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.93 2008/12/05 23:19:04 loki_val Exp $
+
+*gst-plugins-ffmpeg-0.10.6 (05 Dec 2008)
+
+  05 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/0.10.6/system-ffmpeg-warning.patch,
+  +gst-plugins-ffmpeg-0.10.6.ebuild:
+  Bump
 
   10 Nov 2008; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-ffmpeg-0.10.5.ebuild:
