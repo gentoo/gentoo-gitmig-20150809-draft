@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.566 2008/12/06 10:28:52 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.567 2008/12/06 15:49:17 dsd Exp $
+
+  06 Dec 2008; Daniel Drake <dsd@gentoo.org>
+  gentoo-sources-2.6.26-r4.ebuild:
+  Stable on x86/amd64
 
 *gentoo-sources-2.6.26-r4 (06 Dec 2008)
 
