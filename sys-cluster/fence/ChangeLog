@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/fence
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.37 2008/11/22 14:12:12 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.38 2008/12/06 17:49:55 xmerlin Exp $
+
+  06 Dec 2008; Christian Zoffoli <xmerlin@gentoo.org> fence-2.03.09.ebuild,
+  fence-2.03.09-r1.ebuild:
+  Fixed dependency, bug #249841 thanks to Oleg Gawriloff <barzog@telecom.by>.
 
 *fence-2.03.09-r1 (22 Nov 2008)
 

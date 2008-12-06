@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-2.03.09.ebuild,v 1.3 2008/11/21 22:39:29 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-2.03.09.ebuild,v 1.4 2008/12/06 17:49:55 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -25,6 +25,7 @@ DEPEND="=sys-cluster/ccs-${CLUSTER_RELEASE}*
 	=sys-cluster/cman-lib-${CLUSTER_RELEASE}*
 	dev-perl/Net-Telnet
 	dev-perl/Net-SSLeay
+	dev-python/pexpect
 	"
 
 RDEPEND="$DEPEND"
