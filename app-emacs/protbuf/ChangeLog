@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/protbuf
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/protbuf/ChangeLog,v 1.10 2007/12/02 14:07:50 opfer Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/protbuf/ChangeLog,v 1.11 2008/12/06 17:16:53 fauli Exp $
+
+  06 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
+  -files/50protbuf-gentoo.el, -protbuf-1.7.ebuild:
+  clean up
 
   02 Dec 2007; Christian Faulhammer <opfer@gentoo.org>
   protbuf-1.7-r1.ebuild:
