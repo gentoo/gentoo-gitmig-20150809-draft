@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-0.60.ebuild,v 1.2 2008/03/01 23:27:17 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-0.60.ebuild,v 1.3 2008/12/06 20:32:23 keri Exp $
 
 inherit eutils mono
 
@@ -16,6 +16,7 @@ IUSE=""
 RDEPEND=">=dev-lang/mono-1.2.4
 		 sys-libs/readline"
 DEPEND="${RDEPEND}
+		!dev-lang/mercury
 		>=dev-util/pkgconfig-0.20"
 
 RESTRICT="test"

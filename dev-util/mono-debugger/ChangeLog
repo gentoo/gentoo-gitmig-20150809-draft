@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mono-debugger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.17 2008/11/19 22:35:58 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.18 2008/12/06 20:32:23 keri Exp $
+
+  06 Dec 2008; <keri@gentoo.org> mono-debugger-0.60.ebuild,
+  mono-debugger-2.0.ebuild:
+  Block against dev-lang/mercury. Closes bug #247432
 
 *mono-debugger-2.0 (19 Nov 2008)
 
