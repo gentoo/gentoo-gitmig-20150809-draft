@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tdom
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/ChangeLog,v 1.3 2008/12/04 20:14:05 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/ChangeLog,v 1.4 2008/12/06 19:09:52 mescalinum Exp $
+
+  06 Dec 2008; Federico Ferri <mescalinum@gentoo.org> -tdom-0.8.0.ebuild,
+  -tdom-0.8.0-r1.ebuild:
+  remove old ebuilds, affected by bug #248173
 
 *tdom-0.8.2 (04 Dec 2008)
 
