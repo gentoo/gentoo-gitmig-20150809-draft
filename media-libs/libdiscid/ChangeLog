@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdiscid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdiscid/ChangeLog,v 1.12 2008/09/29 09:09:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdiscid/ChangeLog,v 1.13 2008/12/06 19:01:04 nixnut Exp $
+
+  06 Dec 2008; nixnut <nixnut@gentoo.org> libdiscid-0.1.1.ebuild:
+  Stable on ppc wrt bug 249746
 
   29 Sep 2008; Raúl Porcel <armin76@gentoo.org> libdiscid-0.2.2.ebuild:
   Add ~arm wrt #203784
