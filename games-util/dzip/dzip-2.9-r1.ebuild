@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/dzip/dzip-2.9-r1.ebuild,v 1.3 2007/03/12 18:21:27 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/dzip/dzip-2.9-r1.ebuild,v 1.4 2008/12/06 15:40:54 nyhm Exp $
 
-inherit eutils games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="compressor/uncompressor for demo recordings from id's Quake"
 HOMEPAGE="http://speeddemosarchive.com/dzip/"
@@ -25,7 +25,11 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" -f Makefile.linux || die "emake failed"
+	emake \
+		-f Makefile.linux \
+		CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" \
+		|| die "emake failed"
 }
 
 src_install () {
