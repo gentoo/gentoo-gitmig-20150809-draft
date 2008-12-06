@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.59 2008/12/05 14:46:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.60 2008/12/06 19:28:20 nixnut Exp $
+
+  06 Dec 2008; nixnut <nixnut@gentoo.org> thunar-0.9.3.ebuild:
+  Stable on ppc wrt bug 249942
 
   05 Dec 2008; Christoph Mende <angelos@gentoo.org> thunar-0.9.3.ebuild:
   Append -Wno-error, bug 249558
