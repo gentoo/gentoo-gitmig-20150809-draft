@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.1.ebuild,v 1.5 2008/12/06 21:13:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ario-1.1.ebuild,v 1.6 2008/12/06 22:14:07 angelos Exp $
 
 EAPI=1
-inherit gnome2-utils
+inherit autotools eutils gnome2-utils
 
 DESCRIPTION="a GTK2 MPD (Music Player Daemon) client inspired by Rythmbox"
 HOMEPAGE="http://ario-player.sourceforge.net"
@@ -26,6 +26,13 @@ DEPEND="sys-devel/gettext
 	dev-util/pkgconfig"
 
 S="${WORKDIR}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	eautoreconf
+}
 
 src_compile() {
 	econf \
