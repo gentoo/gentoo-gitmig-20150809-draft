@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.5 2008/09/05 21:44:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.6 2008/12/06 14:57:20 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Unique mix of strategy and FPS"
 HOMEPAGE="http://www.s2games.com/savage/
