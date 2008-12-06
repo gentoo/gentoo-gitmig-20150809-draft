@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.4 2008/08/04 12:02:26 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.5 2008/12/06 23:20:30 patrick Exp $
+
+*werkzeug-0.4 (06 Dec 2008)
+
+  06 Dec 2008; Patrick Lauer <patrick@gentoo.org> +werkzeug-0.4.ebuild:
+  Bumping to 0.4, closing 249442
 
 *werkzeug-0.3.1-r1 (04 Aug 2008)
 
