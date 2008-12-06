@@ -1,5 +1,6 @@
 CFLAGS		+= $(shell sdl-config --cflags) -I. -DINLINE=
-LDFLAGS		+= $(shell sdl-config --libs) -L.
+LDFLAGS		+= -L.
+LIBS		+= $(shell sdl-config --libs)
 
 LIB_NAME	= libSDL_flic
 LIB_SHARED	= $(LIB_NAME).so
@@ -16,7 +17,7 @@ all: $(TARGETS)
 SDL_flic.lo: SDL_flic.c
 	$(CC) $(CFLAGS) -fPIC -o $@ -c $<
 $(LIB_SHARED): SDL_flic.lo
-	$(CC) $(LDFLAGS) SDL_flic.lo -shared -Wl,-soname,$@ -o $@.1.0.0
+	$(CC) $(CFLAGS) $(LDFLAGS) SDL_flic.lo -shared -Wl,-soname,$@ -o $@.1.0.0 $(LIBS)
 	ln -s $@.1.0.0 $@.1
 	ln -s $@.1 $@
 
@@ -24,7 +25,7 @@ $(LIB_STATIC): SDL_flic.o
 	$(AR) rcs $@ $<
 
 $(BIN): $(LIB_SHARED) playflic.o
-	$(CC) $(LDFLAGS) -lSDL_flic -o $@ playflic.o
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ playflic.o -lSDL_flic $(LIBS)
 
 install: $(TARGETS)
 	install -d -m 755 $(DESTDIR)/$(LIBDIR)

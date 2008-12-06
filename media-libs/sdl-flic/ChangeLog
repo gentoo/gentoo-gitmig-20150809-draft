@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-flic
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-flic/ChangeLog,v 1.5 2007/02/09 03:43:09 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-flic/ChangeLog,v 1.6 2008/12/06 16:50:21 nyhm Exp $
+
+  06 Dec 2008; Tristan Heaven <nyhm@gentoo.org> files/Makefile,
+  sdl-flic-1.2.ebuild:
+  Fix linking with --as-needed, bug #247775
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
