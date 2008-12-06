@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.4.2.0-r2.ebuild,v 1.1 2008/11/09 21:15:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/gnome-do-0.4.2.0-r2.ebuild,v 1.2 2008/12/06 12:27:44 ford_prefect Exp $
+
+EAPI=2
 
 inherit eutils gnome2 mono versionator
 
@@ -19,7 +21,10 @@ RDEPEND="
 	>=dev-dotnet/gtk-sharp-2.0
 	>=dev-dotnet/gnome-sharp-2.0
 	>=dev-dotnet/gconf-sharp-2.0
-	>=dev-dotnet/glade-sharp-2.0
+	|| (
+		>=dev-dotnet/gtk-sharp-2.12.6[glade]
+		( >=dev-dotnet/gtk-sharp-2.10 >=dev-dotnet/glade-sharp-2.4 )
+	)
 	>=dev-dotnet/gnomevfs-sharp-2.0
 	dev-dotnet/dbus-sharp
 	dev-dotnet/dbus-glib-sharp

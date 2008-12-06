@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-do
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.8 2008/12/05 22:32:22 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.9 2008/12/06 12:27:44 ford_prefect Exp $
+
+  06 Dec 2008; Arun Raghavan <ford_prefect@gentoo.org>
+  gnome-do-0.4.2.0-r2.ebuild:
+  Add support for =dev-dotnet/gtk-sharp-2.12 (now provides glade-sharp)
 
 *gnome-do-0.6.1.0 (05 Dec 2008)
 
