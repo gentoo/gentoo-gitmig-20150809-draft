@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/rpcbind
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.1 2007/12/29 09:13:54 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.2 2008/12/06 11:29:10 ssuominen Exp $
+
+*rpcbind-0.1.5.1 (06 Dec 2008)
+
+  06 Dec 2008; <ssuominen@gentoo.org> +rpcbind-0.1.5.1.ebuild:
+  Version bump for bug 249811, thanks to Chi-Thanh Christopher Nguyen.
 
 *rpcbind-0.1.4 (29 Dec 2007)
 
