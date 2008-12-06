@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.5 2008/12/05 14:48:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.6 2008/12/06 19:13:56 nixnut Exp $
+
+  06 Dec 2008; nixnut <nixnut@gentoo.org> terminal-0.2.8.3.ebuild:
+  Stable on ppc wrt bug 249942
 
   05 Dec 2008; Christoph Mende <angelos@gentoo.org> terminal-0.2.8.3.ebuild:
   Append -Wno-error, bug 249557
