@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.1.0.ebuild,v 1.6 2008/09/29 17:44:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.1.0.ebuild,v 1.7 2008/12/06 14:59:35 nyhm Exp $
 
-inherit gnome2-utils perl-module games
+inherit eutils gnome2-utils perl-module games
 
 DESCRIPTION="A Puzzle Bubble clone written in perl (now with network support)"
 HOMEPAGE="http://www.frozen-bubble.org/"
