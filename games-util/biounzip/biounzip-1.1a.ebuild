@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/biounzip/biounzip-1.1a.ebuild,v 1.7 2008/12/06 14:06:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/biounzip/biounzip-1.1a.ebuild,v 1.8 2008/12/06 14:41:51 nyhm Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Unpacks BioZip archives"
 HOMEPAGE="http://biounzip.sourceforge.net/"
