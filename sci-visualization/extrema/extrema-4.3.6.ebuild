@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.3.6.ebuild,v 1.1 2008/06/02 10:23:51 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/extrema/extrema-4.3.6.ebuild,v 1.2 2008/12/06 17:04:22 grozin Exp $
 
 WX_GTK_VER="2.8"
 inherit eutils fdo-mime wxwidgets
@@ -12,13 +12,15 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-DEPEND=">=x11-libs/wxGTK-2.8.7
+# File collision, see bug #249423
+DEPEND="!sci-chemistry/psi
+	>=x11-libs/wxGTK-2.8.7
 	dev-util/desktop-file-utils"
 
 src_compile() {
 	# extrema cannot be compiled with versions of minuit
 	# available in portage
-	econf --enable-shared || die "econf failed"
+	econf --enable-shared
 	emake || die "emake failed"
 }
 
