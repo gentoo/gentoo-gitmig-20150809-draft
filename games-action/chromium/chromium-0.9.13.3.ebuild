@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.13.3.ebuild,v 1.1 2008/11/30 22:12:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.13.3.ebuild,v 1.2 2008/12/06 15:03:38 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Chromium B.S.U. - an arcade game"
 HOMEPAGE="http://chromium-bsu.sourceforge.net/"
