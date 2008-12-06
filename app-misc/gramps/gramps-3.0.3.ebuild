@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.3.ebuild,v 1.4 2008/11/30 15:19:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.3.ebuild,v 1.5 2008/12/06 23:35:17 fauli Exp $
 
 NEED_PYTHON="2.5"
 WANT_AUTOCONF="latest"
@@ -32,10 +32,10 @@ DOCS="NEWS README TODO"
 
 pkg_setup() {
 	if ! built_with_use -a 'dev-lang/python' sqlite berkdb ; then
-		eerror "You need to install python with Berkely Database support."
+		eerror "You need to install python with Berkeley Database support."
 		eerror "Add 'dev-lang/python berkdb sqlite' to /etc/portage/package.use "
 		eerror "and then re-emerge python."
-		die "berkdb or sqlite support missing from Gnome"
+		die "berkdb or sqlite support missing from Python"
 	fi
 
 	G2CONF="${G2CONF} --disable-mime-install"

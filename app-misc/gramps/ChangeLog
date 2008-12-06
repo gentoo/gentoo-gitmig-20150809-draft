@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.81 2008/11/30 15:19:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.82 2008/12/06 23:35:17 fauli Exp $
+
+  06 Dec 2008; Christian Faulhammer <fauli@gentoo.org> gramps-3.0.3.ebuild:
+  fix typos found by flameeyes in bug 250053
 
   30 Nov 2008; Markus Meier <maekke@gentoo.org> gramps-3.0.3.ebuild:
   amd64/x86 stable, bug #249165
