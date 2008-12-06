@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9253 2008/12/05 21:15:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9254 2008/12/06 00:28:40 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -227,12 +227,6 @@ games-mud/ytin
 media-radio/tucnak1
 media-radio/tucnak1-data
 media-radio/ssbd
-
-# Christoph Mende <angelos@gentoo.org> (10 Nov 2008)
-# Masked for removal in 30 days, it's more or less unmaintained,
-# depends on unmaintained pyxfce and doesn't support most current
-# features
-xfce-extra/pynetworkmanager
 
 # Mike Doty <kingtaco@gentoo.org> (9 Nov 2008)
 # Masked for testing
