@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kid3
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.33 2008/12/06 19:03:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.34 2008/12/06 20:28:59 gentoofan23 Exp $
+
+  06 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org> kid3-1.0.ebuild:
+  stable amd64, bug 244022
 
   06 Dec 2008; nixnut <nixnut@gentoo.org> kid3-1.0.ebuild:
   Stable on ppc wrt bug 244022
