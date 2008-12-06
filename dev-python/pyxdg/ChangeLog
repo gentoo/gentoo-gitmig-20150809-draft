@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.44 2008/02/05 14:13:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.45 2008/12/06 23:41:51 patrick Exp $
+
+*pyxdg-0.17 (06 Dec 2008)
+
+  06 Dec 2008; Patrick Lauer <patrick@gentoo.org> +pyxdg-0.17.ebuild:
+  Bumping to 0.17, closing #246994
 
   05 Feb 2008; Markus Rothe <corsair@gentoo.org> pyxdg-0.15.ebuild:
   Stable on ppc64
