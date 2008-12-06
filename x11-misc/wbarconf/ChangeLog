@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/wbarconf
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbarconf/ChangeLog,v 1.1 2008/12/06 13:03:36 ssuominen Exp $
+
+*wbarconf-0.7.2 (06 Dec 2008)
+
+  06 Dec 2008; <ssuominen@gentoo.org> +files/wbarconf-0.7.2-install.patch,
+  +wbarconf-0.7.2.ebuild:
+  Initial commit. Thanks to Mika Hynnä.
+
