@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/xpa-2.1.8.ebuild,v 1.3 2008/11/28 10:03:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/xpa-2.1.8.ebuild,v 1.4 2008/12/06 11:50:41 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	epatch "${WORKDIR}"/${P}-ds9-5.4.patch
 	epatch "${FILESDIR}"/${P}-makefile.patch
+	sed -i -e "s:\${LINK}:\${LINK} ${LDFLAGS}:" mklib
 	eautoconf
 }
 
