@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-0.21.0.ebuild,v 1.4 2008/11/03 13:00:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-0.21.0.ebuild,v 1.5 2008/12/06 15:06:19 nyhm Exp $
 
 EAPI="1"
 
-inherit cmake-utils games
+inherit eutils cmake-utils games
 
 DESCRIPTION="Tuxanci is first cushion shooter inspired by game Bulanci."
 HOMEPAGE="http://www.tuxanci.org/"
