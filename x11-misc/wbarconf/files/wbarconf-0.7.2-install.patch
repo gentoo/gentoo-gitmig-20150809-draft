@@ -1,6 +1,6 @@
 diff -ur wbarconf.orig/install.sh wbarconf/install.sh
 --- wbarconf.orig/install.sh	2008-05-27 14:44:20.000000000 +0300
-+++ wbarconf/install.sh	2008-12-06 15:07:26.000000000 +0200
++++ wbarconf/install.sh	2008-12-06 15:29:46.000000000 +0200
 @@ -1,5 +1,6 @@
  #!/bin/sh
  startdir=$1
@@ -8,7 +8,7 @@ diff -ur wbarconf.orig/install.sh wbarconf/install.sh
  
  if [ $(echo $1|wc -w) -eq 0 ];then
  	echo "Usage: install.sh /path/to"
-@@ -14,9 +15,9 @@
+@@ -14,17 +15,20 @@
  mkdir -p $startdir/bin/ || return 1
  install -m0755 wbarconf $startdir/bin/ || return 1
  
@@ -20,9 +20,12 @@ diff -ur wbarconf.orig/install.sh wbarconf/install.sh
 +install -m0644 wbarbacks/README $startdir/share/doc/wbarconf-$version/wbarbacks/ || return 1
  
  mkdir -p $startdir/share/locale/ || return 1
- cp -av locale/* $startdir/share/locale/ || return 1
-@@ -24,7 +25,8 @@
+-cp -av locale/* $startdir/share/locale/ || return 1
++cp -dpRv locale/* $startdir/share/locale/ || return 1
+ chmod 0755 -R  $startdir/share/ || return 1
  find $startdir/share/locale/ -name wbarconf.po -print | xargs rm -f
++
++mkdir -p $startdir/share/wbarconf/
  install -m0644 messages.pot $startdir/share/wbarconf/ || return 1
  
 -cp -av wbarbacks $startdir/share/wbarconf/ || return 1
