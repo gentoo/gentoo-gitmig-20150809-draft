@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbarconf/wbarconf-0.7.2.ebuild,v 1.1 2008/12/06 13:03:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbarconf/wbarconf-0.7.2.ebuild,v 1.2 2008/12/06 13:20:58 ssuominen Exp $
 
 inherit eutils
 
@@ -26,6 +26,6 @@ src_unpack() {
 }
 
 src_install() {
-	./install.sh "${D}/usr"
+	./install.sh "${D}/usr" || die "./install.sh failed."
 	prepalldocs
 }
