@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.252 2008/12/02 21:22:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.253 2008/12/06 01:35:54 vapier Exp $
+
+  06 Dec 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.14-AC_BIG_ENDIAN.patch, util-linux-2.14.1.ebuild:
+  Add fix from upstream for missing call to AC_BIG_ENDIAN in configure.
 
   02 Dec 2008; Brent Baude <ranger@gentoo.org> util-linux-2.14.1.ebuild:
   stable ppc64, bug 249107
