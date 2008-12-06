@@ -1,6 +1,9 @@
 # ChangeLog for app-office/orage
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.5 2008/11/07 15:11:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.6 2008/12/06 19:10:19 nixnut Exp $
+
+  06 Dec 2008; nixnut <nixnut@gentoo.org> orage-4.4.3.ebuild:
+  Stable on ppc wrt bug 249942
 
   07 Nov 2008; Christoph Mende <angelos@gentoo.org> -orage-4.5.12.2.ebuild:
   Remove old
