@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.183 2008/12/06 14:43:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.184 2008/12/06 23:52:05 robbat2 Exp $
+
+  06 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> Manifest:
+  Fix broken Manifest.
 
   06 Dec 2008; Peter Volkov <pva@gentoo.org>
   +files/iptables-1.4.0-2.6.26-kernel.patch, iptables-1.4.0-r1.ebuild:
