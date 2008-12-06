@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-22.1.ebuild,v 1.4 2008/06/25 19:12:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-22.1.ebuild,v 1.5 2008/12/06 14:54:17 nyhm Exp $
 
-inherit flag-o-matic games
+inherit flag-o-matic toolchain-funcs games
 
 DESCRIPTION="Bob Hyatt's strong chess engine"
 HOMEPAGE="ftp://ftp.cis.uab.edu/pub/hyatt/"
