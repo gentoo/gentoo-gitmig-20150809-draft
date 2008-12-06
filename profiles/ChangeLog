@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2131 2008/12/06 12:22:02 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2132 2008/12/06 14:30:13 zzam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Dec 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Remove mask entries for no longer existing udev ebuilds.
 
   06 Dec 2008; Arun Raghavan <ford_prefect@gentoo.org> package.mask:
   Masking gnome-extra/gnome-do-0.6 till gnome-extra/gnome-do-plugins-0.6 is

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9255 2008/12/06 12:22:02 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9256 2008/12/06 14:30:13 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -193,11 +193,6 @@ dev-db/fastdb
 # which is still being maintained.
 games-mud/ytin
 
-# Matthias Schwarzott <zzam@gentoo.org> (28 Oct 2008)
-# This breaks kernels with older sysfs layout, Bug #246938
-# and some persistent-net setups, Bug #246927, and Bug #246849
-~sys-fs/udev-132
-
 # Peter Volkov <pva@gentoo.org> (16 Nov 2008)
 # This is developemnt version. Why it was not masked from the beginning?
 >=net-misc/socat-2.0.0_beta1
@@ -279,11 +274,6 @@ app-crypt/truecrypt
 ~virtual/perl-IO-Compress-Zlib-2.008
 ~virtual/perl-Math-BigInt-FastCalc-0.16
 ~virtual/perl-Time-Piece-1.12
-
-# Matthias Schwarzott <zzam@gentoo.org> (28 Oct 2008)
-# Masked until design of new udev init-script for >openrc-0.3.0
-# is finished, Bug #240984.
-=sys-fs/udev-130-r2
 
 # Markus Dittrich <markusle@gentoo.org> (28 Oct 2008)
 # New upstream version is currently masked due to an interface
