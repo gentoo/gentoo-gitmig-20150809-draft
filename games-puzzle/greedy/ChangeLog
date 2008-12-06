@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/greedy
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/ChangeLog,v 1.7 2007/02/22 01:11:30 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/ChangeLog,v 1.8 2008/12/06 16:13:36 nyhm Exp $
+
+  06 Dec 2008; Tristan Heaven <nyhm@gentoo.org> greedy-0.2.0-r1.ebuild:
+  Respect CC and LDFLAGS, bug #244098
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
