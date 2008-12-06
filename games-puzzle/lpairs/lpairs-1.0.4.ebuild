@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/lpairs-1.0.4.ebuild,v 1.1 2008/09/07 23:10:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/lpairs-1.0.4.ebuild,v 1.2 2008/12/06 14:55:53 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A classical memory game"
 HOMEPAGE="http://lgames.sourceforge.net/index.php?project=LPairs"
