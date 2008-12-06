@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.50 2008/10/25 15:38:33 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.51 2008/12/06 00:22:52 betelgeuse Exp $
+
+  06 Dec 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Remove wltjr as he retired ages ago.
 
   25 Oct 2008; nixnut <nixnut@gentoo.org> mod_jk-1.2.26-r1.ebuild:
   Stable on ppc wrt bug 242726

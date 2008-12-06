@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>apache</herd>
 	<herd>java</herd>
-	<maintainer>
-		<email>wltjr@gentoo.org</email>
-		<name>William L. Thomson Jr.</name>
-	</maintainer>
 	<longdescription>
 		mod_jk is a connector used to connect Tomcat JSP/Servlet 
 		container with web servers such as Apache, Netscape, 
