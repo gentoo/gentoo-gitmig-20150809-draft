@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ibuffer
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ibuffer/ChangeLog,v 1.14 2007/11/09 19:10:44 nixnut Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ibuffer/ChangeLog,v 1.15 2008/12/06 17:31:22 fauli Exp $
+
+  06 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
+  -files/50ibuffer-gentoo.el, -ibuffer-1.9.ebuild:
+  clean up
 
   09 Nov 2007; nixnut <nixnut@gentoo.org> ibuffer-2.6.1-r1.ebuild:
   Stable on ppc wrt bug 198328
