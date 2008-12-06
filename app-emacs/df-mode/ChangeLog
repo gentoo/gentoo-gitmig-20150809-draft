@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/df-mode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/df-mode/ChangeLog,v 1.4 2008/06/14 23:25:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/df-mode/ChangeLog,v 1.5 2008/12/06 17:50:57 fauli Exp $
+
+  06 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
+  -files/50df-gentoo.el, -df-mode-1.5.ebuild:
+  clean up
 
   14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> df-mode-20050509.ebuild:
   Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
