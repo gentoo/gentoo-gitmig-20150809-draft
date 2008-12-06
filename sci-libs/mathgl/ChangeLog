@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/mathgl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.1 2008/12/02 16:23:04 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.2 2008/12/06 16:26:11 grozin Exp $
+
+*mathgl-1.8-r1 (06 Dec 2008)
+
+  06 Dec 2008; Andrey Grozin <grozin@gentoo.org>
+  +files/mathgl-1.8-fltk.patch, +files/mathgl-1.8-octave.patch,
+  metadata.xml, +mathgl-1.8-r1.ebuild:
+  Fixing bug #249627; new USE flag octave.
 
 *mathgl-1.8 (02 Dec 2008)
 

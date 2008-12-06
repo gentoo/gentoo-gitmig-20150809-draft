@@ -3,8 +3,11 @@
 <pkgmetadata>
 	<herd>sci</herd>
 	<maintainer>
-		<email>grozin@gentoo.org</email>
+		<email>A.G.Grozin@inp.nsk.su</email>
 		<name>Andrey Grozin</name>
 	</maintainer>
 	<longdescription>Math Graphics Library</longdescription>
+	<use>
+		<flag name='octave'>Add bindings for <pkg>sci-mathematics/octave</pkg></flag>
+	</use>
 </pkgmetadata>
