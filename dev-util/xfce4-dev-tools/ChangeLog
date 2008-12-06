@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xfce4-dev-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/ChangeLog,v 1.2 2008/06/23 12:34:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/ChangeLog,v 1.3 2008/12/06 19:11:20 nixnut Exp $
+
+  06 Dec 2008; nixnut <nixnut@gentoo.org> xfce4-dev-tools-4.4.0.1.ebuild:
+  Stable on ppc wrt bug 249942
 
 *xfce4-dev-tools-4.4.0.1 (22 Jun 2008)
 
