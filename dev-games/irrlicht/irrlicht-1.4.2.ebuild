@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.4.2.ebuild,v 1.1 2008/10/09 06:25:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.4.2.ebuild,v 1.2 2008/12/06 14:52:22 nyhm Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="open source high performance realtime 3D engine written in C++"
 HOMEPAGE="http://irrlicht.sourceforge.net/"
