@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-fluendo-mpegdemux/gst-plugins-fluendo-mpegdemux-0.10.15.ebuild,v 1.4 2008/08/08 18:23:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-fluendo-mpegdemux/gst-plugins-fluendo-mpegdemux-0.10.15.ebuild,v 1.5 2008/12/06 07:02:19 ssuominen Exp $
 
 MY_PN=gst-fluendo-mpegdemux
 MY_P=${MY_PN}-${PV}
@@ -14,10 +14,11 @@ LICENSE="MPL-1.1"
 SLOT=0.10
 
 S=${WORKDIR}/${MY_P}
+
 RDEPEND=">=media-libs/gstreamer-0.10.15
 	 >=media-libs/gst-plugins-base-0.10.15"
-
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
 	make DESTDIR="${D}" install || die
