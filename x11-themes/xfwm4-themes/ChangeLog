@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/xfwm4-themes
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.6 2008/12/06 19:18:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.7 2008/12/06 19:44:32 darkside Exp $
+
+  06 Dec 2008; Jeremy Olexa <darkside@gentoo.org> xfwm4-themes-4.4.3.ebuild:
+  amd64 stable, bug 249942
 
   06 Dec 2008; nixnut <nixnut@gentoo.org> xfwm4-themes-4.4.3.ebuild:
   Stable on ppc wrt bug 249942
