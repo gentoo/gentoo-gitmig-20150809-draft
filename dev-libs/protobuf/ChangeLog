@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.3 2008/10/30 14:22:14 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.4 2008/12/06 22:31:17 spock Exp $
+
+*protobuf-2.0.3 (06 Dec 2008)
+
+  06 Dec 2008; Michał Januszewski <spock@gentoo.org>
+  +files/protobuf-2.0.3-decoder_test_64bit_fix.patch,
+  +protobuf-2.0.3.ebuild:
+  Version bump.
 
   30 Oct 2008; Michał Januszewski <spock@gentoo.org> protobuf-2.0.1.ebuild:
   Install the vim syntax file into vimfiles/syntax instead of vimfiles.
