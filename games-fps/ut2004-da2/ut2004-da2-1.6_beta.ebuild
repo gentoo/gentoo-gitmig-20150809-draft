@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-da2/ut2004-da2-1.6_beta.ebuild,v 1.2 2007/08/27 08:59:05 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-da2/ut2004-da2-1.6_beta.ebuild,v 1.3 2008/12/06 15:12:18 nyhm Exp $
 
 MOD_NAME="Defence Alliance 2"
 MOD_DIR="DA2"
@@ -8,7 +8,7 @@ MOD_DESC="assault mod with improved bot AI"
 MOD_BINS="da2"
 MOD_ICON="defencealliance2.xpm"
 
-inherit games games-mods
+inherit eutils games games-mods
 
 MY_PV=${PV/_beta/beta}
 
