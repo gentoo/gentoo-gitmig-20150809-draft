@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ario
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.4 2008/10/14 16:12:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ario/ChangeLog,v 1.5 2008/12/06 21:13:51 angelos Exp $
+
+  06 Dec 2008; Christoph Mende <angelos@gentoo.org> ario-1.1.ebuild:
+  Renamed USE=avahi to USE=zeroconf and added gnome2_icon_savelist
 
   14 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> ario-1.1.ebuild:
   Add intltool to dependencies (or it'll use the bundled one).
