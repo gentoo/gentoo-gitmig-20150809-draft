@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.18 2008/11/17 20:58:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.19 2008/12/06 16:57:10 dertobi123 Exp $
+
+*open-iscsi-2.0.870-r1 (06 Dec 2008)
+
+  06 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/iscsid-2.0.870.init.d-r1, +open-iscsi-2.0.870-r1.ebuild:
+  Check if /etc/conf.d/iscsid exists and INITIATOR_FILENAME isn't empty.
+  Thanks to Marcel Pennewiß and Craig (#196096)
 
 *open-iscsi-2.0.870 (17 Nov 2008)
 
