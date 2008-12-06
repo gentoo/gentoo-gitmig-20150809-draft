@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.141 2008/11/28 12:37:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.142 2008/12/06 12:32:37 fauli Exp $
+
+*tor-0.2.0.32 (06 Dec 2008)
+
+  06 Dec 2008; Christian Faulhammer <fauli@gentoo.org> +tor-0.2.0.32.ebuild:
+  version bump for security bug 250018
 
   28 Nov 2008; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   Change my email address
