@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/enblend
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.29 2008/11/28 18:41:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/ChangeLog,v 1.30 2008/12/06 18:49:05 nixnut Exp $
+
+  06 Dec 2008; nixnut <nixnut@gentoo.org> enblend-3.2.ebuild:
+  Stable on ppc wrt bug 249380
 
   28 Nov 2008; Markus Meier <maekke@gentoo.org> enblend-3.2.ebuild:
   force -j1 as this package needs about 1 GB RAM for every parallel compile
