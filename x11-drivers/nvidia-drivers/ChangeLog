@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.115 2008/12/03 17:30:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.116 2008/12/06 02:01:23 vapier Exp $
+
+  06 Dec 2008; Mike Frysinger <vapier@gentoo.org>
+  nvidia-drivers-177.80.ebuild, nvidia-drivers-177.82.ebuild:
+  Use unpack_makeself rather than executing the script.
 
 *nvidia-drivers-177.82 (03 Dec 2008)
 

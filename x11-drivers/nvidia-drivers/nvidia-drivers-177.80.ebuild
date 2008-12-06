@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-177.80.ebuild,v 1.1 2008/10/13 00:35:38 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-177.80.ebuild,v 1.2 2008/12/06 02:01:23 vapier Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -188,8 +188,9 @@ src_unpack() {
 	fi
 
 	if ! use x86-fbsd; then
-		cd "${WORKDIR}"
-		bash "${DISTDIR}"/${NV_PACKAGE}${PKG_V}.run --extract-only
+		mkdir "${S}"
+		cd "${S}"
+		unpack_makeself
 	else
 		unpack ${A}
 	fi
