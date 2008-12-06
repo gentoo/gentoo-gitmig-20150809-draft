@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2132 2008/12/06 14:30:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2133 2008/12/06 22:42:50 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Block >sys-process/audit-1.7.4 because the old init scripts+rules cause
+  weird breakage with the new versions still. WIP.
 
   06 Dec 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
   Remove mask entries for no longer existing udev ebuilds.
