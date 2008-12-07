@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.3.8.1.ebuild,v 1.1 2008/11/07 15:07:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.3.8.1.ebuild,v 1.2 2008/12/07 18:55:04 yngwin Exp $
 
 EAPI="1"
 
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 IUSE="+X +alsa wifi"
+RESTRICT="test"  # bug 249598
 
 RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXmu
