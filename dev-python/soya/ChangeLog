@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/soya
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.21 2008/08/06 19:19:28 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.22 2008/12/07 10:22:37 patrick Exp $
+
+*soya-0.14 (07 Dec 2008)
+
+  07 Dec 2008; Patrick Lauer <patrick@gentoo.org> +soya-0.14.ebuild:
+  Bumping to 0.14. Closes 184510. OpenAL is no longer optional even though
+  the configure script checks for that, so the useflag is removed for now
 
   06 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> metadata.xml,
   soya-0.10.2.ebuild:
