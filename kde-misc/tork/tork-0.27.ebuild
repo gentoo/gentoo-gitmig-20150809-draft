@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.27.ebuild,v 1.3 2008/06/30 01:38:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/tork-0.27.ebuild,v 1.4 2008/12/07 00:31:06 patrick Exp $
 
 ARTS_REQUIRED="never"
 
 inherit kde multilib
 
-DESCRIPTION="TorK is a powerful anonymity manager for the KDE and acts as a frontedn to Tor."
+DESCRIPTION="TorK is a powerful anonymity manager for the KDE and acts as a frontend to Tor."
 HOMEPAGE="http://tork.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
