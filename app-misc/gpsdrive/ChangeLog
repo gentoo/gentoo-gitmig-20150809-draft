@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.29 2008/10/23 04:46:57 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.30 2008/12/07 20:38:20 nerdboy Exp $
+
+  07 Dec 2008; Steve Arnold <nerdboy@gentoo.org> gpsdrive-2.10_pre5.ebuild:
+  Updated cmake-utils usage and removed legacy MAKEOPTS value (closes bug 
+  #250134).  Artifact from ebuild update alertly noticed by SpanKY.
 
   23 Oct 2008; Steve Arnold <nerdboy@gentoo.org> gpsdrive-2.10_pre5.ebuild:
   Updated with fix for bug #238959 and mysql example config.
