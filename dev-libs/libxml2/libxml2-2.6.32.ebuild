@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.32.ebuild,v 1.9 2008/11/13 18:55:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.32.ebuild,v 1.10 2008/12/07 05:52:13 vapier Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 LICENSE="MIT"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="bootstrap build debug doc examples ipv6 python readline test"
+IUSE="debug doc examples ipv6 python readline test"
 
 XSTS_HOME="http://www.w3.org/XML/2004/xml-schema-test-suite"
 XSTS_NAME_1="xmlschema2002-01-16"
