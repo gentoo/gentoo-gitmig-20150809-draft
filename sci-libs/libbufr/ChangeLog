@@ -1,0 +1,13 @@
+# ChangeLog for sci-libs/libbufr
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/ChangeLog,v 1.1 2008/12/07 02:48:14 nerdboy Exp $
+
+*libbufr-000360 (07 Dec 2008)
+
+  07 Dec 2008; Steve Arnold <nerdboy@gentoo.org> +metadata.xml,
+  +libbufr-000360.ebuild:
+  New ebuild for the open source BUFR library from ECMWF (requires at least
+  one supported Fortran compiler).  Tested on amd64 and x86 with one of the
+  included test files, but I haven't tested with local tables yet.  Needs
+  some arch luv...
+
