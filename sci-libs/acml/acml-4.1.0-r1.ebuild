@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.3 2008/06/23 14:43:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.4 2008/12/07 18:28:37 vapier Exp $
 
 EAPI="1"
 
@@ -24,12 +24,11 @@ SRC_URI="
 		gfortran? ( ${MY_P}-gfortran-32bit.tgz )
 		!ifc? ( !gfortran? ( ${MY_P}-gfortran-32bit.tgz ) ) )"
 
-IUSE="doc examples gfortran ifc int64 openmp test"
-KEYWORDS="~amd64 ~x86"
-
-RESTRICT="strip fetch"
 LICENSE="ACML"
 SLOT="0"
+KEYWORDS="-* ~amd64 ~x86"
+IUSE="doc examples gfortran ifc int64 openmp test"
+RESTRICT="strip fetch"
 
 CDEPEND="ifc? ( dev-lang/ifc )
 	gfortran? ( sys-devel/gcc:4.2 )
