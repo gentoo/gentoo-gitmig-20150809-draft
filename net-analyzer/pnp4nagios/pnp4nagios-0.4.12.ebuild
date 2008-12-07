@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.4.12.ebuild,v 1.1 2008/11/29 17:09:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.4.12.ebuild,v 1.2 2008/12/07 15:24:07 dertobi123 Exp $
 
 inherit confutils
 
@@ -19,7 +19,9 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 DEPEND=">=dev-lang/php-4.3
 	>=net-analyzer/rrdtool-1.2
 	net-analyzer/nagios-core"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	virtual/perl-Getopt-Long
+	virtual/perl-Time-HiRes"
 
 S=${WORKDIR}/${MY_P}
 
