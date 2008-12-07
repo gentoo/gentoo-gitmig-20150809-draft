@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.5.902a.ebuild,v 1.1 2008/11/13 01:38:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/libarchive-2.5.902a.ebuild,v 1.2 2008/12/07 05:57:02 vapier Exp $
 
 EAPI=1
 
@@ -70,13 +70,6 @@ src_install() {
 	fi
 
 	dodoc NEWS README
-
-	if use build; then
-		rm -rf "${D}"/usr
-		rm -rf "${D}"/lib/*.so*
-		return 0
-	fi
-
 	dodir /$(get_libdir)
 	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)
 	gen_usr_ldscript libarchive.so
