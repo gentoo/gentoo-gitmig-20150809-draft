@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.4-r1.ebuild,v 1.7 2008/08/08 21:35:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.4-r1.ebuild,v 1.8 2008/12/07 12:18:40 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="https://gna.org/projects/smbldap-tools/
 SRC_URI="http://download.gna.org/smbldap-tools/packages/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 RDEPEND="net-nds/openldap
