@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.4-r1.ebuild,v 1.1 2008/11/23 17:14:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.4-r2.ebuild,v 1.1 2008/12/07 17:48:30 armin76 Exp $
 EAPI="1"
 WANT_AUTOCONF="2.1"
 
@@ -303,7 +303,7 @@ pkg_postinst() {
 	ewarn "please add 'xulrunner' to your USE-flags."
 
 	if use xulrunner; then
-		dosym /usr/$(get_libdir)/xulrunner-1.9/defaults/autoconfig \
+		ln -s /usr/$(get_libdir)/xulrunner-1.9/defaults/autoconfig \
 			${MOZILLA_FIVE_HOME}/defaults/autoconfig
 	fi
 
