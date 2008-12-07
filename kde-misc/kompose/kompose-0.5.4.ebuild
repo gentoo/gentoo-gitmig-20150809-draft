@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/kompose-0.5.4.ebuild,v 1.7 2007/07/13 05:55:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/kompose-0.5.4.ebuild,v 1.8 2008/12/07 12:53:20 jmbsvicetto Exp $
 
 inherit kde
 
 DESCRIPTION="A KDE fullscreen task manager."
 HOMEPAGE="http://kompose.berlios.de"
-SRC_URI="http://download.berlios.de/kompose/${P}.tar.bz2"
+SRC_URI="mirror://berlios/kompose/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
@@ -16,7 +16,7 @@ DEPEND="media-libs/imlib2"
 RDEPEND="${DEPEND}"
 need-kde 3.5
 
-PATCHES="${FILESDIR}/${P}-ktoolbar-patch"
+PATCHES=( "${FILESDIR}/${P}-ktoolbar-patch" )
 
 function pkg_setup() {
 	# bug 94881

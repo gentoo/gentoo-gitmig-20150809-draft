@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kompose
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.23 2008/11/17 20:38:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kompose/ChangeLog,v 1.24 2008/12/07 12:53:20 jmbsvicetto Exp $
+
+  07 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kompose-0.5.4.ebuild:
+  Use mirror://berlios (bug #218657).
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/kompose-0.5.4-ktoolbar-patch:
