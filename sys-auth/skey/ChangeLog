@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/skey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.8 2008/11/05 15:37:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.9 2008/12/07 12:13:05 ulm Exp $
+
+  07 Dec 2008; Ulrich Mueller <ulm@gentoo.org> -skey-1.1.5-r6.ebuild:
+  Remove old.
 
   05 Nov 2008; Brent Baude <ranger@gentoo.org> skey-1.1.5-r7.ebuild:
   stable ppc64, bug 244903
