@@ -1,17 +1,17 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.11.ebuild,v 1.8 2007/01/23 07:17:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.11.ebuild,v 1.9 2008/12/07 06:01:23 vapier Exp $
 
 inherit eutils multilib flag-o-matic libtool toolchain-funcs
 
 DESCRIPTION="GNU charset conversion library for libc which doesn't implement it"
-SRC_URI="mirror://gnu/libiconv/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libiconv/"
+SRC_URI="mirror://gnu/libiconv/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
+SLOT="0"
 KEYWORDS="~sparc-fbsd ~x86-fbsd"
-IUSE="build"
+IUSE=""
 
 DEPEND="!sys-libs/glibc
 	!sys-apps/man-pages"
@@ -57,6 +57,4 @@ src_install() {
 	mv "${D}"/usr/$(get_libdir)/*.so* "${D}/$(get_libdir)"
 	gen_usr_ldscript libiconv.so
 	gen_usr_ldscript libcharset.so
-
-	use build && rm -rf "${D}/usr"
 }
