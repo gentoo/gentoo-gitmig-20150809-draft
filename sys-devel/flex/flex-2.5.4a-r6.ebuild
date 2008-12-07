@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r6.ebuild,v 1.13 2007/02/28 22:23:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r6.ebuild,v 1.14 2008/12/07 03:08:55 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 LICENSE="FLEX"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
-IUSE="build static"
+IUSE="static"
 
 DEPEND=""
 
@@ -48,12 +48,6 @@ src_test() {
 
 src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
-
-	if use build ; then
-		rm -r "${D}"/usr/{include,lib,share}
-	else
-		dodoc NEWS README
-	fi
-
+	dodoc NEWS README
 	dosym flex /usr/bin/lex
 }
