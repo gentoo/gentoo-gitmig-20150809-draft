@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/foobillard
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.14 2007/02/24 01:20:00 nyhm Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.15 2008/12/07 11:28:02 mr_bones_ Exp $
+
+  07 Dec 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/foobillard-3.0a-as-needed.patch, foobillard-3.0a.ebuild:
+  add patch from Christian Ruppert (idl0r) to support as-needed (bug #247472)
 
   24 Feb 2007; Tristan Heaven <nyhm@gentoo.org> foobillard-3.0a.ebuild:
   Fix dependencies, bug #168179
