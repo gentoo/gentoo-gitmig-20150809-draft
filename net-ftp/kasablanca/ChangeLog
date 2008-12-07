@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/kasablanca
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.21 2007/08/20 23:14:28 philantrop Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.22 2008/12/07 12:58:23 jmbsvicetto Exp $
+
+  07 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kasablanca-0.4.0.2.ebuild:
+  Use mirror://berlios (bug #218657).
 
   20 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org>
   +files/kasablanca-0.4.0.2-desktop-file.patch, kasablanca-0.4.0.2.ebuild:
