@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.348 2008/11/17 04:46:02 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.349 2008/12/07 07:42:35 wrobel Exp $
+
+  07 Dec 2008; Gunnar Wrobel <wrobel@gentoo.org> phpmyadmin-3.0.1.1.ebuild:
+  Fixed mysql dependency (#248623).
 
 *phpmyadmin-3.0.1.1 (17 Nov 2008)
 
