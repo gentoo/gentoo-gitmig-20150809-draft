@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.1.9.ebuild,v 1.1 2008/09/25 12:12:19 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/mechanize-0.1.9.ebuild,v 1.2 2008/12/07 10:44:02 patrick Exp $
 
 NEED_PYTHON=2.3
 
@@ -44,5 +44,5 @@ src_install() {
 }
 
 src_test() {
-	PYTHONPATH=build/lib/ "${python}" test.py || die "tests failed"
+	PYTHONPATH=build/lib/ "${python}" test.py || die "tests failed"
 }
