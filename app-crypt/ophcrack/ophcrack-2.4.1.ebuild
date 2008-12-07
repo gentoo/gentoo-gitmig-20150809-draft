@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-2.4.1.ebuild,v 1.1 2008/01/10 23:24:34 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-2.4.1.ebuild,v 1.2 2008/12/07 18:22:17 ikelos Exp $
 
 inherit toolchain-funcs eutils
 
@@ -33,12 +33,12 @@ src_compile() {
 	# Make samdump2
 	einfo "Compiling samdump2"
 	cd "${WORKDIR}/samdump2-${SAMDUMP_VER}"
-	MAKEOPTS="-j1" emake || die "Failed to make samdump"
+	emake -j1 || die "Failed to make samdump"
 
 	# Make bkhive2
 	einfo "Compiling bkhive"
 	cd "${WORKDIR}/bkhive-${BKHIVE_VER}"
-	MAKEOPTS="-j1" emake || die "Failed to make bkhive2"
+	emake -j1 || die "Failed to make bkhive2"
 
 	# Make the program
 	einfo "Compiling ophcrack"
