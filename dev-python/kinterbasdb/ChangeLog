@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kinterbasdb
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.30 2008/02/23 17:57:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.31 2008/12/07 00:53:42 patrick Exp $
+
+*kinterbasdb-3.2.2 (07 Dec 2008)
+
+  07 Dec 2008; Patrick Lauer <patrick@gentoo.org> +kinterbasdb-3.2.2.ebuild:
+  Bumping to 3.2.2, fixing #243354
 
   23 Feb 2008; Tiziano Müller <dev-zero@gentoo.org> kinterbasdb-3.2.ebuild:
   Changed include-directory from /opt/firebird/include to /usr/include (bug
