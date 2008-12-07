@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.10.1.ebuild,v 1.1 2008/11/09 22:05:21 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.10.1.ebuild,v 1.2 2008/12/07 18:03:51 vapier Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND=">=media-libs/freetype-2.1.8
