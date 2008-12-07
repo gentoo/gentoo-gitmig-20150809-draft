@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/fio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.15 2008/12/07 02:35:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.16 2008/12/07 02:37:16 robbat2 Exp $
+
+*fio-1.23 (07 Dec 2008)
+
+  07 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> +fio-1.23.ebuild:
+  Version bump
 
   07 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> fio-1.22.ebuild:
   Bug #248300, QA of manpage location.
