@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.6.1-r1.ebuild,v 1.1 2008/12/02 20:26:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.6.1-r1.ebuild,v 1.2 2008/12/07 23:50:37 fauli Exp $
 
 inherit eutils multilib
 
@@ -41,6 +41,17 @@ RDEPEND="${COMMONDEPEND}
 	x11-misc/shared-mime-info"
 
 PLUGIN_NAMES="acpi-notifier att-remover attachwarner cachesaver etpan-privacy fetchinfo gtkhtml maildir mailmbox newmail notification pdf-viewer perl rssyl smime synce vcalendar"
+pkg_setup() {
+	# rework with EAPI=2
+	if use spell; then
+		if ! built_with_use app-text/enchant aspell; then
+			eerror
+			eerror "You need to rebuild app-text/enchant with USE=aspell enabled"
+			eerror
+			die "please rebuild app-text/enchant with USE=aspell"
+		fi
+	fi
+}
 
 src_compile() {
 	local myconf="--disable-libetpan"
