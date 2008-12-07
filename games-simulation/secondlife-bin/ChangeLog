@@ -1,6 +1,14 @@
 # ChangeLog for games-simulation/secondlife-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.5 2008/12/04 13:55:52 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.6 2008/12/07 07:21:16 lavajoe Exp $
+
+*secondlife-bin-1.22_rc2-r1 (07 Dec 2008)
+
+  07 Dec 2008; Joe Peterson <lavajoe@gentoo.org>
+  secondlife-bin-1.21.6.ebuild, -secondlife-bin-1.22_rc1.ebuild,
+  -secondlife-bin-1.22_rc2.ebuild, +secondlife-bin-1.22_rc2-r1.ebuild:
+  Set VersionChannelName when running so new upstream releases do not break
+  existing versions (bug #249894); remove old version
 
 *secondlife-bin-1.22_rc2 (04 Dec 2008)
 
