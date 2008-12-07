@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-1.22.ebuild,v 1.1 2008/11/01 07:48:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-1.22.ebuild,v 1.2 2008/12/07 02:35:53 robbat2 Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -27,7 +27,7 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" prefix="/usr" || die "emake install failed"
+	emake install DESTDIR="${D}" prefix="/usr" mandir="/usr/share/man" || die "emake install failed"
 	dodoc README REPORTING-BUGS HOWTO
 	docinto examples
 	dodoc examples/*
