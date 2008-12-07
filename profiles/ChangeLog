@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2134 2008/12/07 12:13:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2135 2008/12/07 16:32:35 lu_zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Dec 2008; Luca Barbato <lu_zero@gentoo.org> package.mask:
+  FFmpeg live ebuild
 
   07 Dec 2008; <ssuominen@gentoo.org> package.mask:
   Removed sys-libs/detect from tree wrt #244411.

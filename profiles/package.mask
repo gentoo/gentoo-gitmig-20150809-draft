@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9258 2008/12/07 12:13:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9259 2008/12/07 16:32:35 lu_zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Luca Barbato <lu_zero@gentoo.org> (07 Dec 2008)
+# Live sources to be used with other live source applications
+=media-video/ffmpeg-9999
 
 # Robin H. Johnson <robbat2@gentoo.org> (06 Dec 2008)
 # The init.d scripts and default rules need updating and serious testing.
