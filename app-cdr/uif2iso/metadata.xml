@@ -5,4 +5,9 @@
   <maintainer>
     <email>flameeyes@gentoo.org</email>
   </maintainer>
+  <longdescription lang="en">
+    uif2iso is a program that can convert images taken with the
+    MagicISO software under Windows, with its proprietary UIF format,
+    into standard ISO9660 images.
+  </longdescription>
 </pkgmetadata>
