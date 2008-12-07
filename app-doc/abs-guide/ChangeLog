@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.66 2008/11/29 21:27:57 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.67 2008/12/07 03:41:04 dirtyepic Exp $
+
+  07 Dec 2008; Ryan Hill <dirtyepic@gentoo.org> -abs-guide-5.3.ebuild,
+  abs-guide-5.5.ebuild:
+  Stop installing docs into a subdir of DOCDIR so DOC_SYMLINKS_DIR works
+  again. Remove old.
 
   29 Nov 2008; Ryan Hill <dirtyepic@gentoo.org> abs-guide-5.4.ebuild:
   amd64 stable, bug #249134.
