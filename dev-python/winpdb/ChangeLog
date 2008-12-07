@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/winpdb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.10 2008/09/25 04:51:40 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.11 2008/12/07 00:08:24 patrick Exp $
+
+*winpdb-1.4.2 (07 Dec 2008)
+
+  07 Dec 2008; Patrick Lauer <patrick@gentoo.org> +winpdb-1.4.2.ebuild:
+  Bumping to 1.4.2, closing #246707
 
 *winpdb-1.4.0 (25 Sep 2008)
 
