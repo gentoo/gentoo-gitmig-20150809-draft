@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.4.1.ebuild,v 1.1 2008/09/14 06:16:18 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.4.1.ebuild,v 1.2 2008/12/07 08:59:44 ali_bush Exp $
 
 inherit base java-pkg-2
 
@@ -31,8 +31,7 @@ src_compile() {
 		econf --enable-jacl --without-jikes || die
 	#ali_bush: Fails intermitently with MAKEOPTS="-j3"
 	JAVAC_FLAGS="${jflags}" \
-		MAKEOPTS="-j2" \
-		emake DESTDIR="/usr/share/${PN}" || die "emake failed"
+		emake -j1 DESTDIR="/usr/share/${PN}" || die "emake failed"
 }
 
 src_test() {
