@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-irclib
 # Copyright 2000-2008 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/ChangeLog,v 1.4 2008/08/06 06:13:06 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/ChangeLog,v 1.5 2008/12/07 01:01:09 patrick Exp $
+
+*python-irclib-0.4.8 (07 Dec 2008)
+
+  07 Dec 2008; Patrick Lauer <patrick@gentoo.org>
+  +python-irclib-0.4.8.ebuild:
+  Bumping to 0.4.8, closing #238199
 
   06 Aug 2008; Jesus Rivero <neurogeek@gentoo.org>
   python-irclib-0.4.6.ebuild:
