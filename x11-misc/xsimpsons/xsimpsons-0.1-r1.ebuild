@@ -1,11 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsimpsons/xsimpsons-0.1-r1.ebuild,v 1.1 2008/10/15 19:01:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsimpsons/xsimpsons-0.1-r1.ebuild,v 1.2 2008/12/07 21:15:57 ssuominen Exp $
+
 inherit toolchain-funcs
 
 DESCRIPTION="The Simpsons walking along the tops of your windows."
-HOMEPAGE="http://netzverschmutzer.net/~sbeyer/programming/projects/?dir=extensions#xpenguins"
-SRC_URI="http://netzverschmutzer.net/~sbeyer/programming/projects/extensions/xpenguins/${P}.tar.gz"
+HOMEPAGE="http://www.gentoo.org"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
