@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.77 2008/12/02 21:19:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.78 2008/12/07 23:56:27 fauli Exp $
+
+  07 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
+  -libetpan-0.54.ebuild, -libetpan-0.56.ebuild:
+  clean up
 
   02 Dec 2008; Brent Baude <ranger@gentoo.org> libetpan-0.57.ebuild:
   Marking libetpan-0.57 ppc64 for bug 248760
