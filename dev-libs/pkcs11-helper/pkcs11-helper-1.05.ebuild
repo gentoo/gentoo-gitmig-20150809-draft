@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.05.ebuild,v 1.10 2008/10/31 22:03:31 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/pkcs11-helper-1.05.ebuild,v 1.11 2008/12/07 12:07:59 vapier Exp $
 
 DESCRIPTION="PKCS#11 helper library"
 HOMEPAGE="http://www.opensc-project.org/pkcs11-helper"
@@ -8,7 +8,7 @@ SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.bz2"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~ia64 m68k ~mips ppc ppc64 s390 sh ~sparc x86 ~x86-fbsd"
 IUSE="doc gnutls nss"
 RESTRICT="test"
 
