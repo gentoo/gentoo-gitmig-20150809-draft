@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80-r4.ebuild,v 1.10 2006/04/14 23:05:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80-r4.ebuild,v 1.11 2008/12/07 03:18:17 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/make/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="nls static build"
+IUSE="nls static"
 
 DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND=""
@@ -34,18 +34,10 @@ src_compile() {
 }
 
 src_install() {
-	if use build ; then
-		if [[ ${USERLAND} == "GNU" ]] ; then
-			dobin make || die "dobin"
-		else
-			newbin make gmake || die "newbin failed"
-		fi
-	else
-		make DESTDIR="${D}" install || die "make install failed"
-		dodoc AUTHORS ChangeLog NEWS README*
-		if [[ ${USERLAND} == "GNU" ]] ; then
-			dosym gmake /usr/bin/make
-			dosym gmake.1 /usr/share/man/man1/make.1
-		fi
+	emake DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS ChangeLog NEWS README*
+	if [[ ${USERLAND} == "GNU" ]] ; then
+		dosym gmake /usr/bin/make
+		dosym gmake.1 /usr/share/man/man1/make.1
 	fi
 }
