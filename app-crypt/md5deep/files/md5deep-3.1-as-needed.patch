@@ -1,0 +1,18 @@
+--- hashdeep/Makefile.am
++++ hashdeep/Makefile.am
+@@ -1,5 +1,5 @@
+ # The math library is required for floor()
+-AM_LDFLAGS = -lm
++LDADD = -lm
+ INCLUDES   = -I@top_srcdir@/include
+ COMMON_DIR = @top_srcdir@/common
+ 
+--- md5deep/Makefile.am
++++ md5deep/Makefile.am
+@@ -1,5 +1,5 @@
+ 
+-AM_LDFLAGS = -lm
++LDADD = -lm
+ INCLUDES   = -I@top_srcdir@/include
+ COMMON_DIR = @top_srcdir@/common
+ 
