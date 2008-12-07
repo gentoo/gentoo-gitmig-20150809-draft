@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pywebkitgtk
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.1 2008/12/07 15:54:20 neurogeek Exp $
+
+*pywebkitgtk-1.0.2 (07 Dec 2008)
+
+  07 Dec 2008; Jesus Rivero <neurogeek@gentoo.org> +metadata.xml,
+  +pywebkitgtk-1.0.2.ebuild:
+  Initial commit. Proxy mantained by me for Sergio Rodriguez
+  <srinclan@gmail.com>
+
