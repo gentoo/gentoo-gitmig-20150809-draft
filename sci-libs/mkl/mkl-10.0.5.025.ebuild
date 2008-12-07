@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.2 2008/10/07 18:57:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.3 2008/12/07 18:16:17 vapier Exp $
 
 inherit eutils toolchain-funcs fortran check-reqs
 
@@ -8,20 +8,17 @@ PID=1232
 PB=${PN}
 DESCRIPTION="Intel(R) Math Kernel Library: linear algebra, fft, math functions"
 HOMEPAGE="http://developer.intel.com/software/products/mkl/"
-
-KEYWORDS="~amd64 ~ia64 ~x86"
 SRC_URI="http://registrationcenter-download.intel.com/irc_nas/${PID}/l_${PN}_p_${PV}.tgz"
 
+KEYWORDS="-* ~amd64 ~ia64 ~x86"
 SLOT="0"
 LICENSE="Intel-SDP"
-
 IUSE="doc fftw fortran95 int64 mpi"
 RESTRICT="strip mirror"
 
 DEPEND="app-admin/eselect-blas
 	app-admin/eselect-cblas
 	app-admin/eselect-lapack"
-
 RDEPEND="${DEPEND}
 	doc? ( app-doc/blas-docs app-doc/lapack-docs )
 	mpi? ( virtual/mpi )"
