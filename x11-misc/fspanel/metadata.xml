@@ -5,4 +5,8 @@
 <maintainer>
 <email>desktop-misc@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='xft'>Build with support for XFT font renderer
+		(<pkg>x11-libs/libXft</pkg>)</flag>
+</use>
 </pkgmetadata>

@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/fspanel
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/ChangeLog,v 1.16 2007/08/02 12:43:41 uberlord Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/ChangeLog,v 1.17 2008/12/07 13:04:53 coldwind Exp $
+
+*fspanel-0.8_beta1-r3 (07 Dec 2008)
+
+  07 Dec 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/fspanel-0.8_beta1-configure.patch, +fspanel-0.8_beta1-r3.ebuild:
+  Fix --as-needed (bug #210624, thanks to Christian Ruppert), X11 path,
+  don't strip binary, use pkg-config for Xft, and avoid automagic deps on
+  Xpm and Xft.
 
   02 Aug 2007; Roy Marples <uberlord@gentoo.org>
   fspanel-0.8_beta1-r2.ebuild:
