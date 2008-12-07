@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flup
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.5 2007/10/25 20:07:21 dev-zero Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flup/ChangeLog,v 1.6 2008/12/07 00:10:59 patrick Exp $
+
+*flup-1.0.1 (07 Dec 2008)
+
+  07 Dec 2008; Patrick Lauer <patrick@gentoo.org> +flup-1.0.1.ebuild:
+  Bumping to 1.0.1, closing #246548
 
 *flup-1.0 (25 Oct 2007)
 
