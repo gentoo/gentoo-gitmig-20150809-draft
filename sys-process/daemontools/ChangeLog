@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/daemontools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.8 2008/08/16 03:40:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.9 2008/12/07 06:59:37 robbat2 Exp $
+
+*daemontools-0.76-r7 (07 Dec 2008)
+
+  07 Dec 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/svscan.init-0.76-r7, +daemontools-0.76-r7.ebuild:
+  Fix ancient bug #86562.
 
   16 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
