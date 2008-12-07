@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyserial
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.29 2007/07/17 06:23:38 dev-zero Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.30 2008/12/07 01:07:55 patrick Exp $
+
+*pyserial-2.4 (07 Dec 2008)
+
+  07 Dec 2008; Patrick Lauer <patrick@gentoo.org> +pyserial-2.4.ebuild:
+  Bumping to 2.4, closing #232885
 
   17 Jul 2007; Tiziano Müller <dev-zero@gentoo.org> -pyserial-2.0.ebuild:
   Dropped old version
