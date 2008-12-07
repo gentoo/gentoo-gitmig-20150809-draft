@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.8.ebuild,v 1.1 2008/12/07 18:35:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/pqiv-0.8.ebuild,v 1.2 2008/12/07 18:37:05 ssuominen Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_configure() {
-	./configure --prefix=/usr --destdir=${D} || die "./configure failed."
+	./configure --prefix=/usr --destdir="${D}" || die "./configure failed."
 }
 
 src_compile() {
