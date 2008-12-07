@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.8.2.ebuild,v 1.7 2008/08/25 08:46:32 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.8.2.ebuild,v 1.8 2008/12/07 19:29:41 vapier Exp $
 
 NEED_PYTHON=2.3
 
@@ -12,7 +12,7 @@ SRC_URI="http://ipython.scipy.org/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 ~s390 x86"
+KEYWORDS="amd64 ~ia64 ppc ppc64 s390 x86"
 IUSE="doc examples emacs gnuplot"
 
 RDEPEND="gnuplot? ( dev-python/gnuplot-py )

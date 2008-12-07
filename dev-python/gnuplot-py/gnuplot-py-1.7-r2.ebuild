@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.7-r2.ebuild,v 1.9 2008/10/06 16:10:39 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.7-r2.ebuild,v 1.10 2008/12/07 19:28:53 vapier Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 s390 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/python
