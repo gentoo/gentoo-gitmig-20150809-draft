@@ -1,0 +1,29 @@
+Index: udav-0.5/src/src.pro
+===================================================================
+--- udav-0.5.orig/src/src.pro
++++ udav-0.5/src/src.pro
+@@ -1,4 +1,4 @@
+-DEFINES += MGL_DOC_DIR=\\\"$(MGLDOCDIR)\\\"
++DEFINES += MGL_DOC_DIR=\\\"/usr/share/doc/$(PF)/\\\"
+ 
+ TEMPLATE = app
+ CONFIG += release \
+@@ -40,7 +40,7 @@ setupdialog.h \
+ DISTFILES += ../TODO \
+ ../ChangeLog.txt
+ 
+-target.path = /usr/local/bin/
++target.path = /usr/bin/
+ INSTALLS += target \
+  help \
+  pics
+@@ -54,7 +54,7 @@ LIBS += -lmgl
+ help.files += ../help/*.html
+ pics.files += ../help/pics/*.png
+ 
+-help.path = /usr/local/share/doc/udav/
++help.path = /usr/share/doc/${PF}/
+ 
+-pics.path = /usr/local/share/doc/udav/pics/
++pics.path = /usr/share/doc/${PF}/pics/
+ 
