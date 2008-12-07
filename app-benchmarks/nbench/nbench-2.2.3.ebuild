@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/nbench-2.2.3.ebuild,v 1.6 2008/12/01 21:19:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/nbench/nbench-2.2.3.ebuild,v 1.7 2008/12/07 11:58:01 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tux.org/~mayer/linux/${MY_P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sh sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
