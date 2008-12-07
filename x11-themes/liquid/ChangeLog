@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/liquid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/ChangeLog,v 1.13 2008/02/29 16:28:17 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/ChangeLog,v 1.14 2008/12/07 13:30:06 jmbsvicetto Exp $
+
+  07 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  liquid-0.9.7.ebuild:
+  Use mirror://berlios (bug #218657).
 
   29 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> liquid-0.9.7.ebuild:
   Fix DEPEND, bug 211899
