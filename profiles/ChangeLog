@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2136 2008/12/07 22:43:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2137 2008/12/07 23:11:28 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Dec 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask net-analyzer/sysmon for removal in 60 days, bug #153258
 
   07 Dec 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   sys-apps/usbd removed, bug #225301
