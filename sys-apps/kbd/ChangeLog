@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.78 2008/12/01 22:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.79 2008/12/08 14:30:15 armin76 Exp $
+
+  08 Dec 2008; Raúl Porcel <armin76@gentoo.org> kbd-1.15.ebuild:
+  Re-add kbio patch to 1.15, since sparc fails to build without it
 
 *kbd-1.15 (01 Dec 2008)
 

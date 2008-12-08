@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.15.ebuild,v 1.1 2008/12/01 22:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.15.ebuild,v 1.2 2008/12/08 14:30:15 armin76 Exp $
+
+inherit eutils
 
 DESCRIPTION="Keyboard and console utilities"
 HOMEPAGE="http://freshmeat.net/projects/kbd/"
@@ -14,6 +16,13 @@ IUSE="nls"
 RDEPEND=""
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-1.12-kbio.patch
+}
 
 src_compile() {
 	econf $(use_enable nls) || die
