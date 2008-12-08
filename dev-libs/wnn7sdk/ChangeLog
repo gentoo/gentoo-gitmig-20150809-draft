@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/wnn7sdk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/ChangeLog,v 1.6 2008/11/22 01:53:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/ChangeLog,v 1.7 2008/12/08 14:04:13 matsuu Exp $
+
+  08 Dec 2008; MATSUU Takuto <matsuu@gentoo.org> wnn7sdk-20011017-r1.ebuild:
+  Fixed xorg build issue, bug #250211.
 
 *wnn7sdk-20011017-r1 (22 Nov 2008)
 

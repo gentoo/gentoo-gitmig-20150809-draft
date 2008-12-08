@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/wnn7sdk-20011017-r1.ebuild,v 1.1 2008/11/22 01:53:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/wnn7sdk-20011017-r1.ebuild,v 1.2 2008/12/08 14:04:13 matsuu Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -27,7 +27,11 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-gentoo.patch"
 	epatch "${FILESDIR}/${PN}-gcc4.patch"
 	epatch "${FILESDIR}/${PN}-qa.patch"
-	sed -i -e "/CONFIGSRC =/s:=.*:= /usr/$(get_libdir)/X11/config:" Makefile.ini || die
+
+	# Fix path to point to Xorg directory
+	sed -e "s:X11R6/::g" -i config/X11.tmpl || sed "sed 1 failed"
+
+	sed -i -e "/CONFIGSRC =/s:=.*:= /usr/$(get_libdir)/X11/config:" Makefile.ini || die "sed 2 failed"
 }
 
 src_compile() {
@@ -37,11 +41,11 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so Wnn/jlib/*.so* || die
-	dolib.a  Wnn/jlib/*.a   || die
+	dolib.so Wnn/jlib/*.so* || die "dolib.so failed"
+	dolib.a  Wnn/jlib/*.a   || die "dolib.a failed"
 
 	insinto /usr/include/${PN}/wnn
-	doins Wnn/include/*.h || die
+	doins Wnn/include/*.h || die "doins failed"
 
 	dodoc README
 }
