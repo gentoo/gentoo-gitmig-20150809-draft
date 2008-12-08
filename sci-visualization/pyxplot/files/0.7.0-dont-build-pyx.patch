@@ -1,0 +1,23 @@
+--- Makefile.skel.orig	2008-12-08 20:44:22.028136399 +0000
++++ Makefile.skel	2008-12-08 20:27:10.546223231 +0000
+@@ -68,10 +68,6 @@
+ 	echo "DOCDIR='${DOCDIR}'"          >> src/gp_version_install.py
+ 	echo "GHOSTVIEW='${GV_COMMAND}'"   >> src/gp_version_install.py
+ 	echo "GHOSTVIEW_OPT='${GV_OPT}'"   >> src/gp_version_install.py
+-	rm -rf src/pyx
+-	gzip -dc PyX-0.10.tar.gz | tar xf -
+-	mv -f PyX-0.10/pyx src
+-	rm -rf PyX-0.10
+ 	chmod 755 src/__init__.py
+ 	echo "exit" | src/__init__.py
+ 	${PYTHON_COMMAND} manpage_pyxplot.py       ${DOCDIR}/pyxplot.pdf > pyxplot.1
+@@ -81,9 +77,6 @@
+ 
+ install:
+ 	install -d ${SRCDIR} ${BINDIR} ${DOCDIR} ${MANDIR} ${DOCDIR}/examples ${DOCDIR}/examples/eps
+-	rm -rf ${SRCDIR}/pyx
+-	cp -r src/pyx ${SRCDIR}
+-	chmod -R 755 ${SRCDIR}/pyx
+ 	install -m644 src/*.py ${SRCDIR}
+ 	install -m644 src/gp_version_install.py ${SRCDIR}/gp_version.py
+ 	install -m644 src/*.pyc ${SRCDIR}
