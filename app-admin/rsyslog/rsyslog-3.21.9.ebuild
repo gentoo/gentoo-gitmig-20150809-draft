@@ -1,28 +1,29 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.18.4.ebuild,v 1.1 2008/09/29 12:03:18 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.21.9.ebuild,v 1.1 2008/12/08 12:53:06 dev-zero Exp $
 
-inherit eutils versionator
+inherit versionator
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more."
 HOMEPAGE="http://www.rsyslog.com/"
 SRC_URI="http://download.rsyslog.com/${PN}/${P}.tar.gz"
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="debug kerberos dbi mysql postgres relp snmp zlib"
+KEYWORDS="~amd64 ~hppa ~x86"
+IUSE="debug kerberos dbi gnutls mysql postgres relp snmp zlib"
 
 DEPEND="kerberos? ( virtual/krb5 )
 	dbi? ( dev-db/libdbi )
+	gnutls? ( net-libs/gnutls )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-base )
-	relp? ( dev-libs/librelp )
+	relp? ( >=dev-libs/librelp-0.1.1 )
 	snmp? ( net-analyzer/net-snmp )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 PROVIDE="virtual/logger"
 
-BRANCH="3-stable"
+BRANCH="3-devel"
 
 src_compile() {
 	# Maintainer notes:
@@ -42,12 +43,16 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_enable debug rtinst) \
 		$(use_enable debug valgrind) \
+		$(use_enable debug diagtools) \
 		$(use_enable mysql) \
 		$(use_enable postgres pgsql) \
 		$(use_enable dbi libdbi) \
 		$(use_enable snmp) \
+		$(use_enable gnutls) \
+		--enable-rsyslogrt \
 		--enable-rsyslogd \
 		--enable-mail \
+		--disable-imdiag \
 		$(use_enable relp) \
 		--disable-rfc3195 \
 		--enable-imfile \
@@ -78,4 +83,10 @@ src_install() {
 
 	newconfd "${FILESDIR}/${BRANCH}/rsyslog.conf" rsyslog
 	newinitd "${FILESDIR}/${BRANCH}/rsyslog.init" rsyslog
+}
+
+pkg_postinst() {
+	ewarn "You installed a beta version of rsyslog, please do report bugs"
+	ewarn "with the software directly to upstream. Please read more about"
+	ewarn "stable or unstable branches at http://www.rsyslog.com"
 }
