@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/flamerobin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.12 2008/03/19 19:33:09 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.13 2008/12/08 02:48:18 jmbsvicetto Exp $
+
+  08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing wltjr as a maintainer since he was retired.
 
 *flamerobin-0.8.6 (19 Mar 2008)
 
