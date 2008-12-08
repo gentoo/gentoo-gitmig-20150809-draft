@@ -1,13 +1,14 @@
 # ChangeLog for app-laptop/lphdisk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/lphdisk/ChangeLog,v 1.7 2008/12/08 10:33:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/lphdisk/ChangeLog,v 1.8 2008/12/08 10:37:07 ssuominen Exp $
 
 *lphdisk-0.9.1-r2 (08 Dec 2008)
 
   08 Dec 2008; <ssuominen@gentoo.org> +files/lphdisk-0.9.1-gentoo.patch,
   +lphdisk-0.9.1-r2.ebuild:
   Use system lrmi library to fix building with GLIBC 2.8, incorporated with
-  GCC 3.x and linux-headers patchset. Untested version. Closes bug #240018.
+  GCC 3.x and linux-headers patchset. Untested version. Closes bugs #240018,
+  #227611 and #240017.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
