@@ -1,0 +1,14 @@
+--- Src/MPI/compile.py.orig	2008-12-08 22:20:48.087256819 +0000
++++ Src/MPI/compile.py	2008-12-08 22:52:29.115141699 +0000
+@@ -32,9 +32,10 @@
+             items[i] = os.path.join(frameworkdir[0], items[i])
+     linkforshared = ' '.join(items)
+ 
+-cmd = '%s %s -o mpipython -I%s %s %s -L%s -lpython%s %s %s' % \
++cmd = '%s %s %s -o mpipython -I%s -I../../Include %s %s -L%s -lpython%s %s %s' % \
+     (mpicompiler, 
+      linkforshared,
++     cfgDict['LDFLAGS'],
+      cfgDict['INCLUDEPY'],
+      extra_compile_args,
+      sources,
