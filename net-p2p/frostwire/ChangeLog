@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/frostwire
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.6 2008/08/05 18:11:23 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.7 2008/12/08 02:52:00 jmbsvicetto Exp $
+
+  08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing wltjr as a maintainer since he was retired.
 
   05 Aug 2008; William L. Thomson Jr. <wltjr@gentoo.org>
   frostwire-4.13.5-r1.ebuild:
