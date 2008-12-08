@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.145 2008/12/08 18:47:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.146 2008/12/08 19:40:59 ranger Exp $
+
+  08 Dec 2008; Brent Baude <ranger@gentoo.org> tor-0.2.0.32.ebuild:
+  Marking tor-0.2.0.32 ppc64 for bug 250018
 
   08 Dec 2008; Markus Meier <maekke@gentoo.org> tor-0.2.0.32.ebuild:
   x86 stable, bug #250018
