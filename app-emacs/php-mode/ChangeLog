@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/php-mode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.26 2008/12/08 20:47:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.27 2008/12/08 21:43:16 tcunha Exp $
+
+  08 Dec 2008; Tiago Cunha <tcunha@gentoo.org> php-mode-1.5.0.ebuild:
+  stable amd64, bug 250219
 
   08 Dec 2008; Brent Baude <ranger@gentoo.org> php-mode-1.5.0.ebuild:
   stable ppc64, bug 250219
