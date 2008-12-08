@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.183 2008/10/18 10:53:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.184 2008/12/08 20:58:00 caster Exp $
+
+*ibm-jdk-bin-1.6.0.3 (08 Dec 2008)
+
+  08 Dec 2008; Vlastimil Babka <caster@gentoo.org>
+  +ibm-jdk-bin-1.6.0.3.ebuild:
+  Version bump, found no changelog or security alert. Users now have to
+  rename the javacomm distfile because it changes content without versioning
+  the filename properly.
 
   18 Oct 2008; Vlastimil Babka <caster@gentoo.org>
   -ibm-jdk-bin-1.4.2.11.ebuild, -ibm-jdk-bin-1.6.0.1.ebuild,
