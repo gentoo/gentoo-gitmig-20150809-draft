@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/xfce4-icon-theme
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce4-icon-theme/ChangeLog,v 1.5 2008/12/06 19:44:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce4-icon-theme/ChangeLog,v 1.6 2008/12/08 21:35:35 ranger Exp $
+
+  08 Dec 2008; Brent Baude <ranger@gentoo.org>
+  xfce4-icon-theme-4.4.3.ebuild:
+  Marking xfce4-icon-theme-4.4.3 ppc64 stable for bug 249942
 
   06 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
   xfce4-icon-theme-4.4.3.ebuild:
