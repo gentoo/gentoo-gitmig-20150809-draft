@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-native
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.19 2008/10/19 10:32:34 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/ChangeLog,v 1.20 2008/12/08 02:37:34 jmbsvicetto Exp $
+
+  08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing wltjr as a maintainer since he was retired.
 
 *tomcat-native-1.1.15 (19 Oct 2008)
 

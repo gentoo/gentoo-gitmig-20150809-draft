@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-
 	<herd>java</herd>
-
-	<maintainer>
-		<email>wltjr@gentoo.org</email>
-		<name>William L. Thomson Jr.</name>
-	</maintainer>
-
 	<longdescription>
 		edtFTPj is the first choice of Java developers worldwide
 		for incorporating FTP functionality into their applications.
@@ -20,5 +13,4 @@
 		has been downloaded over 100,000 times since its first
 		release, and is in use in thousands of companies worldwide.
 	</longdescription>
-
 </pkgmetadata>

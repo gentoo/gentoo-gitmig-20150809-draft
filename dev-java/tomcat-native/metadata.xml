@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-
 	<herd>java</herd>
-
-	<maintainer>
-		<email>wltjr@gentoo.org</email>
-		<name>William L. Thomson Jr.</name>
-	</maintainer>
-
 	<longdescription>
 	Native library for Tomcat to use the Apache Portable Runtime to
 	provide superior scalability, performance, and better integration with
@@ -19,5 +12,4 @@
 	generation, system status, etc), and native process handling (shared
 	memory, NT pipes and Unix sockets).
 	</longdescription>
-
 </pkgmetadata>

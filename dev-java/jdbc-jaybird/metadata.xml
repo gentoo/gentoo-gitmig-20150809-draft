@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>java</herd>
-  <maintainer>
-    <email>wltjr@gentoo.org</email>
-    <name>William L. Thomson Jr.</name>
-  </maintainer>
   <longdescription>
 	Jaybird is a JCA/JDBC driver suite for the Firebird database server.
 	This package includes both a type 2 and 4 JDBC driver.

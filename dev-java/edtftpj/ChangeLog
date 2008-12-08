@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/edtftpj
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.47 2008/10/25 17:30:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/edtftpj/ChangeLog,v 1.48 2008/12/08 02:30:13 jmbsvicetto Exp $
+
+  08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing wltjr as a maintainer since he was retired.
 
   25 Oct 2008; nixnut <nixnut@gentoo.org> edtftpj-2.0.3.ebuild:
   Stable on ppc wrt bug 242972
