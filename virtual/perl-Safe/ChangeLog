@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Safe
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Safe/ChangeLog,v 1.4 2006/10/25 02:39:35 mcummings Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Safe/ChangeLog,v 1.5 2008/12/08 07:32:06 robbat2 Exp $
+
+*perl-Safe-2.16 (08 Dec 2008)
+
+  08 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> +perl-Safe-2.16.ebuild:
+  Version bump.
 
   25 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   perl-Safe-2.11.ebuild:
