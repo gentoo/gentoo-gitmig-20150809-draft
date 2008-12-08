@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/symon
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.6 2008/11/17 00:56:43 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/ChangeLog,v 1.7 2008/12/08 15:09:19 tcunha Exp $
+
+  08 Dec 2008; Tiago Cunha <tcunha@gentoo.org> metadata.xml,
+  symon-2.79-r5.ebuild:
+  - Call pmake directly. Thanks to vapier in bug 250143.
+  - While there improve USE flags descriptions.
 
   17 Nov 2008; Tiago Cunha <tcunha@gentoo.org> -symon-2.79-r3.ebuild,
   -symon-2.79-r4.ebuild:

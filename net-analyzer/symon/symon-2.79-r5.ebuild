@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/symon-2.79-r5.ebuild,v 1.1 2008/11/17 00:00:46 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/symon/symon-2.79-r5.ebuild,v 1.2 2008/12/08 15:09:19 tcunha Exp $
 
 EAPI=1
 
@@ -57,11 +57,11 @@ src_unpack() {
 }
 
 src_compile() {
-	MAKE=pmake MAKEOPTS= emake			\
-		AR="$(tc-getAR)"				\
-		CC="$(tc-getCC)"				\
-		CFLAGS+="${CFLAGS}"				\
-		RANLIB="$(tc-getRANLIB)"		\
+	pmake							\
+		AR="$(tc-getAR)"			\
+		CC="$(tc-getCC)"			\
+		CFLAGS+="${CFLAGS}"			\
+		RANLIB="$(tc-getRANLIB)"	\
 		STRIP=true || die "emake failed"
 }
 
