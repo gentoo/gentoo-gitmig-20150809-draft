@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.ebuild,v 1.2 2008/11/02 10:07:08 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.ebuild,v 1.3 2008/12/08 14:08:02 aballier Exp $
 
 WANT_AUTOCONF="2.5"
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="X doc"
 
 # We need dejagnu for src_test, but dejagnu needs expect
