@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.7 2008/12/06 19:42:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.8 2008/12/08 21:34:38 ranger Exp $
+
+  08 Dec 2008; Brent Baude <ranger@gentoo.org> terminal-0.2.8.3.ebuild:
+  Marking terminal-0.2.8.3 ppc64 stable for bug 249942
 
   06 Dec 2008; Jeremy Olexa <darkside@gentoo.org> terminal-0.2.8.3.ebuild:
   amd64 stable, bug 249942

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.2.8.3.ebuild,v 1.5 2008/12/06 19:42:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.2.8.3.ebuild,v 1.6 2008/12/08 21:34:38 ranger Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://xfce/xfce-4.4.3/src/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="dbus debug doc nls startup-notification"
 
 RDEPEND=">=dev-libs/glib-2.6:2
