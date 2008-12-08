@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/addresses
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/ChangeLog,v 1.14 2007/11/16 15:22:55 beandog Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/addresses/ChangeLog,v 1.15 2008/12/08 16:24:58 voyageur Exp $
+
+  08 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/addresses-0.4.7-as-needed.patch, addresses-0.4.7.ebuild:
+  Fix compilation with --as-needed, bug #250169
 
   16 Nov 2007; Steve Dibb <beandog@gentoo.org> addresses-0.4.7.ebuild:
   amd64 stable, bug 195990
