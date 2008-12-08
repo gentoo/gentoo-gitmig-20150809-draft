@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-2.12.ebuild,v 1.3 2008/11/04 10:20:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/Class-MethodMaker-2.12.ebuild,v 1.4 2008/12/08 09:47:14 tove Exp $
 
 MODULE_AUTHOR=SCHWIGON
 MODULE_SECTION=class-methodmaker
@@ -15,4 +15,4 @@ IUSE=""
 
 SRC_TEST="do"
 
-RDEPEND="dev-lang/perl"
+DEPEND="dev-lang/perl"
