@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/Mail-DKIM-0.32.ebuild,v 1.6 2008/12/06 19:21:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/Mail-DKIM-0.32.ebuild,v 1.7 2008/12/08 16:44:21 armin76 Exp $
 
 MODULE_AUTHOR=JASLONG
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="Mail::DKIM - Signs/verifies Internet mail using DKIM message signat
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~hppa ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=dev-perl/Crypt-OpenSSL-RSA-0.24
