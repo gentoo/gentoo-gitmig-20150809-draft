@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8.ebuild,v 1.3 2008/05/19 20:35:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8.ebuild,v 1.4 2008/12/08 01:06:02 darkside Exp $
 
 DESCRIPTION="Embedded Linux port of Qt"
 HOMEPAGE="http://www.trolltech.com/products/embedded/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-embedded-free-${PV}.tar.bz2"
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 
 SLOT="3"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="cups debug doc firebird gif ipv6 mysql nis odbc opengl postgres sqlite"
 
 DEPEND="media-libs/libpng

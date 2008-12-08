@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-embedded
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.24 2008/05/19 20:35:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.25 2008/12/08 01:06:02 darkside Exp $
+
+  08 Dec 2008; Jeremy Olexa <darkside@gentoo.org> qt-embedded-3.3.8.ebuild:
+  revert ~amd64 kw until bug #164113 is fixed
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   qt-embedded-3.3.8.ebuild:
