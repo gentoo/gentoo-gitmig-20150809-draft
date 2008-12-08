@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jicmp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jicmp/ChangeLog,v 1.3 2007/09/12 20:19:29 betelgeuse Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jicmp/ChangeLog,v 1.4 2008/12/08 01:57:03 jmbsvicetto Exp $
+
+  08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing wltjr as a maintainer since he was retired.
 
   12 Sep 2007; Petteri Räty <betelgeuse@gentoo.org> jicmp-1.0.2.ebuild:
   Add doc and source use flags and cleanup ebuild.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swing-layout
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.15 2008/07/02 19:07:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.16 2008/12/08 02:04:21 jmbsvicetto Exp $
+
+  08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing wltjr as a maintainer since he was retired.
 
   02 Jul 2008; Brent Baude <ranger@gentoo.org> swing-layout-1.0.3.ebuild:
   stable ppc, bug 229235
