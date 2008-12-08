@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.63.ebuild,v 1.2 2008/12/08 22:54:43 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.64.ebuild,v 1.1 2008/12/08 22:54:43 phosphan Exp $
 
 inherit eutils
 
 DESCRIPTION="COBOL for linux"
 HOMEPAGE="http://tiny-cobol.sourceforge.net/"
-SRC_URI="mirror://sourceforge/tiny-cobol/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/tiny-cobol/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
@@ -27,18 +27,18 @@ src_unpack() {
 
 src_compile() {
 	econf || die
-	make || die "make failed"
+	emake CC="$(tc-getCC)" || die "make failed"
 }
 
 src_install() {
 	dodir /usr/bin
-	dodir /usr/man/man1
+	dodir /usr/share/man/man1
 	dodir /usr/lib
 	dodir /usr/share/htcobol
-	make prefix="${D}/usr" install
-	dodoc AUTHORS ChangeLog README STATUS
-	cd "${D}"/usr/lib
-	rm libhtcobol.so libhtcobol.so.0
-	ln -s libhtcobol.so.0.* libhtcobol.so.0
-	ln -s libhtcobol.so.0 libhtcobol.so
+	dodir /usr/share/doc
+	emake DESTDIR="${D}" cobdir_docdir="/usr/share/doc/htcobol-${PV}" \
+			pkgdatadir="/usr/share/htcobol/" install
+	cd lib
+	emake DESTDIR="${D}" pkgdatadir="/usr/share/htcobol/" install \
+			install-shared-libs install-static-libs
 }
