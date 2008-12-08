@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-
 	<herd>no-herd</herd>
-
 	<maintainer>
-		<email>wltjr@gentoo.org</email>
-		<name>William L. Thomson Jr.</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
-
 	<longdescription>
 	The Anti-Spam SMTP Proxy (ASSP) Server project is an open source
 	platform-independent SMTP Proxy server which implements whitelists
@@ -19,10 +15,8 @@
 	and achieves these goals requiring no operator intervention after the
 	initial setup phase.
 	</longdescription>
-
 	<use>
 		<flag name='spf'>Adds support for Sender Policy Framework</flag>
 		<flag name='srs'>Adds support for Sender Rewriting Scheme</flag>
 	</use>
-
 </pkgmetadata>
