@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/nkf
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.43 2007/09/17 14:36:57 hattya Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.44 2008/12/08 14:58:29 matsuu Exp $
+
+*nkf-2.0.7-r1 (08 Dec 2008)
+
+  08 Dec 2008; MATSUU Takuto <matsuu@gentoo.org> +nkf-2.0.7-r1.ebuild:
+  Fixed pre-strip, bug #248725. Clean up.
 
   17 Sep 2007; Akinori Hattori <hattya@gentoo.org> -files/nkf-python.patch,
   -nkf-2.0.4.ebuild, -nkf-2.0.5-r1.ebuild, -nkf-2.0.7_beta1.ebuild:
