@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/wcslib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.2 2008/11/05 21:56:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.3 2008/12/08 11:58:10 bicatali Exp $
+
+*wcslib-4.3-r1 (08 Dec 2008)
+
+  08 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +wcslib-4.3-r1.ebuild:
+  Install a missing header and propagate LDFLAGS
 
   05 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org> wcslib-4.3.ebuild:
   Added some die's
