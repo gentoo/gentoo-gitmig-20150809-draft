@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.36 2008/08/06 07:07:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.37 2008/12/08 20:40:28 graaff Exp $
+
+  08 Dec 2008; Hans de Graaff <graaff@gentoo.org> -fcgi-2.4.0.ebuild:
+  Remove old version
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
