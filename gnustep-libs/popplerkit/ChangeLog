@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-libs/popplerkit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.15 2008/11/17 14:06:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.16 2008/12/08 14:31:40 voyageur Exp $
+
+*popplerkit-0.4.0-r1 (08 Dec 2008)
+
+  08 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/popplerkit-0.4.0-config-as-needed.patch, -popplerkit-0.4.0.ebuild,
+  +popplerkit-0.4.0-r1.ebuild:
+  Fix --as-needed support, bug #250175
 
   17 Nov 2008; Bernard Cafarelli <voyageur@gentoo.org>
   popplerkit-0.4.0.ebuild:

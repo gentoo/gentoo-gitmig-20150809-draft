@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.4.0.ebuild,v 1.2 2008/11/17 14:06:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.4.0-r1.ebuild,v 1.1 2008/12/08 14:31:40 voyageur Exp $
 
 inherit gnustep-2
 
@@ -18,6 +18,13 @@ RDEPEND=">=app-text/poppler-0.6
 	>=media-libs/freetype-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-config-as-needed.patch
+}
 
 src_compile() {
 	# Compile MissingKit separately
