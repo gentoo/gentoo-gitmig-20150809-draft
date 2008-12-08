@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/defcon-demo
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/defcon-demo/ChangeLog,v 1.1 2008/09/10 17:29:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/defcon-demo/ChangeLog,v 1.2 2008/12/08 02:50:46 darkside Exp $
+
+  08 Dec 2008; Jeremy Olexa <darkside@gentoo.org> defcon-demo-1.42.ebuild:
+  add ~amd64 kw, bug #237398
 
 *defcon-demo-1.42 (10 Sep 2008)
 
