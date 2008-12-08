@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-servlet-api/glassfish-servlet-api-2_beta44.ebuild,v 1.1 2007/04/27 20:37:12 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-servlet-api/glassfish-servlet-api-2_beta44.ebuild,v 1.2 2008/12/08 03:35:37 jmbsvicetto Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -21,7 +21,7 @@ RDEPEND=">=virtual/jre-1.5"
 
 S="${WORKDIR}/glassfish/servlet-api/"
 
-PATCHES="${FILESDIR}/build_xml.patch"
+PATCHES=( "${FILESDIR}/build_xml.patch" )
 
 src_compile() {
 	eant build $(use doc || echo -Ddocs.uptodate=true)

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jrrd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrrd/ChangeLog,v 1.6 2008/12/08 02:22:44 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrrd/ChangeLog,v 1.7 2008/12/08 03:37:55 jmbsvicetto Exp $
+
+  08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  jrrd-1.0.1-r1.ebuild:
+  Made PATCHES an array.
 
   08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:

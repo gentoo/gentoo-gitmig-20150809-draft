@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrrd/jrrd-1.0.1-r1.ebuild,v 1.3 2008/02/12 23:58:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrrd/jrrd-1.0.1-r1.ebuild,v 1.4 2008/12/08 03:37:55 jmbsvicetto Exp $
 
 JAVA_PKG_IUSE="doc source"
 WANT_AUTOMAKE="1.9"
@@ -24,7 +24,7 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
 
-PATCHES="${FILESDIR}/1.0.1-javacflags.patch"
+PATCHES=( "${FILESDIR}/1.0.1-javacflags.patch" )
 
 src_unpack() {
 	base_src_unpack

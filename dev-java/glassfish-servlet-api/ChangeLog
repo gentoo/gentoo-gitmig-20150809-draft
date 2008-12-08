@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/glassfish-servlet-api
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-servlet-api/ChangeLog,v 1.3 2008/12/08 02:15:17 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-servlet-api/ChangeLog,v 1.4 2008/12/08 03:35:37 jmbsvicetto Exp $
+
+  08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  glassfish-servlet-api-2_beta44.ebuild:
+  Made PATCHES an array.
 
   08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
