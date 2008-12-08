@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43.ebuild,v 1.2 2007/12/25 22:44:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.43.ebuild,v 1.3 2008/12/08 01:37:56 darkside Exp $
 
 inherit eutils games
 
@@ -15,7 +15,7 @@ SRC_URI="http://legendsthegame.net/files/${MY_P}.run
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-*  ~x86"
 IUSE="dedicated"
 RESTRICT="strip"
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/legends
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.24 2007/12/25 22:44:27 solar Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/ChangeLog,v 1.25 2008/12/08 01:37:56 darkside Exp $
+
+  08 Dec 2008; Jeremy Olexa <darkside@gentoo.org> legends-0.4.1.42.ebuild,
+  legends-0.4.1.43.ebuild:
+  revert ~amd64 keyword due to bug 168388
 
   25 Dec 2007; <solar@gentoo.org> legends-0.4.1.42.ebuild,
   legends-0.4.1.43.ebuild:
