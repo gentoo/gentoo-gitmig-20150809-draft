@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/avant-window-navigator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.14 2008/12/04 21:50:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.15 2008/12/08 03:19:22 jmbsvicetto Exp $
+
+  08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing wltjr as a maintainer since he was retired.
 
   04 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -avant-window-navigator-0.2.1-r1.ebuild,
