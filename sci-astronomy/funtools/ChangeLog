@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/funtools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/ChangeLog,v 1.2 2008/11/06 14:44:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/ChangeLog,v 1.3 2008/12/08 10:13:36 bicatali Exp $
+
+  08 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/funtools-1.4.0-ds9-5.4.patch, funtools-1.4.0.ebuild:
+  Propagate LDFLAGS, closing bug #250244, thanks to Joshua Rich. Also update
+  HOMEPAGE.
 
   06 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
   funtools-1.4.0.ebuild:
