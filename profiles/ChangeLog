@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2138 2008/12/07 23:34:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2139 2008/12/08 00:49:26 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
+  arch/amd64/package.use.mask, default-linux/amd64/2007.0/package.use.mask:
+  Remove use flag mask on spell for opera ebuild because aspell works on amd64
+  now, bug 136853
 
   07 Dec 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask dev-db/rekall, net-p2p/apollon, app-portage/kuroo, & kde-misc/komics
