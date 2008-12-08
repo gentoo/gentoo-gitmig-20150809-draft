@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/SOAP-Lite
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.46 2008/11/18 15:28:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.47 2008/12/08 07:43:29 robbat2 Exp $
+
+*SOAP-Lite-0.710.08 (08 Dec 2008)
+
+  08 Dec 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/SOAP-Lite-0.710.08.patch, +SOAP-Lite-0.710.08.ebuild:
+  Version bump.
 
   18 Nov 2008; Torsten Veller <tove@gentoo.org> SOAP-Lite-0.69.ebuild:
   New virtuals: Compress-Zlib
