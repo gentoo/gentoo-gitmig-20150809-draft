@@ -1,0 +1,12 @@
+diff -NaurwB syslog-ng-2.1.3.orig/configure.in syslog-ng-2.1.3/configure.in
+--- syslog-ng-2.1.3.orig/configure.in	2008-11-19 14:00:11.000000000 +0100
++++ syslog-ng-2.1.3/configure.in	2008-12-08 01:54:21.000000000 +0100
+@@ -466,7 +466,7 @@
+ elif test "x$enable_static_linking" = "xyes"; then
+ 	DEPS_LIBS="-static $LIBS $LEXLIB $GLIB_LIBS $EVTLOG_LIBS $LIBNET_LIBS $LIBWRAP_LIBS $LIBDBI_LIBS"	
+ else
+-	DEPS_LIBS="$LIBS $LD_START_STATIC $LEXLIB $GLIB_LIBS $EVTLOG_LIBS $LIBNET_LIBS $LIBWRAP_LIBS $LD_END_STATIC $LIBDBI_LIBS $DL_LIBS"
++	DEPS_LIBS="$LIBS $LD_START_STATIC $LEXLIB $LD_END_STATIC $GLIB_LIBS $EVTLOG_LIBS $LIBNET_LIBS $LIBWRAP_LIBS $LD_END_STATIC $LIBDBI_LIBS $DL_LIBS"
+ fi
+ LIBS="$DEPS_LIBS"
+ YFLAGS="-d"

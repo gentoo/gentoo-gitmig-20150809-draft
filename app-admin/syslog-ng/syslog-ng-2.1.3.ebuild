@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-2.1.3.ebuild,v 1.1 2008/12/02 19:27:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-2.1.3.ebuild,v 1.2 2008/12/08 19:50:00 mr_bones_ Exp $
 
 inherit fixheadtails eutils
 
@@ -30,6 +30,7 @@ src_unpack() {
 	tar xzf syslog-ng.html.tar.gz || die "tar failed"
 	cd "${S}"
 	ht_fix_file configure
+	epatch "${FILESDIR}/${P}-nonstatic.patch"
 }
 
 src_compile() {
