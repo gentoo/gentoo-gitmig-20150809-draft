@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.113 2008/10/18 10:54:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.114 2008/12/08 21:00:23 caster Exp $
+
+*ibm-jre-bin-1.6.0.3 (08 Dec 2008)
+
+  08 Dec 2008; Vlastimil Babka <caster@gentoo.org>
+  +ibm-jre-bin-1.6.0.3.ebuild:
+  Version bump, found no changelog or security alert.
 
   18 Oct 2008; Vlastimil Babka <caster@gentoo.org>
   -ibm-jre-bin-1.4.2.11.ebuild:
