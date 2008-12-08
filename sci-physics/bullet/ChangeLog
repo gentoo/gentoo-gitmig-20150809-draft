@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/bullet
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.2 2008/07/08 14:23:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.3 2008/12/08 00:29:02 bicatali Exp $
+
+*bullet-2.73 (08 Dec 2008)
+
+  08 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/bullet-2.73-autotools.patch, -bullet-2.67.ebuild,
+  +bullet-2.73.ebuild:
+  Version bump
 
 *bullet-2.69 (08 Jul 2008)
 
