@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/crypt-rsa
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/ChangeLog,v 1.29 2008/09/05 17:37:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/ChangeLog,v 1.30 2008/12/08 02:12:06 robbat2 Exp $
+
+*crypt-rsa-1.98 (08 Dec 2008)
+
+  08 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> +crypt-rsa-1.98.ebuild:
+  Version bump.
 
   05 Sep 2008; Raúl Porcel <armin76@gentoo.org> crypt-rsa-1.58.ebuild:
   alpha stable

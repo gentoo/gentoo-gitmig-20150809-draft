@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/SQL-Abstract
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/ChangeLog,v 1.15 2007/07/14 09:47:04 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/ChangeLog,v 1.16 2008/12/08 01:59:56 robbat2 Exp $
+
+*SQL-Abstract-1.24 (08 Dec 2008)
+
+  08 Dec 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +SQL-Abstract-1.24.ebuild:
+  Version bump.
 
   14 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning dev-perl/SQL-Abstract to perl-herd, as chriswhite has been retired
