@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.13.ebuild,v 1.3 2008/11/03 12:38:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.13.ebuild,v 1.4 2008/12/08 20:49:40 ranger Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://jfs.sourceforge.net/project/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="static"
 
 DEPEND="virtual/libc"
