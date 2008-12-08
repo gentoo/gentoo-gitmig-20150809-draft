@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.710.08.ebuild,v 1.1 2008/12/08 07:43:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.710.08.ebuild,v 1.2 2008/12/08 09:35:47 tove Exp $
 
 MODULE_AUTHOR="MKUTTER"
 inherit perl-module eutils
@@ -31,6 +31,7 @@ DEPEND="dev-perl/XML-Parser
 	ssl? ( dev-perl/IO-Socket-SSL )
 	virtual/perl-Compress-Zlib
 	>=dev-perl/MIME-tools-5.413
+	virtual/perl-version
 	dev-lang/perl"
 
 src_unpack() {
@@ -44,7 +45,6 @@ src_unpack() {
 }
 
 src_test() {
-	blah
 	has_version '>=www-apache/mod_perl-2' && export MOD_PERL_API_VERSION=2
 	perl-module_src_test
 }

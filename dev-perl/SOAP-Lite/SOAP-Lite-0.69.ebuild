@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.69.ebuild,v 1.8 2008/11/18 15:28:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.69.ebuild,v 1.9 2008/12/08 09:35:47 tove Exp $
 
 IUSE="jabber ssl"
 
@@ -47,7 +47,6 @@ src_unpack() {
 }
 
 src_test() {
-	blah
 	has_version '>=www-apache/mod_perl-2' && export MOD_PERL_API_VERSION=2
 	perl-module_src_test
 }
