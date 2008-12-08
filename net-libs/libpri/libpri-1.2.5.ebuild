@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.5.ebuild,v 1.4 2007/08/06 20:20:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.5.ebuild,v 1.5 2008/12/08 13:27:14 pva Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ BRI_VERSION="0.3.0-PRE-1y-h"
 
 DESCRIPTION="Primary Rate ISDN (PRI) library"
 HOMEPAGE="http://www.asterisk.org/"
-SRC_URI="http://ftp.digium.com/pub/libpri/${MY_P}.tar.gz
+SRC_URI="http://ftp.digium.com/pub/libpri/releases/${MY_P}.tar.gz
 	bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )"
 #	bri? ( http://www.netdomination.org/pub/asterisk/libpri-${PV}-bristuff-${BRI_VERSION}.diff.gz )"
 
@@ -24,14 +24,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc sparc x86"
 
-DEPEND="virtual/libc"
-
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.2.5-gentoo.diff
-	epatch ${FILESDIR}/${P}-multilib.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-1.2.5-gentoo.diff"
+	epatch "${FILESDIR}/${P}-multilib.patch"
+	epatch "${FILESDIR}/${P}-gcc42.patch"
 
 	if use bri; then
 		einfo "Patching libpri w/ BRI stuff (${BRI_VERSION})"
@@ -51,7 +50,7 @@ src_compile() {
 }
 
 src_install() {
-	make INSTALL_PREFIX=${D} LIBDIR="${D}/usr/$(get_libdir)" install || die
+	make INSTALL_PREFIX="${D}" LIBDIR="${D}/usr/$(get_libdir)" install || die
 
-	dodoc ChangeLog README TODO LICENSE
+	dodoc ChangeLog README TODO
 }
