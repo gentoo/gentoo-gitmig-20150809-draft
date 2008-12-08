@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/terminal
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.19 2008/03/08 13:52:55 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/terminal/ChangeLog,v 1.20 2008/12/08 16:39:11 voyageur Exp $
+
+  08 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  terminal-0.9.5_pre20060324-r1.ebuild:
+  Fix compilation with --as-needed, bug #250173
 
   08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   terminal-0.9.5_pre20060324-r1.ebuild:
