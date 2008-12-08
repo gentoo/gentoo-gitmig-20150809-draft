@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/cbind-6.0.ebuild,v 1.6 2008/01/26 23:57:51 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/cbind-6.0.ebuild,v 1.7 2008/12/08 10:32:32 george Exp $
 
 # !NOTE!
 # this is a utility, no libs generated, no reason to do the gnat.eclass dance
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 src_compile() {
-	MAKEOPTS=-j1 emake || die
+	MAKEOPTS="${MAKEOPTS} -j1" emake || die
 }
 
 src_install () {

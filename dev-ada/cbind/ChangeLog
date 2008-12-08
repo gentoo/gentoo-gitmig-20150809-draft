@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/cbind
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/ChangeLog,v 1.13 2006/11/14 22:13:11 george Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/cbind/ChangeLog,v 1.14 2008/12/08 10:32:32 george Exp $
+
+  08 Dec 2008; George Shapovalov <george@gentoo.org> cbind-6.0.ebuild:
+  fixed MAKEOPTS setting (#250132)
 
   14 Nov 2006; George Shapovalov <george@gentoo.org> -files/cbind6.diff,
   -cbind-6.ebuild:
