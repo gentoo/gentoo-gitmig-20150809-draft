@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4.ebuild,v 1.6 2008/12/06 19:06:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4-r1.ebuild,v 1.1 2008/12/08 08:11:18 nerdboy Exp $
 
 inherit eutils multilib pam toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="amd64 ~hppa ppc sparc x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
 IUSE="jbig pam mgetty html"
 
@@ -61,7 +61,7 @@ src_compile() {
 		--with-DIR_SBIN=/usr/sbin
 		--with-DIR_LIB=/usr/$(get_libdir)
 		--with-DIR_LIBEXEC=/usr/sbin
-		--with-DIR_LIBDATA=/var/lib/fax
+		--with-DIR_LIBDATA=/usr/$(get_libdir)/fax
 		--with-DIR_LOCKS=/var/lock
 		--with-DIR_MAN=/usr/share/man
 		--with-DIR_SPOOL=/var/spool/fax
@@ -133,8 +133,8 @@ src_install() {
 	keepdir /var/spool/fax/{archive,client,etc,pollq,recvq,tmp}
 	keepdir /var/spool/fax/{status,sendq,log,info,doneq,docq,dev}
 
-	dosed "s:hostname:hostname -f:g" \
-		/var/spool/fax/bin/{faxrcvd,pollrcvd} || die "dosed failed"
+	dosed "s:hostname:hostname -f:g" /var/spool/fax/bin/{faxrcvd,pollrcvd} \
+		|| die "dosed hostname failed"
 
 	generate_files # in this case, it only generates the env.d entry
 
