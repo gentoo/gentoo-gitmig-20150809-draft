@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.6.3.1.ebuild,v 1.6 2008/07/02 14:19:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.6.3.1.ebuild,v 1.7 2008/12/08 22:03:56 bicatali Exp $
 
 inherit eutils python
 
@@ -17,8 +17,8 @@ RESTRICT="test"
 # should use xdg-utils once those are working for postcript viewers
 RDEPEND=">=dev-python/pyx-0.9
 	sci-libs/scipy
-	virtual/ghostscript
-	|| ( app-text/gv app-text/ggv )
+	virtual/latex-base
+	app-text/gv
 	media-gfx/imagemagick"
 DEPEND="${RDEPEND}"
 
