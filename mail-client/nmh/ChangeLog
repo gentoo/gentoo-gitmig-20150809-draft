@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/nmh
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.21 2008/12/05 01:51:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.22 2008/12/09 03:47:59 darkside Exp $
+
+*nmh-1.3-r1 (09 Dec 2008)
+
+  09 Dec 2008; Jeremy Olexa <darkside@gentoo.org> -nmh-1.3.ebuild,
+  +nmh-1.3-r1.ebuild:
+  (non maintainer commit) making liblockfile an explicit dep instead of
+  automagic, bug #250340
 
 *nmh-1.3 (05 Dec 2008)
 
