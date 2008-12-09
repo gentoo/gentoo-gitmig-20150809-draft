@@ -1,0 +1,45 @@
+=== modified file 'Makefile.in'
+--- Makefile.in	2008-12-08 17:03:23 +0000
++++ Makefile.in	2008-12-08 17:44:21 +0000
+@@ -51,7 +51,8 @@
+ 
+ VERCFLAGS=       -DMAA_MAJOR=$(MAA_MAJOR) -DMAA_MINOR=$(MAA_MINOR) -DMAA_TEENY=$(MAA_TEENY)
+ CFLAGS=		@DEFS@ @CPPFLAGS@ @CFLAGS@ $(VERCFLAGS) -I. -I${srcdir}
+-LDFLAGS=        @LDFLAGS@ @LIBS@ .libs/libmaa.a -lm
++LDFLAGS=        @LDFLAGS@
++LIBS=		@LIBS@ .libs/libmaa.a -lm
+ 
+ HEADERS= config.h maa.h maaP.h obstack.h
+ LIBOBJS= @LIBOBJS@ obstack.o xmalloc.o \
+@@ -63,7 +64,7 @@
+ 	 primetest listtest bittest argtest sltest prtest basetest
+ EXES=    memtest prtest
+ 
+-MAALIB=  libmaa.a
++MAALIB=  libmaa.la
+ 
+ lib: $(MAALIB)
+ 
+@@ -111,17 +112,17 @@
+ 	$(LIBTOOL) --tag=CC --mode=compile $(CC) -o $@ -c $(CFLAGS) $<
+ 
+ %: %.o
+-	$(LIBTOOL) --tag=CC --mode=link $(CC) -o $@ $< $(LDFLAGS)
++	$(LIBTOOL) --tag=CC --mode=link $(CC) -o $@ $< $(LDFLAGS) $(LIBS)
+ 
+ %test: %test.c rnd.o
+-	$(CC) $(CFLAGS) -o $@ $< rnd.o $(LDFLAGS)
++	$(CC) $(CFLAGS) -o $@ $< rnd.o $(LDFLAGS) $(LIBS)
+ 
+ dmalloc/dmalloc.h:
+ 	echo making all in dmalloc
+ 	(cd dmalloc && $(MAKE) all) || exit 1
+ 
+-libmaa.a: $(LIBOBJS)
+-	$(LIBTOOL) --tag=CC --mode=link ${CC} -o libmaa.la ${LIBOBJS:.o=.lo} \
++libmaa.la: $(LIBOBJS)
++	$(LIBTOOL) --tag=CC --mode=link ${CC} $(LDFLAGS) -o libmaa.la ${LIBOBJS:.o=.lo} \
+ 	   -rpath "${libdir}" \
+ 	   -version-info 1:0
+ 
+
