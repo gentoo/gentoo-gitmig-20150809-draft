@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/kgcc64
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.21 2008/10/26 18:54:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.22 2008/12/09 02:14:45 halcy0n Exp $
+
+  09 Dec 2008; Mark Loeser <halcy0n@gentoo.org> kgcc64-4.1.2.ebuild,
+  kgcc64-4.2.4.ebuild, kgcc64-4.3.1.ebuild, kgcc64-4.3.2.ebuild:
+  Add call back in for toolchain_pkg_postinst, thanks to Andrew Gaffney
+  <agaffney AT gentoo DOT org>; bug #249504
 
 *kgcc64-4.3.2 (26 Oct 2008)
 

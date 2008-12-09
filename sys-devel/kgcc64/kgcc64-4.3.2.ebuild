@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.3.2.ebuild,v 1.1 2008/10/26 18:54:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.3.2.ebuild,v 1.2 2008/12/09 02:14:45 halcy0n Exp $
 
 case ${CHOST} in
 	hppa*)    CTARGET=hppa64-${CHOST#*-};;
@@ -33,6 +33,8 @@ DEPEND="hppa? ( sys-devel/binutils-hppa64 )
 	!sys-devel/gcc-sparc64"
 
 pkg_postinst() {
+	toolchain_pkg_postinst
+
 	cd "${ROOT}"/usr/bin
 	local x
 	for x in gcc cpp ; do
