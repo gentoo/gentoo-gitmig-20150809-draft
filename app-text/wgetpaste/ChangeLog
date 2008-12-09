@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wgetpaste
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.81 2008/12/08 20:46:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wgetpaste/ChangeLog,v 1.82 2008/12/09 02:29:28 jer Exp $
+
+  09 Dec 2008; Jeroen Roovers <jer@gentoo.org> wgetpaste-2.12.ebuild:
+  Stable for HPPA (bug #250199).
 
   08 Dec 2008; Brent Baude <ranger@gentoo.org> wgetpaste-2.12.ebuild:
   stable ppc64, bug 250199
