@@ -1,6 +1,8 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/etc-proposals-1.4.3.ebuild,v 1.1 2008/11/30 13:06:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/etc-proposals-1.4.3.ebuild,v 1.2 2008/12/09 15:58:44 dev-zero Exp $
+
+NEED_PYTHON="2.5"
 
 inherit distutils
 
