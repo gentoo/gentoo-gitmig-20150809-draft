@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.1 2008/09/19 14:54:20 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.2 2008/12/09 10:17:30 joker Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -56,7 +56,8 @@ src_compile() {
 	local archflags
 
 	if use x86; then
-		archflags="-DNATIVE_CPU_X86 -DMMX_RGB2YUV USE_MMX=1"
+		archflags="-DNATIVE_CPU_X86 -DMMX_RGB2YUV -DUSE_MMX"
+		export USE_MMX=1
 	else
 		# -fPIC is needed on amd64 but fails on x86.
 		archflags="-fPIC"
