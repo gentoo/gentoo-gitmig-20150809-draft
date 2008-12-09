@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.98 2008/12/07 23:59:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.99 2008/12/09 18:26:16 ssuominen Exp $
+
+  09 Dec 2008; <ssuominen@gentoo.org> claws-mail-3.6.1-r1.ebuild:
+  Disable spell USE flag by default because it pulls in enchant which has
+  hunspell as default instead of required aspell. It is annoying when it
+  doesn't compile with default USE flags.
 
   07 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-3.5.0.ebuild:
