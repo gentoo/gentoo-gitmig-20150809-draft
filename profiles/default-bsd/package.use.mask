@@ -48,7 +48,7 @@ dev-lang/erlang sctp
 
 # Alexis Ballier <aballier@gentoo.org> (8 Aug 2008)
 # Linux only useflags for vlc
-media-video/vlc dc1394
+media-video/vlc dc1394 libsysfs
 
 # Alexis Ballier <aballier@gentoo.org> (8 Aug 2008)
 # Depends on torque which is a linux only thing

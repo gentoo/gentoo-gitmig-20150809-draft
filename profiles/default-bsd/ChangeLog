@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.45 2008/11/28 13:35:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.46 2008/12/09 11:23:36 aballier Exp $
+
+  09 Dec 2008; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  libsysfs for vlc is linux only too
 
   28 Nov 2008; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   usemask bluetooth useflag for libpcap, based on linux bluez, bug #247076
