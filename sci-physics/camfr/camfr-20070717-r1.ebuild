@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r1.ebuild,v 1.1 2008/07/07 23:47:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r1.ebuild,v 1.2 2008/12/09 15:39:43 bicatali Exp $
 
 inherit eutils distutils fortran
 
@@ -33,7 +33,7 @@ pkg_setup() {
 		eerror "Set the tk USE flag and reinstall python and imaging before continuing."
 		die
 	fi
-	FORTRAN="gfortran g77"
+	FORTRAN="gfortran ifc g77"
 	fortran_pkg_setup
 }
 
@@ -41,8 +41,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc43.patch
-	cp machine_cfg.py{.gentoo,} || die
-	sed -i -e '/^library_dirs/d'  -e '/^libs/d' machine_cfg.py || die
+	cp "${FILESDIR}"/machine_cfg.py.gentoo machine_cfg.py || die
 	local lapack_libs=
 	for x in $(pkg-config --libs-only-l lapack); do
 		lapack_libs="${lapack_libs}, \"${x#-l}\""
@@ -60,6 +59,9 @@ src_unpack() {
 		library_dirs = [${lapack_libdirs#,}]
 		libs = ["boost_python", "${libfort}", "blitz"${lapack_libs}]
 	EOF
+
+	# scons redefines F77 to FORTRAN for env variables
+	sed -i -e 's/F77/FORTRAN/g' SConstruct || die
 }
 
 src_test() {
