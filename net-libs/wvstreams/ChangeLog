@@ -1,6 +1,32 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.124 2008/11/19 19:30:33 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.125 2008/12/09 23:31:27 loki_val Exp $
+
+*wvstreams-4.5 (09 Dec 2008)
+
+  09 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -files/wvstreams-4.4.1-as-needed.patch,
+  -files/wvstreams-4.4.1-external-xplc.patch,
+  -files/wvstreams-4.4.1-gcc43.patch, -files/wvstreams-4.4.1-gnulib.patch,
+  -files/wvstreams-4.4.1-linux-serial.patch,
+  -files/wvstreams-4.4.1-sigaction.patch,
+  -files/wvstreams-4.4.1-type-punned.patch,
+  -files/wvstreams-4.4.1-uniconfd-ini.patch,
+  -files/wvstreams-4.4.1-valgrind.patch,
+  -files/wvstreams-4.4.1-wireless-user.patch,
+  -files/wvstreams-4.4.1-wvconfemu.patch,
+  +files/wvstreams-4.5-configure.patch,
+  +files/wvstreams-4.5-dbus-configure-fix.patch,
+  +files/wvstreams-4.5-gcc43.patch,
+  +files/wvstreams-4.5-no_sarestorer.patch,
+  +files/wvstreams-4.5-parallel-make.patch,
+  +files/wvstreams-4.5-qt-fixup.patch,
+  +files/wvstreams-4.5-valgrind-optional.patch, metadata.xml,
+  -wvstreams-4.4.1.ebuild, +wvstreams-4.5.ebuild:
+  Bump, new upstream version. Adding myself as maintainer as per bug 247677.
+  Various patches added to make the new buildsystem play nice. BerkeleyDB,
+  slp and qdbm support dropped in this release by upstream. Shiny new dbus
+  bindings added.
 
   19 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> wvstreams-4.4.1.ebuild:
   Ugly fix for eautoreconf failure. Bug 211327.
