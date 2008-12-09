@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/xfoil
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.10 2008/11/24 15:47:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.11 2008/12/09 12:28:36 bicatali Exp $
+
+  09 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> xfoil-6.97.ebuild:
+  Added LDFLAGS propagation
 
   24 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
   files/xfoil-6.97-overflow.patch, -xfoil-6.96.ebuild:

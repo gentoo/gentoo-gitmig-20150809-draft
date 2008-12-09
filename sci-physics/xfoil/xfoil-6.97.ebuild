@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.2 2008/08/23 11:43:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.3 2008/12/09 12:28:36 bicatali Exp $
 
 inherit eutils fortran
 
@@ -28,7 +28,7 @@ src_unpack() {
 		-e '/^FFLAGS/d' \
 		-e '/^CFLAGS/d' \
 		-e 's/^\(FFLOPT .*\)/FFLOPT = $(FFLAGS)/g' \
-		bin/Makefile plotlib/Makefile plotlib/config.make orrs/bin/Makefile \
+		{bin,plotlib,orrs/bin}/Makefile plotlib/config.make \
 		|| die "sed for flags and compilers failed"
 
 	# fix bug #147033
@@ -43,7 +43,7 @@ src_unpack() {
 src_compile() {
 	export FC="${FORTRANC}" F77="${FORTRANC}"
 	cd "${S}"/orrs/bin
-	emake FLG="${FFLAGS}" FTNLIB="" OS || die "failed to build orrs"
+	emake FLG="${FFLAGS}" FTNLIB="${LDFLAGS}" OS || die "failed to build orrs"
 	cd "${S}"/orrs
 	bin/osgen osmaps_ns.lst
 	cd "${S}"/plotlib
@@ -53,6 +53,7 @@ src_compile() {
 		emake \
 			PLTOBJ="../plotlib/libPlt.a" \
 			CFLAGS="${CFLAGS} -DUNDERSCORE" \
+			FTNLIB="${LDFLAGS}" \
 			${i} || die "failed to build ${i}"
 	done
 }
