@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/DateTime-Format-ISO8601
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/ChangeLog,v 1.1 2008/12/09 08:53:25 robbat2 Exp $
+
+*DateTime-Format-ISO8601-0.06 (09 Dec 2008)
+
+  09 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +DateTime-Format-ISO8601-0.06.ebuild:
+  Initial commit, dep for new dev-libs/OpenSRF-1.0.1
+
