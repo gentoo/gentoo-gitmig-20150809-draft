@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.27.6.ebuild,v 1.1 2008/11/16 09:27:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.27.7.ebuild,v 1.1 2008/12/09 03:49:36 kumba Exp $
 
 # INCLUDED:
 # 1) linux sources from kernel.org
@@ -15,7 +15,7 @@
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20081115"			# Date of diff between kernel.org and lmo GIT
+GITDATE="20081208"			# Date of diff between kernel.org and lmo GIT
 GENPATCHVER="1.33"			# Tarball version for generic patches
 EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
@@ -84,7 +84,7 @@ fi
 
 DESCRIPTION="Linux-Mips GIT sources for MIPS-based machines, dated ${GITDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${STABLEVER}.tar.bz2
-		mirror://gentoo/mipsgit-${F_KV}-${GITDATE}.diff.bz2
+		mirror://gentoo/mipsgit-${F_KV}-${GITDATE}.diff.lzma
 		mirror://gentoo/${PN}-generic_patches-${GENPATCHVER}.tar.bz2
 		${PATCHVER}"
 
