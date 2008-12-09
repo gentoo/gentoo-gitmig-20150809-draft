@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.14 2008/12/04 19:22:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.15 2008/12/09 16:18:50 chainsaw Exp $
+
+*xf86-input-synaptics-0.99.2-r1 (09 Dec 2008)
+
+  09 Dec 2008; <chainsaw@gentoo.org> +files/0.99.2-fdi-comments.patch,
+  +xf86-input-synaptics-0.99.2-r1.ebuild:
+  More helpful FDI file comments by Bernard Cafarelli <voyageur@gentoo.org>
+  so users can modify the FDI file easier. Removed the HAL USE-flag,
+  upstream behaviour changes mean you need it now. Added messages to that
+  effect. Revision bumped.
 
 *xf86-input-synaptics-0.99.2 (04 Dec 2008)
 
