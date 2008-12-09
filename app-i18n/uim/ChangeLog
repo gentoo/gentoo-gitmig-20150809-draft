@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.188 2008/10/29 17:00:51 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.189 2008/12/09 17:46:04 matsuu Exp $
+
+*uim-1.5.4-r2 (09 Dec 2008)
+
+  09 Dec 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/uim-1.5.4-gcc43.patch, +files/uim-1.5.4-zhTW.patch,
+  +uim-1.5.4-r2.ebuild:
+  Added LINGUAS="zh_TW". Fixed gcc-4.3 issue, bug #216759.
 
 *uim-1.5.4-r1 (29 Oct 2008)
 
