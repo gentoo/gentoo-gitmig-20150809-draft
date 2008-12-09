@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/musepack-tools
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.33 2007/05/14 21:21:37 beandog Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.34 2008/12/09 03:26:00 darkside Exp $
+
+  09 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
+  musepack-tools-1.15v.ebuild, musepack-tools-1.15v-r1.ebuild:
+  (non maintainer commit) 64 bit fix as presented in bug #188160. Thanks to
+  Rene Treffer for the patch
 
   14 May 2007; Steve Dibb <beandog@gentoo.org>
   musepack-tools-1.15v-r1.ebuild:

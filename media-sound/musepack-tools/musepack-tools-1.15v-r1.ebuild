@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v-r1.ebuild,v 1.2 2007/05/14 21:21:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v-r1.ebuild,v 1.3 2008/12/09 03:26:00 darkside Exp $
 
 IUSE="static 16bit esd"
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-Makefile.patch"
 	epatch "${FILESDIR}/${P}-gcc4.patch"
@@ -44,6 +44,10 @@ src_unpack() {
 
 	if [[ $(tc-arch) != "x86" ]] ; then
 		sed -i 's/#define USE_ASM/#undef USE_ASM/' mpp.h
+	fi
+
+	if [[ "$(tc-arch)" == "amd64" ]] ; then
+		sed -i 's/-f elf$/-f elf64/' Makefile
 	fi
 
 	use 16bit && sed -i 's|//#define MAKE_16BIT|#define MAKE_16BIT|' mpp.h
