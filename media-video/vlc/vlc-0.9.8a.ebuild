@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.8a.ebuild,v 1.1 2008/12/05 08:51:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.8a.ebuild,v 1.2 2008/12/09 13:56:25 aballier Exp $
 
 EAPI="1"
 
@@ -42,7 +42,7 @@ IUSE="a52 aac aalib alsa altivec arts atmo avahi bidi cdda cddb cdio dbus dc1394
 	debug dirac directfb dts dvb dvd esd fbcon fluidsynth +ffmpeg flac fontconfig ggi gnome gnutls hal httpd
 	id3tag jack kate libass libcaca +libgcrypt libnotify libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg
 	musepack ncurses nsplugin ogg opengl optimisememory oss png	pulseaudio pvr +qt4
-	remoteosd rtsp samba schroedinger sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
+	remoteosd rtsp run-as-root samba schroedinger sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcd vcdinfo vcdx vlm vorbis win32codecs
 	X x264 xinerama xml xosd xv zvbi"
 
@@ -302,6 +302,7 @@ src_compile () {
 		$(use_enable pvr) \
 		$(use_enable qt4) \
 		$(use_enable rtsp realrtsp) \
+		$(use_enable run-as-root) \
 		$(use_enable samba smb) \
 		$(use_enable schroedinger) \
 		$(use_enable sdl) \
