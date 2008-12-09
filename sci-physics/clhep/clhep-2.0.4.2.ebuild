@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.0.3.3.ebuild,v 1.3 2008/07/15 12:09:56 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/clhep-2.0.4.2.ebuild,v 1.1 2008/12/09 12:08:12 bicatali Exp $
 
-inherit autotools flag-o-matic toolchain-funcs
+inherit autotools
 
 DESCRIPTION="High Energy Physics C++ library"
 HOMEPAGE="http://www.cern.ch/clhep"
-SRC_URI="http://proj-clhep.web.cern.ch/proj-clhep/DISTRIBUTION/distributions/${P}-src.tgz"
+SRC_URI="http://wwwasd.web.cern.ch/wwwasd/lhc++/clhep/DISTRIBUTION/distributions/${P}.tgz"
 
 LICENSE="public-domain"
 SLOT="2"
@@ -21,7 +21,6 @@ S="${WORKDIR}/${PV}/CLHEP"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc43.patch
 	for d in $(find . -name configure.in); do
 		pushd ${d/configure.in/}
 		# respect user flags and fix some compilers stuff
@@ -32,16 +31,13 @@ src_unpack() {
 			configure.in || die
 		# need to rebuild because original configurations
 		# have buggy detection
-		eautoconf
+		eautoreconf
 		popd
 	done
 }
 
 src_compile() {
-	# use ld LDFLAGS for intel compiler
-	[[ $(tc-getCXX) = i*c ]] && \
-		export LDFLAGS="$(raw-ldflags)"
-	econf $(use_enable exceptions) || die "econf failed"
+	econf $(use_enable exceptions)
 	emake || die "emake failed"
 }
 

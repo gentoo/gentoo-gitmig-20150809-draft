@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/clhep
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.5 2008/08/22 14:26:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.6 2008/12/09 12:08:12 bicatali Exp $
+
+*clhep-2.0.4.2 (09 Dec 2008)
+
+  09 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/clhep-2.0.3.3-gcc43.patch, -clhep-2.0.3.3.ebuild,
+  +clhep-2.0.4.2.ebuild:
+  Version bump
 
 *clhep-2.0.4.0 (22 Aug 2008)
 
