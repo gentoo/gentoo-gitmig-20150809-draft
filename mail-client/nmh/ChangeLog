@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/nmh
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.22 2008/12/09 03:47:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/ChangeLog,v 1.23 2008/12/09 03:53:43 darkside Exp $
+
+  09 Dec 2008; Jeremy Olexa <darkside@gentoo.org> -nmh-1.0.4-r3.ebuild,
+  -nmh-1.1.ebuild, nmh-1.1-r1.ebuild:
+  (non maintainer commit) Remove old and apply file locking call to configure.
+  bug #153840 by David Fellows
 
 *nmh-1.3-r1 (09 Dec 2008)
 

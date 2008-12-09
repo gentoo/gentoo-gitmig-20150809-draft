@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.1-r1.ebuild,v 1.5 2005/11/23 00:36:48 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.1-r1.ebuild,v 1.6 2008/12/09 03:53:43 darkside Exp $
 
 inherit eutils
 DESCRIPTION="New MH mail reader"
@@ -41,6 +41,7 @@ src_compile() {
 		--with-editor=${EDITOR} \
 		--with-pager=${PAGER} \
 		--enable-nmh-pop \
+		--with-locking=lockf \
 		--sysconfdir=/etc/nmh \
 		--libdir=/usr/bin || die
 	make || die
