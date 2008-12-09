@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pydns
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.4 2008/09/12 13:57:07 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.5 2008/12/09 17:20:44 sbriesen Exp $
+
+  09 Dec 2008; Stefan Briesenick <sbriesen@gentoo.org> -pydns-2.3.1.ebuild:
+  removed old version
 
   12 Sep 2008; Stefan Briesenick <sbriesen@gentoo.org> -pydns-2.3.0.ebuild:
   removed old version.
