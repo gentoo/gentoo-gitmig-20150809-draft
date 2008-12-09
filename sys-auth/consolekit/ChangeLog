@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.33 2008/06/21 20:38:24 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.34 2008/12/09 12:44:56 aballier Exp $
+
+  09 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  consolekit-0.2.10.ebuild:
+  drop bsd patch that doesnt apply anymore, bug #231910
 
 *consolekit-0.2.10 (21 Jun 2008)
 
