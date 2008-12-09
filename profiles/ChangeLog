@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2140 2008/12/08 09:23:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2141 2008/12/09 23:33:49 loki_val Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Dec 2008; Peter Alfredsen <loki_val@gentoo.org> package.mask:
+  Drop wvstreams p.mask as per bug 247677.
 
   08 Dec 2008; Torsten Veller <tove@gentoo.org> package.mask:
   Mask ~dev-perl/Net-Amazon-S3-0.48
