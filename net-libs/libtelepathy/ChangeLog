@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtelepathy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.20 2008/08/21 10:41:15 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.21 2008/12/09 20:15:01 ranger Exp $
+
+  09 Dec 2008; Brent Baude <ranger@gentoo.org> libtelepathy-0.3.3.ebuild:
+  Marking libtelepathy-0.3.3 ~ppc64 for bug 245949
 
   21 Aug 2008; Santiago M. Mola <coldwind@gentoo.org>
   -libtelepathy-0.0.42.ebuild, -libtelepathy-0.0.53.ebuild,
