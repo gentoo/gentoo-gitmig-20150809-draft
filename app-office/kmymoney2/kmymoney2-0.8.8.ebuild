@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.8.8.ebuild,v 1.6 2008/07/03 01:10:40 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.8.8.ebuild,v 1.7 2008/12/09 18:38:03 tgurr Exp $
 
 inherit kde
 
@@ -28,7 +28,7 @@ need-kde 3.5
 # TODO: support maketest
 # (needs cppunit in DEPEND)
 
-PATCHES="${FILESDIR}/kmymoney2.desktop.diff"
+PATCHES=( "${FILESDIR}/kmymoney2.desktop.diff" )
 
 pkg_setup() {
 	if use hbci && ! built_with_use net-libs/aqbanking kde; then
