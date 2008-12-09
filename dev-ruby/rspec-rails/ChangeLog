@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec-rails
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.4 2008/10/25 14:02:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.5 2008/12/09 20:08:16 ranger Exp $
+
+  09 Dec 2008; Brent Baude <ranger@gentoo.org> rspec-rails-1.1.11.ebuild:
+  Marking rspec-rails-1.1.11 ~ppc64 for bug 250348
 
   25 Oct 2008; Hans de Graaff <graaff@gentoo.org> rspec-rails-1.1.11.ebuild:
   Add back hoe dependency because it is still listed as a runtime dependency
