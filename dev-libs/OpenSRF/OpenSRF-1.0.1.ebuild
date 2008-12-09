@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-1.0.1.ebuild,v 1.1 2008/12/09 09:13:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-1.0.1.ebuild,v 1.2 2008/12/09 10:05:16 robbat2 Exp $
 
 inherit eutils multilib flag-o-matic apache-module autotools perl-module
 
@@ -98,6 +98,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--with-apxs=/usr/sbin/apxs2 \
+		--sysconfdir=/etc/opensrf \
 		|| die "econf failed"
 	cd "${S}" && emake || die "main emake failed"
 	cd "${PERL_S}" && S="${PERL_S}" perl-module_src_compile || die "perl-module_src_compile failed"
