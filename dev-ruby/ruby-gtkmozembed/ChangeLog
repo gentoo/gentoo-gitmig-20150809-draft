@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtkmozembed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.14 2008/10/14 12:45:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.15 2008/12/09 14:32:06 fmccor Exp $
+
+  09 Dec 2008; Ferris McCormick <fmccor@gentoo.org>
+  ruby-gtkmozembed-0.16.0.ebuild:
+  Sparc stable, Bug #215149.
 
   14 Oct 2008; Hans de Graaff <graaff@gentoo.org>
   ruby-gtkmozembed-0.16.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnomevfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomevfs/ChangeLog,v 1.27 2008/05/21 12:55:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomevfs/ChangeLog,v 1.28 2008/12/09 14:30:38 fmccor Exp $
+
+  09 Dec 2008; Ferris McCormick <fmccor@gentoo.org>
+  ruby-gnomevfs-0.15.0.ebuild:
+  Sparc stable, Bug #215149.
 
   21 May 2008; Samuli Suominen <drac@gentoo.org>
   ruby-gnomevfs-0.15.0.ebuild:
