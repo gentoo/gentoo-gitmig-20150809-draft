@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.26 2008/12/03 16:25:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.27 2008/12/09 19:45:28 ranger Exp $
+
+  09 Dec 2008; Brent Baude <ranger@gentoo.org> gatt-0.6.2.ebuild:
+  Marking gatt-0.6.2 ppc64 for bug 247464
 
   03 Dec 2008; Jeroen Roovers <jer@gentoo.org> gatt-0.6.2.ebuild:
   Stable for HPPA (bug #247464).
