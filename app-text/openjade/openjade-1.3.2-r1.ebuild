@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.36 2007/06/11 14:38:30 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.37 2008/12/09 21:23:47 bluebird Exp $
 
 inherit libtool sgml-catalog eutils flag-o-matic multilib
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-msggen.pl.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-lib64-fix.patch
 }
 
 src_compile() {
@@ -55,7 +56,7 @@ src_install() {
 	dodir /usr
 	dodir /usr/$(get_libdir)
 
-	make DESTDIR=${D} \
+	make DESTDIR="${D}" \
 		libdir=/usr/$(get_libdir) \
 		install install-man || die "make install failed"
 
@@ -72,7 +73,7 @@ src_install() {
 	echo 'SYSTEM "builtins.dsl" "builtins.dsl"' > ${D}/usr/share/sgml/${P}/catalog
 	insinto /usr/share/sgml/${P}/dsssl
 	doins dsssl/{dsssl.dtd,style-sheet.dtd,fot.dtd}
-	newins ${FILESDIR}/${P}.dsssl-catalog catalog
+	newins "${FILESDIR}"/${P}.dsssl-catalog catalog
 # Breaks sgml2xml among other things
 #	insinto /usr/share/sgml/${P}/unicode
 #	doins unicode/{catalog,unicode.sd,unicode.syn,gensyntax.pl}
