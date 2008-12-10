@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.ebuild,v 1.1 2008/12/10 21:39:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.ebuild,v 1.2 2008/12/10 22:26:15 scarabeus Exp $
 
 EAPI="2"
 
@@ -44,7 +44,7 @@ DEPEND=">=app-misc/strigi-0.5.7
 	njb? ( >=media-libs/libnjb-2.2.4 )
 	semantic-desktop? ( dev-libs/soprano[sesame2] )
 	!media-sound/amarok:4.1
-	kdeprefix? ( !media-sound/amarok:0 )
+	!kdeprefix? ( !media-sound/amarok:0 )
 	"
 
 RDEPEND="${DEPEND}

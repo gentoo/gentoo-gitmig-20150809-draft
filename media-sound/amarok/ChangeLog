@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.291 2008/12/10 21:39:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.292 2008/12/10 22:26:15 scarabeus Exp $
+
+  10 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org> amarok-2.0.ebuild:
+  Block amarok:0 correctly (since it was not done before at all i think it
+  does not need revbump).
 
 *amarok-2.0 (10 Dec 2008)
 
