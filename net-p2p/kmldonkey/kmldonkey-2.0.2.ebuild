@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-2.0.2.ebuild,v 1.2 2008/11/13 13:45:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-2.0.2.ebuild,v 1.3 2008/12/10 12:27:52 scarabeus Exp $
 
 EAPI="1"
 
 KDE_PV="4.1.3"
 SLOT="4.1"
-NEED_KDE=":${SLOT}"
+NEED_KDE="4.1"
 KDE_LINGUAS="ca cs el es et fr ga gl it nb nl pt ru sv tr uk zh_CN zh_TW"
 inherit kde4-base
 
