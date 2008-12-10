@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/tomboy-reminder/tomboy-reminder-0.9.ebuild,v 1.5 2007/04/26 02:36:45 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/tomboy-reminder/tomboy-reminder-0.9.ebuild,v 1.6 2008/12/10 15:52:12 loki_val Exp $
 
 inherit autotools eutils mono
 
@@ -20,10 +20,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-0.9-mcs-to-gmcs.patch
-	epatch ${FILESDIR}/${PN}-0.9-unicode-regex.patch
+	epatch "${FILESDIR}"/${PN}-0.9-mcs-to-gmcs.patch
+	epatch "${FILESDIR}"/${PN}-0.9-unicode-regex.patch
 	eautomake
 }
 
