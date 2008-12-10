@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rspec-rails
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.5 2008/12/09 20:08:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.6 2008/12/10 14:37:47 fmccor Exp $
+
+  10 Dec 2008; Ferris McCormick <fmccor@gentoo.org>
+  rspec-rails-1.1.11.ebuild:
+  Add ~sparc keyword, part of Bug #250348.
 
   09 Dec 2008; Brent Baude <ranger@gentoo.org> rspec-rails-1.1.11.ebuild:
   Marking rspec-rails-1.1.11 ~ppc64 for bug 250348

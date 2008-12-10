@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.41 2008/12/09 20:06:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.42 2008/12/10 14:32:05 fmccor Exp $
+
+  10 Dec 2008; Ferris McCormick <fmccor@gentoo.org> zentest-3.11.0.ebuild:
+  Add ~sparc keyword, part of Bug #250348.
 
   09 Dec 2008; Brent Baude <ranger@gentoo.org> zentest-3.11.0.ebuild:
   Marking zentest-3.11.0 ppc64 for bug 250348
