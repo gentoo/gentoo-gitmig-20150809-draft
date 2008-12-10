@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.13 2008/10/25 14:46:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.14 2008/12/10 01:06:12 robbat2 Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -18,14 +18,16 @@ inherit autotools confutils eutils flag-o-matic multilib
 
 # @ECLASS-VARIABLE: GENTOO_PATCHNAME
 # @DESCRIPTION:
-# This internal variable contains the prefix for the patch tarball
-GENTOO_PATCHNAME="gentoo-${PF}"
+# This internal variable contains the prefix for the patch tarball.
+# Defaults to the full version (including revision) of the package.
+[[ -n "$GENTOO_PATCHNAME" ]] || GENTOO_PATCHNAME="gentoo-${PF}"
 
 # @ECLASS-VARIABLE: GENTOO_PATCHDIR
 # @DESCRIPTION:
 # This internal variable contains the working directory where patches and config
-# files are located
-GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
+# files are located.
+# Defaults to the patchset name appended to the working directory.
+[[ -n "$GENTOO_PATCHDIR" ]] || GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 # @VARIABLE: GENTOO_DEVELOPER
 # @DESCRIPTION:
@@ -37,8 +39,14 @@ GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 # This variable needs to be set in the ebuild and contains the date the patch
 # tarball was created at in YYYYMMDD format
 
+# @VARIABLE: GENTOO_PATCH_A
+# @DESCRIPTION:
+# This variable should contain the entire filename of patch tarball.
+# Defaults to the name of the patchset, with a datestamp.
+[[ -n "$GENTOO_PATCH_A" ]] || GENTOO_PATCH_A="${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2"
+
 SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
-	http://dev.gentoo.org/~${GENTOO_DEVELOPER}/dist/apache/${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2"
+	http://dev.gentoo.org/~${GENTOO_DEVELOPER}/dist/apache/${GENTOO_PATCH_A}"
 
 # @VARIABLE: IUSE_MPMS_FORK
 # @DESCRIPTION:
