@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9264 2008/12/09 23:33:50 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9265 2008/12/10 11:47:18 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -550,14 +550,6 @@ dev-python/twibber
 # Unmaintained. Masked for removal wrt #233394.
 # Open security bugs  #208566, #215006 and #231836.
 media-video/mplayer-bin
-
-# Diego Pettenò <flameeyes@gentoo.org> (2 Aug 2008)
-# Deprecated upstream in favour of Linux-PAM's own SHA512 support.
-# If you want to enable SHA512 passwords, enable the sha512 USE flag
-# for sys-auth/pambase instead.
-# Note that it requires glibc 2.7 or later.
-# Scheduled for removal on September 2nd
-sys-auth/pam_sha512
 
 # Raúl Porcel <armin76@gentoo.org> (1 Aug 2008)
 # This is just for preview

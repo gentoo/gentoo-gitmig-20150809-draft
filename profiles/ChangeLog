@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2141 2008/12/09 23:33:49 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2142 2008/12/10 11:47:17 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Remove pam_sha512 masking.
 
   09 Dec 2008; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   Drop wvstreams p.mask as per bug 247677.
