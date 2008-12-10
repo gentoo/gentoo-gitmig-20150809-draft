@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.14 2008/12/10 01:06:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.15 2008/12/10 01:15:47 robbat2 Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -19,7 +19,10 @@ inherit autotools confutils eutils flag-o-matic multilib
 # @ECLASS-VARIABLE: GENTOO_PATCHNAME
 # @DESCRIPTION:
 # This internal variable contains the prefix for the patch tarball.
-# Defaults to the full version (including revision) of the package.
+# Defaults to the full name and version (including revision) of the package.
+# If you want to override this in an ebuild, use:
+# ORIG_PR="(revision of Gentoo stuff you want)"
+# GENTOO_PATCHNAME="gentoo-${PN}-${PV}${ORIG_PR:+-${ORIG_PR}}"
 [[ -n "$GENTOO_PATCHNAME" ]] || GENTOO_PATCHNAME="gentoo-${PF}"
 
 # @ECLASS-VARIABLE: GENTOO_PATCHDIR
