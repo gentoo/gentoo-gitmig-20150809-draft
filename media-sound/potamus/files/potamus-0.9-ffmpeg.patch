@@ -1,0 +1,14 @@
+diff -ur potamus-0.9.orig/src/input-avcodec.c potamus-0.9/src/input-avcodec.c
+--- potamus-0.9.orig/src/input-avcodec.c	2007-12-02 17:55:57.000000000 +0200
++++ potamus-0.9/src/input-avcodec.c	2008-12-10 18:48:29.000000000 +0200
+@@ -19,8 +19,8 @@
+ 
+ #include <glib.h>
+ #include <stdlib.h>
+-#include <avcodec.h>
+-#include <avformat.h>
++#include <libavcodec/avcodec.h>
++#include <libavformat/avformat.h>
+ #include "buffer.h"
+ #include "format.h"
+ #include "input.h"

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/potamus
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/ChangeLog,v 1.4 2008/01/26 12:11:01 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/potamus/ChangeLog,v 1.5 2008/12/10 16:51:43 ssuominen Exp $
+
+  10 Dec 2008; <ssuominen@gentoo.org> +files/potamus-0.9-ffmpeg.patch,
+  potamus-0.9.ebuild:
+  Fix building with recent FFMPEG versions, thanks to loki_val for advice.
 
 *potamus-0.9 (26 Jan 2008)
 
