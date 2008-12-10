@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.42 2008/12/07 14:09:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.43 2008/12/10 11:39:39 nyhm Exp $
+
+  10 Dec 2008; Tristan Heaven <nyhm@gentoo.org>
+  files/md5deep-3.1-as-needed.patch:
+  Fix linking with --as-needed, bug #246865
 
 *md5deep-3.1 (07 Dec 2008)
 
