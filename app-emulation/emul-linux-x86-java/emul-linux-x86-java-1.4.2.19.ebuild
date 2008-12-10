@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.19.ebuild,v 1.1 2008/12/06 13:46:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.19.ebuild,v 1.2 2008/12/10 22:07:16 maekke Exp $
 
 inherit multilib eutils pax-utils java-vm-2
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://java.sun.com/j2se/1.4.2/"
 SRC_URI=${At}
 SLOT="1.4"
 LICENSE="sun-bcla-java-vm-1.4.2"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 # pre stripped
 RESTRICT="fetch strip"
 IUSE="X alsa nsplugin"
