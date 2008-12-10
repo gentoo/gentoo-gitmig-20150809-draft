@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.4.0.ebuild,v 1.7 2008/11/30 21:05:46 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.4.0-r1.ebuild,v 1.1 2008/12/10 18:01:53 calchan Exp $
 
 inherit eutils versionator
 
