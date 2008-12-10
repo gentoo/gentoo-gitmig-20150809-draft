@@ -1,6 +1,16 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.251 2008/12/08 22:04:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.252 2008/12/10 18:40:54 ford_prefect Exp $
+
+*evolution-2.24.2-r1 (10 Dec 2008)
+
+  10 Dec 2008; Arun Raghavan <ford_prefect@gentoo.org>
+  +files/evolution-2.24.2-mail-config-crash-fix.patch,
+  +files/evolution-2.24.2-spamassassin-plugin-fix.patch,
+  +evolution-2.24.2-r1.ebuild:
+  Add a couple of patches from stable svn to fix SpamAssassin plugin,
+  filtering, crashes in the account prefs dialog, and more (GNOME bugs
+  552583 and 560420)
 
   08 Dec 2008; Daniel Gryniewicz <dang@gentoo.org> evolution-2.24.2.ebuild:
   evo 2.24 doesn't need gnome-spell for spell checking anymore. Bug #250000

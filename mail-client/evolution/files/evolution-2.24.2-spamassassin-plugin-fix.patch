@@ -1,0 +1,11 @@
+--- branches/gnome-2-24/plugins/sa-junk-plugin/em-junk-filter.c	2008/12/03 21:48:56	36828
++++ branches/gnome-2-24/plugins/sa-junk-plugin/em-junk-filter.c	2008/12/03 21:52:13	36829
+@@ -250,7 +250,7 @@
+ 		else
+ 			res = rv_err;
+ 
+-		if (res != 0)
++		if (res >= 64)
+ 			g_set_error (error, EM_JUNK_ERROR, res, _("Pipe to SpamAssassin failed, error code: %d"), res);
+ 
+ 		return res;
