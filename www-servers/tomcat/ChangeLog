@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.201 2008/12/08 03:13:07 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.202 2008/12/10 19:29:54 betelgeuse Exp $
+
+  10 Dec 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Add weisso as proxy maintainer.
 
   08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
