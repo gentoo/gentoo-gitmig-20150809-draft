@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-0.9.6.ebuild,v 1.1 2008/12/09 20:34:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-0.9.6.ebuild,v 1.2 2008/12/10 11:51:48 ssuominen Exp $
+
+inherit eutils
 
 MY_P=${PN}-src-${PV}
 
@@ -23,6 +25,12 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-implicit_declaration_setlocale.patch
+}
 
 src_compile() {
 	econf --disable-dependency-tracking
