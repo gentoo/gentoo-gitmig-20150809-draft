@@ -19,5 +19,6 @@
 		<flag name='smime'>Build plugin for S/MIME support</flag>
 		<flag name='spamassassin'>Build <pkg>mail-filter/spamassassin</pkg>
 			plugin</flag>
+		<flag name='aspell'>Use enchant with aspell support.</flag>
 	</use>
 </pkgmetadata>

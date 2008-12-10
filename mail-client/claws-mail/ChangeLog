@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.99 2008/12/09 18:26:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.100 2008/12/10 23:56:33 ssuominen Exp $
+
+  10 Dec 2008; <ssuominen@gentoo.org> claws-mail-3.6.1-r1.ebuild:
+  Because eutils.eclass is broken with EAPI=1 and doesn't support disabled
+  default USE flags, we use an alternative approach. Rename USE spell to USE
+  aspell.
 
   09 Dec 2008; <ssuominen@gentoo.org> claws-mail-3.6.1-r1.ebuild:
   Disable spell USE flag by default because it pulls in enchant which has
