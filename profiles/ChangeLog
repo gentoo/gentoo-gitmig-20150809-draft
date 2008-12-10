@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2142 2008/12/10 11:47:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2143 2008/12/10 16:53:10 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Dec 2008; <ssuominen@gentoo.org> package.mask:
+  Unmask media-sound/potamus which builds again.
 
   10 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Remove pam_sha512 masking.

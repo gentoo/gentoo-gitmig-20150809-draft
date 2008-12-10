@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9265 2008/12/10 11:47:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9266 2008/12/10 16:53:10 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -601,8 +601,6 @@ games-board/glchess
 # bugs. The following packages are masked now because they are incompatible,
 # and have not yet been fixed. (~arch versions only, because stable versions
 # will build against current stable ffmpeg)
-# sound herd, bug 218099:
-media-sound/potamus
 # voip herd, bug 218102:
 media-libs/mediastreamer
 # no herd, bug 218105:
