@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.24.2-r1.ebuild,v 1.1 2008/12/10 18:40:54 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.24.2-r1.ebuild,v 1.2 2008/12/10 18:58:44 ford_prefect Exp $
 
 inherit gnome2 flag-o-matic libtool
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="crypt dbus debug hal ipv6 kerberos krb4 ldap mono networkmanager nntp pda profile ssl"
+IUSE="crypt dbus hal kerberos krb4 ldap mono networkmanager nntp pda profile ssl"
 
 # Pango dependency required to avoid font rendering problems
 RDEPEND=">=dev-libs/glib-2.16
@@ -61,13 +61,13 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
 ELTCONF="--reverse-deps"
+GCONF_DEBUG="no"
 
 pkg_setup() {
 	G2CONF="--without-kde-applnk-path
 		--enable-plugins=experimental
 		$(use_enable ssl nss)
 		$(use_enable ssl smime)
-		$(use_enable ipv6)
 		$(use_enable mono)
 		$(use_enable nntp)
 		$(use_enable pda pilot-conduits)
