@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.37 2008/06/09 14:38:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.38 2008/12/10 22:09:48 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_BRANCH="master"
 	inherit git
 else
-	SRC_URI="http://roy.marples.name/${PN}/${P}.tar.bz2
+	SRC_URI="http://roy.marples.name/downloads/${PN}/${P}.tar.bz2
 		mirror://gentoo/${P}.tar.bz2
 		http://dev.gentoo.org/~cardoe/files/${P}.tar.bz2
 		http://dev.gentoo.org/~vapier/dist/${P}.tar.bz2"
@@ -30,7 +30,8 @@ RDEPEND="virtual/init
 	ncurses? ( sys-libs/ncurses )
 	pam? ( virtual/pam )
 	>=sys-apps/baselayout-2.0.0
-	!<sys-fs/udev-118-r2"
+	!<sys-fs/udev-133
+	!<sys-apps/sysvinit-2.86-r11"
 DEPEND="${RDEPEND}
 	virtual/os-headers"
 
@@ -263,6 +264,17 @@ pkg_postinst() {
 	if [[ -d ${ROOT}/etc/modules.autoload.d ]] ; then
 		ewarn "/etc/modules.autoload.d is no longer used.  Please convert"
 		ewarn "your files to /etc/conf.d/modules and delete the directory."
+	else
+		if [[ ! -e ${ROOT}/etc/runlevels/sysinit/devfs ]] ; then
+			mkdir -p "${ROOT}"/etc/runlevels/sysinit
+			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/sysinit/* \
+				"${ROOT}"/etc/runlevels/sysinit
+		fi
+		if [[ ! -e ${ROOT}/etc/runlevels/shutdown/mount-ro ]] ; then
+			mkdir -p "${ROOT}"/etc/runlevels/shutdown
+			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/shutdown/* \
+				"${ROOT}"/etc/runlevels/shutdown
+		fi
 	fi
 
 	elog "You should now update all files in /etc, using etc-update"
