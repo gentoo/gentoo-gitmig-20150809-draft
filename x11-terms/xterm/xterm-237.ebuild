@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-237.ebuild,v 1.4 2008/12/08 21:39:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-237.ebuild,v 1.5 2008/12/10 03:51:46 solar Exp $
 
 inherit flag-o-matic
 
@@ -55,6 +55,7 @@ src_compile() {
 		--enable-logging \
 		--enable-dabbrev \
 		--with-app-defaults=${DEFAULTS_DIR} \
+		--x-libraries=${ROOT}/usr/lib \
 		$(use_enable toolbar) \
 		$(use_enable truetype freetype) \
 		$(use_enable unicode luit) $(use_enable unicode mini-luit) \

@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.243 2008/12/08 21:39:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.244 2008/12/10 03:51:46 solar Exp $
+
+  10 Dec 2008; <solar@gentoo.org> xterm-237.ebuild:
+  make sure we link to the right libs when cross compiling
 
   08 Dec 2008; Brent Baude <ranger@gentoo.org> xterm-237.ebuild:
   stable ppc64, bug 227525
