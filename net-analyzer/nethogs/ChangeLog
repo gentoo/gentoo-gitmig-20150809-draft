@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nethogs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.11 2008/12/05 11:45:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.12 2008/12/10 22:44:15 maekke Exp $
+
+  10 Dec 2008; Markus Meier <maekke@gentoo.org> nethogs-0.6.1_pre2.ebuild:
+  amd64/x86 stable, bug #249898
 
 *nethogs-0.6.1_pre2 (05 Dec 2008)
 
