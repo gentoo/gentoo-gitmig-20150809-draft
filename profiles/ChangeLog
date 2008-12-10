@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2143 2008/12/10 16:53:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2144 2008/12/10 22:24:57 zzam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Dec 2008; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Mask udev-135-r2 for redesign of init-script.
 
   10 Dec 2008; <ssuominen@gentoo.org> package.mask:
   Unmask media-sound/potamus which builds again.
