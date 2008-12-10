@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r5.ebuild,v 1.10 2008/06/27 10:13:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r5.ebuild,v 1.11 2008/12/10 15:38:00 ssuominen Exp $
 
 inherit eutils elisp-common
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2 mirror://gentoo/${P}-exit
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm hppa ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="oss nas esd motif X gtk vorbis tk slang alsa arts jack portaudio emacs ao speex flac ncurses"
+IUSE="oss nas esd motif X gtk vorbis tk slang alsa arts jack emacs ao speex flac ncurses"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.0 )
 	emacs? ( virtual/emacs )
@@ -28,7 +28,6 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5.0 )
 	slang? ( >=sys-libs/slang-1.4 )
 	arts? ( kde-base/arts )
 	jack? ( media-sound/jack-audio-connection-kit )
-	portaudio? ( media-libs/portaudio )
 	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
 	flac? ( >=media-libs/flac-1.1.2 )
 	speex? ( >=media-libs/speex-1.1.5 )
@@ -75,7 +74,6 @@ src_compile() {
 	use esd && audios="${audios},esd"
 	use arts && audios="${audios},arts"
 	use jack && audios="${audios},jack"
-	use portaudio && use !ppc && audios="${audios},portaudio"
 	use ao && audios="${audios},ao"
 
 	if use nas; then
@@ -158,7 +156,7 @@ pkg_postinst() {
 	fi
 
 	if use sparc; then
-		ewarn "sparc support is experimental. oss, alsa, esd, and portaudio do not work."
+		ewarn "sparc support is experimental. oss, alsa, and esd do not work."
 		ewarn "-Ow (save to wave file) does..."
 	fi
 }
