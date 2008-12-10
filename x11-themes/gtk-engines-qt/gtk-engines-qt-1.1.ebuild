@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-1.1.ebuild,v 1.3 2008/11/15 21:46:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-1.1.ebuild,v 1.4 2008/12/10 12:37:25 scarabeus Exp $
 
 EAPI="2"
 
-NEED_KDE=":4.1"
+NEED_KDE="4.1"
 KDE_LINGUAS="bg cs de es fr it nn ru sv tr"
 inherit kde4-base
 
