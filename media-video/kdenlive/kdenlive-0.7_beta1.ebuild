@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.7_beta1.ebuild,v 1.1 2008/10/16 20:59:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.7_beta1.ebuild,v 1.2 2008/12/10 12:42:25 scarabeus Exp $
 
 EAPI="2"
 
-NEED_KDE=":4.1"
+NEED_KDE="4.1"
 KDE_LINGUAS="de zh"
 inherit kde4-base
 
@@ -21,6 +21,6 @@ DEPEND=">=media-libs/mlt-0.3.0[ffmpeg,-qt3]
 	>=media-libs/mlt++-0.3.0
 	media-video/ffmpeg[X,sdl]"
 RDEPEND="${DEPEND}
-	kde-base/kdebase-data${NEED_KDE}"
+	>=kde-base/kdebase-data-${NEED_KDE}"
 
 S="${WORKDIR}"/"${PN}-${PV/_/}"
