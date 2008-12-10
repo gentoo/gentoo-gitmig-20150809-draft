@@ -38,6 +38,11 @@
       package will not be redistributable, as it links to the non-GPL compatible
       RealPlayer.
     </flag>
+    <flag name="semantic-desktop">
+            Semantic desktop allows for storage of digital informationand its
+            metadata to allow the user to express his personal mental models, making
+            all information become intuitively accessible
+    </flag>
     <flag name="visualization">Support visualization plugins through <pkg>media-libs/libvisual</pkg></flag>
   </use>
 </pkgmetadata>

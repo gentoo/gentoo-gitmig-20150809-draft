@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.290 2008/12/08 14:07:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.291 2008/12/10 21:39:17 scarabeus Exp $
+
+*amarok-2.0 (10 Dec 2008)
+
+  10 Dec 2008; <scarab@gentoo.org> metadata.xml, +amarok-2.0.ebuild:
+  Version bump.
 
   08 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org> amarok-1.90-r1.ebuild:
   Make amarok optionaly depend on qt-opengl
