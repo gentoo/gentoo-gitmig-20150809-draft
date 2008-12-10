@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.10.2.ebuild,v 1.5 2008/10/25 12:15:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.10.2.ebuild,v 1.6 2008/12/10 16:01:37 loki_val Exp $
 
 inherit gnome2 mono eutils
 
@@ -29,6 +29,7 @@ RDEPEND=">=dev-lang/mono-1.2
 		 eds? ( =dev-libs/gmime-2.2* )
 		 galago? ( =dev-dotnet/galago-sharp-0.5* )"
 DEPEND="${RDEPEND}
+		  app-text/gnome-doc-utils
 		  dev-libs/libxml2
 		  sys-devel/gettext
 		  dev-util/pkgconfig

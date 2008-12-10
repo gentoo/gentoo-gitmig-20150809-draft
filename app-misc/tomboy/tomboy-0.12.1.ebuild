@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.12.1.ebuild,v 1.6 2008/12/03 11:02:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.12.1.ebuild,v 1.7 2008/12/10 16:01:37 loki_val Exp $
 
 EAPI=2
 
@@ -33,6 +33,7 @@ RDEPEND=">=dev-lang/mono-2
 		 >=gnome-base/libgnomeprintui-2.18.3
 		 >=gnome-base/libgnomeprint-2.2"
 DEPEND="${RDEPEND}
+		  app-text/gnome-doc-utils
 		  dev-libs/libxml2[python]
 		  sys-devel/gettext
 		  dev-util/pkgconfig
