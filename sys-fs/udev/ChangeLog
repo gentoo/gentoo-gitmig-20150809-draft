@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.425 2008/12/03 15:31:11 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.426 2008/12/10 22:29:09 zzam Exp $
+
+*udev-135-r2 (10 Dec 2008)
+
+  10 Dec 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-135-r2.confd, +files/udev-135-r2.initd,
+  +files/udev-dev-tarball-135-r2.initd, +files/udev-mount-135-r2.initd,
+  +files/udev-start-135-r2.sh, +files/udev-stop-135-r2.sh,
+  +udev-135-r2.ebuild:
+  Redesign of addons/init-scripts. Moved code into init-scripts and split
+  into smaller parts. Source init-scripts from addons for older baselayouts.
 
 *udev-135-r1 (03 Dec 2008)
 
