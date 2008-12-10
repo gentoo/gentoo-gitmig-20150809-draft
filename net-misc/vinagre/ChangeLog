@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.18 2008/12/10 17:26:53 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.19 2008/12/10 22:17:55 maekke Exp $
+
+  10 Dec 2008; Markus Meier <maekke@gentoo.org> vinagre-0.5.2.ebuild:
+  x86 stable, bug #250314
 
   10 Dec 2008; Tobias Heinlein <keytoaster@gentoo.org> vinagre-0.5.2.ebuild:
   amd64 stable wrt security bug #250314
