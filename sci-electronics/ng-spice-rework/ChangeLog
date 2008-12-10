@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/ng-spice-rework
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.17 2007/05/26 20:57:56 calchan Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.18 2008/12/10 16:27:25 calchan Exp $
+
+*ng-spice-rework-18 (10 Dec 2008)
+
+  10 Dec 2008; Denis Dupeyron <calchan@gentoo.org>
+  +files/ng-spice-rework-18-src_makefile.patch, +ng-spice-rework-18.ebuild:
+  Version bump, bug #249949.
 
 *ng-spice-rework-17-r2 (26 May 2007)
 
