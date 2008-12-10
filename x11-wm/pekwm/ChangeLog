@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.43 2008/11/30 18:35:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.44 2008/12/10 14:09:27 yngwin Exp $
+
+*pekwm-0.1.8 (10 Dec 2008)
+
+  10 Dec 2008; Ben de Groot <yngwin@gentoo.org>
+  +files/pekwm-0.1.8-mplayer.patch, +pekwm-0.1.8.ebuild:
+  Version bump, with added upstream patch for mplayer fullscreen, see bug 246356
 
   30 Nov 2008; Raúl Porcel <armin76@gentoo.org> pekwm-0.1.7.ebuild:
   sparc stable wrt #245246
@@ -160,9 +166,9 @@
 *pekwm-0.1.2 (19 Nov 2002)
 
   16 Feb 2002; Brad Cowan <bcowan@gentoo.org>:
-  
+
   added pkgconfig dependency to check for xft bug# 14664.
-  
+
   19 Nov 2002; Brad Cowan <bcowan@gentoo.org> pekwm-0.1.2.ebuild,
   ChangeLog, files/digest-pekwm-0.1.2 :
 
