@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.52 2008/12/06 01:01:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.53 2008/12/10 19:13:47 betelgeuse Exp $
+
+  10 Dec 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Add weisso as proxy maintainer.
 
 *mod_jk-1.2.27 (06 Dec 2008)
 
