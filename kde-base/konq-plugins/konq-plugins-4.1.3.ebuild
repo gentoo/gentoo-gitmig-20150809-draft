@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-4.1.3.ebuild,v 1.2 2008/11/16 07:52:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-4.1.3.ebuild,v 1.3 2008/12/10 12:44:16 scarabeus Exp $
 
 EAPI="2"
 
 KDE_LINGUAS="af ar be bg bn br ca cs cy da de el en_GB eo es et eu fa fi fr fy
 ga gl he hi hr hu is it ja kk km ko ku lt lv mk ml ms nds ne nl nn oc pa pl
 pt pt_BR ro ru se sk sl sv ta tg th tr uk uz vi xh zh_CN zh_TW"
-NEED_KDE=":4.1"
+NEED_KDE="4.1"
 inherit kde4-base
 
 DESCRIPTION="Various plugins for konqueror"
