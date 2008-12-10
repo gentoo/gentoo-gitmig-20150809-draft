@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/powerdevil/powerdevil-1.4.2.ebuild,v 1.1 2008/12/07 19:50:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/powerdevil/powerdevil-1.4.2.ebuild,v 1.2 2008/12/10 12:29:16 scarabeus Exp $
 
 EAPI="2"
 
-NEED_KDE=":4.1"
+NEED_KDE="4.1"
 inherit kde4-base
 MY_P="${P}-kde4.1.3"
 

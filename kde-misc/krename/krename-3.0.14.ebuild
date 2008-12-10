@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.0.14.ebuild,v 1.8 2007/05/15 16:16:05 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.0.14.ebuild,v 1.9 2008/12/10 12:34:37 scarabeus Exp $
 
 inherit kde
 
@@ -25,7 +25,7 @@ for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-PATCHES="${FILESDIR}/krename-3.0.14-desktop-entry-diff"
+PATCHES=( "${FILESDIR}/krename-3.0.14-desktop-entry-diff" )
 
 src_unpack() {
 	kde_src_unpack
@@ -41,7 +41,7 @@ src_install() {
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins ${DISTDIR}/${DOC}
+		doins "${DISTDIR}"/${DOC}
 	fi
 }
 
