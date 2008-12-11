@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.1 2008/11/13 23:23:21 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.2 2008/12/11 16:01:13 spock Exp $
 
 EAPI="1"
 
@@ -41,7 +41,8 @@ RDEPEND="gpm? ( sys-libs/gpm )
 	>=media-libs/jpeg-6b
 	>=sys-apps/baselayout-1.9.4-r5
 	app-arch/cpio
-	media-gfx/fbgrab"
+	media-gfx/fbgrab
+	!sys-apps/lcdsplash"
 DEPEND="${RDEPEND}
 	>=dev-libs/klibc-1.5
 	dev-util/pkgconfig"

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.148 2008/11/13 23:23:20 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.149 2008/12/11 16:01:13 spock Exp $
+
+  11 Dec 2008; Michał Januszewski <spock@gentoo.org>
+  splashutils-1.5.4.2.ebuild, splashutils-1.5.4.3.ebuild:
+  Add a block on sys-apps/lcdsplash (bug #248315).
 
 *splashutils-1.5.4.3 (13 Nov 2008)
 
