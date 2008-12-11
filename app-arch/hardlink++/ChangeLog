@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/hardlink++
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink++/ChangeLog,v 1.4 2007/02/08 20:58:36 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/hardlink++/ChangeLog,v 1.5 2008/12/11 21:05:44 robbat2 Exp $
+
+  11 Dec 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/hardlink++-0.02-gcc-43-compile-fix.patch, hardlink++-0.02.ebuild:
+  GCC4.3 compile fix per bug #250603. Repoman cleanup.
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
