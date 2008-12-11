@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.1.1.ebuild,v 1.4 2008/08/31 04:56:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.1.1.ebuild,v 1.5 2008/12/11 10:52:32 ssuominen Exp $
 
 # Note: video support in linphone relies on swscaler being disabled
 #       in ffmpeg.  this is because the video code in linphone is old
@@ -26,7 +26,7 @@ RDEPEND="dev-libs/glib
 	net-dns/bind-tools
 	>=net-libs/libosip-3.0.3
 	>=net-libs/libeXosip-3.0.3
-	>=media-libs/speex-1.1.12
+	>=media-libs/speex-1.2_beta3
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
 	gtk? (
 		>=x11-libs/gtk+-2

@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.17 2008/08/31 04:56:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.18 2008/12/11 10:52:32 ssuominen Exp $
+
+  11 Dec 2008; <ssuominen@gentoo.org> linphone-2.1.1.ebuild:
+  Fix speex dep. wrt #233381.
 
   31 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
   linphone-2.1.1.ebuild:
