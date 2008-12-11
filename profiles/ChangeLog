@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2151 2008/12/11 15:59:38 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2152 2008/12/11 20:08:30 coldwind Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Dec 2008; Santiago M. Mola <coldwind@gentoo.org> package.mask:
+  Unmask app-shells/bash-completion (bug #250027).
 
   11 Dec 2008; Jim Ramsay <lack@gentoo.org> package.mask:
   Masking live x11-wm/fluxbox-9999 ebuild
