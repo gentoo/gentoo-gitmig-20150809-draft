@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/kccmp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.13 2008/11/08 15:30:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/kccmp/ChangeLog,v 1.14 2008/12/11 01:08:14 mpagano Exp $
+
+  11 Dec 2008; Michael Pagano <mpagano@gentoo.org> kccmp-0.2-r1.ebuild:
+  Adding boost dependency. Thanks to xlion.
 
   08 Nov 2008; Markus Meier <maekke@gentoo.org> kccmp-0.2-r1.ebuild:
   amd64/x86 stable, bug #245566
