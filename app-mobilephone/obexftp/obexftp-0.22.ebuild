@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.7 2008/11/30 18:52:53 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.8 2008/12/11 20:25:53 mrness Exp $
 
 inherit eutils perl-module flag-o-matic python
 
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 
 	epatch "${FILESDIR}"/${P}-ruby-libpath.patch
+	epatch "${FILESDIR}"/${P}-bluetooth.patch
 }
 
 src_compile() {
