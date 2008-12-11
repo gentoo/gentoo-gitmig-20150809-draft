@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9269 2008/12/11 01:02:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9270 2008/12/11 07:16:16 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -595,16 +595,6 @@ net-irc/bitchx
 # Michael Sterrett <mr_bones_@gentoo.org> (23 Jun 2008)
 # Now a part of gnome-games
 games-board/glchess
-
-# Ben de Groot <yngwin@gentoo.org> (20 Jun 2008)
-# == The great ffmpeg new headers mask (bug #214740) ==
-# Maintainers have been given ample advance warning of the change in headers
-# location of media-video/ffmpeg-0.4.9_p20080326, see bug 214740 and dependant
-# bugs. The following packages are masked now because they are incompatible,
-# and have not yet been fixed. (~arch versions only, because stable versions
-# will build against current stable ffmpeg)
-# voip herd, bug 218102:
-media-libs/mediastreamer
 
 # Tony Vroon <chainsaw@gentoo.org> (08 May 2008)
 # Beta driver, unsupported by nVidia
