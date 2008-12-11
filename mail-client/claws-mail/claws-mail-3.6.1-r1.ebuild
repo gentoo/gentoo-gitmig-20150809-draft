@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.6.1-r1.ebuild,v 1.4 2008/12/10 23:56:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.6.1-r1.ebuild,v 1.5 2008/12/11 00:02:50 ssuominen Exp $
 
 inherit eutils multilib
 
@@ -21,7 +21,7 @@ COMMONDEPEND=">=x11-libs/gtk+-2.6
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	crypt? ( >=app-crypt/gpgme-1.1.1 )
 	dillo? ( www-client/dillo )
-	aspell? ( >=app-text/enchant-1.0.0 )
+	aspell? ( >=app-text/enchant-1.4.2 )
 	kde? ( kde-base/kdelibs )
 	imap? ( >=net-libs/libetpan-0.57 )
 	nntp? ( >=net-libs/libetpan-0.57 )
