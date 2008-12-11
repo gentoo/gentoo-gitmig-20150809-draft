@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.1-r2.ebuild,v 1.1 2008/11/09 00:19:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.1-r2.ebuild,v 1.2 2008/12/11 12:44:33 caster Exp $
 
 # don't depend on itself
 JAVA_ANT_DISABLE_ANT_CORE_DEP=true
@@ -55,8 +55,8 @@ src_compile() {
 		bsyscp="-Dbuild.sysclasspath=ignore"
 	fi
 
-	./build.sh ${bsyscp} jars-core internal_dist $(use_doc javadocs) \
-		|| die "build failed"
+	CLASSPATH="$(java-config -t)" ./build.sh ${bsyscp} jars-core internal_dist \
+		$(use_doc javadocs) || die "build failed"
 }
 
 src_install() {
