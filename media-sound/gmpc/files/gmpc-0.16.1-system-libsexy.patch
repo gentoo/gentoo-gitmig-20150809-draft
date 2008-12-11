@@ -1,0 +1,73 @@
+diff -u -Nru a/configure.ac b/configure.ac
+--- a/configure.ac	2008-09-24 21:11:44.000000000 +0200
++++ b/configure.ac	2008-12-11 16:45:44.000000000 +0100
+@@ -130,6 +130,10 @@
+ AC_SUBST(gthread_LIBS)
+ AC_SUBST(gthread_CFLAGS)
+ 
++# libsexy
++PKG_CHECK_MODULES([libsexy], libsexy)
++AC_SUBST(libsexy_LIBS)
++AC_SUBST(libsexy_CFLAGS)
+ 
+ # sm
+ if test x${enable_sm} = xyes; then
+diff -u -Nru a/src/browsers/playlist3-current-playlist-browser.c b/src/browsers/playlist3-current-playlist-browser.c
+--- a/src/browsers/playlist3-current-playlist-browser.c	2008-09-24 21:11:43.000000000 +0200
++++ b/src/browsers/playlist3-current-playlist-browser.c	2008-12-11 16:47:14.000000000 +0100
+@@ -37,7 +37,7 @@
+ #include "gmpc-mpddata-model-playlist.h"
+ #include "gmpc-mpddata-treeview.h"
+ #include "eggcolumnchooserdialog.h"
+-#include "sexy-icon-entry.h"
++#include <libsexy/sexy-icon-entry.h>
+ #include "playlist3-messages.h"
+ 
+ #include "playlist3-playlist-editor.h"
+diff -u -Nru a/src/browsers/playlist3-tag2-browser.c b/src/browsers/playlist3-tag2-browser.c
+--- a/src/browsers/playlist3-tag2-browser.c	2008-09-24 21:11:43.000000000 +0200
++++ b/src/browsers/playlist3-tag2-browser.c	2008-12-11 16:47:34.000000000 +0100
+@@ -17,7 +17,7 @@
+ #include "misc.h"
+ #include "gmpc-mpddata-treeview.h"
+ #include "gmpc-mpddata-model.h"
+-#include "sexy-icon-entry.h"
++#include <libsexy/sexy-icon-entry.h>
+ #include <libmpd/libmpd-internal.h>
+ 
+ /**
+diff -u -Nru a/src/Makefile.am b/src/Makefile.am
+--- a/src/Makefile.am	2008-09-24 21:11:43.000000000 +0200
++++ b/src/Makefile.am	2008-12-11 16:46:34.000000000 +0100
+@@ -36,7 +36,6 @@
+ 	egg/eggaccelerators.c\
+ 	TreeSearchWidget.c\
+ 	qlib/qasyncqueue.c\
+-	sexy-icon-entry.c\
+ 	edit_markup.c
+ 
+ gmpc_LDADD=\
+@@ -92,6 +91,7 @@
+ 	@gmodule_LIBS@\
+ 	@libglade_LIBS@\
+ 	@gthread_LIBS@\
++	@libsexy_LIBS@\
+ 	@sm_LIBS@
+ 
+ 
+@@ -111,6 +111,7 @@
+ 	@gmodule_CFLAGS@\
+ 	@libglade_CFLAGS@\
+ 	@gthread_CFLAGS@\
++	@libsexy_CFLAGS@\
+ 	@sm_CFLAGS@\
+ 	-DPACKAGE_LIB_DIR=\""$(pkglibdir)"\" \
+ 	$(MAYBE_CFLAGS)
+@@ -149,7 +150,6 @@
+ 		egg/eggcolumnmodel.h\
+ 		revision.h\
+ 		qlib/qasyncqueue.h\
+-		sexy-icon-entry.h\
+ 		egg/eggcellrendererkeys.h\
+ 		egg/eggaccelerators.h
+ 

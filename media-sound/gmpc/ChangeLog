@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.44 2008/12/11 12:38:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.45 2008/12/11 16:09:30 angelos Exp $
+
+  11 Dec 2008; Christoph Mende <angelos@gentoo.org>
+  +files/gmpc-0.16.1-system-libsexy.patch, gmpc-0.16.1.ebuild:
+  Removed usage of internal libsexy
 
   11 Dec 2008; Christoph Mende <angelos@gentoo.org> gmpc-0.15.5.0.ebuild,
   gmpc-0.16.1.ebuild:
