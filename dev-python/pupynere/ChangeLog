@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pupynere
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pupynere/ChangeLog,v 1.1 2008/12/11 18:55:51 bicatali Exp $
+
+*pupynere-1.0.6 (11 Dec 2008)
+
+  11 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +pupynere-1.0.6.ebuild:
+  Initial import. Closing bug #163002
+
