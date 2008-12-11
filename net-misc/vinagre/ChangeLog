@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.20 2008/12/11 17:56:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.21 2008/12/11 21:25:09 ranger Exp $
+
+  11 Dec 2008; Brent Baude <ranger@gentoo.org> vinagre-0.5.2.ebuild:
+  Marking vinagre-0.5.2 ppc64 for bug 250314
 
   11 Dec 2008; Jeroen Roovers <jer@gentoo.org> vinagre-0.5.2.ebuild:
   Stable for HPPA (bug #250314).
