@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/exempi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.4 2008/12/04 05:14:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.5 2008/12/11 10:12:35 armin76 Exp $
+
+  11 Dec 2008; Raúl Porcel <armin76@gentoo.org> exempi-2.0.2.ebuild:
+  Add ~alpha/~ia64 wrt #242812
 
   04 Dec 2008; Jeroen Roovers <jer@gentoo.org> exempi-2.0.2.ebuild:
   Marked ~hppa (bug #242812).
