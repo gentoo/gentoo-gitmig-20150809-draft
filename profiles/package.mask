@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9272 2008/12/11 08:28:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9273 2008/12/11 09:30:32 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -315,10 +315,6 @@ app-crypt/truecrypt
 # Federico Ferri <mescalinum@gentoo.org> (27 Oct 2008)
 # Until Tcl-8.5 gets unmasked
 >=dev-libs/newt-0.52.10
-
-# Mike Frysinger <vapier@gentoo.org> (27 Oct 2008)
-# Does not work with latest DirectFB and ffmpeg #242036
-dev-libs/DirectFB-extra
 
 # Jesus Rivero <neurogeek@gentoo.org> (26 Oct 2008)
 # Masked for removal in 30 days. This package is
