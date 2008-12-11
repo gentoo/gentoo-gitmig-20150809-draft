@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.8_rc1.ebuild,v 1.1 2008/09/13 20:39:00 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.8_rc1.ebuild,v 1.2 2008/12/11 15:36:30 spock Exp $
 
-inherit eutils
+inherit autotools eutils
 
 IUSE="gif gtk jpeg ncurses python readline spell ssl threads zlib"
 
@@ -35,6 +35,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gtkutil-button-decl.patch"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+	eautoreconf
 }
 
 src_compile() {

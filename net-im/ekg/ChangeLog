@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ekg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.41 2008/09/13 20:39:00 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.42 2008/12/11 15:36:30 spock Exp $
+
+  11 Dec 2008; Michał Januszewski <spock@gentoo.org>
+  +files/ekg-1.8_rc1-as-needed.patch, ekg-1.8_rc1.ebuild:
+  Add a fix for bug #247993.
 
 *ekg-1.8_rc1 (13 Sep 2008)
 
