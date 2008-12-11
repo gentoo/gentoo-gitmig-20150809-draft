@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/kdetv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.37 2008/06/13 20:24:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.38 2008/12/11 22:27:54 scarabeus Exp $
+
+  11 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org> kdetv-0.8.9.ebuild:
+  Update homepage. Per bug #235415
 
   13 Jun 2008; Diego Pettenò <flameeyes@gentoo.org>
   -files/kdetv-0.8.9-bindnow.patch, kdetv-0.8.9.ebuild:

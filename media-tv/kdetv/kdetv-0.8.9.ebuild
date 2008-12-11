@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9.ebuild,v 1.10 2008/06/13 20:24:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9.ebuild,v 1.11 2008/12/11 22:27:54 scarabeus Exp $
 
 LANGS="bg ca br da de cs cy el es et fi ga fr gl hu is it lt nb mt nl pa pl pt ro ru rw ta sr sv tr en_GB pt_BR zh_CN sr@Latn"
 LANGS_DOC="da et fr it nl pt ru sv"
@@ -10,7 +10,7 @@ USE_KEG_PACKAGING=1
 inherit kde flag-o-matic
 
 DESCRIPTION="A TV application for KDE"
-HOMEPAGE="http://www.kdetv.org/"
+HOMEPAGE="http://www.kde-apps.org/content/show.php?content=11602"
 SRC_URI="http://dziegel.free.fr/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 
