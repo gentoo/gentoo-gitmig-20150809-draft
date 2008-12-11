@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.0_beta1.ebuild,v 1.1 2008/12/05 11:38:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.0_beta1.ebuild,v 1.2 2008/12/11 23:43:53 bicatali Exp $
 
 EAPI=1
 NEED_PYTHON=2.4
@@ -55,9 +55,6 @@ scipy_fortran_setup() {
 		*)	eerror "Unknown fortran compiler: ${FORTRANC}"
 			die "scipy_fortran_setup failed" ;;
 	esac
-
-	# when fortran flags are set, pic is removed.
-	use amd64 && [[ -n ${FFLAGS} ]] && FFLAGS="${FFLAGS} -fPIC"
 	export SCIPY_FCONFIG="config_fc --fcompiler=${fc} --noopt --noarch"
 }
 
@@ -111,6 +108,8 @@ src_unpack() {
 }
 
 src_compile() {
+	# when fortran flags are set, pic is removed.
+	use amd64 && [[ -n ${FFLAGS} ]] && FFLAGS="${FFLAGS} -fPIC"
 	distutils_src_compile ${SCIPY_FCONFIG}
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.36 2008/12/05 11:38:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.37 2008/12/11 23:43:53 bicatali Exp $
+
+  11 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  scipy-0.6.0-r5.ebuild, scipy-0.7.0_beta1.ebuild:
+  Moved pic flag to src_compile
 
 *scipy-0.7.0_beta1 (05 Dec 2008)
 *scipy-0.6.0-r5 (05 Dec 2008)
