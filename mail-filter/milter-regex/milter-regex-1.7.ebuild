@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.7.ebuild,v 1.2 2008/07/24 16:08:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.7.ebuild,v 1.3 2008/12/11 20:59:13 mrness Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	epatch "${FILESDIR}"/${P}-rules.patch # fix a typo in upstream sample rules
+	epatch "${FILESDIR}"/${P}-yacc.patch
 }
 
 src_compile() {
