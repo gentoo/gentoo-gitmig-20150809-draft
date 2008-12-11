@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/juffed
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.6 2008/11/06 15:46:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.7 2008/12/11 21:16:23 yngwin Exp $
+
+  11 Dec 2008; Ben de Groot <yngwin@gentoo.org> -juffed-0.3.ebuild,
+  juffed-0.4.ebuild:
+  Drop old. EAPI 1->2, adding qt4 use dep on qscintilla. Fixes bug 250642.
 
 *juffed-0.4 (06 Nov 2008)
 
@@ -26,8 +30,8 @@
 
   07 Jul 2008; Ben de Groot <yngwin@gentoo.org>
   +juffed-0.3_beta20080705.ebuild:
-  Version bump. This beta2 renamed to date, to prevent it looking like 
-  a downgrade from the previous versioning cockup. Next time I will do 
+  Version bump. This beta2 renamed to date, to prevent it looking like
+  a downgrade from the previous versioning cockup. Next time I will do
   better - promise!
 
 *juffed-0.3_beta20080421 (04 Jun 2008)
