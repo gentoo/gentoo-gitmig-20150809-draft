@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.549 2008/11/16 05:04:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.550 2008/12/11 13:32:29 scarabeus Exp $
+
+  11 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/kdelibs-4.1.3-gcc4.1.patch, kdelibs-4.1.3-r1.ebuild:
+  Fix bug #246568
 
   15 Nov 2008; Mike Frysinger <vapier@gentoo.org> kdelibs-4.1.3.ebuild,
   kdelibs-4.1.3-r1.ebuild:

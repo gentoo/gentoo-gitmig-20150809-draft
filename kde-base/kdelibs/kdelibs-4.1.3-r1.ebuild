@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.1.3-r1.ebuild,v 1.2 2008/11/16 05:04:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.1.3-r1.ebuild,v 1.3 2008/12/11 13:32:30 scarabeus Exp $
 
 EAPI="2"
 
@@ -74,7 +74,8 @@ RDEPEND="${COMMONDEPEND}
 	x11-apps/iceauth
 "
 
-PATCHES=( "${FILESDIR}/${PN}-4.1.1-cmake-modules.patch" "${FILESDIR}/${PV}-cmake-config.patch" )
+PATCHES=( "${FILESDIR}/${PN}-4.1.1-cmake-modules.patch" "${FILESDIR}/${PV}-cmake-config.patch"
+	"${FILESDIR}/${P}-gcc4.1.patch" )
 
 src_configure() {
 	if use zeroconf; then
