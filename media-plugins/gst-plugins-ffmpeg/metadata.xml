@@ -3,8 +3,4 @@
 <pkgmetadata>
 <herd>gstreamer</herd>
 <herd>gnome</herd>
-<maintainer>
-	<email>loki_val@gentoo.org</email>
-	<name>Peter Alfredsen</name>
-</maintainer>
 </pkgmetadata>
