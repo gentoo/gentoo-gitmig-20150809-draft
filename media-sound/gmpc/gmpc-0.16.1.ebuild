@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.16.1.ebuild,v 1.2 2008/10/14 23:23:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.16.1.ebuild,v 1.3 2008/12/11 12:38:57 angelos Exp $
 
 EAPI=1
+
+inherit gnome2-utils
 
 DESCRIPTION="A GTK+2 client for the Music Player Daemon"
 HOMEPAGE="http://gmpcwiki.sarine.nl/index.php/GMPC"
@@ -32,4 +34,16 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

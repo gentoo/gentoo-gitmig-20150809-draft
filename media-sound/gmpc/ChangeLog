@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.43 2008/10/14 23:23:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.44 2008/12/11 12:38:57 angelos Exp $
+
+  11 Dec 2008; Christoph Mende <angelos@gentoo.org> gmpc-0.15.5.0.ebuild,
+  gmpc-0.16.1.ebuild:
+  Updating icon cache after installation, bug #250534
 
   14 Oct 2008; Christoph Mende <angelos@gentoo.org> gmpc-0.16.1.ebuild:
   Fixed libmpd dependency, bug 238820
