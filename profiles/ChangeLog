@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2149 2008/12/11 09:38:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2150 2008/12/11 10:02:35 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Dec 2008; <ssuominen@gentoo.org> package.mask:
+  Mask dev-php5/ffmpeg-php for removal in 30 days by treecleaners and media
+  because it doesn't build wrt #242050.
 
   11 Dec 2008; <ssuominen@gentoo.org> package.mask:
   Mask net-voip/linphone for removal in 30 days by treecleaners and media,

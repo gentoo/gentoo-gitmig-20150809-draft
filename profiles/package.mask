@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9274 2008/12/11 09:38:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9275 2008/12/11 10:02:35 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (11 Dec 2008)
+# Doesn't build against FFMPEG, bug 242050.
+# Masked for removal by treecleaners and media in 30 days.
+dev-php5/ffmpeg-php
 
 # Samuli Suominen <ssuominen@gentoo.org> (11 Dec 2008)
 # Doesn't build against FFMPEG, bugs 189774 and 218102.
