@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.3 2008/02/11 17:54:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.4 2008/12/11 07:14:22 ssuominen Exp $
+
+  11 Dec 2008; <ssuominen@gentoo.org> mediastreamer-2.1.0.ebuild:
+  Remove USE video which tries to use img_convert instead of swscaler for
+  ffmpeg. Also it looks for the headers from wrong place. This allows
+  unmasking the package.
 
   11 Feb 2008; Mike Frysinger <vapier@gentoo.org>
   mediastreamer-2.1.0.ebuild:
