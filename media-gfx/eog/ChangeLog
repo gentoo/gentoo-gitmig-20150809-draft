@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.218 2008/12/04 05:15:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.219 2008/12/11 10:14:54 armin76 Exp $
+
+  11 Dec 2008; Raúl Porcel <armin76@gentoo.org> eog-2.24.2.ebuild:
+  Add ~alpha/~ia64 wrt #242812
 
   04 Dec 2008; Jeroen Roovers <jer@gentoo.org> eog-2.24.2.ebuild:
   Marked ~hppa (bug #242812).
