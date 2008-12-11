@@ -1,5 +1,55 @@
---- src/Core/Banshee.Core/Banshee.Streaming/StreamTagger.cs	2008-10-06 10:27:31.000000000 -0600
-+++ src/Core/Banshee.Core/Banshee.Streaming/StreamTagger.cs.new	2008-12-05 16:01:22.513964625 -0700
+--- src/Core/Banshee.Core/Banshee.Streaming/SaveTrackMetadataJob.cs.orig	2008-12-10 16:03:27.913232707 -0700
++++ src/Core/Banshee.Core/Banshee.Streaming/SaveTrackMetadataJob.cs	2008-12-10 16:16:00.617267829 -0700
+@@ -29,6 +29,7 @@
+ using System;
+ using Mono.Unix;
+ 
++using Banshee.Base;
+ using Banshee.Collection;
+ using Banshee.Configuration.Schema;
+ 
+@@ -86,24 +87,26 @@
+             file.Tag.DiscCount = (uint)track.DiscCount;
+             file.Tag.Year = (uint)track.Year;
+             file.Tag.BeatsPerMinute = (uint)track.Bpm;
+-            
+-            SaveIsCompilation (file.Tag, track.IsCompilation);
++
++            SaveIsCompilation (file, track.IsCompilation);
+             file.Save ();
+         }
+         
+-        private static void SaveIsCompilation (TagLib.Tag tag, bool is_compilation)
++        private static void SaveIsCompilation (TagLib.File file, bool is_compilation)
+         {
+-            TagLib.Id3v2.Tag id3v2_tag = tag as TagLib.Id3v2.Tag;
+-            if (id3v2_tag != null) {
+-                id3v2_tag.IsCompilation = is_compilation;
+-                return;
+-            }
++            try {
++                 TagLib.Id3v2.Tag id3v2_tag = file.GetTag(TagLib.TagTypes.Id3v2, true) as TagLib.Id3v2.Tag;
++                 if (id3v2_tag != null) {
++                     id3v2_tag.IsCompilation = is_compilation;
++                 }
++            } catch {}
+ 
+-            TagLib.Mpeg4.AppleTag apple_tag = tag as TagLib.Mpeg4.AppleTag;
+-            if (apple_tag != null) {
+-                apple_tag.IsCompilation = is_compilation;
+-                return;
+-            }
++            try {
++                 TagLib.Mpeg4.AppleTag apple_tag = file.GetTag(TagLib.TagTypes.Apple,true) as TagLib.Mpeg4.AppleTag;
++                 if (apple_tag != null) {
++                     apple_tag.IsCompilation = is_compilation;
++                 }
++            } catch {}
+         }
+     }
+ }
+--- src/Core/Banshee.Core/Banshee.Streaming/StreamTagger.cs.orig	2008-10-06 10:27:31.000000000 -0600
++++ src/Core/Banshee.Core/Banshee.Streaming/StreamTagger.cs	2008-12-10 16:17:49.355233640 -0700
 @@ -130,7 +130,7 @@
                  track.ArtistName = Choose (file.Tag.JoinedPerformers, track.ArtistName, preferTrackInfo);
                  track.AlbumTitle = Choose (file.Tag.Album, track.AlbumTitle, preferTrackInfo);
@@ -9,7 +59,7 @@
                  
                  track.TrackTitle = Choose (file.Tag.Title, track.TrackTitle, preferTrackInfo);
                  track.Genre = Choose (file.Tag.FirstGenre, track.Genre, preferTrackInfo);
-@@ -171,18 +171,18 @@
+@@ -171,18 +171,22 @@
              // TODO these ideas could also be done in an extension that collects such hacks
          }
              
@@ -17,14 +67,23 @@
 +        private static bool IsCompilation (TagLib.File file)
          {
 -            TagLib.Id3v2.Tag id3v2_tag = tag as TagLib.Id3v2.Tag;
-+            TagLib.Id3v2.Tag id3v2_tag = file.GetTag(TagLib.TagTypes.Id3v2, true) as TagLib.Id3v2.Tag;
-             if (id3v2_tag != null && id3v2_tag.IsCompilation)
-                 return true;
- 
+-            if (id3v2_tag != null && id3v2_tag.IsCompilation)
+-                return true;
+-
 -            TagLib.Mpeg4.AppleTag apple_tag = tag as TagLib.Mpeg4.AppleTag;
-+            TagLib.Mpeg4.AppleTag apple_tag = file.GetTag(TagLib.TagTypes.Apple,true) as TagLib.Mpeg4.AppleTag;
-             if (apple_tag != null && apple_tag.IsCompilation)
-                 return true;
+-            if (apple_tag != null && apple_tag.IsCompilation)
+-                return true;
++            try {
++                 TagLib.Id3v2.Tag id3v2_tag = file.GetTag(TagLib.TagTypes.Id3v2, true) as TagLib.Id3v2.Tag;
++                 if (id3v2_tag != null && id3v2_tag.IsCompilation)
++                      return true;
++            } catch {}
++            
++            try {
++                 TagLib.Mpeg4.AppleTag apple_tag = file.GetTag(TagLib.TagTypes.Apple,true) as TagLib.Mpeg4.AppleTag;
++                 if (apple_tag != null && apple_tag.IsCompilation)
++                     return true;
++            } catch {}
              
 -            if (tag.Performers.Length > 0 && tag.AlbumArtists.Length > 0 &&
 -                (tag.Performers.Length != tag.AlbumArtists.Length || tag.FirstAlbumArtist != tag.FirstPerformer)) {

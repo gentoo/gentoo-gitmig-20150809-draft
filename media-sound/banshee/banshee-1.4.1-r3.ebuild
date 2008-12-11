@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.1-r2.ebuild,v 1.1 2008/12/09 21:24:34 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.1-r3.ebuild,v 1.1 2008/12/11 00:37:50 loki_val Exp $
 
 EAPI=2
 
