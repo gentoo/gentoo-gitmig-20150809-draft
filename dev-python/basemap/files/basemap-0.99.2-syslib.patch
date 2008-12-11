@@ -1,0 +1,36 @@
+--- setup.py.orig	2008-12-11 17:11:01.000000000 +0000
++++ setup.py	2008-12-11 17:15:58.000000000 +0000
+@@ -16,7 +16,7 @@
+     DBFUpdateHeader is available, we scan shapefil.h for the string
+     'DBFUpdateHeader'.
+     """
+-    f = open(convert_path("pyshapelib/shapelib/shapefil.h"))
++    f = open(convert_path("/usr/include/libshp/shapefil.h"))
+     contents = f.read()
+     f.close()
+     if contents.find("DBFUpdateHeader") >= 0:
+@@ -105,17 +105,16 @@
+ package_dirs['dbflib'] = os.path.join('lib','dbflib')
+ extensions = extensions + \
+          [Extension("shapelibc",
+-                    ["pyshapelib/shapelib_wrap.c",
+-                     "pyshapelib/shapelib/shpopen.c",
+-                     "pyshapelib/shapelib/shptree.c"],
+-                    include_dirs = ["pyshapelib/shapelib"]),
++                    ["pyshapelib/shapelib_wrap.c"],
++                    include_dirs = ["/usr/include/libshp"],
++                    libraries = ["shp"]),
+           Extension("shptree",
+                     ["pyshapelib/shptreemodule.c"],
+-                    include_dirs = ["pyshapelib/shapelib"]),
++                    include_dirs = ["/usr/include/libshp"]),
+           Extension("dbflibc",
+-                    ["pyshapelib/dbflib_wrap.c",
+-                     "pyshapelib/shapelib/dbfopen.c"],
+-                    include_dirs = ["pyshapelib/shapelib"],
++                    ["pyshapelib/dbflib_wrap.c"],
++                    include_dirs = ["/usr/include/libshp"],
++                    libraries = ["shp"],
+                     define_macros = dbf_macros()) ]
+ 
+ # check setup.cfg file to see how to install auxilliary packages.
