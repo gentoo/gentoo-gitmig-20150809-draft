@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9270 2008/12/11 07:16:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9271 2008/12/11 07:21:58 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -789,11 +789,6 @@ media-sound/lastfmproxy
 # Masking per dev-zero request for more testing time
 =dev-db/libpq-8.3*
 =dev-db/postgresql-8.3*
-
-# Luca Barbato <lu_zero@gentoo.org> (26 Mar 2008)
-# huge ffmpeg migration mask
-# we leave intermediate version masked, unmasking 20080326 -yngwin
-=media-video/ffmpeg-0.4.9_p20080206
 
 # William L. Thomson Jr. <wltjr@gentoo.org> (25 Mar 2008)
 # Masked due to bugs and availability of forked alternative Frostwire.
