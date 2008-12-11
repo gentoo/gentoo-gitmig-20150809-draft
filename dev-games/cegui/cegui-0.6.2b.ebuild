@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2.ebuild,v 1.1 2008/12/04 22:31:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.1 2008/12/11 00:49:29 nyhm Exp $
 
 inherit autotools eutils
 
-MY_P=CEGUI-${PV}
+MY_P=CEGUI-${PV%b}
 DESCRIPTION="Crazy Eddie's GUI System"
 HOMEPAGE="http://www.cegui.org.uk/"
-SRC_URI="mirror://sourceforge/crayzedsgui/${MY_P}.tar.gz
+SRC_URI="mirror://sourceforge/crayzedsgui/${MY_P}b.tar.gz
 	doc? ( mirror://sourceforge/crayzedsgui/${MY_P}-DOCS.tar.gz )"
 
 LICENSE="MIT"
