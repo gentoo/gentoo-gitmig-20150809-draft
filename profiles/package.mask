@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9268 2008/12/10 22:24:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9269 2008/12/11 01:02:11 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -47,7 +47,6 @@
 # Jeremy Olexa <darkside@gentoo.org> (07 Dec 2008)
 # Masked for removal in 60 days at maintainers request. Some don't work. Most
 # have dead upstream, etc. bug 250217 - please comment/submit patches there.
-dev-db/rekall
 net-p2p/apollon
 app-portage/kuroo
 kde-misc/komics
@@ -593,11 +592,6 @@ net-irc/bitchx
 >=net-libs/rb_libtorrent-0.13_p2335
 >=net-p2p/qbittorrent-1.1.0_beta1
 
-# Carsten Lohrke <carlo@gentoo.org> (30 Jun 2008)
-# Masking as it's pretty broken for a long while now.
-# Will investigate in a few days.
-dev-db/rekall
-
 # Michael Sterrett <mr_bones_@gentoo.org> (23 Jun 2008)
 # Now a part of gnome-games
 games-board/glchess
@@ -611,10 +605,6 @@ games-board/glchess
 # will build against current stable ffmpeg)
 # voip herd, bug 218102:
 media-libs/mediastreamer
-# no herd, bug 218105:
-# mpeg4ip-1.5.0.1-r5 has new patches
-=media-video/mpeg4ip-1.5.0.1-r3
-=media-video/mpeg4ip-1.5.0.1-r4
 
 # Tony Vroon <chainsaw@gentoo.org> (08 May 2008)
 # Beta driver, unsupported by nVidia
