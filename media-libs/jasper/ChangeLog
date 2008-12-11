@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.45 2008/12/10 10:44:53 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.46 2008/12/11 21:27:59 ranger Exp $
+
+  11 Dec 2008; Brent Baude <ranger@gentoo.org> jasper-1.900.1-r3.ebuild:
+  Marking jasper-1.900.1-r3 ppc64 for bug 222819
 
 *jasper-1.900.1-r3 (08 Dec 2008)
 
