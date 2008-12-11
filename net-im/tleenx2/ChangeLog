@@ -1,6 +1,11 @@
 # ChangeLog for net-im/tleenx2
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/ChangeLog,v 1.14 2008/10/06 20:45:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/ChangeLog,v 1.15 2008/12/11 15:04:49 spock Exp $
+
+  11 Dec 2008; Michał Januszewski <spock@gentoo.org>
+  +files/tleenx2-20060309-configure.in.patch, tleenx2-20060309.ebuild:
+  Fix bug #248009. Apparently eautoreconf fixes the problems with
+  --as-needed.
 
   06 Oct 2008; Markus Meier <maekke@gentoo.org> tleenx2-20060309.ebuild:
   amd64/x86 stable, bug #239855

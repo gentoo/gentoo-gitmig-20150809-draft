@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/tleenx2-20060309.ebuild,v 1.4 2008/10/06 20:45:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/tleenx2-20060309.ebuild,v 1.5 2008/12/11 15:04:49 spock Exp $
+
+inherit autotools eutils
 
 IUSE=""
 LICENSE="GPL-2"
@@ -20,6 +22,13 @@ RDEPEND="net-libs/libtlen
 
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/tleenx2-20060309-configure.in.patch"
+	eautoreconf
+}
 
 src_install() {
 	make DESTDIR="${D}" install
