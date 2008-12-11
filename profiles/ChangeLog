@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2152 2008/12/11 20:08:30 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2153 2008/12/11 20:35:07 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Dec 2008; <ssuominen@gentoo.org> package.mask:
+  Unmask dev-php5/ffmpeg-php thanks to b3hzat at gmail.com wrt #250636.
 
   11 Dec 2008; Santiago M. Mola <coldwind@gentoo.org> package.mask:
   Unmask app-shells/bash-completion (bug #250027).

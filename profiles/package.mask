@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9277 2008/12/11 20:08:30 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9278 2008/12/11 20:35:07 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,14 +36,9 @@
 =x11-wm/fluxbox-9999
 
 # Samuli Suominen <ssuominen@gentoo.org> (11 Dec 2008)
-# Doesn't build against FFMPEG, bug 242050.
-# Masked for removal by treecleaners and media in 30 days.
-dev-php5/ffmpeg-php
-
-# Samuli Suominen <ssuominen@gentoo.org> (11 Dec 2008)
 # Doesn't build against FFMPEG, bugs 189774 and 218102.
 # Masked for removal by treecleaners and media in 30 days.
-net-voip/linphone
+<net-voip/linphone-3.0.0
 
 # Matthias Schwarzott <zzam@gentoo.org> (10 Dec 2008)
 # Masked for development of init-script
