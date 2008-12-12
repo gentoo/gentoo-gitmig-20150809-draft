@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mytharchive
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.32 2008/10/01 23:00:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.33 2008/12/12 19:37:25 beandog Exp $
+
+  12 Dec 2008; Steve Dibb <beandog@gentoo.org>
+  mytharchive-0.21_p17948.ebuild:
+  amd64 stable, bug 239341
 
 *mytharchive-0.21_p18355 (01 Oct 2008)
 
