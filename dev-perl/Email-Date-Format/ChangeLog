@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Email-Date-Format
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date-Format/ChangeLog,v 1.5 2008/08/25 14:53:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date-Format/ChangeLog,v 1.6 2008/12/12 23:14:46 josejx Exp $
+
+  12 Dec 2008; Joseph Jezak <josejx@gentoo.org>
+  Email-Date-Format-1.002.ebuild:
+  Marked ~ppc for bug #235557.
+
+  12 Dec 2008; Joseph Jezak <josejx@gentoo.org>
+  Email-Date-Format-1.002.ebuild:
+  Marked ~ppc for bug #235557.
 
   25 Aug 2008; Raúl Porcel <armin76@gentoo.org>
   Email-Date-Format-1.002.ebuild:
