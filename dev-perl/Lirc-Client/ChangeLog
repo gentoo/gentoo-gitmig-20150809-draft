@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Lirc-Client
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lirc-Client/ChangeLog,v 1.1 2008/12/12 04:19:42 beandog Exp $
+
+*Lirc-Client-1.51 (12 Dec 2008)
+*Lirc-Client-1.50 (12 Dec 2008)
+
+  12 Dec 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +Lirc-Client-1.50.ebuild, +Lirc-Client-1.51.ebuild:
+  Initial commit, bug 214297, thanks to Jiri Tyr for original ebuilds
+
