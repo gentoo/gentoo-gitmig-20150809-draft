@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9279 2008/12/12 05:29:19 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9280 2008/12/12 11:43:36 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -979,13 +979,6 @@ games-fps/doomsday-resources
 # Peter Volkov <pva@gentoo.org> (06 Jan 2008)
 # Masked unstable sources
 >=sys-kernel/openvz-sources-2.6.22
-
-# Luca Barbato <lu_zero@gentoo.org> (05 Jan 2008)
-# Security issues spotted
-# Superceeded by feng and libnemesi
-# Pending removal
-media-video/fenice
-media-video/nemesi
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (01 Jan 2008)
 # hs-plugins only works with the outdated GHC 6.4.2 compiler,
