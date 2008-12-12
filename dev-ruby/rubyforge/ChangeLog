@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.32 2008/12/10 14:23:13 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.33 2008/12/12 19:29:19 graaff Exp $
+
+  12 Dec 2008; Hans de Graaff <graaff@gentoo.org> -rubyforge-0.4.3.ebuild,
+  -rubyforge-0.4.4.ebuild, -rubyforge-1.0.0.ebuild:
+  Remove old versions
 
   10 Dec 2008; Ferris McCormick <fmccor@gentoo.org> rubyforge-1.0.1.ebuild:
   Sparc stable, part of Bug #250348.
