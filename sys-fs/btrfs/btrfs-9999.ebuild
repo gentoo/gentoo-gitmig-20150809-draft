@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-9999.ebuild,v 1.6 2008/11/10 15:45:28 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-9999.ebuild,v 1.7 2008/12/12 09:58:53 lavajoe Exp $
 
 inherit eutils linux-mod git
 
@@ -42,7 +42,7 @@ src_install()
 {
 	linux-mod_src_install
 
-	dodoc INSTALL TODO
+	dodoc INSTALL
 }
 
 pkg_postinst() {
