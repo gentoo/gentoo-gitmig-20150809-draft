@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.264 2008/11/17 22:51:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.265 2008/12/12 19:35:05 beandog Exp $
+
+  12 Dec 2008; Steve Dibb <beandog@gentoo.org> mythtv-0.21_p18314-r1.ebuild:
+  amd64 stable, bug 239341
 
   17 Nov 2008; Doug Goldstein <cardoe@gentoo.org>
   files/mythtv-0.21-bttv.patch,

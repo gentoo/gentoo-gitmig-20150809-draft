@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p18314-r1.ebuild,v 1.2 2008/11/17 16:34:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p18314-r1.ebuild,v 1.3 2008/12/12 19:35:05 beandog Exp $
 
 EAPI=1
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python confutils
 
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia"
 IUSE="aac alsa altivec autostart debug directv dvb dvd fftw ieee1394 jack lcd \
@@ -84,7 +84,7 @@ src_unpack() {
 	# Perl bits need to go into vender_perl and not site_perl
 	sed -e "s:pure_install:pure_install INSTALLDIRS=vendor:" \
 		-i "${S}"/bindings/perl/perl.pro
-	
+
 	# fix mythflix naming collision
 	epatch "${FILESDIR}"/${PN}-0.21-mythflix-naming-collision.patch
 
