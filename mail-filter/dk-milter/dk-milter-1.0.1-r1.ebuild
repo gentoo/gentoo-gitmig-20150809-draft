@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-1.0.0.ebuild,v 1.1 2008/06/08 09:26:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-1.0.1-r1.ebuild,v 1.1 2008/12/12 06:36:18 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,9 +26,13 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+
 	local ENVDEF=""
 	use ipv6 && ENVDEF="${ENVDEF} -DNETINET6"
-	sed -e "s:@@CFLAGS@@:${CFLAGS}:" -e "s/@@ENVDEF@@/${ENVDEF}/" \
+	sed -e "s:@@CFLAGS@@:${CFLAGS}:" \
+		-e "s:@@LDFLAGS@@:${LDFLAGS}:" \
+		-e "s/@@ENVDEF@@/${ENVDEF}/" \
 		"${FILESDIR}/gentoo.config.m4" > "${S}/devtools/Site/site.config.m4" \
 		|| die "failed to generate site.config.m4"
 }
