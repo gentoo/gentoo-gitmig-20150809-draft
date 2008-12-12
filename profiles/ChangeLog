@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2153 2008/12/11 20:35:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2154 2008/12/12 05:29:19 beandog Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Dec 2008; Steve Dibb <beandog@gentoo.org> package.mask:
+  p.mask >=media-libs/xvid-1.2.0 for general testing, lots of reverse deps
 
   11 Dec 2008; <ssuominen@gentoo.org> package.mask:
   Unmask dev-php5/ffmpeg-php thanks to b3hzat at gmail.com wrt #250636.

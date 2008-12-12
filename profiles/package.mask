@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9278 2008/12/11 20:35:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9279 2008/12/12 05:29:19 beandog Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Steve Dibb <beandog@gentoo> (11 Dec 2008)
+# Needs some testing
+>=media-libs/xvid-1.2.0
 
 # Jim Ramsay <lack@gentoo.org> (11 Dec 2008)
 # Live ebuild, for advanced users only
