@@ -1,0 +1,25 @@
+diff -uNr opentyrian.ORIG/Makefile opentyrian/Makefile
+--- opentyrian.ORIG/Makefile	2008-07-10 21:42:20.000000000 +0100
++++ opentyrian/Makefile	2008-07-10 21:42:52.000000000 +0100
+@@ -46,6 +46,9 @@
+ 	CFLAGS += -DSVN_REV=\"$(SVN_REV)\"
+ endif
+ 
++ifneq ($(DATA_PATH), )
++	CFLAGS += -DDATA_PATH=\"$(DATA_PATH)\"
++endif
+ ####################################################
+ 
+ all : $(TARGET)
+diff -uNr opentyrian.ORIG/src/error.c opentyrian/src/error.c
+--- opentyrian.ORIG/src/error.c	2008-07-10 21:42:20.000000000 +0100
++++ opentyrian/src/error.c	2008-07-10 21:43:45.000000000 +0100
+@@ -38,7 +38,7 @@
+ char err_msg[1000] = "No error!?";
+ 
+ #ifndef TARGET_MACOSX
+-static const char *tyrian_searchpaths[] = { "data", "tyrian", "tyrian2k" };
++static const char *tyrian_searchpaths[] = { DATA_PATH , "data", "tyrian", "tyrian2k" };
+ #endif
+ 
+ long get_stream_size( FILE *f )
