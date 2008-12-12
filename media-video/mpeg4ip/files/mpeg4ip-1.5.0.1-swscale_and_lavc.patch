@@ -1,0 +1,65 @@
+--- mpeg4ip-1.5.0.1/player/plugin/audio/ffmpeg/ffmpeg.cpp.orig	2008-10-15 20:28:08.000000000 -0700
++++ mpeg4ip-1.5.0.1/player/plugin/audio/ffmpeg/ffmpeg.cpp	2008-10-15 20:31:06.000000000 -0700
+@@ -214,7 +214,8 @@
+   uint32_t freq_ts = pts->audio_freq_timestamp;
+ 
+   do {
+-    used = avcodec_decode_audio(ffmpeg->m_c, (short *)ffmpeg->m_outbuf,
++    outsize=AVCODEC_MAX_AUDIO_FRAME_SIZE;
++    used = avcodec_decode_audio2(ffmpeg->m_c, (short *)ffmpeg->m_outbuf,
+ 				&outsize, buffer, left);
+     if (used < 0) {
+       ffmpeg_message(LOG_DEBUG, "ffmpeg", "failed to decode at "U64, 
+--- mpeg4ip-1.5.0.1/configure.in.orig	2008-10-15 12:39:56.000000000 -0700
++++ mpeg4ip-1.5.0.1/configure.in	2008-10-15 12:42:39.000000000 -0700
+@@ -509,7 +509,7 @@
+      if test x$have_ffmpeg = xtrue; then
+         AC_DEFINE(HAVE_FFMPEG_INSTALLED, 1, [defined if ffmpeg is installed])
+         FFMPEG_INC=
+-        FFMPEG_LIB="-lavcodec -lz $ffmpeg_add_libs"
++        FFMPEG_LIB="-lavcodec -lswscale -lz $ffmpeg_add_libs"
+         AC_CHECK_TYPES([AVRational], , , [#include <libavcodec/avcodec.h>])
+ 	AC_CHECK_MEMBERS(AVCodecContext.time_base, , , [#include <libavcodec/avcodec.h>])
+         AC_DEFINE(HAVE_FFMPEG, 1, [enable ffmpeg for mp4live])
+--- mpeg4ip-1.5.0.1/player/plugin/video/ffmpeg/ffmpeg.h.orig	2008-10-15 12:33:59.000000000 -0700
++++ mpeg4ip-1.5.0.1/player/plugin/video/ffmpeg/ffmpeg.h	2008-10-15 12:34:10.000000000 -0700
+@@ -27,6 +27,7 @@
+ #ifdef HAVE_FFMPEG_INSTALLED
+ extern "C" {
+ #include <libavcodec/avcodec.h>
++#include <libswscale/swscale.h>
+ }
+ #else
+ extern "C" {
+--- mpeg4ip-1.5.0.1/player/plugin/video/ffmpeg/ffmpeg.cpp.orig	2008-10-15 12:16:22.000000000 -0700
++++ mpeg4ip-1.5.0.1/player/plugin/video/ffmpeg/ffmpeg.cpp	2008-10-15 12:27:22.000000000 -0700
+@@ -565,10 +565,25 @@
+ 	from.data[ix] = ffmpeg->m_picture->data[ix];
+ 	from.linesize[ix] = ffmpeg->m_picture->linesize[ix];
+       }
+-      
+-      img_convert(&to, PIX_FMT_YUV420P,
+-		  &from, ffmpeg->m_c->pix_fmt,
+-		  ffmpeg->m_c->width, ffmpeg->m_c->height);
++
++      SwsContext *img_cvt_ctx;
++      img_cvt_ctx = sws_getContext(ffmpeg->m_c->width,
++		      		   ffmpeg->m_c->height,
++ 			           ffmpeg->m_c->pix_fmt,
++		      	           ffmpeg->m_c->width,
++				   ffmpeg->m_c->height, 
++	                           PIX_FMT_YUV420P,
++				   SWS_BICUBIC,
++				   0, 0, 0);
++      sws_scale(img_cvt_ctx,
++		from.data,
++		from.linesize,
++		0,
++		ffmpeg->m_c->height,
++		to.data,
++		to.linesize);
++      sws_freeContext(img_cvt_ctx);
++
+       ffmpeg->m_vft->video_filled_buffer(ffmpeg->m_ifptr,
+ 					 ffmpeg->have_cached_ts ?
+ 					 ffmpeg->cached_ts : ts);

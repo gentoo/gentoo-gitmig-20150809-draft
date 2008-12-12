@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.64 2008/11/30 17:36:42 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.65 2008/12/12 05:01:59 ssuominen Exp $
+
+*mpeg4ip-1.5.0.1-r6 (12 Dec 2008)
+
+  12 Dec 2008; <ssuominen@gentoo.org>
+  +files/mpeg4ip-1.5.0.1-swscale_and_lavc.patch, +mpeg4ip-1.5.0.1-r6.ebuild:
+  Apply swscale and lavc patchset from bug 242094, thanks to Alexis Ballier
+  and Thomas S. Howard.
 
   30 Nov 2008; Robert Buchholz <rbu@gentoo.org>
   files/mpeg4ip-1.5.0.1-x264.patch:

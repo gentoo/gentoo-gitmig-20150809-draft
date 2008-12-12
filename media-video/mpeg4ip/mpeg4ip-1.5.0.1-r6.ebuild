@@ -1,29 +1,23 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r1.ebuild,v 1.12 2008/07/13 16:37:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1-r6.ebuild,v 1.1 2008/12/12 05:01:59 ssuominen Exp $
 
 WANT_AUTOMAKE="1.9"
 
 inherit eutils multilib autotools
 
 DESCRIPTION="MPEG 4 implementation library"
-
 HOMEPAGE="http://www.mpeg4ip.net/"
-
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-
 LICENSE="MPL-1.1 LGPL-2 GPL-2 LGPL-2.1 BSD UCL MPEG4"
-
 SLOT="0"
-
-KEYWORDS="amd64 ppc x86"
-
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ipv6 mmx v4l2 xvid nas alsa esd arts ffmpeg a52 mpeg2 lame aac id3 player mp4live x264"
 
 RDEPEND=" media-libs/libsdl
 	player? (
 		>=x11-libs/gtk+-2
-		ffmpeg? ( <media-video/ffmpeg-0.4.9_p20080326 )
+		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20081014 )
 		mpeg2? ( media-libs/libmpeg2 )
 		id3? ( media-libs/libid3tag )
 		a52? ( media-libs/a52dec )
@@ -33,7 +27,7 @@ RDEPEND=" media-libs/libsdl
 		>=x11-libs/gtk+-2
 		lame? ( >=media-sound/lame-3.92 )
 		aac? ( >=media-libs/faac-1.24-r1 )
-		ffmpeg? ( <media-video/ffmpeg-0.4.9_p20080326 )
+		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20081014 )
 		x264? ( media-libs/x264 )
 	)
 	nas? ( media-libs/nas x11-libs/libXt )
@@ -44,6 +38,10 @@ RDEPEND=" media-libs/libsdl
 	!<media-libs/faad2-2.0-r9 "
 
 DEPEND="${RDEPEND}
+	>=x11-libs/gtk+-2
+	media-libs/alsa-lib
+	>=dev-libs/glib-2
+	dev-util/pkgconfig
 	player? ( mmx? ( >=dev-lang/nasm-0.98.19 ) )"
 
 pkg_setup() {
@@ -62,9 +60,22 @@ src_unpack() {
 	epatch "${FILESDIR}/mpeg4ip-1.4.1-disable-faac-test.patch"
 	epatch "${FILESDIR}/${P}-x264.patch"
 	epatch "${FILESDIR}/mpeg4ip-1.5.0.1-newffmpeg.patch"
+	epatch "${FILESDIR}/mpeg4ip-1.5.0.1-ffmpeg-headers.patch"
 	epatch "${FILESDIR}/mpeg4ip-1.5.0.1-lX11.patch"
+	epatch "${FILESDIR}/mpeg4ip-1.5.0.1-as-needed.patch"
+	epatch "${FILESDIR}/${P}-gcc42.patch"
+	epatch "${FILESDIR}/${P}-nasm-r.patch"
+	epatch "${FILESDIR}/mpeg4ip-1.5.0.1-avcodec_extern_c-2.patch"
+	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
+	epatch "${FILESDIR}/${P}-swscale_and_lavc.patch"
 
-	eautomake
+	find "${S}" -name Makefile.am -print0 | xargs -0 \
+		sed -i -e 's:-Werror::'
+
+	find "${S}" -name configure.in -print0 | xargs -0 \
+		sed -i -e 's:-Werror::'
+
+	eautoreconf
 }
 
 src_compile() {
