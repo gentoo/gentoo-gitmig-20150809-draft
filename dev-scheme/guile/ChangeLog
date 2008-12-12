@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.67 2008/12/11 16:17:19 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.68 2008/12/12 13:30:11 fmccor Exp $
+
+  12 Dec 2008; Ferris McCormick <fmccor@gentoo.org> guile-1.8.5-r1.ebuild:
+  Sparc stable, Bug #245701.
 
 *guile-1.8.6 (11 Dec 2008)
 
