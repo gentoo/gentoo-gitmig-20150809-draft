@@ -1,17 +1,17 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0_alpha3.ebuild,v 1.2 2008/10/28 02:07:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0_beta1.ebuild,v 1.1 2008/12/12 10:48:01 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
-LANGS="be ca cs de en-US es-AR es-ES fr fy-NL ga-IE hu id it ja lt nb-NO nl nn-NO pl pt-BR pt-PT ro ru si sk sv-SE zh-CN zh-TW"
-NOSHORTLANGS="es-AR pt-BR zh-TW"
+LANGS="af ar be cs de en-GB en-US es-AR es-ES et eu fr fy-NL ga-IE hu id it ja ka ko lt nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro ru si sk sq sv-SE uk zh-CN zh-TW"
+NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
 
-MY_PV="${PV/_alpha/a}"
+MY_PV="${PV/_beta/b}"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Thunderbird Mail Client"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${MY_PV}/linux-i686/en-US/shredder-${MY_PV}.tar.bz2"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${MY_PV}/linux-i686/en-US/thunderbird-${MY_PV}.tar.bz2"
 HOMEPAGE="http://www.mozilla.com/thunderbird"
 RESTRICT="strip"
 
