@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.94 2008/12/11 17:45:45 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.95 2008/12/12 22:26:47 klausman Exp $
+
+  12 Dec 2008; Tobias Klausmann <klausman@gentoo.org>
+  gst-plugins-ffmpeg-0.10.5.ebuild:
+  Stable on alpha, bug #245291
 
   11 Dec 2008; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
   Freedom!
