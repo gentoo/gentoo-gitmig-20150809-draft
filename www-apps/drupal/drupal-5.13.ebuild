@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-6.6.ebuild,v 1.1 2008/10/23 18:50:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-5.13.ebuild,v 1.1 2008/12/12 21:52:34 pva Exp $
 
 inherit webapp eutils depend.php
 
@@ -21,24 +21,19 @@ pkg_setup() {
 	webapp_pkg_setup
 	has_php
 	if [[ ${PHP_VERSION} == "4" ]] ; then
-		local flags="expat"
+		require_php_with_use expat
 	else
-		local flags="xml"
-	fi
-	if ! PHPCHECKNODIE="yes" require_php_with_use ${flags} \
-		|| ! PHPCHECKNODIE="yes" require_php_with_any_use gd gd-external ; then
-			die "Re-install ${PHP_PKG} with ${flags} and either gd or gd-external"
+		require_php_with_use xml
 	fi
 }
 
 src_install() {
 	webapp_src_preinst
 
-	local docs="MAINTAINERS.txt LICENSE.txt INSTALL.txt CHANGELOG.txt INSTALL.mysql.txt INSTALL.pgsql.txt UPGRADE.txt "
+	local docs="MAINTAINERS.txt LICENSE.txt INSTALL.txt CHANGELOG.txt"
 	dodoc ${docs}
-	rm -f ${docs} INSTALL COPYRIGHT.txt
+	rm -f ${docs} INSTALL
 
-	cp sites/default/{default.settings.php,settings.php}
 	insinto "${MY_HTDOCSDIR}"
 	doins -r .
 
