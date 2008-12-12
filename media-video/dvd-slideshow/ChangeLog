@@ -1,6 +1,13 @@
 # ChangeLog for media-video/dvd-slideshow
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/ChangeLog,v 1.16 2007/11/19 20:00:28 aballier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/ChangeLog,v 1.17 2008/12/12 08:49:54 ssuominen Exp $
+
+*dvd-slideshow-0.8.2.2 (12 Dec 2008)
+
+  12 Dec 2008; <ssuominen@gentoo.org> +dvd-slideshow-0.8.2.2.ebuild:
+  Version bump wrt #177662, thanks to xiando <oyvinds at everdot.org> for
+  reporting. Add media-gfx/jhead to deps wrt #249152, thanks to Jakub
+  Klawiter for reporting.
 
   19 Nov 2007; Alexis Ballier <aballier@gentoo.org>
   dvd-slideshow-0.7.5.ebuild, dvd-slideshow-0.8.0.ebuild:
