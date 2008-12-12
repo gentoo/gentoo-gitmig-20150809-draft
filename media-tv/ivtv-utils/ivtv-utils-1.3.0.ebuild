@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.3.0.ebuild,v 1.1 2008/10/21 21:48:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.3.0.ebuild,v 1.2 2008/12/12 04:58:49 beandog Exp $
 
 inherit eutils linux-mod
 
@@ -12,7 +12,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="perl"
 RDEPEND=">=sys-fs/udev-103"
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/unzip
+	!media-tv/ivtv"
 PDEPEND=">=media-tv/ivtv-firmware-20070217
 	perl? (
 		dev-perl/Video-Frequencies
