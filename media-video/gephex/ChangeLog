@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gephex
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.19 2007/12/25 17:22:33 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/ChangeLog,v 1.20 2008/12/12 16:20:30 ssuominen Exp $
+
+  12 Dec 2008; <ssuominen@gentoo.org> gephex-0.4.3.ebuild:
+  Add libXv as dep. wrt #239799. Disable usage of bundled FFMPEG wrt #172424
+  and security #231831.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing zypher from metadata.xml as per #26909.
