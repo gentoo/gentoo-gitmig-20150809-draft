@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libmms
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.23 2007/12/25 13:16:04 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.24 2008/12/12 13:58:54 ssuominen Exp $
+
+*libmms-0.4 (12 Dec 2008)
+
+  12 Dec 2008; <ssuominen@gentoo.org>
+  +files/libmms-0.4-nested_comments.patch,
+  +files/libmms-0.4-this_keyword.patch, +libmms-0.4.ebuild:
+  Version bump for bug 203647, thanks to Gordon and Hans.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing foser from metadata.xml as per #120234.
