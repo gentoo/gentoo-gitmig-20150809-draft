@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.2.1.ebuild,v 1.1 2008/12/12 05:41:57 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.2.1.ebuild,v 1.2 2008/12/12 09:52:46 aballier Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -49,7 +49,7 @@ src_install() {
 	else
 		local mylib=$(basename $(ls "${D}"/usr/$(get_libdir)/libxvidcore.so*))
 		dosym ${mylib} /usr/$(get_libdir)/libxvidcore.so
-		dosym ${mylib} /usr/$(get_libdir)/${mylib/.1}
+		dosym ${mylib} /usr/$(get_libdir)/${mylib%.?}
 	fi
 
 	if use examples; then
