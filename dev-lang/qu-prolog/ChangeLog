@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.53 2008/11/21 22:19:22 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.54 2008/12/12 21:08:30 keri Exp $
+
+*qu-prolog-8.8 (12 Dec 2008)
+
+  12 Dec 2008; <keri@gentoo.org> +files/qu-prolog-8.8-portage.patch,
+  +qu-prolog-8.8.ebuild:
+  Version bump.
 
   21 Nov 2008; <keri@gentoo.org> qu-prolog-8.6.ebuild, qu-prolog-8.7.ebuild:
   Block against dev-util/mpatch and dev-util/rej. Closes #247433 and #247434.
