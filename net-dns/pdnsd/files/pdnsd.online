@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.online,v 1.5 2008/12/13 10:50:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/files/pdnsd.online,v 1.6 2008/12/13 10:53:29 mrness Exp $
 
 depend() {
 	need pdnsd net.${IFACE}
 }
 
 wait_for_socket() {
-	local pdnsd_socket="/var/cache/pdnsd/pdnsd.status"
+	local i pdnsd_socket="/var/cache/pdnsd/pdnsd.status"
 	for ((i=0; i < 10; i=$i+1)) ; do
     	    [ -S "${pdnsd_socket}" ] && return 0
     	    sleep 1s
