@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Template-Latex
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.14 2008/09/03 07:06:45 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.15 2008/12/13 12:52:11 aballier Exp $
+
+  13 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  Template-Latex-2.17.ebuild:
+  keyword ~x86-fbsd
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   Template-Latex-2.17.ebuild:
