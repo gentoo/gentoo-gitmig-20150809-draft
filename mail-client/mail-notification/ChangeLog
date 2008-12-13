@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.79 2008/10/18 23:08:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.80 2008/12/13 10:28:12 graaff Exp $
+
+  23 Oct 2008; Hans de Graaff <graaff@gentoo.org>
+  -files/mail-notification-4.1-evo-2.12-api-change.patch,
+  -files/mail-notification-4.1-find-evo-2.12.patch,
+  -files/mail-notification-5.2-dont-update-cache.patch,
+  -files/mail-notification-5.2-evo-crash-fix.patch,
+  -files/mail-notification-5.3-dont-update-cache.patch,
+  -mail-notification-5.0.ebuild, -mail-notification-5.0-r1.ebuild:
+  Remove old versions that are broken with newer versions of eel, #214301
 
   18 Oct 2008; Brent Baude <ranger@gentoo.org> mail-notification-5.4.ebuild:
   Marking mail-notification-5.4 ppc stable for bug 236971
