@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.7-r2.ebuild,v 1.5 2008/11/29 18:08:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.7-r2.ebuild,v 1.6 2008/12/13 15:02:02 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -134,6 +134,12 @@ src_compile() {
 		--with-system-nss \
 		--with-default-mozilla-five-home=${MOZILLA_FIVE_HOME} \
 		--with-user-appdir=.thunderbird
+
+	# Bug 246421
+	# Breaks builds with gcc-4.3 on amd64
+	if use amd64 && [[ $(gcc-version) == "4.3" ]]; then
+		mozconfig_annotate 'gcc-4.3 breaks build on amd64 with -O2+' --enable-optimize=-Os
+	fi
 
 	# Finalize and report settings
 	mozconfig_final
