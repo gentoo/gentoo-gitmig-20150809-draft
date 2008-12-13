@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/php-mode
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.29 2008/12/13 14:07:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.30 2008/12/13 17:21:04 ulm Exp $
+
+  13 Dec 2008; Ulrich Mueller <ulm@gentoo.org>
+  -files/php-mode-1.4.0_beta-conditional-key.patch,
+  -files/php-mode-info-direntry.patch, -php-mode-1.4.0_beta.ebuild:
+  Remove intermediate version.
 
   13 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   php-mode-1.5.0.ebuild:
