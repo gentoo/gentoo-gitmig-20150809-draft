@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/syweb/syweb-0.58.ebuild,v 1.1 2008/08/19 07:03:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/syweb/syweb-0.58-r1.ebuild,v 1.1 2008/12/13 17:43:49 tcunha Exp $
 
 inherit depend.php eutils webapp
 
@@ -25,9 +25,9 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}"/${PN}-class_lexer.inc.patch
-	epatch "${FILESDIR}"/${PN}-setup.inc.patch
-	epatch "${FILESDIR}"/${PN}-total_firewall.layout.patch
+	epatch "${FILESDIR}"/${PN}-class_lexer.inc.patch	\
+	       "${FILESDIR}"/${PN}-setup.inc.patch			\
+	       "${FILESDIR}"/${PN}-total_firewall.layout.patch
 }
 
 src_install() {
@@ -37,24 +37,13 @@ src_install() {
 	docinto layouts
 	dodoc "${WORKDIR}"/syweb/symon/total* || die "dodoc layouts failed"
 
-	dodir "${MY_HTDOCSDIR}"/cache
-	dodir "${MY_HTDOCSDIR}"/layouts
-	webapp_serverowned "${MY_HTDOCSDIR}"/cache
+	dodir "${MY_HOSTROOTDIR}"/${PN}/cache
+	keepdir "${MY_HTDOCSDIR}"/layouts
+	webapp_serverowned "${MY_HOSTROOTDIR}"/${PN}/cache
 	insinto "${MY_HTDOCSDIR}"
 	doins -r "${WORKDIR}"/syweb/htdocs/syweb/* || die "doins failed"
 	webapp_configfile "${MY_HTDOCSDIR}"/setup.inc
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 
 	webapp_src_install
-}
-
-pkg_postinst() {
-	elog "Test your syweb configuration by pointing your browser at:"
-	elog "http://${VHOST_HOSTNAME}/${PN}/configtest.php"
-	elog "Customize syweb by editing the file setup.inc."
-	elog "If you don't want any user interaction, move index_noui.php"
-	elog "to index.php."
-	elog "NOTE that syweb expects a machine/*.rrd style directory"
-	elog "structure under /var/lib/symon/rrds."
-
-	webapp_pkg_postinst
 }
