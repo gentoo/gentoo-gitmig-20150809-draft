@@ -1,6 +1,9 @@
 # ChangeLog for net-print/xfprint
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.7 2008/12/08 21:34:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.8 2008/12/13 16:42:49 armin76 Exp $
+
+  13 Dec 2008; Raúl Porcel <armin76@gentoo.org> xfprint-4.4.3.ebuild:
+  alpha/arm/ia64/sparc/x86 stable wrt #249942
 
   08 Dec 2008; Brent Baude <ranger@gentoo.org> xfprint-4.4.3.ebuild:
   Marking xfprint-4.4.3 ppc64 stable for bug 249942
