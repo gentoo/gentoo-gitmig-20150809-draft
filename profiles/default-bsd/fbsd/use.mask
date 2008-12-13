@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.41 2008/08/23 13:20:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.42 2008/12/13 13:00:43 aballier Exp $
 
 # Beagle needs these patches #176668, 176670.
 beagle
@@ -44,3 +44,6 @@ milter
 qdbm
 xemacs
 xosd
+
+# we don't have custom patched cdparanoia for fbsd anymore
+cdparanoia
