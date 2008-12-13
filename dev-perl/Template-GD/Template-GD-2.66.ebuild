@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/Template-GD-2.66.ebuild,v 1.14 2007/04/23 12:44:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/Template-GD-2.66.ebuild,v 1.15 2008/12/13 12:51:59 aballier Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://cpan/modules/by-module/Template/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/dist/"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 SRC_TEST="do"
