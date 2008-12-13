@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9284 2008/12/13 14:01:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9285 2008/12/13 15:09:03 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -107,7 +107,10 @@ net-analyzer/sysmon
 
 # Arun Raghavan <ford_prefect@gentoo.org> (6 Dec 2008)
 # Masking till the required gnome-extra/gnome-do-plugins-0.6 gets into the tree
+# Hans de Graaff <graaff@gentoo.org> (13 Dec 2008)
+# Add gnome-do-plugins to the mask so that both can be tested before unleashing them.
 =gnome-extra/gnome-do-0.6*
+=gnome-extra/gnome-do-plugins-0.6*
 
 # Jeroen Roovers <jer@gentoo.org> (5 Dec 2008)
 # Snapshots, alphas and betas of Opera may delete kittens
