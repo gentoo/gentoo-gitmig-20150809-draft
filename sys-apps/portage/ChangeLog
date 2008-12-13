@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.559 2008/12/07 21:29:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.560 2008/12/13 00:21:58 zmedico Exp $
+
+*portage-2.1.6.1 (12 Dec 2008)
+
+  12 Dec 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.6.1.ebuild:
+  2.1.6.1 bump. This fixes bugs #250148 (emerge hangs with selinux if ebuild
+  spawns a daemon), bug #250166 (trigger download when generating manifest
+  if file size differs from existing entry), and bug #250212 (new repoman
+  upstream.workaround category for emake -j1 warnings). Bug #216231 tracks
+  all bugs fixed since 2.1.4.x.
 
 *portage-2.1.6 (07 Dec 2008)
 
