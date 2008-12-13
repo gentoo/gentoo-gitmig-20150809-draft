@@ -1,6 +1,9 @@
 # ChangeLog for app-office/orage
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.8 2008/12/08 21:33:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/ChangeLog,v 1.9 2008/12/13 16:40:42 armin76 Exp $
+
+  13 Dec 2008; Raúl Porcel <armin76@gentoo.org> orage-4.4.3.ebuild:
+  alpha/arm/ia64/sparc/x86 stable wrt #249942
 
   08 Dec 2008; Brent Baude <ranger@gentoo.org> orage-4.4.3.ebuild:
   Marking orage-4.4.3 ppc64 stable for bug 249942
