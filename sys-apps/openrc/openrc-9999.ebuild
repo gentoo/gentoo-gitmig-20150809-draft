@@ -1,13 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.38 2008/12/10 22:09:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.39 2008/12/13 08:35:25 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/openrc.git"
-	EGIT_BRANCH="master"
-	inherit git
+	ESVN_REPO_URI="svn://roy.marples.name/openrc/trunk"
+	inherit subversion
 else
 	SRC_URI="http://roy.marples.name/downloads/${PN}/${P}.tar.bz2
 		mirror://gentoo/${P}.tar.bz2
@@ -58,7 +57,7 @@ pkg_setup() {
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
-		git_src_unpack
+		subversion_src_unpack
 	else
 		unpack ${A}
 	fi
@@ -73,8 +72,8 @@ src_compile() {
 	fi
 
 	if [[ ${PV} == "9999" ]] ; then
-		local ver="git-$(git --git-dir=${EGIT_STORE_DIR}/${EGIT_PROJECT} rev-parse --verify ${EGIT_BRANCH} | cut -c1-8)"
-		sed -i "/^VERSION[[:space:]]*=/s:=.*:=${ver}:" Makefile
+		local ver="-svn-$(cd "${ESVN_STORE_DIR}/${ESVN_PROJECT}/${ESVN_REPO_URI##*/}"; LC_ALL=C svn info|awk '/Revision/ { print $2 }')"
+		sed -i "/^SVNVER[[:space:]]*=/s:=.*:=${ver}:" src/rc/Makefile
 	fi
 
 	tc-export CC AR RANLIB
@@ -256,6 +255,15 @@ pkg_postinst() {
 	if [[ ! -e ${ROOT}/etc/runlevels ]] ; then
 		einfo "Copying across default runlevels"
 		cp -RPp "${ROOT}"/usr/share/${PN}/runlevels "${ROOT}"/etc
+	else
+		if [[ ! -e ${ROOT}/etc/runlevels/sysinit/devfs ]] ; then
+			mkdir -p "${ROOT}"/etc/runlevels/sysinit
+			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/sysinit/* "${ROOT}"/etc/runlevels/sysinit
+		fi
+		if [[ ! -e ${ROOT}/etc/runlevels/shutdown/mount-ro ]] ; then
+			mkdir -p "${ROOT}"/etc/runlevels/shutdown
+			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/shutdown/* "${ROOT}"/etc/runlevels/shutdown
+		fi
 	fi
 
 	# update the dependency tree bug #224171
@@ -264,17 +272,6 @@ pkg_postinst() {
 	if [[ -d ${ROOT}/etc/modules.autoload.d ]] ; then
 		ewarn "/etc/modules.autoload.d is no longer used.  Please convert"
 		ewarn "your files to /etc/conf.d/modules and delete the directory."
-	else
-		if [[ ! -e ${ROOT}/etc/runlevels/sysinit/devfs ]] ; then
-			mkdir -p "${ROOT}"/etc/runlevels/sysinit
-			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/sysinit/* \
-				"${ROOT}"/etc/runlevels/sysinit
-		fi
-		if [[ ! -e ${ROOT}/etc/runlevels/shutdown/mount-ro ]] ; then
-			mkdir -p "${ROOT}"/etc/runlevels/shutdown
-			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/shutdown/* \
-				"${ROOT}"/etc/runlevels/shutdown
-		fi
 	fi
 
 	elog "You should now update all files in /etc, using etc-update"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.45 2008/12/10 22:09:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.46 2008/12/13 08:35:25 zzam Exp $
+
+  13 Dec 2008; Matthias Schwarzott <zzam@gentoo.org> openrc-9999.ebuild:
+  Fix update code. Switch over to svn repository.
 
   10 Dec 2008; Doug Goldstein <cardoe@gentoo.org> openrc-9999.ebuild:
   Add runlevel migration support and update depends for live git build
