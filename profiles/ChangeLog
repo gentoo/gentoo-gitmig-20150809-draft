@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2156 2008/12/12 20:54:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2157 2008/12/13 10:45:31 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Dec 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask vamp-plugin-sdk 2.0; api changes
 
   12 Dec 2008; Doug Goldstein <cardoe@gentoo.org> package.mask:
   masking soon to be removed nvidia-drivers versions package.mask
