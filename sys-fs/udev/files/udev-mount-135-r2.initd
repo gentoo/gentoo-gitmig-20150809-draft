@@ -78,6 +78,11 @@ start()
 		return 1
 	fi
 
+	_start
+}
+
+_start()
+{
 	check_kernel || return 1
 	mount_dev_directory || return 1
 

@@ -16,6 +16,10 @@ depend() {
 
 start()
 {
+	_start
+}
+
+_start() {
 	if yesno "${rc_device_tarball}" && \
 		[ -s "${device_tarball}" ]
 	then
