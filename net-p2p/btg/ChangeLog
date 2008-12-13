@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/btg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.10 2008/09/11 11:44:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.11 2008/12/13 19:43:44 angelos Exp $
+
+  13 Dec 2008; Christoph Mende <angelos@gentoo.org> metadata.xml:
+  Changed maintainer to net-p2p, acked by armin76
 
   11 Sep 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> btg-0.9.7.ebuild:
   Added ~ppc keyword, closing #237329
