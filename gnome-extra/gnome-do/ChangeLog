@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-do
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.9 2008/12/06 12:27:44 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.10 2008/12/13 15:15:48 graaff Exp $
+
+  13 Dec 2008; Hans de Graaff <graaff@gentoo.org> -gnome-do-0.4.2.0.ebuild,
+  -gnome-do-0.4.2.0-r1.ebuild, gnome-do-0.6.1.0.ebuild:
+  Remove old versions with broken dependencies. Remove message about plugins
+  we do provide gnome-do-plugins for gnome-do 0.6.x as well.
 
   06 Dec 2008; Arun Raghavan <ford_prefect@gentoo.org>
   gnome-do-0.4.2.0-r2.ebuild:
