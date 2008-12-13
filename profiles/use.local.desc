@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4063 2008/12/11 09:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4064 2008/12/13 14:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1762,9 +1762,6 @@ net-analyzer/wireshark:smi - Use net-libs/libsmi to resolve numeric OIDs into hu
 net-analyzer/zabbix:agent - Enable zabbix agent (for to-be-monitored machines)
 net-analyzer/zabbix:frontend - Enable zabbix web frontend
 net-analyzer/zabbix:server - Enable zabbix server
-net-dialup/bewan-adsl:kt400 - Enable workaround for KT400 motherboards
-net-dialup/bewan-adsl:pcitimer - Use 2ms PCI hardware timer
-net-dialup/bewan-adsl:slowpcibridge - Enable workaround for low performance PCI bridges
 net-dialup/capi4k-utils:fax - Install capi-fax demo programs
 net-dialup/capi4k-utils:pppd - Installs pppdcapiplugin modules
 net-dialup/freeradius:edirectory - Enables Novell eDirectory integration
