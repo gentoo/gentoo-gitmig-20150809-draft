@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.07.ebuild,v 1.3 2008/07/22 15:27:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.07.ebuild,v 1.4 2008/12/13 04:19:17 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -20,7 +20,7 @@ IUSE="acpi gtk multilib"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
 
-COMMON="x11-base/xorg-server
+COMMON="<x11-base/xorg-server-1.4.99
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	kernel_FreeBSD? ( !media-video/nvidia-freebsd )
 	!app-emulation/emul-linux-x86-nvidia

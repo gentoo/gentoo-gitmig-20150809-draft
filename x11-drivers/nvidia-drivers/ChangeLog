@@ -1,6 +1,19 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.116 2008/12/06 02:01:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.117 2008/12/13 04:19:17 cardoe Exp $
+
+  13 Dec 2008; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-71.86.06.ebuild, nvidia-drivers-96.43.07.ebuild,
+  nvidia-drivers-100.14.19.ebuild, nvidia-drivers-100.14.23.ebuild,
+  nvidia-drivers-169.07.ebuild, nvidia-drivers-169.09.ebuild,
+  nvidia-drivers-169.09-r1.ebuild, nvidia-drivers-169.12.ebuild,
+  nvidia-drivers-173.08.ebuild, nvidia-drivers-173.14.05.ebuild,
+  nvidia-drivers-173.14.09.ebuild, nvidia-drivers-173.14.12.ebuild,
+  nvidia-drivers-177.13.ebuild, nvidia-drivers-177.67.ebuild,
+  nvidia-drivers-177.68.ebuild, nvidia-drivers-177.70.ebuild,
+  nvidia-drivers-177.80.ebuild, nvidia-drivers-177.82.ebuild:
+  update all versions to specify the exact xorg-server versions they're
+  compatible with
 
   06 Dec 2008; Mike Frysinger <vapier@gentoo.org>
   nvidia-drivers-177.80.ebuild, nvidia-drivers-177.82.ebuild:
