@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/vamp-plugin-sdk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.23 2008/12/13 10:48:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.24 2008/12/13 11:39:11 aballier Exp $
+
+  13 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  vamp-plugin-sdk-2.0.ebuild:
+  restore multilib sed for the default search path
 
 *vamp-plugin-sdk-2.0 (13 Dec 2008)
 

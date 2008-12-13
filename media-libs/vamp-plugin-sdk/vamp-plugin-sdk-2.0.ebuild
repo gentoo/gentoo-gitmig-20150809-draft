@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/vamp-plugin-sdk-2.0.ebuild,v 1.1 2008/12/13 10:48:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/vamp-plugin-sdk-2.0.ebuild,v 1.2 2008/12/13 11:39:11 aballier Exp $
 
 inherit toolchain-funcs eutils multilib
 
@@ -16,6 +16,14 @@ IUSE="doc"
 RDEPEND="media-libs/libsndfile"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# multilib for default search paths
+	sed -i -e "s:/usr/lib/vamp:/usr/$(get_libdir)/vamp:" src/vamp-hostsdk/PluginHostAdapter.cpp || die "sed failed"
+}
 
 src_compile() {
 	tc-export CXX AR RANLIB
