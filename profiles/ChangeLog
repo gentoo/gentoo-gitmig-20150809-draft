@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2158 2008/12/13 11:42:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2159 2008/12/13 14:01:28 mrness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Dec 2008; Alin Năstac <mrness@gentoo.org> package.mask:
+  Remove =net-proxy/privoxy-3.0.8 and net-dialup/{bewan-adsl,eagle-usb} atoms
+  from p.mask (packages were removed from the tree).
 
   13 Dec 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask sv 1.4 along with vamp sdk 2.0
