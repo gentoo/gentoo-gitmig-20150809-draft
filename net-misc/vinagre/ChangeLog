@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.23 2008/12/13 11:04:18 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.24 2008/12/13 13:48:38 dertobi123 Exp $
+
+  13 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org>
+  vinagre-0.5.2.ebuild:
+  ppc stable, bug #250314
 
   13 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> vinagre-0.5.2.ebuild:
   Stable on sparc, security bug #250314
