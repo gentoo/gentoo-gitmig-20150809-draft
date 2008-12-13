@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/sendpage
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/ChangeLog,v 1.10 2008/01/03 14:14:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/ChangeLog,v 1.11 2008/12/13 13:35:32 mrness Exp $
+
+  13 Dec 2008; Alin Năstac <mrness@gentoo.org> sendpage-1.1.0-r1.ebuild:
+  Fix collision with net-misc/hylafax (#248091).
 
   03 Jan 2008; Alin Năstac <mrness@gentoo.org> -sendpage-0.9.14.ebuild:
   Remove old version.

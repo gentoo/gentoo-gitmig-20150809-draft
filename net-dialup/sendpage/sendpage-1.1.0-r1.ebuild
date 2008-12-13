@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/sendpage-1.1.0-r1.ebuild,v 1.4 2007/11/05 06:24:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/sendpage-1.1.0-r1.ebuild,v 1.5 2008/12/13 13:35:31 mrness Exp $
 
 inherit perl-module eutils
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=dev-perl/Device-SerialPort-0.13
+DEPEND="!net-misc/hylafax
+	>=dev-perl/Device-SerialPort-0.13
 	>=dev-perl/MailTools-1.44
 	>=virtual/perl-libnet-1.11
 	>=dev-perl/Net-SNPP-1.13
