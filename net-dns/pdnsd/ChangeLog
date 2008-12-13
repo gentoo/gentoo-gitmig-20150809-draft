@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.88 2008/09/19 18:41:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.89 2008/12/13 10:49:59 mrness Exp $
+
+*pdnsd-1.2.7-r1 (13 Dec 2008)
+
+  13 Dec 2008; Alin Năstac <mrness@gentoo.org> files/pdnsd.online,
+  -pdnsd-1.2.7.ebuild, +pdnsd-1.2.7-r1.ebuild:
+  Solve startup error of the pdnsd-online service (#249981).
 
   19 Sep 2008; Tobias Scherbaum <dertobi123@gentoo.org> pdnsd-1.2.7.ebuild:
   ppc stable, bug #231285
