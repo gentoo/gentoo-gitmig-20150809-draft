@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/kqemu
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.22 2008/03/24 05:06:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.23 2008/12/13 17:59:42 flameeyes Exp $
+
+  13 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  kqemu-1.3.0_pre11.ebuild:
+  Die if make fails.
 
   24 Mar 2008; Luca Barbato <lu_zero@gentoo.org> kqemu-1.3.0_pre11.ebuild:
   Dynamic device '/dev/kqemu' creation is now the default. modules conf isn't

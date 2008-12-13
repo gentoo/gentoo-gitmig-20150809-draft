@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.3.0_pre11.ebuild,v 1.6 2008/03/24 05:06:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.3.0_pre11.ebuild,v 1.7 2008/12/13 17:59:42 flameeyes Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -43,7 +43,7 @@ src_compile() {
 	./configure --kernel-path="${KV_DIR}" \
 		|| die "could not configure"
 
-	make
+	make || die "make failed"
 }
 
 src_install() {
