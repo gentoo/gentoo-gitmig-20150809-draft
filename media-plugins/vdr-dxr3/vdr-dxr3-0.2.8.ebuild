@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/vdr-dxr3-0.2.8.ebuild,v 1.2 2008/04/21 17:50:46 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/vdr-dxr3-0.2.8.ebuild,v 1.3 2008/12/13 18:48:29 ssuominen Exp $
 
 inherit vdr-plugin versionator
 
@@ -10,12 +10,12 @@ SRC_URI="mirror://sourceforge/dxr3plugin/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="media-video/em8300-libraries
-		>=media-video/vdr-1.4.0
-		media-video/ffmpeg"
+	>=media-video/vdr-1.4.0
+	media-video/ffmpeg"
 
 src_unpack() {
 	vdr-plugin_src_unpack
