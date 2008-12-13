@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/xfce4-icon-theme
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce4-icon-theme/ChangeLog,v 1.6 2008/12/08 21:35:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce4-icon-theme/ChangeLog,v 1.7 2008/12/13 16:45:38 armin76 Exp $
+
+  13 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  xfce4-icon-theme-4.4.3.ebuild:
+  alpha/arm/ia64/sparc/x86 stable wrt #249942
 
   08 Dec 2008; Brent Baude <ranger@gentoo.org>
   xfce4-icon-theme-4.4.3.ebuild:
