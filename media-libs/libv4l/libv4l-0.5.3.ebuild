@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.5.3.ebuild,v 1.4 2008/11/09 14:25:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libv4l/libv4l-0.5.3.ebuild,v 1.5 2008/12/13 13:45:20 dertobi123 Exp $
 
 inherit multilib toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://people.atrpms.net/~hdegoede/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 ppc ~ppc64 x86"
 IUSE=""
 
 src_compile() {
