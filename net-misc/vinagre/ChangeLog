@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.22 2008/12/12 03:16:05 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.23 2008/12/13 11:04:18 bluebird Exp $
+
+  13 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> vinagre-0.5.2.ebuild:
+  Stable on sparc, security bug #250314
 
   12 Dec 2008; Mart Raudsepp <leio@gentoo.org> -vinagre-2.24.1.ebuild:
   Remove unnecessary version that has a security bug
