@@ -70,3 +70,8 @@ app-text/texlive xindy
 # Alexis Ballier <aballier@gentoo.org> (28 Nov 2008)
 # Requires bluez-libs which is linux only
 net-libs/libpcap bluetooth
+
+# Alexis Ballier <aballier@gentoo.org> (15 Dec 2008)
+# Needs valgrind
+media-libs/gstreamer debug
+media-libs/gst-plugins-base debug
