@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/encfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.38 2008/12/13 16:43:00 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.39 2008/12/13 16:50:32 vanquirius Exp $
+
+  13 Dec 2008; Marcelo Goes <vanquirius@gentoo.org> encfs-1.5.ebuild:
+  Add autotools magic to deal with broken --as-needed for bug 245782. Thanks
+  to Diego Petteno <flameeyes at gentoo dot org>, Alexandre Rostovtsev
+  <tetromino at gmail dot com> and Vlastimil Babka <caster at gentoo dot org>.
 
   13 Dec 2008; Marcelo Goes <vanquirius@gentoo.org> -encfs-1.2.5.1.ebuild,
   -encfs-1.3.1.1.ebuild, -encfs-1.3.2.1.ebuild, -encfs-1.3.2.1-r1.ebuild,
