@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.12.6-r1.ebuild,v 1.1 2008/11/26 22:23:41 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.12.7.ebuild,v 1.1 2008/12/13 22:15:58 loki_val Exp $
 
 EAPI="2"
 
@@ -37,9 +37,6 @@ src_prepare() {
 
 	# Upstream bug #443175
 	sed -i -e ':^CFLAGS=:d' "${S}/configure.in"
-
-	# Upstream bug 445370
-	epatch "${FILESDIR}/${P}-spinbutton-api-fix.patch"
 
 	# disable building of samples (#16015)
 	sed -i -e "s:sample::" Makefile.am

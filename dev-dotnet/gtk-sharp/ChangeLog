@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.85 2008/12/04 23:51:49 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.86 2008/12/13 22:15:58 loki_val Exp $
+
+*gtk-sharp-2.12.7 (13 Dec 2008)
+
+  13 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -files/gtk-sharp-2.12.6-spinbutton-api-fix.patch,
+  -gtk-sharp-2.12.6-r1.ebuild, +gtk-sharp-2.12.7.ebuild:
+  Bump. Remove old.
 
 *gtk-sharp-2.12.7_pre20081204 (04 Dec 2008)
 
