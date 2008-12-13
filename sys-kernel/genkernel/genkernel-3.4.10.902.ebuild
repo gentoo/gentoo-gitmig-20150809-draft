@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.10.902.ebuild,v 1.1 2008/12/07 22:19:15 agaffney Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.10.902.ebuild,v 1.2 2008/12/13 19:03:34 agaffney Exp $
 
 # genkernel-9999        -> latest SVN
 # genkernel-9999.REV    -> use SVN REV
@@ -94,7 +94,7 @@ src_install() {
 	insinto /usr/share/genkernel
 	doins -r "${S}"/* || die "doins"
 	use ibm && cp "${S}"/ppc64/kernel-2.6-pSeries "${S}"/ppc64/kernel-2.6 || \
-		cp "${S}"/ppc64/kernel-2.6.g5 "${S}"/ppc64/kernel-2.6
+		cp "${S}"/arch/ppc64/kernel-2.6.g5 "${S}"/arch/ppc64/kernel-2.6
 
 	# Copy files to /var/cache/genkernel/src
 	elog "Copying files to /var/cache/genkernel/src..."
