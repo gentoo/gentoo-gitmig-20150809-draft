@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/localshell
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/ChangeLog,v 1.7 2007/04/22 13:56:38 dertobi123 Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/ChangeLog,v 1.8 2008/12/13 23:58:49 flameeyes Exp $
+
+  13 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/localshell-1.2+gcc-4.3.patch, localshell-1.2.ebuild:
+  Add patch to build with GCC 4.3, thanks to Bert Karwatzki in bug #250713.
 
   22 Apr 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   localshell-1.2.ebuild:

@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.2.ebuild,v 1.5 2007/04/22 13:56:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.2.ebuild,v 1.6 2008/12/13 23:58:49 flameeyes Exp $
+
+inherit base
 
 DESCRIPTION="Localshell allows per-user/group local control of shell execution."
 HOMEPAGE="http://research.iat.sfu.ca/custom-software/localshell/"
@@ -11,6 +13,8 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 DEPEND="virtual/libc"
 #RDEPEND=""
+
+PATCHES=( "${FILESDIR}/${P}+gcc-4.3.patch" )
 
 src_compile() {
 	# this is a shell, it needs to be in /bin
