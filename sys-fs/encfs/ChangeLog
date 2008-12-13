@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/encfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.37 2008/12/01 20:35:24 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.38 2008/12/13 16:43:00 vanquirius Exp $
+
+  13 Dec 2008; Marcelo Goes <vanquirius@gentoo.org> -encfs-1.2.5.1.ebuild,
+  -encfs-1.3.1.1.ebuild, -encfs-1.3.2.1.ebuild, -encfs-1.3.2.1-r1.ebuild,
+  -encfs-1.4.2.ebuild:
+  Clean old ebuilds.
 
   01 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> encfs-1.5.ebuild:
   Mark stable on sparc and fix homepage, bug #245864
