@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.190 2008/12/12 20:41:41 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.191 2008/12/14 14:03:29 gentoofan23 Exp $
+
+  14 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  distcc-3.0-r4.ebuild:
+  stable amd64, bug 249695
 
   12 Dec 2008; Ferris McCormick <fmccor@gentoo.org> distcc-3.0-r4.ebuild:
   Sparc stable, Bug #249695.
