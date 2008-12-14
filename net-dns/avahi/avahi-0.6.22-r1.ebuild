@@ -1,6 +1,6 @@
 # Copyright 2000-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.22-r1.ebuild,v 1.9 2008/05/29 17:36:48 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.22-r1.ebuild,v 1.10 2008/12/14 15:15:48 loki_val Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="none"
@@ -65,7 +65,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	doc? (
 		app-doc/doxygen
-		mono? ( >=dev-util/monodoc-1.1.8 )
+		mono? ( >=virtual/monodoc-1.1.8 )
 	)"
 
 pkg_setup() {
