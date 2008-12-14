@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.21 2008/10/13 18:41:54 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.22 2008/12/14 00:06:46 flameeyes Exp $
 
 EAPI=1
 
-inherit qt3
+inherit qt3 eutils
 
 DESCRIPTION="graphical documentation browser for Unix/X11"
 SRC_URI="mirror://berlios/dox/${P}.tar.gz"
@@ -25,6 +25,8 @@ src_unpack() {
 		-e 's:/opt/www/htdig/bin/htmerge:/usr/bin/htmerge:g' \
 		-e 's:/opt/www/cgi-bin/htsearch:/usr/bin/htsearch:g' \
 		-e 's:qmake:${QTDIR}/bin/qmake:g' configure || die "sed failed"
+
+	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
 }
 
 src_compile() {

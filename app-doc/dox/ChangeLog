@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/dox
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.14 2008/10/13 18:41:54 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.15 2008/12/14 00:06:46 flameeyes Exp $
+
+  14 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/dox-1.1+gcc-4.3.patch, dox-1.1.ebuild:
+  Add patch to build with GCC 4.3, thanks to Bert Karwatzki in bug #250628.
 
   13 Oct 2008; Thilo Bangert <bangert@gentoo.org> dox-1.1.ebuild:
   use mirror:// (bug #218657)
