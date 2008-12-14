@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.148 2008/12/14 15:15:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.149 2008/12/14 22:21:20 swegener Exp $
+
+*avahi-0.6.24 (14 Dec 2008)
+
+  14 Dec 2008; Sven Wegener <swegener@gentoo.org> +avahi-0.6.24.ebuild:
+  Version bump, security bug #250913.
 
   14 Dec 2008; Peter Alfredsen <loki_val@gentoo.org> avahi-0.6.19-r2.ebuild,
   avahi-0.6.22-r1.ebuild, avahi-0.6.23.ebuild:
