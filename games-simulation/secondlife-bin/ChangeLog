@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/secondlife-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.6 2008/12/07 07:21:16 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.7 2008/12/14 15:28:28 lavajoe Exp $
+
+*secondlife-bin-1.22_rc3 (14 Dec 2008)
+
+  14 Dec 2008; Joe Peterson <lavajoe@gentoo.org>
+  +secondlife-bin-1.22_rc3.ebuild:
+  Add new rc3
 
 *secondlife-bin-1.22_rc2-r1 (07 Dec 2008)
 
