@@ -1,7 +1,6 @@
-diff -aurp data/example.conf data/example.conf
---- data/example.conf	2006-08-29 22:07:50.000000000 +0000
-+++ data/example.conf	2006-08-29 22:08:11.000000000 +0000
-@@ -255,7 +255,7 @@ HostServName	"HostServ"  "vHost Server"
+--- data/example.conf.orig	2008-12-14 20:37:22.000000000 +0000
++++ data/example.conf	2008-12-14 20:37:43.000000000 +0000
+@@ -285,7 +285,7 @@ HostServName	"HostServ"  "vHost Server"
  # PIDFile <filename>  [REQUIRED]
  #     Specifies the name of the file containing Services' process ID.
  

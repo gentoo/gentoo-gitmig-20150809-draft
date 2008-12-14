@@ -1,12 +1,15 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.7.21.ebuild,v 1.2 2008/11/29 15:05:59 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.8.0_rc1.ebuild,v 1.1 2008/12/14 18:51:28 gurligebis Exp $
 
-inherit eutils
+inherit eutils versionator
+
+MY_PV=$(replace_version_separator 3 '-')
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="Anope IRC Services"
 HOMEPAGE="http://www.anope.org"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,13 +31,18 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/pid-patch.diff
+}
+
 src_compile() {
 	local myconf
 	if ! use mysql; then
 		myconf="${myconf} --without-mysql"
 	fi
-
-	epatch "${FILESDIR}"/pid-patch.diff
 
 	econf \
 		${myconf} \
@@ -108,7 +116,6 @@ src_install() {
 	doins src/core/*.so
 
 	fowners anope:anope ${INSTALL_DIR}/services
-	fowners anope:anope ${INSTALL_DIR}/data/services.conf
 	fowners anope:anope ${INSTALL_DIR}/data/languages/cat
 	fowners anope:anope ${INSTALL_DIR}/data/languages/de
 	fowners anope:anope ${INSTALL_DIR}/data/languages/en_us
