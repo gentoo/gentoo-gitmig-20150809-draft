@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libnipper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnipper/ChangeLog,v 1.6 2008/11/08 11:10:41 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnipper/ChangeLog,v 1.7 2008/12/14 12:00:57 ikelos Exp $
+
+*libnipper-0.12.5 (14 Dec 2008)
+
+  14 Dec 2008; Mike Auty <ikelos@gentoo.org> -libnipper-0.12.0.ebuild,
+  -libnipper-0.12.1.ebuild, -libnipper-0.12.2.ebuild,
+  +libnipper-0.12.5.ebuild:
+  Version bump, clear out old versions.
 
   08 Nov 2008; Mike Auty <ikelos@gentoo.org> ChangeLog:
   Fix up broken manifest
