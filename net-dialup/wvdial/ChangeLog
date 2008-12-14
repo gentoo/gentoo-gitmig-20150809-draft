@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/wvdial
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.52 2008/12/14 16:33:50 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.53 2008/12/14 18:38:28 loki_val Exp $
+
+  14 Dec 2008; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
+  Removing myself as maintainer, per email convo with mrness.
 
   14 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/wvdial-1.60-as-needed.patch, metadata.xml, wvdial-1.60.ebuild:
