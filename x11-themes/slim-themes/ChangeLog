@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/slim-themes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.11 2008/12/11 04:41:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.12 2008/12/14 23:25:27 darkside Exp $
+
+*slim-themes-1.2.3a-r2 (14 Dec 2008)
+
+  14 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
+  -slim-themes-1.2.3a-r1.ebuild, +slim-themes-1.2.3a-r2.ebuild:
+  Add xfce-g-box theme, ebuild submitted by BT, bug #249880
 
 *slim-themes-1.2.3a-r1 (11 Dec 2008)
 
