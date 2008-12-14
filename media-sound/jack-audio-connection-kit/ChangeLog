@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.117 2008/12/13 17:27:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.118 2008/12/14 20:18:33 armin76 Exp $
+
+  14 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  jack-audio-connection-kit-0.116.1.ebuild:
+  0.116.1 doesn't compile on alpha, marking -alpha, upstream fixed it on svn
 
   13 Dec 2008; Raúl Porcel <armin76@gentoo.org>
   jack-audio-connection-kit-0.109.2-r1.ebuild:
