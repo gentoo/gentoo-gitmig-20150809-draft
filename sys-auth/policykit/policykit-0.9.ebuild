@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit/policykit-0.9.ebuild,v 1.1 2008/12/01 22:13:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit/policykit-0.9.ebuild,v 1.2 2008/12/14 20:50:58 eva Exp $
 
 inherit autotools bash-completion eutils multilib pam
 
@@ -96,7 +96,7 @@ src_install() {
 
 	einfo "Installing basic PolicyKit.conf"
 	insinto /etc/PolicyKit
-	doins "${FILESDIR}"/PolicyKit.conf
+	doins "${FILESDIR}"/PolicyKit.conf || die "doins failed"
 	# Need to keep a few directories around...
 
 	diropts -m0770 -o root -g polkituser

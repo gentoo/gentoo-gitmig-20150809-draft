@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/policykit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit/ChangeLog,v 1.7 2008/12/01 22:13:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit/ChangeLog,v 1.8 2008/12/14 20:50:58 eva Exp $
+
+  14 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org> +files/PolicyKit.conf,
+  policykit-0.9.ebuild:
+  Add missing file, bug #250856.
 
 *policykit-0.9 (01 Dec 2008)
 
