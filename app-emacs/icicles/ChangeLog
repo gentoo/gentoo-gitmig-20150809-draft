@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/icicles
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/icicles/ChangeLog,v 1.2 2008/08/27 13:19:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/icicles/ChangeLog,v 1.3 2008/12/14 20:56:44 ulm Exp $
+
+*icicles-20081210 (14 Dec 2008)
+
+  14 Dec 2008; Ulrich Mueller <ulm@gentoo.org> +icicles-20081210.ebuild:
+  Version bump, new snapshot.
 
   27 Aug 2008; Ulrich Mueller <ulm@gentoo.org> icicles-20071205.ebuild:
   Use eclass default instead of elisp-comp, bug 235442.
