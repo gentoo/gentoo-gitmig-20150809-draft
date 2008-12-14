@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/chmlib-0.39-r1.ebuild,v 1.1 2008/11/02 08:11:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/chmlib-0.39-r1.ebuild,v 1.2 2008/12/14 23:50:01 maekke Exp $
 
 inherit eutils multilib flag-o-matic versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.jedrea.com/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86"
 IUSE=""
 
 src_unpack() {
