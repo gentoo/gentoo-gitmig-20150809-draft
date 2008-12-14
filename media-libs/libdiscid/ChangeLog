@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdiscid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdiscid/ChangeLog,v 1.14 2008/12/09 19:51:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdiscid/ChangeLog,v 1.15 2008/12/14 18:40:06 armin76 Exp $
+
+  14 Dec 2008; Raúl Porcel <armin76@gentoo.org> libdiscid-0.2.2.ebuild:
+  alpha/arm/ia64/sparc/x86 stable wrt #249746
 
   09 Dec 2008; Brent Baude <ranger@gentoo.org> libdiscid-0.1.1.ebuild:
   stable ppc64, bug 249746
