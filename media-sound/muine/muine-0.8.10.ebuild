@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.10.ebuild,v 1.1 2008/11/23 23:51:58 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.10.ebuild,v 1.2 2008/12/14 14:27:06 loki_val Exp $
 
 EAPI=2
 
@@ -47,7 +47,7 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	gnome-base/gnome-common
 	>=dev-util/intltool-0.29
-	>=dev-util/monodoc-1.1.9"
+	virtual/monodoc"
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS PLUGINS README TODO"
 
