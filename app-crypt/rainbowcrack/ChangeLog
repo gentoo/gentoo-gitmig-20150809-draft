@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/rainbowcrack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/ChangeLog,v 1.11 2008/06/20 14:32:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/ChangeLog,v 1.12 2008/12/14 00:09:21 flameeyes Exp $
+
+  14 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/rainbowcrack-1.2+gcc-4.3.patch, rainbowcrack-1.2-r1.ebuild:
+  Add patch to build with GCC 4.3, thanks to Bert Karwatzki in bug #250623.
 
   20 Jun 2008; Daniel Black <dragonheart@gentoo.org>
   +files/rainbowcrack-1.2-types.patch, rainbowcrack-1.2-r1.ebuild:
