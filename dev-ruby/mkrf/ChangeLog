@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mkrf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.3 2008/04/09 13:47:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.4 2008/12/14 15:44:14 fmccor Exp $
+
+  14 Dec 2008; Ferris McCormick <fmccor@gentoo.org> mkrf-0.2.3.ebuild:
+  Sparc stable, part of Bug #250933.
 
   09 Apr 2008; Raúl Porcel <armin76@gentoo.org> mkrf-0.2.3.ebuild:
   Add ~ia64/~sparc wrt #216480
