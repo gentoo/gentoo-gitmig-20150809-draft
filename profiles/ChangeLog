@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2166 2008/12/14 23:03:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2167 2008/12/14 23:17:18 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Dec 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  more package removals cleanup
 
   14 Dec 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
   Cleanup for non-existant packages - package removals
