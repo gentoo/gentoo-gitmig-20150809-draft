@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/dwun-0.96e.ebuild,v 1.7 2007/05/02 00:17:24 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dwun/dwun-0.96e-r1.ebuild,v 1.1 2008/12/14 13:10:16 mrness Exp $
 
 DESCRIPTION="Dialer Without a Useful Name (DWUN)"
 HOMEPAGE="http://dwun.sourceforge.net/"
@@ -18,7 +18,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-docdir=doc/${P} || die "econf failed."
+	econf --with-docdir=share/doc/${PF} || die "econf failed."
 	emake || die "parallel make failed."
 }
 
