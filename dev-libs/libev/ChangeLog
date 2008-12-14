@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.8 2008/12/13 03:31:02 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.9 2008/12/14 15:50:51 gentoofan23 Exp $
+
+  14 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org> libev-3.48.ebuild:
+  stable amd64, bug 250793
 
 *libev-3.49 (13 Dec 2008)
 
