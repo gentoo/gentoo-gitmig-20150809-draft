@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9288 2008/12/14 15:58:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9289 2008/12/14 23:03:22 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -477,20 +477,6 @@ gnome-extra/gnome-lirc-properties
 # Peter Volkov <pva@gentoo.org> (17 Sep 2008)
 # Development version, but yet nice :)
 =net-analyzer/wireshark-1.1*
-
-# Jeremy Olexa <darkside@gentoo.org> (12 Sep 2008)
-# Masked for removal in 60 days. Broken in Gentoo for 1.5 years, no maintainer,
-# automagic deps, non trivial to version bump due to now bundled packages.
-# dev-lang/stratego comes for the ride becuase it depends on these two packages.
-# See bug #159048
-dev-libs/aterm
-dev-libs/sdf2-bundle
-dev-lang/stratego
-
-# Jeremy Olexa <darkside@gentoo.org> (12 Sep 2008)
-# Masked for removal in 60 days. dead upstream, broken on current systems. No
-# maintainer, See bug #166875
-net-misc/xf4vnc
 
 # Carsten Lohrke <carlo@gentoo.org> (05 Sep 2008)
 # Masked for removal. It's broken and abandoned.
