@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/calcchecksum
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/ChangeLog,v 1.8 2007/02/03 23:52:14 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/ChangeLog,v 1.9 2008/12/14 00:13:31 flameeyes Exp $
+
+  14 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/calcchecksum-1.6_pre1+gcc-4.3.patch, calcchecksum-1.6_pre1.ebuild:
+  Add patch to build with GCC 4.3, thanks to Martin Väth in bug #250620.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

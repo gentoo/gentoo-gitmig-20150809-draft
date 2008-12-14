@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/calcchecksum-1.6_pre1.ebuild,v 1.8 2005/04/21 18:00:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/calcchecksum-1.6_pre1.ebuild,v 1.9 2008/12/14 00:13:31 flameeyes Exp $
 
 inherit kde
 
@@ -17,3 +17,5 @@ KEYWORDS="x86 amd64"
 IUSE=""
 
 need-kde 3.1
+
+PATCHES=( "${FILESDIR}/${P}+gcc-4.3.patch" )
