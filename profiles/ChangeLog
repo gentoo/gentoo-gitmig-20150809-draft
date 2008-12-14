@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2164 2008/12/14 15:58:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2165 2008/12/14 18:10:24 gurligebis Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Dec 2008; Bjarke Istrup Pedersen <gurligebis@gentoo.org> use.local.desc:
+  Adding local use flags for psybnc.
 
   14 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Masked gucharmap for testing until tree is fixed, see bug #243160.
