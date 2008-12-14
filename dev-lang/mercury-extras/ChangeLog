@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.67 2008/12/14 17:36:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.68 2008/12/14 20:46:28 bluebird Exp $
+
+  14 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  mercury-extras-0.13.1-r1.ebuild:
+  Stable on sparc, bug #249575
 
   14 Dec 2008; Markus Meier <maekke@gentoo.org>
   mercury-extras-0.13.1-r1.ebuild:
