@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.3.ebuild,v 1.4 2008/11/13 03:30:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.3.ebuild,v 1.5 2008/12/14 16:02:25 aballier Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ DEPEND="
 	doc? (
 		|| (
 			( app-text/texlive-core dev-texlive/texlive-latexextra )
-			app-text/textex
+			app-text/tetex
 		)
 		media-gfx/transfig
 	)"

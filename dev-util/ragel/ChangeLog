@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.18 2008/11/13 03:30:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.19 2008/12/14 16:02:25 aballier Exp $
+
+  14 Dec 2008; Alexis Ballier <aballier@gentoo.org> ragel-6.3.ebuild:
+  typo: textex -> tetex
 
   13 Nov 2008; Diego Pettenò <flameeyes@gentoo.org> -ragel-6.2.ebuild,
   ragel-6.3.ebuild:
