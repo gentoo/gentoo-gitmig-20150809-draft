@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-1.0.ebuild,v 1.1 2008/06/01 14:52:30 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-1.0.ebuild,v 1.2 2008/12/14 14:32:47 loki_val Exp $
 
 inherit autotools eutils fdo-mime mono multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="aspnet cxx subversion"
 
 RDEPEND=">=dev-lang/mono-1.9
-		 >=dev-util/monodoc-1.9
+		 virtual/monodoc
 		 >=dev-dotnet/mono-addins-0.3.1
 		 >=dev-dotnet/gtk-sharp-2.8
 		 >=dev-dotnet/glade-sharp-2.8
