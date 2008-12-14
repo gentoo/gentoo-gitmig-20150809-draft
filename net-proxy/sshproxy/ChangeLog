@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/sshproxy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.10 2008/08/23 02:56:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.11 2008/12/14 14:36:51 mrness Exp $
+
+  14 Dec 2008; Alin Năstac <mrness@gentoo.org> sshproxy-0.5.0.ebuild,
+  -sshproxy-0.6.0_beta1.ebuild, sshproxy-0.6.0_beta2.ebuild:
+  Add !net-misc/putty dependency atom (#248193).
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
