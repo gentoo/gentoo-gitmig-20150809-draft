@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-0.10.ebuild,v 1.1 2008/05/01 18:20:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-0.10.ebuild,v 1.2 2008/12/14 22:57:07 eva Exp $
 
 inherit libtool
 
@@ -21,6 +21,12 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Fails to build with recent GTK+
+	sed -e "s/-D.*_DISABLE_DEPRECATED//g" \
+		-i src/Makefile.am src/Makefile.in demo/Makefile.am demo/Makefile.in \
+		|| die "sed failed"
+
 	# Needed for FreeBSD - Please do not remove
 	elibtoolize
 }
