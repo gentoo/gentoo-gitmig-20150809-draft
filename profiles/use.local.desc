@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4064 2008/12/13 14:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4065 2008/12/14 05:27:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1233,8 +1233,6 @@ media-libs/libsdl:noaudio - Allow users to disable audio support completely (at 
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
 media-libs/libvorbis:aotuv - Applies the aoTuV patches. Aoyumi's Tuned Vorbis is a third-party patchset that improves the vorbis encoding quality. A previous version of the aoTuV patchset has already been merged with the official libvorbis release. The current patchset especially improves encoding quality at low bitrate settings, and is very likely to be merged at some point in the future. It is recommended that all users enable this useflag. 
-media-libs/mediastreamer:gsm - Include support for the gsm audio codec
-media-libs/mediastreamer:video - Enable video support (display/capture)
 media-libs/netpbm:rle - Build converters for the RLE format (utah raster toolkit)
 media-libs/opencv:demos - Install applications that demo OpenCV library functions
 media-libs/openjpeg:tools - Installs tools (j2k_to_image and image_to_j2k)
@@ -2192,10 +2190,6 @@ net-proxy/squid:zero-penalty-hit - Add Zero Penalty Hit patch (http://zph.bratch
 net-proxy/sshproxy:client-only - Install only the client wrappers
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
 net-proxy/tsocks:tordns -  Apply tordns patch which allows transparent TORification of the DNS queries 
-net-voip/linphone:console - Build console interface
-net-voip/linphone:gsm - Include support for the gsm audio codec
-net-voip/linphone:ilbc - Build ILBC codec plugin
-net-voip/linphone:video - Enable video support (display/capture)
 net-voip/yate:gsm - Build gsm codec plugin
 net-voip/yate:h323 - Build H.323 Channel plugin
 net-voip/yate:ilbc - Build ILBC codec plugin
