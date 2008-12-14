@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.49 2008/12/13 22:06:21 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.50 2008/12/14 12:44:45 maekke Exp $
+
+  14 Dec 2008; Markus Meier <maekke@gentoo.org> jasper-1.900.1-r3.ebuild:
+  amd64/x86 stable, bug #222819
 
   13 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
   jasper-1.900.1-r3.ebuild:
