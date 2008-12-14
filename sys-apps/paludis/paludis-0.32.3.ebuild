@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.32.3.ebuild,v 1.1 2008/12/12 19:57:44 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.32.3.ebuild,v 1.2 2008/12/14 13:39:01 gentoofan23 Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -63,15 +63,6 @@ pkg_setup() {
 			ewarn "Your MAKEOPTS -j is too high. To stop the kernel from throwing a hissy fit"
 			ewarn "when g++ eats all your RAM, we'll use ${FIXED_MAKEOPTS} instead."
 		fi
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	if has userpriv $FEATURES; then
-		epatch "${FILESDIR}/${P}-userprivtest.patch"
 	fi
 }
 
