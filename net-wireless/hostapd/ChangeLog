@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.86 2008/08/23 05:21:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.87 2008/12/14 17:43:06 gurligebis Exp $
+
+*hostapd-0.6.5 (14 Dec 2008)
+
+  14 Dec 2008; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  -files/hostapd-0.6.4-conf.d, -files/hostapd-0.6.4-init.d,
+  +files/hostapd-0.6.5-conf.d, +files/hostapd-0.6.5-init.d,
+  -hostapd-0.6.4.ebuild, +hostapd-0.6.5.ebuild:
+  Bumping to 0.6.5 and removing broken nl80211 check
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

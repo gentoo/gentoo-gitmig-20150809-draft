@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.4.ebuild,v 1.1 2008/08/11 21:13:15 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.5.ebuild,v 1.1 2008/12/14 17:43:06 gurligebis Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -71,16 +71,10 @@ generate_config() {
 	if [[ ${KV_MAJOR} -ge 2 && ${KV_MINOR} -ge 6 || ${KV_PATCH} -ge 26 ]] ; then
 		# Test if header version is new enough (2.6.26+)
 		if [ "$(grep NL80211_MNTR_FLAG_COOK_FRAMES /usr/include/linux/nl80211.h)" ]; then
-			# Test to see if cfg.c contains to code to enable AP mode
-			if [ "$(grep NL80211_IFTYPE_AP: ${KV_DIR}/net/mac80211/cfg.c)" ]; then
-				einfo "  nl80211 driver enabled"
-				echo "CONFIG_DRIVER_NL80211=y" >> ${CONFIG}
-				echo "CFLAGS += -I/usr/include/netlink" >> ${CONFIG}
-				echo "LIBS += -L/usr/lib" >> ${CONFIG}
-			else
-				einfo "  nl80211 driver disabled (due to no AP support in cfg.c file)"
-				einfo "  (To enable this, use the patch from http://johannes.sipsolutions.net/patches/kernel/all/LATEST until support gets added to the mainline kernel)"
-			fi
+			einfo "  nl80211 driver enabled"
+			echo "CONFIG_DRIVER_NL80211=y" >> ${CONFIG}
+			echo "CFLAGS += -I/usr/include/netlink" >> ${CONFIG}
+			echo "LIBS += -L/usr/lib" >> ${CONFIG}
 		else
 			einfo "  nl80211 driver disabled (due to header version below 2.6.26)"
 		fi
