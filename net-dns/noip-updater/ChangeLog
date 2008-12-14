@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.32 2008/05/01 21:19:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.33 2008/12/14 15:52:59 eva Exp $
+
+*noip-updater-2.1.9 (14 Dec 2008)
+
+  14 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/noip-2.1.9-daemon.patch, +files/noip-2.1.9-flags.patch,
+  +noip-updater-2.1.9.ebuild:
+  Bump to 2.1.9 for security bug #248709 and bug #248758.
 
 *noip-updater-2.1.7-r1 (02 May 2008)
 
