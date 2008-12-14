@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.213 2008/11/30 19:20:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.214 2008/12/14 13:56:02 mrness Exp $
+
+  14 Dec 2008; Alin Năstac <mrness@gentoo.org>
+  +files/squid-3.0.10-adapted-zph.patch, -files/squid-3.0.10-zph.patch,
+  squid-3.0.10-r1.ebuild:
+  Adapt zph patch for fixing gcc-4.3 "suggest parentheses" error (#250007).
 
 *squid-3.0.10-r1 (30 Nov 2008)
 *squid-2.7.5-r1 (30 Nov 2008)

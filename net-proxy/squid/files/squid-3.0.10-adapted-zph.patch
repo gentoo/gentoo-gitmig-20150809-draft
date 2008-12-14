@@ -95,7 +95,7 @@ diff -Nru squid-3.0.STABLE10.orig/src/client_side_reply.cc squid-3.0.STABLE10/sr
 +		int tos = 0;
 +		if (Config.zph_tos_peer && 
 +    	 	 (http->request->hier.code==SIBLING_HIT ||
-+			 Config.onoff.zph_tos_parent && http->request->hier.code==PARENT_HIT))
++			 (Config.onoff.zph_tos_parent && http->request->hier.code==PARENT_HIT)))
 +		{
 +			tos = Config.zph_tos_peer;
 +			debugs(33, 1, "ZPH: Peer hit, TOS="<<tos<<" hier.code="<<http->request->hier.code);
