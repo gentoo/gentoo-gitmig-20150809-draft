@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.5.ebuild,v 1.4 2008/12/14 14:12:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.5.ebuild,v 1.5 2008/12/14 14:40:09 pva Exp $
 
 EAPI=1
 WANT_AUTOMAKE="1.9"
@@ -138,7 +138,7 @@ src_install() {
 	doins wiretap/wtap.h
 
 	# FAQ is not required as is installed from help/faq.txt
-	dodoc AUTHORS ChangeLog NEWS README{,bsd,linux,macos,vmware} doc/randpkt.txt
+	dodoc AUTHORS ChangeLog NEWS README{,.bsd,.linux,.macos,.vmware} doc/randpkt.txt
 
 	if use gtk ; then
 		insinto /usr/share/icons/hicolor/16x16/apps
