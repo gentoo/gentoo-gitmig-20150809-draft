@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2161 2008/12/14 05:32:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2162 2008/12/14 06:58:25 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -43,10 +43,6 @@
   Masking live x11-wm/fluxbox-9999 ebuild
 
   11 Dec 2008; <ssuominen@gentoo.org> package.mask:
-  Mask dev-php5/ffmpeg-php for removal in 30 days by treecleaners and media
-  because it doesn't build wrt #242050.
-
-  11 Dec 2008; <ssuominen@gentoo.org> package.mask:
   Mask net-voip/linphone for removal in 30 days by treecleaners and media,
   bugs 189774 and 218102.
 
@@ -55,10 +51,6 @@
 
   11 Dec 2008; Alexis Ballier <aballier@gentoo.org> package.mask:
   adjust ocaml 3.11 mask reason
-
-  11 Dec 2008; <ssuominen@gentoo.org> package.mask:
-  Unmask media-libs/mediastreamer because support for FFMPEG it has been
-  deprecated. This means it will be without video support, thanks upstream.
 
   11 Dec 2008; <ssuominen@gentoo.org> package.mask:
   Removed dev-db/rekall and two unused mpeg4ip versions that have been
