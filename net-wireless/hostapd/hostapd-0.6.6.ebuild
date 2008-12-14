@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.5.ebuild,v 1.1 2008/12/14 17:43:06 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.6.ebuild,v 1.1 2008/12/14 19:27:20 gurligebis Exp $
 
 inherit toolchain-funcs linux-info
 
