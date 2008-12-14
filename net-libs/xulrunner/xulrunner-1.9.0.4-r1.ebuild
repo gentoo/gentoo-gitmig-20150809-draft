@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.0.4-r1.ebuild,v 1.3 2008/12/14 18:28:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.0.4-r1.ebuild,v 1.4 2008/12/14 21:49:54 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -177,7 +177,6 @@ pkg_postinst() {
 pkg_postrm() {
 	if use python; then
 		python_version
-		python_mod_cleanup
+		python_mod_cleanup ${ROOT}/usr/$(get_libdir)/${PN}-1.9/python/xpcom
 	fi
 }
-
