@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.10.0.ebuild,v 1.8 2008/01/13 04:19:53 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-2.10.0.ebuild,v 1.9 2008/12/14 15:27:09 loki_val Exp $
 
 inherit eutils mono autotools
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/mono-1.1.9
 	>=gnome-base/orbit-2.8.3"
 
 DEPEND="${RDEPEND}
-	doc? ( >=dev-util/monodoc-1.1.8 )
+	doc? ( >=virtual/monodoc-1.1.8 )
 	dev-util/pkgconfig"
 
 KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"

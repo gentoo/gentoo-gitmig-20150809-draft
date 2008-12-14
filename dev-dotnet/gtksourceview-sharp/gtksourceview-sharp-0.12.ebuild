@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.12.ebuild,v 1.2 2008/11/29 03:00:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtksourceview-sharp/gtksourceview-sharp-0.12.ebuild,v 1.3 2008/12/14 15:21:48 loki_val Exp $
 
 EAPI=2
 
@@ -27,7 +27,7 @@ RDEPEND=">=dev-lang/mono-1.0
 		 !<dev-dotnet/gtksourceview-sharp-0.12"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.19
-		>=dev-util/monodoc-1.1.8"
+		>=virtual/monodoc-1.1.8"
 
 src_prepare() {
 	#A sample fails with mono-2.

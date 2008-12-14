@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.3.0.ebuild,v 1.4 2008/11/20 17:45:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.3.0.ebuild,v 1.5 2008/12/14 15:28:29 loki_val Exp $
 
 inherit autotools mono eutils
 
@@ -17,7 +17,7 @@ RDEPEND="dev-lang/mono
 	gnome? ( >=dev-dotnet/gnome-sharp-2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( dev-util/monodoc )"
+	doc? ( virtual/monodoc )"
 
 src_unpack() {
 	unpack ${A}

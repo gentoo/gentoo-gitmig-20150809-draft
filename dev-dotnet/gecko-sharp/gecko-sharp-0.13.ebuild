@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.13.ebuild,v 1.1 2008/11/23 15:31:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.13.ebuild,v 1.2 2008/12/14 15:18:41 loki_val Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-lang/mono-1.2
 	>=net-libs/xulrunner-1.9"
 
 DEPEND="${RDEPEND}
-	doc? ( >=dev-util/monodoc-1.0 )
+	doc? ( >=virtual/monodoc-1.0 )
 	>=dev-util/pkgconfig-0.19"
 
 src_prepare() {

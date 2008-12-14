@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-1.9.75474.ebuild,v 1.2 2008/03/02 08:04:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-1.9.75474.ebuild,v 1.3 2008/12/14 15:28:29 loki_val Exp $
 
 inherit mono eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/mono-1.1
-		doc? ( >=dev-util/monodoc-1.1.9
+		doc? ( >=virtual/monodoc-1.1.9
 				app-arch/unzip )
 		media-libs/taglib"
 DEPEND="${RDEPEND}

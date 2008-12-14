@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/njb-sharp/njb-sharp-0.3.0.ebuild,v 1.5 2008/01/17 18:07:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/njb-sharp/njb-sharp-0.3.0.ebuild,v 1.6 2008/12/14 15:17:06 loki_val Exp $
 
 inherit mono
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/mono-1.1.10
-	doc? ( >=dev-util/monodoc-1.1.8 )
+	doc? ( >=virtual/monodoc-1.1.8 )
 	>=dev-dotnet/gtk-sharp-2.0"
 DEPEND="${RDEPEND}
 	>=media-libs/libnjb-2.2.4

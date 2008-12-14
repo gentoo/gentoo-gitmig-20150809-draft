@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-fuse/mono-fuse-0.4.0.ebuild,v 1.6 2007/06/29 21:23:42 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-fuse/mono-fuse-0.4.0.ebuild,v 1.7 2008/12/14 15:20:32 loki_val Exp $
 
 inherit autotools mono
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 IUSE="examples"
 
 DEPEND=">=dev-lang/mono-1.1.13
-		>=dev-util/monodoc-1.1.13
+		>=virtual/monodoc-1.1.13
 		>=sys-fs/fuse-2.5.2"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.2.0.ebuild,v 1.6 2008/07/28 15:47:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/taglib-sharp-2.0.2.0.ebuild,v 1.7 2008/12/14 15:28:29 loki_val Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ IUSE="doc gnome"
 
 RDEPEND="dev-lang/mono
 		 gnome? ( >=dev-dotnet/gnome-sharp-2.0 )
-		 doc? ( dev-util/monodoc )"
+		 doc? ( virtual/monodoc )"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.20"
 

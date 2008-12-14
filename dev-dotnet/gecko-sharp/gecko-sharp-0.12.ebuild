@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.12.ebuild,v 1.2 2008/03/17 15:32:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.12.ebuild,v 1.3 2008/12/14 15:18:41 loki_val Exp $
 
 inherit mono multilib
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-lang/mono-1.0
 				=www-client/mozilla-firefox-2*
 			)"
 DEPEND="${RDEPEND}
-		doc? ( >=dev-util/monodoc-1.0 )
+		doc? ( >=virtual/monodoc-1.0 )
 		>=dev-util/pkgconfig-0.19"
 
 MAKEOPTS="${MAKEOPTS} -j1"
