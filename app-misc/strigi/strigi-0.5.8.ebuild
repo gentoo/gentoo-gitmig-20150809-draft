@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.5.8.ebuild,v 1.5 2008/09/07 19:45:20 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.5.8.ebuild,v 1.6 2008/12/14 23:15:38 jmbsvicetto Exp $
 
 EAPI="1"
 inherit eutils cmake-utils
 
 DESCRIPTION="Fast crawling desktop search engine with Qt4 GUI"
-HOMEPAGE="http://www.vandenoever.info/software/strigi"
+HOMEPAGE="http://strigi.sourceforge.net/"
 SRC_URI="http://www.vandenoever.info/software/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
