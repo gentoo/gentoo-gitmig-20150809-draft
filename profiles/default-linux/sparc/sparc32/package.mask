@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/package.mask,v 1.14 2007/03/08 23:02:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/package.mask,v 1.15 2008/12/14 14:15:56 loki_val Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org> 14 Feb 2007
 # Mask mono stuff
@@ -16,6 +16,7 @@ dev-dotnet/pe-format
 dev-lang/mono
 dev-util/mono-tools
 dev-util/monodoc
+virtual/monodoc
 
 # STLport-5.1.0+ needs gcc4
 >=dev-libs/STLport-5.1.0

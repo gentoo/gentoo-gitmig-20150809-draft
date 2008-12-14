@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/package.mask,v 1.15 2008/06/05 11:39:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/package.mask,v 1.16 2008/12/14 14:16:41 loki_val Exp $
 
 # Jason Wever <weeve@gentoo.org>
 # gradm requires 64 bit support, which doesn't exist in this profile
@@ -32,3 +32,4 @@ dev-dotnet/pe-format
 dev-lang/mono
 dev-util/mono-tools
 dev-util/monodoc
+virtual/monodoc
