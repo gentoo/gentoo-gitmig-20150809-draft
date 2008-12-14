@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.87 2008/12/08 08:11:18 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.88 2008/12/14 16:59:41 maekke Exp $
+
+  14 Dec 2008; Markus Meier <maekke@gentoo.org> hylafax-4.4.4-r1.ebuild:
+  amd64/x86 stable, bug #245190
 
 *hylafax-4.4.4-r1 (07 Dec 2008)
 
