@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.24.2-r1.ebuild,v 1.1 2008/12/14 21:53:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.24.2-r1.ebuild,v 1.2 2008/12/14 21:53:43 eva Exp $
 
 inherit eutils gnome2
 
@@ -61,7 +61,7 @@ src_unpack() {
 	sed 's:-I$(top_srcdir)/plugins \\:\\:g' \
 		-i doc/reference/Makefile.am doc/reference/Makefile.in \
 		|| die "sed	failed"
-	
+
 	# Fix sigbus on sparc, bug #250830
 	epatch "${FILESDIR}/${P}-sigbus.patch"
 }
