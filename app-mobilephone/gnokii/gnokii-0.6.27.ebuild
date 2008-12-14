@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.27.ebuild,v 1.1 2008/12/13 12:35:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.27.ebuild,v 1.2 2008/12/14 12:12:04 mrness Exp $
 
 inherit eutils linux-info
 
@@ -15,7 +15,7 @@ IUSE="nls bluetooth ical irda sms postgres mysql usb X debug"
 
 RDEPEND="sys-apps/pcsc-lite
 	X? ( >=x11-libs/gtk+-2 )
-	bluetooth? ( >=net-wireless/bluez-libs-2.25 )
+	bluetooth? ( || ( net-wireless/bluez >=net-wireless/bluez-libs-2.25 ) )
 	sms? ( >=dev-libs/glib-2
 	       postgres? ( >=virtual/postgresql-base-8.0 )
 	       mysql? ( >=virtual/mysql-4.1 )

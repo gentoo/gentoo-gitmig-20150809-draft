@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.83 2008/12/13 12:35:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.84 2008/12/14 12:12:03 mrness Exp $
+
+  14 Dec 2008; Alin Năstac <mrness@gentoo.org> gnokii-0.6.27.ebuild:
+  Update bluetooth dependency (#250910).
 
 *gnokii-0.6.27 (13 Dec 2008)
 
