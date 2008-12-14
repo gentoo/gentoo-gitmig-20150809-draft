@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/lphdisk/lphdisk-0.9.1-r2.ebuild,v 1.1 2008/12/08 10:33:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/lphdisk/lphdisk-0.9.1-r2.ebuild,v 1.2 2008/12/14 16:57:30 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.procyon.com/~pda/lphdisk/${P}.tar.bz2"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="sys-libs/lrmi"
@@ -31,6 +31,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "This package is now using external lrmi library instead of shipped"
+	ewarn "This package is now using system lrmi library instead of shipped"
 	ewarn "copy it came with. This package is untested, use at your own risk."
 }
