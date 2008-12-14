@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.60.ebuild,v 1.7 2008/01/12 21:29:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.60.ebuild,v 1.8 2008/12/14 16:33:50 loki_val Exp $
 
 inherit eutils
 
@@ -21,7 +21,9 @@ RDEPEND="${COMMON_DEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-destdir.patch"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 }
 
 src_install() {

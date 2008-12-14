@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-dialup</herd>
+<maintainer>
+	<email>loki_val@gentoo.org</email>
+</maintainer>
 </pkgmetadata>
