@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.35.ebuild,v 1.6 2008/11/25 23:03:50 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.35.ebuild,v 1.7 2008/12/14 13:33:35 loki_val Exp $
 
 #WANT_AUTOCONF="latest"
 #WANT_AUTOMAKE="1.8"
@@ -24,7 +24,12 @@ RDEPEND="dev-lang/mono
 			 gnome-base/gnome-panel )"
 
 DEPEND="${RDEPEND}
-	doc? ( >=dev-util/monodoc-1.1.8 )
+	doc? (
+		|| (
+		 >=dev-lang/mono-2.2_pre1
+		 >=dev-util/monodoc-1.1.8
+		)
+	)
 	dev-util/pkgconfig
 	app-arch/rpm
 	>=dev-util/intltool-0.34.2"
