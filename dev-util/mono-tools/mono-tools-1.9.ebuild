@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.9.ebuild,v 1.2 2008/11/19 10:03:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-1.9.ebuild,v 1.3 2008/12/14 15:05:16 loki_val Exp $
 
 inherit mono multilib eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="gtkhtml seamonkey"
 
 RDEPEND=">=dev-lang/mono-1.0
-		 >=dev-util/monodoc-${PV}
+		 >=virtual/monodoc-${PV}
 		 =dev-dotnet/gtk-sharp-2*
 		 =dev-dotnet/glade-sharp-2*
 		 =dev-dotnet/gconf-sharp-2*
