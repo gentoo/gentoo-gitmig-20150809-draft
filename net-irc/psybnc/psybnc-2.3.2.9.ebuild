@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.7-r2.ebuild,v 1.4 2008/12/14 18:23:14 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9.ebuild,v 1.1 2008/12/14 18:23:14 gurligebis Exp $
 
-inherit eutils versionator toolchain-funcs
+inherit eutils versionator toolchain-funcs flag-o-matic
 MY_PV="$(replace_version_separator 3 -)"
 PSYBNC_HOME="/var/lib/psybnc"
 
@@ -13,9 +13,10 @@ SRC_URI="http://www.psybnc.at/download/beta/psyBNC-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
-IUSE="ipv6 ssl"
+IUSE="ipv6 ssl oidentd"
 
-DEPEND="ssl? ( >=dev-libs/openssl-0.9.7d )"
+DEPEND="ssl? ( >=dev-libs/openssl-0.9.7d )
+		oidentd? ( >=net-misc/oidentd-2.0 )"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}"/"${PN}"
 
@@ -29,6 +30,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/compile.diff"
+
+	# add oidentd
+	use oidentd && epatch "${FILESDIR}/${P}-oidentd.patch"
 
 	# Useless files
 	rm -f */INFO
@@ -81,7 +85,18 @@ src_install() {
 		sed -i -e "/^# Default SSL listener$/,+4 d" "${D}"/etc/psybnc/psybnc.conf
 	fi
 
-	newinitd "${FILESDIR}"/psybnc.initd psybnc
+	if use oidentd
+	then
+		insinto /etc
+		doins "${FILESDIR}"/oidentd.conf.psybnc
+		fperms 640 /etc/oidentd.conf.psybnc
+		# install init-script with oidentd-support
+		newinitd "${FILESDIR}"/psybnc-oidentd.initd psybnc
+	else
+		# install init-script without oidentd-support
+		newinitd "${FILESDIR}"/psybnc.initd psybnc
+	fi
+
 	newconfd "${FILESDIR}"/psybnc.confd psybnc
 
 	dodoc CHANGES FAQ README SCRIPTING TODO
@@ -114,6 +129,13 @@ pkg_postinst() {
 	then
 		elog
 		elog "Please run \"emerge --config =${CATEGORY}/${PF}\" to create needed SSL certificates."
+	fi
+	if use oidentd
+	then
+		elog
+		elog "You have enabled oidentd-support. You will need to set"
+		elog "up your /etc/oident.conf file before running psybnc. An example"
+		elog "for psyBNC can be found under /etc/oident.conf.psybnc."
 	fi
 	elog
 	elog "You can connect to psyBNC on port 23998 with user gentoo and password gentoo."

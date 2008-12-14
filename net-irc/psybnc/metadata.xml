@@ -6,5 +6,8 @@
 		<email>gurligebis@gentoo.org</email>
 		<name>Bjarke Istrup Pedersen</name>
 	</maintainer>
+	<use>
+		<flag name='oidentd'>Adds support for oidentd</flag>
+	</use>
 	<longdescription>psyBNC is a multi-user and multi-server gateway to IRC networks</longdescription>
 </pkgmetadata>
