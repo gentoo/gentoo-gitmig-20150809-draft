@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/slim-themes-1.2.3a-r2.ebuild,v 1.2 2008/12/14 23:27:18 darkside Exp $
 
 DESCRIPTION="SLiM (Simple Login Manager) themes pack"
 HOMEPAGE="http://slim.berlios.de"

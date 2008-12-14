@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/slim-themes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.12 2008/12/14 23:25:27 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.13 2008/12/14 23:27:18 darkside Exp $
+
+  14 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
+  slim-themes-1.2.3a-r2.ebuild:
+  malformed header, fix
 
 *slim-themes-1.2.3a-r2 (14 Dec 2008)
 
