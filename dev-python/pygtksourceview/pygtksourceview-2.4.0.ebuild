@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/pygtksourceview-2.4.0.ebuild,v 1.1 2008/10/19 21:00:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/pygtksourceview-2.4.0.ebuild,v 1.2 2008/12/14 23:22:58 eva Exp $
 
 inherit gnome2 python flag-o-matic multilib
 
@@ -35,6 +35,7 @@ pkg_setup() {
 pkg_postinst() {
 	python_version
 	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/
+	python_need_rebuild
 }
 
 pkg_postrm() {

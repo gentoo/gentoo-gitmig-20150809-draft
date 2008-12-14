@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygtksourceview
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.17 2008/11/13 19:21:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.18 2008/12/14 23:22:58 eva Exp $
+
+  14 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  pygtksourceview-2.0.0-r1.ebuild, pygtksourceview-2.2.0.ebuild,
+  pygtksourceview-2.4.0.ebuild:
+  Add python_need_rebuild per bug #244610.
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> pygtksourceview-2.2.0.ebuild:
   Marking pygtksourceview-2.2.0 ppc64 stable for bug 236971

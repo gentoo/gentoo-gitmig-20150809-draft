@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/pygtksourceview-2.2.0.ebuild,v 1.8 2008/11/13 19:21:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/pygtksourceview-2.2.0.ebuild,v 1.9 2008/12/14 23:22:58 eva Exp $
 
 NEED_PYTHON=2.3.5
 
@@ -33,6 +33,7 @@ pkg_setup() {
 pkg_postinst() {
 	python_version
 	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/
+	python_need_rebuild
 }
 
 pkg_postrm() {
