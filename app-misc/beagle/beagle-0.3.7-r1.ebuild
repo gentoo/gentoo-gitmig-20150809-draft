@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.7-r1.ebuild,v 1.5 2008/10/11 22:54:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.7-r1.ebuild,v 1.6 2008/12/14 15:31:10 loki_val Exp $
 
 EAPI=1
 
@@ -56,7 +56,7 @@ RDEPEND="
 	#avahi?	(	>=net-dns/avahi-0.6.10 )
 
 DEPEND="${RDEPEND}
-	doc? ( >=dev-util/monodoc-1.2.4 )
+	doc? ( >=virtual/monodoc-1.2.4 )
 	dev-util/pkgconfig
 	xscreensaver? ( x11-proto/scrnsaverproto )
 	>=dev-util/intltool-0.35"
