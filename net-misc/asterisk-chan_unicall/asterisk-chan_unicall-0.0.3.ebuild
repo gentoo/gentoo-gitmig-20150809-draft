@@ -1,19 +1,20 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_unicall/asterisk-chan_unicall-0.0.3_pre9.ebuild,v 1.2 2008/12/15 12:17:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_unicall/asterisk-chan_unicall-0.0.3.ebuild,v 1.1 2008/12/15 12:17:40 pva Exp $
 
 inherit eutils
 
-IUSE=""
-
+# the source for this package I've took from astunicall-1.2.25-0.1.tar.gz
+# With some trivial modifications it builds...
 DESCRIPTION="Asterisk channel plugin for UniCall"
-HOMEPAGE="http://www.soft-switch.org/"
+HOMEPAGE="http://www.moythreads.com/astunicall/"
 
-SRC_URI="mirror://gentoo/asterisk-chan_unicall-0.0.3_pre9.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND=">=dev-libs/libxml2-2.6.26
 	>=media-libs/libsupertone-0.0.2
