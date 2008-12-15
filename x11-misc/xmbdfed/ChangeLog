@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xmbdfed
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/ChangeLog,v 1.18 2008/03/16 22:00:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/ChangeLog,v 1.19 2008/12/15 22:54:27 pva Exp $
+
+  15 Dec 2008; Peter Volkov <pva@gentoo.org> xmbdfed-4.7_p1.ebuild:
+  Truetype support is not optional any more in this package thus removed
+  truetype USE flag, fixes bug #248584, thank Diego E. 'Flameeyes' Pettenò
+  for report. Respect CC and LDFLAGS.
 
   16 Mar 2008; Ulrich Mueller <ulm@gentoo.org> xmbdfed-4.7_p1.ebuild:
   Remove calls to motif-config, fixes bug 211844.
