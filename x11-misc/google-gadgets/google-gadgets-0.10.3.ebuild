@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.3.ebuild,v 1.1 2008/12/10 15:05:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.3.ebuild,v 1.2 2008/12/15 10:14:36 voyageur Exp $
 
 EAPI=2
 
@@ -101,6 +101,7 @@ src_configure() {
 		--with-smjs-libdir=/usr/$(get_libdir)/xulrunner-1.9 \
 		--with-smjs-incdir=/usr/include/xulrunner-1.9/unstable \
 		--with-browser-plugins-dir=/usr/$(get_libdir)/nsbrowser/plugins \
+		--with-oem-brand=Gentoo \
 		$(use_enable debug) \
 		$(use_enable dbus libggadget-dbus) \
 		$(use_enable gstreamer gst-audio-framework) \
@@ -108,6 +109,7 @@ src_configure() {
 		$(use_enable gtk gtk-host) \
 		$(use_enable gtk libggadget-gtk ) \
 		$(use_enable gtk gtkmoz-browser-element) \
+		$(use_enable gtk gtk-flash-element) \
 		$(use_enable gtk gtk-system-framework) \
 		$(use_enable gtk curl_xml_http_request) \
 		$(use_enable qt4 qt-host) \

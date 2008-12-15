@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.14 2008/12/10 15:05:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.15 2008/12/15 10:14:36 voyageur Exp $
+
+  15 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  google-gadgets-0.10.3.ebuild:
+  Fix USE=-gtk compilation, add Gentoo oem branding, thanks Robert Piasek
+  <robert.piasek@member.fsf.org> and loki_val in bug #250599
 
 *google-gadgets-0.10.3 (10 Dec 2008)
 
