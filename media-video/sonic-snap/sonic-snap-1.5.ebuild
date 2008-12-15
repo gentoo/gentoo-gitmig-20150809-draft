@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.6 2007/11/27 11:51:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.7 2008/12/15 01:57:38 yngwin Exp $
 
+EAPI="1"
 inherit eutils linux-info
 
 DESCRIPTION="Webcam app for sn9c10x based camera controllers (with optional MPEG4 support)"
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="mpeg"
 
-DEPEND=" >=x11-libs/fltk-1.1.0_rc6
+DEPEND="x11-libs/fltk:1.1
 	mpeg? ( >=media-libs/libfame-0.9.1 )
 	sys-libs/zlib
 	virtual/libc

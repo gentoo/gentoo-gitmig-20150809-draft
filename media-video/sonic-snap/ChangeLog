@@ -1,6 +1,9 @@
 # ChangeLog for media-video/sonic-snap
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.5 2007/11/27 11:51:42 zzam Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.6 2008/12/15 01:57:38 yngwin Exp $
+
+  15 Dec 2008; Ben de Groot <yngwin@gentoo.org> sonic-snap-1.5.ebuild:
+  Pinning fltk dep on slot 1.1, bug 246445
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> sonic-snap-1.5.ebuild:
   Fixed quoting.
