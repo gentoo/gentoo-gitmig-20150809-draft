@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.17.ebuild,v 1.1 2008/08/02 21:00:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.17.ebuild,v 1.2 2008/12/15 07:56:29 ssuominen Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -15,7 +15,7 @@ SRC_URI="mirror://alsaproject/tools/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc x86"
 
 ECHOAUDIO_CARDS="alsa_cards_darla20 alsa_cards_gina20
 alsa_cards_layla20 alsa_cards_darla24 alsa_cards_gina24
