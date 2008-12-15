@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.112 2008/09/07 19:29:29 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.113 2008/12/15 11:26:36 pva Exp $
+
+  15 Dec 2008; Peter Volkov <pva@gentoo.org>
+  +files/zaptel-1.2.27-kernel.patch, +files/zaptel-1.2.27-semaphore.patch,
+  zaptel-1.2.27.ebuild:
+  Fixed build issues with recent (2.2.2{6,7}) kernels.
 
 *zaptel-1.2.27 (07 Sep 2008)
 
