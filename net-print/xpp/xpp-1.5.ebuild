@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.5.ebuild,v 1.6 2007/07/22 07:49:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.5.ebuild,v 1.7 2008/12/15 02:05:01 yngwin Exp $
 
+EAPI="1"
 inherit eutils
 
 DESCRIPTION="X Printing Panel"
@@ -15,7 +16,7 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/libc
 	>=net-print/cups-1.1.14
-	>=x11-libs/fltk-1.1
+	x11-libs/fltk:1.1
 	media-libs/jpeg
 	media-libs/libpng
 	sys-libs/zlib
@@ -25,8 +26,8 @@ DEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/xpp-gcc4.patch
+	cd "${S}"
+	epatch "${FILESDIR}/xpp-gcc4.patch"
 }
 
 src_compile() {
@@ -41,5 +42,5 @@ src_compile() {
 
 src_install() {
 	einstall || die "make install failed"
-	dodoc LICENSE ChangeLog README
+	dodoc ChangeLog README
 }

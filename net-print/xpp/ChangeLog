@@ -1,6 +1,9 @@
 # ChangeLog for net-print/xpp
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/ChangeLog,v 1.18 2007/07/22 07:49:09 dberkholz Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/ChangeLog,v 1.19 2008/12/15 02:05:01 yngwin Exp $
+
+  15 Dec 2008; Ben de Groot <yngwin@gentoo.org> xpp-1.5.ebuild:
+  Pinning fltk dep on slot 1.1, bug 246445
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; xpp-1.5.ebuild:
   Drop virtual/x11 references.
