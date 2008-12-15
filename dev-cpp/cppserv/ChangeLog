@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/cppserv
 # Copyright 2006-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.27 2008/12/14 23:49:43 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.28 2008/12/15 10:49:04 iluxa Exp $
+
+*cppserv-0.1.119 (15 Dec 2008)
+
+  15 Dec 2008; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  -cppserv-0.1.118.ebuild, +cppserv-0.1.119.ebuild:
+  Repace cppserv-0.1.118 with cppserv-0.1.119, which fixes critical compile error
 
 *cppserv-0.1.118 (14 Dec 2008)
 
