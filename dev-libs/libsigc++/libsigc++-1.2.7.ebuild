@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.5 2008/12/14 13:11:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.6 2008/12/15 02:54:53 jer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -12,7 +12,7 @@ HOMEPAGE="http://libsigc.sourceforge.net/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="1.2"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="debug"
 
 RDEPEND=""
