@@ -1,6 +1,14 @@
 # ChangeLog for media-radio/svxlink
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.5 2008/09/23 03:48:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.6 2008/12/15 12:27:51 pva Exp $
+
+  15 Dec 2008; Peter Volkov <pva@gentoo.org>
+  +files/svxlink-080730--as-needed.patch,
+  +files/svxlink-080730-spandsp-0.0.6_pre2.patch, svxlink-080730.ebuild:
+  Fixed build problem with >=spandsp-0.0.6_pre2, bug #249338, thank Yaroslav
+  Gorbunov for report and patch. Fixed build issue with --as-needed, bug
+  #247807, thank Diego E. 'Flameeyes' Pettenò for report. Force to use
+  up-to-date spandsp library.
 
 *svxlink-080730 (23 Sep 2008)
 *svxlink-080102-r1 (23 Sep 2008)

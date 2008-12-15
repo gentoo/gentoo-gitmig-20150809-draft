@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-080730.ebuild,v 1.1 2008/09/23 03:48:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-080730.ebuild,v 1.2 2008/12/15 12:27:51 pva Exp $
 
 EAPI=1
 
@@ -19,7 +19,7 @@ RDEPEND="dev-lang/tcl
 	media-sound/gsm
 	x11-libs/qt:3
 	dev-libs/libsigc++:1.2
-	media-libs/spandsp
+	>=media-libs/spandsp-0.0.6_pre2
 	dev-libs/popt"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -28,6 +28,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-fix-Makefile.diff"
+	epatch "${FILESDIR}/${P}--as-needed.patch"
+	epatch "${FILESDIR}/${P}-spandsp-0.0.6_pre2.patch"
 }
 
 src_compile() {
