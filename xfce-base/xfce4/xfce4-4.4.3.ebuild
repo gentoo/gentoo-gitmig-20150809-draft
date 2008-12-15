@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.3.ebuild,v 1.6 2008/12/13 17:05:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/xfce4-4.4.3.ebuild,v 1.7 2008/12/15 05:04:19 jer Exp $
 
 HOMEPAGE="http://www.xfce.org"
 DESCRIPTION="Meta package for Xfce4 desktop, merge this package to install."
@@ -9,7 +9,7 @@ SRC_URI=""
 LICENSE="as-is"
 SLOT="0"
 IUSE="alsa cups minimal oss xscreensaver"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 
 RDEPEND=">=x11-themes/gtk-engines-xfce-2.4.3
 	>=xfce-base/thunar-0.9.3

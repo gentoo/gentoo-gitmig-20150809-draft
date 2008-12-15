@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.4.3.ebuild,v 1.5 2008/12/13 17:02:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.4.3.ebuild,v 1.6 2008/12/15 05:02:01 jer Exp $
 
 inherit xfce44
 
@@ -11,7 +11,7 @@ xfce44_core_package
 
 DESCRIPTION="Session manager"
 HOMEPAGE="http://www.xfce.org/projects/xfce4-session"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="dbus debug gnome"
 
 RDEPEND="x11-libs/libX11
