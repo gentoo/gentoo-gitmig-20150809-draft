@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.24 2008/12/02 19:36:16 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.25 2008/12/15 07:31:15 ssuominen Exp $
+
+  15 Dec 2008; <ssuominen@gentoo.org> jubler-3.9.6.ebuild:
+  x86 stable wrt #245532
 
   02 Dec 2008; Serkan Kaba <serkan@gentoo.org> jubler-3.4.1.ebuild,
   jubler-3.9.0.ebuild, jubler-3.9.6.ebuild:
