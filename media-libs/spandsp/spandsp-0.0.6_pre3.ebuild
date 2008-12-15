@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6_pre2.ebuild,v 1.1 2008/12/15 09:44:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6_pre3.ebuild,v 1.1 2008/12/15 23:00:22 pva Exp $
 
 inherit versionator eutils
 
@@ -27,12 +27,6 @@ DEPEND="${RDEPEND}
 		dev-libs/libxslt )"
 
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-v27ter_tx.h.patch"
-}
 
 src_compile() {
 	econf \
