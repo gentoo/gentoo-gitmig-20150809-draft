@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-6.0-r2.ebuild,v 1.1 2008/12/15 06:50:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-6.0-r2.ebuild,v 1.2 2008/12/15 22:09:28 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -32,17 +32,15 @@ pkg_setup() {
 	fi
 }
 
-S="${WORKDIR}"/${P}/src
-
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
+	cd "${S}"/src
 	epatch "${FILESDIR}/${PN}-5.1-gentoo.diff"
 	epatch "${FILESDIR}/${P}-bzip2.patch"
 }
 
 src_compile() {
-	tc-export CC || die "ohnoz"
+	tc-export CC
 	emake || die "make failed"
 }
 
