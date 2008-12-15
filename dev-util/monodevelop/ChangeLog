@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.64 2008/12/14 14:32:47 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.65 2008/12/15 23:21:42 loki_val Exp $
+
+  15 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  monodevelop-1.9.1.ebuild:
+  Bump dependencies on -sharp packages to avoid conflicting deps. Bug
+  251083.
 
   14 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   monodevelop-0.18.1.ebuild, monodevelop-0.19.ebuild,

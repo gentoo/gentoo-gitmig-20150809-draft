@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-1.9.1.ebuild,v 1.7 2008/12/14 14:49:06 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-1.9.1.ebuild,v 1.8 2008/12/15 23:21:42 loki_val Exp $
 
 EAPI=2
 
@@ -22,9 +22,9 @@ RDEPEND=">=dev-lang/mono-1.9
 			>=dev-dotnet/mono-addins-0.4[gtk]
 			)
 		 >=dev-dotnet/gtk-sharp-2.12.6[glade]
-		 >=dev-dotnet/gnome-sharp-2.8
-		 >=dev-dotnet/gnomevfs-sharp-2.8
-		 >=dev-dotnet/gconf-sharp-2.8
+		 >=dev-dotnet/gnome-sharp-2.24.0
+		 >=dev-dotnet/gnomevfs-sharp-2.24.0
+		 >=dev-dotnet/gconf-sharp-2.24.0
 		 ||	(
 				net-libs/xulrunner
 				www-client/mozilla-firefox
