@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.93 2008/12/15 17:59:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.94 2008/12/15 20:23:24 fmccor Exp $
+
+  15 Dec 2008; Ferris McCormick <fmccor@gentoo.org> openal-1.5.304.ebuild:
+  Add back ~sparc keyword for testing, Bug #245771.
 
   15 Dec 2008; Brent Baude <ranger@gentoo.org> openal-1.5.304.ebuild:
   Marking openal-1.5.304 ~ppc64 for bug 245771

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.5.304.ebuild,v 1.5 2008/12/15 17:59:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.5.304.ebuild,v 1.6 2008/12/15 20:23:24 fmccor Exp $
 
 inherit eutils cmake-utils
 
@@ -12,7 +12,7 @@ SRC_URI="http://kcat.strangesoft.net/openal-releases/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 ~sparc x86"
 IUSE="alsa oss debug"
 
 DEPEND="alsa? ( media-libs/alsa-lib )"
