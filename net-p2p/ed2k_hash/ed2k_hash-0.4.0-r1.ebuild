@@ -1,22 +1,23 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ed2k_hash-0.4.0-r1.ebuild,v 1.7 2008/03/12 15:49:44 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ed2k_hash-0.4.0-r1.ebuild,v 1.8 2008/12/15 02:01:30 yngwin Exp $
 
+EAPI="1"
 inherit flag-o-matic eutils
 
 DESCRIPTION="Tool for generating eDonkey2000 links"
-HOMEPAGE="http://ed2k-tools.sourceforge.net/${PN}.shtml"
+HOMEPAGE="http://ed2k-tools.sourceforge.net/ed2k_hash.shtml"
 RESTRICT="mirror"
 SRC_URI="mirror://sourceforge/ed2k-tools/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="fltk"
-DEPEND="fltk? ( x11-libs/fltk )"
+DEPEND="fltk? ( x11-libs/fltk:1.1 )"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	epatch ${FILESDIR}/ed2k_64bit.patch
+	epatch "${FILESDIR}/ed2k_64bit.patch"
 }
 
 src_compile() {
@@ -32,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} mydocdir=/usr/share/doc/${PF}/html || die
+	make install DESTDIR="${D}" mydocdir=/usr/share/doc/${PF}/html || die
 
 	dodoc AUTHORS INSTALL README TODO
 }
