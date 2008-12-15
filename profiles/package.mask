@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9293 2008/12/15 00:13:45 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9294 2008/12/15 02:10:45 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -370,15 +370,6 @@ app-crypt/truecrypt
 # unmaintained/deprecated.
 # See bug #239978 for reference.
 dev-python/pyframer
-
-# Ben de Groot <yngwin@gentoo.org> (22 Oct 2008)
-# Depends on hard-masked x11-libs/fltk:2
-~www-client/dillo-2.0
-
-# Ben de Groot <yngwin@gentoo.org> (21 Oct 2008)
-# Pre-release snapshot of new major version
-# Masked for testing, see bug 242774
-=x11-libs/fltk-2.0_pre*
 
 # Torsten Veller <tove@gentoo.org> (21 Oct 2008)
 # Masked for removal in 30 days
