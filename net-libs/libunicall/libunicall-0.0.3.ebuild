@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/libunicall-0.0.3.ebuild,v 1.1 2006/10/26 18:26:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/libunicall-0.0.3.ebuild,v 1.2 2008/12/15 09:58:30 pva Exp $
 
 IUSE=""
 
@@ -24,6 +24,6 @@ MAKEOPTS="${MAKEOPTS} -j1"
 RESTRICT="mirror"
 
 src_install () {
-	make DESTDIR=${D} install || die "Install failed"
-	dodoc AUTHORS COPYING INSTALL NEWS README
+	make DESTDIR="${D}" install || die "Install failed"
+	dodoc AUTHORS INSTALL NEWS README
 }

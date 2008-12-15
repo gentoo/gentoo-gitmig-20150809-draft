@@ -1,0 +1,12 @@
+=== modified file 'testcall.c'
+--- testcall.c	2008-12-08 12:11:12 +0000
++++ testcall.c	2008-12-08 12:11:43 +0000
+@@ -47,6 +47,7 @@
+ 
+ #if defined(HAVE_SPANDSP_H)
+ #include <spandsp.h>
++#include <spandsp/expose.h>
+ #endif
+ 
+ #include "unicall.h"
+

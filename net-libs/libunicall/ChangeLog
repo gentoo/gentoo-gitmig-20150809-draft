@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libunicall
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/ChangeLog,v 1.2 2007/08/29 17:23:32 phreak Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/ChangeLog,v 1.3 2008/12/15 09:58:30 pva Exp $
+
+*libunicall-0.0.6_pre1 (15 Dec 2008)
+
+  15 Dec 2008; Peter Volkov <pva@gentoo.org>
+  +files/libunicall-0.0.6_pre1--as-needed.2.patch,
+  +files/libunicall-0.0.6_pre1-expose-internal-headers.patch,
+  libunicall-0.0.3.ebuild, +libunicall-0.0.6_pre1.ebuild:
+  Version bump, cleanup.
 
   29 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing gustavoz from metadata due to his retirement (see #36010 for
