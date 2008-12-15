@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/spiralmodular
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/ChangeLog,v 1.21 2008/04/28 17:01:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/ChangeLog,v 1.22 2008/12/15 01:49:43 yngwin Exp $
+
+  15 Dec 2008; Ben de Groot <yngwin@gentoo.org>
+  spiralmodular-0.2.2a-r1.ebuild:
+  Pinning fltk dep on slot 1.1, bug 246445
 
   28 Apr 2008; Samuli Suominen <drac@gentoo.org>
   +files/spiralmodular-0.2.2a-gcc43.patch, spiralmodular-0.2.2a-r1.ebuild:

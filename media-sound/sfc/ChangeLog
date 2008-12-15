@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sfc
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/ChangeLog,v 1.14 2008/07/06 13:32:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/ChangeLog,v 1.15 2008/12/15 01:47:28 yngwin Exp $
+
+  15 Dec 2008; Ben de Groot <yngwin@gentoo.org> sfc-0.016.ebuild:
+  Pinning fltk dep on slot 1.1, bug 246445
 
   06 Jul 2008; Markus Meier <maekke@gentoo.org> sfc-0.016.ebuild:
   x86 stable, bug #230846

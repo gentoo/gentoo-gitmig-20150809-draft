@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsamixergui
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.28 2008/09/22 18:51:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.29 2008/12/15 01:39:01 yngwin Exp $
+
+  15 Dec 2008; Ben de Groot <yngwin@gentoo.org>
+  alsamixergui-0.9.0.1.2-r4.ebuild:
+  Pinning fltk dep on slot 1.1, bug 246445
 
   22 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   +files/alsamixergui-0.9.0.1.2-fltk-1.1.patch, -files/fltk-1.1+gcc3.diff,

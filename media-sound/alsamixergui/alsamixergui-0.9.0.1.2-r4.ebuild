@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r4.ebuild,v 1.14 2008/09/23 15:27:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r4.ebuild,v 1.15 2008/12/15 01:39:01 yngwin Exp $
 
+EAPI="1"
 inherit eutils autotools
 
 NATIVE_VER=0.9.0rc1-2
@@ -18,7 +19,7 @@ IUSE=""
 
 DEPEND=">=media-libs/alsa-lib-0.9.0_rc1
 	>=media-sound/alsa-utils-0.9.0_rc1
-	>=x11-libs/fltk-1.1.0_rc6"
+	x11-libs/fltk:1.1"
 
 src_unpack() {
 	unpack ${A}

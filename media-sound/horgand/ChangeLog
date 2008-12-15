@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/horgand
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.23 2008/10/28 07:07:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/ChangeLog,v 1.24 2008/12/15 01:42:01 yngwin Exp $
+
+  15 Dec 2008; Ben de Groot <yngwin@gentoo.org> horgand-1.14.ebuild:
+  Pinning fltk dep on slot 1.1, bug 246445
 
   28 Oct 2008; Alexis Ballier <aballier@gentoo.org> horgand-1.14.ebuild:
   add missing libxpm dep, bug #239689

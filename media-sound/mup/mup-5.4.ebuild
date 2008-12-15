@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.2 2008/01/13 15:50:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.3 2008/12/15 01:45:10 yngwin Exp $
 
+EAPI="1"
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Program for printing music scores"
@@ -15,7 +16,7 @@ IUSE=""
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
-	x11-libs/fltk
+	x11-libs/fltk:1.1
 	x11-libs/libXpm
 	media-libs/jpeg
 	media-libs/libpng"

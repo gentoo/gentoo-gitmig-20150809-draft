@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.2a-r1.ebuild,v 1.6 2008/04/28 17:01:35 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.2a-r1.ebuild,v 1.7 2008/12/15 01:49:43 yngwin Exp $
 
+EAPI="1"
 inherit eutils multilib
 
 DESCRIPTION="SSM is a object oriented modular softsynth/ sequencer/ sampler."
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="alsa jack"
 
-DEPEND=">=x11-libs/fltk-1.1
+DEPEND="x11-libs/fltk:1.1
 	media-libs/libsndfile
 	media-libs/liblrdf
 	alsa? ( media-libs/alsa-lib )

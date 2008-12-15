@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-patch-bay
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/ChangeLog,v 1.32 2008/12/14 22:04:21 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/ChangeLog,v 1.33 2008/12/15 01:34:28 yngwin Exp $
+
+  15 Dec 2008; Ben de Groot <yngwin@gentoo.org>
+  alsa-patch-bay-1.0.0-r4.ebuild:
+  Pinning fltk dep on slot 1.1, bug 246445
 
   14 Dec 2008; Rémi Cardona <remi@gentoo.org>
   -alsa-patch-bay-1.0.0-r1.ebuild, -alsa-patch-bay-1.0.0-r2.ebuild,
