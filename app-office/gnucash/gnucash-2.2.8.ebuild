@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.6.ebuild,v 1.5 2008/09/10 09:58:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.8.ebuild,v 1.1 2008/12/15 09:05:10 tove Exp $
 
 EAPI=1
 
@@ -8,13 +8,13 @@ inherit eutils gnome2
 
 DOC_VER="2.2.0"
 
-DESCRIPTION="A personal finance manager."
+DESCRIPTION="A personal finance manager"
 HOMEPAGE="http://www.gnucash.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.lzma"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 IUSE="+doc ofx hbci chipcard debug quotes"
 
@@ -43,9 +43,10 @@ RDEPEND=">=dev-libs/glib-2.6.3
 	x11-libs/pango"
 
 DEPEND="${RDEPEND}
-	  dev-util/pkgconfig
-	  dev-util/intltool
-	  sys-devel/libtool
+	app-arch/lzma-utils
+	dev-util/pkgconfig
+	dev-util/intltool
+	sys-devel/libtool
 	>=app-text/scrollkeeper-0.3"
 
 PDEPEND="doc? ( >=app-doc/gnucash-docs-${DOC_VER} )"
