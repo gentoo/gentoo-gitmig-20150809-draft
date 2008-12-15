@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.41 2008/11/09 13:28:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.42 2008/12/15 06:50:43 jer Exp $
+
+*analog-6.0-r3 (15 Dec 2008)
+*analog-6.0-r2 (15 Dec 2008)
+
+  15 Dec 2008; Jeroen Roovers <jer@gentoo.org>
+  +files/analog-6.0-bzip2.patch, +analog-6.0-r2.ebuild,
+  +analog-6.0-r3.ebuild:
+  Use system bzip2 library (bug #249140). Get CC and CFLAGS from
+  environment. Bump both EAPI=0 and EAPI=2 ebuilds.
 
   09 Nov 2008; nixnut <nixnut@gentoo.org> analog-6.0.ebuild:
   Stable on ppc/ppc64 wrt bug 238859
