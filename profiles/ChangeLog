@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2172 2008/12/15 10:50:24 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2173 2008/12/15 12:23:04 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Dec 2008; Peter Volkov <pva@gentoo.org> package.mask:
+  Unmasking spandsp as upstream told us to use >=spandsp-0.0.6_pre2. Fix
+  packages if they fail to work with this version of spandsp. For hints how
+  to fix take a look here:
+  http://www.soft-switch.org/installing-spandsp.html
 
   15 Dec 2008; Rémi Cardona <remi@gentoo.org> package.mask:
   unleash xorg-server 1.5.3 and evdev 2.1.0
