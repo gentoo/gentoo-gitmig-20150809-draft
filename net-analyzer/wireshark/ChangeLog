@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.139 2008/12/14 14:40:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.140 2008/12/15 22:24:02 jer Exp $
+
+  15 Dec 2008; Jeroen Roovers <jer@gentoo.org> wireshark-1.0.5.ebuild:
+  Stable for HPPA (bug #248425).
 
   14 Dec 2008; Peter Volkov <pva@gentoo.org> wireshark-1.0.5.ebuild:
   Fixed dodoc on nonexistent files, bug #248425, thank Markus Meier for report.
