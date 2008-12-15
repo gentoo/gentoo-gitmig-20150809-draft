@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.162 2008/11/16 22:01:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.163 2008/12/15 11:18:40 ssuominen Exp $
+
+  15 Dec 2008; <ssuominen@gentoo.org> blender-2.48a-r3.ebuild:
+  Upgrade OpenAL dep. for x86 to >=1.5.304 because of undefined 
+  references wrt #245515.
 
   16 Nov 2008; Luca Barbato <lu_zero@gentoo.org>
   -files/blender-2.44-swscale.patch,
