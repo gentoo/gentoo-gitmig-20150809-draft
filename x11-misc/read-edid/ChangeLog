@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/read-edid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.16 2008/11/12 14:49:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.17 2008/12/15 04:09:24 yngwin Exp $
+
+  15 Dec 2008; Ben de Groot <yngwin@gentoo.org> read-edid-1.4.1-r1.ebuild,
+  read-edid-1.4.2.ebuild, read-edid-2.0.0.ebuild:
+  Drop libx86 dep from 1.4.2, and make it a hard dep of 2.0.0, which means
+  -* ~amd64 ~x86 keywords.
 
   12 Nov 2008; Ben de Groot <yngwin@gentoo.org> read-edid-1.4.2.ebuild,
   read-edid-2.0.0.ebuild:
