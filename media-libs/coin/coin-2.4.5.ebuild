@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.5.ebuild,v 1.4 2007/07/22 09:41:34 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.5.ebuild,v 1.5 2008/12/15 19:39:51 angelos Exp $
 
 inherit eutils
 
 MY_P=${P/c/C}
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="Coin3D is a high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1."
+DESCRIPTION="a high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1."
 HOMEPAGE="http://www.coin3d.org/"
 SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/all/${MY_P}.tar.gz"
 
@@ -59,14 +59,14 @@ src_compile() {
 			# $(use_enable javascript javascript-api) \
 			# $(use_with javascript spidermonkey) \
 
-	econf ${myconf} htmldir=${ROOT}usr/share/doc/${PF}/html || die "econf failed"
+	econf ${myconf} htmldir=/usr/share/doc/${PF}/html
 	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS NEWS README* RELNOTES THANKS
 
 	# Waiting for a maintainer to fix, see #117756.
-	rm -f ${D}/usr/share/man/man3/_var_tmp* ${D}/usr/sharedoc/coin-2.4.4/html/dir__*
+	rm -f "${D}"/usr/share/man/man3/_var_tmp* "${D}"/usr/sharedoc/coin-2.4.4/html/dir__*
 }

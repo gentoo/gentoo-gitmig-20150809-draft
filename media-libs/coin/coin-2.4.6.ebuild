@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.6.ebuild,v 1.1 2007/10/21 13:18:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.4.6.ebuild,v 1.2 2008/12/15 19:39:51 angelos Exp $
 
 inherit eutils
 
-MY_P="${P/c/C}"
+MY_P=${P/c/C}
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="Coin3D is a high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1."
+DESCRIPTION="a high-level 3D graphics toolkit, fully compatible with SGI Open Inventor 2.1."
 HOMEPAGE="http://www.coin3d.org/"
 SRC_URI="ftp://ftp.coin3d.org/pub/coin/src/all/${MY_P}.tar.gz"
 
@@ -59,7 +59,7 @@ src_compile() {
 			# $(use_enable javascript javascript-api) \
 			# $(use_with javascript spidermonkey) \
 
-	econf ${myconf} htmldir="${ROOT}usr/share/doc/${PF}/html" || die "econf failed"
+	econf ${myconf} htmldir=/usr/share/doc/${PF}/html
 	emake || die "emake failed"
 }
 
