@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.214 2008/12/14 13:56:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.215 2008/12/15 20:59:59 klausman Exp $
+
+  15 Dec 2008; Tobias Klausmann <klausman@gentoo.org> squid-2.7.5-r1.ebuild:
+  Stable on alpha, bug #250928
 
   14 Dec 2008; Alin Năstac <mrness@gentoo.org>
   +files/squid-3.0.10-adapted-zph.patch, -files/squid-3.0.10-zph.patch,
