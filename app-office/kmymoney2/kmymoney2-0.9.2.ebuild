@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.9.2.ebuild,v 1.1 2008/12/09 18:38:03 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.9.2.ebuild,v 1.2 2008/12/15 20:48:39 tgurr Exp $
 
 EAPI="1"
 inherit kde
 
 DESCRIPTION="Personal Finances Manager for KDE."
 HOMEPAGE="http://kmymoney2.sourceforge.net"
-SRC_URI="mirror://sourceforge/kmymoney2/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/kmymoney2/${P}-1.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
