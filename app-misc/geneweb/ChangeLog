@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/geneweb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.10 2008/12/01 09:06:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.11 2008/12/15 09:54:19 tupone Exp $
+
+  15 Dec 2008; Alfredo Tupone <tupone@gentoo.org>
+  -files/geneweb-5.00-gentoo.patch, -geneweb-5.00.ebuild,
+  -geneweb-5.01.ebuild:
+  Remove old versions
 
   01 Dec 2008; Alfredo Tupone <tupone@gentoo.org> geneweb-5.01-r1.ebuild,
   -geneweb-5.01-r2.ebuild:
