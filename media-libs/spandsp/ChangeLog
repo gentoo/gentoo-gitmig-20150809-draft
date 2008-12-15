@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/spandsp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.13 2008/12/15 09:44:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.14 2008/12/15 12:30:36 pva Exp $
 
   15 Dec 2008; Peter Volkov <pva@gentoo.org>
   +files/spandsp-0.0.6_pre2-v27ter_tx.h.patch, metadata.xml,
@@ -11,7 +11,9 @@
 
   15 Dec 2008; Peter Volkov <pva@gentoo.org>
   +files/spandsp-0.0.6_pre2-v27ter_tx.h.patch, +spandsp-0.0.6_pre2.ebuild:
-  Version bump. Upstream states that everybody should use this version.
+  Version bump. Upstream states that everybody should use this version. Fixes
+  build failure with gcc-4.3, bug #249236, thank Yaroslav for work and
+  investigation of this issue.
 
 *spandsp-0.0.5_pre3 (24 Jun 2008)
 
