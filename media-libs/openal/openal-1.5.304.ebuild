@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.5.304.ebuild,v 1.3 2008/11/16 17:07:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.5.304.ebuild,v 1.4 2008/12/15 11:44:37 ssuominen Exp $
 
 inherit eutils cmake-utils
 
-MY_P="${PN}-soft-${PV}"
+MY_P=${PN}-soft-${PV}
 
 DESCRIPTION="A software implementation of the OpenAL 3D audio API"
 HOMEPAGE="http://kcat.strangesoft.net/openal.html"
@@ -12,13 +12,13 @@ SRC_URI="http://kcat.strangesoft.net/openal-releases/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa x86"
 IUSE="alsa oss debug"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )"
-DEPEND="${RDEPEND}"
+DEPEND="alsa? ( media-libs/alsa-lib )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
+
 DOCS="alsoftrc.sample"
 
 src_compile() {
