@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/spandsp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.12 2008/06/24 16:15:41 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.13 2008/12/15 09:44:12 pva Exp $
+
+  15 Dec 2008; Peter Volkov <pva@gentoo.org>
+  +files/spandsp-0.0.6_pre2-v27ter_tx.h.patch, metadata.xml,
+  +spandsp-0.0.6_pre2.ebuild:
+  Updated metadata.xml to include USE flag descriptions.
+
+*spandsp-0.0.6_pre2 (15 Dec 2008)
+
+  15 Dec 2008; Peter Volkov <pva@gentoo.org>
+  +files/spandsp-0.0.6_pre2-v27ter_tx.h.patch, +spandsp-0.0.6_pre2.ebuild:
+  Version bump. Upstream states that everybody should use this version.
 
 *spandsp-0.0.5_pre3 (24 Jun 2008)
 

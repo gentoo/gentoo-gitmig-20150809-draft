@@ -1,0 +1,14 @@
+=== modified file 'src/spandsp/private/v27ter_tx.h'
+--- src/spandsp/private/v27ter_tx.h	2008-12-15 09:30:32 +0000
++++ src/spandsp/private/v27ter_tx.h	2008-12-15 09:30:51 +0000
+@@ -91,9 +91,5 @@
+     logging_state_t logging;
+ };
+ 
+-#if defined(__cplusplus)
+-}
+-#endif
+-
+ #endif
+ /*- End of file ------------------------------------------------------------*/
+
