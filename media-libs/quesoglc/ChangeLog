@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quesoglc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/ChangeLog,v 1.4 2008/10/25 21:49:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/ChangeLog,v 1.5 2008/12/15 19:32:57 fmccor Exp $
+
+  15 Dec 2008; Ferris McCormick <fmccor@gentoo.org> quesoglc-0.7.1.ebuild:
+  Add ~sparc for testing, related to Bug #245771.
 
   25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> quesoglc-0.7.1.ebuild:
   Keyworded ~ppc. Closes bug #214144
