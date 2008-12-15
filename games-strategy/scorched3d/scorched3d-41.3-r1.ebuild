@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-41.3-r1.ebuild,v 1.7 2008/08/31 15:40:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-41.3-r1.ebuild,v 1.8 2008/12/15 20:15:43 nyhm Exp $
 
 inherit eutils wxwidgets games
 
@@ -48,9 +48,11 @@ src_unpack() {
 		-e '/DWORD/d' \
 		src/porting/windows.h \
 		|| die "sed failed" #213872
+	chmod +x scripts/openal-config
 }
 
 src_compile() {
+	OPENAL_CONFIG="${S}"/scripts/openal-config \
 	egamesconf \
 		--disable-dependency-tracking \
 		--with-fftw=/usr \
