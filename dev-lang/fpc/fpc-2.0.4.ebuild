@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.4.ebuild,v 1.6 2007/06/30 09:23:04 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.4.ebuild,v 1.7 2008/12/16 19:30:03 truedfx Exp $
 
 inherit eutils
 
@@ -26,7 +26,6 @@ IUSE="doc source"
 
 DEPEND="!dev-lang/fpc-bin
 	!dev-lang/fpc-source"
-#	doc? ( virtual/tetex )
 
 src_unpack() {
 	case ${ARCH} in

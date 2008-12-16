@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.44 2008/10/06 19:21:23 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.45 2008/12/16 19:30:03 truedfx Exp $
+
+  16 Dec 2008; Harald van Dĳk <truedfx@gentoo.org> fpc-2.0.4.ebuild,
+  fpc-2.2.0.ebuild, fpc-2.2.0-r1.ebuild, fpc-2.2.2.ebuild:
+  Remove mention of virtual/tetex (#222501)
 
   06 Oct 2008; Harald van Dĳk <truedfx@gentoo.org> fpc-2.2.2.ebuild:
   Don't look for bootstrap compiler in the wrong path on ppc/sparc (#240303
