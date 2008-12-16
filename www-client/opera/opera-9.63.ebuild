@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.63.ebuild,v 1.1 2008/12/16 12:30:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.63.ebuild,v 1.2 2008/12/16 20:38:11 ken69267 Exp $
 
 GCONF_DEBUG="no"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-9.0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 
 RESTRICT="mirror strip test"
 
