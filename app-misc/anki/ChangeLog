@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.3 2008/10/21 17:57:22 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.4 2008/12/16 23:01:16 hncaldwell Exp $
+
+*anki-0.9.9.3 (16 Dec 2008)
+
+  16 Dec 2008; Heath Caldwell <hncaldwell@gentoo.org> +anki-0.9.9.3.ebuild:
+  Version bump. Anki now uses QtWebKit.
 
 *anki-0.9.8.6 (21 Oct 2008)
 
