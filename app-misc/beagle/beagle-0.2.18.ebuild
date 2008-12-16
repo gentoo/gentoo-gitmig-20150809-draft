@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.18.ebuild,v 1.9 2008/10/11 22:54:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.2.18.ebuild,v 1.10 2008/12/16 22:06:00 loki_val Exp $
 
 EAPI=1
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="chm doc eds galago gtk ole pdf python thunderbird +xscreensaver"
 
-RDEPEND=">=dev-lang/mono-1.1.18
+RDEPEND="!sci-libs/beagle
+	>=dev-lang/mono-1.1.18
 	app-arch/zip
 	sys-devel/gettext
 	>=x11-libs/gtk+-2.6
