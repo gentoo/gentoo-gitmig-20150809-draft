@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer-resume
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/ChangeLog,v 1.5 2008/01/13 05:40:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer-resume/ChangeLog,v 1.6 2008/12/16 20:38:27 beandog Exp $
+
+*mplayer-resume-1.6 (16 Dec 2008)
+
+  16 Dec 2008; Steve Dibb <beandog@gentoo.org> +mplayer-resume-1.6.ebuild:
+  Version bump
 
 *mplayer-resume-1.5 (13 Jan 2008)
 
