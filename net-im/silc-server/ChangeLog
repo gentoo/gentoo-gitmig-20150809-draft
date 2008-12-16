@@ -1,6 +1,10 @@
 # ChangeLog for net-im/silc-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/ChangeLog,v 1.40 2008/11/30 16:29:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/ChangeLog,v 1.41 2008/12/16 20:33:05 bluebird Exp $
+
+  16 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  silc-server-1.1.11.ebuild:
+  Stable on sparc, bug #249066
 
   30 Nov 2008; Markus Meier <maekke@gentoo.org> silc-server-1.1.11.ebuild:
   x86 stable, bug #249066
