@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dictd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.59 2008/12/16 17:44:59 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.60 2008/12/16 20:27:08 pva Exp $
+
+  16 Dec 2008; Peter Volkov <pva@gentoo.org> dictd-1.9.14.ebuild,
+  dictd-1.10.11-r3.ebuild, dictd-1.11.0.ebuild:
+  ~mips keyworded, bug #245413, bug #250390
 
   16 Dec 2008; Ferris McCormick <fmccor@gentoo.org> dictd-1.11.0.ebuild:
   Rekeyworded ~sparc --- Bug #250390 --- all tests pass.
