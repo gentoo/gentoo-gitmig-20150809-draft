@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.602 2008/10/14 18:09:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.603 2008/12/16 16:25:48 jer Exp $
+
+  16 Dec 2008; Jeroen Roovers <jer@gentoo.org> xorg-x11-7.4.ebuild:
+  Marked ~hppa (bug #237411).
 
   14 Oct 2008; Donnie Berkholz <dberkholz@gentoo.org>; xorg-x11-7.2.ebuild:
   Drop to ~mips to avoid warnings.

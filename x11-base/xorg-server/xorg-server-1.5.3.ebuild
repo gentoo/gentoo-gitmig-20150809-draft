@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3.ebuild,v 1.2 2008/12/15 23:43:19 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3.ebuild,v 1.3 2008/12/16 16:23:23 jer Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -13,7 +13,7 @@ SRC_URI="${SRC_URI}
 	http://xorg.freedesktop.org/releases/individual/xserver/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-patches-01.tar.bz2"
 DESCRIPTION="X.Org X servers"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
 	input_devices_aiptek
