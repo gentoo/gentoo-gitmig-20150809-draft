@@ -1,3 +1,6 @@
+# Unmask the flag which corresponds to ARCH.
+-ia64
+
 # This is a list of USE flags that should not be used on ia64.
 
 # No hardware to test by the team
@@ -22,6 +25,7 @@ wifi
 apm
 battery
 cpufreq
+laptop
 lm_sensors
 
 # Stuff that doesn't work on ia64, or not tested
@@ -32,9 +36,11 @@ emboss
 hardened
 jack
 lapack
-laptop
+
+# Stuff we don't want
 networkmanager
 octave
+oracle
 timidity
 
 # Stuff that doesn't compile on ia64
@@ -49,7 +55,6 @@ pike
 xemacs
 
 # Other
-
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
