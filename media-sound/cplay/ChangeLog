@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cplay
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.22 2008/05/17 09:13:08 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cplay/ChangeLog,v 1.23 2008/12/16 19:09:47 flameeyes Exp $
+
+  16 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org> cplay-1.49.ebuild:
+  Replace dosed with direct sed call and avoid it failing.
 
   17 May 2008; Samuli Suominen <drac@gentoo.org> cplay-1.49.ebuild:
   Use virtual/mpg123.
