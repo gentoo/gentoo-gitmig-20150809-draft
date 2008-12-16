@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jrtplib/jrtplib-3.7.1.ebuild,v 1.1 2007/12/15 15:34:12 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jrtplib/jrtplib-3.7.1.ebuild,v 1.2 2008/12/16 08:38:15 pva Exp $
+
+inherit eutils
 
 DESCRIPTION="JRTPLIB is an object-oriented RTP library written in C++."
 HOMEPAGE="http://research.edm.luc.ac.be/jori/jrtplib/jrtplib.html"
@@ -13,6 +15,12 @@ IUSE="examples ipv6"
 
 RDEPEND="dev-libs/jthread"
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+}
 
 src_compile() {
 	econf $(use_enable ipv6 IPv6)
