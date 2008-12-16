@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9297 2008/12/15 12:43:31 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9298 2008/12/16 11:14:00 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Volkov <pva@gentoo.org> (16 Dec 2008)
+# Fails to build, bug #247946. Somebody needs to port it to new spandsp interface
+net-dialup/ivcall
 
 # Paul Varner <fuzzyray@gentoo.org> (14 Dec 2008)
 # Dead upstream, masked for removal in ~30 to 60 days.
