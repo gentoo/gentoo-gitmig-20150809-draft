@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-1.36.59.ebuild,v 1.3 2008/11/16 18:30:04 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-1.36.59.ebuild,v 1.4 2008/12/16 13:35:56 hanno Exp $
 
-inherit libtool
+inherit libtool eutils
 
 IUSE=""
 DESCRIPTION="C64 SID player library"
@@ -18,6 +18,8 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-gcc43.patch" || die "epatch failed"
 
 	# Needed to get a sane .so versionning on fbsd, please don't drop
 	elibtoolize
