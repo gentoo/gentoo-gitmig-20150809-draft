@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.6.ebuild,v 1.1 2008/09/27 17:46:02 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.6.ebuild,v 1.2 2008/12/16 13:19:59 flameeyes Exp $
 
 inherit eutils games
 
@@ -31,13 +31,13 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	games_pkg_setup
 	if ! built_with_use media-libs/sdl-image png ; then
-		die "Please emerge sdl-image with USE=png"
+		die "Please emerge media-libs/sdl-image with USE=png"
 	fi
 	if ! built_with_use dev-games/cegui opengl ; then
-		die "Please emerge cegui with USE=opengl"
+		die "Please emerge dev-games/cegui with USE=opengl"
 	fi
 	if ! built_with_use dev-games/cegui devil ; then
-		die "Please emerge cegui with USE=devil"
+		die "Please emerge dev-games/cegui with USE=devil"
 	fi
 	if ! built_with_use dev-libs/libpcre unicode ; then
 		die "Please emerge dev-libs/libpcre with USE=unicode"
