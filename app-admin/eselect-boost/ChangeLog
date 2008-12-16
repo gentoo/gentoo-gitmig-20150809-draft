@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/eselect-boost
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.1 2008/12/16 16:21:07 dev-zero Exp $
+
+*eselect-boost-0.1 (16 Dec 2008)
+
+  16 Dec 2008; Tiziano Müller <dev-zero@gentoo.org>
+  +files/boost.eselect-0.1, +metadata.xml, +eselect-boost-0.1.ebuild:
+  Initial commit. Eselect module written by Łukasz Michalik with a few
+  changes made by me.
+
