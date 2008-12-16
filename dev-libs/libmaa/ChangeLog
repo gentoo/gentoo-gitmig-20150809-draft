@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmaa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.3 2008/12/16 17:07:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.4 2008/12/16 17:27:45 fmccor Exp $
+
+  16 Dec 2008; Ferris McCormick <fmccor@gentoo.org> libmaa-1.1.0.ebuild:
+  Add ~sparc keyword for Bug #250390 --- all tests pass.
 
   16 Dec 2008; Jeroen Roovers <jer@gentoo.org> libmaa-1.1.0.ebuild:
   Marked ~hppa (bug #250390).
