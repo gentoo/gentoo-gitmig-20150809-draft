@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbdfed/gbdfed-1.4.ebuild,v 1.1 2008/05/23 03:07:50 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gbdfed/gbdfed-1.4.ebuild,v 1.2 2008/12/16 09:11:32 pva Exp $
 
 DESCRIPTION="gbdfed Bitmap Font Editor"
 HOMEPAGE="http://www.math.nmsu.edu/~mleisher/Software/gbdfed/"
@@ -16,6 +16,12 @@ DEPEND=">=x11-libs/gtk+-2.6
 		x11-libs/libX11
 		x11-libs/pango"
 RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed "s:-D.*_DISABLE_DEPRECATED::" -i Makefile.in #248562
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failure"
