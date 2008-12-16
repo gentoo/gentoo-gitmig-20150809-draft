@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/beansbinding/beansbinding-1.2.1.ebuild,v 1.1 2008/11/16 16:28:28 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/beansbinding/beansbinding-1.2.1.ebuild,v 1.2 2008/12/16 13:50:28 betelgeuse Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -21,6 +21,10 @@ DEPEND=">=virtual/jdk-1.5
 	app-arch/unzip"
 
 S="${WORKDIR}"
+
+# https://bugs.gentoo.org/show_bug.cgi?id=249740
+# Quite weird. Should look into why this is happening.
+JAVA_PKG_FILTER_COMPILER="ecj-3.4 ecj-3.3 ecj-3.2"
 
 src_install() {
 	java-pkg_dojar "dist/${PN}.jar"
