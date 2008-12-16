@@ -1,6 +1,24 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.23 2008/11/25 14:41:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.24 2008/12/16 15:30:13 dang Exp $
+
+*kvm-81 (16 Dec 2008)
+
+  16 Dec 2008; Daniel Gryniewicz <dang@gentoo.org> +kvm-79-r1.ebuild,
+  +kvm-81.ebuild:
+  Bump to kvm-81
+	- Fixed performance regression in qcow2 files
+	- Several display fixes
+	- Several virtio fixes/cleanups/speedups
+	- Clock fixes
+
+*kvm-79-r1 (10 Dec 2008)
+
+  10 Dec 2008; Daniel Gryniewicz <dang@gentoo.org> +kvm-79-r1.ebuild:
+  Bump to kvm-79-r1
+  - Fix bug #250283: make kvm-ifup/kvm-ifdown not fail if there are
+    multiple bridges on the host
+  - Add patch from ubuntu to make non-alphabet keys work with evdev
 
   25 Nov 2008; Daniel Gryniewicz <dang@gentoo.org> kvm-79.ebuild:
   New patch tarball: remove 06, update 02 (bug #248252)
