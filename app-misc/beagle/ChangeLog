@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.87 2008/12/14 15:31:10 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.88 2008/12/16 22:04:01 loki_val Exp $
+
+*beagle-0.3.8-r2 (16 Dec 2008)
+
+  16 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -files/beagle-0.3.8-fix_gmime-2.4.patch,
+  -files/beagle-0.3.8-fix_gvfs.patch, metadata.xml, -beagle-0.3.6.ebuild,
+  -beagle-0.3.8.ebuild, -beagle-0.3.8-r1.ebuild, +beagle-0.3.8-r2.ebuild:
+  Bump, fix bug 246336, bug 248331, bug 248703 and bug 248957. Also trawled
+  upstream SVN and fixed a number of hangs and crashes. Also add dotnet herd
+  as herd.
 
   14 Dec 2008; Peter Alfredsen <loki_val@gentoo.org> beagle-0.3.6.ebuild,
   beagle-0.3.7-r1.ebuild, beagle-0.3.8.ebuild, beagle-0.3.8-r1.ebuild:
