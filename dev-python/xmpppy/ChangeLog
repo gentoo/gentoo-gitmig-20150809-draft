@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xmpppy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.10 2008/01/06 03:04:21 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.11 2008/12/16 21:04:53 ranger Exp $
+
+  16 Dec 2008; Brent Baude <ranger@gentoo.org> xmpppy-0.4.1.ebuild:
+  Marking xmpppy-0.4.1 ~ppc and ~ppc64 for bug 249837
 
 *xmpppy-0.4.1 (06 Jan 2008)
 
