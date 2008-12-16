@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-radeonhd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-radeonhd/ChangeLog,v 1.10 2008/10/15 00:54:01 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-radeonhd/ChangeLog,v 1.11 2008/12/16 19:44:59 ranger Exp $
+
+  16 Dec 2008; Brent Baude <ranger@gentoo.org>
+  xf86-video-radeonhd-1.2.1.ebuild:
+  Marking xf86-video-radeonhd-1.2.1 ~ppc64 for bug 237411
 
 *xf86-video-radeonhd-1.2.3 (15 Oct 2008)
 
