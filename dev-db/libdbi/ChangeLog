@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.28 2008/12/01 21:37:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.29 2008/12/16 20:15:19 pva Exp $
+
+  16 Dec 2008; Peter Volkov <pva@gentoo.org> libdbi-0.8.3.ebuild:
+  ~mips keyworded for dictd, bug #245413
 
   01 Dec 2008; Brent Baude <ranger@gentoo.org> libdbi-0.8.3.ebuild:
   Marking libdbi-0.8.3 ~ppc64 for bug 244246
