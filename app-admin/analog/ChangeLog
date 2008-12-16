@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.44 2008/12/16 15:05:25 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.45 2008/12/16 15:25:19 jer Exp $
+
+  16 Dec 2008; Jeroen Roovers <jer@gentoo.org> -analog-6.0-r1.ebuild,
+  analog-6.0-r2.ebuild:
+  Stable for HPPA, remove old EAPI=2 ebuild (bug #249140).
 
   16 Dec 2008; Ferris McCormick <fmccor@gentoo.org> analog-6.0-r2.ebuild:
   Sparc stable, Security Bug #249140.
