@@ -1,10 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.5.6.ebuild,v 1.1 2008/11/21 03:27:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.5.6.ebuild,v 1.2 2008/12/16 15:51:23 matsuu Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="hyperestraier migemo ruby ssl webkit"
+#IUSE="hyperestraier migemo ruby ssl webkit"
+IUSE="hyperestraier migemo ruby ssl"
 
 DESCRIPTION="a browser with gecko engine like Epiphany or Galeon."
 SRC_URI="mirror://sourceforge.jp/${PN}/33533/${P}.tar.gz"
@@ -23,8 +24,8 @@ DEPEND=">=x11-libs/gtk+-2.12
 	)
 	ssl? ( >=net-libs/gnutls-1.2.0 )
 	ruby? ( dev-ruby/ruby-gtk2 dev-ruby/ruby-gettext )
-	hyperestraier? ( >=app-text/hyperestraier-1.2 )
-	webkit? ( net-libs/webkit-gtk )"
+	hyperestraier? ( >=app-text/hyperestraier-1.2 )"
+#	webkit? ( net-libs/webkit-gtk )
 
 RDEPEND="${DEPEND}
 	migemo? ( app-text/migemo )"

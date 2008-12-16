@@ -1,17 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.5.5.ebuild,v 1.2 2008/08/04 17:27:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.5.6-r1.ebuild,v 1.1 2008/12/16 15:51:23 matsuu Exp $
 
 inherit eutils flag-o-matic
 
 IUSE="hyperestraier migemo ruby ssl webkit"
 
 DESCRIPTION="a browser with gecko engine like Epiphany or Galeon."
-SRC_URI="mirror://sourceforge.jp/${PN}/32341/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/${PN}/33533/${P}.tar.gz"
 HOMEPAGE="http://kazehakase.sourceforge.jp/"
 
 SLOT="0"
-#KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 
@@ -33,7 +32,13 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
-src_compile(){
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-0.5.5-xulrunner19.patch
+}
+
+src_compile() {
 	local myconf
 
 	# Bug 159949
@@ -47,7 +52,7 @@ src_compile(){
 	emake || die
 }
 
-src_install(){
+src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README* TODO*
 }

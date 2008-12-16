@@ -1,6 +1,13 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.66 2008/11/21 03:27:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.67 2008/12/16 15:51:23 matsuu Exp $
+
+*kazehakase-0.5.6-r1 (16 Dec 2008)
+
+  16 Dec 2008; MATSUU Takuto <matsuu@gentoo.org> -kazehakase-0.5.5.ebuild,
+  kazehakase-0.5.5-r1.ebuild, kazehakase-0.5.6.ebuild,
+  +kazehakase-0.5.6-r1.ebuild:
+  Removed webkit USE flag, bug #245556.
 
 *kazehakase-0.5.6 (21 Nov 2008)
 
