@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dictd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.58 2008/12/16 17:08:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.59 2008/12/16 17:44:59 fmccor Exp $
+
+  16 Dec 2008; Ferris McCormick <fmccor@gentoo.org> dictd-1.11.0.ebuild:
+  Rekeyworded ~sparc --- Bug #250390 --- all tests pass.
 
   16 Dec 2008; Jeroen Roovers <jer@gentoo.org> dictd-1.11.0.ebuild:
   Marked ~hppa (bug #250390).
