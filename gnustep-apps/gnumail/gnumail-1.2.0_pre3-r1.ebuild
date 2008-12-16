@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre3-r1.ebuild,v 1.6 2008/03/08 13:29:38 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/gnumail-1.2.0_pre3-r1.ebuild,v 1.7 2008/12/16 15:18:43 voyageur Exp $
 
 inherit gnustep-2
 
@@ -19,7 +19,7 @@ SLOT="0"
 IUSE="crypt emoticon xface"
 DEPEND="=gnustep-libs/pantomime-${PV}
 	>=gnustep-base/gnustep-gui-0.11.0
-	gnustep-apps/addresses"
+	|| ( gnustep-apps/addresses gnustep-libs/addresseskit )"
 RDEPEND="crypt? ( app-crypt/gnupg )"
 
 src_unpack() {
@@ -28,6 +28,8 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-index.patch
 	epatch "${FILESDIR}"/${P}-pgpversion.patch
+	sed -i -e 's|GNUMail_GUI_LIBS =|LIBRARIES_DEPEND_UPON +=|' \
+		Framework/GNUMail/GNUmakefile || die "as-needed sed failed"
 	sed -i -e \
 		's|$(GNUSTEP_INSTALLATION_DIR)/Library|$(DESTDIR)$(GNUSTEP_SYSTEM_LIBRARY)|' \
 		Bundles/*/GNUmakefile || die "gnustep-make-2 sed failed"
