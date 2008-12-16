@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.3-r3.ebuild,v 1.2 2008/10/12 07:58:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.3-r4.ebuild,v 1.1 2008/12/16 07:38:24 mrness Exp $
 
 WANT_AUTOMAKE=none
 
@@ -34,7 +34,7 @@ src_unpack() {
 	cp ../squidGuard-${PV}-patch-20080714/src/sgDiv.c.in src/ || die "failed to replace sgDiv.c.in"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-autoheader.patch"
-	epatch "${FILESDIR}/${P}-bison.patch"
+	epatch "${FILESDIR}/${P}-nolog.patch"
 	eautoreconf
 }
 

@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squidguard
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.27 2008/10/12 07:58:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.28 2008/12/16 07:38:24 mrness Exp $
+
+*squidguard-1.3-r4 (16 Dec 2008)
+
+  16 Dec 2008; Alin Năstac <mrness@gentoo.org>
+  -files/squidguard-1.3-bison.patch, +files/squidguard-1.3-nolog.patch,
+  -squidguard-1.3-r3.ebuild, +squidguard-1.3-r4.ebuild:
+  Apply upstream patch 20080718 correctly (#247607).
 
   12 Oct 2008; Alin Năstac <mrness@gentoo.org>
   -files/squidguard-1.2.1-gentoo.patch,
