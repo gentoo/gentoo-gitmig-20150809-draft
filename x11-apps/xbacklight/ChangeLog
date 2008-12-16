@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xbacklight
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/ChangeLog,v 1.9 2008/10/03 08:47:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/ChangeLog,v 1.10 2008/12/16 16:28:40 ranger Exp $
+
+  16 Dec 2008; Brent Baude <ranger@gentoo.org> xbacklight-1.1.ebuild:
+  Marking xbacklight-1.1 ~ppc64 for bug 237411
 
   03 Oct 2008; Raúl Porcel <armin76@gentoo.org> xbacklight-1.1.ebuild:
   Add ~ia64 wrt #237411
