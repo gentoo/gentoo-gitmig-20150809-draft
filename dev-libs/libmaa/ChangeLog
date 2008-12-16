@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmaa
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.4 2008/12/16 17:27:45 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.5 2008/12/16 20:25:03 pva Exp $
+
+  16 Dec 2008; Peter Volkov <pva@gentoo.org> libmaa-1.1.0.ebuild:
+  ~mips keyworded for dictd, bug #245413, bug #250390
 
   16 Dec 2008; Ferris McCormick <fmccor@gentoo.org> libmaa-1.1.0.ebuild:
   Add ~sparc keyword for Bug #250390 --- all tests pass.
