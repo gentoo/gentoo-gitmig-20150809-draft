@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.163 2008/12/14 21:19:10 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.164 2008/12/16 13:49:07 jer Exp $
+
+  16 Dec 2008; Jeroen Roovers <jer@gentoo.org> courier-imap-4.0.6-r3.ebuild:
+  Stable for HPPA (bug #168196).
 
 *courier-imap-4.4.1-r1 (14 Dec 2008)
 *courier-imap-4.1.2-r2 (14 Dec 2008)
