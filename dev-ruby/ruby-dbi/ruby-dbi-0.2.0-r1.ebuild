@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.2.0-r1.ebuild,v 1.1 2008/12/08 20:20:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.2.0-r1.ebuild,v 1.2 2008/12/16 20:14:57 armin76 Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/33959/dbi-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 IUSE="examples firebird odbc oracle postgres mysql sqlite sqlite3"
 
 DEPEND="virtual/ruby
