@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/judy
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.24 2008/12/01 21:39:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.25 2008/12/16 20:18:14 pva Exp $
+
+  16 Dec 2008; Peter Volkov <pva@gentoo.org> judy-1.0.4.ebuild:
+  ~mips keyworded for dictd, bug #245413
 
   01 Dec 2008; Brent Baude <ranger@gentoo.org> judy-1.0.4.ebuild:
   Marking judy-1.0.4 ~ppc64 for bug 244246
