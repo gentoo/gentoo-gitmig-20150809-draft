@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9299 2008/12/16 15:40:18 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9300 2008/12/16 22:57:35 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -65,7 +65,6 @@ net-proxy/squirm
 # Speak up if you need one of these versions to stay
 =x11-drivers/nvidia-drivers-100.14.09
 =x11-drivers/nvidia-drivers-100.14.11
-=x11-drivers/nvidia-drivers-100.14.19
 =x11-drivers/nvidia-drivers-100.14.23
 =x11-drivers/nvidia-drivers-169.07
 =x11-drivers/nvidia-drivers-169.09
