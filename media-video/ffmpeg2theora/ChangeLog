@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.29 2008/11/11 14:21:32 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.30 2008/12/17 16:00:38 beandog Exp $
+
+*ffmpeg2theora-0.22-r1 (17 Dec 2008)
+
+  17 Dec 2008; Steve Dibb <beandog@gentoo.org>
+  +ffmpeg2theora-0.22-r1.ebuild:
+  Add libkate dep for subtitle support, bug 246213
 
   11 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
   -ffmpeg2theora-9999.ebuild:
