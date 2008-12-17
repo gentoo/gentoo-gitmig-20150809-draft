@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r1.ebuild,v 1.4 2007/07/10 23:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r1.ebuild,v 1.5 2008/12/17 16:45:55 zzam Exp $
 
 inherit vdr-plugin
 
@@ -29,6 +29,6 @@ src_unpack() {
 
 	if use imagemagick; then
 		elog "Enabling imagemagick-support."
-		sed -i ${S}/Makefile -e 's/^#HAVE_IMAGEMAGICK/HAVE_IMAGEMAGICK/'
+		sed -i "${S}"/Makefile -e 's/^#HAVE_IMAGEMAGICK/HAVE_IMAGEMAGICK/'
 	fi
 }

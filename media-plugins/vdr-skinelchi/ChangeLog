@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-skinelchi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/ChangeLog,v 1.20 2008/03/25 23:00:43 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/ChangeLog,v 1.21 2008/12/17 16:45:55 zzam Exp $
+
+  17 Dec 2008; Matthias Schwarzott <zzam@gentoo.org>
+  -files/vdr-skinelchi-0.1.1_pre2-vdr-1.5.5-getfont.diff,
+  vdr-skinelchi-0.1.1_pre2-r1.ebuild, vdr-skinelchi-0.1.1_pre2-r2.ebuild,
+  vdr-skinelchi-0.1.1_pre2-r3.ebuild:
+  Make repoman happy. Moved big patch to the distfiles mirrors. Bug #248990.
 
   25 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/compile-fix.diff, vdr-skinelchi-0.1.1_pre2-r3.ebuild:

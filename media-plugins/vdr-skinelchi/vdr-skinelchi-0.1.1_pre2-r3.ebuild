@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r3.ebuild,v 1.6 2008/03/25 23:00:43 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.1.1_pre2-r3.ebuild,v 1.7 2008/12/17 16:45:55 zzam Exp $
 
 inherit vdr-plugin
 
@@ -8,7 +8,8 @@ MY_P=${P/_pre/pre}
 
 DESCRIPTION="Video Disk Recorder - Skin Plugin"
 HOMEPAGE="http://www.vdrportal.de/board/thread.php?threadid=41915&sid="
-SRC_URI="mirror://gentoo/${MY_P}.tgz"
+SRC_URI="mirror://gentoo/${MY_P}.tgz
+	mirror://gentoo/${P}-vdr-1.5.5-getfont.diff.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -24,16 +25,16 @@ S=${WORKDIR}/${MY_P#vdr-}
 
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-${PV}-r1.sh"
 
-PATCHES="${FILESDIR}/${P}-PatchCollection-FireFly.diff
-	${FILESDIR}/${P}-vdr-1.5.5-getfont.diff
-	${FILESDIR}/compile-fix.diff"
+PATCHES=("${FILESDIR}/${P}-PatchCollection-FireFly.diff"
+	"${WORKDIR}/${P}-vdr-1.5.5-getfont.diff"
+	"${FILESDIR}/compile-fix.diff")
 
 src_unpack() {
 	vdr-plugin_src_unpack
 
 	if use imagemagick; then
 		elog "Enabling imagemagick-support."
-		sed -i ${S}/Makefile -e 's/^#HAVE_IMAGEMAGICK/HAVE_IMAGEMAGICK/'
+		sed -i "${S}"/Makefile -e 's/^#HAVE_IMAGEMAGICK/HAVE_IMAGEMAGICK/'
 	fi
 
 	sed -i DisplayMenu.h -e "s:uint64:uint64_t:"
