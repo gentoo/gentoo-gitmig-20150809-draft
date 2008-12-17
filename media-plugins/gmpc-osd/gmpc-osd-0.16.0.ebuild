@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-osd/gmpc-osd-0.16.0.ebuild,v 1.1 2008/09/24 19:20:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-osd/gmpc-osd-0.16.0.ebuild,v 1.2 2008/12/17 21:44:42 maekke Exp $
 
 inherit autotools multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.sarine.nl/Programs/gmpc/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND=">=media-sound/gmpc-${PV}
