@@ -1,3 +1,2 @@
+new-ffmpeg-extern-c.diff
 shm-fullscreen-parameter.diff
-shm-init-setupStore.diff
-stream-repacker.diff
