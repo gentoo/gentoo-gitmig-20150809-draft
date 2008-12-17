@@ -1,7 +1,5 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2007.1-dev/virtuals,v 1.1 2007/02/25 17:47:56 kumba Exp $
-
-# 2007.1-dev preps for the move to linux-headers and deprecation of mips-headers
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2007.1-dev/virtuals,v 1.2 2008/12/17 05:43:18 kumba Exp $
 
 virtual/os-headers		sys-kernel/linux-headers
