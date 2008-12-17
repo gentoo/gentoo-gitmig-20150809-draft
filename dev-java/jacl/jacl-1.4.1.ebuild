@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.4.1.ebuild,v 1.2 2008/12/07 08:59:44 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.4.1.ebuild,v 1.3 2008/12/17 14:11:14 betelgeuse Exp $
 
 inherit base java-pkg-2
 
@@ -34,6 +34,8 @@ src_compile() {
 		emake -j1 DESTDIR="/usr/share/${PN}" || die "emake failed"
 }
 
+RESTRICT="test"
+# Dies with anything else besides 1.4 so more trouble than benefit
 src_test() {
 	emake check || die "Tests failed"
 	einfo "Some tests are known to fail. We didn't restrict them"
