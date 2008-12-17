@@ -1,6 +1,9 @@
 # ChangeLog for media-video/subtitleripper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/ChangeLog,v 1.15 2008/11/25 16:15:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/ChangeLog,v 1.16 2008/12/17 07:44:58 ssuominen Exp $
+
+  17 Dec 2008; <ssuominen@gentoo.org> subtitleripper-0.3.4-r3.ebuild:
+  x86 stable wrt #250708
 
   25 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/subtitleripper-0.3.4-linkingorder.patch,
