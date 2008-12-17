@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/XML-SAX-Expat-0.40.ebuild,v 1.1 2008/08/23 12:16:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/XML-SAX-Expat-0.40.ebuild,v 1.2 2008/12/17 09:54:32 tove Exp $
 
 MODULE_AUTHOR=BJOERN
 inherit perl-module
@@ -8,7 +8,7 @@ inherit perl-module
 DESCRIPTION="SAX2 Driver for Expat"
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND=">=dev-perl/XML-SAX-0.15-r1
