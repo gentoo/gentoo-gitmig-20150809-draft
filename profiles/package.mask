@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9301 2008/12/17 08:24:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9302 2008/12/17 19:17:51 mpagano Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Pagano <mpagano@gentoo.org> (17 Dec 2008)
+# Masked waiting on >=portage-2.2* to be unmasked
+>=app-portage/portpeek-1.6
 
 # Torsten Veller <tove@gentoo.org> (17 Dec 2008)
 # Masked for removal
