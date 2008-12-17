@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.16.1.ebuild,v 1.5 2008/12/17 17:19:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.16.1.ebuild,v 1.6 2008/12/17 17:20:14 angelos Exp $
 
 EAPI=1
 
@@ -18,7 +18,6 @@ IUSE="session"
 RDEPEND=">=dev-libs/glib-2.10:2
 	dev-perl/XML-Parser
 	dev-util/gob
-	dev-util/intltool
 	>=gnome-base/libglade-2.3
 	>=media-libs/libmpd-0.16.1
 	net-misc/curl
@@ -26,6 +25,7 @@ RDEPEND=">=dev-libs/glib-2.10:2
 	x11-libs/libsexy
 	session? ( x11-libs/libSM )"
 DEPEND="${RDEPEND}
+	dev-util/intltool
 	dev-util/pkgconfig"
 
 src_unpack() {
