@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.45 2008/12/11 16:09:30 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.46 2008/12/17 17:19:17 angelos Exp $
+
+  17 Dec 2008; Christoph Mende <angelos@gentoo.org> gmpc-0.16.1.ebuild:
+  Added intltool dependency
 
   11 Dec 2008; Christoph Mende <angelos@gentoo.org>
   +files/gmpc-0.16.1-system-libsexy.patch, gmpc-0.16.1.ebuild:
