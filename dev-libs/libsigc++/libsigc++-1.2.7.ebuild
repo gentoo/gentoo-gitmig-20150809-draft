@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.6 2008/12/15 02:54:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.7 2008/12/17 20:32:33 ssuominen Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -17,7 +17,7 @@ IUSE="debug"
 
 RDEPEND=""
 
-DOCS="AUTHORS ChangeLog FEATURES IDEAS README INSTALL NEWS TODO"
+DOCS="AUTHORS ChangeLog FEATURES IDEAS README NEWS TODO"
 
 pkg_config() {
 	use debug \
