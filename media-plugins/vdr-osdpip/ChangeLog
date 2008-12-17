@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-osdpip
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.8 2008/05/06 20:47:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/ChangeLog,v 1.9 2008/12/17 06:28:21 ssuominen Exp $
+
+  17 Dec 2008; <ssuominen@gentoo.org> vdr-osdpip-0.0.10.ebuild:
+  x86 stable, because current stable doesn't link against -lswscale.
 
   06 May 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-osdpip-0.0.8-r1.ebuild, vdr-osdpip-0.0.8-r2.ebuild,
