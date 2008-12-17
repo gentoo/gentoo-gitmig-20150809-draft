@@ -1,5 +1,5 @@
 Submitted by: Heath Caldwell <hncaldwell@gentoo.org>
-Date: 2008-10-21
+Date: 2008-12-17
 Initial Package Version: 0.10
 Upstream Status: No response
 Description: Warns on log files that tenshi can't open and continues monitoring the ones that it can, instead of just exiting.
@@ -7,7 +7,7 @@ Description: Warns on log files that tenshi can't open and continues monitoring 
 diff -ur tenshi-0.10/tenshi tenshi-0.10.new/tenshi
 --- tenshi-0.10/tenshi	2008-10-06 16:55:37.000000000 -0700
 +++ tenshi-0.10.new/tenshi	2008-10-07 11:46:06.000000000 -0700
-@@ -141,10 +141,22 @@
+@@ -141,10 +141,23 @@
          die RED "[ERROR] $main{'csv'}{'path'}: not executable";
      }
  
@@ -27,7 +27,8 @@ diff -ur tenshi-0.10/tenshi tenshi-0.10.new/tenshi
 +
 +        push @good_log_files, $log;
      }
-+    @good_log_files > 0 or die RED "[ERROR] no readable log files";
++    @good_log_files > 0 || @fifo_files > 0
++        or die RED "[ERROR] no readable log files";
 +    @log_files = @good_log_files;
  }
  

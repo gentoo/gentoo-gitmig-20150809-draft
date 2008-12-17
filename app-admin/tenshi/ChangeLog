@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.54 2008/12/02 20:46:54 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.55 2008/12/17 20:34:56 hncaldwell Exp $
+
+  17 Dec 2008; Heath Caldwell <hncaldwell@gentoo.org>
+  files/tenshi-0.10-warn-logfile.patch, tenshi-0.10-r3.ebuild:
+  Fixed tenshi-0.10-warn-logfile.patch to not error if there are fifos set
+  (Fixes bug #250403). Documentation location fix (Fixes bug #241254).
 
 *tenshi-0.10-r3 (02 Dec 2008)
 

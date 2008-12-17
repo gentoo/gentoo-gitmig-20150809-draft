@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.10-r3.ebuild,v 1.1 2008/12/02 20:46:54 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.10-r3.ebuild,v 1.2 2008/12/17 20:34:56 hncaldwell Exp $
 
 inherit eutils
 
@@ -35,6 +35,10 @@ src_unpack() {
 	# Fixes for bug #243082
 	epatch "${FILESDIR}/${PN}-0.10-solo-queue-escalation.patch"
 	epatch "${FILESDIR}/${PN}-0.10-warn-logfile.patch"
+
+	# Fix for bug #241254
+	sed -i 's:^docdir =.*:docdir = /usr/share/doc/${PF}:' \
+		Makefile || die "docdir substitution failed"
 }
 
 src_install() {
