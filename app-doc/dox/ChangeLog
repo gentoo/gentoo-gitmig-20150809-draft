@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/dox
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.15 2008/12/14 00:06:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.16 2008/12/17 22:34:07 maekke Exp $
+
+  17 Dec 2008; Markus Meier <maekke@gentoo.org> dox-1.1.ebuild:
+  add ~amd64, bug #250896
 
   14 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/dox-1.1+gcc-4.3.patch, dox-1.1.ebuild:
