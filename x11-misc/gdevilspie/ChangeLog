@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gdevilspie
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdevilspie/ChangeLog,v 1.1 2008/06/16 21:19:26 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdevilspie/ChangeLog,v 1.2 2008/12/17 04:57:20 ssuominen Exp $
+
+  17 Dec 2008; <ssuominen@gentoo.org> gdevilspie-0.31.ebuild:
+  Keyword ~x86 wrt #250973
 
 *gdevilspie-0.31 (16 Jun 2008)
 
