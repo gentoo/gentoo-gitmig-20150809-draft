@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.91 2008/08/25 18:05:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.92 2008/12/17 04:39:43 nixphoeni Exp $
+
+  17 Dec 2008; Joe Sapp <nixphoeni@gentoo.org> -gdesklets-core-0.36.ebuild:
+  Removed 0.36 since 0.36-r1 is stable and replaces it
 
   25 Aug 2008; nixnut <nixnut@gentoo.org> gdesklets-core-0.36-r1.ebuild:
   Stable on ppc wrt bug 234779
