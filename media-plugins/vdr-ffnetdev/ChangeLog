@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-ffnetdev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.11 2008/04/07 19:31:21 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.12 2008/12/17 14:54:47 zzam Exp $
+
+  17 Dec 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-ffnetdev-0.1.0-gcc4.3.patch, vdr-ffnetdev-0.1.0.ebuild:
+  Fix compilation with gcc-4.3. Bug #251190.
 
   07 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
   +files/vdr-ffnetdev-0.1.0-vdr-1.6.0.diff, vdr-ffnetdev-0.1.0.ebuild:
