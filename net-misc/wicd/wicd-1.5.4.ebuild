@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.4.ebuild,v 1.6 2008/12/14 13:31:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.4.ebuild,v 1.7 2008/12/17 22:03:34 maekke Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=""

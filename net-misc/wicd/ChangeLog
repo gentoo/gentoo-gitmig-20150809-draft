@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.25 2008/12/14 13:31:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.26 2008/12/17 22:03:34 maekke Exp $
+
+  17 Dec 2008; Markus Meier <maekke@gentoo.org> wicd-1.5.4.ebuild:
+  x86 stable, bug #250467
 
   14 Dec 2008; nixnut <nixnut@gentoo.org> wicd-1.5.4.ebuild:
   Stable on ppc wrt bug 250467
