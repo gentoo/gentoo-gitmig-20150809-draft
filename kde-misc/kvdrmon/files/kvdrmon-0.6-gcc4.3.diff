@@ -1,0 +1,10 @@
+--- kvdrmon-0.6-orig/src/kvdrmon.cpp	2008-12-17 21:54:05.012404227 +0100
++++ kvdrmon-0.6/src/kvdrmon.cpp	2008-12-17 21:55:25.692394296 +0100
+@@ -28,6 +28,7 @@
+ #include <kapplication.h>
+ #include <qdatetime.h>
+ #include <sys/vfs.h>
++#include <stdlib.h>
+ 
+ #include "status.h"
+ #include "kvdrmon.h"

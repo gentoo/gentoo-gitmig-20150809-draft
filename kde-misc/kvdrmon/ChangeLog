@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kvdrmon
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvdrmon/ChangeLog,v 1.4 2007/05/13 19:55:33 hd_brummy Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvdrmon/ChangeLog,v 1.5 2008/12/17 21:04:39 zzam Exp $
+
+  17 Dec 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/kvdrmon-0.6-gcc4.3.diff, kvdrmon-0.6-r1.ebuild:
+  Fix compilation with gcc-4.3. Bug #251149.
 
   13 May 2007; Joerg Bornkessel <hd_brummy@gentoo.org> metadata.xml:
   metadata.xml fixed
