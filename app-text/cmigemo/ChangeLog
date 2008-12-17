@@ -1,6 +1,13 @@
 # ChangeLog for app-text/cmigemo
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.15 2007/12/25 16:55:08 phreak Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/ChangeLog,v 1.16 2008/12/17 15:28:04 matsuu Exp $
+
+*cmigemo-1.3c-r1 (17 Dec 2008)
+
+  17 Dec 2008; MATSUU Takuto <matsuu@gentoo.org> metadata.xml,
+  -cmigemo-1.2.ebuild, cmigemo-1.3c.ebuild, +cmigemo-1.3c-r1.ebuild:
+  Fixed rpath security issue, bug #246953. Fixed LICENSE. Added ~amd64.
+  Added unicode and vim-syntax USE flags. Clean up.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931. Assigning to maintainer-needed.

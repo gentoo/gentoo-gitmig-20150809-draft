@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.3c.ebuild,v 1.5 2007/01/28 05:40:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.3c.ebuild,v 1.6 2008/12/17 15:28:04 matsuu Exp $
 
 inherit eutils
 
@@ -25,6 +25,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.2-migemo-dict.diff
 	touch ${S}/dict/SKK-JISYO.L
+
+	# Bug #246953
+	sed -i -e "s:-Wl,-rpath[^ ]*::" compile/Make_gcc.mak || die
 }
 
 src_compile() {
