@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/videotrans-1.6.0.ebuild,v 1.1 2008/02/04 00:58:17 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/videotrans/videotrans-1.6.0.ebuild,v 1.2 2008/12/17 21:10:04 loki_val Exp $
 
-inherit eutils
+inherit base eutils
 
 DESCRIPTION="A package to convert movies to DVD format and to build DVDs with."
 HOMEPAGE="http://videotrans.sourceforge.net/"
@@ -25,6 +25,8 @@ RDEPEND="${DEPEND}
 	www-client/lynx
 	app-shells/bash
 	sys-devel/bc"
+
+PATCHES=( "${FILESDIR}/${P}-forced-as-needed.patch" )
 
 pkg_setup() {
 	if ! built_with_use media-video/mjpegtools png; then
