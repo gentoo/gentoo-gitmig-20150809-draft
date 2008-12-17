@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-amarok
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-amarok/ChangeLog,v 1.2 2007/12/19 14:06:37 hd_brummy Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-amarok/ChangeLog,v 1.3 2008/12/17 14:15:34 zzam Exp $
+
+  17 Dec 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-amarok-0.0.2-gcc4.3.patch, vdr-amarok-0.0.2.ebuild:
+  Fix compilation with gcc-4.3. Bug #251185.
 
   19 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-amarok-0.0.2.ebuild:
