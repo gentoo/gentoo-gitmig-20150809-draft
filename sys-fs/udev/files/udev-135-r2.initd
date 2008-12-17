@@ -198,3 +198,9 @@ _start()
 	return 0
 }
 
+stop() {
+	ebegin "Stopping udevd"
+	start-stop-daemon --stop --exec /sbin/udevd
+	eend $?
+}
+
