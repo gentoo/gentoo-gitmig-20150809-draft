@@ -1,19 +1,18 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.1_beta1.ebuild,v 1.2 2008/11/14 19:31:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.0.19.ebuild,v 1.1 2008/12/17 13:05:08 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
-LANGS="be ca cs de eo en-US es-AR es-ES eu fi fr fy-NL ga-IE he hi-IN hu id it ja ko lt nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro ru si sk sv-SE uk zh-CN zh-TW"
-NOSHORTLANGS="es-AR pt-BR zh-CN"
-
-MY_PV="${PV/_beta/b}"
-MY_P="${PN}-${MY_PV}"
+LANGS="af ar be bg ca cs da de el en-GB en-US es-AR es-ES eu fi fr fy-NL ga-IE gu-IN he hu it ja ka ko ku lt mk mn nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ro ru sk sl sv-SE tr uk zh-CN zh-TW"
+NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
 
 DESCRIPTION="Firefox Web Browser"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/linux-i686/en-US/firefox-${MY_PV}.tar.bz2"
+SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/linux-i686/en-US/firefox-${PV}.tar.gz"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip"
+QA_EXECSTACK="opt/firefox/extensions/talkback@mozilla.org/components/libqfaservices.so"
+QA_TEXTRELS="opt/firefox/extensions/talkback@mozilla.org/components/libqfaservices.so"
 
 KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
@@ -23,34 +22,34 @@ IUSE="restrict-javascript"
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
 		SRC_URI="${SRC_URI}
-			linguas_${X/-/_}? ( http://dev.gentoo.org/~armin76/dist/${MY_P/-bin}-xpi/${MY_P/-bin/}-${X}.xpi )"
+			linguas_${X/-/_}? ( http://dev.gentoo.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
 		if [ "${X}" != "en-US" ]; then
 			SRC_URI="${SRC_URI}
-				linguas_${X%%-*}? ( http://dev.gentoo.org/~armin76/dist/${MY_P/-bin}-xpi/${MY_P/-bin/}-${X}.xpi )"
+				linguas_${X%%-*}? ( http://dev.gentoo.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
 done
 
 DEPEND="app-arch/unzip"
-RDEPEND="dev-libs/dbus-glib
-	x11-libs/libXrender
+RDEPEND="x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libXmu
+	x11-libs/pango
 	x86? (
 		>=x11-libs/gtk+-2.2
-		>=media-libs/alsa-lib-1.0.16
+		=virtual/libstdc++-3.3
 	)
 	amd64? (
 		>=app-emulation/emul-linux-x86-baselibs-1.0
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
-		>=app-emulation/emul-linux-x86-soundlibs-20080418
 		app-emulation/emul-linux-x86-compat
-	)"
+	)
+	>=www-client/mozilla-launcher-1.41"
 
 PDEPEND="restrict-javascript? ( x11-plugins/noscript )"
 
@@ -61,6 +60,12 @@ pkg_setup() {
 	# Please keep this in future versions
 	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
 	has_multilib_profile && ABI="x86"
+
+	if ! built_with_use --missing true x11-libs/pango X; then
+		eerror "Pango is not built with X useflag."
+		eerror "Please add 'X' to your USE flags, and re-emerge pango."
+		die "Pango needs X"
+	fi
 }
 
 linguas() {
@@ -86,11 +91,11 @@ linguas() {
 }
 
 src_unpack() {
-	unpack firefox-${MY_PV}.tar.bz2
+	unpack firefox-${PV}.tar.gz
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_unpack "${MY_P/-bin/}-${X}.xpi"
+		[[ ${X} != "en" ]] && xpi_unpack "${P/-bin/}-${X}.xpi"
 	done
 	if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
 		einfo "Selected language packs (first will be default): ${linguas}"
@@ -100,17 +105,14 @@ src_unpack() {
 src_install() {
 	declare MOZILLA_FIVE_HOME=/opt/firefox
 
-	# Install icon and .desktop for menu entry
-	newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
-	domenu "${FILESDIR}"/icon/${PN}.desktop
-
 	# Install firefox in /opt
 	dodir ${MOZILLA_FIVE_HOME%/*}
+	touch "${S}"/extensions/talkback@mozilla.org/chrome.manifest
 	mv "${S}" "${D}"${MOZILLA_FIVE_HOME}
 
 	linguas
 	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${MY_P/-bin/}-${X}"
+		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P/-bin/}-${X}"
 	done
 
 	local LANG=${linguas%% *}
@@ -122,14 +124,12 @@ src_install() {
 			die "sed failed to change locale"
 	fi
 
-		# Create /usr/bin/firefox-bin
-		dodir /usr/bin/
-		cat <<EOF >"${D}"/usr/bin/firefox-bin
-#!/bin/sh
-unset LD_PRELOAD
-exec /opt/firefox/firefox "\$@"
-EOF
-		fperms 0755 /usr/bin/firefox-bin
+	# Create /usr/bin/firefox-bin
+	install_mozilla_launcher_stub firefox-bin ${MOZILLA_FIVE_HOME}
+
+	# Install icon and .desktop for menu entry
+	doicon "${FILESDIR}"/icon/${PN}-icon.png
+	domenu "${FILESDIR}"/icon/${PN}.desktop
 
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild
@@ -137,9 +137,6 @@ EOF
 
 	# install ldpath env.d
 	doenvd "${FILESDIR}"/71firefox-bin
-
-	rm -rf "${D}"${MOZILLA_FIVE_HOME}/plugins
-	dosym /usr/"$(get_libdir)"/nsbrowser/plugins ${MOZILLA_FIVE_HOME}/plugins
 }
 
 pkg_preinst() {
@@ -151,28 +148,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if use x86; then
-		if ! has_version 'gnome-base/gconf' || ! has_version 'gnome-base/orbit' \
-			|| ! has_version 'net-misc/curl'; then
-			einfo
-			einfo "For using the crashreporter, you need gnome-base/gconf,"
-			einfo "gnome-base/orbit and net-misc/curl emerged."
-			einfo
-		fi
-		if has_version 'net-misc/curl' && built_with_use --missing \
-			true 'net-misc/curl' nss; then
-			einfo
-			einfo "Crashreporter won't be able to send reports"
-			einfo "if you have curl emerged with the nss USE-flag"
-			einfo
-		fi
-	else
-		einfo
-		einfo "NB: You just installed a 32-bit firefox"
-		einfo
-		einfo "Crashreporter won't work on amd64"
-		einfo
-	fi
+	use amd64 && einfo "NB: You just installed a 32-bit firefox"
 	update_mozilla_launcher_symlinks
 }
 
