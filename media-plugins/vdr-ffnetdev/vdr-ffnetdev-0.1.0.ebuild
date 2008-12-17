@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0.ebuild,v 1.11 2008/12/17 14:54:47 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0.ebuild,v 1.12 2008/12/17 19:03:57 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	vdr-plugin_src_unpack unpack
 
 	epatch "${FILESDIR}/${P}-uint64.diff"
+	epatch "${FILESDIR}/${P}-gcc4.3.patch"
 
 	if grep -q "virtual cString Active" /usr/include/vdr/plugin.h; then
 		epatch "${FILESDIR}/${P}-bigpatch-headers.diff"
@@ -30,7 +31,6 @@ src_unpack() {
 		epatch "${FILESDIR}/${P}-vdr-1.6.0.diff"
 	fi
 
-	epatch "${FILESDIR}/${P}-gcc4.3.patch"
 
 	vdr-plugin_src_unpack all_but_unpack
 }

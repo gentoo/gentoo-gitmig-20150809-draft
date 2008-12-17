@@ -5,8 +5,8 @@ diff -ru vdr-ffnetdev-0.1.0-orig/netosd.h vdr-ffnetdev-0.1.0/netosd.h
  	bool truecolor;
  protected:
  public:
--    cNetOSD(int XOfs, int XOfs, uint level);
-+    cNetOSD(int Left, int Top, uint level);
+-    cNetOSD(int XOfs, int XOfs);
++    cNetOSD(int Left, int Top);
      virtual ~cNetOSD();
      virtual eOsdError CanHandleAreas(const tArea *Areas, int NumAreas);
      virtual void Flush(void);
