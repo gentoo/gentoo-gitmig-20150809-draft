@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.16 2008/12/16 10:31:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.17 2008/12/17 09:18:59 voyageur Exp $
+
+  17 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/google-gadgets-0.10.4-gcc41.patch, google-gadgets-0.10.3.ebuild,
+  google-gadgets-0.10.4.ebuild:
+  Fix compilation with gcc 4.1, clean warning on gcc version in 0.10.3
+  (works with gcc 4.1)
 
 *google-gadgets-0.10.4 (16 Dec 2008)
 

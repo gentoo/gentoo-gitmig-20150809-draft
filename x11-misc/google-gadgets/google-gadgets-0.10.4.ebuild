@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.4.ebuild,v 1.1 2008/12/16 10:31:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.4.ebuild,v 1.2 2008/12/17 09:18:59 voyageur Exp $
 
 EAPI=2
 
@@ -19,8 +19,6 @@ IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager startup-notification"
 # Weird things happen when we start mix-n-matching, so for the time being
 # I've just locked the deps to the versions I had as of Summer 2008. With any
 # luck, they'll be stable when we get to stabling this package.
-
-#BIG DANGLING NOTE: This fails with gcc <4.2.
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
@@ -79,6 +77,8 @@ pkg_setup() {
 src_unpack() {
 	base_src_unpack
 	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 
 	sed -i -r \
 		-e '/^GGL_SYSDEPS_INCLUDE_DIR/ c\GGL_SYSDEPS_INCLUDE_DIR=$GGL_INCLUDE_DIR' \
