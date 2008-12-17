@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/3ddesktop
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.38 2008/11/17 22:59:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.39 2008/12/17 18:48:58 angelos Exp $
+
+  17 Dec 2008; Christoph Mende <angelos@gentoo.org>
+  +files/3ddesktop-0.2.9-asneeded.patch,
+  +files/3ddesktop-0.2.9-missing-include.patch, 3ddesktop-0.2.9.ebuild:
+  Fixed compilation with --as-needed (bug 206817, patch by Arfrever Frehtes
+  Taifersar Arahesis) and added missing include cstring (bug 228217, patch
+  by Markus Peloquin)
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/3ddesktop-0.2.9-gcc4.patch:
