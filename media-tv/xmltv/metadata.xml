@@ -9,21 +9,19 @@
   <use>
     <flag name="ar">Argentina tv listing grabber</flag>
     <flag name="be">Belgium and Luxemburg tv listing grabber</flag>
-    <flag name="br">Brazil tv listing grabber</flag>
     <flag name="brnet">Brazil cable tv listing grabber</flag>
     <flag name="ch">Switzerland bluewin tv listing grabber</flag>
-    <flag name="de_tvtoday">Germany tv listing grabber</flag>
     <flag name="dk">Denmark tv listing grabber</flag>
     <flag name="dtvla">Latin America digital tv listing grabber</flag>
     <flag name="ee">Estonia tv listing grabber</flag>
     <flag name="es_laguiatv">Spain alternative grabber</flag>
+    <flag name="es_miguiatv">Spain alternative grabber</flag>
     <flag name="es">Spain tv listing grabber</flag>
     <flag name="eu_epg">EPG grabber for some European countries.</flag>
     <flag name="fi">Finland tv listing grabber</flag>
     <flag name="fr">France tv listing grabber</flag>
     <flag name="hr">Croatia tv listing grabber</flag>
     <flag name="huro">Hungarian tv listing grabber</flag>
-    <flag name="il">Israel tv listing grabber</flag>
     <flag name="is">Iceland tv listing grabber</flag>
     <flag name="it">Italy tv listing grabber</flag>
     <flag name="jp">Japan tv listing grabber</flag>

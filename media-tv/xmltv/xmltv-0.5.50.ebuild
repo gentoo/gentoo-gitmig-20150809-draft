@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.50.ebuild,v 1.7 2008/11/18 16:17:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.50.ebuild,v 1.8 2008/12/17 12:32:23 mattepiu Exp $
 
 inherit eutils perl-module
 
@@ -27,9 +27,6 @@ PREFIX="/usr"
 # enable graphical front-end, Italy grabber
 #  in /etc/portage/package.use : media-tv/xmltv tv_check it
 
-# Care!!!! grab_il is actually missing Text::Bidi
-#
-
 RDEPEND=">=dev-perl/libwww-perl-5.65
 	>=dev-perl/XML-Parser-2.34
 	>=dev-perl/XML-Twig-3.10
@@ -43,7 +40,8 @@ RDEPEND=">=dev-perl/libwww-perl-5.65
 	dev-perl/Unicode-String
 	dev-perl/TermReadKey
 	dev-perl/File-Slurp
-	>=dev-lang/perl-5.6.1"
+	>=dev-lang/perl-5.6.1
+	dev-perl/XML-LibXML"
 
 DEPEND="${RDEPEND}
 	brnet? ( dev-perl/IO-stringy >=dev-perl/WWW-Mechanize-1.02 )
@@ -157,7 +155,7 @@ make_config() {
 }
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	cd "${S}"
 	#epatch ${FILESDIR}/xmltv-na_dd-xmltwig.patch
@@ -199,6 +197,4 @@ pkg_postinst() {
 			elog "otherwise it does nothing."
 		fi
 	fi
-	elog "Israel (il) support has bee turned on for lack of testers, open a"
-	elog "bugreport if you want il support and are willing to collaborate/test"
 }

@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.80 2008/11/18 16:17:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.81 2008/12/17 12:32:23 mattepiu Exp $
+
+*xmltv-0.5.53 (17 Dec 2008)
+
+  17 Dec 2008; Matteo Azzali <mattepiu@gentoo.org> metadata.xml,
+  -xmltv-0.5.44.ebuild, -xmltv-0.5.46.ebuild, -xmltv-0.5.48.ebuild,
+  -xmltv-0.5.49.ebuild, xmltv-0.5.50.ebuild, +xmltv-0.5.53.ebuild:
+  Old ebuilds removed (respecting stabilized 5.50), fixing of bugs #213007
+  and bump request #215537. Bug #230351 for broken il grabber doesn't
+  applies anymore.
 
   18 Nov 2008; Torsten Veller <tove@gentoo.org> xmltv-0.5.44.ebuild,
   xmltv-0.5.46.ebuild, xmltv-0.5.48.ebuild, xmltv-0.5.49.ebuild,
