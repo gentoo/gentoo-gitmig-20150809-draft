@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.53.ebuild,v 1.1 2008/12/17 12:32:23 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.53.ebuild,v 1.2 2008/12/17 12:50:25 mattepiu Exp $
 
 inherit eutils perl-module
 
@@ -61,6 +61,7 @@ DEPEND="${RDEPEND}
 	eu_epg? ( dev-perl/Archive-Zip )
 	se_swedb? ( dev-perl/HTTP-Cache-Transparent dev-perl/IO-stringy dev-perl/XML-LibXML )
 	hr? ( dev-perl/HTTP-Cache-Transparent dev-perl/IO-stringy dev-perl/XML-LibXML )
+	uk_rt? ( dev-perl/HTTP-Cache-Transparent dev-perl/IO-stringy )
 	uk_bleb? ( dev-perl/Archive-Zip dev-perl/IO-stringy )
 	ee? ( dev-perl/IO-stringy )
 	re? ( dev-perl/Lingua-EN-Numbers-Ordinate )
