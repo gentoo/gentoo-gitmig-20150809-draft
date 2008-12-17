@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r11.ebuild,v 1.1 2008/12/05 23:51:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86-r12.ebuild,v 1.1 2008/12/17 22:47:15 cardoe Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -36,7 +36,7 @@ src_unpack() {
 
 	# Mung inittab for specific architectures
 	cd "${WORKDIR}"
-	cp "${FILESDIR}"/inittab-2.86-r11 inittab || die "cp inittab"
+	cp "${FILESDIR}"/inittab-2.86-r12 inittab || die "cp inittab"
 	local insert=""
 	use ppc && insert='#psc0:12345:respawn:/sbin/agetty 115200 ttyPSC0 linux'
 	use arm && insert='#f0:12345:respawn:/sbin/agetty 9600 ttyFB0 vt100'
@@ -55,9 +55,6 @@ src_unpack() {
 			inittab #121786
 	fi
 	[[ -n ${insert} ]] && echo "# Architecture specific features"$'\n'"${insert}" >> inittab
-	
-	# Ready for baselayout2/openrc-0.4.0, commented pending bug 246502
-	#has_version =sys-apps/baselayout-2* && sed -i -e '/^#BL2#/s,^#BL2#,,g' inittab
 }
 
 src_compile() {

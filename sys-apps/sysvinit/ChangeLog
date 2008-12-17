@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.61 2008/12/05 23:51:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.62 2008/12/17 22:47:15 cardoe Exp $
+
+*sysvinit-2.86-r12 (17 Dec 2008)
+
+  17 Dec 2008; Doug Goldstein <cardoe@gentoo.org> -files/inittab-2.86-r11,
+  +files/inittab-2.86-r12, -sysvinit-2.86-r11.ebuild,
+  +sysvinit-2.86-r12.ebuild:
+  resolve bug #246502. bump to have everyone update to this
 
 *sysvinit-2.86-r11 (05 Dec 2008)
 
