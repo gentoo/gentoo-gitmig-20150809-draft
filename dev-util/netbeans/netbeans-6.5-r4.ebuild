@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r3.ebuild,v 1.1 2008/12/05 03:14:28 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r4.ebuild,v 1.1 2008/12/17 11:09:20 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -571,8 +571,8 @@ src_compile() {
 		| grep -v "/profiler3/" | xargs rm -fv
 
 	if use netbeans_modules_cnd ; then
-		rm -fv "${BUILDDESTINATION}"/netbeans/cnd2/bin/*-SunOS-*
-		rm -fv "${BUILDDESTINATION}"/netbeans/cnd2/bin/*-Mac_OS_X-*
+		rm -fv "${BUILDDESTINATION}"/cnd2/bin/*-SunOS-*
+		rm -fv "${BUILDDESTINATION}"/cnd2/bin/*-Mac_OS_X-*
 	fi
 
 	# Removing external stuff. They are api docs from external libs.
