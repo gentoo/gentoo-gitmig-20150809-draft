@@ -1,0 +1,9 @@
+# ChangeLog for sci-misc/lttoolbox
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/lttoolbox/ChangeLog,v 1.1 2008/12/17 00:16:14 anant Exp $
+
+*lttoolbox-3.1.0 (15 Dec 2008)
+
+  15 Dec 2008; <anant@gentoo.org> +metadata.xml, +lttoolbox-3.1.0.ebuild:
+  New ebuild for lttoolbox, bug #215833
+
