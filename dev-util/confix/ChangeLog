@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/confix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/ChangeLog,v 1.6 2008/12/09 08:30:18 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/ChangeLog,v 1.7 2008/12/17 09:43:16 mduft Exp $
+
+  17 Dec 2008; Markus Duft <mduft@gentoo.org>
+  files/2.1.0/fast-install.patch:
+  updated fast install patch to correctly add files to dist rules
 
 *confix-2.1.0-r2 (09 Dec 2008)
 
