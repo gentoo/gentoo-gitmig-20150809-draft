@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.40 2008/12/16 23:36:10 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.41 2008/12/17 22:35:55 maekke Exp $
+
+  17 Dec 2008; Markus Meier <maekke@gentoo.org> k9copy-2.1.0.ebuild:
+  add ~x86, bug #251256
 
 *k9copy-2.1.0 (16 Dec 2008)
 
