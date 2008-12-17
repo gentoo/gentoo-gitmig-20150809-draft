@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.4.ebuild,v 1.2 2008/12/11 21:16:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.4.ebuild,v 1.3 2008/12/17 18:25:41 yngwin Exp $
 
 EAPI=2
 inherit qt4
@@ -27,10 +27,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.3-configure.patch
 }
 
-src_compile() {
+src_configure() {
 	# with econf it chokes on Unrecognized option: --host=...
 	./configure --qmake=qmake --prefix=/usr
-	emake || die "Make failed!"
 }
 
 src_install() {
