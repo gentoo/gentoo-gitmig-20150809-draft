@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.2.5.ebuild,v 1.1 2008/12/05 22:24:31 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.2.5.ebuild,v 1.2 2008/12/17 18:49:01 yngwin Exp $
 
 EAPI="2"
 inherit eutils
@@ -13,20 +13,16 @@ IUSE="curl taglib unicode"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="sys-libs/ncurses[unicode]
+DEPEND="sys-libs/ncurses[unicode?]
 	curl? ( net-misc/curl )
 	taglib? ( media-libs/taglib )"
-RDEPEND="${DEPEND}
-	>=media-sound/mpd-0.14_alpha1"
 
-src_compile() {
-	econf $(use_enable unicode) $(use_with curl) $(use_with taglib) \
-		|| die "configure failed"
-	emake || die "make failed"
+src_configure() {
+	econf $(use_enable unicode) $(use_with curl) $(use_with taglib)
 }
 
 src_install() {
-	make install DESTDIR="${D}" docdir="${ROOT}/usr/share/doc/${PF}" \
+	emake install DESTDIR="${D}" docdir="/usr/share/doc/${PF}" \
 		|| die "install failed"
 	prepalldocs
 }
@@ -37,5 +33,8 @@ pkg_postinst() {
 	elog "${ROOT}usr/share/doc/${PF}"
 	elog "${P} uses ~/.ncmpcpp/config and ~/.ncmpcpp/keys"
 	elog "as user configuration files."
+	echo
+	elog "This version of ncmpcc uses features from mpd-0.14, so"
+	elog "we recommend you use this with >=mpd-0.14_alpha1."
 	echo
 }
