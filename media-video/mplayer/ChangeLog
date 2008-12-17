@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.602 2008/12/13 22:29:35 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.603 2008/12/17 15:15:10 beandog Exp $
+
+*mplayer-1.0_rc2_p28058-r1 (17 Dec 2008)
+
+  17 Dec 2008; Steve Dibb <beandog@gentoo.org>
+  +files/mplayer-1.0_rc2_p28058-demux_vqf.patch,
+  +mplayer-1.0_rc2_p28058-r1.ebuild:
+  Add patch for security bug 251017; Change realplayer dep to realcodecs,
+  bug 249572
 
   13 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
   +files/mplayer-libmpeg2.patch, +files/mplayer-libavcodec.patch,
