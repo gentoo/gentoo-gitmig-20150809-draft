@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.146 2008/12/09 21:35:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.147 2008/12/17 22:21:08 maekke Exp $
+
+  17 Dec 2008; Markus Meier <maekke@gentoo.org> erlang-12.2.5.ebuild:
+  amd64 stable, bug #249960
 
   09 Dec 2008; Raúl Porcel <armin76@gentoo.org> erlang-12.2.5.ebuild:
   alpha/sparc/x86 stable wrt #249960
