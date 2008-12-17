@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.542.ebuild,v 1.6 2008/12/17 12:27:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.561.ebuild,v 1.1 2008/12/17 12:27:13 lu_zero Exp $
 
 IUSE="acpi debug"
 
@@ -9,14 +9,14 @@ inherit eutils multilib linux-mod toolchain-funcs versionator
 DESCRIPTION="Ati precompiled drivers for recent chipsets"
 HOMEPAGE="http://www.ati.com"
 ATI_URL="https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/"
-SRC_URI="${ATI_URL}/ati-driver-installer-8-10-x86.x86_64.run"
+SRC_URI="${ATI_URL}/ati-driver-installer-8-12-x86.x86_64.run"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
 KEYWORDS="~amd64 ~x86"
 
 # The portage dep is for COLON_SEPARATED support in env-update.
 # The eselect dep (>=1.0.9) is for COLON_SEPARATED in eselect env update.
-RDEPEND="x11-base/xorg-server
+RDEPEND=">=x11-base/xorg-server-1.5
 	!x11-apps/ati-drivers-extra
 	>=app-admin/eselect-1.0.9
 	app-admin/eselect-opengl
@@ -31,7 +31,8 @@ RDEPEND="x11-base/xorg-server
 DEPEND="${RDEPEND}
 	x11-proto/xf86miscproto
 	x11-proto/xf86vidmodeproto
-	x11-proto/inputproto"
+	x11-proto/inputproto
+	!<x11-drivers/ati-drivers-8.552-r1"
 
 EMULTILIB_PKG="true"
 
@@ -113,15 +114,21 @@ pkg_setup() {
 		die "CONFIG_PARAVIRT enabled"
 	fi
 
-	# Only support xorg-server >=1.1
-	BASE_DIR="${S}/x710"
+	if ! linux_chkconfig_present MAGIC_SYSRQ; then
+		eerror "You need MAGIC_SYSRQ enabled in order to build ati-drivers"
+		die "CONFIG_MAGIC_SYSRQ disabled"
+	fi
+
+	# Only support xorg-server >=1.5
+	BASE_DIR="${S}/x740"
 
 	# This is used like $(get_libdir) for paths in ati's package.
 	if use amd64 ; then
-		BASE_DIR="${BASE_DIR}_64a"
+		MY_BASE_DIR="${BASE_DIR}_64a"
 		PKG_LIBDIR=lib64
 		ARCH_DIR="${S}/arch/x86_64"
 	else
+		MY_BASE_DIR="${BASE_DIR}"
 		PKG_LIBDIR=lib
 		ARCH_DIR="${S}/arch/x86"
 	fi
@@ -132,6 +139,8 @@ src_unpack() {
 	#would be created
 	local src="${DISTDIR}/${A}"
 	sh "${src}" --extract "${S}"  2&>1 /dev/null
+	cd "${S}"
+	epatch "${FILESDIR}"/8.552/ati-drivers-xen-8.552.patch || die "epatch failed"
 
 	# These are the userspace utilities that we also have source for.
 	# We rebuild these later.
@@ -167,9 +176,6 @@ src_unpack() {
 	ln -s "${ARCH_DIR}"/lib/modules/fglrx/build_mod/libfglrx_ip.a.GCC$(gcc-major-version) \
 		|| die "symlinking precompiled core failed"
 
-	if kernel_is 2 6 27; then
-		epatch "${FILESDIR}/${PV}/ati-drivers-2.6.27.patch"
-	fi
 
 	convert_to_m 2.6.x/Makefile || die "convert_to_m failed"
 
@@ -279,11 +285,11 @@ src_install() {
 
 	# X modules.
 	exeinto /usr/$(get_libdir)/xorg/modules/drivers
-	doexe "${BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/drivers/fglrx_drv.so
+	doexe "${MY_BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/drivers/fglrx_drv.so
 	exeinto /usr/$(get_libdir)/xorg/modules/linux
-	doexe "${BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/linux/libfglrxdrm.so
+	doexe "${MY_BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/linux/libfglrxdrm.so
 	exeinto /usr/$(get_libdir)/xorg/modules
-	doexe "${BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/{esut.a,glesx.so,amdxmm.so}
+	doexe "${MY_BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/{esut.a,glesx.so,amdxmm.so}
 
 	# Arch-specific files.
 	# (s)bin.
@@ -368,9 +374,11 @@ src_install() {
 
 src_install-libs() {
 	if [[ "${ABI}" == "amd64" ]]; then
+		local EX_BASE_DIR="${BASE_DIR}_64a"
 		local pkglibdir=lib64
 		local MY_ARCH_DIR="${S}/arch/x86_64"
 	else
+		local EX_BASE_DIR="${BASE_DIR}"
 		local pkglibdir=lib
 		local MY_ARCH_DIR="${S}/arch/x86"
 	fi
@@ -388,9 +396,8 @@ src_install-libs() {
 	dosym libGL.so.${libver} ${ATI_ROOT}/lib/libGL.so.${libmajor}
 	dosym libGL.so.${libver} ${ATI_ROOT}/lib/libGL.so
 
-	# Same as the xorg implementation (eselect opengl does not fall
-	# back to xorg-x11 if we omit this symlink, meaning no glx).
-	dosym ../xorg-x11/extensions ${ATI_ROOT}/extensions
+	exeinto ${ATI_ROOT}/extensions
+	doexe "${EX_BASE_DIR}"/usr/X11R6/${pkglibdir}/modules/extensions/*
 
 	# DRI modules, installed into the path used by recent versions of mesa.
 	exeinto /usr/$(get_libdir)/dri
@@ -416,10 +423,6 @@ src_install-libs() {
 	fi
 	echo "LIBGL_DRIVERS_PATH=/usr/$(get_libdir)/dri" > "${envname}"
 	doenvd "${envname}"
-}
-
-pkg_prerm() {
-	/usr/bin/eselect opengl set xorg-x11
 }
 
 pkg_postinst() {

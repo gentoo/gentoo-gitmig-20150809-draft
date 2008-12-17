@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.136 2008/11/25 09:49:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.137 2008/12/17 12:27:13 lu_zero Exp $
+
+*ati-drivers-8.561 (17 Dec 2008)
+
+  17 Dec 2008; Luca Barbato <lu_zero@gentoo.org>
+  +files/8.552/ati-drivers-xen-8.552.patch, ati-drivers-8.542.ebuild,
+  +ati-drivers-8.561.ebuild:
+  Version bump + xen patch from git://github.com/tarsius/tarsius-tree.git
+  see Bug #250590
 
   25 Nov 2008; Luca Barbato <lu_zero@gentoo.org>
   ati-drivers-8.552-r2.ebuild:
