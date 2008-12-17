@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.4.3.ebuild,v 1.8 2008/12/15 05:03:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mixer/xfce4-mixer-4.4.3.ebuild,v 1.9 2008/12/17 17:40:51 ssuominen Exp $
 
 EAPI=1
 
@@ -29,11 +29,13 @@ RDEPEND=">=dev-libs/glib-2.6:2
 DEPEND="${RDEPEND}
 	dev-util/intltool"
 
-if use alsa; then
-	XFCE_CONFIG+=" --with-sound=alsa"
-fi
+pkg_setup() {
+	if use alsa; then
+		XFCE_CONFIG+=" --with-sound=alsa"
+	fi
 
-XFCE_CONFIG+=" $(use_enable nls)"
+	XFCE_CONFIG+=" $(use_enable nls)"
+}
 
 src_unpack() {
 	unpack ${A}
