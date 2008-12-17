@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vobcopy
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.41 2008/12/17 17:56:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.42 2008/12/17 22:18:21 maekke Exp $
+
+  17 Dec 2008; Markus Meier <maekke@gentoo.org> vobcopy-1.1.2.ebuild:
+  x86 stable, bug #251309
 
   17 Dec 2008; Brent Baude <ranger@gentoo.org> vobcopy-1.1.2.ebuild:
   Marking vobcopy-1.1.2 ppc64 for bug 251309
