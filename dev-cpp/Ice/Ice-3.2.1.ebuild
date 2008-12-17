@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.2.1.ebuild,v 1.4 2007/09/25 19:41:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/Ice-3.2.1.ebuild,v 1.5 2008/12/17 21:58:29 loki_val Exp $
 
 inherit eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-Makefile.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 
 	MAKE_RULES="${S}/config/Make.rules"
 
