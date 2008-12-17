@@ -42,10 +42,11 @@ seed_dev()
 {
 	# Seed /dev with some things that we know we need
 
-	# creating /dev/console and /dev/tty1 to be able to write
+	# creating /dev/console, /dev/tty and /dev/tty1 to be able to write
 	# to $CONSOLE with/without bootsplash before udevd creates it
 	[ -c /dev/console ] || mknod /dev/console c 5 1
 	[ -c /dev/tty1 ] || mknod /dev/tty1 c 4 1
+	[ -c /dev/tty ] || mknod /dev/tty c 5 0
 
 	# udevd will dup its stdin/stdout/stderr to /dev/null
 	# and we do not want a file which gets buffered in ram
