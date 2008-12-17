@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205-r2.ebuild,v 1.1 2008/07/18 19:46:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205-r2.ebuild,v 1.2 2008/12/17 13:49:12 betelgeuse Exp $
 
 EAPI=1
 WANT_ANT_TASKS="dev-java/exolabtools:0"
@@ -29,6 +29,7 @@ COMMON_DEP="
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
+	java-virtuals/jdk-with-com-sun
 	${COMMON_DEP}
 	dev-java/exolabtools
 	test? (

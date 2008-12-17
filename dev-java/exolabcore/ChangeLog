@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/exolabcore
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/ChangeLog,v 1.15 2008/07/18 19:46:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/ChangeLog,v 1.16 2008/12/17 13:49:12 betelgeuse Exp $
+
+  17 Dec 2008; Petteri Räty <betelgeuse@gentoo.org>
+  exolabcore-0.3.7_p20050205-r2.ebuild:
+  Needs com.sun.net.ssl so adding dependency on
+  java-virtuals/jdk-with-com-sun.
 
 *exolabcore-0.3.7_p20050205-r2 (18 Jul 2008)
 
