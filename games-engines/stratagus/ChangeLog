@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/stratagus
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.16 2007/04/10 01:44:31 nyhm Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.17 2008/12/17 15:41:37 mr_bones_ Exp $
+
+  17 Dec 2008; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/stratagus-2.2.4-gcc43.patch, stratagus-2.2.4.ebuild:
+  add gcc43 build patch from Arttu Valo (bug #251134)
 
 *stratagus-2.2.4 (10 Apr 2007)
 
