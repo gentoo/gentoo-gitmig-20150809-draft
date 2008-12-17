@@ -1,6 +1,6 @@
 diff -ru Confix-2.1.0.orig/libconfix/core/automake/file_installer.py Confix-2.1.0/libconfix/core/automake/file_installer.py
 --- Confix-2.1.0.orig/libconfix/core/automake/file_installer.py	2008-10-21 11:17:30 +0200
-+++ Confix-2.1.0/libconfix/core/automake/file_installer.py	2008-12-17 10:35:54 +0100
++++ Confix-2.1.0/libconfix/core/automake/file_installer.py	2008-12-17 11:58:32 +0100
 @@ -22,6 +22,11 @@
  from libconfix.core.utils.paragraph import Paragraph
  from libconfix.core.utils import const
@@ -95,7 +95,7 @@ diff -ru Confix-2.1.0.orig/libconfix/core/automake/file_installer.py Confix-2.1.
 +                if len(_f) >= FileInstaller.MAX_SIMULTANOUS_INSTALL or _i >= len(files):
 +                    # is this rule name unique enough?
 +                    rulename='.installstamp.public_' + my_md5(str(hash(self)) + targetdir + str(_i)).hexdigest()
-+                    self.fast_general_install(makefile_am, rulename, targetdir, _f, '0644')
++                    self.fast_general_install(makefile_am, rulename, '$(DESTDIR)' + targetdir, _f, '0644')
 +                    install_public_rule.add_prerequisite(rulename)
 +                    uninstall_public_rule.add_prerequisite(rulename + '_clean')
 +                    _f=[]
@@ -147,7 +147,7 @@ diff -ru Confix-2.1.0.orig/libconfix/core/automake/file_installer.py Confix-2.1.
 +                if len(_f) >= FileInstaller.MAX_SIMULTANOUS_INSTALL or _i >= len(files):
 +                    # is this rule name unique enough?
 +                    rulename='.installstamp.public_data_' + my_md5(str(hash(self)) + targetdir + str(_i)).hexdigest()
-+                    self.fast_general_install(makefile_am, rulename, targetdir, _f, '0644')
++                    self.fast_general_install(makefile_am, rulename, '$(DESTDIR)' + targetdir, _f, '0644')
 +                    install_public_data_rule.add_prerequisite(rulename)
 +                    uninstall_public_data_rule.add_prerequisite(rulename + '_clean')
 +                    _f=[]
@@ -200,7 +200,7 @@ diff -ru Confix-2.1.0.orig/libconfix/core/automake/file_installer.py Confix-2.1.
 +                if len(_f) >= FileInstaller.MAX_SIMULTANOUS_INSTALL or _i >= len(files):
 +                    # is this rule name unique enough?
 +                    rulename='.installstamp.public_prefix_' + my_md5(str(hash(self)) + targetdir + str(_i)).hexdigest()
-+                    self.fast_general_install(makefile_am, rulename, targetdir, _f, '0644')
++                    self.fast_general_install(makefile_am, rulename, '$(DESTDIR)' + targetdir, _f, '0644')
 +                    install_public_prefix_rule.add_prerequisite(rulename)
 +                    uninstall_public_prefix_rule.add_prerequisite(rulename + '_clean')
 +                    _f=[]
