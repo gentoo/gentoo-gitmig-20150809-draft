@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.165 2008/12/16 15:48:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.166 2008/12/17 20:08:42 maekke Exp $
+
+  17 Dec 2008; Markus Meier <maekke@gentoo.org>
+  courier-imap-4.0.6-r3.ebuild:
+  amd64/x86 stable, bug #168196
 
   16 Dec 2008; Brent Baude <ranger@gentoo.org> courier-imap-4.0.6-r3.ebuild:
   Marking courier-imap-4.0.6-r3 ppc64 for bug 168196
