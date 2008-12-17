@@ -1,0 +1,9 @@
+# ChangeLog for sci-misc/apertium
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/apertium/ChangeLog,v 1.1 2008/12/17 00:32:22 anant Exp $
+
+*apertium-3.1.0 (16 Dec 2008)
+
+  16 Dec 2008; <anant@gentoo.org> +metadata.xml, +apertium-3.1.0.ebuild:
+  New ebuild for apertium, bug #215833
+
