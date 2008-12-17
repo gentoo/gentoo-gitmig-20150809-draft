@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.96 2008/11/12 08:17:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.97 2008/12/17 17:49:21 ranger Exp $
+
+  17 Dec 2008; Brent Baude <ranger@gentoo.org>
+  epiphany-extensions-2.24.0.ebuild:
+  Marking epiphany-extensions-2.24.0 ~ppc64 for bug 239847
 
   12 Nov 2008; Jeroen Roovers <jer@gentoo.org>
   epiphany-extensions-2.24.1-r10.ebuild:
