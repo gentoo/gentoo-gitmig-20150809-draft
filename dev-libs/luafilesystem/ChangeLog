@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/luafilesystem
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luafilesystem/ChangeLog,v 1.6 2008/12/16 15:38:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luafilesystem/ChangeLog,v 1.7 2008/12/17 20:22:39 maekke Exp $
+
+  17 Dec 2008; Markus Meier <maekke@gentoo.org> luafilesystem-1.4.1.ebuild:
+  amd64/x86 stable, bug #250795
 
   16 Dec 2008; Brent Baude <ranger@gentoo.org> luafilesystem-1.4.1.ebuild:
   stable ppc64, bug 250795
