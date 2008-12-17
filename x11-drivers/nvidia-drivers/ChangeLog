@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.117 2008/12/13 04:19:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.118 2008/12/17 01:00:23 cardoe Exp $
+
+*nvidia-drivers-71.86.07 (17 Dec 2008)
+
+  17 Dec 2008; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-71.86.07.ebuild:
+  add 71.86.07 to the tree for 2.6.27 kernel support. This ebuild is
+  refactored like my past refactoring of the ebuilds. More changes to come.
+  Please report issues if you spot them in the ebuild, or suggest
+  improvements.
 
   13 Dec 2008; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-71.86.06.ebuild, nvidia-drivers-96.43.07.ebuild,
