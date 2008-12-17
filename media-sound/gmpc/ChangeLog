@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.46 2008/12/17 17:19:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.47 2008/12/17 21:37:25 maekke Exp $
+
+  17 Dec 2008; Markus Meier <maekke@gentoo.org> gmpc-0.16.1.ebuild:
+  amd64/x86 stable, bug #251332
 
   17 Dec 2008; Christoph Mende <angelos@gentoo.org> gmpc-0.16.1.ebuild:
   Added intltool dependency
