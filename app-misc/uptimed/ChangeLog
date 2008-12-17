@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.67 2008/01/20 19:11:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.68 2008/12/17 12:13:01 armin76 Exp $
+
+*uptimed-0.3.13 (17 Dec 2008)
+
+  17 Dec 2008; Raúl Porcel <armin76@gentoo.org> +uptimed-0.3.13.ebuild:
+  Version bump wrt #251094
 
   20 Jan 2008; Christoph Mende <angelos@gentoo.org> uptimed-0.3.12.ebuild:
   Stable on amd64 wrt bug #206562
