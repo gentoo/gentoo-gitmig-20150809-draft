@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.8 2008/11/26 23:26:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.9 2008/12/17 10:09:42 remi Exp $
+
+*xf86-video-intel-2.5.1-r1 (17 Dec 2008)
+
+  17 Dec 2008; Rémi Cardona <remi@gentoo.org>
+  +files/2.5.1-0002-include-X11-Xmd.h-to-define-CARD16-needed-by-edid.patch,
+  +xf86-video-intel-2.5.1-r1.ebuild:
+  add build patch (see bug #245095)
 
   26 Nov 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   xf86-video-intel-1.6.5.ebuild, xf86-video-intel-1.7.4.ebuild,
