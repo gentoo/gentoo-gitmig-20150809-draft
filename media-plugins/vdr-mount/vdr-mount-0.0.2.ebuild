@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mount/vdr-mount-0.0.2.ebuild,v 1.3 2008/12/14 16:56:37 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mount/vdr-mount-0.0.2.ebuild,v 1.4 2008/12/17 21:29:31 zzam Exp $
 
 inherit vdr-plugin
 
@@ -15,4 +15,4 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.6"
 
-BUILD_PARAMS="-j1"
+PATCHES=("${FILESDIR}/${P}-makefile-fix.diff")
