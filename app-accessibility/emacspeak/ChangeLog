@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.29 2008/12/13 22:51:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.30 2008/12/18 03:25:14 williamh Exp $
+
+  18 Dec 2008; William Hubbs <williamh@gentoo.org>
+  -files/emacspeak-27.0-espeak.patch, -files/emacspeak-27.0-makefile.patch,
+  -files/emacspeak-27.0-tcl84.patch, -files/emacspeak-28.0-espeak.patch,
+  -files/emacspeak-28.0-makefile.patch, -files/emacspeak-28.0-tcl84.patch,
+  -emacspeak-25.ebuild, -emacspeak-27.0.ebuild, -emacspeak-28.0.ebuild:
+  Removed old ~arch versions for #238575.
 
 *emacspeak-29.0 (13 Dec 2008)
 
