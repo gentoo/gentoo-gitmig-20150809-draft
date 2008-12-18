@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.6 2008/08/01 17:58:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.7 2008/12/18 22:01:50 loki_val Exp $
 
-inherit eutils kde-functions
+inherit base eutils kde-functions autotools
 
 DESCRIPTION="MUD client for KDE"
 HOMEPAGE="http://www.kmuddy.com/"
@@ -17,13 +17,18 @@ DEPEND="arts? ( kde-base/arts )
 	sdl? ( media-libs/sdl-mixer )"
 
 need-kde 3
+PATCHES=(	"${FILESDIR}/${P}-nocrash.patch"
+		"${FILESDIR}/${P}-gcc43.patch"
+		"${FILESDIR}/${P}-idle-crash.patch"
+		"${FILESDIR}/${P}-libtool.patch"
+	)
 
 src_unpack() {
-	unpack ${A}
+	base_src_unpack
 	cd "${S}"
-	epatch \
-		"${FILESDIR}/${P}-nocrash.patch" \
-		"${FILESDIR}/${P}-idle-crash.patch"
+	mv admin/acinclude.m4.in acinclude.m4
+	eautoreconf
+	find . -name Makefile.in -exec perl admin/am_edit ';'
 }
 
 src_compile() {
