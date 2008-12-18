@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/dbmail
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.32 2008/12/01 12:38:03 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.33 2008/12/18 11:38:42 lordvan Exp $
+
+*dbmail-2.2.11_rc3-r1 (18 Dec 2008)
+
+  18 Dec 2008; Thomas Raschbacher <lordvan@gentoo.org>
+  +dbmail-2.2.11_rc3-r1.ebuild:
+  added 2.2.11_rc3-r1 which used upstream gentoo init scripts and conf.d
+  file. also now installing ldap schema if USE="ldap", contrib stuff into
+  doc dir and also installing python modules if USE="python"
 
 *dbmail-2.3.4 (01 Dec 2008)
 
