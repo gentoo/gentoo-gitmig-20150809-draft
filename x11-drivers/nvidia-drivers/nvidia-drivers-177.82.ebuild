@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-177.82.ebuild,v 1.3 2008/12/13 04:19:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-177.82.ebuild,v 1.4 2008/12/18 18:36:31 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -217,7 +217,7 @@ src_unpack() {
 			"${NV_SRC}"/Makefile.kbuild
 
 		# If you set this then it's your own fault when stuff breaks :)
-		use custom-cflags && sed -i "s:-O:${CFLAGS}:" Makefile.*
+		use custom-cflags && sed -i "s:-O:${CFLAGS}:" "${NV_SRC}"/Makefile.*
 
 		# If greater than 2.6.5 use M= instead of SUBDIR=
 		convert_to_m "${NV_SRC}"/Makefile.kbuild

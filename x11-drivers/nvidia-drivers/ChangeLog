@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.120 2008/12/18 18:33:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.121 2008/12/18 18:36:31 cardoe Exp $
+
+  18 Dec 2008; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-177.80.ebuild, nvidia-drivers-177.82.ebuild:
+  Fix incorrectly not replacing CFLAGS when requested. bug #241800
 
   18 Dec 2008; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-drivers-100.14.09.ebuild, -nvidia-drivers-100.14.11.ebuild,
