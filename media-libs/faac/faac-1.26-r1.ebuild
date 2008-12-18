@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.26-r1.ebuild,v 1.8 2007/12/11 23:34:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.26-r1.ebuild,v 1.9 2008/12/18 06:32:53 kumba Exp $
 
 inherit libtool eutils autotools flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.audiocoding.com/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 RDEPEND="media-libs/libmp4v2"
 DEPEND="${RDEPEND}
