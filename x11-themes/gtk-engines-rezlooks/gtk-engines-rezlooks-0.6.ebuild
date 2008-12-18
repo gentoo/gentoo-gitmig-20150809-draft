@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-rezlooks/gtk-engines-rezlooks-0.6.ebuild,v 1.5 2008/12/18 18:08:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-rezlooks/gtk-engines-rezlooks-0.6.ebuild,v 1.6 2008/12/18 18:10:23 ssuominen Exp $
 
 DESCRIPTION="Rezlooks GTK+ Engine"
 HOMEPAGE="http://www.gnome-look.org/content/show.php?content=39179"
@@ -24,5 +24,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog CREDITS NEWS README
+	dodoc AUTHORS Changelog CREDITS NEWS README
 }
