@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.3.ebuild,v 1.2 2008/11/14 14:04:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.3.ebuild,v 1.3 2008/12/18 22:57:38 markusle Exp $
 
 EAPI="1"
 inherit eutils multilib qt4 fdo-mime python
@@ -50,6 +50,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.9.7-gcc4.3.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7.2-liborigin-gcc4.3.patch
 	epatch "${FILESDIR}"/${P}-no-python.patch
+	epatch "${FILESDIR}"/${P}-sip.patch
 
 	sed -i \
 		-e '/manual/d'\
