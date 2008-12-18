@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.46 2008/12/17 17:52:06 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.47 2008/12/18 20:21:20 iluxa Exp $
+
+  18 Dec 2008; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  -sptk-3.5.8.ebuild, -sptk-3.5.8.4.ebuild, -sptk-3.5.8.6.ebuild:
+  Remove outdated SPTK versions
 
   21 Nov 2008; Thomas Anderson <gentoofan23@gentoo.org>
   sptk-3.5.7.13.ebuild:
