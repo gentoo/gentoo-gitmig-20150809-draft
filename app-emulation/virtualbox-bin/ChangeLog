@@ -1,6 +1,20 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.38 2008/11/29 20:50:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.39 2008/12/18 12:26:04 flameeyes Exp $
+
+  18 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/vboxwebsrv-initd:
+  Commit initd fixes from Alessio.
+
+  25 Nov 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  -virtualbox-bin-2.0.2.ebuild, metadata.xml:
+  add chm USE flag to enable the online help (using the shipped
+  kchmviewer binary); drop version 2.0.2;
+
+  10 Nov 2008; Alessio Cassibba (X-Drum) <swapon@gmail.com>
+  files/vboxwebsrv-initd, virtualbox-bin-1.6.6.ebuild,
+  virtualbox-bin-2.0.2.ebuild, virtualbox-bin-2.0.4.ebuild:
+  fix desktop icon, update vboxwebsrv initd
 
 *virtualbox-bin-2.0.6 (29 Nov 2008)
 
