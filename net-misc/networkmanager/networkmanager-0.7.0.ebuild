@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.0.ebuild,v 1.1 2008/12/04 23:38:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.0.ebuild,v 1.2 2008/12/18 18:38:03 rbu Exp $
 
 inherit eutils
 
@@ -127,5 +127,5 @@ pkg_postinst() {
 	elog ""
 	elog "To save system-wide settings as a user, that user needs to have the"
 	elog "right policykit privileges. You can add them by running:"
-	elog 'polkit-auth --grant org.freedesktop.network-manager-settings.system.modify "USERNAME"'
+	elog 'polkit-auth --grant org.freedesktop.network-manager-settings.system.modify --user "USERNAME"'
 }

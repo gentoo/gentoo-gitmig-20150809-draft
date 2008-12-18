@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.35 2008/12/05 13:35:42 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.36 2008/12/18 18:38:03 rbu Exp $
+
+  18 Dec 2008; Robert Buchholz <rbu@gentoo.org> networkmanager-0.7.0.ebuild:
+  Correct postinst output, bug #250858.
 
   05 Dec 2008; Robert Buchholz <rbu@gentoo.org> metadata.xml:
   Add Robert Piasek to metadata
