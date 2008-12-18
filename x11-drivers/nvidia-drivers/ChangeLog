@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.118 2008/12/17 01:00:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.119 2008/12/18 18:27:41 cardoe Exp $
+
+  18 Dec 2008; Doug Goldstein <cardoe@gentoo.org>
+  +files/eblits/donvidia.eblit, +files/eblits/mtrr_check.eblit,
+  +files/eblits/paravirt_check.eblit, +files/eblits/src_install-libs.eblit,
+  +files/eblits/want_tls.eblit:
+  Add eblits in the same fashion as sys-libs/glibc that contain commonly
+  used code between all the different versions of nvidia-drivers
 
 *nvidia-drivers-71.86.07 (17 Dec 2008)
 
