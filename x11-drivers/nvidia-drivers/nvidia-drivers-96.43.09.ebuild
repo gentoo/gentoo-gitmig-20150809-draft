@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.09.ebuild,v 1.1 2008/12/18 22:32:57 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.09.ebuild,v 1.2 2008/12/18 23:02:27 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -204,7 +204,7 @@ src_unpack() {
 		sed -i \
 			-e 's:-Wpointer-arith::g' \
 			-e 's:-Wsign-compare::g' \
-			"${WORKDIR}/${NV_PACKAGE}"/Makefile.kbuild
+			"${NV_SRC}"/Makefile.kbuild
 
 		# If you set this then it's your own fault when stuff breaks :)
 		[[ -n ${USE_CRAZY_OPTS} ]] && sed -i "s:-O:${CFLAGS}:" "${NV_SRC}"/Makefile.*
