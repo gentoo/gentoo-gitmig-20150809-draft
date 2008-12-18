@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bibletime
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.47 2008/12/18 14:47:57 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.48 2008/12/18 15:19:42 beandog Exp $
+
+  18 Dec 2008; Steve Dibb <beandog@gentoo.org> bibletime-1.6.5.1-r1.ebuild:
+  amd64 stable
 
 *bibletime-1.6.5.1-r1 (18 Dec 2008)
 
