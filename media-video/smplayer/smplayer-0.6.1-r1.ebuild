@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.1-r1.ebuild,v 1.8 2008/09/18 01:20:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.1-r1.ebuild,v 1.9 2008/12/18 07:44:50 yngwin Exp $
 
 EAPI="1"
 inherit eutils qt4
@@ -37,13 +37,14 @@ pkg_setup() {
 	fi
 	qt4_pkg_setup
 
-	if ! built_with_use media-video/mplayer srt ; then
+	if ! built_with_use --missing true media-video/mplayer ass \
+		|| ! built_with_use --missing true media-video/mplayer srt; then
 		echo
-		ewarn "SMPlayer needs MPlayer to be built with USE=srt for subtitle"
-		ewarn "support. Please enable the srt USE flag for mplayer and"
+		ewarn "SMPlayer needs MPlayer to be built with USE=ass or srt for subtitle"
+		ewarn "support. Please enable the ass or srt USE flag for mplayer and"
 		ewarn "re-emerge media-video/mplayer before emerging smplayer."
 		echo
-		die "media-video/mplayer needs USE=srt enabled"
+		die "media-video/mplayer needs USE=ass or srt enabled"
 	fi
 	if ! built_with_use media-video/mplayer png; then
 		echo

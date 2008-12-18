@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.49 2008/12/02 13:14:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.50 2008/12/18 07:44:50 yngwin Exp $
+
+  18 Dec 2008; Ben de Groot <yngwin@gentoo.org> smplayer-0.6.1-r1.ebuild,
+  smplayer-0.6.2-r1.ebuild, -smplayer-0.6.5.ebuild:
+  Make stable ebuilds depend on mplayer with either ass or srt useflag.
+  Fixes bug 249588 again. Remove older testing revision.
 
 *smplayer-0.6.5-r1 (02 Dec 2008)
 
