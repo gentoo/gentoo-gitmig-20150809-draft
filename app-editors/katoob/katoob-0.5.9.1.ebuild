@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.5.9.1.ebuild,v 1.3 2008/10/05 16:36:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.5.9.1.ebuild,v 1.4 2008/12/18 23:01:10 loki_val Exp $
 
-inherit eutils gnome2
+inherit base eutils gnome2
 
 DESCRIPTION="A light-weight multilingual BiDi aware text editor"
 HOMEPAGE="http://foolab.org/projects/katoob"
@@ -31,6 +31,9 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
 
+PATCHES=(	"${FILESDIR}/${PN}-0.5.9.1-fix-desktop-file.patch"
+		"${FILESDIR}/${PN}-0.5.9.1-gcc43.patch" )
+
 pkg_setup() {
 	G2CONF="$(use_enable spell aspell) \
 		$(use_enable bidi fribidi) \
@@ -43,5 +46,5 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
-	epatch "${FILESDIR}/${PN}-0.5.9.1-fix-desktop-file.patch"
+	base_src_util autopatch
 }

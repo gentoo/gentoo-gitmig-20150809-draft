@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/katoob
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.25 2008/11/04 00:32:35 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.26 2008/12/18 23:01:10 loki_val Exp $
+
+  18 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/katoob-0.5.9.1-gcc43.patch, metadata.xml, -katoob-0.5.4.ebuild,
+  -katoob-0.5.6.ebuild, katoob-0.5.9.1.ebuild:
+  Fix bug 250641, gcc-4.3 compilation. Add myself as maintainer to get this
+  stabled
 
   04 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml, katoob-0.3.8.ebuild:

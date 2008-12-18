@@ -1,0 +1,135 @@
+diff -NrU5 katoob-0.5.9.1.orig/src/document.cc katoob-0.5.9.1/src/document.cc
+--- katoob-0.5.9.1.orig/src/document.cc	2008-12-18 23:52:42.000000000 +0100
++++ katoob-0.5.9.1/src/document.cc	2008-12-18 23:50:57.000000000 +0100
+@@ -28,10 +28,11 @@
+ #ifndef _GNU_SOURCE
+ #define _GNU_SOURCE
+ #endif
+ #include <cerrno>
+ #include <string>
++#include <cstring>
+ #include <iostream>
+ #include <sstream>
+ #include <cassert>
+ #include <gtkmm/enums.h>
+ #include <gtkmm/image.h>
+diff -NrU5 katoob-0.5.9.1.orig/src/isocodes.hh katoob-0.5.9.1/src/isocodes.hh
+--- katoob-0.5.9.1.orig/src/isocodes.hh	2008-12-18 23:52:42.000000000 +0100
++++ katoob-0.5.9.1/src/isocodes.hh	2008-12-18 23:50:57.000000000 +0100
+@@ -23,10 +23,11 @@
+ #ifndef __ISOCODES_HH__
+ #define __ISOCODES_HH__
+ 
+ #include <expat.h>
+ #include <map>
++#include <string>
+ 
+ class IsoCodes {
+ public:
+   IsoCodes();
+   //  ~IsoCodes();
+diff -NrU5 katoob-0.5.9.1.orig/src/katoob.cc katoob-0.5.9.1/src/katoob.cc
+--- katoob-0.5.9.1.orig/src/katoob.cc	2008-12-18 23:52:42.000000000 +0100
++++ katoob-0.5.9.1/src/katoob.cc	2008-12-18 23:50:57.000000000 +0100
+@@ -23,10 +23,11 @@
+ #ifdef HAVE_CONFIG_H
+ #include <config.h>
+ #endif /* HAVE_CONFIG_H */
+ 
+ #include <iostream>
++#include <cstring>
+ #include "katoob.hh"
+ #include "network.hh"
+ #include "dialogs.hh"
+ #include "macros.h"
+ //#include "utils.hh"
+diff -NrU5 katoob-0.5.9.1.orig/src/mdi.cc katoob-0.5.9.1/src/mdi.cc
+--- katoob-0.5.9.1.orig/src/mdi.cc	2008-12-18 23:52:42.000000000 +0100
++++ katoob-0.5.9.1/src/mdi.cc	2008-12-18 23:50:57.000000000 +0100
+@@ -24,10 +24,11 @@
+ #include <config.h>
+ #endif /* HAVE_CONFIG_H */
+ 
+ #include <cerrno>
+ #include <iostream>
++#include <cstring>
+ #include "mdi.hh"
+ #include "dialogs.hh"
+ #include "filedialog.hh"
+ #include "macros.h"
+ #include "searchdialog.hh"
+diff -NrU5 katoob-0.5.9.1.orig/src/multipress.cc katoob-0.5.9.1/src/multipress.cc
+--- katoob-0.5.9.1.orig/src/multipress.cc	2008-12-18 23:52:42.000000000 +0100
++++ katoob-0.5.9.1/src/multipress.cc	2008-12-18 23:50:57.000000000 +0100
+@@ -24,10 +24,11 @@
+ #include <config.h>
+ #endif /* HAVE_CONFIG_H */
+ 
+ #include <cassert>
+ #include <fstream>
++#include <memory> /* for auto_ptr */
+ #include "multipress.hh"
+ #include "utils.hh"
+ 
+ 
+ Multipress::Multipress() {
+diff -NrU5 katoob-0.5.9.1.orig/src/pipe.cc katoob-0.5.9.1/src/pipe.cc
+--- katoob-0.5.9.1.orig/src/pipe.cc	2008-12-18 23:52:42.000000000 +0100
++++ katoob-0.5.9.1/src/pipe.cc	2008-12-18 23:50:57.000000000 +0100
+@@ -24,10 +24,11 @@
+ #include <config.h>
+ #endif /* HAVE_CONFIG_H */
+ 
+ #include <unistd.h>
+ #include <cerrno>
++#include <cstring>
+ #include "pipe.hh"
+ #include <sys/types.h>
+ #include <sys/wait.h>
+ #include "macros.h"
+ #include "utils.hh"
+diff -NrU5 katoob-0.5.9.1.orig/src/sourcemanager.cc katoob-0.5.9.1/src/sourcemanager.cc
+--- katoob-0.5.9.1.orig/src/sourcemanager.cc	2008-12-18 23:52:17.000000000 +0100
++++ katoob-0.5.9.1/src/sourcemanager.cc	2008-12-18 23:53:35.000000000 +0100
+@@ -25,10 +25,11 @@
+ #endif /* HAVE_CONFIG_H */
+ 
+ #include "xdgmime/xdgmime.h"
+ #include "sourcemanager.hh"
+ #include <iostream>
++#include <cstring>
+ 
+ void SourceManager::init() {
+   manager = gtk_source_language_manager_get_default();
+   if (manager == NULL) {
+     return;
+diff -NrU5 katoob-0.5.9.1.orig/src/tempfile.cc katoob-0.5.9.1/src/tempfile.cc
+--- katoob-0.5.9.1.orig/src/tempfile.cc	2008-12-18 23:52:42.000000000 +0100
++++ katoob-0.5.9.1/src/tempfile.cc	2008-12-18 23:50:57.000000000 +0100
+@@ -24,10 +24,11 @@
+ #include <config.h>
+ #endif /* HAVE_CONFIG_H */
+ 
+ #include <glibmm.h>
+ #include <cerrno>
++#include <cstring>
+ #include "tempfile.hh"
+ #include "utils.hh"
+ #ifdef _WIN32
+ #include <io.h>
+ #endif
+diff -NrU5 katoob-0.5.9.1.orig/src/utils.cc katoob-0.5.9.1/src/utils.cc
+--- katoob-0.5.9.1.orig/src/utils.cc	2008-12-18 23:52:42.000000000 +0100
++++ katoob-0.5.9.1/src/utils.cc	2008-12-18 23:50:57.000000000 +0100
+@@ -27,10 +27,11 @@
+ #include <glibmm.h>
+ #include "utils.hh"
+ #include <iostream>
+ #include <unistd.h>
+ #include <cerrno>
++#include <cstring>
+ #include <fcntl.h>
+ #include <gtkmm/textview.h>
+ #include "macros.h"
+ 
+ #ifdef _WIN32

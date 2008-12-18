@@ -3,6 +3,10 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <herd>middle-east</herd>
+<maintainer>
+	<email>loki_val@gentoo.org</email>
+	<name>Peter Alfredsen</name>
+</maintainer>
 <longdescription>
   Katoob is a light weight, multi lingual, BIDI-aware text editor
   based on the Gtk+ 2 library. It supports opening and saving files
