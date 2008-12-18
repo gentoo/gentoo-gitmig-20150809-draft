@@ -1,6 +1,33 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.36 2008/12/05 17:06:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.37 2008/12/18 18:10:18 bicatali Exp $
+
+*root-5.20.00-r3 (18 Dec 2008)
+
+  18 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  files/root-5.20.00-as-needed.patch, -files/root-5.20.00-configure.patch,
+  +files/root-5.20.00-configure-paths.patch, -files/root-5.20.00-pic.patch,
+  +files/root-5.20.00-prop-flags.patch,
+  +files/root-5.20.00-xrootd-shared.patch, +files/olbd.confd,
+  +files/olbd.initd, +files/proofd.confd, +files/proofd.initd,
+  +files/proofd.xinetd, +files/root.xinetd, +files/rootd.confd,
+  +files/rootd.initd, +files/xrootd.confd, +files/xrootd.initd,
+  -root-5.20.00-r1.ebuild, -root-5.20.00-r2.ebuild, +root-5.20.00-r3.ebuild:
+  Major revision bump with lots of changes:
+	- added proofd, rootd, xrootd initd daemons
+	- added xinetd support (use flag) for proofd and xrootd
+	- added desktop files and mimetypes
+	- fix cfortran dependency (closing bug #250432)
+	- fix qt:4 dependency
+	- fix for bad cfortran include file
+	- fix for more as-needed
+	- now propagates all flags everywhere (should close bug #250653)
+	- removed a bunch of installed files useless on gentoo
+	- install tmva tutorials
+	- now installs tutorials and tests with 'examples' use flag in 
+	  /usr/share/doc/root*/examples directory
+	- do patches instead of sed's to propose upstream.
+  Removed older revisions.
 
   05 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/root-5.20.00-ftgl_header.patch, root-5.20.00-r2.ebuild:
