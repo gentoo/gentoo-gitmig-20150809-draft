@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.9-r2.ebuild,v 1.2 2008/05/21 12:51:33 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.9-r2.ebuild,v 1.3 2008/12/18 14:55:45 beandog Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.crosswire.org/ftpmirror/pub/sword/source/v1.5/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="curl debug doc icu lucene"
 
 RDEPEND="sys-libs/zlib

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.44 2008/08/02 07:26:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.45 2008/12/18 14:55:45 beandog Exp $
+
+  18 Dec 2008; Steve Dibb <beandog@gentoo.org> sword-1.5.9-r2.ebuild,
+  sword-1.5.10-r2.ebuild, sword-1.5.11.ebuild:
+  amd64 stable
 
   02 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
