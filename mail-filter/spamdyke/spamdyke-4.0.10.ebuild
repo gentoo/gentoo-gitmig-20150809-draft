@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/spamdyke-3.1.4.ebuild,v 1.1 2008/01/21 22:47:33 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/spamdyke-4.0.10.ebuild,v 1.1 2008/12/18 08:00:59 tupone Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.spamdyke.org/releases/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+tls"
 
 DEPEND="tls? ( dev-libs/openssl )"
@@ -25,10 +25,14 @@ src_unpack() {
 		echo "tls-certificate-file=/var/qmail/control/clientcert.pem" \
 			>> ${PN}.conf
 	fi
+	echo "graylist-level=always" >> ${PN}.conf
 	echo "graylist-dir=/var/tmp/${PN}/graylist" >> ${PN}.conf
-	echo "never-graylist-rdns-dir=/etc/${PN}/never-graylist" >> ${PN}.conf
+	echo "graylist-exception-rdns-dir=/etc/${PN}/never-graylist" >> ${PN}.conf
 	echo "reject-empty-rdns" >> ${PN}.conf
 	echo "reject-unresolvable-rdns" >> ${PN}.conf
+	sed -i \
+		-e "/STRIP_CMD/d" \
+		Makefile.in || die "sed on Makefile.in failed"
 }
 
 src_compile() {
