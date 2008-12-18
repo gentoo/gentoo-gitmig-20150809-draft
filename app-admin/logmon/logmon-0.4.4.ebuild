@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4.ebuild,v 1.8 2006/08/20 18:02:48 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/logmon-0.4.4.ebuild,v 1.9 2008/12/18 22:26:48 loki_val Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_P="LogMon-${PV}"
 DESCRIPTION="Split-screen terminal/ncurses based log viewer"
@@ -23,6 +23,11 @@ src_unpack() {
 	cd "${S}"
 	# bug 119403 - should be in upstream next release
 	epatch "${FILESDIR}"/${PN}-0.4.4-char2int.diff
+	# bug 250602, gcc43 fix
+	epatch "${FILESDIR}"/${PN}-0.4.4-gcc43.patch
+	#Fixes maintainer-mode detected
+	epatch "${FILESDIR}"/${PN}-0.4.4-maintainer-mode.patch
+	eautoreconf
 }
 
 src_install() {

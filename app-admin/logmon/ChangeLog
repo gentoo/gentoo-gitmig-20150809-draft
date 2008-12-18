@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/logmon
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.9 2006/08/20 18:02:48 malc Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.10 2008/12/18 22:26:48 loki_val Exp $
+
+  18 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/logmon-0.4.4-gcc43.patch,
+  +files/logmon-0.4.4-maintainer-mode.patch, logmon-0.4.4.ebuild:
+  Fix bug 226677. Thanks to Naohiro Aota for gcc-4.3 fix. Also fixed QA:
+  Maintainer Mode detected.
 
   20 Aug 2006; <malc@gentoo.org> logmon-0.4.4.ebuild:
   Stable on amd64
