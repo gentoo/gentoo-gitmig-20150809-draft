@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9303 2008/12/18 01:03:33 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9304 2008/12/18 18:37:58 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -71,25 +71,6 @@ net-proxy/squirm
 # Mask also packages requiring it
 >=media-libs/vamp-plugin-sdk-2.0
 >=media-sound/sonic-visualiser-1.4
-
-# Doug Goldstein <cardoe@gentoo.org (12 Dec 2008)
-# Masked for removal. Outdated and NVIDIA will
-# tell you to be on a current release
-# Speak up if you need one of these versions to stay
-=x11-drivers/nvidia-drivers-100.14.09
-=x11-drivers/nvidia-drivers-100.14.11
-=x11-drivers/nvidia-drivers-100.14.23
-=x11-drivers/nvidia-drivers-169.07
-=x11-drivers/nvidia-drivers-169.09
-=x11-drivers/nvidia-drivers-169.09-r1
-=x11-drivers/nvidia-drivers-169.12
-=x11-drivers/nvidia-drivers-173.08
-=x11-drivers/nvidia-drivers-173.08
-=x11-drivers/nvidia-drivers-173.14.05
-=x11-drivers/nvidia-drivers-177.13
-=x11-drivers/nvidia-drivers-177.67
-=x11-drivers/nvidia-drivers-177.68
-=x11-drivers/nvidia-drivers-177.70
 
 # Steve Dibb <beandog@gentoo> (11 Dec 2008)
 # Needs some testing
