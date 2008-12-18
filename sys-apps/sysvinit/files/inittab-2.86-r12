@@ -9,7 +9,7 @@
 # Modified by:  Mike Frysinger, <vapier@gentoo.org>
 # Modified by:  Robin H. Johnson, <robbat2@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/files/inittab-2.86-r12,v 1.1 2008/12/17 22:47:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/files/inittab-2.86-r12,v 1.2 2008/12/18 20:26:27 robbat2 Exp $
 
 # Default runlevel.
 id:3:initdefault:
@@ -31,7 +31,7 @@ l6:6:wait:/sbin/rc reboot
 l6r:6:wait:/sbin/reboot -dk
 #z6:6:respawn:/sbin/sulogin
 
-# Do not uncomment yet. Pending bug 246502
+# new-style single-user
 su0:S:wait:/sbin/rc single
 su1:S:wait:/sbin/sulogin
 
