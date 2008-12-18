@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.166 2008/11/20 22:07:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.167 2008/12/18 19:18:29 armin76 Exp $
+
+*seamonkey-1.1.14 (18 Dec 2008)
+
+  18 Dec 2008; Raúl Porcel <armin76@gentoo.org> +seamonkey-1.1.14.ebuild:
+  Version bump
 
   20 Nov 2008; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.13.ebuild:
   Replace elog by einfo, bug #247613
