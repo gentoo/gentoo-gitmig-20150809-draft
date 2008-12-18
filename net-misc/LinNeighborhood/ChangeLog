@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/LinNeighborhood
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/ChangeLog,v 1.14 2007/02/22 01:59:40 peper Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/ChangeLog,v 1.15 2008/12/18 12:23:21 flameeyes Exp $
+
+  18 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  LinNeighborhood-0.6.5.ebuild:
+  Fix obvious typo.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

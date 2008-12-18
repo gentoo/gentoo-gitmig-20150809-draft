@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/LinNeighborhood-0.6.5.ebuild,v 1.16 2005/04/24 02:46:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/LinNeighborhood-0.6.5.ebuild,v 1.17 2008/12/18 12:23:21 flameeyes Exp $
 
 inherit eutils
 
@@ -33,5 +33,5 @@ src_compile() {
 src_install() {
 	make prefix=${D}/usr install || die
 
-	dodoc README AUTHORS TODO THANKS BUGS NEW COPYING ChangeLog
+	dodoc README AUTHORS TODO THANKS BUGS NEWS COPYING ChangeLog
 }
