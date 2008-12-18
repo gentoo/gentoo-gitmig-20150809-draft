@@ -24,4 +24,5 @@ KBUILD_MSG_STYLE        := brief
 ## paths, origin, hardening
 VBOX_WITH_HARDENING        := 2
 VBOX_WITH_ORIGIN           :=
+VBOX_ONLY_ADDITIONS        := 1
 
