@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.5.ebuild,v 1.3 2008/08/11 23:40:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.5.ebuild,v 1.4 2008/12/18 03:14:08 jsbronder Exp $
 
 EAPI="1"
 inherit eutils
@@ -24,7 +24,7 @@ DEPEND=">=dev-util/acgmake-1.2-r2
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	use qt4 || sed -i "s:Apps::" ACGMakefile
 }
@@ -38,22 +38,24 @@ src_compile() {
 	acgmake -env || die
 
 	# fix insecure runpaths
-	TMPDIR=${S} scanelf -BXRr ${S} -o /dev/null || die
+	TMPDIR="${S}" scanelf -BXRr "${S}" -o /dev/null || die
 }
 
 src_install() {
-	into /usr
-	dolib Core/Linux_gcc_env/libOpenMesh_Core.so
-	dolib Tools/Linux_gcc_env/libOpenMesh_Tools.so
-	dolib Tools/Subdivider/Adaptive/Composite/Linux_gcc_env/libOpenMesh_Tools_Subdivider_Adaptive_Composite.so
+	local l
+
+	for l in $(find "${S}"/{Core,Tools} -name '*.so'); do
+		dolib ${l} || die
+	done
 
 	make clean
 
-	find . -name 'ACGMakefile' -delete
-	find . -name '*.vcproj' -delete
+	find . -name 'ACGMakefile' -delete || die
+	find . -name '*.vcproj' -delete || die
+	rm -rf $(find "${S}" -type d -name 'Linux_gcc*_env') || die
 
 	dodir /usr/include/${MY_PN}
 
-	cp -a Core ${D}/usr/include/${MY_PN}
-	cp -a Tools ${D}/usr/include/${MY_PN}
+	cp -a Core "${D}"/usr/include/${MY_PN}
+	cp -a Tools "${D}"/usr/include/${MY_PN}
 }

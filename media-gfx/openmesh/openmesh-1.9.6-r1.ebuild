@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.6-r1.ebuild,v 1.1 2008/12/04 02:09:10 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.6-r1.ebuild,v 1.2 2008/12/18 03:14:08 jsbronder Exp $
 
 EAPI="2"
 inherit eutils
@@ -36,14 +36,14 @@ src_compile() {
 	acgmake -env || die
 
 	# fix insecure runpaths
-	TMPDIR=${S} scanelf -BXRr "${S}" -o /dev/null || die
+	TMPDIR="${S}" scanelf -BXRr "${S}" -o /dev/null || die
 }
 
 src_install() {
 	local l
 
 	for l in $(find "${S}"/{Core,Tools} -name '*.so'); do
-		dolib ${l}
+		dolib ${l} || die
 	done
 
 	# Clean up manually as acgmake doesn't do a decent job.
