@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.13 2008/11/07 14:07:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.14 2008/12/18 14:55:26 beandog Exp $
+
+  18 Dec 2008; Steve Dibb <beandog@gentoo.org> clucene-0.9.21b.ebuild:
+  amd64 stable
 
 *clucene-0.9.21b (07 Nov 2008)
 
