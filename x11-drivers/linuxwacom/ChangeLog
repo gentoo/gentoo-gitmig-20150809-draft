@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.26 2008/08/05 21:24:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.27 2008/12/18 00:02:41 ikelos Exp $
+
+*linuxwacom-0.8.2 (18 Dec 2008)
+
+  18 Dec 2008; Mike Auty <ikelos@gentoo.org>
+  +files/linuxwacom-0.8.2-xserver-xorg-input-wacom.udev,
+  +linuxwacom-0.8.2.ebuild:
+  Version bump linuxwacom-0.8.2.
 
   05 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
