@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kio-sword
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-sword/ChangeLog,v 1.5 2007/03/19 17:38:04 kloeri Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-sword/ChangeLog,v 1.6 2008/12/18 14:52:40 beandog Exp $
+
+  18 Dec 2008; Steve Dibb <beandog@gentoo.org> kio-sword-0.2.ebuild:
+  Fix sword dep, bug 233257
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove squinky86 from metadata.xml due to retirement.

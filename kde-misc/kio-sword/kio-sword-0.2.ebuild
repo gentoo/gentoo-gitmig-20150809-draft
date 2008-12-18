@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-sword/kio-sword-0.2.ebuild,v 1.4 2007/01/05 17:02:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-sword/kio-sword-0.2.ebuild,v 1.5 2008/12/18 14:52:40 beandog Exp $
 
 inherit kde eutils
 
@@ -14,15 +14,16 @@ KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=app-text/sword-1.5.8"
+RDEPEND=">=app-text/sword-1.5.8
+	<app-text/sword-1.5.11"
 
-S=${WORKDIR}/${PN/-/_}-${PV}
+S="${WORKDIR}/${PN/-/_}-${PV}"
 
 need-kde 3.3
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch sword_1_5_8_fix.patch
 }
 
