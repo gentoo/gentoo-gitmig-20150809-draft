@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.15 2008/12/09 16:18:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.16 2008/12/18 13:50:38 chainsaw Exp $
+
+*xf86-input-synaptics-0.99.3 (18 Dec 2008)
+
+  18 Dec 2008; <chainsaw@gentoo.org> +xf86-input-synaptics-0.99.3.ebuild:
+  Version bump, adds support for input ABI 0 (older X servers), which users
+  apparently expect. Closes bug #250112 filed by Chris Slycord
+  <cslycord@gmail.com>. With thanks to Donnie Berkholz
+  <dberkholz@gentoo.org> for forwarding the release announcement.
 
 *xf86-input-synaptics-0.99.2-r1 (09 Dec 2008)
 
