@@ -1,14 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.4 2008/10/27 17:19:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.5 2008/12/18 12:47:58 flameeyes Exp $
 
 EAPI=1
 
-inherit eutils fdo-mime flag-o-matic linux-mod qt4 subversion toolchain-funcs
+inherit eutils fdo-mime flag-o-matic linux-mod pax-utils qt4 subversion toolchain-funcs
 
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
 HOMEPAGE="http://www.virtualbox.org/"
-ESVN_REPO_URI="http://virtualbox.org/svn/vbox/trunk"
+ESVN_REPO_URI="http://www.virtualbox.org/svn/vbox/trunk"
 
 LICENSE="GPL-2"
 SLOT="0"
