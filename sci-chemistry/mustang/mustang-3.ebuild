@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/mustang-3.ebuild,v 1.3 2006/12/11 06:21:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/mustang-3.ebuild,v 1.4 2008/12/19 20:22:42 loki_val Exp $
 
-inherit toolchain-funcs
+inherit base toolchain-funcs
 
 MY_PN="MUSTANG"
 SRC_P="${PN}_v.${PV}"
@@ -12,11 +12,13 @@ HOMEPAGE="http://www.cs.mu.oz.au/~arun/mustang/"
 SRC_URI="${HOMEPAGE}${SRC_P}.tgz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
+
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
 
 src_compile() {
 	emake \
@@ -32,7 +34,7 @@ src_test() {
 
 src_install() {
 	newbin bin/MUSTANG_v.3 mustang
-	dodoc README.txt
+	mv mustang mustang.1
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/mustang
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/ChangeLog,v 1.4 2008/04/29 10:30:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mustang/ChangeLog,v 1.5 2008/12/19 20:22:42 loki_val Exp $
+
+  19 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/mustang-3-gcc43.patch, mustang-3.ebuild:
+  Fix bug 250420 thanks to Joel <joel_123@hotmail.com>
 
   29 Apr 2008; Markus Dittrich <markusle@gentoo.org> ChangeLog:
   Redigested ebuild to fix broken Manifest (bug #219429).
