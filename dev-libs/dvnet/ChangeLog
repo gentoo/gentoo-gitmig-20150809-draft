@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dvnet
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.17 2008/01/03 23:00:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.18 2008/12/19 04:09:18 halcy0n Exp $
+
+*dvnet-0.9.21 (19 Dec 2008)
+
+  19 Dec 2008; Mark Loeser <halcy0n@gentoo.org> +dvnet-0.9.21.ebuild:
+  Version bump to fix bug #239584
 
 *dvnet-0.9.16 (03 Jan 2008)
 
