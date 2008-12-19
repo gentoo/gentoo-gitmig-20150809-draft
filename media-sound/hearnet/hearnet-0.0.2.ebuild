@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/hearnet-0.0.2.ebuild,v 1.8 2005/01/29 21:44:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/hearnet-0.0.2.ebuild,v 1.9 2008/12/19 15:29:27 aballier Exp $
 
 IUSE=""
 
@@ -12,8 +12,10 @@ SLOT="0"
 #-amd64: 0.0.2: No sound sent to jack server
 KEYWORDS="x86 -amd64 ~ppc"
 
-DEPEND="virtual/libpcap
+RDEPEND="virtual/libpcap
 	media-sound/jack-audio-connection-kit"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${PN}
 
