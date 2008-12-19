@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r3.ebuild,v 1.1 2008/12/18 18:10:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r3.ebuild,v 1.2 2008/12/19 10:46:25 bicatali Exp $
 
 EAPI=1
 inherit versionator eutils qt4 fortran elisp-common fdo-mime
@@ -101,6 +101,7 @@ src_unpack() {
 	epatch "${WORKDIR}"/${P}-prop-flags.patch
 	epatch "${WORKDIR}"/${P}-as-needed.patch
 	epatch "${WORKDIR}"/${P}-xrootd-shared.patch
+	epatch "${WORKDIR}"/${P}-xrootd-prop-flags.patch
 	epatch "${WORKDIR}"/${P}-configure-paths.patch
 
 	epatch "${WORKDIR}"/${P}-ftgl.patch
