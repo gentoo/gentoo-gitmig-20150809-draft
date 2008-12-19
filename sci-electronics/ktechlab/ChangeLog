@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/ktechlab
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ChangeLog,v 1.13 2007/10/17 00:33:18 dirtyepic Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ChangeLog,v 1.14 2008/12/19 20:51:00 loki_val Exp $
+
+  19 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/ktechlab-0.3.6-gcc43.patch, ktechlab-0.3.6.ebuild:
+  Fix bug 239330, gcc-4.3 compat. Thanks to Dmitry Halturin for the patch.
 
   17 Oct 2007; Ryan Hill <dirtyepic@gentoo.org>
   +files/ktechlab-0.3.6-gcc42.patch, ktechlab-0.3.6.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.3.6.ebuild,v 1.3 2007/10/17 00:33:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.3.6.ebuild,v 1.4 2008/12/19 20:51:00 loki_val Exp $
 
 inherit kde
 
@@ -22,4 +22,7 @@ UNSERMAKE=""
 
 S="${WORKDIR}/${PN}-0.3"
 
-PATCHES="${FILESDIR}/${PN}-0.3-gcc-4.1.patch ${FILESDIR}/${P}-gcc42.patch"
+PATCHES=(	"${FILESDIR}/${PN}-0.3-gcc-4.1.patch"
+		"${FILESDIR}/${P}-gcc42.patch"
+		"${FILESDIR}/${P}-gcc43.patch"
+	)
