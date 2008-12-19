@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sound</herd>
+	<herd>proaudio</herd>
 	<longdescription>
 		BLOP comprises a set of LADSPA plugins that generate bandlimited
 		sawtooth, square, variable pulse and slope-variable triangle waves, for
