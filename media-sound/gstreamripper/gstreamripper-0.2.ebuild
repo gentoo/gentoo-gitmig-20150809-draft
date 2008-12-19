@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/gstreamripper-0.2.ebuild,v 1.11 2006/10/28 01:41:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gstreamripper/gstreamripper-0.2.ebuild,v 1.12 2008/12/19 18:27:06 aballier Exp $
 
 IUSE=""
 
@@ -23,6 +23,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	# override gstreamripperxdoc_DATA because they get installed in a wrong
+	# location and we already dodoc them
+	emake DESTDIR="${D}" gstreamripperxdoc_DATA="" install || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
+	# it creates that dir anyway...
+	rm -rf "${D}/usr/doc/"
 }
