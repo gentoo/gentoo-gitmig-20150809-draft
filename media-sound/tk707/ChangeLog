@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/tk707
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/ChangeLog,v 1.9 2008/12/19 16:04:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/ChangeLog,v 1.10 2008/12/19 16:15:58 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/tk707-0.8-asneeded.patch, +files/tk707-0.8-nostrip.patch,
+  tk707-0.8-r1.ebuild:
+  Fix build with forced asneeded, bug #247866, honour ldflags, dont prestrip
+  files
 
   19 Dec 2008; Alexis Ballier <aballier@gentoo.org> tk707-0.8-r1.ebuild:
   remove useless configure switches, use emake, drop redundant DEPs

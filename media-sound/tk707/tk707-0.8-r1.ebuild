@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8-r1.ebuild,v 1.7 2008/12/19 16:04:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8-r1.ebuild,v 1.8 2008/12/19 16:15:58 aballier Exp $
 
 inherit eutils autotools
 
@@ -25,6 +25,8 @@ src_unpack() {
 	EPATCH_SOURCE=${S} epatch ${P}-*.patch
 
 	cd "${S}"
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+	epatch "${FILESDIR}/${P}-nostrip.patch"
 	eautoreconf
 }
 
