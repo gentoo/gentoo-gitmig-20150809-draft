@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/di
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.17 2008/02/12 04:54:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.18 2008/12/19 21:08:20 flameeyes Exp $
+
+*di-4.13 (19 Dec 2008)
+
+  19 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org> +di-4.13.ebuild:
+  Version bump (the older version failed to build here).
 
   12 Feb 2008; Doug Klima <cardoe@gentoo.org> di-4.5.ebuild, di-4.9.ebuild:
   license is really a ZLIB variant. Change license to ZLIB. Bug #209770
