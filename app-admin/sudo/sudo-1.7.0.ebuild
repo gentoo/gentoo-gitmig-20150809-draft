@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.0_rc5.ebuild,v 1.1 2008/11/13 01:46:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.0.ebuild,v 1.1 2008/12/19 20:17:38 flameeyes Exp $
 
 inherit eutils pam confutils
 
@@ -190,7 +190,7 @@ EOF
 	pamd_mimic system-auth sudo auth account password session
 
 	insinto /etc
-	doins "${FILESDIR}"/sudoers
+	doins "${S}"/sudoers
 	fperms 0440 /etc/sudoers
 }
 
