@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r5.ebuild,v 1.3 2008/12/19 11:14:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r5.ebuild,v 1.4 2008/12/19 17:40:11 jer Exp $
 
 EAPI="1"
 
@@ -19,7 +19,7 @@ SRC_URI="http://ltsp.mirrors.tds.net/pub/ltsp/tarballs/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 -arm ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 -arm ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="server +xorgmodule"
 
 RDEPEND="sys-libs/zlib
