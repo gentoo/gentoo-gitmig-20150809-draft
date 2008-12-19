@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/shout
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/ChangeLog,v 1.15 2007/02/09 08:13:09 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shout/ChangeLog,v 1.16 2008/12/19 19:04:16 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/implicitdecls.patch, +files/ldflags.patch, shout-0.8.0-r2.ebuild:
+  use econf, dont build with -ansi as it uses non ansi stuff, bug #241000,
+  honour ldflags and cc, fix implicit declarations warnings
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
