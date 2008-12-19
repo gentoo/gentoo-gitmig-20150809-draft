@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-135-r2.ebuild,v 1.1 2008/12/10 22:29:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-135-r2.ebuild,v 1.2 2008/12/19 22:40:58 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -160,7 +160,7 @@ src_install() {
 	newins "${FILESDIR}"/udev-stop-135-r2.sh udev-stop.sh
 
 	# The udev-post init-script
-	newinitd "${FILESDIR}"/udev-postmount-130-r2.initd udev-postmount
+	newinitd "${FILESDIR}"/udev-postmount-135-r2.initd udev-postmount
 
 	# init-scripts for >=openrc-0.3.1, Bug #240984
 	newinitd "${FILESDIR}/udev-135-r2.initd" udev
@@ -244,60 +244,6 @@ pkg_preinst() {
 
 	has_version "<${CATEGORY}/${PN}-113"
 	previous_less_than_113=$?
-
-	has_version "<${CATEGORY}/${PN}-133"
-	previous_less_than_133=$?
-}
-
-# enable udev init-script, else system will no longer boot
-# after update to openrc-0.3.1, Bug #240984
-enable_udev_init_script() {
-	local result=msg
-
-	if [[ -e "${ROOT}"/etc/runlevels/sysinit/udev ]]
-	then
-		# already enabled
-		result=enabled
-	elif has_version ">=sys-apps/openrc-0.3.1"
-	then
-		# openrc without addon calls - no idea what to do, so just print msg
-		result=msg
-	else
-		local rc_devices=
-		if has_version "sys-apps/openrc"; then
-			# openrc with udev addon calls
-			rc_devices=$(source ${ROOT}/etc/rc.conf; echo $rc_devices)
-			[[ -z "$rc_devices" ]] && rc_devices=auto
-		else
-			# old baselayout
-			rc_devices=$(source ${ROOT}/etc/conf.d/rc; echo $RC_DEVICES)
-		fi
-
-		case ${rc_devices} in
-			auto|udev)	result=add ;;
-		esac
-	fi
-
-	case "$result" in
-	enabled)
-		einfo "udev init-script is already enabled, nothing to do."
-		;;
-	add)
-		# enable udev init-script for new openrc
-		elog "Auto adding udev init script to the sysinit runlevel"
-		mkdir -p "${ROOT}"/etc/runlevels/sysinit
-		ln -sf /etc/init.d/udev "${ROOT}"/etc/runlevels/sysinit
-		;;
-	msg)
-		ewarn
-		ewarn "You need to add the udev init script to the runlevel sysinit,"
-		ewarn "else your system will not be able to boot"
-		ewarn "after updating to >=openrc-0.3.1"
-		ewarn "Run this to enable udev for >=openrc-0.3.1:"
-		ewarn "\trc-update add udev sysinit"
-		ewarn
-		;;
-	esac
 }
 
 fix_old_persistent_net_rules() {
@@ -345,9 +291,15 @@ pkg_postinst() {
 
 	restart_udevd
 
-	if [[ $previous_less_than_133 = 0 ]]
+	if [[ -e "${ROOT}"/etc/runlevels/sysinit && ! -e "${ROOT}"/etc/runlevels/sysinit/udev ]]
 	then
-		enable_udev_init_script
+		ewarn
+		ewarn "You need to add the udev init script to the runlevel sysinit,"
+		ewarn "else your system will not be able to boot"
+		ewarn "after updating to >=openrc-0.4.0"
+		ewarn "Run this to enable udev for >=openrc-0.4.0:"
+		ewarn "\trc-update add udev sysinit"
+		ewarn
 	fi
 
 	# people want reminders, I'll give them reminders.  Odds are they will
