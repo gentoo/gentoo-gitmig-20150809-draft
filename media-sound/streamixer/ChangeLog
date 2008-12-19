@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/streamixer
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamixer/ChangeLog,v 1.8 2007/02/03 20:29:29 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamixer/ChangeLog,v 1.9 2008/12/19 17:50:23 aballier Exp $
+
+*streamixer-1.19.0-r1 (19 Dec 2008)
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/streamixer-1.19.0-gcc43.patch, +streamixer-1.19.0-r1.ebuild:
+  Honour ldflags/cflags/cxxflags/cc/cxx, bug #240830, fix gcc 4.3 build, bug
+  #251258
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

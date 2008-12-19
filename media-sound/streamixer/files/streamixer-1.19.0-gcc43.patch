@@ -1,0 +1,24 @@
+Index: streamixer-1.19.0/argh/argh.cc
+===================================================================
+--- streamixer-1.19.0.orig/argh/argh.cc
++++ streamixer-1.19.0/argh/argh.cc
+@@ -1,6 +1,7 @@
+ #include <map>
+ #include <cstdio>
+ #include <cstring>
++#include <cstdlib>
+ 
+ using std::strchr;
+ using std::sprintf;
+Index: streamixer-1.19.0/mixer.cc
+===================================================================
+--- streamixer-1.19.0.orig/mixer.cc
++++ streamixer-1.19.0/mixer.cc
+@@ -6,6 +6,7 @@
+ #include <signal.h>
+ #include <unistd.h>
+ #include <vector>
++#include <cstring>
+ 
+ #include "soundtypes.h"
+ #include "serverfun.h"
