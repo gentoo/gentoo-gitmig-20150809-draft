@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.11.ebuild,v 1.4 2008/11/22 15:08:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.11.ebuild,v 1.5 2008/12/19 17:07:40 pva Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="sys-libs/zlib
 	postgres? ( virtual/postgresql-server )"
 
 pkg_setup() {
-	enewuser motion -1 -1 -1 "video" || die "failed to create motion user"
+	enewuser motion -1 -1 -1 "video"
 }
 
 src_unpack() {

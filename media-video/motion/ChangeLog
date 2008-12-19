@@ -1,6 +1,9 @@
 # ChangeLog for media-video/motion
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.24 2008/11/22 15:08:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.25 2008/12/19 17:07:40 pva Exp $
+
+  19 Dec 2008; Peter Volkov <pva@gentoo.org> motion-3.2.11.ebuild:
+  Removed || die after enewuser, bug #237299.
 
   22 Nov 2008; Markus Meier <maekke@gentoo.org> motion-3.2.11.ebuild:
   amd64 stable, bug #245527
