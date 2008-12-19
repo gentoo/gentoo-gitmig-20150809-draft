@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xlwt
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.1 2008/12/19 12:28:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.2 2008/12/19 15:46:13 bicatali Exp $
+
+  19 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> xlwt-0.7.0.ebuild:
+  added ~ppc, thanks to Pierre Martin for testing
 
 *xlwt-0.7.0 (19 Dec 2008)
 
