@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.38 2008/12/19 10:46:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.39 2008/12/19 11:33:38 bicatali Exp $
+
+*root-5.22.00 (19 Dec 2008)
+
+  19 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> +root-5.22.00.ebuild:
+  Version bump, moved to EAPI=2
 
   19 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org>
   root-5.20.00-r3.ebuild:
