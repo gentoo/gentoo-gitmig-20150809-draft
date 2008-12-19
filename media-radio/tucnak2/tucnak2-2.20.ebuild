@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.20.ebuild,v 1.1 2008/12/08 14:04:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.20.ebuild,v 1.2 2008/12/19 14:09:18 darkside Exp $
 
 inherit eutils autotools
 
@@ -28,7 +28,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.19-doc.diff" \
-		"${FILESDIR}/${PN}-2.19-appname.diff"
+		"${FILESDIR}/${PN}-2.19-appname.diff" \
+		"${FILESDIR}/${PN}-2.20-hamlib.diff"
 	eautoreconf
 }
 

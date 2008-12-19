@@ -1,0 +1,32 @@
+--- src/menu.c.orig	2008-12-16 19:31:53.000000000 +0100
++++ src/menu.c	2008-12-16 19:32:12.000000000 +0100
+@@ -1224,7 +1224,9 @@
+     {CTEXT(T_AUDIO), "", CTEXT(T_HK_AUDIO), MENU_FUNC menu_ssbd, {NULL}, 0, 0},
+     {CTEXT(T_CW_CQ), ">", CTEXT(T_HK_CW_CQ), MENU_FUNC menu_cq_cw, {NULL}, 1, 0},
+     {CTEXT(T_SSB_CQ), ">", CTEXT(T_HK_SSB_CQ), MENU_FUNC menu_cq_ssb, {NULL}, 1, 0},
++#if HAVE_HAMLIB
+     {CTEXT(T_RIGOPTS), "", CTEXT(T_HK_RIGOPTS), MENU_FUNC menu_rig_opts, {NULL}, 0, 0},
++#endif
+     {CTEXT(T_AUTOSAVE), "", CTEXT(T_HK_AUTOSAVE), MENU_FUNC menu_autosave, {NULL}, 0, 0},
+     {CTEXT(T_NETWORK), "", CTEXT(T_HK_NETWORK), MENU_FUNC menu_network, {NULL}, 0, 0},
+     {CTEXT(T_MISCOPTS), "", CTEXT(T_HK_MISCOPTS), MENU_FUNC misc_opts, {NULL}, 0, 0},
+--- src/menu5.c.orig	2008-12-16 19:32:20.000000000 +0100
++++ src/menu5.c	2008-12-16 19:32:47.000000000 +0100
+@@ -485,6 +485,7 @@
+ 
+ /************************** rig ******************************/
+ 
++#if HAVE_HAMLIB
+ char rig_filename[MAX_STR_LEN];
+ char rig_model_str[EQSO_LEN];
+ /* choose manufacturer */
+@@ -711,8 +712,7 @@
+     d->items[++i].type = D_END;
+     do_dialog(d, getml(d, NULL));
+ }
+-
+-    
++#endif
+ 
+ 
+ 
