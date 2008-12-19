@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.202 2008/12/10 19:29:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.203 2008/12/19 20:48:47 ali_bush Exp $
+
+*tomcat-6.0.18-r2 (19 Dec 2008)
+*tomcat-5.5.27-r2 (19 Dec 2008)
+
+  19 Dec 2008; Alistair Bush <ali_bush@gentoo.org> files/5.5/tomcat.conf.2,
+  files/6/tomcat.conf, files/5.5/tomcat.init.2, files/6/tomcat.init,
+  +tomcat-5.5.27-r2.ebuild, +tomcat-6.0.18-r2.ebuild:
+  Bump tomcat. Update init script to test for temp dir to fix #246362.
 
   10 Dec 2008; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Add weisso as proxy maintainer.
