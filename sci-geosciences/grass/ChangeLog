@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.65 2008/11/08 22:19:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.66 2008/12/19 05:57:29 nerdboy Exp $
+
+  19 Dec 2008; Steve Arnold <nerdboy@gentoo.org>
+  +files/grass-6.2.1-gcc43.patch, grass-6.2.1.ebuild:
+  Backported ffmpeg fixup and use flag cleanup (see bug #250850).  Also 
+  added ggc 4.3 include patch.  Still need postgres 8.3 pushed to stable
+  before Grass 6.3 can go stable.
 
   08 Nov 2008; Steve Arnold <nerdboy@gentoo.org> metadata.xml,
   grass-6.3.0.ebuild:
