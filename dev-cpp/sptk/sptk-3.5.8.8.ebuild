@@ -1,12 +1,12 @@
 # Copyright 2006-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.8.ebuild,v 1.1 2008/12/17 17:52:06 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.8.ebuild,v 1.2 2008/12/19 00:19:28 iluxa Exp $
 
 EAPI=1
 
 inherit eutils flag-o-matic autotools multilib
 
-IUSE="fltk odbc doc sqlite3 examples excel postgres aspell mysql"
+IUSE="fltk odbc doc sqlite examples excel postgres aspell mysql"
 
 DESCRIPTION="C++ user interface toolkit for X with database and Excel support"
 SRC_URI="http://www.sptk.net/sptk-${PV}.tbz2"
@@ -16,11 +16,11 @@ SLOT="3"
 LICENSE="|| ( BSD )"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
 
-RDEPEND="fltk?     ( >=x11-libs/fltk-1.1.6:1.1 )
+RDEPEND="fltk?    ( >=x11-libs/fltk-1.1.6:1.1 )
 	odbc?     ( >=dev-db/unixODBC-2.2.6 )
-	sqlite3?  ( >=dev-db/sqlite-3 )
+	sqlite?   ( >=dev-db/sqlite-3 )
 	postgres? ( >=virtual/postgresql-base-8.0 )
-	mysql? ( dev-db/mysql )
+	mysql?    ( dev-db/mysql )
 	aspell?   ( >=app-text/aspell-0.50 )"
 
 DEPEND="${RDEPEND}
