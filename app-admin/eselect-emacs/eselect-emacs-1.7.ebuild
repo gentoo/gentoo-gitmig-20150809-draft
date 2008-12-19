@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/eselect-emacs-1.6.ebuild,v 1.1 2008/12/12 12:29:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-emacs/eselect-emacs-1.7.ebuild,v 1.1 2008/12/19 23:37:13 ulm Exp $
 
 DESCRIPTION="Manages Emacs versions"
 HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/"
