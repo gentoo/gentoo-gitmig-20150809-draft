@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.8-r1.ebuild,v 1.1 2008/12/18 23:23:32 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.8-r1.ebuild,v 1.2 2008/12/19 10:33:34 dertobi123 Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -102,7 +102,7 @@ pkg_setup() {
 
 	if use pcre ; then
 		built_with_use dev-libs/libpcre unicode || \
-			die "Please rebuild dev-libs/pcre with USE=unicode"
+			die "Please rebuild dev-libs/libpcre with USE=unicode"
 	fi
 
 	php5_2-sapi_pkg_setup
