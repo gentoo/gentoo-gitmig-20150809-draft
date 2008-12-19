@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.ebuild,v 1.3 2007/08/05 10:15:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.9.ebuild,v 1.4 2008/12/19 17:06:13 pva Exp $
 
 inherit eutils multilib
 
@@ -24,7 +24,7 @@ RESTRICT="test"
 S="${WORKDIR}"/${MY_P}
 
 pkg_setup() {
-	enewuser gnump3d '' '' '' nogroup || die "Failed to add new user."
+	enewuser gnump3d '' '' '' nogroup
 	LIBDIR=/usr/$(get_libdir)
 }
 
