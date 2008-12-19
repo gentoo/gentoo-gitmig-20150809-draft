@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/hfsplusutils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.12 2008/02/05 03:09:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.13 2008/12/19 02:51:10 gentoofan23 Exp $
+
+  19 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  hfsplusutils-1.0.4-r1.ebuild:
+  Drop stable(and ~arch) keywords, code is not 64-bit clean. Bug #250537
 
   05 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   hfsplusutils-1.0.4-r1.ebuild:

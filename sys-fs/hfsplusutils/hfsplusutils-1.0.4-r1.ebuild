@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.16 2008/02/05 03:09:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.17 2008/12/19 02:51:10 gentoofan23 Exp $
 
 WANT_AUTOMAKE=1.6
 inherit autotools eutils libtool
@@ -12,7 +12,7 @@ SRC_URI="http://penguinppc.org/historical/hfsplus/${MY_P}.src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="ppc ppc64 x86"
 IUSE=""
 
 DEPEND="app-arch/bzip2"
