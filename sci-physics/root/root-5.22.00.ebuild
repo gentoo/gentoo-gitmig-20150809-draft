@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.22.00.ebuild,v 1.1 2008/12/19 11:33:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.22.00.ebuild,v 1.2 2008/12/19 14:35:32 bicatali Exp $
 
 EAPI=2
 inherit versionator eutils qt4 fortran elisp-common fdo-mime toolchain-funcs
@@ -32,7 +32,7 @@ IUSE="afs cern cint7 clarens doc emacs examples fftw geant4 kerberos ldap
 #	|| ( >=media-libs/libafterimage-1.15 x11-wm/afterstep )
 CDEPEND=">=dev-lang/cfortran-4.4-r2
 	dev-libs/libpcre
-	media-libs/ftgl
+	>=media-libs/ftgl-2.1.3_rc5
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/giflib
