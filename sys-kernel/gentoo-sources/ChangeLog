@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.570 2008/12/14 17:58:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.571 2008/12/19 10:36:03 dsd Exp $
+
+*gentoo-sources-2.6.27-r7 (19 Dec 2008)
+
+  19 Dec 2008; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.27-r7.ebuild:
+  Update to Linux 2.6.27.10. Fix capacity reported by Macpower hard drive.
+  Fix shutdown hang on Sun Blade 100.
 
 *gentoo-sources-2.6.27-r6 (14 Dec 2008)
 
