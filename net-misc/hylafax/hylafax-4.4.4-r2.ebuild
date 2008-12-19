@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4-r1.ebuild,v 1.3 2008/12/16 15:35:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4-r2.ebuild,v 1.1 2008/12/19 23:45:43 nerdboy Exp $
 
 inherit eutils multilib pam toolchain-funcs
 
@@ -141,8 +141,9 @@ src_install() {
 	einfo "Adding env.d entry for Hylafax"
 	doenvd 99${P}
 
-	einfo "Adding init.d entry for Hylafax"
-	newinitd "${FILESDIR}"/${PN}-4.2 ${PN}
+	einfo "Adding init.d and conf.d entries for Hylafax"
+	newconfd "${FILESDIR}"/${PN}.conf ${PN}
+	newinitd "${FILESDIR}"/${PN}.init ${PN}
 
 	use pam && pamd_mimic_system hylafax auth account session
 

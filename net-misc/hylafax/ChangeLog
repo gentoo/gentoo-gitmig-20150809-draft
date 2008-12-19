@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.89 2008/12/16 15:35:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.90 2008/12/19 23:45:43 nerdboy Exp $
+
+*hylafax-4.4.4-r2 (19 Dec 2008)
+
+  19 Dec 2008; Steve Arnold <nerdboy@gentoo.org> +files/hylafax.conf,
+  +files/hylafax.init, -hylafax-4.4.4-r1.ebuild, +hylafax-4.4.4-r2.ebuild:
+  Another rev-bump is warranted due to new and more Gentoo-conformant init 
+  and conf setup; the previous init script got borked a while back by 
+  other init changes, and as we all know, not everyone has the proper 
+  hardware to fully test this package.  Current keywords are being kept
+  so as not to overly annoy the arch testers (proper operation needs to
+  be verified by a sysadmin with real fax-modem hardware).  The init
+  script now dies correctly if no setup.cache is found.
 
   16 Dec 2008; Jeroen Roovers <jer@gentoo.org> hylafax-4.4.4-r1.ebuild:
   Stable for HPPA (bug #245190).
