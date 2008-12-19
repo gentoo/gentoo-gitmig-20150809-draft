@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PAR-Dist
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.41 2008/10/28 08:40:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.42 2008/12/19 16:45:44 tove Exp $
+
+*PAR-Dist-0.41 (19 Dec 2008)
+
+  19 Dec 2008; Torsten Veller <tove@gentoo.org> +PAR-Dist-0.41.ebuild:
+  Version bump
 
 *PAR-Dist-0.40 (28 Oct 2008)
 
