@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vstrip/vstrip-0.8f.ebuild,v 1.5 2007/06/26 02:19:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vstrip/vstrip-0.8f.ebuild,v 1.6 2008/12/19 12:42:48 aballier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A program to split non-css dvd vobs into individual chapters"
 HOMEPAGE="http://www.maven.de/code"
@@ -10,7 +10,7 @@ SRC_URI="http://files.digital-digest.com/downloads/files/encode/vStrip_${PV/./}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
@@ -31,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die "emake failed."
+	emake CFLAGS="${CFLAGS} -D__UNIX__" CC="$(tc-getCC)" || die "emake failed."
 }
 
 src_install() {

@@ -16,7 +16,7 @@
 -vstrip :	 file_io.o in_buffer.o main.o parse_ifo.o vstrip.o
 -	$(CC)	-g  file_io.o in_buffer.o main.o parse_ifo.o vstrip.o -o vstrip
 +vstrip :	 file_io.o in_buffer.o main.o parse_ifo.o vstrip.o dvd2avi_plugin.o
-+	$(CC)	-g  -lm file_io.o in_buffer.o main.o parse_ifo.o vstrip.o dvd2avi_plugin.o -o vstrip
++	$(CC)	$(LDFLAGS) file_io.o in_buffer.o main.o parse_ifo.o vstrip.o dvd2avi_plugin.o -o vstrip -lm 
  file_io.o : s_types.h file_io.h file_io.c
  in_buffer.o : s_types.h file_io.h in_buffer.h in_buffer.c
  main.o : s_types.h file_io.h vstrip.h main.c

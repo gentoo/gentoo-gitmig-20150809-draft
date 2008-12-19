@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vstrip
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vstrip/ChangeLog,v 1.5 2007/03/31 19:26:38 drac Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vstrip/ChangeLog,v 1.6 2008/12/19 12:42:48 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  files/vstrip-0.8f-gentoo.patch, vstrip-0.8f.ebuild:
+  Fix build with forced asneeded, bug #247916, honour CC and CFLAGS, bug
+  #240848, honour LDFLAGS and keyword ~amd64
 
   31 Mar 2007; Samuli Suominen <drac@gentoo.org>
   files/vstrip-0.8f-gentoo.patch, vstrip-0.8f.ebuild:
