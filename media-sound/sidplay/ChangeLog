@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/sidplay
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/ChangeLog,v 1.15 2007/07/02 15:22:38 drac Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/ChangeLog,v 1.16 2008/12/19 11:50:38 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/sidplay-2.0.9-gcc43.patch, sidplay-2.0.9.ebuild:
+  Fix build with gcc 4.3 by fixing configure checks; autreconfing it
+  requires to rewrite many parts of the build system if we want it to work
+  with eg libtool 2... closes bug #251251
 
   02 Jul 2007; Samuli Suominen <drac@gentoo.org> sidplay-2.0.9.ebuild:
   Remove RESTRICT as it's not required. Old policy for not mirroring files
