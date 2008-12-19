@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.4.1.ebuild,v 1.1 2008/12/18 15:15:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.4.1-r1.ebuild,v 1.1 2008/12/19 14:25:19 beandog Exp $
 
 EAPI="1"
 
@@ -21,7 +21,7 @@ RDEPEND="gnome-extra/gtkhtml:3.14
 	>=gnome-base/libglade-2
 	app-text/gnome-doc-utils
 	dev-libs/libxml2
-	xulrunner? ( =net-libs/xulrunner-1.8* )
+	xulrunner? ( net-libs/xulrunner:1.8 )
 	!xulrunner? ( firefox? ( =www-client/mozilla-firefox-2* ) )
 	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )
 	spell? (
@@ -33,6 +33,10 @@ DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.14"
 
 pkg_setup() {
+	# bug 239209
+	if use xulrunner; then
+		G2CONF="${G2CONF} --with-gecko=xulrunner"
+	fi
 	G2CONF="${G2CONF} $(use_enable spell pspell)"
 	DOCS="NEWS ChangeLog README TODO"
 }
