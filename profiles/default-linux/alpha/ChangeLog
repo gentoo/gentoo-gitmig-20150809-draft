@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.112 2008/11/23 12:41:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.113 2008/12/19 11:27:48 armin76 Exp $
+
+  19 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  2007.0/desktop/make.defaults:
+  Add xulrunner USE-flag to the make.default of desktop profile
 
   23 Nov 2008; Patrick Lauer <patrick@gentoo.org> ChangeLog:
   Removing webkit useflag from PyQt4

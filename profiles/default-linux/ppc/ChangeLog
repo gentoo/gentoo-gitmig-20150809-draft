@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.42 2008/11/12 06:15:19 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.43 2008/12/19 11:31:37 armin76 Exp $
+
+  19 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  ppc32/2007.0/desktop/make.defaults,
+  ppc64/2007.0/32bit-userland/desktop/make.defaults,
+  ppc64/2007.0/64bit-userland/desktop/make.defaults:
+  Add xulrunner USE-flag to the make.default of desktop profile
 
   12 Nov 2008; Joseph Jezak <josejx@gentoo.org> package.use.mask:
   Added use mask for pearpc - jit

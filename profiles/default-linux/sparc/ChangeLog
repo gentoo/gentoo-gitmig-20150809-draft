@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.122 2008/11/24 23:01:54 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.123 2008/12/19 11:26:42 armin76 Exp $
+
+  19 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  sparc64/2007.0/desktop/make.defaults:
+  Add xulrunner USE-flag to the make.default of desktop profile
 
   24 Nov 2008; Friedrich Oslage <bluebird@gentoo.org> use.mask:
   Mask dxr2 and dxr3 use flag, no hardware to test
