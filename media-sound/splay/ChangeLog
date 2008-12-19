@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/splay
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.16 2008/08/06 22:36:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/ChangeLog,v 1.17 2008/12/19 09:40:22 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/splay-0.9.5.2-gcc43-2.patch, splay-0.9.5.2.ebuild:
+  fix build with gcc 4.3, by Yaroslav Gorbunov, bug #251255
 
   06 Aug 2008; Alexis Ballier <aballier@gentoo.org>
   +files/splay-0.9.5.2-gcc43.patch, splay-0.9.5.2.ebuild:

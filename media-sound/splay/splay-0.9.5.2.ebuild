@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/splay-0.9.5.2.ebuild,v 1.18 2008/08/06 22:36:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/splay/splay-0.9.5.2.ebuild,v 1.19 2008/12/19 09:40:22 aballier Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc43.patch"
 	cd "${S}/apps"
 	epatch "${FILESDIR}/${P}-external-id3lib.diff"
+	epatch "${FILESDIR}/${P}-gcc43-2.patch"
 }
 
 src_compile() {
