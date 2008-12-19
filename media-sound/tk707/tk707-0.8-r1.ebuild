@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8-r1.ebuild,v 1.6 2006/11/27 00:33:53 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/tk707-0.8-r1.ebuild,v 1.7 2008/12/19 16:04:29 aballier Exp $
 
 inherit eutils autotools
 
@@ -18,9 +18,7 @@ IUSE=""
 RDEPEND=">=media-libs/alsa-lib-0.9.0
 		>=dev-lang/tcl-8.4
 		>=dev-lang/tk-8.4"
-DEPEND="${RDEPEND}
-		>=sys-devel/automake-1.7
-		>=sys-devel/autoconf-2.5"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -30,11 +28,6 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
-	econf $(use_enable timdity) $(use_enable lame) || die "econf failed"
-	emake || die "emake failed"
-}
-
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 }

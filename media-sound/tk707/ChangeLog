@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tk707
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/ChangeLog,v 1.8 2006/11/27 00:33:53 malc Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tk707/ChangeLog,v 1.9 2008/12/19 16:04:29 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org> tk707-0.8-r1.ebuild:
+  remove useless configure switches, use emake, drop redundant DEPs
 
   27 Nov 2006; <malc@gentoo.org> tk707-0.8-r1.ebuild:
   Add ~amd64 - bug #134049
