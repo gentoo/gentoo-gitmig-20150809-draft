@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/tapiir
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.18 2008/12/15 01:52:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.19 2008/12/19 15:46:21 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/tapiir-0.7.2-ldflags.patch, tapiir-0.7.2.ebuild:
+  Fix configure that has been generated with a broken AM_PATH_FLTK that
+  causes failures with forced asneeded, bug #247865
 
   15 Dec 2008; Ben de Groot <yngwin@gentoo.org> tapiir-0.7.1.ebuild,
   tapiir-0.7.2.ebuild:
