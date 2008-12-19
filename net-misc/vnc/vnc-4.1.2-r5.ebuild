@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r5.ebuild,v 1.2 2008/10/16 09:36:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r5.ebuild,v 1.3 2008/12/19 11:14:34 armin76 Exp $
 
 EAPI="1"
 
 inherit eutils toolchain-funcs multilib autotools
 
-XSERVER_VERSION="1.5.2"
+XSERVER_VERSION="1.5.3"
 PATCH="${P}-r5-patches-0.1"
 
 MY_P="vnc-4_1_2-unixsrc"
@@ -63,6 +63,9 @@ DEPEND="${RDEPEND}
 		x11-proto/xf86dgaproto
 		x11-proto/xf86miscproto
 		x11-proto/xf86vidmodeproto
+		>=media-libs/mesa-7.1
+		>=x11-proto/renderproto-0.9.3
+		x11-libs/libpciaccess
 	)"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.111 2008/10/16 09:36:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.112 2008/12/19 11:14:34 armin76 Exp $
+
+  19 Dec 2008; Raúl Porcel <armin76@gentoo.org> vnc-4.1.2-r5.ebuild:
+  Use xorg-server-1.5.3, bug #251158
 
   16 Oct 2008; Raúl Porcel <armin76@gentoo.org> vnc-4.1.2-r5.ebuild:
   Bump dep to xorg-server-1.5.2
