@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.0.ebuild,v 1.2 2008/10/05 17:46:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.0.ebuild,v 1.3 2008/12/19 15:23:34 aballier Exp $
 
 NEED_PYTHON=2.4.4
 
-inherit distutils python
+inherit distutils python eutils
 
 DESCRIPTION="Quod Libet is a GTK+-based audio player written in Python."
 HOMEPAGE="http://code.google.com/p/${PN}/"
@@ -94,6 +94,7 @@ src_unpack() {
 
 		sed -i -e "s,^          \"pipeline\": \"\",          \"pipeline\": \"${sinktype}\"," quodlibet/config.py
 	fi
+	epatch "${FILESDIR}/${P}-python26.patch" #240188
 }
 
 src_install() {
