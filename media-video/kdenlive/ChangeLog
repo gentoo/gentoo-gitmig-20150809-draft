@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.30 2008/11/13 10:34:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.31 2008/12/19 12:32:34 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org> kdenlive-0.7.ebuild:
+  It requires mlt to be built with sdl support, by Lorenz Quack
+  <don@amberfisharts.com>, bug #251074
 
 *kdenlive-0.7 (13 Nov 2008)
 
