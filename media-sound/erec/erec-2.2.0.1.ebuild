@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/erec-2.2.0.1.ebuild,v 1.10 2008/01/18 02:06:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/erec-2.2.0.1.ebuild,v 1.11 2008/12/19 12:09:51 aballier Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A shared audio recording server"
 HOMEPAGE="http://bisqwit.iki.fi/source/erec.html"
@@ -32,10 +34,11 @@ src_unpack() {
 
 	echo "" > .depend
 	echo "" > argh/.depend
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_compile() {
-	emake -j1 || die
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" -j1 || die
 }
 
 src_install() {

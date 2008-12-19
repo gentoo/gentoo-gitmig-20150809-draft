@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/erec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/ChangeLog,v 1.10 2008/01/18 02:06:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/erec/ChangeLog,v 1.11 2008/12/19 12:09:51 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/erec-2.2.0.1-gcc43.patch, erec-2.2.0.1.ebuild:
+  Fix build with gcc 4.3 by Yaroslav Gorbunov, bug #251220, honour CC/CXX,
+  CFLAGS/CXXFLAGS/LDFLAGS
 
   18 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org> erec-2.2.0.1.ebuild:
   quoting for $S; error check dobin; skip using hard-coded portage directory for
