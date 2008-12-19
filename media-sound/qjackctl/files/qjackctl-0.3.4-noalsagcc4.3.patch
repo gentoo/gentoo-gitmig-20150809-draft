@@ -1,0 +1,12 @@
+Index: qjackctl-0.3.4/src/qjackctlPatchbayRack.cpp
+===================================================================
+--- qjackctl-0.3.4.orig/src/qjackctlPatchbayRack.cpp
++++ qjackctl-0.3.4/src/qjackctlPatchbayRack.cpp
+@@ -30,6 +30,7 @@
+ //
+ 
+ #include <QHash>
++#include <cstdlib>
+ 
+ class qjackctlPatchbaySnapshot
+ {

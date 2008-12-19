@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.4.ebuild,v 1.1 2008/12/08 08:56:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.4.ebuild,v 1.2 2008/12/19 09:23:45 aballier Exp $
 
 EAPI=2
 
@@ -22,6 +22,10 @@ DEPEND="alsa? ( media-libs/alsa-lib[midi] )
 			x11-libs/qt-gui:4
 		) =x11-libs/qt-4.3*:4 )
 	media-sound/jack-audio-connection-kit"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-noalsagcc4.3.patch"
+}
 
 src_configure() {
 	econf \
