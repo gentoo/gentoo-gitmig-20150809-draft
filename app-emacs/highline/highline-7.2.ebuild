@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/highline-7.1.ebuild,v 1.1 2008/12/15 00:01:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/highline-7.2.ebuild,v 1.1 2008/12/19 14:08:33 ulm Exp $
 
 inherit elisp
 
