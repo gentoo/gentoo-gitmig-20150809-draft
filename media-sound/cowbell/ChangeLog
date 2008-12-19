@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/cowbell
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/ChangeLog,v 1.9 2008/11/25 16:29:20 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/ChangeLog,v 1.10 2008/12/19 19:50:26 ssuominen Exp $
+
+  19 Dec 2008; <ssuominen@gentoo.org> +files/cowbell-0.2.7.1-libtool.patch,
+  cowbell-0.2.7.1.ebuild:
+  Add GCONF_DEBUG=no because the pkg doesn't support
+  --enable/--disable-debug configure option. Add AC_PROG_CXX for libtool-2.2
+  wrt #241578, thanks to <larstobi at snota.no>. Run intltoolize because
+  otherwise it won't build or install them at all.
 
   25 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> cowbell-0.2.7.1.ebuild:
   Go eapi-2, fixup deps for gtk-sharp-2.12.6

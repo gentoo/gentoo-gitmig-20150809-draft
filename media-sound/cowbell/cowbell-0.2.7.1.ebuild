@@ -1,8 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/cowbell-0.2.7.1.ebuild,v 1.5 2008/11/25 16:29:20 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/cowbell-0.2.7.1.ebuild,v 1.6 2008/12/19 19:50:26 ssuominen Exp $
 
 EAPI=2
+
+GCONF_DEBUG=no
 
 inherit autotools gnome2 mono
 
@@ -26,6 +28,13 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_unpack() {
+	gnome2_src_unpack
+	epatch "${FILESDIR}"/${P}-libtool.patch
+	intltoolize --force --copy --automake || die "intltoolize failed."
+	eautoreconf
+}
 
 src_configure() {
 	gnome2_src_configure
