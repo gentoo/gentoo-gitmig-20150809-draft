@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.15 2008/12/16 16:18:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.16 2008/12/19 13:38:45 aballier Exp $
+
+*x264-0.0.20081218 (19 Dec 2008)
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  +x264-0.0.20081218.ebuild:
+  bump a new snapshot
 
   16 Dec 2008; Brent Baude <ranger@gentoo.org> x264-0.0.20081006.ebuild:
   Marking x264-0.0.20081006 ppc64 for bug 245285
