@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.20 2008/05/20 04:30:38 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7.1-r5.ebuild,v 1.21 2008/12/19 17:37:01 pva Exp $
 
 inherit eutils linux-info
 
@@ -182,12 +182,12 @@ pkg_postinst() {
 	# http://dev.gentoo.org/~plasmaroo/devmanual/ebuild-writing/functions/
 
 	# Create groups for hotplugging and HAL
-	enewgroup haldaemon || die "Problem adding haldaemon group"
-	enewgroup plugdev || die "Problem adding plugdev group"
+	enewgroup haldaemon
+	enewgroup plugdev
 
 	# HAL drops priviledges by default now ...
 	# ... so we must make sure it can read disk/cdrom info (ie. be in ${HALDAEMON_GROUPS} groups)
-	enewuser haldaemon -1 "-1" /dev/null ${HALDAEMON_GROUPS} || die "Problem adding haldaemon user"
+	enewuser haldaemon -1 "-1" /dev/null ${HALDAEMON_GROUPS}
 
 	# Make sure that the haldaemon user is in the ${HALDAEMON_GROUPS}
 	# If users have a problem with this, let them file a bug
