@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/linuxsampler
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/ChangeLog,v 1.12 2008/07/13 14:23:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/ChangeLog,v 1.13 2008/12/19 14:32:27 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  linuxsampler-0.5.1.ebuild:
+  rename sqlite3 useflag to sqlite, by Henrique Rodrigues
+  <henrique.rodrigues@ist.utl.pt>, bug #251409
 
   13 Jul 2008; Alexis Ballier <aballier@gentoo.org>
   +files/linuxsampler-0.5.1-gcc43.patch, linuxsampler-0.5.1.ebuild:

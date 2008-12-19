@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/linuxsampler-0.5.1.ebuild,v 1.3 2008/07/13 14:23:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/linuxsampler/linuxsampler-0.5.1.ebuild,v 1.4 2008/12/19 14:32:27 aballier Exp $
 
 inherit autotools eutils
 
@@ -11,9 +11,9 @@ SRC_URI="http://download.linuxsampler.org/packages/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc jack sqlite3"
+IUSE="doc jack sqlite"
 
-RDEPEND="sqlite3? ( >=dev-db/sqlite-3.3 )
+RDEPEND="sqlite? ( >=dev-db/sqlite-3.3 )
 	>=media-libs/libgig-3.2.1
 	media-libs/alsa-lib
 	jack? ( media-sound/jack-audio-connection-kit )"
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 	econf --enable-alsa-driver \
 		$(use_enable jack jack-driver) \
-		$(use_enable sqlite3 instruments-db)
+		$(use_enable sqlite instruments-db)
 	emake -j1 || die "emake failed."
 
 	if use doc; then
