@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9304 2008/12/18 18:37:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9305 2008/12/19 22:47:40 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -79,14 +79,6 @@ net-proxy/squirm
 # Jim Ramsay <lack@gentoo.org> (11 Dec 2008)
 # Live ebuild, for advanced users only
 =x11-wm/fluxbox-9999
-
-# Matthias Schwarzott <zzam@gentoo.org> (10 Dec 2008)
-# Masked for development of init-script
-=sys-fs/udev-135-r2
-
-# Doug Goldstein <cardoe@gentoo.org> (10 Dec 2008)
-# Masked for testing
-=sys-apps/openrc-0.4.0
 
 # Torsten Veller <tove@gentoo.org> (08 Dec 2008)
 # Mask broken perl modules
