@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.54 2008/11/24 14:14:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.55 2008/12/19 16:12:10 voyageur Exp $
+
+*nxserver-freenx-0.7.3-r2 (19 Dec 2008)
+
+  19 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/nxserver-freenx-0.7.3-cflags.patch,
+  +nxserver-freenx-0.7.3-r2.ebuild:
+  Ebuild cleanup, fix depend, and CC/CFLAGS handling, closes bug #246819
 
   24 Nov 2008; Bernard Cafarelli <voyageur@gentoo.org>
   -nxserver-freenx-0.7.3.ebuild, nxserver-freenx-0.7.3-r1.ebuild:
