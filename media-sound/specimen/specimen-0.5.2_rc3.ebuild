@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.5.2_rc3.ebuild,v 1.4 2007/11/07 17:24:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.5.2_rc3.ebuild,v 1.5 2008/12/19 14:28:30 aballier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="lash"
 
-RDEPEND="media-sound/jack-audio-connection-kit
+RDEPEND=">=media-sound/jack-audio-connection-kit-0.109.2
 	>=media-libs/alsa-lib-0.9
 	media-libs/libsamplerate
 	media-libs/libsndfile
@@ -33,6 +33,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -e "s:-Werror::" -e "s:-O3:${CFLAGS}:" -i configure
+	epatch "${FILESDIR}/${P}-jackmidi.patch"
 }
 
 src_compile() {
