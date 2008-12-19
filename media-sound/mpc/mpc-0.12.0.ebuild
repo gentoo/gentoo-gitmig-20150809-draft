@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.12.0.ebuild,v 1.7 2007/04/18 18:06:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.12.0.ebuild,v 1.8 2008/12/19 14:45:12 angelos Exp $
 
 inherit bash-completion
 
@@ -13,18 +13,17 @@ KEYWORDS="amd64 hppa ppc ~ppc64 sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/libc
-	nls? ( || ( sys-libs/glibc dev-libs/libiconv ) )"
+DEPEND="nls? ( || ( sys-libs/glibc dev-libs/libiconv ) )"
 
 src_compile() {
 	econf --disable-dependency-tracking \
-		$(use_enable nls iconv) || die "econf failed"
+		$(use_enable nls iconv)
 	emake || die "emake failed"
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
-	mv ${D}/usr/share/doc/mpc/ ${D}/usr/share/doc/${PF}
+	emake install DESTDIR="${D}" || die "emake install failed"
+	mv "${D}"/usr/share/doc/mpc/ "${D}"/usr/share/doc/${PF}
 
 	dobashcompletion doc/mpc-bashrc
 }
