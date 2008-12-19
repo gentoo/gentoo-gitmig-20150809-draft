@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.48 2008/12/17 21:41:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.49 2008/12/19 22:19:24 zzam Exp $
+
+  19 Dec 2008; Matthias Schwarzott <zzam@gentoo.org> openrc-0.4.0.ebuild,
+  openrc-9999.ebuild:
+  Try to auto-detect on update, if the old version had udev enabled, and add
+  it to sysinit runlevel if yes.
 
   17 Dec 2008; Doug Goldstein <cardoe@gentoo.org> openrc-0.3.0-r1.ebuild,
   openrc-0.4.0.ebuild, openrc-9999.ebuild:
