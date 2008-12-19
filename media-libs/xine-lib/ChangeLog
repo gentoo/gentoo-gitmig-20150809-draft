@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.576 2008/11/23 16:40:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.577 2008/12/19 13:06:14 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/xine-lib-1.1.15-GetImagePixels.patch, xine-lib-1.1.15-r1.ebuild:
+  Fix build with latest imagemagick, by Robin H. Johnson
+  <robbat2@gentoo.org> Bug #247292
 
   23 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   xine-lib-1.1.15-r1.ebuild:
