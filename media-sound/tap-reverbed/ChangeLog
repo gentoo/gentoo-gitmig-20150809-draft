@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/tap-reverbed
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/ChangeLog,v 1.6 2007/02/22 01:26:50 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/ChangeLog,v 1.7 2008/12/19 14:50:42 aballier Exp $
+
+  19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
+  +files/tap-reverbed-flags.patch, metadata.xml, tap-reverbed-0.ebuild:
+  Fix build with forced as-needed, bug #247863, respect CFLAGS/LDFLAGS, dont
+  build pic for a binary, handle to proaudio herd.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
