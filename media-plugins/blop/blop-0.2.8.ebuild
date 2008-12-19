@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/blop/blop-0.2.8.ebuild,v 1.5 2008/12/19 19:50:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/blop/blop-0.2.8.ebuild,v 1.6 2008/12/19 19:53:38 aballier Exp $
 
 inherit multilib
 
@@ -21,6 +21,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog NEWS THANKS TODO
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS THANKS TODO
 }
