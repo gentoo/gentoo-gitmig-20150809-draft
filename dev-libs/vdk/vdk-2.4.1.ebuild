@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.1.ebuild,v 1.8 2006/10/20 00:31:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.1.ebuild,v 1.9 2008/12/20 23:46:12 loki_val Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,13 +16,17 @@ IUSE="doc debug"
 DEPEND=">x11-libs/gtk+-2.4
 	doc? ( app-doc/doxygen )"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/vdk-2.4.1-gcc4.patch
+	epatch "${FILESDIR}"/vdk-2.4.1-gcc43.patch
+}
+
+
+
 src_compile() {
-
-	cd ${S}
-
 	local myconf=""
-
-	epatch ${FILESDIR}/vdk-2.4.1-gcc4.patch
 
 	# gnome and sigc USE flags need to be added later
 	# when upstream decides to re-support them - ChrisWhite
@@ -54,6 +58,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README TODO
 }
