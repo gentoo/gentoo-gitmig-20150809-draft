@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.5.0.ebuild,v 1.4 2008/09/22 20:05:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.5.3.ebuild,v 1.1 2008/12/20 12:42:17 graaff Exp $
 
 inherit gems
 
@@ -13,6 +13,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.2
+	>=dev-ruby/rubygems-1.3.0
 	>=dev-ruby/net-ssh-2.0.0
 	>=dev-ruby/net-sftp-2.0.0
 	>=dev-ruby/net-scp-1.0.0
