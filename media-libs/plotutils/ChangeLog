@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/plotutils
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.45 2008/12/19 21:25:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.46 2008/12/20 18:03:42 nixnut Exp $
+
+  20 Dec 2008; nixnut <nixnut@gentoo.org> plotutils-2.5.1.ebuild:
+  Stable on ppc wrt bug 245690
 
   19 Dec 2008; Ferris McCormick <fmccor@gentoo.org> plotutils-2.5.1.ebuild:
   Sparc stable, Bug #245690.
