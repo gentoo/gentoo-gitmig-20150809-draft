@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/eq-audacious
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-audacious/ChangeLog,v 1.5 2008/05/06 12:33:30 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-audacious/ChangeLog,v 1.6 2008/12/20 23:27:50 darkside Exp $
+
+  20 Dec 2008; Jeremy Olexa <darkside@gentoo.org> eq-audacious-0.8.ebuild,
+  eq-audacious-0.9.ebuild, eq-audacious-0.21.ebuild:
+  Remove ~amd64 keywords - doesn't work, bug #209500
 
   06 May 2008; Christian Birchinger <joker@gentoo.org>
   eq-audacious-0.8.ebuild, eq-audacious-0.9.ebuild,
