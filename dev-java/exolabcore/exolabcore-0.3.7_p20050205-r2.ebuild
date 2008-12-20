@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205-r2.ebuild,v 1.2 2008/12/17 13:49:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205-r2.ebuild,v 1.3 2008/12/20 18:48:24 betelgeuse Exp $
 
 EAPI=1
 WANT_ANT_TASKS="dev-java/exolabtools:0"
@@ -33,6 +33,7 @@ DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}
 	dev-java/exolabtools
 	test? (
+		dev-java/jakarta-oro:2.0
 		dev-java/commons-cli
 		dev-java/log4j
 		=dev-java/junit-3.8*
@@ -62,13 +63,14 @@ src_test() {
 	java-pkg_jar-from junit
 	java-pkg_jar-from commons-cli-1
 	java-pkg_jar-from log4j
+	java-pkg_jar-from jakarta-oro-2.0
 
 	cd "${S}/src"
 	eant tests
 	cd ..
 	local deps
 	deps="junit,commons-cli-1,log4j,cdegroot-db-1,commons-logging,jakarta-oro-2.0"
-	java -cp "build/classes:build/tests:$(java-config -p ${deps})" \
+	java -cp "build/classes:build/tests:$(java-pkg_getjars ${deps})" \
 		org.exolab.core.test.CoreTestSuite -execute || die "Tests failed"
 }
 
