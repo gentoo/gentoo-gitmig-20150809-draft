@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr223/jsr223-1.0.ebuild,v 1.1 2008/11/16 13:56:33 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr223/jsr223-1.0.ebuild,v 1.2 2008/12/20 22:01:26 maekke Exp $
 
 JAVA_PKG_IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="sjp-1_0-fr-ri.zip"
 LICENSE="sun-bcla-jsr223"
 RESTRICT="fetch"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 

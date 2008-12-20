@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr223
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr223/ChangeLog,v 1.1 2008/11/16 13:56:33 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr223/ChangeLog,v 1.2 2008/12/20 22:01:26 maekke Exp $
+
+  20 Dec 2008; Markus Meier <maekke@gentoo.org> jsr223-1.0.ebuild:
+  amd64/x86 stable, bug #251172
 
 *jsr223-1.0 (16 Nov 2008)
 
