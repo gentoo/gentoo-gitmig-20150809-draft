@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/openvas-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-server/ChangeLog,v 1.6 2008/08/29 09:05:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-server/ChangeLog,v 1.7 2008/12/20 23:55:03 hanno Exp $
+
+*openvas-server-2.0.0 (20 Dec 2008)
+
+  20 Dec 2008; Hanno Boeck <hanno@gentoo.org>
+  +files/openvas-server-2.0.0-ldflags.diff,
+  +files/openvas-server-2.0.0-remove-useless-gpgme.diff,
+  +openvas-server-2.0.0.ebuild:
+  Version bump and some QA fixes.
 
 *openvas-server-1.0.2 (29 Aug 2008)
 

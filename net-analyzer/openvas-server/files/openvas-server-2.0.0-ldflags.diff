@@ -1,0 +1,24 @@
+diff -Naur openvas-server-2.0.0/openvas.tmpl.in openvas-server-2.0.0-1/openvas.tmpl.in
+--- openvas-server-2.0.0/openvas.tmpl.in	2008-12-16 14:03:12.000000000 +0100
++++ openvas-server-2.0.0-1/openvas.tmpl.in	2008-12-20 23:32:16.000000000 +0100
+@@ -103,7 +103,7 @@
+ # Some defines you may want to modify
+ OPENVAS_DEFS=@DEFS@ $(USE_PTHREADS) $(DEBUG) $(USE_LIBWRAP)
+ DEFS=  
+-LDFLAGS=
++LDFLAGS=@LDFLAGS@
+ 
+ # Your C compiler
+ CC=@CC@
+diff -Naur openvas-server-2.0.0/ssl/Makefile openvas-server-2.0.0-1/ssl/Makefile
+--- openvas-server-2.0.0/ssl/Makefile	2008-12-16 14:03:12.000000000 +0100
++++ openvas-server-2.0.0-1/ssl/Makefile	2008-12-20 23:34:18.000000000 +0100
+@@ -36,7 +36,7 @@
+ all : openvas-mkrand
+ 
+ openvas-mkrand: $(OBJS)
+-	$(CC) $(OBJS) -o openvas-mkrand -lm
++	$(CC) $(LDFLAGS) $(OBJS) -o openvas-mkrand -lm
+ 
+ openvas-mkrand.o: openvas-mkrand.c
+ 	$(CC) $(CFLAGS) -c openvas-mkrand.c 

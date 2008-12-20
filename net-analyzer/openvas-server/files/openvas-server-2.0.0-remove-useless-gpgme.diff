@@ -1,0 +1,10 @@
+--- openvas-server-2.0.0/openvasd/otp_1_0.c.1	2008-12-20 23:26:48.000000000 +0100
++++ openvas-server-2.0.0/openvasd/otp_1_0.c	2008-12-20 23:26:53.000000000 +0100
+@@ -34,7 +34,6 @@
+ 
+ #include "otp_1_0.h"
+ 
+-#include <gpgme.h>
+ #include <glib.h>
+ 
+ /* Find the enum identifier for the client request which is given
