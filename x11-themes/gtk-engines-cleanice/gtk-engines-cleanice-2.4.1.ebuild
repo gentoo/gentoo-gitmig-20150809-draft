@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/gtk-engines-cleanice-2.4.1.ebuild,v 1.2 2008/12/18 18:01:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/gtk-engines-cleanice-2.4.1.ebuild,v 1.3 2008/12/20 16:00:52 nixnut Exp $
 
 DESCRIPTION="GTK+ CleanIce Theme Engine"
 HOMEPAGE="http://sourceforge.net/projects/elysium-project"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/elysium-project/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.4"
