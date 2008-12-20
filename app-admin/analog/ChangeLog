@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.48 2008/12/18 17:59:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.49 2008/12/20 15:24:59 klausman Exp $
+
+  20 Dec 2008; Tobias Klausmann <klausman@gentoo.org> analog-6.0-r2.ebuild:
+  Stable on alpha, bug #249140
 
   18 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   analog-6.0-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-6.0-r2.ebuild,v 1.7 2008/12/18 17:59:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-6.0-r2.ebuild,v 1.8 2008/12/20 15:24:59 klausman Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.analog.cx/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/libpcre-3.4
