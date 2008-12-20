@@ -16,7 +16,7 @@
 +db_file                         "/var/lib/mpd/database"
 +log_file                        "/var/log/mpd/mpd.log"
 +error_file                      "/var/log/mpd/mpd.error.log"
- #follow_outside_symlinks         "no"
+ #follow_outside_symlinks         "yes"
  #follow_inside_symlinks          "yes"
  ################################################################
 @@ -17,13 +17,13 @@
