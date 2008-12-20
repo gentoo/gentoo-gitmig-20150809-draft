@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/worker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.60 2008/12/19 18:09:59 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.61 2008/12/20 04:39:09 ken69267 Exp $
+
+  20 Dec 2008; Kenneth Prugh <ken69267@gentoo.org> worker-2.17.0.ebuild:
+  amd64 stable, bug #251656
 
   19 Dec 2008; Ferris McCormick <fmccor@gentoo.org> worker-2.17.0.ebuild:
   Sparc stable, Bug #251656.
