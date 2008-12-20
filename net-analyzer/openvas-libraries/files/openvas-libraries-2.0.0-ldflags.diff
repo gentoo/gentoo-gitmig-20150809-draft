@@ -1,0 +1,36 @@
+diff -Naur openvas-libraries-2.0.0/libopenvas/Makefile openvas-libraries-2.0.0-1/libopenvas/Makefile
+--- openvas-libraries-2.0.0/libopenvas/Makefile	2008-12-16 14:03:21.000000000 +0100
++++ openvas-libraries-2.0.0-1/libopenvas/Makefile	2008-12-20 23:09:48.000000000 +0100
+@@ -115,7 +115,7 @@
+ 
+ 
+ libopenvas.la: $(OBJS)
+-	$(LIBTOOL) $(CC) $(LIBS) -o libopenvas.la $(LO_OBJS) -rpath ${libdir} \
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o libopenvas.la $(LO_OBJS) $(LIBS) -rpath ${libdir} \
+ 	-version-info ${PACKAGE_VERSION}
+ 
+ install : libopenvas.la
+diff -Naur openvas-libraries-2.0.0/libopenvas_hg/Makefile openvas-libraries-2.0.0-1/libopenvas_hg/Makefile
+--- openvas-libraries-2.0.0/libopenvas_hg/Makefile	2008-12-16 14:03:18.000000000 +0100
++++ openvas-libraries-2.0.0-1/libopenvas_hg/Makefile	2008-12-20 23:10:11.000000000 +0100
+@@ -47,7 +47,7 @@
+ 	$(INSTALL) -m 0644 hg_utils.h $(DESTDIR)${includedir}/openvas
+ 
+ libopenvas_hg.la : $(OBJS)
+-	$(LIBTOOL) $(CC) $(LIBS) -o libopenvas_hg.la $(LO_OBJS) -rpath ${libdir} \
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o libopenvas_hg.la $(LO_OBJS) $(LIBS) -rpath ${libdir} \
+ 	-version-info ${PACKAGE_VERSION}
+ 	        
+ hg_utils.o : hg_utils.h hosts_gatherer.h hg_utils.c
+diff -Naur openvas-libraries-2.0.0/openvas-libraries.tmpl.in openvas-libraries-2.0.0-1/openvas-libraries.tmpl.in
+--- openvas-libraries-2.0.0/openvas-libraries.tmpl.in	2008-12-16 14:03:22.000000000 +0100
++++ openvas-libraries-2.0.0-1/openvas-libraries.tmpl.in	2008-12-20 23:09:14.000000000 +0100
+@@ -62,7 +62,7 @@
+ 
+ # Some defines you may want to modify
+ DEFS=@DEFS@ $(DEBUG_SSL) $(DEBUG)
+-LDFLAGS=
++LDFLAGS=@LDFLAGS@
+ 
+ # Your C compiler
+ CC=@CC@

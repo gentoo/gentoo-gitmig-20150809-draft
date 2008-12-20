@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/openvas-libraries
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/ChangeLog,v 1.4 2008/08/18 11:49:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/ChangeLog,v 1.5 2008/12/20 23:45:08 hanno Exp $
+
+*openvas-libraries-2.0.0 (20 Dec 2008)
+
+  20 Dec 2008; Hanno Boeck <hanno@gentoo.org>
+  +files/openvas-libraries-2.0.0-ldflags.diff,
+  +openvas-libraries-2.0.0.ebuild:
+  Version bump and fix for LDFLAGS.
 
   18 Aug 2008; Peter Volkov <pva@gentoo.org> openvas-libraries-1.0.2.ebuild:
   Added ~amd64 keyword, thank alexxy for report.
