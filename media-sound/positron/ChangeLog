@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/positron
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.17 2007/03/10 20:28:45 beandog Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.18 2008/12/20 02:42:43 aballier Exp $
+
+  20 Dec 2008; Alexis Ballier <aballier@gentoo.org> positron-1.1.ebuild:
+  convert to distutils eclass
 
   10 Mar 2007; Steve Dibb <beandog@gentoo.org> positron-1.1.ebuild:
   Update license, bug 170323
