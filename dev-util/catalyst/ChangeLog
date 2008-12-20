@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.206 2008/12/07 22:31:31 agaffney Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.207 2008/12/20 21:30:08 agaffney Exp $
+
+*catalyst-2.0.6.903 (20 Dec 2008)
+
+  20 Dec 2008; Andrew Gaffney <agaffney@gentoo.org>
+  -catalyst-2.0.6.902.ebuild, +catalyst-2.0.6.903.ebuild:
+  Bump to 2.0.6.903 and remove .902 ebuild
 
 *catalyst-2.0.6.902 (07 Dec 2008)
 
