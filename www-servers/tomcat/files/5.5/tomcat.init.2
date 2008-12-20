@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5/tomcat.init.2,v 1.7 2008/12/19 20:48:47 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5/tomcat.init.2,v 1.8 2008/12/20 18:12:23 serkan Exp $
 
 init_env_vars() {
 	if [ "$(gjl -p tomcat-5.5 --get-vm)" ] ; then
@@ -105,7 +105,7 @@ stop()	{
 	ebegin "Stopping Tomcat"
 	init_env_vars
 	start-stop-daemon --stop --quiet \
-	       	--make-pidfile --pidfile /var/run/tomcat-5.5.pid \
+	       	--pidfile /var/run/tomcat-5.5.pid \
 			--exec ${JAVA_HOME}/bin/java -- ${OPTS_CP} ${CATALINA_ARGS} ${STD_OUT} stop
 	eend $?
 }
