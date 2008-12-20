@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/Cflow-1.051-r1.ebuild,v 1.3 2007/07/09 13:09:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cflow/Cflow-1.051-r1.ebuild,v 1.4 2008/12/20 23:44:34 darkside Exp $
 
 inherit eutils perl-app
 
@@ -13,7 +13,7 @@ SRC_URI="http://net.doit.wisc.edu/~plonka/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc x86"
+KEYWORDS="~ia64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
