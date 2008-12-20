@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.9.6.ebuild,v 1.5 2008/12/20 00:54:50 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-3.9.6.ebuild,v 1.6 2008/12/20 12:03:47 serkan Exp $
 
 inherit gnome2 eutils java-pkg-2 java-ant-2 toolchain-funcs
 
@@ -35,8 +35,10 @@ pkg_setup() {
 	if use spell && ! built_with_use dev-java/zemberek linguas_tr; then
 		die "dev-java/zemberek should be built with Turkish language support"
 	fi
-	if use mplayer && ! built_with_use -o media-video/mplayer srt ass; then
-		msg="media-video/mplayer needs to be built with the srt use flag"
+	if use mplayer &&
+		(  ! built_with_use --missing true media-video/mplayer ass \
+                || ! built_with_use --missing true media-video/mplayer srt ); then
+		msg="media-video/mplayer needs to be built with the srt or ass USE flag"
 		eerror ${msg}
 		die ${msg}
 	fi
