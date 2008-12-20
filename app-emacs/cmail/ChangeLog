@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cmail
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/ChangeLog,v 1.12 2008/12/20 14:51:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cmail/ChangeLog,v 1.13 2008/12/20 16:43:16 fauli Exp $
+
+  20 Dec 2008; Christian Faulhammer <fauli@gentoo.org> -cmail-2.62.ebuild:
+  clean up
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> cmail-2.62-r1.ebuild:
   Stable on ppc wrt bug 250952
