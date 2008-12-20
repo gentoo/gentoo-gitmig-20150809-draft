@@ -1,0 +1,28 @@
+diff -Naur openvas-libnasl-2.0.0/nasl/Makefile openvas-libnasl-2.0.0-1/nasl/Makefile
+--- openvas-libnasl-2.0.0/nasl/Makefile	2008-12-16 14:06:34.000000000 +0100
++++ openvas-libnasl-2.0.0-1/nasl/Makefile	2008-12-21 00:22:32.000000000 +0100
+@@ -93,10 +93,10 @@
+ 	$(COMPILE) -c $<
+ 
+ openvas-nasl : $(OBJS) libopenvasnasl.la nasl.c
+-	$(LINK) -o openvas-nasl -DVERSION=\"$(VERSION)\" nasl.c $(OBJS) $(NESSUS_LIBS)
++	$(LINK) $(LDFLAGS) -o openvas-nasl -DVERSION=\"$(VERSION)\" nasl.c $(OBJS) $(NESSUS_LIBS)
+ 
+ libopenvasnasl.la : $(OBJS)
+-	$(LINK) $(NESSUS_LIBS) -o libopenvasnasl.la $(LO_OBJS) -rpath ${libdir} \
++	$(LINK) $(LDFLAGS) $(NESSUS_LIBS) -o libopenvasnasl.la $(LO_OBJS) -rpath ${libdir} \
+ 	-version-info ${PACKAGE_VERSION}
+ 
+ install : libopenvasnasl.la openvas-nasl
+diff -Naur openvas-libnasl-2.0.0/nasl.tmpl.in openvas-libnasl-2.0.0-1/nasl.tmpl.in
+--- openvas-libnasl-2.0.0/nasl.tmpl.in	2008-12-16 14:06:34.000000000 +0100
++++ openvas-libnasl-2.0.0-1/nasl.tmpl.in	2008-12-21 00:23:25.000000000 +0100
+@@ -66,7 +66,7 @@
+ COMPAT=@compat_lib@
+ # Some defines you may want to modify
+ DEFS=@DEFS@ $(HAVE_UCB_INCLUDE) $(DEBUG)
+-LDFLAGS=
++LDFLAGS=@LDFLAGS@
+ 
+ # GPGME
+ GPGME_CONFIG=@GPGME_CONFIG@
