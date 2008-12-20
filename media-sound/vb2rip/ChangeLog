@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vb2rip
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vb2rip/ChangeLog,v 1.4 2007/02/09 08:00:34 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vb2rip/ChangeLog,v 1.5 2008/12/20 03:12:04 aballier Exp $
+
+  20 Dec 2008; Alexis Ballier <aballier@gentoo.org> vb2rip-1.4.ebuild:
+  honour CC,CFLAGS,LDFLAGS, bug #240834, dont prestrip files, add a die to
+  dobin, quote workdir, keyword ~amd64
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

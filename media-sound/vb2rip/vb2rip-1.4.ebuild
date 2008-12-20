@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vb2rip/vb2rip-1.4.ebuild,v 1.2 2005/07/25 19:16:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vb2rip/vb2rip-1.4.ebuild,v 1.3 2008/12/20 03:12:04 aballier Exp $
 
-inherit versionator
+inherit versionator toolchain-funcs
 
 MY_PV=$(replace_version_separator '')
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.neillcorlett.com/vb2rip/${PN}${MY_PV}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
@@ -20,10 +20,13 @@ DEPEND="app-arch/unzip"
 S=${WORKDIR}/src
 
 src_compile() {
+	tc-export CC
+	echo "vb2rip: main.o decode.o wav.o lsb.o rip.o fmt.o fmt_raw.o fmt_vb2.o fmt_8.o fmt_msa.o fmt_xa2.o" > Makefile
+	echo '	$(CC) $(LDFLAGS) $^ -o $@' >> Makefile
 	emake || die
 }
 
 src_install() {
-	dobin vb2rip
-	dodoc ${WORKDIR}/games.txt ${WORKDIR}/vb2rip.txt
+	dobin vb2rip || die
+	dodoc "${WORKDIR}/games.txt" "${WORKDIR}/vb2rip.txt"
 }
