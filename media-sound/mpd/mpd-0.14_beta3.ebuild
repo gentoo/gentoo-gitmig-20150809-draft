@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14_beta3.ebuild,v 1.1 2008/12/20 15:13:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14_beta3.ebuild,v 1.2 2008/12/20 17:49:31 angelos Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="aac alsa ao audiofile curl debug doc ffmpeg flac icecast id3 ipv6 jack lame libsamplerate mad mikmod musepack ogg oss pulseaudio sysvipc unicode vorbis wavpack zeroconf"
+IUSE="aac alsa ao audiofile curl debug doc ffmpeg flac icecast id3 ipv6 jack lame libsamplerate mad mikmod musepack ogg oss pulseaudio +sysvipc unicode vorbis wavpack zeroconf"
 
 RDEPEND="!sys-cluster/mpich2
 	>=dev-libs/glib-2.4:2
