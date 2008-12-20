@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9310 2008/12/20 21:22:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9311 2008/12/20 21:52:23 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -316,11 +316,6 @@ app-admin/gps
 # nis-utils is dead, use LDAP you slackers.
 # Remove in Jan 2009
 net-nds/nis-utils
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Nov 2008)
-# Removed in 30 days by treecleaners at maintainer's request. bug #152940
-# Dead upstream, other alternatives.
-net-im/gnome-jabber
 
 # Jeremy Olexa <darkside@gentoo.org> (20 Nov 2008)
 # Removed in 60 days by treecleaners, comment on bug #247494
