@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gnome-ppp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.26 2008/08/19 18:31:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/ChangeLog,v 1.27 2008/12/20 19:09:26 maekke Exp $
+
+  20 Dec 2008; Markus Meier <maekke@gentoo.org> gnome-ppp-0.3.23-r1.ebuild:
+  amd64 stable, bug #251479
 
   19 Aug 2008; Alin Năstac <mrness@gentoo.org> gnome-ppp-0.3.23-r1.ebuild:
   Update HOMEPAGE (#235046).
