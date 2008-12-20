@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rexima
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.12 2007/02/03 20:12:29 flameeyes Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.13 2008/12/20 03:38:42 aballier Exp $
+
+  20 Dec 2008; Alexis Ballier <aballier@gentoo.org> rexima-1.4.ebuild:
+  Honour CC and LDLFAGS; dont prestrip files, bug #239890, remove unused sed
+  dep, dodoc the changelog too
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
