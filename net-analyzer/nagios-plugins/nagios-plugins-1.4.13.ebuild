@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13.ebuild,v 1.1 2008/10/16 18:04:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13.ebuild,v 1.2 2008/12/20 08:47:45 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -67,6 +67,10 @@ src_compile() {
 		conf="${conf} --with-openssl=/usr"
 	else
 		conf="${conf} --without-openssl"
+	fi
+
+	if use postgres; then
+		conf="${conf} --with-pgsql=/usr"
 	fi
 
 	econf \
