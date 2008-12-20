@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.0.ebuild,v 1.3 2008/12/19 22:19:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.0.ebuild,v 1.4 2008/12/20 18:54:38 zmedico Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -31,7 +31,7 @@ RDEPEND="virtual/init
 	pam? ( virtual/pam )
 	>=sys-apps/baselayout-2.0.0
 	!<sys-fs/udev-133
-	!<sys-fs/sysvinit-2.86-r11"
+	!<sys-apps/sysvinit-2.86-r11"
 DEPEND="${RDEPEND}
 	virtual/os-headers"
 

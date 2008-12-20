@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.49 2008/12/19 22:19:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.50 2008/12/20 18:54:38 zmedico Exp $
+
+  20 Dec 2008; Zac Medico <zmedico@gentoo.org> openrc-0.4.0.ebuild:
+  Bug #251749 - Fix typo in sys-apps/sysvinit blocker.
 
   19 Dec 2008; Matthias Schwarzott <zzam@gentoo.org> openrc-0.4.0.ebuild,
   openrc-9999.ebuild:
