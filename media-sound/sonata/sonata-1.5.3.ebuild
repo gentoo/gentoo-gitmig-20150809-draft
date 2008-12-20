@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.5.3.ebuild,v 1.1 2008/10/14 23:40:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.5.3.ebuild,v 1.2 2008/12/20 18:27:28 maekke Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sonata.berlios.de/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc64 ~sparc x86"
 SLOT="0"
 IUSE="dbus lyrics taglib"
 
