@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9309 2008/12/20 19:45:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9310 2008/12/20 21:22:22 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,63 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
+# Masked for removal in 60 days. Security issues and unmaintained. bug 251490
+net-analyzer/hyperic-hq-agent
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
+# Removed in 60 days, doesn't compile with gcc-4.3 and upstream stopped dev't in
+# 2004. bug 251219
+media-sound/ecamegapedal
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
+# Removed in 60 days. Doesn't compile with gcc-4.3 and upstream won't fix it.
+# knetload requested to be removed at the same time by kde team because it
+# depends on libksnmp. bug 251452
+net-libs/libksnmp
+net-misc/knetload
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
+# Removed in 60 days, dead upstream for 7 years. Unmaintained in Gentoo for 4
+# years. bug 251057
+net-misc/ossh
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
+# Removed in 60 days. Does not compile with gcc-4.3. Use app-i18n/scim-m17n
+# instead, bug 250680
+app-i18n/scim-wijesekera
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
+# Removed in 60 days. Does not compile with gcc-4.3 and requires kernel patches
+# from a website that doesn't exist => unmaintained. bug 250679
+app-i18n/unicon
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
+# Removed in 60 days. Does not work anymore, dead upstream. Upstream website
+# suggest using media-sound/mpd. bug 249244
+media-sound/waif
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
+# Removed in 60 days. Does not compile with gcc-4.1+, uses gtk-1 and requires
+# other fixes. bug 247912
+media-video/tuxzap-programs
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
+# Removed in 60 days. Does not compile with gcc-4.1+, nothing depends on it. 
+# bug 240908
+net-libs/libopm
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
+# Removed in 60 days, multiple bugs - does not compile with recent kernels.
+# bug 251795
+sys-fs/cloop
+
+# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
+# Removed in 60 days. Many issues including a gcc-4.3 failure and dead upstream
+# see tracker bug (bug 251796)
+app-text/pdftk
+media-gfx/keyjnote
 
 # Christoph Mende <angelos@gentoo.org> (20 Dec 2008)
 # Masked for removal in 30 days, doesn't work with gcc-4.3 (bug 251748),

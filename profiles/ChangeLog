@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2184 2008/12/20 19:45:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2185 2008/12/20 21:22:22 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Dec 2008; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask many packages.. see package.mask file with new entries for today with
+  my name on them.
 
   20 Dec 2008; Christoph Mende <angelos@gentoo.org> package.mask:
   Masked x11-libs/xfc for removal
