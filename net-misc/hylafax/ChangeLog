@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.90 2008/12/19 23:45:43 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.91 2008/12/20 14:42:07 nixnut Exp $
+
+  20 Dec 2008; nixnut <nixnut@gentoo.org> hylafax-4.4.4-r2.ebuild:
+  Stable on ppc wrt bug 245190
 
 *hylafax-4.4.4-r2 (19 Dec 2008)
 
