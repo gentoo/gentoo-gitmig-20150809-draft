@@ -1,14 +1,21 @@
 # ChangeLog for app-office/passepartout
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.8 2007/10/12 08:21:16 leio Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.9 2008/12/20 01:18:48 loki_val Exp $
 
-  12 Oct 2007; Mart Raudsepp <leio@gentoo.org> -passepartout-0.5.ebuild,
-  -passepartout-0.6.ebuild:
-  Clean out older redundant versions for bug 159995
+*passepartout-0.7.0 (20 Dec 2008)
 
-  05 Oct 2007; Christian Faulhammer <opfer@gentoo.org>
-  passepartout-0.6_p1.ebuild:
-  stable x86, bug 194742
+  20 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  +files/passepartout-0.7.0-gcc42.patch,
+  +files/passepartout-0.7.0-gcc43.patch,
+  +files/passepartout-0.7.0-gcc44.patch,
+  +files/passepartout-0.7.0-include-flags.patch,
+  +files/passepartout-0.7.0-libtoolization.patch,
+  +files/passepartout-0.7.0-libxmlpp-2.6-depend.patch,
+  +files/passepartout-0.7.0-safer.patch, metadata.xml,
+  +passepartout-0.7.0.ebuild:
+  Be maintainer. Keyword ~amd64. Bump, fixing bug 206780. Also fixing: Bug
+  226441, maintainer-mode rebuild. Bug 226441, gcc-4.3 compilation. Bug
+  240389, new libsigc api failure.
 
 *passepartout-0.6_p1 (22 Mar 2007)
 
