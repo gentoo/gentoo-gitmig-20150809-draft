@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-lyricwiki
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyricwiki/ChangeLog,v 1.2 2008/12/17 21:42:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyricwiki/ChangeLog,v 1.3 2008/12/20 17:12:23 nixnut Exp $
+
+  20 Dec 2008; nixnut <nixnut@gentoo.org> gmpc-lyricwiki-0.16.0.ebuild:
+  ~ppc wrt bug 251332
 
   17 Dec 2008; Markus Meier <maekke@gentoo.org>
   gmpc-lyricwiki-0.16.0.ebuild:
