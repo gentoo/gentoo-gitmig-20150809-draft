@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.13.ebuild,v 1.14 2005/03/22 02:49:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.13.ebuild,v 1.15 2008/12/20 09:45:38 pva Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.xinetd.org/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="tcpd"
 
 DEPEND="tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
