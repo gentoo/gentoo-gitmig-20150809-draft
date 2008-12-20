@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.70 2008/11/24 20:37:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.71 2008/12/20 11:05:04 pva Exp $
+
+  20 Dec 2008; Peter Volkov <pva@gentoo.org> dropbear-0.49.ebuild,
+  dropbear-0.52.ebuild:
+  ~mips rekeyworeded, bug #210795.
 
   24 Nov 2008; Brent Baude <ranger@gentoo.org> dropbear-0.51.ebuild:
   stable ppc64, bug 230259
