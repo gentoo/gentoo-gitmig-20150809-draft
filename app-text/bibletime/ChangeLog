@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bibletime
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.48 2008/12/18 15:19:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.49 2008/12/20 18:16:10 nixnut Exp $
+
+  20 Dec 2008; nixnut <nixnut@gentoo.org> ChangeLog:
+  Stable on ppc wrt bug 245857
 
   18 Dec 2008; Steve Dibb <beandog@gentoo.org> bibletime-1.6.5.1-r1.ebuild:
   amd64 stable
