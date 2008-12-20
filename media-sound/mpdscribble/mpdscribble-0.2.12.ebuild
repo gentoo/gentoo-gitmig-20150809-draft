@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.2.12.ebuild,v 1.8 2008/01/29 20:55:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/mpdscribble-0.2.12.ebuild,v 1.9 2008/12/20 14:55:13 angelos Exp $
 
 EAPI=1
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed."
 
 	exeinto /usr/share/mpdscribble
 	doexe setup.sh
