@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/test-spec
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.2 2007/12/16 04:45:21 nichoj Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.3 2008/12/20 14:59:02 graaff Exp $
+
+*test-spec-0.9.0 (20 Dec 2008)
+
+  20 Dec 2008; Hans de Graaff <graaff@gentoo.org> +test-spec-0.9.0.ebuild:
+  Version bump
 
   09 Dec 2007; <nichoj@gentoo.org> test-spec-0.4.0.ebuild:
   Keyworded ~x86.
