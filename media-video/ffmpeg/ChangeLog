@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.247 2008/12/19 11:10:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.248 2008/12/20 00:36:04 gentoofan23 Exp $
+
+  20 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  ffmpeg-0.4.9_p20081014.ebuild:
+  stable amd64, security bug #245313
 
 *ffmpeg-0.4.9_p20081219 (19 Dec 2008)
 
