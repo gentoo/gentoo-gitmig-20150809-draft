@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/positron
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.18 2008/12/20 02:42:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/ChangeLog,v 1.19 2008/12/20 02:48:29 aballier Exp $
+
+  20 Dec 2008; Alexis Ballier <aballier@gentoo.org> positron-1.1.ebuild:
+  install doc in /usr/share/doc/PF, bug #241290
 
   20 Dec 2008; Alexis Ballier <aballier@gentoo.org> positron-1.1.ebuild:
   convert to distutils eclass
