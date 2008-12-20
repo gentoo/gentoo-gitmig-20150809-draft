@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/droid
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.7 2008/10/13 09:37:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.8 2008/12/20 11:39:48 pva Exp $
+
+*droid-112 (20 Dec 2008)
+
+  20 Dec 2008; Peter Volkov <pva@gentoo.org> +droid-112.ebuild:
+  Version bump, bug #251288, thank St.MPA3b for report.
 
   13 Oct 2008; Peter Volkov <pva@gentoo.org> -droid-1.ebuild:
   Removed old.
