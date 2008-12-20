@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ant-trax-1.7.1.ebuild,v 1.2 2008/12/20 16:46:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-trax/ant-trax-1.7.1.ebuild,v 1.3 2008/12/20 19:56:21 ken69267 Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ ANT_TASK_DEPNAME=""
 inherit ant-tasks
 
 DESCRIPTION="Apache Ant .jar with optional tasks depending on XML transformer (xalan)"
-KEYWORDS="~amd64 ~ia64 ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ~ppc64 ~x86 ~x86-fbsd"
 
 DEPEND=""
 RDEPEND="dev-java/xalan:0"
