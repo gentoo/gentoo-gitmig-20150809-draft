@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-apache-bcel
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bcel/ChangeLog,v 1.10 2008/07/14 22:05:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bcel/ChangeLog,v 1.11 2008/12/20 16:44:12 nixnut Exp $
+
+  20 Dec 2008; nixnut <nixnut@gentoo.org> ant-apache-bcel-1.7.1.ebuild:
+  Stable on ppc wrt bug 250446
 
 *ant-apache-bcel-1.7.1 (14 Jul 2008)
 
