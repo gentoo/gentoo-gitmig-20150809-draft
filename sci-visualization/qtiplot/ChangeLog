@@ -1,6 +1,15 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.38 2008/12/18 22:57:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.39 2008/12/20 07:11:02 grozin Exp $
+
+*qtiplot-0.9.7.4 (20 Dec 2008)
+
+  20 Dec 2008; Andrey Grozin <grozin@gentoo.org>
+  +files/qtiplot-0.9.7.4-gcc4.3.patch,
+  +files/qtiplot-0.9.7.4-liborigin-gcc4.3.patch,
+  +files/qtiplot-0.9.7.4-no-python.patch, +files/qtiplot-0.9.7.4-pro.patch,
+  +files/qtiplot-0.9.7.4-sip.patch, +qtiplot-0.9.7.4.ebuild:
+  Version bump
 
   18 Dec 2008; Markus Dittrich <markusle@gentoo.org> 
   +files/qtiplot-0.9.7.3-sip.patch, qtiplot-0.9.7.3.ebuild:
