@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.18 2008/12/20 14:31:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.19 2008/12/20 22:47:24 fmccor Exp $
+
+  20 Dec 2008; Ferris McCormick <fmccor@gentoo.org>
+  x264-0.0.20081006.ebuild:
+  Sparc stable, Bug #245533 (required for Bug #245313).
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> x264-0.0.20081006.ebuild:
   Stable on ppc wrt bug 245533
