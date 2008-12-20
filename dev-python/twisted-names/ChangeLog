@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-names
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.30 2008/08/24 11:28:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.31 2008/12/20 18:29:18 nixnut Exp $
+
+  20 Dec 2008; nixnut <nixnut@gentoo.org> twisted-names-8.1.0.ebuild:
+  Stable on ppc wrt bug 231675
 
   24 Aug 2008; Markus Rothe <corsair@gentoo.org> twisted-names-8.1.0.ebuild:
   Stable on ppc64; bug #231675

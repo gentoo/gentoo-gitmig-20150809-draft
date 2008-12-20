@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-runner
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.26 2008/08/24 11:29:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.27 2008/12/20 18:32:45 nixnut Exp $
+
+  20 Dec 2008; nixnut <nixnut@gentoo.org> twisted-runner-8.0.0.ebuild:
+  Stable on ppc wrt bug 231675
 
   24 Aug 2008; Markus Rothe <corsair@gentoo.org>
   twisted-runner-8.0.0.ebuild:

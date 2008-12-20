@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.34 2008/08/27 18:16:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.35 2008/12/20 18:35:19 nixnut Exp $
+
+  20 Dec 2008; nixnut <nixnut@gentoo.org> twisted-words-8.1.0.ebuild:
+  Stable on ppc wrt bug 231675
 
   27 Aug 2008; Raúl Porcel <armin76@gentoo.org> twisted-words-8.1.0.ebuild:
   sparc stable
