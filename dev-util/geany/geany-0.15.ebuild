@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.15.ebuild,v 1.4 2008/12/20 15:01:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.15.ebuild,v 1.5 2008/12/20 17:33:55 maekke Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2 Scintilla"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="+vte"
 
 RDEPEND=">=x11-libs/gtk+-2.10

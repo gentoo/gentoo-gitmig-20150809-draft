@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.20 2008/12/20 15:01:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.21 2008/12/20 17:33:55 maekke Exp $
+
+  20 Dec 2008; Markus Meier <maekke@gentoo.org> geany-0.15.ebuild:
+  x86 stable, bug #251582
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> geany-0.15.ebuild:
   Stable on ppc wrt bug 251582
