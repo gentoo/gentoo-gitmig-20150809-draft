@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/wxmaxima
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.21 2008/11/26 21:13:57 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.22 2008/12/20 10:20:02 grozin Exp $
+
+*wxmaxima-0.8.1 (20 Dec 2008)
+
+  20 Dec 2008; Andrey Grozin <grozin@gentoo.org> +wxmaxima-0.8.1.ebuild:
+  Version bump
 
   26 Nov 2008; Ryan Hill <dirtyepic@gentoo.org> wxmaxima-0.7.5.ebuild:
   Call wxwidgets_pkg_setup.
