@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.3.ebuild,v 1.4 2008/12/15 08:18:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.3.ebuild,v 1.5 2008/12/20 00:59:16 gentoofan23 Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="aac aften alsa amrnb arts dts encode esd jack lame libsamplerate
 	truetype vorbis x264 xv xvid gtk qt4"
 
