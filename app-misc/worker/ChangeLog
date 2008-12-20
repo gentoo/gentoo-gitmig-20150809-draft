@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/worker
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.61 2008/12/20 04:39:09 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.62 2008/12/20 17:13:56 nixnut Exp $
+
+  20 Dec 2008; nixnut <nixnut@gentoo.org> worker-2.17.0.ebuild:
+  Stable on ppc wrt bug 251656
 
   20 Dec 2008; Kenneth Prugh <ken69267@gentoo.org> worker-2.17.0.ebuild:
   amd64 stable, bug #251656
