@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/jupidator-0.2.0.ebuild,v 1.1 2008/12/20 04:06:28 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/jupidator-0.2.0.ebuild,v 1.2 2008/12/20 11:22:37 serkan Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -8,7 +8,7 @@ inherit java-pkg-2 java-ant-2
 
 MY_P="${PN}.${PV}"
 
-DESCRIPTION="Small embeddable pure Java library for syntax highlighting"
+DESCRIPTION="Jupidator is a library/tool in Java for automatic updating of applications"
 HOMEPAGE="http://www.sourceforge.net/projects/jupidator"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="LGPL-3"

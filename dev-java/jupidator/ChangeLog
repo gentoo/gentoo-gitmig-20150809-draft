@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jupidator
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/ChangeLog,v 1.1 2008/12/20 04:06:28 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/ChangeLog,v 1.2 2008/12/20 11:22:37 serkan Exp $
+
+  20 Dec 2008; Serkan Kaba <serkan@gentoo.org> jupidator-0.2.0.ebuild:
+  Fix description.
 
 *jupidator-0.2.0 (20 Dec 2008)
 
