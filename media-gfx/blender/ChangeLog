@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.168 2008/12/20 14:54:21 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.169 2008/12/20 23:34:09 fmccor Exp $
+
+  20 Dec 2008; Ferris McCormick <fmccor@gentoo.org> blender-2.48a-r3.ebuild:
+  Sparc stable, Bug #245515
 
   20 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org>
   blender-2.48a-r3.ebuild:
