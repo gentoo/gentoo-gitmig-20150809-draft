@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/gbsplay
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gbsplay/ChangeLog,v 1.1 2008/12/20 18:50:09 ssuominen Exp $
+
+*gbsplay-0.0.91 (20 Dec 2008)
+
+  20 Dec 2008; <ssuominen@gentoo.org> +gbsplay-0.0.91.ebuild:
+  Initial commit for bug 51115, thanks to Christian Garbs and Tobias
+  Diedrich.
+
