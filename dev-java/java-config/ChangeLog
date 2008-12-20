@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.201 2008/12/20 16:02:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.202 2008/12/20 19:18:15 betelgeuse Exp $
+
+  20 Dec 2008; Petteri Räty <betelgeuse@gentoo.org>
+  java-config-2.1.6-r1.ebuild:
+  Mark stable on ia64.
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> java-config-2.1.6-r1.ebuild:
   Stable on ppc wrt bug 250773
