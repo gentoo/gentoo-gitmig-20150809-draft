@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9311 2008/12/20 21:52:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9312 2008/12/20 23:04:42 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rémi Cardona <remi@gentoo.org> (21 Dec 2008)
+# Masked for treecleaning, see bug #228471
+# uses old gtkmm stack
+net-print/omni
+
+# Rémi Cardona <remi@gentoo.org> (21 Dec 2008)
+# Masked for treecleaning, see bug #228471 and bug #244543
+# uses broken and unmaintained gtkmm 2.2
+# other tools can change the X background
+x11-misc/fluxbg
 
 # Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
 # Masked for removal in 60 days. Security issues and unmaintained. bug 251490
