@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/xfoil
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.12 2008/12/14 23:51:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/ChangeLog,v 1.13 2008/12/20 14:53:29 nixnut Exp $
+
+  20 Dec 2008; nixnut <nixnut@gentoo.org> xfoil-6.97.ebuild:
+  Stable on ppc wrt bug 250370
 
   14 Dec 2008; Markus Meier <maekke@gentoo.org> xfoil-6.97.ebuild:
   amd64/x86 stable, bug #250370

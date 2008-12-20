@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.4 2008/12/14 23:51:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/xfoil/xfoil-6.97.ebuild,v 1.5 2008/12/20 14:53:29 nixnut Exp $
 
 inherit eutils fortran
 
@@ -11,7 +11,7 @@ SRC_URI="http://web.mit.edu/drela/Public/web/${PN}/${PN}${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc examples"
 
 DEPEND="x11-libs/libX11"
