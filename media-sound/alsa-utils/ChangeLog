@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.251 2008/12/16 17:44:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.252 2008/12/20 00:52:54 gentoofan23 Exp $
+
+  20 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org>
+  alsa-utils-1.0.17.ebuild:
+  stable amd64, bug 245517
 
   16 Dec 2008; Brent Baude <ranger@gentoo.org> alsa-utils-1.0.17.ebuild:
   Marking alsa-utils-1.0.17 ppc64 for bug 245517
