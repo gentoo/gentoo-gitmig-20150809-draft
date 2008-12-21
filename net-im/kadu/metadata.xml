@@ -4,7 +4,7 @@
 	<herd>net-im</herd>
 	<maintainer>
 		<email>cla@gentoo.org</email>
-		<name>Dawid WÄgliÅski</name>
+		<name>Dawid Węgliński</name>
 	</maintainer>
 	<use>
 		<flag name='amarok'>Enables amarok support in kadu</flag>
