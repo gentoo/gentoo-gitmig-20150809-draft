@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/mini_httpd-1.19.ebuild,v 1.9 2008/04/21 17:27:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/mini_httpd-1.19.ebuild,v 1.10 2008/12/21 21:58:57 caleb Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.acme.com/software/mini_httpd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ia64 ppc s390 sparc x86"
+KEYWORDS="amd64 ~ia64 ppc s390 sparc x86"
 IUSE="ssl ipv6"
 
 DEPEND="ssl? ( dev-libs/openssl )"
