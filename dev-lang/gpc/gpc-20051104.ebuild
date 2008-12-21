@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20051104.ebuild,v 1.4 2007/06/26 01:50:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20051104.ebuild,v 1.5 2008/12/21 02:18:51 darkside Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -74,6 +74,8 @@ src_compile() {
 		--disable-checking \
 		--disable-werror \
 		--disable-libunwind-exceptions"
+
+	use amd64 && myconf="${myconf} --disable-multilib"
 
 	cd ${BUILDDIR}
 

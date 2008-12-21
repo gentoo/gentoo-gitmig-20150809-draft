@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gpc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.20 2007/05/06 17:32:23 dertobi123 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.21 2008/12/21 02:18:51 darkside Exp $
+
+  21 Dec 2008; Jeremy Olexa <darkside@gentoo.org> gpc-20051104.ebuild:
+  (non maintainer commit) add amd64 specific configure flag to allow
+  compilation, bug #205638
 
   06 May 2007; Tobias Scherbaum <dertobi123@gentoo.org> gpc-20051104.ebuild:
   Added ~ppc, bug #154116
