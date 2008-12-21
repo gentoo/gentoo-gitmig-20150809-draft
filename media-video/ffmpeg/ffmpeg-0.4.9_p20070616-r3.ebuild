@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070616-r3.ebuild,v 1.8 2008/10/30 10:51:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20070616-r3.ebuild,v 1.9 2008/12/21 09:01:57 ssuominen Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -168,5 +168,7 @@ src_test() {
 pkg_postinst() {
 	ewarn "ffmpeg may have had ABI changes, if ffmpeg based programs"
 	ewarn "like xine-lib or vlc stop working as expected please"
-	ewarn "rebuild them."
+	ewarn "rebuild them. This version is vulnerable to several"
+	ewarn "security bugs and is maintained by arm, ia64 and ppc"
+	ewarn "teams. Please don't contact media-video."
 }
