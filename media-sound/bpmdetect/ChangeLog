@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/bpmdetect
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdetect/ChangeLog,v 1.1 2008/12/21 17:00:36 ssuominen Exp $
+
+*bpmdetect-0.6.1 (21 Dec 2008)
+
+  21 Dec 2008; <ssuominen@gentoo.org> +bpmdetect-0.6.1.ebuild:
+  Initial commit for bug 180878, thanks to Jürgen Prömer from
+  #gentoo-media, Freenode for helping out.
+
