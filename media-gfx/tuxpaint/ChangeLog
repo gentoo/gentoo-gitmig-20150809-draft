@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/tuxpaint
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.48 2008/11/08 14:34:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.49 2008/12/21 15:24:39 maekke Exp $
+
+*tuxpaint-0.9.20 (21 Dec 2008)
+
+  21 Dec 2008; Markus Meier <maekke@gentoo.org>
+  +files/tuxpaint-0.9.20-gentoo.patch, +tuxpaint-0.9.20.ebuild:
+  bump to 0.9.20, bug #243838
 
   08 Nov 2008; Markus Meier <maekke@gentoo.org>
   -files/tuxpaint-0.9.16-gentoo-r1.patch,
