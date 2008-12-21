@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythgallery
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.52 2008/12/12 19:40:53 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.53 2008/12/21 17:02:19 nixnut Exp $
+
+  21 Dec 2008; nixnut <nixnut@gentoo.org> mythgallery-0.21_p17105.ebuild:
+  Stable on ppc wrt bug 239341
 
   12 Dec 2008; Steve Dibb <beandog@gentoo.org>
   mythgallery-0.21_p17105.ebuild:
