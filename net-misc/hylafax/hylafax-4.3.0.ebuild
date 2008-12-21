@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.0.ebuild,v 1.11 2007/10/17 21:19:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.0.ebuild,v 1.12 2008/12/21 18:22:25 nerdboy Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -25,7 +25,8 @@ DEPEND="!faxonly? ( net-dialup/mgetty )
 	mgetty? ( net-dialup/mgetty )"
 
 RDEPEND="${DEPEND}
-	net-mail/metamail"
+	net-mail/metamail
+	!net-dialup/sendpage"
 
 export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc /usr/lib/fax"
 

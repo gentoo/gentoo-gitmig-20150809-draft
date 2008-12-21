@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.91 2008/12/20 14:42:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.92 2008/12/21 18:22:25 nerdboy Exp $
+
+  21 Dec 2008; Steve Arnold <nerdboy@gentoo.org> hylafax-4.2.5.ebuild,
+  hylafax-4.3.0.ebuild, hylafax-4.3.1.ebuild, hylafax-4.3.7.ebuild,
+  hylafax-4.4.4-r2.ebuild:
+  Added blocker for net-dialup/sendpage (see bug#248091). Changing the
+  location of sendpage in Hylafax would cause too many new bugs; might
+  take another look in the future if there's really a need...
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> hylafax-4.4.4-r2.ebuild:
   Stable on ppc wrt bug 245190
