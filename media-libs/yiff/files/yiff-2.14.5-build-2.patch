@@ -1,6 +1,6 @@
 diff -ur yiff-2.14.5.orig/libY2/Makefile yiff-2.14.5/libY2/Makefile
 --- yiff-2.14.5.orig/libY2/Makefile	2005-09-26 11:41:57.000000000 +0300
-+++ yiff-2.14.5/libY2/Makefile	2008-12-21 13:17:41.000000000 +0200
++++ yiff-2.14.5/libY2/Makefile	2008-12-21 13:50:45.000000000 +0200
 @@ -57,11 +57,11 @@
  #	-shared			Compile this program as a shared library.
  #
@@ -11,7 +11,7 @@ diff -ur yiff-2.14.5.orig/libY2/Makefile yiff-2.14.5/libY2/Makefile
  #         -finline-functions -ffast-math -march=i586
  
 -CPPFLAGS = -D__cplusplus -Dc_plusplus
-+CXXFLAGS += -D__cplusplus -Dc_plusplus
++CXXFLAGS += -Wall -D__cplusplus -Dc_plusplus
  
  
  # ########################################################################
@@ -44,7 +44,7 @@ diff -ur yiff-2.14.5.orig/libY2/Makefile yiff-2.14.5/libY2/Makefile
 +	+$(CC) -c $*.c $(INC_DIRS) $(CFLAGS) -fPIC
  .cpp.o:
 -	+$(CPP) -c $*.cpp $(INC_DIRS) $(CFLAGS) $(CPPFLAGS)
-+	+$(CXX) -c $*.cpp $(INC_DIRS) $(CFLAGS) $(CPPFLAGS) -fPIC
++	+$(CXX) -c $*.cpp $(INC_DIRS) $(CXXFLAGS) -fPIC
  
  $(LIB): $(OBJ_C) $(OBJ_CPP)
 -	$(CC) $(OBJ_C) $(OBJ_CPP) -Wl,-soname=$(LIB) -shared -o $(LIB) $(LIBS) $(LIB_DIRS)
@@ -84,7 +84,7 @@ diff -ur yiff-2.14.5.orig/libY2/Makefile yiff-2.14.5/libY2/Makefile
  	@echo " "
 diff -ur yiff-2.14.5.orig/libY2/Makefile.Linux yiff-2.14.5/libY2/Makefile.Linux
 --- yiff-2.14.5.orig/libY2/Makefile.Linux	2005-09-26 11:41:57.000000000 +0300
-+++ yiff-2.14.5/libY2/Makefile.Linux	2008-12-21 13:18:06.000000000 +0200
++++ yiff-2.14.5/libY2/Makefile.Linux	2008-12-21 13:50:22.000000000 +0200
 @@ -57,11 +57,11 @@
  #	-shared			Compile this program as a shared library.
  #
@@ -95,7 +95,7 @@ diff -ur yiff-2.14.5.orig/libY2/Makefile.Linux yiff-2.14.5/libY2/Makefile.Linux
  #         -finline-functions -ffast-math -march=i586
  
 -CPPFLAGS = -D__cplusplus -Dc_plusplus
-+CXXFLAGS += -D__cplusplus -Dc_plusplus
++CXXFLAGS += -Wall -D__cplusplus -Dc_plusplus
  
  
  # ########################################################################
@@ -128,7 +128,7 @@ diff -ur yiff-2.14.5.orig/libY2/Makefile.Linux yiff-2.14.5/libY2/Makefile.Linux
 +	+$(CC) -c $*.c $(INC_DIRS) $(CFLAGS) -fPIC
  .cpp.o:
 -	+$(CPP) -c $*.cpp $(INC_DIRS) $(CFLAGS) $(CPPFLAGS)
-+	+$(CXX) -c $*.cpp $(INC_DIRS) $(CFLAGS) $(CPPFLAGS) -fPIC
++	+$(CXX) -c $*.cpp $(INC_DIRS) $(CXXFLAGS) -fPIC
  
  $(LIB): $(OBJ_C) $(OBJ_CPP)
 -	$(CC) $(OBJ_C) $(OBJ_CPP) -Wl,-soname=$(LIB) -shared -o $(LIB) $(LIBS) $(LIB_DIRS)
