@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimageview
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/ChangeLog,v 1.23 2008/01/16 20:32:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/ChangeLog,v 1.24 2008/12/21 13:14:09 ssuominen Exp $
+
+  21 Dec 2008; <ssuominen@gentoo.org> +files/gimageview-0.2.27-gtk2.patch,
+  gimageview-0.2.27-r2.ebuild:
+  Remove unnecessary GTK+-2 defines, and add a missing one for bug 247725,
+  thanks to Flameeyes for reporting. Run elibtoolize.
 
   16 Jan 2008; Markus Meier <maekke@gentoo.org> gimageview-0.2.27-r2.ebuild:
   add quotes
