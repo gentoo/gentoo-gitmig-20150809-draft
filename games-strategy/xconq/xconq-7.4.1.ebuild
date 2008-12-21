@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/xconq-7.4.1.ebuild,v 1.12 2008/08/21 13:34:45 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/xconq-7.4.1.ebuild,v 1.13 2008/12/21 04:31:45 darkside Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://sources.redhat.com/pub/xconq/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 RESTRICT="test"
 

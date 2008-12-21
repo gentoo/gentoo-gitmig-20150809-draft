@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/xconq
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/ChangeLog,v 1.13 2008/11/28 19:03:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/ChangeLog,v 1.14 2008/12/21 04:31:45 darkside Exp $
+
+  21 Dec 2008; Jeremy Olexa <darkside@gentoo.org> xconq-7.4.1.ebuild:
+  amd64 stable, bug 234953
 
   28 Nov 2008; Peter Volkov <pva@gentoo.org> files/xconq-tkconq.patch:
   Fix path in patch.
