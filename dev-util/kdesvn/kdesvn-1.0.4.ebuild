@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.0.4.ebuild,v 1.2 2008/10/22 14:15:56 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.0.4.ebuild,v 1.3 2008/12/21 10:35:18 george Exp $
 
 inherit qt3 kde-functions versionator
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND=">=dev-util/subversion-1.4
+	=kde-base/kdesdk-kioslaves-3.5*
 	dev-db/sqlite"
 
 DEPEND="${RDEPEND}
@@ -40,6 +41,12 @@ src_unpack() {
 	# this seems to be again necessary
 	sed -i -e "s:\${APR_CPP_FLAGS}:\${APR_CPP_FLAGS} \"-DQT_THREAD_SUPPORT\":" \
 		"${S}"/CMakeLists.txt || die "QT_THREAD_SUPPORT sed failed"
+
+	# Force kdesvn to recognize kio_svn protocol name instead of kio_ksvn
+	# (this way we can reuse .protocol files from kdesdk-kioslaves, avoiding
+	# collision)
+	grep -rle "kio_ksvn" "${S}"/* | xargs \
+		sed -i -e "s:kio_ksvn:kio_svn:"
 }
 
 src_compile() {
@@ -64,6 +71,10 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+
+	# remove svn*.protocol files, now that they provide the same stuff as the
+	# ones by kdesdk-kioslaves
+	rm "${D}/${KDEDIR}"/share/services/svn*.protocol
 }
 
 pkg_postinst() {
