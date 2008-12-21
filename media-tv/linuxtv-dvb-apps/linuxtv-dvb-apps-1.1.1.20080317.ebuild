@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20080317.ebuild,v 1.3 2008/11/28 21:56:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20080317.ebuild,v 1.4 2008/12/21 14:48:57 nixnut Exp $
 
 inherit eutils versionator multilib
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.linuxtv.org/"
 DESCRIPTION="small utils for DVB to scan, zap, view signal strength, ..."
 LICENSE="GPL-2"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
-KEYWORDS="amd64 ~ia64 ~ppc x86"
+KEYWORDS="amd64 ~ia64 ppc x86"
 
 RDEPEND="usb? ( >=dev-libs/libusb-0.1.10a )
 	!dev-db/xbase"

@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/linuxtv-dvb-apps
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.42 2008/11/28 21:56:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.43 2008/12/21 14:48:57 nixnut Exp $
+
+  21 Dec 2008; nixnut <nixnut@gentoo.org>
+  linuxtv-dvb-apps-1.1.1.20080317.ebuild:
+  Stable on ppc wrt bug 247995
 
   28 Nov 2008; Markus Meier <maekke@gentoo.org>
   linuxtv-dvb-apps-1.1.1.20080317.ebuild:
