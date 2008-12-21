@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.29 2008/12/19 22:33:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.30 2008/12/21 00:16:59 darkside Exp $
+
+  21 Dec 2008; Jeremy Olexa <darkside@gentoo.org> package.use.mask:
+  Remove USE=mmx mask for imlib2, see bug 218382
 
   19 Dec 2008; Christoph Mende <angelos@gentoo.org>
   no-multilib/package.mask:

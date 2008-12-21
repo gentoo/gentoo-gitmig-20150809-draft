@@ -37,10 +37,6 @@ media-sound/mpg123 mmx 3dnow 3dnowext sse
 # bug 152646
 x11-themes/polymer mmx sse2
 
-# Feb 10th 2007; blubb@gentoo.org
-# bug 166240
-media-libs/imlib2 mmx
-
 # Oct 24th 2006; blubb@gentoo.org
 # working asm; drop this list once the flags are unmasked globally (2007.0)
 >=dev-libs/DirectFB-0.9.25.1 -mmx -sse
