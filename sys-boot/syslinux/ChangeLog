@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.38 2008/10/25 18:43:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.39 2008/12/21 01:02:30 robbat2 Exp $
+
+*syslinux-3.72 (21 Dec 2008)
+
+  21 Dec 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +files/syslinux-3.72-nopie.patch, +files/syslinux-3.72-nostrip.patch,
+  +syslinux-3.72.ebuild:
+  Bug #244775, version bump.
 
   25 Oct 2008; Zac Medico <zmedico@gentoo.org> syslinux-3.71.ebuild:
   Bug #244300 - Call `emake install` with MANDIR=/usr/share/man.
