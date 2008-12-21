@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qtpfsgui
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/ChangeLog,v 1.9 2008/08/15 18:11:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/ChangeLog,v 1.10 2008/12/21 21:53:53 maekke Exp $
+
+  21 Dec 2008; Markus Meier <maekke@gentoo.org> qtpfsgui-1.9.2-r1.ebuild:
+  don't pre-strip files, bug #251951
 
   15 Aug 2008; Markus Meier <maekke@gentoo.org> -qtpfsgui-1.9.1-r1.ebuild,
   qtpfsgui-1.9.2-r1.ebuild:

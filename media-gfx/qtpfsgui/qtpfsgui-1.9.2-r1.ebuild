@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2-r1.ebuild,v 1.3 2008/08/15 18:11:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2-r1.ebuild,v 1.4 2008/12/21 21:53:53 maekke Exp $
 
 EAPI="1"
 
@@ -41,6 +41,9 @@ src_unpack() {
 
 	# no HTML installation by qmake
 	sed -i -e '/INSTALLS/s:htmls ::' project.pro || die
+
+	# no stripping
+	sed -i -e 's:TARGET:QMAKE_STRIP = true\nTARGET:' project.pro || die
 }
 
 src_compile() {
