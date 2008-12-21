@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.31 2008/11/10 03:30:49 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.32 2008/12/21 13:53:59 maekke Exp $
+
+  21 Dec 2008; Markus Meier <maekke@gentoo.org>
+  emul-linux-x86-sdl-20080316.ebuild:
+  amd64 stable, bug #244451
 
 *emul-linux-x86-sdl-20081109 (10 Nov 2008)
 
