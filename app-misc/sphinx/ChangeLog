@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.15 2008/11/10 00:33:05 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.16 2008/12/21 17:46:59 caleb Exp $
+
+*sphinx-0.9.9_rc1 (21 Dec 2008)
+
+  21 Dec 2008; Caleb Tennis <caleb@gentoo.org> +sphinx-0.9.9_rc1.ebuild:
+  Version bump
 
 *sphinx-0.9.8.1 (10 Nov 2008)
 
