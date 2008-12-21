@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.15.ebuild,v 1.2 2007/10/20 15:39:25 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.15.ebuild,v 1.3 2008/12/21 15:20:27 ssuominen Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -16,10 +16,9 @@ SRC_URI="mirror://alsaproject/plugins/${MY_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="debug ffmpeg jack libsamplerate pulseaudio speex"
+IUSE="debug jack libsamplerate pulseaudio speex"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}
-	ffmpeg? ( media-video/ffmpeg )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
 	libsamplerate? ( media-libs/libsamplerate )
 	pulseaudio? ( media-sound/pulseaudio )
@@ -56,7 +55,7 @@ src_compile() {
 	# someone ask for it explicitely, to be on the safe
 	# side.
 	econf \
-		$(use_enable ffmpeg avcodec) \
+		--disable-avcodec \
 		$(use_enable jack) \
 		$(use_enable libsamplerate samplerate) \
 		$(use_enable pulseaudio) \
@@ -75,5 +74,4 @@ src_install() {
 	use jack && dodoc README-jack
 	use libsamplerate && dodoc samplerate.txt
 	use pulseaudio && dodoc README-pulse
-	use ffmpeg && dodoc lavcrate.txt a52.txt
 }
