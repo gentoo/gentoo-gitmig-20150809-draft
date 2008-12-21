@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvd-slideshow
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/ChangeLog,v 1.18 2008/12/14 23:58:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/ChangeLog,v 1.19 2008/12/21 14:52:16 nixnut Exp $
+
+  21 Dec 2008; nixnut <nixnut@gentoo.org> dvd-slideshow-0.8.2.2.ebuild:
+  Stable on ppc wrt bug 250664
 
   14 Dec 2008; Markus Meier <maekke@gentoo.org>
   dvd-slideshow-0.8.2.2.ebuild:

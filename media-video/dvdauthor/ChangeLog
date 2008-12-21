@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdauthor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.29 2008/12/14 23:58:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.30 2008/12/21 14:51:30 nixnut Exp $
+
+  21 Dec 2008; nixnut <nixnut@gentoo.org> dvdauthor-0.6.14.ebuild:
+  Stable on ppc wrt bug 250664
 
   14 Dec 2008; Markus Meier <maekke@gentoo.org> dvdauthor-0.6.14.ebuild:
   amd64/x86 stable, bug #250664
