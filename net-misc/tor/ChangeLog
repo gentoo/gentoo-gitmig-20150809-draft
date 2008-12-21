@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.148 2008/12/10 07:02:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.149 2008/12/21 01:33:20 fauli Exp $
+
+*tor-0.2.0.32-r1 (21 Dec 2008)
+
+  21 Dec 2008; Christian Faulhammer <fauli@gentoo.org> +files/tor.conf,
+  +tor-0.2.0.32-r1.ebuild:
+  install limits file so tor can open more files on the system than normally
+  allowed, this fixes bug 251171 reported by candrews AT integralblue DOT
+  com
 
   10 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
   -files/tor-0.2.0.31-sparc.patch, -tor-0.2.0.31-r1.ebuild:
