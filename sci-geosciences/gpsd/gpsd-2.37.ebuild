@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.37.ebuild,v 1.3 2008/09/08 03:46:33 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.37.ebuild,v 1.4 2008/12/21 17:56:11 nerdboy Exp $
 
 inherit eutils distutils
 
@@ -45,6 +45,14 @@ DEPEND="${RDEPEND}
 		sys-libs/ncurses
 	)"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i -e \
+	    "s:gpspacket\", extension_source)]:gpspacket\", extension_source, libraries=['m'])]:g" \
+	    setup.py || die "sed failed"
+}
+
 src_compile() {
 
 	local my_conf="--enable-shared --with-pic --enable-static \
@@ -80,6 +88,9 @@ src_compile() {
 	fi
 	# Support for the TNT digital compass is currently broken
 	# $(use_enable tntc tnt)
+
+	# still needs an explicit linkage with the math lib (bug #250757)
+	append-ldflags -lm
 
 	emake || die "emake failed"
 }

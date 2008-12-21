@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.35 2008/09/08 03:46:33 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.36 2008/12/21 17:56:11 nerdboy Exp $
+
+  21 Dec 2008; Steve Arnold <nerdboy@gentoo.org> gpsd-2.36.ebuild,
+  gpsd-2.37.ebuild:
+  Added -lm to ldflags back to latest two versions (see bug #250757; also
+  patched the python build to add libm as required lib).
 
   07 Sep 2008; Steve Arnold <nerdboy@gentoo.org> files/99-gpsd-usb.rules,
   gpsd-2.37.ebuild:
