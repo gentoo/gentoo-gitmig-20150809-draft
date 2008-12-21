@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.03-r14.ebuild,v 1.2 2007/12/16 22:03:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.03-r14.ebuild,v 1.3 2008/12/21 16:20:23 serkan Exp $
 
 inherit java-vm-2 versionator
 
@@ -43,6 +43,8 @@ S="${WORKDIR}/j2re${JV}"
 
 JAVAHOME="${D}/opt/${P}"
 
+RESTRICT="strip"
+
 # Extract the 'skip' value (offset of tarball) we should pass to tail
 get_offset() {
 	[ ! -f "$1" ] && return
@@ -69,7 +71,7 @@ src_unpack () {
 	fi
 
 	echo ">>> Unpacking ${A}..."
-	tail -n +${offset} ${DISTDIR}/${A} | tar --no-same-owner -jxpf -
+	tail -n +${offset} "${DISTDIR}"/${A} | tar --no-same-owner -jxpf -
 }
 
 unpack_jars() {

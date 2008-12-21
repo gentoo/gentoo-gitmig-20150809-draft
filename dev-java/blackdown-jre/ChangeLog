@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jre
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.88 2007/12/16 22:03:30 caster Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.89 2008/12/21 16:20:23 serkan Exp $
+
+  21 Dec 2008; Serkan Kaba <serkan@gentoo.org>
+  blackdown-jre-1.4.2.03-r14.ebuild:
+  Restrict strip wrt bug #251891. Fix quoting.
 
   16 Dec 2007; Vlastimil Babka <caster@gentoo.org>
   blackdown-jre-1.4.2.03-r14.ebuild:
