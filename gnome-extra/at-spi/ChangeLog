@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.173 2008/11/13 19:40:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.174 2008/12/21 15:35:34 eva Exp $
+
+*at-spi-1.24.1 (21 Dec 2008)
+
+  21 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org> +at-spi-1.24.1.ebuild:
+  Bump to 1.24.1. Bug fix, allow apps to not load at-spi module on startup.
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> at-spi-1.22.1.ebuild:
   Marking at-spi-1.22.1 ppc64 stable for bug 236971
