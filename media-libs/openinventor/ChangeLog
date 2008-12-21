@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/openinventor
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.21 2008/11/17 21:16:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.22 2008/12/21 09:47:34 stefaan Exp $
+
+*openinventor-2.1.5.10-r3 (21 Dec 2008)
+
+  21 Dec 2008; Stefaan De Roeck <stefaan@gentoo.org>
+  +files/bug-251681.patch, +openinventor-2.1.5.10-r3.ebuild:
+  Fix bug #251681
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/use-byacc.patch:
