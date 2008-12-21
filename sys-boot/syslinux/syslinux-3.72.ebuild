@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.72.ebuild,v 1.1 2008/12/21 01:02:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-3.72.ebuild,v 1.2 2008/12/21 20:39:27 solar Exp $
 
 inherit eutils
 
@@ -40,6 +40,6 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTALLROOT="${D}" MANDIR=/usr/share/man install || die
+	emake INSTALLROOT="${D}" MANDIR=/usr/share/man local-install || die
 	dodoc README NEWS TODO doc/*
 }
