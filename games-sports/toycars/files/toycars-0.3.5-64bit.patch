@@ -1,0 +1,31 @@
+diff -ur toycars-0.3.5/src/Player.cpp ../../../toycars-0.3.5/src/Player.cpp
+--- toycars-0.3.5/src/Player.cpp	2007-12-17 18:38:18.000000000 +0200
++++ ../../../toycars-0.3.5/src/Player.cpp	2008-01-15 22:43:11.000000000 +0200
+@@ -446,7 +446,7 @@
+ 
+ void Player::printDebugInfo() const
+ {
+-	printf("player id: %x\n", (unsigned int)(this));
++	printf("player id: %x\n", (long long)(this));
+ 	printf("stuck: %d\n", ((Player*)(this))->playerIsStuck());
+ }
+ 
+diff -ur toycars-0.3.5/src/RobotHotPotatoPlayer.cpp ../../../toycars-0.3.5/src/RobotHotPotatoPlayer.cpp
+--- toycars-0.3.5/src/RobotHotPotatoPlayer.cpp	2007-12-18 15:13:22.000000000 +0200
++++ ../../../toycars-0.3.5/src/RobotHotPotatoPlayer.cpp	2008-01-15 22:44:30.000000000 +0200
+@@ -16,6 +16,7 @@
+ 
+ #include "RobotHotPotatoPlayer.h"
+ #include "HotPotatoGame.h"
++#include <assert.h>
+ 
+ RobotHotPotatoPlayer::RobotHotPotatoPlayer(ToyCar& inCar, list<Tuple> *path, int inPlayerNumber, FMOD::System* inFMOD_System)
+ 	: RobotPlayer(inCar, path, inPlayerNumber, inFMOD_System), backupDist(-1.0)
+@@ -154,6 +155,6 @@
+ 	printf("route: %d\n", debugRoute);
+ 	printf("avoiding: %d\n", avoiding);
+ 	printf("catching: %d\n", catching);
+-	printf("targetPlayer: %x\n", (unsigned int)(targetPlayer));
++	printf("targetPlayer: %x\n", (long long)(targetPlayer));
+ 	//printf("backupDist: %lf\n", backupDist);
+ }

@@ -1,6 +1,12 @@
 # ChangeLog for games-sports/toycars
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.10 2008/01/01 20:08:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.11 2008/12/21 02:54:29 darkside Exp $
+
+  21 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
+  +files/toycars-0.3.5-64bit.patch, +files/toycars-0.3.5-gcc43.patch,
+  toycars-0.3.5.ebuild:
+  (non maintainer commit) add 64bit patch and gcc43 patch to allow compilation
+  on amd64, bug #206418
 
 *toycars-0.3.5 (01 Jan 2008)
 

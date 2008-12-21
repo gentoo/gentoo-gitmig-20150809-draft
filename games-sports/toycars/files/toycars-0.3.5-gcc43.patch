@@ -1,0 +1,66 @@
+diff -ur toycars-0.3.5.orig/src/CarGame.cpp toycars-0.3.5/src/CarGame.cpp
+--- toycars-0.3.5.orig/src/CarGame.cpp	2008-01-17 21:04:57.000000000 +0000
++++ toycars-0.3.5/src/CarGame.cpp	2008-01-17 21:08:10.000000000 +0000
+@@ -24,6 +24,8 @@
+ #include "TcPreferences.h"
+ #include <cstdlib>
+ #include "PathLine.h"
++#include <cstdio>
++#include <ctime>
+ 
+ //------------
+ 
+diff -ur toycars-0.3.5.orig/src/KnockOutGame.cpp toycars-0.3.5/src/KnockOutGame.cpp
+--- toycars-0.3.5.orig/src/KnockOutGame.cpp	2008-01-17 21:04:57.000000000 +0000
++++ toycars-0.3.5/src/KnockOutGame.cpp	2008-01-17 21:10:52.000000000 +0000
+@@ -12,6 +12,7 @@
+ #include "ScException.h"
+ #include "glf.h"
+ #include "TcPreferences.h"
++#include <cstdio>
+ 
+ extern TcPreferences *gPreferences;
+ 
+diff -ur toycars-0.3.5.orig/src/Player.cpp toycars-0.3.5/src/Player.cpp
+--- toycars-0.3.5.orig/src/Player.cpp	2008-01-17 21:04:57.000000000 +0000
++++ toycars-0.3.5/src/Player.cpp	2008-01-17 21:09:28.000000000 +0000
+@@ -16,6 +16,7 @@
+ 
+ #include "Player.h"
+ #include "CarGame.h"
++#include <cstdio>
+ 
+ // constants
+ 
+diff -ur toycars-0.3.5.orig/src/RobotHotPotatoPlayer.cpp toycars-0.3.5/src/RobotHotPotatoPlayer.cpp
+--- toycars-0.3.5.orig/src/RobotHotPotatoPlayer.cpp	2008-01-17 21:04:57.000000000 +0000
++++ toycars-0.3.5/src/RobotHotPotatoPlayer.cpp	2008-01-17 21:11:13.000000000 +0000
+@@ -17,6 +17,7 @@
+ #include "RobotHotPotatoPlayer.h"
+ #include "HotPotatoGame.h"
+ #include <assert.h>
++#include <cstdio>
+ 
+ RobotHotPotatoPlayer::RobotHotPotatoPlayer(ToyCar& inCar, list<Tuple> *path, int inPlayerNumber, FMOD::System* inFMOD_System)
+ 	: RobotPlayer(inCar, path, inPlayerNumber, inFMOD_System), backupDist(-1.0)
+diff -ur toycars-0.3.5.orig/src/RobotPlayer.cpp toycars-0.3.5/src/RobotPlayer.cpp
+--- toycars-0.3.5.orig/src/RobotPlayer.cpp	2008-01-17 21:04:57.000000000 +0000
++++ toycars-0.3.5/src/RobotPlayer.cpp	2008-01-17 21:09:09.000000000 +0000
+@@ -8,6 +8,7 @@
+  */
+ 
+ #include "RobotPlayer.h"
++#include <cstdio>
+ 
+ RobotPlayer::RobotPlayer(ToyCar& inCar, list<Tuple> *path, int inPlayerNumber, FMOD::System* inFMOD_System)
+ 	: Player(inCar, path, inPlayerNumber, inFMOD_System), backupDist(0)
+--- toycars-0.3.5.orig/src/main.cpp	2008-01-17 21:04:57.000000000 +0000
++++ toycars-0.3.5/src/main.cpp	2008-01-17 21:10:28.000000000 +0000
+@@ -36,6 +36,7 @@
+ #include <cstring>
+ #include <cstdlib>
+ #include <ctime>
++#include <iostream>
+ #include <fcntl.h>
+ #include <errno.h>
+ 

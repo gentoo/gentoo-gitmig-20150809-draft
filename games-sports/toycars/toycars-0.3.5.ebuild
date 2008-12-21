@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.5.ebuild,v 1.1 2008/01/01 20:08:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.5.ebuild,v 1.2 2008/12/21 02:54:29 darkside Exp $
 
 inherit autotools eutils games
 
@@ -26,7 +26,9 @@ src_unpack() {
 		"${FILESDIR}"/${P}-asneeded.patch \
 		"${FILESDIR}"/${P}-fmod.patch \
 		"${FILESDIR}"/${P}-assert.patch \
-		"${FILESDIR}"/${P}-datadir.patch
+		"${FILESDIR}"/${P}-datadir.patch \
+		"${FILESDIR}"/${P}-64bit.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 	AT_M4DIR=m4 eautoreconf
 }
 
