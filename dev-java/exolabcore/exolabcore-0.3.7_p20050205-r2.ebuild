@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205-r2.ebuild,v 1.3 2008/12/20 18:48:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabcore/exolabcore-0.3.7_p20050205-r2.ebuild,v 1.4 2008/12/21 10:47:49 maekke Exp $
 
 EAPI=1
 WANT_ANT_TASKS="dev-java/exolabtools:0"
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
 LICENSE="Exolab"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
