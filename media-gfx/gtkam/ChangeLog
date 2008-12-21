@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.59 2008/06/25 21:54:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.60 2008/12/21 10:44:23 maekke Exp $
+
+*gtkam-0.1.16.1 (21 Dec 2008)
+
+  21 Dec 2008; Markus Meier <maekke@gentoo.org>
+  +files/gtkam-0.1.16.1-gettext.patch, +gtkam-0.1.16.1.ebuild:
+  bump to 0.1.16.1, bug #250847; intltool problems solved by leio
 
   25 Jun 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -files/gtkam-0.1.10-norpm.patch, -files/gtkam-0.1.12-as-needed.patch,
