@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/pg_top-3.6.2.ebuild,v 1.2 2008/06/17 15:27:20 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/pg_top-3.6.2.ebuild,v 1.3 2008/12/21 13:52:06 cedk Exp $
+
+inherit eutils
 
 DESCRIPTION="'top' for PostgreSQL"
 HOMEPAGE="http://ptop.projects.postgresql.org/"
@@ -15,6 +17,14 @@ COMMON_DEPEND="virtual/postgresql-base"
 DEPEND="$COMMON_DEPEND
 	dev-util/pkgconfig"
 RDEPEND="$COMMON_DEPEND"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}.patch"
+	eautoreconf
+}
 
 src_compile() {
 	econf $(use_enable debug)
