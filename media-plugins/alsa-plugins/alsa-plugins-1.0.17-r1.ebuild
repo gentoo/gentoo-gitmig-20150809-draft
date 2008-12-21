@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.17-r1.ebuild,v 1.7 2008/12/20 23:21:49 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.17-r1.ebuild,v 1.8 2008/12/21 15:02:10 nixnut Exp $
 
 inherit libtool autotools eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://alsaproject/plugins/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~ppc ppc64 ~sh sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sh sparc x86"
 IUSE="debug ffmpeg jack libsamplerate pulseaudio speex"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}
