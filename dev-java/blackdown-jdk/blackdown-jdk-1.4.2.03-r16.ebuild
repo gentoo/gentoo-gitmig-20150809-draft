@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r16.ebuild,v 1.2 2007/12/16 22:02:26 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r16.ebuild,v 1.3 2008/12/21 16:12:48 serkan Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 versionator pax-utils
@@ -41,6 +41,8 @@ JAVA_PROVIDE="jdbc-stdext"
 
 S="${WORKDIR}/j2sdk${JV}"
 
+RESTRICT="strip"
+
 # Extract the 'skip' value (offset of tarball) we should pass to tail
 get_offset() {
 	[ ! -f "$1" ] && return
@@ -63,7 +65,7 @@ src_unpack() {
 	fi
 
 	echo ">>> Unpacking ${A}..."
-	tail -n +${offset} ${DISTDIR}/${A} | tar --no-same-owner -jxpf - || die
+	tail -n +${offset} "${DISTDIR}"/${A} | tar --no-same-owner -jxpf - || die
 }
 
 unpack_jars() {

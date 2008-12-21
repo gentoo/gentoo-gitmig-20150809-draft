@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r15.ebuild,v 1.2 2007/05/21 07:53:09 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.03-r15.ebuild,v 1.3 2008/12/21 16:12:48 serkan Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 versionator pax-utils
@@ -27,6 +27,8 @@ JAVA_PROVIDE="jdbc-stdext"
 
 S="${WORKDIR}/j2sdk${JV}"
 
+RESTRICT="strip"
+
 # Extract the 'skip' value (offset of tarball) we should pass to tail
 get_offset() {
 	[ ! -f "$1" ] && return
@@ -49,7 +51,7 @@ src_unpack() {
 	fi
 
 	echo ">>> Unpacking ${A}..."
-	tail -n +${offset} ${DISTDIR}/${A} | tar --no-same-owner -jxpf - || die
+	tail -n +${offset} "${DISTDIR}"/${A} | tar --no-same-owner -jxpf - || die
 }
 
 unpack_jars() {
@@ -84,14 +86,14 @@ src_install() {
 
 	# Set PaX markings on all JDK/JRE executables to allow code-generation on
 	# the heap by the JIT compiler.
-	pax-mark m $(list-paxables ${S}{,/jre}/bin/*)
+	pax-mark m $(list-paxables "${S}"{,/jre}/bin/*)
 
 	dodir /opt/${P}
 
-	cp -pPR ${S}/{bin,jre,lib,man,include} ${D}/opt/${P} || die "failed to copy"
+	cp -pPR "${S}"/{bin,jre,lib,man,include} "${D}"/opt/${P} || die "failed to copy"
 
 	dodir /opt/${P}/share/java
-	cp -pPR ${S}/{demo,src.zip} ${D}/opt/${P}/share || die "failed to copy"
+	cp -pPR "${S}"/{demo,src.zip} "${D}"/opt/${P}/share || die "failed to copy"
 
 	dodoc README
 	dohtml README.html
@@ -106,12 +108,12 @@ src_install() {
 
 		install_mozilla_plugin /opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
 	else
-		rm -f ${D}/opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
+		rm -f "${D}"/opt/${P}/jre/plugin/${platform}/mozilla/libjavaplugin_oji.so
 	fi
 
-	find ${D}/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
+	find "${D}"/opt/${P} -type f -name "*.so" -exec chmod +x \{\} \;
 
-	sed -i "s/standard symbols l/symbol/g" ${D}/opt/${P}/jre/lib/font.properties
+	sed -i "s/standard symbols l/symbol/g" "${D}"/opt/${P}/jre/lib/font.properties
 
 	# install env into /etc/env.d
 	set_java_env
