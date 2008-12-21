@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.6.1.ebuild,v 1.8 2008/12/07 23:50:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.6.1.ebuild,v 1.9 2008/12/21 01:51:18 fauli Exp $
 
 inherit eutils multilib
 
@@ -42,8 +42,9 @@ RDEPEND="${COMMONDEPEND}
 PLUGIN_NAMES="acpi-notifier att-remover attachwarner cachesaver etpan-privacy fetchinfo gtkhtml maildir mailmbox newmail notification pdf-viewer perl rssyl smime synce vcalendar"
 
 pkg_setup() {
+	# rework with EAPI=2
 	if use spell; then
-		if ! built_with_use app-text/enchant aspell; then
+		if ! built_with_use --missing true app-text/enchant aspell; then
 			eerror
 			eerror "You need to rebuild app-text/enchant with USE=aspell enabled"
 			eerror
