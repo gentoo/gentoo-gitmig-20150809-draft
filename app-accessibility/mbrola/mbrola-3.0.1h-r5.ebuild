@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r5.ebuild,v 1.8 2008/09/17 11:40:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r5.ebuild,v 1.9 2008/12/21 20:26:58 williamh Exp $
 
 IUSE="linguas_de linguas_es linguas_fr linguas_it linguas_la linguas_pl linguas_ro"
 
@@ -36,6 +36,8 @@ SRC_URI="mirror://gentoo/mbr${MY_PVR}.zip
 DEPEND="app-arch/unzip"
 
 RDEPEND=""
+
+RESTRICT="strip"
 
 SLOT="0"
 LICENSE="MBROLA"
