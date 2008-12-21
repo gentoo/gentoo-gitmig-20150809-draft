@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/thunar-volman
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.42 2008/09/24 10:13:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.43 2008/12/21 12:40:08 flameeyes Exp $
+
+  21 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  thunar-volman-0.2.0.ebuild:
+  Use the full cat/pn specification for xfce-extra/exo when asking the user
+  to rebuild it.
 
   24 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   thunar-volman-0.2.0.ebuild:
