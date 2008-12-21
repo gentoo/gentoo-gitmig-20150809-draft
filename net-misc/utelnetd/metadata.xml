@@ -4,7 +4,6 @@
 <herd>no-herd</herd>
 <maintainer>
   <email>matsuu@gentoo.org</email>
-  <name>Full name</name>
 </maintainer>
 <longdescription>This is a small telnet daemon for standalone use, mostly on embedded systems.</longdescription>
 </pkgmetadata>
