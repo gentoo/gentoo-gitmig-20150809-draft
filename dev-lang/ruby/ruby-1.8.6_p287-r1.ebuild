@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p287-r1.ebuild,v 1.9 2008/12/21 09:07:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p287-r1.ebuild,v 1.10 2008/12/21 09:31:22 graaff Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -29,7 +29,6 @@ RDEPEND="
 	ssl? ( dev-libs/openssl )
 	socks5? ( >=net-proxy/dante-1.1.13 )
 	tk? ( dev-lang/tk )
-	>=dev-ruby/ruby-config-0.3.1
 	!=dev-lang/ruby-cvs-${SLOT}*
 	!dev-ruby/rdoc
 	!dev-ruby/rexml"
