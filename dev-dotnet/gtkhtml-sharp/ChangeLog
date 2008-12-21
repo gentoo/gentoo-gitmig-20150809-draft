@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gtkhtml-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.66 2008/12/01 23:02:31 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/ChangeLog,v 1.67 2008/12/21 17:54:09 eva Exp $
+
+  21 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  gtkhtml-sharp-1.0.10.ebuild, gtkhtml-sharp-2.8.2.ebuild,
+  gtkhtml-sharp-2.16.0.ebuild:
+  Use slotted deps, bug #247636, with approval of loki_val.
 
 *gtkhtml-sharp-2.24.0-r2 (01 Dec 2008)
 
