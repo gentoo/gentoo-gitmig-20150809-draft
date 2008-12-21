@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.56 2008/10/30 21:19:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.57 2008/12/21 17:04:04 eva Exp $
+
+*gparted-0.4.1 (21 Dec 2008)
+
+  21 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org> +gparted-0.4.1.ebuild:
+  Bump to 0.4.1, closes bug #251611.
 
 *gparted-0.3.9 (30 Oct 2008)
 
