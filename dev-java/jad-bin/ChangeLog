@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jad-bin
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jad-bin/ChangeLog,v 1.8 2007/02/09 01:55:19 flameeyes Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jad-bin/ChangeLog,v 1.9 2008/12/21 16:17:03 serkan Exp $
+
+  21 Dec 2008; Serkan Kaba <serkan@gentoo.org> jad-bin-1.5.8e.ebuild:
+  Restrict strip wrt bug #251892. Add necessary calls to die.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
