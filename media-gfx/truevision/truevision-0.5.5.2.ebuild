@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.9 2008/01/21 04:36:31 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.5.5.2.ebuild,v 1.10 2008/12/21 16:04:47 maekke Exp $
 
 inherit eutils gnome2 versionator
 
@@ -39,6 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-makefile-mime-magic.patch
 	# bug 148763 - won't compile with gcc4
 	epatch "${DISTDIR}"/${P}-gcc4.diff.bz2
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_install() {
