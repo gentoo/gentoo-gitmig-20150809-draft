@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/byld
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/byld/ChangeLog,v 1.4 2007/02/09 05:27:57 flameeyes Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/byld/ChangeLog,v 1.5 2008/12/22 06:26:23 vapier Exp $
+
+  22 Dec 2008; Mike Frysinger <vapier@gentoo.org> byld-1.0.3.ebuild:
+  Disable stripping -- this is a binary-only package.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
