@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2190 2008/12/21 17:49:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2191 2008/12/22 13:15:32 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Dec 2008; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  mask mail-client/claws-mail and new plugins to make version bump painless
+  for users
 
   21 Dec 2008; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Mask app-admin/eselect-{ctags,emacs}-1.8 for testing, bug 251847.
