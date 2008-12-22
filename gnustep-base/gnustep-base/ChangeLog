@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.79 2008/12/22 13:59:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.80 2008/12/22 16:14:18 voyageur Exp $
+
+  22 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  -files/gnustep-base-1.18.0-unexpected_check.patch,
+  gnustep-base-1.18.0.ebuild:
+  configure patch added in upstream tarball, updating ebuild
 
 *gnustep-base-1.18.0 (22 Dec 2008)
 

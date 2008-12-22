@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.18.0.ebuild,v 1.1 2008/12/22 13:59:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.18.0.ebuild,v 1.2 2008/12/22 16:14:18 voyageur Exp $
 
 EAPI=2
 
-inherit gnustep-base autotools
+inherit gnustep-base
 
 DESCRIPTION="A library of general-purpose, non-graphical Objective C objects."
 
@@ -27,11 +27,6 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=dev-libs/openssl-0.9.7
 	>=sys-libs/zlib-1.2"
 RDEPEND="${DEPEND}"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-unexpected_check.patch
-	eautoreconf
-}
 
 src_configure() {
 	egnustep_env
