@@ -1,0 +1,11 @@
+--- configure.ac.orig	2008-12-22 14:28:19.000000000 +0100
++++ configure.ac	2008-12-22 14:28:31.000000000 +0100
+@@ -2007,7 +2007,7 @@
+ saved_CPPFLAGS="$CPPFLAGS"
+ CPPFLAGS="$CPPFLAGS $OBJCFLAGS -x objective-c"
+ AC_MSG_CHECKING(for objc_set_unexpected() in runtime)
+-AC_COMPILE_IFELSE([#include "$srcdir/config/config.unexpected.m"],
++AC_LINK_IFELSE([#include "$srcdir/config/config.unexpected.m"],
+ 	have_unexpected=yes, have_unexpected=no)
+ if test $have_unexpected = yes; then
+   AC_DEFINE(HAVE_UNEXPECTED,1,
