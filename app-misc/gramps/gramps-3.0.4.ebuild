@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.4.ebuild,v 1.1 2008/12/22 12:46:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.4.ebuild,v 1.2 2008/12/22 19:23:17 fauli Exp $
 
 NEED_PYTHON="2.5"
 WANT_AUTOCONF="latest"
@@ -15,12 +15,12 @@ SRC_URI="mirror://sourceforge/gramps/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="gnome reports"
+IUSE="reports"
 
 RDEPEND=">=dev-python/pygtk-2.10.0
-	gnome? ( || ( dev-python/libgnome-python
+	|| ( dev-python/libgnome-python
 		>=dev-python/gnome-python-2.22.0
-		>=dev-python/gnome-python-desktop-2.6 ) )
+		>=dev-python/gnome-python-desktop-2.6 )
 	reports? ( media-gfx/graphviz )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext

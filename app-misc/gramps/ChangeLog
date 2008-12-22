@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.85 2008/12/22 12:46:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.86 2008/12/22 19:23:17 fauli Exp $
+
+  22 Dec 2008; Christian Faulhammer <fauli@gentoo.org> gramps-3.0.4.ebuild:
+  remove USE=gnome as it will work in the upcoming 3.1 series but not in
+  this here
 
 *gramps-3.0.4 (22 Dec 2008)
 
