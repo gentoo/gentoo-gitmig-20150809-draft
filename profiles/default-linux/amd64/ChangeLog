@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.165 2008/12/21 00:17:00 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.166 2008/12/22 16:29:45 angelos Exp $
+
+  22 Dec 2008; Christoph Mende <angelos@gentoo.org> +2007.0/deprecated,
+  +dev/32bit-userland/deprecated, +2007.0/desktop/deprecated,
+  +2007.0/no-multilib/deprecated, +2007.0/server/deprecated,
+  +vserver/deprecated:
+  Deprecated 2007.0 profiles
 
   21 Dec 2008; Jeremy Olexa <darkside@gentoo.org> 2007.0/package.use.mask,
   package.use.mask:
