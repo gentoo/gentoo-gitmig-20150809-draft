@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.26 2008/12/17 22:03:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.27 2008/12/22 21:26:59 darkside Exp $
+
+*wicd-1.5.7 (22 Dec 2008)
+
+  22 Dec 2008; Jeremy Olexa <darkside@gentoo.org> +wicd-1.5.7.ebuild:
+  Version bump:
+  1.5.7
+   * Improved suspend/resume support
+   * Encryption details containing % signs now work
+   * Many other bug fixes
 
   17 Dec 2008; Markus Meier <maekke@gentoo.org> wicd-1.5.4.ebuild:
   x86 stable, bug #250467
