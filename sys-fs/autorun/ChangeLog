@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/autorun
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/autorun/ChangeLog,v 1.3 2006/09/02 01:12:50 vapier Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/autorun/ChangeLog,v 1.4 2008/12/22 06:13:57 vapier Exp $
+
+  22 Dec 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/autorun-3.17-headers.patch, autorun-3.17.ebuild:
+  Fix building with gcc-4.3 #251684 by Diego E. Pettenò.
 
 *autorun-3.17 (02 Sep 2006)
 
