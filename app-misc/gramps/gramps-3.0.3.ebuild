@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.3.ebuild,v 1.6 2008/12/13 22:47:13 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.3.ebuild,v 1.7 2008/12/22 12:41:35 fauli Exp $
 
 NEED_PYTHON="2.5"
 WANT_AUTOCONF="latest"
@@ -43,6 +43,7 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+	epatch "${FILESDIR}"/${P}_fix-installation-race-condition.patch
 	eautoreconf
 	# This is for bug 215944, so .pyo/.pyc files don't get into the
 	# file system

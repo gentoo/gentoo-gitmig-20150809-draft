@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.83 2008/12/13 22:47:13 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.84 2008/12/22 12:41:35 fauli Exp $
+
+  22 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
+  +files/gramps-3.0.3_fix-installation-race-condition.patch,
+  gramps-3.0.3.ebuild:
+  fix a race condition for parallel install. Patch provided by flameeyes in
+  bug 249165
 
   13 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> gramps-3.0.3.ebuild:
   Stable on sparc, bug #249165
