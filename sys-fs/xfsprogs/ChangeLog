@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.104 2008/11/16 14:44:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.105 2008/12/22 06:03:31 vapier Exp $
+
+*xfsprogs-2.10.2 (22 Dec 2008)
+
+  22 Dec 2008; Mike Frysinger <vapier@gentoo.org> +xfsprogs-2.10.2.ebuild:
+  Version bump #251651 by Lars (Polynomial-C).
 
   16 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/xfsprogs-2.10.1-parallelmake.patch, xfsprogs-2.10.1.ebuild:
