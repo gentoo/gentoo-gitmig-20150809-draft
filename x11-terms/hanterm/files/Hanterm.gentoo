@@ -110,19 +110,19 @@ Hanterm*vtMenu*hardreset*Label:  Do Full Reset
 Hanterm*vtMenu*clearsavedlines*Label:  Reset and Clear Saved Lines
 
 Hanterm*fontMenu.Label:  VT Fonts
-Hanterm*fontMenu*fontdefault*Label:     Default
-Hanterm*fontMenu*font1*Label:   Unreadable
-Hanterm*VT100*font1:            nil2
-Hanterm*fontMenu*font2*Label:   Tiny
-Hanterm*VT100*font2:            5x7
-Hanterm*fontMenu*font3*Label:   Small
-Hanterm*VT100*font3:            6x10
-Hanterm*fontMenu*font4*Label:   Medium
-Hanterm*VT100*font4:            7x13
-Hanterm*fontMenu*font5*Label:   Large
-Hanterm*VT100*font5:            9x15
-Hanterm*fontMenu*font6*Label:   Huge
-Hanterm*VT100*font6:            10x20
+Hanterm*fontMenu*fontdefault*Label:	Default
+Hanterm*fontMenu*font1*Label:	Unreadable
+Hanterm*VT100*font1:		nil2
+Hanterm*fontMenu*font2*Label:	Tiny
+Hanterm*VT100*font2:		5x7
+Hanterm*fontMenu*font3*Label:	Small
+Hanterm*VT100*font3:		6x10
+Hanterm*fontMenu*font4*Label:	Medium
+Hanterm*VT100*font4:		7x13
+Hanterm*fontMenu*font5*Label:	Large
+Hanterm*VT100*font5:		9x15
+Hanterm*fontMenu*font6*Label:	Huge
+Hanterm*VT100*font6:		10x20
 Hanterm*fontMenu*fontescape*Label:	Escape Sequence
 Hanterm*fontMenu*fontsel*Label:		Selection
 

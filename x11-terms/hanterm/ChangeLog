@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/hanterm
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.24 2008/08/21 22:25:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.25 2008/12/22 16:44:16 matsuu Exp $
+
+*hanterm-3.1.6-r4 (22 Dec 2008)
+
+  22 Dec 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/hanterm-3.1.6-gentoo.patch, files/Hanterm.gentoo,
+  +hanterm-3.1.6-r4.ebuild:
+  Fixed strip issue, bug #252117.
 
   21 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
