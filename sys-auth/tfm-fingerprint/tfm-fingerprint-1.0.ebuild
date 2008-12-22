@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.5 2008/10/26 19:15:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/tfm-fingerprint/tfm-fingerprint-1.0.ebuild,v 1.6 2008/12/22 03:44:49 vapier Exp $
 
 inherit multilib
 
@@ -13,12 +13,15 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
+RESTRICT="strip"
 
 RDEPEND="sys-auth/bioapi"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 S=${WORKDIR}
+
+QA_TEXTRELS="usr/lib64/libtfmessbsp.so"
 
 src_install() {
 	# this is a binary blob, so it probably shouldnt live in /usr/lib
