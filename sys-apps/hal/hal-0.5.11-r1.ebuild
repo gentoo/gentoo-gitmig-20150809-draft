@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r1.ebuild,v 1.11 2008/12/19 17:37:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r1.ebuild,v 1.12 2008/12/22 21:44:12 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -32,6 +32,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.61
 		 ia64? ( >=sys-apps/dmidecode-2.7 )
 		 kernel_linux?	(
 							>=sys-fs/udev-111
+							!>=sys-fs/udev-125
 							>=sys-apps/util-linux-2.13
 							>=sys-kernel/linux-headers-2.6.19
 							crypt?	( >=sys-fs/cryptsetup-1.0.5 )
