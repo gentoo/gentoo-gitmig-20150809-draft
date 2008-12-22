@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/schroedinger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.23 2008/11/10 11:22:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.24 2008/12/22 14:21:50 armin76 Exp $
+
+  22 Dec 2008; Raúl Porcel <armin76@gentoo.org> schroedinger-1.0.5.ebuild:
+  arm stable
 
   10 Nov 2008; Raúl Porcel <armin76@gentoo.org> schroedinger-1.0.5.ebuild:
   ia64 stable
