@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9315 2008/12/21 17:49:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9316 2008/12/22 02:46:52 nyhm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -854,10 +854,6 @@ net-p2p/limewire
 # http://www.vdr-portal.de/board/thread.php?threadid=74833 (german)
 =net-www/xxv-1.2.1308
 =net-www/xxv-1.2.1315
-
-# Tristan Heaven <nyhm@gentoo.org> (21 Mar 2008)
-# Needs testing
->=games-strategy/warzone2100-2.1_beta2
 
 # Colin Morey <peitolm@gentoo.org> (20 Mar 2008)
 # Masked for testing, closing lots of little bugs
