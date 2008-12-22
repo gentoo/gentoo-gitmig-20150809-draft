@@ -1,6 +1,14 @@
 # ChangeLog for app-pda/synce-gvfs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gvfs/ChangeLog,v 1.1 2008/11/13 00:02:29 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gvfs/ChangeLog,v 1.2 2008/12/22 22:27:13 mescalinum Exp $
+
+*synce-gvfs-0.1-r1 (22 Dec 2008)
+
+  22 Dec 2008; Federico Ferri <mescalinum@gentoo.org>
+  +files/common-Makefile.am, +files/configure.ac.in,
+  +files/daemon-Makefile.am, +files/make-dist.sh, +synce-gvfs-0.1-r1.ebuild:
+  revbump, finally it fixes the issue about gvfs and it's (still) private
+  api
 
 *synce-gvfs-0.1 (13 Nov 2008)
 
