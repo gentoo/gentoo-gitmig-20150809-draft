@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9320 2008/12/22 15:07:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9321 2008/12/22 21:05:39 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,11 +39,6 @@
 =gnustep-base/gnustep-back-cairo-0.16.0
 =gnustep-base/gnustep-back-xlib-0.16.0
 =virtual/gnustep-back-0.16.0
-
-# Ulrich Mueller <ulm@gentoo.org> (21 Dec 2008)
-# Needs testing, bug 251847.
-=app-admin/eselect-ctags-1.8
-=app-admin/eselect-emacs-1.8
 
 # Hans de Graaff <graaff@gentoo.org> (21 Dec 2008)
 # Masked for removal in 60 days, see bug #251833.
