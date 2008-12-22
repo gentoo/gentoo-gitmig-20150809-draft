@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14_beta3.ebuild,v 1.2 2008/12/20 17:49:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14_beta3.ebuild,v 1.3 2008/12/22 17:33:22 angelos Exp $
 
 EAPI=2
 
@@ -74,12 +74,6 @@ src_configure() {
 		myconf+=" --disable-oggflac --disable-libOggFLACtest"
 	fi
 
-	if use zeroconf; then
-		myconf+=" --with-zeroconf=avahi"
-	else
-		myconf+=" --with-zeroconf=no"
-	fi
-
 	append-lfs-flags
 
 	econf \
@@ -103,6 +97,7 @@ src_configure() {
 		$(use_enable sysvipc un) \
 		$(use_enable vorbis oggvorbis) \
 		$(use_enable wavpack) \
+		$(use_with zeroconf zeroconf avahi) \
 		${myconf}
 }
 
