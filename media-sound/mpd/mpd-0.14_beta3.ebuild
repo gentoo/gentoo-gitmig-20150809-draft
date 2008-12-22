@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14_beta3.ebuild,v 1.3 2008/12/22 17:33:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14_beta3.ebuild,v 1.4 2008/12/22 17:37:35 angelos Exp $
 
 EAPI=2
 
@@ -108,7 +108,7 @@ src_install() {
 	keepdir /var/run/mpd
 
 	emake DESTDIR="${D}" install || die "emake install failed"
-#	rm -rf "${D}"/usr/share/doc/mpd/
+	rm -rf "${D}"/usr/share/doc/mpd/
 
 	dodoc AUTHORS NEWS README TODO UPGRADING
 	use doc && dodoc doc/protocol.html

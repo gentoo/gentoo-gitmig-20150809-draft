@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.142 2008/12/22 17:33:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.143 2008/12/22 17:37:35 angelos Exp $
+
+  22 Dec 2008; Christoph Mende <angelos@gentoo.org> mpd-0.14_beta3.ebuild:
+  Uncomment rm line, was never intended to be commented out
 
   22 Dec 2008; Christoph Mende <angelos@gentoo.org> mpd-0.14_beta3.ebuild:
   Use use_with instead of myconf for zeroconf
