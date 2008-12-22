@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>wrobel@gentoo.org</email>
-  <name>Gunnar Wrobel</name>
-  <description>Primary maintainer</description>
+	<email>loki_val@gentoo.org</email>
+	<name>Peter Alfredsen</name>
 </maintainer>
 </pkgmetadata>
