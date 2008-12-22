@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9318 2008/12/22 14:06:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9319 2008/12/22 14:42:08 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Bernard Cafarelli <voyageur@gentoo.org> (22 Dec 2008)
+# Mask new gnustep-base release until matching gorm is available
+=gnustep-base/gnustep-base-1.18.0
+=gnustep-base/gnustep-gui-0.16.0
+=gnustep-base/gnustep-back-art-0.16.0
+=gnustep-base/gnustep-back-cairo-0.16.0
+=gnustep-base/gnustep-back-xlib-0.16.0
+=virtual/gnustep-back-0.16.0
 
 # Christian Faulhammer <fauli@gentoo.org> (22 Dec 2008)
 # Mask to make version bump painless for users
