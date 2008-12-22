@@ -3,7 +3,8 @@
 # Distributed under the terms of the GNU General Public License v2
 
 depend() {
-	need net mpd
+	need net
+	use mpd
 }
 
 checkconfig() {
