@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mousepad
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.8 2008/12/15 04:49:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.9 2008/12/22 17:08:26 angelos Exp $
+
+  22 Dec 2008; Christoph Mende <angelos@gentoo.org> -mousepad-0.2.13.ebuild:
+  Removed old
 
   15 Dec 2008; Jeroen Roovers <jer@gentoo.org> mousepad-0.2.14.ebuild:
   Stable for HPPA (bug #249942).
