@@ -1,0 +1,5 @@
+default/linux/x86/vserver
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default/linux/x86/vserver make.profile
+

@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.141 2008/12/19 11:29:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.142 2008/12/22 15:03:10 armin76 Exp $
+
+  22 Dec 2008; Raúl Porcel <armin76@gentoo.org> +2007.0/deprecated,
+  +deprecated, +dev/deprecated, +gcc2/deprecated, +vserver/deprecated,
+  +xbox/deprecated:
+  Deprecate old profiles
 
   19 Dec 2008; Raúl Porcel <armin76@gentoo.org>
   2007.0/desktop/make.defaults:

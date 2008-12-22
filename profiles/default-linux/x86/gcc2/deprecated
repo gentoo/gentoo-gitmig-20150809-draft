@@ -1,0 +1,5 @@
+default/linux/x86/gcc2
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default/linux/x86/gcc2 make.profile
+

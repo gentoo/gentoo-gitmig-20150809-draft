@@ -1,0 +1,5 @@
+arch/x86/xbox
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/arch/x86/xbox make.profile
+
