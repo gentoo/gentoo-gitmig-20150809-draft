@@ -1,0 +1,5 @@
+default/linux/ia64/2008.0/desktop
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default/linux/ia64/2008.0/desktop make.profile
+

@@ -1,0 +1,5 @@
+default/linux/ia64/2008.0/server
+# cd /etc/
+# rm make.profile
+# ln -s ../usr/portage/profiles/default/linux/ia64/2008.0/server make.profile
+
