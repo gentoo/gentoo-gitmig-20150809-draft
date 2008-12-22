@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-9.5.ebuild,v 1.1 2008/12/10 03:48:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-9.5.ebuild,v 1.2 2008/12/22 05:55:02 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -21,12 +21,11 @@ src_unpack() {
 	sed -i \
 		-e "/^CFLAGS/ s:-O2:${CFLAGS}:" \
 		-e "/^LDFLAGS/ s:-s:${LDFLAGS}:" \
-		-e "/strip hdparm/d" \
 		Makefile || die "sed"
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die "compile error"
+	emake STRIP=: CC="$(tc-getCC)" || die "compile error"
 }
 
 src_install() {
