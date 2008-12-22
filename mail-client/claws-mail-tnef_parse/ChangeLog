@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail-tnef_parse
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-tnef_parse/ChangeLog,v 1.4 2008/11/28 23:24:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-tnef_parse/ChangeLog,v 1.5 2008/12/22 14:42:02 fauli Exp $
+
+*claws-mail-tnef_parse-0.3.3 (22 Dec 2008)
+
+  22 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-tnef_parse-0.3.3.ebuild:
+  version bump
 
   28 Nov 2008; Markus Meier <maekke@gentoo.org>
   claws-mail-tnef_parse-0.3.2.ebuild:
