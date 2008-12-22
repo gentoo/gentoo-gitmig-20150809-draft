@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.1_rc2.ebuild,v 1.1 2008/12/01 00:19:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.1.0.ebuild,v 1.1 2008/12/22 02:41:36 nyhm Exp $
 
-inherit autotools eutils versionator games
+inherit versionator games
 
 MY_PV=$(get_version_component_range -2)
 DESCRIPTION="3D real-time strategy game"
@@ -34,12 +34,6 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 RDEPEND="${RDEPEND}
 	media-fonts/dejavu"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	eautoreconf
-}
 
 src_compile() {
 	egamesconf \

@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.24 2008/12/01 00:19:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.25 2008/12/22 02:41:36 nyhm Exp $
+
+*warzone2100-2.1.0 (22 Dec 2008)
+
+  22 Dec 2008; Tristan Heaven <nyhm@gentoo.org> +warzone2100-2.1.0.ebuild:
+  Version bump
 
 *warzone2100-2.1_rc2 (01 Dec 2008)
 
