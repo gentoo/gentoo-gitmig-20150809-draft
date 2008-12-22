@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.84 2008/12/22 12:41:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.85 2008/12/22 12:46:58 fauli Exp $
+
+*gramps-3.0.4 (22 Dec 2008)
+
+  22 Dec 2008; Christian Faulhammer <fauli@gentoo.org> +gramps-3.0.4.ebuild:
+  version bump: Bugfix and translation update release
 
   22 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
   +files/gramps-3.0.3_fix-installation-race-condition.patch,
