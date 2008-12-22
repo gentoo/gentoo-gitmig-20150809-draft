@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2192 2008/12/22 14:42:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2193 2008/12/22 15:07:24 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Dec 2008; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  unmask mail-client/claws-mail-3.7.0
 
   22 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Mask new gnustep-base release until matching gorm is available
