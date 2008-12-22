@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.219 2008/12/20 15:32:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.220 2008/12/22 16:57:04 armin76 Exp $
+
+  22 Dec 2008; Raúl Porcel <armin76@gentoo.org> squid-2.7.5-r1.ebuild:
+  ia64/sparc stable wrt #250928
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> squid-2.7.5-r1.ebuild:
   Stable on ppc wrt bug 250928
