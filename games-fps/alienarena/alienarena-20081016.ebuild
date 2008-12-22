@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20080227.ebuild,v 1.2 2008/03/25 22:18:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20081016.ebuild,v 1.1 2008/12/22 17:20:30 nyhm Exp $
 
-inherit eutils flag-o-matic toolchain-funcs games
+inherit eutils toolchain-funcs games
 
 MY_PN=${PN}${PV:0:4}
 DESCRIPTION="Fast-paced multiplayer deathmatch game"
@@ -30,21 +30,14 @@ DEPEND="${RDEPEND}
 	!opengl? ( !dedicated? ( ${UIDEPEND} ) )
 	app-arch/unzip"
 
-S=${WORKDIR}/${MY_PN}/source
+S=${WORKDIR}/source
 
 src_unpack() {
 	unpack ${A}
-	cd ${MY_PN}
-	rm -f */*.so cr*
-	mv data1/scripts/maps/tca-titan2k8{\ ,}.rscript
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-include.patch
+	rm -f */*.so
 }
 
 src_compile() {
-	# To avoid audio crackling (gcc bug)
-	[[ $(gcc-fullversion) == "4.1.1" ]] && replace-flags -O? -O0
-
 	emake \
 		CC="$(tc-getCC)" \
 		OPTIMIZED_CFLAGS=no \
@@ -83,7 +76,7 @@ src_install() {
 		newgamesbin crded ${PN}-ded || die "newgamesbin crded failed"
 	fi
 
-	cd "${WORKDIR}/${MY_PN}"
+	cd "${WORKDIR}"
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r arena botinfo data1 || die "doins failed"
 	newicon aa.png ${PN}.png || die "newicon failed"
