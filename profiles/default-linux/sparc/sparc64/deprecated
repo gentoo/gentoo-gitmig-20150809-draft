@@ -1,5 +1,0 @@
-default/linux/sparc
-# cd /etc/
-# rm make.profile
-# ln -s ../usr/portage/profiles/default/linux/sparc make.profile
-
