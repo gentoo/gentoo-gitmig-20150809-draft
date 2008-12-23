@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/slim-themes
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.13 2008/12/14 23:27:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.14 2008/12/23 05:11:34 darkside Exp $
+
+*slim-themes-1.2.3a-r3 (23 Dec 2008)
+
+  23 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
+  -slim-themes-1.2.3a-r2.ebuild, +slim-themes-1.2.3a-r3.ebuild:
+  More themes! New Gentoo theme from bug 107526, ebuild diff by Daniel Pielmeier
 
   14 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
   slim-themes-1.2.3a-r2.ebuild:
