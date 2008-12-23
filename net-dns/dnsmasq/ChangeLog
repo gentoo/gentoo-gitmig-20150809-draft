@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.174 2008/11/03 12:58:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.175 2008/12/23 16:00:58 chutzpah Exp $
+
+*dnsmasq-2.46 (23 Dec 2008)
+
+  23 Dec 2008; Patrick McLean <chutz@gentoo.org> -dnsmasq-2.39.ebuild,
+  -dnsmasq-2.41.ebuild, -dnsmasq-2.42.ebuild, -dnsmasq-2.43.ebuild,
+  +dnsmasq-2.46.ebuild:
+  Version bump, remove "isc" USE flag as reading of isc leasefiles has been
+  dropped in this version (bug #252248). Clean out some old versions.
 
   03 Nov 2008; Raúl Porcel <armin76@gentoo.org> dnsmasq-2.39.ebuild:
   Remove resolvconf-gentoo dep, as its p.masked and going to be removed
