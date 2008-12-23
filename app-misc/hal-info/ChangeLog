@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.45 2008/10/28 17:04:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.46 2008/12/23 21:11:46 cardoe Exp $
+
+  23 Dec 2008; Doug Goldstein <cardoe@gentoo.org> -hal-info-20070425.ebuild,
+  -hal-info-20070516.ebuild, -hal-info-20071011.ebuild,
+  -hal-info-20071030.ebuild, -hal-info-20080310.ebuild:
+  remove old unsupported versions
 
   28 Oct 2008; Markus Rothe <corsair@gentoo.org> hal-info-20080508.ebuild:
   Stable on ppc64
