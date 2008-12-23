@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Bio-Das
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/ChangeLog,v 1.17 2008/11/18 14:25:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/ChangeLog,v 1.18 2008/12/23 09:50:45 robbat2 Exp $
+
+*Bio-Das-1.09 (23 Dec 2008)
+
+  23 Dec 2008; Robin H. Johnson <robbat2@gentoo.org> +Bio-Das-1.09.ebuild:
+  Version bump.
 
   18 Nov 2008; Torsten Veller <tove@gentoo.org> Bio-Das-1.02.ebuild,
   Bio-Das-1.03.ebuild:
