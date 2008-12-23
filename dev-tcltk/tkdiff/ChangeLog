@@ -1,12 +1,12 @@
 # ChangeLog for dev-tcltk/tkdiff
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdiff/ChangeLog,v 1.9 2008/12/23 19:54:17 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdiff/ChangeLog,v 1.10 2008/12/23 19:58:20 mescalinum Exp $
 
 *tkdiff-4.1.4 (23 Dec 2008)
 
   23 Dec 2008; Federico Ferri <mescalinum@gentoo.org>
   +files/tkdiff-4.1.4-hg.patch, +tkdiff-4.1.4.ebuild:
-  version bump + patch from mercurial, bug #251778 - thanks Ottxor
+  version bump + patch for mercurial, bug #251778 - thanks Ottxor
 
   27 Apr 2007; Christian Faulhammer <opfer@gentoo.org> tkdiff-4.1.3.ebuild:
   stable amd64, bug 155797
