@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r3.ebuild,v 1.3 2008/12/19 17:37:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r3.ebuild,v 1.4 2008/12/23 20:43:00 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -207,22 +207,23 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS README || die "docs failed"
 
 	# hal umount for unclean unmounts
 	exeinto /lib/udev/
-	newexe "${FILESDIR}/hal-unmount.dev" hal_unmount
+	newexe "${FILESDIR}/hal-unmount.dev" hal_unmount || die "udev helper failed"
 
 	# initscript
-	newinitd "${FILESDIR}/0.5.10-hald.rc" hald
+	newinitd "${FILESDIR}/0.5.10-hald.rc" hald || die "init script failed"
 
 	# configuration
-	cp "${FILESDIR}/0.5.10-hald.conf" "${WORKDIR}/"
+	cp "${FILESDIR}/0.5.10-hald.conf" "${WORKDIR}/" || \
+		die "failed to copy hald.conf"
 
 	if use debug; then
 		sed -e 's:HALD_VERBOSE="no":HALD_VERBOSE="yes":' \
-			-i "${WORKDIR}/0.5.10-hald.conf"
+			-i "${WORKDIR}/0.5.10-hald.conf" || die "failed to change verbose"
 	fi
 	newconfd "${WORKDIR}/0.5.10-hald.conf" hald
 
