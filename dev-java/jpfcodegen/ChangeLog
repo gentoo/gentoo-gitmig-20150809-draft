@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jpfcodegen
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jpfcodegen/ChangeLog,v 1.1 2008/12/23 11:27:01 caster Exp $
+
+*jpfcodegen-0.4 (22 Dec 2008)
+
+  22 Dec 2008; Vlastimil Babka <caster@gentoo.org> +metadata.xml,
+  +jpfcodegen-0.4.ebuild:
+  New package - dependency of JabRef.
+
