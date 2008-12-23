@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/psemu-peopssoftgpu
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.12 2007/07/15 23:33:56 mr_bones_ Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/ChangeLog,v 1.13 2008/12/23 23:41:39 flameeyes Exp $
+
+  23 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org>
+  psemu-peopssoftgpu-1.17.ebuild:
+  Use absolute names for the sed calls, fixes unpacking on non-x86 (only ppc
+  as it is).
 
   15 Jul 2007; Michael Sterrett <mr_bones_@gentoo.org>
   psemu-peopssoftgpu-1.17.ebuild:

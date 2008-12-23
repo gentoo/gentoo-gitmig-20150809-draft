@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.7 2007/07/15 23:33:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.8 2008/12/23 23:41:39 flameeyes Exp $
 
 inherit eutils games
 
@@ -34,22 +34,21 @@ src_unpack() {
 		"${FILESDIR}"/${P}-gcc41.patch
 
 	if [[ ${ARCH} != "x86" ]] ; then
-		cd src
 		sed -i \
 			-e "s/^CPU = i386/CPU = ${ARCH}/g" \
-			-e '/^XF86VM =/s:TRUE:FALSE:' makes/mk.x11 \
+			-e '/^XF86VM =/s:TRUE:FALSE:' "${S}"/src/makes/mk.x11 \
 			|| die "sed non-x86 failed"
 		if use sdl ; then
 			sed -i \
 				-e "s/OBJECTS.*i386.o//g" \
-				-e "s/-D__i386__//g" makes/mk.fpse \
+				-e "s/-D__i386__//g" "${S}"/src/makes/mk.fpse \
 				|| die "sed sdl failed"
 		fi
 	fi
 	# bug #185428
 	sed -i \
 		-e 's:/X11R6::' \
-		src/makes/mk.x11 \
+		"${S}"/src/makes/mk.x11 \
 		|| die "sed failed"
 }
 
