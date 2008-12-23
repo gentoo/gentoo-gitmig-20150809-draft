@@ -1,9 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/2006.1/G4/make.defaults,v 1.1 2006/06/26 11:31:18 pylon Exp $
-
-CFLAGS="-O2 -mtune=G4 -mcpu=G4 -maltivec -mabi=altivec -pipe"
-CXXFLAGS="${CFLAGS}"
-
-STAGE1_USE="altivec unicode"
-USE="${STAGE1_USE} ${USE}"

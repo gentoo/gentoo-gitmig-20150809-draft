@@ -1,6 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc32/2006.1/make.defaults,v 1.9 2007/08/08 19:27:24 dev-zero Exp $
-
-STAGE1_USE="unicode nptl nptlonly"
-USE="${STAGE1_USE} alsa apache2 arts bitmap-fonts bonobo cdr cups dvd eds emboss encode esd firefox fortran gdbm gif gnome gpm gstreamer gtk gtkhtml jpeg kde ldap libwww mad mikmod mozilla mp3 mpeg ogg opengl pam pdf png qt3 qt4 quicktime ruby sdl spell truetype truetype-fonts type1-fonts vorbis X xml xv"
