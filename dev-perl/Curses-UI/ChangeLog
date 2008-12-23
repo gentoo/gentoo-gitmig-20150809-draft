@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Curses-UI
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.19 2008/12/08 03:37:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/ChangeLog,v 1.20 2008/12/23 18:35:42 robbat2 Exp $
+
+*Curses-UI-0.96.07 (23 Dec 2008)
+
+  23 Dec 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +Curses-UI-0.96.07.ebuild:
+  Version bump.
 
 *Curses-UI-0.96.05 (08 Dec 2008)
 
