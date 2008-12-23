@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pump
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.39 2007/12/29 20:04:20 phreak Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.40 2008/12/23 16:30:51 mpagano Exp $
+
+*pump-0.8.24-r1 (23 Dec 2008)
+
+  23 Dec 2008; Mike Pagano <mpagano@gentoo.org> +pump-0.8.24-r1.ebuild:
+  Add version that builds and works wrt bug #198121 (gcc43).
 
   29 Dec 2007; Christian Heim <phreak@gentoo.org>
   +files/pump-0.8.24-redefinition.patch, pump-0.8.24.ebuild:
