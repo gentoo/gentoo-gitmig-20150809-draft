@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xwarppointer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwarppointer/ChangeLog,v 1.1 2008/12/22 17:41:13 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwarppointer/ChangeLog,v 1.2 2008/12/23 17:57:16 hncaldwell Exp $
+
+  23 Dec 2008; Heath Caldwell <hncaldwell@gentoo.org> xwarppointer-1.ebuild:
+  Added ~ppc keyword. Fixes bug #252237.
 
 *xwarppointer-1 (22 Dec 2008)
 
