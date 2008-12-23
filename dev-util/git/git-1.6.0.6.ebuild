@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.0.6.ebuild,v 1.3 2008/12/23 17:09:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.0.6.ebuild,v 1.4 2008/12/23 19:19:50 robbat2 Exp $
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion
 
@@ -110,36 +110,30 @@ src_unpack() {
 	exportmakeopts
 }
 
-src_compile() {
+git_emake() {
 	emake ${MY_MAKEOPTS} \
 		DESTDIR="${D}" \
 		OPTCFLAGS="${CFLAGS}" \
 		OPTLDFLAGS="${LDFLAGS}" \
 		prefix=/usr \
 		htmldir=/usr/share/doc/${PF}/html \
-		|| die "make failed"
+		"$@"
+}
+
+src_compile() {
+	git_emake || die "emake failed"
 
 	if use emacs ; then
 		elisp-compile contrib/emacs/{,vc-}git.el || die "emacs modules failed"
 	fi
 	if use perl && use cgi ; then
-		emake ${MY_MAKEOPTS} \
-		DESTDIR="${D}" \
-		OPTCFLAGS="${CFLAGS}" \
-		OPTLDFLAGS="${LDFLAGS}" \
-		prefix=/usr \
-		htmldir=/usr/share/doc/${PF}/html \
-		gitweb/gitweb.cgi || die "make gitweb/gitweb.cgi failed"
+		git_emake \
+			gitweb/gitweb.cgi || die "emake gitweb/gitweb.cgi failed"
 	fi
 }
 
 src_install() {
-	emake ${MY_MAKEOPTS} \
-		DESTDIR="${D}" \
-		OPTCFLAGS="${CFLAGS}" \
-		OPTLDFLAGS="${LDFLAGS}" \
-		prefix=/usr \
-		htmldir=/usr/share/doc/${PF}/html \
+	git_emake \
 		install || \
 		die "make install failed"
 
@@ -283,7 +277,8 @@ src_test() {
 	cd "${S}"
 	# Now run the tests
 	einfo "Start test run"
-	emake ${MY_MAKEOPTS} DESTDIR="${D}" prefix=/usr test || die "tests failed"
+	git_emake \
+		test || die "tests failed"
 }
 
 showpkgdeps() {
