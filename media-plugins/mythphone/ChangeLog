@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythphone
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/ChangeLog,v 1.32 2008/12/21 17:08:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/ChangeLog,v 1.33 2008/12/23 17:25:59 maekke Exp $
+
+  23 Dec 2008; Markus Meier <maekke@gentoo.org>
+  mythphone-0.21_p17105.ebuild:
+  x86 stable, bug #239341
 
   21 Dec 2008; nixnut <nixnut@gentoo.org> mythphone-0.21_p17105.ebuild:
   Stable on ppc wrt bug 239341

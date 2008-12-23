@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythvideo
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.73 2008/12/21 17:10:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.74 2008/12/23 17:26:40 maekke Exp $
+
+  23 Dec 2008; Markus Meier <maekke@gentoo.org>
+  mythvideo-0.21_p17595.ebuild:
+  x86 stable, bug #239341
 
   21 Dec 2008; nixnut <nixnut@gentoo.org> mythvideo-0.21_p17595.ebuild:
   Stable on ppc wrt bug 239341

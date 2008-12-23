@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.79 2008/12/21 17:06:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.80 2008/12/23 17:24:38 maekke Exp $
+
+  23 Dec 2008; Markus Meier <maekke@gentoo.org>
+  mythmusic-0.21_p17821.ebuild:
+  x86 stable, bug #239341
 
   21 Dec 2008; nixnut <nixnut@gentoo.org> mythmusic-0.21_p17821.ebuild:
   Stable on ppc wrt bug 239341

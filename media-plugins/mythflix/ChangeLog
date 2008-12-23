@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythflix
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythflix/ChangeLog,v 1.22 2008/12/21 17:00:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythflix/ChangeLog,v 1.23 2008/12/23 17:21:45 maekke Exp $
+
+  23 Dec 2008; Markus Meier <maekke@gentoo.org> mythflix-0.21_p19046.ebuild:
+  x86 stable, bug #239341
 
   21 Dec 2008; nixnut <nixnut@gentoo.org> mythflix-0.21_p19046.ebuild:
   Stable on ppc wrt bug 239341

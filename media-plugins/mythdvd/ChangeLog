@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythdvd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.52 2008/12/21 16:48:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.53 2008/12/23 17:21:05 maekke Exp $
+
+  23 Dec 2008; Markus Meier <maekke@gentoo.org> mythdvd-0.21.ebuild:
+  x86 stable, bug #239341
 
   21 Dec 2008; nixnut <nixnut@gentoo.org> mythdvd-0.21.ebuild:
   Stable on ppc wrt bug 239341
