@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.63 2008/12/21 16:50:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.64 2008/12/23 17:28:26 maekke Exp $
+
+  23 Dec 2008; Markus Meier <maekke@gentoo.org> mythweb-0.21_p17573.ebuild:
+  x86 stable, bug #239341
 
   21 Dec 2008; nixnut <nixnut@gentoo.org> mythweb-0.21_p17573.ebuild:
   Stable on ppc wrt bug 239341
