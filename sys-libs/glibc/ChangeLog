@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.596 2008/12/08 03:29:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.597 2008/12/23 11:59:43 bluebird Exp $
+
+  23 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  files/eblits/common.eblit:
+  Add support to optimize for UltraSPARC T1 and T2 cpus
 
 *glibc-2.9_p20081201 (08 Dec 2008)
 
