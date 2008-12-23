@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2198 2008/12/23 19:45:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2199 2008/12/23 21:24:23 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Dec 2008; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Provide better description for ruby 1.8.7 mask
 
   23 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask udhcp and tinylogin.
