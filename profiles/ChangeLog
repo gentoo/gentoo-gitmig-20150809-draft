@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2199 2008/12/23 21:24:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2200 2008/12/23 22:16:46 betelgeuse Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Dec 2008; Petteri Räty <betelgeuse@gentoo.org> package.mask:
+  Add >=obex-data-server-0.4 to net-wireless/bluez mask. Fixes
+  bug #249315.
 
   23 Dec 2008; Hans de Graaff <graaff@gentoo.org> package.mask:
   Provide better description for ruby 1.8.7 mask
