@@ -1,0 +1,34 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN liferea-1.4.23.orig/configure.ac liferea-1.4.23/configure.ac
+--- liferea-1.4.23.orig/configure.ac	2008-11-29 16:43:57.000000000 -0500
++++ liferea-1.4.23/configure.ac	2008-12-23 11:59:59.000000000 -0500
+@@ -23,6 +23,8 @@ AC_ISC_POSIX
+ AC_PROG_CC
+ AM_PROG_CC_STDC
+ AM_PROG_CC_C_O
++dnl Mozilla needs C++; don't make conditional, or autoconf fails
++AC_PROG_CXX
+ AC_HEADER_STDC
+ AC_PROG_INSTALL
+ AC_PROG_LN_S
+@@ -181,6 +183,7 @@ case "$GECKO" in
+ xulrunner) gecko_min_version=1.8; is_xulrunner=yes ;;
+ libxul*) gecko_min_version=1.9; is_xulrunner=yes ;;
+ *firefox) gecko_min_version=1.5; is_mozilla=yes ;;
++no) no_gecko=yes;;
+ *) AC_MSG_ERROR([$gecko_cv_gecko is not supported])
+ esac
+ 
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN liferea-1.4.23.orig/m4/gecko.m4 liferea-1.4.23/m4/gecko.m4
+--- liferea-1.4.23.orig/m4/gecko.m4	2008-10-26 16:55:39.000000000 -0400
++++ liferea-1.4.23/m4/gecko.m4	2008-12-23 11:56:13.000000000 -0500
+@@ -76,7 +76,9 @@ fi
+ 
+ AC_MSG_RESULT([$gecko_cv_gecko])
+ 
+-if test "x$gecko_cv_gecko" = "x"; then
++if test "x$gecko_cv_gecko" = "xno"; then
++	gecko_cv_have_gecko=no
++elif test "x$gecko_cv_gecko" = "x"; then
+ 	ifelse([$3],,[AC_MSG_ERROR([No gecko found; you may need to adjust PKG_CONFIG_PATH or install a mozilla/firefox/xulrunner -devel package])],[$3])
+ 	gecko_cv_have_gecko=no
+ elif ! ( echo "$_geckos" | egrep "(^| )$gecko_cv_gecko(\$| )" > /dev/null); then
