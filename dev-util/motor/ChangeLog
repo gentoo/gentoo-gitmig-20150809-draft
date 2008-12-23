@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/motor
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.13 2007/11/13 21:57:08 wolf31o2 Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.14 2008/12/23 17:46:51 mpagano Exp $
+
+*motor-3.4.0-r2 (23 Dec 2008)
+
+  23 Dec 2008; Mike Pagano <mpagano@gentoo.org>
+  +files/motor-3.4.0-gcc43.patch, +motor-3.4.0-r2.ebuild:
+  Patch version to builds with gcc43 and work wrt bug #251116 and bug #198121.
 
   13 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org> motor-3.4.0-r1.ebuild:
   QA Cleanup: removed COPYING from dodoc to shut repoman up.
