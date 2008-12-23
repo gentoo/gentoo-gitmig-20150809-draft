@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.7.ebuild,v 1.4 2008/12/17 20:53:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.7.ebuild,v 1.5 2008/12/23 14:05:40 armin76 Exp $
 
 EAPI=1
 
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/1.5.x/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="cups debug nls linguas_he latex"
 RESTRICT="test"
 
