@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/vendetta-online-bin-1.8.21.ebuild,v 1.1 2008/08/27 00:19:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/vendetta-online-bin-1.8.49.ebuild,v 1.1 2008/12/23 13:36:03 nyhm Exp $
 
 inherit eutils games
 

@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/vendetta-online-bin
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/ChangeLog,v 1.3 2008/08/27 00:19:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/ChangeLog,v 1.4 2008/12/23 13:36:03 nyhm Exp $
+
+*vendetta-online-bin-1.8.49 (23 Dec 2008)
+
+  23 Dec 2008; Tristan Heaven <nyhm@gentoo.org>
+  -vendetta-online-bin-1.8.21.ebuild, +vendetta-online-bin-1.8.49.ebuild:
+  Version bump
 
 *vendetta-online-bin-1.8.21 (27 Aug 2008)
 
