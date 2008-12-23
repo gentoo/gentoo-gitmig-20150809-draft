@@ -1,6 +1,12 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.67 2008/10/12 09:26:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.68 2008/12/23 11:35:31 caster Exp $
+
+*jabref-2.4.2 (23 Dec 2008)
+
+  23 Dec 2008; Vlastimil Babka <caster@gentoo.org> -jabref-2.3.ebuild,
+  +jabref-2.4.2.ebuild:
+  Version bump, bug #245207. No more bundling of jpfcodegen.
 
   12 Oct 2008; Vlastimil Babka <caster@gentoo.org> jabref-2.4.1.ebuild:
   Restore ~x86
