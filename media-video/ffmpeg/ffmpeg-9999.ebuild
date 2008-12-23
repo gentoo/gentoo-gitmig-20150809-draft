@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.1 2008/12/20 19:16:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.2 2008/12/23 12:13:03 aballier Exp $
 
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/ffmpeg/trunk"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="aac altivec amr debug dirac doc ieee1394 encode gsm ipv6 mmx mmxext vorbis
 	  test theora threads x264 xvid network zlib sdl X mp3 schroedinger
-	  hardcoded-tables bindist v4l v4l2 ssse3 vhook"
+	  hardcoded-tables bindist v4l v4l2 speex ssse3 vhook"
 
 RDEPEND="vhook? ( >=media-libs/imlib2-1.4.0 >=media-libs/freetype-2 )
 	sdl? ( >=media-libs/libsdl-1.2.10 )
@@ -26,13 +26,14 @@ RDEPEND="vhook? ( >=media-libs/imlib2-1.4.0 >=media-libs/freetype-2 )
 		theora? ( media-libs/libtheora media-libs/libogg )
 		x264? ( >=media-libs/x264-0.0.20081006 )
 		xvid? ( >=media-libs/xvid-1.1.0 ) )
-	aac? ( media-libs/faad2 )
+	aac? ( >=media-libs/faad2-2.6.1 )
 	zlib? ( sys-libs/zlib )
 	ieee1394? ( media-libs/libdc1394
 				sys-libs/libraw1394 )
 	dirac? ( media-video/dirac )
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
 	schroedinger? ( media-libs/schroedinger )
+	speex? ( media-libs/speex )
 	X? ( x11-libs/libX11 x11-libs/libXext )
 	amr? ( media-libs/amrnb media-libs/amrwb )"
 
@@ -89,6 +90,7 @@ src_compile() {
 	use aac && myconf="${myconf} --enable-libfaad"
 	use dirac && myconf="${myconf} --enable-libdirac"
 	use schroedinger && myconf="${myconf} --enable-libschroedinger"
+	use speex && myconf="${myconf} --enable-libspeex"
 	if use gsm; then
 		myconf="${myconf} --enable-libgsm"
 		# Crappy detection or our installation is weird, pick one (FIXME)
@@ -167,14 +169,12 @@ src_compile() {
 		--cc="$(tc-getCC)" \
 		${myconf} || die "configure failed"
 
-	emake -j1 depend || die "depend failed"
 	emake || die "make failed"
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "Install Failed"
+	emake DESTDIR="${D}" install || die "Install Failed"
 
-	use doc && emake -j1 documentation
 	dodoc Changelog README INSTALL
 	dodoc doc/*
 }
