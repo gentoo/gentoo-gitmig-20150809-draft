@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.2_rc1.ebuild,v 1.3 2008/12/22 20:55:56 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.2_rc1.ebuild,v 1.4 2008/12/23 19:31:42 maekke Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~armin76/dist/${P}.tar.bz2
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="utils"
 
 S="${WORKDIR}"
