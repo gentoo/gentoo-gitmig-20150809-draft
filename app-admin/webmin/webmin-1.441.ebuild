@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.441.ebuild,v 1.1 2008/12/05 01:09:02 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.441.ebuild,v 1.2 2008/12/23 05:21:35 darkside Exp $
 
 inherit eutils pam
 
@@ -107,4 +107,7 @@ pkg_postinst() {
 	use ssl || einfo "Point your web browser to http://localhost:10000 to use webmin."
 
 	einfo "NOTE: virtual-server has been removed from this ebuild."
+	elog "To create a login account for webmin named \"admin\", execute the "
+	elog "following command:"
+	elog "/usr/libexec/webmin/changepass.pl /etc/webmin admin <new_password>"
 }
