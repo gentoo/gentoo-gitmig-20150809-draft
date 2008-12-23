@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-libnotify/gmpc-libnotify-0.16.0.ebuild,v 1.2 2008/12/17 21:41:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-libnotify/gmpc-libnotify-0.16.0.ebuild,v 1.3 2008/12/23 21:57:36 flameeyes Exp $
 
 inherit autotools multilib
 
-DESCRIPTION="This plugin ends an announcement to the notification daemon on song change"
+DESCRIPTION="This plugin sends an announcement to the notification daemon on song change"
 HOMEPAGE="http://gmpcwiki.sarine.nl/index.php/Libnotify"
 SRC_URI="http://download.sarine.nl/Programs/gmpc/${PV}/${P}.tar.gz"
 
