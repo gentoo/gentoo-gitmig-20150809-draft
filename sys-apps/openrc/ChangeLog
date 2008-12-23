@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.50 2008/12/20 18:54:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.51 2008/12/23 23:22:19 cardoe Exp $
+
+*openrc-0.4.1 (23 Dec 2008)
+
+  23 Dec 2008; Doug Goldstein <cardoe@gentoo.org> +openrc-0.4.1.ebuild:
+  version bump. fixes s-s-d process matching and segfaults. fixes
+  netplug/ifplug/wpa_supplicant up events. adds support for wpa_supplicant
+  ctrl_interface directive. fix bug #251839 (and more)
 
   20 Dec 2008; Zac Medico <zmedico@gentoo.org> openrc-0.4.0.ebuild:
   Bug #251749 - Fix typo in sys-apps/sysvinit blocker.
