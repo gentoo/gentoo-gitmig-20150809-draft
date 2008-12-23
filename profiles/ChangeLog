@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2196 2008/12/22 21:39:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2197 2008/12/23 15:55:47 armin76 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Dec 2008; Raúl Porcel <armin76@gentoo.org> profiles.desc:
+  Remove ppc32 profiles that have been removed
 
   22 Dec 2008; Hans de Graaff <graaff@gentoo.org> package.mask:
   Revert the ruby-config package.mask. It must stay around long enough for

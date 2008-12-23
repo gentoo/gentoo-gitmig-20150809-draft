@@ -48,7 +48,6 @@ mips		default-linux/mips/2007.1-dev/generic-be/n64	dev
 
 
 # PPC32 Profiles
-ppc		default-linux/ppc/ppc32/2006.1			stable
 ppc		default-linux/ppc/ppc32/2007.0			stable
 ppc		default-linux/ppc/ppc32/2007.0/desktop		stable
 ppc		default-linux/ppc/ppc32/2007.0/G3		stable
@@ -61,10 +60,6 @@ ppc		default-linux/ppc/ppc32/2007.0/desktop/G4	stable
 ppc		default-linux/ppc/ppc32/2007.0/desktop/G4/Pegasos	stable
 
 # PPC64 Profiles
-#ppc64		default-linux/ppc/ppc64/2006.0/32bit-userland	stable
-#ppc64		default-linux/ppc/ppc64/2006.0/64bit-userland	stable
-#ppc64		default-linux/ppc/ppc64/2006.1/64bit-userland	stable
-#ppc64		default-linux/ppc/ppc64/2006.0/multilib		dev
 ppc		default-linux/ppc/ppc64/2007.0/32bit-userland	dev
 ppc64		default-linux/ppc/ppc64/2007.0/64bit-userland	dev
 
