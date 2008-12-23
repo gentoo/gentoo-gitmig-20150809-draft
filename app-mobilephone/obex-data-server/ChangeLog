@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obex-data-server
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.11 2008/12/23 22:05:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.12 2008/12/23 22:10:50 betelgeuse Exp $
+
+  23 Dec 2008; Petteri Räty <betelgeuse@gentoo.org>
+  obex-data-server-0.3.2.ebuild:
+  Mark hppa stable to fix bluez-gnome dep tree.
 
 *obex-data-server-0.3.4 (23 Dec 2008)
 
