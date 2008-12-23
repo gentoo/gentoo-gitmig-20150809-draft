@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/xml-simple-1.0.11.ebuild,v 1.1 2007/12/30 20:14:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/xml-simple-1.0.11.ebuild,v 1.2 2008/12/23 19:34:31 pvdabeel Exp $
 
 inherit ruby gems
 
@@ -9,5 +9,5 @@ HOMEPAGE="http://rubyforge.org/projects/xml-simple/"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86 ~ppc"
 IUSE=""

@@ -1,12 +1,15 @@
 # ChangeLog for dev-ruby/xml-simple
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.9 2008/11/10 20:29:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.10 2008/12/23 19:34:31 pvdabeel Exp $
 
   10 Nov 2008; Hans de Graaff <graaff@gentoo.org> -xml-simple-1.0.6.ebuild,
   -xml-simple-1.0.8.ebuild:
   Remove old versions
 
 *xml-simple-1.0.11 (30 Dec 2007)
+
+  23 Dec 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> xml-simple-1.0.11.ebuild:
+  Keyworded ~ppc. Closes bug #250745
 
   30 Dec 2007; Hans de Graaff <graaff@gentoo.org> +xml-simple-1.0.11.ebuild:
   Version bump
@@ -20,7 +23,7 @@
   13 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Replacing text-markup herd with the new sgml herd.
 
-  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
 *xml-simple-1.0.8 (19 Apr 2006)
