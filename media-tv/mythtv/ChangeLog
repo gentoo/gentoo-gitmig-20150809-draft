@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.266 2008/12/21 16:55:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.267 2008/12/23 17:16:50 maekke Exp $
+
+  23 Dec 2008; Markus Meier <maekke@gentoo.org>
+  mythtv-0.21_p18314-r1.ebuild:
+  x86 stable, bug #239341
 
   21 Dec 2008; nixnut <nixnut@gentoo.org> mythtv-0.21_p18314-r1.ebuild:
   Stable on ppc wrt bug 239341
