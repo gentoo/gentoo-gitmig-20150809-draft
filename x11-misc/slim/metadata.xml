@@ -5,5 +5,8 @@
 	<maintainer>
 		<email>darkside@gentoo.org</email>
 	</maintainer>
+	<use>
+		<flag name="screenshot">Enable screenshot support (using <pkg>media-gfx/imagemagick</pkg>)</flag>
+	</use>
 </pkgmetadata>
 
