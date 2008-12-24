@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/qmail-scanner
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.47 2008/12/10 22:43:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.48 2008/12/24 12:25:37 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  qmail-scanner-2.05.ebuild:
+  Add back ~sparc keyword, bug #249893
 
   10 Dec 2008; Markus Meier <maekke@gentoo.org> qmail-scanner-2.05.ebuild:
   amd64/x86 stable, bug #249893
