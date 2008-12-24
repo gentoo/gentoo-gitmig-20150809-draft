@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/s390-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/ChangeLog,v 1.14 2008/04/21 18:15:02 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/ChangeLog,v 1.15 2008/12/24 19:48:52 vapier Exp $
+
+*s390-tools-1.8.0 (24 Dec 2008)
+
+  24 Dec 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/s390-tools-1.8.0-build.patch, +s390-tools-1.8.0.ebuild:
+  Version bump.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata

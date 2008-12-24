@@ -1,0 +1,662 @@
+ - fix errors in subdir makes
+ - parallelize subdir runs
+ - cleanup flag handling
+
+--- Makefile
++++ Makefile
+@@ -9,17 +9,19 @@ ifeq ($(strip $(SYSFS)),true)
+ 	SUB_DIRS+=libu2s
+ endif
+ 
+-all: subdirs_make
++SUB_DIRS_ALL = $(patsubst %,subdirs_all_%,$(SUB_DIRS))
++SUB_DIRS_CLEAN = $(patsubst %,subdirs_clean_%,$(SUB_DIRS))
++SUB_DIRS_INSTALL = $(patsubst %,subdirs_install_%,$(SUB_DIRS))
+ 
+-subdirs_make:
+-	set -e ; for dir in $(SUB_DIRS) ; do \
+-		( cd $$dir ; $(MAKE) TOPDIR=$(TOPDIR) ARCH=$(ARCH); cd .. ); \
+-	done
++all: $(SUB_DIRS_ALL)
+ 
+-clean:
+-	set -e ; for dir in $(SUB_DIRS) ; do \
+-		( cd $$dir ; $(MAKE) TOPDIR=$(TOPDIR) ARCH=$(ARCH) clean; cd .. ); \
+-	done
++_subdir   = $(patsubst subdirs_%,%,$@)
++subdir    = $(shell expr $(_subdir) : '[^_]*_\(.*\)')
++subtarget = $(shell expr $(_subdir) : '\([^_]*\)_.*')
++subdirs_%:
++	$(MAKE) TOPDIR=$(TOPDIR) ARCH=$(ARCH) -C $(subdir) $(subtarget)
++
++clean: $(SUB_DIRS_CLEAN)
+ 
+ install: all
+ 	for dir in $(INSTDIRS); do \
+@@ -28,6 +30,4 @@ install: all
+ 	for i in 1 2 3 4 5 6 7 8; do \
+ 		test -d $(MANDIR)/man$$i || $(INSTALL) -g $(GROUP) -o $(OWNER) -d $(MANDIR)/man$$i; \
+ 	done
+-	set -e ; for dir in $(SUB_DIRS) ; do \
+-		( cd $$dir ; $(MAKE) TOPDIR=$(TOPDIR) ARCH=$(ARCH) install; cd .. ); \
+-	done
++	$(MAKE) $(SUB_DIRS_INSTALL)
+--- common.mak
++++ common.mak
+@@ -22,7 +22,9 @@ STRIP           = $(CROSS_COMPILE)strip
+ OBJCOPY         = $(CROSS_COMPILE)objcopy
+ OBJDUMP         = $(CROSS_COMPILE)objdump
+ INSTALL         = install # FIXME: We need s390-install (strip)
+-CFLAGS		= $(OPT_FLAGS) -Wall -O3 -DS390_TOOLS_RELEASE=$(S390_TOOLS_RELEASE)
++CFLAGS   += $(OPT_FLAGS) -Wall
++CXXFLAGS += $(OPT_FLAGS) -Wall
++CPPFLAGS += -DS390_TOOLS_RELEASE=$(S390_TOOLS_RELEASE)
+ export AS LD CC CPP AR NM STRIP OBJCOPY OBJDUMP INSTALL CFLAGS
+ 
+ # Support alternate install root
+--- cpuplugd/Makefile
++++ cpuplugd/Makefile
+@@ -7,18 +7,18 @@
+ 
+ include ../common.mak
+ 
+-CFLAGS += -I../include
++CPPFLAGS     += -I../include
+ 
+ all: cpuplugd
+ 
+ cpuplugd: daemon.c cpu.c info.c terms.c config.c main.c getopt.c mem.c vmstat.c cpuplugd.h
+-	$(CC) $(CFLAGS) daemon.c cpu.c info.c terms.c config.c main.c getopt.c mem.c vmstat.c -o $@ -lpthread
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) -o $@ $^ -lpthread
+ 
+ clean:
+ 	rm -f cpuplugd
+ 
+ install: all
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 cpuplugd $(USRSBINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 cpuplugd $(USRSBINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 man/cpuplugd.8 $(MANDIR)/man8
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 man/cpuplugd.conf.5 $(MANDIR)/man5
+ 
+--- dasdfmt/Makefile
++++ dasdfmt/Makefile
+@@ -1,17 +1,16 @@
+ # Include common definitions
+ include ../common.mak
+ 
+-CFLAGS       += -I../include
++CPPFLAGS     += -I../include
+ 
+ all: dasdfmt
+ 
+-dasdfmt: ../libvtoc/vtoc.o dasdfmt.c dasdfmt.h ../include/zt_common.h
+-	$(CC) $(CFLAGS) -c dasdfmt.c -o dasdfmt.o
+-	$(CC) dasdfmt.o ../libvtoc/vtoc.o -o dasdfmt 
++dasdfmt: ../libvtoc/vtoc.o dasdfmt.o
++dasdfmt.o: dasdfmt.h ../include/zt_common.h
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(BINDIR) $(MANDIR)/man8
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 dasdfmt $(BINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 dasdfmt $(BINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 dasdfmt.8  $(MANDIR)/man8 
+ 
+ clean:
+--- dasdinfo/Makefile
++++ dasdinfo/Makefile
+@@ -1,23 +1,20 @@
+ # Include common definitions
+ include ../common.mak
+ 
+-CFLAGS        += -I../include
++CPPFLAGS     += -I../include
+ LIB_OBJECTS   =
+-LIBS          =
+ ifeq ($(strip $(SYSFS)),true)
+ 	LIB_OBJECTS+=../libu2s/u2s.o
+-	CFLAGS+=-DSYSFS
++	CPPFLAGS+=-DSYSFS
+ endif
+ 
+ all: dasdinfo
+ 
+-dasdinfo: $(LIB_OBJECTS) dasdinfo.c
+-	$(CC) $(CFLAGS) -c dasdinfo.c -o dasdinfo.o
+-	$(CC) dasdinfo.o $(LIB_OBJECTS) -o dasdinfo $(LIBS)
++dasdinfo: $(LIB_OBJECTS) dasdinfo.o
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(BINDIR) $(MANDIR)/man8
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 dasdinfo $(BINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 dasdinfo $(BINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 dasdinfo.8  $(MANDIR)/man8
+ 
+ clean:
+--- dasdview/Makefile
++++ dasdview/Makefile
+@@ -1,23 +1,21 @@
+ # Include common definitions
+ include ../common.mak
+ 
+-CFLAGS        += -I../include
++CPPFLAGS     += -I../include
+ LIB_OBJECTS   = ../libvtoc/vtoc.o
+-LIBS          = 
+ ifeq ($(strip $(SYSFS)),true)
+ 	LIB_OBJECTS+=../libu2s/u2s.o
+-	CFLAGS+=-DSYSFS
++	CPPFLAGS+=-DSYSFS
+ endif	
+ 
+ all: dasdview
+ 
+-dasdview: $(LIB_OBJECTS) dasdview.c dasdview.h
+-	$(CC) $(CFLAGS) -c dasdview.c -o dasdview.o
+-	$(CC) dasdview.o $(LIB_OBJECTS) -o dasdview $(LIBS)
++dasdview.o: dasdview.h
++dasdview: $(LIB_OBJECTS) dasdview.o
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(BINDIR) $(MANDIR)/man8
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 dasdview $(BINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 dasdview $(BINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 dasdview.8  $(MANDIR)/man8 
+ 
+ clean:
+--- fdasd/Makefile
++++ fdasd/Makefile
+@@ -1,17 +1,16 @@
+ # Include common definitions
+ include ../common.mak
+ 
+-CFLAGS        += -I../include
++CPPFLAGS     += -I../include
+ 
+ all: fdasd
+ 
+-fdasd: ../libvtoc/vtoc.o fdasd.c fdasd.h
+-	$(CC) $(CFLAGS) -c fdasd.c -o fdasd.o
+-	$(CC) fdasd.o ../libvtoc/vtoc.o -o fdasd 
++fdasd: ../libvtoc/vtoc.o fdasd.o fdasd.h
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ fdasd.o ../libvtoc/vtoc.o
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(BINDIR) $(MANDIR)/man8
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 fdasd $(BINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 fdasd $(BINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 fdasd.8  $(MANDIR)/man8 
+ 
+ clean:
+--- ip_watcher/Makefile
++++ ip_watcher/Makefile
+@@ -13,7 +13,7 @@ install: ip_watcher.pl xcec-bridge start_hsnc.sh
+ 	chown $(OWNER).$(GROUP) $(USRSBINDIR)/start_hsnc.sh; \
+ 	chmod 755 $(USRSBINDIR)/start_hsnc.sh; \
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 ip_watcher.pl $(USRSBINDIR)
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 xcec-bridge $(USRSBINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 xcec-bridge $(USRSBINDIR)
+ 
+ xcec-bridge: xcec-bridge.c
+ 	$(CC) $(CFLAGS) -o xcec-bridge xcec-bridge.c
+--- ipl_tools/Makefile
++++ ipl_tools/Makefile
+@@ -7,12 +7,12 @@
+ 
+ include ../common.mak
+ 
+-CFLAGS += -I../include 
++CPPFLAGS     += -I../include
+ 
+ all: chreipl
+ 
+ chreipl: chreipl.h main.c getopt.c ccw.c fcp.c system.c sa.c ipl.c 
+-	$(CC) $(CFLAGS) main.c getopt.c ccw.c fcp.c system.c sa.c ipl.c -o $@
++	$(CC) $(CFLAGS) $(CPPFLAGS) main.c getopt.c ccw.c fcp.c system.c sa.c ipl.c -o $@
+ 	ln -sf chreipl lsreipl
+ 	ln -sf chreipl chshut
+ 	ln -sf chreipl lsshut
+@@ -24,7 +24,7 @@ clean:
+ 	rm -rf lsshut
+ 
+ install: all
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 chreipl $(USRSBINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 chreipl $(USRSBINDIR)
+ 	ln -f -s chreipl $(USRSBINDIR)/lsreipl
+ 	ln -f -s chreipl $(USRSBINDIR)/chshut
+ 	ln -f -s chreipl $(USRSBINDIR)/lsshut
+--- libu2s/Makefile
++++ libu2s/Makefile
+@@ -1,12 +1,11 @@
+ # Include common definitions
+ include ../common.mak
+ 
+-CFLAGS        += -I../include
++CPPFLAGS     += -I../include
+ 
+ all: u2s.o
+ 
+ u2s.o: u2s.c ../include/u2s.h
+-	$(CC) $(CFLAGS) -c u2s.c -o u2s.o
+ 
+ install:
+ 
+--- libvtoc/Makefile
++++ libvtoc/Makefile
+@@ -1,12 +1,11 @@
+ # Include common definitions
+ include ../common.mak
+ 
+-CFLAGS        += -I../include
++CPPFLAGS     += -I../include
+ 
+ all: vtoc.o
+ 
+ vtoc.o: vtoc.c ../include/vtoc.h
+-	$(CC) $(CFLAGS) -c vtoc.c -o vtoc.o
+ 
+ install:
+ 
+--- mon_tools/Makefile
++++ mon_tools/Makefile
+@@ -1,20 +1,16 @@
+ # Include common definitions
+ include ../common.mak
+ 
+-CFLAGS += -I../include
++CPPFLAGS     += -I../include
+ 
+ all: mon_fsstatd mon_procd
+ 
+-mon_fsstatd: mon_fsstatd.c mon_fsstatd.h
+-	$(CC) $(CFLAGS) -o mon_fsstatd mon_fsstatd.c
+-
+-mon_procd: mon_procd.c mon_procd.h
+-	$(CC) $(CFLAGS) -o mon_procd mon_procd.c
++mon_fsstatd.c mon_procd.c: mon_fsstatd.h
+ 
+ install: all
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 mon_fsstatd $(USRSBINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 mon_fsstatd $(USRSBINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 mon_fsstatd.8  $(MANDIR)/man8
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 mon_procd $(USRSBINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 mon_procd $(USRSBINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 mon_procd.8 $(MANDIR)/man8
+ 
+ clean:
+--- osasnmpd/Makefile
++++ osasnmpd/Makefile
+@@ -5,14 +5,14 @@ include ../common.mak
+ DIRS = osasnmpd-2.4 osasnmpd-2.6
+ 
+ all:
+-	for i in $(DIRS); do make -C $$i; done
++	set -e; for i in $(DIRS); do make -C $$i; done
+ 
+ clean:
+-	for i in $(DIRS); do make clean -C $$i; done
++	set -e; for i in $(DIRS); do make clean -C $$i; done
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(USRSBINDIR) $(MANDIR)/man8
+-	for i in $(DIRS); do make install -C $$i; done
++	set -e; for i in $(DIRS); do make install -C $$i; done
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 osasnmpd $(USRSBINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 osasnmpd.8  $(MANDIR)/man8
+ 
+--- osasnmpd/Makefile.rules
++++ osasnmpd/Makefile.rules
+@@ -1,12 +1,12 @@
+ #Genarl rules
+ 
+ ifeq ($(strip $(shell which net-snmp-config 2>/dev/null)),)
+-LIBS = -lucdagent -lucdmibs -lsnmp -lrpmdb -lrpm -lpopt -lrpmio -lwrap -lnsl -ldl -lcrypto
++LDLIBS = -lucdagent -lucdmibs -lsnmp -lrpmdb -lrpm -lpopt -lrpmio -lwrap -lnsl -ldl -lcrypto
+ else
+-LIBS = `net-snmp-config --agent-libs` 
++LDLIBS = `net-snmp-config --agent-libs` 
+ CFLAGS += `net-snmp-config --cflags`
+-CFLAGS += -DNETSNMP5
++CPPFLAGS += -DNETSNMP5
+ endif
+-CFLAGS += -I../../include
++CPPFLAGS += -I../../include
+ 
+ OBJS = ibmOSAMib.o ibmOSAMibUtil.o osasnmpd.o
+--- osasnmpd/osasnmpd-2.4/Makefile
++++ osasnmpd/osasnmpd-2.4/Makefile
+@@ -5,10 +5,10 @@ include ../Makefile.rules
+ all: osasnmpd-2.4
+ 
+ osasnmpd-2.4: $(OBJS)
+-	$(CC) -o osasnmpd-2.4 $(OBJS) $(LIBS) 
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+ 
+ install: osasnmpd-2.4
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 osasnmpd-2.4 $(USRSBINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 osasnmpd-2.4 $(USRSBINDIR)
+ 
+ clean:
+ 	rm -f $(OBJS) osasnmpd-2.4 core
+--- osasnmpd/osasnmpd-2.6/Makefile
++++ osasnmpd/osasnmpd-2.6/Makefile
+@@ -5,10 +5,10 @@ include ../Makefile.rules
+ all: osasnmpd-2.6
+ 
+ osasnmpd-2.6: $(OBJS)
+-	$(CC) $(CFLAGS) -o osasnmpd-2.6 $(OBJS) $(LIBS) 
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+ 
+ install: osasnmpd-2.6
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 osasnmpd-2.6 $(USRSBINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 osasnmpd-2.6 $(USRSBINDIR)
+ 
+ clean:
+ 	rm -f $(OBJS) osasnmpd-2.6 core
+--- qetharp/Makefile
++++ qetharp/Makefile
+@@ -1,24 +1,18 @@
+ # Common definitions
+ include ../common.mak
+ 
+-CFLAGS        += -I../include
++CPPFLAGS     += -I../include
+ 
+-all: qetharp-2.4 qetharp-2.6
+-
+-qetharp-2.4: qetharp24.c
+-	$(CC) $(CFLAGS) -o qetharp-2.4 qetharp24.c
+-
+-qetharp-2.6: qetharp26.c
+-	$(CC) $(CFLAGS) -o qetharp-2.6 qetharp26.c
++all: qetharp24 qetharp26
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(MANDIR)/man8 $(BINDIR)
+ 	$(INSTALL) -m 755 qetharp $(BINDIR)
+-	$(INSTALL) -s -m 755 qetharp-2.4 $(BINDIR)
+-	$(INSTALL) -s -m 755 qetharp-2.6 $(BINDIR)
++	$(INSTALL) -m 755 qetharp24 $(BINDIR)/qetharp-2.4
++	$(INSTALL) -m 755 qetharp26 $(BINDIR)/qetharp-2.6
+ 	$(INSTALL) -m 644 qetharp.8 $(MANDIR)/man8 
+ 
+ clean:
+-	rm -f qetharp-2.4 qetharp-2.6 *.o *~ core
++	rm -f qetharp24 qetharp26 *.o *~ core
+ 
+ .PHONY: all install clean
+--- tape390/Makefile
++++ tape390/Makefile
+@@ -1,22 +1,20 @@
+ # Common definitions
+ include ../common.mak
+ 
+-CFLAGS        += -D_FILE_OFFSET_BITS=64 -I../include -L.
++CPPFLAGS     += -D_FILE_OFFSET_BITS=64 -I../include -L.
+ 
+ all: tape390_display tape390_crypt
+ 
+-tape390_display: tape390_display.c tape390_common.c tape390_common.h
+-	$(CC) $(CFLAGS) -o $@ tape390_display.c tape390_common.c
++tape390_display: tape390_display.o tape390_common.o tape390_common.h
+ 
+-tape390_crypt: tape390_crypt.c tape390_common.c tape390_common.h
+-	$(CC) $(CFLAGS) -o $@ tape390_crypt.c tape390_common.c
++tape390_crypt: tape390_crypt.o tape390_common.o tape390_common.h
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(BINDIR) $(MANDIR)/man8
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 tape390_display $(BINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 tape390_display $(BINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 tape390_display.8 \
+ 		$(MANDIR)/man8
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 tape390_crypt $(BINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 tape390_crypt $(BINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 tape390_crypt.8 \
+ 		$(MANDIR)/man8
+ 
+--- tunedasd/src/Makefile
++++ tunedasd/src/Makefile
+@@ -8,14 +8,12 @@ includes = $(wildcard ../include/*.h)
+ all: tunedasd
+ 
+ tunedasd: $(objects)
+-	$(CC) $(objects) -o tunedasd
+ 
+-%.o: %.c $(includes) Makefile
+-	$(CC) $(CFLAGS) -c -o $@ $<
++%.c: $(includes) Makefile
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(BINDIR)
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 tunedasd $(BINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 tunedasd $(BINDIR)
+ 
+ clean:
+ 	rm -f *.o tunedasd
+--- vmconvert/Makefile
++++ vmconvert/Makefile
+@@ -1,7 +1,7 @@
+ # Common definitions
+ include ../common.mak
+ 
+-CXXFLAGS      = $(CFLAGS) -D_FILE_OFFSET_BITS=64 -I../include
++CPPFLAGS     += -D_FILE_OFFSET_BITS=64 -I../include
+ OBJS          = main.o lkcd_dump.o vm_dump.o register_content.o dump.o
+ 
+ all: vmconvert
+@@ -12,11 +12,11 @@ dump.o: dump.cpp dump.h
+ register_content.o: register_content.cpp register_content.h
+ 
+ vmconvert: $(OBJS)
+-	$(CXX) $(CXXFLAGS) -o vmconvert $(OBJS) -lz
++	$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) -o $@ $^ -lz
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(USRBINDIR) $(MANDIR)/man8
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 vmconvert $(USRBINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 vmconvert $(USRBINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 vmconvert.8  $(MANDIR)/man8
+ 
+ clean:
+--- vmcp/Makefile
++++ vmcp/Makefile
+@@ -1,17 +1,16 @@
+ # Include common definitions
+ include ../common.mak
+ 
+-CFLAGS        += -I../include
+-LIBS          = 
++CPPFLAGS     += -I../include
+ 
+ all: vmcp
+ 
+-vmcp: vmcp.c vmcp.h ../include/zt_common.h
+-	$(CC) $(CFLAGS)  vmcp.c -o vmcp
++vmcp: vmcp.o
++vmcp.o: vmcp.h ../include/zt_common.h
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(BINDIR) $(MANDIR)/man8
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 vmcp $(BINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 vmcp $(BINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 vmcp.8 $(MANDIR)/man8 
+ 
+ clean:
+--- vmur/Makefile
++++ vmur/Makefile
+@@ -1,16 +1,17 @@
+ # Common definitions
+ include ../common.mak
+ 
+-CFLAGS        += -D_FILE_OFFSET_BITS=64 -I../include -L.
++CPPFLAGS     += -D_FILE_OFFSET_BITS=64 -I../include
++LDFLAGS      += -L.
+ 
+ all: vmur
+ 
+-vmur: vmur.c vmur.h
+-	$(CC) $(CFLAGS) -o $@ vmur.c
++vmur: vmur.o
++vmur.o: vmur.h
+ 
+ install: all
+ 	$(INSTALL) -d -m 755 $(BINDIR) $(MANDIR)/man8
+-	$(INSTALL) -s -g $(GROUP) -o $(OWNER) -m 755 vmur $(BINDIR)
++	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 755 vmur $(BINDIR)
+ 	$(INSTALL) -g $(GROUP) -o $(OWNER) -m 644 vmur.8 \
+ 		$(MANDIR)/man8
+ 
+--- zdump/Makefile
++++ zdump/Makefile
+@@ -1,17 +1,13 @@
+ # Common definitions
+ include ../common.mak
+ 
+-CFLAGS        += -D_FILE_OFFSET_BITS=64 -I../include
+-SRCS          = zgetdump.c
++CPPFLAGS     += -D_FILE_OFFSET_BITS=64 -I../include
+ 
+ all: zgetdump
+ 
+-zgetdump: zgetdump.c
+-	$(CC) $(CFLAGS) -o zgetdump $(SRCS)
+-
+ install: all
+ 	$(INSTALL) -d -m 755 $(MANDIR)/man8 $(BINDIR)
+-	$(INSTALL) -s -m 755 zgetdump $(BINDIR)
++	$(INSTALL) -m 755 zgetdump $(BINDIR)
+ 	$(INSTALL) -m 644 zgetdump.8 $(MANDIR)/man8 
+ 
+ clean:
+--- zfcpdump/ramdisk/Makefile
++++ zfcpdump/ramdisk/Makefile
+@@ -12,16 +12,14 @@ ARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/ar
+ 
+ all: $(ZFCPDUMP_RD)
+ 
+-CFLAGS += -D_FILE_OFFSET_BITS=64
++CPPFLAGS += -D_FILE_OFFSET_BITS=64 -I../../include
++LDFLAGS  += -static
++LDLIBS   += -lz
+ 
+ $(ZFCPDUMP_RD): zfcp_dumper
+ 	/bin/sh ./create_rd.sh $(ARCH)
+ 
+-zfcp_dumper: zfcp_dumper.o
+-	$(CC) -o zfcp_dumper -static zfcp_dumper.o -lz
+-
+ zfcp_dumper.o: zfcp_dumper.c zfcp_dumper.h
+-	$(CC) $(CFLAGS) -c -I../../include zfcp_dumper.c
+ 
+ install: $(ZFCPDUMP_RD)
+ 	/bin/sh ./create_rd.sh -i
+--- zfcpdump_v2/Makefile
++++ zfcpdump_v2/Makefile
+@@ -6,12 +6,13 @@ LINUX_VERSION := 2.6.27
+ LINUX_DIR := linux-$(LINUX_VERSION)
+ E2FSPROGS := e2fsprogs-1.41.3
+ 
+-CFLAGS        += -D_FILE_OFFSET_BITS=64
++CPPFLAGS     += -D_FILE_OFFSET_BITS=64 -DGZIP_SUPPORT
++LDFLAGS      += -static
++LDLIBS       += -lz
+ 
+ all: zfcpdump.image
+ 
+ zfcpdump: zfcpdump.c zfcpdump.h
+-	$(CC) $(CFLAGS) -D GZIP_SUPPORT -static -o $@ zfcpdump.c -lz
+ 
+ e2fsck:
+ 	tar xfzv $(E2FSPROGS).tar.gz
+--- ziomon/Makefile
++++ ziomon/Makefile
+@@ -2,21 +2,20 @@
+ include ../common.mak
+ 
+ #CFLAGS+=-Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -g -I../include
+-CFLAGS+=-Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -DNDEBUG -O3 -I../include
++CFLAGS+=-Wall -Wundef -Wstrict-prototypes -Wno-trigraphs
++CPPFLAGS+=-DNDEBUG -I../include
+ 
+ all: ziomon_util ziomon_mgr ziomon_zfcpdd
+ 
+-ziomon_mgr: ziomon_dacc.o ziomon_util.o ziomon_mgr.c ziomon_tools.o ziomon_zfcpdd.o ziomon_msg_tools.o
+-	$(CC) -DWITH_MAIN $(CFLAGS) ziomon_mgr.c ziomon_dacc.o ziomon_tools.o ziomon_util.o ziomon_zfcpdd.o ziomon_msg_tools.o -o $@
++ziomon_mgr: ziomon_mgr.c ziomon_dacc.o ziomon_tools.o ziomon_util.o ziomon_zfcpdd.o ziomon_msg_tools.o
++	$(CC) $(CFLAGS) -DWITH_MAIN $(CPPFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+ 
+ ziomon_util: ziomon_util.c ziomon_util.h ziomon_tools.o
+-	$(CC) -DWITH_MAIN $(CFLAGS) ziomon_tools.o $< -o $@
++	$(CC) $(CFLAGS) -DWITH_MAIN $(CPPFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+ 
+ ziomon_zfcpdd: ziomon_zfcpdd.c ziomon_zfcpdd.h ziomon_tools.o
+-	$(CC) -DWITH_MAIN $(CFLAGS) ziomon_tools.o -lrt $< -o $@
+-
+-%.o: %.c
+-	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) -DWITH_MAIN $(CPPFLAGS) $(LDFLAGS) -o $@ $^ $(LDLIBS)
++ziomon_zfcpdd: LDLIBS += -lrt
+ 
+ install: all
+ 	cat ziomon  | sed -e 's/%S390_TOOLS_VERSION%/$(S390_TOOLS_RELEASE)/' > $(BINDIR)/ziomon;
+--- zipl/boot/Makefile
++++ zipl/boot/Makefile
+@@ -1,9 +1,8 @@
+ # Common definitions
+ include ../../common.mak
+ 
+-CFLAGS  += -I../include -D__ASSEMBLY__ -DVERSION=$(VERSION) \
++CPPFLAGS += -I../include -D__ASSEMBLY__ -DVERSION=$(VERSION) \
+ 	  -DRELEASE=$(RELEASE) -DPATCHLEVEL=$(PATCHLEVEL)
+-LDFLAGS = -O2
+ HEADERS = fba0.h fba2.h eckd0.h eckd1a.h eckd1b.h eckd2.h eckd2dump.h \
+           tapedump.h stage3.h tape0.h fba2dump.h eckd2mvdump.h
+ 
+@@ -14,7 +13,7 @@ all: data.c tape0.bin
+ 
+ %.o:	%.S
+ 	echo "$(CC) $(CFLAGS) -c -o $@ $<";                        \
+-	$(CC) $(CFLAGS) -c -o $@ $<
++	$(CC) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
+ 
+ %.exec:	%.o
+ 	@STAGE=$$(                                  \
+@@ -33,7 +32,7 @@ all: data.c tape0.bin
+ 		3) SFLAGS="-nostdlib -Wl,-Ttext,0xA000";; \
+ 	esac;                                       \
+ 	echo "$(CC) $(LDFLAGS) -o $@ $$SFLAGS $<";  \
+-	$(CC) $(LDFLAGS) -o $@ $$SFLAGS $<
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $$SFLAGS $<
+ 
+ %.bin:	%.exec
+ 	$(OBJCOPY) -O binary --only-section .text $< $@
+--- zipl/src/Makefile
++++ zipl/src/Makefile
+@@ -1,7 +1,7 @@
+ # Common definitions
+ include ../../common.mak
+ 
+-CFLAGS += -I../include -I../boot -I../../include \
++CPPFLAGS += -I../include -I../boot -I../../include \
+ 	  -DZFCPDUMP_DIR=$(ZFCPDUMP_DIR) \
+ 	  -DZFCPDUMP_IMAGE=$(ZFCPDUMP_IMAGE) -DZFCPDUMP_RD=$(ZFCPDUMP_RD) \
+ 	  -D_FILE_OFFSET_BITS=64
+@@ -12,15 +12,14 @@ includes = $(wildcard ../include/*.h)
+ all: zipl
+ 
+ zipl: ../boot/data.c $(objects)
+-	$(CC) $(objects) -o zipl
++	$(CC) $(CFLAGS) $(LDFLAGS) $(objects) -o $@
+ 
+-%.o: %.c $(includes) Makefile
+-	$(CC) $(CFLAGS) -c -o $@ $<
++%.c: $(includes) Makefile
+ 
+ install: all
+ 	@echo $(INSTALL)
+ 	$(INSTALL) -d -m 755 $(BINDIR)
+-	$(INSTALL) -s -c zipl $(BINDIR)
++	$(INSTALL) -c zipl $(BINDIR)
+ 
+ clean:
+ 	rm -f *.o zipl
