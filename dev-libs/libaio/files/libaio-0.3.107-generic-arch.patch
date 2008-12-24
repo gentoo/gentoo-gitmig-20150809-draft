@@ -3,7 +3,7 @@ using standard syscall() function
 
 --- src/libaio.h
 +++ src/libaio.h
-@@ -49,38 +49,33 @@ typedef enum io_iocb_cmd {
+@@ -49,38 +49,34 @@ typedef enum io_iocb_cmd {
  	IO_CMD_PWRITEV = 8,
  } io_iocb_cmd_t;
  
@@ -32,7 +32,8 @@ using standard syscall() function
 +
 +/* big endian, 32 bits */
 +#elif defined(__PPC__) || defined(__s390__) || defined(__ARMEB__) || \
-+      defined(__MIPSEB__) || defined(__sparc__)
++      defined(__MIPSEB__) || defined(__sparc__) || defined(__m68k__) || \
++      defined(__hppa__)
  #define PADDED(x, y)	unsigned y; x
  #define PADDEDptr(x, y)	unsigned y; x
  #define PADDEDul(x, y)	unsigned y; unsigned long x
