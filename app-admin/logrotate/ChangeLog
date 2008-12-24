@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.72 2008/12/15 17:30:51 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.73 2008/12/24 20:49:12 dang Exp $
+
+*logrotate-3.7.7 (24 Dec 2008)
+
+  24 Dec 2008; Daniel Gryniewicz <dang@gentoo.org>
+  +files/logrotate-3.7.7-datehack.patch,
+  +files/logrotate-3.7.7-ignore-hidden.patch,
+  +files/logrotate-3.7.7-weekly.patch, files/logrotate.conf,
+  +logrotate-3.7.7.ebuild:
+  Bump to 3.7.7; now considering fedora as upstream
 
   15 Dec 2008; Daniel Gryniewicz <dang@gentoo.org> logrotate-3.7.2.ebuild:
   Strip cflags; bug #250960
