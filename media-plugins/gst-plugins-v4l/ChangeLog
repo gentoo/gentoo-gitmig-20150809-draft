@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-v4l
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.35 2008/12/05 20:12:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.36 2008/12/24 11:02:00 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  gst-plugins-v4l-0.10.21.ebuild:
+  Add ~sparc keyword, bug #245949
 
 *gst-plugins-v4l-0.10.21 (05 Dec 2008)
 
