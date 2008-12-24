@@ -1,0 +1,36 @@
+--- a/src/Makefile.am	2008-12-24 12:22:22.059204647 +0100
++++ b/src/Makefile.am	2008-12-24 12:24:04.267205731 +0100
+@@ -5,13 +5,13 @@
+ # extractor
+ ift_extract_SOURCES = extract.c
+ ift_extract_CFLAGS = $(IFT_CFLAGS) $(AM_CFLAGS)
+-ift_extract_LDFLAGS = $(IFT_LIBS) -lgcrypt
++ift_extract_LDADD = $(IFT_LIBS) -lgcrypt
+ 
+ 
+ # export
+ ift_export_SOURCES = export.c
+ ift_export_CFLAGS = $(IFT_CFLAGS) $(AM_CFLAGS)
+-ift_export_LDFLAGS = $(IFT_LIBS)
++ift_export_LDADD = $(IFT_LIBS)
+ 
+ # UDEV
+ libudevdir = ${libdir}/udev
+@@ -23,7 +23,7 @@
+ 
+ ift_load_SOURCES = udev.c load.c load.h
+ ift_load_CFLAGS = $(IFT_CFLAGS) $(LOAD_CFLAGS) $(AM_CFLAGS)
+-ift_load_LDFLAGS = $(IFT_LIBS) $(LOAD_LIBS)
++ift_load_LDADD = $(IFT_LIBS) $(LOAD_LIBS)
+ 
+ rulesdir = ${sysconfdir}/udev/rules.d
+ rules_DATA =
+@@ -45,7 +45,7 @@
+ # HAL loader
+ ift_callout_SOURCES = callout.c load.c load.h
+ ift_callout_CFLAGS = $(IFT_CFLAGS) $(LOAD_CFLAGS) $(HAL_CFLAGS) $(AM_CFLAGS)
+-ift_callout_LDFLAGS = $(IFT_LIBS) $(LOAD_LIBS) $(HAL_LIBS)
++ift_callout_LDADD = $(IFT_LIBS) $(LOAD_LIBS) $(HAL_LIBS)
+ 
+ 50-isight-firmware.fdi: isight-firmware.fdi
+ 	cp $< $@

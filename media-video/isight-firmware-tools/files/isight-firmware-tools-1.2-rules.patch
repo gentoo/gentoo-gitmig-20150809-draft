@@ -1,0 +1,8 @@
+--- a/src/isight.rules.in	2008-12-24 12:00:21.943219661 +0100
++++ b/src/isight.rules.in	2008-12-24 12:04:07.788237004 +0100
+@@ -1 +1,4 @@
+-ACTION=="add", SYSFS{idVendor}=="05ac", SYSFS{idProduct}=="8300", RUN+="@udevdir@/ift-load --firmware /lib/firmware/isight.fw"
++#
++# iSight rules
++
++ACTION=="add", SYSFS{idVendor}=="05ac", SYSFS{idProduct}=="8300", RUN+="@libdir@/udev/ift-load -b %s{busnum} -d %s{devnum} --firmware /lib/firmware/isight.fw"

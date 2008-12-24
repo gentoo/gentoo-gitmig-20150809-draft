@@ -1,6 +1,17 @@
 # ChangeLog for media-video/isight-firmware-tools
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.5 2008/08/03 19:39:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.6 2008/12/24 11:49:21 eva Exp $
+
+*isight-firmware-tools-1.2-r1 (24 Dec 2008)
+
+  24 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/isight-firmware-tools-1.2-ift-ldadd.patch,
+  +files/isight-firmware-tools-1.2-rules.patch, -files/ift-ldadd.diff,
+  -isight-firmware-tools-0.5.1.1.ebuild, -isight-firmware-tools-1.0.ebuild,
+  -isight-firmware-tools-1.0.2.ebuild, +isight-firmware-tools-1.2-r1.ebuild:
+  Fixed forced --as-needed issue, was already in itf-ldadd patch, bug
+  #247904. Fix udev rules and make it mutlilib aware. Clean up old
+  revisions.
 
   03 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org> ChangeLog:
   remove hal from RDEPEND since it's not used
