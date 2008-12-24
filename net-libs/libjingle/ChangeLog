@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libjingle
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/ChangeLog,v 1.12 2008/11/13 00:53:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/ChangeLog,v 1.13 2008/12/24 10:11:46 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  libjingle-0.3.12.ebuild:
+  Add ~sparc keyword, bug #245949
 
   13 Nov 2008; Diego Pettenò <flameeyes@gentoo.org>
   +files/libjingle-0.3.12-asneeded.patch, libjingle-0.3.12.ebuild:
