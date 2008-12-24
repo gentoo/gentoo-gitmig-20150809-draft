@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/mwcollect
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.16 2007/07/24 20:55:51 jokey Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.17 2008/12/24 02:36:41 mpagano Exp $
+
+*mwcollect-3.0.4-r1 (24 Dec 2008)
+
+  24 Dec 2008; Michael Pagano <mpagano@gentoo.org>
+  +files/mwcollect-3.0.4-r1-gcc43.patch, +mwcollect-3.0.4-r1.ebuild:
+  Patch version to build and work with gcc 4.3 wrt to bugs #198121 and bug
+  #251436.
 
   24 Jul 2007; Markus Ullmann <jokey@gentoo.org>
   -files/mwcollect-3.0.0-capacity.patch,
