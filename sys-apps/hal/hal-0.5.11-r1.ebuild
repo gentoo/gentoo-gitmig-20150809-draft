@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r1.ebuild,v 1.13 2008/12/23 20:43:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r1.ebuild,v 1.14 2008/12/24 15:39:11 cardoe Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -207,7 +207,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake failed"
 	dodoc AUTHORS ChangeLog NEWS README || die "docs failed"
 
 	# hal umount for unclean unmounts
@@ -225,16 +225,21 @@ src_install() {
 		sed -e 's:HALD_VERBOSE="no":HALD_VERBOSE="yes":' \
 			-i "${WORKDIR}/0.5.10-hald.conf" || die "failed to change verbose"
 	fi
-	newconfd "${WORKDIR}/0.5.10-hald.conf" hald
+	newconfd "${WORKDIR}/0.5.10-hald.conf" hald || \
+		die "failed to install hald.conf"
 
 	if use X ; then
 		# New Configuration Snippets
-		dodoc "${WORKDIR}/${P}-extras/"*.fdi
-		dobin "${WORKDIR}/${P}-extras/migrate-xorg-to-fdi.py"
+		dodoc "${WORKDIR}/${P}-config-examples/"*.fdi || \
+			die "dodoc X examples failed"
+		dobin "${WORKDIR}/${P}-config-examples/migrate-xorg-to-fdi.py" || \
+			die "dodoc X migration script failed"
 
 		# Automagic conversion!
-		elog "Migrating xorg.conf Core Keyboard configuration to HAL FDI file..."
-		"${WORKDIR}/${P}-extras/migrate-xorg-to-fdi.py" 2> /dev/null > "${D}/etc/hal/fdi/policy/10-x11-input.fdi"
+		elog "Migrating xorg.conf Core Keyboard configuration to HAL FDI file"
+		"${WORKDIR}/${P}-config-examples/migrate-xorg-to-fdi.py" 2> /dev/null \
+			> "${D}/etc/hal/fdi/policy/10-x11-input.fdi" || \
+			ewarn "Failed to migrate your keyboard configuration."
 	fi
 
 	# We now create and keep /media here as both gnome-mount and pmount
