@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.40.01.ebuild,v 1.1 2008/12/24 00:34:16 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.40.01.ebuild,v 1.2 2008/12/24 01:33:02 williamh Exp $
 
 inherit eutils
 
@@ -12,9 +12,9 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="portaudio pulseaudio"
-DEPEND="portaudio? ( >=media-libs/portaudio-18.1-r5 )
-	pulseaudio? ( media-sound/pulseaudio )
-	app-arch/unzip"
+DEPEND="app-arch/unzip
+	portaudio? ( >=media-libs/portaudio-19_pre20071207 )
+	pulseaudio? ( media-sound/pulseaudio )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -47,12 +47,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	# portaudio.h is by default the same as portaudio18.h, but use the version
-	# 19 API if available
+	# portaudio.h is by default the same as portaudio18.h, but we only have
+	# portaudio 19.
 	if use portaudio; then
-		if has_version "=media-libs/portaudio-19*" ; then
-			mv -f "${S}/src/portaudio19.h" "${S}/src/portaudio.h"
-		fi
+		mv -f "${S}/src/portaudio19.h" "${S}/src/portaudio.h"
 	fi
 }
 
