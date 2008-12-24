@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-farsight
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.18 2008/08/01 18:40:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.19 2008/12/24 10:19:54 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  gst-plugins-farsight-0.12.9.ebuild:
+  Add ~sparc keyword, bug #245949
 
   01 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
