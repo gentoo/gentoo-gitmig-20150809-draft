@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.3.91.ebuild,v 1.1 2008/11/06 21:01:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.0.ebuild,v 1.1 2008/12/24 12:16:52 angelos Exp $
 
 EAPI=1
 
