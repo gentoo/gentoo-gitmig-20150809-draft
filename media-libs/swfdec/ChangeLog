@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/swfdec
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.55 2008/11/13 19:27:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.56 2008/12/24 14:25:44 cardoe Exp $
+
+*swfdec-0.8.4 (24 Dec 2008)
+
+  24 Dec 2008; Doug Goldstein <cardoe@gentoo.org> +swfdec-0.8.4.ebuild:
+  version bump. adds support for H264 compression in videos. fixes crashers
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> swfdec-0.6.8.ebuild:
   Marking swfdec-0.6.8 ppc64 stable for bug 236971
