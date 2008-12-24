@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4-r2.ebuild,v 1.3 2008/12/21 18:22:25 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4-r2.ebuild,v 1.4 2008/12/24 07:15:47 nerdboy Exp $
 
 inherit eutils multilib pam toolchain-funcs
 
@@ -47,6 +47,17 @@ pkg_setup() {
 		die "Tiff not merged with jbig USE flag"
 	    fi
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# force it not to strip binaries
+	for dir in etc util faxalter faxcover faxd faxmail faxrm faxstat \
+	    hfaxd sendfax sendpage ; do
+		sed -i -e "s:-idb:-idb \"nostrip\" -idb:g" \
+		    "${dir}"/Makefile.in || die "sed failed"
+	done
 }
 
 src_compile() {
@@ -148,7 +159,7 @@ src_install() {
 
 	use pam && pamd_mimic_system hylafax auth account session
 
-	dodoc CHANGES CONTRIBUTORS COPYRIGHT README TODO
+	dodoc CONTRIBUTORS README TODO
 }
 
 pkg_postinst() {
