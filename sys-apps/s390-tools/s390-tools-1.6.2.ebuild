@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.6.2.ebuild,v 1.1 2008/02/25 04:33:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.6.2.ebuild,v 1.2 2008/12/24 19:46:38 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~s390"
+KEYWORDS="-* s390"
 IUSE=""
 
 RDEPEND="sys-fs/sysfsutils"
