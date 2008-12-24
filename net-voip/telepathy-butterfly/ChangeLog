@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-butterfly
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.10 2008/09/26 12:26:29 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-butterfly/ChangeLog,v 1.11 2008/12/24 10:09:09 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  telepathy-butterfly-0.3.2.ebuild:
+  Add ~sparc keyword, bug #245949
 
   26 Sep 2008; Santiago M. Mola <coldwind@gentoo.org>
   telepathy-butterfly-0.3.2.ebuild:

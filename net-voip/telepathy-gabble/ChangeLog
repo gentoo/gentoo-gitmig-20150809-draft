@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.40 2008/12/14 12:44:46 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.41 2008/12/24 10:05:19 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  telepathy-gabble-0.7.16.ebuild:
+  Add ~sparc keyword, bug #245949
 
 *telepathy-gabble-0.7.16 (14 Dec 2008)
 
