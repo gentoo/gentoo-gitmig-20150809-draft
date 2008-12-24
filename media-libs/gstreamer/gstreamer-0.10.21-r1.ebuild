@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.21-r1.ebuild,v 1.1 2008/12/24 11:53:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.21-r1.ebuild,v 1.2 2008/12/24 12:15:17 ssuominen Exp $
 
 EAPI=2
 
@@ -35,7 +35,7 @@ src_prepare() {
 }
 
 src_configure() {
-	# Disable static archives, dependency tracking  to and examples 
+	# Disable static archives, dependency tracking and examples 
 	# to speed up build time
 	econf \
 		--disable-static \
