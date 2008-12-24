@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymsn
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymsn/ChangeLog,v 1.7 2008/08/20 20:33:43 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymsn/ChangeLog,v 1.8 2008/12/24 10:08:07 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> pymsn-0.3.3.ebuild:
+  Add ~sparc keyword, bug #245949
 
 *pymsn-0.3.3 (20 Aug 2008)
 
