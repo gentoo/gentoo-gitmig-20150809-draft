@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.307 2008/12/23 12:38:50 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.308 2008/12/24 18:12:29 armin76 Exp $
+
+  24 Dec 2008; Raúl Porcel <armin76@gentoo.org> php-5.2.8-r1.ebuild:
+  alpha/ia64 stable wrt #249875
 
   23 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> php-5.2.8-r1.ebuild:
   Stable on sparc, security bug #249875
