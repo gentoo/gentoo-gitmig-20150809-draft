@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtelepathy
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.21 2008/12/09 20:15:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.22 2008/12/24 10:03:53 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  libtelepathy-0.3.3.ebuild:
+  Add ~sparc keyword, bug #245949
 
   09 Dec 2008; Brent Baude <ranger@gentoo.org> libtelepathy-0.3.3.ebuild:
   Marking libtelepathy-0.3.3 ~ppc64 for bug 245949
