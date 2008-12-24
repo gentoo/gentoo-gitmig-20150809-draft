@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.38 2008/12/04 13:57:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.39 2008/12/24 15:26:11 vapier Exp $
+
+  24 Dec 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/libaio-0.3.107-generic-arch.patch, libaio-0.3.107.ebuild:
+  Add generic support for missing arches (arm, blackfin, sh, etc...).
 
   04 Dec 2008; Brent Baude <ranger@gentoo.org> libaio-0.3.106-r2.ebuild:
   stable ppc64, bug 245909
