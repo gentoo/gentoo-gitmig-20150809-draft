@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/farsight
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/ChangeLog,v 1.20 2008/08/24 15:23:09 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/ChangeLog,v 1.21 2008/12/24 10:20:40 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  farsight-0.1.28.ebuild:
+  Add ~sparc keyword, bug #245949
 
 *farsight-0.1.28 (24 Aug 2008)
 

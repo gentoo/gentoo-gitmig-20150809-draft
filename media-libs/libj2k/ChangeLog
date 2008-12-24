@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libj2k
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libj2k/ChangeLog,v 1.4 2007/05/15 10:25:37 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libj2k/ChangeLog,v 1.5 2008/12/24 10:18:21 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> libj2k-0.0.9.ebuild:
+  Add ~sparc keyword, bug #245949
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
