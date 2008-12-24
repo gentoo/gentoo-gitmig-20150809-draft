@@ -1,6 +1,10 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.22 2008/07/18 22:44:20 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.23 2008/12/24 10:10:54 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  telepathy-mission-control-4.67.ebuild:
+  Add ~sparc keyword, bug #245949
 
 *telepathy-mission-control-4.67 (18 Jul 2008)
 
