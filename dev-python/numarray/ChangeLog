@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numarray
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.32 2008/05/21 15:13:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/ChangeLog,v 1.33 2008/12/24 17:35:53 armin76 Exp $
+
+  24 Dec 2008; Raúl Porcel <armin76@gentoo.org> numarray-1.5.2-r1.ebuild:
+  Re-add ~s390 wrt #204039
 
   21 May 2008; Jeroen Roovers <jer@gentoo.org> numarray-1.5.2-r1.ebuild:
   Marked ~hppa too.
