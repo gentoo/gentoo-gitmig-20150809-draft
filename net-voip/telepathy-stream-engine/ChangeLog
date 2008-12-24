@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-stream-engine
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-stream-engine/ChangeLog,v 1.22 2008/10/15 19:00:33 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-stream-engine/ChangeLog,v 1.23 2008/12/24 11:02:46 bluebird Exp $
+
+  24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  telepathy-stream-engine-0.5.3.ebuild:
+  Add ~sparc keyword, bug #245949
 
 *telepathy-stream-engine-0.5.3 (15 Oct 2008)
 
