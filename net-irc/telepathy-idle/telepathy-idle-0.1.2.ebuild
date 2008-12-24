@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.2.ebuild,v 1.2 2008/01/12 15:59:16 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.2.ebuild,v 1.3 2008/12/24 10:10:03 bluebird Exp $
 
 DESCRIPTION="Full-featured IRC connection manager for Telepathy."
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/Components"
@@ -8,7 +8,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/dbus-glib
