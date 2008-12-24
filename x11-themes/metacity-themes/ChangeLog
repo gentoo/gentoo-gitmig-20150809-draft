@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/metacity-themes
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/ChangeLog,v 1.20 2008/08/03 20:57:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/ChangeLog,v 1.21 2008/12/24 12:54:47 eva Exp $
+
+  24 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  metacity-themes-1.1.ebuild:
+  slotmove x11-themes/metacity-themes-1.1 to slot 0, bug #236226.
 
   03 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org>
   metacity-themes-1.2.ebuild:

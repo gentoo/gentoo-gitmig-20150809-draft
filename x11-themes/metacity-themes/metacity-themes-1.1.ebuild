@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.1.ebuild,v 1.7 2007/07/11 02:54:47 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.1.ebuild,v 1.8 2008/12/24 12:54:47 eva Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ HOMEPAGE="http://art.gnome.org/theme_list.php?category=metacity"
 
 RDEPEND="x11-wm/metacity"
 
-SLOT="1"
+SLOT="0"
 LICENSE="as-is"
 KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE=""
@@ -58,7 +58,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr/share/themes
-	cd ${D}/usr/share/themes
+	cd "${D}/usr/share/themes"
 
 	unpack ${A}
 
@@ -74,17 +74,17 @@ src_install() {
 			dir=$new_dir
 		fi
 
-		if [ ! -d ${dir}/metacity-1 ]
+		if [ ! -d "${dir}/metacity-1" ]
 		then
 			mkdir tmp
-			mv ${dir}/* tmp
-			mv tmp ${dir}/metacity-1
+			mv "${dir}"/* tmp
+			mv tmp "${dir}"/metacity-1
 		fi
 	done
 
 	# This patch corrects some XML files that are considered incomplete by
 	# Metacity
-	epatch ${FILESDIR}/${PN}-1.0-gentoo.diff
+	epatch "${FILESDIR}/${PN}-1.0-gentoo.diff"
 
 	chmod -R ugo=rX *
 
