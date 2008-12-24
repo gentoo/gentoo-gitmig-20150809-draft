@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.1.ebuild,v 1.1 2008/12/23 23:22:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.1.ebuild,v 1.2 2008/12/24 06:59:46 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -31,7 +31,7 @@ RDEPEND="virtual/init
 	pam? ( virtual/pam )
 	>=sys-apps/baselayout-2.0.0
 	!<sys-fs/udev-133
-	!<sys-fs/sysvinit-2.86-r11"
+	!<sys-apps/sysvinit-2.86-r11"
 DEPEND="${RDEPEND}
 	virtual/os-headers"
 
@@ -63,7 +63,7 @@ src_unpack() {
 		unpack ${A}
 	fi
 	cd "${S}"
-	epatch "${FILESDIR}"/0.4.1/*.patch
+	epatch "${FILESDIR}"/0.4.0/*.patch
 }
 
 src_compile() {
@@ -174,6 +174,25 @@ pkg_preinst() {
 	# termencoding was added in 0.2.1 and needed in boot
 	has_version ">=sys-apps/openrc-0.2.1" || add_boot_init termencoding
 
+	# openrc-0.4.0 no longer loads the udev addon
+	enable_udev=0
+	if [[ ! -e "${ROOT}"/etc/runlevels/sysinit/udev ]] && \
+		[[ -e "${ROOT}"/etc/init.d/udev ]] && \
+		! has_version ">=sys-apps/openrc-0.4.0"
+	then
+		# make sure udev is in sysinit if it was enabled before
+		local rc_devices=$(
+			[[ -f /etc/rc.conf ]] && source /etc/rc.conf
+			[[ -f /etc/conf.d/rc ]] && source /etc/conf.d/rc
+			echo "${rc_devices:-${RC_DEVICES:-auto}}"
+		)
+		case ${rc_devices} in
+			udev|auto)
+				enable_udev=1
+				;;
+		esac
+	fi
+
 	# skip remaining migration if we already have openrc installed
 	has_version sys-apps/openrc && return 0
 
@@ -270,6 +289,11 @@ pkg_postinst() {
 			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/shutdown/* \
 				"${ROOT}"/etc/runlevels/shutdown
 		fi
+	fi
+
+	if [[ "$enable_udev" = 1 ]]; then
+		elog "Auto adding udev init script to the sysinit runlevel"
+		ln -sf /etc/init.d/udev "${ROOT}"/etc/runlevels/sysinit/udev
 	fi
 
 	# update the dependency tree bug #224171
