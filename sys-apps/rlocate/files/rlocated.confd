@@ -1,5 +1,0 @@
-# /etc/conf.d/rlocated
-
-# Custom options to pass to rlocated
-
-RLOCATED_OPTIONS=""
