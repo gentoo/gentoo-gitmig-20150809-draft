@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qc-usb-messenger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/ChangeLog,v 1.17 2008/12/25 15:26:04 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/ChangeLog,v 1.18 2008/12/25 15:45:57 maekke Exp $
+
+  25 Dec 2008; Markus Meier <maekke@gentoo.org>
+  qc-usb-messenger-1.8-r1.ebuild:
+  x86 stable, bug #245581
 
   25 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org>
   qc-usb-messenger-1.8-r1.ebuild:
