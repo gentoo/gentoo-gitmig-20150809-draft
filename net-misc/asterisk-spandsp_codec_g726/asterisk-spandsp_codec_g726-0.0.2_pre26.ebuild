@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-spandsp_codec_g726/asterisk-spandsp_codec_g726-0.0.2_pre26.ebuild,v 1.2 2007/01/06 16:40:13 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-spandsp_codec_g726/asterisk-spandsp_codec_g726-0.0.2_pre26.ebuild,v 1.3 2008/12/25 10:17:44 pva Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,6 +27,7 @@ do_compile() {
 src_unpack() {
 	unpack "${A}"
 
+	epatch "${FILESDIR}/${P}-spanddsp.patch"
 	# patch include declarations
 	sed -e 's:^\(#include.*\)"\(asterisk/.*\)":\1<\2>:g' \
 		-e 's:^\(#include.*\)"\(asterisk\.h\)":\1<asterisk/\2>:g' \
@@ -41,7 +42,7 @@ src_compile() {
 
 src_install() {
 	exeinto /usr/$(get_libdir)/asterisk/modules
-	doexe ${LIB_CODEC_G726}.so
+	doexe ${LIB_CODEC_G726}.so || die
 }
 
 pkg_postinst() {
