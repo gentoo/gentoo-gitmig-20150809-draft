@@ -1,21 +1,24 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract-Limit/SQL-Abstract-Limit-0.14.1.ebuild,v 1.1 2008/12/23 08:51:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract-Limit/SQL-Abstract-Limit-0.14.1-r1.ebuild,v 1.1 2008/12/25 21:02:49 robbat2 Exp $
 
 inherit versionator
 MODULE_AUTHOR="DAVEBAIRD"
 MY_P="${PN}-$(delete_version_separator 2)"
+S="${WORKDIR}/${MY_P}"
 
 inherit perl-module
 
 DESCRIPTION="portable LIMIT emulation"
 
-IUSE=""
+IUSE="test"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-DEPEND="dev-perl/SQL-Abstract
-	dev-perl/Test-Exception
-	dev-perl/DBI"
+RDEPEND="dev-perl/SQL-Abstract
+		 dev-perl/DBI"
+DEPEND="${RDEPEND}
+		test? ( dev-perl/Test-Deep 
+				dev-perl/Test-Exception )"
