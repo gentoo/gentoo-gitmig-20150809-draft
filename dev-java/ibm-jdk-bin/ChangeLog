@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.185 2008/12/20 20:17:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.186 2008/12/25 10:16:00 maekke Exp $
+
+  25 Dec 2008; Markus Meier <maekke@gentoo.org> ibm-jdk-bin-1.5.0.9.ebuild:
+  amd64/x86 stable, bug #252416
 
 *ibm-jdk-bin-1.5.0.9 (20 Dec 2008)
 
