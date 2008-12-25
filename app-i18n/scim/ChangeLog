@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.123 2008/11/16 17:00:10 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.124 2008/12/25 10:19:04 maekke Exp $
+
+  25 Dec 2008; Markus Meier <maekke@gentoo.org> scim-1.4.7-r2.ebuild:
+  amd64/x86 stable, bug #246064
 
 *scim-1.4.7-r2 (16 Nov 2008)
 
