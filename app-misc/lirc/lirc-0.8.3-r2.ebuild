@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3-r2.ebuild,v 1.7 2008/08/08 20:45:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.3-r2.ebuild,v 1.8 2008/12/25 13:30:54 gentoofan23 Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -241,6 +241,7 @@ src_unpack() {
 	edos2unix contrib/lirc.rules
 
 	epatch "${FILESDIR}/${P}-kernel-2.6.26.diff"
+	epatch "${FILESDIR}/${P}-kernel-2.6.27.diff"
 
 	# Apply patches needed for some special device-types
 	epatch "${FILESDIR}"/${P}-imon-pad2keys.patch
