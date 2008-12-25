@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9326 2008/12/24 13:21:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9327 2008/12/25 12:22:30 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1376,17 +1376,6 @@ net-dns/bind-dns-keygen
 # Tuấn Văn <langthang@gentoo.org> (15 Jul 2006)
 # Initial import. Masked for testing
 mail-filter/sid-milter
-
-# Martin Schlemmer <azarah@gentoo.org> (07 Jul 2006)
-# Testing release to get some feedback.  New features include:
-# - more detailed log format
-# - non-hardcoded default config
-# - stacked per-package config support
-# In general it should behave for intended purposes as expected (except for the
-# log format change), but feedback on config system, etc would be appreciated.
-# Fairly limited comments about it in /etc/sandbox.conf and
-# /etc/sandbox.d/00default.
->=sys-apps/sandbox-1.2.20_alpha1
 
 # Colin Kingsley <tercel@gentoo.org> (24 Jun 2006)
 # Masked for testing
