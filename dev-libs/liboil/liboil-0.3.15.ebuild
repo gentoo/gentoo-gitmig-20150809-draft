@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.15.ebuild,v 1.8 2008/12/07 12:04:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/liboil-0.3.15.ebuild,v 1.9 2008/12/25 07:14:03 ssuominen Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,9 @@ SLOT="0.3"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
-DEPEND="=dev-libs/glib-2*"
+RDEPEND="=dev-libs/glib-2*"
+DEPEND="${RDEPEND}
+	doc? ( dev-util/gtk-doc )"
 
 src_compile() {
 	strip-flags
