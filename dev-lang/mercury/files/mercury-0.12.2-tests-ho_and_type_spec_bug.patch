@@ -1,9 +1,0 @@
-diff -urN mercury-tests-0.12.2.orig/valid/Mmakefile mercury-tests-0.12.2/valid/Mmakefile
---- mercury-tests-0.12.2.orig/valid/Mmakefile	2005-08-17 16:44:17.000000000 +1200
-+++ mercury-tests-0.12.2/valid/Mmakefile	2007-01-07 15:12:25.000000000 +1300
-@@ -376,3 +376,5 @@
- 	rm -f *.err *.h
- 
- #-----------------------------------------------------------------------------#
-+
-+MCFLAGS-ho_and_type_spec_bug+=--no-optimize-higher-order

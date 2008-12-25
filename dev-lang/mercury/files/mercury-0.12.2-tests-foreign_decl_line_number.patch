@@ -1,7 +1,0 @@
-diff -urN mercury-tests-0.12.2.orig/invalid/foreign_decl_line_number.err_exp3 mercury-tests-0.12.2/invalid/foreign_decl_line_number.err_exp3
---- mercury-tests-0.12.2.orig/invalid/foreign_decl_line_number.err_exp3	1970-01-01 12:00:00.000000000 +1200
-+++ mercury-tests-0.12.2/invalid/foreign_decl_line_number.err_exp3	2007-01-07 15:12:25.000000000 +1300
-@@ -0,0 +1,3 @@
-+foreign_decl_line_number.m:19:2: error: #error Error in foreign decl
-+foreign_decl_line_number.m:23:2: error: #error Error in foreign code
-+foreign_decl_line_number.m:37:2: error: #error Error in foreign proc

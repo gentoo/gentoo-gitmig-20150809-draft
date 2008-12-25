@@ -1,6 +1,37 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.94 2008/12/14 20:47:27 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.95 2008/12/25 22:07:58 keri Exp $
+
+  25 Dec 2008; <keri@gentoo.org> -files/mercury-0.12.2-CFLAGS.patch,
+  -files/mercury-0.12.2-MAKEOPTS.patch,
+  -files/mercury-0.12.2-bootstrap.patch,
+  -files/mercury-0.12.2-deep_profiler.patch,
+  -files/mercury-0.12.2-docs.patch, -files/mercury-0.12.2-libgrades.patch,
+  -files/mercury-0.12.2-multilib.patch,
+  -files/mercury-0.12.2-parallel-install_grades.patch,
+  -files/mercury-0.12.2-pic_o-dependencies.patch,
+  -files/mercury-0.12.2-portage-r3.patch,
+  -files/mercury-0.12.2-profdeep-builtin_throw.patch,
+  -files/mercury-0.12.2-tests.patch,
+  -files/mercury-0.12.2-tests-dir_test.patch,
+  -files/mercury-0.12.2-tests-foreign_decl_line_number.patch,
+  -files/mercury-0.12.2-tests-ho_and_type_spec_bug.patch,
+  -files/mercury-0.12.2-tests-mdbrc.patch,
+  -files/mercury-0.12.2-tests-string_format.patch,
+  -files/mercury-0.12.2-tests-tabling_inf_recursion.patch,
+  -files/mercury-0.13.1-CFLAGS.patch, -files/mercury-0.13.1-LIBDIR.patch,
+  -files/mercury-0.13.1-MAKEOPTS.patch,
+  -files/mercury-0.13.1-bootstrap.patch,
+  -files/mercury-0.13.1-deep_profiler.patch,
+  -files/mercury-0.13.1-parallel-install_grades.patch,
+  -files/mercury-0.13.1-portage.patch,
+  -files/mercury-0.13.1-profdeep-builtin_throw.patch,
+  -files/mercury-0.13.1-tests.patch,
+  -files/mercury-0.13.1-tests-declarative-throw.patch,
+  -files/mercury-0.13.1-tests-mdbrc.patch, -mercury-0.12.2-r3.ebuild,
+  -mercury-0.12.2-r4.ebuild, -mercury-0.13.1.ebuild,
+  -mercury-0.13.1-r1.ebuild:
+  Remove old versions.
 
   14 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
   mercury-0.13.1-r2.ebuild:
