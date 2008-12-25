@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.124 2008/12/19 01:43:05 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.125 2008/12/25 10:16:46 vapier Exp $
+
+  25 Dec 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/nvidia-2.6.28.patch, nvidia-drivers-177.82.ebuild:
+  Add patch from upstream for linux 2.6.28 support.
 
 *nvidia-drivers-173.14.15 (19 Dec 2008)
 
