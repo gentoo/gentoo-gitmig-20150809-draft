@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/runit
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.29 2008/10/14 15:00:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/ChangeLog,v 1.30 2008/12/25 22:24:45 vapier Exp $
+
+*runit-2.0.0 (25 Dec 2008)
+
+  25 Dec 2008; Mike Frysinger <vapier@gentoo.org> +runit-2.0.0.ebuild:
+  Version bump #190983 by Daniel Pielmeier (billie).
 
   14 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> runit-1.7.0.ebuild:
   Set compiler and linker during src_compile rather than unpack.
