@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.54 2008/12/12 23:11:48 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.55 2008/12/25 18:45:23 pva Exp $
+
+*drupal-6.8 (25 Dec 2008)
+*drupal-5.14 (25 Dec 2008)
+
+  25 Dec 2008; Peter Volkov <pva@gentoo.org> +drupal-5.14.ebuild,
+  +drupal-6.8.ebuild:
+  Version bump, bug #252252, thank Tom Rogie aka Trogie for report.
 
 *drupal-6.7 (12 Dec 2008)
 *drupal-5.13 (12 Dec 2008)
