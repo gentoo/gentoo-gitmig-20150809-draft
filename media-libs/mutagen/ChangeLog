@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.65 2008/12/25 11:42:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.66 2008/12/25 14:27:08 klausman Exp $
+
+  25 Dec 2008; Tobias Klausmann <klausman@gentoo.org> mutagen-1.15.ebuild:
+  Stable on alpha, bug #251844
 
   25 Dec 2008; Markus Meier <maekke@gentoo.org> mutagen-1.15.ebuild:
   amd64/x86 stable, bug #251844
