@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/himerge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/ChangeLog,v 1.27 2008/12/23 21:50:28 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/ChangeLog,v 1.28 2008/12/25 11:11:33 maekke Exp $
+
+  25 Dec 2008; Markus Meier <maekke@gentoo.org> himerge-0.30.36.ebuild:
+  amd64/x86 stable, bug #252385
 
 *himerge-0.30.36 (23 Dec 2008)
 
