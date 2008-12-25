@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.574 2008/12/25 15:42:40 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.575 2008/12/25 15:49:49 maekke Exp $
+
+  25 Dec 2008; Markus Meier <maekke@gentoo.org>
+  gentoo-sources-2.6.27-r7.ebuild:
+  x86 stable, bug #251670
 
   25 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org>
   gentoo-sources-2.6.27-r7.ebuild:
