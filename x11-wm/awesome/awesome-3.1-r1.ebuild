@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.1-r1.ebuild,v 1.1 2008/12/21 23:53:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.1-r1.ebuild,v 1.2 2008/12/25 17:05:28 matsuu Exp $
 
 EAPI=2
 MY_P="${P/_/-}"
@@ -25,7 +25,7 @@ RDEPEND=">=dev-lang/lua-5.1
 	x11-libs/cairo[xcb]
 	x11-libs/libX11[xcb]
 	>=x11-libs/libxcb-1.1
-	x11-libs/pango
+	>=x11-libs/pango-1.19.3
 	>=x11-libs/xcb-util-0.3
 	media-libs/imlib2
 	dbus? ( >=sys-apps/dbus-1 )"
