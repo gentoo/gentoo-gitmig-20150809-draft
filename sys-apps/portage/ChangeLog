@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.562 2008/12/21 19:23:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.563 2008/12/25 07:20:43 zmedico Exp $
+
+*portage-2.2_rc19 (24 Dec 2008)
+
+  24 Dec 2008; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc19.ebuild:
+  2.2_rc19 bump. This also includes all of the fixes that are in 2.1.6.3.
+  Bug #210077 tracks all bugs fixed in the 2.2 branch.
+
+*portage-2.1.6.3 (24 Dec 2008)
+
+  24 Dec 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.6.3.ebuild:
+  2.1.6.3 bump. This fixes bug #251976 (new QA_PRESTRIPPED variable), bug
+  #252167 (dowgrade removed ebuilds), bug #252243 (avoid circular symlinks
+  in $PKGDIR), bug #252304 (reimplement repoman --version), bug #252374
+  (warn when fakeroot is missing). Bug #216231 tracks all bugs fixed since
+  2.1.4.x.
 
 *portage-2.2_rc18 (20 Dec 2008)
 
