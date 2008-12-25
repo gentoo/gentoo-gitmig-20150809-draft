@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.125 2008/12/24 11:56:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.126 2008/12/25 12:38:03 maekke Exp $
+
+  25 Dec 2008; Markus Meier <maekke@gentoo.org> tightvnc-1.3.9-r2.ebuild:
+  amd64 stable, bug #252368
 
   24 Dec 2008; Raúl Porcel <armin76@gentoo.org> tightvnc-1.3.9-r2.ebuild:
   arm/sparc/x86 stable wrt #252368
