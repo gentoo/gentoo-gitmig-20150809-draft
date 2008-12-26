@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.96 2008/11/25 22:13:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.97 2008/12/26 07:39:51 pva Exp $
+
+*wordpress-2.7 (26 Dec 2008)
+
+  26 Dec 2008; Peter Volkov <pva@gentoo.org> +wordpress-2.7.ebuild:
+  Version bump, bug #252250 thank Kevin Bowling for report.
 
 *wordpress-2.6.5 (25 Nov 2008)
 
