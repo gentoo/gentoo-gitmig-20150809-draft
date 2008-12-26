@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/taglib-sharp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.15 2008/12/14 15:28:29 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.16 2008/12/26 00:44:08 loki_val Exp $
+
+  26 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
+  -files/taglib-sharp-fix-docdir.patch,
+  -files/taglib-sharp-fix-sandbox-violation.patch,
+  -taglib-sharp-1.1.73998-r1.ebuild, -taglib-sharp-1.9.75474.ebuild,
+  -taglib-sharp-2.0.2.0.ebuild:
+  Punt old
 
   14 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   taglib-sharp-1.1.73998-r1.ebuild, taglib-sharp-1.9.75474.ebuild,
