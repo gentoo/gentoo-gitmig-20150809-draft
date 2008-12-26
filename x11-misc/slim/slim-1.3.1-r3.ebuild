@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1-r2.ebuild,v 1.1 2008/12/23 04:50:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1-r3.ebuild,v 1.1 2008/12/26 07:35:00 darkside Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="screenshot pam"
+IUSE="branding screenshot pam"
 
 DEPEND="x11-proto/xproto
 	x11-libs/libXmu
@@ -25,7 +25,8 @@ DEPEND="x11-proto/xproto
 	pam? ( virtual/pam )"
 RDEPEND="${DEPEND}
 	x11-apps/sessreg
-	screenshot? ( media-gfx/imagemagick )"
+	screenshot? ( media-gfx/imagemagick )
+	branding? ( >=x11-themes/slim-themes-1.2.3a-r3 )"
 
 src_prepare() {
 	# respect C[XX]FLAGS, fix crosscompile,
@@ -37,6 +38,11 @@ src_prepare() {
 		-r -e "s:^LDFLAGS=(.*):LDFLAGS=\1 ${LDFLAGS}:" \
 		Makefile || die "sed failed in Makefile"
 	epatch "${FILESDIR}/${P}-config.diff"	
+
+	if use branding; then
+		sed -i -e 's/  default/  slim-gentoo-simple/' slim.conf || die
+	fi
+
 }
 
 src_compile() {
