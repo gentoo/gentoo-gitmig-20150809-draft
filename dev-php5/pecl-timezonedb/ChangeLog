@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/pecl-timezonedb
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-timezonedb/ChangeLog,v 1.10 2008/10/13 15:52:58 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-timezonedb/ChangeLog,v 1.11 2008/12/26 22:07:06 armin76 Exp $
+
+  26 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  pecl-timezonedb-2008.8.ebuild:
+  Add ~arm/~s390/~sh wrt #197785
 
 *pecl-timezonedb-2008.8 (13 Oct 2008)
 
