@@ -1,0 +1,12 @@
+# ChangeLog for sys-apps/qcontrol
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qcontrol/ChangeLog,v 1.1 2008/12/26 18:21:59 armin76 Exp $
+
+*qcontrol-0.4.2 (26 Dec 2008)
+
+  26 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  +files/0.4.2-Makefile.patch, +files/conf.d, +files/init.d,
+  +files/qcontrol.1, +files/ts209.lua, +files/ts409.lua, +metadata.xml,
+  +qcontrol-0.4.2.ebuild:
+  Initial import, ebuild by me
+

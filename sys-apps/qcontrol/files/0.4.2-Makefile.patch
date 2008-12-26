@@ -1,0 +1,9 @@
+--- Makefile.orig	2008-11-23 12:44:33.000000000 +0000
++++ Makefile	2008-11-23 12:45:35.000000000 +0000
+@@ -1,5 +1,4 @@
+-CFLAGS=-Os -Wall -I /usr/include/lua5.1
+-LDFLAGS=-llua5.1 -lpthread
++LDFLAGS=-llua -lpthread
+ SOURCES=qcontrol.c ts209.c ts409.c evdev.c
+ OBJECTS=$(SOURCES:.c=.o)
+ EXECUTABLE=qcontrol
