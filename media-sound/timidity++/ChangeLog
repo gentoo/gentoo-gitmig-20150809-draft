@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.107 2008/12/10 15:38:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.108 2008/12/26 11:46:46 armin76 Exp $
+
+  26 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  timidity++-2.13.2-r7.ebuild:
+  arm/sparc stable wrt #249421
 
   10 Dec 2008; <ssuominen@gentoo.org> timidity++-2.13.2-r5.ebuild:
   Remove portaudo v18 support also from -r5.
