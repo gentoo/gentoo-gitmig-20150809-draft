@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.114 2008/12/26 06:55:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.115 2008/12/26 12:00:55 klausman Exp $
+
+  26 Dec 2008; Tobias Klausmann <klausman@gentoo.org> whois-4.7.27.ebuild:
+  Stable on alpha, bug #252525
 
   26 Dec 2008; Jeremy Olexa <darkside@gentoo.org> whois-4.7.27.ebuild:
   amd64 stable, bug #252525
