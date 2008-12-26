@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.100 2008/11/10 10:58:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.101 2008/12/26 11:48:14 klausman Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -135,3 +135,7 @@ audit
 
 # This works
 -x264
+
+# too complicated/invovled to test and too small user base
+# Tobias Klausmann <klausman@gentoo.org>
+afs
