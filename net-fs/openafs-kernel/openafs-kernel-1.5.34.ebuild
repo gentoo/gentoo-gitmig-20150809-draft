@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.5.34.ebuild,v 1.1 2008/03/25 11:22:07 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.5.34.ebuild,v 1.2 2008/12/26 11:25:39 klausman Exp $
 
 inherit eutils linux-mod versionator toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="http://openafs.org/dl/${MY_PN}/${PV}/${MY_P}-src.tar.bz2
 
 LICENSE="IBM openafs-krb5 openafs-krb5-a APSL-2 sun-rpc"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 PATCHDIR=${WORKDIR}/gentoo/patches/$(get_version_component_range 1-2)

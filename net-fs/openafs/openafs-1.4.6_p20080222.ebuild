@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.6_p20080222.ebuild,v 1.4 2008/05/04 13:41:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.6_p20080222.ebuild,v 1.5 2008/12/26 11:26:21 klausman Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator pam
 
@@ -18,7 +18,7 @@ SRC_URI="http://openafs.org/dl/${PN}/${MY_PV}/${MY_P}-src.tar.bz2
 
 LICENSE="IBM openafs-krb5 openafs-krb5-a APSL-2 sun-rpc"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="debug kerberos pam doc"
 
 RDEPEND="~net-fs/openafs-kernel-${PV}
@@ -39,8 +39,6 @@ src_unpack() {
 	# patch up to the specified cvs version
 	epatch "${DISTDIR}"/${MY_P}-cvs${MY_PV_DATE}.patch.bz2
 
-	# enable UCONTEXT on alpha
-	epatch "${FILESDIR}"/openafs-alpha-ucontext.patch
 	# don't use mapfiles to strip symbols (bug #202489)
 	epatch "${FILESDIR}"/openafs-1.4.5-shared-libs.patch
 

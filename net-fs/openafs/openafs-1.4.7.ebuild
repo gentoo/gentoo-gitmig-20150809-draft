@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.7.ebuild,v 1.2 2008/09/22 11:37:08 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.7.ebuild,v 1.3 2008/12/26 11:26:21 klausman Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator pam
 
@@ -13,7 +13,7 @@ SRC_URI="http://openafs.org/dl/${PV}/${P}-src.tar.bz2
 
 LICENSE="IBM openafs-krb5 openafs-krb5-a APSL-2 sun-rpc"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug kerberos pam doc"
 
 RDEPEND="~net-fs/openafs-kernel-${PV}
@@ -32,8 +32,6 @@ src_unpack() {
 	EPATCH_EXCLUDE="006_all_ppc64.patch" \
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 
-	# enable UCONTEXT on alpha
-	epatch "${FILESDIR}"/openafs-alpha-ucontext.patch
 	# don't use mapfiles to strip symbols (bug #202489)
 	epatch "${FILESDIR}"/openafs-1.4.5-shared-libs.patch
 	# use uname i.o. arch (bug #211378)
