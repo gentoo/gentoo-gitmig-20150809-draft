@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.7-r1.ebuild,v 1.1 2008/12/26 16:50:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.7-r1.ebuild,v 1.2 2008/12/26 16:56:36 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,6 +29,8 @@ src_unpack() {
 
 	# Patch the source, config and the manpage to use /etc/vsftpd/
 	epatch "${FILESDIR}/${PN}-2.0.3-gentoo.patch"
+	# uclibc fix, from Debian
+	epatch "${FILESDIR}"/${PN}-2.0.7-uclibc.patch
 
 	# Fix building without the libcap
 	epatch "${FILESDIR}/${PN}-2.0.6-caps.patch"
