@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.3.2.ebuild,v 1.1 2008/12/23 12:30:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.3.2.ebuild,v 1.2 2008/12/26 21:10:04 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -20,7 +20,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 RESTRICT="test"
 
-DEPEND=""
+DEPEND="app-arch/lzma-utils"
+RDEPEND=""
 
 EMULTILIB_PKG="true"
 has sandbox_death_notice ${EBUILD_DEATH_HOOKS} || EBUILD_DEATH_HOOKS="${EBUILD_DEATH_HOOKS} sandbox_death_notice"
