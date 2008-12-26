@@ -1,21 +1,16 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.9999.ebuild,v 1.16 2008/12/26 12:48:30 ulm Exp $
-
-ECVS_AUTH="pserver"
-ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
-ECVS_MODULE="emacs"
-ECVS_BRANCH="HEAD"
-ECVS_LOCALNAME="emacs"
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.60_pre20081226.ebuild,v 1.1 2008/12/26 12:48:30 ulm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit autotools cvs elisp-common eutils flag-o-matic
+inherit autotools elisp-common eutils flag-o-matic
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-SRC_URI=""
+SRC_URI="mirror://gentoo/emacs-${PV}.tar.gz
+	http://dev.gentoo.org/~ulm/distfiles/emacs-${PV}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.3 BSD as-is X11 W3C"
 SLOT="23"
@@ -63,27 +58,16 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	gzip-el? ( app-arch/gzip )"
 
-S="${WORKDIR}/${ECVS_LOCALNAME}"
-
+# FULL_VERSION keeps the full version number, which is needed in order to
+# determine some path information correctly for copy/move operations later on
+FULL_VERSION="${PV%_*}"
 EMACS_SUFFIX="emacs-${SLOT}"
+S="${WORKDIR}/emacs-${FULL_VERSION}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
 
 src_unpack() {
-	cvs_src_unpack
-
+	unpack ${A}
 	cd "${S}"
-	# FULL_VERSION keeps the full version number, which is needed in
-	# order to determine some path information correctly for copy/move
-	# operations later on
-	FULL_VERSION=$(grep 'defconst[	 ]*emacs-version' lisp/version.el \
-		| sed -e 's/^[^"]*"\([^"]*\)".*$/\1/')
-	[ "${FULL_VERSION}" ] || die "Cannot determine current Emacs version"
-	echo
-	einfo "Emacs CVS branch: ${ECVS_BRANCH}"
-	einfo "Emacs version number: ${FULL_VERSION}"
-	[ "${FULL_VERSION%.*}" = ${PV%.*} ] \
-		|| die "Upstream version number changed to ${FULL_VERSION}"
-	echo
 
 	epatch "${FILESDIR}/${PN}-freebsd-sparc-1.patch"
 
@@ -181,9 +165,9 @@ src_compile() {
 		--infodir=/usr/share/info/${EMACS_SUFFIX} \
 		${myconf} || die "econf emacs failed"
 
-	emake CC="$(tc-getCC)" bootstrap || die "make bootstrap failed"
-	# cleanup, otherwise emacs will be dumped again in src_install
-	(cd src; emake versionclean)
+	#emake CC="$(tc-getCC)" bootstrap || die "make bootstrap failed"
+	## cleanup, otherwise emacs will be dumped again in src_install
+	#(cd src; emake versionclean)
 	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
