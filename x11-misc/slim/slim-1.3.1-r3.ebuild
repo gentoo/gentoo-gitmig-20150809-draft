@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1-r3.ebuild,v 1.1 2008/12/26 07:35:00 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1-r3.ebuild,v 1.2 2008/12/26 07:35:58 darkside Exp $
 
 EAPI=2
 
@@ -37,7 +37,7 @@ src_prepare() {
 		-e "s:^\t\(.*\)\ \$(LDFLAGS)\ \(.*\):\t\1\ \2\ \$(LDFLAGS):g" \
 		-r -e "s:^LDFLAGS=(.*):LDFLAGS=\1 ${LDFLAGS}:" \
 		Makefile || die "sed failed in Makefile"
-	epatch "${FILESDIR}/${P}-config.diff"	
+	epatch "${FILESDIR}/${P}-config.diff"
 
 	if use branding; then
 		sed -i -e 's/  default/  slim-gentoo-simple/' slim.conf || die
