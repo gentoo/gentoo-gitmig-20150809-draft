@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 2003-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init,v 1.6 2008/06/02 04:18:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init,v 1.7 2008/12/26 16:50:15 armin76 Exp $
 
 VSFTPD_NAME=${SVCNAME##*.}
 if [ -n "${VSFTPD_NAME}" -a "${SVCNAME}" != "vsftpd" ]; then
@@ -12,6 +12,7 @@ else
     VSFTPD_CONF_DEFAULT="/etc/vsftpd/vsftpd.conf"
 fi
 VSFTPD_CONF=${VSFTPD_CONF:-${VSFTPD_CONF_DEFAULT}}
+VSFTPD_EXEC=${VSFTPD_EXEC:-/usr/sbin/vsftpd}
 
 depend() {
 	need net
@@ -48,7 +49,7 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting ${SVCNAME}"
-	start-stop-daemon --start --exec /usr/sbin/vsftpd \
+	start-stop-daemon --start --exec ${VSFTPD_EXEC} \
 		--background --make-pidfile --pidfile "${VSFTPD_PID}" \
 		-- "${VSFTPD_CONF}"
 	eend $?
@@ -56,7 +57,12 @@ start() {
 
 stop() {
 	ebegin "Stopping ${SVCNAME}"
-	start-stop-daemon --stop --exec /usr/sbin/vsftpd 
+	if [ -f ${VSFTPD_PID} ]; then
+		start-stop-daemon --stop --pidfile ${VSFTPD_PID} 
+	else
+		ewarn "Couldn't found ${VSFTPD_PID} trying to stop over the process name ${SVCNAME}"
+		start-stop-daemon --stop --name ${SVCNAME}
+	fi
 	eend $?
 }
 
