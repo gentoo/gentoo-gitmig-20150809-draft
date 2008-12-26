@@ -2,11 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>gstreamer</herd>
-	<maintainer>
-		<email>compnerd@gentoo.org</email>
-		<name>Saleem Abdulrasool</name>
-	</maintainer>
-	<longdescription lang="en">
-	</longdescription>
+	<use>
+		<flag name="amrwb">Enables support for Adaptive Multi-Rate Audio support (Wide Band) via amrwb</flag>
+		<flag name="gsm">Enables support for the gsm lossy speech compression codec via libgsm</flag>
+		<flag name="libmms">Enables support for accessing Microsoft Media Server (MMS) media streaming protocol via libmms</flag>
+		<flag name="mythtv">Enables support for retrieval from media-tv/mythtv backend via gmyth</flag>
+		<flag name="neon">Enables support for HTTP and WebDAV client library via neon</flag>
+		<flag name="twolame">Enables support for MPEG Audio Layer 2 encoder via twolame</flag>
+	</use>
 </pkgmetadata>
-
