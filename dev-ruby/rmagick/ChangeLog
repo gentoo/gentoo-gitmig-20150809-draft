@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.128 2008/12/13 16:28:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.129 2008/12/26 13:36:54 graaff Exp $
+
+*rmagick-2.8.0-r1 (26 Dec 2008)
+
+  26 Dec 2008; Hans de Graaff <graaff@gentoo.org> +rmagick-2.8.0-r1.ebuild:
+  Put documentation files in the right place, fixing #252389.
 
   13 Dec 2008; Raúl Porcel <armin76@gentoo.org> rmagick-1.15.15.ebuild,
   rmagick-2.6.0.ebuild:
