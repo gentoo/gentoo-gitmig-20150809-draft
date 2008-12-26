@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.42 2008/09/21 13:30:26 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.43 2008/12/26 21:42:22 marineam Exp $
+
+*ampache-3.4.4 (26 Dec 2008)
+
+  26 Dec 2008; Michael Marineau <marineam@gentoo.org> +ampache-3.4.4.ebuild:
+  Bump to 3.4.4
 
   21 Sep 2008; wrobel@gentoo.org -ampache-3.3.3.5.ebuild:
   Removed vulnerable ampache-3.3.3.5 (#237483).
