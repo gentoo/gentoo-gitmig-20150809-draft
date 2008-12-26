@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.28 2008/12/26 16:51:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.29 2008/12/26 17:43:12 darkside Exp $
+
+  26 Dec 2008; Jeremy Olexa <darkside@gentoo.org> wicd-1.5.7-r1.ebuild:
+  Drop pm-utils dep down to >=pm-utils-1.1.1, bug #252306
 
 *wicd-1.5.7-r1 (26 Dec 2008)
 

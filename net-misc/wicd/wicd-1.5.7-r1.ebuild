@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.7-r1.ebuild,v 1.1 2008/12/26 16:51:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.7-r1.ebuild,v 1.2 2008/12/26 17:43:12 darkside Exp $
 
 inherit distutils eutils
 
@@ -28,7 +28,7 @@ RDEPEND="dev-python/dbus-python
 		sys-apps/ethtool
 	)
 	|| ( x11-misc/ktsuss x11-libs/gksu kde-base/kdesu )
-	>=sys-power/pm-utils-1.2.3"
+	>=sys-power/pm-utils-1.1.1"
 
 src_compile() {
 	${python} ./setup.py configure --no-install-init --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose
