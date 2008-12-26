@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1-r3.ebuild,v 1.2 2008/12/26 07:35:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1-r4.ebuild,v 1.1 2008/12/26 17:49:42 darkside Exp $
 
 EAPI=2
 

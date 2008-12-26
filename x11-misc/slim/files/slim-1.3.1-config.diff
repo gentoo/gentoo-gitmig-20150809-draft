@@ -1,5 +1,5 @@
---- slim.conf.orig	2008-12-26 01:26:00.240257721 -0600
-+++ slim.conf	2008-12-26 01:26:34.109016531 -0600
+--- slim.conf.orig	2008-12-26 11:45:17.308256705 -0600
++++ slim.conf	2008-12-26 11:46:55.314256630 -0600
 @@ -2,7 +2,7 @@
  # Note: -xauth $authfile is automatically appended
  default_path        ./:/bin:/usr/bin:/usr/local/bin
@@ -28,11 +28,12 @@
  
  # Commands executed when starting and exiting a session.
  # They can be used for registering a X11 session with
-@@ -41,11 +42,12 @@
+@@ -41,11 +42,13 @@
  #
  # sessionstart_cmd	some command
  # sessionstop_cmd	some command
 +sessionstart_cmd	/usr/bin/sessreg -a -l :0.0 %user
++sessionstop_cmd     /usr/bin/sessreg -d -l :0.0 %user
  
  # Start in daemon mode. Valid values: yes | no
  # Note that this can be overriden by the command line
