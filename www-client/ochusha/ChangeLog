@@ -1,6 +1,13 @@
 # ChangeLog for www-client/ochusha
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.32 2008/12/24 00:39:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.33 2008/12/26 16:29:30 matsuu Exp $
+
+*ochusha-0.6-r1 (26 Dec 2008)
+
+  26 Dec 2008; MATSUU Takuto <matsuu@gentoo.org> -ochusha-0.6.ebuild,
+  +ochusha-0.6-r1.ebuild:
+  Fixed IUSE. Added app-misc/ca-certificates to RDEPEND. Fixed html
+  location.
 
 *ochusha-0.6 (24 Dec 2008)
 
