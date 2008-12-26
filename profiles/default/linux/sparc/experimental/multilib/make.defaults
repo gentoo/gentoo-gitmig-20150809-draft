@@ -1,0 +1,9 @@
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/sparc/experimental/multilib/make.defaults,v 1.1 2008/12/26 11:09:43 bluebird Exp $
+
+# Multilib stuff
+MULTILIB_ABIS="sparc32 sparc64"
+
+# without this glibc will segfault when compiling a sparc64 abi
+FEATURES="userpriv"
