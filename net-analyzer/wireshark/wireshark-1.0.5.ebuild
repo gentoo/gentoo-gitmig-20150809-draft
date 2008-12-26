@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.5.ebuild,v 1.9 2008/12/18 18:20:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.5.ebuild,v 1.10 2008/12/26 09:02:51 vapier Exp $
 
 EAPI=1
 WANT_AUTOMAKE="1.9"
@@ -61,6 +61,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-0.99.7-asneeded.patch"
 	epatch "${FILESDIR}/${PN}-0.99.8-as-needed.patch"
 	epatch "${FILESDIR}/${P}-glib-1-build.patch"
+	epatch "${FILESDIR}"/${P}-text2pcap-protos.patch
 
 	cd "${S}/epan"
 	epatch "${FILESDIR}/wireshark-except-double-free.diff"
