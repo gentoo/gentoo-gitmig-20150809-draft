@@ -1,9 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.6-r1.ebuild,v 1.2 2008/04/24 11:22:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.6-r1.ebuild,v 1.3 2008/12/26 17:14:05 scarabeus Exp $
+
+EAPI="1"
 
 ARTS_REQUIRED="never"
-
 inherit kde eutils
 
 DESCRIPTION="KDE frontend for various audio transcoding tools"
@@ -18,7 +19,7 @@ KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="amarok shorten wavpack"
 
 RDEPEND="media-libs/taglib
-	amarok? ( media-sound/amarok )"
+	amarok? ( media-sound/amarok:0 )"
 DEPEND="${RDEPEND}"
 RDEPEND="${RDEPEND}
 	shorten? ( media-sound/shorten )

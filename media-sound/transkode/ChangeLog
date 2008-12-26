@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/transkode
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.12 2008/08/24 18:00:10 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.13 2008/12/26 17:14:05 scarabeus Exp $
+
+  26 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org>
+  -transkode-0.6_beta2.ebuild, -transkode-0.6.ebuild,
+  transkode-0.6-r1.ebuild, transkode-0.7.ebuild:
+  Drop old. Update dependency on amarok so only version 1.X satisfy it. Per
+  bug #252406
 
   24 Aug 2008; Matti Bickel <mabi@gentoo.org> transkode-0.7.ebuild:
   added ~ppc (bug #207355)

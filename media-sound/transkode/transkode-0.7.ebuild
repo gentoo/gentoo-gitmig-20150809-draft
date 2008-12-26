@@ -1,9 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.7.ebuild,v 1.3 2008/08/24 18:00:10 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.7.ebuild,v 1.4 2008/12/26 17:14:05 scarabeus Exp $
+
+EAPI="1"
 
 ARTS_REQUIRED="never"
-
 inherit kde
 
 DESCRIPTION="KDE frontend for various audio transcoding tools"
@@ -16,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="amarok ffmpeg gstreamer mplayer wavpack xine"
 
 RDEPEND="media-libs/taglib
-	amarok? ( media-sound/amarok )
+	amarok? ( media-sound/amarok:0 )
 	ffmpeg? ( media-video/ffmpeg )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
