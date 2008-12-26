@@ -1,6 +1,16 @@
 # ChangeLog for app-text/pdftk
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.26 2008/08/02 07:21:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.27 2008/12/26 21:44:37 caster Exp $
+
+*pdftk-1.41-r1 (26 Dec 2008)
+
+  26 Dec 2008; Vlastimil Babka <caster@gentoo.org>
+  +files/pdftk-1.41-gcc-4.3.patch, +files/pdftk-1.41-honor-ldflags.patch,
+  +pdftk-1.41-r1.ebuild:
+  Revbump fixing build with gcc 4.3 (bug #225709 and #235645 and #251796)
+  thanks to patch adapted from Debian submitted by <andrex@mail.ee>. Fixes
+  LDFLAGS and man page (bug #209802 and #234832) thanks to Stephan Springer
+  <Gentoo-bugs@Lini.de>. Uses EAPI2 use deps for gcc[gcj] dep.
 
   02 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
