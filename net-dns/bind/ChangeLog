@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.214 2008/11/19 21:20:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.215 2008/12/26 22:27:30 dertobi123 Exp $
+
+*bind-9.5.1 (26 Dec 2008)
+
+  26 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org> +files/127.zone-r1,
+  +files/localhost.zone-r3, -bind-9.4.2_p2-r1.ebuild, -bind-9.4.3.ebuild,
+  -bind-9.5.0_p2-r1.ebuild, +bind-9.5.1.ebuild:
+  Version bump, fix chroot configuration (#247979) and fix localhost/127.zones
+  (#246175)
 
 *bind-9.4.3 (19 Nov 2008)
 

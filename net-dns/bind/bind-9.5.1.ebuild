@@ -1,15 +1,14 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.5.0_p2-r1.ebuild,v 1.2 2008/11/03 13:03:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.5.1.ebuild,v 1.1 2008/12/26 22:27:30 dertobi123 Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
-MY_PV="${PV/_p2/-P2}"
 SDB_LDAP_VER="1.1.0"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${PN}-${MY_PV}.tar.gz
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
 	sdb-ldap? ( mirror://gentoo/bind-sdb-ldap-${SDB_LDAP_VER}.tar.bz2 )
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )"
 
@@ -23,13 +22,12 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
 	ldap? ( net-nds/openldap )
 	idn? ( net-dns/idnkit )
+	postgres? ( virtual/postgresql-base )
 	threads? ( >=sys-libs/libcap-2.1.0 )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
 	resolvconf? ( net-dns/openresolv )"
-
-S="${WORKDIR}/${PN}-${MY_PV}"
 
 pkg_setup() {
 	use threads && {
@@ -57,9 +55,6 @@ src_unpack() {
 			-e 's:/etc/rndc.key:/etc/bind/rndc.key:g' \
 			"${i}"
 	done
-
-	# bind needs a newer libcap #220167
-	use threads && epatch "${FILESDIR}"/libcap.patch
 
 	use dlz && epatch "${FILESDIR}"/${PN}-9.4.0-dlzbdb-close_cursor.patch
 
@@ -186,8 +181,8 @@ src_install() {
 	insinto /var/bind ; doins "${FILESDIR}"/named.ca
 
 	insinto /var/bind/pri
-	doins "${FILESDIR}"/127.zone
-	newins "${FILESDIR}"/localhost.zone-r2 localhost.zone
+	newins "${FILESDIR}"/127.zone-r1 127.zone
+	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone
 
 	newinitd "${FILESDIR}"/named.init-r5 named
 	newconfd "${FILESDIR}"/named.confd-r2 named
