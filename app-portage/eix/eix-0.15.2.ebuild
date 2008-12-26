@@ -1,10 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.15.2.ebuild,v 1.6 2008/12/26 05:06:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.15.2.ebuild,v 1.7 2008/12/26 06:06:06 darkside Exp $
 
 inherit multilib
 
-DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
+DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext.
+overlays, version changes, and more"
 HOMEPAGE="http://eix.sourceforge.net"
 SRC_URI="mirror://sourceforge/eix/${P}.tar.lzma"
 
