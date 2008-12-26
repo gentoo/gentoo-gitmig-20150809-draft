@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.7.ebuild,v 1.1 2008/12/22 21:26:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.7-r1.ebuild,v 1.1 2008/12/26 16:51:51 darkside Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
@@ -27,7 +27,8 @@ RDEPEND="dev-python/dbus-python
 		sys-apps/net-tools
 		sys-apps/ethtool
 	)
-	|| ( x11-misc/ktsuss x11-libs/gksu kde-base/kdesu )"
+	|| ( x11-misc/ktsuss x11-libs/gksu kde-base/kdesu )
+	>=sys-power/pm-utils-1.2.3"
 
 src_compile() {
 	${python} ./setup.py configure --no-install-init --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose
