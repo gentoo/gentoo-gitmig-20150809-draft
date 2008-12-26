@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gmpc-lyrics
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyrics/ChangeLog,v 1.16 2008/12/20 16:59:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyrics/ChangeLog,v 1.17 2008/12/26 19:45:43 angelos Exp $
+
+*gmpc-lyrics-0.17.0 (26 Dec 2008)
+
+  26 Dec 2008; Christoph Mende <angelos@gentoo.org>
+  +gmpc-lyrics-0.17.0.ebuild:
+  Version bump
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> gmpc-lyrics-0.16.0.ebuild:
   Stable on ppc wrt bug 251332

@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gmpc-serverstats
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-serverstats/ChangeLog,v 1.15 2008/12/20 17:04:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-serverstats/ChangeLog,v 1.16 2008/12/26 19:57:09 angelos Exp $
+
+*gmpc-serverstats-0.17.0 (26 Dec 2008)
+
+  26 Dec 2008; Christoph Mende <angelos@gentoo.org>
+  +gmpc-serverstats-0.17.0.ebuild:
+  Version bump
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> gmpc-serverstats-0.16.0.ebuild:
   Stable on ppc wrt bug 251332
