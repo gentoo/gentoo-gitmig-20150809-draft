@@ -1,0 +1,29 @@
+--- makefile.orig	2008-12-21 12:33:37.001959467 +0100
++++ makefile	2008-12-21 12:38:56.925669582 +0100
+@@ -271,16 +271,16 @@
+ 	@echo "*** of this project" 
+ 	@exit 1
+ endif
+-	$(INSTALL) -D -m 755 $(TARGET) $(PREFIX)/bin/$(TARGET)
+-	$(INSTALL) -D -c -m 644 doc/biew.1 $(PREFIX)/man/man1/biew.1
+-	$(INSTALL) -D -c -m 644 bin_rc/biew.hlp $(DATADIR)/biew.hlp
+-	mkdir --parents $(DATADIR)/skn
+-	$(INSTALL) -D -c -m 644 bin_rc/skn/*.skn $(DATADIR)/skn
+-	mkdir --parents $(DATADIR)/syntax
+-	$(INSTALL) -D -c -m 644 bin_rc/syntax/*.stx $(DATADIR)/syntax
+-	mkdir --parents $(DATADIR)/xlt/russian
+-	$(INSTALL) -D -c -m 644 bin_rc/xlt/russian/*.xlt $(DATADIR)/xlt/russian
+-	$(INSTALL) -D -c -m 644 bin_rc/xlt/*.xlt bin_rc/xlt/readme $(DATADIR)/xlt
++	$(INSTALL) -D -m 755 $(TARGET) $(DESTDIR)$(PREFIX)/bin/$(TARGET)
++	$(INSTALL) -D -c -m 644 doc/biew.1 $(DESTDIR)$(PREFIX)/man/man1/biew.1
++	$(INSTALL) -D -c -m 644 bin_rc/biew.hlp $(DESTDIR)$(DATADIR)/biew.hlp
++	mkdir --parents $(DESTDIR)$(DATADIR)/skn
++	$(INSTALL) -D -c -m 644 bin_rc/skn/*.skn $(DESTDIR)$(DATADIR)/skn
++	mkdir --parents $(DESTDIR)$(DATADIR)/syntax
++	$(INSTALL) -D -c -m 644 bin_rc/syntax/*.stx $(DESTDIR)$(DATADIR)/syntax
++	mkdir --parents $(DESTDIR)$(DATADIR)/xlt/russian
++	$(INSTALL) -D -c -m 644 bin_rc/xlt/russian/*.xlt $(DESTDIR)$(DATADIR)/xlt/russian
++	$(INSTALL) -D -c -m 644 bin_rc/xlt/*.xlt bin_rc/xlt/readme $(DESTDIR)$(DATADIR)/xlt
+ uninstall:
+ 	$(RM) $(PREFIX)/bin/$(TARGET)
+ 	$(RM) $(DATADIR)/skn/*

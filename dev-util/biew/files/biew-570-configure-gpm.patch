@@ -1,0 +1,16 @@
+--- configure.old	2008-12-24 13:26:59.000000000 -0800
++++ configure	2008-12-24 13:34:00.000000000 -0800
+@@ -478,8 +478,11 @@
+ 	#include <gpm.h>
+ 	int main(void) {return 0;}
+ EOF
+-	_gpm=no
+-	cc_check -lgpm && _gpm=yes
++	# _gpm may be forced from command line
++	if test -z "$_gpm" ; then
++	    _gpm=no
++	    cc_check -lgpm && _gpm=yes
++	fi
+ 	if test "$_gpm" = yes ; then
+ 	    _cdefos="-DHAVE_MOUSE $_cdefos"
+ 	    _oslibs="-lgpm $_oslibs"

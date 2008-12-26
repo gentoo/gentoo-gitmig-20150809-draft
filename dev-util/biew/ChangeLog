@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/biew
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.23 2008/10/05 12:00:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.24 2008/12/26 08:07:23 wormo Exp $
+
+*biew-5.7.0 (26 Dec 2008)
+
+  26 Dec 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +files/biew-570-configure-gpm.patch, +files/biew-570-makefile.patch,
+  +biew-5.7.0.ebuild:
+  Version bump with the help of Andrej Gelenberg (bug #251905)
 
   05 Oct 2008; Michał Januszewski <spock@gentoo.org> metadata.xml:
   Remove myself from the maintainer list.
