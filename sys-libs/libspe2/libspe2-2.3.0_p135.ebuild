@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libspe2/libspe2-2.2.80_p95-r1.ebuild,v 1.3 2008/12/26 14:58:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libspe2/libspe2-2.3.0_p135.ebuild,v 1.1 2008/12/26 14:58:21 josejx Exp $
 inherit eutils
 
-MY_P=${P/_p/-}
+MY_P=${P/_p/.}
 
 DESCRIPTION="A wrapper library to adapt the JSRE SPU usage model to SPUFS"
 HOMEPAGE="http://sourceforge/projects/libspe"
@@ -11,10 +11,10 @@ SRC_URI="mirror://sourceforge/libspe/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="ppc ppc64"
+KEYWORDS="~ppc ~ppc64"
 IUSE="debug"
 
-S="${WORKDIR}/${P//_p*}"
+S="${WORKDIR}/${P/_p*//}"
 
 DEPEND=""
 # This packages also provides libspe1
@@ -39,6 +39,7 @@ src_unpack () {
 	unpack ${A}
 	#just in case something is missing
 	cd "${S}"
+	echo "${S}"
 }
 
 src_compile() {
