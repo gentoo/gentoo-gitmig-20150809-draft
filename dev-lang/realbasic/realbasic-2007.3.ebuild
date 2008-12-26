@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/realbasic/realbasic-2007.3.ebuild,v 1.2 2008/02/29 17:55:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/realbasic/realbasic-2007.3.ebuild,v 1.3 2008/12/26 03:00:41 wormo Exp $
 
 inherit eutils portability
 
@@ -15,6 +15,22 @@ IUSE=""
 RESTRICT="mirror strip"
 
 DEPEND=""
+RDEPEND="x86? ( =virtual/libstdc++-3*
+		        =x11-libs/gtk+-2*
+		        =dev-libs/glib-2*
+		        net-print/cups
+		        x11-libs/libXi
+		        x11-libs/libXext
+		        x11-libs/libX11
+		        x11-libs/libXau
+		        x11-libs/libXdmcp
+	            x11-libs/pango
+		      )
+		 amd64? ( app-emulation/emul-linux-x86-baselibs
+		          app-emulation/emul-linux-x86-compat
+		          app-emulation/emul-linux-x86-gtklibs
+		          app-emulation/emul-linux-x86-xlibs
+		        )"
 
 S=${WORKDIR}/REALbasic2007Release3
 

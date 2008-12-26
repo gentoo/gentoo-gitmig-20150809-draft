@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/realbasic
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/realbasic/ChangeLog,v 1.2 2008/02/29 17:55:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/realbasic/ChangeLog,v 1.3 2008/12/26 03:00:41 wormo Exp $
+
+  26 Dec 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  realbasic-2007.3.ebuild:
+  Add missing runtime dependencies, reported by Jens Meissner (bug #251866)
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> realbasic-2007.3.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
