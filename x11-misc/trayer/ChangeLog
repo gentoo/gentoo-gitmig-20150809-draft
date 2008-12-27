@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/trayer
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.15 2008/09/10 11:13:55 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.16 2008/12/27 18:52:54 coldwind Exp $
+
+  27 Dec 2008; Santiago M. Mola <coldwind@gentoo.org> trayer-1.0.ebuild:
+  Update SRC_URI, fvwm crystal migrated to gna.org.
 
   10 Sep 2008; Santiago M. Mola <coldwind@gentoo.org> metadata.xml,
   trayer-1.0.ebuild:
