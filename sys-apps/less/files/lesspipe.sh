@@ -148,7 +148,7 @@ lesspipe() {
 	*.mp3)        mp3info "$1" || id3info "$1" ;;
 	*.ogg)        ogginfo "$1" ;;
 	*.flac)       metaflac --list "$1" ;;
-	*.torrent)    torrentinfo-console "$1" ;;
+	*.torrent)    torrentinfo-console "$1" || ctorrent -x "$1" ;;
 	*.bin|*.cue|*.raw)
 		# not all .bin/.raw files are cd images, so fall back to hexdump
 		cd-info --no-header --no-device-info "$1" || lesspipe_file "$1"
@@ -230,7 +230,7 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.30 2008/05/30 23:54:10 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.31 2008/12/27 05:03:18 vapier Exp $"
 	cat <<-EOF
 		$cvsid
 		Copyright 2001-2008 Gentoo Foundation
