@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.62 2008/12/27 16:54:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.63 2008/12/27 18:58:55 ranger Exp $
+
+  27 Dec 2008; Brent Baude <ranger@gentoo.org> terminus-font-4.28.ebuild:
+  stable ppc64, bug 252648
 
   27 Dec 2008; Jeremy Olexa <darkside@gentoo.org> terminus-font-4.28.ebuild:
   amd64 stable, bug 252648
