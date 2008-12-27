@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0-r1.ebuild,v 1.4 2008/10/25 22:22:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0-r1.ebuild,v 1.5 2008/12/27 01:27:46 gentoofan23 Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic autotools
 
 DESCRIPTION="A collection of algorithms and sample code for various computer vision problems."
-HOMEPAGE="http://www.intel.com/technology/computing/opencv/index.htm"
+HOMEPAGE="http://opencv.willowgarage.com/wiki/"
 SRC_URI="mirror://sourceforge/${PN}library/${P}.tar.gz"
 
 ##If video for linux is enabled, add GPL-2, since it will need to use GPL-2

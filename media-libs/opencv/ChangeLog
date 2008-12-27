@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.9 2008/11/02 17:38:50 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.10 2008/12/27 01:27:46 gentoofan23 Exp $
+
+  27 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml,
+  opencv-1.0.0-r1.ebuild:
+  Fix homepage, bug #252367 by Thomas Pani. Tweak metadata.xml a bit
 
   02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
