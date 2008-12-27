@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.430 2008/12/19 22:40:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.431 2008/12/27 23:03:52 zzam Exp $
+
+*udev-135-r3 (27 Dec 2008)
+
+  27 Dec 2008; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-135-r3.confd, +files/udev-mount-135-r3.initd,
+  +files/udev-start-135-r3.sh, +udev-135-r3.ebuild:
+  Create /dev/.rcsysinit only for older baselayouts. Add some comments about
+  rc_oldplug to /etc/conf.d/udev, suggested by Polynomial-C
+  <polynomial-c@gmx.de>.
 
   19 Dec 2008; Matthias Schwarzott <zzam@gentoo.org>
   +files/udev-postmount-135-r2.initd, files/udev-start-135-r2.sh,
