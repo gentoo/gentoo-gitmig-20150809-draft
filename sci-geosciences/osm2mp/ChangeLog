@@ -1,0 +1,10 @@
+# ChangeLog for sci-geosciences/osm2mp
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2mp/ChangeLog,v 1.1 2008/12/27 16:55:57 hanno Exp $
+
+*osm2mp-0.60 (27 Dec 2008)
+
+  27 Dec 2008; Hanno Boeck <hanno@gentoo.org> +osm2mp-0.60.ebuild:
+  Initial commit of osm2mp, tool to convert openstreetmap data to polish/mp
+  format.
+
