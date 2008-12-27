@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.52 2008/12/08 05:24:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.53 2008/12/27 19:44:00 vapier Exp $
+
+*zziplib-0.13.50 (27 Dec 2008)
+
+  27 Dec 2008; Mike Frysinger <vapier@gentoo.org>
+  +files/zziplib-0.13.50-configure-sed.patch,
+  +files/zziplib-0.13.50-sparc-aligned-access.patch,
+  +zziplib-0.13.50.ebuild:
+  Version bump.
 
   08 Dec 2008; Mike Frysinger <vapier@gentoo.org>
   +files/zziplib-0.13.49-parallel-docs.patch, zziplib-0.13.49-r1.ebuild:
