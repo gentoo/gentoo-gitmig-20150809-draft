@@ -1,7 +1,26 @@
-# !!! WARNING !!!
-# MAKE SURE YOU KEEP default-linux/amd64/package.use.mask AND
-# default-linux/amd64/(dev)?/2007.0/package.use.mask IN SYNC
-# SEE BUG #168249 FOR DETAILS
+# Copyright 1999-2008 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.22 2008/12/27 04:59:14 darkside Exp $
+
+# When you add an entry to the top of this file, add your name, the date, and
+# an explanation of why something is getting masked. Please be extremely
+# careful not to commit atoms that are not valid, as it can cause large-scale
+# breakage, especially if it ends up in the daily snapshot.
+#
+## Example:
+##
+## # Dev E. Loper <developer@gentoo.org> (28 Jun 2012)
+## # Masking foo USE flag until we can get the
+## # foo stuff to work properly again (bug 12345)
+## =media-video/mplayer-0.90_pre5 foo
+## =media-video/mplayer-0.90_pre5-r1 foo
+#
+
+#--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (27 Dec 2008)
+# Mask static USE flag because it just doesn't work on amd64. See bug 236591
+>=app-arch/p7zip-4.58 static
 
 # Jeremy Olexa <darkside@gentoo.org> (24 Dec 2008)
 # unmask USE=bindist on amd64 - also unmasking the other flags that were under a
