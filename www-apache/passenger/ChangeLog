@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.5 2008/08/29 12:47:44 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.6 2008/12/27 21:39:21 caleb Exp $
+
+*passenger-2.0.6 (27 Dec 2008)
+
+  27 Dec 2008; Caleb Tennis <caleb@gentoo.org> +passenger-2.0.6.ebuild:
+  Version bump, from 249713
 
 *passenger-2.0.3 (29 Aug 2008)
 
