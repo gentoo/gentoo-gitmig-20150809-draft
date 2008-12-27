@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gpp
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/ChangeLog,v 1.14 2008/11/04 01:46:45 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/ChangeLog,v 1.15 2008/12/27 12:55:39 eva Exp $
+
+  27 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gpp-0.7.0-as-needed.patch, -gpp-0.6.5.ebuild, gpp-0.7.0.ebuild:
+  Fix failure with --as-needed and tests, bug #247729.
 
   04 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
