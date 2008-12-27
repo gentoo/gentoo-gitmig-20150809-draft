@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/mechanize-0.9.0.ebuild,v 1.1 2008/12/27 12:06:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/mechanize-0.9.0.ebuild,v 1.2 2008/12/27 14:48:07 bluebird Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://mechanize.rubyforge.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-ruby/nokogiri-1.0.7
