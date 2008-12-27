@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20070904.ebuild,v 1.1 2008/12/27 13:21:06 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20070904.ebuild,v 1.2 2008/12/27 14:12:42 george Exp $
 
-inherit eutils flag-o-matic versionator
+inherit eutils flag-o-matic versionator toolchain-funcs
 
 strip-flags
 filter-flags "-pipe"
@@ -79,6 +79,7 @@ src_compile() {
 	use amd64 && myconf="${myconf} --disable-multilib"
 
 	cd ${BUILDDIR}
+	tc-export CC
 
 	einfo "Configuring GCC for GPC build..."
 #	addwrite "/dev/zero"
