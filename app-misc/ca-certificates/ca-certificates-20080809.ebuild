@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20080809.ebuild,v 1.7 2008/12/27 13:49:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20080809.ebuild,v 1.8 2008/12/27 18:45:14 vapier Exp $
 
 inherit eutils
 
@@ -53,6 +53,12 @@ src_install() {
 }
 
 pkg_postinst() {
+	if [[ ${ROOT} == "/" ]] ; then
+		# However it's too overzealous when the user has custom certs in place.
+		# --fresh is to clean up dangling symlinks
+		update-ca-certificates
+	fi
+
 	local badcerts=0
 	for c in $(find -L "${ROOT}"etc/ssl/certs/ -type l) ; do
 		ewarn "Broken symlink for a certificate at $c"
@@ -64,9 +70,4 @@ pkg_postinst() {
 		ewarn "To batch-remove them, run:"
 		ewarn "find -L ${ROOT}etc/ssl/certs/ -type l -exec rm {} +"
 	fi
-
-	[[ ${ROOT} != "/" ]] && return 0
-	# However it's too overzealous when the user has custom certs in place.
-	# --fresh is to clean up dangling symlinks
-	update-ca-certificates
 }
