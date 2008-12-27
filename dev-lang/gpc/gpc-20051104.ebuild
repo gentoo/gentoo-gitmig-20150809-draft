@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20051104.ebuild,v 1.5 2008/12/21 02:18:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20051104.ebuild,v 1.6 2008/12/27 12:26:15 george Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -81,7 +81,7 @@ src_compile() {
 
 	einfo "Configuring GCC for GPC build..."
 #	addwrite "/dev/zero"
-	${S}/configure \
+	"${S}"/configure \
 		--prefix=${PREFIX} \
 		--libdir="${LIBPATH}" \
 		--libexecdir="${LIBEXECPATH}" \
@@ -102,11 +102,11 @@ src_compile() {
 		--with-local-prefix=${PREFIX}/local \
 		${myconf} || die "configure failed"
 
-	touch ${S}/gcc/c-gperf.h
+	touch "${S}"/gcc/c-gperf.h
 
 	einfo "Building GPC..."
 	# Fix for our libtool-portage.patc
-	emake -j1 LIBPATH="${LIBPATH}" bootstrap || die "make failed"
+	MAKEOPTS="${MAKEOPTS} -j1" emake LIBPATH="${LIBPATH}" bootstrap || die "make failed"
 }
 
 src_install () {
@@ -120,7 +120,7 @@ src_install () {
 
 	einfo "Installing GPC..."
 	cd ${BUILDDIR}/gcc
-	make DESTDIR=${D} \
+	make DESTDIR="${D}" \
 		pascal.install-with-gcc || die
 
 	# gcc insists on installing libs in its own place
@@ -138,15 +138,25 @@ src_install () {
 
 	# Install documentation.
 	dodir /usr/share/doc/${PF}
-	mv ${D}${PREFIX}/doc/gpc/* ${D}/usr/share/doc/${PF}
+	mv "${D}${PREFIX}"/doc/gpc/* "${D}"/usr/share/doc/${PF}
 	prepalldocs
 
 	# final cleanups
-	rmdir ${D}${PREFIX}/include ${D}/${PREFIX}/share/man/man7
-	rm -rf ${D}${PREFIX}/doc
+	rmdir "${D}${PREFIX}"/include "${D}/${PREFIX}"/share/man/man7
+	rm -rf "${D}${PREFIX}"/doc
 
 	# create an env.d entry
 	dodir /etc/env.d
-	echo "PATH=${LIBEXECPATH}" > ${D}etc/env.d/56gpc
-	echo "ROOTPATH=${LIBEXECPATH}" >> ${D}etc/env.d/56gpc
+	echo "PATH=${LIBEXECPATH}" > "${D}"etc/env.d/56gpc
+	echo "ROOTPATH=${LIBEXECPATH}" >> "${D}"etc/env.d/56gpc
+}
+
+pkg_postinst ()
+{
+	# need to update environment, as we have installed new env.d file
+	env-update
+	einfo
+	elog "the environment has been set to use gpc,"
+	elog "please don't forget to source /etc/profile"
+	einfo
 }
