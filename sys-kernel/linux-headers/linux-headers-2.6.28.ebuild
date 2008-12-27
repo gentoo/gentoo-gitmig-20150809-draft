@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.28.ebuild,v 1.1 2008/12/27 08:35:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.28.ebuild,v 1.2 2008/12/27 08:39:59 vapier Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm cris hppa m68k mips ia64 ppc ppc64 s390 sh sparc x86"
@@ -44,5 +44,5 @@ src_install() {
 }
 
 src_test() {
-	emake -j1 ARCH=$(tc-arch-kernel) headers_check || die
+	emake ARCH=$(tc-arch-kernel) headers_check || die
 }
