@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xtrlock
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.14 2008/05/12 13:40:44 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.15 2008/12/27 22:40:26 coldwind Exp $
+
+  27 Dec 2008; Santiago M. Mola <coldwind@gentoo.org>
+  -files/xtrlock-2.0-gcc34.patch, -files/xtrlock-2.0-overflow.patch,
+  -xtrlock-2.0-r1.ebuild:
+  Remove old.
 
   12 May 2008; Christian Faulhammer <opfer@gentoo.org>
   xtrlock-2.0-r2.ebuild:
