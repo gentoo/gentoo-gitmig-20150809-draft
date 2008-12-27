@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbweather
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.25 2008/09/22 13:00:28 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.26 2008/12/27 23:06:43 coldwind Exp $
+
+  27 Dec 2008; Santiago M. Mola <coldwind@gentoo.org> -bbweather-0.5.ebuild,
+  -bbweather-0.6.ebuild, bbweather-0.6.2.ebuild:
+  Fix quoting and useless COPYING, remove old.
 
   22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
   Change herd from commonbox to desktop-wm.
