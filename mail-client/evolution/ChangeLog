@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.253 2008/12/10 18:58:44 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.254 2008/12/27 19:22:51 ford_prefect Exp $
+
+*evolution-2.24.2-r2 (27 Dec 2008)
+
+  27 Dec 2008; Arun Raghavan <ford_prefect@gentoo.org>
+  +files/evolution-2.24.2-r2-mail-config-crash-fix.patch,
+  +evolution-2.24.2-r2.ebuild:
+  Update the mail-config.c patch to fix some more leaks (especially w.r.t.
+  Exchange). Thanks to Derek Dolney <nospam@dolney.com> for finding the
+  cause. Bug #251060
 
   10 Dec 2008; Arun Raghavan <ford_prefect@gentoo.org>
   evolution-2.24.2-r1.ebuild:
