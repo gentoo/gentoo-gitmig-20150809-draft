@@ -1,12 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/habak-0.2.5.ebuild,v 1.19 2008/11/13 23:41:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/habak-0.2.5.ebuild,v 1.20 2008/12/27 19:05:04 coldwind Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A simple but powerful tool to set desktop wallpaper"
-HOMEPAGE="http://lubuska.zapto.org/~hoppke/"
-SRC_URI="http://lubuska.zapto.org/~hoppke/yellow_brown/${P}.tar.bz2"
+HOMEPAGE="http://www.fvwm-crystal.org/"
+SRC_URI="http://download.gna.org/fvwm-crystal/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

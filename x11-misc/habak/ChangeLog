@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/habak
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.38 2008/11/13 23:41:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.39 2008/12/27 19:05:04 coldwind Exp $
+
+  27 Dec 2008; Santiago M. Mola <coldwind@gentoo.org> metadata.xml,
+  habak-0.2.5.ebuild:
+  Update HOMEPAGE and SRC_URI (bug #237242). Added desktop-misc herd to
+  metadata.
 
   13 Nov 2008; Diego Pettenò <flameeyes@gentoo.org> habak-0.2.5.ebuild:
   Fix --as-needed (bug #141709), make it respect the CC variable, die on
