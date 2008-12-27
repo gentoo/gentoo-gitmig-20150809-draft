@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.56 2008/11/22 14:50:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.57 2008/12/27 12:07:55 eva Exp $
+
+  27 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/workrave-1.9.0-nosoundplayer.patch, workrave-1.9.0.ebuild:
+  Fix compilation with no sound framework enabled, bug #249683. Add missing
+  cheetah dependency, bug #251275.
 
 *workrave-1.9.0 (22 Nov 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.0.ebuild,v 1.1 2008/11/22 14:50:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.0.ebuild,v 1.2 2008/12/27 12:07:55 eva Exp $
 
 inherit autotools eutils gnome2
 
@@ -44,7 +44,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/inputproto
 	x11-proto/recordproto
-
+	dev-python/cheetah
 	nls? ( sys-devel/gettext )
 	>=dev-util/pkgconfig-0.9"
 # Currently freezes workrave
@@ -73,7 +73,7 @@ src_unpack() {
 	echo "frontend/gtkmm/src/gnome_applet/Workrave-Applet.server.in" >> po/POTFILES.skip
 	echo "intl/plural.c" >> po/POTFILES.skip
 
-	# Copy file missing from tarball
+	# Copy files missing from tarball
 	cp "${FILESDIR}/${P}-gui.xml" "${S}/frontend/gtkmm/src/workrave-gui.xml"
 	cp "${FILESDIR}/${P}-dbus-glib.xml" "${S}/common/bin/DBus-glib.xml"
 	cp "${FILESDIR}/${P}-service.in" "${S}/frontend/gtkmm/src/org.workrave.Workrave.service.in"
@@ -86,6 +86,9 @@ src_unpack() {
 
 	# Fix parallel make issues ?
 	epatch "${FILESDIR}/${P}-parallel-make.patch"
+
+	# Fix compilation with no sound framework enabled, bug #249683
+	epatch "${FILESDIR}/${P}-nosoundplayer.patch"
 
 	eautoreconf
 }
