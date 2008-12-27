@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/slock
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.25 2008/10/30 00:05:14 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.26 2008/12/27 22:54:01 coldwind Exp $
+
+  27 Dec 2008; Santiago M. Mola <coldwind@gentoo.org> -slock-0.8.ebuild:
+  Remove old.
 
   30 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org> slock-0.9.ebuild:
   stable amd64, bug 244530
