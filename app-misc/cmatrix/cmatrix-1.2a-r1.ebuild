@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a-r1.ebuild,v 1.7 2008/02/27 22:37:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a-r1.ebuild,v 1.8 2008/12/27 07:36:32 wormo Exp $
 
 inherit autotools eutils
 
@@ -22,6 +22,9 @@ src_unpack() {
 	# sandbox.
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	if use X ; then
+		epatch "${FILESDIR}"/${P}-fontdir.patch
+	fi
 	eautoreconf
 }
 
@@ -29,16 +32,16 @@ src_install() {
 	dodir /usr/share/consolefonts || die 'dodir failed'
 	dodir /usr/lib/kbd/consolefonts || die 'dodir failed'
 	if use X;then
-	   dodir /usr/lib/X11/fonts/misc || die 'dodir failed'
+	   dodir /usr/share/fonts/misc || die 'dodir failed'
 	fi
 	emake DESTDIR="${D}" install || die 'emake install failed'
 }
 
 pkg_postinst() {
 	if use X; then
-		if [ -d "${ROOT}"usr/lib/X11/fonts/misc ] ; then
-			einfo ">>> Running mkfontdir on ${ROOT}usr/lib/X11/fonts/misc"
-			mkfontdir "${ROOT}"usr/lib/X11/fonts/misc || die 'mkfontdir failed'
+		if [ -d "${ROOT}"usr/share/fonts/misc ] ; then
+			einfo ">>> Running mkfontdir on ${ROOT}usr/share/fonts/misc"
+			mkfontdir "${ROOT}"usr/share/fonts/misc || die 'mkfontdir failed'
 		fi
 	fi
 }
