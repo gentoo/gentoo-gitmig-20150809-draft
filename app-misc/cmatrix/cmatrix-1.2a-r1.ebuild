@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a-r1.ebuild,v 1.8 2008/12/27 07:36:32 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a-r1.ebuild,v 1.9 2008/12/27 16:44:36 jer Exp $
 
 inherit autotools eutils
 
 DESCRIPTION="An ncurses based app to show a scrolling screen from the Matrix"
-HOMEPAGE="http://www.asty.org/cmatrix.html"
+HOMEPAGE="http://www.asty.org/cmatrix"
 SRC_URI="http://www.asty.org/${PN}/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
