@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.29 2008/12/04 17:58:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.30 2008/12/27 17:11:47 darkside Exp $
+
+*hamlib-1.2.8-r1 (27 Dec 2008)
+
+  27 Dec 2008; Jeremy Olexa <darkside@gentoo.org> +files/hamlib-ltdl.diff,
+  -hamlib-1.2.8.ebuild, +hamlib-1.2.8-r1.ebuild:
+  Add patch to allow hamlib to use the system libltdl instead of a bundled
+  one, patch by Thomas Beierlein. bug 252326
 
 *hamlib-1.2.8 (04 Dec 2008)
 
