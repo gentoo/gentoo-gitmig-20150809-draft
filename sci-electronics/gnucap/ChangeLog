@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/gnucap
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.42 2008/11/02 22:31:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.43 2008/12/27 19:05:26 calchan Exp $
+
+*gnucap-0.35.20081223 (27 Dec 2008)
+
+  27 Dec 2008; Denis Dupeyron <calchan@gentoo.org>
+  +gnucap-0.35.20081223.ebuild:
+  Version bump.
 
   02 Nov 2008; Diego Pettenò <flameeyes@gentoo.org>
   gnucap-0.35.20080324.ebuild:
