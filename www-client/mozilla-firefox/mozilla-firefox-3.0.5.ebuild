@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.5.ebuild,v 1.8 2008/12/26 19:07:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.5.ebuild,v 1.9 2008/12/27 16:31:43 ranger Exp $
 EAPI="1"
 WANT_AUTOCONF="2.1"
 
@@ -15,7 +15,7 @@ MY_PV=${PV/3/}
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 -sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 -sparc x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="java mozdevelop bindist restrict-javascript iceweasel +xulrunner"
