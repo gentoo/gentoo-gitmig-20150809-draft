@@ -1,13 +1,12 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-9999.ebuild,v 1.5 2008/12/27 22:47:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.10.ebuild,v 1.1 2008/12/27 22:47:31 ulm Exp $
 
-inherit elisp subversion
+inherit elisp
 
-ESVN_REPO_URI="svn://anonsvn.gentoo.org/emacs/${PN}"
 DESCRIPTION="Emacs modes for editing ebuilds and other Gentoo specific files"
 HOMEPAGE="http://www.gentoo.org/proj/en/lisp/emacs/"
-SRC_URI=""
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
