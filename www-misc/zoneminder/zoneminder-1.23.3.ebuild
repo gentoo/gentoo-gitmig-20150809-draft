@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.4 2008/11/18 16:23:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.5 2008/12/28 21:50:46 wrobel Exp $
 
 inherit eutils autotools depend.php depend.apache multilib
 
@@ -87,7 +87,7 @@ src_install() {
 	keepdir /var/run/zm
 	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
-	fperms 0644 /etc/zm.conf
+	fperms 0640 /etc/zm.conf
 
 	keepdir /var/log/${PN}
 	fowners apache:apache /var/log/${PN}
