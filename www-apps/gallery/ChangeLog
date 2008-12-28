@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.172 2008/12/08 18:48:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.173 2008/12/28 21:04:58 wrobel Exp $
+
+  28 Dec 2008; Gunnar Wrobel <wrobel@gentoo.org> -gallery-1.5.9.ebuild:
+  Removed vulnerable www-apps/gallery-1.5.9 (sec issue #249277).
 
   08 Dec 2008; Markus Meier <maekke@gentoo.org> gallery-1.5.10.ebuild:
   amd64 stable, bug #249277
