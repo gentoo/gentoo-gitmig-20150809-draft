@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/mydns
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.31 2008/05/21 18:53:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/ChangeLog,v 1.32 2008/12/28 01:38:57 matsuu Exp $
+
+*mydns-1.1.0-r2 (28 Dec 2008)
+
+  28 Dec 2008; MATSUU Takuto <matsuu@gentoo.org>
+  +files/mydns-1.1.0-gentoo.patch, -mydns-1.1.0.ebuild,
+  +mydns-1.1.0-r2.ebuild:
+  Fixed static issue, bug #183518. Replaced autoconf to eautoreconf, bug
+  #226413. Fixed QA issue. Removed old revision.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> mydns-1.1.0.ebuild,
   mydns-1.1.0-r1.ebuild:
