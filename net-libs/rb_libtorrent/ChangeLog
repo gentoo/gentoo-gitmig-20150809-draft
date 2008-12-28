@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.52 2008/08/09 16:59:27 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.53 2008/12/28 21:35:27 coldwind Exp $
+
+*rb_libtorrent-0.14.1 (28 Dec 2008)
+
+  28 Dec 2008; Santiago M. Mola <coldwind@gentoo.org>
+  +files/rb_libtorrent-0.14.1-ax_python_path.patch,
+  +rb_libtorrent-0.14.1.ebuild:
+  Version bump (bug #245731), thanks to Atman Sense <atman.sense@zise.de>.
+  Closes bug #225931 too.
 
   09 Aug 2008; Santiago M. Mola <coldwind@gentoo.org>
   rb_libtorrent-0.13.ebuild:
