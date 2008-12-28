@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-21.2.8-r2.ebuild,v 1.2 2008/12/28 01:31:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-21.2.8-r2.ebuild,v 1.3 2008/12/28 16:05:56 tcunha Exp $
 
 inherit eutils versionator
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/emacs/${MY_P}.tar.gz"
 
 LICENSE="FDL-1.1"
 SLOT="21"
-KEYWORDS="amd64 ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~s390 sparc ~x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
