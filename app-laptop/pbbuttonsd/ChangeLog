@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.75 2008/08/24 13:31:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.76 2008/12/28 02:14:12 josejx Exp $
+
+*pbbuttonsd-0.8.1-r3 (28 Dec 2008)
+
+  28 Dec 2008; Joseph Jezak <josejx@gentoo.org> +files/fnmode.patch,
+  pbbuttonsd-0.8.1-r2.ebuild, +pbbuttonsd-0.8.1-r3.ebuild:
+  Add patch to fix fnmode with kernel 2.6.28.
 
   24 Aug 2008; Markus Meier <maekke@gentoo.org> pbbuttonsd-0.8.1-r2.ebuild:
   add ~amd64, bug #167011
