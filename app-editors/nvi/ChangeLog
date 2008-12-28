@@ -1,6 +1,18 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.65 2008/10/05 14:52:40 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.66 2008/12/28 00:09:59 truedfx Exp $
+
+*nvi-1.81.6-r2 (28 Dec 2008)
+
+  28 Dec 2008; Harald van Dĳk <truedfx@gentoo.org>
+  -files/nvi-1.81.5-build.patch, -files/nvi-1.81.5-db4.patch,
+  -files/nvi-1.81.5-gcc4.patch, -files/nvi-1.81.5-header.patch,
+  -files/nvi-1.81.5-tcsetattr.patch, -files/nvi-1.81.5-wide.patch,
+  -files/nvi-1.81.5-wide-2.patch, +files/nvi-1.81.6-db44.patch,
+  -nvi-1.81.5-r3.ebuild, -nvi-1.81.5-r6.ebuild, -nvi-1.81.5-r7.ebuild,
+  +nvi-1.81.6-r2.ebuild:
+  Fix "DB_CREATE must be specified to create databases." message with recent
+  db, and make translations work
 
 *nvi-1.81.6-r1 (05 Oct 2008)
 
