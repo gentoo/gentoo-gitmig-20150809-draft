@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r1.ebuild,v 1.14 2008/12/24 15:39:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r1.ebuild,v 1.15 2008/12/28 15:02:55 armin76 Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -230,14 +230,14 @@ src_install() {
 
 	if use X ; then
 		# New Configuration Snippets
-		dodoc "${WORKDIR}/${P}-config-examples/"*.fdi || \
+		dodoc "${WORKDIR}/${PN}-config-examples/"*.fdi || \
 			die "dodoc X examples failed"
-		dobin "${WORKDIR}/${P}-config-examples/migrate-xorg-to-fdi.py" || \
+		dobin "${WORKDIR}/${PN}-config-examples/migrate-xorg-to-fdi.py" || \
 			die "dodoc X migration script failed"
 
 		# Automagic conversion!
 		elog "Migrating xorg.conf Core Keyboard configuration to HAL FDI file"
-		"${WORKDIR}/${P}-config-examples/migrate-xorg-to-fdi.py" 2> /dev/null \
+		"${WORKDIR}/${PN}-config-examples/migrate-xorg-to-fdi.py" 2> /dev/null \
 			> "${D}/etc/hal/fdi/policy/10-x11-input.fdi" || \
 			ewarn "Failed to migrate your keyboard configuration."
 	fi

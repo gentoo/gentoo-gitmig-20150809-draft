@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.259 2008/12/24 15:39:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.260 2008/12/28 15:02:55 armin76 Exp $
+
+  28 Dec 2008; Raúl Porcel <armin76@gentoo.org> hal-0.5.11-r1.ebuild:
+  Fix bug #252587
 
   24 Dec 2008; Doug Goldstein <cardoe@gentoo.org> hal-0.5.11-r1.ebuild,
   hal-0.5.11-r4.ebuild:
