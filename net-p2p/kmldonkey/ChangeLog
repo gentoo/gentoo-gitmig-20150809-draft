@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/kmldonkey
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.34 2008/11/13 13:45:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.35 2008/12/28 15:38:06 scarabeus Exp $
+
+  28 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org> kmldonkey-2.0.2.ebuild:
+  Update kmldonkey to be cross compilant with prepared eclasses, this means
+  eapi2 only.
 
   13 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> kmldonkey-2.0.2.ebuild:
   Update kde4 ebuild so it works with current kde.
