@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.5.2.ebuild,v 1.2 2008/05/31 22:25:17 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.5.2.ebuild,v 1.3 2008/12/28 17:17:07 dertobi123 Exp $
 
 DESCRIPTION="Program to interactively take a 'snapshot' of a region of the screen"
 SRC_URI="ftp://ftp.ac-grenoble.fr/ge/Xutils/${P}.tar.bz2"
@@ -8,7 +8,7 @@ HOMEPAGE="ftp://ftp.ac-grenoble.fr/ge/Xutils/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
