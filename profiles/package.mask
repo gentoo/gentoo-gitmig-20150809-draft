@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9332 2008/12/27 13:28:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9333 2008/12/28 16:18:22 matsuu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -95,11 +95,6 @@ net-misc/knetload
 # Removed in 60 days, dead upstream for 7 years. Unmaintained in Gentoo for 4
 # years. bug 251057
 net-misc/ossh
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
-# Removed in 60 days. Does not compile with gcc-4.3. Use app-i18n/scim-m17n
-# instead, bug 250680
-app-i18n/scim-wijesekera
 
 # Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
 # Removed in 60 days. Does not compile with gcc-4.3 and requires kernel patches
