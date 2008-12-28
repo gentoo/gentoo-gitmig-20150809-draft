@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.0.1.1.ebuild,v 1.2 2008/12/07 07:42:35 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.11.9.4.ebuild,v 1.1 2008/12/28 20:53:39 wrobel Exp $
 
 inherit eutils webapp depend.php
 
 MY_PV=${PV/_/-}
-MY_P="phpMyAdmin-${MY_PV}-all-languages"
+MY_P="phpMyAdmin-${MY_PV}-all-languages-utf-8-only"
 
 DESCRIPTION="Web-based administration for MySQL database in PHP"
 HOMEPAGE="http://www.phpmyadmin.net/"
@@ -14,8 +14,6 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
-
-RDEPEND=">=dev-db/mysql-5.0.15"
 
 need_httpd_cgi
 need_php_httpd
@@ -31,7 +29,7 @@ pkg_setup() {
 		eerror "${PHP_PKG} needs to be re-installed with all of the following"
 		eerror "USE flags enabled:"
 		eerror
-		eerror "ctype pcre session unicode"
+		eerror "crypt ctype pcre session unicode"
 		eerror
 		eerror "as well as any of the following USE flags enabled:"
 		eerror
@@ -39,6 +37,12 @@ pkg_setup() {
 		eerror
 		die "Re-install ${PHP_PKG}"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-2.11.5-custom-cert.patch
 }
 
 src_install() {
