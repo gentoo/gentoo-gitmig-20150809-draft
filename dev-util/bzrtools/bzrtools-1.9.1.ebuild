@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/bzrtools-1.9.1.ebuild,v 1.1 2008/11/05 17:02:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/bzrtools-1.9.1.ebuild,v 1.2 2008/12/28 01:26:08 darkside Exp $
 
 NEED_PYTHON=2.4
 inherit distutils versionator
@@ -11,7 +11,7 @@ SRC_URI="http://launchpad.net/bzrtools/stable/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="=dev-util/bzr-$(get_version_component_range 1-2)*"
