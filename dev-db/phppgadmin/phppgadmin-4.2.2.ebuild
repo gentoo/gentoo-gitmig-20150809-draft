@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-4.2.1.ebuild,v 1.1 2008/12/07 07:12:49 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-4.2.2.ebuild,v 1.1 2008/12/28 21:27:15 wrobel Exp $
 
 inherit webapp depend.php
 

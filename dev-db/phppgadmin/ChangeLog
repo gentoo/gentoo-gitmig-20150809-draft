@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.76 2008/12/07 07:12:49 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.77 2008/12/28 21:27:15 wrobel Exp $
+
+*phppgadmin-4.2.2 (28 Dec 2008)
+
+  28 Dec 2008; Gunnar Wrobel <wrobel@gentoo.org> -phppgadmin-4.2.1.ebuild,
+  +phppgadmin-4.2.2.ebuild:
+  Removed dev-db/phppgadmin-4.2.1, added 4.2.2 in response to sec issue #250451.
 
 *phppgadmin-4.2.1 (07 Dec 2008)
 
