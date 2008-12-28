@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.2 2008/12/11 16:01:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.3 2008/12/28 22:55:23 spock Exp $
 
 EAPI="1"
 
@@ -83,6 +83,12 @@ src_unpack() {
 	if ! use truetype ; then
 		sed -i -e 's/fbtruetype kbd/kbd/' "${SM}/Makefile"
 	fi
+
+	if has_version ">=sys-apps/openrc-0.4.0"; then
+		cd "${SG}"
+		epatch "${FILESDIR}"/splashutils-openrc-0.4-fix.patch
+		cd "${S}"
+	fi
 }
 
 src_compile() {
@@ -103,7 +109,7 @@ src_compile() {
 		--with-lpng-src=${LPNGSRC} \
 		--with-zlib-src=${ZLIBSRC} || die "failed to configure splashutils"
 
-	emake -j1 KLCC="${CC}" CC="${CC}" || die "failed to build splashutils"
+	emake KLCC="${CC}" CC="${CC}" STRIP="true" || die "failed to build splashutils"
 
 	if has_version ">=sys-apps/baselayout-1.13.99"; then
 		cd "${SG}"
@@ -118,7 +124,7 @@ src_install() {
 	make DESTDIR="${D}" LIB=${LIB} install || die
 
 	cd "${S}"
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" STRIP="true" install || die
 
 	mv "${D}"/usr/${LIB}/libfbsplash.so* "${D}"/${LIB}/
 	gen_usr_ldscript libfbsplash.so

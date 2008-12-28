@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.2.ebuild,v 1.6 2008/12/11 16:01:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.2.ebuild,v 1.7 2008/12/28 22:55:23 spock Exp $
 
 EAPI="1"
 
@@ -82,6 +82,12 @@ src_unpack() {
 
 	if ! use truetype ; then
 		sed -i -e 's/fbtruetype kbd/kbd/' "${SM}/Makefile"
+	fi
+
+	if has_version ">=sys-apps/openrc-0.4.0"; then
+		cd "${SG}"
+		epatch "${FILESDIR}"/splashutils-openrc-0.4-fix.patch
+		cd "${S}"
 	fi
 }
 
