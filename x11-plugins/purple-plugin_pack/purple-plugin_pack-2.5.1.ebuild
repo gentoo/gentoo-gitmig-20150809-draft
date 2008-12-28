@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.5.1.ebuild,v 1.1 2008/12/28 05:51:05 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.5.1.ebuild,v 1.2 2008/12/28 18:26:38 tester Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
-IUSE="talkfilters debug gtk ncurses"
+IUSE="talkfilters debug gtk ncurses spell"
 
 RDEPEND="net-im/pidgin
 	talkfilters? ( app-text/talkfilters )
