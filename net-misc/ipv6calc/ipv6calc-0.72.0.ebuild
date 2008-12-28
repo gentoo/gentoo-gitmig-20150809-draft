@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.72.0.ebuild,v 1.1 2008/12/25 13:48:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.72.0.ebuild,v 1.2 2008/12/28 20:30:14 pva Exp $
 
-inherit fixheadtails toolchain-funcs
+inherit eutils fixheadtails toolchain-funcs autotools
 
 DESCRIPTION="IPv6 address calculator"
 HOMEPAGE="http://www.deepspace6.net/projects/ipv6calc.html"
@@ -17,13 +17,16 @@ DEPEND="geoip? ( >=dev-libs/geoip-1.4.1 )"
 
 src_unpack() {
 	unpack ${A}
-	ht_fix_file "${S}/configure"
+	cd "${S}"
 	find \( -name Makefile.in -o -name Makefile \) -exec \
 		sed -e "s:\(^CC[[:space:]]=\).*:\1 $(tc-getCC):" \
 			-e "s:\(^LDFLAGS[[:space:]]=.*\)$:\1 ${LDFLAGS}:" \
 			-e "/^CFLAGS/{s:-I\$(GETOPT_DIR)::}" \
 			-e "s:\(^CFLAGS[[:space:]]=.*\):\1 ${CFLAGS}:" \
 				-i '{}' \;
+	epatch "${FILESDIR}/${P}-optional-geoip.patch"
+	eautoreconf
+	ht_fix_file configure
 }
 
 src_compile() {
