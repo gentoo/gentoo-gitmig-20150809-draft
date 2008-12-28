@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.45 2008/09/21 14:31:39 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.46 2008/12/28 21:09:26 wrobel Exp $
+
+*twiki-4.2.4 (28 Dec 2008)
+
+  28 Dec 2008; Gunnar Wrobel <wrobel@gentoo.org> -twiki-4.2.3.ebuild,
+  +twiki-4.2.4.ebuild:
+  Added www-apps/twiki-4.2.4, removed www-apps/twiki-4.2.3 in response to sec
+  issue #250356.
 
 *twiki-4.2.3 (21 Sep 2008)
 

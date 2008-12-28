@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.2.3.ebuild,v 1.1 2008/09/21 14:31:39 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.2.4.ebuild,v 1.1 2008/12/28 21:09:26 wrobel Exp $
 
 WEBAPP_NO_AUTO_INSTALL="yes"
 
@@ -10,7 +10,7 @@ MY_PN="TWiki"
 
 DESCRIPTION="A Web Based Collaboration Platform"
 HOMEPAGE="http://twiki.org/"
-SRC_URI="http://twiki.org/p/pub/Codev/Release/${MY_PN}-${PV}.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
