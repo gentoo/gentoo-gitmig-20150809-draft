@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/detox
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.21 2008/12/28 16:43:49 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/detox/ChangeLog,v 1.22 2008/12/28 17:10:55 dertobi123 Exp $
+
+  28 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org> detox-1.2.0.ebuild:
+  ppc stable, bug #250427
 
   28 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> detox-1.2.0.ebuild:
   Stable on sparc, bug #250427
