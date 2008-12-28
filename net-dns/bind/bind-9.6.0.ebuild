@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.0.ebuild,v 1.1 2008/12/26 22:38:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.0.ebuild,v 1.2 2008/12/28 09:52:57 dertobi123 Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
@@ -273,8 +273,20 @@ pkg_config() {
 		cp -R /var/bind ${CHROOT}/var/
 		chown -R named:named ${CHROOT}/var/
 		mknod ${CHROOT}/dev/zero c 1 5
-		mknod ${CHROOT}/dev/random c 1 8
-		chmod 666 ${CHROOT}/dev/{random,zero}
+		chmod 666 ${CHROOT}/dev/zero
+		if use urandom; then
+			mknod ${CHROOT}/dev/urandom c 1 9
+			chmod 666 ${CHROOT}/dev/urandom
+		else
+			mknod ${CHROOT}/dev/random c 1 8
+			chmod 666 ${CHROOT}/dev/random
+		fi
+		echo "none    ${CHROOT}/proc    proc    defaults    0 0" >>/etc/fstab
+		mkdir ${CHROOT}/proc
+		mount -t proc none ${CHROOT}/proc
+		if [ -f '/etc/syslog-ng/syslog-ng.conf' ]; then
+			echo "source jail { unix-stream(\"${CHROOT}/dev/log\"); };" >>/etc/syslog-ng/syslog-ng.conf
+		fi
 		chown root:named ${CHROOT}
 		chmod 0750 ${CHROOT}
 
