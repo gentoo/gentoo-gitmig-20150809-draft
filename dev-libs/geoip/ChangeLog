@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.95 2008/10/26 12:24:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.96 2008/12/28 18:20:32 pva Exp $
+
+  28 Dec 2008; Peter Volkov <pva@gentoo.org>
+  +files/geoip-1.4.5-ppc-fix.patch, geoip-1.4.5.ebuild:
+  Finally fixed test failure on ppc64 and marking it stable, bug #244256.
+  Thank Brent Baude for hardware access.
 
   26 Oct 2008; Raúl Porcel <armin76@gentoo.org> geoip-1.4.5.ebuild:
   alpha/ia64/sparc/x86 stable wrt #244256

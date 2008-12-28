@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.5.ebuild,v 1.5 2008/10/26 12:24:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.4.5.ebuild,v 1.6 2008/12/28 18:20:32 pva Exp $
 
 inherit autotools eutils libtool
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.maxmind.com/download/geoip/api/c/${MY_P}.tar.gz"
 # GPL-2 for md5.c - part of libGeoIPUpdate, MaxMind for GeoLite Country db
 LICENSE="LGPL-2.1 GPL-2 MaxMind"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
@@ -23,6 +23,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-1.4.4-parallel-build.patch
 	epatch "${FILESDIR}"/${PN}-1.4.4-no-noinst_PROGRAMS.patch
+	epatch "${FILESDIR}"/${P}-ppc-fix.patch
 	eautoreconf
 	# FreeBSD requires this
 	#elibtoolize
