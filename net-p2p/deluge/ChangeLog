@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.104 2008/12/26 17:21:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.105 2008/12/28 12:00:27 armin76 Exp $
+
+  28 Dec 2008; Raúl Porcel <armin76@gentoo.org> files/deluged.conf,
+  files/deluged.init:
+  Enhance init script, thanks to Alex Kravtsov and Kevin Bowling on bug #238733
 
   26 Dec 2008; Raúl Porcel <armin76@gentoo.org> deluge-1.1.0_rc1.ebuild:
   Change SRC_URI to bz2
