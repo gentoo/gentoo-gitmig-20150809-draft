@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/purple-plugin_pack
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.17 2008/08/05 21:11:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.18 2008/12/28 05:51:05 tester Exp $
+
+*purple-plugin_pack-2.5.1 (28 Dec 2008)
+
+  28 Dec 2008; Olivier Crête <tester@gentoo.org>
+  +purple-plugin_pack-2.5.1.ebuild:
+  Bump, bug #246809
 
   05 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
