@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.52 2008/05/02 11:55:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.53 2008/12/28 20:00:38 wrobel Exp $
+
+*c-client-2007e (28 Dec 2008)
+
+  28 Dec 2008; Gunnar Wrobel <wrobel@gentoo.org> +c-client-2007e.ebuild:
+  Added net-libs/c-client-2007e in response to sec issue #252567.
 
   02 May 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   c-client-2006k.ebuild:
