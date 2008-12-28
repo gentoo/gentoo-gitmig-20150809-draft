@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.1.7.ebuild,v 1.6 2008/12/28 17:20:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.1.7.ebuild,v 1.7 2008/12/28 20:17:17 gmsoft Exp $
 
 inherit eutils
 if [[ ${PV} == "9999" ]] ; then
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.nano-editor.org/"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="debug justify minimal ncurses nls slang spell unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2
