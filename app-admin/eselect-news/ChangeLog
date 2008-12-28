@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-news
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-news/ChangeLog,v 1.9 2008/06/20 20:52:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-news/ChangeLog,v 1.10 2008/12/28 22:55:34 darkside Exp $
+
+  28 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
+  eselect-news-20080320.ebuild:
+  amd64 stable, bug 251810
 
   20 Jun 2008; Zac Medico <zmedico@gentoo.org> eselect-news-20080320.ebuild:
   Make repoman happy by adding ~m68k, ~sh, and ~sparc-fbsd to KEYWORDS.
