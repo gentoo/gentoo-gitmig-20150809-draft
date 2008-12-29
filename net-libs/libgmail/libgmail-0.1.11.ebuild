@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/libgmail-0.1.9.ebuild,v 1.1 2008/05/02 16:16:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/libgmail-0.1.11.ebuild,v 1.1 2008/12/29 15:28:01 armin76 Exp $
 
 inherit distutils
 
@@ -10,7 +10,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE=""
-DEPEND="dev-python/clientcookie"
+DEPEND="dev-python/clientcookie
+	dev-python/mechanize"
