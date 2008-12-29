@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.44 2008/12/29 09:17:58 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.45 2008/12/29 09:19:58 gengor Exp $
 
 # supported only by gcc-4, unmask when it's stable wrt #217927
 media-libs/libopenraw
@@ -9,9 +9,6 @@ media-gfx/gnome-raw-thumbnailer
 
 # >=acml-3.6 depends on gcc-4*
 >=sci-libs/acml-3.6
-
-# Fails on hardened, bug 187120
-=dev-lang/php-5.2.3-r3
 
 # The following packages need =gcc-4*
 =net-im/skype-1.4.0*
