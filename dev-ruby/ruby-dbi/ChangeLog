@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-dbi
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.28 2008/12/16 20:14:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.29 2008/12/29 11:12:02 graaff Exp $
+
+  29 Dec 2008; Hans de Graaff <graaff@gentoo.org> ruby-dbi-0.2.0-r1.ebuild:
+  Use a bash array for the patches now that the ruby.eclass supports it.
 
   16 Dec 2008; Raúl Porcel <armin76@gentoo.org> ruby-dbi-0.2.0-r1.ebuild:
   Re-add ~ia64 wrt #250319

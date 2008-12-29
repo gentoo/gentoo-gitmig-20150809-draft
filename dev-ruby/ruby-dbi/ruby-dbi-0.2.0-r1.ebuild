@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.2.0-r1.ebuild,v 1.2 2008/12/16 20:14:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.2.0-r1.ebuild,v 1.3 2008/12/29 11:12:02 graaff Exp $
 
 EAPI="1"
 
@@ -25,8 +25,8 @@ DEPEND="virtual/ruby
 	sqlite3? ( dev-db/sqlite:3 )"
 
 S="${WORKDIR}/dbi-${PV}"
-PATCHES="${FILESDIR}/ruby-dbi-destdir-gentoo.diff
-	${FILESDIR}/ruby-dbi-0.1.1-destdir-gentoo.diff"
+PATCHES=( "${FILESDIR}/ruby-dbi-destdir-gentoo.diff"
+	"${FILESDIR}/ruby-dbi-0.1.1-destdir-gentoo.diff" )
 
 src_compile() {
 	myconf="dbi,dbd_proxy,dbd_sqlrelay"
