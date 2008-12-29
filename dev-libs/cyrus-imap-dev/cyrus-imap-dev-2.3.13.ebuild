@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.3.13.ebuild,v 1.1 2008/10/27 19:07:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.3.13.ebuild,v 1.2 2008/12/29 18:06:17 dertobi123 Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-imapd-${MY_PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ppc64"
+KEYWORDS="~amd64 ppc ~ppc64 ~sparc ~x86"
 IUSE="afs kerberos snmp ssl tcpd"
 
 RDEPEND="virtual/libc
