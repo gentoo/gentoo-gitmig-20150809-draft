@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.9.2.ebuild,v 1.4 2008/06/29 10:30:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.9.2.ebuild,v 1.5 2008/12/29 09:24:52 graaff Exp $
 
 inherit ruby eutils
 
@@ -22,11 +22,11 @@ RDEPEND="virtual/ruby
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/plugins/rubyide_fox_gui
+	cd "${S}/plugins/rubyide_fox_gui"
 
 	# A little patch I've created from FR CVS. Probably won't be
 	# needed in future versions.
-	epatch ${FILESDIR}/${P}-gentoo-appframe.patch
+	epatch "${FILESDIR}/${P}-gentoo-appframe.patch"
 }
 
 src_install() {
@@ -37,7 +37,7 @@ src_install() {
 	cp -R config freebase plugins redist so test \
 		"${D}${siteruby}/${PN}" || die "cp -R failed"
 
-	newbin ${FILESDIR}/freeride.sh freeride || die "dobin failed"
+	newbin "${FILESDIR}/freeride.sh" freeride || die "dobin failed"
 
 	erubydoc
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.9.6.ebuild,v 1.2 2008/06/29 10:30:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freeride/freeride-0.9.6.ebuild,v 1.3 2008/12/29 09:24:52 graaff Exp $
 
 inherit ruby eutils
 
@@ -28,7 +28,7 @@ src_install() {
 	cp -R config freebase plugins redist so test \
 		"${D}${siteruby}/${PN}" || die "cp -R failed"
 
-	newbin ${FILESDIR}/freeride.sh freeride || die "dobin failed"
+	newbin "${FILESDIR}/freeride.sh" freeride || die "dobin failed"
 
 	erubydoc
 }
