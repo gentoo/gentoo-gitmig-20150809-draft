@@ -63,12 +63,6 @@ ppc		default-linux/ppc/ppc32/2007.0/desktop/G4/Pegasos	stable
 ppc		default-linux/ppc/ppc64/2007.0/32bit-userland	dev
 ppc64		default-linux/ppc/ppc64/2007.0/64bit-userland	dev
 
-# S/390 Profiles
-s390		default/linux/s390/2008.0/server		dev
-
-# SuperH Profiles
-sh		default/linux/sh/2008.0/server			dev
-
 # SPARC Profiles
 #sparc		default-linux/sparc/sparc32/2006.1		dev
 #sparc		default-linux/sparc/sparc32/2006.1/2.4		dev
