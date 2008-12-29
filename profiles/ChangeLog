@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2209 2008/12/29 02:45:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2210 2008/12/29 10:34:14 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Unmask new gnustep release, gorm 1.2.8 is here
 
   29 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Remove mask on libarchive 2.6 since it has been released.
