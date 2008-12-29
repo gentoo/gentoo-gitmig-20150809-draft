@@ -1,8 +1,9 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.16 2008/12/29 13:36:45 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.17 2008/12/29 13:38:16 bluebird Exp $
 
-  29 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> ChangeLog:
+  29 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  e2fsprogs-libs-1.41.3.ebuild:
   Stable on sparc, bug #251808
 
   27 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
