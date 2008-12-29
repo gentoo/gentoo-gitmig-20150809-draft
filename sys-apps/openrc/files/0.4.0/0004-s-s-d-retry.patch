@@ -1,0 +1,54 @@
+Index: /trunk/src/rc/start-stop-daemon.c
+===================================================================
+--- /trunk/src/rc/start-stop-daemon.c (revision 1453)
++++ /trunk/src/rc/start-stop-daemon.c (revision 1460)
+@@ -627,4 +627,5 @@
+ 	char *name = NULL;
+ 	char *pidfile = NULL;
++	char *retry = NULL;
+ 	int sig = 0;
+ 	int nicelevel = 0;
+@@ -695,5 +696,5 @@
+ 
+ 		case 'R':  /* --retry <schedule>|<timeout> */
+-			parse_schedule(optarg, sig);
++			retry = optarg;
+ 			break;
+ 
+@@ -854,5 +855,7 @@
+ 		*--argv = exec;
+ 
+-	if (stop || sig) {
++	if (stop || sig != 0) {
++		if (sig == 0)
++			sig = SIGTERM;
+ 		if (!*argv && !pidfile && !name && !uid)
+ 			eerrorx("%s: --stop needs --exec, --pidfile,"
+@@ -877,4 +880,5 @@
+ 				" with --background", applet);
+ 	}
++
+ 	/* Expand ~ */
+ 	if (ch_dir && *ch_dir == '~')
+@@ -956,14 +960,14 @@
+ 
+ 	if (stop || sig) {
+-		if (!sig)
++		if (sig == 0)
+ 			sig = SIGTERM;
+ 		if (!stop)
+ 			oknodo = true;
+-		if (!TAILQ_FIRST(&schedule)) {
+-			if (test || oknodo)
+-				parse_schedule("0", sig);
+-			else
+-				parse_schedule(NULL, sig);
+-		}
++		if (retry)
++			parse_schedule(retry, sig);
++		else if (test || oknodo)
++			parse_schedule("0", sig);
++		else
++			parse_schedule(NULL, sig);
+ 		i = run_stop_schedule(exec, (const char *const *)margv,
+ 				      pidfile, uid, quiet, verbose, test);

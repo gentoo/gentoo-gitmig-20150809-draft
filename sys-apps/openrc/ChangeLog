@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.52 2008/12/24 06:59:46 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.53 2008/12/29 22:57:50 cardoe Exp $
+
+*openrc-0.4.1-r1 (29 Dec 2008)
+
+  29 Dec 2008; Doug Goldstein <cardoe@gentoo.org>
+  -files/0.3.0/0001-Fix-a-segfault-when-profile.env-does-not-exist.patch,
+  -files/0.3.0/0005-add-back-KV_-funcs.patch,
+  +files/0.4.0/0004-s-s-d-retry.patch,
+  -files/0.3.0/0003-This-reverts-commit-0e2f160c95b15e95f3885e3f5a3670ec.pat
+  ch, -files/0.3.0/0006-Fix-tests-Gentoo-240350.patch,
+  -files/0.3.0/0002-kenv-is-not-always-available.patch,
+  -files/0.3.0/0007-Fix-utmp-permissions-Gentoo-240437.patch,
+  -files/0.3.0/0004-add-a-softlevel-function-to-the-API-so-people-dont.patch
+  , -files/0.3.0/0008-Clean-up-warnings-regarding-printf.patch,
+  -openrc-0.3.0-r1.ebuild, -openrc-0.4.0.ebuild, -openrc-0.4.1.ebuild,
+  +openrc-0.4.1-r1.ebuild:
+  fix s-s-d signals on retry. bug #252621. remove old versions
 
   24 Dec 2008; Matthias Schwarzott <zzam@gentoo.org> openrc-0.4.1.ebuild:
   Fix patches directory, bug #252340. Update ebuild to match the old 0.4.0
