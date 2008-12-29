@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.016.ebuild,v 1.3 2007/07/13 06:25:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-1.016.ebuild,v 1.4 2008/12/29 11:38:49 coldwind Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ DESCRIPTION="Digital Mars D Compiler"
 HOMEPAGE="http://www.digitalmars.com/d/"
 SRC_URI="http://ftp.digitalmars.com/${MY_P}.zip"
 
+IUSE=""
 LICENSE="DMD"
 RESTRICT="mirror strip"
 SLOT="0"
@@ -19,7 +20,8 @@ KEYWORDS="~x86"
 LOC="/opt/dmd"
 S="${WORKDIR}"
 
-DEPEND="sys-apps/findutils"
+DEPEND="sys-apps/findutils
+	app-arch/unzip"
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-compat )
 	x86? ( sys-libs/libstdc++-v3 )"
 
@@ -27,17 +29,17 @@ src_unpack() {
 	unpack ${A}
 
 	# Remove unneccessary files
-	mv ${S}/dmd/lib/libphobos.a ${S}/dmd
-	rm -r ${S}/dmd/lib
-	mkdir ${S}/dmd/lib
-	mv ${S}/dmd/libphobos.a ${S}/dmd/lib
+	mv "${S}"/dmd/lib/libphobos.a "${S}"/dmd
+	rm -r "${S}"/dmd/lib
+	mkdir "${S}"/dmd/lib
+	mv "${S}"/dmd/libphobos.a "${S}"/dmd/lib
 
-	rm -r ${S}/dm
-	rm ${S}/dmd/bin/*.dll ${S}/dmd/bin/*.exe ${S}/dmd/bin/readme.txt
-	rm ${S}/dmd/bin/sc.ini ${S}/dmd/bin/windbg.hlp
+	rm -r "${S}"/dm
+	rm "${S}"/dmd/bin/*.dll "${S}"/dmd/bin/*.exe "${S}"/dmd/bin/readme.txt
+	rm "${S}"/dmd/bin/sc.ini "${S}"/dmd/bin/windbg.hlp
 
 	# Cleanup line endings
-	cd ${S}/dmd
+	cd "${S}"/dmd
 	edos2unix `find . -name '*.c' -type f`
 	edos2unix `find . -name '*.d' -type f`
 	edos2unix `find . -name '*.ddoc' -type f`
@@ -53,11 +55,11 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/dmd/src/phobos
+	cd "${S}"/dmd/src/phobos
 	sed -i -e "s:DMD=.*:DMD=${S}/dmd/bin/dmd -I${S}/dmd/src/phobos -L${S}/dmd/lib/libphobos.a:" linux.mak internal/gc/linux.mak
 	edos2unix linux.mak internal/gc/linux.mak
 	make -f linux.mak
-	cp libphobos.a ${S}/dmd/lib
+	cp libphobos.a "${S}"/dmd/lib
 
 	# Clean up
 	make -f linux.mak clean
@@ -65,7 +67,7 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}/dmd
+	cd "${S}"/dmd
 
 	# Broken dmd.conf
 	# http://d.puremagic.com/issues/show_bug.cgi?id=278
