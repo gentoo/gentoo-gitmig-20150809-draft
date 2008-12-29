@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.88 2008/12/14 19:27:20 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.89 2008/12/29 13:31:54 gurligebis Exp $
+
+  29 Dec 2008; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  hostapd-0.6.6.ebuild:
+  Fixing typo in version check reported by Jackie
 
 *hostapd-0.6.6 (14 Dec 2008)
 

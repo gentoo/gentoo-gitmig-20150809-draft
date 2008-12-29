@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.6.ebuild,v 1.1 2008/12/14 19:27:20 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.6.ebuild,v 1.2 2008/12/29 13:31:54 gurligebis Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -68,7 +68,7 @@ generate_config() {
 		einfo "  Madwifi driver disabled"
 	fi
 
-	if [[ ${KV_MAJOR} -ge 2 && ${KV_MINOR} -ge 6 || ${KV_PATCH} -ge 26 ]] ; then
+	if [[ ${KV_MAJOR} -ge 2 && ${KV_MINOR} -ge 6 && ${KV_PATCH} -ge 26 ]] ; then
 		# Test if header version is new enough (2.6.26+)
 		if [ "$(grep NL80211_MNTR_FLAG_COOK_FRAMES /usr/include/linux/nl80211.h)" ]; then
 			einfo "  nl80211 driver enabled"
