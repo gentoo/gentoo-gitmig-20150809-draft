@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.672 2008/12/29 20:44:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.673 2008/12/29 23:04:15 the_paya Exp $
+
+  29 Dec 2008; Javier Villavicencio <the_paya@gentoo.org>
+  gcc-4.3.2-r2.ebuild:
+  Keyworded ~x86-fbsd.
 
   29 Dec 2008; Mike Frysinger <vapier@gentoo.org> gcc-4.3.2-r2.ebuild:
   Fix typo in pie alpha patchset #252677.
