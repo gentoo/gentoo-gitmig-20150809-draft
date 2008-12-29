@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/sourcenav
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.21 2008/11/17 20:33:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.22 2008/12/29 23:24:26 nerdboy Exp $
+
+  29 Dec 2008; Steve Arnold <nerdboy@gentoo.org>
+  +files/sourcenav_tk-8.3-lastevent.patch, sourcenav-5.2_beta2.ebuild:
+  Updated with Tk patch for xproto header changes (see bug #252700).
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/sourcenav-5.1.1-gentoo.diff:

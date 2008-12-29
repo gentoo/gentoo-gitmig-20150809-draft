@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.2_beta2.ebuild,v 1.11 2008/02/10 23:54:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.2_beta2.ebuild,v 1.12 2008/12/29 23:24:26 nerdboy Exp $
 
 inherit autotools flag-o-matic eutils toolchain-funcs fdo-mime
 
@@ -33,7 +33,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/sourcenav_destdir.patch
+	epatch "${FILESDIR}"/${PN}_destdir.patch
 	epatch "${FILESDIR}"/${P}-tk-size.patch
 	sed -i -e "s/relid'/relid/" tcl/unix/configure
 	sed -i -e "s/relid'/relid/" tk/unix/configure
@@ -41,6 +41,9 @@ src_unpack() {
 	if [ $(gcc-major-version) -ge 4 ]; then
 	    epatch "${FILESDIR}"/${P}-gcc4.patch
 	fi
+
+	# update internal tk (see bugs 225999 and 252700
+	epatch "${FILESDIR}"/${PN}_tk-8.3-lastevent.patch
 	eaclocal
 }
 
