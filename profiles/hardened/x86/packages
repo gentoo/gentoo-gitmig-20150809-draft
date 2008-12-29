@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/packages,v 1.13 2007/06/28 10:07:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/packages,v 1.14 2008/12/29 20:19:32 gengor Exp $
 
 # IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
 
@@ -18,7 +18,6 @@
 <sys-kernel/gentoo-sources-2.5
 <sys-kernel/grsec-sources-2.5
 <sys-kernel/hardened-sources-2.5
-<sys-kernel/rsbac-sources-2.5
 <sys-kernel/uclinux-sources-2.5
 <sys-kernel/usermode-sources-2.5
 <sys-kernel/vanilla-sources-2.5
