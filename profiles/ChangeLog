@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2214 2008/12/29 19:01:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2215 2008/12/29 19:21:14 fuzzyray Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Dec 2008; Paul Varner <fuzzyray@gentoo.org> package.mask:
+  Bug #105016 - Remove mask for app-portage/gentoolkit-0.2.4_rc1 since it is
+  no longer in the tree.
 
   29 Dec 2008; Zac Medico <zmedico@gentoo.org> package.mask:
   Bug #105016 - Remove foomatic-db-20000000 masks. Masks for pseudo-downgrades
