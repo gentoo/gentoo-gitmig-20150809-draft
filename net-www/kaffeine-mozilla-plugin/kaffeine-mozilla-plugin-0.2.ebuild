@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.11 2007/07/22 07:43:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kaffeine-mozilla-plugin/kaffeine-mozilla-plugin-0.2.ebuild,v 1.12 2008/12/29 15:48:35 scarabeus Exp $
 
 inherit nsplugins multilib
 
@@ -21,11 +21,14 @@ RDEPEND=">=media-video/kaffeine-0.4.3
 DEPEND="${RDEPEND}"
 
 src_compile() {
-	econf --prefix=/usr/$(get_libdir)/${PLUGINS_DIR} || die
+	econf \
+		--prefix=/usr/$(get_libdir)/${PLUGINS_DIR}
+		--libdir=/usr/$(get_libdir)/${PLUGINS_DIR%plugins}
+
 	emake || die
 }
 
 src_install() {
-	einstall prefix=${D}/usr/$(get_libdir)/${PLUGINS_DIR%plugins} || die
+	einstall prefix="${D}"/usr/$(get_libdir)/${PLUGINS_DIR%plugins} || die
 	dodoc AUTHORS ChangeLog README
 }
