@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.323 2008/12/23 17:49:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.324 2008/12/29 04:05:37 robbat2 Exp $
+
+*imagemagick-6.4.5.9 (29 Dec 2008)
+
+  29 Dec 2008; Robin H. Johnson <robbat2@gentoo.org>
+  +imagemagick-6.4.5.9.ebuild:
+  Minor version bump that improves PerlMagick and OpenMP usage.
 
   23 Dec 2008; Markus Meier <maekke@gentoo.org>
   -imagemagick-6.3.5.10.ebuild, -imagemagick-6.4.0.6.ebuild,
