@@ -1,0 +1,12 @@
+implicit string prototypes break 64bit systems
+
+--- src/timecode.c
++++ src/timecode.c
+@@ -23,6 +23,7 @@
+ *******************************************************************************/
+ 
+ #include <stdlib.h>
++#include <string.h>
+ 
+ #include "lqt_private.h"
+ 

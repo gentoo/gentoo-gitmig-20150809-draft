@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.1.1.ebuild,v 1.2 2008/12/20 08:42:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.1.1.ebuild,v 1.3 2008/12/29 22:22:06 vapier Exp $
 
 inherit libtool eutils
 
@@ -11,7 +11,6 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-
 IUSE="mmx X opengl dv gtk alsa aac encode png jpeg vorbis lame x264 ffmpeg doc"
 
 RDEPEND="dv? ( media-libs/libdv )
@@ -50,9 +49,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-headers.patch
+
 	# Needed for sane .so versionning on g/fbsd
 	elibtoolize
 }
+
 src_compile() {
 	local MY_OPTS=""
 	if use !encode || use !aac; then
