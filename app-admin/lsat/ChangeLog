@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/lsat
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.22 2008/04/21 16:05:06 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsat/ChangeLog,v 1.23 2008/12/29 20:37:14 mpagano Exp $
+
+*lsat-0.9.7.1 (29 Dec 2008)
+
+  29 Dec 2008; Mike Pagano <mpagano@gentoo.org>
+  +files/lsat-0.9.7.1-gentoo.patch, +files/lsat-0.9.7.1-segfault-fix.patch,
+  +lsat-0.9.7.1.ebuild:
+  Version bump and patch for bug #184488
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
