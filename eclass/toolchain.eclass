@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.370 2008/12/29 16:40:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.371 2008/12/29 22:46:32 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1468,10 +1468,6 @@ gcc_do_make() {
 		# 3 stage bootstrapping doesnt quite work when you cant run the
 		# resulting binaries natively ^^;
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-all}
-	elif [[ $(tc-arch) == "x86" || $(tc-arch) == "amd64" ]] \
-		&& [[ ${GCCMAJOR}.${GCCMINOR} > 3.3 ]]
-	then
-		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-profiledbootstrap}
 	else
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-bootstrap-lean}
 	fi
