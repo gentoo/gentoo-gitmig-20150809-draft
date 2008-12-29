@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9336 2008/12/29 12:14:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9337 2008/12/29 15:57:02 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -135,11 +135,6 @@ x11-libs/xfc
 # is not ready for stable ( bug 251566 ).
 # Upstream has abandoned it, alternatives such as gedit exist.
 app-editors/katoob
-
-# Hans de Graaff <graaff@gentoo.org> (20 Dec 2008)
-# Installs compiled code in the wrong directory. Masked
-# while we figure out how to fix this with the gem.
-=dev-ruby/hpricot-0.6.164
 
 # Daniel Drake <dsd@gentoo.org> (18 Dec 2008)
 # Unmaintained, unloved, and unwashed. Removing from Portage on on Dec 31st

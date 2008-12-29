@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2212 2008/12/29 15:49:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2213 2008/12/29 15:57:02 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Dec 2008; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove hpricot mask since the broken version is removed from the tree.
 
   29 Dec 2008; Raúl Porcel <armin76@gentoo.org> profiles.desc:
   Remove duped profiles on profiles.desc
