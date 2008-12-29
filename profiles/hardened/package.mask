@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.43 2008/12/29 06:12:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.44 2008/12/29 09:17:58 gengor Exp $
 
 # supported only by gcc-4, unmask when it's stable wrt #217927
 media-libs/libopenraw
@@ -16,8 +16,13 @@ media-gfx/gnome-raw-thumbnailer
 # The following packages need =gcc-4*
 =net-im/skype-1.4.0*
 
-# gcc-4* still isn't ready.
-#=sys-devel/gcc-4*
+# Hardened versions of gcc-4.0 through gcc-4.2* are not available
+=sys-devel/gcc-4.0*
+=sys-devel/gcc-4.1*
+=sys-devel/gcc-4.2*
+
+# No hardened >=sys-devel/gcc-4.4 available
+>=sys-devel/gcc-4.4
 
 # Mask off glibc-2.4 until the approach for SSP compatibilty is
 # resolved in a way that doesn't break running systems, and we
