@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.7 2008/12/23 11:59:43 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.8 2008/12/29 09:22:45 vapier Exp $
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform
@@ -251,8 +251,6 @@ use_multilib() {
 
 # Setup toolchain variables that would be defined in the profiles for these archs.
 setup_env() {
-	# These should not be set, else the zoneinfo do not always get installed ...
-	unset LANGUAGE LANG LC_ALL
 	# silly users
 	unset LD_RUN_PATH
 
