@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.53 2008/12/28 20:00:38 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.54 2008/12/29 13:58:48 ranger Exp $
+
+  29 Dec 2008; Brent Baude <ranger@gentoo.org> c-client-2007e.ebuild:
+  Marking c-client-2007e ppc64 for bug 252567
 
 *c-client-2007e (28 Dec 2008)
 
