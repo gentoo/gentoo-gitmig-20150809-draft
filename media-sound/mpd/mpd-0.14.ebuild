@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.ebuild,v 1.1 2008/12/26 19:20:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.ebuild,v 1.2 2008/12/29 18:04:10 angelos Exp $
 
 EAPI=2
 
@@ -53,6 +53,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	cp doc/mpdconf.example doc/mpdconf.dist
 	epatch "${FILESDIR}"/mpdconf1.patch
 }
 
@@ -109,7 +110,8 @@ src_install() {
 	rm -rf "${D}"/usr/share/doc/mpd/
 
 	dodoc AUTHORS NEWS README TODO UPGRADING
-	use doc && dodoc doc/protocol.html
+	dodoc doc/mpdconf.dist
+	use doc && dohtml doc/protocol.html
 
 	insinto /etc
 	newins doc/mpdconf.example mpd.conf
