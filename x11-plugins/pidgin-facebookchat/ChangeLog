@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/pidgin-facebookchat
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.13 2008/12/19 21:32:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.14 2008/12/29 10:06:06 voyageur Exp $
+
+*pidgin-facebookchat-1.46 (29 Dec 2008)
+
+  29 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +pidgin-facebookchat-1.46.ebuild:
+  Version bump, added support for Pokes, idle/away works properly, buddy
+  icons are larger for everyone, aliases work better on buddies
 
 *pidgin-facebookchat-1.45 (19 Dec 2008)
 
