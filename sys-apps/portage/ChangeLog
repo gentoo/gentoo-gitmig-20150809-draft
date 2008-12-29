@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.565 2008/12/28 23:00:45 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.566 2008/12/29 12:45:23 bluebird Exp $
+
+  29 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  portage-2.1.6.4.ebuild:
+  Stable on sparc, bug #251812
 
   28 Dec 2008; Jeremy Olexa <darkside@gentoo.org> portage-2.1.6.4.ebuild:
   amd64 stable, bug 251812
