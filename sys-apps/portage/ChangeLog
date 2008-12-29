@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.566 2008/12/29 12:45:23 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.567 2008/12/29 16:17:03 armin76 Exp $
+
+  29 Dec 2008; Raúl Porcel <armin76@gentoo.org> portage-2.1.6.4.ebuild:
+  alpha/arm/ia64/s390/x86 stable wrt #251812
 
   29 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
   portage-2.1.6.4.ebuild:
