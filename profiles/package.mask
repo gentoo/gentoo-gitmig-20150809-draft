@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9337 2008/12/29 15:57:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9338 2008/12/29 19:01:38 zmedico Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -719,12 +719,6 @@ dev-dotnet/jscall-sharp
 # Masked for removal in 30 days. Dead upstream.
 dev-db/pgeasy
 dev-db/pgst
-
-# Zac Medico <zmedico@gentoo.org> (18 May 2008)
-# Masked to ensure that pseudo-downgrade happens correctly, following
-# version scheme change from YYYYMMDD to 3.0.YYYYMMDD.
->net-print/foomatic-db-ppds-20000000
->net-print/foomatic-db-20000000
 
 # Rémi Cardona <remi@gentoo.org> (16 Apr 2008)
 # Masked until somebody picks it up
