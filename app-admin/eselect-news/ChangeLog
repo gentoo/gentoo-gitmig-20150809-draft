@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-news
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-news/ChangeLog,v 1.11 2008/12/29 12:42:57 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-news/ChangeLog,v 1.12 2008/12/29 16:15:48 armin76 Exp $
+
+  29 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  eselect-news-20080320.ebuild:
+  alpha/arm/ia64/s390/x86 stable wrt #251810
 
   29 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
   eselect-news-20080320.ebuild:
