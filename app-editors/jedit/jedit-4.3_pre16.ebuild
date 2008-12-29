@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre16.ebuild,v 1.1 2008/11/24 10:22:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.3_pre16.ebuild,v 1.2 2008/12/29 00:26:37 caster Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -33,9 +33,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# we need to use our own classpath
-	java-ant_rewrite-classpath build.xml
-
 	if use doc; then
 		local xsl=$(echo /usr/share/sgml/docbook/xsl-stylesheets-*)
 		xsl=${xsl// *}
@@ -51,11 +48,13 @@ src_unpack() {
 	# still need to do: bsh, com.microstar.xml.*, org.gjt.*
 	java-pkg_filter-compiler jikes
 }
-src_compile() {
-	# TODO could build more docs, ie userdocs target instead of generate-javadoc
-	eant build $(use_doc generate-javadoc) \
-		-Dgentoo.classpath=$(java-config --tools)
-}
+
+JAVA_ANT_REWRITE_CLASSPATH="true"
+EANT_BUILD_TARGET="build"
+# TODO could build more docs, ie userdocs target instead of generate-javadoc
+EANT_DOC_TARGET="generate-javadoc"
+# in fact needed only for docs, but shouldn't hurt
+EANT_NEEDS_TOOLS="true"
 
 src_install () {
 	dodir ${JEDIT_HOME}
