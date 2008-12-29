@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.8_p20080602.ebuild,v 1.11 2008/11/06 06:24:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.8_p20080602.ebuild,v 1.12 2008/12/29 21:49:05 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -257,6 +257,8 @@ pkg_setup() {
 
 	use hardened && ! gcc-specs-pie && \
 		ewarn "PIE hardening not applied, as your compiler doesn't default to PIE"
+
+	export LC_ALL=C #252802
 }
 
 fix_lib64_symlinks() {

@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.600 2008/12/29 09:22:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.601 2008/12/29 21:49:05 vapier Exp $
+
+  29 Dec 2008; Mike Frysinger <vapier@gentoo.org> glibc-2.7-r2.ebuild,
+  glibc-2.8_p20080602.ebuild, glibc-2.8_p20080602-r1.ebuild,
+  glibc-2.9_p20081201.ebuild, glibc-2.9_p20081201-r1.ebuild:
+  Force LC_ALL=C until the iconvdata patch hits #252802 by Harald van Dijk.
 
   29 Dec 2008; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit,
   files/eblits/src_install.eblit:
