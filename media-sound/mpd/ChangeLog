@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.146 2008/12/29 18:04:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.147 2008/12/30 21:14:47 angelos Exp $
+
+  30 Dec 2008; Christoph Mende <angelos@gentoo.org> mpd-0.13.2.ebuild,
+  mpd-0.14.ebuild:
+  Fixed file permissions on /var/lib/mpd, bug 253141
 
   29 Dec 2008; Christoph Mende <angelos@gentoo.org> mpd-0.14.ebuild:
   Also ship the default mpd.conf
