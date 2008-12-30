@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tpconfig
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tpconfig/ChangeLog,v 1.9 2007/05/14 16:47:40 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tpconfig/ChangeLog,v 1.10 2008/12/30 20:29:22 angelos Exp $
+
+  30 Dec 2008; Christoph Mende <angelos@gentoo.org> tpconfig-3.1.3.ebuild:
+  QA: Respect CC (bug 243678)
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
