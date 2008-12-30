@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cdircmp
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdircmp/ChangeLog,v 1.12 2008/06/27 20:51:24 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdircmp/ChangeLog,v 1.13 2008/12/30 19:35:53 angelos Exp $
+
+  30 Dec 2008; Christoph Mende <angelos@gentoo.org> cdircmp-0.3.ebuild:
+  QA: Respect CC (bug 243622) and CFLAGS (bug 240064)
 
   27 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org> cdircmp-0.3.ebuild:
   keyworded ~arch for amd64, bug 228795
