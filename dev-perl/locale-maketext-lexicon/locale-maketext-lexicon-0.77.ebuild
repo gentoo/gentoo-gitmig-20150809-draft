@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/locale-maketext-lexicon-0.71.ebuild,v 1.1 2008/10/06 11:15:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/locale-maketext-lexicon-0.77.ebuild,v 1.1 2008/12/30 16:34:03 tove Exp $
 
-MODULE_AUTHOR=AUDREYT
+MODULE_AUTHOR=DRTECH
 MY_PN=Locale-Maketext-Lexicon
 MY_P=${MY_PN}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -14,9 +14,11 @@ DESCRIPTION="Use other catalog formats in Maketext"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="test"
 
-DEPEND="virtual/perl-locale-maketext
+RDEPEND="virtual/perl-locale-maketext
 	dev-lang/perl"
+DEPEND="${RDEPEND}
+	test? ( dev-perl/Test-Pod )"
 
 SRC_TEST="do"
