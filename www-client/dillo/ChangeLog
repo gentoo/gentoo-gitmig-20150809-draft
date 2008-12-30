@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.65 2008/11/24 15:19:50 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.66 2008/12/30 02:31:15 yngwin Exp $
+
+  30 Dec 2008; Ben de Groot <yngwin@gentoo.org> dillo-2.0.ebuild:
+  Die on doxygen failure
 
   24 Nov 2008; Ferris McCormick <fmccor@gentoo.org> dillo-2.0.ebuild:
   Keyword ~sparc for testing, See Bug #242774.
