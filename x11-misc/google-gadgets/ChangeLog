@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.17 2008/12/17 09:18:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.18 2008/12/30 10:42:12 voyageur Exp $
+
+  30 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/google-gadgets-0.10.4-xulrunner-1.9.1.patch,
+  google-gadgets-0.10.4.ebuild:
+  Get ready for xulrunner 1.9.1, patch spotted by loki_val
 
   17 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
   +files/google-gadgets-0.10.4-gcc41.patch, google-gadgets-0.10.3.ebuild,
