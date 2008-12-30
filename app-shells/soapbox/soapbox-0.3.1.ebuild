@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/soapbox/soapbox-0.3.1.ebuild,v 1.2 2005/06/01 02:39:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/soapbox/soapbox-0.3.1.ebuild,v 1.3 2008/12/30 20:51:13 angelos Exp $
 
-inherit multilib
+inherit multilib toolchain-funcs
 
 DESCRIPTION="A preload (sandbox) library to restrict filesystem writes"
 HOMEPAGE="http://dag.wieers.com/home-made/soapbox/"
@@ -25,9 +25,11 @@ src_unpack() {
 
 src_compile() {
 	emake \
+		CC="$(tc-getCC)" \
+		LD="$(tc-getCC)" \
 		CFLAGS="${CFLAGS} -fPIC" \
 		LDFLAGS="${LDFLAGS}" \
-		|| die
+		|| die "emake failed"
 }
 
 src_install() {
