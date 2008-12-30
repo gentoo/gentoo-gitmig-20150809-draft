@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.1-r1.ebuild,v 1.1 2008/12/29 22:57:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.1-r1.ebuild,v 1.2 2008/12/30 17:24:46 cardoe Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -141,6 +141,9 @@ pkg_preinst() {
 	use kernel_FreeBSD && clock="adjkerntz" || clock="hwclock"
 	if [[ -e ${ROOT}/etc/conf.d/clock ]] ; then
 		mv "${ROOT}"/etc/conf.d/clock "${ROOT}"/etc/conf.d/${clock}
+	fi
+	if [[ -e ${ROOT}/etc/init.d/clock ]] ; then
+		rm -f "${ROOT}"/etc/init.d/clock
 	fi
 	if [[ -L ${ROOT}/etc/runlevels/boot/clock ]] ; then
 		rm -f "${ROOT}"/etc/runlevels/boot/clock
