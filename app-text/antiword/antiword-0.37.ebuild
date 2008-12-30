@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.37.ebuild,v 1.9 2007/10/25 20:22:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.37.ebuild,v 1.10 2008/12/30 20:56:25 angelos Exp $
 
 inherit eutils
 
@@ -18,19 +18,21 @@ KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
 PATCHDIR=${WORKDIR}/gentoo-antiword/patches
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A}
+	cd "${S}"
 	EPATCH_SUFFIX="diff" \
 		epatch ${PATCHDIR}
 }
 
 src_compile() {
-	emake OPT="${CFLAGS}" || die
+	emake OPT="${CFLAGS}" CC="$(tc-getCC)" LD="$(tc-getCC)" \
+		LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} global_install || die
+	make DESTDIR="${D}" global_install || die
 
-	use kde || rm -f ${D}/usr/bin/kantiword
+	use kde || rm -f "${D}"/usr/bin/kantiword
 
 	insinto /usr/share/${PN}/examples
 	doins Docs/testdoc.doc Docs/antiword.php
