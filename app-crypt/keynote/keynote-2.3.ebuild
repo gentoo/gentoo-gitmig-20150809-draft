@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.9 2008/12/30 18:12:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.10 2008/12/30 18:37:26 angelos Exp $
 
 inherit toolchain-funcs
 
@@ -20,7 +20,7 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i -e "/^CFLAGS/s/-O2/${CFLAGS}/" \
-		-e "/^AR/d" Makefile.in || "sed failed"
+		-e "/^AR/d" Makefile.in || die "sed failed"
 }
 
 src_compile() {
