@@ -1,22 +1,22 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36-r1.ebuild,v 1.6 2008/12/30 03:55:44 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.1.ebuild,v 1.1 2008/12/30 03:55:44 nixphoeni Exp $
 
 # We want the latest autoconf and automake (the default)
 inherit gnome2 python eutils autotools multilib
 
-MY_PN="gdesklets"
-MY_P="${MY_PN}-${PV/_/}"
-S="${WORKDIR}/${MY_P}"
+MY_PN="gDesklets"
+MY_P="${PN/-core/}-${PV/_/}"
+S="${WORKDIR}/${MY_PN}-${PV/_/}"
 
 DESCRIPTION="GNOME Desktop Applets: Core library for desktop applets"
-SRC_URI="http://gdesklets.de/files/${MY_P}.tar.bz2"
+SRC_URI="http://gdesklets.de/files/${MY_P}.tar.gz"
 HOMEPAGE="http://www.gdesklets.de"
 LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="alpha amd64 ia64 ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 # is libgsf needed for runtime or just compiling?
 RDEPEND=">=dev-lang/python-2.3
@@ -52,6 +52,8 @@ src_unpack() {
 
 	# Use po/LINGUAS - see gnome bug #506828
 	epatch "${FILESDIR}/${PN}-0.36_beta-linguas.patch"
+	# Install test-control.py - see https://bugs.launchpad.net/gdesklets/+bug/310339
+	epatch "${FILESDIR}/${PN}-${PV}-test-control.py-install-fix.patch"
 
 	eautoreconf
 	intltoolize --force || die

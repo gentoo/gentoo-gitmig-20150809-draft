@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.92 2008/12/17 04:39:43 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.93 2008/12/30 03:55:44 nixphoeni Exp $
+
+*gdesklets-core-0.36.1 (30 Dec 2008)
+
+  30 Dec 2008; Joe Sapp <nixphoeni@gentoo.org>
+  +files/gdesklets-core-0.36.1-test-control.py-install-fix.patch,
+  gdesklets-core-0.35.2-r1.ebuild, gdesklets-core-0.35.4.ebuild,
+  gdesklets-core-0.36-r1.ebuild, +gdesklets-core-0.36.1.ebuild:
+  Version bump; typographical fixes
 
   17 Dec 2008; Joe Sapp <nixphoeni@gentoo.org> -gdesklets-core-0.36.ebuild:
   Removed 0.36 since 0.36-r1 is stable and replaces it

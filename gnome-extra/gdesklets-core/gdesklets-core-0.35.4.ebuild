@@ -1,9 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.4.ebuild,v 1.13 2008/04/20 17:42:17 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.4.ebuild,v 1.14 2008/12/30 03:55:44 nixphoeni Exp $
 
 # We want the latest autoconf and automake (the default)
-inherit gnome2 eutils autotools multilib
+inherit gnome2 eutils multilib
 
 MY_PN="gDesklets"
 MY_P="${MY_PN}-${PV/_/}"
@@ -87,11 +87,11 @@ pkg_postinst() {
 
 	echo
 	elog "gDesklets Displays are required before the library"
-	elog "will be usable. The displays are found in -"
+	elog "will be usable. The Displays are found in -"
 	elog "           x11-plugins/desklet-* ,"
 	elog "at http://www.gdesklets.de, or at http://gdesklets.zencomputer.ca"
 	elog
-	elog "Next you'll need to start gdesklets using"
+	elog "Next you'll need to start gDesklets using"
 	elog "           ${ROOT}usr/bin/gdesklets start"
 	elog "If you're using GNOME this can be done conveniently"
 	elog "through Applications->Accessories->gDesklets"
@@ -100,7 +100,7 @@ pkg_postinst() {
 	elog "you can migrate your desklet configurations by"
 	elog "running"
 	elog "           ${ROOT}usr/$(get_libdir)/gdesklets/gdesklets-migration-tool"
-	elog "after the first time you run gdesklets"
+	elog "after the first time you run gDesklets"
 	echo
 
 	# This stuff is important, especially the migration-tool

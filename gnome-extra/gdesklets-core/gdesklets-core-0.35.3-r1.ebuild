@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3-r1.ebuild,v 1.8 2007/10/09 23:56:02 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3-r1.ebuild,v 1.9 2008/12/30 03:55:44 nixphoeni Exp $
 
 # We want the latest autoconf and automake (the default)
 inherit gnome2 eutils autotools multilib
