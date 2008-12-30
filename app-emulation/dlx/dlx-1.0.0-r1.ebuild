@@ -1,20 +1,26 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dlx/dlx-1.0.0-r1.ebuild,v 1.2 2005/01/01 14:09:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dlx/dlx-1.0.0-r1.ebuild,v 1.3 2008/12/30 19:00:34 angelos Exp $
 
-S=${WORKDIR}/dlx
+inherit toolchain-funcs
+
 DESCRIPTION="DLX Simulator"
 HOMEPAGE="http://www.davidviner.com/dlx.php"
-SRC_URI="http://www.davidviner.com/dlx/dlx.tar.gz"
+SRC_URI="http://www.davidviner.com/${PN}/${PN}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND=""
+
+S="${WORKDIR}/${PN}"
 
 src_compile() {
-	emake || die
+	emake CC="$(tc-getCC)" \
+		LINK="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" \
+		LFLAGS="${LDFLAGS}" \
+		|| die "emake failed"
 }
 
 src_install() {

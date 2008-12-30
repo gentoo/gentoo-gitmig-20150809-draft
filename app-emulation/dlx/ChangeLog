@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dlx
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dlx/ChangeLog,v 1.9 2008/04/21 16:43:32 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dlx/ChangeLog,v 1.10 2008/12/30 19:00:34 angelos Exp $
+
+  30 Dec 2008; Christoph Mende <angelos@gentoo.org> dlx-1.0.0-r1.ebuild:
+  QA: Respect CC (bug 243578) and CFLAGS/LDFLAGS (bug 240003)
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
