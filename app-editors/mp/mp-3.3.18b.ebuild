@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.18b.ebuild,v 1.6 2008/11/21 22:26:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.3.18b.ebuild,v 1.7 2008/12/30 18:41:07 angelos Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Minimum Profit: A text editor for programmers"
 HOMEPAGE="http://www.triptico.com/software/mp.html"
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	local myconf="--prefix=/usr --without-win32 --without-gtk1"
+	tc-export CC
 
 	if use gtk ; then
 		! use ncurses && myconf="${myconf} --without-curses"
