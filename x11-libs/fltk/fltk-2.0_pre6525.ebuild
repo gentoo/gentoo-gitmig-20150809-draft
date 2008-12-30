@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6525.ebuild,v 1.1 2008/12/15 01:18:55 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6525.ebuild,v 1.2 2008/12/30 02:18:31 yngwin Exp $
 
 EAPI="1"
 inherit multilib autotools flag-o-matic
@@ -55,25 +55,26 @@ src_compile() {
 		$(use_enable jpeg) \
 		$(use_enable png) \
 		$(use_enable xinerama) \
-		$(use_enable zlib) \
-		|| die "configure failed"
+		$(use_enable zlib)
 
 	emake || die "make failed"
-	use doc && make -C documentation
+
+	if use doc; then
+		make -C documentation || die "make documentation failed"
+	fi
 }
 
 src_install() {
-	einstall includedir="${D}/usr/include" \
-		libdir="${D}/usr/$(get_libdir)/fltk" || die "install failed"
+	einstall includedir="${D}/usr/include" libdir="${D}/usr/$(get_libdir)/fltk"
 
 	if use doc; then
 		emake -C documentation install || die "install documentation failed"
-		dohtml -r documentation/html/*
+		dohtml -r documentation/html/* || die "install html documentation failed"
 	fi
 	dodoc CHANGES CREDITS README* TODO
 
 	echo "LDPATH=/usr/$(get_libdir)/fltk" > 99fltk-${SLOT}
 	echo "FLTK_DOCDIR=/usr/share/doc/${PF}/html" >> 99fltk-${SLOT}
 
-	doenvd 99fltk-${SLOT}
+	doenvd 99fltk-${SLOT} || die "installing env.d file failed"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.101 2008/12/15 01:18:55 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.102 2008/12/30 02:18:31 yngwin Exp $
+
+  30 Dec 2008; Ben de Groot <yngwin@gentoo.org> -fltk-2.0_pre6403.ebuild,
+  -fltk-2.0_pre6483.ebuild, fltk-2.0_pre6525.ebuild:
+  Removing old snapshots. Minor ebuild improvements wrt die messages.
 
 *fltk-2.0_pre6525 (15 Dec 2008)
 
