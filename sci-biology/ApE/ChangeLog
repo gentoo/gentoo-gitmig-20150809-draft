@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/ApE
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.3 2008/11/02 07:02:37 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.4 2008/12/30 22:13:00 je_fro Exp $
+
+  30 Dec 2008; Jeff Gardner <je_fro@gentoo.org> Manifest:
+  Fix manifest
 
   02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
