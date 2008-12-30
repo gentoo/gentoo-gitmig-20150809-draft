@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/gorg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.16 2007/09/05 01:29:25 nichoj Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.17 2008/12/30 12:43:24 graaff Exp $
+
+*gorg-0.6.3-r2 (30 Dec 2008)
+
+  30 Dec 2008; Hans de Graaff <graaff@gentoo.org> +gorg-0.6.3-r2.ebuild:
+  Add apache2 and fastcgi USE flags as requested in #251177 and how we handle
+  this for other similar packages. Move to EAPI=2 so that we can handle the
+  mysql USE flag dependency on ruby-dbi better. Don't depend directly on
+  underlying dependencies of ruby-dbi and ruby-fcgi. Fix variable quoting.
 
   05 Sep 2007; Joshua Nichols <nichoj@gentoo.org> gorg-0.5.ebuild,
   gorg-0.6.3.ebuild, gorg-0.6.3-r1.ebuild:
