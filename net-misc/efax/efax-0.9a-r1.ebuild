@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/efax-0.9a-r1.ebuild,v 1.3 2008/12/30 17:30:17 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/efax/efax-0.9a-r1.ebuild,v 1.4 2008/12/30 18:04:51 mpagano Exp $
 
 inherit eutils
 
@@ -16,11 +16,14 @@ LICENSE="GPL-2"
 src_unpack () {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e "s:CFLAGS=:CFLAGS=${CFLAGS}:" Makefile
 	epatch "${FILESDIR}/${P}-segfault.patch"
 
 	# remove strip command as per bug #240932
 	sed -i -e '/strip/d' Makefile
+}
+
+src_compile() {
+	emake CC=$(tc-getCC) CFLAGS="${CFLAGS}" || die "compilation failed"
 }
 
 src_install () {
