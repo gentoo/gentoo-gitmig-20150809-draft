@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spectemu
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.24 2007/07/22 09:29:45 omp Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.25 2008/12/30 19:17:56 angelos Exp $
+
+  30 Dec 2008; Christoph Mende <angelos@gentoo.org> -spectemu-0.9.4.ebuild,
+  spectemu-0.99.3.ebuild:
+  QA: Respect CC (bug 243586) and removed broken version
 
   22 Jul 2007; David Shakaryan <omp@gentoo.org> spectemu-0.9.4.ebuild,
   spectemu-0.99.3.ebuild:
