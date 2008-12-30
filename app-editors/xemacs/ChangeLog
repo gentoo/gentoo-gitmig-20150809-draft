@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.115 2008/07/28 18:44:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.116 2008/12/30 13:31:39 graaff Exp $
+
+  30 Dec 2008; Hans de Graaff <graaff@gentoo.org> -xemacs-21.4.21.ebuild,
+  xemacs-21.4.21-r1.ebuild:
+  Remove old version
 
   28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
