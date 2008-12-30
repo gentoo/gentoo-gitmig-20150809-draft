@@ -1,10 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/contest/contest-0.61.ebuild,v 1.6 2005/07/08 14:19:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/contest/contest-0.61.ebuild,v 1.7 2008/12/30 17:26:47 angelos Exp $
 
-DESCRIPTION="Test system responsiveness for compare different kernels"
+inherit toolchain-funcs
+
+DESCRIPTION="Test system responsiveness to compare different kernels"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/contest/"
-SRC_URI="http://members.optusnet.com.au/ckolivas/contest/${P}.tar.gz"
+SRC_URI="http://members.optusnet.com.au/ckolivas/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,10 +17,13 @@ RDEPEND=">=app-benchmarks/dbench-2.0"
 
 src_unpack () {
 	unpack ${A}
+	cd "${S}"
+
 	#Removing -g
-	sed -i "s:-g::" ${S}/Makefile
+	sed -i "s:-g::" Makefile
 	#Adding our cflags
-	sed -i "s:-O2:${CFLAGS}:" ${S}/Makefile
+	sed -i "s:-O2:${CFLAGS} ${LDFLAGS}:" Makefile
+	sed -i -e "/^CC/s/gcc/$(tc-getCC)/" Makefile
 }
 src_compile() {
 	emake || die
