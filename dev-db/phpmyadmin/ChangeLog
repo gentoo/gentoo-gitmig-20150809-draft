@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.352 2008/12/30 15:03:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.353 2008/12/30 20:26:10 bluebird Exp $
+
+  30 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  phpmyadmin-2.11.9.4.ebuild:
+  Stable on sparc, security bug #250752
 
   30 Dec 2008; Brent Baude <ranger@gentoo.org> phpmyadmin-2.11.9.4.ebuild:
   Marking phpmyadmin-2.11.9.4 ppc64 for bug 250752
