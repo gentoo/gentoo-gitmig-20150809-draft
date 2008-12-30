@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9341 2008/12/29 20:56:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9342 2008/12/30 00:13:45 hkbst Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1136,10 +1136,6 @@ net-misc/networkmanager-pptp
 # Sven Wegener <swegener@gentoo.org> (07 Aug 2007)
 # CVS snapshot, needs some more testing
 ~app-misc/screen-4.0.3_p20070403
-
-# Marijn Schouten <hkBst@gentoo.org> (26 Jul 2007)
-# problems starting drscheme (segfault)
-=dev-scheme/drscheme-370.6_p20070725
 
 # Olivier Fisette <ribosome@gentoo.org> (17 Jul 2007)
 # Software no longer available (redistribution not allowed).
