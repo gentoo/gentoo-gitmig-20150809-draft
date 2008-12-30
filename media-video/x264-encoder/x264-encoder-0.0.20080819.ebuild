@@ -1,13 +1,13 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20080819.ebuild,v 1.4 2008/10/30 20:06:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-0.0.20080819.ebuild,v 1.5 2008/12/30 00:31:36 yngwin Exp $
 
 EAPI="1"
 inherit multilib eutils toolchain-funcs versionator
 
 MY_P="x264-snapshot-$(get_version_component_range 3)-2245"
 
-DESCRIPTION="A free library for encoding X264/AVC streams"
+DESCRIPTION="A free commandline encoder for X264/AVC streams"
 HOMEPAGE="http://www.videolan.org/developers/x264.html"
 SRC_URI="ftp://ftp.videolan.org/pub/videolan/x264/snapshots/${MY_P}.tar.bz2"
 SLOT="0"
