@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.56 2008/12/29 21:02:20 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.57 2008/12/30 20:39:22 bluebird Exp $
+
+  30 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> c-client-2007e.ebuild:
+  Stable on sparc, security bug #252567
 
   29 Dec 2008; Tobias Heinlein <keytoaster@gentoo.org>
   c-client-2007e.ebuild:
