@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.69 2008/10/27 14:41:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.70 2008/12/30 10:04:22 pva Exp $
+
+  30 Dec 2008; Peter Volkov <pva@gentoo.org>
+  +files/iptraf-3.0.0-ipv6-glibc24-updated.patch, iptraf-3.0.0-r5.ebuild:
+  Fixed build issue with uclibc, bug #252874, thank Tom Lloyd for report.
 
   27 Oct 2008; Peter Volkov <pva@gentoo.org> iptraf-3.0.0-r5.ebuild:
   ~mips keyworded, bug #237773

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r5.ebuild,v 1.3 2008/11/06 02:34:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r5.ebuild,v 1.4 2008/12/30 10:04:22 pva Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -44,13 +44,9 @@ src_unpack() {
 	if use ipv6 ; then
 		epatch "${DISTDIR}"/${P}-ipv6.patch.bz2
 
-		# bug 126479
-		if has_version '>=sys-libs/glibc-2.4' ; then
-			epatch "${FILESDIR}"/${P}-ipv6-glibc24.patch
-		fi
-
-		# bug 128965
-		epatch "${FILESDIR}"/${P}-ipv6-headerfix.patch
+		# bug #126479 and bug #252874
+		epatch "${FILESDIR}"/${P}-ipv6-glibc24-updated.patch
+		epatch "${FILESDIR}"/${P}-ipv6-headerfix.patch #128965
 	fi
 }
 
