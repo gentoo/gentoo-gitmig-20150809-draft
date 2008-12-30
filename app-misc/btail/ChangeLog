@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/btail
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/ChangeLog,v 1.3 2007/07/02 14:14:51 peper Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/ChangeLog,v 1.4 2008/12/30 19:27:36 angelos Exp $
+
+  30 Dec 2008; Christoph Mende <angelos@gentoo.org> btail-0.2.ebuild:
+  QA: Respect CC/CXX (bug 243612) and CFLAGS/LDFLAGS (bug 243616)
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> btail-0.2.ebuild:
   (QA) RESTRICT clean up.
