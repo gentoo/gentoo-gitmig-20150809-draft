@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r2.ebuild,v 1.8 2008/05/11 13:49:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r2.ebuild,v 1.9 2008/12/30 20:05:20 angelos Exp $
 
 inherit eutils flag-o-matic
 
 S="${WORKDIR}/${PN}_1-9_stable"
-DESCRIPTION="Jail Chroot Project is a tool that builds a chrooted environment and automagically configures and builds all the required files, directories and libraries"
+DESCRIPTION="a tool that builds a chroot and configures all the required files, directories and libraries"
 HOMEPAGE="http://www.jmcresearch.com/projects/jail/"
 SRC_URI="mirror://sourceforge/jail/${PN}_${PV}.tar.gz"
 
@@ -39,7 +39,7 @@ src_compile() {
 
 	# Below didn't work. Don't know why
 	#append-ldflags -Wl,-z,now
-	emake || die "make failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
@@ -47,8 +47,7 @@ src_install() {
 	einstall
 
 	# remove //var/tmp/portage/jail-1.9/image//usr from files
-	FILES="
-	${D}/usr/bin/mkjailenv
+	FILES="${D}/usr/bin/mkjailenv
 	${D}/usr/bin/addjailsw
 	${D}/usr/bin/addjailuser
 	${D}/etc/jail.conf
