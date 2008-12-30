@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sonypid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/ChangeLog,v 1.21 2008/06/18 17:29:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sonypid/ChangeLog,v 1.22 2008/12/30 20:27:16 angelos Exp $
+
+  30 Dec 2008; Christoph Mende <angelos@gentoo.org> sonypid-1.9.ebuild:
+  QA: Respect CC (bug 243672)
 
   18 Jun 2008; Donnie Berkholz <dberkholz@gentoo.org>; sonypid-1.9.ebuild:
   (#227609) Needs to depend on inputproto.
