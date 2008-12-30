@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.568 2008/12/29 18:13:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.569 2008/12/30 21:15:57 zmedico Exp $
+
+  30 Dec 2008; Zac Medico <zmedico@gentoo.org> portage-2.1.6.4.ebuild:
+  Bug #252985 - Add an ewarn message about the new default behavior for
+  `emerge world` and `emerge system` commands.
 
   29 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   portage-2.1.6.4.ebuild:
@@ -27,7 +31,10 @@
   27 Dec 2008; Zac Medico <zmedico@gentoo.org> +portage-2.1.6.4.ebuild:
   2.1.6.4 bump. This fixes bug #252562 (--onlydeps in short emerge help)
   and bug #252572 (infinite dependency calculation loop). Bug #216231
-  tracks all bugs fixed since 2.1.4.x.
+  tracks all bugs fixed since 2.1.4.x. In portage-2.1.6, the default
+  behavior has changed for `emerge world` and `emerge system` commands.
+  These commands will reinstall all packages from the given set unless an
+  option such as --noreplace, --update, or --newuse is specified.
 
   27 Dec 2008; Zac Medico <zmedico@gentoo.org> -portage-2.1.6.2.ebuild,
   -portage-2.1.6.3.ebuild, -portage-2.2_rc18.ebuild,

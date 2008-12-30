@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.4.ebuild,v 1.5 2008/12/29 18:13:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.4.ebuild,v 1.6 2008/12/30 21:15:57 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -221,6 +221,8 @@ pkg_preinst() {
 	fi
 	has_version ">=${CATEGORY}/${PN}-2.2_pre"
 	DOWNGRADE_FROM_2_2=$?
+	has_version "<${CATEGORY}/${PN}-2.1.6_pre"
+	UPGRADE_FROM_2_1=$?
 }
 
 pkg_postinst() {
@@ -239,6 +241,15 @@ pkg_postinst() {
 		"use revdep-rebuild when appropriate, since the @preserved-rebuild" \
 		"package set is only supported with portage-2.2." | fmt -w 70 | \
 		while read ; do ewarn "$REPLY" ; done
+		ewarn
+	fi
+	if [ $UPGRADE_FROM_2_1 = 0 ] ; then
+		ewarn
+		echo "In portage-2.1.6, the default behavior has changed for" \
+		"\`emerge world\` and \`emerge system\` commands. These commands" \
+		"will reinstall all packages from the given set unless an option" \
+		"such as --noreplace, --update, or --newuse is specified." \
+		| fmt -w 70 | while read ; do ewarn "$REPLY" ; done
 		ewarn
 	fi
 }
