@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/dinero-4.7.ebuild,v 1.8 2005/04/24 03:07:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dinero/dinero-4.7.ebuild,v 1.9 2008/12/30 18:53:51 angelos Exp $
+
+inherit toolchain-funcs
 
 MY_P="d${PV/./-}"
 S="${WORKDIR}/${MY_P}"
@@ -12,6 +14,12 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 LICENSE="as-is"
 IUSE=""
+
+src_compile() {
+	tc-export AR CC RANLIB
+	econf
+	emake || die "emake failed"
+}
 
 src_install() {
 	dobin dineroIV || die "dobin failed"
