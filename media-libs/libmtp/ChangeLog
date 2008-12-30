@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.58 2008/11/24 00:42:27 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.59 2008/12/30 22:27:08 loki_val Exp $
+
+*libmtp-0.3.5 (30 Dec 2008)
+
+  30 Dec 2008; Peter Alfredsen <loki_val@gentoo.org> +libmtp-0.3.5.ebuild:
+  Bumb. Thanks to Mieszko Ślusarczyk in bug 253185.
 
 *libmtp-0.3.4 (24 Nov 2008)
 
