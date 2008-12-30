@@ -32,6 +32,6 @@ start() {
 
 stop() {
 	ebegin "Stopping Freenet6 IPv6 Client"
-	start-stop-daemon --stop --quiet --exec $FREENET6_CLIENT
+	start-stop-daemon --stop --quiet -s HUP --exec $FREENET6_CLIENT
 	eend $?
 }
