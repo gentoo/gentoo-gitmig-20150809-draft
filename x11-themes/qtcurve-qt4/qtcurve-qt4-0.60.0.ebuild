@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.60.0.ebuild,v 1.1 2008/12/30 03:59:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.60.0.ebuild,v 1.2 2008/12/30 12:58:34 yngwin Exp $
 
-EAPI="1"
+EAPI="2"
 inherit flag-o-matic cmake-utils
 
 MY_P="${P/qtcurve-qt4/QtCurve-KDE4}"
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="kde"
 
-DEPEND="|| ( x11-libs/qt-gui:4 <x11-libs/qt-4.4:4 )
-	amd64? ( kde? ( >=kde-base/kwin-4.1.0 x11-libs/qt-gui:4 ) )
-	x86? ( kde? ( >=kde-base/kwin-4.1.0 x11-libs/qt-gui:4 ) )"
+DEPEND="|| ( x11-libs/qt-gui:4[dbus] <x11-libs/qt-4.4:4[dbus] )
+	amd64? ( kde? ( >=kde-base/kwin-4.1.0 x11-libs/qt-gui:4[dbus] ) )
+	x86? ( kde? ( >=kde-base/kwin-4.1.0 x11-libs/qt-gui:4[dbus] ) )"
 # kde-4 support needs methods from qt-gui-4.4
 
 S="${WORKDIR}/${MY_P}"
