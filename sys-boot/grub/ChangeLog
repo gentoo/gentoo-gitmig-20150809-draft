@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.105 2008/11/10 14:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.106 2008/12/30 00:12:52 vapier Exp $
+
+*grub-9999 (30 Dec 2008)
+
+  30 Dec 2008; Mike Frysinger <vapier@gentoo.org> grub-1.96.ebuild,
+  +grub-9999.ebuild:
+  Add a live svn ebuild by roger #252769. This also fixes stripping issues
+  #231935 by Alexey Shvetsov.
 
   10 Nov 2008; Mike Frysinger <vapier@gentoo.org> grub-1.96.ebuild:
   Drop USE=netboot and fixup DEPEND #234182.

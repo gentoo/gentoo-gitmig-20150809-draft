@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.96.ebuild,v 1.6 2008/12/30 00:12:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.1 2008/12/30 00:12:52 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
