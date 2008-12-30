@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.28.ebuild,v 1.4 2008/12/28 17:19:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.28.ebuild,v 1.5 2008/12/30 23:49:40 bluebird Exp $
 
 EAPI="1"
 
@@ -23,7 +23,7 @@ SRC_URI="http://www.is-vn.bg/hamster/${P}.tar.gz
 			"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
 IUSE="a-like-o ru-dv +ru-g quote ru-i ru-k width bolddiag +psf raw +pcf"
 
 DEPEND="dev-lang/perl
