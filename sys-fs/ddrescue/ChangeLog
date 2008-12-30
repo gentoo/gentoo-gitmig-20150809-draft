@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ddrescue
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.12 2008/04/21 18:21:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.13 2008/12/30 18:27:48 coldwind Exp $
+
+*ddrescue-1.9 (30 Dec 2008)
+
+  30 Dec 2008; Santiago M. Mola <coldwind@gentoo.org> +ddrescue-1.9.ebuild:
+  Version bump.
 
   21 Apr 2008; Raúl Porcel <armin76@gentoo.org> -ddrescue-1.6.ebuild,
   ddrescue-1.8.ebuild:
