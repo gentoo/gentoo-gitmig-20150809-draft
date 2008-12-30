@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.37.ebuild,v 1.10 2008/12/30 20:56:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.37.ebuild,v 1.11 2008/12/30 20:57:48 angelos Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 IUSE="kde"
 PATCHVER=0.1
