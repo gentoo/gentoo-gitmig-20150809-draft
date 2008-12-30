@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.3.ebuild,v 1.8 2008/12/29 20:45:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.3.ebuild,v 1.9 2008/12/30 04:19:18 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -18,6 +18,14 @@ RDEPEND="~sys-libs/${PN}-libs-${PV}
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-apps/texinfo"
+
+pkg_setup() {
+	if [[ ! -e ${ROOT}/etc/mtab ]] ; then
+		# add some crap to deal with missing /etc/mtab #217719
+		ewarn "No /etc/mtab file, creating one temporarily"
+		echo "${PN} crap for src_test" > "${ROOT}"/etc/mtab
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -75,6 +83,14 @@ src_compile() {
 	if use elibc_FreeBSD ; then
 		cp "${FILESDIR}"/fsck_ext2fs.c .
 		emake fsck_ext2fs || die
+	fi
+}
+
+pkg_preinst() {
+	if [[ -r ${ROOT}/etc/mtab ]] ; then
+		if [[ $(<"${ROOT}"/etc/mtab) == "${PN} crap for src_test" ]] ; then
+			rm -f "${ROOT}"/etc/mtab
+		fi
 	fi
 }
 
