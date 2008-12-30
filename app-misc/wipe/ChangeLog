@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/wipe
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.20 2007/12/07 17:00:29 dertobi123 Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.21 2008/12/30 20:35:57 angelos Exp $
+
+  30 Dec 2008; Christoph Mende <angelos@gentoo.org>
+  wipe-2.2.20050509.ebuild:
+  QA: Respect CC (bug 243682), respect CFLAGS (bug 240083)
 
   07 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   wipe-2.2.20050509.ebuild:
