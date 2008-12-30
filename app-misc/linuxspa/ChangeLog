@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linuxspa
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linuxspa/ChangeLog,v 1.4 2007/05/14 16:47:40 bangert Exp $
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linuxspa/ChangeLog,v 1.5 2008/12/30 20:12:04 angelos Exp $
+
+  30 Dec 2008; Christoph Mende <angelos@gentoo.org> linuxspa-0.7.1.ebuild:
+  QA: Respect CC (bug 243656)
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
