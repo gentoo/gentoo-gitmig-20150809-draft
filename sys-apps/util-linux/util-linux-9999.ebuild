@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.6 2008/03/29 21:31:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.7 2008/12/30 04:33:59 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux-ng/"
 if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 else
-	SRC_URI="http://www.kernel.org/pub/linux/utils/util-linux-ng/v${PV:0:4}/${MY_P}.tar.bz2
+	SRC_URI="mirror://kernel/linux/utils/util-linux-ng/v${PV:0:4}/${MY_P}.tar.bz2
 		loop-aes? ( http://loop-aes.sourceforge.net/loop-AES/loop-AES-v3.2c.tar.bz2 )"
 fi
 
@@ -27,7 +27,7 @@ IUSE="crypt loop-aes nls old-linux selinux slang unicode"
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
 	>=sys-libs/ncurses-5.2-r2
-	>=sys-fs/e2fsprogs-1.34
+	>=sys-libs/e2fsprogs-libs-1.41
 	selinux? ( sys-libs/libselinux )
 	slang? ( sys-libs/slang )"
 DEPEND="${RDEPEND}
