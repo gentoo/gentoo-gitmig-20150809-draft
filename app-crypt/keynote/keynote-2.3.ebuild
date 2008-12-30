@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.8 2005/08/19 04:01:54 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.9 2008/12/30 18:12:29 angelos Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="The KeyNote Trust-Management System"
 HOMEPAGE="http://www1.cs.columbia.edu/~angelos/keynote.html"
@@ -11,11 +13,19 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="ssl"
 
-DEPEND="virtual/libc
-	ssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -i -e "/^CFLAGS/s/-O2/${CFLAGS}/" \
+		-e "/^AR/d" Makefile.in || "sed failed"
+}
 
 src_compile() {
-	econf || die
+	tc-export AR CC RANLIB
+	econf
 	if use ssl; then
 		make || die
 	else

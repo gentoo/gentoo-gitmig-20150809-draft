@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/keynote
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.8 2007/05/13 18:05:41 bangert Exp $
+# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/ChangeLog,v 1.9 2008/12/30 18:12:29 angelos Exp $
+
+  30 Dec 2008; Christoph Mende <angelos@gentoo.org> keynote-2.3.ebuild:
+  QA: Respect CFLAGS and AR/CC/RANLIB
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add herd
