@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9342 2008/12/30 00:13:45 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9343 2008/12/30 01:16:31 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -116,7 +116,7 @@ media-sound/waif
 media-video/tuxzap-programs
 
 # Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
-# Removed in 60 days. Does not compile with gcc-4.1+, nothing depends on it. 
+# Removed in 60 days. Does not compile with gcc-4.1+, nothing depends on it.
 # bug 240908
 net-libs/libopm
 
@@ -783,11 +783,6 @@ media-sound/lastfmproxy
 # Masked for testing
 >=mail-client/mozilla-thunderbird-3.0_alpha1
 >=mail-client/mozilla-thunderbird-bin-3.0_alpha1
-
-# Ben de Groot <yngwin@gentoo.org> (7 Apr 2008)
-# Versioning scheme change after pkgmove from -svn
->=media-libs/x264-20000101
->=media-video/x264-encoder-20000101
 
 # Benedikt Böhm <hollow@gentoo.org> (6 Apr 2008)
 # Mask ebuilds using new qmail.eclass for testing
