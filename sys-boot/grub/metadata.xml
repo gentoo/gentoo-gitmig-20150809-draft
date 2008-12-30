@@ -4,5 +4,6 @@
 <herd>base-system</herd>
 <use>
   <flag name='custom-cflags'>Enable custom CFLAGS (not supported)</flag>
+  <flag name='multislot'>Allow grub1 and grub2 to be installed simultaneously</flag>
 </use>
 </pkgmetadata>

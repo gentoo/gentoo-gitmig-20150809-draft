@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.107 2008/12/30 02:18:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.108 2008/12/30 11:35:54 vapier Exp $
+
+  30 Dec 2008; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  grub-1.96.ebuild, grub-9999.ebuild:
+  Fix install paths and add support for USE=multislot so people can toy with
+  grub2 while keeping grub1.
 
   30 Dec 2008; Mike Frysinger <vapier@gentoo.org> grub-1.96.ebuild,
   grub-9999.ebuild:
