@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/esh
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.17 2007/05/15 09:27:31 bangert Exp $
+# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.18 2008/12/30 20:43:29 angelos Exp $
+
+  30 Dec 2008; Christoph Mende <angelos@gentoo.org> esh-0.8.5.ebuild:
+  QA: Respect CC (bug 243700)
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
