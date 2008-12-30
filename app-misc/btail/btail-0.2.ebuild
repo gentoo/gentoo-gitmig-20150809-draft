@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/btail-0.2.ebuild,v 1.4 2008/12/30 19:27:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/btail-0.2.ebuild,v 1.5 2008/12/30 19:33:14 angelos Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Bayesian logfile filter"
 HOMEPAGE="http://www.vanheusden.com/btail/"
