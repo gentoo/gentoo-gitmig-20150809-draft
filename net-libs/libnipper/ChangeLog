@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libnipper
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnipper/ChangeLog,v 1.7 2008/12/14 12:00:57 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnipper/ChangeLog,v 1.8 2008/12/30 17:59:29 ikelos Exp $
+
+*libnipper-0.12.6 (30 Dec 2008)
+
+  30 Dec 2008; Mike Auty <ikelos@gentoo.org> -libnipper-0.12.3.ebuild,
+  +libnipper-0.12.6.ebuild:
+  Version bump, fixes rare segfault and password processing error.
 
 *libnipper-0.12.5 (14 Dec 2008)
 

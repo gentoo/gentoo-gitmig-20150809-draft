@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnipper/libnipper-0.12.3.ebuild,v 1.1 2008/11/03 15:03:55 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnipper/libnipper-0.12.6.ebuild,v 1.1 2008/12/30 17:59:29 ikelos Exp $
 
 inherit cmake-utils
 
