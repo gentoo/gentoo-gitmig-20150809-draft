@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.9_p20081201-r1.ebuild,v 1.2 2008/12/29 21:49:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.9_p20081201-r1.ebuild,v 1.3 2008/12/31 07:56:10 vapier Exp $
+
+GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 1060_all_glibc-nss-deepbind.patch" #252302
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 

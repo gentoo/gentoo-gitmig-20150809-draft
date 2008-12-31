@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.601 2008/12/29 21:49:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.602 2008/12/31 07:56:10 vapier Exp $
+
+  31 Dec 2008; Mike Frysinger <vapier@gentoo.org>
+  glibc-2.9_p20081201-r1.ebuild:
+  Disable nss deepbind patch until we get it sorted out #252302.
 
   29 Dec 2008; Mike Frysinger <vapier@gentoo.org> glibc-2.7-r2.ebuild,
   glibc-2.8_p20080602.ebuild, glibc-2.8_p20080602-r1.ebuild,
