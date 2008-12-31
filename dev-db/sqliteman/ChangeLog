@@ -1,0 +1,11 @@
+# ChangeLog for dev-db/sqliteman
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteman/ChangeLog,v 1.1 2008/12/31 14:56:55 yngwin Exp $
+
+*sqliteman-1.2.0 (31 Dec 2008)
+
+  31 Dec 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +sqliteman-1.2.0.ebuild:
+  Initial commit, thanks to the users in bug 173637 and Sunrise who
+  developed the ebuild.
+
