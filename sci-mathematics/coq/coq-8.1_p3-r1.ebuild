@@ -1,11 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3-r1.ebuild,v 1.1 2008/10/17 15:23:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.1_p3-r1.ebuild,v 1.2 2008/12/31 03:41:46 mr_bones_ Exp $
 
 EAPI="2"
 
 inherit eutils multilib
-
 
 RESTRICT="strip installsources"
 
