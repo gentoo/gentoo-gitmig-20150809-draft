@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/elisp-manual
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.10 2008/12/28 16:05:56 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.11 2008/12/31 16:28:19 armin76 Exp $
+
+  31 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  elisp-manual-18.1.03.ebuild, elisp-manual-21.2.8-r2.ebuild:
+  s390/x86 stable wrt #252747
 
   28 Dec 2008; Tiago Cunha <tcunha@gentoo.org>
   elisp-manual-21.2.8-r2.ebuild:
