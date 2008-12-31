@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-2.24.1.ebuild,v 1.1 2008/11/24 13:54:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/gnome-build-2.24.1.ebuild,v 1.2 2008/12/31 06:29:18 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -28,4 +28,3 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-2.24.0.ebuild,v 1.1 2008/11/24 13:51:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-2.24.0.ebuild,v 1.2 2008/12/31 06:29:00 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -23,4 +23,3 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.4 )"
 
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
-
