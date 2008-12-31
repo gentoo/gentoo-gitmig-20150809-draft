@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.72.ebuild,v 1.1 2008/11/29 04:41:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.72.ebuild,v 1.2 2008/12/31 03:18:12 mr_bones_ Exp $
 
 MY_EXTRAS_VER="20080601"
 SERVER_URI="http://mirror.provenscaling.com/mysql/enterprise/source/5.0/${P}.tar.gz"
@@ -86,7 +86,7 @@ src_test() {
 					"$t" \
 					"OpenSSL tests broken on 5.0.56"
 			done
-		
+
 		# New test was broken in first time
 		# Upstream bug 41066
 		# http://bugs.mysql.com/bug.php?id=41066

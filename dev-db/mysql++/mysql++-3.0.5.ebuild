@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-3.0.5.ebuild,v 1.1 2008/11/14 06:18:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-3.0.5.ebuild,v 1.2 2008/12/31 03:18:31 mr_bones_ Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	
+
 	# Not needed anymore, patch target is gone
 	#epatch "${FILESDIR}"/${PN}-2.3.2-gcc-4.3.patch
 
@@ -35,7 +35,6 @@ src_unpack() {
 src_compile() {
 	local myconf
 	myconf="--enable-thread-check"
-
 
 	CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 	econf ${myconf} || die "econf failed"
