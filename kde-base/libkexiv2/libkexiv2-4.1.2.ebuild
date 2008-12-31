@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/libkexiv2-4.1.2.ebuild,v 1.2 2008/10/04 16:55:54 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/libkexiv2-4.1.2.ebuild,v 1.3 2008/12/31 03:28:50 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -22,4 +22,3 @@ DEPEND="
 	media-libs/lcms
 "
 RDEPEND="${DEPEND}"
-
