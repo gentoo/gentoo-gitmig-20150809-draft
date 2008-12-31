@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.19.1.ebuild,v 1.3 2008/12/01 14:33:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.19.1.ebuild,v 1.4 2008/12/31 03:21:54 mr_bones_ Exp $
 
 G_PY_PN="gnome-python-extras"
 
@@ -37,4 +37,3 @@ src_unpack() {
 	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
 	eautoreconf
 }
-

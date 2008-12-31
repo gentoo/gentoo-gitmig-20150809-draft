@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.19.1.ebuild,v 1.3 2008/12/01 14:31:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.19.1.ebuild,v 1.4 2008/12/31 03:21:17 mr_bones_ Exp $
 
 # We don't support the egg.recent bindings that are also provided - they are
 # deprecated, have deps we don't really want and there are no users in-tree.
@@ -30,4 +30,3 @@ src_unpack() {
 	epatch "${WORKDIR}/${G_PY_PN}-${PV}-split.patch"
 	eautoreconf
 }
-
