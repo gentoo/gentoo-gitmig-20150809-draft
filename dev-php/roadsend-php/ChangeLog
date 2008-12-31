@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/roadsend-php
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/ChangeLog,v 1.9 2008/11/17 20:55:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/ChangeLog,v 1.10 2008/12/31 00:16:21 hkbst Exp $
+
+*roadsend-php-2.9.8 (31 Dec 2008)
+
+  31 Dec 2008; Marijn Schouten <hkBst@gentoo.org>
+  +roadsend-php-2.9.8.ebuild:
+  bump
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/bigloo-3.1a-configsupport.patch:
