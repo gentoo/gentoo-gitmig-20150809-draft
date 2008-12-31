@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.32.3.ebuild,v 1.2 2008/12/14 13:39:01 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.32.3.ebuild,v 1.3 2008/12/31 03:42:23 mr_bones_ Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -129,7 +129,6 @@ src_test() {
 		export PALUDIS_REDUCED_UID=0
 		export PALUDIS_REDUCED_GID=0
 	fi
-
 
 	if ! emake check ; then
 		eerror "Tests failed. Looking for file for you to add to your bug report..."
