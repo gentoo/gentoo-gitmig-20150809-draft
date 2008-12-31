@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.8_rc6.ebuild,v 1.1 2008/11/24 09:17:21 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.8_rc6.ebuild,v 1.2 2008/12/31 03:26:12 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 EAPI="1"
@@ -72,4 +72,3 @@ src_install() {
 
 	prepgamesdirs
 }
-
