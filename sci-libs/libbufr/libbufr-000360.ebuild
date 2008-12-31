@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000360.ebuild,v 1.1 2008/12/07 02:48:14 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libbufr/libbufr-000360.ebuild,v 1.2 2008/12/31 03:41:08 mr_bones_ Exp $
 
 inherit fortran eutils flag-o-matic toolchain-funcs
 
@@ -154,10 +154,6 @@ generate_files() {
 	N
 	N
 	N
-
-
-
-
 
 	Y
 	EOF
