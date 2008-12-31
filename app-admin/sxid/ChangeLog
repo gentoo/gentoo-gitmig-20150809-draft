@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sxid
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/ChangeLog,v 1.22 2008/10/23 02:25:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/ChangeLog,v 1.23 2008/12/31 03:42:12 darkside Exp $
+
+*sxid-4.0.4-r2 (31 Dec 2008)
+
+  31 Dec 2008; Jeremy Olexa <darkside@gentoo.org>
+  +files/sxid-64bit-clean.patch, -sxid-4.0.4.ebuild, sxid-4.0.4-r1.ebuild,
+  +sxid-4.0.4-r2.ebuild:
+  (non maintainer commit) Remove old, -r1 will not work on amd64, add amd64
+  patch to -r2, bug #247536
 
   23 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> sxid-4.0.4-r1.ebuild:
   Respect CC.

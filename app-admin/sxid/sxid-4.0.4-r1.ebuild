@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.9 2008/10/23 02:25:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.10 2008/12/31 03:42:12 darkside Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://freshmeat.net/projects/sxid"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="-amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="virtual/libc
@@ -33,7 +33,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc README docs/sxid.conf.example docs/sxid.cron.example
 }
 
