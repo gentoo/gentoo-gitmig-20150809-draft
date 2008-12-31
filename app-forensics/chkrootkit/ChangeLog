@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.52 2008/12/28 20:23:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.53 2008/12/31 00:18:22 bluebird Exp $
+
+  31 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
+  chkrootkit-0.48-r1.ebuild:
+  Stable on sparc, bug #252657
 
   28 Dec 2008; Guy Martin <gmsoft@gentoo.org> chkrootkit-0.48-r1.ebuild:
   hppa stable, #252657
