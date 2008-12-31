@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.18.ebuild,v 1.1 2008/11/10 23:49:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.18.ebuild,v 1.2 2008/12/31 03:36:59 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -31,7 +31,6 @@ src_unpack() {
 	    "${FILESDIR}/${PN}-2.17-appname.diff"
 	eautoreconf
 }
-
 
 src_compile() {
 	econf $(use_with alsa) $(use_with ftdi) \
