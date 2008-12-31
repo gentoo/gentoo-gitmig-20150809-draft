@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.24.2.ebuild,v 1.1 2008/12/01 13:11:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.24.2.ebuild,v 1.2 2008/12/31 03:27:09 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -45,4 +45,3 @@ pkg_setup() {
 
 	G2CONF="${G2CONF} $(use_with static static-ldap) --with-openldap"
 }
-
