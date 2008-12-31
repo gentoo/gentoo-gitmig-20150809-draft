@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.79 2008/12/30 22:48:24 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.80 2008/12/31 16:19:44 armin76 Exp $
+
+  31 Dec 2008; Raúl Porcel <armin76@gentoo.org> phppgadmin-4.2.2.ebuild:
+  x86 stable wrt #250451
 
   30 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
   phppgadmin-4.2.2.ebuild:
