@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.569 2008/12/30 21:15:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.570 2008/12/31 15:04:17 jer Exp $
+
+  31 Dec 2008; Jeroen Roovers <jer@gentoo.org> portage-2.1.6.4.ebuild:
+  Stable for HPPA (bug #251812).
 
   30 Dec 2008; Zac Medico <zmedico@gentoo.org> portage-2.1.6.4.ebuild:
   Bug #252985 - Add an ewarn message about the new default behavior for
