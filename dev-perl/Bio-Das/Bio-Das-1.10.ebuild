@@ -1,10 +1,9 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/Bio-Das-1.10.ebuild,v 1.1 2008/12/23 18:34:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/Bio-Das-1.10.ebuild,v 1.2 2008/12/31 03:20:22 mr_bones_ Exp $
 
 MODULE_AUTHOR="LDS"
 inherit perl-module
-
 
 DESCRIPTION="Interface to Distributed Annotation System"
 IUSE=""
