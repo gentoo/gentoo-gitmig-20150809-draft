@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-profiler/nvidia-cuda-profiler-1.0.ebuild,v 1.1 2008/12/18 16:30:42 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-profiler/nvidia-cuda-profiler-1.0.ebuild,v 1.2 2008/12/31 03:25:53 mr_bones_ Exp $
 
 DESCRIPTION="NVIDIA CUDA Visual Profiler"
 HOMEPAGE="http://developer.nvidia.com/cuda"
@@ -27,4 +27,3 @@ src_install() {
 	insinto /opt/cuda/doc
 	doins "${DISTDIR}"/CudaVisualProfiler_README_1.0_13June08.txt
 }
-

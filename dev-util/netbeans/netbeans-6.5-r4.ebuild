@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r4.ebuild,v 1.1 2008/12/17 11:09:20 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r4.ebuild,v 1.2 2008/12/31 03:25:35 mr_bones_ Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -429,7 +429,6 @@ src_prepare () {
 
 	einfo "Removing rest of the bundled jars..."
 	find "${S}" -type f -name "*.jar" > ${tmpfile} || die "Cannot put jars in tmp file"
-
 
 	# We do not remove the jars that we ar not able to unbundle atm
 	# More info at: https://overlays.gentoo.org/proj/java/wiki/Netbeans_Maintenance

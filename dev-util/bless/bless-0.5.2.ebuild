@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.5.2.ebuild,v 1.2 2008/11/25 16:42:28 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.5.2.ebuild,v 1.3 2008/12/31 03:24:36 mr_bones_ Exp $
 
 inherit autotools eutils gnome2 mono
 
@@ -48,4 +48,3 @@ src_unpack() {
 	( "${T}/gettextize" -f --no-changelog > /dev/null ) || die "gettexize failed"
 	eautoreconf
 }
-
