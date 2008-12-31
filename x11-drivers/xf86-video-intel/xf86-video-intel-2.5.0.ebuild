@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.5.0.ebuild,v 1.2 2008/11/26 23:26:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.5.0.ebuild,v 1.3 2008/12/31 03:44:38 mr_bones_ Exp $
 
 SNAPSHOT="yes"
 
@@ -33,4 +33,3 @@ PATCHES=(
 "${FILESDIR}/${PV}-0003-use-standard-automake-macros-for-handling-symlinks.patch"
 "${FILESDIR}/${PV}-0004-add-a-configure-switch-for-pre-2.0-compatibility-sym.patch"
 )
-

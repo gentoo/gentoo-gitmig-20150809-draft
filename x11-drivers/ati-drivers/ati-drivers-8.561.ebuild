@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.561.ebuild,v 1.1 2008/12/17 12:27:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.561.ebuild,v 1.2 2008/12/31 03:44:18 mr_bones_ Exp $
 
 IUSE="acpi debug"
 
@@ -175,7 +175,6 @@ src_unpack() {
 	pushd ${MODULE_DIR} >/dev/null
 	ln -s "${ARCH_DIR}"/lib/modules/fglrx/build_mod/libfglrx_ip.a.GCC$(gcc-major-version) \
 		|| die "symlinking precompiled core failed"
-
 
 	convert_to_m 2.6.x/Makefile || die "convert_to_m failed"
 
