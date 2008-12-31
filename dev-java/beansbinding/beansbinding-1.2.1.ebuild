@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/beansbinding/beansbinding-1.2.1.ebuild,v 1.3 2008/12/20 17:35:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/beansbinding/beansbinding-1.2.1.ebuild,v 1.4 2008/12/31 06:28:28 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -31,4 +31,3 @@ src_install() {
 	use doc && java-pkg_dojavadoc dist/javadoc
 	use source && java-pkg_dosrc src/*
 }
-
