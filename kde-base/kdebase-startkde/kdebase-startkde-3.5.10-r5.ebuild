@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.10-r4.ebuild,v 1.1 2008/10/12 00:56:08 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.10-r5.ebuild,v 1.1 2008/12/31 02:19:09 jmbsvicetto Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -55,18 +55,18 @@ src_install() {
 	doexe startkde
 
 	# startup and shutdown scripts
-	insinto "${KDEDIR}/env"
-	doins "${WORKDIR}/patches/agent-startup.sh"
+	exeinto "${KDEDIR}/env"
+	doexe "${FILESDIR}/agent-startup.sh"
 
 	exeinto "${KDEDIR}/shutdown"
-	doexe "${WORKDIR}/patches/agent-shutdown.sh"
+	doexe "${FILESDIR}/agent-shutdown.sh"
 
 	# freedesktop environment variables
 	cat <<EOF > "${T}/xdg.sh"
 export XDG_CONFIG_DIRS="${KDEDIR}/etc/xdg"
 EOF
-	insinto "${KDEDIR}/env"
-	doins "${T}/xdg.sh"
+	exeinto "${KDEDIR}/env"
+	doexe "${T}/xdg.sh"
 
 	# x11 session script
 	cat <<EOF > "${T}/kde-${SLOT}"

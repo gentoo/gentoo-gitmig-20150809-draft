@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.135 2008/11/16 05:01:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.136 2008/12/31 02:19:09 jmbsvicetto Exp $
+
+*kdebase-startkde-3.5.10-r5 (31 Dec 2008)
+
+  31 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -kdebase-startkde-3.5.10-r3.ebuild, -kdebase-startkde-3.5.10-r4.ebuild,
+  +kdebase-startkde-3.5.10-r5.ebuild:
+  Replaced doins with doexe and correctd the source of the scripts - fixes
+  bug 252976. Removed old revisions of 3.5.10.
 
   15 Nov 2008; Mike Frysinger <vapier@gentoo.org>
   kdebase-startkde-4.1.3.ebuild:
