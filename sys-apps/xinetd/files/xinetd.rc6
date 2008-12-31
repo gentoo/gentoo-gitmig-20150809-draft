@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/files/xinetd.rc6,v 1.19 2005/07/30 07:34:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/files/xinetd.rc6,v 1.20 2008/12/31 09:06:44 vapier Exp $
 
-opts="start stop reload restart dump check"
+opts="reload dump check"
 
 depend() {
 	use net
@@ -11,11 +11,8 @@ depend() {
 
 start() {
 	ebegin "Starting xinetd"
-	(
-	# workaround for #25754
-	unset -f `declare -F | sed 's:declare -f::g'`
-	/usr/sbin/xinetd -pidfile /var/run/xinetd.pid ${XINETD_OPTS}
-	)
+	start-stop-daemon --start --pidfile /var/run/xinetd.pid -- \
+		xinetd -pidfile /var/run/xinetd.pid ${XINETD_OPTS}
 	eend $?
 }
 
@@ -25,19 +22,19 @@ stop() {
 	eend $?
 }
 
-reload(){
+reload() {
 	ebegin "Reloading configuration"
 	killall -HUP xinetd &>/dev/null
 	eend $?
 }
 
-dump(){
+dump() {
 	ebegin "Dumping configuration"
 	killall -USR1 xinetd &>/dev/null
 	eend $?
 }
 
-check(){
+check() {
 	ebegin "Performing Consistency Check"
 	killall -IOT xinetd &>/dev/null
 	eend $?
