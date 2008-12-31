@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/linecache-0.43.ebuild,v 1.1 2008/12/28 11:11:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/linecache-0.43.ebuild,v 1.2 2008/12/31 03:23:24 mr_bones_ Exp $
 
 inherit gems
 
@@ -11,4 +11,3 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
