@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.63 2008/12/30 11:54:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.64 2008/12/31 07:43:38 graaff Exp $
+
+  31 Dec 2008; Hans de Graaff <graaff@gentoo.org>
+  -files/mysql-ruby-2.8-test.patch, +files/mysql-ruby-2.8-test2.patch,
+  mysql-ruby-2.8.ebuild:
+  Re-add test patch without keyword substitution: #253168.
 
 *mysql-ruby-2.8 (30 Dec 2008)
 
