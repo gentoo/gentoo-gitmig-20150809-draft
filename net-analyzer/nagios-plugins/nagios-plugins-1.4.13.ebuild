@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13.ebuild,v 1.2 2008/12/20 08:47:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13.ebuild,v 1.3 2008/12/31 16:34:57 bluebird Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/nagiosplug/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 sparc ~x86"
 IUSE="ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping
 nagios-ssh nagios-game ups ipv6 radius"
 
