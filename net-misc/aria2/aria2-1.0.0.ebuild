@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.0.0.ebuild,v 1.1 2008/11/20 09:27:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.0.0.ebuild,v 1.2 2008/12/31 03:40:21 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -74,4 +74,3 @@ src_install() {
 	dodoc ChangeLog README AUTHORS TODO NEWS
 	dohtml README.html doc/aria2c.1.html
 }
-
