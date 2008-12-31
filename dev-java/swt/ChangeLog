@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.93 2008/10/09 11:02:45 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.94 2008/12/31 03:05:53 ken69267 Exp $
+
+  31 Dec 2008; Kenneth Prugh <ken69267@gentoo.org> swt-3.4-r2.ebuild:
+  amd64 stable, bug #252875
 
   09 Oct 2008; Jean-Noël Rivasseau <elvanor@gentoo.org> Manifest:
   Remove old swt-3.4 ebuilds, bug #237973.
