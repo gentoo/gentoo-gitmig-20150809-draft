@@ -52,7 +52,7 @@
 +if [ x"${CFLAGS+set}" != xset ] ; then
 +	CFLAGS='-Wall -W -O2'
 +fi
-+if [ x"${CXXFLAGS+set}" = xset ] ; then
++if [ x"${CXXFLAGS+set}" != xset ] ; then
 +	CXXFLAGS='-Wall -W -O2'
 +fi
 +
