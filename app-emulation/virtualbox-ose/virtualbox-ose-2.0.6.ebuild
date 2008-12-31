@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-2.0.6.ebuild,v 1.1 2008/12/18 12:47:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-2.0.6.ebuild,v 1.2 2008/12/31 03:17:43 mr_bones_ Exp $
 
 EAPI=1
 
@@ -85,10 +85,10 @@ src_unpack() {
 	# Remove shipped binaries (kBuild,yasm), see bug #232775
 	rm -rf kBuild/bin tools
 
-	# Disable things unused or splitted into separate ebuilds 
+	# Disable things unused or splitted into separate ebuilds
 	cp "${FILESDIR}/${PN}-2-localconfig" LocalConfig.kmk
 
-	# Set the right libdir 
+	# Set the right libdir
 	sed -i \
 			-e "s/MY_LIBDIR/${MY_LIBDIR}/" LocalConfig.kmk \
 			|| die "LocalConfig.kmk sed failed"
