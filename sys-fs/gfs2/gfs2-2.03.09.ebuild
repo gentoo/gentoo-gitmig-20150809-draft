@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs2/gfs2-2.03.09.ebuild,v 1.2 2008/11/21 23:02:44 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs2/gfs2-2.03.09.ebuild,v 1.3 2008/12/31 03:43:18 mr_bones_ Exp $
 
 inherit eutils versionator
 
@@ -25,7 +25,6 @@ RDEPEND="=sys-cluster/ccs-${CLUSTER_RELEASE}*
 	sys-fs/e2fsprogs"
 
 DEPEND="${RDEPEND}"
-
 
 S="${WORKDIR}/${MY_P}/${PN}"
 
