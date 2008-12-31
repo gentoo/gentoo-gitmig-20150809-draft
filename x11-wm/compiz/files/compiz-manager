@@ -1,6 +1,6 @@
 #!/bin/sh
 # Compiz Manager wrapper script
-# 
+#
 # Copyright (c) 2007 Kristian Lyngstøl <kristian@bohemians.org>
 #
 # This program is free software; you can redistribute it and/or modify
@@ -24,15 +24,15 @@
 # Much of this code is based on Beryl code, also licensed under the GPL.
 # This script will detect what options we need to pass to compiz to get it
 # started, and start a default plugin and possibly window decorator.
-# 
+#
 
 
 COMPIZ_BIN_PATH="/usr/bin/" # For window decorators and compiz
-PLUGIN_PATH="/usr/lib/compiz/" 
+PLUGIN_PATH="/usr/lib/compiz/"
 GLXINFO="/usr/bin/glxinfo"
 KWIN="/usr/bin/kwin"
 METACITY="/usr/bin/metacity"
-COMPIZ_NAME="compiz" # Final name for compiz (compiz.real) 
+COMPIZ_NAME="compiz" # Final name for compiz (compiz.real)
 
 # For Xgl LD_PRELOAD
 LIBGL_NVIDIA="/usr/lib/nvidia/libGL.so.1.2.xlibmesa"
@@ -53,7 +53,7 @@ FALLBACKWM_OPTIONS="--replace $@"
 # Driver whitelist
 WHITELIST="nvidia intel ati radeon i810"
 
-# blacklist based on the pci ids 
+# blacklist based on the pci ids
 # See http://wiki.compiz-fusion.org/Hardware/Blacklist for details
 T="   1002:5954 1002:5854 1002:5955" # ati rs480
 T="$T 1002:4153" # ATI Rv350
@@ -122,10 +122,10 @@ check_fbconfig()
 {
 	verbose "Checking for FBConfig: "
 	if [ "$INDIRECT" = "yes" ]; then
-		$GLXINFO -i | grep -q GLX.*fbconfig 
+		$GLXINFO -i | grep -q GLX.*fbconfig
 		FB=$?
 	else
-		$GLXINFO | grep -q GLX.*fbconfig 
+		$GLXINFO | grep -q GLX.*fbconfig
 		FB=$?
 	fi
 
@@ -250,7 +250,7 @@ running_under_whitelisted_driver()
 	fi
 	for DRV in ${WHITELIST}; do
 		if egrep -q "Loading ${XORG_DRIVER_PATH}${DRV}_drv\.so" $LOG &&
-		   ! egrep -q "Unloading ${XORG_DRIVER_PATH}${DRV}_drv\.so" $LOG; 
+		   ! egrep -q "Unloading ${XORG_DRIVER_PATH}${DRV}_drv\.so" $LOG;
 		then
 			return 0
 		fi
@@ -341,7 +341,7 @@ if ! check_xgl; then
 	if ! running_under_whitelisted_driver || have_blacklisted_pciid; then
 		abort_with_fallback_wm
 	fi
-	# check if we have the required bits to run compiz and if not, 
+	# check if we have the required bits to run compiz and if not,
 	# fallback
 	if ! check_tfp || ! check_npot_texture || ! check_composite || ! check_texture_size; then
 		abort_with_fallback_wm
@@ -381,4 +381,3 @@ elif [ -x ${COMPIZ_BIN_PATH}kde-window-decorator ] && [ -n "$KDE_FULL_SESSION" ]
 fi
 
 ${COMPIZ_BIN_PATH}${COMPIZ_NAME} $COMPIZ_OPTIONS "$@" $COMPIZ_PLUGINS || exec $FALLBACKWM $FALLBACKWM_OPTIONS
-
