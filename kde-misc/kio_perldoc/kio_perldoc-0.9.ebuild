@@ -1,6 +1,6 @@
 # Copyright 2008-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_perldoc/kio_perldoc-0.9.ebuild,v 1.4 2008/12/10 12:31:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_perldoc/kio_perldoc-0.9.ebuild,v 1.5 2008/12/31 03:29:30 mr_bones_ Exp $
 
 EAPI="1"
 NEED_KDE="4.1"
@@ -18,4 +18,3 @@ IUSE=""
 DEPEND=">=dev-lang/perl-5.8.0"
 
 PATCHES=( "${FILESDIR}/${P}-kdeexport.patch" )
-
