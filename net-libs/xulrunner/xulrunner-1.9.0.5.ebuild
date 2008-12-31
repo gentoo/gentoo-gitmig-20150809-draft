@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.0.5.ebuild,v 1.11 2008/12/30 19:19:40 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.0.5.ebuild,v 1.12 2008/12/31 03:40:00 mr_bones_ Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -86,7 +86,7 @@ src_compile() {
 #		MEXTENSIONS="${MEXTENSIONS},python/xpcom"
 #	fi
 
-	# It doesn't compile on alpha without this LDFLAGS 
+	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
 
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
@@ -167,4 +167,3 @@ src_install() {
 	    rm -f "${D}"${MOZILLA_FIVE_HOME}/javaxpcom.jar
 	fi
 }
-
