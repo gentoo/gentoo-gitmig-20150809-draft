@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4116.ebuild,v 1.2 2008/12/30 17:37:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4116.ebuild,v 1.3 2008/12/31 03:43:55 mr_bones_ Exp $
 
 GCONF_DEBUG="no"
 
@@ -78,9 +78,9 @@ RDEPEND="media-libs/libexif
 	x11-libs/libSM
 	x11-libs/libICE
 	qt-static? ( !qt3? ( x11-libs/libXinerama media-libs/nas ) )
-	x86? ( !qt-static? ( 
+	x86? ( !qt-static? (
 			qt3? ( =x11-libs/qt-3* )
-			!qt3? ( =x11-libs/qt-core-4* =x11-libs/qt-gui-4* ) 
+			!qt3? ( =x11-libs/qt-core-4* =x11-libs/qt-gui-4* )
 		   )
 		 )
 	amd64? (
