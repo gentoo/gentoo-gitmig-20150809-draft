@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qt-faststart/qt-faststart-0.2.ebuild,v 1.1 2008/12/28 23:05:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qt-faststart/qt-faststart-0.2.ebuild,v 1.2 2008/12/31 03:38:49 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ DEPEND=""
 RDEPEND=""
 
 S="${WORKDIR}/ffmpeg"
-
 
 src_unpack() {
 	unpack ${A}
