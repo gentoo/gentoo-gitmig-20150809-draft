@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.1.0.7.0.ebuild,v 1.1 2008/12/27 12:32:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.1.0.7.0.ebuild,v 1.2 2008/12/31 09:08:13 dertobi123 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ MY_PBASE_amd64="${PN/oracle-instantclient-/}-${PV}-linux-x86_64"
 MY_P_amd64="${PN/oracle-instantclient-/}-${PV/7.0/70}-linux-x86_64"
 MY_PSDK_amd64="${MY_PBASE_amd64/basic/sdk}"
 
-DESCRIPTION="Oracle 10g client installation for Linux with SDK"
+DESCRIPTION="Oracle 11g client installation for Linux with SDK"
 HOMEPAGE="http://www.oracle.com/technology/tech/oci/instantclient/index.html"
 SRC_URI="amd64? ( ${MY_P_amd64}.zip ${MY_PSDK_amd64}.zip )
 		 x86? ( ${MY_P_x86}.zip ${MY_PSDK_x86}.zip )"
@@ -100,7 +100,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "The Basic client page for Oracle 10g has been installed."
+	elog "The Basic client package for Oracle 11g has been installed."
 	elog "You may also wish to install the oracle-instantclient-jdbc (for"
 	elog "supplemental JDBC functionality with Oracle) and the"
 	elog "oracle-instantclient-sqlplus (for running the SQL*Plus application)"
