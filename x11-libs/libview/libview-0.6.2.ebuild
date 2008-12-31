@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/libview-0.6.2.ebuild,v 1.1 2008/12/31 02:11:32 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/libview-0.6.2.ebuild,v 1.2 2008/12/31 02:18:51 ikelos Exp $
 
 inherit gnome2 eutils
 
@@ -18,15 +18,11 @@ RDEPEND=">=x11-libs/gtk+-2.4.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+G2CONF="--enable-deprecated"
+
 src_unpack() {
 	gnome2_src_unpack
 
 	# Fix the pkgconfig file
 	epatch "${FILESDIR}"/${PN}-0.5.6-pcfix.patch
-}
-
-src_compile() {
-	CPPFLAGS="${CPPFLAGS} -U GTK_DISABLE_DEPRECATED"
-	econf || die "Configure failed."
-	emake || die "Compilation failed."
 }
