@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.9.2_p48.ebuild,v 1.2 2008/11/14 17:40:21 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.9.2_p48.ebuild,v 1.3 2008/12/31 03:19:25 mr_bones_ Exp $
 
 inherit eutils
 
@@ -35,4 +35,3 @@ src_install()
 	einstall || die "Installation failed"
 	dodoc AUTHORS BUGS ChangeLog NEWS README References THANKS TODO
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.1.ebuild,v 1.9 2008/12/20 23:46:12 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.1.ebuild,v 1.10 2008/12/31 03:19:43 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -22,8 +22,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/vdk-2.4.1-gcc4.patch
 	epatch "${FILESDIR}"/vdk-2.4.1-gcc43.patch
 }
-
-
 
 src_compile() {
 	local myconf=""
