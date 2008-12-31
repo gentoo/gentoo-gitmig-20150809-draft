@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgal-python/cgal-python-0.9.3.ebuild,v 1.1 2008/10/27 15:31:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgal-python/cgal-python-0.9.3.ebuild,v 1.2 2008/12/31 06:29:35 mr_bones_ Exp $
 
 EAPI=2
 inherit toolchain-funcs python
@@ -33,7 +33,6 @@ src_prepare() {
 src_test() {
 	emake -j1 tests || die "emake tests failed"
 }
-
 
 src_install(){
 	python_need_rebuild
