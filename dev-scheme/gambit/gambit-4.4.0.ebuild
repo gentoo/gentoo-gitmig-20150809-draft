@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.4.0.ebuild,v 1.1 2008/12/29 23:57:31 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.4.0.ebuild,v 1.2 2008/12/31 03:24:00 mr_bones_ Exp $
 
 inherit eutils elisp-common check-reqs autotools multilib
 
@@ -65,7 +65,6 @@ _src_install(){
 	rm "${D}"/usr/current
 
 	mv "${D}"/usr/syntax-case.scm "${D}"/usr/$(get_libdir)
-
 
 	# remove emacs/site-lisp/gambit.el
 	rm -r "${D}"/usr/share/emacs
