@@ -1,6 +1,10 @@
+http://lists.gnu.org/archive/html/bug-ed/2008-12/msg00002.html
+
 2008-09-03  Doug Goldstein  <cardoe@gentoo.org>
 	* Make red man page a symlink instead of a hard link
 	* install man pages by default
+
+http://lists.gnu.org/archive/html/bug-ed/2008-12/msg00001.html
 
 2007-04-16  Mike Frysinger  <vapier@gentoo.org>
 
