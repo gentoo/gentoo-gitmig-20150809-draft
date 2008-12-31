@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.3.1.ebuild,v 1.1 2008/11/23 15:29:38 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.3.1.ebuild,v 1.2 2008/12/31 10:05:32 dertobi123 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,22 +15,21 @@ SRC_URI="http://www.snort.org/dl/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 -sparc ~x86"
-IUSE="static debug pthreads prelude stream4udp memory-cleanup decoder-preprocessor-rules ipv6 targetbased dynamicplugin timestats ruleperf ppm perfprofiling linux-smp-stats inline inline-init-failopen flexresp flexresp2 react aruba gre mpls pic postgres mysql odbc selinux community-rules"
+IUSE="static debug threads prelude stream4udp memory-cleanup decoder-preprocessor-rules ipv6 targetbased dynamicplugin timestats ruleperf ppm perfprofiling linux-smp-stats inline inline-init-failopen flexresp flexresp2 react aruba gre mpls pic postgres mysql odbc selinux community-rules"
 
 #flexresp, react, and inline _ONLY_ work with net-libs/libnet-1.0.2a
 DEPEND="virtual/libc
 	virtual/libpcap
 	>=sys-devel/libtool-1.4
 	>=dev-libs/libpcre-6.0
-        flexresp2? ( dev-libs/libdnet )
+	flexresp2? ( dev-libs/libdnet )
 	flexresp? ( ~net-libs/libnet-1.0.2a )
 	react? ( ~net-libs/libnet-1.0.2a )
-        postgres? ( || ( dev-db/postgresql dev-db/libpq ) )
-        mysql? ( virtual/mysql )
-        odbc? ( dev-db/unixODBC )
+	postgres? ( || ( dev-db/postgresql dev-db/libpq ) )
+	mysql? ( virtual/mysql )
+	odbc? ( dev-db/unixODBC )
 	prelude? ( >=dev-libs/libprelude-0.9.0 )
-	inline? ( ~net-libs/libnet-1.0.2a
-		  net-firewall/iptables )"
+	inline? ( ~net-libs/libnet-1.0.2a net-firewall/iptables )"
 
 RDEPEND="${DEPEND}
 	dev-lang/perl
@@ -65,30 +64,29 @@ pkg_setup() {
 		epause
 	fi
 
-        if use ruleperf && ! use dynamicplugin; then
-                ewarn
-		ewarn
-                ewarn "You have enabled 'ruleperf' but not 'dynamicplugin'."
-                ewarn "'ruleperf' requires 'dynamicplugin' to compile."
-                ewarn
-                ewarn "Enabling dynamicplugin..."
+	if use ruleperf && ! use dynamicplugin; then
 		ewarn
 		ewarn
-		epause
-        fi
-
-        if use inline-init-failopen && ! use inline; then
-                ewarn
+		ewarn "You have enabled 'ruleperf' but not 'dynamicplugin'."
+		ewarn "'ruleperf' requires 'dynamicplugin' to compile."
 		ewarn
-                ewarn "You have enabled 'inline-init-failopen' but not 'inline'."
-                ewarn "'inline-init-failopen' is an 'inline' only function."
-                ewarn
-                ewarn "Enabling inline mode..."
+		ewarn "Enabling dynamicplugin..."
 		ewarn
 		ewarn
 		epause
-        fi
+	fi
 
+	if use inline-init-failopen && ! use inline; then
+		ewarn
+		ewarn
+		ewarn "You have enabled 'inline-init-failopen' but not 'inline'."
+		ewarn "'inline-init-failopen' is an 'inline' only function."
+		ewarn
+		ewarn "Enabling inline mode..."
+		ewarn
+		ewarn
+		epause
+	fi
 }
 
 
@@ -110,8 +108,7 @@ src_unpack() {
 }
 
 src_compile() {
-
-        local myconf
+	local myconf
 
 	#Both shared and static are enable by defaut so we need to be specific
 	if use static; then
@@ -144,57 +141,57 @@ src_compile() {
 		myconf="${myconf} --disable-dynamicplugin"
 	fi
 
-        # USE flages 'targetbased' and 'inline-init-failopen' require pthreads
-	#Only 'pthreads' is set here. 'targetbased' and 'inline-init-failopen' are set below via econf.
-        if use targetbased || use inline-init-failopen || use pthreads; then
-                myconf="${myconf} --enable-pthread"
-        else
-                myconf="${myconf} --disable-pthread"
-        fi
+	# USE flages 'targetbased' and 'inline-init-failopen' require threads
+	#Only 'threads' is set here. 'targetbased' and 'inline-init-failopen' are set below via econf.
+	if use targetbased || use inline-init-failopen || use threads; then
+		myconf="${myconf} --enable-pthread"
+	else
+		myconf="${myconf} --disable-pthread"
+	fi
 
 	#Only needed if...
-        if use flexresp || use react || use inline; then
+	if use flexresp || use react || use inline; then
 		myconf="${myconf} --with-libipq-includes=/usr/include/libipq"
 	fi
 
-        #'inline-init-failopen' requires 'inline'
-        if use inline-init-failopen || use inline; then
-                myconf="${myconf} --enable-inline"
+	#'inline-init-failopen' requires 'inline'
+	if use inline-init-failopen || use inline; then
+		myconf="${myconf} --enable-inline"
 	else
 		myconf="${myconf} --disable-inline"
-        fi
+	fi
 
 
-#The --enable-<feature> options... 'static' 'dynamicplugin' 'pthreads' 'flexresp' 'flexresp2' 'inline'
+#The --enable-<feature> options... 'static' 'dynamicplugin' 'threads' 'flexresp' 'flexresp2' 'inline'
 # are configured above due to dependancy/conflict issues. 
 #All others are handled the standard ebuild way via econf
 
 	econf \
 		--without-oracle \
-                $(use_with postgres postgresql) \
-                $(use_with mysql) \
-                $(use_with odbc) \
-                $(use_with pic) \
+		$(use_with postgres postgresql) \
+		$(use_with mysql) \
+		$(use_with odbc) \
+		$(use_with pic) \
 		--disable-ipfw \
 		--disable-profile \
 		--disable-ppm-test \
 		$(use_enable debug) \
-                $(use_enable prelude) \
-                $(use_enable stream4udp) \
-                $(use_enable memory-cleanup) \
-                $(use_enable decoder-preprocessor-rules) \
+		$(use_enable prelude) \
+		$(use_enable stream4udp) \
+		$(use_enable memory-cleanup) \
+		$(use_enable decoder-preprocessor-rules) \
 		$(use_enable ipv6) \
 		$(use_enable targetbased) \
-                $(use_enable timestats) \
-                $(use_enable ruleperf) \
-                $(use_enable ppm) \
-                $(use_enable perfprofiling) \
-                $(use_enable linux-smp-stats) \
-                $(use_enable inline-init-failopen) \
-                $(use_enable react) \
-                $(use_enable aruba) \
-                $(use_enable gre) \
-                $(use_enable mpls) \
+		$(use_enable timestats) \
+		$(use_enable ruleperf) \
+		$(use_enable ppm) \
+		$(use_enable perfprofiling) \
+		$(use_enable linux-smp-stats) \
+		$(use_enable inline-init-failopen) \
+		$(use_enable react) \
+		$(use_enable aruba) \
+		$(use_enable gre) \
+		$(use_enable mpls) \
 		${myconf} || die "econf failed"
 
 	# limit to single as reported by jforman on irc
@@ -227,7 +224,7 @@ src_install() {
 			etc/snort.conf > "${D}"/etc/snort/snort.conf.distrib
 	fi
 
-        sed -i -e "s:RULE_PATH ../rules:RULE_PATH /etc/snort/rules:g" \
+	sed -i -e "s:RULE_PATH ../rules:RULE_PATH /etc/snort/rules:g" \
 		"${D}"/etc/snort/snort.conf.distrib
 
 	sed -i -e "s:PREPROC_RULE_PATH ../preproc_rules:PREPROC_RULE_PATH /etc/snort/preproc_rules:g" \
@@ -283,9 +280,9 @@ pkg_postinst() {
 		elog "The COMMUNITY ruleset has been installed."
 		elog
 	else
-                elog
-                elog "The COMMUNITY ruleset has NOT been installed."
-                elog
+		elog
+		elog "The COMMUNITY ruleset has NOT been installed."
+		elog
 	fi
 		elog "To learn how to manage updates to your rulesets please visit..."
 		elog
