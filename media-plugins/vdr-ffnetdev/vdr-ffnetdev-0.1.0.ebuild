@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0.ebuild,v 1.12 2008/12/17 19:03:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0.ebuild,v 1.13 2008/12/31 03:31:46 mr_bones_ Exp $
 
 inherit vdr-plugin eutils
 
@@ -30,7 +30,6 @@ src_unpack() {
 	if has_version ">=media-video/vdr-1.6.0"; then
 		epatch "${FILESDIR}/${P}-vdr-1.6.0.diff"
 	fi
-
 
 	vdr-plugin_src_unpack all_but_unpack
 }

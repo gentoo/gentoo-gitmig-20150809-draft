@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/vdr-premiereepg-0.2.0.ebuild,v 1.1 2008/12/09 20:25:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/vdr-premiereepg-0.2.0.ebuild,v 1.2 2008/12/31 03:36:41 mr_bones_ Exp $
 
 inherit vdr-plugin eutils
 
@@ -23,4 +23,3 @@ src_unpack() {
 	cd "${S}"
 	fix_vdr_libsi_include premiereepg.c
 }
-
