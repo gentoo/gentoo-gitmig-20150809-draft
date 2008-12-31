@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.3.1-r2.ebuild,v 1.1 2008/11/28 22:14:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.3.1-r2.ebuild,v 1.2 2008/12/31 03:39:37 mr_bones_ Exp $
 
 EAPI=1
 
@@ -65,11 +65,11 @@ src_compile() {
 #	local mycmakeargs=(
 #		"$(cmake-utils_use_want server CORE)"
 #		"$(cmake-utils_use_want X QTCLIENT)"
-#               "$(cmake-utils_use_with X WEBKIT)" 
+#               "$(cmake-utils_use_with X WEBKIT)"
 #		"$(cmake-utils_use_with dbus DBUS)"
 #		"$(cmake-utils_use_with ssl OPENSSL)"
 #		"-DLINGUAS=\"${LINGUAS}\""
-#               '-DOXYGEN_ICONS=Builtin' 
+#               '-DOXYGEN_ICONS=Builtin'
 #               '-DQUASSEL_ICONS=Builtin'
 #		'-DWANT_MONO=OFF' )
 #

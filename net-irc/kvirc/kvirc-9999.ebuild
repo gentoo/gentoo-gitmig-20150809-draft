@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.16 2008/11/02 14:22:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.17 2008/12/31 03:39:18 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -11,7 +11,6 @@ HOMEPAGE="http://www.kvirc.net/"
 SRC_URI=""
 ESVN_REPO_URI="https://svn.kvirc.de/svn/trunk/kvirc"
 ESVN_PROJECT="kvirc"
-
 
 LICENSE="kvirc"
 SLOT="4"
