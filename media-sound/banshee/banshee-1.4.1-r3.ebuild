@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.1-r3.ebuild,v 1.4 2008/12/14 14:24:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.1-r3.ebuild,v 1.5 2008/12/31 03:37:19 mr_bones_ Exp $
 
 EAPI=2
 
@@ -94,7 +94,6 @@ pkg_setup() {
 		--with-gconf-schema-file-dir=/etc/gconf/schemas"
 
 }
-
 
 src_unpack() {
 	gnome2_src_unpack

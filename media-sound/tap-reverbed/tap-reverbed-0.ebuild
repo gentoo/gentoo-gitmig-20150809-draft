@@ -1,7 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/tap-reverbed-0.ebuild,v 1.6 2008/12/19 14:50:42 aballier Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tap-reverbed/tap-reverbed-0.ebuild,v 1.7 2008/12/31 03:38:13 mr_bones_ Exp $
 
 inherit autotools eutils
 
