@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.62 2008/11/27 23:52:11 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.63 2008/12/31 02:06:01 ikelos Exp $
+
+*vmware-player-2.5.1.126130 (31 Dec 2008)
+
+  31 Dec 2008; Mike Auty <ikelos@gentoo.org>
+  +files/2.5.1.126130/vmware-player.py.patch,
+  +files/vmware-player-2.5.1.126130-installer.patch,
+  +files/2.5.1.126130/vmware-player-extras.py.patch,
+  +vmware-player-2.5.1.126130.ebuild:
+  Version bump vmware-player to 2.5.1.
 
   27 Nov 2008; Mike Auty <ikelos@gentoo.org> files/helpers/vmware-config.sh:
   Fix up vmware-config.sh helper (bug 246854).
