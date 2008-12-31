@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/notify-sharp-0.4.0_pre20080912.ebuild,v 1.3 2008/12/14 15:23:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/notify-sharp-0.4.0_pre20080912.ebuild,v 1.4 2008/12/31 06:27:52 mr_bones_ Exp $
 
 EAPI=2
 
@@ -41,4 +41,3 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 }
-
