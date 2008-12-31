@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.96.ebuild,v 1.8 2008/12/30 11:35:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.96.ebuild,v 1.9 2008/12/31 09:09:06 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -16,7 +16,7 @@ fi
 DESCRIPTION="GNU GRUB 2 boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 use multislot && SLOT="2" || SLOT="0"
 KEYWORDS=""
 IUSE="custom-cflags multislot static"
@@ -29,7 +29,6 @@ STRIP_MASK="/lib*/grub/*/*.mod"
 QA_EXECSTACK="sbin/grub-probe sbin/grub-setup"
 
 src_compile() {
-	use amd64 && multilib_toolchain_setup x86
 	use custom-cflags || unset CFLAGS CPPFLAGS LDFLAGS
 	use static && append-ldflags -static
 
