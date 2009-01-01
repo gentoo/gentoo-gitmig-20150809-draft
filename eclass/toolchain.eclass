@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.372 2008/12/31 21:26:11 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.373 2009/01/01 06:26:11 gengor Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -2014,7 +2014,7 @@ gcc_quick_unpack() {
 			unpack gcc-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2
 		fi
 		[[ -n ${SPECS_VER} ]] && \
-			unpack gcc-${SPECS_GCC_VER}-default-specs-${SPECS_VER}.tar.bz2
+			unpack gcc-${SPECS_GCC_VER}-specs-${SPECS_VER}.tar.bz2
 	fi
 
 	want_boundschecking && \
