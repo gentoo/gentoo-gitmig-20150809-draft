@@ -1,0 +1,25 @@
+Index: init.d/dmesg.in
+===================================================================
+--- init.d/dmesg.in	(revision 1465)
++++ init.d/dmesg.in	(working copy)
+@@ -7,6 +7,7 @@
+ depend()
+ {
+ 	before dev modules
++	keyword novserver
+ }
+ 
+ start()
+Index: init.d/sysfs.in
+===================================================================
+--- init.d/sysfs.in	(revision 1465)
++++ init.d/sysfs.in	(working copy)
+@@ -6,7 +6,7 @@
+ 
+ depend()
+ {
+-	keyword noprefix
++	keyword noprefix novserver
+ }
+ 
+ mount_sys()
