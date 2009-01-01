@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.122 2009/01/01 17:06:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.123 2009/01/01 18:55:59 keytoaster Exp $
+
+  01 Jan 2009; Tobias Heinlein <keytoaster@gentoo.org>
+  mozilla-thunderbird-bin-2.0.0.19.ebuild:
+  amd64 stable wrt security bug #251322
 
   01 Jan 2009; Raúl Porcel <armin76@gentoo.org>
   mozilla-thunderbird-bin-2.0.0.19.ebuild:
