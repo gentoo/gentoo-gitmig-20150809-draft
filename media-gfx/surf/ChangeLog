@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/surf
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/surf/ChangeLog,v 1.7 2008/07/09 21:41:27 loki_val Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/surf/ChangeLog,v 1.8 2009/01/01 05:30:07 matsuu Exp $
+
+*surf-1.0.5-r2 (01 Jan 2009)
+
+  01 Jan 2009; MATSUU Takuto <matsuu@gentoo.org> +surf-1.0.5-r2.ebuild:
+  Fixed to build with no gtk+-1.2 installed, bug #240439.
 
 *surf-1.0.5-r1 (09 Jul 2008)
 
