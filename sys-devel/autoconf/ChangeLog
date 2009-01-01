@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.124 2008/12/31 19:56:31 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.125 2009/01/01 17:19:11 jer Exp $
+
+  01 Jan 2009; Jeroen Roovers <jer@gentoo.org> autoconf-2.63.ebuild:
+  Stable for HPPA (bug #245067).
 
   31 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> autoconf-2.63.ebuild:
   Stable on sparc, bug #245067
