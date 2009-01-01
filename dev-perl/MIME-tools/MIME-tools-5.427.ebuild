@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/MIME-tools-5.427.ebuild,v 1.1 2008/07/04 10:16:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/MIME-tools-5.427.ebuild,v 1.2 2009/01/01 19:49:15 armin76 Exp $
 
 MODULE_AUTHOR=DONEILL
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="A Perl module for parsing and creating MIME entities"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 SRC_TEST="do"
