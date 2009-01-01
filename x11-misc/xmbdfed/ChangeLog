@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xmbdfed
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/ChangeLog,v 1.19 2008/12/15 22:54:27 pva Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/ChangeLog,v 1.20 2009/01/01 01:33:50 matsuu Exp $
+
+*xmbdfed-4.7_p1-r1 (01 Jan 2009)
+
+  01 Jan 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +files/xmbdfed-4.7_p1-gentoo.patch, +xmbdfed-4.7_p1-r1.ebuild:
+  Added ~amd64. Fixed dependency. Added RESTRICT="test".
 
   15 Dec 2008; Peter Volkov <pva@gentoo.org> xmbdfed-4.7_p1.ebuild:
   Truetype support is not optional any more in this package thus removed
