@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.42.ebuild,v 1.2 2009/01/01 19:40:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.42.ebuild,v 1.3 2009/01/01 19:43:41 ssuominen Exp $
 
 EAPI=2
 
@@ -48,7 +48,7 @@ pkg_preinst() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS NEWS
-
+	rm -f "${D}"/usr/share/${PN}/web/LICENSE
 	doinitd "${FILESDIR}"/transmission-daemon
 }
 
