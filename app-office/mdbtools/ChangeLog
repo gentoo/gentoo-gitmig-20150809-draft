@@ -1,6 +1,17 @@
 # ChangeLog for app-office/mdbtools
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.41 2008/12/30 09:29:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.42 2009/01/01 10:22:07 graaff Exp $
+
+*mdbtools-0.6_pre2 (30 Dec 2008)
+
+  30 Dec 2008; Hans de Graaff <graaff@gentoo.org>
+  +files/mdbtools-0.6_pre2-as-needed.patch,
+  +files/mdbtools-0.6_pre2-gcc34.patch, +mdbtools-0.6_pre2.ebuild:
+  Add current CVS from 2005-06-24 as mdbtools-0.6_pre2. Since we were already on
+  pre1 there was not much room to create a better and increased version number.
+  Use a gentoo-hosted tarball with a copy from the CVS archive so that we have a
+  consistent archive to work with. Drop patches that got applied to upstream
+  CVS.
 
   30 Dec 2008; Hans de Graaff <graaff@gentoo.org>
   mdbtools-0.6_pre1-r1.ebuild:
