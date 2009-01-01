@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_dnssd/mod_dnssd-0.5.ebuild,v 1.2 2008/01/31 18:45:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_dnssd/mod_dnssd-0.5.ebuild,v 1.3 2009/01/01 14:21:43 hollow Exp $
 
 inherit apache-module eutils
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="mod_dnssd is an Apache module which adds Zeroconf support via DNS-SD using Avahi"
 HOMEPAGE="http://0pointer.de/lennart/projects/mod_dnssd/"
