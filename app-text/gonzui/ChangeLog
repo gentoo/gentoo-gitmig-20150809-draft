@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gonzui
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/ChangeLog,v 1.9 2008/08/13 17:25:30 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/ChangeLog,v 1.10 2009/01/01 02:35:19 matsuu Exp $
+
+  01 Jan 2009; MATSUU Takuto <matsuu@gentoo.org>
+  files/gonzui-1.2-gentoo.patch:
+  Fixed parallel make issue, bug #246965.
 
 *gonzui-1.2-r1 (13 Aug 2008)
 
