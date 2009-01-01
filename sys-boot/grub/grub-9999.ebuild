@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.4 2008/12/31 09:09:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.5 2009/01/01 11:24:35 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -25,7 +25,7 @@ DEPEND=">=sys-libs/ncurses-5.2-r5
 	dev-libs/lzo"
 PROVIDE="virtual/bootloader"
 
-STRIP_MASK="/lib*/grub/*/*.mod"
+export STRIP_MASK="*/grub/*/*.mod"
 QA_EXECSTACK="sbin/grub-probe sbin/grub-setup"
 
 src_compile() {
