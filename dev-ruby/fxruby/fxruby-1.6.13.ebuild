@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.13.ebuild,v 1.8 2008/04/27 19:45:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.13.ebuild,v 1.9 2009/01/01 12:33:17 mabi Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby
@@ -18,7 +18,7 @@ IUSE="examples doc"
 
 DEPEND="=x11-libs/fox-1.6*
 	>=x11-libs/fxscintilla-1.62-r1"
-USE_RUBY="ruby16 ruby18 ruby19"
+USE_RUBY="ruby18"
 
 S="${WORKDIR}/${MY_P}"
 

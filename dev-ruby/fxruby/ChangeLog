@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.69 2009/01/01 11:32:18 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.70 2009/01/01 12:33:17 mabi Exp $
+
+  01 Jan 2009; Matti Bickel <mabi@gentoo.org> fxruby-1.4.7-r1.ebuild,
+  fxruby-1.6.13.ebuild:
+  versions <1.6.17 fail with ruby-1.9
 
 *fxruby-1.6.18 (01 Jan 2009)
 
