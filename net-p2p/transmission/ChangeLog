@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/transmission
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.68 2008/11/17 21:52:05 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.69 2009/01/01 16:58:20 ssuominen Exp $
+
+*transmission-1.42 (01 Jan 2009)
+
+  01 Jan 2009; <ssuominen@gentoo.org> +transmission-1.42.ebuild:
+  Version bump.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/transmission-1.11-libnotify-option.patch:
