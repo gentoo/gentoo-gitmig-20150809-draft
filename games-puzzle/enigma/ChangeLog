@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/enigma
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.41 2008/11/18 21:14:32 mr_bones_ Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.42 2009/01/01 15:58:09 mr_bones_ Exp $
+
+  01 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  files/enigma-1.01-xerces-c.patch, enigma-1.01.ebuild:
+  Add additional patching from Ivan Boldyrev for cross-platform building with
+  dev-libs/xerces-c-3 (bug #242916)
 
   18 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/enigma-1.01-xerces-c.patch, enigma-1.01.ebuild:
