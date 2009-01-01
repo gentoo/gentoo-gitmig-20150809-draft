@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mediawiki
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.116 2008/12/31 16:27:18 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.117 2009/01/01 23:13:27 keytoaster Exp $
+
+  01 Jan 2009; Tobias Heinlein <keytoaster@gentoo.org>
+  mediawiki-1.13.3.ebuild:
+  amd64 stable wrt security bug #251044
 
   31 Dec 2008; Raúl Porcel <armin76@gentoo.org> mediawiki-1.13.3.ebuild:
   x86 stable wrt #251044
