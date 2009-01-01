@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-news
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-news/ChangeLog,v 1.14 2008/12/30 17:52:10 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-news/ChangeLog,v 1.15 2009/01/01 19:25:40 armin76 Exp $
+
+  01 Jan 2009; Raúl Porcel <armin76@gentoo.org>
+  eselect-news-20080320.ebuild:
+  sh stable
 
   30 Dec 2008; Jeroen Roovers <jer@gentoo.org> eselect-news-20080320.ebuild:
   Stable for HPPA (bug #251810).
