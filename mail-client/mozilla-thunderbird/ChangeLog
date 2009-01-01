@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mozilla-thunderbird
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.279 2008/12/31 15:26:14 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.280 2009/01/01 17:02:30 armin76 Exp $
+
+  01 Jan 2009; Raúl Porcel <armin76@gentoo.org>
+  mozilla-thunderbird-2.0.0.19.ebuild:
+  alpha/ia64/sparc/x86 stable wrt #251322
 
 *mozilla-thunderbird-2.0.0.19 (31 Dec 2008)
 
