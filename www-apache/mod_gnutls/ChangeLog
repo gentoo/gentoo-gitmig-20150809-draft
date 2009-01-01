@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_gnutls
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.16 2008/09/16 15:45:35 trapni Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.17 2009/01/01 14:15:47 hollow Exp $
+
+*mod_gnutls-0.5.3 (01 Jan 2009)
+
+  01 Jan 2009; Benedikt Böhm <hollow@gentoo.org> mod_gnutls-0.5.1.ebuild,
+  +mod_gnutls-0.5.3.ebuild:
+  version bump wrt #244754, 0.5.1 stable on amd64 & x86
 
 *mod_gnutls-0.5.2 (16 Sep 2008)
 

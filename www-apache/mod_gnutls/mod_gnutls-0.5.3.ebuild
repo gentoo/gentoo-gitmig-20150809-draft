@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.5.1.ebuild,v 1.2 2009/01/01 14:15:47 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.5.3.ebuild,v 1.1 2009/01/01 14:15:47 hollow Exp $
 
 inherit apache-module ssl-cert
 
@@ -10,10 +10,10 @@ SRC_URI="http://www.outoforder.cc/downloads/${PN}/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~sparc x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=net-libs/gnutls-2.2.1"
+DEPEND=">=net-libs/gnutls-2.4.0"
 RDEPEND="${DEPEND}"
 
 APACHE2_MOD_CONF="47_${PN}"
