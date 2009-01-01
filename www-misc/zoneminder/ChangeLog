@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/zoneminder
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.30 2008/12/28 21:50:46 wrobel Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.31 2009/01/01 16:47:21 gentoofan23 Exp $
+
+  01 Jan 2009; Thomas Anderson <gentoofan23@gentoo.org> files/init.d,
+  metadata.xml:
+  Update init.d script to use mysql, add myself as a maintainer
 
   28 Dec 2008; Gunnar Wrobel <wrobel@gentoo.org> zoneminder-1.23.3.ebuild:
   fixed #250715.
