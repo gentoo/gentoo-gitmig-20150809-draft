@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iwl4965-ucode
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.9 2008/08/15 22:07:41 chainsaw Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.10 2009/01/01 01:42:33 chainsaw Exp $
+
+  01 Jan 2009; <chainsaw@gentoo.org> iwl4965-ucode-228.57.2.21.ebuild:
+  Mark firmware API-2 stable on AMD64 for 2.6.27 as requested by Thomas Pani
+  <thomas.pani@gmail.com> in bug #252610. Tested on a Fujitsu-Siemens
+  Lifebook S6410.
 
 *iwl4965-ucode-228.57.2.21 (15 Aug 2008)
 
