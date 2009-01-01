@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_security
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.15 2008/07/01 19:43:17 hollow Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.16 2009/01/01 14:11:36 hollow Exp $
+
+*mod_security-2.5.6 (01 Jan 2009)
+
+  01 Jan 2009; Benedikt Böhm <hollow@gentoo.org>
+  -mod_security-2.5.1.ebuild, -mod_security-2.5.4.ebuild,
+  +mod_security-2.5.6.ebuild:
+  version bump wrt security #240946
 
 *mod_security-2.5.5 (01 Jul 2008)
 
