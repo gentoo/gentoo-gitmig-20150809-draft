@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/gccxml-0.6.0-r1.ebuild,v 1.6 2007/02/11 11:20:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/gccxml-0.6.0-r1.ebuild,v 1.7 2009/01/02 01:37:51 halcy0n Exp $
 
 inherit versionator eutils
 PVM="$(get_version_component_range 1-2)"
@@ -16,20 +16,21 @@ IUSE=""
 DEPEND="dev-util/cmake"
 RDEPEND=""
 
-MYBUILDDIR=${WORKDIR}/build
+MYBUILDDIR="${WORKDIR}"/build
 src_unpack() {
-	mkdir ${MYBUILDDIR}
+	mkdir "${MYBUILDDIR}"
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/obstack.h.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/obstack.h.diff
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 src_compile() {
-	cd ${MYBUILDDIR}
+	cd "${MYBUILDDIR}"
 	cmake ../${P} -DCMAKE_INSTALL_PREFIX:PATH=/usr || die "cmake failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	cd ${MYBUILDDIR}
-	make DESTDIR=${D} install || die
+	cd "${MYBUILDDIR}"
+	make DESTDIR="${D}" install || die
 }
