@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2009.01.02.ebuild,v 1.1 2009/01/02 15:26:54 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2009.01.02-r1.ebuild,v 1.1 2009/01/02 15:33:32 araujo Exp $
 
 DESCRIPTION="Io is a small, prototype-based programming language."
 HOMEPAGE="http://www.iolanguage.com"
@@ -10,8 +10,8 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="doc readline mysql cairo postgres dbi opengl ncurses sqlite sqlite3 zlib"
-DEPEND="dev-libs/lzo
+IUSE="doc readline mysql cairo postgres dbi opengl ncurses sqlite sqlite3 zlib lzo"
+DEPEND="lzo? ( dev-libs/lzo )
 		readline? ( sys-libs/readline )
 		mysql? ( virtual/mysql )
 		cairo? ( x11-libs/cairo )
@@ -37,6 +37,7 @@ src_compile() {
 	useq sqlite && make SQLite
 	useq sqlite3 && make SQLite3
 	useq zlib && make Zlib
+	useq lzo && make LZO
 }
 
 src_install() {
