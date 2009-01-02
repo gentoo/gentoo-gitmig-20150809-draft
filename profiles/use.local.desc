@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4093 2009/01/02 17:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4094 2009/01/02 19:47:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -325,7 +325,6 @@ app-misc/lirc:transmitter - Add transmitter support to some lirc-drivers (e.g. s
 app-misc/mc:7zip - Add support for 7zip archives
 app-misc/note:general - Add support for ascii flatfile backend
 app-misc/note:text - Add support for text backend
-app-misc/pal:ical - Add support for converting ical format to pal (dev-libs/libical) 
 app-misc/roadnav:festival - Enable support for app-accessibility/festival
 app-misc/roadnav:flite - Enable support for app-accessibility/flite (festival-lite)
 app-misc/roadnav:openstreetmap - Enable openstreetmap support
