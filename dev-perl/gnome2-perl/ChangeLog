@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-perl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.43 2008/11/29 12:26:30 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/ChangeLog,v 1.44 2009/01/02 21:07:57 ssuominen Exp $
+
+  02 Jan 2009; <ssuominen@gentoo.org> gnome2-perl-1.041.ebuild:
+  x86 stable too.
 
   29 Nov 2008; <ssuominen@gentoo.org> gnome2-perl-1.041.ebuild:
   Move extutils-pkgconfig to DEPEND wrt #223075.
