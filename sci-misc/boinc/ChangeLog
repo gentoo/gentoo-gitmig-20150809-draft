@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/boinc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.44 2008/11/28 00:06:59 scarabeus Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.45 2009/01/02 20:40:21 cryos Exp $
+
+  02 Jan 2009; Marcus D. Hanwell <cryos@gentoo.org> metadata.xml:
+  Removed myself as maintainer.
 
   28 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> boinc-6.2.15.ebuild:
   Update confusing information about password for graphical client.

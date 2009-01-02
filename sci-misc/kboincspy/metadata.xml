@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci</herd>
-  <maintainer>
-    <email>cryos@gentoo.org</email>
-  </maintainer>
   <longdescription>
     KBoincSpy is a KDE monitor and control utility for the BOINC client. It
 	displays a lot of useful information about the computation of work units,
