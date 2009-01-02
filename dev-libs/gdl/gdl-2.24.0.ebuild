@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-2.24.0.ebuild,v 1.2 2008/12/31 06:29:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-2.24.0.ebuild,v 1.3 2009/01/02 23:20:06 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2.12
