@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/maui
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.9 2008/01/31 06:54:07 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.10 2009/01/02 08:51:30 weaver Exp $
+
+*maui-3.2.6_p21 (02 Jan 2009)
+
+  02 Jan 2009; weaver <weaver@gentoo.org>
+  +files/3.2.6_p21-autoconf-2.60-compat.patch, +maui-3.2.6_p21.ebuild:
+  Version bump, bug 164373. Drop 2 patches merged upstream.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -maui-3.2.6_p13.ebuild, -maui-3.2.6_p13-r1.ebuild:
