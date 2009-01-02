@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.ebuild,v 1.1 2008/11/28 20:09:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.ebuild,v 1.2 2009/01/02 19:50:47 solar Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -21,7 +21,7 @@ fi
 
 MY_P=uClibc-0.9.30
 SVN_VER=""
-#PATCH_VER="0.1"
+PATCH_VER="1.0"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://uclibc.org/downloads/${MY_P}.tar.bz2
@@ -33,20 +33,20 @@ SRC_URI="http://uclibc.org/downloads/${MY_P}.tar.bz2
 	SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="LGPL-2"
-[[ ${CTARGET} != ${CHOST} ]] \
-	&& SLOT="${CTARGET}" \
-	|| SLOT="0"
+SLOT="0"
 KEYWORDS="-* ~arm ~m68k -mips ~ppc ~sh ~sparc ~x86 ~amd64"
-IUSE="build uclibc-compat debug hardened iconv ipv6 minimal nls pregen userlocales wordexp crosscompile_opts_headers-only"
+IUSE="build uclibc-compat debug hardened ssp iconv ipv6 minimal nls pregen userlocales wordexp crosscompile_opts_headers-only"
 RESTRICT="strip"
 
 RDEPEND=""
 if [[ -n $CTARGET && ${CTARGET} != ${CHOST} ]]; then
 	DEPEND=""
 	PROVIDE=""
+	SLOT="${CTARGET}"
 else
 	DEPEND="virtual/os-headers app-misc/pax-utils"
 	PROVIDE="virtual/libc"
+	SLOT="0"
 fi
 
 S=${WORKDIR}/${MY_P}
@@ -60,6 +60,7 @@ alt_build_kprefix() {
 		echo /usr/${CTARGET}/usr/include
 	fi
 }
+
 just_headers() {
 	use crosscompile_opts_headers-only && [[ ${CHOST} != ${CTARGET} ]]
 }
@@ -186,19 +187,6 @@ src_unpack() {
 		unpack ${MY_P}-patches-${PATCH_VER}.tar.bz2
 		EPATCH_SUFFIX="patch"
 		epatch "${WORKDIR}"/patch
-		# math functions (sinf,cosf,tanf,atan2f,powf,fabsf,copysignf,scalbnf,rem_pio2f)
-		cp "${WORKDIR}"/patch/math/libm/* "${S}"/libm/ || die
-		epatch "${WORKDIR}"/patch/math
-	fi
-
-	if [[ -d "${FILESDIR}"/patches-${PV} ]] ; then
-		EPATCH_SUFFIX="patch"
-		epatch "${FILESDIR}"/patches-${PV}
-		if [[ -d "${FILESDIR}"/patches-${PV}/math/libm ]] ; then
-			# math functions (sinf,cosf,tanf,atan2f,powf,fabsf,copysignf,scalbnf,rem_pio2f)
-			cp "${FILESDIR}"/patches-${PV}/math/libm/* "${S}"/libm/ || die
-			epatch "${FILESDIR}"/patches-${PV}/math
-		fi
 	fi
 
 	########## CPU SELECTION ##########
@@ -248,7 +236,7 @@ src_unpack() {
 	local moredefs="COMPAT_ATEXIT"
 	local compat_sym=atexit
 
-	# We need todo this for a few months. .29 is a major upgrade.
+	# We need todo this for a few months. .30 is a major upgrade.
 	# Don't do it from cross-compiling case though
 	if ! use uclibc-compat ; then
 		if [[ -z ${UCLIBC_AND_GLIBC} ]] && [[ -z ${UCLIBC_SCANNED_COMPAT} ]] && \
@@ -288,7 +276,7 @@ src_unpack() {
 			set_opt UCLIBC_HAS_GETTEXT_AWARENESS n
 		fi
 
-		if use pregen ; then
+		if use pregen && [[ ${target} != mips ]]; then
 			set_opt UCLIBC_PREGENERATED_LOCALE_DATA y
 			set_opt UCLIBC_DOWNLOAD_PREGENERATED_LOCALE_DATA y
 			if use userlocales ; then
@@ -321,8 +309,7 @@ src_unpack() {
 	# arm/mips do not emit PT_GNU_STACK, but if we enable this here
 	# it will be emitted as RWE, ppc has to be checked, x86 needs it
 	# this option should be used independently of hardened
-	# relro could be also moved out of hardened
-	if has $(tc-arch) x86 ; then
+	if has $(tc-arch) x86 || has $(tc-arch) ppc; then
 		set_opt UCLIBC_BUILD_NOEXECSTACK y
 	else
 		set_opt UCLIBC_BUILD_NOEXECSTACK n
@@ -334,9 +321,11 @@ src_unpack() {
 		else
 			set_opt UCLIBC_BUILD_PIE n
 		fi
-		set_opt SSP_QUICK_CANARY n
-		set_opt UCLIBC_BUILD_SSP y
 		set_opt UCLIBC_BUILD_NOW y
+		use ssp && {
+			set_opt SSP_QUICK_CANARY n
+			set_opt UCLIBC_BUILD_SSP y
+		}
 	else
 		set_opt UCLIBC_BUILD_PIE n
 		set_opt SSP_QUICK_CANARY y
