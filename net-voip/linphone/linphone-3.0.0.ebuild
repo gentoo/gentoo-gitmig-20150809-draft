@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.0.0.ebuild,v 1.1 2008/12/23 04:47:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.0.0.ebuild,v 1.2 2009/01/02 07:21:37 vapier Exp $
 
 inherit eutils
 
@@ -47,6 +47,9 @@ src_unpack() {
 
 src_compile() {
 	export ac_cv_path_DOXYGEN=false
+	export ac_cv_path_INTLTOOL_UPDATE=true #252704
+	export ac_cv_path_INTLTOOL_MERGE=true
+	export ac_cv_path_INTLTOOL_EXTRACT=true
 	econf \
 		--disable-manual \
 		--disable-strict \
