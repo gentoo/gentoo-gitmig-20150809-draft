@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.40 2009/01/01 09:36:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.41 2009/01/02 09:42:26 vapier Exp $
 
 # @ECLASS: font.eclass
 # @MAINTAINER:
@@ -62,6 +62,7 @@ font_xfont_config() {
 	# create Xfont files
 	if use X ; then
 		einfo "Creating fonts.scale & fonts.dir ..."
+		rm -f "${D}${FONTDIR}"/fonts.{dir,scale}
 		mkfontscale "${D}${FONTDIR}"
 		mkfontdir \
 			-e /usr/share/fonts/encodings \
