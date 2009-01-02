@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.6.2.ebuild,v 1.2 2008/12/24 19:46:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.6.2.ebuild,v 1.3 2009/01/02 04:43:43 vapier Exp $
 
 inherit eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 	for x in ${E2FSPROGS_P}.tar.gz ${LINUX_P}.tar.bz2 ; do
 		ln -s "${DISTDIR}"/${x} zfcpdump/extern/${x} || die "ln ${x}"
 	done
+	sed -i -re 's:__u(8|16|32):uint\1_t:' $(find osasnmpd -name '*.h')
 	sed -i -e "s:-lrpm[iodb]*::g" osasnmpd/Makefile.rules
 	sed -i -e '/^ZFCPDUMP_DIR/s:local/::' common.mak
 }
