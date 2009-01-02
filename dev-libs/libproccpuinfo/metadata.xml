@@ -5,8 +5,4 @@
 <maintainer>
   <email>maintainer-needed@gentoo.org</email>
 </maintainer>
-<use>
-  <flag name='sender'>Build a utility for sending the author your
-    /proc/cpuinfo file</flag>
-</use>
 </pkgmetadata>
