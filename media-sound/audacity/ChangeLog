@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacity
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.110 2008/10/27 15:00:26 jer Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.111 2009/01/02 16:33:37 aballier Exp $
+
+  02 Jan 2009; Alexis Ballier <aballier@gentoo.org> audacity-1.3.6.ebuild:
+  fix typo in ladspa useflag deps, by Pierre Lejeune <superheron@gmail.com>,
+  bug #252289
 
   27 Oct 2008; Jeroen Roovers <jer@gentoo.org> audacity-1.3.6.ebuild:
   Marked ~hppa (bug #244360).
