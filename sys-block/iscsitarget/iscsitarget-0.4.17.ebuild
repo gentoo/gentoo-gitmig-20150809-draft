@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.17.ebuild,v 1.1 2008/12/20 00:21:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.17.ebuild,v 1.2 2009/01/02 23:21:17 flameeyes Exp $
 
 inherit linux-mod eutils flag-o-matic
 
@@ -24,6 +24,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.4.15-isns-set-scn-flag.patch #180619
 	epatch "${FILESDIR}"/${PN}-0.4.17-build.patch
+	epatch "${FILESDIR}"/${PN}-0.4.17+linux-2.6.28.patch #252608
 	convert_to_m "${S}"/Makefile
 }
 

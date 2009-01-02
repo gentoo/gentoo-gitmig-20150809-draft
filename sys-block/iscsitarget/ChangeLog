@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/iscsitarget
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.18 2008/12/20 00:21:36 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.19 2009/01/02 23:21:17 flameeyes Exp $
+
+  02 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/iscsitarget-0.4.17+linux-2.6.28.patch, iscsitarget-0.4.17.ebuild:
+  Add patch to fix bug #252608 (failure to build on kernel 2.6.28 and
+  later).
 
 *iscsitarget-0.4.17 (20 Dec 2008)
 
