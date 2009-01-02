@@ -40,8 +40,8 @@ diff -ru esearch-0.7.1-r6/en/esync.1 esearch-0.7.1-r7/en/esync.1
  Don't use ANSI codes for colored output
 -.TP
 +.TP 
-+.B  \\-\\-quiet, \\-q
-+Less output (implies \\-\\-nospinner)
++.B  \-\-quiet, \\-q
++Less output (implies \-\-nospinner)
 +.TP 
  .B \-\-verbose, \-v
  Verbose output
