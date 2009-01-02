@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.3 2008/12/28 22:55:23 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.4 2009/01/02 21:59:05 spock Exp $
 
 EAPI="1"
 
-inherit eutils multilib toolchain-funcs
+inherit autotools eutils multilib toolchain-funcs
 
 MISCSPLASH="miscsplashutils-0.1.8"
 GENTOOSPLASH="splashutils-gentoo-1.0.16"
@@ -84,11 +84,15 @@ src_unpack() {
 		sed -i -e 's/fbtruetype kbd/kbd/' "${SM}/Makefile"
 	fi
 
+	epatch "${FILESDIR}"/splashutils-1.5.4.3-makefile.patch
+
 	if has_version ">=sys-apps/openrc-0.4.0"; then
 		cd "${SG}"
 		epatch "${FILESDIR}"/splashutils-openrc-0.4-fix.patch
 		cd "${S}"
 	fi
+
+	eautoreconf
 }
 
 src_compile() {
