@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/xinetd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.47 2008/12/31 09:06:44 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.48 2009/01/02 20:39:36 vapier Exp $
+
+  02 Jan 2009; Mike Frysinger <vapier@gentoo.org> files/xinetd.rc6:
+  Tweak by Ian Pickworth for ssd usage to work on stable/unstable #253441.
 
   31 Dec 2008; Mike Frysinger <vapier@gentoo.org> files/xinetd.rc6:
   Drop funky custom env cleaning as ssd does it for us now #253178 by Erik
