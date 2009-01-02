@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.2.3.ebuild,v 1.1 2009/01/02 17:12:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.2.3.ebuild,v 1.2 2009/01/02 19:40:11 yngwin Exp $
 
 EAPI="1"
 
 inherit cmake-utils
 
 DESCRIPTION="Qt4-based audio player with winamp/xmms skins support"
-HOMEPAGE="http://qmmp.ylsoftware.com/"
+HOMEPAGE="http://qmmp.ylsoftware.com/index_en.php"
 SRC_URI="http://qmmp.ylsoftware.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
