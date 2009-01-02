@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.19 2009/01/02 23:21:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.20 2009/01/02 23:46:09 flameeyes Exp $
+
+  02 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/iscsitarget-0.4.15-build.patch,
+  -files/iscsitarget-0.4.15-kmem.patch,
+  -files/iscsitarget-0.4.15-scatter.patch,
+  -files/iscsitarget-0.4.16+glibc-2.8-lists.patch, -files/ietd-init.d,
+  -iscsitarget-0.4.15-r1.ebuild, -iscsitarget-0.4.16.ebuild:
+  Remove old versions and patches.
 
   02 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/iscsitarget-0.4.17+linux-2.6.28.patch, iscsitarget-0.4.17.ebuild:
