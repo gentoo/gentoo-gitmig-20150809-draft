@@ -1,0 +1,9 @@
+# ChangeLog for x11-terms/x3270
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/x3270/ChangeLog,v 1.1 2009/01/02 09:50:37 vapier Exp $
+
+*x3270-3.3.8_p2 (02 Jan 2009)
+
+  02 Jan 2009; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +x3270-3.3.8_p2.ebuild:
+  Initial ebuild by me.
