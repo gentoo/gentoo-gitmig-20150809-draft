@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-7.0.0.ebuild,v 1.1 2009/01/02 10:33:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-7.0.0.ebuild,v 1.2 2009/01/02 10:35:28 hollow Exp $
 
 inherit qmail
 
@@ -35,7 +35,7 @@ src_unpack() {
 	echo ${QMAIL_HOME} > conf-qmail
 
 	echo $(tc-getCC) ${CFLAGS} -I/usr/include/{my,postgre}sql > conf-cc
-	echo $(tc-getCC) ${CFLAGS} > conf-ld
+	echo $(tc-getCC) ${CFLAGS} -Wl,-E > conf-ld
 
 	# fix DESTDIR and skip cat man-pages
 	sed -e "s:\(/install\) \(\"\`head\):\1 ${D}\2:" \

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ezmlm-idx
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.19 2009/01/02 10:33:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.20 2009/01/02 10:35:28 hollow Exp $
+
+  02 Jan 2009; Benedikt Böhm <hollow@gentoo.org> ezmlm-idx-7.0.0.ebuild:
+  fix symbol export on ppc wrt #202318
 
 *ezmlm-idx-7.0.0 (02 Jan 2009)
 
