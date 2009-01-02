@@ -1,0 +1,9 @@
+# ChangeLog for sys-boot/sysload
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/sysload/ChangeLog,v 1.1 2009/01/02 05:44:03 vapier Exp $
+
+*sysload-1.0.0 (02 Jan 2009)
+
+  02 Jan 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/sysload-1.0.0-build.patch, +metadata.xml, +sysload-1.0.0.ebuild:
+  Initial package.
