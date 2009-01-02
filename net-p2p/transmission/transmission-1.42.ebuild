@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.42.ebuild,v 1.3 2009/01/01 19:43:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.42.ebuild,v 1.4 2009/01/02 21:00:15 ssuominen Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.${PN}bt.com/${PN}/files/${P}.tar.bz2"
 LICENSE="MIT GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="gtk nls libnotify"
+IUSE="gtk libnotify"
 
 RDEPEND=">=dev-libs/openssl-0.9.4
 	|| ( >=net-misc/curl-7.16.3[ssl] >=net-misc/curl-7.16.3[gnutls] )
@@ -22,8 +22,8 @@ RDEPEND=">=dev-libs/openssl-0.9.4
 		>=dev-libs/dbus-glib-0.70
 		libnotify? ( >=x11-libs/libnotify-0.4.4 ) )"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext
-		gtk? ( dev-util/intltool ) )
+	sys-devel/gettext
+	dev-util/intltool
 	dev-util/pkgconfig"
 
 src_prepare() {
@@ -37,7 +37,6 @@ src_configure() {
 	econf \
 		$(use_enable gtk) \
 		$(use_enable libnotify) \
-		$(use_enable nls) \
 		${myconf}
 }
 
