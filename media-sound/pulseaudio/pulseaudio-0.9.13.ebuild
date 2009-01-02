@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.13.ebuild,v 1.2 2008/10/21 00:05:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.13.ebuild,v 1.3 2009/01/02 21:14:14 loki_val Exp $
 
 EAPI=2
 
@@ -161,7 +161,7 @@ pkg_postinst() {
 	elog "	 http://pulseaudio.org/wiki/SystemWideInstance"
 	if use gnome; then
 		elog
-		elog "By enabling gnome USE flag, you enabled gconf support. Pleaes note"
+		elog "By enabling gnome USE flag, you enabled gconf support. Please note"
 		elog "that you might need to remove the gnome USE flag or disable the"
 		elog "gconf module on /etc/pulse/default.pa to be able to use PulseAudio"
 		elog "with a system-wide instance."
