@@ -2,5 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>s390</herd>
-<longdescription>Linux Kernel Crash Dumps (LKCD) Utilities</longdescription>
+<maintainer>
+	<email>s390@gentoo.org</email>
+</maintainer>
 </pkgmetadata>
