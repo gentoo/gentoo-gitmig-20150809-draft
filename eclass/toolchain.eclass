@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.373 2009/01/01 06:26:11 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.374 2009/01/02 00:09:43 solar Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -709,7 +709,7 @@ setup_minispecs_gcc_build_specs() {
 		if hardened_gcc_works pie ; then
         		cat "${WORKDIR}"/specs/pie.specs >> "${WORKDIR}"/build.specs
 		fi
-		for s in nostrict znow zrelro; do
+		for s in nostrict znow; do
 			cat "${WORKDIR}"/specs/${s}.specs >> "${WORKDIR}"/build.specs
 		done
 		export GCC_SPECS="${WORKDIR}"/build.specs
