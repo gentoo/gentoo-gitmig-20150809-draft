@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/ezmlm-idx
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.18 2008/05/19 20:18:53 dev-zero Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.19 2009/01/02 10:33:17 hollow Exp $
+
+*ezmlm-idx-7.0.0 (02 Jan 2009)
+
+  02 Jan 2009; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
+  +ezmlm-idx-7.0.0.ebuild:
+  version bump wrt #215462
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org> ezmlm-idx-6.0.0.ebuild:
   Changed dependency for postgresql to virtual/postgresql-base
