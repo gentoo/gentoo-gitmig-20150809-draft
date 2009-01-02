@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/exiftool-7.50.ebuild,v 1.5 2008/12/31 16:25:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/exiftool-7.50.ebuild,v 1.6 2009/01/02 21:41:10 dertobi123 Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.sno.phy.queensu.ca/~phil/exiftool/Image-ExifTool-${PV}.tar.g
 MY_PN="Image-ExifTool"
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 S="${WORKDIR}"/${MY_PN}-${PV}
 
