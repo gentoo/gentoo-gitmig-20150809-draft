@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/qucs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.19 2008/07/27 22:22:35 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.20 2009/01/02 20:19:10 cryos Exp $
+
+  02 Jan 2009; Marcus D. Hanwell <cryos@gentoo.org> -qucs-0.0.13.ebuild,
+  qucs-0.0.14.ebuild:
+  Removed old version. Added runtime dependency fixing bug 238115.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qucs-0.0.12.ebuild:
   QA: Get rid of deprecated qt_min_version().
