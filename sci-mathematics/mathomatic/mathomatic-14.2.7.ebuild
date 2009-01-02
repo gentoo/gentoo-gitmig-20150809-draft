@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-14.2.4.ebuild,v 1.1 2008/12/03 12:27:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-14.2.7.ebuild,v 1.1 2009/01/02 20:28:34 cryos Exp $
 
 inherit eutils
 
@@ -17,10 +17,8 @@ DEPEND="sys-libs/readline
 	sys-libs/ncurses"
 
 src_compile() {
-	# respect user flags
 	sed -i \
 		-e '/^CFLAGS/ s/-O.//' \
-		-e '/^LDFLAGS/s/+= -lm/:= -lm $(LDFLAGS)/' \
 		makefile primes/makefile || die "sed failed"
 	emake READLINE=1 || die "emake failed"
 	emake -C primes || die "emake in primes failed"
