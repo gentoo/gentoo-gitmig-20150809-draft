@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.3.8.1.ebuild,v 1.2 2008/12/07 18:55:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.3.8.1.ebuild,v 1.3 2009/01/02 00:36:52 yngwin Exp $
 
 EAPI="1"
+inherit eutils autotools
 
 DESCRIPTION="Lightweight X11 desktop panel for LXDE"
 HOMEPAGE="http://lxde.sf.net/"
@@ -23,6 +24,13 @@ RDEPEND="x11-libs/gtk+:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-sandbox.patch
+	eautoreconf
+}
 
 src_compile() {
 	econf $(use_enable alsa) \
