@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dmidecode
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.23 2008/01/29 16:59:07 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.24 2009/01/02 21:04:22 vapier Exp $
+
+*dmidecode-2.10 (02 Jan 2009)
+
+  02 Jan 2009; Mike Frysinger <vapier@gentoo.org> +dmidecode-2.10.ebuild:
+  Version bump #253222 by Bruno.
 
   29 Jan 2008; nixnut <nixnut@gentoo.org> dmidecode-2.9.ebuild:
   Adding ~ppc
