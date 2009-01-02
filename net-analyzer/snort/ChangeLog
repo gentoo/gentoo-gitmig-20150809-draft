@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snort
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.136 2008/12/31 10:05:32 dertobi123 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.137 2009/01/02 22:00:16 dertobi123 Exp $
+
+  02 Jan 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  snort-2.8.3.1.ebuild:
+  Fix postgres dep, #253429
 
   31 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org> metadata.xml,
   snort-2.8.3.1.ebuild:
