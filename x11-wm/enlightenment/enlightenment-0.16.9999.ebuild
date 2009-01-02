@@ -1,10 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.28 2008/01/06 02:27:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.29 2009/01/02 07:25:51 vapier Exp $
 
-#ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
-ECVS_SERVER="anoncvs.enlightenment.org:/var/cvs/e"
-ECVS_MODULE="e16/e"
+ESVN_REPO_URI="http://svn.enlightenment.org/svn/e/trunk/E16/e"
 inherit eutils cvs
 
 DESCRIPTION="Enlightenment Window Manager"
@@ -50,7 +48,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	cvs_src_unpack
+	subversion_src_unpack
 	cd "${S}"
 	NOCONFIGURE=blah ./autogen.sh
 }
@@ -74,6 +72,6 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	exeinto /etc/X11/Sessions
-	newexe "${FILESDIR}"/e16 enlightenment
+	newexe "${FILESDIR}"/e16 e16
 	dodoc AUTHORS ChangeLog COMPLIANCE README* docs/README* TODO
 }

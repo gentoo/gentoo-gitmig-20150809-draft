@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.14.ebuild,v 1.7 2008/09/29 01:36:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.14.ebuild,v 1.8 2009/01/02 07:25:51 vapier Exp $
 
 inherit eutils
 
@@ -67,6 +67,6 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	exeinto /etc/X11/Sessions
-	newexe "${FILESDIR}"/e16 enlightenment
+	newexe "${FILESDIR}"/e16 e16
 	dodoc AUTHORS ChangeLog COMPLIANCE README* docs/README* TODO
 }
