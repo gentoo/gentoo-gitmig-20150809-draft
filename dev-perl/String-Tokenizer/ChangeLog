@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/String-Tokenizer
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Tokenizer/ChangeLog,v 1.1 2009/01/02 23:24:33 robbat2 Exp $
+
+*String-Tokenizer-0.05 (02 Jan 2009)
+
+  02 Jan 2009; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +String-Tokenizer-0.05.ebuild:
+  Initial commit. Dep for EverGreen ILS (via CQL-Parser).
+
