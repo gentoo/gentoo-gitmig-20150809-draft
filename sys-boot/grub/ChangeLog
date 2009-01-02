@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.109 2008/12/31 09:09:06 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.110 2009/01/02 01:51:05 robbat2 Exp $
+
+*grub-0.97-r9 (02 Jan 2009)
+
+  02 Jan 2009; Robin H. Johnson <robbat2@gentoo.org> +grub-0.97-r9.ebuild:
+  Ext4 funtime for grub-0.97 series. Remember to reinstall it in your MBR.
 
   31 Dec 2008; Mike Frysinger <vapier@gentoo.org> grub-1.96.ebuild,
   grub-9999.ebuild:
