@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.17.ebuild,v 1.1 2008/11/20 10:46:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/cyphesis-0.5.17.ebuild,v 1.2 2009/01/02 03:59:55 mr_bones_ Exp $
 
+EAPI=1
 inherit eutils autotools games
 
 DESCRIPTION="WorldForge server running small games"
@@ -17,7 +18,7 @@ DEPEND=">=media-libs/skstream-0.3.6
 	>=dev-games/wfmath-0.3
 	=dev-games/mercator-0.2*
 	dev-libs/libgcrypt
-	=dev-libs/libsigc++-2.0*
+	dev-libs/libsigc++:2
 	=media-libs/atlas-c++-0.6*
 	>=media-libs/varconf-0.6.4
 	virtual/postgresql-base"

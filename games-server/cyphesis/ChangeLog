@@ -1,6 +1,11 @@
 # ChangeLog for games-server/cyphesis
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.7 2008/11/20 10:46:46 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.8 2009/01/02 03:59:55 mr_bones_ Exp $
+
+  02 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/cyphesis-0.5.15-gentoo.patch, -cyphesis-0.5.15.ebuild,
+  cyphesis-0.5.17.ebuild:
+  use slot dep for dev-libs/libsigc++; clean old
 
 *cyphesis-0.5.17 (20 Nov 2008)
 
