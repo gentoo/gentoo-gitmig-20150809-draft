@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
+<use>
+	<flag name='dbi'>Enables <pkg>dev-db/libdbi</pkg> support</flag>
+</use>
 <maintainer>
 <email>araujo@gentoo.org</email>
 <name>Luis F. Araujo</name>

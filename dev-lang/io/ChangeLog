@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/io
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.2 2008/01/20 03:45:28 araujo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.3 2009/01/02 15:26:54 araujo Exp $
+
+*io-2009.01.02 (02 Jan 2009)
+
+  02 Jan 2009; Luis F. Araujo <araujo@gentoo.org> +io-2009.01.02.ebuild:
+  New and improved io release. Fixing bug #252901. Thanks upstream for help.
 
 *io-2008.01.17 (20 Jan 2008)
 
