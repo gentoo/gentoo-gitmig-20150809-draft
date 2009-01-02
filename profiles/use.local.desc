@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4091 2009/01/02 15:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4092 2009/01/02 16:19:02 matsuu Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -260,6 +260,9 @@ app-i18n/ibus-table:erbi-qs - Enable to generate ErBi-QS Engine
 app-i18n/ibus-table:extra-phrases - Add extra phrases into builded Engine
 app-i18n/ibus-table:wubi - Enable to generate WuBi86 and WuBi98 Engine
 app-i18n/ibus-table:zhengma - Enable to generate ZhengMa Engine
+app-i18n/ibus-table-erbi:extra-phrases - Add extra phrases into builded Engine
+app-i18n/ibus-table-wubi:extra-phrases - Add extra phrases into builded Engine
+app-i18n/ibus-table-zhengma:extra-phrases - Add extra phrases into builded Engine
 app-i18n/im-ja:anthy - Support for Anthy input method
 app-i18n/im-ja:skk - Support for SKK input method
 app-i18n/kimera:anthy - Support for Anthy input method

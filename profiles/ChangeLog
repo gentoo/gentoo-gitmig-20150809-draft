@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2226 2009/01/01 15:39:46 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2227 2009/01/02 16:19:01 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Jan 2009; MATSUU Takuto <matsuu@gentoo.org> use.local.desc:
+  Adding local use flags for app-i18n/ibus-table-{erbi,wubi,zhengma}.
 
   01 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   Removing gtksourceview-sharp mask
