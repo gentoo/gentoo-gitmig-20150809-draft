@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-1.0.1.ebuild,v 1.2 2008/12/09 10:05:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-1.0.1.ebuild,v 1.3 2009/01/02 23:36:29 robbat2 Exp $
 
 inherit eutils multilib flag-o-matic apache-module autotools perl-module
 
@@ -99,6 +99,7 @@ src_compile() {
 	econf \
 		--with-apxs=/usr/sbin/apxs2 \
 		--sysconfdir=/etc/opensrf \
+		--localstatedir=/var \
 		|| die "econf failed"
 	cd "${S}" && emake || die "main emake failed"
 	cd "${PERL_S}" && S="${PERL_S}" perl-module_src_compile || die "perl-module_src_compile failed"
@@ -110,9 +111,9 @@ src_install() {
 	emake install DESTDIR="${D}" || die "Failed to install"
 	apache-module_src_install || die "apache-module_src_install failed"
 	cd "${PERL_S}" && S="${PERL_S}" perl-module_src_install || die "perl-module_src_install failed"
-	#insinto /usr/share/opensrf
-	#doins src/javascript/*js
-	#dodoc doc/*
+	insinto /usr/share/opensrf
+	doins src/javascript/*js
+	dodoc README doc/*
 }
 
 src_test() {
@@ -121,14 +122,15 @@ src_test() {
 }
 
 pkg_config() {
-	JABBER_SERVER=${JABBER_SERVER:=localhost}
-	JABBER_PORT=${JABBER_PORT:=5222}
-	PASSWORD=${PASSWORD:=osrf}
-	einfo "Using Jabber server at ${JABBER_SERVER}:${JABBER_PORT}"
-	einfo "Adding 'osrf' and 'router' users with password ${PASSWORD}"
-	cd "${ROOT}"/usr/share/doc/${PF}/examples
-	for user in osrf router ; do
-		perl register.pl ${JABBER_SERVER} ${JABBER_PORT} ${user} ${PASSWORD} \
-			|| die "Failed to add $user user to server"
-	done
+	:
+	#JABBER_SERVER=${JABBER_SERVER:=localhost}
+	#JABBER_PORT=${JABBER_PORT:=5222}
+	#PASSWORD=${PASSWORD:=osrf}
+	#einfo "Using Jabber server at ${JABBER_SERVER}:${JABBER_PORT}"
+	#einfo "Adding 'osrf' and 'router' users with password ${PASSWORD}"
+	#cd "${ROOT}"/usr/share/doc/${PF}/examples
+	#for user in osrf router ; do
+	#	perl register.pl ${JABBER_SERVER} ${JABBER_PORT} ${user} ${PASSWORD} \
+	#		|| die "Failed to add $user user to server"
+	#done
 }

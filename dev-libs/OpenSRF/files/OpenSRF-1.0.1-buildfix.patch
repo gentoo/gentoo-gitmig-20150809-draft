@@ -3,6 +3,7 @@
 - split out install targets to build the apache modules
 - disable perl and apache install targets, will use gentoo tools instead
 - compile fix to osrf_chat.c
+- Hardcode location of osrf_config instead of using a long recursive find statement
 
 Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
 
@@ -162,3 +163,16 @@ diff -Nuar OpenSRF-1.0.1.orig/Makefile.am OpenSRF-1.0.1/Makefile.am
 -	cp @srcdir@/src/gateway/apachetools.h @includedir@/opensrf/apachetools.h
 +	cp @srcdir@/src/gateway/apachetools.h $(DESTDIR)@includedir@/opensrf/apachetools.h
  
+diff -Nuar OpenSRF-1.0.1/bin/osrf_ctl.sh
+--- OpenSRF-1.0.1.orig/bin/osrf_ctl.sh	2008-09-24 20:27:44.000000000 -0700
++++ OpenSRF-1.0.1/bin/osrf_ctl.sh	2008-12-09 02:25:39.018456228 -0800
+@@ -87,7 +87,8 @@
+ 	esac;
+ done
+ 
+-OSRF_CONFIG=`find $BASEDIR -name osrf_config`
++#OSRF_CONFIG=`find $BASEDIR -name osrf_config`
++OSRF_CONFIG=/usr/bin/osrf_config
+ 
+ [ -z "$OPT_CONFIG" ] && OPT_CONFIG=`$OSRF_CONFIG --sysconfdir`/opensrf_core.xml;
+ if [ ! -r "$OPT_CONFIG" ]; then
