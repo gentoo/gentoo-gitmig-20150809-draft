@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.12-r101.ebuild,v 1.1 2008/07/20 16:09:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.12-r101.ebuild,v 1.2 2009/01/02 14:06:30 cla Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -27,6 +27,7 @@ RESTRICT="test"
 
 RDEPEND="${DEPEND}
 	>=dev-lang/perl-5.6.1-r7
+	dev-perl/Net-SNMP
 	samba? ( >=net-fs/samba-2.2.5-r1 )
 	snmp? ( >=dev-perl/Net-SNMP-4.0.1-r1
 			>=net-analyzer/net-snmp-5.0.6
