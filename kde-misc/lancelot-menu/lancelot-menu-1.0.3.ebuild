@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/lancelot-menu/lancelot-menu-1.0.3.ebuild,v 1.1 2008/10/15 21:31:24 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/lancelot-menu/lancelot-menu-1.0.3.ebuild,v 1.2 2009/01/02 17:38:55 pauldv Exp $
 
 EAPI="2"
 
@@ -18,7 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND="kde-base/libplasma:${SLOT}
-	kde-base/kscreensaver:${SLOT}"
+	kde-base/kscreensaver:${SLOT}
+	kde-base/krunner:${SLOT}"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6.1
 	dev-lang/python"
