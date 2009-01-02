@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/molden
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.26 2007/12/31 15:49:31 je_fro Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.27 2009/01/02 19:58:25 cryos Exp $
+
+*molden-4.7 (02 Jan 2009)
+
+  02 Jan 2009; Marcus D. Hanwell <cryos@gentoo.org> +molden-4.7.ebuild:
+  Version bump.
 
   31 Dec 2007; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
   Fixing my email address
