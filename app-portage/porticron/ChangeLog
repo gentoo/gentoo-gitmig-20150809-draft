@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/porticron
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.5 2009/01/01 12:47:45 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.6 2009/01/02 20:54:28 dertobi123 Exp $
+
+  02 Jan 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  porticron-0.2.1.ebuild:
+  Add ~hppa and ~ppc keywords
 
   01 Jan 2009; Benedikt Böhm <hollow@gentoo.org> porticron-0.2.1.ebuild:
   fix HOMEPAGE and SRC_URI
