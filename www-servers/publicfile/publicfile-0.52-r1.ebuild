@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r1.ebuild,v 1.8 2009/01/03 18:42:40 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r1.ebuild,v 1.9 2009/01/03 19:48:09 bangert Exp $
 
 inherit eutils
 
@@ -23,11 +23,11 @@ src_unpack() {
 	unpack publicfile-0.52.tar.gz
 
 	# filetypes in env using daemontools
-	cd ${S}
-	epatch ${DISTDIR}/${P}-filetype-diff
+	cd "${S}"
+	epatch "${DISTDIR}"/${P}-filetype-diff
 
 	# "normal" ftp listing
-	epatch ${DISTDIR}/ftp-ls-patch
+	epatch "${DISTDIR}"/ftp-ls-patch
 
 	echo "gcc ${CFLAGS}" > conf-cc
 	echo "gcc" > conf-ld

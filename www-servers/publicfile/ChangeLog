@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/publicfile
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.11 2009/01/03 18:42:40 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.12 2009/01/03 19:48:09 bangert Exp $
+
+  03 Jan 2009; Thilo Bangert <bangert@gentoo.org> publicfile-0.52-r1.ebuild:
+  fix quoting
 
   03 Jan 2009; Thilo Bangert <bangert@gentoo.org> publicfile-0.52.ebuild,
   publicfile-0.52-r1.ebuild:
