@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.13.1.ebuild,v 1.9 2007/10/14 23:16:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.24.2.ebuild,v 1.1 2009/01/03 15:07:59 eva Exp $
 
 inherit gnome2 eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnome/sources/libxml++/${PV%.*}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="2.6"
-KEYWORDS="alpha amd64 hppa ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/libxml2-2.6.1
@@ -27,8 +27,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="AUTHORS ChangeLog NEWS README*"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	gnome2_src_unpack
 
 	# don't waste time building the examples
 	sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || \
@@ -37,8 +36,6 @@ src_unpack() {
 
 src_install() {
 	gnome2_src_install
-	dosed -i 's|^\(Cflags.*-I.* \)-I.*$|\1|' \
-		/usr/$(get_libdir)/pkgconfig/${MY_PN}-${SLOT}.pc
 
 	rm -fr "${D}"/usr/share/doc/libxml++*
 	use doc && dohtml docs/reference/${PV%.*}/html/*
