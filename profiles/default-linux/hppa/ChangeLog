@@ -1,6 +1,9 @@
 # ChangeLog for hppa profile
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.52 2008/09/26 13:16:43 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.53 2009/01/03 17:23:24 jer Exp $
+
+  03 Jan 2009; Jeroen Roovers <jer@gentoo.org> +2007.0/deprecated:
+  Deprecate 2007.0 (bug #253572).
 
   26 Sep 2008; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask unsupported video cards.
