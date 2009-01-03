@@ -9,6 +9,5 @@
     <flag name="log4p">Enable perl logger support</flag>
     <flag name="pager">Enable perl pager selection support</flag>
     <flag name="patch">Enable patch creation, import support</flag>
-    <flag name="svn-mirror">Enable SVN-Mirror support</flag>
   </use>
 </pkgmetadata>
