@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/ganeti
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.7 2008/07/05 07:47:22 killerfox Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.8 2009/01/03 18:06:11 angelos Exp $
+
+  03 Jan 2009; Christoph Mende <angelos@gentoo.org> -ganeti-1.2.0.ebuild,
+  ganeti-1.2.1.ebuild:
+  QA: Cleanup, fixed dependencies (bug 239996)
 
   05 Jul 2008; René Nussbaumer <killerfox@gentoo.org> metadata.xml:
   Removing me as a maintainer

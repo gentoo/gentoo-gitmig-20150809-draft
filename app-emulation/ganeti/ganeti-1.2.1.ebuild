@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-1.2.1.ebuild,v 1.1 2008/01/31 21:01:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-1.2.1.ebuild,v 1.2 2009/01/03 18:06:11 angelos Exp $
 
 NEED_PYTHON=2.4
 
@@ -18,9 +18,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="
-	>=app-emulation/xen-3.0
+RDEPEND=">=app-emulation/xen-3.0
 	dev-libs/openssl
 	dev-python/pyopenssl
 	dev-python/pyparsing
@@ -32,23 +30,22 @@ RDEPEND="
 	sys-apps/iproute2
 	sys-cluster/drbd
 	sys-fs/lvm2
-	sys-fs/mdadm
-"
+	sys-fs/mdadm"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	eautoreconf
 }
 
 src_compile() {
-	econf --localstatedir=/var --with-ssh-initscript=/etc/init.d/sshd || die
-	emake || die
+	econf --localstatedir=/var --with-ssh-initscript=/etc/init.d/sshd
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	newinitd "${FILESDIR}/ganeti.initd" ganeti
 
