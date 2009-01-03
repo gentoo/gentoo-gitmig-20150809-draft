@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.561.ebuild,v 1.2 2008/12/31 03:44:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.561.ebuild,v 1.3 2009/01/03 19:02:46 lu_zero Exp $
 
 IUSE="acpi debug"
 
@@ -36,26 +36,7 @@ DEPEND="${RDEPEND}
 
 EMULTILIB_PKG="true"
 
-QA_EXECSTACK_x86="usr/lib/dri/fglrx_dri.so
-	usr/lib/opengl/ati/lib/libGL.so.1.2
-	opt/bin/amdcccle"
-QA_EXECSTACK_amd64="usr/lib64/dri/fglrx_dri.so
-	usr/lib32/dri/fglrx_dri.so
-	usr/lib64/opengl/ati/lib/libGL.so.1.2
-	usr/lib32/opengl/ati/lib/libGL.so.1.2
-	opt/bin/amdcccle"
-QA_TEXTRELS_x86="usr/lib/dri/fglrx_dri.so
-	usr/lib/xorg/modules/drivers/fglrx_drv.so
-	usr/lib/opengl/ati/lib/libGL.so.1.2
-	usr/lib/xorg/modules/glesx.so
-	usr/lib/xorg/modules/amdxmm.so"
-QA_TEXTRELS_amd64="
-	usr/lib64/opengl/ati/lib/libGL.so.1.2
-	usr/lib32/opengl/ati/lib/libGL.so.1.2
-	usr/lib64/dri/fglrx_dri.so
-	usr/lib32/dri/fglrx_dri.so
-	usr/lib32/xorg/modules/glesx.so
-	usr/lib64/xorg/modules/glesx.so"
+RESTRICT="binchecks"
 
 S="${WORKDIR}"
 
@@ -445,7 +426,6 @@ pkg_postinst() {
 	linux-mod_pkg_postinst
 }
 
-pkg_postrm() {
-	linux-mod_pkg_postrm
-	/usr/bin/eselect opengl set --use-old xorg-x11
+pkg_prerm() {
+	/usr/bin/eselect opengl set xorg-x11
 }
