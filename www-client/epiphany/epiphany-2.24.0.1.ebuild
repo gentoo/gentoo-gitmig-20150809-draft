@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.24.0.1.ebuild,v 1.3 2008/12/17 17:47:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.24.0.1.ebuild,v 1.4 2009/01/03 12:47:03 eva Exp $
 
 EAPI="1"
 inherit gnome2 eutils multilib
@@ -69,9 +69,10 @@ src_compile() {
 	addpredict /usr/$(get_libdir)/xulrunner-1.9/components/xpti.dat.tmp
 	addpredict /usr/$(get_libdir)/xulrunner-1.9/components/compreg.dat.tmp
 
-	# Why are these write-opened per bug 228589?
+	# Why are these write-opened per bug #228589 and bug #253043
 	addpredict /usr/$(get_libdir)/mozilla/components/xpti.dat
 	addpredict /usr/$(get_libdir)/mozilla/components/xpti.dat.tmp
+	addpredict /usr/$(get_libdir)/mozilla/components/compreg.dat.tmp
 
 	gnome2_src_compile
 }

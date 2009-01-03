@@ -1,6 +1,15 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.178 2009/01/03 11:38:34 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.179 2009/01/03 12:47:03 eva Exp $
+
+  03 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/epiphany-2.20.3-fix-de-docs-tests.patch, -epiphany-2.20.3.ebuild,
+  epiphany-2.22.3.ebuild, epiphany-2.22.3-r1.ebuild,
+  epiphany-2.22.3-r10.ebuild, epiphany-2.22.3-r11.ebuild,
+  epiphany-2.24.0.1.ebuild, epiphany-2.24.1.ebuild,
+  epiphany-2.24.1-r10.ebuild, epiphany-2.24.2.1.ebuild,
+  epiphany-2.24.2.1-r10.ebuild:
+  Add missing addpredict for mozilla folder, bug #253043.
 
 *epiphany-2.22.3-r11 (03 Jan 2009)
 *epiphany-2.22.3-r1 (03 Jan 2009)
