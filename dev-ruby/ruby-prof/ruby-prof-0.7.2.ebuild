@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.7.2.ebuild,v 1.2 2008/12/31 03:23:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.7.2.ebuild,v 1.3 2009/01/03 04:42:13 mr_bones_ Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+IUSE="doc test"
 
 RDEPEND="virtual/ruby"
 DEPEND="${RDEPEND}
