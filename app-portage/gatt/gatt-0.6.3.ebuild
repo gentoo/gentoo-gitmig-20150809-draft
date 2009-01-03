@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.1.ebuild,v 1.4 2008/07/11 02:51:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.3.ebuild,v 1.1 2009/01/03 12:58:13 gentoofan23 Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gatt/${P}.tar.bz2"
 
 LICENSE="GPL-2 GPL-3 FDL-1.2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc libpaludis"
 
 RDEPEND=">=dev-libs/boost-1.33.1
@@ -33,11 +33,6 @@ pkg_setup() {
 		ewarn "You either have to emerge Paludis with USE=portage enabled or configure"
 		ewarn "it properly before using Gatt with it."
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
 }
 
 src_compile() {
