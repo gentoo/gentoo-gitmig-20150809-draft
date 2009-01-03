@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-kde-client
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ChangeLog,v 1.13 2008/06/27 15:24:46 gentoofan23 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ChangeLog,v 1.14 2009/01/03 19:13:45 mr_bones_ Exp $
+
+  03 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  ggz-kde-client-0.0.14.1.ebuild:
+  add use dep for net-dns/avahi
 
   27 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org>
   ggz-kde-client-0.0.14.1.ebuild:
