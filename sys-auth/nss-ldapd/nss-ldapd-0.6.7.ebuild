@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-ldapd/nss-ldapd-0.6.7.ebuild,v 1.2 2008/12/05 21:12:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-ldapd/nss-ldapd-0.6.7.ebuild,v 1.3 2009/01/03 22:37:58 mr_bones_ Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://ch.tudelft.nl/~arthur/nss-ldapd/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="debug"
+IUSE="debug kerberos sasl"
 
 DEPEND="net-nds/openldap
 		sasl? ( dev-libs/cyrus-sasl )
