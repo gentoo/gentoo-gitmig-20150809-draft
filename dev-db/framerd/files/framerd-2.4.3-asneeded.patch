@@ -1,0 +1,63 @@
+--- framerd-2.4.3/makefile.in.orig	2002-08-13 03:25:50.000000000 +0200
++++ framerd-2.4.3/makefile.in	2009-01-03 17:05:10.991220973 +0100
+@@ -4,7 +4,8 @@
+ DATESTAMP=@datestamp@
+ CFLAGS	= -Iinclude @extra_cc_flags@ @CFLAGS@ $(XCFLAGS) \
+           -DINSTALL_PREFIX=@exec_prefix@ -DFD_DATESTAMP=$(DATESTAMP)
+-LDFLAGS = $(EFENCE) @LDFLAGS@ -L$(LIBDIR) @LIBS@ 
++LDFLAGS = @LDFLAGS@
++LIBS      = @LIBS@ $(EFENCE) -L$(LIBDIR)
+ BUILDROOT = @top_srcdir@
+ BINDIR	 = @top_srcdir@/bin
+ LIBDIR	 = @top_srcdir@/lib
+@@ -16,7 +17,6 @@
+ FD_MINOR  = @fd_minor_version@
+ FD_RELEASE= @fd_release_version@
+ FD_VERSION= $(FD_MAJOR).$(FD_MINOR).$(FD_RELEASE).0`date +Y%m%d`
+-LIBS      = @LIBS@ $(EFENCE)
+ INIT_DIR        := $(shell etc/find_init_d.sh)
+ FMODE		= 0664
+ XMODE		= 0775
+@@ -254,7 +254,7 @@
+ 	$(RANLIB) $(LIBDIR)/libdtypes.a
+ $(LIBDIR)/$(DTYPES_SO): $(DTYPE_OBJECTS)
+ 	$(CC) -shared -Wl,-soname=$(DTYPES_SO) $(LDFLAGS) $(LD_DYNAMIC) \
+-              -o $@ $(DTYPE_OBJECTS)
++              -o $@ $(DTYPE_OBJECTS) $(LIBS)
+ $(LIBDIR)/libdtypes.so: $(LIBDIR)/$(DTYPES_SO)
+ 	ln -sf $(DTYPES_SO) $(LIBDIR)/$(DTYPES_SO_MAJ)
+ 	ln -sf $(DTYPES_SO_MAJ) $(LIBDIR)/libdtypes.so
+@@ -264,7 +264,7 @@
+ 	$(RANLIB) $(LIBDIR)/libframerd.a
+ $(LIBDIR)/$(FRAMERD_SO): $(FRAMERD_OBJECTS) @DTYPES_LIB@
+ 	$(CC) -shared -Wl,-soname=$(FRAMERD_SO) $(LDFLAGS) $(LD_DYNAMIC) \
+-              -o $@ $(FRAMERD_OBJECTS) -ldtypes
++              -o $@ $(FRAMERD_OBJECTS) -ldtypes $(LIBS)
+ $(LIBDIR)/libframerd.so: $(LIBDIR)/$(FRAMERD_SO)
+ 	ln -sf $(FRAMERD_SO) $(LIBDIR)/$(FRAMERD_SO_MAJ)
+ 	ln -sf $(FRAMERD_SO_MAJ) $(LIBDIR)/libframerd.so
+@@ -274,7 +274,7 @@
+ 	$(RANLIB) $(LIBDIR)/libfdscript.a
+ $(LIBDIR)/$(FDSCRIPT_SO): $(FDSCRIPT_OBJECTS) @DTYPES_LIB@ @FRAMERD_LIB@
+ 	$(CC) -shared -Wl,-soname=$(FDSCRIPT_SO) $(LDFLAGS) $(LD_DYNAMIC) \
+-              -o $@ $(FDSCRIPT_OBJECTS) -lframerd -ldtypes
++              -o $@ $(FDSCRIPT_OBJECTS) -lframerd -ldtypes $(LIBS)
+ $(LIBDIR)/libfdscript.so: $(LIBDIR)/$(FDSCRIPT_SO)
+ 	ln -sf $(FDSCRIPT_SO) $(LIBDIR)/$(FDSCRIPT_SO_MAJ)
+ 	ln -sf $(FDSCRIPT_SO_MAJ) $(LIBDIR)/libfdscript.so
+@@ -286,7 +286,7 @@
+ $(LIBDIR)/$(FDTEXT_SO): $(FDTEXT_OBJECTS) \
+ 		        @DTYPES_LIB@ @FRAMERD_LIB@ @FDSCRIPT_LIB@
+ 	$(CC) -shared -Wl,-soname=$(FDTEXT_SO) $(LDFLAGS) $(LD_DYNAMIC) \
+-              -o $@ $(FDTEXT_OBJECTS) -lfdscript -lframerd -ldtypes 
++              -o $@ $(FDTEXT_OBJECTS) -lfdscript -lframerd -ldtypes $(LIBS)
+ $(LIBDIR)/libfdtext.so: $(LIBDIR)/$(FDTEXT_SO)
+ 	ln -sf $(FDTEXT_SO) $(LIBDIR)/$(FDTEXT_SO_MAJ)
+ 	ln -sf $(FDTEXT_SO_MAJ) $(LIBDIR)/libfdtext.so
+@@ -684,4 +684,4 @@
+ #
+ # Revision 1.34  2002/04/03 12:58:42  haase
+ # Added build dependencies for fdmanager
+-#
+\ No newline at end of file
++#

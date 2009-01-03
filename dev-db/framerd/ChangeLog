@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/framerd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/framerd/ChangeLog,v 1.16 2007/05/15 09:28:58 bangert Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/framerd/ChangeLog,v 1.17 2009/01/03 16:23:16 angelos Exp $
+
+  03 Jan 2009; Christoph Mende <angelos@gentoo.org>
+  +files/framerd-2.4.3-asneeded.patch, framerd-2.4.3-r1.ebuild:
+  QA: Install documentation to /usr/share/doc/ (buf 241266), respect CC (bug
+  243766), fix compilation with --as-needed (bug 247006)
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
