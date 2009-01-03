@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.2.0.0.ebuild,v 1.1 2008/12/17 16:27:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.2.0.0.ebuild,v 1.2 2009/01/03 19:11:44 mr_bones_ Exp $
 
+EAPI=1
 inherit toolchain-funcs flag-o-matic games
 
 DESCRIPTION="turn based strategy game designed in the tradition of the Battle Isle series"
@@ -29,7 +30,7 @@ RDEPEND="app-arch/bzip2
 	media-libs/libvorbis
 	dev-libs/expat
 	media-libs/freetype
-	=dev-libs/libsigc++-1.2*"
+	dev-libs/libsigc++:1.2"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-util/pkgconfig"
