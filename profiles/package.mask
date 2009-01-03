@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9357 2009/01/03 07:54:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9358 2009/01/03 13:57:47 ikelos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Auty <ikelos@gentoo.org> (03 Jan 2009)
+# Masking insecure versions
+# See bug 245941 for more details
+# Stable versions are not being masked, but should be really
+=app-emulation/vmware-workstation-5.5.8.108000
+=app-emulation/vmware-workstation-6.0.4.93057
+=app-emulation/vmware-workstation-6.0.5.109488
+=app-emulation/vmware-player-1.0.8.108000
+=app-emulation/vmware-player-2.0.4.93057
+=app-emulation/vmware-player-2.0.5.109488
 
 # Daniel Black <dragonheart@gentoo.org> (03 Jan 2009)
 # mask pending removal
