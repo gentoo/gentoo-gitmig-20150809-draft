@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/libicns
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libicns/ChangeLog,v 1.1 2009/01/03 12:50:44 ssuominen Exp $
+
+*libicns-0.6.0 (03 Jan 2009)
+
+  03 Jan 2009; <ssuominen@gentoo.org> +libicns-0.6.0.ebuild:
+  Version bump for bug 252877, pkgmoved from media-gfx/icns2png.
+
