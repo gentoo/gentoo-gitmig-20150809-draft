@@ -9,7 +9,4 @@
 These are some of the more popular modules for the SWORD Project.
 They provide a large number of tools for personal study.
 </longdescription>
-<use>
-  <flag name='intl'>Enable different languages</flag>
-</use>
 </pkgmetadata>
