@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.2.8.ebuild,v 1.2 2008/11/20 19:20:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.2.8.ebuild,v 1.3 2009/01/03 07:13:39 dragonheart Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -20,7 +20,8 @@ DEPEND=">=net-misc/curl-7.10.8
 		!gnutls? ( dev-libs/openssl )
 		>=dev-lang/lua-5.1.3[deprecated]"
 RDEPEND="${DEPEND}
-		sys-apps/debianutils"
+		sys-apps/debianutils
+		dev-util/dialog"
 # bug #247280 - freepops-updater-dialog requires the /bin/tempfile executable in the
 # sys-apps/debianutils package
 #	doc? ( app-text/ghostscript-gpl app-text/tetex )"
