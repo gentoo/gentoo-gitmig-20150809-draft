@@ -1,6 +1,10 @@
 # ChangeLog for games-board/mahjongg3d
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.11 2008/07/27 20:52:50 carlo Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.12 2009/01/03 22:44:57 mr_bones_ Exp $
+
+  03 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  mahjongg3d-0.96.ebuild:
+  add use-based dep for x11-libs/qt (bug #247341)
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> mahjongg3d-0.96.ebuild:
   QA: Get rid of deprecated qt_min_version().
