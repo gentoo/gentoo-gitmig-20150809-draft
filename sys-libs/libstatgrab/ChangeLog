@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libstatgrab
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.17 2008/08/31 21:50:08 dragonheart Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.18 2009/01/03 15:06:57 angelos Exp $
+
+  03 Jan 2009; Christoph Mende <angelos@gentoo.org>
+  libstatgrab-0.10.3.ebuild, libstatgrab-0.15.ebuild,
+  libstatgrab-0.16.ebuild:
+  QA: Removed unneeded dependencies (bug 236673)
 
 *libstatgrab-0.16 (31 Aug 2008)
 
