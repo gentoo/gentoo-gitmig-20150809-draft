@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wormux
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.26 2008/10/22 19:45:49 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.27 2009/01/03 22:47:07 mr_bones_ Exp $
+
+  03 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> wormux-0.8.2.ebuild:
+  add use-based deps
 
 *wormux-0.8.2 (22 Oct 2008)
 

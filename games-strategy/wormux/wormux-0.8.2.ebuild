@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.8.2.ebuild,v 1.1 2008/10/22 19:45:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.8.2.ebuild,v 1.2 2009/01/03 22:47:07 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="A free Worms clone"
@@ -14,8 +15,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug nls unicode"
 
 RDEPEND="media-libs/libsdl
-	media-libs/sdl-image
-	media-libs/sdl-mixer
+	media-libs/sdl-image[png]
+	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf
 	media-libs/sdl-net
 	media-libs/sdl-gfx
