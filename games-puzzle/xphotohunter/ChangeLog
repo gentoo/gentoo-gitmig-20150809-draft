@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xphotohunter
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xphotohunter/ChangeLog,v 1.4 2008/12/16 16:23:31 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xphotohunter/ChangeLog,v 1.5 2009/01/03 22:12:11 mr_bones_ Exp $
+
+  03 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  xphotohunter-1.4-r1.ebuild:
+  add use-based dep for media-libs/imlib (bug #229477)
 
   16 Dec 2008; <ssuominen@gentoo.org> xphotohunter-1.4-r1.ebuild:
   Respect CC.
