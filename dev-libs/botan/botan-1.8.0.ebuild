@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.0.ebuild,v 1.1 2009/01/03 12:30:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.0.ebuild,v 1.2 2009/01/03 12:31:20 dragonheart Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -88,8 +88,8 @@ src_test() {
 src_install() {
 	make install || die "make install failed"
 	sed -i -e "s:${D}::g" \
-		${D}/usr/bin/botan-config \
-		${D}/usr/$(get_libdir)/pkgconfig/botan-1.8.pc || die 'bad sed'
+		"${D}"/usr/bin/botan-config \
+		"${D}"/usr/$(get_libdir)/pkgconfig/botan-1.8.pc || die 'bad sed'
 	mv "${D}"/usr/share/doc/Botan-${PV} "${D}"/usr/share/doc/${PF} || \
 		die 'could not rename directory'
 }
