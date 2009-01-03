@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freelords
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/ChangeLog,v 1.28 2008/02/29 19:45:27 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/ChangeLog,v 1.29 2009/01/03 21:43:18 mr_bones_ Exp $
+
+  03 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  freelords-0.3.8.ebuild:
+  use-based dep for media-libs/sdl-mixer
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> freelords-0.3.8.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.

@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.8.ebuild,v 1.3 2008/02/29 19:45:27 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.8.ebuild,v 1.4 2009/01/03 21:43:18 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Free Warlords clone"
@@ -14,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="editor nls"
 
 RDEPEND="dev-libs/expat
-	media-libs/sdl-mixer
+	media-libs/sdl-mixer[vorbis]
 	media-libs/libsdl
 	media-libs/sdl-image
 	>=media-libs/freetype-2
@@ -24,13 +25,6 @@ RDEPEND="dev-libs/expat
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
-
-pkg_setup() {
-	if ! built_with_use media-libs/sdl-mixer vorbis ; then
-		die "Please emerge sdl-mixer with USE=vorbis"
-	fi
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack ${A}
