@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-2.24.0.ebuild,v 1.3 2009/01/02 23:20:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-2.24.0.ebuild,v 1.4 2009/01/03 23:48:59 eva Exp $
 
 inherit gnome2
 
@@ -18,6 +18,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/libglade-2.0"
 DEPEND="${RDEPEND}
 	!<dev-python/gdl-python-2.19.1-r1
+	!<=dev-python/gnome-python-extras-2.19.1-r2
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35
 	doc? ( >=dev-util/gtk-doc-1.4 )"
