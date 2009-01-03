@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.22.3.ebuild,v 1.9 2008/11/13 19:36:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.22.3.ebuild,v 1.10 2009/01/03 15:55:24 eva Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -33,13 +33,15 @@ RDEPEND=">=gnome-base/gconf-2
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
+	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9
 	>=app-text/scrollkeeper-0.3.11
-	>=dev-util/intltool-0.35
 	>=app-text/gnome-doc-utils-0.3.2
+	~app-text/docbook-xml-dtd-4.1.2
 	gnome-base/gnome-common
-	doc? ( dev-util/gtk-doc )"
-# gnome-common needed to eautoreconf
+	>=dev-util/gtk-doc-am-1
+	doc? ( >=dev-util/gtk-doc-1 )"
+# gnome-common and gtk-doc-am needed to eautoreconf
 
 DOCS="AUTHORS BUGS ChangeLog MAINTAINERS NEWS README"
 
