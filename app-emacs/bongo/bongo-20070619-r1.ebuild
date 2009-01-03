@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/bongo-20070619-r1.ebuild,v 1.1 2008/11/15 19:38:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/bongo-20070619-r1.ebuild,v 1.2 2009/01/03 00:12:14 ulm Exp $
 
 NEED_EMACS=22
 
@@ -9,12 +9,14 @@ inherit elisp eutils
 DESCRIPTION="Buffer-oriented media player for Emacs"
 HOMEPAGE="http://www.brockman.se/software/bongo/"
 # Darcs snapshot of http://www.brockman.se/software/bongo/
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+# MPlayer support from http://www.emacswiki.org/emacs/bongo-mplayer.el
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	mplayer? ( mirror://gentoo/${PN}-mplayer-${PV}.tar.bz2 )"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="mplayer"
 
 # NOTE: Bongo can use almost anything for playing media files, therefore
 # the dependency possibilities are so broad that we refrain from including
