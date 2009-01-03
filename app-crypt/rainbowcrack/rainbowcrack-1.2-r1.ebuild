@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2-r1.ebuild,v 1.6 2008/12/14 00:09:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2-r1.ebuild,v 1.7 2009/01/03 14:52:02 angelos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,10 +26,11 @@ src_unpack() {
 	unpack ${A} || die "unpack failed"
 	cd "${S}"
 	mv "${WORKDIR}/${P}"-src-algorithmpatch/Hash* "${S}"
-	epatch "${FILESDIR}/${P}-makefile.patch"
-	epatch "${FILESDIR}/${P}-share.patch"
-	epatch "${FILESDIR}/${P}-types.patch"
-	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
+	epatch "${FILESDIR}/${P}-makefile.patch" \
+		"${FILESDIR}/${P}-share.patch" \
+		"${FILESDIR}/${P}-types.patch" \
+		"${FILESDIR}/${P}+gcc-4.3.patch" \
+		"${FILESDIR}/${P}-asneeded.patch"
 	sed -i "s#@@SHARE@@#/usr/share/${P}#g" ChainWalkContext.cpp || die
 }
 
@@ -48,7 +49,7 @@ src_test() {
 }
 
 src_install() {
-	dobin rtgen rtdump rtsort rcrack
+	dobin rtgen rtdump rtsort rcrack || die "dobin failed"
 	insinto "/usr/share/${P}"
 	doins charset.txt
 
