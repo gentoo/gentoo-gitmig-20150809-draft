@@ -8,5 +8,6 @@
 	</maintainer>
 	<use>
 		<flag name="audioscrobbler">Enable song tracking via last.fm</flag>
+		<flag name="idle">Enable experimental support for MPD's idle command to reduce bandwith and cpu usage, requires MPD 0.14</flag>
 	</use>
 </pkgmetadata>
