@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xosview
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.39 2008/12/27 22:51:06 coldwind Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.40 2009/01/03 16:27:21 halcy0n Exp $
+
+  03 Jan 2009; Mark Loeser <halcy0n@gentoo.org> xosview-1.8.3.ebuild:
+  Apply patch by Lars (Polynomial-C) <polynomial-C AT gmx DOT de> to add
+  missing RDEPEND; bug #250986
 
   27 Dec 2008; Santiago M. Mola <coldwind@gentoo.org>
   -xosview-1.8.2-r1.ebuild:
