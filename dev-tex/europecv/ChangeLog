@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/europecv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.24 2008/10/18 16:52:23 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.25 2009/01/03 01:33:00 bluebird Exp $
+
+  03 Jan 2009; Friedrich Oslage <bluebird@gentoo.org>
+  europecv-20060424-r1.ebuild:
+  Add ~sparc keyword, bug #237202
 
   18 Oct 2008; nixnut <nixnut@gentoo.org> europecv-20060424-r1.ebuild:
   Stable on ppc wrt bug 240646
