@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/watchfolder-0.3.3.ebuild,v 1.6 2008/10/27 22:45:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/watchfolder-0.3.3.ebuild,v 1.7 2009/01/03 17:27:52 angelos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,10 +18,10 @@ S="${WORKDIR}/${P/folder/d}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# patch to remove warnings on 64 bit systems
-	epatch ${FILESDIR}/${PV}-64bit.patch || die
+	epatch "${FILESDIR}"/${PV}-64bit.patch || die
 
 	sed -i \
 		-e '/-c -o/s:OPT:CFLAGS:' \
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin watchd
+	dobin watchd || die "dobin failed"
 	insinto /etc
 	doins watchd.conf
 	dodoc README doc/*
