@@ -1,9 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.11 2008/07/27 20:58:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.12 2009/01/03 22:43:11 mr_bones_ Exp $
 
-EAPI=1
-
+EAPI=2
 inherit eutils qt3 games
 
 DESCRIPTION="3D puzzle game"
@@ -15,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="nls"
 
-RDEPEND="x11-libs/qt:3
+RDEPEND="x11-libs/qt:3[opengl]
 	virtual/glut
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
