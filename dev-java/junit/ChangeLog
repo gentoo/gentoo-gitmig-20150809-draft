@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.46 2008/10/24 15:08:48 fordfrog Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.47 2009/01/03 14:35:23 nixnut Exp $
+
+  03 Jan 2009; nixnut <nixnut@gentoo.org> junit-4.5.ebuild:
+  ppc stable #252819
 
   24 Oct 2008; Miroslav Šulc <fordfrog@gentoo.org> junit-4.5.ebuild:
   Fixed installation of sources, bug #243426
