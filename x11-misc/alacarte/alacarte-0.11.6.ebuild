@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.6.ebuild,v 1.1 2008/09/27 16:00:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.11.6.ebuild,v 1.2 2009/01/03 15:21:40 eva Exp $
 
 inherit gnome2 python eutils
 
@@ -12,14 +12,18 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 SLOT=0
 
-RDEPEND=">=dev-lang/python-2.4
-		 >=dev-python/pygtk-2.8
-		 >=gnome-base/gnome-menus-2.18
-		 >=dev-python/gnome-python-2.18"
-DEPEND="${RDEPEND}
-		  sys-devel/gettext
-		>=dev-util/intltool-0.35
-		>=dev-util/pkgconfig-0.19"
+common_depends=">=dev-lang/python-2.4
+	>=dev-python/pygtk-2.8
+	>=gnome-base/gnome-menus-2.18
+	>=dev-python/gnome-python-2.18"
+
+RDEPEND="${common_depends}
+	>=gnome-base/gnome-panel-2.16"
+
+DEPEND="${common_depends}
+	sys-devel/gettext
+	>=dev-util/intltool-0.35
+	>=dev-util/pkgconfig-0.19"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
@@ -46,6 +50,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_version
-	python_mod_cleanup
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/Alacarte
 }

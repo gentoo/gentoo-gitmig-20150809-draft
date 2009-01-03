@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/alacarte
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.60 2008/11/13 19:25:14 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.61 2009/01/03 15:21:40 eva Exp $
+
+  03 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/alacarte-0.11.3-python-2.5.patch, -alacarte-0.11.4.ebuild,
+  alacarte-0.11.5.ebuild, alacarte-0.11.6.ebuild:
+  Add gnome-panel to RDEPEND, bug #253164.
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> alacarte-0.11.5.ebuild:
   Marking alacarte-0.11.5 ppc64 stable for bug 236971
