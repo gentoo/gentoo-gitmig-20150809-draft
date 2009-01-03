@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/netkit-ftpd-0.17-r8.ebuild,v 1.5 2008/11/06 02:31:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/netkit-ftpd-0.17-r8.ebuild,v 1.6 2009/01/03 18:36:26 bangert Exp $
 
 inherit eutils ssl-cert toolchain-funcs
 
@@ -17,7 +17,8 @@ IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}
-	virtual/inetd"
+	virtual/inetd
+	!www-servers/publicfile"
 
 S=${WORKDIR}/${MY_P}
 
