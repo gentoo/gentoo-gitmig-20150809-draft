@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/rrs
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/ChangeLog,v 1.13 2008/08/23 18:30:46 maekke Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rrs/ChangeLog,v 1.14 2009/01/03 14:07:29 angelos Exp $
+
+  03 Jan 2009; Christoph Mende <angelos@gentoo.org>
+  +files/rrs-1.70-asneeded.patch, rrs-1.70.ebuild:
+  QA: Fixed compilation with --as-needed (bug 246951), respect CC (bug
+  243706), respect LDFLAGS
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> rrs-1.70.ebuild:
   add ~amd64, bug #235414
