@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wscr
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/ChangeLog,v 1.15 2008/03/24 17:28:46 coldwind Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/ChangeLog,v 1.16 2009/01/03 15:45:10 angelos Exp $
+
+  03 Jan 2009; Christoph Mende <angelos@gentoo.org> wscr-1.2.ebuild:
+  QA: Respect CC (bug 243762)
 
   24 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> wscr-1.2.ebuild:
   amd64 stable
