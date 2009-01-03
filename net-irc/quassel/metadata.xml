@@ -15,12 +15,20 @@
       disabled, the GUI is not built, and cannot be used. You might
       want to disable this on the server, but you need it enabled on
       the client.
-    </flag>
+	</flag>
+	<flag name="phonon">
+	  Build client with phonon backend support. This enables sound
+	  playback in client.
+	</flag>
     <flag name="server">
       Build the server binary. If this USE flag is disabled, the
       'core' server binary for quassel is not built, and cannot be
       used. You need this enabled on the server, but you might want to
       disable it on the client.
-    </flag>
+	</flag>
+	<flag name="webkit">
+	  Use qt-webkit rendering engine for showing url thumbmails and
+	  for other things that needs webbrowser intergration.
+	</flag>
   </use>
 </pkgmetadata>
