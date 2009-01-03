@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tovid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.18 2009/01/03 13:37:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.19 2009/01/03 13:41:26 aballier Exp $
+
+  03 Jan 2009; Alexis Ballier <aballier@gentoo.org> tovid-0.31-r1.ebuild:
+  dont install desktop entries when not installing the guis, by
+  gentoobugsie@gmail.com, bug #251752
 
   03 Jan 2009; Alexis Ballier <aballier@gentoo.org>
   -files/tovid-0.30-ffmpeg.patch, -files/tovid-0.30-tovid-init.patch,
