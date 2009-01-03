@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fbv
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/ChangeLog,v 1.15 2008/05/11 07:36:41 solar Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/ChangeLog,v 1.16 2009/01/03 13:39:49 angelos Exp $
+
+  03 Jan 2009; Christoph Mende <angelos@gentoo.org> -fbv-0.99.ebuild,
+  fbv-1.0b.ebuild:
+  QA: Cleanup, respect CFLAGS (bug 240794)
 
   11 May 2008; <solar@gentoo.org> fbv-1.0b.ebuild:
   - keyworded for ~arm
