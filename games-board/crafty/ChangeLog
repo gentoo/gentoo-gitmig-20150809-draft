@@ -1,6 +1,11 @@
 # ChangeLog for games-board/crafty
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.30 2008/06/25 19:12:04 nixnut Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.31 2009/01/03 17:48:08 mr_bones_ Exp $
+
+*crafty-22.8 (03 Jan 2009)
+
+  03 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> +crafty-22.8.ebuild:
+  version bump; also enable skill command for bug #252883
 
   25 Jun 2008; nixnut <nixnut@gentoo.org> crafty-22.1.ebuild:
   Stable on ppc wrt bug 229161
