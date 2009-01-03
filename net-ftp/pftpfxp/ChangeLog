@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pftpfxp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/ChangeLog,v 1.11 2007/05/06 11:00:51 genone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/ChangeLog,v 1.12 2009/01/03 13:25:02 angelos Exp $
+
+  03 Jan 2009; Christoph Mende <angelos@gentoo.org>
+  pftpfxp-0.11.4.6-r3.ebuild:
+  QA: Prevent stripping (bug 240772)
 
   06 May 2007; Marius Mauch <genone@gentoo.org> pftpfxp-0.11.4.6.ebuild,
   pftpfxp-0.11.4.6-r3.ebuild:
