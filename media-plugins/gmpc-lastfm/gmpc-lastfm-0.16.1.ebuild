@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lastfm/gmpc-lastfm-0.16.1.ebuild,v 1.4 2008/12/29 23:22:24 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lastfm/gmpc-lastfm-0.16.1.ebuild,v 1.5 2009/01/03 23:51:28 angelos Exp $
 
 inherit autotools eutils multilib
 
@@ -40,5 +40,5 @@ src_unpack() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 }
