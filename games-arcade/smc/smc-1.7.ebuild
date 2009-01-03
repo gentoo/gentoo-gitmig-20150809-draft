@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.7.ebuild,v 1.1 2008/12/25 03:17:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.7.ebuild,v 1.2 2009/01/03 22:04:51 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MUSIC_P=SMC_music_4.0_high
@@ -15,34 +16,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="dev-games/cegui
+RDEPEND="dev-games/cegui[opengl,devil]
 	dev-libs/boost
 	virtual/opengl
 	virtual/glu
+	dev-libs/libpcre[unicode]
 	media-libs/libpng
 	media-libs/libsdl
-	media-libs/sdl-image
-	media-libs/sdl-mixer
+	media-libs/sdl-image[png]
+	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	app-arch/unzip"
-
-pkg_setup() {
-	games_pkg_setup
-	if ! built_with_use media-libs/sdl-image png ; then
-		die "Please emerge media-libs/sdl-image with USE=png"
-	fi
-	if ! built_with_use dev-games/cegui opengl ; then
-		die "Please emerge dev-games/cegui with USE=opengl"
-	fi
-	if ! built_with_use dev-games/cegui devil ; then
-		die "Please emerge dev-games/cegui with USE=devil"
-	fi
-	if ! built_with_use dev-libs/libpcre unicode ; then
-		die "Please emerge dev-libs/libpcre with USE=unicode"
-	fi
-}
 
 src_unpack() {
 	unpack ${P}.tar.bz2
