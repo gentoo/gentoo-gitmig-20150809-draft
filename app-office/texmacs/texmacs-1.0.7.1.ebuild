@@ -1,7 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.1.ebuild,v 1.1 2009/01/02 18:48:31 grozin Exp $
-EAPI=1
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.1.ebuild,v 1.2 2009/01/03 06:32:35 grozin Exp $
+EAPI=2
 inherit autotools
 MY_P=${P/tex/TeX}-src
 DESCRIPTION="Wysiwyg text processor with high-quality maths"
@@ -15,11 +15,12 @@ SLOT="0"
 IUSE="imlib jpeg netpbm -qt4 svg spell"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
-RDEPEND="virtual/latex-base
+RDEPEND="dev-scheme/guile[deprecated]
+	virtual/latex-base
 	virtual/ghostscript
-	>=dev-scheme/guile-1.4
 	media-libs/freetype
 	x11-libs/libXext
+	x11-apps/xmodmap
 	qt4? ( x11-libs/qt-gui:4 )
 	imlib? ( media-libs/imlib2 )
 	jpeg? ( || ( media-gfx/imagemagick media-gfx/jpeg2ps ) )
@@ -39,21 +40,17 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# don't strip
 	epatch "${FILESDIR}"/${P}-strip.patch
 
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_with imlib imlib2) \
 		--enable-optimize="${CXXFLAGS}" \
 		$(use_enable qt4 qt)
-	emake || die "emake failed"
 }
 
 src_install() {
