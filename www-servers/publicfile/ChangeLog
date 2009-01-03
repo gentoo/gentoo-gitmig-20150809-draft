@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/publicfile
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.10 2008/08/23 17:55:07 maekke Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.11 2009/01/03 18:42:40 bangert Exp $
+
+  03 Jan 2009; Thilo Bangert <bangert@gentoo.org> publicfile-0.52.ebuild,
+  publicfile-0.52-r1.ebuild:
+  block on net-ftp/netkit-ftpd due to file collision (bug #248485)
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> publicfile-0.52-r1.ebuild:
   add ~amd64, bug #211550

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52.ebuild,v 1.4 2005/12/31 13:58:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52.ebuild,v 1.5 2009/01/03 18:42:40 bangert Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ LICENSE="as-is"
 
 RDEPEND=">=sys-process/daemontools-0.70
 	>=sys-apps/ucspi-tcp-0.83
-	selinux? ( sec-policy/selinux-publicfile )"
+	selinux? ( sec-policy/selinux-publicfile )
+	!net-ftp/netkit-ftpd"
 
 src_compile() {
 	echo "gcc ${CFLAGS}" > conf-cc
