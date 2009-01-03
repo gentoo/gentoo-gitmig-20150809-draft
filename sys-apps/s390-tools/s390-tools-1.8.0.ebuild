@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.8.0.ebuild,v 1.1 2008/12/24 19:48:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.8.0.ebuild,v 1.2 2009/01/03 10:00:21 vapier Exp $
 
 inherit eutils
 
@@ -19,9 +19,10 @@ SRC_URI="http://download.boulder.ibm.com/ibmdl/pub/software/dw/linux390/ht_src/$
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~s390"
-IUSE="zfcpdump"
+IUSE="snmp zfcpdump"
 
-RDEPEND="sys-fs/sysfsutils"
+RDEPEND="sys-fs/sysfsutils
+	snmp? ( net-analyzer/net-snmp )"
 DEPEND="${RDEPEND}
 	dev-util/indent
 	app-admin/genromfs"
@@ -33,6 +34,8 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-build.patch
 	sed -i -re 's:__u(8|16|32):uint\1_t:' $(find osasnmpd -name '*.h')
+
+	use snmp || sed -i -e '/SUBDIRS/s:osasnmpd::' Makefile
 
 	if use zfcpdump ; then
 		local x

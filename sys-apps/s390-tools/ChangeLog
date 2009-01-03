@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/s390-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/ChangeLog,v 1.16 2009/01/02 04:43:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/ChangeLog,v 1.17 2009/01/03 10:00:21 vapier Exp $
+
+  03 Jan 2009; Mike Frysinger <vapier@gentoo.org> s390-tools-1.6.2.ebuild,
+  s390-tools-1.8.0.ebuild:
+  Add support for USE=snmp.
 
   02 Jan 2009; Mike Frysinger <vapier@gentoo.org> s390-tools-1.6.2.ebuild:
   Fix build failure #253344.
