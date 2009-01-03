@@ -1,6 +1,10 @@
 # ChangeLog for hppa profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.53 2009/01/03 17:23:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/ChangeLog,v 1.54 2009/01/03 17:43:18 jer Exp $
+
+  03 Jan 2009; Jeroen Roovers <jer@gentoo.org> +2007.0/desktop/deprecated,
+  +2007.0/server/deprecated:
+  Deprecate 2007.0 subprofiles (bug #253572).
 
   03 Jan 2009; Jeroen Roovers <jer@gentoo.org> +2007.0/deprecated:
   Deprecate 2007.0 (bug #253572).
