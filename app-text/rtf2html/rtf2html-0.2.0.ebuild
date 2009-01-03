@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/rtf2html-0.2.0.ebuild,v 1.1 2008/03/17 10:57:23 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rtf2html/rtf2html-0.2.0.ebuild,v 1.2 2009/01/03 22:53:39 halcy0n Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -16,10 +18,11 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-src_compile()
-{
-	econf || die "Configuration failed"
-	emake || die "Compilation failed"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_install()
