@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.127 2008/12/25 16:22:08 bluebird Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.128 2009/01/03 15:23:30 nixnut Exp $
+
+  03 Jan 2009; nixnut <nixnut@gentoo.org> scim-1.4.7-r2.ebuild:
+  ppc stable #246064
 
   25 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> scim-1.4.7-r2.ebuild:
   Stable on sparc, bug #246064

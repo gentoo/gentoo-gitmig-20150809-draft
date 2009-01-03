@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.7-r2.ebuild,v 1.4 2008/12/25 16:22:08 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.7-r2.ebuild,v 1.5 2009/01/03 15:23:30 nixnut Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="x11-libs/libX11
