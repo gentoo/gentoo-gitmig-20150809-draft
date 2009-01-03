@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9.ebuild,v 1.1 2008/12/14 18:23:14 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r1.ebuild,v 1.1 2009/01/03 15:43:22 gurligebis Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic
 MY_PV="$(replace_version_separator 3 -)"
@@ -33,6 +33,9 @@ src_unpack() {
 
 	# add oidentd
 	use oidentd && epatch "${FILESDIR}/${P}-oidentd.patch"
+
+	# add scripting support
+	use scripting && epatch "${FILESDIR}/${P}-scripting.patch"
 
 	# Useless files
 	rm -f */INFO
