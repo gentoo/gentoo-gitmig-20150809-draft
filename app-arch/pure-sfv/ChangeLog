@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/pure-sfv
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.12 2008/10/27 18:17:08 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pure-sfv/ChangeLog,v 1.13 2009/01/03 17:39:34 angelos Exp $
+
+  03 Jan 2009; Christoph Mende <angelos@gentoo.org>
+  +files/pure-sfv-0.3-asneeded.patch, pure-sfv-0.3.ebuild:
+  QA: Fixed compilation with --as-needed (bug 246858)
 
   27 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> pure-sfv-0.3.ebuild:
   Fix typo.
