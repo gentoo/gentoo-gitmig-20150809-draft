@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/botan
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.34 2008/08/30 22:01:02 dragonheart Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.35 2009/01/03 12:30:15 dragonheart Exp $
+
+*botan-1.8.0 (03 Jan 2009)
+
+  03 Jan 2009; Daniel Black <dragonheart@gentoo.org> +botan-1.8.0.ebuild:
+  version bump
 
   30 Aug 2008; Daniel Black <dragonheart@gentoo.org> botan-1.6.1-r1.ebuild,
   botan-1.6.5.ebuild:
