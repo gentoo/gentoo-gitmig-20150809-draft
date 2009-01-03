@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/getdate-1.2.ebuild,v 1.9 2005/07/30 17:57:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/getdate-1.2.ebuild,v 1.10 2009/01/03 21:38:23 mpagano Exp $
 
 inherit toolchain-funcs
 
@@ -20,12 +20,20 @@ KEYWORDS="x86 ~mips ppc"
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	#remove prestripped binary as per bug #240934
+	sed -i -e "s:install -s:install:" Makefile
+}
+
 src_compile() {
-	$(tc-getCC) ${CFLAGS} -DHAVE_ADJTIME -s -o getdate getdate.c || die
+	$(tc-getCC) ${CFLAGS} -DHAVE_ADJTIME -o getdate getdate.c || die
 }
 
 src_install() {
-	dobin getdate
+	dobin getdate || die "dobin failed"
 	doman getdate.8
 	dodoc README getdate-cron
 }
