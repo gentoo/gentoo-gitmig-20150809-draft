@@ -1,0 +1,22 @@
+--- gpgme-1.1.7/gpgme/gpgme.h
++++ gpgme-1.1.7-fixed/gpgme/gpgme.h
+@@ -1117,6 +1117,8 @@
+ 
+ /* Crypto Operations.  */
+ 
++gpgme_error_t _gpgme_cancel_with_err (gpgme_ctx_t ctx, gpg_error_t ctx_err);
++
+ /* Cancel a pending asynchronous operation.  */
+ gpgme_error_t gpgme_cancel (gpgme_ctx_t ctx);
+ 
+--- gpgme-1.1.7/gpgme/wait-global.c
++++ gpgme-1.1.7-fixed/gpgme/wait-global.c
+@@ -202,7 +202,7 @@
+ 	if (err)
+ 	  /* An error occured.  Close all fds in this context, and
+ 	     send the error in a done event.  */
+-	  _gpgme_cancel_with_err (ctx, &err);
++	  _gpgme_cancel_with_err (ctx, err);
+       }
+       break;
+ 
