@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.ebuild,v 1.2 2008/05/03 01:13:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.ebuild,v 1.3 2009/01/03 12:46:37 angelos Exp $
 
 inherit toolchain-funcs eutils
 
@@ -14,9 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
-
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
@@ -25,16 +23,17 @@ src_unpack() {
 	sed -e "s#^my \$distro =.*#my \$distro = \"`uname -r`\";#" \
 		-e 's#^@files =#chdir "/usr/share/lmbench"; @files =#' \
 		-e "s#../../CONFIG#/etc/bc-config#g" "${FILESDIR}"/bc_lm.pl > bc_lm.pl
-	sed -i -e "s/^\(bk.ver:\).*/\1/" src/Makefile
+	sed -i -e "s/^\(bk.ver:\).*/\1/" \
+		-e "s:-O:\"${CFLAGS}\":" src/Makefile
 	touch src/bk.ver
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) MAKE=make OS=`scripts/os` build || die
+	emake CC=$(tc-getCC) MAKE=make OS=`scripts/os` build || die "emake failed"
 }
 
 src_install() {
-	cd src ; make BASE="${D}"/usr install || die
+	cd src ; emake BASE="${D}"/usr install || die
 
 	dodir /usr/share
 	mv "${D}"/usr/man "${D}"/usr/share
