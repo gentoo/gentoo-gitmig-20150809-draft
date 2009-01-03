@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.5.1_p2.ebuild,v 1.2 2008/04/01 15:17:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.5.1_p2.ebuild,v 1.3 2009/01/03 15:15:28 angelos Exp $
 
+EAPI=2
 inherit wxwidgets
 
 MY_P=DVDStyler-${PV/_p/_}
@@ -19,11 +20,10 @@ RDEPEND="app-cdr/dvd+rw-tools
 	>=media-video/dvdauthor-0.6.10
 	media-video/mpgtx
 	>=media-video/mjpegtools-1.8.0
-	=x11-libs/wxGTK-2.6*
-	media-libs/netpbm
+	x11-libs/wxGTK:2.6
+	media-libs/netpbm[jpeg]
 	>=media-libs/wxsvg-1.0_beta7
 	virtual/cdrtools
-	virtual/libc
 	gnome? ( >=gnome-base/libgnomeui-2.0 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -31,16 +31,15 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}"/${MY_P}
 
-src_compile() {
+src_configure() {
 	export WX_GTK_VER="2.6"
 	need-wxwidgets gtk2
 	myconf="${myconf} --with-wx-config=${WX_CONFIG}"
-	econf ${myconf} || die "econf failed!"
-	emake || die "emake failed!"
+	econf ${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "failed to install"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	rm  "${D}"usr/share/doc/${PN}/COPYING "${D}"usr/share/doc/${PN}/INSTALL
 	mv "${D}"usr/share/doc/${PN} "${D}"usr/share/doc/${PF}
 }
