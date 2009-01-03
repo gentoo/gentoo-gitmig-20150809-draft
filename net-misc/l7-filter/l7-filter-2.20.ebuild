@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.13.ebuild,v 1.4 2007/12/24 09:26:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.20.ebuild,v 1.1 2009/01/03 09:53:14 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz
 	mirror://gentoo/additional_patch_for_2.6.13.diff"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 #break repoman
 #SLOT="${KV}"
@@ -20,12 +20,15 @@ S=${WORKDIR}/${MY_P}
 RDEPEND="net-misc/l7-protocols"
 
 which_patch() {
-	if kernel_is ge 2 6 22
+	if kernel_is ge 2 6 25
 	then
-		PATCH=kernel-2.6.22-layer7-${PV}.patch
+		PATCH=kernel-2.6.25-layer7-${PV}.patch
+	elif kernel_is ge 2 6 22
+	then
+		PATCH=for_older_kernels/kernel-2.6.22-2.6.24-layer7-2.18.patch
 	elif kernel_is ge 2 6 20
 	then
-		PATCH=for_older_kernels/kernel-2.6.20-2.6.21-layer7-2.10.patch
+		PATCH=for_older_kernels/kernel-2.6.20-2.6.21-layer7-2.16.1.patch
 	elif kernel_is ge 2 6 18
 	then
 		PATCH=for_older_kernels/kernel-2.6.18-2.6.19-layer7-2.9.patch
@@ -79,8 +82,8 @@ src_unpack() {
 
 	cd "${S}"
 
-	mkdir  kernel
-	mkdir  kernel/Documentation
+	mkdir kernel
+	mkdir kernel/Documentation
 
 	# create needed directories
 	if kernel_is ge 2 6 20
