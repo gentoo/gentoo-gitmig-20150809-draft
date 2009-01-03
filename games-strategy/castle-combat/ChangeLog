@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/castle-combat
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/ChangeLog,v 1.9 2007/09/15 21:24:09 tupone Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/ChangeLog,v 1.10 2009/01/03 21:50:27 mr_bones_ Exp $
+
+  03 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  castle-combat-0.8.1.ebuild:
+  add use-based dep for media-libs/sdl-mixer
 
   15 Sep 2007; Tupone Alfredo <tupone@gentoo.org>
   castle-combat-0.8.1.ebuild:

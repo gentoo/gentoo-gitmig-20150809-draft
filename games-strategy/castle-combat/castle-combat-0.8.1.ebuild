@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.8.1.ebuild,v 1.4 2007/09/15 21:24:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.8.1.ebuild,v 1.5 2009/01/03 21:50:27 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="A clone of the old arcade game Rampart"
@@ -14,14 +15,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-python/twisted
+	media-libs/sdl-mixer[mikmod]
 	dev-python/pygame"
-
-pkg_setup() {
-	games_pkg_setup
-	if ! built_with_use media-libs/sdl-mixer mikmod; then
-		die "Please emerge media-libs/sdl-mixer with USE=mikmod"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
