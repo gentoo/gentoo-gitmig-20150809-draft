@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/powerdevil/powerdevil-1.4.2.ebuild,v 1.2 2008/12/10 12:29:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/powerdevil/powerdevil-1.4.2.ebuild,v 1.3 2009/01/04 14:51:32 scarabeus Exp $
 
 EAPI="2"
 
@@ -30,6 +30,7 @@ src_prepare() {
 			-e "s:add_subdirectory(doc):#nada:g" \
 			CMakeLists.txt || die "removing docs failed"
 	fi
+	kde4-base_src_prepare
 }
 
 src_configure() {
