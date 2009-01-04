@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.8.2.ebuild,v 1.2 2009/01/03 22:47:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.8.2.ebuild,v 1.3 2009/01/04 01:52:17 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -46,7 +46,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		--with-localedir-name=/usr/share/locale \
@@ -56,7 +56,6 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_enable unicode fribidi) \
 		|| die "configuration failed"
-	emake || die "emake failed"
 }
 
 src_install() {
