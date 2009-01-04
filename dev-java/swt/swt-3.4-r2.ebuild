@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r2.ebuild,v 1.2 2008/12/31 03:05:53 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r2.ebuild,v 1.3 2009/01/04 16:44:38 maekke Exp $
 
 EAPI="1"
 
@@ -30,7 +30,7 @@ SRC_URI="x86? (
 
 SLOT="3.4"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 
 IUSE="cairo gnome opengl xulrunner"
 COMMON=">=dev-libs/glib-2.6
