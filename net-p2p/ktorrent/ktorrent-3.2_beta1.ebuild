@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2_beta1.ebuild,v 1.2 2008/12/10 12:26:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2_beta1.ebuild,v 1.3 2009/01/04 14:49:42 scarabeus Exp $
 
 EAPI="2"
 
@@ -39,6 +39,8 @@ src_prepare() {
 	sed -i \
 		-e "s:macro_log_feature(PLASMA_FOUND:SET ( PLASMA_FOUND ${VALUE}) #:g" \
 		CMakeLists.txt || die "sed failed"
+
+	kde4-base_src_prepare
 }
 src_configure() {
 	local mycmakeargs
