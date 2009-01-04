@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.12 2009/01/03 21:24:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.13 2009/01/04 04:53:10 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -72,7 +72,6 @@ src_configure() {
 		mycmakeargs="${mycmakeargs} $(cmake-utils_use_with phonon PHONON)
 			-DOXYGEN_ICONS=Builtin -DQUASSEL_ICONS=Builtin"
 	fi
-
 
 	_common_configure_code
 
