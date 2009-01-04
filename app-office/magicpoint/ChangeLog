@@ -1,6 +1,10 @@
 # ChangeLog for app-office/magicpoint
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.38 2008/06/29 16:57:33 darkside Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.39 2009/01/04 20:24:18 ulm Exp $
+
+  04 Jan 2009; Ulrich Mueller <ulm@gentoo.org> magicpoint-1.12a-r1.ebuild,
+  magicpoint-1.13a.ebuild:
+  Change virtual/xft dependency to x11-libs/libXft, bug 253771.
 
 *magicpoint-1.13a (29 Jun 2008)
 
