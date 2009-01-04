@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.1.123.ebuild,v 1.8 2007/11/10 22:03:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.1.123.ebuild,v 1.9 2009/01/04 22:43:51 ulm Exp $
 
 inherit vim
 
@@ -26,7 +26,7 @@ DEPEND="${DEPEND}
 	!aqua? (
 		gtk? (
 			>=x11-libs/gtk+-2.6
-			virtual/xft
+			x11-libs/libXft
 			gnome? ( >=gnome-base/libgnomeui-2.6 )
 		)
 		!gtk? (
