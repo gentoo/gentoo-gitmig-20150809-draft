@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.7.9.ebuild,v 1.7 2007/07/22 07:39:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.7.9.ebuild,v 1.8 2009/01/04 23:18:32 ulm Exp $
 
 ROX_LIB_VER=1.9.14
 inherit rox
@@ -18,10 +18,10 @@ IUSE="xinerama"
 
 DEPEND="
 	>=media-libs/freetype-2.0
-	virtual/xft
 	x11-proto/xproto
 	x11-proto/xextproto
 	x11-proto/xf86vidmodeproto
+	x11-libs/libXft
 	x11-libs/libXpm
 	x11-libs/libXrandr
 	x11-libs/libXrender
@@ -32,9 +32,9 @@ DEPEND="
 
 RDEPEND="
 	>=media-libs/freetype-2.0
-	virtual/xft
 	x11-libs/libX11
 	x11-libs/libXext
+	x11-libs/libXft
 	x11-libs/libXpm
 	x11-libs/libXrandr
 	x11-libs/libXrender

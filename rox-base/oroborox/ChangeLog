@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/oroborox
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.15 2008/08/30 15:27:36 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.16 2009/01/04 23:18:32 ulm Exp $
+
+  04 Jan 2009; Ulrich Mueller <ulm@gentoo.org> oroborox-0.9.7.9.ebuild,
+  oroborox-0.9.8.ebuild, oroborox-0.9.8-r1.ebuild:
+  Change virtual/xft dependency to x11-libs/libXft, bug 253771.
 
   30 Aug 2008; Brent Baude <ranger@gentoo.org> oroborox-0.9.8-r1.ebuild:
   Marking oroborox-0.9.8-r1 ~ppc for bug 236057
