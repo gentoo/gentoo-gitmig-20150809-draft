@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/tripwire
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.27 2008/06/18 02:57:18 darkside Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.28 2009/01/04 19:28:01 patrick Exp $
+
+*tripwire-2.4.1.2 (04 Jan 2009)
+
+  04 Jan 2009; Patrick Lauer <patrick@gentoo.org> +tripwire-2.4.1.2.ebuild:
+  Bump to 2.4.1.2, fixes #189661
 
   18 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
   tripwire-2.3.1.2-r2.ebuild:
