@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.8.2-r2.ebuild,v 1.2 2009/01/02 21:43:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.8.2-r2.ebuild,v 1.3 2009/01/04 15:38:26 maekke Exp $
 
 inherit versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -10,7 +10,7 @@ MY_P="${PN}-v${MY_PV}"
 DESCRIPTION="Utility that enables basic Ethernet frame filtering on a Linux bridge, MAC NAT and brouting."
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://ebtables.sourceforge.net/"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
