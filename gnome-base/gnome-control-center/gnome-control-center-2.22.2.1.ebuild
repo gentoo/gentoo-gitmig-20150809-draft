@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.22.2.1.ebuild,v 1.9 2008/11/13 19:34:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.22.2.1.ebuild,v 1.10 2009/01/04 23:11:33 ulm Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ SLOT="2"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="eds esd hal"
 
-RDEPEND=">=virtual/xft-2.1.2
+RDEPEND="x11-libs/libXft
 		 >=x11-libs/gtk+-2.11.6
 		 >=dev-libs/glib-2.15.5
 		 >=gnome-base/gconf-2.0

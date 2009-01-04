@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.20.3.ebuild,v 1.1 2008/06/05 11:21:09 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.20.3.ebuild,v 1.2 2009/01/04 23:11:33 ulm Exp $
 EAPI="1"
 
 inherit eutils gnome2 autotools
@@ -15,7 +15,7 @@ IUSE="alsa eds esd hal"
 
 RDEPEND=">=gnome-base/gnome-vfs-2.2
 	>=media-libs/fontconfig-1
-	>=virtual/xft-2.1.2
+	x11-libs/libXft
 	x11-apps/xmodmap
 	x11-libs/libX11
 	x11-libs/libXext

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.24.0.1.ebuild,v 1.2 2008/12/03 10:29:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.24.0.1.ebuild,v 1.3 2009/01/04 23:11:33 ulm Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 IUSE="eds hal +sound"
 
 # FIXME: eel is still needed for libslab
-RDEPEND=">=virtual/xft-2.1.2
+RDEPEND="x11-libs/libXft
 	>=x11-libs/gtk+-2.11.6
 	>=dev-libs/glib-2.17.4
 	>=gnome-base/gconf-2.0
