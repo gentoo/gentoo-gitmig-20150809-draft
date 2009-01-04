@@ -1,11 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r5.ebuild,v 1.4 2008/12/19 17:40:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2-r5.ebuild,v 1.5 2009/01/04 20:03:05 armin76 Exp $
 
 EAPI="1"
 
 inherit eutils toolchain-funcs multilib autotools
 
+OPENGL_DIR="xorg-x11"
 XSERVER_VERSION="1.5.3"
 PATCH="${P}-r5-patches-0.1"
 
@@ -26,6 +27,7 @@ RDEPEND="sys-libs/zlib
 	media-libs/freetype
 	x11-libs/libSM
 	x11-libs/libXtst
+	app-admin/eselect-opengl
 	server? (
 		x11-libs/libXi
 		x11-libs/libXfont
@@ -78,7 +80,19 @@ pkg_setup() {
 		einfo "Stop the build now if you need to add 'server' to USE flags.\n"
 		ebeep
 		epause 5
+	else
+		ewarn "Forcing on xorg-x11 for new enough glxtokens.h..."
+		OLD_IMPLEM="$(eselect opengl show)"
+		eselect opengl set --impl-headers ${OPENGL_DIR}
 	fi
+}
+
+switch_opengl_implem() {
+	# Switch to the xorg implementation.
+	# Use new opengl-update that will not reset user selected
+	# OpenGL interface ...
+	echo
+	eselect opengl set ${OLD_IMPLEM}
 }
 
 src_unpack() {
@@ -193,3 +207,8 @@ src_install() {
 
 	rm "${D}"/usr/$(get_libdir)/librfb.{a,la,so}
 }
+
+pkg_postinst() {
+	use server && switch_opengl_implem
+}
+

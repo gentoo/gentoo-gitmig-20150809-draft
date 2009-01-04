@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vnc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.113 2008/12/19 17:40:11 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.114 2009/01/04 20:03:05 armin76 Exp $
+
+  04 Jan 2009; Raúl Porcel <armin76@gentoo.org> vnc-4.1.2-r5.ebuild:
+  Fix bug #242350, thanks to Eric Bosch <eric dot bosch at comcast dot net>
+  for the patch
 
   19 Dec 2008; Jeroen Roovers <jer@gentoo.org> vnc-4.1.2-r5.ebuild:
   Marked ~hppa (bug #240425).
