@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.12.ebuild,v 1.12 2008/04/20 21:55:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.12.ebuild,v 1.13 2009/01/04 23:00:13 ulm Exp $
 
 inherit eutils autotools
 
@@ -16,13 +16,13 @@ IUSE="truetype X"
 DEPEND="=dev-dotnet/pnet-${PV}*
 	X? ( x11-libs/libSM
 		x11-libs/libXft )
-	truetype? ( virtual/xft )
+	truetype? ( x11-libs/libXft )
 	=sys-devel/automake-1.4_p6"
 
 RDEPEND="=dev-dotnet/pnet-${PV}*
 	X? ( x11-libs/libSM
 		x11-libs/libXft )
-	truetype? ( virtual/xft )"
+	truetype? ( x11-libs/libXft )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pnetlib
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.42 2008/04/20 21:55:59 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.43 2009/01/04 23:00:13 ulm Exp $
+
+  04 Jan 2009; Ulrich Mueller <ulm@gentoo.org> pnetlib-0.6.12.ebuild,
+  pnetlib-0.7.4.ebuild, pnetlib-0.8.0.ebuild:
+  Change virtual/xft dependency to x11-libs/libXft, bug 253771.
 
   20 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> pnetlib-0.6.12.ebuild:
   Run eautoreconf in src_unpack phase, bug #207489.
