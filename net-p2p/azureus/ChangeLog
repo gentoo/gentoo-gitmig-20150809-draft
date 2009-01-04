@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/azureus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.72 2008/11/21 23:13:58 caster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.73 2009/01/04 16:46:34 maekke Exp $
+
+  04 Jan 2009; Markus Meier <maekke@gentoo.org> azureus-4.0.0.4.ebuild:
+  amd64/x86 stable, bug #234997
 
 *azureus-4.0.0.4 (21 Nov 2008)
 

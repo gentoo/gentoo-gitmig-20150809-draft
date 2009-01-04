@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-4.0.0.4.ebuild,v 1.2 2009/01/04 04:57:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-4.0.0.4.ebuild,v 1.3 2009/01/04 16:46:34 maekke Exp $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ SRC_URI="mirror://sourceforge/azureus/${MAIN_DIST}
 LICENSE="GPL-2 BSD"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc ~ppc64"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 # bundles parts of commons-lang, but modified
