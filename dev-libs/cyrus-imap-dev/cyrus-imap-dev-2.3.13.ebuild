@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.3.13.ebuild,v 1.4 2009/01/04 15:41:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.3.13.ebuild,v 1.5 2009/01/04 16:20:45 dertobi123 Exp $
 
 inherit eutils autotools
 
@@ -65,9 +65,7 @@ src_compile() {
 		--enable-netscapehack \
 		--with-cyrus-group=mail \
 		--with-com_err=yes \
-		--with-auth=unix \
 		--without-perl \
-		--disable-cyradm \
 		${myconf} || die "econf failed"
 
 	emake -C "${S}/lib" all || die "compile problem"
