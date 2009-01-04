@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.351 2008/12/01 15:50:09 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.352 2009/01/04 17:51:15 armin76 Exp $
+
+  04 Jan 2009; Raúl Porcel <armin76@gentoo.org> samba-3.0.33.ebuild:
+  s390/sh stable wrt #247620
 
   01 Dec 2008; Brent Baude <ranger@gentoo.org> samba-3.0.33.ebuild:
   Marking samba-3.0.33 ppc64 for bug 247620
