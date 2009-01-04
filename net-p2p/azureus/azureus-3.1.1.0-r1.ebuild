@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-3.1.1.0-r1.ebuild,v 1.1 2008/11/02 20:19:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-3.1.1.0-r1.ebuild,v 1.2 2009/01/04 04:57:42 mr_bones_ Exp $
 
 ###
 ### @Todo The new Azureus gui requires swt built with embedded mozilla support,
@@ -109,7 +109,6 @@ src_install() {
 		--main 'org.gudy.azureus2.ui.common.Main' -pre "${FILESDIR}/${PN}-3.1.1.0-pre" \
 		--java_args '-Dazureus.install.path=${HOME}/.azureus/ ${JAVA_OPTIONS}' \
 		--pkg_args '--ui=${UI}'
-
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=204132
 	java-pkg_register-environment-variable MOZ_PLUGIN_PATH /usr/lib/nsbrowser/plugins

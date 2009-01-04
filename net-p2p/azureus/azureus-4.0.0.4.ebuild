@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-4.0.0.4.ebuild,v 1.1 2008/11/21 23:13:58 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-4.0.0.4.ebuild,v 1.2 2009/01/04 04:57:42 mr_bones_ Exp $
 
 EAPI=2
 
@@ -21,7 +21,6 @@ PLUGINS_DIST=${PLUGINS_N}_${PLUGINS_V}.jar
 RATING_DIST=${RATING_N}_${RATING_V}.jar
 UPDATER_DIST=${UPDATER_N}_${UPDATER_V}.zip
 UPNPAV_DIST=${UPNPAV_N}_${UPNPAV_V}.zip
-
 
 ALLPLUGINS_URL="http://azureus.sourceforge.net/plugins"
 
