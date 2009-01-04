@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.0.118166.ebuild,v 1.5 2008/12/31 02:46:52 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.0.118166.ebuild,v 1.6 2009/01/04 22:21:02 ulm Exp $
 
 inherit eutils versionator fdo-mime gnome2-utils
 
@@ -32,11 +32,11 @@ RDEPEND="sys-libs/glibc
 	x11-libs/libXcursor
 	x11-libs/libXinerama
 	x11-libs/libXi
+	x11-libs/libXft
 	>=x11-libs/libview-0.6.2
 	dev-cpp/libsexymm
 	dev-cpp/cairomm
 	dev-cpp/libgnomecanvasmm
-	virtual/xft
 	!app-emulation/vmware-player
 	!app-emulation/vmware-server
 	~app-emulation/vmware-modules-1.0.0.23

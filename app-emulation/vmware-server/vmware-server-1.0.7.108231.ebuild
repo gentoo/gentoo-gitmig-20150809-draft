@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.7.108231.ebuild,v 1.1 2008/09/30 19:55:11 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.7.108231.ebuild,v 1.2 2009/01/04 22:25:53 ulm Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -35,8 +35,8 @@ RDEPEND=">=sys-libs/glibc-2.3.5
 		>=app-emulation/emul-linux-x86-baselibs-2.5.5-r3
 		app-emulation/emul-linux-x86-gtklibs )
 	!amd64? (
-		virtual/xft
 		x11-libs/libX11
+		x11-libs/libXft
 		x11-libs/libXtst
 		x11-libs/libXext
 		x11-libs/libXt
