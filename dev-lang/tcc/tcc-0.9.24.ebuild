@@ -1,17 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.23-r1.ebuild,v 1.6 2009/01/04 21:03:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.24.ebuild,v 1.1 2009/01/04 21:03:25 patrick Exp $
 
 inherit eutils
 
 IUSE=""
 DESCRIPTION="A very small C compiler for ix86"
 HOMEPAGE="http://bellard.org/tcc/"
-SRC_URI="http://download.savannah.nongnu.org/releases/tinycc/${P}.tar.gz"
+SRC_URI="http://download.savannah.nongnu.org/releases/tinycc/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 
 DEPEND=""
 # Both tendra and tinycc install /usr/bin/tcc
@@ -24,9 +24,9 @@ RESTRICT="test"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-anonunion.patch
-	epatch "${FILESDIR}"/${P}-asneeded.patch
-	epatch "${FILESDIR}"/${P}-nxbit.patch
+	#epatch "${FILESDIR}"/${PN}-0.9.23-anonunion.patch
+	#epatch "${FILESDIR}"/${PN}-0.9.23-asneeded.patch
+	#epatch "${FILESDIR}"/${PN}-0.9.23-nxbit.patch
 
 	# Don't strip
 	sed -i -e 's|$(INSTALL) -s|$(INSTALL)|' Makefile
