@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/pstack-1.1.ebuild,v 1.7 2009/01/04 02:06:29 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/pstack-1.1.ebuild,v 1.8 2009/01/04 04:52:52 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -21,7 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# respect CC variable see bug #244036 
+	# respect CC variable see bug #244036
 	sed -i -e "s:gcc:$(tc-getCC):" Makefile
 }
 
