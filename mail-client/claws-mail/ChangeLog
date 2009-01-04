@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.104 2008/12/22 13:54:57 fauli Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.105 2009/01/04 07:57:27 bangert Exp $
+
+  04 Jan 2009; Thilo Bangert <bangert@gentoo.org> metadata.xml:
+  qa: fix email address
 
 *claws-mail-3.7.0 (22 Dec 2008)
 
