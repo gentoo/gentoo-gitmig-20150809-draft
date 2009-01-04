@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.30-r1.ebuild,v 1.2 2009/01/03 02:05:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.30-r1.ebuild,v 1.3 2009/01/04 04:53:28 mr_bones_ Exp $
 
 inherit eutils fixheadtails qmail
 
@@ -30,7 +30,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	# The old code moved the file in DISTDIR, which is forbidden. 
+	# The old code moved the file in DISTDIR, which is forbidden.
 	# It's read-only.
 	cd "${WORKDIR}"
 	rm -f ${PN}-${MY_VER}.tar.gz
