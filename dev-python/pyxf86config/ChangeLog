@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxf86config
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.23 2008/12/13 23:12:14 neurogeek Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.24 2009/01/04 21:44:20 patrick Exp $
+
+  04 Jan 2009; Patrick Lauer <patrick@gentoo.org>
+  pyxf86config-0.3.34-r1.ebuild, pyxf86config-0.3.34-r2.ebuild:
+  Homepage fix, fixes #232216
 
 *pyxf86config-0.3.34-r2 (13 Dec 2008)
 
