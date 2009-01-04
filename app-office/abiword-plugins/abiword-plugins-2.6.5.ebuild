@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.5.ebuild,v 1.1 2008/12/14 20:35:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.5.ebuild,v 1.2 2009/01/04 22:54:26 ulm Exp $
 
 EAPI="1"
 
@@ -20,11 +20,11 @@ IUSE="cxx debug gnome grammar jabber jpeg libgda math ots pdf readline svg thesa
 # add abiscan when we get gnome-scan
 
 RDEPEND="=app-office/abiword-${PV}*
-	virtual/xft
 	>=media-libs/fontconfig-1
 	>=dev-libs/fribidi-0.10.4
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2
+	x11-libs/libXft
 	>=gnome-base/libglade-2
 	>=gnome-extra/libgsf-1.14.4
 	cxx? ( >=dev-libs/boost-1.33.1 )

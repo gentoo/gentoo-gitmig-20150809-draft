@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.14 2008/04/05 17:08:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.15 2009/01/04 22:54:26 ulm Exp $
 
 inherit eutils
 
@@ -15,11 +15,11 @@ IUSE="bzip2 debug gnome grammar jpeg libgda math ots pdf readline svg thesaurus 
 
 # libgsf dependency used by some document format importers
 RDEPEND="=app-office/abiword-${PV}*
-	virtual/xft
 	>=media-libs/fontconfig-1
 	>=dev-libs/fribidi-0.10.4
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2
+	x11-libs/libXft
 	>=gnome-base/libglade-2
 	>=gnome-extra/libgsf-1.12.1
 	bzip2? ( app-arch/bzip2 )
