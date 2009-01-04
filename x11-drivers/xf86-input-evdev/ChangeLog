@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.91 2008/12/16 19:39:41 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.92 2009/01/04 22:45:15 mr_bones_ Exp $
+
+  04 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  xf86-input-evdev-2.1.0.ebuild:
+  drop alpha keyword to match >=x11-base/xorg-server-1.5 keywords
 
   16 Dec 2008; Brent Baude <ranger@gentoo.org>
   xf86-input-evdev-2.1.0.ebuild:
