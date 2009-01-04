@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kouchat/kouchat-0.9.8.ebuild,v 1.2 2008/06/17 20:52:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kouchat/kouchat-0.9.8.ebuild,v 1.3 2009/01/04 17:37:17 maekke Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -12,7 +12,7 @@ HOMEPAGE="http://kouchat.googlecode.com/"
 SRC_URI="http://kouchat.googlecode.com/files/${P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.6"
