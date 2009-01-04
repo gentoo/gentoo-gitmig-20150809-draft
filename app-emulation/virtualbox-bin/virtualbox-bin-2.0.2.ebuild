@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.0.2.ebuild,v 1.2 2008/10/27 17:15:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.0.2.ebuild,v 1.3 2009/01/04 22:12:47 ulm Exp $
 
 EAPI=1
 
@@ -34,7 +34,6 @@ RDEPEND="!app-emulation/virtualbox-ose
 		x11-libs/libXi
 		x11-libs/libXrandr
 		x11-libs/libXinerama
-		virtual/xft
 		x11-libs/libXft
 		media-libs/freetype
 		media-libs/fontconfig
