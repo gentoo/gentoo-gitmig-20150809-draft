@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k9copy
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.41 2008/12/17 22:35:55 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.42 2009/01/04 15:37:25 scarabeus Exp $
+
+  04 Jan 2009; Tomas Chvatal <scarabeus@gentoo.org> k9copy-2.1.0.ebuild:
+  Every kde4 ebuild needs to be EAPI=2.
 
   17 Dec 2008; Markus Meier <maekke@gentoo.org> k9copy-2.1.0.ebuild:
   add ~x86, bug #251256

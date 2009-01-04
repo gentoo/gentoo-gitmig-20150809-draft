@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.1.0.ebuild,v 1.2 2008/12/17 22:35:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.1.0.ebuild,v 1.3 2009/01/04 15:37:25 scarabeus Exp $
 
-EAPI="1"
+EAPI="2"
 
 NEED_KDE="4.1"
 KDE_LINGUAS="ca cs de el es_AR es et fr it nl pl pt_BR ru sr sr@Latn tr zh_TW"
