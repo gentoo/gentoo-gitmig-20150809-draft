@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libzip
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.3 2008/11/02 07:20:58 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.4 2009/01/04 20:09:52 patrick Exp $
+
+*libzip-0.9 (04 Jan 2009)
+
+  04 Jan 2009; Patrick Lauer <patrick@gentoo.org> +libzip-0.9.ebuild:
+  Bump to 0.9, closes #241518
 
   02 Nov 2008; Mike Frysinger <vapier@gentoo.org> libzip-0.8.ebuild:
   Add ppc64 love for KDE 4.
