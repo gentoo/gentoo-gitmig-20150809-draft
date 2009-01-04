@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.72.ebuild,v 1.6 2008/06/13 16:34:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.72.ebuild,v 1.7 2009/01/04 02:24:52 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="DOS emulator"
@@ -13,22 +14,13 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 IUSE="alsa debug hardened opengl"
 
-DEPEND="alsa? ( media-libs/alsa-lib )
+DEPEND="alsa? ( media-libs/alsa-lib[midi] )
 	opengl? ( virtual/opengl )
 	debug? ( sys-libs/ncurses )
 	media-libs/libpng
 	media-libs/libsdl
 	media-libs/sdl-net
 	media-libs/sdl-sound"
-
-pkg_setup() {
-	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
-		eerror "To be able to build dosbox with ALSA support you need"
-		eerror "to have built media-libs/alsa-lib with midi USE flag."
-		die "Missing midi USE flag on media-libs/alsa-lib"
-	fi
-	games_pkg_setup
-}
 
 src_unpack() {
 	unpack ${A}
@@ -37,7 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		$(use_enable alsa alsa-midi) \
@@ -45,7 +37,6 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_enable opengl) \
 		|| die
-	emake || die "emake failed"
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dosbox
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.40 2008/11/17 20:34:37 flameeyes Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.41 2009/01/04 02:24:52 mr_bones_ Exp $
+
+  04 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.72.ebuild:
+  use EAPI=2
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/dosbox-0.72+gcc-4.3.patch:
