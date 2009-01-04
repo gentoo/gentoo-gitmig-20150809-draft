@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/magicrescue
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/ChangeLog,v 1.6 2007/02/21 21:54:34 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/magicrescue/ChangeLog,v 1.7 2009/01/04 23:07:53 patrick Exp $
+
+*magicrescue-1.1.5 (04 Jan 2009)
+
+  04 Jan 2009; Patrick Lauer <patrick@gentoo.org> +magicrescue-1.1.5.ebuild:
+  Bump to 1.1.5, fixes 211061
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
