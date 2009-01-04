@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20061103.ebuild,v 1.3 2006/12/29 15:16:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20061103.ebuild,v 1.4 2009/01/04 22:15:44 angelos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="elibc_glibc"
 
 DEPEND="sys-libs/ncurses
-	!<=sys-freebs/freebsd-lib-6.2_rc1"
+	!<=sys-freebsd/freebsd-lib-6.2_rc1"
 
 S=${WORKDIR}/netbsd-cvs
 
