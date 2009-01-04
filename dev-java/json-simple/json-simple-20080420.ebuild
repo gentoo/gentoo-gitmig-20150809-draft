@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/json-simple/json-simple-20080420.ebuild,v 1.4 2008/10/25 21:11:53 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/json-simple/json-simple-20080420.ebuild,v 1.5 2009/01/04 16:45:32 maekke Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${MY_PN}-20080420.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip"
