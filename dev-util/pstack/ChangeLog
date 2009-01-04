@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pstack
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/ChangeLog,v 1.8 2007/10/06 16:18:42 coldwind Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pstack/ChangeLog,v 1.9 2009/01/04 02:06:29 mpagano Exp $
+
+  04 Jan 2009; Mike Pagano <mpagano@gentoo.org> pstack-1.1.ebuild:
+  Respecting CC variable see bug #244036
 
   06 Oct 2007; Santiago M. Mola <coldwind@gentoo.org> pstack-1.1.ebuild:
   Homepage is dead, use man page (#185450). Thanks to Erik Musick.
