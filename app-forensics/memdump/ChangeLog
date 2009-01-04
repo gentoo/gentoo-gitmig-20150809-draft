@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/memdump
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.6 2006/08/17 00:50:52 tcort Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.7 2009/01/04 23:45:43 patrick Exp $
+
+*memdump-1.0.1 (04 Jan 2009)
+
+  04 Jan 2009; Patrick Lauer <patrick@gentoo.org> +memdump-1.0.1.ebuild:
+  Bumping to 1.0.1, fixes #204211
 
   17 Aug 2006; Thomas Cort <tcort@gentoo.org> memdump-1.0.ebuild:
   Stable on amd64 wrt Bug #144138.
