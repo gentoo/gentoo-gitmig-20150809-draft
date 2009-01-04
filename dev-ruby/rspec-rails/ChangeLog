@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rspec-rails
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.7 2008/12/14 14:03:42 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.8 2009/01/04 10:03:39 graaff Exp $
+
+  04 Jan 2009; Hans de Graaff <graaff@gentoo.org> -rspec-rails-1.1.9.ebuild,
+  -rspec-rails-1.1.10.ebuild:
+  Remove old versions that no longer have a corresponging rspec version
 
   14 Dec 2008; nixnut <nixnut@gentoo.org> rspec-rails-1.1.11.ebuild:
   ~ppc wrt bug 250348
