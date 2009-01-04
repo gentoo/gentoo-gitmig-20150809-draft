@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/libtaskmanager-4.1.3.ebuild,v 1.2 2008/11/16 08:21:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/libtaskmanager-4.1.3.ebuild,v 1.3 2009/01/04 15:17:09 scarabeus Exp $
 
 EAPI="2"
 
@@ -26,4 +26,5 @@ src_prepare() {
 	sed -i \
 		-e "s:task.h:task.h taskrmbmenu.h:g" \
 		"${S}"/libs/taskmanager/CMakeLists.txt || die "sed failed"
+	kde4-meta_src_prepare
 }
