@@ -1,10 +1,10 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.229 2009/01/04 19:15:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.230 2009/01/04 20:12:24 ulm Exp $
 
   04 Jan 2009; Ulrich Mueller <ulm@gentoo.org>
   emacs-cvs-23.0.60_pre20081226.ebuild, emacs-cvs-23.0.9999.ebuild:
-  Change virtual/xft dependency to x11-libs/libXft.
+  Change virtual/xft dependency to x11-libs/libXft, bug 253771.
 
   30 Dec 2008; Raúl Porcel <armin76@gentoo.org> emacs-cvs-23.0.9999.ebuild:
   Add ~arm/~s390 wrt #238712
