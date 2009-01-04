@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.128 2009/01/02 22:14:18 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.129 2009/01/04 17:22:16 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -694,21 +694,7 @@ raw-ldflags() {
 # @DESCRIPTION:
 # DEPRECATED - Gets the flags needed for "NOW" binding
 bindnow-flags() {
-	ewarn "QA: stop using the bindnow-flags function ... simply drop it from your ebuild" >&2
-
-	case $($(tc-getLD) -v 2>&1 </dev/null) in
-	*GNU* | *'with BFD'*) # GNU ld
-		echo "-Wl,-z,now" ;;
-	*Apple*) # Darwin ld
-		echo "-bind_at_load" ;;
-	*)
-		# Some linkers just recognize -V instead of -v
-		case $($(tc-getLD) -V 2>&1 </dev/null) in
-			*Solaris*) # Solaris accept almost the same GNU options
-				echo "-Wl,-z,now" ;;
-		esac
-		;;
-	esac
+	ewarn "QA: stop using the bindnow-flags function ... simply drop it from your ebuild"
 }
 
 
