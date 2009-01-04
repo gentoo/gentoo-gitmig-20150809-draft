@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.179 2009/01/03 12:47:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.180 2009/01/04 14:46:19 bluebird Exp $
+
+  04 Jan 2009; Friedrich Oslage <bluebird@gentoo.org>
+  epiphany-2.22.3-r1.ebuild:
+  Stable on sparc, bug #253534
 
   03 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -files/epiphany-2.20.3-fix-de-docs-tests.patch, -epiphany-2.20.3.ebuild,
