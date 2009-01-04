@@ -1,0 +1,20 @@
+diff -rc augustus.orig/src/Makefile augustus/src/Makefile
+*** augustus.orig/src/Makefile	2009-01-03 18:26:17.000000000 -0500
+--- augustus/src/Makefile	2009-01-03 18:38:35.000000000 -0500
+***************
+*** 3,9 ****
+  #
+  
+  CC	= g++
+! CFLAGS	= -Wall -ansi -pedantic -O2 -g -ggdb # -O2 -g -pg -ggdb -DDEBUG -static -DDEBUG  -pg
+  INCLS	= -I../include -I.
+  LIBS	= # -lcwd
+  OBJS	= genbank.o properties.o statemodel.o \
+--- 3,9 ----
+  #
+  
+  CC	= g++
+! CFLAGS	:= -Wall -ansi -pedantic -O2 -g -ggdb ${CFLAGS} # -O2 -g -pg -ggdb -DDEBUG -static -DDEBUG  -pg
+  INCLS	= -I../include -I.
+  LIBS	= # -lcwd
+  OBJS	= genbank.o properties.o statemodel.o \

@@ -1,0 +1,26 @@
+diff -rc augustus.orig/include/help.hh augustus/include/help.hh
+*** augustus.orig/include/help.hh	2009-01-03 18:26:17.000000000 -0500
+--- augustus/include/help.hh	2009-01-03 18:36:30.000000000 -0500
+***************
+*** 23,28 ****
+--- 23,29 ----
+  #include <cmath>
+  #include <cstring>
+  #include <cctype>
++ #include <stdlib.h>
+  
+  #include "types.hh"
+  #include "projecterror.hh"
+diff -rc augustus.orig/include/types.hh augustus/include/types.hh
+*** augustus.orig/include/types.hh	2009-01-03 18:26:17.000000000 -0500
+--- augustus/include/types.hh	2009-01-03 18:36:39.000000000 -0500
+***************
+*** 21,26 ****
+--- 21,27 ----
+  #define _TYPES_HH
+  
+  #include <string>
++ #include <limits.h>
+  
+  #include "lldouble.hh"
+  
