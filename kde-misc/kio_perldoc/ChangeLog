@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kio_perldoc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_perldoc/ChangeLog,v 1.2 2008/11/13 13:59:16 scarabeus Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_perldoc/ChangeLog,v 1.3 2009/01/04 15:40:42 scarabeus Exp $
+
+  04 Jan 2009; Tomas Chvatal <scarabeus@gentoo.org> kio_perldoc-0.9.ebuild:
+  Every kde4 ebuild needs to be EAPI=2.
 
   13 Nov 2008; Tomas Chvatal <scarabeus@gentoo.org> kio_perldoc-0.9.ebuild:
   Update ebuild, so it works with current kde4.

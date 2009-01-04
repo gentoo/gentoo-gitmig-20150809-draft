@@ -1,8 +1,8 @@
-# Copyright 2008-2008 Gentoo Foundation
+# Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_perldoc/kio_perldoc-0.9.ebuild,v 1.5 2008/12/31 03:29:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_perldoc/kio_perldoc-0.9.ebuild,v 1.6 2009/01/04 15:40:42 scarabeus Exp $
 
-EAPI="1"
+EAPI="2"
 NEED_KDE="4.1"
 inherit kde4-base
 
