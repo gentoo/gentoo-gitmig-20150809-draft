@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.8.0_rc1.ebuild,v 1.1 2008/12/14 18:51:28 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/anope-1.8.0_rc1.ebuild,v 1.2 2009/01/04 21:23:25 gurligebis Exp $
 
 inherit eutils versionator
 
@@ -130,6 +130,8 @@ src_install() {
 	fowners anope:anope ${INSTALL_DIR}/data/languages/tr
 
 	dodoc Changes Changes.conf Changes.lang Changes.mysql docs/*
+
+	use mysql && dodoc data/tables.sql
 }
 
 pkg_preinst() {
@@ -149,4 +151,9 @@ pkg_postinst() {
 	ewarn "Be sure to read Changes.mysql to update your MySQL"
 	ewarn "tables or anope will break after restart"
 	ewarn "!!! ATTENTION !!!"
+
+	if use mysql; then
+		einfo "The mysql script for updating the tables is located in the"
+		einfo "/usr/share/doc/${P} directory"
+	fi
 }
