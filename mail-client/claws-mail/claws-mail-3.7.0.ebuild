@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.0.ebuild,v 1.1 2008/12/22 13:54:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.0.ebuild,v 1.2 2009/01/04 13:34:34 fauli Exp $
 
 inherit eutils multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/sylpheed-claws/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-3"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bogofilter crypt dillo doc gnome gnutls imap ipv6 kde ldap nntp pda
+IUSE="bogofilter crypt dbus dillo doc gnome gnutls imap ipv6 kde ldap nntp pda
 session smime spamassassin spell ssl startup-notification xface"
 
 COMMONDEPEND=">=x11-libs/gtk+-2.6
@@ -20,6 +20,7 @@ COMMONDEPEND=">=x11-libs/gtk+-2.6
 	ssl? ( net-libs/gnutls )
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	crypt? ( >=app-crypt/gpgme-1.1.1 )
+	dbus? ( >=dev-libs/dbus-glib-0.60 )
 	dillo? ( www-client/dillo )
 	spell? ( >=app-text/enchant-1.0.0 )
 	kde? ( kde-base/kdelibs )
@@ -54,6 +55,7 @@ src_compile() {
 		$(use_enable gnome gnomeprint) \
 		$(use_enable ipv6) \
 		$(use_enable ldap) \
+		$(use_enable dbus) \
 		$(use_enable pda jpilot) \
 		$(use_enable spell enchant) \
 		$(use_enable gnutls) \

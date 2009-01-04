@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.106 2009/01/04 13:23:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.107 2009/01/04 13:34:34 fauli Exp $
+
+  04 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-3.7.0.ebuild:
+  introduce USE=dbus for proper handling of dbus dependency Thanks to
+  Christian Glindkamp <christian DOT glindkamp AT gmail DOT com> for the
+  valuable hints in bug 253654
 
   04 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-3.6.1-r1.ebuild:
