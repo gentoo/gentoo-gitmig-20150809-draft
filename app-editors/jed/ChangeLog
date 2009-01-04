@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.51 2008/03/11 17:32:04 opfer Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.52 2009/01/04 19:46:08 ulm Exp $
+
+  04 Jan 2009; Ulrich Mueller <ulm@gentoo.org> jed-0.99.18.ebuild:
+  Change virtual/xft dependency to x11-libs/libXft.
 
   11 Mar 2008; Christian Faulhammer <opfer@gentoo.org> jed-0.99.18.ebuild:
   use emake instead of make
