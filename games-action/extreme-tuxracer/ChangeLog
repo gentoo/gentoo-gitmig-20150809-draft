@@ -1,6 +1,10 @@
 # ChangeLog for games-action/extreme-tuxracer
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.3 2008/02/29 18:46:07 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.4 2009/01/04 08:01:28 mr_bones_ Exp $
+
+  04 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  extreme-tuxracer-0.4.ebuild:
+  add use-based dep for media-libs/sdl-mixer (bug #250815)
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
   extreme-tuxracer-0.4.ebuild:

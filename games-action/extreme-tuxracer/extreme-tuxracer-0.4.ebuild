@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.4.ebuild,v 1.3 2008/03/18 20:32:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.4.ebuild,v 1.4 2009/01/04 08:01:28 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="High speed arctic racing game based on Tux Racer"
@@ -17,7 +18,7 @@ RDEPEND="virtual/opengl
 	dev-lang/tcl
 	virtual/glu
 	media-libs/libsdl
-	media-libs/sdl-mixer
+	media-libs/sdl-mixer[mikmod]
 	>=media-libs/freetype-2
 	media-libs/libpng
 	x11-libs/libXmu
