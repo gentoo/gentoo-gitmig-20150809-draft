@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.16 2008/11/18 23:03:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.17 2009/01/04 23:03:26 ulm Exp $
 
 EAPI=1
 
@@ -20,10 +20,10 @@ RESTRICT="userpriv" # needs to read ${GAMES_LIBDIR}
 
 # A lot of deps are inherited from emilia-pinball, so we don't repeat
 # them here.
-DEPEND="virtual/xft
-	media-libs/libsdl
+DEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer
+	x11-libs/libXft
 	x11-libs/libXt
 	x11-libs/qt:3
 	>=games-arcade/emilia-pinball-0.3.1"
