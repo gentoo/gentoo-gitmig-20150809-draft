@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.51 2008/12/31 16:37:38 bluebird Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.52 2009/01/04 15:41:58 maekke Exp $
+
+  04 Jan 2009; Markus Meier <maekke@gentoo.org>
+  cyrus-imap-dev-2.3.13.ebuild:
+  amd64/x86 stable, bug #253027
 
   31 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
   cyrus-imap-dev-2.3.13.ebuild:
