@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konq-plugins
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.95 2008/11/16 07:52:31 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.96 2009/01/04 15:11:54 scarabeus Exp $
+
+  04 Jan 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  konq-plugins-4.1.3.ebuild:
+  Fix missing kde4-meta_src_prepare call.
 
   15 Nov 2008; Mike Frysinger <vapier@gentoo.org> konq-plugins-4.1.3.ebuild:
   Add ppc/ppc64 love #244306.
