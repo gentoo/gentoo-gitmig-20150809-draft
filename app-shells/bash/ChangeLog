@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.187 2008/12/31 18:35:24 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.188 2009/01/04 09:08:35 jer Exp $
+
+  04 Jan 2009; Jeroen Roovers <jer@gentoo.org> bash-3.2_p39.ebuild:
+  Stable for HPPA (bug #235020).
 
   31 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> bash-3.2_p39.ebuild:
   Stable on sparc, bug #235020
