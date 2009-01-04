@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.16 2008/12/18 13:50:38 chainsaw Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.17 2009/01/04 05:23:34 chainsaw Exp $
+
+  04 Jan 2009; <chainsaw@gentoo.org> xf86-input-synaptics-0.99.3.ebuild:
+  Remove the HAL USE-flag more thoroughly, as requested by Mr_Bones.
 
 *xf86-input-synaptics-0.99.3 (18 Dec 2008)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-0.99.3.ebuild,v 1.1 2008/12/18 13:50:38 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-0.99.3.ebuild,v 1.2 2009/01/04 05:23:34 chainsaw Exp $
 
 inherit toolchain-funcs eutils linux-info x-modular
 
@@ -10,7 +10,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 LICENSE="MIT"
 IUSE=""
 RDEPEND="x11-libs/libXext
-	 hal? ( sys-apps/hal )"
+	 sys-apps/hal"
 DEPEND="${RDEPEND}
 	!x11-drivers/synaptics
 	x11-base/xorg-server
