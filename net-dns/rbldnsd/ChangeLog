@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/rbldnsd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.13 2008/06/29 10:02:55 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.14 2009/01/04 15:57:44 angelos Exp $
+
+  04 Jan 2009; Christoph Mende <angelos@gentoo.org>
+  +files/rbldnsd-0.996b-asneeded.patch, -rbldnsd-0.996a.ebuild,
+  rbldnsd-0.996b.ebuild:
+  QA: Fixed compilation with --as-needed (bug 247960), respect CC, die on
+  dosbin
 
   29 Jun 2008; Torsten Veller <tove@gentoo.org> rbldnsd-0.996a.ebuild,
   rbldnsd-0.996b.ebuild:
