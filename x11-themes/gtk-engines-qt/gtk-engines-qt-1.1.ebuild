@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-1.1.ebuild,v 1.4 2008/12/10 12:37:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-1.1.ebuild,v 1.5 2009/01/04 14:55:43 scarabeus Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ src_prepare() {
 	sed -i \
 		-e "s:\${XDG_APPS_INSTALL_DIR}:${KDEDIR}/share/kde4/services/:g" \
 		kcm_gtk/CMakeLists.txt || die "replacing correct folder failed"
+	kde4-base_src_prepare
 }
 
 src_configure() {

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qt
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.43 2008/11/15 21:46:39 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.44 2009/01/04 14:55:43 scarabeus Exp $
+
+  04 Jan 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  gtk-engines-qt-1.1.ebuild:
+  Add missing kde4-base_src_prepare call.
 
   15 Nov 2008; Mike Frysinger <vapier@gentoo.org> gtk-engines-qt-1.1.ebuild:
   Add ppc/ppc64 love #244306.
