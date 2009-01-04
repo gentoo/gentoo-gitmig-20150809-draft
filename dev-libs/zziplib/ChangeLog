@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/zziplib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.58 2009/01/02 09:24:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/ChangeLog,v 1.59 2009/01/04 18:01:41 armin76 Exp $
+
+  04 Jan 2009; Raúl Porcel <armin76@gentoo.org> zziplib-0.13.49-r1.ebuild:
+  alpha/ia64 stable wrt #252736
 
   02 Jan 2009; Torsten Veller <tove@gentoo.org> zziplib-0.13.49-r1.ebuild:
   Stable on x86 (#252736)
