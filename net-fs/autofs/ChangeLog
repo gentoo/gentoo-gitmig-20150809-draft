@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/autofs
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.76 2008/08/29 13:51:00 robbat2 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.77 2009/01/04 12:31:28 stefaan Exp $
+
+*autofs-5.0.4 (04 Jan 2009)
+
+  04 Jan 2009; Stefaan De Roeck <stefaan@gentoo.org>
+  +files/autofs-5.0.4-user-ldflags-and-as-needed.patch,
+  +autofs-5.0.4.ebuild:
+  Version bump to 5.0.4 + fix bugs #247969 and #253412 concerning LDFLAGS
+  and --as-needed
 
   29 Aug 2008; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   Bug #236051, I had a download failure during digesting, with a zero-byte
