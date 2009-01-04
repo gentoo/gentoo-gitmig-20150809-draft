@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylons
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/ChangeLog,v 1.3 2007/07/04 20:19:28 lucass Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/ChangeLog,v 1.4 2009/01/04 19:00:13 patrick Exp $
+
+*pylons-0.9.6.2 (04 Jan 2009)
+
+  04 Jan 2009; Patrick Lauer <patrick@gentoo.org> +pylons-0.9.6.2.ebuild:
+  Bump to 0.9.6.2, fixes bug #176640
 
   04 Jul 2007; Lukasz Strzygowski <lucass@gentoo.org>
   pylons-0.9.4.1-r1.ebuild:
