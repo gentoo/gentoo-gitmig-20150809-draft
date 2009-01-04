@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.60_pre20081226.ebuild,v 1.2 2008/12/27 19:07:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.60_pre20081226.ebuild,v 1.3 2009/01/04 19:15:44 ulm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -40,7 +40,7 @@ RDEPEND="sys-libs/ncurses
 		xft? (
 			media-libs/fontconfig
 			media-libs/freetype
-			virtual/xft
+			x11-libs/libXft
 			m17n-lib? (
 				>=dev-libs/libotf-0.9.4
 				>=dev-libs/m17n-lib-1.5.1
