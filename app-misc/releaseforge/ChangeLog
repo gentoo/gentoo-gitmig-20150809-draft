@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/releaseforge
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/releaseforge/ChangeLog,v 1.8 2008/08/16 01:16:04 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/releaseforge/ChangeLog,v 1.9 2009/01/04 22:36:02 patrick Exp $
+
+  04 Jan 2009; Patrick Lauer <patrick@gentoo.org> releaseforge-1.3.ebuild:
+  Adding paramiko to releaseforge-1.3 deps. Fixes #238313
 
 *releaseforge-1.3 (16 Aug 2008)
 
