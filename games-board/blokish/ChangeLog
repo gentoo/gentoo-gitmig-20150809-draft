@@ -1,6 +1,10 @@
 # ChangeLog for games-board/blokish
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/ChangeLog,v 1.8 2008/05/02 10:28:28 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/ChangeLog,v 1.9 2009/01/04 19:33:23 mr_bones_ Exp $
+
+  04 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  blokish-0.9.4-r1.ebuild:
+  add use-based dep (bug #206299)
 
   02 May 2008; Markus Meier <maekke@gentoo.org> blokish-0.9.4-r1.ebuild:
   amd64/x86 stable, bug #219772

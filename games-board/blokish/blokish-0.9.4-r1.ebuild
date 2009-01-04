@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.3 2008/05/02 10:28:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.4 2009/01/04 19:33:23 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils wxwidgets games
 
 MY_P="${PN}_v${PV}"
@@ -14,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="=x11-libs/wxGTK-2.8*
+DEPEND="x11-libs/wxGTK:2.8[opengl]
 	virtual/opengl"
 
 S=${WORKDIR}/${PN}
