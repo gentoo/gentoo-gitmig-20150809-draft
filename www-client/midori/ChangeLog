@@ -1,6 +1,9 @@
 # ChangeLog for www-client/midori
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.6 2008/10/27 19:17:29 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.7 2009/01/04 16:18:05 hanno Exp $
+
+  04 Jan 2009; Hanno Boeck <hanno@gentoo.org> midori-9999.ebuild:
+  Fix multilib installation, respect CFLAGS and LDFLAGS.
 
   27 Oct 2008; Markus Ullmann <jokey@gentoo.org> metadata.xml,
   midori-9999.ebuild:
