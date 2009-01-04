@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.0.ebuild,v 1.3 2009/01/03 12:44:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.0.ebuild,v 1.4 2009/01/04 06:10:20 dragonheart Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -71,10 +71,10 @@ src_compile() {
 		--os=linux \
 		--cpu=${CHOSTARCH} \
 		--with-endian="$(tc-endian)" \
-		--with-tr1=system || \
+		--with-tr1=system \
 		--enable-modules=$modules \
 		--disable-modules=proc_walk,unix_procs,cpu_counter \
-		die "configure.pl failed"
+		|| die "configure.pl failed"
 	emake CXX="$(tc-getCXX)" AR="$(tc-getAR) crs" \
 		"LIB_OPT=${CXXFLAGS}" "MACH_OPT=" || die "emake failed"
 }
