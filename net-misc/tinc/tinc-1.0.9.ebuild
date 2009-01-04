@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.7.ebuild,v 1.2 2008/04/01 14:08:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.9.ebuild,v 1.1 2009/01/04 07:15:08 dragonheart Exp $
 
 DESCRIPTION="tinc is an easy to configure VPN implementation"
 HOMEPAGE="http://www.tinc-vpn.org/"
@@ -18,7 +18,7 @@ DEPEND=">=dev-libs/openssl-0.9.7c
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	econf --enable-jumbograms $(use_enable nls) || die
+	econf --enable-jumbograms $(use_enable nls)
 	emake || die
 }
 
@@ -27,6 +27,7 @@ src_install() {
 	dodir /etc/tinc
 	dodoc AUTHORS NEWS README THANKS
 	doinitd "${FILESDIR}"/tincd
+	doconfd "${FILESDIR}"/tinc.networks
 }
 
 pkg_postinst() {
