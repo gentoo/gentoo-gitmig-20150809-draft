@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/eugene-3.5d.ebuild,v 1.1 2009/01/04 05:16:38 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/eugene-3.5d.ebuild,v 1.2 2009/01/04 07:08:03 weaver Exp $
 
 EAPI=2
 
-inherit eutils autotools
+inherit autotools
 
 DESCRIPTION="Eukaryotic gene predictor"
 HOMEPAGE="http://www.inra.fr/mia/T/EuGene/"
@@ -22,7 +22,7 @@ DEPEND="media-libs/gd[png]
 		dev-texlive/texlive-latexrecommended
 		dev-texlive/texlive-latexextra
 		)"
-RDEPEND=""
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}-1"
 
