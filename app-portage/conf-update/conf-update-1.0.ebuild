@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.ebuild,v 1.7 2008/06/15 06:52:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.ebuild,v 1.8 2009/01/04 14:57:16 angelos Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="${PN} is a ncurses-based config management utility"
 HOMEPAGE="gopher://blubb.ch/11/software/conf-update"
@@ -15,19 +15,20 @@ IUSE="colordiff"
 
 RDEPEND=">=dev-libs/glib-2.6
 		dev-libs/openssl
-		sys-libs/ncurses
 		colordiff? ( app-misc/colordiff )"
 DEPEND="dev-util/pkgconfig
 		${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 	sed -i -e "s/\$Rev:.*\\$/${PVR}/" conf-update.h || die 'version-sed failed'
 
-	# gcc-4.1-only option
-	sed -i -e "s:-Wno-pointer-sign::g" Makefile || die 'gcc-sed failed'
+	# -Wno-pointer-sign is gcc-4.1 only
+	sed -i -e "s:-Wno-pointer-sign::g" \
+		-e "s: -g::" Makefile || die 'gcc-sed failed'
 
 	if use colordiff ; then
 		sed -i -e "s/diff_tool=diff/diff_tool=colordiff/" ${PN}.conf || \
