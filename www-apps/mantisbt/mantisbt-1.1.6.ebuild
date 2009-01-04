@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.1.6.ebuild,v 1.2 2009/01/02 21:41:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.1.6.ebuild,v 1.3 2009/01/04 17:31:32 maekke Exp $
 
 inherit eutils webapp depend.php
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.mantisbt.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="
