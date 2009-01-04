@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/locateopen
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/ChangeLog,v 1.28 2008/04/01 23:19:44 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/locateopen/ChangeLog,v 1.29 2009/01/04 17:47:59 vapier Exp $
+
+  04 Jan 2009; Mike Frysinger <vapier@gentoo.org> locateopen-1.3.ebuild:
+  Drop rlocate from RDEPEND #207421.
 
   01 Apr 2008; Christian Faulhammer <opfer@gentoo.org>
   locateopen-1.3.ebuild:
