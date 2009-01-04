@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4100 2009/01/03 21:27:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4101 2009/01/04 22:07:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2619,7 +2619,6 @@ www-apps/lxr:freetext - Adds support for freetext search using swish-e
 www-apps/mediawiki:math - Ads math rendering support
 www-apps/mediawiki:restrict - Initial setup will only allow sysop user to create new accounts, read and edit any pages
 www-apps/rt:lighttpd - Add www-servers/lighttpd support
-www-apps/trac:silvercity - Add app-text/silvercity support to colourize code stored in the repository
 www-apps/viewvc:cvsgraph - Add dev-util/cvsgraph support to show graphical views of revisions and branches
 www-apps/viewvc:highlight - Add app-text/highlight support to colourize code stored in the repository
 www-apps/viewvc:mod_python - Add www-apache/mod_python support
