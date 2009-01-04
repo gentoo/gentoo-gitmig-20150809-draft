@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/integrit
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.22 2008/12/30 17:17:24 angelos Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.23 2009/01/04 23:03:27 patrick Exp $
+
+*integrit-4.1 (04 Jan 2009)
+
+  04 Jan 2009; Patrick Lauer <patrick@gentoo.org> +integrit-4.1.ebuild:
+  Bump to 4.1. Fixes #202803
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org>
   -integrit-3.02.00.ebuild, -integrit-3.05.ebuild, integrit-4.0.ebuild:
