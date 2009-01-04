@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.0.3.ebuild,v 1.1 2009/01/04 00:26:13 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.0.3.ebuild,v 1.2 2009/01/04 00:34:08 weaver Exp $
 
 inherit eutils
 
@@ -24,14 +24,14 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -C src
+	emake -C src || die
 }
 
 src_install() {
-	dobin src/{augustus,etraining}
+	dobin src/{augustus,etraining} || die
 	insinto /usr/share/${PN}
-	doins -r config examples scripts
+	doins -r config examples scripts || die
 	echo "AUGUSTUS_CONFIG_PATH=\"/usr/share/${PN}/config\"" > "${S}/99${PN}"
-	doenvd "${S}/99${PN}"
+	doenvd "${S}/99${PN}" || die
 	dodoc README.TXT HISTORY.TXT
 }
