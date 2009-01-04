@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/gimp-help
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.55 2009/01/03 14:46:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gimp-help/ChangeLog,v 1.56 2009/01/04 08:44:12 jer Exp $
+
+  04 Jan 2009; Jeroen Roovers <jer@gentoo.org> gimp-help-2.4.2.ebuild:
+  Stable for HPPA (bug #252653).
 
   03 Jan 2009; nixnut <nixnut@gentoo.org> gimp-help-2.4.2.ebuild:
   ppc stable #252653
