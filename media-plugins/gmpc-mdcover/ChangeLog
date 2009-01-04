@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-mdcover
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.17 2008/12/29 23:27:18 tcunha Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.18 2009/01/04 00:04:25 angelos Exp $
+
+  04 Jan 2009; Christoph Mende <angelos@gentoo.org>
+  -gmpc-mdcover-0.15.5.0.ebuild, gmpc-mdcover-0.17.0.ebuild:
+  Bumped 0.17.0 to EAPI2 to replace built_with_use+die and cleaned up
 
   29 Dec 2008; Tiago Cunha <tcunha@gentoo.org> gmpc-mdcover-0.16.0.ebuild:
   stable sparc, bug 251332
