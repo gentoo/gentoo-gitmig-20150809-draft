@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.71 2009/01/01 15:47:44 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.72 2009/01/04 16:32:49 mabi Exp $
+
+*fxruby-1.6.18-r1 (04 Jan 2009)
+
+  04 Jan 2009; Matti Bickel <mabi@gentoo.org> fxruby-1.6.18.ebuild,
+  +fxruby-1.6.18-r1.ebuild:
+  fix doc and example use flag behaviour, revert accidential initial stable
+  version back to ~arch for the next days
 
   01 Jan 2009; Matti Bickel <mabi@gentoo.org> fxruby-1.6.18.ebuild:
   fix install failure, general ebuild cleanup thanks to a3li
