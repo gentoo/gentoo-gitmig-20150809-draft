@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-4.5.ebuild,v 1.3 2009/01/03 14:35:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-4.5.ebuild,v 1.4 2009/01/04 17:35:52 maekke Exp $
 
 # WARNING: JUNIT.JAR IS _NOT_ SYMLINKED TO ANT-CORE LIB FOLDER AS JUNIT3 IS
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 HOMEPAGE="http://www.junit.org/"
 LICENSE="CPL-1.0"
 SLOT="4"
-KEYWORDS="~amd64 ~ia64 ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ia64 ppc ~ppc64 x86"
 IUSE=""
 
 CDEPEND="dev-java/hamcrest-core"
