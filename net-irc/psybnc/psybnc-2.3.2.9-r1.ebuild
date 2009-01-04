@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r1.ebuild,v 1.1 2009/01/03 15:43:22 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r1.ebuild,v 1.2 2009/01/04 16:47:05 gurligebis Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic
 MY_PV="$(replace_version_separator 3 -)"
@@ -13,7 +13,7 @@ SRC_URI="http://www.psybnc.at/download/beta/psyBNC-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
-IUSE="ipv6 ssl oidentd"
+IUSE="ipv6 ssl oidentd scripting"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.7d )
 		oidentd? ( >=net-misc/oidentd-2.0 )"
