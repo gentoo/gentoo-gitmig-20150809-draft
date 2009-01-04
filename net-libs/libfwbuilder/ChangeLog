@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.74 2009/01/03 15:15:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.75 2009/01/04 17:29:50 maekke Exp $
+
+  04 Jan 2009; Markus Meier <maekke@gentoo.org> libfwbuilder-2.1.18.ebuild:
+  amd64/x86 stable, bug #245197
 
   03 Jan 2009; nixnut <nixnut@gentoo.org> libfwbuilder-2.1.18.ebuild:
   ppc stable #245197
