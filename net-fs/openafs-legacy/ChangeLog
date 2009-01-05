@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs-legacy
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/ChangeLog,v 1.7 2008/02/07 23:55:44 stefaan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/ChangeLog,v 1.8 2009/01/05 18:01:28 mr_bones_ Exp $
+
+  05 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  openafs-legacy-0.1.ebuild:
+  drop alpha keyword to match net-fs/openafs
 
   07 Feb 2008; Stefaan De Roeck <stefaan@gentoo.org> metadata.xml:
   Correct maintainer email (proxy maintenance has since long ended)
