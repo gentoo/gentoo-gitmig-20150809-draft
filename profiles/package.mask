@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9360 2009/01/04 13:47:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9361 2009/01/05 00:04:03 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (05 Jan 2009)
+# masked for testing
+# http://www.vdr-portal.de/board/thread.php?threadid=74833 (german)
+=net-www/xxv-1.2.1383
+=x11-themes/xxv-skins-1.2.1383
 
 # Mike Auty <ikelos@gentoo.org> (03 Jan 2009)
 # Masking insecure versions
@@ -841,12 +847,6 @@ media-sound/lastfmproxy
 # This ebuild will be moved to the java junkyard overlay when Frostwire
 # is unmasked or stabilized.
 net-p2p/limewire
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (11 Mar 2008)
-# masked for testing
-# http://www.vdr-portal.de/board/thread.php?threadid=74833 (german)
-=net-www/xxv-1.2.1308
-=net-www/xxv-1.2.1315
 
 # Colin Morey <peitolm@gentoo.org> (20 Mar 2008)
 # Masked for testing, closing lots of little bugs

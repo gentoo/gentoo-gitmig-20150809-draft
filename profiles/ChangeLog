@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2232 2009/01/04 13:46:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2233 2009/01/05 00:04:03 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  =net-www/xxv-1.2.1383 , =x11-themes/xxv-skins-1.2.1383 masked for utf8
+  handle testing
 
   04 Jan 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
   mail-client/claws-mail-smime has been removed, see bug 253707
