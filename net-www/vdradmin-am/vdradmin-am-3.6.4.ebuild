@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.6.0.ebuild,v 1.4 2008/11/18 16:20:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.6.4.ebuild,v 1.1 2009/01/05 21:02:19 hd_brummy Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://andreas.vdr-developer.org/download/${MY_P}.tar.bz2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="unicode"
+IUSE=""
 
 DEPEND="dev-lang/perl
 	dev-perl/Template-Toolkit
@@ -24,7 +24,7 @@ DEPEND="dev-lang/perl
 	dev-perl/Authen-SASL
 	dev-perl/Digest-HMAC
 	dev-perl/URI
-	unicode? ( sys-devel/gettext )"
+	sys-devel/gettext"
 RDEPEND="${DEPEND}"
 
 ETC_DIR="/etc/vdradmin"
@@ -49,23 +49,12 @@ src_unpack() {
 		-e "s-/var/run/vdradmind.pid-/var/tmp/vdradmin/vdradmind.pid-"
 }
 
-src_compile() {
-
-	if ! use unicode; then
-		einfo "no need to compile"
-	else
-		einfo "additionally generating utf8 locales"
-		"${S}"/make.sh utf8add || die
-		"${S}"/make.sh po || die
-	fi
-}
-
 src_install() {
 
-	newinitd "${FILESDIR}"/vdradmin-2 vdradmin
+	newinitd "${FILESDIR}"/vdradmin-4 vdradmin
 	newconfd "${FILESDIR}"/confd-2 vdradmin
 
-	dobin vdradmind.pl
+	newbin vdradmind.pl vdradmind
 
 	insinto ${LIB_DIR}/template
 	doins -r "${S}"/template/*
@@ -79,6 +68,8 @@ src_install() {
 	exeinto ${LIB_DIR}
 	doexe autotimer2searchtimer.pl
 
+	doman vdradmind.pl.1
+
 	dodoc HISTORY INSTALL CREDITS README* REQUIREMENTS FAQ
 	docinto contrib
 	dodoc "${S}"/contrib/*
@@ -87,7 +78,7 @@ src_install() {
 	keepdir "${ETC_DIR}"
 	keepdir "${TMP_DIR}"
 
-	dosed "s:FILES_IN_SYSTEM    = 0;:FILES_IN_SYSTEM    = 1;:g" /usr/bin/vdradmind.pl
+	dosed "s:FILES_IN_SYSTEM    = 0;:FILES_IN_SYSTEM    = 1;:g" /usr/bin/vdradmind
 }
 
 pkg_preinst() {
