@@ -27,7 +27,6 @@
 			partition editor</flag>
 		<flag name='qemu'>Add support for <pkg>app-emulation/qemu</pkg> based
 			virtual machines</flag>
-		<flag name='server'>Enables support for libvirtd</flag>
 		<flag name='xen'>Add support for <pkg>app-emulation/xen</pkg> based
 			virtual machines</flag>
 	</use>
