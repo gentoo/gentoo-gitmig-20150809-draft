@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.5.2.ebuild,v 1.3 2008/12/31 03:24:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/bless-0.5.2.ebuild,v 1.4 2009/01/05 17:23:13 loki_val Exp $
 
 inherit autotools eutils gnome2 mono
 
@@ -15,7 +15,7 @@ IUSE="debug"
 
 RDEPEND=">=dev-lang/mono-1.1.14
 		>=dev-dotnet/gtk-sharp-2.8
-		|| ( >=dev-dotnet/gtk-sharp-2.12.6 >=dev-dotnet/glade-sharp-2.8 )"
+		>=dev-dotnet/glade-sharp-2.8"
 DEPEND="${RDEPEND}
 		  app-text/scrollkeeper
 		>=sys-devel/gettext-0.15
@@ -24,14 +24,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	if has_version '>=dev-dotnet/gtk-sharp-2.12.6'
-	then
-		if ! built_with_use --missing false 'dev-dotnet/gtk-sharp' 'glade'
-		then
-			eerror "Please rebuild >=dev-dotnet/gtk-sharp-2.12.6 with USE='glade'"
-			die "Please rebuild >=dev-dotnet/gtk-sharp-2.12.6 with USE='glade'"
-		fi
-	fi
 
 	G2CONF="${G2CONF} --enable-unix-specific $(use_enable debug)"
 

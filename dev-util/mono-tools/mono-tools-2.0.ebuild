@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.0.ebuild,v 1.6 2008/12/31 03:24:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.0.ebuild,v 1.7 2009/01/05 17:23:38 loki_val Exp $
 
 EAPI=2
 
@@ -17,7 +17,8 @@ IUSE="webkit xulrunner"
 
 RDEPEND=">=dev-lang/mono-2.0
 	>=virtual/monodoc-${PV}
-	>=dev-dotnet/gtk-sharp-2.12.6[glade]
+	>=dev-dotnet/gtk-sharp-2.10
+	>=dev-dotnet/glade-sharp-2.10
 	>=dev-dotnet/gconf-sharp-2
 	>=dev-dotnet/gtkhtml-sharp-2
 	webkit? ( dev-dotnet/webkit-sharp )
