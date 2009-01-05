@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monouml/monouml-0.1.ebuild,v 1.7 2008/11/25 22:18:28 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monouml/monouml-0.1.ebuild,v 1.8 2009/01/05 17:21:34 loki_val Exp $
 
 inherit mono eutils
 
@@ -18,20 +18,13 @@ IUSE=""
 RDEPEND=">=dev-lang/mono-1.1.4
 	>=dev-dotnet/gtk-sharp-1.9.2
 	>=dev-dotnet/gnome-sharp-1.9.2
-	|| ( >=dev-dotnet/gtk-sharp-2.12.6 >=dev-dotnet/glade-sharp-1.9.2 )"
+	>=dev-dotnet/glade-sharp-1.9.2"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-util/pkgconfig"
 
 KEYWORDS="amd64 x86"
 SLOT="0"
-
-pkg_setup() {
-	if has_version '>=dev-dotnet/gtk-sharp-2.12.6'
-	then
-		built_with_use --missing false dev-dotnet/gtk-sharp glade || die "dev-dotnet/gtk-sharp must be built with glade support"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
