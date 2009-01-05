@@ -7,6 +7,5 @@
 	</longdescription>
   <use>
     <flag name="screenshot">Enable screenshot support (using <pkg>media-gfx/scrot</pkg>)</flag>
-    <flag name="trayicon">Enable support for trayicon</flag>
   </use>
 </pkgmetadata>
