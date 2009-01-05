@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-dxr3
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.15 2008/12/13 18:48:29 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.16 2009/01/05 23:57:01 hd_brummy Exp $
+
+*vdr-dxr3-0.2.9 (05 Jan 2009)
+
+  05 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-dxr3-0.2.9.ebuild:
+  versions bump
 
   13 Dec 2008; <ssuominen@gentoo.org> vdr-dxr3-0.2.8.ebuild:
   x86 stable
