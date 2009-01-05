@@ -1,64 +1,64 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.6.ebuild,v 1.1 2008/05/15 22:11:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.9.ebuild,v 1.1 2009/01/05 23:32:43 eva Exp $
 
-inherit autotools eutils pam gnome2
+inherit eutils pam gnome2
 
 DESCRIPTION="GNOME Display Manager"
 HOMEPAGE="http://www.gnome.org/projects/gdm/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE_LIBC="elibc_glibc"
 IUSE="accessibility afs branding dmx ipv6 gnome-keyring pam remote selinux tcpd xinerama $IUSE_LIBC"
 
 # Name of the tarball with gentoo specific files
-GDM_EXTRA="${PN}-2.20.5-gentoo-files"
+GDM_EXTRA="${PN}-2.20.9-gentoo-files"
 
 SRC_URI="${SRC_URI}
 		 mirror://gentoo/${GDM_EXTRA}.tar.bz2
 		 branding? ( mirror://gentoo/gentoo-gdm-theme-r3.tar.bz2 )"
 
 RDEPEND="dev-libs/dbus-glib
-		 >=dev-libs/glib-2.12
-		 >=x11-libs/gtk+-2.6
-		 >=x11-libs/pango-1.3
-		 >=gnome-base/libglade-2
-		 >=gnome-base/libgnomecanvas-2
-		 >=gnome-base/librsvg-1.1.1
-		 >=dev-libs/libxml2-2.4.12
-		 >=media-libs/libart_lgpl-2.3.11
-		 x11-libs/gksu
-		 x11-libs/libXi
-		 x11-libs/libXau
-		 x11-libs/libX11
-		 x11-libs/libXext
-		 x11-apps/sessreg
-		 x11-libs/libXdmcp
-		 xinerama? ( x11-libs/libXinerama )
-		 sys-auth/consolekit
-		 accessibility? ( x11-libs/libXevie )
-		 afs? ( net-fs/openafs sys-libs/lwp )
-		 dmx? ( x11-libs/libdmx )
-		 gnome-keyring? ( >=gnome-base/gnome-keyring-2.22 )
-		 pam? (
-			virtual/pam
-			>=sys-auth/pambase-20080318
-		 )
-		 !pam? ( elibc_glibc? ( sys-apps/shadow ) )
-		 remote? ( gnome-extra/zenity )
-		 selinux? ( sys-libs/libselinux )
-		 tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+	>=dev-libs/glib-2.12
+	>=x11-libs/gtk+-2.6
+	>=x11-libs/pango-1.3
+	>=gnome-base/libglade-2
+	>=gnome-base/libgnomecanvas-2
+	>=gnome-base/librsvg-1.1.1
+	>=dev-libs/libxml2-2.4.12
+	>=media-libs/libart_lgpl-2.3.11
+	x11-libs/gksu
+	x11-libs/libXi
+	x11-libs/libXau
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-apps/sessreg
+	x11-libs/libXdmcp
+	xinerama? ( x11-libs/libXinerama )
+	sys-auth/consolekit
+	accessibility? ( x11-libs/libXevie )
+	afs? ( net-fs/openafs sys-libs/lwp )
+	dmx? ( x11-libs/libdmx )
+	gnome-keyring? ( >=gnome-base/gnome-keyring-2.22 )
+	pam? (
+		virtual/pam
+		>=sys-auth/pambase-20080318 )
+	!pam? ( elibc_glibc? ( sys-apps/shadow ) )
+	remote? ( gnome-extra/zenity )
+	selinux? ( sys-libs/libselinux )
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 DEPEND="${RDEPEND}
-		dmx? ( x11-proto/dmxproto )
-		sys-devel/gettext
-		x11-proto/inputproto
-		>=dev-util/intltool-0.35
-		>=dev-util/pkgconfig-0.19
-		>=app-text/scrollkeeper-0.1.4
-		>=app-text/gnome-doc-utils-0.3.2"
+	dmx? ( x11-proto/dmxproto )
+	xinerama? ( x11-proto/xineramaproto )
+	sys-devel/gettext
+	x11-proto/inputproto
+	>=dev-util/intltool-0.35
+	>=dev-util/pkgconfig-0.19
+	>=app-text/scrollkeeper-0.1.4
+	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
@@ -70,6 +70,7 @@ pkg_setup() {
 		--with-xdmcp=yes
 		--with-pam-prefix=/etc
 		--with-console-kit=yes
+		SOUND_PROGRAM=/usr/bin/gdmplay
 		$(use_enable accessibility xevie)
 		$(use_enable ipv6)
 		$(use_enable remote secureremote)
@@ -116,6 +117,9 @@ src_unpack() {
 
 	# Add gksu to gdmsetup menu entry
 	epatch "${FILESDIR}/${PN}-2.20.2-gksu.patch"
+
+	# Fix parallel install, bug #217037
+	epatch "${FILESDIR}/${P}-parallel-make.patch"
 }
 
 src_install() {
@@ -145,6 +149,9 @@ src_install() {
 	# add a custom xsession .desktop by default (#44537)
 	exeinto /etc/X11/dm/Sessions
 	doexe "${gentoodir}/custom.desktop"
+
+	# add a custom sound playing script (#248253)
+	dobin "${gentoodir}/gdmplay"
 
 	# avoid file collision, bug #213118
 	rm -f "${D}/usr/share/xsessions/gnome.desktop"
