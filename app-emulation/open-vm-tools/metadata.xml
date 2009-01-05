@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>vmware</herd>
 <use>
-	<flag name='icu'>Enable unicode support using <pkg>dev-libs/icu</pkg></flag>
 	<flag name='unity'>Enable host unity support</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/open-vm-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.12 2008/12/31 00:39:39 ikelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.13 2009/01/05 21:35:58 maekke Exp $
+
+  05 Jan 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  drop local icu USE-flag description, as it's global now
 
 *open-vm-tools-0.0.20081223.137496 (31 Dec 2008)
 
