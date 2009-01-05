@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yaz
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.55 2008/10/04 12:25:58 ranger Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.56 2009/01/05 21:46:11 maekke Exp $
+
+  05 Jan 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  drop local icu USE-flag description, as it's global now
 
   04 Oct 2008; Brent Baude <ranger@gentoo.org> yaz-3.0.26.ebuild:
   stable ppc64, bug 238992

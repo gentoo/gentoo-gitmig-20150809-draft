@@ -7,8 +7,6 @@
   <name>Robin H. Johnson</name>
 </maintainer>
 <use>
-  <flag name='icu'>Enable ICU (Internationalization Components for Unicode)
-    support, using <pkg>dev-libs/icu</pkg></flag>
   <flag name='ziffy'>Install ziffy, a promiscuous Z39.50 APDU sniffer</flag>
 </use>
 </pkgmetadata>
