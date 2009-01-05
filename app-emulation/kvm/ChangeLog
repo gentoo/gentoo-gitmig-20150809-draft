@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/kvm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.24 2008/12/16 15:30:13 dang Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.25 2009/01/05 01:30:01 dang Exp $
+
+*kvm-82 (05 Jan 2009)
+
+  05 Jan 2009; Daniel Gryniewicz <dang@gentoo.org> kvm-81.ebuild,
+  +kvm-82.ebuild:
+  Bump to 82
+
+  This release adds support for nested virtualization, a feature which
+  allows you to run kvm (and possibly other hypervisors) inside a guest.
+  This is an experimental feature and is only available on AMD hosts.
+
+  Also fixes bug #251903
 
 *kvm-81 (16 Dec 2008)
 

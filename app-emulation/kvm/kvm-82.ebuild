@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-81.ebuild,v 1.2 2009/01/05 01:30:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-82.ebuild,v 1.1 2009/01/05 01:30:01 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
 EAPI="1"
 
 # Patchset git repo is at http://github.com/dang/kvm-patches/tree/master
-PATCHSET="kvm-patches-20081216"
+PATCHSET="kvm-patches-20090104"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	http://apollo.fprintf.net/downloads/${PATCHSET}.tar.gz"
 
@@ -122,7 +122,6 @@ src_compile() {
 	use pulseaudio && audio_opts="pa $audio_opts"
 	use sdl && audio_opts="sdl $audio_opts"
 	use modules && conf_opts="$conf_opts --kerneldir=$KV_DIR"
-	conf_opts="$conf_opts --disable-gcc-check"
 	conf_opts="$conf_opts --prefix=/usr"
 	#conf_opts="$conf_opts --audio-drv-list=\"$audio_opts\""
 
