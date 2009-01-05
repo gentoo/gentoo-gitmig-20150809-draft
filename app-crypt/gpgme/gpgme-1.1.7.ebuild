@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.7.ebuild,v 1.1 2009/01/03 09:02:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.1.7.ebuild,v 1.2 2009/01/05 08:15:37 dragonheart Exp $
 
-inherit eutils autotools
+inherit eutils libtool
 
 DESCRIPTION="GnuPG Made Easy is a library for making GnuPG easier to use"
 HOMEPAGE="http://www.gnupg.org/related_software/gpgme"
