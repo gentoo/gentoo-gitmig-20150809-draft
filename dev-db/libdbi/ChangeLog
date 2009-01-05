@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.29 2008/12/16 20:15:19 pva Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.30 2009/01/05 17:33:27 jer Exp $
+
+  05 Jan 2009; Jeroen Roovers <jer@gentoo.org> libdbi-0.8.3.ebuild:
+  Stable for HPPA (bug #253663).
 
   16 Dec 2008; Peter Volkov <pva@gentoo.org> libdbi-0.8.3.ebuild:
   ~mips keyworded for dictd, bug #245413
