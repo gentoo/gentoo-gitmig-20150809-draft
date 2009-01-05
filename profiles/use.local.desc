@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4102 2009/01/05 03:32:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4103 2009/01/05 03:47:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -206,7 +206,6 @@ app-emulation/libvirt:lvm - Add support for the Logical Volume Manager sys-apps/
 app-emulation/libvirt:openvz - Add support for sys-kernel/openvz-sources OpenVZ-based virtual machines
 app-emulation/libvirt:parted - Add support for the sys-apps/parted partition editor
 app-emulation/libvirt:qemu - Add support for app-emulation/qemu based virtual machines
-app-emulation/libvirt:server - Enables support for libvirtd
 app-emulation/libvirt:xen - Add support for app-emulation/xen based virtual machines
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:pci - Experimental PCI proxy support
