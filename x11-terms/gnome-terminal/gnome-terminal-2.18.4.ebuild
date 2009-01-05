@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.18.4.ebuild,v 1.8 2008/03/14 09:01:14 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.18.4.ebuild,v 1.9 2009/01/05 13:42:59 remi Exp $
 
 inherit eutils gnome2
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="virtual/xft
+RDEPEND="x11-libs/libXft
 	>=x11-libs/gtk+-2.10
 	>=gnome-base/gconf-2.14
 	>=x11-libs/startup-notification-0.8
