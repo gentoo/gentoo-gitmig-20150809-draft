@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.78 2008/09/25 01:50:19 dirtyepic Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.79 2009/01/05 21:33:22 maekke Exp $
+
+  05 Jan 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  drop local icu USE-flag description, as it's global now
 
   25 Sep 2008; Ryan Hill <dirtyepic@gentoo.org>
   +files/brltty-3.9-autoconf.patch, +files/brltty-3.9-gnusource.patch,
