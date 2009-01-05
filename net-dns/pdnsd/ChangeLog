@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdnsd
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.89 2008/12/13 10:49:59 mrness Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.90 2009/01/05 11:14:53 armin76 Exp $
+
+  05 Jan 2009; Raúl Porcel <armin76@gentoo.org> pdnsd-1.2.7-r1.ebuild:
+  arm/s390 stable wrt #231285
 
 *pdnsd-1.2.7-r1 (13 Dec 2008)
 
