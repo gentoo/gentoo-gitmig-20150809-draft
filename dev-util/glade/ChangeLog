@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/glade
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.109 2008/09/12 14:55:37 jer Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.110 2009/01/05 23:37:03 eva Exp $
+
+  05 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org> -glade-3.4.0.ebuild,
+  -glade-3.4.4.ebuild:
+  Clean up old revisions.
 
   12 Sep 2008; Jeroen Roovers <jer@gentoo.org> glade-3.4.5.ebuild:
   Stable for HPPA (bug #235522).
