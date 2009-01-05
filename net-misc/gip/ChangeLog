@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gip
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.16 2008/07/22 04:03:09 darkside Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/ChangeLog,v 1.17 2009/01/05 18:17:19 angelos Exp $
+
+  05 Jan 2009; Christoph Mende <angelos@gentoo.org>
+  +files/gip-1.6.1.1-asneeded.patch, gip-1.6.1.1.ebuild:
+  QA: Fixed compilation with --as-needed (bug 248090), respect LDFLAGS,
+  added missing intltool dependency (bug 233066)
 
   20 Jul 2008; Jeremy Olexa <darkside@gentoo.org>
   +files/gip-1.6.1.1-libsigcpp.patch, gip-1.6.1.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.7 2008/07/20 18:31:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gip/gip-1.6.1.1.ebuild,v 1.8 2009/01/05 18:17:19 angelos Exp $
 
 inherit versionator distutils
 
@@ -19,6 +19,7 @@ RDEPEND=">=dev-cpp/gtkmm-2.4
 	>=dev-libs/libsigc++-2.0"
 
 DEPEND="${RDEPEND}
+	dev-util/intltool
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
@@ -26,7 +27,9 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-libsigcpp.patch"
+	epatch "${FILESDIR}/${P}-libsigcpp.patch" \
+		"${FILESDIR}"/${P}-asneeded.patch
+	sed -i -e "s:g++:$(tc-getCXX):" installer/build_files.sh
 }
 
 src_compile() {
