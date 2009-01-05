@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/sofia-sip
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.6 2008/07/26 01:05:44 tester Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.7 2009/01/05 23:58:47 tester Exp $
+
+*sofia-sip-1.12.10 (06 Jan 2009)
+
+  06 Jan 2009; Olivier Crête <tester@gentoo.org> +sofia-sip-1.12.10.ebuild:
+  Version bump
 
 *sofia-sip-1.12.9 (26 Jul 2008)
 
