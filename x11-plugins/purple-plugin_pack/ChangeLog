@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/purple-plugin_pack
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.19 2008/12/28 18:26:38 tester Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.20 2009/01/05 05:46:53 tester Exp $
+
+  05 Jan 2009; Olivier Crête <tester@gentoo.org>
+  purple-plugin_pack-2.5.1.ebuild:
+  Don'T try to install non-existing TODO, bug #253781
 
   28 Dec 2008; Olivier Crête <tester@gentoo.org>
   purple-plugin_pack-2.5.1.ebuild:
