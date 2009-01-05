@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fspanel
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/ChangeLog,v 1.17 2008/12/07 13:04:53 coldwind Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/ChangeLog,v 1.18 2009/01/05 21:57:02 maekke Exp $
+
+  05 Jan 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  drop local xft USE-flag description, as it's global now
 
 *fspanel-0.8_beta1-r3 (07 Dec 2008)
 
