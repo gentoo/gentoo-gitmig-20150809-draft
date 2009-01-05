@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.4.14.ebuild,v 1.7 2008/04/13 22:49:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.4.14.ebuild,v 1.8 2009/01/05 13:26:13 remi Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -23,7 +23,7 @@ RDEPEND="media-libs/fontconfig
 				x11-libs/libXrender
 				x11-libs/libXext
 				x11-libs/libX11
-				virtual/xft
+				x11-libs/libXft
 				xcb? ( x11-libs/libxcb
 						x11-libs/xcb-util )
 			)
