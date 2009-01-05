@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/amazonmp3-libcompat/amazonmp3-libcompat-0.1.ebuild,v 1.1 2008/09/29 14:16:45 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/amazonmp3-libcompat/amazonmp3-libcompat-0.1.ebuild,v 1.2 2009/01/05 18:27:01 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -10,8 +10,8 @@ BOOST_VERSION="1.34.1-7.fc8.i386"
 
 DESCRIPTION="Support dependencies for net-misc/amazonmp3"
 HOMEPAGE="http://gentoo.org/proj/en/desktop"
-SRC_URI="mirrors://gentoo/amazonmp3-boost-${BOOST_VERSION}.tar.bz2
-	amd64? ( mirrors://gentoo/${P}.tar.bz2 )"
+SRC_URI="mirror://gentoo/amazonmp3-boost-${BOOST_VERSION}.tar.bz2
+	amd64? ( mirror://gentoo/${P}.tar.bz2 )"
 RESTRICT="strip"
 
 LICENSE="GPL-2"
