@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/darkstat
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.34 2008/09/10 10:41:52 pva Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.35 2009/01/05 20:07:19 pva Exp $
+
+*darkstat-3.0.712 (05 Jan 2009)
+
+  05 Jan 2009; Peter Volkov <pva@gentoo.org>
+  +files/darkstat-3.0.712-dlt_raw.patch, +darkstat-3.0.712.ebuild:
+  Version bump, added patch to make darkstat workable on OpenVPN interfaces,
+  thank Anton S. Ustyuzhanin for all this work, bug #251348.
 
   10 Sep 2008; Peter Volkov <pva@gentoo.org> darkstat-3.0.707-r1.ebuild:
   enewuser/enewgroup die on their own, no need to || die
