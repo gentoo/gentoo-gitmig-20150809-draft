@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gnome-subtitles
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.17 2008/11/26 22:50:26 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.18 2009/01/05 17:25:34 loki_val Exp $
+
+  05 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  gnome-subtitles-0.8-r1.ebuild:
+  Fix for new gtk-sharp-module eclass
 
 *gnome-subtitles-0.8-r1 (26 Nov 2008)
 
