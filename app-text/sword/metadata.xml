@@ -11,7 +11,6 @@ project. Its purpose is to create tools that allow programmers and Bible
 societies to write new Bible software more quickly and easily.
 </longdescription>
 <use>
-  <flag name='icu'>Enable <pkg>dev-libs/icu</pkg> support for sword</flag>
   <flag name='lucene'>Enable lucene support for faster searching
     (<pkg>dev-cpp/clucene</pkg>)</flag>
 </use>

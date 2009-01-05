@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sword
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.47 2008/12/20 20:20:12 maekke Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.48 2009/01/05 21:39:18 maekke Exp $
+
+  05 Jan 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  drop local icu USE-flag description, as it's global now
 
   20 Dec 2008; Markus Meier <maekke@gentoo.org> sword-1.5.10-r2.ebuild:
   x86 stable, bug #245857
