@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4103 2009/01/05 03:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4104 2009/01/05 17:27:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -484,7 +484,6 @@ dev-db/postgresql-server:uuid - Enable server side UUID generation (via dev-libs
 dev-db/sqlite:nothreadsafe - Turn off thread safe operation of sqlite
 dev-db/sqlite:soundex - Enable the soundex function to compute soundex encodings of strings
 dev-db/sqlite:threadsafe - Enable thread safe operation of sqlite
-dev-dotnet/gtk-sharp:glade -  Build the C#/Mono bindings for libglade (Glade#). This flag replaces the separate dev-dotnet/glade-sharp package that was available up to version 2.10.0. If a package require Glade# make sure to use a USE-based dependency from EAPI 2. 
 dev-embedded/openocd:ft2232 - Enable support for USB chips via dev-embedded/libftd2xx
 dev-embedded/openocd:ftdi - Enable support for USB FTDI chips (dev-embedded/libftdi)
 dev-embedded/openocd:parport - Enable support for parport JTAG devices
@@ -975,7 +974,6 @@ kde-base/gwenview:semantic-desktop -  Semantic desktop allows for storage of dig
 kde-base/juk:akode - Support for the aKode audio-decoding frame-work
 kde-base/juk:tunepimp - Provide MusicBrainz tagging in Juk
 kde-base/kaddressbook:gnokii - Address synchronization with mobile phones via app-mobilephone/gnokii
-kde-base/kalzium:cviewer - Enable Kalzium compound viewer
 kde-base/kalzium:editor - Enable the embedded molecule editor/viewer
 kde-base/kalzium:solver - Enable the equation solver
 kde-base/kbugbuster:kcal - Support for kcal (calendar) format
@@ -2714,7 +2712,6 @@ x11-misc/x11vnc:system-libvncserver - Build x11vnc against the system libvncserv
 x11-misc/xlockmore:xlockrc - Enables xlockrc for people without PAM
 x11-misc/xscreensaver:new-login - Enables New Login button using gdmflexiserver (gnome-base/gdm)
 x11-misc/zim:screenshot - Enable screenshot support (using media-gfx/scrot)
-x11-misc/zim:trayicon - Enable support for trayicon
 x11-plugins/bfm:gkrellm - Enable building of app-admin/gkrellm module
 x11-plugins/gkrellm-plugins:audacious - Enable the audacious plugin x11-plugins/gkrellmms
 x11-plugins/gkrellmbups:nut - Enable monitoring Network-UPS via sys-power/nut
