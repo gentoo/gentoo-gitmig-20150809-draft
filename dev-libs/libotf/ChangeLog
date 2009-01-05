@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libotf
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.38 2008/11/08 19:51:38 armin76 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.39 2009/01/05 11:19:33 armin76 Exp $
+
+  05 Jan 2009; Raúl Porcel <armin76@gentoo.org> libotf-0.9.8.ebuild:
+  Add ~arm
 
   08 Nov 2008; Raúl Porcel <armin76@gentoo.org> libotf-0.9.8.ebuild:
   ia64 stable
