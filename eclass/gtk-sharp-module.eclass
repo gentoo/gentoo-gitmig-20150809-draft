@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.8 2009/01/05 17:12:34 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.9 2009/01/05 20:49:10 loki_val Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>, butchered by ikelos, then loki_val.
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -207,8 +207,8 @@ gtk-sharp-module_fix_files() {
 	# We also make sure to call the installed gapi-fixup and gapi-codegen and
 	# not the ones that would be built locally.
 	local gapi_dir="${ROOT}/usr/share/gapi${GTK_SHARP_SLOT_DEC}"
-	local GAPI_FIXUP="gapi${GTK_SHARP_COMPONENT_SLOT}-fixup"
-	local GAPI_CODEGEN="gapi${GTK_SHARP_COMPONENT_SLOT}-codegen"
+	local GAPI_FIXUP="gapi2-fixup"
+	local GAPI_CODEGEN="gapi2-codegen"
 
 	local makefiles=( $(find "${S}" -name Makefile.in) )
 	sed -i \
