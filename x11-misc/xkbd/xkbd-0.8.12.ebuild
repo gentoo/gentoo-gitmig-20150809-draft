@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/xkbd-0.8.12.ebuild,v 1.14 2008/12/21 17:34:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/xkbd-0.8.12.ebuild,v 1.15 2009/01/05 14:02:40 remi Exp $
 
 DESCRIPTION="Xkbd - onscreen soft keyboard for X11"
 HOMEPAGE="http://handhelds.org/~mallum/xkbd/"
@@ -13,7 +13,7 @@ IUSE="doc debug"
 
 RDEPEND="x11-libs/libXrender
 	x11-libs/libX11
-	virtual/xft
+	x11-libs/libXft
 	x11-libs/libXtst
 	x11-libs/libXpm
 	media-libs/freetype
