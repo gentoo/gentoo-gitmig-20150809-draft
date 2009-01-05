@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/aircrack-ng
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.35 2008/12/22 01:50:45 vanquirius Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.36 2009/01/05 05:27:49 rbu Exp $
+
+*aircrack-ng-1.0_rc1 (05 Jan 2009)
+
+  05 Jan 2009; Robert Buchholz <rbu@gentoo.org> +aircrack-ng-1.0_rc1.ebuild:
+  Version bump, ebuild contributions by Dylan Scott, Alessandro Guido, Roel
+  Aaij and Pierre Guinoiseau, bug #233285.
 
   22 Dec 2008; Marcelo Goes <vanquirius@gentoo.org>
   -aircrack-ng-0.9.1.ebuild, -aircrack-ng-0.9.2.ebuild:
