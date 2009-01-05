@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/bakery
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/bakery/ChangeLog,v 1.9 2008/06/30 21:19:52 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/bakery/ChangeLog,v 1.10 2009/01/05 22:01:44 eva Exp $
+
+*bakery-2.6.2 (05 Jan 2009)
+
+  05 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org> +bakery-2.6.2.ebuild:
+  Bump to 2.6.2.
 
 *bakery-2.4.4 (30 Jun 2008)
 
