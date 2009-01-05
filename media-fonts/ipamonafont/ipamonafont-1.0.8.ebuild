@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ipamonafont-1.0.8.ebuild,v 1.2 2009/01/03 23:40:34 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ipamonafont-1.0.8.ebuild,v 1.3 2009/01/05 20:48:50 bluebird Exp $
 
 inherit font
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.geocities.jp/ipa_mona/${MY_PN}-${PV}.tar.gz"
 LICENSE="grass-ipafonts as-is"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}"
