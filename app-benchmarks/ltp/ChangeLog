@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/ltp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.13 2008/12/04 22:33:21 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.14 2009/01/05 19:33:19 patrick Exp $
+
+*ltp-20081231 (05 Jan 2009)
+
+  05 Jan 2009; Patrick Lauer <patrick@gentoo.org> +ltp-20081231.ebuild:
+  Bump to 20081231
 
   05 Dec 2008; Patrick Lauer <patrick@gentoo.org> -ltp-20060306.ebuild:
   Removing -20060918 to close bug #249395. Taking over maintenance from robbat2.
