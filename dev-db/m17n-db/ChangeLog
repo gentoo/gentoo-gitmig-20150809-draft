@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/m17n-db
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.36 2008/11/20 14:35:28 ranger Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.37 2009/01/05 11:21:23 armin76 Exp $
+
+  05 Jan 2009; Raúl Porcel <armin76@gentoo.org> m17n-db-1.5.3.ebuild:
+  Add ~arm
 
   20 Nov 2008; Brent Baude <ranger@gentoo.org> m17n-db-1.5.2.ebuild:
   Marking m17n-db-1.5.2 ppc64 for bug 244898
