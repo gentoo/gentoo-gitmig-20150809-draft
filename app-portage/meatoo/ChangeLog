@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/meatoo
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/meatoo/ChangeLog,v 1.4 2007/05/15 09:28:15 bangert Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/meatoo/ChangeLog,v 1.5 2009/01/05 19:23:55 patrick Exp $
+
+  05 Jan 2009; Patrick Lauer <patrick@gentoo.org> meatoo-0.1.1.ebuild:
+  adding ~amd64 keyword
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
