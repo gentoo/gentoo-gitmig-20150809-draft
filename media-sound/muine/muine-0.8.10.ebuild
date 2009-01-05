@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.10.ebuild,v 1.2 2008/12/14 14:27:06 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.10.ebuild,v 1.3 2009/01/05 17:24:27 loki_val Exp $
 
 EAPI=2
 
-inherit base gnome2 mono eutils multilib autotools flag-o-matic
+inherit base gnome2 mono eutils multilib flag-o-matic
 
 DESCRIPTION="A music player for GNOME"
 HOMEPAGE="http://muine-player.org"
@@ -18,7 +18,8 @@ IUSE="aac flac mad vorbis xine"
 RDEPEND="x11-themes/gnome-icon-theme
 	>=dev-lang/mono-2
 	>=x11-libs/gtk+-2.6
-	>=dev-dotnet/gtk-sharp-2.12.6[glade]
+	>=dev-dotnet/gtk-sharp-2.12.6
+	>=dev-dotnet/glade-sharp-2.12.6
 	>=dev-dotnet/gnome-sharp-2.6
 	>=dev-dotnet/gconf-sharp-2.6
 	>=dev-dotnet/gnomevfs-sharp-2.6

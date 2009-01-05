@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cowbell
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/ChangeLog,v 1.12 2008/12/19 20:03:59 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/ChangeLog,v 1.13 2009/01/05 17:24:48 loki_val Exp $
+
+  05 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> cowbell-0.2.7.1.ebuild:
+  Fix for new gtk-sharp-module eclass
 
   19 Dec 2008; <ssuominen@gentoo.org>
   +files/cowbell-0.2.7.1-desktop-entry.patch, cowbell-0.2.7.1.ebuild:

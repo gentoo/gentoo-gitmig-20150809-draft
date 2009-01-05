@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-6-r1.ebuild,v 1.1 2008/11/26 15:37:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-6-r1.ebuild,v 1.2 2009/01/05 17:25:12 loki_val Exp $
 
 EAPI=2
 
@@ -23,7 +23,8 @@ RDEPEND=">=gnome-base/gconf-2
 		>=media-plugins/gst-plugins-gconf-0.10
 		>=media-plugins/gst-plugins-gnomevfs-0.10
 		>=dev-lang/mono-1.0
-		|| ( >=dev-dotnet/gtk-sharp-2.12.6[glade] ( >=dev-dotnet/gtk-sharp-2 >=dev-dotnet/glade-sharp-2 ) )
+		>=dev-dotnet/gtk-sharp-2
+		>=dev-dotnet/glade-sharp-2
 		>=dev-dotnet/gnome-sharp-2
 		>=dev-dotnet/gnomevfs-sharp-2
 		dev-dotnet/notify-sharp
