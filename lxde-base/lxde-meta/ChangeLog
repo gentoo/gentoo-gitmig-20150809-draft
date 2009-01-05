@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxde-meta
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.1 2008/11/07 16:33:33 yngwin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.2 2009/01/05 20:56:59 yngwin Exp $
+
+*lxde-meta-0.3.2.1-r1 (05 Jan 2009)
+
+  05 Jan 2009; Ben de Groot <yngwin@gentoo.org>
+  +lxde-meta-0.3.2.1-r1.ebuild:
+  Adding x11-misc/obconf dependency, in order to configure Openbox, which is
+  used as WM. Fixes bug 250277.
 
 *lxde-meta-0.3.2.1 (07 Nov 2008)
 
