@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/quota
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.38 2008/11/25 11:57:53 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.39 2009/01/05 23:09:49 vapier Exp $
+
+*quota-3.17 (05 Jan 2009)
+
+  05 Jan 2009; Mike Frysinger <vapier@gentoo.org> +quota-3.17.ebuild:
+  Version bump.
 
   25 Nov 2008; Raúl Porcel <armin76@gentoo.org> quota-3.15.ebuild:
   alpha/ia64/sparc stable wrt #247651
