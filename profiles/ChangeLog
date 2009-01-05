@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2235 2009/01/05 22:20:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2236 2009/01/05 22:52:20 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Remove net-misc/logjam and net-news/straw mask per bug #181236 and
+  bug #187285.
 
   05 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Add gnome-extra/gnome-user-share-0.41 to bluez-4 mask

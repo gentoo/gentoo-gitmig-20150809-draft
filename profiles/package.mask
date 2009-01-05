@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9362 2009/01/05 22:20:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9363 2009/01/05 22:52:21 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -314,16 +314,6 @@ net-wireless/bluez
 >=net-wireless/bluez-gnome-1.8
 >=app-mobilephone/obex-data-server-0.4
 >=gnome-extra/gnome-user-share-0.41
-
-# Gilles Dartiguelongue <eva@gentoo.org> (27 Nov 2008)
-# masked because no dev can test it and no proxy maintainer
-# steped up in a year, see bug #181236
-net-misc/logjam
-
-# Gilles Dartiguelongue <eva@gentoo.org> (27 Nov 2008)
-# masked because no-one cares, and broken in many ways.
-# See bugs #187285, #147405, #233055, #205396.
-net-news/straw
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (23 Nov 2007)
 # These might break automounting, so keep them masked for now.
