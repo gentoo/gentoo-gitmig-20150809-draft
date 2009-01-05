@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.230 2009/01/04 20:12:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.231 2009/01/05 21:49:06 maekke Exp $
+
+  05 Jan 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  drop local xft USE-flag description, as it's global now
 
   04 Jan 2009; Ulrich Mueller <ulm@gentoo.org>
   emacs-cvs-23.0.60_pre20081226.ebuild, emacs-cvs-23.0.9999.ebuild:
