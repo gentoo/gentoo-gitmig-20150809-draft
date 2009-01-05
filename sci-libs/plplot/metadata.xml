@@ -17,7 +17,6 @@
 </longdescription>
 <use>
   <flag name='ada'>Add bindings for the ADA programming language</flag>
-  <flag name='fortran95'>Add bindings for FORTRAN 95 programming language</flag>
   <flag name='itcl'>Add bindings for <pkg>dev-tcltk/itcl</pkg></flag>
   <flag name='jadetex'>Add device for <pkg>app-text/jadetex</pkg>
     (for processing tex files produced by the TeX backend of Jade)</flag>
