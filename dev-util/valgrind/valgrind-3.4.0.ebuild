@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.2.3-r1.ebuild,v 1.5 2008/01/14 20:22:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.4.0.ebuild,v 1.1 2009/01/05 19:08:16 griffon26 Exp $
 
 inherit autotools eutils flag-o-matic toolchain-funcs
 
@@ -10,11 +10,8 @@ SRC_URI="http://www.valgrind.org/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* amd64 ppc ppc64 ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="X"
-
-# bug #49147 (bogus stacktrace in gdb with --db-attach=yes) does not seem to be applicable anymore
-#RESTRICT="strip"
 
 RDEPEND="!dev-util/callgrind"
 
@@ -34,20 +31,18 @@ src_unpack() {
 	sed -i -e "s:doc/valgrind:doc/${P}:" docs/Makefile.am
 
 	# Fix incorrect --libs output in valgrind.pc (bug #147904)
-	epatch "${FILESDIR}/${P}-pkg-config.patch"
+	epatch "${FILESDIR}/${PN}-3.2.3-pkg-config.patch"
 
 	# Remove defaulting to ppc32-linux on ppc64 without multilib
 	# "valgrind: failed to start tool 'memcheck' for platform 'ppc32-linux':
 	#  No such file or directory"
 	if use ppc64 && ! has_multilib_profile; then
-		epatch "${FILESDIR}/valgrind-3.2.1-only64bit.patch"
+		epatch "${FILESDIR}/valgrind-3.3.0-only64bit.patch"
 	fi
 
-	epatch "${FILESDIR}/${P}-glibc-2.6.patch"
-	epatch "${FILESDIR}/${P}-glibc-2.7.patch"
-
-	# Prevent "unhandled instruction bytes: 0x66 0x66 0x66 0x66" (bug #189396)
-	epatch "${FILESDIR}/${P}-unhandled-instr-amd64.patch"
+	# Use local labels in inline asm to prevent 'symbol already defined' errors
+	# when optimisation is on (bug #234644).
+	epatch "${FILESDIR}/valgrind-3.3.1-local-labels.patch"
 
 	# Regenerate autotools files
 	eautoreconf
@@ -81,11 +76,20 @@ src_compile() {
 		! has_multilib_profile && myconf="${myconf} --enable-only64bit"
 	fi
 
-	econf ${myconf} || die "Configure failed!"
+	econf ${myconf} --without-mpicc || die "Configure failed!"
 	emake || die "Make failed!"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "Install failed!"
 	dodoc ACKNOWLEDGEMENTS AUTHORS FAQ.txt NEWS README*
+}
+
+pkg_postinst() {
+	if use ppc || use ppc64 ; then
+		ewarn "Valgrind will not work on ppc or ppc64 if glibc does not have"
+		ewarn "debug symbols (see https://bugs.gentoo.org/show_bug.cgi?id=214065)"
+		ewarn "To fix this you can add splitdebug to FEATURES in make.conf and"
+		ewarn "remerge glibc."
+	fi
 }
