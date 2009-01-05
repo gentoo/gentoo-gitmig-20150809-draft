@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beagle
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.88 2008/12/16 22:04:01 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.89 2009/01/05 17:21:13 loki_val Exp $
+
+  05 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> beagle-0.3.8-r2.ebuild:
+  Fix for new gtk-sharp-module eclass
 
 *beagle-0.3.8-r2 (16 Dec 2008)
 
