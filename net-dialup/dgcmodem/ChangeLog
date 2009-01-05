@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/dgcmodem
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dgcmodem/ChangeLog,v 1.2 2008/10/18 08:26:17 calchan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dgcmodem/ChangeLog,v 1.3 2009/01/05 08:46:38 calchan Exp $
+
+*dgcmodem-1.09 (05 Jan 2009)
+
+  05 Jan 2009; Denis Dupeyron <calchan@gentoo.org> +dgcmodem-1.09.ebuild:
+  Version bump for kernel 2.6.28.
 
 *dgcmodem-1.08 (18 Oct 2008)
 
