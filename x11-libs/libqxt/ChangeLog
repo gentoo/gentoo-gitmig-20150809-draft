@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/libqxt
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.5 2008/07/27 01:22:24 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.6 2009/01/05 03:09:41 yngwin Exp $
+
+*libqxt-0.4 (05 Jan 2009)
+
+  05 Jan 2009; Ben de Groot <yngwin@gentoo.org> metadata.xml,
+  -libqxt-0.2.4.ebuild, libqxt-0.2.5.ebuild, +libqxt-0.4.ebuild:
+  Version bump, fixing bug 217274, incorporating some changes proposed by
+  Toffanin in that bug report. Disabling parallel build, fixes bug 194730.
+  Renaming ssl useflag to more correct crypt, fixes bug 195659. Removing old
+  0.2.4 version. Adding local useflag descriptions to metadata.xml.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> libqxt-0.2.5.ebuild:
   Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.

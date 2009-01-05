@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.5.ebuild,v 1.3 2008/07/27 01:22:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.5.ebuild,v 1.4 2009/01/05 03:09:41 yngwin Exp $
 
 EAPI="1"
 inherit eutils qt4
 
-DESCRIPTION="The Qt eXTension library provides cross-platform utility classes to add functionality ontop of the Qt toolkit"
+DESCRIPTION="The Qt eXTension library provides cross-platform utility classes for the Qt toolkit"
 HOMEPAGE="http://libqxt.org/"
 SRC_URI="mirror://sourceforge/libqxt/${P}.tar.gz"
 
@@ -35,7 +35,8 @@ src_compile() {
 
 	./configure -prefix /usr ${myconf}
 
-	emake || die "emake failed"
+	# fails with parallel build, bug 194730
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
