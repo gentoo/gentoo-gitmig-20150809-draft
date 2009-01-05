@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4-r1.ebuild,v 1.8 2008/11/23 13:32:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4-r1.ebuild,v 1.9 2009/01/05 17:22:26 loki_val Exp $
 
 inherit mono eutils
 
@@ -15,21 +15,11 @@ IUSE=""
 
 RDEPEND="!media-gfx/autopano-sift-C
 	dev-lang/mono
-	|| ( >=dev-dotnet/gtk-sharp-2.12.6 dev-dotnet/glade-sharp )
+	dev-dotnet/glade-sharp
 	dev-dotnet/gtk-sharp
 	>=dev-dotnet/libgdiplus-1.1.11"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-pkg_setup() {
-	if has_version '>=dev-dotnet/gtk-sharp-2.12.6'
-	then
-		if ! built_with_use --missing false 'dev-dotnet/gtk-sharp' 'glade'
-		then
-			eerror "Please rebuild >=dev-dotnet/gtk-sharp-2.12.6 with USE='glade'"
-		fi
-	fi
-}
 
 src_unpack() {
 	unpack ${A}

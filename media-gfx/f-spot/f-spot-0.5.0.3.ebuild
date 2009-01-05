@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.5.0.3.ebuild,v 1.1 2008/11/23 13:12:41 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.5.0.3.ebuild,v 1.2 2009/01/05 17:21:58 loki_val Exp $
 
 EAPI=2
 
-inherit gnome2 mono autotools
+inherit gnome2 mono
 
 DESCRIPTION="Personal photo management application for the gnome desktop"
 HOMEPAGE="http://f-spot.org"
@@ -17,7 +17,8 @@ RDEPEND=">=dev-lang/mono-2.0
 	>=dev-libs/dbus-glib-0.71
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2.6
-	>=dev-dotnet/gtk-sharp-2.12.0[glade]
+	>=dev-dotnet/gtk-sharp-2.12.0
+	>=dev-dotnet/glade-sharp-2.12.0
 	>=dev-dotnet/dbus-sharp-0.4.2
 	>=dev-dotnet/dbus-glib-sharp-0.3.0
 	>=dev-dotnet/gtkhtml-sharp-2.7
