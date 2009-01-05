@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.169 2008/09/04 05:00:11 jer Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.170 2009/01/05 16:38:50 patrick Exp $
+
+*kdevelop-3.5.4 (05 Jan 2009)
+
+  05 Jan 2009; Patrick Lauer <patrick@gentoo.org> +kdevelop-3.5.4.ebuild:
+  Bump to 3.5.4, fixes #253369. SRC_URI now pulls from kde mirrors.
 
   04 Sep 2008; Jeroen Roovers <jer@gentoo.org> kdevelop-3.5.2-r1.ebuild:
   Stable for HPPA too.
