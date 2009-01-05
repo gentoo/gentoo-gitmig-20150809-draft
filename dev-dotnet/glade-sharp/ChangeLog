@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/glade-sharp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.62 2008/11/30 15:21:27 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.63 2009/01/05 17:14:30 loki_val Exp $
+
+*glade-sharp-2.12.7-r5 (05 Jan 2009)
+
+  05 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +glade-sharp-2.12.7-r5.ebuild:
+  Bump for new gtk-sharp-module eclass
 
   30 Nov 2008; Peter Alfredsen <loki_val@gentoo.org>
   -glade-sharp-9999.ebuild:
