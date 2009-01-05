@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hal
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.260 2008/12/28 15:02:55 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.261 2009/01/05 18:00:17 chainsaw Exp $
+
+*hal-0.5.11-r5 (05 Jan 2009)
+
+  05 Jan 2009; <chainsaw@gentoo.org> +hal-0.5.11-r5.ebuild:
+  Enable PMU support for PowerPC hardware, as suggested by Christian Schmitt
+  <chrschmitt@gmail.com> in bug #253866.
 
   28 Dec 2008; Raúl Porcel <armin76@gentoo.org> hal-0.5.11-r1.ebuild:
   Fix bug #252587
