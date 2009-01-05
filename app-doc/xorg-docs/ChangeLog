@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/xorg-docs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.49 2008/04/25 20:29:20 ricmm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.50 2009/01/05 21:43:27 the_paya Exp $
+
+  05 Jan 2009; Javier Villavicencio <the_paya@gentoo.org>
+  +files/1.4-rename-security.man.patch.bz2, xorg-docs-1.4-r1.ebuild:
+  Fix collision of security.7 man page, upstream bug 9068.
 
   25 Apr 2008; <ricmm@gentoo.org> xorg-docs-1.4.ebuild:
   Drop to ~mips due to unstable deps

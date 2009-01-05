@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/xorg-docs-1.4-r1.ebuild,v 1.11 2007/10/08 01:33:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/xorg-docs-1.4-r1.ebuild,v 1.12 2009/01/05 21:43:27 the_paya Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -25,7 +25,8 @@ IUSE="doc"
 
 PATCHES="${FILESDIR}/1.1-allow_manpages_only.patch
 	${FILESDIR}/65533-URL-interpolation.patch
-	${FILESDIR}/1.4-sgml-fixes.patch"
+	${FILESDIR}/1.4-sgml-fixes.patch
+	${FILESDIR}/1.4-rename-security.man.patch.bz2"
 
 CONFIGURE_OPTIONS="--with-x11docdir=/usr/share/doc/${PF}
 	$(use_enable doc non-man-docs)
