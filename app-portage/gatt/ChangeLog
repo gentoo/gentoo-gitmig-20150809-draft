@@ -1,6 +1,6 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.28 2009/01/03 12:58:13 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.29 2009/01/05 08:36:53 tove Exp $
 
 *gatt-0.6.3 (03 Jan 2009)
 
@@ -82,7 +82,7 @@
   02 May 2008; Markus Meier <maekke@gentoo.org> gatt-0.6.0.ebuild:
   amd64 stable, bug #217020
 
-  11 Apr 2008; Dawid WÄgliÅski <cla@gentoo.org> gatt-0.6.0.ebuild:
+  11 Apr 2008; Dawid Węgliński <cla@gentoo.org> gatt-0.6.0.ebuild:
   Stable on x86 (bug #217020)
 
   16 Mar 2008; Christian Faulhammer <opfer@gentoo.org> gatt-0.6.0.ebuild:
@@ -158,13 +158,13 @@
   removed spaces from ESVN_PROJECT variable, so path names will be without
   them, too. Reported by Jokey on IRC.
 
-  27 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> gatt-svn-9999.ebuild:
+  27 Mar 2007; Raúl Porcel <armin76@gentoo.org> gatt-svn-9999.ebuild:
   Add ~ia64 wrt bug 163745
 
   04 Mar 2007; Marius Mauch <genone@gentoo.org> gatt-svn-9999.ebuild:
   Replacing einfo with elog
 
-  13 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> gatt-svn-9999.ebuild:
+  13 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> gatt-svn-9999.ebuild:
   Add ~amd64 wrt bug #163745.
 
   10 Feb 2007; nixnut <nixnut@gentoo.org> gatt-svn-9999.ebuild:
