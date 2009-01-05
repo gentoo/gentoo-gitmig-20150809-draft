@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/iqpnni
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/iqpnni/ChangeLog,v 1.1 2008/10/30 13:43:35 weaver Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/iqpnni/ChangeLog,v 1.2 2009/01/05 00:47:54 weaver Exp $
+
+*iqpnni-3.3.1 (05 Jan 2009)
+
+  05 Jan 2009; weaver <weaver@gentoo.org> +files/iqpnni-3.3.1-gcc4.3.patch,
+  +iqpnni-3.3.1.ebuild:
+  Version bump
 
 *iqpnni-3.2 (30 Oct 2008)
 
