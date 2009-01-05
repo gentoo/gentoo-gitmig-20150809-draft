@@ -1,0 +1,12 @@
+# ChangeLog for net-wireless/iw
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.1 2009/01/05 05:03:08 rbu Exp $
+
+*iw-0_p20080605 (05 Jan 2009)
+
+  05 Jan 2009; Robert Buchholz <rbu@gentoo.org>
+  +files/iw-0_p20080605-ldflags.patch, +metadata.xml,
+  +iw-0_p20080605.ebuild:
+  Initial version of iw for aircrack-ng, ebuild contributions by Roel Aaij and
+  Pierre Guinoiseau, bug 233285.
+

@@ -1,0 +1,45 @@
+From 28da3ed85b4f876b91d9412f83cefb0318185c8e Mon Sep 17 00:00:00 2001
+From: Robert Buchholz <rbu@goodpoint.de>
+Date: Mon, 5 Jan 2009 05:53:56 +0100
+Subject: [PATCH] Make iw use LIBS instead of LDFLAGS
+
+When linking with LDFLAGS such as -Wl,--as-needed, gcc behaves
+strictly with respect to the order of object and libraries.
+LDFLAGS need to be specified before objects whereas libraries
+need to be specified after objects using their symbols.
+
+Furthermore, do not impose -O2 -g CFLAGS on anyone who
+has global CFLAGS defined.
+---
+ Makefile |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index f8f07ed..1f1ce44 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,10 +1,10 @@
+ MAKEFLAGS += --no-print-directory
+ 
+ CC ?= "gcc"
++CFLAGS ?= -O2 -g
+ CFLAGS += -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration
+ CFLAGS += -I/lib/modules/`uname -r`/build/include
+-CFLAGS += -O2 -g
+-LDFLAGS += -lnl
++LIBS += -lnl
+ 
+ OBJS = iw.o interface.o info.o station.o util.o mpath.o
+ ALL = iw
+@@ -25,7 +25,7 @@ all: $(ALL)
+ 
+ iw:	$(OBJS)
+ 	@$(NQ) ' LD       ' iw
+-	$(Q)$(CC) $(LDFLAGS) $(OBJS) -o iw
++	$(Q)$(CC) $(LDFLAGS) $(OBJS) $(LIBS) -o iw
+ 
+ check:
+ 	$(Q)$(MAKE) all CC="REAL_CC=$(CC) CHECK=\"sparse -Wall\" cgcc"
+-- 
+1.6.0.4
+
