@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/kipi-plugins
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.41 2008/06/30 18:16:07 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.42 2009/01/05 14:54:51 scarabeus Exp $
+
+*kipi-plugins-0.1.6 (05 Jan 2009)
+
+  05 Jan 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -kipi-plugins-0.1.0_rc1.ebuild, -kipi-plugins-0.1.4-r2.ebuild,
+  -kipi-plugins-0.1.5.ebuild, +kipi-plugins-0.1.6.ebuild:
+  Version bump. Remove old. Per bug #105582. Tampakrap tested this one.
 
   30 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   kipi-plugins-0.1.4-r1.ebuild:

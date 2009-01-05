@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.5.ebuild,v 1.10 2008/06/29 16:10:31 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.6.ebuild,v 1.1 2009/01/05 14:54:51 scarabeus Exp $
 
 EAPI=1
 inherit kde eutils
@@ -35,6 +35,14 @@ RDEPEND="${DEPEND}
 
 need-kde 3.5
 
+LANGS="ar be br ca cs cy da de el en_GB es et fi fr ga gl
+	hu is it ja lt ms mt nb nds nl nn pa pl pt pt_BR
+	ru rw sk sr sr@Latn sv ta th tr uk zh_CN"
+
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
+
 pkg_setup(){
 	if ! built_with_use media-libs/imlib2 X ; then
 		eerror "X support is required in media-libs/imlib2 in order to be able"
@@ -52,6 +60,11 @@ src_unpack() {
 
 	# Set default for the -S option for images2mpeg to work correctly, bug #208133
 	epatch "${FILESDIR}/${PN}-default_chroma_opt.patch"
+
+	cd "${WORKDIR}/${P}/po"
+	for X in ${LANGS} ; do
+		use linguas_${X} || rm -f "${X}."*
+	done
 }
 
 src_compile() {
