@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.103 2008/12/30 02:29:06 yngwin Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.104 2009/01/05 21:53:47 maekke Exp $
+
+  05 Jan 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  drop local xft USE-flag description, as it's global now
 
   30 Dec 2008; Ben de Groot <yngwin@gentoo.org> -fltk-2.0_pre6403.ebuild,
   -fltk-2.0_pre6483.ebuild, fltk-2.0_pre6525.ebuild:

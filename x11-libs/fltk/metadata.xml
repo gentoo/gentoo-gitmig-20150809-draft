@@ -8,7 +8,5 @@
 <longdescription>C++ user interface toolkit for X and OpenGL.</longdescription>
 <use>
 	<flag name='noxft'>Disables xft; use for non-english characters</flag>
-	<flag name='xft'>Build with support for XFT font renderer
-		(<pkg>x11-libs/libXft</pkg>)</flag>
 </use>
 </pkgmetadata>
