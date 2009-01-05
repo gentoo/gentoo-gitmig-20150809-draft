@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.6.2.ebuild,v 1.3 2009/01/05 07:44:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.6.3.ebuild,v 1.1 2009/01/05 07:44:37 dragonheart Exp $
 
 EAPI="2"
 inherit eutils libtool autotools
@@ -52,6 +52,8 @@ src_unpack() {
 	done
 	find . -name ltmain.sh -exec rm {} \;
 
+	# the below patch is in 2.7.* as per
+	# https://savannah.gnu.org/support/?106542
 	epatch "${FILESDIR}"/gnutls-2.6.0-cxx-configure.in.patch
 	eautoreconf
 	elibtoolize # for sane .so versioning on FreeBSD
