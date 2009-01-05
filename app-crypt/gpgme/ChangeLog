@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.152 2009/01/05 08:12:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.153 2009/01/05 08:34:47 tove Exp $
 
 *gpgme-1.1.8 (03 Jan 2009)
 
@@ -13,7 +13,7 @@
   +files/gpgme-1.1.7-_gpgme_cancel_with_err.patch, +gpgme-1.1.7.ebuild:
   version bump. patch and ebuild cleanup byArfrever in bug #242572
 
-  17 Nov 2008; Diego E. PettenÃ² <flameeyes@gentoo.org>
+  17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/gpgme3.m4.patch:
   Fix patch to apply.
 
@@ -23,7 +23,7 @@
   24 Jul 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
 
-  24 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> gpgme-1.1.6.ebuild:
+  24 Mar 2008; Raúl Porcel <armin76@gentoo.org> gpgme-1.1.6.ebuild:
   alpha/ia64/sparc stable wrt #205998
 
   22 Mar 2008; Alon Bar-Lev <alonbl@gentoo.org> gpgme-1.1.6.ebuild:
@@ -55,7 +55,7 @@
   06 Feb 2008; nixnut <nixnut@gentoo.org> gpgme-0.3.14-r2.ebuild:
   stable on ppc wrt bug #205996
 
-  06 Feb 2008; RaÃºl Porcel <armin76@gentoo.org> gpgme-0.3.14-r2.ebuild:
+  06 Feb 2008; Raúl Porcel <armin76@gentoo.org> gpgme-0.3.14-r2.ebuild:
   alpha/ia64/sparc stable wrt #205996
 
   05 Feb 2008; Markus Rothe <corsair@gentoo.org> gpgme-0.3.14-r2.ebuild:
@@ -107,7 +107,7 @@
   -gpgme-1.1.3.ebuild, -gpgme-1.1.4.ebuild:
   Cleanup
 
-  13 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> gpgme-1.1.5.ebuild:
+  13 Nov 2007; Raúl Porcel <armin76@gentoo.org> gpgme-1.1.5.ebuild:
   alpha/ia64 stable wrt #198656
 
   13 Nov 2007; Jeroen Roovers <jer@gentoo.org> gpgme-1.1.5.ebuild:
@@ -116,7 +116,7 @@
   11 Nov 2007; Samuli Suominen <drac@gentoo.org> gpgme-1.1.5.ebuild:
   amd64 stable wrt #198656
 
-  11 Nov 2007; Dawid WÄgliÅski <cla@gentoo.org> gpgme-1.1.5.ebuild:
+  11 Nov 2007; Dawid Węgliński <cla@gentoo.org> gpgme-1.1.5.ebuild:
   Stable on x86 (bug #198656)
 
   10 Nov 2007; Markus Rothe <corsair@gentoo.org> gpgme-1.1.5.ebuild:
@@ -136,7 +136,7 @@
   10 Jul 2007; Alon Bar-Lev <alonbl@gentoo.org> +gpgme-1.1.5.ebuild:
   Version bump
 
-  07 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> gpgme-1.1.4.ebuild:
+  07 Jun 2007; Raúl Porcel <armin76@gentoo.org> gpgme-1.1.4.ebuild:
   alpha stable wrt #177745
 
   19 May 2007; Daniel Gryniewicz <dang@gentoo.org> gpgme-1.1.4.ebuild:
@@ -148,7 +148,7 @@
   12 May 2007; Markus Rothe <corsair@gentoo.org> gpgme-1.1.4.ebuild:
   Stable on ppc64; bug #177745
 
-  11 May 2007; RaÃºl Porcel <armin76@gentoo.org> gpgme-1.1.4.ebuild:
+  11 May 2007; Raúl Porcel <armin76@gentoo.org> gpgme-1.1.4.ebuild:
   ia64 + x86 stable wrt #177745
 
   10 May 2007; Jeroen Roovers <jer@gentoo.org> gpgme-1.1.4.ebuild:
@@ -199,7 +199,7 @@
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org> gpgme-1.1.2-r1.ebuild:
   Mark 1.1.2-r1 stable on ia64
 
-  08 Jun 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  08 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/gpgme-1.1.2-fbsd.patch, gpgme-1.1.2-r1.ebuild:
   Add patch to fix FreeBSD building (bug #136085) and mark ~x86-fbsd.
 
@@ -221,7 +221,7 @@
   16 May 2006; Markus Rothe <corsair@gentoo.org> gpgme-1.1.2-r1.ebuild:
   Stable on ppc64; bug #132343
 
-  11 May 2006; Diego PettenÃ² <flameeyes@gentoo.org> gpgme-1.1.2-r1.ebuild:
+  11 May 2006; Diego Pettenò <flameeyes@gentoo.org> gpgme-1.1.2-r1.ebuild:
   Add elibtoolize.
 
 *gpgme-1.1.2-r1 (10 May 2006)
@@ -314,7 +314,7 @@
   27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> gpgme-1.0.2.ebuild:
   Stable on ppc.
 
-  26 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org> gpgme-1.0.2.ebuild:
+  26 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> gpgme-1.0.2.ebuild:
   Stable on alpha.
 
   23 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> gpgme-1.0.2.ebuild:
@@ -390,7 +390,7 @@
 
   03 Oct 2004; Daniel Black <dragonheart@gentoo.org> gpgme-1.0.0-r1.ebuild,
   gpgme-1.0.0.ebuild:
-  Fixed as per bug #66190. Thank to TÃ³th Csaba <tsabi-gentoo@tsabi.hu>
+  Fixed as per bug #66190. Thank to Tóth Csaba <tsabi-gentoo@tsabi.hu>
 
 *gpgme-1.0.0-r1 (03 Oct 2004)
 
@@ -399,10 +399,10 @@
   +gpgme-1.0.0.ebuild:
   version bump. 1.0.0 without smime support and 1.0.0-r1 with smime support
 
-  02 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> gpgme-0.9.0-r1.ebuild:
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> gpgme-0.9.0-r1.ebuild:
   Stable on alpha, requested in bug 64485.
 
-  02 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> gpgme-0.3.14-r1.ebuild:
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> gpgme-0.3.14-r1.ebuild:
   Stable on alpha, requested in bug 64485.
 
   23 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> gpgme-0.3.14-r1.ebuild,
