@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.9 2009/01/05 20:49:10 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.10 2009/01/05 22:10:44 loki_val Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>, butchered by ikelos, then loki_val.
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -88,6 +88,7 @@ has "${GTK_SHARP_MODULE}" ${gnome_desktop_sharp_module_list} \
 case ${PF} in
 	#gtk-sharp tarball
 	gtk-sharp-gapi*)
+		add_rdepend "!<=dev-dotnet/gtk-sharp-2.12.7:2"
 		add_depend "dev-perl/XML-LibXML"
 		;;
 	gtk-sharp-*)
