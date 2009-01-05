@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.18-r1.ebuild,v 1.1 2009/01/04 16:32:49 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.18-r1.ebuild,v 1.2 2009/01/05 01:19:15 mr_bones_ Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby
@@ -70,4 +70,3 @@ src_install() {
 		done
 	fi
 }
-
