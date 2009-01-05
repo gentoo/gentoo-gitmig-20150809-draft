@@ -1,21 +1,20 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/files/xxv.utf8,v 1.1 2008/03/11 21:48:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/files/xxv.utf8,v 1.2 2009/01/05 00:07:44 hd_brummy Exp $
 
-RUNAS_USER="vdr"
+RUNAS_USER="root"
+
+# Set Verbose Level 0 -> 5 
+VERBOSE="1"
+
+#set -xv
 
 # some fixed Path
 CONFIGFILE="/etc/xxv/xxvd.cfg"
 PIDFILE="/var/run/xxv/xxvd.pid"
 XXV_BIN="/usr/bin/xxvd"
 
-LANGUAGE="de_DE.utf8"
-
-# Set Verbose Level 0 -> 5 
-VERBOSE="3"
-
-#set -xv
 
 depend() {
 	need vdr
@@ -24,54 +23,62 @@ depend() {
 
 kill_vdradmin() {
 
-		# Check at first, is VDR-Admin running
-		# Stopping, while running on same ports
-		# You can comment the next 4 Lines if you running VDR-Admind on different Ports
-		if [ -f /var/run/vdradmind.pid ] ; then
+	# Check at first, is VDR-Admin running
+	# Stopping, while running on same ports
+	# You can comment the next 4 Lines if you running VDR-Admind on different Ports
+	if [ -f /var/run/vdradmind.pid ] ; then
 		ebegin "VDR-Admin will Stop at first now"
 		/etc/init.d/vdradmind stop
-		fi
+	fi
 }
 
 xxv_kill_pid() {
 
-		# After unclear stop, xxvd.pid will not removed, fixed with next line
-		if [ -e ${PIDFILE} -a ! -L /var/lib/init.d/started/xxv ] ; then
-			rm ${PIDFILE}
-			killall xxvd 2>&1 > /dev/null
-		fi
+	# After unclear stop, xxvd.pid will not removed, fixed with next line
+	if [ -e ${PIDFILE} -a ! -L /var/lib/init.d/started/xxv ] ; then
+		rm ${PIDFILE}
+		killall xxvd 2>&1 > /dev/null
+	fi
 }
 
 xxv_kill_initfile() {
 
-		# After unclear stop, init file in /var/lib/init.d/started/ still not removed
-		if [ -L /var/lib/init.d/started/xxv -a ! -e ${PIDFILE} ] ; then
-			rm /var/lib/init.d/started/xxv
-			/etc/init.d/xxv zap
-			killall xxvd 2>&1 > /dev/null
-		fi
+	# After unclear stop, init file in /var/lib/init.d/started/ still not removed
+	if [ -L /var/lib/init.d/started/xxv -a ! -e ${PIDFILE} ] ; then
+		rm /var/lib/init.d/started/xxv
+		/etc/init.d/xxv zap
+		killall xxvd 2>&1 > /dev/null
+	fi
+}
+
+set_utf8_charset() {
+	local capfile=/usr/share/vdr/capabilities.sh
+	[ -e "${capfile}" ] && . ${capfile}
+	if [ "${CAP_UTF8}" = "1" -o "${VDR_CAN_HANDLE_UTF8}" = "yes" ]; then
+		# do not clean out utf8
+		XXV_UTF8="-utf8"
+	fi
 }
 	
 start() {
-
-	kill_vdradmin
-
-	# Finaly start XXV :)
-	export LANG="${LANGUAGE}"
 	ebegin "Start xxv"
+#	kill_vdradmin
+	set_utf8_charset
+	
 	start-stop-daemon  --nicelevel 15 --pidfile ${PIDFILE} --start -c ${RUNAS_USER} --exec ${XXV_BIN} -- \
-	-configfile=${CONFIGFILE} -verbose=${VERBOSE} -pidfile=${PIDFILE} --utf8
+	${XXV_UTF8} -configfile=${CONFIGFILE} -verbose=${VERBOSE} -pidfile=${PIDFILE}
 	eend $?
 }
 
 
 stop() {
 
-	ebegin "Stopping xxv"
+	ebegin "Stopping xxvd"
 	start-stop-daemon --stop --quiet --pidfile ${PIDFILE}
 
 	xxv_kill_pid
 	xxv_kill_initfile
+#	killall xxvd 2>&1 > /dev/null
 
 	eend $?
 }

@@ -1,12 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.2-r1.ebuild,v 1.3 2009/01/05 00:07:45 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.2.1383.ebuild,v 1.1 2009/01/05 00:07:45 hd_brummy Exp $
 
-inherit eutils
+inherit eutils versionator
+
+MY_PV=$(get_version_component_range 3)
+MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="WWW Admin for the VDR (Video Disk Recorder)"
 HOMEPAGE="http://xxv.berlios.de/content/view/40/1/"
-SRC_URI="mirror://berlios/${PN}/${P}.tgz"
+SRC_URI="http://vdr.websitec.de/download/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -44,18 +47,18 @@ RDEPEND=">=media-video/vdr-1.2.6
 	dev-perl/Template-Toolkit
 	dev-perl/SOAP-Lite
 	dev-perl/XML-RSS
-	themes? ( =x11-themes/${PN}-skins-${PV} )"
+	themes? ( >=x11-themes/${PN}-skins-${PV} )"
 
 PDEPEND="mplayer? ( media-video/mplayer )"
 
 SHAREDIR="/usr/share/${PN}"
 LIBDIR="/usr/lib/${PN}"
 
-DB_VERS="26"
+DB_VERS="31"
 
 db_update_check() {
 
-	DB_VERS_OLD="`cat /var/db/pkg/net-www/xxv-*/xxv-*.ebuild | grep DB_VERS | cut -c10-11`"
+	DB_VERS_OLD="`cat /var/db/pkg/net-www/xxv-*/xxv-*.ebuild | grep DB_VERS | head -n 1 | cut -c10-11`"
 
 	if [ "${DB_VERS_OLD}" -lt "${DB_VERS}" ]; then
 		echo
@@ -132,7 +135,7 @@ src_compile() {
 
 src_install() {
 
-	doinitd "${FILESDIR}"/xxv
+	newinitd "${FILESDIR}"/xxv.utf8 xxv
 
 	dobin	bin/xxvd
 
