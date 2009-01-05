@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.35.ebuild,v 1.8 2008/12/14 14:19:08 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.35.ebuild,v 1.9 2009/01/05 17:26:19 loki_val Exp $
 
 #WANT_AUTOCONF="latest"
 #WANT_AUTOMAKE="1.8"
@@ -20,7 +20,7 @@ RDEPEND="dev-lang/mono
 	gnome? ( >=dev-dotnet/gtk-sharp-2.4
 			 >=dev-dotnet/gnome-sharp-2.4
 			 >=dev-dotnet/gconf-sharp-2.4
-			 || ( >=dev-dotnet/gtk-sharp-2.12.6 >=dev-dotnet/glade-sharp-2.4 )
+			 >=dev-dotnet/glade-sharp-2.4
 			 gnome-base/gnome-panel )"
 
 DEPEND="${RDEPEND}
@@ -32,13 +32,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog README TODO"
 
 pkg_setup() {
-	if has_version '>=dev-dotnet/gtk-sharp-2.12.6'
-	then
-		if ! built_with_use --missing false 'dev-dotnet/gtk-sharp' 'glade'
-		then
-			eerror "Please rebuild >=dev-dotnet/gtk-sharp-2.12.6 with USE='glade'"
-		fi
-	fi
 	use gnome || elog "gnome is absent in USE thus applet and editor will not be built"
 }
 
