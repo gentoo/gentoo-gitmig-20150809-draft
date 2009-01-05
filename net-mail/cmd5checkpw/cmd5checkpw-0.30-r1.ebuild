@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.30-r1.ebuild,v 1.3 2009/01/04 04:53:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.30-r1.ebuild,v 1.4 2009/01/05 15:25:20 hollow Exp $
 
-inherit eutils fixheadtails qmail
+inherit eutils fixheadtails
 
 MY_VER="030"
 
@@ -41,19 +41,12 @@ src_unpack() {
 	epatch "${FILESDIR}"/euid_${MY_VER}.diff
 	epatch "${FILESDIR}"/reloc.diff
 
-	sed \
-		-e 's:-c -g -Wall -O3:$(OPTCFLAGS):' \
-		-e "s:cp cmd5checkpw /bin/:cp cmd5checkpw \${D}/bin/:" \
-		-e "s:cp cmd5checkpw.8 /usr/man/man8/:cp cmd5checkpw.8 \${D}/usr/share/man/man8/:" \
-		-i Makefile
+	sed -e 's:-c -g -Wall -O3:$(OPTCFLAGS):' -i Makefile
 
 	ht_fix_file Makefile
 }
 
 src_compile() {
-	# cmd5checkpw does not use conf-cc/conf-ld
-	# qmail_set_cc
-
 	emake OPTCFLAGS="${CFLAGS}" || die
 }
 
@@ -63,7 +56,6 @@ src_install() {
 
 	exeinto /bin
 	doexe cmd5checkpw
-
 	doman cmd5checkpw.8
 
 	fowners cmd5checkpw /etc/poppasswd /bin/cmd5checkpw
