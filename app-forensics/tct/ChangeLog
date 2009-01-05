@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/tct
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/ChangeLog,v 1.10 2007/03/04 19:52:37 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/tct/ChangeLog,v 1.11 2009/01/05 00:04:28 patrick Exp $
+
+*tct-1.18 (05 Jan 2009)
+
+  05 Jan 2009; Patrick Lauer <patrick@gentoo.org> +tct-1.18.ebuild:
+  Bumping to 1.18, fixes #165300, thanks to RB <aoz.syn@gmail.com>
 
   04 Mar 2007; Piotr Jaroszyński <peper@gentoo.org> tct-1.15-r1.ebuild:
   Fix incomplete sys-apps/lsof -> sys-process/lsof move.
