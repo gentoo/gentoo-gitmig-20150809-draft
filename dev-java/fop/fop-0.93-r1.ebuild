@@ -1,11 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93-r1.ebuild,v 1.8 2007/09/18 22:18:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.93-r1.ebuild,v 1.9 2009/01/05 20:27:57 serkan Exp $
 
 # TODO: if 'doc' use flag is used then should build also extra docs ('docs' ant target), currently it cannot
 #       be built as it needs forrest which we do not have
 # TODO: package and use optional dependency jeuclid
 
+EAPI="2"
 JAVA_PKG_IUSE="doc examples source"
 WANT_ANT_TASKS="ant-trax"
 inherit eutils java-pkg-2 java-ant-2
@@ -21,12 +22,12 @@ KEYWORDS="amd64 ~ia64 ppc ~ppc64 x86"
 IUSE="hyphenation jai jimi"
 
 COMMON_DEPEND="
-	>=dev-java/avalon-framework-4.2
-	>=dev-java/batik-1.6
+	dev-java/avalon-framework:4.2
+	dev-java/batik:1.6
 	dev-java/commons-io
 	dev-java/commons-logging
-	=dev-java/servletapi-2.2*
-	>=dev-java/xmlgraphics-commons-1.1
+	dev-java/servletapi:2.2
+	dev-java/xmlgraphics-commons:1[jpeg]
 	jai? ( dev-java/sun-jai-bin )
 	jimi? ( dev-java/sun-jimi )"
 
@@ -35,23 +36,13 @@ RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 
 DEPEND=">=virtual/jdk-1.4
-	=dev-java/eclipse-ecj-3.2*
+	dev-java/eclipse-ecj:3.2
 	hyphenation? ( dev-java/offo-hyphenation )
 	${COMMON_DEPEND}"
 #	test? (
-#		=dev-java/junit-3.8*
+#		dev-java/junit:0
 #		dev-java/xmlunit
 #	)"
-
-pkg_setup() {
-	if ! built_with_use dev-java/xmlgraphics-commons jpeg; then
-		msg="${CATEGORY}/${P} needs dev-java/xmlgraphics-commons built with"
-		msg="${msg} the jpeg use flag"
-		eerror ${msg}
-		die "Recompile dev-java/xmlgraphics-commons with the jpeg use flag"
-	fi
-	java-pkg-2_pkg_setup
-}
 
 src_unpack() {
 	unpack "${A}"
