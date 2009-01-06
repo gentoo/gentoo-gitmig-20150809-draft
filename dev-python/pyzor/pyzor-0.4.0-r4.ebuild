@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.4.0-r4.ebuild,v 1.1 2009/01/05 07:43:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.4.0-r4.ebuild,v 1.2 2009/01/06 06:02:29 mr_bones_ Exp $
 
 inherit distutils eutils
 
@@ -41,10 +41,9 @@ src_unpack() {
 	cd "${S}"
 	epatch "${S}"/debian/patches/*dpatch
 
-
 	# Same as Debian 08_define_mbox.dpatch
 	#epatch "${FILESDIR}/debian_mbox.patch"
-	# Same as Debian 07_handle_unknown_encodings.dpatch  
+	# Same as Debian 07_handle_unknown_encodings.dpatch
 	#epatch "${FILESDIR}/handle_unknown_encodings.patch"
 
 	# Gentoo-unique
