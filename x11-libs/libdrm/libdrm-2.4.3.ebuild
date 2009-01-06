@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.3.ebuild,v 1.1 2009/01/06 07:54:05 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.3.ebuild,v 1.2 2009/01/06 17:18:33 remi Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -20,29 +20,10 @@ DEPEND="${RDEPEND}"
 
 # FIXME, we should try to see how we can fit the --enable-udev configure flag
 
-PATCHES=(
-	)
-
-pkg_preinst() {
-	x-modular_pkg_preinst
-
-	if [[ -e ${ROOT}/usr/$(get_libdir)/libdrm.so.1 ]] ; then
-		cp -pPR "${ROOT}"/usr/$(get_libdir)/libdrm.so.{1,1.0.0} "${D}"/usr/$(get_libdir)/
-	fi
-}
-
 pkg_postinst() {
 	x-modular_pkg_postinst
 
-	if [[ -e ${ROOT}/usr/$(get_libdir)/libdrm.so.1 ]] ; then
-		elog "You must re-compile all packages that are linked against"
-		elog "libdrm 1 by using revdep-rebuild from gentoolkit:"
-		elog "# revdep-rebuild --library libdrm.so.1"
-		elog "After this, you can delete /usr/$(get_libdir)/libdrm.so.1"
-		elog "and /usr/$(get_libdir)/libdrm.so.1.0.0 ."
-		epause
-	fi
-
-	elog "Please rebuild media-libs/mesa, x11-base/xorg-server and"
-	elog "your video drivers in x11-drivers/*."
+	ewarn "libdrm's ABI may have changed without change in library name"
+	ewarn "Please rebuild media-libs/mesa, x11-base/xorg-server and"
+	ewarn "your video drivers in x11-drivers/*."
 }
