@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4107 2009/01/05 22:07:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4108 2009/01/06 06:47:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -995,7 +995,6 @@ kde-base/kopete:alias - Enable the alias plugin
 kde-base/kopete:autoreplace - Enable the autoreplace plugin
 kde-base/kopete:connectionstatus - Builds Connection Status plugin
 kde-base/kopete:contactnotes - Enable the contactnotes plugin
-kde-base/kopete:decibel - Enable the Telepathy protocol plugin
 kde-base/kopete:gadu - Enable the gadu protocol plugin
 kde-base/kopete:groupwise - Enable the groupwise protocol plugin
 kde-base/kopete:highlight - Enable the highlight plugin
@@ -1008,19 +1007,16 @@ kde-base/kopete:nowlistening - Enable the nowlistening plugin
 kde-base/kopete:otr - Encryption for IMs, using libotr
 kde-base/kopete:pipes - Enable support for the pipes plugin
 kde-base/kopete:privacy - plugin to selectively filter messages
-kde-base/kopete:qca - Enable the Qt Cryptographic Architecture
 kde-base/kopete:qq - enable support for the chinese network protocol
 kde-base/kopete:sametime - Enables support for the Sametime protocol for instant messaging
 kde-base/kopete:sms - Enable the sms protocol plugin
 kde-base/kopete:statistics - Enable the statistics plugin
-kde-base/kopete:telepathy - Enable support for the realtime communication framework telepathy
 kde-base/kopete:testbed - Enable the testbed protocol plugin
 kde-base/kopete:texteffect - Enable the texteffect plugin
 kde-base/kopete:translator - Enable the translator plugin
 kde-base/kopete:urlpicpreview - plugin to allow users to send photos through URLs
 kde-base/kopete:webpresence - Enable the webpresence plugin
 kde-base/kopete:winpopup - Enable support for the winpopup plugin
-kde-base/kopete:xslt - Enable xslt support
 kde-base/kstars:fits - Enable support for the FITS image format through cfitsio
 kde-base/kstars:nova - Enable support for libnova.
 kde-base/kstars:sbig - Enable support for SBIG.
