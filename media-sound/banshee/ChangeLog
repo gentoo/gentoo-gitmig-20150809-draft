@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/banshee
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.79 2008/12/14 14:24:15 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.80 2009/01/06 21:15:43 loki_val Exp $
+
+  06 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  banshee-1.4.1-r3.ebuild:
+  Use external notify-sharp, now that it's in tree.
 
   14 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   banshee-1.0.0-r1.ebuild, banshee-1.2.1.ebuild, banshee-1.2.1-r2.ebuild,
