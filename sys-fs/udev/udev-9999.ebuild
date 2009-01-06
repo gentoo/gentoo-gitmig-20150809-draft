@@ -1,10 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.1 2008/12/30 22:51:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.2 2009/01/06 18:42:15 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
-DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
@@ -13,6 +12,7 @@ if [[ ${PV} == "9999" ]]; then
 else
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 fi
+DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 
 LICENSE="GPL-2"
 SLOT="0"
