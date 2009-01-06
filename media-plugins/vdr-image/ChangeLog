@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-image
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.27 2008/10/25 22:19:26 hd_brummy Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-image/ChangeLog,v 1.28 2009/01/06 02:22:11 hd_brummy Exp $
+
+*vdr-image-0.3.0 (06 Jan 2009)
+
+  06 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-image-0.3.0-gentoo.diff, +files/rc-addon-0.3.0.sh,
+  +vdr-image-0.3.0.ebuild:
+  version bump
 
 *vdr-image-0.2.7.26 (25 Oct 2008)
 
