@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.4.7.ebuild,v 1.2 2009/01/03 21:48:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.4.7.ebuild,v 1.3 2009/01/06 02:17:20 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs flag-o-matic games
@@ -21,7 +21,7 @@ RDEPEND=">=media-libs/libsdl-1.2.7[X]
 	!dedicated? (
 		x11-libs/libX11
 		>=media-libs/sdl-mixer-1.2[vorbis]
-		>=media-libs/sdl-image-1.2[png]
+		>=media-libs/sdl-image-1.2[png,jpeg]
 		dev-lang/python
 		>=media-libs/freetype-2 )
 	nls? ( virtual/libintl )"
