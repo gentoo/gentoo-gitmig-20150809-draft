@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.09.ebuild,v 1.3 2008/12/29 18:20:08 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/PortageXS-0.02.09.ebuild,v 1.4 2009/01/06 00:15:40 cla Exp $
 
 inherit perl-module
 DESCRIPTION="Portage abstraction layer for perl"
@@ -9,7 +9,7 @@ SRC_URI="http://download.mpsna.de/opensource/PortageXS/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86 ~x86-fbsd"
 IUSE="minimal"
 SRC_TEST="do"
 
@@ -22,19 +22,19 @@ DEPEND="dev-lang/perl
 src_unpack() {
 	unpack ${A}
 	if use minimal ; then
-		rm -r ${S}/usr
-		rm -r ${S}/etc/init.d
-		rm -r ${S}/etc/pxs/certs
-		rm ${S}/etc/pxs/portagexsd.conf
-		rm -r ${S}/lib/PortageXS/examples
+		rm -r "${S}"/usr
+		rm -r "${S}"/etc/init.d
+		rm -r "${S}"/etc/pxs/certs
+		rm "${S}"/etc/pxs/portagexsd.conf
+		rm -r "${S}"/lib/PortageXS/examples
 	fi
 }
 
 pkg_preinst() {
 	if use !minimal ; then
-		cp -r ${S}/usr ${D}
+		cp -r "${S}"/usr "${D}"
 	fi
-	cp -r ${S}/etc ${D}
+	cp -r "${S}"/etc "${D}"
 }
 
 pkg_postinst() {
