@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/glade-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.64 2009/01/05 18:05:43 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.65 2009/01/06 09:10:51 loki_val Exp $
+
+  06 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +glade-sharp-2.8.2.ebuild:
+  Reinstate 2.8.2 since latest stable of gconf-sharp needs it.
 
   05 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
   -glade-sharp-2.8.2.ebuild:
