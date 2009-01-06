@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.24 2009/01/04 22:34:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.25 2009/01/06 17:16:19 matsuu Exp $
+
+*fcitx-3.6.0_rc (06 Jan 2009)
+
+  06 Jan 2009; MATSUU Takuto <matsuu@gentoo.org> fcitx-3.1.1.ebuild,
+  -fcitx-3.4.2.ebuild, -fcitx-3.5_pre070703.ebuild, fcitx-3.5.ebuild,
+  +fcitx-3.6.0_rc.ebuild:
+  Version bumped, bug #253962. Replaced use flag from truetype to xft, bug
+  #253910. Removed old versions.
 
   04 Jan 2009; Ulrich Mueller <ulm@gentoo.org> fcitx-3.1.1.ebuild:
   Change virtual/xft dependency to x11-libs/libXft, bug 253771.
