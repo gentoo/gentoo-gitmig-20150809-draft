@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: boost.eselect-0.1,v 1.1 2008/12/16 16:21:07 dev-zero Exp $
+# $Id: boost.eselect-0.2,v 1.1 2009/01/06 12:04:16 dev-zero Exp $
 
 # This eclass-module has been initially written by Łukasz Michalik <lmi@ift.uni.wroc.pl>
 # Corrections and extensions by Tiziano Müller <dev-zero@gentoo.org>
@@ -196,7 +196,7 @@ do_update() {
 
 	local targets=($(find_targets))
 	if [[ ${#targets[@]} -gt 0 ]]; then
-		remove_installation || die -q "Couldn't remove existing installation"
+		remove_installation
 		local target="${targets[@]:(-1)}"
 		set_installation "${target}" "${target//boost-}" || die -q "Couldn't set a new symlink"
 	else

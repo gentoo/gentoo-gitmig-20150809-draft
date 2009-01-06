@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-boost
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.1 2008/12/16 16:21:07 dev-zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.2 2009/01/06 12:04:16 dev-zero Exp $
+
+*eselect-boost-0.2 (06 Jan 2009)
+
+  06 Jan 2009; Tiziano Müller <dev-zero@gentoo.org>
+  -files/boost.eselect-0.1, +files/boost.eselect-0.2,
+  -eselect-boost-0.1.ebuild, +eselect-boost-0.2.ebuild:
+  Version bump to fix bug #252828
 
 *eselect-boost-0.1 (16 Dec 2008)
 
