@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libgksu-python
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgksu-python/ChangeLog,v 1.1 2008/10/16 22:54:29 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgksu-python/ChangeLog,v 1.2 2009/01/06 14:41:36 neurogeek Exp $
+
+  06 Jan 2009; Jesus Rivero <neurogeek@gentoo.org>
+  libgksu-python-2.19.1.ebuild:
+  Updated DESCRIPTION var
 
 *libgksu-python-2.19.1 (16 Oct 2008)
 
