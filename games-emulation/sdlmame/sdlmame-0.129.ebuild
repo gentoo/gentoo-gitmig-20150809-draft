@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.129.ebuild,v 1.1 2009/01/05 22:52:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.129.ebuild,v 1.2 2009/01/06 21:40:54 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils flag-o-matic games
 
 DESCRIPTION="Multiple Arcade Machine Emulator (SDL)"
@@ -21,11 +22,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="opengl"
 
-RDEPEND=">=media-libs/libsdl-1.2.10
+RDEPEND=">=media-libs/libsdl-1.2.10[opengl?]
 	dev-libs/expat
 	x11-libs/libXinerama
-	>=x11-libs/gtk+-2
-	>gnome-base/gconf-2"
+	x11-libs/gtk+:2
+	gnome-base/gconf:2"
 
 DEPEND="${RDEPEND}
 	app-arch/unzip
@@ -49,15 +50,7 @@ enable_feature() {
 		|| die "sed failed"
 }
 
-pkg_setup() {
-	if use opengl && ! built_with_use media-libs/libsdl opengl ; then
-		die "Please emerge media-libs/libsdl with USE=opengl"
-	fi
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	sed -i \
 		-e '/CFLAGS += -O$(OPTIMIZE)/s:^:# :' \
 		-e '/CFLAGS += -pipe/s:^:# :' \
