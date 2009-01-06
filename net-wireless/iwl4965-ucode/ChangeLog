@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/iwl4965-ucode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.10 2009/01/01 01:42:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.11 2009/01/06 11:20:52 chainsaw Exp $
+
+*iwl4965-ucode-228.57.2.23 (06 Jan 2009)
+
+  06 Jan 2009; <chainsaw@gentoo.org> +iwl4965-ucode-228.57.2.23.ebuild:
+  ABI 2 microcode version bump, as requested by Ari Entlich
+  <lmage11@twcny.rr.com> in bug #252642.
 
   01 Jan 2009; <chainsaw@gentoo.org> iwl4965-ucode-228.57.2.21.ebuild:
   Mark firmware API-2 stable on AMD64 for 2.6.27 as requested by Thomas Pani
