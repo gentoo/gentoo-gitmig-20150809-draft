@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/service-discovery-applet/service-discovery-applet-0.4.3-r1.ebuild,v 1.1 2008/11/09 23:32:11 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/service-discovery-applet/service-discovery-applet-0.4.3-r1.ebuild,v 1.2 2009/01/06 20:54:45 swegener Exp $
 
 inherit eutils gnome2
 
@@ -34,6 +34,8 @@ pkg_setup() {
 	then
 		die "Sorry, but you need net-dns/avahi compiled with gdbm support."
 	fi
+
+	G2CONF="${G2CONF} --disable-schemas-install"
 }
 
 src_install() {
