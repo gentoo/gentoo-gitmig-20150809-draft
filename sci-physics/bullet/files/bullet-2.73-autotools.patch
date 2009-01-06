@@ -20,20 +20,20 @@ diff -Nur bullet-2.73.orig/Makefile.am bullet-2.73/Makefile.am
 -SUBDIRS=src Extras Demos/OpenGL Demos/BasicDemo Demos/TerrainDemo Demos/VehicleDemo Demos/CcdPhysicsDemo Demos/ColladaDemo Demos/SoftDemo Demos/AllBulletDemos
 -endif
 +SUBDIRS=src 
-+pkgconfigdir = $(libdir)
++pkgconfigdir = $(libdir)/pkgconfig
 +pkgconfig_DATA = bullet.pc
 diff -Nur bullet-2.73.orig/src/Makefile.am bullet-2.73/src/Makefile.am
 --- bullet-2.73.orig/src/Makefile.am	2008-12-07 23:23:55.000000000 +0000
 +++ bullet-2.73/src/Makefile.am	2008-12-07 23:24:05.000000000 +0000
 @@ -1,9 +1,56 @@
-+pkgincludedir = $(includedir)/@PACKAGE@
-+nobase_include_HEADERS = \
++bullet_includedir = $(includedir)/bullet
++nobase_bullet_include_HEADERS = \
 +	btBulletDynamicsCommon.h \
 +	Bullet-C-Api.h \
 +	btBulletCollisionCommon.h
 +
  if CONDITIONAL_BUILD_MULTITHREADED
-+nobase_include_HEADERS = \
++nobase_bullet_include_HEADERS += \
 +	BulletMultiThreaded/PosixThreadSupport.h \
 +	BulletMultiThreaded/SpuRaycastTaskProcess.h \
 +	BulletMultiThreaded/vectormath/scalar/cpp/mat_aos.h \
@@ -130,7 +130,7 @@ diff -Nur bullet-2.73.orig/src/Makefile.am bullet-2.73/src/Makefile.am
  
  
  
-+nobase_include_HEADERS += \
++nobase_bullet_include_HEADERS += \
 +	BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.h \
 +	BulletSoftBody/btSoftBodyInternals.h \
 +	BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h \

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.73.ebuild,v 1.1 2008/12/08 00:29:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.73-r1.ebuild,v 1.1 2009/01/06 11:35:21 bicatali Exp $
 
 inherit eutils autotools
 

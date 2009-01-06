@@ -1,6 +1,14 @@
 # ChangeLog for sci-physics/bullet
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.3 2008/12/08 00:29:02 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.4 2009/01/06 11:35:21 bicatali Exp $
+
+*bullet-2.73-r1 (06 Jan 2009)
+
+  06 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  files/bullet-2.73-autotools.patch, -bullet-2.69.ebuild,
+  -bullet-2.73.ebuild, +bullet-2.73-r1.ebuild:
+  Fixed installation directory for include files and pkgconfig location,
+  closing bug #253785
 
 *bullet-2.73 (08 Dec 2008)
 
