@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-osdteletext
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/ChangeLog,v 1.13 2008/07/10 10:39:54 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/ChangeLog,v 1.14 2009/01/06 00:42:41 hd_brummy Exp $
+
+*vdr-osdteletext-0.7.0 (06 Jan 2009)
+
+  06 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-osdteletext-0.5.1.ebuild, -vdr-osdteletext-0.5.1-r1.ebuild,
+  +vdr-osdteletext-0.7.0.ebuild:
+  version bump; cleanup old versions
 
   10 Jul 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-osdteletext-0.5.1-r2.ebuild:
