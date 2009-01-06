@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4110 2009/01/06 07:47:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4111 2009/01/06 13:47:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1967,7 +1967,6 @@ net-irc/unrealircd:prefixaq - Enable chanadmin and chanowner prefixes
 net-irc/unrealircd:showlistmodes - Support displaying channel modes during compilation
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
-net-irc/xchat-gnome:libsexy - Enable x11-libs/libsexy support
 net-irc/xchat-gnome:sound - Enable sound event support with media-libs/libcanberra
 net-irc/xchat-xsys:audacious - Enables media-sound/audacious integration
 net-irc/znc:nomodules - Don't build modules
@@ -2084,7 +2083,6 @@ net-misc/openswan:weak-algorithms - Include weak algorithms (DH1)
 net-misc/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
 net-misc/openvpn:passwordsave - Enables openvpn to save passwords
 net-misc/openvpn:pkcs11 - Enable PKCS#11 smartcard support
-net-misc/quagga:bgpas4 - Enable support for 32-bit AS numbers
 net-misc/quagga:bgpclassless - Enable classless prefixes for BGP
 net-misc/quagga:fix-connected-rt - Remove interface connected routes from kernel table on link loss so that no packets get routed to downed interface
 net-misc/quagga:multipath - Enable multipath routes support for any number of routes
