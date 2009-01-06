@@ -4,7 +4,6 @@
 <herd>net-irc</herd>
 <herd>gnome</herd>
 <use>
-	<flag name='libsexy'>Enable <pkg>x11-libs/libsexy</pkg> support</flag>
 	<flag name='sound'>Enable sound event support with <pkg>media-libs/libcanberra</pkg></flag>
 </use>
 </pkgmetadata>
