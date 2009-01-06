@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.237 2009/01/02 22:57:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.238 2009/01/06 10:17:24 vapier Exp $
+
+  06 Jan 2009; Mike Frysinger <vapier@gentoo.org> wine-9999.ebuild:
+  Drop gcc-3.4 ssp-compat patch #253740.
 
 *wine-1.1.12 (02 Jan 2009)
 

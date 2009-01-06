@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.24 2008/03/27 18:30:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.25 2009/01/06 10:17:24 vapier Exp $
 
 EAPI="1"
 
@@ -82,7 +82,6 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
-	epatch "${FILESDIR}"/wine-gentoo-no-ssp.patch #66002
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
 }
 
