@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.4 2008/06/25 19:23:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.5 2009/01/06 21:51:49 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="An arcade 2D shoot-em-up game"
@@ -14,19 +15,9 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-0.11.0
-	media-libs/sdl-mixer"
+	media-libs/sdl-mixer[mikmod]"
 
-pkg_setup() {
-	if ! built_with_use media-libs/sdl-mixer mikmod ; then
-		eerror "${PN} needs sdl-mixer compiled with mikmod use-flag enabled!"
-		die "sdl-mixer without mikmod detected"
-	fi
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i -e "/null/d" graphics/Makefile.in || die "sed failed"
 	sed -i -e "/zozo/d" texts/text_en.txt || die "sed failed"
 	local f
@@ -39,9 +30,8 @@ src_unpack() {
 	done
 }
 
-src_compile() {
+src_configure() {
 	egamesconf --prefix=/usr || die "egamesconf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
