@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.6.ebuild,v 1.2 2008/12/29 13:31:54 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.7.ebuild,v 1.1 2009/01/06 19:43:22 gurligebis Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -11,7 +11,7 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="ipv6 logwatch madwifi ssl"
+IUSE="ipv6 logwatch madwifi ssl wps"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	>=dev-libs/libnl-1.1
@@ -38,6 +38,12 @@ generate_config() {
 		echo "CONFIG_EAP_TTLS=y" >> ${CONFIG}
 		echo "CONFIG_EAP_MSCHAPV2=y" >> ${CONFIG}
 		echo "CONFIG_EAP_PEAP=y" >> ${CONFIG}
+	fi
+
+	if use wps; then
+		# Enable Wi-Fi Protected Setup
+		echo "CONFIG_WPS=y" >> ${CONFIG}
+		einfo "Enabling Wi-Fi Protected Setup support"
 	fi
 
 	echo "CONFIG_EAP_GTC=y" >> ${CONFIG}
@@ -136,6 +142,9 @@ src_install() {
 	doman hostapd.8 hostapd_cli.1
 
 	dodoc ChangeLog developer.txt README
+	if use wps; then
+		dodoc README-WPS
+	fi
 
 	docinto examples
 	dodoc wired.conf
@@ -173,4 +182,10 @@ pkg_postinst() {
 	#	einfo "the kernel source for the mac80211 driver. You should "
 	#	einfo "re-emerge ${PN} after upgrading your kernel source."
 	#fi
+
+	if use wps; then
+		einfo "You have enabled Wi-Fi Protected Setup support, please"
+		einfo "read the README-WPS file in /usr/share/doc/${P}"
+		einfo "for info on how to use WPS"
+	fi
 }

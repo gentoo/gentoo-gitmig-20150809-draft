@@ -15,5 +15,6 @@
 		<flag name='logwatch'>Install support files for
 			<pkg>sys-app/logwatch</pkg></flag>
 		<flag name='madwifi'>Add support for madwifi (Atheros chipset)</flag>
+		<flag name='wps'>Add support for Wi-Fi Protected Setup</flag>
 	</use>
 </pkgmetadata>
