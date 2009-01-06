@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r5.ebuild,v 1.1 2009/01/05 18:00:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r6.ebuild,v 1.1 2009/01/06 13:43:59 chainsaw Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -166,7 +166,7 @@ src_compile() {
 		fi
 
 		hardware="--with-cpufreq --with-usb-csr --with-keymaps"
-		use arm && hardware="$hardware --with-omap"
+		use arm && hardware="$hardware --with-omap --enable-pmu"
 		use ppc && hardware="$hardware --enable-pmu"
 
 		if use dell ; then
@@ -196,7 +196,6 @@ src_compile() {
 		  --disable-acl-management \
 		  --enable-pci \
 		  $(use_enable apm) \
-		  $(use_enable arm pmu) \
 		  $(use_enable debug verbose-mode) \
 		  $(use_enable disk-partition parted) \
 		  $(use_enable doc docbook-docs) \

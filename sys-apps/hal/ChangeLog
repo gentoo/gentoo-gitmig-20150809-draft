@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.261 2009/01/05 18:00:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.262 2009/01/06 13:43:59 chainsaw Exp $
+
+*hal-0.5.11-r6 (06 Jan 2009)
+
+  06 Jan 2009; <chainsaw@gentoo.org> -hal-0.5.11-r5.ebuild,
+  +hal-0.5.11-r6.ebuild:
+  Bad interactions between the ARM & PPC setup meant the PMU was
+  enabled/disabled twice. Avoid by using hardware variable instead of
+  use_enable for PMU.
 
 *hal-0.5.11-r5 (05 Jan 2009)
 
