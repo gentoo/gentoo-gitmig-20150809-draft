@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/autounmask
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.32 2008/12/29 18:20:41 dertobi123 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.33 2009/01/06 00:17:27 cla Exp $
+
+  06 Jan 2009; Dawid Węgliński <cla@gentoo.org> autounmask-0.23.ebuild:
+  Stable on amd64 (bug #252687)
 
   29 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   autounmask-0.23.ebuild:
