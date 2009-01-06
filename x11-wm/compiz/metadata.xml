@@ -4,7 +4,6 @@
 <use>
 	<flag name="fuse">Enables support for the filesystem in userspace plugin through <pkg>sys-fs/fuse</pkg>.</flag>
 	<flag name="kde4">Compile the kde4 window decorator and add support for <pkg>kde-base/kdebase-startkde:4.1</pkg>.</flag>
-	<flag name="annotate">Build the annotate plugin</flag>
 </use>
 <herd>desktop-effects</herd>
 <longdescription>
