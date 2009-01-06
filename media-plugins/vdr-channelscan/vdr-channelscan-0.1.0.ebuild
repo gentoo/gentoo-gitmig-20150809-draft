@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelscan/vdr-channelscan-0.1.0.ebuild,v 1.4 2008/04/23 09:00:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelscan/vdr-channelscan-0.1.0.ebuild,v 1.5 2009/01/06 20:22:30 hd_brummy Exp $
 
 inherit vdr-plugin
 
@@ -20,16 +20,20 @@ RDEPEND="${DEPEND}"
 PATCHES=("${FILESDIR}/${P}-shared-data.diff"
 		"${FILESDIR}/${P}-show-only-basename.diff"
 		"${FILESDIR}/${P}-gcc4.diff"
-		"${FILESDIR}/${P}-vdr-1.5.10.diff")
+		"${FILESDIR}/${P}-vdr-1.5.10.diff"
+		"${FILESDIR}/${P}_gcc-4.3.x.diff")
 
 src_unpack() {
 	vdr-plugin_src_unpack
 	fix_vdr_libsi_include filter.c
+
+	has_version ">=media-video/vdr-1.7.0" && \
+	epatch "${FILESDIR}/${P}-vdr-1.7.x.diff"
 }
 
 src_install() {
 	vdr-plugin_src_install
 
 	insinto /usr/share/vdr/channelscan-transponders
-	doins ${S}/transponders/*.ini
+	doins "${S}"/transponders/*.ini
 }

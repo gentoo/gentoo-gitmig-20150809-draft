@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-channelscan
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelscan/ChangeLog,v 1.10 2008/04/23 09:00:03 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelscan/ChangeLog,v 1.11 2009/01/06 20:22:30 hd_brummy Exp $
+
+  06 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-channelscan-0.1.0-vdr-1.7.x.diff,
+  +files/vdr-channelscan-0.1.0_gcc-4.3.x.diff, vdr-channelscan-0.1.0.ebuild:
+  fixed compile probs gcc-4.3.x #bug 251186, thanks to Diego E. Petteno;
+  added compile fix for vdr-1.7.x
 
   23 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
   +files/vdr-channelscan-0.1.0-vdr-1.5.10.diff,
