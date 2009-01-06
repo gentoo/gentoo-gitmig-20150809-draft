@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-0.41.ebuild,v 1.1 2009/01/05 22:51:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/gnome-user-share-0.41.ebuild,v 1.2 2009/01/06 06:02:46 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -50,4 +50,3 @@ pkg_setup() {
 		--with-httpd=apache2
 		--with-modules-path=/usr/lib/apache2/modules/"
 }
-
