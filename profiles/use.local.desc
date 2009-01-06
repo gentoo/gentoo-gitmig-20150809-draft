@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4108 2009/01/06 06:47:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4109 2009/01/06 07:27:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2283,7 +2283,6 @@ sci-geosciences/gpsd:itrax - Enable iTrax hardware support
 sci-geosciences/gpsd:ntp - Enable net-misc/ntp shared memory interface for GPS time
 sci-geosciences/gpsd:tntc - Enable True North Technologies support
 sci-geosciences/grass:gdal - Enable support for sci-libs/gdal (Grass 5 only)
-sci-geosciences/grass:glw - Enable libGLw support (requires media-libs/mesa) 
 sci-geosciences/grass:gmath - Enable gmath wrapper for BLAS/Lapack (virtual/blas, virtual/lapack)
 sci-geosciences/grass:largefile - Enable LFS support for huge files
 sci-geosciences/mapserver:agg - Enable x11-libs/agg library support
@@ -2434,7 +2433,6 @@ sys-apps/tuxonice-userui:fbsplash - Add support for framebuffer splash
 sys-apps/ucspi-ssl:tls - Add TLS support (see also http://www.suspectclass.com/~sgifford/ucspi-tls/)
 sys-apps/usbutils:network-cron - Monthly cronjob the update-usbids script
 sys-apps/util-linux:loop-aes - include support for Loop AES encryption
-sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
 sys-apps/v86d:x86emu - Use x86emu for Video BIOS calls
 sys-auth/pam_mysql:openssl - Use OpenSSL for md5 and sha1 support
 sys-auth/pam_pkcs11:pcsc-lite - build with sys-apps/pcsc-lite instead of dev-libs/openct
@@ -2705,7 +2703,6 @@ x11-plugins/wmsysmon:high-ints - Enable support for monitoring 24 interrupts. Us
 x11-terms/aterm:background - Enable background image support via media-libs/libafterimage
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/eterm:escreen - Enable built-in app-misc/screen support
-x11-terms/eterm:etwin - Enable twin support
 x11-terms/hanterm:utempter - Records user logins. Useful on multi-user systems
 x11-terms/mlterm:scim - Enable scim support
 x11-terms/mlterm:uim - Enable uim support
