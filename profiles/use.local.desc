@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4113 2009/01/06 18:48:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4114 2009/01/06 19:47:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2209,6 +2209,7 @@ net-wireless/bluez-utils:old-daemons - Install old daemons like hidd and sdpd th
 net-wireless/bluez-utils:test-programs - Install l2test and rctest
 net-wireless/hostapd:logwatch - Install support files for sys-app/logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
+net-wireless/hostapd:wps - Add support for Wi-Fi Protected Setup
 net-wireless/iwlwifi:ipw3945 - Add support for the IPW3945 wireless card
 net-wireless/iwlwifi:ipw4965 - Add support for the IPW4965 wireless card
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
