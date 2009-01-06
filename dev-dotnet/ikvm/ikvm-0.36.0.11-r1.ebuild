@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.36.0.11-r1.ebuild,v 1.1 2008/12/28 20:05:52 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.36.0.11-r1.ebuild,v 1.2 2009/01/06 05:56:23 mr_bones_ Exp $
 
 EAPI=2
 
@@ -75,7 +75,6 @@ generate_pkgconfig() {
 	PKG_CONFIG_PATH="${D}/usr/$(get_libdir)/pkgconfig/" pkg-config --silence-errors --libs ikvm &> /dev/null
 	eend $?
 }
-
 
 src_install() {
 	local dll dllbase exe
