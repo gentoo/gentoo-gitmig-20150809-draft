@@ -10,8 +10,6 @@
     <flag name="atmo">Enables support for AtmoLight (homebrew Ambient Lighting Technology)</flag>
     <flag name="cdda">Enables libcdda cd audio playback support.</flag>
     <flag name="cdio">Enables CD input and control library support.</flag>
-    <flag name="corba">Enables corba interface support.</flag>
-    <flag name="daap">Enables DAAP shares services discovery support.</flag>
     <flag name="dc1394">Enables IIDC cameras support.</flag>
     <flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
     <flag name="fluidsynth">Enables Fluidsynth MIDI software synthesis (with external sound fonts).</flag>
@@ -42,7 +40,6 @@
     <flag name="vcdinfo">Enables VCD information library support.</flag>
     <flag name="vcdx">Enables VCD with navigation via libvcdinfo (depends on cdio)</flag>
     <flag name="vlm">New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.</flag>
-    <flag name="wxwindows" restrict="&lt;=media-video/vlc-0.8.6">Builds a <pkg>x11-libs/wxGTK</pkg> based frontend. This interface is no longer maintained.</flag>
     <flag name="X">Enables support for, e.g., fullscreen mode via the X Window System. By itself, this flag does not build a graphical interface.</flag>
     <flag name="zvbi">Enables support for teletext subtitles via the zvbi library.</flag>
   </use>
