@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9363 2009/01/05 22:52:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9364 2009/01/06 02:41:34 zmedico Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Zac Medico <zmedico@gentoo.org> (05 Jan 2009)
+# Portage 2.2 is masked due to known bugs in the
+# package sets and preserve-libs features.
+>=sys-apps/portage-2.2_pre
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (05 Jan 2009)
 # masked for testing
@@ -322,13 +327,6 @@ net-wireless/bluez
 =gnome-base/gnome-mount-0.7
 >=sys-auth/policykit-0.6
 >=gnome-extra/policykit-gnome-0.6
-
-# Zac Medico <zmedico@gentoo.org> (24 Nov 2008)
-# In order to ensure that portage-2.1.6 gets sufficient testing,
-# portage-2.2 will be masked in package.mask until portage-2.1.6 has
-# been marked stable. If you would like to continue using portage-2.2
-# then you should unmask it (instead of downgrading to portage-2.1.6).
->=sys-apps/portage-2.2_pre
 
 # Peter Alfredsen <loki_val@gentoo.org> (22 Nov 2008)
 # Packages not building with mono-2
