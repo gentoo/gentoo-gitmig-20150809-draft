@@ -31,7 +31,6 @@
 		from a GUI interface agnostic of your desktop environment.</flag>
 	<flag name='doc'>Generates documentation that describes HAL's fdi
 		format.</flag>
-	<flag name='dmi'>Adds support for DMI (Desktop Management Interface)</flag>
 	<flag name='laptop'>Adds support for power management scripts
 		(<pkg>sys-power/pm-utils</pkg>)</flag>
 	<flag name='pcmcia'>Allows HAL to process PCMCIA/CardBus slot data which
