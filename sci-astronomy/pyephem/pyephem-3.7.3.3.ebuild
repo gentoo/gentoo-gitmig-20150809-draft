@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.2.3.ebuild,v 1.1 2008/01/29 12:59:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.3.3.ebuild,v 1.1 2009/01/06 23:55:57 bicatali Exp $
 
 inherit distutils
 
@@ -16,19 +16,14 @@ IUSE=""
 DEPEND=""
 
 src_test() {
-	# python setup.py test did not work, so do it manually
-	cd build/lib*
-	for t in angles bodies constants dates usno usno_equinoxes; do
-		PYTHONPATH=. \
-			"${python}" ephem/tests/test_${t}.py \
-			|| die "test_${t} failed"
-	done
+	# remove a buggy test (it's a doc test), check next version.
+	mv src/ephem/tests/test_rst.py{,orig}
+	PYTHONPATH=$(dir -d build/lib*) ${python} setup.py test || die "tests failed"
 }
 
 src_install() {
 	distutils_src_install
-	insinto /usr/share/doc/${PF}/examples
-	doins examples/* || die "Failed to install examples"
+	insinto /usr/share/doc/${PF}
 	mv "${D}"/usr/lib*/${python}*/site-packages/ephem/doc \
 		"${D}"/usr/share/doc/${PF}/html || die "Failed to install doc"
 }
