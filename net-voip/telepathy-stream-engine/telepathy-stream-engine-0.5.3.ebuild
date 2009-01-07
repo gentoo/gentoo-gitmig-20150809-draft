@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-stream-engine/telepathy-stream-engine-0.5.3.ebuild,v 1.2 2008/12/24 11:02:46 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-stream-engine/telepathy-stream-engine-0.5.3.ebuild,v 1.3 2009/01/07 17:17:07 armin76 Exp $
 
 DESCRIPTION="A Telepathy client that handles channels of type 'StreamedMedia'"
 HOMEPAGE="http://telepathy.freedesktop.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/stream-engine/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 IUSE="debug v4l v4l2 xv alsa esd oss gnome pulseaudio"
 
 DEPEND=">=dev-libs/glib-2.4
