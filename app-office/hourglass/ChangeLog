@@ -1,6 +1,11 @@
 # ChangeLog for app-office/hourglass
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/ChangeLog,v 1.2 2009/01/06 08:28:42 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/ChangeLog,v 1.3 2009/01/07 05:41:51 ali_bush Exp $
+
+*hourglass-0.7.2 (07 Jan 2009)
+
+  07 Jan 2009; Alistair Bush <ali_bush@gentoo.org> +hourglass-0.7.2.ebuild:
+  Version Update.
 
   06 Jan 2009; Alistair Bush <ali_bush@gentoo.org> metadata.xml:
   Add java herd to metadata.xml
