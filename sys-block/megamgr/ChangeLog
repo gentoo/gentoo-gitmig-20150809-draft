@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/megamgr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megamgr/ChangeLog,v 1.4 2008/12/01 16:12:40 wschlich Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megamgr/ChangeLog,v 1.5 2009/01/07 04:42:40 tsunam Exp $
+
+  07 Jan 2009; <tsunam@gentoo.org> megamgr-5.20-r1.ebuild:
+  Changing download url per bug 250385, thanks to Christophe Lefebvre for
+  correct url
 
 *megamgr-5.20-r1 (01 Dec 2008)
 

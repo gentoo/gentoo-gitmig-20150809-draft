@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megamgr/megamgr-5.20-r1.ebuild,v 1.1 2008/12/01 16:12:40 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megamgr/megamgr-5.20-r1.ebuild,v 1.2 2009/01/07 04:42:40 tsunam Exp $
 
 inherit multilib
 
 DESCRIPTION="LSI Logic MegaRAID Text User Interface management tool"
 HOMEPAGE="http://www.lsi.com"
-SRC_URI="http://www.lsi.com/files/support/rsa/utilities/megamgr/ut_linux_${PN##mega}_${PV}.zip"
+SRC_URI="http://www.lsi.com/DistributionSystem/AssetDocument/files/support/rsa/utilities/megamgr/ut_linux_${PN##mega}_${PV}.zip"
 
 LICENSE="LSI"
 SLOT="0"
