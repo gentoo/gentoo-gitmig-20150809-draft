@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/filezilla
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.29 2008/12/02 23:23:21 voyageur Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.30 2009/01/07 20:35:32 voyageur Exp $
+
+*filezilla-3.2.0 (07 Jan 2009)
+
+  07 Jan 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +filezilla-3.2.0.ebuild:
+  Version bump, adds bookmarks, logging to file, allow to use GNOME session
+  manager via dbus to cleanly shut down on end of session
 
 *filezilla-3.1.6 (02 Dec 2008)
 
