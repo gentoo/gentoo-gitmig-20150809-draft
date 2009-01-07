@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/currvita
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/ChangeLog,v 1.16 2008/10/06 04:28:56 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/currvita/ChangeLog,v 1.17 2009/01/07 19:48:08 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> currvita-0.9i-r1.ebuild:
+  stable ppc64, bug 254084
 
   06 Oct 2008; Jeroen Roovers <jer@gentoo.org> currvita-0.9i-r1.ebuild:
   Marked ~hppa (bug #237202).
