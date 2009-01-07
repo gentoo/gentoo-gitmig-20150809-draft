@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/icewm
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.135 2008/02/19 15:20:37 beandog Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.136 2009/01/07 14:52:20 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> icewm-1.2.35.ebuild:
+  Marking icewm-1.2.35 ~ppc64 for bug 253304
 
 *icewm-1.2.35 (19 Feb 2008)
 
