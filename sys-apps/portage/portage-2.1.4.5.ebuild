@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4.5.ebuild,v 1.2 2008/10/09 21:34:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.4.5.ebuild,v 1.3 2009/01/07 20:49:44 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -56,10 +56,10 @@ S="${WORKDIR}"/${PN}-${TARBALL_PV}
 S_PL="${WORKDIR}"/${PN}-${PV_PL}
 
 portage_docs() {
-	elog ""
-	elog "For help with using portage please consult the Gentoo Handbook"
-	elog "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
-	elog ""
+	einfo
+	einfo "For help with using portage please consult the Gentoo Handbook"
+	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
+	einfo
 }
 
 src_unpack() {

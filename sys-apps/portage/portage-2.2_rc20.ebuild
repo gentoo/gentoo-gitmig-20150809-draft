@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc20.ebuild,v 1.1 2008/12/28 01:23:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc20.ebuild,v 1.2 2009/01/07 20:49:44 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -280,10 +280,10 @@ pkg_postinst() {
 		done
 	fi
 
-	elog
-	elog "For help with using portage please consult the Gentoo Handbook"
-	elog "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
-	elog
+	einfo
+	einfo "For help with using portage please consult the Gentoo Handbook"
+	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
+	einfo
 
 	if [ $MINOR_UPGRADE = 0 ] ; then
 		elog "If you're upgrading from a pre-2.2 version of portage you might"

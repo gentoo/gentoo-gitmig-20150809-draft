@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.4.ebuild,v 1.8 2008/12/31 15:04:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.4.ebuild,v 1.9 2009/01/07 20:49:44 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -230,10 +230,10 @@ pkg_postinst() {
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
-	elog
-	elog "For help with using portage please consult the Gentoo Handbook"
-	elog "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
-	elog
+	einfo
+	einfo "For help with using portage please consult the Gentoo Handbook"
+	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
+	einfo
 
 	if [ $DOWNGRADE_FROM_2_2 = 0 ] ; then
 		ewarn
