@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnstop
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.21 2008/11/25 22:25:35 rajiv Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.22 2009/01/07 02:43:20 cla Exp $
+
+  07 Jan 2009; Dawid Węgliński <cla@gentoo.org> dnstop-20080502.ebuild:
+  Stable on amd64 (bug #254032)
 
 *dnstop-20080502 (25 Nov 2008)
 
