@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/envlab
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.18 2008/10/06 04:31:03 jer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.19 2009/01/07 19:44:42 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> envlab-1.2-r1.ebuild:
+  stable ppc64, bug 254082
 
   06 Oct 2008; Jeroen Roovers <jer@gentoo.org> envlab-1.2-r1.ebuild:
   Marked ~hppa (bug #237202).
