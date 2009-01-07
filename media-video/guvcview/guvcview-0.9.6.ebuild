@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-0.9.6.ebuild,v 1.3 2008/12/17 14:44:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-0.9.6.ebuild,v 1.4 2009/01/07 14:11:40 ssuominen Exp $
 
 inherit eutils
 
-MY_P="${PN}-src-${PV}"
+MY_P=${PN}-src-${PV}
 
 DESCRIPTION="GTK+ UVC Viewer"
 HOMEPAGE="http://guvcview.berlios.de"
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
