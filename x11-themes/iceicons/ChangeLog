@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/iceicons
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.9 2007/02/06 02:07:41 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.10 2009/01/07 14:53:39 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> iceicons-0.10.0.ebuild:
+  marking iceicons-0.10.0 ~ppc and ~ppc64 for bug 253304
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
