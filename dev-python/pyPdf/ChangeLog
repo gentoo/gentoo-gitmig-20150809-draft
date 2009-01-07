@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyPdf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyPdf/ChangeLog,v 1.1 2009/01/06 11:07:25 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyPdf/ChangeLog,v 1.2 2009/01/07 20:41:58 zmedico Exp $
+
+  07 Jan 2009; Zac Medico <zmedico@gentoo.org> pyPdf-1.12.ebuild:
+  Bug #254092 - Fix incorrect SRC_URI path.
 
 *pyPdf-1.12 (06 Jan 2009)
 
