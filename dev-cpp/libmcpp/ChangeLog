@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libmcpp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/ChangeLog,v 1.2 2008/08/23 18:26:45 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/ChangeLog,v 1.3 2009/01/07 15:12:29 b33fc0d3 Exp $
+
+*libmcpp-2.7 (07 Jan 2009)
+
+  07 Jan 2009; Ahmed Ammar <aammar@edge-techno.com> <b33fc0d3@gentoo.org>
+  +files/libmcpp-2.7-stpcpy-gcc4.3.patch, +libmcpp-2.7.ebuild:
+  Ebuild bump for libmcpp and new patch for gcc-4.3.
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> libmcpp-2.6.4.ebuild:
   add ~amd64, bug #235184
