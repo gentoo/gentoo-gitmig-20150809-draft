@@ -1,0 +1,16 @@
+--- ./Ice-3.3.0/cpp/src/IceUtil/Thread.cpp.orig	2008-11-20 16:40:34.000000000 +0200
++++ ./Ice-3.3.0/cpp/src/IceUtil/Thread.cpp	2008-11-20 16:42:41.000000000 +0200
+@@ -438,7 +438,12 @@
+     }
+     else
+     {
+-        int rc = pthread_create(&_thread, 0, startHook, this);
++				pthread_attr_t attr;
++        int rc = pthread_attr_init(&attr);
++				if(rc != 0)
++					rc = pthread_attr_setstacksize(&attr, PTHREAD_STACK_MIN);
++				if(rc != 0)
++        	rc = pthread_create(&_thread, 0, startHook, this);
+         if(rc != 0)
+         {
+             __decRef();

@@ -1,0 +1,110 @@
+--- ./Ice-3.3.0/cpp/src/Freeze/MapDb.h.orig	2008-09-16 10:46:13.000000000 +0200
++++ ./Ice-3.3.0/cpp/src/Freeze/MapDb.h	2008-09-16 10:48:07.000000000 +0200
+@@ -11,7 +11,7 @@
+ #define FREEZE_MAP_DB_H
+ 
+ #include <IceUtil/Config.h>
+-#include <db_cxx.h>
++#include <db4.6/db_cxx.h>
+ #include <Freeze/ConnectionI.h>
+ #include <Freeze/Map.h>
+ 
+--- ./Ice-3.3.0/cpp/src/Freeze/TransactionI.h.orig	2008-09-16 10:46:13.000000000 +0200
++++ ./Ice-3.3.0/cpp/src/Freeze/TransactionI.h	2008-09-16 10:48:07.000000000 +0200
+@@ -12,7 +12,7 @@
+ 
+ #include <Ice/CommunicatorF.h>
+ #include <Freeze/Transaction.h>
+-#include <db_cxx.h>
++#include <db4.6/db_cxx.h>
+ 
+ namespace Freeze
+ {
+--- ./Ice-3.3.0/cpp/src/Freeze/ObjectStore.h.orig	2008-09-16 10:46:13.000000000 +0200
++++ ./Ice-3.3.0/cpp/src/Freeze/ObjectStore.h	2008-09-16 10:48:07.000000000 +0200
+@@ -20,7 +20,7 @@
+ 
+ #include <vector>
+ #include <list>
+-#include <db_cxx.h>
++#include <db4.6/db_cxx.h>
+ 
+ namespace Freeze
+ {
+--- ./Ice-3.3.0/cpp/src/Freeze/Util.h.orig	2008-09-16 10:46:13.000000000 +0200
++++ ./Ice-3.3.0/cpp/src/Freeze/Util.h	2008-09-16 10:48:07.000000000 +0200
+@@ -12,7 +12,7 @@
+ 
+ #include <Ice/Ice.h>
+ #include <Freeze/DB.h>
+-#include <db_cxx.h>
++#include <db4.6/db_cxx.h>
+ #include <sys/stat.h>
+ 
+ #ifdef _WIN32
+--- ./Ice-3.3.0/cpp/src/Freeze/SharedDbEnv.h.orig	2008-09-16 10:46:13.000000000 +0200
++++ ./Ice-3.3.0/cpp/src/Freeze/SharedDbEnv.h	2008-09-16 10:48:07.000000000 +0200
+@@ -12,7 +12,7 @@
+ 
+ #include <Freeze/Map.h>
+ #include <Ice/Ice.h>
+-#include <db_cxx.h>
++#include <db4.6/db_cxx.h>
+ #include <map>
+ #include <list>
+ 
+--- ./Ice-3.3.0/cpp/src/FreezeScript/DumpDescriptors.cpp.orig	2008-09-16 10:46:13.000000000 +0200
++++ ./Ice-3.3.0/cpp/src/FreezeScript/DumpDescriptors.cpp	2008-09-16 10:48:07.000000000 +0200
+@@ -14,7 +14,7 @@
+ #include <FreezeScript/Exception.h>
+ #include <FreezeScript/Util.h>
+ #include <IceUtil/InputUtil.h>
+-#include <db_cxx.h>
++#include <db4.6/db_cxx.h>
+ #include <set>
+ #include <climits>
+ 
+--- ./Ice-3.3.0/cpp/src/FreezeScript/DumpDB.cpp.orig	2008-09-16 10:46:13.000000000 +0200
++++ ./Ice-3.3.0/cpp/src/FreezeScript/DumpDB.cpp	2008-09-16 10:48:07.000000000 +0200
+@@ -12,7 +12,7 @@
+ #include <FreezeScript/Exception.h>
+ #include <IceUtil/OutputUtil.h>
+ #include <IceUtil/Options.h>
+-#include <db_cxx.h>
++#include <db4.6/db_cxx.h>
+ #include <sys/stat.h>
+ #include <fstream>
+ #include <algorithm>
+--- ./Ice-3.3.0/cpp/src/FreezeScript/Util.cpp.orig	2008-09-16 10:46:13.000000000 +0200
++++ ./Ice-3.3.0/cpp/src/FreezeScript/Util.cpp	2008-09-16 10:48:07.000000000 +0200
+@@ -13,7 +13,7 @@
+ #include <Freeze/Connection.h>
+ #include <Freeze/Initialize.h>
+ #include <Slice/Preprocessor.h>
+-#include <db_cxx.h>
++#include <db4.6/db_cxx.h>
+ #include <sys/stat.h>
+ 
+ using namespace std;
+--- ./Ice-3.3.0/cpp/src/FreezeScript/Transformer.cpp.orig	2008-09-16 10:46:13.000000000 +0200
++++ ./Ice-3.3.0/cpp/src/FreezeScript/Transformer.cpp	2008-09-16 10:48:07.000000000 +0200
+@@ -19,7 +19,7 @@
+ #include <Freeze/Initialize.h>
+ #include <IceXML/Parser.h>
+ #include <IceUtil/InputUtil.h>
+-#include <db_cxx.h>
++#include <db4.6/db_cxx.h>
+ #include <climits>
+ 
+ using namespace std;
+--- ./Ice-3.3.0/cpp/src/FreezeScript/transformdb.cpp.orig	2008-09-16 10:46:13.000000000 +0200
++++ ./Ice-3.3.0/cpp/src/FreezeScript/transformdb.cpp	2008-09-16 10:48:07.000000000 +0200
+@@ -15,7 +15,7 @@
+ #include <Freeze/Transaction.h>
+ #include <Freeze/Catalog.h>
+ #include <IceUtil/Options.h>
+-#include <db_cxx.h>
++#include <db4.6/db_cxx.h>
+ #include <sys/stat.h>
+ #include <fstream>
+ #include <algorithm>

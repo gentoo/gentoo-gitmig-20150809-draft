@@ -1,0 +1,18 @@
+--- Ice-3.3.0/cpp/config/Make.rules.orig	2008-09-16 11:19:04.000000000 +0200
++++ Ice-3.3.0/cpp/config/Make.rules	2008-09-16 11:20:07.000000000 +0200
+@@ -11,13 +11,13 @@
+ # Select an installation base directory. The directory will be created
+ # if it does not exist.
+ #
+-prefix			 ?= /opt/Ice-$(VERSION)
++prefix			 ?= DESTDIR_PLACE_HOLDER
+ 
+ #
+ # The "root directory" for runpath embedded in executables. Can be unset
+ # to avoid adding a runpath to Ice executables.
+ #
+-embedded_runpath_prefix  ?= /opt/Ice-$(VERSION_MAJOR).$(VERSION_MINOR)
++#embedded_runpath_prefix  ?= /opt/Ice-$(VERSION_MAJOR).$(VERSION_MINOR)
+ 
+ #
+ # Define OPTIMIZE as yes if you want to build with

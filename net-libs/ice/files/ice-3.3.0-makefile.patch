@@ -1,0 +1,50 @@
+--- ./Ice-3.3.0/cpp/config/Make.rules.Linux.orig	2008-09-16 14:05:40.000000000 +0200
++++ ./Ice-3.3.0/cpp/config/Make.rules.Linux	2008-09-16 14:08:25.000000000 +0200
+@@ -18,17 +18,17 @@
+ # Default compiler is c++ (aka g++).
+ #
+ ifeq ($(CXX),)
+-   CXX			= c++
++   ICXX			= c++
+ endif
+ 
+ ifeq ($(CXX),g++)
+-   CXX			= c++
++   ICXX			= c++
+ endif
+ 
+ #
+ # icecpp is built with a C compiler
+ #
+-CFLAGS = -O2
++CFLAGS += -O2
+ 
+ ifeq ($(MACHINE),x86_64)
+    ifeq ($(LP64),yes)
+@@ -38,7 +38,7 @@
+    endif
+ endif
+ 
+-ifeq ($(CXX),c++)
++ifeq ($(ICXX),c++)
+ 
+    ifeq ($(MACHINE),sparc64)
+       #
+@@ -78,7 +78,7 @@
+       endif
+    endif
+ 
+-   CXXFLAGS		= $(CXXARCHFLAGS) -ftemplate-depth-128 -Wall -D_REENTRANT -I/usr/include/nptl
++   CXXFLAGS		+= $(CXXARCHFLAGS) -ftemplate-depth-128 -Wall -D_REENTRANT -I/usr/include/nptl
+ 
+    ifneq ($(GENPIC),no)
+       CXXFLAGS		+= -fPIC
+@@ -122,7 +122,7 @@
+ 
+ endif
+ 
+-ifeq ($(CXX),icpc)
++ifeq ($(ICXX),icpc)
+    $(warning ===================================================================) 
+    $(warning Intel C++ is currently not supported. The Ice team does not)
+    $(warning maintain Intel C++ specific portions of the source code or build)
