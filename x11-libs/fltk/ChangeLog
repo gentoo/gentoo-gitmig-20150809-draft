@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.104 2009/01/05 21:53:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.105 2009/01/07 14:15:00 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> fltk-2.0_pre6525.ebuild:
+  Marking fltk-2.0_pre6525 ppc64 for bug 253082
 
   05 Jan 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
   drop local xft USE-flag description, as it's global now
