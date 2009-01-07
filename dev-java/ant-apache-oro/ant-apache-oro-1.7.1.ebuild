@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-oro/ant-apache-oro-1.7.1.ebuild,v 1.4 2008/12/21 13:36:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-oro/ant-apache-oro-1.7.1.ebuild,v 1.5 2009/01/07 19:17:50 ranger Exp $
 
 EAPI=1
 
@@ -8,7 +8,7 @@ ANT_TASK_DEPNAME="jakarta-oro-2.0"
 
 inherit ant-tasks
 
-KEYWORDS="amd64 ~ia64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
 
 DEPEND=">=dev-java/jakarta-oro-2.0.8-r2:2.0"
 RDEPEND="${DEPEND}"
