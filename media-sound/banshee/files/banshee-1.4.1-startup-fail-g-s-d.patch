@@ -1,0 +1,26 @@
+diff -NrU5 banshee-1-1.4.1.orig/src/Clients/Booter/banshee-1.in banshee-1-1.4.1/src/Clients/Booter/banshee-1.in
+--- banshee-1-1.4.1.orig/src/Clients/Booter/banshee-1.in	2009-01-07 00:35:26.000000000 +0100
++++ banshee-1-1.4.1/src/Clients/Booter/banshee-1.in	2009-01-07 00:36:51.000000000 +0100
+@@ -34,10 +34,22 @@
+ if [ -n "$BANSHEE_DEBUG" -o -n "$BANSHEE_TRACE" -o -n "$BANSHEE_PROFILE" ]; then
+     MONO_OPTIONS="$BANSHEE_DEBUG $BANSHEE_TRACE $BANSHEE_PROFILE"
+     echo "** Running Mono with $MONO_OPTIONS **"
+ fi
+ 
++DBUS_CMD="dbus-send --session --dest=org.gnome.SettingsDaemon --type=method_call --print-reply --reply-timeout=2000 /org/gnome/SettingsDaemon org.gnome.SettingsDaemon.Awake"
++
++if ! ${DBUS_CMD} &> /dev/null
++then
++	echo "Debug: gnome-settings-daemon not running, kickstarting..."
++	sleep 1
++	${DBUS_CMD} &> /dev/null || { echo "** FATAL: gnome-settings-daemon could not start. Exiting...**"; return 1; }
++else
++	echo "Gnome-settings-daemon already running, no need to start it. Continuing.."
++fi
++
++
+ # Finally - environment is set up, time to run our beloved
+ exec_args="-a banshee-1 mono $MONO_OPTIONS $MONO_EXE $@"
+ 
+ if [ -z "$BANSHEE_REDIRECT_LOG" ]; then
+ 	exec $exec_args

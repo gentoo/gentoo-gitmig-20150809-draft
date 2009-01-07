@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.1-r3.ebuild,v 1.7 2009/01/06 21:30:26 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.1-r4.ebuild,v 1.1 2009/01/07 00:32:37 loki_val Exp $
 
 EAPI=2
 
@@ -22,6 +22,8 @@ RDEPEND=">=dev-lang/mono-2
 	>=dev-dotnet/gconf-sharp-2.8
 	>=dev-dotnet/gnome-sharp-2.8
 	dev-dotnet/notify-sharp
+	gnome-base/gnome-settings-daemon
+	sys-apps/dbus
 	>=media-libs/gst-plugins-bad-${GVER}
 	>=media-libs/gst-plugins-good-${GVER}
 	>=media-libs/gst-plugins-ugly-${GVER}
@@ -102,6 +104,11 @@ src_unpack() {
 	#Upstream bug 563283
 	#Author is thansen on freenode.
 	epatch "${FILESDIR}/${P}-metadata-writefail.patch"
+
+	#Upstream bug 566846
+	#loki_val@gentoo.org is author.
+	epatch "${FILESDIR}/${P}-startup-fail-g-s-d.patch"
+
 }
 
 src_configure() {
