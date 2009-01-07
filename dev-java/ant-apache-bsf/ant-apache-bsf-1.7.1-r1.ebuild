@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bsf/ant-apache-bsf-1.7.1-r1.ebuild,v 1.1 2008/12/09 23:15:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-bsf/ant-apache-bsf-1.7.1-r1.ebuild,v 1.2 2009/01/07 19:05:11 ranger Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ ANT_TASK_DEPNAME="bsf-2.3"
 
 inherit eutils ant-tasks
 
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~x86 ~x86-fbsd"
 
 # ant-nodeps contains <script> task which is needed for this
 # although it's not a build dep through import
