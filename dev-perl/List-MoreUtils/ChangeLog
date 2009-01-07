@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/List-MoreUtils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.14 2008/07/22 19:25:20 corsair Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.15 2009/01/07 21:05:36 armin76 Exp $
+
+  07 Jan 2009; Raúl Porcel <armin76@gentoo.org> List-MoreUtils-0.22.ebuild:
+  alpha/ia64/sparc/x86
 
   22 Jul 2008; Markus Rothe <corsair@gentoo.org> List-MoreUtils-0.22.ebuild:
   Added ~ppc64; bug #232181
