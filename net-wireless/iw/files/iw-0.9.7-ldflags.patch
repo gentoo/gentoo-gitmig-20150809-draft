@@ -1,0 +1,34 @@
+From 9b2e7e6e695370ae3d01c3f341f4ab9d8d13efcf Mon Sep 17 00:00:00 2001
+From: Mike Auty <mike.auty@gmail.com>
+Date: Fri, 12 Dec 2008 22:47:16 +0100
+Subject: [PATCH] allow compilation using --as-needed
+
+---
+ Makefile |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index df59b51..8a97bae 100644
+--- a/Makefile
++++ b/Makefile
+@@ -12,7 +12,7 @@ CC ?= "gcc"
+ 
+ CFLAGS += -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration `pkg-config --cflags libnl-1`
+ CFLAGS += -O2 -g
+-LDFLAGS += `pkg-config --libs libnl-1`
++LIBS += `pkg-config --libs libnl-1`
+ NLVERSION = 1.0
+ 
+ OBJS = iw.o info.o phy.o interface.o station.o util.o mpath.o reg.o mesh.o genl.o
+@@ -42,7 +42,7 @@ version.h: version.sh
+ 
+ iw:	$(OBJS)
+ 	@$(NQ) ' CC  ' iw
+-	$(Q)$(CC) $(LDFLAGS) $(OBJS) -o iw
++	$(Q)$(CC) $(LDFLAGS) $(OBJS) $(LIBS) -o iw
+ 
+ check:
+ 	$(Q)$(MAKE) all CC="REAL_CC=$(CC) CHECK=\"sparse -Wall\" cgcc"
+-- 
+1.6.0.4
+

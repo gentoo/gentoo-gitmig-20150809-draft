@@ -1,0 +1,26 @@
+From da069ce18c72ec1bf2a15121a0aefb69a6756490 Mon Sep 17 00:00:00 2001
+From: Robert Buchholz <rbu@goodpoint.de>
+Date: Wed, 7 Jan 2009 15:46:13 +0100
+Subject: [PATCH] Do not set -O2 -g CFLAGS if CFLAGS are already defined (in the env).
+
+---
+ Makefile |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 8a97bae..5a0385b 100644
+--- a/Makefile
++++ b/Makefile
+@@ -10,8 +10,8 @@ MKDIR ?= mkdir -p
+ INSTALL ?= install
+ CC ?= "gcc"
+ 
++CFLAGS ?= -O2 -g
+ CFLAGS += -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration `pkg-config --cflags libnl-1`
+-CFLAGS += -O2 -g
+ LIBS += `pkg-config --libs libnl-1`
+ NLVERSION = 1.0
+ 
+-- 
+1.6.0.4
+

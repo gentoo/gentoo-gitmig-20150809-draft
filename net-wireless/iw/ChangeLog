@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.1 2009/01/05 05:03:08 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.2 2009/01/07 15:09:31 rbu Exp $
+
+*iw-0.9.7 (07 Jan 2009)
+
+  07 Jan 2009; Robert Buchholz <rbu@gentoo.org>
+  +files/iw-0.9.7-cflags.patch, +files/iw-0.9.7-ldflags.patch, metadata.xml,
+  +iw-0.9.7.ebuild:
+  Version bump from obsolete version of the code to an actual release (bug
+  #238879). Include patches to fix LDFLAGS and CFLAGS, both applied upstream.
 
 *iw-0_p20080605 (05 Jan 2009)
 
