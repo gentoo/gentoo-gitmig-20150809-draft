@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/svninfo
-# Copyright 2005-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.23 2008/10/06 04:38:16 jer Exp $
+# Copyright 2005-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.24 2009/01/07 19:48:53 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> svninfo-0.7.3-r1.ebuild:
+  stable ppc64, bug 254083
 
   06 Oct 2008; Jeroen Roovers <jer@gentoo.org> svninfo-0.7.3-r1.ebuild:
   Marked ~hppa (bug #237202).
