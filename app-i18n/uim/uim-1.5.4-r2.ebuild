@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.4-r2.ebuild,v 1.1 2008/12/09 17:46:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.4-r2.ebuild,v 1.2 2009/01/07 15:28:59 matsuu Exp $
 
 EAPI=2
-inherit autotools eutils qt3 multilib elisp-common flag-o-matic
+inherit libtool eutils qt3 multilib elisp-common flag-o-matic
 
 DESCRIPTION="Simple, secure and flexible input method library"
 HOMEPAGE="http://code.google.com/p/uim/"
@@ -12,7 +12,7 @@ SRC_URI="http://uim.googlecode.com/files/${P}.tar.bz2"
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+anthy canna eb emacs gnome gtk kde libedit libnotify m17n-lib ncurses nls prime qt3 qt4 truetype unicode X linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
+IUSE="+anthy canna eb emacs gnome gtk kde libedit libnotify m17n-lib ncurses nls prime qt3 qt4 unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
 RDEPEND="X? (
 		x11-libs/libX11
@@ -149,7 +149,7 @@ src_configure() {
 		$(use_with prime) \
 		$(use_with qt3 qt-immodule) \
 		$(use_with qt4 qt4-immodule) \
-		$(use_with truetype xft) \
+		$(use_with xft) \
 		${myconf} || die "econf failed"
 }
 
