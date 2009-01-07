@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/freealut-1.1.0.ebuild,v 1.11 2007/07/23 18:14:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/freealut-1.1.0.ebuild,v 1.12 2009/01/07 13:40:08 gmsoft Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.openal.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="media-libs/openal"
