@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/europecv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.25 2009/01/03 01:33:00 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.26 2009/01/07 19:46:33 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> europecv-20060424-r1.ebuild:
+  stable ppc64, bug 254089
 
   03 Jan 2009; Friedrich Oslage <bluebird@gentoo.org>
   europecv-20060424-r1.ebuild:
