@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4-r1.ebuild,v 1.9 2009/01/05 17:22:26 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift/autopano-sift-2.4-r1.ebuild,v 1.10 2009/01/07 09:12:56 loki_val Exp $
 
 inherit mono eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 		sed -i 's%pkg:gtk-sharp%pkg:gtk-sharp-2.0%g' Makefile util/Makefile \
 			util/autopanog/Makefile || die "sed failed"
 	fi
-	if has_version '>=dev-dotnet/glade-sharp-2' || has_version '>=dev-dotnet/gtk-sharp-2.12.6' ; then
+	if has_version '>=dev-dotnet/glade-sharp-2'; then
 		sed -i 's%pkg:glade-sharp%pkg:glade-sharp-2.0%g' util/Makefile \
 			util/autopanog/Makefile || die "sed failed"
 	fi
