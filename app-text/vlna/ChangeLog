@@ -1,6 +1,9 @@
 # ChangeLog for app-text/vlna
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.19 2008/10/06 04:31:58 jer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.20 2009/01/07 19:43:28 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> vlna-1.3.ebuild:
+  stable ppc64, bug 254078
 
   06 Oct 2008; Jeroen Roovers <jer@gentoo.org> vlna-1.3.ebuild:
   Marked ~hppa (bug #237202).
