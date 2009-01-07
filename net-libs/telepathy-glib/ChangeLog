@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-glib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.23 2008/12/30 12:52:54 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.24 2009/01/07 16:57:33 armin76 Exp $
+
+  07 Jan 2009; Raúl Porcel <armin76@gentoo.org>
+  telepathy-glib-0.7.20.ebuild:
+  Add ~alpha/~ia64 wrt #245949
 
 *telepathy-glib-0.7.20 (30 Dec 2008)
 
