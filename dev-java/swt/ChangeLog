@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.95 2009/01/04 16:44:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.96 2009/01/07 16:43:33 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> swt-3.4-r2.ebuild:
+  Marking swt-3.4-r2 ppc64 for bug 252875
 
   04 Jan 2009; Markus Meier <maekke@gentoo.org> swt-3.4-r2.ebuild:
   x86 stable, bug #252875
