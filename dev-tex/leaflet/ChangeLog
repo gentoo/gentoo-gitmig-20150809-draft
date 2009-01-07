@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/leaflet
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.17 2008/10/06 04:33:14 jer Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/leaflet/ChangeLog,v 1.18 2009/01/07 19:45:28 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> leaflet-20041222.ebuild:
+  stable ppc64, bug 254091
 
   06 Oct 2008; Jeroen Roovers <jer@gentoo.org> leaflet-20041222.ebuild:
   Marked ~hppa (bug #237202).
