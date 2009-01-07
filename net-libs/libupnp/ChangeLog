@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.19 2009/01/03 15:00:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.20 2009/01/07 20:21:18 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> libupnp-1.6.6.ebuild:
+  Marking libupnp-1.6.6 ppc64 for bug 239533
 
   03 Jan 2009; nixnut <nixnut@gentoo.org> libupnp-1.6.6.ebuild:
   ppc stable #239533
