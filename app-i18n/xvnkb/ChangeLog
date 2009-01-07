@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/xvnkb
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/ChangeLog,v 1.20 2009/01/04 22:39:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/ChangeLog,v 1.21 2009/01/07 15:33:14 matsuu Exp $
+
+  07 Jan 2009; MATSUU Takuto <matsuu@gentoo.org> xvnkb-0.2.8a-r1.ebuild,
+  -xvnkb-0.2.9a.ebuild, xvnkb-0.2.9a-r1.ebuild:
+  Changed truetype USE flag to xft, bug #253910. Removed old revision.
 
   04 Jan 2009; Ulrich Mueller <ulm@gentoo.org> xvnkb-0.2.8a-r1.ebuild,
   xvnkb-0.2.9a.ebuild, xvnkb-0.2.9a-r1.ebuild:

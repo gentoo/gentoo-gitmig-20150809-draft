@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.9a-r1.ebuild,v 1.2 2009/01/04 22:39:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.9a-r1.ebuild,v 1.3 2009/01/07 15:33:14 matsuu Exp $
 
 inherit eutils multilib toolchain-funcs
 
-IUSE="truetype spell"
+IUSE="spell xft"
 
 DESCRIPTION="Vietnamese input keyboard for X"
 SRC_URI="http://xvnkb.sourceforge.net/${P}.tar.bz2"
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND="x11-libs/libX11
-	truetype? ( x11-libs/libXft )"
+	xft? ( x11-libs/libXft )"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
@@ -25,7 +25,7 @@ src_compile() {
 	tc-export CC
 
 	use spell || myconf="${myconf} --no-spellcheck"
-	use truetype || myconf="${myconf} --no-xft"
+	use xft || myconf="${myconf} --no-xft"
 
 	# *not* autotools
 	./configure \
