@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymsn
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymsn/ChangeLog,v 1.8 2008/12/24 10:08:07 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymsn/ChangeLog,v 1.9 2009/01/07 16:59:25 armin76 Exp $
+
+  07 Jan 2009; Raúl Porcel <armin76@gentoo.org> pymsn-0.3.3.ebuild:
+  Add ~alpha/~ia64 wrt #245949
 
   24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> pymsn-0.3.3.ebuild:
   Add ~sparc keyword, bug #245949
