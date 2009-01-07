@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>nx</herd>
-<longdescription>
-  Server part of 2x Terminal Server (a GPL NX server)
-</longdescription>
-</pkgmetadata>
