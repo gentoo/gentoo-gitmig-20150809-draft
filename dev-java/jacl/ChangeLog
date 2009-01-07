@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jacl
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/ChangeLog,v 1.27 2008/12/20 17:58:55 maekke Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/ChangeLog,v 1.28 2009/01/07 19:29:56 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> jacl-1.4.1.ebuild:
+  stable ppc64, bug 243126
 
   20 Dec 2008; Markus Meier <maekke@gentoo.org> jacl-1.4.1.ebuild:
   x86 stable, bug #243126
