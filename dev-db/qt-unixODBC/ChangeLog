@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qt-unixODBC
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.39 2008/07/26 21:00:53 carlo Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.40 2009/01/07 19:44:51 ranger Exp $
+
+  07 Jan 2009; Brent Baude <ranger@gentoo.org> qt-unixODBC-3.3.8b.ebuild:
+  Marking qt-unixODBC-3.3.8b ppc64 for bug 253978
 
 *qt-unixODBC-3.3.8b (26 Jul 2008)
 
