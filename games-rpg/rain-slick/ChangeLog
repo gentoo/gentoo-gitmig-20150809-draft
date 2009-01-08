@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/rain-slick
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/ChangeLog,v 1.2 2008/10/29 18:47:19 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/rain-slick/ChangeLog,v 1.3 2009/01/08 18:18:04 mr_bones_ Exp $
+
+  08 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  rain-slick-2.1.ebuild:
+  fix up SRC_URI as mentioned by Xake in bug #250975
 
 *rain-slick-2.1 (29 Oct 2008)
 *rain-slick-1.4 (29 Oct 2008)
