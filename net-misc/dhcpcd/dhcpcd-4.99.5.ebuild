@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.99.5.ebuild,v 1.1 2008/11/21 13:08:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-4.99.5.ebuild,v 1.2 2009/01/08 01:39:08 darkside Exp $
 
 EAPI=1
 
@@ -11,7 +11,7 @@ MY_P="${MY_P/_beta/-beta}"
 MY_P="${MY_P/_rc/-rc}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="A DHCP client"
+DESCRIPTION="A fully featured, yet light weight RFC2131 compliant DHCP client"
 HOMEPAGE="http://roy.marples.name/projects/dhcpcd/"
 SRC_URI="http://roy.marples.name/downloads/${PN}/${MY_P}.tar.bz2"
 LICENSE="BSD-2"

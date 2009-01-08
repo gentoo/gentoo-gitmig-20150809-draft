@@ -6,7 +6,7 @@
   	<email>welp@gentoo.org</email>
 	<name>Peter Weller</name>
   </maintainer>
-  <longdescription>A DHCP client</longdescription>
+  <longdescription>A fully featured, yet light weight RFC2131 compliant DHCP client</longdescription>
   <longdescription lang="ja">DHCP クライアントです。</longdescription>
   <use>
     <flag name="compat">Enable commandline compability with dhcpcd-3.x</flag>
