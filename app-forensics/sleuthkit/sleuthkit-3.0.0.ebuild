@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-3.0.0.ebuild,v 1.1 2009/01/04 23:38:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-3.0.0.ebuild,v 1.2 2009/01/08 20:06:34 patrick Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -18,6 +18,8 @@ KEYWORDS="~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
 #	aff? ( app-forensics/afflib )"
 RDEPEND="dev-perl/DateManip"
 
+IUSE=""
+
 src_unpack() {
 	unpack "${A}"
 	cd "${S}"
@@ -26,12 +28,11 @@ src_unpack() {
 }
 
 src_compile() {
-	use hfs && append-flags "-DTSK_USE_HFS"
 	econf	|| die "configure failed"
 	emake || die "make failed"
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
+	emake install DESTDIR="${D}" || die
 	dodoc docs/*.txt README.txt CHANGES.txt TODO.txt
 }
