@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.34 2008/10/26 03:52:01 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.35 2009/01/08 06:18:27 vapier Exp $
+
+  08 Jan 2009; Mike Frysinger <vapier@gentoo.org> ftp-0.17-r7.ebuild:
+  Mark amd64 stable.
 
   26 Oct 2008; Mike Frysinger <vapier@gentoo.org>
   +files/netkit-ftp-0.17-CPPFLAGS.patch, ftp-0.17-r7.ebuild:
