@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/secondlife-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.9 2009/01/08 03:52:19 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.10 2009/01/08 11:29:48 lavajoe Exp $
+
+  08 Jan 2009; Joe Peterson <lavajoe@gentoo.org>
+  secondlife-bin-1.22_rc5.ebuild:
+  Fix sandbox issue - no rev bump
 
 *secondlife-bin-1.22_rc5 (08 Jan 2009)
 

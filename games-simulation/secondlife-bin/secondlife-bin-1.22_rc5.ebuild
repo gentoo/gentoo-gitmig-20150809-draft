@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.22_rc5.ebuild,v 1.1 2009/01/08 03:52:19 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.22_rc5.ebuild,v 1.2 2009/01/08 11:29:48 lavajoe Exp $
 
 inherit eutils multilib games versionator
 
@@ -20,8 +20,9 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
+# Note, used to RDEPEND on:
+# media-fonts/kochi-substitute
 RDEPEND="sys-libs/glibc
-	media-fonts/kochi-substitute
 	x86? (
 		x11-libs/libX11
 		x11-libs/libXau
@@ -83,7 +84,7 @@ src_install() {
 	insinto "${SECONDLIFE_HOME}"
 	doins -r * || die "doins * failed"
 
-	dosym /usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf "${SECONDLIFE_HOME}"/unicode.ttf
+	#dosym /usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf "${SECONDLIFE_HOME}"/unicode.ttf
 
 	games_make_wrapper secondlife-bin "./secondlife --set VersionChannelName Gentoo" "${SECONDLIFE_HOME}" "${SECONDLIFE_HOME}"/lib
 	make_desktop_entry secondlife-bin "Second Life" /opt/secondlife/secondlife_icon.png
