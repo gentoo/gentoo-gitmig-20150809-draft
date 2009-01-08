@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.79 2008/10/05 00:23:31 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.80 2009/01/08 16:52:38 armin76 Exp $
+
+  08 Jan 2009; Raúl Porcel <armin76@gentoo.org> devhelp-0.20.ebuild,
+  devhelp-0.21.ebuild:
+  Mark -sparc due to bug #253541
 
 *devhelp-0.21 (04 Oct 2008)
 
