@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.36.ebuild,v 1.9 2008/12/06 19:38:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-3.36.ebuild,v 1.10 2009/01/08 18:01:40 ranger Exp $
 
 inherit autotools multilib eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://bluez.sourceforge.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ppc ~ppc64 ~sh sparc ~x86"
+KEYWORDS="~amd64 ~arm hppa ppc ppc64 ~sh sparc ~x86"
 
 IUSE="alsa cups debug examples gstreamer old-daemons test-programs usb"
 

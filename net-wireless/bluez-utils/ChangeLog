@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-utils
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.137 2008/12/06 19:38:51 dertobi123 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.138 2009/01/08 18:01:40 ranger Exp $
+
+  08 Jan 2009; Brent Baude <ranger@gentoo.org> bluez-utils-3.36.ebuild:
+  Marking bluez-utils-3.36 ppc64 for bug 230591
 
   06 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   bluez-utils-3.36.ebuild:
