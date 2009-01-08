@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-libs
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.113 2008/12/13 15:07:24 armin76 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.114 2009/01/08 17:59:59 ranger Exp $
+
+  08 Jan 2009; Brent Baude <ranger@gentoo.org> bluez-libs-3.36.ebuild:
+  Marking bluez-libs-3.36 ppc64 for bug 230591
 
   13 Dec 2008; Raúl Porcel <armin76@gentoo.org> bluez-libs-2.22.ebuild,
   bluez-libs-2.25.ebuild, bluez-libs-3.25.ebuild, bluez-libs-3.27.ebuild,
