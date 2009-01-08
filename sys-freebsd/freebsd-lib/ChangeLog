@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.60 2008/08/22 22:10:05 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.61 2009/01/08 17:39:48 aballier Exp $
+
+  08 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  +files/freebsd-lib-new_as.patch, freebsd-lib-6.2-r4.ebuild:
+  import a patch from fbsd 7 overlay to build with latest as
 
   22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
