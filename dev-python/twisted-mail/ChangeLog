@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/twisted-mail
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.33 2008/12/20 18:34:04 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.34 2009/01/08 22:53:48 patrick Exp $
+
+*twisted-mail-8.2.0 (08 Jan 2009)
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org>
+  -twisted-mail-0.1.0-r1.ebuild, -twisted-mail-0.2.0.ebuild,
+  -twisted-mail-0.3.0.ebuild, -twisted-mail-0.4.0.ebuild,
+  -twisted-mail-8.0.0.ebuild, +twisted-mail-8.2.0.ebuild:
+  Bump to 8.2.0, remove old
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> twisted-mail-8.1.0.ebuild:
   Stable on ppc wrt bug 231675
