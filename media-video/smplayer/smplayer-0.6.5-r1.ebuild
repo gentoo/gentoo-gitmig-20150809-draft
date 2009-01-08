@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.5-r1.ebuild,v 1.4 2009/01/08 01:20:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.5-r1.ebuild,v 1.5 2009/01/08 19:31:50 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -16,7 +16,6 @@ DEPEND="|| ( x11-libs/qt-gui:4
 			=x11-libs/qt-4.3* )"
 RDEPEND="${DEPEND}
 	media-video/mplayer[ass,png]"
-
 
 LANGS="bg ca cs de en_US es eu fi fr gl hu it ja ka ko ku mk nl pl pt_BR pt_PT sk sr sv tr zh_CN zh_TW"
 NOLONGLANGS="ar_SY el_GR ro_RO ru_RU sl_SI uk_UA"
