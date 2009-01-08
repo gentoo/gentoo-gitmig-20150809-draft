@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/svk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.34 2009/01/02 21:07:08 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.35 2009/01/08 14:34:06 armin76 Exp $
+
+  08 Jan 2009; Raúl Porcel <armin76@gentoo.org> svk-2.0.2.ebuild:
+  Add ~ia64 wrt #253448
 
   02 Jan 2009; Friedrich Oslage <bluebird@gentoo.org> svk-2.0.2.ebuild:
   Re-Add ~sparc keyword, bug #253448
