@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.56 2008/06/10 19:03:27 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.57 2009/01/08 21:17:28 aballier Exp $
+
+  08 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  -freebsd-ubin-6.2.ebuild:
+  remove old
 
   10 Jun 2008; Alexis Ballier <aballier@gentoo.org>
   freebsd-ubin-6.2-r2.ebuild:
