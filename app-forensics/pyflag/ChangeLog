@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/pyflag
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/ChangeLog,v 1.7 2007/01/24 03:20:44 genone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/pyflag/ChangeLog,v 1.8 2009/01/08 20:13:08 patrick Exp $
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -pyflag-0.80.1.ebuild:
+  Removing old
 
   24 Jan 2007; Marius Mauch <genone@gentoo.org> pyflag-0.80.1.ebuild,
   pyflag-0.82.ebuild:

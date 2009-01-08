@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.35 2009/01/08 20:06:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.36 2009/01/08 20:16:37 patrick Exp $
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -sleuthkit-2.02.ebuild,
+  -sleuthkit-2.03.ebuild, -sleuthkit-2.08.ebuild:
+  Removing old
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org> sleuthkit-3.0.0.ebuild:
   Small fixes

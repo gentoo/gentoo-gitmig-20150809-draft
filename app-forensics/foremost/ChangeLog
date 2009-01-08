@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/foremost
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.13 2009/01/05 17:34:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.14 2009/01/08 20:11:23 patrick Exp $
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -foremost-1.0.ebuild,
+  -foremost-1.4.ebuild, -foremost-1.5.ebuild, -foremost-1.5.3.ebuild:
+  Removing old
 
 *foremost-1.5.5 (05 Jan 2009)
 
