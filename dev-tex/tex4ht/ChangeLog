@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.37 2009/01/07 16:46:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.38 2009/01/08 19:24:19 jer Exp $
+
+  08 Jan 2009; Jeroen Roovers <jer@gentoo.org> tex4ht-20081103_p0302.ebuild:
+  Stable for HPPA (bug #254065).
 
   07 Jan 2009; Brent Baude <ranger@gentoo.org> tex4ht-20081103_p0302.ebuild:
   stable ppc64, bug 254065
