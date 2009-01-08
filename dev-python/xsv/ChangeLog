@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xsv
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xsv/ChangeLog,v 1.8 2007/02/09 07:41:02 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xsv/ChangeLog,v 1.9 2009/01/08 21:09:51 patrick Exp $
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -xsv-2.5-r1.ebuild:
+  Removing old
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
