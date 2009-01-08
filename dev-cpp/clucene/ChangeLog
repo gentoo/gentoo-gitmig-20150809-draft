@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/clucene
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.16 2008/12/20 20:19:18 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.17 2009/01/08 20:01:30 jer Exp $
+
+  08 Jan 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix <herd>.
 
   20 Dec 2008; Markus Meier <maekke@gentoo.org> clucene-0.9.21b.ebuild:
   x86 stable, bug #251643
