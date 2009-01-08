@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.68 2009/01/07 21:07:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.69 2009/01/08 20:49:44 ranger Exp $
+
+  08 Jan 2009; Brent Baude <ranger@gentoo.org> DateTime-0.45.01.ebuild:
+  Marking DateTime-0.45.01 ppc64 for bug 254143
 
   07 Jan 2009; Raúl Porcel <armin76@gentoo.org> DateTime-0.45.01.ebuild:
   alpha/ia64/x86 stable wrt #254143
