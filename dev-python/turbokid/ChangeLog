@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/turbokid
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbokid/ChangeLog,v 1.5 2008/01/04 18:06:51 hawking Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbokid/ChangeLog,v 1.6 2009/01/08 23:33:25 patrick Exp $
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -turbokid-1.0.2.ebuild:
+  Remove old
 
 *turbokid-1.0.4 (04 Jan 2008)
 
