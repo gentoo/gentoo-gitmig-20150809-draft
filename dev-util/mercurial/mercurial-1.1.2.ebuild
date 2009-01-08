@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.0.1-r3.ebuild,v 1.2 2008/09/15 20:13:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.1.2.ebuild,v 1.1 2009/01/08 22:20:31 nelchael Exp $
 
-inherit bash-completion distutils elisp-common flag-o-matic eutils
+inherit bash-completion elisp-common flag-o-matic eutils distutils
 
 DESCRIPTION="Scalable distributed SCM"
 HOMEPAGE="http://www.selenic.com/mercurial/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.selenic.com/mercurial/release/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="bugzilla emacs gpg test zsh-completion"
 
 CDEPEND=">=dev-lang/python-2.3"
@@ -25,12 +25,6 @@ DEPEND="${CDEPEND}
 
 PYTHON_MODNAME="${PN} hgext"
 SITEFILE="70${PN}-gentoo.el"
-
-src_unpack() {
-	distutils_src_unpack
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-87c704ac92d4-git-patch.patch"
-}
 
 src_compile() {
 	filter-flags -ftracer -ftree-vectorize
@@ -81,6 +75,8 @@ EOF
 }
 
 src_test() {
+	local testdir="${T}/tests"
+	mkdir -p -m1777 "${testdir}" || die
 	cd "${S}/tests/"
 	rm -f *svn*		# Subversion tests fail with 1.5
 	rm -f test-convert-baz*		# GNU Arch baz
@@ -89,8 +85,17 @@ src_test() {
 	rm -f test-convert-git*		# git
 	rm -f test-convert-mtn*		# monotone
 	rm -f test-convert-tla*		# GNU Arch tla
+	rm -f test-doctest*		# doctest always fails with python 2.5.x
+	if ! has userpriv ${FEATURES}; then
+		einfo "Removing tests which require user privileges to succeed"
+		rm -f test-command-template	# Test is broken when run as root
+		rm -f test-convert			# Test is broken when run as root
+		rm -f test-lock-badness		# Test is broken when run as root
+		rm -f test-permissions		# Test is broken when run as root
+		rm -f test-pull-permission	# Test is broken when run as root
+	fi
 	einfo "Running Mercurial tests ..."
-	python run-tests.py || die "test failed"
+	python run-tests.py --tmpdir="${testdir}" || die "test failed"
 }
 
 pkg_postinst() {
