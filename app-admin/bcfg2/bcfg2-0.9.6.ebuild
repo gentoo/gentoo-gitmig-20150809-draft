@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-0.9.6.ebuild,v 1.2 2009/01/08 17:52:20 darkside Exp $
-
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-0.9.6.ebuild,v 1.3 2009/01/08 18:01:41 darkside Exp $
 
 inherit distutils
 
@@ -25,7 +23,7 @@ RDEPEND="app-portage/gentoolkit
 	dev-python/lxml
 	server? (
 		dev-python/pyopenssl
-		|| ( app-admin/gamin[python] app-admin/fam ) )"
+		app-admin/gam-server )"
 
 src_install() {
 	distutils_src_install --record=PY_SERVER_LIBS --install-scripts /usr/sbin
