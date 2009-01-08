@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.1.2.ebuild,v 1.1 2009/01/08 22:20:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.1.2.ebuild,v 1.2 2009/01/08 22:45:15 nelchael Exp $
 
 inherit bash-completion elisp-common flag-o-matic eutils distutils
 
@@ -17,6 +17,7 @@ CDEPEND=">=dev-lang/python-2.3"
 RDEPEND="${CDEPEND}
 	bugzilla? ( dev-python/mysql-python )
 	gpg? ( app-crypt/gnupg )
+	tk? ( dev-lang/tk )
 	zsh-completion? ( app-shells/zsh )"
 DEPEND="${CDEPEND}
 	emacs? ( virtual/emacs )

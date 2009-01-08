@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.87 2009/01/08 22:20:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.88 2009/01/08 22:45:15 nelchael Exp $
+
+  08 Jan 2009; <nelchael@gentoo.org> metadata.xml, mercurial-1.1.2.ebuild:
+  Add tk use flag for hgk script.
 
 *mercurial-1.1.2 (08 Jan 2009)
 

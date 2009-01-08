@@ -11,6 +11,7 @@
     <flag name="darcs">Support conversion of Darcs repositories to Mercurial.</flag>
     <flag name="git">Support conversion of Git repositories to Mercurial.</flag>
     <flag name="gpg">Support signing with GnuPG.</flag>
+	<flag name="tk">Install dev-lang/tk for hgk script.</flag>
     <flag name="zsh-completion">Install zsh command completion for hg.</flag>
   </use>
 </pkgmetadata>
