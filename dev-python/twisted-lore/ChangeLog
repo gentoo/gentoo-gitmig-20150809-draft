@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/twisted-lore
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.29 2008/12/20 18:36:30 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.30 2009/01/08 23:01:14 patrick Exp $
+
+*twisted-lore-8.2.0 (08 Jan 2009)
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org>
+  -twisted-lore-0.1.0-r1.ebuild, -twisted-lore-0.1.0-r2.ebuild,
+  -twisted-lore-0.2.0.ebuild, -twisted-lore-0.3.0.ebuild,
+  -twisted-lore-8.0.0.ebuild, +twisted-lore-8.2.0.ebuild:
+  Bump to 8.2.0, remove old
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> twisted-lore-8.1.0.ebuild:
   Stable on ppc wrt bug 231675

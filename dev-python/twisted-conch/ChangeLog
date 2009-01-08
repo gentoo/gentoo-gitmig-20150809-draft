@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/twisted-conch
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.36 2008/12/20 18:30:47 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.37 2009/01/08 23:05:23 patrick Exp $
+
+*twisted-conch-8.2.0 (08 Jan 2009)
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org>
+  -twisted-conch-0.5.0-r1.ebuild, -twisted-conch-0.6.0.ebuild,
+  -twisted-conch-0.7.0.ebuild, -twisted-conch-0.8.0.ebuild,
+  +twisted-conch-8.2.0.ebuild:
+  Bump to 8.2.0, remove old
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> twisted-conch-8.1.0.ebuild:
   Stable on ppc wrt bug 231675
