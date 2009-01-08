@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gnutu
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnutu/ChangeLog,v 1.5 2007/07/14 10:05:06 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnutu/ChangeLog,v 1.6 2009/01/08 18:38:44 jer Exp $
+
+*gnutu-2.5 (08 Jan 2009)
+
+  08 Jan 2009; Jeroen Roovers <jer@gentoo.org> +gnutu-2.5.ebuild:
+  Version bump thanks to Ben Leggett (bug #147369).
 
   14 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning app-misc/gnutu to m-needed, as chriswhite has been retired (#56211).
