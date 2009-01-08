@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vcdimager
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.53 2006/10/20 21:52:43 kloeri Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.54 2009/01/08 11:02:26 ssuominen Exp $
+
+*vcdimager-0.7.23-r1 (08 Jan 2009)
+
+  08 Jan 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +vcdimager-0.7.23-r1.ebuild:
+  If libcdio is built with USE minimal, it doesn't install cdtext.h include
+  required for building vcdimager wrt #252387, thanks to Christopher Schwan.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   vcdimager-0.7.23.ebuild:
