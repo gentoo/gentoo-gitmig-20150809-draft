@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.0-r1.ebuild,v 1.5 2008/06/18 13:04:11 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.0-r1.ebuild,v 1.6 2009/01/08 23:21:21 jsbronder Exp $
 
-inherit autotools flag-o-matic eutils linux-info
+inherit flag-o-matic eutils linux-info
 
 DESCRIPTION="Resource manager and queuing system based on OpenPBS"
 HOMEPAGE="http://www.clusterresources.com/products/torque/"

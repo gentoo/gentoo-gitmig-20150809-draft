@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.3.ebuild,v 1.1 2008/08/15 19:06:40 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.3.3.ebuild,v 1.2 2009/01/08 23:21:21 jsbronder Exp $
 
-inherit autotools flag-o-matic eutils linux-info
+inherit flag-o-matic eutils linux-info
 
 DESCRIPTION="Resource manager and queuing system based on OpenPBS"
 HOMEPAGE="http://www.clusterresources.com/products/torque/"
@@ -176,12 +176,12 @@ pkg_postinst() {
 # root will be setup as the primary operator/manager, the local machine
 # will be added as a node and we'll create a simple queue, batch.
 pkg_config() {
-	local h="${ROOT}/${PBS_SERVER_HOME}"
+	local h="$(echo "${ROOT}/${PBS_SERVER_HOME}" | sed 's:///*:/:g')"
 	local rc=0
 
 	ebegin "Configuring Torque"
 	[ -n "${PBS_SERVER_NAME}" ] || PBS_SERVER_NAME=$(hostname -f)
-	einfo "Using ${PBS_SERVER_HOME} as the pbs homedir"
+	einfo "Using ${h} as the pbs homedir"
 	einfo "Using ${PBS_SERVER_NAME} as the pbs_server"
 
 	# Check for previous configuration and bail if found.
@@ -199,8 +199,8 @@ pkg_config() {
 
 	if use server; then
 		local qmgr="${ROOT}/usr/bin/qmgr -c"
-		if ! echo "y" | "${ROOT}"/usr/sbin/pbs_server \
-			-d "${ROOT}${PBS_SERVER_HOME}" -t create &>/dev/null; then
+		# pbs_server bails on repeated backslashes.
+		if ! echo "y" | "${ROOT}"/usr/sbin/pbs_server -d "${h}" -t create; then
 			eerror "Failed to start pbs_server"
 			rc=1
 		else
