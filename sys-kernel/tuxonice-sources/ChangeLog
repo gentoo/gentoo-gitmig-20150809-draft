@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/tuxonice-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.43 2009/01/08 21:46:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/ChangeLog,v 1.44 2009/01/08 21:51:22 nelchael Exp $
+
+  08 Jan 2009; <nelchael@gentoo.org> tuxonice-sources-2.6.24-r9.ebuild,
+  tuxonice-sources-2.6.25-r7.ebuild, tuxonice-sources-2.6.26.ebuild:
+  Fix dependency on tuxonice-userui-0.7.2 for TOI 3.0-rc7 based kernels.
 
   08 Jan 2009; <nelchael@gentoo.org> -tuxonice-sources-2.6.23-r12.ebuild:
   Remove old version.
