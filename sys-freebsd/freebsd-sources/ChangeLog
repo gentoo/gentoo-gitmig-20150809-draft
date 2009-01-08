@@ -1,6 +1,19 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.43 2009/01/08 17:55:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.44 2009/01/08 18:35:47 aballier Exp $
+
+*freebsd-sources-6.2-r5 (08 Jan 2009)
+
+  08 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  +files/freebsd-sources-6.2-amd64.patch,
+  +files/freebsd-sources-6.2-arc4random6x.patch,
+  +files/freebsd-sources-6.2-icmp6.patch,
+  +files/freebsd-sources-6.2-nd6-6.patch,
+  +files/freebsd-sources-6.2-protosw6x.patch,
+  +files/freebsd-sources-7.0-binutils_link.patch,
+  +freebsd-sources-6.2-r5.ebuild:
+  Fix module symbols export with latest binutils, grab a bunch of security
+  fixes from security.freebsd.org.
 
   08 Jan 2009; Alexis Ballier <aballier@gentoo.org>
   -freebsd-sources-6.2.ebuild, -freebsd-sources-6.2-r1.ebuild,
