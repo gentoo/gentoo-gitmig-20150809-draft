@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9368 2009/01/07 21:16:31 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9369 2009/01/08 02:30:57 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -308,11 +308,6 @@ net-analyzer/sysmon
 # upstream for quite some time now. bug #246891
 app-emulation/xcopilot
 
-# Jeremy Olexa <darkside@gentoo.org> (02 Dec 2008)
-# Removed in 30 days at maintainer's request. No interest and doesn't work with
-# newer gcc versions. bug #249308
-kde-misc/kio_perldoc
-
 # Ulrich Mueller <ulm@gentoo.org> (30 Nov 2008)
 # Depends on masked Emacs live CVS version; unmask after Emacs 23 release.
 app-emacs/emacs-daemon
@@ -397,13 +392,6 @@ games-mud/ytin
 media-video/realplayer
 media-libs/amd64codecs
 media-libs/realcodecs
-
-# Jeremy Olexa <darkside@gentoo.org> (4 Nov 2008)
-# Masked for removal in 60 days by treecleaners. No maintainer, broken package.
-# Year old bug, dead upstream. old patchset to compiling tools. bug #245476
-# dev-lang/palmos-sdk depends on prc-tools, so that is to be removed as well.
-dev-lang/prc-tools
-dev-lang/palmos-sdk
 
 # Daniel Black <dragonheart@gentoo.org> (4 Nov 2008)
 # Legal problems #241650 causing distribution problems #245322 and build problems #237493
