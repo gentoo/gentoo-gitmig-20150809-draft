@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libmix
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.8 2008/08/06 09:55:05 ulm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.9 2009/01/08 19:11:40 jer Exp $
+
+*libmix-2.05-r1 (08 Jan 2009)
+
+  08 Jan 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/libmix-2.05-fix-pattern.patch, +libmix-2.05-r1.ebuild:
+  Revision bump to fix NULL dereferencing thanks to Israel G. Lugo (bug
+  #190248).
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
