@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.129 2009/01/04 17:22:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.130 2009/01/08 08:12:55 gengor Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -558,7 +558,7 @@ has_ssp_all() {
 	# note; this matches only -fstack-protector-all
 	[[ ${CFLAGS/-fstack-protector-all} != ${CFLAGS} || \
 	   -n $(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP_ALL__) ]] || \
-	gcc-specs-ssp-all
+	gcc-specs-ssp-to-all
 }
 
 # @FUNCTION: has_ssp
