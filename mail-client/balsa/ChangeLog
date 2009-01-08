@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/balsa
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.71 2008/11/21 23:38:37 eva Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.72 2009/01/08 23:12:56 eva Exp $
+
+*balsa-2.3.27 (08 Jan 2009)
+
+  08 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org> +balsa-2.3.27.ebuild:
+  Bump to 2.3.27. Support for gnome-keyring, update to recent gtk+ APIs,
+  user documentation ported to gnome-doc-utils.
 
 *balsa-2.3.26 (22 Nov 2008)
 
