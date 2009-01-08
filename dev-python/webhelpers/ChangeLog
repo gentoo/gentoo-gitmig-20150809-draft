@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/webhelpers
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/ChangeLog,v 1.4 2008/05/02 04:08:56 pythonhead Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/ChangeLog,v 1.5 2009/01/08 21:30:31 patrick Exp $
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -webhelpers-0.2.2.ebuild,
+  -webhelpers-0.3.ebuild:
+  Removing old
 
 *webhelpers-0.3.4 (02 May 2008)
 
