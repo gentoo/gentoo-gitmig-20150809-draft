@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.2-r2.ebuild,v 1.2 2007/08/06 15:46:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.2-r2.ebuild,v 1.3 2009/01/08 20:02:49 aballier Exp $
 
 inherit flag-o-matic bsdmk freebsd
 
@@ -66,19 +66,6 @@ src_install() {
 
 	# ext2fs can mount ext3, you just don't get the journalling
 	dosym mount_ext2fs sbin/mount_ext3
-
-	newinitd "${FILESDIR}/devd.initd" devd
-	newinitd "${FILESDIR}/ipfw.initd" ipfw
-	newconfd "${FILESDIR}/ipfw.confd" ipfw
-	newinitd "${FILESDIR}/sysctl.initd" sysctl
-
-	# Gentoo devd.conf
-	# devd_queue is a filter so that only the last event is applied to an
-	# init script
-	insinto /etc
-	newins "${FILESDIR}/devd.conf" devd.conf
-	exeinto /etc
-	newexe "${FILESDIR}/devd_queue" devd_queue
 
 	# Do we need pccard.conf if we have devd?
 	# Maybe ship our own sysctl.conf so things like radvd work out of the box.

@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.45 2008/08/22 22:15:58 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.46 2009/01/08 20:02:49 aballier Exp $
+
+  08 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  freebsd-sbin-6.2-r2.ebuild:
+  Dont install init.d/conf.d files that are installed by openrc
 
   22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
