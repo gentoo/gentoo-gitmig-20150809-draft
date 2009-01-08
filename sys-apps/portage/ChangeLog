@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.572 2009/01/08 20:35:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.573 2009/01/08 21:32:21 zmedico Exp $
+
+  08 Jan 2009; Zac Medico <zmedico@gentoo.org> portage-2.1.6.4.ebuild:
+  Bug #253745 - Warn that you need to ensure that neither protect-owned nor
+  collision-protect are enabled if you want to disable collision protection
+  completely.
 
   08 Jan 2009; Brent Baude <ranger@gentoo.org> portage-2.1.6.4.ebuild:
   Marking portage-2.1.6.4 ppc64 for bug 251812
