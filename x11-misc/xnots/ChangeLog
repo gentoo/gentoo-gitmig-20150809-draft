@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xnots
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.2 2008/06/19 06:22:00 nelchael Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.3 2009/01/08 22:30:26 nelchael Exp $
+
+  08 Jan 2009; <nelchael@gentoo.org> xnots-0.2.ebuild:
+  Depend on pango with X use flag enabled.
 
   19 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org> xnots-0.2.ebuild:
   Add missing dev-util/pkgconfig to DEPEND, bug #228235.
