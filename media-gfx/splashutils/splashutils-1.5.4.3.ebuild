@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.4 2009/01/02 21:59:05 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.5 2009/01/08 20:01:31 spock Exp $
 
 EAPI="1"
 
@@ -92,6 +92,7 @@ src_unpack() {
 		cd "${S}"
 	fi
 
+	rm -f m4/*
 	eautoreconf
 }
 
