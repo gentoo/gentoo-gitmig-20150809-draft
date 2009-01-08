@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/monopod
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/monopod/ChangeLog,v 1.9 2008/05/02 15:56:54 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/monopod/ChangeLog,v 1.10 2009/01/08 20:28:05 loki_val Exp $
+
+  08 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/monopod-0.6-build-fix.patch, monopod-0.6.ebuild:
+  Fix build with newer sharp stack.
 
   02 May 2008; Samuli Suominen <drac@gentoo.org> monopod-0.6.ebuild:
   Use berlios mirrors://

@@ -1,0 +1,46 @@
+diff -NrU5 monopod-0.6.orig/configure.ac monopod-0.6/configure.ac
+--- monopod-0.6.orig/configure.ac	2009-01-08 20:49:25.000000000 +0100
++++ monopod-0.6/configure.ac	2009-01-08 20:58:49.000000000 +0100
+@@ -28,11 +28,11 @@
+ 
+ MONODIR=`$PKG_CONFIG --variable=exec_prefix mono`
+ MONOBIN="$MONODIR/bin"
+ MONO="$MONOBIN/mono"
+ MINT="$MONOBIN/mint"
+-MCS="$MONOBIN/mcs"
++MCS="$MONOBIN/gmcs"
+ GACUTIL="$MONOBIN/gacutil"
+ 
+ if test ! -x "$MONO" -a ! -x "$MINT"; then
+ 	AC_MSG_ERROR([No Mono runtime found])
+ fi
+@@ -76,10 +76,14 @@
+ dnl gconf-sharp
+ GCONFSHARP_REQUIRED_VERSION=2.8.0
+ PKG_CHECK_MODULES(GCONFSHARP, gconf-sharp-2.0 >= $GCONFSHARP_REQUIRED_VERSION)
+ AC_SUBST(GCONFSHARP_LIBS)
+ 
++GNOMESHARP_REQUIRED_VERSION=2.8.0
++PKG_CHECK_MODULES(GNOMESHARP, gnome-sharp-2.0 >= $GNOMESHARP_REQUIRED_VERSION)
++AC_SUBST(GNOMESHARP_LIBS)
++
+ dnl ipod-sharp
+ 
+ dnl configure options
+ AC_ARG_ENABLE(ipod, AC_HELP_STRING([--enable-ipod], [Enable iPod support]), , enable_ipod="yes")
+ enable_ipodsharp="${enable_ipod}"
+diff -NrU5 monopod-0.6.orig/Monopod/Makefile.am monopod-0.6/Monopod/Makefile.am
+--- monopod-0.6.orig/Monopod/Makefile.am	2009-01-08 20:49:25.000000000 +0100
++++ monopod-0.6/Monopod/Makefile.am	2009-01-08 20:59:39.000000000 +0100
+@@ -48,10 +48,11 @@
+ Monopod.exe: $(monopod_build_sources) $(monopod_resources) $(entagged_dll)
+ 	$(MCS) \
+ 	$(GTKSHARP_LIBS) \
+ 	$(GLADESHARP_LIBS) \
+ 	$(GCONFSHARP_LIBS) \
++	$(GNOMESHARP_LIBS) \
+ 	$(IPODSHARP_LIBS) \
+ 	-r:$(entagged_dll) \
+ 	$(OTHERLIBS) \
+ 	$(monopod_embedded) \
+ 	$(MCS_FLAGS) \
