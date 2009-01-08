@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/YAML-Syck
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.14 2009/01/02 21:04:17 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.15 2009/01/08 14:33:19 armin76 Exp $
+
+  08 Jan 2009; Raúl Porcel <armin76@gentoo.org> YAML-Syck-1.05.ebuild:
+  Add ~ia64 wrt #253448
 
   02 Jan 2009; Friedrich Oslage <bluebird@gentoo.org> YAML-Syck-1.05.ebuild:
   Add ~sparc keyword, bug #253448
