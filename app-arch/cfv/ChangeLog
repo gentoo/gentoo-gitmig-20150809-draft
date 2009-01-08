@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cfv
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.29 2008/08/04 19:16:58 swegener Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.30 2009/01/08 17:20:10 jer Exp $
+
+  08 Jan 2009; Jeroen Roovers <jer@gentoo.org> cfv-1.18.2.ebuild:
+  Stable for HPPA (bug #249121).
 
 *cfv-1.18.2 (04 Aug 2008)
 
