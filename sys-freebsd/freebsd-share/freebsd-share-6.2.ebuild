@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.2.ebuild,v 1.3 2007/05/02 19:31:37 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.2.ebuild,v 1.4 2009/01/08 21:07:29 aballier Exp $
 
 inherit bsdmk freebsd
 
@@ -46,10 +46,12 @@ src_unpack() {
 	sed -i -e 's:make.conf.5::' "${S}/man/man5/Makefile"
 	# Remove mailer.conf manpage
 	sed -i -e 's:mailer.conf.5::' "${S}/man/man5/Makefile"
-	# Remove pbm manpage
-	sed -i -e 's:pbm.5::' "${S}/man/man5/Makefile"
+	# Remove pbm and moduli(ssh) manpages
+	sed -i -e 's:pbm.5::' -e 's:moduli.5::' "${S}/man/man5/Makefile"
 	# Remove builtins manpage
 	sed -i -e '/builtins\.1/d' "${S}/man/man1/Makefile"
+	# Remove rc manpages
+	sed -i -e '/rc.8/d' "${S}/man/man8/Makefile"
 
 	# Don't install the arch-specific directories in subdirectories
 	sed -i -e '/MANSUBDIR/d' "${S}"/man/man4/man4.{alpha,i386,sparc64}/Makefile
