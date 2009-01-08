@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.5.1.ebuild,v 1.1 2008/11/28 05:18:29 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/dbus-java-2.5.1.ebuild,v 1.2 2009/01/08 18:07:41 serkan Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit eutils java-pkg-2
@@ -30,6 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}" || die
 	epatch "${FILESDIR}/${P}-jarfixes.patch"
+	cp -v "${FILESDIR}"/TestSignalInterface2-${PV}.java org/freedesktop/dbus/test/TestSignalInterface2.java || die "cp failed"
 }
 
 src_compile() {
@@ -86,4 +87,12 @@ src_install() {
 	use source && java-pkg_dosrc org/
 	use doc && java-pkg_dojavadoc doc/api
 	use doc && java-pkg_dohtml doc/dbus-java/*
+}
+
+src_test() {
+	local debug="disable"
+	use debug && debug="enable"
+	local libdir=$(dirname $(java-pkg_getjar libmatthew-java unix.jar))
+	emake -j1 JCFLAGS="$(java-pkg_javac-args) -encoding UTF-8" \
+		DEBUG=${debug} JAVAUNIXJARDIR=${libdir} JAVAUNIXLIBDIR=/usr/lib/libmatthew-java check || die "emake check failed"
 }
