@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.7.5.ebuild,v 1.4 2009/01/06 21:16:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ultimatestunts-0.7.5.ebuild,v 1.5 2009/01/08 00:44:34 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils versionator games
@@ -12,12 +12,12 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="nls"
 
 RDEPEND="media-libs/libsdl[opengl]
 	media-libs/sdl-image
-	media-libs/openal[vorbis]
+	>=media-libs/openal-1
 	media-libs/freealut
 	virtual/opengl
 	virtual/glu
