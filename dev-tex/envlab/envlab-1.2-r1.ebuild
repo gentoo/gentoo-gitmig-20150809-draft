@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/envlab-1.2-r1.ebuild,v 1.7 2009/01/07 19:44:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/envlab-1.2-r1.ebuild,v 1.8 2009/01/08 19:27:34 jer Exp $
 
 inherit latex-package
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://planck.psu.edu/~boris/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 SLOT="0"
 DEPEND=""
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 TEXMF=/usr/share/texmf-site
