@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-news
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.27 2008/12/20 18:37:44 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.28 2009/01/08 22:40:21 patrick Exp $
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org>
+  -twisted-news-0.1.0-r1.ebuild, -twisted-news-0.2.0.ebuild,
+  -twisted-news-0.3.0.ebuild, -twisted-news-8.0.0.ebuild:
+  Removing old
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> twisted-news-8.1.0.ebuild:
   Stable on ppc wrt bug 231675
