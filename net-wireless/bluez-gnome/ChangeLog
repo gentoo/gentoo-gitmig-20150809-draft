@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-gnome
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.36 2008/12/01 06:25:32 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.37 2009/01/08 14:14:40 betelgeuse Exp $
+
+  08 Jan 2009; Petteri Räty <betelgeuse@gentoo.org>
+  bluez-gnome-0.28.ebuild:
+  Does not work with =app-mobilephone/obex-data-server-0.4* so restrict to
+  =0.3*. Fixes bug #249315.
 
   01 Dec 2008; Jeroen Roovers <jer@gentoo.org> bluez-gnome-0.28.ebuild:
   Stable for HPPA (bug #230591).

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.28.ebuild,v 1.3 2008/12/01 06:25:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/bluez-gnome-0.28.ebuild,v 1.4 2009/01/08 14:14:40 betelgeuse Exp $
 
 inherit gnome2
 
@@ -27,7 +27,7 @@ DEPEND="
 
 RDEPEND="=net-wireless/bluez-utils-3*
 	gnome? ( gnome-base/nautilus )
-	>=app-mobilephone/obex-data-server-0.3
+	=app-mobilephone/obex-data-server-0.3*
 	${COMMON_DEPEND}"
 
 PDEPEND="gnome? ( gnome-extra/gnome-vfs-obexftp )"
