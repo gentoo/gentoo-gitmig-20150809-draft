@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.5 2009/01/08 20:01:31 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.6 2009/01/08 21:01:05 spock Exp $
 
 EAPI="1"
 
@@ -86,11 +86,12 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-makefile.patch
 
+	cd "${SG}"
 	if has_version ">=sys-apps/openrc-0.4.0"; then
-		cd "${SG}"
 		epatch "${FILESDIR}"/splashutils-openrc-0.4-fix.patch
-		cd "${S}"
 	fi
+	epatch "${FILESDIR}"/splashutils-1.5.4.3-fix_rc_var.patch
+	cd "${S}"
 
 	rm -f m4/*
 	eautoreconf

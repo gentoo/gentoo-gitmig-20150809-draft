@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.152 2009/01/08 20:01:31 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.153 2009/01/08 21:01:05 spock Exp $
+
+  08 Jan 2009; Michał Januszewski <spock@gentoo.org>
+  +files/splashutils-1.5.4.3-fix_rc_var.patch, splashutils-1.5.4.3.ebuild:
+  Fix parsing of the boot messages so that the progress variable works
+  properly.
 
   08 Jan 2009; Michał Januszewski <spock@gentoo.org>
   splashutils-1.5.4.3.ebuild:
