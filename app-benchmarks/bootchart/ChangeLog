@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bootchart
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.10 2008/11/08 15:03:34 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/ChangeLog,v 1.11 2009/01/08 20:20:11 patrick Exp $
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -bootchart-0.9-r1.ebuild:
+  Removing old
 
   08 Nov 2008; Markus Meier <maekke@gentoo.org> bootchart-0.9-r2.ebuild:
   amd64/x86 stable, bug #245495
