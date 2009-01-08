@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.22.3-r11.ebuild,v 1.2 2009/01/03 12:47:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.22.3-r11.ebuild,v 1.3 2009/01/08 16:47:31 armin76 Exp $
 
 inherit gnome2 eutils multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 -sparc ~x86"
 IUSE="avahi doc networkmanager python spell"
 
 # This revision is meant to work with xulrunner 1.9, an earlier revision
