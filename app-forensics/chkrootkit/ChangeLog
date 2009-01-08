@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/chkrootkit
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.53 2008/12/31 00:18:22 bluebird Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.54 2009/01/08 20:32:06 ranger Exp $
+
+  08 Jan 2009; Brent Baude <ranger@gentoo.org> chkrootkit-0.48-r1.ebuild:
+  Marking chkrootkit-0.48-r1 ppc64 for bug 252657
 
   31 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
   chkrootkit-0.48-r1.ebuild:
