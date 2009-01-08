@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.82 2009/01/08 06:33:20 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.83 2009/01/08 09:56:00 gengor Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -365,21 +365,18 @@ gcc-specs-pie() {
 }
 # Returns true if gcc builds with the stack protector
 gcc-specs-ssp() {
-	[[ $(test-flags-CC -fno-stack-protector) ]] || return 1
 	local directive
 	directive=$(gcc-specs-directive cc1)
 	return $([[ ${directive/\{!fno-stack-protector:} != ${directive} ]])
 }
 # Returns true if gcc upgrades fstack-protector to fstack-protector-all
 gcc-specs-ssp-to-all() {
-	[[ $(test-flags-CC -fno-stack-protector-all) ]] || return 1
 	local directive
 	directive=$(gcc-specs-directive cc1)
 	return $([[ ${directive/\{!fno-stack-protector-all:} != ${directive} ]])
 }
 # Returns true if gcc builds with fno-strict-overflow
 gcc-specs-nostrict() {
-	[[ $(test-flags-CC -fstrict-overflow) ]] || return 1
 	local directive
 	directive=$(gcc-specs-directive cc1)
 	return $([[ ${directive/\{!fstrict-overflow:} != ${directive} ]])
