@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.102 2009/01/08 23:25:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.103 2009/01/08 23:30:39 patrick Exp $
+
+  08 Jan 2009; Patrick Lauer <patrick@gentoo.org> +twisted-1.2.0.ebuild:
+  Undoing breakage
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org> +twisted-1.3.0.ebuild:
   Readding 1.3.0. Ooopsie ...
