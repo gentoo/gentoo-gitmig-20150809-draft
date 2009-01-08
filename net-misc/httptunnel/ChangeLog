@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/httptunnel
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.16 2007/07/15 08:48:23 phreak Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.17 2009/01/08 18:56:37 jer Exp $
+
+*httptunnel-3.3-r1 (08 Jan 2009)
+
+  08 Jan 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/httptunnel-3.3-fix_write_stdin.patch, httptunnel-3.0.5.ebuild,
+  httptunnel-3.3.ebuild, +httptunnel-3.3-r1.ebuild:
+  Fix --stdin-stdout option thanks to Israel G. Lugo (bug #182753). Fix
+  quoting.
 
   15 Jul 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Assigning to m-needed, as beu is being retired (#66608).
