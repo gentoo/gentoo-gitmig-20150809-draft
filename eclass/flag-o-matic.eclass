@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.130 2009/01/08 08:12:55 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.131 2009/01/08 11:29:06 gengor Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -73,13 +73,13 @@ _filter-hardened() {
 				is-flagq -nopie || append-flags -nopie;;
 			-fstack-protector)
 				gcc-specs-ssp || continue
-				is-flagq -fno-stack-protector || append-flags -fno-stack-protector;;
+				is-flagq -fno-stack-protector || append-flags $(test-flags -fno-stack-protector);;
 			-fstack-protector-all)
 				gcc-specs-ssp-to-all || continue
-				is-flagq -fno-stack-protector-all || append-flags -fno-stack-protector-all;;
+				is-flagq -fno-stack-protector-all || append-flags $(test-flags -fno-stack-protector-all);;
 			-fno-strict-overflow)
 				gcc-specs-nostrict || continue
-				is-flagq -fstrict-overflow || append-flags -fstrict-overflow;;
+				is-flagq -fstrict-overflow || append-flags $(test-flags -fstrict-overflow);;
 		esac
 	done
 }
