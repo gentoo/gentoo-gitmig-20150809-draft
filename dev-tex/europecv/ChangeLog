@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/europecv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.26 2009/01/07 19:46:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.27 2009/01/08 19:32:26 jer Exp $
+
+  08 Jan 2009; Jeroen Roovers <jer@gentoo.org> europecv-20060424-r1.ebuild:
+  Stable for HPPA (bug #254089).
 
   07 Jan 2009; Brent Baude <ranger@gentoo.org> europecv-20060424-r1.ebuild:
   stable ppc64, bug 254089
