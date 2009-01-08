@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.19.ebuild,v 1.6 2008/12/22 15:38:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.19.ebuild,v 1.7 2009/01/08 07:10:59 gengor Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -99,12 +99,7 @@ src_compile() {
 	# Finalize and report settings
 	mozconfig_final
 
-	# -fstack-protector breaks us
-	if gcc-version ge 4 1; then
-		gcc-specs-ssp && append-flags -fno-stack-protector
-	else
-		gcc-specs-ssp && append-flags -fno-stack-protector-all
-	fi
+	# -fstack-protector{,-all} breaks us
 	filter-flags -fstack-protector -fstack-protector-all
 
 	####################################
