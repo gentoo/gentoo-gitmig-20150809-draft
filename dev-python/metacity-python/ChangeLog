@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/metacity-python
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.3 2008/10/20 17:05:38 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.4 2009/01/08 23:42:28 eva Exp $
+
+*metacity-python-2.24.1 (08 Jan 2009)
+
+  08 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +metacity-python-2.24.1.ebuild:
+  Bump to 2.24.1.
 
   20 Oct 2008; Brent Baude <ranger@gentoo.org>
   metacity-python-2.22.0.ebuild:
