@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.9_p20081201-r1.ebuild,v 1.3 2008/12/31 07:56:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.9_p20081201-r1.ebuild,v 1.4 2009/01/09 07:08:19 vapier Exp $
 
 GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 1060_all_glibc-nss-deepbind.patch" #252302
 
@@ -350,8 +350,9 @@ pkg_postinst() {
 	fi
 
 	if ! is_crosscompile && [[ ${ROOT} == "/" ]] ; then
-		# Reload init ...
-		/sbin/telinit U
+		# Reload init ... if in a chroot or a diff init package, ignore
+		# errors from this step #253697
+		/sbin/telinit U 2>/dev/null
 
 		# if the host locales.gen contains no entries, we'll install everything
 		local locale_list="${ROOT}etc/locale.gen"
