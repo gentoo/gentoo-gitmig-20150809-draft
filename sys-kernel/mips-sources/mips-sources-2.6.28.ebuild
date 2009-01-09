@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.28.ebuild,v 1.1 2009/01/08 05:35:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.28.ebuild,v 1.2 2009/01/09 08:38:50 kumba Exp $
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org GIT snapshot diff from 17 Dec 2008
+# 2) linux-mips.org GIT snapshot diff from 30 Dec 2008
 # 3) Generic Fixes
 # 4) Patch for the IOC3 Metadriver (IP27, IP30)
 # 5) Patch for IP30 Support
@@ -371,24 +371,24 @@ do_sekrit_patches() {
 do_ip27_support() {
 	echo -e ""
 	einfo ">>> Patching the kernel for SGI Origin 200/2000 (IP27) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.28-ioc3-metadriver-r27.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.22-ioc3-revert_commit_691cd0c.patch
+	epatch "${MIPS_PATCHES}"/misc-2.6.28-ioc3-metadriver-r27.patch
+	epatch "${MIPS_PATCHES}"/misc-2.6.22-ioc3-revert_commit_691cd0c.patch
 }
 
 # SGI Indigo2 Impact R10000 (IP28)
 do_ip28_support() {
 	echo -e ""
 	einfo ">>> Patching the kernel for SGI Indigo2 Impact R10000 (IP28) Graphics support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.27-ip28-solidimpact-gfx.patch
+	epatch "${MIPS_PATCHES}"/misc-2.6.27-ip28-solidimpact-gfx.patch
 }
 
 # SGI Octane 'Speedracer' (IP30)
 do_ip30_support() {
 	echo -e ""
 	einfo ">>> Patching the kernel for SGI Octane (IP30) support ..."
-	epatch ${MIPS_PATCHES}/misc-2.6.28-ioc3-metadriver-r27.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.28-ip30-octane-support-r28.patch
-	epatch ${MIPS_PATCHES}/misc-2.6.22-ioc3-revert_commit_691cd0c.patch
+	epatch "${MIPS_PATCHES}"/misc-2.6.28-ioc3-metadriver-r27.patch
+	epatch "${MIPS_PATCHES}"/misc-2.6.28-ip30-octane-support-r28.patch
+	epatch "${MIPS_PATCHES}"/misc-2.6.22-ioc3-revert_commit_691cd0c.patch
 }
 
 #//------------------------------------------------------------------------------
@@ -397,7 +397,7 @@ do_ip30_support() {
 rename_source_tree() {
 	if [ ! -z "${1}" ]; then
 		if use ${1}; then
-			mv ${S} ${S}.${1}
+			mv "${S}" "${S}.${1}"
 			S="${S}.${1}"
 		fi
 	fi
@@ -409,8 +409,8 @@ src_unpack() {
 	local x
 
 	unpack ${A}
-	mv ${WORKDIR}/linux-${STABLEVER} ${WORKDIR}/linux-${OKV}-${GITDATE}
-	cd ${S}
+	mv "${WORKDIR}/linux-${STABLEVER}" "${WORKDIR}/linux-${OKV}-${GITDATE}"
+	cd "${S}"
 
 	# If USE_RC == "yes", use a release candidate kernel (2.6.x-rcy)
 	# OR
@@ -418,13 +418,13 @@ src_unpack() {
 	if [ "${USE_RC}" = "yes" -o "${USE_PNT}" = "yes" ]; then
 		echo -e ""
 		einfo ">>> linux-${STABLEVER} --> linux-${OKV} ..."
-		epatch ${WORKDIR}/patch-${OKV}
+		epatch "${WORKDIR}/patch-${OKV}"
 	fi
 
 	# Update the vanilla sources with linux-mips GIT changes
 	echo -e ""
 	einfo ">>> linux-${OKV} --> linux-${OKV}-${GITDATE} patch ..."
-	epatch ${WORKDIR}/mipsgit-${F_KV}-${GITDATE}.diff
+	epatch "${WORKDIR}/mipsgit-${F_KV}-${GITDATE}.diff"
 
 	# Generic patches we always include
 	do_generic_patches
@@ -458,9 +458,9 @@ pkg_postinst() {
 		use ${x} && my_ksrc="${my_ksrc}.${x}"
 	done
 
-	if [ ! -e ${ROOT}usr/src/linux ]; then
-		rm -f ${ROOT}usr/src/linux
-		ln -sf ${my_ksrc} ${ROOT}/usr/src/linux
+	if [ ! -e "${ROOT}usr/src/linux" ]; then
+		rm -f "${ROOT}usr/src/linux"
+		ln -sf "${my_ksrc}" "${ROOT}/usr/src/linux"
 	fi
 }
 
