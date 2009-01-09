@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.185 2009/01/08 16:47:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.186 2009/01/09 18:04:41 ranger Exp $
+
+  09 Jan 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking epiphany-2.22.3-r1 ppc64 for bug 253534
 
   08 Jan 2009; Raúl Porcel <armin76@gentoo.org> epiphany-2.22.3-r10.ebuild,
   epiphany-2.22.3-r11.ebuild, epiphany-2.24.0.1.ebuild,
