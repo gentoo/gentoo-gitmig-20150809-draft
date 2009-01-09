@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmovies/nwmovies-0.2.ebuild,v 1.1 2008/08/02 14:00:15 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmovies/nwmovies-0.2.ebuild,v 1.2 2009/01/09 13:58:11 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 UPSTREAM_VERSION="nwmovies-v4-public.20080512.v4rc1"
@@ -15,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=games-rpg/nwn-data-1.29-r3"
+DEPEND=">=games-rpg/nwn-data-1.29-r3[videos]"
 RDEPEND="${DEPEND}
 	>=games-rpg/nwn-1.68-r4
 	media-video/binkplayer"
@@ -27,11 +28,6 @@ QA_TEXTRELS="opt/nwn/nwmovies/binklib.so opt/nwn/nwmovies.so"
 QA_WX_LOAD="opt/nwn/nwmovies.so"
 QA_EXECSTACK="opt/nwn/nwmovies.so"
 QA_DT_HASH="opt/nwn/nwmovies/binklib.so opt/nwn/nwmovies/libdis/libdisasm.so opt/nwn/nwmovies.so"
-
-pkg_setup() {
-	games_pkg_setup
-	built_with_use games-rpg/nwn-data videos || die "nwn-data requires USE=videos"
-}
 
 src_install() {
 	exeinto "${DESTDIR}"
