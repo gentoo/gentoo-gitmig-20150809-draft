@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.164 2009/01/09 17:21:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.165 2009/01/09 20:41:26 klausman Exp $
+
+  09 Jan 2009; Tobias Klausmann <klausman@gentoo.org> gkrellm-2.3.2.ebuild:
+  Stable on alpha, bug #254203
 
   09 Jan 2009; Brent Baude <ranger@gentoo.org> gkrellm-2.3.2.ebuild:
   stable ppc, bug 254203
