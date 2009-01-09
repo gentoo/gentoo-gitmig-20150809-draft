@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.12.0.ebuild,v 1.1 2008/09/01 07:05:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.12.0.ebuild,v 1.2 2009/01/09 19:28:21 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Reimplementation of the SCUMM game engine used in Lucasarts adventures"
@@ -18,7 +19,7 @@ RDEPEND=">=media-libs/libsdl-1.2.2
 	>media-libs/libmpeg2-0.3.1
 	ogg? ( media-libs/libogg media-libs/libvorbis )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
-	alsa? ( >=media-libs/alsa-lib-0.9 )
+	alsa? ( >=media-libs/alsa-lib-0.9[midi] )
 	mp3? ( media-libs/libmad )
 	flac? ( media-libs/flac )
 	fluidsynth? ( media-sound/fluidsynth )
@@ -26,22 +27,9 @@ RDEPEND=">=media-libs/libsdl-1.2.2
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
-pkg_setup() {
-	games_pkg_setup
-
-	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
-		eerror ""
-		eerror "To be able to build ${CATEGORY}/${PN} with ALSA support you"
-		eerror "need to have built media-libs/alsa-lib with midi USE flag."
-		die "Missing midi USE flag on media-libs/alsa-lib"
-	fi
-}
-
-src_unpack() {
+src_prepare() {
 	local f
 
-	unpack ${A}
-	cd "${S}"
 	# -g isn't needed for nasm here
 	sed -i \
 		-e '/NASMFLAGS/ s/-g//' \
@@ -57,7 +45,7 @@ EOF
 	done
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--backend=sdl" # x11 backend no worky (bug #83502)
 
 	# let the engine find its data files in the right place (bug #178116)
@@ -81,7 +69,6 @@ src_compile() {
 		$(use_enable x86 nasm) \
 		${myconf} \
 		|| die "configure failed"
-	emake || die "emake failed"
 }
 
 src_install() {

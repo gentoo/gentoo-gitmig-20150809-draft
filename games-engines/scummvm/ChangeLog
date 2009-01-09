@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/scummvm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.60 2008/09/01 07:05:44 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.61 2009/01/09 19:28:21 mr_bones_ Exp $
+
+  09 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  scummvm-0.12.0.ebuild:
+  EAPI=2; add use-based dep for media-libs/alsa-lib
 
 *scummvm-0.12.0 (01 Sep 2008)
 
