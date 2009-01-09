@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/notify-sharp-0.4.0_pre20080912.ebuild,v 1.4 2008/12/31 06:27:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/notify-sharp-0.4.0_pre20080912-r1.ebuild,v 1.1 2009/01/09 13:31:51 loki_val Exp $
 
 EAPI=2
 
@@ -21,7 +21,8 @@ IUSE="doc"
 RDEPEND=">=dev-lang/mono-1.1.13
 	>=dev-dotnet/gtk-sharp-2.10.1
 	>=dev-dotnet/dbus-sharp-0.6
-	>=dev-dotnet/dbus-glib-sharp-0.4"
+	>=dev-dotnet/dbus-glib-sharp-0.4
+	>=x11-misc/notification-daemon-0.4.0"
 DEPEND="${RDEPEND}
 	doc? ( virtual/monodoc )"
 
