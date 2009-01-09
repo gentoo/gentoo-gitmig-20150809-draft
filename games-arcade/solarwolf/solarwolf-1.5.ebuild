@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.5.ebuild,v 1.17 2007/06/21 13:21:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.5.ebuild,v 1.18 2009/01/09 20:39:13 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="action/arcade recreation of SolarFox"
@@ -13,18 +14,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
 
-RDEPEND=">=dev-python/pygame-1.5.6"
+RDEPEND=">=dev-python/pygame-1.5.6
+	media-libs/sdl-mixer[mikmod,vorbis]"
 
-pkg_setup() {
-	if ! built_with_use media-libs/sdl-mixer mikmod ; then
-		die "You need to build media-libs/sdl-mixer with USE=mikmod"
-	fi
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	find . -name .xvpics -print0 | xargs -0 rm -fr
 }
 
