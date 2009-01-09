@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vlock
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.35 2008/10/28 10:40:52 armin76 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vlock/ChangeLog,v 1.36 2009/01/09 21:37:20 josejx Exp $
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org> vlock-2.2.2-r2.ebuild:
+  Marked ppc/ppc64 for bug #241732.
 
   28 Oct 2008; Raúl Porcel <armin76@gentoo.org> vlock-2.2.2-r2.ebuild:
   Re-add ~alpha/~ia64 wrt #242546
