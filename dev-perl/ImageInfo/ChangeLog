@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ImageInfo
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.67 2009/01/09 18:26:29 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.68 2009/01/09 20:29:15 klausman Exp $
+
+  09 Jan 2009; Tobias Klausmann <klausman@gentoo.org> ImageInfo-1.28.ebuild:
+  Stable on alpha, bug #254334
 
   09 Jan 2009; Ferris McCormick <fmccor@gentoo.org> ImageInfo-1.28.ebuild:
   Sparc stable, Bug #254334.
