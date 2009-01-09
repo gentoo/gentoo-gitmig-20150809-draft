@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/windowlab-1.34.ebuild,v 1.5 2007/08/24 18:03:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/windowlab-1.34.ebuild,v 1.6 2009/01/09 15:42:49 remi Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ~mips ppc x86"
 IUSE="truetype"
 
-RDEPEND="truetype? ( virtual/xft )
+RDEPEND="truetype? ( x11-libs/libXft )
 	x11-libs/libXext"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto

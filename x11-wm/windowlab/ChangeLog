@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowlab
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.27 2007/08/24 19:09:28 coldwind Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.28 2009/01/09 15:42:49 remi Exp $
+
+  09 Jan 2009; Rémi Cardona <remi@gentoo.org> windowlab-1.34.ebuild:
+  Change virtual/xft dependency to x11-libs/libXft, bug 253771.
 
   24 Aug 2007; Santiago M. Mola <coldwind@gentoo.org>
   -windowlab-1.30.ebuild, -windowlab-1.31.ebuild:
