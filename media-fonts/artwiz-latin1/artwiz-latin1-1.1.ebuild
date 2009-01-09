@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-latin1/artwiz-latin1-1.1.ebuild,v 1.1 2009/01/04 09:18:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-latin1/artwiz-latin1-1.1.ebuild,v 1.2 2009/01/09 14:04:49 ranger Exp $
 
 inherit font
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/artwiz-latin1/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
 S=${WORKDIR}/artwiz-latin1
