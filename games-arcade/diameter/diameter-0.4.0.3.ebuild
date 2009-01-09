@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/diameter-0.4.0.3.ebuild,v 1.1 2008/09/06 00:11:47 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/diameter-0.4.0.3.ebuild,v 1.2 2009/01/09 16:15:10 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils autotools games
 
 DESCRIPTION="Arcade game with elements of economy and adventure"
@@ -13,28 +14,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-games/guichan-0.8
+RDEPEND=">=dev-games/guichan-0.8[opengl,sdl]
 	media-libs/libpng
 	virtual/opengl
 	virtual/glu
 	media-libs/libsdl
-	media-libs/sdl-image
+	media-libs/sdl-image[gif,jpeg,png]
 	media-libs/sdl-mixer"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/gamediameter
 
-pkg_setup() {
-	if ! built_with_use dev-games/guichan opengl sdl; then
-		die "dev-games/guichan built without USE=\"opengl sdl\""
-	fi
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s:gamediameter:diameter:" \
 		configure.in \
