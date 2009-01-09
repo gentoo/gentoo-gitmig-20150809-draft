@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cmd5checkpw
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.49 2009/01/07 19:20:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.50 2009/01/09 17:14:10 ranger Exp $
+
+  09 Jan 2009; Brent Baude <ranger@gentoo.org> cmd5checkpw-0.30-r1.ebuild:
+  stable ppc, bug 253864
 
   07 Jan 2009; Brent Baude <ranger@gentoo.org> cmd5checkpw-0.30-r1.ebuild:
   stable ppc64, bug 253864
