@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9374 2009/01/09 13:10:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9375 2009/01/09 15:47:17 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rémi Cardona <remi@gentoo.org> (09 Jan 2009)
+# old virtual left from the transition from monolithic
+# to modular X. Use x11-libs/libXft directly
+virtual/xft
 
 # Michael Sterrett <mr_bones_@gentoo.org> (09 Jan 2009)
 # missing a license file
