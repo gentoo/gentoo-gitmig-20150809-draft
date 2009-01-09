@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.49 2008/10/11 23:01:21 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.50 2009/01/09 15:48:02 ranger Exp $
+
+  09 Jan 2009; Brent Baude <ranger@gentoo.org> tracker-0.6.6-r1.ebuild:
+  Marking tracker-0.6.6-r1 ppc64 for bug 254034
 
   11 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org> tracker-0.6.3.ebuild,
   tracker-0.6.6.ebuild, tracker-0.6.6-r1.ebuild, tracker-9999.ebuild:
