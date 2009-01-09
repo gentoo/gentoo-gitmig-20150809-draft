@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.13 2009/01/04 04:53:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.14 2009/01/09 17:53:50 patrick Exp $
 
 EAPI="2"
 
@@ -59,6 +59,7 @@ src_configure() {
 # language is considered.
 	local mycmakeargs="$(cmake-utils_use_want server CORE)
 		$(cmake-utils_use_want X QTCLIENT)
+		$(cmake-utils_use_want X MONO)
 		$(cmake-utils_use_with webkit WEBKIT)
 		$(cmake-utils_use_with dbus DBUS)
 		$(cmake-utils_use_with kde KDE)
