@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2243 2009/01/09 03:07:32 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2244 2009/01/09 04:30:25 marineam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jan 2009; Michael Marineau <marineam@gentoo.org> use.local.desc:
+  Add lxc and uml use flags for libvirt
 
   09 Jan 2009; Bryan Stine <battousai@gentoo.org> package.mask:
   Unmask app-admin/bastille for newly-updated 3.0.9 bump.
