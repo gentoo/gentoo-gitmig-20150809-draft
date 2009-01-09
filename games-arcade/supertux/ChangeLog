@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/supertux
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/ChangeLog,v 1.30 2008/02/26 22:27:40 mr_bones_ Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/ChangeLog,v 1.31 2009/01/09 21:07:33 mr_bones_ Exp $
+
+  09 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  supertux-0.1.3.ebuild:
+  EAPI=2; add use-based deps
 
   26 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/supertux-0.1.3-ndebug.patch, supertux-0.1.3.ebuild:
