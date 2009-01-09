@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/opentyrian-20081211.ebuild,v 1.1 2008/12/12 14:22:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/opentyrian-20081211.ebuild,v 1.2 2009/01/09 22:16:34 josejx Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="http://darklomax.org/tyrian/tyrian21.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc"
 IUSE="debug"
 
 RDEPEND="media-libs/libsdl
