@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/turbocheetah
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbocheetah/ChangeLog,v 1.3 2008/07/02 05:38:35 pythonhead Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbocheetah/ChangeLog,v 1.4 2009/01/09 19:01:31 patrick Exp $
+
+  09 Jan 2009; Patrick Lauer <patrick@gentoo.org> Manifest:
+  Remove old
 
 *turbocheetah-1.0 (02 Jul 2008)
 
