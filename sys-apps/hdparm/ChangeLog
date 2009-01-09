@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hdparm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.162 2008/12/23 19:49:41 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.163 2009/01/09 20:43:55 vapier Exp $
+
+*hdparm-9.8 (09 Jan 2009)
+
+  09 Jan 2009; Mike Frysinger <vapier@gentoo.org> +hdparm-9.8.ebuild:
+  Version bump.
 
   23 Dec 2008; Raúl Porcel <armin76@gentoo.org> hdparm-9.3.ebuild:
   sparc stable wrt #250473
