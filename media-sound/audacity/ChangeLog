@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.111 2009/01/02 16:33:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.112 2009/01/09 22:22:04 josejx Exp $
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org> audacity-1.3.6.ebuild:
+  Marked ~ppc for bug #244360.
 
   02 Jan 2009; Alexis Ballier <aballier@gentoo.org> audacity-1.3.6.ebuild:
   fix typo in ladspa useflag deps, by Pierre Lejeune <superheron@gmail.com>,
