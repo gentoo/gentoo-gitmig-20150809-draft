@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mftrace
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.45 2009/01/08 14:37:11 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.46 2009/01/09 13:31:03 josejx Exp $
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org> mftrace-1.2.13.ebuild:
+  Marked ppc stable for bug #254222.
 
   08 Jan 2009; Ferris McCormick <fmccor@gentoo.org> mftrace-1.2.13.ebuild:
   Sparc stable --- Bug #254222 --- tests are fine.
