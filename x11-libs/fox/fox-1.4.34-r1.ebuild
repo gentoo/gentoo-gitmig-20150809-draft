@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.4.34-r1.ebuild,v 1.11 2007/03/26 12:20:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.4.34-r1.ebuild,v 1.12 2009/01/09 13:57:43 remi Exp $
 
 inherit eutils fox
 
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/libXrandr
 	png? ( >=media-libs/libpng-1.2.5 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	truetype? ( =media-libs/freetype-2*
-		virtual/xft )
+		x11-libs/libXft )
 	zlib? ( >=sys-libs/zlib-1.1.4 )"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto

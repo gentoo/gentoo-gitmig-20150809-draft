@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fox
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.124 2008/12/05 10:03:19 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.125 2009/01/09 13:57:43 remi Exp $
+
+  09 Jan 2009; Rémi Cardona <remi@gentoo.org> fox-1.4.34-r1.ebuild,
+  fox-1.6.30.ebuild, fox-1.6.31.ebuild, fox-1.6.34.ebuild:
+  Change virtual/xft dependency to x11-libs/libXft, bug 253771.
 
   05 Dec 2008; Raúl Porcel <armin76@gentoo.org> fox-1.6.34.ebuild:
   alpha/ia64/sparc stable wrt #249286
