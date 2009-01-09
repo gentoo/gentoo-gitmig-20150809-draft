@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r3.ebuild,v 1.1 2007/12/15 21:12:22 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7-r3.ebuild,v 1.2 2009/01/09 13:45:51 remi Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -27,7 +27,7 @@ DEPEND="
 	x11-libs/libSM
 	x11-libs/libXt
 	x11-proto/xextproto
-	!noxft? ( virtual/xft )
+	!noxft? ( x11-libs/libXft )
 	media-libs/libpng
 	media-libs/jpeg
 	opengl? ( virtual/opengl )"
