@@ -1,0 +1,161 @@
+From: Daniel P. Berrange <berrange@redhat.com>
+Date: Wed, 17 Dec 2008 16:45:22 +0000 (+0000)
+Subject: Add missing checks for read-only connection flag (CVE-2008-5086)
+X-Git-Url: http://git.et.redhat.com/?p=libvirt.git;a=commitdiff_plain;h=e87a5440dff8020d7247656368023e1b2d57415c
+
+Add missing checks for read-only connection flag (CVE-2008-5086)
+---
+
+diff --git a/src/libvirt.c b/src/libvirt.c
+index a4a0df5..7efe1d0 100644
+--- a/src/libvirt.c
++++ b/src/libvirt.c
+@@ -2299,6 +2299,16 @@ virDomainMigrate (virDomainPtr domain,
+         return NULL;
+     }
+ 
++    if (domain->conn->flags & VIR_CONNECT_RO) {
++        virLibDomainError(domain, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return NULL;
++    }
++    if (dconn->flags & VIR_CONNECT_RO) {
++        /* NB, delibrately report error against source object, not dest here */
++        virLibDomainError(domain, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return NULL;
++    }
++
+     /* Check that migration is supported by both drivers. */
+     if (VIR_DRV_SUPPORTS_FEATURE (conn->driver, conn,
+                                   VIR_DRV_FEATURE_MIGRATION_V1) &&
+@@ -2426,6 +2436,11 @@ virDomainMigratePrepare (virConnectPtr dconn,
+         return -1;
+     }
+ 
++    if (dconn->flags & VIR_CONNECT_RO) {
++        virLibConnError(dconn, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return -1;
++    }
++
+     if (dconn->driver->domainMigratePrepare)
+         return dconn->driver->domainMigratePrepare (dconn, cookie, cookielen,
+                                                     uri_in, uri_out,
+@@ -2457,6 +2472,11 @@ virDomainMigratePerform (virDomainPtr domain,
+     }
+     conn = domain->conn;
+ 
++    if (domain->conn->flags & VIR_CONNECT_RO) {
++        virLibDomainError(domain, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return -1;
++    }
++
+     if (conn->driver->domainMigratePerform)
+         return conn->driver->domainMigratePerform (domain, cookie, cookielen,
+                                                    uri,
+@@ -2485,6 +2505,11 @@ virDomainMigrateFinish (virConnectPtr dconn,
+         return NULL;
+     }
+ 
++    if (dconn->flags & VIR_CONNECT_RO) {
++        virLibConnError(dconn, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return NULL;
++    }
++
+     if (dconn->driver->domainMigrateFinish)
+         return dconn->driver->domainMigrateFinish (dconn, dname,
+                                                    cookie, cookielen,
+@@ -2517,6 +2542,11 @@ virDomainMigratePrepare2 (virConnectPtr dconn,
+         return -1;
+     }
+ 
++    if (dconn->flags & VIR_CONNECT_RO) {
++        virLibConnError(dconn, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return -1;
++    }
++
+     if (dconn->driver->domainMigratePrepare2)
+         return dconn->driver->domainMigratePrepare2 (dconn, cookie, cookielen,
+                                                      uri_in, uri_out,
+@@ -2547,6 +2577,11 @@ virDomainMigrateFinish2 (virConnectPtr dconn,
+         return NULL;
+     }
+ 
++    if (dconn->flags & VIR_CONNECT_RO) {
++        virLibConnError(dconn, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return NULL;
++    }
++
+     if (dconn->driver->domainMigrateFinish2)
+         return dconn->driver->domainMigrateFinish2 (dconn, dname,
+                                                     cookie, cookielen,
+@@ -2905,6 +2940,11 @@ virDomainBlockPeek (virDomainPtr dom,
+     }
+     conn = dom->conn;
+ 
++    if (dom->conn->flags & VIR_CONNECT_RO) {
++        virLibDomainError(dom, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return (-1);
++    }
++
+     if (!path) {
+         virLibDomainError (dom, VIR_ERR_INVALID_ARG,
+                            _("path is NULL"));
+@@ -2980,6 +3020,11 @@ virDomainMemoryPeek (virDomainPtr dom,
+     }
+     conn = dom->conn;
+ 
++    if (dom->conn->flags & VIR_CONNECT_RO) {
++        virLibDomainError(dom, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return (-1);
++    }
++
+     /* Flags must be VIR_MEMORY_VIRTUAL at the moment.
+      *
+      * Note on access to physical memory: A VIR_MEMORY_PHYSICAL flag is
+@@ -3247,6 +3292,11 @@ virDomainSetAutostart(virDomainPtr domain,
+ 
+     conn = domain->conn;
+ 
++    if (domain->conn->flags & VIR_CONNECT_RO) {
++        virLibDomainError(domain, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return (-1);
++    }
++
+     if (conn->driver->domainSetAutostart)
+         return conn->driver->domainSetAutostart (domain, autostart);
+ 
+@@ -4197,6 +4247,11 @@ virNetworkSetAutostart(virNetworkPtr network,
+         return (-1);
+     }
+ 
++    if (network->conn->flags & VIR_CONNECT_RO) {
++        virLibNetworkError(network, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return (-1);
++    }
++
+     conn = network->conn;
+ 
+     if (conn->networkDriver && conn->networkDriver->networkSetAutostart)
+@@ -4395,6 +4450,11 @@ virConnectFindStoragePoolSources(virConnectPtr conn,
+         return NULL;
+     }
+ 
++    if (conn->flags & VIR_CONNECT_RO) {
++        virLibConnError(conn, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return NULL;
++    }
++
+     if (conn->storageDriver && conn->storageDriver->findPoolSources)
+         return conn->storageDriver->findPoolSources(conn, type, srcSpec, flags);
+ 
+@@ -5068,6 +5128,11 @@ virStoragePoolSetAutostart(virStoragePoolPtr pool,
+         return (-1);
+     }
+ 
++    if (pool->conn->flags & VIR_CONNECT_RO) {
++        virLibStoragePoolError(pool, VIR_ERR_OPERATION_DENIED, __FUNCTION__);
++        return (-1);
++    }
++
+     conn = pool->conn;
+ 
+     if (conn->storageDriver && conn->storageDriver->poolSetAutostart)

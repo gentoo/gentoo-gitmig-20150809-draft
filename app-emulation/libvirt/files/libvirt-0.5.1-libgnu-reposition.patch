@@ -1,0 +1,21 @@
+--- libvirt-0.5.1/qemud/Makefile.am.orig	2009-01-08 22:47:27.000000000 -0500
++++ libvirt-0.5.1/qemud/Makefile.am	2009-01-08 22:55:17.000000000 -0500
+@@ -87,8 +87,7 @@
+ 	$(COVERAGE_LDFLAGS) \
+ 	$(POLKIT_LIBS)
+ 
+-libvirtd_LDADD =					\
+-		../gnulib/lib/libgnu.la
++libvirtd_LDADD =
+ 
+ if ! WITH_DRIVER_MODULES
+ if WITH_QEMU
+@@ -223,6 +222,8 @@
+ 
+ endif # DBUS_INIT_SCRIPTS_RED_HAT
+ 
++libvirtd_LDADD += ../gnulib/lib/libgnu.la
++
+ endif # WITH_LIBVIRTD
+ 
+ CLEANFILES = libvirtd.init

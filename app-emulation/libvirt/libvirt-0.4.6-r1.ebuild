@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.4.4-r2.ebuild,v 1.2 2008/11/23 22:54:37 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.4.6-r1.ebuild,v 1.1 2009/01/09 04:31:31 marineam Exp $
 
 inherit eutils autotools
 
@@ -38,16 +38,10 @@ DEPEND="sys-libs/readline
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/"${P}"-kvm-cdrom-fix.patch
 
-	# app-emulation/kvm renames its binaries with kvm-* prefixes, deal with it
-	# in a sane manner for libvirt but use qemu-img if the useflag is set
-	if use kvm && ! use qemu ; then
-		epatch "${FILESDIR}"/"${P}"-binary-paths.patch
-		epatch "${FILESDIR}"/"${P}"-capabilities-kvm-path.patch
-	fi
-
-	epatch "${FILESDIR}"/"${PN}"-0.4.6-parallel-build-fix.patch
+	epatch "${FILESDIR}"/"${P}"-qemu-img-name.patch
+	epatch "${FILESDIR}"/"${P}"-parallel-build-fix.patch
+	epatch "${FILESDIR}"/"${P}"-add-missing-permission-checks.patch
 	eautoreconf
 }
 
@@ -62,6 +56,7 @@ pkg_setup() {
 src_compile() {
 	local my_conf=""
 	if use qemu || use kvm ; then
+		# fix path for kvm-img but use qemu-img if the useflag is set
 		my_conf="--with-qemu \
 			$(use_with !qemu qemu-img-name kvm-img)"
 	else
@@ -71,7 +66,6 @@ src_compile() {
 	econf \
 		$(use_with avahi) \
 		$(use_with iscsi storage-iscsi) \
-		$(use_with kvm qemu-kvm-path /usr/bin/kvm) \
 		$(use_with lvm storage-lvm) \
 		$(use_with openvz) \
 		$(use_with parted storage-disk) \

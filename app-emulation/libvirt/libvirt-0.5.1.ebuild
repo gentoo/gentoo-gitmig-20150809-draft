@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.4.6.ebuild,v 1.2 2008/11/23 22:54:37 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.5.1.ebuild,v 1.1 2009/01/09 04:31:31 marineam Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,9 @@ SRC_URI="http://libvirt.org/sources/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="avahi iscsi lvm kvm openvz parted qemu sasl selinux xen" #policykit is in package.mask
+IUSE="avahi iscsi lvm lxc hal kvm openvz parted qemu sasl selinux uml xen"
+# policykit is in package.mask
+# devicekit isn't in portage
 
 DEPEND="sys-libs/readline
 	sys-libs/ncurses
@@ -39,14 +41,24 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/"${P}"-qemu-img-name.patch
-	epatch "${FILESDIR}"/"${P}"-parallel-build-fix.patch
+	epatch "${FILESDIR}"/"${PN}"-0.4.6-qemu-img-name.patch
+	epatch "${FILESDIR}"/"${PN}"-0.4.6-parallel-build-fix.patch
+	epatch "${FILESDIR}"/"${P}"-libgnu-reposition.patch
+	epatch "${FILESDIR}"/"${P}"-add-missing-permission-checks.patch
 	eautoreconf
 }
 
 pkg_setup() {
-	if ! use qemu && ! use xen && ! use openvz && ! use kvm ; then
-		local msg="You must enable one of these USE flags: qemu xen openvz kvm"
+	local hasbackend=0
+	local backends="lxc kvm openvz qemu uml xen"
+	local backend
+
+	for backend in $backends ; do
+		use $backend && hasbackend=1
+	done
+
+	if [ "$hasbackend" == 0 ]; then
+		local msg="You must enable one of these USE flags: $backends"
 		eerror "$msg"
 		die "$msg"
 	fi
@@ -66,12 +78,17 @@ src_compile() {
 		$(use_with avahi) \
 		$(use_with iscsi storage-iscsi) \
 		$(use_with lvm storage-lvm) \
+		$(use_with lxc) \
+		$(use_with hal) \
 		$(use_with openvz) \
 		$(use_with parted storage-disk) \
 		$(use_with sasl) \
 		$(use_with selinux) \
+		$(use_with uml) \
 		$(use_with xen) \
 		${my_conf} \
+		--without-devkit \
+		--without-polkit \
 		--with-remote \
 		--disable-iptables-lokkit \
 		--localstatedir=/var \
@@ -86,4 +103,9 @@ src_install() {
 	mv "${D}"/usr/share/doc/{${PN}-python*,${P}/python}
 	newinitd "${FILESDIR}"/libvirtd.init libvirtd
 	newconfd "${FILESDIR}"/libvirtd.confd libvirtd
+}
+
+pkg_postinst() {
+	elog "To allow normal users to connect to libvirtd you must change the"
+	elog " unix sock group and/or perms in /etc/libvirt/libvirtd.conf"
 }
