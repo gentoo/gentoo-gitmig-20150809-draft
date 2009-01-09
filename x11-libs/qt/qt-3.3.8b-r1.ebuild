@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8b-r1.ebuild,v 1.3 2009/01/07 21:22:19 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8b-r1.ebuild,v 1.4 2009/01/09 14:09:54 remi Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -27,7 +27,7 @@ RDEPEND="
 	>=media-libs/libmng-1.0.9
 	media-libs/libpng
 	sys-libs/zlib
-	virtual/xft
+	x11-libs/libXft
 	x11-libs/libXcursor
 	x11-libs/libXi
 	x11-libs/libXrandr
