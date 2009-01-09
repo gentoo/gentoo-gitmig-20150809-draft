@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Image-Imlib2
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/ChangeLog,v 1.40 2009/01/09 18:07:05 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/ChangeLog,v 1.41 2009/01/09 20:13:08 josejx Exp $
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org> Image-Imlib2-2.02.ebuild:
+  Marked ppc stable for bug #254333.
 
   09 Jan 2009; Ferris McCormick <fmccor@gentoo.org>
   Image-Imlib2-2.02.ebuild:
