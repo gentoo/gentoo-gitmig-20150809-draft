@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/defendguin-0.0.11.ebuild,v 1.6 2007/04/09 21:57:46 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/defendguin-0.0.11.ebuild,v 1.7 2009/01/09 19:38:12 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="A clone of the arcade game Defender, but with a Linux theme"
@@ -13,19 +14,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/sdl-mixer
+DEPEND="media-libs/sdl-mixer[mikmod]
 	media-libs/libsdl"
 
-pkg_setup() {
-	if ! built_with_use media-libs/sdl-mixer mikmod; then
-		die "Please build media-libs/sdl-mixer with USE=mikmod"
-	fi
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "1i CC=$(tc-getCC)" \
 		-e "s:\$(DATA_PREFIX):${GAMES_DATADIR}/${PN}/:" \
