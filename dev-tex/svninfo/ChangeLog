@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/svninfo
 # Copyright 2005-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.25 2009/01/08 19:30:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.26 2009/01/09 18:21:37 josejx Exp $
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org> svninfo-0.7.3-r1.ebuild:
+  Marked ppc stable for bug #254083.
 
   08 Jan 2009; Jeroen Roovers <jer@gentoo.org> svninfo-0.7.3-r1.ebuild:
   Stable for HPPA (bug #254083).
