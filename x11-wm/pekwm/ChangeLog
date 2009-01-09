@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/pekwm
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.44 2008/12/10 14:09:27 yngwin Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.45 2009/01/09 15:20:33 remi Exp $
+
+  09 Jan 2009; Rémi Cardona <remi@gentoo.org> pekwm-0.1.5.ebuild,
+  pekwm-0.1.6.ebuild, pekwm-0.1.7.ebuild, pekwm-0.1.8.ebuild:
+  Change virtual/xft dependency to x11-libs/libXft, bug 253771.
 
 *pekwm-0.1.8 (10 Dec 2008)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.5.ebuild,v 1.10 2007/09/09 17:58:31 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.5.ebuild,v 1.11 2009/01/09 15:20:33 remi Exp $
 
 DESCRIPTION="A small window mananger based on aewm++"
 HOMEPAGE="http://www.pekwm.org/"
@@ -18,7 +18,7 @@ DEPEND="media-libs/jpeg
 	x11-libs/libXrandr
 	x11-libs/libXrender
 	perl? ( dev-libs/libpcre )
-	truetype? ( virtual/xft )
+	truetype? ( x11-libs/libXft )
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${DEPEND}
 	x11-apps/xprop"

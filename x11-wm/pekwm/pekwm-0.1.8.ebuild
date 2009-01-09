@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.8.ebuild,v 1.1 2008/12/10 14:09:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.8.ebuild,v 1.2 2009/01/09 15:20:33 remi Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="media-libs/jpeg
 	x11-libs/libXrandr
 	x11-libs/libXrender
 	perl? ( dev-libs/libpcre )
-	truetype? ( virtual/xft )
+	truetype? ( x11-libs/libXft )
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${DEPEND}
 	x11-apps/xprop"
