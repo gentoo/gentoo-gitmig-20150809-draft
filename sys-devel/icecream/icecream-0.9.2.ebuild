@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.2.ebuild,v 1.2 2008/12/30 23:33:44 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.2.ebuild,v 1.3 2009/01/09 17:13:24 ranger Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.suse.com/pub/projects/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ppc sparc ~x86"
 IUSE="doc"
 
 RDEPEND="virtual/libc"
