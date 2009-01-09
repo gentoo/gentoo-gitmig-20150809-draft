@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.38 2008/11/23 13:03:07 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.39 2009/01/09 19:34:45 patrick Exp $
+
+  09 Jan 2009; Patrick Lauer <patrick@gentoo.org> -PyQt4-4.4.3.ebuild,
+  -PyQt4-4.4.4.ebuild:
+  Removing old
 
 *PyQt4-4.4.4-r1 (23 Nov 2008)
 
