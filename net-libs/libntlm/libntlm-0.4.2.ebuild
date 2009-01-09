@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/libntlm-0.4.2.ebuild,v 1.5 2009/01/08 20:44:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/libntlm-0.4.2.ebuild,v 1.6 2009/01/09 17:21:24 ranger Exp $
 
 DESCRIPTION="Microsoft's NTLM authentication (libntlm) library"
 HOMEPAGE="http://josefsson.org/libntlm/"
@@ -8,7 +8,7 @@ SRC_URI="http://josefsson.org/libntlm/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 src_install () {
