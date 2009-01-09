@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9370 2009/01/08 20:33:18 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9371 2009/01/09 03:07:33 battousai Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1167,11 +1167,6 @@ sys-power/powersave
 #  Has a hard dependency on wxGTK-2.4 (bug #121818)
 #  Masked until we can update it for 2.6.
 app-pda/plucker
-
-# Bryan Stine <battousai@gentoo.org> (26 Apr 2007)
-# Masked until it works with current baselayout and
-# application locations.
-app-admin/bastille
 
 # Tristan Heaven <nyhm@gentoo.org> (25 Apr 2007)
 # Masked until it's updated to use >=wxpython-2.6
