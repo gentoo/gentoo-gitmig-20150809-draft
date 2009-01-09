@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lyx
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.162 2008/12/23 14:05:40 armin76 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.163 2009/01/09 18:37:26 josejx Exp $
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org> lyx-1.6.0.ebuild,
+  lyx-1.6.1.ebuild:
+  Marked ~ppc for bug #246285.
 
   23 Dec 2008; Raúl Porcel <armin76@gentoo.org> lyx-1.5.7.ebuild:
   alpha/ia64/sparc stable wrt #250950
