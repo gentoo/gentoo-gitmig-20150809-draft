@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Mason
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.83 2008/12/08 02:20:22 robbat2 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.84 2009/01/09 17:48:49 tove Exp $
+
+  09 Jan 2009; Torsten Veller <tove@gentoo.org> HTML-Mason-1.37.ebuild,
+  HTML-Mason-1.40.ebuild:
+  Remove Module-Build from RDEPEND (#246942)
 
 *HTML-Mason-1.40 (08 Dec 2008)
 
