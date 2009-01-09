@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.17 2009/01/09 19:45:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.18 2009/01/09 19:47:25 patrick Exp $
+
+  09 Jan 2009; Patrick Lauer <patrick@gentoo.org> ChangeLog:
+  Really remove old
 
   09 Jan 2009; Patrick Lauer <patrick@gentoo.org> ChangeLog:
   Removing old
