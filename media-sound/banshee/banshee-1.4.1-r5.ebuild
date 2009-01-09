@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.1-r4.ebuild,v 1.1 2009/01/07 00:32:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.1-r5.ebuild,v 1.1 2009/01/09 13:46:01 loki_val Exp $
 
 EAPI=2
 
-inherit base gnome2 mono autotools
+inherit base gnome2 mono
 
-GVER=0.10.3
+GVER=0.10.9
 
 DESCRIPTION="Import, organize, play, and share your music using a simple and powerful interface."
 HOMEPAGE="http://banshee-project.org"
@@ -21,9 +21,10 @@ RDEPEND=">=dev-lang/mono-2
 	>=dev-dotnet/gtk-sharp-2.12
 	>=dev-dotnet/gconf-sharp-2.8
 	>=dev-dotnet/gnome-sharp-2.8
-	dev-dotnet/notify-sharp
+	>=dev-dotnet/notify-sharp-0.4.0_pre20080912-r1
 	gnome-base/gnome-settings-daemon
 	sys-apps/dbus
+	>=media-libs/gstreamer-0.10.21-r3
 	>=media-libs/gst-plugins-bad-${GVER}
 	>=media-libs/gst-plugins-good-${GVER}
 	>=media-libs/gst-plugins-ugly-${GVER}
