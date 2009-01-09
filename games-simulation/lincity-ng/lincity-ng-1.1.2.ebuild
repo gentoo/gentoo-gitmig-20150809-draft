@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.1.2.ebuild,v 1.5 2008/07/08 16:50:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-1.1.2.ebuild,v 1.6 2009/01/09 14:27:10 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="city/country simulation game for X and opengl"
@@ -16,7 +17,7 @@ IUSE=""
 RDEPEND="virtual/opengl
 	dev-libs/libxml2
 	media-libs/libsdl
-	media-libs/sdl-mixer
+	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-image
 	media-libs/sdl-ttf
 	media-libs/sdl-gfx
@@ -25,17 +26,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/ftjam"
 
-pkg_setup() {
-	games_pkg_setup
-	if ! built_with_use media-libs/sdl-mixer vorbis ; then
-		eerror "lincity-ng doesn't work properly if"
-		eerror "sdl-mixer is built without vorbis support"
-		die "Please emerge sdlmixer with USE=vorbis"
-	fi
-}
-
 src_compile() {
-	egamesconf || die
 	jam || die "jam failed"
 }
 
