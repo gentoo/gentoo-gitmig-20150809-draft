@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qt-unixODBC
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.41 2009/01/07 21:19:26 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.42 2009/01/09 17:27:05 gmsoft Exp $
+
+  09 Jan 2009; Guy Martin <gmsoft@gentoo.org> qt-unixODBC-3.3.8b.ebuild:
+  hppa stable, #254153
 
   07 Jan 2009; Thomas Anderson <gentoofan23@gentoo.org>
   qt-unixODBC-3.3.8b.ebuild:
