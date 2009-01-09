@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.30 2009/01/06 14:37:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.31 2009/01/09 19:54:51 josejx Exp $
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org> wicd-1.5.7-r1.ebuild,
+  wicd-1.5.8.ebuild:
+  Added the ~ppc keyword for bug #250515.
 
 *wicd-1.5.8 (06 Jan 2009)
 
