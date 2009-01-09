@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/jfsutils
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.49 2008/12/10 22:47:01 maekke Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.50 2009/01/09 17:11:58 ranger Exp $
+
+  09 Jan 2009; Brent Baude <ranger@gentoo.org> jfsutils-1.1.13.ebuild:
+  stable ppc, bug 250281
 
   10 Dec 2008; Markus Meier <maekke@gentoo.org> jfsutils-1.1.13.ebuild:
   amd64/x86 stable, bug #250281
