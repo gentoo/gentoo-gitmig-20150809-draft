@@ -1,6 +1,15 @@
 # ChangeLog for media-video/qc-usb-messenger
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/ChangeLog,v 1.18 2008/12/25 15:45:57 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb-messenger/ChangeLog,v 1.19 2009/01/09 21:18:12 coldwind Exp $
+
+*qc-usb-messenger-1.8-r2 (09 Jan 2009)
+
+  09 Jan 2009; Santiago M. Mola <coldwind@gentoo.org>
+  +files/qc-usb-messenger-1.8-kcompat-2.6.28.patch,
+  +files/qc-usb-messenger-1.8-ppc.patch, +qc-usb-messenger-1.8-r2.ebuild:
+  Fix compatibility with linux 2.6.28 (bug #252849) and fix Makefile to
+  support ppc and ppc64 (not keyworded though, bug #245585). Thanks to
+  Thomas Juergues <thomas@sokrates.homelinux.net> for both patches.
 
   25 Dec 2008; Markus Meier <maekke@gentoo.org>
   qc-usb-messenger-1.8-r1.ebuild:

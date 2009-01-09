@@ -1,0 +1,16 @@
+Source: Written by Thomas Juerges <thomas@sokrates.homelinux.net>, thanks to Joseph Jezak <josejx@gentoo.org>
+        for the tip about ppc64.
+Upstream: unknown
+Reason: Support ppc and ppc64. https://bugs.gentoo.org/show_bug.cgi?id=245585
+
+--- qc-usb-messenger-1.8/Makefile	2008-11-04 11:36:03.000000000 -0700
++++ qc-usb-messenger-1.8.new/Makefile	2008-11-04 11:23:45.000000000 -0700
+@@ -70,7 +70,7 @@
+ USER_OPT := $(USER_OPT) -DHAVE_UTSRELEASE_H=$(HAVE_UTSRELEASE_H)
+ endif
+ 
+-ARCH    := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/)
++ARCH    := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/ -e s/ppc64/powerpc/ -e s/ppc/powerpc/)
+ INSTALL := $(shell which install)
+ DEPMOD  := $(shell which depmod || which /sbin/depmod || echo "true You should now run depmod")
+ 

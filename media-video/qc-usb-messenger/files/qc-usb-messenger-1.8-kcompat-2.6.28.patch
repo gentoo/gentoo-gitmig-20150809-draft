@@ -1,0 +1,114 @@
+Source: Thomas Juerges <thomas@sokrates.homelinux.net>
+Upstream: unknown
+Reason: Linux 2.6.28 compatibility. http://bugs.gentoo.org/show_bug.cgi?id=252849
+
+--- qc-usb-messenger-1.8.org/qc-driver.c	2008-12-28 11:40:18.000000000 -0700
++++ qc-usb-messenger-1.8/qc-driver.c	2008-12-28 11:24:23.000000000 -0700
+@@ -2486,7 +2486,7 @@
+ 		}
+ 
+ 		if (qc->settings.adaptive && !qc->sensor_data.sensor->autoexposure && r>=0 && midvalue>=0) {
+-			int ex, gn;
++			int ex = 0, gn = 0;
+ 			qc_adapt(qc, midvalue, qc->vpic.brightness>>8, &ex, &gn);
+ 			qc->sensor_data.sensor->set_levels(qc, ex, gn, qc->vpic.hue, qc->vpic.colour);
+ 			if(qc->settings.shutteradapt)
+@@ -2622,7 +2622,11 @@
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
+ 	struct video_device *dev = video_devdata(file);
+ #endif
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,28)
++	struct quickcam *qc = (struct quickcam *)video_get_drvdata(dev);
++#else
+ 	struct quickcam *qc = (struct quickcam *)dev->priv;
++#endif
+ 	struct qc_frame_data *fd = &qc->frame_data;
+ 	int mask;
+ 
+@@ -2674,7 +2678,11 @@
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
+ 	struct video_device *dev = video_devdata(file);
+ #endif
+-	struct quickcam *qc = dev->priv;
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,28)
++	struct quickcam *qc = (struct quickcam *)video_get_drvdata(dev);
++#else
++	struct quickcam *qc = (struct quickcam *)dev->priv;
++#endif
+ 	int r;
+ 
+ 	if (qcdebug&QC_DEBUGLOGIC || qcdebug&QC_DEBUGUSER) PDEBUG("qc_v4l_open(qc=%p)", qc);
+@@ -2739,7 +2747,11 @@
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
+ 	struct video_device *dev = video_devdata(file);
+ #endif
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,28)
++	struct quickcam *qc = (struct quickcam *)video_get_drvdata(dev);
++#else
+ 	struct quickcam *qc = (struct quickcam *)dev->priv;
++#endif
+ 	if (qcdebug&QC_DEBUGLOGIC || qcdebug&QC_DEBUGUSER) PDEBUG("qc_v4l_close(dev=%p,qc=%p)",dev,qc);
+ 
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
+@@ -2788,7 +2800,11 @@
+ 	struct video_device *dev = video_devdata(file);
+ 	int noblock = file->f_flags & O_NONBLOCK;
+ #endif
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,28)
++	struct quickcam *qc = (struct quickcam *)video_get_drvdata(dev);
++#else
+ 	struct quickcam *qc = (struct quickcam *)dev->priv;
++#endif
+ 	int frame_len;
+ 	unsigned char *frame;
+ 	long r = 0;
+@@ -2845,7 +2861,11 @@
+ 	const void *start = (void *)vma->vm_start;
+ 	unsigned long size  = vma->vm_end - vma->vm_start;
+ #endif
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,28)
++	struct quickcam *qc = (struct quickcam *)video_get_drvdata(dev);
++#else
+ 	struct quickcam *qc = (struct quickcam *)dev->priv;
++#endif
+ 	unsigned char *frame;
+ 	int ret = 0,  frame_size;
+ #if !HAVE_VMA && LINUX_VERSION_CODE<KERNEL_VERSION(2,6,0)
+@@ -2877,7 +2897,11 @@
+ 	struct video_device *dev = video_devdata(file);
+ 	void *argp = (void *)arg;
+ #endif
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,28)
++	struct quickcam *qc = (struct quickcam *)video_get_drvdata(dev);
++#else
+ 	struct quickcam *qc = (struct quickcam *)dev->priv;
++#endif
+ 	int i, retval = 0;
+ 
+ 	if (qcdebug&QC_DEBUGLOGIC || qcdebug&QC_DEBUGUSER) PDEBUG("qc_v4l_ioctl(dev=%p,cmd=%u,arg=%p,qc=%p)",dev,cmd,argp,qc);
+@@ -3688,8 +3712,12 @@
+ 	qc->input_ptr->id.vendor = qc->dev->descriptor.idVendor;
+ 	qc->input_ptr->id.product = qc->dev->descriptor.idProduct;
+ 	qc->input_ptr->id.version = qc->dev->descriptor.bcdDevice;
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,28)
++	r = input_register_device(qc->input_ptr);
++	CHECK_ERROR(r != 0, fail2b, "qc_int_init input_register_device failed %d", r);
++#else
+ 	input_register_device(qc->input_ptr);
+-
++#endif
+ 	*qc->input_event_path = '\0';
+ 	usb_make_path(qc->dev, qc->input_physname, 56);
+ 	strcat(qc->input_physname, "/input0");
+@@ -3748,7 +3776,11 @@
+ 
+ 		/* Register V4L video device */
+ 		memcpy(&qc->vdev, &qc_v4l_template, sizeof(qc_v4l_template));
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,28)
++		video_set_drvdata(&(qc->vdev), qc);
++#else
+ 		qc->vdev.priv = qc;
++#endif
+ 
+ 		mb();
+ 		r = video_register_device(&qc->vdev, VFL_TYPE_GRABBER, video_nr);
