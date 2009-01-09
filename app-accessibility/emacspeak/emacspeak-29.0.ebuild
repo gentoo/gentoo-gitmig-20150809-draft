@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-29.0.ebuild,v 1.1 2008/12/13 22:51:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-29.0.ebuild,v 1.2 2009/01/09 16:26:35 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2
 	mirror://gentoo/${P}-patches.tar.bz2"
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc ~x86"
 IUSE=""
 
 DEPEND=">=virtual/emacs-22"
