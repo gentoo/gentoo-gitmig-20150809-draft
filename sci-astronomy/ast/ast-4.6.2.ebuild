@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ast-4.6.2.ebuild,v 1.2 2008/11/24 10:12:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ast-4.6.2.ebuild,v 1.3 2009/01/09 22:43:14 josejx Exp $
 
 EAPI=2
 inherit eutils versionator
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.starlink.ac.uk/~dsb/ast/ast.html"
 SRC_URI="http://www.starlink.ac.uk/~dsb/${PN}/${MYP}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 RDEPEND=""
 DEPEND="${RDEPEND}"

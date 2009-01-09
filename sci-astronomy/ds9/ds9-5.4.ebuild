@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.4.ebuild,v 1.2 2008/11/20 11:25:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.4.ebuild,v 1.3 2009/01/09 22:45:01 josejx Exp $
 
 EAPI=2
 inherit eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://hea-www.harvard.edu/RD/ds9"
 SRC_URI="http://hea-www.harvard.edu/saord/download/${PN}/source/${PN}.${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 RDEPEND="dev-tcltk/blt
 	>=dev-tcltk/tcllib-1.10
