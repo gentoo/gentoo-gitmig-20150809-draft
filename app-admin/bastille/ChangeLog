@@ -1,6 +1,21 @@
 # ChangeLog for app-admin/bastille
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.21 2007/10/28 12:46:02 phreak Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.22 2009/01/09 00:36:14 battousai Exp $
+
+*bastille-3.0.9 (08 Jan 2009)
+
+  08 Jan 2009; Bryan Stine <battousai@gentoo.org>
+  -files/bastille-2.1.1-firewall.init,
+  -files/bastille-2.1.1-hlist-fix.patch,
+  -files/bastille-3.0.2-firewall.init, -files/bastille-firewall-imap.patch,
+  -bastille-2.1.1-r3.ebuild, -bastille-3.0.2.ebuild, +bastille-3.0.9.ebuild:
+  Version bump to 3.0.9. Restores compatibility with various distribution
+  changes, such as coreutils program locations, etc. Also added many little
+  fixes. Moved firewall init script into patch distribution, so no future
+  versions will require FILESDIR. This version should bring the package out
+  of p.mask, fixing version bump bug #157187 and issues bug #154002. Removed
+  old versions that no longer work with those distribution changes mentioned
+  above.
 
   28 Oct 2007; Christian Heim <phreak@gentoo.org> bastille-2.1.1-r1.ebuild,
   bastille-2.1.1-r2.ebuild, bastille-2.1.1-r3.ebuild, bastille-3.0.2.ebuild:
