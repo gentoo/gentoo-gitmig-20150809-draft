@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.0.ebuild,v 1.1 2008/12/06 22:13:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.0.ebuild,v 1.2 2009/01/09 21:14:43 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils gnome2-utils perl-module games
 
 DESCRIPTION="A Puzzle Bubble clone written in perl (now with network support)"
@@ -15,32 +16,15 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.6.1
-	>=media-libs/sdl-mixer-1.2.3
+	>=media-libs/sdl-mixer-1.2.3[mikmod,vorbis]
 	media-libs/sdl-pango
-	media-libs/sdl-image
+	media-libs/sdl-image[gif,png]
 	dev-perl/sdl-perl
 	dev-perl/Locale-gettext"
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 
-pkg_setup() {
-	if ! built_with_use -a media-libs/sdl-image gif png ; then
-		ewarn "Frozen-bubble uses GIF and PNG image files."
-		ewarn "You must emerge media-libs/sdl-image with GIF and PNG support."
-		ewarn "Please USE=\"gif png\" emerge media-libs/sdl-image"
-		die "Cannot emerge without gif and png USE flags on sdl-image"
-	fi
-	if ! built_with_use media-libs/sdl-mixer mikmod ; then
-		ewarn "You must emerge media-libs/sdl-mixer with mikmod support."
-		ewarn "    USE=mikmod emerge media-libs/sdl-mixer"
-		die "missing mikmod USE flag for sdl-mixer"
-	fi
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e '/^PREFIX /s:=.*:=/usr:' \
 		-e "/^BINDIR /s:=.*:=${GAMES_BINDIR}:" \
@@ -61,7 +45,7 @@ src_install() {
 		insinto /usr/share/icons/hicolor/${res}/apps
 		newins icons/frozen-bubble-icon-${res}.png ${PN}.png
 	done
-	make_desktop_entry ${PN} Frozen-Bubble ${PN}
+	make_desktop_entry ${PN} Frozen-Bubble
 
 	fixlocalpod
 	prepgamesdirs
