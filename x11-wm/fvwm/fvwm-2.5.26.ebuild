@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.26.ebuild,v 1.1 2008/05/14 21:29:51 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.26.ebuild,v 1.2 2009/01/09 15:06:36 remi Exp $
 
 inherit eutils flag-o-matic
 
@@ -42,7 +42,7 @@ COMMON_DEPEND="
 	svg? ( gnome-base/librsvg )
 	truetype? (
 		media-libs/fontconfig
-		virtual/xft
+		x11-libs/libXft
 	)
 	xinerama? (
 		x11-proto/xineramaproto

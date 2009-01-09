@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fvwm
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.147 2008/05/14 21:29:51 omp Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.148 2009/01/09 15:06:36 remi Exp $
+
+  09 Jan 2009; Rémi Cardona <remi@gentoo.org> fvwm-2.5.18-r1.ebuild,
+  fvwm-2.5.19.ebuild, fvwm-2.5.21.ebuild, fvwm-2.5.25.ebuild,
+  fvwm-2.5.26.ebuild:
+  Change virtual/xft dependency to x11-libs/libXft, bug 253771.
 
 *fvwm-2.5.26 (14 May 2008)
 

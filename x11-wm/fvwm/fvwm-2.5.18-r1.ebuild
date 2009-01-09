@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18-r1.ebuild,v 1.14 2008/01/07 03:49:05 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18-r1.ebuild,v 1.15 2009/01/09 15:06:36 remi Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,7 +23,7 @@ RDEPEND="readline? ( sys-libs/readline sys-libs/ncurses )
 					dev-lang/tk
 					dev-perl/perl-tk
 					>=dev-perl/X11-Protocol-0.56 ) )
-		truetype? ( virtual/xft media-libs/fontconfig )
+		truetype? ( x11-libs/libXft media-libs/fontconfig )
 		dev-lang/perl
 		sys-libs/zlib
 		sys-apps/debianutils
