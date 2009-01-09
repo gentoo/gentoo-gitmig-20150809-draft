@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.175 2008/12/05 14:35:07 yngwin Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.176 2009/01/09 15:18:46 remi Exp $
+
+  09 Jan 2009; Rémi Cardona <remi@gentoo.org> openbox-3.4.7.2.ebuild,
+  openbox-3.4.8_rc1.ebuild:
+  Change virtual/xft dependency to x11-libs/libXft, bug 253771.
 
 *openbox-3.4.8_rc1 (05 Dec 2008)
 
