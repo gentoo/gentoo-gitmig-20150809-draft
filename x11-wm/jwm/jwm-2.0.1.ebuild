@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-2.0.1.ebuild,v 1.1 2007/12/09 17:59:21 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-2.0.1.ebuild,v 1.2 2009/01/09 15:11:33 remi Exp $
 
 inherit autotools eutils
 
@@ -20,7 +20,7 @@ RDEPEND="xpm? ( x11-libs/libXpm )
 	x11-libs/libXrender
 	x11-libs/libXau
 	x11-libs/libXdmcp
-	truetype? ( virtual/xft )
+	truetype? ( x11-libs/libXft )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	bidi? ( dev-libs/fribidi )
