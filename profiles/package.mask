@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9372 2009/01/09 12:37:04 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9373 2009/01/09 12:56:38 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -121,7 +121,6 @@ x11-misc/goats
 # we are completely against the notion of monolithic versions, these
 # here should be considered an experimentation
 >=media-libs/gstreamer-0.10.21-r10
->=media-libs/gstreamer-0.10.21-r2
 >=media-libs/gst-plugins-good-0.10.11-r1
 >=media-libs/gst-plugins-bad-0.10.9-r1
 >=media-libs/gst-plugins-ugly-0.10.10-r1
