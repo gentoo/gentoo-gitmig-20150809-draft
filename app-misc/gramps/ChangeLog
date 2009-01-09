@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.89 2009/01/06 00:39:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.90 2009/01/09 13:34:02 fauli Exp $
+
+  09 Jan 2009; Christian Faulhammer <fauli@gentoo.org> gramps-3.0.3.ebuild,
+  gramps-3.0.4.ebuild:
+  Dependency on gnome-doc-utils not needed anymore, reported through email
+  by Christian Schmitt <chris AT ilovelinux DOT de>
 
   06 Jan 2009; Christian Faulhammer <fauli@gentoo.org> gramps-3.0.4.ebuild:
   make use of EAPI2 features to check for USE=sqlite or USE=berkdb on

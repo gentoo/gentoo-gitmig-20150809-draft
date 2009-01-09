@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.4.ebuild,v 1.3 2009/01/06 00:39:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.0.4.ebuild,v 1.4 2009/01/09 13:34:02 fauli Exp $
 
 EAPI=2
 NEED_PYTHON="2.5"
@@ -27,8 +27,7 @@ DEPEND="${RDEPEND}
 	|| ( dev-lang/python[sqlite] dev-lang/python[berkdb] )
 	sys-devel/gettext
 	virtual/libiconv
-	dev-util/pkgconfig
-	app-text/gnome-doc-utils"
+	dev-util/pkgconfig"
 
 DOCS="NEWS README TODO"
 
