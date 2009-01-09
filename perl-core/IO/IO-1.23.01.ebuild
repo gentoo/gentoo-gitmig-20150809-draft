@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/IO-1.23.01.ebuild,v 1.9 2007/11/19 03:52:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/IO-1.23.01.ebuild,v 1.10 2009/01/09 21:23:49 josejx Exp $
 
 inherit versionator perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/G/GB/GBARR/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ia64 mips sparc x86"
+KEYWORDS="amd64 ia64 mips ~ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
