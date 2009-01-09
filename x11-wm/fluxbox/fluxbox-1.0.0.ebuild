@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0.0.ebuild,v 1.8 2007/11/16 16:43:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0.0.ebuild,v 1.9 2009/01/09 15:03:15 remi Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/libXpm
 	x11-libs/libXrandr
 	xinerama? ( x11-libs/libXinerama )
 	x11-apps/xmessage
-	virtual/xft
+	x11-libs/libXft
 	truetype? ( media-libs/freetype )
 	imlib? ( >=media-libs/imlib2-1.2.0 )
 	!<x11-themes/fluxbox-styles-fluxmod-20040809-r1
