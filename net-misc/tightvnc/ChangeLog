@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.129 2009/01/07 15:01:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.130 2009/01/09 21:13:12 klausman Exp $
+
+  09 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
+  tightvnc-1.3.9-r2.ebuild:
+  Stable on alpha, bug #252368
 
   07 Jan 2009; Jeroen Roovers <jer@gentoo.org> tightvnc-1.3.9-r2.ebuild:
   Stable for HPPA (bug #252368).

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9-r2.ebuild,v 1.8 2009/01/07 15:01:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.9-r2.ebuild,v 1.9 2009/01/09 21:13:12 klausman Exp $
 
 inherit eutils toolchain-funcs java-pkg-opt-2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2
 		java? ( mirror://sourceforge/vnc-tight/${P}_javasrc.tar.gz )"
 HOMEPAGE="http://www.tightvnc.com/"
 
-KEYWORDS="~alpha amd64 arm hppa ~mips ppc ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~mips ppc ~sh sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 SLOT="0"
 
