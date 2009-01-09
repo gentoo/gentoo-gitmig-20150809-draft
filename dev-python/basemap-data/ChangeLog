@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/basemap-data
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap-data/ChangeLog,v 1.4 2008/01/04 18:35:52 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap-data/ChangeLog,v 1.5 2009/01/09 19:57:32 patrick Exp $
+
+  09 Jan 2009; Patrick Lauer <patrick@gentoo.org>
+  -basemap-data-0.9.6.ebuild:
+  Removing old
 
 *basemap-data-0.9.7 (04 Jan 2008)
 
