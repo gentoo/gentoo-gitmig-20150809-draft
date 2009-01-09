@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libntlm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.10 2009/01/09 17:21:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.11 2009/01/09 20:37:16 klausman Exp $
+
+  09 Jan 2009; Tobias Klausmann <klausman@gentoo.org> libntlm-0.4.2.ebuild:
+  Stable on alpha, bug #254203
 
   09 Jan 2009; Brent Baude <ranger@gentoo.org> libntlm-0.4.2.ebuild:
   Marking libntlm-0.4.2 ppc for bug 254203
