@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkcon
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkcon/ChangeLog,v 1.1 2008/11/05 21:32:54 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkcon/ChangeLog,v 1.2 2009/01/09 22:41:07 josejx Exp $
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org> tkcon-20081103.ebuild:
+  Marked ~ppc for bug #253299.
 
 *tkcon-20081103 (05 Nov 2008)
 
