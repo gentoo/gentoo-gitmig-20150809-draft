@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.12 2007/07/22 03:46:29 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.13 2009/01/09 14:24:15 remi Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXinerama
 	x11-libs/libXmu
-	virtual/xft"
+	x11-libs/libXft"
 
 DEPEND="${RDEPEND}
 	x11-proto/xproto

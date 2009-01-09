@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/skippy
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/ChangeLog,v 1.13 2007/07/22 03:46:29 dberkholz Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/ChangeLog,v 1.14 2009/01/09 14:24:15 remi Exp $
+
+  09 Jan 2009; Rémi Cardona <remi@gentoo.org> skippy-0.5.0.ebuild:
+  Change virtual/xft dependency to x11-libs/libXft, bug 253771.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; skippy-0.5.0.ebuild:
   Drop virtual/x11 references.
