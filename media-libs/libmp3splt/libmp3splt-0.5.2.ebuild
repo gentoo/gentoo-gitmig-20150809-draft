@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.5.2.ebuild,v 1.1 2008/11/24 20:40:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.5.2.ebuild,v 1.2 2009/01/09 16:29:58 josejx Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mp3splt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="media-libs/libmad
