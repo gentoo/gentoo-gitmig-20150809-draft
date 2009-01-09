@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.106 2009/01/06 10:04:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.107 2009/01/09 15:01:11 remi Exp $
+
+  09 Jan 2009; Rémi Cardona <remi@gentoo.org>
+  enlightenment-0.16.8.14.ebuild, enlightenment-0.16.8.15.ebuild,
+  enlightenment-0.16.9999.ebuild:
+  Change virtual/xft dependency to x11-libs/libXft, bug 253771.
 
 *enlightenment-0.16.8.15 (06 Jan 2009)
 

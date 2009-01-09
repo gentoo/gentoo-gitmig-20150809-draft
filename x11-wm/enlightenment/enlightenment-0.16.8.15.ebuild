@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.15.ebuild,v 1.1 2009/01/06 10:04:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.15.ebuild,v 1.2 2009/01/09 15:01:11 remi Exp $
 
 if [[ ${PV} == *9999 ]] ; then
 	ESVN_REPO_URI="http://svn.enlightenment.org/svn/e/trunk/E16/e"
@@ -33,7 +33,7 @@ RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	x11-libs/libXfixes
 	x11-libs/libXdamage
 	x11-libs/libXxf86vm
-	virtual/xft
+	x11-libs/libXft
 	xrandr? ( x11-libs/libXrandr )
 	x11-libs/libXrender
 	x11-misc/xbitmaps
