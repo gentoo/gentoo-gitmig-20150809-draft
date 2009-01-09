@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/adodb-py
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.23 2008/10/29 12:11:54 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.24 2009/01/09 19:40:55 patrick Exp $
+
+  09 Jan 2009; Patrick Lauer <patrick@gentoo.org> -adodb-py-1.13.ebuild,
+  -adodb-py-2.01.ebuild:
+  Removing old
 
 *adodb-py-2.20 (29 Oct 2008)
 

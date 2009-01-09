@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.16 2008/04/03 21:44:49 lordvan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.17 2009/01/09 19:45:01 patrick Exp $
+
+  09 Jan 2009; Patrick Lauer <patrick@gentoo.org> ChangeLog:
+  Removing old
 
   03 Apr 2008; Thomas Raschbacher <lordvan@gentoo.org> axiom-0.5.27.ebuild:
   added ~amd64 arch

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/adns-python
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.21 2008/03/24 00:48:12 ranger Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.22 2009/01/09 19:38:01 patrick Exp $
+
+  09 Jan 2009; Patrick Lauer <patrick@gentoo.org> -adns-python-1.0.0.ebuild,
+  -adns-python-1.2.1.ebuild:
+  Removing old
 
   24 Mar 2008; Brent Baude <ranger@gentoo.org> adns-python-1.2.1.ebuild:
   Marking adns-python-1.2.1 ppc64 for bug 213740
