@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cbtracker
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cbtracker/ChangeLog,v 1.9 2008/04/21 16:48:48 phreak Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cbtracker/ChangeLog,v 1.10 2009/01/09 19:39:21 josejx Exp $
+
+  09 Jan 2009; Joseph Jezak <josejx@gentoo.org> cbtracker-1.0b.ebuild:
+  Removed ~ppc keyword for bug #240029.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
