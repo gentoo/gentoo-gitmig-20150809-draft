@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-opengl
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.27 2008/12/21 10:55:02 maekke Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.28 2009/01/10 16:12:16 klausman Exp $
+
+  10 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
+  ruby-opengl-0.60.0.ebuild:
+  Stable on alpha, bug #250933
 
   21 Dec 2008; Markus Meier <maekke@gentoo.org> ruby-opengl-0.60.0.ebuild:
   x86 stable, bug #250933
