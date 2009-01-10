@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xawtv
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.58 2007/11/27 10:22:56 zzam Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.59 2009/01/10 13:13:56 beandog Exp $
+
+  10 Jan 2009; Steve Dibb <beandog@gentoo.org> xawtv-3.95-r1.ebuild:
+  Drop deprecated bindnow flags, bug 226979
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> xawtv-3.95-r1.ebuild:
   Fixed quoting.

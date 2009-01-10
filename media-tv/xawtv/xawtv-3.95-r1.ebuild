@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.24 2007/11/27 10:22:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.25 2009/01/10 13:13:56 beandog Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -99,7 +99,7 @@ src_compile() {
 		$(use_enable aalib aa) \
 		|| die " xawtv configure failed"
 
-	emake BINDNOW_FLAGS=$(bindnow-flags) verbose=yes || die "Make failed"
+	emake verbose=yes || die "Make failed"
 
 	if use X; then
 		cd "${WORKDIR}/${MY_FONT}"
