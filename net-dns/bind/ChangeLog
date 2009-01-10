@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.223 2009/01/09 21:04:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.224 2009/01/10 10:02:48 maekke Exp $
+
+  10 Jan 2009; Markus Meier <maekke@gentoo.org> bind-9.4.3_p1.ebuild:
+  amd64/x86 stable, bug #254134
 
   09 Jan 2009; Tobias Klausmann <klausman@gentoo.org> bind-9.4.3_p1.ebuild:
   Stable on alpha, bug #254134
