@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.2.ebuild,v 1.5 2009/01/10 17:10:51 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.4.ebuild,v 1.1 2009/01/10 17:10:51 hanno Exp $
 
 inherit eutils gnome2 fdo-mime multilib python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gimp/v2.6/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 
 IUSE="alsa aalib altivec curl dbus debug doc exif gnome hal jpeg lcms mmx mng pdf png python smp sse svg tiff webkit wmf"
 
@@ -25,15 +25,13 @@ RDEPEND=">=dev-libs/glib-2.18.1
 	dev-libs/libxslt
 	x11-misc/xdg-utils
 	x11-themes/hicolor-icon-theme
-	media-libs/gegl
+	>=media-libs/gegl-0.0.22
 	aalib? ( media-libs/aalib )
 	alsa? ( >=media-libs/alsa-lib-1.0.14a-r1 )
 	curl? ( net-misc/curl )
 	dbus? ( dev-libs/dbus-glib )
 	hal? ( sys-apps/hal )
-	gnome? ( gnome-base/gvfs
-		>=gnome-base/libgnomeui-2.10.0
-		>=gnome-base/gnome-keyring-0.4.5 )
+	gnome? ( gnome-base/gvfs )
 	webkit? ( net-libs/webkit-gtk )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	exif? ( >=media-libs/libexif-0.6.15 )
