@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/frozen-bubble
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.34 2009/01/10 15:30:46 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.35 2009/01/10 15:50:29 fmccor Exp $
+
+  10 Jan 2009; Ferris McCormick <fmccor@gentoo.org>
+  frozen-bubble-2.2.0.ebuild:
+  Sparc stable, Bug #254357.
 
   10 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
   frozen-bubble-2.2.0.ebuild:
