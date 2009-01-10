@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.15 2009/01/10 16:50:30 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.16 2009/01/10 16:56:07 hanno Exp $
+
+  10 Jan 2009; Hanno Boeck <hanno@gentoo.org> gegl-0.0.22.ebuild:
+  Remove sandbox workaround, fixed upstream, see
+  http://bugzilla.gnome.org/show_bug.cgi?id=529668.
 
 *gegl-0.0.22 (10 Jan 2009)
 

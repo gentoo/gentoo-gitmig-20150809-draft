@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.22.ebuild,v 1.1 2009/01/10 16:50:30 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.0.22.ebuild,v 1.2 2009/01/10 16:56:07 hanno Exp $
 
 DESCRIPTION="A graph based image processing framework"
 HOMEPAGE="http://www.gegl.org/"
@@ -58,7 +58,7 @@ src_compile() {
 		$(use_with svg librsvg) \
 		$(use_enable sse) \
 		|| die "econf failed"
-	env GEGL_SWAP="${WORKDIR}" emake || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
