@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.24 2009/01/09 19:50:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.25 2009/01/10 00:18:17 josejx Exp $
+
+  10 Jan 2009; Joseph Jezak <josejx@gentoo.org> ChangeLog:
+  Reverting pm-utils change until it goes stable.
 
   09 Jan 2009; Joseph Jezak <josejx@gentoo.org> package.use.mask:
   Removed mask on sys-apps/hal for bug #253868.
