@@ -1,0 +1,11 @@
+# ChangeLog for app-dicts/aspell-de-alt
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de-alt/ChangeLog,v 1.1 2009/01/10 11:13:31 ulm Exp $
+
+*aspell-de-alt-2.1.1 (10 Jan 2009)
+
+  10 Jan 2009; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
+  +aspell-de-alt-2.1.1.ebuild:
+  Initial import. Ebuild contributed by Patric Mueller <bhaak@gmx.net>,
+  modified by me; bug 193593.
+
