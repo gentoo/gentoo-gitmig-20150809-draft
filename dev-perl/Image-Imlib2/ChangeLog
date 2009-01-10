@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Image-Imlib2
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/ChangeLog,v 1.42 2009/01/09 20:31:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/ChangeLog,v 1.43 2009/01/10 16:44:40 armin76 Exp $
+
+  10 Jan 2009; Raúl Porcel <armin76@gentoo.org> Image-Imlib2-2.02.ebuild:
+  ia64 stable wrt #254333
 
   09 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
   Image-Imlib2-2.02.ebuild:
