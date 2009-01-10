@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9376 2009/01/10 11:06:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9377 2009/01/10 17:17:32 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -748,10 +748,6 @@ games-server/greenhouse
 =dev-haskell/regex-compat-0.90
 =dev-haskell/regex-base-0.91
 =dev-haskell/regex-posix-0.92
-
-# Ulrich Mueller <ulm@gentoo.org> (27 Apr 2008)
-# CVS snapshot, bug 219449.
-~app-emacs/navi2ch-1.7.5_p20080325
 
 # Markus Ullmann <jokey@gentoo.org> (21 Apr 2008)
 # mask beta version
