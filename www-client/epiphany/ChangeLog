@@ -1,11 +1,14 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.187 2009/01/09 18:09:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.188 2009/01/10 00:03:48 remi Exp $
+
+  10 Jan 2009; Rémi Cardona <remi@gentoo.org> ChangeLog:
+  fix ChangeLog encoding
 
   09 Jan 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   marking epiphany-2.22.3-r1 ppc stable for bug 253534
 
-  08 Jan 2009; RaÃºl Porcel <armin76@gentoo.org> epiphany-2.22.3-r10.ebuild,
+  08 Jan 2009; Raúl Porcel <armin76@gentoo.org> epiphany-2.22.3-r10.ebuild,
   epiphany-2.22.3-r11.ebuild, epiphany-2.24.0.1.ebuild,
   epiphany-2.24.1-r10.ebuild, epiphany-2.24.2.1-r10.ebuild:
   Mark -sparc due to bug #253541
@@ -13,7 +16,7 @@
   08 Jan 2009; Jeroen Roovers <jer@gentoo.org> epiphany-2.22.3-r1.ebuild:
   Stable for HPPA (bug #253534).
 
-  07 Jan 2009; RaÃºl Porcel <armin76@gentoo.org> epiphany-2.22.3-r1.ebuild:
+  07 Jan 2009; Raúl Porcel <armin76@gentoo.org> epiphany-2.22.3-r1.ebuild:
   alpha/ia64 stable wrt #253534
 
   07 Jan 2009; Brent Baude <ranger@gentoo.org> epiphany-2.22.3-r1.ebuild:
@@ -38,7 +41,7 @@
 *epiphany-2.22.3-r11 (03 Jan 2009)
 *epiphany-2.22.3-r1 (03 Jan 2009)
 
-  03 Jan 2009; RÃ©mi Cardona <remi@gentoo.org>
+  03 Jan 2009; Rémi Cardona <remi@gentoo.org>
   +files/epiphany-2.22.3-notify-crash-fix.patch, +epiphany-2.22.3-r1.ebuild,
   +epiphany-2.22.3-r11.ebuild:
   add patch to fix libnotify crash (see bug #250031)
@@ -66,7 +69,7 @@
   +epiphany-2.24.1.ebuild, +epiphany-2.24.1-r10.ebuild:
   bump to 2.24.1, bug fixes.
 
-  10 Oct 2008; RaÃºl Porcel <armin76@gentoo.org> epiphany-2.24.0.1.ebuild:
+  10 Oct 2008; Raúl Porcel <armin76@gentoo.org> epiphany-2.24.0.1.ebuild:
   Add ~alpha/~ia64/~sparc wrt #239847
 
 *epiphany-2.24.0.1 (06 Oct 2008)
@@ -82,7 +85,7 @@
   04 Sep 2008; Mart Raudsepp <leio@gentoo.org> epiphany-2.22.3-r10.ebuild:
   Remove x86-fbsd keyword from xulrunner-1.9 using revision, bug 236678
 
-  12 Aug 2008; RaÃºl Porcel <armin76@gentoo.org> epiphany-2.22.3.ebuild:
+  12 Aug 2008; Raúl Porcel <armin76@gentoo.org> epiphany-2.22.3.ebuild:
   alpha/ia64/sparc stable wrt #229709
 
   10 Aug 2008; Markus Meier <maekke@gentoo.org> epiphany-2.22.3.ebuild:
@@ -102,7 +105,7 @@
   epiphany-2.22.3.ebuild:
   Fix build against =www-client/mozilla-firefox-2.0* (bug #230834)
 
-  26 Jul 2008; Olivier CrÃªte <tester@gentoo.org> epiphany-2.22.3.ebuild:
+  26 Jul 2008; Olivier Crête <tester@gentoo.org> epiphany-2.22.3.ebuild:
   Stable on amd64, bug #229709
 
 *epiphany-2.22.3-r10 (06 Jul 2008)
@@ -160,7 +163,7 @@
   engine support, and some GUI work (notifications for downloads for
   example)
 
-  17 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> epiphany-2.20.3.ebuild:
+  17 Mar 2008; Raúl Porcel <armin76@gentoo.org> epiphany-2.20.3.ebuild:
   Fix deps for net-libs/xulrunner and www-client/mozilla-firefox
 
   10 Mar 2008; Mart Raudsepp <leio@gentoo.org>
@@ -171,7 +174,7 @@
   04 Feb 2008; Jeroen Roovers <jer@gentoo.org> epiphany-2.20.3.ebuild:
   Stable for HPPA (bug #208366).
 
-  03 Feb 2008; RaÃºl Porcel <armin76@gentoo.org> epiphany-2.20.3.ebuild:
+  03 Feb 2008; Raúl Porcel <armin76@gentoo.org> epiphany-2.20.3.ebuild:
   alpha/ia64/sparc stable wrt #208366
 
   02 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
@@ -217,16 +220,16 @@
   24 Nov 2007; Brent Baude <ranger@gentoo.org> epiphany-2.20.1.ebuild:
   Marking epiphany-2.20.1 ppc stable for bug 199740
 
-  22 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> epiphany-2.20.1.ebuild:
+  22 Nov 2007; Raúl Porcel <armin76@gentoo.org> epiphany-2.20.1.ebuild:
   alpha/ia64/sparc stable wrt #199740
 
-  21 Nov 2007; Dawid WÄgliÅski <cla@gentoo.org> epiphany-2.20.1.ebuild:
+  21 Nov 2007; Dawid Węgliński <cla@gentoo.org> epiphany-2.20.1.ebuild:
   Stable on x86 (bug #199740)
 
   20 Nov 2007; Samuli Suominen <drac@gentoo.org> epiphany-2.20.1.ebuild:
   amd64 stable wrt #199740
 
-  06 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> epiphany-2.18.3.ebuild:
+  06 Nov 2007; Raúl Porcel <armin76@gentoo.org> epiphany-2.18.3.ebuild:
   sparc stable wrt #193339
 
 *epiphany-2.20.1 (17 Oct 2007)
@@ -245,7 +248,7 @@
   +epiphany-2.20.0.ebuild:
   bump to 2.20.0
 
-  27 Sep 2007; RaÃºl Porcel <armin76@gentoo.org> epiphany-2.18.3.ebuild:
+  27 Sep 2007; Raúl Porcel <armin76@gentoo.org> epiphany-2.18.3.ebuild:
   alpha/ia64 stable wrt #193339
 
   25 Sep 2007; Jeroen Roovers <jer@gentoo.org> epiphany-2.18.3.ebuild:
@@ -293,7 +296,7 @@
   10 Aug 2007; Christoph Mende <angelos@gentoo.org> epiphany-2.18.2.ebuild:
   Stable on amd64 wrt bug #185823
 
-  08 Aug 2007; RaÃºl Porcel <armin76@gentoo.org> epiphany-2.18.2.ebuild:
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org> epiphany-2.18.2.ebuild:
   alpha/ia64 stable wrt #185823
 
   07 Aug 2007; Tobias Scherbaum <dertobi123@gentoo.org>
@@ -343,7 +346,7 @@
   31 May 2007; Brent Baude <ranger@gentoo.org> epiphany-2.16.3.ebuild:
   Marking epiphany-2.16.3 ppc64 stable for bug #171107
 
-  30 May 2007; RaÃºl Porcel <armin76@gentoo.org> epiphany-2.16.3.ebuild:
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> epiphany-2.16.3.ebuild:
   alpha/ia64 stable wrt #171107
 
   29 May 2007; Andrej Kacian <ticho@gentoo.org> epiphany-2.16.3.ebuild:
@@ -379,13 +382,13 @@
   epiphany-2.16.1.ebuild, epiphany-2.16.2.ebuild:
   Add WANT_AUTOMAKE; bug #164142
 
-  21 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org> epiphany-2.16.2.ebuild:
+  21 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> epiphany-2.16.2.ebuild:
   Stable on IA64, bug 156662.
 
   19 Jan 2007; Jeroen Roovers <jer@gentoo.org> epiphany-2.16.2.ebuild:
   Stable for HPPA (bug #147751).
 
-  14 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org> epiphany-2.16.2.ebuild:
+  14 Jan 2007; Bryan Østergaard <kloeri@gentoo.org> epiphany-2.16.2.ebuild:
   Stable on Alpha.
 
   22 Dec 2006; Tony Vroon <chainsaw@gentoo.org> epiphany-2.16.2.ebuild:
@@ -542,7 +545,7 @@
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org> epiphany-1.8.4.1.ebuild:
   Mark 1.8.4.1 stable on ia64
 
-  18 Mar 2006; Olivier CrÃªte <tester@gentoo.org> epiphany-1.8.4.1.ebuild:
+  18 Mar 2006; Olivier Crête <tester@gentoo.org> epiphany-1.8.4.1.ebuild:
   Stable on amd64 per bug #126321
 
   17 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
@@ -600,7 +603,7 @@
   20 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> epiphany-1.8.3.ebuild:
   Stable on sparc wrt #119634
 
-  26 Dec 2005; Bryan Ãstergaard <kloeri@gentoo.org epiphany-1.8.2.ebuild,
+  26 Dec 2005; Bryan Østergaard <kloeri@gentoo.org epiphany-1.8.2.ebuild,
   epiphany-1.8.3.ebuild:
   ~alpha keyword.
 
@@ -610,7 +613,7 @@
   +epiphany-1.8.3.ebuild:
   New version.
 
-  31 Oct 2005; Bryan Ãstergaard <kloeri@gentoo.org> epiphany-1.8.2.ebuild:
+  31 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.8.2.ebuild:
   ~ia64 keyword.
 
   15 Oct 2005; Joseph Jezak <josejx@gentoo.org> epiphany-1.8.2.ebuild:
@@ -706,14 +709,14 @@
   epiphany-1.6.3.ebuild:
   Stable on hppa.
 
-  12 Jun 2005; Olivier CrÃªte <tester@gentoo.org> epiphany-1.6.0-r3.ebuild:
+  12 Jun 2005; Olivier Crête <tester@gentoo.org> epiphany-1.6.0-r3.ebuild:
   Stable on amd64
 
   12 Jun 2005; Tobias Scherbaum <dertobi123@gentoo.org>
   epiphany-1.6.0-r3.ebuild:
   Stable on ppc.
 
-  12 Jun 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org>
   epiphany-1.6.0-r3.ebuild:
   Stable on alpha.
 
@@ -745,7 +748,7 @@
   +files/epiphany-1.6.3-fix_includes.patch, +epiphany-1.6.3.ebuild:
   new version that incorporates several patches from previous release
 
-  27 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> epiphany-1.4.8.ebuild:
+  27 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.4.8.ebuild:
   Stable on alpha.
 
   25 Apr 2005; Mike Gardiner <obz@gentoo.org> epiphany-1.4.8.ebuild:
@@ -822,7 +825,7 @@
   08 Jan 2005; Tom Martin <slarti@gentoo.org> epiphany-1.4.6.ebuild:
   Stable on amd64, resolving bug 77102.
 
-  24 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> epiphany-1.4.6.ebuild:
+  24 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.4.6.ebuild:
   Stable on alpha.
 
   21 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> epiphany-1.4.6.ebuild:
@@ -841,7 +844,7 @@
   19 Dec 2004; Mike Gardiner <obz@gentoo.org> epiphany-1.4.6.ebuild:
   Keyworded x86 and ppc for GNOME 2.8.1
 
-  11 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> epiphany-1.4.5.ebuild:
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.4.5.ebuild:
   Stable on alpha.
 
   06 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> epiphany-1.4.5.ebuild:
@@ -904,7 +907,7 @@
   Versionbump, patch unnecessary, this fixes some mozilla issues to be more
   futureproof
 
-  23 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> epiphany-1.2.7-r1.ebuild:
+  23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.2.7-r1.ebuild:
   Stable on alpha.
 
   18 Aug 2004; Travis Tilley <lv@gentoo.org> epiphany-1.2.7-r1.ebuild:
@@ -921,7 +924,7 @@
   17 Aug 2004; Stuart Herbert <stuart@gentoo.org>
   +files/epiphany-1.2.6-moz-1.7.2.patch, +epiphany-1.2.6-r1.ebuild:
   Fix for epiphany not compiling against stable Mozilla; fix for bug # 60501;
-  thanks to Lorenzo HernÃ¡ndez GarcÃ­a-Hierro <lorenzo@gnu.org> for the basis of
+  thanks to Lorenzo Hernández García-Hierro <lorenzo@gnu.org> for the basis of
   the patch
 
   09 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> epiphany-1.2.7.ebuild:
@@ -944,7 +947,7 @@
   Marked 1.2.6 x86 as mozilla 1.7 has moved to x86. See bug #55005 or brad[] for
   more information
 
-  07 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> epiphany-1.2.2.ebuild:
+  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.2.2.ebuild:
   Stable on alpha.
 
 *epiphany-1.2.6 (19 Jun 2004)
