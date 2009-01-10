@@ -1,6 +1,9 @@
 # ChangeLog for app-text/vlna
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.22 2009/01/09 18:18:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vlna/ChangeLog,v 1.23 2009/01/10 16:18:11 klausman Exp $
+
+  10 Jan 2009; Tobias Klausmann <klausman@gentoo.org> vlna-1.3.ebuild:
+  Stable on alpha, bug #254078
 
   09 Jan 2009; Joseph Jezak <josejx@gentoo.org> vlna-1.3.ebuild:
   Marked ppc stable for bug #254078.
