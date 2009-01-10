@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.3-r1.ebuild,v 1.2 2007/08/30 01:44:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.3-r1.ebuild,v 1.3 2009/01/10 10:59:13 beandog Exp $
 
 DESCRIPTION="A Better CD Encoder"
-HOMEPAGE="http://www.hispalinux.es/~data/abcde.php"
-SRC_URI="http://www.hispalinux.es/~data/files/${PN}_${PV}.orig.tar.gz"
+HOMEPAGE="http://code.google.com/p/abcde/"
+SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,13 +28,13 @@ RDEPEND="
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i 's:/etc/abcde.conf:/etc/abcde/abcde.conf:g' abcde
 	sed -i 's:/etc:/etc/abcde/:g' Makefile
 }
 
 src_install() {
 	dodir /etc/abcde
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README TODO changelog
 }
