@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/resin
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.80 2008/08/22 22:37:01 cardoe Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.81 2009/01/10 15:11:35 nelchael Exp $
+
+*resin-3.1.8 (10 Jan 2009)
+
+  10 Jan 2009; <nelchael@gentoo.org> +files/3.1.8/resin.conf,
+  +files/3.1.8/resin.init, +resin-3.1.8.ebuild:
+  Version bump.
 
   22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
