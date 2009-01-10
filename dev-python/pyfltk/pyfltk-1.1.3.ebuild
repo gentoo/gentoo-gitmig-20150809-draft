@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.3.ebuild,v 1.1 2009/01/09 23:35:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/pyfltk-1.1.3.ebuild,v 1.2 2009/01/10 12:42:26 bicatali Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ DOCS="CHANGES"
 
 src_prepare() {
 	distutils_python_version
-	[[ "${PYVER}" != 2.4 ]] && epatch "${FILESDIR}"/${PN}-1.1.2-python25.patch
+	[[ "${PYVER}" != 2.4 ]] && epatch "${FILESDIR}"/${P}-python25.patch
 	rm -f python/fltk*
 	# move docs because the swig stuff will remove them
 	use doc && cp -r fltk fltk.docs

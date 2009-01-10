@@ -1,0 +1,61 @@
+diff -Nur swig.orig/Fl_Bitmap.i swig/Fl_Bitmap.i
+--- swig.orig/Fl_Bitmap.i	2008-10-22 10:58:49.000000000 +0100
++++ swig/Fl_Bitmap.i	2009-01-10 12:37:38.000000000 +0000
+@@ -13,7 +13,7 @@
+ 
+ %typemap(in) const uchar *bits {
+     /* Check if the input support the buffer protocol */
+-    int size_buffer;
++    Py_ssize_t size_buffer;
+     const void * buffer;
+     int failure = PyObject_AsReadBuffer($input,&buffer,&size_buffer);
+     if (!failure) {
+diff -Nur swig.orig/fl_draw.i swig/fl_draw.i
+--- swig.orig/fl_draw.i	2008-10-22 10:58:49.000000000 +0100
++++ swig/fl_draw.i	2009-01-10 12:37:38.000000000 +0000
+@@ -9,7 +9,7 @@
+ 
+ %typemap(in) const uchar * {
+        /* Check if the input support the buffer protocol */
+-       int size_buffer;
++       Py_ssize_t size_buffer;
+        const void * buffer;
+        int failure = PyObject_AsReadBuffer($input,&buffer,&size_buffer);
+        if (!failure) {
+diff -Nur swig.orig/Fl_Gl_Window.i swig/Fl_Gl_Window.i
+--- swig.orig/Fl_Gl_Window.i	2008-10-22 10:58:49.000000000 +0100
++++ swig/Fl_Gl_Window.i	2009-01-10 12:37:38.000000000 +0000
+@@ -59,7 +59,8 @@
+ void Fl_Gl_Window::drawPixels(PyObject *rgb_py) {
+ 
+     char *rgb;
+-    int len, i, height=self->h(), halfheight=self->h()/2, rowsize=self->w()*3;
++    Py_ssize_t len;
++    int i, height=self->h(), halfheight=self->h()/2, rowsize=self->w()*3;
+     char *row0, *row1;
+ 
+     char tmp[rowsize];
+diff -Nur swig.orig/Fl_Image.i swig/Fl_Image.i
+--- swig.orig/Fl_Image.i	2008-10-22 10:58:49.000000000 +0100
++++ swig/Fl_Image.i	2009-01-10 12:37:38.000000000 +0000
+@@ -23,7 +23,7 @@
+ 
+ %typemap(in) const uchar *bits {
+     /* Check if the input support the buffer protocol */
+-  int size_buffer;
++  Py_ssize_t size_buffer;
+   const void * buffer;
+   int failure = PyObject_AsReadBuffer($input,&buffer,&size_buffer);
+   if (!failure) {
+diff -Nur swig.orig/gl.i swig/gl.i
+--- swig.orig/gl.i	2008-10-22 10:58:49.000000000 +0100
++++ swig/gl.i	2009-01-10 12:37:38.000000000 +0000
+@@ -49,7 +49,7 @@
+ 
+ %typemap(in) const uchar * {
+     /* Check if the input support the buffer protocol */
+-  int size_buffer;
++  Py_ssize_t size_buffer;
+   const void * buffer;
+   int failure = PyObject_AsReadBuffer($input,&buffer,&size_buffer);
+   if (!failure) {
