@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libkexiv2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.20 2008/10/04 16:51:17 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.21 2009/01/10 13:37:42 caster Exp $
+
+*libkexiv2-0.1.8 (10 Jan 2009)
+
+  10 Jan 2009; Vlastimil Babka <caster@gentoo.org> +libkexiv2-0.1.8.ebuild:
+  Version bump, bug #251896, which fixes build with media-gfx/exiv2-0.1.8,
+  bug #254093.
 
 *libkexiv2-0.1.7-r1 (04 Oct 2008)
 
