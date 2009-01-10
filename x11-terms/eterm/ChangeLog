@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/eterm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.68 2008/12/05 09:51:22 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.69 2009/01/10 13:18:27 vapier Exp $
+
+  10 Jan 2009; Mike Frysinger <vapier@gentoo.org> eterm-0.9.5.ebuild,
+  eterm-9999.ebuild:
+  Convert cvs->svn urls #253948 by DEMAINE Benoît-Pierre.
 
   05 Dec 2008; Raúl Porcel <armin76@gentoo.org> eterm-0.9.5.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #249332
