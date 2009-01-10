@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/desmume
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/ChangeLog,v 1.9 2008/10/25 22:12:15 pvdabeel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/ChangeLog,v 1.10 2009/01/10 22:53:48 hanno Exp $
+
+*desmume-0.9 (10 Jan 2009)
+
+  10 Jan 2009; Hanno Boeck <hanno@gentoo.org> +desmume-0.9.ebuild:
+  Version bump.
 
   25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.orG> desmume-0.8.ebuild:
   Keyworded ~ppc. Closes bug #233107

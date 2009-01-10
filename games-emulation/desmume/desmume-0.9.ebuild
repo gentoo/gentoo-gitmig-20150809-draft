@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/desmume-0.8.ebuild,v 1.4 2009/01/10 22:53:48 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/desmume-0.9.ebuild,v 1.1 2009/01/10 22:53:48 hanno Exp $
 
-inherit games eutils
+inherit games
 
 DESCRIPTION="Emulator for Nintendo DS."
-HOMEPAGE="http://desmume.sourceforge.net/"
+HOMEPAGE="http://desmume.org/"
 SRC_URI="mirror://sourceforge/desmume/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -20,12 +20,6 @@ DEPEND=">=x11-libs/gtk+-2.8.0
 	sys-libs/zlib
 	dev-libs/zziplib
 	media-libs/libsdl"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-desktop.patch"
-}
 
 src_compile() {
 	egamesconf --datadir=/usr/share || die "egamesconf failed"
