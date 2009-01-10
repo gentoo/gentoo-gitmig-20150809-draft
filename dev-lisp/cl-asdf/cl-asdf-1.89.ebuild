@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/cl-asdf-1.89.ebuild,v 1.5 2008/07/07 13:21:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf/cl-asdf-1.89.ebuild,v 1.6 2009/01/10 15:31:00 armin76 Exp $
 
 DEB_PV=1
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${PN}_${PV}.orig.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ia64 ~mips ~ppc ~ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND=""
