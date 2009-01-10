@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.40 2009/01/10 14:46:27 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.41 2009/01/10 15:41:25 klausman Exp $
+
+  10 Jan 2009; Tobias Klausmann <klausman@gentoo.org> libaio-0.3.107.ebuild:
+  Stable on alpha, bug #254291
 
   10 Jan 2009; Thomas Anderson <gentoofan23@gentoo.org>
   libaio-0.3.107.ebuild:
