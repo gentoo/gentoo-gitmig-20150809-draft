@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wormux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.27 2009/01/03 22:47:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/ChangeLog,v 1.28 2009/01/10 15:16:55 maekke Exp $
+
+  10 Jan 2009; Markus Meier <maekke@gentoo.org> wormux-0.8.2.ebuild:
+  amd64/x86 stable, bug #253146
 
   03 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> wormux-0.8.2.ebuild:
   add use-based deps
