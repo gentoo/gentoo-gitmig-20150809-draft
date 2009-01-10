@@ -1,13 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.4_p20061203.ebuild,v 1.1 2006/12/31 18:00:34 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.5_p20080311.ebuild,v 1.1 2009/01/10 13:43:09 beandog Exp $
 
 inherit eutils
 
-S="${WORKDIR}/nuvexport-0.4"
 DESCRIPTION="Export from mythtv recorded NuppelVideo files"
 HOMEPAGE="http://www.forevermore.net/mythtv/"
-SRC_URI="http://www.forevermore.net/files/nuvexport/nuvexport-0.4-0.20061203.svn.tar.bz2"
+SRC_URI="http://www.forevermore.net/files/nuvexport/nuvexport-0.5-0.20080311.svn.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
@@ -16,12 +15,14 @@ DEPEND=""
 RDEPEND="dev-perl/DBI
 	dev-perl/DBD-mysql
 	dev-perl/DateManip
-	>=media-video/ffmpeg-0.4.9_p20050226-r1
+	media-video/ffmpeg
 	media-video/mjpegtools
-	>=media-video/transcode-0.6.14
+	media-video/transcode
 	media-libs/id3lib
 	media-video/mplayer
-	=media-tv/mythtv-0.20*"
+	=media-tv/mythtv-0.21*"
+
+S="${WORKDIR}/nuvexport-0.5"
 
 pkg_setup() {
 	if ! built_with_use media-video/transcode mjpeg ; then
