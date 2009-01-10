@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/nvtv
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/ChangeLog,v 1.11 2007/11/27 10:47:09 zzam Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/ChangeLog,v 1.12 2009/01/10 12:32:33 beandog Exp $
+
+*nvtv-0.4.7-r1 (10 Jan 2009)
+
+  10 Jan 2009; Steve Dibb <beandog@gentoo.org> -nvtv-0.4.5.ebuild,
+  -nvtv-0.4.6.ebuild, -nvtv-0.4.7.ebuild, +nvtv-0.4.7-r1.ebuild:
+  Drop old, drop stable keywords, fix zlib dep, bug 187588
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> nvtv-0.4.5.ebuild,
   nvtv-0.4.6.ebuild, nvtv-0.4.7.ebuild:

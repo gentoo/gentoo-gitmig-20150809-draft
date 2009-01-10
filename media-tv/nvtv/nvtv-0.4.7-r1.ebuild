@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.6.ebuild,v 1.8 2007/11/27 10:47:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.7-r1.ebuild,v 1.1 2009/01/10 12:32:33 beandog Exp $
+
+EAPI="2"
 
 IUSE="X gtk"
 
@@ -12,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 
-RDEPEND="sys-apps/pciutils
+RDEPEND="sys-apps/pciutils[-zlib]
 	gtk? ( x11-libs/gtk+ )
 	X? ( x11-libs/libXi
 		x11-libs/libXmu
