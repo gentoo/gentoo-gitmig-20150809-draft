@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/kvdr
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/ChangeLog,v 1.13 2007/10/18 16:24:29 zzam Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/ChangeLog,v 1.14 2009/01/10 12:37:46 beandog Exp $
+
+*kvdr-0.64-r3 (10 Jan 2009)
+
+  10 Jan 2009; Steve Dibb <beandog@gentoo.org> +kvdr-0.64-r3.ebuild:
+  Add x11-libs/libXxf86dga missing dep, bug 199405
 
 *kvdr-0.64-r2 (18 Oct 2007)
 
