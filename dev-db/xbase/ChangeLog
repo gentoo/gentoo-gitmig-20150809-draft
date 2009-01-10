@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/xbase
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.18 2008/11/21 16:39:24 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.19 2009/01/10 19:04:23 halcy0n Exp $
+
+  10 Jan 2009; Mark Loeser <halcy0n@gentoo.org>
+  +files/xbase-2.0.0-gcc43.patch, xbase-2.0.0.ebuild:
+  Add patch from Fedora to fix compilation with gcc-4.3; bug #250782
 
   21 Nov 2008; Santiago M. Mola <coldwind@gentoo.org> xbase-2.0.0.ebuild:
   Block media-tv/linuxtv-dvb-apps, bug #208596.

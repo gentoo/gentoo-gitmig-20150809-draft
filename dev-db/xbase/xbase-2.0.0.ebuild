@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/xbase-2.0.0.ebuild,v 1.17 2008/11/21 16:39:24 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/xbase-2.0.0.ebuild,v 1.18 2009/01/10 19:04:23 halcy0n Exp $
 
-inherit base
+inherit base eutils
 
 DESCRIPTION="XBase is an xbase (i.e. dBase, FoxPro, etc.) compatible C++ class library"
 HOMEPAGE="http://www.rekallrevealed.org/"
@@ -18,6 +18,13 @@ RDEPEND="!media-tv/linuxtv-dvb-apps"
 DEPEND="${DEPEND}
 	sys-devel/automake
 	sys-devel/libtool"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_install() {
 	base_src_install
