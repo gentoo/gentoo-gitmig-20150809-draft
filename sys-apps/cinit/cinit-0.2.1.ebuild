@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/cinit-0.2.1.ebuild,v 1.2 2007/09/27 14:20:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cinit/cinit-0.2.1.ebuild,v 1.3 2009/01/10 17:41:42 angelos Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="a fast, small and simple init with support for profiles"
 HOMEPAGE="http://linux.schottelius.org/cinit/"
@@ -16,10 +18,13 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i "/contrib+tools/d" Makefile
+	sed -i "/^STRIP/s/strip.*/true/" Makefile.include
 }
 
 src_compile() {
 	emake \
+		CC="$(tc-getCC)" \
+		LD="$(tc-getCC)" \
 		OPTIMIZE="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
 		STRIP=/bin/true \
