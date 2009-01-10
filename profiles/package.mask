@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9378 2009/01/10 21:41:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9379 2009/01/10 22:42:43 dragonheart Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Daniel Black <dragonheart@gentoo.org> (10 Jan 2009)
+# package masking to allow dependant packages to resolve
+# bug #253709
+>=net-libs/gnutls-2.7.0
+
+# mask pending removal
 # Benedikt Böhm <hollow@gentoo.org> (10 Jan 2009)
 # baselayout-vserver is unmaintained and obsoleted by
 # baselayout-2/openrc. please upgrade. removal in 30 days.
