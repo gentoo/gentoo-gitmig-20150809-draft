@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-1.1.ebuild,v 1.1 2009/01/10 13:52:57 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-1.1.ebuild,v 1.2 2009/01/10 13:54:45 beandog Exp $
 
 EAPI="1"
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=media-libs/libdvbpsi-0.1.5
-	dev-db/sqlite:3
+RDEPEND="dev-db/sqlite:3
 	sys-libs/readline"
 
 DEPEND="${RDEPEND}
