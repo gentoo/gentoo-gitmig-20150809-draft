@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/hexter
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/hexter/ChangeLog,v 1.1 2009/01/10 13:49:35 aballier Exp $
+
+*hexter-0.6.2 (10 Jan 2009)
+
+  10 Jan 2009; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
+  +hexter-0.6.2.ebuild:
+  initial import
+
