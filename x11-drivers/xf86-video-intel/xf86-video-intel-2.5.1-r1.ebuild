@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.5.1-r1.ebuild,v 1.1 2008/12/17 10:09:42 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.5.1-r1.ebuild,v 1.2 2009/01/10 00:14:00 remi Exp $
 
 SNAPSHOT="yes"
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 			>=x11-libs/libdrm-2.4.0
 			x11-libs/libX11 )"
 
-CONFIGURE_OPTIONS="$(use_enable dri) --disable-symlinks"
+CONFIGURE_OPTIONS="$(use_enable dri)"
 
 PATCHES=(
 "${FILESDIR}/${PV}-0001-clean-up-man-page-generation-and-remove-all-traces-o.patch"
