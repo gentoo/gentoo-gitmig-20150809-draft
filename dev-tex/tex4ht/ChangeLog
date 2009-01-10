@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.39 2009/01/09 18:17:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.40 2009/01/10 14:08:31 klausman Exp $
+
+  10 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
+  tex4ht-20081103_p0302.ebuild:
+  Stable on alpha, bug #254065
 
   09 Jan 2009; Joseph Jezak <josejx@gentoo.org>
   tex4ht-20081103_p0302.ebuild:
