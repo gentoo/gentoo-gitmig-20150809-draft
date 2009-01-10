@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libnut
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.2 2007/06/25 00:50:26 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.3 2009/01/10 11:50:39 beandog Exp $
+
+*libnut-661 (10 Jan 2009)
+
+  10 Jan 2009; Steve Dibb <beandog@gentoo.org> +libnut-661.ebuild:
+  Snapshot bump
 
 *libnut-503 (25 Jun 2007)
 
