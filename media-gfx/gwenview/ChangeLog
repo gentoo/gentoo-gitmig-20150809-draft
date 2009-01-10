@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/gwenview
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.61 2008/08/22 22:10:21 maekke Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.62 2009/01/10 11:44:32 caster Exp $
+
+*gwenview-1.4.2-r1 (10 Jan 2009)
+
+  10 Jan 2009; Vlastimil Babka <caster@gentoo.org>
+  +files/gwenview-1.4.2-exiv2.patch, +gwenview-1.4.2-r1.ebuild:
+  Revbump to fix building with media-libs/exiv2-0.18, bug #254049. Thanks to
+  Yar Odin <yarodin@gmail.com> and Lars <polynomial-C@gmx.de> for the patch.
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
