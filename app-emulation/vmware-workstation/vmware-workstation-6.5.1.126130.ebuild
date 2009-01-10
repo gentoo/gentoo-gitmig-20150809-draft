@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.1.126130.ebuild,v 1.3 2009/01/04 22:29:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.1.126130.ebuild,v 1.4 2009/01/10 12:21:11 ikelos Exp $
 
 inherit eutils versionator fdo-mime gnome2-utils
 
@@ -43,6 +43,7 @@ RDEPEND="sys-libs/glibc
 	~app-emulation/vmware-modules-1.0.0.23
 	!<app-emulation/vmware-modules-1.0.0.23
 	!>=app-emulation/vmware-modules-1.0.0.24
+	sys-fs/fuse
 	sys-apps/pciutils"
 
 S=${WORKDIR}/vmware-distrib
