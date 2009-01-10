@@ -1,6 +1,11 @@
 # ChangeLog for media-video/alevt
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.28 2007/11/27 11:58:56 zzam Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.29 2009/01/10 12:07:43 beandog Exp $
+
+*alevt-1.6.2 (10 Jan 2009)
+
+  10 Jan 2009; Steve Dibb <beandog@gentoo.org> +alevt-1.6.2.ebuild:
+  Version bump, bug 205934
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> alevt-1.6.1-r1.ebuild,
   alevt-1.6.1-r3.ebuild:
