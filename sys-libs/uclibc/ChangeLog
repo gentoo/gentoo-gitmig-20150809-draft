@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.42 2009/01/02 19:50:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.43 2009/01/10 04:32:59 redhatter Exp $
+
+  10 Jan 2009; Stuart Longland <redhatter@gentoo.org> uclibc-0.9.30.ebuild:
+  Added ~mips keyword. uClibc appears to work fine on both mips and mipsel
+  with one caveat: it doesn't work on 16KB page size kernels (i.e. Loongson)
+  see http://bugs.busybox.net/show_bug.cgi?id=9 for info here.
+
+  It *does* however, work fine on my Cobalt Qube2 and SGI O2, where I am 
+  building stages.
 
   02 Jan 2009; <solar@gentoo.org> metadata.xml, uclibc-0.9.30.ebuild:
   work around gcc-4 lack of ssp by default support while +hardened is enabled

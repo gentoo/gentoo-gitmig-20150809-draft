@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.ebuild,v 1.2 2009/01/02 19:50:47 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.ebuild,v 1.3 2009/01/10 04:32:59 redhatter Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -34,7 +34,7 @@ SRC_URI="http://uclibc.org/downloads/${MY_P}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="-* ~arm ~m68k -mips ~ppc ~sh ~sparc ~x86 ~amd64"
+KEYWORDS="-* ~amd64 ~arm ~m68k ~mips ~ppc ~sh ~sparc ~x86"
 IUSE="build uclibc-compat debug hardened ssp iconv ipv6 minimal nls pregen userlocales wordexp crosscompile_opts_headers-only"
 RESTRICT="strip"
 
