@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.21_p17015.ebuild,v 1.1 2008/04/23 18:15:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.21_p17015-r1.ebuild,v 1.1 2009/01/10 13:07:40 beandog Exp $
 
 inherit mythtv-plugins flag-o-matic toolchain-funcs eutils subversion
 
 DESCRIPTION="Music player module for MythTV."
-IUSE="aac cdr fftw libvisual opengl sdl"
+IUSE="cdr fftw libvisual opengl sdl"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND=">=media-sound/cdparanoia-3.9.8
@@ -14,7 +14,6 @@ RDEPEND=">=media-sound/cdparanoia-3.9.8
 	>=media-libs/libcdaudio-0.99.6
 	>=media-libs/flac-1.1.2
 	>=media-libs/taglib-1.4
-	aac? ( >=media-libs/faad2-2.0-r7 )
 	fftw? ( sci-libs/fftw )
 	opengl? ( virtual/opengl )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
@@ -30,5 +29,5 @@ pkg_config() {
 	fi
 }
 
-MTVCONF="$(use_enable aac) $(use_enable fftw) $(use_enable sdl) \
+MTVCONF="--disable-aac $(use_enable fftw) $(use_enable sdl) \
 	$(use_enable opengl)"
