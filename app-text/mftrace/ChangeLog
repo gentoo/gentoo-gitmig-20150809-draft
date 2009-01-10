@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mftrace
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.47 2009/01/10 16:37:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.48 2009/01/10 17:01:23 klausman Exp $
+
+  10 Jan 2009; Tobias Klausmann <klausman@gentoo.org> mftrace-1.2.13.ebuild:
+  Stable on alpha, bug #254222
 
   10 Jan 2009; Raúl Porcel <armin76@gentoo.org> mftrace-1.2.13.ebuild:
   ia64 stable wrt #254222
