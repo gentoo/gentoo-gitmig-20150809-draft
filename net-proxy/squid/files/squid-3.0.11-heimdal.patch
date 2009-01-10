@@ -1,6 +1,6 @@
-diff -ur squid-2.7.STABLE4.orig/helpers/negotiate_auth/squid_kerb_auth/Makefile.am squid-2.7.STABLE4/helpers/negotiate_auth/squid_kerb_auth/Makefile.am
---- squid-2.7.STABLE4.orig/helpers/negotiate_auth/squid_kerb_auth/Makefile.am	2007-05-14 23:36:29.000000000 +0000
-+++ squid-2.7.STABLE4/helpers/negotiate_auth/squid_kerb_auth/Makefile.am	2008-10-17 20:09:19.000000000 +0000
+diff -Nru squid-3.0.STABLE11.orig/helpers/negotiate_auth/squid_kerb_auth/Makefile.am squid-3.0.STABLE11/helpers/negotiate_auth/squid_kerb_auth/Makefile.am
+--- squid-3.0.STABLE11.orig/helpers/negotiate_auth/squid_kerb_auth/Makefile.am	2008-12-23 04:19:26.000000000 +0000
++++ squid-3.0.STABLE11/helpers/negotiate_auth/squid_kerb_auth/Makefile.am	2009-01-10 11:49:46.000000000 +0000
 @@ -18,10 +18,10 @@
  #-L$(top_builddir)/lib -lmiscutil $(XTRA_LIBS)
  
