@@ -1,6 +1,9 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.46 2009/01/08 16:17:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.47 2009/01/10 16:19:48 maekke Exp $
+
+  10 Jan 2009; Markus Meier <maekke@gentoo.org> planner-0.14.3-r1.ebuild:
+  amd64/x86 stable, bug #253940
 
   08 Jan 2009; Raúl Porcel <armin76@gentoo.org> planner-0.14.3-r1.ebuild:
   alpha/sparc stable wrt #253940
