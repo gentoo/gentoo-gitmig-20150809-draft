@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mingw-runtime
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/ChangeLog,v 1.14 2008/10/05 17:50:36 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/ChangeLog,v 1.15 2009/01/10 23:25:20 vapier Exp $
+
+  10 Jan 2009; Mike Frysinger <vapier@gentoo.org> mingw-runtime-3.15.1.ebuild:
+  Mark amd64/x86 stable.
 
 *mingw-runtime-3.15.1 (05 Oct 2008)
 
