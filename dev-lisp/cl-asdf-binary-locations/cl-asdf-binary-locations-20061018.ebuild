@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf-binary-locations/cl-asdf-binary-locations-20061018.ebuild,v 1.8 2008/07/07 13:23:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-asdf-binary-locations/cl-asdf-binary-locations-20061018.ebuild,v 1.9 2009/01/10 15:33:46 armin76 Exp $
 
 inherit common-lisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://common-lisp.net/project/cl-containers/asdf-binary-locations/"
 SRC_URI="http://common-lisp.net/project/portage-overlay/distfiles/${PN/cl-/}_${PV}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-lisp/cl-asdf"
