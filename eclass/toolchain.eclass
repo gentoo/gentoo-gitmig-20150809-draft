@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.378 2009/01/06 03:53:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.379 2009/01/10 12:02:56 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1108,11 +1108,6 @@ gcc_src_unpack() {
 			echo ${PV/_/-} > "${S}"/gcc/BASE-VER
 			echo "" > "${S}"/gcc/DATESTAMP
 		fi
-	fi
-
-	# Misdesign in libstdc++ (Redhat)
-	if [[ ${GCCMAJOR} -ge 3 ]] && [[ -e ${S}/libstdc++-v3/config/cpu/i486/atomicity.h ]] ; then
-		cp -pPR "${S}"/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 	fi
 
 	# >= gcc-4.3 doesn't bundle ecj.jar, so copy it
