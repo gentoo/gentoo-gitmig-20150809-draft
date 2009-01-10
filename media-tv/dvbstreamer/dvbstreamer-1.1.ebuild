@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-1.1.ebuild,v 1.2 2009/01/10 13:54:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstreamer/dvbstreamer-1.1.ebuild,v 1.3 2009/01/10 17:56:00 gentoofan23 Exp $
 
 EAPI="1"
 
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "make install failed"
-	rm -rf "${D}"/usr/doc/DVBStreamer/
+	rm -rf "${D}"/usr/doc/
 
 	dodoc doc/*.txt ChangeLog README AUTHORS NEWS TODO
 }
