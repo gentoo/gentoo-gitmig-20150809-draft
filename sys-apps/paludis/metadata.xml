@@ -16,7 +16,11 @@
 	  <flag name='pink'>Use a less boring colourscheme than the default</flag>
 	  <flag name='portage'>Enable experimental support for Portage
 		  configuration formats</flag>
+	  <flag name='python-bindings'>Enable Python bindings. Requires a lot of RAM
+		  to build (~700Mbyes per job) and adds a dependency upon
+		  <pkg>dev-libs/boost</pkg></flag>
 	  <flag name='qa'>Enable QA tools</flag>
+	  <flag name='ruby-bindings'>Enable Ruby bindings.</flag>
 	  <flag name='visibility'>Enable visibility support (g++ >=4.1)</flag>
 	  <flag name='zsh-completion'>Enable zsh completion support</flag>
   </use>
