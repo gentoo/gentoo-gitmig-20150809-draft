@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4_p5.ebuild,v 1.6 2008/12/07 11:05:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.4_p5.ebuild,v 1.7 2009/01/10 13:03:43 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -52,6 +52,7 @@ src_unpack() {
 
 	# Needs to be ported ...
 	#epatch "${FILESDIR}"/4.2.0.20040617-hostname.patch
+	epatch "${FILESDIR}"/${PN}-4.2.4_p5-adjtimex.patch #254030
 
 	sed -i \
 		-e 's:md5\.h:touch_not_my_md5:g' \
