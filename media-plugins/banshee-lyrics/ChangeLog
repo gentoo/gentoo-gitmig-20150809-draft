@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/banshee-lyrics
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-lyrics/ChangeLog,v 1.1 2009/01/10 21:39:14 loki_val Exp $
+
+*banshee-lyrics-0.6 (10 Jan 2009)
+
+  10 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> +metadata.xml,
+  +banshee-lyrics-0.6.ebuild:
+  BansheeLyricsPlugin, bug 254274. Many thanks to Federico Ferri
+  <mescalinum@gentoo.org>, original ebuild.
+
