@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/zpspell-0.4.1.ebuild,v 1.1 2008/07/18 22:32:15 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/zpspell-0.4.1.ebuild,v 1.2 2009/01/10 15:15:40 maekke Exp $
 
 inherit cmake-utils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://cekirdek.uludag.org.tr/~baris/zpspell/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="app-text/zemberek-server"

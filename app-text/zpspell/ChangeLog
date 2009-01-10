@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zpspell
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/ChangeLog,v 1.1 2008/07/18 22:32:15 serkan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/ChangeLog,v 1.2 2009/01/10 15:15:40 maekke Exp $
+
+  10 Jan 2009; Markus Meier <maekke@gentoo.org> zpspell-0.4.1.ebuild:
+  amd64/x86 stable, bug #253055
 
 *zpspell-0.4.1 (18 Jul 2008)
 
