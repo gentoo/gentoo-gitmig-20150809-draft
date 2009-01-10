@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.21.ebuild,v 1.1 2008/12/09 18:03:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.21.ebuild,v 1.2 2009/01/10 14:14:17 dertobi123 Exp $
 
 inherit php-lib-r1 eutils
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc64 ~sparc ~x86"
 
 MY_P="Smarty-${PV}"
 
