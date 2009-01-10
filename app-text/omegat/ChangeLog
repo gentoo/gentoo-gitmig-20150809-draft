@@ -1,6 +1,11 @@
 # ChangeLog for app-text/omegat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/ChangeLog,v 1.7 2008/11/04 16:17:21 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/ChangeLog,v 1.8 2009/01/10 17:19:22 matsuu Exp $
+
+*omegat-1.8.1_p01 (10 Jan 2009)
+
+  10 Jan 2009; MATSUU Takuto <matsuu@gentoo.org> +omegat-1.8.1_p01.ebuild:
+  Version bumped. Added native/libhanspell-*.so.
 
 *omegat-1.8.1 (04 Nov 2008)
 
