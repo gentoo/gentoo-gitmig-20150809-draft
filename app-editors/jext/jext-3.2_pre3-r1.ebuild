@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-3.2_pre3-r1.ebuild,v 1.4 2007/02/11 14:53:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-3.2_pre3-r1.ebuild,v 1.5 2009/01/10 13:20:37 ali_bush Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -8,7 +8,7 @@ DESCRIPTION="A cool and fully featured editor in Java"
 HOMEPAGE="http://www.jext.org/"
 MY_PV="${PV/_}"
 SRC_URI="mirror://sourceforge/jext/${PN}-sources-${MY_PV}.tar.gz"
-LICENSE="|| ( GPL-2 JPython )"
+LICENSE="|| ( GPL-2 Jython )"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="doc"

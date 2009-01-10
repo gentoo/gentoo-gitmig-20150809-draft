@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jext
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.16 2007/02/11 15:11:28 caster Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.17 2009/01/10 13:20:37 ali_bush Exp $
+
+  10 Jan 2009; Alistair Bush <ali_bush@gentoo.org> jext-3.2_pre3-r1.ebuild:
+  Fixed incorrect LICENSE. see #252951
 
   11 Feb 2007; Vlastimil Babka <caster@gentoo.org> -jext-3.2_pre3.ebuild:
   Cleanup.
