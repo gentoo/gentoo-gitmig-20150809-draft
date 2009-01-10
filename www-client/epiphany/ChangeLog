@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.188 2009/01/10 00:03:48 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.189 2009/01/10 08:27:35 remi Exp $
+
+  10 Jan 2009; Rémi Cardona <remi@gentoo.org> -epiphany-2.22.3.ebuild,
+  -epiphany-2.22.3-r10.ebuild:
+  remove old ebuilds (see bug #250031)
 
   10 Jan 2009; Rémi Cardona <remi@gentoo.org> ChangeLog:
   fix ChangeLog encoding
