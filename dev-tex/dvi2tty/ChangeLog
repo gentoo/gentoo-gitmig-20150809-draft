@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dvi2tty
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.17 2009/01/10 14:11:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.18 2009/01/10 15:59:36 armin76 Exp $
+
+  10 Jan 2009; Raúl Porcel <armin76@gentoo.org> dvi2tty-5.3.1.ebuild:
+  ia64/sparc stable wrt #254076
 
   10 Jan 2009; Tobias Klausmann <klausman@gentoo.org> dvi2tty-5.3.1.ebuild:
   Stable on alpha, bug #254076
