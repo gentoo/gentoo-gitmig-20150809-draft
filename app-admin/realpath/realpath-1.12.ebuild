@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.12.ebuild,v 1.3 2008/07/07 13:12:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.12.ebuild,v 1.4 2009/01/10 15:29:35 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/r/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="!sys-freebsd/freebsd-bin"
