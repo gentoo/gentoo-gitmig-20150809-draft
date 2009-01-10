@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.31 2009/01/09 16:26:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.32 2009/01/10 10:05:46 maekke Exp $
+
+  10 Jan 2009; Markus Meier <maekke@gentoo.org> emacspeak-29.0.ebuild:
+  x86 stable, bug #238575
 
   09 Jan 2009; Tobias Scherbaum <dertobi123@gentoo.org>
   emacspeak-29.0.ebuild:
