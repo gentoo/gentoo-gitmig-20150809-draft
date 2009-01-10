@@ -1,6 +1,6 @@
 # Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/matchbox-common-0.9.1-r1.ebuild,v 1.7 2009/01/10 02:23:34 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/matchbox-common-0.9.1-r2.ebuild,v 1.1 2009/01/10 02:23:34 solar Exp $
 
 inherit eutils versionator
 
@@ -11,12 +11,13 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~arm ~hppa ~ppc ~x86"
-IUSE=""
+IUSE="pda"
 
 DEPEND=">=x11-libs/libmatchbox-1.1"
 
 src_compile() {
-	econf --disable-pda-folders \
+
+	econf $(use_enable pda pda-folders) \
 		|| die "Configuration failed"
 
 	emake || die "Compilation failed"
@@ -34,4 +35,11 @@ src_install() {
 	wm=matchbox make_session_desktop MatchBox matchbox-session
 
 	dodoc AUTHORS Changelog INSTALL NEWS README
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/no-utilities-category.patch
+	epatch "${FILESDIR}"/add-media-category.patch
 }

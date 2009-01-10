@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gpe</herd>
+<use>
+	<flag name='pda'>Support for pda folders</flag>
+</use>
 <maintainer>
 <email>yvasilev@gentoo.org</email>
 <name>Yuri Vasilevski</name>
