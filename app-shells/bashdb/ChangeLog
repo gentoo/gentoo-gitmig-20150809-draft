@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bashdb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bashdb/ChangeLog,v 1.1 2007/12/27 20:00:37 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bashdb/ChangeLog,v 1.2 2009/01/10 17:54:36 vapier Exp $
+
+*bashdb-4.0.0.2 (10 Jan 2009)
+
+  10 Jan 2009; Mike Frysinger <vapier@gentoo.org> +bashdb-4.0.0.2.ebuild:
+  Version bump #254318 by cdf v.
 
 *bashdb-3.1.0.09 (27 Dec 2007)
 
