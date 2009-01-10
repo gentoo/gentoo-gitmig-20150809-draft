@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.283 2009/01/05 23:32:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.284 2009/01/10 12:25:27 armin76 Exp $
+
+  10 Jan 2009; Raúl Porcel <armin76@gentoo.org> gdm-2.20.9.ebuild:
+  Re-add ~arm/~sh
 
 *gdm-2.20.9 (05 Jan 2009)
 
