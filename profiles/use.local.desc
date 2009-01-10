@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4120 2009/01/10 02:45:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4121 2009/01/10 04:47:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -584,6 +584,11 @@ dev-lang/idb:icc - Use dev-lang/icc to install idb (default)
 dev-lang/idb:ifc - Use dev-lang/ifc to install idb
 dev-lang/io:dbi - Enables dev-db/libdbi support
 dev-lang/lisaac:vim - install a syntax file for vim
+dev-lang/logtalk:gnupl - Support GNU Prolog back-end compiler
+dev-lang/logtalk:qupl - Support Qu-Prolog back-end compiler
+dev-lang/logtalk:swipl - Support SWI-Prolog back-end compiler
+dev-lang/logtalk:xsbpl - Support XSB back-end compiler
+dev-lang/logtalk:yappl - Support YAP back-end compiler
 dev-lang/lua:deprecated - make deprecated data structures/routines available
 dev-lang/luarocks:curl - Uses net-misc/curl for fetching lua packages instead of net-misc/wget.
 dev-lang/luarocks:openssl - Uses dev-libs/openssl for verifying lua packages instead of md5sum.
