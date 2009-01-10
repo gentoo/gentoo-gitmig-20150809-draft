@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.32 2009/01/09 16:31:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.33 2009/01/10 16:28:01 klausman Exp $
+
+  10 Jan 2009; Tobias Klausmann <klausman@gentoo.org> eventlog-0.2.9.ebuild:
+  Stable on alpha, bug #253664
 
   09 Jan 2009; Brent Baude <ranger@gentoo.org> eventlog-0.2.9.ebuild:
   stable ppc, bug 253664
