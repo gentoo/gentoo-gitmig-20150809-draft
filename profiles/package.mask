@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9375 2009/01/09 15:47:17 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9376 2009/01/10 11:06:48 beandog Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -100,10 +100,6 @@ dev-util/w32api
 # Masked due to being broken with portage 2.1 and 2.2.
 # Users can use either the unstable versions or switch to app-portage/eix
 =app-portage/esearch-0.7.1
-
-# Ben de Groot <yngwin@gentoo.org> (31 Dec 2008)
-# Masked due to security issues, bug 251017, pending removal
-~media-video/mplayer-1.0_rc2_p27725
 
 # Torsten Veller <tove@gentoo.org> (29 Dec 2008)
 # Unmaintained net-mail packages
