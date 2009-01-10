@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ImageInfo
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.69 2009/01/09 20:35:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.70 2009/01/10 16:38:57 armin76 Exp $
+
+  10 Jan 2009; Raúl Porcel <armin76@gentoo.org> ImageInfo-1.28.ebuild:
+  ia64 stable wrt #254334
 
   09 Jan 2009; Joseph Jezak <josejx@gentoo.org> ImageInfo-1.28.ebuild:
   Marked ppc/ppc64 for bug #254334.
