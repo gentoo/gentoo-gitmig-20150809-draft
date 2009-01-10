@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/merkaartor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.10 2009/01/08 15:01:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.11 2009/01/10 16:45:59 hanno Exp $
+
+  10 Jan 2009; Hanno Boeck <hanno@gentoo.org> merkaartor-0.12.ebuild:
+  Fix typo on icon filename.
 
 *merkaartor-0.12 (08 Jan 2009)
 
