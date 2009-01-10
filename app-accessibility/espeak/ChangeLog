@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.62 2009/01/09 20:48:42 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.63 2009/01/10 19:15:16 maekke Exp $
+
+  10 Jan 2009; Markus Meier <maekke@gentoo.org> espeak-1.39.ebuild:
+  amd64/x86 stable, bug #254103
 
   09 Jan 2009; Tobias Klausmann <klausman@gentoo.org> espeak-1.39.ebuild:
   Stable on alpha, bug #254103
