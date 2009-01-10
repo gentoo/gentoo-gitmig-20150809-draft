@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9377 2009/01/10 17:17:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9378 2009/01/10 21:41:41 hollow Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Benedikt Böhm <hollow@gentoo.org> (10 Jan 2009)
+# baselayout-vserver is unmaintained and obsoleted by
+# baselayout-2/openrc. please upgrade. removal in 30 days.
+sys-apps/baselayout-vserver
 
 # Rémi Cardona <remi@gentoo.org> (09 Jan 2009)
 # old virtual left from the transition from monolithic
