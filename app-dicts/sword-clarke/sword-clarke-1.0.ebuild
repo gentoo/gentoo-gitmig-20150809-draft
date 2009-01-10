@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-clarke/sword-clarke-2.0.ebuild,v 1.1 2008/05/17 02:24:44 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-clarke/sword-clarke-1.0.ebuild,v 1.1 2009/01/10 23:31:09 beandog Exp $
 
 SWORD_MODULE="Clarke"
 
