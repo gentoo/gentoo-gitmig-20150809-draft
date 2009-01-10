@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/nuvexport
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.43 2009/01/10 13:43:09 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.44 2009/01/10 14:45:35 beandog Exp $
+
+  10 Jan 2009; Steve Dibb <beandog@gentoo.org>
+  nuvexport-0.5_p20080311.ebuild:
+  Switch to EAPI2 use deps
 
 *nuvexport-0.5_p20080311 (10 Jan 2009)
 
