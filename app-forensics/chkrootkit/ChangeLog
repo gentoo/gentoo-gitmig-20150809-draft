@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.54 2009/01/08 20:32:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.55 2009/01/10 17:11:32 armin76 Exp $
+
+  10 Jan 2009; Raúl Porcel <armin76@gentoo.org> chkrootkit-0.48-r1.ebuild:
+  alpha/arm/ia64/s390/sh/x86 stable wrt #252657
 
   08 Jan 2009; Brent Baude <ranger@gentoo.org> chkrootkit-0.48-r1.ebuild:
   Marking chkrootkit-0.48-r1 ppc64 for bug 252657
