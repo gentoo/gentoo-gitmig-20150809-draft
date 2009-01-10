@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/slf4j-api
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/ChangeLog,v 1.4 2008/07/26 07:47:58 corsair Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/ChangeLog,v 1.5 2009/01/10 15:11:30 maekke Exp $
+
+  10 Jan 2009; Markus Meier <maekke@gentoo.org> slf4j-api-1.5.2.ebuild:
+  amd64/x86 stable, bug #253054
 
   26 Jul 2008; Markus Rothe <corsair@gentoo.org> ChangeLog:
   Added ~ppc; bug #232411

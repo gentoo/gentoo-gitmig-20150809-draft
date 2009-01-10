@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dbus-java
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/ChangeLog,v 1.5 2009/01/08 18:07:41 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/ChangeLog,v 1.6 2009/01/10 15:09:16 maekke Exp $
+
+  10 Jan 2009; Markus Meier <maekke@gentoo.org> dbus-java-2.5.1.ebuild:
+  amd64/x86 stable, bug #253054
 
   08 Jan 2009; Serkan Kaba <serkan@gentoo.org>
   +files/TestSignalInterface2-2.5.1.java, dbus-java-2.5.1.ebuild:

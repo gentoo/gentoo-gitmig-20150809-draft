@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mina-core
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mina-core/ChangeLog,v 1.3 2008/07/26 07:48:38 corsair Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mina-core/ChangeLog,v 1.4 2009/01/10 15:12:59 maekke Exp $
+
+  10 Jan 2009; Markus Meier <maekke@gentoo.org> mina-core-1.1.7.ebuild:
+  amd64/x86 stable, bug #253054
 
   26 Jul 2008; Markus Rothe <corsair@gentoo.org> mina-core-1.1.7.ebuild:
   Added ~ppc; bug #232411
