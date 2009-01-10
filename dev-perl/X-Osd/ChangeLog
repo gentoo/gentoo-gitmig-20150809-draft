@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/X-Osd
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X-Osd/ChangeLog,v 1.1 2009/01/10 12:57:38 beandog Exp $
+
+*X-Osd-0.7 (10 Jan 2009)
+
+  10 Jan 2009; Steve Dibb <beandog@gentoo.org> +metadata.xml,
+  +X-Osd-0.7.ebuild:
+  Initial commit, bug 250687
+
