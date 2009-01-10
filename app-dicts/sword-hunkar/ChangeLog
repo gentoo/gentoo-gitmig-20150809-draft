@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/sword-hunkar
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-hunkar/ChangeLog,v 1.1 2008/05/13 21:28:00 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-hunkar/ChangeLog,v 1.2 2009/01/10 23:40:41 beandog Exp $
+
+*sword-hunkar-1.6 (10 Jan 2009)
+
+  10 Jan 2009; Steve Dibb <beandog@gentoo.org> +sword-hunkar-1.6.ebuild:
+  Version bump, bug 251642
 
 *sword-hunkar-1.2 (13 May 2008)
 
