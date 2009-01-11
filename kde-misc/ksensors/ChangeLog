@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/ksensors
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ChangeLog,v 1.12 2008/08/06 18:25:14 cardoe Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ChangeLog,v 1.13 2009/01/11 08:01:40 gengor Exp $
+
+*ksensors-0.7.3-r2 (11 Jan 2009)
+
+  11 Jan 2009; Gordon Malm <gengor@gentoo.org> +ksensors-0.7.3-r2.ebuild:
+  Bump debian patchset for lm_sensors-3 support, bug #232782
 
   06 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
