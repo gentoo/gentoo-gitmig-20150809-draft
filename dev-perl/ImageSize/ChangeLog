@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ImageSize
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ChangeLog,v 1.51 2009/01/10 16:46:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ChangeLog,v 1.52 2009/01/11 13:50:16 maekke Exp $
+
+  11 Jan 2009; Markus Meier <maekke@gentoo.org> ImageSize-3.1.1.ebuild:
+  amd64/x86 stable, bug #254335
 
   10 Jan 2009; Raúl Porcel <armin76@gentoo.org> ImageSize-3.1.1.ebuild:
   ia64 stable wrt #254335
