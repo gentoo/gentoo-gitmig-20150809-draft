@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.3.0.901.ebuild,v 1.1 2008/09/20 16:18:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.3.1.ebuild,v 1.1 2009/01/11 07:32:50 matsuu Exp $
 
 inherit multilib
 
 DESCRIPTION="Library for Chinese Phonetic input method"
 HOMEPAGE="http://chewing.csie.net/"
-SRC_URI="http://chewing.csie.net/download/rc/${P}.tar.gz"
+SRC_URI="http://chewing.csie.net/download/libchewing/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -15,7 +15,8 @@ IUSE="debug test"
 
 RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
-	test? ( >=dev-libs/check-0.8.2 )"
+	dev-util/pkgconfig
+	test? ( >=dev-libs/check-0.9.4 )"
 
 src_compile() {
 	econf $(use_enable debug) || die
