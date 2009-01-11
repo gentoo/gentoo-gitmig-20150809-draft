@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.31 2009/01/09 18:06:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.32 2009/01/11 15:57:12 maekke Exp $
+
+  11 Jan 2009; Markus Meier <maekke@gentoo.org> libdbi-0.8.3.ebuild:
+  x86 stable, bug #253663
 
   09 Jan 2009; Brent Baude <ranger@gentoo.org> libdbi-0.8.3.ebuild:
   Marking libdbi-0.8.3 ppc for bug 253663
