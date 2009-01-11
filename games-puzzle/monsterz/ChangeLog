@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/monsterz
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.21 2008/06/23 14:31:54 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.22 2009/01/11 21:34:04 mr_bones_ Exp $
+
+  11 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  monsterz-0.7.1-r1.ebuild:
+  EAPI=2; add use-based deps
 
   23 Jun 2008; Jeroen Roovers <jer@gentoo.org> monsterz-0.7.1-r1.ebuild:
   Stable for HPPA (bug #228603).
