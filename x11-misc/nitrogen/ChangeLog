@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/nitrogen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/ChangeLog,v 1.7 2009/01/10 16:33:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/ChangeLog,v 1.8 2009/01/11 21:07:19 maekke Exp $
+
+  11 Jan 2009; Markus Meier <maekke@gentoo.org> nitrogen-1.4.ebuild:
+  x86 stable, bug #254237
 
   10 Jan 2009; Jeremy Olexa <darkside@gentoo.org> nitrogen-1.4.ebuild:
   amd64 stable, bug 254237
