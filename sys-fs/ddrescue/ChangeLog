@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ddrescue
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.13 2008/12/30 18:27:48 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.14 2009/01/11 19:14:49 maekke Exp $
+
+  11 Jan 2009; Markus Meier <maekke@gentoo.org> ddrescue-1.8.ebuild:
+  amd64 stable, bug #251804
 
 *ddrescue-1.9 (30 Dec 2008)
 
