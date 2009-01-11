@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.06.ebuild,v 1.1 2009/01/11 08:36:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.06.ebuild,v 1.2 2009/01/11 09:29:40 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Hercules System/370, ESA/390 and zArchitecture Mainframe Emulator"
 HOMEPAGE="http://www.hercules-390.org/"
@@ -11,7 +11,7 @@ SRC_URI="http://www.hercules-390.org/${P}.tar.gz"
 LICENSE="QPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE=""
+IUSE="custom-cflags"
 
 src_unpack() {
 	unpack ${A}
@@ -27,12 +27,12 @@ src_unpack() {
 }
 
 src_compile() {
+	use custom-cflags || strip-flags
 	econf \
 		--enable-cckd-bzip2 \
 		--enable-het-bzip2 \
 		--enable-setuid-hercifc \
 		--enable-custom="Gentoo Linux ${PF}.ebuild" \
-		--disable-optimization \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
