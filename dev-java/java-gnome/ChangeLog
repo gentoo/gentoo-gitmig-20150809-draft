@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.74 2009/01/03 17:28:30 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.75 2009/01/11 15:32:40 maekke Exp $
+
+  11 Jan 2009; Markus Meier <maekke@gentoo.org> java-gnome-4.0.9-r1.ebuild:
+  x86 stable, bug #253577
 
   03 Jan 2009; Kenneth Prugh <ken69267@gentoo.org>
   java-gnome-4.0.9-r1.ebuild:
