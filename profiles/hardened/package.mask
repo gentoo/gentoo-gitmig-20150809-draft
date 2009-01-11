@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.47 2008/12/31 21:42:06 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.48 2009/01/11 07:36:55 gengor Exp $
 
 # supported only by gcc-4, unmask when it's stable wrt #217927
 media-libs/libopenraw
@@ -34,9 +34,6 @@ media-gfx/gnome-raw-thumbnailer
 # around if you try it in a live system.
 # 2006-03-13 kevquinn
 =sys-libs/glibc-2.4*
-
-# needs =sys-libs/glibc-2.4*
->=sys-cluster/gfs-kernel-2.02.00
 
 # These packages do more harm than good w/ hardened.
 # users must now the opensource xorg nv driver with nvidia cards.

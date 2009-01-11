@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/package.mask,v 1.50 2008/09/30 08:29:01 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/package.mask,v 1.51 2009/01/11 07:36:55 gengor Exp $
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (20 Sep 2007)
 # mask because it requires nptl and 2.6
@@ -33,20 +33,6 @@ sys-apps/hal
 sys-apps/hwinfo
 sys-apps/ivman
 sys-apps/raidutils
-sys-cluster/cman-headers
-sys-cluster/cman-kernel
-sys-cluster/dlm-kernel
-sys-cluster/gfs-kernel
-sys-cluster/gnbd-kernel
-sys-cluster/cman
-sys-cluster/fence
-sys-cluster/gfs-headers
-#x11-misc/linuxwacom
-sys-cluster/gulm
-sys-cluster/magma-plugins
-sys-cluster/rgmanager
-sys-fs/clvm
-sys-fs/gfs
 sys-power/kpowersave
 sys-power/powersave
 media-libs/libipoddevice

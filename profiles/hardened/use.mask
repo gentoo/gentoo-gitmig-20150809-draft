@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.21 2008/04/18 16:57:29 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.22 2009/01/11 07:36:55 gengor Exp $
 
 # supported only by gcc-4, unmask when it's stable wrt #217927
 raw
@@ -11,11 +11,6 @@ emul-linux-x86
 video_cards_nvidia
 
 x264
-
-# lvm2 clustered use flags (moved from default-linux)
-clvm
-gulm
-cman
 
 # tcc is x86-only
 tcc

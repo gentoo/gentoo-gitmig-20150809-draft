@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.20 2008/12/29 20:25:40 gengor Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/ChangeLog,v 1.21 2009/01/11 07:36:55 gengor Exp $
+
+  11 Jan 2009; Gordon Malm <gengor@gentoo.org> package.mask, use.mask:
+  Clear out masking of clustering related packages, bug #248112
 
   29 Dec 2008; Gordon Malm <gengor@gentoo.org> package.mask:
   Masked RSBAC-related ebuilds for eventual removal.
