@@ -1,6 +1,9 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.114 2009/01/10 14:36:11 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.115 2009/01/11 15:16:56 maekke Exp $
+
+  11 Jan 2009; Markus Meier <maekke@gentoo.org> jabberd-1.6.1.1-r1.ebuild:
+  x86 stable, bug #234168
 
   10 Jan 2009; Thomas Anderson <gentoofan23@gentoo.org>
   jabberd-1.6.1.1-r1.ebuild:
