@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/gnokii
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.84 2008/12/14 12:12:03 mrness Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.85 2009/01/11 17:29:52 mrness Exp $
+
+*gnokii-0.6.27-r1 (11 Jan 2009)
+
+  11 Jan 2009; Alin Năstac <mrness@gentoo.org>
+  +files/gnokii-0.6.27-disable-database.patch,
+  +files/gnokii-0.6.27-icon.patch, +gnokii-0.6.27-r1.ebuild:
+  Use xgnokii icon (#253342). Allow user to disable mysql/postgres support
+  through USE flags (#250906).
 
   14 Dec 2008; Alin Năstac <mrness@gentoo.org> gnokii-0.6.27.ebuild:
   Update bluetooth dependency (#250910).
