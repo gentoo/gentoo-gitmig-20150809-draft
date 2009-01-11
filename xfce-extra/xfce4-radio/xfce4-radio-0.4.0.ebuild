@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-radio/xfce4-radio-0.4.0.ebuild,v 1.1 2008/12/03 19:14:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-radio/xfce4-radio-0.4.0.ebuild,v 1.2 2009/01/11 23:44:01 angelos Exp $
 
 inherit xfce44
 
@@ -11,7 +11,7 @@ DESCRIPTION="Panel plugin to control V4L radio device"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-util/intltool"
+DEPEND=">=dev-util/intltool-0.40"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
