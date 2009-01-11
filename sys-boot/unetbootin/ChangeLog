@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.1 2009/01/08 18:12:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.2 2009/01/11 16:01:08 jer Exp $
+
+*unetbootin-304-r1 (11 Jan 2009)
+
+  11 Jan 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/unetbootin-304-syslinux-gentoo.patch, -unetbootin-304.ebuild,
+  +unetbootin-304-r1.ebuild:
+  Marked ~amd64 thanks to Markos Chandras and Xavier Neys (bug #254316).
+  Apply syslinux patch thanks to Xavier Neys (bug #254419).
 
 *unetbootin-304 (08 Jan 2009)
 
