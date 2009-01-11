@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/pcsc-perl/pcsc-perl-1.4.7.ebuild,v 1.1 2009/01/11 01:37:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pcsc-perl/pcsc-perl-1.4.7.ebuild,v 1.2 2009/01/11 05:46:20 mr_bones_ Exp $
 
 inherit perl-module eutils multilib
 
@@ -19,4 +19,3 @@ DEPEND="sys-apps/pcsc-lite
 myconf="-I/usr/include/ -l/usr/$(get_libdir)"
 
 mydoc="README Changelog"
-
