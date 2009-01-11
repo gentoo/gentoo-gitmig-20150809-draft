@@ -1,0 +1,14 @@
+# ChangeLog for dev-perl/pcsc-perl
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/pcsc-perl/ChangeLog,v 1.1 2009/01/11 01:37:45 nerdboy Exp $
+
+*pcsc-perl-1.4.7 (11 Jan 2009)
+
+  11 Jan 2009; Steve Arnold <nerdboy@gentoo.org> +metadata.xml,
+  +pcsc-perl-1.4.7.ebuild:
+  New ebuild for pcsc-perl. Ebuild written by me. Very handy for setting 
+  up and using the PC/SC smartcard tools that go with the daemon package.  
+  Tested with a USB smartcard reader (Axalto Reflex USB v3).  The older 
+  reader I tried (mentioned on several forum posts) won't work without 
+  a firmware update.
+
