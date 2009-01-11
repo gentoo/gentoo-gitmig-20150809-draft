@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.7.0-r1.ebuild,v 1.3 2008/07/19 00:53:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.8.0.ebuild,v 1.1 2009/01/11 02:38:11 rich0 Exp $
 
+EAPI="2"
 inherit cvs eutils flag-o-matic games
 
 DESCRIPTION="An online MMORPG written in C and SDL"
@@ -26,10 +27,9 @@ RDEPEND="x11-libs/libX11
 	media-libs/freealut
 	media-libs/libvorbis
 	dev-libs/libxml2
-	media-libs/cal3d
-	!=media-libs/cal3d-0.11.0_pre20050823
+	media-libs/cal3d[-16bit-indices]
 	media-libs/libpng
-	>=games-rpg/eternal-lands-data-1.7.0"
+	>=games-rpg/eternal-lands-data-1.8.0"
 
 DEPEND="${RDEPEND}
 	>=app-admin/eselect-opengl-1.0.6-r1
@@ -43,16 +43,16 @@ ECVS_USER="anonymous"
 #ECVS_LOCALNAME="elc"
 ECVS_PASS=""
 ECVS_CVS_OPTIONS="-dP -z3"
-ECVS_BRANCH="elc_1_7_0"
+ECVS_BRANCH="elc_1_8_0"
 
 S="${WORKDIR}/${ECVS_MODULE}"
 
 pkg_setup() {
 	games_pkg_setup
-	if built_with_use media-libs/cal3d 16bit-indices ; then
-		eerror "${PN} won't work if media-libs/cal3d has been built with 16bit-indices"
-		die "re-emerge  media-libs/cal3d without the 16bit-indices USE flag"
-	fi
+#	if built_with_use media-libs/cal3d 16bit-indices ; then
+#		eerror "${PN} won't work if media-libs/cal3d has been built with 16bit-indices"
+#		die "re-emerge  media-libs/cal3d without the 16bit-indices USE flag"
+#	fi
 }
 
 src_unpack() {
@@ -61,9 +61,11 @@ src_unpack() {
 	S_CLIENT="${WORKDIR}/elc"
 	BROWSER="firefox"
 
+
 	cd "${S}"
 
-	epatch "${FILESDIR}/eternal-lands-1.7.0-errors.patch"
+#	epatch "${FILESDIR}/eternal-lands-1.7.0-errors.patch"
+
 
 	# Add debugging options
 	if use debug ; then

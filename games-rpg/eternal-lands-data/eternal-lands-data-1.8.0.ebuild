@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.7.0-r1.ebuild,v 1.1 2008/07/18 16:51:41 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.8.0.ebuild,v 1.1 2009/01/11 02:37:35 rich0 Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ MY_PV="${MY_PV//./}"
 MY_PN="${PN%*-data}"
 DESCRIPTION="An online MMORPG written in C and SDL"
 HOMEPAGE="http://www.eternal-lands.com"
-SRC_URI="http://www.eternal-lands.com/el_linux_170_install.zip
+SRC_URI="http://www.eternal-lands.com/el_linux_180_install.zip
 		music? ( mirror://gentoo/el_music_full-${MUSIC_DATE}.zip )
 		sound? ( mirror://gentoo/el_sound_150.zip )"
 # WARNING: The music file is held at
@@ -28,7 +28,7 @@ IUSE="music sound"
 DEPEND="app-arch/unzip"
 
 # Maybe one day upstream will do things in a consistent way.
-S="${WORKDIR}/el_install"
+S="${WORKDIR}/el_linux"
 
 src_unpack() {
 	unpack ${A}

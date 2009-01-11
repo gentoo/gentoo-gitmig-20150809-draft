@@ -1,6 +1,13 @@
 # ChangeLog for games-rpg/eternal-lands
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.46 2008/07/18 16:49:16 rich0 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.47 2009/01/11 02:38:10 rich0 Exp $
+
+*eternal-lands-1.8.0 (11 Jan 2009)
+
+  11 Jan 2009; Richard Freeman <rich0@gentoo.org>
+  -files/eternal-lands-1.7.0-errors.patch, -eternal-lands-1.7.0-r1.ebuild,
+  +eternal-lands-1.8.0.ebuild:
+  Version Bump - 254364
 
   18 Jul 2008; Richard Freeman <rich0@gentoo.org>
   -eternal-lands-1.6.0.ebuild, -eternal-lands-1.7.0.ebuild,
