@@ -1,9 +1,9 @@
 # ChangeLog for dev-lang/polyml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.2 2009/01/11 19:13:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.3 2009/01/11 19:16:52 maekke Exp $
 
   11 Jan 2009; Markus Meier <maekke@gentoo.org> polyml-5.2.1.ebuild:
-  x86 stable, bug #254097
+  add ~x86, bug #254097
 
 *polyml-5.2.1 (30 Dec 2008)
 
