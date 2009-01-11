@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9381 2009/01/11 10:52:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9382 2009/01/11 12:23:33 ikelos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -96,12 +96,15 @@ gnome-base/gnome-vfs-monikers
 # Masking insecure versions
 # See bug 245941 for more details
 # Stable versions are not being masked, but should be really
+# 11-Jan-2009 Adding in x.5.0 series, since they're also vulnerable
 =app-emulation/vmware-workstation-5.5.8.108000
 =app-emulation/vmware-workstation-6.0.4.93057
 =app-emulation/vmware-workstation-6.0.5.109488
+=app-emulation/vmware-workstation-6.5.0.118166
 =app-emulation/vmware-player-1.0.8.108000
 =app-emulation/vmware-player-2.0.4.93057
 =app-emulation/vmware-player-2.0.5.109488
+=app-emulation/vmware-player-2.5.0.118166
 
 # Daniel Black <dragonheart@gentoo.org> (03 Jan 2009)
 # mask pending removal
