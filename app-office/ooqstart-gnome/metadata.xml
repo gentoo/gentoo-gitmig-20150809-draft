@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>openoffice</herd>
-	<longdescription>ooqstart-gnome is an OpenOffice.org Quickstarter Applet for the Gnome 2.x Panel. For it to do something useful you will have to install one of the different flavours of OpenOffice.org Gentoo provides</longdescription>
-</pkgmetadata>
