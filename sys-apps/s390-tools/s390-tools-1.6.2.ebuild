@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.6.2.ebuild,v 1.4 2009/01/03 10:00:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.6.2.ebuild,v 1.5 2009/01/11 08:56:20 vapier Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 	done
 	sed -i -re 's:__u(8|16|32):uint\1_t:' $(find osasnmpd -name '*.h')
 	sed -i -e "s:-lrpm[iodb]*::g" osasnmpd/Makefile.rules
-	use snmp || sed -i -e '/SUBDIRS/s:osasnmpd::' Makefile
+	use snmp || sed -i -e '/SUB_DIRS/s:osasnmpd::' Makefile
 	sed -i -e '/^ZFCPDUMP_DIR/s:local/::' common.mak
 }
 
