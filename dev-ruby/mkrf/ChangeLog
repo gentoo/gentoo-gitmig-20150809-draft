@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mkrf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.8 2009/01/10 15:43:59 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.9 2009/01/11 14:08:28 armin76 Exp $
+
+  11 Jan 2009; Raúl Porcel <armin76@gentoo.org> mkrf-0.2.3.ebuild:
+  ia64 stable wrt #250933
 
   10 Jan 2009; Tobias Klausmann <klausman@gentoo.org> mkrf-0.2.3.ebuild:
   Stable on alpha, bug #250933
