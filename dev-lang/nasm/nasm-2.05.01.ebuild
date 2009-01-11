@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-2.05.01.ebuild,v 1.2 2008/12/07 05:58:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-2.05.01.ebuild,v 1.3 2009/01/11 15:12:56 maekke Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/nasm/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="-* amd64 x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="dev-lang/perl
