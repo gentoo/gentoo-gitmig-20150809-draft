@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.66 2008/12/30 02:31:15 yngwin Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.67 2009/01/11 14:04:48 gmsoft Exp $
+
+  11 Jan 2009; Guy Martin <gmsoft@gentoo.org> dillo-2.0.ebuild:
+  re-added ~hppa, #253083
 
   30 Dec 2008; Ben de Groot <yngwin@gentoo.org> dillo-2.0.ebuild:
   Die on doxygen failure
