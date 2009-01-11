@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/php
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.308 2008/12/24 18:12:29 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.309 2009/01/11 21:16:32 hoffie Exp $
+
+*php-5.2.8-r2 (11 Jan 2009)
+
+  11 Jan 2009; Christian Hoffmann <hoffie@gentoo.org>
+  -files/70_mod_php.conf-apache2,
+  +files/70_mod_php5_concurr.conf-apache2-r1,
+  +files/70_mod_php5.conf-apache2-r1,
+  -files/70_mod_php_concurr.conf-apache2, -php-5.2.8.ebuild,
+  +php-5.2.8-r2.ebuild:
+  revision bump to fix bug 162478 (dropping usage of AddType apache config
+  directive) and bug 249703 (libxml2-2.7 breakage) and an upstream fix for
+  bug 217392; removing old and unused files
 
   24 Dec 2008; Raúl Porcel <armin76@gentoo.org> php-5.2.8-r1.ebuild:
   alpha/ia64 stable wrt #249875

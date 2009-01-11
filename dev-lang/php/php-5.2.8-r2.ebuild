@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.8.ebuild,v 1.1 2008/12/08 23:30:02 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.8-r2.ebuild,v 1.1 2009/01/11 21:16:32 hoffie Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -21,7 +21,7 @@ PHP_PACKAGE="1"
 
 # php patch settings, general
 PHP_PATCHSET_REV="${PR/r/}"
-SUHOSIN_PATCH="suhosin-patch-5.2.7-0.9.6.3.patch.gz"
+SUHOSIN_PATCH="suhosin-patch-5.2.8-0.9.6.3.patch.gz"
 MULTILIB_PATCH="${MY_PHP_PV}/opt/multilib-search-path.patch"
 # php patch settings, ebuild specific
 FASTBUILD_PATCH="${MY_PHP_PV}/opt/fastbuild.patch"
@@ -32,9 +32,6 @@ KOLAB_PATCH="${MY_PHP_PV}/opt/kolab-imap-annotations.patch"
 
 inherit versionator php5_2-sapi apache-module
 
-SRC_URI="http://home.hoffie.info/php-patchset-${PV}-r${PHP_PATCHSET_REV}.tar.bz2
-	${SRC_URI}"
-
 # Suhosin patch support
 [[ -n "${SUHOSIN_PATCH}" ]] && SRC_URI="${SRC_URI} suhosin? ( http://gentoo.longitekk.com/${SUHOSIN_PATCH} )"
 
@@ -42,7 +39,10 @@ DESCRIPTION="The PHP language runtime engine: CLI, CGI and Apache2 SAPIs."
 
 DEPEND="app-admin/php-toolkit
 	imap? ( >=virtual/imap-c-client-2006k )
-	pcre? ( >=dev-libs/libpcre-7.8 )"
+	pcre? ( >=dev-libs/libpcre-7.8 )
+	xml? ( >=dev-libs/libxml2-2.7.2-r2 )
+	xmlrpc? ( >=dev-libs/libxml2-2.7.2-r2 virtual/libiconv )"
+
 RDEPEND="${DEPEND}"
 if [[ -n "${KOLAB_PATCH}" ]] ; then
 	IUSE="${IUSE} kolab"
@@ -98,6 +98,11 @@ pkg_setup() {
 		ewarn "derives from 'fastbuild', please file a bug in"
 		ewarn "Gentoo's Bugzilla only."
 		ewarn
+	fi
+
+	if use pcre ; then
+		built_with_use dev-libs/libpcre unicode || \
+			die "Please rebuild dev-libs/libpcre with USE=unicode"
 	fi
 
 	php5_2-sapi_pkg_setup
@@ -164,9 +169,6 @@ src_unpack() {
 		sed -e "s|test \! -z \"\$(top_builddir)/php-cli\" \&\& test -x \"\$(top_builddir)/php-cli\"|test \! -z \"\$(top_builddir)/php-cli\" \&\& test -x \"\$(top_builddir)/php-cli\" \&\& test \! -z \"\$(top_builddir)/php-cgi\" \&\& test -x \"\$(top_builddir)/php-cgi\"|g" -i Makefile.global
 		sed -e "s|TEST_PHP_EXECUTABLE=\"\$(top_builddir)/php-cli\"|TEST_PHP_EXECUTABLE=\"\$(top_builddir)/php-cli\" TEST_PHP_CGI_EXECUTABLE=\"\$(top_builddir)/php-cgi\"|g" -i Makefile.global
 	fi
-
-	# bug 217392 (autconf-2.62 behavior changes)
-	sed s:_GNU_SOURCE:__GLIBC__: -i ext/posix/posix.c
 
 	# try to fix some test cases which fail because of sandbox otherwise
 	sed -e 's:/no/such/:.\0:' -i ext/standard/tests/file/005_error.phpt \
@@ -424,7 +426,7 @@ src_install() {
 				if use concurrentmodphp ; then
 					einfo "Installing Apache${APACHE_VERSION} config file for PHP5-concurrent (70_mod_php5_concurr.conf)"
 					insinto ${APACHE_MODULES_CONFDIR}
-					newins "${FILESDIR}/70_mod_php5_concurr.conf-apache2" "70_mod_php5_concurr.conf"
+					newins "${FILESDIR}/70_mod_php5_concurr.conf-apache2-r1" "70_mod_php5_concurr.conf"
 
 					# Put the ld version script in the right place so it's always accessible
 					insinto "/var/lib/php-pkg/${CATEGORY}/${PN}-${PVR}/"
@@ -435,7 +437,7 @@ src_install() {
 				else
 					einfo "Installing Apache${APACHE_VERSION} config file for PHP5 (70_mod_php5.conf)"
 					insinto ${APACHE_MODULES_CONFDIR}
-					newins "${FILESDIR}/70_mod_php5.conf-apache2" "70_mod_php5.conf"
+					newins "${FILESDIR}/70_mod_php5.conf-apache2-r1" "70_mod_php5.conf"
 				fi
 				php5_2-sapi_install_ini
 				;;
