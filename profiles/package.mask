@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9380 2009/01/11 10:14:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9381 2009/01/11 10:52:08 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Fabian Groffen <grobian@gentoo.org> (11 Jan 2009)
+# sidebar patch doesn't apply, hence sidebar USE-flag is broken.  If you
+# don't care about sidebar feel free to test and report.  Also, feel
+# free to notify me if a new sidebar patch was released (or you made a
+# patch that works).
+=mail-client/mutt-1.5.19
 
 # Tobias Scherbaum <dertobi123@gentoo.org> (11 Jan 2009)
 # bundles *very* outdated versions of gd, zlib and libpng libraries, static
