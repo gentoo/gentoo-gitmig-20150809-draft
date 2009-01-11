@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub-static
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.17 2009/01/03 21:07:21 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.18 2009/01/11 21:04:00 maekke Exp $
+
+  11 Jan 2009; Markus Meier <maekke@gentoo.org> grub-static-0.97-r6.ebuild:
+  amd64 stable, bug #254028
 
 *grub-static-0.97-r9 (03 Jan 2009)
 
