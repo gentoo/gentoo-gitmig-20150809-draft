@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4125 2009/01/11 16:27:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4126 2009/01/11 17:27:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1670,6 +1670,7 @@ media-video/vlc:libsysfs - Get user key from firewire connected iPod via libsysf
 media-video/vlc:libv4l2 - Enables Libv4l2 Video4Linux2 support (for conversion from various video formats to standard ones, needed to use v4l2 devices with strange formats).
 media-video/vlc:live - Enables LIVE.com support.
 media-video/vlc:optimisememory - Enable optimisation for memory rather than performance.
+media-video/vlc:pda - Builds a GTK+ interface suitable for PDA devices.
 media-video/vlc:pvr - Enables PVR cards access module.
 media-video/vlc:qt4 - Builds a x11-libs/qt based frontend. It is now the most up-to-date graphical interface available.
 media-video/vlc:remoteosd - Enables RemoteOSD plugin (VNC client as video filter).
