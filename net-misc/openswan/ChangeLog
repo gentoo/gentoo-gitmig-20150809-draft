@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openswan
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.56 2008/12/06 00:17:30 mrness Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.57 2009/01/11 11:01:51 mrness Exp $
+
+  11 Jan 2009; Alin Năstac <mrness@gentoo.org>
+  -files/openswan-2.6.18-gentoo.patch, files/openswan-2.6.19-gentoo.patch,
+  -openswan-2.6.18.ebuild, openswan-2.6.19.ebuild:
+  Replace xmlto --skip-validation patch with app-text/docbook-xml-dtd:4.1.2
+  dependency atom (#237132).
 
   06 Dec 2008; Alin Năstac <mrness@gentoo.org> Manifest:
   Fix checksums of the openswan-2.6.18.tar.gz file (#249867).
