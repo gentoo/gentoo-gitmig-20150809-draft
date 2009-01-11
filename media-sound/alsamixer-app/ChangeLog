@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsamixer-app
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixer-app/ChangeLog,v 1.1 2008/06/28 05:46:35 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixer-app/ChangeLog,v 1.2 2009/01/11 15:22:16 maekke Exp $
+
+  11 Jan 2009; Markus Meier <maekke@gentoo.org> alsamixer-app-0.1.ebuild:
+  add ~x86, bug #253466
 
 *alsamixer-app-0.1 (28 Jun 2008)
 
