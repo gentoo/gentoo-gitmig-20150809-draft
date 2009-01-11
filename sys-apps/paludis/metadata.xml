@@ -11,7 +11,6 @@
     <name>Thomas Anderson</name>
   </maintainer>
   <use>
-	  <flag name='glsa'>Enable parsing of GLSA files</flag>
 	  <flag name='inquisitio'>Enable inquisitio, the search client</flag>
 	  <flag name='pink'>Use a less boring colourscheme than the default</flag>
 	  <flag name='portage'>Enable experimental support for Portage
