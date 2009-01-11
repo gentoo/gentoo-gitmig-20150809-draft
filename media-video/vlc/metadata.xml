@@ -25,6 +25,7 @@
 		with strange formats).</flag>
     <flag name="live">Enables LIVE.com support.</flag>
     <flag name="optimisememory">Enable optimisation for memory rather than performance.</flag>
+    <flag name="pda">Builds a GTK+ interface suitable for PDA devices.</flag>
     <flag name="pvr">Enables PVR cards access module.</flag>
     <flag name="qt4" restrict="&gt;=media-video/vlc-0.9">Builds a <pkg>x11-libs/qt</pkg> based frontend. It is now the most up-to-date graphical interface available.</flag>
     <flag name="remoteosd">Enables RemoteOSD plugin (VNC client as video filter).</flag>

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.8a.ebuild,v 1.6 2008/12/13 21:18:54 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.8a.ebuild,v 1.7 2009/01/11 17:19:27 aballier Exp $
 
 EAPI="1"
 
@@ -41,7 +41,7 @@ KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="a52 aac aalib alsa altivec arts atmo avahi bidi cdda cddb cdio dbus dc1394
 	debug dirac directfb dts dvb dvd esd fbcon fluidsynth +ffmpeg flac fontconfig ggi gnome gnutls hal httpd
 	id3tag jack kate libass libcaca +libgcrypt libnotify libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg
-	musepack ncurses nsplugin ogg opengl optimisememory oss png	pulseaudio pvr +qt4
+	musepack ncurses nsplugin ogg opengl optimisememory oss pda png	pulseaudio pvr +qt4
 	remoteosd rtsp run-as-root samba schroedinger sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcd vcdinfo vcdx vlm vorbis win32codecs
 	X x264 xinerama xml xosd xv zvbi"
@@ -104,6 +104,7 @@ RDEPEND="
 			!seamonkey? ( >=net-libs/xulrunner-1.8 )
 		)
 		ogg? ( media-libs/libogg )
+		pda? ( x11-libs/gtk+:2 )
 		png? ( media-libs/libpng )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.8 )
 		qt4? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 ) )
@@ -296,6 +297,7 @@ src_compile () {
 		$(use_enable opengl glx) $(use_enable opengl) $(use_enable opengl galaktos) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable oss) \
+		$(use_enable pda) \
 		$(use_enable png) \
 		--disable-portaudio \
 		$(use_enable pulseaudio pulse) \
