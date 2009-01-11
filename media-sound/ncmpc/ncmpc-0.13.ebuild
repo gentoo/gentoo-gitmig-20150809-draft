@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.12.ebuild,v 1.2 2009/01/11 13:21:32 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.13.ebuild,v 1.1 2009/01/11 13:21:32 gentoofan23 Exp $
 
 EAPI="2"
 inherit multilib
@@ -35,6 +35,8 @@ src_configure() {
 		$(use_with   lyrics-screen lyrics-plugin-dir /usr/$(get_libdir)/ncmpc/lyrics) \
 		$(use_enable mouse) \
 		$(use_enable nls) \
+		$(use_enable nls locale) \
+		$(use_enable nls multibyte) \
 		$(use_enable search-screen) \
 		$(use_enable song-screen)
 }

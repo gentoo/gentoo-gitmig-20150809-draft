@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ncmpc
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.37 2008/12/05 21:39:11 omp Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.38 2009/01/11 13:21:32 gentoofan23 Exp $
+
+*ncmpc-0.13 (11 Jan 2009)
+
+  11 Jan 2009; Thomas Anderson <gentoofan23@gentoo.org> ncmpc-0.12.ebuild,
+  +ncmpc-0.13.ebuild:
+  Version bump, add configure option for multilib fix for amd64.
 
 *ncmpc-0.12 (05 Dec 2008)
 
