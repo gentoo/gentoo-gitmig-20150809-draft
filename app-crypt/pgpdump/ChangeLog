@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pgpdump
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.15 2009/01/08 02:23:04 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.16 2009/01/11 15:20:27 maekke Exp $
+
+  11 Jan 2009; Markus Meier <maekke@gentoo.org> pgpdump-0.26.ebuild:
+  x86 stable, bug #253325
 
   08 Jan 2009; Tiago Cunha <tcunha@gentoo.org> pgpdump-0.26.ebuild:
   stable sparc, bug 253325
