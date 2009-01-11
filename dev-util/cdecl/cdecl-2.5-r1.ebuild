@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r1.ebuild,v 1.13 2008/02/11 11:20:02 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r1.ebuild,v 1.14 2009/01/11 20:56:36 phosphan Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Turn English phrases to C or C++ declarations"
 SRC_URI="ftp://ftp.netsw.org/softeng/lang/c/tools/cdecl/${P}.tar.gz"
@@ -37,7 +37,7 @@ src_compile() {
 		CFLAGS="${CFLAGS} -DUSE_READLINE"
 		LIBS="${LIBS} -lreadline -lncurses"
 	fi
-	emake CFLAGS="${CFLAGS}" LIBS="${LIBS}" || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LIBS="${LIBS}" || die
 }
 
 src_install() {
