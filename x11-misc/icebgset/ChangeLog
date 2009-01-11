@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/icebgset
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icebgset/ChangeLog,v 1.20 2007/02/21 23:40:52 jokey Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icebgset/ChangeLog,v 1.21 2009/01/11 21:36:43 phosphan Exp $
+
+  11 Jan 2009; Patrick Kursawe <phosphan@gentoo.org> icebgset-1.3.ebuild:
+  Bug #252097: Not stripping any more, actually compiling in src_compile.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
