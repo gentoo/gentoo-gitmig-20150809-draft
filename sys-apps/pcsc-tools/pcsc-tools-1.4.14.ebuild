@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.14.ebuild,v 1.1 2009/01/11 01:56:57 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.14.ebuild,v 1.2 2009/01/11 05:46:39 mr_bones_ Exp $
 
 inherit eutils fdo-mime multilib
 
@@ -60,4 +60,3 @@ pkg_postinst() {
 pkg_postrm() {
 	fdo-mime_desktop_database_update
 }
-
