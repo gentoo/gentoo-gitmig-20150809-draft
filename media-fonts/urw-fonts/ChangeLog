@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/urw-fonts
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.29 2008/06/21 06:01:53 pva Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.30 2009/01/11 13:53:40 pva Exp $
+
+*urw-fonts-2.4.6 (11 Jan 2009)
+
+  11 Jan 2009; Peter Volkov <pva@gentoo.org> +urw-fonts-2.4.6.ebuild:
+  Version bump, bug #252876, thank James Cloos for report.
 
   21 Jun 2008; Peter Volkov <pva@gentoo.org> urw-fonts-2.3.6.ebuild:
   Small cleanup. Added postinst message for bug #208990, thank Christian
