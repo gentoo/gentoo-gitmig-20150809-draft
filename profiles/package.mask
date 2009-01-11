@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9383 2009/01/11 20:28:41 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9384 2009/01/11 20:56:47 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Volkov <pva@gentoo.org> (11 Jan 2009)
+# EC fonts are tex fonts, this package was used by lilypond at some point of
+# time, but now nothing uses them, no maintainer so it looks like time to
+# remove them from the tree has come. Objections? Report to bug 183730.
+media-fonts/ec-fonts-mftraced
 
 # Fabian Groffen <grobian@gentoo.org> (11 Jan 2009)
 # sidebar patch doesn't apply, hence sidebar USE-flag is broken.  If you
