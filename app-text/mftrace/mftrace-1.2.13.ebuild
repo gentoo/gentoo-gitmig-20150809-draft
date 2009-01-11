@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.13.ebuild,v 1.6 2009/01/10 17:15:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.13.ebuild,v 1.7 2009/01/11 21:03:17 maekke Exp $
 
 inherit python multilib toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="traces TeX fonts to PFA or PFB fonts (formerly pktrace)"
 HOMEPAGE="http://lilypond.org/download/sources/mftrace/"
 SRC_URI="http://lilypond.org/download/sources/mftrace/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ia64 ppc sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 # SLOT 1 was used in pktrace ebuild
 SLOT="1"
 IUSE="truetype"
