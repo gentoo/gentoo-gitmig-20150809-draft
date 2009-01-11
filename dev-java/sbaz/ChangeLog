@@ -1,0 +1,15 @@
+# ChangeLog for dev-java/sbaz
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sbaz/ChangeLog,v 1.1 2009/01/11 03:54:28 ali_bush Exp $
+
+*sbaz-1.25 (11 Jan 2009)
+
+  11 Jan 2009; Alistair Bush <ali_bush@gentoo.org> +metadata.xml,
+  +sbaz-1.25.ebuild:
+  Adding to main tree
+
+  10 Jan 2009; Alistair Bush <ali_bush@gentoo.org> +metadata.xml,
+  +sbaz-1.25.ebuild:
+  New package sbaz. Adding to java-experimental to test before moving to
+  main tree.
+
