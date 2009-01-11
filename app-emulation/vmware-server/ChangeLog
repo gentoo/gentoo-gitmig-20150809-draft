@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.48 2009/01/04 22:25:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.49 2009/01/11 22:07:09 maekke Exp $
+
+  11 Jan 2009; Markus Meier <maekke@gentoo.org>
+  vmware-server-1.0.7.108231.ebuild:
+  amd64/x86 stable, bug #236167
 
   04 Jan 2009; Ulrich Mueller <ulm@gentoo.org>
   vmware-server-1.0.5.80187.ebuild, vmware-server-1.0.6.91891.ebuild,
