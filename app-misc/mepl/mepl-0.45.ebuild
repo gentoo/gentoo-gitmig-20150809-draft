@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/mepl-0.45.ebuild,v 1.8 2005/07/21 17:21:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mepl/mepl-0.45.ebuild,v 1.9 2009/01/11 16:58:35 phosphan Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Self-employed-mode software for 3COM/USR message modems"
 HOMEPAGE="http://www.hof-berlin.de/mepl/"
@@ -15,8 +17,16 @@ DEPEND="virtual/libc"
 
 S=${WORKDIR}/${PN}${PV}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	echo "#include <stdlib.h>" > tmpmepl.c
+	cat mepl.c >> tmpmepl.c
+	mv tmpmepl.c mepl.c
+}
+
 src_compile() {
-	emake en || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -DMEPLCONFIG=\\\"/etc/mepl.conf\\\"" en || die
 }
 
 src_install() {
