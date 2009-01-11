@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9382 2009/01/11 12:23:33 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9383 2009/01/11 20:28:41 suka Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -529,14 +529,6 @@ www-apps/dotproject
 # Keri Harris <keri@gentoo.org> (21 Sep 2008)
 # Development version
 =dev-lang/swi-prolog-5.7*
-
-# Andreas Proschofsky <suka@gentoo.org> (20 Sep 2008)
-# Masked for removal in 30 days. Both packages are broken
-# and are unmaintained for ages. If you want a proper
-# quickstarter for OpenOffice.org use the one which is
-# provided with the source-based build of OOo.
-app-office/ooqstart-gnome
-app-office/oooqs
 
 # MATSUU Takuto <matsuu@gentoo.org> (18 Sep 2008)
 # Masked for removal in 60 days.

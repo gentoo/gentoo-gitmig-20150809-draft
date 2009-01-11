@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2253 2009/01/11 12:23:33 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2254 2009/01/11 20:28:41 suka Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jan 2009; Andreas Proschofsky <suka@gentoo.org> package.mask:
+  Remove mask on oooqs and ooqstart-gnome, both are now gone from the tree
 
   11 Jan 2009; Mike Auty <ikelos@gentoo.org> package.mask:
   Adding x.5.0 series mask for vmware, since they're also vulnerable (bug
