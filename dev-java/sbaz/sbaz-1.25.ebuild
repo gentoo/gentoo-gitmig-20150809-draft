@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sbaz/sbaz-1.25.ebuild,v 1.1 2009/01/11 03:54:28 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sbaz/sbaz-1.25.ebuild,v 1.2 2009/01/11 05:46:03 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -57,4 +57,3 @@ src_install() {
 	insinto "/etc/${PN}"
 	doins debian/default-universe
 }
-
