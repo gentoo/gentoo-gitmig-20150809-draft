@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/lrzsz
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.9 2008/05/25 17:48:56 solar Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/ChangeLog,v 1.10 2009/01/11 12:09:35 mrness Exp $
+
+*lrzsz-0.12.20-r2 (11 Jan 2009)
+
+  11 Jan 2009; Alin Năstac <mrness@gentoo.org> +lrzsz-0.12.20-r2.ebuild:
+  Install manpage symlinks for all available commands (#251630).
 
   25 May 2008; <solar@gentoo.org> lrzsz-0.12.20-r1.ebuild:
   - cross compile fix. inherit toolchain-funcs ; tc-export CC
