@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ted
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.26 2008/09/14 17:23:52 truedfx Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.27 2009/01/11 00:29:39 truedfx Exp $
+
+  11 Jan 2009; Harald van Dĳk <truedfx@gentoo.org> ted-2.17-r1.ebuild:
+  Regenerate all configure scripts to fix locale issues
 
   14 Sep 2008; Harald van Dĳk <truedfx@gentoo.org> metadata.xml:
   List myself as maintainer
