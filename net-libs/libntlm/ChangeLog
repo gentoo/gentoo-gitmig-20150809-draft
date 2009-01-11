@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libntlm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.12 2009/01/09 23:06:06 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.13 2009/01/11 20:59:49 maekke Exp $
+
+  11 Jan 2009; Markus Meier <maekke@gentoo.org> libntlm-0.4.2.ebuild:
+  x86 stable, bug #254203
 
   09 Jan 2009; Thomas Anderson <gentoofan23@gentoo.org>
   libntlm-0.4.2.ebuild:
