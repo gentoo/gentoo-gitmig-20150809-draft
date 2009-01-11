@@ -1,0 +1,14 @@
+# ChangeLog for sys-apps/pcsc-tools
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.1 2009/01/11 01:56:57 nerdboy Exp $
+
+*pcsc-tools-1.4.14 (11 Jan 2009)
+
+  11 Jan 2009; Steve Arnold <nerdboy@gentoo.org> +files/smartcard.svg,
+  +metadata.xml, +pcsc-tools-1.4.14.ebuild:
+  New ebuild for pcsc-tools. Ebuild written by me. Very handy for setting 
+  up and using PC/SC smartcards (tools that go with the daemon package).  
+  Tested with a USB smartcard reader (Axalto Reflex USB v3).  The older 
+  reader I tried (mentioned on several forum posts) won't work without 
+  a firmware update.
+
