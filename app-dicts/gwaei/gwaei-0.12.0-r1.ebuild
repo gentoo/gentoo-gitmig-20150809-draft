@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-0.11.0.ebuild,v 1.2 2009/01/09 17:51:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-0.12.0-r1.ebuild,v 1.1 2009/01/12 14:05:55 matsuu Exp $
 
 inherit gnome2
 
@@ -24,6 +24,11 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.17 )
 	dev-util/pkgconfig"
 
-G2CONF="$(use_enable nls)"
+G2CONF="$(use_enable nls) --disable-schemas-install"
 
-DOCS="AUTHORS ChangeLog NEWS README"
+src_install() {
+	gnome2_src_install
+
+	rm -rf "${D}/usr/share/doc/${P}"
+	dodoc AUTHORS ChangeLog NEWS README
+}
