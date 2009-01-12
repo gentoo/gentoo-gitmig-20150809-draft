@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/etc-proposals
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.8 2009/01/04 15:49:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.9 2009/01/12 20:37:32 fmccor Exp $
+
+  12 Jan 2009; Ferris McCormick <fmccor@gentoo.org>
+  etc-proposals-1.4.3.ebuild:
+  Add ~sparc at user (Robert Annessi) request, Bug #254590.
 
   04 Jan 2009; Markus Meier <maekke@gentoo.org> etc-proposals-1.4.3.ebuild:
   amd64/x86 stable, bug #253256
