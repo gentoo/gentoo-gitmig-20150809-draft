@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.15.ebuild,v 1.10 2008/06/30 18:28:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.17.ebuild,v 1.1 2009/01/12 21:49:07 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="Gnome Palm Pilot and Palm OS Device Syncing Library"
 HOMEPAGE="http://live.gnome.org/GnomePilot"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="hal"
 
 RDEPEND=">=gnome-base/libgnome-2.0.0
@@ -45,8 +45,18 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	epatch "${FILESDIR}/${P}-as-needed.patch"
+	echo "libgpilotdCM/gnome-pilot-conduit-management.c" >> po/POTFILES.in
 
+	# Fix --as-needed
+	epatch "${FILESDIR}/${PN}-2.0.15-as-needed.patch"
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
-	intltoolize --force || die
+}
+
+pkg_postinst() {
+	if ! built_with_use app-pda/pilot-link bluetooth; then
+		elog "if you want bluetooth support, please rebuild app-pda/pilot-link"
+		elog "echo 'app-pda/pilot-link bluetooth >> /etc/portage/package.use"
+	fi
 }

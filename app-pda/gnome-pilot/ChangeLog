@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/gnome-pilot
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.50 2008/09/20 11:13:24 dertobi123 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.51 2009/01/12 21:49:07 eva Exp $
+
+*gnome-pilot-2.0.17 (12 Jan 2009)
+
+  12 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-pilot-2.0.15.ebuild, -gnome-pilot-2.0.16.ebuild,
+  +gnome-pilot-2.0.17.ebuild:
+  Bump to 2.0.17. Bug fixes and translation updates.
 
   20 Sep 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-pilot-2.0.16-r1.ebuild:
