@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.42 2009/01/01 15:58:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.43 2009/01/12 06:19:29 mr_bones_ Exp $
+
+  12 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> enigma-1.01.ebuild:
+  EAPI=2; add use-based dep for media-libs/sdl-image (bug #206393)
 
   01 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   files/enigma-1.01-xerces-c.patch, enigma-1.01.ebuild:

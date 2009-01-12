@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.01.ebuild,v 1.9 2009/01/01 15:58:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.01.ebuild,v 1.10 2009/01/12 06:19:29 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="puzzle game similar to Oxyd"
@@ -16,7 +17,7 @@ IUSE="nls"
 RDEPEND="media-libs/sdl-ttf
 	media-libs/libsdl
 	media-libs/sdl-mixer
-	media-libs/sdl-image
+	media-libs/sdl-image[png]
 	media-libs/libpng
 	>=dev-libs/xerces-c-3
 	net-libs/enet
@@ -24,9 +25,7 @@ RDEPEND="media-libs/sdl-ttf
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	cp /usr/share/gettext/config.rpath .
 	epatch \
 		"${FILESDIR}"/${P}-autotools.patch \
@@ -35,12 +34,11 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		$(use_enable nls) \
 		|| die
-	emake || die "emake failed"
 }
 
 src_install() {
