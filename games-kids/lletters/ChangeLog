@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/lletters
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.20 2008/11/24 16:26:19 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.21 2009/01/12 17:45:17 mr_bones_ Exp $
+
+  12 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  lletters-0.1.95-r2.ebuild:
+  EAPI=2
 
   24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
   Re-assign to games herd.
