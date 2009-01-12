@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kletterwizard
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.27 2008/09/03 11:34:07 opfer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.28 2009/01/12 19:31:20 aballier Exp $
+
+  12 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  kletterwizard-0.9.8.ebuild:
+  Fixup latex-unicode deps: it has been moved to texlive-latexextra for the
+  2008 version.
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   kletterwizard-0.9.7.ebuild, kletterwizard-0.9.8.ebuild:
