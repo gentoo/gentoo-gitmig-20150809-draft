@@ -1,6 +1,6 @@
 # Copyright 2007-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.22 2009/01/12 17:25:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.23 2009/01/12 19:40:34 scarabeus Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -465,30 +465,7 @@ kde4-base_src_unpack() {
 	debug-print-function $FUNCNAME "$@"
 
 	if [[ $BUILD_TYPE = live ]]; then
-		local cleandir
-		cleandir="${ESVN_STORE_DIR}/KDE"
-		if [[ -d "${cleandir}" ]]; then
-			ewarn "'${cleandir}' has been found. Moving contents to new location."
-			addwrite "${ESVN_STORE_DIR}"
-			# Split kdebase
-			local module
-			if pushd "${cleandir}"/kdebase/kdebase > /dev/null; then
-				for module in `find . -maxdepth 1 -type d -name [a-z0-9]\*`; do
-					module="${module#./}"
-					mkdir -p "${ESVN_STORE_DIR}/kdebase-${module}" && mv -f "${module}" "${ESVN_STORE_DIR}/kdebase-${module}" || \
-						die "Failed to move to '${ESVN_STORE_DIR}/kdebase-${module}'."
-				done
-				popd > /dev/null
-				rm -fr "${cleandir}/kdebase" || \
-					die "Failed to remove ${cleandir}/kdebase. You need to remove it manually."
-			fi
-			# Move the rest
-			local pkg
-			for pkg in "${cleandir}"/*; do
-				mv -f "${pkg}" "${ESVN_STORE_DIR}"/ || eerror "failed to move ${pkg}"
-			done
-			rmdir "${cleandir}" || die "Could not move obsolete KDE store dir. Please move '${cleandir}' contents to appropriate location (possibly ${ESVN_STORE_DIR}) and manually remove '${cleandir}' in order to continue."
-		fi
+		migrate_store_dir
 		subversion_src_unpack
 	else
 		[[ -z $KDE_S ]] && KDE_S="${S}"

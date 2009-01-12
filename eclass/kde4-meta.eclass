@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.9 2009/01/12 17:25:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.10 2009/01/12 19:40:34 scarabeus Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -163,7 +163,12 @@ kde4-meta_pkg_setup() {
 kde4-meta_src_unpack() {
 	debug-print-function  ${FUNCNAME} "$@"
 	if [[ $BUILD_TYPE = live ]]; then
-		kde4-base_src_unpack
+		migrate_store_dir
+		S="${WORKDIR}/${PN}-${PV}"
+		mkdir -p "${S}"
+		ESVN_RESTRICT="export" subversion_src_unpack
+		subversion_wc_info
+		subversion_bootstrap
 		kde4-meta_src_extract
 	else
 		kde4-meta_src_extract
