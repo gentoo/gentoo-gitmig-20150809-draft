@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.148 2009/01/12 21:08:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.149 2009/01/12 23:38:52 angelos Exp $
+
+  12 Jan 2009; Christoph Mende <angelos@gentoo.org> mpd-0.14.ebuild:
+  die if no audio outputs were enabled, bug 254731
 
   12 Jan 2009; Christoph Mende <angelos@gentoo.org> mpd-0.14.ebuild:
   Add use_enable for lame, bug 254545
