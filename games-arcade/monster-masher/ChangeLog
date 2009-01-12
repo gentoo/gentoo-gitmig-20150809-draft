@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/monster-masher
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.19 2008/03/20 00:30:30 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monster-masher/ChangeLog,v 1.20 2009/01/12 16:14:38 mr_bones_ Exp $
+
+  12 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  monster-masher-1.8.ebuild:
+  EAPI=2; add use-based dep
 
   20 Mar 2008; Tristan Heaven <nyhm@gentoo.org> monster-masher-1.8.ebuild:
   Add ~amd64 keyword, bug #201801
