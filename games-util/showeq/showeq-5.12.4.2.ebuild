@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.12.4.2.ebuild,v 1.1 2008/08/13 06:11:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-5.12.4.2.ebuild,v 1.2 2009/01/12 19:50:46 tupone Exp $
 
 EAPI=1
 inherit eutils qt3 games
@@ -16,6 +16,12 @@ IUSE=""
 
 DEPEND="virtual/libpcap
 	x11-libs/qt:3"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_compile() {
 	egamesconf \
