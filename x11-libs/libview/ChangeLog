@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libview
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.8 2008/12/31 02:18:51 ikelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.9 2009/01/12 21:41:05 maekke Exp $
+
+  12 Jan 2009; Markus Meier <maekke@gentoo.org> libview-0.6.2.ebuild:
+  amd64/x86 stable, bug #245941
 
   31 Dec 2008; Mike Auty <ikelos@gentoo.org> libview-0.6.2.ebuild:
   Fix up deprecation system (bug 239325).
