@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.54 2009/01/12 15:47:20 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.55 2009/01/12 16:37:17 ranger Exp $
+
+  12 Jan 2009; Brent Baude <ranger@gentoo.org> hunspell-1.2.8.ebuild:
+  Marking hunspell-1.2.8 ppc64 for bug 254634
 
   12 Jan 2009; Ferris McCormick <fmccor@gentoo.org> hunspell-1.2.8.ebuild:
   Sparc stable, Bug # 254634.
