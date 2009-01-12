@@ -1,0 +1,95 @@
+=== modified file 'main.c'
+--- main.c	2008-06-11 02:05:34 +0000
++++ main.c	2008-06-11 11:13:25 +0000
+@@ -1574,6 +1574,9 @@
+   gtk_init (&argc, &argv);
+   gdk_imlib_init();
+ 
++  gtk_widget_push_visual(gdk_imlib_get_visual());
++  gtk_widget_push_colormap(gdk_imlib_get_colormap());
++
+   config_load(argc==2?argv[1]:NULL);
+   select_scene();
+   gtk_main ();
+
+=== modified file 'select.c'
+--- select.c	2008-06-11 02:05:34 +0000
++++ select.c	2008-06-12 13:42:59 +0000
+@@ -229,7 +229,7 @@
+   }
+   free(files1);
+   while (j < count2) free(files2[j++]);
+-  if (count2) free(files2);
++  if (count2 > 0) free(files2);
+ 
+   return table;
+ }
+
+=== modified file 'rc.c'
+--- rc.c	2008-06-11 02:10:01 +0000
++++ rc.c	2008-06-12 14:07:55 +0000
+@@ -271,14 +271,14 @@
+ 
+   if (config.sticker_dir[0] != '/'
+       || config.icon_dir[0] != '/'
+-      || (config.work_dir[0] != '/' && !strcmp(config.work_dir, "./"))) {
++      || (config.work_dir[0] != '/' && strcmp(config.work_dir, "./") != 0)) {
+ 
+     GtkWidget *box, *button;
+ 
+     box=gtk_dialog_new();
+     gtk_signal_connect (GTK_OBJECT (box), "destroy",
+ 			GTK_SIGNAL_FUNC(gtk_widget_destroyed),
+-			&box);
++			GTK_OBJECT(box));
+     gtk_window_set_title (GTK_WINDOW (box), _("Sticker Warning"));
+ 
+     gtk_container_border_width (GTK_CONTAINER (GTK_DIALOG(box)->vbox), 10);
+
+=== modified file 'rc.c'
+--- rc.c	2008-06-11 02:05:34 +0000
++++ rc.c	2008-06-11 02:10:01 +0000
+@@ -440,7 +440,6 @@
+   TRACE("[%p,%p]",wptrs[0],wptrs[1]);
+   s = gtk_font_selection_dialog_get_font_name
+     (GTK_FONT_SELECTION_DIALOG (wptrs[0]));
+-ONTRACE("s=%p", s);
+   if (s) {
+     gtk_entry_set_text(GTK_ENTRY(wptrs[1]), s);
+     g_free(s);
+
+=== modified file 'stickers.h'
+--- stickers.h	2008-06-11 02:05:34 +0000
++++ stickers.h	2008-06-11 14:10:22 +0000
+@@ -95,8 +95,8 @@
+ 
+ #define NOTRACE(x, args...) do { } while(0)
+ #define ONTRACE(format, args...) \
+-  fprintf(stderr, format  "\t##" __FUNCTION__ "(" __FILE__ ":%d)\n" \
+-	  , ## args , __LINE__)
++  fprintf(stderr, format "\t## in %s (%s:%d)\n" , ## args , \
++      __func__, __FILE__, __LINE__)
+ 
+ 
+ 
+
+=== modified file 'main.c'
+--- main.c	2008-06-11 11:13:25 +0000
++++ main.c	2008-06-14 00:34:21 +0000
+@@ -210,7 +210,14 @@
+ 
+ int size2pixel(int percent)
+ {
+-  return (percent * gdk_screen_width() + 50) / 100;
++  /* limit the aspect ratio to 4:3 to stop the window from being too wide
++     on dual monitor setups */
++  gint width = gdk_screen_width();
++  gint height = gdk_screen_height();
++  if (width > (height * 4 / 3)) {
++    width = height * 4 / 3;
++  }
++  return (percent * width + 50) / 100;
+ }
+ 
+ /* Create a picture widget of the given dimension while preserving the
+

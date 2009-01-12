@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/stickers/stickers-0.1.3-r2.ebuild,v 1.4 2009/01/12 16:27:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/stickers/stickers-0.1.3-r2.ebuild,v 1.5 2009/01/12 16:54:04 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils
+inherit base eutils
 
 DESCRIPTION="Stickers Book for small children"
 HOMEPAGE="http://users.powernet.co.uk/kienzle/stickers/"
@@ -25,17 +25,13 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	nls? ( sys-devel/gettext )"
 
-src_prepare() {
-	# gcc34 fix? (bug #72734)
-	sed -i \
-		-e '/ONTRACE/d' rc.c \
-		|| die "sed failed"
-}
+PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
 src_configure() {
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 
+	# not an autoconf script
 	./configure \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
