@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.1 2009/01/12 19:48:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.2 2009/01/12 22:16:59 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -76,4 +76,3 @@ src_configure() {
 		$(cmake-utils_use_with semantic-desktop Soprano)"
 	kde4-base_src_configure
 }
-
