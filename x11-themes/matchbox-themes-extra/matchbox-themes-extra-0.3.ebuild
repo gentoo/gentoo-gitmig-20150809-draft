@@ -1,6 +1,6 @@
-# Copyright 2006-2008 Gentoo Foundation
+# Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/matchbox-themes-extra/matchbox-themes-extra-0.3.ebuild,v 1.5 2008/07/13 07:37:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/matchbox-themes-extra/matchbox-themes-extra-0.3.ebuild,v 1.6 2009/01/12 21:03:43 solar Exp $
 
 inherit versionator
 
@@ -26,5 +26,5 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
 
-	dodoc AUTHORS Changelog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
