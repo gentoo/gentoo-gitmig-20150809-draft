@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ipv6calc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.21 2008/12/28 20:30:14 pva Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.22 2009/01/12 16:41:06 pva Exp $
+
+*ipv6calc-0.72.1 (12 Jan 2009)
+
+  12 Jan 2009; Peter Volkov <pva@gentoo.org>
+  -files/ipv6calc-0.72.0-optional-geoip.patch, -ipv6calc-0.72.0.ebuild,
+  +ipv6calc-0.72.1.ebuild:
+  Version bump. Removed not to became stable version.
 
   28 Dec 2008; Peter Volkov <pva@gentoo.org>
   +files/ipv6calc-0.72.0-optional-geoip.patch, -ipv6calc-0.45.ebuild,
