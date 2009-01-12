@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.1.5.ebuild,v 1.2 2008/12/10 12:26:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.1.5-r2.ebuild,v 1.1 2009/01/12 18:14:25 scarabeus Exp $
 
 EAPI="2"
 
-NEED_KDE="4.1"
+KDE_MINIMAL="4.1"
 KDE_LINGUAS="ca cs da de el es et fr gl it ja lv nb nds nl nn pl pt pt_BR ru sv uk zh_CN zh_TW"
 inherit kde4-base
 
@@ -14,13 +14,16 @@ SRC_URI="http://ktorrent.org/downloads/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-SLOT="4.1"
+SLOT="3"
 IUSE="+bwscheduler +infowidget +ipfilter +logviewer +mediaplayer +scanfolder +search +stats +upnp webinterface"
 
 DEPEND="app-crypt/qca:2
 	dev-libs/gmp
 	sys-devel/gettext
-	!kdeprefix? ( !net-p2p/ktorrent:0 )"
+	!kdeprefix? ( !net-p2p/ktorrent:0 )
+	!net-p2p/ktorrent:4.1"
+# 4.1 blocker is due to slot change. We wont slot based on kde version but based
+# on application version. This was stupid mistake.
 RDEPEND="${DEPEND}
 	infowidget? ( >=dev-libs/geoip-1.4.4 )"
 
