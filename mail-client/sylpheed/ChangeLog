@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/sylpheed
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.270 2008/09/24 08:14:49 aballier Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.271 2009/01/12 17:03:09 hattya Exp $
+
+*sylpheed-2.6.0 (12 Jan 2009)
+
+  12 Jan 2009; Akinori Hattori <hattya@gentoo.org>
+  +files/sylpheed-2.5-enchant.diff, sylpheed-2.4.8.ebuild,
+  sylpheed-2.5.0.ebuild, +sylpheed-2.6.0.ebuild:
+  new upstream release.
 
   24 Sep 2008; Alexis Ballier <aballier@gentoo.org> sylpheed-2.5.0.ebuild:
   keyword ~x86-fbsd thanks to Matt "gfunkmonk" Rinsch <gfunkmonk@gmail.com>,

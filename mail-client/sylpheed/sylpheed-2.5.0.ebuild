@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.5.0.ebuild,v 1.4 2008/09/24 08:14:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.5.0.ebuild,v 1.5 2009/01/12 17:03:09 hattya Exp $
 
 inherit autotools eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-2.*.diff
+	epatch "${FILESDIR}"/${PN}-2.[124]-*.diff
 
 	use crypt || cp ac/missing/gpgme.m4 ac
 
