@@ -1,10 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.9.2.ebuild,v 1.3 2008/12/31 03:29:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.9.2-r1.ebuild,v 1.1 2009/01/12 18:30:12 scarabeus Exp $
 
 EAPI="2"
 
-NEED_KDE="4.1"
 inherit kde4-base
 
 DESCRIPTION="KRename - a very powerful batch file renamer."
