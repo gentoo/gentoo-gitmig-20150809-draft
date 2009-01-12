@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r2.ebuild,v 1.1 2009/01/11 12:09:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/lrzsz/lrzsz-0.12.20-r2.ebuild,v 1.2 2009/01/12 22:17:17 mr_bones_ Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -42,7 +42,7 @@ src_install() {
 	for x in {r,s}{b,x,z} ; do
 		dosym l${x} /usr/bin/${x}
 		dosym l${x:0:1}z.1 /usr/share/man/man1/${x}.1
-		[ "${x:1:1}" = "z" ] || dosym l${x:0:1}z.1 /usr/share/man/man1/l${x}.1 
+		[ "${x:1:1}" = "z" ] || dosym l${x:0:1}z.1 /usr/share/man/man1/l${x}.1
 	done
 
 	dodoc AUTHORS COMPATABILITY ChangeLog NEWS README* THANKS TODO
