@@ -1,6 +1,32 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.573 2009/01/08 21:32:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.574 2009/01/12 19:57:34 zmedico Exp $
+
+*portage-2.2_rc21 (12 Jan 2009)
+
+  12 Jan 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc21.ebuild:
+  2.2_rc21 bump. This includes the fixes that are in 2.1.6.5. Bug #210077
+  tracks all bugs fixed in the 2.2 branch.
+
+*portage-2.1.6.5 (12 Jan 2009)
+
+  12 Jan 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.6.5.ebuild:
+  2.1.6.5 bump. This fixes bug #55321 (profile package.keywords), bug #241808
+  (--resume uses stale --color setting), bug #250469 (userpriv unpack fails
+  with deb2targz), bug #252354 (hardlink support for splitdebug), bug #252727
+  (repoman git support misses files added to index), bug #252840
+  (DeprecationWarning triggers TypeError with python-2.6), bug #252985 (add
+  changes in `emerge <set>` behavior to RELEASE-NOTES), bug #252995 (check
+  news in --pretend mode), bug #253002 (repoman check for non-ASCII in ebuild
+  variables), bug #253210 (AssertionError when package phase fails), bug
+  #253336 (make ebuild(1) show files being merged), bug #253467 ($A corruption
+  due to leakage from calling environment), bug #253563 (fix some hardcoded
+  colors), bug #253745 (add note about disabling file collision protection to
+  RELEASE-NOTES), bug #253800 (updated FETCHCOMMAND in make.conf.example for
+  compatibility with SRC_URI arrows), bug #254114 (ValueError due to invalid
+  COUNTER in installed package), and bug #254421 (socket.error due to
+  unreachable ftp host in PORTAGE_BINHOST). Bug #254662 tracks all bugs fixed
+  since 2.1.6.4.
 
   08 Jan 2009; Zac Medico <zmedico@gentoo.org> portage-2.1.6.4.ebuild:
   Bug #253745 - Warn that you need to ensure that neither protect-owned nor
