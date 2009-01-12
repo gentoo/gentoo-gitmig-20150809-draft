@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-de
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.14 2008/11/03 21:44:55 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.15 2009/01/12 16:12:39 fmccor Exp $
+
+  12 Jan 2009; Ferris McCormick <fmccor@gentoo.org>
+  myspell-de-20080915-r1.ebuild:
+  Sparc stable, Bug #254636.
 
 *myspell-de-20080915-r1 (03 Nov 2008)
 
