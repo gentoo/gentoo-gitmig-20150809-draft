@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.8.126538.ebuild,v 1.2 2008/11/09 21:39:21 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.8.126538.ebuild,v 1.3 2009/01/12 21:49:52 maekke Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -21,7 +21,7 @@ SRC_URI="mirror://vmware/software/vmserver/${FN}.zip"
 LICENSE="vmware"
 IUSE=""
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 RESTRICT="strip"
 
 DEPEND=">=sys-libs/glibc-2.3.5
