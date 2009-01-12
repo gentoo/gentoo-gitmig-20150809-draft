@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/gnome-pilot-conduits-2.0.15.ebuild,v 1.7 2008/06/30 18:27:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/gnome-pilot-conduits-2.0.17.ebuild,v 1.1 2009/01/12 21:53:57 eva Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/GnomePilot"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnome-2.0
@@ -21,3 +21,11 @@ DEPEND="sys-devel/gettext
 
 G2CONF="${G2CONF} --enable-pilotlinktest"
 SCROLLKEEPER_UPDATE="0"
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# fix build failures
+	sed -i "s:pi-md5.h:libpisock/pi-md5.h:g" \
+		mal-conduit/mal/common/AG{Digest,MD5}.c || die "sed failed"
+}
