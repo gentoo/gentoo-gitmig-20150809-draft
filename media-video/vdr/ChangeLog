@@ -1,6 +1,15 @@
 # ChangeLog for media-video/vdr
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.122 2008/11/11 12:25:46 zzam Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.123 2009/01/12 13:23:01 zzam Exp $
+
+  12 Jan 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-dvb-api-5-is-fine.diff, vdr-1.4.6.ebuild, vdr-1.4.7-r10.ebuild,
+  vdr-1.4.7-r11.ebuild, vdr-1.4.7-r12.ebuild, vdr-1.6.0.ebuild,
+  vdr-1.6.0-r1.ebuild, vdr-1.6.0-r2.ebuild, vdr-1.6.0_p1.ebuild,
+  vdr-1.6.0_p1-r1.ebuild, vdr-1.6.0_p2.ebuild:
+  Do not abort compilation wwhen detecting dvb api 5 (headers installed by
+  linux-headers-2.6.28) as that is backward compatible to api version 3, Bug
+  #254269
 
   11 Nov 2008; Matthias Schwarzott <zzam@gentoo.org> vdr-1.4.7-r12.ebuild:
   Mark stable on x86.

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r12.ebuild,v 1.3 2008/11/11 12:25:46 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r12.ebuild,v 1.4 2009/01/12 13:23:01 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -165,6 +165,7 @@ src_unpack() {
 
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/vdr-dvb-api-5-is-fine.diff
 
 	ebegin "Changing pathes for gentoo"
 
