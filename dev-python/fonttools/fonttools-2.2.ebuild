@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.2.ebuild,v 1.4 2008/10/16 10:07:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.2.ebuild,v 1.5 2009/01/12 15:15:32 pva Exp $
 
 inherit distutils
 
@@ -18,6 +18,12 @@ DEPEND="virtual/python
 	dev-python/pyxml"
 
 DOCS="README.txt Doc/*.txt"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed '/data_files/{s:man/man1:share/man/man1:}' -i setup.py #247154
+}
 
 src_install() {
 	distutils_src_install

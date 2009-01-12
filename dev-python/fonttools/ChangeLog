@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/fonttools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.13 2008/10/16 10:07:53 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.14 2009/01/12 15:15:32 pva Exp $
+
+  12 Jan 2009; Peter Volkov <pva@gentoo.org> -fonttools-2.0_beta1.ebuild,
+  -fonttools-2.0_beta1-r1.ebuild, fonttools-2.2.ebuild:
+  Fixed man pages installation path, bug #247154, thank Diego E. 'Flameeyes'
+  Pettenò for report. Removed old.
 
   16 Oct 2008; Raúl Porcel <armin76@gentoo.org> fonttools-2.2.ebuild:
   ia64/x86 stable wrt #241724
