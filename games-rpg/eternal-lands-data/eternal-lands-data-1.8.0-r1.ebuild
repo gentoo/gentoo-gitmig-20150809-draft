@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.8.0.ebuild,v 1.1 2009/01/11 02:37:35 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.8.0-r1.ebuild,v 1.1 2009/01/12 22:06:49 rich0 Exp $
 
 inherit games
 
@@ -50,7 +50,7 @@ src_install() {
 	insopts -m 0660
 	insinto "${GAMES_DATADIR}/${MY_PN}"
 	doins -r 2dobjects 3dobjects actor_defs animations maps meshes \
-		particles skeletons textures tiles languages skybox \
+		particles skeletons textures tiles languages shaders skybox \
 		*.lst 3dobjects.txt *.xml \
 		|| die "doins failed"
 
