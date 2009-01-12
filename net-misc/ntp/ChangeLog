@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.135 2009/01/11 14:22:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.136 2009/01/12 15:44:54 ranger Exp $
+
+  12 Jan 2009; Brent Baude <ranger@gentoo.org> ntp-4.2.4_p6.ebuild:
+  Marking ntp-4.2.4_p6 ppc64 for bug 254098
 
   11 Jan 2009; Guy Martin <gmsoft@gentoo.org> ntp-4.2.4_p6.ebuild:
   hppa stable, #254098
