@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.36 2009/01/12 02:45:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.37 2009/01/12 13:16:35 fmccor Exp $
+
+  12 Jan 2009; Ferris McCormick <fmccor@gentoo.org> coq-8.1_p4.ebuild:
+  Sparc stable, Bug #254073.
 
   12 Jan 2009; Jeremy Olexa <darkside@gentoo.org> coq-8.1_p4.ebuild:
   amd64 stable, bug 254073
