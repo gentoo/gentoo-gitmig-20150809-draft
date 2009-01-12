@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-de
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.15 2009/01/12 16:12:39 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.16 2009/01/12 16:47:29 ranger Exp $
+
+  12 Jan 2009; Brent Baude <ranger@gentoo.org>
+  myspell-de-20080915-r1.ebuild:
+  Marking myspell-de-20080915-r1 ppc64 for bug 254636
 
   12 Jan 2009; Ferris McCormick <fmccor@gentoo.org>
   myspell-de-20080915-r1.ebuild:
