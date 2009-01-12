@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/europecv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.27 2009/01/08 19:32:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.28 2009/01/12 19:27:58 aballier Exp $
+
+  12 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  europecv-20060424-r1.ebuild:
+  Fixup latex-unicode deps: it has been moved to texlive-latexextra for the
+  2008 version.
 
   08 Jan 2009; Jeroen Roovers <jer@gentoo.org> europecv-20060424-r1.ebuild:
   Stable for HPPA (bug #254089).
