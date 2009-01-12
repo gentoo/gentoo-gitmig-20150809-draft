@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.ebuild,v 1.5 2009/01/12 23:38:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.ebuild,v 1.6 2009/01/12 23:41:36 angelos Exp $
 
 EAPI=2
 
@@ -48,7 +48,7 @@ pkg_setup() {
 		ewarn "USE=icecast enabled but lame and vorbis disabled,"
 		ewarn "disabling icecast"
 	fi
-	
+
 	enewuser mpd "" "" "/var/lib/mpd" audio
 }
 
@@ -59,7 +59,6 @@ src_prepare() {
 
 src_configure() {
 	local myconf=""
-
 
 	if ! use alsa && ! use ao && ! use icecast && ! use jack && ! use oss && \
 		! use pulseaudio; then
@@ -73,7 +72,7 @@ src_configure() {
 		einfo "USE=pulseaudio - output via media-sound/pulseaudio"
 		die "No audio output enabled"
 	fi
-		
+
 	if use icecast; then
 		myconf+=" $(use_enable vorbis shout_ogg) $(use_enable lame shout_mp3)
 			$(use_enable lame lametest) $(use_enable lame)"
