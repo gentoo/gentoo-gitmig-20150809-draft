@@ -1,6 +1,11 @@
 # ChangeLog for net-im/amsn
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.82 2008/08/08 18:55:40 nixnut Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.83 2009/01/12 05:59:58 tester Exp $
+
+  12 Jan 2009; Olivier Crête <tester@gentoo.org>
+  -files/amsn-0.96-dos.patch, -files/amsn-0.97_rc1-autoconf-logic.patch,
+  -amsn-0.96-r1.ebuild, -amsn-0.97.ebuild:
+  Cleanup old versions
 
   08 Aug 2008; nixnut <nixnut@gentoo.org> amsn-0.97.2.ebuild:
   Stable on ppc wrt bug 234105
