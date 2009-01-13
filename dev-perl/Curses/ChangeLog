@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Curses
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.46 2008/12/08 02:09:07 robbat2 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.47 2009/01/13 19:37:28 robbat2 Exp $
+
+*Curses-1.26 (13 Jan 2009)
+
+  13 Jan 2009; Robin H. Johnson <robbat2@gentoo.org> +Curses-1.26.ebuild:
+  Version bump.
 
 *Curses-1.24 (08 Dec 2008)
 
