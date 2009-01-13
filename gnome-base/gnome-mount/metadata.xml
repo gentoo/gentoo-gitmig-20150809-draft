@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome</herd>
-<herd>gentopia</herd>
+<herd>freedesktop</herd>
 <use>
 	<flag name='nautilus'>Enables the Nautilus plugin</flag>
 </use>
