@@ -1,6 +1,18 @@
 # ChangeLog for net-www/vdradmin-am
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.29 2009/01/05 21:02:19 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.30 2009/01/13 18:00:02 hd_brummy Exp $
+
+  13 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org> files/vdradmin-4,
+  metadata.xml, +vdradmin-am-3.6.4-r1.ebuild:
+  bug #171947; added version to run vdradmin-am on a vdr-less install, use
+  -vdr then
+
+*vdradmin-am-3.6.4-r1 (07 Jan 2009)
+
+  07 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org> files/vdradmin-4,
+  +vdradmin-am-3.6.4-r1.ebuild:
+  #171947 vdradmin-am can now install on vdr-less system if use-flag vdr is
+  disabled; using EAPI to enable use-flag vdr by default
 
 *vdradmin-am-3.6.4 (05 Jan 2009)
 
