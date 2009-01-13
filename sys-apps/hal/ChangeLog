@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.262 2009/01/06 13:43:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.263 2009/01/13 15:19:54 cardoe Exp $
+
+  13 Jan 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  gentopia is becoming freedesktop
 
 *hal-0.5.11-r6 (06 Jan 2009)
 
