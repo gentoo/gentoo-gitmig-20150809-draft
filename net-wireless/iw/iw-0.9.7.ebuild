@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.7.ebuild,v 1.1 2009/01/07 15:09:31 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.7.ebuild,v 1.2 2009/01/13 21:05:41 rbu Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/libnl
+DEPEND=">=dev-libs/libnl-1.1
 	dev-util/pkgconfig"
-RDEPEND="dev-libs/libnl"
+RDEPEND=">=dev-libs/libnl-1.1"
 
 CC=$(tc-getCC)
 LD=$(tc-getLD)
