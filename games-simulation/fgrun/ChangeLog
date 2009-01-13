@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/fgrun
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/ChangeLog,v 1.5 2008/11/14 18:46:00 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/fgrun/ChangeLog,v 1.6 2009/01/13 02:09:58 mr_bones_ Exp $
+
+  13 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> fgrun-1.0.0.ebuild:
+  EAPI=2; add use-based dep
 
   14 Nov 2008; Santiago M. Mola <coldwind@gentoo.org> fgrun-1.0.0.ebuild:
   Restrict fltk dependency to SLOT 1.1 (bug #246445).
