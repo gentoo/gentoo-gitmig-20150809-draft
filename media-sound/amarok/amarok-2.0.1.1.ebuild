@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.4 2009/01/13 14:40:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.5 2009/01/13 15:07:05 alexxy Exp $
 
 EAPI="2"
 
@@ -45,6 +45,23 @@ DEPEND=">=app-misc/strigi-0.5.7
 RDEPEND="${DEPEND}
 	app-arch/unzip
 	daap? ( www-servers/mongrel )"
+
+pkg_setup() {
+	if use amd64 ; then
+		ewarn
+		ewarn "Compilation will fail if dev-db/mysql[-community] is built without -fPIC in your CFLAGS!"
+		ewarn "Related bug: http://bugs.gentoo.org/show_bug.cgi?id=238487"
+		ewarn
+		ewarn "To fix this, and to avoid using -fPIC globally in your make.conf	(which is not recommended),"
+		ewarn "put the following into /etc/portage/env/dev-db/mysql (or	mysql-community, depending on which you use;"
+		ewarn "create dirs and the file if they don't exist):"
+		ewarn
+		ewarn "CFLAGS=\"${CFLAGS} -DPIC -fPIC\""
+		ewarn "CXXFLAGS=\"${CXXFLAGS} -DPIC -fPIC\""
+		ewarn
+	fi
+	kde4-base_pkg_setup
+}
 
 src_configure() {
 	if use debug; then
