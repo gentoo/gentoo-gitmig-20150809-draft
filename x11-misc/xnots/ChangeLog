@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xnots
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.3 2009/01/08 22:30:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnots/ChangeLog,v 1.4 2009/01/13 00:58:43 nelchael Exp $
+
+*xnots-0.2.1 (13 Jan 2009)
+
+  13 Jan 2009; <nelchael@gentoo.org> +xnots-0.2.1.ebuild:
+  Version bump, bug #254594, ebuild improved by Gautam Iyer.
 
   08 Jan 2009; <nelchael@gentoo.org> xnots-0.2.ebuild:
   Depend on pango with X use flag enabled.
