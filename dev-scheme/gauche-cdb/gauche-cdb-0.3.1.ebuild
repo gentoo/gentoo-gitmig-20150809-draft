@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/gauche-cdb-0.3.1.ebuild,v 1.8 2008/06/19 15:24:04 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/gauche-cdb-0.3.1.ebuild,v 1.9 2009/01/13 13:48:41 hattya Exp $
 
 inherit autotools eutils
 
@@ -24,8 +24,6 @@ src_unpack() {
 
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}"/${P}-tinycdb.diff
 
 	if has_version '>=dev-scheme/gauche-0.8'; then
 		epatch "${FILESDIR}"/${P}-gpd.diff
