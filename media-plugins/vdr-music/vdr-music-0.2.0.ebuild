@@ -1,6 +1,6 @@
-# Copyright 2003-2008 Gentoo Foundation
+# Copyright 2003-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/vdr-music-0.2.0.ebuild,v 1.3 2008/06/22 17:25:17 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/vdr-music-0.2.0.ebuild,v 1.4 2009/01/13 20:54:17 zzam Exp $
 
 inherit vdr-plugin
 
@@ -13,9 +13,10 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE="imagemagick debug vorbis oss ff-card graphtft 4mb-mod sndfile"
 
-PATCHES="${FILESDIR}/${P}-gentoo.diff
-	${FILESDIR}/${P}-vdr-1.5.x.diff
-	${FILESDIR}/${P}-lyrics.diff"
+PATCHES=("${FILESDIR}/${P}-gentoo.diff"
+	"${FILESDIR}/${P}-vdr-1.5.x.diff"
+	"${FILESDIR}/${P}-lyrics.diff"
+	"${FILESDIR}/${P}-gcc4.3.diff")
 
 DEPEND=">=media-video/vdr-1.3.30
 	media-libs/libmad
