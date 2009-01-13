@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/consolekit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.34 2008/12/09 12:44:56 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.35 2009/01/13 15:47:20 cardoe Exp $
+
+  13 Jan 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  gentopia is becoming freedesktop
 
   09 Dec 2008; Alexis Ballier <aballier@gentoo.org>
   consolekit-0.2.10.ebuild:
