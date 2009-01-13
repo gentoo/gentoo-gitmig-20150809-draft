@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/daimonin-client
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.18 2007/05/29 21:19:42 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/daimonin-client/ChangeLog,v 1.19 2009/01/13 02:34:45 mr_bones_ Exp $
+
+  13 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  daimonin-client-0.9.7.ebuild:
+  EAPI=2; add use-based deps (bug #247458)
 
 *daimonin-client-0.9.7 (29 May 2007)
 
