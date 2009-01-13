@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.5.1.ebuild,v 1.5 2008/06/29 10:53:17 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.5.1.ebuild,v 1.6 2009/01/13 01:01:10 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -23,6 +23,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-glibc29.patch
 	# Fix paths
 	sed -i \
 		-e 's:\$(datadir)/kobo-deluxe:$(datadir)/kobodeluxe:' \
