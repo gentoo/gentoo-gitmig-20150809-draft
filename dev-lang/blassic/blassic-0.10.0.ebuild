@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/blassic-0.10.0.ebuild,v 1.11 2008/12/17 22:32:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/blassic-0.10.0.ebuild,v 1.12 2009/01/13 17:10:29 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="classic Basic interpreter"
 HOMEPAGE="http://blassic.org"
@@ -33,6 +35,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS NEWS README THANKS TODO
 }
