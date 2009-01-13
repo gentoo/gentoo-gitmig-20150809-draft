@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdetoys-meta
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.99 2008/11/16 10:13:42 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.100 2009/01/13 23:45:33 alexxy Exp $
+
+*kdetoys-meta-4.1.4 (13 Jan 2009)
+
+  13 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdetoys-meta-4.1.4.ebuild:
+  Bump kde to 4.1.4
 
   16 Nov 2008; Patrick Lauer <patrick@gentoo.org> Manifest:
   Fixing Manifest
