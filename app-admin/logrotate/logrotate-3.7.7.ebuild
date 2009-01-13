@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.7.ebuild,v 1.1 2008/12/24 20:49:12 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.7.ebuild,v 1.2 2009/01/13 21:52:35 dang Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -36,6 +36,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-datehack.patch
 	epatch ${FILESDIR}/${P}-ignore-hidden.patch
 	epatch ${FILESDIR}/${P}-weekly.patch
+	epatch ${FILESDIR}/${P}-fbsd.patch
 }
 
 src_compile() {

@@ -1,0 +1,22 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN logrotate-3.7.7.orig/config.c logrotate-3.7.7/config.c
+--- logrotate-3.7.7.orig/config.c	2008-05-09 03:28:59.000000000 -0400
++++ logrotate-3.7.7/config.c	2009-01-13 16:48:13.000000000 -0500
+@@ -1,5 +1,7 @@
+ #include <sys/queue.h>
++#ifndef NO_ALLOCA_H
+ #include <alloca.h>
++#endif /* NO_ALLOCA_H */
+ #include <ctype.h>
+ #include <dirent.h>
+ #include <errno.h>
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN logrotate-3.7.7.orig/logrotate.c logrotate-3.7.7/logrotate.c
+--- logrotate-3.7.7.orig/logrotate.c	2008-05-14 06:31:35.000000000 -0400
++++ logrotate-3.7.7/logrotate.c	2009-01-13 16:48:12.000000000 -0500
+@@ -1,5 +1,7 @@
+ #include <sys/queue.h>
++#ifndef NO_ALLOCA_H
+ #include <alloca.h>
++#endif /* NO_ALLOCA_H */
+ #include <ctype.h>
+ #include <dirent.h>
+ #include <errno.h>

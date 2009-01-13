@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logrotate
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.73 2008/12/24 20:49:12 dang Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.74 2009/01/13 21:52:35 dang Exp $
+
+  13 Jan 2009; Daniel Gryniewicz <dang@gentoo.org>
+  +files/logrotate-3.7.7-fbsd.patch, logrotate-3.7.7.ebuild:
+  re-add missed fbsd patch. Bug #254795
 
 *logrotate-3.7.7 (24 Dec 2008)
 
