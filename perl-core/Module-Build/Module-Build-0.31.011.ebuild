@@ -1,11 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/Module-Build-0.31011.ebuild,v 1.1 2009/01/13 20:20:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/Module-Build-0.31.011.ebuild,v 1.1 2009/01/13 20:49:40 tove Exp $
 
 inherit versionator
 MODULE_AUTHOR=EWILHELM
-MY_PN=Module-Build
-MY_P=${MY_PN}-$(delete_version_separator 2)
+MY_P=${PN}-$(delete_version_separator 2)
 S=${WORKDIR}/${MY_P}
 inherit perl-module
 
@@ -27,7 +26,3 @@ DEPEND="dev-lang/perl
 	>=virtual/perl-Archive-Tar-1.09"
 
 SRC_TEST="do"
-
-src_test(){
-	HOME= perl-module_src_test
-}
