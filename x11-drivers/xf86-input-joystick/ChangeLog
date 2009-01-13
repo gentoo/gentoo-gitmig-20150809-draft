@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-joystick
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.57 2008/09/24 00:06:38 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.58 2009/01/13 03:03:17 dberkholz Exp $
+
+*xf86-input-joystick-1.4.0 (13 Jan 2009)
+
+  13 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-input-joystick-1.4.0.ebuild:
+  Bump. Adds support for some device properties for dynamic reconfiguration.
+  Works with Multi-Pointer X.
 
 *xf86-input-joystick-1.3.3 (24 Sep 2008)
 
