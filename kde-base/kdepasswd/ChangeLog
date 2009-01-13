@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepasswd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.105 2008/11/16 10:27:52 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.106 2009/01/13 21:44:53 alexxy Exp $
+
+*kdepasswd-4.1.4 (13 Jan 2009)
+
+  13 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> +kdepasswd-4.1.4.ebuild:
+  Bump to 4.1.4
 
   16 Nov 2008; Patrick Lauer <patrick@gentoo.org> ChangeLog:
   Digest fix

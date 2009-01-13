@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/umbrello
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.99 2008/11/16 08:29:40 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.100 2009/01/13 23:36:28 alexxy Exp $
+
+*umbrello-4.1.4 (13 Jan 2009)
+
+  13 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> +umbrello-4.1.4.ebuild:
+  Bump to 4.1.4
 
   15 Nov 2008; Mike Frysinger <vapier@gentoo.org> umbrello-4.1.3.ebuild:
   Add ppc/ppc64 love #244306.
