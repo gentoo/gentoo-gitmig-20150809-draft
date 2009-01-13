@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.373 2008/12/16 19:45:58 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.374 2009/01/13 22:29:06 remi Exp $
+
+*xorg-server-1.5.3-r1 (13 Jan 2009)
+
+  13 Jan 2009; Rémi Cardona <remi@gentoo.org> +xorg-server-1.5.3-r1.ebuild:
+  include patches from upstream's server-1.5-branch and backport more EXA
+  fixes (including one for bug #251242)
 
   16 Dec 2008; Brent Baude <ranger@gentoo.org> xorg-server-1.5.3.ebuild:
   Marking xorg-server-1.5.3 ~ppc64 for bug 237411
