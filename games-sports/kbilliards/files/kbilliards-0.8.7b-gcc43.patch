@@ -1,0 +1,10 @@
+--- src/aiplayer.cpp.old        2009-01-13 16:15:19.000000000 +0100
++++ src/aiplayer.cpp    2009-01-13 16:15:46.000000000 +0100
+@@ -21,6 +21,7 @@
+ #include <iostream>
+ #include <sstream>
+
++#include <cstdlib>
+
+ #include <qnamespace.h>
+ #include <qpen.h>
