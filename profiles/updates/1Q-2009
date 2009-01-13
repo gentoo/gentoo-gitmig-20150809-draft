@@ -1,1 +1,2 @@
 move media-gfx/icns2png media-libs/libicns
+move net-libs/icee dev-cpp/IceE
