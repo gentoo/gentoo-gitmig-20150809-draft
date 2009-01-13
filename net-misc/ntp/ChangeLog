@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.136 2009/01/12 15:44:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.137 2009/01/13 11:08:33 armin76 Exp $
+
+  13 Jan 2009; Raúl Porcel <armin76@gentoo.org> ntp-4.2.4_p6.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #254098
 
   12 Jan 2009; Brent Baude <ranger@gentoo.org> ntp-4.2.4_p6.ebuild:
   Marking ntp-4.2.4_p6 ppc64 for bug 254098
