@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.0.ebuild,v 1.2 2009/01/04 13:34:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.0.ebuild,v 1.3 2009/01/13 08:41:29 fauli Exp $
 
 inherit eutils multilib
 
@@ -45,11 +45,15 @@ RDEPEND="${COMMONDEPEND}
 PLUGIN_NAMES="acpi-notifier archive att-remover attachwarner cachesaver fetchinfo gtkhtml mailmbox newmail notification perl rssyl spam_report tnef_parse vcalendar"
 
 src_compile() {
-	local myconf="--disable-libetpan"
+	local myconf="--disable-libetpan --disable-gnutls"
 
 	# libetpan is needed if user wants nntp or imap functionality
-	use imap && myconf="--enable-libetpan"
-	use nntp && myconf="--enable-libetpan"
+	use imap && myconf="${myconf} --enable-libetpan"
+	use nntp && myconf="${myconf} --enable-libetpan"
+	# The usage of openssl was discarded once and USE=ssl is mapped to
+	# USE=gnutls now.  Maybe USE=ssl can fade out sometime
+	use ssl && myconf="${myconf} --enable-gnutls"
+	use gnutls && myconf="${myconf} --enable-gnutls"
 
 	econf \
 		$(use_enable gnome gnomeprint) \
@@ -58,8 +62,6 @@ src_compile() {
 		$(use_enable dbus) \
 		$(use_enable pda jpilot) \
 		$(use_enable spell enchant) \
-		$(use_enable gnutls) \
-		$(use_enable ssl gnutls) \
 		$(use_enable xface compface) \
 		$(use_enable doc manual) \
 		$(use_enable startup-notification) \
