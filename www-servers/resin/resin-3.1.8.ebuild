@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.8.ebuild,v 1.1 2009/01/10 15:11:35 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.1.8.ebuild,v 1.2 2009/01/13 21:12:03 nelchael Exp $
 
 EAPI="1"
 
@@ -43,15 +43,12 @@ JAVA_PKG_BSFIX="off"
 src_unpack() {
 
 	unpack ${A}
+
+	cd "${S}"
 	for i in "${WORKDIR}"/${PV}/resin-${PV}-*; do
 		epatch "${i}"
 	done;
 
-	java-ant_bsfix_one "${S}/build.xml"
-
-	sed -i -e 's/256m/384m/' "${S}/build.xml"
-
-	cd "${S}"
 	eautoreconf
 
 }
