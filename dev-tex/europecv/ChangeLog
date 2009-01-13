@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/europecv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.29 2009/01/12 20:12:01 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.30 2009/01/13 11:11:24 armin76 Exp $
+
+  13 Jan 2009; Raúl Porcel <armin76@gentoo.org>
+  europecv-20060424-r1.ebuild:
+  alpha/ia64 stable wrt #254089
 
   12 Jan 2009; Ferris McCormick <fmccor@gentoo.org>
   europecv-20060424-r1.ebuild:
