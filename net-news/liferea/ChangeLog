@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.164 2008/12/23 17:11:45 dang Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.165 2009/01/13 14:52:42 dang Exp $
+
+  13 Jan 2009; Daniel Gryniewicz <dang@gentoo.org> liferea-1.4.23.ebuild:
+  Default to xulrunner. Bug #254754
 
 *liferea-1.4.23 (23 Dec 2008)
 

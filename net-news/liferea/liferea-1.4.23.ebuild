@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.23.ebuild,v 1.1 2008/12/23 17:11:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.23.ebuild,v 1.2 2009/01/13 14:52:42 dang Exp $
 
 WANT_AUTOMAKE=1.9
 inherit gnome2 eutils autotools
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 # Can't add webkit until there's a masked use flag for it's keyworded
 # webkit
-IUSE="dbus gtkhtml gnutls libnotify lua networkmanager webkit xulrunner"
+IUSE="dbus gtkhtml gnutls libnotify lua networkmanager webkit +xulrunner"
 
 RDEPEND="
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
