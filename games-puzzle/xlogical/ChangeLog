@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xlogical
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/ChangeLog,v 1.4 2008/05/04 21:08:55 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/ChangeLog,v 1.5 2009/01/13 02:02:32 mr_bones_ Exp $
+
+  13 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  xlogical-1.0.7.ebuild:
+  EAPI=2; add use-based deps (bug #209009); add alternate graphics support
 
   04 May 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/xlogical-1.0.7-gcc43.patch, xlogical-1.0.7.ebuild:

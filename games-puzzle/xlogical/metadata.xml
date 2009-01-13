@@ -6,4 +6,7 @@
 XLogical is a puzzle game based on the Logical! game that was originally
 released by Rainbow Arts on the Commodore Amiga computer.
 </longdescription>
+  <use>
+    <flag name="alt_gfx">Use alternate graphics which are closer to the original Amiga version</flag>
+  </use>
 </pkgmetadata>
