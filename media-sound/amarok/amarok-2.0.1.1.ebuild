@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.2 2009/01/12 22:16:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.3 2009/01/13 13:01:23 alexxy Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://amarok.kde.org/"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 SLOT="2"
-IUSE="cdaudio daap debug ifp ipod mp3tunes mp4 mtp njb +semantic-desktop"
+IUSE="daap debug ifp ipod mp3tunes mp4 mtp njb +semantic-desktop"
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 
 DEPEND=">=app-misc/strigi-0.5.7
@@ -29,10 +29,6 @@ DEPEND=">=app-misc/strigi-0.5.7
 	>=kde-base/kdelibs-${KDE_MINIMAL}[opengl?,semantic-desktop?]
 	>=kde-base/plasma-workspace-${KDE_MINIMAL}
 	x11-libs/qt-webkit:4
-	cdaudio? (
-		>=kde-base/libkcompactdisc-${KDE_MINIMAL}
-		>=kde-base/libkcddb-${KDE_MINIMAL}
-	)
 	ifp? ( media-libs/libifp )
 	ipod? ( >=media-libs/libgpod-0.4.2 )
 	mp3tunes? (

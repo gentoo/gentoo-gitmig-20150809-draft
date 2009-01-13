@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.295 2009/01/12 19:48:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.296 2009/01/13 13:01:23 alexxy Exp $
+
+  13 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> amarok-2.0.1.1.ebuild:
+  cdaudio support removed from amarok by upstream
 
 *amarok-2.0.1.1 (12 Jan 2009)
 
