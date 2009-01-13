@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pstricks/texlive-pstricks-2007.ebuild,v 1.16 2008/09/09 18:38:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pstricks/texlive-pstricks-2007.ebuild,v 1.17 2009/01/13 08:13:34 aballier Exp $
 
 TEXLIVE_MODULES_DEPS="dev-texlive/texlive-basic
 "
@@ -13,3 +13,4 @@ LICENSE="GPL-2 LPPL-1.3c"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
+RDEPEND="dev-texlive/texlive-genericrecommended"
