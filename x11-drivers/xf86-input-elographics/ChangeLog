@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-elographics
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-elographics/ChangeLog,v 1.34 2008/07/05 06:30:21 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-elographics/ChangeLog,v 1.35 2009/01/13 02:57:23 dberkholz Exp $
+
+*xf86-input-elographics-1.2.3 (13 Jan 2009)
+
+  13 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-input-elographics-1.2.3.ebuild:
+  Bump. Fix build, support Model option, work with Sunit dSeries, work right
+  with new servers.
 
 *xf86-input-elographics-1.2.2 (05 Jul 2008)
 
