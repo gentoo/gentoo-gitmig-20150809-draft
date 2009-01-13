@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.87 2008/06/22 16:49:26 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.88 2009/01/13 23:01:06 remi Exp $
+
+  13 Jan 2009; Rémi Cardona <remi@gentoo.org> xdm-1.1.8.ebuild:
+  remove xprint support (see bug #254874)
 
   22 Jun 2008; Thomas Anderson <gentoofan23@gentoo.org> xdm-1.1.6-r1.ebuild:
   Marked ~amd64, bug #211014
