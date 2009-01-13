@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-en
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/ChangeLog,v 1.16 2009/01/12 16:48:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/ChangeLog,v 1.17 2009/01/13 11:12:37 armin76 Exp $
+
+  13 Jan 2009; Raúl Porcel <armin76@gentoo.org> myspell-en-20081002.ebuild:
+  alpha/ia64/x86 stable wrt #254636
 
   12 Jan 2009; Brent Baude <ranger@gentoo.org> myspell-en-20081002.ebuild:
   Marking myspell-en-20081002 ppc64 for bug 254636
