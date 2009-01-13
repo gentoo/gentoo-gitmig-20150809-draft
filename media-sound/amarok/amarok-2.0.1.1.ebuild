@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.3 2009/01/13 13:01:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.4 2009/01/13 14:40:22 alexxy Exp $
 
 EAPI="2"
 
@@ -21,8 +21,8 @@ SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 
 DEPEND=">=app-misc/strigi-0.5.7
 	|| (
-		>=dev-db/mysql-5.0[embedded]
-		>=dev-db/mysql-community-5.0[embedded]
+		>=dev-db/mysql-5.0[embedded,-minimal]
+		>=dev-db/mysql-community-5.0[embedded,-minimal]
 	)
 	>=media-libs/taglib-1.5
 	|| ( media-sound/phonon x11-libs/qt-phonon:4 )
