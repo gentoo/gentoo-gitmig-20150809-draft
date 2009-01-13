@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-lt
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-lt/ChangeLog,v 1.2 2007/11/03 22:14:48 uberlord Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-lt/ChangeLog,v 1.3 2009/01/13 16:33:52 tcunha Exp $
+
+  13 Jan 2009; Tiago Cunha <tcunha@gentoo.org> aspell-lt-1.0.1.ebuild:
+  keyworded ~arch for sparc, bug 254425
 
   03 Nov 2007; Roy Marples <uberlord@gentoo.org> aspell-lt-1.0.1.ebuild:
   Keyworded ~sparc-fbsd and ~x86-fbsd
