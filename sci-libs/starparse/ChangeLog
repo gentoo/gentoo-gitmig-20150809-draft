@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/starparse
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/starparse/ChangeLog,v 1.1 2009/01/13 06:24:14 dberkholz Exp $
+
+*starparse-0.9 (13 Jan 2009)
+
+  13 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +starparse-0.9.ebuild:
+  New package: Library for parsing NMR star files (peak-list format) and CIF
+  files. Dependency of sci-chemistry/burrow-owl.
+
