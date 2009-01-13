@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.5.2.ebuild,v 1.1 2008/07/09 14:30:18 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.6.3.ebuild,v 1.1 2009/01/13 12:42:21 rbu Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -16,7 +16,7 @@ IUSE="doc"
 
 RDEPEND=">=virtual/jre-1.5"
 DEPEND="net-im/jabber-base
-		dev-java/ant-contrib
+		~dev-java/ant-contrib-1.0_beta2
 		>=virtual/jdk-1.5"
 
 S=${WORKDIR}/${PN}_src
@@ -29,6 +29,10 @@ PROVIDE="virtual/jabber-server"
 pkg_setup() {
 	if [ -f /etc/env.d/98openfire ]; then
 		einfo "This is an upgrade"
+		ewarn "As the plugin API changed, at least these plugins need to be updated also:"
+		ewarn "User Search, IM Gateway, Fastpath, Monitoring"
+		ewarn "hey can be downloaded via Admin Console or at"
+		ewarn "${HOMEPAGE}"
 	else
 		ewarn "If this is an upgrade stop right ( CONTROL-C ) and run the command:"
 		ewarn "echo 'CONFIG_PROTECT=\"/opt/openfire/resources/security/\"' > /etc/env.d/98openfire "
@@ -101,4 +105,6 @@ pkg_postinst() {
 	ewarn If you are upgrading please have a look at the Wildfire to Openfire Upgrade Guide:
 	ewarn http://wiki.igniterealtime.org/display/WILDFIRE/Wildfire+to+Openfire+Upgrade+Guide
 	ewarn
+	ewarn Also there is a known issue about IQ Packets and connection drops
+	ewarn see http://www.igniterealtime.org/issues/browse/JM-1465 for details
 }
