@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/pacmanarena
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/ChangeLog,v 1.13 2007/02/14 10:46:34 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/ChangeLog,v 1.14 2009/01/13 02:07:19 mr_bones_ Exp $
+
+  13 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  pacmanarena-0.15.ebuild:
+  EAPI=2; add use-based dep (bug #207401)
 
   14 Feb 2007; Tristan Heaven <nyhm@gentoo.org> pacmanarena-0.15.ebuild:
   Install menu entry, bug #160241
