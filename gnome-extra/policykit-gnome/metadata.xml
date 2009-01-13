@@ -5,8 +5,6 @@
 		<email>compnerd@gentoo.org</email>
 		<name>Saleem Abdulrasool</name>
 	</maintainer>
-	<herd>gentopia</herd>
-	<longdescription lang="en">
-	</longdescription>
+	<herd>freedesktop</herd>
 </pkgmetadata>
 
