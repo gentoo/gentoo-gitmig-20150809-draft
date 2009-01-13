@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.6.2.ebuild,v 1.4 2009/01/13 18:26:59 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.6.2.ebuild,v 1.5 2009/01/13 19:21:37 ranger Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.sqlite.org/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="debug doc soundex tcl +threadsafe"
 RESTRICT="!tcl? ( test )"
 
