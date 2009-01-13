@@ -1,26 +1,25 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r2.ebuild,v 1.17 2008/03/15 23:17:20 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2007e.ebuild,v 1.1 2009/01/13 17:45:03 dertobi123 Exp $
 
 inherit eutils flag-o-matic
 
 MY_P="imap-${PV}"
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="UW server daemons for IMAP and POP network mail protocols."
 SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 HOMEPAGE="http://www.washington.edu/imap/"
 
-LICENSE="as-is"
+LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ipv6 ssl kerberos clearpasswd"
 
 PROVIDE="virtual/imapd"
 PROVIDE="${PROVIDE} virtual/imap-c-client"
 DEPEND="!net-mail/vimap
 	!virtual/imap-c-client
-	>=net-mail/uw-mailutils-2004g
 	virtual/libc
 	>=sys-libs/pam-0.72
 	>=net-mail/mailbase-0.00-r8
@@ -28,6 +27,7 @@ DEPEND="!net-mail/vimap
 	kerberos? ( virtual/krb5 )"
 
 RDEPEND="${DEPEND}
+	>=net-mail/uw-mailutils-${PV}
 	sys-apps/xinetd
 	!virtual/imapd"
 
@@ -164,7 +164,7 @@ src_install() {
 	cd "${S}"
 
 	insinto /usr/include/imap
-	doins c-client/{c-client,flstring,mail,imap4r1,rfc822,misc,smtp,nntp}.h
+	doins c-client/{c-client,flstring,mail,imap4r1,rfc822,misc,smtp,nntp,utf8,utf8aux}.h
 	doins c-client/linkage.{c,h}
 	doins c-client/{osdep,env_unix,env,fs,ftl,nl,tcp}.h
 	dolib.a c-client/c-client.a
@@ -173,7 +173,7 @@ src_install() {
 	doman src/ipopd/ipopd.8 src/imapd/imapd.8
 	doman src/dmail/dmail.1 src/tmail/tmail.1
 
-	dodoc CPYRIGHT README docs/*.txt docs/CONFIG docs/RELNOTES
+	dodoc README docs/*.txt docs/CONFIG docs/RELNOTES
 
 	docinto rfc
 	dodoc docs/rfc/*.txt
