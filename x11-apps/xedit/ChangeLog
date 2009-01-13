@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xedit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.21 2008/03/24 14:03:05 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.22 2009/01/13 02:47:48 dberkholz Exp $
+
+*xedit-1.1.2 (13 Jan 2009)
+
+  13 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; +xedit-1.1.2.ebuild:
+  Bump. Way too many changes for a package that should be dead. Make ispell
+  interface work correctly again. Add perl and "auto tools" modes. Add
+  python mode. Assorted bugfixes.
 
   24 Mar 2008; Markus Meier <maekke@gentoo.org> xedit-1.0.2.ebuild:
   amd64 stable, bug #202087
