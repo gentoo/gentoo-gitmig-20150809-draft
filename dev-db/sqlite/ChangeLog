@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqlite
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.203 2008/12/04 19:37:42 betelgeuse Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.204 2009/01/13 17:50:43 betelgeuse Exp $
+
+*sqlite-3.6.8 (13 Jan 2009)
+
+  13 Jan 2009; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.6.8.ebuild:
+  Version bump. Fixes bug #251461.
 
   04 Dec 2008; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.6.6.2.ebuild:
   Add link to upstream bug on doc naming schema.
