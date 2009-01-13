@@ -1,6 +1,9 @@
 # ChangeLog for games-board/crafty
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.31 2009/01/03 17:48:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.32 2009/01/13 01:43:00 mr_bones_ Exp $
+
+  13 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> crafty-22.8.ebuild:
+  newer gcc uses -pthread (bug #254689)
 
 *crafty-22.8 (03 Jan 2009)
 
