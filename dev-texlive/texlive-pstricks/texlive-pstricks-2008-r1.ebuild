@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pstricks/texlive-pstricks-2008-r1.ebuild,v 1.1 2008/11/06 20:04:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pstricks/texlive-pstricks-2008-r1.ebuild,v 1.2 2009/01/13 08:19:51 aballier Exp $
 
 TEXLIVE_MODULE_CONTENTS="auto-pst-pdf makeplot pdftricks pst-2dplot pst-3d pst-3dplot pst-asr pst-bar pst-barcode pst-blur pst-circ pst-coil pst-cox pst-dbicons pst-diffraction pst-eps pst-eucl pst-fill pst-fr3d pst-fractal pst-fun pst-func pst-geo pst-ghsb pst-gr3d pst-grad pst-infixplot pst-jtree pst-labo pst-lens pst-light3d pst-math pst-ob3d pst-optexp pst-optic pst-osci pst-pad pst-pdgr pst-poly pst-qtree pst-slpe pst-spectra pst-stru pst-solides3d pst-soroban pst-text pst-uml pst-vue3d pst2pdf pstricks pstricks-add uml collection-pstricks
 "
@@ -15,5 +15,6 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2008
 "
-RDEPEND="${DEPEND} "
+RDEPEND="${DEPEND} dev-texlive/texlive-genericrecommended
+"
 TEXLIVE_MODULE_BINSCRIPTS="texmf-dist/scripts/pst2pdf/pst2pdf.pl"
