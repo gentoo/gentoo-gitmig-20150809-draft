@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/SVG
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/ChangeLog,v 1.28 2008/12/17 16:33:39 tove Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG/ChangeLog,v 1.29 2009/01/13 20:22:39 robbat2 Exp $
+
+*SVG-2.48 (13 Jan 2009)
+
+  13 Jan 2009; Robin H. Johnson <robbat2@gentoo.org> +SVG-2.48.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *SVG-2.47 (17 Dec 2008)
 
