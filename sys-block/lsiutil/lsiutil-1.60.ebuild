@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/lsiutil/lsiutil-1.60.ebuild,v 1.1 2008/11/11 16:06:13 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/lsiutil/lsiutil-1.60.ebuild,v 1.2 2009/01/13 12:02:27 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,10 @@ IUSE=""
 
 RESTRICT="strip mirror test"
 
-S="${WORKDIR}"
+RDEPEND=""
+DEPEND="app-arch/unzip"
+
+S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
@@ -27,10 +30,10 @@ src_unpack() {
 
 src_compile() {
 	cd "${S}"/${PN}
-	$(tc-getCC) ${CFLAGS} -o ${PN} ${PN}.c
+	$(tc-getCC) ${CFLAGS} -o ${PN} ${PN}.c || die "emake failed."
 }
 
 src_install() {
-	dosbin ${PN}/${PN}
+	dosbin ${PN}/${PN} || die "dosbin failed."
 	dodoc "${S}"/*.txt
 }

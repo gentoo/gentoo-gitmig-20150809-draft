@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/lsiutil
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/lsiutil/ChangeLog,v 1.2 2008/11/11 16:06:13 wschlich Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/lsiutil/ChangeLog,v 1.3 2009/01/13 12:02:27 ssuominen Exp $
+
+  13 Jan 2009; Samuli Suominen <ssuominen@gentoo.org> lsiutil-1.60.ebuild:
+  Add missing DEPEND app-arch/unzip wrt #254809. Remove unnecessary quoting
+  from assigment. Add missing dies from compile and dosbin.
 
 *lsiutil-1.60 (11 Nov 2008)
 
