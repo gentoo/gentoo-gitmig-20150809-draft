@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2257 2009/01/13 17:01:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2258 2009/01/13 18:49:09 zmedico Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jan 2009; Zac Medico <zmedico@gentoo.org> package.mask:
+  Mask =sys-apps/portage-2.1.6.5 due to bug 254860.
 
   13 Jan 2009; Petteri Räty <betelgeuse@gentoo.org> thirdpartymirrors:
   Add internap to sourceforge mirrors.
