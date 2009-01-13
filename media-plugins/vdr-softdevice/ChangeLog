@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-softdevice
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.59 2008/11/08 16:45:28 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.60 2009/01/13 20:41:28 zzam Exp $
+
+  13 Jan 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-softdevice-0.5.0.20080922.ebuild:
+  Enabled xv use-flag by default with the help of EAPI1. Requested by
+  flameeyes on Bug #254752.
 
   08 Nov 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-softdevice-0.5.0.20080922.ebuild:

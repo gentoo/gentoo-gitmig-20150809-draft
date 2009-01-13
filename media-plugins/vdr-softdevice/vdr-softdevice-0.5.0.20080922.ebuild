@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.5.0.20080922.ebuild,v 1.3 2008/11/08 16:45:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.5.0.20080922.ebuild,v 1.4 2009/01/13 20:41:28 zzam Exp $
+
+EAPI=1
 
 inherit eutils vdr-plugin versionator
 
@@ -20,7 +22,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
-IUSE="xv fbcon directfb mmx mmxext xinerama"
+IUSE="+xv fbcon directfb mmx mmxext xinerama"
 
 RDEPEND=">=media-video/vdr-1.3.36
 	>=media-video/ffmpeg-0.4.9_pre1
@@ -54,7 +56,7 @@ PATCHES=("${FILESDIR}/patches-0.4.0/shm-fullscreen-parameter.diff"
 pkg_setup() {
 	vdr-plugin_pkg_setup
 
-	if use !xv && use !fbcon && use !directfb; then
+	if ! use xv && ! use fbcon && ! use directfb; then
 		ewarn "You need to set at least one of these use-flags: xv fbcon directfb"
 		die "no output-method enabled"
 	fi
