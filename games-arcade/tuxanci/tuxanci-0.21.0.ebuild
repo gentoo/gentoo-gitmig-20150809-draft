@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-0.21.0.ebuild,v 1.5 2008/12/06 15:06:19 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-0.21.0.ebuild,v 1.6 2009/01/13 17:16:20 scarabeus Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils cmake-utils games
 
@@ -17,19 +17,19 @@ IUSE="alsa debug dedicated nls"
 # alsa is used only when building client
 
 RDEPEND="!dedicated? (
-			>=media-libs/libsdl-1.2.10
-			>=media-libs/sdl-ttf-2.0.7
-			>=media-libs/sdl-image-1.2.6-r1
+			>=media-libs/libsdl-1.2.10[X]
+			>=media-libs/sdl-ttf-2.0.7[X]
+			>=media-libs/sdl-image-1.2.6-r1[png]
 			alsa? (
-				>=media-libs/sdl-mixer-1.2.7
+				>=media-libs/sdl-mixer-1.2.7[vorbis]
 			)
 		)
-	dev-libs/zziplib"
+	dev-libs/zziplib[sdl]"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6.0
 	nls? ( sys-devel/gettext )"
 
-src_compile() {
+src_configure() {
 	local mycmakeargs
 	use alsa || mycmakeargs="${mycmakeargs} -DNO_Audio=1"
 	use debug && mycmakeargs="${mycmakeargs} -DDebug=1"
@@ -43,6 +43,10 @@ src_compile() {
 		-DCMAKE_DOC_PATH=${GAMES_DATADIR_BASE}/doc/
 		-DCMAKE_ETC_PATH=${GAMES_SYSCONFDIR} -DLIB_INSTALL_DIR=$(games_get_libdir)
 		-DCMAKE_BUILD_TYPE=Release"
+	cmake-utils_src_configure
+}
+
+src_compile() {
 	cmake-utils_src_compile
 }
 
