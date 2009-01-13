@@ -1,0 +1,26 @@
+
+# HG changeset patch
+# User Timo Sirainen <tss@iki.fi>
+# Date 1231444007 18000
+# Node ID 5417c01fff5be03b9b41f0da1d2bf1902c55aaa0
+# Parent 0041d055acac5ca09428262dc8cdec91d7008c0b
+mbox: Fixed assert-crash with pop3_lock_session=yes
+
+--- a/src/lib-storage/index/mbox/mbox-transaction.c	Thu Jan 08 12:22:11 2009 -0500
++++ b/src/lib-storage/index/mbox/mbox-transaction.c	Thu Jan 08 14:46:47 2009 -0500
+@@ -50,8 +50,12 @@ static int mbox_transaction_commit(struc
+ 		if (mbox_unlock(mbox, lock_id) < 0)
+ 			ret = -1;
+ 	}
+-	i_assert(mbox->ibox.box.transaction_count > 0 ||
+-		 mbox->mbox_lock_type == F_UNLCK);
++	if (mbox->mbox_global_lock_id == 0) {
++		i_assert(mbox->ibox.box.transaction_count > 0 ||
++			 mbox->mbox_lock_type == F_UNLCK);
++	} else {
++		i_assert(mbox->mbox_lock_type == F_WRLCK);
++	}
+ 	return ret;
+ }
+ 
+

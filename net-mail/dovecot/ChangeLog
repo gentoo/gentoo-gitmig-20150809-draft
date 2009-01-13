@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.194 2008/12/08 16:37:30 armin76 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.195 2009/01/13 18:01:25 wschlich Exp $
+
+*dovecot-1.1.8 (13 Jan 2009)
+
+  13 Jan 2009; Wolfram Schlich <wschlich@gentoo.org>
+  +files/dovecot-1.1.8-5417c01fff5b.patch,
+  +files/dovecot-1.1.8-b42c06ef8213.patch, +dovecot-1.1.8.ebuild:
+  version bump
 
   08 Dec 2008; Raúl Porcel <armin76@gentoo.org> dovecot-1.1.7-r1.ebuild:
   alpha/sparc stable wrt #245316

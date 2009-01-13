@@ -1,0 +1,30 @@
+
+# HG changeset patch
+# User Timo Sirainen <tss@iki.fi>
+# Date 1231444040 18000
+# Node ID b42c06ef8213c8c412f0fff26146284b79b9413d
+# Parent 5417c01fff5be03b9b41f0da1d2bf1902c55aaa0
+mbox: Fixed crash with pop3_lock_session=yes if dotlock already existed.
+
+--- a/src/lib-storage/index/mbox/mbox-storage.c	Thu Jan 08 14:46:47 2009 -0500
++++ b/src/lib-storage/index/mbox/mbox-storage.c	Thu Jan 08 14:47:20 2009 -0500
+@@ -569,6 +569,9 @@ mbox_alloc_mailbox(struct mbox_storage *
+ 	if ((storage->storage.flags & MAIL_STORAGE_FLAG_KEEP_HEADER_MD5) != 0)
+ 		mbox->mbox_save_md5 = TRUE;
+ 
++	index_storage_mailbox_init(&mbox->ibox, name, flags,
++				   want_memory_indexes(storage, path));
++
+ 	if ((flags & MAILBOX_OPEN_KEEP_LOCKED) != 0) {
+ 		if (mbox_lock(mbox, F_WRLCK, &mbox->mbox_global_lock_id) <= 0) {
+ 			struct mailbox *box = &mbox->ibox.box;
+@@ -584,8 +587,6 @@ mbox_alloc_mailbox(struct mbox_storage *
+ 		}
+ 	}
+ 
+-	index_storage_mailbox_init(&mbox->ibox, name, flags,
+-				   want_memory_indexes(storage, path));
+ 	return mbox;
+ }
+ 
+
