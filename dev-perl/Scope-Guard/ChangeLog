@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Scope-Guard
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scope-Guard/ChangeLog,v 1.1 2009/01/14 07:59:32 tove Exp $
+
+*Scope-Guard-0.03 (14 Jan 2009)
+
+  14 Jan 2009; Torsten Veller <tove@gentoo.org> +metadata.xml,
+  +Scope-Guard-0.03.ebuild:
+  Initial version. From the perl overlay
+
