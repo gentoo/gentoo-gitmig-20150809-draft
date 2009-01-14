@@ -1,6 +1,10 @@
 # ChangeLog for games-action/bomberclone
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.28 2008/06/25 19:40:31 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.29 2009/01/14 19:41:30 mr_bones_ Exp $
+
+  14 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  bomberclone-0.11.8.ebuild:
+  EAPI=2; add use-based deps; also install the music (bug #254977)
 
   25 Jun 2008; nixnut <nixnut@gentoo.org> bomberclone-0.11.8.ebuild:
   Stable on ppc wrt bug 229305
