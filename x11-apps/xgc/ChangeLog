@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xgc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgc/ChangeLog,v 1.14 2007/12/20 00:13:49 cla Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgc/ChangeLog,v 1.15 2009/01/14 13:01:14 remi Exp $
+
+*xgc-1.0.1-r1 (14 Jan 2009)
+
+  14 Jan 2009; Rémi Cardona <remi@gentoo.org> +xgc-1.0.1-r1.ebuild:
+  remove xprint support (see bug #254874)
 
   19 Dec 2007; Dawid Węgliński <cla@gentoo.org> xgc-1.0.1.ebuild:
   Stable on x86 (bug #202087)
