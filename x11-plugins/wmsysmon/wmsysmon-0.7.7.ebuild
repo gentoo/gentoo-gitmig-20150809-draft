@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.7.ebuild,v 1.10 2008/06/29 13:46:30 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsysmon/wmsysmon-0.7.7.ebuild,v 1.11 2009/01/14 13:58:36 s4t4n Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	x11-proto/xextproto"
+	x11-proto/xextproto
+	>=sys-apps/sed-4.1.5-r1"
 
 src_unpack()
 {
@@ -32,6 +33,9 @@ src_unpack()
 		cd src
 		epatch "${FILESDIR}"/${PN}-high-ints.patch
 	fi
+
+	# Do no strip binaries during compilation, see bug #252113
+	sed -i 's/LDFLAGS += -lXpm -lXext -lX11 -lm -s/LDFLAGS += -lXpm -lXext -lX11 -lm/' "src/Makefile"
 }
 
 src_compile()
