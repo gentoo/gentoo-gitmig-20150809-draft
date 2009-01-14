@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-20080829.ebuild,v 1.1 2008/08/29 12:20:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/dovecot-antispam-20080829.ebuild,v 1.2 2009/01/14 18:29:36 hollow Exp $
 
-inherit confutils eutils autotools flag-o-matic multilib
+EAPI="1"
+
+inherit confutils
 
 DESCRIPTION="A dovecot antispam plugin supporting multiple backends"
 HOMEPAGE="http://johannes.sipsolutions.net/Projects/dovecot-antispam"
@@ -11,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug dspam crm114 mailtrain signature-log syslog"
+IUSE="debug +dspam crm114 mailtrain signature-log syslog"
 
 DEPEND="net-mail/dovecot
 	dspam? ( mail-filter/dspam )
