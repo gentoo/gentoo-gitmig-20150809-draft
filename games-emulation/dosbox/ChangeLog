@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.41 2009/01/04 02:24:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.42 2009/01/14 20:25:18 mr_bones_ Exp $
+
+  14 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.72.ebuild:
+  use PATCHES array
 
   04 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.72.ebuild:
   use EAPI=2

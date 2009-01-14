@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.72.ebuild,v 1.7 2009/01/04 02:24:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.72.ebuild,v 1.8 2009/01/14 20:25:18 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -22,12 +22,7 @@ DEPEND="alsa? ( media-libs/alsa-lib[midi] )
 	media-libs/sdl-net
 	media-libs/sdl-sound"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
-}
+PATCHES=( "${FILESDIR}"/${P}+gcc-4.3.patch )
 
 src_configure() {
 	egamesconf \
