@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/translator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/translator/ChangeLog,v 1.9 2009/01/14 18:14:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/translator/ChangeLog,v 1.10 2009/01/14 20:54:22 ranger Exp $
+
+  14 Jan 2009; Brent Baude <ranger@gentoo.org> translator-1.00.ebuild:
+  stable ppc64, bug 254788
 
   14 Jan 2009; Jeroen Roovers <jer@gentoo.org> translator-1.00.ebuild:
   Stable for HPPA (bug #254788).
