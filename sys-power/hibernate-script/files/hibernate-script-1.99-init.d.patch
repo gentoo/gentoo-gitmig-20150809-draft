@@ -1,0 +1,58 @@
+
+Gentoo layout.
+
+--- init.d/hibernate-cleanup.sh.org	2007-05-04 07:17:40.000000000 +0300
++++ init.d/hibernate-cleanup.sh	2007-05-04 07:22:25.000000000 +0300
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!/sbin/runscript
+ 
+ # This script invalidates any stale swsusp and Software Suspend 2 images. It
+ # searches all swap partitions on your machine, as well as Suspend2's
+@@ -78,27 +78,30 @@ do_reload() {
+ 
+ 
+ msg_status() {
+-	echo -n "$1"
++	einfon "$1"
+ }
+ 
+ msg() {
+-	echo "$1"
++	einfo "$1"
+ }
+ 
+-case "$1" in
+-start)
+-	msg_status "Invalidating stale software suspend images... "
++opts="reload"
++
++depend() {
++	after modules
++	before localmount
++}
++
++start() {
++	ebegin "Invalidating stale software suspend images"
+ 	do_start
+-	msg "done."
+-	;;
+-stop)
++	eend $?
++}
++
++stop() {
+ 	do_stop
+-	;;
+-restart|force-reload)
+-	do_reload
+-	;;
+-*)
+-	msg "Usage: /etc/init.d/hibernate {start|stop|restart|force-reload}"
+-esac
++}
+ 
+-exit 0
++reload() {
++	do_reload
++}
