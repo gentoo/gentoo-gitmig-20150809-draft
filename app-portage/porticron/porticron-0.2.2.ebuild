@@ -1,20 +1,18 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/porticron-0.2.ebuild,v 1.1 2008/10/31 08:20:07 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/porticron-0.2.2.ebuild,v 1.1 2009/01/14 18:39:52 hollow Exp $
 
 DESCRIPTION="porticron is a cron script to sync portage and send update mails to root"
-HOMEPAGE="http://git.xnull.de/gitweb/?p=porticron.git;a=summary"
-SRC_URI="http://dev.gentoo.org/~hollow/distfiles/${P}.tar.bz2"
+HOMEPAGE="http://bb.xnull.de/projects/porticron/"
+SRC_URI="http://bb.xnull.de/projects/porticron/dist/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
 RDEPEND="net-dns/bind-tools"
-
-S="${WORKDIR}"/${PN}
 
 src_install() {
 	dosbin bin/porticron
