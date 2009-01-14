@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/cancd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/ChangeLog,v 1.6 2008/11/14 15:00:41 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/ChangeLog,v 1.7 2009/01/14 05:27:34 vapier Exp $
+
+  14 Jan 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/cancd-0.1.0-build.patch, cancd-0.1.0-r1.ebuild:
+  Fix building with newer glibc #246734 by Diego E. Pettenò.
 
   14 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   cancd-0.1.0-r1.ebuild:
