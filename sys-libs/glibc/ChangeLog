@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.602 2008/12/31 07:56:10 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.603 2009/01/14 11:21:55 vapier Exp $
+
+  14 Jan 2009; Mike Frysinger <vapier@gentoo.org>
+  glibc-2.8_p20080602-r1.ebuild:
+  Mark s390 stable.
 
   31 Dec 2008; Mike Frysinger <vapier@gentoo.org>
   glibc-2.9_p20081201-r1.ebuild:
