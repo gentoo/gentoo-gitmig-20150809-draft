@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Sub-Install
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.1 2009/01/14 09:47:56 tove Exp $
+
+*Sub-Install-0.924 (14 Jan 2009)
+
+  14 Jan 2009; Torsten Veller <tove@gentoo.org> +metadata.xml,
+  +Sub-Install-0.924.ebuild:
+  Initial commit. From the perl overlay
+
