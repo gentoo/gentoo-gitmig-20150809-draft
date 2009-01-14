@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/libertine-ttf-4.1.8.ebuild,v 1.2 2009/01/12 15:52:10 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/libertine-ttf-4.1.8.ebuild,v 1.3 2009/01/14 00:44:31 josejx Exp $
 
 inherit font versionator
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/linuxlibertine/${MY_P}.tgz"
 
 LICENSE="|| ( GPL-2-with-font-exception OFL )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc sparc ~x86"
 IUSE=""
 
 DEPEND=""
