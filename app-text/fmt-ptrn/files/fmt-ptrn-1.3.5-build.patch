@@ -1,0 +1,25 @@
+http://bugs.gentoo.org/227315
+
+--- src/fmt_ptrn.c
++++ src/fmt_ptrn.c
+@@ -118,6 +118,7 @@
+ }
+ 
+ /* ============================ stack_t ==================================== */
++#define stack_t fmt_ptrn_stack_t
+ typedef struct stack_t {
+ 	modifier_t data[STACK_MAX_ITEMS];
+ 	int size;
+--- src/new_proj.c
++++ src/new_proj.c
+@@ -41,6 +41,10 @@
+ #include <pwd.h>
+ #endif
+ 
++#ifndef ARG_MAX
++# define ARG_MAX sysconf (_SC_ARG_MAX)
++#endif
++
+ /* Bit mask values for arguments. */
+ #define FORCE 0x1		/* Overwrite existing file. */
+ #define USE_GLOBAL 0x2		/* Ignore local templates. */
