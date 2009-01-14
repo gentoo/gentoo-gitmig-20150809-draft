@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/grep-edit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/grep-edit/ChangeLog,v 1.2 2008/06/14 23:26:11 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/grep-edit/ChangeLog,v 1.3 2009/01/14 20:33:16 ulm Exp $
+
+*grep-edit-2.9 (11 Jan 2009)
+
+  11 Jan 2009; Ulrich Mueller <ulm@gentoo.org> +grep-edit-2.9.ebuild:
+  Version bump. LICENSE changed to GPL-3.
 
   14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> grep-edit-2.5.ebuild:
   Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
