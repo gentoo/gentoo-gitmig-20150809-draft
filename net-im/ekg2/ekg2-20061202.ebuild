@@ -1,22 +1,17 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.7 2008/03/14 14:17:27 phreak Exp $
-
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.8 2009/01/14 05:23:17 vapier Exp $
 
 inherit eutils perl-module autotools
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
 HOMEPAGE="http://dev.null.pl/ekg2/"
 SRC_URI="http://dev.null.pl/ekg2/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-
 KEYWORDS="~x86"
-
-IUSE="gpm jabber ssl spell jpeg gsm python unicode sqlite sqlite3 gif nogg
-gtk perl xosd debug expat static"
+IUSE="gpm jabber ssl spell jpeg gsm python unicode sqlite sqlite3 gif nogg gtk perl xosd debug expat static"
 
 DEPEND="jabber? ( >=dev-libs/expat-1.95.6 )
 	expat? ( >=dev-libs/expat-1.95.6 )
@@ -56,26 +51,25 @@ src_unpack() {
 }
 
 src_compile() {
-
 	econf \
 		--with-pthread \
-		`use_with !nogg libgadu` \
-		`use_with expat` \
-		`use_with jabber expat` \
-		`use_with gpm gpm-mouse` \
-		`use_with ssl openssl` \
-		`use_with jpeg libjpeg` \
-		`use_with spell aspell` \
-		`use_with gsm libgsm` \
-		`use_with gif libgif` \
-		`use_with xosd libxosd` \
-		`use_with python` \
-		`use_with perl` \
-		`use_with sqlite` \
-		`use_with sqlite3` \
-		`use_enable unicode` \
-		`use_enable static` \
-		`use jabber && use ssl && echo --with-gnutls` \
+		$(use_with !nogg libgadu) \
+		$(use_with expat) \
+		$(use_with jabber expat) \
+		$(use_with gpm gpm-mouse) \
+		$(use_with ssl openssl) \
+		$(use_with jpeg libjpeg) \
+		$(use_with spell aspell) \
+		$(use_with gsm libgsm) \
+		$(use_with gif libgif) \
+		$(use_with xosd libxosd) \
+		$(use_with python) \
+		$(use_with perl) \
+		$(use_with sqlite) \
+		$(use_with sqlite3) \
+		$(use_enable unicode) \
+		$(use_enable static) \
+		$(use jabber && use ssl && echo --with-gnutls) \
 		|| die "econf failed"
 
 	emake || die "emake failed"
