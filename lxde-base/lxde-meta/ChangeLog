@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.2 2009/01/05 20:56:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.3 2009/01/14 17:27:45 bluebird Exp $
+
+  14 Jan 2009; Friedrich Oslage <bluebird@gentoo.org>
+  lxde-meta-0.3.2.1.ebuild, lxde-meta-0.3.2.1-r1.ebuild:
+  Fix broken deps
 
 *lxde-meta-0.3.2.1-r1 (05 Jan 2009)
 
