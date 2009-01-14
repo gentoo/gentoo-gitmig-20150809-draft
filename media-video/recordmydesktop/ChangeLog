@@ -1,6 +1,13 @@
 # ChangeLog for media-video/recordmydesktop
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.23 2008/05/05 03:00:05 tester Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.24 2009/01/14 16:57:02 fauli Exp $
+
+*recordmydesktop-0.3.8.1 (14 Jan 2009)
+
+  14 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
+  +recordmydesktop-0.3.8.1.ebuild:
+  version bump, fixes bug 254418 * port to EAPI=2 (built_with_use) * remove
+  die messages * fix HOMEPAGE entry
 
   05 May 2008; Olivier Crête <tester@gentoo.org>
   recordmydesktop-0.3.7.3.ebuild:
