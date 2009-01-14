@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.7.ebuild,v 1.2 2009/01/13 21:52:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.7.ebuild,v 1.3 2009/01/14 16:26:28 dang Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -29,7 +29,6 @@ src_unpack() {
 	strip-flags
 
 	sed -i \
-		-e "s:CFLAGS += -g:CFLAGS += -g ${CFLAGS}:" \
 		-e "/CVSROOT =/d" \
 		Makefile || die "sed failed"
 
@@ -43,7 +42,8 @@ src_compile() {
 	local myconf
 	myconf="CC=$(tc-getCC)"
 	useq selinux && myconf="${myconf} WITH_SELINUX=yes"
-	emake ${myconf} || die "emake failed"
+	use elibc_FreeBSD && append-flags -DNO_ALLOCA_H
+	emake ${myconf} RPM_OPT_FLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
