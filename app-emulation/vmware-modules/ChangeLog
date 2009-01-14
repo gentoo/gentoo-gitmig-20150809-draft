@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.39 2009/01/12 23:25:46 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.40 2009/01/14 00:06:04 ikelos Exp $
+
+  14 Jan 2009; Mike Auty <ikelos@gentoo.org>
+  files/patches/vmnet/030_all_kernel-2.6.27.patch:
+  Add patch to try and fix bug 254768.
 
   12 Jan 2009; Mike Auty <ikelos@gentoo.org> Manifest:
   Fix up vmware-modules-1.0.0.15 patches for kernels older than 2.6.27.
