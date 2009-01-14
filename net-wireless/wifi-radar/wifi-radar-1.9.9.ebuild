@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.9.ebuild,v 1.1 2008/12/02 10:22:22 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.9.ebuild,v 1.2 2009/01/14 16:33:25 s4t4n Exp $
 
 inherit eutils
 
@@ -26,10 +26,9 @@ src_unpack()
 src_install ()
 {
 	dosbin wifi-radar
-	dosed "s:/etc/conf.d:/etc:g" /usr/sbin/wifi-radar
+	dosed "s:/etc/wpa_supplicant.conf:/etc/wpa_supplicant/wpa_supplicant.conf:" /usr/sbin/wifi-radar
 	dobin wifi-radar.sh
-	dodir /etc/wifi-radar
-	insinto /etc/wifi-radar; doins wifi-radar.conf
+	insinto /etc; doins wifi-radar.conf
 	if use svg; then
 		doicon pixmaps/wifi-radar.svg
 		make_desktop_entry wifi-radar.sh "WiFi Radar" wifi-radar Network
@@ -38,7 +37,7 @@ src_install ()
 		make_desktop_entry wifi-radar.sh "WiFi Radar" wifi-radar Network
 	fi
 	doman wifi-radar.1 wifi-radar.conf.5
-	dodoc AUTHORS ChangeLog README TODO
+	dodoc CHANGE.LOG README TODO
 }
 
 pkg_postinst()
