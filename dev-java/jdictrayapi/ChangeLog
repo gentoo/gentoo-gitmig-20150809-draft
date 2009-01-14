@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdictrayapi
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/ChangeLog,v 1.16 2007/10/24 05:04:38 wltjr Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdictrayapi/ChangeLog,v 1.17 2009/01/14 14:30:05 caster Exp $
+
+  14 Jan 2009; Vlastimil Babka <caster@gentoo.org>
+  jdictrayapi-0.9.1-r3.ebuild:
+  Use a list of supported jre versions instead of blocker that breaks
+  deptrees.
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -jdictrayapi-0.8.7.ebuild, jdictrayapi-0.9.1-r2.ebuild:
