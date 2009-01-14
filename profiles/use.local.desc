@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4131 2009/01/14 17:47:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4132 2009/01/14 23:47:53 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -281,6 +281,7 @@ app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
 app-laptop/tpctl:tpctlir - Enable support for thinkpad models 760 and 765
 app-misc/anki:furigana -  Enable support for furigana generation 
 app-misc/anki:graph -  Enable support for making graphs 
+app-misc/anki:latex -  Enable support for LaTeX 
 app-misc/anki:sound -  Enable support for adding sound to cards 
 app-misc/beagle:chm - Enables support for indexing of the MS CHM (Compressed HTML) file format using app-doc/chmlib.
 app-misc/beagle:debug - Enables debug XML dumps of all messages passed between the daemons and the UIs. WARNING, this option will fill up your Beagle Log directory very quickly.
