@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2262 2009/01/14 09:36:13 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2263 2009/01/14 10:27:26 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jan 2009; Rémi Cardona <remi@gentoo.org> package.mask:
+  unleash xorg-server-1.5.3-r1
 
   14 Jan 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   virtual/xft is gone from portage, updating p.mask
