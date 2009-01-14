@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmrecord
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrecord/ChangeLog,v 1.8 2007/07/22 04:34:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrecord/ChangeLog,v 1.9 2009/01/14 15:02:21 s4t4n Exp $
+
+  14 Jan 2009; Michele Noberasco <s4t4n@gentoo.org>; wmrecord-1.0.5.3-r1.ebuild:
+  Prevent auto-stripping of binaries. Closes bug #252112.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmrecord-1.0.5.3-r1.ebuild:
