@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9389 2009/01/13 21:31:47 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9390 2009/01/14 08:37:12 zmedico Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -289,10 +289,6 @@
 ~kde-base/sweeper-4.1.4
 ~kde-base/systemsettings-4.1.4
 ~kde-base/umbrello-4.1.4
-
-# Zac Medico <zmedico@gentoo.org> (13 Jan 2009)
-# Masked due to bug 254860.
-=sys-apps/portage-2.1.6.5
 
 # Donnie Berkholz <dberkholz@gentoo.org> (12 Jan 2009)
 # Masked pending unmasking of guile-gnome-platform 2.16
