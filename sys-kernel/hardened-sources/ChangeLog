@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/hardened-sources
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.267 2008/12/15 16:29:00 nixnut Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.268 2009/01/14 16:28:01 gengor Exp $
+
+*hardened-sources-2.6.27-r4 (14 Jan 2009)
+*hardened-sources-2.6.26-r8 (14 Jan 2009)
+*hardened-sources-2.6.25-r12 (14 Jan 2009)
+
+  14 Jan 2009; Gordon Malm <gengor@gentoo.org>
+  +hardened-sources-2.6.25-r12.ebuild, +hardened-sources-2.6.26-r8.ebuild,
+  +hardened-sources-2.6.27-r4.ebuild:
+  2.6.25-r12: Fixes bugs #249729, #250548, #252688, #254907
+  2.6.26-r8: Fixes bugs #249729, #250548, #252688, #254907
+  2.6.27-r4: Update to latest genpatches (includes Linux 2.6.27.10) and
+  grsecurity patch. Fixes bugs #249729, #250511, #250548, #252688, #254907
 
   15 Dec 2008; nixnut <nixnut@gentoo.org>
   hardened-sources-2.6.25-r11.ebuild:
