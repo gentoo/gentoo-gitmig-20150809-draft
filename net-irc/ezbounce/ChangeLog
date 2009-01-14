@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ezbounce
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ChangeLog,v 1.16 2008/08/23 01:13:11 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ChangeLog,v 1.17 2009/01/14 03:59:50 vapier Exp $
+
+  14 Jan 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/ezbounce-1.99.14-build.patch, ezbounce-1.99.14.ebuild:
+  Fix building with glibc-2.8 #251445 by Diego E. Pettenò.
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
