@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/mousetweaks
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.19 2008/11/23 22:30:16 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/ChangeLog,v 1.20 2009/01/14 22:30:55 eva Exp $
+
+*mousetweaks-2.24.3 (14 Jan 2009)
+
+  14 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -mousetweaks-2.24.0.ebuild, -mousetweaks-2.24.1.ebuild,
+  +mousetweaks-2.24.3.ebuild:
+  Bump to 2.24.3. Bug fixes and translation updates. Clean up old revisions.
 
 *mousetweaks-2.24.2 (23 Nov 2008)
 
