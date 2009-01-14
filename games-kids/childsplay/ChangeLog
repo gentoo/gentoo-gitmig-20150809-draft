@@ -1,6 +1,12 @@
 # ChangeLog for games-kids/childsplay
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/ChangeLog,v 1.14 2007/11/09 19:52:41 mr_bones_ Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/ChangeLog,v 1.15 2009/01/14 21:17:14 mr_bones_ Exp $
+
+*childsplay-0.90.2 (14 Jan 2009)
+
+  14 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +childsplay-0.90.2.ebuild:
+  version bump
 
   09 Nov 2007; Michael Sterrett <mr_bones_@gentoo.org>
   -childsplay-0.68.ebuild:
