@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/inspircd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.26 2008/09/18 20:05:44 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.27 2009/01/14 05:12:18 vapier Exp $
+
+  14 Jan 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/inspircd-1.1.19-build.patch, inspircd-1.1.19.ebuild:
+  Fix building with newer glibc #251446 by Diego E. Pettenò.
 
   18 Sep 2008; Markus Meier <maekke@gentoo.org> inspircd-1.1.19.ebuild:
   amd64 stable, bug #236658

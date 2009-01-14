@@ -1,21 +1,20 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.19.ebuild,v 1.5 2008/09/18 20:05:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-1.1.19.ebuild,v 1.6 2009/01/14 05:12:18 vapier Exp $
 
 inherit eutils toolchain-funcs multilib # subversion
 
 DESCRIPTION="InspIRCd - The Modular C++ IRC Daemon"
 HOMEPAGE="http://www.inspircd.org/"
 SRC_URI="http://www.inspircd.org/downloads/InspIRCd-${PV}.tar.bz2
-mirror://sourceforge/${PN}/InspIRCd-${PV}.tar.bz2"
+	mirror://sourceforge/${PN}/InspIRCd-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="openssl gnutls ipv6 kernel_linux mysql postgres sqlite zlib ldap"
 
-RDEPEND="
-	dev-lang/perl
+RDEPEND="dev-lang/perl
 	openssl? ( dev-libs/openssl )
 	gnutls? ( net-libs/gnutls )
 	mysql? ( virtual/mysql )
@@ -24,11 +23,12 @@ RDEPEND="
 	ldap? ( net-nds/openldap )"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/inspircd"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-build.patch #251446
 
 	local SQL=0
 	cd src/modules
@@ -63,7 +63,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	# ./configure doesn't know --disable-gnutls, -ipv6 and -openssl options,
 	# so should be used only --enable-like.
 	local myconf=""
@@ -98,7 +97,8 @@ src_install() {
 		MODPATH="${D}/usr/$(get_libdir)/inspircd/modules/" \
 		CONPATH="${D}/etc/inspircd" \
 		BINPATH="${D}/usr/bin" \
-		BASE="${D}/usr/$(get_libdir)/inspircd/inspircd.launcher"
+		BASE="${D}/usr/$(get_libdir)/inspircd/inspircd.launcher" \
+		|| die
 
 	insinto /usr/include/inspircd/
 	doins "${S}"/include/*
