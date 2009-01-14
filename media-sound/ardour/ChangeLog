@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ardour
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.83 2008/12/08 09:15:40 aballier Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.84 2009/01/14 09:08:30 aballier Exp $
+
+  14 Jan 2009; Alexis Ballier <aballier@gentoo.org> ardour-2.7.1.ebuild:
+  require at least gnomecanvas 2.20, by Jimmy.Jazz@gmx.net, bug #254692
 
 *ardour-2.7.1 (08 Dec 2008)
 

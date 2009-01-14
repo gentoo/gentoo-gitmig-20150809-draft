@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.7.1.ebuild,v 1.1 2008/12/08 09:15:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.7.1.ebuild,v 1.2 2009/01/14 09:08:30 aballier Exp $
 
 EAPI=2
 
@@ -28,8 +28,8 @@ RDEPEND="media-libs/liblo
 	>=media-libs/libsamplerate-0.1.1-r1
 	>=dev-libs/libxml2-2.6.0
 	dev-libs/libxslt
+	>=gnome-base/libgnomecanvas-2.20
 	>=media-libs/libsndfile-1.0.16
-	gnome-base/libgnomecanvas
 	x11-themes/gtk-engines
 	>=dev-cpp/gtkmm-2.12.3[accessibility]
 	>=dev-cpp/glibmm-2.14.2
