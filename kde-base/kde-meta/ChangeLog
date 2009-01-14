@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.110 2009/01/13 23:59:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.111 2009/01/14 08:56:37 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> kde-meta-4.1.4.ebuild:
+  Add ~ppc ~ppc64 keywords to metas 4.1.4
 
 *kde-meta-4.1.4 (13 Jan 2009)
 

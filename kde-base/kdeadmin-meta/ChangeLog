@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeadmin-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.104 2009/01/13 23:46:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.105 2009/01/14 08:53:17 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  kdeadmin-meta-4.1.4.ebuild:
+  Add ~ppc ~ppc64 keywords to metas 4.1.4
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Add ~ppc ~ppc64 keywords to metas 4.1.4
 
 *kdeadmin-meta-4.1.4 (13 Jan 2009)
 

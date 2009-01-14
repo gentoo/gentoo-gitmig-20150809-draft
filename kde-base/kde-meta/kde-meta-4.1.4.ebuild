@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-4.1.4.ebuild,v 1.1 2009/01/13 23:59:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-4.1.4.ebuild,v 1.2 2009/01/14 08:56:37 alexxy Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ DESCRIPTION="KDE - merge this to pull in all non-developer, split kde-base/* pac
 HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="4.1"
 IUSE="accessibility"
 
