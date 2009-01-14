@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dosbox-cvs
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.15 2007/03/21 23:15:23 mr_bones_ Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.16 2009/01/14 20:19:17 mr_bones_ Exp $
+
+  14 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  dosbox-cvs-20030809.ebuild:
+  EAPI=2; add use-based dep
 
   21 Mar 2007; Michael Sterrett <mr_bones_@gentoo.org>
   dosbox-cvs-20030809.ebuild:
