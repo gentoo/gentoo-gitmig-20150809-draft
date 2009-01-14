@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.14.ebuild,v 1.1 2009/01/14 00:18:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.14.ebuild,v 1.2 2009/01/14 12:06:07 flameeyes Exp $
 
 EAPI=2
 
@@ -132,19 +132,12 @@ src_install() {
 		"${FILESDIR}/pulseaudio.init.d-4" \
 		> "${T}/pulseaudio"
 
-	# Specific fix for 0.9.13, drop at .14!
-	sed -i -e '/start-stop-daemon --start/s:$: --exit-idle-time=-1:' \
-		"${T}"/pulseaudio
-
 	doinitd "${T}/pulseaudio"
 
 	use avahi && sed -i -e '/module-zeroconf-publish/s:^#::' "${D}/etc/pulse/default.pa"
 
 	dohtml -r doc
 	dodoc README
-
-	# this should fix system daemon startup #233789
-	cp "${D}/etc/pulse/default.pa" "${D}/etc/pulse/system.pa"
 
 	# Create the state directory
 	diropts -o pulse -g pulse -m0755
