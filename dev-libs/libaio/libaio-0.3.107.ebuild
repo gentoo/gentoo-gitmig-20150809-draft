@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.107.ebuild,v 1.7 2009/01/11 21:10:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.107.ebuild,v 1.8 2009/01/14 20:08:12 vapier Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -16,20 +16,19 @@ KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc 
 IUSE=""
 RESTRICT="test"
 
-DEPEND=""
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-sparc.patch
 	epatch "${FILESDIR}"/${P}-install-to-slash.patch
+	epatch "${FILESDIR}"/${PN}-0.3.107-ar-ranlib.patch
 	epatch "${FILESDIR}"/${PN}-0.3.106-build.patch
 	epatch "${FILESDIR}"/${PN}-0.3.107-generic-arch.patch
 	sed -i "/^libdir=/s:lib$:$(get_libdir):" src/Makefile Makefile
 }
 
 src_compile() {
-	tc-export CC
+	tc-export AR CC RANLIB
 	emake || die "emake failed"
 }
 

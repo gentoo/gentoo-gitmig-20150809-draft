@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.42 2009/01/11 21:10:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.43 2009/01/14 20:08:12 vapier Exp $
+
+  14 Jan 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/libaio-0.3.107-ar-ranlib.patch, libaio-0.3.107.ebuild:
+  Respect AR/RANLIB in env.
 
   11 Jan 2009; Markus Meier <maekke@gentoo.org> libaio-0.3.107.ebuild:
   x86 stable, bug #254291
