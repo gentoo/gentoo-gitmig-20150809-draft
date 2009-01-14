@@ -1,17 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/libbt-1.05.ebuild,v 1.3 2007/07/02 14:53:02 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbt/libbt-1.05.ebuild,v 1.4 2009/01/14 05:20:07 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="libBT is an implementation of the BitTorrent core protocols in C"
-HOMEPAGE="http://libbt.sourceforge.net"
+DESCRIPTION="implementation of the BitTorrent core protocols in C"
+HOMEPAGE="http://libbt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="mirror"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl
@@ -21,21 +20,16 @@ DEPEND="dev-libs/openssl
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
+	epatch "${FILESDIR}"/${P}-build.patch #248034
 	epatch "${FILESDIR}"/${PV}-btlist.patch # 152489
+	sed -i -e '/CFLAGS/s|:=|+=|' src/Makefile.in || die
 }
 
-src_compile () {
-	econf || die
-	sed -i -e "s:-g -Wall:${CFLAGS} -g -Wall:g" src/Makefile
-	emake || die
-}
-
-src_install () {
-	dobin src/btlist src/btget src/btcheck
+src_install() {
+	dobin src/btlist src/btget src/btcheck || die
 	doman man/*
 	insinto /usr/include/libbt
 	doins include/*
 	dolib src/libbt.a
-	dodoc CHANGELOG COPYING CREDITS README docs/*
+	dodoc CHANGELOG CREDITS README docs/*
 }
