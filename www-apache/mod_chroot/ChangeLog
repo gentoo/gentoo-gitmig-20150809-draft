@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_chroot
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/ChangeLog,v 1.15 2008/03/07 22:28:05 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_chroot/ChangeLog,v 1.16 2009/01/14 10:18:28 hollow Exp $
+
+  14 Jan 2009; Benedikt Böhm <hollow@gentoo.org> -mod_chroot-0.4.ebuild,
+  mod_chroot-0.5.ebuild:
+  chroot support is built into apache 2.2.10, fixes #254450
 
   07 Mar 2008; Christoph Mende <angelos@gentoo.org> mod_chroot-0.5.ebuild:
   Stable on amd64, bug #208554
