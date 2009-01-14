@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Sub-Identify
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Identify/ChangeLog,v 1.1 2009/01/14 07:31:07 tove Exp $
+
+*Sub-Identify-0.04 (14 Jan 2009)
+
+  14 Jan 2009; Torsten Veller <tove@gentoo.org> +metadata.xml,
+  +Sub-Identify-0.04.ebuild:
+  Initial version. From the perl overlay
+
