@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/atari-fdisk
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/atari-fdisk/ChangeLog,v 1.3 2005/09/16 11:23:32 agriffis Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/atari-fdisk/ChangeLog,v 1.4 2009/01/14 02:59:06 vapier Exp $
+
+*atari-fdisk-0.7.1.5.4 (14 Jan 2009)
+
+  14 Jan 2009; Mike Frysinger <vapier@gentoo.org>
+  +atari-fdisk-0.7.1.5.4.ebuild:
+  Update debian patchset for build failure #241412.
 
   16 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   atari-fdisk-0.7.1.5.1.ebuild:
