@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/htun-0.9.5.ebuild,v 1.7 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htun/htun-0.9.5.ebuild,v 1.8 2009/01/14 03:47:53 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Project to tunnel IP traffic over HTTP"
 HOMEPAGE="http://htun.runslinux.net/"
@@ -9,27 +11,34 @@ SRC_URI="http://htun.runslinux.net/dist/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-
 IUSE=""
 
-DEPEND="virtual/libc
-	dev-util/yacc"
+DEPEND="dev-util/yacc"
 RDEPEND=""
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-glibc.patch #248100
+	sed -i \
+		-e '/^CFLAGS/s:=\(.*\)-O :+=\1 $(CPPFLAGS) :' \
+		-e '/LDFLAGS/s:=:+=:' \
+		src/Makefile || die
+}
 
-	cd ${S}/src
-	make all || die
+src_compile() {
+	cd src
+	emake all || die
 }
 
 src_install() {
-	dosbin ${S}/src/htund
-
+	dosbin src/htund || die
 	insinto /etc
-	doins ${S}/doc/htund.conf
-	dodoc doc/*
+	doins doc/htund.conf
+	dodoc doc/* README
+}
 
-	einfo
+pkg_postinst() {
 	einfo "NOTE: HTun requires the Universal TUN/TAP module"
 	einfo "available in the Linux kernel.  Make sure you have"
 	einfo "compiled the tun.o driver as a module!"
@@ -41,5 +50,4 @@ src_install() {
 	einfo "  # mknod /dev/net/tun c 10 200"
 	einfo "  # echo \"alias char-major-10-200 tun\" >> /etc/modules.conf"
 	einfo "  # depmod -e"
-	einfo
 }
