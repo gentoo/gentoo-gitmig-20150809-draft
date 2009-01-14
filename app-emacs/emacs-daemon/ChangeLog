@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/emacs-daemon
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.4 2008/12/27 20:51:29 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.5 2009/01/14 21:47:13 ulm Exp $
+
+*emacs-daemon-0.11 (14 Jan 2009)
+
+  14 Jan 2009; Ulrich Mueller <ulm@gentoo.org> -emacs-daemon-0.8.ebuild,
+  -emacs-daemon-0.9.ebuild, +emacs-daemon-0.11.ebuild:
+  Version bump. Remove old.
 
 *emacs-daemon-0.10 (27 Dec 2008)
 
