@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xmh
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmh/ChangeLog,v 1.15 2007/12/20 00:17:40 cla Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmh/ChangeLog,v 1.16 2009/01/14 13:07:49 remi Exp $
+
+*xmh-1.0.1-r1 (14 Jan 2009)
+
+  14 Jan 2009; Rémi Cardona <remi@gentoo.org> +xmh-1.0.1-r1.ebuild:
+  remove xprint support (see bug #254874)
 
   19 Dec 2007; Dawid Węgliński <cla@gentoo.org> xmh-1.0.1.ebuild:
   Stable on x86 (bug #202087)
