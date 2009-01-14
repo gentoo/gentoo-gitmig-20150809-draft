@@ -18,6 +18,9 @@
 		<flag name="graph">
 			Enable support for making graphs
 		</flag>
+		<flag name="latex">
+			Enable support for LaTeX
+		</flag>
 		<flag name="sound">
 			Enable support for adding sound to cards
 		</flag>

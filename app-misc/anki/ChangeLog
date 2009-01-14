@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.5 2009/01/07 17:33:25 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.6 2009/01/14 23:42:54 hncaldwell Exp $
+
+*anki-0.9.9.5 (14 Jan 2009)
+
+  14 Jan 2009; Heath Caldwell <hncaldwell@gentoo.org> metadata.xml,
+  +anki-0.9.9.5.ebuild:
+  Version bump, ebuild fixes submitted by Seth W. (Jzalae) Klein
+  <sk@sethwklein.net> (sound dependency fix, add latex use flag, reorder
+  python setup.py installs to match upstream documentation). Fixes
+  bug #254283.
 
 *anki-0.9.9.4 (07 Jan 2009)
 
