@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pretrace
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/ChangeLog,v 1.13 2008/09/25 14:32:29 hawking Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/ChangeLog,v 1.14 2009/01/14 04:32:20 vapier Exp $
+
+  14 Jan 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/pretrace-0.4-build.patch, pretrace-0.4.ebuild:
+  Fix by Bandan for building with newer glibc #227923.
 
   25 Sep 2008; Ali Polatel <hawking@gentoo.org> metadata.xml,
   -pretrace-0.3.ebuild, -pretrace-0.3-r1.ebuild, pretrace-0.4.ebuild:
