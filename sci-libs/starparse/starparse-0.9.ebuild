@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/starparse/starparse-0.9.ebuild,v 1.1 2009/01/13 06:24:14 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/starparse/starparse-0.9.ebuild,v 1.2 2009/01/14 00:55:09 zmedico Exp $
 
 if [[ ${PV} = 9999* ]]; then
 	EBZR_REPO_URI="http://oregonstate.edu/~benisong/software/projects/starparse/"
@@ -13,7 +13,7 @@ inherit autotools ${BZR}
 
 DESCRIPTION="Library for parsing NMR star files (peak-list format) and CIF files"
 HOMEPAGE="http://burrow-owl.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/burrow-owl/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
