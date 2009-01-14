@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/btrfs-progs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.16 2008/11/27 17:56:51 lavajoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.17 2009/01/14 22:12:04 lavajoe Exp $
+
+*btrfs-progs-0.17 (14 Jan 2009)
+
+  14 Jan 2009; Joe Peterson <lavajoe@gentoo.org> +btrfs-progs-0.17.ebuild:
+  New version 0.17
 
   27 Nov 2008; Joe Peterson <lavajoe@gentoo.org>
   -btrfs-progs-0.15-r2.ebuild, -btrfs-progs-0.16.ebuild:
