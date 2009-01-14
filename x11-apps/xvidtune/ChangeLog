@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xvidtune
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.15 2008/01/11 08:31:59 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.16 2009/01/14 13:32:28 remi Exp $
+
+*xvidtune-1.0.1-r1 (14 Jan 2009)
+
+  14 Jan 2009; Rémi Cardona <remi@gentoo.org> +xvidtune-1.0.1-r1.ebuild:
+  remove xprint support (see bug #254874)
 
   11 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   xvidtune-1.0.1.ebuild:
