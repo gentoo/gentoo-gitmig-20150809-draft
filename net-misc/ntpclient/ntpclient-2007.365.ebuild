@@ -1,6 +1,6 @@
-# Copyright 2008-2008 Gentoo Foundation
+# Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ntpclient-2007.365.ebuild,v 1.2 2008/11/16 16:39:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ntpclient-2007.365.ebuild,v 1.3 2009/01/14 18:18:41 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd "${S}"
 	sed -i -e s/'-O2'// Makefile
 	sed -i -e 's/LDFLAGS +=/LDLIBS +=/' Makefile
+	sed -i -e s/__adjtimex/adjtimex/g ntpclient.c
 }
 
 src_compile() {
