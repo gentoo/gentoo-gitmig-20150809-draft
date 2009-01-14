@@ -8,8 +8,6 @@
 <use>
 	<flag name="video_cards_nvidia">When combined with the xvmc USE flag,
 		enables NVIDIA specific XvMC extension usage.</flag>
-	<flag name="video_cards_via">When combined with the xvmc USE flag, enables
-		VIA specific XvMC extension usage.</flag>
 	<flag name="alsa">Allows MythTV to directly output sound to ALSA devices,
 		this is needed if you are using ALSA dmix or SPDIF. Note, you will have
 		to physically type your device into the MythTV configuration since it
@@ -20,13 +18,6 @@
 		expierence with MythTV since it's early versions and discussed with
 		other MythTV maintainers and users. Does not rely on KDE being installed
 		like most methods do.</flag>
-	<flag name="backendonly" restrict="&gt;media-tv/mythtv-0.21">Allows one to
-		build only the backend and it's components. This is not a supported
-		configuration any long and will be removed in future versions. It's also
-		known that it does not compile all the addon programs that the backend
-		may use.</flag>
-	<flag name="crciprec">describe</flag>
-	<flag name="dbox2">describe</flag>
 	<flag name="debug">Instructs Qt to use the 'debug' target instead of
 		'release' target. If your MythTV is crashing or you need a backtrace,
 		you need to compile it with this option otherwise the debugging data is
@@ -34,33 +25,19 @@
 	<flag name="directv">Installs the DirecTV channel changing script so that
 		you can configure MythTV to use it to change the channels on your
 		DirecTV box.</flag>
-	<flag name="dts">Enables the support of DTS sound from DVDs.</flag>
 	<flag name="dvb">Enables support for Linux DVB cards. These include all
 		cards that work with digital signals such as ATSC, DVB-T, DVB-C, and
 		DVB-S, QAM-64, and QAM-256.</flag>
 	<flag name="dvd">Adds support for MythTV's internal player to support media
 		files found on DVDs. You still need <pkg>media-plugins/mythdvd</pkg>
 		installed to play DVDs from MythTV.</flag>
-	<flag name="freebox">describe</flag>
-	<flag name="frontendonly" restrict="&gt;media-tv/mythtv-0.21">Allows one to
-		build only the frontend and it's components. This is not a supported
-		configuration any long and will be removed in future versions. It's also
-		known that it does not compile all the addon programs that the frontend
-		may use.</flag>
-	<flag name="hdhomerun">Allows MythTV to communicate to HDHomeRun devices and
-		receive your TV input from those sources.</flag>
 	<flag name="ieee1394">Allows MythTV to communicate and use Firewire enabled
 		Cable boxes. These are typically found in the United States, where such
 		support is required by law. This will also install Firewire test
 		programs and external channel changers if the internal changer does not
 		work.</flag>
-	<flag name="ivtv">Adds support for ivtv based cards. Typically these are
-		Hauppauge cards which output analog TV directly in MPEG2 format.
-		Essentially, hardware encoding of analog TV.</flag>
 	<flag name="jack">Allows MythTV to use JACK as your sound output device. You
 		will have to manually configure the path to your JACK settings.</flag>
-	<flag name="joystick">Allows you to configure MythTV to be controlled by a
-		joystick rather then a remote or keyboard.</flag>
 	<flag name="lcd">Tells MythTV that you have an instance of
 		<pkg>app-misc/lcdproc</pkg> configured on your machine and it should
 		output information such as current time, show name, episode name, etc to
@@ -68,8 +45,6 @@
 	<flag name="lirc">Adds LIRC support directly to MythTV allowing for built in
 		control via a LIRC device.</flag>
 	<flag name="mmx">Builds ffmpeg's codec libraries with mmx support.</flag>
-	<flag name="vorbis">Adds support for the Vorbis container format to
-		MythTV.</flag>
 	<flag name="opengl">Builds MythTV with support for using OpenGL as the
 		output painter rather then Qt3 built in painter.</flag>
 	<flag name="perl">Builds the perl bindings for MythTV. Allows you to write
