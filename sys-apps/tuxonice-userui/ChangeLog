@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/tuxonice-userui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.8 2009/01/08 20:11:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.9 2009/01/14 19:23:41 nelchael Exp $
+
+  14 Jan 2009; <nelchael@gentoo.org>
+  +files/tuxonice-userui-0.7.3-Makefiles.patch,
+  tuxonice-userui-0.7.3.ebuild:
+  Restore fbsplash USE flag.
 
 *tuxonice-userui-0.7.3 (08 Jan 2009)
 
