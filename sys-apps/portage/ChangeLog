@@ -1,6 +1,25 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.574 2009/01/12 19:57:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.575 2009/01/14 08:33:43 zmedico Exp $
+
+*portage-2.2_rc22 (14 Jan 2009)
+
+  14 Jan 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc22.ebuild:
+  2.2_rc22 bump. This includes the fixes that are in 2.1.6.6. Bug #210077
+  tracks all bugs fixed in the 2.2 branch.
+
+*portage-2.1.6.6 (14 Jan 2009)
+
+  14 Jan 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.6.6.ebuild:
+  2.1.6.6 bump. This fixes bug #254825 (repoman output for changed
+  distfiles digests) and bug #254860 (AttributeError triggered by
+  `emerge -u <atom>`. Also, dropping of privileges for emerge --sync is
+  now controlled by FEATURES=usersync, which is disabled by default.
+  Bug #254662 tracks all bugs fixed since 2.1.6.4.
+
+  14 Jan 2009; Zac Medico <zmedico@gentoo.org> -portage-2.1.6.5.ebuild,
+  -portage-2.2_rc21.ebuild:
+  Remove old versions.
 
 *portage-2.2_rc21 (12 Jan 2009)
 
