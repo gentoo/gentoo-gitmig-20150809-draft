@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/recordmydesktop-0.3.8.1.ebuild,v 1.1 2009/01/14 16:57:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/recordmydesktop-0.3.8.1.ebuild,v 1.2 2009/01/14 18:43:54 aballier Exp $
 
 EAPI=2
 
@@ -24,9 +24,8 @@ DEPEND="x11-libs/libXext
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )"
 
-src_compile() {
-	econf $(use_enable jack) $(use_enable !alsa oss) || die
-	emake || die
+src_configure() {
+	econf $(use_enable jack) $(use_enable !alsa oss)
 }
 
 src_install() {
