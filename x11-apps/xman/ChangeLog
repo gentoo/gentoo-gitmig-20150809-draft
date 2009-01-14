@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xman
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.20 2008/10/11 22:27:05 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.21 2009/01/14 13:22:42 remi Exp $
+
+*xman-1.0.2-r1 (14 Jan 2009)
+
+  14 Jan 2009; Rémi Cardona <remi@gentoo.org> +xman-1.0.2-r1.ebuild:
+  remove xprint support (see bug #254874)
 
   11 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> xman-1.0.2.ebuild:
   Fix dependencies.
