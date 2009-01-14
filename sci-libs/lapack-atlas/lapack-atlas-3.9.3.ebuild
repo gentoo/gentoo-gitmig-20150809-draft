@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.3.ebuild,v 1.3 2008/11/28 09:37:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.9.3.ebuild,v 1.4 2009/01/14 19:14:03 bicatali Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran autotools versionator
 
@@ -141,7 +141,7 @@ src_compile() {
 		|| die "Failed to create liblapack.la"
 
 	# making pkg-config file
-	sed -e "s:@LIBDIR@:$(get_libdir):" \
+	sed -e "s:@LIBDIR@:$(get_libdir)/lapack/atlas:" \
 		-e "s:@PV@:${PV}:" \
 		-e "s:@EXTLIBS@:-lm ${flibs}:g" \
 		"${FILESDIR}"/lapack.pc.in > "${S}"/lapack.pc \

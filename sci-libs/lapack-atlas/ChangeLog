@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-atlas
-# Copyright 2004-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.72 2008/09/05 20:50:10 bicatali Exp $
+# Copyright 2004-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.73 2009/01/14 19:14:03 bicatali Exp $
+
+  14 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> files/lapack.pc.in,
+  lapack-atlas-3.9.3.ebuild:
+  Now pkg-config files link to the atlas dirs
 
   05 Sep 2008; Sébastien Fabbro <bicatali@gentoo.org>
   -files/lapack-reference-3.0-autotool.patch,
