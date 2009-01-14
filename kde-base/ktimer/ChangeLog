@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktimer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimer/ChangeLog,v 1.98 2009/01/13 22:58:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimer/ChangeLog,v 1.99 2009/01/14 15:40:52 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> -ktimer-4.1.2.ebuild,
+  -ktimer-4.1.3.ebuild:
+  Drop KDE 4.1.2 and 4.1.3
 
 *ktimer-4.1.4 (13 Jan 2009)
 

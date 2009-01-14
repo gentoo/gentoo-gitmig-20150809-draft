@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/solid-hardware
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-hardware/ChangeLog,v 1.4 2009/01/13 23:31:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-hardware/ChangeLog,v 1.5 2009/01/14 16:07:31 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -solid-hardware-4.1.2.ebuild, -solid-hardware-4.1.3.ebuild:
+  Drop KDE 4.1.2 and 4.1.3
 
 *solid-hardware-4.1.4 (13 Jan 2009)
 

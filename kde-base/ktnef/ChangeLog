@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktnef
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.98 2009/01/13 22:59:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.99 2009/01/14 15:42:17 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> -ktnef-4.1.2.ebuild,
+  -ktnef-4.1.3.ebuild:
+  Drop KDE 4.1.2 and 4.1.3
 
 *ktnef-4.1.4 (13 Jan 2009)
 

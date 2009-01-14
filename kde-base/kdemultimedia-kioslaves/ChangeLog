@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia-kioslaves
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.107 2009/01/13 21:43:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.108 2009/01/14 14:36:28 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdemultimedia-kioslaves-4.1.2.ebuild,
+  -kdemultimedia-kioslaves-4.1.3.ebuild:
+  Drop KDE 4.1.2 and 4.1.3
 
 *kdemultimedia-kioslaves-4.1.4 (13 Jan 2009)
 

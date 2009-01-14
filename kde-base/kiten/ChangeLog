@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kiten
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.98 2009/01/13 22:10:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.99 2009/01/14 15:02:11 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> -kiten-4.1.2.ebuild,
+  -kiten-4.1.3.ebuild:
+  Drop KDE 4.1.2 and 4.1.3
 
 *kiten-4.1.4 (13 Jan 2009)
 

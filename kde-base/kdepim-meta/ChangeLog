@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.102 2009/01/14 09:03:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.103 2009/01/14 14:41:18 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdepim-meta-4.1.2.ebuild, -kdepim-meta-4.1.3.ebuild:
+  Drop KDE 4.1.2 and 4.1.3
 
   14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> kdepim-meta-4.1.4.ebuild:
   Add ~ppc ~ppc64 keywords to metas 4.1.4

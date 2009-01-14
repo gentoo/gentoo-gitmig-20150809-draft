@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcalc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.99 2009/01/13 21:22:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.100 2009/01/14 14:14:01 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> -kcalc-4.1.2.ebuild,
+  -kcalc-4.1.3.ebuild:
+  Drop KDE 4.1.2 and 4.1.3
 
 *kcalc-4.1.4 (13 Jan 2009)
 

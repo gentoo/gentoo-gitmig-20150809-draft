@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegames-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.104 2009/01/14 08:57:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.105 2009/01/14 14:31:35 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdegames-meta-4.1.2.ebuild, -kdegames-meta-4.1.3.ebuild:
+  Drop KDE 4.1.2 and 4.1.3
 
   14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org>
   kdegames-meta-4.1.4.ebuild:

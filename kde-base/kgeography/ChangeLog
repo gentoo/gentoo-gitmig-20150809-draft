@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kgeography
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.71 2009/01/13 22:01:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.72 2009/01/14 14:54:44 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> -kgeography-4.1.2.ebuild,
+  -kgeography-4.1.3.ebuild:
+  Drop KDE 4.1.2 and 4.1.3
 
 *kgeography-4.1.4 (13 Jan 2009)
 

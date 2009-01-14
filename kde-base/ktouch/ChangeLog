@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.106 2009/01/13 23:00:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.107 2009/01/14 15:42:50 alexxy Exp $
+
+  14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> -ktouch-4.1.2.ebuild,
+  -ktouch-4.1.3.ebuild:
+  Drop KDE 4.1.2 and 4.1.3
 
 *ktouch-4.1.4 (13 Jan 2009)
 
