@@ -9,7 +9,7 @@
  #GDKPIXBUF2 = 1
  
  XROOT = /usr/X11R6
-@@ -19,14 +19,14 @@
+@@ -19,17 +19,17 @@
  
  # If you want to use gdk-pixbuf-2.0, pass GDKPIXBUF2=1 to make command
  ifdef GDKPIXBUF2
@@ -26,3 +26,7 @@
  CPPFLAGS = -MMD -ansi -pedantic -Wall $(INCDIRS) $(DEFINES)
  INCDIRS = -I$(DAROOT)/include -I$(XROOT)/include $(PIXBUF_INC)
  DEFINES = -DETCDIR='"$(ETCDIR)"' $(PIXBUF_DEF)
+-LDFLAGS = -s
++#LDFLAGS = -s
+ LIBDIRS = -L$(DAROOT)/lib -L$(XROOT)/lib $(PIXBUF_LIB)
+ LDLIBS = -ldockapp -lXpm -lXext -lX11 -lm
