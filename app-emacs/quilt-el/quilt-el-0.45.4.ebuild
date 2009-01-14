@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/quilt-el-0.45.4.ebuild,v 1.6 2009/01/14 10:13:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/quilt-el-0.45.4.ebuild,v 1.7 2009/01/14 20:56:06 ranger Exp $
 
 inherit elisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://stakeuchi.sakura.ne.jp/dev/quilt-el/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="dev-util/quilt"
