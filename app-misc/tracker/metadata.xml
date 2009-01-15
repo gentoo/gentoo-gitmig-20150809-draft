@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>compnerd@gentoo.org</email>
-  <name>Saleem Abdulrasool</name>
-</maintainer>
+<herd>freedesktop</herd>
 <use>
   <flag name='applet'>Build tracker monitor applet</flag>
   <flag name='deskbar'>Build <pkg>gnome-extra/deskbar-applet</pkg> plugin
