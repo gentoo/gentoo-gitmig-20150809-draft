@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.35 2009/01/03 12:30:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.36 2009/01/15 12:22:05 dragonheart Exp $
+
+  15 Jan 2009; Daniel Black <dragonheart@gentoo.org> botan-1.8.0.ebuild:
+  remove alg_ia32 as per bug #253716 thanks Helmut Jarausch, Nickolay
+  Kolchin-Semyonov et. al
 
 *botan-1.8.0 (03 Jan 2009)
 

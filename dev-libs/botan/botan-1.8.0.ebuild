@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.0.ebuild,v 1.5 2009/01/04 06:58:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.0.ebuild,v 1.6 2009/01/15 12:22:05 dragonheart Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -46,9 +46,9 @@ src_compile() {
 
 	# If we have assembly code for this machine, use it
 	if [ "${ARCH}" = "x86" ]; then
-		modules="${modules},mp_ia32,alg_ia32"
+		modules="${modules},mp_ia32"
 		#below is untested.
-		#modules="${modules},mp_ia32,alg_ia32,mulop_ia32,serpent_ia32,ia32_eng,md4_ia32,md5_ia32,sha1_ia32,asm_ia32"
+		#modules="${modules},mp_ia32,mulop_ia32,serpent_ia32,ia32_eng,md4_ia32,md5_ia32,sha1_ia32,asm_ia32"
 	elif [ "${ARCH}" = "amd64" ]; then
 		modules="${modules},mp_amd64"
 		# monty_amd64 and mulop_amd64 had compile failures 20090103 Botan-1.8
