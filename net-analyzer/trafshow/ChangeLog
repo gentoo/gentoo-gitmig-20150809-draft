@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/trafshow
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.35 2009/01/15 06:04:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.36 2009/01/15 06:11:38 jer Exp $
+
+  15 Jan 2009; Jeroen Roovers <jer@gentoo.org> trafshow-5.2.3.ebuild:
+  Marked ~hppa too.
 
   15 Jan 2009; Jeroen Roovers <jer@gentoo.org>
   -files/trafshow-5.2.1-gentoo.patch, +files/trafshow-5.2.3-gentoo.patch,
