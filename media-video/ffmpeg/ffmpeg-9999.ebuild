@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.2 2008/12/23 12:13:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.3 2009/01/15 07:40:25 aballier Exp $
 
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/ffmpeg/trunk"
 
@@ -169,6 +169,7 @@ src_compile() {
 		--cc="$(tc-getCC)" \
 		${myconf} || die "configure failed"
 
+	emake version.h || die #252269
 	emake || die "make failed"
 }
 
