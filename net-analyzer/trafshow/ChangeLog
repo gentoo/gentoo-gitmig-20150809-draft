@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/trafshow
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.34 2008/02/09 12:09:26 drac Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.35 2009/01/15 06:04:12 jer Exp $
+
+  15 Jan 2009; Jeroen Roovers <jer@gentoo.org>
+  -files/trafshow-5.2.1-gentoo.patch, +files/trafshow-5.2.3-gentoo.patch,
+  trafshow-5.2.3.ebuild:
+  Install with normal permissions and group. Do not strip (bug #251987).
 
   09 Feb 2008; Samuli Suominen <drac@gentoo.org> trafshow-5.2.3.ebuild:
   Fix trafshow to work with slang 2.1.3.
