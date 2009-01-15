@@ -16,7 +16,7 @@
 	  <flag name='portage'>Enable experimental support for Portage
 		  configuration formats</flag>
 	  <flag name='python-bindings'>Enable Python bindings. Requires a lot of RAM
-		  to build (~700Mbyes per job) and adds a dependency upon
+		  to build (~700Mbytes per job) and adds a dependency upon
 		  <pkg>dev-libs/boost</pkg></flag>
 	  <flag name='qa'>Enable QA tools</flag>
 	  <flag name='ruby-bindings'>Enable Ruby bindings.</flag>
