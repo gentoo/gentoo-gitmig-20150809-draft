@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/traitsbackendqt-3.0.3.ebuild,v 1.1 2009/01/15 10:11:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/traitsbackendqt-3.0.3.ebuild,v 1.2 2009/01/15 16:01:46 mr_bones_ Exp $
 
 inherit distutils
 
@@ -20,7 +20,6 @@ DEPEND="dev-python/setuptools"
 
 S="${WORKDIR}/${MY_P}"
 PYTHON_MODNAME="enthought"
-
 
 src_install() {
 	find "${S}" -name \*LICENSE.txt -delete
