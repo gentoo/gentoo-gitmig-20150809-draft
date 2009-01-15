@@ -3,10 +3,6 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>compnerd@gentoo.org</email>
-    <name>Saleem Abdulrasool</name>
-  </maintainer>
-  <maintainer>
     <email>welp@gentoo.org</email>
     <name>Peter Weller</name>
   </maintainer>
