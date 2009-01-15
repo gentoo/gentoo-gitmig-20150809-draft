@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmmsg
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.16 2008/03/23 13:27:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.17 2009/01/15 11:32:30 s4t4n Exp $
+
+*wmmsg-1.0.1-r1 (15 Jan 2009)
+
+  15 Jan 2009; Michele Noberasco <s4t4n@gentoo.org>
+  +files/wmmsg-1.0.1-alt-desktop.patch, +wmmsg-1.0.1-r1.ebuild:
+  Revision bump, with patch to fix monitor_desktops feature. Closes bug #253498.
 
   23 Mar 2008; nixnut <nixnut@gentoo.org> wmmsg-1.0.1.ebuild:
   Stable on ppc wrt bug 214344
