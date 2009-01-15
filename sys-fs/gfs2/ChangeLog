@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/gfs2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs2/ChangeLog,v 1.2 2008/11/21 23:02:44 xmerlin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs2/ChangeLog,v 1.3 2009/01/15 17:25:40 jer Exp $
+
+  15 Jan 2009; Jeroen Roovers <jer@gentoo.org> gfs2-2.03.09.ebuild:
+  Fix HOMEPAGE thanks to Mariusz Kozlowski (bug #255015).
 
   22 Nov 2008; Christian Zoffoli <xmerlin@gentoo.org> gfs2-2.03.09.ebuild:
   Fixed homepage.
