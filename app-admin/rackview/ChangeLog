@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/rackview
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.12 2006/10/22 20:09:19 vivo Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.13 2009/01/15 21:04:17 tantive Exp $
+
+*rackview-0.09-r1 (15 Jan 2009)
+
+  15 Jan 2009; Michael Imhof <tantive@gentoo.org> +rackview-0.09-r1.ebuild:
+  Added deps. Closes #194133.
 
   22 Oct 2006; <vivo@gentoo.org> -rackview-0.04-r1.ebuild,
   -rackview-0.05.ebuild, rackview-0.09.ebuild:
