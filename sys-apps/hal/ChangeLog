@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.263 2009/01/13 15:19:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.264 2009/01/15 22:02:48 loki_val Exp $
+
+  15 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
+  Compnerd retired.
 
   13 Jan 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   gentopia is becoming freedesktop

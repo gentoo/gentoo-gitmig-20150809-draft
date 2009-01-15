@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>freedesktop</herd>
 <maintainer>
-	<email>compnerd@gentoo.org</email>
-</maintainer>
-<maintainer>
 	<email>steev@gentoo.org</email>
 </maintainer>
 <use>
