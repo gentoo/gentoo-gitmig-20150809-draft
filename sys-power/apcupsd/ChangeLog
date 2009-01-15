@@ -1,6 +1,15 @@
 # ChangeLog for sys-power/apcupsd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.37 2008/09/03 07:25:44 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.38 2009/01/15 15:21:11 flameeyes Exp $
+
+*apcupsd-3.14.5 (15 Jan 2009)
+
+  15 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/apcupsd.init.2, +apcupsd-3.14.5.ebuild:
+  Version bump, finally closing bug #228011 (thanks to all for the
+  patience). Also fix bug #240694 (thanks to Billy DeVincentis for the init
+  script), #254242 (thanks to Gordon Pritchard for reporting), #243070
+  (thanks to Ryan Tandy for the patch).
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   apcupsd-3.12.3.ebuild, apcupsd-3.12.4.ebuild, apcupsd-3.14.0.ebuild,
