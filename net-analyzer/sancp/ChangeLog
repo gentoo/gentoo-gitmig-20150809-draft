@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sancp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/ChangeLog,v 1.11 2008/08/04 19:54:06 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/ChangeLog,v 1.12 2009/01/15 07:28:38 jer Exp $
+
+  15 Jan 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/sancp-1.6.1-compiler.patch, sancp-1.6.1-r2.ebuild:
+  Use toolchain. Use dobin. Do not strip (bug #251984).
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe local USE flags for GLEP 56.

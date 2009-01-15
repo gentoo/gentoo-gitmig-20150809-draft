@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/sancp-1.6.1-r2.ebuild,v 1.3 2007/05/20 08:29:47 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sancp/sancp-1.6.1-r2.ebuild,v 1.4 2009/01/15 07:28:37 jer Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="SANCP is a network security tool designed to collect statistical \
 	information regarding network traffic and collect the traffic itself in pcap format."
@@ -36,6 +36,12 @@ src_unpack() {
 	# bug 138337
 	epatch "${DISTDIR}"/${PN}-1.6.1.fix200601.c.patch
 	epatch "${DISTDIR}"/${PN}-1.6.1.fix200606.d.patch
+	epatch "${FILESDIR}"/${P}-compiler.patch
+}
+
+src_compile() {
+	tc-export CXX
+	emake || die "make failed"
 }
 
 src_install() {
@@ -50,8 +56,7 @@ src_install() {
 		doins etc/sancp/sancp.conf
 	fi
 
-	exeinto /usr/bin
-	doexe sancp
+	dobin sancp
 
 	newinitd "${FILESDIR}"/sancp.rc1 sancp
 	newconfd "${FILESDIR}"/sancp.confd sancp
