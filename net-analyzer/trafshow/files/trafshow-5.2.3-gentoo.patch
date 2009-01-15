@@ -9,7 +9,7 @@
 -	[ -f /etc/$(PROG) ] || ./install-sh -c -m 444 .trafshow /etc/$(PROG)
 +	./install-sh -c -m 755 -o root -g root $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
 +	./install-sh -c -m 644 -o root -g root $(PROG).1 $(DESTDIR)$(MANDEST)/man1/$(PROG).1
-+	[ -f $(DESTDIR)/etc/$(PROG) ] || ./install-sh -c -o root -m 444 .trafshow $(DESTDIR)/etc/$(PROG)
++	[ -f $(DESTDIR)/etc/$(PROG) ] || ./install-sh -c -o root -m 644 .trafshow $(DESTDIR)/etc/$(PROG)
  
  clean:
  	rm -f $(CLEANFILES)
