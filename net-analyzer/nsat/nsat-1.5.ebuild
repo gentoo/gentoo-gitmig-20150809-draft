@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.16 2007/07/22 07:59:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.17 2009/01/15 07:04:29 jer Exp $
 
-inherit eutils
+inherit eutils autotools
+
+WANT_AUTOCONF=2.5
 
 DESCRIPTION="Network Security Analysis Tool, an application-level network security scanner"
 HOMEPAGE="http://nsat.sourceforge.net/"
@@ -24,10 +26,11 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
+	cp -va configure.in{,.orig}
 	epatch "${FILESDIR}"/${P}-configure.patch
 	# bug 128204
 	epatch "${FILESDIR}"/${P}-lvalue-gcc4.patch
+	epatch "${FILESDIR}"/${P}-strip.patch
 
 	sed -i "s:^#CGIFile /usr/local/share/nsat/nsat.cgi$:#CGIFile /usr/share/nsat/nsat.cgi:g" \
 		nsat.conf
@@ -36,12 +39,11 @@ src_unpack() {
 	sed -i -e "s:/usr/local/share/nsat/nsat.conf:/etc/nsat/nsat.conf:g" \
 		-e "s:/usr/local/share/nsat/nsat.cgi:/usr/share/nsat/nsat.cgi:g" \
 		src/lang.h
+
+	eautoconf
 }
 
 src_compile() {
-	WANT_AUTOCONF=2.5
-	autoconf
-
 	econf $( use_with X x ) || die
 
 	make|| die "compile problem"
