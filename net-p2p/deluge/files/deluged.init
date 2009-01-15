@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/files/deluged.init,v 1.3 2008/12/28 12:00:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/files/deluged.init,v 1.4 2009/01/15 09:43:15 armin76 Exp $
 
 depend() {
 	need net
@@ -33,7 +33,7 @@ checkconfig() {
 
 start() {
 	checkconfig || return $?
-	DELUGED_USER_HOME=`getent passwd | grep $( echo "${DELUGED_USER}" | cut -d ':' -f 1 ) | cut -d ':' -f 6`
+	DELUGED_USER_HOME=`getent passwd | grep ^$( echo "${DELUGED_USER}" | cut -d ':' -f 1 ): | cut -d ':' -f 6`
 	ebegin "Starting Deluged"
 	start-stop-daemon --start --user "${DELUGED_USER}" \
 	--name deluged --pidfile /var/run/deluged.pid --background --make-pidfile \
