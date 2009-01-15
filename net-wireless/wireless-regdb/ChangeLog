@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/wireless-regdb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.4 2008/12/02 17:02:15 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.5 2009/01/15 17:33:12 chainsaw Exp $
+
+*wireless-regdb-20090115 (15 Jan 2009)
+
+  15 Jan 2009; <chainsaw@gentoo.org> metadata.xml,
+  wireless-regdb-20081117.ebuild, +wireless-regdb-20090115.ebuild:
+  Fix MY_P logic as it had an off-by-one error. Removed -master part from
+  SRC_URI in response to upstream tarball renaming. Bump to 15-01-2009
+  release.
 
   02 Dec 2008; Brent Baude <ranger@gentoo.org>
   wireless-regdb-20081117.ebuild:
