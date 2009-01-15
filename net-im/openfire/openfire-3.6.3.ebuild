@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.6.3.ebuild,v 1.1 2009/01/13 12:42:21 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.6.3.ebuild,v 1.2 2009/01/15 22:02:08 maekke Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.igniterealtime.org/builds/openfire/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc"
 
 RDEPEND=">=virtual/jre-1.5"

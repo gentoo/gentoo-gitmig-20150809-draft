@@ -1,6 +1,9 @@
 # ChangeLog for net-im/openfire
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.31 2009/01/13 12:42:21 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.32 2009/01/15 22:02:08 maekke Exp $
+
+  15 Jan 2009; Markus Meier <maekke@gentoo.org> openfire-3.6.3.ebuild:
+  amd64/x86 stable, bug #254309
 
 *openfire-3.6.3 (13 Jan 2009)
 
