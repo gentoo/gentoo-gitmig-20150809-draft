@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4133 2009/01/15 10:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4134 2009/01/15 13:47:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2396,7 +2396,7 @@ sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/paludis:inquisitio - Enable inquisitio, the search client
 sys-apps/paludis:pink - Use a less boring colourscheme than the default
 sys-apps/paludis:portage - Enable experimental support for Portage configuration formats
-sys-apps/paludis:python-bindings - Enable Python bindings. Requires a lot of RAM to build (~700Mbyes per job) and adds a dependency upon dev-libs/boost
+sys-apps/paludis:python-bindings - Enable Python bindings. Requires a lot of RAM to build (~700Mbytes per job) and adds a dependency upon dev-libs/boost
 sys-apps/paludis:qa - Enable QA tools
 sys-apps/paludis:ruby-bindings - Enable Ruby bindings.
 sys-apps/paludis:visibility - Enable visibility support (g++ >=4.1)
