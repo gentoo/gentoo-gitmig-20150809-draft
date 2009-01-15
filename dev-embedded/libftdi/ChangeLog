@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/libftdi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.32 2008/10/13 10:34:00 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.33 2009/01/15 16:44:01 vapier Exp $
+
+*libftdi-0.15 (15 Jan 2009)
+
+  15 Jan 2009; Mike Frysinger <vapier@gentoo.org> +libftdi-0.15.ebuild:
+  Version bump.
 
 *libftdi-0.14 (13 Oct 2008)
 
