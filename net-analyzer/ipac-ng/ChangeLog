@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ipac-ng
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.28 2008/05/21 18:49:18 dev-zero Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.29 2009/01/15 05:25:43 jer Exp $
+
+  15 Jan 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/ipac-ng-1.31-strip.patch, ipac-ng-1.31-r2.ebuild:
+  Do not strip (bug #251977).
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> ipac-ng-1.31-r2.ebuild:
   Changed dependency for postgresql from dev-db/postgresql to
