@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2264 2009/01/14 12:43:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2265 2009/01/15 08:07:55 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jan 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask vamp sdk 2.0 now that audacity is fixed
 
   14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Unmask kde 4.1.4

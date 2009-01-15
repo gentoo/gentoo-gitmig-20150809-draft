@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9393 2009/01/14 12:43:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9394 2009/01/15 08:07:55 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -267,12 +267,6 @@ app-portage/udept
 # Alin Năstac <mrness@gentoo.org> (14 Dec 2008)
 # Dead upstream, masked for removal in ~60 days.
 net-proxy/squirm
-
-# Alexis Ballier <aballier@gentoo.org> (13 Dec 2008)
-# API changes on the host side
-# Mask also packages requiring it
->=media-libs/vamp-plugin-sdk-2.0
->=media-sound/sonic-visualiser-1.4
 
 # Steve Dibb <beandog@gentoo> (11 Dec 2008)
 # Needs some testing
