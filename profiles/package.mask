@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9394 2009/01/15 08:07:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9395 2009/01/15 11:14:55 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -275,12 +275,6 @@ net-proxy/squirm
 # Jim Ramsay <lack@gentoo.org> (11 Dec 2008)
 # Live ebuild, for advanced users only
 =x11-wm/fluxbox-9999
-
-# Torsten Veller <tove@gentoo.org> (08 Dec 2008)
-# Mask broken perl modules
-# Missing dependencies:
-~dev-perl/Net-Amazon-S3-0.48
-~dev-perl/Net-Amazon-S3-0.49
 
 # Jeremy Olexa <darkside@gentoo.org> (07 Dec 2008)
 # Masked for removal in 60 days at maintainers request. Some don't work. Most
