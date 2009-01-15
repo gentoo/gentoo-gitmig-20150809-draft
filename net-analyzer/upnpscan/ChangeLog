@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/upnpscan
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.4 2006/12/23 23:03:00 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.5 2009/01/15 07:48:14 jer Exp $
+
+  15 Jan 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/upnpscan-0.4-cflags.patch, upnpscan-0.4.ebuild:
+  Respect CFLAGS (bug #240868).
 
   23 Dec 2006; Piotr Jaroszyński <peper@gentoo.org> upnpscan-0.4.ebuild:
   Add ~amd64 wrt bug #156251.
