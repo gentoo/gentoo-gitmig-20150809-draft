@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.0.2.ebuild,v 1.1 2009/01/15 10:24:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.0.2.ebuild,v 1.2 2009/01/15 11:20:43 bicatali Exp $
 
 EAPI=2
 inherit eutils distutils
 
 MY_PN="Enable"
 MY_P="${MY_PN}-${PV}"
-DESCRIPTION="Enthought Tools Suite drawing and interaction GUI objects"
+DESCRIPTION="Enthought Tool Suite drawing and interaction GUI objects"
 HOMEPAGE="http://code.enthought.com/projects/enable"
 SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
