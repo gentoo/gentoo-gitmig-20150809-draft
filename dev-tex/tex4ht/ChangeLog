@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.43 2009/01/11 18:18:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.44 2009/01/15 07:21:37 aballier Exp $
+
+*tex4ht-20090115_p0029 (15 Jan 2009)
+
+  15 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  +tex4ht-20090115_p0029.ebuild:
+  version bump
 
   11 Jan 2009; Alexis Ballier <aballier@gentoo.org>
   -tex4ht-20071024_p0140.ebuild:
