@@ -1,6 +1,6 @@
 # ChangeLog for games-sports/kbilliards
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/kbilliards/ChangeLog,v 1.6 2009/01/13 15:33:43 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/kbilliards/ChangeLog,v 1.7 2009/01/15 10:18:27 tove Exp $
 
   13 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/kbilliards-0.8.7b-gcc43.patch, kbilliards-0.8.7b.ebuild:
@@ -10,7 +10,7 @@
   kbilliards-0.8.7b.ebuild:
   stable amd64, bug 232772
 
-  25 Jul 2008; RaÃºl Porcel <armin76@gentoo.org> kbilliards-0.8.7b.ebuild:
+  25 Jul 2008; Raúl Porcel <armin76@gentoo.org> kbilliards-0.8.7b.ebuild:
   x86 stable wrt #232772
 
 *kbilliards-0.8.7b (18 Oct 2006)
