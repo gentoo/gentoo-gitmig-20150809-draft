@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/braa
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.14 2009/01/15 03:02:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.15 2009/01/15 16:56:40 jer Exp $
+
+  15 Jan 2009; Jeroen Roovers <jer@gentoo.org> files/braa-0.8-gentoo.diff:
+  Fix patch to include directory.
 
 *braa-0.8-r2 (15 Jan 2009)
 
