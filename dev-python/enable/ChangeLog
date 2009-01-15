@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/enable
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.1 2009/01/15 10:24:27 bicatali Exp $
+
+*enable-3.0.2 (15 Jan 2009)
+
+  15 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/enable-3.0.2-nofreetype.patch, +metadata.xml, +enable-3.0.2.ebuild:
+  Initial import
+

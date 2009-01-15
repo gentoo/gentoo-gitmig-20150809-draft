@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/chaco
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/ChangeLog,v 1.1 2009/01/15 10:26:01 bicatali Exp $
+
+*chaco-3.0.1 (15 Jan 2009)
+
+  15 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +chaco-3.0.1.ebuild:
+  Initial import
+

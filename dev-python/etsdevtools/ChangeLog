@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/etsdevtools
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/ChangeLog,v 1.1 2009/01/15 10:27:10 bicatali Exp $
+
+*etsdevtools-3.0.1 (15 Jan 2009)
+
+  15 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +etsdevtools-3.0.1.ebuild:
+  Initial import
+
