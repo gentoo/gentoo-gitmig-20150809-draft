@@ -1,0 +1,18 @@
+--- ipband-0.8.1/Makefile.orig	2008-06-17 19:23:19.000000000 +0200
++++ ipband-0.8.1/Makefile	2009-01-15 06:33:07.000000000 +0100
+@@ -12,7 +12,6 @@
+ CPPFLAGS=-I/usr/include/pcap
+ LIBS=-lpcap
+ CFLAGS := -Wall $(CFLAGS)
+-CC=gcc 
+ 
+ ifndef PREFIX
+ PREFIX=/usr
+@@ -50,7 +49,6 @@
+ 
+ $(BIN):	$(OBJ_C)
+ 	$(CC) -o $(BIN) $(OBJ_C) $(LIBS) $(CFLAGS)
+-	strip $(BIN)
+ 
+ install-strip:	install
+ 

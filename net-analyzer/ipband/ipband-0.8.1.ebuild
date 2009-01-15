@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipband/ipband-0.8.1.ebuild,v 1.1 2008/12/06 19:48:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipband/ipband-0.8.1.ebuild,v 1.2 2009/01/15 05:38:51 jer Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A pcap based IP traffic and bandwidth monitor with configurable reporting and alarm abilities"
 HOMEPAGE="http://ipband.sourceforge.net/"
@@ -21,16 +21,20 @@ src_unpack() {
 	# Provide a postfix MTA string in the author's ipband.conf example
 	sed -rie 's:(#mtastring.*):# Sendmail\n\1\n# Postfix\n#mtastring "/usr/sbin/sendmail -t":g' \
 		"${S}"/ipband.sample.conf
+
+	# Do not strip and do use toolchain
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_compile() {
+	tc-export CC
 	emake || die "Compile problem"
 }
 
 src_install() {
 	doman ipband.8
 	dodoc CHANGELOG README
-	exeinto /usr/bin ; doexe ipband
+	dobin ipband
 	newinitd "${FILESDIR}"/ipband-init ipband
 	insinto /etc/ ; newins ipband.sample.conf ipband.conf
 }
