@@ -1,0 +1,48 @@
+Index: src/effects/vamp/VampEffect.cpp
+===================================================================
+RCS file: /cvsroot/audacity/audacity-src/src/effects/vamp/VampEffect.cpp,v
+retrieving revision 1.8
+retrieving revision 1.10
+diff -u -B -r1.8 -r1.10
+--- src/effects/vamp/VampEffect.cpp	12 Jul 2008 15:25:49 -0000	1.8
++++ src/effects/vamp/VampEffect.cpp	30 Dec 2008 00:36:55 -0000	1.10
+@@ -13,15 +13,9 @@
+ 
+ #include "VampEffect.h"
+ 
+-#ifdef _WIN32
+-#include "../../../lib-src/libvamp/vamp-sdk/Plugin.h"
+-#include "../../../lib-src/libvamp/vamp-sdk/hostext/PluginChannelAdapter.h"
+-#include "../../../lib-src/libvamp/vamp-sdk/hostext/PluginInputDomainAdapter.h"
+-#else
+-#include <vamp-sdk/Plugin.h>
+-#include <vamp-sdk/hostext/PluginChannelAdapter.h>
+-#include <vamp-sdk/hostext/PluginInputDomainAdapter.h>
+-#endif
++#include <vamp-hostsdk/Plugin.h>
++#include <vamp-hostsdk/PluginChannelAdapter.h>
++#include <vamp-hostsdk/PluginInputDomainAdapter.h>
+ 
+ #include <wx/wxprec.h>
+ #include <wx/button.h>
+Index: src/effects/vamp/VampEffect.h
+===================================================================
+RCS file: /cvsroot/audacity/audacity-src/src/effects/vamp/VampEffect.h,v
+retrieving revision 1.5
+retrieving revision 1.7
+diff -u -B -r1.5 -r1.7
+--- src/effects/vamp/VampEffect.h	12 Jul 2008 15:25:49 -0000	1.5
++++ src/effects/vamp/VampEffect.h	30 Dec 2008 00:36:55 -0000	1.7
+@@ -22,11 +22,7 @@
+ 
+ #include <wx/dialog.h>
+ 
+-#ifdef _WIN32
+-#include "../../../lib-src/libvamp/vamp-sdk/hostext/PluginLoader.h"
+-#else
+-#include <vamp-sdk/hostext/PluginLoader.h>
+-#endif
++#include <vamp-hostsdk/PluginLoader.h>
+ 
+ void LoadVampPlugins();
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.6.ebuild,v 1.4 2009/01/09 22:22:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.6.ebuild,v 1.5 2009/01/15 08:06:35 aballier Exp $
 
 EAPI=2
 
@@ -51,6 +51,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-1.3.4-automagic.patch"
 	epatch "${FILESDIR}/${PN}-1.3.5-libtool22.patch"
 	epatch "${FILESDIR}/${P}-novorbis.patch"
+	has_version '>=media-libs/vamp-plugin-sdk-2.0' && epatch "${FILESDIR}/${P}-vamp2.patch"
 	AT_M4DIR="${S}/m4" eautoreconf
 }
 
