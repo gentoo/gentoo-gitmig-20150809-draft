@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/iwl4965-ucode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.12 2009/01/10 16:34:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.13 2009/01/15 22:07:37 loki_val Exp $
+
+  15 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
+  Compnerd retired.
 
   10 Jan 2009; <chainsaw@gentoo.org> iwl4965-ucode-228.57.2.21.ebuild:
   Mark firmware ABI-2 stable on X86 based on user testing by

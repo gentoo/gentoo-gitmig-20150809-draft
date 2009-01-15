@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>compnerd@gentoo.org</email>
-		<name>Saleem Abdulrasool</name>
-	</maintainer>
 	<herd>mobile</herd>
 	<longdescription lang="en">
 		Firmware image for the Intel Wireless 3945 series network cards
