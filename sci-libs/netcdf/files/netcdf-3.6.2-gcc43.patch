@@ -9,3 +9,23 @@
  
  #include "ncvalues.h"
  
+--- examples/CXX/sfc_pres_temp_rd.cpp.orig	2009-01-15 13:10:38.866169747 +0000
++++ examples/CXX/sfc_pres_temp_rd.cpp	2009-01-15 13:11:21.301635873 +0000
+@@ -17,6 +17,7 @@
+ */
+ 
+ #include <iostream>
++#include <cstring>
+ #include <netcdfcpp.h>
+ 
+ using namespace std;
+--- examples/CXX/sfc_pres_temp_wr.cpp.orig	2009-01-15 13:10:28.031052831 +0000
++++ examples/CXX/sfc_pres_temp_wr.cpp	2009-01-15 13:11:07.535199220 +0000
+@@ -17,6 +17,7 @@
+ */
+ 
+ #include <iostream>
++#include <cstring>
+ #include <netcdfcpp.h>
+ 
+ using namespace std;
