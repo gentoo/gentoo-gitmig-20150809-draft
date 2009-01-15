@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.5.0b.ebuild,v 1.1 2008/10/21 14:35:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.5.0b.ebuild,v 1.2 2009/01/15 16:52:23 bicatali Exp $
 
 EAPI="2"
 
@@ -19,6 +19,14 @@ IUSE="debug"
 DEPEND=">=dev-lang/R-2.7.0
 		dev-lang/php"
 RDEPEND="${DEPEND}"
+
+src_prepare(){
+	kde4-base_src_prepare
+	# fixing Rdevices.h missing header
+	sed -i \
+		-e '/#include "Rdevices.h"/d' \
+		"${S}"/rkward/rbackend/rembedinternal.cpp || die
+}
 
 src_install() {
 	kde4-base_src_install
