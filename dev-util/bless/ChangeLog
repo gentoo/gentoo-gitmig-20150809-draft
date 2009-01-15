@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bless
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.14 2009/01/05 17:23:13 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.15 2009/01/15 23:40:50 ikelos Exp $
+
+  15 Jan 2009; Mike Auty <ikelos@gentoo.org> metadata.xml:
+  Compnerd retired, taking over bless.
 
   05 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> bless-0.5.2.ebuild,
   bless-0.6.0.ebuild:
