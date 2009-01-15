@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/cnet
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.15 2007/06/02 22:42:58 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.16 2009/01/15 05:02:55 jer Exp $
+
+  15 Jan 2009; Jeroen Roovers <jer@gentoo.org>
+  files/cnet-2.0.10-gentoo.patch, cnet-2.0.10.ebuild:
+  New toolchain patch. New strip patch (bug #251974). Unify patches. Clean
+  up ebuild.
 
   02 Jun 2007; Markus Ullmann <jokey@gentoo.org>
   -files/cnet-2.0.5-gentoo.patch, -files/cnet-2.0.9-gentoo.patch,

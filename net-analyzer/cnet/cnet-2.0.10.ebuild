@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/cnet-2.0.10.ebuild,v 1.3 2007/04/07 04:21:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/cnet-2.0.10.ebuild,v 1.4 2009/01/15 05:02:55 jer Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Network simulation tool"
 SRC_URI="http://www.csse.uwa.edu.au/cnet/${P}.tgz"
@@ -16,15 +16,15 @@ IUSE=""
 DEPEND=">=dev-lang/tk-8.3.4
 	dev-libs/elfutils"
 
-#RDEPEND=""
-
-# unpacking the source
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+}
 
-	epatch "${FILESDIR}"/${PN}-2.0.10-gentoo.patch
-	sed -i.orig -e "s/^CFLAGS.*/CFLAGS=${CFLAGS}/" "${S}"/src/Makefile.linux
+src_compile() {
+	tc-export CC
+	emake CFLAGS="${CFLAGS}" || die "make failed"
 }
 
 src_install() {

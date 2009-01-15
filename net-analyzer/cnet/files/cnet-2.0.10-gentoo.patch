@@ -1,6 +1,5 @@
-diff --exclude='*~' -Naur cnet-2.0.10.orig/Makefile cnet-2.0.10/Makefile
---- cnet-2.0.10.orig/Makefile	2006-04-20 21:54:40.000000000 -0300
-+++ cnet-2.0.10/Makefile	2006-04-20 21:54:54.000000000 -0300
+--- cnet-2.0.10/Makefile.orig	2006-03-06 20:03:14.000000000 +0100
++++ cnet-2.0.10/Makefile	2009-01-15 05:51:23.000000000 +0100
 @@ -7,14 +7,14 @@
  # It is presumed that BINDIR and MANDIR exist, so you may need
  # to create them, and set their permissions, if necessary.
@@ -20,77 +19,30 @@ diff --exclude='*~' -Naur cnet-2.0.10.orig/Makefile cnet-2.0.10/Makefile
  
  # ---------------------------------------------------------------------
  
-diff --exclude='*~' -Naur cnet-2.0.10.orig/Makefile.orig cnet-2.0.10/Makefile.orig
---- cnet-2.0.10.orig/Makefile.orig	1969-12-31 21:00:00.000000000 -0300
-+++ cnet-2.0.10/Makefile.orig	2006-03-06 16:03:14.000000000 -0300
-@@ -0,0 +1,46 @@
-+NAME		= cnet
-+VERSION		= 2.0.10
-+SHELL		= /bin/sh
-+#
-+# Change the following 5 constants to suit your local site.
-+#
-+# It is presumed that BINDIR and MANDIR exist, so you may need
-+# to create them, and set their permissions, if necessary.
-+#
-+PREFIX		= /usr/local
-+#
-+BINDIR		= $(PREFIX)/bin
-+CNETDIR		= $(PREFIX)/cnetlib
-+MANDIR		= $(PREFIX)/man/man1
-+MANEXT		= 1
-+MANFILE		= $(MANDIR)/$(NAME).$(MANEXT)
-+WEBDIR		= /home/httpd/html/cnet
-+
-+# ---------------------------------------------------------------------
-+
-+it:
-+	(cd src && make)
-+
-+install:
-+	(cd src && make)
-+	cp $(NAME) $(BINDIR)/$(NAME)  && chmod 755 $(BINDIR)/$(NAME)
-+	mkdir -p $(CNETDIR)           && chmod 755 $(CNETDIR)
-+	cp cnetlib/* $(CNETDIR)       && chmod 644 $(CNETDIR)/*
-+	cp DOC/$(NAME).man $(MANFILE) && chmod 644 $(MANFILE)
-+
-+web:
-+	mkdir -p $(WEBDIR)            && chmod 755 $(WEBDIR)
-+	mkdir -p $(WEBDIR)/images     && chmod 755 $(WEBDIR)/images
-+	cp DOC/*.* $(WEBDIR)
-+	cp DOC/images/* $(WEBDIR)/images
-+	chmod 644 $(WEBDIR)/*.* $(WEBDIR)/images/*
-+
-+# ---------------------------------------------------------------------
-+
-+clean:
-+	(cd src && make clean)
-+	(cd DOC		    && make clean)
-+	(cd EXAMPLES	    && make clean)
-+
-+uninstall:
-+	rm -rf $(BINDIR)/$(NAME) $(MANFILE) $(CNETDIR) $(WEBDIR)
-diff --exclude='*~' -Naur cnet-2.0.10.orig/src/config.h cnet-2.0.10/src/config.h
---- cnet-2.0.10.orig/src/config.h	2006-04-20 21:54:40.000000000 -0300
-+++ cnet-2.0.10/src/config.h	2006-04-20 21:54:55.000000000 -0300
-@@ -169,7 +169,7 @@
- #if	defined(USE_FREEBSD)
- #define	CNETPATH	"/usr/local/share/cnet:/usr/local/include:/usr/local/cnetlib"
- #else
--#define	CNETPATH	"/usr/local/cnetlib:/usr/lib/cnet:/cslinux/cnetlib"
-+#define	CNETPATH	"/usr/lib/cnetlib:/usr/lib/cnet:"
- #endif
+--- cnet-2.0.10/src/Makefile.common.orig	2004-05-10 21:26:53.000000000 +0200
++++ cnet-2.0.10/src/Makefile.common	2009-01-15 05:51:23.000000000 +0100
+@@ -18,7 +18,6 @@
+ 
+ $(NAME):	$(OBJ)
+ 		$(LD) $(LDFLAGS) -o $(NAME) $(OBJ) $(LIBDIRS) $(XLIBS) $(LIBS)
+-		@$(STRIP) $(NAME)
+ 		@chmod 755 $(NAME)
  
  
-diff --exclude='*~' -Naur cnet-2.0.10.orig/src/Makefile.linux cnet-2.0.10/src/Makefile.linux
---- cnet-2.0.10.orig/src/Makefile.linux	2006-04-20 21:54:40.000000000 -0300
-+++ cnet-2.0.10/src/Makefile.linux	2006-04-20 21:54:55.000000000 -0300
-@@ -29,7 +29,7 @@
- ANSICC		= gcc -ansi
+--- cnet-2.0.10/src/Makefile.linux.orig	2004-05-10 21:27:19.000000000 +0200
++++ cnet-2.0.10/src/Makefile.linux	2009-01-15 05:51:23.000000000 +0100
+@@ -26,12 +26,10 @@
+ 
+ # Cannot use the -pedantic option if requiring 'long long' syntax.
+ #ANSICC		= gcc -ansi -pedantic
+-ANSICC		= gcc -ansi
++ANSICC		= $(CC) -ansi
  INCLUDES	= $(LIBELFINC)
  
 -CFLAGS		= -O -Wall -fPIC $(INCLUDES) $(XINCLUDES)
-+CFLAGS		= -march=pentium3 -O3 -pipe -fPIC $(INCLUDES) $(XINCLUDES)
- 
- LD		= gcc -rdynamic
+-
+-LD		= gcc -rdynamic
++LD		= $(CC) -rdynamic
  LIBDIRS		= -L/usr/X11R6/lib $(XLIBDIRS) $(LIBELFDIR)
+ LIBS		= -lelf -ldl -lm
+ STRIP		= strip
