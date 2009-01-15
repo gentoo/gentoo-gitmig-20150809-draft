@@ -1,6 +1,36 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.38 2009/01/15 15:21:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.39 2009/01/15 15:37:07 flameeyes Exp $
+
+  15 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/3.10.15/apcupsd.in.patch, -files/3.10.15/smtp.patch,
+  -files/3.10.16/apache.conf, -files/3.10.16/apcupsd.in.patch,
+  -files/3.10.16/smtp.patch, -files/3.10.17/apache.conf,
+  -files/3.10.17/apcupsd.in.patch, -files/3.10.17/smtp.patch,
+  -files/3.10.15/apache.conf, -files/3.12.2/apache.conf,
+  -files/3.12.2/apcupsd.in.patch, -files/3.12.2/apcupsd-lighttpd.conf,
+  -files/3.12.2/etc.patch, -files/3.12.3/apcupsd.in.patch,
+  -files/3.12.3/etc.patch, -files/3.14/apcupsd.in.patch,
+  -files/3.14/etc.patch,
+  -files/3.14.0/apcupsd-3.14.0-apccontrol-gentoo.patch,
+  -files/3.14.0/apcupsd.in.patch, -files/3.14.0/apcupsd.initd,
+  -files/3.14.0/etc.patch, -files/3.14.0/no-parallel.patch,
+  -files/3.14.1/apcupsd-3.14.1-apccontrol-gentoo.patch,
+  -files/3.14.1/apcupsd.in.patch, -files/3.14.1/apcupsd.initd,
+  -files/3.14.1/etc.patch, -files/3.14.1/no-parallel.patch,
+  -files/3.14.2/apcupsd.in.patch, -files/3.14.2/apcupsd.initd,
+  -files/3.14.2/etc.patch, -files/3.14.2/no-parallel.patch,
+  -files/3.14.3/apcupsd.in.patch, -files/3.14.3/apcupsd.initd,
+  -files/3.14.3/etc.patch, -files/3.14.3/hal-ups-policy.patch,
+  -files/3.14.3/no-parallel.patch, metadata.xml, -apcupsd-3.10.15-r1.ebuild,
+  -apcupsd-3.10.16-r3.ebuild, -apcupsd-3.10.17-r1.ebuild,
+  -apcupsd-3.10.18-r2.ebuild, -apcupsd-3.12.2.ebuild,
+  -apcupsd-3.12.2-r1.ebuild, -apcupsd-3.12.3.ebuild, -apcupsd-3.14.0.ebuild,
+  -apcupsd-3.14.1.ebuild, -apcupsd-3.14.2.ebuild, -apcupsd-3.14.3.ebuild,
+  apcupsd-3.14.5.ebuild:
+  Take over package, remove all the old versions that are not latest-stable
+  for any architecture, remove all the extra files (lots of duplicates too),
+  remove the etc patch from 3.14.5 because with mailx it shouldn't matter.
 
 *apcupsd-3.14.5 (15 Jan 2009)
 
