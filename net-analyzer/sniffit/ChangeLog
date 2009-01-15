@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sniffit
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.14 2007/09/06 18:11:08 jokey Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.15 2009/01/15 06:37:32 jer Exp $
+
+  15 Jan 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/sniffit-0.3.7-gentoo.patch, sniffit-0.3.7-r1.ebuild:
+  Do not hide compiler warnings. Do not hardcode CFLAGS in Makefile. Do not
+  strip (bug #251985).
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -sniffit-0.3.7.ebuild:
   Cleanup
