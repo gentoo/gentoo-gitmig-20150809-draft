@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.17 2009/01/15 07:04:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nsat/nsat-1.5.ebuild,v 1.18 2009/01/15 07:08:09 jer Exp $
 
 inherit eutils autotools
 
@@ -40,7 +40,7 @@ src_unpack() {
 		-e "s:/usr/local/share/nsat/nsat.cgi:/usr/share/nsat/nsat.cgi:g" \
 		src/lang.h
 
-	eautoconf
+	eautoreconf
 }
 
 src_compile() {
