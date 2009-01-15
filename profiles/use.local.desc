@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4132 2009/01/14 23:47:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4133 2009/01/15 10:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -729,6 +729,7 @@ dev-python/jinja2:i18n - Enables support for i18n with dev-python/Babel
 dev-python/kaa-base:tls - SSL/TLS support via dev-python/tlslite
 dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
 dev-python/matplotlib:excel - Pull dev-python/xlwt for the exceltools toolkit
+dev-python/matplotlib:traits - Pull dev-python/traits for the experimental enthought traits support
 dev-python/nose:twisted - install nose.twistedtools to integrate tests with twisted
 dev-python/paste:flup - enable support for flup (and therefore for various wgsi servers and middleware)
 dev-python/paste:openid - enable OpenID support
