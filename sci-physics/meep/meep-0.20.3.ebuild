@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-0.20.3.ebuild,v 1.2 2008/11/08 19:18:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-0.20.3.ebuild,v 1.3 2009/01/16 15:54:38 bicatali Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="sci-libs/fftw
 	bindist? ( <sci-libs/gsl-1.10 )
 	sci-physics/harminv
 	virtual/lapack
-	guile? ( >=sci-libs/libctl-3.0 )
+	guile? ( >=sci-libs/libctl-3.0.3 )
 	hdf5? ( sci-libs/hdf5 )
 	mpi? ( virtual/mpi )"
 
