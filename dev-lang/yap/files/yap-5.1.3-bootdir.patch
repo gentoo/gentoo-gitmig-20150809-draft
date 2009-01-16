@@ -1,0 +1,59 @@
+--- Yap-5.1.3.orig/console/yap.c	2008-06-05 01:58:37.000000000 +1200
++++ Yap-5.1.3/console/yap.c	2008-08-24 14:31:21.000000000 +1200
+@@ -82,6 +82,7 @@
+ static int output_msg;
+ #endif
+ 
++static char *YapBootDir = NULL;
+ static char BootFile[] = "boot.yap";
+ static char InitFile[] = "init.yap";
+ 
+@@ -595,11 +596,22 @@
+   BootMode = parse_yap_arguments(argc,argv,iap);
+ 
+   if (BootMode == YAP_FULL_BOOT_FROM_PROLOG) {
++    YapBootDir = getenv("YAPBOOTDIR");
++    if (YapBootDir) {
+ #if HAVE_STRNCAT
+-    strncpy(boot_file, PL_SRC_DIR, 256);
++      strncpy(boot_file, YapBootDir, 256);
+ #else
+-    strcpy(boot_file, PL_SRC_DIR);
++      strcpy(boot_file, YapBootDir);
+ #endif
++      strcat(boot_file, "/");
++    }
++    else {
++#if HAVE_STRNCAT
++      strncpy(boot_file, PL_SRC_DIR, 256);
++#else
++      strcpy(boot_file, PL_SRC_DIR);
++#endif
++    }
+ #if HAVE_STRNCAT
+     strncat(boot_file, BootFile, 256);
+ #else
+@@ -649,11 +661,21 @@
+ 	YAP_Functor fgoal;
+ 	YAP_Term goal, as[2];
+ 
++        if (YapBootDir) {
+ #if HAVE_STRNCAT
+-	strncpy(init_file, PL_SRC_DIR, 256);
++          strncpy(init_file, YapBootDir, 256);
+ #else
+-	strcpy(init_file, PL_SRC_DIR);
++          strcpy(init_file, YapBootDir);
+ #endif
++          strcat(init_file, "/");
++        }
++        else {
++#if HAVE_STRNCAT
++          strncpy(init_file, PL_SRC_DIR, 256);
++#else
++	  strcpy(init_file, PL_SRC_DIR);
++#endif
++        }
+ #if HAVE_STRNCAT
+ 	strncat(init_file, InitFile, 256);
+ #else
