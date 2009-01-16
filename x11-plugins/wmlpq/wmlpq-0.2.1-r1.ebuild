@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlpq/wmlpq-0.2.1-r1.ebuild,v 1.2 2006/01/15 17:47:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlpq/wmlpq-0.2.1-r1.ebuild,v 1.3 2009/01/16 16:21:10 s4t4n Exp $
 
 inherit eutils
 
@@ -21,18 +21,18 @@ KEYWORDS="x86 ppc"
 src_unpack()
 {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-makefile.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-makefile.patch"
 }
 
 src_install()
 {
 	dodir /usr/bin/
-	einstall DESTDIR=${D}/usr/bin/ CFLAGS="${CFLAGS} -Wall" || die "Installation failed"
+	einstall DESTDIR="${D}/usr/bin/" CFLAGS="${CFLAGS} -Wall" || die "Installation failed"
 
 	dodoc README sample.wmlpqrc
 	newman wmlpq.1x wmlpq.1
 
 	insinto /usr/share/applications
-	doins ${FILESDIR}/${PN}.desktop
+	doins "${FILESDIR}/${PN}.desktop"
 }
