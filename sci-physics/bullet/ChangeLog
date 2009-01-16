@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/bullet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.4 2009/01/06 11:35:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.5 2009/01/16 14:54:03 bicatali Exp $
+
+  16 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  bullet-2.73-r1.ebuild:
+  Added a dos2unix to get rid of DOS terminations in install-sh, closing bug
+  #255166
 
 *bullet-2.73-r1 (06 Jan 2009)
 
