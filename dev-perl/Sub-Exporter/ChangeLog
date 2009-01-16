@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Sub-Exporter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.1 2009/01/14 10:21:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/ChangeLog,v 1.2 2009/01/16 20:22:31 robbat2 Exp $
+
+*Sub-Exporter-0.982 (16 Jan 2009)
+
+  16 Jan 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +Sub-Exporter-0.982.ebuild:
+  Version bump via perl-bump experimental tool.
 
 *Sub-Exporter-0.981 (14 Jan 2009)
 
