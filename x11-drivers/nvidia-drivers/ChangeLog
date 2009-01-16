@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.127 2008/12/25 15:44:29 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.128 2009/01/16 21:24:15 cardoe Exp $
+
+*nvidia-drivers-180.22 (16 Jan 2009)
+
+  16 Jan 2009; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-180.22.ebuild:
+  add new version. add vdpau support
 
   25 Dec 2008; Markus Meier <maekke@gentoo.org>
   nvidia-drivers-71.86.07.ebuild, nvidia-drivers-96.43.09.ebuild,
