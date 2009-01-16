@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/flagedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.17 2009/01/16 21:59:58 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flagedit/ChangeLog,v 1.18 2009/01/16 23:50:41 dams Exp $
+
+  16 Jan 2009; <dams@gentoo.org> +flagedit-0.0.8.ebuild:
+  make flagedit compatible with directories support of Portage >= 2.2 ( bug
+  #241668 )
 
   16 Jan 2009; <dams@gentoo.org> ChangeLog:
   updated homepage and download urls
