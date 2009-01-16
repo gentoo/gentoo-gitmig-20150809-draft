@@ -25,6 +25,9 @@ java-external
 ffmpeg
 
 # havent tested yet
+chicken
+clisp
+R
 mythtv
 dvb
 qt3
