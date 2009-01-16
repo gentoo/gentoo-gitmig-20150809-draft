@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.230 2009/01/14 20:52:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.231 2009/01/16 21:19:47 beandog Exp $
+
+  16 Jan 2009; Steve Dibb <beandog@gentoo.org> dhcpcd-4.0.7.ebuild:
+  amd64 stable, bug 254812
 
   14 Jan 2009; Brent Baude <ranger@gentoo.org> dhcpcd-4.0.7.ebuild:
   stable ppc64, bug 254812
