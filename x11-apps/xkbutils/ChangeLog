@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xkbutils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbutils/ChangeLog,v 1.18 2008/10/03 08:50:31 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbutils/ChangeLog,v 1.19 2009/01/16 11:06:14 remi Exp $
+
+*xkbutils-1.0.1-r1 (16 Jan 2009)
+
+  16 Jan 2009; Rémi Cardona <remi@gentoo.org> +xkbutils-1.0.1-r1.ebuild:
+  remove xprint support (see bug #254874)
 
   03 Oct 2008; Raúl Porcel <armin76@gentoo.org> xkbutils-1.0.1.ebuild:
   Add ~ia64 wrt #237411
