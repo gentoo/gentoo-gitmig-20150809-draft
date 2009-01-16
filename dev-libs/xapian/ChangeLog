@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xapian
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.29 2008/07/06 19:00:14 maekke Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.30 2009/01/16 15:13:18 jer Exp $
+
+*xapian-1.0.10 (16 Jan 2009)
+
+  16 Jan 2009; Jeroen Roovers <jer@gentoo.org> +xapian-1.0.10.ebuild:
+  Version bump thanks to Hans Rakers (bug #255153).
 
   06 Jul 2008; Markus Meier <maekke@gentoo.org> xapian-1.0.6.ebuild:
   x86 stable, bug #228537
