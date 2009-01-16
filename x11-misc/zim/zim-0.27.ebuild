@@ -1,14 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.27.ebuild,v 1.1 2008/11/29 20:54:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.27.ebuild,v 1.2 2009/01/16 21:06:16 yngwin Exp $
 
 inherit eutils fdo-mime perl-module
 
 MY_P=${P/z/Z}
 
 DESCRIPTION="A desktop wiki"
-HOMEPAGE="http://pardus-larus.student.utwente.nl/~pardus/projects/zim"
-SRC_URI="http://pardus-larus.student.utwente.nl/~pardus/downloads/Zim/${MY_P}.tar.gz"
+HOMEPAGE="http://zim-wiki.org/"
+SRC_URI="http://www.zim-wiki.org/downloads/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
