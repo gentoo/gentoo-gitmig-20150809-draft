@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.128 2009/01/11 16:04:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.129 2009/01/16 14:55:22 mueli Exp $
+
+  16 Jan 2009; Michael Hammer <mueli@gentoo.org> heimdal-1.2.1-r1.ebuild:
+  restricted tests for heimdal-1.2.1-r1 - won't work during emerge
 
   11 Jan 2009; Jeroen Roovers <jer@gentoo.org> heimdal-1.2.1-r1.ebuild:
   Stable for HPPA (bug #244707).

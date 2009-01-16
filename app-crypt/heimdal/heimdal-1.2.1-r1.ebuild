@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r1.ebuild,v 1.4 2009/01/11 16:04:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r1.ebuild,v 1.5 2009/01/16 14:55:22 mueli Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -10,6 +10,7 @@ inherit autotools libtool eutils virtualx toolchain-funcs flag-o-matic
 EAPI=1
 PATCHVER=0.2
 PATCH_P=${PN}-gentoo-patches-${PATCHVER}
+RESTRICT="test"
 
 DESCRIPTION="Kerberos 5 implementation from KTH"
 HOMEPAGE="http://www.h5l.org/"
