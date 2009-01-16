@@ -1,18 +1,19 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.3.0.ebuild,v 1.1 2008/11/24 14:08:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.3.0-r2.ebuild,v 1.1 2009/01/16 10:51:59 voyageur Exp $
 
+EAPI=2
 inherit autotools eutils multilib
 
 DESCRIPTION="NX compression technology core libraries"
 HOMEPAGE="http://www.nomachine.com/developers.php"
 
 URI_BASE="http://web04.nomachine.com/download/${PV}/sources"
-SRC_NX_X11="nx-X11-$PV-3.tar.gz"
-SRC_NXAGENT="nxagent-$PV-6.tar.gz"
+SRC_NX_X11="nx-X11-$PV-4.tar.gz"
+SRC_NXAGENT="nxagent-$PV-9.tar.gz"
 SRC_NXAUTH="nxauth-$PV-1.tar.gz"
 SRC_NXCOMP="nxcomp-$PV-3.tar.gz"
-SRC_NXCOMPEXT="nxcompext-$PV-2.tar.gz"
+SRC_NXCOMPEXT="nxcompext-$PV-3.tar.gz"
 SRC_NXCOMPSHAD="nxcompshad-$PV-2.tar.gz"
 SRC_NXPROXY="nxproxy-$PV-2.tar.gz"
 
@@ -34,7 +35,7 @@ RDEPEND="x11-libs/libXau
 	>=media-libs/libpng-1.2.8
 	>=sys-libs/zlib-1.2.3
 	rdesktop? ( net-misc/rdesktop )
-	vnc? ( || ( net-misc/vnc net-misc/tightvnc ) )"
+	vnc? ( || ( net-misc/vnc[server] net-misc/tightvnc[server] ) )"
 
 DEPEND="${RDEPEND}
 		x11-misc/gccmakedep
@@ -43,33 +44,37 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}-X11
 
-pkg_setup() {
-	if use vnc; then
-		if has_version net-misc/vnc && ! built_with_use net-misc/vnc server;
-		then
-			die "net-misc/vnc needs to be built with USE=\"server\" for VNC support"
-		fi
-
-		if has_version net-misc/tightvnc && ! built_with_use net-misc/tightvnc server;
-		then
-			die "net-misc/tightvnc needs to be built with USE=\"server\" for VNC support"
-		fi
-	fi
-}
-
 src_unpack() {
 	unpack ${A}
 
-	cd "${WORKDIR}"
-	epatch "${FILESDIR}"/1.5.0/nx-x11-1.5.0-tmp-exec.patch
-	epatch "${FILESDIR}"/1.5.0/nxcomp-1.5.0-pic.patch
-
+	# For nxcl/qtnx
 	cd "${WORKDIR}"/nxproxy
 	epatch "${FILESDIR}"/${PN}-3.2.0-nxproxy_read_from_stdin.patch
 
+	# Quiet some warnings
 	cd "${WORKDIR}"/nxcomp
 	epatch "${FILESDIR}"/${PN}-2.1.0-invalid-options.patch
-	eautoreconf
+
+	cd "${WORKDIR}"
+	# Fix sandbox violation
+	epatch "${FILESDIR}"/1.5.0/nx-x11-1.5.0-tmp-exec.patch
+	# -fPIC
+	epatch "${FILESDIR}"/1.5.0/nxcomp-1.5.0-pic.patch
+	# Respect CFLAGS/CXXFLAGS
+	epatch "${FILESDIR}"/${PN}-3.3.0-cflags.patch
+	# Run autoreconf in all neeed folders
+	for i in nxcomp nxcompext nxcompshad nxproxy; do
+		cd "${WORKDIR}"/${i}
+		eautoreconf ${i}
+		cd "${WORKDIR}"
+	done
+
+	# From xorg-x11-6.9.0-r3.ebuild
+	cd "${S}"
+	HOSTCONF="config/cf/host.def"
+	echo "#define CcCmd $(tc-getCC)" >> ${HOSTCONF}
+	echo "#define OptimizedCDebugFlags ${CFLAGS} GccAliasingArgs" >> ${HOSTCONF}
+	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS} GccAliasingArgs" >> ${HOSTCONF}
 }
 
 src_compile() {
@@ -87,7 +92,9 @@ src_compile() {
 	emake || die "nxproxy emake failed"
 
 	cd "${S}" || die "No nx-X11 directory found"
-	emake World || die "nx-X11 emake failed"
+	# Again, from xorg-x11-6.9.0-r3.ebuild
+	unset MAKE_OPTS
+	FAST=1 emake -j1 World WORLDOPTS="" MAKE="make" || die "nx-X11 emake failed"
 
 	cd "${WORKDIR}"/nxcompext || die "No nxcompext directory found"
 	econf || die "nxcompext econf failed"
