@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/kyra
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/ChangeLog,v 1.10 2006/10/26 21:37:27 nyhm Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/ChangeLog,v 1.11 2009/01/16 19:55:39 tupone Exp $
+
+  16 Jan 2009; Tupone Alfredo <tupone@gentoo.org>
+  +files/kyra-2.0.7-gcc43.patch, kyra-2.0.7.ebuild:
+  gcc-4.3 fix, bug #250791 by flameeyes@gentoo.org
 
   26 Oct 2006; Tristan Heaven <nyhm@gentoo.org> +files/kyra-2.0.7-sdl.patch,
   kyra-2.0.7.ebuild:

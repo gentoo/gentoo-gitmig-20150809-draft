@@ -1,0 +1,23 @@
+diff -Nurpa kyra.orig/tinyxml/tinyxml.cpp kyra/tinyxml/tinyxml.cpp
+--- kyra.orig/tinyxml/tinyxml.cpp	2008-12-18 08:48:49.000000000 +0300
++++ kyra/tinyxml/tinyxml.cpp	2008-12-18 08:50:16.000000000 +0300
+@@ -23,6 +23,8 @@ distribution.
+ 
+ #include "tinyxml.h"
+ 
++#include <cstdlib>
++#include <cstring>
+ 
+ TiXmlNode::TiXmlNode( NodeType _type )
+ {
+diff -Nurpa kyra.orig/tinyxml/tinyxmlparser.cpp kyra/tinyxml/tinyxmlparser.cpp
+--- kyra.orig/tinyxml/tinyxmlparser.cpp	2008-12-18 08:48:49.000000000 +0300
++++ kyra/tinyxml/tinyxmlparser.cpp	2008-12-18 08:51:03.000000000 +0300
+@@ -24,6 +24,7 @@ distribution.
+ 
+ #include "tinyxml.h"
+ #include <ctype.h>
++#include <cstring>
+ 
+ const char* TiXmlBase::SkipWhiteSpace( const char* p )
+ {
