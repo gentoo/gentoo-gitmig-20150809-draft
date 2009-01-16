@@ -50,6 +50,7 @@ java-external
 chicken
 clisp
 R
+octave
 dvb
 mythtv
 qt3
