@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xconsole
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xconsole/ChangeLog,v 1.24 2008/02/05 11:29:46 corsair Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xconsole/ChangeLog,v 1.25 2009/01/16 12:36:39 remi Exp $
+
+*xconsole-1.0.3-r1 (16 Jan 2009)
+
+  16 Jan 2009; Rémi Cardona <remi@gentoo.org> +xconsole-1.0.3-r1.ebuild:
+  remove xprint support (see bug #254874)
 
   05 Feb 2008; Markus Rothe <corsair@gentoo.org> xconsole-1.0.3.ebuild:
   Stable on ppc64
