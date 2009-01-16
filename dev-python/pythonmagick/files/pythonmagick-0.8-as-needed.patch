@@ -1,0 +1,15 @@
+--- Makefile.am.orig	2009-01-16 10:31:46.177792880 +0000
++++ Makefile.am	2009-01-16 10:31:21.412531252 +0000
+@@ -17,10 +17,9 @@
+ nodist_EXTRA__PythonMagick_la_SOURCES = dummy.cpp
+ 
+ # Flags are always good to have
+-_PythonMagick_la_LDFLAGS = -avoid-version -module $(BOOST_LDFLAGS) $(BOOST_PYTHON_LIBS) $(MAGICKPP_LIBS) $(MAGICK_LIBS) -l$(PYTHON_LIB)
++_PythonMagick_la_LDFLAGS = -avoid-version -module
+ 
+ # And the libraries to include
+-_PythonMagick_la_LIBADD = pythonmagick_src/libpymagick.la \
+-								  helpers_src/libhelper.la
++_PythonMagick_la_LIBADD = pythonmagick_src/libpymagick.la helpers_src/libhelper.la -l$(BOOST_PYTHON_LIB) $(BOOST_LDFLAGS) $(MAGICKPP_LIBS) $(MAGICK_LIBS) -l$(PYTHON_LIB)
+ 
+ EXTRA_DIST = autogen.pl SConstruct pyste_src

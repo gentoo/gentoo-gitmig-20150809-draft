@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pythonmagick
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.14 2008/11/16 16:33:27 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.15 2009/01/16 13:09:48 bicatali Exp $
+
+*pythonmagick-0.8 (16 Jan 2009)
+
+  16 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/pythonmagick-0.8-as-needed.patch, metadata.xml,
+  +pythonmagick-0.8.ebuild:
+  Version bump, with fix for as-needed
 
   16 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   pythonmagick-0.7-r1.ebuild:
