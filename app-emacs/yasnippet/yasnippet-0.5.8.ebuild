@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yasnippet/yasnippet-0.5.5.ebuild,v 1.1 2008/06/19 12:14:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yasnippet/yasnippet-0.5.8.ebuild,v 1.1 2009/01/16 20:55:54 ulm Exp $
 
 inherit elisp
 
@@ -18,7 +18,7 @@ IUSE="doc"
 DEPEND=">=app-emacs/dropdown-list-20080316"
 RDEPEND="${DEPEND}"
 
-SITEFILE=50${PN}-gentoo.el
+SITEFILE="50${PN}-gentoo.el"
 
 src_unpack() {
 	elisp_src_unpack
