@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.25 2009/01/06 10:17:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.26 2009/01/16 20:04:57 vapier Exp $
 
 EAPI="1"
 
@@ -11,18 +11,21 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git
 	SRC_URI=""
 else
-	SRC_URI="mirror://sourceforge/${PN}/wine-${PV}.tar.bz2"
+	MY_P="${PN}-${PV/_/-}"
+	SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+	S=${WORKDIR}/${MY_P}
 fi
 
+GV="0.9.0"
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
 SRC_URI="${SRC_URI}
-	gecko? ( mirror://sourceforge/wine/wine_gecko-0.1.0.cab )"
+	gecko? ( mirror://sourceforge/wine/wine_gecko-${GV}.cab )"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="alsa cups dbus esd +gecko hal jack jpeg lcms ldap nas ncurses +opengl oss samba scanner xml +X"
+IUSE="alsa cups dbus esd +gecko gnutls hal jack jpeg lcms ldap nas ncurses +opengl oss samba scanner xml +X"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -30,6 +33,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	ncurses? ( >=sys-libs/ncurses-5.2 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	dbus? ( sys-apps/dbus )
+	gnutls? ( net-libs/gnutls )
 	hal? ( sys-apps/hal )
 	X? (
 		x11-libs/libXcursor
@@ -51,12 +55,13 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	scanner? ( media-gfx/sane-backends )
 	amd64? (
-		>=app-emulation/emul-linux-x86-xlibs-2.1
-		>=app-emulation/emul-linux-x86-soundlibs-2.1
+		X? (
+			>=app-emulation/emul-linux-x86-xlibs-2.1
+			>=app-emulation/emul-linux-x86-soundlibs-2.1
+		)
 		>=sys-kernel/linux-headers-2.6
 	)"
 DEPEND="${RDEPEND}
-	>=media-gfx/fontforge-20060703
 	X? (
 		x11-proto/inputproto
 		x11-proto/xextproto
@@ -77,11 +82,11 @@ src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
 		git_src_unpack
 	else
-		unpack wine-${PV}.tar.bz2
+		unpack ${MY_P}.tar.bz2
 	fi
 	cd "${S}"
 
-	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in
+	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in || die
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
 }
 
@@ -120,6 +125,7 @@ src_compile() {
 	#	$(use_enable amd64 win64)
 	econf \
 		--sysconfdir=/etc/wine \
+		$(use_with gnutls) \
 		$(use_with ncurses curses) \
 		$(use_with opengl) \
 		$(use_with X x) \
@@ -131,10 +137,10 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc ANNOUNCE AUTHORS ChangeLog DEVELOPERS-HINTS README
+	dodoc ANNOUNCE AUTHORS README
 	if use gecko ; then
 		insinto /usr/share/wine/gecko
-		doins "${DISTDIR}"/wine_gecko-*.cab || die
+		doins "${DISTDIR}"/wine_gecko-${GV}.cab || die
 	fi
 }
 
