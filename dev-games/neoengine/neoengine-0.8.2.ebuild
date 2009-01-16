@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.2.ebuild,v 1.5 2008/05/13 05:54:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.2.ebuild,v 1.6 2009/01/16 20:38:49 tupone Exp $
 
 inherit eutils autotools
 
@@ -25,7 +25,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}"-gcc41.patch
+	epatch "${FILESDIR}/${P}"-gcc41.patch \
+		"${FILESDIR}/${P}"-gcc43.patch
 
 	./setbuildtype.sh dynamic
 
