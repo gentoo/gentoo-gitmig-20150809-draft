@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/test-unit
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.1 2009/01/16 19:08:56 flameeyes Exp $
+
+*test-unit-2.0.2 (16 Jan 2009)
+
+  16 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +test-unit-2.0.2.ebuild:
+  Initial import of improved Test::Unit, also supporting Ruby 1.9. Masked
+  because of test failures for now.
+
