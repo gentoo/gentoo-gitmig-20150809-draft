@@ -20,7 +20,7 @@
  wmMoonClock.o: wmMoonClock_master.xpm wmMoonClock_mask.xbm CalcEphem.h
  wmMoonClock:	$(OBJS) 
 -	$(CC) $(COPTS) $(SYSTEM) -lm -o wmMoonClock $^ $(INCDIR) $(LIBDIR) $(LIBS)
-+	$(CC) $(COPTS) $(SYSTEM) -lm -o wmMoonClock $^ $(INCDIR) -L$(LIBDIR) $(LDFLAGS) $(LIBS)
++	$(CC) $(COPTS) $(SYSTEM) -o wmMoonClock $^ $(INCDIR) -L$(LIBDIR) $(LDFLAGS) $(LIBS) -lm
  
  clean:
  	for i in $(OBJS) ; do \
