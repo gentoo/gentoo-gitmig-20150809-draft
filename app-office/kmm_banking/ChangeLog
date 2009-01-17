@@ -1,0 +1,10 @@
+# ChangeLog for app-office/kmm_banking
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmm_banking/ChangeLog,v 1.1 2009/01/17 14:35:58 tgurr Exp $
+
+*kmm_banking-0.9.9 (17 Jan 2009)
+
+  17 Jan 2009; Timo Gurr <tgurr@gentoo.org> +metadata.xml,
+  +kmm_banking-0.9.9.ebuild:
+  Initial ebuild, thanks to Jan Essert. Fixes bug #250285.
+
