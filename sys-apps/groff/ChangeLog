@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/groff
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.82 2008/06/24 11:02:02 mduft Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.83 2009/01/17 16:40:08 vapier Exp $
+
+*groff-1.20.1 (17 Jan 2009)
+
+  17 Jan 2009; Mike Frysinger <vapier@gentoo.org> +groff-1.20.1.ebuild:
+  Version bump #254964 by Lars (Polynomial-C).
 
   24 Jun 2008; Markus Duft <mduft@gentoo.org> groff-1.19.2-r3.ebuild:
   added missing dependencies to X11 libraries (bug #219003)
