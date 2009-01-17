@@ -1,0 +1,13 @@
+--- configure.in.orig	2009-01-17 03:18:29.000000000 +0100
++++ configure.in	2009-01-17 03:18:56.000000000 +0100
+@@ -68,8 +68,8 @@ fi
+ # Find Tcl/Tk
+ 
+ AC_CHECKING(Tcl/Tk installation)
+-legal_tk_versions="8.4 8.3 8.2 8.0 4.9 4.8 4.7 4.6 4.5 4.4 4.3 4.2 4.1"
+-legal_tcl_versions="8.4 8.3 8.2 8.0 7.9 7.8 7.7 7.6 7.5"
++legal_tk_versions="8.6 8.5 8.4 8.3 8.2 8.0 4.9 4.8 4.7 4.6 4.5 4.4 4.3 4.2 4.1"
++legal_tcl_versions="8.6 8.5 8.4 8.3 8.2 8.0 7.9 7.8 7.7 7.6 7.5"
+ 
+ #### Find tclsh
+ AC_ARG_WITH(tclsh,[  --with-tclsh=<path>     full path name of tclsh],
