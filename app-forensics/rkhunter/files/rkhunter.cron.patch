@@ -1,0 +1,40 @@
+--- files/rkhunter.cron	2005-09-02 12:05:27.000000000 +0200
++++ files/rkhunter.cron	2009-01-12 17:57:10.000000000 +0100
+@@ -1,12 +1,13 @@
+ #!/bin/bash
+-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/files/rkhunter.cron.patch,v 1.1 2009/01/17 20:55:15 patrick Exp $
++# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/files/rkhunter.cron.patch,v 1.1 2009/01/17 20:55:15 patrick Exp $
+ # original author: Aaron Walker <ka0ttic@gentoo.org>
+ 
+ ########################## Begin Configuration ###############################
+ 
+ # Default options - more options may be added depending on the
+ # configuration variables you set below
+-RKHUNTER_OPTS="-c --cronjob --skip-keypress"
++# --cronjob implies -c, --nocolor, --sk
++RKHUNTER_OPTS="--cronjob --summary"
+ 
+ # Set this to 'yes' to enable ; this script does nothing otherwise
+ ENABLE=no
+@@ -60,7 +61,7 @@ fi
+ 
+ # moved this out of config section since it'll
+ # probably never need to be changed
+-RKHUNTER_EXEC="/usr/bin/rkhunter"
++RKHUNTER_EXEC="/usr/sbin/rkhunter"
+ 
+ # sanity check
+ if [[ ! -x "${RKHUNTER_EXEC}" ]] ; then
+@@ -91,9 +92,9 @@ case "${VERBOSITY}" in
+ 	# warnings and errors only
+ 	1)	RKHUNTER_OPTS="${RKHUNTER_OPTS} --quiet" ;;
+ 	# default rkhunter output (no extra options)
+-	2)	;;
+-	# default to option 3 (report-mode)
+-	*)	RKHUNTER_OPTS="${RKHUNTER_OPTS} --report-mode"	;;
++#	2)	;;
++	# default to option 3
++	*)	;;
+ esac
+ 
+ # save old log

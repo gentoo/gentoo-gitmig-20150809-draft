@@ -1,6 +1,14 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.64 2009/01/05 17:26:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.65 2009/01/17 20:55:16 patrick Exp $
+
+*rkhunter-1.3.4-r1 (17 Jan 2009)
+
+  17 Jan 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/rkhunter.conf.patch, +files/rkhunter.cron.patch,
+  +files/rkhunter-ppc64.patch, +rkhunter-1.3.4-r1.ebuild:
+  Fixed 1.3.4-r1 ebuild. Fixes bug #254100 and thanks to Christian Ruppert
+  <spooky85@gmail.com> for the patches
 
 *rkhunter-1.3.4 (05 Jan 2009)
 
