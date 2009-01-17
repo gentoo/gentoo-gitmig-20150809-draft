@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2-r1.ebuild,v 1.4 2008/12/21 21:53:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2-r1.ebuild,v 1.5 2009/01/17 12:26:35 maekke Exp $
 
 EAPI="1"
 
@@ -39,8 +39,9 @@ src_unpack() {
 	# no insane CXXFLAGS
 	sed -i -e '/QMAKE_CXXFLAGS/d' project.pro || die
 
-	# no HTML installation by qmake
-	sed -i -e '/INSTALLS/s:htmls ::' project.pro || die
+	if ! use doc ; then
+		sed -i -e '/INSTALLS/s:htmls ::' project.pro || die
+	fi
 
 	# no stripping
 	sed -i -e 's:TARGET:QMAKE_STRIP = true\nTARGET:' project.pro || die
@@ -55,9 +56,6 @@ src_compile() {
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die
 	dodoc README TODO || die
-	if use doc ; then
-		dohtml -r html/ || die
-	fi
 
 	for lang in ${LANGS} ; do
 		use linguas_${lang} || rm "${D}"/usr/share/${PN}/i18n/lang_${lang}.qm
