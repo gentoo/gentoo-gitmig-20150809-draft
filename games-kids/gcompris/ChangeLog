@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.43 2009/01/05 23:36:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.44 2009/01/17 22:40:52 mr_bones_ Exp $
+
+  17 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  gcompris-6.5.3-r1.ebuild, gcompris-8.4.8.ebuild:
+  needs dev-perl/XML-Parser to build (bug #255296)
 
 *gcompris-8.4.8 (05 Jan 2009)
 

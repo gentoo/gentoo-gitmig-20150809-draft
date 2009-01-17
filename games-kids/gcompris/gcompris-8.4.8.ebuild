@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-8.4.8.ebuild,v 1.1 2009/01/05 23:36:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-8.4.8.ebuild,v 1.2 2009/01/17 22:40:52 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils python games
@@ -36,6 +36,7 @@ RDEPEND="x11-libs/gtk+:2
 	)
 	sqlite? ( dev-db/sqlite:3 )"
 DEPEND="${RDEPEND}
+	dev-perl/XML-Parser
 	sys-devel/gettext
 	sys-apps/texinfo
 	app-text/texi2html
