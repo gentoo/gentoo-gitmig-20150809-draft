@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.3-r1.ebuild,v 1.3 2009/01/10 16:19:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.3-r1.ebuild,v 1.4 2009/01/17 14:58:54 nixnut Exp $
 
 EAPI="1"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://live.gnome.org/Planner/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="doc eds libgda python examples"
 
 RDEPEND=">=dev-libs/glib-2.6
