@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.60 2009/01/17 11:49:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.61 2009/01/17 12:38:14 mrness Exp $
+
+  17 Jan 2009; Alin Năstac <mrness@gentoo.org>
+  +files/gammu-1.22.1-assert.patch, -files/gammu-1.22.1-debug-test.patch,
+  +files/gammu-1.22.1-skip-locktest.patch, gammu-1.22.1.ebuild:
+  Fix errors when test phase is executed by root.
 
 *gammu-1.22.1 (17 Jan 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.22.1.ebuild,v 1.1 2009/01/17 11:49:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.22.1.ebuild,v 1.2 2009/01/17 12:38:14 mrness Exp $
 
 inherit cmake-utils
 
@@ -31,7 +31,8 @@ IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}"/${P}-debug-test.patch
+	epatch "${FILESDIR}"/${P}-assert.patch
+	epatch "${FILESDIR}"/${P}-skip-locktest.patch
 
 	pushd "${S}"/locale || die "locale directory not found"
 	local lang support_linguas=no
