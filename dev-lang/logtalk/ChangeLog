@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/logtalk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/ChangeLog,v 1.3 2009/01/13 05:33:08 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/ChangeLog,v 1.4 2009/01/17 22:33:41 keri Exp $
+
+  17 Jan 2009; <keri@gentoo.org> logtalk-2.34.1.ebuild:
+  Use doenvd function rather than doins function for /etc/env.d/99logtalk file
 
   13 Jan 2009; <keri@gentoo.org> logtalk-2.34.1.ebuild:
   Fix up local USE flag typo.

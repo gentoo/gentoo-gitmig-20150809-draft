@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/logtalk-2.34.1.ebuild,v 1.2 2009/01/13 05:33:08 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/logtalk-2.34.1.ebuild,v 1.3 2009/01/17 22:33:41 keri Exp $
 
 inherit eutils versionator
 
@@ -51,9 +51,9 @@ src_install() {
 	use swipl && dosym /usr/share/${P}/integration/swilgt.sh /usr/bin/swilgt
 	use xsbpl && use x86 && dosym /usr/share/${P}/integration/xsblgt.sh /usr/bin/xsblgt
 	use yappl && dosym /usr/share/${P}/integration/yaplgt.sh /usr/bin/yaplgt
+
 	echo "LOGTALKHOME=/usr/share/${P}" > 99logtalk
-	insinto /etc/env.d/
-	doins 99logtalk
+	doenvd 99logtalk
 }
 
 pkg_postinst() {
