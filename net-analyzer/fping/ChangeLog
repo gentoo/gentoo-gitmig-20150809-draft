@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.19 2009/01/12 15:54:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.20 2009/01/17 15:02:23 nixnut Exp $
+
+  17 Jan 2009; nixnut <nixnut@gentoo.org> fping-2.4_beta2-r2.ebuild:
+  ppc stable #254632
 
   12 Jan 2009; Guy Martin <gmsoft@gentoo.org> fping-2.4_beta2-r2.ebuild:
   hppa stable, #254632
