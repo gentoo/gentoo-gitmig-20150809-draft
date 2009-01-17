@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tie-Cache
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Cache/ChangeLog,v 1.5 2007/08/04 15:36:11 ticho Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Cache/ChangeLog,v 1.6 2009/01/17 22:15:39 robbat2 Exp $
+
+  17 Jan 2009; Robin H. Johnson <robbat2@gentoo.org> Tie-Cache-0.17.ebuild:
+  Emerge on an empty system (without perl) failed due to lack of perl dep.
 
   04 Aug 2007; Andrej Kacian <ticho@gentoo.org> Tie-Cache-0.17.ebuild:
   Stable on x86.
