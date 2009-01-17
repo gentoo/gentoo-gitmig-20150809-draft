@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.675 2009/01/15 19:06:53 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.676 2009/01/17 22:08:48 halcy0n Exp $
+
+  17 Jan 2009; Mark Loeser <halcy0n@gentoo.org> gcc-4.1.2.ebuild:
+  Bump patchset to fix a bug for arm
 
 *gcc-4.2.4-r1 (15 Jan 2009)
 
