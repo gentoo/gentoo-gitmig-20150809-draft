@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/reiserfsprogs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.48 2008/01/26 11:03:39 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.49 2009/01/17 16:04:51 vapier Exp $
+
+*reiserfsprogs-3.6.21 (17 Jan 2009)
+
+  17 Jan 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/reiserfsprogs-3.6.21-fsck-n.patch, +reiserfsprogs-3.6.21.ebuild:
+  Version bump #255215 by Bartosz Szreder.
 
   26 Jan 2008; Raúl Porcel <armin76@gentoo.org>
   reiserfsprogs-3.6.19-r2.ebuild:
