@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.8.0.ebuild,v 1.1 2009/01/11 07:51:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.8.1.ebuild,v 1.1 2009/01/17 03:18:18 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
@@ -31,7 +31,7 @@ src_unpack() {
 
 	cp site.config.m4.dist devtools/Site/site.config.m4 || \
 		die "failed to copy site.config.m4"
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}"/${PN}-2.8.0-gentoo.patch
 
 	local ENVDEF=""
 	use ipv6 && ENVDEF="${ENVDEF} -DNETINET6"
