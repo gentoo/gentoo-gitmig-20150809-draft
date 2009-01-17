@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.3.ebuild,v 1.6 2008/12/21 14:46:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.3.ebuild,v 1.7 2009/01/17 20:52:14 yngwin Exp $
 
 EAPI="1"
 
@@ -69,6 +69,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.4-i18n.patch
 	# Upstream patch for newer x264
 	epatch "${FILESDIR}"/${P}-x264.patch
+	# Fix compile error triggered by -ftracer (bug 255268)
+	epatch "${FILESDIR}"/lavcodec-mpegvideo_mmx-asm-fix.patch
 }
 
 src_compile() {
