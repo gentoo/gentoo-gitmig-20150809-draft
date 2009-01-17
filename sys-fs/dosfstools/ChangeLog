@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.53 2009/01/10 17:15:10 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.54 2009/01/17 15:11:13 bluebird Exp $
+
+  17 Jan 2009; Friedrich Oslage <bluebird@gentoo.org>
+  dosfstools-3.0.0.ebuild:
+  Stable on sparc, bug #253046
 
   10 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
   dosfstools-3.0.0.ebuild:
