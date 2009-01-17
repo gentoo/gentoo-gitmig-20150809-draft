@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.125 2008/11/21 13:52:22 yngwin Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.126 2009/01/17 16:26:35 nixnut Exp $
+
+  17 Jan 2009; nixnut <nixnut@gentoo.org> sip-4.7.9.ebuild:
+  ppc stable #248038
 
 *sip-4.7.9 (21 Nov 2008)
 
