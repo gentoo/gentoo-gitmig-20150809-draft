@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/wammu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.34 2008/11/05 19:57:09 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.35 2009/01/17 14:27:14 mrness Exp $
+
+  17 Jan 2009; Alin Năstac <mrness@gentoo.org> -wammu-0.25.ebuild:
+  Remove obsolete version.
 
   05 Nov 2008; Markus Meier <maekke@gentoo.org> wammu-0.27.ebuild:
   amd64/x86 stable, bug #231597
