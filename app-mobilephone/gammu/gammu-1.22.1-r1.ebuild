@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.22.1.ebuild,v 1.2 2009/01/17 12:38:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.22.1-r1.ebuild,v 1.1 2009/01/17 14:24:04 mrness Exp $
 
 inherit cmake-utils
 
@@ -65,4 +65,9 @@ src_compile() {
 
 src_test() {
 	LD_LIBRARY_PATH="${WORKDIR}"/${PN}_build/common cmake-utils_src_test
+}
+
+pkg_preinst() {
+	# use standard -l options
+	sed -i -e 's:-l[a-z0-9A-Z_/-]*/lib\([a-z]*\)\.so:-l\1:g' "${D}"/usr/*/pkgconfig/gammu.pc || die "sed failed"
 }
