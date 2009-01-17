@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.15.ebuild,v 1.9 2009/01/05 18:12:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.15.ebuild,v 1.10 2009/01/17 17:18:14 vapier Exp $
 
 inherit eutils multilib toolchain-funcs pam
 
@@ -23,15 +23,20 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}/*.patch
 	sed -i -e '/cap_setfcap.*morgan/s:^:#:' pam_cap/capability.conf
+	sed -i \
+		-e "/^PAM_CAP/s:=.*:=$(use pam && echo yes || echo no):" \
+		-e '/^DYNAMIC/s:=.*:=yes:' \
+		-e "/^lib=/s:=.*:=$(get_libdir):" \
+		Make.Rules
 }
 
 src_compile() {
 	tc-export BUILD_CC CC AR RANLIB
-	emake DYNAMIC=yes PAM_CAP=$(use pam && echo yes || echo no) || die
+	emake || die
 }
 
 src_install() {
-	emake install DESTDIR="${D}" lib=$(get_libdir) || die
+	emake install DESTDIR="${D}" || die
 
 	gen_usr_ldscript libcap.so
 	mv "${D}"/$(get_libdir)/libcap.a "${D}"/usr/$(get_libdir)/ || die
