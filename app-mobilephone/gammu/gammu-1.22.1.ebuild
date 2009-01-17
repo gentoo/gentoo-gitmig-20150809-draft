@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.18.0.ebuild,v 1.2 2008/05/21 15:51:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.22.1.ebuild,v 1.1 2009/01/17 11:49:24 mrness Exp $
 
 inherit cmake-utils
 
@@ -22,22 +22,34 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/cmake"
 
+# sys-devel/gettext is needed for creating .mo files
 # Supported languages and translated documentation
 # Be sure all languages are prefixed with a single space!
-MY_AVAILABLE_LINGUAS=" cs de es it pl ru"
+MY_AVAILABLE_LINGUAS=" cs de es id it pl ru"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 src_unpack() {
 	unpack ${A}
 
-	# sys-devel/gettext is needed for creating .mo files
-	cd "${S}/locale"
-	local lang
+	epatch "${FILESDIR}"/${P}-debug-test.patch
+
+	pushd "${S}"/locale || die "locale directory not found"
+	local lang support_linguas=no
 	for lang in ${MY_AVAILABLE_LINGUAS} ; do
-		if ! use linguas_${lang} ; then
-			sed -i -e "/^[[:space:]]*${lang}[[:space:]]*$/d" CMakeLists.txt
+		if use linguas_${lang} ; then
+			support_linguas=yes
+			break
 		fi
 	done
+	# install all languages when all selected LINGUAS aren't supported
+	if [ "${support_linguas}" = "yes" ]; then
+		for lang in ${MY_AVAILABLE_LINGUAS} ; do
+			if ! use linguas_${lang} ; then
+				sed -i -e "/^[[:space:]]*${lang}[[:space:]]*$/d" CMakeLists.txt
+			fi
+		done
+	fi
+	popd
 }
 
 src_compile() {
