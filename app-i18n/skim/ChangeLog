@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.62 2009/01/10 16:39:25 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.63 2009/01/17 14:58:37 bluebird Exp $
+
+  17 Jan 2009; Friedrich Oslage <bluebird@gentoo.org> skim-1.4.5-r2.ebuild:
+  Stable on sparc, bug #253611
 
   10 Jan 2009; Tobias Klausmann <klausman@gentoo.org> skim-1.4.5-r2.ebuild:
   Stable on alpha, bug #253611
