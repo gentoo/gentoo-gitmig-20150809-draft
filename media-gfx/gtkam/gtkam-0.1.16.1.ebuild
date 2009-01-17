@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.16.1.ebuild,v 1.1 2008/12/21 10:44:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.16.1.ebuild,v 1.2 2009/01/17 12:39:44 maekke Exp $
 
 inherit autotools eutils gnome2
 
@@ -24,6 +24,7 @@ RDEPEND=">=x11-libs/gtk+-2.0
 		>=gnome-base/libbonobo-2
 		>=gnome-base/libgnomeui-2 )"
 DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
 	app-text/scrollkeeper
 	nls? ( >=sys-devel/gettext-0.14.1 )"
@@ -45,10 +46,9 @@ src_unpack() {
 
 	# Fix --as-needed, bug #169661
 	epatch "${FILESDIR}/${PN}-0.1.14-as-needed.patch"
-	epatch "${FILESDIR}/${P}-gettext.patch"
 
 	intltoolize --automake --force --copy || die "intltoolize failed"
-	eautoreconf
+	eautomake
 }
 
 src_install() {
