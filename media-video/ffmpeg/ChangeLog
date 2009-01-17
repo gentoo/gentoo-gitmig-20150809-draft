@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.254 2009/01/15 07:40:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.255 2009/01/17 00:31:58 aballier Exp $
+
+  17 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  ffmpeg-0.4.9_p20081219.ebuild, ffmpeg-9999.ebuild:
+  require at least speex 1.2, should fix #254922
 
   15 Jan 2009; Alexis Ballier <aballier@gentoo.org>
   ffmpeg-0.4.9_p20081014.ebuild, ffmpeg-0.4.9_p20081219.ebuild,
