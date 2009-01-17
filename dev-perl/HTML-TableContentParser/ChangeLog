@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-TableContentParser
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableContentParser/ChangeLog,v 1.2 2007/07/19 15:35:37 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableContentParser/ChangeLog,v 1.3 2009/01/17 22:29:20 robbat2 Exp $
+
+  17 Jan 2009; Robin H. Johnson <robbat2@gentoo.org>
+  HTML-TableContentParser-0.13.ebuild:
+  Emerge on an empty system (without perl) failed due to lack of perl dep.
 
   19 Jul 2007; Raúl Porcel <armin76@gentoo.org>
   HTML-TableContentParser-0.13.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/X-Osd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X-Osd/ChangeLog,v 1.1 2009/01/10 12:57:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X-Osd/ChangeLog,v 1.2 2009/01/17 22:27:04 robbat2 Exp $
+
+  17 Jan 2009; Robin H. Johnson <robbat2@gentoo.org> X-Osd-0.7.ebuild:
+  Emerge on an empty system (without perl) failed due to lack of perl dep.
 
 *X-Osd-0.7 (10 Jan 2009)
 

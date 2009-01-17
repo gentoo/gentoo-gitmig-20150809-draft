@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/WWW-Curl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Curl/ChangeLog,v 1.1 2008/09/30 08:41:04 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Curl/ChangeLog,v 1.2 2009/01/17 22:27:22 robbat2 Exp $
+
+  17 Jan 2009; Robin H. Johnson <robbat2@gentoo.org> WWW-Curl-4.05.ebuild:
+  Emerge on an empty system (without perl) failed due to lack of perl dep.
 
 *WWW-Curl-4.05 (30 Sep 2008)
 
