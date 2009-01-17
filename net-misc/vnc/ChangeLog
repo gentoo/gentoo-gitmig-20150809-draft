@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.114 2009/01/04 20:03:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.115 2009/01/17 15:54:34 armin76 Exp $
+
+*vnc-4.1.3-r1 (17 Jan 2009)
+*vnc-4.1.3 (17 Jan 2009)
+
+  17 Jan 2009; Raúl Porcel <armin76@gentoo.org> +vnc-4.1.3.ebuild,
+  +vnc-4.1.3-r1.ebuild:
+  Version bump
 
   04 Jan 2009; Raúl Porcel <armin76@gentoo.org> vnc-4.1.2-r5.ebuild:
   Fix bug #242350, thanks to Eric Bosch <eric dot bosch at comcast dot net>
