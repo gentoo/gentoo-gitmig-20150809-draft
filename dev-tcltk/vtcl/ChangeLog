@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/vtcl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/vtcl/ChangeLog,v 1.5 2007/02/09 02:58:32 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/vtcl/ChangeLog,v 1.6 2009/01/17 02:02:05 mescalinum Exp $
+
+  17 Jan 2009; Federico Ferri <mescalinum@gentoo.org> ChangeLog,
+  +vtcl-1.6.0-r1.ebuild:
+  fix bug #250368
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
