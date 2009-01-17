@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.13.ebuild,v 1.2 2008/05/21 18:54:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.20.ebuild,v 1.1 2009/01/17 14:34:46 cedk Exp $
 
 inherit autotools ssl-cert eutils pam
 
@@ -38,7 +38,6 @@ src_unpack() {
 		-e 's:^#\(nuauth_tls_key="/etc/nufw/\)nuauth-key.pem:\1nuauth.key:' \
 		-e 's:^#\(nuauth_tls_cert="/etc/nufw/\)nuauth-cert.pem:\1nuauth.pem:' \
 		conf/nuauth.conf || die "sed failed"
-	epatch "${FILESDIR}"/${P}-destdir.patch
 
 	# This tests require inl_tests to be installed. We don't have it now in our
 	# tree so we disable them for now... for more information see tests/README
@@ -51,7 +50,7 @@ src_compile() {
 	econf \
 		--with-shared \
 		$(use_enable static) \
-		$(use_enable pam_nuauth pam-nuauth) \
+		$(use_enable pam_nuauth pam-nufw) \
 		$(use_with prelude prelude-log) \
 		$(use_with mysql mysql-log) \
 		$(use_with mysql mysql-auth) \
@@ -65,6 +64,7 @@ src_compile() {
 		$(use_with nfconntrack) \
 		$(use_with unicode utf8) \
 		$(use_enable debug) \
+		--with-user-mark \
 		--sysconfdir="/etc/nufw" \
 		--localstatedir="/var" \
 		|| die "econf failed"

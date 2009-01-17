@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/nufw
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.31 2008/08/17 16:01:45 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.32 2009/01/17 14:34:46 cedk Exp $
+
+*nufw-2.2.20 (17 Jan 2009)
+
+  17 Jan 2009; Cédric Krier <cedk@gentoo.org>
+  -files/nufw-2.2.13-destdir.patch, metadata.xml, -nufw-2.2.13.ebuild,
+  -nufw-2.2.14.ebuild, +nufw-2.2.20.ebuild:
+  Version bump
 
   17 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
