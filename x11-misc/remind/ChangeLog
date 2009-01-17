@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/remind
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.39 2009/01/09 22:28:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.40 2009/01/17 13:50:47 bluebird Exp $
+
+  17 Jan 2009; Friedrich Oslage <bluebird@gentoo.org>
+  remind-03.01.06.ebuild:
+  Stable on sparc, bug #253686
 
   09 Jan 2009; Joseph Jezak <josejx@gentoo.org> remind-03.01.06.ebuild:
   Marked ppc stable for bug #253686.
