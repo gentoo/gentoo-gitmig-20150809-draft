@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.47-r1.ebuild,v 1.4 2009/01/10 15:52:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.47-r1.ebuild,v 1.5 2009/01/17 14:09:18 nixnut Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 # EAPI="1"
 SLOT="2"
-KEYWORDS="alpha amd64 ia64 ~ppc -sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc -sparc x86"
 IUSE="hyperspec X new-clx dbus fastcgi gdbm gtk pari pcre postgres readline svm zlib"
 
 RDEPEND="virtual/libiconv
