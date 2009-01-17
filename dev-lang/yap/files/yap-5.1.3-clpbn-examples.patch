@@ -1,0 +1,13 @@
+--- Yap-5.1.3.orig/CLPBN/Makefile.in	2008-03-27 13:41:32.000000000 +1300
++++ Yap-5.1.3/CLPBN/Makefile.in	2009-01-17 16:24:29.000000000 +1300
+@@ -72,10 +72,7 @@
+ install: $(CLBN_TOP) $(CLBN_PROGRAMS) $(CLPBN_PROGRAMS)
+ 	mkdir -p $(DESTDIR)$(SHAREDIR)/clpbn
+ 	mkdir -p $(DESTDIR)$(SHAREDIR)/clpbn/learning
+-	mkdir -p $(DESTDIR)$(SHAREDIR)/clpbn/examples/School
+ 	for h in $(CLPBN_TOP); do $(INSTALL_DATA) $$h $(DESTDIR)$(SHAREDIR); done
+ 	for h in $(CLPBN_PROGRAMS); do $(INSTALL_DATA) $$h $(DESTDIR)$(SHAREDIR)/clpbn; done
+ 	for h in $(CLPBN_LEARNING_PROGRAMS); do $(INSTALL_DATA) $$h $(DESTDIR)$(SHAREDIR)/clpbn/learning; done
+-	for h in $(CLPBN_EXAMPLES); do $(INSTALL_DATA) $$h $(DESTDIR)$(SHAREDIR)/clpbn/examples; done
+-	for h in $(CLPBN_SCHOOL_EXAMPLES); do $(INSTALL_DATA) $$h $(DESTDIR)$(SHAREDIR)/clpbn/examples/School; done
+ 

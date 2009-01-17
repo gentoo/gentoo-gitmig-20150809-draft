@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.3-r1.ebuild,v 1.1 2009/01/16 08:42:13 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.3-r1.ebuild,v 1.2 2009/01/17 03:30:43 keri Exp $
 
 inherit autotools eutils java-pkg-opt-2
 
@@ -37,6 +37,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
 	epatch "${FILESDIR}"/${P}-bootdir.patch
 	epatch "${FILESDIR}"/${P}-chr.patch
+	epatch "${FILESDIR}"/${P}-clpbn-examples.patch
 	epatch "${FILESDIR}"/${P}-tkyap.patch
 
 	eautoconf
@@ -84,8 +85,13 @@ src_install() {
 	fi
 
 	if use examples ; then
-		docinto examples
-		dodoc CLPBN/clpbn/examples/cg.yap
-		dodoc CLPBN/clpbn/examples/School/*
+		docinto examples/clpbn
+		dodoc CLPBN/clpbn/examples/*.yap
+		docinto examples/clpbn/school
+		dodoc CLPBN/clpbn/examples/School/*.yap
+		if use mpi ; then
+			docinto examples/mpi
+			dodoc library/mpi/examples/*.pl
+		fi
 	fi
 }
