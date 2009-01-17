@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-phonon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.14 2009/01/06 15:02:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-phonon/ChangeLog,v 1.15 2009/01/17 16:11:15 nixnut Exp $
+
+  17 Jan 2009; nixnut <nixnut@gentoo.org> qt-phonon-4.4.2.ebuild:
+  ppc stable #248038
 
   06 Jan 2009; Ben de Groot <yngwin@gentoo.org> -qt-phonon-4.4.0.ebuild,
   -qt-phonon-4.4.1.ebuild, -qt-phonon-4.4.1-r1.ebuild:
