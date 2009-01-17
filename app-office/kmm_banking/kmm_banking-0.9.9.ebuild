@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmm_banking/kmm_banking-0.9.9.ebuild,v 1.1 2009/01/17 14:35:58 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmm_banking/kmm_banking-0.9.9.ebuild,v 1.2 2009/01/17 14:58:34 tgurr Exp $
 
 EAPI="2"
 ARTS_REQUIRED="never"
@@ -75,7 +75,8 @@ src_configure() {
 
 	myconf="${myconf} \
 		--enable-aqbanking \
-		--enable-gwenhywfar"
+		--enable-gwenhywfar \
+		--without-arts"
 
 	econf ${myconf}
 }
