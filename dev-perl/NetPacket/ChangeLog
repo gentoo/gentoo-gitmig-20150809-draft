@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/NetPacket
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.16 2009/01/07 20:01:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.17 2009/01/17 16:39:37 tcunha Exp $
+
+  17 Jan 2009; Tiago Cunha <tcunha@gentoo.org> NetPacket-0.41.1.ebuild:
+  keyworded ~arch for sparc
 
 *NetPacket-0.41.1 (07 Jan 2009)
 
