@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.149 2008/11/14 09:21:53 robbat2 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.150 2009/01/17 22:44:20 robbat2 Exp $
+
+  17 Jan 2009; Robin H. Johnson <robbat2@gentoo.org>
+  files/lvm.rc-2.02.28-r2:
+  Minor fix for bug #255237.
 
   14 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
   lvm2-2.02.33.ebuild, lvm2-2.02.33-r1.ebuild, lvm2-2.02.36.ebuild,
