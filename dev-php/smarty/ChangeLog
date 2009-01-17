@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.90 2009/01/11 15:11:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.91 2009/01/17 15:43:50 bluebird Exp $
+
+  17 Jan 2009; Friedrich Oslage <bluebird@gentoo.org> smarty-2.6.21.ebuild:
+  Stable on sparc, bug #254415
 
   11 Jan 2009; Markus Meier <maekke@gentoo.org> smarty-2.6.21.ebuild:
   amd64/x86 stable, bug #254415
