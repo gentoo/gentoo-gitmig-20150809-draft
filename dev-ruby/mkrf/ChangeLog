@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mkrf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.9 2009/01/11 14:08:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.10 2009/01/17 14:30:38 nixnut Exp $
+
+  17 Jan 2009; nixnut <nixnut@gentoo.org> mkrf-0.2.3.ebuild:
+  ppc stable #250933
 
   11 Jan 2009; Raúl Porcel <armin76@gentoo.org> mkrf-0.2.3.ebuild:
   ia64 stable wrt #250933
