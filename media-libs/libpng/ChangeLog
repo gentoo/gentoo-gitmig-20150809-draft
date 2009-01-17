@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.203 2008/12/21 21:34:48 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.204 2009/01/17 17:07:19 fmccor Exp $
+
+  17 Jan 2009; Ferris McCormick <fmccor@gentoo.org> libpng-1.2.34.ebuild:
+  Sparc stable, Security Bug #255231.
 
 *libpng-1.2.34 (21 Dec 2008)
 
