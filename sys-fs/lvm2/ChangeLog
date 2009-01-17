@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.150 2009/01/17 22:44:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.151 2009/01/17 22:53:14 robbat2 Exp $
+
+  17 Jan 2009; Robin H. Johnson <robbat2@gentoo.org>
+  files/lvm.rc-2.02.28-r2:
+  Stop using /lib/librc.so to detect openrc/baselayout2, and use a file
+  installed by new openrc instead, fixes bug #253076.
 
   17 Jan 2009; Robin H. Johnson <robbat2@gentoo.org>
   files/lvm.rc-2.02.28-r2:
