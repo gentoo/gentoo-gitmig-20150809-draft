@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/evolution-data-server
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.199 2008/12/20 17:31:47 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.200 2009/01/18 06:48:42 ford_prefect Exp $
+
+*evolution-data-server-2.24.3 (18 Jan 2009)
+
+  18 Jan 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +evolution-data-server-2.24.3.ebuild:
+  Bump to 2.24.3 - lots of bug fixes. Dropping icaltz-util.patch since this
+  has been committed.
 
   20 Dec 2008; nixnut <nixnut@gentoo.org>
   evolution-data-server-2.22.3-r1.ebuild:
