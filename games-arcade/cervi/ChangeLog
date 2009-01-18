@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/cervi
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cervi/ChangeLog,v 1.5 2006/10/09 16:23:11 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cervi/ChangeLog,v 1.6 2009/01/18 19:58:12 tupone Exp $
+
+  18 Jan 2009; Tupone Alfredo <tupone@gentoo.org>
+  +files/cervi-0.0.3-gcc43.patch, cervi-0.0.3.ebuild:
+  Fix gcc-4.3 build. Bug #251119 by flameeyes@gentoo.org
 
   09 Oct 2006; Tristan Heaven <nyhm@gentoo.org> cervi-0.0.3.ebuild:
   Add gtk+-1 to DEPEND

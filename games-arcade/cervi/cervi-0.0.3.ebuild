@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cervi/cervi-0.0.3.ebuild,v 1.7 2006/10/09 16:23:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cervi/cervi-0.0.3.ebuild,v 1.8 2009/01/18 19:58:12 tupone Exp $
 
-inherit toolchain-funcs games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="A multiplayer game where players drive a worm and try not to collide with anything"
 SRC_URI="http://tomi.nomi.cz/download/${P}.tar.bz2"
@@ -22,6 +22,7 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i \
 		-e "/^CFLAGS/ s:-Wall:${CFLAGS}:" \
 		-e "/^CXXFLAGS/ s:-Wall:${CXXFLAGS}:" Makefile \
