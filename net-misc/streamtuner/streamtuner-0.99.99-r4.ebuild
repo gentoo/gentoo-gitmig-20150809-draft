@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r4.ebuild,v 1.1 2009/01/18 18:18:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r4.ebuild,v 1.2 2009/01/18 18:38:25 ssuominen Exp $
 
-EAPI=2
+EAPI=1
 GCONF_DEBUG=no
 
 inherit eutils gnome2
@@ -27,9 +27,14 @@ RDEPEND=">=x11-libs/gtk+-2.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS NEWS README TODO"
+pkg_setup() {
+	# live365 causes parse errors at connect time.
+	G2CONF="-disable-live365 $(use_enable python)
+		$(use_enable shout shoutcast) $(use_enable xiph)"
+}
 
-src_prepare() {
+src_unpack() {
+	gnome2_src_unpack
 	epatch "${FILESDIR}"/${P}-gentoo.patch \
 		"${FILESDIR}"/${P}-shoutcast.patch \
 		"${FILESDIR}"/${P}-shoutcast-2.patch \
@@ -37,8 +42,4 @@ src_prepare() {
 		"${DISTDIR}"/${P}-pygtk-2.6.diff
 }
 
-src_configure() {
-	# live365 causes parse errors at connect time.
-	econf --disable-live365 $(use_enable python) \
-		$(use_enable shout shoutcast) $(use_enable xiph)
-}
+DOCS="AUTHORS NEWS README TODO"
