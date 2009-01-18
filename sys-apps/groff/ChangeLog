@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.84 2009/01/18 11:24:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.85 2009/01/18 15:57:08 klausman Exp $
+
+  18 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
+  groff-1.19.2-r3.ebuild:
+  Stable on alpha, bug #255280
 
   18 Jan 2009; Tobias Scherbaum <dertobi123@gentoo.org>
   groff-1.19.2-r3.ebuild:
