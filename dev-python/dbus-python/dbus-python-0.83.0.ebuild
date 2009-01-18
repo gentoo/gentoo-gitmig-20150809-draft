@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.83.0.ebuild,v 1.1 2008/08/15 04:10:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.83.0.ebuild,v 1.2 2009/01/18 18:59:43 eva Exp $
 
 inherit python multilib
 
@@ -27,23 +27,23 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# don't run py-compile
-	sed -i \
-		-e '/if test -n "$$dlist"; then/,/else :; fi/d' \
-		Makefile.in || die "sed in Makefile.in failed"
+	# disable pyc compiling
+	mv "${S}"/py-compile "${S}"/py-compile.orig
+	ln -s $(type -P true) "${S}"/py-compile
 }
 
 src_compile() {
-	econf --docdir=/usr/share/doc/dbus-python-${PV} || die "econf failed"
+	econf --docdir=/usr/share/doc/dbus-python-${PV}
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 }
 
 pkg_postinst() {
 	python_version
+	python_need_rebuild
 	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/dbus
 }
 
