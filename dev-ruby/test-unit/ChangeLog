@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.1 2009/01/16 19:08:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.2 2009/01/18 10:12:24 flameeyes Exp $
+
+  18 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  test-unit-2.0.2.ebuild:
+  Don't use rake to call the testsuite or it'll fail, as upstream suggested,
+  use the testrun script directly.
 
 *test-unit-2.0.2 (16 Jan 2009)
 
