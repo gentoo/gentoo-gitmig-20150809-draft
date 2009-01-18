@@ -1,6 +1,22 @@
 # ChangeLog for dev-dotnet/xsp
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.59 2008/11/27 18:45:20 ssuominen Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.60 2009/01/18 17:44:04 loki_val Exp $
+
+*xsp-2.2 (18 Jan 2009)
+
+  18 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -files/1.2.3/mod-mono-server.initd, -files/1.2.3/xsp.initd,
+  -files/1.9.1/mod-mono-server.confd, -files/1.2.3/mod-mono-server.confd,
+  -files/1.2.3/xsp.confd, -files/1.2.5/mod-mono-server.confd,
+  -files/1.2.5/mod-mono-server.initd, -files/1.2.5/xsp.confd,
+  -files/1.2.5/xsp.initd, -files/1.9.1/mod-mono-server.initd,
+  -files/1.9.1/xsp.confd, -files/1.9.1/xsp.initd,
+  -files/1.9/mod-mono-server.confd, -files/1.9/mod-mono-server.initd,
+  -files/1.9/xsp.confd, -files/1.9/xsp.initd,
+  +files/2.2/configure-fix.patch, +files/2.2/mod-mono-server.confd,
+  +files/2.2/mod-mono-server.initd, +files/2.2/xsp.confd,
+  +files/2.2/xsp.initd, metadata.xml, -xsp-1.9.1.ebuild, +xsp-2.2.ebuild:
+  Bump to 2.2, bug 254929.
 
   27 Nov 2008; <ssuominen@gentoo.org> xsp-1.2.1.ebuild, xsp-1.2.4.ebuild:
   Move dev-util/pkgconfig from RDEPEND to DEPEND wrt #224301.

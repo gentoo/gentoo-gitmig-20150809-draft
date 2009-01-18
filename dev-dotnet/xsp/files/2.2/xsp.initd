@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/files/1.2.5/xsp.initd,v 1.1 2007/09/10 19:36:20 jurek Exp $
+# $Id: xsp.initd,v 1.1 2009/01/18 17:44:04 loki_val Exp $
 
 depend() {
 	need net
