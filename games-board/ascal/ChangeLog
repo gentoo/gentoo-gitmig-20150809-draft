@@ -1,6 +1,11 @@
 # ChangeLog for games-board/ascal
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ascal/ChangeLog,v 1.2 2007/06/12 14:57:42 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ascal/ChangeLog,v 1.3 2009/01/18 20:38:56 tupone Exp $
+
+  18 Jan 2009; Tupone Alfredo <tupone@gentoo.org>
+  +files/ascal-0.1.1-gcc43.patch, files/ascal-0.1.1-install.patch,
+  ascal-0.1.1.ebuild:
+  Fix gcc-4.3 build bug #251125 by flameeyes@gentoo.org
 
   12 Jun 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/ascal-0.1.1-install.patch, ascal-0.1.1.ebuild:

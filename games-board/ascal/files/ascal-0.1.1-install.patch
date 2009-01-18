@@ -30,7 +30,7 @@
  
 --- Makefile.am
 +++ Makefile.am
-@@ -17,13 +17,13 @@
+@@ -17,13 +17,12 @@
  
  ACLOCAL_AMFLAGS = -I m4
  
@@ -41,7 +41,7 @@
 -desktopdir = $(datadir)/applications
 +desktopdir = /usr/share/applications
  desktop_in_files = ascal.desktop.in
- desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+-desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
  
  @INTLTOOL_DESKTOP_RULE@
  
