@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.13 2009/01/15 22:10:20 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.14 2009/01/18 20:21:37 eva Exp $
+
+*pm-utils-1.2.3-r1 (18 Jan 2009)
+
+  18 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -pm-utils-0.99.4.ebuild, +pm-utils-1.2.3-r1.ebuild:
+  Fix pkgconfig file, bug #254492. Fix generation of hook exception file,
+  bug #253835. Kill pm-utils-0.99.4, bug #240720.
 
   15 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
   Compnerd retired.
