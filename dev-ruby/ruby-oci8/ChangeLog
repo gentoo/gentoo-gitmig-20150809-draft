@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-oci8
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ChangeLog,v 1.5 2008/10/06 10:08:41 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ChangeLog,v 1.6 2009/01/18 16:45:53 graaff Exp $
+
+*ruby-oci8-1.0.3 (18 Jan 2009)
+
+  18 Jan 2009; Hans de Graaff <graaff@gentoo.org> +ruby-oci8-1.0.3.ebuild:
+  Version bump by Troy Bowman in bug 249921.
 
   06 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> ruby-oci8-1.0.2.ebuild:
   Fix build-time dependencies.
