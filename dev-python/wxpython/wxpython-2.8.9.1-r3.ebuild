@@ -1,64 +1,74 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.7.1.ebuild,v 1.13 2008/07/28 22:59:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.9.1-r3.ebuild,v 1.1 2009/01/18 08:06:06 dirtyepic Exp $
 
-EAPI="1"
+EAPI="2"
 WX_GTK_VER="2.8"
 
 inherit alternatives eutils multilib python wxwidgets flag-o-matic
-
-# Note, we don't use distutils.eclass because it doesn't seem to play nice with
+# We don't use distutils.eclass because it doesn't seem to play nice with
 # need-wxwidgets
 
 MY_P="${P/wxpython-/wxPython-src-}"
 DESCRIPTION="A blending of the wxWindows C++ class library with Python"
 HOMEPAGE="http://www.wxpython.org/"
-SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.bz2
+		doc? ( mirror://sourceforge/wxpython/wxPython-docs-${PV}.tar.bz2
+				mirror://sourceforge/wxpython/wxPython-newdocs-${PV}.tar.bz2 )
+		examples? ( mirror://sourceforge/wxpython/wxPython-demo-${PV}.tar.bz2 )"
 
 LICENSE="wxWinLL-3"
 SLOT="2.8"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
-IUSE="opengl"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="cairo opengl doc examples"
 
-RDEPEND=">=dev-lang/python-2.1
-	>=x11-libs/wxGTK-${PV}:2.8
+RDEPEND=">=x11-libs/wxGTK-${PV}:2.8[opengl?]
+	>=dev-lang/python-2.4
 	>=x11-libs/gtk+-2.4
 	>=x11-libs/pango-1.2
 	>=dev-libs/glib-2.0
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff
+	cairo? ( dev-python/pycairo )
 	opengl? ( >=dev-python/pyopengl-2.0.0.44 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}/wxPython/"
+DOC_S="${WORKDIR}/wxPython-${PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i "s:cflags.append('-O3'):pass:" config.py || die "sed failed"
 
-	epatch "${FILESDIR}"/${PN}-2.8.7-wxversion-scripts.patch
+	epatch "${FILESDIR}"/${PN}-2.8.8-wxversion-scripts.patch
 
+	if use doc; then
+		cd "${DOC_S}"
+		epatch "${FILESDIR}"/${PN}-${SLOT}-cache-writable.patch
+	fi
+
+	if use examples; then
+		cd "${DOC_S}"
+		epatch "${FILESDIR}"/${PN}-${SLOT}-wxversion-demo.patch
+	fi
 }
 
-src_compile() {
-	local mypyconf
-
+src_configure() {
 	need-wxwidgets unicode
-	use opengl && check_wxuse opengl
 
 	append-flags -fno-strict-aliasing
 
-	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
 	use opengl \
 		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
 		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
 
+	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
 	mypyconf="${mypyconf} WXPORT=gtk2 UNICODE=1"
+}
 
+src_compile() {
 	python setup.py ${mypyconf} build || die "setup.py build failed"
 }
 
@@ -90,6 +100,20 @@ src_install() {
 	done
 
 	[[ ${wxaddons_copied} ]] && rm -rf "${D}"/${site_pkgs}/wxaddons/
+
+	dodoc "${S}"/docs/{CHANGES,PyManual,README,wxPackage,wxPythonManual}.txt
+
+	if use doc; then
+		dodir /usr/share/doc/${PF}/docs
+		cp -R "${DOC_S}"/docs/* "${D}"usr/share/doc/${PF}/docs/
+	fi
+
+	if use examples; then
+		dodir /usr/share/doc/${PF}/demo
+		dodir /usr/share/doc/${PF}/samples
+		cp -R "${DOC_S}"/demo/* "${D}"/usr/share/doc/${PF}/demo/
+		cp -R "${DOC_S}"/samples/* "${D}"/usr/share/doc/${PF}/samples/
+	fi
 }
 
 pkg_postinst() {
@@ -104,9 +128,26 @@ pkg_postinst() {
 
 	echo
 	elog "Gentoo uses the Multi-version method for SLOT'ing."
-	elog "Developers see this site for instructions on using 2.6 or 2.8"
-	elog "with your apps:"
+	elog "Developers, see this site for instructions on using"
+	elog "2.6 or 2.8 with your apps:"
 	elog "http://wiki.wxpython.org/index.cgi/MultiVersionInstalls"
+	elog
+	if use doc; then
+		elog "To access the general wxWidgets documentation,"
+		elog "run /usr/share/doc/${PF}/docs/viewdocs.py"
+		elog
+		elog "wxPython documentation is available by pointing a browser"
+		elog "at /usr/share/doc/${PF}/docs/api/index.html"
+		elog
+	fi
+	if use examples; then
+		elog "The demo.py app which contains hundreds of demo modules"
+		elog "with documentation and source code has been installed at"
+		elog "/usr/share/doc/${PF}/demo/demo.py"
+		elog
+		elog "Many more example apps and modules can be found in"
+		elog "/usr/share/doc/${PF}/samples/"
+	fi
 	echo
 }
 

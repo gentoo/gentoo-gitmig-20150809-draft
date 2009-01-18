@@ -3,4 +3,8 @@
 <pkgmetadata>
 <herd>wxwidgets</herd>
 <herd>python</herd>
+<use>
+	<flag name="examples">Install interactive demo module browser and sample applets.</flag>
+	<flag name="doc">Install HTML wxWidgets docs and wxpython API reference.</flag>
+</use>
 </pkgmetadata>

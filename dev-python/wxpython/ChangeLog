@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/wxpython
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.107 2008/11/26 02:20:19 dirtyepic Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.108 2009/01/18 08:06:06 dirtyepic Exp $
+
+*wxpython-2.8.9.1-r3 (18 Jan 2009)
+
+  18 Jan 2009; Ryan Hill <dirtyepic@gentoo.org>
+  +files/wxpython-2.8-cache-writable.patch,
+  +files/wxpython-2.8-wxversion-demo.patch, metadata.xml,
+  wxpython-2.6.4.0.ebuild, -wxpython-2.6.4.0-r1.ebuild,
+  -wxpython-2.8.7.1.ebuild, +wxpython-2.8.9.1-r3.ebuild:
+  Integrate dev-python/wxpython-docs into wxpython ebuild for bug #230305.
+  Remove old and drop all keywords except arm, sh, and x86-fbsd on the
+  2.6.4.0 ebuild.
 
 *wxpython-2.8.9.1-r2 (26 Nov 2008)
 
