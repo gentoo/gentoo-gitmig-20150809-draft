@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqldeveloper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/ChangeLog,v 1.1 2009/01/18 05:28:01 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/ChangeLog,v 1.2 2009/01/18 05:48:49 bluebird Exp $
+
+  18 Jan 2009; Friedrich Oslage <bluebird@gentoo.org>
+  sqldeveloper-1.5.3.5783.ebuild:
+  Change pkg_postinst message to suggest to set the TNS_NAMES environment
+  variable
 
 *sqldeveloper-1.5.3.5783 (18 Jan 2009)
 

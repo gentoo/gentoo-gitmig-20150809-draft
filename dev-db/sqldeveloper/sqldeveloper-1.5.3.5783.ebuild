@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/sqldeveloper-1.5.3.5783.ebuild,v 1.1 2009/01/18 05:28:01 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/sqldeveloper-1.5.3.5783.ebuild,v 1.2 2009/01/18 05:48:49 bluebird Exp $
 
 EAPI="2"
 
@@ -90,11 +90,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! has_version dev-db/oracle-instantclient-basic; then
-		echo
-		einfo "You can connect to Oracle databases using the Basic"
-		einfo "connection type. If you want to use TNS based connections please"
-		einfo "also install dev-db/oracle-instantclient-basic."
-		echo
-	fi
+	echo
+	einfo "If you want to use the TNS connection type you need to set up the"
+	einfo "TNS_NAMES environment variable to point to the directory your"
+	einfo "tnsnames.ora resides in."
+	echo
 }
