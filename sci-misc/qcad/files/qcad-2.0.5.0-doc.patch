@@ -12,7 +12,7 @@ diff -Naur qcad-2.0.5.0-1-community.src/qcad/src/qc_applicationwindow.cpp qcad-2
          QStringList args;
          args << "-profile";
 -        args << QDir::convertSeparators(RS_SYSTEM->getDocPath() + "/qcaddoc.adp");
-+        args << QDir::convertSeparators("QCADDOCPATH/qcaddoc.adp");
++        args << QDir::convertSeparators("QCADDOCPATH/" + RS_SETTINGS->readEntry("/Language", "en") + "/qcaddoc.adp");
  //        args << QString("doc") + QDir::separator() + QString("qcaddoc.adp");
  
  #if QT_VERSION>=0x030200 

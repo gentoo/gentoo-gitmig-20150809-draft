@@ -1,15 +1,27 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.5.0.ebuild,v 1.7 2008/11/26 16:42:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/qcad/qcad-2.0.5.0.ebuild,v 1.8 2009/01/18 22:28:25 bicatali Exp $
 
 inherit kde-functions eutils
+
+manual_cs="2.0.4.0-1"
+manual_de="2.1.0.0-1"
+manual_en="2.1.0.0-1"
+manual_hu="2.0.4.0-1"
+
+LANGS_M="cs de en hu"
 
 MY_P=${P}-1-community.src
 PATCH_V="2.0.4.0-1.src"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A 2D CAD package based upon Qt."
+# ugly hack, don't make en LINGUAS-controlled as we may need it as default
 SRC_URI="http://www.ribbonsoft.com/archives/qcad/${MY_P}.tar.gz
-		doc? ( mirror://gentoo/qcad-manual-200404.tar.bz2 )"
+	doc? (
+		linguas_cs? ( ftp://anonymous@ribbonsoft.com/archives/qcad/qcad-manual-cs-${manual_cs}.html.zip )
+		linguas_de? ( ftp://anonymous@ribbonsoft.com/archives/qcad/qcad-manual-de-${manual_de}.html.zip )
+		ftp://anonymous@ribbonsoft.com/archives/qcad/qcad-manual-en-${manual_en}.html.zip
+		linguas_hu? ( ftp://anonymous@ribbonsoft.com/archives/qcad/qcad-manual-hu-${manual_hu}.html.zip ) )"
 HOMEPAGE="http://www.ribbonsoft.com/qcad.html"
 
 LICENSE="GPL-2"
@@ -19,6 +31,15 @@ KEYWORDS="amd64 hppa ppc ppc64 x86"
 
 DEPEND=">=sys-apps/sed-4"
 need-qt 3.3
+
+LANGS="cs da de el en es et fr hu it nl no pa pl ru sk tr"
+for X in ${LANGS} ; do
+		IUSE="${IUSE} linguas_${X}"
+done
+
+if [[ -z "${LINGUAS}" ]]; then
+	LINGUAS="en"
+fi
 
 src_unpack() {
 	unpack ${A}
@@ -73,6 +94,12 @@ src_compile() {
 	if ! test -f "${S}"/qcad/qcad; then
 		die "no binary created, build failed"
 	fi
+	# make translations as release_translations.sh is missing
+	cd ../qcad
+	strip-linguas ${LANGS}
+	for LANG in ${LINGUAS}; do
+		lrelease src/ts/qcad_${LANG}.ts -qm qm/qcad_${LANG}.qm
+	done
 }
 
 src_install () {
@@ -93,7 +120,23 @@ src_install () {
 
 	if use doc; then
 		cd "${WORKDIR}"
-		insinto /usr/share/doc/${PF}/
-		doins -r qcaddoc.adp cad || die "Failed to install manual"
+		strip-linguas ${LANGS_M}
+		if [[ -z "${LINGUAS}" ]]; then
+			ewarn "No manual translation available for your LINGUAS. Installing English."
+			ewarn "Note that if you want to use it while UI set to another language, you have to symlink"
+			ewarn "/usr/share/doc/${PF}/LC -> /usr/share/doc/${PF}/en"
+			ewarn "(where LC is the language code of the language set for the UI)"
+			LINGUAS="en"
+		fi
+		for LANG in ${LINGUAS}; do
+			m_version=$(eval "echo \$manual_${LANG}")
+			cd qcad-manual-${LANG}-${m_version}.html
+			if [[ -e "index.adp" ]]; then
+				ln -s index.adp qcaddoc.adp
+			fi
+			insinto /usr/share/doc/${PF}/${LANG}
+			doins -r * || die "Failed to install manual for LINGUAS=${LANG}"
+			cd ..
+		done
 	fi
 }
