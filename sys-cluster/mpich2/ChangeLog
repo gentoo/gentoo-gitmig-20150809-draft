@@ -1,6 +1,18 @@
 # ChangeLog for sys-cluster/mpich2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.31 2008/09/03 07:33:41 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.32 2009/01/18 21:54:59 jsbronder Exp $
+
+*mpich2-1.0.8 (18 Jan 2009)
+
+  18 Jan 2009; Justin Bronder <jsbronder@gentoo.org>
+  +files/mpich2-1.0.8-gforker-install-alt-fix.patch,
+  +files/mpich2-1.0.8-mpdconf-env.patch,
+  +files/mpich2-1.0.8-site-packages-py.patch, +files/mpich2.envd,
+  metadata.xml, +mpich2-1.0.8.ebuild:
+  Bump mpich2-1.0.8. Fixes #221193, #221635, #242180 as well as some other
+  cleanup. Also removed mpe2 from this ebuild so it can also be used with
+  openmpi, see the science overlay for now. Taking over as maintainer after
+  talking to kanaka.
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> mpich2-1.0.3.ebuild,
   mpich2-1.0.3-r1.ebuild, mpich2-1.0.6.ebuild:

@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>hp-cluster</herd>
 <maintainer>
-  <email>kanaka@gentoo.org</email>
-  <name>Joel Martin</name>
+  <email>jsbronder@gentoo.org</email>
+  <name>Justin Bronder</name>
 </maintainer>
 <use>
 	<flag name='fast'>Enabling fast turns off error checking and timing
@@ -14,5 +14,6 @@
 	<flag name='pvfs2'>Add pvfs2 support</flag>
 	<flag name='romio'>Enable romio, a high-performance portable MPI-IO
 	implementation</flag>
+	<flag name='mpi-threads'>Enable MPI_THREAD_MULTIPLE</flag>
 </use>
 </pkgmetadata>
