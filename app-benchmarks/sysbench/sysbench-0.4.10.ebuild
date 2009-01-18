@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/sysbench-0.4.10.ebuild,v 1.1 2009/01/17 20:33:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/sysbench-0.4.10.ebuild,v 1.2 2009/01/18 01:31:04 mr_bones_ Exp $
 
 DESCRIPTION="System performance benchmark"
 HOMEPAGE="http://sysbench.sourceforge.net/"
@@ -23,4 +23,3 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ChangeLog README
 }
-
