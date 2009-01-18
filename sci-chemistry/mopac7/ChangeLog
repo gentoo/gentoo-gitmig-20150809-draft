@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/mopac7
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.18 2008/11/28 22:57:04 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/ChangeLog,v 1.19 2009/01/18 18:24:26 je_fro Exp $
+
+  18 Jan 2009; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
+  Fix for bug #254491. Big Thanks to Permjacov E. A. and Rene Meier. Also
+  removing mopac7-1.14.ebuild because of repoman warning: Upstream parallel
+  compilation bug (ebuild calls emake -j1 on line: 55)
 
   28 Nov 2008; Patrick Lauer <patrick@gentoo.org> mopac7-1.14.ebuild:
   Adding econf call so it can actually work. No idea how this got through,

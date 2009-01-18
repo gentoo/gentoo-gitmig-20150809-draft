@@ -1,22 +1,21 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.14.ebuild,v 1.2 2008/11/28 22:57:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.14-r1.ebuild,v 1.1 2009/01/18 18:24:26 je_fro Exp $
 
-WANT_AUTOMAKE="1.8"
-WANT_AUTOCONF="latest"
-
-inherit autotools
+inherit autotools fortran
 
 DESCRIPTION="Autotooled, updated version of a powerful, fast semi-empirical package"
 HOMEPAGE="http://sourceforge.net/projects/mopac7/"
-#SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 SRC_URI="http://www.bioinformatics.org/ghemical/download/current/${P}.tar.gz"
+
 LICENSE="mopac7"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-RDEPEND=">=dev-libs/libf2c-20070912"
+RDEPEND=""
 DEPEND="${RDEPEND}"
+
+FORTRAN="gfortran"
 
 src_unpack() {
 	unpack ${A}
@@ -25,40 +24,37 @@ src_unpack() {
 	# Install the executable
 	sed -i \
 		-e "s:noinst_PROGRAMS = mopac7:bin_PROGRAMS = mopac7:g" \
-		Makefile.am \
+		fortran/Makefile.am \
 		|| die "sed failed: install mopac7"
 	# Install the script to run the executable
 	sed -i \
-		-e "s:EXTRA_DIST = run_mopac7:if HAVE_F2C\nbin_SCRIPTS = run_mopac7\nendif:g" \
+		-e "s:EXTRA_DIST = autogen.sh run_mopac7:bin_SCRIPTS = run_mopac7:g" \
 		Makefile.am \
 		|| die "sed failed: install run_mopac7"
 
 	# Fix parallel build by adding internal dependency on libmopac7.la from
 	# executable
 	sed -i \
-		-e "s:mopac7_LDFLAGS = -lmopac7 -lf2c -lm:mopac7_LDFLAGS = -lf2c -lm:g" \
+		-e "s:mopac7_LDFLAGS = -lmopac7 -lm:mopac7_LDFLAGS = -lm:g" \
 		-e "s:\(mopac7_LDFLAGS.*\):\1\nmopac7_LDADD = libmopac7.la:g" \
-		Makefile.am \
+		fortran/Makefile.am \
 		|| die "sed failed: fix dependencies"
-
-	# Switch to gfortran from g77.
-	sed -i \
-		-e "s:lg2c:lgfortran:" \
-		libmopac7.pc.in \
-		|| die "sed failed: fix to use gfortran in libmopac7.pc.in"
 
 	eautoreconf
 }
 
 src_compile() {
-	econf
-	emake -j1 || die "mopac7 failed to build."
-	}
+	#set -std=legacy -fno-automatic according to
+	#http://www.bioinformatics.org/pipermail/ghemical-devel/2008-August/000763.html
+	FFLAGS="${FFLAGS} -std=legacy -fno-automatic" econf
+	emake || die "mopac7 failed to build."
+}
+
 
 src_install() {
 	# A correct fix would have a run_mopac7.in with @bindir@ that gets
 	# replaced by configure, and run_mopac7 added to AC_OUTPUT in configure.ac
-	sed -i "s:./src/mopac7:mopac7:g" run_mopac7
+	sed -i "s:./fortran/mopac7:mopac7:g" run_mopac7
 
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS README ChangeLog
