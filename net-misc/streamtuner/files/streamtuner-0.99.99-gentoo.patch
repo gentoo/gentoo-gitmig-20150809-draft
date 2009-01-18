@@ -1,14 +1,3 @@
-diff -ur streamtuner-0.99.99.orig/configure.ac streamtuner-0.99.99/configure.ac
---- streamtuner-0.99.99.orig/configure.ac	2004-12-21 17:20:45.000000000 +0200
-+++ streamtuner-0.99.99/configure.ac	2007-07-29 09:42:17.000000000 +0300
-@@ -21,6 +21,7 @@
- AM_INIT_AUTOMAKE(foreign)
- AM_MAINTAINER_MODE
- AM_CONFIG_HEADER(config.h)
-+AC_LIBTOOL_DLOPEN
- AC_PROG_LIBTOOL
- 
- if $CONFIG_SHELL ./libtool --features | grep "enable shared" >/dev/null 2>&1; then :; else
 diff -ur streamtuner-0.99.99.orig/data/streamtuner.pc.in streamtuner-0.99.99/data/streamtuner.pc.in
 --- streamtuner-0.99.99.orig/data/streamtuner.pc.in	2004-12-11 04:03:20.000000000 +0200
 +++ streamtuner-0.99.99/data/streamtuner.pc.in	2007-07-29 09:40:44.000000000 +0300

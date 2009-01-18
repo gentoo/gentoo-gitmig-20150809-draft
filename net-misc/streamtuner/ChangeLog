@@ -1,16 +1,27 @@
 # ChangeLog for net-misc/streamtuner
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.33 2008/05/13 06:10:24 drac Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.34 2009/01/18 18:18:42 ssuominen Exp $
+
+*streamtuner-0.99.99-r4 (18 Jan 2009)
+
+  18 Jan 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +files/streamtuner-0.99.99-audacious.patch,
+  files/streamtuner-0.99.99-gentoo.patch,
+  +files/streamtuner-0.99.99-shoutcast-2.patch,
+  +streamtuner-0.99.99-r4.ebuild:
+  Replace references of xmms with audacious by default. Remove unused part
+  of the patch -gentoo.patch. Use http://classic.shoutcast.com wrt #245373
+  by djkrysak at stny dot rr dot com. Use EAPI2.
 
 *streamtuner-0.99.99-r3 (13 May 2008)
 
-  13 May 2008; Samuli Suominen <drac@gentoo.org>
+  13 May 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/streamtuner-0.99.99-shoutcast.patch,
   +streamtuner-0.99.99-r3.ebuild:
   Fix view of shoutcast genres with a patch from Gentoo bug 220811 or Debian
   bug 471132. Thanks to Per-Erik Westerberg for reporting.
 
-  25 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  25 Jan 2008; Samuli Suominen <ssuominen@gentoo.org>
   streamtuner-0.99.99-r2.ebuild:
   amd64 stable wrt #206313
 
@@ -18,17 +29,17 @@
   streamtuner-0.99.99-r2.ebuild:
   x86 stable, bug #206313
 
-  30 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  30 Jul 2007; Samuli Suominen <ssuominen@gentoo.org>
   streamtuner-0.99.99-r2.ebuild:
   Add shout and xiph USE flags for bug 110358.
 
-  29 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  29 Jul 2007; Samuli Suominen <ssuominen@gentoo.org>
   streamtuner-0.99.99-r2.ebuild:
   Add blockers to old plugins wrt bug 97195.
 
 *streamtuner-0.99.99-r2 (29 Jul 2007)
 
-  29 Jul 2007; Samuli Suominen <drac@gentoo.org>
+  29 Jul 2007; Samuli Suominen <ssuominen@gentoo.org>
   +files/streamtuner-0.99.99-gentoo.patch, +streamtuner-0.99.99-r2.ebuild:
   Merge patches and changes by Pacho Ramos from bug 184869, thanks.
 
