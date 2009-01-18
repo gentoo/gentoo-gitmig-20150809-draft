@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r4.ebuild,v 1.2 2009/01/18 18:38:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r4.ebuild,v 1.3 2009/01/18 18:44:43 ssuominen Exp $
 
 EAPI=1
 GCONF_DEBUG=no
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	# live365 causes parse errors at connect time.
-	G2CONF="-disable-live365 $(use_enable python)
+	G2CONF="--disable-live365 $(use_enable python)
 		$(use_enable shout shoutcast) $(use_enable xiph)"
 }
 
