@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.239 2009/01/16 20:05:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.240 2009/01/18 19:36:38 vapier Exp $
+
+  18 Jan 2009; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  wine-1.1.13.ebuild, wine-9999.ebuild:
+  Add USE="png ssl win64" and convert USE flags to $(use_with) #255250 by
+  Johan Verrept.
 
 *wine-1.1.13 (16 Jan 2009)
 
