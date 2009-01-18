@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-dict
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.5 2008/07/25 07:14:18 wormo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.6 2009/01/18 10:30:59 flameeyes Exp $
+
+  18 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-dict-0.9.4.ebuild:
+  Set this to just use ruby18 (doesn't work with Ruby 1.9), use doruby, and
+  die on failure.
 
   25 Jul 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
   ruby-dict-0.9.4.ebuild:
