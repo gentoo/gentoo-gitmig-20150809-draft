@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.67 2008/11/21 14:22:30 yngwin Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.68 2009/01/18 22:00:16 jokey Exp $
+
+*eric-4.2.5 (18 Jan 2009)
+
+  18 Jan 2009; <jokey@gentoo.org> +eric-4.2.5.ebuild:
+  Version bump
 
 *eric-4.2.3 (21 Nov 2008)
 
