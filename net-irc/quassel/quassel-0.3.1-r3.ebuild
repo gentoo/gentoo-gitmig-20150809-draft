@@ -1,23 +1,21 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.15 2009/01/18 19:44:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.3.1-r3.ebuild,v 1.1 2009/01/18 19:44:40 jokey Exp $
 
-EAPI="2"
+EAPI=2
 
-inherit cmake-utils eutils git
-
-EGIT_REPO_URI="git://git.quassel-irc.org/quassel.git"
-EGIT_BRANCH="master"
+inherit cmake-utils eutils
 
 DESCRIPTION="Core/client IRC client."
 HOMEPAGE="http://quassel-irc.org/"
+SRC_URI="http://quassel-irc.org/pub/${P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="dbus debug kde monolithic phonon +server +ssl webkit +X"
+IUSE="+dbus debug monolithic +server +ssl +X"
 
-LANGS="cs da de fr nb_NO ru tr"
+LANGS="nb_NO da de fr ru"
 for l in ${LANGS}; do
 	IUSE="${IUSE} linguas_${l}"
 done
@@ -29,9 +27,7 @@ RDEPEND="
 		x11-libs/qt-sql:4[sqlite]
 		x11-libs/qt-script:4
 		x11-libs/qt-gui:4
-		kde? ( >=kde-base/kdelibs-4.1 )
-		phonon? ( || ( media-sound/phonon x11-libs/qt-phonon ) )
-		webkit? ( x11-libs/qt-webkit:4 )
+		x11-libs/qt-webkit:4
 	)
 	!monolithic? (
 		server? (
@@ -40,9 +36,7 @@ RDEPEND="
 		)
 		X? (
 			x11-libs/qt-gui:4
-			kde? ( >=kde-base/kdelibs-4.1 )
-			phonon? ( || ( media-sound/phonon x11-libs/qt-phonon ) )
-			webkit? ( x11-libs/qt-webkit:4 )
+			x11-libs/qt-webkit:4
 		)
 	)
 	ssl? (
@@ -63,27 +57,20 @@ pkg_setup() {
 	fi
 }
 
-src_configure() {
-# Comment this out and invoke _common_configure_code and cmake manually until cmake-utils.eclass 
-# supports space separated strings as arguments for cmake options or quassel changes the 
-# separator. Until now multiple languages are not passed to -DLINGUAS and only the first 
+src_compile() {
+# Comment this out and invoke _common_configure_code and cmake manually until cmake-utils.eclass
+# supports space separated strings as arguments for cmake options or quassel changes the
+# separator. Until now multiple languages are not passed to -DLINGUAS and only the first
 # language is considered.
+
 	local mycmakeargs="$(cmake-utils_use_want server CORE)
 		$(cmake-utils_use_want X QTCLIENT)
-		$(cmake-utils_use_want monolithic MONO)
-		$(cmake-utils_use_with webkit WEBKIT)
+		$(cmake-utils_use_want X MONO)
+		$(cmake-utils_use_with X WEBKIT)
 		$(cmake-utils_use_with dbus DBUS)
-		$(cmake-utils_use_with kde KDE)
-		$(cmake-utils_use_with phonon PHONON)
-		$(cmake-utils_use_with ssl OPENSSL)"
-
-	if use kde ; then
-		# We don't use our own phonon backend, so don't enable it; also use system icon themes
-		mycmakeargs="${mycmakeargs} -DWITH_PHONON=0 -DOXYGEN_ICONS=External -DQUASSEL_ICONS=External"
-	else
-		mycmakeargs="${mycmakeargs} $(cmake-utils_use_with phonon PHONON)
-			-DOXYGEN_ICONS=Builtin -DQUASSEL_ICONS=Builtin"
-	fi
+		$(cmake-utils_use_with ssl OPENSSL)
+		-DOXYGEN_ICONS=Builtin
+		-DQUASSEL_ICONS=Builtin"
 
 	_common_configure_code
 
@@ -94,12 +81,10 @@ src_configure() {
 		${mycmakeargs} \
 		-DLINGUAS="${LINGUAS}" \
 		"${S}" || die "Cmake failed"
-
 }
 
 src_install() {
 	cmake-utils_src_install
-
 	if use server ; then
 		newinitd "${FILESDIR}"/quasselcore.init quasselcore || die "newinitd failed"
 		newconfd "${FILESDIR}"/quasselcore.conf quasselcore || die "newconfd failed"
