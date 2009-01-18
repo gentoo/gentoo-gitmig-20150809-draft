@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/varconf-0.6.5.ebuild,v 1.4 2009/01/13 20:25:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/varconf-0.6.5.ebuild,v 1.5 2009/01/18 15:23:44 maekke Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.worldforge.org/dev/eng/libraries/varconf"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libsigc++-2.0"
