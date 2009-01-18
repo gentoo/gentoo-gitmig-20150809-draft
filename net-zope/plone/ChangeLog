@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/plone
 # Copyright 2003-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.61 2009/01/11 15:13:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.62 2009/01/18 12:50:14 bluebird Exp $
+
+  18 Jan 2009; Friedrich Oslage <bluebird@gentoo.org> plone-3.1.7.ebuild:
+  Stable on sparc, bug #254108
 
   11 Jan 2009; Markus Meier <maekke@gentoo.org> plone-3.1.7.ebuild:
   amd64/x86 stable, bug #254108
