@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.150 2009/01/14 18:21:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.151 2009/01/18 23:59:47 angelos Exp $
+
+*mpd-0.14.1 (18 Jan 2009)
+
+  18 Jan 2009; Christoph Mende <angelos@gentoo.org> +mpd-0.14.1.ebuild:
+  Version bump
 
   14 Jan 2009; Christoph Mende <angelos@gentoo.org> mpd-0.14.ebuild:
   Removed sysvipc USE flag, always enabled now, bug 254911
