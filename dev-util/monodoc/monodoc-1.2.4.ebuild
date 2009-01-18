@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.2.4.ebuild,v 1.7 2008/10/04 18:08:17 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodoc/monodoc-1.2.4.ebuild,v 1.8 2009/01/18 19:24:10 loki_val Exp $
 
 inherit mono multilib
 
@@ -14,7 +14,8 @@ KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE="X"
 
 RDEPEND=">=dev-lang/mono-1.1
-		www-client/lynx"
+	www-client/lynx
+	!>=dev-lang/mono-2.2"
 DEPEND="${RDEPEND}
 		app-arch/unzip"
 PDEPEND="X? ( >=dev-util/mono-tools-1.1.17 )"
