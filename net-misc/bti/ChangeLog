@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bti
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.3 2009/01/12 18:43:18 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.4 2009/01/18 16:52:58 gregkh Exp $
+
+  18 Jan 2009; Greg Kroah-Hartman <gregkh@gentoo.org> ChangeLog:
+  011 release, added readline dependancy
 
 *bti-010 (12 Jan 2009)
 
