@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4140 2009/01/18 19:47:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4141 2009/01/18 22:07:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2471,6 +2471,7 @@ sys-cluster/lam-mpi:xmpi - Build support for the external XMPI debugging GUI
 sys-cluster/mpich2:fast - Enabling fast turns off error checking and timing collection
 sys-cluster/mpich2:mpe - Add mpe support
 sys-cluster/mpich2:mpe-sdk - Include additional SDK support, jar files
+sys-cluster/mpich2:mpi-threads - Enable MPI_THREAD_MULTIPLE
 sys-cluster/mpich2:pvfs2 - Add pvfs2 support
 sys-cluster/mpich2:romio - Enable romio, a high-performance portable MPI-IO implementation
 sys-cluster/ocfs:aio - Add aio support
