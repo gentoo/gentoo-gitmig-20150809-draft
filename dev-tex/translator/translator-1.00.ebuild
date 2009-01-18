@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/translator/translator-1.00.ebuild,v 1.10 2009/01/14 20:54:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/translator/translator-1.00.ebuild,v 1.11 2009/01/18 13:15:18 klausman Exp $
 
 inherit latex-package
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/latex-beamer/${P}.tar.gz"
 
 LICENSE="GPL-2 LPPL-1.3c"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ~ia64 ~ppc ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 TEXMF="/usr/share/texmf-site"
