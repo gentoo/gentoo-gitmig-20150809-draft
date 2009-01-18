@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.36 2009/01/17 16:56:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.37 2009/01/18 18:21:08 loki_val Exp $
 
 # @ECLASS: base.eclass
 # @MAINTAINER:
@@ -166,11 +166,17 @@ base_src_work() {
 	case $1 in
 		configure)
 			debug-print-section configure
-			econf || die "died running econf, $FUNCNAME:configure"
+			if [[ -x ${ECONF_SOURCE:-.}/configure ]]
+			then
+				econf || die "died running econf, $FUNCNAME:configure"
+			fi
 			;;
 		make)
 			debug-print-section make
-			emake || die "died running emake, $FUNCNAME:make"
+			if [ -f Makefile ] || [ -f GNUmakefile ] || [ -f makefile ]
+			then
+				emake || die "died running emake, $FUNCNAME:make"
+			fi
 			;;
 		all)
 			debug-print-section all
