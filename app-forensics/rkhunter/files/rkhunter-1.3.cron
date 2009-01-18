@@ -1,12 +1,13 @@
 #!/bin/bash
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/files/rkhunter.cron,v 1.4 2009/01/18 00:20:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/files/rkhunter-1.3.cron,v 1.1 2009/01/18 00:20:29 patrick Exp $
 # original author: Aaron Walker <ka0ttic@gentoo.org>
 
 ########################## Begin Configuration ###############################
 
 # Default options - more options may be added depending on the
 # configuration variables you set below
-RKHUNTER_OPTS="-c --cronjob --skip-keypress"
+# --cronjob implies -c, --nocolor, --sk
+RKHUNTER_OPTS="--cronjob --summary"
 
 # Set this to 'yes' to enable ; this script does nothing otherwise
 ENABLE=no
@@ -53,7 +54,7 @@ VERBOSITY=3
 
 # debug mode?  (mainly for my benefit)
 if [[ -n "${1}" ]] && [[ ${1} = "-d" ]] ; then
-	set -o verbose -o xtrace
+        set -o verbose -o xtrace
 fi
 
 [[ -z "${LOGFILE}" ]] && LOGFILE="/var/log/rkhunter.log"
@@ -64,8 +65,8 @@ RKHUNTER_EXEC="/usr/sbin/rkhunter"
 
 # sanity check
 if [[ ! -x "${RKHUNTER_EXEC}" ]] ; then
-	echo "${RKHUNTER_EXEC} does not exist or is not executable!"
-	exit 1
+        echo "${RKHUNTER_EXEC} does not exist or is not executable!"
+        exit 1
 fi
 
 # we create a few tmp files, so let's at least make
@@ -78,9 +79,9 @@ exec > ${_tmpout} 2>&1
 
 # update data files
 if [[ "${UPDATE}" == "yes" ]] ; then
-	# save the output of --update in a tmp file so that it can be mailed
-	# along with the scan output; otherwise the user will get 2 mails
-	${RKHUNTER_EXEC} --update
+        # save the output of --update in a tmp file so that it can be mailed
+        # along with the scan output; otherwise the user will get 2 mails
+        ${RKHUNTER_EXEC} --update
 fi
 
 # formulate options string according to user configuration
@@ -88,21 +89,21 @@ fi
     RKHUNTER_OPTS="${RKHUNTER_OPTS} --createlogfile ${LOGFILE}"
 
 case "${VERBOSITY}" in
-	# warnings and errors only
-	1)	RKHUNTER_OPTS="${RKHUNTER_OPTS} --quiet" ;;
-	# default rkhunter output (no extra options)
-#	2)	;;
-	# default to option 3
-	*)	;;
+        # warnings and errors only
+        1)      RKHUNTER_OPTS="${RKHUNTER_OPTS} --quiet" ;;
+        # default rkhunter output (no extra options)
+#       2)      ;;
+        # default to option 3
+        *)      ;;
 esac
 
 # save old log
 if [[ "${LOG}" == "yes" && "${SAVE_OLD_LOGS}" == "yes" ]] ; then
-	if [[ -e "${LOGFILE}" ]] ; then
-		_tmpfile=$(mktemp ${LOGFILE}.XXXXXX)
-		mv -f ${LOGFILE} ${_tmpfile}
-		echo -e "--\nrkhunter.cron commencing at: $(date)\n--" >> ${_tmpfile}
-	fi
+        if [[ -e "${LOGFILE}" ]] ; then
+                _tmpfile=$(mktemp ${LOGFILE}.XXXXXX)
+                mv -f ${LOGFILE} ${_tmpfile}
+                echo -e "--\nrkhunter.cron commencing at: $(date)\n--" >> ${_tmpfile}
+        fi
 fi
 
 # finally, run rkhunter
@@ -112,8 +113,8 @@ RV=$?
 
 # email output?
 if [[ "${SEND_EMAIL}" == "yes" ]] ; then
-	CMD="cat ${_tmpout} ${EMAIL_CMD}"
-	eval ${CMD}
+        CMD="cat ${_tmpout} ${EMAIL_CMD}"
+        eval ${CMD}
 fi
 
 # remove temp file
@@ -125,8 +126,8 @@ fi
 
 # append new log to old log and restore
 if [[ -n "${_tmpfile}" ]] ; then
-	cat ${LOGFILE} >> ${_tmpfile}
-	mv ${_tmpfile} ${LOGFILE}
+        cat ${LOGFILE} >> ${_tmpfile}
+        mv ${_tmpfile} ${LOGFILE}
 fi
 
 chmod ${LOGFILE_PERMS:-0644} ${LOGFILE}
