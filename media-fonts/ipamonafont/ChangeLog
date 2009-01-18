@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ipamonafont
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ChangeLog,v 1.16 2009/01/16 16:58:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ChangeLog,v 1.17 2009/01/18 14:57:21 klausman Exp $
+
+  18 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
+  ipamonafont-1.0.8.ebuild:
+  Stable on alpha, bug #253501
 
   16 Jan 2009; Jeroen Roovers <jer@gentoo.org> ipamonafont-1.0.8.ebuild:
   Stable for HPPA (bug #253501).
