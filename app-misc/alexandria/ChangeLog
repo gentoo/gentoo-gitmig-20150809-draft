@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/alexandria
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.23 2008/04/23 18:20:26 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.24 2009/01/18 10:51:02 a3li Exp $
+
+*alexandria-0.6.3-r1 (18 Jan 2009)
+
+  18 Jan 2009; Alex Legler <a3li@gentoo.org>
+  +files/alexandria-0.6.3-tooltips.patch, +alexandria-0.6.3-r1.ebuild:
+  Fixing tooltip crash reported in bug 254601. Patch provided by John
+  Keeping. PATCHES now is a bash array.
 
 *alexandria-0.6.3 (23 Apr 2008)
 

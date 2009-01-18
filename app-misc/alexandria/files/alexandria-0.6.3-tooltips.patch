@@ -1,0 +1,90 @@
+Changes backported from upstream SVN for bug 254601.
+Fixes a crash when displaying a tooltip for a book without publisher.
+
+--- lib/alexandria/ui/iconview_tooltips.rb	2008-11-25 12:31:05.000000000 +0000
++++ lib/alexandria/ui/iconview_tooltips.rb	2009-01-11 20:44:51.000000000 +0000
+@@ -25,6 +25,8 @@
+ #
+ # Ported to ruby-gtk2 (and modified for IconView) by Cathal Mc Ginley
+ 
++require 'cgi'
++
+ class IconViewTooltips
+   def initialize(view)
+     @tooltip_window = Gtk::Window.new(Gtk::Window::POPUP)
+@@ -36,21 +38,21 @@
+     @tooltip_window.signal_connect('expose_event') { |window, event|
+       on_expose(window, event) }
+ 
+-    @label = Gtk::Label.new('')
+-    @label.wrap = true
+-    @label.set_alignment(0.5, 0.5)
+-    @label.use_markup = true
+-    @label.show()
++      @label = Gtk::Label.new('')
++      @label.wrap = true
++      @label.set_alignment(0.5, 0.5)
++      @label.use_markup = true
++      @label.show()
+ 
+-    @tooltip_window.add(@label)
+-    set_view(view)
++      @tooltip_window.add(@label)
++      set_view(view)
+   end
+ 
+   def set_view(view)
+     view.signal_connect('motion_notify_event') { |view, event|
+       on_motion(view, event) }
+-    view.signal_connect('leave_notify_event') { |view, event|
+-      on_leave(view, event) }
++      view.signal_connect('leave_notify_event') { |view, event|
++        on_leave(view, event) }
+   end
+ 
+   def on_expose(window, event)
+@@ -71,30 +73,31 @@
+     # This is much too complex... but it works for now!
+     html = ""
+     if title.size > 0
+-      html += "<b>#{title}</b>"
++      html += "<b>#{CGI.escapeHTML(title)}</b>"
+       if authors.size > 0
+         html += "\n"
+       end
+     end
+     if authors.size > 0
+-      html += "<i>#{authors}</i>"
++      html += "<i>#{CGI.escapeHTML(authors)}</i>"
+     end
+     if (title.size > 0) or (authors.size > 0)
+       html += "\n"
+     end
+-    if (publisher.size > 0) or (year.size > 0)
+-      html += "<small>"
+-      if publisher.size > 0
+-        html += "#{publisher}"
+-      end
+-      if year.size > 0
+-        if publisher.size > 0
+-          html += " "
+-        end
+-        html += "(#{year})"
++
++    html += "<small>"
++    if publisher and publisher.size > 0
++      html += "#{CGI.escapeHTML(publisher)}"
++    end
++
++    if year and year.size > 0
++      if publisher and publisher.size > 0
++        html += " "
+       end
+-      html += "</small>"
++      html += "(#{year})"
+     end
++
++    html += "</small>"
+   end
+ 
+   def on_motion(view, event)
