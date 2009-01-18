@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.168 2008/12/23 20:57:20 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.169 2009/01/18 20:12:33 maekke Exp $
+
+  18 Jan 2009; Markus Meier <maekke@gentoo.org> package.mask:
+  mask this version for a smooth upgrade wrt bug #248038
 
   23 Dec 2008; Raúl Porcel <armin76@gentoo.org> -deprecated:
   Revert deprecation of top dir
