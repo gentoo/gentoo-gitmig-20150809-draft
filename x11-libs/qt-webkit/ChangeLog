@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.16 2009/01/17 16:20:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.17 2009/01/18 19:58:37 maekke Exp $
+
+  18 Jan 2009; Markus Meier <maekke@gentoo.org> qt-webkit-4.4.2.ebuild:
+  amd64/x86 stable, bug #248038
 
   17 Jan 2009; nixnut <nixnut@gentoo.org> qt-webkit-4.4.2.ebuild:
   ppc stable #248038
