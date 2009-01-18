@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.1 2009/01/15 15:04:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.2 2009/01/18 21:48:04 bicatali Exp $
 
 EAPI=2
 inherit fortran eutils toolchain-funcs flag-o-matic autotools
@@ -26,7 +26,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.6.2-parallel-make.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	eautoreconf
 }
