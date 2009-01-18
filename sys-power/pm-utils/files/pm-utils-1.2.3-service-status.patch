@@ -1,0 +1,18 @@
+# https://bugs.gentoo.org/attachment.cgi?id=178922
+# Fix status detection under gentoo
+#
+# functions.in |    3 ++-
+# 1 file changed, 2 insertions(+), 1 deletion(-)
+#
+--- a/pm/functions.in	2009-01-18 21:11:52.000000000 +0100
++++ b/pm/functions.in	2009-01-18 21:12:19.000000000 +0100
+@@ -141,7 +141,8 @@
+ 
+ stopservice()
+ {
+-	if service "$1" status 2>/dev/null | grep -c -q running; then
++	if service "$1" status 2>/dev/null | grep -q -e running -e started
++	then
+ 		touch "${STORAGEDIR}/service:$1"
+ 		service "$1" stop
+ 	fi

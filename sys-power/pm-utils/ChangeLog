@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.14 2009/01/18 20:21:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.15 2009/01/18 20:53:35 eva Exp $
+
+  18 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/pm-utils-1.2.3-service-status.patch, pm-utils-1.2.3-r1.ebuild:
+  Fix service status detection, bug #255431.
 
 *pm-utils-1.2.3-r1 (18 Jan 2009)
 

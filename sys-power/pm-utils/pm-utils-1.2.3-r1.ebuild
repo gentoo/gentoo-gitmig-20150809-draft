@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.3-r1.ebuild,v 1.1 2009/01/18 20:21:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.3-r1.ebuild,v 1.2 2009/01/18 20:53:35 eva Exp $
+
+inherit eutils
 
 DESCRIPTION="Suspend and hibernation utilties for HAL"
 HOMEPAGE="http://pm-utils.freedesktop.org/"
@@ -28,6 +30,9 @@ DEPEND="!sys-power/powermgmt-base
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# fix status detection, bug #255431
+	epatch "${FILESDIR}/${P}-service-status.patch"
 
 	# fix pkg-config file, bug #254492
 	sed -e 's:${pm_libdir):${pm_libdir}:' -i pm-utils.pc.in || die "sed failed"
