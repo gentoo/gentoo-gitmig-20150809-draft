@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.93 2009/01/18 15:58:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.94 2009/01/18 16:32:00 maekke Exp $
+
+  18 Jan 2009; Markus Meier <maekke@gentoo.org> cpio-2.9-r2.ebuild:
+  amd64/x86 stable, bug #255288
 
   18 Jan 2009; Tobias Klausmann <klausman@gentoo.org> cpio-2.9-r2.ebuild:
   Stable on alpha, bug #255280
