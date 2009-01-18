@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.1.1.17910.0.ebuild,v 1.1 2008/07/23 22:29:18 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.1.1.17910.0.ebuild,v 1.2 2009/01/18 22:03:05 jsbronder Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -23,7 +23,8 @@ RDEPEND="dev-libs/libedit
 DEPEND="${RDEPEND}
 	doc? ( app-arch/unzip )"
 RDEPEND="${RDEPEND}
-	xinetd? ( virtual/inetd )"
+	xinetd? ( virtual/inetd )
+	!sys-cluster/ganglia"
 
 S="${WORKDIR}/${MY_P}"
 
