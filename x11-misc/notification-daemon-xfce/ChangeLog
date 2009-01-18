@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon-xfce
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/ChangeLog,v 1.5 2008/09/21 18:06:06 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/ChangeLog,v 1.6 2009/01/18 15:34:23 angelos Exp $
+
+  18 Jan 2009; Christoph Mende <angelos@gentoo.org>
+  notification-daemon-xfce-0.3.7.ebuild:
+  Added libnotify dependency, bug 253335
 
   21 Sep 2008; Christoph Mende <angelos@gentoo.org>
   notification-daemon-xfce-0.3.7.ebuild:
