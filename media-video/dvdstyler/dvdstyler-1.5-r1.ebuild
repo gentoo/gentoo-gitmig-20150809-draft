@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.5-r1.ebuild,v 1.4 2008/04/01 15:17:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.5-r1.ebuild,v 1.5 2009/01/18 13:25:07 dragonheart Exp $
 
 inherit wxwidgets
 
