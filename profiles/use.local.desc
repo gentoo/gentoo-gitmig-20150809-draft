@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4138 2009/01/18 08:07:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4139 2009/01/18 17:47:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -483,6 +483,8 @@ dev-db/postgresql-server:uuid - Enable server side UUID generation (via dev-libs
 dev-db/sqlite:nothreadsafe - Turn off thread safe operation of sqlite
 dev-db/sqlite:soundex - Enable the soundex function to compute soundex encodings of strings
 dev-db/sqlite:threadsafe - Enable thread safe operation of sqlite
+dev-dotnet/libgdiplus:pango - Use pango instead of cairo to render text.
+dev-dotnet/xsp:debug - Enable tracing messages (RECOMMENDED)
 dev-embedded/openocd:ft2232 - Enable support for USB chips via dev-embedded/libftd2xx
 dev-embedded/openocd:ftdi - Enable support for USB FTDI chips (dev-embedded/libftdi)
 dev-embedded/openocd:parport - Enable support for parport JTAG devices
@@ -594,7 +596,8 @@ dev-lang/lua:deprecated - make deprecated data structures/routines available
 dev-lang/luarocks:curl - Uses net-misc/curl for fetching lua packages instead of net-misc/wget.
 dev-lang/luarocks:openssl - Uses dev-libs/openssl for verifying lua packages instead of md5sum.
 dev-lang/mlton:binary - install a binary version (need to do this once to bootstrap, until smlnj is supported)
-dev-lang/mono:moonlight - add moonlight support
+dev-lang/mono:moonlight - Generate Moonlight 2.1 assemblies
+dev-lang/mono:xen - Make mono generate code that is considerably faster on xen VMs but slightly slower on for normal systems.
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
 dev-lang/perl:perlsuid - Enable Perl SUID install. Has some risks associated.
 dev-lang/php:cli - Enable CLI SAPI
