@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.7.3.ebuild,v 1.5 2008/01/14 19:22:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.7.3.ebuild,v 1.6 2009/01/18 22:42:04 angelos Exp $
 
 inherit eutils
 
@@ -26,7 +26,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-amd64-gtk-flags.patch"
+	epatch "${FILESDIR}/${P}-amd64-gtk-flags.patch" \
+		"${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_compile() {
@@ -35,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc AUTHORS HACKING INSTALL README TODO
+	dodoc AUTHORS HACKING README TODO
 
 	cd endeavour2
 	dobin endeavour2 || die

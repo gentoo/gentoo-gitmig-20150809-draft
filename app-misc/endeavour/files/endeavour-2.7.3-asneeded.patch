@@ -1,0 +1,105 @@
+--- endeavour-2.7.3/endeavour2/utils/Makefile.orig	2006-11-06 09:00:00.000000000 +0100
++++ endeavour-2.7.3/endeavour2/utils/Makefile	2009-01-18 23:09:11.792880952 +0100
+@@ -73,80 +73,79 @@
+ 	@echo "Compiling confirmation-dialog"
+ 	@$(CC) -c $(CFLAGS) `gtk-config --cflags`		\
+         confirmation-dialog.c
+-	@$(CPP) `gtk-config --libs`				\
++	@$(CPP)	-o confirmation-dialog				\
+         confirmation-dialog.o					\
+ 	../guiutils.o ../cdialog.o ../string.o			\
+-        -o confirmation-dialog
++        `gtk-config --libs`
+ 
+ file-selector:
+ 	@echo "Compiling file-selector"
+ 	@$(CC) -c $(CFLAGS) `gtk-config --cflags`		\
+         file-selector.c
+-	@$(CPP) $(CFLAGS) `gtk-config --libs`			\
++	@$(CPP) $(CFLAGS) -o file-selector			\
+ 	file-selector.o ../fb.o					\
+ 	../cdialog.o ../guiutils.o ../fprompt.o ../pulist.o	\
+-        ../string.o ../disk.o ../fio.o				\
+-        -o file-selector
++        ../string.o ../disk.o ../fio.o `gtk-config --libs`
+ 
+ lsmimetypes:
+ 	@echo "Compiling lsmimetypes"
+ 	@$(CC) -Wall -O2 -g					\
+-        $(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)			\
+-	lsmimetypes.c -o lsmimetypes
++	lsmimetypes.c -o lsmimetypes				\
++        $(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)
+ 
+ notify:
+ 	@echo "Compiling notify"
+ 	@$(CC) -Wall -O2 -g					\
+-        $(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)			\
+-	notify.c -o notify
++	notify.c -o notify					\
++        $(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)
+ 
+ open:
+ 	@echo "Compiling open"
+ 	@$(CC) -Wall -O2 -g 					\
+-	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)			\
+-	open.c -o open
++	open.c -o open						\
++	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)
+ 
+ properties:
+ 	@echo "Compiling properties"
+ 	@$(CC) -Wall -O2 -g 					\
+-	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)			\
+-	properties.c -o properties
++	properties.c -o properties				\
++	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)
+ 
+ purge:
+ 	@echo "Compiling purge"
+ 	@$(CC) -Wall -O2 -g					\
+-	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)			\
+-	purge.c -o purge
++	purge.c -o purge					\
++	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)
+ 
+ recover:
+ 	@echo "Compiling recover"
+ 	@$(CC) -Wall -O2 -g 					\
+-	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)			\
+-	recover.c -o recover
++	recover.c -o recover					\
++	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)
+ 
+ recycle:
+ 	@echo "Compiling recycle"
+ 	@$(CC) -Wall -O2 -g					\
+-	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)			\
+-	recycle.c -o recycle
++	recycle.c -o recycle					\
++	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)
+ 
+ rls:
+ 	@echo "Compiling rls"
+ 	@$(CC) -Wall -O2 -g					\
+-	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)			\
+-	rls.c -o rls
++	rls.c -o rls						\
++	$(EDV_UTIL_CFLAGS) $(EDV_UTIL_LIBS)
+ 
+ 
+ style-editor:
+ 	@echo "Compiling style-editor"
+ 	@$(CC) -c $(CFLAGS) `gtk-config --cflags`		\
+         style-editor.c
+-	@$(CPP) `gtk-config --libs`				\
++	@$(CPP) -o style-editor					\
+         style-editor.o						\
+         ../guiutils.o ../cdialog.o ../fprompt.o ../pulist.o	\
+         ../fb.o ../csd.o ../fsd.o ../style_edit.o		\
+         ../string.o ../fio.o ../disk.o				\
+-        -o style-editor
++        `gtk-config --libs`
+ 
+ 
+ # Install
