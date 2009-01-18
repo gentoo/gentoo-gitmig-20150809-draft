@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.67 2009/01/11 14:04:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.68 2009/01/18 12:16:13 klausman Exp $
+
+  18 Jan 2009; Tobias Klausmann <klausman@gentoo.org> dillo-2.0.ebuild:
+  Keyworded on alpha, bug #253083
 
   11 Jan 2009; Guy Martin <gmsoft@gentoo.org> dillo-2.0.ebuild:
   re-added ~hppa, #253083
