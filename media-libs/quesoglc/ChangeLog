@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quesoglc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/ChangeLog,v 1.5 2008/12/15 19:32:57 fmccor Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/ChangeLog,v 1.6 2009/01/18 15:28:19 maekke Exp $
+
+  18 Jan 2009; Markus Meier <maekke@gentoo.org> quesoglc-0.7.1.ebuild:
+  amd64/x86 stable, bug #254875
 
   15 Dec 2008; Ferris McCormick <fmccor@gentoo.org> quesoglc-0.7.1.ebuild:
   Add ~sparc for testing, related to Bug #245771.
