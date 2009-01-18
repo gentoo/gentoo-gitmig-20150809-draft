@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2270 2009/01/16 18:42:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2271 2009/01/18 10:14:05 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Remove dev-ruby/test-unit mask, tests now fixed.
 
   16 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Add mask for dev-ruby/test-unit.

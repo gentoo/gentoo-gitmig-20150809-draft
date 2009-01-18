@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9399 2009/01/16 18:42:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9400 2009/01/18 10:14:05 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,11 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (16 Jan 2009)
-# Masked for test failures, since it's not needed with Ruby 1.8 (but
-# could be used to future-proof code), let it in but masked.
-dev-ruby/test-unit
 
 # Rémi Cardona <remi@gentoo.org> (16 Jan 2009)
 # Masked until upstreams confirms it's safe to use
