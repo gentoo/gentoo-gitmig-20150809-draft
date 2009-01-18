@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/sqldeveloper
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/ChangeLog,v 1.1 2009/01/18 05:28:01 bluebird Exp $
+
+*sqldeveloper-1.5.3.5783 (18 Jan 2009)
+
+  18 Jan 2009; Friedrich Oslage <bluebird@gentoo.org> +files/sqldeveloper,
+  +metadata.xml, +sqldeveloper-1.5.3.5783.ebuild:
+  New package, bug #126170
+
