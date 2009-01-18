@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/ganglia
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.20 2008/11/19 17:11:16 jsbronder Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.21 2009/01/18 21:12:50 jsbronder Exp $
+
+*ganglia-3.1.1-r1 (18 Jan 2009)
+
+  18 Jan 2009; Justin Bronder <jsbronder@gentoo.org>
+  +files/ganglia-3.1.1-process_path-overflow.patch,
+  +ganglia-3.1.1-r1.ebuild:
+  Bump ganglia-3.1.1-r1. Patch added to prevent a buffer overflow. Gentoo
+  #255366, Ganglia #223.
 
   19 Nov 2008; Justin Bronder <jsbronder@gentoo.org>
   -ganglia-3.0.6-r1.ebuild, -ganglia-3.0.7.ebuild, -ganglia-3.1.0.ebuild:
