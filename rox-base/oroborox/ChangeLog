@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/oroborox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.16 2009/01/04 23:18:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.17 2009/01/18 17:43:42 maekke Exp $
+
+  18 Jan 2009; Markus Meier <maekke@gentoo.org> oroborox-0.9.8-r1.ebuild:
+  add ~amd64, bug #255253
 
   04 Jan 2009; Ulrich Mueller <ulm@gentoo.org> oroborox-0.9.7.9.ebuild,
   oroborox-0.9.8.ebuild, oroborox-0.9.8-r1.ebuild:
