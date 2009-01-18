@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.264 2009/01/15 22:02:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.265 2009/01/18 19:10:25 eva Exp $
+
+  18 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org> hal-0.5.11-r6.ebuild:
+  Update PDEPEND on hal-info, follow up on bug #241912.
 
   15 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
   Compnerd retired.
