@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.145 2009/01/18 01:45:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.146 2009/01/18 15:52:58 klausman Exp $
+
+  18 Jan 2009; Tobias Klausmann <klausman@gentoo.org> gdb-6.8-r1.ebuild:
+  Stable on alpha, bug #255219
 
   18 Jan 2009; Guy Martin <gmsoft@gentoo.org> gdb-6.8-r1.ebuild:
   hppa stable, #255219
