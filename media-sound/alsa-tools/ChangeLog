@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-tools
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.168 2008/12/20 23:23:14 fmccor Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.169 2009/01/19 16:11:29 chainsaw Exp $
+
+*alsa-tools-1.0.19 (19 Jan 2009)
+
+  19 Jan 2009; <chainsaw@gentoo.org> +alsa-tools-1.0.19.ebuild:
+  Version bump. Drop the epatch as the Flameeyes-fix made it upstream.
 
   20 Dec 2008; Ferris McCormick <fmccor@gentoo.org>
   alsa-tools-1.0.17.ebuild:
