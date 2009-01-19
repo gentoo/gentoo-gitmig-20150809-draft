@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libgpod
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.54 2008/11/30 16:38:47 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.55 2009/01/19 23:58:34 tester Exp $
+
+*libgpod-0.7.0 (19 Jan 2009)
+
+  19 Jan 2009; Olivier Crête <tester@gentoo.org> +libgpod-0.7.0.ebuild:
+  Version bump
 
   30 Nov 2008; Friedrich Oslage <bluebird@gentoo.org> libgpod-0.6.0.ebuild:
   Stable on sparc, bug #231573
