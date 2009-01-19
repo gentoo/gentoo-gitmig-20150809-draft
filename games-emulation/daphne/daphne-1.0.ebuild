@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.2 2008/12/09 10:17:30 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.3 2009/01/19 15:42:43 tupone Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -30,6 +30,8 @@ src_unpack() {
 
 	# amd64 does not like int pointers
 	epatch "${FILESDIR}/${P}"-typefix.patch
+
+	epatch "${FILESDIR}/${P}"-gcc43.patch
 
 	sed -i "/m_appdir =/s:\.:${GAMES_DATADIR}/${PN}:" \
 		io/homedir.cpp \

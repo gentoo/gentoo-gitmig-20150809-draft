@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/daphne
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.13 2008/12/09 10:17:30 joker Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.14 2009/01/19 15:42:43 tupone Exp $
+
+  19 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/daphne-1.0-gcc43.patch, daphne-1.0.ebuild:
+  Fix gcc-4.3 build bug #251127 by flameeyes@gentoo.org
 
   09 Dec 2008; Christian Birchinger <joker@gentoo.org> daphne-1.0.ebuild:
   Changed MMX defines and exports for x86
