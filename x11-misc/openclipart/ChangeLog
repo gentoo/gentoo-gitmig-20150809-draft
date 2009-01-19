@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/openclipart
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/ChangeLog,v 1.13 2007/10/15 07:33:09 nelchael Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/ChangeLog,v 1.14 2009/01/19 03:41:06 darkside Exp $
+
+  19 Jan 2009; Jeremy Olexa <darkside@gentoo.org>
+  openclipart-0.18-r1.ebuild:
+  amd64 stable, bug 254547
 
   15 Oct 2007; Krzysiek Pawlik <nelchael@gentoo.org>
   openclipart-0.18-r1.ebuild:
