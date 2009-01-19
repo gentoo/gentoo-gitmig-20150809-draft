@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.5 2008/02/28 03:24:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.6 2009/01/19 18:51:48 mr_bones_ Exp $
 
+EAPI=2
 fromcvs=0
 ECVS_MODULE="duke3d"
 if [[ ${fromcvs} -eq 1 ]] ; then
@@ -31,7 +32,7 @@ RDEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
 	media-sound/timidity++
 	media-sound/timidity-eawpatches
-	perl? ( dev-lang/perl )
+	perl? ( dev-lang/perl[-ithreads] )
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
 	demo? ( app-arch/unzip )
@@ -40,14 +41,6 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${PN}"
 
 use_tf() { use ${1} && echo "true" || echo "false"; }
-
-pkg_setup() {
-	if built_with_use dev-lang/perl ithreads ; then
-		eerror "${PN} needs perl compiled with ithreads use-flag disabled!"
-		die "perl with ithreads detected"
-	fi
-	games_pkg_setup
-}
 
 src_unpack() {
 	if [[ ${fromcvs} -eq 1 ]] ; then
@@ -62,7 +55,9 @@ src_unpack() {
 	if use demo ; then
 		unzip -qo DN3DSW13.SHR || die "unzip DN3DSW13.SHR failed"
 	fi
+}
 
+src_prepare() {
 	# configure buildengine
 	cd "${S}/source/buildengine"
 	sed -i \
