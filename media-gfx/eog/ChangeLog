@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/eog
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.221 2008/12/28 16:32:15 bluebird Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.222 2009/01/19 19:38:20 ford_prefect Exp $
+
+*eog-2.24.3.1 (19 Jan 2009)
+
+  19 Jan 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +files/eog-2.24.3.1-noexif-doc.patch, +eog-2.24.3.1.ebuild:
+  Bump to 2.24.3.1, and fix bug #254943. Dropping the sparc sigbus patch
+  since it has been committed.
 
   28 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> eog-2.24.2-r1.ebuild:
   Add ~sparc keyword, bug #242812

@@ -1,0 +1,289 @@
+---
+http://bugzilla.gnome.org/show_bug.cgi?id=557662
+https://bugs.gentoo.org/show_bug.cgi?id=254943
+
+diff -urNp eog-2.24.3.1-orig/configure.ac eog-2.24.3.1/configure.ac
+--- eog-2.24.3.1-orig/configure.ac	2009-01-18 15:38:44.000000000 +0530
++++ eog-2.24.3.1/configure.ac	2009-01-18 20:20:32.000000000 +0530
+@@ -159,6 +159,17 @@ fi
+ 
+ AM_CONDITIONAL([HAVE_EXEMPI], [test "x$have_exempi" = "xyes"])
+  
++# Build EXIF-related documentation if we really have support for it
++if test "x$have_exif" = "xyes" || test "x$have_exempi" = "xyes"; then
++  EOG_DOC_EXIF_START=""
++  EOG_DOC_EXIF_STOP=""
++else
++  EOG_DOC_EXIF_START="<!--"
++  EOG_DOC_EXIF_STOP="-->"
++fi
++
++AC_SUBST([EOG_DOC_EXIF_START])
++AC_SUBST([EOG_DOC_EXIF_STOP])
+ 
+ # ********************
+ # Jpeg (semi-optional)
+@@ -397,6 +408,7 @@ data/icons/scalable/apps/Makefile
+ doc/Makefile
+ doc/reference/Makefile
+ doc/reference/version.xml
++doc/reference/eog-docs.sgml
+ plugins/Makefile
+ plugins/reload/Makefile
+ plugins/fullscreen/Makefile
+diff -urNp eog-2.24.3.1-orig/doc/reference/eog-docs.sgml eog-2.24.3.1/doc/reference/eog-docs.sgml
+--- eog-2.24.3.1-orig/doc/reference/eog-docs.sgml	2009-01-18 15:38:44.000000000 +0530
++++ eog-2.24.3.1/doc/reference/eog-docs.sgml	1970-01-01 05:30:00.000000000 +0530
+@@ -1,82 +0,0 @@
+-<?xml version="1.0"?>
+-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+-               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+-<!ENTITY version SYSTEM "version.xml">
+-]>
+-<book id="index" xmlns:xi="http://www.w3.org/2003/XInclude">
+-  <bookinfo>
+-    <title>Eye of GNOME Reference Manual</title>
+-    <releaseinfo>
+-      for Eye of GNOME &version;
+-    </releaseinfo>
+-  </bookinfo>
+-
+-  <chapter>
+-    <title>User Interface</title>
+-    <xi:include href="xml/eog-properties-dialog.xml"/>
+-    <xi:include href="xml/eog-list-store.xml"/>
+-    <xi:include href="xml/eog-file-chooser.xml"/>
+-    <xi:include href="xml/eog-thumb-nav.xml"/>
+-    <xi:include href="xml/eog-thumb-view.xml"/>
+-    <xi:include href="xml/eog-scroll-view.xml"/>
+-    <xi:include href="xml/eog-window.xml"/>
+-    <xi:include href="xml/eog-statusbar.xml"/>
+-    <xi:include href="xml/eog-exif-details.xml"/>
+-    <xi:include href="xml/eog-message-area.xml"/>
+-    <xi:include href="xml/eog-dialog.xml"/>
+-    <xi:include href="xml/eog-sidebar.xml"/>
+-    <xi:include href="xml/eog-thumbnail.xml"/>
+-    <xi:include href="xml/eog-save-as-dialog-helper.xml"/>
+-    <xi:include href="xml/eog-pixbuf-cell-renderer.xml"/>
+-    <xi:include href="xml/eog-error-message-area.xml"/>
+-  </chapter>
+-
+-  <chapter>
+-    <title>Image data and manipulation</title>
+-    <xi:include href="xml/eog-image.xml"/>
+-    <xi:include href="xml/eog-image-save-info.xml"/>
+-    <xi:include href="xml/eog-transform.xml"/>
+-    <xi:include href="xml/eog-metadata-reader.xml"/>
+-    <xi:include href="xml/eog-metadata-reader-png.xml"/>
+-    <xi:include href="xml/eog-metadata-reader-jpg.xml"/>
+-  </chapter>
+-
+-  <chapter>
+-    <title>Printing</title>
+-    <xi:include href="xml/eog-print-preview.xml"/>
+-    <xi:include href="xml/eog-print-image-setup.xml"/>
+-    <xi:include href="xml/eog-print.xml"/>
+-  </chapter>
+-
+-  <chapter>
+-    <title>Application and configuration</title>
+-    <xi:include href="xml/eog-preferences-dialog.xml"/>
+-    <xi:include href="xml/eog-application.xml"/>
+-    <xi:include href="xml/eog-session.xml"/>
+-    <xi:include href="xml/eog-config-keys.xml"/>
+-  </chapter>
+-
+-  <chapter>
+-    <title>Plugins</title>
+-    <xi:include href="xml/eog-plugin.xml"/>
+-    <xi:include href="xml/eog-plugin-manager.xml"/>
+-    <xi:include href="xml/eog-plugin-engine.xml"/>
+-  </chapter>
+-
+-  <chapter>
+-    <title>Utilities</title>
+-    <xi:include href="xml/eog-debug.xml"/>
+-    <xi:include href="xml/eog-uri-converter.xml"/>
+-    <xi:include href="xml/eog-util.xml"/>
+-    <xi:include href="xml/eog-exif-util.xml"/>
+-    <xi:include href="xml/eog-pixbuf-util.xml"/>
+-    <xi:include href="xml/zoom.xml"/>
+-    <xi:include href="xml/uta.xml"/>
+-  </chapter>
+-
+-  <chapter>
+-    <title>Asynchronous jobs</title>
+-    <xi:include href="xml/eog-jobs.xml"/>
+-    <xi:include href="xml/eog-job-queue.xml"/>
+-  </chapter>
+-</book>
+diff -urNp eog-2.24.3.1-orig/doc/reference/eog-docs.sgml.in eog-2.24.3.1/doc/reference/eog-docs.sgml.in
+--- eog-2.24.3.1-orig/doc/reference/eog-docs.sgml.in	1970-01-01 05:30:00.000000000 +0530
++++ eog-2.24.3.1/doc/reference/eog-docs.sgml.in	2009-01-18 17:44:00.000000000 +0530
+@@ -0,0 +1,86 @@
++<?xml version="1.0"?>
++<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
++               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
++<!ENTITY version SYSTEM "version.xml">
++]>
++<book id="index" xmlns:xi="http://www.w3.org/2003/XInclude">
++  <bookinfo>
++    <title>Eye of GNOME Reference Manual</title>
++    <releaseinfo>
++      for Eye of GNOME &version;
++    </releaseinfo>
++  </bookinfo>
++
++  <chapter>
++    <title>User Interface</title>
++    <xi:include href="xml/eog-properties-dialog.xml"/>
++    <xi:include href="xml/eog-list-store.xml"/>
++    <xi:include href="xml/eog-file-chooser.xml"/>
++    <xi:include href="xml/eog-thumb-nav.xml"/>
++    <xi:include href="xml/eog-thumb-view.xml"/>
++    <xi:include href="xml/eog-scroll-view.xml"/>
++    <xi:include href="xml/eog-window.xml"/>
++    <xi:include href="xml/eog-statusbar.xml"/>
++    @EOG_DOC_EXIF_START@
++    <xi:include href="xml/eog-exif-details.xml"/>
++    @EOG_DOC_EXIF_STOP@
++    <xi:include href="xml/eog-message-area.xml"/>
++    <xi:include href="xml/eog-dialog.xml"/>
++    <xi:include href="xml/eog-sidebar.xml"/>
++    <xi:include href="xml/eog-thumbnail.xml"/>
++    <xi:include href="xml/eog-save-as-dialog-helper.xml"/>
++    <xi:include href="xml/eog-pixbuf-cell-renderer.xml"/>
++    <xi:include href="xml/eog-error-message-area.xml"/>
++  </chapter>
++
++  <chapter>
++    <title>Image data and manipulation</title>
++    <xi:include href="xml/eog-image.xml"/>
++    <xi:include href="xml/eog-image-save-info.xml"/>
++    <xi:include href="xml/eog-transform.xml"/>
++    <xi:include href="xml/eog-metadata-reader.xml"/>
++    <xi:include href="xml/eog-metadata-reader-png.xml"/>
++    <xi:include href="xml/eog-metadata-reader-jpg.xml"/>
++  </chapter>
++
++  <chapter>
++    <title>Printing</title>
++    <xi:include href="xml/eog-print-preview.xml"/>
++    <xi:include href="xml/eog-print-image-setup.xml"/>
++    <xi:include href="xml/eog-print.xml"/>
++  </chapter>
++
++  <chapter>
++    <title>Application and configuration</title>
++    <xi:include href="xml/eog-preferences-dialog.xml"/>
++    <xi:include href="xml/eog-application.xml"/>
++    <xi:include href="xml/eog-session.xml"/>
++    <xi:include href="xml/eog-config-keys.xml"/>
++  </chapter>
++
++  <chapter>
++    <title>Plugins</title>
++    <xi:include href="xml/eog-plugin.xml"/>
++    <xi:include href="xml/eog-plugin-manager.xml"/>
++    <xi:include href="xml/eog-plugin-engine.xml"/>
++  </chapter>
++
++  <chapter>
++    <title>Utilities</title>
++    <xi:include href="xml/eog-debug.xml"/>
++    <xi:include href="xml/eog-uri-converter.xml"/>
++    <xi:include href="xml/eog-util.xml"/>
++    @EOG_DOC_EXIF_START@
++    <xi:include href="xml/eog-exif-util.xml"/>
++    @EOG_DOC_EXIF_STOP@
++    <xi:include href="xml/eog-pixbuf-util.xml"/>
++    <xi:include href="xml/zoom.xml"/>
++    <xi:include href="xml/uta.xml"/>
++  </chapter>
++
++  <chapter>
++    <title>Asynchronous jobs</title>
++    <xi:include href="xml/eog-jobs.xml"/>
++    <xi:include href="xml/eog-job-queue.xml"/>
++  </chapter>
++</book>
+diff -urNp eog-2.24.3.1-orig/doc/reference/eog.types eog-2.24.3.1/doc/reference/eog.types
+--- eog-2.24.3.1-orig/doc/reference/eog.types	2009-01-18 15:38:44.000000000 +0530
++++ eog-2.24.3.1/doc/reference/eog.types	1970-01-01 05:30:00.000000000 +0530
+@@ -1,33 +0,0 @@
+-eog_image_get_type
+-eog_preferences_dialog_get_type
+-eog_list_store_get_type
+-eog_print_preview_get_type
+-eog_transform_get_type
+-eog_file_chooser_get_type
+-eog_metadata_reader_get_type
+-eog_properties_dialog_get_type
+-eog_job_get_type
+-eog_job_thumbnail_get_type
+-eog_job_load_get_type
+-eog_job_model_get_type
+-eog_job_transform_get_type
+-eog_job_save_get_type
+-eog_job_save_as_get_type
+-eog_thumb_nav_get_type
+-eog_metadata_reader_png_get_type
+-eog_uri_converter_get_type
+-eog_print_image_setup_get_type
+-eog_pixbuf_cell_renderer_get_type
+-eog_thumb_view_get_type
+-eog_plugin_get_type
+-eog_application_get_type
+-eog_plugin_manager_get_type
+-eog_scroll_view_get_type
+-eog_window_get_type
+-eog_statusbar_get_type
+-eog_exif_details_get_type
+-eog_message_area_get_type
+-eog_metadata_reader_jpg_get_type
+-eog_dialog_get_type
+-eog_image_save_info_get_type
+-eog_sidebar_get_type
+diff -urNp eog-2.24.3.1-orig/doc/reference/Makefile.am eog-2.24.3.1/doc/reference/Makefile.am
+--- eog-2.24.3.1-orig/doc/reference/Makefile.am	2009-01-18 15:38:44.000000000 +0530
++++ eog-2.24.3.1/doc/reference/Makefile.am	2009-01-20 00:07:03.000000000 +0530
+@@ -25,7 +25,7 @@ SCANGOBJ_OPTIONS=
+ 
+ # Extra options to supply to gtkdoc-scan.
+ # e.g. SCAN_OPTIONS=--deprecated-guards="GTK_DISABLE_DEPRECATED"
+-SCAN_OPTIONS=
++SCAN_OPTIONS=--rebuild-types
+ 
+ # Extra options to supply to gtkdoc-mkdb.
+ # e.g. MKDB_OPTIONS=--sgml-mode --output-format=xml
+@@ -57,6 +57,14 @@ IGNORE_HFILES= \
+ 	eog-module.h \
+ 	eog-python-module.h
+ 
++if !HAVE_EXIF
++if !HAVE_EXEMPI
++IGNORE_HFILES +=			\
++	eog-exif-util.h			\
++	eog-exif-details.h
++endif
++endif
++
+ # Images to copy into HTML directory.
+ # e.g. HTML_IMAGES=$(top_srcdir)/gtk/stock-icons/stock_about_24.png
+ HTML_IMAGES=
+@@ -110,12 +118,13 @@ include $(top_srcdir)/gtk-doc.make
+ 
+ # Other files to distribute
+ # e.g. EXTRA_DIST += version.xml.in
+-EXTRA_DIST += version.xml.in
++EXTRA_DIST += version.xml.in		\
++	      $(DOC_MAIN_SGML_FILE).in
+ 
+ # Files not to distribute
+ # for --rebuild-types in $(SCAN_OPTIONS), e.g. $(DOC_MODULE).types
+ # for --rebuild-sections in $(SCAN_OPTIONS) e.g. $(DOC_MODULE)-sections.txt
+-#DISTCLEANFILES +=
++DISTCLEANFILES = $(DOC_MODULE).types
+ 
+ # Comment this out if you want your docs-status tested during 'make check'
+ #TESTS = $(GTKDOC_CHECK)
