@@ -1,6 +1,13 @@
 # ChangeLog for net-im/pyicq-t
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/ChangeLog,v 1.9 2008/12/19 18:00:44 griffon26 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/ChangeLog,v 1.10 2009/01/19 19:59:45 griffon26 Exp $
+
+*pyicq-t-0.8.1.1 (19 Jan 2009)
+
+  19 Jan 2009; Maurice van der Pot <griffon26@gentoo.org>
+  +pyicq-t-0.8.1.1.ebuild:
+  Version bump as requested by lindevel@gmx.net in bug #255483. 
+  Also fixes bug #251916 reported by jamatik <jamatik@wheep.de>.
 
 *pyicq-t-0.8.1 (19 Dec 2008)
 
