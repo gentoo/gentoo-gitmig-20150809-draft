@@ -8,6 +8,9 @@
 compat_volume_nodes()
 {
 	# Only do this for baselayout-1*
+	# This check is likely to get false positives due to some multilib stuff,
+	# but that should not matter, as this can only happen on old openrc versions
+	# no longer available as ebuilds.
 	if [ ! -e /lib/librc.so ]; then
 
 		# Create nodes that udev can't
