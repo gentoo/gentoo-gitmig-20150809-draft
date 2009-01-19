@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xvidcap
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.46 2009/01/03 22:26:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.47 2009/01/19 23:15:33 aballier Exp $
+
+  19 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  files/xvidcap-1.1.7-ffmpeg-headers.patch:
+  Dont try to include useless and private ffmpeg header. Bug #254452
 
   03 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   -files/xvidcap-1.1.6-ffmpeg.patch, -files/xvidcap-1.1.7_rc1-ffmpeg.patch,

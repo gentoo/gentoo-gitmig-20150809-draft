@@ -42,7 +42,7 @@ diff -wru /home/fsousa/tmp/xvidcap-1.1.7/src/xtoffmpeg.c xvidcap-1.1.7/src/xtoff
 -#include <ffmpeg/rgb2rgb.h>
 -#include <ffmpeg/fifo.h>
 +#include <libswscale/swscale.h>
-+#include <libswscale/rgb2rgb.h>
++//#include <libswscale/rgb2rgb.h>
 +#include <libavutil/fifo.h>
  #define swscale_isRGB(x) ((x)==PIX_FMT_BGR32 || (x)==PIX_FMT_RGB24 \
                          || (x)==PIX_FMT_RGB565 || (x)==PIX_FMT_RGB555 \
