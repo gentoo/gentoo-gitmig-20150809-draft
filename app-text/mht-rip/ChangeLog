@@ -1,0 +1,8 @@
+# ChangeLog for app-text/mht-rip
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mht-rip/ChangeLog,v 1.1 2009/01/19 01:59:05 vapier Exp $
+
+*mht-rip-0.4 (19 Jan 2009)
+
+  19 Jan 2009; Mike Frysinger <vapier@gentoo.org> +mht-rip-0.4.ebuild:
+  Initial ebuild by me.
