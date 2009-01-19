@@ -1,8 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.mask,v 1.17 2009/01/18 20:12:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.mask,v 1.18 2009/01/19 01:04:49 mr_bones_ Exp $
 
 # Markus Meier <maekke@gentoo.org> (18 Jan 2009)
 # mask this version for a smooth upgrade wrt bug #248038
-=x11-libs/qt-4.3*
+#=x11-libs/qt-4.3*
 
 # 2005.0 Jeremy Huddleston <eradicator@gentoo.org>
 # This is a stub file 'cause glibc provides 32bit libs on newer profiles
