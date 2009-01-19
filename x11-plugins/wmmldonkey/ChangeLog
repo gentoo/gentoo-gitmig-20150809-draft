@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmldonkey
 # Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/ChangeLog,v 1.6 2007/07/22 04:50:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/ChangeLog,v 1.7 2009/01/19 14:56:59 s4t4n Exp $
+
+  19 Jan 2009; Michele Noberasco <s4t4n@gentoo.org> wmmldonkey-0.003.ebuild:
+  Fixed compilation with --as-needed. Closes bug #248643.
+  Some ebuild QA fixes.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   wmmldonkey-0.003.ebuild:
