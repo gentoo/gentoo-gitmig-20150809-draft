@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.15 2009/01/18 19:44:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.16 2009/01/19 00:27:05 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -64,9 +64,9 @@ pkg_setup() {
 }
 
 src_configure() {
-# Comment this out and invoke _common_configure_code and cmake manually until cmake-utils.eclass 
-# supports space separated strings as arguments for cmake options or quassel changes the 
-# separator. Until now multiple languages are not passed to -DLINGUAS and only the first 
+# Comment this out and invoke _common_configure_code and cmake manually until cmake-utils.eclass
+# supports space separated strings as arguments for cmake options or quassel changes the
+# separator. Until now multiple languages are not passed to -DLINGUAS and only the first
 # language is considered.
 	local mycmakeargs="$(cmake-utils_use_want server CORE)
 		$(cmake-utils_use_want X QTCLIENT)
