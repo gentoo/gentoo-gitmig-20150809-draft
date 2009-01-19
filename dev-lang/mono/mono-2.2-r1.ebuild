@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.2.ebuild,v 1.2 2009/01/19 00:26:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.2-r1.ebuild,v 1.1 2009/01/19 21:30:19 loki_val Exp $
 
 EAPI=2
 
@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="xen moonlight minimal"
 
-RDEPEND="!<dev-dotnet/pnet-0.6.12
+#Bash requirement is for += operator
+RDEPEND=">=app-shells/bash-3.2
+	!<dev-dotnet/pnet-0.6.12
 	!dev-util/monodoc
 	dev-libs/glib:2
 	!minimal? (
@@ -38,6 +40,12 @@ PATCHES=(
 	"${FILESDIR}/mono-2.2-uselibdir.patch"
 )
 
+pkg_setup() {
+	MONO_NUNIT_DIR="/usr/$(get_libdir)/mono/mono-nunit"
+	NUNIT_DIR="/usr/$(get_libdir)/mono/nunit"
+}
+
+
 src_prepare() {
 	sed -e "s:@MONOLIBDIR@:$(get_libdir):" \
 		< "${FILESDIR}"/mono-2.2-libdir126.patch \
@@ -45,6 +53,7 @@ src_prepare() {
 		die "Sedding patch file failed"
 	go-mono_src_prepare
 }
+
 
 src_configure() {
 	# mono's build system is finiky, strip the flags
@@ -89,18 +98,69 @@ src_install() {
 	find "${D}"/usr/ -name '*nunit-docs*' -exec rm -rf '{}' '+' || die "Removing nunit .docs failed"
 
 	#Standardize install paths for eselect-nunit
-	local nunit_dir="/usr/$(get_libdir)/mono/nunit-mono-${PV}-internal"
-	dodir ${nunit_dir}
+	dodir ${MONO_NUNIT_DIR}
 	rm -f "${D}"/usr/bin/nunit-console*
 
 	for file in "${D}"/usr/$(get_libdir)/mono/1.0/nunit*.dll "${D}"/usr/$(get_libdir)/mono/1.0/nunit*.exe
 	do
-		dosym ../1.0/${file##*/} ${nunit_dir}/${file##*/}
+		dosym ../1.0/${file##*/} ${MONO_NUNIT_DIR}/${file##*/}
 	done
 
-	make_wrapper "nunit-console" "mono ${nunit_dir}/nunit-console.exe" "" "" "${nunit_dir}"
-	dosym nunit-console "${nunit_dir}"/nunit-console2
+	make_wrapper "nunit-console" "mono ${MONO_NUNIT_DIR}/nunit-console.exe" "" "" "${MONO_NUNIT_DIR}"
+	dosym nunit-console "${MONO_NUNIT_DIR}"/nunit-console2
 }
+
+#THINK!!!! Before touching postrm and postinst
+#Reference phase order:
+#pkg_preinst
+#pkg_prerm
+#pkg_postrm
+#pkg_postinst
+
+
+pkg_postrm() {
+	if [[ "$(readlink "${ROOT}"/${NUNIT_DIR})" == *"mono-nunit" ]]
+	then
+		ebegin "Removing old symlinks for nunit"
+		rm -rf "${ROOT}"/${NUNIT_DIR} &> /dev/null
+		rm -rf "${ROOT}"/usr/bin/nunit-console &> /dev/null
+		rm -rf "${ROOT}"/usr/bin/nunit-console2 &> /dev/null
+		rm -rf "${ROOT}"/usr/$(get_libdir)/pkgconfig/nunit.pc &> /dev/null
+		eend 0
+	fi
+}
+
+pkg_postinst() {
+	local -a FAIL
+	local fail return=0
+	if ! [[ -L "${ROOT}/${NUNIT_DIR}" ]]
+	then
+		einfo "No default NUnit installed, using mono-nunit as default."
+		ebegin "Removing stale symlinks for nunit, if any"
+		rm -rf "${ROOT}"/${NUNIT_DIR} &> /dev/null
+		rm -rf "${ROOT}"/usr/bin/nunit-console &> /dev/null
+		rm -rf "${ROOT}"/usr/bin/nunit-console2 &> /dev/null
+		rm -rf "${ROOT}"/usr/$(get_libdir)/pkgconfig/nunit.pc &> /dev/null
+		eend 0
+
+		ebegin "Installing mono-nunit symlinks"
+		ln -sf mono-nunit "${ROOT}/${NUNIT_DIR}"					|| { return=1; FAIL+=( $NUNIT_DIR ) ; }
+		ln -sf ../..${NUNIT_DIR}/nunit-console  "${ROOT}"/usr/bin/nunit-console	|| { return=1; FAIL+=( /usr/bin/nunit-console ) ; }
+		ln -sf ../..${NUNIT_DIR}/nunit-console2 "${ROOT}"/usr/bin/nunit-console2	|| { return=1; FAIL+=( /usr/bin/nunit-console2 ) ; }
+		ln -sf mono-nunit.pc "${ROOT}"/usr/$(get_libdir)/pkgconfig/nunit.pc		|| { return=1; FAIL+=( /usr/$(get_libdir)/pkgconfig/nunit.pc ) ; }
+		eend $return
+
+		if [[ "$return" = "1" ]]
+		then
+			elog "These errors are non-fatal, if re-emerging mono does not solve them, file a bug."
+			for fail in "${FAIL[@]}"
+			do
+				eerror "Linking $fail failed"
+			done
+		fi
+	fi
+}
+
 
 # NOTICE: THE COPYRIGHT FILES IN THE TARBALL ARE UNCLEAR!
 # WHENEVER YOU THINK SOMETHING IS GPL-2+, IT'S ONLY GPL-2
