@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.18 2009/01/10 12:13:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.19 2009/01/19 19:59:44 bicatali Exp $
+
+*geant-4.9.2-r1 (19 Jan 2009)
+
+  19 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/geant-4.9.2-zlib.patch, +geant-4.9.2-r1.ebuild:
+  Added a patch to avoid linking to G4zlib, closing bug #255017, thanks to
+  Benjamin Bannier for the hint
 
 *geant-4.9.2 (10 Jan 2009)
 
