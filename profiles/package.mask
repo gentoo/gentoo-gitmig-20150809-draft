@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9405 2009/01/19 13:07:34 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9406 2009/01/19 21:12:52 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -410,11 +410,6 @@ net-nds/nis-utils
 # MATSUU Takuto <matsuu@gentoo.org> (19 Nov 2008)
 # Masked for bug #196340
 =media-fonts/ja-ipafonts-0.0.20040715
-
-# Michael Sterrett <mr_bones_@gentoo.org> (18 Nov 2008)
-# ytin hasn't been updated in years.  Use games-mud/tintin instead
-# which is still being maintained.
-games-mud/ytin
 
 # Peter Volkov <pva@gentoo.org> (16 Nov 2008)
 # This is developemnt version. Why it was not masked from the beginning?
