@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/policykit-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/policykit-gnome/ChangeLog,v 1.3 2009/01/13 15:54:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/policykit-gnome/ChangeLog,v 1.4 2009/01/19 22:18:10 eva Exp $
+
+  19 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -policykit-gnome-0.6.ebuild:
+  Kill old revision.
 
   13 Jan 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   gentopia is becoming freedesktop
