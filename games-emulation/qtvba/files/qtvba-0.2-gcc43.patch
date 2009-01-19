@@ -1,0 +1,23 @@
+--- qtvba.cpp.old	2009-01-19 22:06:58.000000000 +0100
++++ qtvba.cpp	2009-01-19 22:08:40.000000000 +0100
+@@ -27,7 +27,8 @@
+ #include <qurloperator.h>
+ 
+ // c++ headers
+-#include <iostream.h>
++#include <iostream>
++using namespace std;
+ 
+ // images
+ #include "logo.xpm"
+--- rom_associate.cpp.old	2009-01-19 22:08:57.000000000 +0100
++++ rom_associate.cpp	2009-01-19 22:10:12.000000000 +0100
+@@ -16,7 +16,7 @@
+ #include <qprocess.h>
+ 
+ // c++ headers
+-#include <iostream.h>
++#include <iostream>
+ 
+ // images
+ 

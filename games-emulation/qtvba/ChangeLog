@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/qtvba
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/qtvba/ChangeLog,v 1.6 2008/07/27 21:15:46 carlo Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/qtvba/ChangeLog,v 1.7 2009/01/19 21:18:42 tupone Exp $
+
+  19 Jan 2009; Tupone Alfredo <tupone@gentoo.org>
+  +files/qtvba-0.2-gcc43.patch, qtvba-0.2.ebuild:
+  Fix gcc-4.3 build bug #251130 by flameeyes@gentoo.org
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qtvba-0.2.ebuild:
   QA: Get rid of deprecated qt_min_version().
