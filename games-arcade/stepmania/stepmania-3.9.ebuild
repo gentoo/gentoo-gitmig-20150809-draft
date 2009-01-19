@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.17 2008/11/24 16:48:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.18 2009/01/19 19:53:21 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 MY_PV=${PV/_/-}
@@ -22,7 +23,7 @@ RESTRICT="test"
 RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
 	mad? ( media-libs/libmad )
 	>=dev-lang/lua-5
-	media-libs/libsdl
+	media-libs/libsdl[opengl]
 	jpeg? ( media-libs/jpeg )
 	media-libs/libpng
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
@@ -34,16 +35,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/StepMania-${MY_PV}-src
 
-pkg_setup() {
-	games_pkg_setup
-	built_with_use media-libs/libsdl opengl \
-		|| die "You need to compile media-libs/libsdl with USE=opengl."
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed "s:/usr/share/games/${PN}:${GAMES_DATADIR}/${PN}:" \
 		"${FILESDIR}"/${P}-gentoo.patch > "${T}"/gentoo.patch
 
@@ -57,7 +49,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf --disable-dependency-tracking \
 		$(use_with debug) \
 		$(use_with jpeg) \
@@ -65,7 +57,6 @@ src_compile() {
 		$(use_with mad mp3) \
 		$(use_enable gtk gtk2) \
 		$(use_enable force-oss)
-	emake || die "emake failed."
 }
 
 src_install() {
