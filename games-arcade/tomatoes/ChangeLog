@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/tomatoes
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.15 2008/05/01 15:53:35 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.16 2009/01/19 20:20:23 mr_bones_ Exp $
+
+  19 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  tomatoes-1.55-r2.ebuild:
+  EAPI=2; add use-based dep; build cpp files with the c++ compiler
 
   01 May 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/tomatoes-1.55-gcc43.patch, tomatoes-1.55-r2.ebuild:

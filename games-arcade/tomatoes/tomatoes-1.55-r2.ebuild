@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.5 2008/05/01 15:53:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.6 2009/01/19 20:20:23 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DATA_PV=1.5
@@ -19,27 +20,17 @@ DEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl
 	media-libs/sdl-image
-	media-libs/sdl-mixer"
+	media-libs/sdl-mixer[mikmod]"
 
-pkg_setup() {
-	if ! built_with_use media-libs/sdl-mixer mikmod ; then
-		eerror "Tomatoes doesn't work properly if sdl-mixer"
-		eerror "is built with USE=-mikmod"
-		die "Please emerge sdl-mixer with USE=mikmod"
-	fi
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	mv ../tomatoes-1.5/* . || die "mv failed"
 	mv icon.png ${PN}.png
 
 	sed -i \
 		-e '/^CC/d' \
 		-e '/^MARCH/d' \
-		-e "/^CFLAGS/s/=.*$/= ${CFLAGS} \$(SDL_FLAGS)/" \
+		-e "/(CFLAGS)/s/CC/CXX/" \
+		-e "/^CFLAGS/s/=.*$/= ${CXXFLAGS} \$(SDL_FLAGS)/" \
 		-e "/^LDFLAGS/s/-s$/${LDFLAGS}/" \
 		-e "/^MPKDIR = /s:./:${GAMES_DATADIR}/${PN}/:" \
 		-e "/^MUSICDIR = /s:./music/:${GAMES_DATADIR}/${PN}/music/:" \
