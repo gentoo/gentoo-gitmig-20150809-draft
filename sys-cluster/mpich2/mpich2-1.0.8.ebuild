@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.1 2009/01/18 21:54:59 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.2 2009/01/19 00:27:59 mr_bones_ Exp $
 
 EAPI=1
 inherit python eutils fortran
@@ -200,4 +200,3 @@ pkg_postinst() {
 pkg_postrm() {
 	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
 }
-
