@@ -1,6 +1,9 @@
 # ChangeLog for app-text/namazu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.30 2008/09/06 05:01:08 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.31 2009/01/19 01:13:03 tcunha Exp $
+
+  19 Jan 2009; Tiago Cunha <tcunha@gentoo.org> namazu-2.0.18.ebuild:
+  keyworded ~arch for sparc
 
   06 Sep 2008; MATSUU Takuto <matsuu@gentoo.org> namazu-2.0.18.ebuild:
   Use elisp-complie instead of elisp-comp, bug #235919.
