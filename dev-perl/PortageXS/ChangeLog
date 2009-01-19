@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PortageXS
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.37 2009/01/06 00:15:40 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PortageXS/ChangeLog,v 1.38 2009/01/19 11:39:49 jer Exp $
+
+  19 Jan 2009; Jeroen Roovers <jer@gentoo.org> PortageXS-0.02.09.ebuild:
+  Stable for HPPA (bug #252687).
 
   06 Jan 2009; Dawid Węgliński <cla@gentoo.org> PortageXS-0.02.09.ebuild:
   Stable on amd64 (bug #252687)
