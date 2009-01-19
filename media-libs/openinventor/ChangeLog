@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openinventor
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.22 2008/12/21 09:47:34 stefaan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.23 2009/01/19 13:25:10 fmccor Exp $
+
+  19 Jan 2009; Ferris McCormick <fmccor@gentoo.org>
+  openinventor-2.1.5.10-r3.ebuild:
+  Sparc stable, Bug #251681 (required for geant).
 
 *openinventor-2.1.5.10-r3 (21 Dec 2008)
 
