@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-firmware
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.85 2008/09/01 18:00:05 betelgeuse Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.86 2009/01/19 16:31:13 chainsaw Exp $
+
+*alsa-firmware-1.0.19 (19 Jan 2009)
+
+  19 Jan 2009; <chainsaw@gentoo.org> +alsa-firmware-1.0.19.ebuild:
+  Version bump. Contains new PCXHR firmware.
 
   01 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
   -alsa-firmware-1.0.14.ebuild:
