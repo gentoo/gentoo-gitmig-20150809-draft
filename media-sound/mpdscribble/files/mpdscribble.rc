@@ -14,7 +14,7 @@ start () {
 
 stop () {
 	ebegin "Stopping Music Player Daemon Audioscrobbler client"
-	start-stop-daemon --stop --quiet -p /var/run/mpdscribble.pid -m --exec /usr/bin/mpdscribble || eerror "mpdscribble is not running"
+	start-stop-daemon --stop --quiet -p /var/run/mpdscribble.pid --exec /usr/bin/mpdscribble || eerror "mpdscribble is not running"
 	rm -f /var/run/mpdscribble.pid
 	eend $?
 }
