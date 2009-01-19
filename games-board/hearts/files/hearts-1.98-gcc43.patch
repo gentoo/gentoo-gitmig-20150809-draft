@@ -1,0 +1,10 @@
+--- common/general/utilitario.cpp.old   2009-01-19 15:20:12.000000000 +0100
++++ common/general/utilitario.cpp       2009-01-19 15:20:54.000000000 +0100
+@@ -3,6 +3,7 @@
+ #include <sys/poll.h>
+ #include <unistd.h>
+ #include <iostream>
++#include <cstdlib>
+
+ int Utility::read_to_vector( int fd, std::vector<char>& buffer, std::vector<char>::size_type rao )
+ {

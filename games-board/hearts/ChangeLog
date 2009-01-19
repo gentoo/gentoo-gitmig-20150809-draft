@@ -1,6 +1,10 @@
 # ChangeLog for games-board/hearts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hearts/ChangeLog,v 1.3 2009/01/05 01:17:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hearts/ChangeLog,v 1.4 2009/01/19 14:54:44 tupone Exp $
+
+  19 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/hearts-1.98-gcc43.patch, hearts-1.98.ebuild:
+  Fix gcc-4.3 bug #251126 by flameeyes@gentoo.org
 
   05 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> hearts-1.98.ebuild:
   make PATCHES an array

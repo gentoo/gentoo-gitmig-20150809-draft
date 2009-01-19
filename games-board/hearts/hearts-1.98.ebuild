@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hearts/hearts-1.98.ebuild,v 1.3 2009/01/05 01:17:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hearts/hearts-1.98.ebuild,v 1.4 2009/01/19 14:54:44 tupone Exp $
 
 inherit eutils kde
 
@@ -15,7 +15,7 @@ IUSE=""
 
 need-kde 3
 
-PATCHES=( ${FILESDIR}/${P}-gcc.patch )
+PATCHES=( ${FILESDIR}/${P}-gcc.patch ${FILESDIR}/${P}-gcc43.patch )
 
 src_install() {
 	kde_src_install
