@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.2.ebuild,v 1.1 2009/01/18 17:45:22 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.2.ebuild,v 1.2 2009/01/19 00:26:46 mr_bones_ Exp $
 
 EAPI=2
 
@@ -45,7 +45,6 @@ src_prepare() {
 		die "Sedding patch file failed"
 	go-mono_src_prepare
 }
-
 
 src_configure() {
 	# mono's build system is finiky, strip the flags
@@ -102,8 +101,6 @@ src_install() {
 	make_wrapper "nunit-console" "mono ${nunit_dir}/nunit-console.exe" "" "" "${nunit_dir}"
 	dosym nunit-console "${nunit_dir}"/nunit-console2
 }
-
-
 
 # NOTICE: THE COPYRIGHT FILES IN THE TARBALL ARE UNCLEAR!
 # WHENEVER YOU THINK SOMETHING IS GPL-2+, IT'S ONLY GPL-2
