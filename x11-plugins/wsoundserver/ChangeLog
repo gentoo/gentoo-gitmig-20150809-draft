@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wsoundserver
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wsoundserver/ChangeLog,v 1.5 2007/02/06 02:06:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wsoundserver/ChangeLog,v 1.6 2009/01/19 16:21:08 s4t4n Exp $
+
+  19 Jan 2009; Michele Noberasco <s4t4n@gentoo.org>
+  wsoundserver-0.4.1.ebuild, +files/wsoundserver-0.4.1-as-needed.patch:
+  Added patch to fix compilation with --as-needed. Closes bug #248652.
+  Some ebuild QA fixing.
 
   06 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

@@ -1,0 +1,22 @@
+--- configure.in	2009-01-19 16:58:55.000000000 +0100
++++ configure.in.new	2009-01-19 16:58:44.000000000 +0100
+@@ -212,6 +212,7 @@
+     AC_DEFINE(DRIVER_ESD)
+     driver="DRIVER_ESD"
+ else
++    AM_CONDITIONAL(HAVE_ESD,test "x$enable_esd" = xyes)
+     echo "---------------------------------------------------------------------"
+     echo "--- Checking to see which audio header files your system uses.";
+     echo "--- Most of these checks should fail. Do not be alarmed.";
+
+--- wslib/Makefile.am	2009-01-19 17:07:10.000000000 +0100
++++ wslib/Makefile.am.new	2009-01-19 17:07:28.000000000 +0100
+@@ -40,7 +40,7 @@
+ LIBLIST = libwsound.la libwsoundeffect.la -L../wseffectlib/ @LIBRARY_SEARCH_PATH@ @XLIBS@
+ 
+ 
+-libwsound_la_LIBADD =
++libwsound_la_LIBADD = @XLIBS@
+ 
+ CLEANFILES = 
+ 
