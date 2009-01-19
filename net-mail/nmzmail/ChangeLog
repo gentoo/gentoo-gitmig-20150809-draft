@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/nmzmail
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nmzmail/ChangeLog,v 1.5 2008/12/31 03:27:11 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nmzmail/ChangeLog,v 1.6 2009/01/19 01:16:36 tcunha Exp $
+
+  19 Jan 2009; Tiago Cunha <tcunha@gentoo.org> nmzmail-0.1.3.ebuild:
+  keyworded ~arch for sparc
 
   31 Dec 2008; Jeremy Olexa <darkside@gentoo.org> nmzmail-0.1.3.ebuild:
   add ~amd64 kw, bug 252870
