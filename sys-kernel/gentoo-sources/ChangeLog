@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.578 2009/01/09 22:54:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.579 2009/01/19 12:51:36 dsd Exp $
+
+*gentoo-sources-2.6.27-r8 (19 Jan 2009)
+
+  19 Jan 2009; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.27-r8.ebuild:
+  Update to Linux 2.6.27.12. Add some fixes for s390 architecture. Fix
+  inability to select correct DVB tuner modules. Fix data transfer over
+  IrDA. Fix iwl3945 adhoc network disconnection issue. Fix compilation on
+  alpha. Fix capacity reported by Nokia 6300 phone. Fix possible memory
+  overflow with SCTP networking.
 
   09 Jan 2009; Joseph Jezak <josejx@gentoo.org>
   gentoo-sources-2.6.27-r7.ebuild:
