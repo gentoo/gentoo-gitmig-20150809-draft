@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.44 2009/01/17 22:40:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.45 2009/01/19 04:40:40 mr_bones_ Exp $
+
+  19 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  files/gcompris-8.4.8-build.patch, gcompris-8.4.8.ebuild:
+  use system libs; refine deps a bit more; rebase patch
 
   17 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   gcompris-6.5.3-r1.ebuild, gcompris-8.4.8.ebuild:

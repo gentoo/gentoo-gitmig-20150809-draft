@@ -1,7 +1,48 @@
-diff -Ndur gcompris-8.3.3.orig/configure.in gcompris-8.3.3.patched/configure.in
---- gcompris-8.3.3.orig/configure.in	2007-08-16 01:09:34.000000000 +0200
-+++ gcompris-8.3.3.patched/configure.in	2007-08-22 07:51:31.000000000 +0200
-@@ -258,10 +258,8 @@
+diff -ur gcompris-8.4.8.orig/Makefile.am gcompris-8.4.8/Makefile.am
+--- gcompris-8.4.8.orig/Makefile.am	2008-10-28 17:44:35.000000000 -0400
++++ gcompris-8.4.8/Makefile.am	2009-01-18 23:15:44.000000000 -0500
+@@ -17,7 +17,7 @@
+ endif
+ 
+ 
+-icondir=$(datadir)/pixmaps
++icondir=/usr/share/pixmaps
+ icon_DATA = gcompris.png gcompris-edit.png
+ 
+ if BUILD_MINGW32
+@@ -29,12 +29,10 @@
+ Menu_DATA=
+ 
+ else
+-Applicationsdir = $(datadir)/applications/
++Applicationsdir = /usr/share/applications
+ Applications_in_files = gcompris.desktop.in gcompris-edit.desktop.in
+ Applications_DATA = gcompris.desktop gcompris-edit.desktop
+ 
+-Menudir=$(prefix)/lib/menu
+-Menu_DATA=gcompris
+ endif
+ 
+ @INTLTOOL_DESKTOP_RULE@
+diff -ur gcompris-8.4.8.orig/configure.in gcompris-8.4.8/configure.in
+--- gcompris-8.4.8.orig/configure.in	2008-11-08 15:47:52.000000000 -0500
++++ gcompris-8.4.8/configure.in	2009-01-18 23:15:44.000000000 -0500
+@@ -146,6 +146,14 @@
+ AC_SUBST(XML_CFLAGS)
+ AC_SUBST(XML_LIBS)
+ 
++PKG_CHECK_MODULES(LIBGNOMECANVAS, libgnomecanvas-2.0)
++AC_SUBST(LIBGNOMECANVAS_CFLAGS)
++AC_SUBST(LIBGNOMECANVAS_LIBS)
++
++PKG_CHECK_MODULES(LIBART_LGPL, libart-2.0)
++AC_SUBST(LIBART_LGPL_CFLAGS)
++AC_SUBST(LIBART_LGPL_LIBS)
++
+ dnl Freetype2 flags (needed for libgnomecanvas)
+ PKG_CHECK_MODULES(FT2, freetype2)
+ AC_SUBST(FT2_CFLAGS)
+@@ -225,10 +233,8 @@
            USE_DEBUG="$enableval", USE_DEBUG="no")
  if test "x$USE_DEBUG" == "xyes" ; then
      AC_DEFINE_UNQUOTED(DEBUG, 1, "Enable debug messages.")
@@ -13,7 +54,7 @@ diff -Ndur gcompris-8.3.3.orig/configure.in gcompris-8.3.3.patched/configure.in
  
  dnl WIN32 Specifics
  AC_MSG_CHECKING([for native Win32])
-@@ -330,25 +328,25 @@
+@@ -297,25 +303,25 @@
  if test "x$platform_win32" = "xno" ; then
  
    dnl Set PACKAGE_LOCALE_DIR in config.h.
@@ -44,9 +85,18 @@ diff -Ndur gcompris-8.3.3.orig/configure.in gcompris-8.3.3.patched/configure.in
    AC_SUBST(PYTHON_PLUGIN_DIR)
  
    dnl System GCompris config directory
-diff -Ndur gcompris-8.3.3.orig/docs/C/Makefile.am gcompris-8.3.3.patched/docs/C/Makefile.am
---- gcompris-8.3.3.orig/docs/C/Makefile.am	2007-06-17 21:23:54.000000000 +0200
-+++ gcompris-8.3.3.patched/docs/C/Makefile.am	2007-08-22 07:35:21.000000000 +0200
+@@ -531,8 +537,6 @@
+ src/boards/python/gcompris/utils/Makefile
+ src/boards/python/connect4p/Makefile
+ src/boards/python/admin/Makefile
+-src/libart_lgpl/Makefile
+-src/libgnomecanvas/Makefile
+ po/Makefile.in
+ docs/Makefile
+ docs/C/Makefile
+diff -ur gcompris-8.4.8.orig/docs/C/Makefile.am gcompris-8.4.8/docs/C/Makefile.am
+--- gcompris-8.4.8.orig/docs/C/Makefile.am	2008-03-12 16:26:23.000000000 -0400
++++ gcompris-8.4.8/docs/C/Makefile.am	2009-01-18 23:15:44.000000000 -0500
 @@ -10,7 +10,7 @@
  	     overview.dia \
  	     $(man_MANS)
@@ -56,9 +106,9 @@ diff -Ndur gcompris-8.3.3.orig/docs/C/Makefile.am gcompris-8.3.3.patched/docs/C/
  
  all: $(doc)
  
-diff -Ndur gcompris-8.3.3.orig/docs/eu/Makefile.am gcompris-8.3.3.patched/docs/eu/Makefile.am
---- gcompris-8.3.3.orig/docs/eu/Makefile.am	2007-06-17 21:23:55.000000000 +0200
-+++ gcompris-8.3.3.patched/docs/eu/Makefile.am	2007-08-22 07:35:21.000000000 +0200
+diff -ur gcompris-8.4.8.orig/docs/eu/Makefile.am gcompris-8.4.8/docs/eu/Makefile.am
+--- gcompris-8.4.8.orig/docs/eu/Makefile.am	2008-10-28 17:36:12.000000000 -0400
++++ gcompris-8.4.8/docs/eu/Makefile.am	2009-01-18 23:15:44.000000000 -0500
 @@ -8,7 +8,7 @@
  	     overview.dia \
  	     gcompris.texi
@@ -68,9 +118,9 @@ diff -Ndur gcompris-8.3.3.orig/docs/eu/Makefile.am gcompris-8.3.3.patched/docs/e
  
  all: $(doc)
  
-diff -Ndur gcompris-8.3.3.orig/docs/fr/Makefile.am gcompris-8.3.3.patched/docs/fr/Makefile.am
---- gcompris-8.3.3.orig/docs/fr/Makefile.am	2007-06-17 21:23:55.000000000 +0200
-+++ gcompris-8.3.3.patched/docs/fr/Makefile.am	2007-08-22 07:35:21.000000000 +0200
+diff -ur gcompris-8.4.8.orig/docs/fr/Makefile.am gcompris-8.4.8/docs/fr/Makefile.am
+--- gcompris-8.4.8.orig/docs/fr/Makefile.am	2008-10-28 17:35:25.000000000 -0400
++++ gcompris-8.4.8/docs/fr/Makefile.am	2009-01-18 23:15:44.000000000 -0500
 @@ -8,7 +8,7 @@
  	     overview.dia \
  	     gcompris.texi
@@ -80,35 +130,9 @@ diff -Ndur gcompris-8.3.3.orig/docs/fr/Makefile.am gcompris-8.3.3.patched/docs/f
  
  all: $(doc)
  
-diff -Ndur gcompris-8.3.3.orig/Makefile.am gcompris-8.3.3.patched/Makefile.am
---- gcompris-8.3.3.orig/Makefile.am	2007-06-17 21:27:17.000000000 +0200
-+++ gcompris-8.3.3.patched/Makefile.am	2007-08-22 07:59:08.000000000 +0200
-@@ -17,7 +17,7 @@
- endif
- 
- 
--icondir=$(datadir)/pixmaps
-+icondir=/usr/share/pixmaps
- icon_DATA = gcompris.png gcompris-edit.png
- 
- if BUILD_MINGW32
-@@ -29,12 +29,10 @@
- Menu_DATA=
- 
- else
--Applicationsdir = $(datadir)/applications/
-+Applicationsdir = /usr/share/applications
- Applications_in_files = gcompris.desktop.in gcompris-edit.desktop.in
- Applications_DATA = gcompris.desktop gcompris-edit.desktop
- 
--Menudir=$(prefix)/lib/menu
--Menu_DATA=gcompris
- endif
- 
- @INTLTOOL_DESKTOP_RULE@
-diff -Ndur gcompris-8.3.3.orig/po/Makefile.in.in gcompris-8.3.3.patched/po/Makefile.in.in
---- gcompris-8.3.3.orig/po/Makefile.in.in	2007-03-05 11:52:19.000000000 +0100
-+++ gcompris-8.3.3.patched/po/Makefile.in.in	2007-08-22 07:35:21.000000000 +0200
+diff -ur gcompris-8.4.8.orig/po/Makefile.in.in gcompris-8.4.8/po/Makefile.in.in
+--- gcompris-8.4.8.orig/po/Makefile.in.in	2008-11-08 16:02:03.000000000 -0500
++++ gcompris-8.4.8/po/Makefile.in.in	2009-01-18 23:15:44.000000000 -0500
 @@ -34,7 +34,7 @@
  datarootdir = @datarootdir@
  libdir = @libdir@
@@ -118,10 +142,99 @@ diff -Ndur gcompris-8.3.3.orig/po/Makefile.in.in gcompris-8.3.3.patched/po/Makef
  subdir = po
  install_sh = @install_sh@
  # Automake >= 1.8 provides @mkdir_p@.
-diff -Ndur gcompris-8.3.3.orig/src/gcompris/gcompris.c gcompris-8.3.3.patched/src/gcompris/gcompris.c
---- gcompris-8.3.3.orig/src/gcompris/gcompris.c	2007-06-19 00:19:49.000000000 +0200
-+++ gcompris-8.3.3.patched/src/gcompris/gcompris.c	2007-08-22 07:35:21.000000000 +0200
-@@ -1120,7 +1120,7 @@
+diff -ur gcompris-8.4.8.orig/src/Makefile.am gcompris-8.4.8/src/Makefile.am
+--- gcompris-8.4.8.orig/src/Makefile.am	2007-05-22 16:15:05.000000000 -0400
++++ gcompris-8.4.8/src/Makefile.am	2009-01-18 23:15:44.000000000 -0500
+@@ -1,3 +1,3 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-SUBDIRS = libart_lgpl libgnomecanvas gcompris boards
++SUBDIRS = gcompris boards
+diff -ur gcompris-8.4.8.orig/src/boards/Makefile.am gcompris-8.4.8/src/boards/Makefile.am
+--- gcompris-8.4.8.orig/src/boards/Makefile.am	2008-10-28 17:34:35.000000000 -0400
++++ gcompris-8.4.8/src/boards/Makefile.am	2009-01-18 23:15:44.000000000 -0500
+@@ -80,6 +80,8 @@
+ 	-I$(top_srcdir)/src \
+ 	$(GCOMPRIS_CFLAGS) \
+ 	$(XML_CFLAGS) \
++	$(LIBART_LGPL_CFLAGS) \
++	$(LIBGNOMECANVAS_CFLAGS) \
+ 	$(PYTHON_CFLAGS) \
+ 	$(PYGTK_CFLAGS) \
+ 	$(sqlite_cflags) \
+@@ -110,7 +112,7 @@
+ libclockgame_la_SOURCES = clockgame.c
+ 
+ 
+-libshapegame_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs) $(XML_LIBS)
++libshapegame_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs) $(XML_LIBS) $(LIBART_LGPL_LIBS) $(LIBGNOMECANVAS_LIBS)
+ libshapegame_la_LIBADD =
+ libshapegame_la_SOURCES = shapegame.c
+ 
+@@ -154,12 +156,12 @@
+ libmemory_la_SOURCES = memory.c
+ 
+ 
+-libimageid_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs) $(XML_LIBS)
++libimageid_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs) $(XML_LIBS) $(LIBART_LGPL_LIBS) $(LIBGNOMECANVAS_LIBS)
+ libimageid_la_LIBADD =
+ libimageid_la_SOURCES = imageid.c
+ 
+ 
+-libmissingletter_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs) $(XML_LIBS)
++libmissingletter_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs) $(XML_LIBS) $(LIBART_LGPL_LIBS) $(LIBGNOMECANVAS_LIBS)
+ libmissingletter_la_LIBADD =
+ libmissingletter_la_SOURCES = missingletter.c
+ 
+@@ -208,7 +210,7 @@
+ libcanal_lock_la_LIBADD =
+ libcanal_lock_la_SOURCES = canal_lock.c
+ 
+-libadvanced_colors_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs) $(XML_LIBS)
++libadvanced_colors_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs) $(XML_LIBS) $(LIBART_LGPL_LIBS) $(LIBGNOMECANVAS_LIBS)
+ libadvanced_colors_la_LIBADD =
+ libadvanced_colors_la_SOURCES = advanced_colors.c
+ 
+@@ -216,7 +218,7 @@
+ libsuperbrain_la_LIBADD =
+ libsuperbrain_la_SOURCES = superbrain.c
+ 
+-libread_colors_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs) $(XML_LIBS)
++libread_colors_la_LDFLAGS = $(shared) $(no_undefined) -module -avoid-version $(gc_libs) $(XML_LIBS) $(LIBART_LGPL_LIBS) $(LIBGNOMECANVAS_LIBS)
+ libread_colors_la_LIBADD =
+ libread_colors_la_SOURCES = read_colors.c
+ 
+diff -ur gcompris-8.4.8.orig/src/gcompris/Makefile.am gcompris-8.4.8/src/gcompris/Makefile.am
+--- gcompris-8.4.8.orig/src/gcompris/Makefile.am	2008-10-28 17:33:46.000000000 -0400
++++ gcompris-8.4.8/src/gcompris/Makefile.am	2009-01-18 23:16:00.000000000 -0500
+@@ -51,6 +51,8 @@
+ 	$(GCOMPRIS_CFLAGS) \
+ 	$(GNOME_INCLUDEDIR) \
+ 	$(XML_CFLAGS) \
++	$(LIBART_LGPL_CFLAGS) \
++	$(LIBGNOMECANVAS_CFLAGS) \
+ 	-DGNOME_DISABLE_DEPRECATED \
+         $(sqlite_cflags) \
+ 	$(GNET_CFLAGS) \
+@@ -119,12 +121,10 @@
+ 	wordlist.h
+ 
+ gcompris_LDFLAGS = \
+-	-export-dynamic $(top_builddir)/src/libgnomecanvas/libgnomecanvas-2.a \
+-	$(top_builddir)/src/libart_lgpl/libart_lgpl_2.a
+-
++	-export-dynamic
+ 
+ gcompris_LDADD = \
+-	$(GCOMPRIS_LIBS) $(sqlite_ldadd) $(XML_LIBS) $(GNET_LIBS) \
++	$(GCOMPRIS_LIBS) $(sqlite_ldadd) $(XML_LIBS) $(GNET_LIBS) $(LIBART_LGPL_LIBS) $(LIBGNOMECANVAS_LIBS) \
+         $(INTLLIBS) $(NSBUNDLE_LDFLAGS) $(XF86VM_LIBS)
+ 
+ EXTRA_DIST = \
+diff -ur gcompris-8.4.8.orig/src/gcompris/gcompris.c gcompris-8.4.8/src/gcompris/gcompris.c
+--- gcompris-8.4.8.orig/src/gcompris/gcompris.c	2008-10-25 15:11:51.000000000 -0400
++++ gcompris-8.4.8/src/gcompris/gcompris.c	2009-01-18 23:15:44.000000000 -0500
+@@ -1156,7 +1156,7 @@
        properties->package_locale_dir = gbr_find_locale_dir(PACKAGE_LOCALE_DIR);
        properties->package_plugin_dir = g_strconcat(pkg_clib_dir, "/gcompris", NULL);
        properties->package_python_plugin_dir = g_strconcat(pkg_data_dir, "/gcompris/python", NULL);
