@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2277 2009/01/19 22:24:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2278 2009/01/19 22:46:03 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jan 2009; Alexis Ballier <aballier@gentoo.org> profiles.desc:
+  Add a (commented out for now) entry for FreeBSD 7.1 profiles
 
   19 Jan 2009; Ben de Groot <yngwin@gentoo.org>
   default-bsd/package.use.mask, default-linux/package.use.mask,
