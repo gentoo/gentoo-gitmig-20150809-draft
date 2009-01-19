@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.48 2009/01/18 18:40:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.49 2009/01/19 11:08:54 armin76 Exp $
+
+  19 Jan 2009; Raúl Porcel <armin76@gentoo.org> hal-info-20081219.ebuild:
+  Add ~arm/~sh
 
 *hal-info-20081219 (18 Jan 2009)
 
