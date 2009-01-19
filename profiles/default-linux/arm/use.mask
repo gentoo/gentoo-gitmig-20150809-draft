@@ -1,10 +1,10 @@
-# Raúl Porcel <armin76@gentoo.org>
-# Doesn't compile/work
-openexr
-
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
 networkmanager
+
+# Raúl Porcel <armin76@gentoo.org>
+# Fails to build/work
+openexr
 
 # Samuli Suominen <drac@gentoo.org>
 # media-libs/amrnb and media-libs/amrwb not tested.
@@ -17,10 +17,6 @@ grace
 # Samuli Suominen <drac@gentoo.org>
 # media-gfx/gimp not tested.
 gimp
-
-# Samuli Suominen <drac@gentoo.org>
-# CPU Frequency Scaling not supported.
-cpufreq
 
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # With vapier's permission masking this.
@@ -43,16 +39,21 @@ java
 java-internal
 java-external
 
-# dont make sense on this arch
+# Stuff that doesn't make sense on this arch
 3dfx
+cpufreq
+dell
 
-# havent tested yet
+# Stuff we don't want
 chicken
 clisp
 R
 octave
-dvb
+tracker
+
+# havent tested yet
 mythtv
+dvb
 qt3
 qt4
 arts
@@ -64,7 +65,6 @@ lirc
 lm_sensors
 netjack
 beagle
-dell
 nvtv
 mzscheme
 
