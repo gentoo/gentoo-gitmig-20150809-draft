@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9406 2009/01/19 21:12:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9407 2009/01/19 22:24:04 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Ben de Groot <yngwin@gentoo.org> (19 Jan 2009)
+# Masked because of bug 248038 which requires mask of qt-4.3*
+# Newer versions of these do work with split Qt 4.4
+<media-sound/qsynth-0.3.2
+~sci-libs/vtk-5.0.3
+
 # Jeremy Olexa <darkside@gentoo.org> (19 Jan 2009)
 # Removed by treecleaners in 60 days. Doesn't build, uses old macros, uses
 # non-existant header files, & unmaintianed upstream and in Gentoo. bug 241452
@@ -38,7 +44,7 @@ www-servers/tux
 
 # Jeremy Olexa <darkside@gentoo.org> (19 Jan 2009)
 # Removed by treecleaners in 60 days. Doesn't build with gcc-4.3, unmaintained
-# upstream and in Gentoo, & file collisions with media-libs/audiofile 
+# upstream and in Gentoo, & file collisions with media-libs/audiofile
 # See bug 251154
 media-libs/osalp
 
