@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/gluezilla-2.2.ebuild,v 1.1 2009/01/18 17:44:55 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/gluezilla-2.2.ebuild,v 1.2 2009/01/19 13:33:33 loki_val Exp $
 
 EAPI=2
 
@@ -16,4 +16,4 @@ IUSE=""
 
 RDEPEND="net-libs/xulrunner:1.9
 	x11-libs/gtk+:2"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
