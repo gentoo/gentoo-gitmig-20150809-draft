@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lzma/lzma-4.63.ebuild,v 1.1 2009/01/19 21:19:23 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lzma/lzma-4.63.ebuild,v 1.2 2009/01/19 21:46:21 tommy Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -22,7 +22,9 @@ S=${WORKDIR}/Java
 src_unpack() {
 	unpack ${A}
 	cd "${S}" || die
-	cp -i "${FILESDIR}"/build.xml . || die
+	cp "${FILESDIR}"/build.xml . || die
+	#check for upstream adding build.xml, see Request ID 2464084 (on Feature
+	#Request Tracer at http://sourceforge.net/projects/sevenzip/
 }
 
 src_install() {
