@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.265 2009/01/18 19:10:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.266 2009/01/19 11:16:45 armin76 Exp $
+
+  19 Jan 2009; Raúl Porcel <armin76@gentoo.org> hal-0.5.11-r6.ebuild:
+  Add ~arm/~sh
 
   18 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org> hal-0.5.11-r6.ebuild:
   Update PDEPEND on hal-info, follow up on bug #241912.
