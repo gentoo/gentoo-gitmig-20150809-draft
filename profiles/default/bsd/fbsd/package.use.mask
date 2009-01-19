@@ -33,9 +33,6 @@ dev-util/checkstyle test
 # PDA masked until we can do some testing on it
 mail-client/claws-mail dillo pda
 
-# Python support isn't tested (Twisted for instance)
-net-dns/avahi python
-
 # Original spell plugin uses ispell that requires
 # miscfiles.. that in turn does not work
 net-irc/rbot spell

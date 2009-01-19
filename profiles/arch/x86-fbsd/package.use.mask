@@ -1,9 +1,6 @@
 # Java currently uses generation 1
 dev-libs/cyrus-sasl java
 
-# Python bindings for avahi work...
-net-dns/avahi -python
-
 # nvidia-driver uses acpid
 x11-drivers/nvidia-drivers acpi
 
