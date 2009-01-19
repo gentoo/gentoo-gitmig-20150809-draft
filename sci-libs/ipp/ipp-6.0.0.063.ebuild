@@ -1,25 +1,25 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-5.3.3.075.ebuild,v 1.1 2008/05/29 08:10:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-6.0.0.063.ebuild,v 1.1 2009/01/19 22:58:10 bicatali Exp $
 
-inherit versionator multilib check-reqs
+inherit check-reqs
 
-PID=1097
+PID=1243
 PB=${PN}
 DESCRIPTION="Intel(R) Integrated Performance Primitive library for multimedia and data processing"
 HOMEPAGE="http://developer.intel.com/software/products/ipp/"
 
 KEYWORDS="~amd64 ~x86 ~ia64"
 COM_URI="http://registrationcenter-download.intel.com/irc_nas/${PID}"
-SRC_URI="amd64? ( ${COM_URI}/l_${PB}_em64t_p_${PV}.tgz )
-	x86? ( ${COM_URI}/l_${PB}_ia32_p_${PV}.tgz )
-	ia64? ( ${COM_URI}/l_${PB}_itanium_p_${PV}.tgz )"
+SRC_URI="amd64? ( ${COM_URI}/l_${PB}_em64t_p_${PV}.tar.gz )
+	x86? ( ${COM_URI}/l_${PB}_ia32_p_${PV}.tar.gz )
+	ia64? ( ${COM_URI}/l_${PB}_itanium_p_${PV}.tar.gz )"
 
 SLOT=0
 LICENSE="Intel-SDP"
 
 IUSE=""
-RESTRICT="strip mirror"
+RESTRICT="strip mirror binchecks"
 
 INTEL_LIC_DIR=/opt/intel/licenses
 
