@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.4-r3.ebuild,v 1.1 2008/09/27 12:02:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.4-r3.ebuild,v 1.2 2009/01/19 20:30:38 betelgeuse Exp $
 
 EAPI=2
 
@@ -23,6 +23,7 @@ SLOT="3.4"
 CDEPEND=">=app-admin/eselect-ecj-0.3
 	sys-devel/gcc[gcj?]"
 DEPEND="${CDEPEND}
+	app-arch/unzip
 	!gcj? ( !java6? ( >=virtual/jdk-1.4 )
 		java6? ( >=virtual/jdk-1.6 ) )"
 RDEPEND="${CDEPEND}
