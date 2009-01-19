@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/alsa-plugins
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.90 2008/12/22 16:31:44 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.91 2009/01/19 16:19:44 chainsaw Exp $
+
+*alsa-plugins-1.0.19 (19 Jan 2009)
+
+  19 Jan 2009; <chainsaw@gentoo.org> +alsa-plugins-1.0.19.ebuild:
+  Version bump. Drop the epatch/eautoreconf/elibtoolize as the
+  Flameeyes-magic made it upstream.
 
   22 Dec 2008; Raúl Porcel <armin76@gentoo.org>
   alsa-plugins-1.0.17-r1.ebuild:
