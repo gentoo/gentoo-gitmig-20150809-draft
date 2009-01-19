@@ -38,10 +38,6 @@ gnome-base/gnome-applets apm
 # media-plugins/gst-plugins-mythtv not keyworded
 media-plugins/gst-plugins-meta mythtv
 
-# Ben de Groot <yngwin@gentoo.org> (22 Jun 2008)
-# does not work with ffmpeg new headers
-<net-www/gnash-0.8.3 ffmpeg
-
 # Alexis Ballier <aballier@gentoo.org> (18 Jul 2008)
 # Requires a linux only library,  bug #226085
 dev-lang/erlang sctp
