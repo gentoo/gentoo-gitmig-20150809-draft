@@ -1,6 +1,20 @@
 # ChangeLog for media-sound/alsa-utils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.254 2008/12/21 15:03:35 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.255 2009/01/19 17:21:11 chainsaw Exp $
+
+*alsa-utils-1.0.19 (19 Jan 2009)
+
+  19 Jan 2009; <chainsaw@gentoo.org> +files/alsasound-1.0.19.confd,
+  +files/alsasound-1.0.19.initd, +alsa-utils-1.0.19.ebuild:
+  Version bump, disabling the ill-advised automatic module unloading. Note
+  that our recommendations have changed, you are encouraged to build your
+  audio drivers into the kernels unless the device is hotpluggable or needs
+  special parameters (such as model= for HD-Audio). Unloading did not work
+  if the audio device prefix was not snd, as reported by chad heuschober
+  <chad_ryan1@hotmail.com> in bug #175740. As Dieter Ries <clip2@gmx.de>
+  reported in bug #253535 the modularisation of the HD-Audio driver meant
+  that the fragile code handling this broke further as ordering was not
+  taken into account.
 
   21 Dec 2008; nixnut <nixnut@gentoo.org> alsa-utils-1.0.17.ebuild:
   Stable on ppc wrt bug 245517
