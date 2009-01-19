@@ -1,0 +1,11 @@
+# ChangeLog for Gentoo/x86-fbsd profile directory
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.1 2009/01/19 21:55:44 aballier Exp $
+
+  19 Jan 2009; Alexis Ballier <aballier@gentoo.org> +make.defaults,
+  +package.use.mask, +parent, +use.force, +use.mask:
+  Add x86-fbsd arch profile; it will be used for freebsd 7.1 and we should
+  try to make 6.2 profiles use it if they are going to stay for some time.
+  This directory is where lazy people are expected to put the masks for
+  missing keywords.
+
