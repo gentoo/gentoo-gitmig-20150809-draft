@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9402 2009/01/18 22:51:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9403 2009/01/19 04:37:28 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,32 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (19 Jan 2009)
+# Removed by treecleaners in 60 days. Doesn't build, uses old macros, uses
+# non-existant header files, & unmaintianed upstream and in Gentoo. bug 241452
+www-servers/tux
+
+# Jeremy Olexa <darkside@gentoo.org> (19 Jan 2009)
+# Removed by treecleaners in 60 days. Doesn't build with gcc-4.3, unmaintained
+# upstream and in Gentoo, & file collisions with media-libs/audiofile 
+# See bug 251154
+media-libs/osalp
+
+# Jeremy Olexa <darkside@gentoo.org> (19 Jan 2009)
+# Removed by treecleaners in 30 days. No use for this, included in util-linux
+# bug 254329
+sys-process/schedutils
+
+# Jeremy Olexa <darkside@gentoo.org> (19 Jan 2009)
+# Removed by treecleaners in 60 days. Dead package completely, cvs repo doesn't
+# exist anymore, bug 196982
+x11-wm/stumpwm-cvs
+
+# Jeremy Olexa <darkside@gentoo.org> (19 Jan 2009)
+# Removed by treecleaners in 60 says. www-apps/gallery includes a java webstart
+# for gallery remote now, use that instead. bug 111025
+app-misc/gallery-remote
 
 # Andreas Proschofsky <suka@gentoo.org> (18 Jan 2009)
 # Mask release candidates for OpenOffice.org 3.0.1
@@ -385,24 +411,10 @@ net-wireless/bluez
 # Masked for removal in 60 days.
 app-pda/dopi
 
-# Jeremy Olexa <darkside@gentoo.org> (22 Nov 2008)
-# Masked for removal in 30 days, requested by maintainers. bug #173584
-# Does not compile, old, unmaintained, depends on gtk-1.
-app-admin/gps
-
 # Alec Warner <antarus@gentoo.org> (22 Nov 2008)
 # nis-utils is dead, use LDAP you slackers.
 # Remove in Jan 2009
 net-nds/nis-utils
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Nov 2008)
-# Removed in 60 days by treecleaners, comment on bug #247494
-# 1. lack of users interest - I see zero version bump requests for this package
-# although version currently in the tree more then year and a half old (released
-# 03.03.2007)
-# 2. lack of developers interest it's maintainer-wanted
-# 3. nothing in the tree depends on it
-dev-db/fastdb
 
 # MATSUU Takuto <matsuu@gentoo.org> (19 Nov 2008)
 # Masked for bug #196340
