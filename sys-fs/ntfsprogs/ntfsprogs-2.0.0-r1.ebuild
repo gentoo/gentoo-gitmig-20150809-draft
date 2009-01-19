@@ -1,8 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0-r1.ebuild,v 1.3 2008/05/05 04:20:22 vapier Exp $
-
-inherit eutils autotools
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-2.0.0-r1.ebuild,v 1.4 2009/01/19 00:02:57 vapier Exp $
 
 DESCRIPTION="User tools for NTFS filesystems"
 HOMEPAGE="http://www.linux-ntfs.org/"
@@ -27,8 +25,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-extras.patch #218601
-	eautoreconf
+	#epatch "${FILESDIR}"/${P}-extras.patch #218601
+	use minimal || sed -i 's:^EXTRA_PROGRAMS =:bin_PROGRAMS +=:' ntfsprogs/Makefile.in #218601
 	sed -i \
 		-e '/CFLAGS/s:-ggdb3\>::' \
 		-e '/CFLAGS/s:-O0\>::' \
@@ -37,7 +35,6 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_enable !minimal extras) \
 		$(use_enable crypt crypto) \
 		$(use_enable debug) \
 		$(use_enable fuse ntfsmount) \
