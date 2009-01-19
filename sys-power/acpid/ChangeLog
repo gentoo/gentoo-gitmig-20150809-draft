@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpid
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.36 2008/08/16 04:08:44 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.37 2009/01/19 04:48:49 vapier Exp $
+
+  19 Jan 2009; Mike Frysinger <vapier@gentoo.org> files/acpid-1.0.6-init.d:
+  Use --quiet when starting since acpid is noisy.
 
   16 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
