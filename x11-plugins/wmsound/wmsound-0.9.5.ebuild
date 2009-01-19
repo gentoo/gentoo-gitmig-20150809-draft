@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5.ebuild,v 1.6 2006/10/27 08:49:38 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsound/wmsound-0.9.5.ebuild,v 1.7 2009/01/19 15:21:36 s4t4n Exp $
 
 inherit eutils
 
@@ -26,25 +26,29 @@ src_unpack()
 {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/wmsound-config.patch
-	epatch ${FILESDIR}/wmsound-ComplexProgramTargetNoMan.patch
-	use esd && epatch ${FILESDIR}/wmsound-esd.patch
+	cd "${S}"
+	epatch "${FILESDIR}/wmsound-config.patch"
+	epatch "${FILESDIR}/wmsound-ComplexProgramTargetNoMan.patch"
+	use esd && epatch "${FILESDIR}/wmsound-esd.patch"
+
+	#Fix compilation with --as-needed.
+	sed -i 's:-lPropList $(WMSOUNDLIB):$(WMSOUNDLIB) -lPropList:' src/Imakefile
+	sed -i 's:-lPropList $(XLIB) $(WMSOUNDLIB):$(WMSOUNDLIB) -lPropList $(XLIB):' utils/Imakefile
 }
 
 src_compile()
 {
 	export PATH="${PATH}:/usr/X11R6/bin"
 
-	cd ${S}
+	cd "${S}"
 	xmkmf -a
 	emake CDEBUGFLAGS="${CFLAGS}" || die "make failed"
 }
 
 src_install()
 {
-	cd ${S}
-	einstall PREFIX=${D}/usr USRLIBDIR=${D}/usr/X11R6/lib || die "make install failed"
+	cd "${S}"
+	einstall PREFIX="${D}/usr" USRLIBDIR="${D}/usr/X11R6/lib" || die "make install failed"
 	dodoc AUTHORS BUGS ChangeLog
 }
 
