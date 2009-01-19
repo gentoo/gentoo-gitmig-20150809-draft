@@ -31,6 +31,7 @@ tracker
 # Stuff that doesn't make sense on this arch
 3dfx
 dell
+laptop
 
 # havent tested yet
 gphoto2
