@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/flobopuyo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.16 2008/08/07 00:03:12 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/ChangeLog,v 1.17 2009/01/19 18:56:06 mr_bones_ Exp $
+
+  19 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  flobopuyo-0.20-r1.ebuild:
+  EAPI=2; add use-based deps
 
   07 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
   files/flobopuyo-0.20-libs.patch, flobopuyo-0.20-r1.ebuild:

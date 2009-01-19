@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20-r1.ebuild,v 1.7 2008/08/07 00:03:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/flobopuyo/flobopuyo-0.20-r1.ebuild,v 1.8 2009/01/19 18:56:06 mr_bones_ Exp $
 
+EAPI=2
 inherit toolchain-funcs eutils games
 
 DESCRIPTION="Clone of the famous PuyoPuyo game"
@@ -15,23 +16,11 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="opengl"
 
 DEPEND="media-libs/libsdl
-	media-libs/sdl-image
-	media-libs/sdl-mixer
+	media-libs/sdl-image[jpeg,png]
+	media-libs/sdl-mixer[mikmod]
 	opengl? ( virtual/opengl )"
 
-pkg_setup() {
-	if ! built_with_use media-libs/sdl-image jpeg png ; then
-		eerror "You need jpeg and png useflags enabled on media-libs/sdl-image."
-		eerror "Please emerge media-libs/sdl-image with USE=\"jpeg png\""
-		die "Missing jpeg or png useflags."
-	fi
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gcc4.patch \
 		"${FILESDIR}"/${P}-gcc41.patch \
@@ -52,13 +41,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc Changelog TODO
 	doman man/flobopuyo.6
+	doicon "${DISTDIR}/${PN}.png"
+	make_desktop_entry flobopuyo FloboPuyo
 	prepgamesdirs
-
-	insinto /usr/share/icons/hicolor/128x128/apps
-	doins "${DISTDIR}/${PN}.png"
-
-	make_desktop_entry flobopuyo FloboPuyo flobopuyo "Game;ArcadeGame;"
 }
