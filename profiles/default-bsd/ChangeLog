@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.48 2008/12/13 13:25:52 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.49 2009/01/19 22:55:30 aballier Exp $
+
+  19 Jan 2009; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  remove useless gnash[ffmpeg] mask here too
 
   13 Dec 2008; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask gstreamer debugs useflags that need valgrind, its not supported on
