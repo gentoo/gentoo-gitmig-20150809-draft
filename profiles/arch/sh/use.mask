@@ -23,6 +23,7 @@ ffmpeg
 # Stuff we don't want
 chicken
 clisp
+fuse
 R
 octave
 tracker
@@ -32,6 +33,7 @@ tracker
 dell
 
 # havent tested yet
+gphoto2
 chicken
 clisp
 R

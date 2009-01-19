@@ -47,11 +47,13 @@ dell
 # Stuff we don't want
 chicken
 clisp
+fuse
 R
 octave
 tracker
 
 # havent tested yet
+gphoto2
 mythtv
 dvb
 qt3
