@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.14-r1.ebuild,v 1.1 2009/01/18 18:24:26 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.14-r1.ebuild,v 1.2 2009/01/19 00:27:40 mr_bones_ Exp $
 
 inherit autotools fortran
 
@@ -49,7 +49,6 @@ src_compile() {
 	FFLAGS="${FFLAGS} -std=legacy -fno-automatic" econf
 	emake || die "mopac7 failed to build."
 }
-
 
 src_install() {
 	# A correct fix would have a run_mopac7.in with @bindir@ that gets
