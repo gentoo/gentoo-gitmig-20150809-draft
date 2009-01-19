@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.434 2009/01/06 18:42:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.435 2009/01/19 09:05:21 hollow Exp $
+
+  19 Jan 2009; Benedikt Böhm <hollow@gentoo.org> files/udev-135-r2.initd:
+  fix newer udev init script inside vservers too, bug #253105
 
   06 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> udev-9999.ebuild:
   set DESCRIPTION after inherit to avoid overwriting it
