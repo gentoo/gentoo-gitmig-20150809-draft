@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libgksu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.51 2008/03/09 21:54:37 leio Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.52 2009/01/19 21:29:23 eva Exp $
+
+*libgksu-2.0.7 (19 Jan 2009)
+
+  19 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/libgksu-2.0.7-libs.patch, +files/libgksu-2.0.7-polinguas.patch,
+  +libgksu-2.0.7.ebuild:
+  Bump to 2.0.7. Fix bug #226837.
 
   09 Mar 2008; Mart Raudsepp <leio@gentoo.org> -libgksu-1.9.2.ebuild,
   -libgksu-2.0.0.ebuild, -libgksu-2.0.4.ebuild, libgksu-2.0.5.ebuild:
