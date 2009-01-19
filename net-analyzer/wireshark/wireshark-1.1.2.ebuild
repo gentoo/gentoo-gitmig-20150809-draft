@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.1.1.ebuild,v 1.3 2008/10/21 05:51:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.1.2.ebuild,v 1.1 2009/01/19 09:40:18 pva Exp $
 
 EAPI=1
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
@@ -17,7 +17,7 @@ SRC_URI="http://www.wireshark.org/download/src/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="adns +gtk ipv6 lua portaudio gnutls ares gcrypt zlib kerberos threads profile smi +pcap pcre +caps selinux"
+IUSE="adns ares +gtk ipv6 lua portaudio gnutls gcrypt geoip zlib kerberos threads profile smi +pcap pcre +caps selinux"
 
 RDEPEND=">=dev-libs/glib-2.4.0:2
 	zlib? ( sys-libs/zlib )
@@ -34,6 +34,7 @@ RDEPEND=">=dev-libs/glib-2.4.0:2
 	portaudio? ( media-libs/portaudio )
 	ares? ( >=net-dns/c-ares-1.5 )
 	!ares? ( adns? ( net-libs/adns ) )
+	geoip? ( dev-libs/geoip )
 	lua? ( >=dev-lang/lua-5.1 )
 	selinux? ( sec-policy/selinux-wireshark )"
 
@@ -69,9 +70,7 @@ src_unpack() {
 	epatch "${FILESDIR}/wireshark-except-double-free.diff"
 
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-misc-warnings.patch"
-	# made dependent on lua as generally dissectors shouldn't depend on wiretap
-	use lua && epatch "${FILESDIR}/${P}--as-needed.patch"
+	epatch "${FILESDIR}/${PN}-1.1.2--as-needed.patch"
 	eautoreconf
 }
 
@@ -113,6 +112,7 @@ src_compile() {
 		$(use_with pcap) \
 		$(use_with zlib) \
 		$(use_with pcre) \
+		$(use_with geoip) \
 		$(use_with portaudio) \
 		$(use_with caps libcap) \
 		$(use_enable pcap setuid-install) \
