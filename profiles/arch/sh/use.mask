@@ -34,10 +34,6 @@ dell
 
 # havent tested yet
 gphoto2
-chicken
-clisp
-R
-octave
 mythtv
 dvb
 qt3
