@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/lzma
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lzma/ChangeLog,v 1.1 2009/01/19 21:19:23 tommy Exp $
+
+*lzma-4.63 (19 Jan 2009)
+
+  19 Jan 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +files/build.xml,
+  +lzma-4.63.ebuild:
+  Initial commit. Fixes bug 244922
+
