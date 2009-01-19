@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.579 2009/01/19 12:51:36 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.580 2009/01/19 12:55:09 dsd Exp $
+
+*gentoo-sources-2.6.28-r1 (19 Jan 2009)
+
+  19 Jan 2009; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.28-r1.ebuild:
+  Update to Linux 2.6.28.1. Fix reuse of USB interfaces from userspace. Fix
+  compilation on alpha. Fix boot hang with pata_hpt366 driver. Fix iwl3945
+  adhoc network disconnection issue. Fix capacity reported by Nokia 6300
+  phone. Fix vt switch hang with GEM + compiz. Fix possible memory overflow
+  with SCTP networking.
 
 *gentoo-sources-2.6.27-r8 (19 Jan 2009)
 
