@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.2-r1.ebuild,v 1.2 2009/01/19 23:10:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.2-r2.ebuild,v 1.1 2009/01/20 13:51:44 loki_val Exp $
 
 EAPI=2
 
@@ -15,19 +15,20 @@ KEYWORDS="~x86 ~amd64"
 IUSE="xen moonlight minimal"
 
 #Bash requirement is for += operator
-RDEPEND=">=app-shells/bash-3.2
-	!<dev-dotnet/pnet-0.6.12
+COMMONDEPEND="!<dev-dotnet/pnet-0.6.12
 	!dev-util/monodoc
 	dev-libs/glib:2
-	!minimal? (
-		=dev-dotnet/libgdiplus-${GO_MONO_REL_PV}*
-		=dev-dotnet/gluezilla-${GO_MONO_REL_PV}*
-	)
+	!minimal? ( =dev-dotnet/gluezilla-${GO_MONO_REL_PV}* )
 	ia64? (
 		sys-libs/libunwind
 	)"
-DEPEND="${RDEPEND}
-	sys-devel/bc"
+RDEPEND="${COMMONDEPEND}
+	!minimal? ( =dev-dotnet/libgdiplus-${GO_MONO_REL_PV}* )
+	|| ( www-client/links www-client/lynx )"
+
+DEPEND="${COMMONDEPEND}
+	sys-devel/bc
+	>=app-shells/bash-3.2"
 PDEPEND="dev-dotnet/pe-format"
 
 MAKEOPTS="${MAKEOPTS} -j1"
@@ -38,12 +39,14 @@ PATCHES=(
 	"${WORKDIR}/mono-2.2-libdir126.patch"
 	"${FILESDIR}/mono-2.2-ppc-threading.patch"
 	"${FILESDIR}/mono-2.2-uselibdir.patch"
+	"${FILESDIR}/mono-2.2-r121596-work-around-runtime-crash.patch"
 )
 
 pkg_setup() {
 	MONO_NUNIT_DIR="/usr/$(get_libdir)/mono/mono-nunit"
 	NUNIT_DIR="/usr/$(get_libdir)/mono/nunit"
 }
+
 
 src_prepare() {
 	sed -e "s:@MONOLIBDIR@:$(get_libdir):" \
@@ -52,6 +55,7 @@ src_prepare() {
 		die "Sedding patch file failed"
 	go-mono_src_prepare
 }
+
 
 src_configure() {
 	# mono's build system is finiky, strip the flags
@@ -86,6 +90,9 @@ src_test() {
 
 src_install() {
 	go-mono_src_install
+	#Bug 255610
+	sed -i -e "s:mono/2.0/mod.exe:mono/1.0/mod.exe:" \
+		"${D}"/usr/bin/mod || die "Failed to fix mod."
 
 	docinto docs
 	dodoc docs/*
@@ -114,6 +121,7 @@ src_install() {
 #pkg_prerm
 #pkg_postrm
 #pkg_postinst
+
 
 pkg_postrm() {
 	if [[ "$(readlink "${ROOT}"/${NUNIT_DIR})" == *"mono-nunit" ]]
@@ -157,6 +165,7 @@ pkg_postinst() {
 		fi
 	fi
 }
+
 
 # NOTICE: THE COPYRIGHT FILES IN THE TARBALL ARE UNCLEAR!
 # WHENEVER YOU THINK SOMETHING IS GPL-2+, IT'S ONLY GPL-2
