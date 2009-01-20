@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9411 2009/01/20 12:54:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9412 2009/01/20 13:22:46 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,6 +44,8 @@ perl-core/Module-Load-Conditional
 virtual/perl-Module-Load-Conditional
 perl-core/Params-Check
 virtual/perl-Params-Check
+perl-core/IPC-Cmd
+virtual/perl-IPC-Cmd
 
 # Ben de Groot <yngwin@gentoo.org> (19 Jan 2009)
 # Masked because of bug 248038 which requires mask of qt-4.3*
