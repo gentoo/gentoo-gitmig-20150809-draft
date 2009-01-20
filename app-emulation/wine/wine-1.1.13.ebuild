@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.13.ebuild,v 1.2 2009/01/18 19:36:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.13.ebuild,v 1.3 2009/01/20 14:55:54 vapier Exp $
 
 EAPI="2"
 
@@ -104,9 +104,9 @@ src_compile() {
 		$(use_with opengl) \
 		$(use_with oss) \
 		$(use_with png) \
-		$(use_with sane scanner) \
+		$(use_with scanner sane) \
 		$(use_with ssl openssl) \
-		$(use_with win64) \
+		$(use_enable win64) \
 		$(use_with X x) \
 		$(use_with xcomposite) \
 		$(use_with xinerama) \

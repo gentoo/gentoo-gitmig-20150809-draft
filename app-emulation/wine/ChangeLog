@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.240 2009/01/18 19:36:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.241 2009/01/20 14:55:54 vapier Exp $
+
+  20 Jan 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.13.ebuild,
+  wine-9999.ebuild:
+  Fix by Robert Förster for scanner/win64 econf typos #255447.
 
   18 Jan 2009; Mike Frysinger <vapier@gentoo.org> metadata.xml,
   wine-1.1.13.ebuild, wine-9999.ebuild:
