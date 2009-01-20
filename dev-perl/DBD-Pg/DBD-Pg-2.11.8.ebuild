@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-2.11.8.ebuild,v 1.1 2009/01/16 10:52:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-2.11.8.ebuild,v 1.2 2009/01/20 09:34:40 tove Exp $
 
 MODULE_AUTHOR=TURNSTEP
 inherit perl-module eutils
@@ -13,6 +13,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 
 DEPEND="virtual/perl-Test-Simple
+	virtual/perl-version
 	>=virtual/perl-Test-Harness-2.03
 	>=dev-perl/DBI-1.52
 	>=virtual/postgresql-base-7.3"
