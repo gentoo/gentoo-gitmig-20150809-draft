@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7.ebuild,v 1.4 2007/03/12 14:00:01 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-1.0.7.ebuild,v 1.5 2009/01/20 14:24:47 tupone Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -28,7 +28,9 @@ src_unpack() {
 		|| die "sed Makefile failed"
 	mkdir obj || die "mkdir failed" # silly makefile
 
-	epatch "${FILESDIR}/${PV}-cdintf_linux.patch"
+	edos2unix src/sdlemu_config.cpp
+	epatch "${FILESDIR}/${PV}-cdintf_linux.patch" \
+		"${FILESDIR}"/${P}-gcc43.patch
 
 	cp "${FILESDIR}/virtualjaguar" "${T}" || die "cp failed"
 
