@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9409 2009/01/20 11:58:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9410 2009/01/20 12:07:25 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (20 Jan 2009)
+# Temporary mask for adding new virtuals
+perl-core/Module-Load
+virtual/perl-Module-Load
+perl-core/Module-Load-Conditional
+virtual/perl-Module-Load-Conditional
+perl-core/Params-Check
+virtual/perl-Params-Check
 
 # Ben de Groot <yngwin@gentoo.org> (19 Jan 2009)
 # Masked because of bug 248038 which requires mask of qt-4.3*
