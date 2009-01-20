@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.271 2009/01/20 18:05:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.272 2009/01/20 23:29:52 gengor Exp $
+
+*hardened-sources-2.6.25-r13 (20 Jan 2009)
+
+  20 Jan 2009; Gordon Malm <gengor@gentoo.org>
+  +hardened-sources-2.6.25-r13.ebuild:
+  Revert RLIMIT_STACK false-positives-avoidance patch. Bugs 253773, 254843
 
   20 Jan 2009; nixnut <nixnut@gentoo.org>
   hardened-sources-2.6.25-r12.ebuild:
