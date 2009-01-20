@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libdbi-drivers
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.42 2009/01/11 15:58:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.43 2009/01/20 21:55:23 aballier Exp $
+
+  20 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  libdbi-drivers-0.8.3.ebuild:
+  keyword ~x86-fbsd
 
   11 Jan 2009; Markus Meier <maekke@gentoo.org> libdbi-drivers-0.8.3.ebuild:
   x86 stable, bug #253663
