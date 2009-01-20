@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.5.1.ebuild,v 1.6 2009/01/13 01:01:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.5.1.ebuild,v 1.7 2009/01/20 15:49:13 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_P="KoboDeluxe-${PV/_/}"
@@ -15,14 +16,12 @@ KEYWORDS="alpha amd64 ppc ppc64 x86"
 IUSE="opengl"
 
 DEPEND="media-libs/libsdl
-	media-libs/sdl-image
+	media-libs/sdl-image[png]
 	opengl? ( virtual/opengl )"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-glibc29.patch
 	# Fix paths
 	sed -i \
@@ -36,9 +35,8 @@ src_unpack() {
 	tar xzvf icons.tar.gz || die "unpacking icons failed"
 }
 
-src_compile() {
+src_configure() {
 	egamesconf $(use_enable opengl) || die
-	emake || die "emake failed"
 }
 
 src_install () {
