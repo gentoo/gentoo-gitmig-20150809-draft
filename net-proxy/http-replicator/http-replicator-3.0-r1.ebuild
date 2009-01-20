@@ -1,12 +1,15 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0-r1.ebuild,v 1.6 2008/08/26 18:33:44 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0-r1.ebuild,v 1.7 2009/01/20 19:54:07 griffon26 Exp $
 
 inherit eutils
 
+MY_P="${PN}_${PV}"
+
 DESCRIPTION="Proxy cache for Gentoo packages"
-HOMEPAGE="http://gertjan.freezope.org/replicator/"
-SRC_URI="http://gertjan.freezope.org/replicator/${PN}_${PV}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/http-replicator"
+SRC_URI="mirror://sourceforge/http-replicator/${MY_P}.tar.gz"
+S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -14,6 +17,7 @@ KEYWORDS="alpha amd64 ~hppa ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3"
+
 
 src_compile() {
 	epatch "${FILESDIR}/http-replicator-3.0-sighup.patch"
