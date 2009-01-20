@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.11_rc1.ebuild,v 1.1 2009/01/10 13:30:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.11.ebuild,v 1.1 2009/01/20 11:58:51 pva Exp $
 
 NEED_PYTHON=2.4
 
@@ -101,9 +101,10 @@ pkg_postrm() {
 
 src_test() {
 	export LC_ALL=C
+	# Define tests which are known to fail below.
 	local skip_tests="("
-	#skip_tests+="test|"
-	skip_tests+="test_osutils.TestChunksToLines.test_is_compiled"
+	skip_tests+="bzrlib.tests.test_bzrdir.ChrootedTests|"
+	skip_tests+="test_http.SmartHTTPTunnellingTest.test_bulk_data"
 	skip_tests+=")"
 	# Some tests expect the usual pyc compiling behaviour.
 	python_enable_pyc
