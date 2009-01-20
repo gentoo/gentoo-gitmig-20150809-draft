@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.1.5.ebuild,v 1.1 2009/01/20 13:37:39 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-2.1.5.ebuild,v 1.2 2009/01/20 22:44:25 mr_bones_ Exp $
 
 NEED_PYTHON="2.3"
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 	# Use cython instead of own bundled version of pyrex
 	epatch "${FILESDIR}/${PN}-2.0.3-no-fake-pyrex.patch"
-	# Patch for xpath/unicode test. This test fails 
+	# Patch for xpath/unicode test. This test fails
 	epatch "${FILESDIR}/${P}_unicode_test.patch"
 }
 
