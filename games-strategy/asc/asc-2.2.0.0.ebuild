@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.2.0.0.ebuild,v 1.2 2009/01/03 19:11:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.2.0.0.ebuild,v 1.3 2009/01/20 07:31:11 mr_bones_ Exp $
 
-EAPI=1
+EAPI=2
 inherit toolchain-funcs flag-o-matic games
 
 DESCRIPTION="turn based strategy game designed in the tradition of the Battle Isle series"
@@ -21,13 +21,13 @@ RDEPEND="app-arch/bzip2
 	media-libs/jpeg
 	media-libs/libsdl
 	media-libs/libpng
-	media-libs/sdl-image
-	media-libs/sdl-mixer
+	media-libs/sdl-image[gif,jpeg,png]
+	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-sound
 	dev-libs/boost
 	dev-games/physfs
-	media-libs/smpeg
 	media-libs/libvorbis
+	media-libs/xvid
 	dev-libs/expat
 	media-libs/freetype
 	dev-libs/libsigc++:1.2"
@@ -49,7 +49,7 @@ src_unpack() {
 	done
 }
 
-src_compile() {
+src_configure() {
 	# Added --disable-paraguitest for bugs 26402 and 4488
 	# Added --disable-paragui for bug 61154 since it's not really used much
 	# and the case is well documented at http://www.asc-hq.org/
@@ -62,7 +62,6 @@ src_compile() {
 		--disable-paragui \
 		--datadir="${GAMES_DATADIR_BASE}" \
 		|| die
-	emake || die "emake failed"
 }
 
 src_install() {
