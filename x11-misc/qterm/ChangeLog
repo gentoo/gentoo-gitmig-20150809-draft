@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/qterm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.29 2008/11/03 15:17:44 matsuu Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.30 2009/01/20 06:43:55 yngwin Exp $
+
+*qterm-0.5.2-r2 (19 Jan 2009)
+
+  19 Jan 2009; Ben de Groot <yngwin@gentoo.org>
+  +files/qterm-0.5.2-as-needed.patch, +qterm-0.5.2-r2.ebuild:
+  Fix Qt dep for bug 248038 and in the process fix bug 225117 by applying
+  suggested as-needed patch.
 
 *qterm-0.5.2-r1 (03 Nov 2008)
 
