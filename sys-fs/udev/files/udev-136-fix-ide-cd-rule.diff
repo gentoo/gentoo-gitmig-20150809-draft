@@ -1,0 +1,21 @@
+commit 18cff5c3b2e3591fa46107288ea2d7026a15ccf3
+Author: Kay Sievers <kay.sievers@vrfy.org>
+Date:   Sat Jan 10 17:44:09 2009 +0100
+
+    rules: fix typo in ide cd rule
+    
+    Thanks to Scott, who found that.
+
+diff --git a/rules/rules.d/50-udev-default.rules b/rules/rules.d/50-udev-default.rules
+index 119941b..7730f0d 100644
+--- a/rules/rules.d/50-udev-default.rules
++++ b/rules/rules.d/50-udev-default.rules
+@@ -68,7 +68,7 @@ KERNEL=="hd*", SUBSYSTEMS=="ide", ATTRS{media}=="floppy", OPTIONS+="all_partitio
+ 
+ # cdrom
+ SUBSYSTEM=="block", KERNEL=="sr[0-9]*", SYMLINK+="scd%n", GROUP="cdrom"
+-SUBSYSTEM=="block", KERNEL=="hd[0-9]*", SUBSYSTEMS=="ide", ATTRS{media}=="cdrom", GROUP="cdrom"
++SUBSYSTEM=="block", KERNEL=="hd*", SUBSYSTEMS=="ide", ATTRS{media}=="cdrom", GROUP="cdrom"
+ SUBSYSTEMS=="scsi", ATTRS{type}=="4|5", GROUP="cdrom"
+ KERNEL=="pktcdvd[0-9]*", NAME="pktcdvd/%k", GROUP="cdrom"
+ KERNEL=="pktcdvd", NAME="pktcdvd/control", GROUP="cdrom"

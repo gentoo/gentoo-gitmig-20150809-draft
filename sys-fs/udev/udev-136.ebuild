@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.3 2009/01/20 13:00:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-136.ebuild,v 1.1 2009/01/20 13:00:01 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -16,7 +16,7 @@ DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace d
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux"
 
 DEPEND="selinux? ( sys-libs/libselinux )"
@@ -79,6 +79,7 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
+	epatch "${FILESDIR}/${P}-fix-ide-cd-rule.diff"
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \

@@ -1,6 +1,21 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.437 2009/01/20 11:20:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.438 2009/01/20 13:00:01 zzam Exp $
+
+*udev-136 (20 Jan 2009)
+
+  20 Jan 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +files/136/shell-compat-addon.sh, +files/136/udev.confd,
+  +files/udev-136-fix-ide-cd-rule.diff, +files/136/udev.initd,
+  +files/136/udev-dev-tarball.initd, +files/136/udev-mount.initd,
+  +files/136/shell-compat-KV.sh, +files/136/udev-postmount.initd,
+  +files/136/udev-start.sh, +files/136/udev-stop.sh, +udev-136.ebuild,
+  udev-9999.ebuild:
+  Version bumped. This raises kernel version for reliable udev usage to
+  2.6.20. Backported one patch. The upstream rule changes still need to be
+  reviewed. For now keep using group uucp instead of dialout as suggested by
+  upstream. Move init-script stuff into a subdir for FILESDIR. Small changes
+  to shell-compat logic.
 
   20 Jan 2009; Matthias Schwarzott <zzam@gentoo.org>
   files/shell-compat-118-r3.sh:
