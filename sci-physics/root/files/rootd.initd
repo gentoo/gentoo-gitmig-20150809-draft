@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/files/rootd.initd,v 1.1 2008/12/18 18:10:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/files/rootd.initd,v 1.2 2009/01/20 18:04:09 bicatali Exp $
 
 depend() {
     need net
@@ -11,10 +11,10 @@ depend() {
 
 start() {
     ebegin "Starting ROOT file server"
-    pid=$(start-stop-daemon --start --quiet --user=${ROOTD_USER} \
-	--pidfile=/var/run/rootd.pid \
+    pid=$(start-stop-daemon --start --quiet --user ${ROOTD_USER} \
+	--pidfile /var/run/rootd.pid \
 	--exec /usr/bin/rootd -- ${ROOTD_OPTS})
-    eval ${pid}
+    retval=$?
     echo ${ROOTD_PID} > /var/run/rootd.pid
     eend ${retval}
 }
@@ -22,7 +22,7 @@ start() {
 stop() {
     ebegin "Stopping ROOT file server"
     start-stop-daemon --stop --quiet \
-	--pidfile=/var/run/rootd.pid \
+	--pidfile /var/run/rootd.pid \
 	--exec /usr/bin/rootd
     eend $?
 }

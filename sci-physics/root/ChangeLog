@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/root
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.40 2008/12/19 14:35:32 bicatali Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.41 2009/01/20 18:04:09 bicatali Exp $
+
+  20 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> files/proofd.initd,
+  files/rootd.initd, files/xrootd.initd, root-5.20.00-r3.ebuild,
+  root-5.22.00.ebuild:
+  Fixed postgresql configuration (bug #251590), fixed server rootd and
+  proofd files
 
   19 Dec 2008; Sébastien Fabbro <bicatali@gentoo.org> root-5.22.00.ebuild:
   Fixed ftgl dependency, closing bug #251634

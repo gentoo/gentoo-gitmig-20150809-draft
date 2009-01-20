@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r3.ebuild,v 1.2 2008/12/19 10:46:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r3.ebuild,v 1.3 2009/01/20 18:04:09 bicatali Exp $
 
 EAPI=1
 inherit versionator eutils qt4 fortran elisp-common fdo-mime
@@ -52,7 +52,7 @@ CDEPEND=">=dev-lang/cfortran-4.4-r2
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/libiodbc )
 	oracle? ( dev-db/oracle-instantclient-basic )
-	postgres? ( virtual/postgresql-server )
+	postgres? ( virtual/postgresql-base )
 	pythia6? ( sci-physics/pythia:6 )
 	pythia8? ( sci-physics/pythia:8 )
 	python? ( dev-lang/python )
