@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.2-r2.ebuild,v 1.1 2009/01/20 13:51:44 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.2-r2.ebuild,v 1.2 2009/01/20 22:44:06 mr_bones_ Exp $
 
 EAPI=2
 
@@ -47,7 +47,6 @@ pkg_setup() {
 	NUNIT_DIR="/usr/$(get_libdir)/mono/nunit"
 }
 
-
 src_prepare() {
 	sed -e "s:@MONOLIBDIR@:$(get_libdir):" \
 		< "${FILESDIR}"/mono-2.2-libdir126.patch \
@@ -55,7 +54,6 @@ src_prepare() {
 		die "Sedding patch file failed"
 	go-mono_src_prepare
 }
-
 
 src_configure() {
 	# mono's build system is finiky, strip the flags
@@ -122,7 +120,6 @@ src_install() {
 #pkg_postrm
 #pkg_postinst
 
-
 pkg_postrm() {
 	if [[ "$(readlink "${ROOT}"/${NUNIT_DIR})" == *"mono-nunit" ]]
 	then
@@ -165,7 +162,6 @@ pkg_postinst() {
 		fi
 	fi
 }
-
 
 # NOTICE: THE COPYRIGHT FILES IN THE TARBALL ARE UNCLEAR!
 # WHENEVER YOU THINK SOMETHING IS GPL-2+, IT'S ONLY GPL-2
