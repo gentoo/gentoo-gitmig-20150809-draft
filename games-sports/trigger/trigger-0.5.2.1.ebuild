@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.2.1.ebuild,v 1.6 2008/07/08 16:51:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.2.1.ebuild,v 1.7 2009/01/20 17:08:33 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DATA_V=0.5.2
@@ -18,7 +19,7 @@ IUSE=""
 RDEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl
-	media-libs/sdl-image
+	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-mixer
 	media-libs/openal
 	media-libs/freealut
@@ -28,8 +29,11 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}-src
 
-src_compile() {
+src_configure() {
 	egamesconf --datadir="${GAMES_DATADIR}"/${PN} || die
+}
+
+src_compile() {
 	jam -qa || die "jam failed"
 }
 

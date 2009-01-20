@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/trigger
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.20 2007/11/21 04:09:20 dirtyepic Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.21 2009/01/20 17:08:33 mr_bones_ Exp $
+
+  20 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  trigger-0.5.2.1.ebuild:
+  EAPI=2; add use-based dep
 
   21 Nov 2007; Ryan Hill <dirtyepic@gentoo.org> trigger-0.5.2.1.ebuild:
   Allow building with ftjam for bug #188194
