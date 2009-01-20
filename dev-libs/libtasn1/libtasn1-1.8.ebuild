@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-1.5.ebuild,v 1.1 2008/11/04 08:25:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-1.8.ebuild,v 1.1 2009/01/20 14:47:42 dragonheart Exp $
 
 DESCRIPTION="provides ASN.1 structures parsing capabilities for use with GNUTLS"
 HOMEPAGE="http://www.gnutls.org/"
