@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/duke3d-data
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/ChangeLog,v 1.1 2009/01/20 02:17:03 mr_bones_ Exp $
+
+*duke3d-data-1.0 (20 Jan 2009)
+
+  20 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +duke3d-data-1.0.ebuild:
+  initial commit - ebuild submitted by Brandon Captain via bug #162261
+
