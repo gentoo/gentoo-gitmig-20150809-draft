@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgail-gnome
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.92 2008/09/27 16:40:18 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.93 2009/01/20 11:25:34 armin76 Exp $
+
+  20 Jan 2009; Raúl Porcel <armin76@gentoo.org>
+  libgail-gnome-1.20.1.ebuild:
+  Add ~sh
 
 *libgail-gnome-1.20.1 (27 Sep 2008)
 
