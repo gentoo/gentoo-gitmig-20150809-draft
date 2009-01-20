@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sqlite-ruby
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.39 2008/10/04 08:18:52 graaff Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.40 2009/01/20 23:35:06 aballier Exp $
+
+  20 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  sqlite-ruby-2.2.3-r1.ebuild:
+  keyword ~x86-fbsd
 
   04 Oct 2008; Hans de Graaff <graaff@gentoo.org>
   sqlite-ruby-2.2.3-r1.ebuild:
