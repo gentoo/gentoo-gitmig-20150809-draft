@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.128 2009/01/16 21:24:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.129 2009/01/20 10:50:30 loki_val Exp $
+
+  20 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  nvidia-drivers-96.43.09.ebuild:
+  Non-maintainer commit: Changing <x11-base/xorg-server-1.4.99 to
+  <x11-base/xorg-server-1.5.99 per bug 252359. Tested on Geforce FX 5600,
+  works as well as can be expected. Two users reported it working on bug
+  252359.
 
 *nvidia-drivers-180.22 (16 Jan 2009)
 
