@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9412 2009/01/20 13:22:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9413 2009/01/20 14:14:57 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,17 +35,6 @@
 # Masked until udev-135-r3 is tested good enough and stable
 # and until all (upstream) rule changes are reviewed
 ~sys-fs/udev-136
-
-# Torsten Veller <tove@gentoo.org> (20 Jan 2009)
-# Temporary mask for adding new virtuals
-perl-core/Module-Load
-virtual/perl-Module-Load
-perl-core/Module-Load-Conditional
-virtual/perl-Module-Load-Conditional
-perl-core/Params-Check
-virtual/perl-Params-Check
-perl-core/IPC-Cmd
-virtual/perl-IPC-Cmd
 
 # Ben de Groot <yngwin@gentoo.org> (19 Jan 2009)
 # Masked because of bug 248038 which requires mask of qt-4.3*
