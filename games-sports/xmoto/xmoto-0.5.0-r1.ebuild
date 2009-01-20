@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.0-r1.ebuild,v 1.1 2009/01/07 17:59:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.0-r1.ebuild,v 1.2 2009/01/20 02:26:58 mr_bones_ Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit eutils games
 
-LVL_PV="0.5.0~rc1" #they unfortunately don't release both at the same time, why ~ as separator :(
+LVL_PV="0.5.0~rc2" #they unfortunately don't release both at the same time, why ~ as separator :(
 LVL="inksmoto-${LVL_PV}"
 DESCRIPTION="A challenging 2D motocross platform game"
 HOMEPAGE="http://xmoto.tuxfamily.org"
@@ -32,12 +31,10 @@ RDEPEND="
 	virtual/opengl
 	virtual/glu
 	nls? ( virtual/libintl )
-	editor? ( media-gfx/inkscape )
-	"
+	editor? ( media-gfx/inkscape )"
 DEPEND="${RDEPEND}
 	!=dev-db/sqlite-3.6.2
-	nls? ( sys-devel/gettext )
-	"
+	nls? ( sys-devel/gettext )"
 
 src_prepare() {
 	use editor && rm -f "${WORKDIR}"/extensions/{bezmisc,inkex}.py
@@ -92,17 +89,17 @@ src_install() {
 	prepgamesdirs
 
 	if use editor; then
-	  insinto /usr/share/inkscape/
-	  doins -r "${WORKDIR}"/extensions/ || die "doins failed"
+		insinto /usr/share/inkscape/
+		doins -r "${WORKDIR}"/extensions/ || die "doins failed"
 	fi
 }
 
 pkg_postinst() {
 	games_pkg_postinst
 	if use editor; then
-	  elog "If you want to know how to create Xmoto levels"
-	  elog "have a look at this Tutorial:"
-	  elog "http://wiki.xmoto.tuxfamily.org/index.php?title=Inkscape-0.5.0"
-	  elog "You can share your levels on the Xmoto homepage."
+		elog "If you want to know how to create Xmoto levels"
+		elog "have a look at this Tutorial:"
+		elog "http://wiki.xmoto.tuxfamily.org/index.php?title=Inkscape-0.5.0"
+		elog "You can share your levels on the Xmoto homepage."
 	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.28 2009/01/07 17:59:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.29 2009/01/20 02:26:58 mr_bones_ Exp $
+
+  20 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  xmoto-0.5.0-r1.ebuild:
+  newer level editor
 
 *xmoto-0.5.0-r1 (07 Jan 2009)
 
