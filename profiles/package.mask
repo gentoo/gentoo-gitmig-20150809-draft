@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9407 2009/01/19 22:24:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9408 2009/01/20 01:41:19 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -779,11 +779,6 @@ x11-libs/lesstif
 # Beta driver, unsupported by nVidia
 ~x11-drivers/nvidia-drivers-173.08
 ~media-video/nvidia-settings-173.08
-
-# Michael Sterrett <mr_bones_@gentoo.org> (05 May 2008)
-# masked until bug #217901 is fixed, again.
-# Still has broken deps and missing license.
-games-server/greenhouse
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (04 May 2008)
 # Some of the older 0.9x regex packages are experimental versions and does
