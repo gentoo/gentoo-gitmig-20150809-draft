@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.12.ebuild,v 1.6 2009/01/19 17:27:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.12.ebuild,v 1.7 2009/01/20 15:59:18 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -29,7 +29,7 @@ UIDEPEND="virtual/opengl
 	x11-libs/libXt
 	x11-libs/libXxf86vm"
 
-DEPEND=">=net-misc/curl-7.15.0[ares]
+DEPEND=">=net-misc/curl-7.15.0
 	sys-libs/ncurses
 	net-dns/c-ares
 	sdl? ( ${UIDEPEND} )
