@@ -1,6 +1,6 @@
 Index: gmetad/server.c
 ===================================================================
---- gmetad/server.c	(revision 1949)
+--- gmetad/server.c	(revision 1953)
 +++ gmetad/server.c	(working copy)
 @@ -370,14 +370,13 @@
     
@@ -36,4 +36,13 @@ Index: gmetad/server.c
 +         free(element);
        }
     if (rc) return 1;
+ 
+@@ -537,7 +540,7 @@
+    socklen_t len;
+    client_t client;
+    char remote_ip[16];
+-   char request[REQUESTLEN];
++   char request[REQUESTLEN + 1];
+    llist_entry *le;
+    datum_t rootdatum;
  

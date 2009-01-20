@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.1-r1.ebuild,v 1.1 2009/01/18 21:12:50 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.1-r2.ebuild,v 1.1 2009/01/20 16:42:26 jsbronder Exp $
 
 WEBAPP_OPTIONAL="yes"
 inherit multilib webapp depend.php python
@@ -43,7 +43,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-multidisk-group.patch
 	# Shouldn't be needed for 3.1.2
 	# http://bugzilla.ganglia.info/cgi-bin/bugzilla/show_bug.cgi?id=223
-	epatch "${FILESDIR}"/${P}-process_path-overflow.patch
+	epatch "${FILESDIR}"/${P}-process_path-overflow-r1.patch
 }
 
 src_compile() {
