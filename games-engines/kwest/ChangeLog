@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/kwest
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/kwest/ChangeLog,v 1.12 2008/01/28 01:11:31 mr_bones_ Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/kwest/ChangeLog,v 1.13 2009/01/20 15:41:05 tupone Exp $
+
+  20 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/kwest-1.0-gcc43.patch, +files/kwest-1.1.1-gcc43.patch,
+  kwest-1.0.ebuild, kwest-1.1.1.ebuild:
+  Fix gcc-4.3 bug #251132 by flameeyes@gentoo.org
 
   28 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org> kwest-1.0.ebuild,
   kwest-1.1.1.ebuild:

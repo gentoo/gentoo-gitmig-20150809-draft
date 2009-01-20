@@ -1,0 +1,23 @@
+--- kwest/kwestview.cpp.old     2009-01-20 15:29:26.000000000 +0100
++++ kwest/kwestview.cpp 2009-01-20 15:29:41.000000000 +0100
+@@ -26,7 +26,7 @@
+ #include "frotz.h"
+ #include "k_frotz.h"
+
+-#include <iostream.h>
++#include <iostream>
+
+ extern "C" bool is_terminator(zchar);
+ extern "C" int completion(const zchar *, zchar *);
+--- kwest/k_init.cpp.old        2009-01-20 15:37:26.000000000 +0100
++++ kwest/k_init.cpp    2009-01-20 15:38:04.000000000 +0100
+@@ -154,7 +154,7 @@
+  *
+  */
+
+-#include <iostream.h>
++#include <iostream>
+
+ void os_init_screen()
+ {
+
