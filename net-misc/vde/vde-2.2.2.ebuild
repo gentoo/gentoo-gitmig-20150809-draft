@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.2.2.ebuild,v 1.1 2008/09/04 19:37:08 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.2.2.ebuild,v 1.2 2009/01/20 12:49:23 caleb Exp $
 
 inherit base eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/vde/${MY_P}.tar.bz2"
 HOMEPAGE="http://vde.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 DEPEND=""
 
