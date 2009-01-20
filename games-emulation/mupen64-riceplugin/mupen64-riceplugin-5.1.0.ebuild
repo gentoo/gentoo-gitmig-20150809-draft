@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.11 2007/04/06 05:46:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.12 2009/01/20 10:41:01 tupone Exp $
 
 inherit toolchain-funcs eutils flag-o-matic games
 
@@ -26,11 +26,13 @@ S=${WORKDIR}/riceplugin
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	edos2unix DLParser.h ROM.h
 	epatch \
 		"${FILESDIR}"/${PN}-makefile.patch \
 		"${FILESDIR}"/${PN}-gtk2.patch \
 		"${FILESDIR}"/${PN}-compile.patch \
-		"${FILESDIR}"/${PN}-gcc4.patch
+		"${FILESDIR}"/${PN}-gcc4.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {

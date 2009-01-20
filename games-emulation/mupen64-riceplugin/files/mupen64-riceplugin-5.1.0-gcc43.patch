@@ -1,0 +1,21 @@
+--- DLParser.h.old      2009-01-20 11:33:53.000000000 +0100
++++ DLParser.h  2009-01-20 11:34:07.000000000 +0100
+@@ -21,6 +21,7 @@
+ #ifndef __DAEDALUS_RDP_GFX_H__
+ #define __DAEDALUS_RDP_GFX_H__
+
++#include <cstring>
+ #include "ultra_sptask.h"
+ //#include "Debugger.h"
+
+--- ROM.h.old   2009-01-20 11:34:41.000000000 +0100
++++ ROM.h       2009-01-20 11:34:56.000000000 +0100
+@@ -21,6 +21,7 @@
+ #ifndef __DAEDALUS_ROM_H__
+ #define __DAEDALUS_ROM_H__
+
++#include <climits>
+ #include "ultra_types.h"
+ #include "IniFile.h"
+
+

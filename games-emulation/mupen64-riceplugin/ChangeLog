@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/mupen64-riceplugin
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/ChangeLog,v 1.14 2006/06/01 18:51:02 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/ChangeLog,v 1.15 2009/01/20 10:41:01 tupone Exp $
+
+  20 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/mupen64-riceplugin-5.1.0-gcc43.patch,
+  mupen64-riceplugin-5.1.0.ebuild:
+  Fix gcc-4.3 bug #251128 by flameeyes@gentoo.org
 
   01 Jun 2006; <Tupone@gentoo.org> mupen64-riceplugin-5.1.0.ebuild:
   Fix for gcc-4.1 not compiling without -msse, bug #132051 by me
