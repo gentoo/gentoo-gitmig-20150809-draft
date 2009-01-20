@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.2.ebuild,v 1.10 2008/09/22 18:56:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.2.ebuild,v 1.11 2009/01/20 08:23:31 aballier Exp $
 
 inherit flag-o-matic eutils multilib versionator toolchain-funcs
 
@@ -62,6 +62,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export LC_ALL=C
 	local myconf="--host ${CHOST}"
 
 	# dev-lang/ocaml tends to break/give unexpected results with "unsafe" CFLAGS.

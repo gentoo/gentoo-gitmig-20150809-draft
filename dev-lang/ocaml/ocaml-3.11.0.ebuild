@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.11.0.ebuild,v 1.1 2008/12/08 08:46:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.11.0.ebuild,v 1.2 2009/01/20 08:23:31 aballier Exp $
 
 inherit flag-o-matic eutils multilib versionator toolchain-funcs
 
@@ -57,6 +57,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export LC_ALL=C
 	local myconf="--host ${CHOST}"
 
 	# It doesn't compile on alpha without this LDFLAGS
