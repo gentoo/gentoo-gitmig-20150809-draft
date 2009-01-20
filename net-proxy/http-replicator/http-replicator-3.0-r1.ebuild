@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0-r1.ebuild,v 1.7 2009/01/20 19:54:07 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/http-replicator-3.0-r1.ebuild,v 1.8 2009/01/20 22:44:42 mr_bones_ Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ KEYWORDS="alpha amd64 ~hppa ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3"
-
 
 src_compile() {
 	epatch "${FILESDIR}/http-replicator-3.0-sighup.patch"
