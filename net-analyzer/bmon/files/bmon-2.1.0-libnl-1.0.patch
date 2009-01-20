@@ -14,7 +14,7 @@
 +	case ${target_os} in
 +	    *linux*)
 +		echo
-+		echo "*** Warning: Building bmon on Linuxx w/o libnl ***"
++		echo "*** Warning: Building bmon on Linux w/o libnl ***"
 +		echo
 +	    ;;
 +	esac
