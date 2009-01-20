@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.3 2009/01/20 13:00:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.4 2009/01/20 22:45:08 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -198,7 +198,6 @@ src_install() {
 	sed -e "s/%KV_MIN%/${KV_min}/" \
 		-e "s/%KV_MIN_RELIABLE%/${KV_min_reliable}/" \
 		-i "${D}"/etc/init.d/udev-mount
-
 
 	# config file for init-script and start-addon
 	newconfd "${scriptdir}/udev.confd" udev \
