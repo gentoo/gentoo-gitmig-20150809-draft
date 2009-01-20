@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.18 2009/01/20 13:17:13 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.19 2009/01/20 20:50:09 fmccor Exp $
 # Please add a proper entry, like a ChangeLog file, to the top, thanks.
 
 # Ben de Groot <yngwin@gentoo.org> (30 Dec 2008)
@@ -33,3 +33,6 @@ app-text/texlive	xindy
 
 # Needs krb4 USE flag for mit-krb5 (Bug #255579), and we believe it to be unstable.
 net-im/pidgin	zephyr
+
+# Mask zemberek for enchant because it requires java.
+app-text/enchant	zemberek
