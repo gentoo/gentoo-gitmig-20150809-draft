@@ -24,3 +24,6 @@ net-misc/kpvnc smartcard
 
 # xindy requires clisp which does not build
 app-text/texlive	xindy
+
+# Needs krb4 USE flag for mit-krb5 (Bug #255579), and we believe it to be unstable.
+net-im/pidgin   zephyr
