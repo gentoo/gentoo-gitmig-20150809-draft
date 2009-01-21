@@ -1,9 +1,0 @@
-diff -uprN strongswan-4.1.9.orig/src/starter/Makefile.am strongswan-4.1.9/src/starter/Makefile.am
---- strongswan-4.1.9.orig/src/starter/Makefile.am	2007-11-06 12:37:59.000000000 +0100
-+++ strongswan-4.1.9/src/starter/Makefile.am	2007-12-14 21:29:01.000000000 +0100
-@@ -31,4 +31,4 @@ defs.o:		$(PLUTODIR)/defs.c $(PLUTODIR)/
- 		$(COMPILE) -c -o $@ $<
- 
- install-exec-local :
--		test -e "$(DESTDIR)$(sysconfdir)/ipsec.conf" || $(INSTALL) ipsec.conf $(DESTDIR)$(sysconfdir)/ipsec.conf
-+		test -e "$(DESTDIR)$(sysconfdir)/ipsec.conf" || $(INSTALL) -D ipsec.conf $(DESTDIR)$(sysconfdir)/ipsec.conf
