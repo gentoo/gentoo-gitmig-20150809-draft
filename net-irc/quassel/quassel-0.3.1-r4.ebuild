@@ -1,91 +1,90 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.3.1-r1.ebuild,v 1.1 2008/11/28 21:11:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.3.1-r4.ebuild,v 1.1 2009/01/21 08:39:39 jokey Exp $
 
-EAPI=1
+EAPI="2"
 
 inherit cmake-utils eutils
 
-MY_P="${P/_/-}"
-
-DESCRIPTION="Core/client IRC client."
+DESCRIPTION="Qt4/KDE4 IRC client suppporting a remote daemon for 24/7 connectivity."
 HOMEPAGE="http://quassel-irc.org/"
-SRC_URI="http://quassel-irc.org/pub/${MY_P}.tar.bz2"
+SRC_URI="http://quassel-irc.org/pub/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="+dbus debug +server +ssl +X"
+IUSE="dbus debug monolithic +server +ssl +X"
 
 LANGS="nb_NO da de fr ru"
 for l in ${LANGS}; do
 	IUSE="${IUSE} linguas_${l}"
 done
 
-RDEPEND="x11-libs/qt-core:4
+RDEPEND="
+	x11-libs/qt-core:4
+	dbus? ( x11-libs/qt-dbus:4 )
+	monolithic? (
+		x11-libs/qt-sql:4[sqlite]
+		x11-libs/qt-script:4
+		x11-libs/qt-gui:4
+		x11-libs/qt-webkit:4
+	)
+	!monolithic? (
 		server? (
-			x11-libs/qt-sql:4
+			x11-libs/qt-sql:4[sqlite]
 			x11-libs/qt-script:4
 		)
 		X? (
 			x11-libs/qt-gui:4
-			x11-libs/qt-webkit:4 )
-		dbus? ( x11-libs/qt-dbus:4 )
-		ssl? ( dev-libs/openssl )"
+			x11-libs/qt-webkit:4
+		)
+	)
+	ssl? (
+		dev-libs/openssl
+		x11-libs/qt-core:4[ssl]
+	)
+	"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.6"
 
 DOCS="AUTHORS ChangeLog README"
 
-S=${WORKDIR}/${MY_P}
-
 pkg_setup() {
-	if ! use server && ! use X ; then
-		eerror "You have to build one or both of quassel client or server."
-		die "Both server and X USE flags unset."
-	fi
-
-	if use server && ! built_with_use x11-libs/qt-sql sqlite ; then
-		eerror "Please rebuild x11-libs/qt-sql:4 with sqlite USE flag enabled."
-		die "Missing sqlite support in x11-libs/qt-sql:4"
-	fi
-
-	if use ssl && ! built_with_use x11-libs/qt-core ssl ; then
-		eerror "Please rebuild x11-libs/qt-core:4 with ssl USE flag enabled."
-		die "Missing ssl support in x11-libs/qt-core:4"
+	if ! use monolithic && ! use server && ! use X ; then
+		eerror "You have to build at least one of the monolithic client (USE=monolithic),"
+		eerror "the quasselclient (USE=X) or the quasselcore (USE=server)."
+		die "monolithic, server and X flag unset."
 	fi
 }
 
-src_compile() {
-# Comment this out and invoke _common_configure_code, cmake and cmake-utils_src_make
-# manually until cmake-utils.eclass supports space separated strings as arguments for cmake
-# options. Until now multiple languages are not passed to -DLINGUAS and only the first
+src_configure() {
+# Comment this out and invoke _common_configure_code and cmake manually until cmake-utils.eclass
+# supports space separated strings as arguments for cmake options or quassel changes the
+# separator. Until now multiple languages are not passed to -DLINGUAS and only the first
 # language is considered.
-#
-#	local mycmakeargs=(
-#		"$(cmake-utils_use_want server CORE)"
-#		"$(cmake-utils_use_want X QTCLIENT)"
-#		"$(cmake-utils_use_with dbus DBUS)"
-#		"$(cmake-utils_use_with ssl OPENSSL)"
-#		"-DLINGUAS=\"${LINGUAS}\""
-#		'-DWANT_MONO=OFF' )
-#
-#	cmake-utils_src_compile
+	local mycmakeargs="$(cmake-utils_use_want server CORE)
+		$(cmake-utils_use_want X QTCLIENT)
+		$(cmake-utils_use_want monolithic MONO)
+		$(cmake-utils_use_with X WEBKIT)
+		$(cmake-utils_use_with dbus DBUS)
+		$(cmake-utils_use_with ssl OPENSSL)
+		-DOXYGEN_ICONS=Builtin
+		-DQUASSEL_ICONS=Builtin"
 
 	_common_configure_code
 
-	cmake -C "${TMPDIR}/gentoo_common_config.cmake" \
-		$(cmake-utils_use_want server CORE) $(cmake-utils_use_want X QTCLIENT) \
-		$(cmake-utils_use_with X WEBKIT) $(cmake-utils_use_with dbus DBUS) \
-		$(cmake-utils_use_with ssl OPENSSL) -DLINGUAS="${LINGUAS}" \
-		-DOXYGEN_ICONS=Builtin -DLINGUAS="${LINGUAS}" -DWANT_MONO=OFF \
-		"${S}" || die "Cmake failed"
+	mkdir -p "${WORKDIR}"/${PN}_build
+	pushd "${WORKDIR}"/${PN}_build > /dev/null
 
-	cmake-utils_src_make
+	cmake -C "${TMPDIR}/gentoo_common_config.cmake" \
+		${mycmakeargs} \
+		-DLINGUAS="${LINGUAS}" \
+		"${S}" || die "Cmake failed"
 }
 
 src_install() {
 	cmake-utils_src_install
+
 	if use server ; then
 		newinitd "${FILESDIR}"/quasselcore.init quasselcore || die "newinitd failed"
 		newconfd "${FILESDIR}"/quasselcore.conf quasselcore || die "newconfd failed"
@@ -110,7 +109,7 @@ pkg_postinst() {
 		elog "Please make sure that the quasselcore is stopped before adding more users."
 	fi
 
-	if use server && use ssl ; then
+	if ( use server || use monolithic ) && use ssl ; then
 		elog
 		elog "To enable SSL support for client/core connections the quasselcore needs"
 		elog "a PEM certificate which needs to be stored in ~/.quassel/quasselCert.pem."

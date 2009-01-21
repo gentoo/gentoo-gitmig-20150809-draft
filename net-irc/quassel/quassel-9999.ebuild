@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.16 2009/01/19 00:27:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.17 2009/01/21 08:39:39 jokey Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit cmake-utils eutils git
 EGIT_REPO_URI="git://git.quassel-irc.org/quassel.git"
 EGIT_BRANCH="master"
 
-DESCRIPTION="Core/client IRC client."
+DESCRIPTION="Qt4/KDE4 IRC client suppporting a remote daemon for 24/7 connectivity."
 HOMEPAGE="http://quassel-irc.org/"
 
 LICENSE="GPL-3"
@@ -94,7 +94,6 @@ src_configure() {
 		${mycmakeargs} \
 		-DLINGUAS="${LINGUAS}" \
 		"${S}" || die "Cmake failed"
-
 }
 
 src_install() {
