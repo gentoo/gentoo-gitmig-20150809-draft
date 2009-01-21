@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.13.ebuild,v 1.1 2009/01/21 00:44:52 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.13.ebuild,v 1.2 2009/01/21 11:09:18 mescalinum Exp $
 
 inherit eutils gnome2
 
@@ -21,9 +21,9 @@ DEPEND="sys-apps/dbus
 		gnome-base/libglade
 		gnome-base/gnome-keyring
 		gnome-base/gnome-common
-		~app-pda/synce-libsynce-${PV}
-		~app-pda/synce-librra-${PV}
-		~app-pda/synce-librapi2-${PV}
+		=app-pda/synce-libsynce-${PV}*
+		=app-pda/synce-librra-${PV}*
+		=app-pda/synce-librapi2-${PV}*
 		>=app-pda/orange-0.3.2"
 RDEPEND="${DEPEND}"
 

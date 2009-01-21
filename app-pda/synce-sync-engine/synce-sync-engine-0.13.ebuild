@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.13.ebuild,v 1.2 2009/01/21 00:47:23 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.13.ebuild,v 1.3 2009/01/21 11:07:50 mescalinum Exp $
 
 inherit eutils distutils
 
@@ -17,13 +17,13 @@ RDEPEND="dev-python/pygobject
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-python/pyxml
-	~app-pda/synce-librra-${PV}
+	=app-pda/synce-librra-${PV}*
 	~app-pda/synce-librtfcomp-1.1"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
 SRC_URI="mirror://sourceforge/synce/sync-engine-${PV}.tar.gz"
-S=${WORKDIR}/sync-engine-${PV}
+S="${WORKDIR}/sync-engine-${PV}"
 
 src_install() {
 	DOCS="CHANGELOG COPYING"

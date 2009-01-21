@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/synce-hal-0.13.ebuild,v 1.1 2009/01/21 00:58:16 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/synce-hal-0.13.ebuild,v 1.2 2009/01/21 11:06:13 mescalinum Exp $
 
 DESCRIPTION="SynCE - hal connection manager"
 HOMEPAGE="http://sourceforge.net/projects/synce/"
@@ -14,11 +14,11 @@ DEPEND="sys-apps/hal
 		!app-pda/synce-dccm
 		!app-pda/synce-vdccm
 		!app-pda/synce-odccm
-		~app-pda/synce-libsynce-${PV}
-		~app-pda/synce-librapi2-${PV}
-		~app-pda/synce-librra-${PV}"
+		=app-pda/synce-libsynce-${PV}*
+		=app-pda/synce-librapi2-${PV}*
+		=app-pda/synce-librra-${PV}*"
 RDEPEND="${DEPEND}
-		~app-pda/synce-sync-engine-${PV}
+		=app-pda/synce-sync-engine-${PV}*
 		app-pda/synce-serial
 		net-misc/dhcp"
 
