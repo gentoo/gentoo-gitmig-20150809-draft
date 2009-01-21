@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.39 2009/01/05 23:09:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.40 2009/01/21 20:22:45 jer Exp $
+
+  21 Jan 2009; Jeroen Roovers <jer@gentoo.org> quota-3.15.ebuild:
+  Stable for HPPA (bug #247651).
 
 *quota-3.17 (05 Jan 2009)
 
