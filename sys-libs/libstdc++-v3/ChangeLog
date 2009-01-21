@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstdc++-v3
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.53 2008/11/06 17:22:14 jer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.54 2009/01/21 15:17:52 gmsoft Exp $
+
+  21 Jan 2009; Guy Martin <gmsoft@gentoo.org> libstdc++-v3-3.3.6.ebuild:
+  hppa stable
 
   06 Nov 2008; Jeroen Roovers <jer@gentoo.org> libstdc++-v3-3.3.6.ebuild:
   Marked ~hppa too. Thanks to LuckyLuke for testing.

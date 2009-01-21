@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.17 2008/11/06 17:22:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.18 2009/01/21 15:17:52 gmsoft Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -125,7 +125,7 @@ HOMEPAGE="http://gcc.gnu.org/libstdc++/"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="amd64 ~hppa ~mips ppc -ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ~mips ppc -ppc64 sparc x86 ~x86-fbsd"
 IUSE="multilib nls nptl build"
 
 # 3.2.3 -> 3.3.x install .so.5, so lets slot to 5
