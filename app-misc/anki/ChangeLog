@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.7 2009/01/16 18:19:30 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.8 2009/01/21 21:27:11 hncaldwell Exp $
+
+*anki-0.9.9.6 (21 Jan 2009)
+
+  21 Jan 2009; Heath Caldwell <hncaldwell@gentoo.org> metadata.xml,
+  -anki-0.9.8.5.ebuild, -anki-0.9.8.6.ebuild, -anki-0.9.9.3.ebuild,
+  +anki-0.9.9.6.ebuild:
+  Version bump. Added recording use flag for new audio recording feature.
+  Removed some old versions.
 
   16 Jan 2009; Heath Caldwell <hncaldwell@gentoo.org> metadata.xml:
   Removed latex use flag description it metadata.xml.
