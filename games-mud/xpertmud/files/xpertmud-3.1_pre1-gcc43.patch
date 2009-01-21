@@ -1,0 +1,13 @@
+--- xpertmud/scripting/python/createCallbacks.py.old    2009-01-21 13:38:10.000000000 +0100
++++ xpertmud/scripting/python/createCallbacks.py        2009-01-21 13:38:27.000000000 +0100
+@@ -116,7 +116,7 @@
+       q%s = QString((QChar*)NULL, %sLen);
+       Py_UNICODE* p%s = PyUnicode_AS_UNICODE(%sUni);
+       for(int i=0; i<%sLen; ++i) {
+-        q%s.ref(i) = QChar(p%s[i]);
++        q%s.ref(i) = QChar((uint)p%s[i]);
+       }
+     }
+ """ % (name, name, name, name, name, name, name, name, name, name, name, name, name, name, 
+name, name)
+
