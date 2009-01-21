@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/squeezecenter
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.35 2008/12/20 01:24:43 lavajoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.36 2009/01/21 17:52:58 lavajoe Exp $
+
+*squeezecenter-7.3.1 (21 Jan 2009)
+
+  21 Jan 2009; Joe Peterson <lavajoe@gentoo.org>
+  +files/squeezecenter-7.3.1-aac-transcode-gentoo.patch,
+  +files/squeezecenter-7.3.1-build-perl-modules-gentoo.patch,
+  +files/squeezecenter-7.3.1-json-xs-gentoo.patch, metadata.xml,
+  +squeezecenter-7.3.1.ebuild:
+  Add new version 7.3.1
 
 *squeezecenter-7.3.0 (20 Dec 2008)
 
