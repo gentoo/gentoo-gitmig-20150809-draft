@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.74 2009/01/17 14:29:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.75 2009/01/21 20:25:35 jer Exp $
+
+  21 Jan 2009; Jeroen Roovers <jer@gentoo.org> gpm-1.20.5.ebuild:
+  Stable for HPPA (bug #253354).
 
   17 Jan 2009; Raúl Porcel <armin76@gentoo.org> gpm-1.20.5.ebuild:
   alpha/ia64/sparc stable wrt #253354
