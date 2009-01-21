@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.1 2008/10/18 13:15:20 spock Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.2 2009/01/21 14:29:31 spock Exp $
+
+*nvidia-cuda-toolkit-2.1 (21 Jan 2009)
+
+  21 Jan 2009; Michał Januszewski <spock@gentoo.org>
+  +nvidia-cuda-toolkit-2.1.ebuild:
+  Version bump (bug #255128).
 
 *nvidia-cuda-toolkit-2.0 (18 Oct 2008)
 
