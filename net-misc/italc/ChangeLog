@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/italc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.12 2009/01/19 21:46:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/ChangeLog,v 1.13 2009/01/21 22:24:13 maekke Exp $
+
+  21 Jan 2009; Markus Meier <maekke@gentoo.org> italc-1.0.3-r1.ebuild:
+  amd64/x86 stable, bug #248038
 
 *italc-1.0.3-r1 (19 Jan 2009)
 
