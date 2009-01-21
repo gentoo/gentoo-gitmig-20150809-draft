@@ -1,0 +1,16 @@
+Author: pva@gentoo.org
+Fixes bug http://bugs.gentoo.org/show_bug.cgi?id=254496
+
+=== modified file 'extensions/libxt_hashlimit.c'
+--- extensions/libxt_hashlimit.c	2009-01-21 18:23:22 +0000
++++ extensions/libxt_hashlimit.c	2009-01-21 18:23:32 +0000
+@@ -636,7 +636,7 @@
+ 	if (info->cfg.max != 0)
+ 		printf("--hashlimit-htable-max %u ", info->cfg.max);
+ 	if (info->cfg.gc_interval != XT_HASHLIMIT_GCINTERVAL)
+-		printf("--hashlimit-htable-gcinterval %u", info->cfg.gc_interval);
++		printf("--hashlimit-htable-gcinterval %u ", info->cfg.gc_interval);
+ 	if (info->cfg.expire != XT_HASHLIMIT_EXPIRE)
+ 		printf("--hashlimit-htable-expire %u ", info->cfg.expire);
+ 
+

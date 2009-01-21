@@ -1,0 +1,40 @@
+From: Thomas Jarosch <thomas.jarosch@intra2net.com>
+Date: Thu, 23 Oct 2008 13:40:52 +0000 (+0200)
+Subject: Fix compile error in libxt_iprange.c using gcc 4.3.2
+X-Git-Tag: v1.4.3-rc1~12
+X-Git-Url: https://git.netfilter.org/cgi-bin/gitweb.cgi?p=iptables.git;a=commitdiff_plain;h=240eee607ab7e5bb9f671b7ceba40e2940182f61
+
+Fix compile error in libxt_iprange.c using gcc 4.3.2
+
+In file included from libxt_iprange.c:9:
+../include/linux/netfilter.h:43: error: field 'in' has incomplete type
+../include/linux/netfilter.h:44: error: field 'in6' has incomplete type
+libxt_iprange.c: In function 'parse_iprange':
+libxt_iprange.c:46: error: dereferencing pointer to incomplete type
+libxt_iprange.c:53: error: dereferencing pointer to incomplete type
+libxt_iprange.c: In function 'iprange_mt4_parse':
+libxt_iprange.c:117: error: dereferencing pointer to incomplete type
+libxt_iprange.c:121: error: dereferencing pointer to incomplete type
+libxt_iprange.c:136: error: dereferencing pointer to incomplete type
+libxt_iprange.c:140: error: dereferencing pointer to incomplete type
+libxt_iprange.c: In function 'iprange_mt6_parse':
+libxt_iprange.c:167: error: dereferencing pointer to incomplete type
+libxt_iprange.c:171: error: dereferencing pointer to incomplete type
+libxt_iprange.c:186: error: dereferencing pointer to incomplete type
+libxt_iprange.c:190: error: dereferencing pointer to incomplete type
+
+Signed-off-by: Thomas Jarosch <thomas.jarosch@intra2net.com>
+---
+
+diff --git a/extensions/libxt_iprange.c b/extensions/libxt_iprange.c
+index 503372f..ee87a6f 100644
+--- a/extensions/libxt_iprange.c
++++ b/extensions/libxt_iprange.c
+@@ -5,6 +5,7 @@
+ #include <stdlib.h>
+ #include <getopt.h>
+ 
++#include <netinet/in.h>
+ #include <xtables.h>
+ #include <linux/netfilter.h>
+ #include <linux/netfilter/xt_iprange.h>
