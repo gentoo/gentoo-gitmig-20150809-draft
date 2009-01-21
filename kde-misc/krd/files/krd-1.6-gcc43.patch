@@ -1,0 +1,14 @@
+diff -ur krd-orig/src/main.cpp krd/src/main.cpp
+--- krd-orig/src/main.cpp	2009-01-20 17:47:53.000000000 -0500
++++ krd/src/main.cpp	2009-01-20 17:48:02.000000000 -0500
+@@ -11,7 +11,8 @@
+ #include <kcmdlineargs.h>
+ #include <klocale.h>
+ #include "krd_main_form.h"
+-#include <iostream.h>
++#include <iostream>
++using std::cout;
+ /*
+ #include <libintl.h>*/
+ 
+
