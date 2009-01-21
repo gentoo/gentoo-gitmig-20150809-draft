@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.28 2009/01/20 14:55:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.29 2009/01/21 08:52:46 vapier Exp $
 
 EAPI="2"
 
@@ -60,6 +60,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 			>=app-emulation/emul-linux-x86-xlibs-2.1
 			>=app-emulation/emul-linux-x86-soundlibs-2.1
 		)
+		app-emulation/emul-linux-x86-baselibs
 		>=sys-kernel/linux-headers-2.6
 	)"
 DEPEND="${RDEPEND}
