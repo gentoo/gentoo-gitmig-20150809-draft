@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-BufferedSelect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-BufferedSelect/ChangeLog,v 1.5 2009/01/21 15:54:20 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-BufferedSelect/ChangeLog,v 1.6 2009/01/21 19:19:21 hncaldwell Exp $
+
+  21 Jan 2009; Heath Caldwell <hncaldwell@gentoo.org> metadata.xml,
+  IO-BufferedSelect-1.0.ebuild:
+  Added explicit RDEPEND and taking over maintainership.
 
   21 Jan 2009; Ferris McCormick <fmccor@gentoo.org>
   IO-BufferedSelect-1.0.ebuild:
