@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4146 2009/01/21 16:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4147 2009/01/21 18:07:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1438,6 +1438,7 @@ media-sound/sonic-visualiser:id3tag - Enables ID3 tagging with id3tag library
 media-sound/sox:amrnb - Enables Adaptive Multi-Rate Audio support (Narrow Band)
 media-sound/sox:amrwb - Enables Adaptive Multi-Rate Audio support (Wide Band)
 media-sound/sox:id3tag - Enables ID3 tagging with id3tag library
+media-sound/squeezecenter:aac - Enable playback support for AAC (.m4a) encoded files
 media-sound/squeezecenter:alac - Enable support for alac
 media-sound/squeezecenter:bonjour - Enable support for bonjour
 media-sound/transkode:amarok - Build Amarok script
