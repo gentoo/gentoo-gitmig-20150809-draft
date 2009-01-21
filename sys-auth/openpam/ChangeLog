@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/openpam
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.12 2008/06/10 19:04:34 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.13 2009/01/21 22:30:26 aballier Exp $
+
+  21 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  -files/openpam-20050201-gentoo.patch, -openpam-20050616.ebuild,
+  -openpam-20050616-r1.ebuild, -openpam-20050616-r2.ebuild:
+  remove old
 
   10 Jun 2008; Alexis Ballier <aballier@gentoo.org> openpam-20071221.ebuild:
   keyword ~sparc-fbsd
