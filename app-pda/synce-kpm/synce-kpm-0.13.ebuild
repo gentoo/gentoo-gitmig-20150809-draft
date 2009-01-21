@@ -1,12 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kpm/synce-kpm-0.13.ebuild,v 1.2 2009/01/21 11:17:52 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kpm/synce-kpm-0.13.ebuild,v 1.3 2009/01/21 11:46:33 mescalinum Exp $
 
-inherit distutils
+inherit distutils versionator
 
 DESCRIPTION="The KDE (and Gnome) PDA Manager is an application to manage WM5/WM6 PDA devices from Linux."
 HOMEPAGE="http://www.guidodiepen.nl/category/synce/"
 LICENSE="GPL-2"
+
+synce_PV=$(get_version_component_range 1-2)
 
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
@@ -18,8 +20,8 @@ RDEPEND="dev-python/pygobject
 		dev-libs/libxml2
 		dev-libs/libxslt
 		dev-python/pyxml
-		=app-pda/synce-hal-${PV}*
-		=app-pda/synce-librra-${PV}*
+		=app-pda/synce-hal-${synce_PV}*
+		=app-pda/synce-librra-${synce_PV}*
 		~app-pda/synce-librtfcomp-1.1
 		dev-python/PyQt4"
 DEPEND="${RDEPEND}
