@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.20 2009/01/21 18:01:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.21 2009/01/21 19:32:49 jer Exp $
+
+  21 Jan 2009; Jeroen Roovers <jer@gentoo.org> xcb-proto-1.1.ebuild:
+  Stable for HPPA (bug #244210).
 
   21 Jan 2009; Ferris McCormick <fmccor@gentoo.org> xcb-proto-1.1.ebuild:
   Sparc stable, Bug #244210.
