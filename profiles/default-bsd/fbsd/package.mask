@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.23 2008/10/18 19:27:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/package.mask,v 1.24 2009/01/21 21:45:38 aballier Exp $
 
 # As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
 # used to limit usage of unsupported packages.
@@ -12,7 +12,6 @@
 >=app-accessibility/dasher-4.7
 >=app-accessibility/gnome-mag-0.15.0
 >=app-crypt/seahorse-2.22
->=gnome-base/libgtop-2.22
 >=x11-themes/gtk-engines-2.14
 >=x11-libs/libwnck-2.22
 >=x11-themes/gnome-backgrounds-2.22
