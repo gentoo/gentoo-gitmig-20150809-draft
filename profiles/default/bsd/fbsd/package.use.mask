@@ -70,6 +70,7 @@ www-client/epiphany spell
 # GNU attr isn't supported
 =app-editors/gedit-2.18* acl
 =app-editors/gedit-2.20* xattr
+dev-libs/glib xattr
 
 # Joe Peterson <lavajoe@gentoo.org> (21 Nov 2007)
 # The following new swig USE flags are not supported (yet):
