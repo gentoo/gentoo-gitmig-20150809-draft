@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/tuxpaint
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.49 2008/12/21 15:24:39 maekke Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.50 2009/01/21 23:13:09 maekke Exp $
+
+  21 Jan 2009; Markus Meier <maekke@gentoo.org> tuxpaint-0.9.20.ebuild:
+  remove svg USE-flag, as disabling it is broken. media-libs/sdl-image needs
+  to be built with png support, bug #255529
 
 *tuxpaint-0.9.20 (21 Dec 2008)
 

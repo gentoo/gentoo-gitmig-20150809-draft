@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.20.ebuild,v 1.1 2008/12/21 15:24:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.20.ebuild,v 1.2 2009/01/21 23:13:09 maekke Exp $
+
+EAPI="2"
 
 inherit eutils gnome2-utils multilib toolchain-funcs
 
@@ -12,25 +14,22 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="nls svg"
+IUSE="nls"
 
-DEPEND="media-libs/libsdl
-	media-libs/sdl-image
-	media-libs/sdl-ttf
-	media-libs/sdl-mixer
-	media-libs/sdl-pango
+DEPEND="
+	app-text/libpaper
+	gnome-base/librsvg
 	>=media-libs/libpng-1.2
 	>=media-libs/freetype-2
-	app-text/libpaper
-	nls? ( sys-devel/gettext )
-	svg? (
-		gnome-base/librsvg
-		x11-libs/cairo )"
+	media-libs/libsdl
+	media-libs/sdl-image[png]
+	media-libs/sdl-mixer
+	media-libs/sdl-pango
+	media-libs/sdl-ttf
+	x11-libs/cairo
+	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Sanitize the Makefile and correct a few other issues.
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	sed -i -e "s|linux_PREFIX:=/usr/local|linux_PREFIX:=/usr|" Makefile || die
@@ -43,7 +42,6 @@ src_compile() {
 	local myopts=""
 
 	use nls && myopts="${myopts} ENABLE_GETTEXT=1"
-	use svg || myopts="${myopts} nosvg"
 
 	# emake may break things
 	make CC="$(tc-getCC)" ${myopts} || die "Compilation failed"
