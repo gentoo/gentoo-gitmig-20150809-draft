@@ -1,6 +1,9 @@
 # ChangeLog for app-text/t1utils
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.35 2008/04/08 06:37:01 jer Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.36 2009/01/21 15:49:06 fmccor Exp $
+
+  21 Jan 2009; Ferris McCormick <fmccor@gentoo.org> t1utils-1.34.ebuild:
+  Sparc stable, Bug #255739.
 
   08 Apr 2008; Jeroen Roovers <jer@gentoo.org> t1utils-1.32.ebuild:
   Stable for HPPA (bug #215735).
