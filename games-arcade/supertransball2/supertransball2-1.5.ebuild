@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/supertransball2-1.5.ebuild,v 1.2 2007/04/24 15:14:45 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/supertransball2-1.5.ebuild,v 1.3 2009/01/21 19:20:15 mr_bones_ Exp $
 
 inherit eutils versionator games
 
@@ -40,14 +40,12 @@ src_unpack() {
 
 	local deb_dir=${P}/debian/patches
 	rm -f "${deb_dir}"/00list
-	local p
-	for p in "${deb_dir}"/* ; do
-		epatch "${p}"
-	done
+	epatch "${deb_dir}"/*
 
 	sed -i \
 		-e "s: -I/usr/local/include/SDL::" \
 		-e "s:-g3 -O3:\$(CXXFLAGS):" \
+		-e "s:c++:\$(CXX):" \
 		"${S}"/Makefile || die "sed Makefile failed"
 }
 

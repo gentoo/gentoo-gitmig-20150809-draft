@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/supertransball2
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/ChangeLog,v 1.2 2007/04/24 15:14:45 drizzt Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/ChangeLog,v 1.3 2009/01/21 19:20:15 mr_bones_ Exp $
+
+  21 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  supertransball2-1.5.ebuild:
+  epatch takes a list and use the c++ from toolchain
 
   24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org>
   supertransball2-1.5.ebuild:
