@@ -35,7 +35,6 @@ media-video/totem bluetooth nvtv tracker
 
 # Gilles Dartiguelongue <eva@gentoo.org> (29 Oct 2007)
 mail-client/evolution pda
-=gnome-base/gnome-vfs-2.20.0-r1 acl
 gnome-base/gnome-applets apm
 
 # Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
