@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/synce-trayicon
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/ChangeLog,v 1.18 2008/11/13 06:32:47 mescalinum Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/ChangeLog,v 1.19 2009/01/21 00:44:52 mescalinum Exp $
+
+*synce-trayicon-0.13 (21 Jan 2009)
+
+  21 Jan 2009; Federico Ferri <mescalinum@gentoo.org>
+  +synce-trayicon-0.13.ebuild:
+  version bump, bug #254886
 
 *synce-trayicon-0.12 (13 Nov 2008)
 *synce-trayicon-0.11 (13 Nov 2008)
