@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxf86config
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.25 2009/01/19 11:15:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.26 2009/01/21 22:05:01 aballier Exp $
+
+  21 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  +files/0.3.34-bsdmake.patch, pyxf86config-0.3.34-r2.ebuild:
+  Fix build with make=bsd make and keyword ~x86-fbsd, bug #236775
 
   19 Jan 2009; Raúl Porcel <armin76@gentoo.org>
   pyxf86config-0.3.34-r2.ebuild:
