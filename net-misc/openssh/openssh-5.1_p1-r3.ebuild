@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.1_p1-r3.ebuild,v 1.1 2009/01/09 02:37:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.1_p1-r3.ebuild,v 1.2 2009/01/21 05:04:51 darkside Exp $
 
 inherit eutils flag-o-matic ccc multilib autotools pam
 
@@ -95,6 +95,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-null-banner.patch #244222
 	epatch "${FILESDIR}"/${P}-escaped-banner.patch #244222
 	epatch "${FILESDIR}"/${P}-better-ssp-check.patch
+
+	# Disable PATH reset, trust what portage gives us. bug 254615
+	sed -i -e 's:^PATH=/:#PATH=/:' configure || die
 
 	eautoreconf
 }
