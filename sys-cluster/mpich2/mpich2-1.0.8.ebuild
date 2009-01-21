@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.2 2009/01/19 00:27:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.3 2009/01/21 18:56:27 jsbronder Exp $
 
 EAPI=1
 inherit python eutils fortran
@@ -84,6 +84,9 @@ src_unpack() {
 		-e "s,@MPIEXEC@,${S}/bin/mpiexec,g" \
 		$(find ./test/ -name 'Makefile.in') || die
 
+	# 254167, I'm pretty sure they meant srcdir in the path to remove files.
+	sed -i 's:scrdir:srcdir:g' "${S}"/src/pm/mpd/Makefile.in || die
+
 	if ! use romio; then
 		# These tests in errhan/ rely on MPI::File ...which is in romio
 		echo "" > test/mpi/errors/cxx/errhan/testlist
@@ -127,6 +130,7 @@ src_compile() {
 
 	c="${c} --sysconfdir=/etc/${PN}"
 	econf ${c} ${romio_conf} \
+		--docdir=/usr/share/doc/${PF} \
 		--with-pm=mpd:gforker \
 		--disable-mpe \
 		$(use_enable romio) \
