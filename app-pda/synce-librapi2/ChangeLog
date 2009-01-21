@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/synce-librapi2
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.28 2009/01/21 11:22:26 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.29 2009/01/21 11:27:43 mescalinum Exp $
+
+*synce-librapi2-0.13.1 (21 Jan 2009)
+
+  21 Jan 2009; Federico Ferri <mescalinum@gentoo.org>
+  +synce-librapi2-0.13.1.ebuild:
+  version bump, fixes bug #255729
 
   21 Jan 2009; Federico Ferri <mescalinum@gentoo.org>
   synce-librapi2-0.13.ebuild:
