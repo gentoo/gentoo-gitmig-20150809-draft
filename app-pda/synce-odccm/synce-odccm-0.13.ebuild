@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-odccm/synce-odccm-0.13.ebuild,v 1.1 2009/01/21 00:37:32 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-odccm/synce-odccm-0.13.ebuild,v 1.2 2009/01/21 11:16:04 mescalinum Exp $
 
 DESCRIPTION="SynCE - odccm connection manager"
 HOMEPAGE="http://sourceforge.net/projects/synce/"
@@ -14,8 +14,8 @@ DEPEND="sys-apps/dbus
 		>=net-libs/gnet-2.0.0
 		!app-pda/synce-dccm
 		!app-pda/synce-vdccm
-		~app-pda/synce-libsynce-${PV}
-		~app-pda/synce-librapi2-${PV}"
+		=app-pda/synce-libsynce-${PV}*
+		=app-pda/synce-librapi2-${PV}*"
 RDEPEND="${DEPEND}"
 
 MY_P="odccm-${PV}"

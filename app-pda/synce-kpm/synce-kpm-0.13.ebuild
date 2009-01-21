@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kpm/synce-kpm-0.13.ebuild,v 1.1 2009/01/21 00:34:55 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kpm/synce-kpm-0.13.ebuild,v 1.2 2009/01/21 11:17:52 mescalinum Exp $
 
 inherit distutils
 
@@ -18,8 +18,8 @@ RDEPEND="dev-python/pygobject
 		dev-libs/libxml2
 		dev-libs/libxslt
 		dev-python/pyxml
-		>=app-pda/synce-hal-0.1
-		~app-pda/synce-librra-${PV}
+		=app-pda/synce-hal-${PV}*
+		=app-pda/synce-librra-${PV}*
 		~app-pda/synce-librtfcomp-1.1
 		dev-python/PyQt4"
 DEPEND="${RDEPEND}
