@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/frozen-bubble
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.36 2009/01/11 17:50:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/ChangeLog,v 1.37 2009/01/21 18:11:54 jer Exp $
+
+  21 Jan 2009; Jeroen Roovers <jer@gentoo.org> frozen-bubble-2.2.0.ebuild:
+  Stable for HPPA (bug #254357).
 
   11 Jan 2009; Raúl Porcel <armin76@gentoo.org> frozen-bubble-2.2.0.ebuild:
   ia64/x86 stable wrt #254357
