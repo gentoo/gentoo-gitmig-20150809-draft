@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.130 2009/01/05 01:24:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.131 2009/01/21 19:03:53 mr_bones_ Exp $
 
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -8,7 +8,7 @@
 # you better have a *good* reason why you're *not* using games.eclass
 # in a games-* ebuild
 
-inherit base multilib eutils
+inherit base multilib toolchain-funcs eutils
 
 case ${EAPI:-0} in
 	0|1) EXPORT_FUNCTIONS pkg_setup src_compile pkg_preinst pkg_postinst ;;
@@ -113,6 +113,7 @@ gamesenv() {
 }
 
 games_pkg_setup() {
+	tc-export CC CXX
 	[[ ${GAMES_CHECK_LICENSE} == "yes" ]] && check_license ${LICENSE}
 
 	# Make sure SDL was built in a certain way
