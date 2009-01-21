@@ -1,12 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.4.ebuild,v 1.3 2009/01/20 13:26:15 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.4.ebuild,v 1.4 2009/01/21 01:12:51 tester Exp $
 
 EAPI=2
 
-WANT_AUTOMAKE="1.9"
-
-inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2 autotools
+inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://pidgin.im/"
