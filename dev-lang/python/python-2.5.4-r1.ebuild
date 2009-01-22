@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4.ebuild,v 1.2 2009/01/21 17:27:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r1.ebuild,v 1.1 2009/01/22 01:13:20 neurogeek Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -23,7 +23,7 @@ DESCRIPTION="Python is an interpreted, interactive, object-oriented programming
 language."
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
-	mirror://gentoo/python-gentoo-patches-${PV}.tar.bz2"
+		 mirror://gentoo/python-gentoo-patches-${PV}.tar.bz2"
 
 LICENSE="PSF-2.2"
 SLOT="2.5"
@@ -37,15 +37,15 @@ IUSE="+xml ncurses gdbm ssl readline tk berkdb ipv6 build ucs2 sqlite doc
 
 DEPEND=">=sys-libs/zlib-1.1.3
 		!build? (
-				sqlite? ( >=dev-db/sqlite-3 )
-				tk? ( >=dev-lang/tk-8.0 )
-				ncurses? ( >=sys-libs/ncurses-5.2
-					readline? ( >=sys-libs/readline-4.1 ) )
-				berkdb? ( || ( sys-libs/db:4.5 sys-libs/db:4.4 sys-libs/db:4.3
-								sys-libs/db:4.2 ) )
-				gdbm? ( sys-libs/gdbm )
-				ssl? ( dev-libs/openssl )
-				doc? ( dev-python/python-docs:2.5 )
+			sqlite? ( >=dev-db/sqlite-3 )
+			tk? ( >=dev-lang/tk-8.0 )
+			ncurses? ( >=sys-libs/ncurses-5.2
+						readline? ( >=sys-libs/readline-4.1 ) )
+			berkdb? ( || ( sys-libs/db:4.5 sys-libs/db:4.4 sys-libs/db:4.3
+							sys-libs/db:4.2 ) )
+			gdbm? ( sys-libs/gdbm )
+			ssl? ( dev-libs/openssl )
+			doc? ( dev-python/python-docs:2.5 )
 		xml? ( dev-libs/expat )
 	)"
 
@@ -112,10 +112,12 @@ _curses_panel _tkinter _sqlite3"
 		export PYTHON_DISABLE_MODULES="${disable}"
 	fi
 
-	use xml ||
+	if use !xml; then
+		${PYTHON_DISABLE_MODULES}="${PYTHON_DISABLE_MODULES} pyexpat"
 		ewarn "You have configured Python without XML support."
 		ewarn "This is NOT a recommended configuration as you"
 		ewarn "may face problems parsing any XML documents."
+	fi
 
 	einfo "Disabled modules: $PYTHON_DISABLE_MODULES"
 }
@@ -342,3 +344,4 @@ emerge:"
 	elog "cd /usr/lib/python${PYVER}/test"
 	elog "and run the tests separately."
 }
+
