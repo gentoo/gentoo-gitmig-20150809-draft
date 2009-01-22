@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20070314.ebuild,v 1.13 2008/11/02 00:02:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20070314.ebuild,v 1.14 2009/01/22 23:19:06 battousai Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
@@ -146,18 +146,18 @@ kernel_setup() {
 set_vidcards() {
 	if use kernel_linux; then
 		set_kvobj
-		I810_VIDCARDS="i810.${KV_OBJ} i830.${KV_OBJ} i915.${KV_OBJ}"
+		INTEL_VIDCARDS="i810.${KV_OBJ} i830.${KV_OBJ} i915.${KV_OBJ}"
 	elif use kernel_FreeBSD; then
 		KV_OBJ="ko"
 		# bsd does not have i810/i830, only i915:
-		I810_VIDCARDS="i915.${KV_OBJ}"
+		INTEL_VIDCARDS="i915.${KV_OBJ}"
 	fi
 
 	VIDCARDS=""
 
 	if [[ -n "${VIDEO_CARDS}" ]]; then
 		use video_cards_intel && \
-			VIDCARDS="${VIDCARDS} ${I810_VIDCARDS}"
+			VIDCARDS="${VIDCARDS} ${INTEL_VIDCARDS}"
 		use video_cards_mach64 && \
 			VIDCARDS="${VIDCARDS} mach64.${KV_OBJ}"
 		use video_cards_mga && \

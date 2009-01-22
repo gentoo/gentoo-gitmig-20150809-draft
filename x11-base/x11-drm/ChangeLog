@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/x11-drm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.67 2008/11/02 00:02:58 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.68 2009/01/22 23:19:06 battousai Exp $
+
+  22 Jan 2009; Bryan D. Stine <battousai@gentoo.org>
+  -x11-drm-20060608.ebuild, -x11-drm-20060608-r1.ebuild,
+  x11-drm-20070314.ebuild, x11-drm-20071019.ebuild, x11-drm-20080710.ebuild:
+  Push 20080710 patchball 0.5, restoring compatibility with kernel 2.6.28.
+  Dropped old 20060608 snapshot. Rename I810_VIDCARDS to INTEL_VIDCARDS for
+  consistency. 20080710-0.5 fixes bug #255956.
 
   02 Nov 2008; Markus Meier <maekke@gentoo.org> x11-drm-20070314.ebuild:
   amd64/x86 stable, bug #237876
