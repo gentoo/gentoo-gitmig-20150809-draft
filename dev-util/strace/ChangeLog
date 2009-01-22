@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.129 2008/11/11 20:41:04 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.130 2009/01/22 17:20:07 jer Exp $
+
+  22 Jan 2009; Jeroen Roovers <jer@gentoo.org> strace-4.5.18.ebuild:
+  Reverting to ~hppa (bug #250631, reopening bug #241168).
 
   11 Nov 2008; Raúl Porcel <armin76@gentoo.org> strace-4.5.18.ebuild:
   Revert, since it seems to fail
