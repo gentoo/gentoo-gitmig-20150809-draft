@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.17-r1.ebuild,v 1.9 2008/12/22 16:31:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.17-r1.ebuild,v 1.10 2009/01/22 23:13:12 chainsaw Exp $
 
 inherit libtool autotools eutils flag-o-matic
 

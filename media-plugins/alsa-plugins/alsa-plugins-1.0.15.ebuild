@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.15.ebuild,v 1.3 2008/12/21 15:20:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.15.ebuild,v 1.4 2009/01/22 23:13:12 chainsaw Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
