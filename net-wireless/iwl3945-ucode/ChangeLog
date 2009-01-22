@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/iwl3945-ucode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl3945-ucode/ChangeLog,v 1.6 2009/01/15 22:05:18 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl3945-ucode/ChangeLog,v 1.7 2009/01/22 10:45:13 pva Exp $
+
+*iwl3945-ucode-15.28.2.8 (22 Jan 2009)
+*iwl3945-ucode-15.28.1.8 (22 Jan 2009)
+
+  22 Jan 2009; Peter Volkov <pva@gentoo.org> metadata.xml,
+  +iwl3945-ucode-15.28.1.8.ebuild, +iwl3945-ucode-15.28.2.8.ebuild:
+  Version bump, bug #246045, thank Tim Harder for report. Added 15.28.2.8
+  version, thank PaX Team for report. Took maintaining.
 
   15 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
   Compnerd retired.
