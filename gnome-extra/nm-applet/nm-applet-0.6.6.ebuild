@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.6.ebuild,v 1.4 2008/08/17 16:15:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.6.ebuild,v 1.5 2009/01/22 16:25:44 pva Exp $
 
 inherit gnome2 eutils
 
@@ -27,7 +27,7 @@ RDEPEND=">=sys-apps/dbus-0.60
 	>=x11-libs/gtk+-2.10
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-keyring-0.4
-	>=gnome-base/gnome-panel-2
+	|| ( >=gnome-base/gnome-panel-2 xfce-base/xfce4-panel )
 	>=gnome-base/gconf-2
 	>=gnome-base/libgnomeui-2"
 DEPEND="${RDEPEND}

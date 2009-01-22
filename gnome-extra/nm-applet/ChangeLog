@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/nm-applet
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.21 2008/12/05 13:27:03 rbu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.22 2009/01/22 16:25:44 pva Exp $
+
+  22 Jan 2009; Peter Volkov <pva@gentoo.org> nm-applet-0.6.5.ebuild,
+  nm-applet-0.6.6.ebuild, nm-applet-0.7.0.ebuild:
+  Added xfce-base/xfce4-panel as alternative for gnome-panel, but I really
+  vote to remove this dep, see bug #246023.
 
 *nm-applet-0.7.0 (05 Dec 2008)
 
