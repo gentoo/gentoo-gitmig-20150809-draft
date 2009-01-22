@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall6-lite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.1 2009/01/22 08:44:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.2 2009/01/22 17:29:58 pva Exp $
+
+  22 Jan 2009; Peter Volkov <pva@gentoo.org> shorewall6-lite-4.2.4.1.ebuild:
+  Fixed iptables dependency, bug #255437, as always... thank Vieri for all
+  work.
 
 *shorewall6-lite-4.2.4.1 (22 Jan 2009)
 
