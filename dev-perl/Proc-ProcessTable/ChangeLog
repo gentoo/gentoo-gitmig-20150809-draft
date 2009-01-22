@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Proc-ProcessTable
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/ChangeLog,v 1.38 2008/09/15 19:20:56 tove Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-ProcessTable/ChangeLog,v 1.39 2009/01/22 19:42:18 fmccor Exp $
+
+  22 Jan 2009; Ferris McCormick <fmccor@gentoo.org>
+  Proc-ProcessTable-0.45.ebuild:
+  Sparc stable --- Bug #256007 --- 'All tests successful.'
 
   15 Sep 2008; Torsten Veller <tove@gentoo.org>
   -Proc-ProcessTable-0.39.ebuild, -Proc-ProcessTable-0.40.ebuild:
