@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kexec-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.21 2008/12/18 01:06:31 dsd Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.22 2009/01/22 05:33:35 darkside Exp $
+
+  22 Jan 2009; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  update metedata.xml - I'll maintain this
 
 *kexec-tools-1.101-r6 (18 Dec 2008)
 
