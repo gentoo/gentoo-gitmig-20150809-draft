@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/glest
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.21 2008/11/01 12:40:22 pauldv Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.22 2009/01/22 18:53:35 mr_bones_ Exp $
+
+  22 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> glest-3.1.2.ebuild:
+  transition to the non-no* use flags in libsdl
 
   01 Nov 2008; Paul de Vrieze <pauldv@gentoo.org> glest-3.1.2.ebuild:
   Glest actually depends on xerces-c (really doesn't run or build without

@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.1.2.ebuild,v 1.4 2008/11/01 12:40:22 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.1.2.ebuild,v 1.5 2009/01/22 18:53:35 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 L_URI="http://www.glest.org/files/contrib/translations"
@@ -23,7 +24,7 @@ KEYWORDS="~amd64 -ppc ~x86" # ppc: bug #145478
 IUSE="linguas_pt_BR linguas_cs linguas_de linguas_hu linguas_no linguas_ru
 linguas_tr"
 
-RDEPEND="media-libs/libsdl
+RDEPEND="|| ( media-libs/libsdl[joystick] <media-libs/libsdl-1.2.13-r1 )
 	media-libs/libogg
 	media-libs/libvorbis
 	media-libs/openal
@@ -40,10 +41,7 @@ S="${WORKDIR}"/${PN}-source-${PV}
 
 GAMES_USE_SDL="nojoystick"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-{home,gcc43}.patch
 
@@ -61,13 +59,15 @@ src_unpack() {
 	sed -i 's:-O3 -g3::' Jamrules || die "sed Jamrules failed"
 }
 
-src_compile() {
+src_configure() {
 	# Fails with wx enabled, bug #130011
 	egamesconf \
 		--with-vorbis=/usr \
 		--with-ogg=/usr \
-		--with-wx-config=disabled_wx \
-		|| die
+		--with-wx-config=disabled_wx
+}
+
+src_compile() {
 	jam -q || die "jam failed"
 }
 
