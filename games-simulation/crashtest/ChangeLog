@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/crashtest
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/ChangeLog,v 1.4 2008/11/14 18:43:38 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/ChangeLog,v 1.5 2009/01/22 20:21:06 mr_bones_ Exp $
+
+  22 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  files/crashtest-1.0-gentoo.patch, crashtest-1.0.ebuild:
+  EAPI=2; re-roll patch; work around for bug #237135
 
   14 Nov 2008; Santiago M. Mola <coldwind@gentoo.org> crashtest-1.0.ebuild:
   Restrict fltk dependency to SLOT 1.1 (bug #246445).
