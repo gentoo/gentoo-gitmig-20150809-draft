@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.10.ebuild,v 1.6 2009/01/22 09:13:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.12.ebuild,v 1.1 2009/01/22 09:13:05 hanno Exp $
 
-inherit eutils fdo-mime flag-o-matic
+inherit eutils fdo-mime
 
 DESCRIPTION="Taxbird provides a GUI to submit tax forms to the german digital tax project ELSTER."
 HOMEPAGE="http://www.taxbird.de/"
-
 SRC_URI="http://www.taxbird.de/download/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -28,14 +27,8 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
-	econf || die "Configure failed!"
-	emake || die "Make failed!"
-}
-
 src_install() {
-
-	dodoc README*
+	dodoc README* || die "dodoc failed"
 
 	einstall || die "Installation failed!"
 
