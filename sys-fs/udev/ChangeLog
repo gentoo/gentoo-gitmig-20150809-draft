@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.439 2009/01/22 11:18:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.440 2009/01/22 11:41:37 zzam Exp $
+
+  22 Jan 2009; Matthias Schwarzott <zzam@gentoo.org> files/136/udev.confd,
+  files/136/udev.initd:
+  Add expert options to change udevsettle timeout and to run udevmonitor at
+  boot time to catch all events.
 
   22 Jan 2009; Matthias Schwarzott <zzam@gentoo.org> udev-9999.ebuild:
   Also set HOMEPAGE after inherit, Bug #255953.

@@ -90,11 +90,37 @@ populate_dev()
 	eend $?
 
 	ebegin "Waiting for uevents to be processed"
-	udevadm settle --timeout=60
+	udevadm settle --timeout=${udev_settle_timeout:-60}
 	eend $?
 
 	udevadm control --env do_not_run_plug_service=
 	return 0
+}
+
+# for debugging
+start_udevmonitor()
+{
+	yesno "${udev_monitor:-no}" || return 0
+
+	udevmonitor_log=/dev/.udev/udevmonitor.log
+	udevmonitor_pid=/dev/.udev/udevmonitor.pid
+
+	einfo "udev: Running udevadm monitor ${udev_monitor_opts} to get a log of all events"
+	start-stop-daemon --start --stdout "${udevmonitor_log}" \
+		--make-pidfile --pidfile "${udevmonitor_pid}" \
+		--background --exec /sbin/udevadm -- monitor ${udev_monitor_opts}
+}
+
+stop_udevmonitor()
+{
+	yesno "${udev_monitor:-no}" || return 0
+
+	if yesno "${udev_monitor_keep_running:-no}"; then
+		ewarn "udev: udevmonitor is still running and writing into ${udevmonitor_log}"
+	else
+		einfo "udev: Stopping udevmonitor: Log is in ${udevmonitor_log}"
+		start-stop-daemon --stop --pidfile "${udevmonitor_pid}" --exec /sbin/udevadm
+	fi
 }
 
 display_hotplugged_services() {
@@ -191,11 +217,13 @@ _start()
 	
 	disable_hotplug_agent
 	start_udevd || cleanup
+	start_udevmonitor
 	populate_dev || cleanup
 
 	check_persistent_net
 
 	check_udev_works || cleanup
+	stop_udevmonitor
 
 	return 0
 }
