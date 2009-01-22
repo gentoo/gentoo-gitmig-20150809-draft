@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-wxwidgets
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.34 2009/01/22 12:43:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.35 2009/01/22 12:49:52 armin76 Exp $
+
+  22 Jan 2009; Raúl Porcel <armin76@gentoo.org>
+  eselect-wxwidgets-0.8.ebuild:
+  arm/sh stable, since its just an eselect script
 
   22 Jan 2009; Raúl Porcel <armin76@gentoo.org>
   eselect-wxwidgets-0.8.ebuild:
