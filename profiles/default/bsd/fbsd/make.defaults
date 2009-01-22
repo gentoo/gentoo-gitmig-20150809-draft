@@ -1,6 +1,6 @@
 # Copyright 2004-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.1 2009/01/19 22:15:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.2 2009/01/22 20:10:07 the_paya Exp $
 
 FEATURES="-sandbox"
 
@@ -12,8 +12,9 @@ MAKE="gmake"
 
 USE="berkdb crypt ipv6 ncurses nls pam perl python readline ssl tcpd zlib"
 
-# Don't enable ipv6 because it can create trouble sto who have only IPv4
-USE="${USE} -ipv6"
+# Javier Villavicencio <the_paya@gentoo.org> (22 Jan 2009)
+# Enabled again for testing.
+# USE="${USE} -ipv6"
 
 # 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: Support direct rendering by default

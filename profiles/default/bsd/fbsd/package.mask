@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.2 2009/01/21 21:45:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.3 2009/01/22 20:10:07 the_paya Exp $
 
 # As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
 # used to limit usage of unsupported packages.
@@ -109,3 +109,7 @@ dev-util/byacc
 
 # revdep-rebuild is broken for g/fbsd in this version
 =app-portage/gentoolkit-0.2.4_pre6
+
+# Javier Villavicencio <the_paya@gentoo.org> (22 Jan 2009)
+# We are the bleeding edge here.
+->=sys-apps/portage-2.2_pre

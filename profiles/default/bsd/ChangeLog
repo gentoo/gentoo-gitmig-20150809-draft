@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.8 2009/01/22 09:40:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.9 2009/01/22 20:10:06 the_paya Exp $
+
+  22 Jan 2009; Javier Villavicencio <the_paya@gentoo.org>
+  fbsd/make.defaults, fbsd/package.mask, package.use.force:
+  Remove a few masks and force zlib and bzip2 on libarchive.
 
   22 Jan 2009; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   usemask links[livecd] since it requires gpm
