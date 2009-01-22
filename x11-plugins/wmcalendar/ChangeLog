@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmcalendar
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/ChangeLog,v 1.17 2008/11/17 23:10:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/ChangeLog,v 1.18 2009/01/22 15:47:56 s4t4n Exp $
+
+  22 Jan 2009; Michele Noberasco <s4t4n@gentoo.org> wmcalendar-0.5.2.ebuild,
+  +files/wmcalendar-0.5.2-rename_kill_func.patch:
+  Added patch to rename internal 'kill' function that on some
+  setups conflicts with glibc definition. No point in creating a new
+  package revision since the change is really trivial. Closes bug #248626.
+  -files/wmcalendar-0.5.0.makefile.patch, -files/wmcalendar-0.5.0-gcc4.patch:
+  Removed old, unused, stale patches.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/wmcalendar-0.5.0.makefile.patch:
