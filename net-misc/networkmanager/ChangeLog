@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/networkmanager
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.36 2008/12/18 18:38:03 rbu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.37 2009/01/22 16:29:17 pva Exp $
+
+  22 Jan 2009; Peter Volkov <pva@gentoo.org>
+  networkmanager-0.6.5_p20070823.ebuild, networkmanager-0.6.6.ebuild:
+  Added xfce-base/xfce4-panel as alternative for gnome-panel, but I really
+  vote to remove this dep, see bug #246023.
 
   18 Dec 2008; Robert Buchholz <rbu@gentoo.org> networkmanager-0.7.0.ebuild:
   Correct postinst output, bug #250858.

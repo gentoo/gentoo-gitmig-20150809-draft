@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5_p20070823.ebuild,v 1.9 2008/06/26 14:10:20 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.5_p20070823.ebuild,v 1.10 2009/01/22 16:29:17 pva Exp $
 
 inherit gnome2 eutils
 
@@ -30,7 +30,7 @@ RDEPEND=">=sys-apps/dbus-0.60
 	gnome? ( >=x11-libs/gtk+-2.8
 		>=gnome-base/libglade-2
 		>=gnome-base/gnome-keyring-0.4
-		>=gnome-base/gnome-panel-2
+		|| ( >=gnome-base/gnome-panel-2 xfce-base/xfce4-panel )
 		>=gnome-base/gconf-2
 		>=gnome-base/libgnomeui-2 )
 	crypt? ( dev-libs/libgcrypt )"
