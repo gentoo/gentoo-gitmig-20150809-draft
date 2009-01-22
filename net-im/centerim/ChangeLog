@@ -1,6 +1,12 @@
 # ChangeLog for net-im/centerim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.27 2009/01/10 16:21:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.28 2009/01/22 17:51:06 swegener Exp $
+
+*centerim-4.22.6-r1 (22 Jan 2009)
+
+  22 Jan 2009; Sven Wegener <swegener@gentoo.org>
+  +centerim-4.22.6-r1.ebuild:
+  EAPI-2 support, IUSE defaults and USE dependencies, bug #254756.
 
   10 Jan 2009; Markus Meier <maekke@gentoo.org> centerim-4.22.6.ebuild:
   amd64/x86 stable, bug #254019
