@@ -1,0 +1,58 @@
+--- acinclude.m4
++++ acinclude.m4
+@@ -83,7 +83,6 @@
+ AC_DEFUN([RVL_PYGTK], [
+ 	PKG_CHECK_MODULES(PYGTK, [pygtk-2.0 >= 2.8.0])
+ 	PKG_CHECK_MODULES(GNOME_PYTHON, [gnome-python-2.0 >= 2.10.0])
+-	PKG_CHECK_MODULES(GNOME_PYTHON_EXTRAS, [gnome-python-extras-2.0 >= 2.10.0])
+ 
+ 	AC_PATH_PROG(PYGTK_CODEGEN, pygtk-codegen-2.0, no)
+ 
+--- configure.ac
++++ configure.ac
+@@ -12,6 +12,7 @@
+ 
+ dnl check for dependencies
+ AC_PROG_CC()
++AC_PROG_LIBTOOL
+ 
+ RVL_PYTHON_PATH(2.3)
+ RVL_PYGTK()
+--- src/wrap/crack/crack.c
++++ src/wrap/crack/crack.c
+@@ -24,8 +24,6 @@
+ 
+ #define FILENAME_MAXLEN 512
+ 
+-static char DEFAULT_DICTPATH[] = "/usr/local/share/revelation/pwdict";
+-
+ static char crack_FascistCheck_doc [] =
+ 	"arguments: passwd, dictpath (optional)\n"
+ 	"\n"
+--- src/wrap/crack/Makefile.am
++++ src/wrap/crack/Makefile.am
+@@ -5,19 +5,9 @@
+ # $Id: revelation-0.4.11-build.patch,v 1.1 2009/01/22 18:12:53 nyhm Exp $
+ #
+ 
+-module_PROGRAMS	= crack.so
+ moduledir	= $(pyexecdir)/revelation
+-CLEANFILES	= crack.c
+-EXTRA_DIST	= crack.c.in
+-
+-crack.c: crack.c.in
+-	sed \
+-		-e "s|\@CRACK_DICTPATH\@|@CRACK_DICTPATH@|" \
+-		crack.c.in >crack.c
+-
+-crack.o: crack.c
+-	$(CC) -pthread -fno-strict-aliasing -fPIC -I${PYTHON_INCLUDE} -c crack.c -o crack.o
+-
+-crack.so: crack.o
+-	$(CC) -Wl --export-dynamic -pthread -shared crack.o -lcrack -o crack.so
+-
++module_LTLIBRARIES	= crack.la
++crack_la_SOURCES	= crack.c
++crack_la_CFLAGS	= -Wall
++crack_la_CPPFLAGS	= -I$(PYTHON_INCLUDE) -DDEFAULT_DICTPATH="\"$(CRACK_DICTPATH)\""
++crack_la_LDFLAGS	= -module

@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/revelation
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.11 2008/10/05 23:16:42 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.12 2009/01/22 18:12:53 nyhm Exp $
+
+*revelation-0.4.11-r2 (22 Jan 2009)
+
+  22 Jan 2009; Tristan Heaven <nyhm@gentoo.org>
+  +files/revelation-0.4.11-build.patch, +revelation-0.4.11-r2.ebuild:
+  Depend on the split gnome-python packages, bug #248786; respect
+  CFLAGS/LDFLAGS
 
 *revelation-0.4.11-r1 (05 Oct 2008)
 
