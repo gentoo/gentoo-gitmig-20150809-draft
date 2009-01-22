@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4149 2009/01/21 23:07:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4150 2009/01/22 21:07:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2518,15 +2518,15 @@ sys-devel/gcc-nios2:multislot - Allow for SLOTs to include minor version (3.3.4 
 sys-devel/gdb:multitarget - Support all known targets in one gdb binary
 sys-devel/kgcc64:multislot - Allow for SLOTs to include minor version (eg. 3.3.4 instead of just 3.3)
 sys-devel/libperl:ithreads - Enable Perl threads, has some compatibility problems
-sys-freebsd/freebsd-lib:gpib - Enable gpib support (TODO improve description)
-sys-freebsd/freebsd-lib:hesiod - Enable hesiod support
+sys-freebsd/freebsd-lib:gpib - Enable General Purpose Interface Bus support
+sys-freebsd/freebsd-lib:hesiod - Enable support for net-dns/hesiod
 sys-freebsd/freebsd-sbin:ipfilter - Enable ipfilter firewall support
 sys-freebsd/freebsd-sbin:vinum - Enable vinum support (TODO improve description)
 sys-freebsd/freebsd-share:isdn - Enable ISDN support
-sys-freebsd/freebsd-usbin:ipfilter - Enable ipfilter firewall support
-sys-freebsd/freebsd-usbin:ipsec - Enable IPSec support
-sys-freebsd/freebsd-usbin:isdn - Enable ISDN support
-sys-freebsd/freebsd-usbin:nat - Enable Network Address Translation support
+sys-freebsd/freebsd-usbin:ipfilter - Enable building of ipfilter firewall support.
+sys-freebsd/freebsd-usbin:ipsec - Enable IPSec support.
+sys-freebsd/freebsd-usbin:isdn - Enable ISDN support.
+sys-freebsd/freebsd-usbin:nat - Enable Network Address Translation support daemon.
 sys-fs/cryptsetup:dynamic - Build cryptsetup dynamically
 sys-fs/ecryptfs-utils:gpg - Enable app-crypt/gnupg key module
 sys-fs/ecryptfs-utils:openssl - Enable dev-libs/openssl key module
