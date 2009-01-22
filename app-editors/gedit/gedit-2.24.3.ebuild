@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.24.3.ebuild,v 1.1 2009/01/13 23:49:47 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.24.3.ebuild,v 1.2 2009/01/22 00:08:51 eva Exp $
 
 inherit gnome2 python eutils autotools
 
@@ -75,6 +75,7 @@ src_unpack() {
 	# needed to build on a libtool-1 system, bug #248788
 	rm m4/lt* m4/libtool.m4 ltmain.sh
 
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.256 2009/01/13 23:49:47 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.257 2009/01/22 00:08:51 eva Exp $
+
+  22 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org> gedit-2.24.2.ebuild,
+  gedit-2.24.3.ebuild:
+  Fix missing locales, bug #255155.
 
 *gedit-2.24.3 (13 Jan 2009)
 
