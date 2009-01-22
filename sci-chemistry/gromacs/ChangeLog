@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.32 2009/01/04 01:04:00 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.33 2009/01/22 04:14:36 je_fro Exp $
+
+  22 Jan 2009; Jeff Gardner <je_fro@gentoo.org> +gromacs-4.0.3.ebuild:
+  Latest version.
 
 *gromacs-4.0.2 (04 Jan 2009)
 

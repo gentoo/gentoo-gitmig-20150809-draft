@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.3.ebuild,v 1.1 2008/10/06 02:08:34 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-3.3.3.ebuild,v 1.2 2009/01/22 04:14:36 je_fro Exp $
 EAPI="1"
 LIBTOOLIZE="true"
 inherit autotools eutils flag-o-matic fortran multilib
@@ -31,6 +31,8 @@ DEPEND=">=sci-libs/fftw-3.0.1
 	lapack? ( virtual/lapack )
 	mpi? ( virtual/mpi )
 	xml? ( dev-libs/libxml2 )"
+
+RDEPEND="${DEPEND}"
 
 FORTRAN="g77 gfortran ifc"
 
