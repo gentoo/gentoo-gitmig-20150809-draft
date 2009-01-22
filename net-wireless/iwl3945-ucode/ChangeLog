@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/iwl3945-ucode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl3945-ucode/ChangeLog,v 1.7 2009/01/22 10:45:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl3945-ucode/ChangeLog,v 1.8 2009/01/22 18:03:17 pva Exp $
+
+  22 Jan 2009; Peter Volkov <pva@gentoo.org> iwl3945-ucode-15.28.1.8.ebuild,
+  iwl3945-ucode-15.28.2.8.ebuild:
+  Slotted 15.28.2.8 since it's useful to have both ucodes installed at the
+  same time. Added warnings about kernel compatibilities, thank PaX Team and
+  Robert Förster for help in bug #246045.
 
 *iwl3945-ucode-15.28.2.8 (22 Jan 2009)
 *iwl3945-ucode-15.28.1.8 (22 Jan 2009)
