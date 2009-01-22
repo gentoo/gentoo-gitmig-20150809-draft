@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-2.0.9.1.ebuild,v 1.1 2008/02/15 01:51:15 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-2.0.9.1.ebuild,v 1.2 2009/01/22 10:20:48 tupone Exp $
 
 inherit eutils versionator games
 
@@ -18,6 +18,12 @@ DEPEND=">=dev-libs/DirectFB-1
 	media-libs/FusionSound"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"

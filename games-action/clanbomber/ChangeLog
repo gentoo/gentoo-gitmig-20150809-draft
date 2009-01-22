@@ -1,6 +1,11 @@
 # ChangeLog for games-action/clanbomber
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.9 2008/02/15 01:51:15 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.10 2009/01/22 10:20:48 tupone Exp $
+
+  22 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/clanbomber-2.0.9.1-gcc43.patch, clanbomber-2.0.9.1.ebuild:
+  Fix gcc-4.3 bug #227937 by Evil Compile Person
+  Fix build with dev-libs/DirectFb-1*
 
 *clanbomber-2.0.9.1 (15 Feb 2008)
 
