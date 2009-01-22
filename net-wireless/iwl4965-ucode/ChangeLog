@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iwl4965-ucode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.14 2009/01/22 11:57:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.15 2009/01/22 18:20:25 pva Exp $
+
+  22 Jan 2009; Peter Volkov <pva@gentoo.org>
+  iwl4965-ucode-228.57.2.21.ebuild, iwl4965-ucode-228.57.2.23.ebuild:
+  As it was suggested by PaX Team in bug #246045 die was bad idea. So merely
+  warn user instead.
 
   22 Jan 2009; Peter Volkov <pva@gentoo.org> metadata.xml,
   iwl4965-ucode-228.57.2.21.ebuild, iwl4965-ucode-228.57.2.23.ebuild:
