@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-0.1.1.20081023.ebuild,v 1.2 2009/01/21 14:53:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-0.1.1.20081023.ebuild,v 1.3 2009/01/22 12:08:12 matsuu Exp $
 
 EAPI="1"
 inherit autotools eutils multilib python
@@ -16,14 +16,12 @@ IUSE="nls qt4"
 
 RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2
+	>=gnome-base/librsvg-2
 	dev-libs/dbus-glib
-	qt4? ( || (
-		(
-			>=x11-libs/qt-core-4.4:4
-			>=x11-libs/qt-dbus-4.4:4
-		)
-		>=x11-libs/qt-4.4:4
-	) )
+	qt4? (
+		>=x11-libs/qt-core-4.4:4
+		>=x11-libs/qt-dbus-4.4:4
+	)
 	app-text/iso-codes
 	x11-libs/libX11
 	>=dev-lang/python-2.5
