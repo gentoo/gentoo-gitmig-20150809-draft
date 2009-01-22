@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-1.101-r6.ebuild,v 1.1 2008/12/18 01:06:31 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-1.101-r7.ebuild,v 1.1 2009/01/22 13:59:21 darkside Exp $
 
 inherit eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 
 src_compile() {
 	econf $(use_with zlib) || die "econf failed"
+	sed -i -e 's/=-Wall/+=-Wall/' Makefile.conf || die
 	emake || die "emake failed"
 }
 

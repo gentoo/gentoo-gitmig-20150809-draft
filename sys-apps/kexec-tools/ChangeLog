@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.23 2009/01/22 13:40:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.24 2009/01/22 13:59:21 darkside Exp $
+
+*kexec-tools-1.101-r7 (22 Jan 2009)
+
+  22 Jan 2009; Jeremy Olexa <darkside@gentoo.org>
+  -kexec-tools-1.101-r6.ebuild, +kexec-tools-1.101-r7.ebuild:
+  Respect user CFLAGS, bug 241994
 
   22 Jan 2009; Jeremy Olexa <darkside@gentoo.org> kexec-tools-9999.ebuild:
   Fix git URL, bug 239512
