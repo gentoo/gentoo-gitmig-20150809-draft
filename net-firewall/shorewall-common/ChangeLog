@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/shorewall-common
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/ChangeLog,v 1.20 2008/11/21 11:27:33 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/ChangeLog,v 1.21 2009/01/22 08:17:45 pva Exp $
+
+*shorewall-common-4.2.4 (22 Jan 2009)
+*shorewall-common-4.0.15 (22 Jan 2009)
+
+  22 Jan 2009; Peter Volkov <pva@gentoo.org>
+  +shorewall-common-4.0.15.ebuild, +shorewall-common-4.2.4.ebuild:
+  Version bump, bug #255437, thank Vieri for all work.
 
 *shorewall-common-4.2.1 (21 Nov 2008)
 *shorewall-common-4.0.14.2 (21 Nov 2008)
