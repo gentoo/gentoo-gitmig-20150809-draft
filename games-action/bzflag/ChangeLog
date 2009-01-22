@@ -1,6 +1,9 @@
 # ChangeLog for games-action/bzflag
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.41 2009/01/20 15:59:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.42 2009/01/22 21:10:46 mr_bones_ Exp $
+
+  22 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> bzflag-2.0.12.ebuild:
+  transition to the non-no* use flags in libsdl
 
   20 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> bzflag-2.0.12.ebuild:
   ares support for curl doesn't seem to be required (bug #255601)
