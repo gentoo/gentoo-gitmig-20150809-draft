@@ -1,24 +1,10 @@
-# /etc/conf.d/nfs
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/nfs.confd,v 1.1 2006/04/01 16:43:51 flameeyes Exp $
-
 # Config file for /etc/init.d/nfs
+# Options for nfsd (see man nfsd)
+# Example: 8 nfsd servers started:
+#nfsdopts="-n 8"
 
-# If you wish to set the port numbers for lockd,
-# please see /etc/sysctl.conf
-
-# Number of servers to be started up by default
-RPCNFSDCOUNT=8
-
-# Options to pass to rpc.mountd
-# ex. RPCMOUNTDOPTS="-p 32767
-RPCMOUNTDOPTS=""
-
-# Options to pass to rpc.statd
-# ex. RPCSTATDOPTS="-p 32765 -o 32766"
-RPCSTATDOPTS=""
-
-# Options to pass to rpc.idmapd
-RPCIDMAPDOPTS=""
-
-# Timeout (in seconds) for exportfs
-EXPORTFSTIMEOUT=30
+# Options for mountd (see man mountd)
+# Example: allow non-root users to mount shares:
+#mountdopts="-n"
+# Specify t he exports file, this is the default:
+#exportsfile="/etc/exports"

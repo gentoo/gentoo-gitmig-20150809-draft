@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>bsd</herd>
 <use>
-	<flag name='gpib'>Enable gpib support (TODO improve description)</flag>
-	<flag name='hesiod'>Enable hesiod support</flag>
+    <flag name='gpib'>Enable General Purpose Interface Bus support</flag>
+    <flag name='hesiod'>Enable support for net-dns/hesiod</flag>
 </use>
 </pkgmetadata>

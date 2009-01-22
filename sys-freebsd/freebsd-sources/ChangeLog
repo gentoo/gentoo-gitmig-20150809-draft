@@ -1,6 +1,19 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.44 2009/01/08 18:35:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.45 2009/01/22 21:05:47 the_paya Exp $
+
+*freebsd-sources-7.1 (22 Jan 2009)
+
+  22 Jan 2009; Javier Villavicencio <the_paya@gentoo.org>
+  +files/freebsd-sources-7.0-gentoo.patch,
+  +files/freebsd-sources-7.0-tmpfs_whiteout_stub.patch,
+  +files/freebsd-sources-7.0-werror.patch,
+  +files/freebsd-sources-7.1-asm.patch,
+  +files/freebsd-sources-7.1-binutils_link.patch,
+  +files/freebsd-sources-7.1-sparc64.patch,
+  +files/freebsd-sources-7.1-subnet-route-pr40133.patch,
+  +files/freebsd-sources-7.1-types.h-fix.patch, +freebsd-sources-7.1.ebuild:
+  Import 7.1 ebuilds from gentoo-bsd overlay.
 
 *freebsd-sources-6.2-r5 (08 Jan 2009)
 

@@ -3,9 +3,9 @@
 <pkgmetadata>
 <herd>bsd</herd>
 <use>
-	<flag name='ipfilter'>Enable ipfilter firewall support</flag>
-	<flag name='ipsec'>Enable IPSec support</flag>
-	<flag name='isdn'>Enable ISDN support</flag>
-	<flag name='nat'>Enable Network Address Translation support</flag>
+    <flag name='ipfilter'>Enable building of ipfilter firewall support.</flag>
+    <flag name='ipsec'>Enable IPSec support.</flag>
+    <flag name='isdn'>Enable ISDN support.</flag>
+    <flag name='nat'>Enable Network Address Translation support daemon.</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-pam-modules
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.22 2009/01/08 21:21:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.23 2009/01/22 21:03:18 the_paya Exp $
+
+*freebsd-pam-modules-7.1 (22 Jan 2009)
+
+  22 Jan 2009; Javier Villavicencio <the_paya@gentoo.org>
+  +files/README.pamd, +freebsd-pam-modules-7.1.ebuild:
+  Import 7.1 ebuilds from gentoo-bsd overlay.
 
   08 Jan 2009; Alexis Ballier <aballier@gentoo.org>
   -freebsd-pam-modules-6.2.ebuild:

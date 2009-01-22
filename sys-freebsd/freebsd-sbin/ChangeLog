@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.46 2009/01/08 20:02:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.47 2009/01/22 21:04:48 the_paya Exp $
+
+*freebsd-sbin-7.1 (22 Jan 2009)
+
+  22 Jan 2009; Javier Villavicencio <the_paya@gentoo.org>
+  +files/freebsd-sbin-7.1-zlib.patch, +files/idmapd.initd,
+  +freebsd-sbin-7.1.ebuild:
+  Import 7.1 ebuilds from gentoo-bsd overlay.
 
   08 Jan 2009; Alexis Ballier <aballier@gentoo.org>
   freebsd-sbin-6.2-r2.ebuild:

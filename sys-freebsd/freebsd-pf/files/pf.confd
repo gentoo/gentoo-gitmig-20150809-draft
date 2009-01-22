@@ -1,10 +1,9 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/files/pf.confd,v 1.1 2006/04/14 15:26:29 flameeyes Exp $
 
 # Defines where the rules file is found, by default /etc/pf.conf
-PF_RULES_FILE=/etc/pf.conf
+# pf_conf=/etc/pf.conf
 
 # Extra options to pass to pfctl when loading the rules
 # See pfctl(8)
-# PF_OPTS=
+# pf_args=
