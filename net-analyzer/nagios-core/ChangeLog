@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nagios-core
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.135 2008/12/02 17:48:30 dertobi123 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.136 2009/01/22 17:00:59 dertobi123 Exp $
+
+*nagios-core-3.0.6-r1 (22 Jan 2009)
+
+  22 Jan 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/lighttpd_nagios3-r1.conf, -nagios-core-3.0.6.ebuild,
+  +nagios-core-3.0.6-r1.ebuild:
+  Require mod_alias in lighttpd config, #191675
 
 *nagios-core-3.0.6 (02 Dec 2008)
 

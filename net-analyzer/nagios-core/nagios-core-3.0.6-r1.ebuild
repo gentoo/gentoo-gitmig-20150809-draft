@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.6.ebuild,v 1.1 2008/12/02 17:48:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.6-r1.ebuild,v 1.1 2009/01/22 17:00:59 dertobi123 Exp $
 
 EAPI="1"
 
@@ -123,7 +123,7 @@ src_install() {
 			doins "${FILESDIR}"/99_nagios3.conf
 	    elif use lighttpd ; then
 			insinto /etc/lighttpd
-			newins "${FILESDIR}/lighttpd_nagios3.conf" nagios.conf
+			newins "${FILESDIR}/lighttpd_nagios3-r1.conf" nagios.conf
 		else
 			ewarn "${CATEGORY}/${PF} only supports Apache-2.x or Lighttpd webserver"
 			ewarn "out-of-the-box. Since you are not using one of them, you"
