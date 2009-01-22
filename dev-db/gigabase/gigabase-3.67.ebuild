@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.67.ebuild,v 1.3 2008/12/31 17:45:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.67.ebuild,v 1.4 2009/01/22 08:21:40 pva Exp $
 
 inherit eutils multilib
 
@@ -12,6 +12,7 @@ SLOT="0"
 KEYWORDS="amd64 s390 x86"
 IUSE="doc"
 DEPEND=""
+RDEPEND=""
 
 S=${WORKDIR}/gigabase
 

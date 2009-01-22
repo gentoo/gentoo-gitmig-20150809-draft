@@ -1,27 +1,28 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.66.ebuild,v 1.2 2008/10/09 20:29:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.68.ebuild,v 1.1 2009/01/22 08:21:40 pva Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="OO-DBMS with interfaces for C/C++/Java/PHP/Perl"
 HOMEPAGE="http://www.garret.ru/~knizhnik/gigabase.html"
 SRC_URI="mirror://sourceforge/gigabase/${P}.tar.gz"
+
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~s390 x86"
+KEYWORDS="~amd64 ~s390 ~x86"
 IUSE="doc"
+
 DEPEND=""
+RDEPEND=""
 
 S=${WORKDIR}/gigabase
 
 src_compile() {
 	mf="${S}/Makefile"
 
-	econf || die "econf failed"
-
+	econf
 	sed -r -i -e 's/subsql([^\.]|$)/subsql-gdb\1/' ${mf}
-
 	emake || die "compilation failed"
 }
 
@@ -36,9 +37,4 @@ src_install() {
 pkg_postinst() {
 	elog "The subsql binary has been renamed to subsql-gdb,"
 	elog "to avoid a name clash with the FastDB version of subsql"
-	echo
-	ewarn "Content of indices created by old (<=3.42) version of GigaBASE with"
-	ewarn "USE_LOCALE_SETTINGS enabled and using non-standard locale will be"
-	ewarn "different with format used by version 3.43 and higher. So you will"
-	ewarn "have to recreate indices in this case."
 }
