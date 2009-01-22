@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.5.2.ebuild,v 1.8 2007/08/08 22:04:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.5.2.ebuild,v 1.9 2009/01/22 20:12:23 mr_bones_ Exp $
 
+EAPI=2
 inherit flag-o-matic eutils games
 
 levels_V=20070121
@@ -20,7 +21,7 @@ IUSE="themes"
 
 DEPEND="media-libs/libpng
 	sys-libs/zlib
-	>=media-libs/libsdl-1.1.5
+	|| ( media-libs/libsdl[joystick] <media-libs/libsdl-1.2.13-r1 )
 	media-libs/sdl-net
 	media-libs/sdl-mixer"
 
@@ -47,17 +48,15 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	filter-flags -O?
 	egamesconf \
 		--enable-sdl-net \
-		--with-docdir="/usr/share/doc/${PF}" \
-		|| die
-	emake || die "emake failed"
+		--with-docdir="/usr/share/doc/${PF}"
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	mv "${D}"/usr/share/doc/${PF}/{lbreakout2,html}
 	dodoc AUTHORS README TODO ChangeLog
