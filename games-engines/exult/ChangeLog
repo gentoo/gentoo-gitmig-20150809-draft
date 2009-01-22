@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/exult
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.21 2008/08/15 04:40:00 mr_bones_ Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.22 2009/01/22 05:46:19 mr_bones_ Exp $
+
+  22 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> exult-1.2.ebuild:
+  EAPI=2; add workaround mentioned by Rafał Mużyło in bug #239373
 
   15 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> exult-1.2.ebuild:
   add digital sound install as well (bug #224655 with patch from Tomáš
