@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.91 2009/01/19 16:19:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.92 2009/01/22 21:06:06 loki_val Exp $
+
+  22 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  alsa-plugins-1.0.19.ebuild:
+  Fix bug 256040, we need to run eautoreconf when we sed a .am
 
 *alsa-plugins-1.0.19 (19 Jan 2009)
 

@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.19.ebuild,v 1.1 2009/01/19 16:19:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.19.ebuild,v 1.2 2009/01/22 21:06:06 loki_val Exp $
 
 EAPI=2
 
 MY_P="${P/_/}"
+
+inherit autotools
 
 DESCRIPTION="ALSA extra plugins"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -38,6 +40,7 @@ src_prepare() {
 	# disable them waiting for a better solution.
 	sed -i -e '/AM_CFLAGS/s:-Wall:-DNDEBUG -Wall:' \
 		"${S}/pulse/Makefile.am"
+	eautoreconf
 }
 
 src_configure() {
