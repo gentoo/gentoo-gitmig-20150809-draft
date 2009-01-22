@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.222 2009/01/19 19:38:20 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.223 2009/01/22 13:19:32 armin76 Exp $
+
+  22 Jan 2009; Raúl Porcel <armin76@gentoo.org> eog-2.24.3.1.ebuild:
+  Readd ~arm
 
 *eog-2.24.3.1 (19 Jan 2009)
 
