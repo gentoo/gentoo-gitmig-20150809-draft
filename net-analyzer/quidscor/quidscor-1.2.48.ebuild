@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48.ebuild,v 1.6 2005/07/19 15:35:31 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48.ebuild,v 1.7 2009/01/22 19:57:22 jer Exp $
+
+inherit eutils
 
 DESCRIPTION="IDS/VA Correlation engine"
 HOMEPAGE="http://quidscor.sourceforge.net/"
@@ -21,6 +23,7 @@ src_unpack() {
 	#yes, the fix below is as pathetic as it seems
 	echo "#define FALSE 0" >> ${S}/libqg/libqg.h
 	echo "#define TRUE 1" >> ${S}/libqg/libqg.h
+	epatch "${FILESDIR}"/${P}-strip.patch
 }
 
 src_compile() {

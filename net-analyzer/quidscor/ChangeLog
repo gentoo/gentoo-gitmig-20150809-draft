@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/quidscor
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/ChangeLog,v 1.6 2007/02/09 04:06:53 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/ChangeLog,v 1.7 2009/01/22 19:57:22 jer Exp $
+
+  22 Jan 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/quidscor-1.2.48-strip.patch, quidscor-1.2.48.ebuild:
+  Do not strip (bug #251982).
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
