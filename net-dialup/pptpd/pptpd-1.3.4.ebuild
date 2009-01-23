@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.4.ebuild,v 1.3 2007/06/10 21:16:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.4.ebuild,v 1.4 2009/01/23 10:21:54 pva Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -18,6 +18,7 @@ DEPEND="net-dialup/ppp
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-more-reodering-fixes.patch"
@@ -26,7 +27,8 @@ src_unpack() {
 	local PPPD_VER=`best_version net-dialup/ppp`
 	PPPD_VER=${PPPD_VER#*/*-} #reduce it to ${PV}-${PR}
 	PPPD_VER=${PPPD_VER%%[_-]*} # main version without beta/pre/patch/revision
-	sed -i -e "s:\\(#define[ \\t]*VERSION[ \\t]*\\)\".*\":\\1\"${PPPD_VER}\":" "${S}/plugins/patchlevel.h"
+	sed -i -e "s:\\(#define[ \\t]*VERSION[ \\t]*\\)\".*\":\\1\"${PPPD_VER}\":" "plugins/patchlevel.h"
+	sed -e "/^LDFLAGS/{s:=:+=:}" -i plugins/Makefile
 
 	eautomake
 }
