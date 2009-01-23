@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.7.ebuild,v 1.1 2008/08/17 15:25:52 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.7.ebuild,v 1.2 2009/01/23 06:37:52 nerdboy Exp $
 
 inherit eutils fixheadtails flag-o-matic fortran toolchain-funcs
 
@@ -77,6 +77,8 @@ src_unpack() {
 	# fix sort key
 	sed -i -e "s:sort +2:sort -k 2:g" bin/ltmain.sh || die "sed failed"
 
+	# change the SHLIB default for C
+	sed -i -e "s/SHLIB:-no/SHLIB:-yes/g" tools/misc/h5cc.in || die "sed h5cc failed"
 }
 
 src_compile() {
@@ -93,7 +95,7 @@ src_compile() {
 	fi
 
 	if use fortran && use mpi ; then
-	    ewarn "Requires Fortran 90 support in your mpi library..."
+	    ewarn "Parallel HDF5 requires Fortran 90 support in your mpi library..."
 	    myconf="${myconf} --enable-fortran --enable-parallel"
 	fi
 
@@ -204,7 +206,7 @@ src_install() {
 		srb_append cache flush1 srb_read cmpd_dset flush2 srb_write \
 		dangle gass_append links stab dsets dtypes enum extend external \
 		gass_read mount gass_write getname gheap hyperslab mtime ntypes \
-		ohdr reserved stream_test testhdf5 ttsafe unlink
+		ohdr reserved testhdf5 ttsafe unlink
 	    cd "${S}"
 	    use mpi && doexe testpar/testphdf5 testpar/t_mpi
 	fi
@@ -218,8 +220,6 @@ src_install() {
 	if use fortran ; then
 	    mv "${D}"usr/bin/h5pfc "${D}"usr/bin/h5fc
 	fi
-	# change the SHLIB default for C
-	dosed "s/SHLIB:-no/SHLIB:-yes/g" "${D}"usr/bin/h5cc || die "dosed failed"
 }
 
 pkg_postinst() {

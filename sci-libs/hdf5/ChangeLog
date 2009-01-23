@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf5
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.31 2008/08/17 15:25:52 markusle Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.32 2009/01/23 06:37:52 nerdboy Exp $
+
+  23 Jan 2009; Steve Arnold <nerdboy@gentoo.org> hdf5-1.6.7.ebuild:
+  Updated for upstream changes in test-tools and a more appropriate sed 
+  invocation.
 
 *hdf5-1.6.7 (17 Aug 2008)
 
