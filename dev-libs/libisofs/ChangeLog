@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisofs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.23 2008/11/26 17:42:24 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.24 2009/01/23 21:50:59 maekke Exp $
+
+  23 Jan 2009; Markus Meier <maekke@gentoo.org> libisofs-0.6.12.ebuild:
+  amd64/x86 stable, bug #254947
 
 *libisofs-0.6.12 (26 Nov 2008)
 

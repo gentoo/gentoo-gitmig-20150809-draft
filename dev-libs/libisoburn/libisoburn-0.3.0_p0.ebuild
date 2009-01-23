@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.3.0_p0.ebuild,v 1.1 2008/12/02 22:40:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/libisoburn-0.3.0_p0.ebuild,v 1.2 2009/01/23 21:51:36 maekke Exp $
 
 inherit base
 
@@ -10,7 +10,7 @@ SRC_URI="http://files.libburnia-project.org/releases/${P/_p/.pl0}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc64 x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libburn-0.5.6
