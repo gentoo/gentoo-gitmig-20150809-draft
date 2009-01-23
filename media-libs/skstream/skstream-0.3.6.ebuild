@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/skstream-0.3.6.ebuild,v 1.4 2009/01/13 20:26:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/skstream-0.3.6.ebuild,v 1.5 2009/01/23 16:18:46 tupone Exp $
 
 inherit eutils
 
@@ -16,7 +16,9 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+	edos2unix ping/ping.cpp
+	epatch "${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-test.patch
 }
 
 src_install() {

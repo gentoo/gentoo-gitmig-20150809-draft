@@ -8,3 +8,14 @@
  #endif
  #if @SKSTREAM_BEOS_HEADER_FLAG@
    #include <net/socket.h>
+--- ping/ping.cpp.old   2009-01-23 16:35:39.000000000 +0100
++++ ping/ping.cpp       2009-01-23 16:35:59.000000000 +0100
+@@ -10,6 +10,7 @@
+ #include <utility>
+
+ #include <cstdio>
++#include <cstdlib>
+
+ #include <time.h>
+ #include <signal.h> // to trap Ctrl+C : SIGINT
+
