@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-osp/quake3-osp-1.03a-r1.ebuild,v 1.1 2006/10/27 16:06:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-osp/quake3-osp-1.03a-r1.ebuild,v 1.2 2009/01/23 18:04:58 mr_bones_ Exp $
 
-MOD_DESC="a touirnament-based mod"
+MOD_DESC="a tournament mod"
 MOD_NAME="OSP"
 MOD_DIR="osp"
 

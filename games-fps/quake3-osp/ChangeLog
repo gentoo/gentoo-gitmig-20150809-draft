@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-osp
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-osp/ChangeLog,v 1.7 2006/10/27 16:06:54 wolf31o2 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-osp/ChangeLog,v 1.8 2009/01/23 18:04:58 mr_bones_ Exp $
+
+  23 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  quake3-osp-1.03a-r1.ebuild:
+  fix DESCRIPTION (bug #242374)
 
 *quake3-osp-1.03a-r1 (27 Oct 2006)
 
