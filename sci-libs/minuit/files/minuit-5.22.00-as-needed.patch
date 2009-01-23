@@ -1,0 +1,11 @@
+--- src/Makefile.am.orig	2009-01-22 00:44:01.925673316 +0000
++++ src/Makefile.am	2009-01-22 00:43:34.963076306 +0000
+@@ -79,6 +79,8 @@
+ 	 mnvert.cxx				\
+          mnxerbla.cxx                        
+ 
++libMinuit2_la_LDFLAGS = $(OPENMP_CXXFLAGS)
++
+ INCLUDES =					\
+ 	-I$(top_srcdir)/inc
+ 
