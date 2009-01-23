@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/eselect-ctags-1.8.ebuild,v 1.1 2008/12/21 17:51:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/eselect-ctags-1.8.ebuild,v 1.2 2009/01/23 18:25:43 ulm Exp $
 
 MY_P="eselect-emacs-${PV}"
 DESCRIPTION="Manages ctags implementations"
@@ -22,6 +22,6 @@ src_compile() { :; }
 
 src_install() {
 	insinto /usr/share/eselect/modules
-	doins ctags.eselect || die "doins failed"
-	doman ctags.eselect.5 || die "doman failed"
+	doins ctags.eselect || die
+	doman ctags.eselect.5 || die
 }
