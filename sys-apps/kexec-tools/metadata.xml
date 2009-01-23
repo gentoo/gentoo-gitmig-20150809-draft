@@ -5,4 +5,7 @@
   <maintainer>
     <email>darkside@gentoo.org</email>
   </maintainer>
+  <use>
+	  <flag name='xen'>Enable extended xen support</flag>
+  </use>
 </pkgmetadata>

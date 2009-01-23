@@ -1,0 +1,17 @@
+Upstream already:
+http://git.kernel.org/?p=linux/kernel/git/horms/kexec-tools.git;a=blobdiff;f=kexec/Makefile;h=99949c44f94e5c727d6e379e86bb373730e74237;hp=61479040891440a76d95771b8f9d318526cb83fa;hb=6abf3ba5dc63ef670010927d5572d38c3ce2a587;hpb=8108aeeef14a2ab40756e90c980ac09687eff007
+
+--- kexec/Makefile.orig	2009-01-22 22:09:36.502007555 -0600
++++ kexec/Makefile	2009-01-22 22:10:21.644256852 -0600
+@@ -67,10 +67,9 @@
+ 
+ -include $(KEXEC_DEPS)
+ 
+-$(KEXEC): LDFLAGS+=$(LIBS)
+ $(KEXEC): $(KEXEC_OBJS) $(UTIL_LIB)
+ 	@$(MKDIR) -p $(@D)
+-	$(LINK.o) -o $@ $^
++	$(LINK.o) -o $@ $^ $(LIBS)
+ 
+ $(KEXEC): CPPFLAGS+=-I$(srcdir)/kexec/arch/$(ARCH)/include
+ 
