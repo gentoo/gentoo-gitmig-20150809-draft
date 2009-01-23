@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.8.7686.ebuild,v 1.2 2008/11/10 07:46:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/btanks-0.8.7686.ebuild,v 1.3 2009/01/23 07:26:17 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="Fast 2D tank arcade game with multiplayer and split-screen modes"
@@ -19,21 +20,18 @@ RDEPEND=">=dev-lang/lua-5.1
 	virtual/opengl
 	dev-libs/expat
 	media-libs/smpeg
-	media-libs/sdl-image"
+	media-libs/sdl-image[jpeg,png]"
 DEPEND="${RDEPEND}
 	dev-util/scons
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-scons-blows.patch
-}
+PATCHES=( "${FILESDIR}"/${P}-scons-blows.patch )
 
 src_compile() {
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -e "s/.*\(-j[0-9]\+\).*/\1/")
+
 	scons \
-		CC="$(tc-getCC)" \
-		CXX="$(tc-getCXX)" \
+		${sconsopts} \
 		prefix="${GAMES_PREFIX}" \
 		lib_dir="$(games_get_libdir)"/${PN} \
 		plugins_dir="$(games_get_libdir)"/${PN} \
