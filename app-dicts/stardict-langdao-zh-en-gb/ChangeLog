@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-langdao-zh-en-gb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-langdao-zh-en-gb/ChangeLog,v 1.8 2007/02/01 14:49:58 blubb Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-langdao-zh-en-gb/ChangeLog,v 1.9 2009/01/23 13:27:58 pva Exp $
+
+  23 Jan 2009; Peter Volkov <pva@gentoo.org>
+  stardict-langdao-zh-en-gb-2.4.2.ebuild:
+  Drop stardict dependency as it's provided by stardict.eclass.
 
   01 Feb 2007; Simon Stelling <blubb@gentoo.org>
   stardict-langdao-zh-en-gb-2.4.2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-dictd-devils
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-dictd-devils/ChangeLog,v 1.10 2007/08/30 12:21:44 phreak Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-dictd-devils/ChangeLog,v 1.11 2009/01/23 13:27:15 pva Exp $
+
+  23 Jan 2009; Peter Volkov <pva@gentoo.org>
+  stardict-dictd-devils-2.4.2.ebuild:
+  Drop stardict dependency as it's provided by stardict.eclass.
 
   30 Aug 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing liquidx from metadata due to his retirement (see #171155 for

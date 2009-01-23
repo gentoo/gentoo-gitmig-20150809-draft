@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-jmdict-en-ja/stardict-jmdict-en-ja-2.4.2-r1.ebuild,v 1.4 2007/02/01 14:47:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-jmdict-en-ja/stardict-jmdict-en-ja-2.4.2-r1.ebuild,v 1.5 2009/01/23 13:18:39 pva Exp $
 
 FROM_LANG="English"
 TO_LANG="Japanese"
@@ -15,7 +15,8 @@ LICENSE="GDLS"
 KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
-RDEPEND=">=app-dicts/stardict-2.4.2"
+DEPEND=""
+RDEPEND=""
 
 src_install() {
 	stardict_src_install

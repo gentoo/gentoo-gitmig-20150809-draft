@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-hnd-vi-de
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-hnd-vi-de/ChangeLog,v 1.5 2008/08/16 16:47:46 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-hnd-vi-de/ChangeLog,v 1.6 2009/01/23 13:25:02 pva Exp $
+
+  23 Jan 2009; Peter Volkov <pva@gentoo.org>
+  stardict-hnd-vi-de-20050917.ebuild:
+  Drop stardict dependency as it's provided by stardict.eclass.
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove pclouds from metadata.xml (#49680)
