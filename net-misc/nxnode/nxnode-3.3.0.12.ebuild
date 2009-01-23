@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.3.0.11.ebuild,v 1.1 2009/01/16 10:12:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.3.0.12.ebuild,v 1.1 2009/01/23 09:04:37 voyageur Exp $
 
 inherit eutils versionator
 
