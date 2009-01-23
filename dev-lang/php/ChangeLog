@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.311 2009/01/20 17:27:27 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.312 2009/01/23 16:46:49 ranger Exp $
+
+  23 Jan 2009; Brent Baude <ranger@gentoo.org> php-5.2.8-r2.ebuild:
+  Marking php-5.2.8-r2 ppc64 for bug 249703
 
   20 Jan 2009; Tobias Heinlein <keytoaster@gentoo.org> php-5.2.8-r2.ebuild:
   amd64 stable wrt security bug 249703
