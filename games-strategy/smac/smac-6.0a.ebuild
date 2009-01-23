@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.18 2009/01/23 07:34:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.19 2009/01/23 07:35:20 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -8,7 +8,7 @@ inherit eutils games
 DESCRIPTION="Linux port of the popular strategy game from Firaxis"
 HOMEPAGE="http://www.lokigames.com/products/smac/"
 SRC_URI="x86? ( mirror://lokigames/${PN}/${P}-x86.run )
-    amd64? ( mirror://lokigames/${PN}/${P}-x86.run )
+	amd64? ( mirror://lokigames/${PN}/${P}-x86.run )
 	ppc? ( http://mirrors.dotsrc.org/lokigames/installers/${PN}/${PN}-install-ppc.run )"
 
 LICENSE="LOKI-EULA"
@@ -83,7 +83,7 @@ src_install() {
 	make_desktop_entry smacx "Sid Meier's Alpha Centauri - Alien Crossfire" smac
 	prepgamesdirs
 
-	if use x86 || use amd64 ; then 
+	if use x86 || use amd64 ; then
 	    einfo "Linking libs provided by 'sys-libs/lib-compat-loki' to '${dir}'."
 	    dosym /lib/loki_ld-linux.so.2 "${dir}"/ld-linux.so.2 && \
 	    dosym /usr/lib/loki_libc.so.6 "${dir}"/libc.so.6 && \
