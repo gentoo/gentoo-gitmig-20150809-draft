@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/kamikaze
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.17 2008/03/27 12:26:10 drac Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.18 2009/01/23 08:53:43 tupone Exp $
+
+  23 Jan 2009; Alfredo Tupone <tupone@gentoo.org> kamikaze-0.2.2-r1.ebuild:
+  Fix gcc-4.3 bug #251120 by flameeyes@gentoo.org
 
   27 Mar 2008; Samuli Suominen <drac@gentoo.org>
   -files/kamikaze-0.2.2-gcc41.patch:
