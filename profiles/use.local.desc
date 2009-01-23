@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4151 2009/01/23 04:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4152 2009/01/23 10:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2074,7 +2074,7 @@ net-misc/networkmanager:resolvconf - Use net-dns/openresolv for managing DNS inf
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/nxcl:nxclient - Use nxssh from net-misc/nxclient instead of standard ssh
-net-misc/nxserver-freenx:nxclient - Add support for the commercial nxclient
+net-misc/nxserver-freenx:nxclient - Allow to install net-misc/nxclient in parallel with this package, using it to display messages in the sessions
 net-misc/oidentd:masquerade - Enable support for masqueraded/NAT connections
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support
