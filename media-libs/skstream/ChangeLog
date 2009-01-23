@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/skstream
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/ChangeLog,v 1.22 2009/01/23 16:18:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/ChangeLog,v 1.23 2009/01/23 17:36:06 ranger Exp $
+
+  23 Jan 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  stable ppc, bug 254833
 
   23 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
   files/skstream-0.3.6-gcc43.patch, +files/skstream-0.3.6-test.patch,
