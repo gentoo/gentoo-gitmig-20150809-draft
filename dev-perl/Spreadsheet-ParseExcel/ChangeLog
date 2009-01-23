@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Spreadsheet-ParseExcel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.27 2009/01/20 14:46:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.28 2009/01/23 08:28:08 tove Exp $
+
+*Spreadsheet-ParseExcel-0.47 (23 Jan 2009)
+
+  23 Jan 2009; Torsten Veller <tove@gentoo.org>
+  +Spreadsheet-ParseExcel-0.47.ebuild:
+  Version bump
 
 *Spreadsheet-ParseExcel-0.46 (20 Jan 2009)
 

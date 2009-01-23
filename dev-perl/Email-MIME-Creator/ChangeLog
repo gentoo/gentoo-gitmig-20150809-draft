@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Email-MIME-Creator
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Creator/ChangeLog,v 1.20 2008/09/15 18:49:57 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Creator/ChangeLog,v 1.21 2009/01/23 08:22:06 tove Exp $
+
+*Email-MIME-Creator-1.455 (23 Jan 2009)
+
+  23 Jan 2009; Torsten Veller <tove@gentoo.org>
+  +Email-MIME-Creator-1.455.ebuild:
+  Version bump
 
   15 Sep 2008; Torsten Veller <tove@gentoo.org>
   -Email-MIME-Creator-1.451.ebuild, -Email-MIME-Creator-1.452.ebuild,
