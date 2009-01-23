@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-7.1.ebuild,v 1.1 2009/01/22 21:03:11 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-7.1.ebuild,v 1.2 2009/01/23 02:18:16 mr_bones_ Exp $
 
 inherit bsdmk freebsd
 
@@ -18,7 +18,6 @@ DEPEND=""
 RESTRICT="strip"
 
 S="${WORKDIR}/share/mk"
-
 
 src_unpack() {
 	unpack ${A}

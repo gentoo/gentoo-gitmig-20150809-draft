@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-7.1.ebuild,v 1.1 2009/01/22 21:06:12 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-7.1.ebuild,v 1.2 2009/01/23 02:18:34 mr_bones_ Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -83,7 +83,6 @@ pkg_preinst() {
 		rm -f "${ROOT}"/usr/bin/yacc
 	fi
 }
-
 
 src_unpack() {
 	freebsd_src_unpack

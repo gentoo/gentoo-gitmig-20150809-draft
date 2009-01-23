@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1.ebuild,v 1.1 2009/01/22 21:02:31 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1.ebuild,v 1.2 2009/01/23 02:17:58 mr_bones_ Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -293,7 +293,7 @@ src_install() {
 	doins auth.conf nls.alias mac.conf netconfig
 
 	# Install ttys file
-	
+
 	doins "etc.${MACHINE}"/*
 
 	dodir /etc/sandbox.d
@@ -301,7 +301,7 @@ src_install() {
 	# Generate ldscripts, otherwise bad thigs are supposed to happen
 	gen_usr_ldscript libalias_cuseeme.so libalias_dummy.so libalias_ftp.so \
 		libalias_irc.so libalias_nbt.so libalias_pptp.so libalias_skinny.so \
-		libalias_smedia.so 
+		libalias_smedia.so
 	# These show on QA warnings too, however they're pretty much bsd only,
 	# aka, no autotools for them.
 	#	libbsdxml.so libcam.so libcrypt.so libdevstat.so libgeom.so \
@@ -321,7 +321,7 @@ install_includes()
 	local INCLUDEDIR="$1"
 
 	# The idea is to be called from either install or unpack.
-	# During unpack it's required to install them as portage's user. 
+	# During unpack it's required to install them as portage's user.
 	if [[ "${EBUILD_PHASE}" == "install" ]]; then
 		local DESTDIR="${D}"
 		BINOWN="root"
