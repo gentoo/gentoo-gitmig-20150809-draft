@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.5.14.0.ebuild,v 1.1 2008/09/19 16:07:18 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.5.14.0.ebuild,v 1.2 2009/01/23 16:30:11 angelos Exp $
 
-inherit gnome2-utils
+inherit eutils gnome2-utils
 
 DESCRIPTION="Calendar suite for Xfce4"
 HOMEPAGE="http://www.kolumbus.fi/~w408237/orage"
@@ -26,6 +26,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-bsd.patch
+}
 
 src_compile() {
 	econf $(use_enable dbus) \
