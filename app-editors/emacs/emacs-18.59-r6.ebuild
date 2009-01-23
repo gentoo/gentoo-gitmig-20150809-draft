@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r5.ebuild,v 1.8 2009/01/23 16:53:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.1 2009/01/23 16:53:41 ulm Exp $
+
+EAPI=2
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -12,33 +14,23 @@ SRC_URI="mirror://gnu/old-gnu/emacs/${P}.tar.gz
 
 LICENSE="GPL-1 GPL-2 BSD as-is"
 SLOT="18"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
-	X? ( x11-libs/libX11 )"
+	X? ( x11-libs/libX11[-xcb] )"
 DEPEND="${RDEPEND}"
 
 MY_BASEDIR="/usr/share/emacs/${PV}"
 MY_LOCKDIR="/var/lib/emacs/lock"
 
-pkg_setup() {
-	use X && built_with_use x11-libs/libX11 xcb \
-		&& die "${P} requires x11-libs/libX11 built with USE=-xcb"
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${WORKDIR}/${P}-linux22x-elf-glibc21.diff"
 	EPATCH_SUFFIX=patch epatch
 }
 
-src_compile() {
-	# Do not use the sandbox, or the dumped Emacs will be twice as large
-	SANDBOX_ON=0
-
+src_configure() {
 	# autoconf? What's autoconf? We are living in 1992. ;-)
 	local arch
 	case ${ARCH} in
@@ -60,7 +52,11 @@ src_compile() {
 	filter-flags -finline-functions
 	replace-flags -O[3-9] -O2
 	strip-flags
+}
 
+src_compile() {
+	# Do not use the sandbox, or the dumped Emacs will be twice as large
+	SANDBOX_ON=0
 	emake -j1 CC="$(tc-getCC)" CFLAGS="${CFLAGS} -Demacs" || die
 }
 
