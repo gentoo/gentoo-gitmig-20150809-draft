@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mina-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mina-core/ChangeLog,v 1.4 2009/01/10 15:12:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mina-core/ChangeLog,v 1.5 2009/01/23 17:53:15 ranger Exp $
+
+  23 Jan 2009; Brent Baude <ranger@gentoo.org> mina-core-1.1.7.ebuild:
+  Marking mina-core-1.1.7 ppc64 for bug 253054
 
   10 Jan 2009; Markus Meier <maekke@gentoo.org> mina-core-1.1.7.ebuild:
   amd64/x86 stable, bug #253054
