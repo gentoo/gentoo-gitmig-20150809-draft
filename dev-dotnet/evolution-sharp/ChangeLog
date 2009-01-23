@@ -1,6 +1,14 @@
 # ChangeLog for dev-dotnet/evolution-sharp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.32 2008/12/16 21:49:35 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.33 2009/01/23 15:40:04 loki_val Exp $
+
+*evolution-sharp-0.19.1 (23 Jan 2009)
+
+  23 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  evolution-sharp-0.17.4.ebuild, evolution-sharp-0.18.1.ebuild,
+  +evolution-sharp-0.19.1.ebuild:
+  Bump to 0.19.1, transition to CSC=gmcs, bugfixes, adds support for <2.25.7
+  gnome. Also adjust dependencies of older packages to match reality.
 
 *evolution-sharp-0.18.1 (16 Dec 2008)
 
