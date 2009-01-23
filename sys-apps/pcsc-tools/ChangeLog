@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pcsc-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.1 2009/01/11 01:56:57 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.2 2009/01/23 07:37:40 nerdboy Exp $
+
+*pcsc-tools-1.4.15 (23 Jan 2009)
+
+  23 Jan 2009; Steve Arnold <nerdboy@gentoo.org> -pcsc-tools-1.4.14.ebuild,
+  +pcsc-tools-1.4.15.ebuild:
+  Updated to new upstream release and changed to static hardware list (moved 
+  the data file from SRC_URI to DISTFILES).  Should close bugs #142037 and 
+  #255682).
 
 *pcsc-tools-1.4.14 (11 Jan 2009)
 

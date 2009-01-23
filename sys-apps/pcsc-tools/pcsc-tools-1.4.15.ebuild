@@ -1,13 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.14.ebuild,v 1.2 2009/01/11 05:46:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.15.ebuild,v 1.1 2009/01/23 07:37:40 nerdboy Exp $
 
 inherit eutils fdo-mime multilib
 
 DESCRIPTION="PC/SC Architecture smartcard tools"
 HOMEPAGE="http://ludovic.rousseau.free.fr/softwares/pcsc-tools/"
-SRC_URI="http://ludovic.rousseau.free.fr/softwares/${PN}/${P}.tar.gz
-	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt"
+SRC_URI="http://ludovic.rousseau.free.fr/softwares/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -52,9 +51,15 @@ src_install() {
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 
-	elog "Note you may need a firmware upgrade for your card reader in order"
-	elog "for this to work.  See:"
+	elog ""
+	elog "If your card reader isn't recognized, you should make sure you"
+	elog "have the latest copy of smartcard_list.txt.  Download it from:"
+	elog "http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt"
+	elog ""
+	elog "Note you may also need a firmware upgrade for your card reader in"
+	elog "order for this to work.  See:"
 	elog "http://symbolik.wordpress.com/2007/02/26/scm-scr-331-usb-smartcard-reader-firmware-upgrade/"
+	elog ""
 }
 
 pkg_postrm() {
