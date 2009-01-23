@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.8-r1.ebuild,v 1.6 2009/01/23 12:31:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.8-r1.ebuild,v 1.7 2009/01/23 18:00:25 ranger Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,7 +22,7 @@ LICENSE="GPL-2 LGPL-2"
 [[ ${CTARGET} != ${CHOST} ]] \
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 s390 sparc x86 ~x86-fbsd"
 IUSE="multitarget nls test vanilla"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2
