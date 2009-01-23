@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.8.2.ebuild,v 1.8 2008/11/26 16:38:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.8.2.ebuild,v 1.9 2009/01/23 17:00:41 loki_val Exp $
 
 EAPI=1
 
@@ -69,11 +69,11 @@ src_unpack() {
 
 	eautoreconf
 
-        # Prevent scrollkeeper access violations
-        gnome2_omf_fix
+	# Prevent scrollkeeper access violations
+	gnome2_omf_fix
 
-        # Run libtoolize
-        elibtoolize ${ELTCONF}
+	# Run libtoolize
+	elibtoolize ${ELTCONF}
 }
 
 src_test() {

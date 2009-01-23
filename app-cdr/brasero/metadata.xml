@@ -8,7 +8,10 @@
 	<flag name='gdl'>Enable gdl support for customisable GUI</flag>
 	<flag name='gnome'>Enable integration with the <pkg>gnome-base/gnome</pkg>
 		desktop (help, session management, etc.)</flag>
+	<flag name='nautilus'> Build <pkg>gnome-base/nautilus</pkg> extension</flag>
 	<flag name='libburn'>Enable <pkg>dev-libs/libburn</pkg> backend</flag>
+	<flag name='cdrtools'>Enable <pkg>app-cdr/cdrtools</pkg> backend</flag>
+	<flag name='cdrkit'>Enable <pkg>app-cdr/cdrkit</pkg> backend</flag>
 	<flag name='totem'>Enable support for <pkg>media-video/totem</pkg>
 		playlists</flag>
 </use>
