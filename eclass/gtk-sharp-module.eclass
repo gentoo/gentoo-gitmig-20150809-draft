@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.12 2009/01/23 19:58:46 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.13 2009/01/23 20:28:58 loki_val Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>, butchered by ikelos, then loki_val.
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -78,8 +78,8 @@ gsm_get_tarball() {
 }
 
 [[ "${PN}" != "gtk-sharp-gapi" ]] && add_bdepend "=dev-dotnet/gtk-sharp-gapi-${GTK_SHARP_REQUIRED_VERSION}*"
-[[ "${PN}" != "gtk-sharp-gapi" ]] && add_bdepend "!=dev-dotnet/gtk-sharp-gapi-2.12.7-r5"
-[[ "${PN}" != "gtk-sharp-gapi" ]] && add_bdepend "!=dev-dotnet/gtk-sharp-gapi-2.12.7-r6"
+[[ "${PN}" != "gtk-sharp-gapi" ]] && add_bdepend "!!=dev-dotnet/gtk-sharp-gapi-2.12.7-r5"
+[[ "${PN}" != "gtk-sharp-gapi" ]] && add_bdepend "!!=dev-dotnet/gtk-sharp-gapi-2.12.7-r6"
 
 has "${GTK_SHARP_MODULE}" ${gnome_sharp_module_list} ${gnome_desktop_sharp_module_list} gtk-dotnet glade \
 	&& add_depend "=dev-dotnet/gtk-sharp-${GTK_SHARP_REQUIRED_VERSION}*"
