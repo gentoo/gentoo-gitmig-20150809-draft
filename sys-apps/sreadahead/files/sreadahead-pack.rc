@@ -1,0 +1,33 @@
+#!/sbin/runscript
+
+# This script generates the sreadahead pack file, which lists the blocks that
+# sreadahead should load into memory.
+# To regenerate the pack file, delete /etc/readahead.packed and reboot the
+# system.
+
+description="Generate sreadahead pack file (if it does not exist)"
+
+depend() {
+	after *
+}
+
+start() {
+	if [ -f /etc/readahead.packed ]
+	then
+		return 0
+	fi
+
+	ebegin "Generating sreadahead pack file"
+	cd /tmp
+	find / \
+		-path /home -prune -o \
+		-path /tmp -prune -o \
+		-path /var -prune -o \
+		-path /proc -prune -o \
+		-path /usr/portage -prune -o \
+	    -type f \( -fstype ext3 -o -fstype rootfs \) > \
+		/tmp/readahead.packed.new
+	/sbin/sreadahead-pack readahead.packed.new &> /dev/null
+	mv readahead.packed /etc/readahead.packed
+	eend $?
+}
