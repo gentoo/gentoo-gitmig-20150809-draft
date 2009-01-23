@@ -1,0 +1,13 @@
+--- setup.py.orig	2009-01-20 21:54:55.000000000 +0000
++++ setup.py	2009-01-20 23:23:59.000000000 +0000
+@@ -124,8 +124,8 @@
+             runtime_library_dirs = r_libs,
+             #extra_compile_args=['-O0', '-g'],
+             extra_link_args = get_rconfig(RHOME, '--ldflags') +\
+-                              get_rconfig(RHOME, 'LAPACK_LIBS') +\
+-                              get_rconfig(RHOME, 'BLAS_LIBS'),
++                              tuple(get_rconfig(RHOME, 'LAPACK_LIBS')[0].split()) +\
++                              tuple(get_rconfig(RHOME, 'BLAS_LIBS')[0].split()),
+             )
+ 
+     return rinterface_ext
