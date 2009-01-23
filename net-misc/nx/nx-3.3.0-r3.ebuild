@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.3.0-r2.ebuild,v 1.1 2009/01/16 10:51:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.3.0-r3.ebuild,v 1.1 2009/01/23 09:29:48 voyageur Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -9,12 +9,12 @@ DESCRIPTION="NX compression technology core libraries"
 HOMEPAGE="http://www.nomachine.com/developers.php"
 
 URI_BASE="http://web04.nomachine.com/download/${PV}/sources"
-SRC_NX_X11="nx-X11-$PV-4.tar.gz"
-SRC_NXAGENT="nxagent-$PV-9.tar.gz"
+SRC_NX_X11="nx-X11-$PV-5.tar.gz"
+SRC_NXAGENT="nxagent-$PV-10.tar.gz"
 SRC_NXAUTH="nxauth-$PV-1.tar.gz"
 SRC_NXCOMP="nxcomp-$PV-3.tar.gz"
 SRC_NXCOMPEXT="nxcompext-$PV-3.tar.gz"
-SRC_NXCOMPSHAD="nxcompshad-$PV-2.tar.gz"
+SRC_NXCOMPSHAD="nxcompshad-$PV-3.tar.gz"
 SRC_NXPROXY="nxproxy-$PV-2.tar.gz"
 
 SRC_URI="$URI_BASE/$SRC_NX_X11 $URI_BASE/$SRC_NXAGENT $URI_BASE/$SRC_NXPROXY $URI_BASE/$SRC_NXAUTH $URI_BASE/$SRC_NXCOMPEXT $URI_BASE/$SRC_NXCOMPSHAD $URI_BASE/$SRC_NXCOMP"
