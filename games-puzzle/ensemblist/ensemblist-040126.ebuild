@@ -1,8 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ensemblist-040126.ebuild,v 1.6 2006/12/06 16:59:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ensemblist-040126.ebuild,v 1.7 2009/01/23 08:32:19 mr_bones_ Exp $
 
-inherit games
+EAPI=2
+inherit eutils games
 
 DESCRIPTION="Put together several primitives to build a given shape. (C.S.G. Game)"
 HOMEPAGE="http://www.nongnu.org/ensemblist/index_en.html"
@@ -18,17 +19,12 @@ DEPEND="x11-libs/libXmu
 	virtual/glut
 	virtual/glu
 	media-libs/libpng
-	media-libs/libmikmod"
+	media-libs/libmikmod[oss]"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e '/^CC/d' \
-		-e '/strip/d' \
-		-e "s:^DATADIR=.*:DATADIR=${GAMES_DATADIR}/${PN}/datas:" \
-		-e "/^COMPILE_FLAGS/s/-Wall -O3 -fomit-frame-pointer/${CFLAGS}/" \
-		Makefile || die "sed failed"
+PATCHES=( "${FILESDIR}"/${P}-build.patch )
+
+src_compile() {
+	emake DATADIR="\"${GAMES_DATADIR}\"/${PN}/datas" || die "emake failed"
 }
 
 src_install() {
@@ -36,5 +32,6 @@ src_install() {
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r datas || die "doins failed"
 	dodoc README Changelog
+	make_desktop_entry ${PN} Ensemblist
 	prepgamesdirs
 }
