@@ -1,5 +1,5 @@
 --- Yap-5.1.3.orig/configure.in	2008-05-24 10:29:52.000000000 +1200
-+++ Yap-5.1.3/configure.in	2008-07-27 16:51:01.000000000 +1200
++++ Yap-5.1.3/configure.in	2009-01-25 10:00:30.000000000 +1300
 @@ -95,22 +95,35 @@
  	fi,
  	[yap_cv_gmp=yes])
@@ -63,7 +63,15 @@
  dnl		threads=yes
  	elif test "$withval" = no; then
  		yap_cv_jpl=no
-@@ -432,6 +443,8 @@
+@@ -261,7 +272,6 @@
+ 	fi,
+ 	[yap_cv_max_threads="1024"])
+ 
+-
+ if test "$tabling" = yes -o "$orparallelism" = yes -o "$threads" = yes
+ then
+   AC_DEFINE(MinHeapSpace, (1000*SIZEOF_INT_P))
+@@ -432,6 +442,8 @@
  AC_PATH_PROG(INSTALL_INFO,install-info,true,$PATH:/sbin:/usr/sbin:/usr/etc:/usr/local/sbin)
  AC_PATH_PROG(SHELL,sh)
  
@@ -72,7 +80,7 @@
  dnl Check for libraries.
  dnl mingw does not get along well with libm
  dnl cygnus and mingw32 also need wsock32 to use sockets.
-@@ -488,7 +501,7 @@
+@@ -488,7 +500,7 @@
    AC_CHECK_LIB(gmp,main)
  fi
  
@@ -81,7 +89,7 @@
  then
  	dnl check for mysql
  	AC_MSG_CHECKING(for main in -lmysqlclient)
-@@ -505,9 +518,26 @@
+@@ -505,9 +517,26 @@
  	if test "$yap_mysql" = yes 
  	then
                  YAP_EXTRAS="$YAP_EXTRAS -DMYDDAS_MYSQL"
@@ -110,7 +118,7 @@
  	dnl check for odbc
  	AC_MSG_CHECKING(for main in -lodbc)
  	AC_CACHE_VAL(yap_odbc,[
-@@ -526,40 +556,21 @@
+@@ -526,40 +555,21 @@
  		YAP_EXTRAS="$YAP_EXTRAS -DMYDDAS_ODBC"
  		LIBS="$LIBS -lodbc "
  	fi
@@ -155,7 +163,47 @@
  
  if test "$myddasstats" = "yes"
    then
-@@ -1002,7 +1013,6 @@
+@@ -854,10 +864,14 @@
+   YAP_EXTRAS="$SHLIB_CFLAGS $YAP_EXTRAS"
+   CROSS_SIMULATOR="LD_LIBRARY_PATH=."
+   case "$target_os" in
++  *cygwin*!*mingw32*)
++    EXTEND_DYNLOADER_PATH=""
++    ;;
+   *darwin*)
+     DYNYAPLIB=libYap"$SHLIB_SUFFIX"
+     YAPLIB="$DYNYAPLIB"
+     DYNLIB_LD="gcc -dynamiclib"
++    EXTEND_DYNLOADER_PATH="DYLD_LIBRARY_PATH=\$DYLD_LIBRARY_PATH:\$(DESTDIR)\$(LIBDIR): YAPSHAREDIR=\$(DESTDIR)\$(SHAREDIR)/Yap YAPBOOTDIR=\$(DESTDIR)\$(SHAREDIR)/Yap/pl YAPLIBDIR=\$(DESTDIR)\$(YAPLIBDIR)"
+     ;;
+   *)
+        case "$target_cpu" in
+@@ -871,13 +885,15 @@
+         JAVA_TARGET=sparc
+         ;;
+        esac
+-    LDFLAGS="$LDFLAGS -Wl,-R,$prefix/lib  -Wl,-R,$JAVA_HOME/jre/lib/$JAVA_TARGET"
++    EXTEND_DYNLOADER_PATH="LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$(DESTDIR)\$(LIBDIR): YAPSHAREDIR=\$(DESTDIR)\$(SHAREDIR)/Yap YAPBOOTDIR=\$(DESTDIR)\$(SHAREDIR)/Yap/pl YAPLIBDIR=\$(DESTDIR)\$(YAPLIBDIR)"
+     DYNYAPLIB=libYap"$SHLIB_SUFFIX"
++    LDFLAGS="$LDFLAGS -Wl,-R,$prefix/lib -Wl,-R,$JAVA_HOME/jre/lib/$JAVA_TARGET -Wl,-soname=$DYNYAPLIB"
+     YAPLIB="$DYNYAPLIB"
+     DYNLIB_LD="$SHLIB_LD"
+     ;;
+   esac
+ else
++  EXTEND_DYNLOADER_PATH="YAPSHAREDIR=\$(DESTDIR)\$(SHAREDIR)/Yap YAPBOOTDIR=\$(DESTDIR)\$(SHAREDIR)/Yap/pl YAPLIBDIR=\$(DESTDIR)\$(YAPLIBDIR)"
+   DYNYAPLIB=libYap.notused
+ fi
+ 
+@@ -992,6 +1008,7 @@
+ 	ENABLE_CPLINT="#"
+ fi
+ AC_SUBST(ENABLE_CPLINT)
++AC_SUBST(EXTEND_DYNLOADER_PATH)
+ 
+ # LAM
+ OLD_CC=${CC}	
+@@ -1002,7 +1019,6 @@
  CC=${OLD_CC}
  
  dnl Checks for header files.
@@ -163,7 +211,7 @@
  AC_HEADER_SYS_WAIT
  AC_CHECK_HEADERS(arpa/inet.h ctype.h direct.h dirent.h dlfcn.h)
  AC_CHECK_HEADERS(errno.h fcntl.h)
-@@ -1021,7 +1031,7 @@
+@@ -1021,7 +1037,7 @@
  then
    AC_CHECK_HEADERS(gmp.h)
  fi
