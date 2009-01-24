@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/buzhug
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/buzhug/ChangeLog,v 1.1 2008/03/01 11:59:33 dev-zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/buzhug/ChangeLog,v 1.2 2009/01/24 15:44:37 patrick Exp $
+
+*buzhug-1.4 (24 Jan 2009)
+
+  24 Jan 2009; Patrick Lauer <patrick@gentoo.org> +buzhug-1.4.ebuild:
+  Bump to 1.4, fixes #255417
 
 *buzhug-1.0 (01 Mar 2008)
 
