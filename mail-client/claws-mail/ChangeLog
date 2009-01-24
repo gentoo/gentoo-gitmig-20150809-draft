@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.108 2009/01/13 08:41:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.109 2009/01/24 14:10:05 fmccor Exp $
+
+  24 Jan 2009; Ferris McCormick <fmccor@gentoo.org> claws-mail-3.7.0.ebuild:
+  Sparc stable, part of Bug #256165.
 
   13 Jan 2009; Christian Faulhammer <fauli@gentoo.org> metadata.xml,
   claws-mail-3.7.0.ebuild:
