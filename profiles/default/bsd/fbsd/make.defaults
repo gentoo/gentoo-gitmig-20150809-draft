@@ -1,8 +1,9 @@
 # Copyright 2004-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.2 2009/01/22 20:10:07 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.3 2009/01/24 07:59:26 the_paya Exp $
 
-FEATURES="-sandbox"
+# Sandbox should work now, leaving commented for testing.
+# FEATURES="-sandbox"
 
 USERLAND="BSD"
 KERNEL="FreeBSD"
