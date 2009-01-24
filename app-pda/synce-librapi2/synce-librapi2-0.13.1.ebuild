@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/synce-librapi2-0.13.1.ebuild,v 1.1 2009/01/21 11:27:43 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/synce-librapi2-0.13.1.ebuild,v 1.2 2009/01/24 12:34:55 mescalinum Exp $
 
 inherit eutils versionator
 
@@ -22,12 +22,7 @@ RDEPEND="${DEPEND}"
 SRC_URI="mirror://sourceforge/synce/librapi2-${PV}.tar.gz"
 S="${WORKDIR}/librapi2-${PV}"
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc BUGS README README.contributing README.design TODO ChangeLog
 }
