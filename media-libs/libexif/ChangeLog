@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.98 2008/12/21 09:27:31 maekke Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.99 2009/01/24 13:52:50 nixnut Exp $
+
+  24 Jan 2009; nixnut <nixnut@gentoo.org> libexif-0.6.17.ebuild:
+  ppc stable #256173
 
 *libexif-0.6.17 (21 Dec 2008)
 
