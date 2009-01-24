@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>freedesktop</herd>
-<maintainer>
-	<email>gentopia@gentoo.org</email>
-</maintainer>
 </pkgmetadata>
