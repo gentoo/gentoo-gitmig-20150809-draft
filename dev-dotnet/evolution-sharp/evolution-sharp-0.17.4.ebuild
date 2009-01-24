@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.17.4.ebuild,v 1.5 2009/01/23 15:40:04 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.17.4.ebuild,v 1.6 2009/01/24 09:54:30 loki_val Exp $
 
 inherit mono gnome.org
 
@@ -12,8 +12,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=gnome-extra/evolution-data-server-1.8.1-r1
-	!>=gnome-extra/evolution-data-server-2.24
+RDEPEND="<gnome-extra/evolution-data-server-2.24
+	!<gnome-extra/evolution-data-server-1.8.1-r1
 	>=dev-dotnet/gtk-sharp-2.4
 	dev-lang/mono"
 DEPEND="${RDEPEND}
