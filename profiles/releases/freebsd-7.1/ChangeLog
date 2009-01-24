@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/FreeBSD-7.1 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-7.1/ChangeLog,v 1.1 2009/01/19 22:08:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-7.1/ChangeLog,v 1.2 2009/01/24 08:11:42 the_paya Exp $
+
+  24 Jan 2009; Javier Villavicencio <the_paya@gentoo.org> -profile.bashrc:
+  Move profile.bashrc to default/bsd/fbsd.
 
   19 Jan 2009; Alexis Ballier <aballier@gentoo.org> +make.defaults,
   +package.mask, +packages, +parent, +profile.bashrc:
