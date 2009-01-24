@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.15 2008/08/25 20:18:24 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.16 2009/01/24 12:33:45 aballier Exp $
+
+  24 Jan 2009; Alexis Ballier <aballier@gentoo.org> libssh2-0.18.ebuild:
+  keyword ~x86-fbsd
 
   25 Aug 2008; Jeroen Roovers <jer@gentoo.org> libssh2-0.18.ebuild:
   Stable for HPPA (bug #233122).
