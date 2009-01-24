@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/synce-gvfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gvfs/ChangeLog,v 1.4 2009/01/21 11:04:34 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gvfs/ChangeLog,v 1.5 2009/01/24 12:43:03 mescalinum Exp $
+
+  24 Jan 2009; Federico Ferri <mescalinum@gentoo.org>
+  synce-gvfs-0.1-r1.ebuild, synce-gvfs-0.2.1.ebuild:
+  fixed some QA stuff left behind when bumping version
+
+  21 Jan 2009; Federico Ferri <mescalinum@gentoo.org> ChangeLog:
+  better version handling
 
   21 Jan 2009; Federico Ferri <mescalinum@gentoo.org>
   synce-gvfs-0.2.1.ebuild:
