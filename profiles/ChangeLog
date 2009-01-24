@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2287 2009/01/24 06:09:38 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2288 2009/01/24 16:03:14 zzam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jan 2009; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Also add sys-fs/udev-137 to package.mask
 
   24 Jan 2009; Javier Villavicencio <the_paya@gentoo.org> profiles.desc:
   Uncomment the Gentoo/FreeBSD-7.1 profile.
