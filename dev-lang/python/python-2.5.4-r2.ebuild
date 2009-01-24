@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r1.ebuild,v 1.2 2009/01/22 05:45:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r2.ebuild,v 1.1 2009/01/24 01:58:57 neurogeek Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -19,18 +19,15 @@ PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 MY_P="Python-${PV}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="Python is an interpreted, interactive, object-oriented programming
-language."
+DESCRIPTION="Python is an interpreted, interactive, object-oriented programming language."
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 		 mirror://gentoo/python-gentoo-patches-${PV}.tar.bz2"
 
 LICENSE="PSF-2.2"
 SLOT="2.5"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
-~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="+xml ncurses gdbm ssl readline tk berkdb ipv6 build ucs2 sqlite doc
-+threads examples elibc_uclibc wininst"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+IUSE="+xml ncurses gdbm ssl readline tk berkdb ipv6 build ucs2 sqlite doc +threads examples elibc_uclibc wininst"
 
 # NOTE: dev-python/{elementtree,celementtree,pysqlite,ctypes,cjkcodecs}
 #       do not conflict with the ones in python proper. - liquidx
@@ -93,8 +90,7 @@ src_unpack() {
 src_configure() {
 	# disable extraneous modules with extra dependencies
 	if use build; then
-		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _curses
-_curses_panel _tkinter _sqlite3"
+		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _curses _curses_panel _tkinter _sqlite3"
 		export PYTHON_DISABLE_SSL=1
 	else
 		# dbm module can link to berkdb or gdbm
@@ -194,8 +190,8 @@ src_install() {
 	src_configure
 	make DESTDIR="${D}" altinstall maninstall || die
 
-	mv "${D}"/usr/bin/python${PYVER}-config
-"${D}"/usr/bin/python-config-${PYVER}
+	mv "${D}"/usr/bin/python${PYVER}-config \
+		"${D}"/usr/bin/python-config-${PYVER}
 
 	# Fix slotted collisions
 	mv "${D}"/usr/bin/pydoc "${D}"/usr/bin/pydoc${PYVER}
@@ -211,11 +207,11 @@ src_install() {
 			/usr/$(get_libdir)/python${PYVER}/config/Makefile
 
 	if use build ; then
-		rm -rf
-"${D}"/usr/$(get_libdir)/python${PYVER}/{test,encodings,email,lib-tk,bsddb/test}
+		rm -rf \
+			"${D}"/usr/$(get_libdir)/python${PYVER}/{test,encodings,email,lib-tk,bsddb/test}
 	else
-		use elibc_uclibc && rm -rf
-"${D}"/usr/$(get_libdir)/python${PYVER}/{test,bsddb/test}
+		use elibc_uclibc && rm -rf \
+			"${D}"/usr/$(get_libdir)/python${PYVER}/{test,bsddb/test}
 		use berkdb || rm -rf "${D}"/usr/$(get_libdir)/python${PYVER}/bsddb
 		use tk || rm -rf "${D}"/usr/$(get_libdir)/python${PYVER}/lib-tk
 	fi
@@ -281,9 +277,9 @@ pkg_postinst() {
 		if [ -f ${myroot}/usr/lib/python2.3/site-packages/portage.py ]; then
 			einfo "Working around possible python-portage upgrade breakage"
 			mkdir -p ${myroot}/usr/lib/portage/pym
-			cp
-${myroot}/usr/lib/python2.4/site-packages/{portage,xpak,output,cvstree,getbinpkg,emergehelp,dispatch_conf}.py
-${myroot}/usr/lib/portage/pym
+			cp \
+			${myroot}/usr/lib/python2.4/site-packages/{portage,xpak,output,cvstree,getbinpkg,emergehelp,dispatch_conf}.py \
+				${myroot}/usr/lib/portage/pym
 			python_mod_optimize /usr/lib/portage/pym
 		fi
 	fi
@@ -316,8 +312,7 @@ src_test() {
 
 	#skip all tests that fail during emerge but pass without emerge:
 	#(See bug# 67970)
-	local skip_tests="distutils global mimetools minidom mmap posix pyexpat sax
-strptime subprocess syntax tcl time urllib urllib2 webbrowser xml_etree"
+	local skip_tests="distutils global mimetools minidom mmap posix pyexpat sax strptime subprocess syntax tcl time urllib urllib2 webbrowser xml_etree"
 
 	# test_pow fails on alpha.
 	# http://bugs.python.org/issue756093
@@ -334,8 +329,7 @@ strptime subprocess syntax tcl time urllib urllib2 webbrowser xml_etree"
 		mv "${T}"/test_${test}.py "${S}"/Lib/test/test_${test}.py
 	done
 
-	elog "Portage skipped the following tests which aren't able to run from
-emerge:"
+	elog "Portage skipped the following tests which aren't able to run from emerge:"
 	for test in ${skip_tests} ; do
 		elog "test_${test}.py"
 	done

@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.361 2009/01/22 01:13:20 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.362 2009/01/24 01:58:57 neurogeek Exp $
+
+*python-2.5.4-r2 (24 Jan 2009)
+
+  24 Jan 2009; Jesus Rivero <neurogeek@gentoo.org> -python-2.5.4-r1.ebuild,
+  +python-2.5.4-r2.ebuild:
+  Fixed line breaks errors in ebuild. Removed older version. Closes Bug
+  #255946. Thanks Walter and Steve for helping
 
 *python-2.5.4-r1 (22 Jan 2009)
 
