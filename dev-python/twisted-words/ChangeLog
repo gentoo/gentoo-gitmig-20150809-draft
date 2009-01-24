@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.36 2009/01/08 22:37:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.37 2009/01/24 16:50:16 patrick Exp $
+
+*twisted-words-8.2.0 (24 Jan 2009)
+
+  24 Jan 2009; Patrick Lauer <patrick@gentoo.org>
+  +twisted-words-8.2.0.ebuild:
+  Bump to 8.2.0, fixes #255415
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org>
   -twisted-words-0.3.0.ebuild, -twisted-words-0.3.0-r1.ebuild,
