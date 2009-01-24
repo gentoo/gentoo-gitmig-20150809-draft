@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-alarm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-alarm/ChangeLog,v 1.5 2008/12/26 19:31:24 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-alarm/ChangeLog,v 1.6 2009/01/24 12:22:45 nixnut Exp $
+
+  24 Jan 2009; nixnut <nixnut@gentoo.org> gmpc-alarm-0.16.0.ebuild:
+  ppc stable #251332
 
   26 Dec 2008; Christoph Mende <angelos@gentoo.org>
   gmpc-alarm-0.17.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-avahi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/ChangeLog,v 1.11 2009/01/04 00:05:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-avahi/ChangeLog,v 1.12 2009/01/24 12:24:40 nixnut Exp $
+
+  24 Jan 2009; nixnut <nixnut@gentoo.org> gmpc-avahi-0.16.0.ebuild:
+  ppc stable #251332
 
   04 Jan 2009; Christoph Mende <angelos@gentoo.org>
   -gmpc-avahi-0.15.5.0.ebuild:
