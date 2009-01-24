@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.9.ebuild,v 1.6 2008/11/17 13:18:53 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.9-r1.ebuild,v 1.1 2009/01/24 10:50:45 hollow Exp $
 
 inherit eutils webapp versionator depend.apache
 
@@ -97,6 +97,10 @@ src_install() {
 	dodir /usr/share/awstats
 	dosym "${MY_HTDOCSDIR}" /usr/share/awstats/htdocs
 
+	for dir in lang lib plugins; do
+		dosym "${MY_CGIBINDIR}"/"${dir}" /usr/share/awstats/"${dir}"
+	done
+
 	# copy configuration file
 	insinto /etc/awstats
 	doins "${S}"/wwwroot/cgi-bin/awstats.model.conf
@@ -116,10 +120,10 @@ src_install() {
 
 	# fix perms
 	for dir in lang lib plugins; do
-		fperms 0755 "${MY_CGIBINDIR}"/${dir}
+		fperms 0755 "${MY_CGIBINDIR}"/"${dir}"
 	done
 	for dir in icon css js; do
-		fperms 0755 "${MY_HTDOCSDIR}"/${dir}
+		fperms 0755 "${MY_HTDOCSDIR}"/"${dir}"
 	done
 }
 
