@@ -1,3 +1,26 @@
+diff -ru cddl.orig/lib/libctf/Makefile cddl/lib/libctf/Makefile
+--- cddl.orig/lib/libctf/Makefile	2009-01-24 03:36:33 -0200
++++ cddl/lib/libctf/Makefile	2009-01-24 03:55:10 -0200
+@@ -4,6 +4,7 @@
+ 
+ LIB=		ctf
+ SHLIB_MAJOR=	1
++LDADD+=-lz
+ 
+ SRCS=		ctf_create.c \
+ 		ctf_decl.c \
+diff -ru cddl.orig/lib/libdtrace/Makefile cddl/lib/libdtrace/Makefile
+--- cddl.orig/lib/libdtrace/Makefile	2009-01-24 00:18:47 -0200
++++ cddl/lib/libdtrace/Makefile	2009-01-24 03:31:06 -0200
+@@ -74,7 +74,7 @@
+ .endif
+ 
+ LFLAGS+=-l
+-
++LDADD+=-lz -lproc
+ YFLAGS+=-d
+ 
+ CLEANFILES=	dt_errtags.c dt_names.c
 diff -ru cddl.orig/lib/libzfs/Makefile cddl/lib/libzfs/Makefile
 --- cddl.orig/lib/libzfs/Makefile	2008-06-22 10:26:18 -0300
 +++ cddl/lib/libzfs/Makefile	2008-06-22 10:26:26 -0300
