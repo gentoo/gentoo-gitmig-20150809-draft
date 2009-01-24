@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.2.ebuild,v 1.7 2009/01/11 19:12:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.2.ebuild,v 1.8 2009/01/24 18:36:48 armin76 Exp $
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -50,6 +50,14 @@ pkg_preinst() {
 		enewgroup p2p
 		enewuser p2p -1 -1 /home/p2p p2p
 	fi
+}
+
+src_unpack () {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/gcc-4.3.patch
+	epatch "${FILESDIR}"/gcc-4.4.patch
 }
 
 src_compile() {

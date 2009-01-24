@@ -1,0 +1,10 @@
+--- src/libs/common/MuleDebug.h	2008-03-29 16:10:03.000000000 +0000
++++ src/libs/common/MuleDebug.h	2009-01-21 16:36:08.325800564 +0000
+@@ -27,6 +27,7 @@
+ #define MULEDEBUG_H
+ 
+ #include <wx/string.h>
++#include <ctype.h>
+ 
+ /**
+  * Installs an exception handler that can handle CMuleExceptions.
