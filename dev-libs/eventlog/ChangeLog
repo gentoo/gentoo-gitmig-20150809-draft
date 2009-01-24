@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/eventlog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.34 2009/01/24 15:40:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.35 2009/01/24 22:32:29 mr_bones_ Exp $
+
+  24 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  -eventlog-0.2.5.ebuild, -eventlog-0.2.7.ebuild:
+  clean out old ebuilds
 
   24 Jan 2009; Raúl Porcel <armin76@gentoo.org> eventlog-0.2.9.ebuild:
   arm/ia64/s390/sh stable wrt #253664
