@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.441 2009/01/24 21:01:47 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.442 2009/01/24 21:14:13 zzam Exp $
+
+*udev-135-r4 (24 Jan 2009)
+
+  24 Jan 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-135-fix-dri-perms.diff, +files/udev-fix-udevinfo-in-doc.diff,
+  +udev-135-r4.ebuild:
+  Fix permissions of dri devices, Bug #255841. Fix references to no longer
+  existing udevinfo command, Bug #255955.
 
 *udev-137 (24 Jan 2009)
 
