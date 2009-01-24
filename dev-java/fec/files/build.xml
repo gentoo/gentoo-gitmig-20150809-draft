@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="fec" default="jar" basedir=".">
+	<target name="init">
+		<mkdir dir="build"/>
+		<mkdir dir="docs"/>
+	</target>
+	<target name="compile" depends="init">
+		<javac srcdir="." destdir="build">
+			<classpath path="../lib/onion-common.jar"/>
+			<classpath path="../lib/log4j.jar"/>
+			<classpath path="../lib/concurrent-jaxed.jar"/>
+		</javac>
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar jarfile="fec.jar" basedir="build"/>
+	</target>
+
+	<target name="javadoc" depends="init">
+		<javadoc destdir="docs">
+			<classpath path="../lib/onion-common.jar"/>
+			<classpath path="../lib/log4j.jar"/>
+			<classpath path="../lib/concurrent-jaxed.jar"/>
+			<fileset dir=".">
+				<include name="**/*.java"/>
+			</fileset>
+		</javadoc>
+	</target>
+</project>
