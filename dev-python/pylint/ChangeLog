@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylint
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.45 2008/10/21 17:28:23 hawking Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.46 2009/01/24 17:42:16 patrick Exp $
+
+*pylint-0.15.2 (24 Jan 2009)
+
+  24 Jan 2009; Patrick Lauer <patrick@gentoo.org> +pylint-0.15.2.ebuild:
+  Bump to 0.15.2, fixes #254653
 
   21 Oct 2008; Ali Polatel <hawking@gentoo.org> pylint-0.14.0.ebuild:
   Fix astng dependency, #236455.
