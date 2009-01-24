@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.151 2009/01/24 18:09:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.152 2009/01/24 18:30:55 fmccor Exp $
+
+  24 Jan 2009; Ferris McCormick <fmccor@gentoo.org> tor-0.2.0.33.ebuild:
+  Sparc stable, Security Bug #256078.
 
   24 Jan 2009; Brent Baude <ranger@gentoo.org> tor-0.2.0.33.ebuild:
   Marking tor-0.2.0.33 ppc64 for bug 256078
