@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.5.ebuild,v 1.6 2008/06/30 23:53:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.9.7.ebuild,v 1.1 2009/01/24 19:44:37 armin76 Exp $
 
 WANT_AUTOCONF=2.5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="dev-lang/perl
 	guionly? ( >=gnome-base/librsvg-2.4.0
@@ -77,8 +77,6 @@ src_unpack() {
 	eautoconf
 	cd "${S}"
 	use ocamlopt || sed -i -e "s/ocamlopt/idontwantocamlopt/g" "${S}/config/configure" || die "failed to disable ocamlopt"
-
-	epatch "${FILESDIR}"/${PV}-execstacks.patch
 }
 
 src_compile() {
