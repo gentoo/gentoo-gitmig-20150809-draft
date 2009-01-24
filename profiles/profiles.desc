@@ -77,7 +77,7 @@ ppc64		default-linux/ppc/ppc64/2007.0/64bit-userland	dev
 # Gentoo/FreeBSD Profiles
 sparc-fbsd	default-bsd/fbsd/6.2/sparc			dev
 x86-fbsd	default-bsd/fbsd/6.2/x86			dev
-#x86-fbsd	default/bsd/fbsd/x86/7.1			dev
+x86-fbsd	default/bsd/fbsd/x86/7.1			dev
 
 
 # hardened multiarch profiles

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2286 2009/01/22 18:05:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2287 2009/01/24 06:09:38 the_paya Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jan 2009; Javier Villavicencio <the_paya@gentoo.org> profiles.desc:
+  Uncomment the Gentoo/FreeBSD-7.1 profile.
 
   22 Jan 2009; Peter Volkov <pva@gentoo.org> package.mask:
   Unmasking ~net-wireless/iwl3945-ucode-15.28.2.8 since it's good idea to
