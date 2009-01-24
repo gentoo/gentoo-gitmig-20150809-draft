@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.243 2009/01/24 11:17:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.244 2009/01/24 15:05:06 vapier Exp $
+
+  24 Jan 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.13.ebuild,
+  wine-9999.ebuild:
+  Split apart funcs according to EAPI-2 #256117 by Arfrever Frehtes
+  Taifersar Arahesis.
 
   24 Jan 2009; Alexis Ballier <aballier@gentoo.org> wine-1.1.0.ebuild,
   wine-1.1.1.ebuild, wine-1.1.2.ebuild:

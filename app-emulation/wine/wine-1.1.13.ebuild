@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.13.ebuild,v 1.4 2009/01/21 08:52:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.13.ebuild,v 1.5 2009/01/24 15:05:06 vapier Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa cups dbus esd +gecko gnutls hal jack jpeg lcms ldap nas ncurses +opengl oss png samba scanner ssl win64 xml +X"
+IUSE="alsa cups dbus esd +gecko gnutls hal jack jpeg lcms ldap nas ncurses +opengl oss png samba scanner ssl win64 +X xcomposite xinerama xml"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -78,13 +78,14 @@ src_unpack() {
 	else
 		unpack ${MY_P}.tar.bz2
 	fi
-	cd "${S}"
+}
 
+src_prepare() {
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in || die
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
 }
 
-src_compile() {
+src_configure() {
 	export LDCONFIG=/bin/true
 
 	# XXX: should check out these flags too:
@@ -116,6 +117,9 @@ src_compile() {
 		|| die "configure failed"
 
 	emake -j1 depend || die "depend"
+}
+
+src_compile() {
 	emake all || die "all"
 }
 
