@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/egroupware
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.98 2008/08/23 04:45:05 cardoe Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.99 2009/01/24 10:02:49 pva Exp $
+
+*egroupware-1.6.001 (24 Jan 2009)
+
+  24 Jan 2009; Peter Volkov <pva@gentoo.org> metadata.xml,
+  -egroupware-1.4.002.ebuild, -egroupware-1.4.003.ebuild,
+  +egroupware-1.6.001.ebuild:
+  Version bump, bug #251743, thank Kai Sommer and Thomas Raschbacher for this
+  work. Remove old.
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
