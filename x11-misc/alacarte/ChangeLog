@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.63 2009/01/22 14:14:44 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.64 2009/01/24 05:23:00 ken69267 Exp $
+
+  24 Jan 2009; Kenneth Prugh <ken69267@gentoo.org> alacarte-0.11.6.ebuild:
+  amd64 stable, bug #255820
 
   22 Jan 2009; Ferris McCormick <fmccor@gentoo.org> alacarte-0.11.6.ebuild:
   Sparc stable, Bug #255820.
