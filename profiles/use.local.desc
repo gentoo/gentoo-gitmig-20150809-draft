@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4154 2009/01/23 20:27:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4155 2009/01/24 10:07:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2604,7 +2604,10 @@ www-apps/Embperl:modperl - Enable www-apache/mod_perl support
 www-apps/Embperl:xalan - Enable dev-java/xalan support
 www-apps/bugzilla:extras - Optional Perl modules
 www-apps/bugzilla:modperl - Enable www-apache/mod_perl support
+www-apps/egroupware:gallery - Install gallery2 port for eGW
+www-apps/egroupware:icalsrv - Install iCal Server (eGroupware-iCalSrv)
 www-apps/egroupware:jpgraph - Add dev-php5/jpgraph support
+www-apps/egroupware:mydms - Install eGroupware-MyDMS
 www-apps/gallery:netpbm - Add media-libs/netpbm support
 www-apps/gallery:unzip - Add app-arch/unzip support for the archive upload module
 www-apps/gallery:zip - Add app-arch/zip for the zip download module
