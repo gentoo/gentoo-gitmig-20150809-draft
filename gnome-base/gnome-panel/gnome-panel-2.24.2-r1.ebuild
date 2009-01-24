@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.24.2-r1.ebuild,v 1.1 2008/12/23 14:23:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.24.2-r1.ebuild,v 1.2 2009/01/24 11:20:29 armin76 Exp $
 
 GCONF_DEBUG="no"
 
@@ -13,7 +13,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="doc eds networkmanager"
 
 RDEPEND=">=gnome-base/gnome-desktop-2.12
