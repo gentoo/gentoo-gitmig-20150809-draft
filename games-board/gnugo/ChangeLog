@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnugo
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.16 2008/06/24 01:51:17 mr_bones_ Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.17 2009/01/24 05:22:49 mr_bones_ Exp $
+
+*gnugo-3.7.13 (24 Jan 2009)
+
+  24 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> +gnugo-3.7.13.ebuild:
+  version bump (bug #256144)
 
 *gnugo-3.7.12 (24 Jun 2008)
 
