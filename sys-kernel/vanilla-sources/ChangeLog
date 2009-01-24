@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.590 2009/01/24 15:52:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.591 2009/01/24 15:54:25 armin76 Exp $
+
+  24 Jan 2009; Raúl Porcel <armin76@gentoo.org>
+  vanilla-sources-2.4.37.ebuild, vanilla-sources-2.6.27.12.ebuild:
+  arm/ia64/sparc/x86 stable
 
   24 Jan 2009; Raúl Porcel <armin76@gentoo.org>
   vanilla-sources-2.6.28.1.ebuild:
