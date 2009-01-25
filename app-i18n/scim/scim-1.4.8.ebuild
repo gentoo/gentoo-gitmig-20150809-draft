@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.7-r1.ebuild,v 1.2 2008/08/10 16:16:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.8.ebuild,v 1.1 2009/01/25 06:15:01 matsuu Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -11,22 +11,22 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc gtk"
+IUSE="doc"
 
 RDEPEND="x11-libs/libX11
-	gtk? ( >=x11-libs/gtk+-2
-		>=dev-libs/atk-1
-		>=x11-libs/pango-1
-		>=dev-libs/glib-2 )
-	!app-i18n/scim-cvs
-	sys-devel/libtool"
+	>=x11-libs/gtk+-2
+	>=dev-libs/atk-1
+	>=x11-libs/pango-1
+	>=dev-libs/glib-2
+	!app-i18n/scim-cvs"
 DEPEND="${RDEPEND}
 	x11-libs/libXt
 	doc? ( app-doc/doxygen
-		app-text/docbook-xsl-stylesheets )
+		>=app-text/docbook-xsl-stylesheets-1.73.1 )
 	dev-lang/perl
 	dev-util/pkgconfig
-	>=dev-util/intltool-0.33"
+	>=dev-util/intltool-0.33
+	sys-devel/libtool"
 
 get_gtk_confdir() {
 	if use amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && use x86 ) ; then
@@ -41,12 +41,7 @@ src_unpack() {
 
 	cd "${S}"
 
-	if use doc ; then
-		local xsl=$(ls -1d /usr/share/sgml/docbook/xsl-stylesheets* | head -n 1)
-		sed -i -e "s:/usr/share/sgml/docbook/xsl-stylesheets:${xsl}:" configure.ac || die
-	fi
-
-	epatch "${FILESDIR}/${P}-syslibltdl.patch"
+	epatch "${FILESDIR}/${PN}-1.4.7-syslibltdl.patch"
 	rm "${S}"/src/ltdl.{cpp,h}
 	eautoreconf
 }
@@ -57,12 +52,13 @@ src_compile() {
 	filter-flags -fvisibility-inlines-hidden
 	filter-flags -fvisibility=hidden
 
-	# We cannot use "use_enable"
-	if ! use gtk ; then
-		myconf="${myconf} --disable-panel-gtk"
-		myconf="${myconf} --disable-setup-ui"
-		myconf="${myconf} --disable-gtk2-immodule"
-	fi
+	# bug #191696
+	## We cannot use "use_enable"
+	#if ! use gtk ; then
+	#	myconf="${myconf} --disable-panel-gtk"
+	#	myconf="${myconf} --disable-setup-ui"
+	#	myconf="${myconf} --disable-gtk2-immodule"
+	#fi
 
 	econf \
 		$(use_with doc doxygen) \

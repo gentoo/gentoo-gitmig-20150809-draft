@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/scim-bridge
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.23 2008/11/02 09:31:21 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.24 2009/01/25 06:19:07 matsuu Exp $
+
+*scim-bridge-0.4.15.2 (25 Jan 2009)
+
+  25 Jan 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +files/scim-bridge-0.4.15.2-gcc43.patch,
+  +files/scim-bridge-0.4.15.2-qt4.patch, -scim-bridge-0.4.15-r1.ebuild,
+  -scim-bridge-0.4.15-r2.ebuild, +scim-bridge-0.4.15.2.ebuild:
+  Version bumped. Removed old versions.
 
 *scim-bridge-0.4.15-r3 (02 Nov 2008)
 
