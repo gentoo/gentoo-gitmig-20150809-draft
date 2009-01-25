@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-lt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-lt/ChangeLog,v 1.4 2009/01/13 23:36:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-lt/ChangeLog,v 1.5 2009/01/25 14:26:16 ranger Exp $
+
+  25 Jan 2009; Brent Baude <ranger@gentoo.org> aspell-lt-1.0.1.ebuild:
+  Marking aspell-lt-1.0.1 ~ppc64 for bug 254425
 
   13 Jan 2009; Peter Volkov <pva@gentoo.org> aspell-lt-1.0.1.ebuild:
   Define IUSE, thank Tiago Cunha for report in bug #254425.
