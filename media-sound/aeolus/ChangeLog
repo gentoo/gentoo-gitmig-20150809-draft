@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/aeolus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aeolus/ChangeLog,v 1.4 2008/07/24 19:03:47 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aeolus/ChangeLog,v 1.5 2009/01/25 14:56:31 maekke Exp $
+
+  25 Jan 2009; Markus Meier <maekke@gentoo.org> aeolus-0.8.1.ebuild:
+  amd64/x86 stable, bug #256042
 
   24 Jul 2008; Raúl Porcel <armin76@gentoo.org> aeolus-0.8.1.ebuild:
   Add ~x86 wrt #232871

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aeolus/aeolus-0.8.1.ebuild,v 1.2 2008/07/24 19:03:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aeolus/aeolus-0.8.1.ebuild,v 1.3 2009/01/25 14:56:31 maekke Exp $
 
 inherit versionator toolchain-funcs multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.kokkinizita.net/linuxaudio/downloads/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=media-libs/libclalsadrv-1.2.2
