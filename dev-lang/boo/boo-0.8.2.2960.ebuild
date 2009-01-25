@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.8.2.2960.ebuild,v 1.1 2008/06/01 11:33:01 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.8.2.2960.ebuild,v 1.2 2009/01/25 16:13:51 loki_val Exp $
 
 inherit mono fdo-mime eutils autotools
 
@@ -19,7 +19,7 @@ DEPEND=">=dev-lang/mono-1.1.4
 		x11-misc/shared-mime-info
 		=x11-libs/gtksourceview-1*"
 
-MAKEOPTS="-j1 ${MAKEOPTS}"
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}

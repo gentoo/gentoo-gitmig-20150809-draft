@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/boo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.22 2008/06/01 11:33:01 jurek Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.23 2009/01/25 16:13:51 loki_val Exp $
+
+  25 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -boo-0.7.5.2013-r1.ebuild, -boo-0.7.9.2659.ebuild, boo-0.8.2.2960.ebuild:
+  Clean out and fix for bug 250138.
 
 *boo-0.8.2.2960 (01 Jun 2008)
 
