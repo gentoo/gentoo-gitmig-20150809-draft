@@ -1,12 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.250-r2.ebuild,v 1.5 2007/11/06 10:22:03 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.250-r2.ebuild,v 1.6 2009/01/25 01:11:35 darkside Exp $
 
 inherit eutils
 
 DESCRIPTION="iptables firewall generator"
 HOMEPAGE="http://firehol.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-1.226.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${PN}-1.226.tar.bz2
+	mirror://gentoo/${PN}-1.226-to-250.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,7 +42,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}" || die
 	epatch "${FILESDIR}/firehol-1.226-to-228.patch" || die
-	epatch "${FILESDIR}/firehol-1.226-to-250.patch" || die
+	epatch "${WORKDIR}/firehol-1.226-to-250.patch" || die
 	# invalid, see Bug 176862 epatch ${FILESDIR}/${P}-groupwith.patch || die
 	epatch "${FILESDIR}/${P}-printf.patch" || die
 }
