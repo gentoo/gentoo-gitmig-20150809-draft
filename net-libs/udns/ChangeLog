@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/udns
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.12 2008/12/13 12:20:11 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.13 2009/01/25 13:51:31 klausman Exp $
+
+  25 Jan 2009; Tobias Klausmann <klausman@gentoo.org> udns-0.0.9.ebuild:
+  Stable on alpha, bug #255408
 
   13 Dec 2008; Friedrich Oslage <bluebird@gentoo.org> udns-0.0.9.ebuild:
   Stable on sparc, bug #243096
