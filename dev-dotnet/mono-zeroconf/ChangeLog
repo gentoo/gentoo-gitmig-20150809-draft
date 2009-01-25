@@ -1,6 +1,14 @@
 # ChangeLog for dev-dotnet/mono-zeroconf
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/ChangeLog,v 1.5 2008/11/24 00:13:14 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/ChangeLog,v 1.6 2009/01/25 13:56:40 loki_val Exp $
+
+*mono-zeroconf-0.8.0-r1 (25 Jan 2009)
+
+  25 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/mono-zeroconf-0.8.0-mono-2.2.patch, -mono-zeroconf-0.8.0.ebuild,
+  +mono-zeroconf-0.8.0-r1.ebuild:
+  Fix bug 252647, thanks to Paul de Vrieze (pauldv@gentoo.org) for the
+  patch.
 
 *mono-zeroconf-0.8.0 (24 Nov 2008)
 

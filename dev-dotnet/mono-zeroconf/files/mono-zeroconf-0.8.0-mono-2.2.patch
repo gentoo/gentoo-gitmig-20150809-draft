@@ -1,0 +1,24 @@
+diff -urN mono-zeroconf-0.8.0.orig/src/Mono.Zeroconf.Providers.AvahiDBus/Mono.Zeroconf.Providers.AvahiDBus/Service.cs mono-zeroconf-0.8.0/src/Mono.Zeroconf.Providers.AvahiDBus/Mono.Zeroconf.Providers.AvahiDBus/Service.cs
+--- mono-zeroconf-0.8.0.orig/src/Mono.Zeroconf.Providers.AvahiDBus/Mono.Zeroconf.Providers.AvahiDBus/Service.cs	2008-06-27 00:45:12.000000000 +0200
++++ mono-zeroconf-0.8.0/src/Mono.Zeroconf.Providers.AvahiDBus/Mono.Zeroconf.Providers.AvahiDBus/Service.cs	2009-01-22 16:52:58.155891843 +0100
+@@ -65,17 +65,17 @@
+         
+         public string Name {
+             get { return name; }
+-            protected set { name = value; }
++            set { name = value; }
+         }
+         
+         public string RegType {
+             get { return regtype; }
+-            protected set { regtype = value; }
++            set { regtype = value; }
+         }
+         
+         public string ReplyDomain {
+             get { return reply_domain; }
+-            protected set { reply_domain = value; }
++            set { reply_domain = value; }
+         }
+         
+         public uint NetworkInterface {
