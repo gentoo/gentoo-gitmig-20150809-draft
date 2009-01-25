@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libclxclient
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.13 2008/10/07 23:04:44 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.14 2009/01/25 14:55:17 maekke Exp $
+
+  25 Jan 2009; Markus Meier <maekke@gentoo.org> libclxclient-3.3.2.ebuild:
+  amd64/x86 stable, bug #256042
 
   07 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   libclxclient-3.6.1.ebuild:

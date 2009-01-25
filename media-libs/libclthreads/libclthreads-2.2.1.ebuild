@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/libclthreads-2.2.1.ebuild,v 1.1 2007/04/19 20:46:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/libclthreads-2.2.1.ebuild,v 1.2 2009/01/25 14:54:36 maekke Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.kokkinizita.net/linuxaudio/downloads/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 src_unpack() {
