@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gqview
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.90 2009/01/20 14:43:29 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.91 2009/01/25 10:52:17 armin76 Exp $
+
+  25 Jan 2009; Raúl Porcel <armin76@gentoo.org> gqview-2.1.5.ebuild:
+  ia64 stable wrt #254900
 
   20 Jan 2009; Tiago Cunha <tcunha@gentoo.org> gqview-2.1.5.ebuild:
   stable sparc, bug 254900
