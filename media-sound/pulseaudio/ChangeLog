@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.117 2009/01/14 12:06:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.118 2009/01/25 11:40:58 armin76 Exp $
+
+  25 Jan 2009; Raúl Porcel <armin76@gentoo.org>
+  pulseaudio-0.9.10-r1.ebuild, pulseaudio-0.9.14.ebuild:
+  Add ~arm/~sh
 
   14 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   pulseaudio-0.9.14.ebuild:
