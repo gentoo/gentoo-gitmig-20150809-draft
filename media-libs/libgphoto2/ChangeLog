@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgphoto2
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.138 2008/12/04 23:17:40 eva Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.139 2009/01/25 13:58:05 maekke Exp $
+
+  25 Jan 2009; Markus Meier <maekke@gentoo.org> libgphoto2-2.4.3.ebuild:
+  amd64/x86 stable, bug #255825
 
   04 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
   +files/libgphoto2-2.4.3-gcc43.patch, libgphoto2-2.4.3.ebuild:
