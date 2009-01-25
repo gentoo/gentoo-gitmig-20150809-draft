@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.8.ebuild,v 1.5 2009/01/04 19:23:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/methane/methane-1.4.8.ebuild,v 1.6 2009/01/25 22:52:37 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -19,9 +19,7 @@ RDEPEND="dev-games/clanlib:0.8[opengl]
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	if ! use mikmod ; then
 		sed -i \
 			-e '/^METHANE_SND/s/^/#/' \
