@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyme
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.23 2008/05/12 07:57:42 hawking Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.24 2009/01/25 15:13:04 maekke Exp $
+
+  25 Jan 2009; Markus Meier <maekke@gentoo.org> pyme-0.7.0-r1.ebuild:
+  add ~amd64, bug #255694
 
   12 May 2008; Ali Polatel <hawking@gentoo.org> -pyme-0.5.1.ebuild,
   pyme-0.6.0-r1.ebuild, pyme-0.7.0-r1.ebuild:
