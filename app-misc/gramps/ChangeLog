@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.91 2009/01/24 14:06:04 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.92 2009/01/25 16:41:45 armin76 Exp $
+
+  25 Jan 2009; Raúl Porcel <armin76@gentoo.org> gramps-3.0.4.ebuild:
+  x86 stable wrt #256161
 
   24 Jan 2009; Ferris McCormick <fmccor@gentoo.org> gramps-3.0.4.ebuild:
   Sparc stable, Bug #256161.
