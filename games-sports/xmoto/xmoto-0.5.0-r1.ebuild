@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.0-r1.ebuild,v 1.2 2009/01/20 02:26:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.0-r1.ebuild,v 1.3 2009/01/25 00:25:53 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit autotools eutils games
 
 LVL_PV="0.5.0~rc2" #they unfortunately don't release both at the same time, why ~ as separator :(
 LVL="inksmoto-${LVL_PV}"
@@ -15,7 +15,7 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${PN}/${PV}/${P}-src.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="X editor nls" # sdl"
+IUSE="editor nls"
 
 RDEPEND="
 	dev-db/sqlite:3
@@ -23,11 +23,12 @@ RDEPEND="
 	dev-lang/lua[deprecated]
 	media-libs/jpeg
 	media-libs/libpng
-	media-libs/libsdl
-	media-libs/sdl-mixer
+	media-libs/libsdl[joystick]
+	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf
 	media-libs/sdl-net
 	net-misc/curl
+	app-arch/bzip2
 	virtual/opengl
 	virtual/glu
 	nls? ( virtual/libintl )
@@ -38,53 +39,31 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	use editor && rm -f "${WORKDIR}"/extensions/{bezmisc,inkex}.py
+	sed -i \
+		-e '/^gettextsrcdir/s:=.*:= @localedir@/gettext/po:' \
+		po/Makefile.in.in \
+		|| die "sed failed"
 }
 
 src_configure() {
-	#if use sdl ; then
-	#	ewarn "SDL is known to be broken, if you experience any troubles please"
-	#	ewarn "try again without this useflag"
-	#	RENDERER="--with-renderer-sdlGfx=1 --with-renderer-openGl=0"
-	#else
-		RENDERER="--with-renderer-sdlGfx=0 --with-renderer-openGl=1"
-	#fi
-	if ! use nls ; then
-		NLS="--disable-nls"
-	else
-		NLS="--with-gettext"
-	fi
-	# using some nice dejavu font, better than nothing
 	egamesconf \
 		--disable-dependency-tracking \
 		--with-enable-zoom=1 \
 		--enable-threads=posix \
 		--with-gnu-ld \
-		$(use_with X) \
+		$(use_enable nls) \
+		--localedir=/usr/share/locale \
 		--with-localesdir=/usr/share/locale \
-		${RENDERER} \
-		${NLS}
+		--with-renderer-sdlGfx=0 \
+		--with-renderer-openGl=1
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	## if it is not working nice way, we'll do it ugly way
-	if use nls ; then
-		dodir /usr/share/locale
-
-		cd "${S}"/po
-		for i in `ls -c1 |grep "\.gmo$"` ; do
-			BASE=$(echo ${i} |sed 's/\.gmo$//g')
-			msgfmt -v -o ${BASE}.mo ${BASE}.po
-
-			insinto /usr/share/locale/${BASE}/LC_MESSAGES
-			newins ${BASE}.gmo xmoto.mo
-		done;
-	fi
-	cd "${S}"
 	dodoc README TODO NEWS ChangeLog
 
 	doicon extra/xmoto.xpm
-	domenu extra/xmoto.desktop
+	make_desktop_entry ${PN} Xmoto
 
 	prepgamesdirs
 

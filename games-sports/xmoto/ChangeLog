@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.29 2009/01/20 02:26:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.30 2009/01/25 00:25:53 mr_bones_ Exp $
+
+  25 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  xmoto-0.5.0-r1.ebuild:
+  more use-based deps; tidy (bug #256205)
 
   20 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   xmoto-0.5.0-r1.ebuild:
