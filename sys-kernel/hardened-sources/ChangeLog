@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.280 2009/01/24 22:48:04 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.281 2009/01/25 00:57:58 gengor Exp $
+
+  25 Jan 2009; Gordon Malm <gengor@gentoo.org>
+  hardened-sources-2.6.26-r9.ebuild:
+  Stable amd64/x86.
 
   24 Jan 2009; Gordon Malm <gengor@gentoo.org>
   -hardened-sources-2.6.27-r3.ebuild, -hardened-sources-2.6.27-r4.ebuild,
