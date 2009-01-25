@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/fuse
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.24 2009/01/25 02:36:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.25 2009/01/25 03:33:43 darkside Exp $
+
+  25 Jan 2009; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  Update metadata to reflect reality
 
 *fuse-0.10.0.2 (25 Jan 2009)
 

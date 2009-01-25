@@ -3,13 +3,13 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>darkside@gentoo.org</email>
-		<description>Proxy Maintainer</description>
+		<email>jmfo1982@yahoo.es</email>
+		<description>Proxied Maintainer. Please assign on bugs.</description>
+		<name>José Manuel Ferrer Ortiz</name>
 	</maintainer>
 	<maintainer>
-		<email>jmfo1982@yahoo.es</email>
-		<description>Proxied Maintainer. Please CC on bugs.</description>
-		<name>José Manuel Ferrer Ortiz</name>
+		<email>darkside@gentoo.org</email>
+		<description>Proxy Maintainer. Please CC on bugs</description>
 	</maintainer>
 	<use>
 		<flag name='libdsk'>Enable support for the floppy disk emulation
