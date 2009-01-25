@@ -1,6 +1,6 @@
 # Copyright 2000-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tasque/tasque-0.1.8.ebuild,v 1.2 2009/01/25 05:22:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tasque/tasque-0.1.8.ebuild,v 1.3 2009/01/25 11:57:15 loki_val Exp $
 
 EAPI=2
 
@@ -63,4 +63,5 @@ src_configure() {
 src_install() {
 	make DESTDIR="${D}" install || die "emake failed"
 	dodoc NEWS TODO README AUTHORS || die "docs installation failed"
+	mv_command="cp -ar" mono_multilib_comply
 }
