@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-newmail
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-newmail/ChangeLog,v 1.22 2008/12/22 14:25:35 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-newmail/ChangeLog,v 1.23 2009/01/25 16:29:13 maekke Exp $
+
+  25 Jan 2009; Markus Meier <maekke@gentoo.org>
+  claws-mail-newmail-0.0.15.ebuild:
+  amd64/x86 stable, bug #256165
 
 *claws-mail-newmail-0.0.15 (22 Dec 2008)
 
