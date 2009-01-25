@@ -1,8 +1,8 @@
 # ChangeLog for media-sound/seq24
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.35 2009/01/25 15:05:13 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.36 2009/01/25 15:12:01 mescalinum Exp $
 
-  25 Jan 2009; Federico Ferri <mescalinum@gentoo.org> ChangeLog:
+  25 Jan 2009; Federico Ferri <mescalinum@gentoo.org> seq24-0.9.0.ebuild:
   install desktop file
 
 *seq24-0.9.0 (29 Nov 2008)
