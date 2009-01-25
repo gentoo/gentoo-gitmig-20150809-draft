@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.26 2009/01/17 13:42:13 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.27 2009/01/25 15:29:04 klausman Exp $
+
+  25 Jan 2009; Tobias Klausmann <klausman@gentoo.org> libkate-0.3.0.ebuild:
+  Keyworded on alpha, bug #254306
 
   17 Jan 2009; Friedrich Oslage <bluebird@gentoo.org> libkate-0.3.0.ebuild:
   Re-add ~sparc keyword, bug #254306

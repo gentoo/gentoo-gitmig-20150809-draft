@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liboggz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.11 2009/01/17 13:40:30 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.12 2009/01/25 15:28:16 klausman Exp $
+
+  25 Jan 2009; Tobias Klausmann <klausman@gentoo.org> liboggz-0.9.8.ebuild:
+  Keyworded on alpha, bug #254306
 
   17 Jan 2009; Friedrich Oslage <bluebird@gentoo.org> liboggz-0.9.8.ebuild:
   Add ~sparc keyword, bug #254306
