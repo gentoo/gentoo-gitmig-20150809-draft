@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.12 2009/01/24 21:58:18 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.13 2009/01/25 16:20:36 aballier Exp $
+
+  25 Jan 2009; Alexis Ballier <aballier@gentoo.org> profile.bashrc:
+  Add a profile.bashrc test for test == construction that does not work on
+  BSD in order to get automatic warnings for things like bug #256305
 
   24 Jan 2009; Javier Villavicencio <the_paya@gentoo.org>
   fbsd/profile.bashrc:
