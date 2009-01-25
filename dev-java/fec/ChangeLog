@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fec
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/ChangeLog,v 1.1 2009/01/24 18:27:35 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/ChangeLog,v 1.2 2009/01/25 23:50:06 tommy Exp $
+
+  25 Jan 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +files/libfec8path.patch:
+  Add missing patch
 
 *fec-1.0.3 (24 Jan 2009)
 
