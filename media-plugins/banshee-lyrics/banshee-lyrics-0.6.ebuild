@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-lyrics/banshee-lyrics-0.6.ebuild,v 1.1 2009/01/10 21:39:14 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-lyrics/banshee-lyrics-0.6.ebuild,v 1.2 2009/01/25 17:05:21 loki_val Exp $
 
 EAPI=2
 
@@ -18,8 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=media-sound/banshee-1.4
-	dev-dotnet/gtkhtml-sharp:2
-	dev-dotnet/gconf-sharp:2"
+	>=dev-dotnet/gtkhtml-sharp-2.24.0:2
+	>=dev-dotnet/gconf-sharp-2.24.0:2"
 DEPEND="${RDEPEND}
 	sys-devel/libtool
 	dev-util/pkgconfig"
