@@ -1,11 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r2.ebuild,v 1.3 2008/08/27 04:27:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r2.ebuild,v 1.4 2009/01/25 00:45:28 darkside Exp $
 
 inherit autotools eutils flag-o-matic
 
 DESCRIPTION="iptables daemon for ULOG target for userspace iptables filter logging"
-SRC_URI="http://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2"
+SRC_URI="http://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2
+	mirror://gentoo/${PN}-glsa-200701.patch.bz2"
 HOMEPAGE="http://www.gnumonks.org/gnumonks/projects/project_details?p_id=1"
 
 SLOT="0"
@@ -27,7 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc41.patch"
 	epatch "${FILESDIR}/${P}-configure.in.patch"
 	EPATCH_OPTS="-F3" \
-		epatch "${FILESDIR}/glsa-200701.patch"
+		epatch "${WORKDIR}/glsa-200701.patch"
 
 	eautoreconf
 }
