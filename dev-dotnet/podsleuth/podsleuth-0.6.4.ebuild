@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.4.ebuild,v 1.1 2009/01/25 11:30:46 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.4.ebuild,v 1.2 2009/01/25 11:46:54 loki_val Exp $
 
 EAPI=2
 
@@ -33,4 +33,5 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog NEWS README
+	mono_multilib_comply
 }
