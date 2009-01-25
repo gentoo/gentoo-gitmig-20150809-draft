@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/podsleuth
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/ChangeLog,v 1.5 2008/12/14 17:03:53 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/ChangeLog,v 1.6 2009/01/25 11:30:46 loki_val Exp $
+
+*podsleuth-0.6.4 (25 Jan 2009)
+
+  25 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -files/podsleuth-0.6.3-libsgutils.patch, -podsleuth-0.6.3.ebuild,
+  -podsleuth-0.6.3-r1.ebuild, +podsleuth-0.6.4.ebuild:
+  Bump
 
 *podsleuth-0.6.3-r1 (14 Dec 2008)
 
