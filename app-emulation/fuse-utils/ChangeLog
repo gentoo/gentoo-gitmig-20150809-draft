@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/fuse-utils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.6 2008/10/05 16:44:01 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.7 2009/01/25 02:43:48 darkside Exp $
+
+*fuse-utils-0.10.0.1 (25 Jan 2009)
+
+  25 Jan 2009; Jeremy Olexa <darkside@gentoo.org>
+  -files/fuse-utils-0.9.0-without-audiofile.patch,
+  -fuse-utils-0.9.0-r1.ebuild, -fuse-utils-0.9.0-r2.ebuild,
+  +fuse-utils-0.10.0.1.ebuild:
+  Version bump by José Manuel Ferrer Ortiz, remove old
 
   05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   fuse-utils-0.9.0-r2.ebuild:
