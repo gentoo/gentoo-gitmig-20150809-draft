@@ -1,0 +1,13 @@
+# ChangeLog for dev-java/touchgraph-graphlayout
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/touchgraph-graphlayout/ChangeLog,v 1.1 2009/01/25 19:31:01 weaver Exp $
+
+*touchgraph-graphlayout-1.22 (25 Jan 2009)
+
+  25 Jan 2009; weaver <weaver@gentoo.org> +metadata.xml,
+  +touchgraph-graphlayout-1.22.ebuild:
+  Import from Java overlay, dependency for dev-java/biojava, thanks to serkan
+
+  22 Jan 2009; Alistair Bush <ali_bush@gentoo.org> ChangeLog:
+  Add ChangeLog for QA.
+
