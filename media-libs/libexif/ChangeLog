@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.99 2009/01/24 13:52:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.100 2009/01/25 16:40:06 maekke Exp $
+
+  25 Jan 2009; Markus Meier <maekke@gentoo.org> libexif-0.6.17.ebuild:
+  amd64/x86 stable, bug #256173
 
   24 Jan 2009; nixnut <nixnut@gentoo.org> libexif-0.6.17.ebuild:
   ppc stable #256173
