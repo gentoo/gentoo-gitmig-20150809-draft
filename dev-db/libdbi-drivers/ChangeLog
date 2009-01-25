@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi-drivers
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.43 2009/01/20 21:55:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.44 2009/01/25 14:36:02 ranger Exp $
+
+  25 Jan 2009; Brent Baude <ranger@gentoo.org> libdbi-drivers-0.8.3.ebuild:
+  Marking libdbi-drivers-0.8.3 ppc64 for bug 256132
 
   20 Jan 2009; Alexis Ballier <aballier@gentoo.org>
   libdbi-drivers-0.8.3.ebuild:
