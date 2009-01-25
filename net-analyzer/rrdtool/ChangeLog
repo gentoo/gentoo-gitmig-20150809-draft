@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.168 2009/01/23 23:15:41 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.169 2009/01/25 17:26:10 klausman Exp $
+
+  25 Jan 2009; Tobias Klausmann <klausman@gentoo.org> rrdtool-1.2.29.ebuild:
+  Stable on alpha, bug #255979
 
   23 Jan 2009; Dawid Węgliński <cla@gentoo.org> rrdtool-1.2.29.ebuild:
   Stable on amd64 (bug #255979)
