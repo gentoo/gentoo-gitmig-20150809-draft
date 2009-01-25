@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.6.ebuild,v 1.2 2009/01/05 17:22:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.6.ebuild,v 1.3 2009/01/25 11:59:35 loki_val Exp $
 
 EAPI=2
 
@@ -34,4 +34,5 @@ MAKEOPTS="${MAKEOPTS} -j1"
 src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
+	mono_multilib_comply
 }
