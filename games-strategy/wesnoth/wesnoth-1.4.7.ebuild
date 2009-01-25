@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.4.7.ebuild,v 1.4 2009/01/18 17:02:33 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.4.7.ebuild,v 1.5 2009/01/25 21:40:54 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs flag-o-matic games
@@ -51,8 +51,7 @@ pkg_setup() {
 	games_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	if use dedicated || use server ; then
 		sed \
 			-e "s:GAMES_BINDIR:${GAMES_BINDIR}:" \
@@ -71,7 +70,7 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	filter-flags -ftracer -fomit-frame-pointer
@@ -102,9 +101,7 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_enable nls dummy-locales) \
 		$(use_enable !dedicated game) \
-		${myconf} \
-		|| die
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install() {
