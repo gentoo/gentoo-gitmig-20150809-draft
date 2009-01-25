@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/calcurse-2.4.ebuild,v 1.1 2008/12/28 14:35:03 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/calcurse-2.4.ebuild,v 1.2 2009/01/25 11:45:11 cedk Exp $
 
-inherit eutils autotools
+inherit eutils
 
 DESCRIPTION="a text-based personal organizer"
 HOMEPAGE="http://culot.org/calcurse/index.html"
