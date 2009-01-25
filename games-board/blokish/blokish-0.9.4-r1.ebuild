@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.4 2009/01/04 19:33:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.5 2009/01/25 22:59:14 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils wxwidgets games
@@ -25,9 +25,7 @@ pkg_setup() {
 	games_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i \
 		-e "s:wx-config:${WX_CONFIG}:" \
