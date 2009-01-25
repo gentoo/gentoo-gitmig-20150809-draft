@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.36 2009/01/25 15:18:36 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/ChangeLog,v 1.37 2009/01/25 15:46:44 maekke Exp $
+
+  25 Jan 2009; Markus Meier <maekke@gentoo.org> libdbi-0.8.3.ebuild:
+  amd64 stable, bug #253663
 
   25 Jan 2009; Ferris McCormick <fmccor@gentoo.org> libdbi-0.8.3.ebuild:
   Sparc stable, Bug #253663.

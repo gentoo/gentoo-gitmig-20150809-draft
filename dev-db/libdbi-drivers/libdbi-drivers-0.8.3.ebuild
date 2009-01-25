@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.3.ebuild,v 1.14 2009/01/25 15:19:55 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.8.3.ebuild,v 1.15 2009/01/25 15:47:36 maekke Exp $
 
 inherit eutils autotools
 
@@ -20,7 +20,7 @@ DEPEND=">=dev-db/libdbi-0.8.3
 		doc? ( app-text/openjade )"
 
 IUSE="mysql postgres sqlite oci8 firebird sqlite3 bindist doc"
-KEYWORDS="alpha ~amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT=0
 S="${WORKDIR}/${MY_P}"
 
