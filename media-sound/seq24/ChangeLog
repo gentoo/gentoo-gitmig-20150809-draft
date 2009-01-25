@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/seq24
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.33 2008/11/29 13:27:14 aballier Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.34 2009/01/25 14:54:45 mescalinum Exp $
+
+  25 Jan 2009; Federico Ferri <mescalinum@gentoo.org> seq24-0.9.0.ebuild:
+  install desktop file
 
 *seq24-0.9.0 (29 Nov 2008)
 
@@ -9,7 +12,7 @@
 
 *seq24-0.8.7-r1 (10 Oct 2008)
 
-  10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> +seq24-0.8.7-r1.ebuild:
+  10 Oct 2008; Diego PettenÃ² <flameeyes@gentoo.org> +seq24-0.8.7-r1.ebuild:
   Update to EAPI=2 and USE deps.
 
   04 Jun 2008; Alexis Ballier <aballier@gentoo.org> seq24-0.8.7.ebuild:
@@ -25,14 +28,14 @@
   24 Sep 2007; Christian Faulhammer <opfer@gentoo.org> seq24-0.8.7.ebuild:
   stable x86, bug 184421
 
-  06 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> seq24-0.8.7.ebuild:
+  06 Jul 2007; Diego PettenÃ² <flameeyes@gentoo.org> seq24-0.8.7.ebuild:
   Add a pkg_setup check for the midi USE flag in alsa-lib; disable the ALSA
   test, we expect it to be present.
 
-  02 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  02 Jul 2007; Diego PettenÃ² <flameeyes@gentoo.org> metadata.xml:
   Hand to newly-born proaudio herd.
 
-  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
 *seq24-0.8.7 (11 Sep 2006)
