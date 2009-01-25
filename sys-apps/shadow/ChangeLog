@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.212 2008/12/20 09:40:04 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.213 2009/01/25 13:57:06 maekke Exp $
+
+  25 Jan 2009; Markus Meier <maekke@gentoo.org> shadow-4.1.2.2.ebuild:
+  amd64/x86 stable, bug #251320
 
   20 Dec 2008; Peter Volkov <pva@gentoo.org> shadow-4.1.2.2.ebuild:
   ~mips rekeyworeded, bug #210769.
