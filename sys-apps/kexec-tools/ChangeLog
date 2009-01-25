@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.25 2009/01/23 04:43:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.26 2009/01/25 01:32:52 darkside Exp $
+
+*kexec-tools-2.0.0-r1 (25 Jan 2009)
+
+  25 Jan 2009; Jeremy Olexa <darkside@gentoo.org>
+  +files/kexec-tools-2.0.0-respect-LDFLAGS.patch, -kexec-tools-2.0.0.ebuild,
+  +kexec-tools-2.0.0-r1.ebuild:
+  Add patch to respect LDFLAGS in kdump
 
 *kexec-tools-2.0.0 (23 Jan 2009)
 
