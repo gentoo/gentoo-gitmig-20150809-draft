@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-137.ebuild,v 1.2 2009/01/24 22:21:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-137.ebuild,v 1.3 2009/01/25 19:55:53 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -38,7 +38,7 @@ pkg_setup() {
 	local KV_MINOR=$(get_version_component_range 2 ${KV})
 	local KV_MICRO=$(get_version_component_range 3 ${KV})
 
-	local KV_min_micro=15 KV_min_micro_reliable=20
+	local KV_min_micro=15 KV_min_micro_reliable=22
 	KV_min=2.6.${KV_min_micro}
 	KV_min_reliable=2.6.${KV_min_micro_reliable}
 
@@ -80,6 +80,7 @@ src_unpack() {
 
 	# patches go here...
 	epatch "${FILESDIR}/${P}-rules-update.diff"
+	epatch "${FILESDIR}/${PN}-fix-udevinfo-in-doc.diff"
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
