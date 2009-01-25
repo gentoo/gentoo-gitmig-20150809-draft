@@ -1,6 +1,10 @@
-diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN logrotate-3.7.7.orig/config.c logrotate-3.7.7/config.c
---- logrotate-3.7.7.orig/config.c	2008-05-09 03:28:59.000000000 -0400
-+++ logrotate-3.7.7/config.c	2009-01-13 16:48:13.000000000 -0500
+Fix compilation on Gentoo/FreeBSD, no alloca.h here and PATH_MAX
+is defined elsewhere.
+
+See bug 254795
+
+--- logrotate-3.7.7.orig/config.c
++++ logrotate-3.7.7/config.c
 @@ -1,5 +1,7 @@
  #include <sys/queue.h>
 +#ifndef NO_ALLOCA_H
@@ -9,9 +13,18 @@ diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN logrotate-3.7.7.orig/con
  #include <ctype.h>
  #include <dirent.h>
  #include <errno.h>
-diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN logrotate-3.7.7.orig/logrotate.c logrotate-3.7.7/logrotate.c
---- logrotate-3.7.7.orig/logrotate.c	2008-05-14 06:31:35.000000000 -0400
-+++ logrotate-3.7.7/logrotate.c	2009-01-13 16:48:12.000000000 -0500
+@@ -21,6 +21,9 @@
+ #include <wctype.h>
+ #include <fnmatch.h>
+ 
++#if !defined(PATH_MAX) && defined(__FreeBSD__)
++#include <sys/param.h>
++#endif
+ #include "basenames.h"
+ #include "log.h"
+ #include "logrotate.h"
+--- logrotate-3.7.7.orig/logrotate.c
++++ logrotate-3.7.7/logrotate.c
 @@ -1,5 +1,7 @@
  #include <sys/queue.h>
 +#ifndef NO_ALLOCA_H
@@ -20,3 +33,13 @@ diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN logrotate-3.7.7.orig/log
  #include <ctype.h>
  #include <dirent.h>
  #include <errno.h>
+@@ -24,6 +24,9 @@
+ int selinux_enforce = 0;
+ #endif
+ 
++#if !defined(PATH_MAX) && defined(__FreeBSD__)
++#include <sys/param.h>
++#endif
+ #include "basenames.h"
+ #include "log.h"
+ #include "logrotate.h"
