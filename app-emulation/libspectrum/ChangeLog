@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libspectrum
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.25 2009/01/25 02:40:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/ChangeLog,v 1.26 2009/01/25 17:38:35 darkside Exp $
+
+  25 Jan 2009; Jeremy Olexa <darkside@gentoo.org>
+  +files/libspectrum-0.5.0.1-without-bzip2_zlib.patch,
+  libspectrum-0.5.0.1.ebuild:
+  actually add the patch
 
   25 Jan 2009; Jeremy Olexa <darkside@gentoo.org>
   +files/libspectrum-0.5.0.1-without-bzip2_zlib.patch:

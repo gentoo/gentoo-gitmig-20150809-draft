@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.5.0.1.ebuild,v 1.1 2009/01/25 02:35:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.5.0.1.ebuild,v 1.2 2009/01/25 17:38:35 darkside Exp $
 
 inherit eutils autotools
 
@@ -24,7 +24,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	#submitted upstream, see bug #0000000000000000000000000000000000000000000000
+	#submitted upstream at:
+	# http://sf.net/tracker/index.php?func=detail&aid=2533274&group_id=91293&atid=596650
 	epatch "${FILESDIR}/${P}-without-bzip2_zlib.patch"
 	eautoreconf
 }
