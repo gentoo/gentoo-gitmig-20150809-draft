@@ -1,12 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r1.ebuild,v 1.9 2008/11/13 13:11:46 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-0.19.6-r1.ebuild,v 1.10 2009/01/25 16:39:35 hd_brummy Exp $
 
-EAPI="1"
+EAPI="2"
+
 inherit eutils qt4
 
-DESCRIPTION="Tool for removing advertisements from recorded MPEG files"
-HOMEPAGE="http://ttcut.tritime.org/"
+DESCRIPTION="Tool for cutting MPEG files especially for removing commercials"
+HOMEPAGE="http://www.tritime.de/ttcut/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,17 +20,9 @@ DEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) =x11-libs/qt-4.3* )
 
 RDEPEND="${DEPEND}
 	media-video/mplayer
-	media-video/transcode"
+	media-video/transcode[mjpeg]"
 
 S=${WORKDIR}/${PN}
-
-pkg_setup() {
-	if ! built_with_use media-video/transcode mjpeg ; then
-		eerror "In order to have encoding mode working with ttcut"
-		eerror "you need to recompile transcode with mjpeg USE flag enabled."
-		die "Recompile transcode with mjpeg USE flag enabled"
-	fi
-}
 
 src_compile() {
 	eqmake4 ttcut.pro -o Makefile.ttcut
