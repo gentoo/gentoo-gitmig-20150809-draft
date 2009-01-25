@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/libxml
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.21 2008/12/13 14:23:46 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.22 2009/01/25 15:14:15 flameeyes Exp $
+
+*libxml-0.9.8 (25 Jan 2009)
+
+  25 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -libxml-0.3.8.ebuild, -libxml-0.3.8.4.ebuild, -libxml-0.8.3.ebuild,
+  -libxml-0.9.5.ebuild, -libxml-0.9.6.ebuild, +libxml-0.9.8.ebuild:
+  Version bump, and remove some older versions, 0.9.7 is candidate for
+  stable, given that dev-ruby/osmlib-base works with that.
 
 *libxml-0.9.7 (13 Dec 2008)
 

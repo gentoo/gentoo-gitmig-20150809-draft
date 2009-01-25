@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-0.9.6.ebuild,v 1.1 2008/12/08 16:24:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-0.9.8.ebuild,v 1.1 2009/01/25 15:14:15 flameeyes Exp $
 
 inherit ruby
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://rubyforge/${PN}/${MY_P}.tgz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="" # doc
+IUSE="doc"
 
 RDEPEND=">=dev-libs/libxml2-2.6.6"
 DEPEND="${RDEPEND}
@@ -21,13 +21,14 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+USE_RUBY="ruby18"
+
 src_compile() {
 	rake extensions || die "rake extensions failed"
 
-	# Does not work on 0.9.6
-	#if use doc; then
-	#	rake rdoc || die "rake rdoc failed"
-	#fi
+	if use doc; then
+		rake rdoc || die "rake rdoc failed"
+	fi
 }
 
 src_test() {
@@ -45,7 +46,7 @@ src_install() {
 
 	dodoc README CHANGES || die "dodoc failed"
 
-	#if use doc; then
-	#	dohtml -r doc/* || die "dohtml failed"
-	#fi
+	if use doc; then
+		dohtml -r doc/* || die "dohtml failed"
+	fi
 }
