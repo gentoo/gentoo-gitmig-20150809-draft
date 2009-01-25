@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.136 2009/01/18 17:02:33 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.137 2009/01/25 22:27:26 maekke Exp $
+
+  25 Jan 2009; Markus Meier <maekke@gentoo.org> wesnoth-1.4.7.ebuild:
+  amd64/x86 stable, bug #255394
 
   18 Jan 2009; Ferris McCormick <fmccor@gentoo.org> wesnoth-1.4.7.ebuild:
   Sparc stable, Bug #255394.
