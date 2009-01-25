@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/a2jmidid
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/ChangeLog,v 1.1 2008/08/06 21:19:08 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/ChangeLog,v 1.2 2009/01/25 17:07:52 maekke Exp $
+
+  25 Jan 2009; Markus Meier <maekke@gentoo.org> a2jmidid-4.ebuild:
+  amd64/x86 stable, bug #255746
 
 *a2jmidid-4 (06 Aug 2008)
 
