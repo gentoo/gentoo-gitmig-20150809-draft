@@ -1,6 +1,6 @@
 # Copyright 2000-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tasque/tasque-0.1.8.ebuild,v 1.1 2009/01/23 20:13:19 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tasque/tasque-0.1.8.ebuild,v 1.2 2009/01/25 05:22:25 mr_bones_ Exp $
 
 EAPI=2
 
@@ -41,7 +41,6 @@ pkg_setup() {
 		die "Please select a backend"
 	fi
 }
-
 
 src_prepare() {
 	#http://bugzilla.gnome.org/show_bug.cgi?id=566355
