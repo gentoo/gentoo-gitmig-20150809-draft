@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.2-r2.ebuild,v 1.6 2009/01/25 15:18:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.2-r2.ebuild,v 1.7 2009/01/26 00:34:45 eva Exp $
 
-inherit libtool flag-o-matic eutils
+inherit libtool flag-o-matic eutils python
 
 DESCRIPTION="Version 2 of the library to manipulate XML files"
 HOMEPAGE="http://www.xmlsoft.org/"
@@ -110,6 +110,11 @@ src_install() {
 }
 
 pkg_postinst() {
+	if use python; then
+		python_version
+		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+	fi
+
 	# We don't want to do the xmlcatalog during stage1, as xmlcatalog will not
 	# be in / and stage1 builds to ROOT=/tmp/stage1root. This fixes bug #208887.
 	if [[ "${ROOT}" != "/" ]]
@@ -128,4 +133,8 @@ pkg_postinst() {
 			einfo "Created XML catalog in ${CATALOG}"
 		fi
 	fi
+}
+
+pkg_postrm() {
+	use python && python_mod_cleanup
 }
