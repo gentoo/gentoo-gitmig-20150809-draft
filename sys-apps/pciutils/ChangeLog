@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.154 2009/01/26 16:05:34 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.155 2009/01/26 18:07:20 klausman Exp $
+
+  26 Jan 2009; Tobias Klausmann <klausman@gentoo.org> pciutils-3.0.2.ebuild:
+  Stable on alpha, bug #256377
 
   26 Jan 2009; Kenneth Prugh <ken69267@gentoo.org> pciutils-3.0.2.ebuild:
   amd64 stable, bug #256377
