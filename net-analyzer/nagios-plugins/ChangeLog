@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.105 2009/01/07 14:32:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.106 2009/01/26 19:55:02 ranger Exp $
+
+  26 Jan 2009; Brent Baude <ranger@gentoo.org>
+  nagios-plugins-1.4.13-r1.ebuild:
+  Marking nagios-plugins-1.4.13-r1 ppc64 stable for bug 256177
 
   07 Jan 2009; Brent Baude <ranger@gentoo.org> nagios-plugins-1.4.13.ebuild:
   stable ppc64, bug 252669
