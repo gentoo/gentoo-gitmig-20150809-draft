@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.12 2009/01/03 22:43:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.13 2009/01/26 01:13:00 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt3 games
@@ -20,9 +20,7 @@ RDEPEND="x11-libs/qt:3[opengl]
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i \
 		's:$(localedir):/usr/share/locale:' \
@@ -30,10 +28,9 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	egamesconf $(use_enable nls) || die
 	mkdir src/moc src/helpviewer/moc
-	emake CXXFLAGS="${CXXFLAGS}" || die "emake failed"
 }
 
 src_install() {
