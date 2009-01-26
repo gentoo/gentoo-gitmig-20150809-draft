@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2294 2009/01/26 18:43:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2295 2009/01/26 19:07:49 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jan 2009; Peter Volkov <pva@gentoo.org> package.mask:
+  Unmasked www-apps/dotproject as security issue is resolved, bug #236518.
 
   26 Jan 2009; Mike Frysinger <vapier@gentoo.org> arch/hppa/make.defaults,
   default-linux/hppa/make.defaults, use.desc:
