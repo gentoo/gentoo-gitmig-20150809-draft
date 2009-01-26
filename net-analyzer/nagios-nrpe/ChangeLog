@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-nrpe
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.59 2008/08/04 19:39:15 jer Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.60 2009/01/26 19:54:04 ranger Exp $
+
+  26 Jan 2009; Brent Baude <ranger@gentoo.org> nagios-nrpe-2.12-r102.ebuild:
+  Marking nagios-nrpe-2.12-r102 ppc64 stable for bug 256177
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe local USE flags for GLEP 56.
