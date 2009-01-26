@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/sysprof
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/ChangeLog,v 1.13 2008/12/26 03:25:32 leio Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/ChangeLog,v 1.14 2009/01/26 03:21:37 leio Exp $
+
+  26 Jan 2009; Mart Raudsepp <leio@gentoo.org> sysprof-1.0.12.ebuild:
+  Add einfo about frame pointers and the lack of them affecting sysprof
+  usefulness.
 
   26 Dec 2008; Mart Raudsepp <leio@gentoo.org> -sysprof-1.0.8.ebuild,
   -sysprof-1.0.9.ebuild, -sysprof-1.0.10.ebuild:

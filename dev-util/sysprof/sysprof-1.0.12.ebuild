@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.0.12.ebuild,v 1.1 2008/12/10 23:52:19 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.0.12.ebuild,v 1.2 2009/01/26 03:21:37 leio Exp $
 
 inherit eutils linux-mod
 
@@ -40,4 +40,16 @@ src_install() {
 	linux-mod_src_install
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	make_desktop_entry sysprof Sysprof sysprof-icon
+}
+
+pkg_postinst() {
+	einfo "On many systems, especially amd64, it is typical that with a modern"
+	einfo "toolchain -fomit-frame-pointer for gcc is the default, because"
+	einfo "debugging is still possible thanks to gcc4/gdb location list feature."
+	einfo "However sysprof is not able to construct call trees if frame pointers"
+	einfo "are not present. Therefore -fno-omit-frame-pointer CFLAGS is suggested"
+	einfo "for the libraries and applications involved in the profiling. That"
+	einfo "means a CPU register is used for the frame pointer instead of other"
+	einfo "purposes, which means a very minimal performance loss when there is"
+	einfo "register pressure."
 }
