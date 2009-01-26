@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/lzmajio-0.94.ebuild,v 1.1 2009/01/26 18:54:49 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/lzmajio-0.94.ebuild,v 1.2 2009/01/26 23:18:36 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 EAPI=2
@@ -36,4 +36,3 @@ src_install() {
 	use doc && java-pkg_dojavadoc docs
 	use source && java-pkg_dosrc net
 }
-
