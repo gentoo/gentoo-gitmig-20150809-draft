@@ -1,6 +1,5 @@
-diff -Nru lrzsz-0.12.20.orig/lib/long-options.c lrzsz-0.12.20/lib/long-options.c
---- lrzsz-0.12.20.orig/lib/long-options.c	1998-04-26 16:22:35.000000000 +0300
-+++ lrzsz-0.12.20/lib/long-options.c	2007-04-14 14:42:34.000000000 +0300
+--- lrzsz-0.12.20/lib/long-options.c
++++ lrzsz-0.12.20/lib/long-options.c
 @@ -22,6 +22,7 @@
  #endif
  
@@ -9,11 +8,11 @@ diff -Nru lrzsz-0.12.20.orig/lib/long-options.c lrzsz-0.12.20/lib/long-options.c
  #include <getopt.h>
  #include "long-options.h"
  
-diff -Nru lrzsz-0.12.20.orig/src/lsyslog.c lrzsz-0.12.20/src/lsyslog.c
---- lrzsz-0.12.20.orig/src/lsyslog.c	1998-12-29 19:27:46.000000000 +0200
-+++ lrzsz-0.12.20/src/lsyslog.c	2007-04-14 14:43:10.000000000 +0300
-@@ -22,6 +22,7 @@
+--- lrzsz-0.12.20/src/lsyslog.c
++++ lrzsz-0.12.20/src/lsyslog.c
+@@ -22,6 +22,8 @@
  #ifdef ENABLE_SYSLOG
++#define _GNU_SOURCE
  #include "zglobal.h"
  #include <pwd.h>
 +#include <stdio.h>
