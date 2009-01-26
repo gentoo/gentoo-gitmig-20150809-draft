@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iwl3945-ucode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl3945-ucode/ChangeLog,v 1.9 2009/01/23 21:48:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl3945-ucode/ChangeLog,v 1.10 2009/01/26 16:48:19 pva Exp $
+
+  26 Jan 2009; Peter Volkov <pva@gentoo.org> iwl3945-ucode-15.28.1.8.ebuild,
+  iwl3945-ucode-15.28.2.8.ebuild:
+  Ucode API change to 2 happens after 2.6.29-rc1, so updated elog messages
+  respectively.
 
   23 Jan 2009; Markus Meier <maekke@gentoo.org>
   iwl3945-ucode-15.28.1.6.ebuild:
