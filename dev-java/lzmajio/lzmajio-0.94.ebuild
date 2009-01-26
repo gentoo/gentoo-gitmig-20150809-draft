@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/lzmajio-0.93.ebuild,v 1.1 2009/01/22 18:17:14 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/lzmajio-0.94.ebuild,v 1.1 2009/01/26 18:54:49 tommy Exp $
 
 JAVA_PKG_IUSE="doc source"
+EAPI=2
 
 inherit java-pkg-2 java-ant-2
 
@@ -26,15 +27,13 @@ DEPEND=">=virtual/jdk-1.5
 
 EANT_GENTOO_CLASSPATH="lzma"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}" || die
+src_prepare() {
 	java-pkg_jar-from lzma
-	cp "${FILESDIR}"/build.xml . || die
 }
 
 src_install() {
 	java-pkg_dojar ${PN}.jar
 	use doc && java-pkg_dojavadoc docs
-	use source && java-pkg_dosrc lzmajio
+	use source && java-pkg_dosrc net
 }
+
