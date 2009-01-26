@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-imagepack
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/ChangeLog,v 1.17 2008/04/27 18:12:03 dertobi123 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/ChangeLog,v 1.18 2009/01/26 19:53:42 ranger Exp $
+
+  26 Jan 2009; Brent Baude <ranger@gentoo.org>
+  nagios-imagepack-1.0-r100.ebuild:
+  Marking nagios-imagepack-1.0-r100 ppc64 stable for bug 256177
 
 *nagios-imagepack-1.0-r100 (27 Apr 2008)
 
