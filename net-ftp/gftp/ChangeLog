@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.72 2009/01/24 00:01:09 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.73 2009/01/26 18:30:32 klausman Exp $
+
+  26 Jan 2009; Tobias Klausmann <klausman@gentoo.org> gftp-2.0.19.ebuild:
+  Stable on alpha, bug #255853
 
   24 Jan 2009; Kenneth Prugh <ken69267@gentoo.org> gftp-2.0.19.ebuild:
   amd64 stable, bug #255853
