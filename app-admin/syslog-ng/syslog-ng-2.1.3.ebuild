@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-2.1.3.ebuild,v 1.7 2009/01/25 17:20:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-2.1.3.ebuild,v 1.8 2009/01/26 23:27:54 mr_bones_ Exp $
 
-inherit fixheadtails eutils
+EAPI=2
+inherit autotools fixheadtails eutils
 
 MY_PV=${PV/_/}
 DESCRIPTION="syslog replacement with advanced filtering features"
@@ -28,12 +29,15 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}/doc/reference"
 	tar xzf syslog-ng.html.tar.gz || die "tar failed"
-	cd "${S}"
-	ht_fix_file configure
-	epatch "${FILESDIR}/${P}-nonstatic.patch"
 }
 
-src_compile() {
+src_prepare() {
+	ht_fix_file configure
+	epatch "${FILESDIR}/${P}-nonstatic.patch"
+	eautoreconf
+}
+
+src_configure() {
 	econf \
 		--sysconfdir=/etc/syslog-ng \
 		--disable-dependency-tracking \
@@ -41,9 +45,7 @@ src_compile() {
 		$(use_enable sql) \
 		$(use_enable static static-linking) \
 		$(use_enable spoof-source) \
-		$(use_enable tcpd tcp-wrapper) \
-		|| die
-	emake || die "emake failed"
+		$(use_enable tcpd tcp-wrapper)
 }
 
 src_install() {

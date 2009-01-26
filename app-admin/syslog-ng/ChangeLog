@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.197 2009/01/25 17:20:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.198 2009/01/26 23:27:54 mr_bones_ Exp $
+
+  26 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  syslog-ng-2.1.3.ebuild:
+  run eautoreconf after touching configure.in (bug #256455)
 
   25 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
   syslog-ng-2.1.3.ebuild:
