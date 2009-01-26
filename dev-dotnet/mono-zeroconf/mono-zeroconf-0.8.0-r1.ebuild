@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/mono-zeroconf-0.8.0-r1.ebuild,v 1.1 2009/01/25 13:56:40 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/mono-zeroconf-0.8.0-r1.ebuild,v 1.2 2009/01/26 12:40:40 loki_val Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 PATCHES=( "${FILESDIR}/${P}-mono-2.2.patch" )
 
 src_configure() {
-	econf $(use_enable doc docs)$(use_enable avahi) $(use_enable !avahi mdnsresponder)
+	econf $(use_enable doc docs) $(use_enable avahi) $(use_enable !avahi mdnsresponder)
 }
 
 src_compile() {
