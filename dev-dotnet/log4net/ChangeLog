@@ -1,9 +1,16 @@
 # ChangeLog for dev-dotnet/log4net
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/ChangeLog,v 1.4 2007/08/20 19:01:30 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/ChangeLog,v 1.5 2009/01/26 17:26:13 loki_val Exp $
 
-  20 Aug 2007; Markus Ullmann <jokey@gentoo.org> log4net-1.2.10-r1.ebuild:
-  Stable on x86 wrt bug #189502
+*log4net-1.2.10-r2 (26 Jan 2009)
+
+  26 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/log4net.pc.in-r1, +files/log4net.snk, +log4net-1.2.10-r2.ebuild:
+  Install log4net.dll into the GAC. Use the same signing key to sign every
+  time so users don't have to rebuild all packages depending on this each
+  time they emerge it. Use the nant build system to figure out which docs to
+  install. EAPI-2ize. Use Debian's tarball so we don't have to mirror the
+  binaries in upstream's. Add ~amd64.
 
 *log4net-1.2.10-r1 (26 Jun 2007)
 
