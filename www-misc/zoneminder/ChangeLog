@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/zoneminder
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.31 2009/01/01 16:47:21 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.32 2009/01/26 19:42:55 pva Exp $
+
+  26 Jan 2009; Peter Volkov <pva@gentoo.org> zoneminder-1.23.3.ebuild:
+  Fixed perllocal.pod collision, bug #252862. Thank rinus for the report and fix.
 
   01 Jan 2009; Thomas Anderson <gentoofan23@gentoo.org> files/init.d,
   metadata.xml:

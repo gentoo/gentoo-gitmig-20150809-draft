@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.6 2009/01/01 16:47:21 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.7 2009/01/26 19:42:55 pva Exp $
 
-inherit eutils autotools depend.php depend.apache multilib
+inherit eutils autotools depend.php depend.apache multilib perl-module
 
 MY_PV=${PV/_/-}
 MY_PN="ZoneMinder"
@@ -108,6 +108,7 @@ src_install() {
 		dodir "${ROOT}"/var/www/zoneminder/htdocs/${DIR}
 	done
 
+	fixlocalpod
 }
 
 pkg_postinst() {
