@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-nsca
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.31 2008/04/27 18:21:45 dertobi123 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/ChangeLog,v 1.32 2009/01/26 19:54:25 ranger Exp $
+
+  26 Jan 2009; Brent Baude <ranger@gentoo.org>
+  nagios-nsca-2.7.2-r100.ebuild:
+  Marking nagios-nsca-2.7.2-r100 ppc64 stable for bug 256177
 
 *nagios-nsca-2.7.2-r100 (27 Apr 2008)
 
