@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.10.ebuild,v 1.1 2009/01/18 17:44:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.10.ebuild,v 1.2 2009/01/26 05:16:45 vapier Exp $
 
 EAPI="1"
 
@@ -42,6 +42,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/sandbox-fix2.patch
+	epatch "${FILESDIR}"/${P}-tcl-install.patch
 
 	elibtoolize
 	epunt_cxx
