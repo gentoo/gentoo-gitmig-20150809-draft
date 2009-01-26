@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.13 2009/01/23 21:51:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.14 2009/01/26 19:19:57 ranger Exp $
+
+  26 Jan 2009; Brent Baude <ranger@gentoo.org> libisoburn-0.3.0_p0.ebuild:
+  Marking libisoburn-0.3.0_p0 ppc64 for bug 254947
 
   23 Jan 2009; Markus Meier <maekke@gentoo.org> libisoburn-0.3.0_p0.ebuild:
   amd64/x86 stable, bug #254947
