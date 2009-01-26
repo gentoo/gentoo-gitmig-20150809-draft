@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/fec
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/fec/ChangeLog,v 1.1 2009/01/26 00:33:37 tommy Exp $
+
+*fec-1.0.3-r1 (26 Jan 2009)
+
+  26 Jan 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +fec-1.0.3-r1.ebuild:
+  Initial commit. Fixes bug 238036
+
