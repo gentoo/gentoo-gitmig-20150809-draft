@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.16.0.ebuild,v 1.1 2009/01/19 03:22:32 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.16.0.ebuild,v 1.2 2009/01/26 06:07:53 leio Exp $
 
 inherit autotools gnome2 python virtualx
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pygtk.org/"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="doc examples libffi"
+IUSE="doc examples" # libffi
 
 RDEPEND=">=dev-lang/python-2.4.4-r5
 	>=dev-libs/glib-2.16
@@ -22,11 +22,11 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	if use libffi && ! built_with_use sys-devel/gcc libffi; then
-		eerror "libffi support not found in sys-devel/gcc." && die
-	fi
+#	if use libffi && ! built_with_use sys-devel/gcc libffi; then
+#		eerror "libffi support not found in sys-devel/gcc." && die
+#	fi
 
-	G2CONF="${G2CONF} $(use_enable doc docs) $(use_with libffi ffi)"
+	G2CONF="${G2CONF} $(use_enable doc docs)" # $(use_with libffi ffi)
 }
 
 src_unpack() {
