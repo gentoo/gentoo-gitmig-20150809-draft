@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pciutils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.149 2008/10/19 11:11:29 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.150 2009/01/26 03:29:10 vapier Exp $
+
+  26 Jan 2009; Mike Frysinger <vapier@gentoo.org> +files/pcimodules.8,
+  files/pcimodules-pciutils-3.0.0.patch, +files/pcimodules.c,
+  pciutils-3.0.0.ebuild, pciutils-3.0.2.ebuild:
+  Split pcimodules files apart to share across versions.
 
   18 Oct 2008; Robin H. Johnson <robbat2@gentoo.org> pciutils-3.0.2.ebuild:
   Bug #242564, docs.

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.0.2.ebuild,v 1.3 2008/10/19 11:11:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.0.2.ebuild,v 1.4 2009/01/26 03:28:41 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -19,10 +19,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-3.0.0-build.patch #233314
-	#epatch "${FILESDIR}"/${PN}-3.0.0-resolv.patch #218555 #Merged
 	epatch "${FILESDIR}"/pcimodules-${PN}-3.0.0.patch
 	epatch "${FILESDIR}"/${PN}-2.2.7-update-pciids-both-forms.patch
 	epatch "${FILESDIR}"/${PN}-3.0.0-locale-happiness.patch
+	cp "${FILESDIR}"/pcimodules.c . || die
 	sed -i -e "/^LIBDIR=/s:/lib:/$(get_libdir):" Makefile
 }
 
@@ -47,7 +47,7 @@ src_compile() {
 src_install() {
 	pemake DESTDIR="${D}" install install-lib || die
 	dosbin pcimodules || die
-	newman pcimodules.man pcimodules.8
+	doman pcimodules.8
 	dodoc ChangeLog README TODO
 
 	if use network-cron ; then
