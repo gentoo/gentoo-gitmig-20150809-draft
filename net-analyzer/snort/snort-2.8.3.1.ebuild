@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.3.1.ebuild,v 1.4 2009/01/02 22:00:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.3.1.ebuild,v 1.5 2009/01/26 18:37:26 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -15,7 +15,7 @@ SRC_URI="http://www.snort.org/dl/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 -sparc ~x86"
-IUSE="static debug threads prelude stream4udp memory-cleanup decoder-preprocessor-rules ipv6 targetbased dynamicplugin timestats ruleperf ppm perfprofiling linux-smp-stats inline inline-init-failopen flexresp flexresp2 react aruba gre mpls pic postgres mysql odbc selinux community-rules"
+IUSE="static debug threads prelude stream4udp memory-cleanup decoder-preprocessor-rules ipv6 targetbased dynamicplugin timestats ruleperf ppm perfprofiling linux-smp-stats inline inline-init-failopen flexresp flexresp2 react aruba gre mpls postgres mysql odbc selinux community-rules"
 
 #flexresp, react, and inline _ONLY_ work with net-libs/libnet-1.0.2a
 DEPEND="virtual/libc
@@ -169,7 +169,6 @@ src_compile() {
 		$(use_with postgres postgresql) \
 		$(use_with mysql) \
 		$(use_with odbc) \
-		$(use_with pic) \
 		--disable-ipfw \
 		--disable-profile \
 		--disable-ppm-test \
