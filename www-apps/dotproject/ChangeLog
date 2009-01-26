@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/dotproject
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/ChangeLog,v 1.7 2008/10/02 04:44:43 wrobel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/ChangeLog,v 1.8 2009/01/26 19:05:24 pva Exp $
+
+*dotproject-2.1.2-r1 (26 Jan 2009)
+
+  26 Jan 2009; Peter Volkov <pva@gentoo.org> -dotproject-2.1.2.ebuild,
+  +dotproject-2.1.2-r1.ebuild:
+  Added patch from upstream developer Matthew Dirks to fix security issues
+  reported in bug #236518. Thank Robert Buchholz for report.
 
 *dotproject-2.1.2 (02 Oct 2008)
 

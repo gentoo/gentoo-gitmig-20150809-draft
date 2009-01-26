@@ -1,12 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/dotproject-2.1.2.ebuild,v 1.1 2008/10/02 04:44:43 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dotproject/dotproject-2.1.2-r1.ebuild,v 1.1 2009/01/26 19:05:24 pva Exp $
 
-inherit webapp depend.php
+inherit eutils webapp depend.php
 
 DESCRIPTION="dotProject is a PHP web-based project management framework"
 HOMEPAGE="http://www.dotproject.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://gentoo/dotproject-2.1.2-r5791_5840.patch.bz2"
 
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
@@ -18,7 +19,13 @@ RDEPEND="app-text/poppler"
 need_httpd_cgi
 need_php_httpd
 
-S="${WORKDIR}"/${PN}
+S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${WORKDIR}/${P}-r5791_5840.patch"
+}
 
 src_install () {
 	webapp_src_preinst
