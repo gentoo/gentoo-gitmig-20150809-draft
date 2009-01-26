@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.0.ebuild,v 1.1 2009/01/26 03:29:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.0.ebuild,v 1.2 2009/01/26 15:58:52 vapier Exp $
 
 inherit eutils multilib
 
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
 	pemake DESTDIR="${D}" install install-lib || die
 	dosbin pcimodules || die
-	newman pcimodules.man pcimodules.8
+	doman "${FILESDIR}"/pcimodules.8
 	dodoc ChangeLog README TODO
 
 	if use network-cron ; then
