@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nini/nini-1.1.0-r1.ebuild,v 1.2 2009/01/07 22:04:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nini/nini-1.1.0-r2.ebuild,v 1.1 2009/01/26 20:45:38 loki_val Exp $
 
 EAPI=2
 
-inherit mono multilib
+inherit mono multilib versionator
 
 DESCRIPTION="Nini - A configuration library for .NET"
 HOMEPAGE="http://nini.sourceforge.net"
@@ -54,7 +54,11 @@ src_compile() {
 
 src_install() {
 	egacinstall Nini.dll Nini
-	insinto /usr/$(get_libdir)/pkgconfig
-	doins "${S}"/nini.pc
+	pkgconfigdir=/usr/$(get_libdir)/pkgconfig
+	insinto ${pkgconfigdir}
+	newins "${S}"/nini.pc ${P}.pc
+	dosym ${P}.pc ${pkgconfigdir}/${PN}-$(get_version_component_range 1-2).pc
+	dosym ${P}.pc ${pkgconfigdir}/${PN}.pc
+
 	dodoc "${S}"/../CHANGELOG.txt "${S}"/../README.txt
 }
