@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/pauker
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.22 2008/11/24 09:17:21 ali_bush Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.23 2009/01/26 21:59:38 mr_bones_ Exp $
+
+  26 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  pauker-1.8_rc6.ebuild:
+  EAPI=2
 
 *pauker-1.8_rc6 (24 Nov 2008)
 

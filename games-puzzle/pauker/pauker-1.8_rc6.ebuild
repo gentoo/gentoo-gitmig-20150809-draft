@@ -1,10 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.8_rc6.ebuild,v 1.2 2008/12/31 03:26:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.8_rc6.ebuild,v 1.3 2009/01/26 21:59:38 mr_bones_ Exp $
 
+EAPI=2
 JAVA_PKG_IUSE="doc source"
-EAPI="1"
-
 inherit eutils java-pkg-2 java-ant-2 games
 
 MY_PV="1.8RC6"
@@ -16,30 +15,26 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.src.jar"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-
 IUSE=""
 
 COMMON_DEP="dev-java/browserlauncher2:1.0
 			dev-java/javahelp
 			dev-java/lucene:2.4
 			dev-java/swing-layout:1"
-
 RDEPEND=">=virtual/jre-1.5
 		${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.5
 		app-arch/unzip
 		${COMMON_DEP}"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 pkg_setup() {
 	games_pkg_setup
 	java-pkg-2_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	find . -iname '*.jar' -delete
 
 	epatch "${FILESDIR}/${PN}_bundledjars.patch"
