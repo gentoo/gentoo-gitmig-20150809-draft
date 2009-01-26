@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.24 2008/06/01 02:34:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.25 2009/01/26 18:41:34 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -40,7 +40,7 @@ LICENSE="LGPL-2"
 	&& SLOT="${CTARGET}-2.2" \
 	|| SLOT="2.2"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc s390 sh sparc x86"
-IUSE="build nls nptl pic userlocales"
+IUSE="build nls nptl userlocales"
 RESTRICT="strip" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -670,18 +670,6 @@ EOF
 	insinto /etc
 	# This is our new config file for building locales
 	doins ${FILESDIR}/locales.build
-
-	if use pic
-	then
-		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}/lib/soinit.o \;
-		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}/lib/sofini.o \;
-		find ${S}/${buildtarget}/ -name "*_pic.a" -exec cp {} ${D}/lib \;
-		find ${S}/${buildtarget}/ -name "*.map" -exec cp {} ${D}/lib \;
-		for i in ${D}/lib/*.map
-		do
-			mv ${i} ${i%.map}_pic.map
-		done
-	fi
 
 	# Is this next line actually needed or does the makefile get it right?
 	# It previously has 0755 perms which was killing things.

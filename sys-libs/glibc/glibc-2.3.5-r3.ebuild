@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.34 2008/09/05 20:23:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r3.ebuild,v 1.35 2009/01/26 18:41:34 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -48,7 +48,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 LICENSE="LGPL-2"
 
-IUSE="nls pic build nptl nptlonly erandom hardened userlocales multilib selinux glibc-compat20 glibc-omitfp linuxthreads-tls profile"
+IUSE="nls build nptl nptlonly erandom hardened userlocales multilib selinux glibc-compat20 glibc-omitfp linuxthreads-tls profile"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -370,17 +370,6 @@ toolchain-glibc_src_install() {
 		done
 		popd > /dev/null
 		rm -rf ${D}/nptl
-	fi
-
-	if use pic && [[ $(tc-arch) != "amd64" ]] ; then
-		find ${S}/${buildtarget}/ -name "soinit.os" -exec cp {} ${D}$(alt_libdir)/soinit.o \;
-		find ${S}/${buildtarget}/ -name "sofini.os" -exec cp {} ${D}$(alt_libdir)/sofini.o \;
-		find ${S}/${buildtarget}/ -name "*_pic.a" -exec cp {} ${D}$(alt_libdir) \;
-		find ${S}/${buildtarget}/ -name "*.map" -exec cp {} ${D}$(alt_libdir) \;
-
-		for i in ${D}$(alt_libdir)/*.map; do
-			mv ${i} ${i%.map}_pic.map
-		done
 	fi
 
 	# We'll take care of the cache ourselves
