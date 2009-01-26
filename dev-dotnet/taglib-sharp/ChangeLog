@@ -1,6 +1,17 @@
 # ChangeLog for dev-dotnet/taglib-sharp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.16 2008/12/26 00:44:08 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.17 2009/01/26 13:52:07 loki_val Exp $
+
+*taglib-sharp-2.0.3.1 (26 Jan 2009)
+
+  26 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -files/taglib-sharp-2.0.3.0-fix-doc-failure.patch,
+  -files/taglib-sharp-2.0.3.0-fix-docdir.patch,
+  -files/taglib-sharp-gnome-sharp-toggle.patch, taglib-sharp-2.0.3.0.ebuild,
+  +taglib-sharp-2.0.3.1.ebuild:
+  Docs generation is totally broken with mono-2.0+, so just don't build
+  them. Some of the old patches were silly because they only applied to
+  examples. Bump to 2.0.3.1 since we're in the neighbourhood.
 
   26 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   -files/taglib-sharp-fix-docdir.patch,
