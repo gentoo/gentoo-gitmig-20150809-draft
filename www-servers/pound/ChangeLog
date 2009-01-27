@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/pound
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.38 2008/08/22 22:36:02 cardoe Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.39 2009/01/27 19:39:52 bangert Exp $
+
+*pound-2.4.4 (27 Jan 2009)
+
+  27 Jan 2009; Thilo Bangert <bangert@gentoo.org> +pound-2.4.4.ebuild:
+  version bump
 
   22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
