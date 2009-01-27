@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9430 2009/01/26 22:52:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9431 2009/01/27 10:10:12 mescalinum Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -313,21 +313,6 @@ media-founts/mikachan-font
 # any more. Will remove within a month, please contact me if you
 # think it should stay.
 app-misc/sdricoh_cs
-
-# Federico Ferri <mescalinum@gentoo.org> (21 Jan 2009)
-# Still under test and probably wont work for the most of people
-# as there are a number of open issues
-=app-pda/synce-gvfs-0.2*
-=app-pda/synce-libsynce-0.13*
-=app-pda/synce-librapi2-0.13*
-=app-pda/synce-librra-0.13*
-=app-pda/synce-sync-engine-0.13*
-=app-pda/synce-hal-0.13*
-=app-pda/synce-trayicon-0.13*
-=app-pda/synce-0.13*
-=app-pda/synce-kpm-0.13*
-=app-pda/synce-gnomevfs-0.13*
-=app-pda/synce-odccm-0.13*
 
 # Matthias Schwarzott <zzam@gentoo.org> (20 Jan 2009)
 # Masked until udev-135-r3 is tested good enough and stable
