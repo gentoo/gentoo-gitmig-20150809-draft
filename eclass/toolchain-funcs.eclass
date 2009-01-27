@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.84 2009/01/08 11:06:10 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.85 2009/01/27 23:35:04 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -384,7 +384,7 @@ gcc-specs-nostrict() {
 
 
 # @FUNCTION: gen_usr_ldscript
-# @USAGE: <list of libs to create linker scripts for>
+# @USAGE: [-a] <list of libs to create linker scripts for>
 # @DESCRIPTION:
 # This function generate linker scripts in /usr/lib for dynamic
 # libs in /lib.  This is to fix linking problems when you have
@@ -398,9 +398,15 @@ gcc-specs-nostrict() {
 # the library (libfoo.so), as ldconfig should usually update it
 # correctly to point to the latest version of the library present.
 gen_usr_ldscript() {
-	local lib libdir=$(get_libdir) output_format=""
+	local lib libdir=$(get_libdir) output_format="" auto=false suffix=$(get_libname)
 	# Just make sure it exists
 	dodir /usr/${libdir}
+
+	if [[ $1 == "-a" ]] ; then
+		auto=true
+		shift
+		dodir /${libdir}
+	fi
 
 	# OUTPUT_FORMAT gives hints to the linker as to what binary format
 	# is referenced ... makes multilib saner
@@ -413,6 +419,16 @@ gen_usr_ldscript() {
 			ewarn "making a symlink instead."
 			dosym "/${libdir}/${lib}" "/usr/${libdir}/${lib}"
 		else
+			local tlib
+			if ${auto} ; then
+				lib="lib${lib}${suffix}"
+				mv "${D}"/usr/${libdir}/${lib}* "${D}"/${libdir}/ || die
+				tlib=$(scanelf -qF'%S#F' "${D}"/${libdir}/${lib})
+				[[ -z ${tlib} ]] && die "unable to read SONAME from ${lib}"
+				rm -f "${D}"/${libdir}/${lib}
+			else
+				tlib=${lib}
+			fi
 			cat > "${D}/usr/${libdir}/${lib}" <<-END_LDSCRIPT
 			/* GNU ld script
 			   Since Gentoo has critical dynamic libraries
@@ -423,9 +439,9 @@ gen_usr_ldscript() {
 			   See bug http://bugs.gentoo.org/4411 for more info.
 			 */
 			${output_format}
-			GROUP ( /${libdir}/${lib} )
+			GROUP ( /${libdir}/${tlib} )
 			END_LDSCRIPT
+			fperms a+x "/usr/${libdir}/${lib}" || die "could not change perms on ${lib}"
 		fi
-		fperms a+x "/usr/${libdir}/${lib}" || die "could not change perms on ${lib}"
 	done
 }
