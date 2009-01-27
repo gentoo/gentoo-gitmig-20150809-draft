@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.8-r1.ebuild,v 1.1 2009/01/23 17:49:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.8-r1.ebuild,v 1.2 2009/01/27 10:08:21 bicatali Exp $
 
 NEED_PYTHON=2.5
 EAPI=2
@@ -28,7 +28,7 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	append-flags $(python-config --includes)
-	export BOOST_PYTHON="boost_python"
+	export BOOST_PYTHON_LIB="boost_python"
 }
 
 src_install() {
