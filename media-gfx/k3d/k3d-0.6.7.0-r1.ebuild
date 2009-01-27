@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.6.7.0-r1.ebuild,v 1.1 2008/05/13 07:24:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.6.7.0-r1.ebuild,v 1.2 2009/01/27 02:41:11 gengor Exp $
 
-inherit eutils
+inherit flag-o-matic
 
 DESCRIPTION="A free 3D modeling, animation, and rendering system"
 HOMEPAGE="http://www.k-3d.org/"
@@ -50,6 +50,10 @@ src_unpack() {
 }
 
 src_compile() {
+	if [[ $(gcc-major-version) -lt 4 ]]; then
+		append-cxxflags -fno-stack-protector
+	fi
+
 	local myconf="--with-ngui"
 	if use expat || ! use xml ; then
 		myconf="--without-libxml2"
