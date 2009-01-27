@@ -1,15 +1,18 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.1.ebuild,v 1.3 2008/08/14 08:13:48 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.1.ebuild,v 1.4 2009/01/27 05:22:14 keri Exp $
 
 MY_PN="XSB"
 MY_P="${MY_PN}-unix"
+
+PATCHSET_VER="0"
 
 inherit eutils autotools java-pkg-opt-2
 
 DESCRIPTION="XSB is a logic programming and deductive database system"
 HOMEPAGE="http://xsb.sourceforge.net"
-SRC_URI="mirror://sourceforge/xsb/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/xsb/${MY_P}.tar.gz
+	mirror://gentoo/${P}-gentoo-patchset-${PATCHSET_VER}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
@@ -30,19 +33,27 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-configure.patch
-	epatch "${FILESDIR}"/${P}-portage.patch
-	epatch "${FILESDIR}"/${P}-varstring.patch
-	epatch "${FILESDIR}"/${P}-orient.patch
-	epatch "${FILESDIR}"/${P}-xsb-script.patch
-	epatch "${FILESDIR}"/${P}-nostrip.patch
-	epatch "${FILESDIR}"/${P}-packages.patch
-	epatch "${FILESDIR}"/${P}-chr_d.patch
-	epatch "${FILESDIR}"/${P}-gap.patch
-	epatch "${FILESDIR}"/${P}-justify.patch
-	epatch "${FILESDIR}"/${P}-mysql.patch
-	epatch "${FILESDIR}"/${P}-odbc.patch
-	epatch "${FILESDIR}"/${P}-xpath.patch
+	EPATCH_FORCE=yes
+	EPATCH_SUFFIX=patch
+	epatch "${WORKDIR}"/${PV}
+
+#	epatch "${FILESDIR}"/${P}-configure.patch
+#	epatch "${FILESDIR}"/${P}-portage.patch
+#	epatch "${FILESDIR}"/${P}-varstring.patch
+#	epatch "${FILESDIR}"/${P}-orient.patch
+#	epatch "${FILESDIR}"/${P}-xsb-script.patch
+#	epatch "${FILESDIR}"/${P}-nostrip.patch
+#	epatch "${FILESDIR}"/${P}-packages.patch
+#	epatch "${FILESDIR}"/${P}-chr_d.patch
+#	epatch "${FILESDIR}"/${P}-dbdrivers.patch
+#	epatch "${FILESDIR}"/${P}-gap.patch
+#	epatch "${FILESDIR}"/${P}-justify.patch
+#	epatch "${FILESDIR}"/${P}-libwww.patch
+#	epatch "${FILESDIR}"/${P}-mysql.patch
+#	epatch "${FILESDIR}"/${P}-odbc.patch
+#	epatch "${FILESDIR}"/${P}-perlmatch.patch
+#	epatch "${FILESDIR}"/${P}-sgml.patch
+#	epatch "${FILESDIR}"/${P}-xpath.patch
 
 	cd "${S}"/build
 	eautoconf

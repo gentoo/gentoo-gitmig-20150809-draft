@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/xsb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.14 2008/10/11 03:50:12 keri Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.15 2009/01/27 05:22:14 keri Exp $
+
+  27 Jan 2009; <keri@gentoo.org> -files/xsb-3.1-chr_d.patch,
+  -files/xsb-3.1-configure.patch, -files/xsb-3.1-gap.patch,
+  -files/xsb-3.1-justify.patch, -files/xsb-3.1-mysql.patch,
+  -files/xsb-3.1-nostrip.patch, -files/xsb-3.1-odbc.patch,
+  -files/xsb-3.1-orient.patch, -files/xsb-3.1-packages.patch,
+  -files/xsb-3.1-portage.patch, -files/xsb-3.1-varstring.patch,
+  -files/xsb-3.1-xpath.patch, -files/xsb-3.1-xsb-script.patch,
+  xsb-3.1.ebuild:
+  Move patches into tarball; support multi-threaded packages
 
   11 Oct 2008; <keri@gentoo.org> files/xsb-3.1-configure.patch:
   Fix configure to ignore interprolog with USE=-java. Closes #240209
