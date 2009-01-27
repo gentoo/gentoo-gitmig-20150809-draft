@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/synce-hal-0.13.ebuild,v 1.4 2009/01/27 02:32:21 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/synce-hal-0.13.ebuild,v 1.5 2009/01/27 02:42:04 mescalinum Exp $
 
 inherit multilib versionator
 
@@ -28,16 +28,15 @@ RDEPEND="${DEPEND}
 
 SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
+src_compile() {
+	econf --with-hal-addon-dir="/usr/$(get_libdir)/hal/scripts" || die
+	emake || die
+}
+
 src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS README ChangeLog || die
 
 	# fix collision with app-pda/synce-serial, bug 246675
 	rm -f "${D}/usr/libexec/synce-serial-chat"
-
-	# fix install location of hal scripts
-	local hal_dir="/usr/$(get_libdir)/hal"
-	local hal_scripts_dir="${hal_dir}/scripts"
-	dodir "${hal_scripts_dir}"
-	mv "${D}${hal_dir}"/hal-synce-* "${D}${hal_scripts_dir}/"
 }
