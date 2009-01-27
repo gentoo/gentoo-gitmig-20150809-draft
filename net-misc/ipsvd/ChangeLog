@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ipsvd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.4 2008/08/23 17:57:21 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.5 2009/01/27 20:23:46 bangert Exp $
+
+*ipsvd-1.0.0 (27 Jan 2009)
+
+  27 Jan 2009; Thilo Bangert <bangert@gentoo.org> +ipsvd-1.0.0.ebuild:
+  version bump
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> ipsvd-0.13.0.ebuild:
   add ~amd64, bug #212319
