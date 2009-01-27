@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/bar
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.18 2007/04/18 20:06:47 welp Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.19 2009/01/27 08:09:33 pva Exp $
+
+*bar-1.10.9 (27 Jan 2009)
+
+  27 Jan 2009; Peter Volkov <pva@gentoo.org> -bar-1.10.2.ebuild,
+  +bar-1.10.9.ebuild:
+  Version bump. Don't pre-stripped executable, bug #241242, thank Diego E.
+  'Flameeyes' Pettenò for report.
 
   18 Apr 2007; <welp@gentoo.org> bar-1.10.3.ebuild:
   Stable on amd64 wrt bug 175087
