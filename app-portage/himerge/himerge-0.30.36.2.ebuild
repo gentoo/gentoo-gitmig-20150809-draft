@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.30.1.ebuild,v 1.1 2008/09/19 19:13:24 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.30.36.2.ebuild,v 1.1 2009/01/27 04:44:37 araujo Exp $
+
+EAPI="2"
 
 inherit base haskell-cabal
 
@@ -14,20 +16,27 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.8.2
-	>=dev-haskell/gtk2hs-0.9.12.1
+	|| ( >=dev-haskell/gtk2hs-0.9.12.1[firefox]
+		>=dev-haskell/gtk2hs-0.9.12.1[seamonkey]
+		>=dev-haskell/gtk2hs-0.9.12.1[xulrunner] )
 	dev-haskell/parallel
+	dev-haskell/regex-posix
 	>=app-portage/eix-0.9.3
 	>=app-portage/gentoolkit-0.2.3
 	>=app-portage/portage-utils-0.1.28
 	>=dev-haskell/filepath-1.0"
 RDEPEND=""
 
+RESTRICT="strip"
+
 pkg_setup() {
-	if ! built_with_use -o dev-haskell/gtk2hs firefox seamonkey xulrunner; then
-	   	echo
-		eerror "gtk2hs was not merged with the firefox, seamonkey or xulrunner USE flag."
-		eerror "Himerge requires gtk2hs to be compiled with any of these flags."
-		die "gtk2hs missing web browser support."
+	if has_version '>=www-client/mozilla-firefox-3.0'; then
+		if ! built_with_use dev-haskell/gtk2hs xulrunner; then
+			echo
+			eerror "Himerge requires gtk2hs to be compiled with the xulrunner
+			USE flag if you have mozilla-firefox >= 3.0."
+			die "gtk2hs missing web browser support."
+		fi
 	fi
 }
 
