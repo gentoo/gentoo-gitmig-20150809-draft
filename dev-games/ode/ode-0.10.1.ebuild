@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.10.1.ebuild,v 1.2 2008/09/03 18:57:17 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.10.1.ebuild,v 1.3 2009/01/27 22:22:51 mr_bones_ Exp $
 
+EAPI=2
 DESCRIPTION="Open Dynamics Engine SDK"
 HOMEPAGE="http://ode.org/"
 SRC_URI="mirror://sourceforge/opende/${P}.tar.bz2"
@@ -18,9 +19,7 @@ RDEPEND="examples? (
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s:\$.*/drawstuff/textures:/usr/share/doc/${PF}/examples:" \
 		drawstuff/src/Makefile.in \
@@ -28,7 +27,7 @@ src_unpack() {
 		|| die "sed Makefile.in failed"
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--disable-dependency-tracking \
 		--enable-shared \
@@ -36,8 +35,10 @@ src_compile() {
 		$(use_enable double-precision) \
 		$(use_enable examples demos) \
 		$(use_enable gyroscopic) \
-		$(use_with examples drawstuff X11) \
-		|| die
+		$(use_with examples drawstuff X11)
+}
+
+src_compile() {
 	emake || die "emake failed"
 	if use doc ; then
 		cd ode/doc
