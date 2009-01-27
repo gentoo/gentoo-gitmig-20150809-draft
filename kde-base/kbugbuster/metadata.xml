@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<use>
-	<flag name="kcal">Support for kcal (calendar) format</flag>
-</use>
 <herd>kde</herd>
 </pkgmetadata>
