@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4157 2009/01/27 06:48:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4158 2009/01/27 16:47:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -981,6 +981,8 @@ gnustep-base/gnustep-back-cairo:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
 gnustep-base/gnustep-base:gcc-libffi - Use dev-libs/libffi from sys-devel/gcc instead of dev-libs/ffcall. Requires sys-devel/gcc built with USE=libffi
 kde-base/akonadi:nepomuk - Enable desktop-wide tagging support
+kde-base/akonadi:opensync - Enables OpenSync data synchronization protocol support.
+kde-base/akonadi:semantic-desktop - Enables desktop-wide tagging support.
 kde-base/ark:archive - Enable support for a variety of archive formats through libarchive
 kde-base/ark:zip - Enable zip support through LibZip
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
@@ -2233,8 +2235,6 @@ net-wireless/bluez-utils:test-programs - Install l2test and rctest
 net-wireless/hostapd:logwatch - Install support files for sys-app/logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
 net-wireless/hostapd:wps - Add support for Wi-Fi Protected Setup
-net-wireless/iwlwifi:ipw3945 - Add support for the IPW3945 wireless card
-net-wireless/iwlwifi:ipw4965 - Add support for the IPW4965 wireless card
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/madwifi-ng:injection - Adds support for net-wireless/aircrack-ng aireplay-ng packet injection
 net-wireless/madwifi-old:amrr - Use Adaptive Multi Rate Retry bit rate control algorithm
