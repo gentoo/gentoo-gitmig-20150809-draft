@@ -1,0 +1,42 @@
+Patch from FreeBSD ports.
+
+--- pftop-0.7.orig/sf-gencode.c
++++ pftop-0.7/sf-gencode.c
+@@ -32,7 +32,7 @@
+ #include <netinet/in.h>
+ #include <netinet/if_ether.h>
+ 
+-#include <net/if_pflog.h>
++/* #include <net/if_pflog.h> */
+ #include <net/pfvar.h>
+ 
+ #include <netdb.h>
+@@ -60,7 +60,7 @@
+ static char sf_errbuf[PFTOP_ERRBUF_SIZE];
+ 
+ /* VARARGS */
+-__dead void
++__dead2 void
+ sf_error(const char *fmt, ...)
+ {
+ 	va_list ap;
+--- pftop-0.7.orig/sf-gencode.h
++++ pftop-0.7/sf-gencode.h
+@@ -169,7 +169,7 @@
+ struct arth  *gen_loadexpire(void);
+ 
+ void bpf_optimize(struct block **);
+-__dead void bpf_error(const char *, ...)
++__dead2 void bpf_error(const char *, ...)
+     __attribute__((volatile, __format__ (printf, 1, 2)));
+ 
+ void finish_parse(struct block *);
+@@ -184,7 +184,7 @@
+ #define JT(b)  ((b)->et.succ)
+ #define JF(b)  ((b)->ef.succ)
+ 
+-__dead void sf_error(const char *fmt, ...);
++__dead2 void sf_error(const char *fmt, ...);
+ const char *sf_get_error(void);
+ int sf_compile(struct bpf_program *, char *, int, bpf_u_int32);
+ void sf_freecode(struct bpf_program *);

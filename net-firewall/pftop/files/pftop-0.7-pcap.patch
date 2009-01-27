@@ -1,0 +1,61 @@
+Fix compilation against libpcap-1.0.0.
+
+--- pftop-0.7.orig/bpf_dump.c
++++ pftop-0.7/bpf_dump.c
+@@ -33,10 +33,10 @@
+ #include <stdio.h>
+ 
+ 
+-extern void bpf_dump(struct bpf_program *, int);
++extern void bpf_dump(const struct bpf_program *, int);
+ 
+ void
+-bpf_dump(struct bpf_program *p, int option)
++bpf_dump(const struct bpf_program *p, int option)
+ {
+ 	struct bpf_insn *insn;
+ 	int i;
+--- pftop-0.7.orig/bpf_filter.c
++++ pftop-0.7/bpf_filter.c
+@@ -134,7 +134,7 @@
+ }
+ #endif
+ 
+-#include <net/bpf.h>
++//#include <net/bpf.h>
+ 
+ /*
+  * Execute the filter program starting at pc on the packet p
+@@ -143,8 +143,8 @@
+  */
+ u_int
+ bpf_filter(pc, p, wirelen, buflen)
+-	struct bpf_insn *pc;
+-	u_char *p;
++	const struct bpf_insn *pc;
++	const u_char *p;
+ 	u_int wirelen;
+ 	u_int buflen;
+ {
+--- pftop-0.7.orig/bpf_image.c
++++ pftop-0.7/bpf_image.c
+@@ -36,7 +36,7 @@
+ 
+ char *
+ bpf_image(p, n)
+-	struct bpf_insn *p;
++	const struct bpf_insn *p;
+ 	int n;
+ {
+ 	int v;
+--- pftop-0.7.orig/sf-gencode.h
++++ pftop-0.7/sf-gencode.h
+@@ -188,7 +188,7 @@
+ const char *sf_get_error(void);
+ int sf_compile(struct bpf_program *, char *, int, bpf_u_int32);
+ void sf_freecode(struct bpf_program *);
+-void bpf_dump(struct bpf_program *, int);
++void bpf_dump(const struct bpf_program *, int);
+ 
+ extern int no_optimize;
+ 

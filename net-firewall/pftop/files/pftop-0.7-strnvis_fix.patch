@@ -1,0 +1,13 @@
+Fix from FreeBSD ports.
+
+--- sf-scanner.l.orig
++++ sf-scanner.l
+@@ -233,7 +233,7 @@
+ 			size_t len = strlen(yytext) * 4 + 1;
+ 			char *v = malloc(len);
+ 			if (v != NULL)
+-				strnvis(v, yytext, len, 0);
++				strvis(v, yytext, 0);
+ 			sf_error("illegal token: %s", v);
+ 			free(v);
+ 			}
