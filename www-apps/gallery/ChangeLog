@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/gallery
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.173 2008/12/28 21:04:58 wrobel Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.174 2009/01/27 12:01:41 pva Exp $
+
+*gallery-2.3-r1 (27 Jan 2009)
+
+  27 Jan 2009; Peter Volkov <pva@gentoo.org> +gallery-2.3-r1.ebuild:
+  Added sqlite support, bug #247271, thank Marcin Deranek for report. Sqlite
+  support is a bit experimental, so I'd like it to be ~arch for some time.
 
   28 Dec 2008; Gunnar Wrobel <wrobel@gentoo.org> -gallery-1.5.9.ebuild:
   Removed vulnerable www-apps/gallery-1.5.9 (sec issue #249277).
