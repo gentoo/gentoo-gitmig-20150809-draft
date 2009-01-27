@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/taglib-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.18 2009/01/26 15:35:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/taglib-sharp/ChangeLog,v 1.19 2009/01/27 14:46:46 loki_val Exp $
+
+  27 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  taglib-sharp-2.0.3.1.ebuild:
+  Fix bug 256504, taglib-sharp erroneously demanding monodoc even though we
+  have sedded it out of makefiles. Thanks to Pacho Ramos
+  <pacho@condmat1.ciencias.uniovi.es> for reporting.
 
   26 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
   taglib-sharp-2.0.3.0.ebuild, taglib-sharp-2.0.3.1.ebuild:
