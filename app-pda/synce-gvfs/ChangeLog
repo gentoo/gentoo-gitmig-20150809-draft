@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/synce-gvfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gvfs/ChangeLog,v 1.5 2009/01/24 12:43:03 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gvfs/ChangeLog,v 1.6 2009/01/27 02:08:12 mescalinum Exp $
+
+  27 Jan 2009; Federico Ferri <mescalinum@gentoo.org>
+  synce-gvfs-0.2.1.ebuild:
+  switch back to external gnome/gvfs tarball, which allows to build synce-gvfs
+  against a arbitrary gvfs version rather than the shipped one. (this has to
+  continue until gvfs becomes a public api)
 
   24 Jan 2009; Federico Ferri <mescalinum@gentoo.org>
   synce-gvfs-0.1-r1.ebuild, synce-gvfs-0.2.1.ebuild:
