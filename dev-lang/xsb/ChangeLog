@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.15 2009/01/27 05:22:14 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.16 2009/01/27 05:23:46 keri Exp $
+
+  27 Jan 2009; <keri@gentoo.org> xsb-3.1.ebuild:
+  Remove redundant comments
 
   27 Jan 2009; <keri@gentoo.org> -files/xsb-3.1-chr_d.patch,
   -files/xsb-3.1-configure.patch, -files/xsb-3.1-gap.patch,
