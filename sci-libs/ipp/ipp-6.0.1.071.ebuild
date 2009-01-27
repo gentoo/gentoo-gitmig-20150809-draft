@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-6.0.0.063.ebuild,v 1.2 2009/01/27 16:11:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-6.0.1.071.ebuild,v 1.1 2009/01/27 16:11:37 bicatali Exp $
 
 inherit check-reqs
 
-PID=1243
+PID=1326
 PB=${PN}
 DESCRIPTION="Intel(R) Integrated Performance Primitive library for multimedia and data processing"
 HOMEPAGE="http://developer.intel.com/software/products/ipp/"
