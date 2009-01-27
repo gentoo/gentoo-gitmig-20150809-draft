@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-gpupetexgl2/psemu-gpupetexgl2-2.0.8.ebuild,v 1.2 2007/04/09 16:57:33 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-gpupetexgl2/psemu-gpupetexgl2-2.0.8.ebuild,v 1.3 2009/01/27 06:25:30 mr_bones_ Exp $
 
+EAPI=1
 inherit games
 
 DESCRIPTION="PSEmu XGL2 GPU"
@@ -16,7 +17,8 @@ KEYWORDS="x86"
 IUSE=""
 RESTRICT="strip"
 
-RDEPEND="virtual/opengl"
+RDEPEND="virtual/opengl
+	x11-libs/gtk+:1"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 

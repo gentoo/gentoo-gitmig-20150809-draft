@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-tr64gl/mupen64-blight-tr64gl-0.8.7_pre1.ebuild,v 1.5 2007/04/06 04:51:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-tr64gl/mupen64-blight-tr64gl-0.8.7_pre1.ebuild,v 1.6 2009/01/27 06:23:40 mr_bones_ Exp $
 
+EAPI=1
 inherit games
 
 MY_P="tr64gl-${PV/_/-}"
@@ -15,7 +16,9 @@ KEYWORDS="x86"
 IUSE=""
 RESTRICT="strip"
 
-RDEPEND="media-libs/libsdl"
+RDEPEND="media-libs/libsdl
+	virtual/opengl
+	x11-libs/gtk+:1"
 
 S=${WORKDIR}
 

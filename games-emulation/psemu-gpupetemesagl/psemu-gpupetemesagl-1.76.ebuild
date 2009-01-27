@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-gpupetemesagl/psemu-gpupetemesagl-1.76.ebuild,v 1.3 2007/04/09 16:54:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-gpupetemesagl/psemu-gpupetemesagl-1.76.ebuild,v 1.4 2009/01/27 06:27:45 mr_bones_ Exp $
 
+EAPI=1
 inherit games
 
 DESCRIPTION="PSEmu MesaGL GPU"
@@ -14,7 +15,8 @@ KEYWORDS="x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND="virtual/opengl"
+RDEPEND="virtual/opengl
+	x11-libs/gtk+:1"
 
 S=${WORKDIR}
 
