@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.206 2009/01/25 14:26:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.207 2009/01/27 10:35:50 armin76 Exp $
+
+  27 Jan 2009; Raúl Porcel <armin76@gentoo.org> netpbm-10.44.00-r1.ebuild:
+  ia64/sparc stable wrt #249384
 
   25 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
   netpbm-10.44.00-r1.ebuild:
