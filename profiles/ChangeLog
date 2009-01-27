@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2298 2009/01/27 10:10:12 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2299 2009/01/27 14:04:45 wschlich Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jan 2009; Wolfram Schlich <wschlich@gentoo.org> package.mask:
+  remove hpacucli mask as the license file is now in portage
 
   27 Jan 2009; Federico Ferri <mescalinum@gentoo.org> package.mask:
   unmask synce-0.13 as the issues are now solved
