@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4160 2009/01/27 17:27:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4161 2009/01/27 18:27:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1056,6 +1056,11 @@ kde-base/kttsd:phonon - Enable support for the KDE multimedia API
 kde-base/kwin:captury - Enable the 'Capture'-plugin in kwin
 kde-base/marble:designer-plugin - Enable designer plugin
 kde-base/okular:chm - Enable support for Microsoft Compiled HTML Help files
+kde-base/okular:ebook - Add E-Book suppport
+kde-base/okular:ps - Add PostScript support
+kde-base/plasma-workspace:google-gadgets - Add google-gadgets support
+kde-base/pykde4:akonadi - Builds Akonadi python language bindings
+kde-base/pykde4:semantic-desktop - Enables Nemomuk and Soprano python language bindings
 kde-base/step:qalculate - Enable the libqalculate library for unit conversion
 kde-misc/knetworkmanager:cisco - Adds support for the Cisco VPN client net-misc/vpnc
 kde-misc/knetworkmanager:dialup - Enables Dialup (PPP) support
