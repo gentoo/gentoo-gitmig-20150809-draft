@@ -1,0 +1,31 @@
+--- src/scusibot.cpp.old        2009-01-27 15:22:39.000000000 +0100
++++ src/scusibot.cpp    2009-01-27 15:23:10.000000000 +0100
+@@ -5,6 +5,7 @@
+ #include "stationarygun.hpp"
+ #include "global.hpp"
+ #include <vector>
++#include <algorithm>
+
+ ScusiBot::ScusiBot()
+        : m_event( Event::EMPTY ), m_count( 0 ), m_state( IDLE ) {
+--- src/spriteset.cpp.old       2009-01-27 15:26:39.000000000 +0100
++++ src/spriteset.cpp   2009-01-27 15:27:51.000000000 +0100
+@@ -2,6 +2,7 @@
+
+ #include  "spriteset.hpp"
+ #include  "global.hpp"
++#include "sprite.hpp"
+
+ /**********************************************************/
+
+@@ -17,6 +18,9 @@
+ #endif // SUPPRESS_COLORING
+ #endif // BLACK_
+
++/* force creation of an implementation of SpriteSet<Sprite> */
++static SpriteSet<Sprite> foo;
++
+ /**********************************************************/
+
+ template <class T>
+

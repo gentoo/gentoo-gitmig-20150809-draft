@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/wop
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/wop/ChangeLog,v 1.8 2008/06/22 15:32:17 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/wop/ChangeLog,v 1.9 2009/01/27 14:42:16 tupone Exp $
+
+  27 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/wop-0.4.3-gcc43.patch, wop-0.4.3-r1.ebuild:
+  Fix gcc-4.3 bug #253496 by Erik Hahn <erik_hahn@gmx.de>
 
   22 Jun 2008; Markus Meier <maekke@gentoo.org> wop-0.4.3-r1.ebuild:
   x86 stable, bug #227645
