@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.40-r3.ebuild,v 1.10 2008/11/12 21:47:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.40-r3.ebuild,v 1.11 2009/01/27 08:41:56 pva Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,6 +25,7 @@ src_unpack() {
 		sed -i -e 's/^#EXTERNAL_MD5[[:blank:]]*= /EXTERNAL_MD5 = /g' \
 					Makefile || die "sed failed"
 	fi
+	sed -e 's/-o fdupes/${CFLAGS} ${LDFLAGS} -o fdupes/' -i Makefile
 }
 
 src_compile() {
