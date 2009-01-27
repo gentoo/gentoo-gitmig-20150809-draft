@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9432 2009/01/27 14:04:45 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9433 2009/01/27 16:40:10 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1442,10 +1442,6 @@ sci-chemistry/nmrview
 # Mask zaptel-1.2.18-r1 since it seems to have some issues and is experimental
 # See bug #185268
 =net-misc/zaptel-1.2.18-r1
-
-# Saleem Abdulrasool <compnerd@gentoo.org> (10 Jul 2007)
-# Masking for testing (still not a drop in replacement for ipw3945)
-net-wireless/iwlwifi
 
 # Sven Wegener <swegener@gentoo.org> (07 Jul 2007)
 # Development releases
