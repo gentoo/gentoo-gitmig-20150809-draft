@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.1_rc2.ebuild,v 1.1 2009/01/18 19:12:40 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.1_rc2.ebuild,v 1.2 2009/01/27 15:04:39 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -242,6 +242,7 @@ src_unpack() {
 	epatch "${FILESDIR}/ooo-env_log.diff"
 	cp -f "${FILESDIR}/nojavanostax.diff" "${S}/patches/dev300" || die
 	cp -f "${FILESDIR}/hunspell-one-dir-nocrash.diff" "${S}/patches/dev300" || die
+	cp -f "${FILESDIR}/buildfix-mono-2-2.diff" "${S}/patches/dev300" || die
 
 	#Use flag checks
 	if use java ; then
