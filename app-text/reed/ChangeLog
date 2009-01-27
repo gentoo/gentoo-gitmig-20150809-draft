@@ -1,6 +1,10 @@
 # ChangeLog for app-text/reed
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/reed/ChangeLog,v 1.8 2008/12/30 21:29:30 angelos Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/reed/ChangeLog,v 1.9 2009/01/27 08:34:17 pva Exp $
+
+  27 Jan 2009; Peter Volkov <pva@gentoo.org> reed-5.4.ebuild:
+  Respect LDFLAGS. Don't install wrap, as it collides with talkfilters, bug
+  #247396, thank Diego E. 'Flameeyes' Pettenò for report.
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> reed-5.4.ebuild:
   QA: Respect CC (bug 243740), prevent stripping (bug 239875)
