@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.2.ebuild,v 1.4 2008/08/22 23:41:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.4.ebuild,v 1.1 2009/01/27 17:57:49 dragonheart Exp $
 
 EAPI=1
 ARTS_REQUIRED="never"
@@ -13,11 +13,11 @@ SRC_URI="http://www.xs4all.nl/~mfnboer/twinkle/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="arts speex ilbc zrtp kdehiddenvisibility"
+IUSE="kde arts speex ilbc zrtp kdehiddenvisibility"
 
 # Requires libqt-mt actually...  Is that *always* built, or do we need to check?
-RDEPEND=">=net-libs/ccrtp-1.5.0
-	>=dev-cpp/commoncpp2-1.4.2
+RDEPEND=">=net-libs/ccrtp-1.6.0
+	>=dev-cpp/commoncpp2-1.6.1
 	x11-libs/qt:3
 	media-libs/libsndfile
 	dev-libs/boost
@@ -39,6 +39,7 @@ pkg_setup() {
 
 src_compile() {
 	local myconf=" \
+			$(use_with kde) \
 			$(use_with ilbc) \
 			$(use_with arts) \
 			$(use_with zrtp) \
@@ -51,10 +52,4 @@ src_install() {
 	kde_src_install
 	dodoc THANKS
 	domenu twinkle.desktop
-}
-
-pkg_postinst() {
-	elog "if you get crashes on startup re-emerge commoncpp2 ccrtp and	twinkle"
-	elog "see http://www.xs4all.nl/~mfnboer/twinkle/faq.html#crash_startup"
-	kde_pkg_postinst
 }
