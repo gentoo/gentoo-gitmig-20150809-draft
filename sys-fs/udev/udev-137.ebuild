@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-137.ebuild,v 1.3 2009/01/25 19:55:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-137.ebuild,v 1.4 2009/01/27 10:42:15 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -19,11 +19,22 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux"
 
-DEPEND="selinux? ( sys-libs/libselinux )"
-RDEPEND="!sys-apps/coldplug
-	!<sys-fs/device-mapper-1.02.19-r1"
-RDEPEND="${DEPEND} ${RDEPEND}
+COMMON_DEPEND="selinux? ( sys-libs/libselinux )"
+
+if [[ ${PV} == "9999" ]]; then
+	# for documentation processing with xsltproc
+	DEPEND="${COMMON_DEPEND}
+		app-text/docbook-xsl-stylesheets
+		app-text/docbook-xml-dtd"
+else
+	DEPEND="${COMMON_DEPEND}"
+fi
+
+RDEPEND="${COMMON_DEPEND}
+	!sys-apps/coldplug
+	!<sys-fs/device-mapper-1.02.19-r1
 	>=sys-apps/baselayout-1.12.5"
+
 # We need the lib/rcscripts/addon support
 PROVIDE="virtual/dev-manager"
 

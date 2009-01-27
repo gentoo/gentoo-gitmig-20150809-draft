@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.444 2009/01/25 19:55:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.445 2009/01/27 10:42:15 zzam Exp $
+
+  27 Jan 2009; Matthias Schwarzott <zzam@gentoo.org>
+  files/udev-137-rules-update.diff, udev-137.ebuild, udev-9999.ebuild:
+  Cleanup depends. Add missing depends for documentation processing of
+  udev-9999. Fix kernel version check of udev-9999. Update rules patch for
+  udev-137, move all rules in one file.
 
   25 Jan 2009; Matthias Schwarzott <zzam@gentoo.org> udev-137.ebuild:
   Fix kernel version with which udev runs reliable. Also apply documentation
