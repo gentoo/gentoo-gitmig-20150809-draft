@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4159 2009/01/27 17:08:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4160 2009/01/27 17:27:53 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1013,8 +1013,12 @@ kde-base/kdeutils:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
 kde-base/kdeutils-meta:floppy - Install kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
 kde-base/kdvi:kpathsea - Enable integration with kpathsea search library (TeX related)
+kde-base/kget:bittorrent - Enable embedded bittorrent transport plugin
+kde-base/kget:bittorrent-external - Enable external bittorrent transport plugin via ktorrent
+kde-base/kget:semantic-desktop - Semantic desktop allows for storage of digital information and its metadata to allow the user to express his personal mental models, making all information become intuitively accessible
 kde-base/kig:kig-scripting - Support Python scripting
 kde-base/kmail:nepomuk - Enable desktop-wide tagging support
+kde-base/kmail:semantic-desktop - Semantic desktop allows for storage of digital information and its metadata to allow the user to express his personal mental models, making all information become intuitively accessible
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
 kde-base/kopete:addbookmarks - Enable the addbookmarks plugin
 kde-base/kopete:alias - Enable the alias plugin
