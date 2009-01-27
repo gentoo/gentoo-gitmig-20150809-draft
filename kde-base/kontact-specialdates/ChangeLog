@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kontact-specialdates
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.91 2008/09/13 23:59:20 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.92 2009/01/27 17:39:00 alexxy Exp $
+
+*kontact-specialdates-4.2.0 (27 Jan 2009)
+
+  27 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +kontact-specialdates-4.2.0.ebuild:
+  Bump KDE-4.2.0
 
 *kontact-specialdates-3.5.10 (13 Sep 2008)
 

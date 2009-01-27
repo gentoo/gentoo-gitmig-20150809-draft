@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>kde</herd>
+<use>
+	<flag name="akonadi">Builds Akonadi python language bindings</flag>
+	<flag name="semantic-desktop">Enables Nemomuk and Soprano python language bindings</flag>
+</use>
 </pkgmetadata>

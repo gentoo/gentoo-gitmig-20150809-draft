@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/kdebase-desktoptheme
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.1 2009/01/27 16:51:22 alexxy Exp $
+
+*kdebase-desktoptheme-4.2.0 (27 Jan 2009)
+
+  27 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> +metadata.xml,
+  +kdebase-desktoptheme-4.2.0.ebuild:
+  Bump KDE-4.2.0
+

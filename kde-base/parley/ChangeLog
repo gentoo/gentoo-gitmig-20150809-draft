@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.18 2009/01/14 16:04:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.19 2009/01/27 18:19:34 alexxy Exp $
+
+*parley-4.2.0 (27 Jan 2009)
+
+  27 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> +parley-4.2.0.ebuild:
+  Bump KDE-4.2.0
 
   14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> -parley-4.1.2.ebuild,
   -parley-4.1.3.ebuild:

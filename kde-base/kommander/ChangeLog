@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kommander
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kommander/ChangeLog,v 1.97 2009/01/14 15:18:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kommander/ChangeLog,v 1.98 2009/01/27 17:34:59 alexxy Exp $
+
+*kommander-4.2.0 (27 Jan 2009)
+
+  27 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> +kommander-4.2.0.ebuild:
+  Bump KDE-4.2.0
 
   14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> -kommander-4.1.2.ebuild,
   -kommander-4.1.3.ebuild:
