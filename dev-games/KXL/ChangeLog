@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/KXL
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.8 2007/05/13 20:42:28 tupone Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.9 2009/01/28 15:53:45 tupone Exp $
+
+  28 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/KXL-1.1.7-as-needed.patch, KXL-1.1.7-r1.ebuild:
+  Fix --as-needed bug #247284 by flameeyes@gentoo.org
 
 *KXL-1.1.7-r1 (13 May 2007)
 

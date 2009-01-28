@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/KXL-1.1.7-r1.ebuild,v 1.1 2007/05/13 20:42:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/KXL-1.1.7-r1.ebuild,v 1.2 2009/01/28 15:53:45 tupone Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Development Library for making games for X"
 HOMEPAGE="http://kxl.orz.hm/"
@@ -19,7 +19,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-m4.patch \
-		"${FILESDIR}"/${P}-amd64.patch
+		"${FILESDIR}"/${P}-amd64.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
+	eautoreconf
 }
 
 src_install() {
