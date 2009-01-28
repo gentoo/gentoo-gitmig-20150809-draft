@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.383 2009/01/28 04:29:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.384 2009/01/28 05:22:05 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1932,8 +1932,6 @@ gcc_movelibs() {
 	done
 	find "${D}" -type d | xargs rmdir >& /dev/null
 
-	# make sure the libtool archives have libdir set to where they actually
-	# -are-, and not where they -used- to be.
 	fix_libtool_libdir_paths $(find "${D}"${LIBPATH} -name *.la)
 }
 
@@ -2450,11 +2448,19 @@ disable_multilib_libjava() {
 	fi
 }
 
+# make sure the libtool archives have libdir set to where they actually
+# -are-, and not where they -used- to be.  also, any dependencies we have
+# on our own .la files need to be updated.
 fix_libtool_libdir_paths() {
-	local dirpath
-	for archive in $* ; do
-		dirpath=$(dirname ${archive} | sed -e "s:^${D}::")
-		sed -i ${archive} -e "s:^libdir.*:libdir=\'${dirpath}\':"
+	local dirpath allarchives="${@##*/}"
+	allarchives="\(${allarchives// /\\|}\)"
+	for archive in "$@" ; do
+		dirpath=${archive%/*}
+		dirpath=${dirpath#${D}}
+		sed -i \
+			-e "/^libdir=/s:=.*:'${dirpath}':" \
+			-e "/^dependency_libs=/s:/[^ ]*/${allarchives}:${dirpath}/\1:g" \
+			"${archive}"
 	done
 }
 
