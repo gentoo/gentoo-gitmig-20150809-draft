@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9434 2009/01/27 20:47:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9435 2009/01/28 02:30:53 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -94,12 +94,15 @@ x11-base/kdrive
 >=kde-base/kcron-4.1.96
 >=kde-base/kdeaccessibility-colorschemes-4.1.96
 >=kde-base/kdeaccessibility-iconthemes-4.1.96
+>=kde-base/kdeaccessibility-meta-4.1.96
 >=kde-base/kdeaccounts-plugin-4.1.96
+>=kde-base/kdeadmin-meta-4.1.96
 >=kde-base/kdeartwork-colorschemes-4.1.96
 >=kde-base/kdeartwork-desktopthemes-4.1.96
 >=kde-base/kdeartwork-emoticons-4.1.96
 >=kde-base/kdeartwork-iconthemes-4.1.96
 >=kde-base/kdeartwork-kscreensaver-4.1.96
+>=kde-base/kdeartwork-meta-4.1.96
 >=kde-base/kdeartwork-sounds-4.1.96
 >=kde-base/kdeartwork-styles-4.1.96
 >=kde-base/kdeartwork-wallpapers-4.1.96
@@ -107,30 +110,41 @@ x11-base/kdrive
 >=kde-base/kdebase-data-4.1.96
 >=kde-base/kdebase-desktoptheme-4.1.96
 >=kde-base/kdebase-kioslaves-4.1.96
+>=kde-base/kdebase-meta-4.1.96
 >=kde-base/kdebase-startkde-4.1.96
 >=kde-base/kdebugdialog-4.1.96
 >=kde-base/kdedglobalaccel-4.1.96
+>=kde-base/kdeedu-meta-4.1.96
+>=kde-base/kdegames-meta-4.1.96
+>=kde-base/kdegraphics-meta-4.1.96
 >=kde-base/kdegraphics-strigi-analyzer-4.1.96
 >=kde-base/kde-l10n-4.1.96
 >=kde-base/kdelibs-4.1.96
 >=kde-base/kdemaildir-4.1.96
 >=kde-base/kde-menu-icons-4.1.96
 >=kde-base/kde-menu-4.1.96
+>=kde-base/kde-meta-4.1.96
 >=kde-base/kdemultimedia-kioslaves-4.1.96
+>=kde-base/kdemultimedia-meta-4.1.96
 >=kde-base/kdenetwork-filesharing-4.1.96
+>=kde-base/kdenetwork-meta-4.1.96
 >=kde-base/kdepasswd-4.1.96
 >=kde-base/kdepim-icons-4.1.96
 >=kde-base/kdepim-kresources-4.1.96
 >=kde-base/kdepimlibs-4.1.96
+>=kde-base/kdepim-meta-4.1.96
 >=kde-base/kdepim-strigi-analyzer-4.1.96
 >=kde-base/kdepim-wizards-4.1.96
 >=kde-base/kdeplasma-addons-4.1.96
 >=kde-base/kdesdk-kioslaves-4.1.96
+>=kde-base/kdesdk-meta-4.1.96
 >=kde-base/kdesdk-misc-4.1.96
 >=kde-base/kdesdk-scripts-4.1.96
 >=kde-base/kdesdk-strigi-analyzer-4.1.96
 >=kde-base/kdessh-4.1.96
 >=kde-base/kdesu-4.1.96
+>=kde-base/kdetoys-meta-4.1.96
+>=kde-base/kdeutils-meta-4.1.96
 >=kde-base/kde-wallpapers-4.1.96
 >=kde-base/kdf-4.1.96
 >=kde-base/kdialog-4.1.96
