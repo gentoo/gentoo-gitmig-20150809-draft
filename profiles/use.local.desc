@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4162 2009/01/27 19:27:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4163 2009/01/28 01:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -295,6 +295,7 @@ app-misc/beagle:eds - Enables Beagle to index the Addressbook and Calendar from 
 app-misc/beagle:epiphany - Compiles and installs the extension for either www-client/epiphany. This extension helps Beagle index the websites you visit.
 app-misc/beagle:firefox - Compiles and installs the extension for either www-client/mozilla-firefox or www-client/mozilla-firefox-bin. This extension helps Beagle index the websites you visit.
 app-misc/beagle:galago - Allows Beagle to get status information from applications such as Pidgin to show in the search results.
+app-misc/beagle:google - Enables google (gmail etc.) indexing support.
 app-misc/beagle:gtk - Enables the GTK+ Beagle Search UI for showing search results. This is the default GUI for Beagle.
 app-misc/beagle:inotify - Enable inotify filesystem monitoring support 
 app-misc/beagle:ole - Enables OLE (Object Linking and Editing) support via dev-dotnet/gsf-sharp, app-text/wv, and app-office/gnumeric(ssindex). These allow Beagle to index MS Powerpoint, Word, and Spreadsheet Documents.
