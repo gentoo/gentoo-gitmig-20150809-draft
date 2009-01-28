@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9436 2009/01/28 09:29:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9437 2009/01/28 16:48:48 hkbst Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1353,10 +1353,6 @@ dev-lang/entity
 # Live SVN ebuilds
 ~app-emacs/gentoo-syntax-9999
 ~app-emacs/ngnus-9999
-
-# Marijn Schouten <hkBst@gentoo.org> (20 Dec 2007)
-# Broken, bug 202880
->=dev-scheme/gambit-4.1.1
 
 # Ingmar Vanhassel <ingmar@gentoo.org> (10 Mar 2008)
 # Masked for testing, various dependencies still need to be updated...
