@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.9.ebuild,v 1.1 2008/08/26 09:09:53 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.11.ebuild,v 1.1 2009/01/28 15:21:38 grozin Exp $
 
 NEED_PYTHON=2.4
 inherit distutils
