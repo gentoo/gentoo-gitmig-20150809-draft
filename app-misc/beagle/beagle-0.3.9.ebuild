@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9.ebuild,v 1.1 2009/01/28 00:48:00 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9.ebuild,v 1.2 2009/01/28 20:37:04 loki_val Exp $
 
 EAPI=2
 
@@ -74,7 +74,7 @@ RDEPEND="!!sci-libs/beagle
 	)
 	xscreensaver? ( x11-libs/libXScrnSaver )
 	>=dev-libs/libbeagle-0.3.9
-	avahi?	(	>=net-dns/avahi-0.6.10 )"
+	avahi?	( >=net-dns/avahi-0.6.10[mono] )"
 
 DEPEND="${RDEPEND}
 	doc? ( >=virtual/monodoc-1.2.4 )
