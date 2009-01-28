@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.382 2009/01/28 02:27:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.383 2009/01/28 04:29:52 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1702,7 +1702,7 @@ gcc-compiler_src_install() {
 	S=${WORKDIR}/build \
 	make DESTDIR="${D}" install || die
 	# Punt some tools which are really only useful while building gcc
-	find "${D}" -name install-tools -type d -exec rm -rf "{}" \;
+	find "${D}" -name install-tools -prune -type d -exec rm -rf "{}" \;
 	# This one comes with binutils
 	find "${D}" -name libiberty.a -exec rm -f "{}" \;
 
