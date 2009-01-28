@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.86 2009/01/24 14:13:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.87 2009/01/28 10:48:01 pva Exp $
+
+  28 Jan 2009; Peter Volkov <pva@gentoo.org> enchant-1.4.2.ebuild:
+  Added ewarn about changes in spellchecking engine, bug #250115.
 
   24 Jan 2009; nixnut <nixnut@gentoo.org> enchant-1.4.2.ebuild:
   ppc stable #255691
