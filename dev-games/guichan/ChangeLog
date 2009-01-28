@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/guichan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.14 2009/01/28 11:30:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.15 2009/01/28 13:59:31 mr_bones_ Exp $
+
+  28 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  files/guichan-0.8.1-as-needed.patch, guichan-0.8.1.ebuild:
+  EAPI=2; re-roll patch so it applies
 
   28 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/guichan-0.8.1-as-needed.patch, guichan-0.8.1.ebuild:
