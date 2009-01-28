@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.109 2009/01/14 14:32:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.110 2009/01/28 02:41:50 jmbsvicetto Exp $
+
+*kdegraphics-meta-4.2.0 (28 Jan 2009)
+
+  28 Jan 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +kdegraphics-meta-4.2.0.ebuild:
+  Bump to 4.2.0.
 
   14 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdegraphics-meta-4.1.2.ebuild, -kdegraphics-meta-4.1.3.ebuild:
