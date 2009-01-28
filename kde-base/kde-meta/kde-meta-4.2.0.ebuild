@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-4.2.0.ebuild,v 1.1 2009/01/28 02:43:39 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-4.2.0.ebuild,v 1.2 2009/01/28 03:09:08 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -28,5 +28,5 @@ RDEPEND="
 	>=kde-base/kdetoys-meta-${PV}:${SLOT}
 	>=kde-base/kdeutils-meta-${PV}:${SLOT}
 	accessibility? ( >=kde-base/kdeaccessibility-meta-${PV}:${SLOT} )
-	nls? ( >=kde-base/kde-i10n-${PV}:${SLOT} )
+	nls? ( >=kde-base/kde-l10n-${PV}:${SLOT} )
 "
