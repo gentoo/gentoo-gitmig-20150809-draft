@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.604 2009/01/26 18:41:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.605 2009/01/28 18:11:40 vapier Exp $
+
+  28 Jan 2009; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
+  Build glibc with -U_FORTIFY_SOURCE.
 
   26 Jan 2009; Mike Frysinger <vapier@gentoo.org> glibc-2.3.2-r12.ebuild,
   glibc-2.3.5-r3.ebuild:

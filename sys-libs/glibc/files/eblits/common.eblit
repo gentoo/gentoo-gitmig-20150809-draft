@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.8 2008/12/29 09:22:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.9 2009/01/28 18:11:41 vapier Exp $
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform
@@ -163,6 +163,9 @@ setup_flags() {
 	# conservative here.  -fno-strict-aliasing is to work around #155906
 	filter-flags -O?
 	append-flags -O2 -fno-strict-aliasing
+
+	# Cant build glibc itself with fortify code
+	append-cppflags -U_FORTIFY_SOURCE
 
 	# building glibc with SSP is fraught with difficulty, especially
 	# due to __stack_chk_fail_local which would mean significant changes
