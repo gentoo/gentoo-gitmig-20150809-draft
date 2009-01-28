@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.384 2009/01/28 05:22:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.385 2009/01/28 21:00:27 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1485,7 +1485,6 @@ gcc_do_make() {
 	fi
 
 	pushd "${WORKDIR}"/build
-	einfo "Running make LDFLAGS=\"${LDFLAGS}\" STAGE1_CFLAGS=\"${STAGE1_CFLAGS}\" LIBPATH=\"${LIBPATH}\" BOOT_CFLAGS=\"${BOOT_CFLAGS}\" ${GCC_MAKE_TARGET}"
 
 	emake \
 		LDFLAGS="${LDFLAGS}" \
@@ -1644,11 +1643,10 @@ gcc_src_test() {
 }
 
 gcc-library_src_install() {
-	einfo "Installing ${PN} ..."
 	# Do the 'make install' from the build directory
 	cd "${WORKDIR}"/build
 	S=${WORKDIR}/build \
-	make DESTDIR="${D}" \
+	emake DESTDIR="${D}" \
 		prefix=${PREFIX} \
 		bindir=${BINPATH} \
 		includedir=${LIBPATH}/include \
@@ -1696,11 +1694,10 @@ gcc-compiler_src_install() {
 		grep -q 'It has been auto-edited by fixincludes from' "${x}" \
 			&& rm -f "${x}"
 	done
-	einfo "Installing GCC..."
 	# Do the 'make install' from the build directory
 	cd "${WORKDIR}"/build
 	S=${WORKDIR}/build \
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	# Punt some tools which are really only useful while building gcc
 	find "${D}" -name install-tools -prune -type d -exec rm -rf "{}" \;
 	# This one comes with binutils
