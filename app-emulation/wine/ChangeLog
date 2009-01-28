@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.244 2009/01/24 15:05:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.245 2009/01/28 19:00:04 vapier Exp $
+
+  28 Jan 2009; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  wine-1.1.13.ebuild, wine-9999.ebuild:
+  Force gcc-4.4 for USE=win64 #256274 by John W Eckhart.
 
   24 Jan 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.13.ebuild,
   wine-9999.ebuild:

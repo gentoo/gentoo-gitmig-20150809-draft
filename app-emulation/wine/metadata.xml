@@ -13,6 +13,6 @@ Think of Wine as a compatibility layer for running Windows programs. Wine does n
 	<flag name='samba'>Add support for NTLM auth. see
 		http://wiki.winehq.org/NtlmAuthSetupGuide and
 		http://wiki.winehq.org/NtlmSigningAndSealing</flag>
-	<flag name='win64'>Build a 64bit version of Wine</flag>
+	<flag name='win64'>Build a 64bit version of Wine (won't run Win32 binaries)</flag>
 </use>
 </pkgmetadata>
