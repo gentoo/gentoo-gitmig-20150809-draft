@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.43 2008/12/31 21:31:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.44 2009/01/28 14:57:41 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -72,7 +72,7 @@ src_compile() {
 	fi
 
 	if [[ ${PV} == "9999" ]] ; then
-		local ver="-svn-$(cd "${ESVN_STORE_DIR}/${ESVN_PROJECT}/${ESVN_REPO_URI##*/}"; LC_ALL=C svn info|awk '/Revision/ { print $2 }')"
+		local ver="-svn-$(cd "${ESVN_STORE_DIR}/${ESVN_PROJECT}/${ESVN_REPO_URI##*/}"; LC_ALL=C svnversion)"
 		sed -i "/^SVNVER[[:space:]]*=/s:=.*:=${ver}:" src/rc/Makefile
 	fi
 
