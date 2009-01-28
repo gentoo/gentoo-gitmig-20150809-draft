@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.1.0.ebuild,v 1.1 2009/01/25 17:02:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.1.0.ebuild,v 1.2 2009/01/28 18:51:03 dertobi123 Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils depend.apache toolchain-funcs
 
@@ -20,7 +20,8 @@ DEPEND="virtual/mailx
 		>=media-libs/jpeg-6b-r3
 		>=media-libs/libpng-1.2.5-r4
 		>=media-libs/gd-1.8.3-r5
-		lighttpd? ( www-servers/lighttpd )
+		lighttpd? ( www-servers/lighttpd dev-lang/php[cgi] )
+		apache2? ( || ( dev-lang/php[apache2] dev-lang/php[cgi] ) )
 	)
 	perl? ( >=dev-lang/perl-5.6.1-r7 )"
 RDEPEND="${DEPEND}

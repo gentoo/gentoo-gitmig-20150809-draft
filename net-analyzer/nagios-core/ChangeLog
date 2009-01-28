@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.138 2009/01/26 19:53:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.139 2009/01/28 18:51:03 dertobi123 Exp $
+
+  28 Jan 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  nagios-core-3.1.0.ebuild:
+  Add dep on dev-lang/php
 
   26 Jan 2009; Brent Baude <ranger@gentoo.org> nagios-core-3.0.6-r1.ebuild:
   Marking nagios-core-3.0.6-r1 ppc64 stable for bug 256177
