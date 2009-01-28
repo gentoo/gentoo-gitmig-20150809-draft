@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.2.ebuild,v 1.2 2009/01/07 14:45:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.2.ebuild,v 1.3 2009/01/28 14:57:13 pva Exp $
 
 MY_PN="${PN}mail"
 MY_P="${MY_PN}-${PV}-stable"
@@ -23,13 +23,13 @@ RDEPEND="dev-php/PEAR-PEAR"
 need_httpd_cgi
 need_php_httpd
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	local flags="crypt iconv imap pcre session unicode"
 	use ldap && flags="${flags} ldap"
 	use ssl && flags="${flags} ssl"
-	use spell && flags="${flags} curl ssl"
+	use spell && flags="${flags} curl spell"
 
 	# check for required PHP features
 	if ! use mysql && ! use postgres && ! use sqlite ; then

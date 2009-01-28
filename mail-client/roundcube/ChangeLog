@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.2 2009/01/07 14:45:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.3 2009/01/28 14:57:13 pva Exp $
+
+  28 Jan 2009; Peter Volkov <pva@gentoo.org> roundcube-0.2.ebuild:
+  Fixed typo. For spell checking we need spell in php, not ssl.
 
   07 Jan 2009; Brent Baude <ranger@gentoo.org> roundcube-0.2.ebuild:
   Marking roundcube-0.2 ~ppc and ~ppc64 for bug 253492
