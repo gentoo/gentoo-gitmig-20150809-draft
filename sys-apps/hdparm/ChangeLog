@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.166 2009/01/26 21:55:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.167 2009/01/28 14:30:50 chainsaw Exp $
+
+  28 Jan 2009; <chainsaw@gentoo.org> hdparm-9.6.ebuild:
+  Mark stable on AMD64 as requested by SpanKY <vapier@gentoo.org> in bug
+  #256371. Tested on a Core2 Duo laptop with ICH9-M chipset (AHCI mode) and
+  a Hitachi HTS543232L9A300 drive.
 
   26 Jan 2009; Brent Baude <ranger@gentoo.org> hdparm-9.6.ebuild:
   stable ppc64, bug 256371
