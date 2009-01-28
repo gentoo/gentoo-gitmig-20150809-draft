@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.83 2009/01/09 13:46:01 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.84 2009/01/28 19:14:12 loki_val Exp $
+
+*banshee-1.4.2 (28 Jan 2009)
+
+  28 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/banshee-1.4.2-metadata-writefail.patch, +banshee-1.4.2.ebuild:
+  Bump, fixing 256157. Drop gnome2.eclass usage, I once again got bit by bug
+  239123 while remaking the ebuild, take up again when gnome2.eclass isn't
+  broken. Code duplication sucks. Fix bug 249620, included musicbrainz was
+  getting old and buggy. Update to a newer revision. Thanks to Tom Corner
+  <tacorner@cornersplace.org> for the patch. Refresh metadata-fail patch to
+  apply against 1.4.2.
 
 *banshee-1.4.1-r5 (09 Jan 2009)
 
