@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/fec-1.0.3-r1.ebuild,v 1.1 2009/01/27 23:30:41 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/fec-1.0.3-r1.ebuild,v 1.2 2009/01/28 00:05:29 tommy Exp $
 
 JAVA_PKG_IUSE="doc source"
 
-inherit java-pkg-2 java-ant-2
+inherit flag-o-matic java-pkg-2 java-ant-2 toolchain-funcs
 
 DESCRIPTION="Forword error correction libs"
 HOMEPAGE="http://www.onionnetworks.com/developers/"
@@ -57,6 +57,6 @@ src_install() {
 	use doc && java-pkg_dojavadoc javadoc
 	use source && java-pkg_dosrc src/com
 	if use x86; then
-		 dolib.so ../../lib/fec-linux-x86/lib/linux/x86/libfec{8,16}.so || die
+		 dolib.so lib/fec-linux-x86/lib/linux/x86/libfec{8,16}.so || die
 	fi
 }
