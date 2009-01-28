@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.1_rc2.ebuild,v 1.2 2009/01/27 15:04:39 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.1.ebuild,v 1.1 2009/01/28 07:49:49 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -52,7 +52,7 @@ SRC_URI="${DEVPATH}-artwork.tar.bz2
 	http://download.go-oo.org/SRC680/libwps-0.1.2.tar.gz
 	http://download.go-oo.org/SRC680/libwpg-0.1.3.tar.gz"
 
-LANGS1="af ar as_IN be_BY bg bn br bs ca cs cy da de dz el en_GB en_ZA eo es et fa fi fr ga gl gu_IN he hi_IN hr hu it ja km ko ku lt lv mk ml_IN mr_IN nb ne nl nn nr ns or_IN pa_IN pl pt pt_BR ru rw sh sk sl sr ss st sv sw_TZ ta_IN te_IN tg th ti_ER tn tr ts uk ur_IN ve vi xh zh_CN zh_TW zu"
+LANGS1="af ar as_IN be_BY bg bn br bs ca cs cy da de dz el en_GB en_ZA eo es et fa fi fr ga gl gu he hi_IN hr hu it ja ka kk km ko ku lt lv mk ml_IN mn mr_IN nb ne nl nn nr ns or_IN pa_IN pl pt pt_BR ru rw sh sk sl sr ss st sv sw_TZ ta te_IN tg th ti_ER tn tr ts uk ur_IN ve vi xh zh_CN zh_TW zu"
 LANGS="${LANGS1} en en_US"
 
 for X in ${LANGS} ; do
