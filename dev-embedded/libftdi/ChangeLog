@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/libftdi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.34 2009/01/18 15:33:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.35 2009/01/28 14:53:52 ranger Exp $
+
+  28 Jan 2009; Brent Baude <ranger@gentoo.org> libftdi-0.14.ebuild:
+  stable ppc64, bug 255061
 
   18 Jan 2009; Markus Meier <maekke@gentoo.org> libftdi-0.14.ebuild:
   amd64/x86 stable, bug #255061
