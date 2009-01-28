@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.4.1,v 1.7 2008/03/16 01:20:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.4.1,v 1.8 2009/01/28 02:32:50 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -18,6 +18,9 @@ umask 022
 # on software developers.
 SED=$(type -P gsed)
 SED=${SED:-$(type -P sed)}
+
+GENTOO_LIBDIR="@GENTOO_LIBDIR@"
+[[ ${GENTOO_LIBDIR} == @*@ ]] && GENTOO_LIBDIR="lib"
 
 usage() {
 cat << "USAGE_END"
@@ -273,7 +276,7 @@ switch_profile() {
 
 	# Find the bin wrapper
 	local wrapper
-	for wrapper in GENTOO_LIBDIR lib lib64 lib32 lib ; do
+	for wrapper in ${GENTOO_LIBDIR} lib lib64 lib32 lib ; do
 		wrapper="${ROOT}usr/${wrapper}/misc/gcc-config"
 		[[ -e ${wrapper} ]] && break
 	done
@@ -318,6 +321,18 @@ switch_profile() {
 	if ! is_cross_compiler && [[ ${CTARGET} != *-solaris* ]] ; then
 		rm -f "${ROOT}/lib/cpp"
 		cp -f "${wrapper}" "${ROOT}/lib/cpp"
+	fi
+
+	# Relocate random crap
+	if ! is_cross_compiler ; then
+		if [[ -e ${ROOT}/usr/${GENTOO_LIBDIR}/pkgconfig/libgcj-${CC_COMP_VERSION}.pc ]] ; then
+			local mver=${CC_COMP_VERSION:0:3}
+			for x in "" "-${mver}" ; do
+				x="${ROOT}/usr/lib/pkgconfig/libgcj${x}.pc"
+				rm -f "${x}"
+				ln -s libgcj-${CC_COMP_VERSION}.pc "${x}"
+			done
+		fi
 	fi
 
 	# We need to make sure that libgcc_s.so / libunwind.so make it into /lib.
@@ -477,7 +492,12 @@ print_environ() {
 			;;
 	esac
 
-	echo "${ENV_CMD} PATH${SET_ELEMENT}\"${GCC_PATH}:${PATH}\""
+	(
+	PATH=${GCC_PATH}:${PATH}
+	for var in PATH GCC_SPECS ; do
+		echo "${ENV_CMD} ${var}${SET_ELEMENT}\"${!var}\""
+	done
+	)
 }
 
 get_bin_path() {
@@ -670,7 +690,14 @@ for x in "$@" ; do
 			usage 0
 			;;
 		-V|--version)
-			echo "gcc-config-PORTAGE-VERSION"
+			rcsfile="$RCSfile: gcc-config-1.4.1,v $"
+			rcsfile=${rcsfile#: }
+			rcsfile=${rcsfile%,v*}
+			cvsrev="$Revision: 1.8 $"
+			cvsrev=${cvsrev#: }
+			cvsdate="$Date: 2009/01/28 02:32:50 $"
+			cvsdate=${cvsdate#: }
+			echo "${rcsfile} (r${cvsrev% *} @ ${cvsdate% *})"
 			exit 0
 			;;
 		-*)
