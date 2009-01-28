@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.147 2009/01/28 04:39:41 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.148 2009/01/28 09:34:16 alexxy Exp $
+
+  28 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +files/kmail-4.1.72-fix.patch:
+  Add missing patch
 
   28 Jan 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +files/kmail-4.1.72-fix.patch:
