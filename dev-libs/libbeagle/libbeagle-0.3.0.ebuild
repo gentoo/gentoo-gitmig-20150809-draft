@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/libbeagle-0.3.0.ebuild,v 1.3 2008/03/01 12:30:55 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/libbeagle-0.3.0.ebuild,v 1.4 2009/01/28 00:40:28 loki_val Exp $
 
 EAPI=1
 
-inherit gnome.org autotools
+inherit gnome.org
 
 DESCRIPTION="C and Python bindings for Beagle"
 HOMEPAGE="http://beagle-project.org/"

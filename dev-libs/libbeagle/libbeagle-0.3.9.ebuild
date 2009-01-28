@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/libbeagle-0.3.5.ebuild,v 1.5 2009/01/28 00:40:28 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/libbeagle-0.3.9.ebuild,v 1.1 2009/01/28 00:40:28 loki_val Exp $
 
-EAPI=1
+EAPI=2
 
 inherit gnome.org
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://beagle-project.org/"
 
 LICENSE="MIT Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc +python"
 
 RDEPEND=">=dev-libs/glib-2.6
@@ -23,11 +23,13 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
 src_compile() {
-	econf \
+	econf	--disable-dependency-tracking \
 		$(use_enable python) \
 		$(use_enable doc gtk-doc) \
 		$(use_enable debug xml-dump)
+}
 
+src_compile() {
 	emake || die "emake failed"
 }
 
