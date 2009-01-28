@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-6.0.0.063.ebuild,v 1.2 2009/01/27 16:11:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-6.0.0.063.ebuild,v 1.3 2009/01/28 23:02:15 bicatali Exp $
 
 inherit check-reqs
 
@@ -67,7 +67,7 @@ src_unpack() {
 	# tar xf l_*; ./install.sh --duplicate ipp.ini;
 
 	# binary blob extractor uses stupid directory
-	addwrite /usr/local/share/macrovision
+	addpredict /usr/local/share/macrovision
 
 	cp ${IPP_LICENSE} "${WORKDIR}"/
 	cat > ipp.ini <<- EOF
@@ -98,7 +98,6 @@ src_unpack() {
 	find . -type d -print0 | xargs --null chmod 755
 	rm -rf tmp* uninstall.sh
 	rm -rf "${WORKDIR}"/l_*
-	rm -rf /usr/local/share/macrovision
 }
 
 src_install() {
