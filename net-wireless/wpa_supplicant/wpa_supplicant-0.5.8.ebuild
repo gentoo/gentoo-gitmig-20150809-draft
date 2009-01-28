@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.8.ebuild,v 1.5 2008/06/03 02:26:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.8.ebuild,v 1.6 2009/01/28 14:19:31 chainsaw Exp $
 
 inherit eutils toolchain-funcs
 
@@ -168,7 +168,7 @@ src_install() {
 	insinto /etc/wpa_supplicant/
 	newins "${FILESDIR}"/wpa_supplicant.conf wpa_supplicant.conf
 
-	dodoc ChangeLog COPYING eap_testing.txt README todo.txt
+	dodoc ChangeLog eap_testing.txt README todo.txt
 	newdoc wpa_supplicant.conf wpa_supplicant.conf
 
 	doman doc/docbook/*.8
