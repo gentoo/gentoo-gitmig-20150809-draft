@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.181 2009/01/27 10:08:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.182 2009/01/28 14:56:17 ranger Exp $
+
+  28 Jan 2009; Brent Baude <ranger@gentoo.org>
+  gnome-system-monitor-2.22.4.ebuild:
+  stable ppc64, bug 255458
 
   27 Jan 2009; Raúl Porcel <armin76@gentoo.org> ChangeLog:
   alpha/ia64/sparc stable wrt #255458
