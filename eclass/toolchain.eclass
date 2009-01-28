@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.385 2009/01/28 21:00:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.386 2009/01/28 21:01:10 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -2455,7 +2455,7 @@ fix_libtool_libdir_paths() {
 		dirpath=${archive%/*}
 		dirpath=${dirpath#${D}}
 		sed -i \
-			-e "/^libdir=/s:=.*:'${dirpath}':" \
+			-e "/^libdir=/s:=.*:='${dirpath}':" \
 			-e "/^dependency_libs=/s:/[^ ]*/${allarchives}:${dirpath}/\1:g" \
 			"${archive}"
 	done
