@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.2.0.ebuild,v 1.1 2009/01/27 18:22:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.2.0.ebuild,v 1.2 2009/01/28 12:47:47 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -8,6 +8,8 @@ KMNAME="kdebase-workspace"
 CPPUNIT_REQUIRED="test"
 inherit kde4-meta
 
+SRC_URI="${SRC_URI}
+	mirror://gentoo/${PN}-4.2.0-backport-solid-bluetooth.patch.tar.bz2"
 DESCRIPTION="Solid: the KDE hardware library"
 KEYWORDS="~amd64 ~x86"
 IUSE="bluetooth debug networkmanager"
@@ -31,7 +33,7 @@ KMEXTRA="
 	libs/solid/
 "
 
-PATCHES=( "${FILESDIR}/${PN}-4.2.0-backport-solid-bluetooth.patch" )
+PATCHES=( "${DISTDIR}/${PN}-4.2.0-backport-solid-bluetooth.patch.tar.bz2" )
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
