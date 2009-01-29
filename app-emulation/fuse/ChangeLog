@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/fuse
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.25 2009/01/25 03:33:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.26 2009/01/29 02:52:21 darkside Exp $
+
+*fuse-0.10.0.2-r1 (29 Jan 2009)
+
+  29 Jan 2009; Jeremy Olexa <darkside@gentoo.org> -fuse-0.10.0.2.ebuild,
+  +fuse-0.10.0.2-r1.ebuild:
+  fix build issue with missing glib, bug 256640
 
   25 Jan 2009; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   Update metadata to reflect reality
