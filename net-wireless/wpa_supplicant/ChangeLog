@@ -1,10 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.110 2009/01/28 14:19:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.111 2009/01/29 11:37:38 chainsaw Exp $
 
   28 Jan 2009; <chainsaw@gentoo.org> wpa_supplicant-0.5.7.ebuild,
   wpa_supplicant-0.5.8.ebuild, wpa_supplicant-0.6.4.ebuild:
-  Mark 0.5.8 stable on AMD64 after testing on a Core2 duo laptop with
+  Mark 0.6.4 stable on AMD64 after testing on a Core2 duo laptop with
   IWL5300ABGN, as requested by Christian Faulhammer <fauli@gentoo.org>.
   EAPI=1 can go stable, confirmed by Jeremy Olexa <darkside@gentoo.org> on
   IRC. Drop COPYING from dodoc to make repoman happy.
