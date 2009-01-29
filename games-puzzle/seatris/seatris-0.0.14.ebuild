@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.8 2008/05/15 13:04:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.9 2009/01/29 02:12:43 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 DESCRIPTION="A color ncurses tetris clone"
@@ -15,9 +16,7 @@ IUSE=""
 
 DEPEND="sys-libs/ncurses"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s:/var/lib/games:${GAMES_STATEDIR}:" \
 		scoring.h seatris.6 \
