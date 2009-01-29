@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/slibo-0.4.4.ebuild,v 1.13 2007/08/09 23:15:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/slibo/slibo-0.4.4.ebuild,v 1.14 2009/01/29 08:20:51 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils kde
 
 DESCRIPTION="A comfortable replacement for the xboard chess interface"
@@ -13,11 +14,15 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="=dev-db/sqlite-2*"
+DEPEND="=dev-db/sqlite-2*
+	x11-libs/qt:3[opengl]"
 need-kde 3
 
-PATCHES="${FILESDIR}/${PV}-gcc34.patch ${FILESDIR}/${P}-gcc41.patch ${FILESDIR}/${P}-gcc42.patch"
+PATCHES=( "${FILESDIR}"/${PV}-gcc34.patch "${FILESDIR}"/${P}-gcc41.patch "${FILESDIR}"/${P}-gcc42.patch )
 
+src_prepare() {
+	: # work around kde.eclass lacking eapi=2 support
+}
 src_install() {
 	kde_src_install
 	# whack empty doc files (bug #137114)
