@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/nativebiginteger-0.6.4.ebuild,v 1.1 2009/01/29 21:15:27 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/nativebiginteger-0.6.4.ebuild,v 1.2 2009/01/29 21:22:17 tommy Exp $
 
 inherit flag-o-matic multilib toolchain-funcs java-pkg-2
 
 DESCRIPTION="NativeBigInteger libs for Freenet taken from i2p"
 HOMEPAGE="http://www.i2p2.de"
-SRC_URI="http://dev.gentooexperimental.org/~tommy/distfiles/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="|| ( public-domain BSD MIT )"
 SLOT="0"
