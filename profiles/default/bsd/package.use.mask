@@ -79,4 +79,3 @@ www-client/links livecd
 # qt-webkit fails to build here, bug #256836
 # Usemask stuff requiring it for now
 x11-libs/qt-assistant webkit
-x11-libs/qt webkit
