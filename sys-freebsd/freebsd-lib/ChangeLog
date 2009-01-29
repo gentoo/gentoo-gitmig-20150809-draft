@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.63 2009/01/22 21:02:31 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.64 2009/01/29 06:52:45 the_paya Exp $
+
+*freebsd-lib-7.1-r1 (29 Jan 2009)
+
+  29 Jan 2009; Javier Villavicencio <the_paya@gentoo.org>
+  +files/freebsd-lib-7.1-strndup_bport.patch, +freebsd-lib-7.1-r1.ebuild:
+  Added strndup(3) backport from -CURRENT. Fixes bug 249731 and partially
+  bug 249731.
 
 *freebsd-lib-7.1 (22 Jan 2009)
 
