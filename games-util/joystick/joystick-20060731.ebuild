@@ -1,8 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/joystick-20060731.ebuild,v 1.3 2007/04/19 22:32:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/joystick-20060731.ebuild,v 1.4 2009/01/29 08:24:46 mr_bones_ Exp $
 
-inherit eutils
+EAPI=2
+inherit eutils toolchain-funcs
 
 DESCRIPTION="joystick testing utilities"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~vojtech/input/"
@@ -17,16 +18,19 @@ DEPEND="sdl? ( media-libs/libsdl )"
 
 S=${WORKDIR}/utils
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/joystick-MCS-defines.patch \
 		"${FILESDIR}"/joystick-jstest-segv.patch
+	sed -i \
+		-e '/^CC/d' \
+		Makefile \
+		|| die 'sed failed'
 }
 
 src_compile() {
 	local SDL
+	tc-export CC
 	use sdl && SDL=1 || SDL=0
 	emake SDL=${SDL} || die "emake failed"
 	emake inputattach || die "inputattach failed"
