@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/lua-mode
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.19 2009/01/29 02:10:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.20 2009/01/29 02:19:43 fauli Exp $
+
+*lua-mode-20071122 (29 Jan 2009)
+
+  29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
+  +lua-mode-20071122.ebuild:
+  version bump
 
   29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
   -lua-mode-20061208.ebuild:
