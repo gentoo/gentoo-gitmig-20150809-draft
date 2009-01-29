@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.0.3.ebuild,v 1.2 2009/01/20 11:13:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.0.3.ebuild,v 1.3 2009/01/29 22:07:22 eva Exp $
 
-inherit bash-completion gnome2 eutils
+inherit autotools bash-completion gnome2 eutils
 
 DESCRIPTION="GNOME Virtual Filesystem Layer"
 HOMEPAGE="http://www.gnome.org"
@@ -37,7 +37,8 @@ RDEPEND=">=dev-libs/glib-2.17.6
 DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.40
 		>=dev-util/pkgconfig-0.19
-		doc? ( >=dev-util/gtk-doc-1 )"
+		doc? ( >=dev-util/gtk-doc-1 )
+		dev-util/gtk-doc-am"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
@@ -62,6 +63,15 @@ pkg_setup() {
 		ewarn "without the minimal USE flag."
 		die "Please re-emerge dev-libs/libcdio without the minimal USE flag"
 	fi
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Fix non posixy tests, bug #256305
+	epatch "${FILESDIR}/${P}-posixtest.patch"
+
+	eautoreconf
 }
 
 src_install() {
