@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/tetrinet
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/ChangeLog,v 1.8 2008/01/15 10:27:47 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/ChangeLog,v 1.9 2009/01/29 02:20:15 mr_bones_ Exp $
+
+  29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> tetrinet-0.11.ebuild:
+  EAPI=2; respect CC
 
   15 Jan 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/tetrinet-0.11-no-ipv6.patch, tetrinet-0.11.ebuild:
