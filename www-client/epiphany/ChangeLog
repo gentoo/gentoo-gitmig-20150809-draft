@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.190 2009/01/26 22:25:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.191 2009/01/29 17:03:45 jer Exp $
+
+  29 Jan 2009; Jeroen Roovers <jer@gentoo.org> epiphany-2.24.2.1.ebuild,
+  epiphany-2.24.3.ebuild:
+  Marked ~hppa too.
 
 *epiphany-2.24.3-r10 (26 Jan 2009)
 *epiphany-2.24.3 (26 Jan 2009)
