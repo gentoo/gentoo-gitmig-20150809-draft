@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.156 2009/01/29 17:15:23 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.157 2009/01/29 18:27:16 jer Exp $
+
+  29 Jan 2009; Jeroen Roovers <jer@gentoo.org> sudo-1.7.0.ebuild:
+  Stable for HPPA (bug #256633).
 
   29 Jan 2009; <chainsaw@gentoo.org> sudo-1.7.0.ebuild:
   Marked stable on AMD64 for security bug #256633, tested on a Core2 Duo
