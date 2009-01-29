@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.35 2009/01/27 03:44:04 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.36 2009/01/29 16:51:16 jsbronder Exp $
+
+  29 Jan 2009; Justin Bronder <jsbronder@gentoo.org> openmpi-1.3.ebuild:
+  Don't build Vampir Trace on sparc, #256529.
 
 *openmpi-1.3 (27 Jan 2009)
 
