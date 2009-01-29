@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r2.ebuild,v 1.9 2008/08/04 17:34:45 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r2.ebuild,v 1.10 2009/01/29 02:06:43 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils python games
 
 PNX=pysol-cardsets
@@ -19,19 +20,12 @@ SLOT="0"
 KEYWORDS="amd64 ~mips ppc ppc64 sparc x86"
 IUSE="extra-cardsets"
 
-DEPEND="virtual/python"
-RDEPEND="virtual/python
+DEPEND="dev-lang/python[tk]"
+RDEPEND="dev-lang/python[tk]
 	>=games-board/pysol-sound-server-3.0
 	>=dev-lang/tk-8.0"
 
-pkg_setup() {
-	python_tkinter_exists
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm -f Makefile data/*.pyc
 	epatch "${FILESDIR}"/${P}-sound-ok.patch #94234
 	if use extra-cardsets; then
