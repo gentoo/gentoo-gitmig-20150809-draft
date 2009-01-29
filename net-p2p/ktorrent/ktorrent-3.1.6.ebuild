@@ -1,16 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.1.5-r2.ebuild,v 1.2 2009/01/29 13:14:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.1.6.ebuild,v 1.1 2009/01/29 13:14:01 scarabeus Exp $
 
 EAPI="2"
 
-NEED_KDE="4.1"
+KDE_MINIMAL="4.1"
 KDE_LINGUAS="ca cs da de el es et fr gl it ja lv nb nds nl nn pl pt pt_BR ru sv uk zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="A BitTorrent program for KDE."
 HOMEPAGE="http://ktorrent.org/"
-SRC_URI="http://ktorrent.org/downloads/${PV}/${P}.tar.bz2"
+SRC_URI="http://ktorrent.org/downloads/${PV}/${P}-4.tar.bz2"
+# god knows what the -4 is for
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
