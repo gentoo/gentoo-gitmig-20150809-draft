@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/xbomber-101.ebuild,v 1.13 2006/12/01 20:10:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xbomber/xbomber-101.ebuild,v 1.14 2009/01/29 02:00:17 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Bomberman clone w/multiplayer support"
@@ -15,11 +16,12 @@ IUSE=""
 
 DEPEND="x11-libs/libX11"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
-		-e "s:X386:X11R6:" Makefile \
+		-e "/^CC/d" \
+		-e 's/gcc/$(CC)/g' \
+		-e "s:X386:X11R6:" \
+		Makefile \
 		|| die "sed failed"
 	sed -i \
 		-e "s:data/%s:${GAMES_DATADIR}/${PN}/%s:" bomber.c \
@@ -27,8 +29,9 @@ src_unpack() {
 	sed -i \
 		-e "s:=\"data\":=\"${GAMES_DATADIR}/${PN}\":" sound.c \
 		|| die "sed failed"
-	epatch "${FILESDIR}"/${P}-va_list.patch
-	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch \
+		"${FILESDIR}"/${P}-va_list.patch \
+		"${FILESDIR}"/${P}-gcc4.patch
 }
 
 src_compile() {
