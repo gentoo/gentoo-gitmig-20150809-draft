@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/vhdl-mode
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.19 2008/04/10 04:54:50 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vhdl-mode/ChangeLog,v 1.20 2009/01/29 07:39:31 fauli Exp $
+
+*vhdl-mode-3.33.27 (29 Jan 2009)
+
+  29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
+  +vhdl-mode-3.33.27.ebuild:
+  version bump
 
 *vhdl-mode-3.33.23 (10 Apr 2008)
 
