@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.13.3.ebuild,v 1.2 2008/12/06 15:03:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.13.3.ebuild,v 1.3 2009/01/29 04:52:10 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Chromium B.S.U. - an arcade game"
@@ -10,7 +11,7 @@ SRC_URI="mirror://sourceforge/chromium-bsu/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="mixer sdl"
 
 DEPEND="media-fonts/dejavu
@@ -24,9 +25,8 @@ DEPEND="media-fonts/dejavu
 		media-libs/openal )
 	sdl? ( media-libs/libsdl )
 	!sdl? ( virtual/glut )"
-RDEPEND="${DEPEND}"
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		--with-font-path="/usr/share/fonts/dejavu/DejaVuSerif-Bold.ttf" \
@@ -34,8 +34,6 @@ src_compile() {
 		$(use_enable !mixer openal) \
 		$(use_enable sdl) \
 		$(use_enable !sdl glut)
-
-	emake || die "make failed"
 }
 
 src_install() {

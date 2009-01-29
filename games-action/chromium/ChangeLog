@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chromium
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.30 2008/11/30 22:12:39 scarabeus Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.31 2009/01/29 04:52:10 mr_bones_ Exp $
+
+  29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  chromium-0.9.13.3.ebuild:
+  EAPI=2; add back dropped ppc keyword
 
 *chromium-0.9.13.3 (30 Nov 2008)
 
