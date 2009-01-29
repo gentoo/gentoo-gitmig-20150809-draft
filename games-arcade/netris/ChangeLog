@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/netris
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/ChangeLog,v 1.11 2007/04/24 14:49:27 drizzt Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/ChangeLog,v 1.12 2009/01/29 03:34:28 mr_bones_ Exp $
+
+  29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> netris-0.52.ebuild:
+  EAPI=2; try to fix bug #185332; bump Debian patch; fix warnings; honor CC
 
   24 Apr 2007; Timothy Redaelli <drizzt@gentoo.org> netris-0.52.ebuild:
   Add ~x86-fbsd keyword.
