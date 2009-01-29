@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.19.ebuild,v 1.3 2009/01/22 23:13:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.19.ebuild,v 1.4 2009/01/29 17:45:11 lack Exp $
 
 EAPI=2
 
@@ -40,6 +40,10 @@ src_prepare() {
 	# disable them waiting for a better solution.
 	sed -i -e '/AM_CFLAGS/s:-Wall:-DNDEBUG -Wall:' \
 		"${S}/pulse/Makefile.am"
+
+	# Bug #256119
+	epatch "${FILESDIR}/${P}-missing-avutil.patch"
+
 	eautoreconf
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.93 2009/01/22 23:13:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.94 2009/01/29 17:45:11 lack Exp $
+
+  29 Jan 2009; Jim Ramsay <lack@gentoo.org>
+  +files/alsa-plugins-1.0.19-missing-avutil.patch,
+  alsa-plugins-1.0.19.ebuild:
+  Bug 256119: Patch to configure.in which fixes compilation problem
 
   22 Jan 2009; <chainsaw@gentoo.org> alsa-plugins-1.0.19.ebuild:
   Fix second part of bug #256040 by partially undoing an overenthusiastic
