@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mpg123-el
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.14 2008/01/14 19:24:40 angelos Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/ChangeLog,v 1.15 2009/01/29 02:30:36 fauli Exp $
+
+  29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
+  -mpg123-el-1.47.ebuild:
+  clean up
 
   14 Jan 2008; Christoph Mende <angelos@gentoo.org> mpg123-el-1.50.ebuild:
   Stable on amd64 wrt bug #204003
