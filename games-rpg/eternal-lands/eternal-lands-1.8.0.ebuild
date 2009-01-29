@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.8.0.ebuild,v 1.2 2009/01/13 16:25:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.8.0.ebuild,v 1.3 2009/01/29 04:27:07 mr_bones_ Exp $
 
-EAPI="2"
+EAPI=2
 inherit cvs eutils flag-o-matic games
 
 DESCRIPTION="An online MMORPG written in C and SDL"
@@ -47,24 +47,14 @@ ECVS_BRANCH="elc_1_8_0"
 
 S="${WORKDIR}/${ECVS_MODULE}"
 
-pkg_setup() {
-	games_pkg_setup
-#	if built_with_use media-libs/cal3d 16bit-indices ; then
-#		eerror "${PN} won't work if media-libs/cal3d has been built with 16bit-indices"
-#		die "re-emerge  media-libs/cal3d without the 16bit-indices USE flag"
-#	fi
-}
-
 src_unpack() {
 	cvs_src_unpack
 	OPTIONS="-DDATA_DIR="\\\\\"${GAMES_DATADIR}/${PN}/\\\\\"""
 	S_CLIENT="${WORKDIR}/elc"
 	BROWSER="firefox"
+}
 
-	cd "${S}"
-
-#	epatch "${FILESDIR}/eternal-lands-1.7.0-errors.patch"
-
+src_prepare() {
 	# Add debugging options
 	if use debug ; then
 		OPTIONS="${OPTIONS} -DMEMORY_DEBUG"

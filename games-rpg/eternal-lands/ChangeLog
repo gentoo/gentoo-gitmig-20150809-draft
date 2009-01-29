@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.47 2009/01/11 02:38:10 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.48 2009/01/29 04:27:07 mr_bones_ Exp $
+
+  26 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  eternal-lands-1.8.0.ebuild:
+  tidy; use src_prepare
 
 *eternal-lands-1.8.0 (11 Jan 2009)
 
