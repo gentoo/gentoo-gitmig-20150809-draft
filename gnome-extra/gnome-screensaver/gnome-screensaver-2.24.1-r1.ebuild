@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.24.0.ebuild,v 1.2 2008/11/30 12:10:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.24.1-r1.ebuild,v 1.1 2009/01/29 21:38:54 eva Exp $
 
 inherit eutils gnome2
 
@@ -58,6 +58,13 @@ pkg_setup() {
 		--with-kbd-layout-indicator
 		--with-xscreensaverdir=/usr/share/xscreensaver/config
 		--with-xscreensaverhackdir=/usr/lib/misc/xscreensaver"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# fix bug #253581
+	epatch "${FILESDIR}/${PN}-2.24.1-pixmap-leak.patch"
 }
 
 src_install() {

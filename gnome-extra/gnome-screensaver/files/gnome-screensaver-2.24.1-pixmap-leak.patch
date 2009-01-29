@@ -1,0 +1,14 @@
+diff -up gnome-screensaver-2.25.1/src/gs-window-x11.c.pixmap-leak gnome-screensaver-2.25.1/src/gs-window-x11.c
+--- gnome-screensaver-2.25.1/src/gs-window-x11.c.pixmap-leak	2008-12-14 22:16:01.000000000 -0500
++++ gnome-screensaver-2.25.1/src/gs-window-x11.c	2008-12-14 22:16:34.000000000 -0500
+@@ -2287,6 +2287,10 @@ gs_window_finalize (GObject *object)
+ 
+         gs_window_dialog_finish (window);
+ 
++	if (window->priv->background_pixmap) {
++		g_object_unref (window->priv->background_pixmap);
++	}
++ 
+         G_OBJECT_CLASS (gs_window_parent_class)->finalize (object);
+ }
+ 
