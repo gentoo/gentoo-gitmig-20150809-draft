@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9441 2009/01/29 21:02:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9442 2009/01/29 22:17:31 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -508,12 +508,6 @@ mail-client/elm
 net-mail/ezmlm
 net-mail/ezmlm-idx-mysql
 net-mail/ezmlm-idx-pgsql
-
-# Gilles Dartiguelongue <eva@gentoo.org> (27 Dec 2008)
-# Dead upstream, does not compile with recent gcc/glibc.
-# Replacements: tomboy, sticky-notes applet (from gnome-applets)
-# See bug #248564 for details, removal in 30 days.
-x11-misc/goats
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Dec 2008)
 # - drop .la files (and static libs)
