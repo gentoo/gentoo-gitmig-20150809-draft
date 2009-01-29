@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chickens
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.12 2006/09/20 16:42:42 blubb Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.13 2009/01/29 02:46:23 mr_bones_ Exp $
+
+  29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  chickens-0.2.4.ebuild:
+  EAPI=2; desktop entry (bug #159748)
 
   20 Sep 2006; <blubb@gentoo.org> chickens-0.2.4.ebuild:
   stable on amd64
