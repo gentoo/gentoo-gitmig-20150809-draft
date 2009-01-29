@@ -74,3 +74,9 @@ media-libs/gst-plugins-base debug
 # Alexis Ballier <aballier@gentoo.org> (22 Jan 2009)
 # Requires gpm
 www-client/links livecd
+
+# Alexis Ballier <aballier@gentoo.org> (29 Jan 2009)
+# qt-webkit fails to build here, bug #256836
+# Usemask stuff requiring it for now
+x11-libs/qt-assistant webkit
+x11-libs/qt webkit
