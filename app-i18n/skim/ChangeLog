@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.63 2009/01/17 14:58:37 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.64 2009/01/29 14:29:25 matsuu Exp $
+
+*skim-1.4.5-r3 (29 Jan 2009)
+
+  29 Jan 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +files/skim-1.4.5-klineedit.patch, +files/skim-1.4.5-python26.patch,
+  -skim-1.4.2.ebuild, -skim-1.4.5-r1.ebuild, +skim-1.4.5-r3.ebuild:
+  Fixed python-2.6 issue, #255210. Fixed KLineEdit issue.
 
   17 Jan 2009; Friedrich Oslage <bluebird@gentoo.org> skim-1.4.5-r2.ebuild:
   Stable on sparc, bug #253611

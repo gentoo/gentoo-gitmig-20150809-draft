@@ -1,0 +1,9 @@
+diff -Naur scons-local-0.96.1.orig/SCons/Tool/gas.py scons-local-0.96.1/SCons/Tool/gas.py
+--- scons-local-0.96.1.orig/SCons/Tool/gas.py	2005-04-22 06:18:50.000000000 +0900
++++ scons-local-0.96.1/SCons/Tool/gas.py	2009-01-29 20:43:13.000000000 +0900
+@@ -1,4 +1,4 @@
+-import as
++as_module = __import__('as', globals(), locals(), [])
+ assemblers=['as', 'gas']
+ def generate(env):
+     as.generate(env)

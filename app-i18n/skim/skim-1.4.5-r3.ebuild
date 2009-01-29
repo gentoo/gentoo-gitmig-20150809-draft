@@ -1,6 +1,6 @@
-# Copyright 2000-2008 Gentoo Foundation
+# Copyright 2000-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5-r1.ebuild,v 1.1 2008/11/12 00:41:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5-r3.ebuild,v 1.1 2009/01/29 14:29:25 matsuu Exp $
 
 inherit kde-functions multilib toolchain-funcs eutils
 
@@ -26,7 +26,13 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-asneeded.patch"
 	# bug #211493
+	epatch "${FILESDIR}/${P}-kde3.patch"
+	#
+	epatch "${FILESDIR}/${P}-klineedit.patch"
+
 	sed -i -e "s:/opt/kde3:${KDEDIR}:g" doc/de/index.docbook || die
+	# bug #246223
+	ln -s libscim-kdeutils.so.0.1.0 utils/libscim-kdeutils.so || die
 }
 
 src_compile() {
@@ -34,16 +40,14 @@ src_compile() {
 	[ "${MAKEOPTS/-s/}" != "${MAKEOPTS}" ] && sconsopts="${sconsopts} -s"
 
 	./configure prefix=/usr libdir=/usr/$(get_libdir) || die
+	# bug #255210
+	epatch "${FILESDIR}/${P}-python26.patch"
 	sed -i -e "/^compilers/s:\[:\['$(tc-getCXX)',:" scons-local-0.96.1/SCons/Tool/g++.py || die
-#	sed -i \
-#		-e "/c_compilers=/s:\[:\['$(tc-getCC)',:" \
-#		-e "/cxx_compilers=/s:\[:\['$(tc-getCXX)',:" \
-#		scons-local-0.96.1/SCons/Tool/__init__.py || die
 	./scons ${sconsopts} || die
 }
 
 src_install() {
-	DESTDIR=${D} ./scons prefix=/usr install || die
+	DESTDIR="${D}" ./scons prefix=/usr install || die
 
 	# Install the .desktop file in FDO's suggested directory
 	dodir /usr/share/applications/kde
