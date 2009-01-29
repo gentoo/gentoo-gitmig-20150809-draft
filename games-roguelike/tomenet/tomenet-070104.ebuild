@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-070104.ebuild,v 1.4 2008/01/14 15:46:33 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-070104.ebuild,v 1.5 2009/01/29 02:18:07 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 DESCRIPTION="A MMORPG based on the works of J.R.R. Tolkien"
@@ -18,9 +19,17 @@ DEPEND="X? ( x11-libs/libX11 )
 
 S="${WORKDIR}/${PN}/src"
 
+src_prepare() {
+	sed -i \
+		-e '/^CC =/d' \
+		makefile \
+		|| die "sed failed"
+}
+
 src_compile() {
 	local GENTOO_DEFINES="-DUSE_GCU "
 	local GENTOO_LIBS="-lncurses -lcrypt "
+
 	if use Xaw3d; then
 		GENTOO_DEFINES="${GENTOO_DEFINES} -DUSE_XAW"
 	elif use X; then
