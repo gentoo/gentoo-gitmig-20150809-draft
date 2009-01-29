@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.387 2009/01/28 23:40:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.388 2009/01/29 00:11:26 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1683,19 +1683,16 @@ gcc-library_src_install() {
 gcc-compiler_src_install() {
 	local x=
 
-	# Do allow symlinks in ${PREFIX}/lib/gcc-lib/${CHOST}/${GCC_CONFIG_VER}/include as
-	# this can break the build.
-	for x in "${WORKDIR}"/build/gcc/include*/* ; do
-		[[ -L ${x} ]] && rm -f "${x}"
-	done
+	cd "${WORKDIR}"/build
+	# Do allow symlinks in private gcc include dir as this can break the build
+	find gcc/include*/ -type l -print0 | xargs rm -f
 	# Remove generated headers, as they can cause things to break
 	# (ncurses, openssl, etc).
-	for x in $(find "${WORKDIR}"/build/gcc/include*/ -name '*.h') ; do
+	for x in $(find gcc/include*/ -name '*.h') ; do
 		grep -q 'It has been auto-edited by fixincludes from' "${x}" \
 			&& rm -f "${x}"
 	done
 	# Do the 'make install' from the build directory
-	cd "${WORKDIR}"/build
 	S=${WORKDIR}/build \
 	emake DESTDIR="${D}" install || die
 	# Punt some tools which are really only useful while building gcc
@@ -1809,7 +1806,9 @@ gcc-compiler_src_install() {
 			|| prepman "${DATAPATH}"
 	fi
 	# prune empty dirs left behind
-	find "${D}" -type d | xargs rmdir >& /dev/null
+	for x in 1 2 3 4 ; do
+		find "${D}" -type d -exec rmdir "{}" \; >& /dev/null
+	done
 
 	# install testsuite results
 	if use test; then
