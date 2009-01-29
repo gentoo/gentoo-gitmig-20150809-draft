@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xblockout
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.19 2008/10/27 22:42:20 tupone Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.20 2009/01/29 01:36:24 mr_bones_ Exp $
+
+  29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  xblockout-1.1.5-r1.ebuild:
+  EAPI=2; respect CC
 
 *xblockout-1.1.5-r1 (27 Oct 2008)
 
