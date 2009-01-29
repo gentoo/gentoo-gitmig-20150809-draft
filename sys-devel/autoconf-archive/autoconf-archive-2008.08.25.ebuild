@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/autoconf-archive-2008.08.25.ebuild,v 1.1 2008/08/25 18:09:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/autoconf-archive-2008.08.25.ebuild,v 1.2 2009/01/29 16:10:26 vapier Exp $
 
 inherit eutils
 
@@ -11,12 +11,8 @@ SRC_URI="http://autoconf-archive.cryp.to/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
-
-DEPEND=""
-RDEPEND="sys-devel/automake
-	sys-devel/autoconf"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
