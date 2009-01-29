@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/quack
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quack/ChangeLog,v 1.12 2008/06/14 23:29:12 ulm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quack/ChangeLog,v 1.13 2009/01/29 07:22:39 fauli Exp $
+
+  29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
+  -files/70quack-gentoo.el, -quack-0.29.ebuild:
+  clean up
 
   14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> quack-0.30.ebuild:
   Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
