@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.9 2006/12/06 00:03:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.10 2009/01/29 08:40:12 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="A Doom level (wad) editor"
@@ -16,8 +17,7 @@ RESTRICT="test"
 
 DEPEND="x11-libs/libX11"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	sed -i \
 		-e '/iwad/s/local\///' \
 		"${S}"/yadex.cfg \
@@ -27,10 +27,13 @@ src_unpack() {
 	touch -t 196910101010 "${S}"/src/wadlist.cc
 }
 
-src_compile() {
+src_configure() {
 	# not an autoconf script
 	./configure --prefix="/usr" || die "configure failed"
-	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die "emake failed"
+}
+
+src_compile() {
+	emake CC="${CC}" CXX="${CXX}" CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die "emake failed"
 }
 
 src_install() {
