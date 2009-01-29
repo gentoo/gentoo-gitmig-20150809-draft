@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/fteqcc/fteqcc-2501.ebuild,v 1.3 2007/07/02 00:08:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/fteqcc/fteqcc-2501.ebuild,v 1.4 2009/01/29 08:31:07 mr_bones_ Exp $
 
-inherit eutils
+EAPI=2
+inherit eutils flag-o-matic
 
 DESCRIPTION="QC compiler"
 HOMEPAGE="http://fteqw.sourceforge.net/"
@@ -19,15 +20,16 @@ RDEPEND=""
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-cleanup-source.patch
 	sed -i \
+		-e '/^CC/d' \
 		-e "s: -O3 : :g" \
 		-e "s: -s : :g" \
+		-e 's/-o fteqcc.bin/$(LDFLAGS) -o fteqcc.bin/' \
 		Makefile || die "sed failed"
 	edos2unix readme.txt
+	append-flags -DQCCONLY
 }
 
 src_compile() {

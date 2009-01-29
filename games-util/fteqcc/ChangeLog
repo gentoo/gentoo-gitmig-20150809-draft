@@ -1,6 +1,9 @@
 # ChangeLog for games-util/fteqcc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/fteqcc/ChangeLog,v 1.3 2007/07/02 00:08:48 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/fteqcc/ChangeLog,v 1.4 2009/01/29 08:31:07 mr_bones_ Exp $
+
+  29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> fteqcc-2501.ebuild:
+  EAPI=2; more toolchain respect
 
   02 Jul 2007; Tristan Heaven <nyhm@gentoo.org> fteqcc-2501.ebuild:
   RESTRICT="test"
