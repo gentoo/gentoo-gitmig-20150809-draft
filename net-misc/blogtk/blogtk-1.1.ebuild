@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-1.1.ebuild,v 1.6 2008/07/26 22:48:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-1.1.ebuild,v 1.7 2009/01/29 21:51:23 eva Exp $
 
 inherit eutils fdo-mime python
 
@@ -31,6 +31,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-destdir.patch"
+
+	# Fix parallel make issues, bug #239777
+	epatch "${FILESDIR}/${P}-makefile.patch"
 
 	# Respect multilib
 	sed -i "s:lib/blogtk:$(get_libdir)/blogtk:g" Makefile || die "sed failed"

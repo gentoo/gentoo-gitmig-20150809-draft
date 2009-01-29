@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/blogtk
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.15 2008/07/26 22:48:58 eva Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.16 2009/01/29 21:51:23 eva Exp $
+
+  29 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/blogtk-1.1-makefile.patch, blogtk-1.1.ebuild:
+  Fix parallel make issues, bug #239777.
 
   26 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org> ChangeLog:
   fix QA warnings. Fix various ebuild issues in 1.1. Add gettext and

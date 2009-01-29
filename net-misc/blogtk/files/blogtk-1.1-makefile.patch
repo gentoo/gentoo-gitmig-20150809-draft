@@ -1,0 +1,20 @@
+--- a/Makefile	2008-11-22 02:11:42.768480178 +0100
++++ b/Makefile	2008-11-22 02:12:12.664007668 +0100
+@@ -19,8 +19,8 @@
+ PYFILES := $(shell $(FIND) . -name "*.py" -print)
+ 
+ install: 
+-	mv src/BloGTK.py src/BloGTK.py.old
+-	sed -e "s|/usr/share|$(PREFIX)/share|g" src/BloGTK.py.old > src/BloGTK.py
++	mv src/BloGTK.py src/BloGTK.py.old; \
++	sed -e "s|/usr/share|$(PREFIX)/share|g" src/BloGTK.py.old > src/BloGTK.py; \
+ 	rm src/BloGTK.py.old
+ 	$(INSTALL) -m 755 -d $(BINDIR) $(LIBDIR) $(DATADIR) $(APPLICATIONSDIR)	$(ICONDIR) 
+ 	$(INSTALL) -m 755 src/* $(LIBDIR)
+@@ -28,5 +28,5 @@
+ 	$(INSTALL) -m 644 data/blogtk-icon.png $(ICONDIR)
+ 	$(INSTALL) -m 644 data/blogtk.desktop $(APPLICATIONSDIR)
+ 
+-	ln -sf $(LIBDIR)/BloGTK.py $(BINDIR)/BloGTK
++	ln -sf $(LIBDIR)/BloGTK.py $(BINDIR)/BloGTK; \
+ 	chmod +x $(LIBDIR)/BloGTK.py
