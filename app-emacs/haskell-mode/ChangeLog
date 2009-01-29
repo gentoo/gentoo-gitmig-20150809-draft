@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/haskell-mode
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.31 2008/10/06 16:10:58 ulm Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.32 2009/01/29 01:56:31 fauli Exp $
+
+  29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
+  -haskell-mode-2.3.ebuild:
+  clean up
 
 *haskell-mode-2.4_p20080826 (06 Oct 2008)
 
