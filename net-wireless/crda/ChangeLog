@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.10 2009/01/29 18:05:03 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.11 2009/01/29 18:37:01 gentoofan23 Exp $
+
+  29 Jan 2009; Thomas Anderson <gentoofan23@gentoo.org> crda-1.0.1-r1.ebuild:
+  stable amd64, bug 256245
 
 *crda-1.0.1-r1 (29 Jan 2009)
 
