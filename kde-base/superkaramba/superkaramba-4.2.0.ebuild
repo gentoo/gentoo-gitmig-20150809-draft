@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.2.0.ebuild,v 1.1 2009/01/27 18:24:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.2.0.ebuild,v 1.2 2009/01/29 13:24:09 scarabeus Exp $
 
 EAPI="2"
 
@@ -12,7 +12,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug htmlhandbook python"
 
 DEPEND="kde-base/qimageblitz
-	python? ( dev-lang/python )"
+	>=x11-libs/libXrender-0.9.4
+	python? ( dev-lang/python )
+"
 
 PATCHES=( "${FILESDIR}/${PN}-as-needed.patch" )
 
