@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.9 2007/04/09 21:42:22 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.10 2009/01/29 01:41:41 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 DESCRIPTION="An ncurses-based Xenon clone"
@@ -17,12 +18,11 @@ DEPEND="sys-libs/ncurses"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s/-O2/${CFLAGS}/" \
 		-e '/strip/d' \
+		-e '/^CC/d' \
 		Makefile || die "sed failed"
 }
 
