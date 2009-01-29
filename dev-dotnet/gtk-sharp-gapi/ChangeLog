@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/gtk-sharp-gapi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-gapi/ChangeLog,v 1.4 2009/01/23 19:58:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-gapi/ChangeLog,v 1.5 2009/01/29 22:42:15 loki_val Exp $
+
+*gtk-sharp-gapi-2.12.7-r10 (29 Jan 2009)
+
+  29 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -gtk-sharp-gapi-2.12.7-r7.ebuild, +gtk-sharp-gapi-2.12.7-r10.ebuild:
+  Bump for new eclass
 
 *gtk-sharp-gapi-2.12.7-r7 (23 Jan 2009)
 

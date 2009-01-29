@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-gapi/gtk-sharp-gapi-2.12.7-r7.ebuild,v 1.1 2009/01/23 19:58:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp-gapi/gtk-sharp-gapi-2.12.7-r10.ebuild,v 1.1 2009/01/29 22:42:15 loki_val Exp $
 
 EAPI=2
 
@@ -15,7 +15,6 @@ IUSE=""
 RESTRICT="test"
 
 src_compile() {
-	gtk-sharp-module_src_compile
 	GTK_SHARP_MODULE_DIR="parser" gtk-sharp-module_src_compile
 	GTK_SHARP_MODULE_DIR="generator" gtk-sharp-module_src_compile
 }
