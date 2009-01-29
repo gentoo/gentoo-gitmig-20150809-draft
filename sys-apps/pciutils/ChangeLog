@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.156 2009/01/26 21:54:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.157 2009/01/29 18:25:59 vapier Exp $
+
+  29 Jan 2009; Mike Frysinger <vapier@gentoo.org> pciutils-3.1.0.ebuild:
+  Force LC_ALL=C with tr since upper/lower don't work #256447 by Gürkan
+  Gür.
 
   26 Jan 2009; Brent Baude <ranger@gentoo.org> pciutils-3.0.2.ebuild:
   stable ppc64, bug 256377
