@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.7.ebuild,v 1.1 2008/07/08 15:51:02 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.7.ebuild,v 1.2 2009/01/29 14:07:44 s4t4n Exp $
 
 inherit elisp-common eutils pam
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="crypt directfb emacs gpm logrotate opensslcrypt pam static X"
 
 RDEPEND=">=sys-libs/ncurses-5.4-r6
@@ -46,17 +46,6 @@ src_unpack()
 
 	if use directfb; then
 
-		#Issues with this version have been work-arounded :-)
-		#if has_version "=dev-libs/DirectFB-0.9.25.1"; then
-		#	echo
-		#	ewarn "You are running DirectFB version 0.9.25.1:"
-		#	ewarn "I advise against that as this version introduces"
-		#	ewarn "instability, expecially when closing DirectFB mode!"
-		#	ewarn "Please consider downgrading DirectFB to version 0.9.24..."
-		#	echo
-		#	epause
-		#fi
-
 		if ! built_with_use -a dev-libs/DirectFB fbcon jpeg png truetype; then
 			echo
 			eerror "qingy expects DirectFB to provide certain capabilities."
@@ -65,6 +54,18 @@ src_unpack()
 			eerror "You must rebuild DirectFB those USE flags enabled!"
 			echo
 			die "USE flags check failed"
+		fi
+
+		if has_version ">=dev-libs/DirectFB-1.2.6"; then
+			if built_with_use -a dev-libs/DirectFB X; then
+				echo
+				eerror "Detected DirectFB version >= 1.2.6."
+				eerror "For this version of DirectFB to work with qingy"
+				eerror "X USE flag must be disabled."
+				eerror "You must rebuild DirectFB with X USE flag disabled!"
+				echo
+				die "USE flags check failed"
+			fi
 		fi
 
 	fi
