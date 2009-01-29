@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.20 2009/01/18 19:53:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.21 2009/01/29 18:51:06 aballier Exp $
+
+  29 Jan 2009; Alexis Ballier <aballier@gentoo.org> qt-gui-4.4.2-r1.ebuild:
+  keyword ~x86-fbsd
 
   18 Jan 2009; Markus Meier <maekke@gentoo.org> qt-gui-4.4.2-r1.ebuild:
   amd64/x86 stable, bug #248038
