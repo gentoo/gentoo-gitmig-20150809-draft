@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/crontab-mode
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/crontab-mode/ChangeLog,v 1.14 2008/06/14 23:23:33 ulm Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/crontab-mode/ChangeLog,v 1.15 2009/01/29 01:21:11 fauli Exp $
+
+  29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
+  -crontab-mode-1.18.ebuild:
+  clean up
 
   14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> crontab-mode-1.18.ebuild:
   Do not assign SIMPLE_ELISP since elisp.eclass now detects this case

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emms
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/ChangeLog,v 1.11 2007/07/11 22:00:05 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/ChangeLog,v 1.12 2009/01/29 01:36:42 fauli Exp $
+
+  29 Jan 2009; Christian Faulhammer <fauli@gentoo.org> -emms-2.1.ebuild:
+  clean up
 
 *emms-3.0 (11 Jul 2007)
 
