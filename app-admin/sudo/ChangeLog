@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.154 2009/01/29 13:35:33 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.155 2009/01/29 16:47:28 ranger Exp $
+
+  29 Jan 2009; Brent Baude <ranger@gentoo.org> sudo-1.7.0.ebuild:
+  Marking sudo-1.7.0 ppc64 for bug 256633
 
   29 Jan 2009; Ferris McCormick <fmccor@gentoo.org> sudo-1.7.0.ebuild:
   Sparc stable, security bug #256633.
