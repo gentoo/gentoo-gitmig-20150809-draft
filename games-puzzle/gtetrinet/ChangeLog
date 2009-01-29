@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gtetrinet
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.16 2008/03/22 10:30:49 remi Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.17 2009/01/29 02:36:31 mr_bones_ Exp $
+
+  29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  gtetrinet-0.7.11.ebuild:
+  EAPI=2; add use-based dep
 
   22 Mar 2008; Rémi Cardona <remi@gentoo.org> gtetrinet-0.7.11.ebuild:
   update ebuild to new gnome2 eclass (see bug #155993)

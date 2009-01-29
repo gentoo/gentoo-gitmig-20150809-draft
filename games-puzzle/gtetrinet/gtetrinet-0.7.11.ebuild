@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11.ebuild,v 1.2 2008/03/22 10:30:49 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11.ebuild,v 1.3 2009/01/29 02:36:31 mr_bones_ Exp $
 
+EAPI=2
 # games after gnome2 so games' functions will override gnome2's
 inherit gnome2 games
 
@@ -18,16 +19,14 @@ IUSE="nls ipv6"
 RDEPEND="dev-libs/libxml2
 	>=media-sound/esound-0.2.5
 	>=gnome-base/gconf-2
-	>=gnome-base/libgnome-2
+	>=gnome-base/libgnome-2[esd]
 	>=gnome-base/libgnomeui-2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "/^pkgdatadir =/s:=.*:= ${GAMES_DATADIR}/${PN}:" \
 		src/Makefile.in themes/*/Makefile.in || die "sed themes"
@@ -37,12 +36,11 @@ src_unpack() {
 		src/Makefile.in || die "sed bindir"
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable ipv6) \
 		--bindir="${GAMES_BINDIR}" \
 		|| die
-	emake || die "emake failed"
 }
 
 src_install() {
