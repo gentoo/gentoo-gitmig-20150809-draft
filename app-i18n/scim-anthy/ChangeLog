@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-anthy
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/ChangeLog,v 1.58 2008/12/20 18:43:24 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/ChangeLog,v 1.59 2009/01/29 14:29:02 matsuu Exp $
+
+*scim-anthy-1.2.7 (29 Jan 2009)
+
+  29 Jan 2009; MATSUU Takuto <matsuu@gentoo.org> +scim-anthy-1.2.7.ebuild:
+  Version bumped.
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> scim-anthy-1.2.6.ebuild:
   Stable on ppc wrt bug 245175
