@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9437 2009/01/28 16:48:48 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9438 2009/01/29 03:47:14 jmbsvicetto Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -56,7 +56,6 @@ x11-base/kdrive
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (24 Jan 2009)
 # Masked until KDE-4.2.0 is put in the tree.
 # The mask should be removed in 1 or 2 weeks.
-
 >=kde-base/akonadi-4.1.96
 >=kde-base/akregator-4.1.96
 >=kde-base/amor-4.1.96
@@ -319,6 +318,7 @@ x11-base/kdrive
 >=kde-base/system-config-printer-kde-4.1.96
 >=kde-base/systemsettings-4.1.96
 >=kde-base/umbrello-4.1.96
+>=media-sound/phonon-4.3.0
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (24 Jan 2009)
 # Finally get rid of the combined mikachan-font package.
