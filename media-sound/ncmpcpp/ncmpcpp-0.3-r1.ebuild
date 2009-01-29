@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.3-r1.ebuild,v 1.1 2009/01/27 06:30:24 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.3-r1.ebuild,v 1.2 2009/01/29 22:39:51 yngwin Exp $
 
 EAPI="2"
 inherit eutils
@@ -36,7 +36,10 @@ pkg_postinst() {
 	elog "${P} uses ~/.ncmpcpp/config and ~/.ncmpcpp/keys"
 	elog "as user configuration files."
 	echo
-	elog "This version of ncmpcc uses features from mpd-0.14, so"
+	elog "This version of ncmpcpp uses features from mpd-0.14, so"
 	elog "we recommend you use this with >=mpd-0.14_alpha1."
+	echo
+	elog "The color syntax has changed, see the example config file"
+	elog "for the new syntax."
 	echo
 }
