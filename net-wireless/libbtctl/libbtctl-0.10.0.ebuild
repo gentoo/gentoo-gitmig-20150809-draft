@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.10.0.ebuild,v 1.2 2008/04/17 19:31:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.10.0.ebuild,v 1.3 2009/01/29 23:05:11 eva Exp $
 
-inherit gnome2 multilib mono autotools
+inherit autotools gnome2 multilib mono
 
 DESCRIPTION="A GObject wrapper for Bluetooth functionality"
 HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
@@ -30,7 +30,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
-MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="README NEWS ChangeLog AUTHORS COPYING"
 
 src_unpack() {
@@ -39,8 +38,11 @@ src_unpack() {
 	# Fix multilib
 	sed -e "s:\/lib\/:\/$(get_libdir)\/:" -i src/Makefile.am
 
+	# Fix parallel make, bug #235991
+	epatch "${FILESDIR}/${P}-parallel-make.patch"
+
 	# Fix tests (needed with eautoreconf)
-	intltoolize --force
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
 
@@ -49,7 +51,8 @@ pkg_setup() {
 }
 
 src_compile() {
-	sed -i -e 's/libext="a/& la/' libtool
+	gnome2_src_configure
 
-	gnome2_src_compile
+	sed -e 's/libext="a/& la/' -i libtool || die "sed failed"
+	emake || die "compile failure"
 }

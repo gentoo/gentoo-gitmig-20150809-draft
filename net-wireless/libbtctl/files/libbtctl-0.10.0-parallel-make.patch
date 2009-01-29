@@ -1,0 +1,57 @@
+Index: libbtctl-0.10.0/src/Makefile.am
+===================================================================
+--- libbtctl-0.10.0.orig/src/Makefile.am
++++ libbtctl-0.10.0/src/Makefile.am
+@@ -37,27 +37,27 @@ obex_server_source_test_LDADD = \
+ 	libbtctl.la \
+ 	$(BTCTL_LIBS) $(BLUETOOTH_LIBS) $(OPENOBEX_LIBS)
+ 
+-btctl_async_test_LDFLAGS= \
++btctl_async_test_LDADD = \
+ 	libbtctl.la  $(BTCTL_LIBS) \
+ 	$(BLUETOOTH_LIBS) $(OPENOBEX_LIBS)
+ 
+-btobexclient_test_LDFLAGS= \
++btobexclient_test_LDADD = \
+ 	libbtctl.la  $(BTCTL_LIBS) \
+ 	$(BLUETOOTH_LIBS) $(OPENOBEX_LIBS)
+ 
+-btobex_test_LDFLAGS= \
++btobex_test_LDADD = \
+ 	libbtctl.la  $(BTCTL_LIBS) \
+ 	$(BLUETOOTH_LIBS) $(OPENOBEX_LIBS)
+ 
+-btctl_discovery_test_LDFLAGS= \
++btctl_discovery_test_LDADD = \
+ 	libbtctl.la  $(BTCTL_LIBS) \
+ 	$(BLUETOOTH_LIBS) $(OPENOBEX_LIBS)
+ 
+-btlist_LDFLAGS = \
++btlist_LDADD = \
+ 	libbtctl.la  $(BTCTL_LIBS) \
+ 	$(BLUETOOTH_LIBS) $(OPENOBEX_LIBS)
+ 
+-btsignal_watch_LDFLAGS = \
++btsignal_watch_LDADD = \
+ 	libbtctl.la $(BTCTL_LIBS) \
+ 	$(BLUETOOTH_LIBS) $(OPENOBEX_LIBS)
+ 
+@@ -80,7 +80,8 @@ pkginclude_HEADERS = \
+ 	btobex-client.h btctl-types.h
+ 
+ libbtctl_la_LDFLAGS = \
+-	-version-info $(BTCTL_LT_VERSION) \
++	-version-info $(BTCTL_LT_VERSION)
++libbtctl_la_LIBADD = \
+ 	$(BTCTL_LIBS) $(BLUETOOTH_LIBS) $(OPENOBEX_LIBS)
+ 
+ 
+@@ -123,6 +124,7 @@ btctl-py.c: btctl.defs btctl.override
+ 
+ btctl_la_SOURCES = btctl-py.c btctl-pymodule.c
+ btctl_la_LIBADD = libbtctl.la
+-btctl_la_LDFLAGS = $(BTCTLPY_LIBS) -module -avoid-version
++btctl_la_LDFLAGS = -module -avoid-version
++btctl_la_LIBADD = $(BTCTLPY_LIBS)
+ endif
+ 

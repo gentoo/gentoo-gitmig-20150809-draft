@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/libbtctl
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.43 2008/04/17 19:31:54 jer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.44 2009/01/29 23:05:11 eva Exp $
+
+  30 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/libbtctl-0.6.0-aclocal_openobex.patch,
+  -files/libbtctl-0.6.0-libdir.patch,
+  +files/libbtctl-0.10.0-parallel-make.patch, -libbtctl-0.6.0-r1.ebuild,
+  -libbtctl-0.8.1.ebuild, -libbtctl-0.8.2.ebuild, libbtctl-0.10.0.ebuild:
+  Fix parallel make, bug #235991. Fix effectless sed. Remove old revisions.
 
   17 Apr 2008; Jeroen Roovers <jer@gentoo.org> libbtctl-0.10.0.ebuild:
   Marked ~hppa too.
