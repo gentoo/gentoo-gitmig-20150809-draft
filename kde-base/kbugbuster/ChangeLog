@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbugbuster
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.93 2009/01/27 19:18:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.94 2009/01/29 14:05:46 alexxy Exp $
+
+  29 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> metadata.xml:
+  Fix metadata.xml
 
 *kbugbuster-4.2.0 (27 Jan 2009)
 
