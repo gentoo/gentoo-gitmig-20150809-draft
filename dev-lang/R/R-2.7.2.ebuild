@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.2.ebuild,v 1.8 2008/11/09 13:20:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.2.ebuild,v 1.9 2009/01/29 10:45:01 bicatali Exp $
 
+EAPI=2
 inherit fortran flag-o-matic bash-completion versionator
 
 DESCRIPTION="Language and environment for statistical computing and graphics"
@@ -21,7 +22,8 @@ CDEPEND="dev-lang/perl
 	app-arch/bzip2
 	virtual/blas
 	virtual/ghostscript
-	cairo? ( x11-libs/cairo x11-libs/pango )
+	cairo? ( x11-libs/cairo[X]
+		|| ( >=x11-libs/pango-1.20[X] <x11-libs/pango-1.20 ) )
 	readline? ( sys-libs/readline )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
@@ -49,27 +51,10 @@ pkg_setup() {
 	export FFLAGS="${FFLAGS:--O2}"
 	[[ ${FORTRANC} = gfortran || ${FORTRANC} = if* ]] && \
 		export FCFLAGS="${FCFLAGS:-${FFLAGS}}"
-
-	# make sure cairo and pango are both compiled with "X"
-	# use flag (see bug #231970)
-	if use cairo; then
-		if ( ! built_with_use x11-libs/cairo X ); then
-			eerror "x11-libs/cairo needs to be built with USE=\"X\""
-			die "Please rebuild x11-libs/cairo with USE=\"X\""
-		fi
-
-		if ( ! built_with_use x11-libs/pango X ); then
-			eerror "x11-libs/pango needs to be built with USE=\"X\""
-			die "Please rebuild x11-libs/pango with USE=\"X\""
-		fi
-	fi
-
 	filter-ldflags -Wl,-Bdirect -Bdirect
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-javareconf.patch
 	epatch "${FILESDIR}"/${PN}-2.7.1-test-fix.patch
 }
@@ -80,7 +65,7 @@ src_test() {
 	R_HOME="" make check || die "Some of the tests failed"
 }
 
-src_compile() {
+src_configure() {
 	# fix packages.html for doc (bug #205103)
 	# check in later versions if fixed
 	sed -i \
@@ -120,8 +105,10 @@ src_compile() {
 		$(use_with png libpng) \
 		$(use_with readline) \
 		$(use_with cairo) \
-		$(use_with X x) \
-		|| die "econf failed"
+		$(use_with X x)
+}
+
+src_compile() {
 	emake || die "emake failed"
 	if use doc; then
 		export VARTEXFONTS="${T}/fonts"
