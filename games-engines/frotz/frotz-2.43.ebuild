@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/frotz-2.43.ebuild,v 1.15 2008/02/06 20:08:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/frotz-2.43.ebuild,v 1.16 2009/01/30 06:49:50 mr_bones_ Exp $
 
-inherit toolchain-funcs games
+EAPI=2
+inherit games
 
 DESCRIPTION="Curses based interpreter for Z-code based text games"
 HOMEPAGE="http://www.cs.csubak.edu/~dgriffi/proj/frotz/"
@@ -16,8 +17,15 @@ IUSE="alsa oss"
 DEPEND="sys-libs/ncurses
 	alsa? ( oss? ( media-libs/alsa-oss ) )"
 
+src_prepare() {
+	sed -i \
+		-e '/^CC /d' \
+		Makefile \
+		|| die 'sed failed'
+}
+
 src_compile() {
-	local OPTS="CC=$(tc-getcc) CONFIG_DIR=${GAMES_SYSCONFDIR}"
+	local OPTS="CONFIG_DIR=${GAMES_SYSCONFDIR}"
 	use oss && OPTS="${MAKE_OPTS} SOUND_DEFS=-DOSS_SOUND SOUND_DEV=/dev/dsp"
 	emake ${MAKE_OPTS} all || die "emake failed"
 }
