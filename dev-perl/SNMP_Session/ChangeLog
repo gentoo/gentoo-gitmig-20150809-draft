@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/SNMP_Session
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.15 2007/01/19 15:45:20 mcummings Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.16 2009/01/30 08:02:06 tove Exp $
+
+*SNMP_Session-1.12 (30 Jan 2009)
+
+  30 Jan 2009; Torsten Veller <tove@gentoo.org> metadata.xml,
+  +SNMP_Session-1.12.ebuild:
+  Version bump. Fixes #256847.
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   -SNMP_Session-0.92.ebuild, SNMP_Session-0.92-r1.ebuild:
