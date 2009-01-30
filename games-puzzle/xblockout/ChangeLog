@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xblockout
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.21 2009/01/30 04:37:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.22 2009/01/30 20:18:49 mr_bones_ Exp $
+
+  30 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  xblockout-1.1.5-r1.ebuild:
+  add desktop entry (bug #256966)
 
   30 Jan 2009; Jeremy Olexa <darkside@gentoo.org> xblockout-1.1.5-r1.ebuild:
   amd64 stable, bug 256731
