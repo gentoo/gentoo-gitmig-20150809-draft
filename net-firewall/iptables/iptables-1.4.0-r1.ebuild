@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.0-r1.ebuild,v 1.14 2008/12/06 14:43:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.0-r1.ebuild,v 1.15 2009/01/30 21:54:08 dragonheart Exp $
 
 inherit eutils toolchain-funcs linux-info
 
-L7_PV=2.17
+L7_PV=2.21
 L7_P=netfilter-layer7-v${L7_PV}
 IMQ_PATCH=iptables-1.4.0-imq.diff
 
