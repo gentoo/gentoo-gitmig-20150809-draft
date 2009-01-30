@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xgammon
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/ChangeLog,v 1.11 2007/09/08 11:09:48 angelos Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/ChangeLog,v 1.12 2009/01/30 05:38:12 mr_bones_ Exp $
+
+  30 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> xgammon-0.98.ebuild:
+  look in . first to find db
 
   08 Sep 2007; Christoph Mende <angelos@gentoo.org> xgammon-0.98.ebuild:
   Stable on amd64 wrt bug #190570
