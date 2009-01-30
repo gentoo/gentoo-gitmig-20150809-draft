@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2307 2009/01/30 01:31:18 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2308 2009/01/30 02:34:14 loki_val Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
+  P.mask gtkgl-sharp
 
   30 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   Mask mcatalog for removal
