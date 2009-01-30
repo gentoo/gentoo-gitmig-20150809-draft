@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9447 2009/01/30 15:07:29 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9448 2009/01/30 16:49:52 tommy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Thomas Sachau <tommy@gentoo.org> (30 Jan 2009)
+# Masked as requested by mr_bones_@gentoo.org because of freenet not in the main tree
+# just unmask it for freenet install
+net-libs/NativeThread
 
 # Thomas Anderson <gentoofan23@gentoo.org> (30 Jan 2009)
 # Depends on security-vulnerable zoneminder. Leave masked
