@@ -1,0 +1,14 @@
+--- ./cowloop-3.0/src/cowloop.c.orig	2009-01-31 07:39:38.000000000 +1100
++++ ./cowloop-3.0/src/cowloop.c	2009-01-31 07:42:10.000000000 +1100
+@@ -923,7 +923,11 @@
+ ** in the queue
+ */
+ static void
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,25))
+ cowlo_request(request_queue_t *q)
++#else
++cowlo_request(struct request_queue *q)
++#endif
+ {
+ 	struct request		*req;
+ 	struct cowloop_device	*cowdev;

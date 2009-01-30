@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-3.0-r3.ebuild,v 1.1 2008/04/01 14:39:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-3.0-r3.ebuild,v 1.2 2009/01/30 21:04:05 dragonheart Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.atconsultancy.nl/cowloop/"
 SRC_URI="http://www.atconsultancy.nl/cowloop/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 DEPEND="virtual/libc
 	virtual/linux-sources"
@@ -36,6 +36,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-config_h.patch
 	epatch "${FILESDIR}"/${P}-vfs_statfs.patch
 	epatch "${FILESDIR}"/${P}-kern-2.6.23.patch
+	epatch "${FILESDIR}"/${P}-semaphore_h.patch
+	epatch "${FILESDIR}"/${P}-request_queue_t.patch
 }
 
 src_compile() {

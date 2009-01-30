@@ -1,0 +1,14 @@
+--- cowloop-3.0/src/cowloop.c.orig	2009-01-31 07:31:18.000000000 +1100
++++ cowloop-3.0/src/cowloop.c	2009-01-31 07:32:46.000000000 +1100
+@@ -250,7 +250,11 @@
+ #include <linux/stat.h>
+ #include <linux/vmalloc.h>
+ #include <linux/slab.h>
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,27))
+ #include <asm/semaphore.h>
++#else
++#include <linux/semaphore.h>
++#endif
+ #include <asm/uaccess.h>
+ #include <linux/proc_fs.h>
+ #include <linux/blkdev.h>
