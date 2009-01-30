@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/cavezofphear-0.5.ebuild,v 1.2 2007/04/09 21:53:38 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cavezofphear/cavezofphear-0.5.ebuild,v 1.3 2009/01/30 16:35:51 tupone Exp $
 
-inherit toolchain-funcs games
+EAPI=2
+inherit toolchain-funcs eutils games
 
 DESCRIPTION="A boulder dash / digger-like game for console using ncurses"
 HOMEPAGE="http://www.x86.no/cavezofphear/"
@@ -15,18 +16,12 @@ IUSE=""
 
 S=${WORKDIR}/${P/cavezof/}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	export CC=$(tc-getCC)
 	sed -i \
 		-e 's/cd src.*/$(MAKE) -C src phear/' Makefile \
 		|| die "sed Makefile failed"
-	sed -i \
-		-e "/^CC/ s:gcc:$(tc-getCC):" \
-		-e "/^CFLAGS/ s:=.*:= ${CFLAGS}:" \
-		-e "/^LDFLAGS/ s:$: ${LDFLAGS}:" \
-		src/Makefile \
-		|| die "sed src/Makefile failed"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 	sed -i \
 		-e "s:get_data_dir(.):\"${GAMES_DATADIR}/${PN}/\":" \
 		src/{chk.c,main.c,gplot.c} \
