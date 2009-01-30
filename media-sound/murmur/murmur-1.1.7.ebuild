@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.1.6.ebuild,v 1.4 2008/10/31 20:25:08 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.1.7.ebuild,v 1.1 2009/01/30 01:16:39 tgurr Exp $
 
 EAPI="2"
 
@@ -19,11 +19,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug +ice logrotate pch"
 
 RDEPEND="
-	|| ( ( x11-libs/qt-core:4[ssl]
-			x11-libs/qt-dbus:4
-			|| ( x11-libs/qt-sql:4[sqlite] x11-libs/qt-sql:4[mysql] ) )
-		=x11-libs/qt-4.3*:4[dbus,ssl,sqlite3]
-		=x11-libs/qt-4.3*:4[dbus,ssl,mysql] )
+	x11-libs/qt-core:4[ssl]
+	x11-libs/qt-dbus:4
+	|| ( x11-libs/qt-sql:4[sqlite] x11-libs/qt-sql:4[mysql] )
 	ice? ( dev-cpp/Ice dev-libs/boost )
 	logrotate? ( app-admin/logrotate )
 "

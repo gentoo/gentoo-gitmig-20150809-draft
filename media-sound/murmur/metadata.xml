@@ -9,9 +9,7 @@
 Mumble is a low-latency, high quality voice chat software primarily intended for use while gaming.
 </longdescription>
 <use>
-	<flag name='ice'>Use <pkg>dev-cpp/Ice</pkg> to enable remote control
-		capabilities</flag>
-	<flag name='logrotate'>Use <pkg>app-admin/logrotate</pkg> for rotating
-		logs</flag>
+	<flag name='ice'>Use <pkg>dev-cpp/Ice</pkg> to enable remote control capabilities.</flag>
+	<flag name='logrotate'>Use <pkg>app-admin/logrotate</pkg> for rotating logs.</flag>
 </use>
 </pkgmetadata>
