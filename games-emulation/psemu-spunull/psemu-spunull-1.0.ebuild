@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-spunull/psemu-spunull-1.0.ebuild,v 1.5 2007/04/09 17:28:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-spunull/psemu-spunull-1.0.ebuild,v 1.6 2009/01/30 06:55:07 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="PSEmu plugin to use a null sound driver"
@@ -15,14 +16,16 @@ IUSE=""
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	epatch "${FILESDIR}"/${PV}-makefile-cflags.patch
+	sed -i \
+		-e 's/gcc/$(CC)/' \
+		src/Makefile \
+		|| die "sed failed"
 }
 
 src_compile() {
-	cd src
-	emake OPTFLAGS="${CFLAGS}" || die "emake failed"
+	emake -C src OPTFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {

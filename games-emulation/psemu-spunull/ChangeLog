@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/psemu-spunull
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-spunull/ChangeLog,v 1.4 2007/02/09 07:47:47 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-spunull/ChangeLog,v 1.5 2009/01/30 06:55:07 mr_bones_ Exp $
+
+  30 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  psemu-spunull-1.0.ebuild:
+  EAPI=2; respect CC
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
