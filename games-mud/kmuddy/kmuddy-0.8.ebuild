@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.7 2008/12/18 22:01:50 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.8 2009/01/30 13:17:27 mr_bones_ Exp $
 
 inherit base eutils kde-functions autotools
 
@@ -26,6 +26,10 @@ PATCHES=(	"${FILESDIR}/${P}-nocrash.patch"
 src_unpack() {
 	base_src_unpack
 	cd "${S}"
+	sed -i \
+		-e '/kmuddyscriptingplugin_la_LDFLAGS/ s/$(LIB_QT)/$(LIB_QT) $(LIB_KIO)/' \
+		plugins/scripting/Makefile.am \
+		|| die "sed failed"
 	mv admin/acinclude.m4.in acinclude.m4
 	eautoreconf
 	find . -name Makefile.in -exec perl admin/am_edit ';'

@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/kmuddy
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.21 2008/12/18 22:03:09 loki_val Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.22 2009/01/30 13:17:27 mr_bones_ Exp $
+
+  30 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> kmuddy-0.8.ebuild:
+  kludge building with kde-base/kdelibs-3.5.9 (bug #256907)
 
   18 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/kmuddy-0.8-gcc43.patch, +files/kmuddy-0.8-libtool.patch,
