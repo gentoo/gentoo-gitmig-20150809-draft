@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.56 2009/01/30 16:43:32 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.57 2009/01/30 17:56:35 fmccor Exp $
+
+  30 Jan 2009; Ferris McCormick <fmccor@gentoo.org> tenshi-0.10-r3.ebuild:
+  Sparc stable, Bug #256858.
 
   30 Jan 2009; Heath Caldwell <hncaldwell@gentoo.org> tenshi-0.10-r3.ebuild:
   Added postinst warning about making sure that monitored files are readable
