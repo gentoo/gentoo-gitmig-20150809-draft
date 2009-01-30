@@ -1,6 +1,10 @@
 # ChangeLog for games-server/nwn-ded
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/ChangeLog,v 1.18 2008/02/21 18:37:51 calchan Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/ChangeLog,v 1.19 2009/01/30 07:35:06 mr_bones_ Exp $
+
+  30 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  nwn-ded-1.68-r1.ebuild:
+  restrict strip for bug #251941
 
 *nwn-ded-1.68-r1 (21 Feb 2008)
 
