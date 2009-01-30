@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/portpeek
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.16 2008/12/30 19:15:09 mpagano Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.17 2009/01/30 15:25:51 mpagano Exp $
+
+*portpeek-1.7.0 (30 Jan 2009)
+
+  30 Jan 2009; Mike Pagano <mpagano@gentoo.org> +portpeek-1.7.0.ebuild:
+  Version bump to fix issue where unmasked packages were not displaying as
+  removable.
 
 *portpeek-1.5.7.2 (30 Dec 2008)
 
