@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.15 2009/01/29 19:59:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.16 2009/01/30 17:43:44 aballier Exp $
+
+  30 Jan 2009; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  usemask gvfs[bluetooth] as it requires bluez
 
   29 Jan 2009; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   usemask qt-webkit dependant useflags until bug #256836 is fixed
