@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.8 2008/09/16 22:03:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.9 2009/01/30 08:26:09 tove Exp $
 
-inherit perl-module
+inherit multilib perl-module
 
 MY_P="Gimp-${PV/_/}"
 S="${WORKDIR}/${PN}"
@@ -36,5 +36,5 @@ src_unpack() {
 
 src_install() {
 	perl-module_src_install
-	rm "${D}/usr/lib/gimp/2.0/plug-ins/redeye"
+	rm "${D}/usr/$(get_libdir)/gimp/2.0/plug-ins/redeye"
 }
