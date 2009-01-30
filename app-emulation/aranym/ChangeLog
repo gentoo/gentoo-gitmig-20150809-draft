@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/aranym
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.14 2009/01/30 00:21:06 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.15 2009/01/30 03:30:39 dirtyepic Exp $
+
+  30 Jan 2009; Ryan Hill <dirtyepic@gentoo.org> ChangeLog:
+  fix header in ChangeLog
 
 *aranym-0.9.7_beta (30 Jan 2009)
 
@@ -9,10 +12,6 @@
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing dholm from metadata.xml as per #24623. Assigning to maintainer-needed.
-
-  14 Nov 2007; Robin H. Johnson <robbat2@gentoo.org>
-  aranym-0.9.4_beta2.ebuild:
-  Fix $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/ChangeLog,v 1.14 2009/01/30 00:21:06 dirtyepic Exp $ string.
 
   15 Mar 2007; <dholm@gentoo.org> -aranym-0.8.6_beta.ebuild,
   -aranym-0.9.0.ebuild:
