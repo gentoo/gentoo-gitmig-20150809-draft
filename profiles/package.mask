@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9442 2009/01/29 22:17:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9443 2009/01/30 01:23:12 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1043,11 +1043,6 @@ virtual/libffi
 # Peter Alfredsen <loki_val@gentoo.org> (04 Jun 2008)
 # o Fails its own tests in horrendous ways (buuh!)
 =dev-libs/xmlrpc-c-1.15*
-
-# Jurek Bartuszek <jurek@gentoo.org> (01 Jun 2008)
-# Not used by anything anymore
-# Masked for removal in 30 days
-dev-dotnet/jscall-sharp
 
 # Rémi Cardona <remi@gentoo.org> (27 Mai 2008)
 # mildly broken, see bug #156583
