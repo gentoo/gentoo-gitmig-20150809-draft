@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/superkaramba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.88 2009/01/29 13:24:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.89 2009/01/30 10:57:26 scarabeus Exp $
+
+  30 Jan 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  superkaramba-4.2.0.ebuild:
+  Remove libXrender dep. Works without same as fine. Per bug #256851.
 
   29 Jan 2009; Tomas Chvatal <scarabeus@gentoo.org>
   superkaramba-4.2.0.ebuild:
