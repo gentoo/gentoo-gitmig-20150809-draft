@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.10 2009/01/30 01:16:39 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.11 2009/01/30 01:23:09 tgurr Exp $
+
+  30 Jan 2009; Timo Gurr <tgurr@gentoo.org> murmur-1.1.7.ebuild:
+  Add suggested pch change by Atman Sense, bug #256852.
 
 *murmur-1.1.7 (30 Jan 2009)
 

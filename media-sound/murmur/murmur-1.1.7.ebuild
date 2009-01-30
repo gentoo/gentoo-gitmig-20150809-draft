@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.1.7.ebuild,v 1.1 2009/01/30 01:16:39 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.1.7.ebuild,v 1.2 2009/01/30 01:23:09 tgurr Exp $
 
 EAPI="2"
 
@@ -44,9 +44,10 @@ src_prepare() {
 }
 
 src_configure() {
+	local conf_add
 	use debug && conf_add="${conf_add} symbols debug" || conf_add="${conf_add} release"
 	use ice || conf_add="${conf_add} no-ice"
-	use pch || echo "CONFIG-=precompile_header" >> src/mumble.pri
+	use pch || conf_add="${conf_add} no-pch"
 
 	eqmake4 main.pro -recursive \
 		CONFIG+="${conf_add} no-client no-bundled-speex" \
