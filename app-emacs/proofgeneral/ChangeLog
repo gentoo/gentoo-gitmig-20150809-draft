@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/proofgeneral
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.24 2008/12/06 17:23:50 fauli Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.25 2009/01/30 06:47:52 ulm Exp $
+
+*proofgeneral-3.7.1 (30 Jan 2009)
+
+  30 Jan 2009; Ulrich Mueller <ulm@gentoo.org> proofgeneral-3.7.ebuild,
+  +proofgeneral-3.7.1.ebuild:
+  Version bump. Remove missing file from dodoc arguments, bug 256683.
 
   06 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
   -files/proofgeneral-3.5_isabelle-non-interactive.patch,

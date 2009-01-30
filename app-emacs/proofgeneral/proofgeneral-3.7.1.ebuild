@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.7.ebuild,v 1.5 2009/01/30 06:47:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.7.1.ebuild,v 1.1 2009/01/30 06:47:52 ulm Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ SRC_URI="http://proofgeneral.inf.ed.ac.uk/releases/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -26,7 +26,7 @@ src_install() {
 
 	dohtml doc/*.html doc/*.jpg
 	doinfo doc/*.info*
-	dodoc AUTHORS BUGS CHANGES COMPATIBILITY FAQ INSTALL README REGISTER
+	dodoc AUTHORS BUGS CHANGES COMPATIBILITY FAQ FUTURE INSTALL README REGISTER
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" ${MY_PN} \
 		|| die "elisp-site-file-install failed"
