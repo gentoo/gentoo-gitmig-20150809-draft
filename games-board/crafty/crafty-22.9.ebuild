@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-22.8.ebuild,v 1.2 2009/01/13 01:43:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-22.9.ebuild,v 1.1 2009/01/30 06:40:38 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs games
 
@@ -37,7 +37,7 @@ src_compile() {
 
 	if ! use no-opts ; then
 		if [[ $(tc-getCC) = icc ]] ; then
-			makeopts="${makeopts} CC=icc CXX=gcc asm=X86.o"
+			makeopts="${makeopts} asm=X86.o"
 			append-flags -D_REENTRANT -tpp6 \
 				-DCOMPACT_ATTACKS -DUSE_ATTACK_FUNCTIONS \
 				-DUSE_ASSEMBLY_A -DUSE_ASSEMBLY_B -DFAST \
@@ -52,13 +52,11 @@ src_compile() {
 					-DFAST -DSMP -DCPUS=4 -DCLONE -DDGT
 				append-flags -fno-gcse \
 					-fomit-frame-pointer -mpreferred-stack-boundary=2
-				makeopts="${makeopts} CC=gcc CXX=g++"
 			elif [[ "${CHOST}" == "x86_64-pc-linux-gnu" ]] ; then
 				append-flags -DCOMPACT_ATTACKS -DUSE_ATTACK_FUNCTIONS \
 					-DUSE_ASSEMBLY_A -DUSE_ASSEMBLY_B \
 					-DFAST -DSMP -DCPUS=4 -DCLONE -DDGT
 				append-flags -fomit-frame-pointer
-				makeopts="${makeopts} CC=gcc CXX=g++"
 			else
 				: # everything else :)
 			fi
