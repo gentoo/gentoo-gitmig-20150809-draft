@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gio
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.10 2008/12/21 17:36:30 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.11 2009/01/30 19:20:18 aballier Exp $
+
+  30 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  gst-plugins-gio-0.10.21-r1.ebuild:
+  keyword ~x86-fbsd
 
 *gst-plugins-gio-0.10.21-r1 (21 Dec 2008)
 
