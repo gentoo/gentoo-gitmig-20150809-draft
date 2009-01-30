@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.8.ebuild,v 1.1 2008/12/15 09:05:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.8.ebuild,v 1.2 2009/01/30 18:26:59 tove Exp $
 
 EAPI=1
 
@@ -59,8 +59,12 @@ MAKEOPTS="${MAKEOPTS} -j1"
 pkg_setup() {
 	local diemessage=""
 	local flags="deprecated regex"
+	if use hbci && \
+		! built_with_use net-libs/aqbanking qt3 ; then
+		diemessage="net-libs/aqbanking must be built with qt3 use flag. "
+	fi
 	if ! built_with_use --missing true dev-scheme/guile ${flags} ; then
-		diemessage="dev-scheme/guile must be built with \"${flags}\" use flags. "
+		diemessage="${diemessage}dev-scheme/guile must be built with \"${flags}\" use flags. "
 	fi
 	if ! built_with_use gnome-extra/libgsf gnome ; then
 		diemessage="${diemessage}gnome-extra/libgsf must be built with gnome use flag. "
