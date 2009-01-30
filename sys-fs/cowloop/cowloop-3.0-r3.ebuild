@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-3.0-r3.ebuild,v 1.2 2009/01/30 21:04:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-3.0-r3.ebuild,v 1.3 2009/01/30 21:13:43 dragonheart Exp $
 
+EAPI=2
 inherit linux-mod toolchain-funcs
 
 DESCRIPTION="A copy-on-write loop driver (block device) to be used on top of any other block driver"
@@ -11,8 +12,8 @@ SRC_URI="http://www.atconsultancy.nl/cowloop/packages/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
-DEPEND="virtual/libc
-	virtual/linux-sources"
+DEPEND=""
+RDEPEND=""
 
 S=${WORKDIR}/${P}/src
 MODULE_NAMES="cowloop(fs:)"
@@ -30,8 +31,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-cflags.patch
 	epatch "${FILESDIR}"/${P}-config_h.patch
 	epatch "${FILESDIR}"/${P}-vfs_statfs.patch
