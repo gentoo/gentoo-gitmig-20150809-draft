@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/mythzoneminder
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythzoneminder/ChangeLog,v 1.1 2009/01/30 15:12:36 gentoofan23 Exp $
+
+*mythzoneminder-0.21_p17948 (30 Jan 2009)
+
+  30 Jan 2009; Thomas Anderson <gentoofan23@gentoo.org> +metadata.xml,
+  +mythzoneminder-0.21_p17948.ebuild:
+  Initial import, ebuild by Thomas Anderson <gentoofan23@gentoo.org> for bug
+  #225131
+
