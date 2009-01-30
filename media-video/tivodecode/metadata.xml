@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>media-video</herd>
+<longdescription lang="en">
+This software converts a .TiVo file (produced by the TiVoToGo functionality on recent TiVo software releases, or from files downloaded through the web interface) to a normal MPEG file.
+</longdescription>
+</pkgmetadata>
