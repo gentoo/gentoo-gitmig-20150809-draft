@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/khotkeys-4.2.0.ebuild,v 1.1 2009/01/27 17:15:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/khotkeys-4.2.0.ebuild,v 1.2 2009/01/30 15:30:02 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -19,4 +19,3 @@ KMEXTRACTONLY="libs/kworkspace/"
 src_compile() {
 	MAKEOPTS="${MAKEOPTS} -j1" kde4-meta_src_compile
 }
-

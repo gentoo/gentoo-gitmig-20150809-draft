@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.2.0.ebuild,v 1.1 2009/01/27 16:53:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.2.0.ebuild,v 1.2 2009/01/30 15:29:07 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -58,7 +58,7 @@ src_configure() {
 	done
 	_libdirs=${_libdirs#:}
 
-	# Sort the LDFLAGS out if necessary	
+	# Sort the LDFLAGS out if necessary
 	if use kdeprefix; then
 		sed -e "s#@REPLACE_LDFLAGS@#export LDFLAGS=${_libdirs}:\$LDFLAGS#" \
 			-i "${S}/startkde.cmake" || die "Sed for LDPATH failed."

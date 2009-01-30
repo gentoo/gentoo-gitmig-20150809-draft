@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/libtaskmanager-4.2.0.ebuild,v 1.1 2009/01/27 18:15:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/libtaskmanager-4.2.0.ebuild,v 1.2 2009/01/30 15:30:21 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -22,4 +22,3 @@ DEPEND="${COMMONDEPEND}
 RDEPEND="${COMMONDEPEND}"
 
 KMSAVELIBS="true"
-
