@@ -3,12 +3,13 @@
 <pkgmetadata>
 <herd>voip</herd>
 <maintainer>
-<email>drizzt@gentoo.org</email>
+<email>tgurr@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
 Mumble is a low-latency, high quality voice chat software primarily intended for use while gaming.
 </longdescription>
 <use>
-	<flag name='speech'>Enables text-to-speech support in Mumble.</flag>
+	<flag name='g15'>Enable support for the Logitech G15 LCD (and compatible devices).</flag>
+	<flag name='speech'>Enable text-to-speech support in Mumble.</flag>
 </use>
 </pkgmetadata>
