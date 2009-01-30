@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.300 2009/01/25 22:17:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.301 2009/01/30 15:35:30 carlo Exp $
+
+*amarok-1.4.10_p20090130-r1 (30 Jan 2009)
+*amarok-1.4.10_p20090130 (30 Jan 2009)
+
+  30 Jan 2009; Carsten Lohrke <carlo@gentoo.org>
+  +amarok-1.4.10_p20090130.ebuild, +amarok-1.4.10_p20090130-r1.ebuild:
+  Sync to stable branch, fixing bug #256389. Desktop entry fixes.
 
   25 Jan 2009; <jokey@gentoo.org> amarok-2.0.1.1.ebuild:
   Revert keyword per #gentoo-dev talk
