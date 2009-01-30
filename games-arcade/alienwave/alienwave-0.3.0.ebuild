@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.10 2009/01/29 01:41:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.11 2009/01/30 15:09:45 tupone Exp $
 
 EAPI=2
 inherit games
 
 DESCRIPTION="An ncurses-based Xenon clone"
-HOMEPAGE="http://www.cs.unibo.it/~pira/alienwave/aw.html"
-SRC_URI="http://www.cs.unibo.it/~pira/alienwave/${P}.tar.gz"
+HOMEPAGE="http://http://www.alessandropira.org/alienwave/aw.html"
+SRC_URI="http://www.alessandropira.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,11 +19,7 @@ DEPEND="sys-libs/ncurses"
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	sed -i \
-		-e "s/-O2/${CFLAGS}/" \
-		-e '/strip/d' \
-		-e '/^CC/d' \
-		Makefile || die "sed failed"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_install() {

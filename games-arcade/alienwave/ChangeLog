@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/alienwave
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/ChangeLog,v 1.9 2009/01/29 01:41:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/ChangeLog,v 1.10 2009/01/30 15:09:45 tupone Exp $
+
+  30 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/alienwave-0.3.0-gentoo.patch, alienwave-0.3.0.ebuild:
+  Fix --as-needed bug #247285 by flameeyes@gentoo.org
 
   29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   alienwave-0.3.0.ebuild:
