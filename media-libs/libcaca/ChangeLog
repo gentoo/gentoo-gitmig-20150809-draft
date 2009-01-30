@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcaca
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.70 2008/12/02 23:21:33 ranger Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.71 2009/01/30 15:07:01 aballier Exp $
+
+  30 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  -files/libcaca-0.99_beta4-deoptimise.patch, -libcaca-0.99_beta11.ebuild:
+  remove old
 
   02 Dec 2008; Brent Baude <ranger@gentoo.org> libcaca-0.99_beta14.ebuild:
   stable ppc64, bug 245561
