@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.72 2008/09/29 11:40:28 phosphan Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.73 2009/01/30 12:39:26 phosphan Exp $
+
+  30 Jan 2009; Patrick Kursawe <phosphan@gentoo.org> -xsane-0.994.ebuild:
+  Removed obsolete version.
 
 *xsane-0.996 (29 Sep 2008)
 
