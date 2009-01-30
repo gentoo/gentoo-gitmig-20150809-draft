@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xmess
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.61 2008/03/13 20:25:04 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.62 2009/01/30 14:45:10 mr_bones_ Exp $
+
+  30 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> xmess-0.106.ebuild:
+  not parallel safe in the build
 
   13 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org> xmess-0.83.1.ebuild:
   QA cleanup: Fix quoting (again).

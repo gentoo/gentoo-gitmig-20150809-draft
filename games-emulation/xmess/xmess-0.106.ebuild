@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.8 2007/04/09 17:39:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.9 2009/01/30 14:45:10 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -149,11 +149,11 @@ EOF
 src_compile() {
 	local disp=0
 	if use sdl ; then
-		emake DISPLAY_METHOD=SDL || die "emake failed (SDL)"
+		emake -j1 DISPLAY_METHOD=SDL || die "emake failed (SDL)"
 		disp=1
 	fi
 	if use svga ; then
-		emake DISPLAY_METHOD=svgalib || die "emake failed (svgalib)"
+		emake -j1 DISPLAY_METHOD=svgalib || die "emake failed (svgalib)"
 		disp=1
 	fi
 	if use ggi ; then
@@ -162,7 +162,7 @@ src_compile() {
 		ewarn "GGI support is currently (${PV}) broken :("
 	fi
 	if  [[ ${disp} -eq 0 ]] || use opengl || use X || use dga || use xv ; then
-		emake DISPLAY_METHOD=x11 || die "emake failed (x11)"
+		emake -j1 DISPLAY_METHOD=x11 || die "emake failed (x11)"
 	fi
 }
 
