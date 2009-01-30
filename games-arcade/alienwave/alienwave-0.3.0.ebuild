@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.11 2009/01/30 15:09:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.12 2009/01/30 15:23:07 tupone Exp $
 
 EAPI=2
-inherit games
+inherit eutils games
 
 DESCRIPTION="An ncurses-based Xenon clone"
 HOMEPAGE="http://http://www.alessandropira.org/alienwave/aw.html"
