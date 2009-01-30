@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/hatari
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.22 2009/01/13 01:28:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.23 2009/01/30 00:43:40 mr_bones_ Exp $
+
+*hatari-1.2.0 (30 Jan 2009)
+
+  30 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> +hatari-1.2.0.ebuild:
+  version bump
 
 *hatari-1.1.0 (13 Jan 2009)
 
