@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r1.ebuild,v 1.1 2009/01/29 06:52:45 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r1.ebuild,v 1.2 2009/01/30 15:30:39 mr_bones_ Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -85,7 +85,6 @@ PATCHES="${FILESDIR}/${PN}-bsdxml.patch
 	${FILESDIR}/${PN}-new_as.patch
 	${FILESDIR}/${PN}-7.0-CVE-2008-1391.patch"
 
-
 # Here we disable and remove source which we don't need or want
 # In order:
 # - ncurses stuff
@@ -126,7 +125,7 @@ src_unpack() {
 		rm "${x}".bak
 	done
 
-	# This one is here because it also 
+	# This one is here because it also
 	# patches "${WORKDIR}/include"
 	cd "${WORKDIR}"
 	epatch ${FILESDIR}/${PN}-7.1-strndup_bport.patch
