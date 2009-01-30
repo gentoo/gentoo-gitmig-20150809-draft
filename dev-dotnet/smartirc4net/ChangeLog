@@ -1,0 +1,10 @@
+# ChangeLog for dev-dotnet/smartirc4net
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/smartirc4net/ChangeLog,v 1.1 2009/01/30 23:59:38 loki_val Exp $
+
+*smartirc4net-0.4.5.1 (30 Jan 2009)
+
+  30 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> +metadata.xml,
+  +smartirc4net-0.4.5.1.ebuild:
+  Add smartirc4net, ebuild by me.
+
