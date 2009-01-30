@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xmame
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.71 2007/03/12 14:05:45 genone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.72 2009/01/30 14:51:21 mr_bones_ Exp $
+
+  30 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.106.ebuild:
+  not parallel build safe
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> xmame-0.106.ebuild:
   Replacing einfo with elog
