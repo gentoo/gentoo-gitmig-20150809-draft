@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.21 2009/01/29 18:51:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.22 2009/01/30 22:15:33 yngwin Exp $
+
+*qt-gui-4.4.2-r2 (30 Jan 2009)
+
+  30 Jan 2009; Ben de Groot <yngwin@gentoo.org>
+  +files/0248-fix-qwidget-scroll-slowness.diff,
+  +files/0256-fix-recursive-backingstore-sync-crash.diff,
+  +files/0262-fix-treeview-animation-crash.diff,
+  +files/0263-fix-fontconfig-handling.diff,
+  +files/0265-fix-formlayoutcrash.diff, +qt-gui-4.4.2-r2.ebuild:
+  Add bugfix patches from KDE's qt-copy
 
   29 Jan 2009; Alexis Ballier <aballier@gentoo.org> qt-gui-4.4.2-r1.ebuild:
   keyword ~x86-fbsd
