@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/wsmake
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/wsmake/ChangeLog,v 1.5 2008/04/21 18:21:48 phreak Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/wsmake/ChangeLog,v 1.6 2009/01/30 01:29:41 dirtyepic Exp $
+
+  30 Jan 2009; Ryan Hill <dirtyepic@gentoo.org>
+  +files/wsmake-0.6.4-gcc43.patch, wsmake-0.6.4.ebuild:
+  Fix building with GCC-4.3, bug #251745. Patch contributed by mipas.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata

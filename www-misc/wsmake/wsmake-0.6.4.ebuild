@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/wsmake/wsmake-0.6.4.ebuild,v 1.5 2007/07/15 05:58:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/wsmake/wsmake-0.6.4.ebuild,v 1.6 2009/01/30 01:29:41 dirtyepic Exp $
 
 inherit eutils
 
@@ -15,8 +15,8 @@ IUSE=""
 
 src_unpack () {
 	unpack ${A} && cd "${S}"
-	#Apply patch to allow compiling
-	epatch "${FILESDIR}/${P}-bv.diff" || die "epatch failed."
+	epatch "${FILESDIR}"/${P}-bv.diff
+	epatch "${FILESDIR}"/${P}-gcc43.patch	# 251745
 }
 
 src_compile () {
