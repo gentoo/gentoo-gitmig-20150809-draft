@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.7.1_pre20080830.ebuild,v 1.3 2008/10/04 16:55:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.8.ebuild,v 1.1 2009/01/30 21:41:16 swegener Exp $
 
 inherit linux-info eutils
 
@@ -19,7 +19,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="sqlite"
 
 DEPEND=">=dev-libs/elfutils-0.122
@@ -41,7 +41,10 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_enable sqlite) || die "econf failed"
+	econf \
+		--docdir=/usr/share/doc/${PF} \
+		$(use_enable sqlite) \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
