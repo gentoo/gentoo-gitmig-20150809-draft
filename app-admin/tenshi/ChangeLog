@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/tenshi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.55 2008/12/17 20:34:56 hncaldwell Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.56 2009/01/30 16:43:32 hncaldwell Exp $
+
+  30 Jan 2009; Heath Caldwell <hncaldwell@gentoo.org> tenshi-0.10-r3.ebuild:
+  Added postinst warning about making sure that monitored files are readable
+  by tenshi.
 
   17 Dec 2008; Heath Caldwell <hncaldwell@gentoo.org>
   files/tenshi-0.10-warn-logfile.patch, tenshi-0.10-r3.ebuild:

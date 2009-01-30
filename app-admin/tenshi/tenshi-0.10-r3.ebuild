@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.10-r3.ebuild,v 1.2 2008/12/17 20:34:56 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/tenshi-0.10-r3.ebuild,v 1.3 2009/01/30 16:43:32 hncaldwell Exp $
 
 inherit eutils
 
@@ -49,4 +49,11 @@ src_install() {
 	doman tenshi.8
 	newinitd tenshi.gentoo-init tenshi
 	keepdir /var/lib/tenshi
+}
+
+pkg_postinst() {
+	ewarn "The sample config installed to ${ROOT}etc/tenshi/tenshi.conf"
+	ewarn "monitors /var/log/messages which, by default, can not be read"
+	ewarn "by the tenshi user.  Make sure that the tenshi user has read"
+	ewarn "permission on all the files that you want tenshi to monitor."
 }
