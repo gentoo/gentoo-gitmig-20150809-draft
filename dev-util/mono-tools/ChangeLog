@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.48 2009/01/18 17:46:30 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.49 2009/01/31 22:44:55 loki_val Exp $
+
+  31 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> mono-tools-2.2.ebuild:
+  Add dev-dotnet/gluezilla to xulrunner deps per bug 257087. Thanks to
+  Andrea Pinazzi <follettoonip@gmail.com> for the report.
 
 *mono-tools-2.2 (18 Jan 2009)
 

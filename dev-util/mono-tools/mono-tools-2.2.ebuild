@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.2.ebuild,v 1.1 2009/01/18 17:46:30 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.2.ebuild,v 1.2 2009/01/31 22:44:55 loki_val Exp $
 
 EAPI=2
 
@@ -20,7 +20,10 @@ RDEPEND="=virtual/monodoc-${GO_MONO_REL_PV}*
 	>=dev-dotnet/gconf-sharp-2
 	>=dev-dotnet/gtkhtml-sharp-2
 	webkit? ( dev-dotnet/webkit-sharp )
-	xulrunner? ( >=dev-dotnet/gecko-sharp-0.13 )"
+	xulrunner? (
+		>=dev-dotnet/gecko-sharp-0.13
+		=dev-dotnet/gluezilla-${PV}
+	)"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.19"
