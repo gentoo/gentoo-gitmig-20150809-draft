@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/system-config-base
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/system-config-base/ChangeLog,v 1.7 2008/03/19 07:28:42 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/system-config-base/ChangeLog,v 1.8 2009/01/31 07:48:12 dberkholz Exp $
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership; reassign to maintainer-needed.
 
   19 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   system-config-base-1-r1.ebuild:
