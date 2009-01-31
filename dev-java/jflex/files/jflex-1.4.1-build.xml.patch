@@ -1,5 +1,5 @@
---- build.xml	2007-05-21 17:01:26.000000000 +0200
-+++ build-neww.xml	2007-05-21 17:02:02.000000000 +0200
+--- build.xml	2009-01-31 16:14:57.000000000 +0200
++++ build.xml.fixed	2009-01-31 16:17:14.000000000 +0200
 @@ -35,7 +35,7 @@
  
    <target name="declare" description="define tasks for jflex and cup">
@@ -18,3 +18,13 @@
    </target>
  
    <target name="copy" description="copy resources to build dir">
+@@ -79,7 +79,8 @@
+ 
+   <target name="jar" depends="compile,copy" description="make JFlex.jar">
+     <jar basedir="../lib" 
+-    	 includes="JFlex/**,java_cup/**,skeleton" 
++    	 includes="JFlex/**,java_cup/**,skeleton"
++    	 excludes="JFlex/tests/*" 
+     	 jarfile="../lib/JFlex.jar" 
+     	 manifest="manifest"/>
+   </target>

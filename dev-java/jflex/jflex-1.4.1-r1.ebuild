@@ -1,10 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/jflex-1.4.1.ebuild,v 1.2 2008/01/10 22:34:32 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/jflex-1.4.1-r1.ebuild,v 1.1 2009/01/31 14:27:08 serkan Exp $
 
 # Currently, this package uses an included JFlex.jar file to bootstrap.
 # Upstream was contacted and this bootstrap is really needed. The only way to avoid it would be to use a supplied pre-compiled .scanner file.
 
+EAPI="1"
 JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2
@@ -18,11 +19,11 @@ KEYWORDS="~x86 ~amd64"
 RDEPEND=">=virtual/jre-1.4
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 	>=dev-java/ant-core-1.7.0
-	>=dev-java/javacup-0.11a_beta20060608"
+	>=dev-java/javacup-0.11a_beta20060608:0"
 
 DEPEND=">=virtual/jdk-1.4
-	=dev-java/junit-3.8*
-	>=dev-java/javacup-0.11a_beta20060608"
+	dev-java/junit:0
+	>=dev-java/javacup-0.11a_beta20060608:0"
 
 IUSE="doc source vim-syntax"
 
