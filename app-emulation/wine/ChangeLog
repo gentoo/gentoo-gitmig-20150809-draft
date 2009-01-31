@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.246 2009/01/30 20:34:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.247 2009/01/31 15:25:51 vapier Exp $
+
+  31 Jan 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.13.ebuild,
+  wine-9999.ebuild:
+  Tweak gcc-4.4 dep a bit #256274.
 
 *wine-1.1.14 (30 Jan 2009)
 
