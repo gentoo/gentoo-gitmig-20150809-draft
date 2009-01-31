@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.60 2009/01/28 14:57:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.61 2009/01/31 14:34:36 zzam Exp $
+
+  31 Jan 2009; Matthias Schwarzott <zzam@gentoo.org> openrc-0.4.2.ebuild,
+  openrc-9999.ebuild:
+  Sync 0.4.2 and 9999 ebuild. This does not change anything for 0.4.2
+  ebuild.
 
   28 Jan 2009; Matthias Schwarzott <zzam@gentoo.org> openrc-9999.ebuild:
   Use specialized svnversion command to get commit version.

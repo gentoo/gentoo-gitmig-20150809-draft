@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.44 2009/01/28 14:57:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.45 2009/01/31 14:34:36 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -173,6 +173,9 @@ pkg_preinst() {
 		fi
 	done
 
+	# termencoding was added in 0.2.1 and needed in boot
+	has_version ">=sys-apps/openrc-0.2.1" || add_boot_init termencoding
+
 	# openrc-0.4.0 no longer loads the udev addon
 	enable_udev=0
 	if [[ ! -e "${ROOT}"/etc/runlevels/sysinit/udev ]] && \
@@ -280,11 +283,13 @@ pkg_postinst() {
 	else
 		if [[ ! -e ${ROOT}/etc/runlevels/sysinit/devfs ]] ; then
 			mkdir -p "${ROOT}"/etc/runlevels/sysinit
-			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/sysinit/* "${ROOT}"/etc/runlevels/sysinit
+			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/sysinit/* \
+				"${ROOT}"/etc/runlevels/sysinit
 		fi
 		if [[ ! -e ${ROOT}/etc/runlevels/shutdown/mount-ro ]] ; then
 			mkdir -p "${ROOT}"/etc/runlevels/shutdown
-			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/shutdown/* "${ROOT}"/etc/runlevels/shutdown
+			cp -RPp "${ROOT}"/usr/share/${PN}/runlevels/shutdown/* \
+				"${ROOT}"/etc/runlevels/shutdown
 		fi
 	fi
 
