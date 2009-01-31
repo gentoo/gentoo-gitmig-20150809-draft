@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.11 2008/07/27 16:04:31 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/ChangeLog,v 1.12 2009/01/31 18:30:09 serkan Exp $
+
+  31 Jan 2009; Serkan Kaba <serkan@gentoo.org> ChangeLog:
+  Version bump and add missing dependency to ant-core.
 
   27 Jul 2008; Petteri Räty <betelgeuse@gentoo.org> -xmlc-2.2.5.ebuild,
   -xmlc-2.2.5-r1.ebuild:
