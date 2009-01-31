@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.141 2009/01/31 22:12:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.142 2009/01/31 22:13:56 vapier Exp $
+
+  31 Jan 2009; Mike Frysinger <vapier@gentoo.org> files/nfs.initd:
+  Add /proc/fs/nfs -> /proc/fs/nfsd fix again.
 
   31 Jan 2009; Mike Frysinger <vapier@gentoo.org> files/nfs.initd:
   Restart rpc.idmapd if nfsd is a module #220747 by Jochen Radmacher.

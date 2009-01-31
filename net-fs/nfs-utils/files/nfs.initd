@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.15 2009/01/31 22:12:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.16 2009/01/31 22:13:56 vapier Exp $
 
 opts="reload"
 
@@ -55,9 +55,9 @@ mount_nfsd() {
 
 	# This is the new "kernel 2.6 way" to handle the exports file
 	if grep -qs nfsd /proc/filesystems ; then
-		if ! grep -qs "nfsd /proc/fs/nfs" /proc/mounts ; then
+		if ! grep -qs "nfsd /proc/fs/nfsd" /proc/mounts ; then
 			ebegin "Mounting nfsd filesystem in /proc"
-			mount -t nfsd -o nodev,noexec,nosuid nfsd /proc/fs/nfs
+			mount -t nfsd -o nodev,noexec,nosuid nfsd /proc/fs/nfsd
 			eend $?
 		fi
 	fi
