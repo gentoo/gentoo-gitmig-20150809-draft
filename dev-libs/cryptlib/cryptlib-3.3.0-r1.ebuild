@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.3.0-r1.ebuild,v 1.1 2007/02/05 08:53:35 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/cryptlib-3.3.0-r1.ebuild,v 1.2 2009/01/31 00:20:57 dragonheart Exp $
 
 inherit eutils multilib flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.franken.de/pub/crypt/cryptlib/cl${MY_PV}.zip
 	doc? ( mirror://gentoo/${P}-manual.pdf.bz2 )"
 
 LICENSE="Sleepycat"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="doc odbc"
 

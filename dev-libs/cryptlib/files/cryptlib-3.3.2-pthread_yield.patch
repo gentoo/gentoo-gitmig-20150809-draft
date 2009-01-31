@@ -1,0 +1,11 @@
+--- kernel/thread.h
++++ kernel/thread.h
+@@ -1712,7 +1712,7 @@
+ 	 underlying process context should yield the associated thread */
+   #define THREAD_YIELD()		yield()
+ #else
+-  #ifdef __linux__
++  #if defined(__linux__) && !defined(__USE_GNU)
+ 	void pthread_yield( void );
+   #endif /* Present but not prototyped unless GNU extensions are enabled */
+   #define  THREAD_YIELD()		pthread_yield()
