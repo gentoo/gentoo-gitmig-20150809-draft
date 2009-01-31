@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmidecode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.24 2009/01/02 21:04:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.25 2009/01/31 19:37:31 solar Exp $
+
+  31 Jan 2009; <solar@gentoo.org> dmidecode-2.10.ebuild:
+  - keyword ~arm
 
 *dmidecode-2.10 (02 Jan 2009)
 
