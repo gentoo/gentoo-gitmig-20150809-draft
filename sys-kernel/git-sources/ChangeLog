@@ -1,6 +1,25 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.444 2009/01/28 14:57:55 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.445 2009/01/31 02:03:55 mpagano Exp $
+
+*git-sources-2.6.29_rc3-r2 (31 Jan 2009)
+
+  31 Jan 2009; Mike Pagano <mpagano@gentoo.org>
+  -git-sources-2.6.29_rc1.ebuild, -git-sources-2.6.29_rc1-r1.ebuild,
+  -git-sources-2.6.29_rc1-r2.ebuild, -git-sources-2.6.29_rc1-r3.ebuild,
+  -git-sources-2.6.29_rc1-r4.ebuild, -git-sources-2.6.29_rc1-r5.ebuild,
+  -git-sources-2.6.29_rc1-r6.ebuild, +git-sources-2.6.29_rc3-r1.ebuild,
+  +git-sources-2.6.29_rc3-r2.ebuild:
+  Version bump
+
+*git-sources-2.6.29_rc3-r1 (30 Jan 2009)
+
+  30 Jan 2009; Mike Pagano <mpagano@gentoo.org>
+  -git-sources-2.6.29_rc1.ebuild, -git-sources-2.6.29_rc1-r1.ebuild,
+  -git-sources-2.6.29_rc1-r2.ebuild, -git-sources-2.6.29_rc1-r3.ebuild,
+  -git-sources-2.6.29_rc1-r4.ebuild, -git-sources-2.6.29_rc1-r5.ebuild,
+  -git-sources-2.6.29_rc1-r6.ebuild, +git-sources-2.6.29_rc3-r1.ebuild:
+  Version bump and old version cleanup
 
 *git-sources-2.6.29_rc2-r4 (28 Jan 2009)
 
