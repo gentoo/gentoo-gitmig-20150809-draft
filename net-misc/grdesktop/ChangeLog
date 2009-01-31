@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/grdesktop
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.25 2008/01/12 13:22:18 leio Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.26 2009/01/31 17:40:05 eva Exp $
+
+  31 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org> grdesktop-0.23.ebuild:
+  Fix locale installation, bug #253463.
 
   12 Jan 2008; Mart Raudsepp <leio@gentoo.org>
   -files/0010_all_0.22-remove-double-makefile-syntax.patch,

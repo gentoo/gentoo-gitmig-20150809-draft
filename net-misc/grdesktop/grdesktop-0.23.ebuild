@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.23.ebuild,v 1.10 2008/01/12 13:22:18 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.23.ebuild,v 1.11 2009/01/31 17:40:05 eva Exp $
 
 inherit eutils gnome2
 
@@ -25,14 +25,15 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} --with-keymap-path=/usr/share/rdesktop/keymaps/"
 
-docs="AUTHORS ChangeLog NEWS README TODO"
+DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	gnome2_src_unpack
 
 	# Correct icon path. See bug #50295.
-	sed -i -e 's:Icon=.*:Icon=grdesktop/icon.png:' grdesktop.desktop
+	sed -e 's:Icon=.*:Icon=grdesktop/icon.png:' \
+		-i grdesktop.desktop || die "sed 1 failed"
 
-	gnome2_omf_fix
+	sed -e 's/\(GETTEXT_PACKAGE = \)@GETTEXT_PACKAGE@/\1grdesktop/g' \
+		-i po/Makefile.in.in || die "sed 2 failed"
 }
