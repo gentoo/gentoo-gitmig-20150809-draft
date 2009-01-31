@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/iotop
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.8 2008/10/03 14:30:41 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.9 2009/01/31 07:52:25 dberkholz Exp $
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership; reassign to maintainer-needed.
 
   03 Oct 2008; Jeroen Roovers <jer@gentoo.org> iotop-0.2.1.ebuild:
   Marked ~hppa too.
