@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.4.7.14.ebuild,v 1.2 2009/01/31 12:30:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.4.7.15-r1.ebuild,v 1.1 2009/01/31 12:30:07 patrick Exp $
 
-inherit distutils eutils
+inherit distutils eutils base
 
 DESCRIPTION="pkgcore package manager"
 HOMEPAGE="http://www.pkgcore.org"
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-python/docutils-0.4 )"
 
 DOCS="AUTHORS NEWS"
+
+PATCHES=( "${FILESDIR}/pkgcore-sandbox.patch" )
 
 src_compile() {
 	distutils_src_compile
