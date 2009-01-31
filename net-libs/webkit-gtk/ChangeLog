@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.16 2009/01/25 19:02:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.17 2009/01/31 21:51:04 jokey Exp $
+
+  31 Jan 2009; <jokey@gentoo.org> webkit-gtk-0_p40220.ebuild:
+  Dropping gnome-vfs dependency wrt bug #256456 and drop old
 
 *webkit-gtk-0_p40220 (25 Jan 2009)
 
