@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/radiomixer
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/ChangeLog,v 1.13 2008/03/06 17:20:56 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/ChangeLog,v 1.14 2009/01/31 20:10:51 jokey Exp $
+
+  31 Jan 2009; <jokey@gentoo.org> +files/radiomixer-1.1_rc1-gcc43.patch,
+  radiomixer-1.1_rc1-r1.ebuild:
+  Add gcc4.3 build patch and use defaults from bug #251250
 
   27 Dec 2007; <rich0@gentoo.org> radiomixer-1.1_rc1-r1.ebuild:
   Stable on amd64 - #203348.

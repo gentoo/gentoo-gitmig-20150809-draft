@@ -1,0 +1,11 @@
+diff -rupN radiomixer-1.1RC1b/src/metainfo.cpp radiomixer-1.1RC1/src/metainfo.cpp
+--- radiomixer-1.1RC1b/src/metainfo.cpp	2009-01-24 15:48:58.000000000 -0400
++++ radiomixer-1.1RC1/src/metainfo.cpp	2009-01-24 17:05:04.000000000 -0400
+@@ -20,6 +20,7 @@
+  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+  ***************************************************************************/
+ #include "metainfo.h"
++#include <cstdlib>
+ 
+ metaInfo::metaInfo(QObject *parent, const char *name)
+  : QObject(parent, name)

@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.1_rc1-r1.ebuild,v 1.4 2007/12/27 22:43:23 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/radiomixer/radiomixer-1.1_rc1-r1.ebuild,v 1.5 2009/01/31 20:10:51 jokey Exp $
+
+EAPI=2
 
 inherit kde-functions eutils
 
@@ -11,7 +13,7 @@ SRC_URI="mirror://sourceforge/radiomixer/${PN}-1.1RC1.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="alsa debug hwmixer jack mad vorbis"
+IUSE="alsa debug hwmixer +jack +mad vorbis"
 
 DEPEND="media-libs/libsamplerate
 	alsa? ( media-libs/alsa-lib )
@@ -59,6 +61,10 @@ pkg_setup() {
 	elog
 	elog "Jack mode is recommended by upstream."
 	elog
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {
