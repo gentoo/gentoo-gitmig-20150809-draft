@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.59 2009/01/22 18:11:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.60 2009/01/31 18:39:35 swegener Exp $
+
+*pdns-2.9.22 (31 Jan 2009)
+
+  31 Jan 2009; Sven Wegener <swegener@gentoo.org> +pdns-2.9.22.ebuild:
+  Version bump.
 
   22 Jan 2009; Sven Wegener <swegener@gentoo.org>
   +files/2.9.21.2-zone2ldap.patch, pdns-2.9.21.2.ebuild:
