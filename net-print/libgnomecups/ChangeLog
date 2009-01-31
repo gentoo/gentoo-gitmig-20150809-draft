@@ -1,6 +1,10 @@
 # ChangeLog for net-print/libgnomecups
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.63 2008/11/13 19:42:27 ranger Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.64 2009/01/31 18:54:58 eva Exp $
+
+  31 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  libgnomecups-0.2.2.ebuild, libgnomecups-0.2.3.ebuild:
+  Set a safe minimum version for cups dependency, bug #254215.
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> libgnomecups-0.2.3.ebuild:
   Marking libgnomecups-0.2.3 ppc64 stable for bug 236971
