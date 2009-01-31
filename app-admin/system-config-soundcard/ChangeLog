@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/system-config-soundcard
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-soundcard/ChangeLog,v 1.4 2007/10/15 09:27:45 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-soundcard/ChangeLog,v 1.5 2009/01/31 07:37:16 dberkholz Exp $
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership; reassign to maintainer-needed.
 
   15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   system-config-soundcard-2.0.1.ebuild:

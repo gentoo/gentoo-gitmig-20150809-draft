@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/system-config-lvm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-lvm/ChangeLog,v 1.6 2008/01/31 06:16:30 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-lvm/ChangeLog,v 1.7 2009/01/31 07:36:16 dberkholz Exp $
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership; reassign to maintainer-needed.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -files/1.0.18-use-portable-pam.patch, -system-config-lvm-1.0.18.ebuild:

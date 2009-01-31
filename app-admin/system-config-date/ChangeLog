@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/system-config-date
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-date/ChangeLog,v 1.6 2008/01/31 06:13:21 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-date/ChangeLog,v 1.7 2009/01/31 07:34:57 dberkholz Exp $
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership; reassign to maintainer-needed.
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -system-config-date-1.8.5.ebuild, -system-config-date-1.8.11.ebuild:
