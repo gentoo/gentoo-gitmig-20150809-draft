@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ipp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.6 2009/01/27 16:11:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.7 2009/01/31 12:07:10 bicatali Exp $
+
+  31 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> ipp-6.0.0.063.ebuild,
+  ipp-6.0.1.071.ebuild:
+  Re-add addwrite on /opt/intel, needed for a first install
 
 *ipp-6.0.1.071 (27 Jan 2009)
 
