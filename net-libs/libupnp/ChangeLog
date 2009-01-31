@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.22 2009/01/11 19:12:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.23 2009/01/31 17:04:20 gurligebis Exp $
+
+*libupnp-1.6.6-r1 (31 Jan 2009)
+
+  31 Jan 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  +files/libupnp-1.6.6-patch-statevar-query.patch, -libupnp-1.4.6.ebuild,
+  -libupnp-1.6.5.ebuild, +libupnp-1.6.6-r1.ebuild:
+  Fixing bug #256843 and removing old ebuilds
 
   11 Jan 2009; Markus Meier <maekke@gentoo.org> libupnp-1.6.6.ebuild:
   amd64 stable, bug #239533

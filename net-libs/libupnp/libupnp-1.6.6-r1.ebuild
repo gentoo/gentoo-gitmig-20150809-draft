@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.4.6.ebuild,v 1.8 2007/06/29 11:24:17 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/libupnp-1.6.6-r1.ebuild,v 1.1 2009/01/31 17:04:20 gurligebis Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -12,12 +12,14 @@ SRC_URI="mirror://sourceforge/pupnp/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-patch-statevar-query.patch"
 
 	AT_M4DIR="m4" eautoreconf
 
@@ -37,7 +39,16 @@ src_compile() {
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dobin upnp/.libs/upnp_tv_{ctrlpt,device}
+	dobin upnp/sample/upnp_tv_{ctrlpt,device,combo}
 	dodoc NEWS README ChangeLog
-	dohtml upnp/doc/*.pdf
+}
+
+pkg_postinst() {
+	ewarn "Please remember to run revdep-rebuild when upgrading"
+	ewarn "from libupnp 1.4.x to libupnp 1.6.x , so packages"
+	ewarn "gets linked with the new library."
+	ewarn ""
+	ewarn "The revdep-rebuild script is part of the"
+	ewarn "app-portage/gentoolkit package."
+	ebeep
 }
