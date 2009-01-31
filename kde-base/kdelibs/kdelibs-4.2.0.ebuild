@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.0.ebuild,v 1.1 2009/01/27 16:55:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.0.ebuild,v 1.2 2009/01/31 13:58:08 scarabeus Exp $
 
 EAPI="2"
 
@@ -26,6 +26,7 @@ RESTRICT="test"
 COMMONDEPEND="
 	!<=kde-base/kdebase-3.5.9-r4
 	!<=kde-base/kdebase-startkde-3.5.10
+	!x11-libs/qt-phonon
 	!kdeprefix? (
 		!kde-base/kitchensync:4.1[kdeprefix=]
 		!kde-base/knewsticker:4.1[kdeprefix=]

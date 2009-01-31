@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.0-r1.ebuild,v 1.1 2009/01/31 13:39:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.0-r1.ebuild,v 1.2 2009/01/31 13:58:08 scarabeus Exp $
 
 EAPI="2"
 
@@ -26,12 +26,13 @@ RESTRICT="test"
 COMMONDEPEND="
 	!<=kde-base/kdebase-3.5.9-r4
 	!<=kde-base/kdebase-startkde-3.5.10
+	!x11-libs/qt-phonon
 	!kdeprefix? (
-		!kde-base/kitchensync:4.1[kdeprefix=]
-		!kde-base/knewsticker:4.1[kdeprefix=]
-		!kde-base/kpercentage:4.1[kdeprefix=]
-		!kde-base/ktnef:4.1[kdeprefix=]
-		!kde-base/libplasma[kdeprefix=]
+		!kde-base/kitchensync:4.1[-kdeprefix]
+		!kde-base/knewsticker:4.1[-kdeprefix]
+		!kde-base/kpercentage:4.1[-kdeprefix]
+		!kde-base/ktnef:4.1[-kdeprefix]
+		!kde-base/libplasma[-kdeprefix]
 		!<=kde-misc/kdnssd-avahi-0.1.2:0
 	)
 	>=app-misc/strigi-0.6.3[qt4,dbus]
