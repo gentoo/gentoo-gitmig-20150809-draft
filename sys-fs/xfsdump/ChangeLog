@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsdump
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.67 2008/08/25 17:53:34 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.68 2009/01/31 01:28:24 jer Exp $
+
+  31 Jan 2009; Jeroen Roovers <jer@gentoo.org> xfsdump-2.2.48.ebuild:
+  Stable for HPPA (bug #235017).
 
   25 Aug 2008; nixnut <nixnut@gentoo.org> xfsdump-2.2.48.ebuild:
   Stable on ppc wrt bug 235017
