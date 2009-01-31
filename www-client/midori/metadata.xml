@@ -7,6 +7,6 @@
   <name>Markus Ullmann</name>
 </maintainer>
 <use>
-	<flag name="soup">Use native C http library</flag>
+	<flag name="soup">Use Soup (<pkg>net-libs/libsoup</pkg>) as HTTP backend instead of curl(<pkg>net-misc/curl</pkg>), if you want better gnome integration for URL processing</flag>
 </use>
 </pkgmetadata>
