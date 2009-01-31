@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.16 2009/01/31 22:13:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.17 2009/01/31 22:19:06 vapier Exp $
 
 opts="reload"
 
@@ -106,6 +106,8 @@ stop() {
 	start-stop-daemon --stop --oknodo --name nfsd --user root --signal 2
 	eend $?
 	ret=$((ret + $?))
+	# in case things don't work out ... #228127
+	rpc.nfsd 0
 
 	# When restarting the NFS server, running "exportfs -ua" probably
 	# isn't what the user wants.  Running it causes all entries listed

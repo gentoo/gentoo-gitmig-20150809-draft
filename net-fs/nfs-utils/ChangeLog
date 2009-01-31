@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.143 2009/01/31 22:16:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.144 2009/01/31 22:19:05 vapier Exp $
+
+  31 Jan 2009; Mike Frysinger <vapier@gentoo.org> files/nfs.initd:
+  Also use rpc.nfsd to try to shutdown nfsd #228127 by Maurice Volaski.
 
   31 Jan 2009; Mike Frysinger <vapier@gentoo.org> files/rpc.statd.initd:
   Make sure stop() works even if rpc.statd is dead so init.d doesnt fake
