@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.7.9.ebuild,v 1.3 2009/01/18 19:46:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.7.9.ebuild,v 1.4 2009/01/31 18:23:54 klausman Exp $
 
 NEED_PYTHON=2.3
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.riverbankcomputing.com/static/Downloads/sip$(get_major_versi
 
 LICENSE="sip"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug"
 
 S=${WORKDIR}/${MY_P}
