@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.68 2009/01/18 22:00:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.69 2009/01/31 23:07:16 jokey Exp $
+
+  31 Jan 2009; <jokey@gentoo.org> -files/4.1.1-paths.patch,
+  -eric-4.1.1.ebuild, -eric-4.1.4.ebuild, -eric-4.1.6.ebuild,
+  -eric-4.2.0.ebuild, -eric-4.2.3.ebuild, eric-4.2.5.ebuild:
+  Stable on amd64 and x86, drop old
 
 *eric-4.2.5 (18 Jan 2009)
 
