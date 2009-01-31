@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.4-r1.ebuild,v 1.1 2009/01/20 09:09:43 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.4-r2.ebuild,v 1.1 2009/01/31 11:48:35 stefaan Exp $
 
 inherit eutils multilib autotools
 
@@ -17,7 +17,8 @@ PATCH_LIST="
 	${P}-fix-ldap-detection.patch
 	${P}-use-CLOEXEC-flag.patch
 	${P}-fix-select-fd-limit.patch
-	${P}-make-hash-table-scale-to-thousands-of-entries.patch"
+	${P}-make-hash-table-scale-to-thousands-of-entries.patch
+	${P}-fix-quoted-mess.patch"
 SRC_URI="${SRC_URI_BASE}/${P}.tar.bz2"
 for i in ${PATCH_LIST} ; do
 	SRC_URI="${SRC_URI} ${SRC_URI_BASE}/${i}"
@@ -26,6 +27,7 @@ DEPEND="virtual/libc
 		ldap? ( >=net-nds/openldap-2.0 )
 		sasl? ( virtual/krb5 )"
 			# currently, sasl code assumes the presence of kerberosV
+RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
