@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.144 2009/01/31 22:19:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.145 2009/01/31 22:20:24 vapier Exp $
+
+*nfs-utils-1.1.4-r1 (31 Jan 2009)
+
+  31 Jan 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/nfs-utils-1.1.4-ascii-man.patch,
+  +files/nfs-utils-1.1.4-mtab-sym.patch,
+  +files/nfs-utils-1.1.4-no-exec.patch, +nfs-utils-1.1.4-r1.ebuild:
+  Add some fixes from Debian and push out init.d fixes.
 
   31 Jan 2009; Mike Frysinger <vapier@gentoo.org> files/nfs.initd:
   Also use rpc.nfsd to try to shutdown nfsd #228127 by Maurice Volaski.
