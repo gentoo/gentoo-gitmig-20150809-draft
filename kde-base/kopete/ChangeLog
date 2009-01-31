@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.167 2009/01/29 14:26:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.168 2009/01/31 19:08:43 scarabeus Exp $
+
+  31 Jan 2009; Tomas Chvatal <scarabeus@gentoo.org> kopete-4.2.0.ebuild:
+  Fix deps. Per bug #257125
 
   29 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> metadata.xml:
   Fix metadata.xml
