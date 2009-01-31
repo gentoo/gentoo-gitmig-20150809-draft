@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.2.ebuild,v 1.5 2008/07/28 21:30:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.9.ebuild,v 1.1 2009/01/31 21:21:12 jokey Exp $
 
-EAPI=1
+EAPI=2
 
-inherit qt4 eutils autotools
+inherit autotools qt4 eutils autotools
 
 DESCRIPTION="Intelligent Teaching And Learning with Computers (iTALC) supports working with computers in school"
 HOMEPAGE="http://italc.sourceforge.net/"
@@ -12,16 +12,18 @@ SRC_URI="mirror://sourceforge/italc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
-IUSE="X v4l crypt xinerama threads fbcon"
+IUSE="X v4l crypt xinerama threads fbcon system-libvncserver"
 
-DEPEND="dev-libs/lzo
+RDEPEND="dev-libs/lzo
 	sys-apps/tcp-wrappers
 	media-libs/jpeg
 	sys-libs/zlib
 	dev-libs/openssl
-	=x11-libs/qt-4.3*:4
+	x11-libs/qt-core
+	x11-libs/qt-xmlpatterns
+	system-libvncserver? ( net-libs/libvncserver )
 	xinerama? ( x11-libs/libXinerama )
 	X? ( x11-libs/libICE
 		x11-libs/libSM
@@ -30,16 +32,26 @@ DEPEND="dev-libs/lzo
 		x11-libs/libXext
 		x11-libs/libXfixes
 		x11-libs/libXrandr
-		x11-libs/libXtst )"
-RDEPEND=${DEPEND}
+		x11-libs/libXtst
+		x11-misc/xinput
+		x11-libs/qt-gui:4 )"
+DEPEND="${RDEPEND}
+	X? ( x11-proto/inputproto )"
 
 pkg_setup() {
 	enewgroup italc
 }
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-qt4-libpath.patch
+	epatch "${FILESDIR}"/${P}-strip.patch
+	use system-libvncserver && epatch "${FILESDIR}"/${P}-system-libvncserver.patch
+	eautoreconf
+}
+
+src_configure() {
 	econf \
-		"--with-qtdir=${ROOT}/usr" \
+		"--with-qtdir=/usr" \
 		"--with-linux" \
 		"--with-uinput" \
 		"--without-macosx-native" \
@@ -58,7 +70,6 @@ src_compile() {
 		$(use_with threads pthread) \
 		$(use_with crypt) \
 		|| die "econf failed"
-	emake || die "make failed"
 }
 
 src_install() {

@@ -1,0 +1,52 @@
+--- ./italc-1.0.9.orig/ica/Makefile.am	2008-04-17 23:23:57.000000000 +0200
++++ ./italc-1.0.9/ica/Makefile.am	2009-01-31 22:08:53.000000000 +0100
+@@ -6,47 +6,14 @@
+ IVS_INCLUDES = -I$(srcdir)/x11 -I$(srcdir)/x11/x11vnc -I$(srcdir)/x11/libvncserver
+ 
+ IVS_SRCS =	$(srcdir)/x11/x11vnc.c				\
+-		$(srcdir)/x11/libvncserver/auth.c		\
+-		$(srcdir)/x11/libvncserver/cargs.c		\
+-		$(srcdir)/x11/libvncserver/corre.c		\
+-		$(srcdir)/x11/libvncserver/cursor.c		\
+-		$(srcdir)/x11/libvncserver/cutpaste.c		\
+-		$(srcdir)/x11/libvncserver/d3des.c		\
+-		$(srcdir)/x11/libvncserver/draw.c		\
+-		$(srcdir)/x11/libvncserver/font.c		\
+-		$(srcdir)/x11/libvncserver/hextile.c		\
+-		$(srcdir)/x11/libvncserver/httpd.c		\
+-		$(srcdir)/x11/libvncserver/main.c		\
+-		$(srcdir)/x11/libvncserver/rfbregion.c		\
+-		$(srcdir)/x11/libvncserver/rfbserver.c		\
+-		$(srcdir)/x11/libvncserver/rre.c		\
+-		$(srcdir)/x11/libvncserver/scale.c		\
+-		$(srcdir)/x11/libvncserver/selbox.c		\
+-		$(srcdir)/x11/libvncserver/sockets.c		\
+-		$(srcdir)/x11/libvncserver/stats.c		\
+-		$(srcdir)/x11/libvncserver/translate.c		\
+-		$(srcdir)/x11/libvncserver/ultra.c		\
+-		$(srcdir)/x11/libvncserver/vncauth.c		\
+ 		$(srcdir)/x11/rfb/rfbregion.h			\
+-		$(srcdir)/x11/rfb/default8x16.h			\
+-		$(srcdir)/x11/libvncserver/d3des.h		\
+-		$(srcdir)/x11/libvncserver/private.h		\
+-		$(srcdir)/x11/libvncserver/scale.h		\
+-		$(srcdir)/x11/libvncserver/zrleoutstream.h	\
+-		$(srcdir)/x11/libvncserver/zrlepalettehelper.h	\
+-		$(srcdir)/x11/libvncserver/zrletypes.h		\
+-		$(srcdir)/x11/libvncserver/zlib.c		\
+-		$(srcdir)/x11/libvncserver/zrle.c		\
+-		$(srcdir)/x11/libvncserver/zrleoutstream.c	\
+-		$(srcdir)/x11/libvncserver/zrlepalettehelper.c	\
+-		$(srcdir)/x11/libvncserver/tight.c
+-
++		$(srcdir)/x11/rfb/default8x16.h
+ 
+ if HAVE_LIBPTHREAD
+ PTHREADLDADD = -lpthread
+ endif
+ 
+-IVSLDADD = @X_LIBS@ $(PTHREADLDADD)
++IVSLDADD = @X_LIBS@ $(PTHREADLDADD) -lvncserver
+ 
+ 
+ else
