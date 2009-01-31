@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.262 2009/01/27 07:50:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.263 2009/01/31 20:26:02 klausman Exp $
+
+  31 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
+  ffmpeg-0.4.9_p20081219.ebuild:
+  Stable on alpha, bug #255008
 
   27 Jan 2009; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   no need for local variables when we use them only once
