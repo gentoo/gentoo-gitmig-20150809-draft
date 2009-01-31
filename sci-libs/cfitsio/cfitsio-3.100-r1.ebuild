@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.090.ebuild,v 1.1 2008/06/18 21:47:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.100-r1.ebuild,v 1.1 2009/01/31 12:39:37 bicatali Exp $
 
 inherit eutils fortran autotools
 
@@ -27,6 +27,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	epatch "${FILESDIR}"/${P}-null-protect.patch
 	cd "${S}"
 	# avoid internal cfortran
 	if use fortran; then

@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/cfitsio
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.21 2008/08/22 18:26:16 bicatali Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.22 2009/01/31 12:39:37 bicatali Exp $
+
+*cfitsio-3.100-r1 (31 Jan 2009)
+
+  31 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/cfitsio-3.100-null-protect.patch, metadata.xml,
+  -cfitsio-3.090.ebuild, +cfitsio-3.100-r1.ebuild:
+  Added protection against null pointer dereferences, thanks to Paul Price,
+  bug #256681
 
 *cfitsio-3.100 (22 Aug 2008)
 

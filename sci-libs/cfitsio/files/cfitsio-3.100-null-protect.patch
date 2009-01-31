@@ -1,0 +1,39 @@
+diff -Naur cfitsio.orig/edithdu.c cfitsio/edithdu.c
+--- cfitsio.orig/edithdu.c	2009-01-31 12:30:07.196101165 +0000
++++ cfitsio/edithdu.c	2009-01-31 12:32:03.467511681 +0000
+@@ -556,7 +556,9 @@
+         return(*status);
+ 
+     extnm[0] = '\0';
+-    strncat(extnm, extnmx, FLEN_VALUE-1);
++    if (extnmx) {
++      strncat(extnm, extnmx, FLEN_VALUE-1);
++    }
+ 
+     if (fptr->HDUposition != (fptr->Fptr)->curhdu)
+         ffmahd(fptr, (fptr->HDUposition) + 1, NULL, status);
+@@ -692,7 +694,9 @@
+         return(*status);
+ 
+     extnm[0] = '\0';
+-    strncat(extnm, extnmx, FLEN_VALUE-1);
++    if (extnmx) {
++      strncat(extnm, extnmx, FLEN_VALUE-1);
++    }
+ 
+     if (fptr->HDUposition != (fptr->Fptr)->curhdu)
+         ffmahd(fptr, (fptr->HDUposition) + 1, NULL, status);
+diff -Naur cfitsio.orig/putkey.c cfitsio/putkey.c
+--- cfitsio.orig/putkey.c	2009-01-31 12:30:07.220108134 +0000
++++ cfitsio/putkey.c	2009-01-31 12:32:49.566075447 +0000
+@@ -2729,7 +2729,9 @@
+     }
+ 
+     xtension[0] = '\0';
+-    strncat(xtension, xtensionx, FLEN_VALUE-1);
++    if (xtensionx) {
++      strncat(xtension, xtensionx, FLEN_VALUE-1);
++    }
+ 
+     ffpkys(fptr, "XTENSION", xtension, "extension type", status);
+     ffpkyj(fptr, "BITPIX",   bitpix,   "number of bits per data pixel", status);
