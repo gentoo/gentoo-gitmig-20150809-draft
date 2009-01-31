@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-0.9.9.5.ebuild,v 1.1 2008/04/21 19:05:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-0.9.9.5.ebuild,v 1.2 2009/01/31 21:33:45 jokey Exp $
 
-inherit autotools
+EAPI=2
+
+inherit autotools eutils
 
 DESCRIPTION="A portable high-level Jabber/XMPP library for C++"
 HOMEPAGE="http://camaya.net/gloox"
@@ -20,7 +22,11 @@ DEPEND="idn? ( >=net-dns/libidn-0.5.0 )
 
 RDEPEND="${DEPEND}"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
+
+src_configure() {
 	econf \
 		$(use_enable debug debug) \
 		$(use_with idn libidn) \
@@ -28,7 +34,6 @@ src_compile() {
 		$(use_with ssl openssl) \
 		$(use_with zlib zlib) \
 		|| die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {

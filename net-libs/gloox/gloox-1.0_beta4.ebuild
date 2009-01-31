@@ -1,33 +1,31 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-0.9.9.4.ebuild,v 1.1 2008/03/18 21:15:42 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/gloox-1.0_beta4.ebuild,v 1.1 2009/01/31 21:33:45 jokey Exp $
 
-inherit autotools eutils
+EAPI=2
 
+inherit autotools
+
+MY_P=${P/_/-}
 DESCRIPTION="A portable high-level Jabber/XMPP library for C++"
 HOMEPAGE="http://camaya.net/gloox"
-SRC_URI="http://camaya.net/download/${P}.tar.bz2"
+SRC_URI="http://camaya.net/download/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug gnutls idn ssl zlib"
 
-DEPEND="idn? ( >=net-dns/libidn-0.5.0 )
-	gnutls? ( >=net-libs/gnutls-1.2.0 )
-	ssl? ( >=dev-libs/openssl-0.9.8 )
-	zlib? ( >=sys-libs/zlib-1.2.3 )"
+DEPEND="idn? ( net-dns/libidn )
+	gnutls? ( net-libs/gnutls )
+	ssl? ( dev-libs/openssl )
+	zlib? ( sys-libs/zlib )"
 
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-res_query-check.patch
-	eautoreconf
-}
+S=${WORKDIR}/${MY_P}
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable debug debug) \
 		$(use_with idn libidn) \
@@ -35,7 +33,6 @@ src_compile() {
 		$(use_with ssl openssl) \
 		$(use_with zlib zlib) \
 		|| die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
