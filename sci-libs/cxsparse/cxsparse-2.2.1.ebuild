@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/cxsparse-2.2.1.ebuild,v 1.6 2008/05/27 07:32:22 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/cxsparse-2.2.1.ebuild,v 1.7 2009/01/31 06:17:54 zmedico Exp $
 
 inherit autotools eutils
 
 MY_PN=CXSparse
 DESCRIPTION="Extended sparse matrix package."
-HOMEPAGE="http://www.cise.ufl.edu/research/sparse/cxsparse"
+HOMEPAGE="http://www.cise.ufl.edu/research/sparse/CXSparse/"
 SRC_URI="http://www.cise.ufl.edu/research/sparse/${MY_PN}/versions/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
