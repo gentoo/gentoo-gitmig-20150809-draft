@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.10.0.ebuild,v 1.4 2009/01/29 23:21:29 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.10.0.ebuild,v 1.5 2009/01/31 23:39:43 loki_val Exp $
 
 inherit autotools gnome2 multilib mono
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
-DOCS="README NEWS ChangeLog AUTHORS COPYING"
+DOCS="README NEWS ChangeLog AUTHORS"
 
 src_unpack() {
 	gnome2_src_unpack
