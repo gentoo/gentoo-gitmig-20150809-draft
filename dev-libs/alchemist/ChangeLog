@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/alchemist
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/alchemist/ChangeLog,v 1.1 2006/09/05 21:23:57 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/alchemist/ChangeLog,v 1.2 2009/01/31 07:42:55 dberkholz Exp $
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership; reassign to maintainer-needed.
 
 *alchemist-1.0.36 (05 Sep 2006)
 
