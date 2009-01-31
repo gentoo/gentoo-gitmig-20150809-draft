@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2_beta1-r1.ebuild,v 1.2 2009/01/29 13:14:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2_rc1.ebuild,v 1.1 2009/01/31 14:10:59 scarabeus Exp $
 
 EAPI="2"
 
-NEED_KDE="4.1"
+KDE_MINIMAL="4.22"
 KDE_LINGUAS="ca cs da de el es et fr gl it ja lv nb nds nl nn pl pt pt_BR ru sv uk zh_CN zh_TW"
 inherit kde4-base
 
@@ -33,13 +33,6 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}"/${MY_P}
 
-src_prepare() {
-	# plasma is automagic so make it normal dep.
-	use plasma && VALUE="true" || VALUE="false"
-	sed -i \
-		-e "s:macro_log_feature(PLASMA_FOUND:SET ( PLASMA_FOUND ${VALUE}) #:g" \
-		CMakeLists.txt || die "sed failed"
-}
 src_configure() {
 	local mycmakeargs
 
