@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rhpxl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpxl/ChangeLog,v 1.8 2008/07/18 12:38:58 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpxl/ChangeLog,v 1.9 2009/01/31 07:44:44 dberkholz Exp $
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership; reassign to maintainer-needed.
 
   18 Jul 2008; Jeremy Olexa <darkside@gentoo.org> rhpxl-1.9.ebuild:
   Even thought the last SRC_URI worked for me, the gentoo mirrors didn't like
