@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jreleaseinfo/jreleaseinfo-1.3.0.ebuild,v 1.2 2006/12/03 00:50:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jreleaseinfo/jreleaseinfo-1.3.0-r1.ebuild,v 1.1 2009/01/31 19:50:47 serkan Exp $
 
+EAPI=2
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Ant Task for build-time creation of Java source file with program version, build number or any other info"
@@ -13,24 +14,21 @@ KEYWORDS="~amd64 ~x86"
 IUSE="source"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
-	dev-java/ant-core
+	dev-java/ant-core:0
 	source? ( app-arch/zip )"
-RDEPEND=">=virtual/jre-1.4"
+RDEPEND=">=virtual/jre-1.4
+	dev-java/ant-core:0"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+EANT_GENTOO_CLASSPATH="ant-core"
 
+src_prepare() {
+	java-pkg-2_src_prepare
 	java-ant_rewrite-classpath build.xml
 }
 
-src_compile() {
-	local gcp="$(java-pkg_getjar --build-only ant-core ant.jar)"
-	eant -Dgentoo.classpath="${gcp}" jar
-}
 
 src_install() {
 	java-pkg_newjar "target/${P}.jar"
-	dodoc LICENSE.txt
+	dodoc LICENSE.txt || die
 	use source && java-pkg_dosrc src/java/ch
 }
