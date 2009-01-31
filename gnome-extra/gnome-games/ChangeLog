@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.259 2009/01/31 21:36:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.260 2009/01/31 21:48:30 eva Exp $
+
+  31 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-games-2.24.3.ebuild:
+  Use split python bindings dependencies, bug #249348.
 
   31 Jan 2009; Daniel Gryniewicz <dang@gentoo.org>
   gnome-games-2.24.3.ebuild:

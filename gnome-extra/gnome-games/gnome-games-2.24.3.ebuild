@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.24.3.ebuild,v 1.2 2009/01/31 21:36:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.24.3.ebuild,v 1.3 2009/01/31 21:48:30 eva Exp $
 
 GCONF_DEBUG="no"
 
@@ -19,14 +19,22 @@ IUSE="artworkextra guile opengl"
 RDEPEND=">=gnome-base/libgnomeui-2.16.0
 	>=gnome-base/libgnome-2.16.0
 	>=dev-python/pygtk-2.10
-	dev-python/gconf-python
-	dev-python/libgnome-python
-	dev-python/gnome-python-desktop-base
-	dev-python/bug-buddy-python
-	dev-python/libgnomeprint-python
 	>=x11-libs/gtk+-2.12
-	>=gnome-base/gconf-2
+
+	>=dev-python/gconf-python-2.17.3
+	>=dev-python/bug-buddy-python-2.17.3
+	>=dev-python/libgnome-python-2.17.3
+	>=dev-python/libgnomeprint-python-2.17.3
+	>=dev-python/gnome-applets-python-2.17.3
+	>=dev-python/gnome-desktop-python-2.17.3
+	>=dev-python/gnome-keyring-python-2.17.3
+	>=dev-python/gnome-media-python-2.17.3
+	>=dev-python/gnome-vfs-python-2.17.3
+	>=dev-python/libgnomecanvas-python-2.17.3
+
 	>=x11-libs/cairo-1
+	>=dev-python/pycairo-1
+	>=gnome-base/gconf-2
 	>=dev-libs/libxml2-2.4.0
 	>=gnome-base/librsvg-2.14
 	>=media-libs/gstreamer-0.10.11
