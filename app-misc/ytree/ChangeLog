@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/ytree
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.7 2008/10/27 17:08:53 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ChangeLog,v 1.8 2009/01/31 20:02:19 jokey Exp $
+
+*ytree-1.92-r1 (31 Jan 2009)
+
+  31 Jan 2009; <jokey@gentoo.org> +files/ytree-1.92-support-cflags.patch,
+  -ytree-1.92.ebuild, +ytree-1.92-r1.ebuild:
+  Add cflag support for bug #240085
 
   27 Oct 2008; Markus Ullmann <jokey@gentoo.org> -ytree-1.90.ebuild,
   ytree-1.92.ebuild:
