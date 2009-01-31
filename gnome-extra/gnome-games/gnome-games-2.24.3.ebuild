@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.24.3.ebuild,v 1.1 2009/01/19 00:12:24 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.24.3.ebuild,v 1.2 2009/01/31 21:36:15 dang Exp $
 
 GCONF_DEBUG="no"
 
@@ -19,7 +19,11 @@ IUSE="artworkextra guile opengl"
 RDEPEND=">=gnome-base/libgnomeui-2.16.0
 	>=gnome-base/libgnome-2.16.0
 	>=dev-python/pygtk-2.10
-	>=dev-python/gnome-python-desktop-2.17.3
+	dev-python/gconf-python
+	dev-python/libgnome-python
+	dev-python/gnome-python-desktop-base
+	dev-python/bug-buddy-python
+	dev-python/libgnomeprint-python
 	>=x11-libs/gtk+-2.12
 	>=gnome-base/gconf-2
 	>=x11-libs/cairo-1

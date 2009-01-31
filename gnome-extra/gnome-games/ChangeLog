@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.258 2009/01/19 00:12:24 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.259 2009/01/31 21:36:15 dang Exp $
+
+  31 Jan 2009; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-games-2.24.3.ebuild:
+  Update for split python deps; bug #249348
 
 *gnome-games-2.24.3 (19 Jan 2009)
 
