@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptlib_py/cryptlib_py-3.3.1.ebuild,v 1.2 2009/01/31 00:21:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptlib_py/cryptlib_py-3.3.2.ebuild,v 1.1 2009/01/31 00:21:25 dragonheart Exp $
 
 inherit distutils
 
@@ -21,6 +21,10 @@ RDEPEND="virtual/python
 	>=dev-libs/cryptlib-${PV}"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
+
+src_unpack() {
+	unzip -qoa "${DISTDIR}/cl${MY_PV}.zip"
+}
 
 src_install(){
 	DOCS="../README"

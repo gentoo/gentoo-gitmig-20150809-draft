@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cryptlib_py
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptlib_py/ChangeLog,v 1.5 2007/11/10 16:15:19 alonbl Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptlib_py/ChangeLog,v 1.6 2009/01/31 00:21:25 dragonheart Exp $
+
+*cryptlib_py-3.3.2 (31 Jan 2009)
+
+  31 Jan 2009; Daniel Black <dragonheart@gentoo.org>
+  +cryptlib_py-3.3.2.ebuild:
+  version bump to 3.3.2 as per bug #246936 all thanks to Arfrever Frehtes
+  Taifersar Arahesis
 
   10 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> -cryptlib_py-3.2.2.ebuild:
   Cleanup
