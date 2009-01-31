@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kudzu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.30 2008/07/20 01:49:49 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.31 2009/01/31 07:46:44 dberkholz Exp $
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership; reassign to maintainer-needed.
 
   20 Jul 2008; Jeremy Olexa <darkside@gentoo.org> kudzu-1.2.83.ebuild:
   Make SRC_URI and explicit location. This file is hard to find on the fedora
