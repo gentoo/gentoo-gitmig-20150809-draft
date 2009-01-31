@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.09.ebuild,v 1.5 2009/01/20 10:50:30 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.09.ebuild,v 1.6 2009/01/31 09:25:11 aballier Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -14,11 +14,12 @@ X86_FBSD_NV_PACKAGE="NVIDIA-${X86_FBSD_NV}-${PV}"
 DESCRIPTION="NVIDIA X11 driver and GLX libraries"
 HOMEPAGE="http://www.nvidia.com/"
 SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/${X86_NV}/${PV}/${X86_NV_PACKAGE}.run )
-	 amd64? ( ftp://download.nvidia.com/XFree86/${AMD64_NV}/${PV}/${AMD64_NV_PACKAGE}.run )"
+	 amd64? ( ftp://download.nvidia.com/XFree86/${AMD64_NV}/${PV}/${AMD64_NV_PACKAGE}.run )
+	 x86-fbsd? ( ftp://download.nvidia.com/freebsd/${PV}/${X86_FBSD_NV_PACKAGE}.tar.gz )"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* amd64 x86 ~x86-fbsd"
 IUSE="acpi custom-cflags gtk multilib kernel_FreeBSD kernel_linux userland_BSD"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
@@ -197,7 +198,9 @@ src_unpack() {
 	# Use some more sensible gl headers and make way for new glext.h
 	epatch "${FILESDIR}"/NVIDIA_glx-glheader.patch
 	# allow on board sensors to work with lm_sensors
-	epatch "${FILESDIR}"/NVIDIA_i2c-hwmon.patch
+	if ! use x86-fbsd; then
+		epatch "${FILESDIR}"/NVIDIA_i2c-hwmon.patch
+	fi
 
 	if use kernel_linux; then
 		# Quiet down warnings the user does not need to see
@@ -221,8 +224,8 @@ src_compile() {
 
 	cd "${NV_SRC}"
 	if use x86-fbsd; then
-		emake CC="$(tc-getCC)" LD="$(tc-getLD)" LDFLAGS="$(raw-ldflags)" \
-			CFLAGS="-Wno-sign-compare" || die "Failed to compile"
+		echo LDFLAGS="$(raw-ldflags)"
+		MAKE="$(get_bmake)" emake CC="$(tc-getCC)" LD="$(tc-getLD)" LDFLAGS="$(raw-ldflags)" || die
 	else
 		linux-mod_src_compile
 	fi

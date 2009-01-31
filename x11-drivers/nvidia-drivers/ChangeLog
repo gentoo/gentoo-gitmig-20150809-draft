@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.130 2009/01/30 20:01:43 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.131 2009/01/31 09:25:11 aballier Exp $
+
+  31 Jan 2009; Alexis Ballier <aballier@gentoo.org>
+  nvidia-drivers-96.43.09.ebuild:
+  Backport the missing bits from the 100. ebuild for x86-fbsd and keyword it
+  since this is apparently the version I need for my GeForce2 MX 400
 
 *nvidia-drivers-180.27 (30 Jan 2009)
 
