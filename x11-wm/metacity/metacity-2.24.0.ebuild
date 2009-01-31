@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.24.0.ebuild,v 1.2 2008/10/11 17:45:39 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.24.0.ebuild,v 1.3 2009/01/31 11:46:54 eva Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="GNOME default window manager"
 HOMEPAGE="http://blogs.gnome.org/metacity/"
@@ -41,4 +41,11 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README *.txt doc/*.txt"
 
 pkg_setup() {
 	G2CONF="${G2CONF} $(use_enable xinerama)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Fix compilation on *bsd, bug #256224
+	epatch "${FILESDIR}/${P}-fbsd.patch"
 }
