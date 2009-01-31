@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.158 2009/01/29 18:57:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.159 2009/01/31 16:49:30 vapier Exp $
+
+  31 Jan 2009; Mike Frysinger <vapier@gentoo.org> pciutils-3.0.2.ebuild:
+  Fix man page install in older ebuild too #256696 by Pacho Ramos.
 
 *pciutils-3.1.0-r1 (29 Jan 2009)
 
