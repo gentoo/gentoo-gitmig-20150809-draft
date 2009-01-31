@@ -92,3 +92,12 @@ sys-auth/pambase consolekit cracklib ssh sha512
 # bug #216855
 # octave needs fftw which does not work of fbsd
 dev-lang/swig octave
+
+
+
+# Alexis Ballier <aballier@gentoo.org> (31 Jan 2009)
+# app-misc/tracker should work but needs some code fixups and it uses the fdatasync system call
+# that we do not have (bug #257052)
+# Mask it for now
+gnome-base/nautilus tracker
+media-video/totem tracker
