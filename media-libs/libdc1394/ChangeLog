@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.37 2009/01/31 10:26:52 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.38 2009/01/31 10:36:45 stefaan Exp $
+
+*libdc1394-1.2.2 (31 Jan 2009)
+
+  31 Jan 2009; Stefaan De Roeck <stefaan@gentoo.org>
+  +files/libdc1394-disable-raw-capture.patch, +libdc1394-1.2.2.ebuild:
+  Version bump, + new patch to disable obsolete raw capture (required for
+  bug #231908)
 
   31 Jan 2009; Stefaan De Roeck <stefaan@gentoo.org>
   -libdc1394-2.0.0_pre4.ebuild, -libdc1394-2.0.0-r1.ebuild:
