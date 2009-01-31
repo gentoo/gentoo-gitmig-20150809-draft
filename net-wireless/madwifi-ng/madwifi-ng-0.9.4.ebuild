@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.ebuild,v 1.9 2008/11/15 16:28:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.ebuild,v 1.10 2009/01/31 16:15:06 pva Exp $
 
 inherit linux-mod
 
@@ -61,6 +61,7 @@ src_unpack() {
 	done
 	epatch "${FILESDIR}"/madwifi-dfs-ieee80211-skb-update.patch
 	kernel_is ge 2 6 27 && epatch "${FILESDIR}/${P}-2.6.27-r3811.patch"
+	epatch "${FILESDIR}/${P}-request_module-build.patch"
 }
 
 src_install() {

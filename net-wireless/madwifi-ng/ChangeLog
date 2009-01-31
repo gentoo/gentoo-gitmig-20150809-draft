@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/madwifi-ng
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.64 2008/11/15 16:28:31 pva Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.65 2009/01/31 16:15:06 pva Exp $
+
+  31 Jan 2009; Peter Volkov <pva@gentoo.org>
+  +files/madwifi-ng-0.9.4-request_module-build.patch,
+  madwifi-ng-0.9.4.ebuild, madwifi-ng-0.9.4-r1.ebuild:
+  Fixed build problem with gcc-4.3, bug #256669, thank cilly for report and
+  fix.
 
   15 Nov 2008; Peter Volkov <pva@gentoo.org> madwifi-ng-0.9.4.ebuild,
   madwifi-ng-0.9.4-r1.ebuild:
