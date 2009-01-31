@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3gain
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.31 2009/01/26 22:07:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.32 2009/01/31 02:00:22 jer Exp $
+
+  31 Jan 2009; Jeroen Roovers <jer@gentoo.org> mp3gain-1.4.6-r2.ebuild:
+  Stable for HPPA (bug #255516).
 
   26 Jan 2009; Brent Baude <ranger@gentoo.org> mp3gain-1.4.6-r2.ebuild:
   stable ppc64, bug 255516
