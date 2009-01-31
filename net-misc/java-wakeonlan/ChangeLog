@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/java-wakeonlan
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/ChangeLog,v 1.13 2008/02/02 17:35:08 caster Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/ChangeLog,v 1.14 2009/01/31 10:06:31 serkan Exp $
+
+*java-wakeonlan-1.0.0-r1 (31 Jan 2009)
+
+  31 Jan 2009; Serkan Kaba <serkan@gentoo.org>
+  +files/java-wakeonlan-1.0.0-build.xml.patch,
+  +java-wakeonlan-1.0.0-r1.ebuild:
+  Revbump to avoid bundling of unit tests in the jar. Add jsap to javadoc
+  classpath. Keyword for amd64.
 
   02 Feb 2008; Vlastimil Babka <caster@gentoo.org>
   -java-wakeonlan-0.3.0.ebuild:
