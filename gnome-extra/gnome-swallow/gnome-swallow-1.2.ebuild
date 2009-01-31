@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/gnome-swallow-1.2.ebuild,v 1.6 2006/08/11 20:04:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-swallow/gnome-swallow-1.2.ebuild,v 1.7 2009/01/31 18:35:56 eva Exp $
 
-inherit gnome2
+inherit autotools gnome2
 
 DESCRIPTION="An applet for Gnome2 that 'swallows' normal apps. Useful for docks that are made for other DEs or WMs"
 HOMEPAGE="http://interreality.org/~tetron/technology/swallow/"
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnomeui-2
@@ -20,9 +20,15 @@ RDEPEND=">=gnome-base/libgnomeui-2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 
-src_install() {
-	gnome2_src_install
-	rm -rf ${D}/usr/share/doc/gnome-swallow
+G2CONF="${G2CONF} --docdir=/usr/share/doc/${PF}"
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Fix compilation with --as-needed, bug #247521
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+
+	eautoreconf
 }
