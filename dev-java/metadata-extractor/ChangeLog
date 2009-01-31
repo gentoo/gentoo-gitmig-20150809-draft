@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/metadata-extractor
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.12 2008/03/11 15:47:43 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.13 2009/01/31 13:46:36 serkan Exp $
+
+*metadata-extractor-2.2.2-r3 (31 Jan 2009)
+
+  31 Jan 2009; Serkan Kaba <serkan@gentoo.org>
+  +files/metadata-extractor-2.2.2-buildfix.patch,
+  +metadata-extractor-2.2.2-r3.ebuild:
+  Migrate to EAPI 1. Limit jdk version to <=1.6. Compile tests with test USE
+  flag only. Avoid packing unit tests into the jar.
 
   11 Mar 2008; Petteri Räty <betelgeuse@gentoo.org>
   metadata-extractor-2.2.2-r2.ebuild:
