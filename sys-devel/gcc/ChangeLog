@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.679 2009/01/27 21:32:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.680 2009/01/31 17:28:39 gmsoft Exp $
+
+  31 Jan 2009; Guy Martin <gmsoft@gentoo.org> gcc-4.2.4-r1.ebuild:
+  hppa stable with Rej's blessing
 
 *gcc-4.3.3 (27 Jan 2009)
 
