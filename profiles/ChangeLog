@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2312 2009/01/31 08:16:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2313 2009/01/31 21:37:39 jokey Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Jan 2009; <jokey@gentoo.org> package.mask:
+  Mask games-puzzle/ksudoku for removal
 
   30 Jan 2009; Daniel Black <dragonheart@gentoo.org> package.mask:
   app-crypt/tpm-module removed from portage. removed from package.mask also
