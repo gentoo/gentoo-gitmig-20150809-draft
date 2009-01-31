@@ -1,6 +1,20 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.46 2009/01/21 10:44:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.47 2009/01/31 15:19:36 scarabeus Exp $
+
+*boinc-6.4.5 (31 Jan 2009)
+
+  31 Jan 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -files/08_all_Makefile.patch, -files/boinc-4.72.20050813-gcc4-fix.patch,
+  -files/boinc-5.2.14-gcc-4.1.patch, -files/boinc-5.10.45-gcc4.3.patch,
+  -files/boinc-6.2.15-mute-warnings.patch,
+  -files/boinc-6.2.15-project-list-size.patch, files/boinc.conf,
+  files/boinc.init, -files/gui_rpc_auth.cfg, metadata.xml,
+  -boinc-4.72.20050813-r3.ebuild, -boinc-5.2.14.ebuild,
+  -boinc-5.4.11.ebuild, -boinc-5.5.6.ebuild, -boinc-5.8.15.ebuild,
+  -boinc-5.10.28.ebuild, -boinc-5.10.45.ebuild, -boinc-6.2.15.ebuild,
+  +boinc-6.4.5.ebuild:
+  Version bump. Remove old cruft. Per bug #251766.
 
   21 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Updated maintainership for scarabeus
