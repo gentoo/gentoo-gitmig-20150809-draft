@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bugle
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/ChangeLog,v 1.8 2008/08/25 21:19:23 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/ChangeLog,v 1.9 2009/01/31 19:51:55 jokey Exp $
+
+  31 Jan 2009; <jokey@gentoo.org> bugle-0.0.20080803.ebuild:
+  Add dependency for bug 254940 and temporarily -j1 to emake until a
+  solution exists for bug 247219
 
 *bugle-0.0.20080803 (25 Aug 2008)
 

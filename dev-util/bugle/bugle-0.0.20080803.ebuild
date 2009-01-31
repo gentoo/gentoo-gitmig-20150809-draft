@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/bugle-0.0.20080803.ebuild,v 1.1 2008/08/25 21:19:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bugle/bugle-0.0.20080803.ebuild,v 1.2 2009/01/31 19:51:55 jokey Exp $
 
 inherit toolchain-funcs
 
@@ -17,6 +17,7 @@ DEPEND="ffmpeg? ( media-video/ffmpeg )
 	gtk? ( >=x11-libs/gtk+-2.4.0 >=x11-libs/gtkglext-1.0.0 )
 	readline? ( sys-libs/readline )
 	virtual/opengl
+	media-libs/glew
 	sys-libs/ncurses"
 RDEPEND="${DEPEND}"
 
@@ -38,7 +39,7 @@ src_install() {
 	dodoc README TODO TROUBLESHOOTING FAQ doc/*.{txt,html}
 	docinto examples
 	dodoc doc/examples/*
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" -j1 install || die "emake install failed"
 }
 
 pkg_postinst() {
