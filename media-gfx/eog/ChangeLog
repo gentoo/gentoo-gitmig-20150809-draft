@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.224 2009/01/31 08:18:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.225 2009/01/31 16:14:49 eva Exp $
+
+  31 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/eog-2.24.2-sigbus.patch, -eog-2.20.4.ebuild, -eog-2.22.2.ebuild,
+  -eog-2.24.2.ebuild, -eog-2.24.2-r1.ebuild:
+  Clean up old revisions.
 
   31 Jan 2009; Alexis Ballier <aballier@gentoo.org> eog-2.24.3.1.ebuild:
   keyword ~x86-fbsd
