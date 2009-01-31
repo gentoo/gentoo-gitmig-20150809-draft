@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.30 2009/01/15 21:34:53 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.31 2009/01/31 18:23:40 lack Exp $
+
+*roxterm-1.13.5 (31 Jan 2009)
+
+  31 Jan 2009; Jim Ramsay <lack@gentoo.org> +roxterm-1.13.5.ebuild:
+  Version bump: 1.13.5
 
   15 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
   Rox herd takes over from compnerd who's resigning.
