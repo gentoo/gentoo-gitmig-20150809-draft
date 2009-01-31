@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/at
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.13 2008/10/29 12:45:26 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.14 2009/01/31 19:13:33 bangert Exp $
+
+*at-3.1.10.2 (31 Jan 2009)
+
+  31 Jan 2009; Thilo Bangert <bangert@gentoo.org>
+  +files/at-3.1.10.2-Makefile.in-parallel-make-fix.patch,
+  +files/at-3.1.10.2-configure.in-fix-PAM-automagick-dep.patch,
+  +files/at.pamd, +at-3.1.10.2.ebuild:
+  version bump - fixes for bugs #229203, #238335, #244884 and #252970
 
   29 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> at-3.1.10.1.ebuild:
   Force -j1, see bug #244884.
