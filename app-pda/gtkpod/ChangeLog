@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.67 2009/01/19 23:59:40 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.68 2009/01/31 06:43:37 tester Exp $
+
+  31 Jan 2009; Olivier Crête <tester@gentoo.org> gtkpod-0.99.14.ebuild:
+  Bump libgpod dep, bug #255751
 
 *gtkpod-0.99.14 (19 Jan 2009)
 
