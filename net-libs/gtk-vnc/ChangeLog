@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.27 2008/11/26 15:43:07 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.28 2009/01/31 07:45:49 dberkholz Exp $
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership.
 
   26 Nov 2008; Brent Baude <ranger@gentoo.org> gtk-vnc-0.3.7.ebuild:
   stable ppc64, bug 248168
