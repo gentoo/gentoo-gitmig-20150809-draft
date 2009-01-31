@@ -1,6 +1,9 @@
 # ChangeLog for media-video/tivodecode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tivodecode/ChangeLog,v 1.1 2009/01/30 11:43:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tivodecode/ChangeLog,v 1.2 2009/01/31 00:41:11 gengor Exp $
+
+  31 Jan 2009; Gordon Malm <gengor@gentoo.org> tivodecode-0.2_pre4.ebuild:
+  Works for me, add ~x86 keyword
 
 *tivodecode-0.2_pre4 (30 Jan 2009)
 
