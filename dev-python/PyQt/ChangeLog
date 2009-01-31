@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.109 2009/01/18 20:09:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.110 2009/01/31 18:53:46 klausman Exp $
+
+  31 Jan 2009; Tobias Klausmann <klausman@gentoo.org> PyQt-3.17.6.ebuild:
+  Stable on alpha, bug #248038
 
   18 Jan 2009; Markus Meier <maekke@gentoo.org> PyQt-3.17.6.ebuild:
   amd64/x86 stable, bug #248038

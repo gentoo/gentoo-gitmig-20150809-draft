@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.16 2009/01/18 20:10:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.17 2009/01/31 18:54:34 klausman Exp $
+
+  31 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
+  qscintilla-python-2.3.2.ebuild:
+  Stable on alpha, bug #248038
 
   18 Jan 2009; Markus Meier <maekke@gentoo.org>
   qscintilla-python-2.3.2.ebuild:
