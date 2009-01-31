@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind-dns-keygen
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-dns-keygen/ChangeLog,v 1.1 2006/09/05 21:14:58 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-dns-keygen/ChangeLog,v 1.2 2009/01/31 07:45:13 dberkholz Exp $
+
+  31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Give up maintainership; reassign to maintainer-needed.
 
 *bind-dns-keygen-9.3.2.39 (05 Sep 2006)
 
