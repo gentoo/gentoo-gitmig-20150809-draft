@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/db4o-jdk5
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/db4o-jdk5/ChangeLog,v 1.1 2009/02/01 20:50:31 tommy Exp $
+
+*db4o-jdk5-7.4 (01 Feb 2009)
+
+  01 Feb 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +db4o-jdk5-7.4.ebuild:
+  Initial commit. Part of fixing bug 236981
+
