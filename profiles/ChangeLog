@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2314 2009/02/01 02:55:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2315 2009/02/01 14:33:08 loki_val Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Feb 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
+  Mask monopod for removal.
 
   01 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> package.mask:
   Mask sci-astronomy/setiathome for removal.
