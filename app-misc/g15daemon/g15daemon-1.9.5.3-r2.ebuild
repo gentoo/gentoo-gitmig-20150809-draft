@@ -1,12 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.1.ebuild,v 1.2 2008/05/29 15:41:32 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r2.ebuild,v 1.1 2009/02/01 16:18:40 jokey Exp $
+
+EAPI=2
 
 inherit eutils linux-info perl-module python multilib
 
 DESCRIPTION="G15daemon takes control of the G15 keyboard, through the linux kernel uinput device driver"
 HOMEPAGE="http://g15daemon.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -54,9 +56,11 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
-	econf || die "configure failed"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-forgotten-open-mode.patch
+}
 
+src_compile() {
 	emake || die "make failed"
 
 	if use perl; then
@@ -81,6 +85,12 @@ src_install() {
 
 	newconfd "${FILESDIR}/${PN}-1.2.7.confd" ${PN}
 	newinitd "${FILESDIR}/${PN}-1.2.7-r2.initd" ${PN}
+	dobin "${FILESDIR}/g15daemon-hotplug"
+	insinto /etc/udev/rules.d
+	doins "${FILESDIR}/99-g15daemon.rules"
+
+	insinto /etc
+	doins "${FILESDIR}"/g15daemon.conf
 
 	if use perl; then
 		ebegin "Installing Perl Bindings (G15Daemon.pm)"
@@ -100,8 +110,6 @@ src_install() {
 		docinto python
 		dodoc AUTHORS
 	fi
-
-	prepalldocs
 }
 
 pkg_postinst() {

@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/g15daemon
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.22 2008/09/08 11:44:02 chainsaw Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.23 2009/02/01 16:18:40 jokey Exp $
+
+*g15daemon-1.9.5.3-r2 (01 Feb 2009)
+
+  01 Feb 2009; <jokey@gentoo.org> +files/g15daemon.conf,
+  +files/g15daemon-1.9.5.3-forgotten-open-mode.patch,
+  -g15daemon-1.2.6a-r1.ebuild, -g15daemon-1.9.0-r1.ebuild,
+  -g15daemon-1.9.1.ebuild, -g15daemon-1.9.2.ebuild, -g15daemon-1.9.3.ebuild,
+  -g15daemon-1.9.5.3.ebuild, +g15daemon-1.9.5.3-r2.ebuild:
+  Add a missing open() permission and install default configuration file
 
 *g15daemon-1.9.5.3-r1 (08 Sep 2008)
 
