@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.5.0.3-r1.ebuild,v 1.1 2009/02/01 16:24:47 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.5.0.3-r1.ebuild,v 1.2 2009/02/01 16:31:17 loki_val Exp $
 
 EAPI=2
 
-inherit gnome2 mono
+inherit gnome2 mono eutils
 
 DESCRIPTION="Personal photo management application for the gnome desktop"
 HOMEPAGE="http://f-spot.org"
@@ -63,6 +63,8 @@ src_prepare() {
 			grep -lr --include='Makefile.in' \
 			'rm -f \$(pl' "${S}"/extensions/Exporters
 		) || die "sed failed"
+	epatch ${FILESDIR}/f-spot-0.5.0.3-icon-size-crash-fix.patch
+	epatch ${FILESDIR}/f-spot-0.5.0.3-no-image-in-collection-crash-fix.patch
 }
 
 src_configure() {
