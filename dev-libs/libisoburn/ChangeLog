@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libisoburn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.14 2009/01/26 19:19:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisoburn/ChangeLog,v 1.15 2009/02/01 02:42:35 loki_val Exp $
+
+*libisoburn-0.3.2_p0 (01 Feb 2009)
+
+  01 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +libisoburn-0.3.2_p0.ebuild:
+  Bump, bug 254991. EAPI-2. Thanks to Daniel Pielmeier (billie)
+  <daniel.pielmeier@googlemail.com>.
 
   26 Jan 2009; Brent Baude <ranger@gentoo.org> libisoburn-0.3.0_p0.ebuild:
   Marking libisoburn-0.3.0_p0 ppc64 for bug 254947
