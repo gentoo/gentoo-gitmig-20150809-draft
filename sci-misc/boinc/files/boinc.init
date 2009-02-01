@@ -64,11 +64,18 @@ start() {
 	# sys-apps/util-linux
 	CHRT="/usr/bin/chrt ${SCHED_PARAM}"
 
+	# check for baselayout version
+	if [[ "`start-stop-daemon --version |awk -F' ' '{print $2}'`" = "(OpenRC)" ]]; then
+		PARAMS="--stdout ${LOGFILE} --stderr ${LOGFILE} -- ${ARGS}"
+	else
+		PARAMS="-- ${ARGS} &> ${LOGFILE}"
+	fi
+
 	${CHRT} start-stop-daemon \
 		--quiet --start --chdir ${RUNTIMEDIR} \
 		--exec ${BOINCBIN} --chuid ${USER}:${GROUP} \
-		--background --stdout ${LOGFILE} --stderr ${LOGFILE} \
-		--nicelevel ${NICELEVEL} -- ${ARGS}
+		--background --nicelevel ${NICELEVEL} \
+		${PARAMS}
 
 	RESULT=$?
 
