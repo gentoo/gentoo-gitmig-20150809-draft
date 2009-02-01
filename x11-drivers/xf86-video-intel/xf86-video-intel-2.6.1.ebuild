@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.6.1.ebuild,v 1.1 2009/02/01 22:57:52 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.6.1.ebuild,v 1.2 2009/02/01 23:53:42 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -29,4 +29,6 @@ DEPEND="${RDEPEND}
 
 CONFIGURE_OPTIONS="$(use_enable dri)"
 
-PATCHES=("${FILESDIR}/${PV}*")
+PATCHES=(
+"${FILESDIR}/${PV}-0001-clean-up-man-page-generation-and-remove-all-traces-o.patch"
+)

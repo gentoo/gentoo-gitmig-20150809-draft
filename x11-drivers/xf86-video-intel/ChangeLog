@@ -1,6 +1,19 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.11 2009/02/01 22:57:52 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.12 2009/02/01 23:53:42 remi Exp $
+
+  01 Feb 2009; Rémi Cardona <remi@gentoo.org>
+  -files/2.5.0-0001-Default-kernel-mode-setting-to-off-add-configure-fl.patc
+  h, -files/2.4.2-0001-Don-t-allocate-a-pipe-for-hotplug-detection.patch,
+  -files/2.4.2-0002-Disable-render-standby.patch,
+  -files/2.5.0-0002-clean-up-man-pages-generation-and-installation.patch,
+  -files/2.4.2-0003-never-enable-DRI_MM-on-this-branch.patch,
+  -files/2.5.0-0003-use-standard-automake-macros-for-handling-symlinks.patch
+  ,
+  -files/2.5.0-0004-add-a-configure-switch-for-pre-2.0-compatibility-sym.pat
+  ch, -xf86-video-intel-2.4.2-r3.ebuild, -xf86-video-intel-2.5.0.ebuild,
+  -xf86-video-intel-2.5.1.ebuild, xf86-video-intel-2.6.1.ebuild:
+  remove old ebuilds and don't use wildcards in PATCHES
 
 *xf86-video-intel-2.6.1 (01 Feb 2009)
 
