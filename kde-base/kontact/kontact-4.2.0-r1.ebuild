@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-4.2.0.ebuild,v 1.3 2009/02/01 19:16:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-4.2.0-r1.ebuild,v 1.1 2009/02/01 19:16:25 scarabeus Exp $
 
 EAPI="2"
 
@@ -14,6 +14,7 @@ IUSE="debug htmlhandbook"
 DEPEND="app-crypt/gnupg
 	app-crypt/gpgme
 	>=kde-base/kontactinterfaces-${PV}:${SLOT}
+	>=kde-base/ktimezoned-${PV}:${SLOT}
 	>=kde-base/libkdepim-${PV}:${SLOT}"
 RDEPEND="${DEPEND}"
 
