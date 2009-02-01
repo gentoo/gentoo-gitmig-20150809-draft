@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.23 2009/02/01 16:18:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.24 2009/02/01 16:21:55 jokey Exp $
+
+  01 Feb 2009; <jokey@gentoo.org> -g15daemon-1.2.7.ebuild,
+  g15daemon-1.2.7-r1.ebuild, -g15daemon-1.9.5.3-r1.ebuild,
+  g15daemon-1.9.5.3-r2.ebuild:
+  Stable on x86 and amd64
 
 *g15daemon-1.9.5.3-r2 (01 Feb 2009)
 
