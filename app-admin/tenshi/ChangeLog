@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tenshi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.58 2009/02/01 12:16:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tenshi/ChangeLog,v 1.59 2009/02/01 19:07:54 nixnut Exp $
+
+  01 Feb 2009; nixnut <nixnut@gentoo.org> tenshi-0.10-r3.ebuild:
+  ppc stable #256858
 
   01 Feb 2009; Markus Meier <maekke@gentoo.org> tenshi-0.10-r3.ebuild:
   amd64/x86 stable, bug #256858
