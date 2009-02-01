@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/denyhosts
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.34 2008/10/30 10:57:15 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.35 2009/02/01 22:15:14 gentoofan23 Exp $
+
+  01 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml:
+  Pick up maintainership.
 
   30 Oct 2008; Raúl Porcel <armin76@gentoo.org> denyhosts-2.6-r1.ebuild:
   Add ~arm wrt #242990
