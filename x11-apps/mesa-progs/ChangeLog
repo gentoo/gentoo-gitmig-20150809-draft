@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.49 2009/01/05 18:05:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.50 2009/02/01 22:33:00 remi Exp $
+
+*mesa-progs-7.3 (01 Feb 2009)
+
+  01 Feb 2009; Rémi Cardona <remi@gentoo.org> +mesa-progs-7.3.ebuild:
+  bump to 7.3, copy from the x11 overlay
 
 *mesa-progs-7.2 (05 Jan 2009)
 
