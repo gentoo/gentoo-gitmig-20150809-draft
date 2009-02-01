@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.2.0.ebuild,v 1.2 2009/01/28 12:47:47 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.2.0.ebuild,v 1.3 2009/02/01 08:36:26 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ inherit kde4-meta
 SRC_URI="${SRC_URI}
 	mirror://gentoo/${PN}-4.2.0-backport-solid-bluetooth.patch.tar.bz2"
 DESCRIPTION="Solid: the KDE hardware library"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="bluetooth debug networkmanager"
 
 # solid/CMakeLists.txt has an add_subdirectory statement that depends on

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.129 2009/01/29 14:09:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.130 2009/02/01 06:42:07 jmbsvicetto Exp $
+
+  01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kcontrol-4.2.0.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
   29 Jan 2009; Alexey Shvetsov <alexxy@gentoo.org> metadata.xml:
   Fix metadata.xml

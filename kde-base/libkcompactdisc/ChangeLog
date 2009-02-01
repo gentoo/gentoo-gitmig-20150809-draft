@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkcompactdisc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcompactdisc/ChangeLog,v 1.16 2009/01/27 18:07:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcompactdisc/ChangeLog,v 1.17 2009/02/01 08:18:26 jmbsvicetto Exp $
+
+  01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  libkcompactdisc-4.2.0.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
 *libkcompactdisc-4.2.0 (27 Jan 2009)
 

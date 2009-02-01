@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktuberling
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.101 2009/01/27 17:59:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.102 2009/02/01 08:09:38 jmbsvicetto Exp $
+
+  01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ktuberling-4.2.0.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
 *ktuberling-4.2.0 (27 Jan 2009)
 

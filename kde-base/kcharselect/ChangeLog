@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.89 2009/01/27 16:41:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.90 2009/02/01 06:38:58 jmbsvicetto Exp $
+
+  01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kcharselect-4.2.0.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
 *kcharselect-4.2.0 (27 Jan 2009)
 

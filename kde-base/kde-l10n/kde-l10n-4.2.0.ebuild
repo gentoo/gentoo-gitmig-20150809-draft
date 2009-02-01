@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.2.0.ebuild,v 1.1 2009/01/27 19:21:26 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.2.0.ebuild,v 1.2 2009/02/01 06:54:59 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 DEPEND="sys-devel/gettext"
 RDEPEND=""
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="htmlhandbook"
 
 MY_LANGS="ar bg bn_IN ca cs csb da de el en_GB es et eu fi fr ga gl gu he hi hu

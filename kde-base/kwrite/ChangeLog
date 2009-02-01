@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwrite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.16 2009/01/27 18:05:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.17 2009/02/01 08:16:48 jmbsvicetto Exp $
+
+  01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kwrite-4.2.0.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
 *kwrite-4.2.0 (27 Jan 2009)
 

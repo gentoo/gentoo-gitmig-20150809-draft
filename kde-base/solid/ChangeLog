@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.18 2009/01/28 12:47:47 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.19 2009/02/01 08:36:26 jmbsvicetto Exp $
+
+  01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  solid-4.2.0.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
   28 Jan 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -files/solid-4.2.0-backport-solid-bluetooth.patch, solid-4.2.0.ebuild:

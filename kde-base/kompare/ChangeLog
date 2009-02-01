@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kompare
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.98 2009/01/27 17:35:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.99 2009/02/01 07:41:59 jmbsvicetto Exp $
+
+  01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kompare-4.2.0.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
 *kompare-4.2.0 (27 Jan 2009)
 

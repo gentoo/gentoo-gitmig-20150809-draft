@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kbreakout
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbreakout/ChangeLog,v 1.6 2009/01/27 16:39:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbreakout/ChangeLog,v 1.7 2009/02/01 06:36:01 jmbsvicetto Exp $
+
+  01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kbreakout-4.2.0.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
 *kbreakout-4.2.0 (27 Jan 2009)
 

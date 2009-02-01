@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kiconfinder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiconfinder/ChangeLog,v 1.6 2009/01/27 17:15:26 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiconfinder/ChangeLog,v 1.7 2009/02/01 07:18:37 jmbsvicetto Exp $
+
+  01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kiconfinder-4.2.0.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
 *kiconfinder-4.2.0 (27 Jan 2009)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.140 2009/01/30 23:15:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.141 2009/02/01 06:52:45 jmbsvicetto Exp $
+
+  01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kdebase-startkde-4.2.0.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
   30 Jan 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kdebase-startkde-4.2.0.ebuild:
