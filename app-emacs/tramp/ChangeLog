@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/tramp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.75 2008/11/11 06:24:57 ulm Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tramp/ChangeLog,v 1.76 2009/02/01 11:09:45 ulm Exp $
+
+*tramp-2.1.15 (01 Feb 2009)
+
+  01 Feb 2009; Ulrich Mueller <ulm@gentoo.org> +tramp-2.1.15.ebuild:
+  Version bump.
 
   11 Nov 2008; Ulrich Mueller <ulm@gentoo.org>
   -files/tramp-2.1.11-environment_fix.patch, -tramp-2.0.55.ebuild,
