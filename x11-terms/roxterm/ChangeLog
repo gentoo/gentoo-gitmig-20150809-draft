@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.31 2009/01/31 18:23:40 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.32 2009/02/01 21:31:14 maekke Exp $
+
+  01 Feb 2009; Markus Meier <maekke@gentoo.org> roxterm-1.11.1.ebuild:
+  amd64/x86 stable, bug #248872
 
 *roxterm-1.13.5 (31 Jan 2009)
 
