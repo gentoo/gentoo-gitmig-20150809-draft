@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.1.1.ebuild,v 1.2 2009/01/30 17:07:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.1.1.ebuild,v 1.3 2009/02/01 23:28:06 scarabeus Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="x11-libs/qt-core:4
 DEPEND="${RDEPEND}
 	dev-libs/boost
 	dev-libs/libxslt
-	kde-base/automoc"
+	>=kde-base/automoc-0.9.88"
 
 S="${WORKDIR}/${P/-server/}"
 
