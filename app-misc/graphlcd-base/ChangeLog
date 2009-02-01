@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/graphlcd-base
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.21 2008/10/14 13:32:11 rbu Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.22 2009/02/01 22:03:34 hd_brummy Exp $
+
+  01 Feb 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  graphlcd-base-0.1.5-r1.ebuild:
+  stabel x86 amd64; bug 245869
 
   14 Oct 2008; Robert Buchholz <rbu@gentoo.org> graphlcd-base-0.1.5.ebuild,
   graphlcd-base-0.1.5-r1.ebuild:
