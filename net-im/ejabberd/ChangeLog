@@ -1,6 +1,12 @@
 # ChangeLog for net-im/ejabberd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.48 2008/09/09 23:36:50 caleb Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.49 2009/02/01 09:47:34 patrick Exp $
+
+*ejabberd-2.0.2-r1 (01 Feb 2009)
+
+  01 Feb 2009; Patrick Lauer <patrick@gentoo.org> ejabberd-2.0.2.ebuild,
+  +ejabberd-2.0.2-r1.ebuild:
+  Small doc fix, docs are actually installed now
 
 *ejabberd-2.0.2 (09 Sep 2008)
 
