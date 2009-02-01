@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10-r1.ebuild,v 1.1 2009/01/31 19:08:02 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10-r1.ebuild,v 1.2 2009/02/01 02:20:13 mr_bones_ Exp $
 
 EAPI=2
 
@@ -19,7 +19,6 @@ RDEPEND="prolog? ( dev-lang/swi-prolog )
 DEPEND="${RDEPEND}
 	sys-devel/m4"
 
-
 src_configure() {
 
 	use prolog && want_prolog="swi_prolog"
@@ -31,7 +30,6 @@ src_configure() {
 		--enable-interfaces="c cxx ${want_prolog}"		\
 		|| die
 }
-
 
 src_install() {
 
