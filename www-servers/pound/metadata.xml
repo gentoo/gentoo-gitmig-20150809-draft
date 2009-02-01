@@ -15,8 +15,5 @@
   <use>
 	  <flag name='dynscaler'>Enable dynamic rescaling of back-end
 		  priorities</flag>
-	  <flag name='msdav'>if you want the Microsoft DAV extensions enabled</flag>
-	  <flag name='unsafe'>if you want the 'unsafe' characters passed through to
-		  the web servers</flag>
   </use>
 </pkgmetadata>
