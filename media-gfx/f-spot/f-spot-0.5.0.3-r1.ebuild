@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.5.0.3.ebuild,v 1.2 2009/01/05 17:21:58 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.5.0.3-r1.ebuild,v 1.1 2009/02/01 16:24:47 loki_val Exp $
 
 EAPI=2
 
@@ -44,6 +44,36 @@ MAKEOPTS="${MAKEOPTS} -j1"
 # See bug #203566
 RESTRICT="test"
 
+src_unpack() {
+	default
+}
+
+src_prepare() {
+	# Prevent scrollkeeper access violations
+	gnome2_omf_fix
+
+	# Run libtoolize
+	elibtoolize ${ELTCONF}
+
+
+	# http://bugs.gentoo.org/show_bug.cgi?id=252636
+	# http://bugzilla.gnome.org/565733
+	sed -i -e '/rm \-f $(pl/d' \
+		$(
+			grep -lr --include='Makefile.in' \
+			'rm -f \$(pl' "${S}"/extensions/Exporters
+		) || die "sed failed"
+}
+
 src_configure() {
-	:
+	gnome2_src_configure --disable-static
+}
+
+src_compile () {
+	default
+}
+
+src_install() {
+	gnome2_src_install
+	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
 }
