@@ -1,11 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.6.3.ebuild,v 1.2 2009/02/01 02:20:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/smuxi-0.6.3.ebuild,v 1.3 2009/02/01 02:55:41 loki_val Exp $
 
 EAPI="2"
 
 inherit base  mono
 
+DESCRIPTION="A flexible, irssi-like and user-friendly IRC client for the Gnome Desktop."
 HOMEPAGE="http://www.smuxi.org/page/Download"
 SRC_URI="http://smuxi.meebey.net/jaws/data/files/${P}.tar.gz"
 
@@ -37,6 +38,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc FEATURES TODO README || die "dodoc failed"
 }
