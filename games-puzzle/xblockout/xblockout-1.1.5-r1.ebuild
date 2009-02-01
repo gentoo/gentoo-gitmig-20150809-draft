@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/xblockout-1.1.5-r1.ebuild,v 1.4 2009/01/30 20:18:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/xblockout-1.1.5-r1.ebuild,v 1.5 2009/02/01 19:10:56 nixnut Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://www710.univ-lyon1.fr/~exco/XBL/xbl-${PV}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE=""
 
 DEPEND="x11-libs/libXext"
