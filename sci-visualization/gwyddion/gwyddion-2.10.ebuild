@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.10.ebuild,v 1.3 2008/12/03 22:36:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.10.ebuild,v 1.4 2009/02/01 12:16:54 bicatali Exp $
 
 DESCRIPTION="A software framework for SPM data analysis"
 HOMEPAGE="http://gwyddion.net/"
@@ -32,6 +32,7 @@ src_compile() {
 		$(use_enable nls) \
 		$(use_with fftw fftw3) \
 		$(use_with tiff) \
+		--disable-pascal \
 		--disable-desktop-file-update \
 		--enable-library-bloat
 	emake || die "emake failed."
