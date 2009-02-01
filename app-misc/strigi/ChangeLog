@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.21 2009/02/01 18:20:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.22 2009/02/01 23:00:48 jmbsvicetto Exp $
+
+  01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  strigi-0.6.3.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
   01 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> strigi-0.6.3.ebuild:
   Update deps. Per bug #257254.
