@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.315 2009/02/01 00:05:34 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.316 2009/02/01 10:39:52 klausman Exp $
+
+  01 Feb 2009; Tobias Klausmann <klausman@gentoo.org> php-5.2.8-r2.ebuild:
+  Stable on alpha, bug #249703
 
   31 Jan 2009; Tiago Cunha <tcunha@gentoo.org> php-5.2.8-r2.ebuild:
   stable sparc, bug 249703
