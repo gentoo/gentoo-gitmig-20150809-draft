@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.9 2009/01/31 18:00:20 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.10 2009/02/01 16:45:36 klausman Exp $
 
 # Patrick Lauer <patrick@gentoo.org> (23 Nov 2008)
 # needs webkit keyworded
@@ -29,3 +29,5 @@ net-im/mcabber otr
 media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
 
+# Needs nut and qstat respectively, neither is keyworded on alpha.
+net-analyzer/nagios-plugins ups nagios-game
