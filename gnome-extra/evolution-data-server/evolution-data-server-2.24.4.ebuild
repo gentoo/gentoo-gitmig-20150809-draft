@@ -1,28 +1,28 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.22.2.ebuild,v 1.5 2008/08/12 13:51:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.24.4.ebuild,v 1.1 2009/02/01 00:05:23 eva Exp $
 
-inherit db-use eutils flag-o-matic gnome2 autotools
+inherit db-use eutils flag-o-matic gnome2 autotools versionator
 
 DESCRIPTION="Evolution groupware backend"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
 
 LICENSE="LGPL-2 Sleepycat"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc ipv6 kerberos gnome-keyring krb4 ldap ssl"
 
-RDEPEND=">=dev-libs/glib-2.15.3
+RDEPEND=">=dev-libs/glib-2.16.1
 	>=x11-libs/gtk+-2.10
 	>=gnome-base/orbit-2.9.8
-	>=gnome-base/gnome-vfs-2.4
 	>=gnome-base/libbonobo-2.20.3
 	>=gnome-base/gconf-2
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2
 	>=dev-libs/libxml2-2
 	>=net-libs/libsoup-2.4
-	gnome-keyring? ( >=gnome-base/gnome-keyring-2.20 )
+	gnome-keyring? ( >=gnome-base/gnome-keyring-2.20.1 )
+	>=dev-db/sqlite-3.5
 	ssl? (
 		>=dev-libs/nspr-4.4
 		>=dev-libs/nss-3.9 )
@@ -63,6 +63,7 @@ pkg_setup() {
 	else
 		G2CONF="${G2CONF} $(use_with krb4 krb4 /usr)"
 	fi
+
 }
 
 src_unpack() {
@@ -74,22 +75,20 @@ src_unpack() {
 	# Fix broken libdb build
 	epatch "${FILESDIR}"/${PN}-1.11.3-no-libdb.patch
 
-	# Resolve symbols at execution time for setgid binaries
-	epatch "${FILESDIR}"/${PN}-no_lazy_bindings.patch
-
 	# Rewind in camel-disco-diary to fix a crash
 	epatch "${FILESDIR}"/${PN}-1.8.0-camel-rewind.patch
 
-	# Don't assume that endian.h and byteswap.h exist on all non sun os's
-	epatch "${FILESDIR}"/${PN}-2.21.90-icaltz-util.patch
+	# Fix building evo-exchange with --as-needed, upstream bug #342830
+	epatch "${FILESDIR}"/${PN}-2.23.6-as-needed.patch
 
-	# Don't error out if gtkdoc-rebase doesn't exist.
-	epatch "${FILESDIR}"/${PN}-2.21.4-gtkdoc-rebase.patch
-
-	# Fix building evo-exchange with --as-needed
-	epatch "${FILESDIR}"/${PN}-2.21.4-as-needed.patch
+	if use doc; then
+		sed "/^TARGET_DIR/i \GTKDOC_REBASE=/usr/bin/gtkdoc-rebase" -i gtk-doc.make
+	else
+		sed "/^TARGET_DIR/i \GTKDOC_REBASE=/bin/true" -i gtk-doc.make
+	fi
 
 	# gtk-doc-am and gnome-common needed for this
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
 
@@ -110,4 +109,23 @@ src_compile() {
 
 	cd "${S}"
 	gnome2_src_compile
+}
+
+src_install() {
+	gnome2_src_install
+
+	if use ldap; then
+		MY_MAJORV=$(get_version_component_range 1-2)
+		insinto /etc/openldap/schema
+		doins "${FILESDIR}"/calentry.schema
+		dosym "${D}"/usr/share/${PN}-${MY_MAJORV}/evolutionperson.schema /etc/openldap/schema/evolutionperson.schema
+	fi
+
+}
+
+pkg_postinst() {
+	if use ldap; then
+		elog ""
+		elog "LDAP schemas needed by evolution are installed in /etc/openldap/schema"
+	fi
 }

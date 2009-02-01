@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.24.3.ebuild,v 1.1 2009/01/18 06:48:42 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.24.3.ebuild,v 1.2 2009/02/01 00:05:23 eva Exp $
 
-inherit db-use eutils flag-o-matic gnome2 autotools
+inherit db-use eutils flag-o-matic gnome2 autotools versionator
 
 DESCRIPTION="Evolution groupware backend"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
@@ -102,4 +102,23 @@ src_compile() {
 
 	cd "${S}"
 	gnome2_src_compile
+}
+
+src_install() {
+	gnome2_src_install
+
+	if use ldap; then
+		MY_MAJORV=$(get_version_component_range 1-2)
+		insinto /etc/openldap/schema
+		doins "${FILESDIR}"/calentry.schema
+		dosym "${D}"/usr/share/${PN}-${MY_MAJORV}/evolutionperson.schema /etc/openldap/schema/evolutionperson.schema
+	fi
+
+}
+
+pkg_postinst() {
+	if use ldap; then
+		elog ""
+		elog "LDAP schemas needed by evolution are installed in /etc/openldap/schema"
+	fi
 }
