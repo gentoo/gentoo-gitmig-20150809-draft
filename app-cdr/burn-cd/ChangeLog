@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/burn-cd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burn-cd/ChangeLog,v 1.1 2008/06/06 21:38:03 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burn-cd/ChangeLog,v 1.2 2009/02/01 12:11:55 maekke Exp $
+
+  01 Feb 2009; Markus Meier <maekke@gentoo.org> burn-cd-1.7.4.ebuild:
+  amd64/x86 stable, bug #256548
 
 *burn-cd-1.7.4 (06 Jun 2008)
 
