@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/mindterm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.23 2008/05/15 01:30:53 rich0 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mindterm/ChangeLog,v 1.24 2009/02/01 09:13:03 serkan Exp $
+
+*mindterm-3.2-r1 (01 Feb 2009)
+
+  01 Feb 2009; Serkan Kaba <serkan@gentoo.org>
+  +files/mindterm-3.2-missingclasses.patch, -files/2.4.2-buildxml.patch,
+  +mindterm-3.2-r1.ebuild:
+  Revbump to add missing classes. Add jzlib to javadoc classpath. Migrate to
+  EAPI 2. Remove old patch.
 
   15 May 2008; Richard Freeman <rich0@gentoo.org> mindterm-3.2.ebuild:
   amd64 stable - 219672
