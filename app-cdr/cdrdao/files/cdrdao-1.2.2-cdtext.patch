@@ -1,0 +1,28 @@
+
+#!/bin/sh /usr/share/dpatch/dpatch-run
+## 07-cdtext.dpatch by Anonymous
+##
+## DP: Adds missing entries to TOC output when using CdText (Closes: #458357).
+
+@DPATCH@
+
+diff -Naurp cdrdao-1.2.2.orig/trackdb/CdTextItem.cc cdrdao-1.2.2/trackdb/CdTextItem.cc
+--- cdrdao-1.2.2.orig/trackdb/CdTextItem.cc	2004-04-28 00:46:05.000000000 +0000
++++ cdrdao-1.2.2/trackdb/CdTextItem.cc	2007-12-30 16:35:40.000000000 +0000
+@@ -320,6 +320,15 @@ int CdTextItem::isTrackPack(PackType typ
+   int ret;
+   
+   switch (type) {
++  case CDTEXT_DISK_ID:
++  case CDTEXT_GENRE:
++  case CDTEXT_TOC_INFO1:
++  case CDTEXT_TOC_INFO2:
++  case CDTEXT_RES1:
++  case CDTEXT_RES2:
++  case CDTEXT_RES3:
++  case CDTEXT_RES4:
++  case CDTEXT_SIZE_INFO:
+   case CDTEXT_TITLE:
+   case CDTEXT_PERFORMER:
+   case CDTEXT_SONGWRITER:
+

@@ -1,0 +1,30 @@
+Snatched from Debian
+
+#!/bin/sh /usr/share/dpatch/dpatch-run
+## 06-tocparser.dpatch by Florian Forster <octo@verplant.org>
+##
+## DP: Undo upstream removal of automatic reading of the track lengths in TOC
+## DP: files (Closes: #440419).
+
+@DPATCH@
+
+diff -Naurp cdrdao-1.2.2.orig/trackdb/TocParser.g cdrdao-1.2.2/trackdb/TocParser.g
+--- cdrdao-1.2.2.orig/trackdb/TocParser.g	2005-11-03 01:08:16.000000000 +0000
++++ cdrdao-1.2.2/trackdb/TocParser.g	2007-09-24 11:58:34.000000000 +0000
+@@ -496,6 +496,15 @@ subTrack < [ TrackData::Mode trackType, 
+ 	  }
+        >>
+     )
++    << if ($st != NULL && $st->length() == 0) {
++         // try to determine length 
++         if ($st->determineLength() != 0) {
++	   message(-2, "%s:%d: Cannot determine length of track data specification.",
++		   filename_, $lineNr);
++	   error_ = 1;
++	 }
++       }
++    >> 
+     ;
+     // fail action
+     << delete $st, $st = NULL;
+

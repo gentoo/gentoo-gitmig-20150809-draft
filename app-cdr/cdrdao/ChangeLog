@@ -1,6 +1,16 @@
 # ChangeLog for app-cdr/cdrdao
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.121 2008/12/05 13:23:15 ssuominen Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.122 2009/02/01 01:42:56 loki_val Exp $
+
+*cdrdao-1.2.2-r3 (01 Feb 2009)
+
+  01 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/cdrdao-1.2.2-cdtext.patch, +files/cdrdao-1.2.2-device.patch,
+  +files/cdrdao-1.2.2-toc2cue.patch, +files/cdrdao-1.2.2-tocparser.patch,
+  +cdrdao-1.2.2-r3.ebuild:
+  EAPI-2, fix bug 238891, CDTEXT and toc2cue problems. Import patches from
+  Debian for a few issues. Remove RESTRICT=strip, which seems to be
+  left-overs from a user-submitted ebuild in bug 43003.
 
   05 Dec 2008; <ssuominen@gentoo.org> cdrdao-1.2.2-r2.ebuild:
   Block cue2toc because cdrdao also installs cue2toc application wrt

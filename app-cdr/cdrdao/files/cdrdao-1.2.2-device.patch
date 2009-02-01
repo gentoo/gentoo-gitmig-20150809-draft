@@ -1,0 +1,21 @@
+
+#!/bin/sh /usr/share/dpatch/dpatch-run
+## 04-device.dpatch by Free Ekanayaka <free@64studio.com>
+##
+## DP: Change default device to /dev/cdrw (Closes: #452123).
+
+@DPATCH@
+
+diff -Naur cdrdao-1.2.2.orig/dao/main.cc cdrdao-1.2.2/dao/main.cc
+--- cdrdao-1.2.2.orig/dao/main.cc	2006-09-19 09:07:11.000000000 +0000
++++ cdrdao-1.2.2/dao/main.cc	2006-10-06 20:24:57.000000000 +0000
+@@ -140,7 +140,7 @@
+ 
+ #elif defined(__linux__)
+ 
+-static const char *SCSI_DEVICE = "/dev/cdrecorder";
++static const char *SCSI_DEVICE = "/dev/cdrw";
+ static int FIFO_BUFFERS = 32;
+ 
+ #else
+
