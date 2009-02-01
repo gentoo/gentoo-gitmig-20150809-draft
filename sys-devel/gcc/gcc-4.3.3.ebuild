@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.3.ebuild,v 1.1 2009/01/27 21:32:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.3.ebuild,v 1.2 2009/02/01 18:14:08 vapier Exp $
 
 PATCH_VER="1.0"
 UCLIBC_VER="1.0"
@@ -55,18 +55,13 @@ DEPEND="${RDEPEND}
 	test? ( sys-devel/autogen dev-util/dejagnu )
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/bison-1.875
-	amd64? (
-		>=sys-libs/glibc-2.7-r2
-		multilib? (
-			gcj? ( app-emulation/emul-linux-x86-xlibs )
-		)
-	)
+	amd64? ( multilib? ( gcj? ( app-emulation/emul-linux-x86-xlibs ) ) )
 	ppc? ( >=${CATEGORY}/binutils-2.17 )
 	ppc64? ( >=${CATEGORY}/binutils-2.17 )
 	>=${CATEGORY}/binutils-2.15.94"
 PDEPEND=">=sys-devel/gcc-config-1.4"
 if [[ ${CATEGORY} != cross-* ]] ; then
-	PDEPEND="${PDEPEND} elibc_glibc? ( >=sys-libs/glibc-2.6 )"
+	PDEPEND="${PDEPEND} elibc_glibc? ( >=sys-libs/glibc-2.8 )"
 fi
 
 src_unpack() {
