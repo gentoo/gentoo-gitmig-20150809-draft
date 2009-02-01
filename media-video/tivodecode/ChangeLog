@@ -1,9 +1,6 @@
 # ChangeLog for media-video/tivodecode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tivodecode/ChangeLog,v 1.3 2009/02/01 21:35:26 maekke Exp $
-
-  01 Feb 2009; Markus Meier <maekke@gentoo.org> ChangeLog:
-  add ~x86, bug #256863
+# $Header: /var/cvsroot/gentoo-x86/media-video/tivodecode/ChangeLog,v 1.4 2009/02/01 21:37:06 maekke Exp $
 
   31 Jan 2009; Gordon Malm <gengor@gentoo.org> tivodecode-0.2_pre4.ebuild:
   Works for me, add ~x86 keyword
