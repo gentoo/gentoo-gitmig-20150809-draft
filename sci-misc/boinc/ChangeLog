@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.48 2009/02/01 14:33:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.49 2009/02/01 15:55:16 scarabeus Exp $
+
+  01 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> boinc-6.4.5.ebuild:
+  Fix bug #249997. Wrong dependency on ca-certificates.
 
   01 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> files/boinc.init:
   Update init script so it works with baselayout1 again. Per bug #257113.
