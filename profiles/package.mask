@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9457 2009/02/01 18:44:32 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9458 2009/02/01 21:52:14 ikelos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Auty <ikelos@gentoo.org> (1 Feb 2009)
+# Masked for removal in 30 days.  Old and unmaintained.
+# Vmware herd has no access to the product, and it's
+# for a very old version.  See bug 143232.
+app-emulation/vmware-esx-console
 
 # Rémi Cardona <remi@gentoo.org> (1 Feb 2009)
 # Temporary mask for xf86-video-intel and friends while they get a wee bit more
