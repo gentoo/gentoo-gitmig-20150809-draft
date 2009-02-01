@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/pidgin-libnotify-0.13.ebuild,v 1.8 2008/01/07 23:12:58 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/pidgin-libnotify-0.14.ebuild,v 1.1 2009/02/01 02:01:38 tester Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gaim-libnotify/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="nls debug"
 
 RDEPEND=">=x11-libs/libnotify-0.3.2
@@ -25,6 +25,12 @@ pkg_setup() {
 		eerror "You need to compile net-im/pidgin with USE=gtk"
 		die "Missing gtk USE flag on net-im/pidgin"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/pidgin-libnotify-showbutton.patch
 }
 
 src_compile() {
