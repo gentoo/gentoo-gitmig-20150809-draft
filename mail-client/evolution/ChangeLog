@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/evolution
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.254 2008/12/27 19:22:51 ford_prefect Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.255 2009/02/01 10:11:43 eva Exp $
+
+*evolution-2.24.4 (01 Feb 2009)
+
+  01 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +evolution-2.24.4.ebuild:
+  Bump to 2.24.4. Tons of bug fixes.
 
 *evolution-2.24.2-r2 (27 Dec 2008)
 
