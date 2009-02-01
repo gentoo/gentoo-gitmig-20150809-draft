@@ -66,15 +66,15 @@ start() {
 
 	# check for baselayout version
 	if [[ "`start-stop-daemon --version |awk -F' ' '{print $2}'`" = "(OpenRC)" ]]; then
-		PARAMS="--stdout ${LOGFILE} --stderr ${LOGFILE} -- ${ARGS}"
+		PARAMS="--background --stdout ${LOGFILE} --stderr ${LOGFILE} -- ${ARGS}"
 	else
-		PARAMS="-- ${ARGS} &> ${LOGFILE}"
+		PARAMS="-- ${ARGS} >> ${LOGFILE} 2>&1 &"
 	fi
 
-	${CHRT} start-stop-daemon \
+	eval ${CHRT} start-stop-daemon \
 		--quiet --start --chdir ${RUNTIMEDIR} \
 		--exec ${BOINCBIN} --chuid ${USER}:${GROUP} \
-		--background --nicelevel ${NICELEVEL} \
+		--nicelevel ${NICELEVEL} \
 		${PARAMS}
 
 	RESULT=$?
