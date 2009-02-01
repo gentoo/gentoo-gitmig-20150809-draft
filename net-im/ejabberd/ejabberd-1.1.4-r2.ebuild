@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.4-r1.ebuild,v 1.5 2009/02/01 10:01:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.4-r2.ebuild,v 1.1 2009/02/01 10:01:06 patrick Exp $
 
 inherit eutils multilib
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://ejabberd.jabber.ru/"
 SRC_URI="http://process-one.net/en/projects/${PN}/download/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug mod_irc mod_muc mod_pubsub ldap odbc ssl web zlib"
 
 DEPEND=">=net-im/jabber-base-0.01
@@ -70,6 +70,7 @@ src_install() {
 	chown -R jabber:jabber "${D}${JABBER_LOG}"
 	chown -R jabber:jabber "${D}/usr/$(get_libdir)/erlang/lib/${P}"
 
+	cd "${WORKDIR}/${P}"
 	insinto /usr/share/doc/${PF}
 	dohtml doc/*.{html,png}
 
