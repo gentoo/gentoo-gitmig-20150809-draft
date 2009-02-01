@@ -1,8 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.8.2.ebuild,v 1.1 2008/08/31 05:50:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.8.2.ebuild,v 1.2 2009/02/01 21:41:07 mr_bones_ Exp $
 
-EAPI=1
 inherit python games distutils
 
 DESCRIPTION="A chess client for Gnome"
@@ -17,7 +16,7 @@ IUSE="gstreamer"
 DEPEND="dev-python/pygtk
 	dev-python/pygobject
 	dev-python/pycairo
-	dev-python/pysqlite:2
+	dev-python/pysqlite
 	gstreamer? ( dev-python/gst-python )
 	dev-python/gnome-python-desktop
 	x11-themes/gnome-icon-theme"
@@ -27,9 +26,4 @@ src_install() {
 	distutils_src_install --install-scripts="${GAMES_BINDIR}"
 	dodoc AUTHORS README
 	prepgamesdirs
-}
-
-pkg_postinst() {
-	games_pkg_postinst
-	distutils_pkg_postinst
 }
