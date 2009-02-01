@@ -1,0 +1,10 @@
+--- rss-glx_0.8.1-orig/other_src/Makefile.am
++++ rss-glx_0.8.1/other_src/Makefile.am
+@@ -23,6 +23,7 @@ EXTRA_DIST = $(man_MANS)
+ noinst_PROGRAMS = stringify
+ stringify_LDADD = @BZIP2@
+ 
++matrixview_CFLAGS = @Wand_CFLAGS@
+ matrixview_LDADD = @BZIP2@ @Wand_LIBS@
+ matrixview_textures.c: stringify matrixview_textures/cfont matrixview_textures/cpics
+ 	./stringify matrixview_textures/cfont matrixview_textures/cpics > matrixview_textures.c

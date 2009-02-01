@@ -1,6 +1,18 @@
 # ChangeLog for x11-misc/rss-glx
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.61 2008/04/04 17:54:56 je_fro Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.62 2009/02/01 05:12:54 dirtyepic Exp $
+
+*rss-glx-0.8.1-r5 (01 Feb 2009)
+
+  01 Feb 2009; Ryan Hill <dirtyepic@gentoo.org>
+  +files/rss-glx-0.8.1-gcc43.patch, +files/rss-glx-0.8.1-gentoo.patch,
+  +files/rss-glx-0.8.1-imagemagick.patch, +rss-glx-0.8.1-r5.ebuild:
+  Revision bump.
+    Bug #220825 - configure error w/ >=libtool-2
+    Bug #221286 - install into /usr/lib instead of /usr/lib64
+    Bug #227071 - GCC 4.3 compile error
+    Should also fix bug #245415 (libtool again).
+    Drop 3dnow and sse USE flags (were removed upstream in 0.8.1)
 
   04 Apr 2008; Jeff Gardner <je_fro@gentoo.org>
   -files/rss-glx-0.8.1-r1-gentoo.patch,
