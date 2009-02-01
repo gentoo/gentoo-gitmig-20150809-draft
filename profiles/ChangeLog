@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2316 2009/02/01 14:59:25 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2317 2009/02/01 16:39:46 jokey Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Feb 2009; Markus Ullmann <jokey@gentoo.org> package.mask:
+  Drop package mask for bug #257162
 
   02 Feb 2009; Jim Ramsay <lack@gentoo.org> package.mask:
   Masking net-misc/amazonmp3-libcompat until it is actually used
