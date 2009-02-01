@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/yum
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.7 2008/09/27 13:41:29 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.8 2009/02/01 01:53:29 patrick Exp $
+
+*yum-3.2.8-r1 (01 Feb 2009)
+
+  01 Feb 2009; Patrick Lauer <patrick@gentoo.org> +yum-3.2.8-r1.ebuild:
+  Fixing deps for tests, closes #255696
 
   27 Sep 2008; Petteri Räty <betelgeuse@gentoo.org> yum-3.2.8.ebuild:
   Use EAPI 2 use dependencies instead of built_with_use.
