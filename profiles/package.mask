@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9450 2009/01/31 21:37:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9451 2009/02/01 02:55:00 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tomas Chvatal <scarabeus@gentoo.org> (1 Feb 2009)
+# mask for removal in 30 days. Not needed anymore integrated in boinc
+sci-astronomy/setiathome
 
 # Markus Ullmann <jokey@gentoo.org> (31 Jan 2009)
 # Mask for removal in 30 days (found its way into mainline kde as kde-base/ksudoku)
