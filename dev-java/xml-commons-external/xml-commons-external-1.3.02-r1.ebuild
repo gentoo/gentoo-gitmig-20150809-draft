@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/xml-commons-external-1.3.02-r1.ebuild,v 1.9 2007/01/03 20:36:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/xml-commons-external-1.3.02-r1.ebuild,v 1.10 2009/02/01 06:17:26 serkan Exp $
 
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Thirdparty libraries for xml-commons"
 HOMEPAGE="http://xml.apache.org/commons/"
-SRC_URI="mirror://gentoo/distfiles/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 # svn co http://svn.apache.org/repos/asf/xml/commons/tags/xml-commons-external-1_3_02/java/external/ xml-commons-external-1.3.02
 # tar cjf xml-commons-external-1.3.02.tar.bz2 xml-commons-external-1.3.02
 
