@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kopete-antispam
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-antispam/ChangeLog,v 1.1 2009/02/01 18:45:34 alexxy Exp $
+
+*kopete-antispam-0.4 (01 Feb 2009)
+
+  01 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> +metadata.xml,
+  +kopete-antispam-0.4.ebuild:
+  Initial import of kopete-antispam; this fixes bug #225655
+
