@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/gnome-do-plugins-0.8.0.ebuild,v 1.1 2009/02/01 17:57:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/gnome-do-plugins-0.8.0.ebuild,v 1.2 2009/02/01 21:27:49 mr_bones_ Exp $
 
 inherit eutils autotools gnome2 mono versionator
 
@@ -19,7 +19,7 @@ IUSE="banshee evo"
 RDEPEND=">=gnome-extra/gnome-do-${PV}
 		dev-dotnet/wnck-sharp
 		banshee? ( >=media-sound/banshee-1.4.2 )
-		evolution? ( dev-dotnet/evolution-sharp )"
+		evo? ( dev-dotnet/evolution-sharp )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/monodevelop"
