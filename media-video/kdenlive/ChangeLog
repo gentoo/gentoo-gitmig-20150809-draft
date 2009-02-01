@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.35 2009/02/01 18:16:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.36 2009/02/01 18:34:21 scarabeus Exp $
+
+  01 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> kdenlive-0.7.2.ebuild:
+  Ease deps a bit.
 
 *kdenlive-0.7.2 (01 Feb 2009)
 
