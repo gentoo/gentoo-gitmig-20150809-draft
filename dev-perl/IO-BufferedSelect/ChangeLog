@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-BufferedSelect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-BufferedSelect/ChangeLog,v 1.7 2009/01/25 15:07:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-BufferedSelect/ChangeLog,v 1.8 2009/02/01 19:06:54 nixnut Exp $
+
+  01 Feb 2009; nixnut <nixnut@gentoo.org> IO-BufferedSelect-1.0.ebuild:
+  ppc stable #256858
 
   25 Jan 2009; Markus Meier <maekke@gentoo.org>
   IO-BufferedSelect-1.0.ebuild:
