@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jreleaseinfo/jreleaseinfo-1.3.0-r1.ebuild,v 1.1 2009/01/31 19:50:47 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jreleaseinfo/jreleaseinfo-1.3.0-r1.ebuild,v 1.2 2009/02/01 02:19:55 mr_bones_ Exp $
 
 EAPI=2
 inherit java-pkg-2 java-ant-2
@@ -25,7 +25,6 @@ src_prepare() {
 	java-pkg-2_src_prepare
 	java-ant_rewrite-classpath build.xml
 }
-
 
 src_install() {
 	java-pkg_newjar "target/${P}.jar"
