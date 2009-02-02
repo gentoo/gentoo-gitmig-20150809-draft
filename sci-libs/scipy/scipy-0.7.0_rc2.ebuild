@@ -1,41 +1,39 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.6.0-r4.ebuild,v 1.8 2008/10/28 12:51:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.0_rc2.ebuild,v 1.1 2009/02/02 16:50:21 bicatali Exp $
 
 EAPI=1
-NEED_PYTHON=2.3
+NEED_PYTHON=2.4
+MYP=${P/_rc/rc}
 inherit eutils distutils fortran flag-o-matic
 
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MYP}.tar.gz"
 DESCRIPTION="Scientific algorithms library for Python"
 HOMEPAGE="http://www.scipy.org/"
 LICENSE="BSD"
 
 SLOT="0"
 
-IUSE="fftw umfpack sandbox"
+IUSE="test umfpack"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-CDEPEND="dev-python/numpy
+CDEPEND=">=dev-python/numpy-1.2
 	virtual/cblas
 	virtual/lapack
-	fftw? ( sci-libs/fftw:2.1 )
-	umfpack? ( sci-libs/umfpack )
-	sandbox? ( >=sci-libs/netcdf-3.6 x11-libs/libX11 )"
+	umfpack? ( sci-libs/umfpack )"
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
+	test? ( dev-python/nose )
 	umfpack? ( dev-lang/swig )"
 
 RDEPEND="${CDEPEND}
 	dev-python/imaging"
 
-# test still buggy on lapack with 2 failures on check_syevr
-# (lapack float). check every version bump.
-RESTRICT="test"
+DOCS="THANKS.txt LATEST.txt TOCHANGE.txt"
 
-DOCS="THANKS.txt DEVELOPERS.txt LATEST.txt TOCHANGE.txt FORMAT_GUIDELINES.txt"
+S="${WORKDIR}/${MYP}"
 
 scipy_fortran_setup() {
 	append-ldflags -shared
@@ -57,9 +55,6 @@ scipy_fortran_setup() {
 		*)	eerror "Unknown fortran compiler: ${FORTRANC}"
 			die "scipy_fortran_setup failed" ;;
 	esac
-
-	# when fortran flags are set, pic is removed.
-	use amd64 && [[ -n ${FFLAGS} ]] && FFLAGS="${FFLAGS} -fPIC"
 	export SCIPY_FCONFIG="config_fc --fcompiler=${fc} --noopt --noarch"
 }
 
@@ -72,42 +67,37 @@ pkg_setup() {
 	fi
 	# scipy automatically detects libraries by default
 	export {FFTW,FFTW3,UMFPACK}=None
-	use fftw && unset FFTW
 	use umfpack && unset UMFPACK
-	use sandbox && elog "Warning: using sandbox modules at your own risk!"
 	scipy_fortran_setup
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-implicit.patch
-	epatch "${FILESDIR}"/${P}-randomkit.patch
-	epatch "${FILESDIR}"/${P}-cdf.patch
-	epatch "${FILESDIR}"/${P}-fftw-fix.patch
-	epatch "${FILESDIR}"/${P}-ndimage.patch
+	epatch "${FILESDIR}"/${PN}-0.7.0_beta1-implicit.patch
+	epatch "${FILESDIR}"/${PN}-0.6.0-stsci.patch
 	cat > site.cfg <<-EOF
 		[DEFAULT]
 		library_dirs = /usr/$(get_libdir)
 		include_dirs = /usr/include
 		[atlas]
 		include_dirs = $(pkg-config --cflags-only-I \
-			cblas lapack | sed -e 's/^-I//' -e 's/ -I/:/g')
+			cblas | sed -e 's/^-I//' -e 's/ -I/:/g')
 		library_dirs = $(pkg-config --libs-only-L \
-			cblas lapack | sed -e \
+			cblas blas lapack| sed -e \
 			's/^-L//' -e 's/ -L/:/g' -e 's/ //g'):/usr/$(get_libdir)
 		atlas_libs = $(pkg-config --libs-only-l \
-			cblas | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
+			cblas blas | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
 		lapack_libs = $(pkg-config --libs-only-l \
 			lapack | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
 		[blas_opt]
 		include_dirs = $(pkg-config --cflags-only-I \
 			cblas | sed -e 's/^-I//' -e 's/ -I/:/g')
 		library_dirs = $(pkg-config --libs-only-L \
-			cblas | sed -e 's/^-L//' -e 's/ -L/:/g' \
+			cblas blas | sed -e 's/^-L//' -e 's/ -L/:/g' \
 			-e 's/ //g'):/usr/$(get_libdir)
 		libraries = $(pkg-config --libs-only-l \
-			cblas | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
+			cblas blas | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
 		[lapack_opt]
 		library_dirs = $(pkg-config --libs-only-L \
 			lapack | sed -e 's/^-L//' -e 's/ -L/:/g' \
@@ -115,17 +105,11 @@ src_unpack() {
 		libraries = $(pkg-config --libs-only-l \
 			lapack | sed -e 's/^-l//' -e 's/ -l/, /g' -e 's/,.pthread//g')
 	EOF
-	if use sandbox; then
-		cd scipy/sandbox
-		ls -1 */__init__.py \
-			| sed -e 's:/__init__.py::' \
-			| grep -v exmplpackage \
-			> enabled_packages.txt \
-			|| die "sandbox listing failed"
-	fi
 }
 
 src_compile() {
+	# when fortran flags are set, pic is removed.
+	use amd64 && [[ -n ${FFLAGS} ]] && FFLAGS="${FFLAGS} -fPIC"
 	distutils_src_compile ${SCIPY_FCONFIG}
 }
 
@@ -135,10 +119,8 @@ src_test() {
 		--no-compile \
 		${SCIPY_FCONFIG} || die "install test failed"
 	pushd "${S}"/test/lib*/python
-	PYTHONPATH=. "${python}" -c \
-		"import scipy as s;import sys;sys.exit(s.test(10,3))" \
-		 2>&1 | tee test.log
-	grep -q OK test.log || die "test failed"
+	PYTHONPATH=. "${python}" -c "import scipy; scipy.test('full')" 2>&1 | tee test.log
+	grep -q ^ERROR test.log && die "test failed"
 	popd
 	rm -rf test
 }
