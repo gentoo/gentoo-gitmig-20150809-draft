@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.316 2009/02/01 10:39:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.317 2009/02/02 05:41:44 vapier Exp $
+
+  02 Feb 2009; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Document local USE=pic flag.
 
   01 Feb 2009; Tobias Klausmann <klausman@gentoo.org> php-5.2.8-r2.ebuild:
   Stable on alpha, bug #249703
