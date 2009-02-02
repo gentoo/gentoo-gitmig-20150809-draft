@@ -1,0 +1,80 @@
+diff -Nur gretl-1.8.0.orig/cli/Makefile.in gretl-1.8.0/cli/Makefile.in
+--- gretl-1.8.0.orig/cli/Makefile.in	2008-03-24 12:46:11.000000000 +0000
++++ gretl-1.8.0/cli/Makefile.in	2009-02-02 23:48:16.880402952 +0000
+@@ -3,6 +3,7 @@
+ 
+ CC = @CC@
+ CFLAGS = @CFLAGS@
++LDFLAGS = @LDFLAGS@
+ MAKE = @MAKE@
+ INSTALL = @INSTALL@
+ 
+@@ -51,7 +52,7 @@
+ 	$(CC) $(CFLAGS) -MM $< > .deps/$*.d 
+ 
+ $(CLI): .deps $(OBJS)
+-	$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJS) $(GRETLLIB) $(READLINE_LIBS) 
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $(OBJS) $(GRETLLIB) $(READLINE_LIBS) 
+ 
+ .deps:
+ 	mkdir $@
+diff -Nur gretl-1.8.0.orig/gui2/Makefile.in gretl-1.8.0/gui2/Makefile.in
+--- gretl-1.8.0.orig/gui2/Makefile.in	2008-12-11 18:44:33.000000000 +0000
++++ gretl-1.8.0/gui2/Makefile.in	2009-02-02 23:20:16.989339642 +0000
+@@ -7,6 +7,7 @@
+ libdir = @libdir@
+ CC = @CC@
+ CFLAGS = @CFLAGS@
++LDFLAGS = @LDFLAGS@
+ MAKE = @MAKE@
+ INSTALL = @INSTALL@
+ LN = @LN_S@
+@@ -164,7 +165,7 @@
+ 	$(CC) $(CFLAGS) -MM $< > .deps/$*.d 
+ 
+ $(PROG): .deps $(OBJS) $(HACK_OBJ) $(GTKSOURCEVIEW_LITE) 
+-	$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJS) $(HACK_OBJ) $(LIBS) $(INETLIB) $(CARBONLIB)
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $(OBJS) $(HACK_OBJ) $(LIBS) $(INETLIB) $(CARBONLIB)
+ 
+ $(HACK_OBJ): $(HACK_SRC) $(HACK_HDR)
+ 	$(CC) $(CFLAGS) $(GTK_CFLAGS) -c $<
+diff -Nur gretl-1.8.0.orig/lib/Makefile.in gretl-1.8.0/lib/Makefile.in
+--- gretl-1.8.0.orig/lib/Makefile.in	2008-12-14 17:35:18.000000000 +0000
++++ gretl-1.8.0/lib/Makefile.in	2009-02-02 23:21:00.017863458 +0000
+@@ -6,6 +6,7 @@
+ bindir = @bindir@
+ CC = @CC@
+ CFLAGS = @CFLAGS@
++LDFLAGS = @LDFLAGS@
+ MAKE = @MAKE@
+ INSTALL = @INSTALL@
+ LN = @LN_S@
+@@ -231,7 +232,7 @@
+ 	$(CC) $(CFLAGS) -MM -MT $*.lo $< > .deps/$*.d
+ 
+ $(LIBGRETL): .deps $(LOBJS) $(AUX_LOBJ)
+-	$(LIBTOOL) --mode=link $(CC) -o $@ $(LOBJS) $(AUX_LOBJ) \
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $(LOBJS) $(AUX_LOBJ) \
+ 	-rpath $(prefix)/lib $(LIBS) \
+ 	-version-info $(CURRENT):$(REVISION):$(AGE)
+ 
+diff -Nur gretl-1.8.0.orig/plugin/Makefile.in gretl-1.8.0/plugin/Makefile.in
+--- gretl-1.8.0.orig/plugin/Makefile.in	2008-12-09 15:49:20.000000000 +0000
++++ gretl-1.8.0/plugin/Makefile.in	2009-02-02 23:21:36.595339921 +0000
+@@ -7,6 +7,7 @@
+ 
+ CC = @CC@
+ CFLAGS = @CFLAGS@
++LDFLAGS = @LDFLAGS@
+ MAKE = @MAKE@
+ INSTALL = @INSTALL@
+ LN = @LN_S@
+@@ -47,7 +48,7 @@
+ 
+ LIBTOOL = ../libtool
+ COMPILE = $(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) 
+-LINK = $(LIBTOOL) --mode=link $(CC) -module -avoid-version -rpath $(plugindir)
++LINK = $(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -module -avoid-version -rpath $(plugindir)
+ 
+ GRETLINC = -I$(topsrc)/lib/src
+ GRETLLIB = ../lib/libgretl-1.0.la

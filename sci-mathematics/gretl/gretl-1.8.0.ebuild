@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.7.7.ebuild,v 1.1 2008/08/30 16:59:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.8.0.ebuild,v 1.1 2009/02/02 23:52:23 bicatali Exp $
 
 USE_EINSTALL=true
-EAPI=1
+EAPI=2
 inherit eutils gnome2 elisp-common
 
 DESCRIPTION="Regression, econometrics and time-series library"
@@ -26,8 +26,12 @@ RDEPEND="dev-libs/libxml2
 	readline? ( sys-libs/readline )
 	gmp? ( dev-libs/gmp )
 	accessibility? ( app-accessibility/flite )
-	gtk? ( >=x11-libs/gtk+-2.10:2 )
-	gnome? ( gnome-base/libgnomeui
+	gtk?  ( sci-visualization/gnuplot[gd]
+			media-libs/gd[png]
+			x11-libs/gtk+:2 )
+	gnome? ( sci-visualization/gnuplot[gd]
+			 media-libs/gd[png]
+			 gnome-base/libgnomeui
 			 gnome-base/libgnomeprint:2.2
 			 gnome-base/libgnomeprintui:2.2
 			 gnome-base/gconf:2 )
@@ -40,22 +44,13 @@ DEPEND="${RDEPEND}
 
 SITEFILE=50${PN}-gentoo.el
 
-pkg_setup() {
-	if use gtk && ! built_with_use sci-visualization/gnuplot gd; then
-		eerror "gretl gtk GUI needs gnuplot with gd and gd with png"
-		die "Please install gnuplot with gd and png use flags enabled"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.7.5-locale.patch
-	epatch "${FILESDIR}"/${PN}-1.7.6-ldflags.patch
+	epatch "${FILESDIR}"/${PN}-1.8.0-ldflags.patch
+	epatch "${FILESDIR}"/${PN}-1.7.9-nls.patch
 }
 
-src_compile() {
-
+src_configure() {
 	local myconf
 	if use gtk; then
 		myconf="--enable-gui"
@@ -73,8 +68,10 @@ src_compile() {
 		$(use_with odbc) \
 		$(use_with accessibility audio) \
 		${myconf} \
-		LAPACK_LIBS="$(pkg-config --libs lapack)" \
-		|| die "econf failed"
+		LAPACK_LIBS="$(pkg-config --libs lapack)"
+}
+
+src_compile() {
 
 	emake || die "emake failed"
 
@@ -85,13 +82,13 @@ src_compile() {
 
 src_install() {
 	if use gnome; then
-		gnome2_src_install gnome_prefix="${D}"/usr
+		gnome2_src_install gnome_prefix="${D}"/usr svprefix="${D}usr"
 	else
-		einstall || die "einstall failed"
+		einstall svprefix="${D}usr"
 	fi
 	if use gtk && ! use gnome; then
 		doicon gnome/gretl.png
-		make_desktop_entry gretlx11 gretl
+		make_desktop_entry gretl_x11 gretl
 	fi
 	if use emacs; then
 		elisp-install ${PN} utils/emacs/gretl.{el,elc} \
