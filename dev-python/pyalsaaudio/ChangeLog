@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyalsaaudio
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.7 2008/08/30 15:32:18 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.8 2009/02/02 10:52:29 patrick Exp $
+
+*pyalsaaudio-0.4 (02 Feb 2009)
+
+  02 Feb 2009; Patrick Lauer <patrick@gentoo.org> +pyalsaaudio-0.4.ebuild:
+  Bump to 0.4. Fixes #254912
 
   30 Aug 2008; Brent Baude <ranger@gentoo.org> pyalsaaudio-0.2.ebuild:
   Marking pyalsaaudio-0.2 ~ppc for bug 236057
