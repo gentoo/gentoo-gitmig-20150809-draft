@@ -47,7 +47,22 @@
 -CFLAGS=-I. -I../JLib -O3 -Wall -Werror -Wshadow $(CPU_OPTS) -ffast-math -c `$(SDL_CONFIG) --cflags`
 -LDFLAGS=-L. -ffast-math -lSDL_image -lSDL_ttf -lSDL_mixer `$(SDL_CONFIG) --libs`
 +CFLAGS=-I. -I../JLib $(CPU_OPTS) -c `$(SDL_CONFIG) --cflags`
-+LDFLAGS=-L. -lSDL_image -lSDL_ttf -lSDL_mixer `$(SDL_CONFIG) --libs`
++LDLIBS=-L. -lSDL_image -lSDL_ttf -lSDL_mixer `$(SDL_CONFIG) --libs`
  
  
  JLib: 
+@@ -53,12 +53,12 @@
+ 	g++ $(CFLAGS) $(DEFINES) $< -o $@
+ 
+ HC: $(HC_OBJS) $(HC_OBJ_MAIN) ../JLib/libJLib.a
+-	g++ $(LDFLAGS) $? -o $@;\
++	g++ $(LDFLAGS) $? $(LDLIBS) -o $@;\
+ 	mv HC ../holotz-castle
+ 
+ # HCed (Holotz's Castle editor).
+ HCed: $(HC_OBJS) $(HCED_OBJ_MAIN) ../JLib/libJLib.a
+-	g++ $(LDFLAGS) $? -o $@;\
++	g++ $(LDFLAGS) $? $(LDLIBS) -o $@;\
+ 	mv HCed ../holotz-castle-editor
+ 
+ install:
