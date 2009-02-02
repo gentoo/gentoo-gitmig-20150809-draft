@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/pk2cmd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/ChangeLog,v 1.2 2008/09/21 03:30:10 josejx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/ChangeLog,v 1.3 2009/02/02 20:45:09 josejx Exp $
+
+*pk2cmd-1.20 (02 Feb 2009)
+
+  02 Feb 2009; Joseph Jezak <josejx@gentoo.org>
+  +files/pk2cmd-add-share-dir-for-dev-file-1.20.patch,
+  pk2cmd-1.12.0-r1.ebuild, +pk2cmd-1.20.ebuild:
+  Revision bump, bug #257138. Marked 1.12.0-r1 stable on ppc/ppc64.
 
 *pk2cmd-1.12.0-r1 (21 Sep 2008)
 
