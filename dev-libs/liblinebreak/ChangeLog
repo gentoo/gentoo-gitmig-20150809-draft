@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/liblinebreak
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinebreak/ChangeLog,v 1.1 2009/02/02 22:22:33 alexxy Exp $
+
+*liblinebreak-1.0 (02 Feb 2009)
+
+  02 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> +metadata.xml,
+  +liblinebreak-1.0.ebuild:
+  Initial import of liblinebreak; this fixes bug #216311
+
