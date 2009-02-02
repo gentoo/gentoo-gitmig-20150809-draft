@@ -1,10 +1,13 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.80 2009/01/14 19:34:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.81 2009/02/02 23:51:21 nelchael Exp $
+
+  02 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org> ChangeLog:
+  Fix ChangeLog entries.
 
 *hibernate-script-1.99-r1 (14 Jan 2009)
 
-  14 Jan 2009; <nelchael@gentoo.org>
+  14 Jan 2009; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/hibernate-script-1.99-init.d.patch,
   +hibernate-script-1.99-r1.ebuild:
   Move single patch from separate patches tarball into files/, blacklist
@@ -12,7 +15,7 @@
 
 *hibernate-script-1.99 (08 Jan 2009)
 
-  08 Jan 2009; <nelchael@gentoo.org> metadata.xml,
+  08 Jan 2009; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml,
   +hibernate-script-1.99.ebuild:
   Added myself as maintainer, version bump.
 
