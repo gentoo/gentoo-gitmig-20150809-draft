@@ -1,20 +1,40 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.60_pre20081226.ebuild,v 1.4 2009/01/25 19:25:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.90.ebuild,v 1.1 2009/02/02 00:24:56 ulm Exp $
 
+EAPI=2
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
 inherit autotools elisp-common eutils flag-o-matic
 
+if [ "${PV##*.}" = "9999" ]; then
+	ECVS_AUTH="pserver"
+	ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
+	ECVS_MODULE="emacs"
+	ECVS_BRANCH="HEAD"
+	ECVS_LOCALNAME="emacs"
+	inherit cvs
+	SRC_URI=""
+	FULL_VERSION=""
+	S="${WORKDIR}/${ECVS_LOCALNAME}"
+else
+	SRC_URI="mirror://gentoo/emacs-${PV}.tar.gz
+		ftp://alpha.gnu.org/gnu/emacs/pretest/emacs-${PV}.tar.gz"
+	# FULL_VERSION keeps the full version number, which is needed in
+	# order to determine some path information correctly for copy/move
+	# operations later on
+	FULL_VERSION="${PV%%_*}"
+	S="${WORKDIR}/emacs-${FULL_VERSION}"
+fi
+
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-SRC_URI="mirror://gentoo/emacs-${PV}.tar.gz"
 
 LICENSE="GPL-3 FDL-1.3 BSD as-is X11 W3C"
 SLOT="23"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="alsa dbus gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png spell sound source svg tiff toolkit-scroll-bars X Xaw3d xft xpm"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+IUSE="alsa dbus gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png spell sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
 RESTRICT="strip"
 
 RDEPEND="sys-libs/ncurses
@@ -46,7 +66,7 @@ RDEPEND="sys-libs/ncurses
 				>=dev-libs/m17n-lib-1.5.1
 			)
 		)
-		gtk? ( =x11-libs/gtk+-2* )
+		gtk? ( x11-libs/gtk+:2 )
 		!gtk? (
 			Xaw3d? ( x11-libs/Xaw3d )
 			!Xaw3d? ( motif? ( x11-libs/openmotif ) )
@@ -57,18 +77,21 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	gzip-el? ( app-arch/gzip )"
 
-# FULL_VERSION keeps the full version number, which is needed in order to
-# determine some path information correctly for copy/move operations later on
-FULL_VERSION="${PV%_*}"
 EMACS_SUFFIX="emacs-${SLOT}"
-S="${WORKDIR}/emacs-${FULL_VERSION}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${PN}-freebsd-sparc-1.patch"
+src_prepare() {
+	if [ -z "${FULL_VERSION}" ]; then
+		FULL_VERSION=$(grep 'defconst[	 ]*emacs-version' lisp/version.el \
+			| sed -e 's/^[^"]*"\([^"]*\)".*$/\1/')
+		[ "${FULL_VERSION}" ] || die "Cannot determine current Emacs version"
+		echo
+		einfo "Emacs CVS branch: ${ECVS_BRANCH}"
+		einfo "Emacs version number: ${FULL_VERSION}"
+		[ "${FULL_VERSION%.*}" = ${PV%.*} ] \
+			|| die "Upstream version number changed to ${FULL_VERSION}"
+		echo
+	fi
 
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
@@ -91,8 +114,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
-	export SANDBOX_ON=0			# for the unbelievers, see Bug #131505
+src_configure() {
 	ALLOWED_FLAGS=""
 	strip-flags
 	#unset LDFLAGS
@@ -163,10 +185,15 @@ src_compile() {
 		--program-suffix=-${EMACS_SUFFIX} \
 		--infodir=/usr/share/info/${EMACS_SUFFIX} \
 		${myconf} || die "econf emacs failed"
+}
 
-	#emake CC="$(tc-getCC)" bootstrap || die "make bootstrap failed"
-	## cleanup, otherwise emacs will be dumped again in src_install
-	#(cd src; emake versionclean)
+src_compile() {
+	export SANDBOX_ON=0			# for the unbelievers, see Bug #131505
+	if [ "${PV##*.}" = "9999" ]; then
+		emake CC="$(tc-getCC)" bootstrap || die "make bootstrap failed"
+		# cleanup, otherwise emacs will be dumped again in src_install
+		(cd src; emake versionclean)
+	fi
 	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
