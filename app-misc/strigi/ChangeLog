@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.22 2009/02/01 23:00:48 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.23 2009/02/02 22:17:50 scarabeus Exp $
+
+*strigi-0.6.4 (02 Feb 2009)
+
+  02 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> +strigi-0.6.4.ebuild:
+  Version bump.
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   strigi-0.6.3.ebuild:
