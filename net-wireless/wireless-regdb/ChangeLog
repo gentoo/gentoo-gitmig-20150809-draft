@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/wireless-regdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.6 2009/01/29 18:35:27 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.7 2009/02/02 18:42:21 chainsaw Exp $
+
+*wireless-regdb-20090130 (02 Feb 2009)
+
+  02 Feb 2009; <chainsaw@gentoo.org> wireless-regdb-20081117.ebuild,
+  wireless-regdb-20090115.ebuild, +wireless-regdb-20090130.ebuild:
+  Version bump to Jan 30 version (which was delayed because of a cron job
+  failure). Reworked SRC_URI for dots instead of dashes as per new upstream
+  naming.
 
   29 Jan 2009; Thomas Anderson <gentoofan23@gentoo.org>
   wireless-regdb-20090115.ebuild:
