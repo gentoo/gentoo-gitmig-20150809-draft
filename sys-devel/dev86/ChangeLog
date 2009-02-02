@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/dev86
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.12 2008/03/06 16:20:46 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.13 2009/02/02 19:02:27 truedfx Exp $
+
+*dev86-0.16.17-r6 (02 Feb 2009)
+
+  02 Feb 2009; Harald van Dĳk <truedfx@gentoo.org>
+  +files/dev86-0.16.17-fortify.patch, +dev86-0.16.17-r6.ebuild:
+  Fix possible buffer overflow (#256782)
 
   06 Mar 2008; Christoph Mende <angelos@gentoo.org> dev86-0.16.17-r5.ebuild:
   Stable on amd64, bug #208905
