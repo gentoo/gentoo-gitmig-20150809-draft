@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.29 2009/01/07 14:23:15 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.30 2009/02/02 17:01:13 hkbst Exp $
+
+  02 Feb 2009; Marijn Schouten <hkBst@gentoo.org> bigloo-3.2a.ebuild:
+  fix bug 254916
 
 *bigloo-3.2a (07 Jan 2009)
 
