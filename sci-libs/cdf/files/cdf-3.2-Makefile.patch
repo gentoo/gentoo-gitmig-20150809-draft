@@ -82,3 +82,19 @@
  	@echo COPTIONSld=$(COPTIONSld_$(OS)_$(ENV))
  	@echo CURSESLIB=$(CURSESLIB_$(OS)_$(ENV))
  	@echo SYSLIBSexe=$(SYSLIBSexe_$(OS)_$(ENV))
+--- src/tools/Makefile.orig	2009-02-02 18:02:55.000000000 +0000
++++ src/tools/Makefile	2009-02-02 18:07:31.000000000 +0000
+@@ -35,10 +35,10 @@
+ INCLUDEcdf= ../include
+ 
+ CC=$(CCx)
+-CFLAGS=$(COPTIONS) -I$(INCLUDEcdf)
+-CFLAGSld=$(COPTIONSld)
++CFLAGS:= $(CFLAGS) $(COPTIONS) -I$(INCLUDEcdf)
++CFLAGSld=$(LDFLAGS) $(COPTIONSld)
+ 
+-LIBCDFa=../lib/libcdf.a 
++LIBCDFa=../lib/libcdf.so.3
+ 
+ LIBs1=$(LIBCDFa) $(SYSLIBS)
+ LIBs2=$(LIBCDFa) $(CURSESLIB) $(SYSLIBS)

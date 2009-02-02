@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.2.1-r1.ebuild,v 1.3 2008/05/11 12:20:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/cdf-3.2.1-r1.ebuild,v 1.4 2009/02/02 18:34:08 bicatali Exp $
 
 inherit eutils toolchain-funcs multilib versionator
 
@@ -71,10 +71,11 @@ src_compile() {
 			-c cdfNativeLibrary.c \
 			-o cdfNativeLibrary.o \
 			|| die "compiling java lib failed"
-		$(tc-getLD) \
+		$(tc-getCC) \
+			${LDFLAGS} \
 			-L${CDF_LIB} -lcdf -lm \
 			-shared cdfNativeLibrary.o \
-			-soname=libcdfNativeLibrary.so.${PV_SO} \
+			-Wl,-soname=libcdfNativeLibrary.so.${PV_SO} \
 			-o libcdfNativeLibrary.so.${PV_SO} \
 			|| die "linking java lib failed"
 	fi
@@ -99,7 +100,7 @@ src_install() {
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins "${DISTDIR}"/${MY_P}*.pdf
+		doins "${DISTDIR}"/${MY_DP}*.pdf
 		use java || rm "${D}"/usr/share/doc/${PF}/${MY_P}jrm.pdf
 	fi
 
