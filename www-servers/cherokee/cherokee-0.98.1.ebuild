@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.11.6.ebuild,v 1.1 2008/12/26 09:04:43 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.98.1.ebuild,v 1.1 2009/02/02 09:12:26 bass Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,8 +13,8 @@ HOMEPAGE="http://www.cherokee-project.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="ipv6 ssl static pam coverpage threads kernel_linux admin"
+KEYWORDS="~x86"
+IUSE="ipv6 ssl static pam coverpage threads kernel_linux admin debug"
 
 RDEPEND=">=sys-libs/zlib-1.1.4-r1
 	ssl? ( dev-libs/openssl )
@@ -25,16 +25,14 @@ DEPEND="${RDEPEND}"
 src_compile() {
 	local myconf
 
-	if use ssl ; then
-		myconf="${myconf}  --enable-tls=openssl"
-	else
-		myconf="${myconf} --disable-tls"
-	fi
-
 	if use static ; then
 		myconf="${myconf} --enable-static --enable-static-module=all"
 	else
 		myconf="${myconf} --disable-static"
+	fi
+
+	if use debug ; then
+		myconf="${myconf} --enable-trace"
 	fi
 
 	local os="Unknown"
@@ -49,6 +47,7 @@ src_compile() {
 			os="Linux" ;;
 	esac
 
+	# No options to enable or disable ssl since Cherokee 0.11
 	econf \
 		${myconf} \
 		$(use_enable pam) \
@@ -68,18 +67,17 @@ src_compile() {
 
 src_install () {
 	emake -j1 DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install || die "make install failed"
-	dodoc AUTHORS ChangeLog TODO
+	dodoc AUTHORS ChangeLog
 
-	newpamd pam.d_cherokee ${PN} || die "newpamd failed"
+	use pam && pamd_mimic system-auth cherokee auth account session
 	newinitd "${FILESDIR}/${PN}-initd-0.11" ${PN} || die "newinitd failed"
 
 	dodir /usr/share/doc/${PF}/contrib
 	insinto /usr/share/${PF}/contrib
-	doins contrib/05to06.py
-	doins contrib/06to07.py
 	doins contrib/07to08.py
 	doins contrib/08to09.py
-	doins contrib/09to10.py
+	doins contrib/09to010.py
+	doins contrib/011to098.py
 
 	keepdir /etc/cherokee/mods-enabled /etc/cherokee/sites-enabled /var/www/localhost/htdocs
 
