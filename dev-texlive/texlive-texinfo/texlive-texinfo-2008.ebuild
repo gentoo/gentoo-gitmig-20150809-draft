@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-texinfo/texlive-texinfo-2008.ebuild,v 1.2 2008/10/31 14:48:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-texinfo/texlive-texinfo-2008.ebuild,v 1.3 2009/02/02 07:16:33 aballier Exp $
 
 TEXLIVE_MODULE_CONTENTS="texinfo collection-texinfo
 "
@@ -15,4 +15,4 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2008
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND} dev-texlive/texlive-genericrecommended"
