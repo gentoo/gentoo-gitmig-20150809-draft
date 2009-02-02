@@ -24,7 +24,7 @@
  
  ${CORE_SHARED_LIB}:	$(EXPROBJS)
 -	$(CXX) $(CORE_LDFLAGS) -o $@ $^
-+	$(CXX) $(CORE_LDFLAGS) -Wl,-soname,$(CORE_SHARED_LIB_NAME).1 -o $@ $^
++	$(CXX) $(LDFLAGS) $(CORE_LDFLAGS) -Wl,-soname,$(CORE_SHARED_LIB_NAME).1 -o $@ $^
  
  %${VAR}.o:	%.cpp
  # Aug 8, 2004 by Chee (TEMP CHANGE! FOR DEBUGGING)
@@ -60,7 +60,7 @@
  ${COREX_SHARED_LIB_LEVEL3}: ${L3_OBJS}
  	-@rm -rf $@ 
 -	$(CXX) $(CORE_LDFLAGS) -o $@ $?
-+	$(CXX) $(CORE_LDFLAGS) -Wl,-soname,$(COREX_SHARED_LIB_LEVEL3_NAME).1 -o $@ $?
++	$(CXX) $(LDFLAGS) $(CORE_LDFLAGS) -Wl,-soname,$(COREX_SHARED_LIB_LEVEL3_NAME).1 -o $@ $?
  
  ${COREX_LIB_LEVEL2}: ${L2_OBJS}
  	-@rm -rf $@ 
@@ -69,7 +69,7 @@
  ${COREX_SHARED_LIB_LEVEL2}: ${L2_OBJS}
  	-@rm -rf $@ 
 -	$(CXX) $(CORE_LDFLAGS) -o $@ $?
-+	$(CXX) $(CORE_LDFLAGS) -Wl,-soname,$(COREX_SHARED_LIB_LEVEL2_NAME).1 -o $@ $?
++	$(CXX) $(LDFLAGS) $(CORE_LDFLAGS) -Wl,-soname,$(COREX_SHARED_LIB_LEVEL2_NAME).1 -o $@ $?
  
  ${COREX_LIB_LEVEL1}: ${L1_OBJS}
  	-@rm -rf $@ 
@@ -78,7 +78,7 @@
  ${COREX_SHARED_LIB_LEVEL1}: ${L1_OBJS}
  	-@rm -rf $@ 
 -	$(CXX) $(CORE_LDFLAGS) -o $@ $?
-+	$(CXX) $(CORE_LDFLAGS) -Wl,-soname,$(COREX_SHARED_LIB_LEVEL1_NAME).1 -o $@ $?
++	$(CXX) $(LDFLAGS) $(CORE_LDFLAGS) -Wl,-soname,$(COREX_SHARED_LIB_LEVEL1_NAME).1 -o $@ $?
  
  %_level3.o:	%.cpp
 -	${CXX} $(CORE_CXXFLAGS) -DCORE_LEVEL=3 $(INCLUDE) -c $< -o $@
@@ -94,14 +94,3 @@
  
  clean:
  	-@test -z "*.o" || rm -f *.o
---- Make.config	2005-02-02 14:25:29.000000000 +0100
-+++ Make.config	2006-10-12 20:20:59.000000000 +0200
-@@ -217,7 +217,7 @@
- ifeq (${VAR}, Debug)
-   CXXFLAGS=-g -Wall
- else
--  CXXFLAGS=-O2 -Wall -DNDEBUG
-+  CXXFLAGS=${CFLAGS} -Wall -DNDEBUG
- endif
- 
- ifeq (${VAR}, Opt)

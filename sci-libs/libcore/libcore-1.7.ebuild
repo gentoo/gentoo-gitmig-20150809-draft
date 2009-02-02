@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/libcore-1.7.ebuild,v 1.4 2008/09/03 09:32:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/libcore-1.7.ebuild,v 1.5 2009/02/02 23:01:37 bicatali Exp $
 
 inherit eutils toolchain-funcs
 
@@ -24,6 +24,10 @@ src_unpack(){
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}.patch
+	sed -i \
+		-e "s/-O2/${CXXFLAGS}/g" \
+		-e "s/-shared/-shared ${LDFLAGS}/g" \
+		Make.config || die
 }
 
 src_compile(){
