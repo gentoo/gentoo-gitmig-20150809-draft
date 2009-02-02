@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.1.4.ebuild,v 1.1 2008/11/19 14:36:36 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.2.2.ebuild,v 1.1 2009/02/02 21:31:05 chutzpah Exp $
 
 inherit eutils nsplugins multilib
 
