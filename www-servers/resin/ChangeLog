@@ -1,20 +1,23 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.83 2009/02/02 23:31:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.84 2009/02/02 23:54:36 nelchael Exp $
+
+  02 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org> ChangeLog:
+  Fix ChangeLog entries.
 
 *resin-3.2.1 (02 Feb 2009)
 
-  02 Feb 2009; <nelchael@gentoo.org> +files/3.2.1/resin.conf,
-  +files/3.2.1/resin.init, +resin-3.2.1.ebuild:
+  02 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/3.2.1/resin.conf, +files/3.2.1/resin.init, +resin-3.2.1.ebuild:
   Version bump.
 
-  13 Jan 2009; <nelchael@gentoo.org> resin-3.1.8.ebuild:
+  13 Jan 2009; Krzysiek Pawlik <nelchael@gentoo.org> resin-3.1.8.ebuild:
   Fix patching, see bug #254681.
 
 *resin-3.1.8 (10 Jan 2009)
 
-  10 Jan 2009; <nelchael@gentoo.org> +files/3.1.8/resin.conf,
-  +files/3.1.8/resin.init, +resin-3.1.8.ebuild:
+  10 Jan 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/3.1.8/resin.conf, +files/3.1.8/resin.init, +resin-3.1.8.ebuild:
   Version bump.
 
   22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
