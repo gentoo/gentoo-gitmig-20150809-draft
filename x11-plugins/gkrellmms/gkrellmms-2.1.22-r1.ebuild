@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.22-r1.ebuild,v 1.8 2008/03/16 15:08:25 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.22-r1.ebuild,v 1.9 2009/02/02 17:08:05 drizzt Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -24,7 +24,7 @@ KEYWORDS="~alpha amd64 ppc sparc x86"
 S="${WORKDIR}"/${PN}
 
 pkg_setup() {
-	if ! built_with_use media-sound/audacious dbus ; then
+	if has_version '<media-sound/audacious-1.5.0' && ! built_with_use media-sound/audacious dbus ; then
 		eerror "${PN} needs media-sound/audacious built with"
 		eerror "USE='dbus'. Please, reinstall it with dbus enabled"
 		eerror "and try again."
