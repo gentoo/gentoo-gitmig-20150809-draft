@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/zsnes
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.38 2008/05/09 19:14:57 drizzt Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.39 2009/02/02 16:41:45 drizzt Exp $
+
+  02 Feb 2009; <drizzt@gentoo.org> +files/zsnes-1.51-depbuild.patch,
+  zsnes-1.51-r2.ebuild:
+  Fix a (possible) compilation problem wrt bug #170108
 
 *zsnes-1.51-r2 (09 May 2008)
 
