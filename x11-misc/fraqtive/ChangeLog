@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/fraqtive
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/ChangeLog,v 1.5 2008/10/14 12:33:05 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/ChangeLog,v 1.6 2009/02/02 16:59:38 drizzt Exp $
+
+*fraqtive-0.4.4 (02 Feb 2009)
+
+  02 Feb 2009; <drizzt@gentoo.org> +fraqtive-0.4.4.ebuild:
+  Version bump
 
   14 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> fraqtive-0.4.3.ebuild:
   Fix dependencies.
