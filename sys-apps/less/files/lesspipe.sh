@@ -9,11 +9,12 @@ trap 'exit 0' PIPE
 
 guesscompress() {
 	case "$1" in
-		*.gz)   echo "gunzip -c" ;;
-		*.bz2)  echo "bunzip2 -c" ;;
-		*.lzma) echo "unlzma -c" ;;
-		*.Z)    echo "compress -d" ;;
-		*)      echo "cat" ;;
+		*.gz|*.z) echo "gunzip -c" ;;
+		*.bz2)    echo "bunzip2 -c" ;;
+		*.lz)     echo "lzip -c" ;;
+		*.lzma)   echo "unlzma -c" ;;
+		*.xz)     echo "xzdec" ;;
+		*)        echo "cat" ;;
 	esac
 }
 
@@ -99,15 +100,18 @@ lesspipe() {
 		;;
 
 	### Tar files ###
-	*.tar)                  tar tvvf "$1" ;;
-	*.tar.bz2|*.tbz2|*.tbz) tar tjvvf "$1" ;;
-	*.tar.gz|*.tgz|*.tar.z) tar tzvvf "$1" ;;
-	*.tar.lzma)             lzma -dc -- "$1" | tar tvvf - ;;
+	*.tar|\
+	*.tar.bz2|*.tbz2|*.tbz|\
+	*.tar.gz|*.tgz|*.tar.z|\
+	*.tar.lz|*.tar.tlz|\
+	*.tar.lzma|*.tar.xz)
+		${DECOMPRESSOR} -- "$1" | tar tvvf -;;
 
 	### Misc archives ###
-	*.bz2)        bzip2 -dc -- "$1" ;;
-	*.gz|*.z)     gzip -dc -- "$1"  ;;
-	*.lzma)       lzma -dc -- "$1" ;;
+	*.bz2|\
+	*.gz|*.z|\
+	*.lz|\
+	*.lzma|*.xz)  ${DECOMPRESSOR} -- "$1" ;;
 	*.rpm)        rpm -qpivl --changelog -- "$1" ;;
 	*.cpi|*.cpio) cpio -itv < "$1" ;;
 	*.ace)        unace l "$1" ;;
@@ -230,10 +234,10 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.31 2008/12/27 05:03:18 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.32 2009/02/02 19:44:13 vapier Exp $"
 	cat <<-EOF
 		$cvsid
-		Copyright 2001-2008 Gentoo Foundation
+		Copyright 2001-2009 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)
 
