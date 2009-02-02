@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/skystreets
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/skystreets/ChangeLog,v 1.18 2007/03/12 16:10:33 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/skystreets/ChangeLog,v 1.19 2009/02/02 17:05:33 tupone Exp $
+
+  02 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/skystreets-0.2.4-as-needed.patch, skystreets-0.2.4.ebuild:
+  Fix --as-needed bug #247306 by flameeyes@gentoo.org
 
   12 Mar 2007; Tristan Heaven <nyhm@gentoo.org> skystreets-0.2.4.ebuild:
   Install menu entry, bug #160252
