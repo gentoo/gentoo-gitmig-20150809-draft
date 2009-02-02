@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-extras
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.60 2008/12/02 08:17:28 jer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.61 2009/02/02 21:56:54 eva Exp $
+
+  02 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-themes-extras-2.20.ebuild, -gnome-themes-extras-2.22.0.ebuild:
+  Clean up old revisions.
 
   02 Dec 2008; Jeroen Roovers <jer@gentoo.org>
   gnome-themes-extras-2.22.0-r1.ebuild:
