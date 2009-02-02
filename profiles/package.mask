@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9464 2009/02/02 21:13:53 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9465 2009/02/02 22:33:55 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -477,6 +477,7 @@ net-wireless/bluez
 >=gnome-extra/gnome-user-share-0.41
 >=media-video/totem-2.24.3-r1
 =gnome-base/gvfs-1.0.3-r10
+=gnome-base/gvfs-1.0.3-r11
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (23 Nov 2007)
 # These might break automounting, so keep them masked for now.
