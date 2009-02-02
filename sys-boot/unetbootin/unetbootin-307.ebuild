@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-307.ebuild,v 1.1 2009/01/26 03:52:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-307.ebuild,v 1.2 2009/02/02 07:32:58 jer Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${PN}-304-syslinux-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-gentoo.patch
 }
 
 src_compile() {

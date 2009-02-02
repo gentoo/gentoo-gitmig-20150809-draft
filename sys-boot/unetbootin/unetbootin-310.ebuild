@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-304-r1.ebuild,v 1.2 2009/02/02 07:32:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-310.ebuild,v 1.1 2009/02/02 07:32:58 jer Exp $
 
-inherit eutils
+inherit qt4
 
 DESCRIPTION="Universal Netboot Installer creates Live USB systems for various OS
 distributions."
@@ -22,13 +22,11 @@ RDEPEND="${DEPEND}
 		 sys-boot/syslinux
 		 app-arch/p7zip"
 
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}"/${PN}-gentoo.patch
-}
-
 src_compile() {
-	./INSTALL || die "compile failed!"
+	lupdate unetbootin.pro
+	lrelease unetbootin.pro
+	eqmake4 unetbootin.pro
+	emake || die "make failed"
 }
 
 src_install() {
