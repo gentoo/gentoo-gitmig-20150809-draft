@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/cdk
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.52 2008/11/27 15:50:23 jer Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.53 2009/02/02 18:44:41 drizzt Exp $
+
+*cdk-5.0.20081105 (02 Feb 2009)
+
+  02 Feb 2009; <drizzt@gentoo.org> +files/cdk-5.0.20081105-ldflags.patch,
+  +cdk-5.0.20081105.ebuild:
+  Version Bump Fix for bug #186273 and #221611
 
   27 Nov 2008; Jeroen Roovers <jer@gentoo.org> cdk-5.0.20060507.ebuild:
   Stable for HPPA (bug #249039).
