@@ -1,0 +1,11 @@
+--- Makefile.in.old	2009-02-02 14:25:06.000000000 +0100
++++ Makefile.in	2009-02-02 14:25:34.000000000 +0100
+@@ -26,7 +26,7 @@
+ CC = @CC@
+ CFLAGS = -I. @CFLAGS@ @DEFS@ @X_CFLAGS@ -DXGALAGADIR=\"@prefix@/\" $(SOUNDDEFS)
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@ libsprite/libsprite.a @X_LIBS@
++LIBS = libsprite/libsprite.a @LIBS@ @X_LIBS@
+ INSTALL = @INSTALL@
+ 
+ OBJS = main.o images.o data.o paths.o pathfile.o title.o explosions.o \

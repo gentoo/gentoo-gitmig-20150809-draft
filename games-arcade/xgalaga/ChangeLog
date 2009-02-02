@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/xgalaga
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/ChangeLog,v 1.12 2008/12/18 21:30:29 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/ChangeLog,v 1.13 2009/02/02 13:26:38 tupone Exp $
+
+  02 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/xgalaga-2.0.34-as-needed.patch, xgalaga-2.0.34-r6.ebuild:
+  Fix --as-needed bug #247331 by flameeyes@gentoo.org
 
   18 Dec 2008; Jeremy Olexa <darkside@gentoo.org> xgalaga-2.0.34-r6.ebuild:
   (non maintainer commit) games-arcade/xgalaga doesn't build with --as-needed,
