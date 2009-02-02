@@ -1,0 +1,10 @@
+--- a/nss.c
++++ b/nss.c
+@@ -34,6 +34,7 @@
+  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  */
+ 
++#include <ctype.h>
+ #include <sys/types.h>
+ #include <errno.h>
+ #include <unistd.h>

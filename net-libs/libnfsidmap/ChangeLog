@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnfsidmap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.24 2009/02/02 14:12:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.25 2009/02/02 17:50:58 vapier Exp $
+
+  02 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/libnfsidmap-0.21-headers.patch, libnfsidmap-0.21-r1.ebuild:
+  Fix prototype warnings.
 
   02 Feb 2009; Torsten Veller <tove@gentoo.org> libnfsidmap-0.21-r1.ebuild:
   Back to ~arch until !<net-fs/nfs-utils-0.14 is stabil too (#257148 + dups)
