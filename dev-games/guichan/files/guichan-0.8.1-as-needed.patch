@@ -1,6 +1,5 @@
-diff -ru guichan-0.8.1.orig/src/sdl/Makefile.am guichan-0.8.1/src/sdl/Makefile.am
---- guichan-0.8.1.orig/src/sdl/Makefile.am	2008-04-12 07:57:57.000000000 -0400
-+++ guichan-0.8.1/src/sdl/Makefile.am	2009-01-28 08:53:53.000000000 -0500
+--- src/sdl/Makefile.am.old	2008-04-12 07:57:57.000000000 -0400
++++ src/sdl/Makefile.am	2009-01-28 08:53:53.000000000 -0500
 @@ -6,6 +6,8 @@
  
  libguichan_sdl_la_LDFLAGS = -no-undefined -release $(LT_RELEASE) -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
@@ -10,3 +9,11 @@ diff -ru guichan-0.8.1.orig/src/sdl/Makefile.am guichan-0.8.1/src/sdl/Makefile.a
  libguichan_sdl_la_SOURCES =	\
  	sdl.cpp			\
  	sdlgraphics.cpp		\
+--- src/Makefile.am.old 2009-02-03 16:41:09.000000000 +0100
++++ src/Makefile.am     2009-02-03 16:41:20.000000000 +0100
+@@ -1,4 +1,4 @@
+-SUBDIRS = widgets @GUICHAN_EXTRADIRS@ hge openlayer contrib
++SUBDIRS = widgets . @GUICHAN_EXTRADIRS@ hge openlayer contrib
+ 
+ INCLUDES = -I$(top_srcdir)/include
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.8.1.ebuild,v 1.4 2009/02/03 03:56:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.8.1.ebuild,v 1.5 2009/02/03 15:54:43 tupone Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -21,11 +21,10 @@ DEPEND="allegro? ( media-libs/allegro )
 		media-libs/sdl-image
 	)"
 
-# Commented out until the as-needed stuff is fixed (bug #257455)
-#src_prepare() {
-	#epatch "${FILESDIR}"/${P}-as-needed.patch
-	#eautoreconf
-#}
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf \
