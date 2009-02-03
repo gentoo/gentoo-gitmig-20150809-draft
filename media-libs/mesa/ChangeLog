@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.191 2009/02/01 19:01:41 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.192 2009/02/03 15:56:57 remi Exp $
+
+  03 Feb 2009; Rémi Cardona <remi@gentoo.org> mesa-7.3.ebuild:
+  only pull in the git eclass when PV==9999, fixes bug #257461
 
 *mesa-7.3 (01 Feb 2009)
 

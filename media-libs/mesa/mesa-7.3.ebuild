@@ -1,10 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.3.ebuild,v 1.1 2009/02/01 19:01:41 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.3.ebuild,v 1.2 2009/02/03 15:56:57 remi Exp $
 
+GIT=$([[ ${PV} = 9999* ]] && echo "git")
 EGIT_REPO_URI="git://anongit.freedesktop.org/mesa/mesa"
 
-inherit autotools multilib flag-o-matic git portability
+inherit autotools multilib flag-o-matic ${GIT} portability
 
 OPENGL_DIR="xorg-x11"
 
