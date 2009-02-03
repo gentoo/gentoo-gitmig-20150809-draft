@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/qtjava-3.5.9.ebuild,v 1.5 2008/06/14 17:38:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/qtjava-3.5.9.ebuild,v 1.6 2009/02/03 04:19:37 jmbsvicetto Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
@@ -15,9 +15,9 @@ IUSE=""
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
 # libhpi for bug #208631
-PATCHES="${FILESDIR}/no-gtk-glib-check.diff
-		${FILESDIR}/${PN}-${SLOT}-javacflags.patch
-		${FILESDIR}/no-libhpi.so-check.patch"
+PATCHES=( "${FILESDIR}/no-gtk-glib-check.diff"
+		"${FILESDIR}/${PN}-${SLOT}-javacflags.patch"
+		"${FILESDIR}/no-libhpi.so-check.patch" )
 
 pkg_setup() {
 	if ! built_with_use x11-libs/qt:3 opengl ; then
