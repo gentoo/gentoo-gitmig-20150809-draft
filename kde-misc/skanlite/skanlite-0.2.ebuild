@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-0.2.ebuild,v 1.1 2009/02/03 11:08:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-0.2.ebuild,v 1.2 2009/02/03 21:41:39 mr_bones_ Exp $
 
 EAPI="2"
 KDE_MINIMAL="4.1"
@@ -30,4 +30,3 @@ src_prepare() {
 			-i skanlite.desktop || die "Sed failed for skanlite.desktop"
 	kde4-base_src_prepare
 }
-
