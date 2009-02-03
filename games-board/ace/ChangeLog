@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ace
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ChangeLog,v 1.17 2008/11/17 21:01:07 flameeyes Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ChangeLog,v 1.18 2009/02/03 08:27:18 tupone Exp $
+
+  03 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/ace-1.2-as-needed.patch, ace-1.2-r2.ebuild:
+  Fix --as-needed bug #247334 by flameeyes@gentoo.org
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/ace-1.2-mastermind-keys.patch:

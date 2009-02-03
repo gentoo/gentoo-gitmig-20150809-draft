@@ -1,0 +1,39 @@
+--- lib/Makefile.in.old 2009-02-03 09:04:55.000000000 +0100
++++ lib/Makefile.in     2009-02-03 09:08:37.000000000 +0100
+@@ -85,7 +85,6 @@
+ CLEANFILES = images.c images.d
+ 
+ INCLUDES = $(X_CFLAGS) @PDA@
+-LDFLAGS = $(X_LIBS)
+ 
+ BUILD_CC = @BUILD_CC@
+ AR = @AR@
+@@ -107,7 +106,7 @@
+ X_LIBS = @X_LIBS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_PRE_LIBS = @X_PRE_LIBS@
+-libcards_la_LIBADD = 
++libcards_la_LIBADD = -lpng -lX11
+ libcards_la_OBJECTS =  table.lo help.lo stack.lo imagelib.lo xwin.lo \
+ images.lo table_ai.lo table_ck.lo table_dc.lo table_dg.lo table_dp.lo \
+ table_in.lo table_ky.lo table_rd.lo table_rn.lo table_rs.lo
+--- games/Makefile.in.old       2009-02-03 09:07:26.000000000 +0100
++++ games/Makefile.in   2009-02-03 09:07:35.000000000 +0100
+@@ -90,7 +90,6 @@
+ STRIP = @STRIP@
+ 
+ INCLUDES = -I$(srcdir)/../lib $(X_CFLAGS) @PDA@
+-LDFLAGS = $(X_LIBS)
+ 
+ canfield_SOURCES = canfield.c canfield-img.c
+ freecell_SOURCES = freecell.c freecell-help.c freecell-img.c
+--- tests/Makefile.in.old       2009-02-03 09:10:36.000000000 +0100
++++ tests/Makefile.in   2009-02-03 09:10:47.000000000 +0100
+@@ -85,7 +85,6 @@
+ test6_SOURCES = test6.c test6c.c
+ 
+ INCLUDES = -I$(srcdir)/../lib $(X_CFLAGS) @PDA@
+-LDFLAGS = $(X_LIBS)
+ LDADD = ../lib/libcards.la -lpng -lz -lX11 -lm
+ 
+ EXTRA_DIST = test6.png
