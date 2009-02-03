@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.573.ebuild,v 1.2 2009/02/03 06:25:30 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.573.ebuild,v 1.3 2009/02/03 14:45:56 je_fro Exp $
 
 IUSE="acpi debug"
 
@@ -27,8 +27,6 @@ RDEPEND=">=x11-base/xorg-server-1.5
 	)
 	x11-libs/libXrandr
 	>=sys-apps/portage-2.1.1-r1"
-
-#	sys-libs/libstdc++-v3
 
 DEPEND="${RDEPEND}
 	x11-proto/xf86miscproto
