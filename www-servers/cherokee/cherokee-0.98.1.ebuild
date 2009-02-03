@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.98.1.ebuild,v 1.1 2009/02/02 09:12:26 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.98.1.ebuild,v 1.2 2009/02/03 12:45:46 betelgeuse Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -16,7 +16,11 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="ipv6 ssl static pam coverpage threads kernel_linux admin debug"
 
-RDEPEND=">=sys-libs/zlib-1.1.4-r1
+# lighttpd block should be resolved properly
+# http://bugs.gentoo.org/show_bug.cgi?id=224781
+RDEPEND="
+	!www-servers/lighttpd
+	>=sys-libs/zlib-1.1.4-r1
 	ssl? ( dev-libs/openssl )
 	pam? ( virtual/pam )
 	admin? ( dev-lang/python )"
