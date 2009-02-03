@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.6.2-r1.ebuild,v 1.2 2009/02/03 21:58:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.6.2-r1.ebuild,v 1.3 2009/02/03 23:03:42 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -53,7 +53,7 @@ src_compile() {
 	fi
 
 	tc-export CC CXX LD
-	
+
 	if use qt4; then
 		qt_arg="--qt-gui"
 	else
