@@ -1,0 +1,33 @@
+# ChangeLog for sci-calculators/tilp2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp2/ChangeLog,v 1.1 2009/02/03 15:52:59 bicatali Exp $
+
+*tilp2-1.11 (03 Feb 2009)
+
+  03 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +tilp2-1.11.ebuild:
+  Initial import from sunrise, thanks to Christian Helbling and all
+  contributors in bug #146028
+
+  03 May 2008; Christian Helbling <helch@gmx.ch> -tilp2-1.10.ebuild,
+  +tilp2-1.11.ebuild:
+  version bump
+
+  18 Jan 2008; Christian Helbling <helch@gmx.ch> tilp2-1.10.ebuild:
+  changing SRC_URI back to sf mirrors
+
+  17 Jan 2008; Christian Helbling <helch@gmx.ch> -tilp2-1.07.ebuild,
+  +tilp2-1.10.ebuild:
+  Version bump
+
+  22 Sep 2007; Christian Helbling <helch@gmx.ch> -tilp2-1.03.ebuild,
+  +tilp2-1.07.ebuild:
+  version bump
+
+  15 Jun 2007; Ali Polatel (hawking) <polatel@gmail.com> tilp2-1.03.ebuild:
+  removed trailing blank line
+
+  15 Jun 2007; Christian Helbling <helch@gmx.ch> +tilp2-1.03.ebuild,
+  +metadata.xml:
+  New ebuild for bug 109220 thanks to Henning Schild
+
