@@ -1,12 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.9-r2.ebuild,v 1.1 2008/06/05 22:46:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.9-r2.ebuild,v 1.2 2009/02/03 22:54:42 alexxy Exp $
 
 EAPI="1"
 inherit kde-dist
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/kdepim-3.5-patchset-04.tar.bz2"
+	mirror://gentoo/kdepim-3.5-patchset-04.tar.bz2
+	mirror://gentoo/kitchensync-${PV}-OpenSync0.30API.patch.tar.bz2"
 
 DESCRIPTION="KDE PIM (Personal Information Management) applications: KOrganizer, KMail, KNode,..."
 
@@ -36,7 +37,7 @@ DEPEND="${DEPEND}
 PATCHES=( "${FILESDIR}/certmanager-${PV}-fix-kdeenablefinal.patch"
 			"${FILESDIR}/korganizer-${PV}-kdeenablefinal.patch"
 			"${FILESDIR}/akregator-${PV}-customcolors.patch"
-			"${FILESDIR}/kitchensync-${PV}-OpenSync0.30API.patch" )
+			"${DISTDIR}/kitchensync-${PV}-OpenSync0.30API.patch.tar.bz2" )
 
 src_unpack() {
 	kde_src_unpack

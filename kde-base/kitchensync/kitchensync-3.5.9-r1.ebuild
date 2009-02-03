@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.9-r1.ebuild,v 1.1 2008/06/05 23:31:36 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.9-r1.ebuild,v 1.2 2009/02/03 22:50:01 alexxy Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -8,6 +8,8 @@ inherit kde-meta eutils
 
 DESCRIPTION="Synchronize Data with KDE"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+SRC_URI="${SRC_URI}
+		mirror://gentoo/${P}-OpenSync0.30API.patch.tar.bz2"
 IUSE=""
 DEPEND=">=app-pda/libopensync-0.36
 	>=kde-base/kontact-${PV}:${SLOT}
@@ -25,7 +27,7 @@ KMEXTRACTONLY="
 	libkdenetwork/
 	kontact/interfaces"
 
-PATCHES=( "${FILESDIR}/${P}-OpenSync0.30API.patch" )
+PATCHES=( "${DISTDIR}/${P}-OpenSync0.30API.patch.tar.bz2" )
 
 # Disabled by default in kontact/plugins/Makefile.am, so check before enabling - 3.4.0_beta1 -- danarmak
 # KMEXTRA="kontact/plugins/kitchensync"
