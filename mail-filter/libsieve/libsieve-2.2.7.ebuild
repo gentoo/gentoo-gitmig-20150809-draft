@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/libsieve-2.2.7.ebuild,v 1.1 2008/11/22 13:53:22 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/libsieve-2.2.7.ebuild,v 1.2 2009/02/03 00:01:23 bangert Exp $
 
 DESCRIPTION="A library for parsing, sorting and filtering your mail."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -12,6 +12,7 @@ KEYWORDS="~sparc ~ppc ~alpha ~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/libc"
+RDEPEND="!net-mail/mailutils"
 
 src_compile() {
 	cd "${S}"/src
