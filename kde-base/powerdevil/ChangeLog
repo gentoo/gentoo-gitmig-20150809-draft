@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.1 2009/01/27 18:21:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.2 2009/02/03 21:14:12 alexxy Exp $
+
+  03 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> powerdevil-4.2.0.ebuild:
+  Add ~ppc/~ppc64 keywords as they was added to full kde-4.2
 
 *powerdevil-4.2.0 (27 Jan 2009)
 
