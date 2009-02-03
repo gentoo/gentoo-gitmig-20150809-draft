@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.9.ebuild,v 1.9 2008/05/18 19:05:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.9.ebuild,v 1.10 2009/02/03 21:09:00 alexxy Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -18,6 +18,8 @@ DEPEND=">=kde-base/libkdenetwork-${PV}:${SLOT}
 	|| ( >=app-crypt/gnupg-2.0.1-r1 <app-crypt/gnupg-1.9 )"
 	# We use GnuPG 1.4.x for OpenPGP and 1.9 (via gpgme) for s/mime as upstream advises.
 
+RDEPEND="${DEPEND}"
+
 KMCOPYLIB="libqgpgme libkdenetwork/qgpgme/"
 KMEXTRACTONLY="libkdenetwork/
 	libkpgp/
@@ -26,8 +28,8 @@ KMEXTRACTONLY="libkdenetwork/
 KMEXTRA="doc/kleopatra
 	doc/kwatchgnupg"
 
-PATCHES="${FILESDIR}/${P}-no-kdeenablefinal.patch
-	${FILESDIR}/${P}-gcc-4.3-testsuite.patch"
+PATCHES=( "${FILESDIR}/${P}-no-kdeenablefinal.patch"
+		"${FILESDIR}/${P}-gcc-4.3-testsuite.patch" )
 
 src_compile() {
 	myconf="--with-gpg=/usr/bin/gpg"

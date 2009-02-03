@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/certmanager
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.105 2008/09/13 23:57:10 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.106 2009/02/03 21:09:00 alexxy Exp $
+
+  03 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> certmanager-3.5.9.ebuild,
+  certmanager-3.5.10.ebuild:
+  Fix small QA
 
 *certmanager-3.5.10 (13 Sep 2008)
 
