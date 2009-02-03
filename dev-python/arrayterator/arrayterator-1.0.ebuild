@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/arrayterator/arrayterator-1.0.ebuild,v 1.1 2009/02/03 21:22:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/arrayterator/arrayterator-1.0.ebuild,v 1.2 2009/02/03 23:03:06 mr_bones_ Exp $
 
 inherit distutils
 
@@ -18,5 +18,3 @@ RDEPEND="virtual/python
 	>=dev-python/numpy-1.0_rc1"
 DEPEND="${RDEPEND}
 	>=dev-python/setuptools-0.6_rc3"
-
-

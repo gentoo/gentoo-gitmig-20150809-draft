@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/pysvg-0.1.5.ebuild,v 1.1 2009/02/03 22:06:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvg/pysvg-0.1.5.ebuild,v 1.2 2009/02/03 23:03:24 mr_bones_ Exp $
 
 inherit distutils
 
@@ -12,4 +12,3 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
-
