@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20090123.ebuild,v 1.1 2009/01/24 21:18:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20090123.ebuild,v 1.2 2009/02/03 19:23:25 flameeyes Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -39,6 +39,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/iasl-20080701-parallelmake.patch
+
+	sed -i -e 's:LDFLAGS=:LDLIBS+=:' \
+		"${S}"/compiler/Makefile || die "unable to fix compiler Makefile"
 }
 
 src_compile() {

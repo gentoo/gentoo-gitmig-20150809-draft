@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/iasl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.22 2009/01/24 21:18:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.23 2009/02/03 19:23:25 flameeyes Exp $
+
+  03 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  iasl-20090123.ebuild:
+  Fix build with --as-needed, see bug #256521.
 
 *iasl-20090123 (24 Jan 2009)
 
