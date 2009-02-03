@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.0.3.ebuild,v 1.4 2008/02/29 19:01:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.0.3.ebuild,v 1.5 2009/02/03 14:22:15 tupone Exp $
 
+EAPI=2
 inherit eutils games
 
 EXTRAS1="eboard-extras-1pl2"
@@ -25,24 +26,21 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "s:(\"-O6\"):split(' ', \"${CXXFLAGS}\"):" \
 		configure \
 		|| die "sed configure failed"
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 }
 
-src_compile() {
+src_configure() {
 	# not an autoconf script
 	./configure \
 		--prefix="${GAMES_PREFIX}" \
 		--data-prefix="${GAMES_DATADIR}" \
 		--man-prefix="/usr/share/man" \
 		$(use_enable nls) || die
-	emake || die "emake failed"
 }
 
 src_install() {
