@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.4.ebuild,v 1.1 2009/02/02 16:59:38 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.4.ebuild,v 1.2 2009/02/03 20:50:18 drizzt Exp $
 
 EAPI=1
 
@@ -36,6 +36,8 @@ src_unpack() {
 
 	echo "CONFIG += $conf" > "${S}"/config.pri
 	echo "PREFIX = /usr" >> "${S}"/config.pri
+	# Don't strip wrt #252096
+	echo "QMAKE_STRIP =" >> "${S}"/config.pri
 }
 
 src_compile() {
