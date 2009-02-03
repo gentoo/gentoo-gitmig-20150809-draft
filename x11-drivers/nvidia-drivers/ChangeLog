@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.131 2009/01/31 09:25:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.132 2009/02/03 18:53:33 ricmm Exp $
+
+*nvidia-drivers-96.43.10 (03 Feb 2009)
+
+  03 Feb 2009; Ricardo Mendoza <ricmm@gentoo.org>
+  +nvidia-drivers-96.43.10.ebuild:
+  Version bump. See http://www.nvnews.net/vbulletin/showthread.php?t=126954
 
   31 Jan 2009; Alexis Ballier <aballier@gentoo.org>
   nvidia-drivers-96.43.09.ebuild:
