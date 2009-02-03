@@ -1,0 +1,11 @@
+--- old/nanohttp.c	2000-06-28 20:33:46.000000000 +0200
++++ new/nanohttp.c	2009-02-02 13:45:31.199209868 +0100
+@@ -1182,7 +1182,7 @@
+     if (!strcmp(filename, "-")) 
+         fd = 0;
+     else {
+-        fd = open(filename, O_CREAT | O_WRONLY);
++      fd = open(filename, O_CREAT | O_WRONLY, 0644);
+ 	if (fd < 0) {
+ 	    xmlNanoHTTPClose(ctxt);
+ 	    return(-1);
