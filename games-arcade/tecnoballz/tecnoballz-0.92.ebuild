@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tecnoballz/tecnoballz-0.92.ebuild,v 1.2 2008/10/10 19:33:19 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tecnoballz/tecnoballz-0.92.ebuild,v 1.3 2009/02/03 03:37:00 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils autotools games
 
 DESCRIPTION="An exciting Brick Breaker"
@@ -15,12 +16,10 @@ IUSE=""
 
 DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
-	media-libs/sdl-image
+	media-libs/sdl-image[png]
 	media-libs/libmikmod"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-automake.patch
 	mv man/${PN}.fr.6 man/fr/${PN}.6 || die "failed moving man pages"
@@ -31,6 +30,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS CHANGES NEWS README
 	fperms g+w "${GAMES_STATEDIR}"/${PN}.hi || die "fperms failed"
+	make_desktop_entry ${PN} Tecnoballz
 	prepgamesdirs
 }
 
