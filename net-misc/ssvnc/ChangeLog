@@ -1,0 +1,11 @@
+# ChangeLog for 
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.1 2009/02/03 01:57:26 vapier Exp $
+
+*ssvnc-1.0.22 (03 Feb 2009)
+
+  03 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/ssvnc-1.0.22-build.patch, +files/ssvnc-1.0.22-optional-java.patch,
+  +metadata.xml, +ssvnc-1.0.22.ebuild:
+  Initial package by me.
+
