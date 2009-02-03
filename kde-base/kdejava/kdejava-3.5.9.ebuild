@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.5.9.ebuild,v 1.6 2008/06/14 17:40:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.5.9.ebuild,v 1.7 2009/02/03 04:09:14 jmbsvicetto Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY=qtjava
@@ -19,9 +19,9 @@ RDEPEND=">=virtual/jre-1.4 $COMMONDEPEND"
 OLDDEPEND="~kde-base/kwin-$PV ~kde-base/kcontrol-$PV ~kde-base/qtjava-$PV virtual/jdk"
 
 # libhpi for bug #209631
-PATCHES="${FILESDIR}/no-gtk-glib-check.diff
-		${FILESDIR}/${PN}-${SLOT}-javacflags.patch
-		${FILESDIR}/no-libhpi.so-check.patch"
+PATCHES=( "${FILESDIR}/no-gtk-glib-check.diff"
+		"${FILESDIR}/${PN}-${SLOT}-javacflags.patch"
+		"${FILESDIR}/no-libhpi.so-check.patch" )
 
 # Probably missing other kdebase, kdepim etc deps
 # Needs to be compiled with just kdelibs installed to make sure

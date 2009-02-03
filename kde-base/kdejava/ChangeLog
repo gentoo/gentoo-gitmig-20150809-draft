@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdejava
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.76 2008/09/13 23:58:05 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.77 2009/02/03 04:09:14 jmbsvicetto Exp $
+
+  03 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kdejava-3.5.9.ebuild:
+  Fixed some QA issues.
 
 *kdejava-3.5.10 (13 Sep 2008)
 
