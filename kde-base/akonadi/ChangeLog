@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/akonadi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.8 2009/02/01 06:20:27 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.9 2009/02/03 01:55:44 jmbsvicetto Exp $
+
+  03 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Commented the opensync use flag description has it's disable until a new
+  version hits portage.
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   akonadi-4.2.0.ebuild:
