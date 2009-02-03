@@ -1,8 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r1.ebuild,v 1.7 2006/12/06 20:14:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r1.ebuild,v 1.8 2009/02/03 23:37:20 mr_bones_ Exp $
 
-inherit eutils toolchain-funcs games
+EAPI=2
+inherit eutils games
 
 DESCRIPTION="A fast paced action game"
 HOMEPAGE="http://icculus.org/excido/"
@@ -14,17 +15,26 @@ KEYWORDS="~alpha ~amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-games/physfs
-	media-libs/libsdl
+	media-libs/libsdl[opengl]
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf
-	media-libs/sdl-image
+	media-libs/sdl-image[png]
 	media-libs/openal
 	media-libs/freealut"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-alut.patch
+	sed -i \
+		-e '/^CC=/d' \
+		-e '/^LIBS/s/-s -Bstatic//' \
+		-e 's/-static//' \
+		-e 's/-L./`sdl-config --libs`/' \
+		-e '/^CFLAGS=/s/CFLAGS/CXXFLAGS+/' \
+		-e 's/(CC)/(CXX)/g' \
+		-e 's/(CFLAGS)/(CXXFLAGS)/g' \
+		-e '/(LIBS)/s/$(LIBS)/$(LDFLAGS) $(LIBS)/' \
+		Makefile \
+		|| die "sed failed"
 }
 
 src_compile() {
@@ -38,11 +48,11 @@ src_compile() {
 
 src_install() {
 	dodir "${GAMES_BINDIR}" "${GAMES_DATADIR}/${PN}"
-	make \
+	emake \
 		PREFIX="${D}/usr" \
 		BINDIR="${D}${GAMES_BINDIR}/" \
 		DATADIR="${D}${GAMES_DATADIR}/${PN}/" \
-		install || die "make install failed"
+		install || die "emake install failed"
 	dodoc BUGS CHANGELOG HACKING README TODO \
 		keyguide.txt data/CREDITS data/*.txt
 	prepgamesdirs
