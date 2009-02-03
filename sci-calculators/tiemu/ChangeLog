@@ -1,0 +1,19 @@
+# ChangeLog for sci-calculators/tiemu
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.1 2009/02/03 15:49:54 bicatali Exp $
+
+*tiemu-3.02 (03 Feb 2009)
+
+  03 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/tiemu-3.02-gcc43.patch, +metadata.xml, +tiemu-3.02.ebuild:
+  Initial import from sunrise, thanks to Christian Helbling and all
+  contributors in bug #112985
+
+  18 Jan 2008; (Tommy[D]) tommy100@gmx.de tiemu-3.02.ebuild:
+  Drop eutils.eclass
+
+  17 Jan 2008; Christian Helbling <helch@gmx.ch> +metadata.xml,
+  +tiemu-3.02.ebuild:
+  Version bump and transfer upstream's renaming (was sci-calculators/tiemu3).
+  Bug is still #112985.
+
