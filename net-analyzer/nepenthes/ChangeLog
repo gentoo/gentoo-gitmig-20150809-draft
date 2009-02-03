@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nepenthes
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.17 2008/08/27 20:54:36 darkside Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.18 2009/02/03 10:03:53 pva Exp $
+
+  03 Feb 2009; Peter Volkov <pva@gentoo.org>
+  +files/nepenthes-0.2.2-gcc4.patch, nepenthes-0.2.2.ebuild:
+  Fixed build issue with newer compiler, bug #251437, thank Diego E.
+  'Flameeyes' Pettenò for report and Michael Mair-Keimberger for making us
+  reopen and finally fix bug.
 
   27 Aug 2008; Jeremy Olexa <darkside@gentoo.org> -nepenthes-0.2.0.ebuild:
   remove old, bug #199168

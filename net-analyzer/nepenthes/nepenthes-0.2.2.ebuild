@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.2.2.ebuild,v 1.1 2008/05/14 02:41:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.2.2.ebuild,v 1.2 2009/02/03 10:03:53 pva Exp $
 
-inherit eutils
+EAPI="2"
+inherit eutils autotools
 
 DESCRIPTION="Nepenthes is a low interaction honeypot that captures worms by emulating known vulnerabilities"
 HOMEPAGE="http://nepenthes.sourceforge.net"
@@ -26,11 +27,17 @@ pkg_setup() {
 	enewuser nepenthes -1 -1 /dev/null nepenthes
 }
 
-src_compile() {
-	local myconf="--sysconfdir=/etc --localstatedir=/var/lib/nepenthes --enable-capabilities"
-	econf "${myconf}" || die
-	sed -i 's|var/cache|/var/lib/cache|' "${S}"/modules/shellcode-signatures/shellcode-signatures.cpp
-	emake || die "make failed"
+src_prepare() {
+	epatch ${FILESDIR}/${P}-gcc4.patch
+	sed 's|var/cache|/var/lib/cache|' -i modules/shellcode-signatures/shellcode-signatures.cpp
+	find . -name Makefile.am -exec sed 's: -Werror::' -i '{}' \;
+	eautoreconf
+}
+
+src_configure() {
+	econf --sysconfdir=/etc \
+		  --localstatedir=/var/lib/nepenthes \
+		  --enable-capabilities
 }
 
 src_install() {
@@ -47,10 +54,9 @@ src_install() {
 			-e 's|"etc|"/etc|' $i
 	done
 
-	dodoc doc/README doc/README.VFS AUTHORS
+	dodoc doc/README.VFS AUTHORS
 	dosbin nepenthes-core/src/nepenthes || die "dosbin failed"
 	rm "${D}"/usr/bin/nepenthes
-	rm "${D}"/usr/share/doc/README
 	rm "${D}"/usr/share/doc/README.VFS
 	rm "${D}"/usr/share/doc/logo-shaded.svg
 
