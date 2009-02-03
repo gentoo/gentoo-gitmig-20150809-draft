@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.50 2009/02/01 22:33:00 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.51 2009/02/03 00:08:41 remi Exp $
+
+  02 Feb 2009; Rémi Cardona <remi@gentoo.org> mesa-progs-7.3.ebuild:
+  fix ignored LDFLAGS (fixes bug #233298, thanks to Arfrever Arahesis)
 
 *mesa-progs-7.3 (01 Feb 2009)
 

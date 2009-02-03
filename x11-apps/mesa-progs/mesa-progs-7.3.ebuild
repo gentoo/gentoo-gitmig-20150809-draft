@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-7.3.ebuild,v 1.1 2009/02/01 22:33:00 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-7.3.ebuild,v 1.2 2009/02/03 00:08:41 remi Exp $
 
 inherit toolchain-funcs
 
@@ -60,6 +60,7 @@ src_unpack() {
 	echo "OPT_FLAGS = ${CFLAGS}" >> ${HOSTCONF}
 	echo "CC = $(tc-getCC)" >> ${HOSTCONF}
 	echo "CXX = $(tc-getCXX)" >> ${HOSTCONF}
+	echo "LDFLAGS = ${LDFLAGS}" >> ${HOSTCONF}
 
 	# Just executables here, no need to compile with -fPIC
 	echo "PIC_FLAGS =" >> ${HOSTCONF}
