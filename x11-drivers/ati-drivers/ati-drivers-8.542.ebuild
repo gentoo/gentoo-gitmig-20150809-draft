@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.542.ebuild,v 1.7 2009/02/03 06:25:30 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.542.ebuild,v 1.8 2009/02/03 16:44:38 gengor Exp $
 
 IUSE="acpi debug"
 
@@ -167,7 +167,7 @@ src_unpack() {
 	ln -s "${ARCH_DIR}"/lib/modules/fglrx/build_mod/libfglrx_ip.a.GCC$(gcc-major-version) \
 		|| die "symlinking precompiled core failed"
 
-	if kernel_is 2 6 27; then
+	if kernel_is ge 2 6 27; then
 		epatch "${FILESDIR}/${PV}/ati-drivers-2.6.27.patch"
 	fi
 

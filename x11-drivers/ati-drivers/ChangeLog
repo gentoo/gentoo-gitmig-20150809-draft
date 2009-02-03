@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.141 2009/02/03 14:45:56 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.142 2009/02/03 16:44:38 gengor Exp $
+
+  03 Feb 2009; Gordon Malm <gengor@gentoo.org> ati-drivers-8.542.ebuild:
+  Fix compile with kernel 2.6.28, bug #252695 thanks to Sasha Medvedev.
 
   03 Feb 2009; Jeff Gardner <je_fro@gentoo.org> ati-drivers-8.573.ebuild:
   Small cleanup.
