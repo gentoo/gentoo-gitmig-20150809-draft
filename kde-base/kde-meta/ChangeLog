@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.114 2009/01/28 03:09:08 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.115 2009/02/03 14:51:53 scarabeus Exp $
+
+  03 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> kde-meta-4.2.0.ebuild:
+  Make kdepim-meta optional since it requires mysql.
 
   28 Jan 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kde-meta-4.2.0.ebuild:
