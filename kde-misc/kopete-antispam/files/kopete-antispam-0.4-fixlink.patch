@@ -1,0 +1,44 @@
+--- kopete-antispam-kde4-0.4/CMakeLists.txt.orig	2009-02-03 13:12:45.000000000 +0300
++++ kopete-antispam-kde4-0.4/CMakeLists.txt	2009-02-03 13:13:36.000000000 +0300
+@@ -2,10 +2,14 @@
+ 
+ find_package( KDE4 REQUIRED ) 
+ find_package( Automoc4 REQUIRED )
+-
++find_package( Qt4 REQUIRED )
++set(QT_USE_QTGUI 1)
++set(QT_USE_QTCORE 1)
++set(QT_USE_QT3SUPPORT 1)
++include(${QT_USE_FILE})
+ add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+ 
+-include_directories( ${KDE4_INCLUDES} ${CMAKE_CURRENT_BINARY_DIR} )
++include_directories( ${KDE4_INCLUDES}  ${CMAKE_CURRENT_BINARY_DIR} )
+ link_directories( ${KDE4_LIB_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
+ 
+ # libkopete_antispam
+@@ -15,7 +19,7 @@
+ kde4_add_kcfg_files( KOPETEANTISPAM_SRCS kopeteantispamconfig.kcfgc )
+ 
+ kde4_add_plugin( kopete_antispam ${KOPETEANTISPAM_SRCS} )
+-target_link_libraries( kopete_antispam kopete kdeui )
++target_link_libraries( kopete_antispam kopete kdecore kdeui ${QT_LIBRARIES} )
+ 
+ # libkcm_kopete_antispam
+ 
+@@ -25,11 +29,12 @@
+ kde4_add_ui_files( KCMKOPETEANTISPAM_SRCS kopeteantispampreferencesuibase.ui )
+ 
+ kde4_add_plugin( kcm_kopete_antispam ${KCMKOPETEANTISPAM_SRCS} )
+-target_link_libraries( kcm_kopete_antispam kopete kdeui )
++target_link_libraries( kcm_kopete_antispam kopete kdecore kdeui ${QT_LIBRARIES} )
+ 
+ # installation
+ 
+ install( FILES kopeteantispamconfig.kcfg DESTINATION ${KCFG_INSTALL_DIR} )
+ install( FILES kopete_antispam.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+ install( FILES kopete_antispam_config.desktop DESTINATION ${SERVICES_INSTALL_DIR}/kconfiguredialog )
+-install( TARGETS kopete_antispam kcm_kopete_antispam DESTINATION ${PLUGIN_INSTALL_DIR} )
+\ В конце файла нет новой строки
++install( TARGETS kopete_antispam kcm_kopete_antispam DESTINATION ${PLUGIN_INSTALL_DIR} )
++
