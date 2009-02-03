@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kopete-cryptography
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-cryptography/ChangeLog,v 1.1 2009/02/03 10:51:25 alexxy Exp $
+
+*kopete-cryptography-1.3.0 (03 Feb 2009)
+
+  03 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> +metadata.xml,
+  +kopete-cryptography-1.3.0.ebuild:
+  Initial import of kopete-cryptography; this fixes bug #253992
+
