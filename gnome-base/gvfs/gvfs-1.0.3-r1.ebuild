@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.0.3-r1.ebuild,v 1.1 2009/02/02 22:36:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.0.3-r1.ebuild,v 1.2 2009/02/03 07:11:54 eva Exp $
 
 inherit autotools bash-completion gnome2 eutils
 
@@ -68,9 +68,6 @@ src_unpack() {
 
 	# Fix non posixy tests, bug #256305
 	epatch "${FILESDIR}/${P}-posixtest.patch"
-
-	# Fix themed icon for obexftp, bug #256890
-	epatch "${FILESDIR}/${P}-obexftp-icon.patch"
 
 	# Fix HTTP leaks, bug #256892
 	epatch "${FILESDIR}/${P}-http-leak.patch"
