@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qcontrol/qcontrol-0.4.2.ebuild,v 1.1 2008/12/26 18:21:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qcontrol/qcontrol-0.4.2.ebuild,v 1.2 2009/02/03 11:24:36 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://byronbradley.co.uk/piccontrol/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~arm"
+KEYWORDS="arm"
 IUSE=""
 
 DEPEND=">=dev-lang/lua-5.1"
