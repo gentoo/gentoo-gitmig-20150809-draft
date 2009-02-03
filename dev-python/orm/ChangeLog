@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/orm
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/ChangeLog,v 1.7 2007/02/22 00:31:44 peper Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/ChangeLog,v 1.8 2009/02/03 22:15:52 patrick Exp $
+
+  03 Feb 2009; Patrick Lauer <patrick@gentoo.org> orm-1.0.1.ebuild:
+  Adding ~amd64 keyword, fixing default IUSE for bug #254759
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
