@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.9.ebuild,v 1.9 2008/11/23 22:07:06 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.9.ebuild,v 1.10 2009/02/03 04:03:09 jmbsvicetto Exp $
 
 EAPI="1"
 WANT_AUTOMAKE="1.10"
 
-inherit kde eutils autotools
+inherit autotools eutils kde
 
 DESCRIPTION="KDE internationalization package"
 HOMEPAGE="http://www.kde.org/"
@@ -16,6 +16,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=sys-devel/automake-1.10.1"
+RDEPEND=""
 
 need-kde ${PV}
 LANGS="af ar az bg bn br bs ca cs csb cy da de el en_GB eo es et
@@ -55,6 +56,8 @@ src_unpack() {
 	done
 
 	use linguas_ru && epatch "${FILESDIR}/${P}-russian.patch"
+
+	eautoreconf
 }
 
 src_compile() {
