@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ucspi-ssl
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.13 2009/01/18 14:54:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.14 2009/02/03 00:43:52 bangert Exp $
+
+  03 Feb 2009; Thilo Bangert <bangert@gentoo.org>
+  -files/ucspi-ssl-0.50-errno.patch, -files/ucspi-ssl-0.70-fix-paths.patch,
+  -ucspi-ssl-0.50.ebuild, -ucspi-ssl-0.70.ebuild:
+  remove old versions - fixes bug #252064 (pre-stripped files)
 
   18 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
   ucspi-ssl-0.70-r1.ebuild:
