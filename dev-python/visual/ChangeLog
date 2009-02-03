@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.24 2009/01/08 21:39:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.25 2009/02/03 17:59:47 patrick Exp $
+
+*visual-3.2.9-r2 (03 Feb 2009)
+
+  03 Feb 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/visual-3.2.9-gcc43.patch, +visual-3.2.9-r2.ebuild:
+  gcc 4.3 fix, closes bug #237421. Patch from Nikolay Orlyuk
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -visual-4_beta0.ebuild:
   Removing old
