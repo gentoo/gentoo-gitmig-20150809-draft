@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-1.3.ebuild,v 1.5 2008/07/27 20:16:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-1.3.ebuild,v 1.6 2009/02/03 15:11:55 drizzt Exp $
 
 EAPI=1
 
@@ -27,10 +27,9 @@ src_unpack() {
 
 	sed -i 's/\r/\n/g' *.{cpp,h}
 
-	# I hate qt designer!
-	has_version "=x11-libs/qt-3.3*" && sed -i '1s/UI version="3.2"/UI version="3.3"/'
-
 	epatch "${FILESDIR}"/${P}-externalsqlite.patch
+	# Don't use internal sqlite3 function wrt #227215
+	epatch "${FILESDIR}"/${P}-sqlite-deprecated.patch
 }
 
 src_compile() {

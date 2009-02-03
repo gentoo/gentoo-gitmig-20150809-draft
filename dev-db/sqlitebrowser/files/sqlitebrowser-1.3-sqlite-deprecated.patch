@@ -1,0 +1,76 @@
+Common subdirectories: sqlitebrowser.orig/.moc and sqlitebrowser/.moc
+Common subdirectories: sqlitebrowser.orig/.obj and sqlitebrowser/.obj
+Common subdirectories: sqlitebrowser.orig/.ui and sqlitebrowser/.ui
+Common subdirectories: sqlitebrowser.orig/CVS and sqlitebrowser/CVS
+Common subdirectories: sqlitebrowser.orig/images and sqlitebrowser/images
+diff -u sqlitebrowser.orig/sqlbrowser_util.c sqlitebrowser/sqlbrowser_util.c
+--- sqlitebrowser.orig/sqlbrowser_util.c	2009-02-03 11:34:57.000000000 +0100
++++ sqlitebrowser/sqlbrowser_util.c	2009-02-03 11:46:25.000000000 +0100
+@@ -3,7 +3,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-
++#include <stdint.h>
+ 
+ /*following routines extracted from shell.c for dump support*/
+ 
+@@ -23,6 +23,40 @@
+ #define ArraySize(X)  (sizeof(X)/sizeof(X[0]))
+ 
+ /*
++** Return TRUE if z is a pure numeric string.  Return FALSE if the
++** string contains any character which is not part of a number. If
++** the string is numeric and contains the '.' character, set *realnum
++** to TRUE (otherwise FALSE).
++**
++** An empty string is considered non-numeric.
++*/
++static int _isNumber(const char *z, int *realnum, uint8_t enc){
++  int incr = (enc==SQLITE_UTF8?1:2);
++  if( enc==SQLITE_UTF16BE ) z++;
++  if( *z=='-' || *z=='+' ) z += incr;
++  if( !isdigit(*(uint8_t*)z) ){
++    return 0;
++  }
++  z += incr;
++  if( realnum ) *realnum = 0;
++  while( isdigit(*(uint8_t*)z) ){ z += incr; }
++  if( *z=='.' ){
++    z += incr;
++    if( !isdigit(*(uint8_t*)z) ) return 0;
++    while( isdigit(*(uint8_t*)z) ){ z += incr; }
++    if( realnum ) *realnum = 1;
++  }
++  if( *z=='e' || *z=='E' ){
++    z += incr;
++    if( *z=='+' || *z=='-' ) z += incr;
++    if( !isdigit(*(uint8_t*)z) ) return 0;
++    while( isdigit(*(uint8_t*)z) ){ z += incr; }
++    if( realnum ) *realnum = 1;
++  }
++  return *z==0;
++}
++
++/*
+ ** Output the given string as a quoted string using SQL quoting conventions.
+ */
+ static void output_quoted_string(FILE *out, const char *z){
+@@ -192,7 +226,7 @@
+         char *zSep = i>0 ? ",": "";
+         if( azArg[i]==0 ){
+           fprintf(p->out,"%sNULL",zSep);
+-        }else if( sqlite3IsNumber(azArg[i], NULL, SQLITE_UTF8) ){
++        }else if( _isNumber(azArg[i], NULL, SQLITE_UTF8) ){
+           fprintf(p->out,"%s%s",zSep, azArg[i]);
+         }else{
+           if( zSep[0] ) fprintf(p->out,"%s",zSep);
+@@ -350,7 +384,7 @@
+ static int _is_command_terminator(const char *zLine){
+   while( isspace(*zLine) ){ zLine++; };
+   if( zLine[0]=='/' && _all_whitespace(&zLine[1]) ) return 1;  /* Oracle */
+-  if( sqlite3StrNICmp(zLine,"go",2)==0 && _all_whitespace(&zLine[2]) ){
++  if( strncasecmp(zLine,"go",2)==0 && _all_whitespace(&zLine[2]) ){
+     return 1;  /* SQL Server */
+   }
+   return 0;
