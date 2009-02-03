@@ -1,6 +1,10 @@
 # ChangeLog for games-board/atakks
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/ChangeLog,v 1.8 2007/03/14 23:25:50 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/ChangeLog,v 1.9 2009/02/03 09:11:40 tupone Exp $
+
+  03 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/atakks-1.0-as-needed.patch, atakks-1.0.ebuild:
+  Fix --as-needed bug #247336 by flameeyes@gentoo.org
 
   14 Mar 2007; Tristan Heaven <nyhm@gentoo.org> atakks-1.0.ebuild:
   Install menu entry, bug #159843

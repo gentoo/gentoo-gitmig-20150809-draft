@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/atakks-1.0.ebuild,v 1.8 2007/03/14 23:25:50 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/atakks/atakks-1.0.ebuild,v 1.9 2009/02/03 09:11:40 tupone Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_P=${P/-/_}
@@ -20,22 +21,14 @@ DEPEND="media-libs/libsdl"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Modify game data paths
 	sed -i \
 		-e "s:SDL_LoadBMP(\":SDL_LoadBMP(\"${GAMES_DATADIR}/${PN}/:" \
 		main.c || die "sed failed"
 
-	# Modify Makefile (CFLAGS and language)
-	sed -i \
-		-e 's:^CFLAGS=:CFLAGS= $(E_CFLAGS) -DUS:' \
-		-e "s:^LDFLAGS.*$:LDFLAGS+=$(sdl-config --libs):" \
-		Makefile || die "sed failed"
-
-	epatch "${FILESDIR}"/${PV}-warnings.patch
+	epatch "${FILESDIR}"/${PV}-warnings.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
 }
 
 src_compile() {
