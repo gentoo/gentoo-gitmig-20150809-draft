@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-3.5.10.ebuild,v 1.1 2008/09/13 23:57:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-3.5.10.ebuild,v 1.2 2009/02/03 03:11:32 jmbsvicetto Exp $
 KMNAME=kdeedu
 EAPI="1"
 inherit flag-o-matic kde-meta eutils
@@ -12,13 +12,14 @@ HOMEPAGE="http://edu.kde.org/kalzium"
 
 DEPEND=">=kde-base/libkdeedu-${PV}:${SLOT}
 		solver? ( >=dev-ml/facile-1.1 )"
+RDEPEND="${DEPEND}"
 
 KMEXTRACTONLY="libkdeedu/kdeeduplot
 	libkdeedu/kdeeduui"
 KMCOPYLIB="libkdeeduplot libkdeedu/kdeeduplot
 	libkdeeduui libkdeedu/kdeeduui"
 
-PATCHES="${FILESDIR}/${PN}-3.5.7-copy_string.patch"
+PATCHES=( "${FILESDIR}/${PN}-3.5.7-copy_string.patch" )
 
 pkg_setup() {
 	if use solver && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
