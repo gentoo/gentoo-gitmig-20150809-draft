@@ -1,0 +1,10 @@
+# ChangeLog for games-board/pokerth
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.1 2009/02/03 01:52:57 mr_bones_ Exp $
+
+*pokerth-0.6.3 (03 Feb 2009)
+
+  03 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +pokerth-0.6.3.ebuild:
+  initial commit (bug #169238)
+
