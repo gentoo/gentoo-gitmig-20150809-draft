@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/Freemail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/ChangeLog,v 1.1 2009/02/02 21:28:43 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/ChangeLog,v 1.2 2009/02/03 18:20:17 tommy Exp $
+
+  03 Feb 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  Freemail-9999.ebuild:
+  Explicitly call pkg_preinst of java-pkg-2 and subversion eclass
 
 *Freemail-9999 (02 Feb 2009)
 

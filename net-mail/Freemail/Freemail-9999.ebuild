@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/Freemail-9999.ebuild,v 1.1 2009/02/02 21:28:43 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/Freemail-9999.ebuild,v 1.2 2009/02/03 18:20:17 tommy Exp $
 
 EAPI="2"
 
@@ -36,6 +36,11 @@ src_install() {
 	dodir /var/freenet/plugins
 	dosym ../../../usr/share/Freemail/lib/Freemail.jar /var/freenet/plugins/Freemail.jar
 	dodoc README || die "installation of documentation failed"
+}
+
+pkg_preinst() {
+	java-pkg-2_pkg_preinst
+	subversion_pkg_preinst
 }
 
 pkg_postinst () {
