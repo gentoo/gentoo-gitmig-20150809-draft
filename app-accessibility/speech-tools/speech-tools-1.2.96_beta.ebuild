@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.11 2008/03/13 02:52:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.12 2009/02/03 23:30:18 patrick Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ MY_P=${P/speech-/speech_}
 MY_P=${MY_P/_beta/-beta}
 
 DESCRIPTION="Speech tools for Festival Text to Speech engine"
-HOMEPAGE="http://www.cstr.ed.ac.uk/"
+HOMEPAGE="http://www.cstr.ed.ac.uk/projects/speech_tools/"
 SRC_URI="http://www.festvox.org/packed/festival/latest/${MY_P}.tar.gz"
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"

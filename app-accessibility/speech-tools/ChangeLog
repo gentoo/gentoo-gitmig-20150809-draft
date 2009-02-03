@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-tools
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.60 2008/03/20 01:48:57 williamh Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.61 2009/02/03 23:30:18 patrick Exp $
+
+  03 Feb 2009; Patrick Lauer <patrick@gentoo.org>
+  speech-tools-1.2.96_beta.ebuild:
+  Homepage fix, closes #257245
 
   20 Mar 2008; William Hubbs <williamh@gentoo.org> -files/58speech-tools:
   Removed a file that I missed.
