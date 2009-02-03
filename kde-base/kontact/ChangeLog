@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kontact
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.103 2009/02/01 19:16:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.104 2009/02/03 03:22:55 jmbsvicetto Exp $
+
+  03 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kontact-4.2.0.ebuild, kontact-4.2.0-r1.ebuild:
+  Restored ~ppc and ~ppc64 keywords to KDE-4.2.0
 
 *kontact-4.2.0-r1 (01 Feb 2009)
 
