@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5-r1.ebuild,v 1.1 2008/10/26 23:32:10 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5-r1.ebuild,v 1.2 2009/02/03 22:52:28 patrick Exp $
 
 EAPI="2"
 inherit python distutils multilib
@@ -57,7 +57,7 @@ src_install() {
 
 	dodoc leeme.txt || die "dodoc failed"
 	insinto /usr/share/doc/${PF}
-	doins {LICENCIA,MANUAL,demos} || die "doins failed"
+	doins -r {LICENCIA,MANUAL,demos} || die "doins failed"
 	rm -f "${D}"/usr/share/doc/"${PF}"/demos/modulepythong.py
 
 	if use doc; then
