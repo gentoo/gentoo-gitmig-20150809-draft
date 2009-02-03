@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.201 2009/02/01 00:05:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.202 2009/02/03 20:49:00 aballier Exp $
+
+  03 Feb 2009; Alexis Ballier <aballier@gentoo.org>
+  evolution-data-server-2.24.4.ebuild:
+  Dont call true with an absolute path which is different between FreeBSD
+  and linux, bug #257471
 
 *evolution-data-server-2.24.4 (01 Feb 2009)
 

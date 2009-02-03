@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.24.4.ebuild,v 1.1 2009/02/01 00:05:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.24.4.ebuild,v 1.2 2009/02/03 20:49:00 aballier Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools versionator
 
@@ -84,7 +84,7 @@ src_unpack() {
 	if use doc; then
 		sed "/^TARGET_DIR/i \GTKDOC_REBASE=/usr/bin/gtkdoc-rebase" -i gtk-doc.make
 	else
-		sed "/^TARGET_DIR/i \GTKDOC_REBASE=/bin/true" -i gtk-doc.make
+		sed "/^TARGET_DIR/i \GTKDOC_REBASE=true" -i gtk-doc.make
 	fi
 
 	# gtk-doc-am and gnome-common needed for this
