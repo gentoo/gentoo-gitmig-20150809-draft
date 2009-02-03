@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-0.99.2-r1.ebuild,v 1.3 2009/02/03 13:04:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.0.0.ebuild,v 1.1 2009/02/03 13:04:54 chainsaw Exp $
 
 inherit toolchain-funcs eutils linux-info x-modular
 
@@ -45,11 +45,6 @@ pkg_setup() {
 	evdev-input_check
 }
 
-src_unpack() {
-	x-modular_unpack_source
-	epatch "${FILESDIR}/${PV}-fdi-comments.patch"
-}
-
 src_install() {
 	DOCS="INSTALL NEWS TODO README"
 	x-modular_src_install
@@ -58,9 +53,10 @@ src_install() {
 	newinitd "${FILESDIR}"/rc.init syndaemon
 	newconfd "${FILESDIR}"/rc.conf syndaemon
 
-	# Have HAL assign this driver to supported touchpads.
-	insinto /usr/share/hal/fdi/policy/10osvendor
-	doins "${S}"/fdi/11-x11-synaptics.fdi
+	if use hal ; then
+		insinto /usr/share/hal/fdi/policy/10osvendor
+		doins "${S}"/fdi/11-x11-synaptics.fdi
+	fi
 }
 
 pkg_postinst() {
