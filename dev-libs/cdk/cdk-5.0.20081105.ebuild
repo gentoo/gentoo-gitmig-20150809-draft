@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20081105.ebuild,v 1.1 2009/02/02 18:44:41 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-5.0.20081105.ebuild,v 1.2 2009/02/03 04:23:16 mr_bones_ Exp $
 
 inherit eutils versionator toolchain-funcs
-
 
 MY_P="${PN}-$(replace_version_separator 2 -)"
 DESCRIPTION="A library of curses widgets"
