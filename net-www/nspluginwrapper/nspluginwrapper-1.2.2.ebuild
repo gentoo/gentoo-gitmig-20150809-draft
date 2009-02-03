@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.2.2.ebuild,v 1.1 2009/02/02 21:31:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.2.2.ebuild,v 1.2 2009/02/03 00:05:59 chutzpah Exp $
 
 inherit eutils nsplugins multilib
 
@@ -20,14 +20,6 @@ RDEPEND=">=x11-libs/gtk+-2
 	|| ( >=sys-apps/util-linux-2.13 sys-apps/setarch )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# bug #238403
-	epatch "${FILESDIR}/${PN}-1.1.0-quiet-64bit-plugin-warnings.patch"
-}
 
 src_compile() {
 	econf --with-biarch \

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/nspluginwrapper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.24 2009/02/02 21:31:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.25 2009/02/03 00:05:59 chutzpah Exp $
+
+  03 Feb 2009; Patrick McLean <chutzpah@gentoo.org>
+  nspluginwrapper-1.2.2.ebuild:
+  Remove 64bit patch as it doesn't apply anymore, and its not needed.
 
 *nspluginwrapper-1.2.2 (02 Feb 2009)
 
