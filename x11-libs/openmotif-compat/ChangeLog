@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/openmotif-compat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/ChangeLog,v 1.4 2008/05/08 10:32:19 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/ChangeLog,v 1.5 2009/02/04 21:58:10 ulm Exp $
+
+  04 Feb 2009; Ulrich Mueller <ulm@gentoo.org>
+  openmotif-compat-2.2.3.ebuild:
+  Fix "present but cannot be compiled" warning in configure, in order to
+  prepare for autoconf-2.64. Bug 82081 (see also tracker bug 257596).
 
   08 May 2008; Ulrich Mueller <ulm@gentoo.org>
   openmotif-compat-2.2.3.ebuild:
