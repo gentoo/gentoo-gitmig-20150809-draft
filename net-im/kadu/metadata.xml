@@ -11,9 +11,6 @@
 		<flag name='config_wizard'>Enables configuration wizard module</flag>
 		<flag name='extraicons'>Enables extra icon set</flag>
 		<flag name='extramodules'>Enables extra module in kadu</flag>
-		<flag name='libgadu'>Build against existing libgadu rather than
-			built-in
-		</flag>
 		<flag name='mail'>Enables mail module in kadu</flag>
 		<flag name='powerkadu'>Installs extra powerkadu modules</flag>
 		<flag name='speech'>Enables speech module in kadu</flag>

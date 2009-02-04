@@ -1,6 +1,15 @@
 # ChangeLog for net-im/kadu
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.65 2008/12/21 21:27:18 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.66 2009/02/04 17:21:27 rbu Exp $
+
+*kadu-0.6.0.2-r1 (04 Feb 2009)
+
+  04 Feb 2009; Robert Buchholz <rbu@gentoo.org> metadata.xml,
+  +files/kadu-0.6.0.2-kill-strip.patch, -kadu-0.6.0.1.ebuild, -kadu-0.6.0.2.ebuild,
+  +kadu-0.6.0.2-r1.ebuild:
+  Do allow building against internal libgadu, remove USE flag. This solves bug
+  #256509 (file collision), bug #247990 (internal library copy) and security bug
+  #244888 (buffer overread in libgadu). Do not strip binaries (bug #251995).
 
   21 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Fix cla's name in metadata.xml. Thomas, please fix your UTF-8.

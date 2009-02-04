@@ -1,0 +1,39 @@
+From 7ccbae5f87973acf551c943488c93c89ebef6f96 Mon Sep 17 00:00:00 2001
+From: Robert Buchholz <rbu@goodpoint.de>
+Date: Wed, 4 Feb 2009 17:26:46 +0100
+Subject: [PATCH] Kill -s CFLAG for regular build
+
+Binaries are stripped using "make install-strip" and not during compile.
+---
+ configure.ac |    8 --------
+ 1 files changed, 0 insertions(+), 8 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 0f32cfe..30df316 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -802,10 +802,6 @@ if test "$enable_debug" = "yes"; then
+ 	CXXFLAGS="$CXXFLAGS -ggdb"
+ 	CFLAGS="$CFLAGS -ggdb"
+ 	libgadu_CFLAGS="$CFLAGS -ggdb"
+-else
+-	CXXFLAGS="$CXXFLAGS -s"
+-	CFLAGS="$CFLAGS -s"
+-	libgadu_CFLAGS="$CFLAGS -s"
+ fi
+ 
+ 
+@@ -820,10 +816,6 @@ if test -z "$enable_macosx"; then
+ 	SHARED_FLAGS=
+ fi
+ if test "$enable_macosx" = "yes"; then
+-	# -s kills dynamic modules
+-	CXXFLAGS="`echo $CXXFLAGS | sed 's/ -s//'`"
+-	CFLAGS="`echo $CFLAGS | sed 's/ -s//'`"
+-
+ 	LDFLAGS="$LDFLAGS -framework Carbon -framework QuickTime -lz -framework OpenGL -framework AGL"
+ 	DYNAMIC_OPT="-dynamic"
+ 	SO_EXT="dylib"
+-- 
+1.6.0.6
+

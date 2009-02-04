@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.0.1.ebuild,v 1.2 2008/07/20 18:17:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.0.2-r1.ebuild,v 1.1 2009/02/04 17:21:27 rbu Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils autotools
 
 AGENT="0.4.4"			#http://www.kadu.net/w/Agent
 TABS="1.1.6"			#http://www.kadu.net/w/Tabs
@@ -34,11 +34,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="X debug libgadu alsa arts esd voice speech spell nas oss ssl mail extramodules powerkadu kdeenablefinal"
+IUSE="X debug alsa arts esd voice speech spell nas oss ssl mail extramodules powerkadu kdeenablefinal"
 
 DEPEND="=x11-libs/qt-3*
 	media-libs/libsndfile
-	libgadu? ( >=net-libs/libgadu-1.8.0 )
+	>=net-libs/libgadu-1.8.0
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
@@ -46,6 +46,7 @@ DEPEND="=x11-libs/qt-3*
 	ssl? ( dev-libs/openssl )
 	speech? ( app-accessibility/powiedz )
 	spell? ( app-dicts/aspell-pl )"
+RDEPEND=${DEPEND}
 
 SRC_URI="http://www.kadu.net/download/stable/${P}.tar.bz2
 	extramodules? (
@@ -134,6 +135,9 @@ src_unpack() {
 	enable_module spell spellchecker
 
 	use voice && epatch "${FILESDIR}"/voice-gentoo.patch
+
+	epatch "${FILESDIR}"/${P}-kill-strip.patch
+	eautoreconf
 }
 
 src_compile() {
@@ -178,9 +182,8 @@ src_compile() {
 	fi
 
 	local myconf
-	myconf="${myconf} --enable-modules --enable-dist-info=Gentoo --enable-pheaders"
+	myconf="${myconf} --enable-modules --enable-dist-info=Gentoo --enable-pheaders --with-existing-libgadu"
 	econf \
-		$(use_with libgadu existing-libgadu) \
 		$(use_enable kdeenablefinal final) \
 		$(use_enable voice dependency-tracing) \
 		$(use_enable debug) \
