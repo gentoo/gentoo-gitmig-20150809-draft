@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.7.ebuild,v 1.2 2009/01/23 06:37:52 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.7.ebuild,v 1.3 2009/02/04 13:46:26 patrick Exp $
 
 inherit eutils fixheadtails flag-o-matic fortran toolchain-funcs
 
@@ -64,6 +64,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${PN}-gcc4.3.3-fix.patch
 	epatch "${FILESDIR}"/${PN}-1.6.6-gcc4.3.patch
 	if use mpi; then
 	    # this is required for mpich2, and should be safe otherwise

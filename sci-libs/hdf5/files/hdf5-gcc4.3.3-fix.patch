@@ -1,0 +1,11 @@
+--- hdf5-1.6.7/perform/zip_perf.c	2008-01-31 21:04:10.000000000 -0600
++++ hdf5-1.6.7.new/perform/zip_perf.c	2009-02-01 22:08:48.532069100 -0600
+@@ -546,7 +546,7 @@
+         unlink(filename);
+ 
+         /* do compressed data write */
+-        output = open(filename, O_RDWR | O_CREAT);
++        output = open(filename, O_RDWR | O_CREAT, S_IRWXU);
+ 
+         if (output == -1)
+             error(strerror(errno));

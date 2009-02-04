@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.32 2009/01/23 06:37:52 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.33 2009/02/04 13:46:26 patrick Exp $
+
+  04 Feb 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/hdf5-gcc4.3.3-fix.patch, hdf5-1.6.7.ebuild:
+  fortify_sources fix, patch from Simon C. Ion, closes #257177
 
   23 Jan 2009; Steve Arnold <nerdboy@gentoo.org> hdf5-1.6.7.ebuild:
   Updated for upstream changes in test-tools and a more appropriate sed 
