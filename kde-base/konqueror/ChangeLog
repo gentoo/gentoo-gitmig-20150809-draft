@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.128 2009/02/01 07:42:34 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.129 2009/02/04 18:35:21 scarabeus Exp $
+
+*konqueror-4.2.0-r1 (04 Feb 2009)
+
+  04 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
+  +konqueror-4.2.0-r1.ebuild:
+  Add 2 new flags introducing auth and bookmarks, so user can emerge
+  konqueror with these deps. Per bug #257355.
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   konqueror-4.2.0.ebuild:
