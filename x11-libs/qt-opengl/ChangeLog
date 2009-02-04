@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-opengl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.19 2009/02/04 13:21:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-opengl/ChangeLog,v 1.20 2009/02/04 23:29:37 ranger Exp $
+
+  04 Feb 2009; Brent Baude <ranger@gentoo.org> qt-opengl-4.4.2.ebuild:
+  Marking qt-opengl-4.4.2 ppc64 stable for bug 248038
 
   04 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> qt-opengl-4.4.2.ebuild:
   Add ~mips keywords to qt-4.4.2
