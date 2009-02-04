@@ -1,0 +1,20 @@
+--- Makefile.in.old     2009-02-04 17:16:29.000000000 +0100
++++ Makefile.in 2009-02-04 17:17:40.000000000 +0100
+@@ -72,7 +72,7 @@
+ snes9express_SOURCES = frend.h frend.cc defines.h controller.h controller.cc profiler.h profiler.cc rom.h rom.cc sound.h sound.cc video.h video.cc cpu.h cpu.cc netplay.h netplay.cc extra.h extra.cc prefs.h prefs.cc misc.h misc.cc s9xskin.h s9xskin.cc skins.h skins.cc interface.h interface.cc 
+ snes9express_DEPENDENCIES = frend.h defines.h Makefile config.h
+ AM_CXXFLAGS = @GTK_CFLAGS@
+-snes9express_LDFLAGS = $(GTK_LIBS) @LIBOBJS@
++snes9express_LDFLAGS = 
+ EXTRA_DIST = snes.s9xskin snsp.s9xskin snes9express.spec
+ pkgdata_DATA = snes.s9xskin snsp.s9xskin
+ AM_CPPFLAGS = -DS9XDATADIR=\"$(pkgdatadir)\"
+@@ -90,7 +90,7 @@
+ snes9express_OBJECTS =  frend.o controller.o profiler.o rom.o sound.o \
+ video.o cpu.o netplay.o extra.o prefs.o misc.o s9xskin.o skins.o \
+ interface.o
+-snes9express_LDADD = $(LDADD)
++snes9express_LDADD = $(GTK_LIBS) @LIBOBJS@
+ CXXFLAGS = @CXXFLAGS@
+ CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+ CXXLD = $(CXX)
