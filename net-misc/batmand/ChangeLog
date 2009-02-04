@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/batmand
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batmand/ChangeLog,v 1.5 2009/01/17 14:40:19 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batmand/ChangeLog,v 1.6 2009/02/04 18:14:35 cedk Exp $
+
+*batmand-0.3.1 (04 Feb 2009)
+
+  04 Feb 2009; Cédric Krier <cedk@gentoo.org> +batmand-0.3.1.ebuild:
+  Version bump
 
   17 Jan 2009; Cédric Krier <cedk@gentoo.org> -batmand-0.2.0_rc2.ebuild,
   -batmand-0.2.0.ebuild, batmand-0.3.ebuild:
