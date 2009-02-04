@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pxp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.14 2008/04/19 15:38:09 aballier Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.15 2009/02/04 07:57:58 aballier Exp $
+
+*pxp-1.2.1 (04 Feb 2009)
+
+  04 Feb 2009; Alexis Ballier <aballier@gentoo.org> +pxp-1.2.1.ebuild:
+  version bump
 
   19 Apr 2008; Alexis Ballier <aballier@gentoo.org> -pxp-1.1.95.ebuild,
   -pxp-1.1.96.ebuild:
