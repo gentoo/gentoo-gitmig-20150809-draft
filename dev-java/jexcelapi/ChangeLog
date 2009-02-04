@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jexcelapi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.21 2008/10/25 17:12:28 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jexcelapi/ChangeLog,v 1.22 2009/02/04 12:26:27 betelgeuse Exp $
+
+  04 Feb 2009; Petteri Räty <betelgeuse@gentoo.org>
+  -jexcelapi-2.6.4.ebuild, -jexcelapi-2.6.6.ebuild:
+  Remove old versions.
 
   25 Oct 2008; nixnut <nixnut@gentoo.org> jexcelapi-2.6.8.ebuild:
   Stable on ppc wrt bug 243136

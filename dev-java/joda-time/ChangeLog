@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/joda-time
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.36 2008/04/13 22:19:12 betelgeuse Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/ChangeLog,v 1.37 2009/02/04 12:28:27 betelgeuse Exp $
+
+  04 Feb 2009; Petteri Räty <betelgeuse@gentoo.org>
+  -joda-time-1.4-r1.ebuild, -joda-time-1.5.ebuild:
+  Remove old versions.
 
 *joda-time-1.5.2 (13 Apr 2008)
 
