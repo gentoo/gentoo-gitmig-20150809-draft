@@ -3,8 +3,8 @@
 #
 
 auth    required        pam_env.so
-@include common-auth
-@include common-account
-@include common-session
-session    required   pam_limits.so
+auth    include         system-auth
+account include         system-auth
+session required        pam_limits.so
+session include         system-auth
 
