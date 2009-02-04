@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/excido
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/ChangeLog,v 1.16 2009/02/03 23:37:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/ChangeLog,v 1.17 2009/02/04 17:00:50 nyhm Exp $
+
+*excido-0.1.5c-r2 (04 Feb 2009)
+
+  04 Feb 2009; Tristan Heaven <nyhm@gentoo.org>
+  +files/excido-0.1.5c-build.patch, +files/excido-0.1.5c-freealut.patch,
+  +excido-0.1.5c-r2.ebuild:
+  Fix segfault with recent openal/freealut; more makefile cleanup
 
   03 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
   excido-0.1.5c-r1.ebuild:
