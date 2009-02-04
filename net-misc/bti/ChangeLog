@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bti
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.5 2009/01/25 18:22:18 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.6 2009/02/04 18:22:16 gregkh Exp $
+
+*bti-013 (04 Feb 2009)
+
+  04 Feb 2009; Greg Kroah-Hartman <gregkh@gentoo.org> +bti-013.ebuild:
+  013 version bump
 
   25 Jan 2009; Greg Kroah-Hartman <gregkh@gentoo.org> ChangeLog:
   012 release, now with log files and bash completion
