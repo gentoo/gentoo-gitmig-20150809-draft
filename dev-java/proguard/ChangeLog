@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/proguard
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.14 2008/10/22 01:27:23 fordfrog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.15 2009/02/04 20:08:58 serkan Exp $
+
+*proguard-4.3 (04 Feb 2009)
+
+  04 Feb 2009; Serkan Kaba <serkan@gentoo.org> +proguard-4.3.ebuild:
+  Version bump. Add missing dependency on ant-core.
 
 *proguard-4.2-r1 (22 Oct 2008)
 
