@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/skalibs-0.30.ebuild,v 1.5 2009/02/04 14:36:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/skalibs-0.47.ebuild,v 1.1 2009/02/04 14:36:35 patrick Exp $
 
 # NOTE: The comments in this file are for instruction and documentation.
 # They're not meant to appear with your final, production ebuild.  Please
