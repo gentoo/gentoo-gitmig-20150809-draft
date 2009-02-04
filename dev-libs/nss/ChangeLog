@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nss
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.136 2008/12/27 16:15:54 ranger Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.137 2009/02/04 11:26:58 armin76 Exp $
+
+*nss-3.12.2 (04 Feb 2009)
+
+  04 Feb 2009; Raúl Porcel <armin76@gentoo.org> +nss-3.12.2.ebuild:
+  Version bump
 
   27 Dec 2008; Brent Baude <ranger@gentoo.org> nss-3.12.2_rc1.ebuild:
   Marking nss-3.12.2_rc1 ppc64 and ppc for bug 234646
