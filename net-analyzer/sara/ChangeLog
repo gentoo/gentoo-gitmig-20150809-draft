@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sara
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.25 2008/07/18 07:36:04 jer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/ChangeLog,v 1.26 2009/02/04 17:51:22 patrick Exp $
+
+*sara-7.8.4 (04 Feb 2009)
+
+  04 Feb 2009; Patrick Lauer <patrick@gentoo.org> +sara-7.8.4.ebuild:
+  Bump to 7.8.4, closes #248126
 
 *sara-7.8.1 (18 Jul 2008)
 
