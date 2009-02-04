@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.267 2009/01/21 22:18:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.268 2009/02/04 12:47:14 chainsaw Exp $
+
+*hal-0.5.11-r7 (04 Feb 2009)
+
+  04 Feb 2009; <chainsaw@gentoo.org> metadata.xml, +hal-0.5.11-r7.ebuild:
+  Avoid circular dependencies between HAL and X by dropping migration script
+  and py86 dependency, closes bug #225091 by Ster0n <er0trashbox@gmail.com>.
+  Properly ignore Dell recovery partitions, patch supplied by Pacho Ramos
+  <pacho@condmat1.ciencias.uniovi.es> in bug #236784. Stop hiding unmounted
+  partitions, as suggested by Kirill Igorevich Cherniy
+  <kirill_i_cherniy@rambler.ru> in bug #247025. Upstream patch identified by
+  Rafael <rktspm@gmail.com> fixes detection of partitions over ~1.2TB in
+  size, closes bug #253815 by Yar Odin <yarodin@gmail.com>. Cease using
+  deprecated keys in our installed examples, as pointed out by Sebastian
+  Günther <samson@guenther-roetgen.de> in bug #256304.
 
   21 Jan 2009; Alexis Ballier <aballier@gentoo.org> hal-0.5.11-r6.ebuild:
   keyword ~x86-fbsd
