@@ -1,0 +1,35 @@
+diff --git a/tapsets.cxx b/tapsets.cxx
+index c8742fb..1e44986 100644
+--- a/tapsets.cxx
++++ b/tapsets.cxx
+@@ -2273,21 +2273,21 @@ struct dwflpp
+     FILE *memstream = open_memstream (&buf, &bufsz);
+     assert(memstream);
+ 
+-    fprintf(memstream, "{\n");
+-    fprintf(memstream, prelude.c_str());
++    fputs("{\n", memstream);
++    fputs(prelude.c_str(), memstream);
+     bool deref = c_emit_location (memstream, head, 1);
+-    fprintf(memstream, postlude.c_str());
+-    fprintf(memstream, "  goto out;\n");
++    fputs(postlude.c_str(), memstream);
++    fputs("  goto out;\n", memstream);
+ 
+     // dummy use of deref_fault label, to disable warning if deref() not used
+-    fprintf(memstream, "if (0) goto deref_fault;\n");
++    fputs("if (0) goto deref_fault;\n", memstream);
+ 
+     // XXX: deref flag not reliable; emit fault label unconditionally
+     (void) deref;
+-    fprintf(memstream,
+-            "deref_fault:\n"
+-            "  goto out;\n");
+-    fprintf(memstream, "}\n");
++    fputs("deref_fault:\n"
++          "  goto out;\n",
++          memstream);
++    fputs("}\n", memstream);
+ 
+     fclose (memstream);
+     string result(buf);
