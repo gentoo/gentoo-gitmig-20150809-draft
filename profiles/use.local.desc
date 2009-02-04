@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4185 2009/02/03 22:07:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4186 2009/02/04 17:27:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1935,7 +1935,6 @@ net-im/kadu:amarok - Enables amarok support in kadu
 net-im/kadu:config_wizard - Enables configuration wizard module
 net-im/kadu:extraicons - Enables extra icon set
 net-im/kadu:extramodules - Enables extra module in kadu
-net-im/kadu:libgadu - Build against existing libgadu rather than built-in 
 net-im/kadu:mail - Enables mail module in kadu
 net-im/kadu:powerkadu - Installs extra powerkadu modules
 net-im/kadu:speech - Enables speech module in kadu
