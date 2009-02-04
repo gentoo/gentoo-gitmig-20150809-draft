@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.268 2009/02/04 12:47:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.269 2009/02/04 14:27:53 chainsaw Exp $
+
+  04 Feb 2009; <chainsaw@gentoo.org> hal-0.5.11-r7.ebuild:
+  Do not break the dependency tree by being silly about hal-info.
 
 *hal-0.5.11-r7 (04 Feb 2009)
 
