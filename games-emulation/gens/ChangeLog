@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/gens
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.18 2008/10/14 16:22:27 mr_bones_ Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.19 2009/02/04 15:39:31 tupone Exp $
+
+  04 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/gens-2.15.4-as-needed.patch, +files/gens-2.15.5-as-needed.patch,
+  gens-2.15.4.ebuild, gens-2.15.5.ebuild:
+  Fix --as-needed bug #247350 by flameeyes@gentoo.org
 
 *gens-2.15.5 (14 Oct 2008)
 
