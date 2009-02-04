@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/worker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.68 2009/01/25 16:53:56 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.69 2009/02/04 21:23:03 armin76 Exp $
+
+  04 Feb 2009; Raúl Porcel <armin76@gentoo.org> worker-2.17.1.ebuild:
+  ia64 stable wrt #255520
 
   25 Jan 2009; Tobias Klausmann <klausman@gentoo.org> worker-2.17.1.ebuild:
   Stable on alpha, bug #255520
