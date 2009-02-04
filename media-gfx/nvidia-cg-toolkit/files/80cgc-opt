@@ -1,0 +1,7 @@
+# /etc/env.d/80cgc :
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/files/80cgc-opt,v 1.1 2009/02/04 21:17:54 maekke Exp $
+
+
+# Configures the CG Runtime environment for Bourne shell and compatible shells
+
+CG_COMPILER_EXE=/opt/bin/cgc
