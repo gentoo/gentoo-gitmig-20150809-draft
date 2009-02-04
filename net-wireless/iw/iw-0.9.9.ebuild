@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.7.ebuild,v 1.2 2009/01/13 21:05:41 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.9.ebuild,v 1.1 2009/02/04 20:13:50 rbu Exp $
 
-EAPI=2
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="nl80211-based configuration utility for wireless devices using the mac80211 kernel stack"
 HOMEPAGE="http://wireless.kernel.org/en/users/Documentation/iw"
@@ -20,11 +19,6 @@ RDEPEND=">=dev-libs/libnl-1.1"
 
 CC=$(tc-getCC)
 LD=$(tc-getLD)
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-ldflags.patch
-	epatch "${FILESDIR}"/${P}-cflags.patch
-}
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Failed to install"
