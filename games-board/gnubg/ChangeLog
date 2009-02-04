@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnubg
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.38 2008/02/29 18:58:00 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.39 2009/02/04 09:54:57 tupone Exp $
+
+  04 Feb 2009; Alfredo Tupone <tupone@gentoo.org> gnubg-0.14.3-r1.ebuild:
+  Does not work with dev-scheme/guile-1.8
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> gnubg-0.14.3-r1.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
