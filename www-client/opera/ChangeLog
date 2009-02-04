@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.316 2009/01/13 16:05:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.317 2009/02/04 16:45:28 jer Exp $
+
+  04 Feb 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4126.ebuild:
+  Depend on media-libs/libpng thanks to Constantine D. Kardaris (bug
+  #257437).
 
 *opera-10.00_pre4126 (13 Jan 2009)
 

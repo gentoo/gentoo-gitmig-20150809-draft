@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4126.ebuild,v 1.1 2009/01/13 16:05:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4126.ebuild,v 1.2 2009/02/04 16:45:28 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -64,8 +64,9 @@ SRC_URI="
 
 DEPEND=">=sys-apps/sed-4"
 
-RDEPEND="media-libs/libexif
+RDEPEND="
 	media-libs/jpeg
+	media-libs/libexif
 	>=media-libs/fontconfig-2.1.94-r1
 	x11-libs/libXrandr
 	x11-libs/libXp
@@ -77,6 +78,7 @@ RDEPEND="media-libs/libexif
 	x11-libs/libX11
 	x11-libs/libSM
 	x11-libs/libICE
+	!qt-static? ( media-libs/libpng )
 	qt-static? ( !qt3? ( x11-libs/libXinerama media-libs/nas ) )
 	x86? ( !qt-static? (
 			qt3? ( =x11-libs/qt-3* )
