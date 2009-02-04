@@ -7,18 +7,15 @@
 # 	-std=iso9899:1999
 # 	-std=iso9899:199x
 
-extra_flag=-std=c99
-
 for i; do
     case "$i" in
 	-std=c9[9x]|-std=iso9899:199[9x])
-	    extra_flag=
 	    ;;
-	-std=*)
-	    echo >&2 "`basename $0` called with non ANSI/ISO C option $i"
+	-ansi|-std=*)
+	    echo >&2 "`basename $0` called with non ANSI/ISO C99 option $i"
 	    exit 1
 	    ;;
     esac
 done
 
-exec gcc $extra_flag ${1+"$@"}
+exec gcc -std=c99 -pedantic -U_FORTIFY_SOURCE ${1+"$@"}
