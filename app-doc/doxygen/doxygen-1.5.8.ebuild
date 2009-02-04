@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.8.ebuild,v 1.2 2009/02/03 21:40:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.8.ebuild,v 1.3 2009/02/04 14:53:34 yngwin Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc nodot qt4 latex elibc_FreeBSD"
 
-RDEPEND="qt4? ( x11-libs/qt:4 )
+RDEPEND="qt4? ( x11-libs/qt-gui:4 )
 	latex? ( || (
 		( app-text/texlive-core
 		dev-texlive/texlive-genericrecommended
