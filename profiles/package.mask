@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9469 2009/02/04 20:01:57 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9470 2009/02/04 21:17:28 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -747,10 +747,6 @@ dev-python/twibber
 # Mike Doty <kingtaco@gentoo.org> (11 Aug 2008)
 # Masked due to build failure, bug 234448
 =app-emulation/emul-linux-x86-gtklibs-20080810
-
-# Michael Sterrett <mr_bones_@gentoo.org> (04 Aug 2008)
-# Security masked: bug #233929
-<games-simulation/openttd-0.6.3
 
 # Samuli Suominen <ssuominen@gentoo.org> (3 Aug 2008)
 # Unmaintained. Masked for removal wrt #233394.
