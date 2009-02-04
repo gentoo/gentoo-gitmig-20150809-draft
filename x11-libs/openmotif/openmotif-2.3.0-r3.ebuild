@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r3.ebuild,v 1.10 2008/06/29 12:39:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.3.0-r3.ebuild,v 1.11 2009/02/04 21:04:38 ulm Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -62,6 +62,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-sensitivity-invisible.patch"
 	epatch "${FILESDIR}/${P}-fix-nedit-segfaults.patch"
 	epatch "${FILESDIR}/${P}-freebsd-libiconv.patch"
+	epatch "${FILESDIR}/${PN}-2.3.1-ac-editres.patch" #82081
 
 	# disable compilation of demo binaries
 	sed -i -e '/^SUBDIRS/{:x;/\\$/{N;bx;};s/[ \t\n\\]*demos//;}' Makefile.am
