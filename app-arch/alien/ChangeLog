@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/alien
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.21 2008/02/03 11:20:03 drac Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.22 2009/02/04 14:55:56 patrick Exp $
+
+*alien-8.72 (04 Feb 2009)
+
+  04 Feb 2009; Patrick Lauer <patrick@gentoo.org> +alien-8.72.ebuild:
+  Bump to 8.72, fixes #213596, dep added for #178476
 
 *alien-8.69 (03 Feb 2008)
 
