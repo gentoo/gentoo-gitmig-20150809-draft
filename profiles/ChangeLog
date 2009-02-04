@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2329 2009/02/04 05:14:55 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2330 2009/02/04 10:57:59 armin76 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Feb 2009; Raúl Porcel <armin76@gentoo.org> package.mask:
+  Add >=seamonkey-bin-2.0_alpha1 mask
 
   04 Feb 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask sdsc-syslog (bug 239863) and openpbs-common (bug 255425) for removal
