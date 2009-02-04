@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca-tls
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.49 2008/03/09 21:45:19 ricmm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.50 2009/02/04 21:40:37 maekke Exp $
+
+  04 Feb 2009; Markus Meier <maekke@gentoo.org> qca-tls-1.0-r4.ebuild:
+  amd64/x86 stable, bug #257462
 
   09 Mar 2008; <ricmm@gentoo.org> qca-tls-1.0-r3.ebuild:
   Marked unstable on mips due to unstable deps
