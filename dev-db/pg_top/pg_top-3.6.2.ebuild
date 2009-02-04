@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/pg_top-3.6.2.ebuild,v 1.3 2008/12/21 13:52:06 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/pg_top-3.6.2.ebuild,v 1.4 2009/02/04 18:23:25 cedk Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="'top' for PostgreSQL"
 HOMEPAGE="http://ptop.projects.postgresql.org/"
