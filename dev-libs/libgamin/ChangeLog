@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgamin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.10 2009/01/31 11:33:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.11 2009/02/04 18:45:22 angelos Exp $
+
+  04 Feb 2009; Christoph Mende <angelos@gentoo.org> metadata.xml:
+  Changed gnome/kde/xfce to freedesktop
 
   31 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -libgamin-0.1.10.ebuild, libgamin-0.1.10-r1.ebuild:
