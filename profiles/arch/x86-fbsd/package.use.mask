@@ -7,3 +7,7 @@ x11-drivers/nvidia-drivers acpi
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # afs not keyworded
 >=gnome-base/gdm-2.20 afs
+
+# Ben de Groot <yngwin@gentoo.org> (4 Feb 2009)
+# needs qt-webkit keyworded
+x11-libs/qt-assistant webkit
