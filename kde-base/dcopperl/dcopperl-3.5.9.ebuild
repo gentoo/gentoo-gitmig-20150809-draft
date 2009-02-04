@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/dcopperl-3.5.9.ebuild,v 1.5 2008/06/14 17:35:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/dcopperl-3.5.9.ebuild,v 1.6 2009/02/04 11:24:28 jmbsvicetto Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
@@ -13,9 +13,10 @@ KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
 
-PATCHES="$FILESDIR/no-gtk-glib-check.diff
-	$FILESDIR/installdirs-vendor.diff" # install into vendor_perl, not into site_perl - bug 42819
+PATCHES=( "$FILESDIR/no-gtk-glib-check.diff"
+	"$FILESDIR/installdirs-vendor.diff" ) # install into vendor_perl, not into site_perl - bug 42819
 
 # Because this installs into /usr/lib/perl5/..., it doesn't have SLOT=X.Y like the rest of KDE,
 # and it installs into /usr entirely
