@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.39 2009/02/04 09:54:57 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.40 2009/02/04 11:56:38 tupone Exp $
+
+  04 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  files/gnubg-0.14.3-as-needed.patch:
+  Fix --as-needed bug #247340 by flameeyes@gentoo.org
 
   04 Feb 2009; Alfredo Tupone <tupone@gentoo.org> gnubg-0.14.3-r1.ebuild:
   Does not work with dev-scheme/guile-1.8
