@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/spe
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.38 2008/05/02 18:46:17 pythonhead Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.39 2009/02/04 16:04:45 patrick Exp $
+
+*spe-0.8.4h (04 Feb 2009)
+
+  04 Feb 2009; Patrick Lauer <patrick@gentoo.org> +spe-0.8.4h.ebuild:
+  Bump to 0.8.4h. Fixes #216970
 
   02 May 2008; Rob Cakebread <pythonhead@gentoo.org> spe-0.8.2.ebuild,
   spe-0.8.3c-r1.ebuild:
