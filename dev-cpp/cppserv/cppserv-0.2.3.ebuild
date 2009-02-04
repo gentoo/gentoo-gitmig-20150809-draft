@@ -1,6 +1,6 @@
 # Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.2.3.ebuild,v 1.1 2009/02/04 19:13:45 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.2.3.ebuild,v 1.2 2009/02/04 19:20:37 iluxa Exp $
 
 inherit eutils apache-module multilib
 
@@ -35,9 +35,11 @@ src_compile() {
 }
 
 src_install() {
-	local CPPSERV_DBG_FLAG
-	use debug && CPPSERV_DBG_FLAG="CPPFLAGS=-DMODCSERV_DEBUG"
 	emake $(cppserv_build_flags) DESTDIR="${D}" ${CPPSERV_DBG_FLAG} install || die "emake install failed. Bug iluxa on #cppserv on irc.freenode.net immediately"
 	insinto "${APACHE_MODULES_CONFDIR}"
 	doins "${FILESDIR}/${APACHE2_MOD_CONF}.conf" || die "internal ebuild error: \"${FILESDIR}/${APACHE2_MOD_CONF}.conf\" not found. Bug iluxa on #cppserv on irc.freenode.net immediately"
+}
+
+src_test() {
+	emake $(cppserv_build_flags) check
 }
