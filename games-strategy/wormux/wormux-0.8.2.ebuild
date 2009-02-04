@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.8.2.ebuild,v 1.4 2009/01/10 15:16:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.8.2.ebuild,v 1.5 2009/02/04 03:14:25 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -36,6 +36,7 @@ src_unpack() {
 	sed -i \
 		-e "/AX_CFLAGS_WARN_ALL/d" \
 		-e "s/-Werror//g" \
+		-e "s/fribidi-config/pkg-config fribidi/g" \
 		configure.ac \
 		|| die "sed failed"
 	sed -i \
