@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.32 2009/01/31 15:25:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.33 2009/02/05 19:44:55 vapier Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ else
 	S=${WORKDIR}/${MY_P}
 fi
 
-GV="0.9.0"
+GV="0.9.1"
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
 SRC_URI="${SRC_URI}

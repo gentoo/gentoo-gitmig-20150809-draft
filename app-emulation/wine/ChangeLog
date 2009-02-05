@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.248 2009/01/31 15:27:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.249 2009/02/05 19:44:55 vapier Exp $
+
+  05 Feb 2009; Mike Frysinger <vapier@gentoo.org> wine-9999.ebuild:
+  Update gecko version.
 
   31 Jan 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.13.ebuild,
   wine-1.1.14.ebuild, wine-9999.ebuild:
