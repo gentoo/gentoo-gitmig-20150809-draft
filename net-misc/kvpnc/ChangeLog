@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/kvpnc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.33 2008/11/15 20:07:07 halcy0n Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.34 2009/02/05 19:35:34 scarabeus Exp $
+
+  05 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> kvpnc-0.9.0.ebuild:
+  Switch to eapi1 and make cisco useflag enabled by default. Per bug
+  #209126.
 
   15 Nov 2008; Mark Loeser <halcy0n@gentoo.org>
   +files/kvpnc-0.9.0-gcc43.patch, kvpnc-0.9.0.ebuild:
