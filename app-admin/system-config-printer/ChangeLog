@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-printer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/ChangeLog,v 1.6 2009/01/31 07:36:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/ChangeLog,v 1.7 2009/02/05 05:31:59 darkside Exp $
+
+  05 Feb 2009; Jeremy Olexa <darkside@gentoo.org>
+  system-config-printer-0.7.27.ebuild:
+  (non maintainer commit) [QA] fix HOMEPAGE, bug 241104
 
   31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Give up maintainership; reassign to maintainer-needed.
