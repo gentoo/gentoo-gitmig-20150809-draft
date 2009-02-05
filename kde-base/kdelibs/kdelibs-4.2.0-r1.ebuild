@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.0-r1.ebuild,v 1.4 2009/02/03 22:57:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.0-r1.ebuild,v 1.5 2009/02/05 17:47:01 scarabeus Exp $
 
 EAPI="2"
 
@@ -105,6 +105,7 @@ PATCHES=(
 	"$FILESDIR/$PV-kio_copy.patch"
 	"$FILESDIR/$PV-klauncher.patch"
 	"$FILESDIR/$PV-klauncher_konsole.patch"
+	"$FILESDIR/$PV-kode_crash.patch"
 )
 
 src_configure() {

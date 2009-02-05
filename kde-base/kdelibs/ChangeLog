@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.558 2009/02/03 22:57:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.559 2009/02/05 17:47:00 scarabeus Exp $
+
+  05 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/4.2.0-kode_crash.patch, kdelibs-4.2.0-r1.ebuild:
+  Add patch fixing kode crashes. Per bug #257535
 
   03 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> kdelibs-4.2.0.ebuild,
   kdelibs-4.2.0-r1.ebuild:
