@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/phonon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.6 2009/02/01 22:45:50 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.7 2009/02/05 18:15:28 scarabeus Exp $
+
+  05 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> phonon-4.3.0.ebuild:
+  Fix -xine build. Per bug #257509.
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   phonon-4.3.0.ebuild:
