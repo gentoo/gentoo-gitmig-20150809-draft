@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lufs
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.28 2008/11/17 22:54:38 flameeyes Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.29 2009/02/05 05:08:13 darkside Exp $
+
+  05 Feb 2009; Jeremy Olexa <darkside@gentoo.org> lufs-0.9.7-r3.ebuild:
+  (non maintainer commit) [QA] fix HOMEPAGE, bug 230065
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/lufs-0.9.7-enable-gnome-2.patch:

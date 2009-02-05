@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.10 2008/06/29 12:20:55 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.11 2009/02/05 05:08:13 darkside Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -8,7 +8,7 @@ WANT_AUTOCONF="latest"
 inherit eutils autotools
 
 DESCRIPTION="User-mode filesystem implementation"
-HOMEPAGE="http://lufs.sourceforge.net/lufs/"
+HOMEPAGE="http://sourceforge.net/projects/lufs/"
 SRC_URI="mirror://sourceforge/lufs/${P}.tar.gz"
 
 LICENSE="GPL-2"
