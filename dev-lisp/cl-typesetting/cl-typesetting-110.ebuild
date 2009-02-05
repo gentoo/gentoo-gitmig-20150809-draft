@@ -1,11 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-typesetting/cl-typesetting-110.ebuild,v 1.2 2006/04/14 10:03:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-typesetting/cl-typesetting-110.ebuild,v 1.3 2009/02/05 05:29:47 darkside Exp $
 
 inherit common-lisp eutils
 
 DESCRIPTION="CL-TYPESETTING is a complete typesetting system written in Common Lisp."
-HOMEPAGE="http://www.fractalconcept.com/asp/BCg/sdataQ0709qxv9wpLDM==/asdataQucgleWmCuSG9eWI$Nmw"
+HOMEPAGE="http://www.fractalconcept.com:8000/asp/cl-typesetting"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"

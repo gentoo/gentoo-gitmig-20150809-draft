@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-typesetting
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-typesetting/ChangeLog,v 1.1 2005/12/31 08:23:44 mkennedy Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-typesetting/ChangeLog,v 1.2 2009/02/05 05:29:47 darkside Exp $
+
+  05 Feb 2009; Jeremy Olexa <darkside@gentoo.org> cl-typesetting-110.ebuild:
+  (non maintainer commit) [QA] fix HOMEPAGE, bug 240698
 
 *cl-typesetting-110 (31 Dec 2005)
 
