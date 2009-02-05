@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/skanlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.1 2009/02/03 11:08:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.2 2009/02/05 08:12:34 alexxy Exp $
+
+  05 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> skanlite-0.2.ebuild:
+  Fix desc, bug #257703
 
 *skanlite-0.2 (03 Feb 2009)
 
