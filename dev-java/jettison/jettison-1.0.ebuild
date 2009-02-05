@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jettison/jettison-1.0.ebuild,v 1.1 2009/02/05 00:22:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jettison/jettison-1.0.ebuild,v 1.2 2009/02/05 00:36:59 betelgeuse Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source"
@@ -17,7 +17,7 @@ KEYWORDS="~x86"
 
 IUSE=""
 
-COMMON_DEP=""
+COMMON_DEP="java-virtuals/jaxp-virtual"
 
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
@@ -32,6 +32,8 @@ src_prepare(){
 	#no supplied Build file
 	cp -v "${FILESDIR}"/build.xml "${S}/build.xml" || die
 }
+
+EANT_GENTOO_CLASSPATH="jaxp-virtual"
 
 src_install() {
 	java-pkg_dojar dist/"${PN}.jar"

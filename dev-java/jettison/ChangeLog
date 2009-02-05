@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jettison
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jettison/ChangeLog,v 1.1 2009/02/05 00:22:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jettison/ChangeLog,v 1.2 2009/02/05 00:36:59 betelgeuse Exp $
+
+  05 Feb 2009; Petteri Räty <betelgeuse@gentoo.org> jettison-1.0.ebuild:
+  Require jaxp-virtual so jettison builds with 1.4.
 
 *jettison-1.0 (05 Feb 2009)
 
