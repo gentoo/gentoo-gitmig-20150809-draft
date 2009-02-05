@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.1.ebuild,v 1.1 2009/02/04 13:50:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.1.ebuild,v 1.2 2009/02/05 16:44:21 mr_bones_ Exp $
 
 EAPI="1"
 NEED_PYTHON="2.2"
@@ -21,7 +21,6 @@ DEPEND=">=sci-libs/hdf5-1.6.5
 	app-arch/bzip2"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}/tables-${PV}"
-
 
 src_install() {
 	cd "{S}"
