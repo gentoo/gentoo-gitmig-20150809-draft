@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9470 2009/02/04 21:17:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9471 2009/02/05 05:15:52 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (05 Feb 2009)
+# libjingle-0.3.11 was created by the tapioca team
+# libjingle-0.3.12 was created by the farsight team
+# As a result, some things don't work with 0.3.12 (bug 256953)
+=net-libs/libjingle-0.3.12
 
 # Serkan Kaba <serkan@gentoo.org> (04 Feb 2009)
 # Masked until bug #256953 is resolved

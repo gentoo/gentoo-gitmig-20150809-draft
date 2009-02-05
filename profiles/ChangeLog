@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2332 2009/02/04 21:09:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2333 2009/02/05 05:15:52 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Feb 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  libjingle-0.3.12 is not backwards compatible, p.mask for now. bug 256953
 
   04 Feb 2009; Ben de Groot <yngwin@gentoo.org> arch/ia64/package.use.mask,
   arch/sparc/package.use.mask, arch/x86-fbsd/package.use.mask:
