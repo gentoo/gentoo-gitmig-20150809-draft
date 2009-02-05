@@ -1,0 +1,10 @@
+# ChangeLog for java-virtuals/jaxp-virtual
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jaxp-virtual/ChangeLog,v 1.1 2009/02/05 00:34:14 betelgeuse Exp $
+
+*jaxp-virtual-1.4 (05 Feb 2009)
+
+  05 Feb 2009; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +jaxp-virtual-1.4.ebuild:
+  Move jaxp-virtual from java-experimental.
+
