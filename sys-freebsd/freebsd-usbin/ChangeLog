@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.50 2009/01/22 21:06:27 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.51 2009/02/05 20:50:23 aballier Exp $
+
+*freebsd-usbin-7.1-r1 (05 Feb 2009)
+
+  05 Feb 2009; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-usbin-7.1-r1.ebuild:
+  Dont disable traceroute as we don't have any working ebuild for it
+  otherwise...
 
 *freebsd-usbin-7.1 (22 Jan 2009)
 
