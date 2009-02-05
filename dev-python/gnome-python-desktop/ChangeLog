@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.68 2009/01/08 23:28:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.69 2009/02/05 20:16:32 aballier Exp $
+
+  05 Feb 2009; Alexis Ballier <aballier@gentoo.org>
+  gnome-python-desktop-2.24.1.ebuild:
+  keyword ~x86-fbsd
 
 *gnome-python-desktop-2.24.1 (08 Jan 2009)
 
