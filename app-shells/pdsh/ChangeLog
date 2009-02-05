@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/pdsh
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.12 2008/08/03 15:20:56 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.13 2009/02/05 00:24:58 jsbronder Exp $
+
+*pdsh-2.17 (05 Feb 2009)
+
+  05 Feb 2009; Justin Bronder <jsbronder@gentoo.org> +pdsh-2.17.ebuild:
+  Bump app-shells/pdsh-2.17 (#255239). Also adding RESTRICT=test as, so far
+  as I can tell, the test suite never worked.
 
   03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
