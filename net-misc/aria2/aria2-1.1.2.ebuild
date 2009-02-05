@@ -1,16 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.0.0.ebuild,v 1.2 2008/12/31 03:40:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.1.2.ebuild,v 1.1 2009/02/05 21:13:39 dev-zero Exp $
 
 EAPI="2"
 
 inherit eutils
 
-MY_P="aria2c-${PV/_p/+}"
-
 DESCRIPTION="A download utility with resuming and segmented downloading with HTTP/HTTPS/FTP/BitTorrent support."
 HOMEPAGE="http://aria2.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
@@ -35,9 +33,8 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	nls? ( virtual/libiconv virtual/libintl )"
 
-S="${WORKDIR}/${MY_P}"
-
 src_prepare() {
+	epatch "${FILESDIR}/${PV}-testRetrieveCookie-testfix.patch"
 	sed -i -e "s|/tmp|${T}|" test/*.cc test/*.txt || die "sed failed"
 }
 
@@ -71,6 +68,6 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	rm -rf "${D}/usr/share/doc/aria2c"
-	dodoc ChangeLog README AUTHORS TODO NEWS
+	dodoc ChangeLog README AUTHORS NEWS
 	dohtml README.html doc/aria2c.1.html
 }
