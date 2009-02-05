@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.22.1.ebuild,v 1.1 2008/09/27 16:27:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.22.1.ebuild,v 1.2 2009/02/05 21:13:06 aballier Exp $
 
 inherit gnome2 eutils
 
@@ -16,7 +16,7 @@ COMMON_DEPEND=">=x11-libs/gtk+-2.5.4
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-2"
 RDEPEND="${COMMON_DEPEND}
-	net-analyzer/traceroute
+	|| ( net-analyzer/traceroute sys-freebsd/freebsd-usbin )
 	net-dns/bind-tools
 	userland_GNU? ( net-misc/netkit-fingerd net-misc/whois )
 	userland_BSD? ( net-misc/bsdwhois )"

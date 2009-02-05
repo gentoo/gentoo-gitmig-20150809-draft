@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-nettool
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.74 2008/11/13 19:24:46 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.75 2009/02/05 21:13:06 aballier Exp $
+
+  05 Feb 2009; Alexis Ballier <aballier@gentoo.org>
+  gnome-nettool-2.22.1.ebuild:
+  Allow freebsd-usbin as traceroute provider
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> gnome-nettool-2.22.0.ebuild:
   Marking gnome-nettool-2.22.0 ppc64 stable for bug 236971
