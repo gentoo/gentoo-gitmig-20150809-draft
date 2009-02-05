@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-0.1.1.20080918.ebuild,v 1.1 2008/09/20 01:00:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.1.0.20090205.ebuild,v 1.1 2009/02/05 16:18:58 matsuu Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
-RDEPEND="app-i18n/ibus
+RDEPEND=">=app-i18n/ibus-1.1.0
 	>=dev-lang/python-2.5
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}

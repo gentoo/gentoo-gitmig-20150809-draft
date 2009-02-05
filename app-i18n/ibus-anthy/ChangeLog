@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/ibus-anthy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.4 2009/02/03 14:41:51 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.5 2009/02/05 16:15:00 matsuu Exp $
+
+*ibus-anthy-1.1.0.20090205 (05 Feb 2009)
+
+  05 Feb 2009; MATSUU Takuto <matsuu@gentoo.org>
+  -files/ibus-anthy-0.1.1.20080912-gentoo.patch,
+  -ibus-anthy-0.1.1.20080901.ebuild, -ibus-anthy-0.1.1.20080912.ebuild,
+  -ibus-anthy-0.1.1.20080912-r1.ebuild, ibus-anthy-0.1.1.20090203.ebuild,
+  +ibus-anthy-1.1.0.20090205.ebuild:
+  Version bumped. Fixed dependency. Removed old versions.
 
 *ibus-anthy-0.1.1.20090203 (03 Feb 2009)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ibus-m17n-0.1.1.20081013.ebuild,v 1.1 2008/10/19 14:14:07 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-m17n/ibus-m17n-0.1.1.20081013.ebuild,v 1.2 2009/02/05 16:17:36 matsuu Exp $
 
 inherit python
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
-RDEPEND="app-i18n/ibus
+RDEPEND="=app-i18n/ibus-0.1*
 	dev-libs/m17n-lib
 	>=dev-lang/python-2.5
 	nls? ( virtual/libintl )"
