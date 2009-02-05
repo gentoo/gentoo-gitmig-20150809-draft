@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/fluxbox-styles-fluxmod
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.29 2008/09/22 13:10:48 omp Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.30 2009/02/05 06:07:31 darkside Exp $
+
+  05 Feb 2009; Jeremy Olexa <darkside@gentoo.org>
+  fluxbox-styles-fluxmod-20040809.ebuild,
+  fluxbox-styles-fluxmod-20041024.ebuild,
+  fluxbox-styles-fluxmod-20050128.ebuild,
+  fluxbox-styles-fluxmod-20050128-r1.ebuild:
+  (non maintainer commit) [QA] fix HOMEPAGE, bug 223179
 
   22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
   Change herd from commonbox to desktop-wm.
