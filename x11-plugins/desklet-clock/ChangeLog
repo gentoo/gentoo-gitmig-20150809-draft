@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/desklet-clock
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.23 2007/08/03 09:46:31 armin76 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.24 2009/02/05 05:53:49 darkside Exp $
+
+  05 Feb 2009; Jeremy Olexa <darkside@gentoo.org> desklet-clock-0.31.ebuild,
+  desklet-clock-0.32.ebuild, desklet-clock-0.32-r1.ebuild,
+  desklet-clock-0.40.ebuild, desklet-clock-0.50.ebuild:
+  (non maintainer commit) [QA] fix HOMEPAGE, bug 248295
 
   03 Aug 2007; Raúl Porcel <armin76@gentoo.org> desklet-clock-0.50.ebuild:
   alpha stable

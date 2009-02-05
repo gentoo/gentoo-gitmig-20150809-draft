@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-calendar
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/ChangeLog,v 1.9 2007/02/21 23:15:22 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/ChangeLog,v 1.10 2009/02/05 05:49:46 darkside Exp $
+
+  05 Feb 2009; Jeremy Olexa <darkside@gentoo.org>
+  desklet-calendar-0.21.ebuild:
+  (non maintainer commit) [QA] fix HOMEPAGE, bug 248295
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2

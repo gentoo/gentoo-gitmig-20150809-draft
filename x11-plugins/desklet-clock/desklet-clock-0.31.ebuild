@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/desklet-clock-0.31.ebuild,v 1.7 2007/07/11 20:39:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/desklet-clock-0.31.ebuild,v 1.8 2009/02/05 05:53:49 darkside Exp $
 
 DESKLET_NAME="Clock"
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="The clock sensors and displays for gdesklets"
 SRC_URI="http://gdesklets.gnomedesktop.org/files/${MY_P}.tar.bz2"
-HOMEPAGE="http://gdesklets.gnomedesktop.org/categories.php?func=gd_show_app&gd_app_id=12"
+HOMEPAGE="http://gdesklets.de/index.php?q=desklet/view/201"
 LICENSE="as-is"
 
 SLOT="0"

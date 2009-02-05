@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-wirelessmonitor
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-wirelessmonitor/ChangeLog,v 1.4 2006/10/15 21:27:25 agriffis Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-wirelessmonitor/ChangeLog,v 1.5 2009/02/05 05:46:30 darkside Exp $
+
+  05 Feb 2009; Jeremy Olexa <darkside@gentoo.org>
+  desklet-wirelessmonitor-0.13.ebuild:
+  (non maintainer commit) [QA] fix HOMEPAGE, bug 248295
 
   15 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   desklet-wirelessmonitor-0.13.ebuild:

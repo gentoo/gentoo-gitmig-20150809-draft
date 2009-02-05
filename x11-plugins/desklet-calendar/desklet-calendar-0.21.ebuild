@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/desklet-calendar-0.21.ebuild,v 1.3 2006/10/06 12:56:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/desklet-calendar-0.21.ebuild,v 1.4 2009/02/05 05:49:46 darkside Exp $
 
 inherit gdesklets
 
@@ -11,7 +11,7 @@ MY_P="${MY_PN}-${PV}"
 S=${WORKDIR}/${MY_PN}
 
 DESCRIPTION="A calendar display for gDesklets"
-HOMEPAGE="http://gdesklets.gnomedesktop.org/categories.php?func=gd_show_app&gd_app_id=213"
+HOMEPAGE="http://gdesklets.de/index.php?q=desklet/view/121"
 SRC_URI="http://gdesklets.gnomedesktop.org/files/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 

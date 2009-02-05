@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-newsgrab/desklet-newsgrab-1.5.ebuild,v 1.7 2006/10/14 16:08:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-newsgrab/desklet-newsgrab-1.5.ebuild,v 1.8 2009/02/05 05:55:06 darkside Exp $
 
 inherit gdesklets
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${DESKLET_NAME}
 
 DESCRIPTION="News Grab is a XML rss reader that displays the titles of each news item with a small description, and the date it was posted up."
 SRC_URI="http://gdesklets.gnomedesktop.org/files/${DESKLET_NAME}${PV}.tar.gz"
-HOMEPAGE="http://gdesklets.gnomedesktop.org/categories.php?func=gd_show_app&gd_app_id=209"
+HOMEPAGE="http://gdesklets.de/index.php?q=desklet/view/61"
 LICENSE="as-is"
 
 SLOT="0"
