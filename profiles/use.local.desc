@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4188 2009/02/05 00:47:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4189 2009/02/05 16:07:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -257,12 +257,6 @@ app-forensics/samhain:userfiles - Compile in the module to check for files in us
 app-forensics/sleuthkit:dbtool - Add patch for dbtool interface from PyFlag
 app-i18n/anthy:ucs4 - Enable ucs4 support
 app-i18n/atokx2:ext-iiimf - Link with the system IIIMF, rather than the bundled version
-app-i18n/ibus-table:additional - Enable to generate additional Engine
-app-i18n/ibus-table:cangjie5 - Enable to generate CangJie5 Engine
-app-i18n/ibus-table:erbi-qs - Enable to generate ErBi-QS Engine
-app-i18n/ibus-table:extra-phrases - Add extra phrases into builded Engine
-app-i18n/ibus-table:wubi - Enable to generate WuBi86 and WuBi98 Engine
-app-i18n/ibus-table:zhengma - Enable to generate ZhengMa Engine
 app-i18n/ibus-table-erbi:extra-phrases - Add extra phrases into builded Engine
 app-i18n/ibus-table-wubi:extra-phrases - Add extra phrases into builded Engine
 app-i18n/ibus-table-zhengma:extra-phrases - Add extra phrases into builded Engine
