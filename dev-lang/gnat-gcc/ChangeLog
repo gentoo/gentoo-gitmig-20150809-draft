@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gnat-gcc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.27 2008/10/23 12:09:18 george Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.28 2009/02/05 14:14:44 george Exp $
+
+*gnat-gcc-4.3.3 (05 Feb 2009)
+
+  05 Feb 2009; George Shapovalov <george@gentoo.org> +gnat-gcc-4.3.3.ebuild:
+  new version
 
   23 Oct 2008; George Shapovalov <george@gentoo.org> gnat-gcc-3.4.6.ebuild:
   fixed repoman complaint about not using inherited autotools
