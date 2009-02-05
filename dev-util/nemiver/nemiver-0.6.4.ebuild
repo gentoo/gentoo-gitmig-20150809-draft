@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.6.4.ebuild,v 1.1 2008/11/24 23:50:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/nemiver-0.6.4.ebuild,v 1.2 2009/02/05 05:36:43 darkside Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="A gtkmm front end to the GNU Debugger (gdb)"
-HOMEPAGE="http://home.gna.org/nemiver/"
+HOMEPAGE="http://projects.gnome.org/nemiver/"
 
 LICENSE="GPL-2"
 SLOT="0"
