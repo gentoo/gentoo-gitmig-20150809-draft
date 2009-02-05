@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-0.1.1.20081016.ebuild,v 1.1 2008/10/19 14:11:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.1.0.20090205.ebuild,v 1.1 2009/02/05 16:13:05 matsuu Exp $
 
 EAPI="1"
 inherit autotools eutils multilib python
@@ -12,34 +12,31 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nls qt4"
+IUSE="doc nls qt4"
 
-RDEPEND=">=dev-libs/glib-2
+RDEPEND=">=dev-libs/glib-2.18
 	>=x11-libs/gtk+-2
-	dev-libs/dbus-glib
-	qt4? ( || (
-		(
-			>=x11-libs/qt-core-4.4:4
-			>=x11-libs/qt-dbus-4.4:4
-		)
-		>=x11-libs/qt-4.4:4
-	) )
+	>=gnome-base/gconf-2.11.1
+	>=gnome-base/librsvg-2
+	sys-apps/dbus
+	qt4? (
+		>=x11-libs/qt-core-4.4:4
+		>=x11-libs/qt-dbus-4.4:4
+	)
 	app-text/iso-codes
 	x11-libs/libX11
 	>=dev-lang/python-2.5
+	>=dev-python/pygobject-2.15
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	doc? ( >=dev-util/gtk-doc-1.9 )
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 RDEPEND="${RDEPEND}
 	dev-python/pygtk
 	>=dev-python/dbus-python-0.83
 	dev-python/pyxdg
-	x11-misc/notification-daemon
-	|| (
-		dev-python/gconf-python
-		dev-python/gnome-python
-	)"
+	x11-misc/notification-daemon"
 
 pkg_setup() {
 	# An arch specific config directory is used on multilib systems
@@ -58,6 +55,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
+		$(use_enable doc gtk-doc) \
 		$(use_enable nls) \
 		$(use_enable qt4 qt4-immodule) || die
 	emake || die
