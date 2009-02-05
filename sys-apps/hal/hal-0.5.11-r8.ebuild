@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r8.ebuild,v 1.1 2009/02/04 22:58:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r8.ebuild,v 1.2 2009/02/05 10:18:24 chainsaw Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -166,7 +166,9 @@ src_compile() {
 		hardware="--with-cpufreq --with-usb-csr --with-keymaps"
 		use arm && hardware="$hardware --with-omap --enable-pmu"
 		use ppc && hardware="$hardware --enable-pmu"
-		use laptop && hardware="--with-macbook --with-macbookpro"
+		if use x86 || use amd64; then
+			hardware="$hardware --with-macbook --with-macbookpro"
+		fi
 
 		if use dell ; then
 			hardware="$hardware --with-dell-backlight"
