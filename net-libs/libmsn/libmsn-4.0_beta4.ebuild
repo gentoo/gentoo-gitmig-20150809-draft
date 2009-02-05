@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/libmsn-4.0_beta4.ebuild,v 1.2 2009/02/05 00:13:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/libmsn-4.0_beta4.ebuild,v 1.3 2009/02/05 02:32:53 ranger Exp $
 
 inherit cmake-utils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl"
