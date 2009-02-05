@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/pidgin-encryption-3.0.ebuild,v 1.7 2007/08/28 14:45:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-encryption/pidgin-encryption-3.0.ebuild,v 1.8 2009/02/05 05:11:25 darkside Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Pidgin IM Encryption PlugIn"
-HOMEPAGE="http://gaim-encryption.sourceforge.net/"
+HOMEPAGE="http://pidgin-encrypt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gaim-encryption/${P}.tar.gz"
 
 LICENSE="GPL-2"
