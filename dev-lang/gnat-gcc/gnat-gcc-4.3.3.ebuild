@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.3.ebuild,v 1.1 2009/02/05 14:14:44 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.3.ebuild,v 1.2 2009/02/05 14:27:27 george Exp $
 
 # Need to let configure know where to find stddef.h
 #EXTRA_CONFGCC="${WORKDIR}/usr/lib/include/"
@@ -10,6 +10,8 @@ inherit gnatbuild
 DESCRIPTION="GNAT Ada Compiler - gcc version"
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GMGPL"
+
+IUSE=""
 
 # overriding the BOOT_SLOT, as 4.1 should do fine, no need for bootstrap
 # duplication

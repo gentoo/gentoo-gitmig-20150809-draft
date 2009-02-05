@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-3.4.6.ebuild,v 1.10 2008/10/23 12:09:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-3.4.6.ebuild,v 1.11 2009/02/05 14:27:27 george Exp $
 
 WANT_AUTOCONF=2.1
 inherit gnatbuild
@@ -8,6 +8,8 @@ inherit gnatbuild
 DESCRIPTION="GNAT Ada Compiler - gcc version"
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GMGPL"
+
+IUSE=""
 
 # BOOT_SLOT is defined in gnatbuild.eclass and depends only on $PV
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-core-${PV}.tar.bz2

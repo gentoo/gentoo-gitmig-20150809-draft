@@ -1,12 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.1.2.ebuild,v 1.5 2007/10/10 18:28:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.1.2.ebuild,v 1.6 2009/02/05 14:27:27 george Exp $
 
 inherit gnatbuild
 
 DESCRIPTION="GNAT Ada Compiler - gcc version"
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GMGPL"
+
+IUSE=""
 
 # SLOT is set in gnatbuild.eclass, depends only on PV (basically SLOT=GCCBRANCH)
 # so the URI's are static.
