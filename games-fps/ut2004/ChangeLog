@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.63 2008/07/28 16:41:54 wolf31o2 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.64 2009/02/05 16:56:21 mr_bones_ Exp $
+
+  05 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  ut2004-3369-r4.ebuild:
+  Always use the system libraries since the included ones don't seem to work
+  with xcb (bug #239977)
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.

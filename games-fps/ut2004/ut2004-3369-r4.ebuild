@@ -1,11 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.18 2008/02/29 19:23:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.19 2009/02/05 16:56:21 mr_bones_ Exp $
 
 # To use system libraries, uncomment the following line and comment the one
 # below it.
-#inherit eutils multilib games
-inherit eutils games
+inherit eutils multilib games
 
 MY_P="${PN}-lnxpatch${PV}-2.tar.bz2"
 DESCRIPTION="Editor's Choice Edition plus Mega Pack for the critically-acclaimed first-person shooter"
@@ -35,12 +34,9 @@ RDEPEND=">=games-fps/ut2004-data-3186-r2
 	x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXau
-	x11-libs/libXdmcp"
-	# If you wish to use your system libSDL/openal, then you will need to remove
-	# the comments from the following two lines, along with the quotes above and
-	# this comment text.
-#	>=media-libs/libsdl-1.2
-#	media-libs/openal"
+	x11-libs/libXdmcp
+	>=media-libs/libsdl-1.2
+	media-libs/openal"
 
 S=${WORKDIR}/UT2004-Patch
 
@@ -60,12 +56,9 @@ src_install() {
 			|| die "copying ${p} from patch"
 	done
 
-	# To use system libraries, rather than binaries from ut2004-data, you will
-	# need to uncomment these three lines, as well as ensure that you have both
-	# libsdl and openal installed.
-#	dosym /usr/$(get_libdir)/libopenal.so "${dir}"/System/openal.so || die
-#	dosym /usr/$(get_libdir)/libSDL-1.2.so.0 "${dir}"/System/libSDL-1.2.so.0 \
-#		|| die
+	dosym /usr/$(get_libdir)/libopenal.so "${dir}"/System/openal.so || die
+	dosym /usr/$(get_libdir)/libSDL-1.2.so.0 "${dir}"/System/libSDL-1.2.so.0 \
+		|| die
 
 	use amd64 && rm "${Ddir}"/System/u{cc,t2004}-bin \
 		&& mv "${Ddir}"/System/ucc-bin-linux-amd64 "${Ddir}"/System/ucc-bin \
