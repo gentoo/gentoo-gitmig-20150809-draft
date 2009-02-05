@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.19 2009/02/01 22:51:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.20 2009/02/05 04:12:56 je_fro Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -157,21 +157,24 @@ PDEPEND="sys-devel/gcc-config"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/libstdc++-v3-open_missing_mode.patch || die "epatch failed"
+
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
 
 	if (has_multilib_profile || use multilib) ; then
 		sed -i \
 			-e 's:\(MULTILIB_OSDIRNAMES = \).*:\1../lib64 ../lib32:' \
-			${S}/gcc/config/i386/t-linux64 \
+			"${S}"/gcc/config/i386/t-linux64 \
 			|| die "sed failed!"
 	fi
 
 	# Misdesign in libstdc++ (Redhat)
-	cp -pPR ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
+	cp -pPR "${S}"/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 
-	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
+	cd "${S}"; ./contrib/gcc_update --touch &> /dev/null
 	gnuconfig_update
 }
 
@@ -193,12 +196,12 @@ src_compile() {
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
 
 	# Build in a separate build tree
-	mkdir -p ${WORKDIR}/build
-	cd ${WORKDIR}/build
+	mkdir -p "${WORKDIR}"/build
+	cd "${WORKDIR}"/build
 
 	einfo "Configuring libstdc++..."
 	addwrite "/dev/zero"
-	${S}/configure --prefix=${LOC} \
+	"${S}"/configure --prefix=${LOC} \
 		--bindir=${BINPATH} \
 		--includedir=${LIBPATH}/include \
 		--datadir=${DATAPATH} \
@@ -219,7 +222,7 @@ src_compile() {
 		--with-local-prefix=${LOC}/local \
 		${myconf} || die
 
-	touch ${S}/gcc/c-gperf.h
+	touch "${S}"/gcc/c-gperf.h
 
 	einfo "Compiling libstdc++..."
 	S="${WORKDIR}/build" \
@@ -233,7 +236,7 @@ src_install() {
 
 	# Do allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
 	# this can break the build.
-	for x in ${WORKDIR}/build/gcc/include/*
+	for x in "${WORKDIR}"/build/gcc/include/*
 	do
 		if [ -L ${x} ]
 		then
@@ -243,7 +246,7 @@ src_install() {
 	done
 	# Remove generated headers, as they can cause things to break
 	# (ncurses, openssl, etc).
-	for x in `find ${WORKDIR}/build/gcc/include/ -name '*.h'`
+	for x in `find "${WORKDIR}"/build/gcc/include/ -name '*.h'`
 	do
 		if grep -q 'It has been auto-edited by fixincludes from' ${x}
 		then
@@ -253,7 +256,7 @@ src_install() {
 
 	einfo "Installing libstdc++..."
 	# Do the 'make install' from the build directory
-	cd ${WORKDIR}/build
+	cd "${WORKDIR}"/build
 	S="${WORKDIR}/build" \
 	make prefix=${LOC} \
 		bindir=${BINPATH} \
@@ -268,24 +271,24 @@ src_install() {
 	# we'll move this into a directory we can put at the end of ld.so.conf
 	# other than the normal versioned directory, so that it doesnt conflict
 	# with gcc 3.3.3
-	mkdir -p ${D}/${LOC}/lib/libstdc++-v3/
-	mv ${D}/${LIBPATH}/lib* ${D}/${LOC}/lib/libstdc++-v3/
+	mkdir -p "${D}"/${LOC}/lib/libstdc++-v3/
+	mv "${D}"/${LIBPATH}/lib* "${D}"/${LOC}/lib/libstdc++-v3/
 	# we dont want the headers...
-	rm -rf ${D}/${LOC}/lib/gcc*
+	rm -rf "${D}"/${LOC}/lib/gcc*
 	# or locales...
-	rm -rf ${D}/${LOC}/share
+	rm -rf "${D}"/${LOC}/share
 	# or anything other than the .so files, really.
-	find ${D} | grep -e c++.la$ -e c++.a$ | xargs rm -f
+	find "${D}" | grep -e c++.la$ -e c++.a$ | xargs rm -f
 	# we dont even want the un-versioned .so symlink, as it confuses some
 	# apps and also causes others to link against the old libstdc++...
-	rm ${D}/${LOC}/lib/libstdc++-v3/libstdc++.so
+	rm "${D}"/${LOC}/lib/libstdc++-v3/libstdc++.so
 
 	# and it's much easier to just move around the result than it is to
 	# configure libstdc++-v3 to use CONF_LIDIR
 	if [ "$(get_libdir)" != "lib" ] ; then
-		mv ${D}/${LOC}/lib ${D}/${LOC}/$(get_libdir)
+		mv "${D}"/${LOC}/lib "${D}"/${LOC}/$(get_libdir)
 	fi
 
-	mkdir -p ${D}/etc/env.d/
-	echo "LDPATH=\"${LOC}/$(get_libdir)/libstdc++-v3/\"" >> ${D}/etc/env.d/99libstdc++
+	mkdir -p "${D}"/etc/env.d/
+	echo "LDPATH=\"${LOC}/$(get_libdir)/libstdc++-v3/\"" >> "${D}"/etc/env.d/99libstdc++
 }

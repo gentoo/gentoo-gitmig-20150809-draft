@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.55 2009/02/01 22:51:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.56 2009/02/05 04:12:56 je_fro Exp $
+
+  05 Feb 2009; Jeff Gardner <je_fro@gentoo.org>
+  +files/libstdc++-v3-open_missing_mode.patch, libstdc++-v3-3.3.6.ebuild:
+  Patch to compile with gcc-4.3.3, thanks to Magnus Granberg, closes bug
+  #232102. Fixed repoman warnings galore.
 
   01 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
   libstdc++-v3-3.3.3-r1.ebuild, libstdc++-v3-3.3.4.ebuild,
