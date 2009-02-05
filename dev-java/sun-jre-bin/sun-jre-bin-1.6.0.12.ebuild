@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.10.ebuild,v 1.3 2008/11/17 21:42:37 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.12.ebuild,v 1.1 2009/02/05 21:25:38 serkan Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -19,7 +19,7 @@ SRC_URI="x86? ( ${URL_BASE}/${X86_AT} )
 		amd64? ( ${URL_BASE}/${AMD64_AT} )"
 SLOT="1.6"
 LICENSE="dlj-1.1"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="strip"
 IUSE="X alsa nsplugin odbc"
 
@@ -89,7 +89,7 @@ src_install() {
 			install_mozilla_plugin /opt/${P}/plugin/i386/$plugin_dir/libjavaplugin_oji.so
 			install_mozilla_plugin /opt/${P}/lib/i386/libnpjp2.so plugin2
 		else
-			eerror "No plugin available for amd64 arch"
+			install_mozilla_plugin /opt/${P}/lib/amd64/libnpjp2.so
 		fi
 	fi
 
@@ -120,6 +120,16 @@ pkg_postinst() {
 		elog "Two variants of the nsplugin are available via eselect java-nsplugin:"
 		elog "${VMHANDLE} and ${VMHANDLE}-plugin2 (the Next-Generation Plug-In) "
 		ewarn "Note that the ${VMHANDLE}-plugin2 works only in Firefox 3!"
+		elog "For more info see https://jdk6.dev.java.net/plugin2/"
+		elog
+	fi
+
+	if use amd64 && use nsplugin; then
+		elog
+		elog "This version finally brings a browser plugin for amd64"
+		elog "It is the so-called Next-Generation Plug-In (plugin2)"
+		elog "Use eselect java-nsplugin to select it (${VMHANDLE})."
+		ewarn "Note that it works only in Firefox 3 or newer browsers!"
 		elog "For more info see https://jdk6.dev.java.net/plugin2/"
 		elog
 	fi
