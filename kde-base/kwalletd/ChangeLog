@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.1 2009/01/27 18:03:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.2 2009/02/05 01:15:29 ranger Exp $
+
+  05 Feb 2009; Brent Baude <ranger@gentoo.org> kwalletd-4.2.0.ebuild:
+  Marking kwalletd-4.2.0 ~ppc for bug 257421
 
 *kwalletd-4.2.0 (27 Jan 2009)
 
