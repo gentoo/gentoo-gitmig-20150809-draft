@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.375 2009/01/25 17:57:29 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.376 2009/02/05 11:30:44 remi Exp $
+
+*xorg-server-1.5.3-r2 (05 Feb 2009)
+
+  05 Feb 2009; Rémi Cardona <remi@gentoo.org> +xorg-server-1.5.3-r2.ebuild:
+  bump to patchset 4 which fixes a screensaver bug, a xinerama bug (bug
+  #18668) and hopefully bitmap fonts as well (bugs #257206 and #255082),
+  drop --with-default-font-path as 'built-ins' is always appended internally
+  (patch #60)
 
   25 Jan 2009; Rémi Cardona <remi@gentoo.org> xorg-server-1.5.3-r1.ebuild:
   silently update the patch-ball to 03 to fix bug #19691
