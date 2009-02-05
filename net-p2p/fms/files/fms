@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/files/fms,v 1.1 2009/02/05 18:36:43 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/files/fms,v 1.2 2009/02/05 18:54:52 tommy Exp $
 
 start() {
 	ebegin "Starting FMS"
@@ -24,7 +24,7 @@ stop() {
 		pkill -u freenet -f "fms --daemon"
 		eend 0
 	fi
-	if RC_CMD=restart; then
+	if [[ $RC_CMD == "restart" ]]; then
 		ebegin "Waiting a few seconds to be sure FMS is ready for restart"
 		sleep 10
 		#give fms time to stop and release the nntp port
