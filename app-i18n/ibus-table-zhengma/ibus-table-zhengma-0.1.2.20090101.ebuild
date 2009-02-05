@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-zhengma/ibus-table-zhengma-0.1.2.20090101.ebuild,v 1.1 2009/01/02 16:26:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-zhengma/ibus-table-zhengma-0.1.2.20090101.ebuild,v 1.2 2009/02/05 16:11:53 matsuu Exp $
 
 DESCRIPTION="The ZhengMa for IBus Tables"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="extra-phrases"
 
-RDEPEND=">=app-i18n/ibus-table-0.1.2
+RDEPEND="=app-i18n/ibus-table-0.1*
 	extra-phrases? ( >=app-i18n/ibus-table-extraphrase-0.1.2 )
 	>=dev-lang/python-2.5"
 DEPEND="${RDEPEND}
