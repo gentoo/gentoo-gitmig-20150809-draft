@@ -1,0 +1,124 @@
+diff -u src/or.orig/dns.c src/or/dns.c
+--- src/or.orig/dns.c	2009-01-14 20:58:15.000000000 +0100
++++ src/or/dns.c	2009-01-29 14:51:21.000000000 +0100
+@@ -16,7 +16,7 @@
+ 
+ #include "or.h"
+ #include "ht.h"
+-#include "eventdns.h"
++#include <evdns.h>
+ 
+ /** Longest hostname we're willing to resolve. */
+ #define MAX_ADDRESSLEN 256
+diff -u src/or.orig/dnsserv.c src/or/dnsserv.c
+--- src/or.orig/dnsserv.c	2008-02-26 20:56:28.000000000 +0100
++++ src/or/dnsserv.c	2009-01-29 14:51:34.000000000 +0100
+@@ -12,7 +12,7 @@
+  **/
+ 
+ #include "or.h"
+-#include "eventdns.h"
++#include <evdns.h>
+ 
+ /* Helper function: called by evdns whenever the client sends a request to our
+  * DNSPort.  We need to eventually answer the request <b>req</b>.
+diff -u src/or.orig/Makefile.am src/or/Makefile.am
+--- src/or.orig/Makefile.am	2008-03-11 19:57:51.000000000 +0100
++++ src/or/Makefile.am	2009-01-29 14:50:44.000000000 +0100
+@@ -20,7 +20,6 @@
+ 	networkstatus.c \
+ 	onion.c policies.c relay.c rendcommon.c rendclient.c rendmid.c \
+ 	rendservice.c rephist.c router.c routerlist.c routerparse.c \
+-	eventdns.c \
+ 	tor_main.c
+ 
+ AM_CPPFLAGS = -DSHARE_DATADIR="\"$(datadir)\"" \
+@@ -42,7 +41,6 @@
+ 	networkstatus.c \
+ 	onion.c policies.c relay.c rendcommon.c rendclient.c rendmid.c \
+ 	rendservice.c rephist.c router.c routerlist.c routerparse.c \
+-	eventdns.c \
+ 	test_data.c test.c
+ 
+ test_LDFLAGS = @TOR_LDFLAGS_zlib@ @TOR_LDFLAGS_openssl@ \
+@@ -50,7 +48,7 @@
+ test_LDADD = ../common/libor.a ../common/libor-crypto.a \
+         -lz -levent -lssl -lcrypto @TOR_LIB_WS32@ @TOR_LIB_GDI@
+ 
+-noinst_HEADERS = or.h eventdns.h eventdns_tor.h micro-revision.i
++noinst_HEADERS = or.h micro-revision.i
+ 
+ tor_main.o: micro-revision.i
+ 
+diff -u src/or.orig/Makefile.in src/or/Makefile.in
+--- src/or.orig/Makefile.in	2009-01-21 18:38:07.000000000 +0100
++++ src/or/Makefile.in	2009-01-29 14:50:29.000000000 +0100
+@@ -56,7 +56,7 @@
+ 	dirvote.c dns.c dnsserv.c geoip.c hibernate.c main.c ntmain.c \
+ 	networkstatus.c onion.c policies.c relay.c rendcommon.c \
+ 	rendclient.c rendmid.c rendservice.c rephist.c router.c \
+-	routerlist.c routerparse.c eventdns.c test_data.c test.c
++	routerlist.c routerparse.c test_data.c test.c
+ @BUILD_NT_SERVICES_TRUE@am__objects_1 = ntmain.$(OBJEXT)
+ am_test_OBJECTS = buffers.$(OBJEXT) circuitbuild.$(OBJEXT) \
+ 	circuitlist.$(OBJEXT) circuituse.$(OBJEXT) command.$(OBJEXT) \
+@@ -69,7 +69,7 @@
+ 	onion.$(OBJEXT) policies.$(OBJEXT) relay.$(OBJEXT) \
+ 	rendcommon.$(OBJEXT) rendclient.$(OBJEXT) rendmid.$(OBJEXT) \
+ 	rendservice.$(OBJEXT) rephist.$(OBJEXT) router.$(OBJEXT) \
+-	routerlist.$(OBJEXT) routerparse.$(OBJEXT) eventdns.$(OBJEXT) \
++	routerlist.$(OBJEXT) routerparse.$(OBJEXT) \
+ 	test_data.$(OBJEXT) test.$(OBJEXT)
+ test_OBJECTS = $(am_test_OBJECTS)
+ test_DEPENDENCIES = ../common/libor.a ../common/libor-crypto.a
+@@ -81,7 +81,7 @@
+ 	dirvote.c dns.c dnsserv.c geoip.c hibernate.c main.c ntmain.c \
+ 	networkstatus.c onion.c policies.c relay.c rendcommon.c \
+ 	rendclient.c rendmid.c rendservice.c rephist.c router.c \
+-	routerlist.c routerparse.c eventdns.c tor_main.c
++	routerlist.c routerparse.c tor_main.c
+ am_tor_OBJECTS = buffers.$(OBJEXT) circuitbuild.$(OBJEXT) \
+ 	circuitlist.$(OBJEXT) circuituse.$(OBJEXT) command.$(OBJEXT) \
+ 	config.$(OBJEXT) connection.$(OBJEXT) \
+@@ -93,7 +93,7 @@
+ 	onion.$(OBJEXT) policies.$(OBJEXT) relay.$(OBJEXT) \
+ 	rendcommon.$(OBJEXT) rendclient.$(OBJEXT) rendmid.$(OBJEXT) \
+ 	rendservice.$(OBJEXT) rephist.$(OBJEXT) router.$(OBJEXT) \
+-	routerlist.$(OBJEXT) routerparse.$(OBJEXT) eventdns.$(OBJEXT) \
++	routerlist.$(OBJEXT) routerparse.$(OBJEXT) \
+ 	tor_main.$(OBJEXT)
+ tor_OBJECTS = $(am_tor_OBJECTS)
+ tor_DEPENDENCIES = ../common/libor.a ../common/libor-crypto.a
+@@ -230,7 +230,6 @@
+ 	networkstatus.c \
+ 	onion.c policies.c relay.c rendcommon.c rendclient.c rendmid.c \
+ 	rendservice.c rephist.c router.c routerlist.c routerparse.c \
+-	eventdns.c \
+ 	tor_main.c
+ 
+ AM_CPPFLAGS = -DSHARE_DATADIR="\"$(datadir)\"" \
+@@ -253,7 +252,6 @@
+ 	networkstatus.c \
+ 	onion.c policies.c relay.c rendcommon.c rendclient.c rendmid.c \
+ 	rendservice.c rephist.c router.c routerlist.c routerparse.c \
+-	eventdns.c \
+ 	test_data.c test.c
+ 
+ test_LDFLAGS = @TOR_LDFLAGS_zlib@ @TOR_LDFLAGS_openssl@ \
+@@ -262,7 +260,7 @@
+ test_LDADD = ../common/libor.a ../common/libor-crypto.a \
+         -lz -levent -lssl -lcrypto @TOR_LIB_WS32@ @TOR_LIB_GDI@
+ 
+-noinst_HEADERS = or.h eventdns.h eventdns_tor.h micro-revision.i
++noinst_HEADERS = or.h micro-revision.i
+ all: all-am
+ 
+ .SUFFIXES:
+@@ -351,7 +349,6 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dirvote.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dns.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dnsserv.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/eventdns.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/geoip.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hibernate.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@

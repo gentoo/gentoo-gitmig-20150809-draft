@@ -10,6 +10,7 @@
     <name>Christian Faulhammer</name>
   </maintainer>
   <use>
+    <flag name="bundledlibevent">USE bundled libevent for asynchronous DNS requests (provides a tiny bit more anonymity)</flag>
     <flag name="logrotate">Enable logrotate file installation</flag>
   </use>
 </pkgmetadata>
