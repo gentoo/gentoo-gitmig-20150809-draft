@@ -1,10 +1,11 @@
 # ChangeLog for net-p2p/fms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/ChangeLog,v 1.1 2009/02/05 18:36:43 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/ChangeLog,v 1.2 2009/02/05 18:40:21 tommy Exp $
 
 *fms-0.3.29 (05 Feb 2009)
 
   05 Feb 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +files/fms,
   +fms-0.3.29.ebuild:
-  Initial commit. Fixes bug 240087
+  Initial commit. Fixes bug 240087. Thanks to Dennis Nezic for the initial
+  ebuild.
 
