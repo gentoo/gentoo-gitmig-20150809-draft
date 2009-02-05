@@ -1,6 +1,11 @@
 # ChangeLog for app-text/omegat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/ChangeLog,v 1.9 2009/02/01 15:14:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/ChangeLog,v 1.10 2009/02/05 16:53:56 matsuu Exp $
+
+*omegat-1.8.1_p02 (05 Feb 2009)
+
+  05 Feb 2009; MATSUU Takuto <matsuu@gentoo.org> +omegat-1.8.1_p02.ebuild:
+  Version bumped.
 
 *omegat-1.8.1_p01-r1 (01 Feb 2009)
 
