@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-i18n
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.161 2008/11/23 22:07:06 pva Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.162 2009/02/05 01:33:14 jmbsvicetto Exp $
+
+  05 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kde-i18n-3.5.9.ebuild:
+  Removed the eautoreconf call until I can get a propper fix for the
+  autotools maintainer mode.
 
   23 Nov 2008; Peter Volkov <pva@gentoo.org> kde-i18n-3.5.9.ebuild,
   kde-i18n-3.5.10.ebuild:

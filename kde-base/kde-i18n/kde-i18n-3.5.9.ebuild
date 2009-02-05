@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.9.ebuild,v 1.10 2009/02/03 04:03:09 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.9.ebuild,v 1.11 2009/02/05 01:33:14 jmbsvicetto Exp $
 
 EAPI="1"
 WANT_AUTOMAKE="1.10"
@@ -56,8 +56,6 @@ src_unpack() {
 	done
 
 	use linguas_ru && epatch "${FILESDIR}/${P}-russian.patch"
-
-	eautoreconf
 }
 
 src_compile() {
