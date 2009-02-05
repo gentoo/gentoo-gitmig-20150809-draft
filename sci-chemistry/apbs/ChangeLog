@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/apbs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.19 2008/10/11 17:29:20 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.20 2009/02/05 05:44:50 darkside Exp $
+
+  05 Feb 2009; Jeremy Olexa <darkside@gentoo.org> apbs-0.5.0.ebuild,
+  apbs-0.5.1.ebuild, apbs-1.0.0-r1.ebuild:
+  (non maintainer commit) [QA] fix HOMEPAGE, bug 256488
 
 *apbs-1.0.0-r1 (11 Oct 2008)
 

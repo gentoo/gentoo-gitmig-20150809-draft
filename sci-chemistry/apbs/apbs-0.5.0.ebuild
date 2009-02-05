@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.5.0.ebuild,v 1.3 2008/01/12 13:44:08 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-0.5.0.ebuild,v 1.4 2009/02/05 05:44:50 darkside Exp $
 
 inherit eutils fortran
 
@@ -9,7 +9,7 @@ S="${WORKDIR}"/"${MY_P}"
 
 DESCRIPTION=" Software for evaluating the electrostatic properties of nanoscale biomolecular systems"
 LICENSE="GPL-2"
-HOMEPAGE="http://agave.wustl.edu/apbs/"
+HOMEPAGE="http://apbs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
