@@ -1,0 +1,13 @@
+# ChangeLog for app-admin/smolt
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/ChangeLog,v 1.1 2009/02/05 21:24:36 bangert Exp $
+
+*smolt-1.2 (05 Feb 2009)
+
+  05 Feb 2009; Thilo Bangert <bangert@gentoo.org>
+  +files/smolt-1.2-Makefile-fix-install.patch,
+  +files/smolt-1.2-config.py-gentoo-config.patch, +files/smolt-init.d,
+  +metadata.xml, +smolt-1.2.ebuild:
+  initial release - smolt - The Fedora hardware profiler - based on
+  contributed ebuild by Peter GAAL (bug #248396) - thanks
+
