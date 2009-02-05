@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.12.ebuild,v 1.8 2008/11/13 19:45:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.12.ebuild,v 1.9 2009/02/05 03:04:07 darkside Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -66,6 +66,10 @@ src_unpack() {
 
 	# Fix gnome-doc-utils detection
 	epatch "${FILESDIR}"/${P}-gdu.patch
+
+	# Use installed inittools, see bug #234851
+	sed -i -e 's#$(top_builddir)/intltool-#intltool-#' configure \
+		|| die "patching configure failed"
 }
 
 src_install() {
