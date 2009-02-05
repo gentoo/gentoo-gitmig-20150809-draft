@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.10 2009/01/18 04:16:30 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.11 2009/02/05 08:13:53 ali_bush Exp $
+
+  05 Feb 2009; Alistair Bush <ali_bush@gentoo.org> scala-2.7.3.ebuild:
+  Fixed #257581.
 
 *scala-2.7.3 (18 Jan 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.7.3.ebuild,v 1.1 2009/01/18 04:16:30 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.7.3.ebuild,v 1.2 2009/02/05 08:13:53 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 WANT_ANT_TASKS="ant-nodeps"
@@ -11,6 +11,7 @@ MY_P="${P}.final-sources"
 # creating the binary:
 # JAVA_PKG_FORCE_VM="$available-1.5" USE="doc examples source" ebuild scala-*.ebuild compile
 # cd $WORDKIR
+# fix dist/latest link.
 # tar -cjf $DISTDIR/scala-$PN-gentoo-binary.tar.bz2 ${MY_P}/dists ${MY_P}/docs/TODO
 
 DESCRIPTION="The Scala Programming Language"
@@ -95,7 +96,12 @@ scala_launcher() {
 }
 
 src_install() {
-	cd dists/latest || die
+	if use binary ; then
+		cd dists/scala-2.7.3.r0-b20090118133557 || die
+	else
+		cd dists/latest || die
+	fi
+
 	local SCALADIR="/usr/share/${PN}/"
 
 	#sources are .scala so no use for java-pkg_dosrc
