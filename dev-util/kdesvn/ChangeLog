@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdesvn
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.55 2008/12/21 10:35:18 george Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.56 2009/02/05 11:11:50 tampakrap Exp $
+
+  05 Feb 2009; Theo Chatzimichos <tampakrap@gentoo.org> metadata.xml:
+  add myself as maintainer
 
   01 Dec 2008; George Shapovalov <george@gentoo.org> kdesvn-1.0.4.ebuild:
   fixed collision with kdesdk-kioslaves (#243434)
