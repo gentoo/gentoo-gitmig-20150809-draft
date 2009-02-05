@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.1.0.ebuild,v 1.3 2009/01/04 15:37:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.1.0-r1.ebuild,v 1.1 2009/02/05 18:30:00 scarabeus Exp $
 
 EAPI="2"
 
-NEED_KDE="4.1"
+KDE_MINIMAL="4.1"
 KDE_LINGUAS="ca cs de el es_AR es et fr it nl pl pt_BR ru sr sr@Latn tr zh_TW"
 inherit kde4-base
 
@@ -28,18 +28,6 @@ RDEPEND="${DEPEND}
 	media-video/mplayer"
 
 S="${WORKDIR}/${P}-Source"
-
-src_unpack() {
-	# NOTE: Should be changed once the eclass moving linguas stuff to src_prepare
-	# hits the tree or package gets fixed upstream.
-	kde4-base_src_unpack
-
-	sed -i -e 's/sr@latin/sr@Latn/g' \
-		"${S}"/po/cmake_install.cmake || die "sed failed"
-	mv -i "${S}"/po/sr@latin.po "${S}"/po/sr@Latn.po
-
-	enable_selected_linguas
-}
 
 pkg_postinst() {
 	echo
