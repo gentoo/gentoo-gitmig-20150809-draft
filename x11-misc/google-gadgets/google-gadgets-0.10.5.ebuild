@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.5.ebuild,v 1.1 2009/01/08 10:33:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.10.5.ebuild,v 1.2 2009/02/05 02:46:08 ranger Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://code.google.com/p/google-gadgets-for-linux/"
 SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager startup-notification"
 
 # Weird things happen when we start mix-n-matching, so for the time being

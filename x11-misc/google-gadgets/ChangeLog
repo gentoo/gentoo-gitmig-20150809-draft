@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.19 2009/01/08 10:33:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.20 2009/02/05 02:46:08 ranger Exp $
+
+  05 Feb 2009; Brent Baude <ranger@gentoo.org> google-gadgets-0.10.5.ebuild:
+  google-gadgets-0.10.5 ~ppc64 for kde borkage
 
 *google-gadgets-0.10.5 (08 Jan 2009)
 
