@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20060301.ebuild,v 1.6 2009/01/31 15:51:32 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20060301.ebuild,v 1.7 2009/02/06 03:48:37 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.caliban.org/files/bash/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
 IUSE=""
 
 DEPEND=""
