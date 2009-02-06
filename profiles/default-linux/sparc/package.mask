@@ -1,13 +1,12 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/package.mask,v 1.7 2008/11/21 20:20:46 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/package.mask,v 1.8 2009/02/06 16:46:00 armin76 Exp $
 
-# Alexis Ballier <aballier@gentoo.org> (09 Sep 2008)
-# The big TeX Live 2008 mask. Needs some testing and keywording love.
-# Updated 06 Oct 2008 for bug #237202 and bug #239472
-##
-# Ferris McCormick <fmccor@gentoo.org> (18 Nov 2008)
-# Unmask texlive-2008.
+# Raúl Porcel <armin76@gentoo.org> (06 Feb 2009)
+# mask these versions for a smooth upgrade of x11-libs/qt-4.4.2 wrt bug #248038.
+=x11-libs/qt-4.3*
+<dev-python/PyQt4-4.4
+<dev-python/PyQt-3.17.6
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # Broken, no way to test it, see bug #155887 and bug #186958
