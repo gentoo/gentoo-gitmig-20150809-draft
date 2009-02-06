@@ -1,5 +1,0 @@
-# Copyright 1999-2007 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2007.0/desktop/make.defaults,v 1.1 2007/04/16 20:36:01 wolf31o2 Exp $
-
-USE="acpi alsa arts cairo cdr dbus dvd dvdr dvdread eds emboss encode esd evo fam firefox gif gnome gpm gstreamer gtk hal jpeg kde kerberos ldap mad mikmod mp3 mpeg ogg opengl oss pdf png qt3 qt3support qt4 quicktime sdl spell svg tiff truetype vorbis win32codecs unicode X xml xv"

@@ -1,9 +1,0 @@
-# Copyright 1999-2007 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/package.mask,v 1.4 2008/09/08 05:16:31 jer Exp $
-# DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
-
-# Jeroen Roovers <jer@gentoo.org> (31 Aug 2007)
-# No version of metakit currently builds on HPPA (bug #169509): 
-dev-db/metakit
-

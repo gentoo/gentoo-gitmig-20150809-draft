@@ -1,9 +1,0 @@
-# Copyright 2001-2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/packages,v 1.5 2004/12/04 19:20:27 gmsoft Exp $
-
-*virtual/bootloader
-
->=sys-devel/binutils-2.13.90.0.16-r1
->=sys-devel/gcc-3.2.2
->=sys-libs/glibc-2.3.1-r2

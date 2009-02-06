@@ -1,10 +1,28 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2335 2009/02/05 16:09:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2336 2009/02/06 05:40:22 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Feb 2009; Jeroen Roovers <jer@gentoo.org>
+  -default-linux/hppa/2007.0/deprecated,
+  -default-linux/hppa/2007.0/desktop/deprecated,
+  -default-linux/hppa/2007.0/desktop/make.defaults,
+  -default-linux/hppa/2007.0/desktop/parent,
+  -default-linux/hppa/2007.0/desktop/virtuals,
+  -default-linux/hppa/2007.0/make.defaults,
+  -default-linux/hppa/2007.0/package.use.force,
+  -default-linux/hppa/2007.0/packages, -default-linux/hppa/2007.0/parent,
+  -default-linux/hppa/2007.0/server/deprecated,
+  -default-linux/hppa/2007.0/server/make.defaults,
+  -default-linux/hppa/2007.0/server/parent,
+  -default-linux/hppa/2007.0/use.mask, -default-linux/hppa/make.defaults,
+  -default-linux/hppa/package.mask, -default-linux/hppa/package.use.mask,
+  -default-linux/hppa/packages, -default-linux/hppa/parent,
+  -default-linux/hppa/use.mask, -default-linux/hppa/virtuals:
+  Remove default-linux/hppa (bug #253572).
 
   05 Feb 2009; MATSUU Takuto <matsuu@gentoo.org> package.mask:
   p.mask >=app-i18n/ibus*-1.1

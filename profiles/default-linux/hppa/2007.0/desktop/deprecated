@@ -1,5 +1,0 @@
-default/linux/hppa/2008.0/desktop
-# cd /etc/
-# rm make.profile
-# ln -s ../usr/portage/profiles/default/linux/hppa/2008.0/desktop make.profile
-

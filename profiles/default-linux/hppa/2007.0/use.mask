@@ -1,5 +1,0 @@
-# 2006/05/25 Guy Martin <gmsoft@gentoo.org>
-# nptl is the only supported option with >=sys-libs/glibc-2.5
-
--nptl
--nptlonly
