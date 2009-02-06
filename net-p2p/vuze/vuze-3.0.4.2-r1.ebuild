@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-3.0.4.2-r1.ebuild,v 1.1 2009/02/06 11:46:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-3.0.4.2-r1.ebuild,v 1.2 2009/02/06 12:06:46 caster Exp $
 
 ###
 ### @Todo The new Azureus gui requires swt built with embedded mozilla support,
@@ -106,7 +106,7 @@ src_install() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=204132
 	java-pkg_register-environment-variable MOZ_PLUGIN_PATH /usr/lib/nsbrowser/plugins
 
-	doicon "${FILESDIR}/azureus.png"
+	doicon "${FILESDIR}/vuze.png"
 	domenu "${FILESDIR}/vuze.desktop"
 
 	use source && java-pkg_dosrc "${S}"/{com,edu,org}

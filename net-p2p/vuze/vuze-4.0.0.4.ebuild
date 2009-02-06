@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.0.0.4.ebuild,v 1.1 2009/02/06 11:56:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.0.0.4.ebuild,v 1.2 2009/02/06 12:06:46 caster Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ UPNPAV_DIST=${UPNPAV_N}_${UPNPAV_V}.zip
 
 ALLPLUGINS_URL="http://azureus.sourceforge.net/plugins"
 
-DESCRIPTION="BitTorrent client in Java, now called Vuze"
+DESCRIPTION="BitTorrent client in Java, formerly called Azureus"
 HOMEPAGE="http://www.vuze.com/"
 SRC_URI="mirror://sourceforge/azureus/${MAIN_DIST}
 	${ALLPLUGINS_URL}/${PLUGINS_DIST}
@@ -111,6 +111,7 @@ src_install() {
 		--main org.gudy.azureus2.ui.common.Main -pre "${FILESDIR}/${PN}-4.1.0.0-pre" \
 		--java_args '-Dazureus.install.path=/usr/share/vuze/ ${JAVA_OPTIONS}' \
 		--pkg_args '--ui=${UI}'
+	dosym vuze /usr/bin/azureus
 
 	insinto /usr/share/${PN}/
 	doins -r "${WORKDIR}/plugins"
@@ -129,23 +130,25 @@ pkg_postinst() {
 	### @Todo We should probably deactivate auto-update it by default,
 	###       or even remove the option - bug #218959
 	###
-	ewarn "Running Azureus as root is not supported and may result in untracked"
+	ewarn "Running Vuze as root is not supported and may result in untracked"
 	ewarn "updates to shared components and then collisions on updates via portage"
 
+	elog "Vuze has been formerly called Azureus and many references to the old name remain."
+	elog
 	elog "Since version 4.0.0.2, plugins that are normally bundled by upstream"
 	elog "(and auto-installed in each user's ~/.azureus if not bundled)"
 	elog "are now installed into shared plugin directory by the ebuild."
 	elog "Users are recommended to delete the following plugin copies:"
 	elog "~/.azureus/plugins/{${PLUGINS_N},${RATING_N},${UPDATER_N},${UPNPAV_N}}"
 	elog
-	elog "Azureus may warn that shared plugin dir is not writable, that's fine."
+	elog "Vuze may warn that shared plugin dir is not writable, that's fine."
 	elog "It may also attempt to update some these plugins and fail to write."
 	elog "In that case look for or fill a bump bug in bugs.gentoo.org"
 	elog
 	elog "We plan to disable updater for shared components and plugins."
 	elog "See progress in bug #218959, patches welcome."
 	elog
-	elog "After running azureus for the first time, configuration"
+	elog "After running Vuze for the first time, configuration"
 	elog "options will be placed in '~/.azureus/gentoo.config'."
 	elog "If you need to change some startup options, you should"
 	elog "modify this file, rather than the startup script."
@@ -155,7 +158,7 @@ pkg_postinst() {
 	elog "1: Tools > Options > Interface > Start > Display Vuze UI Chooser"
 	elog "2: Toolbar (right-hand side)"
 	elog
-	elog "If you have problems starting Azureus, try starting it"
+	elog "If you have problems starting Vuze, try starting it"
 	elog "from the command line to look at debugging output."
 
 	fdo-mime_desktop_database_update
