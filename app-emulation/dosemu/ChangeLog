@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/dosemu
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.49 2008/11/21 12:39:15 hanno Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.50 2009/02/06 13:40:32 hanno Exp $
+
+  06 Feb 2009; Hanno Boeck <hanno@gentoo.org>
+  +files/dosemu-1.4.0.1-gcc433.diff, dosemu-1.4.0.1.ebuild:
+  Patch from upstream svn to fix compilation with gcc 4.3.3.
 
   21 Nov 2008; Hanno Boeck <hanno@gentoo.org> dosemu-1.4.0.1.ebuild:
   xf86dgaproto is only a build-time dep.
