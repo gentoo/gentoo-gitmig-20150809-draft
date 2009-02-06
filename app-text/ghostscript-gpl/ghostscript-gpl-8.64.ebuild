@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.61-r1.ebuild,v 1.10 2008/10/31 20:13:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.64.ebuild,v 1.1 2009/02/06 00:06:30 tgurr Exp $
 
 inherit autotools eutils versionator flag-o-matic
 
-DESCRIPTION="GPL Ghostscript - the most current Ghostscript, AFPL, relicensed"
+DESCRIPTION="GPL Ghostscript - the most current Ghostscript, AFPL, relicensed."
 HOMEPAGE="http://ghostscript.com/"
 
 MY_P=${P/-gpl}
@@ -18,16 +18,18 @@ SRC_URI="cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200406.tar.gz
 
 LICENSE="GPL-2 CPL-1.0"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="bindist cjk cups djvu gtk jpeg2k X"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+IUSE="bindist cairo cjk cups djvu gtk jpeg2k X"
 
-COMMON_DEPEND="media-libs/fontconfig
+COMMON_DEPEND="app-text/libpaper
+	media-libs/fontconfig
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.5
 	>=media-libs/tiff-3.7
 	>=sys-libs/zlib-1.1.4
 	!bindist? ( djvu? ( app-text/djvu ) )
-	cups? ( >=net-print/cups-1.1.20 )
+	cairo? ( >=x11-libs/cairo-1.2.0 )
+	cups? ( >=net-print/cups-1.3.8 )
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	jpeg2k? ( media-libs/jasper )
 	X? ( x11-libs/libXt x11-libs/libXext )
@@ -58,16 +60,27 @@ src_unpack() {
 
 	cd "${S}"
 
-	# Fedora patches
-	# upstream bug http://bugs.ghostscript.com/show_bug.cgi?id=689393
-	epatch "${WORKDIR}/patches/${PN}-8.61-ijs-krgb.patch"
-	epatch "${WORKDIR}/patches/${PN}-8.60-fPIC.patch"
-	epatch "${WORKDIR}/patches/${PN}-8.61-multilib.patch"
-	epatch "${WORKDIR}/patches/${PN}-8.60-noopt.patch"
-	epatch "${WORKDIR}/patches/${PN}-8.60-scripts.patch"
+	# remove internal copies of expat, jasper, jpeg, libpng and zlib
+	rm -rf "${S}/expat"
+	rm -rf "${S}/jasper"
+	rm -rf "${S}/jpeg"
+	rm -rf "${S}/libpng"
+	rm -rf "${S}/zlib"
+	# remove internal urw-fonts
+	rm -rf "${S}/Resource/Font"
 
-	# additional Gentoo patches, compilation fixes
-	epatch "${WORKDIR}/patches/${PN}-8.61-rinkj.patch"
+	# Fedora patches
+	# http://cvs.fedora.redhat.com/viewcvs/devel/ghostscript/
+	epatch "${WORKDIR}/patches/${PN}-8.64-fPIC.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.61-multilib.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.64-noopt.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.64-scripts.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.64-system-jasper.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.64-pksmraw.patch"
+
+	# Gentoo patches
+	# respect LDFLAGS, bug #215913
+	epatch "${WORKDIR}/patches/${PN}-8.64-respect-ldflags.patch"
 
 	if use bindist && use djvu ; then
 		ewarn "You have bindist in your USE, djvu support will NOT be compiled!"
@@ -77,21 +90,21 @@ src_unpack() {
 	if ! use bindist && use djvu ; then
 		unpack gsdjvu-${GSDJVU_PV}.tar.gz
 		cp gsdjvu-${GSDJVU_PV}/gsdjvu "${S}"
-		cp gsdjvu-${GSDJVU_PV}/gdevdjvu.c "${S}/src"
-		epatch "${WORKDIR}/patches/${PN}-8.61-gsdjvu-1.3.patch"
+		cp gsdjvu-${GSDJVU_PV}/gdevdjvu.c "${S}/base"
+		epatch "${WORKDIR}/patches/${PN}-8.64-gsdjvu-1.3.patch"
 		cp gsdjvu-${GSDJVU_PV}/ps2utf8.ps "${S}/lib"
-		cp "${S}/src/contrib.mak" "${S}/src/contrib.mak.gsdjvu"
-		grep -q djvusep "${S}/src/contrib.mak" || \
-			cat gsdjvu-${GSDJVU_PV}/gsdjvu.mak >> "${S}/src/contrib.mak"
+		cp "${S}/base/contrib.mak" "${S}/base/contrib.mak.gsdjvu"
+		grep -q djvusep "${S}/base/contrib.mak" || \
+			cat gsdjvu-${GSDJVU_PV}/gsdjvu.mak >> "${S}/base/contrib.mak"
 
 		# install ps2utf8.ps, bug #197818
-		sed -i -e '/$(EXTRA_INIT_FILES)/ a\ps2utf8.ps \\' "${S}/src/unixinst.mak" \
-		|| die "sed failed"
+		sed -i -e '/$(EXTRA_INIT_FILES)/ a\ps2utf8.ps \\' "${S}/base/unixinst.mak" \
+			|| die "sed failed"
 	fi
 
 	if ! use gtk ; then
-		sed -i "s:\$(GSSOX)::" src/*.mak || die "gsx sed failed"
-		sed -i "s:.*\$(GSSOX_XENAME)$::" src/*.mak || die "gsxso sed failed"
+		sed -i "s:\$(GSSOX)::" base/*.mak || die "gsx sed failed"
+		sed -i "s:.*\$(GSSOX_XENAME)$::" base/*.mak || die "gsxso sed failed"
 	fi
 
 	# search path fix
@@ -100,7 +113,7 @@ src_unpack() {
 		-e "s:exdir=.*:exdir=/usr/share/doc/${PF}/examples:" \
 		-e "s:docdir=.*:docdir=/usr/share/doc/${PF}/html:" \
 		-e "s:GS_DOCDIR=.*:GS_DOCDIR=/usr/share/doc/${PF}/html:" \
-		src/Makefile.in src/*.mak || die "sed failed"
+		base/Makefile.in base/*.mak || die "sed failed"
 
 	cd "${S}"
 	eautoreconf
@@ -111,16 +124,18 @@ src_unpack() {
 
 src_compile() {
 	econf \
+		$(use_enable cairo) \
 		$(use_enable cups) \
 		$(use_enable gtk) \
 		$(use_with jpeg2k jasper) \
 		$(use_with X x) \
+		--disable-compile-inits \
 		--enable-dynamic \
 		--enable-fontconfig \
-		--with-drivers=ALL,rinkj \
+		--with-drivers=ALL \
 		--with-ijs \
 		--with-jbig2dec \
-	|| die "econf failed"
+		--with-libpaper
 
 	if ! use bindist && use djvu ; then
 		sed -i -e 's!$(DD)bbox.dev!& $(DD)djvumask.dev $(DD)djvusep.dev!g' Makefile
@@ -134,11 +149,15 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install-so install || die "emake install failed"
+	# parallel install is broken, bug #251066
+	emake -j1 DESTDIR="${D}" install-so install || die "emake install failed"
 
 	if ! use bindist && use djvu ; then
 		dobin gsdjvu || die "dobin gsdjvu install failed"
 	fi
+
+	# remove gsc in favor of gambit, bug #253064
+	rm -rf "${D}/usr/bin/gsc"
 
 	rm -rf "${D}/usr/share/doc/${PF}/html/"{README,PUBLIC}
 	dodoc doc/README || die "dodoc install failed"
