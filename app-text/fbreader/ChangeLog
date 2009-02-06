@@ -1,6 +1,12 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.1 2009/02/02 22:28:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.2 2009/02/06 19:09:22 alexxy Exp $
+
+*fbreader-0.10.3 (06 Feb 2009)
+
+  06 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -fbreader-0.10.2.ebuild,
+  +fbreader-0.10.3.ebuild:
+  Version Bump, bug #257883
 
 *fbreader-0.10.2 (02 Feb 2009)
 
