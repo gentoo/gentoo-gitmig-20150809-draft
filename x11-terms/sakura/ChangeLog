@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/sakura
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.4 2008/11/02 17:33:36 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.5 2009/02/06 04:19:10 darkside Exp $
+
+*sakura-2.3.3 (06 Feb 2009)
+
+  06 Feb 2009; Jeremy Olexa <darkside@gentoo.org> +sakura-2.3.3.ebuild:
+  (non maintainer commit) version bump w/ modded deps and removed workaround
+  for installation by Michal Kurgan, bug 257332
 
   02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
