@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9473 2009/02/05 16:09:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9474 2009/02/06 05:53:57 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1158,11 +1158,6 @@ dev-lang/entity
 # Live SVN ebuilds
 ~app-emacs/gentoo-syntax-9999
 ~app-emacs/ngnus-9999
-
-# Jeroen Roovers <jer@gentoo.org> (17 Dec 2007)
-# Masked pending removal - see bug #202391
-# Please switch to sys-kernel/gentoo-sources
-sys-kernel/hppa-sources
 
 # Peter Volkov <pva@gentoo.org> (13 Dec 2007)
 # Live svn ebuild... 0.9.4 branch is not supported atm.
