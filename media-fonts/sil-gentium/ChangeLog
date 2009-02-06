@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sil-gentium
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-gentium/ChangeLog,v 1.1 2008/05/19 04:46:05 dirtyepic Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-gentium/ChangeLog,v 1.2 2009/02/06 04:46:46 jer Exp $
+
+  06 Feb 2009; Jeroen Roovers <jer@gentoo.org> sil-gentium-1.0.2.ebuild:
+  Stable for HPPA (bug #256159).
 
 *sil-gentium-1.0.2 (19 May 2008)
 *sil-gentium-1.0.1 (19 May 2008)
