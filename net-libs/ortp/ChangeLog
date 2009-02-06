@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/ortp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.30 2008/08/16 15:39:08 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.31 2009/02/06 03:43:12 darkside Exp $
+
+*ortp-0.13.1-r1 (06 Feb 2009)
+
+  06 Feb 2009; Jeremy Olexa <darkside@gentoo.org> -ortp-0.13.1.ebuild,
+  +ortp-0.13.1-r1.ebuild:
+  (non maintainer commit) basically a rewrite of the ebuild by Mounir Lamouri
+  to fix many issues, bug 257029
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove stkn from metadata.xml (#27693)
