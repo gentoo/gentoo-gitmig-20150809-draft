@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.182 2009/01/28 14:56:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.183 2009/02/06 03:03:48 jer Exp $
+
+  06 Feb 2009; Jeroen Roovers <jer@gentoo.org>
+  gnome-system-monitor-2.22.4.ebuild:
+  Stable for HPPA (bug #255458).
 
   28 Jan 2009; Brent Baude <ranger@gentoo.org>
   gnome-system-monitor-2.22.4.ebuild:
