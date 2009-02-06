@@ -8,7 +8,8 @@
   </maintainer>
   <use>
     <flag name="atmo">Enables support for AtmoLight (homebrew Ambient Lighting Technology)</flag>
-    <flag name="cdda">Enables libcdda cd audio playback support.</flag>
+    <flag name="cdda">Enables audio CD and VCD playback support.</flag>
+    <flag name="cddax">Enables audio CD plugin with CD Text and CD paranoia via libcdio</flag>
     <flag name="cdio">Enables CD input and control library support.</flag>
     <flag name="dc1394">Enables IIDC cameras support.</flag>
     <flag name="dirac">Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.</flag>
