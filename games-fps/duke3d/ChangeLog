@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/duke3d
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.30 2009/01/19 18:51:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.31 2009/02/06 08:59:49 tupone Exp $
+
+  06 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/duke3d-20040817-noinline.patch, duke3d-20040817-r1.ebuild,
+  duke3d-20040817-r2.ebuild:
+  Fix compilation with gcc-4.3 and -O2. Bug #26968 by butters@opengames.net
 
   19 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   duke3d-20040817-r2.ebuild:
