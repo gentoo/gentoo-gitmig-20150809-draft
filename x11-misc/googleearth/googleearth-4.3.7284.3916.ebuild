@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.3.7284.3916.ebuild,v 1.4 2008/09/27 13:12:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4.3.7284.3916.ebuild,v 1.5 2009/02/06 23:44:25 caster Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit eutils fdo-mime
 
 DESCRIPTION="A 3D interface to the planet"
 HOMEPAGE="http://earth.google.com/"
-SRC_URI="http://dl.google.com/earth/client/GE4/release_4_3/GoogleEarthLinux.bin
+SRC_URI="http://dl.google.com/earth/client/ge4/release_4_3/googleearth-linux-plus-4.3.7284.3916.bin
 			-> GoogleEarthLinux-${PV}.bin"
 
 LICENSE="googleearth MIT X11 SGI-B-1.1 openssl as-is ZLIB"
