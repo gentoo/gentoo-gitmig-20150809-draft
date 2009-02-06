@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2338 2009/02/06 05:53:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2339 2009/02/06 11:46:48 caster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Feb 2009; Vlastimil Babka <caster@gentoo.org> updates/1Q-2009:
+  Package move net-p2p/azureus to net-p2p/vuze
 
   06 Feb 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
   Remove hppa-sources from package.mask (bug #202391).
