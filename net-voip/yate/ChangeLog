@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/yate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.6 2009/02/06 14:49:47 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.7 2009/02/06 15:21:30 drizzt Exp $
+
+  06 Feb 2009; Timothy Redaelli <drizzt@gentoo.org>
+  files/yate-1.3.0-makefiles.patch, +files/yate-1.3.0-resolv.patch,
+  yate-1.3.0.ebuild:
+  Also fix compilation problem with uclibc #199222
 
 *yate-1.3.0 (06 Feb 2009)
 

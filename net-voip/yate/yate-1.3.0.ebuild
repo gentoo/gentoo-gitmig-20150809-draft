@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-1.3.0.ebuild,v 1.1 2009/02/06 14:49:47 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-1.3.0.ebuild,v 1.2 2009/02/06 15:21:30 drizzt Exp $
 
 IUSE="doc gsm gtk h323 ilbc postgres zaptel"
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="YATE - Yet Another Telephony Engine"
 HOMEPAGE="http://yate.null.ro/"
@@ -36,6 +36,9 @@ src_unpack() {
 
 	# fix makefiles for custom CFLAGS/LDFLAGS
 	epatch "${FILESDIR}"/${P}-makefiles.patch
+	epatch "${FILESDIR}"/${P}-resolv.patch #199222
+
+	eautoconf
 }
 
 src_compile() {

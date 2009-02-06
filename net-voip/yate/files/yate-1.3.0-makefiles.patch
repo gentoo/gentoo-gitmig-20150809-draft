@@ -64,8 +64,6 @@ diff -ur --exclude Makefile yate.orig/clients/Makefile.in yate/clients/Makefile.
  
  $(GTKCLIENT):
  	$(MAKE) -C ../contrib/gtk2
-Only in yate: config.log
-Only in yate: config.status
 diff -ur --exclude Makefile yate.orig/contrib/gtk2/Makefile.in yate/contrib/gtk2/Makefile.in
 --- yate.orig/contrib/gtk2/Makefile.in	2009-02-06 14:54:30.457004060 +0100
 +++ yate/contrib/gtk2/Makefile.in	2009-02-06 15:17:15.993003394 +0100
@@ -89,7 +87,6 @@ diff -ur --exclude Makefile yate.orig/contrib/gtk2/Makefile.in yate/contrib/gtk2
  SOURCES = gtk2client.cpp
  OBJECTS = $(SOURCES:.cpp=.o)
  
-Only in yate/contrib/gtk2: Makefile.in.orig
 diff -ur --exclude Makefile yate.orig/contrib/ilbc/Makefile.in yate/contrib/ilbc/Makefile.in
 --- yate.orig/contrib/ilbc/Makefile.in	2009-02-06 14:54:30.457004060 +0100
 +++ yate/contrib/ilbc/Makefile.in	2009-02-06 15:08:35.465004588 +0100
@@ -117,7 +114,7 @@ diff -ur --exclude Makefile yate.orig/contrib/yiax/Makefile.in yate/contrib/yiax
  DEFS :=
  INCLUDES := -I@top_srcdir@ -I../.. -I@srcdir@
 -CFLAGS := -O2 @MODULE_CPPFLAGS@ @INLINE_FLAGS@
-+CXFLAGS += @MODULE_CPPFLAGS@ @INLINE_FLAGS@
++CXXFLAGS += @MODULE_CPPFLAGS@ @INLINE_FLAGS@
  LDFLAGS:= -L../.. -lyate
  INCFILES := @top_srcdir@/yateclass.h @srcdir@/yateiax.h
  
@@ -316,7 +313,7 @@ diff -ur --exclude Makefile yate.orig/modules/Makefile.in yate/modules/Makefile.
  
  .PHONY: install
  install: all do-install
-@@ -169,80 +169,80 @@
+@@ -169,80 +169,84 @@
  	$(LINK) -shared -o $@ $^
  
  %.yate: @srcdir@/%.cpp $(MKDEPS) $(INCFILES)
@@ -381,7 +378,7 @@ diff -ur --exclude Makefile yate.orig/modules/Makefile.in yate/modules/Makefile.
  
  ilbccodec.yate: ../contrib/ilbc/libilbc.a
 -ilbccodec.yate: LOCALLIBS = ../contrib/ilbc/libilbc.a
-+ilbccodec.yate: LOCALLIBS += ../contrib/ilbc/libilbc.a
++ilbccodec.yate: LOCALLIBS += ../contrib/ilbc/libilbc.a -lm
  ilbccodec.yate: LOCALFLAGS = @ILBC_INC@
  
 -gsmcodec.yate: LOCALLIBS = -lgsm
@@ -415,10 +412,13 @@ diff -ur --exclude Makefile yate.orig/modules/Makefile.in yate/modules/Makefile.
  rmanager.yate: LOCALFLAGS = $(COREDUMP_INC)
 -rmanager.yate: LOCALLIBS = $(COREDUMP_LIB)
 +rmanager.yate: LOCALLIBS += $(COREDUMP_LIB)
++
++analyzer.yate: LOCALLIBS += -lm
++tonegen.yate: LOCALLIBS += -lm
++yradius.yate: LOCALLIBS += -lm
  
  ../libyatess7.so:
  	$(MAKE) -C ../contrib/yss7
-Only in yate: run
 diff -ur --exclude Makefile yate.orig/test/Makefile.in yate/test/Makefile.in
 --- yate.orig/test/Makefile.in	2009-02-06 14:54:30.497003971 +0100
 +++ yate/test/Makefile.in	2009-02-06 15:03:14.912003374 +0100
@@ -442,6 +442,3 @@ diff -ur --exclude Makefile yate.orig/test/Makefile.in yate/test/Makefile.in
  COMPILE = $(CXX) $(DEFS) $(INCLUDES) $(CFLAGS)
  LINK = $(CXX) $(LDFLAGS)
  MODLINK = $(CXX) $(MODFLAGS) $(MODSTRIP) $(LDFLAGS)
-Only in yate: yate-config
-Only in yate: yate.pc
-Only in yate: yateversn.h

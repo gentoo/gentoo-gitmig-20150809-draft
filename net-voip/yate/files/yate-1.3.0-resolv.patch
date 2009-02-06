@@ -1,0 +1,22 @@
+--- ../yate.orig/configure.in	2009-02-06 15:55:22.000000000 +0100
++++ ../yate/configure.in	2009-02-06 16:04:36.000000000 +0100
+@@ -182,14 +182,17 @@
+ 
+ # Checks for optional libraries.
+ 
++SAVE_LIBS="$LIBS"
++LIBS=-lresolv
+ HAVE_RESOLV=no
+-AC_MSG_CHECKING([for resolver library])
++AC_MSG_CHECKING([for resolver library (with dn_skipname)])
+ AC_LANG_SAVE
+ AC_LANG_C
+ AC_TRY_LINK([#include <netinet/in.h>
+ #include <arpa/nameser.h>
+-#include <resolv.h>],[res_init();],[HAVE_RESOLV=yes],[HAVE_RESOLV=no])
++#include <resolv.h>],[res_init(); dn_skipname(NULL, NULL);],[HAVE_RESOLV=yes],[HAVE_RESOLV=no])
+ AC_LANG_RESTORE
++LIBS="$SAVE_LIBS"
+ AC_MSG_RESULT([$HAVE_RESOLV])
+ AC_SUBST(HAVE_RESOLV)
+ 
