@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.107 2009/02/01 16:45:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.108 2009/02/06 04:15:40 jer Exp $
+
+  06 Feb 2009; Jeroen Roovers <jer@gentoo.org>
+  nagios-plugins-1.4.13-r1.ebuild:
+  Stable for HPPA (bug #256177).
 
   01 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
   nagios-plugins-1.4.13-r1.ebuild:
