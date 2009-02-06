@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.9.ebuild,v 1.4 2009/01/26 21:56:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.1.9.ebuild,v 1.5 2009/02/06 05:47:15 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://cdrkit.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ppc64 ~s390 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ppc64 ~s390 ~sparc x86 ~x86-fbsd"
 IUSE="hfs unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="unicode? ( virtual/libiconv )
