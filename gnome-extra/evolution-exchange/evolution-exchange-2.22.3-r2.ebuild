@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.22.3-r2.ebuild,v 1.4 2008/12/20 17:34:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.22.3-r2.ebuild,v 1.5 2009/02/06 03:09:01 jer Exp $
 EAPI="1"
 
 inherit gnome2 eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.novell.com/products/desktop/features/evolution.html"
 LICENSE="GPL-2"
 
 SLOT="2.0"
-KEYWORDS="amd64 ~hppa ppc sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="debug doc static"
 
 RDEPEND="
