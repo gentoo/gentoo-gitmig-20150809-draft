@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.1 2009/02/06 11:46:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.2 2009/02/06 11:56:14 caster Exp $
+
+*vuze-4.0.0.4 (06 Feb 2009)
+
+  06 Feb 2009; Vlastimil Babka <caster@gentoo.org>
+  +files/patches-4.0.0.4/remove-osx-platform.diff,
+  +files/patches-4.0.0.4/use-jdk-cipher-only.diff, +vuze-4.0.0.4.ebuild:
+  Restore the stable version.
 
 *vuze-4.1.0.0 (06 Feb 2009)
 *vuze-3.0.4.2-r1 (06 Feb 2009)
