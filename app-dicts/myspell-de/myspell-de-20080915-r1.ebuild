@@ -1,6 +1,6 @@
 # Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/myspell-de-20080915-r1.ebuild,v 1.6 2009/01/17 15:24:41 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/myspell-de-20080915-r1.ebuild,v 1.7 2009/02/06 04:30:14 jer Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "de,DE,de_DE_frami,German (Germany),de_DE_frami.zip"
@@ -24,5 +24,5 @@ DESCRIPTION="German dictionaries for myspell/hunspell"
 LICENSE="GPL-2 LGPL-2"
 HOMEPAGE="http://lingucomponent.openoffice.org/"
 
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
