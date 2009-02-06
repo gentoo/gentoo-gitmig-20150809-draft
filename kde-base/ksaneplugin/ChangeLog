@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksaneplugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksaneplugin/ChangeLog,v 1.2 2009/02/05 01:15:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksaneplugin/ChangeLog,v 1.3 2009/02/06 00:02:08 ranger Exp $
+
+  05 Feb 2009; Brent Baude <ranger@gentoo.org> ksaneplugin-4.2.0.ebuild:
+  Marking ksaneplugin-4.2.0 ~ppc64 for bug 257421
 
   05 Feb 2009; Brent Baude <ranger@gentoo.org> ksaneplugin-4.2.0.ebuild:
   Marking ksaneplugin-4.2.0 ~ppc for bug 257421
