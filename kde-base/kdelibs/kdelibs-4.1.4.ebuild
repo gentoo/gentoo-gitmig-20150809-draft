@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.1.4.ebuild,v 1.2 2009/01/31 13:58:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.1.4.ebuild,v 1.3 2009/02/06 00:29:50 tampakrap Exp $
 
 EAPI="2"
 
@@ -183,7 +183,7 @@ COLON_SEPARATED="XDG_DATA_DIRS"
 		doenvd "${T}"/43kdepaths
 	fi
 	# Ensure that the correct permissions are set on ${PREFIX}/share/config
-	chmod 755 "${D}"/"${PREFIX}"/share/config
+	fperms 755 "${PREFIX}"/share/config
 }
 
 pkg_postinst() {
