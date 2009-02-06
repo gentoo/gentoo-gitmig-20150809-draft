@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.12 2009/01/25 14:03:38 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.13 2009/02/06 04:48:23 jer Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://download.jabberd.org/jabberd14/jabberd14-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ppc ~sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ~sparc x86"
 IUSE="ipv6 mysql postgres"
 
 RDEPEND=">=net-im/jabber-base-0.01
