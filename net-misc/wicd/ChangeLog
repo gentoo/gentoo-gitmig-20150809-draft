@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.31 2009/01/09 19:54:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.32 2009/02/06 15:44:53 darkside Exp $
+
+*wicd-1.5.9 (06 Feb 2009)
+
+  06 Feb 2009; Jeremy Olexa <darkside@gentoo.org> +wicd-1.5.9.ebuild:
+  1.5.9
+   * Fixed security hole in DBus configuration file
+   * Fixed the TTLS template
+   * Added support for Crux to the setup.py
 
   09 Jan 2009; Joseph Jezak <josejx@gentoo.org> wicd-1.5.7-r1.ebuild,
   wicd-1.5.8.ebuild:
