@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.12.ebuild,v 1.1 2009/02/05 20:58:56 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.12.ebuild,v 1.2 2009/02/06 00:07:24 mr_bones_ Exp $
 
 inherit versionator java-vm-2 eutils pax-utils
 
@@ -142,7 +142,7 @@ pkg_postinst() {
 		elog "For more info see https://jdk6.dev.java.net/plugin2/"
 		elog
 	fi
-	
+
 	if use amd64 && use nsplugin; then
 		elog
 		elog "This version finally brings a browser plugin for amd64"
