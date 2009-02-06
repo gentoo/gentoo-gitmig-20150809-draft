@@ -1,6 +1,12 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.8 2009/01/31 21:59:30 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.9 2009/02/06 11:09:28 jokey Exp $
+
+*midori-0.1.2 (06 Feb 2009)
+
+  06 Feb 2009; Markus Ullmann <jokey@gentoo.org> +midori-0.1.2.ebuild:
+  Add modified release ebuild for bug #250208, thanks to Corey Beres for the
+  initial ebuild
 
   31 Jan 2009; <jokey@gentoo.org> metadata.xml:
   Improve useflag description for bug 256675
