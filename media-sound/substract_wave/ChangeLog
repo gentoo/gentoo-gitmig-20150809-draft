@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/substract_wave
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/substract_wave/ChangeLog,v 1.1 2007/10/06 14:52:19 sbriesen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/substract_wave/ChangeLog,v 1.2 2009/02/06 14:10:48 sbriesen Exp $
+
+  06 Feb 2009; Stefan Briesenick <sbriesen@gentoo.org>
+  substract_wave-0.3.ebuild:
+  added math library, because some compilations needs it (depends on
+  CFLAGS).
 
 *substract_wave-0.3 (06 Oct 2007)
 
