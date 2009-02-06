@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-xmlpatterns
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.19 2009/02/04 23:32:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.20 2009/02/06 16:26:50 armin76 Exp $
+
+  06 Feb 2009; Raúl Porcel <armin76@gentoo.org>
+  qt-xmlpatterns-4.4.2.ebuild:
+  ia64/sparc stable wrt #248038
 
   04 Feb 2009; Brent Baude <ranger@gentoo.org> qt-xmlpatterns-4.4.2.ebuild:
   Marking qt-xmlpatterns-4.4.2 ppc64 stable for bug 248038

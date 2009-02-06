@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.24 2009/02/04 23:27:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.25 2009/02/06 16:28:44 armin76 Exp $
+
+  06 Feb 2009; Raúl Porcel <armin76@gentoo.org>
+  qt-assistant-4.4.2-r1.ebuild:
+  ia64/sparc stable wrt #248038
 
   04 Feb 2009; Brent Baude <ranger@gentoo.org> qt-assistant-4.4.2-r1.ebuild:
   Marking qt-assistant-4.4.2-r1 ppc64 stable for bug 248038
