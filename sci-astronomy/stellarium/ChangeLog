@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/stellarium
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.46 2008/08/17 00:00:30 mr_bones_ Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.47 2009/02/06 23:07:11 mr_bones_ Exp $
+
+*stellarium-0.10.1 (06 Feb 2009)
+
+  06 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +stellarium-0.10.1.ebuild:
+  version bump
 
   17 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
   stellarium-0.9.1-r1.ebuild:
