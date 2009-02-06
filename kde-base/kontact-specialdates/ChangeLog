@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kontact-specialdates
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.93 2009/02/05 01:14:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.94 2009/02/06 00:08:26 ranger Exp $
+
+  06 Feb 2009; Brent Baude <ranger@gentoo.org>
+  kontact-specialdates-4.2.0.ebuild:
+  Marking kontact-specialdates-4.2.0 ~ppc64 for bug 257421
 
   05 Feb 2009; Brent Baude <ranger@gentoo.org>
   kontact-specialdates-4.2.0.ebuild:
