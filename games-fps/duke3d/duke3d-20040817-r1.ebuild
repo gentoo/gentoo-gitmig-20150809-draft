@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r1.ebuild,v 1.7 2009/02/06 08:59:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r1.ebuild,v 1.8 2009/02/06 11:47:17 tupone Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -72,6 +72,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}-gcc34.patch" # compile fixes for GCC 3.4
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${P}-noinline.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 	sed -i \
 		-e "/^use_opengl := / s:=.*:= $(use_tf opengl):" \
 		-e "/^use_physfs := / s:=.*:= false:" \

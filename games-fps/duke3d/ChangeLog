@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/duke3d
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.31 2009/02/06 08:59:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.32 2009/02/06 11:47:17 tupone Exp $
+
+  06 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  files/duke3d-20040817-as-needed.patch, duke3d-20040817-r1.ebuild:
+  Fix --as-neede bug #247356 by flameeyes@gentoo.org
 
   06 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/duke3d-20040817-noinline.patch, duke3d-20040817-r1.ebuild,
