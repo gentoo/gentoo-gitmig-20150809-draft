@@ -1,0 +1,10 @@
+--- a/org/gudy/azureus2/ui/swt/views/table/impl/TableViewSWTImpl.java	2009-01-22 03:14:04.000000000 +0100
++++ b/org/gudy/azureus2/ui/swt/views/table/impl/TableViewSWTImpl.java	2009-02-06 00:32:22.000000000 +0100
+@@ -29,7 +29,6 @@
+ import org.eclipse.swt.dnd.*;
+ import org.eclipse.swt.events.*;
+ import org.eclipse.swt.graphics.*;
+-import org.eclipse.swt.internal.ole.win32.COM;
+ import org.eclipse.swt.layout.*;
+ import org.eclipse.swt.widgets.*;
+ 
