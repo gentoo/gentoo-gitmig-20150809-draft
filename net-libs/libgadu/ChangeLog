@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.25 2009/02/04 16:15:45 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.26 2009/02/07 14:41:17 rbu Exp $
+
+  07 Feb 2009; Robert Buchholz <rbu@gentoo.org> libgadu-1.8.2.ebuild:
+  Add blocker to colliding kadu versions (bug #257972).
 
 *libgadu-1.8.2 (04 Feb 2009)
 

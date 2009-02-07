@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.8.2.ebuild,v 1.1 2009/02/04 16:15:45 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.8.2.ebuild,v 1.2 2009/02/07 14:41:17 rbu Exp $
 
 inherit eutils libtool
 
@@ -15,7 +15,9 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="ssl threads"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6m )"
-RDEPEND=${DEPEND}
+RDEPEND="${DEPEND}
+	!=net-im/kadu-0.6.0.2
+	!=net-im/kadu-0.6.0.1"
 
 src_compile() {
 	econf \
