@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.3.4.ebuild,v 1.1 2009/02/07 12:12:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.3.4.ebuild,v 1.2 2009/02/07 21:51:04 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -29,6 +29,12 @@ has sandbox_death_notice ${EBUILD_DEATH_HOOKS} || EBUILD_DEATH_HOOKS="${EBUILD_D
 sandbox_death_notice() {
 	ewarn "If configure failed with a 'cannot run C compiled programs' error, try this:"
 	ewarn "FEATURES=-sandbox emerge sandbox"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/0001-sandbox-fix-typo-in-struct-sandbox_info_t-decl.patch
 }
 
 src_compile() {

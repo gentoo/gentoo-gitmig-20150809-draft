@@ -1,0 +1,33 @@
+From 1f835b90585676e3f87608e94a6500b8732b4b45 Mon Sep 17 00:00:00 2001
+From: Mike Frysinger <vapier@gentoo.org>
+Date: Sat, 7 Feb 2009 16:43:43 -0500
+Subject: [PATCH] sandbox: fix typo in struct sandbox_info_t decl
+
+A "typedef" was missing when declaring the sandbox_info_t struct resulting
+in a large unused "sandbox_info_t" object showing up everywhere.  Normally
+this isn't a problem (other than resource waste), but some systems don't
+like multiply defined objects even if they're in the .bss section.
+
+URL: http://bugs.gentoo.org/258031
+Signed-off-by: Mike Frysinger <vapier@gentoo.org>
+Reported-by: Timo Kamph <timo@kamph.org>
+---
+ src/sandbox.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/sandbox.h b/src/sandbox.h
+index 028dc37..e25a206 100644
+--- a/src/sandbox.h
++++ b/src/sandbox.h
+@@ -21,7 +21,7 @@ struct sandbox_info_t {
+ 	char work_dir[SB_PATH_MAX];
+ 	char tmp_dir[SB_PATH_MAX];
+ 	char *home_dir;
+-} sandbox_info_t;
++};
+ 
+ extern char **setup_environ(struct sandbox_info_t *sandbox_info, bool interactive);
+ 
+-- 
+1.6.1.2
+
