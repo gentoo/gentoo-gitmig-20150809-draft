@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Video-Info
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.12 2007/04/14 15:08:45 mcummings Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.13 2009/02/07 12:36:36 tove Exp $
+
+  07 Feb 2009; Torsten Veller <tove@gentoo.org> metadata.xml,
+  Video-Info-0.993.ebuild:
+  Stable on x86 (#251594). Fix LICENSE.
 
   14 Apr 2007; Michael Cummings <mcummings@gentoo.org>
   Video-Info-0.993.ebuild:
