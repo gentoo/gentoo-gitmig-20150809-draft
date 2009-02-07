@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/dsiutils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/ChangeLog,v 1.7 2008/06/04 07:47:09 ali_bush Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dsiutils/ChangeLog,v 1.8 2009/02/07 21:13:43 ali_bush Exp $
+
+*dsiutils-1.0.7 (07 Feb 2009)
+
+  07 Feb 2009; Alistair Bush <ali_bush@gentoo.org> +dsiutils-1.0.7.ebuild:
+  Version Bump.
 
 *dsiutils-1.0.5 (04 Jun 2008)
 
