@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.3 2009/02/06 12:06:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.4 2009/02/07 18:20:54 caster Exp $
+
+*vuze-4.1.0.2 (07 Feb 2009)
+
+  07 Feb 2009; Vlastimil Babka <caster@gentoo.org> +vuze-4.1.0.2.ebuild:
+  Version bump.
 
   06 Feb 2009; Vlastimil Babka <caster@gentoo.org> -files/azureus.png,
   +files/vuze.png, vuze-3.0.4.2-r1.ebuild, vuze-4.0.0.4.ebuild:
