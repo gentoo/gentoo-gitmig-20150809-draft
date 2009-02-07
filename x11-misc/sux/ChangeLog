@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sux
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.23 2008/11/17 23:09:24 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.24 2009/02/07 12:09:15 armin76 Exp $
+
+  07 Feb 2009; Raúl Porcel <armin76@gentoo.org> sux-1.0-r3.ebuild:
+  Add ~arm wrt #255203
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/sux-1.0-r1.patch, files/sux-X11R6.patch:
