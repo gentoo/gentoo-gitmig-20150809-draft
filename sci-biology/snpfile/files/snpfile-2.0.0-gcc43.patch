@@ -1,0 +1,23 @@
+diff -dur snpfile-2.0.0-orig/matrix.hh snpfile-2.0.0/matrix.hh
+--- snpfile-2.0.0-orig/matrix.hh	2009-02-07 12:51:44.090353089 +0000
++++ snpfile-2.0.0/matrix.hh	2009-02-07 12:54:45.602853488 +0000
+@@ -29,6 +29,7 @@
+ #ifndef MATRIX_HH_INCLUDED
+ #define MATRIX_HH_INCLUDED
+ 
++#include <cstring>
+ #include <vector>
+ #include <set>
+ #include <algorithm>
+diff -dur snpfile-2.0.0-orig/metadata.hh snpfile-2.0.0/metadata.hh
+--- snpfile-2.0.0-orig/metadata.hh	2009-02-07 12:51:44.090353089 +0000
++++ snpfile-2.0.0/metadata.hh	2009-02-07 12:55:56.181360877 +0000
+@@ -27,7 +27,7 @@
+ #define METADATA_HH_INCLUDED
+ 
+ #include <stdexcept>
+-#include <string>
++#include <cstring>
+ 
+ /** \file
+  * \brief Declaration of metadata concepts.
