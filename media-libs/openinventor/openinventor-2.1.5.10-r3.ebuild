@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r3.ebuild,v 1.4 2009/01/25 15:07:27 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r3.ebuild,v 1.5 2009/02/07 21:11:28 maekke Exp $
 
-inherit eutils versionator flag-o-matic
+inherit eutils versionator flag-o-matic toolchain-funcs
 
 MY_PV=$(replace_version_separator 3 '-')
 MY_PN="inventor"
@@ -56,6 +56,13 @@ src_unpack() {
 	epatch "${FILESDIR}"/gcc4-support.patch
 	# fix bug #251681
 	epatch "${FILESDIR}"/bug-251681.patch
+
+	# respect CC etc
+	sed -i \
+		-e "s:CC  = /usr/bin/gcc:CC = $(tc-getCC):g" \
+		-e "s:C++ = /usr/bin/g++:C++ = $(tc-getCXX):g" \
+		-e "s:LD  = /usr/bin/g++:LD = $(tc-getCXX):g" \
+		make/ivcommondefs || die
 }
 
 src_compile() {

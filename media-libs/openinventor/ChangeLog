@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openinventor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.26 2009/01/25 16:02:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/ChangeLog,v 1.27 2009/02/07 21:11:28 maekke Exp $
+
+  07 Feb 2009; Markus Meier <maekke@gentoo.org>
+  openinventor-2.1.5.10-r3.ebuild:
+  respect CC etc, bug #256325
 
   25 Jan 2009; Markus Meier <maekke@gentoo.org>
   -openinventor-2.1.5.10-r2.ebuild:
