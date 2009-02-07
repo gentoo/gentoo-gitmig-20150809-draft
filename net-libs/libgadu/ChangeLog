@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.27 2009/02/07 15:17:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.28 2009/02/07 18:16:01 jer Exp $
+
+  07 Feb 2009; Jeroen Roovers <jer@gentoo.org> libgadu-1.8.2.ebuild:
+  Stable for HPPA (bug #244888).
 
   07 Feb 2009; Tobias Klausmann <klausman@gentoo.org> libgadu-1.8.2.ebuild:
   Stable on alpha, bug #244888
