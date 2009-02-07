@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libjingle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/ChangeLog,v 1.14 2009/01/07 17:01:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/ChangeLog,v 1.15 2009/02/07 05:17:53 darkside Exp $
+
+*libjingle-0.3.11-r1 (07 Feb 2009)
+
+  07 Feb 2009; Jeremy Olexa <darkside@gentoo.org> -libjingle-0.3.11.ebuild,
+  +libjingle-0.3.11-r1.ebuild:
+  (non maintainer commit) fix CFLAGS - CXXFLAGS mixup, patch by Mounir
+  Lamouri. bug 234012
 
   07 Jan 2009; Raúl Porcel <armin76@gentoo.org> libjingle-0.3.12.ebuild:
   Add ~alpha/~ia64 wrt #245949

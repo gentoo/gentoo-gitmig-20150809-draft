@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.11.ebuild,v 1.2 2008/05/14 12:24:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.11-r1.ebuild,v 1.1 2009/02/07 05:17:53 darkside Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -18,9 +20,13 @@ RDEPEND="dev-libs/openssl
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	# there is an error in configure.ac : CXXFLAGS are using CFLAGS
+	# see bug #234012
+	# patching directly configure to prevent executing autoconf
+	sed -i -e 's/CXXFLAGS="$CFLAGS/CXXFLAGS="$CXXFLAGS/' configure \
+		|| die "patching configure failed"
+
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
