@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2340 2009/02/07 03:45:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2341 2009/02/07 18:29:46 serkan Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Feb 2009; Serkan Kaba <serkan@gentoo.org> package.mask:
+  Update sandbox mask.
 
   07 Feb 2009; MATSUU Takuto <matsuu@gentoo.org> package.mask:
   added =x11-wm/awesome-3.2* and =x11-libs/xcb-util-0.3.3* to p.mask.
