@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/pytraffic
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/ChangeLog,v 1.8 2007/04/25 21:03:41 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/pytraffic/ChangeLog,v 1.9 2009/02/07 19:59:06 gentoofan23 Exp $
+
+  07 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  pytraffic-2.5.4.ebuild:
+  stable amd64, bug 257812
 
 *pytraffic-2.5.4 (25 Apr 2007)
 
