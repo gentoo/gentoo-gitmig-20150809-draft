@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.88 2008/12/05 19:58:52 ford_prefect Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.89 2009/02/07 12:07:50 armin76 Exp $
+
+  07 Feb 2009; Raúl Porcel <armin76@gentoo.org> meld-1.2.1.ebuild:
+  Add ~arm wrt #255203
 
   05 Dec 2008; Arun Raghavan <ford_prefect@gentoo.org> meld-1.2.1.ebuild:
   Replace gnome-python dependency with only required modules
