@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-power-manager
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.99 2008/11/13 19:45:58 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.100 2009/02/07 15:48:10 ford_prefect Exp $
+
+  07 Feb 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  gnome-power-manager-2.22.1.ebuild:
+  Add a note about requiring gnome-extra/gnome-screensaver for
+  suspend/hibernate on idle - bug #253867
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org>
   gnome-power-manager-2.22.1.ebuild:
