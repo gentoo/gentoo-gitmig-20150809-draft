@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.20.1-r1.ebuild,v 1.1 2009/01/20 00:10:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.20.1-r1.ebuild,v 1.2 2009/02/07 07:54:01 vapier Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -36,7 +36,8 @@ src_unpack() {
 			-e '/^GROFFBIN=/s:=.*:=/usr/bin/groff:' \
 			-e '/^TROFFBIN=/s:=.*:=/usr/bin/troff:' \
 			-e '/^GROFF_BIN_PATH=/s:=.*:=:' \
-			contrib/mom/Makefile.sub \
+			-e '/^GROFF_BIN_DIR=/s:=.*:=:' \
+			contrib/*/Makefile.sub \
 			doc/Makefile.in \
 			doc/Makefile.sub || die "cross-compile sed failed"
 	fi
@@ -50,13 +51,10 @@ src_unpack() {
 src_compile() {
 	# Fix problems with not finding g++
 #	tc-export CC CXX
-	local myconf="--with-appresdir=/usr/share/X11/app-defaults"
-
-	use linguas_ja && myconf="${myconf} --enable-japanese"
-
 	econf \
+		--with-appresdir=/usr/share/X11/app-defaults \
 		$(use_with X x) \
-		${myconf} || die
+		$(use linguas_ja && echo --enable-japanese)
 	emake || die
 }
 
