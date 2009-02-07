@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.9 2008/12/04 21:50:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.2.6-r1.ebuild,v 1.10 2009/02/07 14:37:05 eva Exp $
 
 inherit gnome2 python
 
@@ -73,7 +73,7 @@ src_compile() {
 	else myconf="--with-desktop=agnostic"
 	fi
 
-	econf $(use_enable gnome gconf ) \
+	econf $(use_with gnome gconf) \
 		$(use_enable doc gtk-doc) \
 		--disable-vala \
 		${myconf}
