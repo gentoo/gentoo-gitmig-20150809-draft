@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.117 2009/02/07 16:06:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.118 2009/02/07 17:15:16 fauli Exp $
+
+  07 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
+  elfutils-0.131-r2.ebuild:
+  stable x86, bug 245861
 
   07 Feb 2009; Jeroen Roovers <jer@gentoo.org> elfutils-0.131-r2.ebuild:
   Stable for HPPA (bug #245861).
