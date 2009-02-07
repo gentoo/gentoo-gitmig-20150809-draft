@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.5.ebuild,v 1.4 2009/01/05 03:09:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.5-r1.ebuild,v 1.1 2009/02/07 20:15:07 hwoarang Exp $
 
 EAPI="1"
 inherit eutils qt4
@@ -32,7 +32,10 @@ src_compile() {
 	use debug && myconf="${myconf} -debug"
 	use !ssl && myconf="${myconf} -nomake crypto"
 	use !fastcgi && myconf="${myconf} -nomake web"
-
+	# fix pre-stripped files issue
+	for i in $(ls "${S}"/src); do
+		sed -i "s/qxtbuild/nostrip\ qxtbuild/" "${S}"/src/${i}/${i}.pro
+	done
 	./configure -prefix /usr ${myconf}
 
 	# fails with parallel build, bug 194730

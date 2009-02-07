@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libqxt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.6 2009/01/05 03:09:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.7 2009/02/07 20:15:07 hwoarang Exp $
+
+*libqxt-0.4-r1 (07 Feb 2009)
+*libqxt-0.2.5-r1 (07 Feb 2009)
+
+  07 Feb 2009; Markos Chandras <hwoarang@gentoo.org> -libqxt-0.2.5.ebuild,
+  +libqxt-0.2.5-r1.ebuild, -libqxt-0.4.ebuild, +libqxt-0.4-r1.ebuild:
+  Fixed pre-stripped files issue ( see bug #255937 )
 
 *libqxt-0.4 (05 Jan 2009)
 

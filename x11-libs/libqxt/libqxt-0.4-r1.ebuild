@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.4.ebuild,v 1.1 2009/01/05 03:09:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.4-r1.ebuild,v 1.1 2009/02/07 20:15:07 hwoarang Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -37,7 +37,10 @@ src_configure() {
 		$(use !crypt && echo -nomake crypto -no-openssl) \
 		$(use !sql && echo -nomake sql) \
 		$(use !web && echo -nomake web)"
-
+	# fix pre-striped files issue
+	for i in $(ls "${S}"/src); do
+		sed -i "s/qxtbuild/nostrip\ qxtbuild/" "${S}"/src/${i}/${i}.pro
+	done
 	./configure ${myconf} || die "configure failed"
 }
 
