@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/biojava
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/biojava/ChangeLog,v 1.1 2009/01/25 19:33:17 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/biojava/ChangeLog,v 1.2 2009/02/07 18:48:17 weaver Exp $
+
+  07 Feb 2009; weaver <weaver@gentoo.org> metadata.xml:
+  Assume ownership
 
 *biojava-1.6 (25 Jan 2009)
 
