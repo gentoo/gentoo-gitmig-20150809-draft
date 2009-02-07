@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p1-r1.ebuild,v 1.5 2009/02/07 08:06:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p1-r1.ebuild,v 1.6 2009/02/07 09:04:45 vapier Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -27,9 +27,11 @@ done
 LICENSE="OracleDB"
 SLOT="4.7"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="tcl java doc nocxx"
+IUSE="doc java nocxx tcl test"
 
+# the entire testsuite needs the TCL functionality
 DEPEND="tcl? ( >=dev-lang/tcl-8.4 )
+	test? ( >=dev-lang/tcl-8.4 )
 	java? ( >=virtual/jdk-1.5 )
 	>=sys-devel/binutils-2.16.1"
 RDEPEND="tcl? ( dev-lang/tcl )
@@ -81,62 +83,41 @@ src_compile() {
 		is-flag -O[s123] || append-flags -O2
 	fi
 
-	local myconf=""
-
-	use amd64 && myconf="${myconf} --with-mutex=x86/gcc-assembly"
-
-	myconf="${myconf} $(use_enable !nocxx cxx)"
-
-	use tcl \
-		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/$(get_libdir)" \
-		|| myconf="${myconf} --disable-tcl"
-
-	myconf="${myconf} $(use_enable java)"
-	if use java; then
-		myconf="${myconf} --with-java-prefix=${JAVA_HOME}"
-		# Can't get this working any other way, since it returns spaces, and
-		# bash doesn't seem to want to pass correctly in any way i try
-		local javaconf="-with-javac-flags=$(java-pkg_javac-args)"
-	fi
-
-	[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
-
-	# the entire testsuite needs the TCL functionality
-	if use tcl && has test $FEATURES ; then
-		myconf="${myconf} --enable-test"
-	else
-		myconf="${myconf} --disable-test"
+	# use `set` here since the java opts will contain whitespace
+	set --
+	if use java ; then
+		set -- "$@" \
+			--with-java-prefix="${JAVA_HOME}" \
+			--with-javac-flags="$(java-pkg_javac-args)"
 	fi
 
 	# Add linker versions to the symbols. Easier to do, and safer than header file
 	# mumbo jumbo.
-	if use userland_GNU; then
+	if use userland_GNU ; then
 		append-ldflags -Wl,--default-symver
 	fi
 
-	cd "${S}" && ECONF_SOURCE="${S}"/../dist econf \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--datadir=/usr/share \
-		--sysconfdir=/etc \
-		--localstatedir=/var/lib \
-		--libdir=/usr/"$(get_libdir)" \
+	cd "${S}"
+	ECONF_SOURCE="${S}"/../dist \
+	STRIP="true" \
+	econf \
 		--enable-compat185 \
 		--enable-o_direct \
 		--without-uniquename \
 		--enable-rpc \
-		--host="${CHOST}" \
-		${myconf}  "${javaconf}" || die "configure failed"
-
-	sed -e "s,\(^STRIP *=\).*,\1\"true\"," Makefile > Makefile.cpy \
-	    && mv Makefile.cpy Makefile
+		$(use amd64 && echo --with-mutex=x86/gcc-assembly) \
+		$(use_enable !nocxx cxx) \
+		$(use_enable java) \
+		$(use_enable tcl) \
+		$(use tcl && echo --with-tcl=/usr/$(get_libdir)) \
+		$(use_enable test) \
+		"$@"
 
 	emake || die "make failed"
 }
 
 src_install() {
-	einstall libdir="${D}/usr/$(get_libdir)" STRIP="true" || die
+	emake install DESTDIR="${D}" || die
 
 	db_src_install_usrbinslot
 

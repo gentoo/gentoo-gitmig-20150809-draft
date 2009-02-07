@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.272 2009/02/07 08:06:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.273 2009/02/07 09:04:45 vapier Exp $
+
+  07 Feb 2009; Mike Frysinger <vapier@gentoo.org> db-4.7.25_p1-r1.ebuild:
+  Cleanup src_compile and src_install.
 
   07 Feb 2009; Mike Frysinger <vapier@gentoo.org> db-4.6.21_p1.ebuild,
   db-4.6.21_p3.ebuild, db-4.6.21_p3-r1.ebuild, db-4.7.25.ebuild,
