@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0016.ebuild,v 1.1 2009/02/04 21:17:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1.0016.ebuild,v 1.2 2009/02/07 14:39:16 maekke Exp $
 
 inherit versionator
 
@@ -54,6 +54,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Starting with ${CATEGORY}/${PN}-2.1.0016, nvidia-cg-toolkit"
-	einfo "is installed in /opt/nvidia-cg-toolkit."
+	einfo "Starting with ${CATEGORY}/${PN}-2.1.0016, ${PN}"
+	einfo "is installed in /opt/${PN}."
 }
