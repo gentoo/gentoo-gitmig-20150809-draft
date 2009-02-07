@@ -1,6 +1,10 @@
 # ChangeLog for games-action/extreme-tuxracer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.4 2009/01/04 08:01:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.5 2009/02/07 19:02:21 gentoofan23 Exp $
+
+  07 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  extreme-tuxracer-0.4.ebuild:
+  stable amd64, bug 256746
 
   04 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   extreme-tuxracer-0.4.ebuild:
