@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p1-r1.ebuild,v 1.6 2009/02/07 09:04:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p1-r1.ebuild,v 1.7 2009/02/07 09:10:23 vapier Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -80,7 +80,7 @@ src_compile() {
 	# compilation with -O0 fails on amd64, see bug #171231
 	if use amd64; then
 		replace-flags -O0 -O2
-		is-flag -O[s123] || append-flags -O2
+		is-flagq -O[s123] || append-flags -O2
 	fi
 
 	# use `set` here since the java opts will contain whitespace
