@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/ophcrack
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.26 2009/01/16 00:33:05 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.27 2009/02/07 18:52:14 ikelos Exp $
+
+*ophcrack-3.1.0-r1 (07 Feb 2009)
+
+  07 Feb 2009; Mike Auty <ikelos@gentoo.org> +ophcrack-3.1.0-r1.ebuild:
+  Change dependency on ophcrack from qt to qt-gui, hopefully fixing bug
+  257922.
 
 *ophcrack-3.1.0 (16 Jan 2009)
 
