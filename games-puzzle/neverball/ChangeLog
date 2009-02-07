@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/neverball
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.27 2009/02/05 06:27:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.28 2009/02/07 17:06:52 mr_bones_ Exp $
+
+  07 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  neverball-1.5.0.ebuild:
+  needs libsdl[joystick] (bug #258007)
 
 *neverball-1.5.0 (05 Feb 2009)
 
