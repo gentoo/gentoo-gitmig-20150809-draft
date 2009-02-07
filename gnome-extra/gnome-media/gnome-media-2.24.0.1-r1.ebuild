@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.24.0.1.ebuild,v 1.2 2009/02/07 12:10:03 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.24.0.1-r1.ebuild,v 1.1 2009/02/07 12:10:03 ford_prefect Exp $
 
 EAPI="1"
 
@@ -46,6 +46,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_enable esd esound)
 		$(use_enable esd vumeter)
+		$(use_enable gnomecd cddbslave)
 		$(use_enable gnomecd)
 		$(use_enable ipv6)
 		--enable-gstmix
