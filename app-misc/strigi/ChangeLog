@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.23 2009/02/02 22:17:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.24 2009/02/07 19:19:07 alexxy Exp $
+
+  07 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -strigi-0.6.3.ebuild,
+  strigi-0.6.4.ebuild:
+  Cleanup. Strigi doenst support sqlite anymore
 
 *strigi-0.6.4 (02 Feb 2009)
 
