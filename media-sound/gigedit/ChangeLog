@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gigedit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gigedit/ChangeLog,v 1.1 2008/01/27 10:15:26 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gigedit/ChangeLog,v 1.2 2009/02/08 10:04:55 aballier Exp $
+
+  08 Feb 2009; Alexis Ballier <aballier@gentoo.org>
+  +files/gigedit-0.1.1-gcc43.patch, gigedit-0.1.1.ebuild:
+  fix build with gcc 4.3, bug #257516
 
 *gigedit-0.1.1 (27 Jan 2008)
 

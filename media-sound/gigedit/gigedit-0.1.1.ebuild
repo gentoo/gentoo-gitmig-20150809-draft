@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gigedit/gigedit-0.1.1.ebuild,v 1.1 2008/01/27 10:15:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gigedit/gigedit-0.1.1.ebuild,v 1.2 2009/02/08 10:04:55 aballier Exp $
+
+inherit eutils
 
 DESCRIPTION="An instrument editor for gig files"
 HOMEPAGE="http://www.linuxsampler.org/"
@@ -17,6 +19,12 @@ DEPEND=">=media-sound/linuxsampler-0.5
 	>=media-libs/libsndfile-1.0.2"
 
 RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+}
 
 src_compile() {
 	econf
