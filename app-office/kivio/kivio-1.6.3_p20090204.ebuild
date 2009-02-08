@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/kivio-1.6.3_p20090204.ebuild,v 1.1 2009/02/08 17:23:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/kivio-1.6.3_p20090204.ebuild,v 1.2 2009/02/08 22:23:10 mr_bones_ Exp $
 
 ARTS_REQUIRED="never"
 
@@ -17,7 +17,6 @@ IUSE=""
 
 DEPEND="~app-office/koffice-libs-1.6.3_p20090204
 	dev-lang/python"
-
 
 KMCOPYLIB="
 	libkformula lib/kformula
