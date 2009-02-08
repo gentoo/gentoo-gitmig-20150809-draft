@@ -1,6 +1,11 @@
 # ChangeLog for media-video/devede
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.18 2008/11/22 21:31:08 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.19 2009/02/08 10:29:10 aballier Exp $
+
+*devede-3.12c (08 Feb 2009)
+
+  08 Feb 2009; Alexis Ballier <aballier@gentoo.org> +devede-3.12c.ebuild:
+  version bump by Francisco Lloret <fcolloret@terra.es>, bug #257188
 
   22 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> -devede-3.9.ebuild:
   punt by order of ssuominen
