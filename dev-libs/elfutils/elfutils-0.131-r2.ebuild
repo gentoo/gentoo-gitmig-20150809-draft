@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.131-r2.ebuild,v 1.4 2009/02/07 17:15:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.131-r2.ebuild,v 1.5 2009/02/08 17:56:53 klausman Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/e/elfutils/elfutils_${PV}.orig.tar.gz"
 
 LICENSE="OpenSoftware"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE=""
 
 # This pkg does not actually seem to compile currently in a uClibc
