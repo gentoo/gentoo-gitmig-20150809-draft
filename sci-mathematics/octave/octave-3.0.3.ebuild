@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.0.3.ebuild,v 1.1 2008/11/18 02:27:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.0.3.ebuild,v 1.2 2009/02/08 15:56:02 klausman Exp $
 
 inherit flag-o-matic fortran xemacs-elisp-common
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 IUSE="emacs readline zlib doc hdf5 curl fftw xemacs sparse"
-KEYWORDS="~amd64 ~x86 ~alpha ~hppa ~ppc ~ppc64 ~sparc"
+KEYWORDS="alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="virtual/lapack
 	dev-libs/libpcre
