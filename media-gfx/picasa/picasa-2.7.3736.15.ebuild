@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.7.3736.15.ebuild,v 1.2 2008/08/17 15:36:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.7.3736.15.ebuild,v 1.3 2009/02/08 01:49:47 caster Exp $
 
 inherit eutils versionator rpm
 
@@ -68,6 +68,9 @@ src_install() {
 	sed -i -e "s:ICON:picasa.xpm:" google-picasa{,-mediadetector}.desktop
 	sed -i -e "s:EXEC:picasafontcfg:" google-picasa-fontcfg.desktop
 	sed -i -e "s:ICON:picasa-fontcfg.xpm:" google-picasa-fontcfg.desktop
+
+	echo "Categories=Graphics;" >> google-picasa.desktop
+	echo "Categories=Graphics;" >> google-picasa-fontcfg.desktop
 
 	doicon picasa.xpm picasa-fontcfg.xpm
 	domenu {google-picasa{,-mediadetector,-fontcfg},picasascr}.desktop

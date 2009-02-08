@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/picasa
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.13 2008/08/17 15:36:22 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.14 2009/02/08 01:49:47 caster Exp $
+
+*picasa-3.0.0.57.4402.0_beta (08 Feb 2009)
+
+  08 Feb 2009; Vlastimil Babka <caster@gentoo.org>
+  picasa-2.7.3736.15.ebuild, +picasa-3.0.0.57.4402.0_beta.ebuild:
+  Version bump, thanks to Simonas Leleiva <simaskonfa@gmail.com> and
+  Rolandas Valteris <ro_0@yahoo.com> in bug #240406. Add categories to
+  .desktop files, thanks to Pacho Ramos <pacho@condmat1.ciencias.uniovi.es>
+  in bug #238968.
 
   17 Aug 2008; Markus Meier <maekke@gentoo.org> picasa-2.7.3736.15.ebuild:
   amd64/x86 stable, bug #235001
