@@ -1,26 +1,20 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.20 2009/02/08 17:12:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.21 2009/02/08 17:16:02 vapier Exp $
 
 # @ECLASS: ccc.eclass
-# @MAINTAINER: 
-# ???
-# 
+# @MAINTAINER:
+# alpha@gentoo.org
+# @BLURB: functions to make ebuilds more ccc friendly.
+#
 # Authors:
 # Tavis Ormandy <taviso@gentoo.org>
 # Aron Griffis <agriffis@gentoo.org>
-# @BLURB: functions to make ebuilds more ccc friendly.
-
-# 16/6/2003 - Added otsify()
-# 18/6/2003 - regex tweaks.
-# 22/7/2003 - newdepend
 
 inherit flag-o-matic
 
-
 # define this to make this eclass noisy.
 #DEBUG_CCC_ECLASS=1
-
 
 ccc-fixup()
 {
