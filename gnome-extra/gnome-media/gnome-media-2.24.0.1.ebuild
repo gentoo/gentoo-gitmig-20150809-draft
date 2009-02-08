@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.24.0.1.ebuild,v 1.2 2009/02/07 12:10:03 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.24.0.1.ebuild,v 1.3 2009/02/08 22:05:33 eva Exp $
 
 EAPI="1"
 
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.11
 	>=dev-util/intltool-0.35.0"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
