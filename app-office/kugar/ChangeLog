@@ -1,6 +1,12 @@
 # ChangeLog for app-office/kugar
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.76 2007/07/26 17:37:57 corsair Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.77 2009/02/08 17:29:12 carlo Exp $
+
+*kugar-1.6.3_p20090204 (08 Feb 2009)
+
+  08 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  +kugar-1.6.3_p20090204.ebuild:
+  Sync to branch plus various fixes.
 
   26 Jul 2007; Markus Rothe <corsair@gentoo.org> kugar-1.6.2.ebuild:
   Stable on ppc64; bug #178697

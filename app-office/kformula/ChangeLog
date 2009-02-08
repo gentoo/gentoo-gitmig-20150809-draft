@@ -1,6 +1,12 @@
 # ChangeLog for app-office/kformula
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.83 2008/06/09 05:42:07 dirtyepic Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.84 2009/02/08 17:22:40 carlo Exp $
+
+*kformula-1.6.3_p20090204 (08 Feb 2009)
+
+  08 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  +kformula-1.6.3_p20090204.ebuild:
+  Sync to branch plus various fixes.
 
   09 Jun 2008; Ryan Hill <dirtyepic@gentoo.org>
   +files/kformula-1.6.2-gcc-4.3.patch, kformula-1.6.2.ebuild:
