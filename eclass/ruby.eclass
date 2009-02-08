@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.73 2009/01/18 17:06:32 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.74 2009/02/08 21:13:35 a3li Exp $
 #
 # @ECLASS: ruby.eclass
 # @MAINTAINER:
@@ -67,7 +67,7 @@ ruby_patch_mkmf() {
 
 	if [ ! -x /bin/install -a -x /usr/bin/install ]; then
 		einfo "Patching mkmf"
-		cat <<END >${T}/mkmf.rb
+		cat <<END >"${T}"/mkmf.rb
 require 'mkmf'
 
 STDERR.puts 'Modified mkmf is used'
@@ -83,7 +83,7 @@ END
 ruby_src_unpack() {
 	#ruby_patch_mkmf
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Apply any patches that have been provided.
 	if [[ ${#PATCHES[@]} -gt 1 ]]; then
@@ -156,17 +156,17 @@ ruby_einstall() {
 
 	RUBY_ECONF="${RUBY_ECONF} ${EXTRA_ECONF}"
 	if [ -f install.rb ] ; then
-		${RUBY} install.rb config --prefix=${D}/usr "$@" \
+		${RUBY} install.rb config --prefix="${D}"/usr "$@" \
 			${RUBY_ECONF} || die "install.rb config failed"
 		${RUBY} install.rb install "$@" \
 			${RUBY_ECONF} || die "install.rb install failed"
 	elif [ -f setup.rb ] ; then
-		${RUBY} setup.rb config --prefix=${D}/usr "$@" \
+		${RUBY} setup.rb config --prefix="${D}"/usr "$@" \
 			${RUBY_ECONF} || die "setup.rb config failed"
 		${RUBY} setup.rb install "$@" \
 			${RUBY_ECONF} || die "setup.rb install failed"
 	elif [ -f extconf.rb -o -f Makefile ] ; then
-		make DESTDIR=${D} "$@" install || die "make install failed"
+		make DESTDIR="${D}" "$@" install || die "make install failed"
 	else
 		siteruby=$(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitedir"]')
 		insinto ${siteruby}
@@ -181,7 +181,7 @@ erubydoc() {
 
 	insinto ${rdbase}
 	[ -n "${rdfiles}" ] && doins ${rdfiles}
-	rmdir ${D}${rdbase} 2>/dev/null || true
+	rmdir "${D}"${rdbase} 2>/dev/null || true
 	if [ -d doc -o -d docs ] ; then
 		dohtml -x html -r {doc,docs}/*
 		dohtml -r {doc,docs}/html/*
@@ -193,7 +193,7 @@ erubydoc() {
 		for dir in sample samples example examples; do
 			if [ -d ${dir} ] ; then
 				dodir /usr/share/doc/${PF}
-				cp -pPR ${dir} ${D}/usr/share/doc/${PF} || die "cp failed"
+				cp -pPR ${dir} "${D}"/usr/share/doc/${PF} || die "cp failed"
 			fi
 		done
 	fi
@@ -244,15 +244,15 @@ prepall() {
 				einfo "Using $rb"
 				export RUBY=/usr/bin/$rb
 				ruby() { /usr/bin/$rb "$@" ; }
-				mkdir -p ${S}
-				cd ${WORKDIR}
+				mkdir -p "${S}"
+				cd "${WORKDIR}"
 				einfo "Unpacking for $rb"
 				src_unpack || die "src_unpack failed"
-				cd ${S}
+				cd "${S}"
 				find . -name '*.[ao]' -exec rm {} \;
 				einfo "Building for $rb"
 				src_compile || die "src_compile failed"
-				cd ${S}
+				cd "${S}"
 				einfo "Installing for $rb"
 				src_install || die "src_install failed"
 			done
@@ -262,11 +262,11 @@ prepall() {
 			local shopts=$-
 			set -o noglob # so that bash doen't expand "*"
 
-			for x in ${D}/${siteruby}/* ; do
-				mv $x ${D}/${siteruby}/..
+			for x in "${D}"/${siteruby}/* ; do
+				mv $x "${D}"/${siteruby}/..
 			done
-			if [ -d ${D}${siteruby} ] ; then
-				rmdir --ignore-fail-on-non-empty ${D}/${siteruby}
+			if [[ -d ${D}${siteruby} ]] ; then
+				rmdir --ignore-fail-on-non-empty "${D}"/${siteruby}
 			fi
 
 			set +o noglob; set -$shopts # reset old shell opts
