@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevocosm/libevocosm-3.3.0.ebuild,v 1.1 2008/05/01 00:36:08 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevocosm/libevocosm-3.3.0.ebuild,v 1.2 2009/02/08 14:34:35 maekke Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.coyotegulch.com/products/libevocosm/"
 SRC_URI="http://www.coyotegulch.com/distfiles/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc"
 
 RDEPEND="dev-libs/libcoyotl

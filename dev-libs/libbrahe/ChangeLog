@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbrahe
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbrahe/ChangeLog,v 1.1 2008/05/01 00:30:01 dev-zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbrahe/ChangeLog,v 1.2 2009/02/08 14:33:49 maekke Exp $
+
+  08 Feb 2009; Markus Meier <maekke@gentoo.org> libbrahe-1.1.0.ebuild:
+  amd64/x86 stable, bug #245193
 
 *libbrahe-1.1.0 (01 May 2008)
 
