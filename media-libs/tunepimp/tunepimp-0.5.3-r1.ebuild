@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r1.ebuild,v 1.4 2008/06/14 12:40:44 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r1.ebuild,v 1.5 2009/02/08 15:40:05 maekke Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 # Most use flags were void as not deterministic - needs a patch sooner or later.
 #IUSE="flac mp3 readline perl python vorbis"
 IUSE="python"
