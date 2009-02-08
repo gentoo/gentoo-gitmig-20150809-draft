@@ -1,6 +1,11 @@
 # ChangeLog for www-client/jd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.7 2009/01/29 14:29:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.8 2009/02/08 06:02:43 matsuu Exp $
+
+*jd-2.2.0_rc090208 (08 Feb 2009)
+
+  08 Feb 2009; MATSUU Takuto <matsuu@gentoo.org> +jd-2.2.0_rc090208.ebuild:
+  Version bumped.
 
 *jd-2.1.1_beta090128 (29 Jan 2009)
 
