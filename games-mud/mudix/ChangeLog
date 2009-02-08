@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/mudix
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mudix/ChangeLog,v 1.14 2008/07/30 23:36:04 ken69267 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mudix/ChangeLog,v 1.15 2009/02/08 16:56:47 tupone Exp $
+
+  08 Feb 2009; Tupone Alfredo <tupone@gentoo.org>
+  +files/mudix-4.3-as-needed.patch, mudix-4.3-r1.ebuild:
+  Fix --as-needed bug #247415 by flameeyes@gentoo.org
 
   30 Jul 2008; Kenneth Prugh <ken69267@gentoo.org> mudix-4.3-r1.ebuild:
   amd64 stable, bug #232679
