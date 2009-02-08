@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r2.ebuild,v 1.2 2008/05/29 18:19:27 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r2.ebuild,v 1.3 2009/02/08 14:00:03 ford_prefect Exp $
 
 GCONF_DEBUG="no"
 
@@ -18,9 +18,10 @@ IUSE=""
 DEPEND=">=dev-lang/python-2.4
 	>=dev-python/pygobject-2.6
 	>=dev-python/pygtk-2.6
-	>=dev-python/gnome-python-2.10
-	>=dev-python/gnome-python-desktop-2.10
-	>=dev-python/gnome-python-extras-2.10
+	>=dev-python/gconf-python-2.22.0
+	>=dev-python/libgnome-python-2.22.0
+	>=dev-python/gnome-applets-python-2.22.0
+	>=dev-python/gnome-vfs-python-2.22.0
 	>=gnome-base/gnome-desktop-2.10"
 RDEPEND="${DEPEND}"
 
