@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.7 2009/01/26 19:42:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.8 2009/02/08 13:36:02 gentoofan23 Exp $
 
 inherit eutils autotools depend.php depend.apache multilib perl-module
 
@@ -74,8 +74,8 @@ src_compile() {
 		$(use_with ffmpeg ffmpeg /usr) \
 		$(use_enable debug) \
 		$(use_enable debug crashtrace) \
-		--with-webdir="${ROOT}/var/www/zoneminder/htdocs" \
-		--with-cgidir="${ROOT}/var/www/zoneminder/cgi-bin" \
+		--with-webdir="/var/www/zoneminder/htdocs" \
+		--with-cgidir="/var/www/zoneminder/cgi-bin" \
 		--with-webuser=apache \
 		--with-webgroup=apache \
 		|| die "econf failed"
@@ -105,7 +105,7 @@ src_install() {
 	doins "${FILESDIR}"/10_zoneminder.conf
 
 	for DIR in events images sound; do
-		dodir "${ROOT}"/var/www/zoneminder/htdocs/${DIR}
+		dodir /var/www/zoneminder/htdocs/${DIR}
 	done
 
 	fixlocalpod
