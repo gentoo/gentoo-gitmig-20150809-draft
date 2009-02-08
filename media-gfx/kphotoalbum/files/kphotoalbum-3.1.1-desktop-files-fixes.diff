@@ -1,0 +1,22 @@
+--- ./kphotoalbum-3.1.1/src/kphotoalbum.desktop.orig	2009-02-08 23:46:38.000000000 +0100
++++ ./kphotoalbum-3.1.1/src/kphotoalbum.desktop	2009-02-08 23:46:38.000000000 +0100
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=KPhotoAlbum
+ Name[pa]=ਕ-ਫੋਟੋਐਲਬਮ
+ Name[sv]=Kfotoalbum
+--- ./kphotoalbum-3.1.1/src/kphotoalbum-import.desktop.orig	2009-02-08 23:46:38.000000000 +0100
++++ ./kphotoalbum-3.1.1/src/kphotoalbum-import.desktop	2009-02-08 23:46:38.000000000 +0100
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=KPhotoAlbum
+ Name[pa]=ਕ-ਫੋਟੋਐਲਬਮ
+ Name[sv]=Kfotoalbum
+@@ -45,4 +44,4 @@
+ Icon=kphotoalbum
+ Categories=Qt;KDE;Graphics;
+ NoDisplay=true
+-MimeType=application/vnd.kde.kphotoalbum-import
++MimeType=application/vnd.kde.kphotoalbum-import;
