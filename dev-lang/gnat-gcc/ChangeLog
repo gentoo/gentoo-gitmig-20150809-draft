@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.29 2009/02/05 14:27:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.30 2009/02/08 21:52:34 maekke Exp $
+
+  08 Feb 2009; Markus Meier <maekke@gentoo.org> gnat-gcc-4.3.2.ebuild:
+  amd64/x86 stable, bug #257800
 
   05 Feb 2009; George Shapovalov <george@gentoo.org> ChangeLog:
   removed old versions
