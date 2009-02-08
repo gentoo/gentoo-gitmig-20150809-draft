@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.2 2008/11/23 14:56:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.3 2009/02/08 19:42:55 vapier Exp $
 
 EGIT_REPO_URI="git://git.savannah.gnu.org/automake.git"
 
@@ -44,7 +44,7 @@ src_install() {
 	# SLOT the docs and junk
 	local x
 	for x in aclocal automake ; do
-		help2man ./${x} > ${x}-${SLOT}.1
+		help2man "perl -Ilib ${x}" > ${x}-${SLOT}.1
 		doman ${x}-${SLOT}.1
 		rm -f "${D}"/usr/bin/${x}
 	done
