@@ -1,6 +1,18 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.59 2009/01/23 17:00:41 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.60 2009/02/08 14:57:25 loki_val Exp $
+
+*brasero-2.25.90 (08 Feb 2009)
+
+  08 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/brasero-2.25.90-il8n.patch, -brasero-0.9.1.ebuild,
+  +brasero-2.25.90.ebuild:
+  Bump to latest development version. Fix bug 256406, brasero causes
+  nautilus to be semi-translated, thanks to Pacho Ramos
+  <pacho@condmat1.ciencias.uniovi.es> for report and patch. Add blurb about
+  gstreamer plugin having to be installed for each codec w.r.t. bug 256830.
+  Dropped keywords for ppc and ppc64 because they haven't keyworded
+  nautilus-2.24.x, bug 258134.
 
 *brasero-0.9.1 (23 Jan 2009)
 *brasero-0.8.4-r1 (23 Jan 2009)
