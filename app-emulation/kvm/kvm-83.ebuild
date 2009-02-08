@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-83.ebuild,v 1.1 2009/01/26 19:33:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-83.ebuild,v 1.2 2009/02/08 19:36:43 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -102,6 +102,9 @@ src_unpack() {
 			qemu/Makefile.target
 	# avoid strip
 	sed -i 's/$(INSTALL) -m 755 -s/$(INSTALL) -m 755/' qemu/Makefile
+
+	# Fix building with vtd; bug #256685
+	epatch "${FILESDIR}"/${P}-vtd.patch
 
 	# apply patchset
 	EPATCH_SOURCE="${WORKDIR}/${PATCHSET}"
