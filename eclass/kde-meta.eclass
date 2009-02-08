@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.88 2009/02/08 16:21:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.89 2009/02/08 21:33:06 carlo Exp $
 
 # @ECLASS: kde-meta.eclass
 # @MAINTAINER:
@@ -320,7 +320,7 @@ kde-meta_src_unpack() {
 		# Avoid syncing if possible
 		# No idea what the above comment means...
 		if [[ -n "$RAWTARBALL" ]]; then
-			rm -f $T/$RAWTARBALL
+			rm -f "${T}"/$RAWTARBALL
 		fi
 
 		# Default $S is based on $P not $myP; rename the extracted dir to fit $S
