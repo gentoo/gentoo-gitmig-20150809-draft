@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.23 2008/08/29 19:10:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.24 2009/02/08 21:42:27 maekke Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -218,7 +218,7 @@ java-vm_revdep-mask() {
 
 	dodir /etc/revdep-rebuild/
 	echo "SEARCH_DIRS_MASK=\"${VMROOT}\""> "${D}/etc/revdep-rebuild/61-${VMHANDLE}"
-	
+
 	elog "A revdep-rebuild control file was installed to prevent reinstalls due to"
 	elog "missing dependencies (see bug #177925 for more info). Note that some parts"
 	elog "of the JVM may require dependencies that are pulled only through respective"
