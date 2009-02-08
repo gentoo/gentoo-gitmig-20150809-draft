@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.23 2009/01/14 12:19:04 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.24 2009/02/08 06:13:19 jer Exp $
+
+  08 Feb 2009; Jeroen Roovers <jer@gentoo.org> libnfnetlink-0.0.39.ebuild:
+  Stable for HPPA (bug #245173).
 
 *libnfnetlink-0.0.40 (14 Jan 2009)
 
