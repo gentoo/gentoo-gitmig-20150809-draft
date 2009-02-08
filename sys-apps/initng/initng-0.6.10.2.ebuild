@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-9999.ebuild,v 1.13 2009/02/08 19:35:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.6.10.2.ebuild,v 1.1 2009/02/08 19:35:58 vapier Exp $
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="http://svn.initng.org/initng/trunk"
@@ -46,6 +46,7 @@ src_unpack() {
 	fi
 	cd "${S}"
 	sed -i -e 's:-Werror::' CMakeLists.txt #136992
+	epatch "${FILESDIR}"/${P}-logfile-open.patch
 }
 
 src_compile() {
