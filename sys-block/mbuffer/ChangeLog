@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/mbuffer
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.19 2007/12/04 17:45:52 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.20 2009/02/08 19:50:37 vapier Exp $
+
+*mbuffer-20090113 (08 Feb 2009)
+
+  08 Feb 2009; Mike Frysinger <vapier@gentoo.org> +mbuffer-20090113.ebuild:
+  Version bump.
 
   04 Dec 2007; nixnut <nixnut@gentoo.org> mbuffer-20070911.ebuild:
   Stable on ppc wrt bug 201037
