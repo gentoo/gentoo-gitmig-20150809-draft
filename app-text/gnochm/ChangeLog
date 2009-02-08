@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gnochm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/ChangeLog,v 1.10 2008/11/08 12:16:07 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnochm/ChangeLog,v 1.11 2009/02/08 16:23:47 ford_prefect Exp $
+
+*gnochm-0.9.11-r1 (08 Feb 2009)
+
+  08 Feb 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +gnochm-0.9.11-r1.ebuild:
+  Switch to split gnome-python* deps. Thanks to Nirbheek Chauhan
+  <nirbheek.chauhan@gmail.com>.
 
   08 Nov 2008; nixnut <nixnut@gentoo.org> gnochm-0.9.11.ebuild:
   Stable on ppc wrt bug 245208
