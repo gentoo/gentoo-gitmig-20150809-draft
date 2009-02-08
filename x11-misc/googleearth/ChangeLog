@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.41 2009/02/06 23:44:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.42 2009/02/08 14:36:06 caster Exp $
+
+*googleearth-5.0.11337.1968_beta (08 Feb 2009)
+
+  08 Feb 2009; Vlastimil Babka <caster@gentoo.org>
+  +googleearth-5.0.11337.1968_beta.ebuild:
+  Version bump, bug #257533.
 
   06 Feb 2009; Vlastimil Babka <caster@gentoo.org>
   googleearth-4.3.7284.3916.ebuild:
