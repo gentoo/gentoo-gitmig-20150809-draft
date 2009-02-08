@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.47 2008/11/19 00:04:47 robbat2 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.48 2009/02/08 17:26:55 maekke Exp $
+
+  08 Feb 2009; Markus Meier <maekke@gentoo.org> radvd-1.1.ebuild:
+  amd64/x86 stable, bug #245873
 
 *radvd-1.2 (19 Nov 2008)
 

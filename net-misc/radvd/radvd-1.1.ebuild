@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.1.ebuild,v 1.4 2008/11/19 00:03:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.1.ebuild,v 1.5 2009/02/08 17:26:55 maekke Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://v6web.litech.org/radvd/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~sparc x86 ~x86-fbsd"
 IUSE="kernel_FreeBSD"
 
 DEPEND="sys-devel/bison
