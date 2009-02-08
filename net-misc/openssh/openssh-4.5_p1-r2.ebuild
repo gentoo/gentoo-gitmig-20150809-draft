@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.5_p1-r2.ebuild,v 1.15 2008/05/11 13:12:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.5_p1-r2.ebuild,v 1.16 2009/02/08 17:14:24 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 # Please leave pam at end, so that dopamd and newpamd from eutils eclass are not used
-inherit eutils flag-o-matic ccc multilib autotools pam
+inherit eutils flag-o-matic multilib autotools pam
 
 # Make it more portable between straight releases
 # and _p? releases.
