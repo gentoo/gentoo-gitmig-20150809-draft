@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.188 2009/02/05 22:02:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.189 2009/02/08 15:59:31 klausman Exp $
+
+  08 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
+  iptables-1.4.2-r2.ebuild:
+  Stable on alpha, bug #255786
 
   05 Feb 2009; Jeroen Roovers <jer@gentoo.org> iptables-1.4.2-r2.ebuild:
   Stable for HPPA (bug #255786).
