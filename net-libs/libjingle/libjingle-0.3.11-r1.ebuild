@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.11-r1.ebuild,v 1.1 2009/02/07 05:17:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.11-r1.ebuild,v 1.2 2009/02/08 16:13:31 klausman Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/tapioca-voip/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl
