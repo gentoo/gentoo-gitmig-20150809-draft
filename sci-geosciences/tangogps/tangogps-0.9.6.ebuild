@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tangogps/tangogps-0.9.6.ebuild,v 1.1 2009/02/05 19:30:48 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tangogps/tangogps-0.9.6.ebuild,v 1.2 2009/02/08 16:05:35 bangert Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ RDEPEND="x11-libs/gtk+
 		sys-apps/dbus
 		gnome-base/gconf
 		net-misc/curl
+		media-libs/libexif
 		gps? ( >=sci-geosciences/gpsd-2.34 )"
 DEPEND="sys-devel/gettext
 	${RDEPEND}"
