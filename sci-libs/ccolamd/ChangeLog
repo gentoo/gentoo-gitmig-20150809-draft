@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccolamd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.6 2008/05/22 01:11:05 jsbronder Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.7 2009/02/08 15:27:36 klausman Exp $
+
+  08 Feb 2009; Tobias Klausmann <klausman@gentoo.org> ccolamd-2.7.1.ebuild:
+  Stable on alpha, bug #245707
 
   22 May 2008; Justin Bronder <jsbronder@gentoo.org> ccolamd-2.7.1.ebuild:
   Adding ~ppc (#215839)
