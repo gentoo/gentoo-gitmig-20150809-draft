@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.19 2008/09/10 08:20:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.20 2009/02/08 17:12:02 vapier Exp $
 
 # @ECLASS: ccc.eclass
 # @MAINTAINER: 
@@ -209,58 +209,6 @@ create-so()
 	dolib.so ${T}/${2##*/}
 }
 
-# @FUNCTION: append-ldflags
-# @USAGE: < flag >
-# @DESCRIPTION:
-# Append <flag> to the current LDFLAGS
-append-ldflags()
-{
-	LDFLAGS="${LDFLAGS} ${1}"
-}
-
-# flag-o-matic clone
-#
-#is-ldflags()
-#{
-#	for x in ${LDFLAGS}
-#	do
-#		if [ "${x}" = "${1}" ]; then
-#			echo true
-#			break
-#		fi
-#	done
-#}
-
-# @FUNCTION: is-ldflags
-# @USAGE: < flag >
-# @RETURN: Return code 0 if <flag> is in LDFLAGS, else return code 1
-is-ldflags() {
-	local x
-	for x in ${LDFLAGS}
-	do
-		if [ "${x}" == "${1}" ]; then
-			tty --quiet < /dev/stdout || echo "true"
-			return 0
-		fi
-	done
-	return 1
-}
-
-# @FUNCTION: filter-ldflags
-# @USAGE: < flag >
-# @DESCRIPTION:
-# flag-o-matic doesnt provide LDFLAGS utilities.
-# Some replacements for ccc porting. These functions
-# mimic the flag-o-matic equivalents, look in there for
-# documentation.
-filter-ldflags()
-{
-	for x in ${1}
-	do
-		LDFLAGS="${LDFLAGS/${x}}"
-	done
-}
-
 # @FUNCTION: otsify
 # @USAGE: < archive >
 # @DESCRIPTION:
@@ -310,5 +258,3 @@ otsify()
 		return 1
 	fi
 }
-
-
