@@ -1,8 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/anagramarama-0.2.ebuild,v 1.7 2006/08/15 13:41:08 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/anagramarama-0.2.ebuild,v 1.8 2009/02/08 17:35:24 tupone Exp $
 
-inherit games
+EAPI=2
+inherit eutils games
 
 DESCRIPTION="Create as many words as you can before the time runs out"
 HOMEPAGE="http://www.coralquest.com/anagramarama/"
@@ -21,22 +22,15 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${PN}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "s:wordlist.txt:${GAMES_DATADIR}\/${PN}\/wordlist.txt:" \
 		-e "s:\"audio\/:\"${GAMES_DATADIR}\/${PN}\/audio\/:" \
 		-e "s:\"images\/:\"${GAMES_DATADIR}\/${PN}\/images\/:" \
 		src/{ag.c,dlb.c} \
 		|| die "sed failed"
-	sed -i \
-		-e "/^LFLAGS/s:-funroll-loops -fomit-frame-pointer -pipe -O9:${CFLAGS}:" \
-		-e "/^CFLAGS/s:-funroll-loops -fomit-frame-pointer -pipe -O9:${CFLAGS}:" \
-		makefile \
-		|| die "sed failed"
 	rm -rf $(find . -type d -name CVS)
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_install() {
