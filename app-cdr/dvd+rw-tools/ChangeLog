@@ -1,6 +1,17 @@
 # ChangeLog for app-cdr/dvd+rw-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.66 2008/09/28 09:12:22 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.67 2009/02/08 15:42:00 loki_val Exp $
+
+*dvd+rw-tools-7.1-r1 (08 Feb 2009)
+
+  08 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/dvd+rw-tools-7.0-dvddl.patch,
+  +files/dvd+rw-tools-7.0-glibc2.6.90.patch,
+  +files/dvd+rw-tools-7.0-wctomb.patch, +files/dvd+rw-tools-7.0-wexit.patch,
+  -dvd+rw-tools-7.0.ebuild, +dvd+rw-tools-7.1-r1.ebuild:
+  Fix bug 257360, patch from redhat. Allow dvd-dl media to be burned even
+  when less than 50% of the media is used. Exit with status !=0 when child
+  processes do.
 
   28 Sep 2008; Peter Alfredsen <loki_val@gentoo.org>
   dvd+rw-tools-7.1.ebuild:
