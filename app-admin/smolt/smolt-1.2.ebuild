@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/smolt-1.2.ebuild,v 1.1 2009/02/05 21:24:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/smolt-1.2.ebuild,v 1.2 2009/02/08 16:00:08 bangert Exp $
 
 inherit python eutils
 
@@ -21,7 +21,8 @@ RDEPEND="${DEPEND}
 	sys-apps/hal
 	>=dev-python/rhpl-0.213
 	>=dev-python/urlgrabber-3.0.0
-	>=dev-python/simplejson-1.7.1"
+	>=dev-python/simplejson-1.7.1
+	dev-python/dbus-python"
 
 S="${S}/client"
 
