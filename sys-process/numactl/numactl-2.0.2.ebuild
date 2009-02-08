@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.2.ebuild,v 1.1 2008/09/29 23:40:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.2.ebuild,v 1.2 2009/02/08 19:54:31 vapier Exp $
 
-inherit base eutils toolchain-funcs
+inherit eutils toolchain-funcs
 
-DESCRIPTION="Utilities and libraries for NUMA systems."
+DESCRIPTION="Utilities and libraries for NUMA systems"
 HOMEPAGE="http://oss.sgi.com/projects/libnuma/"
 SRC_URI="ftp://oss.sgi.com/www/projects/libnuma/download/${P}.tar.gz"
 
@@ -15,8 +15,21 @@ IUSE="perl"
 
 RDEPEND="perl? ( dev-lang/perl )"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-build.patch
+}
+
 src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" BENCH_CFLAGS="" || die
+}
+
+src_test() {
+	einfo "The only generically safe test is regress2."
+	einfo "The other test cases require 2 NUMA nodes."
+	cd test
+	./regress2 || die "regress2 failed!"
 }
 
 src_install() {
@@ -28,11 +41,4 @@ src_install() {
 	if ! use perl ; then
 		rm "${D}"/usr/bin/numastat "${D}"/usr/share/man/man8/numastat.8 || die
 	fi
-}
-
-src_test() {
-	einfo "The only generically safe test is regress2."
-	einfo "The other test cases require 2 NUMA nodes."
-	cd test
-	./regress2 || die "regress2 failed!"
 }

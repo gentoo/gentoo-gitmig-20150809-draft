@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/numactl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.8 2008/09/29 23:40:12 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.9 2009/02/08 19:54:31 vapier Exp $
+
+  08 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/numactl-2.0.2-build.patch, numactl-2.0.2.ebuild:
+  Fix linking order #248444 by Diego E. Pettenò.
 
 *numactl-2.0.2 (29 Sep 2008)
 
