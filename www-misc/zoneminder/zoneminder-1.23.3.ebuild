@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.8 2009/02/08 13:36:02 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.9 2009/02/08 14:02:10 gentoofan23 Exp $
 
 inherit eutils autotools depend.php depend.apache multilib perl-module
 
@@ -104,8 +104,9 @@ src_install() {
 	insinto /etc/apache2/vhosts.d
 	doins "${FILESDIR}"/10_zoneminder.conf
 
-	for DIR in events images sound; do
-		dodir /var/www/zoneminder/htdocs/${DIR}
+	for DIR in events images sounds temp; do
+		dodir   /var/www/zoneminder/htdocs/${DIR}
+		keepdir /var/www/zoneminder/htdocs/${DIR}
 	done
 
 	fixlocalpod
