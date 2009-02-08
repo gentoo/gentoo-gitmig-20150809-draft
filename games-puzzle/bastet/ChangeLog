@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/bastet
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bastet/ChangeLog,v 1.8 2006/10/19 15:20:40 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bastet/ChangeLog,v 1.9 2009/02/08 18:27:16 tupone Exp $
+
+  08 Feb 2009; Tupone Alfredo <tupone@gentoo.org>
+  +files/bastet-0.41-as-needed.patch, bastet-0.41.ebuild:
+  Fix --as-needed bug #247418 by flameeyes@gentoo.org
 
   19 Oct 2006; Tristan Heaven <nyhm@gentoo.org> bastet-0.41.ebuild:
   Use LDFLAGS and install the man page
