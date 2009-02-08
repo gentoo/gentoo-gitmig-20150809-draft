@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ack-1.88.ebuild,v 1.1 2009/02/08 05:54:21 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ack-1.88.ebuild,v 1.2 2009/02/08 22:23:47 mr_bones_ Exp $
 
 inherit perl-module bash-completion
 
@@ -25,4 +25,3 @@ pkg_postinst() {
 	perl-module_pkg_postinst
 	bash-completion_pkg_postinst
 }
-
