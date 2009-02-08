@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.0.33.ebuild,v 1.6 2009/02/05 00:32:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.0.33.ebuild,v 1.7 2009/02/08 22:45:38 fauli Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="+bundledlibevent debug logrotate"
+IUSE="+bundledlibevent debug"
 
 DEPEND="dev-libs/openssl
 	>=dev-libs/libevent-1.2"
@@ -61,14 +61,12 @@ src_install() {
 	fperms 755 /var/run/tor
 	fowners tor:tor /var/lib/tor /var/log/tor /var/run/tor
 
-	if use logrotate; then
-		sed -e "s:/lib::" \
-			-e "s:/rc.d::" \
-			-e "s:\\*:\\*.:" \
-			-e "s:sharedscripts:create 0640 tor tor\n\tsharedscripts:" -i contrib/tor.logrotate || die
-		insinto /etc/logrotate.d
-		newins contrib/tor.logrotate tor
-	fi
+	sed -e "s:/lib::" \
+		-e "s:/rc.d::" \
+		-e "s:\\*:\\*.:" \
+		-e "s:sharedscripts:create 0640 tor tor\n\tsharedscripts:" -i contrib/tor.logrotate || die
+	insinto /etc/logrotate.d
+	newins contrib/tor.logrotate tor
 
 	# allow the tor user more open files to avoid errors, see bug 251171
 	insinto /etc/security/limits.d/

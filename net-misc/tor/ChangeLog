@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.156 2009/02/05 00:32:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.157 2009/02/08 22:45:38 fauli Exp $
+
+  08 Feb 2009; Christian Faulhammer <fauli@gentoo.org> tor-0.2.0.33.ebuild:
+  kill logrotate USE flag as requested by bangert on bug 258188
 
   05 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
   +files/tor-0.2.0.33-no-internal-libevent.patch, metadata.xml,
