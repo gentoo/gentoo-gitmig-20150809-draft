@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glib-sharp/glib-sharp-2.12.7-r10.ebuild,v 1.1 2009/01/29 22:40:43 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gdk-sharp/gdk-sharp-2.12.8.ebuild,v 1.1 2009/02/08 17:20:42 loki_val Exp $
 
 EAPI=2
 
