@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.94 2009/02/08 17:07:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.95 2009/02/08 21:54:33 maekke Exp $
+
+  08 Feb 2009; Markus Meier <maekke@gentoo.org>
+  gdesklets-core-0.36.1.ebuild:
+  amd64/x86 stable, bug #258067
 
   08 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
   gdesklets-core-0.36.1.ebuild:
