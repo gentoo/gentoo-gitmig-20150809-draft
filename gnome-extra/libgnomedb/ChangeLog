@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.59 2009/02/09 19:10:46 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.60 2009/02/09 21:28:31 maekke Exp $
+
+  09 Feb 2009; Markus Meier <maekke@gentoo.org> libgnomedb-3.0.0.ebuild:
+  amd64/x86 stable, bug #258194
 
   09 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
   libgnomedb-3.0.0.ebuild:
