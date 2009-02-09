@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.108 2009/01/07 18:50:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.109 2009/02/09 09:33:14 angelos Exp $
+
+  09 Feb 2009; Christoph Mende <angelos@gentoo.org> vsftpd-2.0.7-r1.ebuild:
+  QA: Removed logrotate USE flag, the logrotate.d file is installed
+  unconditionally now (bug 258180)
 
   07 Jan 2009; Raúl Porcel <armin76@gentoo.org> vsftpd-2.0.7-r1.ebuild:
   alpha/ia64/x86 stable wrt #248458
