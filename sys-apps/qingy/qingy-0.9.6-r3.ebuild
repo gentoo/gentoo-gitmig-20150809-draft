@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.6-r3.ebuild,v 1.4 2009/01/29 14:07:44 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.6-r3.ebuild,v 1.5 2009/02/09 09:12:12 s4t4n Exp $
 
 inherit elisp-common eutils pam
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="crypt directfb emacs gpm logrotate opensslcrypt pam static X"
+IUSE="crypt directfb emacs gpm opensslcrypt pam static X"
 
 RDEPEND=">=sys-libs/ncurses-5.4-r6
 	opensslcrypt? ( >=dev-libs/openssl-0.9.7e )
@@ -117,11 +117,9 @@ src_install()
 	# Alter config file so that it uses our theme
 	sed -i 's/theme = "default"/theme = "gentoo"/' "${D}/etc/${PN}/settings"
 
-	# Install log rotation policy if user wants it
-	if use logrotate; then
-		insinto /etc/logrotate.d
-		newins "${FILESDIR}/${PN}-logrotate" ${PN} || die "Log rotation policy installation failed"
-	fi
+	# Install log rotation policy
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/${PN}-logrotate" ${PN} || die "Log rotation policy installation failed"
 
 	use emacs && elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
