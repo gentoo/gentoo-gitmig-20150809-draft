@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.35 2009/01/30 15:02:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.36 2009/02/09 18:40:54 aballier Exp $
+
+*mlt-0.3.6 (09 Feb 2009)
+
+  09 Feb 2009; Alexis Ballier <aballier@gentoo.org> +mlt-0.3.6.ebuild:
+  version bump, bug #257966
 
   30 Jan 2009; Alexis Ballier <aballier@gentoo.org>
   -files/mlt-0.2.2-motion-est-nonx86.patch, -files/mlt-0.3.0-sox1420.patch,
