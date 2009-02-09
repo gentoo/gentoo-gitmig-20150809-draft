@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/braincurses
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/braincurses/ChangeLog,v 1.8 2008/05/01 10:34:46 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/braincurses/ChangeLog,v 1.9 2009/02/09 15:26:40 tupone Exp $
+
+  09 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/braincurses-0.5b-as-needed.patch, braincurses-0.5b.ebuild:
+  Fix --as-needed bug #247420 by flameeyes@gentoo.org.
+  Patch from Kevin Pyle
 
   01 May 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/braincurses-0.5b-gcc43.patch, braincurses-0.5b.ebuild:
