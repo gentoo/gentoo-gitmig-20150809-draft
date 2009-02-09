@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audio-entropyd
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.27 2009/01/04 13:24:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.28 2009/02/09 17:03:42 angelos Exp $
+
+  09 Feb 2009; Christoph Mende <angelos@gentoo.org>
+  +files/audio-entropyd-1.0.5-ldflags.patch, audio-entropyd-1.0.5.ebuild:
+  Respect LDFLAGS
 
 *audio-entropyd-1.0.5 (04 Jan 2009)
 
