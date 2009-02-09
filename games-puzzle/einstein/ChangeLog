@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/einstein
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/ChangeLog,v 1.7 2008/04/15 18:10:15 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/ChangeLog,v 1.8 2009/02/09 15:46:06 tupone Exp $
+
+  09 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/einstein-2.0-as-needed.patch:
+  Fix --as-needed bug #247422 by flameeyes@gentoo.org
 
   15 Apr 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/einstein-2.0-gcc43.patch, einstein-2.0.ebuild:
