@@ -1,10 +1,8 @@
 --- generate-modprobe.conf
 +++ generate-modprobe.conf
-@@ -1,20 +1,33 @@
--#! /bin/sh -e
--
-+#!/bin/bash
-+#
+@@ -1,20 +1,35 @@
+ #! /bin/sh -e
+ 
  # Naive shell script to translate modules.conf + defaults to modprobe.conf
  # Normal caveats apply, as with any machine translation.
 -if [ $# -gt 2 ] || [ x"$1" = x--help ]; then
@@ -26,7 +24,7 @@
 -  shift
 -fi
 +KV=`uname -r`
-+while [[ "$1" == --* ]]; do
++while [ -n "$1" ] ; do
 +    case "$1" in
 +	--assume-kernel=*)
 +	    KV=${1#*=}
@@ -34,13 +32,15 @@
 +	--stdin)
 +	    STDIN=1
 +	    ;;
-+	*)
++	--*)
 +	    echo "Usage: $0 [--stdin] [--assume-kernel=n.n.n] [modprobe.conf]"
 +	    echo "   Converts your current modules setup to modprobe.conf."
 +	    echo "   Don't trust it too much."
 +	    echo " Version 0.1"
 +	    exit 1
 +	    ;;
++	*)
++	    break;;
 +    esac
 +    shift
 +done
