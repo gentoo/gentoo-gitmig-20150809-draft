@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta-r1.ebuild,v 1.1 2009/02/09 03:18:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.96_beta-r1.ebuild,v 1.2 2009/02/09 13:50:40 williamh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -48,9 +48,6 @@ src_unpack() {
 	sed -i -e "s:\(EST=\).*:\1/usr/share/speech-tools:" "${S}"/config/config.in
 	sed -i -e "s:\$(EST)/lib:/usr/$(get_libdir):" "${S}"/config/project.mak
 
-	# copy what we need for MultiSyn from speech_tools.
-	cp -pr "${WORKDIR}"/speech_tools/base_class "${S}"/src/modules/MultiSyn
-
 	# fix the reference  to /usr/lib/festival
 	sed -i -e "s:\(FTLIBDIR.*=.*\)\$.*:\1/usr/share/festival:" "${S}"/config/project.mak
 
@@ -66,6 +63,9 @@ src_unpack() {
 	# Apply patches for gcc4.3.
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	epatch "${FILESDIR}"/speech-tools-1.2.96_beta-gcc43-include.patch
+
+	# copy what we need for MultiSyn from speech_tools.
+	cp -pr "${WORKDIR}"/speech_tools/base_class "${S}"/src/modules/MultiSyn
 
 	if use alsa; then
 		echo "(Parameter.set 'Audio_Command \"aplay -q -c 1 -t raw -f s16 -r \$SR \$FILE\")" >> ${S}/lib/siteinit.scm

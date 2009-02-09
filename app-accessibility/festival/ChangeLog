@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.82 2009/02/09 03:18:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.83 2009/02/09 13:50:40 williamh Exp $
+
+  09 Feb 2009; William Hubbs <williamh@gentoo.org>
+  festival-1.96_beta-r1.ebuild:
+  Fixed the gcc 4.3 patch order for bug #205401.
 
 *festival-1.96_beta-r1 (09 Feb 2009)
 
