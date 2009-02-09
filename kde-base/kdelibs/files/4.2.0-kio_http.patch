@@ -1,0 +1,13 @@
+diff -urN kdelibs-4.2.0.old/kioslave/http/http.cpp kdelibs-4.2.0/kioslave/http/http.cpp
+--- kdelibs-4.2.0.old/kioslave/http/http.cpp	2009-01-01 17:28:03.000000000 +0100
++++ kdelibs-4.2.0/kioslave/http/http.cpp	2009-02-09 22:45:45.000000000 +0100
+@@ -1868,6 +1868,9 @@
+             buf[i] = m_unreadBuf.constData()[bufSize - i - 1];
+         }
+         m_unreadBuf.truncate(bufSize - bytesRead);
++		// we actualy have to return the data
++		// they might be complete already and we dont want to wait
++		return bytesRead;
+     }
+     if (bytesRead < size) {
+         int rawRead = TCPSlaveBase::read(buf + bytesRead, size - bytesRead);
