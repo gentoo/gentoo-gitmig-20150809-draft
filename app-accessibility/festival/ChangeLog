@@ -1,6 +1,15 @@
 # ChangeLog for app-accessibility/festival
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.81 2008/11/23 17:44:11 patrick Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.82 2009/02/09 03:18:23 williamh Exp $
+
+*festival-1.96_beta-r1 (09 Feb 2009)
+
+  09 Feb 2009; William Hubbs <williamh@gentoo.org>
+  +files/speech-tools-1.2.96_beta-gcc43-include.patch,
+  +files/festival-1.96_beta-hts-voices.patch, +festival-1.96_beta-r1.ebuild:
+  Add back the HTS voices, thanks to garlicbread@ntlworld.com for the patch.
+  Also add back the MultiSyn engine.
+  This closes bug #211214.
 
   23 Nov 2008; Patrick Lauer <patrick@gentoo.org> festival-1.96_beta.ebuild:
   Fixing homepage to point directly at the actual project page.

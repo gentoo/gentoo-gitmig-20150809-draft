@@ -1,0 +1,100 @@
+diff -Naur festival.orig/lib/voices/us/cmu_us_awb_arctic_hts/festvox/cmu_us_awb_arctic_f0model.scm festival/lib/voices/us/cmu_us_awb_arctic_hts/festvox/cmu_us_awb_arctic_f0model.scm
+--- festival.orig/lib/voices/us/cmu_us_awb_arctic_hts/festvox/cmu_us_awb_arctic_f0model.scm	2003-08-01 15:12:59.000000000 +0100
++++ festival/lib/voices/us/cmu_us_awb_arctic_hts/festvox/cmu_us_awb_arctic_f0model.scm	2009-01-28 21:34:30.000000000 +0000
+@@ -35,7 +35,7 @@
+ ;;;
+ 
+ ;;; Load any necessary files here
+-;(require 'f2bf0lr)
++(require 'f2bf0lr)
+ (require 'cmu_us_awb_arctic_f0clunits)
+ 
+ (set! cmu_us_awb_arctic_int_lr_params
+diff -Naur festival.orig/lib/voices/us/cmu_us_awb_arctic_hts/festvox/cmu_us_awb_arctic_hts.scm festival/lib/voices/us/cmu_us_awb_arctic_hts/festvox/cmu_us_awb_arctic_hts.scm
+--- festival.orig/lib/voices/us/cmu_us_awb_arctic_hts/festvox/cmu_us_awb_arctic_hts.scm	2004-06-07 08:50:56.000000000 +0100
++++ festival/lib/voices/us/cmu_us_awb_arctic_hts/festvox/cmu_us_awb_arctic_hts.scm	2009-01-28 21:33:58.000000000 +0000
+@@ -115,12 +115,12 @@
+        (list "-md" (path-append hts_data_dir "duration.pdf"))
+        (list "-mm" (path-append hts_data_dir "mcep.pdf"))
+        (list "-mf" (path-append hts_data_dir "lf0.pdf"))
+-       '("-a" " 0.420000")                 
+-       '("-r" " 0.000000")                 
+-       '("-fs" "1.000000")             
+-       '("-fm" "0.000000")            
+-       '("-u" " 0.500000")                 
+-       '("-l" " 0.000000") 
++       '("-a"  0.420000)                 
++       '("-r"  0.000000)                 
++       '("-fs" 1.000000)             
++       '("-fm" 0.000000)            
++       '("-u"  0.500000)                 
++       '("-l"  0.000000) 
+        ))
+ 
+ ;; This function is called to setup a voice.  It will typically
+diff -Naur festival.orig/lib/voices/us/cmu_us_bdl_arctic_hts/festvox/cmu_us_bdl_arctic_hts.scm festival/lib/voices/us/cmu_us_bdl_arctic_hts/festvox/cmu_us_bdl_arctic_hts.scm
+--- festival.orig/lib/voices/us/cmu_us_bdl_arctic_hts/festvox/cmu_us_bdl_arctic_hts.scm	2004-06-07 07:29:03.000000000 +0100
++++ festival/lib/voices/us/cmu_us_bdl_arctic_hts/festvox/cmu_us_bdl_arctic_hts.scm	2009-01-28 21:33:58.000000000 +0000
+@@ -115,12 +115,12 @@
+        (list "-md" (path-append hts_data_dir "duration.pdf"))
+        (list "-mm" (path-append hts_data_dir "mcep.pdf"))
+        (list "-mf" (path-append hts_data_dir "lf0.pdf"))
+-       '("-a" " 0.420000")                 
+-       '("-r" " 0.000000")                 
+-       '("-fs" "1.000000")             
+-       '("-fm" "0.000000")            
+-       '("-u" " 0.500000")                 
+-       '("-l" " 0.000000") 
++       '("-a"  0.420000)                 
++       '("-r"  0.000000)                 
++       '("-fs" 1.000000)             
++       '("-fm" 0.000000)            
++       '("-u"  0.500000)                 
++       '("-l"  0.000000) 
+        ))
+ 
+ ;; This function is called to setup a voice.  It will typically
+diff -Naur festival.orig/lib/voices/us/cmu_us_jmk_arctic_hts/festvox/cmu_us_jmk_arctic_hts.scm festival/lib/voices/us/cmu_us_jmk_arctic_hts/festvox/cmu_us_jmk_arctic_hts.scm
+--- festival.orig/lib/voices/us/cmu_us_jmk_arctic_hts/festvox/cmu_us_jmk_arctic_hts.scm	2004-06-07 06:59:22.000000000 +0100
++++ festival/lib/voices/us/cmu_us_jmk_arctic_hts/festvox/cmu_us_jmk_arctic_hts.scm	2009-01-28 21:33:58.000000000 +0000
+@@ -115,12 +115,12 @@
+        (list "-md" (path-append hts_data_dir "duration.pdf"))
+        (list "-mm" (path-append hts_data_dir "mcep.pdf"))
+        (list "-mf" (path-append hts_data_dir "lf0.pdf"))
+-       '("-a" " 0.420000")                 
+-       '("-r" " 0.000000")                 
+-       '("-fs" "1.000000")             
+-       '("-fm" "0.000000")            
+-       '("-u" " 0.500000")                 
+-       '("-l" " 0.000000") 
++       '("-a"  0.420000)                 
++       '("-r"  0.000000)                 
++       '("-fs" 1.000000)             
++       '("-fm" 0.000000)            
++       '("-u"  0.500000)                 
++       '("-l"  0.000000) 
+        ))
+ 
+ ;; This function is called to setup a voice.  It will typically
+diff -Naur festival.orig/lib/voices/us/cmu_us_slt_arctic_hts/festvox/cmu_us_slt_arctic_hts.scm festival/lib/voices/us/cmu_us_slt_arctic_hts/festvox/cmu_us_slt_arctic_hts.scm
+--- festival.orig/lib/voices/us/cmu_us_slt_arctic_hts/festvox/cmu_us_slt_arctic_hts.scm	2004-06-07 04:54:46.000000000 +0100
++++ festival/lib/voices/us/cmu_us_slt_arctic_hts/festvox/cmu_us_slt_arctic_hts.scm	2009-01-28 21:33:58.000000000 +0000
+@@ -115,12 +115,12 @@
+        (list "-md" (path-append hts_data_dir "duration.pdf"))
+        (list "-mm" (path-append hts_data_dir "mcep.pdf"))
+        (list "-mf" (path-append hts_data_dir "lf0.pdf"))
+-       '("-a" " 0.420000")                 
+-       '("-r" " 0.000000")                 
+-       '("-fs" "1.000000")             
+-       '("-fm" "0.000000")            
+-       '("-u" " 0.500000")                 
+-       '("-l" " 0.000000") 
++       '("-a"  0.420000)                 
++       '("-r"  0.000000)                 
++       '("-fs" 1.000000)             
++       '("-fm" 0.000000)            
++       '("-u"  0.500000)                 
++       '("-l"  0.000000) 
+        ))
+ 
+ ;; This function is called to setup a voice.  It will typically
