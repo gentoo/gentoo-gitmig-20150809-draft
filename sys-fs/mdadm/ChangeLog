@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.104 2009/02/09 19:13:39 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.105 2009/02/09 21:31:15 maekke Exp $
+
+  09 Feb 2009; Markus Meier <maekke@gentoo.org> mdadm-2.6.8.ebuild:
+  amd64/x86 stable, bug #258205
 
   09 Feb 2009; Tobias Klausmann <klausman@gentoo.org> mdadm-2.6.8.ebuild:
   Stable on alpha, bug #258205
