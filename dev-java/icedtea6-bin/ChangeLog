@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea6-bin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.1 2008/12/24 22:22:37 caster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.2 2009/02/09 18:45:23 caster Exp $
+
+*icedtea6-bin-1.4 (09 Feb 2009)
+
+  09 Feb 2009; Vlastimil Babka <caster@gentoo.org> +icedtea6-bin-1.4.ebuild:
+  Version bump, built from icedtea6-1.4 java-overlay r7477. Bug #255493.
 
 *icedtea6-bin-1.3.1-r1 (24 Dec 2008)
 
