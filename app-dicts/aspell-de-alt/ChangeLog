@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-de-alt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de-alt/ChangeLog,v 1.5 2009/02/06 05:46:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-de-alt/ChangeLog,v 1.6 2009/02/09 19:18:16 klausman Exp $
+
+  09 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
+  aspell-de-alt-2.1.1.ebuild:
+  Stable on alpha, bug #258297
 
   06 Feb 2009; Jeroen Roovers <jer@gentoo.org> aspell-de-alt-2.1.1.ebuild:
   Marked ~hppa (bug #254398).
