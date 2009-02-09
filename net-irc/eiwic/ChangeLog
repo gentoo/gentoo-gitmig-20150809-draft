@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/eiwic
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/ChangeLog,v 1.4 2007/07/01 12:42:23 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/ChangeLog,v 1.5 2009/02/09 16:58:10 angelos Exp $
+
+  09 Feb 2009; Christoph Mende <angelos@gentoo.org>
+  +files/eiwic-1.1.3-ldflags.patch, eiwic-1.1.3.ebuild:
+  Respect LDFLAGS
 
   01 Jul 2007; Christoph Mende <angelos@gentoo.org> eiwic-1.1.3.ebuild:
   Stable on amd64

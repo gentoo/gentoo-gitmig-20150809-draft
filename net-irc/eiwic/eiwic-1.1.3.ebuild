@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/eiwic-1.1.3.ebuild,v 1.4 2007/07/01 12:42:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eiwic/eiwic-1.1.3.ebuild,v 1.5 2009/02/09 16:58:10 angelos Exp $
 
-inherit multilib flag-o-matic
+inherit autotools eutils multilib flag-o-matic
 
 DESCRIPTION="A modular IRC bot written in C"
 HOMEPAGE="http://lordi.styleliga.org/eiwic/"
@@ -19,21 +19,16 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	if use debug; then
-		strip-flags
-		append-flags -ggdb
-	fi
-
 	sed -i "/^set MODULE_PATH/s:modules:/usr/$(get_libdir)/eiwic:" sample.conf
 	sed -i "/^load MODULE/s:$:.so:" sample.conf
+	epatch "${FILESDIR}"/${P}-ldflags.patch
+	eautoreconf
 }
 
 src_compile() {
 	econf \
-	$(use_enable debug vv-debug) \
-	$(use_enable ipv6) \
-	|| die "econf failed"
+		$(use_enable debug vv-debug) \
+		$(use_enable ipv6)
 	emake || die "emake failed"
 }
 
