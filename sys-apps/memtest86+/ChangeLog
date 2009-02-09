@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.46 2009/01/03 12:38:55 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.47 2009/02/09 21:26:48 spock Exp $
+
+  09 Feb 2009; Michał Januszewski <spock@gentoo.org>
+  memtest86+-2.01.ebuild, memtest86+-2.10.ebuild, memtest86+-2.11.ebuild:
+  Fix GRUB device number translation code (bug #257767).
 
 *memtest86+-2.11 (03 Jan 2009)
 

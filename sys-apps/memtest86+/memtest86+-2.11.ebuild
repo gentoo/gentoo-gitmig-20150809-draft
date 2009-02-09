@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-2.11.ebuild,v 1.1 2009/01/03 12:38:55 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-2.11.ebuild,v 1.2 2009/02/09 21:26:48 spock Exp $
 
 inherit mount-boot eutils
 
@@ -15,6 +15,7 @@ IUSE="serial"
 RESTRICT="test"
 
 DEPEND=""
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -54,8 +55,8 @@ pkg_postinst() {
 	if [[ -n ${res} ]] ; then
 		# transform /dev/hd* magic into grub naming ...
 		#        /dev/hda1   ->         a1          ->      01
-		root=$(echo "${res}" | grep -o '[a-z][0-9]' | tr -t a-z 0123456789)
-		root="(hd${root:0:1},$((${root:1:1}-1)))"
+		root=$(echo "${res}" | grep -o '[a-z][0-9]\+' | tr -t a-z 0123456789)
+		root="(hd${root:0:1},$((${root:1:3}-1)))"
 	fi
 	einfo " - For grub:"
 	einfo "    > title=Memtest86Plus"
