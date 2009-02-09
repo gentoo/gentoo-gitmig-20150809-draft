@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.1.ebuild,v 1.3 2009/02/08 21:54:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.1.ebuild,v 1.4 2009/02/09 14:15:40 armin76 Exp $
 
 # We want the latest autoconf and automake (the default)
 inherit gnome2 python eutils autotools multilib
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc ~sparc x86"
 
 # is libgsf needed for runtime or just compiling?
 RDEPEND=">=dev-lang/python-2.3
