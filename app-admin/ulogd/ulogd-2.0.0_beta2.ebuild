@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.0_beta2.ebuild,v 1.1 2008/12/05 00:39:28 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.0_beta2.ebuild,v 1.2 2009/02/09 09:36:03 angelos Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ SRC_URI="http://ftp.netfilter.org/pub/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="mysql postgres sqlite3 pcap logrotate doc"
+IUSE="mysql postgres sqlite3 pcap doc"
 
 RDEPEND="net-firewall/iptables
 	>=net-libs/libnfnetlink-0.0.39
@@ -23,8 +23,7 @@ RDEPEND="net-firewall/iptables
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-server )
 	sqlite3? ( dev-db/sqlite:3 )
-	pcap? ( net-libs/libpcap )
-	logrotate? ( app-admin/logrotate )"
+	pcap? ( net-libs/libpcap )"
 
 DEPEND="${RDEPEND}
 	sys-devel/autoconf:2.5
@@ -69,11 +68,9 @@ src_install() {
 	use postgres && dodoc doc/pgsql-ulogd2.sql
 	use sqlite3 && dodoc doc/sqlite3.table
 
-	if use logrotate ; then
-		# install logrotate config
-		insinto /etc/logrotate.d
-		newins ulogd.logrotate ulogd || die "logrotate config failed"
-	fi
+	# install logrotate config
+	insinto /etc/logrotate.d
+	newins ulogd.logrotate ulogd || die "logrotate config failed"
 
 	doman ulogd.8 || die
 }
