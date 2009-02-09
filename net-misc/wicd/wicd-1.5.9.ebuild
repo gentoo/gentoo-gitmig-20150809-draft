@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.9.ebuild,v 1.1 2009/02/06 15:44:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.5.9.ebuild,v 1.2 2009/02/09 22:40:09 darkside Exp $
 
 inherit distutils eutils
 
@@ -31,14 +31,13 @@ RDEPEND="dev-python/dbus-python
 	>=sys-power/pm-utils-1.1.1"
 
 src_compile() {
-	${python} ./setup.py configure --no-install-init --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose
+	${python} ./setup.py configure --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose
 	distutils_src_compile
 }
 
 src_install() {
 	DOCS="CHANGES"
 	distutils_src_install
-	newinitd "${FILESDIR}/wicd-init.d" wicd || die "newinitd failed"
 	keepdir /var/lib/wicd/configurations || die "keepdir failed, critical for this app"
 }
 
