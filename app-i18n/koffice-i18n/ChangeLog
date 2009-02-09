@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.102 2009/02/08 16:24:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.103 2009/02/09 16:09:28 jer Exp $
+
+  09 Feb 2009; Jeroen Roovers <jer@gentoo.org> koffice-i18n-1.6.3.ebuild:
+  Stable for HPPA too.
 
   08 Feb 2009; Carsten Lohrke <carlo@gentoo.org> koffice-i18n-1.6.3.ebuild:
   Adjust dependency for patch level builds.
