@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.6.ebuild,v 1.1 2009/02/08 20:44:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.6.ebuild,v 1.2 2009/02/09 17:07:07 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -10,7 +10,8 @@ MY_P="${P/_pre/-pre}"
 DESCRIPTION="tools for managing linux kernel modules"
 HOMEPAGE="http://kerneltools.org/"
 SRC_URI="mirror://kernel/linux/utils/kernel/module-init-tools/${MY_P}.tar.bz2
-	old-linux? ( mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2 )"
+	old-linux? ( mirror://kernel/linux/utils/kernel/modutils/v2.4/modutils-${MODUTILS_PV}.tar.bz2 )
+	mirror://gentoo/${MY_P}-man.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
