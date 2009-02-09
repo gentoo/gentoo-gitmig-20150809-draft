@@ -1,0 +1,59 @@
+diff -NrU5 showimg-0.9.5.orig/showimg/kexi/kexidb/parser/sqlparser.cpp showimg-0.9.5/showimg/kexi/kexidb/parser/sqlparser.cpp
+--- showimg-0.9.5.orig/showimg/kexi/kexidb/parser/sqlparser.cpp	2006-01-07 09:47:45.000000000 +0100
++++ showimg-0.9.5/showimg/kexi/kexidb/parser/sqlparser.cpp	2008-04-27 21:30:03.000000000 +0200
+@@ -357,10 +357,11 @@
+ #include <string.h>
+ #include <string>
+ #include <iostream>
+ #include <assert.h>
+ #include <limits.h>
++#include <cstdlib>
+ //TODO OK?
+ #ifdef Q_WS_WIN
+ //workaround for bug on msvc
+ # undef LLONG_MIN
+ #endif
+diff -NrU5 showimg-0.9.5.orig/showimg/kexi/kexidb/parser/sqlparser.y showimg-0.9.5/showimg/kexi/kexidb/parser/sqlparser.y
+--- showimg-0.9.5.orig/showimg/kexi/kexidb/parser/sqlparser.y	2006-01-07 09:47:45.000000000 +0100
++++ showimg-0.9.5/showimg/kexi/kexidb/parser/sqlparser.y	2008-04-27 21:17:31.000000000 +0200
+@@ -438,10 +438,12 @@
+ #include <string.h>
+ #include <string>
+ #include <iostream>
+ #include <assert.h>
+ #include <limits.h>
++#include <alloca.h>
++#include <cstdlib>
+ //TODO OK?
+ #ifdef Q_WS_WIN
+ //workaround for bug on msvc
+ # undef LLONG_MIN
+ #endif
+diff -NrU5 showimg-0.9.5.orig/showimg/showimg/imagelistview.cpp showimg-0.9.5/showimg/showimg/imagelistview.cpp
+--- showimg-0.9.5.orig/showimg/showimg/imagelistview.cpp	2006-01-07 09:48:04.000000000 +0100
++++ showimg-0.9.5/showimg/showimg/imagelistview.cpp	2008-04-27 21:17:31.000000000 +0200
+@@ -47,10 +47,13 @@
+ #include "imagefileiconitem.h"
+ #include "dirfileiconitem.h"
+ #include "imageviewer.h"
+ #include "imagemetainfo.h"
+ 
++#include <cstdlib>
++#include <climits>
++
+ #ifdef HAVE_KIPI
+ #include "kipiplugins/kipipluginmanager.h"
+ #endif /* HAVE_KIPI */
+ 
+ #ifdef HAVE_LIBKEXIF
+--- showimg-0.9.5/showimg/kexi/kexidb/drivers/pqxx/pqxxcursor.cpp.orig	2009-02-09 01:29:07.000000000 +0100
++++ showimg-0.9.5/showimg/kexi/kexidb/drivers/pqxx/pqxxcursor.cpp	2009-02-09 01:31:36.000000000 +0100
+@@ -19,6 +19,8 @@
+ #include <klocale.h>
+ #include <kdebug.h>
+ 
++#include <cstdlib>
++
+ using namespace KexiDB;
+ 
+ 

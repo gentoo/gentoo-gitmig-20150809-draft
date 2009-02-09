@@ -1,0 +1,109 @@
+diff -Naur showimg-0.9.5-orig/showimg/kexi/kexidb/drivers/pqxx/pqxxconnection.cpp showimg-0.9.5-libpqxx/showimg/kexi/kexidb/drivers/pqxx/pqxxconnection.cpp
+--- showimg-0.9.5-orig/showimg/kexi/kexidb/drivers/pqxx/pqxxconnection.cpp	2006-01-07 19:47:46.000000000 +1100
++++ showimg-0.9.5-libpqxx/showimg/kexi/kexidb/drivers/pqxx/pqxxconnection.cpp	2008-11-12 18:11:01.000000000 +1100
+@@ -16,6 +16,8 @@
+ #include <kexidb/error.h>
+ #include <klocale.h>
+ #include <string>
++#include <pqxx/nontransaction>
++#include <pqxx/transaction>
+ 
+ using namespace KexiDB;
+ 
+@@ -26,6 +28,7 @@
+ 		data = new pqxx::nontransaction(*static_cast<pqxxSqlConnection*>(conn)->m_pqxxsql /* todo: add name? */);
+ 	else
+ 		data = new pqxx::transaction<>(*static_cast<pqxxSqlConnection*>(conn)->m_pqxxsql /* todo: add name? */);
++
+ 	if (!static_cast<pqxxSqlConnection*>(conn)->m_trans) {
+ 		static_cast<pqxxSqlConnection*>(conn)->m_trans = this;
+ 	}
+@@ -248,7 +251,8 @@
+ 		//        m_trans = new pqxx::nontransaction(*m_pqxxsql);
+ 
+         //Create a result object through the transaction
+-        m_res = new pqxx::result(m_trans->data->exec(statement.utf8()));
++	std::string query(statement.utf8());
++	m_res = new pqxx::result(m_trans->data->exec(query));
+ 
+ 		//Commit the transaction
+ 		if (implicityStarted) {
+diff -Naur showimg-0.9.5-orig/showimg/kexi/kexidb/drivers/pqxx/pqxxconnection.h showimg-0.9.5-libpqxx/showimg/kexi/kexidb/drivers/pqxx/pqxxconnection.h
+--- showimg-0.9.5-orig/showimg/kexi/kexidb/drivers/pqxx/pqxxconnection.h	2006-01-07 19:47:46.000000000 +1100
++++ showimg-0.9.5-libpqxx/showimg/kexi/kexidb/drivers/pqxx/pqxxconnection.h	2008-11-12 18:10:06.000000000 +1100
+@@ -16,7 +16,9 @@
+ 
+ #include <kexidb/connection.h>
+ #include "pqxxcursor.h"
+-#include <pqxx/all.h>
++#include <pqxx/result>
++#include <pqxx/connection>
++#include <pqxx/transaction_base>
+ 
+ 
+ namespace KexiDB
+diff -Naur showimg-0.9.5-orig/showimg/kexi/kexidb/drivers/pqxx/pqxxcursor.cpp showimg-0.9.5-libpqxx/showimg/kexi/kexidb/drivers/pqxx/pqxxcursor.cpp
+--- showimg-0.9.5-orig/showimg/kexi/kexidb/drivers/pqxx/pqxxcursor.cpp	2006-01-07 19:47:46.000000000 +1100
++++ showimg-0.9.5-libpqxx/showimg/kexi/kexidb/drivers/pqxx/pqxxcursor.cpp	2008-11-12 18:10:11.000000000 +1100
+@@ -11,6 +11,7 @@
+ //
+ #include "pqxxcursor.h"
+ #include "pqxxconnection.h"
++#include <pqxx/nontransaction>
+ 
+ #include <kexidb/error.h>
+ #include <kexidb/global.h>
+@@ -84,7 +85,8 @@
+ 			m_implicityStarted = true;
+ 		}
+ 
+-		m_res = new pqxx::result(((pqxxSqlConnection*)connection())->m_trans->data->exec(statement.utf8()));
++		std::string std_statement(statement.utf8());
++		m_res = new pqxx::result(((pqxxSqlConnection*)connection())->m_trans->data->exec(std_statement));
+ 		((pqxxSqlConnection*)connection())
+ 			->drv_commitTransaction(((pqxxSqlConnection*)connection())->m_trans);
+ //		my_conn->m_trans->commit();
+diff -Naur showimg-0.9.5-orig/showimg/kexi/kexidb/drivers/pqxx/pqxxcursor.h showimg-0.9.5-libpqxx/showimg/kexi/kexidb/drivers/pqxx/pqxxcursor.h
+--- showimg-0.9.5-orig/showimg/kexi/kexidb/drivers/pqxx/pqxxcursor.h	2006-01-07 19:47:46.000000000 +1100
++++ showimg-0.9.5-libpqxx/showimg/kexi/kexidb/drivers/pqxx/pqxxcursor.h	2008-11-12 18:10:16.000000000 +1100
+@@ -15,7 +15,8 @@
+ #include <kexidb/cursor.h>
+ #include <kexidb/connection.h>
+ 
+-#include <pqxx/all.h>
++#include <pqxx/result>
++#include <pqxx/connection>
+ 
+ namespace KexiDB {
+ 
+diff -Naur showimg-0.9.5-orig/showimg/kexi/kexidb/drivers/pqxx/pqxxdriver.cpp showimg-0.9.5-libpqxx/showimg/kexi/kexidb/drivers/pqxx/pqxxdriver.cpp
+--- showimg-0.9.5-orig/showimg/kexi/kexidb/drivers/pqxx/pqxxdriver.cpp	2006-01-07 19:47:46.000000000 +1100
++++ showimg-0.9.5-libpqxx/showimg/kexi/kexidb/drivers/pqxx/pqxxdriver.cpp	2008-11-12 18:10:23.000000000 +1100
+@@ -22,6 +22,7 @@
+ #include <kexidb/driver_p.h>
+ #include "pqxxdriver.h"
+ #include "pqxxconnection.h"
++#include <pqxx/util>
+ #include <string>
+ 
+ #include <kdebug.h>
+@@ -132,14 +133,17 @@
+ //
+ QString pqxxSqlDriver::escapeString( const QString& str) const
+ {
+-    return QString(pqxx::Quote(str.ascii()).c_str());
++	// pqxx::sqlesc has been marked as deprecated
++	// in libpqxx 2.6, but this will get us through
++	// until showimg is killed or upgraded to a new kexi
++	return QString(pqxx::sqlesc(str.ascii()).c_str());
+ }
+ 
+ //==================================================================================
+ //
+ QCString pqxxSqlDriver::escapeString( const QCString& str) const
+ {
+-    return QCString(pqxx::Quote(QString(str).ascii()).c_str());
++	return QCString(pqxx::sqlesc(QString(str).ascii()).c_str());
+ }
+ 
+ //==================================================================================
