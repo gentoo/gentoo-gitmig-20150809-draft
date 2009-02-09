@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/kdiff3
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.31 2008/06/21 10:33:41 carlo Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.32 2009/02/09 23:24:08 voyageur Exp $
+
+*kdiff3-0.9.94 (09 Feb 2009)
+
+  09 Feb 2009; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml,
+  +kdiff3-0.9.94.ebuild:
+  Bump to new version rewritten for KDE4, ebuild from kde-testing overlay.
+  Closes bug #256888 and maybe #254499. Needs rekeywording from ppc,ppc64
+  and sparc (when possible). Added myself to maintainers
 
 *kdiff3-0.9.92-r1 (21 Jun 2008)
 
