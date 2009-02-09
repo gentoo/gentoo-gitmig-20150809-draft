@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.149 2009/02/09 13:18:34 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.150 2009/02/09 19:25:48 klausman Exp $
+
+  09 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
+  libsdl-1.2.13-r1.ebuild:
+  Stable on alpha, bug #258230
 
   09 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org>
   libsdl-1.2.13-r1.ebuild:
