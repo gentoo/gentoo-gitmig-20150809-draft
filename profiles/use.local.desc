@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4190 2009/02/06 09:07:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4191 2009/02/09 01:27:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -403,6 +403,7 @@ app-portage/layman:git - Support dev-util/git based overlays
 app-portage/portato:etc-proposals - Use app-portage/etc-proposals for updating CONFIG_PROTECTed stuff
 app-portage/portato:userpriv - Allow emerge processes as normal user
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
+app-shells/bash:net - Enable /dev/tcp/host/port redirection
 app-shells/bash:plugins - Add support for loading builtins at runtime via 'enable'
 app-shells/pdsh:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites. sftp is a much more secure protocol and is preferred.
 app-shells/scsh:scsh - Use a non-FHS directory layout
