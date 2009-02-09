@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5.ebuild,v 1.1 2009/01/31 15:32:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5.ebuild,v 1.2 2009/02/09 19:00:29 aballier Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -135,8 +135,8 @@ src_compile() {
 }
 
 src_install() {
-	emake OPTFLAGS="${CFLAGS}" DESTDIR="${D}" install || die
-	emake OPTFLAGS="${CFLAGS}" DESTDIR="${D}" install-lib || die
+	emake STRIP="true" OPTFLAGS="${CFLAGS}" DESTDIR="${D}" install || die
+	emake STRIP="true" OPTFLAGS="${CFLAGS}" DESTDIR="${D}" install-lib || die
 	dodoc AUTHORS BUGS Changelog README TODO
 	dodoc doc/*.txt
 	dohtml doc/*.html

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.66 2009/01/31 15:32:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.67 2009/02/09 19:00:29 aballier Exp $
+
+  09 Feb 2009; Alexis Ballier <aballier@gentoo.org> gpac-0.4.5.ebuild:
+  avoid prestripping libgpac.so
 
 *gpac-0.4.5 (31 Jan 2009)
 
