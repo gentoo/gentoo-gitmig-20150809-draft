@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gnome-build
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.19 2008/11/24 13:54:36 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.20 2009/02/09 21:49:55 maekke Exp $
+
+  09 Feb 2009; Markus Meier <maekke@gentoo.org> gnome-build-0.3.0.ebuild:
+  amd64/x86 stable, bug #258253
 
 *gnome-build-2.24.1 (24 Nov 2008)
 
