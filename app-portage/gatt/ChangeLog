@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.32 2009/02/07 16:00:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.33 2009/02/09 19:39:38 nixnut Exp $
+
+  09 Feb 2009; nixnut <nixnut@gentoo.org> gatt-0.6.3.ebuild:
+  ppc stable #257833
 
   07 Feb 2009; Christian Faulhammer <fauli@gentoo.org> gatt-0.6.3.ebuild:
   stable x86, bug 257833
