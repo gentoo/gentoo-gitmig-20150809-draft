@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.0.ebuild,v 1.2 2008/06/15 22:27:56 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.0.ebuild,v 1.3 2009/02/09 22:18:05 maekke Exp $
 
 inherit base
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://fishshell.org/"
 SRC_URI="http://fishshell.org/files/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="X"
 RDEPEND="sys-libs/ncurses
 	sys-devel/bc
