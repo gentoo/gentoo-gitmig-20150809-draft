@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.100-r1.ebuild,v 1.3 2009/02/09 18:14:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.100-r1.ebuild,v 1.4 2009/02/09 20:32:43 maekke Exp $
 
 inherit eutils fortran autotools
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://heasarc.gsfc.nasa.gov/software/fitsio/c/${PN}${PV//.}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="doc fortran"
 
 DEPEND="fortran? ( dev-lang/cfortran )"
