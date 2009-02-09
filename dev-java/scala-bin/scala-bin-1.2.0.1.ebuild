@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.6 2005/07/11 00:34:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.7 2009/02/09 14:42:55 caster Exp $
 
-inherit java-pkg
+inherit java-pkg-2
 
 DESCRIPTION="The Scala Programming Language"
 HOMEPAGE="http://scala.epfl.ch/"
@@ -11,7 +11,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 amd64"
 IUSE=""
-DEPEND=">=virtual/jdk-1.4"
+DEPEND=""
 RDEPEND=">=virtual/jre-1.4"
 S=${WORKDIR}/scala-${PV}
 
