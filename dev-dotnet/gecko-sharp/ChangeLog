@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gecko-sharp
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.52 2008/12/14 15:18:41 loki_val Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.53 2009/02/09 22:17:19 maekke Exp $
+
+  09 Feb 2009; Markus Meier <maekke@gentoo.org> gecko-sharp-0.13.ebuild:
+  amd64/x86 stable, bug #258258
 
   14 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   gecko-sharp-0.12.ebuild, gecko-sharp-0.13.ebuild:

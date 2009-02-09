@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.13.ebuild,v 1.2 2008/12/14 15:18:41 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.13.ebuild,v 1.3 2009/02/09 22:17:19 maekke Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.novell.com/pub/mono/sources/gecko-sharp2/${PN}-2.0-${PV}.tar
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc"
 
 S="${WORKDIR}/${PN}-2.0-${PV}"
