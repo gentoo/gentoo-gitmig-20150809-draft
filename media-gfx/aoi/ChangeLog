@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/aoi
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.21 2007/12/10 16:02:04 maekke Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/ChangeLog,v 1.22 2009/02/09 19:49:56 maekke Exp $
+
+  09 Feb 2009; Markus Meier <maekke@gentoo.org> aoi-2.2.1.ebuild,
+  aoi-2.5.ebuild:
+  convert to gen-2 java eclasses by Vlastimil Babka in bug #258334
 
 *aoi-2.5 (10 Dec 2007)
 

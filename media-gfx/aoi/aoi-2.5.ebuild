@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-2.5.ebuild,v 1.1 2007/12/10 16:02:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-2.5.ebuild,v 1.2 2009/02/09 19:49:56 maekke Exp $
 
-inherit java-pkg eutils
+inherit java-pkg-2 eutils
 
 MY_P="aoi25"
 MY_MANUAL_V="2.3"
@@ -15,13 +15,10 @@ KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 DEPEND="app-arch/unzip"
-RDEPEND=">=virtual/jdk-1.2"
+RDEPEND=">=virtual/jre-1.4"
 IUSE="doc"
 
 src_install() {
-	# wrapper script
-	dobin "${FILESDIR}"/aoi
-
 	# documentation
 	dodoc HISTORY README
 	if use doc ; then
@@ -31,6 +28,11 @@ src_install() {
 
 	# main app
 	java-pkg_dojar ArtOfIllusion.jar
+
+	# run script
+	java-pkg_dolauncher aoi \
+		--jar ArtOfIllusion.jar \
+		--java_args -Xmx128M
 
 	# plugins
 	mv Plugins "${D}"/usr/share/${PN}/lib
