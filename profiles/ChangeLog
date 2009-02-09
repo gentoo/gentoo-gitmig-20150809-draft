@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2343 2009/02/08 20:54:06 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2344 2009/02/09 19:53:27 angelos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Feb 2009; Christoph Mende <angelos@gentoo.org> updates/1Q-2009:
+  Moved xfce-extra/verve to xfce-extra/xfce4-verve
 
   08 Feb 2009; Andreas Proschofsky <suka@gentoo.org> package.mask:
   Remove mask on OpenOffice.org 3.0.1, officially released now
