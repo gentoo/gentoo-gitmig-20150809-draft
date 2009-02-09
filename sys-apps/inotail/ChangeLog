@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/inotail
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/ChangeLog,v 1.6 2008/04/21 18:28:23 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/ChangeLog,v 1.7 2009/02/09 17:09:19 drizzt Exp $
+
+*inotail-0.5-r1 (09 Feb 2009)
+
+  09 Feb 2009; Timothy Redaelli <drizzt@gentoo.org> +inotail-0.5-r1.ebuild:
+  Use the correct CC and don't gzip man by default. Authorized by maintainer
 
   21 Apr 2008; Raúl Porcel <armin76@gentoo.org> inotail-0.5.ebuild:
   x86 stable
