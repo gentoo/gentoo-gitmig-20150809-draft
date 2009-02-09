@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.23 2009/02/09 04:55:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.24 2009/02/09 18:14:13 klausman Exp $
+
+  09 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
+  cfitsio-3.100-r1.ebuild:
+  Stable on alpha, bug #256681
 
   09 Feb 2009; Jeroen Roovers <jer@gentoo.org> cfitsio-3.100-r1.ebuild:
   Stable for HPPA (bug #256681).
