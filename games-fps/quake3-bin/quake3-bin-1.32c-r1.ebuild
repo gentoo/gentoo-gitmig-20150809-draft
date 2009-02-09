@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.7 2008/09/26 18:47:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.8 2009/02/09 03:50:14 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="3rd installment of the classic id 3D first-person shooter"
@@ -36,8 +37,10 @@ RDEPEND="sys-libs/glibc
 	dedicated? ( app-misc/screen )
 	amd64? ( app-emulation/emul-linux-x86-baselibs )
 	opengl? ( ${UIDEPEND} )
-	cdinstall? ( games-fps/quake3-data )
-	cdinstall? ( teamarena? ( games-fps/quake3-teamarena ) )
+	cdinstall? (
+		games-fps/quake3-data[cdinstall]
+		teamarena? ( games-fps/quake3-teamarena )
+	)
 	!dedicated? ( !opengl? ( ${UIDEPEND} ) )"
 
 S=${WORKDIR}
@@ -51,22 +54,11 @@ QA_TEXTRELS="${dir:1}/pb/pbag.so
 	${dir:1}/pb/pbsv.so"
 
 default_client() {
-	if use opengl || ! use dedicated
-	then
-		# Use opengl by default
+	# Use opengl by default
+	if use opengl || ! use dedicated ; then
 		return 0
-	else
-		return 1
 	fi
-}
-
-pkg_setup() {
-	if use cdinstall
-	then
-		built_with_use games-fps/quake3-data cdinstall \
-			|| die "You must install quake3-data with USE=cdinstall to get the required data."
-	fi
-	games_pkg_setup
+	return 1
 }
 
 src_unpack() {
@@ -90,22 +82,19 @@ src_install() {
 
 	exeinto "${dir}"
 	doins quake3.xpm README* Q3A_EULA.txt
-	if default_client
-	then
+	if default_client ; then
 		doexe "Quake III Arena 1.32c"/linux/quake3*.x86 || die "doexe"
 		games_make_wrapper ${PN} ./quake3.x86 "${dir}" "${dir}"
 		newicon quake3.xpm ${PN}.xpm
 		make_desktop_entry ${PN} "Quake III Arena (binary)" ${PN}.xpm
-		if use teamarena
-		then
+		if use teamarena ; then
 			games_make_wrapper ${PN}-teamarena \
 				"./quake3.x86 +set fs_game missionpack" "${dir}" "${dir}"
 			make_desktop_entry ${PN}-teamarena \
 				"Quake III Team Arena (binary)" quake3-bin
 		fi
 	fi
-	if use dedicated
-	then
+	if use dedicated ; then
 		doexe "Quake III Arena 1.32c"/linux/q3ded || die "doexe q3ded"
 		games_make_wrapper quake3-ded ./q3ded "${dir}" "${dir}"
 		newinitd "${FILESDIR}"/q3ded.rc quake3-ded
@@ -122,7 +111,7 @@ pkg_postinst() {
 	ewarn "denial of service. One affects the game when running a server, the"
 	ewarn "other when running as a client."
 	ewarn "For more information, please see bug #82149."
-	if use dedicated; then
+	if use dedicated ; then
 		echo
 		elog "To start a dedicated server, run"
 		elog "  /etc/init.d/quake3-ded start"

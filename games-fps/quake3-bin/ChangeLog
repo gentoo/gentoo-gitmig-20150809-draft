@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-bin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.27 2008/09/26 18:47:42 zmedico Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.28 2009/02/09 03:50:14 mr_bones_ Exp $
+
+  09 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  quake3-bin-1.32c-r1.ebuild:
+  EAPI=2; add use-based dep
 
   26 Sep 2008; Zac Medico <zmedico@gentoo.org> quake3-bin-1.32c.ebuild,
   quake3-bin-1.32c-r1.ebuild:
