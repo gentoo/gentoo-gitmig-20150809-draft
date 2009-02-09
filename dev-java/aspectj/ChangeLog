@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aspectj
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.23 2008/01/10 22:02:11 caster Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.24 2009/02/09 14:09:17 caster Exp $
+
+  09 Feb 2009; Vlastimil Babka <caster@gentoo.org> aspectj-1.2.ebuild:
+  Switch to gen2 eclasses to kill gen1, fixes also bug #204381.
 
   10 Jan 2008; Vlastimil Babka <caster@gentoo.org> aspectj-1.2-r2.ebuild:
   Restrict junit dependency.
