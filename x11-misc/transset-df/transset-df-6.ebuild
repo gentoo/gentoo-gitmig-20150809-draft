@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset-df/transset-df-6.ebuild,v 1.3 2008/01/09 15:26:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset-df/transset-df-6.ebuild,v 1.4 2009/02/09 16:43:34 angelos Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="a patched version of xorg's transset"
 HOMEPAGE="http://forchheimer.se/transset-df/"
@@ -19,6 +21,17 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x11-proto/xproto"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-ldflags.patch
+	sed -i -e "/^CFLAGS/d" Makefile
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" || die "emake failed"
+}
 
 src_install() {
 	dobin transset-df

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/transset-df
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset-df/ChangeLog,v 1.5 2008/01/09 15:26:28 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset-df/ChangeLog,v 1.6 2009/02/09 16:43:34 angelos Exp $
+
+  09 Feb 2009; Christoph Mende <angelos@gentoo.org>
+  +files/transset-df-6-ldflags.patch, transset-df-6.ebuild:
+  Respect CC, CFLAGS, LDFLAGS
 
   09 Jan 2008; Christoph Mende <angelos@gentoo.org> transset-df-6.ebuild:
   Added missing pkgconfig and X library deps
