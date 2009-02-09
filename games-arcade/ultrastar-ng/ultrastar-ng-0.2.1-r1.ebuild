@@ -1,13 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.5 2008/02/09 21:43:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.6 2009/02/09 18:38:01 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_PN=UltraStar-ng
 MY_P=${MY_PN}-${PV}
 SONGS_PN=ultrastar-songs
-SONGS_P=${SONGS_PN}-1
+SONGS_P=${SONGS_PN}-2
 
 DESCRIPTION="SingStar GPL clone"
 HOMEPAGE="http://sourceforge.net/projects/ultrastar-ng/"
@@ -21,12 +22,13 @@ LICENSE="GPL-2
 	)"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="novideo opengl xine debug alsa gstreamer portaudio songs"
+IUSE="+video opengl xine debug alsa gstreamer portaudio +songs"
 
 RDEPEND="gnome-base/librsvg
 	>=dev-libs/boost-1.34
 	x11-libs/pango
-	media-libs/sdl-image
+	media-libs/libsdl[opengl?]
+	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-gfx
 	xine? ( media-libs/xine-lib )
 	!xine? ( media-libs/gstreamer )
@@ -37,26 +39,19 @@ RDEPEND="gnome-base/librsvg
 	alsa? ( media-libs/alsa-lib )
 	portaudio? ( media-libs/portaudio )
 	gstreamer? ( >=media-libs/gstreamer-0.10 )
-	!novideo? ( media-libs/smpeg )"
+	video? ( media-libs/smpeg )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
-pkg_setup() {
-	games_pkg_setup
-	if use opengl && ! built_with_use media-libs/libsdl opengl ; then
-		eerror "opengl flag set, but libsdl wasn't build with opengl support"
-	fi
-}
-
-src_compile() {
+src_configure() {
 	local myconf
 
-	if use novideo; then
-		myconf="--with-video=disable"
-	else
+	if use video; then
 		myconf="--with-video=smpeg"
+	else
+		myconf="--with-video=disable"
 	fi
 	if use opengl; then
 		myconf="$myconf --with-graphic-driver=opengl"
@@ -74,9 +69,7 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_enable portaudio record-portaudio) \
 		$(use_enable gstreamer record-gst) \
-		$(use_enable alsa record-alsa) \
-		|| die
-	emake || die "emake failed"
+		$(use_enable alsa record-alsa)
 }
 
 src_install() {

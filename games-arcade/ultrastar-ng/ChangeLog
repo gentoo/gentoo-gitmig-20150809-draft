@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/ultrastar-ng
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ChangeLog,v 1.5 2008/02/09 21:43:14 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ChangeLog,v 1.6 2009/02/09 18:38:01 mr_bones_ Exp $
+
+  09 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  ultrastar-ng-0.2.1-r1.ebuild:
+  EAPI=2; use-based deps; songs version bump
 
   09 Feb 2008; Michael Sterrett <mr_bones_@gentoo.org>
   -ultrastar-ng-0.1.4.ebuild, -ultrastar-ng-0.2.1.ebuild,
