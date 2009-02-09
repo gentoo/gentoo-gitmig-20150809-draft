@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.103 2008/12/22 05:44:06 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.104 2009/02/09 19:13:39 klausman Exp $
+
+  09 Feb 2009; Tobias Klausmann <klausman@gentoo.org> mdadm-2.6.8.ebuild:
+  Stable on alpha, bug #258205
 
 *mdadm-2.6.8 (22 Dec 2008)
 
