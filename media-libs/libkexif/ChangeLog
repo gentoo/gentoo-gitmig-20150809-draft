@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkexif
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/ChangeLog,v 1.29 2007/07/25 21:51:38 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/ChangeLog,v 1.30 2009/02/09 00:21:16 carlo Exp $
+
+*libkexif-0.2.5-r1 (09 Feb 2009)
+
+  09 Feb 2009; Carsten Lohrke <carlo@gentoo.org> +libkexif-0.2.5-r1.ebuild:
+  Get rid of invalid aRts dependency.
 
   25 Jul 2007; Raúl Porcel <armin76@gentoo.org> libkexif-0.2.5.ebuild:
   alpha/x86 stable

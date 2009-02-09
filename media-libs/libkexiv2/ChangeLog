@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkexiv2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.21 2009/01/10 13:37:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.22 2009/02/09 00:19:40 carlo Exp $
+
+*libkexiv2-0.1.8-r1 (09 Feb 2009)
+
+  09 Feb 2009; Carsten Lohrke <carlo@gentoo.org> +libkexiv2-0.1.8-r1.ebuild:
+  Get rid of invalid aRts dependency.
 
 *libkexiv2-0.1.8 (10 Jan 2009)
 
