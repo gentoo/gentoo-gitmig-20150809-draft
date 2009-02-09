@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.24 2009/02/08 21:42:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.25 2009/02/09 23:01:51 caster Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -18,8 +18,13 @@ DEPEND="
 	=dev-java/java-config-2*
 	>=sys-apps/portage-2.1"
 RDEPEND="
-	=dev-java/java-config-2*
-	=dev-java/java-config-1.3*"
+	=dev-java/java-config-2*"
+
+# bug #176784
+if [[ ${JAVA_SUPPORTS_GENERATION_1} == 'true' && ${JAVA_VM_NO_GENERATION1} != 'true' ]]; then
+	DEPEND="${DEPEND} =dev-java/java-config-1.3*"
+	RDEPEND="${RDEPEND} =dev-java/java-config-1.3*"
+fi
 
 export WANT_JAVA_CONFIG=2
 
