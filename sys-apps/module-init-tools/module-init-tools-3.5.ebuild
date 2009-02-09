@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.5.ebuild,v 1.1 2008/10/25 23:55:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.5.ebuild,v 1.2 2009/02/09 19:15:07 klausman Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/module-init-tools/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="old-linux"
 # The test code runs `make clean && configure` and screws up src_compile()
 RESTRICT="test"
