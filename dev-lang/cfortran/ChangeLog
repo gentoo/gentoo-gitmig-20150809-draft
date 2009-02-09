@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/cfortran
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.12 2009/02/09 04:55:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cfortran/ChangeLog,v 1.13 2009/02/09 18:07:27 klausman Exp $
+
+  09 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
+  cfortran-4.4-r2.ebuild:
+  Stable on alpha, bug #256681
 
   09 Feb 2009; Jeroen Roovers <jer@gentoo.org> cfortran-4.4-r2.ebuild:
   Stable for HPPA (bug #256681).
