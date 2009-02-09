@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/tdfsb-0.0.10.ebuild,v 1.6 2009/02/09 17:16:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/tdfsb-0.0.10.ebuild,v 1.7 2009/02/09 17:18:06 angelos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,13 +16,14 @@ IUSE=""
 DEPEND="media-libs/smpeg
 	media-libs/sdl-image
 	virtual/glut"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 	sed -i -e "s:-O2:${CFLAGS} ${LDFLAGS}:" \
-		-e "s:gcc:$(tc-getCC):" ${S}/compile.sh
+		-e "s:gcc:$(tc-getCC):" "${S}"/compile.sh
 }
 
 src_compile() {
