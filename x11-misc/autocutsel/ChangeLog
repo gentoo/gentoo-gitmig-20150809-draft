@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/autocutsel
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.22 2007/02/12 14:25:57 gustavoz Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.23 2009/02/10 20:15:38 angelos Exp $
+
+  10 Feb 2009; Christoph Mende <angelos@gentoo.org> autocutsel-0.9.0.ebuild:
+  Keyworded ~amd64
 
   12 Feb 2007; Gustavo Zacarias <gustavoz@gentoo.org>
   -autocutsel-0.8.0.ebuild, -autocutsel-0.8.1.ebuild,
