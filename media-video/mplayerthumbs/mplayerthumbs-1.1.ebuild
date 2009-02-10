@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayerthumbs/mplayerthumbs-1.1.ebuild,v 1.2 2009/02/10 14:09:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayerthumbs/mplayerthumbs-1.1.ebuild,v 1.3 2009/02/10 22:12:28 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,8 +17,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="|| (
-		>=kde-base/dolphin-${KDE_MINIMAL}
-		>=kde-base/konqueror-${KDE_MINIMAL}
+		>=kde-base/dolphin-${KDE_MINIMAL}[kdeprefix=]
+		>=kde-base/konqueror-${KDE_MINIMAL}[kdeprefix=]
 	)
 	|| (
 		media-video/mplayer
