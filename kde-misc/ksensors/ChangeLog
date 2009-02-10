@@ -1,6 +1,15 @@
 # ChangeLog for kde-misc/ksensors
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ChangeLog,v 1.13 2009/01/11 08:01:40 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ChangeLog,v 1.14 2009/02/10 14:42:55 carlo Exp $
+
+*ksensors-0.7.3-r3 (10 Feb 2009)
+
+  10 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  +files/ksensors-0.7.3-desktop-file.diff,
+  +files/ksensors-0.7.3-sound-dir.diff, +ksensors-0.7.3-r3.ebuild:
+  Require correct automake version. Get rid of the invalid aRts dependency.
+  Proper desktop file fix. Wipe superfluous debian docs etc.. Address bug
+  #254596 and #258437.
 
 *ksensors-0.7.3-r2 (11 Jan 2009)
 
