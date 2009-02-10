@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/picpuz
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/picpuz/ChangeLog,v 1.3 2008/08/25 22:54:38 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/picpuz/ChangeLog,v 1.4 2009/02/10 11:42:46 tupone Exp $
+
+  10 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/picpuz-1.7-gentoo.patch, picpuz-1.7.ebuild:
+  Fix --as-needed bug #247444 by flameeyes@gentoo.org
 
 *picpuz-1.7 (25 Aug 2008)
 

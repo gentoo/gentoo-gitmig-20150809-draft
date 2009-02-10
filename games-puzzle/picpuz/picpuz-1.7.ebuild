@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/picpuz/picpuz-1.7.ebuild,v 1.1 2008/08/25 22:54:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/picpuz/picpuz-1.7.ebuild,v 1.2 2009/02/10 11:42:46 tupone Exp $
 
-inherit toolchain-funcs eutils games
+EAPI=2
+inherit eutils games
 
 DESCRIPTION="a jigsaw puzzle program"
 HOMEPAGE="http://www.kornelix.com/picpuz"
@@ -19,18 +20,8 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	sed -i \
-		-e 's/CFLAGS/CXXFLAGS/g' \
-		-e '/LFLAGS/s/$/ $(LDFLAGS)/' \
-		-e '/^CXXFLAGS/s/=/+=/' \
-		-e 's/-O//' \
-		-e "s/g++/$(tc-getCXX)/g" \
-		Makefile \
-		|| die "sed failed"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 	rm -f doc/COPYING
 	mv doc/*pdf "${T}" || die "mv failed"
 }
