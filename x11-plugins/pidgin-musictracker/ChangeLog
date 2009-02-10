@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/pidgin-musictracker
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-musictracker/ChangeLog,v 1.1 2009/02/10 17:59:18 serkan Exp $
+
+*pidgin-musictracker-0.4.14 (10 Feb 2009)
+
+  10 Feb 2009; Serkan Kaba <serkan@gentoo.org> +metadata.xml,
+  +pidgin-musictracker-0.4.14.ebuild:
+  Initial import. Thanks to people in bug #180771 for help.
+
