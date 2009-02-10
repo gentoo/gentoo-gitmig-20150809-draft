@@ -1,6 +1,14 @@
 # ChangeLog for x11-apps/xinit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.117 2008/05/12 08:34:27 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.118 2009/02/10 02:49:00 dberkholz Exp $
+
+*xinit-1.0.8-r4 (10 Feb 2009)
+
+  10 Feb 2009; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xinit-1.0.8-r4.ebuild:
+  (#220797) Instead of letting settings in /etc/env.d/90xsession get
+  overwritten on every update, don't install anything there and just tell
+  people what to do.
 
   12 May 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   xinit-1.0.8-r3.ebuild:
