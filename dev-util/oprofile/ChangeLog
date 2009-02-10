@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/oprofile
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.54 2008/10/14 19:23:03 spock Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.55 2009/02/10 00:19:25 spock Exp $
+
+  09 Feb 2009; Michał Januszewski <spock@gentoo.org>
+  +files/oprofile-0.9.4-open.patch, oprofile-0.9.4.ebuild:
+  Make oprofile compile with gcc 4.3.3 (bug #257875).
 
   14 Oct 2008; Michał Januszewski <spock@gentoo.org> oprofile-0.9.4.ebuild:
   Fix bug #241974 (install all documentation to the correct directory).
