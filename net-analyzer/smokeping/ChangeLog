@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/smokeping
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.23 2008/08/19 14:13:13 falco Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.24 2009/02/10 15:51:42 pva Exp $
+
+*smokeping-2.4.2 (10 Feb 2009)
+
+  10 Feb 2009; Peter Volkov <pva@gentoo.org> +files/79_smokeping.conf,
+  +files/smokeping.init.1, metadata.xml, +smokeping-2.4.2.ebuild:
+  Version bump, bug #229275, Raúl Porcel for report. Quite rewrote ebuild:
+  install manpages, smoketrace, separate files for cgi and htdocs, new USE
+  flag speedy.
 
   19 Aug 2008; Raphael Marichez <falco@gentoo.org> smokeping-2.3.5.ebuild:
   Fix Config/Grammar Perl dependencies bug 221831
