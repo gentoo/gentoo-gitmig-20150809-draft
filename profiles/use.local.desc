@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4193 2009/02/10 16:07:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4194 2009/02/10 16:27:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -53,7 +53,6 @@ app-admin/system-tools-backends:policykit - Use sys-auth/policykit to gain privi
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/testdisk:reiserfs - include reiserfs reading ability
 app-admin/ulogd:ip-as-string - Logs IP addresses as stings
-app-admin/ulogd:logrotate - Install support files for logrotate
 app-admin/ulogd:pcap - Build the PCAP plugin. Use the net-libs/libpcap library
 app-admin/webalizer:xtended - Include the 404 extension
 app-arch/cabextract:extra-tools - Install experimental tools: wince_info and wince_rename for examining and processing Windows CE installation cabinet header files; cabinfo for examining the structure of a cab file.
@@ -2145,7 +2144,6 @@ net-misc/strongswan:nat - Enable NAT traversal with IPsec transport mode
 net-misc/termpkg:uucp -  Adds support for uucp style device locking 
 net-misc/tightvnc:server - Build vncserver. Allows us to only build server on one machine if set, build only viewer otherwise.
 net-misc/tor:bundledlibevent - USE bundled libevent for asynchronous DNS requests (provides a tiny bit more anonymity)
-net-misc/tor:logrotate - Enable logrotate file installation
 net-misc/vnc:server - Build VNC server
 net-misc/vnc:xorgmodule - Build the Xorg module
 net-misc/vpnc:hybrid-auth - Enable hybrid authentication (certificates), only if not redistributed as compiled binary
@@ -2457,7 +2455,6 @@ sys-apps/pcmcia-cs:xforms - Enable building the xforms based cardinfo binary
 sys-apps/pcmcia-cs-modules:cardbus - Enable 32bit CardBus support
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
 sys-apps/portage:epydoc - Build html API documentation with epydoc.
-sys-apps/qingy:logrotate - Enable app-admin/logrotate support
 sys-apps/qingy:opensslcrypt - Encrypt communications between qingy and its GUI using dev-libs/openssl
 sys-apps/qtparted:jfs - Include JFS support
 sys-apps/qtparted:ntfs - Include NTFS support
