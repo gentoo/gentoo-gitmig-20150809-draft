@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/krystaldrop
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/ChangeLog,v 1.8 2008/07/31 04:21:55 mr_bones_ Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/ChangeLog,v 1.9 2009/02/10 10:29:56 tupone Exp $
+
+  10 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/krystaldrop-0.7.2-as-needed.patch, krystaldrop-0.7.2.ebuild:
+  Fix --as-needed bug #247443 by flameeyes@gentoo.org
+  Use package name in distfiles
 
   31 Jul 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/krystaldrop-0.7.2-gcc43.patch, krystaldrop-0.7.2.ebuild:

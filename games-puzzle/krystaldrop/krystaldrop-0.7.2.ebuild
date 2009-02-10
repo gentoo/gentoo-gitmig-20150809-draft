@@ -1,13 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.9 2008/07/31 04:21:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.10 2009/02/10 10:29:56 tupone Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Free clone of an excellent NeoGeo puzzle game, Magical Drop"
 HOMEPAGE="http://krystaldrop.sourceforge.net/"
-SRC_URI="mirror://sourceforge/krystaldrop/art_${PV}.tgz
-	mirror://sourceforge/krystaldrop/src_${PV}.tgz"
+SRC_URI="mirror://sourceforge/krystaldrop/art_${PV}.tgz -> ${P}-art.tgz
+	mirror://sourceforge/krystaldrop/src_${PV}.tgz -> ${P}-src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,15 +24,13 @@ DEPEND="virtual/opengl
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack src_${PV}.tgz
-	cd "${S}"
+src_prepare() {
+	mv ../art .
 	epatch "${FILESDIR}/krystaldrop-assert.patch" \
 		"${FILESDIR}/${P}"-gcc41.patch \
 		"${FILESDIR}/${P}"-gcc43.patch \
+		"${FILESDIR}/${P}"-as-needed.patch \
 		"${FILESDIR}/${P}"-deps.patch
-
-	unpack art_${PV}.tgz
 
 	sed -i \
 		-e "/^EXEDIR:=/ s|$|/bin|" \
