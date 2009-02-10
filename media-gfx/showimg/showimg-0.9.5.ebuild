@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5.ebuild,v 1.13 2008/05/19 20:05:17 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5.ebuild,v 1.14 2009/02/10 01:22:25 carlo Exp $
 
 inherit kde eutils
 
@@ -20,7 +20,7 @@ IUSE="exif kipi mysql postgres"
 
 DEPEND="|| ( =kde-base/libkonq-3.5* =kde-base/kdebase-3.5* )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-base dev-libs/libpqxx )
+	postgres? ( virtual/postgresql-base <dev-libs/libpqxx-2.6.9 )
 	exif? ( media-libs/libkexif )
 	kipi? ( media-plugins/kipi-plugins )
 	media-libs/libexif"
