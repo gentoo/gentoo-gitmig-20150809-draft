@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/cssutils
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.1 2009/02/10 13:15:01 lordvan Exp $
+
+*cssutils-0.9.6_alpha1 (10 Feb 2009)
+*cssutils-0.9.5.1 (10 Feb 2009)
+
+  10 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org>
+  +cssutils-0.9.5.1.ebuild, +cssutils-0.9.6_alpha1.ebuild:
+  initial version
+
