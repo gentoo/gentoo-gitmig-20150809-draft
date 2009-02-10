@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.153 2009/01/08 21:01:05 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.154 2009/02/10 00:53:51 spock Exp $
+
+  10 Feb 2009; Michał Januszewski <spock@gentoo.org>
+  splashutils-1.5.4.2.ebuild, splashutils-1.5.4.3.ebuild:
+  Do not override the KLCC setting with the system compiler. This makes
+  splashutils use klibc when building the kernel helper and fixes bug
+  #257604.
 
   08 Jan 2009; Michał Januszewski <spock@gentoo.org>
   +files/splashutils-1.5.4.3-fix_rc_var.patch, splashutils-1.5.4.3.ebuild:

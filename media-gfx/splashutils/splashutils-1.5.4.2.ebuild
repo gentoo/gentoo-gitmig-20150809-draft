@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.2.ebuild,v 1.7 2008/12/28 22:55:23 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.2.ebuild,v 1.8 2009/02/10 00:53:51 spock Exp $
 
 EAPI="1"
 
@@ -109,7 +109,7 @@ src_compile() {
 		--with-lpng-src=${LPNGSRC} \
 		--with-zlib-src=${ZLIBSRC} || die "failed to configure splashutils"
 
-	emake -j1 KLCC="${CC}" CC="${CC}" || die "failed to build splashutils"
+	emake -j1 CC="${CC}" || die "failed to build splashutils"
 
 	if has_version ">=sys-apps/baselayout-1.13.99"; then
 		cd "${SG}"
