@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.94.ebuild,v 1.1 2009/02/09 23:24:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.94.ebuild,v 1.2 2009/02/10 16:16:49 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -28,4 +28,3 @@ src_prepare() {
 			"${S}"/CMakeLists.txt || die "removing docs failed"
 	fi
 }
-
