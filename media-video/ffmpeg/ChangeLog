@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.270 2009/02/09 14:23:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.271 2009/02/10 19:54:04 aballier Exp $
+
+  10 Feb 2009; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  add openjpeg support
 
   09 Feb 2009; Raúl Porcel <armin76@gentoo.org>
   ffmpeg-0.4.9_p20090201.ebuild:

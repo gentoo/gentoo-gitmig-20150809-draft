@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.8 2009/01/27 07:50:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.9 2009/02/10 19:54:04 aballier Exp $
 
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/ffmpeg/trunk"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://ffmpeg.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="3dnow aac alsa altivec amr debug dirac doc ieee1394 encode gsm ipv6 mmx mmxext vorbis
+IUSE="3dnow aac alsa altivec amr debug dirac doc ieee1394 jpeg2k encode gsm ipv6 mmx mmxext vorbis
 	  test theora threads x264 xvid network zlib sdl X mp3 oss schroedinger
 	  hardcoded-tables bindist v4l v4l2 speex ssse3 vhook"
 
@@ -33,6 +33,7 @@ RDEPEND="vhook? ( >=media-libs/imlib2-1.4.0 >=media-libs/freetype-2 )
 				sys-libs/libraw1394 )
 	dirac? ( media-video/dirac )
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
+	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
 	schroedinger? ( media-libs/schroedinger )
 	speex? ( >=media-libs/speex-1.2_beta3 )
 	X? ( x11-libs/libX11 x11-libs/libXext )
@@ -98,6 +99,7 @@ src_compile() {
 	use dirac && myconf="${myconf} --enable-libdirac"
 	use schroedinger && myconf="${myconf} --enable-libschroedinger"
 	use speex && myconf="${myconf} --enable-libspeex"
+	use jpeg2k && myconf="${myconf} --enable-libopenjpeg"
 	if use gsm; then
 		myconf="${myconf} --enable-libgsm"
 		# Crappy detection or our installation is weird, pick one (FIXME)
