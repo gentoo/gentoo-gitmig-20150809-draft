@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/mantissa
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/ChangeLog,v 1.9 2008/04/03 21:50:03 lordvan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/ChangeLog,v 1.10 2009/02/10 13:22:58 lordvan Exp $
+
+*mantissa-0.6.21 (10 Feb 2009)
+
+  10 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org>
+  +mantissa-0.6.21.ebuild:
+  new version. now depends on cssutils as well as newer twisted
+  not for ia64 because I can't test this and cssutils on it
 
 *mantissa-0.6.19 (03 Apr 2008)
 
