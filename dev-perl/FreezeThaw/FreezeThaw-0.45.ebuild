@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/FreezeThaw-0.44.ebuild,v 1.1 2009/02/08 19:52:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FreezeThaw/FreezeThaw-0.45.ebuild,v 1.1 2009/02/10 13:35:22 tove Exp $
 
 MODULE_AUTHOR=ILYAZ
 MODULE_SECTION=modules
