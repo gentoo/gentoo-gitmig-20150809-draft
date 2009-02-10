@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.1 2009/01/19 00:22:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.7.ebuild,v 1.2 2009/02/10 23:50:36 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -257,6 +257,13 @@ pkg_postinst() {
 		"disable collision protection completely (not recommended), then" \
 		"you need to ensure that neither protect-owned nor collision-protect" \
 		"are enabled." | fmt -w 70 | while read ; do ewarn "$REPLY" ; done
+		ewarn
+		echo "If you have overridden FETCHCOMMAND or RESUMECOMMAND variables," \
+		"for compatibility with EAPI 2, you must ensure that these variables" \
+		"are written such that the downloaded file will be placed at" \
+		"\"\${DISTDIR}/\${FILE}\". Refer to make.conf(5) for" \
+		"information about FETCHCOMMAND and RESUMECOMMAND." | \
+		fmt -w 70 | while read ; do ewarn "$REPLY" ; done
 		warning_shown=1
 	fi
 	if [ $warning_shown = 1 ] ; then
