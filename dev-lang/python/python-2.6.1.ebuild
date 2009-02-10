@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.1.ebuild,v 1.2 2008/12/24 20:47:52 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.1.ebuild,v 1.3 2009/02/10 16:18:40 neurogeek Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -27,7 +27,7 @@ SRC_URI="http://www.python.org/ftp/python/2.6.1/${MY_P}.tar.bz2
 LICENSE="PSF-2.2"
 SLOT="2.6"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="berkdb build doc elibc_uclibc examples +expat gdbm ipv6 ncurses readline sqlite ssl +threads tk ucs2 wininst"
+IUSE="berkdb build doc elibc_uclibc examples gdbm ipv6 ncurses readline sqlite ssl +threads tk ucs2 wininst +xml"
 
 # NOTE: dev-python/{elementtree,celementtree,pysqlite,ctypes,cjkcodecs}
 #       do not conflict with the ones in python proper. - liquidx
@@ -43,7 +43,7 @@ DEPEND=">=app-admin/eselect-python-20080925
 		gdbm? ( sys-libs/gdbm )
 		ssl? ( dev-libs/openssl )
 		doc? ( dev-python/python-docs:2.6 )
-		expat? ( dev-libs/expat )
+		xml? ( dev-libs/expat )
 	)"
 
 # NOTE: changed RDEPEND to PDEPEND to resolve bug 88777. - kloeri
@@ -99,7 +99,7 @@ src_configure() {
 		local disable
 		use berkdb   || use gdbm || disable="${disable} dbm"
 		use berkdb   || disable="${disable} bsddb"
-		use expat    || disable="${disable} pyexpat"
+		use xml      || disable="${disable} pyexpat"
 		use gdbm     || disable="${disable} gdbm"
 		use ncurses  || disable="${disable} _curses _curses_panel"
 		use readline || disable="${disable} readline"
@@ -108,6 +108,14 @@ src_configure() {
 		use tk       || disable="${disable} _tkinter"
 		export PYTHON_DISABLE_MODULES="${disable}"
 	fi
+
+	if use !xml; then
+		ewarn "You have configured Python without XML support."
+		ewarn "This is NOT a recommended configuration as you"
+		ewarn "may face problems parsing any XML documents."
+	fi
+
+	einfo "Disabled modules: $PYTHON_DISABLE_MODULES"
 
 	export OPT="${CFLAGS}"
 
