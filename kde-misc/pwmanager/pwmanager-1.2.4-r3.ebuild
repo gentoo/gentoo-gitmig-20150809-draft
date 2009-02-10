@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/pwmanager-1.2.4-r3.ebuild,v 1.3 2009/02/08 15:44:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pwmanager/pwmanager-1.2.4-r3.ebuild,v 1.4 2009/02/10 01:24:04 carlo Exp $
 
 ARTS_REQUIRED="never"
 
@@ -31,7 +31,8 @@ PATCHES=( "${FILESDIR}/pwmanager-1.2.4-gcc43.patch"
 src_compile() {
 	local myconf="--enable-kwallet --disable-pwmanager-smartcard"
 
-	kde_src_compile
+        rm "${S}"/configure
+        kde_src_compile
 
 	if [ -d "${WORKDIR}/${LANGS_PKG}" ]; then
 		KDE_S="${WORKDIR}/${LANGS_PKG}"
@@ -40,6 +41,7 @@ src_compile() {
 		done
 		export DO_NOT_COMPILE
 
+		rm "${KDE_S}"/configure
 		kde_src_compile
 	fi
 }
