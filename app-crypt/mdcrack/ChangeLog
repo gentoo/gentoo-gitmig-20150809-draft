@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mdcrack
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mdcrack/ChangeLog,v 1.4 2007/02/08 21:19:49 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mdcrack/ChangeLog,v 1.5 2009/02/10 16:15:32 angelos Exp $
+
+  10 Feb 2009; Christoph Mende <angelos@gentoo.org>
+  +files/mdcrack-1.2-asneeded.patch, mdcrack-1.2.ebuild:
+  QA: Fixed compilation with --as-needed (bug 246867), respect CC (bug
+  243544), respect LDFLAGS, let dobin die
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
