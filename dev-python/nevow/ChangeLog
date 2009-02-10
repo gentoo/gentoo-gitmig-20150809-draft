@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nevow
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.25 2008/12/07 10:29:34 patrick Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.26 2009/02/10 13:36:40 lordvan Exp $
+
+*nevow-0.9.32 (10 Feb 2009)
+
+  10 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org> +nevow-0.9.32.ebuild:
+  version bump. downloading from project page now (requires EAPI2)
 
   07 Dec 2008; Patrick Lauer <patrick@gentoo.org> nevow-0.9.31.ebuild:
   Correcting deps, fixes #229891
