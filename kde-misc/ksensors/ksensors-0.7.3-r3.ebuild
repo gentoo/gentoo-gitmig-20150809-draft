@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ksensors-0.7.3-r3.ebuild,v 1.1 2009/02/10 14:42:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ksensors-0.7.3-r3.ebuild,v 1.2 2009/02/10 14:45:11 carlo Exp $
 
 ARTS_REQUIRED="never"
 WANT_AUTOMAKE="1.6"
@@ -29,7 +29,7 @@ src_unpack() {
 
 	rm -f "${S}"/configure
 
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 
 	# Debian patchset, fixes bugs 120350, 171208, 173821, 232782
 	epatch ${PN}_${PV}-16.diff
