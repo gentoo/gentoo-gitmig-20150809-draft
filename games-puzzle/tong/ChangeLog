@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/tong
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/ChangeLog,v 1.5 2008/02/29 19:29:34 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/ChangeLog,v 1.6 2009/02/10 16:32:32 tupone Exp $
+
+  10 Feb 2009; Alfredo Tupone <tupone@gentoo.org> files/1.0-makefile.patch:
+  Fix --as-needed bug #247448 by flameeyes@gentoo.org
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> tong-1.0.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.

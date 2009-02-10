@@ -24,7 +24,7 @@
 -
 -tong.o: $(SDL_SOURCES)
 -	$(CC) $(SDL_CFLAGS) -c -o $@ $<
-+	$(CXX) $(SDL_LDFLAGS) $(MIXER_FLAGS) $(IMG_FLAGS) $(OBJS) -o $(TARGET)
++	$(CXX) $(LDFLAGS) $(OBJS) $(SDL_LDFLAGS) $(MIXER_FLAGS) $(IMG_FLAGS) -o $(TARGET)
  
  # clean out the mess
  clean:
