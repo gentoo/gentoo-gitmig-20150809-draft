@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.147 2009/02/01 07:09:00 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.148 2009/02/10 15:03:10 hwoarang Exp $
+
+*kdm-4.2.0-r1 (10 Feb 2009)
+
+  10 Feb 2009; Markos Chandras <hwoarang@gentoo.org>
+  +files/kdm-4.2.0-qt4.5_h.patch, +files/kdm-4.2.0-qt4.5.patch,
+  +kdm-4.2.0-r1.ebuild:
+  Apply patches to prevent crashes with Qt-4.5
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdm-4.2.0.ebuild:
