@@ -1,20 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-9999.ebuild,v 1.10 2009/02/10 16:53:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3.ebuild,v 1.1 2009/02/10 16:53:05 armin76 Exp $
 
-inherit bzr eutils
+inherit eutils
 
 DESCRIPTION="Direct connect client, looks and works like famous DC++"
-HOMEPAGE="http://linuxdcpp.berlios.de"
-SRC_URI=""
+HOMEPAGE="https://launchpad.net/linuxdcpp"
+SRC_URI="http://launchpad.net/linuxdcpp/1.0/${PV}/+download/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="debug"
-
-EBZR_REPO_URI="lp:linuxdcpp"
-
-S="${WORKDIR}/${P}"
 
 RDEPEND=">=gnome-base/libglade-2.4
 	>=x11-libs/gtk+-2.6
