@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5-r1.ebuild,v 1.1 2009/02/09 00:51:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5-r1.ebuild,v 1.2 2009/02/10 16:17:26 mr_bones_ Exp $
 
 ARTS_REQUIRED="never"
 
@@ -40,7 +40,6 @@ src_compile() {
 		$(use_enable kipi libkipi) \
 		$(use_enable mysql) \
 		$(use_enable postgres pgsql)"
-
 
 	rm -f "${S}"/configure
 	kde_src_compile all
