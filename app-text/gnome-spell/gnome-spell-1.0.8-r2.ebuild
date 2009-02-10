@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.8-r1.ebuild,v 1.1 2009/02/09 22:06:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.8-r2.ebuild,v 1.1 2009/02/10 11:59:53 pva Exp $
 
 inherit eutils gnome2 autotools
 
 DESCRIPTION="Gnome spellchecking component"
 HOMEPAGE="http://www.gnome.org/"
 SRC_URI="${SRC_URI}
-	mirror://gentoo/${P}-isocodes.patch.bz2"
+	mirror://gentoo/${P}-isocodes-r1.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -48,7 +48,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-1.0.7-remove_gnome_h.patch"
 
 	# Use iso-codes instead of hardcoded locales list, bug #256564
-	epatch "${WORKDIR}/${P}-isocodes.patch"
+	epatch "${WORKDIR}/${P}-isocodes-r1.patch"
 
 	# Fix test error caused by previous patch.
 	echo "gnome-spell/spell-checker-language.c" >> po/POTFILES.in

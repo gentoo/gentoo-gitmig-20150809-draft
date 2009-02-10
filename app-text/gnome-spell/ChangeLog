@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.92 2009/02/09 22:06:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.93 2009/02/10 11:59:53 pva Exp $
+
+*gnome-spell-1.0.8-r2 (10 Feb 2009)
+
+  10 Feb 2009; Peter Volkov <pva@gentoo.org>
+  -files/gnome-spell-1.0.7-enchant-r2.patch, -gnome-spell-1.0.8-r1.ebuild,
+  +gnome-spell-1.0.8-r2.ebuild:
+  Fixed 'Unknown' language for dictionaries with name of form ru_RU_ye.
 
 *gnome-spell-1.0.8-r1 (09 Feb 2009)
 
