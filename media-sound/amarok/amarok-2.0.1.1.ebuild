@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.7 2009/01/25 22:17:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.8 2009/02/10 22:09:34 scarabeus Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ DEPEND=">=app-misc/strigi-0.5.7
 	>=kde-base/plasma-workspace-${KDE_MINIMAL}
 	x11-libs/qt-webkit:4
 	ifp? ( media-libs/libifp )
-	ipod? ( >=media-libs/libgpod-0.4.2 )
+	ipod? ( >=media-libs/libgpod-0.7.0 )
 	mp3tunes? (
 		dev-libs/libxml2
 		dev-libs/openssl
@@ -45,6 +45,8 @@ DEPEND=">=app-misc/strigi-0.5.7
 RDEPEND="${DEPEND}
 	app-arch/unzip
 	daap? ( www-servers/mongrel )"
+
+PATCHES=( "${FILESDIR}/${PV}-ipod.patch" )
 
 pkg_setup() {
 	if use amd64 ; then
