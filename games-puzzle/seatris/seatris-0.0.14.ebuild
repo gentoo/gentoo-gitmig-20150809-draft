@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.9 2009/01/29 02:12:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/seatris/seatris-0.0.14.ebuild,v 1.10 2009/02/10 11:55:04 tupone Exp $
 
 EAPI=2
-inherit games
+inherit eutils games
 
 DESCRIPTION="A color ncurses tetris clone"
 HOMEPAGE="http://www.earth.li/projectpurple/progs/seatris.html"
@@ -21,6 +21,7 @@ src_prepare() {
 		-e "s:/var/lib/games:${GAMES_STATEDIR}:" \
 		scoring.h seatris.6 \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 }
 
 src_install () {
