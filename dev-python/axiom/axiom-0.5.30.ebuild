@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.5.30.ebuild,v 1.1 2009/02/10 11:03:08 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.5.30.ebuild,v 1.2 2009/02/10 15:35:46 lordvan Exp $
 
 inherit twisted distutils eutils
 
@@ -32,6 +32,9 @@ DOCS="NAME.txt"
 src_unpack() {
 	distutils_src_unpack
 	epatch "${FILESDIR}/${P}-sqlite3.patch"
+	if has_version ">=dev-db/sqlite-3.6.4"; then
+		epatch "${FILESDIR}/${P}-sqlite3_3.6.4.patch"
+	fi
 }
 
 src_compile() {

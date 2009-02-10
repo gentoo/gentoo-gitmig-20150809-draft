@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.19 2009/02/10 11:03:08 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.20 2009/02/10 15:35:46 lordvan Exp $
+
+  10 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org>
+  +files/axiom-0.5.30-sqlite3_3.6.4.patch, axiom-0.5.30.ebuild:
+  added patch for it to work with >= sqlite-3.6.4
 
 *axiom-0.5.30 (10 Feb 2009)
 
