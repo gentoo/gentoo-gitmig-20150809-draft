@@ -1,17 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.11.ebuild,v 1.1 2009/02/10 08:03:07 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.11.ebuild,v 1.2 2009/02/10 09:55:46 lordvan Exp $
 
 inherit distutils
 
 DESCRIPTION="Epsilon is a Python utilities package, most famous for its Time class."
 HOMEPAGE="http://divmod.org/trac/wiki/DivmodEpsilon"
-SRC_URI="mirror://gentoo/Epsilon-${PV}.tar.gz"
+SRC_URI="http://divmod.org/trac/attachment/wiki/SoftwareReleases/Epsilon-${PV}.tar.gz?format=raw -> Epsilon-${PV}.tar.gz"
+#SRC_URI="mirror://gentoo/Epsilon-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~ia64 ~ppc64 ~x86 ~amd64"
 IUSE=""
+EAPI="2"
 
 DEPEND=">=dev-lang/python-2.4
 	>=dev-python/twisted-2.4"

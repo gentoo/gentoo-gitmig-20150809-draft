@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.11 2009/02/10 08:03:07 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.12 2009/02/10 09:55:46 lordvan Exp $
+
+  10 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org>
+  epsilon-0.5.11.ebuild:
+  Fixed SRC_URI to use project download url with EAPI2
 
 *epsilon-0.5.11 (10 Feb 2009)
 
