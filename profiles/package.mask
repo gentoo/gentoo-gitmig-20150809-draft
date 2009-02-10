@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9480 2009/02/10 18:04:48 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9481 2009/02/10 18:17:51 killerfox Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # René Nussbaumer <killerfox@gentoo.org> (10 Feb 2009)
 # I gave away maintainership a while ago nobody took it on. Prepare for remove.
 app-emulation/ganeti
+app-emulation/ganeti-instance-debian-etch
 
 # Peter Volkov <pva@gentoo.org> (10 Feb 2009)
 # Masking release candidate.
