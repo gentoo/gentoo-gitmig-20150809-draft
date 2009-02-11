@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.5.0b-r3.ebuild,v 1.4 2007/09/06 07:28:52 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.5.0b-r3.ebuild,v 1.5 2009/02/11 08:46:18 mr_bones_ Exp $
 
 inherit autotools eutils
 
@@ -33,6 +33,10 @@ S=${WORKDIR}/${MY_P/b}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	sed -i \
+		-e 's/ILvoid/void/g' \
+		ImageCodecModules/DevILImageCodec/CEGUIDevILImageCodec.cpp \
+		|| die "sed failed"
 	if use examples ; then
 		cp -r Samples Samples.clean
 		rm -f $(find Samples.clean -name 'Makefile*')
