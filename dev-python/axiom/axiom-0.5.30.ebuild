@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.5.30.ebuild,v 1.4 2009/02/11 10:03:12 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.5.30.ebuild,v 1.5 2009/02/11 15:09:48 lordvan Exp $
 
 inherit twisted distutils eutils
 
@@ -22,7 +22,7 @@ DEPEND="|| ( >=dev-lang/python-2.5[sqlite]
 	>=dev-db/sqlite-3.2.1
 	>=dev-python/twisted-2.4
 	>=dev-python/twisted-conch-0.7.0-r1
-	>=dev-python/epsilon-0.5.11"
+	=dev-python/epsilon-0.5*"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -55,10 +55,17 @@ src_install() {
 	unset PORTAGE_PLUGINCACHE_NOOP
 }
 
+update_axiom_plugin_cache() {
+	einfo "Updating axiom plugin cache..."
+	python -c 'from twisted.plugin import IPlugin, getPlugIns;from axiom import plugins; list(getPlugIns(IPlugin, plugins))'
+}
+
 pkg_postrm() {
 	twisted_pkg_postrm
+	update_axiom_plugin_cache
 }
 
 pkg_postinst() {
 	twisted_pkg_postinst
+	update_axiom_plugin_cache
 }
