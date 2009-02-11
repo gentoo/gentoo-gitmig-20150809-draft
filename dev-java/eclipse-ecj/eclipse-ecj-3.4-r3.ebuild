@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.4-r3.ebuild,v 1.2 2009/01/19 20:30:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.4-r3.ebuild,v 1.3 2009/02/11 20:22:49 elvanor Exp $
 
 EAPI=2
 
@@ -68,7 +68,7 @@ src_compile() {
 	fi
 
 	mkdir -p bootstrap || die
-	cp -a org bootstrap || die
+	cp -pPR org bootstrap || die
 	cd "${S}/bootstrap" || die
 
 	einfo "bootstrapping ${MY_PN} with ${javac} ..."
