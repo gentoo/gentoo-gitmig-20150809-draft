@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.105 2009/02/11 11:28:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.106 2009/02/11 11:29:48 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -686,9 +686,6 @@ mysql_src_install() {
 	emake install DESTDIR="${D}" benchdir_root="${MY_SHAREDSTATEDIR}" || die "emake install failed"
 
 	mysql_version_is_at_least "5.1.12" && use pbxt && pbxt_src_install
-
-	insinto "${MY_INCLUDEDIR}"
-	doins "${MY_INCLUDEDIR}"/my_{config,dir}.h
 
 	# Convenience links
 	einfo "Making Convenience links for mysqlcheck multi-call binary"
