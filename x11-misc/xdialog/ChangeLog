@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xdialog
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.23 2008/01/07 04:10:11 omp Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.24 2009/02/11 10:06:25 nelchael Exp $
+
+  11 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/xdialog-2.3.1-no-strip.patch, xdialog-2.3.1.ebuild:
+  Fix bug #252101: no pre-stripping of binaries, fixed configure.in to
+  recognize only GTK+2.
 
   07 Jan 2008; David Shakaryan <omp@gentoo.org> xdialog-2.2.1-r1.ebuild,
   xdialog-2.3.1.ebuild:
