@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.62 2009/02/11 10:00:02 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.63 2009/02/11 14:31:23 cardoe Exp $
+
+  11 Feb 2009; Doug Goldstein <cardoe@gentoo.org>
+  -files/0.4.3/0001-msg-style.patch,
+  -files/0.4.3/0002-useful-functions.patch, -files/0.4.3/0003-KV.patch,
+  openrc-0.4.3.ebuild:
+  0.4.3 patches are identical to 0.4.2. reuse 0.4.2 patches to save cvs
+  space and fix weird rsyncing error
 
 *openrc-0.4.3 (11 Feb 2009)
 
