@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdialog
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.24 2009/02/11 10:06:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.25 2009/02/11 22:53:30 klausman Exp $
+
+  11 Feb 2009; Tobias Klausmann <klausman@gentoo.org> xdialog-2.3.1.ebuild:
+  Stable on alpha, bug #258579
 
   11 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/xdialog-2.3.1-no-strip.patch, xdialog-2.3.1.ebuild:
