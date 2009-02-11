@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nevow
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.27 2009/02/11 08:50:39 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.28 2009/02/11 15:19:08 lordvan Exp $
+
+  11 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org> nevow-0.9.32.ebuild:
+  regenerate nevow plugin cache too
 
   11 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org> nevow-0.9.32.ebuild:
   disable plugin cache update in src_install
