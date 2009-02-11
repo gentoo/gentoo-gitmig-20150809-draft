@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.34.3.ebuild,v 1.1 2009/02/09 23:54:12 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.34.4.ebuild,v 1.1 2009/02/11 17:01:49 cla Exp $
 
 inherit bash-completion eutils flag-o-matic
 
