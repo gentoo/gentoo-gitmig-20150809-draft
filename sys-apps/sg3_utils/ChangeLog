@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sg3_utils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.45 2008/08/18 04:24:17 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.46 2009/02/11 02:28:06 robbat2 Exp $
+
+  11 Feb 2009; Robin H. Johnson <robbat2@gentoo.org> sg3_utils-1.25.ebuild,
+  sg3_utils-1.26.ebuild, sg3_utils-1.26-r1.ebuild, sg3_utils-1.27.ebuild:
+  Bug 258388: new hosting location.
 
 *sg3_utils-1.27 (18 Aug 2008)
 
