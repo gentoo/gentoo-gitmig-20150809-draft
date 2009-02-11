@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.42 2009/01/05 14:54:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.43 2009/02/11 19:45:26 carlo Exp $
+
+*kipi-plugins-0.1.7 (11 Feb 2009)
+
+  11 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  +files/kipi-plugins-0.1.4-header.diff, +kipi-plugins-0.1.4-r2.ebuild,
+  +kipi-plugins-0.1.7.ebuild:
+  Get rid of invalid aRts dependency. Correct other dependencies, bug #256299.
+  Fix missing eclass pkg_setup call. Version bump.
 
 *kipi-plugins-0.1.6 (05 Jan 2009)
 
