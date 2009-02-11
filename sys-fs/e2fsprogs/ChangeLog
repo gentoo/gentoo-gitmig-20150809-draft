@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.177 2009/02/11 16:57:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.178 2009/02/11 22:41:39 klausman Exp $
+
+  11 Feb 2009; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
+  Stable on alpha, bug #258527
 
   11 Feb 2009; Jeroen Roovers <jer@gentoo.org> e2fsprogs-1.41.3-r1.ebuild:
   Stable for HPPA (bug #258527).
