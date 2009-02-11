@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.191 2009/01/29 17:03:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.192 2009/02/11 08:49:20 aballier Exp $
+
+  11 Feb 2009; Alexis Ballier <aballier@gentoo.org> epiphany-2.24.3.ebuild:
+  keyword ~x86-fbsd
 
   29 Jan 2009; Jeroen Roovers <jer@gentoo.org> epiphany-2.24.2.1.ebuild,
   epiphany-2.24.3.ebuild:
