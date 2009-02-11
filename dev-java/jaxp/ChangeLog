@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jaxp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.13 2007/12/09 14:27:47 nelchael Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxp/ChangeLog,v 1.14 2009/02/11 15:22:23 betelgeuse Exp $
+
+*jaxp-1.4-r1 (11 Feb 2009)
+
+  11 Feb 2009; Petteri Räty <betelgeuse@gentoo.org> +jaxp-1.4-r1.ebuild:
+  Install a jaxp.jar symlink to jaxp-ri.jar.
 
   09 Dec 2007; Krzysiek Pawlik <nelchael@gentoo.org> jaxp-1.4.ebuild:
   Stable on ppc, see bug #200585.
