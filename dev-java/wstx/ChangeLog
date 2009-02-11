@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/wstx
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wstx/ChangeLog,v 1.1 2009/02/11 15:27:56 betelgeuse Exp $
+
+*wstx-3.2.8 (11 Feb 2009)
+
+  11 Feb 2009; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
+  +wstx-3.2.8.ebuild:
+  Moved from java-experimental to main tree. Fixes bug #257831. Thanks to
+  Mike Weissman <mike@weisso.com> for the ebuild.
+
