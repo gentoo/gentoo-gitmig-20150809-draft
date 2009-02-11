@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/dap-2.2.6.6.ebuild,v 1.1 2008/12/11 19:26:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/dap-2.2.6.6.ebuild,v 1.2 2009/02/11 00:06:40 flameeyes Exp $
 
 inherit eutils distutils
 
@@ -26,6 +26,6 @@ DOCS="docs/bugs docs/Changelog docs/history"
 
 src_install() {
 	distutils_src_install
-	dosed -i -e '1idap' \
-		/usr/$(get_libdir)/python*/site-packages/dap-*.egg-info/namespace_packages.txt || die
+	sed -i -e '1idap' \
+		"${D}"/usr/$(get_libdir)/python*/site-packages/dap-*.egg-info/namespace_packages.txt || die
 }

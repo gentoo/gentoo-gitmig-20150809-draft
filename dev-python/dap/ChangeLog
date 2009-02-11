@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dap
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/ChangeLog,v 1.5 2008/12/11 19:26:58 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/ChangeLog,v 1.6 2009/02/11 00:06:40 flameeyes Exp $
+
+  11 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org> dap-2.2.6.6.ebuild:
+  Fix the dosed/sed line to expand the shell otherwise it'll fail install.
 
 *dap-2.2.6.6 (11 Dec 2008)
 
