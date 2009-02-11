@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4126-r1.ebuild,v 1.1 2009/02/11 18:24:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4126-r1.ebuild,v 1.2 2009/02/11 19:33:21 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -90,7 +90,6 @@ RDEPEND="
 		!ia32? ( =x11-libs/qt-3* )
 	)
 	ppc? ( =x11-libs/qt-3* )
-	spell? ( app-text/aspell )
 	x86-fbsd? (
 		=virtual/libstdc++-3*
 		!qt-static? ( !qt3? ( =x11-libs/qt-3* ) )
@@ -216,15 +215,14 @@ pkg_postinst() {
 	elog "file chooser at /opt/opera/share/opera/locale/, then enter the"
 	elog "directory for the language you want and [Open] the .lng file."
 
-	if has_version "<app-text/aspell-0.60.6"; then
+	if use spell; then
 		elog
-		elog "To use the spellchecker (USE=spell) for non-English simply do"
-		elog "$ emerge app-dicts/aspell-[your language]."
-	else
-		elog
-		elog "To use the spellchecker (USE=spell) for languages other that English,"
-		elog "set the LINGUAS variable in your package manager configuration, and"
-		elog "then update the world target."
+		elog "To use the spellchecker (USE=spell) for languages other than English, do:"
+		elog " emerge app-dicts/myspell-[your language]"
+		elog " mkdir \${HOME}/.opera/dictionaries"
+		elog " cd \${HOME}/.opera/dictionaries"
+		elog " ln -s /usr/share/myspell/*.{aff,dic} ."
+		elog "A future release of Opera 10 should remedy this inconvenience."
 	fi
 
 	if use elibc_FreeBSD; then
