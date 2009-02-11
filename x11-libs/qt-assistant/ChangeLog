@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-assistant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.25 2009/02/06 16:28:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-assistant/ChangeLog,v 1.26 2009/02/11 23:15:09 yngwin Exp $
+
+*qt-assistant-4.5.0_rc1 (11 Feb 2009)
+
+  11 Feb 2009; Ben de Groot <yngwin@gentoo.org>
+  +qt-assistant-4.5.0_rc1.ebuild:
+  Version bump. Dropping keywords for arches that don't have qt-webkit
+  keyworded, which is now a hard dependency.
 
   06 Feb 2009; Raúl Porcel <armin76@gentoo.org>
   qt-assistant-4.4.2-r1.ebuild:
