@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/cssed-0.4.0-r1.ebuild,v 1.4 2008/05/18 16:09:44 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/cssed-0.4.0-r1.ebuild,v 1.5 2009/02/11 15:08:51 angelos Exp $
 
-DESCRIPTION="CSSED a GTK2 application to help create and maintain CSS style sheets for web developing"
+inherit autotools eutils toolchain-funcs
+
+DESCRIPTION="a GTK2 application to help create and maintain CSS style sheets for web developing"
 HOMEPAGE="http://cssed.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
@@ -19,11 +21,20 @@ RDEPEND=">=x11-libs/gtk+-2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	sed -i -e "/^cssed_LINK/s:g++:$(tc-getCXX) \$(LDFLAGS):" src/Makefile.am
+	eautoreconf
+}
+
 src_compile() {
-	econf $(use_with plugins plugin-headers) || die
-	emake || die
+	econf $(use_with plugins plugin-headers)
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake failed"
+	dodoc AUTHORS ChangeLog NEWS README
 }
