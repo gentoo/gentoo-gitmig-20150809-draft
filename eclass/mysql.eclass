@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.104 2009/02/11 11:27:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.105 2009/02/11 11:28:16 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -691,11 +691,13 @@ mysql_src_install() {
 	doins "${MY_INCLUDEDIR}"/my_{config,dir}.h
 
 	# Convenience links
+	einfo "Making Convenience links for mysqlcheck multi-call binary"
 	dosym "/usr/bin/mysqlcheck" "/usr/bin/mysqlanalyze"
 	dosym "/usr/bin/mysqlcheck" "/usr/bin/mysqlrepair"
 	dosym "/usr/bin/mysqlcheck" "/usr/bin/mysqloptimize"
 
 	# Various junk (my-*.cnf moved elsewhere)
+	einfo "Removing duplicate /usr/share/mysql files"
 	rm -Rf "${D}/usr/share/info"
 	for removeme in  "mysql-log-rotate" mysql.server* \
 		binary-configure* my-*.cnf mi_test_all*
@@ -705,6 +707,7 @@ mysql_src_install() {
 
 	# Clean up stuff for a minimal build
 	if use minimal ; then
+		einfo "Remove all extra content for minimal build"
 		rm -Rf "${D}${MY_SHAREDSTATEDIR}"/{mysql-test,sql-bench}
 		rm -f "${D}"/usr/bin/{mysql{_install_db,manager*,_secure_installation,_fix_privilege_tables,hotcopy,_convert_table_format,d_multi,_fix_extensions,_zap,_explain_log,_tableinfo,d_safe,_install,_waitpid,binlog,test},myisam*,isam*,pack_isam}
 		rm -f "${D}/usr/sbin/mysqld"
@@ -717,6 +720,7 @@ mysql_src_install() {
 	else
 		mysql_mycnf_version="4.0"
 	fi
+	einfo "Building default my.cnf"
 	insinto "${MY_SYSCONFDIR}"
 	doins scripts/mysqlaccess.conf
 	sed -e "s!@DATADIR@!${MY_DATADIR}!g" \
@@ -729,6 +733,7 @@ mysql_src_install() {
 
 	# Minimal builds don't have the MySQL server
 	if ! use minimal ; then
+		einfo "Creating initial directories"
 		# Empty directories ...
 		diropts "-m0750"
 		if [[ "${PREVIOUS_DATADIR}" != "yes" ]] ; then
@@ -746,11 +751,13 @@ mysql_src_install() {
 	fi
 
 	# Docs
+	einfo "Installing docs"
 	dodoc README COPYING ChangeLog EXCEPTIONS-CLIENT INSTALL-SOURCE
 	doinfo "${S}"/Docs/mysql.info
 
 	# Minimal builds don't have the MySQL server
 	if ! use minimal ; then
+		einfo "Including support files and sample configurations"
 		docinto "support-files"
 		for script in \
 			"${S}"/support-files/my-*.cnf \
