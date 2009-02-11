@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.95 2009/02/09 15:39:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.96 2009/02/11 10:30:49 armin76 Exp $
+
+  11 Feb 2009; Raúl Porcel <armin76@gentoo.org> groff-1.20.1-r1.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #257985
 
   09 Feb 2009; Jeroen Roovers <jer@gentoo.org> groff-1.20.1-r1.ebuild:
   Stable for HPPA (bug #257985).
