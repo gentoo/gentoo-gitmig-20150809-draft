@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cegui
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.22 2008/12/11 00:49:29 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.23 2009/02/11 08:38:48 mr_bones_ Exp $
+
+  11 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org> cegui-0.6.2b.ebuild:
+  EAPI=2; make it work with newer devil
 
 *cegui-0.6.2b (11 Dec 2008)
 
