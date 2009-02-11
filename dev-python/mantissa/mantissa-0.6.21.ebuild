@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.6.21.ebuild,v 1.1 2009/02/10 13:22:58 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.6.21.ebuild,v 1.2 2009/02/11 08:56:10 lordvan Exp $
 
-inherit distutils eutils
+inherit twisted distutils eutils
 
 MY_P=Mantissa-${PV}
 DESCRIPTION="An extensible, multi-protocol, multi-user, interactive application server"
@@ -37,4 +37,18 @@ src_compile() {
 
 src_test() {
 	PYTHONPATH=. trial xmantissa || die "trial failed"
+}
+
+src_install() {
+	export PORTAGE_PLUGINCACHE_NOOP=1
+	distutils_install
+	unset PORTAGE_PLUGINCACHE_NOOP
+}
+
+pkg_postrm() {
+	twisted_pkg_postrm
+}
+
+pkg_postinst() {
+	twisted_pkg_postinst
 }
