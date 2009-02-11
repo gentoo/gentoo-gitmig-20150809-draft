@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/jfbterm
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.51 2007/12/25 16:46:14 phreak Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.52 2009/02/11 04:31:00 flameeyes Exp $
+
+  11 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  jfbterm-0.4.7-r4.ebuild:
+  Remove bindnow-flags usage and add die clauses on the dodoc/doman.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931.
