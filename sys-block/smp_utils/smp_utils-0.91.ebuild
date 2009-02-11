@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/smp_utils-0.91.ebuild,v 1.1 2006/08/24 05:50:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/smp_utils-0.91.ebuild,v 1.2 2009/02/11 02:52:48 robbat2 Exp $
 
 inherit eutils
 
 DESCRIPTION="Utilities for SAS management protocol (SMP)"
-HOMEPAGE="http://www.torque.net/sg/smp_utils.html"
-SRC_URI="http://www.torque.net/sg/p/${P}.tgz"
+HOMEPAGE="http://sg.danny.cz/sg/smp_utils.html"
+SRC_URI="http://sg.danny.cz/sg/p/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"

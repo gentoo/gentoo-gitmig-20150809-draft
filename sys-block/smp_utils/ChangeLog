@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/smp_utils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/ChangeLog,v 1.4 2008/11/18 02:14:30 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/ChangeLog,v 1.5 2009/02/11 02:52:48 robbat2 Exp $
+
+  11 Feb 2009; Robin H. Johnson <robbat2@gentoo.org> smp_utils-0.91.ebuild,
+  smp_utils-0.93.ebuild:
+  Bug 258388: new hosting location.
 
 *smp_utils-0.94 (18 Nov 2008)
 
