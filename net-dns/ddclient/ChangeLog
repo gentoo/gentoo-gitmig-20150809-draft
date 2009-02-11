@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.38 2009/02/04 14:17:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.39 2009/02/11 20:20:16 gentoofan23 Exp $
+
+  11 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml:
+  Pick up maintainership.
 
 *ddclient-3.8.0 (04 Feb 2009)
 
