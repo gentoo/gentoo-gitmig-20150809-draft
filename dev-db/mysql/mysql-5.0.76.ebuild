@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.76.ebuild,v 1.1 2009/02/11 12:22:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.76.ebuild,v 1.2 2009/02/11 21:25:14 mr_bones_ Exp $
 
 MY_EXTRAS_VER="20090211-1206Z"
 SERVER_URI="http://mirror.provenscaling.com/mysql/enterprise/source/5.0/${P}.tar.gz"
@@ -18,7 +18,6 @@ EPATCH_EXCLUDE=''
 # Please do not add a naive src_unpack to this ebuild
 # If you want to add a single patch, copy the ebuild to an overlay
 # and create your own mysql-extras tarball, looking at 000_index.txt
-
 
 # Official test instructions:
 # USE='berkdb cluster embedded extraengine' \
