@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.5.30.ebuild,v 1.2 2009/02/10 15:35:46 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/axiom-0.5.30.ebuild,v 1.3 2009/02/11 08:42:51 lordvan Exp $
 
 inherit twisted distutils eutils
 
@@ -47,9 +47,12 @@ src_test() {
 }
 
 src_install() {
+	export PORTAGE_PLUGINCACHE_NOOP=1
 	distutils_src_install
-	# remove stupid dropin.cache from destdir
-	rm "${D}usr/$(get_libdir)/python${PYVER}/site-packages/twisted/plugins/dropin.cache"
+	# Not needed sine we disable plugin cache update now
+	# remove dropin.cache from destdir
+	#rm "${D}usr/$(get_libdir)/python${PYVER}/site-packages/twisted/plugins/dropin.cache"
+	unset PORTAGE_PLUGINCACHE_NOOP
 }
 
 pkg_postrm() {
