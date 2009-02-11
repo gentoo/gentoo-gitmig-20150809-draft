@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/galaxyhack-1.74.ebuild,v 1.2 2008/08/31 05:18:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/galaxyhack-1.74.ebuild,v 1.3 2009/02/11 21:35:08 tupone Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Multiplayer AI script based strategy game."
@@ -21,25 +22,19 @@ DEPEND="media-libs/libsdl
 
 S=${WORKDIR}/${PN}/src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	edos2unix Makefile
 	epatch \
 		"${FILESDIR}"/${P}-destdirs.patch \
 		"${FILESDIR}"/${P}-boost.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-gentoo.patch
 	sed -i "s:@GAMES_DATADIR@:${GAMES_DATADIR}:" \
 		Main.cpp \
 		|| die "sed Main.cpp failed"
 	sed -i "/Base data path/s:pwd:${GAMES_DATADIR}/${PN}:" \
 		../settings.dat \
 		|| die "sed settings.dat failed"
-	sed -i \
-		-e "/^CXXFLAGS/s:-O3:${CXXFLAGS}:" \
-		-e '/^LDFLAGS/s:=:+=:' \
-		Makefile \
-		|| die "sed Makefile failed"
 }
 
 src_install() {
