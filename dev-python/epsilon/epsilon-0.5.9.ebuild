@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.9.ebuild,v 1.1 2008/04/04 05:14:42 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.9.ebuild,v 1.2 2009/02/11 08:28:49 lordvan Exp $
 
 inherit distutils
 
@@ -30,6 +30,9 @@ src_unpack() {
 	sed -i \
 		-e "s#bin/benchmark#bin/epsilon-benchmark#" \
 		setup.py || die "sed failed"
+	# otherwise we get sandbox violations as it wants to update 
+	# the plugin cache
+	epatch "${FILESDIR}/epsilon_plugincache_portagesandbox.patch"
 }
 
 src_compile() {
