@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.219 2009/02/02 19:35:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.220 2009/02/11 03:39:39 vapier Exp $
+
+  11 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/4.1.2.2/shadow-svn-2298.patch,
+  +files/4.1.2.2/shadow-svn-2364.patch, shadow-4.1.2.2.ebuild:
+  Grab some fixes from upstream to fix building on uClibc systems #256784.
 
   02 Feb 2009; Raúl Porcel <armin76@gentoo.org> shadow-4.1.2.2.ebuild:
   ia64 stable wrt #251320
