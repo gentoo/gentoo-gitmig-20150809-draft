@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.21 2009/02/11 08:42:51 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.22 2009/02/11 10:03:12 lordvan Exp $
+
+  11 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org> axiom-0.5.30.ebuild:
+  fixed epsilon dep
 
   11 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org> axiom-0.5.30.ebuild:
   disable plugin cache update in src_install
