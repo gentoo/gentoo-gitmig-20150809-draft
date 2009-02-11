@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.ebuild,v 1.1 2009/02/11 20:32:01 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.ebuild,v 1.2 2009/02/11 22:17:31 tampakrap Exp $
 
 EAPI="2"
 
@@ -15,10 +15,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0.7"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="debug"
 
 RDEPEND=">=media-video/mplayer-1.0_rc1"
-DEPEND="${DEPEND}"
+
+CMAKE_IN_SOURCE_BUILD="1"
 
 src_prepare() {
 	# doc not working
@@ -32,8 +33,4 @@ src_prepare() {
 		"${S}"/kplayer/CMakeLists.txt
 
 	kde4-base_src_prepare
-}
-
-src_configure() {
-	cmake-utils_src_configurein
 }
