@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xpuyopuyo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpuyopuyo/ChangeLog,v 1.3 2008/06/26 08:43:21 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpuyopuyo/ChangeLog,v 1.4 2009/02/11 08:39:43 tupone Exp $
+
+  11 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/xpuyopuyo-0.9.8-as-needed.patch, xpuyopuyo-0.9.8.ebuild:
+  Fix --as-needed bug #247452 by flameeyes@gentoo.org
 
   26 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   xpuyopuyo-0.9.8.ebuild:

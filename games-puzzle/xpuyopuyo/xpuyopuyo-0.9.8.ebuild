@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpuyopuyo/xpuyopuyo-0.9.8.ebuild,v 1.4 2008/06/26 08:43:21 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xpuyopuyo/xpuyopuyo-0.9.8.ebuild,v 1.5 2009/02/11 08:39:43 tupone Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="A Tetris-like game with opponent"
@@ -17,13 +18,16 @@ DEPEND="=x11-libs/gtk+-1.2*
 	x11-libs/libXpm
 	media-libs/libmikmod"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+}
+
+src_configure() {
 	egamesconf \
 		--with-gnome \
 		--enable-aibreed \
 		--enable-network \
 		|| die
-	emake || die "make failed"
 }
 
 src_install() {
