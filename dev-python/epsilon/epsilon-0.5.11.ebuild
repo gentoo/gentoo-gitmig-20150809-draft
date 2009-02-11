@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.11.ebuild,v 1.2 2009/02/10 09:55:46 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.11.ebuild,v 1.3 2009/02/11 09:58:11 lordvan Exp $
 
-inherit distutils
+inherit twisted distutils
 
 DESCRIPTION="Epsilon is a Python utilities package, most famous for its Time class."
 HOMEPAGE="http://divmod.org/trac/wiki/DivmodEpsilon"
@@ -32,6 +32,9 @@ src_unpack() {
 	sed -i \
 		-e "s#bin/benchmark#bin/epsilon-benchmark#" \
 		setup.py || die "sed failed"
+	# otherwise we get sandbox violations as it wants to update 
+	# the plugin cache
+	epatch "${FILESDIR}/epsilon_plugincache_portagesandbox.patch"
 }
 
 src_compile() {
@@ -43,4 +46,12 @@ src_test() {
 	# release tests needs DivmodCombinator
 	rm epsilon/test/test_release.py*
 	PYTHONPATH=. trial epsilon || die "tests failed"
+}
+
+pkg_postrm() {
+	twisted_pkg_postrm
+}
+
+pkg_postinst() {
+	twisted_pkg_postinst
 }

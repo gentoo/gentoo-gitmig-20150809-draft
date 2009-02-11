@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.13 2009/02/11 08:28:49 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.14 2009/02/11 09:58:11 lordvan Exp $
+
+  11 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org> epsilon-0.5.9.ebuild,
+  epsilon-0.5.11.ebuild:
+  apply patch to 0.5.11 instead of 0.5.9 and update twisted plugin cache
+  afterwards
 
   11 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org> ChangeLog:
   patch so plugin cache update can be disabled with env var for ebuilds
