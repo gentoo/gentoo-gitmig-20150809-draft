@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdaemon
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.56 2008/10/05 20:22:00 eva Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/ChangeLog,v 1.57 2009/02/11 07:40:38 aballier Exp $
+
+  11 Feb 2009; Alexis Ballier <aballier@gentoo.org>
+  +files/libdaemon-0.13-bsd.patch, libdaemon-0.13-r1.ebuild:
+  add a patch from upstream to fix build on bsd/solaris
 
 *libdaemon-0.13-r1 (05 Oct 2008)
 

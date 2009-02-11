@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.13-r1.ebuild,v 1.1 2008/10/05 20:22:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdaemon/libdaemon-0.13-r1.ebuild,v 1.2 2009/02/11 07:40:38 aballier Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="Simple library for creating daemon processes in C"
 HOMEPAGE="http://0pointer.de/lennart/projects/libdaemon/"
@@ -18,7 +18,8 @@ DEPEND="doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
-
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-bsd.patch"
 	elibtoolize
 }
 
