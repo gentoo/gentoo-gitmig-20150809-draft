@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.2.ebuild,v 1.1 2009/01/18 17:44:04 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-2.2.ebuild,v 1.2 2009/02/11 20:45:44 loki_val Exp $
 
 EAPI=2
 
@@ -40,7 +40,7 @@ src_configure() {
 }
 
 src_install() {
-	mv_command="cp -ar" go-mono_src_install
+	mv_command="cp -pPR" go-mono_src_install
 	newinitd "${FILESDIR}"/${PV}/xsp.initd xsp || die
 	newinitd "${FILESDIR}"/${PV}/mod-mono-server.initd mod-mono-server || die
 	newconfd "${FILESDIR}"/${PV}/xsp.confd xsp || die
