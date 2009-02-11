@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.10 2007/03/12 18:17:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.11 2009/02/11 02:36:36 mr_bones_ Exp $
 
 inherit games
 
@@ -18,7 +18,6 @@ RDEPEND="x11-libs/libXext
 	!games-strategy/xbattleai"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
-	x11-libs/libX11
 	app-text/rman
 	x11-misc/imake"
 
