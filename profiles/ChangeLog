@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2346 2009/02/10 22:19:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2347 2009/02/11 09:06:50 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Feb 2009; Peter Volkov <pva@gentoo.org> package.mask:
+  Add dev-util/bzrtools-1.12.0 to mask as it depends on bzr-1.12
 
   10 Feb 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask xvid 1.2 as everything seems fine
