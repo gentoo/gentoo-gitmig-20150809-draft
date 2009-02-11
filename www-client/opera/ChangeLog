@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.317 2009/02/04 16:45:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.318 2009/02/11 18:24:26 jer Exp $
+
+*opera-10.00_pre4126-r1 (11 Feb 2009)
+
+  11 Feb 2009; Jeroen Roovers <jer@gentoo.org>
+  +opera-10.00_pre4126-r1.ebuild:
+  Correct spellcheck.so location in spellcheck.ini thanks to MageSlayer (bug
+  #258198). Die when spellcheck.so is not found. Refer to LINGUAS for
+  >app-text/aspell-0.60.5.
 
   04 Feb 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4126.ebuild:
   Depend on media-libs/libpng thanks to Constantine D. Kardaris (bug
