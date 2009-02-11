@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.3.1.ebuild,v 1.4 2007/06/22 22:33:19 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.3.1.ebuild,v 1.5 2009/02/11 05:35:13 dberkholz Exp $
 
 inherit autotools eutils
 
@@ -35,7 +35,6 @@ RDEPEND=">=sci-libs/gsl-1.3
 	sci-chemistry/ccp4
 	dev-lang/python
 	>=x11-libs/gtk-canvas-0.1.1-r2
-	dev-lang/python
 	dev-scheme/guile-gui
 	dev-scheme/net-http
 	dev-scheme/goosh
