@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.61 2009/01/31 14:34:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.62 2009/02/11 10:00:02 zzam Exp $
+
+*openrc-0.4.3 (11 Feb 2009)
+
+  11 Feb 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +files/0.4.3/0001-msg-style.patch,
+  +files/0.4.3/0002-useful-functions.patch, +files/0.4.3/0003-KV.patch,
+  +openrc-0.4.3.ebuild:
+  Version bumped. Fixes a lot of issues. Like clock skew handling.
+  wpa_supplicant stuff, openvz handling, s-s-d environment and umask.
 
   31 Jan 2009; Matthias Schwarzott <zzam@gentoo.org> openrc-0.4.2.ebuild,
   openrc-9999.ebuild:
