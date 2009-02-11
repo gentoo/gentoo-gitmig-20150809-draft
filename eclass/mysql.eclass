@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.103 2009/01/12 23:08:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.104 2009/02/11 11:27:13 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -10,7 +10,7 @@
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit eutils flag-o-matic gnuconfig autotools mysql_fx
+inherit eutils flag-o-matic gnuconfig autotools mysql_fx versionator
 
 # Shorten the path because the socket path length must be shorter than 107 chars
 # and we will run a mysql server during test phase
@@ -82,6 +82,9 @@ mysql_version_is_at_least "5.1.12" \
 
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
 PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
+
+# For other stuff to bring us in
+PDEPEND="${PDEPEND} =virtual/mysql-$(get_version_component_range 1-2 ${PV})"
 
 # Work out the default SERVER_URI correctly
 if [ -z "${SERVER_URI}" ]; then
