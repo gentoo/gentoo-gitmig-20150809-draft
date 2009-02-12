@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lash
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.22 2008/11/09 14:47:24 klausman Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.23 2009/02/12 03:15:31 darkside Exp $
+
+  12 Feb 2009; Jeremy Olexa <darkside@gentoo.org> lash-0.5.4-r1.ebuild:
+  amd64 stable, bug 258262
 
   09 Nov 2008; Tobias Klausmann <klausman@gentoo.org> lash-0.5.4-r1.ebuild:
   Stable on alpha, bug #245774
