@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.94.ebuild,v 1.2 2009/02/10 16:16:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.94-r1.ebuild,v 1.1 2009/02/12 16:17:25 voyageur Exp $
 
 EAPI="2"
 
@@ -12,13 +12,14 @@ DESCRIPTION="KDE-based frontend to diff3"
 HOMEPAGE="http://kdiff3.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kdiff3/${P}.tar.gz"
 
-SLOT="0"
+SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE="debug htmlhandbook"
 
 RDEPEND=">=kde-base/libkonq-${KDE_MINIMAL}[kdeprefix=]
-	sys-apps/diffutils"
+	sys-apps/diffutils
+	!kdeprefix? ( !kde-misc/kdiff3:0 )"
 
 src_prepare() {
 	# fix handbook
