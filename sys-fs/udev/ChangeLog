@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.445 2009/01/27 10:42:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.446 2009/02/12 17:52:01 jer Exp $
+
+  12 Feb 2009; Jeroen Roovers <jer@gentoo.org> udev-135-r4.ebuild:
+  Stable for HPPA (bug #254616).
 
   27 Jan 2009; Matthias Schwarzott <zzam@gentoo.org>
   files/udev-137-rules-update.diff, udev-137.ebuild, udev-9999.ebuild:
