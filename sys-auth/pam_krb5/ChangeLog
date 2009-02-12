@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.24 2009/02/12 13:54:18 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.25 2009/02/12 16:21:30 ranger Exp $
+
+  12 Feb 2009; Brent Baude <ranger@gentoo.org> pam_krb5-3.12.ebuild:
+  Marking pam_krb5-3.12 ppc for bug 257075
 
   12 Feb 2009; Michael Hammer <mueli@gentoo.org>
   +files/pam_krb5-3.12-CVE-2009-0361-0362.patch,
