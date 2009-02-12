@@ -1,15 +1,16 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24-r1.ebuild,v 1.1 2008/12/23 16:30:51 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24-r2.ebuild,v 1.1 2009/02/12 20:37:12 nelchael Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 PATCHLEVEL="5"
 
 DESCRIPTION="This is the DHCP/BOOTP client written by RedHat"
 HOMEPAGE="http://ftp.debian.org/debian/pool/main/p/pump/"
 SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV}.orig.tar.gz
-	mirror://debian/pool/main/p/${PN}/${PN}_${PV}-${PATCHLEVEL}.diff.gz"
+	mirror://debian/pool/main/p/${PN}/${PN}_${PV}-${PATCHLEVEL}.diff.gz
+	mirror://gentoo/${P}-patches.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,24 +18,23 @@ KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/popt-1.5"
+RDEPEND="${DEPEND}"
 PROVIDE="virtual/dhcpc"
 
 src_unpack() {
-	cd "${WORKDIR}"
-	unpack "${PN}_${PV}.orig.tar.gz"
+	unpack ${A}
 	cd "${S}"
 
 	# Apply Debians pump patchset - they fix things good :)
-	epatch "${DISTDIR}/${PN}_${PV}-${PATCHLEVEL}.diff.gz"
+	epatch "${WORKDIR}/${PN}_${PV}-${PATCHLEVEL}.diff"
 
-	# Enable the -m (--route-metric) option to specify the default
-	# metric applied to routes
-	# Enable the --keep-up option to keep interfaces up when we release
-	# Enable the creation of /etc/ntp.conf and the --no-ntp option
-	epatch "${FILESDIR}/pump-${PV}-gentoo.patch"
+	for i in "${WORKDIR}/${PV}/"*; do
+		epatch "${i}"
+	done
 
-	# Add an if defined around the definition of foo, just like in popt.h
-	epatch "${FILESDIR}/${P}-redefinition.patch"
+	sed -i \
+		-e 's,-Werror -g,,' \
+		Makefile || die "sed failed"
 
 	# Only install specific po files if LINGUAS is set
 	if [[ -n ${LINGUAS} ]]; then
@@ -47,7 +47,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make DEB_CFLAGS="-fPIC ${CFLAGS}" pump || die
+	make CC="$(tc-getCC)" DEB_CFLAGS="-fPIC ${CFLAGS}" pump || die
 }
 
 src_install() {
