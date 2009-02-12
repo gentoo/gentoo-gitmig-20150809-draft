@@ -1,0 +1,22 @@
+--- world/Makefile.in.old	2009-02-12 21:13:10.000000000 +0100
++++ world/Makefile.in	2009-02-12 21:13:26.000000000 +0100
+@@ -176,7 +176,7 @@
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+ libvamos_world_la_LDFLAGS =
+-libvamos_world_la_LIBADD =
++libvamos_world_la_LIBADD = `pkg-config --libs sigc++-1.2`
+ am_libvamos_world_la_OBJECTS = Atmosphere.lo World.lo Controls.lo \
+ 	Gl_World.lo Sounds.lo
+ libvamos_world_la_OBJECTS = $(am_libvamos_world_la_OBJECTS)
+--- media/Makefile.in.old	2009-02-12 21:13:35.000000000 +0100
++++ media/Makefile.in	2009-02-12 21:13:50.000000000 +0100
+@@ -174,7 +174,7 @@
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+ libvamos_media_la_LDFLAGS =
+-libvamos_media_la_LIBADD =
++libvamos_media_la_LIBADD = ../geometry/libvamos-geometry.la
+ am_libvamos_media_la_OBJECTS = Ac3d.lo Sample.lo Texture_Image.lo \
+ 	XML_Parser.lo
+ libvamos_media_la_OBJECTS = $(am_libvamos_media_la_OBJECTS)

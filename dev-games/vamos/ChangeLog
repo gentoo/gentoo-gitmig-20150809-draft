@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/vamos
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.8 2008/08/19 01:44:56 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.9 2009/02/12 20:38:59 tupone Exp $
+
+  12 Feb 2009; Tupone Alfredo <tupone@gentoo.org>
+  +files/vamos-0.5.5-as-needed.patch, +files/vamos-0.6.0-as-needed.patch,
+  vamos-0.5.5.ebuild, vamos-0.6.0.ebuild:
+  Fix --as-needed bug #250072 by flameeyes@gentoo.org
 
   19 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/vamos-0.6.0-gcc43.patch, vamos-0.6.0.ebuild:

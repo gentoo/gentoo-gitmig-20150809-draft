@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.5.5.ebuild,v 1.2 2006/02/10 16:25:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.5.5.ebuild,v 1.3 2009/02/12 20:38:59 tupone Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="an automotive simulation framework"
@@ -21,6 +22,10 @@ RDEPEND="media-libs/libpng
 
 DEPEND="${RDEPEND}
 	media-libs/plib"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install"

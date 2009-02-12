@@ -1,0 +1,32 @@
+--- world/Makefile.in.old	2009-02-12 20:30:44.000000000 +0100
++++ world/Makefile.in	2009-02-12 20:31:31.000000000 +0100
+@@ -155,7 +155,7 @@
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+ libvamos_world_la_LDFLAGS =
+-libvamos_world_la_LIBADD =
++libvamos_world_la_LIBADD = `pkg-config --libs sigc++-1.2`
+ am_libvamos_world_la_OBJECTS = Atmosphere.lo World.lo Controls.lo \
+ 	Gl_World.lo Sounds.lo
+ libvamos_world_la_OBJECTS = $(am_libvamos_world_la_OBJECTS)
+--- caelum/Sky.cc.old	2009-02-12 20:35:43.000000000 +0100
++++ caelum/Sky.cc	2009-02-12 20:36:03.000000000 +0100
+@@ -19,6 +19,7 @@
+ #include "Sky.h"
+ 
+ #include <cassert>
++#include <cstdlib>
+ 
+ // Windows puts OpenGL 1.2 and 1.3 stuff in glext.h.
+ #if HAVE_GL_GLEXT_H
+--- media/Makefile.in.old	2009-02-12 20:37:50.000000000 +0100
++++ media/Makefile.in	2009-02-12 20:39:12.000000000 +0100
+@@ -150,7 +150,7 @@
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+ libvamos_media_la_LDFLAGS =
+-libvamos_media_la_LIBADD =
++libvamos_media_la_LIBADD = ../geometry/libvamos-geometry.la
+ am_libvamos_media_la_OBJECTS = Ac3d.lo Sample.lo Texture_Image.lo
+ libvamos_media_la_OBJECTS = $(am_libvamos_media_la_OBJECTS)
+ 
