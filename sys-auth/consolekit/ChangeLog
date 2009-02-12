@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.36 2009/02/09 17:55:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.37 2009/02/12 03:11:07 darkside Exp $
+
+  12 Feb 2009; Jeremy Olexa <darkside@gentoo.org> consolekit-0.2.10.ebuild:
+  amd64 stable, bug 242270
 
   09 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
   consolekit-0.2.10.ebuild:
