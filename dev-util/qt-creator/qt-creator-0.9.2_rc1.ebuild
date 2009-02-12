@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-0.9.2_rc1.ebuild,v 1.1 2009/02/11 23:35:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-0.9.2_rc1.ebuild,v 1.2 2009/02/12 17:25:00 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -28,7 +28,6 @@ DEPEND=">=x11-libs/qt-assistant-4.5.0_rc1
 
 RDEPEND="${DEPEND}
 	|| ( media-sound/phonon >=x11-libs/qt-phonon-4.5.0_rc1 )"
-
 
 src_prepare() {
 	epatch "${FILESDIR}/fix_headers_git.patch"
