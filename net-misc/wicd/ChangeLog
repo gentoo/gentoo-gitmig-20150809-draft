@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.33 2009/02/09 22:40:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.34 2009/02/12 03:37:29 darkside Exp $
+
+  12 Feb 2009; Jeremy Olexa <darkside@gentoo.org> wicd-1.5.9.ebuild:
+  init script isn't executable by default, sorry - didn't catch that
 
   09 Feb 2009; Jeremy Olexa <darkside@gentoo.org> wicd-1.5.9.ebuild:
   rely on upstream's init script, they package everyone elses and are
