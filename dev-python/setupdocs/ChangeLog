@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/setupdocs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.1 2009/01/15 09:30:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.2 2009/02/12 11:48:37 bicatali Exp $
+
+  12 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  setupdocs-1.0.1.ebuild:
+  Added setuptools as building dependency
 
 *setupdocs-1.0.1 (15 Jan 2009)
 
