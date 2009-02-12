@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-8.02.ebuild,v 1.2 2008/06/01 03:34:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-8.02.ebuild,v 1.3 2009/02/12 04:42:37 dirtyepic Exp $
 
 inherit autotools wxwidgets flag-o-matic eutils
 
@@ -35,6 +35,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}/${PV}-version.patch"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 	#epatch "${FILESDIR}/${PV}-install-plugins.patch"
 	cd "${S}"
 	find src/plugins -name Makefile.am -exec \

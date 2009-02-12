@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/codeblocks
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.13 2008/06/01 00:12:46 jurek Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.14 2009/02/12 04:42:37 dirtyepic Exp $
+
+  12 Feb 2009; Ryan Hill <dirtyepic@gentoo.org>
+  +files/codeblocks-8.02-gcc43.patch, codeblocks-8.02.ebuild:
+  Fix building with gcc-4.3 for bug #256218. Thanks to Nick S. Novikov for
+  the patch.
 
 *codeblocks-8.02 (01 Jun 2008)
 
