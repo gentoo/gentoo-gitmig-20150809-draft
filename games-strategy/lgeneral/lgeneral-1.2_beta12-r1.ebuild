@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta12-r1.ebuild,v 1.6 2007/05/24 06:35:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta12-r1.ebuild,v 1.7 2009/02/12 09:13:08 tupone Exp $
 
+EAPI=2
 inherit eutils autotools games
 
 MY_P="${P/_/}"
@@ -24,14 +25,13 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gentoo-path.patch \
 		"${FILESDIR}"/${P}-gettext.patch \
 		"${FILESDIR}"/${P}-64bit.patch \
-		"${FILESDIR}"/${P}-build.patch
+		"${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
 
 	cp /usr/share/gettext/config.rpath .
 	rm -f missing
@@ -53,12 +53,11 @@ src_unpack() {
 		|| die "sed failed (tmp)"
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		$(use_enable nls) \
 		|| die
-	emake || die "emake failed"
 
 	# Build the temporary lgc-pg:
 	cd "${WORKDIR}"/tmp-build
@@ -67,6 +66,13 @@ src_compile() {
 		--disable-nls \
 		--datadir="${D}/${GAMES_DATADIR}" \
 		|| die
+}
+
+src_compile() {
+	emake || die "emake failed"
+
+	# Build the temporary lgc-pg:
+	cd "${WORKDIR}"/tmp-build
 	emake || die "emake failed (tmp)"
 }
 
