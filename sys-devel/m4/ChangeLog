@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.119 2009/02/12 07:36:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.120 2009/02/12 16:09:09 fmccor Exp $
+
+  12 Feb 2009; Ferris McCormick <fmccor@gentoo.org> m4-1.4.12.ebuild:
+  Sparc stable, Bug #258525.
 
   12 Feb 2009; Jeroen Roovers <jer@gentoo.org> m4-1.4.12.ebuild:
   Stable for HPPA (bug #258525).
