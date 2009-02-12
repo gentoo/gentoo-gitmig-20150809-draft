@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.562 2009/02/12 19:05:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.563 2009/02/12 22:02:51 alexxy Exp $
+
+  12 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdelibs-3.5.8-r4.ebuild:
+  Drop stalled kde 3.5.[45678] ebuilds
 
   12 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
   +files/4.2.0-kcatalog.patch, kdelibs-4.2.0-r2.ebuild:

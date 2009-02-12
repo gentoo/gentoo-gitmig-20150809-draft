@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/pykde
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.40 2008/09/14 00:00:35 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.41 2009/02/12 22:07:16 alexxy Exp $
+
+  12 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/pykde-3.5.5-python-2.5-compat.diff,
+  -files/pykde-3.5.6-python-2.4.patch, -files/configure.py.diff,
+  -pykde-3.5.5-r2.ebuild, -pykde-3.5.7.ebuild, -pykde-3.5.8.ebuild:
+  Drop stalled kde 3.5.[45678] ebuilds
 
 *pykde-3.5.10 (13 Sep 2008)
 
