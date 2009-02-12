@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.13 2009/01/29 19:58:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.14 2009/02/12 20:41:47 mr_bones_ Exp $
+
+  12 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  hedgewars-0.9.9.ebuild:
+  use cmake-utils funcs
 
 *hedgewars-0.9.9 (29 Jan 2009)
 

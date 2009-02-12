@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.9.ebuild,v 1.1 2009/01/29 19:58:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.9.ebuild,v 1.2 2009/02/12 20:41:47 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit cmake-utils eutils games
 
 MY_P=${PN}-src-${PV}
 DESCRIPTION="Free Worms-like turn based strategy game"
@@ -31,18 +31,18 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_configure() {
-	cmake \
-		-DCMAKE_CXX_FLAGS="${CXXFLAGS}" \
-		-DCMAKE_INSTALL_PREFIX="${GAMES_PREFIX}" \
-		-DDATA_INSTALL_DIR="${GAMES_DATADIR}" \
-		. || die "cmake failed"
+	mycmakeargs="-DCMAKE_INSTALL_PREFIX=${GAMES_PREFIX} -DDATA_INSTALL_DIR=${GAMES_DATADIR}"
+	cmake-utils_src_configure
+}
+
+src_compile() {
+	cmake-utils_src_compile
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	DOCS="ChangeLog.txt README" cmake-utils_src_install
 	newicon QTfrontend/res/hh25x25.png ${PN}.png
 	make_desktop_entry ${PN} Hedgewars
-	dodoc ChangeLog.txt README
 	doman man/${PN}.6
 	prepgamesdirs
 }
