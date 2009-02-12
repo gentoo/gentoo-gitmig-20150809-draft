@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.43 2009/02/11 19:45:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.44 2009/02/12 01:51:19 carlo Exp $
+
+  12 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  kipi-plugins-0.1.4-r2.ebuild, kipi-plugins-0.1.7.ebuild:
+  Fix bug #232056 and #236721. Switch to proper use dependencies.
 
 *kipi-plugins-0.1.7 (11 Feb 2009)
 
