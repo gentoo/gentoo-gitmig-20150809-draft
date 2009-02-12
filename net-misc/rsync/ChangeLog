@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.184 2009/02/12 03:38:17 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.185 2009/02/12 18:08:44 nixnut Exp $
+
+  12 Feb 2009; nixnut <nixnut@gentoo.org> rsync-3.0.5.ebuild:
+  ppc stable #258367
 
   12 Feb 2009; Jeremy Olexa <darkside@gentoo.org> rsync-3.0.5.ebuild:
   amd64 stable, bug 258367
