@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.103 2009/02/08 16:23:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.104 2009/02/12 18:14:34 nixnut Exp $
+
+  12 Feb 2009; nixnut <nixnut@gentoo.org> kismet-2008.05.1.ebuild:
+  ppc stable #245565
 
   08 Feb 2009; Markus Meier <maekke@gentoo.org> kismet-2008.05.1.ebuild:
   amd64/x86 stable, bug #245565
