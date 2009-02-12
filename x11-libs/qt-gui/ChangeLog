@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.27 2009/02/11 23:16:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.28 2009/02/12 06:50:19 yngwin Exp $
+
+  12 Feb 2009; Ben de Groot <yngwin@gentoo.org>
+  +files/hardcoded_fonts.patch:
+  Add patch. Fixes bug 258670.
 
 *qt-gui-4.5.0_rc1 (11 Feb 2009)
 
