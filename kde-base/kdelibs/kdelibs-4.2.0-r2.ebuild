@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.0-r2.ebuild,v 1.1 2009/02/09 22:22:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.0-r2.ebuild,v 1.2 2009/02/12 19:05:37 alexxy Exp $
 
 EAPI="2"
 
@@ -101,12 +101,13 @@ RDEPEND="${COMMONDEPEND}
 
 # upstream patches
 PATCHES=(
-	"$FILESDIR/$PV-kded.patch"
-	"$FILESDIR/$PV-kio_copy.patch"
-	"$FILESDIR/$PV-klauncher.patch"
-	"$FILESDIR/$PV-klauncher_konsole.patch"
-	"$FILESDIR/$PV-kode_crash.patch"
-	"$FILESDIR/$PV-kio_http.patch"
+	"${FILESDIR}/${PV}-kded.patch"
+	"${FILESDIR}/${PV}-kio_copy.patch"
+	"${FILESDIR}/${PV}-klauncher.patch"
+	"${FILESDIR}/${PV}-klauncher_konsole.patch"
+	"${FILESDIR}/${PV}-kode_crash.patch"
+	"${FILESDIR}/${PV}-kio_http.patch"
+	"${FILESDIR}/${PV}-kcatalog.patch"
 )
 
 src_configure() {

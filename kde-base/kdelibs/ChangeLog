@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.561 2009/02/09 22:22:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.562 2009/02/12 19:05:37 alexxy Exp $
+
+  12 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +files/4.2.0-kcatalog.patch, kdelibs-4.2.0-r2.ebuild:
+  Add kcatalog.patch; fix bug #258660
 
 *kdelibs-4.2.0-r2 (09 Feb 2009)
 
