@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.25 2009/02/11 23:15:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.26 2009/02/12 01:45:05 hwoarang Exp $
+
+  12 Feb 2009; Markos Chandras <hwoarang@gentoo.org> +files/moc.pro,
+  +files/rcc.pro, +files/uic.pro, qt-core-4.5.0_rc1.ebuild:
+  Add missing files, add bootstrap build target ( see bug #258667 )
 
   11 Feb 2009; Ben de Groot <yngwin@gentoo.org> ChangeLog:
   Version bump
