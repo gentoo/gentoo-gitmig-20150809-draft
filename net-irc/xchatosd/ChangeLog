@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchatosd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/ChangeLog,v 1.21 2007/02/23 11:10:53 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchatosd/ChangeLog,v 1.22 2009/02/12 05:17:54 dirtyepic Exp $
+
+  12 Feb 2009; Ryan Hill <dirtyepic@gentoo.org>
+  +files/xchatosd-5.19-gcc43.patch, xchatosd-5.19.ebuild:
+  Fix building w/ gcc-4.3 for bug #251449. Thanks to Gene Seto for the
+  patch.
 
   23 Feb 2007; Raúl Porcel <armin76@gentoo.org> xchatosd-5.19.ebuild:
   Remove ROOT, bug 168039
