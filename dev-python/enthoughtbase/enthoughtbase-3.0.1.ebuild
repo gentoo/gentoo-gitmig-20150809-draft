@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.0.1.ebuild,v 1.1 2009/01/15 09:35:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.0.1.ebuild,v 1.2 2009/02/12 11:55:30 bicatali Exp $
 
 EAPI=2
 inherit distutils
@@ -32,6 +32,7 @@ src_prepare() {
 src_compile() {
 	distutils_src_compile
 	if use doc; then
+		export VARTEXFONTS="${T}/fonts"
 		${python} setup.py build_docs --formats=html,pdf \
 			|| die "doc building failed"
 	fi
