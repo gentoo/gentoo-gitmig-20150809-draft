@@ -1,24 +1,24 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/files/fms,v 1.2 2009/02/05 18:54:52 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/files/fms,v 1.3 2009/02/12 18:07:25 tommy Exp $
 
 start() {
 	ebegin "Starting FMS"
-	if [ ! -f /etc/init.d/sysfs ]; then
-		start-stop-daemon -S -u freenet:freenet -d /var/freenet/fms -x ./fms --daemon
+	if [[ -f /etc/init.d/sysfs ]]; then
+		start-stop-daemon -S -u freenet:freenet -d /var/freenet/fms -b -x /usr/bin/fms
 		eend $?
 	else
 		cd /var/freenet/fms
-		su -s /bin/sh -c "./fms --daemon" freenet
+		su -s /bin/sh -c "fms --daemon" freenet
 		eend $?
 	fi
 }
 
 stop() {
 	ebegin "Stopping FMS"
-	if [ ! -f /etc/init.d/sysfs ]; then
-		start-stop-daemon -K -u freenet:freenet -d /var/freenet/fms ./fms --daemon
+	if [[ -f /etc/init.d/sysfs ]]; then
+		start-stop-daemon -K -u freenet:freenet -d /var/freenet/fms /usr/bin/fms
 		eend $?
 	else
 		pkill -u freenet -f "fms --daemon"
