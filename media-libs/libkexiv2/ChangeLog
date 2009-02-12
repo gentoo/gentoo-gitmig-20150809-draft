@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkexiv2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.23 2009/02/11 21:08:57 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.24 2009/02/12 00:05:16 carlo Exp $
+
+  12 Feb 2009; Carsten Lohrke <carlo@gentoo.org> libkexiv2-0.1.8-r1.ebuild:
+  Precious typography, bug #258656.
 
   11 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
   libkexiv2-0.1.8-r1.ebuild:
