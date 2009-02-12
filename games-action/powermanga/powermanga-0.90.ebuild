@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.5 2009/01/06 21:51:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.90.ebuild,v 1.6 2009/02/12 16:39:38 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,6 +15,9 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-0.11.0
+	media-libs/libpng
+	x11-libs/libXext
+	x11-libs/libXxf86dga
 	media-libs/sdl-mixer[mikmod]"
 
 src_prepare() {
