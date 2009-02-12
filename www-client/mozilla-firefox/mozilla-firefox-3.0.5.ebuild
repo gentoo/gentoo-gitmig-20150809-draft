@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.5.ebuild,v 1.12 2009/01/25 20:22:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.5.ebuild,v 1.13 2009/02/12 03:46:03 jer Exp $
 EAPI="1"
 WANT_AUTOCONF="2.1"
 
@@ -279,7 +279,7 @@ src_install() {
 		# Create /usr/bin/firefox
 		cat <<EOF >"${D}"/usr/bin/firefox
 #!/bin/sh
-export LD_LIBRARY_PATH="${MOZILLA_FIVE_HOME}"
+export LD_LIBRARY_PATH="${MOZILLA_FIVE_HOME}:${LD_LIBRARY_PATH}"
 exec "${MOZILLA_FIVE_HOME}"/firefox "\$@"
 EOF
 		fperms 0755 /usr/bin/firefox
