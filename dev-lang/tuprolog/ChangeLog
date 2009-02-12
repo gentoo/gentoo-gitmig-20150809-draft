@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tuprolog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.26 2009/01/07 19:22:52 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.27 2009/02/12 17:39:50 nixnut Exp $
+
+  12 Feb 2009; nixnut <nixnut@gentoo.org> tuprolog-2.1.1.ebuild:
+  ppc stable #258681
 
   07 Jan 2009; <keri@gentoo.org> +files/tuprolog-2.1.1-javadocs.patch:
   Fix up binary javadocs.patch files/tuprolog-2.1.1-javadocs.patch
