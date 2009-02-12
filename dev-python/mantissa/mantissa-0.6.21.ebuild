@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.6.21.ebuild,v 1.2 2009/02/11 08:56:10 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.6.21.ebuild,v 1.3 2009/02/12 08:58:12 lordvan Exp $
 
 inherit twisted distutils eutils
 
@@ -41,7 +41,7 @@ src_test() {
 
 src_install() {
 	export PORTAGE_PLUGINCACHE_NOOP=1
-	distutils_install
+	distutils_src_install
 	unset PORTAGE_PLUGINCACHE_NOOP
 }
 
