@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-1.5012.ebuild,v 1.1 2008/10/23 14:23:59 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2009.2.1.ebuild,v 1.1 2009/02/12 16:21:24 chutzpah Exp $
 
 MY_PN="${PN/3g/-3g}"
 MY_P="${MY_PN}-${PV}"
@@ -38,7 +38,7 @@ src_install() {
 
 	if use hal; then
 		insinto /etc/hal/fdi/policy/
-		doins "${FILESDIR}/10-ntfs3g.fdi"
+		newins "${FILESDIR}/10-ntfs3g.fdi.2009" "10-ntfs3g.fdi"
 	fi
 }
 
