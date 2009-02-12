@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.3 2009/01/21 18:56:27 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.4 2009/02/12 03:05:39 jsbronder Exp $
 
 EAPI=1
 inherit python eutils fortran
@@ -71,9 +71,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-site-packages-py.patch
 
 	# Respect the env var MPD_CONF_FILE
+	# TODO:  Send upstream
 	epatch "${FILESDIR}"/${P}-mpdconf-env.patch
 
 	# Fix gforker instal-alt
+	# TODO:  Send upstream
 	epatch "${FILESDIR}"/${P}-gforker-install-alt-fix.patch
 
 	# We need f90 to include the directory with mods, and to
@@ -85,7 +87,12 @@ src_unpack() {
 		$(find ./test/ -name 'Makefile.in') || die
 
 	# 254167, I'm pretty sure they meant srcdir in the path to remove files.
+	# TODO:  Send upstream
 	sed -i 's:scrdir:srcdir:g' "${S}"/src/pm/mpd/Makefile.in || die
+
+	# #257821, fix the pkgconfig file.
+	# TODO:  Send upstream
+	epatch "${FILESDIR}"/${P}-pkgconfig.patch
 
 	if ! use romio; then
 		# These tests in errhan/ rely on MPI::File ...which is in romio
