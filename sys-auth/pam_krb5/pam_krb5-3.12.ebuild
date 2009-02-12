@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-3.12.ebuild,v 1.1 2009/02/12 09:28:40 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/pam_krb5-3.12.ebuild,v 1.2 2009/02/12 13:54:18 mueli Exp $
 
 inherit multilib eutils pam
 
@@ -20,7 +20,7 @@ S="${WORKDIR}/${P/_/-}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-CVE-20090211.patch"
+	epatch "${FILESDIR}/${P}-CVE-2009-0361-0362.patch"
 }
 
 src_compile() {
