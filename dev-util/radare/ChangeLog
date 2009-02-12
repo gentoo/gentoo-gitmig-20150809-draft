@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/radare
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.1 2008/07/31 17:54:59 deathwing00 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.2 2009/02/12 14:00:05 deathwing00 Exp $
+
+*radare-1.2.1 (12 Feb 2009)
+
+  12 Feb 2009; Ioannis Aslanidis <iaslanidis@gentoo.org> metadata.xml,
+  +radare-1.2.1.ebuild:
+  Version bump. Parallel build is bogus and creates race conditions. Created a
+  local use flag to optionally build the gui. Currently there are a few missing
+  dependencies that need to be fixed sooner or later for the gui to work
+  properly.
 
 *radare-0.9.9 (31 Jul 2008)
 

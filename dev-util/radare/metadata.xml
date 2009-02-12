@@ -2,6 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>kde</herd>
+<use>
+  <flag name='gui'>
+    Enable the graphical user interface of radare (broken)
+  </flag>
+</use>
 <maintainer>
 <email>deathwing00@gentoo.org</email>
 <name>Ioannis Aslanidis</name>
