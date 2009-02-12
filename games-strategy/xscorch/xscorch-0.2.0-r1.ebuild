@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/xscorch-0.2.0-r1.ebuild,v 1.4 2008/03/25 15:42:11 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/xscorch-0.2.0-r1.ebuild,v 1.5 2009/02/12 14:57:18 tupone Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="clone of the classic DOS game, 'Scorched Earth'"
@@ -18,15 +19,14 @@ IUSE="gtk mikmod"
 DEPEND="gtk? ( =x11-libs/gtk+-1* )
 	mikmod? ( media-libs/libmikmod )"
 
-src_unpack() {
-	unpack ${P}.tar.gz
-	cd "${S}"
+src_prepare() {
 	epatch \
-		"${DISTDIR}/${P}-64bit.patch.gz" \
-		"${DISTDIR}/${P}-stack-smash.patch.gz"
+		"${WORKDIR}"/${P}-64bit.patch \
+		"${WORKDIR}"/${P}-stack-smash.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
 }
 
-src_compile() {
+src_configure() {
 	#configure failed on readline support
 	egamesconf \
 		--enable-network \
@@ -34,7 +34,6 @@ src_compile() {
 		$(use_enable mikmod sound) \
 		$(use_with gtk) \
 		|| die
-	emake || die "emake failed"
 }
 
 src_install() {
