@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkdcraw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/ChangeLog,v 1.16 2009/02/11 21:09:51 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/ChangeLog,v 1.17 2009/02/13 10:32:18 carlo Exp $
+
+*libkdcraw-0.1.4-r2 (13 Feb 2009)
+
+  13 Feb 2009; Carsten Lohrke <carlo@gentoo.org> +libkdcraw-0.1.4-r2.ebuild:
+  Add another revision for digiKam 0.9.4.
 
   11 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
   libkdcraw-0.1.4-r1.ebuild:
