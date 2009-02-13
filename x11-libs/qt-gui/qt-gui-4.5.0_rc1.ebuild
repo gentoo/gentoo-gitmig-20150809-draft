@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.5.0_rc1.ebuild,v 1.2 2009/02/13 17:29:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.5.0_rc1.ebuild,v 1.3 2009/02/13 23:05:35 hwoarang Exp $
 
 EAPI="2"
 inherit eutils qt4-build
@@ -47,6 +47,18 @@ QT4_EXTRACT_DIRECTORIES="
 include/
 src/
 tools/shared/"
+
+pkg_setup() {
+	if use raster; then
+		ewarn
+		ewarn "You have enabled raster backend rendering engine."
+		ewarn "This is a new feature and might lead to composite problems"
+		ewarn "or screen corruption."
+		ewarn
+		ebeep 3
+	fi
+	qt4-build_pkg_setup
+}
 
 src_unpack() {
 	use dbus && QT4_TARGET_DIRECTORIES="${QT4_TARGET_DIRECTORIES} tools/qdbus/qdbusviewer"
