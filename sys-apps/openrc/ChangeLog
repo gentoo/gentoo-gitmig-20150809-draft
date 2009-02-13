@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.63 2009/02/11 14:31:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.64 2009/02/13 09:07:16 zzam Exp $
+
+*openrc-0.4.3-r1 (13 Feb 2009)
+
+  13 Feb 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +files/openrc-0.4.3-fix-is_older_than.patch, +openrc-0.4.3-r1.ebuild:
+  Fix is_older_than, Bug #258688.
 
   11 Feb 2009; Doug Goldstein <cardoe@gentoo.org>
   -files/0.4.3/0001-msg-style.patch,
