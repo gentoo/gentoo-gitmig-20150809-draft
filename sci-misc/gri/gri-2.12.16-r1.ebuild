@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.16-r1.ebuild,v 1.5 2008/08/24 17:29:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/gri-2.12.16-r1.ebuild,v 1.6 2009/02/13 20:52:35 phosphan Exp $
 
 inherit eutils elisp-common
 
@@ -24,7 +24,7 @@ SITEFILE="50gri-gentoo.el"
 
 src_compile() {
 	econf || die "econf failed."
-	emake || die "emake failed."
+	VARTEXFONTS="${T}/fonts" emake || die "emake failed."
 	if use emacs; then
 		elisp-compile src/*.el || die "elisp-compile failed"
 	fi

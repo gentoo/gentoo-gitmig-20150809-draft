@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/gri
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.25 2009/02/13 20:44:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.26 2009/02/13 20:52:35 phosphan Exp $
+
+  13 Feb 2009; Patrick Kursawe <phosphan@gentoo.org> gri-2.12.16-r1.ebuild,
+  gri-2.12.18.ebuild:
+  Setting VARTEXFONTS (see bug #223077)
 
   13 Feb 2009; Patrick Kursawe <phosphan@gentoo.org> -gri-2.12.17.ebuild:
   Removed unneeded version.
