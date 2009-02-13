@@ -2,5 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>cjk</herd>
+<longdescription lang="en">
+  gWaei is a drop-in replacement for Gjiten. The main
+  feature of this dictonary program is regular expression
+  support. For example, you can use periods in place of
+  unknown Kanji of a word to search for it.
+</longdescription>
+<use>
+  <flag name='libsexy'>Enable support for <pkg>x11-libs/libsexy</pkg></flag>
+</use>
 </pkgmetadata>
 
