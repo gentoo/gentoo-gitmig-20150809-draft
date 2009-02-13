@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/clipgrab-2.0_beta2.ebuild,v 1.3 2008/10/04 17:31:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/clipgrab-2.0_beta2.ebuild,v 1.4 2009/02/13 21:52:57 yngwin Exp $
 
+EAPI=1
 inherit qt4 versionator
 
 MY_PV=$(replace_version_separator 2 '-' )
@@ -16,7 +17,7 @@ SLOT="0"
 KEYWORDS="sparc x86"
 IUSE="debug"
 
-DEPEND="=x11-libs/qt-4*"
+DEPEND="x11-libs/qt-gui:4"
 RDEPEND="x11-misc/xdg-utils
 		media-video/ffmpeg
 		${DEPEND}"
