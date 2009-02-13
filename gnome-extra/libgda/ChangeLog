@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.123 2009/02/09 21:27:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.124 2009/02/13 15:59:37 ranger Exp $
+
+  13 Feb 2009; Brent Baude <ranger@gentoo.org> libgda-3.0.4.ebuild:
+  stable ppc64, bug 258192
 
   09 Feb 2009; Markus Meier <maekke@gentoo.org> libgda-3.0.4.ebuild:
   amd64/x86 stable, bug #258192
