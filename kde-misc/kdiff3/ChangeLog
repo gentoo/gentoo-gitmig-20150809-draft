@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.33 2009/02/12 16:17:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.34 2009/02/13 15:56:22 ranger Exp $
+
+  13 Feb 2009; Brent Baude <ranger@gentoo.org> kdiff3-0.9.94-r1.ebuild:
+  Marking kdiff3-0.9.94-r1 ~ppc64 for bug 258384
 
 *kdiff3-0.9.94-r1 (12 Feb 2009)
 
