@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.2a_p2.ebuild,v 1.1 2009/02/11 15:46:49 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-3.2a_p2.ebuild,v 1.2 2009/02/13 13:20:36 hkbst Exp $
 
 inherit elisp-common multilib
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-libs/boehm-gc-7.1
 
 RDEPEND="dev-libs/boehm-gc"
 
-S=${WORKDIR}/${MY_P%-*}
+S=${WORKDIR}/${MY_P}
 
 SITEFILE="50bigloo-gentoo.el"
 
