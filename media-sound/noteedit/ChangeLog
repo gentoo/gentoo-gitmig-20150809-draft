@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/noteedit
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.34 2008/06/25 17:24:22 aballier Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.35 2009/02/13 23:07:23 carlo Exp $
+
+*noteedit-2.8.1-r2 (13 Feb 2009)
+
+  13 Feb 2009; Carsten Lohrke <carlo@gentoo.org> +noteedit-2.8.1-r2.ebuild:
+  Get rid of invalid aRts dependency.
 
   25 Jun 2008; Alexis Ballier <aballier@gentoo.org>
   +files/noteedit-2.8.1+gcc-4.3.1.patch, noteedit-2.8.1-r1.ebuild:
