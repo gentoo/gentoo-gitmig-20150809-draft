@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.144 2009/02/12 21:13:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.145 2009/02/13 02:17:41 gentoofan23 Exp $
+
+  13 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org> man-1.6f-r3.ebuild:
+  stable amd64, bug 258767
 
   12 Feb 2009; Brent Baude <ranger@gentoo.org> man-1.6f-r3.ebuild:
   stable ppc64, bug 258767
