@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/gri
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.24 2008/11/01 15:10:31 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gri/ChangeLog,v 1.25 2009/02/13 20:44:14 phosphan Exp $
+
+  13 Feb 2009; Patrick Kursawe <phosphan@gentoo.org> -gri-2.12.17.ebuild:
+  Removed unneeded version.
 
   01 Nov 2008; Markus Dittrich <markusle@gentoo.org>
   +files/gri-2.12.18-postscript.patch, gri-2.12.18.ebuild:
