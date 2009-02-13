@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.0.ebuild,v 1.1 2009/01/04 15:00:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.0a.ebuild,v 1.1 2009/02/13 11:53:02 scarabeus Exp $
 
 EAPI="2"
 
-NEED_KDE="4.1"
 inherit kde4-base
 
 MY_P="${P/_/-}"
@@ -15,7 +14,7 @@ SRC_URI="http://${PN}.kde.org/pkgs/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="4.1"
-IUSE="cairo npp"
+IUSE="cairo htmlhandbook npp"
 
 DEPEND="
 	>=dev-libs/expat-2.0.1
@@ -34,14 +33,24 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	# fixup icon install
 	sed -i \
-		-e "s:add_subdirectory(icons):#add_subdirectory(icons):g"\
+		-e "s:add_subdirectory(icons):#add_subdirectory(icons):g" \
 		CMakeLists.txt || die "removing icons failed"
+	# fixup htmlhandbook
+	if ! use htmlhandbook; then
+		sed -i \
+			-e "s:add_subdirectory(doc):#add_subdirectory(doc):g" \
+			CMakeLists.txt || die "removing docs failed"
+	else
+		# fix the install dir for docs
+		sed -i \
+			-e "s:\${HTML_INSTALL_DIR}:\${HTML_INSTALL_DIR}/${PF}:g" \
+			doc/CMakeLists.txt || die "fixing target dir failed"
+	fi
 	kde4-base_src_prepare
 }
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
-		-DCMAKE_INSTALL_PREFIX=${KDEDIR}
 		$(cmake-utils_use_with cairo CAIRO)
 		$(cmake-utils_use_with npp NPP)"
 	kde4-base_src_configure
