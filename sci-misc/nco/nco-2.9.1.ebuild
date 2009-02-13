@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-2.9.1.ebuild,v 1.5 2008/05/04 15:41:44 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-2.9.1.ebuild,v 1.6 2009/02/13 20:59:15 phosphan Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ src_compile() {
 
 	#need to make info
 	cd doc
-	make
+	VARTEXFONTS="${T}/fonts" make
 }
 
 src_install() {

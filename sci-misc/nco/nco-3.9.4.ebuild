@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.9.4.ebuild,v 1.1 2008/05/04 15:41:44 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.9.4.ebuild,v 1.2 2009/02/13 20:59:15 phosphan Exp $
 
 DESCRIPTION="Command line utilities for operating on netCDF files"
 SRC_URI="http://dust.ess.uci.edu/nco/src/${P}.tar.gz"
@@ -40,7 +40,7 @@ src_compile() {
 	cd doc
 	emake clean info
 	if use doc; then
-		emake html pdf || die "emake doc failed"
+		VARTEXFONTS="${T}/fonts" emake html pdf || die "emake doc failed"
 	fi
 }
 
