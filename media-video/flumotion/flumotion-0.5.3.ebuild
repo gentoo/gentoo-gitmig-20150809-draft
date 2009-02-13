@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.5.2.ebuild,v 1.3 2009/02/13 11:48:58 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/flumotion-0.5.3.ebuild,v 1.1 2009/02/13 11:48:58 deathwing00 Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 autotools
 
 DESCRIPTION="Flumotion Streaming server"
 HOMEPAGE="http://www.flumotion.net"
@@ -45,6 +45,12 @@ DOCS="AUTHORS COPYING ChangeLog INSTALL \
 	  LICENCE.Flumotion LICENCE.GPL \
 	  NEWS README TODO"
 
+src_unpack() {
+	unpack ${A} && cd "${S}"
+	epatch "${FILESDIR}/${P}-missing-files.diff"
+	eautoreconf
+}
+
 src_compile() {
 	addpredict "$(unset HOME; echo ~)/.gconf"
 	addpredict "$(unset HOME; echo ~)/.gconfd"
@@ -52,7 +58,7 @@ src_compile() {
 	export HOME="${T}/home"
 	export GST_REGISTRY=${T}/home/registry.cache.xml
 	unset LINGUAS
-	econf --disable-install-schemas --localstatedir=/var || die
+	econf --localstatedir=/var || die
 
 	emake || die
 	# fix ${exec_prefix} not being expanded
@@ -97,7 +103,7 @@ pkg_postinst() {
 	fi
 
 	for dir in /usr/share/flumotion /var/log/flumotion /var/run/flumotion; do
-		chown -R flumotion:flumotion ${dir}
-		chmod -R 755 ${dir}
+		chown -R flumotion:flumotion "${dir}"
+		chmod -R 755 "${dir}"
 	done
 }
