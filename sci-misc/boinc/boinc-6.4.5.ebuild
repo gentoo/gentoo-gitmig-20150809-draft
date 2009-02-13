@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5.ebuild,v 1.2 2009/02/01 15:55:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5.ebuild,v 1.3 2009/02/13 16:42:41 ranger Exp $
 
 #
 # Don't forget to keep things in sync with binary boinc package!
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentooexperimental.org/~scarabeus/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X cuda server"
 
 RDEPEND="
