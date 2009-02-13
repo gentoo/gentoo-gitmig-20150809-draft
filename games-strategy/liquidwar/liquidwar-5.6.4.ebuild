@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.4.ebuild,v 1.4 2008/02/10 08:32:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.4.ebuild,v 1.5 2009/02/13 22:40:21 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="unique multiplayer wargame"
@@ -16,9 +17,7 @@ RESTRICT="test"
 
 DEPEND=">=media-libs/allegro-4.2"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-exec-stack.patch
 	sed -i \
 		-e 's:/games::' \
@@ -38,14 +37,12 @@ src_unpack() {
 		|| die "sed src/Makefile.in failed"
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-doc-ps \
 		--disable-doc-pdf \
 		--disable-target-opt \
-		$(use_enable x86 asm) \
-		|| die
-	emake || die "emake failed"
+		$(use_enable x86 asm)
 }
 
 src_install() {
