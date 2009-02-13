@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.mask,v 1.8 2009/02/12 21:01:45 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.mask,v 1.9 2009/02/13 19:01:14 gengor Exp $
 
 # >=acml-3.6 depends on gcc-4*
 >=sci-libs/acml-3.6
@@ -29,7 +29,7 @@
 # 2006-03-13 kevquinn
 =sys-libs/glibc-2.4*
 
-# Mask off anything greater than glibc-2.6.x for now.
+# sys-libs/glibc-2.8 is about to go stable and stable hardened may not be ready for it.
 # 2009-02-11 gengor
 >=sys-libs/glibc-2.7
 
