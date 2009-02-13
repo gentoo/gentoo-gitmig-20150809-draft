@@ -1,15 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.4.ebuild,v 1.3 2009/02/13 10:33:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.4-r1.ebuild,v 1.1 2009/02/13 10:33:07 carlo Exp $
+
+EAPI="1"
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit kde eutils
+ARTS_REQUIRED="never"
+
+inherit kde
 
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
-P_DOC="${PN}-doc-0.9.4"
+P_DOC="${PN}-doc-${PV}"
 S_DOC="${WORKDIR}/${P_DOC}"
 
 DESCRIPTION="A digital photo management application for KDE."
@@ -18,10 +22,11 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	doc? ( mirror://sourceforge/${PN}/${P_DOC}.tar.bz2 )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="nfs doc kdehiddenvisibility kdeenablefinal"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+IUSE="nfs doc"
 
-DEPEND=">=media-libs/libgphoto2-2.2
+DEPEND=">=dev-db/sqlite-3.5.9:3
+	>=media-libs/libgphoto2-2.2
 	>=media-libs/libkipi-0.1.5
 	>=media-libs/tiff-3.8.2
 	>=media-libs/lcms-1.14
@@ -33,8 +38,8 @@ DEPEND=">=media-libs/libgphoto2-2.2
 	!media-plugins/digikamimageplugins"
 
 RDEPEND="${DEPEND}
-	|| ( ( =kde-base/kgamma-3.5* =kde-base/kamera-3.5* )
-		=kde-base/kdegraphics-3.5* )"
+	|| ( ( kde-base/kgamma:3.5 kde-base/kamera:3.5 )
+		kde-base/kdegraphics:3.5 )"
 
 need-kde 3.5
 
@@ -42,7 +47,9 @@ LANGS="ar bg br ca cs cy da de el en_GB es et fa fi fr gl he hu is it ja ka lt
 mk ms mt nb nds nl nn pa pl pt pt_BR ro ru rw sk sl sr sr@Latn sv ta th tr uk vi
 zh_CN zh_TW"
 
-LANGS_DOC="da de es et fr it nl pl pt pt_BR ru sv"
+LANGS_DOC_DIGIKAM="da de es et it nl pt ru sv"
+
+LANGS_DOC_SHOWFOTO="da de es et it nl sv"
 
 for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
@@ -51,31 +58,33 @@ done
 src_unpack(){
 	kde_src_unpack
 
-	epatch "${FILESDIR}/${PN}-lcms-1.17.patch"
-
 	rm -f "${S}/configure" "${S_DOC}/configure"
 
-	local MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | tr '\n' ' ')
-	elog "Enabling translations for: en ${MAKE_PO}"
+	local MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | tr ' ' '\n' | sort | uniq -d | tr '\n' ' ')
+	elog "Preparing to build translations for: en ${MAKE_PO}"
 	sed -i -e "s:^SUBDIRS =.*:SUBDIRS = . ${MAKE_PO}:" "${S}/po/Makefile.am" || die "sed for locale failed"
 
 	if use doc; then
-		local MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d | tr '\n' ' ')
-		elog "Enabling documentation for: en ${MAKE_DOC}"
 		cd "${S_DOC}/doc"
+		MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC_DIGIKAM}" | tr ' ' '\n' | sort | uniq -d | tr '\n' ' ')
+		elog "Preparing to build digiKam documentation for: en ${MAKE_DOC}"
 		for X in ${MAKE_DOC}; do
-			DIRS+="$(ls -d ${X}*) "
+			DIRS+="$(ls -d ${X}_digikam) "
+		done
+		MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC_SHOWFOTO}" | tr ' ' '\n' | sort | uniq -d | tr '\n' ' ')
+		elog "Preparing to build ShowFoto documentation for: en ${MAKE_DOC}"
+		for X in ${MAKE_DOC}; do
+			DIRS+="$(ls -d ${X}_showfoto) "
 		done
 		DIRS="$(echo ${DIRS} | tr '\n' ' ')"
-		sed -i -e "s:^SUBDIRS =.*:SUBDIRS = digikam ${DIRS}:" "${S_DOC}/doc/Makefile.am" || die "sed for locale (docs) failed"
+		sed -i -e "s:^SUBDIRS =.*:SUBDIRS = digikam showfoto ${DIRS}:" "${S_DOC}/doc/Makefile.am" || die "sed for locale (docs) failed"
 	fi
 }
 
 src_compile(){
-	local myconf
-
-	myconf="$(use_enable nfs nfs-hack)"
+	local myconf="$(use_enable nfs nfs-hack) --without-included-sqlite3"
 	kde_src_compile
+
 	myconf=""
 	[[ -d "${S_DOC}" ]] && KDE_S="${S_DOC}" kde_src_compile
 }
