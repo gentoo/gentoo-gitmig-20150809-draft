@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-pdf
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.38 2009/02/13 15:07:13 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.39 2009/02/13 15:30:19 tgurr Exp $
+
+  13 Feb 2009; Timo Gurr <tgurr@gentoo.org> cups-pdf-2.4.2.ebuild,
+  cups-pdf-2.4.5.ebuild, cups-pdf-2.4.8.ebuild, cups-pdf-2.5.0.ebuild:
+  Replace einfo with elog.
 
 *cups-pdf-2.5.0 (13 Feb 2009)
 

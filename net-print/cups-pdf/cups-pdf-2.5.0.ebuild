@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.5.0.ebuild,v 1.1 2009/02/13 15:07:13 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.5.0.ebuild,v 1.2 2009/02/13 15:30:19 tgurr Exp $
 
 inherit toolchain-funcs multilib
 
@@ -38,8 +38,8 @@ src_install () {
 }
 
 pkg_postinst () {
-	einfo "Please view both the README and contrib_Contents files"
-	einfo "as you may want to adjust some settings and/or use"
-	einfo "contributed software. In the latter case you may need"
-	einfo "to extract some files from the ${P} distfile."
+	elog "Please view both the README and contrib_Contents files"
+	elog "as you may want to adjust some settings and/or use"
+	elog "contributed software. In the latter case you may need"
+	elog "to extract some files from the ${P} distfile."
 }
