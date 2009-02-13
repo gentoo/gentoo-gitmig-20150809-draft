@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de-alt/ispell-de-alt-2.ebuild,v 1.5 2009/02/12 20:27:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de-alt/ispell-de-alt-2.ebuild,v 1.6 2009/02/13 16:50:08 ulm Exp $
 
 inherit eutils multilib
 
@@ -28,5 +28,7 @@ src_unpack() {
 src_install() {
 	insinto /usr/$(get_libdir)/ispell
 	doins deutsch.aff deutsch.hash || die "doins failed"
+	dosym deutsch.aff /usr/$(get_libdir)/ispell/de_DE_1901.aff || die
+	dosym deutsch.hash /usr/$(get_libdir)/ispell/de_DE_1901.hash || die
 	dodoc ANNOUNCE Changes Contributors README*
 }
