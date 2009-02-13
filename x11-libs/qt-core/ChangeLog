@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.26 2009/02/12 01:45:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.27 2009/02/13 12:48:36 carlo Exp $
+
+  13 Feb 2009; Carsten Lohrke <carlo@gentoo.org> qt-core-4.5.0_rc1.ebuild:
+  Correct Qt 4.4 blocker.
 
   12 Feb 2009; Markos Chandras <hwoarang@gentoo.org> +files/moc.pro,
   +files/rcc.pro, +files/uic.pro, qt-core-4.5.0_rc1.ebuild:
