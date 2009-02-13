@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1.11.ebuild,v 1.1 2009/02/07 15:35:47 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.1.11-r1.ebuild,v 1.1 2009/02/13 14:10:35 wschlich Exp $
 
 inherit autotools eutils ssl-cert versionator
 
@@ -52,6 +52,10 @@ src_unpack() {
 		epatch "${WORKDIR}"/${MY_P}-${MANAGESIEVE_PATCH}.diff
 		eautoreconf
 	fi
+	epatch "${FILESDIR}"/${P}-4736327a8740.patch
+	epatch "${FILESDIR}"/${P}-11112baa8592.patch
+	epatch "${FILESDIR}"/${P}-bdc5391e52df.patch
+	epatch "${FILESDIR}"/${P}-c08c602ca0dc.patch
 }
 
 pkg_setup() {
