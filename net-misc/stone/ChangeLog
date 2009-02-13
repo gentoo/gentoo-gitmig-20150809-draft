@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stone
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.15 2008/12/04 16:12:38 matsuu Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.16 2009/02/13 01:00:21 darkside Exp $
+
+  13 Feb 2009; Jeremy Olexa <darkside@gentoo.org> stone-2.3e.ebuild:
+  amd64 stable, bug 258265
 
 *stone-2.3e (04 Dec 2008)
 
