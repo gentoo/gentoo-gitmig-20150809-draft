@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.0a.ebuild,v 1.1 2009/02/13 11:53:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.0a.ebuild,v 1.2 2009/02/13 12:01:21 scarabeus Exp $
 
 EAPI="2"
 
@@ -43,7 +43,7 @@ src_prepare() {
 	else
 		# fix the install dir for docs
 		sed -i \
-			-e "s:\${HTML_INSTALL_DIR}:\${HTML_INSTALL_DIR}/${PF}:g" \
+			-e "s:\${HTML_INSTALL_DIR}/en:\${HTML_INSTALL_DIR}/en/${PF}:g" \
 			doc/CMakeLists.txt || die "fixing target dir failed"
 	fi
 	kde4-base_src_prepare
