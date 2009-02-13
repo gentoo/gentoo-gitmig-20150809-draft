@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.7.ebuild,v 1.1 2009/02/03 07:45:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.7.ebuild,v 1.2 2009/02/13 07:20:53 aballier Exp $
 
 EAPI=2
 
@@ -68,7 +68,7 @@ src_configure() {
 		--enable-nyquist \
 		$(use_enable ladspa) \
 		--with-libsndfile=system \
-		--with-libexpat=system \
+		--with-expat=system \
 		$(use_with libsamplerate) \
 		$(use_with !libsamplerate libresample) \
 		$(use_with vorbis libvorbis) \
