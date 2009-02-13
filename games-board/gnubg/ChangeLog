@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.40 2009/02/04 11:56:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.41 2009/02/13 11:35:28 tupone Exp $
+
+  13 Feb 2009; Alfredo Tupone <tupone@gentoo.org> gnubg-0.14.3-r1.ebuild:
+  append-ldflags removed as not needed. Bug #226895 by flameeyes@gentoo.org
 
   04 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
   files/gnubg-0.14.3-as-needed.patch:
