@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.16 2008/11/23 12:35:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.17 2009/02/13 23:50:45 yngwin Exp $
 
 # Patrick Lauer <patrick@gentoo.org> (23 Nov 2008)
 # needs webkit keyworded
@@ -33,3 +33,9 @@ dev-util/astyle java
 # on those.
 sys-apps/iproute2 atm
 net-dialup/ppp atm
+
+# Ben de Groot <yngwin@gentoo.org> 13 Feb 2009
+# Mask for unkeyworded deps
+x11-libs/qt-core phonon
+x11-libs/qt-core webkit
+

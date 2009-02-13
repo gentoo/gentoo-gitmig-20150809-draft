@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.8 2009/02/04 21:09:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.9 2009/02/13 23:50:44 yngwin Exp $
 
 # Patrick Lauer <patrick@gentoo.org> (23 Nov 2008)
 # needs webkit keyworded
@@ -21,3 +21,9 @@ media-video/mplayer ladspa
 # Needs valgrind
 media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
+
+# Ben de Groot <yngwin@gentoo.org> 13 Feb 2009
+# Mask for unkeyworded deps
+x11-libs/qt-core phonon
+x11-libs/qt-core webkit
+

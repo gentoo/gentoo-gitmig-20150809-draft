@@ -1,10 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2352 2009/02/13 15:45:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2353 2009/02/13 23:50:44 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Feb 2009; Ben de Groot <yngwin@gentoo.org> arch/alpha/package.use.mask,
+  arch/ia64/package.use.mask, arch/mips/package.use.mask,
+  arch/x86-fbsd/package.use.mask, default-bsd/fbsd/package.use.mask,
+  default-linux/alpha/package.use.mask, default-linux/ia64/package.use.mask,
+  default-linux/mips/package.use.mask:
+  Mask phonon and webkit useflags of qt meta ebuild, for arches on which
+  those deps are not keyworded
 
   13 Feb 2009; MATSUU Takuto <matsuu@gentoo.org> use.local.desc:
   Added libsexy local use flag for app-dicts/gwaei

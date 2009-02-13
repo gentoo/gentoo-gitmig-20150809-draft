@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.10 2009/02/01 16:45:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.11 2009/02/13 23:50:44 yngwin Exp $
 
 # Patrick Lauer <patrick@gentoo.org> (23 Nov 2008)
 # needs webkit keyworded
@@ -31,3 +31,9 @@ media-libs/gst-plugins-base debug
 
 # Needs nut and qstat respectively, neither is keyworded on alpha.
 net-analyzer/nagios-plugins ups nagios-game
+
+# Ben de Groot <yngwin@gentoo.org> 13 Feb 2009
+# Mask for unkeyworded deps
+x11-libs/qt-core phonon
+x11-libs/qt-core webkit
+
