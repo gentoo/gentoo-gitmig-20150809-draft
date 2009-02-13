@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/transkode
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.13 2008/12/26 17:14:05 scarabeus Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.14 2009/02/13 23:38:47 carlo Exp $
+
+*transkode-0.7-r1 (13 Feb 2009)
+
+  13 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  +files/transkode-0.7-desktop-file.diff, +transkode-0.7-r1.ebuild:
+  Missing eclass function calls. Proper desktop file fix.
 
   26 Dec 2008; Tomas Chvatal <scarabeus@gentoo.org>
   -transkode-0.6_beta2.ebuild, -transkode-0.6.ebuild,
