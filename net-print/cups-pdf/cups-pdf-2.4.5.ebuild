@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.4.5.ebuild,v 1.2 2007/05/23 15:58:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.4.5.ebuild,v 1.3 2009/02/13 15:07:13 tgurr Exp $
 
 inherit toolchain-funcs multilib
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND="net-print/cups
 	virtual/ghostscript"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	cd src

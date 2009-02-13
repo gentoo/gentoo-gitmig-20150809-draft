@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.4.7.ebuild,v 1.1 2008/06/01 20:36:40 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/cups-pdf-2.5.0.ebuild,v 1.1 2009/02/13 15:07:13 tgurr Exp $
 
 inherit toolchain-funcs multilib
 
@@ -15,25 +15,26 @@ IUSE=""
 
 DEPEND="net-print/cups
 	virtual/ghostscript"
+RDEPEND="${DEPEND}"
 
 src_compile() {
-	cd src
+	cd "${S}"/src
 	$(tc-getCC) ${CFLAGS} -o cups-pdf cups-pdf.c || die "Compilation failed."
 }
 
 src_install () {
 	exeinto $(cups-config --serverbin)/backend
 	has_version '>=net-print/cups-1.2' && exeopts -m0700
-	doexe src/cups-pdf
+	doexe src/cups-pdf || die "doexe cups-pdf failed."
 
 	insinto /usr/share/cups/model
-	doins extra/CUPS-PDF.ppd
+	doins extra/CUPS-PDF.ppd || die "doins CUPS-PDF.ppd failed."
 
 	insinto /etc/cups
-	doins extra/cups-pdf.conf
+	doins extra/cups-pdf.conf || die "doins cups-pdf.conf failed."
 
-	dodoc ChangeLog README
-	newdoc contrib/Contents contrib_Contents
+	dodoc ChangeLog README || die "dodoc failed."
+	newdoc contrib/Contents contrib_Contents || die "newdoc failed."
 }
 
 pkg_postinst () {
