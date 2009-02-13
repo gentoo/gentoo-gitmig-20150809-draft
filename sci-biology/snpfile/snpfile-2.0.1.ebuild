@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/snpfile-2.0.0.ebuild,v 1.1 2009/02/07 18:16:12 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/snpfile-2.0.1.ebuild,v 1.1 2009/02/13 16:46:21 weaver Exp $
 
 inherit eutils
 
@@ -15,11 +15,6 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="dev-libs/boost"
 RDEPEND="${DEPEND}"
-
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}"/${P}-*.patch
-}
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"

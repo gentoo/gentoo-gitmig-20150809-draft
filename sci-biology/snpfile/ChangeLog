@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/snpfile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/ChangeLog,v 1.1 2009/02/07 18:16:12 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/snpfile/ChangeLog,v 1.2 2009/02/13 16:46:21 weaver Exp $
+
+*snpfile-2.0.1 (13 Feb 2009)
+
+  13 Feb 2009; weaver <weaver@gentoo.org> -files/snpfile-2.0.0-gcc43.patch,
+  -snpfile-2.0.0.ebuild, +snpfile-2.0.1.ebuild:
+  Bump, drop patch
 
   07 Feb 2009; weaver <weaver@gentoo.org> ChangeLog:
   New package, ebuild written by me
