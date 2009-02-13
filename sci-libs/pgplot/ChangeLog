@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/pgplot
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.15 2008/11/07 12:56:54 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.16 2009/02/13 11:24:29 phosphan Exp $
+
+  13 Feb 2009; Patrick Kursawe <phosphan@gentoo.org>
+  -pgplot-5.2.2-r2.ebuild, pgplot-5.2.2-r3.ebuild:
+  Setting VARTEXFONTS (see bug #223077).
+  Removed obsolete revision.
 
   07 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
   files/pgplot-makemake.patch, pgplot-5.2.2-r3.ebuild:

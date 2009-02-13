@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.2 2008/11/07 12:56:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.3 2009/02/13 11:24:29 phosphan Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -93,6 +93,7 @@ src_compile() {
 		|| die "emake shared failed"
 
 	if use doc; then
+		export VARTEXFONTS="${T}/fonts"
 		emake pgplot.html || die "make pgplot.html failed"
 		emake pgplot-routines.tex  || die "make pgplot-routines failed"
 		pdflatex pgplot-routines.tex
