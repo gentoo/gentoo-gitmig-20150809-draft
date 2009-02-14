@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.330 2009/02/14 14:30:48 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.331 2009/02/14 16:53:52 jer Exp $
+
+  14 Feb 2009; Jeroen Roovers <jer@gentoo.org> openssh-5.1_p1-r2.ebuild:
+  Stable for HPPA (bug #258940).
 
   14 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
   openssh-5.1_p1-r2.ebuild:
