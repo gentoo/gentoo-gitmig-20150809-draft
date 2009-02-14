@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/kvdr
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/ChangeLog,v 1.14 2009/01/10 12:37:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kvdr/ChangeLog,v 1.15 2009/02/14 20:05:42 carlo Exp $
+
+*kvdr-0.64-r4 (14 Feb 2009)
+
+  14 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  +files/kvdr-0.64-desktop-file.diff, +kvdr-0.64-r4.ebuild:
+  Get rid of invalid aRts dependency. Improved desktop file fix.
 
 *kvdr-0.64-r3 (10 Jan 2009)
 
