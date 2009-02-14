@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bti
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.7 2009/02/14 06:48:46 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.8 2009/02/14 07:00:19 gregkh Exp $
+
+  14 Feb 2009; Greg Kroah-Hartman <gregkh@gentoo.org> ChangeLog:
+  remove old ebuilds
 
   14 Feb 2009; Greg Kroah-Hartman <gregkh@gentoo.org> +bti-014.ebuild:
   014 version bump, fixed bad problem in 013
