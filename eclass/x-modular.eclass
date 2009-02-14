@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.103 2008/11/26 23:13:24 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.104 2009/02/14 18:37:34 maekke Exp $
 #
 # @ECLASS: x-modular.eclass
 # @MAINTAINER:
@@ -229,7 +229,7 @@ x-modular_unpack_source() {
 	else
 		unpack ${A}
 	fi
-	cd ${S}
+	cd "${S}"
 
 	if [[ -n ${FONT_OPTIONS} ]]; then
 		einfo "Detected font directory: ${FONT_DIR}"
@@ -409,7 +409,7 @@ x-modular_src_install() {
 	fi
 
 	if [[ -e ${S}/ChangeLog ]]; then
-		dodoc ${S}/ChangeLog
+		dodoc "${S}"/ChangeLog
 	fi
 # @VARIABLE: DOCS
 # @DESCRIPTION:
@@ -421,7 +421,7 @@ x-modular_src_install() {
 
 	# Don't install libtool archives for server modules
 	if [[ -e ${D}/usr/$(get_libdir)/xorg/modules ]]; then
-		find ${D}/usr/$(get_libdir)/xorg/modules -name '*.la' \
+		find "${D}"/usr/$(get_libdir)/xorg/modules -name '*.la' \
 			| xargs rm -f
 	fi
 
@@ -534,7 +534,7 @@ remove_font_metadata() {
 			[[ "${DIR}" != "CID" ]] ; then
 			# Delete font metadata files
 			# fonts.scale, fonts.dir, fonts.cache-1
-			rm -f ${D}/usr/share/fonts/${DIR}/fonts.{scale,dir,cache-1}
+			rm -f "${D}"/usr/share/fonts/${DIR}/fonts.{scale,dir,cache-1}
 		fi
 	done
 }
@@ -583,7 +583,7 @@ create_fonts_scale() {
 			if [[ "${x/encodings}" = "${x}" ]] \
 				&& [[ -n "$(find ${x} -iname '*.[pot][ft][abcf]' -print)" ]]; then
 				mkfontscale \
-					-a ${ROOT}/usr/share/fonts/encodings/encodings.dir \
+					-a "${ROOT}"/usr/share/fonts/encodings/encodings.dir \
 					-- ${x}
 			fi
 		done
@@ -603,8 +603,8 @@ create_fonts_dir() {
 
 			if [[ "${x/encodings}" = "${x}" ]]; then
 				mkfontdir \
-					-e ${ROOT}/usr/share/fonts/encodings \
-					-e ${ROOT}/usr/share/fonts/encodings/large \
+					-e "${ROOT}"/usr/share/fonts/encodings \
+					-e "${ROOT}"/usr/share/fonts/encodings/large \
 					-- ${x}
 			fi
 		done
@@ -618,7 +618,7 @@ create_fonts_dir() {
 fix_font_permissions() {
 	ebegin "Fixing permissions"
 		for DIR in ${FONT_DIR}; do
-			find ${ROOT}/usr/share/fonts/${DIR} -type f -name 'font.*' \
+			find "${ROOT}"/usr/share/fonts/${DIR} -type f -name 'font.*' \
 				-exec chmod 0644 {} \;
 		done
 	eend 0
