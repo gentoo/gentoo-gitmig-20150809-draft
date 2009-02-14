@@ -60,7 +60,7 @@ gnome-base/gdm pam
 gnome-base/gnome accessibility
 
 # Test this later
-gnome-base/gnome ldap 
+gnome-base/gnome ldap
 
 # Diego Pettenò <flameeyes@gentoo.org> (18 June 2007)
 # The tests requires JDK 1.4, we don't have it.
@@ -95,9 +95,4 @@ sys-auth/pambase consolekit cracklib ssh sha512
 # bug #216855
 # octave needs fftw which does not work of fbsd
 dev-lang/swig octave
-
-# Ben de Groot <yngwin@gentoo.org> 13 Feb 2009
-# Mask for unkeyworded deps
-x11-libs/qt-core phonon
-x11-libs/qt-core webkit
 

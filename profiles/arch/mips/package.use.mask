@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.5 2009/02/13 23:50:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.6 2009/02/14 00:27:29 yngwin Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
@@ -70,5 +70,5 @@ dev-lang/ruby xemacs
 
 # Ben de Groot <yngwin@gentoo.org> 13 Feb 2009
 # Mask for unkeyworded deps
-x11-libs/qt-core phonon
+x11-libs/qt phonon
 

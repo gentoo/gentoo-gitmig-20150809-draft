@@ -12,8 +12,3 @@ x11-drivers/nvidia-drivers acpi
 # needs qt-webkit keyworded
 x11-libs/qt-assistant webkit
 
-# Ben de Groot <yngwin@gentoo.org> 13 Feb 2009
-# Mask for unkeyworded deps
-x11-libs/qt-core phonon
-x11-libs/qt-core webkit
-
