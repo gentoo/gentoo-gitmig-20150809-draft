@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/hop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/hop/ChangeLog,v 1.6 2009/02/14 16:14:53 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/hop/ChangeLog,v 1.7 2009/02/14 16:17:08 hkbst Exp $
+
+  14 Feb 2009; Marijn Schouten <hkBst@gentoo.org> -hop-1.7.0.ebuild,
+  -hop-1.8.1.ebuild, -hop-1.8.5.ebuild:
+  remove cruft, fixes bug 227869
 
 *hop-1.10.2 (14 Feb 2009)
 
