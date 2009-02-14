@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spamprobe
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.24 2008/07/20 10:48:52 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamprobe/ChangeLog,v 1.25 2009/02/14 23:41:46 maekke Exp $
+
+  14 Feb 2009; Markus Meier <maekke@gentoo.org> spamprobe-1.4d.ebuild:
+  amd64/x86 stable, bug #245859
 
   20 Jul 2008; Peter Alfredsen <loki_val@gentoo.org> spamprobe-1.4d.ebuild:
   Fix gcc-4.3 patch location per bug 232427
