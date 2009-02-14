@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/mangos
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mangos/ChangeLog,v 1.1 2008/10/04 07:38:26 trapni Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mangos/ChangeLog,v 1.2 2009/02/14 07:51:02 trapni Exp $
+
+*mangos-9999.1 (14 Feb 2009)
+
+  14 Feb 2009; Christian Parpart <trapni@gentoo.org> +mangos-9999.1.ebuild:
+  adapted to changes in built management; and updated project uri.
 
 *mangos-9999 (04 Oct 2008)
 
