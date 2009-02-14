@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/acpi4asus
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/ChangeLog,v 1.16 2007/05/25 07:09:47 opfer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/ChangeLog,v 1.17 2009/02/14 21:37:37 scarabeus Exp $
+
+  14 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -files/acpi4asus-0.32-2.6.20.patch, -acpi4asus-0.30.ebuild,
+  -acpi4asus-0.32.ebuild, -acpi4asus-0.32-r1.ebuild, -acpi4asus-0.40.ebuild,
+  -acpi4asus-0.40-r1.ebuild, acpi4asus-0.41.ebuild:
+  Remove old. Fix build on kernels newer than 2.6.23. Fixes bugs #207770 and
+  #195891.
 
   25 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
   corrected ChangeLog, so it conforms to our standards
