@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.7.3-r1.ebuild,v 1.3 2009/02/14 20:00:59 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.7.3-r1.ebuild,v 1.4 2009/02/14 21:05:59 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 WANT_ANT_TASKS="ant-nodeps"
@@ -31,7 +31,8 @@ DEPEND=">=virtual/jdk-1.5
 		dev-java/jline
 	)"
 RDEPEND=">=virtual/jre-1.5
-	dev-java/jline"
+	dev-java/jline
+	!dev-java/scala-bin"
 
 PDEPEND="emacs? ( app-emacs/scala-mode )"
 
