@@ -1,0 +1,26 @@
+--- src/ktvschedule.desktop.o	2009-02-14 17:50:27.000000000 +0100
++++ src/ktvschedule.desktop	2009-02-14 18:00:17.000000000 +0100
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=ktvschedule
+ Name[xx]=xxktvschedulexx
+ Exec=ktvschedule
+@@ -31,4 +30,4 @@
+ Comment[xx]=xxA simple KDE Applicationxx
+ Comment[zh_CN]=一个简单的KDE应用程序
+ GenericName=TV Scheduler
+-Categories=Qt;KDE;Utility
+\ No newline at end of file
++Categories=Qt;KDE;AudioVideo;Video;TV;Utility;
+--- src/Makefile.am.o	2009-02-14 17:50:53.000000000 +0100
++++ src/Makefile.am	2009-02-14 18:00:59.000000000 +0100
+@@ -25,7 +25,7 @@
+ ktvschedule_LDADD = $(LIB_KIO) $(LIB_KDEUI)
+ 
+ # this is where the desktop file will go 
+-shelldesktopdir   = $(kde_appsdir)/Utilities
++shelldesktopdir   = $(xdg_appsdir)
+ shelldesktop_DATA = ktvschedule.desktop
+ xdg_apps_DATA = ktvschedule.desktop
+ 

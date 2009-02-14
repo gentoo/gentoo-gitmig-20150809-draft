@@ -1,0 +1,23 @@
+diff -rupN ktvschedule-0.1.9.1b/src/prefsdialog.cpp ktvschedule-0.1.9.1/src/prefsdialog.cpp
+--- ktvschedule-0.1.9.1b/src/prefsdialog.cpp	2009-01-23 17:11:01.000000000 -0400
++++ ktvschedule-0.1.9.1/src/prefsdialog.cpp	2009-01-23 17:13:58.000000000 -0400
+@@ -28,6 +28,7 @@
+ #include <klineedit.h>      // for KLineEdit
+ #include <kmessagebox.h> 
+ #include <qwidgetstack.h>
++#include <cstdlib>
+ 
+ #include "configuration.h"
+ #include "styleprefslayout.h"
+
+diff -rupN ktvschedule-0.1.9.1b/src/tvguidetable.cpp ktvschedule-0.1.9.1/src/tvguidetable.cpp
+--- ktvschedule-0.1.9.1b/src/tvguidetable.cpp	2009-01-23 17:11:01.000000000 -0400
++++ ktvschedule-0.1.9.1/src/tvguidetable.cpp	2009-01-23 17:13:31.000000000 -0400
+@@ -29,6 +29,7 @@
+ #include <kiconloader.h>
+ #include <knotifyclient.h>
+ #include <klocale.h>
++#include <cstdlib>
+ 
+ #include <qframe.h>
+ #include <qfont.h>
