@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.130 2009/01/22 17:20:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.131 2009/02/14 17:53:47 vapier Exp $
+
+  14 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/strace-4.5.18-arm-syscalls.patch, strace-4.5.18.ebuild:
+  Add changes from upstream for ARM #241168 #258987.
 
   22 Jan 2009; Jeroen Roovers <jer@gentoo.org> strace-4.5.18.ebuild:
   Reverting to ~hppa (bug #250631, reopening bug #241168).

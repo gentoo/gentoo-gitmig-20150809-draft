@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.18.ebuild,v 1.12 2009/01/31 08:19:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.18.ebuild,v 1.13 2009/02/14 17:53:47 vapier Exp $
 
 inherit flag-o-matic
 
@@ -22,6 +22,7 @@ src_unpack() {
 	#epatch "${FILESDIR}"/${PN}-4.5.11-fbsd.patch
 
 	epatch "${FILESDIR}"/strace-fix-arm-bad-syscall.patch
+	epatch "${FILESDIR}"/${PN}-4.5.18-arm-syscalls.patch #241168
 }
 
 src_compile() {
