@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-wmdock
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock/ChangeLog,v 1.12 2009/02/07 14:22:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock/ChangeLog,v 1.13 2009/02/14 16:48:12 angelos Exp $
+
+  14 Feb 2009; Christoph Mende <angelos@gentoo.org>
+  xfce4-wmdock-0.3.2.ebuild:
+  Fixed make check (bug 258973)
 
 *xfce4-wmdock-0.3.2 (07 Feb 2009)
 

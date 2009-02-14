@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock/xfce4-wmdock-0.3.2.ebuild,v 1.1 2009/02/07 14:22:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock/xfce4-wmdock-0.3.2.ebuild,v 1.2 2009/02/14 16:48:12 angelos Exp $
 
 inherit xfce44
 
@@ -15,5 +15,11 @@ IUSE="debug"
 RDEPEND="x11-libs/libwnck"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	echo panel-plugin/wmdock.desktop.in.in >>po/POTFILES.skip
+}
 
 DOCS="AUTHORS ChangeLog README TODO"
