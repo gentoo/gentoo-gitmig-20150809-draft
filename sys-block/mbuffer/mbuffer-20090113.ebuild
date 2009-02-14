@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/mbuffer-20090113.ebuild,v 1.1 2009/02/08 19:50:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/mbuffer-20090113.ebuild,v 1.2 2009/02/14 07:31:37 vapier Exp $
 
 inherit eutils autotools
 
@@ -13,11 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug ssl"
 
-RDEPEND="ssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	sed -i 's:/bin/ksh:/bin/sh:' Makefile.in #258359
+	ln -s "${DISTDIR}"/${P}.tgz test.tar #258881
 }
 
 src_compile() {
