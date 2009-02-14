@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2355 2009/02/14 13:06:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2356 2009/02/14 16:26:34 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Feb 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  remove mask for dev-util/bzr and bzrtools, stable versions of 1.12
+  released
 
   14 Feb 2009; Ben de Groot <yngwin@gentoo.org> package.mask:
   Masking =x11-libs/qt-script-4.5.0_rc1-r1 because of build failures, bug

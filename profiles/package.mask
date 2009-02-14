@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9486 2009/02/14 13:06:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9487 2009/02/14 16:26:34 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -43,11 +43,6 @@ dev-lang/rubinius
 # I gave away maintainership a while ago nobody took it on. Prepare for remove.
 app-emulation/ganeti
 app-emulation/ganeti-instance-debian-etch
-
-# Peter Volkov <pva@gentoo.org> (10 Feb 2009)
-# Masking release candidate.
-=dev-util/bzr-1.12_rc1
-=dev-util/bzrtools-1.12.0
 
 # MATSUU Takuto <matsuu@gentoo.org> (07 Feb 2009)
 # Masked for testing
