@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.8-r1.ebuild,v 1.1 2009/02/13 23:54:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.8-r1.ebuild,v 1.2 2009/02/14 06:31:17 mr_bones_ Exp $
 
 ARTS_REQUIRED="never"
 
@@ -32,8 +32,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-0.3.6-gcc43.patch"
 	"${FILESDIR}/soundkonverter-0.3.8-desktop-file.diff"
 	)
-
-
 
 src_compile() {
 	append-flags -fno-inline
