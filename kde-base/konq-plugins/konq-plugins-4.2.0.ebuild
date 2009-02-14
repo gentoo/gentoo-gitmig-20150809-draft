@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-4.2.0.ebuild,v 1.5 2009/02/13 12:08:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-4.2.0.ebuild,v 1.6 2009/02/14 21:23:04 scarabeus Exp $
 
 EAPI="2"
 
@@ -20,7 +20,8 @@ IUSE="debug htmlhandbook"
 
 RDEPEND="!kde-misc/konq-plugins
 	!kdeprefix? ( !kde-base/konq-plugins:4.1[-kdeprefix] )
-	>=kde-base/konqueror-${KDE_MINIMAL}
+	>=kde-base/konqueror-${KDE_MINIMAL}[kdeprefix=]
+	>=kde-base/kcmshell-${KDE_MINIMAL}[kdeprefix=]
 "
 DEPEND="${RDEPEND}"
 
