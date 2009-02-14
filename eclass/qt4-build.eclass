@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.21 2009/02/14 22:25:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.22 2009/02/14 22:48:26 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -121,7 +121,7 @@ qt4-build_src_prepare() {
 	fi
 	
 	# Bug 172219	
-	if !use custom-cxxflags;then
+	if ! use custom-cxxflags;then
 		# Don't let the user go too overboard with flags.
 		strip-flags
 		replace-flags -O3 -O2
