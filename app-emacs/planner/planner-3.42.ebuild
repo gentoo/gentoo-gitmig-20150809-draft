@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/planner-3.41-r2.ebuild,v 1.2 2009/02/14 08:23:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/planner-3.42.ebuild,v 1.1 2009/02/14 08:23:36 ulm Exp $
 
 inherit elisp
 
@@ -8,7 +8,7 @@ DESCRIPTION="Maintain a local Wiki using Emacs-friendly markup"
 HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki/PlannerMode"
 SRC_URI="http://download.gna.org/planner-el/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
