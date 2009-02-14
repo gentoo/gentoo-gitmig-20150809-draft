@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.8.1.ebuild,v 1.1 2009/02/13 19:04:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.8.1.ebuild,v 1.2 2009/02/14 17:49:06 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -36,6 +36,7 @@ src_prepare() {
 		-e 's/\.mod(/.fmod(/' \
 		$(grep -rl "\.mod\>" "${WORKDIR}"/fillets-ng-data-${DATA_PV}) \
 		|| die "sed failed"
+	rm -f missing
 	eautoreconf
 }
 

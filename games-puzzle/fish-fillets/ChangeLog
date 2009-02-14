@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/fish-fillets
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.34 2009/02/13 19:04:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.35 2009/02/14 17:49:06 mr_bones_ Exp $
+
+  14 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  fish-fillets-0.8.1.ebuild:
+  missing is too old
 
 *fish-fillets-0.8.1 (13 Feb 2009)
 
