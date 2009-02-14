@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/jbidwatcher
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/ChangeLog,v 1.33 2008/03/05 16:41:15 betelgeuse Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/ChangeLog,v 1.34 2009/02/14 23:22:25 betelgeuse Exp $
+
+  14 Feb 2009; Petteri Räty <betelgeuse@gentoo.org>
+  -jbidwatcher-1.0.1.ebuild, -jbidwatcher-1.0.2.ebuild:
+  Remove old versions.
 
 *jbidwatcher-1.0.2-r1 (05 Mar 2008)
 
