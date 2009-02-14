@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/gnome-python-desktop-base-2.22.0.ebuild,v 1.1 2008/09/14 16:27:45 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/gnome-python-desktop-base-2.22.0.ebuild,v 1.2 2009/02/14 14:19:04 klausman Exp $
 
 inherit versionator eutils autotools gnome2
 
@@ -27,7 +27,7 @@ RDEPEND="virtual/python
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gtkspell-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/ChangeLog,v 1.2 2009/01/06 14:30:42 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/ChangeLog,v 1.3 2009/02/14 14:23:50 klausman Exp $
+
+  14 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
+  gtkspell-python-2.19.1.ebuild:
+  Stable on alpha, bug #258040
 
   06 Jan 2009; Jesus Rivero <neurogeek@gentoo.org>
   gtkspell-python-2.19.1.ebuild:

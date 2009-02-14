@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras-base
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.3 2008/10/25 08:22:30 remi Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras-base/ChangeLog,v 1.4 2009/02/14 14:23:05 klausman Exp $
+
+  14 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
+  gnome-python-extras-base-2.19.1.ebuild:
+  Stable on alpha, bug #258040
 
   25 Oct 2008; Rémi Cardona <remi@gentoo.org>
   gnome-python-extras-base-2.19.1.ebuild:

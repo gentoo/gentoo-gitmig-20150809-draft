@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/librsvg-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.3 2009/01/08 23:41:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.4 2009/02/14 14:21:35 klausman Exp $
+
+  14 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
+  librsvg-python-2.22.0.ebuild:
+  Stable on alpha, bug #258040
 
 *librsvg-python-2.24.1 (08 Jan 2009)
 
