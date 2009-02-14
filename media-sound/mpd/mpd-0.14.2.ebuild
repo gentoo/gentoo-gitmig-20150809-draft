@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.ebuild,v 1.7 2009/01/14 18:21:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.2.ebuild,v 1.1 2009/02/14 00:48:52 angelos Exp $
 
 EAPI=2
 
