@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.5.0_rc1.ebuild,v 1.4 2009/02/14 00:04:03 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.5.0_rc1.ebuild,v 1.5 2009/02/14 23:00:38 hwoarang Exp $
 
 EAPI="2"
 inherit qt4-build
@@ -109,6 +109,17 @@ src_unpack() {
 	for i in kr jp cn tw ; do
 		echo "CONFIG+=nostrip" >> "${S}"/src/plugins/codecs/${i}/${i}.pro
 	done
+}
+
+src_prepare(){
+	# bug #172219
+	if use custom-cxxflags;then
+		sed -i -e "s:CXXFLAGS.*=:CXXFLAGS=${CXXFLAGS} :" \
+			"${S}/qmake/Makefile.unix" || die "sed qmake/Makefile.unix CXXFLAGS failed"
+	fi
+	sed -i -e "s:LFLAGS.*=:LFLAGS=${LDFLAGS} :" \
+		"${S}/qmake/Makefile.unix" || die "sed qmake/Makefile.unix LDFLAGS failed"
+	qt4-build_src_prepare
 }
 
 src_configure() {
