@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mangos/mangos-9999.1.ebuild,v 1.1 2009/02/14 07:51:02 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mangos/mangos-9999.1.ebuild,v 1.2 2009/02/14 14:14:25 trapni Exp $
 
 # TODO:
 # - make use of system's zlib/zthread ebuilds instead of mangos' packaged
@@ -102,6 +102,10 @@ src_compile() {
 		|| die "econf failed"
 
 	emake || die "emake with current options failed"
+
+	cd "${S}/contrib/extractor" || die
+	cmake . || die
+	emake || die "failed to run emake for extractor"
 }
 
 src_install() {
@@ -111,28 +115,33 @@ src_install() {
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 
+	dodir "${PREFIX}/share"
+	mv "${D}/usr/share/mangos" "${D}${PREFIX}/share/mangos" || die
 	rm -f "${D}${PREFIX}/bin/genrevision" # not really part of mangos dist
 
 	doinitd "${FILESDIR}/${PV_FILES}/mangos-realmd" || die
 	doinitd "${FILESDIR}/${PV_FILES}/mangos-worldd" || die
 
-	dodir ${PREFIX}/share/mangos/dbc
-	dodir ${PREFIX}/share/mangos/maps
-	dodir ${PREFIX}/share/mangos/vmaps
+	exeinto "${PREFIX}/bin"
+	doexe "${S}/contrib/extractor/ad" || die
+
+	keepdir ${PREFIX}/share/mangos/dbc
+	keepdir ${PREFIX}/share/mangos/maps
+	keepdir ${PREFIX}/share/mangos/vmaps
 
 	if useq sd2; then
 		local DIRS=(sql sql/Updates sql/Updates/0.0.1 sql/Updates/0.0.2)
 
 		for dir in ${DIRS[*]}; do
-			dodir ${PREFIX}/share/sd2/${dir} || die
-			cp -r ../src/bindings/ScriptDev2/${dir}/*.sql ${D}${PREFIX}/share/sd2/${dir} || die
+			dodir "${PREFIX}/share/sd2/${dir}" || die
+			cp -r "../src/bindings/ScriptDev2/${dir}/*.sql" "${D}${PREFIX}/share/sd2/${dir}" || die
 		done
 	fi
 
-	dodir ${LOGDIR}
+	keepdir ${LOGDIR}
 
-	fowners root.mangos /etc/mangos
-	fowners mangos.mangos /var/log/mangos
+	fowners root.mangos ${SYSCONFDIR}
+	fowners mangos.mangos ${LOGDIR}
 }
 
 pkg_postinst() {
@@ -140,16 +149,22 @@ pkg_postinst() {
 
 	ewarn "You need to manually configure MaNGOS."
 	ewarn "See /etc/mangos/ for config files."
-	ewarn "Remember to move you maps, DBC and vmaps files to your data folder - ${PREFIX}/share/mangos/"
+	ewarn "Remember to move your maps, DBC and vmaps files to your data folder - ${PREFIX}/share/mangos/"
 	ewarn
 	ewarn "Don't forget to run SQL scripts for:"
-	ewarn "\t- MaNGOS databases : ${PREFIX}/share/mangos/sql"
-
-	useq sd2 && ewarn "\t- ScriptDev2 database: /usr/share/scriptdev2/sql"
+	ewarn "\t- MaNGOS databases: ${PREFIX}/share/mangos/sql"
+	useq sd2 && ewarn "\t- ScriptDev2 database: ${PREFIX}/share/sd2/sql"
 
 	ewarn
-	einfo "If you want Mangos to start automatically on boot execute :"
-	einfo "\t- rc-update add mangos-realmd default"
-	einfo "\t- rc-update add mangos-worldd default"
+	einfo "If you want Mangos to start automatically on boot execute:"
+	einfo "\trc-update add mangos-realmd default"
+	einfo "\trc-update add mangos-worldd default"
 	einfo
+
+	ewarn
+	einfo "Next steps for you may be as the following example:"
+	einfo "\t${PREFIX}/bin/ad -i/path/to/wow/client -o${PREFIX}/share/mangos"
+	# TODO replace these points with actual commands, and provide helpful URLs
+	einfo "\t- initialize database schema"
+	einfo "\t- populate database"
 }
