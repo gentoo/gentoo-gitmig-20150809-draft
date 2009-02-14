@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.7.ebuild,v 1.2 2009/02/11 08:27:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.7.ebuild,v 1.3 2009/02/14 20:51:41 maekke Exp $
 
 EAPI=2
 DESCRIPTION="DevIL image library"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/openil/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
 IUSE="openexr gif jpeg lcms mng png tiff xpm allegro opengl sdl X"
 
 RDEPEND="gif? ( media-libs/giflib )
