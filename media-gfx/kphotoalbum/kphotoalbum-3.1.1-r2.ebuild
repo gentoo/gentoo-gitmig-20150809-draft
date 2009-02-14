@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.1-r2.ebuild,v 1.2 2009/02/14 16:38:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.1-r2.ebuild,v 1.3 2009/02/14 17:50:21 mr_bones_ Exp $
 
 EAPI=2
 
@@ -34,7 +34,6 @@ PATCHES=(
 	"${FILESDIR}/kphotoalbum-3.1.1-gcc-4.3.patch"
 	"${FILESDIR}/kphotoalbum-3.1.1-desktop-files-fixes.diff"
 	)
-
 
 src_compile() {
 	local myconf="$(use_enable raw kdcraw) $(use_enable exif exiv2)"
