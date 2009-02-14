@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/missingh
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.10 2007/12/20 13:27:00 dcoutts Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.11 2009/02/14 10:46:09 kolmodin Exp $
+
+  14 Feb 2009; Lennart Kolmodin <kolmodin@gentoo.org>
+  missingh-0.18.6.ebuild:
+  Remove duplical deps on hunit. Spotted by Mr. Anderson <walch.martin@web.de>
 
   20 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> missingh-0.18.6.ebuild:
   Add missing DEPEND on dev-haskell/regex-compat.
