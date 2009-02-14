@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2-r1.ebuild,v 1.5 2009/01/17 12:26:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2-r1.ebuild,v 1.6 2009/02/14 22:12:28 maekke Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="doc"
+IUSE=""
 
 LANGS="cs de es fr it pl ru tr"
 for lang in ${LANGS} ; do
@@ -29,6 +29,7 @@ DEPEND="
 	>=sci-libs/fftw-3.0.1-r2
 	|| ( ( x11-libs/qt-core:4 x11-libs/qt-gui:4 )
 		>=x11-libs/qt-4.2.3-r1 )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -38,10 +39,6 @@ src_unpack() {
 
 	# no insane CXXFLAGS
 	sed -i -e '/QMAKE_CXXFLAGS/d' project.pro || die
-
-	if ! use doc ; then
-		sed -i -e '/INSTALLS/s:htmls ::' project.pro || die
-	fi
 
 	# no stripping
 	sed -i -e 's:TARGET:QMAKE_STRIP = true\nTARGET:' project.pro || die
