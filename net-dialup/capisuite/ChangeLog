@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/capisuite
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.33 2008/09/13 22:39:00 sbriesen Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.34 2009/02/14 23:27:19 maekke Exp $
+
+  14 Feb 2009; Markus Meier <maekke@gentoo.org> capisuite-0.4.5-r5.ebuild:
+  amd64/x86 stable, bug #245571
 
 *capisuite-0.4.5-r5 (13 Sep 2008)
 
