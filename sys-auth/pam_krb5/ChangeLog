@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_krb5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.25 2009/02/12 16:21:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.26 2009/02/14 16:33:54 armin76 Exp $
+
+  14 Feb 2009; Raúl Porcel <armin76@gentoo.org> pam_krb5-3.12.ebuild:
+  sparc stable wrt #257075
 
   12 Feb 2009; Brent Baude <ranger@gentoo.org> pam_krb5-3.12.ebuild:
   Marking pam_krb5-3.12 ppc for bug 257075
