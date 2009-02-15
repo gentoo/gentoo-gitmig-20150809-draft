@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersoftplus/powersoftplus-0.1.8-r1.ebuild,v 1.1 2007/09/02 19:12:49 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersoftplus/powersoftplus-0.1.8-r1.ebuild,v 1.2 2009/02/15 21:56:29 loki_val Exp $
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Ever UPS daemon"
 HOMEPAGE="http://www.ever.com.pl"
@@ -49,6 +49,7 @@ src_unpack() {
 
 	eautoreconf
 
+	epatch ${FILESDIR}/${P}-gcc43.patch
 	epatch ${FILESDIR}/${P}-reduceverbosity.patch
 }
 
