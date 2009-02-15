@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9491 2009/02/15 21:37:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9492 2009/02/15 23:15:23 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -419,12 +419,6 @@ net-libs/libopm
 # Removed in 60 days, multiple bugs - does not compile with recent kernels.
 # bug 251795
 sys-fs/cloop
-
-# Peter Alfredsen <loki_val@gentoo.org> (20 Dec 2008)
-# Masked for removal in 30 days. Version that compiles with gcc-4.3
-# is not ready for stable ( bug 251566 ).
-# Upstream has abandoned it, alternatives such as gedit exist.
-app-editors/katoob
 
 # Mike Pagano <mpagano@gentoo.org> (17 Dec 2008)
 # Masked waiting on >=portage-2.2* to be unmasked
