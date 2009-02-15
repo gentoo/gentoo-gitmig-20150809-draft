@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/klamav
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.50 2009/02/11 15:59:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.51 2009/02/15 22:21:07 carlo Exp $
+
+  15 Feb 2009; Carsten Lohrke <carlo@gentoo.org> klamav-0.44.ebuild:
+  Missing kde.eclass function call.
 
   11 Feb 2009; Raúl Porcel <armin76@gentoo.org> klamav-0.44.ebuild:
   sparc stable wrt #245552
