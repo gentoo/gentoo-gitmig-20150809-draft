@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/periodic-calendar/periodic-calendar-2.2.ebuild,v 1.1 2008/10/02 03:05:01 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/periodic-calendar/periodic-calendar-2.3.ebuild,v 1.1 2009/02/15 21:25:57 loki_val Exp $
 
 inherit gnome2 eutils
 
