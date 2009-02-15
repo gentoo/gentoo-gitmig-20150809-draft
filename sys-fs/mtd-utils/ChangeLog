@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtd-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.18 2009/02/12 03:16:39 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/ChangeLog,v 1.19 2009/02/15 15:53:23 maekke Exp $
+
+  15 Feb 2009; Markus Meier <maekke@gentoo.org> mtd-utils-20080907.ebuild:
+  x86 stable, bug #258264
 
   12 Feb 2009; Jeremy Olexa <darkside@gentoo.org> mtd-utils-20080907.ebuild:
   amd64 stable, bug 258264
