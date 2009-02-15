@@ -1,6 +1,13 @@
 # ChangeLog for media-video/isight-firmware-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.7 2009/02/15 19:11:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.8 2009/02/15 19:46:08 eva Exp $
+
+*isight-firmware-tools-1.4.1 (15 Feb 2009)
+
+  15 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -isight-firmware-tools-1.2.ebuild, -isight-firmware-tools-1.4.ebuild,
+  +isight-firmware-tools-1.4.1.ebuild:
+  Bump to 1.4.1. Add more hash for firmware extraction.
 
 *isight-firmware-tools-1.4 (15 Feb 2009)
 
