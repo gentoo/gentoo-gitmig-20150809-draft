@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xclass
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.21 2008/02/21 14:23:53 armin76 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.22 2009/02/15 22:36:38 loki_val Exp $
+
+  15 Feb 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
+  Anant retired.
 
   21 Feb 2008; Raúl Porcel <armin76@gentoo.org> xclass-0.8.2-r2.ebuild:
   alpha/sparc stable
