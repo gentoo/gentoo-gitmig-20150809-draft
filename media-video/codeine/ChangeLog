@@ -1,6 +1,14 @@
 # ChangeLog for media-video/codeine
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/ChangeLog,v 1.19 2007/07/28 17:26:44 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/ChangeLog,v 1.20 2009/02/15 17:10:09 carlo Exp $
+
+*codeine-1.0.1.3-r1 (15 Feb 2009)
+
+  15 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  +files/codeine-1.0.1.3-desktop-file.diff,
+  +files/codeine-1.0.1.3-gcc43.diff, +codeine-1.0.1.3-r1.ebuild:
+  Use kde-functions.eclass, to get rid of pointless use flags and invalid
+  dependencies. Fix desktop file. GCC 4.3 build fix, bug #251267.
 
   28 Jul 2007; Raúl Porcel <armin76@gentoo.org> codeine-1.0.1.3.ebuild:
   x86 stable wrt #186894
