@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-uisp/tos-uisp-1.1.15.ebuild,v 1.4 2008/06/04 17:06:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-uisp/tos-uisp-1.1.15.ebuild,v 1.5 2009/02/15 19:54:35 loki_val Exp $
 
-inherit autotools
+inherit autotools flag-o-matic
 
 CVS_MONTH="Dec"
 CVS_YEAR="2005"
@@ -21,6 +21,10 @@ DEPEND="!dev-embedded/uisp"
 RDEPEND="!dev-embedded/uisp"
 
 S=${WORKDIR}/${MY_P}-${PV}${CVS_MONTH}${CVS_YEAR}cvs/tools/src/uisp
+
+pkg_setup() {
+	append-flags -Wno-error
+}
 
 src_unpack() {
 	unpack ${A}
