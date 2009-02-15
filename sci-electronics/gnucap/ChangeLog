@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gnucap
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.43 2008/12/27 19:05:26 calchan Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.44 2009/02/15 20:36:11 dirtyepic Exp $
+
+  15 Feb 2009; Ryan Hill <dirtyepic@gentoo.org>
+  +files/gnucap-0.35-gcc43.patch, gnucap-0.35.ebuild:
+  Fix build with GCC 4.3. Patch by Arttu Valo in bug #251705
 
 *gnucap-0.35.20081223 (27 Dec 2008)
 
