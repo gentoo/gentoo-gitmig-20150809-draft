@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/genetic
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genetic/ChangeLog,v 1.1 2006/07/15 19:46:31 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genetic/ChangeLog,v 1.2 2009/02/15 22:20:59 patrick Exp $
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> genetic-0.1.1.ebuild:
+  Adding ~amd64 keyword
 
 *genetic-0.1.1 (15 Jul 2006)
 

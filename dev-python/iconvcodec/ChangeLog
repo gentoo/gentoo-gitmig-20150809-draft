@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/iconvcodec
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.7 2008/05/02 18:35:54 pythonhead Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.8 2009/02/15 22:26:38 patrick Exp $
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> iconvcodec-1.1.2.ebuild:
+  Adding ~amd64 keyword
 
   02 May 2008; Rob Cakebread <pythonhead@gentoo.org>
   iconvcodec-1.1.2.ebuild:

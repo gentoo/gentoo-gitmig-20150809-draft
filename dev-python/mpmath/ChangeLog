@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mpmath
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.4 2009/01/28 15:21:38 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.5 2009/02/15 22:32:34 patrick Exp $
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> mpmath-0.11.ebuild:
+  Adding ~amd64 keyword
 
 *mpmath-0.11 (28 Jan 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/piddle
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/ChangeLog,v 1.10 2008/10/27 10:09:57 hawking Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/ChangeLog,v 1.11 2009/02/15 22:34:30 patrick Exp $
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> piddle-1.0.15.ebuild:
+  Adding ~amd64 keyword
 
   27 Oct 2008; Ali Polatel <hawking@gentoo.org> piddle-1.0.15.ebuild:
   Use distutils.
