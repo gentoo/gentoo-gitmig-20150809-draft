@@ -1,6 +1,12 @@
 # ChangeLog for app-text/bibus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.9 2009/02/15 11:05:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.10 2009/02/15 17:53:50 patrick Exp $
+
+*bibus-1.4.3.2 (15 Feb 2009)
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/bibus-1.4.3.2-install.patch, +bibus-1.4.3.2.ebuild:
+  Bump to 1.4.3.2, with fixes from Attila Toth. Closes #254395
 
   15 Feb 2009; Markus Meier <maekke@gentoo.org> bibus-1.4.3.1.ebuild:
   amd64/x86 stable, bug #250823
