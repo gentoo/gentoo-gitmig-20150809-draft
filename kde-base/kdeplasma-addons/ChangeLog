@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.7 2009/02/01 07:02:39 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.8 2009/02/15 17:49:56 hwoarang Exp $
+
+*kdeplasma-addons-4.2.0-r1 (15 Feb 2009)
+
+  15 Feb 2009; Markos Chandras <hwoarang@gentoo.org>
+  +files/lancelot-qt45.patch, +kdeplasma-addons-4.2.0-r1.ebuild:
+  Fixing lancelot compatibility with qt-4.5 ( bug #258758 ). Thanks to
+  Robert Piasek for backporting upstream patch
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdeplasma-addons-4.2.0.ebuild:
