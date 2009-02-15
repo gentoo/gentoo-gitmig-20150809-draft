@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.5.0_rc1-r1.ebuild,v 1.1 2009/02/14 14:21:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.5.0_rc1-r1.ebuild,v 1.2 2009/02/15 22:05:35 hwoarang Exp $
 
 EAPI="2"
 inherit eutils qt4-build
@@ -26,6 +26,7 @@ RDEPEND="media-libs/fontconfig
 	~x11-libs/qt-script-${PV}[debug=]
 	cups? ( net-print/cups )
 	dbus? ( ~x11-libs/qt-dbus-${PV}[debug=] )
+	gtkstyle? ( x11-libs/gtk+:2 )
 	mng? ( >=media-libs/libmng-1.0.9 )
 	nas? ( >=media-libs/nas-1.5 )
 	tiff? ( media-libs/tiff )

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.32 2009/02/14 15:35:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.33 2009/02/15 22:05:35 hwoarang Exp $
+
+  15 Feb 2009; Markos Chandras <hwoarang@gentoo.org>
+  -qt-gui-4.5.0_rc1.ebuild, qt-gui-4.5.0_rc1-r1.ebuild:
+  Added gtk+:2 dependency. Fixes bug #259119
 
 *qt-gui-4.4.2-r3 (14 Feb 2009)
 
