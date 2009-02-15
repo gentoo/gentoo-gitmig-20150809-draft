@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/acpi4asus-0.41.ebuild,v 1.3 2009/02/14 21:37:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/acpi4asus-0.41.ebuild,v 1.4 2009/02/15 14:40:39 mr_bones_ Exp $
 
 inherit linux-mod eutils
 
@@ -59,7 +59,6 @@ src_install() {
 pkg_preinst() {
 	kernel_is lt 2 6 23 && linux-mod_pkg_preinst
 }
-
 
 pkg_postinst() {
 	kernel_is lt 2 6 23 && linux-mod_pkg_postinst
