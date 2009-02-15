@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/kwebget
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/ChangeLog,v 1.5 2007/02/04 00:11:30 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/ChangeLog,v 1.6 2009/02/15 20:26:38 dirtyepic Exp $
+
+  15 Feb 2009; Ryan Hill <dirtyepic@gentoo.org>
+  +files/kwebget-0.8.1-gcc43.patch, kwebget-0.8.1.ebuild:
+  Fix building with gcc-4.3. Bug #251487. Thanks to Gene Seto for the patch.
 
   04 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

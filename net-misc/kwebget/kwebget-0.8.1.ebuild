@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/kwebget-0.8.1.ebuild,v 1.6 2005/10/12 13:00:59 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/kwebget-0.8.1.ebuild,v 1.7 2009/02/15 20:26:38 dirtyepic Exp $
 
 inherit kde eutils
 
@@ -23,5 +23,6 @@ src_unpack() {
 	kde_src_unpack
 
 	# respect the "arts" USE flag until it's fixed upstream
-	use arts || epatch ${FILESDIR}/kwebget-0.8.1-configure.patch
+	use arts || epatch "${FILESDIR}"/${P}-configure.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
