@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/nfs4-acl-tools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs4-acl-tools/ChangeLog,v 1.1 2007/12/22 07:19:20 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs4-acl-tools/ChangeLog,v 1.2 2009/02/15 20:55:31 vapier Exp $
+
+*nfs4-acl-tools-0.3.3 (15 Feb 2009)
+
+  15 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  +nfs4-acl-tools-0.3.3.ebuild:
+  Version bump #258602 by Hans Meine.
 
 *nfs4-acl-tools-0.3.2 (22 Dec 2007)
 
