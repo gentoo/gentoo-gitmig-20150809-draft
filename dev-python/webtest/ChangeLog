@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/webtest
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.1 2008/07/02 05:19:59 pythonhead Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.2 2009/02/15 14:08:25 patrick Exp $
+
+*webtest-1.1 (15 Feb 2009)
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> +webtest-1.1.ebuild:
+  Bump to 1.1, adding ~amd64 keyword
 
 *webtest-1.0 (02 Jul 2008)
 
