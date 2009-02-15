@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/artwiz-latin1
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-latin1/ChangeLog,v 1.9 2009/02/12 22:24:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/artwiz-latin1/ChangeLog,v 1.10 2009/02/15 11:06:30 maekke Exp $
+
+  15 Feb 2009; Markus Meier <maekke@gentoo.org> artwiz-latin1-1.1.ebuild:
+  amd64/x86 stable, bug #253668
 
   12 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
   artwiz-latin1-1.1.ebuild:
