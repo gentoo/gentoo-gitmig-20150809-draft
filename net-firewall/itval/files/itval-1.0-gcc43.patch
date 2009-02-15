@@ -1,0 +1,26 @@
+/usr/include/alloca.h:
+diff -rupN ITVal-1.0b/FDDL/api.cc ITVal-1.0/FDDL/api.cc
+--- ITVal-1.0b/FDDL/api.cc	2009-01-22 17:22:54.000000000 -0400
++++ ITVal-1.0/FDDL/api.cc	2009-01-22 17:24:09.000000000 -0400
+@@ -26,8 +26,8 @@ College of William and Mary
+ Williamsburg, VA 23185
+ */
+ 
+-#include <stdio.h>
+ #include <assert.h>
++#include <climits>
+ #include <FDDL/mdd.h>
+ 
+ #define MAX(a, b) (a>b ? a : b)
+diff -rupN ITVal-1.0b/src/fwmdd.h ITVal-1.0/src/fwmdd.h
+--- ITVal-1.0b/src/fwmdd.h	2009-01-22 17:22:54.000000000 -0400
++++ ITVal-1.0/src/fwmdd.h	2009-01-22 17:27:51.000000000 -0400
+@@ -135,7 +135,7 @@ class fw_fddl_forest:public fddl_forest 
+    int InternalGetServiceArcs(level k, node_idx p, int* src, int* dst,
+       int* low, int* high, service*&output, int& numArcs);
+   void PrintPort (mdd_handle h, level k);
+-  int PrintPort (level k, node_idx p, int highByte, int depth, portset * p);
++  int PrintPort (level k, node_idx p, int highByte, int depth, portset * ps);
+ };
+ 
+ #endif

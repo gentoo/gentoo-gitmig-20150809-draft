@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/itval/itval-1.0.ebuild,v 1.1 2007/05/23 09:12:37 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/itval/itval-1.0.ebuild,v 1.2 2009/02/15 20:41:23 loki_val Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,6 +17,12 @@ DEPEND="sys-devel/bison
 	sys-devel/flex"
 
 S=${WORKDIR}/ITVal-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+}
 
 src_install(){
 	make DESTDIR="${D}" install || die "make install failed"
