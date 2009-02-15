@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.23 2009/02/14 23:47:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.24 2009/02/15 00:11:50 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -119,7 +119,7 @@ qt4-build_src_prepare() {
 		skip_project_generation_patch
 		symlink_binaries_to_buildtree
 	fi
-	
+
 	if ! use custom-cxxflags;then
 		# Don't let the user go too overboard with flags.
 		strip-flags
@@ -139,7 +139,7 @@ qt4-build_src_prepare() {
 		append-flags -fno-gcse
 	fi
 
-	# Bug 172219	
+	# Bug 172219
 	sed -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
 		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
 		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
