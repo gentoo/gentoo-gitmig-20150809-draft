@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libstdc++-v3
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.56 2009/02/05 04:12:56 je_fro Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.57 2009/02/15 22:58:32 vapier Exp $
+
+  15 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  -files/libstdc++-v3-open_missing_mode.patch, libstdc++-v3-3.3.6.ebuild:
+  Use the common gcc patchset.
 
   05 Feb 2009; Jeff Gardner <je_fro@gentoo.org>
   +files/libstdc++-v3-open_missing_mode.patch, libstdc++-v3-3.3.6.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.20 2009/02/05 04:12:56 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.21 2009/02/15 22:58:32 vapier Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -105,6 +105,7 @@ S=${WORKDIR}/gcc-${PV}
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
 
+PATCH_VER="1.6"
 LOC="/usr"
 #MY_PV="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
 #MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
@@ -118,7 +119,8 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 # We will handle /usr/include/g++-v3/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
-SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-${PV}.tar.bz2"
+SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-${PV}.tar.bz2
+	mirror://gentoo/gcc-${PV}-patches-${PATCH_VER}.tar.bz2"
 
 DESCRIPTION="Compatibility package for running binaries linked against a pre gcc 3.4 libstdc++"
 HOMEPAGE="http://gcc.gnu.org/libstdc++/"
@@ -158,8 +160,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-
-	epatch "${FILESDIR}"/libstdc++-v3-open_missing_mode.patch || die "epatch failed"
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
