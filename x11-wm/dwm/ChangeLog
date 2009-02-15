@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/dwm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.58 2009/02/14 05:03:53 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.59 2009/02/15 15:57:11 maekke Exp $
+
+  15 Feb 2009; Markus Meier <maekke@gentoo.org> dwm-5.3.1.ebuild:
+  x86 stable, bug #258305
 
   14 Feb 2009; Kenneth Prugh <ken69267@gentoo.org> dwm-5.3.1.ebuild:
   amd64 stable, bug #258305
