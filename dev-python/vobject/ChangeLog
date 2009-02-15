@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/vobject
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/ChangeLog,v 1.4 2009/01/08 21:37:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/ChangeLog,v 1.5 2009/02/15 14:12:54 patrick Exp $
+
+*vobject-0.8.1b (15 Feb 2009)
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> +vobject-0.8.1b.ebuild:
+  Bump to 0.8.1b
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -vobject-0.6.0.ebuild,
   -vobject-0.6.6.ebuild:
