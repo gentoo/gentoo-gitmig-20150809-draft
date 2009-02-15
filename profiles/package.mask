@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9487 2009/02/14 16:26:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9488 2009/02/15 15:30:55 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -256,8 +256,8 @@ net-analyzer/rtg
 
 # mask pending removal
 # Benedikt Böhm <hollow@gentoo.org> (10 Jan 2009)
-# baselayout-vserver is unmaintained and obsoleted by
-# baselayout-2/openrc. please upgrade. removal in 30 days.
+# baselayout-vserver is unmaintained and obsoleted by baselayout-2/openrc.
+# Please, upgrade to openrc. removal after openrc goes stable, bug #254519
 sys-apps/baselayout-vserver
 
 # Christoph Mende <angelos@gentoo.org> (07 Jan 2009)
