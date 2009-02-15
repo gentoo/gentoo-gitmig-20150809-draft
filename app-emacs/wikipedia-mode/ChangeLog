@@ -1,9 +1,14 @@
 # ChangeLog for app-emacs/wikipedia-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wikipedia-mode/ChangeLog,v 1.4 2009/02/15 18:22:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wikipedia-mode/ChangeLog,v 1.5 2009/02/15 19:00:50 ulm Exp $
+
+*wikipedia-mode-0.5-r1 (15 Feb 2009)
 
   15 Feb 2009; Ulrich Mueller <ulm@gentoo.org>
-  files/50wikipedia-mode-gentoo.el, wikipedia-mode-0.5.ebuild:
+  files/50wikipedia-mode-gentoo.el,
+  +files/wikipedia-mode-0.5-require-outline-magic.patch,
+  -wikipedia-mode-0.5.ebuild, +wikipedia-mode-0.5-r1.ebuild:
+  Actually load outline-magic, otherwise it would be useless to depend on it.
   Generalise auto-mode pattern in site-init file for all language versions.
   SRC_URI was an inexistent domain; changed to Gentoo mirrors now.
 

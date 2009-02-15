@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wikipedia-mode/wikipedia-mode-0.5.ebuild,v 1.4 2009/02/15 18:22:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wikipedia-mode/wikipedia-mode-0.5-r1.ebuild,v 1.1 2009/02/15 19:00:50 ulm Exp $
 
-inherit elisp
+inherit elisp eutils
 
 DESCRIPTION="Mode for editing Wikipedia articles off-line"
 HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki/WikipediaMode"
@@ -16,3 +16,8 @@ IUSE=""
 RDEPEND="app-emacs/outline-magic"
 
 SITEFILE="50${PN}-gentoo.el"
+
+src_unpack() {
+	elisp_src_unpack
+	epatch "${FILESDIR}/${P}-require-outline-magic.patch"
+}
