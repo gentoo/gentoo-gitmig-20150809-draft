@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/efax-gtk
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.26 2007/04/20 21:29:01 josejx Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.27 2009/02/15 22:58:27 loki_val Exp $
+
+*efax-gtk-3.0.18 (15 Feb 2009)
+
+  15 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +efax-gtk-3.0.18.ebuild:
+  Fix bug 251779 with ebuild from Michael Mair-Keimberger <miki3@gmx.net>.
+  Also solves bug 193309.
 
   20 Apr 2007; Joseph Jezak <josejx@gentoo.org> efax-gtk-3.0.11.ebuild:
   Marked ~ppc for bug #173832.
