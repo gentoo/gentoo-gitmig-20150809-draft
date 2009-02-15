@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/commons-configuration-1.4.ebuild,v 1.3 2008/04/13 08:16:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/commons-configuration-1.4.ebuild,v 1.4 2009/02/15 17:30:39 caster Exp $
 
+EAPI=1
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2
@@ -11,15 +12,15 @@ HOMEPAGE="http://jakarta.apache.org/commons/configuration/"
 SRC_URI="mirror://apache/jakarta/commons/configuration/source/${P}-src.tar.gz"
 
 COMMON_DEPENDS="
-	>=dev-java/commons-beanutils-1.7.0
-	>=dev-java/commons-codec-1.3
-	>=dev-java/commons-collections-3.1
-	>=dev-java/commons-digester-1.6
-	>=dev-java/commons-jxpath-1.2
-	>=dev-java/commons-lang-2.3
-	>=dev-java/commons-logging-1.0.4
-	>=dev-java/commons-httpclient-3.0
-	=dev-java/servletapi-2.4*"
+	>=dev-java/commons-beanutils-1.7.0:1.7
+	>=dev-java/commons-codec-1.3:0
+	>=dev-java/commons-collections-3.1:0
+	>=dev-java/commons-digester-1.6:0
+	>=dev-java/commons-jxpath-1.2:0
+	>=dev-java/commons-lang-2.3:2.1
+	>=dev-java/commons-logging-1.0.4:0
+	>=dev-java/commons-httpclient-3.0:3
+	dev-java/servletapi:2.4"
 
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEPENDS}"
@@ -29,6 +30,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+IUSE=""
 
 S="${WORKDIR}/${P}-src"
 

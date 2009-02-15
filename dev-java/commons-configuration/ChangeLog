@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-configuration
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/ChangeLog,v 1.4 2009/02/14 23:35:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/ChangeLog,v 1.5 2009/02/15 17:30:39 caster Exp $
+
+  15 Feb 2009; Vlastimil Babka <caster@gentoo.org>
+  commons-configuration-1.4.ebuild:
+  Use slot deps everywhere.
 
 *commons-configuration-1.6 (14 Feb 2009)
 
