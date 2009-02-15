@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.6-r1.ebuild,v 1.1 2009/02/13 22:09:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.6-r2.ebuild,v 1.1 2009/02/15 01:38:59 robbat2 Exp $
 
 inherit perl-app
 

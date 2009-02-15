@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mytop
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.19 2009/02/13 22:09:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.20 2009/02/15 01:38:59 robbat2 Exp $
+
+*mytop-1.6-r2 (15 Feb 2009)
+
+  15 Feb 2009; Robin H. Johnson <robbat2@gentoo.org>
+  files/mytop-1.6-queries-vs-questions-mysql-5.0.76.patch,
+  -mytop-1.6-r1.ebuild, +mytop-1.6-r2.ebuild:
+  Had a bug in the first edition of the patch, roll out a new revision
+  instead.
 
 *mytop-1.6-r1 (13 Feb 2009)
 

@@ -10,21 +10,32 @@ Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
 MySQL-Bug: 41131
 MySQL-Bug-URL: http://bugs.mysql.com/?id=41131
 
+====
+Revision 2:
+The first revision missed changing the instances of $OLD_STATUS{Questions}.
+
 diff -Nuar mytop-1.6.orig/mytop mytop-1.6/mytop
---- mytop-1.6.orig/mytop	2009-02-13 13:59:43.882787823 -0800
-+++ mytop-1.6/mytop	2009-02-13 14:03:54.749418810 -0800
-@@ -800,8 +800,8 @@
+--- mytop-1.6.orig/mytop	2009-02-14 17:28:38.696187159 -0800
++++ mytop-1.6/mytop	2009-02-14 17:36:31.192890507 -0800
+@@ -800,8 +800,15 @@
  
          ## Queries per second...
  
 -        my $avg_queries_per_sec  = sprintf("%.2f", $STATUS{Questions} / $STATUS{Uptime});
 -        my $num_queries          = $STATUS{Questions};
-+		my $num_queries = defined($STATUS{Queries}) ? $STATUS{Queries} : $STATUS{Questions};
++        my ($num_queries, $old_num_queries);
++        if(defined($STATUS{Queries})) {
++            $num_queries = $STATUS{Queries};
++            $old_num_queries = $OLD_STATUS{Queries};
++        } else {
++            $num_queries = $STATUS{Questions};
++            $old_num_queries = $OLD_STATUS{Questions};
++        }
 +        my $avg_queries_per_sec  = sprintf("%.2f", $num_queries / $STATUS{Uptime});
  
          my @t = localtime(time);
  
-@@ -820,25 +820,25 @@
+@@ -820,25 +827,25 @@
  
  
          printf " Queries: %-5s  qps: %4.0f Slow: %7s         Se/In/Up/De(%%):    %02.0f/%02.0f/%02.0f/%02.0f \n",
@@ -50,12 +61,12 @@ diff -Nuar mytop-1.6.orig/mytop mytop-1.6/mytop
          {
 -          my $q_diff = ( $STATUS{Questions} - $OLD_STATUS{Questions} );
 -#          print("q_diff: $STATUS{Questions} - $OLD_STATUS{Questions}  / $t_delta = $q_diff\n");
-+          my $q_diff = ( $num_queries - $OLD_STATUS{Questions} );
-+#          print("q_diff: $num_queries - $OLD_STATUS{Questions}  / $t_delta = $q_diff\n");
++          my $q_diff = ( $num_queries - $old_num_queries );
++#          print("q_diff: $num_queries - $old_num_queries  / $t_delta = $q_diff\n");
  
            printf("             qps now: %4.0f Slow qps: %3.1f  Threads: %4.0f (%4.0f/%4.0f) %02.0f/%02.0f/%02.0f/%02.0f \n",
 -                 ( $STATUS{Questions} - $OLD_STATUS{Questions} ) / $t_delta,
-+                 ( $num_queries - $OLD_STATUS{Questions} ) / $t_delta,
++                 ( $num_queries - $old_num_queries ) / $t_delta,
                   ( # slow now (qps)
                    ($STATUS{Slow_queries} ) ?
                    ( $STATUS{Slow_queries} - $OLD_STATUS{Slow_queries} ) / $t_delta :
