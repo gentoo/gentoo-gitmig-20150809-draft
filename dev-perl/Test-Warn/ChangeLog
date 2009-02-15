@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Warn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/ChangeLog,v 1.18 2009/02/15 13:02:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/ChangeLog,v 1.19 2009/02/15 15:04:41 tcunha Exp $
+
+  15 Feb 2009; Tiago Cunha <tcunha@gentoo.org> Test-Warn-0.11.ebuild:
+  stable sparc, bug 259065
 
   15 Feb 2009; Markus Meier <maekke@gentoo.org> Test-Warn-0.11.ebuild:
   amd64/x86 stable, bug #259065
