@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.4.ebuild,v 1.2 2009/02/12 21:44:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/libtorrent-0.12.4.ebuild,v 1.3 2009/02/15 11:48:14 maekke Exp $
 
 inherit base eutils toolchain-funcs flag-o-matic libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://libtorrent.rakshasa.no/"
 SRC_URI="http://libtorrent.rakshasa.no/downloads/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
 
 IUSE="debug ipv6"
 
