@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-freedict-tur-eng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-tur-eng/ChangeLog,v 1.3 2009/01/09 22:13:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-freedict-tur-eng/ChangeLog,v 1.4 2009/02/15 12:01:21 maekke Exp $
+
+  15 Feb 2009; Markus Meier <maekke@gentoo.org>
+  stardict-freedict-tur-eng-2.4.2.ebuild:
+  amd64/x86 stable, bug #258485
 
   09 Jan 2009; Joseph Jezak <josejx@gentoo.org>
   stardict-freedict-tur-eng-2.4.2.ebuild:
