@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.49 2009/01/19 11:11:40 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.50 2009/02/15 17:20:16 iluxa Exp $
+
+  15 Feb 2009; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  sptk-3.5.8.9.ebuild:
+  Rename check_use to sptk_use_enable. Replace call to make with call to emake
+  in src_install
 
 *sptk-3.5.8.9 (19 Jan 2009)
 

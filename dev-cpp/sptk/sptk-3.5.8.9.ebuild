@@ -1,6 +1,6 @@
 # Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.9.ebuild,v 1.1 2009/01/19 11:11:40 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.9.ebuild,v 1.2 2009/02/15 17:20:16 iluxa Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.sptk.net/sptk-${PV}.tbz2"
 HOMEPAGE="http://www.sptk.net"
 
 SLOT="3"
-LICENSE="|| ( BSD )"
+LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
 
 RDEPEND="fltk?    ( >=x11-libs/fltk-1.1.6:1.1 )
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	dev-util/cmake
 	doc?      ( app-doc/doxygen )"
 
-check_use() {
+sptk_use_enable() {
 	if use ${1}; then
 		SPTK_OPTIONS="${SPTK_OPTIONS} -DNO_${2}:BOOLEAN=FALSE"
 	else
@@ -39,14 +39,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	check_use examples EXAMPLES
-	check_use postgres POSTGRESQL
-	check_use mysql    MYSQL
-	check_use sqlite3  SQLITE3
-	check_use odbc     ODBC
-	check_use aspell   ASPELL
-	check_use fltk     FLTK
-	check_use excel    EXCEL
+	sptk_use_enable examples EXAMPLES
+	sptk_use_enable postgres POSTGRESQL
+	sptk_use_enable mysql    MYSQL
+	sptk_use_enable sqlite3  SQLITE3
+	sptk_use_enable odbc     ODBC
+	sptk_use_enable aspell   ASPELL
+	sptk_use_enable fltk     FLTK
+	sptk_use_enable excel    EXCEL
 
 	cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr -D LIBDIR=$(get_libdir) ${SPTK_OPTIONS} .  || die "Configuration Failed"
 }
@@ -67,7 +67,7 @@ src_compile() {
 
 src_install () {
 
-	make DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "Installation failed"
 
 	dodoc README AUTHORS
 
