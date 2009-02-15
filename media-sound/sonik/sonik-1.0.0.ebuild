@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonik/sonik-1.0.0.ebuild,v 1.2 2006/10/21 14:02:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonik/sonik-1.0.0.ebuild,v 1.3 2009/02/15 01:20:51 loki_val Exp $
 
 ARTS_REQUIRED="yes"
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="KDE Audio Editor"
 HOMEPAGE="http://sonik.sourceforge.net/"
@@ -19,6 +19,12 @@ RDEPEND="media-libs/liblrdf
 	sci-libs/gsl
 	media-libs/audiofile"
 need-kde 3.3
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
+}
 
 src_compile() {
 	myconf="$(use_enable ladspa)"
