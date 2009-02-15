@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gnomecanvas2
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.40 2008/10/06 14:09:56 graaff Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.41 2009/02/15 14:17:47 flameeyes Exp $
+
+  15 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-gnomecanvas2-0.16.0.ebuild:
+  Remove ruby19 from USE_RUBY since it does not build with Ruby 1.9.
 
   06 Oct 2008; Hans de Graaff <graaff@gentoo.org>
   ruby-gnomecanvas2-0.16.0.ebuild:
