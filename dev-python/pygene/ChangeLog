@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygene
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygene/ChangeLog,v 1.2 2008/09/02 21:03:11 pythonhead Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygene/ChangeLog,v 1.3 2009/02/15 22:48:54 patrick Exp $
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> pygene-0.2.1.ebuild:
+  Adding ~amd64 keyword
 
   02 Sep 2008; Rob Cakebread <pythonhead@gentoo.org> pygene-0.2.1.ebuild:
   Fixed NEED_PYTHON.

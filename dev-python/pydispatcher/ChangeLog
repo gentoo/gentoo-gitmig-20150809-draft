@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pydispatcher
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydispatcher/ChangeLog,v 1.8 2008/08/06 05:46:21 neurogeek Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydispatcher/ChangeLog,v 1.9 2009/02/15 22:46:29 patrick Exp $
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> pydispatcher-2.0.1.ebuild:
+  Adding ~amd64 keyword
 
 *pydispatcher-2.0.1 (06 Aug 2008)
 

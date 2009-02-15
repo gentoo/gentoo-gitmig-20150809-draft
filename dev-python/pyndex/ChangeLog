@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyndex
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyndex/ChangeLog,v 1.6 2006/07/13 05:10:06 agriffis Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyndex/ChangeLog,v 1.7 2009/02/15 22:51:16 patrick Exp $
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> pyndex-0.3.2a.ebuild:
+  Adding ~amd64 keyword
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> pyndex-0.3.2a.ebuild:
   Mark 0.3.2a stable on ia64

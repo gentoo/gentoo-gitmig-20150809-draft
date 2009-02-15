@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygene/pygene-0.2.1.ebuild,v 1.2 2008/09/02 21:03:11 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygene/pygene-0.2.1.ebuild,v 1.3 2009/02/15 22:48:54 patrick Exp $
 
 NEED_PYTHON=2.4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Simple python genetic algorithms programming library"
 SRC_URI="http://www.freenet.org.nz/python/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.freenet.org.nz/python/pygene/"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 IUSE="doc examples"
 DEPEND="doc? ( >=dev-python/epydoc-2.1-r2 )"
