@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.4.ebuild,v 1.1 2009/01/27 17:57:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.4.1.ebuild,v 1.1 2009/02/15 12:54:20 dragonheart Exp $
 
-EAPI=1
+EAPI=2
 ARTS_REQUIRED="never"
-inherit eutils qt3 kde
+inherit eutils qt3 kde autotools
 
 DESCRIPTION="a soft phone for your VOIP communcations using SIP"
 HOMEPAGE="http://www.twinklephone.com/"
@@ -37,7 +37,12 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-kdedetect.patch
+	eautoreconf
+}
+
+src_configure() {
 	local myconf=" \
 			$(use_with kde) \
 			$(use_with ilbc) \
@@ -45,11 +50,10 @@ src_compile() {
 			$(use_with zrtp) \
 			$(use_with speex)"
 	set-kdedir
-	kde_src_compile
 }
 
 src_install() {
 	kde_src_install
-	dodoc THANKS
 	domenu twinkle.desktop
+	dodoc THANKS
 }

@@ -1,6 +1,14 @@
 # ChangeLog for net-im/twinkle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.44 2009/01/27 17:57:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.45 2009/02/15 12:54:20 dragonheart Exp $
+
+*twinkle-1.4.1 (15 Feb 2009)
+
+  15 Feb 2009; Daniel Black <dragonheart@gentoo.org>
+  +files/twinkle-1.4.1-kdedetect.patch, -twinkle-1.4.ebuild,
+  +twinkle-1.4.1.ebuild:
+  version bump as per bug #259071 - patch for kde4 as per bug #257247 thanks
+  to Michael Davidsaver. removed 1.4 because of bug #256561
 
 *twinkle-1.4 (27 Jan 2009)
 
