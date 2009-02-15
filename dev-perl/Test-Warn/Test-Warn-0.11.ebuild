@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/Test-Warn-0.11.ebuild,v 1.1 2008/07/18 14:37:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/Test-Warn-0.11.ebuild,v 1.2 2009/02/15 13:02:48 maekke Exp $
 
 MODULE_AUTHOR=CHORNY
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="Perl extension to test methods for warnings"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
 IUSE=""
 
 SRC_TEST="do"
