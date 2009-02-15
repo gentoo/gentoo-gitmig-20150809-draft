@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Math-Calc-Units
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Calc-Units/ChangeLog,v 1.1 2009/02/15 18:21:43 tove Exp $
+
+*Math-Calc-Units-1.06 (15 Feb 2009)
+
+  15 Feb 2009; Torsten Veller <tove@gentoo.org> +metadata.xml,
+  +Math-Calc-Units-1.06.ebuild:
+  Initial commit. Used by Nagios-Plugin (#257580)
+
