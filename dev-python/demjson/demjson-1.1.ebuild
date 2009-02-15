@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/demjson-1.1.ebuild,v 1.1 2007/11/21 22:13:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/demjson-1.1.ebuild,v 1.2 2009/02/15 22:10:38 patrick Exp $
 
 NEED_PYTHON=2.3
 
 inherit distutils
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Read and write JSON-encoded data, compliant with RFC 4627"
 HOMEPAGE="http://deron.meranda.us/python/demjson/"

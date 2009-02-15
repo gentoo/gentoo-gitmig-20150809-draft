@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cfgparse
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cfgparse/ChangeLog,v 1.3 2007/02/21 16:31:49 lucass Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cfgparse/ChangeLog,v 1.4 2009/02/15 22:02:28 patrick Exp $
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> cfgparse-1.2-r1.ebuild:
+  Adding ~amd64 keyword
 
   21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
   files/digest-cfgparse-1.2-r1, Manifest:

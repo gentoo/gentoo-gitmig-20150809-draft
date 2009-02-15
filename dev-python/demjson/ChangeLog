@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/demjson
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.2 2007/11/24 18:57:49 swegener Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.3 2009/02/15 22:10:38 patrick Exp $
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org> demjson-1.1.ebuild:
+  Adding ~amd64 keyword
 
 *demjson-1.1 (21 Nov 2007)
 

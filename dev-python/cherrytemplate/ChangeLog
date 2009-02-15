@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cherrytemplate
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrytemplate/ChangeLog,v 1.6 2007/06/25 07:35:26 hawking Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrytemplate/ChangeLog,v 1.7 2009/02/15 22:06:08 patrick Exp $
+
+  15 Feb 2009; Patrick Lauer <patrick@gentoo.org>
+  cherrytemplate-1.0.0.ebuild:
+  Adding ~amd64 keyword
 
   25 Jun 2007; Ali Polatel <hawking@gentoo.org> cherrytemplate-1.0.0.ebuild:
   use NEED_PYTHON, removed unneeded lines
