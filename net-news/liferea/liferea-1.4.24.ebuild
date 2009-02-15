@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.24.ebuild,v 1.2 2009/02/14 14:41:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.24.ebuild,v 1.3 2009/02/15 21:22:06 dang Exp $
 
 WANT_AUTOMAKE=1.9
 inherit gnome2 eutils autotools
@@ -45,7 +45,7 @@ pkg_setup() {
 	# Backends are now mutually exclusive.
 	# we prefer xulrunner over webkit over seamonkey over gtkhtml
 	if use xulrunner ; then
-		if ! built_with_use xulrunner gnome ; then
+		if ! built_with_use net-libs/xulrunner:1.9 gnome ; then
 			die "You must build xulrunner with the gnome USE flag"
 		fi
 		G2CONF="${G2CONF} --with-gecko=libxul"
