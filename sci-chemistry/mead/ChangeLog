@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/mead
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mead/ChangeLog,v 1.5 2007/02/22 14:44:24 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mead/ChangeLog,v 1.6 2009/02/15 22:57:07 dirtyepic Exp $
+
+*mead-2.2.7 (15 Feb 2009)
+
+  15 Feb 2009; Ryan Hill <dirtyepic@gentoo.org>
+  +files/mead-2.2.7-gcc43.patch, +files/mead-2.2.7-respect-cflags.patch,
+  +mead-2.2.7.ebuild:
+  Version bump and gcc-4.3 fix by Joel on bug #250423.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org>
   files/digest-mead-2.2.5, Manifest:
