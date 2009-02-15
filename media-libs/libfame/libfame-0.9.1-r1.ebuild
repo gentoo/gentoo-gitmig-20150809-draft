@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.25 2006/10/28 23:39:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.26 2009/02/15 00:08:23 loki_val Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 
 	# Do not add -march=i586, bug #41770.
 	sed -i -e 's:-march=i[345]86 ::g' configure
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_compile() {
