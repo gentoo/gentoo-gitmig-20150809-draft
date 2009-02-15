@@ -1,6 +1,13 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.119 2009/02/13 12:01:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.120 2009/02/15 17:21:41 carlo Exp $
+
+*kmplayer-0.10.0c-r1 (15 Feb 2009)
+
+  15 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  +files/kmplayer-0.10.0c-desktop-file.diff, +kmplayer-0.10.0c-r1.ebuild:
+  Reflect use dependency properly, bug #225151. Get rid of invalid aRts
+  dependency. Missing kde.eclass function call. Proper desktop file fix.
 
   13 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> kmplayer-0.11.0a.ebuild:
   Fix stupid typo.
