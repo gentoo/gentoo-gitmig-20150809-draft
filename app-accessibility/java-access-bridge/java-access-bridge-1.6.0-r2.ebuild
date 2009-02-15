@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.6.0-r1.ebuild,v 1.3 2007/07/11 02:34:03 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.6.0-r2.ebuild,v 1.1 2009/02/15 10:09:27 serkan Exp $
 
-inherit java-pkg-2 gnome2
+EAPI="2"
+inherit java-pkg-2 gnome2 autotools
 
 DESCRIPTION="Gnome Java Accessibility Bridge"
 HOMEPAGE="http://developer.gnome.org/projects/gap/"
@@ -24,26 +25,39 @@ DEPEND="$COMMON_DEPEND
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
+src_prepare() {
+	java-pkg-2_src_prepare
+	epatch "${FILESDIR}"/${P}-missingclasses.patch
+	eautoreconf
+}
+
 pkg_setup() {
 	java-pkg-2_pkg_setup
-
 	G2CONF="--with-java-home=${JDK_HOME}"
 }
 
-src_compile() {
+src_configure() {
 	gnome2_src_configure
+}
+
+src_compile() {
 	emake JAVAC="${JAVAC} ${JAVACFLAGS}" || die "compile failure"
 }
 
 src_install() {
 	gnome2_src_install
 
-	java-pkg_dojar ${D}/usr/share/jar/*.jar
+	java-pkg_dojar "${D}"/usr/share/jar/*.jar
 
 	insinto /usr/share/${PN}
-	doins ${D}/usr/share/jar/*.properties
+	doins "${D}"/usr/share/jar/*.properties
 
-	rm -rf ${D}/usr/share/jar
+	rm -rf "${D}"/usr/share/jar
+}
+
+pkg_preinst() {
+	java-pkg-2_pkg_preinst
+	gnome2_pkg_preinst
 }
 
 pkg_postinst() {

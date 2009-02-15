@@ -1,6 +1,15 @@
 # ChangeLog for app-accessibility/java-access-bridge
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.42 2007/01/23 14:52:32 genone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.43 2009/02/15 10:09:27 serkan Exp $
+
+*java-access-bridge-1.24.2 (15 Feb 2009)
+*java-access-bridge-1.6.0-r2 (15 Feb 2009)
+
+  15 Feb 2009; Serkan Kaba <serkan@gentoo.org>
+  +files/java-access-bridge-1.6.0-missingclasses.patch, metadata.xml,
+  java-access-bridge-1.6.0.ebuild, -java-access-bridge-1.6.0-r1.ebuild,
+  +java-access-bridge-1.6.0-r2.ebuild, +java-access-bridge-1.24.2.ebuild:
+  Fix bug #256883. Version bump. Add to java herd. Quoting.
 
   23 Jan 2007; Marius Mauch <genone@gentoo.org>
   java-access-bridge-1.6.0.ebuild, java-access-bridge-1.6.0-r1.ebuild:
