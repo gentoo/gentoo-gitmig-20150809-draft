@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kaffeine
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.92 2008/08/28 22:40:28 tgurr Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.93 2009/02/15 17:13:35 carlo Exp $
+
+*kaffeine-0.8.7-r1 (15 Feb 2009)
+
+  15 Feb 2009; Carsten Lohrke <carlo@gentoo.org> +kaffeine-0.8.7-r1.ebuild:
+  Get rid of invalid aRts dependency. Reflect use dependency properly.
 
 *kaffeine-0.8.7 (28 Aug 2008)
 
