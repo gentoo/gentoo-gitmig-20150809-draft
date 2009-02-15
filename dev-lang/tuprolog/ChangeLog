@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tuprolog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.27 2009/02/12 17:39:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.28 2009/02/15 12:23:35 maekke Exp $
+
+  15 Feb 2009; Markus Meier <maekke@gentoo.org> tuprolog-2.1.1.ebuild:
+  amd64/x86 stable, bug #258681
 
   12 Feb 2009; nixnut <nixnut@gentoo.org> tuprolog-2.1.1.ebuild:
   ppc stable #258681
