@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/fex
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/fex/ChangeLog,v 1.5 2007/12/29 03:56:06 dirtyepic Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/fex/ChangeLog,v 1.6 2009/02/15 20:47:32 loki_val Exp $
+
+  15 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
+  files/fex-0.8.18-gcc4.patch:
+  Update gcc4 patch with fixes for gcc-4.3. Bug 241444. Thanks to Gene Seto
+  <geneseto@hotmail.com> for the patch.
 
 *fex-0.8.18-r1 (29 Dec 2007)
 
