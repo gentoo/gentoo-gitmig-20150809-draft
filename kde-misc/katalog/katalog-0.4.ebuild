@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/katalog-0.4.ebuild,v 1.4 2007/07/26 01:54:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/katalog-0.4.ebuild,v 1.5 2009/02/15 20:06:27 loki_val Exp $
 
 inherit kde
 
@@ -16,6 +16,8 @@ IUSE=""
 DEPEND=">=dev-util/scons-0.96.1"
 
 RDEPEND=">=dev-db/sqlite-3.1"
+
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
 
 src_compile() {
 	local myconf="kdeincludes=$(kde-config --prefix)/include prefix=/usr "
