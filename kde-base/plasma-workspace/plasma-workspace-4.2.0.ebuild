@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.2.0.ebuild,v 1.2 2009/02/01 08:34:36 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.2.0.ebuild,v 1.3 2009/02/15 22:52:57 scarabeus Exp $
 
 EAPI="2"
 
@@ -13,12 +13,12 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug google-gadgets htmlhandbook python xcomposite xinerama"
 
 COMMONDEPEND="
-	>=kde-base/kephal-${PV}:${SLOT}
-	>=kde-base/ksysguard-${PV}:${SLOT}
-	>=kde-base/libkworkspace-${PV}:${SLOT}
-	>=kde-base/libplasmaclock-${PV}:${SLOT}
-	>=kde-base/libtaskmanager-${PV}:${SLOT}
-	>=kde-base/soliduiserver-${PV}:${SLOT}
+	>=kde-base/kephal-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/ksysguard-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/libkworkspace-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/libplasmaclock-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/libtaskmanager-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/soliduiserver-${PV}:${SLOT}[kdeprefix=]
 	x11-libs/libXau
 	x11-libs/libXfixes
 	x11-libs/libXrender
@@ -38,7 +38,8 @@ DEPEND="${COMMONDEPEND}
 "
 RDEPEND="${COMMONDEPEND}
 	!kde-base/plasma:${SLOT}
-	>=kde-base/kde-menu-icons-${PV}:${SLOT}
+	>=kde-base/kioclient-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kde-menu-icons-${PV}:${SLOT}[kdeprefix=]
 "
 
 KMEXTRA="
