@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/world-of-goo-1.40.ebuild,v 1.1 2009/02/15 00:15:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/world-of-goo-1.40.ebuild,v 1.2 2009/02/15 00:47:37 vapier Exp $
 
 inherit games
 
@@ -48,7 +48,7 @@ src_install() {
 
 	dodoc readme.html linux-issues.txt
 	newicon icon.png ${MY_PN}.png
-	make_desktop_entry ${MY_PN} "World Of Goo (Demo)" ${MY_PN}.png
+	make_desktop_entry ${MY_PN} "World Of Goo" ${MY_PN}.png
 
 	dosym ${d}/${MY_PN%Demo} "${GAMES_BINDIR}"/${MY_PN}
 	pushd "${D}"${d} >/dev/null
