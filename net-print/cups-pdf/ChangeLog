@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-pdf
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.40 2009/02/15 12:33:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.41 2009/02/15 15:16:33 ranger Exp $
+
+  15 Feb 2009; Brent Baude <ranger@gentoo.org> cups-pdf-2.4.8.ebuild:
+  stable ppc, bug 258851
 
   15 Feb 2009; Markus Meier <maekke@gentoo.org> cups-pdf-2.4.8.ebuild:
   amd64/x86 stable, bug #258851
