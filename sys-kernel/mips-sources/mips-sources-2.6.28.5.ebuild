@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.28.ebuild,v 1.2 2009/01/09 08:38:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.28.5.ebuild,v 1.1 2009/02/15 22:40:36 kumba Exp $
 
 # INCLUDED:
 # 1) linux sources from kernel.org
@@ -15,7 +15,7 @@
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20081230"			# Date of diff between kernel.org and lmo GIT
+GITDATE="20090215"			# Date of diff between kernel.org and lmo GIT
 GENPATCHVER="1.34"			# Tarball version for generic patches
 EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
@@ -41,7 +41,7 @@ DEPEND=">=sys-devel/gcc-4.1.1"
 
 # Version Control Variables
 USE_RC="no"				# If set to "yes", then attempt to use an RC kernel
-USE_PNT="no"				# If set to "yes", then attempt to use a point-release (2.6.x.y)
+USE_PNT="yes"				# If set to "yes", then attempt to use a point-release (2.6.x.y)
 
 # Machine Support Control Variables
 DO_IP22="yes"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
