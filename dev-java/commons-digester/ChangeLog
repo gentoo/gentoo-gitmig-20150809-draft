@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-digester
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.52 2008/04/05 00:43:36 betelgeuse Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.53 2009/02/15 20:12:12 caster Exp $
+
+*commons-digester-1.8.1 (15 Feb 2009)
+
+  15 Feb 2009; Vlastimil Babka <caster@gentoo.org>
+  -files/1.7-build.xml-jar-target.patch,
+  +files/1.8.1-build.xml-jar-target.patch, +commons-digester-1.8.1.ebuild:
+  Version bump.
 
   05 Apr 2008; Petteri Räty <betelgeuse@gentoo.org>
   -commons-digester-1.7-r2.ebuild:
