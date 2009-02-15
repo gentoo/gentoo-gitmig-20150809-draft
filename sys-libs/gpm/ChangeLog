@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.76 2009/02/15 21:05:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.77 2009/02/15 21:06:38 vapier Exp $
+
+*gpm-1.20.6 (15 Feb 2009)
+
+  15 Feb 2009; Mike Frysinger <vapier@gentoo.org> +gpm-1.20.6.ebuild:
+  Version bump.
 
   15 Feb 2009; Mike Frysinger <vapier@gentoo.org>
   -files/gpm-configure-LANG.patch, gpm-1.20.1-r6.ebuild:
