@@ -8,7 +8,7 @@ depend() {
 start () {
 	
 	ebegin "Starting Music Player Daemon Audioscrobbler client"
-	start-stop-daemon --start -p /var/run/mpdscribble.pid -b -m --exec /usr/bin/mpdscribble
+	start-stop-daemon --start --exec /usr/bin/mpdscribble -- --pidfile /var/run/mpdscribble.pid
 	eend $?
 }
 

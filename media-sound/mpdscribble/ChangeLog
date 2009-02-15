@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpdscribble
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.23 2009/01/19 00:37:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpdscribble/ChangeLog,v 1.24 2009/02/15 22:15:56 angelos Exp $
+
+  15 Feb 2009; Christoph Mende <angelos@gentoo.org> files/mpdscribble.rc:
+  Don't fork twice and fix the pid file in the init script
 
 *mpdscribble-0.16 (19 Jan 2009)
 
