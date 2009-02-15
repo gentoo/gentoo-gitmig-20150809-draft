@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/adns
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.31 2008/04/21 17:51:54 phreak Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.32 2009/02/15 02:14:25 dragonheart Exp $
+
+  15 Feb 2009; Daniel Black <dragonheart@gentoo.org> +files/README.security,
+  -adns-1.1.ebuild, adns-1.4.ebuild:
+  added warning thanks to Robert Buchholz bug #238119.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
