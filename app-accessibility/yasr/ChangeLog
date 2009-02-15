@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/yasr
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.23 2009/02/07 17:04:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.24 2009/02/15 14:58:23 maekke Exp $
+
+  15 Feb 2009; Markus Meier <maekke@gentoo.org> yasr-0.6.9-r1.ebuild:
+  amd64 stable, bug #245872
 
   07 Feb 2009; Christian Faulhammer <fauli@gentoo.org> yasr-0.6.9-r1.ebuild:
   stable x86, bug 245872
