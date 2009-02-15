@@ -1,0 +1,27 @@
+--- src/ksubtitleripper.desktop.o	2009-02-15 02:14:07.000000000 +0100
++++ src/ksubtitleripper.desktop	2009-02-15 02:14:17.000000000 +0100
+@@ -1,10 +1,9 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=KSubtitleRipper
+-Exec=ksubtitleripper %i %m -caption "%c"
++Exec=ksubtitleripper %i -caption "%c"
+ Icon=ksubtitleripper
+ Type=Application
+-DocPath=ksubtitleripper/index.html
++X-DocPath=ksubtitleripper/index.html
+ Comment=An application to extract DVD subtitles
+ Comment[es]=Una aplicación para extraer subtítulos de DVD
+-Terminal=0
++Terminal=false
+--- src/Makefile.am.o	2009-02-15 02:14:33.000000000 +0100
++++ src/Makefile.am	2009-02-15 02:14:48.000000000 +0100
+@@ -37,7 +37,7 @@
+ KDE_ICON = ksubtitleripper
+ 
+ # this is where the kdelnk file will go
+-kdelnkdir   = $(kde_appsdir)/Utilities
++kdelnkdir   = $(xdg_appsdir)
+ kdelnk_DATA = ksubtitleripper.desktop
+ 
+ # this is where the XML-GUI resource file goes
