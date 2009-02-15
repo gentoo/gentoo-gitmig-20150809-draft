@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/pidgin-msn-pecan
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-msn-pecan/ChangeLog,v 1.5 2008/12/01 14:46:11 voyageur Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-msn-pecan/ChangeLog,v 1.6 2009/02/15 23:46:05 voyageur Exp $
+
+*pidgin-msn-pecan-0.0.18 (15 Feb 2009)
+
+  15 Feb 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +pidgin-msn-pecan-0.0.18.ebuild:
+  Version bump, bugfixes including personal status messages, adds voice clip
+  support, remove Makefile sed for multilib as it's not longer needed and
+  breaks things in this version
 
 *pidgin-msn-pecan-0.0.17 (01 Dec 2008)
 
