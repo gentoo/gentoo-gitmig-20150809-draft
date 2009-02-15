@@ -1,13 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo-demo/world-of-goo-demo-1.40.ebuild,v 1.1 2009/02/15 00:00:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo-demo/world-of-goo-demo-1.40.ebuild,v 1.2 2009/02/15 00:15:49 vapier Exp $
 
 inherit games
 
-MY_PN="WorldOfGooDemo"
 DESCRIPTION="World of Goo is a puzzle game with a strong emphasis on physics"
 HOMEPAGE="http://2dboy.com/"
-SRC_URI="${MY_PN}.${PV}.tar.gz"
+
+if [[ ${PN} == *-demo ]] ; then
+	MY_PN="WorldOfGooDemo"
+	SRC_URI="${MY_PN}.${PV}.tar.gz"
+else
+	MY_PN="WorldOfGoo"
+	SRC_URI="${MY_PN}Setup.${PV}.tar.gz"
+fi
 
 LICENSE="2dboy-EULA"
 SLOT="0"
@@ -28,7 +34,7 @@ DEPEND=""
 
 S=${WORKDIR}/${MY_PN}
 
-QA_EXECSTACK="opt/WorldOfGooDemo/WorldOfGoo.bin"
+QA_EXECSTACK="opt/${MY_PN}/WorldOfGoo.bin"
 
 pkg_nofetch() {
 	elog "To download the demo, visit http://worldofgoo.com/dl2.php?lk=demo"
