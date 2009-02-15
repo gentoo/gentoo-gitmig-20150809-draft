@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.16 2009/02/02 23:18:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.17 2009/02/15 22:05:45 scarabeus Exp $
+
+  15 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> soprano-2.2.1.ebuild:
+  Update deps. Per bug #259069.
 
 *soprano-2.2.1 (02 Feb 2009)
 

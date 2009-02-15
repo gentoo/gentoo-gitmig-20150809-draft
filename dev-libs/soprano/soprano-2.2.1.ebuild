@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.2.1.ebuild,v 1.1 2009/02/02 23:18:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.2.1.ebuild,v 1.2 2009/02/15 22:05:45 scarabeus Exp $
 
 EAPI="2"
 
@@ -29,6 +29,7 @@ COMMON_DEPEND="
 	sesame2? ( >=virtual/jdk-1.6.0 )
 "
 DEPEND="${COMMON_DEPEND}
+	>=dev-util/cmake-2.6.2
 	doc? ( app-doc/doxygen )
 "
 RDEPEND="${COMMON_DEPEND}"
