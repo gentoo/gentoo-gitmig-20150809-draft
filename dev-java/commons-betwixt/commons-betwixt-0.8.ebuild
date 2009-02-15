@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.8.ebuild,v 1.2 2008/04/07 15:48:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.8.ebuild,v 1.3 2009/02/15 17:21:53 caster Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc test source"
@@ -16,16 +16,16 @@ IUSE=""
 
 COMMON_DEP="
 	dev-java/commons-collections:0
-	>=dev-java/commons-logging-1.0.2
+	>=dev-java/commons-logging-1.0.2:0
 	dev-java/commons-beanutils:1.7
-	>=dev-java/commons-digester-1.6"
+	>=dev-java/commons-digester-1.6:0"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEP}"
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}
 	test? (
 		dev-java/ant-junit
-		>=dev-java/xerces-2.7
+		>=dev-java/xerces-2.7:2
 	)"
 
 S="${WORKDIR}/${P}-src/"
