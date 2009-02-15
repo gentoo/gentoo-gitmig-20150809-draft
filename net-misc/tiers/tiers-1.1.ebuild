@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/tiers-1.1.ebuild,v 1.7 2007/06/12 21:21:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/tiers-1.1.ebuild,v 1.8 2009/02/15 21:46:04 loki_val Exp $
 
 inherit eutils
 
@@ -19,12 +19,13 @@ S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
-	epatch ${FILESDIR}/${MY_P}-gccfixes.patch
-	sed -e '1a\#!/bin/sh' -e '1d' -e "s|-f |-f /usr/share/${PN}/|g" -i ${S}/bin/strip4gnuplot3.5
+	epatch "${FILESDIR}"/${MY_P}-gccfixes.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+	sed -e '1a\#!/bin/sh' -e '1d' -e "s|-f |-f /usr/share/${PN}/|g" -i "${S}"/bin/strip4gnuplot3.5
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}"/src
 	emake CFLAGS="${CFLAGS}" CONFIGFILE="/etc/tiers-gnuplot.conf" EXEC="../bin/tiers-gnuplot" || die
 	# cleanup for a sec
 	rm *.o
@@ -37,6 +38,6 @@ src_install() {
 	newins src/tiers_config.generic tiers.conf
 	newins src/tiers_config.gnuplot tiers-gnuplot.conf
 	insinto /usr/share/${PN}
-	doins bin/*.awk ${DISTDIR}/tiers2ns-lan.awk
+	doins bin/*.awk "${DISTDIR}"/tiers2ns-lan.awk
 	dodoc CHANGES COPYRIGHT README docs/*
 }
