@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailutils
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.36 2008/07/15 03:26:05 dirtyepic Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.37 2009/02/15 21:35:21 tove Exp $
+
+  15 Feb 2009; Torsten Veller <tove@gentoo.org> mailutils-0.6-r3.ebuild,
+  mailutils-1.2.ebuild:
+  Remove mail-client/elm blocker as elm was removed
 
   15 Jul 2008; Ryan Hill <dirtyepic@gentoo.org> mailutils-0.6-r3.ebuild,
   mailutils-1.2.ebuild:
