@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9490 2009/02/15 20:28:16 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9491 2009/02/15 21:37:42 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -339,10 +339,6 @@ dev-util/w32api
 # Torsten Veller <tove@gentoo.org> (29 Dec 2008)
 # Unmaintained net-mail packages
 # Masked for removal in 30 days
-# 251377 - 29 Dec 2008
-mail-client/xfmail
-# 251381 - 29 Dec 2008
-mail-client/elm
 # 251383 - 29 Dec 2008
 net-mail/ezmlm
 net-mail/ezmlm-idx-mysql
