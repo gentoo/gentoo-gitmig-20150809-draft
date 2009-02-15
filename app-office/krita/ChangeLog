@@ -1,6 +1,10 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.85 2009/02/08 17:27:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.86 2009/02/15 22:22:45 carlo Exp $
+
+  15 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  krita-1.6.3_p20090204.ebuild:
+  Reflect use dependency properly.
 
 *krita-1.6.3_p20090204 (08 Feb 2009)
 
