@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r6.ebuild,v 1.10 2008/01/10 09:56:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r6.ebuild,v 1.11 2009/02/15 21:05:33 vapier Exp $
 
 # emacs support disabled due to Bug 99533
 
 inherit eutils toolchain-funcs
 #elisp-common
 
-PATCH_VER="1.5"
+PATCH_VER="1.6"
 DESCRIPTION="Console-based mouse driver"
 HOMEPAGE="http://linux.schottelius.org/gpm/"
 SRC_URI="ftp://arcana.linux.it/pub/gpm/${P}.tar.bz2
@@ -27,7 +27,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
-	epatch "${FILESDIR}"/gpm-configure-LANG.patch
 }
 
 src_compile() {
