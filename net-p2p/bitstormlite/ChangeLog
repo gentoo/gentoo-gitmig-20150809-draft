@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bitstormlite
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitstormlite/ChangeLog,v 1.9 2008/04/13 14:46:21 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitstormlite/ChangeLog,v 1.10 2009/02/16 00:05:16 loki_val Exp $
+
+  16 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/bitstormlite-0.2p-gcc43.patch, bitstormlite-0.2p.ebuild:
+  Fix build with gcc-4.3. Bug 251535. Patch snatched from
+  http://bugs.debian.org/455302 .
 
   13 Apr 2008; Petteri Räty <betelgeuse@gentoo.org>
   bitstormlite-0.2p.ebuild:
