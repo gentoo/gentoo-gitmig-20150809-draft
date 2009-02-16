@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.284 2009/01/10 12:25:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.285 2009/02/16 14:09:08 remi Exp $
+
+*gdm-2.20.9-r1 (16 Feb 2009)
+
+  16 Feb 2009; Rémi Cardona <remi@gentoo.org> +gdm-2.20.9-r1.ebuild:
+  fix custom sessions (see bug #216984, work done by Gilles, I'm just
+  committing)
 
   10 Jan 2009; Raúl Porcel <armin76@gentoo.org> gdm-2.20.9.ebuild:
   Re-add ~arm/~sh
