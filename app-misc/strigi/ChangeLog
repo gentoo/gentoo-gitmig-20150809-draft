@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.25 2009/02/10 15:20:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.26 2009/02/16 14:15:03 tampakrap Exp $
+
+  16 Feb 2009; Theo Chatzimichos <tampakrap@gentoo.org> metadata.xml,
+  -strigi-0.5.8.ebuild, -strigi-0.5.9.ebuild, -strigi-0.5.10.ebuild,
+  -strigi-0.5.11.ebuild:
+  Remove 0.5* versions as KDE 4.1 works with 0.6*
 
   10 Feb 2009; Carsten Lohrke <carlo@gentoo.org> strigi-0.6.4.ebuild:
   clucene related build issue, bug #257659.
