@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/kiax
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.13 2008/07/27 22:16:26 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.14 2009/02/16 19:11:17 darkside Exp $
+
+*kiax-0.8.51-r1 (16 Feb 2009)
+
+  16 Feb 2009; Jeremy Olexa <darkside@gentoo.org>
+  +files/kiax-0.8.51-h_addr_list.patch, -kiax-0.8.51.ebuild,
+  +kiax-0.8.51-r1.ebuild:
+  (non maintainer commit) fix many QA issues - biggest is fails to compile
+  with glibc-2.8, remove old version. Patch by Mounir Lamouri, bug 246131
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> kiax-0.8.5_p1.ebuild,
   kiax-0.8.51.ebuild:
