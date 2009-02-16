@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmahjongg/xmahjongg-3.7.ebuild,v 1.6 2008/10/30 08:55:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmahjongg/xmahjongg-3.7.ebuild,v 1.7 2009/02/16 19:41:32 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lcdf.org/xmahjongg/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 mips ppc x86"
+KEYWORDS="amd64 ~mips ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libSM
