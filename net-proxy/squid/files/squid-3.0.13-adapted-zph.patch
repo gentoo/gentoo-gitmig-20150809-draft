@@ -1,6 +1,6 @@
-diff -Nru squid-3.0.STABLE10.orig/src/cf.data.pre squid-3.0.STABLE10/src/cf.data.pre
---- squid-3.0.STABLE10.orig/src/cf.data.pre	2008-11-02 09:55:43.000000000 +0000
-+++ squid-3.0.STABLE10/src/cf.data.pre	2008-11-02 09:57:33.000000000 +0000
+diff -Nru squid-3.0.STABLE13.orig/src/cf.data.pre squid-3.0.STABLE13/src/cf.data.pre
+--- squid-3.0.STABLE13.orig/src/cf.data.pre	2009-02-16 23:20:51.000000000 +0000
++++ squid-3.0.STABLE13/src/cf.data.pre	2009-02-16 23:21:13.000000000 +0000
 @@ -1133,6 +1133,60 @@
  	making the request.
  DOC_END
@@ -62,9 +62,9 @@ diff -Nru squid-3.0.STABLE10.orig/src/cf.data.pre squid-3.0.STABLE10/src/cf.data
  NAME: tcp_outgoing_address
  TYPE: acl_address
  DEFAULT: none
-diff -Nru squid-3.0.STABLE10.orig/src/client_side_reply.cc squid-3.0.STABLE10/src/client_side_reply.cc
---- squid-3.0.STABLE10.orig/src/client_side_reply.cc	2008-10-14 11:22:31.000000000 +0000
-+++ squid-3.0.STABLE10/src/client_side_reply.cc	2008-11-02 09:57:33.000000000 +0000
+diff -Nru squid-3.0.STABLE13.orig/src/client_side_reply.cc squid-3.0.STABLE13/src/client_side_reply.cc
+--- squid-3.0.STABLE13.orig/src/client_side_reply.cc	2009-02-03 01:36:22.000000000 +0000
++++ squid-3.0.STABLE13/src/client_side_reply.cc	2009-02-16 23:21:13.000000000 +0000
 @@ -48,6 +48,7 @@
  #include "ESI.h"
  #endif
@@ -110,9 +110,9 @@ diff -Nru squid-3.0.STABLE10.orig/src/client_side_reply.cc squid-3.0.STABLE10/sr
  
      if (buf != result.data) {
          /* we've got to copy some data */
-diff -Nru squid-3.0.STABLE10.orig/src/fde.h squid-3.0.STABLE10/src/fde.h
---- squid-3.0.STABLE10.orig/src/fde.h	2008-10-14 11:22:32.000000000 +0000
-+++ squid-3.0.STABLE10/src/fde.h	2008-11-02 09:57:33.000000000 +0000
+diff -Nru squid-3.0.STABLE13.orig/src/fde.h squid-3.0.STABLE13/src/fde.h
+--- squid-3.0.STABLE13.orig/src/fde.h	2009-02-03 01:36:22.000000000 +0000
++++ squid-3.0.STABLE13/src/fde.h	2009-02-16 23:21:13.000000000 +0000
 @@ -106,7 +106,7 @@
          long handle;
      } win32;
@@ -122,9 +122,9 @@ diff -Nru squid-3.0.STABLE10.orig/src/fde.h squid-3.0.STABLE10/src/fde.h
  };
  
  #endif /* SQUID_FDE_H */
-diff -Nru squid-3.0.STABLE10.orig/src/forward.cc squid-3.0.STABLE10/src/forward.cc
---- squid-3.0.STABLE10.orig/src/forward.cc	2008-10-14 11:22:32.000000000 +0000
-+++ squid-3.0.STABLE10/src/forward.cc	2008-11-02 09:57:33.000000000 +0000
+diff -Nru squid-3.0.STABLE13.orig/src/forward.cc squid-3.0.STABLE13/src/forward.cc
+--- squid-3.0.STABLE13.orig/src/forward.cc	2009-02-03 01:36:22.000000000 +0000
++++ squid-3.0.STABLE13/src/forward.cc	2009-02-16 23:21:13.000000000 +0000
 @@ -964,6 +964,52 @@
  
      netdbPingSite(request->host);
@@ -178,9 +178,9 @@ diff -Nru squid-3.0.STABLE10.orig/src/forward.cc squid-3.0.STABLE10/src/forward.
      if (servers && (p = servers->_peer)) {
          p->stats.fetches++;
          request->peer_login = p->login;
-diff -Nru squid-3.0.STABLE10.orig/src/structs.h squid-3.0.STABLE10/src/structs.h
---- squid-3.0.STABLE10.orig/src/structs.h	2008-10-14 11:22:32.000000000 +0000
-+++ squid-3.0.STABLE10/src/structs.h	2008-11-02 09:57:33.000000000 +0000
+diff -Nru squid-3.0.STABLE13.orig/src/structs.h squid-3.0.STABLE13/src/structs.h
+--- squid-3.0.STABLE13.orig/src/structs.h	2009-02-03 01:36:23.000000000 +0000
++++ squid-3.0.STABLE13/src/structs.h	2009-02-16 23:21:13.000000000 +0000
 @@ -553,6 +553,8 @@
          int emailErrData;
          int httpd_suppress_version_string;
