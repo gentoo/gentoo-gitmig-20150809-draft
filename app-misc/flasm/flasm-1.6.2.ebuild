@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/flasm-1.6.2.ebuild,v 1.1 2007/09/03 09:42:17 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/flasm-1.6.2.ebuild,v 1.2 2009/02/16 12:05:39 drizzt Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -29,6 +29,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-bison-2.patch
 }
 
 src_compile() {
