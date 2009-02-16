@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmimic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/ChangeLog,v 1.6 2009/01/07 21:48:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/ChangeLog,v 1.7 2009/02/16 18:42:31 darkside Exp $
+
+*libmimic-1.0.4-r1 (16 Feb 2009)
+
+  16 Feb 2009; Jeremy Olexa <darkside@gentoo.org> -libmimic-1.0.4.ebuild,
+  +libmimic-1.0.4-r1.ebuild:
+  (non maintainer commit) Fix QA issues, patch by Mounir Lamouri. bug 205821
 
   07 Jan 2009; Raúl Porcel <armin76@gentoo.org> libmimic-1.0.4.ebuild:
   Add ~alpha/~ia64 wrt #245949
