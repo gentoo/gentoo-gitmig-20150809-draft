@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.17 2009/02/15 22:56:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.18 2009/02/16 14:20:36 chainsaw Exp $
+
+  16 Feb 2009; <chainsaw@gentoo.org> pm-utils-1.2.3-r1.ebuild:
+  Stable on PowerPC for bug #259080, based on arch testing by Christian
+  Schmitt <chrschmitt@gmail.com>.
 
 *pm-utils-1.2.4 (15 Feb 2009)
 
