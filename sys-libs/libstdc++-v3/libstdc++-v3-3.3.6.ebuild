@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.22 2009/02/16 00:29:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.23 2009/02/16 23:38:47 vapier Exp $
 
 inherit eutils flag-o-matic libtool multilib
 
@@ -120,10 +120,13 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 	elibtoolize --portage --shallow
 	./contrib/gcc_update --touch
+	mkdir -p "${WORKDIR}"/build
 }
 
 src_compile() {
+	cd "${WORKDIR}"/build
 	do_filter_flags
+	ECONF_SOURCE=${S}
 	econf \
 		--enable-shared \
 		--with-system-zlib \
@@ -144,7 +147,10 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install-target-libstdc++-v3 || die
+	emake -j1 \
+		-C "${WORKDIR}"/build \
+		DESTDIR="${D}" \
+		install-target-libstdc++-v3 || die
 
 	# scrub everything but the library we care about
 	pushd "${D}" >/dev/null
