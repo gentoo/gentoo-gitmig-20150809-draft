@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.64 2009/02/09 20:54:48 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.65 2009/02/16 21:22:40 ranger Exp $
+
+  16 Feb 2009; Brent Baude <ranger@gentoo.org> tunepimp-0.5.3-r1.ebuild:
+  stable ppc64, bug 245547
 
   09 Feb 2009; Tiago Cunha <tcunha@gentoo.org> tunepimp-0.5.3-r1.ebuild:
   stable sparc, bug 245547
