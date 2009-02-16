@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.51 2009/02/04 14:19:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.52 2009/02/16 14:16:27 chainsaw Exp $
+
+  16 Feb 2009; <chainsaw@gentoo.org> hal-info-20081219.ebuild:
+  Stable on PowerPC for bug #259080, based on arch testing by Christian
+  Schmitt <chrschmitt@gmail.com>.
 
 *hal-info-20090202 (04 Feb 2009)
 
