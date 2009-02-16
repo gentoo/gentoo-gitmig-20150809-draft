@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.33 2009/02/14 20:51:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.34 2009/02/16 14:21:15 armin76 Exp $
+
+  16 Feb 2009; Raúl Porcel <armin76@gentoo.org> devil-1.7.7.ebuild:
+  ia64/sparc stable wrt #255217
 
   14 Feb 2009; Markus Meier <maekke@gentoo.org> devil-1.7.7.ebuild:
   amd64/x86 stable, bug #255217
