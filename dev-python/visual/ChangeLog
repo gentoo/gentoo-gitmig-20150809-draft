@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.25 2009/02/03 17:59:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.26 2009/02/16 14:13:34 ranger Exp $
+
+  16 Feb 2009; Brent Baude <ranger@gentoo.org> visual-3.2.9-r2.ebuild:
+  stable ppc, bug 259136
 
 *visual-3.2.9-r2 (03 Feb 2009)
 
