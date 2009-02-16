@@ -1,0 +1,123 @@
+diff -rupN lurker-2.1b/common/Thread.cpp lurker-2.1/common/Thread.cpp
+--- lurker-2.1b/common/Thread.cpp	2009-01-24 18:43:46.000000000 -0400
++++ lurker-2.1/common/Thread.cpp	2009-01-24 18:44:57.000000000 -0400
+@@ -25,7 +25,7 @@
+ #define _FILE_OFFSET_BITS 64
+ 
+ #include <cstdio>
+-#include <string>
++#include <cstring>
+ 
+ #include "md5.h"
+ #include "Keys.h"
+diff -rupN lurker-2.1b/index/Index.cpp lurker-2.1/index/Index.cpp
+--- lurker-2.1b/index/Index.cpp	2009-01-24 18:43:46.000000000 -0400
++++ lurker-2.1/index/Index.cpp	2009-01-24 18:45:48.000000000 -0400
+@@ -47,6 +47,7 @@
+ #include <string>
+ #include <vector>
+ #include <iostream>
++#include <cstdlib>
+ 
+ #include <unistd.h>
+ #include <iconv.h>
+diff -rupN lurker-2.1b/index/main.cpp lurker-2.1/index/main.cpp
+--- lurker-2.1b/index/main.cpp	2009-01-24 18:43:46.000000000 -0400
++++ lurker-2.1/index/main.cpp	2009-01-24 18:46:17.000000000 -0400
+@@ -38,6 +38,7 @@
+ #include <cstdio>
+ #include <ctime>
+ #include <cstdlib>
++#include <cstring>
+ 
+ #include <sys/stat.h>
+ #include <sys/types.h>
+diff -rupN lurker-2.1b/libesort/File.cpp lurker-2.1/libesort/File.cpp
+--- lurker-2.1b/libesort/File.cpp	2009-01-24 18:43:46.000000000 -0400
++++ lurker-2.1/libesort/File.cpp	2009-01-24 18:44:08.000000000 -0400
+@@ -34,6 +34,7 @@
+ 
+ #include <cassert>
+ #include <iostream>
++#include <cstring>
+ 
+ namespace ESort
+ {
+diff -rupN lurker-2.1b/libesort/Transaction.cpp lurker-2.1/libesort/Transaction.cpp
+--- lurker-2.1b/libesort/Transaction.cpp	2009-01-24 18:43:46.000000000 -0400
++++ lurker-2.1/libesort/Transaction.cpp	2009-01-24 18:44:21.000000000 -0400
+@@ -30,6 +30,7 @@
+ 
+ #include <iostream>
+ #include <cassert>
++#include <cstring>
+ 
+ /* #define DEBUG */
+ 
+diff -rupN lurker-2.1b/prune/attach.cpp lurker-2.1/prune/attach.cpp
+--- lurker-2.1b/prune/attach.cpp	2009-01-24 18:43:46.000000000 -0400
++++ lurker-2.1/prune/attach.cpp	2009-01-24 18:47:50.000000000 -0400
+@@ -28,6 +28,7 @@
+ #include <Keys.h>
+ 
+ #include <iostream>
++#include <cstdlib>
+ 
+ using namespace std;
+ 
+diff -rupN lurker-2.1b/prune/prune.cpp lurker-2.1/prune/prune.cpp
+--- lurker-2.1b/prune/prune.cpp	2009-01-24 18:43:46.000000000 -0400
++++ lurker-2.1/prune/prune.cpp	2009-01-24 18:47:32.000000000 -0400
+@@ -36,6 +36,7 @@
+ #include <utime.h>
+ 
+ #include <iostream>
++#include <cstdlib>
+ 
+ #include <cstring>
+ #include <cerrno>
+diff -rupN lurker-2.1b/render/attach.cpp lurker-2.1/render/attach.cpp
+--- lurker-2.1b/render/attach.cpp	2009-01-24 18:43:46.000000000 -0400
++++ lurker-2.1/render/attach.cpp	2009-01-24 18:48:34.000000000 -0400
+@@ -36,6 +36,7 @@
+ #include "Summary.h"
+ 
+ #include <iostream>
++#include <cstdlib>
+ 
+ using std::cout;
+ 
+diff -rupN lurker-2.1b/render/jump.cpp lurker-2.1/render/jump.cpp
+--- lurker-2.1b/render/jump.cpp	2009-01-24 18:43:46.000000000 -0400
++++ lurker-2.1/render/jump.cpp	2009-01-24 18:49:46.000000000 -0400
+@@ -28,6 +28,7 @@
+ 
+ #include <ctime>
+ #include <cstring>
++#include <cstdlib>
+ 
+ int main()
+ {
+diff -rupN lurker-2.1b/render/keyword.cpp lurker-2.1/render/keyword.cpp
+--- lurker-2.1b/render/keyword.cpp	2009-01-24 18:43:46.000000000 -0400
++++ lurker-2.1/render/keyword.cpp	2009-01-24 18:50:16.000000000 -0400
+@@ -31,6 +31,8 @@
+ #include <vector>
+ 
+ #include <ctime>
++#include <cstdlib>
++#include <cstring>
+ 
+ using std::set;
+ 
+diff -rupN lurker-2.1b/render/parse.cpp lurker-2.1/render/parse.cpp
+--- lurker-2.1b/render/parse.cpp	2009-01-24 18:43:46.000000000 -0400
++++ lurker-2.1/render/parse.cpp	2009-01-24 18:49:31.000000000 -0400
+@@ -25,6 +25,7 @@
+ #define _FILE_OFFSET_BITS 64
+ 
+ #include <iostream>
++#include <cstdlib>
+ 
+ #include "parse.h"
+ 

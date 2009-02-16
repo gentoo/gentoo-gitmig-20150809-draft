@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lurker/lurker-2.1.ebuild,v 1.4 2008/02/05 10:51:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lurker/lurker-2.1.ebuild,v 1.5 2009/02/16 00:35:10 loki_val Exp $
 
 inherit eutils webapp depend.apache
 
@@ -25,6 +25,8 @@ pkg_setup() {
 src_unpack() {
 	unpack lurker-${PV}.tar.gz && cd "${S}"
 	unpack mimelib-3.1.1.tar.gz
+	cd ${S}
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_compile() {
