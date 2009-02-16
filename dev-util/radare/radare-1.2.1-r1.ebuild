@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/radare-1.2.1-r1.ebuild,v 1.1 2009/02/16 12:25:29 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/radare-1.2.1-r1.ebuild,v 1.2 2009/02/16 21:56:04 mr_bones_ Exp $
 
 inherit eutils
 
@@ -31,4 +31,3 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 }
-
