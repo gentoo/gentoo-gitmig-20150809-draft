@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-0.9.7.ebuild,v 1.3 2008/09/11 11:44:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-0.9.7.ebuild,v 1.4 2009/02/16 00:26:18 loki_val Exp $
 
 EAPI=1
 
@@ -37,6 +37,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-broken_bundled_plotmm_sigc.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
 src_compile() {
