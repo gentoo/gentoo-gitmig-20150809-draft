@@ -31,7 +31,7 @@ if [ ! -f /etc/prelink.cache -o -f /var/lib/misc/prelink.force ] \
   rm -f /etc/prelink.cache /var/lib/misc/prelink.force
   PRELINK_OPTS="$PRELINK_OPTS -f"
   date > /var/lib/misc/prelink.full
-  cp -a /var/lib/misc/prelink.{full,quick}
+  cp -a /var/lib/misc/prelink.full /var/lib/misc/prelink.quick
 elif [ -n "$PRELINK_FULL_TIME_INTERVAL" \
        -a "`find /var/lib/misc/prelink.full -mtime -${PRELINK_FULL_TIME_INTERVAL} 2>/dev/null`" \
 	  = /var/lib/misc/prelink.full ]; then
@@ -47,7 +47,7 @@ elif [ -n "$PRELINK_FULL_TIME_INTERVAL" \
   PRELINK_OPTS="$PRELINK_OPTS -q"
 else
   date > /var/lib/misc/prelink.full
-  cp -a /var/lib/misc/prelink.{full,quick}
+  cp -a /var/lib/misc/prelink.full /var/lib/misc/prelink.quick
 fi
 
 echo /usr/sbin/prelink -av $PRELINK_OPTS > /var/log/prelink.log
