@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/gwhois
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.41 2008/08/24 17:48:51 klausman Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/ChangeLog,v 1.42 2009/02/16 07:51:59 wschlich Exp $
+
+*gwhois-20081227 (16 Feb 2009)
+
+  16 Feb 2009; Wolfram Schlich <wschlich@gentoo.org>
+  -gwhois-20071030.ebuild, +gwhois-20081227.ebuild:
+  version bump, removed old version
 
   24 Aug 2008; Tobias Klausmann <klausman@gentoo.org>
   gwhois-20080716.ebuild:

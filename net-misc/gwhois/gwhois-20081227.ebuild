@@ -1,15 +1,17 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20071030.ebuild,v 1.5 2008/03/27 23:12:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwhois/gwhois-20081227.ebuild,v 1.1 2009/02/16 07:51:59 wschlich Exp $
 
 inherit eutils
 
+MY_P=${P/_p/.}
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="generic whois"
 HOMEPAGE="http://gwhois.de/"
-SRC_URI="http://gwhois.de/gwhois/${P/-/_}.tar.gz"
+SRC_URI="http://gwhois.de/gwhois/${MY_P/-/_}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="www-client/lynx
@@ -23,7 +25,7 @@ src_install() {
 	doins pattern
 	dobin gwhois
 	doman gwhois.1
-	dodoc TODO "${FILESDIR}/gwhois.xinetd" README.RIPE README.upgrade
+	dodoc TODO "${FILESDIR}/gwhois.xinetd" README.RIPE
 	einfo ""
 	einfo "See included gwhois.xinetd for an example on how to"
 	einfo "use gwhois as a whois proxy using xinetd."
