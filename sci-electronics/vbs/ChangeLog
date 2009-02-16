@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/vbs
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vbs/ChangeLog,v 1.6 2007/03/09 22:34:48 calchan Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vbs/ChangeLog,v 1.7 2009/02/16 00:49:15 loki_val Exp $
+
+  16 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/vbs-1.4.0-gcc-4.3.patch, vbs-1.4.0.ebuild:
+  Add gcc-4.3 patch per bug 251627. Thanks to Gene Seto
+  <geneseto@hotmail.com> for the patch.
 
   09 Mar 2007; Denis Dupeyron <calchan@gentoo.org>
   +files/vbs-1.4.0-gcc-4.1.patch, -files/vbs-gcc-3.4.patch,
