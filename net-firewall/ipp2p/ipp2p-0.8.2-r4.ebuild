@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r4.ebuild,v 1.7 2008/07/04 20:14:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r4.ebuild,v 1.8 2009/02/16 22:38:46 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/modutils
-	 <net-firewall/iptables-1.4.1.1"
+	 net-firewall/iptables"
 
 DEPEND="${RDEPEND}
 	virtual/linux-sources"
@@ -39,6 +39,9 @@ src_unpack() {
 	    sed -i -e "s/ld -shared/\$\(CC\) -shared/" Makefile
 		if has_version '>=net-firewall/iptables-1.4.0' ; then
 			epatch "${FILESDIR}"/${P}-iptables-1.4.0.patch
+			if has_version '>=net-firewall/iptables-1.4.1' ; then
+				epatch "${FILESDIR}"/${P}-iptables-1.4.1.patch
+			fi
 		fi
 	fi
 }
@@ -58,7 +61,11 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /$(get_libdir)/iptables
+	if has_version '>=net-firewall/iptables-1.4.1' ; then
+		exeinto /$(get_libdir)/xtables
+	else
+		exeinto /$(get_libdir)/iptables
+	fi
 	doexe libipt_ipp2p.so
 
 	dodoc README
