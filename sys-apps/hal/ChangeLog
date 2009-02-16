@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.271 2009/02/05 10:18:24 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.272 2009/02/16 14:21:34 chainsaw Exp $
+
+  16 Feb 2009; <chainsaw@gentoo.org> hal-0.5.11-r8.ebuild:
+  Mark stable on PowerPC 32-bit for bug #259080, based on arch testing by
+  Christian Schmitt <chrschmitt@gmail.com>. Unmasking USE=laptop in the
+  powerpc profile as requested on the bug.
 
   05 Feb 2009; <chainsaw@gentoo.org> hal-0.5.11-r8.ebuild:
   As per Christian Schmitt, PowerPC plans to stop masking the laptop
