@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/keepalived
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.59 2008/05/17 17:19:22 armin76 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.60 2009/02/16 14:32:42 wschlich Exp $
+
+*keepalived-1.1.16 (16 Feb 2009)
+
+  16 Feb 2009; Wolfram Schlich <wschlich@gentoo.org>
+  +files/keepalived-1.1.16-do-not-need-kernel-sources.patch,
+  +keepalived-1.1.16.ebuild:
+  version bump
 
   17 May 2008; Raúl Porcel <armin76@gentoo.org> keepalived-1.1.15.ebuild:
   ia64/sparc stable wrt #213995
