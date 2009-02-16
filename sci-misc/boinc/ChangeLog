@@ -1,6 +1,13 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.52 2009/02/13 16:42:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.53 2009/02/16 19:48:25 scarabeus Exp $
+
+*boinc-6.4.5-r1 (16 Feb 2009)
+
+  16 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/6.4.5-RSA_security.patch, -boinc-6.4.5.ebuild,
+  +boinc-6.4.5-r1.ebuild:
+  Revision bump. Fix the RSA Security issue. Per bug #258011.
 
   13 Feb 2009; Brent Baude <ranger@gentoo.org> boinc-6.4.5.ebuild:
   Marking boinc-6.4.5 ~ppc64 for bug 255156

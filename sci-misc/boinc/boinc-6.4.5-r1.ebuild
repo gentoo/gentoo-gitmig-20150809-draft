@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5.ebuild,v 1.3 2009/02/13 16:42:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r1.ebuild,v 1.1 2009/02/16 19:48:25 scarabeus Exp $
 
 #
 # Don't forget to keep things in sync with binary boinc package!
@@ -51,6 +51,8 @@ src_prepare() {
 	cp /etc/ssl/certs/ca-certificates.crt "${S}"/curl/ca-bundle.crt
 	# copy icons to correct location
 	cp "${S}"/sea/*.png "${S}"/clientgui/res/
+	# RSA Security bug fix. Per bug #258011
+	epatch "${FILESDIR}"/${PV}-RSA_security.patch
 	# fix stripping
 	## TODO
 }
