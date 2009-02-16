@@ -6,8 +6,6 @@
   </maintainer>
   <herd>net-mail</herd>
   <use>
-    <flag name="autocreate">Enable not supported (by upstream) patch from University of Athens for automatic creation of user mailboxes</flag>
-	<flag name="autosieve">Enable not supported (by upstream) patch from University of Athens for "on demand" creation of any folder requested by a sieve filter</flag>
 	<flag name="drac">Enable dynamic relay support in the cyrus imap server</flag>
 	<flag name="idled">Enable idled vs poll IMAP IDLE method</flag>
 	<flag name="replication">Enable replication support in the cyrus imap server</flag>
