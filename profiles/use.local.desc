@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4203 2009/02/16 14:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4204 2009/02/16 19:47:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -859,6 +859,7 @@ games-board/freedoko:pysolcards - Use the PySol card set
 games-board/freedoko:xskatcards - Use the XSkat card set
 games-board/grhino:gtp - Install the GTP (Go/Game Text Protocol) frontend
 games-board/pysol:extra-cardsets - Install extra cardsets
+games-board/spider:xaw - Enable athena widgets
 games-board/xboard:zippy - Enable experimental zippy client
 games-emulation/generator:sdlaudio - Enable SDL Audio
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
