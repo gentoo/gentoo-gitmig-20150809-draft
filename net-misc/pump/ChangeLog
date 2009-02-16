@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.41 2009/02/12 20:37:12 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.42 2009/02/16 18:15:33 nelchael Exp $
+
+  16 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org> Manifest:
+  Fix digest.
 
 *pump-0.8.24-r2 (12 Feb 2009)
 
