@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.57 2009/02/15 22:58:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.58 2009/02/16 00:29:11 vapier Exp $
+
+  16 Feb 2009; Mike Frysinger <vapier@gentoo.org> libstdc++-v3-3.3.6.ebuild:
+  Simplify ebuild greatly by removing all the extraneous gcc cruft.
 
   15 Feb 2009; Mike Frysinger <vapier@gentoo.org>
   -files/libstdc++-v3-open_missing_mode.patch, libstdc++-v3-3.3.6.ebuild:

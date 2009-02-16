@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.21 2009/02/15 22:58:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.22 2009/02/16 00:29:11 vapier Exp $
 
-inherit eutils flag-o-matic libtool gnuconfig versionator
+inherit eutils flag-o-matic libtool multilib
 
 transform_known_flags() {
 	declare setting
@@ -100,117 +100,32 @@ do_filter_flags() {
 	strip-flags
 }
 
-S=${WORKDIR}/gcc-${PV}
-
-# Theoretical cross compiler support
-[ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
-
 PATCH_VER="1.6"
-LOC="/usr"
-#MY_PV="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
-#MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
-MY_PV="$(get_version_component_range 1-2)"
-MY_PV_FULL="$(get_version_component_range 1-3)"
-
-LIBPATH="${LOC}/lib/gcc-lib/${CCHOST}/${MY_PV_FULL}"
-BINPATH="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"
-DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
-# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
-# We will handle /usr/include/g++-v3/ with gcc-config ...
-STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
-
-SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-${PV}.tar.bz2
-	mirror://gentoo/gcc-${PV}-patches-${PATCH_VER}.tar.bz2"
 
 DESCRIPTION="Compatibility package for running binaries linked against a pre gcc 3.4 libstdc++"
 HOMEPAGE="http://gcc.gnu.org/libstdc++/"
+SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-${PV}.tar.bz2
+	mirror://gentoo/gcc-${PV}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
-
+SLOT="5"
 KEYWORDS="amd64 hppa ~mips ppc -ppc64 sparc x86 ~x86-fbsd"
-IUSE="multilib nls nptl build"
+IUSE="multilib nls"
 
-# 3.2.3 -> 3.3.x install .so.5, so lets slot to 5
-if [ "${CHOST}" == "${CCHOST}" ]
-then
-	SLOT="5"
-else
-	SLOT="${CCHOST}-5"
-fi
-
-DEPEND="virtual/libc
-	!nptl? ( elibc_glibc? ( >=sys-libs/glibc-2.3.2-r3 ) )
-	>=sys-devel/binutils-2.14.90.0.6-r1
-	>=sys-devel/bison-1.875
-	>=sys-devel/gcc-config-1.3.1
-	>=sys-devel/gcc-3.3.3_pre20040130
-	!build? ( >=sys-libs/ncurses-5.2-r2
-	          nls? ( sys-devel/gettext ) )"
-
-RDEPEND="virtual/libc
-	!nptl? ( elibc_glibc? ( >=sys-libs/glibc-2.3.2-r3 ) )
-	>=sys-devel/gcc-config-1.3.1
-	>=sys-libs/zlib-1.1.4
-	>=sys-apps/texinfo-4.2-r4
-	!build? ( >=sys-libs/ncurses-5.2-r2 )"
-
-PDEPEND="sys-devel/gcc-config"
+S=${WORKDIR}/gcc-${PV}
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
-
-	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
-
-	if (has_multilib_profile || use multilib) ; then
-		sed -i \
-			-e 's:\(MULTILIB_OSDIRNAMES = \).*:\1../lib64 ../lib32:' \
-			"${S}"/gcc/config/i386/t-linux64 \
-			|| die "sed failed!"
-	fi
-
-	# Misdesign in libstdc++ (Redhat)
-	cp -pPR "${S}"/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
-
-	cd "${S}"; ./contrib/gcc_update --touch &> /dev/null
-	gnuconfig_update
+	./contrib/gcc_update --touch
 }
 
 src_compile() {
-
-	local myconf=
-
-	if ! use nls || use build
-	then
-		myconf="${myconf} --disable-nls"
-	else
-		myconf="${myconf} --enable-nls --without-included-gettext"
-	fi
-
-	(has_multilib_profile || use multilib) || myconf="${myconf} --disable-multilib"
-
 	do_filter_flags
-	einfo "CFLAGS=\"${CFLAGS}\""
-	einfo "CXXFLAGS=\"${CXXFLAGS}\""
-
-	# Build in a separate build tree
-	mkdir -p "${WORKDIR}"/build
-	cd "${WORKDIR}"/build
-
-	einfo "Configuring libstdc++..."
-	addwrite "/dev/zero"
-	"${S}"/configure --prefix=${LOC} \
-		--bindir=${BINPATH} \
-		--includedir=${LIBPATH}/include \
-		--datadir=${DATAPATH} \
-		--mandir=${DATAPATH}/man \
-		--infodir=${DATAPATH}/info \
+	econf \
 		--enable-shared \
-		--host=${CHOST} \
-		--target=${CCHOST} \
 		--with-system-zlib \
 		--enable-languages=c++ \
 		--enable-threads=posix \
@@ -218,78 +133,24 @@ src_compile() {
 		--disable-checking \
 		--enable-cstdio=stdio \
 		--enable-__cxa_atexit \
-		--enable-version-specific-runtime-libs \
-		--with-gxx-include-dir=${STDCXX_INCDIR} \
-		--with-local-prefix=${LOC}/local \
-		${myconf} || die
+		$(use_enable multilib) \
+		$(use_enable nls) \
+		$(use_with !nls included-gettext) \
+		|| die
 
 	touch "${S}"/gcc/c-gperf.h
 
-	einfo "Compiling libstdc++..."
-	S="${WORKDIR}/build" \
-	emake all-target-libstdc++-v3 \
-		LIBPATH="${LIBPATH}" \
-		BOOT_CFLAGS="${CFLAGS}" STAGE1_CFLAGS="-O" || die
+	emake all-target-libstdc++-v3 || die
 }
 
 src_install() {
-	local x=
+	emake -j1 DESTDIR="${D}" install-target-libstdc++-v3 || die
 
-	# Do allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
-	# this can break the build.
-	for x in "${WORKDIR}"/build/gcc/include/*
-	do
-		if [ -L ${x} ]
-		then
-			rm -f ${x}
-			continue
-		fi
-	done
-	# Remove generated headers, as they can cause things to break
-	# (ncurses, openssl, etc).
-	for x in `find "${WORKDIR}"/build/gcc/include/ -name '*.h'`
-	do
-		if grep -q 'It has been auto-edited by fixincludes from' ${x}
-		then
-			rm -f ${x}
-		fi
-	done
-
-	einfo "Installing libstdc++..."
-	# Do the 'make install' from the build directory
-	cd "${WORKDIR}"/build
-	S="${WORKDIR}/build" \
-	make prefix=${LOC} \
-		bindir=${BINPATH} \
-		includedir=${LIBPATH}/include \
-		datadir=${DATAPATH} \
-		mandir=${DATAPATH}/man \
-		infodir=${DATAPATH}/info \
-		DESTDIR="${D}" \
-		LIBPATH="${LIBPATH}" \
-		install-target-libstdc++-v3 || die
-
-	# we'll move this into a directory we can put at the end of ld.so.conf
-	# other than the normal versioned directory, so that it doesnt conflict
-	# with gcc 3.3.3
-	mkdir -p "${D}"/${LOC}/lib/libstdc++-v3/
-	mv "${D}"/${LIBPATH}/lib* "${D}"/${LOC}/lib/libstdc++-v3/
-	# we dont want the headers...
-	rm -rf "${D}"/${LOC}/lib/gcc*
-	# or locales...
-	rm -rf "${D}"/${LOC}/share
-	# or anything other than the .so files, really.
-	find "${D}" | grep -e c++.la$ -e c++.a$ | xargs rm -f
-	# we dont even want the un-versioned .so symlink, as it confuses some
-	# apps and also causes others to link against the old libstdc++...
-	rm "${D}"/${LOC}/lib/libstdc++-v3/libstdc++.so
-
-	# and it's much easier to just move around the result than it is to
-	# configure libstdc++-v3 to use CONF_LIDIR
-	if [ "$(get_libdir)" != "lib" ] ; then
-		mv "${D}"/${LOC}/lib "${D}"/${LOC}/$(get_libdir)
-	fi
-
-	mkdir -p "${D}"/etc/env.d/
-	echo "LDPATH=\"${LOC}/$(get_libdir)/libstdc++-v3/\"" >> "${D}"/etc/env.d/99libstdc++
+	# scrub everything but the library we care about
+	pushd "${D}" >/dev/null
+	mv usr/lib* . || die
+	rm -rf usr
+	rm -f lib*/*.{a,la,so} || die
+	dodir /usr
+	mv lib* usr/ || die
 }
