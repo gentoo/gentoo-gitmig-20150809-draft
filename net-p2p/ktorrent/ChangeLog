@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.105 2009/02/05 22:10:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.106 2009/02/16 20:47:00 tampakrap Exp $
+
+*ktorrent-3.2 (16 Feb 2009)
+
+  16 Feb 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +files/ktorrent-2.2.8-lograce.patch, metadata.xml, -ktorrent-2.2.7.ebuild,
+  ktorrent-2.2.8.ebuild, -ktorrent-3.1.5-r2.ebuild,
+  -ktorrent-3.2_rc1.ebuild, +ktorrent-3.2.ebuild:
+  Apply patch to ktorrent-2.2.8 bug 255068 Version bump to ktorrent-3.2
+  (KDE4) Remove old versions
 
   05 Feb 2009; Brent Baude <ranger@gentoo.org> ktorrent-3.1.6.ebuild:
   marking ktorrent-3.1.6 ~ppc64 to fix kde tree breakage

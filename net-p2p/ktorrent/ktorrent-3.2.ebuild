@@ -1,43 +1,47 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2_rc1.ebuild,v 1.2 2009/01/31 16:06:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2.ebuild,v 1.1 2009/02/16 20:47:00 tampakrap Exp $
 
 EAPI="2"
 
 KDE_MINIMAL="4.2"
-KDE_LINGUAS="ca cs da de el es et fr gl it ja lv nb nds nl nn pl pt pt_BR ru sv uk zh_CN zh_TW"
+KDE_LINGUAS="ar be bg ca cs da de el en_GB es et fr ga gl hi it ja
+	km lt lv nb nds nl nn oc pl pt pt_BR ro ru se sk sl sr sv
+	tr uk zh_CN zh_TW"
 inherit kde4-base
-
-MY_PV="${PV/_/}"
-MY_P="${P/_/}"
 
 DESCRIPTION="A BitTorrent program for KDE."
 HOMEPAGE="http://ktorrent.org/"
-SRC_URI="http://ktorrent.org/downloads/${MY_PV}/${MY_P}.tar.bz2"
+SRC_URI="http://ktorrent.org/downloads/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="3"
-IUSE="+bwscheduler +downloadorder +infowidget +ipfilter +kross +logviewer +mediaplayer +plasma +rss +scanfolder +search +stats +upnp webinterface"
+IUSE="+bwscheduler debug +downloadorder +infowidget +ipfilter +kross +logviewer +mediaplayer plasma rss +scanfolder +search +stats +upnp webinterface +zeroconf"
 
 DEPEND="app-crypt/qca:2
 	dev-libs/gmp
 	sys-devel/gettext
 	!kdeprefix? ( !net-p2p/ktorrent:0 )
-	plasma? ( kde-base/plasma-workspace )
-	!net-p2p/ktorrent:4.1"
-	# 4.1 blocker is due to slot change. We wont slot based on kde version
-	# but based on application version. This was stupid mistake.
+	plasma? ( >=kde-base/libtaskmanager-${KDE_MINIMAL}[kdeprefix=] )
+	rss? (
+		dev-libs/boost
+		>=kde-base/kdepimlibs-${KDE_MINIMAL}[kdeprefix=] )"
 RDEPEND="${DEPEND}
-	infowidget? ( >=dev-libs/geoip-1.4.4 )"
+	infowidget? ( >=dev-libs/geoip-1.4.4 )
+	ipfilter? ( >=kde-base/kdebase-kioslaves-${KDE_MINIMAL}[kdeprefix=] )"
 
-S="${WORKDIR}"/${MY_P}
+src_prepare() {
+	if ! use plasma; then
+		sed -i -e 's/add_subdirectory([[:space:]]*plasma[[:space:]]*)//' \
+		CMakeLists.txt || die "Failed to make plasmoid optional"
+	fi
+
+	kde4-base_src_prepare
+}
 
 src_configure() {
-	local mycmakeargs
-
 	mycmakeargs="${mycmakeargs}
-		-DCMAKE_INSTALL_PREFIX=${PREFIX}
 		-DENABLE_DHT_SUPPORT=ON
 		$(cmake-utils_use_enable bwscheduler BWSCHEDULER_PLUGIN)
 		$(cmake-utils_use_enable downloadorder DOWNLOADORDER_PLUGIN)
@@ -52,6 +56,7 @@ src_configure() {
 		$(cmake-utils_use_enable search SEARCH_PLUGIN)
 		$(cmake-utils_use_enable stats STATS_PLUGIN)
 		$(cmake-utils_use_enable upnp UPNP_PLUGIN)
-		$(cmake-utils_use_enable webinterface WEBINTERFACE_PLUGIN)"
+		$(cmake-utils_use_enable webinterface WEBINTERFACE_PLUGIN)
+		$(cmake-utils_use_enable zeroconf ZEROCONF_PLUGIN)"
 	kde4-base_src_configure
 }

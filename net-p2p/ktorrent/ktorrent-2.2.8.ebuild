@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.8.ebuild,v 1.5 2009/01/06 02:48:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.8.ebuild,v 1.6 2009/02/16 20:47:00 tampakrap Exp $
 
 inherit kde
 
@@ -58,6 +58,7 @@ src_unpack() {
 	cd "${S}"
 	# Fix automagic dependencies on avahi
 	epatch "${FILESDIR}/${PN}-2.2.5-avahi-check.patch"
+	epatch "${FILESDIR}/${P}-lograce.patch"
 
 	rm -f "${S}/configure"
 }
