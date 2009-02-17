@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.53 2009/01/18 21:48:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.54 2009/02/17 15:55:14 bicatali Exp $
+
+  17 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  netcdf-3.6.3.ebuild:
+  Added dependency on libtool >= 2.2, fixing bug #258976
 
   18 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> netcdf-3.6.3.ebuild:
   Patch for parallel building not needed after all.

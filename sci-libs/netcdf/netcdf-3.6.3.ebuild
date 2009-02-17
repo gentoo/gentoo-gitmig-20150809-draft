@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.2 2009/01/18 21:48:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.3.ebuild,v 1.3 2009/02/17 15:55:14 bicatali Exp $
 
 EAPI=2
+
 inherit fortran eutils toolchain-funcs flag-o-matic autotools
 
 DESCRIPTION="Scientific library and interface for array oriented data access"
@@ -16,6 +17,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2.2
 	doc? ( virtual/latex-base )"
 
 pkg_setup() {
@@ -27,6 +29,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
+	#epatch "${FILESDIR}"/${P}-libtool.patch
 	eautoreconf
 }
 
