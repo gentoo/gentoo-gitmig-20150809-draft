@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/ds9
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.15 2009/01/09 22:45:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ChangeLog,v 1.16 2009/02/17 16:33:48 bicatali Exp $
+
+*ds9-5.5 (17 Feb 2009)
+
+  17 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/ds9-5.5-main.patch, +files/ds9-5.5-makefile.patch,
+  +files/ds9-5.5-src.patch, +ds9-5.5.ebuild:
+  Version bump
 
   09 Jan 2009; Joseph Jezak <josejx@gentoo.org> ds9-5.4.ebuild:
   Marked ~ppc for bug #253299.
