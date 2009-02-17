@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/shaaft
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.9 2008/05/01 10:40:51 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.10 2009/02/17 18:27:29 mr_bones_ Exp $
+
+  17 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org> shaaft-0.5.0.ebuild:
+  EAPI=2; skip installing build utility Packer
 
   01 May 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/shaaft-0.5.0-gcc43.patch, shaaft-0.5.0.ebuild:
