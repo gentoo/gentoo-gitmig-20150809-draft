@@ -1,6 +1,10 @@
 # ChangeLog for app-text/epstool
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.24 2009/02/17 21:14:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epstool/ChangeLog,v 1.25 2009/02/17 21:23:39 phosphan Exp $
+
+  17 Feb 2009; Patrick Kursawe <phosphan@gentoo.org> +files/gcc43.patch,
+  epstool-3.08.ebuild:
+  Fix for gcc 4.3 and newer (bug #259305).
 
   17 Feb 2009; Patrick Kursawe <phosphan@gentoo.org> -epstool-3.06.ebuild:
   Removed obsolete version.
