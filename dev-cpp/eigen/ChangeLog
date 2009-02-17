@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/eigen
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.4 2008/11/02 07:01:55 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.5 2009/02/17 17:44:50 scarabeus Exp $
+
+*eigen-2.0.0 (17 Feb 2009)
+
+  17 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
+  +eigen-2.0.0.ebuild:
+  Version bump. Add kde to maintainers, since we will use it for koffice2
+  and other kde packages in future.
 
   02 Nov 2008; Mike Frysinger <vapier@gentoo.org> eigen-1.0.5.ebuild:
   Add ppc/ppc64 love for KDE 4.
