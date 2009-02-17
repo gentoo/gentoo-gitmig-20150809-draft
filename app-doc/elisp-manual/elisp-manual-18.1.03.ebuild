@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-18.1.03.ebuild,v 1.5 2009/01/03 16:13:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-18.1.03.ebuild,v 1.6 2009/02/17 08:08:10 ulm Exp $
 
 inherit eutils versionator
 
@@ -33,4 +33,5 @@ src_compile() {
 
 src_install() {
 	doinfo elisp18.info* || die "doinfo failed"
+	dodoc README
 }
