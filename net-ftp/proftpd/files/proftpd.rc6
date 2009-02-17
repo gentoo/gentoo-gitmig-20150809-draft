@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/files/proftpd.rc6,v 1.12 2008/04/17 07:57:57 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/files/proftpd.rc6,v 1.13 2009/02/17 22:05:07 voyageur Exp $
 
 opts="${opts} reload"
 
@@ -17,7 +17,7 @@ checkconfig() {
 		return 1
 	fi
 	ebegin "Checking proftpd configuration"
-	/usr/sbin/proftpd -t -c /etc/proftpd/proftpd.conf &>/dev/null
+	/usr/sbin/proftpd -t -c /etc/proftpd/proftpd.conf
 	eend $? "Configuration error: please fix your configuration file (/etc/proftpd/proftpd.conf)."
 }
 
