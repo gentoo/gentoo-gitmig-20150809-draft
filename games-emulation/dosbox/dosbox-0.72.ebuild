@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.72.ebuild,v 1.8 2009/01/14 20:25:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.72.ebuild,v 1.9 2009/02/17 04:07:17 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,7 @@ DEPEND="alsa? ( media-libs/alsa-lib[midi] )
 	opengl? ( virtual/opengl )
 	debug? ( sys-libs/ncurses )
 	media-libs/libpng
-	media-libs/libsdl
+	media-libs/libsdl[joystick]
 	media-libs/sdl-net
 	media-libs/sdl-sound"
 
