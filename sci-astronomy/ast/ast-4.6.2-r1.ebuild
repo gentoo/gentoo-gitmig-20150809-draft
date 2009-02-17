@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ast-4.6.2-r1.ebuild,v 1.1 2009/02/17 16:26:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ast-4.6.2-r1.ebuild,v 1.2 2009/02/17 20:20:47 bicatali Exp $
 
 EAPI=2
 inherit eutils versionator
@@ -19,14 +19,9 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
-	# dont do sed in Makefile.am because it requires special starlink automake
-	sed -i \
-		-e 's/@STAR_LATEX_DOCUMENTATION@//' \
-		-e 's/ast.news//' \
-		-e 's/LICENCE//' \
-		-e 's/starfacs_DATA =.*/starfacs_DATA =/' \
-		-e '/$(INSTALL_DATA) $$MF/d' \
-		Makefile.in || die
+	# dont patch/sed Makefile.am because it requires special upstream automake
+	# not shipped
+	epatch "${FILESDIR}"/${P}-makefile.in.patch
 }
 
 src_configure() {

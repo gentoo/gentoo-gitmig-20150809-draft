@@ -1,0 +1,63 @@
+--- Makefile.in.orig	2009-02-17 17:47:41.139829207 +0000
++++ Makefile.in	2009-02-17 20:13:20.388249934 +0000
+@@ -76,7 +76,17 @@
+ 	"$(DESTDIR)$(includedir)" "$(DESTDIR)$(includedir)"
+ libLTLIBRARIES_INSTALL = $(INSTALL)
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+-libast_la_LIBADD =
++libast_la_LIBADD = \
++    libast_err.la \
++    libast_ems.la \
++    libast_grf3d.la \
++    libast_grf_2.0.la \
++    libast_grf_3.2.la \
++    libast_pgplot.la \
++    libast_pgplot3d.la \
++    libast_pal.la \
++    libast_wcslib.la
++
+ am__objects_1 = libast_la-axis.lo libast_la-box.lo libast_la-c2f77.lo \
+ 	libast_la-channel.lo libast_la-circle.lo libast_la-cmpframe.lo \
+ 	libast_la-cmpmap.lo libast_la-cmpregion.lo \
+@@ -670,7 +680,6 @@
+ nodist_include_HEADERS = ast.h AST_PAR
+ include_MESSAGES = AST_ERR ast_err.h
+ lib_LTLIBRARIES = \
+-    libast.la \
+     libast_err.la \
+     libast_ems.la \
+     libast_grf3d.la \
+@@ -679,11 +688,12 @@
+     libast_pgplot.la \
+     libast_pgplot3d.la \
+     libast_pal.la \
+-    libast_wcslib.la
++    libast_wcslib.la \
++    libast.la
+ 
+-stardocs_DATA = @STAR_LATEX_DOCUMENTATION@
+-dist_starnews_DATA = ast.news
+-dist_pkgdata_DATA = LICENCE
++stardocs_DATA = 
++dist_starnews_DATA = 
++dist_pkgdata_DATA = 
+ 
+ # Make all library code position independent by default. This is handy for
+ # creating shareable libraries from the static ones (Java JNI libraries). 
+@@ -791,7 +801,7 @@
+ #ast_test_LDADD = `ast_link`
+ # Expand ast_link to avoid libast_pass2, which causes problems for Solaris
+ ast_test_LDADD = libast.la libast_pal.la libast_grf_3.2.la libast_wcslib.la libast_grf_2.0.la libast_grf3d.la libast_err.la -lm
+-starfacs_DATA = fac_1521_err
++starfacs_DATA = 
+ all: $(BUILT_SOURCES) config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-am
+ 
+@@ -2566,7 +2576,6 @@
+ 	      echo "</files>"; \
+ 	      echo "</manifest>"; \
+ 	    ) >$$MF; \
+-	    $(INSTALL_DATA) $$MF $(DESTDIR)$(STAR_MANIFEST_DIR)/$(PACKAGE); \
+ 	  else \
+ 	    echo "Installation of component $(DESTDIR)$(STAR_MANIFEST_DIR)/$(PACKAGE) failed" >&2; \
+ 	  fi; \
