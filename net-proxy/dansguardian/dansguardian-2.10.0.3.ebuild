@@ -1,25 +1,21 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.9.9.5_beta.ebuild,v 1.1 2008/07/13 14:10:08 mrness Exp $
-
-inherit eutils
-
-MY_P=${P/_beta/}
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10.0.3.ebuild,v 1.1 2009/02/17 23:04:05 mrness Exp $
 
 DESCRIPTION="Web content filtering via proxy"
 HOMEPAGE="http://dansguardian.org"
-SRC_URI="http://dansguardian.org/downloads/2/Beta/${MY_P}.tar.gz"
+SRC_URI="http://dansguardian.org/downloads/2/Stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="clamav kaspersky debug ntlm pcre"
 
-DEPEND="pcre? ( dev-libs/libpcre )
+RDEPEND="sys-libs/zlib
+	pcre? ( dev-libs/libpcre )
 	clamav? ( >=app-antivirus/clamav-0.93 )"
-RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${MY_P}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	if has_version "<${CATEGORY}/${PN}-2.9" ; then
@@ -40,15 +36,11 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-
-	epatch "${FILESDIR}/${P%_beta}-gentoo.patch"
-}
-
 src_compile() {
 	local myconf="--with-logdir=/var/log/dansguardian
 		--with-piddir=/var/run
+		--docdir=/usr/share/doc/${PF}
+		--htmldir=/usr/share/doc/${PF}/html
 		$(use_enable pcre)
 		$(use_enable ntlm)
 		--enable-fancydm
@@ -73,6 +65,11 @@ src_compile() {
 src_install() {
 	make "DESTDIR=${D}" install || die "make install failed"
 
+	# Move html documents to html dir
+	mkdir "${D}"/usr/share/doc/${PF}/html \
+		&& mv "${D}"/usr/share/doc/${PF}/*.html "${D}"/usr/share/doc/${PF}/html \
+		|| die "no html docs found in docdir"
+
 	# Copying init script
 	newinitd "${FILESDIR}/dansguardian.init" dansguardian
 
@@ -90,18 +87,6 @@ src_install() {
 
 	keepdir /var/log/dansguardian
 	fperms o-rwx /var/log/dansguardian
-
-	# TODO : see if no-default-lists.patch and these linea are still needed in next version
-	local f
-	touch "${T}"/emptyfile
-	insinto /etc/dansguardian/lists
-	for f in exceptionfileurllist bannedregexpheaderlist logsitelist logurllist headerregexplist logregexpurllist; do
-		if [ -f "${f}" ] ; then
-			einfo "${f} already exists"
-		else
-			newins "${T}"/emptyfile ${f}
-		fi
-	done
 }
 
 pkg_postinst() {
