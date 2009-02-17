@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.5.ebuild,v 1.1 2009/02/17 16:33:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ds9/ds9-5.5.ebuild,v 1.2 2009/02/17 16:37:26 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -22,7 +22,7 @@ RDEPEND="dev-tcltk/blt
 	x11-libs/libXau
 	x11-libs/libXdmcp
 	x11-libs/xpa
-	sci-astronomy/ast
+	>=sci-astronomy/ast-4.6.2-r1
 	sci-astronomy/funtools"
 
 DEPEND="${RDEPEND}
