@@ -1,0 +1,25 @@
+# ChangeLog for sci-astronomy/cdsclient
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/ChangeLog,v 1.1 2009/02/17 20:47:22 bicatali Exp $
+
+*cdsclient-3.2 (17 Feb 2009)
+
+  17 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +cdsclient-3.2.ebuild:
+  Initial import to the main tree from the sci overlay
+
+  28 Mar 2008; Sébastien Fabbro <bicatali@gentoo.org>
+  +cdsclient-2.90.ebuild:
+  Bump
+
+  07 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  -cdsclient-2.87.ebuild, +cdsclient-2.89.ebuild:
+  Version bump
+
+  26 Mar 2007; Sébastien Fabbro <bicatali@gentoo.org>
+  +cdsclient-2.87.ebuild:
+  Version bump.
+
+  19 Sep 2006; Sebastien Fabbro <seb@ist.utl.pt> cdsclient-2.85.ebuild
+  Initial import.
+
