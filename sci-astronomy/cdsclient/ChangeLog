@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/cdsclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/ChangeLog,v 1.1 2009/02/17 20:47:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/ChangeLog,v 1.2 2009/02/17 22:03:50 bicatali Exp $
+
+  17 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/cdsclient-makefile.in.patch, cdsclient-3.2.ebuild:
+  Now propagate LDFLAGS, and merge fixes in patch
 
 *cdsclient-3.2 (17 Feb 2009)
 

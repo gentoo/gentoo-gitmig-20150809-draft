@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/cdsclient-3.2.ebuild,v 1.1 2009/02/17 20:47:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/cdsclient-3.2.ebuild,v 1.2 2009/02/17 22:03:50 bicatali Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="Collection of scripts to access the CDS databases"
@@ -14,23 +15,13 @@ IUSE=""
 DEPEND=""
 RDEPEND="app-shells/tcsh"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-makefile.in.patch
 	# remove non standard "mantex" page
 	sed -i \
 		-e 's/aclient.tex//' \
 		"${S}"/configure || die "sed failed"
-	# remove useless version file
-	sed -i \
-		-e 's/install_shs install_info/install_shs/' \
-		"${S}"/Makefile.in || die "sed failed"
 }
-
-src_compile() {
-	econf || die "econf failed"
-	emake C_OPT="${CFLAGS}" STRIP=touch || die "emake failed"
-}
-
 
 src_install() {
 	dodir /usr/bin
