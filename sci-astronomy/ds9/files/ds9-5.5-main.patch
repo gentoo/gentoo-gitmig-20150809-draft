@@ -213,7 +213,7 @@ diff -Nur saods9.orig/ds9/Makefile saods9/ds9/Makefile
 +ifeq ($(ARCH),gentoo)
 +ds9Base : $(OBJS) $(LIBS)
 +	$(RM) $@                                                                
-+	$(CXX) ${OPTS} \
++	$(CXX) ${OPTS} ${LDFLAGS} \
 +	-o $@ $(OBJS) $(LIBS) \
 +	-L$(X11LIB) -lX11 \
 +	-ldl -lpthread \
