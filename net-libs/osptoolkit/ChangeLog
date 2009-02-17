@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/osptoolkit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.8 2008/08/16 15:39:32 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.9 2009/02/17 05:08:42 darkside Exp $
+
+*osptoolkit-3.3.6-r1 (17 Feb 2009)
+
+  17 Feb 2009; Jeremy Olexa <darkside@gentoo.org> -osptoolkit-3.3.6.ebuild,
+  +osptoolkit-3.3.6-r1.ebuild:
+  (non maintainer commit) migrate to EAPI=2, fix die messages, fix C(XX)FLAGS.
+  Patch by Mounir Lamouri in bug 241034
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove stkn from metadata.xml (#27693)
