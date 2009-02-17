@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.586 2009/02/16 23:42:50 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.587 2009/02/17 09:47:22 jer Exp $
+
+  17 Feb 2009; Jeroen Roovers <jer@gentoo.org> gentoo-sources-2.6.27.ebuild,
+  gentoo-sources-2.6.27-r1.ebuild, gentoo-sources-2.6.27-r2.ebuild,
+  gentoo-sources-2.6.27-r3.ebuild, gentoo-sources-2.6.27-r4.ebuild,
+  gentoo-sources-2.6.27-r5.ebuild, gentoo-sources-2.6.27-r6.ebuild,
+  gentoo-sources-2.6.27-r7.ebuild, gentoo-sources-2.6.27-r8.ebuild:
+  Mask 2.6.27 (bug #251670).
 
 *gentoo-sources-2.6.28-r2 (16 Feb 2009)
 
