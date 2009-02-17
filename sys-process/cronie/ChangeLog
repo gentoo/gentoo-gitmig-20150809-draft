@@ -1,0 +1,13 @@
+# ChangeLog for sys-process/cronie
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.1 2009/02/17 22:09:35 bangert Exp $
+
+*cronie-1.2 (17 Feb 2009)
+
+  17 Feb 2009; Thilo Bangert <bangert@gentoo.org>
+  +files/cronie-1.2-cron.deny, +files/cronie-1.2-crontab,
+  +files/cronie-1.2-initd,
+  +files/cronie-1.2-pathnames.h-fix-SPOOL_DIR.patch, +metadata.xml,
+  +cronie-1.2.ebuild:
+  cronie - a vixie-cron fork by the fedora people
+

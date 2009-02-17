@@ -1,0 +1,11 @@
+--- src/pathnames.h.orig	2009-02-17 22:43:14.000000000 +0100
++++ src/pathnames.h	2009-02-17 22:43:31.000000000 +0100
+@@ -46,7 +46,7 @@
+ 			 * newer than they were last time around (or which
+ 			 * didn't exist last time around...)
+ 			 */
+-#define SPOOL_DIR	"cron"
++#define SPOOL_DIR	"cron/crontabs"
+ 
+ 			/* cron allow/deny file.  At least cron.deny must
+ 			 * exist for ordinary users to run crontab.
