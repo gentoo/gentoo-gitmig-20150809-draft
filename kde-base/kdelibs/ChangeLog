@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.564 2009/02/17 13:19:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.565 2009/02/17 19:15:24 scarabeus Exp $
+
+*kdelibs-4.2.0-r3 (17 Feb 2009)
+
+  17 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/dist/09_disable_debug_messages_if_not_explicitly_enabled.patch,
+  +files/dist/20_use_dejavu_as_default_font.patch,
+  +files/dist/23_solid_no_double_build.patch, +kdelibs-4.2.0-r3.ebuild:
+  Add few patches making user experience better. Revision bump.
 
   17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdelibs-4.1.4.ebuild:
   Drop KDE 4.1.4
