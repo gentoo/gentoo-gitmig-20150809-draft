@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.59 2009/02/16 23:38:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.60 2009/02/17 03:28:06 vapier Exp $
+
+  17 Feb 2009; Mike Frysinger <vapier@gentoo.org> libstdc++-v3-3.3.6.ebuild:
+  Restore USE=multilib crap #259215.
 
   16 Feb 2009; Mike Frysinger <vapier@gentoo.org> libstdc++-v3-3.3.6.ebuild:
   Restore out-of-tree building #259192 by Martin von Gagern.

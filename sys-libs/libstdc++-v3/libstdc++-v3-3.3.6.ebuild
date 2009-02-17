@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.23 2009/02/16 23:38:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.24 2009/02/17 03:28:06 vapier Exp $
 
 inherit eutils flag-o-matic libtool multilib
 
@@ -121,6 +121,15 @@ src_unpack() {
 	elibtoolize --portage --shallow
 	./contrib/gcc_update --touch
 	mkdir -p "${WORKDIR}"/build
+
+	if use multilib ; then
+		# ugh, this shit has to match the way we've hacked gcc else
+		# the build falls apart #259215
+		sed -i \
+			-e 's:\(MULTILIB_OSDIRNAMES = \).*:\1../lib64 ../lib32:' \
+			"${S}"/gcc/config/i386/t-linux64 \
+			|| die "sed failed!"
+	fi
 }
 
 src_compile() {
