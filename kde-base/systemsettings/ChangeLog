@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.20 2009/02/17 14:37:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.21 2009/02/17 19:32:06 scarabeus Exp $
+
+*systemsettings-4.2.0-r1 (17 Feb 2009)
+
+  17 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/20_use_dejavu_as_default_font.patch,
+  +systemsettings-4.2.0-r1.ebuild:
+  Add patch for default font setting, so user will have allways readable
+  font by default.
 
   17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -systemsettings-4.1.4.ebuild:
