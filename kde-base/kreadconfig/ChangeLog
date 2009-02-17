@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.80 2009/02/01 07:50:24 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.81 2009/02/17 14:05:09 alexxy Exp $
+
+  17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kreadconfig-4.1.4.ebuild:
+  Drop KDE 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kreadconfig-4.2.0.ebuild:

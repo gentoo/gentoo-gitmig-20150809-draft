@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmag
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.99 2009/02/01 07:27:48 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.100 2009/02/17 13:49:26 alexxy Exp $
+
+  17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -kmag-4.1.4.ebuild:
+  Drop KDE 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kmag-4.2.0.ebuild:

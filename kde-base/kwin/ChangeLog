@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.139 2009/02/01 08:15:31 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.140 2009/02/17 14:20:02 alexxy Exp $
+
+  17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -kwin-4.1.4.ebuild:
+  Drop KDE 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kwin-4.2.0.ebuild:

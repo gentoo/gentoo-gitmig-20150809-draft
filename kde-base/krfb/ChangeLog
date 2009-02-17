@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.103 2009/02/01 07:51:37 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.104 2009/02/17 14:06:21 alexxy Exp $
+
+  17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -krfb-4.1.4.ebuild:
+  Drop KDE 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   krfb-4.2.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kollision
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.7 2009/02/01 07:40:17 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.8 2009/02/17 13:57:25 alexxy Exp $
+
+  17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -kollision-4.1.4.ebuild:
+  Drop KDE 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kollision-4.2.0.ebuild:

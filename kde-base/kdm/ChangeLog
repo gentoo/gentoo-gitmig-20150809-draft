@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.148 2009/02/10 15:03:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.149 2009/02/17 13:34:14 alexxy Exp $
+
+  17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdm-4.1.4.ebuild:
+  Drop KDE 4.1.4
 
 *kdm-4.2.0-r1 (10 Feb 2009)
 

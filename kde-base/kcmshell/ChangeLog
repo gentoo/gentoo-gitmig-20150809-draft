@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcmshell
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.17 2009/02/01 06:40:55 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcmshell/ChangeLog,v 1.18 2009/02/17 13:06:02 alexxy Exp $
+
+  17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -kcmshell-4.1.4.ebuild:
+  Drop KDE 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kcmshell-4.2.0.ebuild:

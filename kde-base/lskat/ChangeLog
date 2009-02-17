@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/lskat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lskat/ChangeLog,v 1.102 2009/02/01 08:28:56 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lskat/ChangeLog,v 1.103 2009/02/17 14:30:33 alexxy Exp $
+
+  17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -lskat-4.1.4.ebuild:
+  Drop KDE 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   lskat-4.2.0.ebuild:
