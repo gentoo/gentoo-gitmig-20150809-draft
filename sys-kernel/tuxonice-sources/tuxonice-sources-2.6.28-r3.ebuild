@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.28-r2.ebuild,v 1.1 2009/02/16 21:28:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.28-r3.ebuild,v 1.1 2009/02/17 20:29:11 nelchael Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -14,12 +14,12 @@ DESCRIPTION="TuxOnIce + Gentoo patchset sources"
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches http://www.tuxonice.net"
 IUSE=""
 
-TUXONICE_VERSION="3.0-rc8"
+TUXONICE_VERSION="20090214-v1"
 TUXONICE_TARGET="2.6.28"
-TUXONICE_SRC="tuxonice-${TUXONICE_VERSION}-for-${TUXONICE_TARGET}-removed-swsusp-bitmaps"
-TUXONICE_URI="mirror://gentoo/${TUXONICE_SRC}.patch.bz2"
+TUXONICE_SRC="current-tuxonice-for-${TUXONICE_TARGET}.patch-${TUXONICE_VERSION}"
+TUXONICE_URI="http://www.tuxonice.net/downloads/all/${TUXONICE_SRC}.bz2"
 
-UNIPATCH_LIST="${DISTDIR}/${TUXONICE_SRC}.patch.bz2"
+UNIPATCH_LIST="${DISTDIR}/${TUXONICE_SRC}.bz2"
 UNIPATCH_STRICTORDER="yes"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${TUXONICE_URI}"
 
