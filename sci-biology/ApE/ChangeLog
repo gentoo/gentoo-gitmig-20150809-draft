@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/ApE
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.4 2008/12/30 22:13:00 je_fro Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.5 2009/02/17 03:54:29 je_fro Exp $
+
+*ApE-1.17 (17 Feb 2009)
+
+  17 Feb 2009; Jeff Gardner <je_fro@gentoo.org> -ApE-1.12.ebuild,
+  +ApE-1.17.ebuild:
+  Bump to latest version. Thanks to Sascha Lucas on bug #259267.
 
   30 Dec 2008; Jeff Gardner <je_fro@gentoo.org> Manifest:
   Fix manifest
