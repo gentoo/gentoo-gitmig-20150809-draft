@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/lastfmplayer
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.34 2008/12/11 23:32:16 yngwin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.35 2009/02/17 20:07:23 hwoarang Exp $
+
+*lastfmplayer-1.5.1.31879-r2 (17 Feb 2009)
+
+  17 Feb 2009; Markos Chandras <hwoarang@gentoo.org>
+  +files/makefile-qt45.patch, +lastfmplayer-1.5.1.31879-r2.ebuild:
+  Use EAPI2,fixed doc installation, fixed Qt4 dependencies, fixed bug
+  #258862
 
 *lastfmplayer-1.5.1.31879-r1 (11 Dec 2008)
 
