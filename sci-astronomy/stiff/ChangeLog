@@ -1,0 +1,19 @@
+# ChangeLog for sci-astronomy/stiff
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stiff/ChangeLog,v 1.1 2009/02/17 21:04:02 bicatali Exp $
+
+*stiff-1.10 (17 Feb 2009)
+
+  17 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +stiff-1.10.ebuild:
+  Initial import to the main tree from the sci overlay
+
+  26 Mar 2007; Sébastien Fabbro <bicatali@gentoo.org> stiff-1.10.ebuild:
+  cleaning
+
+  29 Dec 2006; Sebastien Fabbro <seb@ist.utl.pt>;
+  Removed icc flag, too buggy.
+
+  19 Sep 2006; Sebastien Fabbro <seb@ist.utl.pt> +stiff-1.10.ebuild:
+  Initial import.
+
