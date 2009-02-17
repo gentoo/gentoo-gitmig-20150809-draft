@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2003-bonuspack-epic
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ChangeLog,v 1.18 2008/07/28 16:43:36 wolf31o2 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ChangeLog,v 1.19 2009/02/17 01:05:44 mr_bones_ Exp $
+
+  17 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  ut2003-bonuspack-epic-1.ebuild:
+  the direct download locations went away (bug #224793)
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.

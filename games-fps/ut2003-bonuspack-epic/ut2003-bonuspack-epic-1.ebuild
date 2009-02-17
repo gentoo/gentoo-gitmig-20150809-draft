@@ -1,20 +1,18 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.15 2008/02/15 01:24:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.16 2009/02/17 01:05:44 mr_bones_ Exp $
 
 inherit games
 
 IUSE=""
 DESCRIPTION="Epic Bonus Pack for UT2003"
 HOMEPAGE="http://www.unrealtournament2003.com/"
-SRC_URI="ftp://ftp.infogrames.net/misc/ut2003/UT2003-epicbonuspackone.exe
-	http://fragzone.medialt.ru/files/Unreal%20Tournament/Patches/UT2003-epicbonuspackone.exe
-	http://www.edgefiles.com/download/dl3.edgefiles.com/unrealgaming.com/www/ut2003/bonuspack/UT2003-epicbonuspackone.exe"
+SRC_URI="UT2003-epicbonuspackone.exe"
 
 LICENSE="ut2003"
 SLOT="1"
 KEYWORDS="x86"
-RESTRICT="mirror strip"
+RESTRICT="fetch strip"
 
 DEPEND="app-arch/unzip"
 RDEPEND="games-fps/ut2003"
@@ -23,6 +21,11 @@ S=${WORKDIR}/UT2003-BonusPack
 
 dir=${GAMES_PREFIX_OPT}/ut2003
 Ddir=${D}/${dir}
+
+pkg_nofetch() {
+	einfo "Please download ${A} and put it into ${DISTDIR}"
+	einfo "http://files.filefront.com/ut2003+epicbonuspackoneexe/;826445;/fileinfo.html"
+}
 
 src_unpack() {
 	unzip -qq "${DISTDIR}"/${A} || die "unpacking"
