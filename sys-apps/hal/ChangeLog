@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.273 2009/02/16 18:26:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.274 2009/02/17 14:02:08 chainsaw Exp $
+
+  17 Feb 2009; <chainsaw@gentoo.org> hal-0.5.11-r8.ebuild:
+  Mark stable on AMD64 for bug #259080 based on an arch tester report by
+  Víctor Enríquez <victor.quicksilver@gmail.com>.
 
   16 Feb 2009; Raúl Porcel <armin76@gentoo.org> hal-0.5.11-r8.ebuild:
   alpha stable wrt #259080
