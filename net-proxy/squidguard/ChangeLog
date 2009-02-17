@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squidguard
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.29 2009/01/10 13:24:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.30 2009/02/17 22:42:17 mrness Exp $
+
+*squidguard-1.4-r1 (17 Feb 2009)
+
+  17 Feb 2009; Alin Năstac <mrness@gentoo.org>
+  +files/squidguard-1.4-vsnprintf.patch, +squidguard-1.4-r1.ebuild:
+  Fix buffer overflow, thanks to emerald <dirk at liji-und-dirk dot de>
+  (#259272).
 
 *squidguard-1.4 (10 Jan 2009)
 
