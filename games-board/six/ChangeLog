@@ -1,6 +1,9 @@
 # ChangeLog for games-board/six
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/six/ChangeLog,v 1.13 2008/06/30 06:22:27 mr_bones_ Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/six/ChangeLog,v 1.14 2009/02/17 09:17:57 mr_bones_ Exp $
+
+  17 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org> six-0.5.3.ebuild:
+  fix desktop entry as reported by Pacho Ramos in bug #160251
 
   30 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/six-0.5.3-gcc43.patch, six-0.5.3.ebuild:
