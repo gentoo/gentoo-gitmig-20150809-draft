@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.85 2008/03/22 10:19:05 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.86 2009/02/17 16:05:33 dang Exp $
 
 #
 # gnome2.eclass
@@ -14,6 +14,14 @@
 
 inherit fdo-mime libtool gnome.org gnome2-utils
 
+case "${EAPI:-0}" in
+	0|1)
+		EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
+		;;
+	*)
+		EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install pkg_preinst pkg_postinst pkg_postrm
+		;;
+esac
 
 # Extra configure opts passed to econf
 G2CONF=${G2CONF:-""}
@@ -38,7 +46,10 @@ fi
 gnome2_src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	has ${EAPI:-0} 0 1 && gnome2_src_prepare
+}
 
+gnome2_src_prepare() {
 	# Prevent scrollkeeper access violations
 	gnome2_omf_fix
 
@@ -67,7 +78,7 @@ gnome2_src_configure() {
 }
 
 gnome2_src_compile() {
-	gnome2_src_configure "$@"
+	has ${EAPI:-0} 0 1 && gnome2_src_configure "$@"
 	emake || die "compile failure"
 }
 
@@ -137,4 +148,3 @@ gnome2_pkg_postrm() {
 }
 
 # pkg_prerm
-EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
