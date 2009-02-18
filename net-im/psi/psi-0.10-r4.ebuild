@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r4.ebuild,v 1.3 2008/07/27 22:00:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10-r4.ebuild,v 1.4 2009/02/18 14:35:44 pva Exp $
 
 EAPI=1
 
@@ -245,8 +245,8 @@ src_compile() {
 
 	./configure \
 		--prefix=/usr \
-		--with-qca-inc=/usr/include \
-		--with-qca-lib=/usr/lib \
+		--with-qca-inc=/usr/include/qca1 \
+		--with-qca-lib=/usr/lib/qca1 \
 		${myconf} \
 		|| die "Configure failed"
 
