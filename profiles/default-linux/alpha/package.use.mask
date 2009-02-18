@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.18 2009/02/14 00:27:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.19 2009/02/18 16:30:38 armin76 Exp $
 
 # Patrick Lauer <patrick@gentoo.org> (23 Nov 2008)
 # needs webkit keyworded
@@ -20,17 +20,12 @@ net-im/mcabber otr
 media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
 
-# Tobias Klausmann <klausman@gentoo.org> (3 Apr 2008)
-# Needs pm-utils which will never be keyworded on alpha
-sys-apps/hal laptop
-
-# Steve Arnold <nerdboy@gentoo.org> (11 May 2008)
-# Has massive QA issues with the java depends
-dev-util/astyle java
-
 # Tobias Klausmann <klausman@gentoo.org> (15 Jun 2008)
 # No hardware to test net-dialup/linux-atm on alpha, so mask atm use flag
 # on those.
 sys-apps/iproute2 atm
 net-dialup/ppp atm
+
+# Needs nut and qstat respectively, neither is keyworded on alpha.
+net-analyzer/nagios-plugins ups nagios-game
 

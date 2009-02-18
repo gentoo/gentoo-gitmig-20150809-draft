@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.117 2009/02/06 16:44:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.118 2009/02/18 16:30:38 armin76 Exp $
+
+  18 Feb 2009; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
+  Sync from ../../arch/alpha
 
   06 Feb 2009; Raúl Porcel <armin76@gentoo.org> package.mask:
   Mask old versions of qt related packages, bug #248038

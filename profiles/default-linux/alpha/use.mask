@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.101 2008/12/26 11:48:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.102 2009/02/18 16:30:38 armin76 Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -34,6 +34,7 @@ battery
 cpufreq
 dell
 dmi
+laptop
 
 # Stuff that doesn't work on alpha, or not tested
 avi
@@ -55,6 +56,10 @@ mono
 ocamlopt
 
 # Other
+
+# Ben de Groot <yngwin@gentoo.org> 11 Feb 2009
+# both x11-libs/qt-phonon and media-sound/phonon are unkeyworded
+phonon
 
 # 13 Jun 2007 Jose Luis Rivero <yoswink@gentoo.org>
 # acpid masked and acpi use flag is deprecated now. 
