@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.312 2009/02/18 18:40:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.313 2009/02/18 20:17:18 betelgeuse Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1830,14 +1830,20 @@ EOF
 # Compress files in /usr/share/doc which are not already
 # compressed, excluding /usr/share/doc/${PF}/html.
 # Uses the ecompressdir to do the compression.
-prepalldocs() {
-	if [[ -n $1 ]] ; then
-		ewarn "prepalldocs: invalid usage; takes no arguments"
-	fi
+# 2009-02-18 by betelgeuse:
+# Commented because ecompressdir is even more internal to
+# Portage than prepalldocs (it's not even mentioned in man 5
+# ebuild). Please submit a better version for review to gentoo-dev
+# if you want prepalldocs here.
+#prepalldocs() {
+#	if [[ -n $1 ]] ; then
+#		ewarn "prepalldocs: invalid usage; takes no arguments"
+#	fi
 
-	cd "${D}"
-	[[ -d usr/share/doc ]] || return 0
+#	cd "${D}"
+#	[[ -d usr/share/doc ]] || return 0
 
-	ecompressdir --ignore /usr/share/doc/${PF}/html
-	ecompressdir --queue /usr/share/doc
-}
+#	find usr/share/doc -exec gzip {} +
+#	ecompressdir --ignore /usr/share/doc/${PF}/html
+#	ecompressdir --queue /usr/share/doc
+#}
