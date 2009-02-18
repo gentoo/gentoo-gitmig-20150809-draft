@@ -1,6 +1,22 @@
 # ChangeLog for sys-auth/thinkfinger
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.6 2007/09/08 18:21:42 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.7 2009/02/18 15:37:38 chainsaw Exp $
+
+*thinkfinger-0.3-r1 (18 Feb 2009)
+
+  18 Feb 2009; <chainsaw@gentoo.org> +files/0.3-carriagereturn.patch,
+  +files/0.3-direct_set_config_usb_hello.patch,
+  +files/0.3-tftoolgroup.patch, +files/60-thinkfinger.rules, metadata.xml,
+  +thinkfinger-0.3-r1.ebuild:
+  Due to lack of hardware I have been unable to attend to this package. I
+  will now however be proxy maintaining for Víctor Enríquez Miguel
+  <victor.quicksilver@gmail.com> , metadata updated to reflect this. Add a
+  fingerprint group so non-root users can use the software, as per the
+  suggestions by Henning Schild <henning@wh9.tu-dresden.de> in bug #228919.
+  Also add explicit chmod/chown statements to the installed script. Do not
+  apply USB configuration 1 to the device, this was never necessary and
+  broke with kernel 2.6.28 ("hello" patch). Added udev rules to make device
+  handling automatic.
 
   08 Sep 2007; Mike Frysinger <vapier@gentoo.org> thinkfinger-0.3.ebuild:
   Make kernel check a warning and use emake in src_install.

@@ -3,8 +3,13 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
+          <email>victor.quicksilver@gmail.com</email>
+          <name>Víctor Enríquez Miguel</name>
+  </maintainer>
+  <maintainer>
           <email>chainsaw@gentoo.org</email>
           <name>Tony Vroon</name>
+          <description>Proxy Maintainer</description>
   </maintainer>
   <longdescription></longdescription>
 </pkgmetadata>
