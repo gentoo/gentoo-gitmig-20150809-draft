@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper-dtd/scrollkeeper-dtd-1.0.ebuild,v 1.1 2008/07/01 21:27:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper-dtd/scrollkeeper-dtd-1.0.ebuild,v 1.2 2009/02/18 23:53:36 eva Exp $
 
 DTD_FILE="scrollkeeper-omf.dtd"
 
@@ -14,7 +14,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbs
 IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.4.19"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	!<app-text/scrollkeeper-9999-r1"
 
 src_unpack() { :; }
 
