@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-ripper/lastfm-ripper-1.2.1-r1.ebuild,v 1.2 2006/12/10 05:52:59 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-ripper/lastfm-ripper-1.2.1-r1.ebuild,v 1.3 2009/02/18 18:39:27 beandog Exp $
 
 inherit perl-module eutils
 
@@ -18,13 +18,14 @@ DEPEND="virtual/perl-Getopt-Long
 	!minimal? ( dev-perl/Term-ReadPassword )
 	tagwriting? ( dev-perl/MP3-Tag )
 	amazon? ( dev-perl/MP3-Tag dev-perl/Net-Amazon )"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/last.fm-ripper-${PV}"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/UnescapedVariableFix.patch
-	epatch ${FILESDIR}/CoverOutputDirectoryFix.patch
-	epatch ${FILESDIR}/HandleSlashCharFix.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/UnescapedVariableFix.patch
+	epatch "${FILESDIR}"/CoverOutputDirectoryFix.patch
+	epatch "${FILESDIR}"/HandleSlashCharFix.patch
 }
