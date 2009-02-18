@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.311 2009/02/18 08:05:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.312 2009/02/18 18:40:07 mr_bones_ Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1836,7 +1836,7 @@ prepalldocs() {
 	fi
 
 	cd "${D}"
-	[[ -d usr/share/doc ]] || exit 0
+	[[ -d usr/share/doc ]] || return 0
 
 	ecompressdir --ignore /usr/share/doc/${PF}/html
 	ecompressdir --queue /usr/share/doc
