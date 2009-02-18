@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/adzapper
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.54 2008/10/12 07:45:57 mrness Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.55 2009/02/18 18:22:54 klausman Exp $
+
+  18 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
+  adzapper-20080508.ebuild:
+  Stable on alpha, bug #257531
 
   12 Oct 2008; Alin Năstac <mrness@gentoo.org> -adzapper-20070317.ebuild,
   -adzapper-20071023.ebuild, adzapper-20080508.ebuild:
