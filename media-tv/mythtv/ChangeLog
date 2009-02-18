@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.267 2008/12/23 17:16:50 maekke Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.268 2009/02/18 21:48:22 cardoe Exp $
+
+*mythtv-0.21_p19961 (18 Feb 2009)
+
+  18 Feb 2009; Doug Goldstein <cardoe@gentoo.org>
+  +mythtv-0.21_p19961.ebuild:
+  add newer upstream revision. many fixes. primary bump reason is to support
+  Linux 2.6.28
 
   23 Dec 2008; Markus Meier <maekke@gentoo.org>
   mythtv-0.21_p18314-r1.ebuild:
