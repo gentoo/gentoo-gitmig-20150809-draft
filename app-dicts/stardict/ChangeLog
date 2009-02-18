@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/stardict
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.50 2008/08/31 15:43:38 ranger Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.51 2009/02/18 22:45:44 eva Exp $
+
+*stardict-3.0.1-r2 (18 Feb 2009)
+
+  18 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/stardict-3.0.1-gucharmap2.patch, +stardict-3.0.1-r2.ebuild:
+  Add gucharmap2 compatibility patch, bug #240728. Fix typoe, bug #253438.
 
   31 Aug 2008; Brent Baude <ranger@gentoo.org> stardict-3.0.1-r1.ebuild:
   stable ppc64, bug 236096
