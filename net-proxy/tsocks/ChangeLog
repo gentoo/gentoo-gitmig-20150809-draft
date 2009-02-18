@@ -1,6 +1,15 @@
 # ChangeLog for net-proxy/tsocks
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.27 2008/08/22 21:58:52 maekke Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.28 2009/02/18 00:01:46 mrness Exp $
+
+*tsocks-1.8_beta5-r4 (18 Feb 2009)
+
+  18 Feb 2009; Alin Năstac <mrness@gentoo.org>
+  -files/tsocks-1.8_beta5-gentoo.patch,
+  +files/tsocks-1.8_beta5-gentoo-r2.patch, -tsocks-1.8_beta5-r2.ebuild,
+  +tsocks-1.8_beta5-r4.ebuild:
+  Fix LD_PRELOAD setup, thanks to Yuval Hager <yuval at avramzon dot net>
+  (#255960).
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> metadata.xml,
   tsocks-1.8_beta5-r3.ebuild:

@@ -1,17 +1,17 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/tsocks-1.8_beta5-r2.ebuild,v 1.7 2007/04/22 08:26:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/tsocks-1.8_beta5-r4.ebuild,v 1.1 2009/02/18 00:01:46 mrness Exp $
 
 inherit multilib eutils autotools toolchain-funcs
 
 DESCRIPTION="Transparent SOCKS v4 proxying library"
 HOMEPAGE="http://tsocks.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tsocks/${PN}-${PV/_}.tar.gz
-	tordns? ( mirror://gentoo/${PN}-${PV/_beta/b}-tordns1-gentoo.patch.gz )"
+	tordns? ( mirror://gentoo/${PN}-${PV/_beta/b}-tordns1-gentoo-r1.patch.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="tordns"
 
 S="${WORKDIR}/${P%%_*}"
@@ -20,9 +20,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-gentoo-r2.patch"
 	epatch "${FILESDIR}/${P}-bsd.patch"
-	use tordns && epatch "../${PN}-${PV/_beta/b}-tordns1-gentoo.patch"
+	use tordns && epatch "../${PN}-${PV/_beta/b}-tordns1-gentoo-r1.patch"
 	eautoconf
 }
 
@@ -48,9 +48,6 @@ src_install() {
 	doins tsocks.conf.*.example
 	dodoc FAQ
 	use tordns && dodoc README*
-	# tsocks script is buggy so we need this symlink
-	dodir /usr/$(get_libdir)
-	dosym /$(get_libdir)/libtsocks.so /usr/$(get_libdir)/libtsocks.so
 }
 
 pkg_postinst() {
