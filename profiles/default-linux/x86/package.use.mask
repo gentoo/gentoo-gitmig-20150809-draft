@@ -1,5 +1,19 @@
 # This file requires >=portage-2.1.1
 
+# Raúl Porcel <armin76@gentoo.org> (02 Dec 2008)
+media-libs/realcodecs win32codecs
+
+# Tomas Chvatal <scarabeus@gentoo.org> (24 Nov 2008)
+# masked in base, unmaks for x86/amd64
+sci-misc/boinc -cuda
+
+# Robert Buchholz <rbu@gentoo.org> (16 Aug 2008)
+# masked in base, unmask for x86/amd64
+dev-python/kaa-base -tls
+
+# Serkan Kaba <serkan@gentoo.org> (20 Jul 2008)
+app-text/enchant -zemberek
+
 dev-java/sun-jdk -nsplugin
 dev-java/sun-jre-bin -nsplugin
 dev-java/ibm-jdk-bin -nsplugin 
@@ -17,7 +31,4 @@ dev-java/ibm-jre-bin -alsa
 
 # Steve Dibb <beandog@gentoo.org> (29 Sept 2008)
 media-video/mplayer -cpudetection -custom-cpuopts -win32codecs -dxr3 -bindist
-
-# Raúl Porcel <armin76@gentoo.org> (02 Dec 2008)
-media-libs/realcodecs win32codecs
 
