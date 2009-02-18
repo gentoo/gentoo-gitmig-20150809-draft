@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py-rrdtool
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-rrdtool/ChangeLog,v 1.15 2007/11/24 09:47:35 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-rrdtool/ChangeLog,v 1.16 2009/02/18 14:53:20 pva Exp $
+
+  18 Feb 2009; Peter Volkov <pva@gentoo.org> py-rrdtool-0.2.1-r1.ebuild,
+  py-rrdtool-1.0_beta1.ebuild:
+  Fixed collision with rrdtool by requiring it to be build without python
+  bindings.
 
   24 Nov 2007; Samuli Suominen <drac@gentoo.org>
   py-rrdtool-1.0_beta1.ebuild:
