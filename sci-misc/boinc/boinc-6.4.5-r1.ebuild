@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r1.ebuild,v 1.1 2009/02/16 19:48:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r1.ebuild,v 1.2 2009/02/18 11:38:28 scarabeus Exp $
 
 #
 # Don't forget to keep things in sync with binary boinc package!
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="X cuda server"
 
 RDEPEND="
-	!sci-misc/boinc
+	!sci-misc/boinc-bin
 	>=app-misc/ca-certificates-20080809
 	dev-libs/openssl
 	net-misc/curl
@@ -75,6 +75,13 @@ src_configure() {
 
 	# nonstandard enable
 	use server || config="--disable-server"
+
+	# Bug #248769: don't use strlcat and friends from kerberos or similar
+	local func
+	for func in strlcat strlcpy; do
+		eval "export ac_cv_func_${func}=no"
+		append-cppflags -D${func}=boinc_${func}
+	done
 
 	# configure
 	econf \
