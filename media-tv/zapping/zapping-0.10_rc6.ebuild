@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.10_rc6.ebuild,v 1.3 2008/09/09 13:47:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.10_rc6.ebuild,v 1.4 2009/02/18 18:43:26 beandog Exp $
 
 inherit gnome2
 
@@ -28,7 +28,7 @@ DEPEND=">=gnome-base/libgnomeui-2.0
 	>=app-text/scrollkeeper-0.3.5
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	econf `use_enable nls` \
