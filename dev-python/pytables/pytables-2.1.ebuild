@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.1.ebuild,v 1.2 2009/02/05 16:44:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.1.ebuild,v 1.3 2009/02/18 17:49:18 patrick Exp $
 
 EAPI="1"
 NEED_PYTHON="2.2"
@@ -16,7 +16,7 @@ LICENSE="BSD"
 IUSE="doc examples"
 
 DEPEND=">=sci-libs/hdf5-1.6.5
-	>=dev-python/numpy-1.0.3
+	>=dev-python/numpy-1.2.1
 	dev-libs/lzo:2
 	app-arch/bzip2"
 RDEPEND="${DEPEND}"
