@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/bfilter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.24 2009/01/15 22:29:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.25 2009/02/18 16:55:46 armin76 Exp $
+
+  18 Feb 2009; Raúl Porcel <armin76@gentoo.org> bfilter-1.1.4.ebuild:
+  sparc stable wrt #254396
 
   15 Jan 2009; Markus Meier <maekke@gentoo.org> bfilter-1.1.4.ebuild:
   amd64/x86 stable, bug #254396
