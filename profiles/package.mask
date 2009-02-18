@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9494 2009/02/17 11:42:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9495 2009/02/18 14:46:39 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -478,11 +478,6 @@ x11-wm/stumpwm-cvs
 # Removed by treecleaners in 60 says. www-apps/gallery includes a java webstart
 # for gallery remote now, use that instead. bug 111025
 app-misc/gallery-remote
-
-# Sébastien Fabbro <bicatali@gentoo.org> (15 Jan 2009)
-# Masked for removal in 30 days. f2py hase been integrated in
-# dev-python/numpy.
-dev-python/f2py
 
 # Donnie Berkholz <dberkholz@gentoo.org> (12 Jan 2009)
 # Masked pending unmasking of guile-gnome-platform 2.16
