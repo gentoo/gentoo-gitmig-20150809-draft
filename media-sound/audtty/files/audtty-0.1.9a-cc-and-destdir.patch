@@ -6,7 +6,7 @@ diff -ur audtty.orig/Makefile.in audtty/Makefile.in
  
  audtty: ${BINS}
 -	cc -Wall -lncurses -laudclient ${LDFLAGS} -o audtty $(BINS)
-+	$(CC) -Wall -lncurses -laudclient ${LDFLAGS} -o audtty $(BINS)
++	$(CC) -Wall ${LDFLAGS} -o audtty $(BINS) -lncurses -laudclient
  
  .c.o:
 -	cc -Wall ${AUDACIOUS_CFLAGS} ${CFLAGS} -o $@ -c $<

@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/audtty
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.19 2008/07/05 06:39:19 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.20 2009/02/18 15:52:23 chainsaw Exp $
+
+*audtty-0.1.9a-r1 (18 Feb 2009)
+
+  18 Feb 2009; <chainsaw@gentoo.org>
+  files/audtty-0.1.9a-cc-and-destdir.patch, -audtty-0.1.9a.ebuild,
+  +audtty-0.1.9a-r1.ebuild:
+  Bump up audacious DEPEND to v1.5 where the D-Bus mess has been sorted out.
+  Patch by Kevin Pyle <kevin.pyle@bluecoat.com> fixes link ordering and
+  closes bug #247822 filed by Diego E. Flameeyes Pettenò
+  <flameeyes@gentoo.org>.
 
 *audtty-0.1.9a (05 Jul 2008)
 
