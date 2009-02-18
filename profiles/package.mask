@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9496 2009/02/18 15:03:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9497 2009/02/18 20:53:58 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -733,9 +733,6 @@ net-analyzer/sysmon
 # Snapshots, alphas and betas of Opera may delete kittens
 =www-client/opera-10*
 
-# Sébastien Fabbro <bicatali@gentoo.org> (05 Dec 2008)
-# beta version for testing, unmasked only when release.
-=sci-libs/scipy-0.7*
 
 # Tomas Chvatal <scarabeus@gentoo.org> (04 Dec 2008)
 # new version, needs policykit which is masked
