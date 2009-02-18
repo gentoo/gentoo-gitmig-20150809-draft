@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.120 2009/02/15 17:21:41 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.121 2009/02/18 10:41:47 scarabeus Exp $
+
+  18 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/0.11.0a-fix_linking.patch, kmplayer-0.11.0a.ebuild:
+  Fix linking issue. Per bug #258995. Thanks to Rick Harris for the patch.
 
 *kmplayer-0.10.0c-r1 (15 Feb 2009)
 

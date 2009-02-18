@@ -1,0 +1,25 @@
+diff -urN kmplayer-0.11.0a/src/kmplayer_part.cpp kmplayer-0.11.0a-patched/src/kmplayer_part.cpp
+--- kmplayer-0.11.0a/src/kmplayer_part.cpp	2009-01-26 06:27:46.000000000 +1030
++++ kmplayer-0.11.0a-patched/src/kmplayer_part.cpp	2009-02-18 11:19:12.000000000 +1030
+@@ -125,6 +125,21 @@
+       return new KMPlayerPart (wparent, parent, args);
+ }
+ 
++KDE_NO_EXPORT QString PartBase::getStatus () {
++    QString rval = "Waiting";
++    if (source() && source()->document()) {
++        if (source()->document()->unfinished ())
++            rval = "Playable";
++        else if (source()->document()->state >= Node::state_deactivated)
++            rval = "Complete";
++    }
++    return rval;
++}
++
++KDE_NO_EXPORT QString PartBase::doEvaluate (const QString &) {
++    return "undefined";
++}
++
+ const KComponentData &KMPlayerFactory::componentData () {
+     kDebug () << "KMPlayerFactory::instance";
+     if (!s_instance)
