@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/lcov
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lcov/ChangeLog,v 1.1 2008/10/24 20:10:16 tester Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lcov/ChangeLog,v 1.2 2009/02/18 21:32:39 cardoe Exp $
+
+*lcov-1.7 (18 Feb 2009)
+
+  18 Feb 2009; Doug Goldstein <cardoe@gentoo.org> +lcov-1.7.ebuild:
+  new upstream version
 
   24 Oct 2008; Olivier Crête <tester@gentoo.org> ChangeLog:
   Initial import of lcov, from bug #100803. Ebuild contributed by Ryo Kuya
