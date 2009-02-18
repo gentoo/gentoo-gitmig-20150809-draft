@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/ipsc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsc/ChangeLog,v 1.5 2008/10/11 23:07:47 chainsaw Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsc/ChangeLog,v 1.6 2009/02/18 16:26:06 chainsaw Exp $
+
+*ipsc-0.4.3.2-r2 (18 Feb 2009)
+
+  18 Feb 2009; <chainsaw@gentoo.org> -ipsc-0.4.3.2-r1.ebuild,
+  +ipsc-0.4.3.2-r2.ebuild:
+  New and improved sed statement by Kevin Pyle <kevin.pyle@bluecoat.com>
+  keeps LDFLAGS from being ignored. Closes bug #248101 filed by Diego E.
+  Flameeyes Pettenò <flameeyes@gentoo.org>.
 
 *ipsc-0.4.3.2-r1 (11 Oct 2008)
 

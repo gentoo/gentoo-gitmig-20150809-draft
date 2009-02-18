@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsc/ipsc-0.4.3.2-r1.ebuild,v 1.1 2008/10/11 23:07:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsc/ipsc-0.4.3.2-r2.ebuild,v 1.1 2009/02/18 16:26:06 chainsaw Exp $
 
 inherit toolchain-funcs
 
@@ -16,8 +16,13 @@ RDEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e "s:^CC = gcc:CC = $(tc-getCC):" src/Makefile || die "Unable to override compiler selection"
-	sed -i -e "s:^CFLAGS = .*::" src/Makefile || die "Unable to unset upstream CFLAGS"
+	sed -i \
+		-e "s:^CC = gcc:CC = $(tc-getCC):" \
+		-e "/^CFLAGS = .*/d" \
+		-e "s/^LIBS = /LDLIBS = /" \
+		-e '/$(CC).*\\$/,+1d' \
+		-e '/$(CC)/d' \
+		src/Makefile || die "Unable to sed upstream Makefile"
 }
 
 src_compile() {
