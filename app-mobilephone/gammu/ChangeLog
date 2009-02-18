@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.62 2009/01/17 14:24:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.63 2009/02/18 19:32:42 mrness Exp $
+
+  18 Feb 2009; Alin Năstac <mrness@gentoo.org> gammu-1.22.1-r1.ebuild:
+  Update bluetooth dependency atom (#255424).
 
 *gammu-1.22.1-r1 (17 Jan 2009)
 
