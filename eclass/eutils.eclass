@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.310 2009/02/15 20:09:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.311 2009/02/18 08:05:52 mr_bones_ Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1822,4 +1822,22 @@ EOF
 	else
 		newbin "${tmpwrapper}" "${wrapper}" || die
 	fi
+}
+
+# @FUNCTION: prepalldocs
+# @USAGE:
+# @DESCRIPTION:
+# Compress files in /usr/share/doc which are not already
+# compressed, excluding /usr/share/doc/${PF}/html.
+# Uses the ecompressdir to do the compression.
+prepalldocs() {
+	if [[ -n $1 ]] ; then
+		ewarn "prepalldocs: invalid usage; takes no arguments"
+	fi
+
+	cd "${D}"
+	[[ -d usr/share/doc ]] || exit 0
+
+	ecompressdir --ignore /usr/share/doc/${PF}/html
+	ecompressdir --queue /usr/share/doc
 }
