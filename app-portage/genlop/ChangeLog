@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.70 2009/01/14 23:46:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.71 2009/02/18 21:36:26 fmccor Exp $
+
+  18 Feb 2009; Ferris McCormick <fmccor@gentoo.org> genlop-0.30.8-r2.ebuild:
+  Sparc stable, Bug #259360 --- looks fine.
 
 *genlop-0.30.8-r2 (14 Jan 2009)
 
