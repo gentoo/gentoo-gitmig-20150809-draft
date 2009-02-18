@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/skstream
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/ChangeLog,v 1.24 2009/01/23 21:49:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/ChangeLog,v 1.25 2009/02/18 16:51:28 armin76 Exp $
+
+  18 Feb 2009; Raúl Porcel <armin76@gentoo.org> skstream-0.3.6.ebuild:
+  sparc stable wrt #254833
 
   23 Jan 2009; Markus Meier <maekke@gentoo.org> skstream-0.3.6.ebuild:
   amd64/x86 stable, bug #254833
