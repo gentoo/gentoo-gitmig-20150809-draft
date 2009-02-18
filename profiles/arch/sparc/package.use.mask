@@ -1,7 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.20 2009/02/04 21:09:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.21 2009/02/18 16:45:36 armin76 Exp $
 # Please add a proper entry, like a ChangeLog file, to the top, thanks.
+
+# Raúl Porcel <armin76@gentoo.org>
+# Depends on dev-java/fop which requires java...
+sci-geosciences/gpsbabel doc
 
 # Ben de Groot <yngwin@gentoo.org> (4 Feb 2009)
 # needs qt-webkit which is -sparc keyworded

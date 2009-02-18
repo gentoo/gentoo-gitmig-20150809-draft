@@ -1,3 +1,7 @@
+# Raúl Porcel <armin76@gentoo.org>
+# Depends on dev-java/fop which requires java...
+sci-geosciences/gpsbabel doc
+
 #Fails to build
 net-misc/asterisk h323
 
