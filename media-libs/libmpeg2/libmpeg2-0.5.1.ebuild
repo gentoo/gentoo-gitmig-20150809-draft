@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.5.1.ebuild,v 1.6 2009/02/06 20:03:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.5.1.ebuild,v 1.7 2009/02/18 18:05:42 aballier Exp $
 
 inherit eutils libtool
 
@@ -29,7 +29,8 @@ src_unpack() {
 
 	# Fix problem that the test for external symbols
 	# uses nm which also displays hidden symbols. Bug #130831
-	epatch "${FILESDIR}"/${PN}-0.4.1-use-readelf-for-test.patch
+	# Breaks tests on other platforms: bug #255151
+	# epatch "${FILESDIR}"/${PN}-0.4.1-use-readelf-for-test.patch
 
 	elibtoolize
 }

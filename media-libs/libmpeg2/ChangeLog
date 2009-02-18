@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.68 2009/02/06 20:03:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.69 2009/02/18 18:05:42 aballier Exp $
+
+  18 Feb 2009; Alexis Ballier <aballier@gentoo.org> libmpeg2-0.5.1.ebuild:
+  drop supposed test suite fix that causes test failures on some platforms,
+  bug #255151
 
   06 Feb 2009; Jeroen Roovers <jer@gentoo.org> libmpeg2-0.5.1.ebuild:
   Stable for HPPA (bug #255151).
