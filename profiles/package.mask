@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9495 2009/02/18 14:46:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9496 2009/02/18 15:03:53 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sébastien Fabbro <bicatali@gentoo.org> (17 Feb 2009)
+# Masked for removal in 30 days, unsupported upstream and
+# renamed packages terminating with 2 available in tree
+# See bug #259483
+sci-calculators/tilp
+sci-libs/libticables
+sci-libs/libticalcs
+sci-libs/libtifiles
 
 # Alexey Shvetsov <alexxy@gentoo.org> (17 Feb 2009)
 # Masked for removing
