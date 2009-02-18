@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.150 2009/02/18 16:50:26 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.151 2009/02/18 17:56:00 keytoaster Exp $
+
+  18 Feb 2009; Tobias Heinlein <keytoaster@gentoo.org> psi-0.12.1.ebuild:
+  amd64 stable wrt security bug 252830
 
   18 Feb 2009; Ferris McCormick <fmccor@gentoo.org> psi-0.12.1.ebuild:
   Sparc stable, security Bug #252830.
