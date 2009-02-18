@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/consed
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/consed/ChangeLog,v 1.1 2009/02/18 16:21:44 weaver Exp $
+
+*consed-19 (18 Feb 2009)
+
+  18 Feb 2009; weaver <weaver@gentoo.org> +metadata.xml, +consed-19.ebuild:
+  New package sci-biology/consed, bug 253451. Ebuild written by Martin Mokrejs
+  <mmokrejs@ribosome.natur.cuni.cz> and me.
+
