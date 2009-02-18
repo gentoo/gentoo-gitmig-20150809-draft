@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/whaawmp/whaawmp-0.2.10.1.ebuild,v 1.1 2009/01/01 22:26:16 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/whaawmp/whaawmp-0.2.10.1.ebuild,v 1.2 2009/02/18 07:21:38 yngwin Exp $
 
 inherit distutils
 
 DESCRIPTION="Whaaw! Media Player is a lightweight audio/video player"
-HOMEPAGE="http://home.gna.org/whaawmp"
+HOMEPAGE="http://gna.org/projects/whaawmp"
 SRC_URI="http://download.gna.org/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
