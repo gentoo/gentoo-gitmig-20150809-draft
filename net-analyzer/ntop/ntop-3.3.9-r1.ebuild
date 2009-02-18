@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.9.ebuild,v 1.1 2009/02/16 22:17:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.9-r1.ebuild,v 1.1 2009/02/18 21:44:38 mrness Exp $
 
 inherit eutils autotools
 
@@ -27,15 +27,16 @@ COMMON_DEPEND="sys-apps/gawk
 	sys-libs/zlib
 	dev-libs/geoip"
 DEPEND="${COMMON_DEPEND}
-	>=sys-devel/libtool-1.4
-	net-misc/wget" # needed for downloading GeoIP data
+	>=sys-devel/libtool-1.4"
 
 # Needed by xmldumpPlugin - couldn't get it to work
 #	dev-libs/gdome2
 #	>=dev-libs/glib-2"
 RDEPEND="${COMMON_DEPEND}
 	media-fonts/corefonts
-	media-gfx/graphviz"
+	media-gfx/graphviz
+	net-misc/wget
+	app-arch/gzip"
 
 pkg_setup() {
 	# snmp doesn't compile in this release, disabled for now
@@ -102,8 +103,7 @@ src_install() {
 
 	keepdir /var/lib/ntop &&
 		fowners ntop:ntop /var/lib/ntop &&
-		fperms 750 /var/lib/ntop &&
-		mv "${D}"/etc/ntop/Geo*.dat "${D}"/var/lib/ntop ||
+		fperms 750 /var/lib/ntop ||
 		die "failed to prepare /var/lib/ntop dir"
 
 	dodoc AUTHORS CONTENTS ChangeLog MANIFESTO NEWS
@@ -111,9 +111,14 @@ src_install() {
 
 	newinitd "${FILESDIR}"/ntop-initd ntop
 	newconfd "${FILESDIR}"/ntop-confd ntop
+
+	exeinto /etc/cron.monthly
+	doexe "${FILESDIR}"/ntop-update-geoip-db
 }
 
 pkg_postinst() {
-	elog "You need to set a password first by running"
-	elog "ntop --set-admin-password"
+	elog "If this is the first time you install ntop, you need to run"
+	elog "following commands before starting ntop service:"
+	elog "   ntop --set-admin-password"
+	elog "   /etc/cron.monthly/ntop-update-geoip-db"
 }

@@ -1,7 +1,7 @@
 diff -Nru ntop-3.3.9.orig/configure.in ntop-3.3.9/configure.in
---- ntop-3.3.9.orig/configure.in	2009-02-16 19:43:57.000000000 +0000
-+++ ntop-3.3.9/configure.in	2009-02-16 19:47:10.000000000 +0000
-@@ -1882,20 +1882,6 @@
+--- ntop-3.3.9.orig/configure.in	2009-02-18 21:04:10.000000000 +0000
++++ ntop-3.3.9/configure.in	2009-02-18 21:05:58.000000000 +0000
+@@ -1883,39 +1883,7 @@
  fi
  
  dnl> GeoIP (http://www.maxmind.com/)
@@ -19,13 +19,21 @@ diff -Nru ntop-3.3.9.orig/configure.in ntop-3.3.9/configure.in
 -   fi
 -fi
 -
- if test -f "GeoLiteCity.dat"; then
-    echo "GeoLiteCity.dat already present"
- else
-@@ -1911,10 +1897,7 @@
- fi
- 
- 
+-if test -f "GeoLiteCity.dat"; then
+-   echo "GeoLiteCity.dat already present"
+-else
+-   wget http://www.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+-   gunzip GeoLiteCity.dat.gz
+-fi
+-
+-if test -f "GeoIPASNum.dat"; then
+-   echo "GeoIPASNum.dat already present"
+-else
+-   wget http://www.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
+-   gunzip GeoIPASNum.dat.gz
+-fi
+-
+-
 -GEO_DIR=`find $PWD -type d -name "GeoIP-*"`
 -GEO_IP="$GEO_DIR/libGeoIP/"
 -CFLAGS="$CFLAGS -I$GEO_IP"
@@ -34,7 +42,7 @@ diff -Nru ntop-3.3.9.orig/configure.in ntop-3.3.9/configure.in
  
  dnl> NTOPCONFIGDEBUG_SETTINGS([precet])
  
-@@ -2079,7 +2062,6 @@
+@@ -2080,7 +2048,6 @@
  AC_SUBST(SO_VERSION_PATCH)
  AC_SUBST(RRD_LIB)
  AC_SUBST(RRD_INC)
@@ -44,7 +52,7 @@ diff -Nru ntop-3.3.9.orig/configure.in ntop-3.3.9/configure.in
  
 diff -Nru ntop-3.3.9.orig/initialize.c ntop-3.3.9/initialize.c
 --- ntop-3.3.9.orig/initialize.c	2008-12-03 22:00:22.000000000 +0000
-+++ ntop-3.3.9/initialize.c	2009-02-16 22:04:34.000000000 +0000
++++ ntop-3.3.9/initialize.c	2009-02-18 21:04:44.000000000 +0000
 @@ -467,16 +467,15 @@
  #endif
  
@@ -85,8 +93,19 @@ diff -Nru ntop-3.3.9.orig/initialize.c ntop-3.3.9/initialize.c
    
 diff -Nru ntop-3.3.9.orig/Makefile.am ntop-3.3.9/Makefile.am
 --- ntop-3.3.9.orig/Makefile.am	2008-12-03 22:00:22.000000000 +0000
-+++ ntop-3.3.9/Makefile.am	2009-02-16 19:47:25.000000000 +0000
-@@ -270,8 +270,6 @@
++++ ntop-3.3.9/Makefile.am	2009-02-18 21:05:33.000000000 +0000
+@@ -76,9 +76,7 @@
+ NTOPDATA = ntop-cert.pem \
+            $(ETTER_PASSIVE) \
+            oui.txt.gz \
+-           specialMAC.txt.gz \
+-	   GeoIPASNum.dat \
+-	   GeoLiteCity.dat
++           specialMAC.txt.gz
+ 
+ NTOPHTML = html html/*.js html/*.html  html/*.gif html/*.jpg html/*.ico html/*.png \
+            html/*.css html/*.dtd \
+@@ -270,8 +268,6 @@
  
  install: install-recursive
  

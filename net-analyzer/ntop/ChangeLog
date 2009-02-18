@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.67 2009/02/16 22:17:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.68 2009/02/18 21:44:38 mrness Exp $
+
+*ntop-3.3.9-r1 (18 Feb 2009)
+
+  18 Feb 2009; Alin Năstac <mrness@gentoo.org>
+  files/ntop-3.3.9-external-geoip.patch, +files/ntop-update-geoip-db,
+  -ntop-3.3.9.ebuild, +ntop-3.3.9-r1.ebuild:
+  Update GeoIP databases through a cron job (#259394).
 
 *ntop-3.3.9 (16 Feb 2009)
 
