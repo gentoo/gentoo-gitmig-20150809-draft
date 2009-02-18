@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/wikipedia-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wikipedia-mode/ChangeLog,v 1.5 2009/02/15 19:00:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wikipedia-mode/ChangeLog,v 1.6 2009/02/18 07:04:43 ulm Exp $
+
+  18 Feb 2009; Ulrich Mueller <ulm@gentoo.org> metadata.xml,
+  wikipedia-mode-0.5-r1.ebuild:
+  Local USE flag for outline-magic.
 
 *wikipedia-mode-0.5-r1 (15 Feb 2009)
 
