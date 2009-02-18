@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.27 2009/02/08 19:36:43 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.28 2009/02/18 18:17:23 dang Exp $
+
+*kvm-84 (18 Feb 2009)
+
+  18 Feb 2009; Daniel Gryniewicz <dang@gentoo.org> +kvm-84.ebuild:
+  Bump to kvm-84
 
   08 Feb 2009; Daniel Gryniewicz <dang@gentoo.org> +files/kvm-83-vtd.patch,
   kvm-83.ebuild:
