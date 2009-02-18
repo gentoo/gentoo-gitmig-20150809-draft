@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.2-r1.ebuild,v 1.1 2009/02/17 22:05:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.2-r1.ebuild,v 1.2 2009/02/18 07:15:36 voyageur Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -16,7 +16,7 @@ VROOT_VER="0.8.3"
 
 DESCRIPTION="An advanced and very configurable FTP server."
 
-SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/w²}.tar.bz2
+SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/}.tar.bz2
 		case? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-case-${CASE_VER}.tar.gz )
 		clamav? ( http://www.thrallingpenguin.com/resources/mod_clamav-${CLAMAV_VER}.tar.gz )
 		deflate? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-deflate-${DEFLATE_VER}.tar.gz )
