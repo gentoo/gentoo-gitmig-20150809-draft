@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.0_rc2.ebuild,v 1.1 2009/02/02 16:50:21 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.0.ebuild,v 1.1 2009/02/18 20:52:29 bicatali Exp $
 
-EAPI=1
+EAPI=2
 NEED_PYTHON=2.4
-MYP=${P/_rc/rc}
+
 inherit eutils distutils fortran flag-o-matic
 
-SRC_URI="mirror://sourceforge/${PN}/${MYP}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 DESCRIPTION="Scientific algorithms library for Python"
 HOMEPAGE="http://www.scipy.org/"
 LICENSE="BSD"
@@ -26,14 +26,12 @@ CDEPEND=">=dev-python/numpy-1.2
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	test? ( dev-python/nose )
-	umfpack? ( dev-lang/swig )"
+	umfpack? ( dev-lang/swig[python] )"
 
 RDEPEND="${CDEPEND}
 	dev-python/imaging"
 
 DOCS="THANKS.txt LATEST.txt TOCHANGE.txt"
-
-S="${WORKDIR}/${MYP}"
 
 scipy_fortran_setup() {
 	append-ldflags -shared
@@ -59,21 +57,13 @@ scipy_fortran_setup() {
 }
 
 pkg_setup() {
-	if use umfpack && ! built_with_use dev-lang/swig python; then
-		eerror "With umfpack enabled you need"
-		eerror "dev-lang/swig with python enabled"
-		einfo  "Please re-emerge swig with USE=python"
-		die "needs swig with python"
-	fi
 	# scipy automatically detects libraries by default
 	export {FFTW,FFTW3,UMFPACK}=None
 	use umfpack && unset UMFPACK
 	scipy_fortran_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.7.0_beta1-implicit.patch
 	epatch "${FILESDIR}"/${PN}-0.6.0-stsci.patch
 	cat > site.cfg <<-EOF
@@ -109,7 +99,7 @@ src_unpack() {
 
 src_compile() {
 	# when fortran flags are set, pic is removed.
-	use amd64 && [[ -n ${FFLAGS} ]] && FFLAGS="${FFLAGS} -fPIC"
+	[[ -n ${FFLAGS} ]] && FFLAGS="${FFLAGS} -fPIC"
 	distutils_src_compile ${SCIPY_FCONFIG}
 }
 
