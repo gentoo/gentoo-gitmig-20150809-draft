@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3-r1.ebuild,v 1.1 2009/02/16 15:43:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3-r1.ebuild,v 1.2 2009/02/19 05:15:16 serkan Exp $
 
 EAPI=2
 
@@ -114,6 +114,11 @@ src_install() {
 		cd "${S}/bindings/Python"
 		distutils_src_install
 	fi
+}
+
+pkg_preinst() {
+	perl-module_pkg_preinst
+	java-pkg-2_pkg_preinst
 }
 
 pkg_postinst() {
