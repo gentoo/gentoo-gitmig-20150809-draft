@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.218 2009/02/18 17:07:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.219 2009/02/19 18:11:37 nixnut Exp $
+
+  19 Feb 2009; nixnut <nixnut@gentoo.org> sqlite-3.6.10.ebuild:
+  ppc stable #259462
 
   18 Feb 2009; Mike Frysinger <vapier@gentoo.org>
   files/sqlite-3.6.10-tcl-install.patch:
