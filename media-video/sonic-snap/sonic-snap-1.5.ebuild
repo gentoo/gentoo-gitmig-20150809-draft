@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.7 2008/12/15 01:57:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.8 2009/02/19 06:19:32 nerdboy Exp $
 
 EAPI="1"
 inherit eutils linux-info
 
 DESCRIPTION="Webcam app for sn9c10x based camera controllers (with optional MPEG4 support)"
-HOMEPAGE="http://stolk.org/sonic-snap/"
-SRC_URI="http://stolk.org/${PN}/${P}.tar.gz"
+HOMEPAGE="http://bram.creative4vision.nl/sonic-snap/"
+SRC_URI="http://bram.creative4vision.nl/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
@@ -26,9 +26,8 @@ DEPEND="x11-libs/fltk:1.1
 	x11-libs/libXft"
 
 CONFIG_CHECK="USB_SN9C102"
-ERROR_USB_SN9C102="Please make sure Device Drivers -> USB Support -> SN9C10x \
-PC Camera Controller support, and Device Drivers -> Video For Linux support \
-are enabled as modules in your kernel."
+ERROR_USB_SN9C102="Please make sure the SN9C1xx PC Camera Controller driver is \
+enabled, under V4L USB devices, as a module in your kernel."
 
 src_unpack() {
 	unpack ${A}
