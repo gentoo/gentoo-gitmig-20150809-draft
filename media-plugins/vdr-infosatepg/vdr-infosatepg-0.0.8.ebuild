@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-infosatepg/vdr-infosatepg-0.0.8.ebuild,v 1.1 2009/02/18 21:15:51 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-infosatepg/vdr-infosatepg-0.0.8.ebuild,v 1.2 2009/02/19 18:40:54 mr_bones_ Exp $
 
 inherit vdr-plugin
 
@@ -14,4 +14,3 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.6.0"
-
