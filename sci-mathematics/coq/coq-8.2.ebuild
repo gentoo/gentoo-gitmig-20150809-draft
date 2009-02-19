@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.2.ebuild,v 1.1 2009/02/18 18:07:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.2.ebuild,v 1.2 2009/02/19 18:41:12 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -12,7 +12,6 @@ MY_P="${PN}-${MY_PV}"
 DESCRIPTION="Coq is a proof assistant written in O'Caml"
 HOMEPAGE="http://coq.inria.fr/"
 SRC_URI="http://coq.inria.fr/V${MY_PV}/files/${MY_P}.tar.gz"
-
 
 LICENSE="LGPL-2.1"
 SLOT="0"
