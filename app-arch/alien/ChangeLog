@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/alien
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.22 2009/02/04 14:55:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.23 2009/02/19 09:11:00 lordvan Exp $
+
+*alien-8.74 (19 Feb 2009)
+
+  19 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org> +alien-8.74.ebuild:
+  version bump + added dep for tar >= 1.14.91
 
 *alien-8.72 (04 Feb 2009)
 
