@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/vinagre
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.25 2008/12/13 17:31:33 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.26 2009/02/19 04:06:20 ford_prefect Exp $
+
+*vinagre-2.24.2-r1 (19 Feb 2009)
+
+  19 Feb 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +files/vinagre-2.24.2-optional-avahi.patch, +vinagre-2.24.2-r1.ebuild:
+  Make Avahi support optional again, and add more USE-conditional deps for
+  net-dns/avahi. Fixes bug #243004, #256190.
 
   13 Dec 2008; Raúl Porcel <armin76@gentoo.org> vinagre-0.5.2.ebuild:
   alpha/ia64 stable wrt #250314
