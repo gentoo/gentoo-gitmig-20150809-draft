@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.10.1-r1.ebuild,v 1.1 2009/01/12 17:57:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.10.1-r1.ebuild,v 1.2 2009/02/19 19:17:05 alexxy Exp $
 
 EAPI="2"
-KDE_MINIMAL="4.1"
+KDE_MINIMAL="4.2"
 KDE_LINGUAS="bg cs da de es fr hu is it ja nb nl pt pt_BR ru sk sv tr uk zh_CN zh_TW"
 inherit kde4-base
 
