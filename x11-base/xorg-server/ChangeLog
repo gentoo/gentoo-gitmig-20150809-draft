@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.376 2009/02/05 11:30:44 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.377 2009/02/19 17:21:41 remi Exp $
+
+  19 Feb 2009; Rémi Cardona <remi@gentoo.org> xorg-server-1.5.3-r2.ebuild:
+  drop liblbxutil dep, there are no references to it in the sources
 
 *xorg-server-1.5.3-r2 (05 Feb 2009)
 
