@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.23 2009/02/17 14:32:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.24 2009/02/19 12:17:09 scarabeus Exp $
+
+*okular-4.2.0-r1 (19 Feb 2009)
+
+  19 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> +okular-4.2.0-r1.ebuild:
+  Enable some stuff by default (+useflag). Per bug #258077.
 
   17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -okular-4.1.4.ebuild:
   Drop KDE 4.1.4
