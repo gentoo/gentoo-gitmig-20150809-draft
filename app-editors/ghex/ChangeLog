@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/ghex
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.51 2008/08/17 17:19:36 maekke Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.52 2009/02/19 22:56:11 eva Exp $
+
+*ghex-2.24.0 (19 Feb 2009)
+
+  19 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org> +ghex-2.24.0.ebuild:
+  Bump to 2.24.0. Nothing much besides bug fixing.
 
   17 Aug 2008; Markus Meier <maekke@gentoo.org> ghex-2.22.0.ebuild:
   x86 stable, bug #234517
