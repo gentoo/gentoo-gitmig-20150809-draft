@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.170 2009/02/12 22:12:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.171 2009/02/19 23:32:15 alexxy Exp $
+
+  19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -kopete-4.1.4.ebuild:
+  Drop stale kde 4.1.4
 
   12 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -files/kopete-3.5.5-enable-final-redefines.patch,

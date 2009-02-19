@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpasswdserver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.17 2009/02/01 07:46:41 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.18 2009/02/19 23:37:25 alexxy Exp $
+
+  19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kpasswdserver-4.1.4.ebuild:
+  Drop stale kde 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kpasswdserver-4.2.0.ebuild:

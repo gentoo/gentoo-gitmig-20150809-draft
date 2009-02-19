@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kscreensaver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.103 2009/02/01 07:54:33 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.104 2009/02/19 23:25:39 alexxy Exp $
+
+  19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kscreensaver-4.1.4.ebuild:
+  Drop stale kde 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kscreensaver-4.2.0.ebuild:

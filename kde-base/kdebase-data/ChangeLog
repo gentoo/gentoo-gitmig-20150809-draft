@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.104 2009/02/01 06:51:23 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.105 2009/02/19 23:06:27 alexxy Exp $
+
+  19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdebase-data-4.1.4.ebuild:
+  Drop stale kde 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdebase-data-4.2.0.ebuild:

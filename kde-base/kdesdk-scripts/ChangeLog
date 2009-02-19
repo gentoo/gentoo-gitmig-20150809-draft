@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-scripts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.88 2009/02/01 07:04:17 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.89 2009/02/19 23:22:17 alexxy Exp $
+
+  19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdesdk-scripts-4.1.4.ebuild:
+  Drop stale kde 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdesdk-scripts-4.2.0.ebuild:

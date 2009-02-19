@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/renamedlg-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-plugins/ChangeLog,v 1.7 2009/02/01 08:35:13 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-plugins/ChangeLog,v 1.8 2009/02/19 23:11:31 alexxy Exp $
+
+  19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -renamedlg-plugins-4.1.4.ebuild:
+  Drop stale kde 4.1.4
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   renamedlg-plugins-4.2.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.107 2009/02/05 18:01:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.108 2009/02/19 23:41:53 alexxy Exp $
+
+  19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -korganizer-4.1.4.ebuild:
+  Drop stale kde 4.1.4
 
 *korganizer-4.2.0-r1 (05 Feb 2009)
 
