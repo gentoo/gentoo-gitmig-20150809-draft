@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2364 2009/02/18 22:08:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2365 2009/02/19 08:39:54 zzam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Feb 2009; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Add sys-fs/udev-138 to masked ebuilds.
 
   18 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org> base/package.use.mask:
   Add policykit use.mask for consolekit.

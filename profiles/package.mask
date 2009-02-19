@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9497 2009/02/18 20:53:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9498 2009/02/19 08:39:54 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -455,6 +455,7 @@ app-misc/sdricoh_cs
 # and until all (upstream) rule changes are reviewed
 ~sys-fs/udev-136
 ~sys-fs/udev-137
+~sys-fs/udev-138
 
 # Ben de Groot <yngwin@gentoo.org> (19 Jan 2009)
 # Masked because of bug 248038 which requires mask of qt-4.3*
