@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/mapserver
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.13 2008/08/06 18:08:02 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.14 2009/02/19 05:21:24 serkan Exp $
+
+  19 Feb 2009; Serkan Kaba <serkan@gentoo.org> mapserver-5.0.0-r1.ebuild:
+  Add support for java-pkg-opt-2_pkg_preinst.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
