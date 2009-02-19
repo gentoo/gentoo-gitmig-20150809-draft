@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.75 2009/02/19 18:39:06 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.76 2009/02/19 22:38:51 tcunha Exp $
+
+  19 Feb 2009; Tiago Cunha <tcunha@gentoo.org> genlop-0.30.8-r2.ebuild:
+  stable amd64, bug 259360
 
   19 Feb 2009; tgall_foo <tgall@gentoo.org> genlop-0.30.8-r2.ebuild:
   stable on ppc64 bug #259360
