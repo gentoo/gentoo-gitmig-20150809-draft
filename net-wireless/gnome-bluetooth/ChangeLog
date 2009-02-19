@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/gnome-bluetooth
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.48 2008/05/05 22:42:03 eva Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.49 2009/02/19 23:20:29 eva Exp $
+
+*gnome-bluetooth-0.12.0 (19 Feb 2009)
+
+  19 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-bluetooth-0.12.0.ebuild:
+  Bump to 0.12.0. Remove gnome-obex-server, it is now provided by
+  gnome-user-share.
 
   06 May 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -files/gnome-bluetooth-0.7.0-aclocal_openobex.patch,
