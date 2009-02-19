@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.20 2009/02/12 13:04:07 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.21 2009/02/19 19:21:14 cla Exp $
+
+  19 Feb 2009; Dawid Węgliński <cla@gentoo.org> varnish-2.0.3.ebuild:
+  Keywording ~amd64
+  
+  > Hi, i'm using www-servers/varnish for some time in a production
+  > environment here, and it works fine. Can i keyword it ~amd64?
+  
+  sure! thanks for your feedback.
 
 *varnish-2.0.3 (12 Feb 2009)
 
