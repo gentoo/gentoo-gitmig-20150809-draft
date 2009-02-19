@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/quilt-el
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.8 2009/01/18 17:25:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.9 2009/02/19 19:18:44 nixnut Exp $
+
+  19 Feb 2009; nixnut <nixnut@gentoo.org> quilt-el-0.45.4.ebuild:
+  ppc stable #254621
 
   18 Jan 2009; Markus Meier <maekke@gentoo.org> quilt-el-0.45.4.ebuild:
   amd64 stable, bug #254621
