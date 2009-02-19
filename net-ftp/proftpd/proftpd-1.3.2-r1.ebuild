@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.2-r1.ebuild,v 1.3 2009/02/18 18:24:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.2-r1.ebuild,v 1.4 2009/02/19 20:29:16 voyageur Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -63,6 +63,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-upstream-bug-3183.patch
 	# Fix parallel build
 	epatch "${FILESDIR}"/${P}-parallel-build.patch
+	# Fix mysql include when both backends are enabled
+	epatch "${FILESDIR}"/${P}-mysql-include.patch
 
 	# Fix stripping of files
 	sed -e "s| @INSTALL_STRIP@||g" -i Make*
