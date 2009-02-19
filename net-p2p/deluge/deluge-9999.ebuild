@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.16 2009/02/12 15:46:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.17 2009/02/19 11:07:05 armin76 Exp $
 
 inherit eutils distutils subversion flag-o-matic
 
@@ -16,17 +16,17 @@ SLOT="0"
 KEYWORDS=""
 IUSE="gtk"
 
-DEPEND=">=dev-lang/python-2.4
+DEPEND=">=dev-lang/python-2.5
 	dev-libs/boost
 	dev-python/setuptools"
 RDEPEND="${DEPEND}
 	dev-python/pyxdg
-	dev-python/pygobject
 	dev-python/twisted
 	dev-python/twisted-web
 	dev-python/simplejson
 	dev-python/pyopenssl
 	gtk? (
+		dev-python/pygobject
 		>=dev-python/pygtk-2
 		dev-python/pyxdg
 		dev-python/dbus-python
