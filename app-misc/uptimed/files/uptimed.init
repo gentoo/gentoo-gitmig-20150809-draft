@@ -1,0 +1,25 @@
+--- /usr/portage/app-misc/uptimed/files/uptimed
++++ /usr/local/portage/app-misc/uptimed/files/uptimed
+@@ -5,15 +5,19 @@
+ 
+ # Copyright 2002 Sean Russell
+ 
++PIDFILE="/var/run/uptimed/uptimed.pid"
++
+ start() {
+ 	ebegin "Starting uptimed"
+-	uptimed -b
+-	start-stop-daemon --quiet --start --pidfile /var/run/uptimed --exec /usr/sbin/uptimed
++	start-stop-daemon --quiet --start --chuid uptimed \
++		--exec /usr/sbin/uptimed -- -b
++	start-stop-daemon --quiet --start --chuid uptimed \
++		--exec /usr/sbin/uptimed -- -p ${PIDFILE}
+ 	eend $?
+ }
+ 
+ stop() {
+ 	ebegin "Stopping uptimed"
+-	start-stop-daemon --quiet --stop --pidfile /var/run/uptimed
++	start-stop-daemon --quiet --stop --user uptimed --pidfile ${PIDFILE}
+ 	eend $?
+ }

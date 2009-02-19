@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.16.ebuild,v 1.1 2009/01/02 12:05:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.16-r1.ebuild,v 1.1 2009/02/19 19:33:20 armin76 Exp $
 
 inherit autotools
 
@@ -12,6 +12,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
+
+pkg_setup() {
+	enewgroup uptimed
+	enewuser uptimed -1 -1 -1 uptimed
+}
 
 src_unpack() {
 	unpack ${A}
@@ -26,9 +31,12 @@ src_unpack() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
+	diropts -o uptimed -g uptimed
+	dodir /var/run/uptimed
 	keepdir /var/spool/uptimed
+	fowners uptimed:uptimed /var/spool/uptimed
 	dodoc ChangeLog README TODO AUTHORS CREDITS INSTALL.cgi sample-cgi/*
-	doinitd "${FILESDIR}"/uptimed
+	doinitd "${FILESDIR}"/uptimed.init
 }
 
 pkg_postinst() {
