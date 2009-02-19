@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.85 2009/01/11 17:29:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.86 2009/02/19 15:49:08 flameeyes Exp $
+
+  19 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  gnokii-0.6.22-r2.ebuild:
+  Restore serial make for version 0.6.22, closes bug #246653.
 
 *gnokii-0.6.27-r1 (11 Jan 2009)
 
