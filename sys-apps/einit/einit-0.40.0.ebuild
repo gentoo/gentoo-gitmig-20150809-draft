@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/einit-0.40.0.ebuild,v 1.6 2008/06/11 16:36:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/einit-0.40.0.ebuild,v 1.7 2009/02/19 09:35:30 fauli Exp $
 
 EAPI="1"
 
@@ -59,6 +59,6 @@ pkg_postinst() {
 	elog "To use einit as a non-root user, add that user to the group 'einit'."
 	elog
 	elog "You can always find the latest documentation at"
-	elog "http://einit.org/"
+	elog "${HOMEPAGE}"
 	elog
 }
