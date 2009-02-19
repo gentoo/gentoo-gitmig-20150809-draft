@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/quake3-urbanterror
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/ChangeLog,v 1.19 2007/08/18 00:46:11 wolf31o2 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-urbanterror/ChangeLog,v 1.20 2009/02/19 18:13:18 scarabeus Exp $
+
+*quake3-urbanterror-4.1 (19 Feb 2009)
+
+  19 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  quake3-urbanterror-3.7.ebuild, quake3-urbanterror-3.7-r1.ebuild,
+  -quake3-urbanterror-4.0.ebuild, +quake3-urbanterror-4.1.ebuild:
+  Update SRC_URI for 3 series. Version bump 4 series for 4.1 where we can
+  obtain the source. Per bug #225549.
 
 *quake3-urbanterror-4.0 (18 Aug 2007)
 
