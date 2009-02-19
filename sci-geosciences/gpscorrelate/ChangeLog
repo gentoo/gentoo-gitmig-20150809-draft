@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpscorrelate
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.4 2008/12/01 18:35:02 hanno Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpscorrelate/ChangeLog,v 1.5 2009/02/19 04:00:54 tester Exp $
+
+  19 Feb 2009; Olivier Crête <tester@gentoo.org> gpscorrelate-1.5.8.ebuild:
+  Stable on amd64
 
 *gpscorrelate-1.5.8 (01 Dec 2008)
 
