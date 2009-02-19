@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-unix
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.21 2009/02/15 15:44:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ChangeLog,v 1.22 2009/02/19 18:27:46 nixnut Exp $
+
+  19 Feb 2009; nixnut <nixnut@gentoo.org> ucspi-unix-0.36-r3.ebuild:
+  ppc stable #258261
 
   15 Feb 2009; Markus Meier <maekke@gentoo.org> ucspi-unix-0.36-r3.ebuild:
   x86 stable, bug #258261
