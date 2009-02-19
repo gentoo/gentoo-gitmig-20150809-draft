@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbxml
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.2 2008/07/14 11:40:39 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.3 2009/02/19 05:18:26 serkan Exp $
+
+  19 Feb 2009; Serkan Kaba <serkan@gentoo.org> dbxml-2.4.13.2.ebuild:
+  Add support for java-pkg-opt-2_pkg_preinst.
 
   14 Jul 2008; Diego Pettenò <flameeyes@gentoo.org> dbxml-2.4.13.2.ebuild:
   Fix the name of the package, it's sys-libs/db not dev-libs/db, the error
