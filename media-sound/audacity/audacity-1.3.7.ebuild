@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.7.ebuild,v 1.2 2009/02/13 07:20:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.7.ebuild,v 1.3 2009/02/19 07:53:06 patrick Exp $
 
 EAPI=2
 
@@ -53,6 +53,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-1.3.4-automagic.patch"
 	epatch "${FILESDIR}/${PN}-1.3.5-libtool22.patch"
+	epatch "${FILESDIR}/${P}-cflags.patch"
 	AT_M4DIR="${S}/m4" eautoreconf
 }
 
