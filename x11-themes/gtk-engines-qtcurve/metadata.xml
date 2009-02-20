@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>desktop-misc</herd>
-	<maintainer>
-		<email>yngwin@gentoo.org</email>
-		<name>Ben de Groot</name>
-	</maintainer>
-	<longdescription>
-		The gtk-engines-qtcurve package offers a cross-toolkit uniform look and
-		feel, together with the qtcurve and qtcurve-qt4 packages, for GTK+, Qt
-		and KDE based applications.
-	</longdescription>
-	<use>
-		<flag name="firefox3">Install GUI theme tweaks for version 3 of
-			<pkg>www-client/mozilla-firefox</pkg></flag>
-		<flag name="mozilla">Install GUI theme tweaks for mozilla based
-			browsers, including version 2 of
-			<pkg>www-client/mozilla-firefox</pkg></flag>
-	</use>
+  <herd>desktop-misc</herd>
+  <maintainer>
+    <email>yngwin@gentoo.org</email>
+    <name>Ben de Groot</name>
+  </maintainer>
+  <longdescription>
+    The gtk-engines-qtcurve package offers a cross-toolkit uniform look and
+    feel, together with the qtcurve and qtcurve-qt4 packages, for GTK+, Qt
+    and KDE based applications.
+  </longdescription>
+  <use>
+    <flag name="firefox3">Install GUI theme tweaks for version 3 of
+      <pkg>www-client/mozilla-firefox</pkg>
+    </flag>
+    <flag name="mozilla">Install GUI theme tweaks for mozilla based
+      browsers, including version 2 of
+      <pkg>www-client/mozilla-firefox</pkg>
+    </flag>
+  </use>
 </pkgmetadata>
