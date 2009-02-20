@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/micropolis-1.0.ebuild,v 1.2 2008/06/25 09:51:41 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/micropolis/micropolis-1.0.ebuild,v 1.3 2009/02/20 13:44:40 hanno Exp $
 
 inherit eutils games
 
@@ -16,7 +16,8 @@ IUSE=""
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
-	media-libs/libsdl"
+	media-libs/libsdl
+	media-libs/sdl-mixer"
 DEPEND="${RDEPEND}
 	sys-devel/bison"
 
