@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.89 2009/01/25 18:38:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.90 2009/02/20 00:04:45 fmccor Exp $
+
+  20 Feb 2009; Ferris McCormick <fmccor@gentoo.org>
+  gentoo-syntax-20081006.ebuild:
+  Sparc stable, Bug #248220.
 
   25 Jan 2009; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   edit metadata - I have access to the repo, so I should be CC'd on bugs now
