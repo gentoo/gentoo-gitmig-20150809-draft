@@ -1,8 +1,9 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.29 2009/02/20 14:41:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.30 2009/02/20 15:09:45 flameeyes Exp $
 
-  20 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org> ChangeLog:
+  20 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  vinagre-2.24.2-r1.ebuild:
   Add gnome-common dependency.
 
   19 Feb 2009; Arun Raghavan <ford_prefect@gentoo.org> vinagre-0.5.2.ebuild:

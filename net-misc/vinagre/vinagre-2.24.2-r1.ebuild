@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.24.2-r1.ebuild,v 1.1 2009/02/19 04:06:20 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.24.2-r1.ebuild,v 1.2 2009/02/20 15:09:45 flameeyes Exp $
 
 EAPI=2
 
@@ -26,6 +26,7 @@ RDEPEND=">=dev-libs/glib-2.17.0
 	avahi? ( >=net-dns/avahi-0.6.22[dbus,gtk] )"
 
 DEPEND="${RDEPEND}
+	gnome-base/gnome-common
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35
 	app-text/scrollkeeper
