@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsmi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.28 2008/10/29 19:22:11 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.29 2009/02/20 18:55:13 armin76 Exp $
+
+  20 Feb 2009; Raúl Porcel <armin76@gentoo.org> libsmi-0.4.8.ebuild:
+  Add ~arm/~s390/~sh wrt #247076
 
   29 Oct 2008; Peter Volkov <pva@gentoo.org> libsmi-0.4.8.ebuild:
   Added 'replace-flags -O? -O2' to fix tests, bug #218541, thank Guy Martin
