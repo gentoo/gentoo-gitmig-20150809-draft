@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.92 2009/02/20 16:03:01 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.93 2009/02/20 17:40:42 darkside Exp $
+
+  20 Feb 2009; Jeremy Olexa <darkside@gentoo.org>
+  gentoo-syntax-20090220.ebuild:
+  I uploaded a bad distfile to the mirrors. This change will fix it and offer
+  a definitive source for the distfile that I *know* works.
 
 *gentoo-syntax-20090220 (20 Feb 2009)
 
