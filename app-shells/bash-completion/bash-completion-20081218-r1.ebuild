@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20081218.ebuild,v 1.1 2008/12/18 22:54:51 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20081218-r1.ebuild,v 1.1 2009/02/20 05:31:48 darkside Exp $
+
+EAPI="2"
 
 DESCRIPTION="Programmable Completion for bash"
 HOMEPAGE="http://bash-completion.alioth.debian.org/"
@@ -22,13 +24,10 @@ PDEPEND="app-shells/gentoo-bashcomp"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	#EPATCH_SUFFIX="patch" epatch "${FILESDIR}"/${PV}
-
-	# bug #111681
-	sed -i -e "/^complete.* xine /d" bash_completion
+src_prepare() {
+	# bug #111681 
+	sed -i -e "/^complete.* xine /d" \
+		-e '0,/gz|bz2/s//gz|bz2|lzma/' bash_completion || die "sed failed"
 }
 
 src_install() {
@@ -36,7 +35,7 @@ src_install() {
 	# 1. /usr/share/bash-completion/.pre    -- hidden from eselect
 	# 2. /usr/share/bash-completion/base -- eselectable
 	# 3. /usr/share/bash-completion/.post   -- hidden from eselect
-	dodir /usr/share/bash-completion
+	dodir /usr/share/bash-completion || die "dodir failed"
 	awk -v D="$D" '
 		BEGIN { out=".pre" }
 		/^# A lot of the following one-liners/ { out="base" }
@@ -69,7 +68,7 @@ pkg_postinst() {
 	elog
 	elog "Versions of bash-completion prior to 20060301-r1 required each user to"
 	elog "explicitly source /etc/profile.d/bash-completion in ~/.bashrc.  This"
-	elog "was kludgy and inconsistent with the completion modules which are"
+	elog "was inconsistent with the completion modules which are"
 	elog "enabled with eselect bashcomp.  Now any user can enable the base"
 	elog "completions without editing their .bashrc by running"
 	elog
@@ -84,13 +83,15 @@ pkg_postinst() {
 	elog
 	elog "If you use non-login shells you still need to source"
 	elog "/etc/profile.d/bash-completion.sh in your ~/.bashrc."
+	elog "Note this is bash-completion.sh, not bash-completion. Lots of people"
+	elog "overlook this"
 	elog
 
 	if has_version 'app-shells/zsh' ; then
 		elog "If you are interested in using the provided bash completion functions with"
 		elog "zsh, valuable tips on the effective use of bashcompinit are available:"
 		elog "  http://www.zsh.org/mla/workers/2003/msg00046.html"
-		elog "  http://zshwiki.org/ZshSwitchingTo"
+		#elog "  http://zshwiki.org/ZshSwitchingTo" (doesn't exist)
 		elog
 	fi
 }
