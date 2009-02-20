@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.5 2009/02/20 17:36:44 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.6 2009/02/20 17:39:12 gentoofan23 Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs autotools fortran
@@ -58,14 +58,12 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable gd) \
 		$(use_enable gs) \
 		$(use_enable opengl) \
-		$(use_enable X) || die "Econf failed"
-
-	emake || die "Make failed"
+		$(use_enable X)
 }
 
 src_install() {
