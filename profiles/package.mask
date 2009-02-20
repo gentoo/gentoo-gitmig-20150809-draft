@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9503 2009/02/19 23:48:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9504 2009/02/20 09:28:19 tampakrap Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -498,10 +498,6 @@ net-analyzer/sysmon
 >=net-misc/networkmanager-pptp-0.7.0
 >=net-misc/networkmanager-openvpn-0.7.0
 
-# Tomas Chvatal <scarabeus@gentoo.org> (03 Dec 2008)
-# Betaversion, has cool stuff like plasmoid and so on
-=net-p2p/ktorrent-3.2*
-
 # Tobias Scherbaum <dertobi123@gentoo.org> (02 Dec 2008)
 # Mask because of broken upgrade path. Need to investigate what the real
 # problem is. bug #249579
@@ -701,13 +697,6 @@ app-portage/kuroo
 # to send me patches or help me fix it. If that doesn't sound like you, this
 # software is not yet ready for you. Thanks.
 ~net-misc/dhcp-4.0.0
-
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (03 Sep 2008)
-# Restrict the following mask only to 4.0.* packages. KDE-4.1 won't enter
-# the tree p. masked.
-# Timo Gurr <tgurr@gentoo.org> (22 Feb 2008)
-# Mask KDE4 versions of ktorrent as long as KDE4 is masked.
-=net-p2p/ktorrent-3.0*
 
 # Michael Marineau <marineam@gentoo.org> (03 Sep 2008)
 # Unmaintained and out of date security wise,
