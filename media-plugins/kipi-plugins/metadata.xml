@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>kde</herd>
+<use>
+	<flag name="mjpeg">Add mjpeg suppport</flag>
+	<flag name="redeyes">Add redeyes removal suppport</flag>
+	<flag name="linguas_zn_CN">Add zn_CN lingua suppport</flag>
+</use>
 </pkgmetadata>
