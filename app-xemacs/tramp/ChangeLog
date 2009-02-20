@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/tramp
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.17 2007/11/25 15:06:00 graaff Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.18 2009/02/20 00:36:11 fauli Exp $
+
+  20 Feb 2009; Christian Faulhammer <fauli@gentoo.org> -tramp-1.34.ebuild:
+  clean up
 
   25 Nov 2007; Hans de Graaff <graaff@gentoo.org> tramp-1.37.ebuild:
   Marked amd64 stable per kingtaco's email to -core

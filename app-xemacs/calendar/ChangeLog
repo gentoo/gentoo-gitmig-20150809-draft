@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/calendar
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.22 2008/03/19 19:19:08 graaff Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.23 2009/02/19 23:54:08 fauli Exp $
+
+  19 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
+  -calendar-1.30.ebuild:
+  clean up
 
   19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   A herd should not be listed as maintainer

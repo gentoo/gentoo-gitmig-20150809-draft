@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/haskell-mode
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/haskell-mode/ChangeLog,v 1.20 2008/05/12 13:57:19 corsair Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/haskell-mode/ChangeLog,v 1.21 2009/02/20 00:10:55 fauli Exp $
+
+  20 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
+  -haskell-mode-1.10.ebuild:
+  clean up
 
   12 May 2008; Markus Rothe <corsair@gentoo.org> haskell-mode-1.11.ebuild:
   Stable on ppc64
