@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-0.5.2.ebuild,v 1.8 2008/12/13 17:31:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-0.5.2.ebuild,v 1.9 2009/02/20 03:50:50 ford_prefect Exp $
 
 inherit gnome2 eutils
 
@@ -30,9 +30,10 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 
 pkg_setup() {
-	if use avahi && ! built_with_use net-dns/avahi gtk; then
-		eerror "gtk support in avahi needed"
-		die "Please rebuild avahi with USE='gtk'"
+	if use avahi && ! built_with_use net-dns/avahi dbus gtk; then
+		eerror "DBus and GTK support are needed in Avahi"
+		eerror "Please rebuild net-dns/avahi with USE='dbus gtk'"
+		die "Missing USE flags for net-dns/avahi"
 	fi
 
 	G2CONF="${G2CONF} $(use_enable avahi) --disable-scrollkeeper"
