@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.7.197.ebuild,v 1.3 2009/02/20 11:04:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.7.197.ebuild,v 1.4 2009/02/20 11:13:52 remi Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
-XDPVER=4
 
 inherit x-modular
 

@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.8.0-r1.ebuild,v 1.9 2009/02/20 11:04:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.8.0-r1.ebuild,v 1.10 2009/02/20 11:13:52 remi Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
-XDPVER=4
 
 inherit x-modular
 
@@ -28,17 +27,18 @@ DEPEND="${RDEPEND}
 
 CONFIGURE_OPTIONS="$(use_enable dri)"
 
-PATCHES="
-	${FILESDIR}/${PV}/0001-Bump-CRTC-size-limits-on-AVIVO-chips-so-30-displays.patch
-	${FILESDIR}/${PV}/0002-RADEON-update-man-page-with-supported-chips.patch
-	${FILESDIR}/${PV}/0003-RADEON-fix-DDC-types-5-and-6.patch
-	${FILESDIR}/${PV}/0004-RADEON-restore-clock-gating-and-CP-clock-errata-on.patch
-	${FILESDIR}/${PV}/0005-R100-fix-render-accel-for-transforms.patch
-	${FILESDIR}/${PV}/0006-radeon-Fix-typo-flagged-by-gcc-Wall.patch
-	${FILESDIR}/${PV}/0007-ATOM-properly-set-up-DDIA-output-on-RS6xx-boards.patch
-	${FILESDIR}/${PV}/0008-RS6xx-fix-DDC-on-DDIA-output-usually-HDMI-port.patch
-	${FILESDIR}/${PV}/0134-Disable-the-setting-of-HARDWARE_CURSOR_BIT_ORDER_MSB.patch
-	"
+PATCHES=(
+	"${FILESDIR}/${PV}/0001-Bump-CRTC-size-limits-on-AVIVO-chips-so-30-displays.patch"
+	"${FILESDIR}/${PV}/0002-RADEON-update-man-page-with-supported-chips.patch"
+	"${FILESDIR}/${PV}/0003-RADEON-fix-DDC-types-5-and-6.patch"
+	"${FILESDIR}/${PV}/0004-RADEON-restore-clock-gating-and-CP-clock-errata-on.patch"
+	"${FILESDIR}/${PV}/0005-R100-fix-render-accel-for-transforms.patch"
+	"${FILESDIR}/${PV}/0006-radeon-Fix-typo-flagged-by-gcc-Wall.patch"
+	"${FILESDIR}/${PV}/0007-ATOM-properly-set-up-DDIA-output-on-RS6xx-boards.patch"
+	"${FILESDIR}/${PV}/0008-RS6xx-fix-DDC-on-DDIA-output-usually-HDMI-port.patch"
+	"${FILESDIR}/${PV}/0134-Disable-the-setting-of-HARDWARE_CURSOR_BIT_ORDER_MSB.patch"
+)
+
 src_install() {
 	x-modular_src_install
 	insinto /usr/share/hwdata/videoaliases
