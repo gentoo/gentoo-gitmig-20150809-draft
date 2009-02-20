@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/Test-Harness-3.15.ebuild,v 1.1 2009/02/18 10:44:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/Test-Harness-3.16.ebuild,v 1.1 2009/02/20 06:21:44 tove Exp $
 
 MODULE_AUTHOR=ANDYA
 inherit perl-module
