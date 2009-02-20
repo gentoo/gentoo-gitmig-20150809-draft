@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.1.ebuild,v 1.4 2008/07/23 09:52:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.1.ebuild,v 1.5 2009/02/20 12:51:36 dragonheart Exp $
 
 inherit base eutils linux-info
 
@@ -30,7 +30,6 @@ pkg_setup() {
 	local tpm_kernel_version tpm_kernel_present tpm_module
 	kernel_is ge 2 6 12 && tpm_kernel_version="yes"
 	linux_chkconfig_present TCG_TPM && tpm_kernel_present="yes"
-	has_version app-crypt/tpm-module && tpm_module="yes"
 	has_version app-crypt/tpm-emulator && tpm_module="yes"
 	if [ -n "${tpm_kernel_present}" ] ; then
 		einfo "Good, you seem to have in-kernel TPM support."
@@ -51,7 +50,6 @@ pkg_setup() {
 		eerror
 		eerror "To use this package, you should install a TPM driver."
 		eerror "You can have the following options:"
-		eerror "  - install app-crypt/tpm-module"
 		eerror "  - install app-crypt/tpm-emulator"
 		eerror "  - switch to a >=2.6.12 kernel and compile the kernel module"
 		eerror

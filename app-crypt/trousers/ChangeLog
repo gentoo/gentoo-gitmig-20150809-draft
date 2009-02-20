@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/trousers
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.18 2008/07/23 09:52:37 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.19 2009/02/20 12:51:36 dragonheart Exp $
+
+  20 Feb 2009; Daniel Black <dragonheart@gentoo.org> trousers-0.3.1.ebuild:
+  app-crypt/tpm-module being purged
 
   23 Jul 2008; Peter Alfredsen <loki_val@gentoo.org>
   files/trousers-0.2.3-nouseradd.patch, +files/trousers-0.3.1-gcc43.patch,
