@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.13 2009/01/01 02:44:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.14 2009/02/20 16:18:17 matsuu Exp $
+
+*libev-3.53 (20 Feb 2009)
+
+  20 Feb 2009; MATSUU Takuto <matsuu@gentoo.org> libev-3.48.ebuild,
+  libev-3.49.ebuild, libev-3.51.ebuild, +libev-3.53.ebuild:
+  Version bumped. Fixed SRC_URI, bug #259435.
 
 *libev-3.51 (01 Jan 2009)
 
