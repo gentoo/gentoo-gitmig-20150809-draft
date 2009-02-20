@@ -1,9 +1,6 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.156 2009/02/20 16:02:41 dertobi123 Exp $
-
-  20 Feb 2009; Tobias Scherbaum <dertobi123@gentoo.org> metadata.xml:
-  Add Jeremy Olexa <darkside@gentoo.org> as maintainer
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.157 2009/02/20 16:49:50 dertobi123 Exp $
 
 *fetchmail-6.3.9-r1 (20 Feb 2009)
 
