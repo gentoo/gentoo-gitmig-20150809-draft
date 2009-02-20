@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.60.0.ebuild,v 1.3 2009/02/20 23:28:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.61.1.ebuild,v 1.1 2009/02/20 23:28:05 yngwin Exp $
 
 EAPI="2"
 inherit flag-o-matic cmake-utils

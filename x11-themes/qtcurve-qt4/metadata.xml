@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>desktop-misc</herd>
-	<maintainer>
-		<email>yngwin@gentoo.org</email>
-		<name>Ben de Groot</name>
-	</maintainer>
-	<use>
-		<flag name='kde'>Enable KDE4 support. This adds a QtCurve configuration
-			module to KDE's SystemSettings.</flag>
-	</use>
+  <herd>desktop-misc</herd>
+  <maintainer>
+    <email>yngwin@gentoo.org</email>
+    <name>Ben de Groot</name>
+  </maintainer>
+  <use>
+    <flag name='kde'>Enable KDE4 support. This adds a QtCurve configuration
+      module to KDE's SystemSettings.
+    </flag>
+  </use>
 </pkgmetadata>
