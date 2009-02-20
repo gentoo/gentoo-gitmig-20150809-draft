@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.5.1.ebuild,v 1.1 2008/10/04 10:17:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.5.1.ebuild,v 1.2 2009/02/20 13:29:32 flameeyes Exp $
 
 inherit eutils fortran
 
@@ -19,10 +19,6 @@ RDEPEND=""
 
 pkg_setup() {
 	local err
-	if use python && ! built_with_use dev-lang/swig python; then
-		eerror "You need USE=python in dev-lang/swig for python support."
-		err="${err} python"
-	fi
 	# this is needed for formulas even with html output only
 	if use doc && ! built_with_use app-doc/doxygen latex; then
 		eerror "You need USE=latex in app-doc/doxygen for docs."
