@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.18 2009/02/20 06:16:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.19 2009/02/20 06:22:15 darkside Exp $
 
 # @ECLASS: bash-completion.eclass
 # @MAINTAINER:
@@ -48,21 +48,16 @@ dobashcompletion() {
 # The bash-completion pkg_postinst function, which is exported
 bash-completion_pkg_postinst() {
 	if useq bash-completion ; then
-		echo
-		einfo "To enable command-line completion for ${PN}, run:"
-		einfo
-		if has_version app-admin/eselect ; then
-			einfo "  eselect bashcomp enable ${BASH_COMPLETION_NAME:-${PN}}"
-		else
-			einfo "  bash-completion-config --install ${BASH_COMPLETION_NAME:-${PN}}"
-			einfo
-			einfo "to install locally, or"
-			einfo
-			einfo "  bash-completion-config --global --install ${BASH_COMPLETION_NAME:-${PN}}"
-			einfo
-			einfo "to install system-wide."
-			einfo "Read bash-completion-config(1) for more information."
-		fi
-		echo
+		elog "To enable command-line completion for ${PN}, run:"
+		elog
+		elog "  eselect bashcomp enable ${BASH_COMPLETION_NAME:-${PN}}"
+		elog "  bash-completion-config --install ${BASH_COMPLETION_NAME:-${PN}}"
+		elog
+		elog "to install locally, or"
+		elog
+		elog "  bash-completion-config --global --install ${BASH_COMPLETION_NAME:-${PN}}"
+		elog
+		elog "to install system-wide."
+		elog "Read bash-completion-config(1) for more information."
 	fi
 }
