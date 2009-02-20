@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.44 2009/02/19 11:48:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.45 2009/02/20 20:02:08 scarabeus Exp $
+
+*quassel-0.4.0-r1 (20 Feb 2009)
+
+  20 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/quasselcore-2.conf, +files/quasselcore-2.init,
+  -quassel-0.4.0.ebuild, +quassel-0.4.0-r1.ebuild, quassel-9999.ebuild:
+  Revision bump. Update initscripts. Fix live correctly. Proxycommit for
+  billie.
 
 *quassel-0.4.0 (19 Feb 2009)
 

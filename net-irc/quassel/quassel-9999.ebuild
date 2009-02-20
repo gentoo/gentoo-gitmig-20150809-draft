@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.18 2009/02/19 11:48:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.19 2009/02/20 20:02:08 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ KEYWORDS=""
 SLOT="0"
 IUSE="dbus debug kde monolithic +oxygen phonon +server +ssl webkit +X"
 
-LANGS="cs da de fr nb_NO ru tr"
+LANGS="cs da de fr hu nb_NO ru sl tr"
 for l in ${LANGS}; do
 	IUSE="${IUSE} linguas_${l}"
 done
@@ -64,44 +64,34 @@ pkg_setup() {
 }
 
 src_configure() {
-# Comment this out and invoke _common_configure_code and cmake manually until cmake-utils.eclass
-# supports space separated strings as arguments for cmake options or quassel changes the
-# separator. Until now multiple languages are not passed to -DLINGUAS and only the first
-# language is considered.
-	local mycmakeargs="$(cmake-utils_use_want server CORE)
+	local MY_LANGUAGES=""
+	for i in ${LINGUAS}; do
+		MY_LANGUAGES="${i},${MY_LANGUAGES}"
+	done
+
+	local mycmakeargs="
 		$(cmake-utils_use_want X QTCLIENT)
+		$(cmake-utils_use_want server CORE)
 		$(cmake-utils_use_want monolithic MONO)
 		$(cmake-utils_use_with webkit WEBKIT)
-		$(cmake-utils_use_with dbus DBUS)
+		$(cmake-utils_use_with phonon PHONON)
 		$(cmake-utils_use_with kde KDE)
-		$(cmake-utils_use_with oxygen OXYGEN)
+		$(cmake-utils_use_with dbus DBUS)
 		$(cmake-utils_use_with ssl OPENSSL)
-		-DEMBED_DATA=OFF"
+		$(cmake-utils_use_with oxygen OXYGEN)
+		-DEMBED_DATA=OFF
+		-DLINGUAS=${MY_LANGUAGES}
+		"
 
-	if use kde ; then
-		# We don't use our own phonon backend, so don't enable it; also use system icon themes
-		mycmakeargs="${mycmakeargs} -DWITH_PHONON=0"
-	else
-		mycmakeargs="${mycmakeargs} $(cmake-utils_use_with phonon PHONON)"
-	fi
-
-	_common_configure_code
-
-	mkdir -p "${WORKDIR}"/${PN}_build
-	pushd "${WORKDIR}"/${PN}_build > /dev/null
-
-	cmake -C "${TMPDIR}/gentoo_common_config.cmake" \
-		${mycmakeargs} \
-		-DLINGUAS="${LINGUAS}" \
-		"${S}" || die "Cmake failed"
+	cmake-utils_src_configure
 }
 
 src_install() {
 	cmake-utils_src_install
 
 	if use server ; then
-		newinitd "${FILESDIR}"/quasselcore.init quasselcore || die "newinitd failed"
-		newconfd "${FILESDIR}"/quasselcore.conf quasselcore || die "newconfd failed"
+		newinitd "${FILESDIR}"/quasselcore-2.init quasselcore || die "newinitd failed"
+		newconfd "${FILESDIR}"/quasselcore-2.conf quasselcore || die "newconfd failed"
 
 		insinto /usr/share/doc/${PF}
 		doins "${S}"/scripts/manageusers.py || die "installing manageusers.py failed"
@@ -120,14 +110,15 @@ pkg_postinst() {
 		elog "possible via the quasselclient yet. If you need to do these things"
 		elog "you have to use the manageusers.py script, which has been installed in"
 		elog "/usr/share/doc/${PF}".
-		elog "Please make sure that the quasselcore is stopped before adding more users."
+		elog "http://bugs.quassel-irc.org/wiki/quassel-irc/Manage_core_users provides"
+		elog "some information on using the script."
+		elog "To be sure nothing bad will happen you need to stop the quasselcore"
+		elog "before adding more users."
 	fi
 
 	if ( use server || use monolithic ) && use ssl ; then
 		elog
-		elog "To enable SSL support for client/core connections the quasselcore needs"
-		elog "a PEM certificate which needs to be stored in ~/.quassel/quasselCert.pem."
-		elog "To create the certificate use the following command:"
-		elog "openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout ~/.quassel/quasselCert.pem -out ~/.quassel/quasselCert.pem"
+		elog "Information on how to enable SSL support for client/core connections"
+		elog "is available at http://bugs.quassel-irc.org/wiki/quassel-irc."
 	fi
 }
