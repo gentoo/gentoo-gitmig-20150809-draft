@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/distel-4.03.ebuild,v 1.1 2009/02/20 18:11:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/distel-4.03.ebuild,v 1.2 2009/02/20 18:22:43 ulm Exp $
 
 EAPI=2
 
@@ -28,7 +28,7 @@ src_prepare() {
 src_compile() {
 	emake base info || die "emake failed"
 	cd elisp
-	elisp-compile *.el || die "elisp-compile failed"
+	elisp-compile *.el || die
 }
 
 src_install() {
