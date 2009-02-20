@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.0.ebuild,v 1.1 2009/02/18 20:52:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.0.ebuild,v 1.2 2009/02/20 10:29:30 bicatali Exp $
 
 EAPI=2
 NEED_PYTHON=2.4
@@ -26,7 +26,7 @@ CDEPEND=">=dev-python/numpy-1.2
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	test? ( dev-python/nose )
-	umfpack? ( dev-lang/swig[python] )"
+	umfpack? ( || ( >=dev-lang/swig-1.3.38 <=dev-lang/swig-1.3.36[python] ) )"
 
 RDEPEND="${CDEPEND}
 	dev-python/imaging"
