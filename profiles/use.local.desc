@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4215 2009/02/20 07:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4216 2009/02/20 11:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -120,7 +120,6 @@ app-crypt/mit-krb5:doc -  Creates and installs the API and implementation docume
 app-crypt/mit-krb5:ipv6 -  Enables ipv6 support which is default in actual releases. This flag is marked for removal. 
 app-crypt/mit-krb5:krb4 -  This option enables Kerberos V4 backwards compatibility using the builtin Kerberos V4 library. This is really outdated and dangerous to use because not safe. 
 app-crypt/mit-krb5:tcl -  Some of the unit-tests in the build tree rely upon using a program in Tcl. This flag is marked for removal. 
-app-crypt/ophcrack:ophsmall - Makes use of smaller cracking tables
 app-crypt/ophcrack-tables:vistafree - Installs the free Vista ophcrack tables
 app-crypt/ophcrack-tables:xpfast - Installs the fast XP ophcrack tables
 app-crypt/ophcrack-tables:xpsmall - Installs the small free XP ophcrack tables
