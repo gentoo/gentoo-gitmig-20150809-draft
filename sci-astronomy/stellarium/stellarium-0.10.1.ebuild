@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.10.1.ebuild,v 1.1 2009/02/06 23:07:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.10.1.ebuild,v 1.2 2009/02/20 18:08:04 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	mycmakeargs=$(cmake-utils_use_enable nls NLS)
-	cmake-utils_src_configurein
+	CMAKE_IN_SOURCE_BUILD=1 cmake-utils_src_configure
 }
 
 src_install() {

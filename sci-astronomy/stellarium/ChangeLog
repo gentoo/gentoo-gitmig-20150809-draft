@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.47 2009/02/06 23:07:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.48 2009/02/20 18:08:04 mr_bones_ Exp $
+
+  20 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  stellarium-0.10.1.ebuild:
+  use cmake-utils_src_configure to make scarabeus happy
 
 *stellarium-0.10.1 (06 Feb 2009)
 
