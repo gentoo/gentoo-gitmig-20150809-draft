@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.70 2009/01/13 06:02:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.71 2009/02/20 08:34:03 remi Exp $
+
+  20 Feb 2009; Rémi Cardona <remi@gentoo.org> +files/old_hw_data/ati.xinf,
+  +files/old_hw_data/r128.xinf:
+  copy old hwdata files to a separate dir
 
 *xf86-video-ati-6.10.0 (13 Jan 2009)
 
