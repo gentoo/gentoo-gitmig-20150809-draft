@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.17 2008/07/17 09:38:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.18 2009/02/20 06:16:15 darkside Exp $
 
 # @ECLASS: bash-completion.eclass
 # @MAINTAINER:
@@ -21,14 +21,7 @@ EXPORT_FUNCTIONS pkg_postinst
 
 IUSE="bash-completion"
 
-# bash-completion-config is deprecated in favor of eselect,
-# however, eselect currently lacks stable keywords.
-RDEPEND="bash-completion?
-		( || (
-			app-admin/eselect
-			app-shells/bash-completion-config
-			)
-		)"
+RDEPEND="bash-completion? (	app-admin/eselect )"
 
 # @FUNCTION: dobashcompletion
 # @USAGE: < file > [ new_file ]
