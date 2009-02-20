@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.71 2009/02/20 08:34:03 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.72 2009/02/20 11:04:38 remi Exp $
+
+  20 Feb 2009; Rémi Cardona <remi@gentoo.org> -files/ati.xinf,
+  -files/r128.xinf, xf86-video-ati-6.6.3.ebuild,
+  xf86-video-ati-6.7.197.ebuild, xf86-video-ati-6.8.0.ebuild,
+  xf86-video-ati-6.8.0-r1.ebuild:
+  only install ati.xinf and r128.xinf with older drivers (fixes collision
+  bug #245769)
 
   20 Feb 2009; Rémi Cardona <remi@gentoo.org> +files/old_hw_data/ati.xinf,
   +files/old_hw_data/r128.xinf:
