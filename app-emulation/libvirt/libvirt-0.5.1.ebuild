@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.5.1.ebuild,v 1.1 2009/01/09 04:31:31 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.5.1.ebuild,v 1.2 2009/02/20 17:47:32 cardoe Exp $
 
 inherit eutils autotools
 
@@ -24,6 +24,7 @@ DEPEND="sys-libs/readline
 	net-misc/bridge-utils
 	net-analyzer/netcat
 	net-dns/dnsmasq
+	dev-util/pkgconfig
 	avahi? ( >=net-dns/avahi-0.6 )
 	iscsi? ( sys-block/open-iscsi )
 	kvm? ( app-emulation/kvm )
