@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.16-r1.ebuild,v 1.1 2009/02/19 19:33:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.16-r2.ebuild,v 1.1 2009/02/20 20:03:21 armin76 Exp $
 
 inherit autotools
 
