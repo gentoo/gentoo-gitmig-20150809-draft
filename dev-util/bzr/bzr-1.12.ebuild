@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.12.ebuild,v 1.1 2009/02/14 16:30:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.12.ebuild,v 1.2 2009/02/20 18:51:08 fauli Exp $
 
 NEED_PYTHON=2.4
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="curl doc emacs sftp test"
 
-RDEPEND="|| ( dev-python/celementtree >=dev-lang/python-2.5 )
+RDEPEND="|| ( >=dev-lang/python-2.5 dev-python/celementtree )
 	curl? ( dev-python/pycurl )
 	sftp? ( dev-python/paramiko )"
 
