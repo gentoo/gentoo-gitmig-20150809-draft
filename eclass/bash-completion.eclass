@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.19 2009/02/20 06:22:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.20 2009/02/20 06:45:12 darkside Exp $
 
 # @ECLASS: bash-completion.eclass
 # @MAINTAINER:
@@ -51,11 +51,10 @@ bash-completion_pkg_postinst() {
 		elog "To enable command-line completion for ${PN}, run:"
 		elog
 		elog "  eselect bashcomp enable ${BASH_COMPLETION_NAME:-${PN}}"
-		elog "  bash-completion-config --install ${BASH_COMPLETION_NAME:-${PN}}"
 		elog
 		elog "to install locally, or"
 		elog
-		elog "  bash-completion-config --global --install ${BASH_COMPLETION_NAME:-${PN}}"
+		elog "  eselect bashcomp enable --global ${BASH_COMPLETION_NAME:-${PN}}"
 		elog
 		elog "to install system-wide."
 		elog "Read bash-completion-config(1) for more information."
