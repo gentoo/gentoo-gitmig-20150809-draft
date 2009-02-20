@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.24.2.ebuild,v 1.1 2008/11/02 07:17:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.24.4.ebuild,v 1.1 2009/02/20 00:13:00 eva Exp $
 
 inherit gnome.org
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
 src_compile() {
-	econf $(use_with hal)
+	econf $(use_with hal) --disable-static
 	emake || die "build failed"
 }
 
