@@ -1,3 +1,7 @@
+# Ben de Groot <yngwin@gentoo.org> (20 Feb 2009)
+# needs kde4 keyworded
+x11-themes/qtcurve-qt4 kde
+
 # Raúl Porcel <armin76@gentoo.org>
 # Depends on dev-java/fop which requires java...
 sci-geosciences/gpsbabel doc

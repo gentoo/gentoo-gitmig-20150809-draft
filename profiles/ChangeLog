@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2369 2009/02/20 09:28:19 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2370 2009/02/20 23:01:11 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Feb 2009; Ben de Groot <yngwin@gentoo.org> arch/alpha/package.use.mask,
+  arch/sparc/package.use.mask, default-linux/alpha/package.use.mask,
+  arch/hppa/package.use.mask, default-linux/sparc/package.use.mask:
+  Add p.use.mask entries on alpha, hppa and sparc due to unkeyworded kde4
+  for x11-themes/qtcurve-qt4
 
   20 Feb 2009; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
   remove ktorrent from profiles/package.mask
@@ -1414,7 +1420,7 @@
   Adding gst-plugins-ffmpeg-0.10.5 to ffmpeg mask.
 
   14 Oct 2008; Andreas Proschofsky <suka@gentoo.org> use.local.desc:
-  Add local "templates" use-flag for openoffice 
+  Add local "templates" use-flag for openoffice
 
   14 Oct 2008; Peter Volkov <pva@gentoo.org> package.mask:
   Masking >=sys-cluster/vzctl-3.0.22-r10 until it'll start to work with
@@ -1554,7 +1560,7 @@
 
   02 Oct 2008; Gunnar Wrobel <wrobel@gentoo.org> package.mask:
   Masking www-apps/dotproject for security reasons (bug #236518)
-  
+
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> use.desc:
   Added description for the kdeprefix use flag.
 
