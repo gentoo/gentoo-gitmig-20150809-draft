@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20081218-r1.ebuild,v 1.1 2009/02/20 05:31:48 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20081218-r1.ebuild,v 1.2 2009/02/20 06:02:22 darkside Exp $
 
 EAPI="2"
 
@@ -25,9 +25,11 @@ PDEPEND="app-shells/gentoo-bashcomp"
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	# bug #111681 
+	# bug #111681 & bug 254814
 	sed -i -e "/^complete.* xine /d" \
 		-e '0,/gz|bz2/s//gz|bz2|lzma/' bash_completion || die "sed failed"
+	# bug 146726
+	rm contrib/svk || die "rm failed"
 }
 
 src_install() {
