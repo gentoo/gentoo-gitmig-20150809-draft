@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.16-r2.ebuild,v 1.1 2009/02/20 20:03:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.16-r3.ebuild,v 1.1 2009/02/21 10:33:29 armin76 Exp $
 
 inherit autotools
 
@@ -36,7 +36,7 @@ src_install() {
 	keepdir /var/spool/uptimed
 	fowners uptimed:uptimed /var/spool/uptimed
 	dodoc ChangeLog README TODO AUTHORS CREDITS INSTALL.cgi sample-cgi/*
-	doinitd "${FILESDIR}"/uptimed.init
+	newinitd "${FILESDIR}"/uptimed.init uptimed
 }
 
 pkg_postinst() {
