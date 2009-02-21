@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/viper
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/viper/ChangeLog,v 1.22 2009/02/20 00:38:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/viper/ChangeLog,v 1.23 2009/02/21 14:35:36 graaff Exp $
+
+*viper-1.65 (21 Feb 2009)
+
+  21 Feb 2009; Hans de Graaff <graaff@gentoo.org> +viper-1.65.ebuild:
+  Version bump
 
   20 Feb 2009; Christian Faulhammer <fauli@gentoo.org> -viper-1.53.ebuild:
   clean up
