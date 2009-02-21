@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.76 2009/02/21 16:36:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.77 2009/02/21 16:45:59 jer Exp $
+
+  21 Feb 2009; Jeroen Roovers <jer@gentoo.org> debootstrap-1.0.10.ebuild,
+  debootstrap-1.0.10_p1.ebuild, debootstrap-1.0.11.ebuild:
+  Switch DEPEND to RDEPEND. Install man page (1.0.11 only).
 
 *debootstrap-1.0.11 (21 Feb 2009)
 

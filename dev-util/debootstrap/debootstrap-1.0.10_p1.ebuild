@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.10_p1.ebuild,v 1.1 2009/02/04 18:40:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.10_p1.ebuild,v 1.2 2009/02/21 16:45:59 jer Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="sys-devel/binutils
+RDEPEND="sys-devel/binutils
 	net-misc/wget
 	>=app-arch/dpkg-1.14.20"
 
