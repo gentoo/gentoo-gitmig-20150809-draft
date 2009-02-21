@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.107 2009/01/09 15:01:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.108 2009/02/21 07:08:09 vapier Exp $
+
+  21 Feb 2009; Mike Frysinger <vapier@gentoo.org> -files/e16,
+  enlightenment-0.16.8.14.ebuild, enlightenment-0.16.8.15.ebuild,
+  enlightenment-0.16.9999.ebuild:
+  Stop installing historical /etc/X11/Sessions/ file as
+  /usr/share/xsessions/ works fine.
 
   09 Jan 2009; Rémi Cardona <remi@gentoo.org>
   enlightenment-0.16.8.14.ebuild, enlightenment-0.16.8.15.ebuild,
