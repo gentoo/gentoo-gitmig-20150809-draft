@@ -1,15 +1,23 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/files/136/udev-postmount.initd,v 1.1 2009/01/20 13:00:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/files/136/udev-postmount.initd,v 1.2 2009/02/21 10:13:20 zzam Exp $
 
 depend() {
 	need localmount
 }
 
+dir_writeable()
+{
+        mkdir "$1"/.test.$$ 2>/dev/null && rmdir "$1"/.test.$$
+}
+
 start() {
 	# check if this system uses udev
 	[ -d /dev/.udev/ ] || return 0
+
+	# only continue if rules-directory is writable
+	dir_writable /etc/udev/rules.d || return 0
 
 	# store persistent-rules that got created while booting
 	# when / was still read-only

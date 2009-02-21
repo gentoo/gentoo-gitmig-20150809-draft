@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.450 2009/02/20 17:59:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.451 2009/02/21 10:13:21 zzam Exp $
+
+  21 Feb 2009; Matthias Schwarzott <zzam@gentoo.org> files/136/udev.confd,
+  files/136/udev.initd, files/136/udev-mount.initd,
+  files/136/udev-postmount.initd:
+  Add option to disable persistent-cd. Make read-only root not fatal in
+  udev-postmount. Bug #259495. Allow silencing unreliable kernel/udev
+  warning.
 
   20 Feb 2009; Jeroen Roovers <jer@gentoo.org> udev-135-r4.ebuild:
   Revert to ~alpha and ~hppa (bug #254616 comment #6).

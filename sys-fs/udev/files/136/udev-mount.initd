@@ -18,6 +18,9 @@ check_kernel()
 		eerror "Current udev only supports Linux kernel %KV_MIN% and newer."
 		return 1
 	fi
+
+	yesno "${unreliable_kernel_warning:-yes}" || return 0
+
 	if [ $(get_KV) -lt $(KV_to_int '%KV_MIN_RELIABLE%') ]; then
 		ewarn "You need at least Linux kernel %KV_MIN_RELIABLE% for reliable operation of udev."
 	fi

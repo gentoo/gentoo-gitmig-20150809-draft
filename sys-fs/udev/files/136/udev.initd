@@ -42,16 +42,19 @@ root_link()
 	/lib/udev/write_root_link_rule
 }
 
-persistent_net_switch()
+rules_disable_switch()
 {
 	# this function disables rules files
 	# by creating new files with the same name
 	# in a temp rules directory with higher priority
-	local d=/dev/.udev/rules.d
-	if yesno "${persistent_net_disable:-no}"; then
+	local d=/dev/.udev/rules.d bname="$1" onoff="$2"
+
+	if yesno "${onoff}"; then
 		mkdir -p "$d"
-		echo "# This file disables persistent-net due to /etc/conf.d/udev" \
-			> "$d"/75-persistent-net-generator.rules
+		echo "# This file disables ${bname} due to /etc/conf.d/udev" \
+			> "${d}/${bname}"
+	else
+		rm -f "${d}/${bname}"
 	fi
 }
 
@@ -213,7 +216,8 @@ start()
 _start()
 {
 	root_link
-	persistent_net_switch
+	rules_disable_switch 75-persistent-net-generator.rules "${persistent_net_disable:-no}"
+	rules_disable_switch 75-cd-aliases-generator.rules ${persistent_cd_disable:-no}
 	
 	disable_hotplug_agent
 	start_udevd || cleanup
