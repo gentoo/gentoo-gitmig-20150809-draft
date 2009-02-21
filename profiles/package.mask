@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9504 2009/02/20 09:28:19 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9505 2009/02/21 04:37:11 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -387,48 +387,6 @@ net-print/omni
 x11-misc/fluxbg
 
 # Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
-# Masked for removal in 60 days. Security issues and unmaintained. bug 251490
-net-analyzer/hyperic-hq-agent
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
-# Removed in 60 days, doesn't compile with gcc-4.3 and upstream stopped dev't in
-# 2004. bug 251219
-media-sound/ecamegapedal
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
-# Removed in 60 days. Doesn't compile with gcc-4.3 and upstream won't fix it.
-# knetload requested to be removed at the same time by kde team because it
-# depends on libksnmp. bug 251452
-net-libs/libksnmp
-net-misc/knetload
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
-# Removed in 60 days, dead upstream for 7 years. Unmaintained in Gentoo for 4
-# years. bug 251057
-net-misc/ossh
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
-# Removed in 60 days. Does not compile with gcc-4.3 and requires kernel patches
-# from a website that doesn't exist => unmaintained. bug 250679
-app-i18n/unicon
-app-i18n/chinput
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
-# Removed in 60 days. Does not work anymore, dead upstream. Upstream website
-# suggest using media-sound/mpd. bug 249244
-media-sound/waif
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
-# Removed in 60 days. Does not compile with gcc-4.1+, uses gtk-1 and requires
-# other fixes. bug 247912
-media-video/tuxzap-programs
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
-# Removed in 60 days. Does not compile with gcc-4.1+, nothing depends on it.
-# bug 240908
-net-libs/libopm
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
 # Removed in 60 days, multiple bugs - does not compile with recent kernels.
 # bug 251795
 sys-fs/cloop
@@ -463,18 +421,6 @@ net-proxy/squirm
 # Live ebuild, for advanced users only
 =x11-wm/fluxbox-9999
 
-# Jeremy Olexa <darkside@gentoo.org> (07 Dec 2008)
-# Masked for removal in 60 days at maintainers request. Some don't work. Most
-# have dead upstream, etc. bug 250217 - please comment/submit patches there.
-net-p2p/apollon
-app-portage/kuroo
-kde-misc/komics
-
-# Jeremy Olexa <darkside@gentoo.org> (07 Dec 2008)
-# Masked for removal in 60 days. Does not build, no maintainer. Non-trivial to
-# fix. Please see bug #153258 for more info.
-net-analyzer/sysmon
-
 # Luca Barbato <lu_zero@gentoo.org> (07 Dec 2008)
 # Live sources to be used with other live source applications
 =media-video/ffmpeg-9999
@@ -502,11 +448,6 @@ net-analyzer/sysmon
 # Mask because of broken upgrade path. Need to investigate what the real
 # problem is. bug #249579
 =mail-filter/procmail-3.22-r9
-
-# Jeremy Olexa <darkside@gentoo.org> (02 Dec 2008)
-# Pending removal in 60 days. Doesn't work with current stable gcc and dead
-# upstream for quite some time now. bug #246891
-app-emulation/xcopilot
 
 # Tiziano Müller <dev-zero@gentoo.org> (28 Nov 2008)
 # mask for testing/transition
