@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-exec/vdr-exec-0.0.2.ebuild,v 1.3 2007/12/19 13:58:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-exec/vdr-exec-0.0.2.ebuild,v 1.4 2009/02/21 15:04:43 zzam Exp $
 
 inherit vdr-plugin
 
@@ -14,3 +14,14 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="media-video/vdr"
+RDEPEND="${DEPEND}"
+
+src_unpack()
+{
+	vdr-plugin_src_unpack
+	cd "${S}"
+
+	# remove symlink pointing on itself, irritating portage
+	rm exec
+}
+
