@@ -1,0 +1,13 @@
+# ChangeLog for media-tv/xbmc
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.1 2009/02/21 01:42:31 vapier Exp $
+
+*xbmc-9999 (21 Feb 2009)
+
+  21 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/xbmc-alsa-params.patch, +files/xbmc-fribidi.patch,
+  +files/xbmc-noexec.patch, +files/xbmc-readsector.patch, +metadata.xml,
+  +xbmc-9999.ebuild:
+  Initial ebuild by many people at #198849 (Peter Fern, Rick Harris, etc...)
+  cleaned up by me.
+
