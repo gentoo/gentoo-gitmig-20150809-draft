@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/mikachan-font-ttf-8.9-r1.ebuild,v 1.17 2009/02/21 13:38:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/mikachan-font-ttf-8.9-r2.ebuild,v 1.1 2009/02/21 13:38:18 lu_zero Exp $
 
 inherit font
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge.jp/mikachan/5513/${MY_PN}-${PV}.tar.bz2
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 FONT_S="${WORKDIR}"
@@ -23,6 +23,7 @@ FONT_SUFFIX="ttf"
 
 # Only installs fonts
 RESTRICT="strip binchecks"
+FONT_CONF=( "${FILESDIR}/60-mikachan.conf" )
 
 src_install() {
 	insinto /usr/share/fonts/${PN}
@@ -37,4 +38,15 @@ src_install() {
 
 	font_xfont_config
 	font_xft_config
+	font_fontconfig
+}
+
+pkg_postinst() {
+	font_pkg_postinst
+
+	echo
+	elog "To use mikachan ttf instead of the default font for sans, serif and"
+	elog "monospace, use:"
+	elog "   eselect fontconfig enable 60-mikachan.conf"
+	echo
 }
