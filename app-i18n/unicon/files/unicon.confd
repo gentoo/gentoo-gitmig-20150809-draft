@@ -1,4 +1,0 @@
-# preferred encoding for tty
-# define one of "gb gbk big5 jis kscm eucjp sjis"
-#
-#UNICON_ENCODE="eucjp"
