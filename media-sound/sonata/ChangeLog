@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.35 2008/12/20 18:27:28 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.36 2009/02/21 10:31:20 angelos Exp $
+
+  21 Feb 2009; Christoph Mende <angelos@gentoo.org> -sonata-1.5.2.ebuild:
+  Removed old
 
   20 Dec 2008; Markus Meier <maekke@gentoo.org> sonata-1.5.3.ebuild:
   amd64/x86 stable, bug #251770
