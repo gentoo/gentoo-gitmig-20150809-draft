@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.313 2009/02/18 20:17:18 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.314 2009/02/21 07:35:14 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -971,25 +971,28 @@ validate_desktop_entries() {
 }
 
 # @FUNCTION: make_session_desktop
-# @USAGE: <title> <command>
+# @USAGE: <title> <command> [command args...]
 # @DESCRIPTION:
 # Make a GDM/KDM Session file.  The title is the file to execute to start the
 # Window Manager.  The command is the name of the Window Manager.
+#
+# You can set the name of the file via the ${wm} variable.
 make_session_desktop() {
-	[[ -z $1 ]] && eerror "make_session_desktop: You must specify the title" && return 1
-	[[ -z $2 ]] && eerror "make_session_desktop: You must specify the command" && return 1
+	[[ -z $1 ]] && eerror "$0: You must specify the title" && return 1
+	[[ -z $2 ]] && eerror "$0: You must specify the command" && return 1
 
 	local title=$1
 	local command=$2
-	local desktop=${T}/${wm}.desktop
+	local desktop=${T}/${wm:-${PN}}.desktop
+	shift 2
 
 	cat <<-EOF > "${desktop}"
 	[Desktop Entry]
 	Name=${title}
 	Comment=This session logs you into ${title}
-	Exec=${command}
+	Exec=${command} $*
 	TryExec=${command}
-	Type=Application
+	Type=XSession
 	EOF
 
 	(
