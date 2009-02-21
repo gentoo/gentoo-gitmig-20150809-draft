@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/vm
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vm/ChangeLog,v 1.13 2008/03/19 20:12:17 graaff Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vm/ChangeLog,v 1.14 2009/02/21 14:16:40 graaff Exp $
+
+*vm-8.07 (21 Feb 2009)
+
+  21 Feb 2009; Hans de Graaff <graaff@gentoo.org> +vm-8.07.ebuild:
+  Version bump
 
   19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   A herd should not be listed as maintainer
