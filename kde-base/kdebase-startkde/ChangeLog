@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.142 2009/02/19 23:31:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.143 2009/02/21 19:07:48 dirtyepic Exp $
+
+*kdebase-startkde-4.2.0-r1 (21 Feb 2009)
+
+  21 Feb 2009; Ryan Hill <dirtyepic@gentoo.org>
+  files/gentoo-startkde4.patch, +kdebase-startkde-4.2.0-r1.ebuild:
+  Fix path mangling with USE="-kdeprefix" (bug #242360) Fix invalid
+  XDG_CONFIG_DIR with USE="-kdeprefix"
 
   19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdebase-startkde-4.1.4.ebuild:
