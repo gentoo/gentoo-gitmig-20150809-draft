@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.17.ebuild,v 1.9 2009/02/21 16:18:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.19-r1.ebuild,v 1.1 2009/02/21 16:18:27 chainsaw Exp $
 
-inherit eutils autotools
+inherit eutils
 
 MY_P="${P/_rc/rc}"
 
@@ -12,12 +12,13 @@ SRC_URI="mirror://alsaproject/utils/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="nls midi minimal"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	dev-util/dialog
-	>=media-libs/alsa-lib-${PV}"
+	>=media-libs/alsa-lib-${PV}
+	app-text/xmlto"
 RDEPEND="${DEPEND}
 	virtual/modutils
 	!minimal? ( sys-apps/pciutils )"
@@ -31,18 +32,6 @@ pkg_setup() {
 		eerror "to have built media-libs/alsa-lib with midi USE flag."
 		die "Missing midi USE flag on media-libs/alsa-lib"
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${PN}-1.0.11_rc2-nls.patch"
-	epatch "${FILESDIR}/${PN}-1.0.11_rc5-alsaconf-redirect.patch"
-	epatch "${FILESDIR}/${PN}-1.0.14-alsaconf-modules-update.patch"
-	epatch "${FILESDIR}/${PN}-1.0.17-seq.patch"
-
-	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
@@ -71,8 +60,8 @@ src_install() {
 	dodoc ${ALSA_UTILS_DOCS} || die
 	newdoc alsamixer/README README.alsamixer || die
 
-	newinitd "${FILESDIR}/alsasound.initd" alsasound
-	newconfd "${FILESDIR}/alsasound.confd" alsasound
+	newinitd "${FILESDIR}/alsasound-1.0.19-r1.initd" alsasound
+	newconfd "${FILESDIR}/alsasound-1.0.19.confd" alsasound
 	insinto /etc/modprobe.d
 	newins "${FILESDIR}/alsa-modules.conf-rc" alsa
 
@@ -82,11 +71,18 @@ src_install() {
 pkg_postinst() {
 	echo
 	elog "To take advantage of the init script, and automate the process of"
-	elog "loading and unloading the ALSA sound drivers as well as"
-	elog "storing and restoring sound-card mixer levels you should"
+	elog "saving and restoring sound-card mixer levels you should"
 	elog "add alsasound to the boot runlevel. You can do this as"
 	elog "root like so:"
 	elog "	# rc-update add alsasound boot"
+	echo
+	elog "The script will load ALSA modules, if you choose to use a modular"
+	elog "configuration. The Gentoo ALSA developers recommend you to build"
+	elog "your audio drivers into the kernel unless the device is hotpluggable"
+	elog "or you need to supply specific options (such as model= to HD Audio)."
+	echo
+	ewarn "Automated unloading of ALSA modules is deprecated and unsupported."
+	ewarn "Should you choose to use it, bug reports will not be accepted."
 	echo
 	if use minimal; then
 		ewarn "The minimal use flag disables the dependency on pciutils that"

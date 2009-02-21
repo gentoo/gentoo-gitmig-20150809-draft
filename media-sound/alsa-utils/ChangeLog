@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.255 2009/01/19 17:21:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.256 2009/02/21 16:18:27 chainsaw Exp $
+
+*alsa-utils-1.0.19-r1 (21 Feb 2009)
+
+  21 Feb 2009; <chainsaw@gentoo.org> +files/alsasound-1.0.19-r1.initd,
+  +alsa-utils-1.0.19-r1.ebuild:
+  Incorporate changes suggested by Dennis <lindevel@gmx.net> to repair the
+  module loading regexes after module-init-tools 3.6 broke them. Closes bug
+  #258930.
 
 *alsa-utils-1.0.19 (19 Jan 2009)
 
