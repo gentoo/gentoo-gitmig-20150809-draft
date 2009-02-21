@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12.1.ebuild,v 1.5 2009/02/18 20:44:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12.1.ebuild,v 1.6 2009/02/21 13:14:48 pva Exp $
 
 EAPI="2"
 
@@ -61,6 +61,7 @@ src_compile() {
 
 	if use doc; then
 		cd doc
+		mkdir -p api # 259632
 		make api_public || die "make api_public failed"
 	fi
 }
@@ -82,7 +83,9 @@ src_install() {
 	# install translations
 	cd "${WORKDIR}/${PN}-langs"
 	insinto /usr/share/${PN}/
-	for LNG in ${LINGUAS}; do
-		doins ${PN}_${LNG/ur_PK/ur_pk}.qm || die
+	for LNG in ${LANGS}; do
+		if use linguas_${LNG}; then
+			doins ${PN}_${LNG/ur_PK/ur_pk}.qm || die
+		fi
 	done
 }
