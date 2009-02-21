@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/recoverjpeg/recoverjpeg-1.1.4.ebuild,v 1.1 2009/02/20 23:06:38 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/recoverjpeg/recoverjpeg-1.1.4.ebuild,v 1.2 2009/02/21 06:25:11 mr_bones_ Exp $
 
 DESCRIPTION="Recover JPEG pictures from a possibly corrupted disk image"
 HOMEPAGE="http://www.rfc1149.net/devel/recoverjpeg"
@@ -27,4 +27,3 @@ src_install() {
 	fi
 	dodoc README
 }
-
