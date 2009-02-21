@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/xemacs-base
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-base/ChangeLog,v 1.24 2008/10/14 12:02:41 graaff Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-base/ChangeLog,v 1.25 2009/02/21 10:36:06 graaff Exp $
+
+*xemacs-base-2.19 (21 Feb 2009)
+
+  21 Feb 2009; Hans de Graaff <graaff@gentoo.org> +xemacs-base-2.19.ebuild:
+  Version bump with various minor fixes
 
 *xemacs-base-2.10-r1 (14 Oct 2008)
 
