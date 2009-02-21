@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/wmstickynotes
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmstickynotes/ChangeLog,v 1.1 2009/02/21 19:05:36 hncaldwell Exp $
+
+*wmstickynotes-0.1 (21 Feb 2009)
+
+  21 Feb 2009; Heath Caldwell <hncaldwell@gentoo.org> +metadata.xml,
+  +wmstickynotes-0.1.ebuild:
+  New ebuild for wmstickynotes. ebuild written by me.
+
