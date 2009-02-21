@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ZendFramework
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.48 2009/02/20 17:40:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.49 2009/02/21 15:35:01 jer Exp $
+
+  21 Feb 2009; Jeroen Roovers <jer@gentoo.org> ZendFramework-1.7.5.ebuild:
+  Stable for HPPA (bug #259512).
 
   20 Feb 2009; Brent Baude <ranger@gentoo.org> ZendFramework-1.7.5.ebuild:
   Marking ZendFramework-1.7.5 ppc64 for bug 259512
