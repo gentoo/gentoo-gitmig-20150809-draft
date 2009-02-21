@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/htpdate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.37 2009/02/20 18:26:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.38 2009/02/21 16:27:53 jer Exp $
+
+  21 Feb 2009; Jeroen Roovers <jer@gentoo.org> htpdate-1.0.4.ebuild:
+  Stable for HPPA (bug #254417).
 
   20 Feb 2009; Raúl Porcel <armin76@gentoo.org> htpdate-1.0.4.ebuild:
   arm/s390/sh/x86 stable wrt #254417
