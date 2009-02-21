@@ -1,0 +1,10 @@
+# ChangeLog for app-editors/editra
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.1 2009/02/21 22:37:44 dirtyepic Exp $
+
+*editra-0.4.65 (21 Feb 2009)
+
+  21 Feb 2009; Ryan Hill <dirtyepic@gentoo.org> +metadata.xml,
+  +editra-0.4.65.ebuild:
+  Initial import, split off from dev-python/wxpython.
+
