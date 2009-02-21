@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.2 2009/01/02 19:40:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.3 2009/02/21 11:49:43 hwoarang Exp $
+
+*qmmp-0.2.3-r1 (21 Feb 2009)
+
+  21 Feb 2009; Markos Chandras <hwoarang@gentoo.org>
+  +files/qmmp-0.2.3-fix-playlist-download.patch,
+  +files/qmmp-0.2.3-fix-xspf.patch, +qmmp-0.2.3-r1.ebuild:
+  revbump, fixes bug #257712, thanks to Sebastian Pipping
 
   02 Jan 2009; Ben de Groot <yngwin@gentoo.org> qmmp-0.2.3.ebuild:
   Let homepage refer to English version
