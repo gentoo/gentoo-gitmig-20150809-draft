@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/irssi-otr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.3 2008/08/04 19:53:59 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.4 2009/02/22 10:41:19 armin76 Exp $
+
+*irssi-otr-0.3 (22 Feb 2009)
+
+  22 Feb 2009; Raúl Porcel <armin76@gentoo.org> +irssi-otr-0.3.ebuild:
+  Version bump
 
   04 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> irssi-otr-0.2.ebuild:
   Add ~sparc keyword at user(Michael Hellwig) request, bug #233886
