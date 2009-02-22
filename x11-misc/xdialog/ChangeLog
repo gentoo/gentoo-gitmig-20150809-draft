@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdialog
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.27 2009/02/15 13:48:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.28 2009/02/22 15:56:19 nelchael Exp $
+
+  22 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  -xdialog-2.2.1-r1.ebuild:
+  Remove old version.
 
   15 Feb 2009; Brent Baude <ranger@gentoo.org> xdialog-2.3.1.ebuild:
   stable ppc, bug 258579
