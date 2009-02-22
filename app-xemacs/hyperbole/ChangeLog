@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/hyperbole
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/hyperbole/ChangeLog,v 1.4 2008/04/28 18:03:31 armin76 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/hyperbole/ChangeLog,v 1.5 2009/02/22 10:48:41 graaff Exp $
+
+*hyperbole-1.17 (22 Feb 2009)
+
+  22 Feb 2009; Hans de Graaff <graaff@gentoo.org> +hyperbole-1.17.ebuild:
+  Version bump synced with upstream 5.0.1.
 
   28 Apr 2008; Raúl Porcel <armin76@gentoo.org> hyperbole-1.16.ebuild:
   alpha stable wrt #219332
