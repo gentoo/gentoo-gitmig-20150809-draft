@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/html5lib-0.11.1.ebuild,v 1.2 2009/02/03 21:48:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/html5lib-0.11.1.ebuild,v 1.3 2009/02/22 12:34:35 loki_val Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ src_install() {
 	distutils_src_install
 
 	if use examples ; then
-		$(find examples -name '*.pyc' -exec rm -rf {} \;)
+		$(find examples -name '*.pyc' -exec rm -rf {} ';')
 		insinto "/usr/share/doc/${PF}"
 		doins -r examples || die "Failed to install examples"
 	fi
