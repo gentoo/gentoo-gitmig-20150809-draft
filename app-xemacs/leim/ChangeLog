@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/leim
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/leim/ChangeLog,v 1.14 2008/03/19 19:43:00 graaff Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/leim/ChangeLog,v 1.15 2009/02/22 10:24:39 graaff Exp $
+
+*leim-1.28 (22 Feb 2009)
+
+  22 Feb 2009; Hans de Graaff <graaff@gentoo.org> +leim-1.28.ebuild:
+  Version bump with various enhancements.
 
   19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   A herd should not be listed as maintainer
