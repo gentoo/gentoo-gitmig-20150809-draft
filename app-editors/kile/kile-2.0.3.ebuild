@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.0.2.ebuild,v 1.2 2009/02/22 17:02:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.0.3.ebuild,v 1.1 2009/02/22 17:02:16 carlo Exp $
+
+EAPI="1"
 
 ARTS_REQUIRED="never"
 
@@ -19,11 +21,11 @@ RDEPEND="dev-lang/perl
 	virtual/latex-base
 	dev-tex/latex2html
 	kde? (
-		|| ( ( =kde-base/kpdf-3.5*
-			=kde-base/kghostview-3.5*
-			=kde-base/kdvi-3.5*
-			=kde-base/kviewshell-3.5* )
-			=kde-base/kdegraphics-3.5* )
+		|| ( ( kde-base/kpdf:3.5
+			kde-base/kghostview:3.5
+			kde-base/kdvi:3.5
+			kde-base/kviewshell:3.5 )
+			kde-base/kdegraphics:3.5 )
 		)"
 
 need-kde 3.5
