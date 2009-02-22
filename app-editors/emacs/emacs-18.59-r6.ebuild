@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.1 2009/01/23 16:53:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.2 2009/02/22 16:33:14 armin76 Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/old-gnu/emacs/${P}.tar.gz
 
 LICENSE="GPL-1 GPL-2 BSD as-is"
 SLOT="18"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses
