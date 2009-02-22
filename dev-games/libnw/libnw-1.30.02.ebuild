@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/libnw-1.30.02.ebuild,v 1.2 2009/01/29 01:51:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/libnw-1.30.02.ebuild,v 1.3 2009/02/22 15:49:09 armin76 Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/openknights/${P}.tar.gz"
 
 LICENSE="openknights"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="sys-devel/bison
