@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.28-r2.ebuild,v 1.1 2009/02/16 23:42:51 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.28-r2.ebuild,v 1.2 2009/02/22 19:53:17 mpagano Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -11,7 +11,7 @@ detect_arch
 
 KEYWORDS="-alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE=""
-HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches"
+HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches/"
 
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}"
