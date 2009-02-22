@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/redirfs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/ChangeLog,v 1.4 2008/05/28 18:43:29 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/redirfs/ChangeLog,v 1.5 2009/02/22 12:53:54 carlo Exp $
+
+*redirfs-0.6 (22 Feb 2009)
+
+  22 Feb 2009; Carsten Lohrke <carlo@gentoo.org> +redirfs-0.6.ebuild:
+  Version bump.
 
   28 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Alon Bar-Lev (alonbl) from metadata.xml (as per #147110). Assigning
