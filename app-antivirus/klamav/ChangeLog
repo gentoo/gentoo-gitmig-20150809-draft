@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/klamav
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.52 2009/02/16 21:01:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.53 2009/02/22 13:35:43 carlo Exp $
+
+*klamav-0.45 (22 Feb 2009)
+
+  22 Feb 2009; Carsten Lohrke <carlo@gentoo.org> +klamav-0.45.ebuild:
+  Version bump.
 
   16 Feb 2009; Brent Baude <ranger@gentoo.org> klamav-0.44.ebuild:
   Marking klamav-0.44 ppc64 for bug 245552
