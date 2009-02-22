@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/kcdlabel
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdlabel/ChangeLog,v 1.25 2008/02/15 16:12:02 armin76 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdlabel/ChangeLog,v 1.26 2009/02/22 21:43:57 carlo Exp $
+
+*kcdlabel-2.13-r1 (22 Feb 2009)
+
+  22 Feb 2009; Carsten Lohrke <carlo@gentoo.org>
+  +files/kcdlabel-2.13-desktop-file.diff, +kcdlabel-2.13-r1.ebuild:
+  Get rid of invalid aRts dependency. Improved desktop file fix.
 
   15 Feb 2008; Raúl Porcel <armin76@gentoo.org> kcdlabel-2.13.ebuild:
   sparc stable wrt #209880
