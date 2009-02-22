@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ganglia
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.26 2009/02/21 21:42:26 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.27 2009/02/22 17:39:58 jsbronder Exp $
+
+  22 Feb 2009; Justin Bronder <jsbronder@gentoo.org> ganglia-3.1.2.ebuild:
+  Use in pkg_postrm, thanks to dberkholz for pointing out my mistake.
 
   21 Feb 2009; Justin Bronder <jsbronder@gentoo.org> metadata.xml:
   May as well take over as maintainer.
