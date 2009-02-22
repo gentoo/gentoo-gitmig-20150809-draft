@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.5 2009/02/22 19:53:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.6 2009/02/22 20:07:33 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -92,6 +92,7 @@ src_unpack() {
 
 	# Fix XBMC's final version string showing as "exported"
 	# instead of the SVN revision number.  Also cleanup flags.
+	# http://xbmc.org/trac/ticket/5963
 	export SVN_REV=${ESVN_WC_REVISION:-exported}
 	sed -i -r \
 		-e "s:\$(svnversion -n .):${SVN_REV}:g" \
@@ -100,6 +101,7 @@ src_unpack() {
 	sed -i \
 		-e 's:\<strip\>:echo:' \
 		build.sh xbmc/lib/libhdhomerun/Makefile.in
+	# http://xbmc.org/trac/ticket/5962
 	sed -i -r \
 		-e '/CFLAGS/s:-(s|O3)::' \
 		xbmc/cores/paplayer/MACDll/Makefile.in
@@ -107,9 +109,6 @@ src_unpack() {
 	sed -i \
 		-e 's:/usr/bin/lsb_release -d:cat /etc/gentoo-release:' \
 		xbmc/utils/SystemInfo.cpp
-
-	# Prevent Mac OSX files being installed
-	rm -rf system/python/lib-osx/ system/players/dvdplayer/*-osx*
 
 	# Fix case sensitivity
 	mv media/Fonts/{a,A}rial.ttf
