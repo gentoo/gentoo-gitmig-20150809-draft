@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tuxonice-userui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.10 2009/02/02 23:47:09 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.11 2009/02/22 20:46:03 nelchael Exp $
+
+  22 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  tuxonice-userui-0.7.3.ebuild:
+  Add missing media-libs/libmng to DEPEND, see bug #259800.
 
   02 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org> ChangeLog:
   Fix ChangeLog entries.
