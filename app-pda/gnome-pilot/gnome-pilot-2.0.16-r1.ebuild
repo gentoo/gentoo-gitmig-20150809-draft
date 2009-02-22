@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.16-r1.ebuild,v 1.4 2008/09/20 11:13:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.16-r1.ebuild,v 1.5 2009/02/22 21:31:25 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -53,12 +53,12 @@ src_unpack() {
 	# Fix use with hal-0.5.11
 	epatch "${FILESDIR}/${P}-hal-0.5.11.patch"
 
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
-	intltoolize --force || die
 }
 
 pkg_postinst() {
-	if ! built_with_use app-pda/pilot-link bluetooth; then
+	if ! built_with_use --missing false app-pda/pilot-link bluetooth; then
 		elog "if you want bluetooth support, please rebuild app-pda/pilot-link"
 		elog "echo 'app-pda/pilot-link bluetooth >> /etc/portage/package.use"
 	fi
