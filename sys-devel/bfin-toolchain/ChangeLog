@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/bfin-toolchain
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/ChangeLog,v 1.7 2009/02/19 21:12:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/ChangeLog,v 1.8 2009/02/22 13:22:19 flameeyes Exp $
+
+  22 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  bfin-toolchain-2008.1.5_rc14.ebuild:
+  Depend on readline 5.x since the gdb in this version is linked against
+  libreadline.so.5.
 
 *bfin-toolchain-2008.1.5_rc14 (19 Feb 2009)
 

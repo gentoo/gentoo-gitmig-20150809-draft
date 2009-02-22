@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/bfin-toolchain-2008.1.5_rc14.ebuild,v 1.1 2009/02/19 21:12:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/bfin-toolchain-2008.1.5_rc14.ebuild,v 1.2 2009/02/22 13:22:19 flameeyes Exp $
 
 DESCRIPTION="toolchain for Blackfin processors"
 HOMEPAGE="http://blackfin.uclinux.org/"
@@ -26,6 +26,9 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc x86"
 IUSE=""
 RESTRICT="strip"
+
+DEPEND=""
+RDEPEND="=sys-libs/readline-5*"
 
 S=${WORKDIR}
 
