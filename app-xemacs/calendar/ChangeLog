@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/calendar
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.23 2009/02/19 23:54:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.24 2009/02/22 14:52:01 graaff Exp $
+
+*calendar-1.38 (22 Feb 2009)
+
+  22 Feb 2009; Hans de Graaff <graaff@gentoo.org> +calendar-1.38.ebuild:
+  Version bump with bug fixes and enhancements.
 
   19 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
   -calendar-1.30.ebuild:
