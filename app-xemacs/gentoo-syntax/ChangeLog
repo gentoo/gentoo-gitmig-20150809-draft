@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/gentoo-syntax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/ChangeLog,v 1.11 2009/02/20 00:04:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/gentoo-syntax/ChangeLog,v 1.12 2009/02/22 13:29:07 tcunha Exp $
+
+  22 Feb 2009; Tiago Cunha <tcunha@gentoo.org> gentoo-syntax-1.11.ebuild:
+  stable amd64, bug 259655
 
   20 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
   -gentoo-syntax-1.9.ebuild, -gentoo-syntax-1.10.ebuild:
