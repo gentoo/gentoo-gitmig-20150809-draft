@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.10.1-r1.ebuild,v 1.2 2009/02/19 19:17:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.10.2.ebuild,v 1.1 2009/02/22 14:35:05 scarabeus Exp $
 
 EAPI="2"
 KDE_MINIMAL="4.2"
@@ -16,9 +16,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="bindist"
 
-COMMON_DEPEND=">=kde-base/konqueror-${KDE_MINIMAL}"
-DEPEND="${COMMON_DEPEND}"
-RDEPEND="${COMMON_DEPEND}
+DEPEND=">=kde-base/konqueror-${KDE_MINIMAL}"
+RDEPEND="${DEPEND}
 	bindist? ( <net-fs/samba-3.2.0_rc2 )
 	!bindist? ( net-fs/samba )
 	!kdeprefix? ( !net-misc/smb4k:0 )
