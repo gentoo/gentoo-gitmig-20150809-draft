@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/auctex
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/ChangeLog,v 1.22 2009/02/19 23:45:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/auctex/ChangeLog,v 1.23 2009/02/22 15:06:58 graaff Exp $
+
+*auctex-1.51 (22 Feb 2009)
+
+  22 Feb 2009; Hans de Graaff <graaff@gentoo.org> +auctex-1.51.ebuild:
+  Version bump with sync to upstream 11.84
 
   19 Feb 2009; Christian Faulhammer <fauli@gentoo.org> -auctex-1.46.ebuild:
   clean up
