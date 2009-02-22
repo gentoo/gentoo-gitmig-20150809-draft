@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/katalog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/ChangeLog,v 1.11 2009/02/15 20:06:27 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/ChangeLog,v 1.12 2009/02/22 15:30:01 armin76 Exp $
+
+  22 Feb 2009; Raúl Porcel <armin76@gentoo.org> katalog-0.4.ebuild:
+  sparc/x86 stable wrt #259137
 
   15 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
   +files/katalog-0.4-gcc43.patch, katalog-0.4.ebuild:

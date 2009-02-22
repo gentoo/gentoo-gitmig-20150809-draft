@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/katalog-0.4.ebuild,v 1.5 2009/02/15 20:06:27 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/katalog-0.4.ebuild,v 1.6 2009/02/22 15:30:01 armin76 Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://salvaste.altervista.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-util/scons-0.96.1"
