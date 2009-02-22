@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.10.ebuild,v 1.1 2009/02/21 16:39:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.10.ebuild,v 1.2 2009/02/22 14:48:23 mr_bones_ Exp $
 
 inherit distutils multilib toolchain-funcs
 
@@ -23,7 +23,6 @@ RDEPEND="virtual/python
 	!net-p2p/nicotine"
 
 DEPEND="${RDEPEND}"
-
 
 src_install() {
 	distutils_python_version
