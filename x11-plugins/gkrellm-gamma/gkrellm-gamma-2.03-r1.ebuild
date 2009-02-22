@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/gkrellm-gamma-2.03-r1.ebuild,v 1.7 2008/07/28 13:46:41 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-gamma/gkrellm-gamma-2.03-r1.ebuild,v 1.8 2009/02/22 23:45:23 lack Exp $
 
 inherit gkrellm-plugin
 
 IUSE=""
 DESCRIPTION="A gamma control plugin for gkrellm"
-HOMEPAGE="http://sweb.cz/tripie/gkrellm/gamma/"
-SRC_URI="http://sweb.cz/tripie/gkrellm/gamma/dist/${P}.tar.gz"
+HOMEPAGE="http://tripie.sweb.cz/gkrellm/gamma/"
+SRC_URI="http://tripie.sweb.cz/gkrellm/gamma/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
