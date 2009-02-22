@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.3 2009/02/21 21:05:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.4 2009/02/22 19:53:37 vapier Exp $
+
+  22 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  -files/xbmc-alsa-params.patch, xbmc-9999.ebuild:
+  Upstream has fixed the ALSA bug, so drop our workaround.
 
   21 Feb 2009; Mike Frysinger <vapier@gentoo.org> -files/xbmc-noexec.patch,
   xbmc-9999.ebuild:
