@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.5.2.ebuild,v 1.9 2009/01/22 20:12:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.5.2.ebuild,v 1.10 2009/02/22 23:50:59 mr_bones_ Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -21,11 +21,9 @@ IUSE="themes"
 
 DEPEND="media-libs/libpng
 	sys-libs/zlib
-	|| ( media-libs/libsdl[joystick] <media-libs/libsdl-1.2.13-r1 )
+	media-libs/libsdl[joystick]
 	media-libs/sdl-net
 	media-libs/sdl-mixer"
-
-GAMES_USE_SDL="nojoystick" #bug #139864
 
 src_unpack() {
 	unpack ${P}.tar.gz
