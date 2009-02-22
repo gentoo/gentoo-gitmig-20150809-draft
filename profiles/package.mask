@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9507 2009/02/22 14:15:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9508 2009/02/22 21:22:49 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -404,10 +404,6 @@ net-dialup/ivcall
 # Paul Varner <fuzzyray@gentoo.org> (14 Dec 2008)
 # Dead upstream, masked for removal in ~30 to 60 days.
 app-portage/udept
-
-# Gilles Dartiguelongue <eva@gentoo.org> (14 Dec 2008)
-# Masked for testing until tree is fixed, see bug #243160.
->=gnome-extra/gucharmap-2.24
 
 # Alin Năstac <mrness@gentoo.org> (14 Dec 2008)
 # Dead upstream, masked for removal in ~60 days.
