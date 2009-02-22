@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/gmult-5.3.ebuild,v 1.3 2008/11/19 04:31:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/gmult-5.3.ebuild,v 1.4 2009/02/22 15:53:25 armin76 Exp $
 
 inherit eutils gnome2-utils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mterry.name/gmult/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-cpp/gtkmm-2.6
