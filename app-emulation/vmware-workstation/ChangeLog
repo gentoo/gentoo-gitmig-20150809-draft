@@ -1,6 +1,44 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.195 2009/02/14 01:21:18 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.196 2009/02/22 23:10:06 ikelos Exp $
+
+  22 Feb 2009; Mike Auty <ikelos@gentoo.org>
+  -files/6.5.0.118166/vmware-player.py.patch,
+  -files/6.5.0.118166/vmware-workstation.py.patch,
+  -files/6.5.0.118166/vmware-vix.py.patch,
+  -files/5.5.7.91707/000_all_initd-location.patch,
+  -files/5.5.7.91707/001_all_fix-permissions.patch,
+  -files/5.5.7.91707/002_all_pagebreak-detection-fix.patch,
+  -files/5.5.7.91707/004_all_do-not-build-modules.patch,
+  -files/5.5.7.91707/007_all_use-modprobe-over-insmod.patch,
+  -files/5.5.7.91707/009_all_init.d-modules-warning.patch,
+  -files/5.5.8.108000/000_all_initd-location.patch,
+  -files/5.5.8.108000/001_all_fix-permissions.patch,
+  -files/5.5.8.108000/002_all_pagebreak-detection-fix.patch,
+  -files/5.5.8.108000/004_all_do-not-build-modules.patch,
+  -files/5.5.8.108000/007_all_use-modprobe-over-insmod.patch,
+  -files/5.5.8.108000/009_all_init.d-modules-warning.patch,
+  -files/6.0.4.93057/000_all_initd-location.patch,
+  -files/6.0.4.93057/001_all_fix-permissions.patch,
+  -files/6.0.4.93057/002_all_pagebreak-detection-fix.patch,
+  -files/6.0.4.93057/004_all_do-not-build-modules.patch,
+  -files/6.0.4.93057/007_all_use-modprobe-over-insmod.patch,
+  -files/6.0.4.93057/009_all_init.d-modules-warning.patch,
+  -files/6.0.4.93057/011_all_legit-modules-only.patch,
+  -files/6.0.5.109488/000_all_initd-location.patch,
+  -files/6.0.5.109488/001_all_fix-permissions.patch,
+  -files/6.0.5.109488/002_all_pagebreak-detection-fix.patch,
+  -files/6.0.5.109488/004_all_do-not-build-modules.patch,
+  -files/6.0.5.109488/007_all_use-modprobe-over-insmod.patch,
+  -files/6.0.5.109488/009_all_init.d-modules-warning.patch,
+  -files/6.0.5.109488/011_all_legit-modules-only.patch,
+  -files/6.5.0.118166/vmware-player-extras.py.patch,
+  -vmware-workstation-5.5.7.91707.ebuild,
+  -vmware-workstation-5.5.8.108000.ebuild,
+  -vmware-workstation-6.0.4.93057.ebuild,
+  -vmware-workstation-6.0.5.109488.ebuild,
+  -vmware-workstation-6.5.0.118166.ebuild:
+  Clear out old insecure versions of vmware-workstation (bug 245941).
 
   14 Feb 2009; Mike Auty <ikelos@gentoo.org>
   vmware-workstation-6.5.1.126130.ebuild:
