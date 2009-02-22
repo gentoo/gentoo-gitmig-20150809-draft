@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/igrep
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/igrep/ChangeLog,v 1.14 2008/03/19 19:40:28 graaff Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/igrep/ChangeLog,v 1.15 2009/02/22 10:41:07 graaff Exp $
+
+*igrep-1.16 (22 Feb 2009)
+
+  22 Feb 2009; Hans de Graaff <graaff@gentoo.org> +igrep-1.16.ebuild:
+  Version bump synced to upstream 2.113
 
   19 Mar 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   A herd should not be listed as maintainer
