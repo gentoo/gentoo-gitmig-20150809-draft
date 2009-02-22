@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/mail-lib
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/ChangeLog,v 1.22 2009/02/20 00:16:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mail-lib/ChangeLog,v 1.23 2009/02/22 10:12:33 graaff Exp $
+
+*mail-lib-1.80 (22 Feb 2009)
+
+  22 Feb 2009; Hans de Graaff <graaff@gentoo.org> +mail-lib-1.80.ebuild:
+  Version bump with minor bug fix.
 
   20 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
   -mail-lib-1.78.ebuild:
