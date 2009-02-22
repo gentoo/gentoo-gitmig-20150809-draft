@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.24.2.ebuild,v 1.1 2008/11/24 19:44:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.24.4.ebuild,v 1.1 2009/02/22 20:35:12 eva Exp $
 
 inherit gnome2 python
 
