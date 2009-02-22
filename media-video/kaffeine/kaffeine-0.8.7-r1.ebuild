@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.7-r1.ebuild,v 1.1 2009/02/15 17:13:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.7-r1.ebuild,v 1.2 2009/02/22 22:07:46 carlo Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="dvb gstreamer xinerama vorbis encode xcb"
 # kdehiddenvisibility removed due to bug 207002.
 
-RDEPEND=">=media-libs/xine-lib-1.1.9[xcb]
+RDEPEND=">=media-libs/xine-lib-1.1.9[xcb?]
 	xcb? ( >=x11-libs/libxcb-1.0 )
 	gstreamer? ( =media-libs/gstreamer-0.10*
 		=media-plugins/gst-plugins-xvideo-0.10* )
