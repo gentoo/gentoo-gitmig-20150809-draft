@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.31 2009/02/09 13:20:21 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.32 2009/02/22 15:45:49 armin76 Exp $
+
+  22 Feb 2009; Raúl Porcel <armin76@gentoo.org> xmoto-0.5.0-r1.ebuild:
+  x86 stable wrt #257673
 
   09 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org>
   xmoto-0.5.0-r1.ebuild:
