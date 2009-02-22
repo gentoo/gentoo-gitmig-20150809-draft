@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.3.ebuild,v 1.2 2009/01/29 16:51:16 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.3.ebuild,v 1.3 2009/02/22 19:51:13 jsbronder Exp $
 
 EAPI=1
 inherit eutils multilib flag-o-matic toolchain-funcs fortran
@@ -90,6 +90,9 @@ src_compile() {
 	# 256529 Vampir Trace doesn't build on sparc.
 	# http://www.open-mpi.org/faq/?category=vampirtrace
 	use sparc && myconf="${myconf} --enable-contrib-no-build=vt"
+
+	# Push Vampir Trace includes to a subdir.
+	c="${c} --with-contrib-vt-flags=\"--includedir=/usr/include/vt\""
 
 	econf ${myconf} \
 		$(use_enable cxx mpi-cxx) \
