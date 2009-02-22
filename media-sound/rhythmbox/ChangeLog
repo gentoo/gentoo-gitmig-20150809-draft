@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/rhythmbox
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.133 2008/09/14 18:52:27 ford_prefect Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.134 2009/02/22 14:34:01 eva Exp $
+
+  22 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/rhythmbox-0.11.5-fix_gtk_doc.patch, -rhythmbox-0.11.5.ebuild,
+  -rhythmbox-0.11.5-r1.ebuild, -rhythmbox-0.11.6.ebuild,
+  rhythmbox-0.11.6-r1.ebuild:
+  Fix automagic nsplugin activation. Clean up old revisions.
 
 *rhythmbox-0.11.6-r1 (14 Sep 2008)
 
