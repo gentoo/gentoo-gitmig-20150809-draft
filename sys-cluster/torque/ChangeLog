@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.76 2009/01/08 23:21:21 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.77 2009/02/22 15:20:05 klausman Exp $
+
+  22 Feb 2009; Tobias Klausmann <klausman@gentoo.org> torque-2.3.6.ebuild:
+  Stable on alpha, bug #259857
 
 *torque-2.3.6 (08 Jan 2009)
 
