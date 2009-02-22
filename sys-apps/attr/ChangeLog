@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/attr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.111 2009/02/19 18:45:08 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.112 2009/02/22 14:45:36 klausman Exp $
+
+  22 Feb 2009; Tobias Klausmann <klausman@gentoo.org> attr-2.4.43.ebuild:
+  Stable on alpha, bug #259431
 
   19 Feb 2009; Tom Gall <tgall@gentoo.org> attr-2.4.43.ebuild:
   stable on ppc64, bug #259431
