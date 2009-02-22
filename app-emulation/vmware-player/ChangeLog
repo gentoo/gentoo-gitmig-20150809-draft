@@ -1,6 +1,41 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.68 2009/01/12 21:45:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.69 2009/02/22 23:16:28 ikelos Exp $
+
+  22 Feb 2009; Mike Auty <ikelos@gentoo.org>
+  -files/2.5.0.118166/vmware-player.py.patch,
+  -files/2.5.0.118166/vmware-player-extras.py.patch,
+  -files/vmware-player-2.5.0.118166-installer.patch,
+  -files/1.0.7.91707/000_all_initd-location.patch,
+  -files/1.0.7.91707/001_all_fix-permissions.patch,
+  -files/1.0.7.91707/002_all_pagebreak-detection-fix.patch,
+  -files/1.0.7.91707/004_all_do-not-build-modules.patch,
+  -files/1.0.7.91707/007_all_use-modprobe-over-insmod.patch,
+  -files/1.0.7.91707/009_all_init.d-modules-warning.patch,
+  -files/1.0.8.108000/000_all_initd-location.patch,
+  -files/1.0.8.108000/001_all_fix-permissions.patch,
+  -files/1.0.8.108000/002_all_pagebreak-detection-fix.patch,
+  -files/1.0.8.108000/004_all_do-not-build-modules.patch,
+  -files/1.0.8.108000/007_all_use-modprobe-over-insmod.patch,
+  -files/1.0.8.108000/009_all_init.d-modules-warning.patch,
+  -files/2.0.4.93057/000_all_initd-location.patch,
+  -files/2.0.4.93057/001_all_fix-permissions.patch,
+  -files/2.0.4.93057/002_all_pagebreak-detection-fix.patch,
+  -files/2.0.4.93057/004_all_do-not-build-modules.patch,
+  -files/2.0.4.93057/007_all_use-modprobe-over-insmod.patch,
+  -files/2.0.4.93057/009_all_init.d-modules-warning.patch,
+  -files/2.0.4.93057/011_all_legit-modules-only.patch,
+  -files/2.0.5.109488/000_all_initd-location.patch,
+  -files/2.0.5.109488/001_all_fix-permissions.patch,
+  -files/2.0.5.109488/002_all_pagebreak-detection-fix.patch,
+  -files/2.0.5.109488/004_all_do-not-build-modules.patch,
+  -files/2.0.5.109488/007_all_use-modprobe-over-insmod.patch,
+  -files/2.0.5.109488/009_all_init.d-modules-warning.patch,
+  -files/2.0.5.109488/011_all_legit-modules-only.patch,
+  -vmware-player-1.0.7.91707.ebuild, -vmware-player-1.0.8.108000.ebuild,
+  -vmware-player-2.0.4.93057.ebuild, -vmware-player-2.0.5.109488.ebuild,
+  -vmware-player-2.5.0.118166.ebuild:
+  Clear out old insecure versions of vmware-player (bug 245941).
 
   12 Jan 2009; Markus Meier <maekke@gentoo.org>
   vmware-player-1.0.9.126128.ebuild, vmware-player-2.5.1.126130.ebuild:
