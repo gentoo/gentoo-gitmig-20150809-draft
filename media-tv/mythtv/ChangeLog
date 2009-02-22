@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.268 2009/02/18 21:48:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.269 2009/02/22 03:55:42 beandog Exp $
+
+*mythtv-0.21_p19961-r1 (22 Feb 2009)
+
+  22 Feb 2009; Steve Dibb <beandog@gentoo.org> -mythtv-0.21_p19961.ebuild,
+  +mythtv-0.21_p19961-r1.ebuild:
+  Drop bttv patch, bug 259547
 
 *mythtv-0.21_p19961 (18 Feb 2009)
 
