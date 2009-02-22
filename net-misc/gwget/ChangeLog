@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gwget
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.15 2008/08/04 21:11:20 eva Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.16 2009/02/22 19:13:26 eva Exp $
+
+*gwget-1.0.1 (22 Feb 2009)
+
+  22 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org> +gwget-1.0.1.ebuild:
+  Bump to 1.0.1. Works with epiphany up to 2.26, port to GIO.
 
   04 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org> -gwget-0.6.ebuild,
   gwget-0.99.ebuild:
