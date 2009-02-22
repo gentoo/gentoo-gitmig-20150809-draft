@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/android-sdk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk/ChangeLog,v 1.4 2009/02/17 20:41:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk/ChangeLog,v 1.5 2009/02/22 18:11:52 nelchael Exp $
+
+  22 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org> Manifest:
+  Fix digest.
 
 *android-sdk-1.1_p1 (17 Feb 2009)
 
