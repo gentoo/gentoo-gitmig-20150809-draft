@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-1.3.5.ebuild,v 1.1 2009/02/15 17:04:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-1.3.5.ebuild,v 1.2 2009/02/22 22:17:31 carlo Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ MY_P=${P/_/}
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A collection manager for the KDE environment."
-HOMEPAGE="http://www.periapsis.org/tellico"
+HOMEPAGE="http://www.periapsis.org/tellico/"
 SRC_URI="http://www.periapsis.org/tellico/download/${MY_P}.tar.gz
 		mirror://gentoo/kde-admindir-3.5.5.tar.bz2"
 LICENSE="GPL-2"

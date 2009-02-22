@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.80 2009/02/15 17:04:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.81 2009/02/22 22:17:31 carlo Exp $
+
+  22 Feb 2009; Carsten Lohrke <carlo@gentoo.org> tellico-1.3.5.ebuild:
+  Trivial homepage change, bug #259755.
+
+  22 Feb 2009; Carsten Lohrke <carlo@gentoo.org> tellico-1.3.5.ebuild:
+  Trivial homepage change, bug #259755.
 
 *tellico-1.3.5 (15 Feb 2009)
 
