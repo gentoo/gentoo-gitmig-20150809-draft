@@ -1,6 +1,12 @@
 # ChangeLog for app-xemacs/edit-utils
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/ChangeLog,v 1.28 2009/02/07 15:27:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edit-utils/ChangeLog,v 1.29 2009/02/22 14:14:43 graaff Exp $
+
+*edit-utils-2.40 (22 Feb 2009)
+
+  22 Feb 2009; Hans de Graaff <graaff@gentoo.org> +edit-utils-2.40.ebuild:
+  Version bump with minor fixes, including a security fix we released
+  ourselves earlier.
 
   07 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
   -edit-utils-2.36.ebuild, -edit-utils-2.37.ebuild:
