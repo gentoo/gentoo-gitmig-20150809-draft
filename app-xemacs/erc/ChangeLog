@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/erc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/erc/ChangeLog,v 1.4 2008/04/28 18:02:14 armin76 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/erc/ChangeLog,v 1.5 2009/02/22 15:33:26 graaff Exp $
+
+*erc-0.22 (22 Feb 2009)
+
+  22 Feb 2009; Hans de Graaff <graaff@gentoo.org> +erc-0.22.ebuild:
+  Version bump with minor bug fix.
 
   28 Apr 2008; Raúl Porcel <armin76@gentoo.org> erc-0.21.ebuild:
   alpha stable wrt #219332
