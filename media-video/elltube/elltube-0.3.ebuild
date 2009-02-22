@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/elltube/elltube-0.3.ebuild,v 1.1 2009/02/15 23:20:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/elltube/elltube-0.3.ebuild,v 1.2 2009/02/22 09:43:27 hwoarang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.4
