@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.28.5.ebuild,v 1.1 2009/02/15 22:40:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.28.7.ebuild,v 1.1 2009/02/23 21:43:44 kumba Exp $
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org GIT snapshot diff from 30 Dec 2008
+# 2) linux-mips.org GIT snapshot diff from 23 Feb 2009
 # 3) Generic Fixes
 # 4) Patch for the IOC3 Metadriver (IP27, IP30)
 # 5) Patch for IP30 Support
@@ -15,7 +15,7 @@
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20090215"			# Date of diff between kernel.org and lmo GIT
+GITDATE="20090223"			# Date of diff between kernel.org and lmo GIT
 GENPATCHVER="1.34"			# Tarball version for generic patches
 EXTRAVERSION="-mipsgit-${GITDATE}"
 KV="${OKV}${EXTRAVERSION}"
