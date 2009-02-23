@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/mogilefs-server
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.6 2008/12/30 16:30:22 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/ChangeLog,v 1.7 2009/02/23 09:59:21 robbat2 Exp $
+
+*mogilefs-server-2.30 (23 Feb 2009)
+
+  23 Feb 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +files/mogilefsd.conf-2.30, +files/mogstored-conf.d-2.30,
+  +files/mogstored-init.d-2.30,
+  +files/mogilefs-server-2.30-pidfile-etc.patch,
+  +mogilefs-server-2.30.ebuild:
+  Version bump. mogstored now includes pidfile support.
 
   30 Dec 2008; Torsten Veller <tove@gentoo.org>
   -mogilefs-server-2.10.ebuild, -mogilefs-server-2.15.ebuild,
