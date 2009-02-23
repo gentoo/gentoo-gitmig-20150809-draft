@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r2.ebuild,v 1.1 2009/02/05 07:51:24 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r2.ebuild,v 1.2 2009/02/23 03:11:54 the_paya Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -27,7 +27,8 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 	RDEPEND="ssl? ( dev-libs/openssl )
 		hesiod? ( net-dns/hesiod )
 		kerberos? ( virtual/krb5 )
-		!sys-freebsd/freebsd-headers"
+		!sys-freebsd/freebsd-headers
+		dev-libs/libelf"
 	DEPEND="${RDEPEND}
 		>=sys-devel/flex-2.5.31-r2
 		=sys-freebsd/freebsd-sources-${RV}*
