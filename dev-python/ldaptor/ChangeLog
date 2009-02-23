@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ldaptor
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.26 2008/10/26 05:24:40 neurogeek Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.27 2009/02/23 16:01:10 josejx Exp $
+
+  23 Feb 2009; Joseph Jezak <josejx@gentoo.org> ldaptor-0.0.43.ebuild:
+  Marked ~ppc for bug #211749.
 
   30 Aug 2008; Markus Meier <maekke@gentoo.org> ldaptor-0.0.43.ebuild:
   readd dropped ~amd64 keyword, bug #235969
