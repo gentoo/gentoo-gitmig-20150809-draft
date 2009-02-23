@@ -14,5 +14,6 @@
 		connect from multiple workstations, or when you simply want to have a playback
 		of what was said while you were away.
 	</longdescription>
+	<use><flag name='oidentd'>Enable oidentd support</flag></use>
 </pkgmetadata>
 
