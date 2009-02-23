@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/net-http
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/net-http/ChangeLog,v 1.6 2007/01/10 19:41:40 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/net-http/ChangeLog,v 1.7 2009/02/23 05:56:41 darkside Exp $
+
+  23 Feb 2009; Jeremy Olexa <darkside@gentoo.org> net-http-0.3.1.ebuild:
+  add ~amd64 kw, bug 259607
 
   10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> net-http-0.3.1.ebuild:
   Dependency update: dev-util/guile -> dev-scheme/guile.
