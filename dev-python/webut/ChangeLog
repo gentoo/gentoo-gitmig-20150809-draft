@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webut
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.4 2008/08/29 14:15:57 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.5 2009/02/23 15:56:52 josejx Exp $
+
+  23 Feb 2009; Joseph Jezak <josejx@gentoo.org> webut-0.1.0.2.ebuild:
+  Marked ~ppc.
 
   29 Aug 2008; Raúl Porcel <armin76@gentoo.org> webut-0.1.0.2.ebuild:
   Add ~alpha/~ia64 wrt #235969
