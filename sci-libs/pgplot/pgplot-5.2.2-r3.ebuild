@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.3 2009/02/13 11:24:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/pgplot-5.2.2-r3.ebuild,v 1.4 2009/02/23 17:30:38 bicatali Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.astro.caltech.edu/~tjp/pgplot/"
 SRC_URI="ftp://ftp.astro.caltech.edu/pub/pgplot/${MY_P}.tar.gz"
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="doc motif tk"
 RDEPEND="x11-libs/libX11
 	x11-libs/libXt

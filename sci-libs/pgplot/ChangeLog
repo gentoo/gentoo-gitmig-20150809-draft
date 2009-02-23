@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/pgplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.16 2009/02/13 11:24:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pgplot/ChangeLog,v 1.17 2009/02/23 17:30:38 bicatali Exp $
+
+  23 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  pgplot-5.2.2-r3.ebuild:
+  Added ~ppc, thanks to Pierre Martin.
 
   13 Feb 2009; Patrick Kursawe <phosphan@gentoo.org>
   -pgplot-5.2.2-r2.ebuild, pgplot-5.2.2-r3.ebuild:
