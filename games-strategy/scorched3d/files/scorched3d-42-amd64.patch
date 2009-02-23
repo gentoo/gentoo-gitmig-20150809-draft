@@ -1,0 +1,772 @@
+diff -ur scorched_old/src/client/GLEXT/GLFont2d.cpp scorched/src/client/GLEXT/GLFont2d.cpp
+--- scorched_old/src/client/GLEXT/GLFont2d.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/GLEXT/GLFont2d.cpp	2009-02-23 15:21:52.000000000 +0100
+@@ -122,7 +122,7 @@
+ 	float x, float y, float z, 
+ 	const LangString &text)
+ {
+-	int slen = text.size();
++	int slen = (int) text.size();
+ 	if (slen > 0)
+ 	{
+ 		int l = 0;
+diff -ur scorched_old/src/client/GLEXT/GLImageModifier.cpp scorched/src/client/GLEXT/GLImageModifier.cpp
+--- scorched_old/src/client/GLEXT/GLImageModifier.cpp	2009-01-15 18:32:11.000000000 +0100
++++ scorched/src/client/GLEXT/GLImageModifier.cpp	2009-02-23 15:21:52.000000000 +0100
+@@ -455,7 +455,7 @@
+ 	sources.push_back(&slopeBitmap);
+ 	sources.push_back(&shoreBitmap);
+ 
+-	int currentCount = sources.size();
++	int currentCount = (int) sources.size();
+ 	for (int i=currentCount; i<9; i++)
+ 	{
+ 		sources.push_back(&shoreBitmap);
+diff -ur scorched_old/src/client/GLW/GLWPanel.cpp scorched/src/client/GLW/GLWPanel.cpp
+--- scorched_old/src/client/GLW/GLWPanel.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/GLW/GLWPanel.cpp	2009-02-23 15:21:53.000000000 +0100
+@@ -468,7 +468,7 @@
+ 
+ 		w = 0.0f;
+ 		for (unsigned int i=0; i<gridWidth_; i++) w += gridW[i];
+-		int rows = widgets_.size() / gridWidth_;
++		int rows = (int) widgets_.size() / gridWidth_;
+ 		if (widgets_.size() % gridWidth_ > 0) rows ++;
+ 		h *= rows;
+ 	}
+diff -ur scorched_old/src/client/GLW/GLWTextBox.cpp scorched/src/client/GLW/GLWTextBox.cpp
+--- scorched_old/src/client/GLW/GLWTextBox.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/GLW/GLWTextBox.cpp	2009-02-23 15:21:53.000000000 +0100
+@@ -110,7 +110,7 @@
+ 				if (entry.widget->getMetaClassId() == getMetaClassId())
+ 				{
+ 					GLWTextBox *textBox = (GLWTextBox *) entry.widget;
+-					if (this == textBox) position = textBoxes.size();
++					if (this == textBox) position = (unsigned int) textBoxes.size();
+ 					textBoxes.push_back(textBox);
+ 				}
+ 			}
+diff -ur scorched_old/src/client/GLW/GLWTime.cpp scorched/src/client/GLW/GLWTime.cpp
+--- scorched_old/src/client/GLW/GLWTime.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/GLW/GLWTime.cpp	2009-02-23 15:21:53.000000000 +0100
+@@ -62,7 +62,7 @@
+ 	glColor3f(1.0f, 0.0f, 0.0f);
+ 	calcWidth();
+ 	GLWFont::instance()->getGameFont()->drawSubStr(
+-		0, strlen(timeStr) - 1,
++		0, (int) strlen(timeStr) - 1,
+ 		color_, size_,
+ 		x_, y_ + 6.0f, 0.0f, timeStr);
+ }
+diff -ur scorched_old/src/client/GLW/GLWToolTip.cpp scorched/src/client/GLW/GLWToolTip.cpp
+--- scorched_old/src/client/GLW/GLWToolTip.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/GLW/GLWToolTip.cpp	2009-02-23 15:21:53.000000000 +0100
+@@ -128,7 +128,7 @@
+ 
+ 	tipTextHeight_ = 24.0f;
+ 
+-	int pos, startpos = 0;
++	size_t pos, startpos = 0;
+ 	LangString tipText = tipText_;
+ 	tipText.append(LANG_STRING("\n"));
+ 	while ((pos = tipText.find(LANG_STRING("\n"), startpos)) != LangString::npos)
+diff -ur scorched_old/src/client/client/ClientSave.cpp scorched/src/client/client/ClientSave.cpp
+--- scorched_old/src/client/client/ClientSave.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/client/ClientSave.cpp	2009-02-23 15:21:55.000000000 +0100
+@@ -100,7 +100,7 @@
+ 	FILE *file = fopen(fileName.c_str(), "wb");
+ 	if (!file) return false;
+ 
+-	int size = fwrite(saveBuffer.getBuffer(),	
++	int size = (int) fwrite(saveBuffer.getBuffer(),	
+ 		sizeof(char),
+ 		saveBuffer.getBufferUsed(),
+ 		file);
+diff -ur scorched_old/src/client/console/ConsoleRules.cpp scorched/src/client/console/ConsoleRules.cpp
+--- scorched_old/src/client/console/ConsoleRules.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/console/ConsoleRules.cpp	2009-02-23 15:21:54.000000000 +0100
+@@ -87,7 +87,7 @@
+ 
+ 			if (values.size() == 1)
+ 			{
+-				unsigned int nameLen = strlen(rule->getName());
++				size_t nameLen = strlen(rule->getName());
+ 				if (nameLen >= nameValue.valueString.length() &&
+ 					_strnicmp(line, rule->getName(), nameValue.valueString.length()) == 0)
+ 				{
+diff -ur scorched_old/src/client/dialogs/AdminDialog.cpp scorched/src/client/dialogs/AdminDialog.cpp
+--- scorched_old/src/client/dialogs/AdminDialog.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/dialogs/AdminDialog.cpp	2009-02-23 15:21:50.000000000 +0100
+@@ -58,7 +58,7 @@
+ 
+ 		std::map<unsigned int, Tank *> &tanks = 
+ 			ScorchedClient::instance()->getTankContainer().getPlayingTanks();
+-		adminTable_->setItemCount(tanks.size());
++		adminTable_->setItemCount((int) tanks.size());
+ 
+ 		// Player Actions
+ 		GLWPanel *buttonPanel = new GLWPanel(10.0f, 10.0f, 600.0f, 50.0f, false, false);
+@@ -125,7 +125,7 @@
+ {
+ 	std::map<unsigned int, Tank *> &tanks = 
+ 		ScorchedClient::instance()->getTankContainer().getPlayingTanks();
+-	adminTable_->setItemCount(tanks.size());
++	adminTable_->setItemCount((int) tanks.size());
+ 
+ 	int pos = 0;
+ 	std::map<unsigned int, Tank *>::iterator itor;
+@@ -178,7 +178,7 @@
+ {
+ 	std::map<unsigned int, Tank *> &tanks = 
+ 		ScorchedClient::instance()->getTankContainer().getPlayingTanks();
+-	adminTable_->setItemCount(tanks.size());
++	adminTable_->setItemCount((int) tanks.size());
+ 
+ 	unsigned int sid = ClientAdminResultHandler::instance()->getSid();
+ 	unsigned int playerId = 0;
+diff -ur scorched_old/src/client/serverbrowser/ServerBrowserCollect.cpp scorched/src/client/serverbrowser/ServerBrowserCollect.cpp
+--- scorched_old/src/client/serverbrowser/ServerBrowserCollect.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/serverbrowser/ServerBrowserCollect.cpp	2009-02-23 15:21:55.000000000 +0100
+@@ -177,7 +177,7 @@
+ 
+ 		// Find the start of the XML
+ 		while (*buffer != '<' && *buffer != '\0') buffer++;
+-		unsigned int len = strlen(buffer);
++		unsigned int len = (unsigned int) strlen(buffer);
+ 
+ 		// Parse the buffer
+ 		if (*buffer == '<')
+diff -ur scorched_old/src/client/serverbrowser/ServerBrowserRefresh.cpp scorched/src/client/serverbrowser/ServerBrowserRefresh.cpp
+--- scorched_old/src/client/serverbrowser/ServerBrowserRefresh.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/serverbrowser/ServerBrowserRefresh.cpp	2009-02-23 15:21:55.000000000 +0100
+@@ -72,7 +72,7 @@
+ 		time_t theTime = time(0);
+ 
+ 		// Add a number of new entries
+-		for (int i=entryMap_.size(); i<20 && !refreshEntries_.empty(); i++)
++		for (int i=(int) entryMap_.size(); i<20 && !refreshEntries_.empty(); i++)
+ 		{
+ 			ServerBrowserRefreshEntry entry = refreshEntries_.front();
+ 			refreshEntries_.pop_front();
+diff -ur scorched_old/src/client/sound/Sound.cpp scorched/src/client/sound/Sound.cpp
+--- scorched_old/src/client/sound/Sound.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/sound/Sound.cpp	2009-02-23 15:21:53.000000000 +0100
+@@ -406,12 +406,12 @@
+ 
+ int Sound::getAvailableChannels()
+ {
+-	return availableSources_.size();
++	return (int) availableSources_.size();
+ }
+ 
+ int Sound::getPlayingChannels()
+ {
+-	return playingSources_.size();
++	return (int) playingSources_.size();
+ }
+ 
+ SoundListener *Sound::getDefaultListener()
+diff -ur scorched_old/src/client/sound/SoundBufferFactory.cpp scorched/src/client/sound/SoundBufferFactory.cpp
+--- scorched_old/src/client/sound/SoundBufferFactory.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/sound/SoundBufferFactory.cpp	2009-02-23 15:21:53.000000000 +0100
+@@ -29,7 +29,7 @@
+ {
+ 	if (Sound::instance()->getInit())
+ 	{
+-		int len = strlen(fileName);
++		int len = (int) strlen(fileName);
+ 		if (len >= 3)
+ 		{
+ 			if (0 == strcmp(&fileName[len-3], "wav"))
+diff -ur scorched_old/src/client/tankgraph/RenderTargets.cpp scorched/src/client/tankgraph/RenderTargets.cpp
+--- scorched_old/src/client/tankgraph/RenderTargets.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/tankgraph/RenderTargets.cpp	2009-02-23 15:21:50.000000000 +0100
+@@ -215,6 +215,11 @@
+ 
+ void RenderTargets::draw()
+ {
++	if (!OptionsDisplay::instance()->getNoFog())
++	{
++		glEnable(GL_FOG); // NOTE: Fog on
++	}
++
+ 	// Don't put fully transparent areas into the depth buffer
+ 	unsigned int wantedstate = GLState::BLEND_ON | 
+ 		GLState::ALPHATEST_ON | GLState::TEXTURE_ON | 
+@@ -244,7 +249,7 @@
+ 			itor.init(currentPatch->getTrees());
+ 			drawTargets(itor, currentPatch->getDistance());
+ 
+-			treesDrawn_+=currentPatch->getTrees().size();
++			treesDrawn_+=(unsigned int) currentPatch->getTrees().size();
+ 		}
+ 
+ 		ModelRendererTree::setSkipPre(false);
+@@ -267,14 +272,14 @@
+ 			itor.init(currentPatch->getTargets());
+ 			drawTargets(itor, currentPatch->getDistance());
+ 
+-			targetsDrawn_+=currentPatch->getTargets().size();
++			targetsDrawn_+=(unsigned int) currentPatch->getTargets().size();
+ 		}
+ 
+ 		{
+ 			itor.init(TargetVisibilityPatch::getLargeTargets());
+ 			drawTargets(itor, 0.0f);
+ 
+-			targetsDrawn_+=TargetVisibilityPatch::getLargeTargets().size();
++			targetsDrawn_+=(unsigned int) TargetVisibilityPatch::getLargeTargets().size();
+ 		}
+ 	}
+ 	GAMESTATE_PERF_COUNTER_END(ScorchedClient::instance()->getGameState(), "TARGETS_DRAW_MODELS");
+@@ -297,6 +302,8 @@
+ 			renderImpl->render2D(distance);
+ 		}
+ 	}
++
++	glDisable(GL_FOG); // NOTE: Fog off
+ }
+ 
+ void RenderTargets::draw2d()
+diff -ur scorched_old/src/client/water/WaterWaves.cpp scorched/src/client/water/WaterWaves.cpp
+--- scorched_old/src/client/water/WaterWaves.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/client/water/WaterWaves.cpp	2009-02-23 15:21:50.000000000 +0100
+@@ -353,5 +353,5 @@
+ 			glVertex3fv(ptD);
+ 		}
+ 	glEnd();
+-	GLInfo::addNoTriangles(paths.size() - 2);
++	GLInfo::addNoTriangles((unsigned int) paths.size() - 2);
+ }
+diff -ur scorched_old/src/common/3dsparse/aseFile.tab.cpp scorched/src/common/3dsparse/aseFile.tab.cpp
+--- scorched_old/src/common/3dsparse/aseFile.tab.cpp	2008-03-02 19:47:36.000000000 +0100
++++ scorched/src/common/3dsparse/aseFile.tab.cpp	2009-02-23 15:21:46.000000000 +0100
+@@ -591,7 +591,7 @@
+ #endif
+ 
+       /* Get the current used size of the three stacks, in elements.  */
+-      int size = yyssp - yyss + 1;
++      int size = (int)(yyssp - yyss + 1);
+ 
+ #ifdef yyoverflow
+       /* Each stack pointer address is followed by the size of
+diff -ur scorched_old/src/common/XML/XMLFile.cpp scorched/src/common/XML/XMLFile.cpp
+--- scorched_old/src/common/XML/XMLFile.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/XML/XMLFile.cpp	2009-02-23 15:21:48.000000000 +0100
+@@ -44,7 +44,7 @@
+ 		itor != lines.getLines().end();
+ 		itor++)
+ 	{
+-		if (!parser_.parse((*itor).c_str(), (*itor).size(), 0)) return false;
++		if (!parser_.parse((*itor).c_str(), (int) (*itor).size(), 0)) return false;
+ 
+ 		// Hack to get it to count lines correctly :)
+ 		if (!parser_.parse("\n", 1, 0)) return false;
+diff -ur scorched_old/src/common/XML/XMLNode.cpp scorched/src/common/XML/XMLNode.cpp
+--- scorched_old/src/common/XML/XMLNode.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/XML/XMLNode.cpp	2009-02-23 15:21:48.000000000 +0100
+@@ -84,14 +84,14 @@
+ 	name_(name), parent_(0), type_(type),
+ 	useContentNodes_(false)
+ {
+-	addContent(content, strlen(content));
++	addContent(content, (int) strlen(content));
+ }
+ 
+ XMLNode::XMLNode(const char *name, const std::string &content, NodeType type) : 
+ 	name_(name), parent_(0), type_(type),
+ 	useContentNodes_(false)
+ {
+-	addContent(content.c_str(), content.size());
++	addContent(content.c_str(), (int) content.size());
+ }
+ 
+ XMLNode::XMLNode(const char *name, const LangString &langStringContent, NodeType type) : 
+@@ -100,7 +100,7 @@
+ {
+ 	std::string content;
+ 	content = LangStringUtil::convertFromLang(langStringContent);
+-	addContent(content.c_str(), content.size());
++	addContent(content.c_str(), (int) content.size());
+ }
+ 
+ XMLNode::XMLNode(const char *name, float content, NodeType type) :
+@@ -108,7 +108,7 @@
+ {
+ 	char buffer[20];
+ 	snprintf(buffer, 20, "%.2f", content);
+-	addContent(buffer, strlen(buffer));
++	addContent(buffer, (int) strlen(buffer));
+ }
+ 
+ XMLNode::XMLNode(const char *name, int content, NodeType type) :
+@@ -116,7 +116,7 @@
+ {
+ 	char buffer[20];
+ 	snprintf(buffer, 20, "%i", content);
+-	addContent(buffer, strlen(buffer));
++	addContent(buffer, (int) strlen(buffer));
+ }
+ 
+ XMLNode::XMLNode(const char *name, unsigned int content, NodeType type) :
+@@ -124,21 +124,21 @@
+ {
+ 	char buffer[20];
+ 	snprintf(buffer, 20, "%u", content);
+-	addContent(buffer, strlen(buffer));
++	addContent(buffer, (int) strlen(buffer));
+ }
+ 
+ XMLNode::XMLNode(const char *name, bool content, NodeType type) :
+ 	name_(name), parent_(0), type_(type), useContentNodes_(false)
+ {
+ 	const char *buffer = content?"true":"false";
+-	addContent(buffer, strlen(buffer));
++	addContent(buffer, (int) strlen(buffer));
+ }
+ 
+ XMLNode::XMLNode(const char *name, fixed content, NodeType type) :
+ 	name_(name), parent_(0), type_(type), useContentNodes_(false)
+ {
+ 	const char *buffer = content.asString();
+-	addContent(buffer, strlen(buffer));
++	addContent(buffer, (int) strlen(buffer));
+ }
+ 
+ XMLNode::XMLNode(const char *name, FixedVector &content, NodeType type) :
+@@ -152,13 +152,13 @@
+ 	addChild(nodeC);
+ 
+ 	const char *buffer = content[0].asString();
+-	nodeA->addContent(buffer, strlen(buffer));
++	nodeA->addContent(buffer, (int) strlen(buffer));
+ 
+ 	buffer = content[1].asString();
+-	nodeB->addContent(buffer, strlen(buffer));
++	nodeB->addContent(buffer, (int) strlen(buffer));
+ 
+ 	buffer = content[2].asString();
+-	nodeC->addContent(buffer, strlen(buffer));
++	nodeC->addContent(buffer, (int) strlen(buffer));
+ }
+ 
+ XMLNode::XMLNode(const char *name, Vector &content, NodeType type) :
+@@ -173,13 +173,13 @@
+ 
+ 	char buffer[20];
+ 	snprintf(buffer, 20, "%.2f", content[0]);
+-	nodeA->addContent(buffer, strlen(buffer));
++	nodeA->addContent(buffer, (int) strlen(buffer));
+ 
+ 	snprintf(buffer, 20, "%.2f", content[1]);
+-	nodeB->addContent(buffer, strlen(buffer));
++	nodeB->addContent(buffer, (int) strlen(buffer));
+ 
+ 	snprintf(buffer, 20, "%.2f", content[2]);
+-	nodeC->addContent(buffer, strlen(buffer));
++	nodeC->addContent(buffer, (int) strlen(buffer));
+ }
+ 
+ XMLNode::~XMLNode()
+diff -ur scorched_old/src/common/XML/XMLParser.cpp scorched/src/common/XML/XMLParser.cpp
+--- scorched_old/src/common/XML/XMLParser.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/XML/XMLParser.cpp	2009-02-23 15:21:48.000000000 +0100
+@@ -100,7 +100,7 @@
+ 			atts++;
+ 
+ 			XMLNode *param = new XMLNode(name, "", XMLNode::XMLParameterType);
+-			param->addContent(value, strlen(value));
++			param->addContent(value, (int) strlen(value));
+ 			param->setLine(XML_GetCurrentLineNumber(p_),
+ 				XML_GetCurrentColumnNumber(p_));
+ 			current_->addParameter(param);
+diff -ur scorched_old/src/common/common/DefinesString.cpp scorched/src/common/common/DefinesString.cpp
+--- scorched_old/src/common/common/DefinesString.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/common/DefinesString.cpp	2009-02-23 15:21:47.000000000 +0100
+@@ -27,8 +27,8 @@
+ 
+ void S3D::trim(std::string &value)
+ {
+-	int start = value.find_first_not_of(" \t\n");
+-	int end = value.find_last_not_of(" \t\n");
++	size_t start = value.find_first_not_of(" \t\n");
++	size_t end = value.find_last_not_of(" \t\n");
+ 	if (start == std::string::npos) value = "";
+ 	else if (end == std::string::npos) value = "";
+ 	else value = std::string(value, start, end-start+1);
+diff -ur scorched_old/src/common/common/FileLogger.cpp scorched/src/common/common/FileLogger.cpp
+--- scorched_old/src/common/common/FileLogger.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/common/FileLogger.cpp	2009-02-23 15:21:47.000000000 +0100
+@@ -39,7 +39,7 @@
+ 	if (!logFile_) return;
+ 
+ 	// Log to file and flush file
+-	size_ += strlen(info.getMessage());
++	size_ += (unsigned int) strlen(info.getMessage());
+ 	fprintf(logFile_, "%s - %s\n", info.getTime(), info.getMessage());
+ 	fflush(logFile_);
+ }
+diff -ur scorched_old/src/common/common/NumberParser.cpp scorched/src/common/common/NumberParser.cpp
+--- scorched_old/src/common/common/NumberParser.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/common/NumberParser.cpp	2009-02-23 15:21:47.000000000 +0100
+@@ -53,10 +53,9 @@
+ bool NumberParser::getOperands()
+ {
+ 	operands_.clear();
+-        int count = 0;
+-	int nextPos = 0;
++	size_t nextPos = 0;
+         std::string value;
+-        int pos = (int) expression_.find('(',0);
++        size_t pos = expression_.find('(',0);
+ 	if (pos == std::string::npos)
+ 	{
+ 		//value = expression_.substr(pos + 1, nextPos - pos + 1);
+@@ -65,11 +64,11 @@
+ 	}
+ 
+ 	pos += 1;
+-        while (pos < (int) expression_.length())
++        while (pos < expression_.length())
+         {
+-                nextPos = (int) expression_.find_first_of(",)", pos);
++                nextPos = expression_.find_first_of(",)", pos);
+                 if (nextPos == std::string::npos)
+-                        nextPos = (int) expression_.length() -1;
++                        nextPos = expression_.length() -1;
+                 value = expression_.substr(pos, nextPos - pos);
+                 operands_.push_back(fixed(value.c_str()));
+                 pos = nextPos + 1;
+diff -ur scorched_old/src/common/common/RandomGenerator.cpp scorched/src/common/common/RandomGenerator.cpp
+--- scorched_old/src/common/common/RandomGenerator.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/common/RandomGenerator.cpp	2009-02-23 15:21:47.000000000 +0100
+@@ -42,7 +42,7 @@
+ 		DIALOG_ASSERT(in);
+ 		bufferSize_= 100000;
+ 		unsigned int *tmpbuffer = new unsigned int[bufferSize_];
+-		int size = fread(tmpbuffer, sizeof(unsigned int), bufferSize_, in);
++		int size = (int) fread(tmpbuffer, sizeof(unsigned int), bufferSize_, in);
+ 		fclose(in);	
+ 		DIALOG_ASSERT(size == bufferSize_);
+ 
+diff -ur scorched_old/src/common/common/SplinePath.cpp scorched/src/common/common/SplinePath.cpp
+--- scorched_old/src/common/common/SplinePath.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/common/SplinePath.cpp	2009-02-23 15:21:47.000000000 +0100
+@@ -57,7 +57,7 @@
+ {
+ 	fixed currentPointTime = pathTime_ * pointsPerSecond_;
+ 
+-	unsigned int noPoints = pathPoints_.size();
++	unsigned int noPoints = (unsigned int) pathPoints_.size();
+ 	unsigned int currentPointId = (unsigned int) (currentPointTime).asInt();
+ 	fixed currentPointDiff = currentPointTime - fixed(currentPointId);
+ 	currentPointId = currentPointId % noPoints;
+diff -ur scorched_old/src/common/common/StatsLoggerDatabase.cpp scorched/src/common/common/StatsLoggerDatabase.cpp
+--- scorched_old/src/common/common/StatsLoggerDatabase.cpp	2009-01-11 15:46:55.000000000 +0100
++++ scorched/src/common/common/StatsLoggerDatabase.cpp	2009-02-23 15:21:47.000000000 +0100
+@@ -882,7 +882,7 @@
+ 	char playerName[1024];
+ 	escapeString(playerName, 
+ 		tank->getCStrName().c_str(),
+-		tank->getCStrName().size());
++		(unsigned long) tank->getCStrName().size());
+ 
+ 	// Add the players name (may fail if duplicates)
+ 	runQuery("INSERT INTO scorched3d_names (playerid, name, count) VALUES "
+diff -ur scorched_old/src/common/common/Vector.h scorched/src/common/common/Vector.h
+--- scorched_old/src/common/common/Vector.h	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/common/Vector.h	2009-02-23 15:21:47.000000000 +0100
+@@ -77,18 +77,16 @@
+ 	Vector Normalize()
+ 	{
+ 		float mag = Magnitude();
+-		Vector v;
+ 		if (mag == 0.0f) mag = 0.00001f;
+-		v = (*this) / mag;
++		Vector v(V[0] / mag, V[1] / mag, V[2] / mag);
+ 		return v;
+ 	}
+ 
+ 	Vector Normalize2D()
+ 	{
+-		float mag = float(sqrt(V[0]*V[0] + V[1]*V[1]));
+-		Vector v;
++		float mag = Magnitude2d();
+ 		if (mag == 0.0f) mag = 0.00001f;
+-		v = (*this) / mag;
++		Vector v(V[0] / mag, V[1] / mag, V[2] / mag);
+ 		return v;
+ 	}
+ 
+@@ -114,9 +112,8 @@
+ 
+ 	float dotP(const Vector &Vin)
+ 	{
+-		Vector &V1 = (*this);
+ 		Vector &V2 = (Vector &) Vin;
+-		return (V1.V[0] * V2.V[0]) + (V1.V[1] * V2.V[1]) + (V1.V[2] * V2.V[2]);
++		return (V[0] * V2.V[0]) + (V[1] * V2.V[1]) + (V[2] * V2.V[2]);
+ 	}
+ 
+ 	float Max()
+@@ -141,7 +138,9 @@
+ 	{
+ 		float mag = Magnitude();
+ 		if (mag == 0.0f) mag = 0.00001f;
+-		(*this) /= mag;
++		V[0] /= mag;
++		V[1] /= mag;
++		V[2] /= mag;
+ 	}
+ 
+ 	void zero()
+@@ -271,7 +270,9 @@
+ 
+ 	void operator-=(const float a)
+ 	{
+-		(*this) += -a;
++		V[0] -= a;
++		V[1] -= a;
++		V[2] -= a;
+ 	}
+ 
+ 	void operator-=(const Vector &Vin)
+@@ -288,7 +289,7 @@
+ 
+ 	bool operator!=(const Vector &Vin1)
+ 	{
+-		return !((*this) == Vin1);
++		return (Vin1.V[0]!=V[0] || Vin1.V[1]!=V[1] || Vin1.V[2]!=V[2]);
+ 	}
+ 
+ 	float &operator[](const int m) { DIALOG_ASSERT(m<=2); return V[m]; }
+diff -ur scorched_old/src/common/common/fixed.cpp scorched/src/common/common/fixed.cpp
+--- scorched_old/src/common/common/fixed.cpp	2008-03-02 19:47:36.000000000 +0100
++++ scorched/src/common/common/fixed.cpp	2009-02-23 15:21:47.000000000 +0100
+@@ -132,7 +132,7 @@
+ 	{
+ 		snprintf(buffer, 15, "%i", m_nVal);
+ 	}
+-	int len = strlen(buffer);
++	int len = (int) strlen(buffer);
+ 
+ 	if (len <= 4)
+ 	{
+diff -ur scorched_old/src/common/engine/ModFileEntry.cpp scorched/src/common/engine/ModFileEntry.cpp
+--- scorched_old/src/common/engine/ModFileEntry.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/engine/ModFileEntry.cpp	2009-02-23 15:21:48.000000000 +0100
+@@ -134,7 +134,7 @@
+ 		tmpBuffer.reset();
+ 		do
+ 		{
+-			newSize = fread(buffer, 
++			newSize = (int) fread(buffer, 
+ 				sizeof(unsigned char), 
+ 				sizeof(buffer), 
+ 				file);
+diff -ur scorched_old/src/common/engine/ModFiles.cpp scorched/src/common/engine/ModFiles.cpp
+--- scorched_old/src/common/engine/ModFiles.cpp	2009-01-11 16:30:44.000000000 +0100
++++ scorched/src/common/engine/ModFiles.cpp	2009-02-23 15:21:48.000000000 +0100
+@@ -43,8 +43,8 @@
+ 
+ bool ModFiles::fileEnding(const std::string &file, const std::string &ext)
+ {
+-	int fileLen = file.size();
+-	int extLen = ext.size();
++	int fileLen = (int) file.size();
++	int extLen = (int) ext.size();
+ 	if (fileLen < extLen) return false;
+ 
+ 	for (int i=0; i<extLen; i++)
+@@ -211,7 +211,7 @@
+ 
+ 	// Turn it into a unix style path and remove the 
+ 	// name of the directory that contains it
+-	int modDirLen = modDir.size();
++	int modDirLen = (int) modDir.size();
+ 	shortFileName += modDirLen;
+ 	while (shortFileName[0] == '/') shortFileName++;
+ 
+@@ -337,7 +337,7 @@
+ 	// Read Buffer
+ 	NetBuffer tmpBuffer;
+ 	unsigned char readBuf[512];
+-	while (unsigned int size = fread(readBuf, sizeof(unsigned char), 512, in))
++	while (unsigned int size = (unsigned int) fread(readBuf, sizeof(unsigned char), 512, in))
+ 	{
+ 		tmpBuffer.addDataToBuffer(readBuf, size);
+ 	}
+diff -ur scorched_old/src/common/image/ImageJpg.cpp scorched/src/common/image/ImageJpg.cpp
+--- scorched_old/src/common/image/ImageJpg.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/image/ImageJpg.cpp	2009-02-23 15:21:45.000000000 +0100
+@@ -120,7 +120,7 @@
+ 	int read = 0;
+ 	char buffer[256];
+ 	NetBuffer netBuffer;
+-	while (read = fread(buffer, 1, 256, file))
++	while (read = (int) fread(buffer, 1, 256, file))
+ 	{
+ 		netBuffer.addDataToBuffer(buffer, read);
+ 	}
+diff -ur scorched_old/src/common/image/ImagePng.cpp scorched/src/common/image/ImagePng.cpp
+--- scorched_old/src/common/image/ImagePng.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/image/ImagePng.cpp	2009-02-23 15:21:45.000000000 +0100
+@@ -125,7 +125,7 @@
+ 	int read = 0;
+ 	char buffer[256];
+ 	NetBuffer netBuffer;
+-	while (read = fread(buffer, 1, 256, file))
++	while (read = (int) fread(buffer, 1, 256, file))
+ 	{
+ 		netBuffer.addDataToBuffer(buffer, read);
+ 	}
+diff -ur scorched_old/src/common/lang/LangParam.cpp scorched/src/common/lang/LangParam.cpp
+--- scorched_old/src/common/lang/LangParam.cpp	2009-02-23 19:10:57.000000000 +0100
++++ scorched/src/common/lang/LangParam.cpp	2009-02-23 15:21:43.000000000 +0100
+@@ -26,18 +26,18 @@
+ {
+ 	const LangString &value = convValue.getValue();
+ 
+-	int valueLen = value.size();
+-	int current = 0;
++	size_t valueLen = value.size();
++	size_t current = 0;
+ 	while (current < valueLen)
+ 	{
+-		int bstart = value.find('{', current);
++		size_t bstart = value.find('{', current);
+ 		if (bstart == std::string::npos) 
+ 		{
+ 			parts_.push_back(LangString(value, current));
+ 			break;
+ 		}
+ 
+-		int bend = value.find('}', bstart);
++		size_t bend = value.find('}', bstart);
+ 		if (bend == std::string::npos)
+ 		{
+ 			parts_.push_back(LangString(value, current));
+@@ -45,7 +45,7 @@
+ 		}
+ 
+ 		static LangString numbers = LANG_STRING("0123456789");
+-		int charstart = value.find_first_not_of(numbers, bstart+1);
++		size_t charstart = value.find_first_not_of(numbers, bstart+1);
+ 		if (charstart != bend)
+ 		{
+ 			parts_.push_back(LangString(value, current));
+diff -ur scorched_old/src/common/lang/LangString.cpp scorched/src/common/lang/LangString.cpp
+--- scorched_old/src/common/lang/LangString.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/lang/LangString.cpp	2009-02-23 15:21:43.000000000 +0100
+@@ -187,7 +187,8 @@
+ 
+ unsigned int *LangStringUtil::strstr(const unsigned int *str1, const LangString &str2)
+ {
+-	unsigned int pos = LangString(str1).find(str2);
++	LangString newString(str1);
++	size_t pos = newString.find(str2);
+ 	if (pos == LangString::npos) return 0;
+ 	return (unsigned int*)(str1 + pos);
+ }
+@@ -198,15 +199,15 @@
+ 	LangString str2l(str2);
+ 	lowercase(str1l);
+ 	lowercase(str2l);
+-	unsigned int pos = str1l.find(str2l);
++	size_t pos = str1l.find(str2l);
+ 	if (pos == LangString::npos) return 0;
+ 	return (unsigned int*)(str1 + pos);
+ }
+ 
+ void LangStringUtil::trim(LangString &value)
+ {
+-	int start = value.find_first_not_of(LANG_STRING(" \t\n"));
+-	int end = value.find_last_not_of(LANG_STRING(" \t\n"));
++	size_t start = value.find_first_not_of(LANG_STRING(" \t\n"));
++	size_t end = value.find_last_not_of(LANG_STRING(" \t\n"));
+ 	if (start == LangString::npos) value.clear();
+ 	else if (end == LangString::npos) value.clear();
+ 	else value = LangString(value, start, end-start+1);
+diff -ur scorched_old/src/common/tank/TankAvatar.cpp scorched/src/common/tank/TankAvatar.cpp
+--- scorched_old/src/common/tank/TankAvatar.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/tank/TankAvatar.cpp	2009-02-23 15:21:48.000000000 +0100
+@@ -89,7 +89,7 @@
+ 		name_ = fileName;
+ 		file_->reset();
+ 		unsigned char readBuf[512];
+-		while (unsigned int size = fread(readBuf, sizeof(unsigned char), 512, in))
++		while (unsigned int size = (unsigned int) fread(readBuf, sizeof(unsigned char), 512, in))
+ 		{
+ 			file_->addDataToBuffer(readBuf, size);
+ 		}
+diff -ur scorched_old/src/common/tank/TankPosition.cpp scorched/src/common/tank/TankPosition.cpp
+--- scorched_old/src/common/tank/TankPosition.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/tank/TankPosition.cpp	2009-02-23 15:21:48.000000000 +0100
+@@ -107,7 +107,7 @@
+ {
+ 	if (index < oldShots_.size())
+ 	{
+-		int newIndex = (oldShots_.size() - 1) - index;
++		int newIndex = (int) (oldShots_.size() - 1) - index;
+ 		rotateGunXY(oldShots_[newIndex].rot, false);
+ 		rotateGunYZ(oldShots_[newIndex].ele, false);
+ 		changePower(oldShots_[newIndex].power, false);
+diff -ur scorched_old/src/common/target/Target.h scorched/src/common/target/Target.h
+--- scorched_old/src/common/target/Target.h	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/target/Target.h	2009-02-23 15:21:46.000000000 +0100
+@@ -83,7 +83,7 @@
+ 	const LangString &getTargetName() { return name_; }
+ 	const std::string &getCStrName();
+ 	void setName(const LangString &name);
+-	unsigned int getNameLen() { return name_.size(); }
++	unsigned int getNameLen() { return (unsigned int) name_.size(); }
+ 
+ 	// Serialize the target
+ 	virtual bool writeMessage(NetBuffer &buffer);
+diff -ur scorched_old/src/common/weapons/AccessoryStore.cpp scorched/src/common/weapons/AccessoryStore.cpp
+--- scorched_old/src/common/weapons/AccessoryStore.cpp	2009-01-21 14:02:58.000000000 +0100
++++ scorched/src/common/weapons/AccessoryStore.cpp	2009-02-23 15:21:49.000000000 +0100
+@@ -65,7 +65,7 @@
+ 	}
+ 
+ 	// Itterate all of the accessories in the file
+-	int noChildren = file.getRootNode()->getChildren().size();
++	int noChildren = (int) file.getRootNode()->getChildren().size();
+ 	int childCount = 0;
+ 	XMLNode *currentNode = 0;
+ 	while (file.getRootNode()->getNamedChild("accessory", currentNode, false))
+diff -ur scorched_old/src/common/weapons/EconomyFreeMarket.cpp scorched/src/common/weapons/EconomyFreeMarket.cpp
+--- scorched_old/src/common/weapons/EconomyFreeMarket.cpp	2008-12-29 18:38:23.000000000 +0100
++++ scorched/src/common/weapons/EconomyFreeMarket.cpp	2009-02-23 15:21:49.000000000 +0100
+@@ -200,7 +200,7 @@
+ 	if (possibleAccessories.size() <= 1) return;
+ 
+ 	// How much should each accessory get (on average)
+-	int moneyShouldAquire = boughtAccessory->getPrice() / possibleAccessories.size();
++	int moneyShouldAquire = boughtAccessory->getPrice() / (int) possibleAccessories.size();
+ 	
+ 	// Alter prices
+ 	{
+diff -ur scorched_old/src/server/webserver/ServerWebServerUtil.cpp scorched/src/server/webserver/ServerWebServerUtil.cpp
+--- scorched_old/src/server/webserver/ServerWebServerUtil.cpp	2008-12-28 20:33:43.000000000 +0100
++++ scorched/src/server/webserver/ServerWebServerUtil.cpp	2009-02-23 15:21:41.000000000 +0100
+@@ -401,15 +401,16 @@
+ 	while (true)
+ 	{
+ 		// Find start {{permission}}
+-		int start1 = result.find("{{");
++		size_t start1 = result.find("{{");
+ 		if (start1 == std::string::npos) break;
+-		int end1 = result.find("}}", start1);
++		size_t end1 = result.find("}}", start1);
+ 		if (end1 == std::string::npos) break;
+ 		std::string perm(result, start1 + 2, end1 - start1 - 2);
+ 		result.replace(start1, end1 - start1 + 2, "");
+ 
+ 		// Find end {{permission}}
+-		int start2 = result.find(S3D::formatStringBuffer("{{%s}}", perm.c_str()), start1);
++		size_t start2 = result.find(
++			S3D::formatStringBuffer("{{%s}}", perm.c_str()), start1);
+ 		if (start2 == std::string::npos) break;
+ 		result.replace(start2, 4 + perm.size(), "");
+ 
