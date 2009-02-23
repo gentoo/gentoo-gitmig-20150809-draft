@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p287-r5.ebuild,v 1.1 2009/02/23 14:05:31 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p287-r5.ebuild,v 1.2 2009/02/23 14:58:58 klausman Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.ruby-lang.org/"
 SRC_URI="mirror://ruby/${SLOT}/${MY_P}.tar.bz2"
 
 LICENSE="Ruby"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="berkdb debug doc emacs examples gdbm ipv6 rubytests socks5 ssl threads tk xemacs"
 
 RDEPEND="

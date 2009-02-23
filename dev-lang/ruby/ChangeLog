@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.375 2009/02/23 14:05:31 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.376 2009/02/23 14:58:58 klausman Exp $
+
+  23 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
+  ruby-1.8.6_p287-r5.ebuild:
+  Stable on alpha, bug #260006
 
 *ruby-1.8.7_p72-r2 (23 Feb 2009)
 *ruby-1.8.6_p287-r12 (23 Feb 2009)
