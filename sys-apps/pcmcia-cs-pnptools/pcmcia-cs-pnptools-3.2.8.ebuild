@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-pnptools/pcmcia-cs-pnptools-3.2.8.ebuild,v 1.2 2006/02/13 15:37:55 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-pnptools/pcmcia-cs-pnptools-3.2.8.ebuild,v 1.3 2009/02/23 09:56:43 flameeyes Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -54,10 +54,10 @@ src_compile() {
 }
 
 src_install () {
-	dosbin debug-tools/lspnp debug-tools/setpnp
+	dosbin debug-tools/lspnp debug-tools/setpnp || die "dosbin failed"
 
 	insinto /usr/share/misc
-	doins debug-tools/pnp.ids
+	doins debug-tools/pnp.ids || die "doins failed"
 
-	doman man/lspnp.8 man/setpnp.8
+	doman man/lspnp.8 man/setpnp.8 || die "doman failed"
 }
