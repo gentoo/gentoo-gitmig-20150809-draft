@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.13 2009/01/22 18:50:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertux/supertux-0.1.3.ebuild,v 1.14 2009/02/23 01:02:56 mr_bones_ Exp $
 
 EAPI=2
-GAMES_USE_SDL="nojoystick" #bug #100372
 inherit eutils games
 
 DESCRIPTION="A game similar to Super Mario Bros."
@@ -15,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="opengl"
 
-DEPEND="|| ( media-libs/libsdl[joystick] <media-libs/libsdl-1.2.13-r1 )
+DEPEND="media-libs/libsdl[joystick]
 	media-libs/sdl-image[png,jpeg]
 	media-libs/sdl-mixer[mikmod,vorbis]
 	x11-libs/libXt"
