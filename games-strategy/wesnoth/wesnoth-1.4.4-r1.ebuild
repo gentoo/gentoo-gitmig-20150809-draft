@@ -1,8 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.4.7.ebuild,v 1.6 2009/01/25 22:27:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.4.4-r1.ebuild,v 1.1 2009/02/23 20:35:55 mr_bones_ Exp $
 
-EAPI=2
 inherit eutils toolchain-funcs flag-o-matic games
 
 MY_PV=${PV/_/}
@@ -12,46 +11,49 @@ SRC_URI="mirror://sourceforge/wesnoth/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
-IUSE="dedicated editor lite nls server smallgui static tinygui tools"
+KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+IUSE="dedicated editor lite nls server static tools"
 
-RDEPEND=">=media-libs/libsdl-1.2.7[X]
+RDEPEND=">=media-libs/libsdl-1.2.7
 	media-libs/sdl-net
 	dev-libs/boost
 	!dedicated? (
 		x11-libs/libX11
-		>=media-libs/sdl-mixer-1.2[vorbis]
-		>=media-libs/sdl-image-1.2[png,jpeg]
-		dev-lang/python
+		>=media-libs/sdl-mixer-1.2
+		>=media-libs/sdl-image-1.2
 		>=media-libs/freetype-2 )
+		dev-lang/python
 	nls? ( virtual/libintl )"
 # the configure script is broken and checks for freetype even if
 # it won't be used.  until it's either patched out or upstream fixes
 # it, just make it a DEPEND.
 # reported by Miika Linnapuomi
 DEPEND="${RDEPEND}
-	!dedicated? (
-		smallgui? ( media-gfx/imagemagick )
-		tinygui? ( media-gfx/imagemagick )
-	)
 	dedicated? (
-		>=media-libs/sdl-mixer-1.2[vorbis]
-		>=media-libs/sdl-image-1.2[png]
+		>=media-libs/sdl-mixer-1.2
+		>=media-libs/sdl-image-1.2
 		>=media-libs/freetype-2 )
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
 pkg_setup() {
-	if use !dedicated && use smallgui && use tinygui ; then
-		ewarn "USE=tinygui overrides USE=smallgui"
-		ebeep
-		epause 10
+	if ! built_with_use media-libs/sdl-mixer vorbis ; then
+		die "Please emerge media-libs/sdl-mixer with USE=vorbis"
+	fi
+	if ! built_with_use media-libs/sdl-image png ; then
+		die "Please emerge media-libs/sdl-image with USE=png"
+	fi
+	# dedicated also needs USE=X for libsdl: bug #222033
+	if ! built_with_use media-libs/libsdl X ; then
+		die "Please emerge media-libs/libsdl with USE=X"
 	fi
 	games_pkg_setup
 }
 
-src_prepare() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	if use dedicated || use server ; then
 		sed \
 			-e "s:GAMES_BINDIR:${GAMES_BINDIR}:" \
@@ -62,15 +64,15 @@ src_prepare() {
 			|| die "sed failed"
 	fi
 	if ! use nls ; then
-		cd "${S}"
 		sed -i \
 			-e '/^MAN_LANG/d' \
 			doc/man/Makefile.in \
 			|| die "sed failed"
 	fi
+	epatch "${FILESDIR}"/no-python.patch
 }
 
-src_configure() {
+src_compile() {
 	local myconf
 
 	filter-flags -ftracer -fomit-frame-pointer
@@ -91,9 +93,7 @@ src_configure() {
 		--with-icondir=/usr/share/icons \
 		--with-desktopdir=/usr/share/applications \
 		--docdir=/usr/share/doc/${PF} \
-		--enable-python-install \
-		$(use_enable smallgui) \
-		$(use_enable tinygui) \
+		--disable-python \
 		$(use_enable lite) \
 		$(use_enable static) \
 		$(use_enable editor) \
@@ -101,11 +101,14 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable nls dummy-locales) \
 		$(use_enable !dedicated game) \
-		${myconf}
+		${myconf} \
+		|| die
+	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	rm -fr "${D}${GAMES_DATADIR}"/wesnoth/data/{ais,campaigns/Descent_Into_Darkness/ais}
 	dodoc changelog
 	if use dedicated || use server; then
 		keepdir "${GAMES_STATEDIR}/run/wesnothd"
