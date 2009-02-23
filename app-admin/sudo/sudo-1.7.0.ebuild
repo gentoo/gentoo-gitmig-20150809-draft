@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.0.ebuild,v 1.10 2009/02/04 11:42:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.0.ebuild,v 1.11 2009/02/23 13:56:55 flameeyes Exp $
 
 inherit eutils pam confutils
 
@@ -46,6 +46,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}; cd "${S}"
+
+	epatch "${FILESDIR}/${P}-parallelinstall.patch"
 
 	# compatability fix.
 	epatch "${FILESDIR}"/${PN}-skeychallengeargs.diff
@@ -166,7 +168,7 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog HISTORY PORTING README TROUBLESHOOTING \
 		UPGRADE WHATSNEW sample.sudoers sample.syslog.conf
 
