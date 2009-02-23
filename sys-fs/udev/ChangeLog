@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.451 2009/02/21 10:13:21 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.452 2009/02/23 16:30:52 zzam Exp $
+
+  23 Feb 2009; Matthias Schwarzott <zzam@gentoo.org>
+  files/136/udev-postmount.initd:
+  Typo.
 
   21 Feb 2009; Matthias Schwarzott <zzam@gentoo.org> files/136/udev.confd,
   files/136/udev.initd, files/136/udev-mount.initd,
