@@ -25,7 +25,7 @@ diff -ru scorched.orig/configure-al.m4 scorched/configure-al.m4
 -	AC_MSG_RESULT(yes)
 -fi
 +AL_LIBS="-lopenal"
-+AL_CFLAGS="-I/auto/include/AL"
++AL_CFLAGS="-I/usr/include/AL"
 +AC_MSG_RESULT(yes)
  
  AC_MSG_CHECKING(for Freealut support)
