@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.2.3-r1.ebuild,v 1.1 2009/02/21 11:49:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.2.3-r1.ebuild,v 1.2 2009/02/23 20:41:38 hwoarang Exp $
 
 EAPI="2"
 
@@ -54,9 +54,6 @@ src_prepare() {
 }
 
 src_compile() {
-	# needs to be built in source tree
-	CMAKE_IN_SOURCE_BUILD=1
-
 	mycmakeargs="${mycmakeargs}
 		$(qmmp_use_enable alsa ALSA)
 		$(qmmp_use_enable dbus DBUS)
