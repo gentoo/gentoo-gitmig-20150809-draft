@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/coot-data-1.ebuild,v 1.3 2007/03/15 22:06:55 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/coot-data-1.ebuild,v 1.4 2009/02/23 05:51:17 darkside Exp $
 
 DESCRIPTION="Data for the Crystallographic Object-Oriented Toolkit"
 HOMEPAGE="http://www.ysbl.york.ac.uk/~emsley/coot/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.ysbl.york.ac.uk/~emsley/software/extras/reference-structures
 	http://www.ysbl.york.ac.uk/~emsley/software/extras/refmac-lib-data-monomers.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}"

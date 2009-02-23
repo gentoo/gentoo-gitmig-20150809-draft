@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/coot-data
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/ChangeLog,v 1.6 2007/03/15 22:06:55 kugelfang Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/ChangeLog,v 1.7 2009/02/23 05:51:17 darkside Exp $
+
+  23 Feb 2009; Jeremy Olexa <darkside@gentoo.org> coot-data-1.ebuild:
+  add ~amd64, bug 259603
 
   15 Mar 2007; Danny van Dyk <kugelfang@gentoo.org> coot-data-1.ebuild:
   QA: Removed illegal use of ${ROOT}. Bug #168043
