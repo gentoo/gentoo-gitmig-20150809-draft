@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/jsr311-api
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr311-api/ChangeLog,v 1.1 2009/02/23 10:37:45 robbat2 Exp $
+
+*jsr311-api-1.0 (23 Feb 2009)
+
+  23 Feb 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +files/jsr311-api-1.0-build.xml, +files/jsr311-api-1.0-manifest,
+  +files/jsr311-api-1.0-maven-build.xml, +metadata.xml,
+  +jsr311-api-1.0.ebuild:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
