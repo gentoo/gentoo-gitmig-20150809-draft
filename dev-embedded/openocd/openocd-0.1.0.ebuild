@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.5 2009/02/23 22:47:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.1.0.ebuild,v 1.1 2009/02/23 22:47:08 maekke Exp $
 
 ESVN_REPO_URI="http://svn.berlios.de/svnroot/repos/openocd/trunk"
 inherit eutils multilib
@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 	SRC_URI=""
 else
-	KEYWORDS=""
+	KEYWORDS="~x86"
 	SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 fi
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/openocd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.5 2008/11/29 21:02:33 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.6 2009/02/23 22:47:08 maekke Exp $
+
+*openocd-0.1.0 (23 Feb 2009)
+
+  23 Feb 2009; Markus Meier <maekke@gentoo.org> +openocd-0.1.0.ebuild,
+  openocd-9999.ebuild:
+  bumb to first openocd release, also tweak the live ebuild, bug #259938
 
   29 Nov 2008; Mike Frysinger <vapier@gentoo.org> openocd-9999.ebuild:
   Make usb support optional #249211 by Scott.
