@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagtrap/nagtrap-0.1.3.ebuild,v 1.1 2009/02/23 20:13:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagtrap/nagtrap-0.1.3.ebuild,v 1.2 2009/02/23 20:41:43 dertobi123 Exp $
 
 EAPI=2
 
@@ -27,7 +27,7 @@ src_install() {
 
 	dodir /usr/share/nagtrap
 	cp -r {db,nagtrap} "${D}"/usr/share/nagtrap/
-	fperms 640 "${D}"/usr/share/nagtrap/nagtrap/etc/config.ini.php-sample
+	fperms 640 "${D}"/usr/share/nagtrap/nagtrap/etc/config.ini.php-dist
 
 	sed -i -e 's#use lib.*#use lib "/usr/lib/nagios/plugins";#g' \
 	  plugin/check_snmptraps.pl || die "sed failed"
