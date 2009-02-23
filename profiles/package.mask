@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9510 2009/02/23 03:15:29 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9511 2009/02/23 13:44:09 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -546,10 +546,6 @@ dev-python/pyframer
 # genflags should never have been born.  Output needs to be specific per GCC
 # version, and that's a big change.
 app-portage/genflags
-
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (15 Oct 2008)
-# Beta release
->=kde-misc/krusader-2.0.0_beta1
 
 # Alexis Ballier <aballier@gentoo.org> (15 Oct 2008)
 # Breaks ocamlduce
