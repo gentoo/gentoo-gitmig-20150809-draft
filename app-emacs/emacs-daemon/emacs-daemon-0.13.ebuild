@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/emacs-daemon-0.10.ebuild,v 1.1 2008/12/27 20:51:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/emacs-daemon-0.13.ebuild,v 1.1 2009/02/23 15:31:38 ulm Exp $
 
 inherit elisp
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=virtual/emacs-23"
 RDEPEND="${DEPEND}
-	>=sys-apps/openrc-0.3.0-r1"
+	>=sys-apps/openrc-0.4"
 
 SITEFILE="10${PN}-gentoo.el"
 
@@ -38,4 +38,5 @@ src_install() {
 	doexe emacs-wrapper.sh || die
 	elisp-site-file-install "${SITEFILE}" || die
 	keepdir /var/run/emacs || die
+	dodoc README ChangeLog || die
 }
