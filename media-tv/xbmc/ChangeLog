@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.5 2009/02/22 22:28:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.6 2009/02/23 19:03:55 vapier Exp $
+
+  23 Feb 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Upstream now allows SVN_REV to override svnversion.
 
   22 Feb 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   MACDll build flags have been merged upstream.
