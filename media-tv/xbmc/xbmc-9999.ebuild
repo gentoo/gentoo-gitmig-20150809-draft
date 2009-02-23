@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.8 2009/02/23 19:03:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.9 2009/02/23 20:49:37 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -93,12 +93,8 @@ src_unpack() {
 	# Fix XBMC's final version string showing as "exported"
 	# instead of the SVN revision number.  Also cleanup flags.
 	export SVN_REV=${ESVN_WC_REVISION:-exported}
-	sed -i -r \
-		-e '/DEBUG_FLAGS/s:-(g|O2)::' \
-		configure || die
-	sed -i \
-		-e 's:\<strip\>:echo:' \
-		build.sh xbmc/lib/libhdhomerun/Makefile.in
+	sed -i -r -e '/DEBUG_FLAGS/s:-(g|O2)::' configure
+	sed -i -e 's:\<strip\>:echo:' xbmc/lib/libhdhomerun/Makefile.in
 	# Avoid lsb-release dependency
 	sed -i \
 		-e 's:/usr/bin/lsb_release -d:cat /etc/gentoo-release:' \
