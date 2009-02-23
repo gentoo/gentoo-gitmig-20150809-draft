@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.197 2009/02/23 01:25:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.198 2009/02/23 05:52:00 vapier Exp $
+
+  23 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/bash-4.0-comsub-backslash-metacharacters.patch, bash-4.0.ebuild:
+  Add fix from upstream for escaped semicolons in $(...) subshells.
 
   23 Feb 2009; Mike Frysinger <vapier@gentoo.org>
   -files/bash-4.0-protos.patch, bash-4.0.ebuild:
