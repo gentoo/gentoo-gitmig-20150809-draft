@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10-r1.ebuild,v 1.2 2009/02/01 02:20:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ppl-0.10-r1.ebuild,v 1.3 2009/02/23 06:05:26 dirtyepic Exp $
 
 EAPI=2
 
@@ -42,7 +42,9 @@ src_install() {
 		# move them to the right place
 		mv * ppl-watchdog
 		mv ../ppl .
-		prepalldocs
+		# TODO - prepalldocs is banned
+		# replace it with whatever takes its place when it becomes available
+		# prepalldocs
 	else
 		rm -rf "${D}"/usr/share/doc/${PN}
 		rm -rf "${D}"/usr/share/doc/${PF}
