@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/echinus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.3 2008/08/26 11:43:57 yngwin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.4 2009/02/23 20:40:27 yngwin Exp $
+
+*echinus-0.3.2.1 (23 Feb 2009)
+
+  23 Feb 2009; Ben de Groot <yngwin@gentoo.org> +echinus-0.3.2.1.ebuild:
+  Version bump. Removing patch that has been applied upstream.
 
   26 Aug 2008; Ben de Groot <yngwin@gentoo.org> echinus-0.3.1.ebuild:
   Adding pkgconfig dep
