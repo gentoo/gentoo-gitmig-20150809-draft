@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.44 2009/02/19 05:15:16 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.45 2009/02/23 13:40:25 pva Exp $
+
+  23 Feb 2009; Peter Volkov <pva@gentoo.org>
+  files/pilot-link-0.12.3-glibc-open.patch:
+  Fixed build issue, bug #259241, thank Dustin Polke for report, MaratIK,
+  Israel G. Lugo, Jan Paesmans for this fix.
 
   19 Feb 2009; Serkan Kaba <serkan@gentoo.org> pilot-link-0.12.3.ebuild,
   pilot-link-0.12.3-r1.ebuild:
