@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.0_rc5.ebuild,v 1.1 2009/01/07 11:52:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.1.ebuild,v 1.1 2009/02/23 12:59:13 aballier Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.10"
@@ -11,7 +11,7 @@ MY_P=${P/_}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="video stream processing tool"
 HOMEPAGE="http://www.transcoding.org/cgi-bin/transcode"
-SRC_URI="http://fromani.exit1.org/${MY_P}.tar.bz2"
+SRC_URI="mirror://berlios/tcforge/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
@@ -62,7 +62,8 @@ src_unpack() {
 
 	sed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
 		"${S}"/Makefile.am "${S}"/docs/Makefile.am "${S}"/docs/html/Makefile.am \
-		"${S}"/docs/release-notes/Makefile.am
+		"${S}"/docs/pvm3/Makefile.am "${S}"/docs/tech/html/Makefile.am \
+		"${S}"/docs/tech/Makefile.am
 
 	eautoreconf
 }
