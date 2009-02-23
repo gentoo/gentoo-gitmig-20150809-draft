@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.65 2008/09/04 10:47:58 swegener Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.66 2009/02/23 14:36:17 armin76 Exp $
+
+  23 Feb 2009; Raúl Porcel <armin76@gentoo.org> diffstat-1.46.ebuild:
+  alpha/arm/ia64/s390/sh/sparc/x86 stable
 
 *diffstat-1.46 (04 Sep 2008)
 
