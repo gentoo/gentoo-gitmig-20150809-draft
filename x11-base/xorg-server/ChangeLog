@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.377 2009/02/19 17:21:41 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.378 2009/02/23 20:08:00 kumba Exp $
+
+  23 Feb 2009; Joshua Kinard <kumba@gentoo.org> xorg-server-1.5.3-r2.ebuild:
+  Added ~mips to KEYWORDS for #237411
 
   19 Feb 2009; Rémi Cardona <remi@gentoo.org> xorg-server-1.5.3-r2.ebuild:
   drop liblbxutil dep, there are no references to it in the sources
