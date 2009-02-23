@@ -1,16 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.0.1.ebuild,v 1.2 2008/12/31 03:40:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.2.0.ebuild,v 1.1 2009/02/23 20:23:26 dev-zero Exp $
 
 EAPI="2"
 
-inherit eutils
-
-MY_P="aria2c-${PV/_p/+}"
-
 DESCRIPTION="A download utility with resuming and segmented downloading with HTTP/HTTPS/FTP/BitTorrent support."
 HOMEPAGE="http://aria2.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
@@ -20,9 +16,9 @@ CDEPEND="sys-libs/zlib
 	ssl? (
 		gnutls? ( >=net-libs/gnutls-1.2.9 )
 		!gnutls? ( dev-libs/openssl ) )
-	ares? ( >=net-dns/c-ares-1.3.1 )
+	ares? ( >=net-dns/c-ares-1.5.0 )
 	bittorrent? (
-		gnutls? ( >=net-libs/gnutls-1.2.9 >=dev-libs/libgcrypt-1.2.0 )
+		gnutls? ( >=net-libs/gnutls-1.2.9 >=dev-libs/libgcrypt-1.2.2 )
 		!gnutls? ( dev-libs/openssl ) )
 	metalink? (
 		!expat? ( >=dev-libs/libxml2-2.6.26 )
@@ -34,8 +30,6 @@ DEPEND="${CDEPEND}
 	test? ( >=dev-util/cppunit-1.12.0 )"
 RDEPEND="${CDEPEND}
 	nls? ( virtual/libiconv virtual/libintl )"
-
-S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	sed -i -e "s|/tmp|${T}|" test/*.cc test/*.txt || die "sed failed"
