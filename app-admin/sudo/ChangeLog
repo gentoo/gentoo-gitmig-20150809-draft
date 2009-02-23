@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.161 2009/02/04 11:42:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.162 2009/02/23 13:01:01 flameeyes Exp $
+
+  23 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -sudo-1.6.9_p13.ebuild, -sudo-1.6.9_p19.ebuild:
+  Reap old versions.
 
   04 Feb 2009; Raúl Porcel <armin76@gentoo.org> sudo-1.7.0.ebuild:
   arm/ia64/s390/sh stable wrt #256633
