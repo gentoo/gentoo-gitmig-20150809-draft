@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.30.ebuild,v 1.1 2009/02/23 09:59:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mogilefs-server/mogilefs-server-2.30.ebuild,v 1.2 2009/02/23 10:01:04 robbat2 Exp $
 
 MODULE_AUTHOR="DORMANDO"
 inherit perl-module
@@ -25,7 +25,7 @@ DEPEND="dev-perl/Net-Netmask
 		dev-perl/Gearman-Server
 		dev-perl/Gearman-Client-Async
 		dev-perl/libwww-perl
-		dev-perl/Cache-Memcached 
+		dev-perl/Cache-Memcached
 		mysql? ( dev-perl/DBD-mysql )
 		sqlite? ( dev-perl/DBD-SQLite )
 		dev-lang/perl"
@@ -51,13 +51,13 @@ src_compile() {
 
 src_install() {
 	perl-module_src_install || die "perl-module_src_install failed"
-	cd ${S}
+	cd "${S}"
 
-	newconfd ${FILESDIR}/mogilefsd-conf.d-2.16 mogilefsd
-	newinitd ${FILESDIR}/mogilefsd-init.d-2.16 mogilefsd
+	newconfd "${FILESDIR}"/mogilefsd-conf.d-2.16 mogilefsd
+	newinitd "${FILESDIR}"/mogilefsd-init.d-2.16 mogilefsd
 
-	newconfd ${FILESDIR}/mogstored-conf.d-2.30 mogstored
-	newinitd ${FILESDIR}/mogstored-init.d-2.30 mogstored
+	newconfd "${FILESDIR}"/mogstored-conf.d-2.30 mogstored
+	newinitd "${FILESDIR}"/mogstored-init.d-2.30 mogstored
 
 	diropts -m 700 -o ${MOGILE_USER}
 	keepdir /var/run/mogile
@@ -68,11 +68,11 @@ src_install() {
 	dodir /etc/mogilefs
 	insinto /etc/mogilefs
 	insopts -m 600 -o root -g ${MOGILE_USER}
-	newins ${FILESDIR}/mogilefsd.conf-2.30 mogilefsd.conf
-	newins ${FILESDIR}/mogstored.conf-2.16 mogstored.conf
+	newins "${FILESDIR}"/mogilefsd.conf-2.30 mogilefsd.conf
+	newins "${FILESDIR}"/mogstored.conf-2.16 mogstored.conf
 }
 
 pkg_postinst() {
-	chmod 640 ${ROOT}/etc/mogilefs/{mogilefsd,mogstored}.conf
-	chown root:${MOGILE_USER} ${ROOT}/etc/mogilefs/{mogilefsd,mogstored}.conf
+	chmod 640 "${ROOT}"/etc/mogilefs/{mogilefsd,mogstored}.conf
+	chown root:${MOGILE_USER} "${ROOT}"/etc/mogilefs/{mogilefsd,mogstored}.conf
 }
