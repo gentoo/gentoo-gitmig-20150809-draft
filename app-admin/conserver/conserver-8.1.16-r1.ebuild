@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.16-r1.ebuild,v 1.5 2008/03/21 15:43:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.16-r1.ebuild,v 1.6 2009/02/23 14:57:29 josejx Exp $
 
 inherit ssl-cert eutils pam
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.conserver.com/conserver/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pam ssl tcpd debug"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
