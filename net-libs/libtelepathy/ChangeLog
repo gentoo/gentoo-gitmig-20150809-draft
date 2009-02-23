@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtelepathy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.23 2009/01/07 17:02:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.24 2009/02/23 15:46:00 josejx Exp $
+
+  23 Feb 2009; Joseph Jezak <josejx@gentoo.org> libtelepathy-0.3.3.ebuild:
+  Marked ~ppc for bug #211776.
 
   07 Jan 2009; Raúl Porcel <armin76@gentoo.org> libtelepathy-0.3.3.ebuild:
   Add ~alpha/~ia64 wrt #245949
