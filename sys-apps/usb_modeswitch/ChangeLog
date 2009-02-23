@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/usb_modeswitch
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/ChangeLog,v 1.1 2008/08/25 22:28:23 wschlich Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/ChangeLog,v 1.2 2009/02/23 09:43:14 flameeyes Exp $
+
+  23 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  usb_modeswitch-0.9.4.ebuild:
+  Fix building with --as-needed and respect CPPFLAGS. Thanks to Kevin Pyle
+  in bug #248397 for the patch.
 
 *usb_modeswitch-0.9.4 (25 Aug 2008)
 

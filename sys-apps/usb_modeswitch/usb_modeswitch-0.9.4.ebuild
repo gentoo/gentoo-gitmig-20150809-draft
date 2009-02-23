@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-0.9.4.ebuild,v 1.1 2008/08/25 22:28:23 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-0.9.4.ebuild,v 1.2 2009/02/23 09:43:15 flameeyes Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND="dev-libs/libusb"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -l usb -o usb_modeswitch usb_modeswitch.c \
+	$(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -o usb_modeswitch usb_modeswitch.c -lusb \
 		|| die 'failed to compile usb_modeswitch'
 }
 
