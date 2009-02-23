@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxf86config
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.30 2009/02/07 14:24:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxf86config/ChangeLog,v 1.31 2009/02/23 16:40:36 josejx Exp $
+
+  23 Feb 2009; Joseph Jezak <josejx@gentoo.org>
+  pyxf86config-0.3.34-r2.ebuild:
+  Marked ppc/ppc64 stable for bug #223357.
 
   07 Feb 2009; Raúl Porcel <armin76@gentoo.org>
   pyxf86config-0.3.34-r2.ebuild:
