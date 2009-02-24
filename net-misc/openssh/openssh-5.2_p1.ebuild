@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.2_p1.ebuild,v 1.1 2009/02/24 17:03:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.2_p1.ebuild,v 1.2 2009/02/24 19:11:25 vapier Exp $
 
 inherit eutils flag-o-matic multilib autotools pam
 
@@ -84,7 +84,7 @@ src_unpack() {
 		EPATCH_OPTS="-p1" epatch "${WORKDIR}"/*pkcs11*/{1,2,4}*
 		use X509 && EPATCH_OPTS="-R" epatch "${WORKDIR}"/*pkcs11*/1000_all_log.patch
 	fi
-	use X509 && epatch "${DISTDIR}"/${X509_PATCH} "${FILESDIR}"/${PN}-5.1_p1-x509-hpn-glue.patch
+	use X509 && epatch "${DISTDIR}"/${X509_PATCH}
 	use smartcard && epatch "${FILESDIR}"/openssh-3.9_p1-opensc.patch
 	if ! use X509 ; then
 		if [[ -n ${LDAP_PATCH} ]] && use ldap ; then
