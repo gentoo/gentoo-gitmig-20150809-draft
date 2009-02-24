@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.39 2009/02/11 20:20:16 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.40 2009/02/24 20:53:58 gentoofan23 Exp $
+
+  24 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  ddclient-3.7.3-r1.ebuild, ddclient-3.8.0.ebuild:
+  Fix ROOT abuse, thanks to Thilo Bangert in bug #258098
 
   11 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml:
   Pick up maintainership.
