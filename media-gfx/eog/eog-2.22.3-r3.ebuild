@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.22.3-r2.ebuild,v 1.1 2008/10/11 23:35:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.22.3-r3.ebuild,v 1.1 2009/02/24 17:25:43 dang Exp $
 
 inherit eutils gnome2
 
@@ -59,6 +59,9 @@ src_unpack() {
 
 	# Don't fail on unrecognized chunks, bug #237835
 	epatch "${FILESDIR}/${P}-unrecognized-chunks.patch"
+
+	# Sanitize python paths. bug #257002
+	epatch "${FILESDIR}"/${P}-CVE-2008-5987.patch
 }
 
 pkg_postinst() {
