@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.36 2009/02/21 10:31:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.37 2009/02/24 01:39:00 josejx Exp $
+
+  24 Feb 2009; Joseph Jezak <josejx@gentoo.org> sonata-1.5.3.ebuild:
+  Marked ~ppc for bug #222011.
 
   21 Feb 2009; Christoph Mende <angelos@gentoo.org> -sonata-1.5.2.ebuild:
   Removed old
