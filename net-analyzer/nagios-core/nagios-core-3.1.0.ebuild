@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.1.0.ebuild,v 1.2 2009/01/28 18:51:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.1.0.ebuild,v 1.3 2009/02/24 17:07:42 dertobi123 Exp $
 
 EAPI="2"
 
@@ -17,9 +17,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug lighttpd perl +web vim-syntax"
 DEPEND="virtual/mailx
 	web? (
-		>=media-libs/jpeg-6b-r3
-		>=media-libs/libpng-1.2.5-r4
-		>=media-libs/gd-1.8.3-r5
+		>=media-libs/gd-1.8.3-r5[jpeg,png]
 		lighttpd? ( www-servers/lighttpd dev-lang/php[cgi] )
 		apache2? ( || ( dev-lang/php[apache2] dev-lang/php[cgi] ) )
 	)
@@ -32,16 +30,6 @@ want_apache2
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	# Check if gd has been compiled with jpeg and png support
-	if use web; then
-		if ! built_with_use media-libs/gd jpeg png; then
-			eerror "Your gd has been compiled without jpeg and/or png support."
-			eerror "Please re-emerge gd:"
-			eerror "# USE="jpeg png" emerge gd"
-			die "pkg_setup failed"
-		fi
-	fi
-
 	enewgroup nagios
 	enewuser nagios -1 /bin/bash /var/nagios/home nagios
 }
