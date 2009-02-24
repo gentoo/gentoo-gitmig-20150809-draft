@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.4 2009/01/25 17:05:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.5 2009/02/24 15:27:24 drizzt Exp $
 
 # As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
 # used to limit usage of unsupported packages.
@@ -33,3 +33,7 @@ dev-util/byacc
 # Javier Villavicencio <the_paya@gentoo.org> (22 Jan 2009)
 # We are the bleeding edge here.
 ->=sys-apps/portage-2.2_pre
+
+# Timothy Redaelli <drizzt@gentoo.org> (24 Feb 2009)
+# Temporary mask for bug #260048
+=sys-libs/readline-6.0
