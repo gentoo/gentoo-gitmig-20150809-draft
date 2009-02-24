@@ -1,6 +1,11 @@
 # ChangeLog for games-util/etswitch
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/etswitch/ChangeLog,v 1.3 2008/11/24 16:27:49 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/etswitch/ChangeLog,v 1.4 2009/02/24 19:08:21 mr_bones_ Exp $
+
+  24 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/etswitch-0.1.14-glibc.patch, etswitch-0.1.14.ebuild:
+  EAPI=2; fix building with newer glibc (patch submitted by Michał Górny via
+  bug #260111)
 
   24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
   Re-assign to games herd.
