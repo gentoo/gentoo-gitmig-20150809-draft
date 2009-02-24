@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.0.ebuild,v 1.3 2009/02/23 00:56:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.0.ebuild,v 1.4 2009/02/24 08:57:47 kumba Exp $
 
 inherit autotools eutils multilib toolchain-funcs flag-o-matic
 
@@ -67,17 +67,21 @@ src_compile() {
 	econf --with-curses || die
 	emake || die
 
-	cd examples/rlfe
-	append-ldflags -Lreadline
-	econf || die
-	emake || die "make rlfe failed"
+	if ! tc-is-cross-compiler ; then
+		cd examples/rlfe
+		append-ldflags -Lreadline
+		econf || die
+		emake || die "make rlfe failed"
+	fi
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
 	gen_usr_ldscript -a readline history #4411
 
-	dobin examples/rlfe/rlfe || die
+	if ! tc-is-cross-compiler; then
+		dobin examples/rlfe/rlfe || die
+	fi
 
 	dodoc CHANGELOG CHANGES README USAGE NEWS
 	docinto ps
