@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gmpy
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.7 2008/09/12 13:20:35 sbriesen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.8 2009/02/24 21:05:29 grozin Exp $
+
+*gmpy-1.04 (24 Feb 2009)
+
+  24 Feb 2009; Andrey Grozin <grozin@gentoo.org> +gmpy-1.04.ebuild:
+  Version bump. src_test added.
 
   12 Sep 2008; Stefan Briesenick <sbriesen@gentoo.org> -gmpy-1.0.ebuild:
   removed old version
