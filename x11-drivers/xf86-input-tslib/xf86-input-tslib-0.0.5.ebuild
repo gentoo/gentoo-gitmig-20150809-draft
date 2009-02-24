@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.5.ebuild,v 1.1 2008/11/01 21:30:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.5.ebuild,v 1.2 2009/02/24 18:02:46 armin76 Exp $
 
 # Based on xf86-input-synaptics ebuild
 
@@ -9,7 +9,7 @@ inherit toolchain-funcs eutils linux-info x-modular
 DESCRIPTION="xorg input driver for use of tslib based touchscreen devices"
 HOMEPAGE="http://www.pengutronix.de/software/xf86-input-tslib/index_en.html"
 SRC_URI="http://www.pengutronix.de/software/${PN}/download/${P}.tar.bz2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 LICENSE="GPL-2"
 IUSE=""
 RDEPEND="x11-libs/tslib"
