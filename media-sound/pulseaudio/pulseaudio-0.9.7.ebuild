@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.7.ebuild,v 1.11 2009/01/02 21:14:14 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.7.ebuild,v 1.12 2009/02/24 11:16:21 flameeyes Exp $
 
 inherit eutils libtool # autotools
 
 DESCRIPTION="A networked sound server with an advanced plugin system"
-HOMEPAGE="http://0pointer.de/lennart/projects/pulseaudio/"
+HOMEPAGE="http://www.pulseaudio.org"
 SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
