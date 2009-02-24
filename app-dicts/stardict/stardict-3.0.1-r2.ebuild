@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-3.0.1-r2.ebuild,v 1.1 2009/02/18 22:45:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-3.0.1-r2.ebuild,v 1.2 2009/02/24 15:26:07 pva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -33,7 +33,7 @@ DEP="gnome? ( >=gnome-base/libbonobo-2.2.0
 
 RDEPEND="${DEP}
 	espeak? ( >=app-accessibility/espeak-1.29 )
-	festival? ( =app-accessibility/festival-1.96_beta )"
+	festival? ( ~app-accessibility/festival-1.96_beta )"
 
 DEPEND="${DEP}
 	>=dev-util/intltool-0.22
