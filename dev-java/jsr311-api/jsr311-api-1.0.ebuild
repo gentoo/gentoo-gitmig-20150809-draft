@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr311-api/jsr311-api-1.0.ebuild,v 1.1 2009/02/23 10:37:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr311-api/jsr311-api-1.0.ebuild,v 1.2 2009/02/24 17:45:49 mr_bones_ Exp $
 
 JAVA_PKG_IUSE="doc source"
 JAVA_PKG_STRICT=1
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="CDDL"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="test"
 
 DEPEND=">=virtual/jdk-1.5
 		test? ( dev-java/ant-junit =dev-java/junit-3* )"
