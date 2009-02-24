@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/jargon
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/jargon/ChangeLog,v 1.6 2007/03/17 23:02:17 chtekk Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/jargon/ChangeLog,v 1.7 2009/02/24 01:49:51 josejx Exp $
+
+  24 Feb 2009; Joseph Jezak <josejx@gentoo.org> jargon-1.1.0.ebuild:
+  Marked ~ppc for bug #229854.
 
   17 Mar 2007; Luca Longinotti <chtekk@gentoo.org> jargon-1.1.0.ebuild:
   Cleanup.
