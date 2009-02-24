@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p287-r5.ebuild,v 1.5 2009/02/23 18:11:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p287-r5.ebuild,v 1.6 2009/02/24 10:15:24 a3li Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -40,7 +40,10 @@ PDEPEND="emacs? ( app-emacs/ruby-mode )
 PROVIDE="virtual/ruby"
 
 pkg_setup() {
-	if use tk && ! (use threads == built_with_use dev-lang/tk threads) ; then
+	use tk || return
+
+	if (use threads && ! built_with_use dev-lang/tk threads) \
+		|| (! use threads && built_with_use dev-lang/tk threads) ; then
 		eerror
 		eerror "You have Tk support enabled."
 		eerror
