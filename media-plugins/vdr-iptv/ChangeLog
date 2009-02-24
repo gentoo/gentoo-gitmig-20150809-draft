@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-iptv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-iptv/ChangeLog,v 1.5 2008/03/30 13:12:38 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-iptv/ChangeLog,v 1.6 2009/02/24 00:34:51 zzam Exp $
+
+  24 Feb 2009; Matthias Schwarzott <zzam@gentoo.org> vdr-iptv-0.2.0.ebuild:
+  Switch to eapi2 so the built_with_use can be replaced by a proper
+  use-depend.
 
 *vdr-iptv-0.2.0 (30 Mar 2008)
 
