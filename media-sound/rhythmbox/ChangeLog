@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.134 2009/02/22 14:34:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.135 2009/02/24 17:24:29 josejx Exp $
+
+  24 Feb 2009; Joseph Jezak <josejx@gentoo.org> rhythmbox-0.11.6-r1.ebuild:
+  Marked ~ppc for bug #259906.
 
   22 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -files/rhythmbox-0.11.5-fix_gtk_doc.patch, -rhythmbox-0.11.5.ebuild,

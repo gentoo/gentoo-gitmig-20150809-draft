@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.6-r1.ebuild,v 1.2 2009/02/22 14:34:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.6-r1.ebuild,v 1.3 2009/02/24 17:24:29 josejx Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ inherit eutils gnome2 python multilib virtualx
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cdr daap dbus doc hal ipod gnome-keyring libnotify lirc musicbrainz mtp nsplugin python tagwriting test"
 
 # I want tagwriting to be on by default in the future. It is just a local flag
