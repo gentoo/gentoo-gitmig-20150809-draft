@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/booh
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.20 2008/08/04 23:31:34 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.21 2009/02/24 06:16:18 josejx Exp $
+
+  24 Feb 2009; Joseph Jezak <josejx@gentoo.org> booh-0.9.1.ebuild:
+  Marked ~ppc for bug #231068.
 
   04 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org> booh-0.9.1.ebuild:
   keyword ~amd64, bug #231065
