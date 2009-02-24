@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-augeas
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.1 2009/02/24 15:50:11 matsuu Exp $
+
+*ruby-augeas-0.2.0 (24 Feb 2009)
+
+  24 Feb 2009; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
+  +ruby-augeas-0.2.0.ebuild:
+  Initial import, bug #229361.
+
