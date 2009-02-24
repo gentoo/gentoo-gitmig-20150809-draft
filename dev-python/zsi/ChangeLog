@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/zsi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/ChangeLog,v 1.8 2008/08/06 18:24:59 neurogeek Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/ChangeLog,v 1.9 2009/02/24 01:37:45 josejx Exp $
+
+  24 Feb 2009; Joseph Jezak <josejx@gentoo.org> zsi-2.0.ebuild:
+  Marked ~ppc for bug #222011.
 
   06 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

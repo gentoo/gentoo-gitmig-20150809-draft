@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tagpy
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.22 2008/07/10 14:40:26 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.23 2009/02/24 01:37:10 josejx Exp $
+
+  24 Feb 2009; Joseph Jezak <josejx@gentoo.org> tagpy-0.94.5.ebuild:
+  Marked ~ppc for bug #222011.
 
   10 Jul 2008; Brent Baude <ranger@gentoo.org> tagpy-0.94.5.ebuild:
   stable ppc64, bug 230937
