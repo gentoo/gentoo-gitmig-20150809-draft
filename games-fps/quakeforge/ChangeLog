@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quakeforge
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.19 2008/02/15 01:12:38 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/ChangeLog,v 1.20 2009/02/24 22:19:00 mr_bones_ Exp $
+
+  24 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  quakeforge-0.5.5-r2.ebuild:
+  EAPI=2
 
   15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   quakeforge-0.5.5.ebuild:
