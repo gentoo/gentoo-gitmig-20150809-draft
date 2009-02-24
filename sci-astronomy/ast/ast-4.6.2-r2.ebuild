@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ast-4.6.2-r2.ebuild,v 1.1 2009/02/23 17:31:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ast-4.6.2-r2.ebuild,v 1.2 2009/02/24 16:43:11 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils versionator
@@ -15,7 +15,6 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 RDEPEND="sci-libs/pgplot"
 DEPEND="${RDEPEND}"
-
 
 S="${WORKDIR}/${MYP}"
 
