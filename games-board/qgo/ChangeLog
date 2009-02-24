@@ -1,6 +1,10 @@
 # ChangeLog for games-board/qgo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.32 2008/07/27 20:51:02 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.33 2009/02/24 21:20:04 mr_bones_ Exp $
+
+  24 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org> qgo-1.5.4.ebuild,
+  qgo-1.5.4_p3.ebuild:
+  EAPI=2; autotools eclass isn't needed
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qgo-1.5.4.ebuild:
   QA: Get rid of deprecated qt_min_version().
