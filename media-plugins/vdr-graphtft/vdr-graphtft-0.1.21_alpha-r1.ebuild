@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.21_alpha-r1.ebuild,v 1.1 2009/02/24 00:14:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.21_alpha-r1.ebuild,v 1.2 2009/02/24 18:05:21 hd_brummy Exp $
 
 EAPI="2"
 MY_PV="${PV/_alpha/.alpha}"
@@ -9,7 +9,7 @@ MY_P="${PN}-${MY_PV}"
 inherit vdr-plugin
 
 DESCRIPTION="VDR plugin: GraphTFT"
-HOMEPAGE="http://www.vdr-wiki.de/wiki/index.php/Graphtft-plugin (german)"
+HOMEPAGE="http://www.vdr-wiki.de/wiki/index.php/Graphtft-plugin"
 SRC_URI="http://www.jwendel.de/vdr/${MY_P}.tar.bz2
 		http://www.jwendel.de/vdr/DeepBlue-horchi-0.0.8.tar.bz2"
 
