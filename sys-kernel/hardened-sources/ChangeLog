@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.284 2009/02/04 17:22:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.285 2009/02/24 05:32:01 gengor Exp $
+
+*hardened-sources-2.6.27-r8 (24 Feb 2009)
+
+  24 Feb 2009; Gordon Malm <gengor@gentoo.org>
+  +hardened-sources-2.6.27-r8.ebuild:
+  Bump to latest genpatches, Linux 2.6.27.19, PaX updates. Fixes bug #256067
+  and probably more.
 
   04 Feb 2009; nixnut <nixnut@gentoo.org> hardened-sources-2.6.26-r9.ebuild:
   ppc stable
