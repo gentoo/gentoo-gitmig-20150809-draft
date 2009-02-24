@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.610 2009/02/21 22:56:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.611 2009/02/24 22:56:33 kumba Exp $
+
+  24 Feb 2009; Joshua Kinard <kumba@gentoo.org>
+  glibc-2.9_p20081201-r2.ebuild:
+  Add ~mips to KEYWORDS
 
   21 Feb 2009; Mike Frysinger <vapier@gentoo.org>
   glibc-2.9_p20081201-r2.ebuild:
