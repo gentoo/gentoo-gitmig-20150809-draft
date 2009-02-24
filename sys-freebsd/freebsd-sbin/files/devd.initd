@@ -41,7 +41,7 @@ stop() {
 	sysctl hw.bus.devctl_disable=1 >/dev/null
 	start-stop-daemon --stop --exec /sbin/devd \
 		--pidfile /var/run/devd.pid
-	eend $? $"Failed to stop devd"
+	eend $? "Failed to stop devd"
 }
 
 # vim: ts=4 :
