@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.51 2009/02/05 20:50:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.52 2009/02/24 17:43:06 drizzt Exp $
+
+  24 Feb 2009; Timothy Redaelli <drizzt@gentoo.org> files/syscons.initd:
+  Fix bashism
 
 *freebsd-usbin-7.1-r1 (05 Feb 2009)
 
