@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/flightgear
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.35 2008/09/20 12:44:47 gentoofan23 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.36 2009/02/24 17:14:18 josejx Exp $
+
+  24 Feb 2009; Joseph Jezak <josejx@gentoo.org> flightgear-1.0.0.ebuild:
+  Marked ppc stable for bug #217505.
 
   20 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org>
   flightgear-1.0.0.ebuild:
