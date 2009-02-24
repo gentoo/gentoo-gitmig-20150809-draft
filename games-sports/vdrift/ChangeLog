@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/vdrift
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.5 2008/08/24 21:03:58 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.6 2009/02/24 00:45:11 mr_bones_ Exp $
+
+  24 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  vdrift-20080805.ebuild:
+  EAPI=2; pass -j from MAKEOPTS to scons
 
 *vdrift-20080805 (24 Aug 2008)
 
