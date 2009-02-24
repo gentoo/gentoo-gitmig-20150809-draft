@@ -1,0 +1,10 @@
+# ChangeLog for dev-games/openscenegraph
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.1 2009/02/24 13:26:59 tupone Exp $
+
+*openscenegraph-2.8.0 (24 Feb 2009)
+
+  24 Feb 2009; Alfredo Tupone <tupone@gentoo.org> +metadata.xml,
+  +openscenegraph-2.8.0.ebuild:
+  Package added. Release 2.8.0. Reference to bug #91526
+
