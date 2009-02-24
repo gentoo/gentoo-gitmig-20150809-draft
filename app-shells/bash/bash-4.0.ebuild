@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0.ebuild,v 1.4 2009/02/24 05:01:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0.ebuild,v 1.5 2009/02/24 17:18:28 vapier Exp $
 
 EAPI="1"
 
@@ -67,7 +67,6 @@ src_unpack() {
 	if ! use vanilla ; then
 		epatch "${FILESDIR}"/${PN}-3.2-parallel-build.patch #189671
 		epatch "${FILESDIR}"/${PN}-4.0-ldflags-for-build.patch #211947
-		epatch "${FILESDIR}"/${PN}-3.2-process-subst.patch
 		epatch "${FILESDIR}"/${PN}-4.0-comsub-backslash-metacharacters.patch
 		epatch "${FILESDIR}"/${PN}-4.0-save-current-token.patch
 		epatch "${FILESDIR}"/${PN}-4.0-exit-checkjobs.patch
