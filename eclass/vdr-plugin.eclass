@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.66 2009/02/23 23:46:31 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.67 2009/02/24 00:26:25 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -443,6 +443,7 @@ vdr-plugin_src_unpack() {
 }
 
 vdr-plugin_src_prepare() {
+	base_src_prepare
 	vdr-plugin_src_util all_but_unpack
 }
 
