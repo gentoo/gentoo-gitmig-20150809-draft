@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/files/ypbind.initd,v 1.5 2007/08/15 17:54:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/files/ypbind.initd,v 1.6 2009/02/24 17:25:01 drizzt Exp $
 
 depend() {
 	need net portmap
@@ -19,7 +19,7 @@ start() {
 		notfound=1
 		for i in 0 1 2 3 4 5 6 7 8 9
 		do
-			ypwhich &>/dev/null && { notfound=0; break; }
+			ypwhich >/dev/null 2>&1 && { notfound=0; break; }
 			sleep 1
 		done
 		if [ $notfound -eq 1 ] ; then
