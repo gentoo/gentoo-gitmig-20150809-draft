@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.219 2009/02/24 16:01:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.220 2009/02/24 18:28:01 klausman Exp $
+
+  24 Feb 2009; Tobias Klausmann <klausman@gentoo.org> busybox-1.13.2.ebuild:
+  Stable on alpha, bug #260138
 
   24 Feb 2009; Mike Frysinger <vapier@gentoo.org>
   +files/busybox-1.13.2-depmod.patch, +files/busybox-1.13.2-init.patch,
