@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.16 2009/01/22 05:46:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.17 2009/02/24 19:29:34 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE="timidity zlib"
 
 RDEPEND="media-libs/libsdl
-	media-libs/sdl-mixer[vorbis]
+	media-libs/sdl-mixer[vorbis,timidity?]
 	media-libs/smpeg
 	media-libs/libogg
 	media-libs/libvorbis
