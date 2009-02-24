@@ -1,16 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.2-r2.ebuild,v 1.1 2009/02/23 14:00:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.2-r2.ebuild,v 1.2 2009/02/24 22:00:44 voyageur Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="acl authfile ban case clamav deflate hardened ifsession ipv6 ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
+IUSE="acl authfile ban case clamav deflate hardened ifsession ipv6 kerberos ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
 
 CASE_VER="0.3"
 CLAMAV_VER="0.10"
 DEFLATE_VER="0.3.1"
+MODGSS_VER="1.3.1"
 SHAPER_VER="0.6.5"
 VROOT_VER="0.8.3"
 
@@ -20,18 +21,21 @@ SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/}.tar.bz2
 		case? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-case-${CASE_VER}.tar.gz )
 		clamav? ( http://www.thrallingpenguin.com/resources/mod_clamav-${CLAMAV_VER}.tar.gz )
 		deflate? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-deflate-${DEFLATE_VER}.tar.gz )
+		kerberos? ( mirror://sourceforge/gssmod/mod_gss-${MODGSS_VER}.tar.gz )
 		shaper? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-shaper-${SHAPER_VER}.tar.gz )
 		vroot? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-vroot-${VROOT_VER}.tar.gz )"
 
 HOMEPAGE="http://www.proftpd.org/
 		http://www.castaglia.org/proftpd/
-		http://www.thrallingpenguin.com/resources/mod_clamav.htm"
+		http://www.thrallingpenguin.com/resources/mod_clamav.htm
+		http://gssmod.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 		clamav? ( app-antivirus/clamav )
+		kerberos? ( || ( app-crypt/mit-krb5 app-crypt/heimdal ) )
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		mysql? ( virtual/mysql )
 		ncurses? ( sys-libs/ncurses )
@@ -65,6 +69,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-parallel-build.patch
 	# Fix mysql include when both backends are enabled
 	epatch "${FILESDIR}"/${P}-mysql-include.patch
+	# Do not use bundled libltdl when compiling mod_dso
+	epatch "${FILESDIR}"/${P}-system-libltdl.patch
 
 	# Fix stripping of files
 	sed -e "s| @INSTALL_STRIP@||g" -i Make*
@@ -85,6 +91,10 @@ src_unpack() {
 		unpack ${PN}-mod-deflate-${DEFLATE_VER}.tar.gz
 		cp -f mod_deflate/mod_deflate.c contrib/
 		cp -f mod_deflate/mod_deflate.html doc/
+	fi
+
+	if use kerberos ; then
+		unpack mod_gss-${MODGSS_VER}.tar.gz
 	fi
 
 	if use shaper ; then
@@ -184,6 +194,23 @@ src_compile() {
 		myconf="${myconf} --disable-auth-unix"
 	else
 		myconf="${myconf} --enable-auth-unix"
+	fi
+
+	if use kerberos ; then
+		cd "${S}"/mod_gss-${MODGSS_VER}
+		# Generate source files for installed virtual/krb5 provider
+		if has_version app-crypt/mit-krb5; then
+			econf --enable-mit
+		else
+			econf --enable-heimdal
+		fi
+		cd "${S}"
+		# copy the generated files
+		cp -f mod_gss-${MODGSS_VER}/mod_gss.c contrib/
+		cp -f mod_gss-${MODGSS_VER}/mod_gss.h include/
+		cp -f mod_gss-${MODGSS_VER}/mod_auth_gss.c contrib/
+
+		myconf="${myconf} --enable-dso  --with-shared=mod_gss:mod_auth_gss"
 	fi
 
 	LIBS="${mylibs}" econf \
