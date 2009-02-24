@@ -1,6 +1,9 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.28 2009/02/24 15:16:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.29 2009/02/24 18:13:28 hwoarang Exp $
+
+  24 Feb 2009; Markos Chandras <hwoarang@gentoo.org> griffith-9999:
+  Dropping keywords from live ebuild
 
 *griffith-0.9.9 (24 Feb 2009)
 

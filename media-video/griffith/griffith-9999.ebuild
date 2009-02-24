@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-9999.ebuild,v 1.1 2008/08/16 12:28:33 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-9999.ebuild,v 1.2 2009/02/24 18:13:28 hwoarang Exp $
 
 EAPI="1"
 ESVN_REPO_URI="http://svn.berlios.de/svnroot/repos/griffith/trunk"
@@ -14,7 +14,7 @@ HOMEPAGE="http://griffith.berlios.de/"
 SRC_URI="mirror://berlios/griffith/${PN}-extra-artwork-${ARTWORK_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS=""
 IUSE="csv doc spell"
 
 RDEPEND="dev-python/imaging
