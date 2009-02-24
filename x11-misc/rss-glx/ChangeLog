@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.62 2009/02/01 05:12:54 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.63 2009/02/24 01:48:54 dirtyepic Exp $
+
+  24 Feb 2009; Ryan Hill <dirtyepic@gentoo.org> rss-glx-0.8.1-r5.ebuild:
+  Lock kde deps to 3
 
 *rss-glx-0.8.1-r5 (01 Feb 2009)
 

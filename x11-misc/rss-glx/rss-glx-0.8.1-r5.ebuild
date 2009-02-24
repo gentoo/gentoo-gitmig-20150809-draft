@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r5.ebuild,v 1.1 2009/02/01 05:12:54 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r5.ebuild,v 1.2 2009/02/24 01:48:54 dirtyepic Exp $
 
 inherit flag-o-matic eutils autotools multilib
 
@@ -18,8 +18,8 @@ IUSE="kde openal xscreensaver"
 RDEPEND="${RDEPEND}
 	virtual/opengl
 	media-libs/glew
-	>=media-gfx/imagemagick-5.5.7
-	kde? ( || ( kde-base/kdeartwork-kscreensaver kde-base/kdeartwork ) )
+	>=media-gfx/imagemagick-6.2
+	kde? ( || ( =kde-base/kdeartwork-kscreensaver-3* =kde-base/kdeartwork-3* ) )
 	!kde? ( >=x11-misc/xscreensaver-5 )
 	xscreensaver? ( >=x11-misc/xscreensaver-5 )
 	openal? ( media-libs/openal )"
