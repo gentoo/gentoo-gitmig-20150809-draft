@@ -1,6 +1,14 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.192 2009/02/11 08:49:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.193 2009/02/24 16:59:08 dang Exp $
+
+*epiphany-2.22.3-r12 (24 Feb 2009)
+*epiphany-2.22.3-r2 (24 Feb 2009)
+
+  24 Feb 2009; Daniel Gryniewicz <dang@gentoo.org>
+  +files/epiphany-2.22.3-CVE-2008-5985.patch, +epiphany-2.22.3-r2.ebuild,
+  +epiphany-2.22.3-r12.ebuild:
+  Sanitize python path. bug #257000
 
   11 Feb 2009; Alexis Ballier <aballier@gentoo.org> epiphany-2.24.3.ebuild:
   keyword ~x86-fbsd
