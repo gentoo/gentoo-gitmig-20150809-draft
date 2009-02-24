@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.5 2009/01/04 18:17:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.6 2009/02/24 06:31:31 josejx Exp $
+
+  24 Feb 2009; Joseph Jezak <josejx@gentoo.org> foolscap-0.3.1.ebuild:
+  Marked ~ppc for bug #242292.
 
   04 Jan 2009; Raúl Porcel <armin76@gentoo.org> foolscap-0.3.1.ebuild:
   Add ~s390 wrt #242292
