@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.9 2009/02/23 20:49:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.10 2009/02/24 07:18:36 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -86,9 +86,6 @@ src_unpack() {
 		find . -type f -print0 | xargs -0 touch -r configure
 	done
 	cd "${S}"
-
-	epatch "${FILESDIR}"/${PN}-readsector.patch
-	epatch "${FILESDIR}"/${PN}-fribidi.patch
 
 	# Fix XBMC's final version string showing as "exported"
 	# instead of the SVN revision number.  Also cleanup flags.
