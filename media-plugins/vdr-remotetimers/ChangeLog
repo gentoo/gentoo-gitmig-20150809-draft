@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-remotetimers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remotetimers/ChangeLog,v 1.5 2009/02/23 15:33:40 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remotetimers/ChangeLog,v 1.6 2009/02/24 17:40:56 hd_brummy Exp $
+
+  24 Feb 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-remotetimers-0.1.1-Makefile.diff,
+  vdr-remotetimers-0.1.1.ebuild:
+  added makefile-fix to install locales, thanks to T.Reinhold
 
 *vdr-remotetimers-0.1.1 (23 Feb 2009)
 
