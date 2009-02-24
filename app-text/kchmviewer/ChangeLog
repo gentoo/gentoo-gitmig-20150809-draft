@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.9 2009/02/10 21:13:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.10 2009/02/24 19:31:32 josejx Exp $
+
+  24 Feb 2009; Joseph Jezak <josejx@gentoo.org> kchmviewer-4.0-r1.ebuild:
+  Marked ~ppc for bug #244326.
 
 *kchmviewer-4.0-r1 (10 Feb 2009)
 
