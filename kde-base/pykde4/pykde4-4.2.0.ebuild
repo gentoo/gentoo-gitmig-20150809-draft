@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.2.0.ebuild,v 1.3 2009/02/06 00:00:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.2.0.ebuild,v 1.4 2009/02/24 03:29:50 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -22,6 +22,7 @@ DEPEND="
 		>=kde-base/nepomuk-${PV}:${SLOT}
 	)
 "
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i -e's/MACRO_OPTIONAL_FIND_PACKAGE(KdepimLibs)//'\

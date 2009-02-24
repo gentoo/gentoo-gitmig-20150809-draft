@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.5 2009/02/06 00:00:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.6 2009/02/24 03:29:50 jmbsvicetto Exp $
+
+  24 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Fixed a typo in nepomuk - thanks to Josh Sled <jsled@asynchronous.org> for
+  the heads up. Explicitely assign DEPEND to RDEPEND.
 
   05 Feb 2009; Brent Baude <ranger@gentoo.org> pykde4-4.2.0.ebuild:
   Marking pykde4-4.2.0 ~ppc64 for bug 257421
