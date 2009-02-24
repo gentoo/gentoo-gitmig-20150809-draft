@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.198 2009/02/23 05:52:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.199 2009/02/24 05:01:02 vapier Exp $
+
+  24 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/bash-4.0-exit-checkjobs.patch,
+  +files/bash-4.0-negative-return.patch,
+  +files/bash-4.0-save-current-token.patch, bash-4.0.ebuild:
+  Add fixes from upstream.
 
   23 Feb 2009; Mike Frysinger <vapier@gentoo.org>
   +files/bash-4.0-comsub-backslash-metacharacters.patch, bash-4.0.ebuild:
