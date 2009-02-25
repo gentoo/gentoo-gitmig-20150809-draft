@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.54 2009/02/23 13:43:02 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.55 2009/02/25 21:55:30 maekke Exp $
+
+  25 Feb 2009; Markus Meier <maekke@gentoo.org> texmaker-1.80.ebuild:
+  amd64/x86 stable, bug #259592
 
   23 Feb 2009; Ferris McCormick <fmccor@gentoo.org> texmaker-1.80.ebuild:
   Sparc stable, Bug #259592.
