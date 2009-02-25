@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.152.0.ebuild,v 1.1 2009/01/07 13:50:16 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.159.0.ebuild,v 1.1 2009/02/25 19:41:34 lack Exp $
 
 inherit nsplugins
 
@@ -16,7 +16,7 @@ RESTRICT="strip mirror"
 
 S=${WORKDIR}
 
-DEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs
+RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs
 			app-emulation/emul-linux-x86-gtklibs
 			app-emulation/emul-linux-x86-soundlibs
 			 app-emulation/emul-linux-x86-xlibs )
@@ -26,7 +26,7 @@ DEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs
 		=x11-libs/gtk+-2*
 		media-libs/freetype
 		media-libs/fontconfig )
-	media-fonts/corefonts"
+	|| ( media-fonts/freefont-ttf media-fonts/corefonts )"
 
 pkg_setup() {
 	# This is a binary x86 package => ABI=x86
