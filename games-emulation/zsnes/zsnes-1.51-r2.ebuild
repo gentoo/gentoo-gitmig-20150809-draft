@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r2.ebuild,v 1.3 2009/02/25 17:10:09 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r2.ebuild,v 1.4 2009/02/25 17:16:56 drizzt Exp $
 
 inherit eutils autotools flag-o-matic toolchain-funcs multilib games
 
@@ -39,7 +39,7 @@ src_unpack() {
 	# Fix bug #170108
 	epatch "${FILESDIR}"/${P}-depbuild.patch
 	# Fix bug #260247
-	epatch "${FILESDIR}"/${P}-makefile.dep.patch
+	epatch "${FILESDIR}"/${P}-CC-quotes.patch
 
 	# Remove hardcoded CFLAGS and LDFLAGS
 	sed -i \
