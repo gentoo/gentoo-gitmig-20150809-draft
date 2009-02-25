@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/xfburn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.13 2009/01/30 17:11:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.14 2009/02/25 11:27:16 angelos Exp $
+
+*xfburn-0.4.1 (25 Feb 2009)
+
+  25 Feb 2009; Christoph Mende <angelos@gentoo.org> +xfburn-0.4.1.ebuild:
+  Version bump
 
   30 Jan 2009; Christoph Mende <angelos@gentoo.org> xfburn-0.4.0.ebuild:
   Added missing gst-plugins-base dependency
