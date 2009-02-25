@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.8.0.ebuild,v 1.1 2009/02/04 14:17:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.8.0.ebuild,v 1.2 2009/02/25 13:43:06 gentoofan23 Exp $
 
 inherit eutils
 
@@ -57,7 +57,7 @@ src_install() {
 
 	# Filename of sample conf - use live filename if available
 	local sample=${PN}.conf
-	[[ -e "${ROOT}/etc/${PN}/${sample}" ]] && sample="${sample}.sample"
+	[[ -e "/etc/${PN}/${sample}" ]] && sample="${sample}.sample"
 	insinto /etc/${PN}
 	insopts -m 0640 -o root -g ${PN}
 	newins sample-etc_${PN}.conf "${sample}" || die "newins conf failed"
