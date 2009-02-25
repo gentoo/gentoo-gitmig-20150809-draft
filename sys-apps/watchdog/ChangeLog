@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/watchdog
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.24 2008/03/22 15:45:15 josejx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.25 2009/02/25 19:40:46 vapier Exp $
+
+*watchdog-5.5 (25 Feb 2009)
+
+  25 Feb 2009; Mike Frysinger <vapier@gentoo.org> +watchdog-5.5.ebuild:
+  Version bump.
 
   22 Mar 2008; Joseph Jezak <josejx@gentoo.org> watchdog-5.4.ebuild:
   Marked ppc stable for bug #213809.
