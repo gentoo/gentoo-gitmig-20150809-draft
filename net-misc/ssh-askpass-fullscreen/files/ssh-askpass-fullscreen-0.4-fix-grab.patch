@@ -1,0 +1,13 @@
+http://bugs.gentoo.org/260308
+
+--- ssh-askpass-fullscreen-0.4-orig/ssh-askpass-fullscreen.c	2006-01-16 13:49:38.000000000 +0100
++++ ssh-askpass-fullscreen-0.4/ssh-askpass-fullscreen.c	2009-02-25 22:44:47.000000000 +0100
+@@ -247,7 +247,7 @@
+ 	GdkColor color;
+ 	gchar *str;
+         GdkGrabStatus status;
+-        int grab_tries;
++        int grab_tries = 0;
+         const char *failed;
+         
+  	grab_server = (getenv("GNOME_SSH_ASKPASS_GRAB_SERVER") != NULL); 
