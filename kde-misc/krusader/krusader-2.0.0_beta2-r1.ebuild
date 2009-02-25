@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.0.0_beta2-r1.ebuild,v 1.1 2009/01/12 18:33:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.0.0_beta2-r1.ebuild,v 1.2 2009/02/25 21:38:58 hwoarang Exp $
 
 EAPI="2"
 
@@ -22,6 +22,12 @@ IUSE="debug htmlhandbook"
 DEPEND="!kdeprefix? ( !kde-misc/krusader:0 )
 	!kde-misc/krusader:4.1
 	sys-devel/gettext"
+
+RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/actionproperty-qt45.patch"
+)
 
 S="${WORKDIR}/${MY_P}"
 
