@@ -1,0 +1,12 @@
+# ChangeLog for x11-terms/yeahconsole
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/yeahconsole/ChangeLog,v 1.1 2009/02/25 17:01:49 jer Exp $
+
+*yeahconsole-0.3.4 (25 Feb 2009)
+
+  25 Feb 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/yeahconsole-0.3.4-make.patch, +metadata.xml,
+  +yeahconsole-0.3.4.ebuild:
+  Initial commit, thanks to Martín R. Dapás (bug #120112, partly based on
+  the ebuilds attached there).
+
