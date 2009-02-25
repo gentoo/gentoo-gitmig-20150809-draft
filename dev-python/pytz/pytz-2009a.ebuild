@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2008a.ebuild,v 1.2 2008/07/25 19:08:47 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2009a.ebuild,v 1.1 2009/02/25 10:56:45 bicatali Exp $
 
 NEED_PYTHON=2.3
-
-inherit distutils
+EAPI=2
+inherit eutils distutils
 
 DESCRIPTION="World Timezone Definitions for Python"
 HOMEPAGE="http://pytz.sourceforge.net/"
@@ -15,10 +15,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="!<=dev-python/matplotlib-0.82"
+RDEPEND=">=sys-libs/timezone-data-${PV}"
+DEPEND="${RDEPEND}"
 
 DOCS="CHANGES.txt"
 
+src_prepare() {
+	# use timezone-data zoneinfo
+	epatch "${FILESDIR}"/${PN}-2008i-zoneinfo.patch
+}
+
 src_test() {
 	PYTHONPATH=. "${python}" pytz/tests/test_tzinfo.py || die "test failed"
+}
+
+src_install() {
+	distutils_src_install
+	rm -rf "${D}"/usr/lib*/python*/site-packages/pytz/zoneinfo
 }
