@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.450 2009/02/16 20:13:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.451 2009/02/25 21:01:40 josejx Exp $
+
+  25 Feb 2009; Joseph Jezak <josejx@gentoo.org> kdebase-3.5.9-r4.ebuild:
+  Marked ppc stable for bug #258257.
 
   16 Feb 2009; Brent Baude <ranger@gentoo.org> kdebase-3.5.9-r4.ebuild:
   Marking kdebase-3.5.9-r4 ppc64 for bug 258257
