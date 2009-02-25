@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.61.2.ebuild,v 1.1 2009/02/24 23:30:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-0.61.2.ebuild,v 1.2 2009/02/25 07:02:42 yngwin Exp $
 
 EAPI="2"
 inherit flag-o-matic cmake-utils
@@ -22,10 +22,12 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_P}"
 DOCS="ChangeLog README TODO"
 
-src_compile() {
+src_prepare() {
+	if has_version '>=x11-libs/qt-gui-4.5.0_rc1'; then
+		sed -i "s/QStyleOptionTabV2/QStyleOptionTabV3/" "${S}"/style/qtcurve.cpp
+	fi
 	if use !kde ; then
 		append-cppflags "-DQTC_NO_KDE4_LINKING=true -DQTC_DISABLE_KDEFILEDIALOG_CALLS=true";
 		sed -i "s/find_package(KDE4)/#&/" "${S}"/CMakeLists.txt
 	fi
-	cmake-utils_src_compile
 }
