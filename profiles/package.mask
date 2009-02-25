@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9518 2009/02/25 17:08:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9519 2009/02/25 22:51:35 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,7 +39,7 @@ media-plugins/vdr-streamdev-server
 
 # Markus Meier <maekke@gentoo.org> (25 Feb 2009)
 # mask beta releases of media-gfx/hugin-0.8.0
->=media-gfx/hugin-0.8.0
+>=media-gfx/hugin-0.8.0_beta1
 
 # Joe Sapp <nixphoeni@gentoo.org> (22 Feb 2009)
 # These packages don't live on gdesklets.de any more,
