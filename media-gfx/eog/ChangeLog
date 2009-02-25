@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.227 2009/02/24 17:25:43 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.228 2009/02/25 20:06:54 maekke Exp $
+
+  25 Feb 2009; Markus Meier <maekke@gentoo.org> eog-2.22.3-r3.ebuild:
+  amd64/x86 stable, bug #257002
 
 *eog-2.22.3-r3 (24 Feb 2009)
 
