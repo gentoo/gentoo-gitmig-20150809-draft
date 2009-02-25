@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-sl/ispell-sl-0.5.3.ebuild,v 1.5 2008/11/23 17:35:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-sl/ispell-sl-0.5.3.ebuild,v 1.6 2009/02/25 13:16:34 josejx Exp $
 
 inherit rpm multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://nl.ijs.si/GNUsl/download/ispell/ispell-sl-0.5-3.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="app-text/ispell"
