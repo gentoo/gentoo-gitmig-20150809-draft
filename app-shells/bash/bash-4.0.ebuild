@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0.ebuild,v 1.8 2009/02/25 21:20:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0.ebuild,v 1.9 2009/02/25 21:54:25 vapier Exp $
 
 EAPI="1"
 
@@ -72,6 +72,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/${P}-save-current-token.patch
 		epatch "${FILESDIR}"/${P}-exit-checkjobs.patch
 		epatch "${FILESDIR}"/${P}-declare-identifier.patch
+		epatch "${FILESDIR}"/${P}-reset-parser-current-token.patch
 		epatch "${FILESDIR}"/${PN}-4.0-negative-return.patch
 		# Log bash commands to syslog #91327
 		if use bashlogger ; then

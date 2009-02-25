@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.203 2009/02/25 21:20:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.204 2009/02/25 21:54:25 vapier Exp $
+
+  25 Feb 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/bash-4.0-reset-parser-current-token.patch, bash-4.0.ebuild:
+  Add a fix for quotes from upstream.
 
   25 Feb 2009; Mike Frysinger <vapier@gentoo.org> bash-3.2_p39.ebuild,
   bash-3.2_p48.ebuild, bash-3.2_p48-r1.ebuild, bash-4.0.ebuild:
