@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.058.ebuild,v 1.1 2008/07/11 18:04:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-0.066.ebuild,v 1.1 2009/02/25 18:42:19 armin76 Exp $
 
 inherit autotools
 
