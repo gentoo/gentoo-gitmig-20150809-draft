@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.452 2009/02/23 16:30:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.453 2009/02/25 12:50:07 zzam Exp $
+
+  25 Feb 2009; Matthias Schwarzott <zzam@gentoo.org> udev-9999.ebuild:
+  Fix dialout permissions also for udev-9999 ebuild.
 
   23 Feb 2009; Matthias Schwarzott <zzam@gentoo.org>
   files/136/udev-postmount.initd:

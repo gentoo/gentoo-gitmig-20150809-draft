@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.6 2009/01/27 10:42:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.7 2009/02/25 12:50:07 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -93,14 +93,15 @@ src_unpack() {
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
-		-i rules/{rules.d,packages}/*.rules
+		-i rules/{rules.d,packages,gentoo}/*.rules \
+	|| die "failed to change group dialout to uucp"
 
 	if [[ ${PV} != 9999 ]]; then
 		# Make sure there is no sudden changes to upstream rules file
 		# (more for my own needs than anything else ...)
 		MD5=$(md5sum < "${S}/rules/rules.d/50-udev-default.rules")
 		MD5=${MD5/  -/}
-		if [[ ${MD5} != 7c7de0a29a2cf218dc43dd099cd3bfec ]]
+		if [[ ${MD5} != 980aeafcd2f2d057945cf3ddf2ae884e ]]
 		then
 			echo
 			eerror "50-udev-default.rules has been updated, please validate!"
