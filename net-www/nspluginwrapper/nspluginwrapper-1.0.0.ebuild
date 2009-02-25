@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.0.0.ebuild,v 1.2 2008/10/02 03:16:56 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-1.0.0.ebuild,v 1.3 2009/02/25 19:22:44 lack Exp $
 
 inherit eutils nsplugins flag-o-matic multilib
 
@@ -20,6 +20,26 @@ RDEPEND=">=x11-libs/gtk+-2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+autoinstall() {
+	if [[ -x /usr/bin/${PN} ]]; then
+		einfo "Auto installing 32bit plugins..."
+		${PN} -a -i
+		ls /usr/lib64/nsbrowser/plugins
+
+		# Remove wrappers if equivalent 64-bit plugins exist
+		# TODO: May be better to patch nspluginwrapper so it doesn't create
+		#       duplicate wrappers in the first place...
+		local DIR64="${ROOT}/usr/lib64/nsbrowser/plugins/"
+		for f in "${DIR64}"/npwrapper.*.so; do
+			local PLUGIN=${f##*/npwrapper.}
+			if [[ -f ${DIR64}/${PLUGIN} ]]; then
+				einfo "  Removing duplicate wrapper for native 64-bit ${PLUGIN}"
+				${PN} -r "${f}"
+			fi
+		done
+	fi
+}
+
 src_compile() {
 	econf --with-biarch \
 		--with-lib32=$(ABI=x86 get_libdir) \
@@ -38,8 +58,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Auto installing 32bit plugins..."
-	nspluginwrapper -a -i
+	autoinstall
 	elog "Any 32bit plugins you currently have installed have now been"
 	elog "configured to work in a 64bit browser. Any plugins you install in"
 	elog "the future will first need to be setup with:"
@@ -58,8 +77,5 @@ pkg_prerm() {
 }
 
 pkg_postrm() {
-	if [[ -x /usr/bin/nspluginwrapper ]]; then
-		einfo "Auto installing 32bit plugins..."
-		nspluginwrapper -a -i
-	fi
+	autoinstall
 }
