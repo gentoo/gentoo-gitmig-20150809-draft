@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.7 2009/02/23 15:31:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.8 2009/02/25 08:57:50 ulm Exp $
+
+  25 Feb 2009; Ulrich Mueller <ulm@gentoo.org> emacs-daemon-0.13.ebuild:
+  Remove check for daemon option in pkg_setup, use NEED_EMACS=23 instead.
 
 *emacs-daemon-0.13 (23 Feb 2009)
 
