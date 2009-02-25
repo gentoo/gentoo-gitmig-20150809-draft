@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-1.5-r1.ebuild,v 1.1 2009/01/16 09:44:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-1.5-r1.ebuild,v 1.2 2009/02/25 12:00:56 bicatali Exp $
 
 NEED_PYTHON=2.3
 EAPI=2
@@ -18,6 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 DEPEND="dev-lang/python[tk]
 	>=sci-libs/vtk-5[tk,python]"
+RDEPEND="${DEPEND}"
+
 RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
