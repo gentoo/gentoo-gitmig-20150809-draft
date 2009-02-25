@@ -22,7 +22,7 @@
  
  $(OBJECTS): $(SOURCES) 
 -	$(CC) $(FLAGS)  $(DEFINES) $(INCLUDES) $(LIB_DIRS) -c -o $@ $<
-+	$(CC) $(CFLAGS)  $(DEFINES) $(INCLUDES) $(LIB_DIRS) -c -o $@ $<
++	$(CC) $(CFLAGS) -Wall $(DEFINES) $(INCLUDES) $(LIB_DIRS) -c -o $@ $<
  
  clean:
  	rm -rf $(TARGET) $(OBJECTS)
