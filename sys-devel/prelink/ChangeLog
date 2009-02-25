@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.59 2009/02/16 10:42:23 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.60 2009/02/25 21:30:13 maekke Exp $
+
+  25 Feb 2009; Markus Meier <maekke@gentoo.org> prelink-20071009.ebuild:
+  amd64/x86 stable, bug #254201
 
   16 Feb 2009; Ferris McCormick <fmccor@gentoo.org> prelink-20071009.ebuild:
   Sparc stable, Bug #254201, all tests pass.
