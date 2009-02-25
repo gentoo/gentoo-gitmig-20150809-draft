@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libchewing
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/ChangeLog,v 1.14 2009/01/11 07:32:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/ChangeLog,v 1.15 2009/02/25 17:06:52 matsuu Exp $
+
+*libchewing-0.3.2 (25 Feb 2009)
+
+  25 Feb 2009; MATSUU Takuto <matsuu@gentoo.org> +libchewing-0.3.2.ebuild:
+  Version bumped.
 
 *libchewing-0.3.1 (11 Jan 2009)
 
