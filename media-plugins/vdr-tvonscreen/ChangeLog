@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-tvonscreen
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvonscreen/ChangeLog,v 1.7 2008/04/22 10:41:49 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvonscreen/ChangeLog,v 1.8 2009/02/25 15:52:56 zzam Exp $
+
+*vdr-tvonscreen-1.0.141-r2 (25 Feb 2009)
+
+  25 Feb 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-tvonscreen-1.0.141-logo-path.diff,
+  +vdr-tvonscreen-1.0.141-r2.ebuild:
+  Fix default logo path, to match the logos installed by
+  x11-themes/vdr-channel-logos, Bug #257842. Also rdepend on
+  vdr-channel-logos now.
 
 *vdr-tvonscreen-1.0.141-r1 (22 Apr 2008)
 
