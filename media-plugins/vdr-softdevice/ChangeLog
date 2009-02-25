@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.61 2009/02/18 21:29:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.62 2009/02/25 11:53:04 zzam Exp $
+
+  25 Feb 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-softdevice-0.5.0.20090218.ebuild:
+  Removed die in case mmx and mmxext are disabled, as it seems to compile
+  now in this case.
 
 *vdr-softdevice-0.5.0.20090218 (18 Feb 2009)
 

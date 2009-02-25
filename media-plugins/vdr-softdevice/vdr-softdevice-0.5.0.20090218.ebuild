@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.5.0.20090218.ebuild,v 1.1 2009/02/18 21:29:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.5.0.20090218.ebuild,v 1.2 2009/02/25 11:53:04 zzam Exp $
 
 EAPI=1
 
@@ -97,12 +97,6 @@ src_compile() {
 
 	use mmx || MYOPTS="${MYOPTS} --disable-mmx"
 	use mmxext || MYOPTS="${MYOPTS} --disable-mmx2"
-
-	if use !mmx && use !mmxext; then
-		ewarn "${PN}"' does not compile with USE="-mmx -mmxext".'
-		ewarn 'Please enable at least one of these two use-flags.'
-		die "${PN}"' does not compile with USE="-mmx -mmxext".'
-	fi
 
 	use xinerama || MYOPTS="${MYOPTS} --disable-xinerama"
 
