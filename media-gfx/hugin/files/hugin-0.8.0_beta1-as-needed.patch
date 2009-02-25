@@ -1,0 +1,39 @@
+diff -ru hugin-0.8.0.orig/src/foreign/jhead/CMakeLists.txt hugin-0.8.0/src/foreign/jhead/CMakeLists.txt
+--- hugin-0.8.0.orig/src/foreign/jhead/CMakeLists.txt	2009-02-25 00:33:09.000000000 +0100
++++ hugin-0.8.0/src/foreign/jhead/CMakeLists.txt	2009-02-25 00:35:44.000000000 +0100
+@@ -7,3 +7,5 @@
+ ELSE (${HUGIN_SHARED_LIBS})
+   add_library(huginjhead STATIC ${HUGIN_JHEAD_SRC})
+ ENDIF (${HUGIN_SHARED_LIBS})
++
++TARGET_LINK_LIBRARIES(huginjhead huginbase)
+diff -ru hugin-0.8.0.orig/src/foreign/levmar/CMakeLists.txt hugin-0.8.0/src/foreign/levmar/CMakeLists.txt
+--- hugin-0.8.0.orig/src/foreign/levmar/CMakeLists.txt	2009-02-25 00:33:09.000000000 +0100
++++ hugin-0.8.0/src/foreign/levmar/CMakeLists.txt	2009-02-25 00:36:08.000000000 +0100
+@@ -1,4 +1,6 @@
+ add_library(huginlevmar STATIC lm.c Axb.c misc.c lmlec.c lmbc.c)
+ IF (NOT MSVC)
+   set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
+-ENDIF (NOT MSVC)
+\ No newline at end of file
++ENDIF (NOT MSVC)
++
++SET_TARGET_PROPERTIES(huginlevmar PROPERTIES COMPILE_FLAGS -fPIC)
+diff -ru hugin-0.8.0.orig/src/foreign/vigra/vigra_impex/CMakeLists.txt hugin-0.8.0/src/foreign/vigra/vigra_impex/CMakeLists.txt
+--- hugin-0.8.0.orig/src/foreign/vigra/vigra_impex/CMakeLists.txt	2009-02-25 00:33:09.000000000 +0100
++++ hugin-0.8.0/src/foreign/vigra/vigra_impex/CMakeLists.txt	2009-02-25 00:34:48.000000000 +0100
+@@ -9,3 +9,5 @@
+ ELSE (${HUGIN_SHARED_LIBS})
+   add_library(huginvigraimpex STATIC ${VIGRA_IMPEX_SRC})
+ ENDIF (${HUGIN_SHARED_LIBS})
++
++TARGET_LINK_LIBRARIES(huginvigraimpex ${JPEG_LIBRARIES} ${OPENEXR_LIBRARIES} ${PNG_LIBRARIES} ${TIFF_LIBRARIES})
+diff -ru hugin-0.8.0.orig/src/hugin_base/CMakeLists.txt hugin-0.8.0/src/hugin_base/CMakeLists.txt
+--- hugin-0.8.0.orig/src/hugin_base/CMakeLists.txt	2009-02-25 00:33:08.000000000 +0100
++++ hugin-0.8.0/src/hugin_base/CMakeLists.txt	2009-02-25 00:33:54.000000000 +0100
+@@ -64,3 +64,5 @@
+ ENDIF (${HUGIN_SHARED_LIBS})
+ 
+ add_subdirectory(test)
++
++TARGET_LINK_LIBRARIES(huginbase huginlevmar huginvigraimpex ${Boost_thread_LIBRARIES} ${EXIV2_LIBRARIES} ${PANO_LIBRARIES} ${TIFF_LIBRARIES})
