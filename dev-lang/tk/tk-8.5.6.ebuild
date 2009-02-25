@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.6.ebuild,v 1.1 2009/01/17 13:34:39 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.6.ebuild,v 1.2 2009/02/25 15:17:11 armin76 Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/tcl/${MY_P}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug threads truetype"
 
 RDEPEND="x11-libs/libX11
