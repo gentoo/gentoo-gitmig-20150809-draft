@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.0.ebuild,v 1.1 2009/02/24 13:26:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.0.ebuild,v 1.2 2009/02/25 14:00:49 tupone Exp $
 
 EAPI=2
-inherit cmake-utils versionator
+inherit eutils versionator cmake-utils
 
 MY_PN="OpenSceneGraph"
 MY_P=${MY_PN}-${PV}
@@ -16,14 +16,16 @@ SRC_URI="http://www.openscenegraph.org/downloads/stable_releases/${MY_P_MAJOR}/s
 LICENSE="wxWinLL-3 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="xulrunner"
 
 RDEPEND="virtual/opengl
 	virtual/glu
 	net-misc/curl
-	net-libs/xulrunner
+	xulrunner? ( net-libs/xulrunner )
 	gnome-base/librsvg
 	media-libs/jpeg
+	media-libs/giflib
+	media-libs/tiff
 	app-text/poppler-bindings"
 
 DEPEND="${RDEPEND}
@@ -31,5 +33,14 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}"/${MY_P}
 
-mycmakeargs="-DBUILD_OSG_APPLICATIONS=OFF"
 DOCS="AUTHORS.txt ChangeLog NEWS.txt"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-magicoff.patch
+}
+
+src_configure() {
+	mycmakeargs="-DBUILD_OSG_APPLICATIONS=OFF"
+	mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable xulrunner XUL)"
+	cmake-utils_src_configure
+}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.1 2009/02/24 13:26:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.2 2009/02/25 14:00:49 tupone Exp $
+
+  25 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/openscenegraph-2.8.0-magicoff.patch, openscenegraph-2.8.0.ebuild:
+  Making xulrunner an optional dependency. Bug #260187 by Christian Schmitt
 
 *openscenegraph-2.8.0 (24 Feb 2009)
 

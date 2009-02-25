@@ -1,0 +1,21 @@
+--- CMakeLists.txt.old  2009-02-25 10:26:47.000000000 +0100
++++ CMakeLists.txt      2009-02-25 10:33:07.000000000 +0100
+@@ -287,6 +287,8 @@
+     INCLUDE(Find3rdPartyDependencies)
+ ENDIF(WIN32)
+ 
++OPTION(ENABLE_XUL "Enable plugin gecko if xulrunner is available" ON)
++
+ # Common to all platforms:
+ FIND_PACKAGE(FreeType)
+ FIND_PACKAGE(Inventor)
+@@ -302,7 +304,9 @@
+ FIND_PACKAGE(ITK)
+ FIND_PACKAGE(LibVNCServer)
+ FIND_PACKAGE(OurDCMTK)
++IF(ENABLE_XUL)
+ FIND_PACKAGE(XUL)
++ENDIF(ENABLE_XUL)
+ 
+ #use pkg-config to find various modues
+ INCLUDE(FindPkgConfig OPTIONAL)
