@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.4.ebuild,v 1.1 2009/02/24 23:48:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.4.ebuild,v 1.2 2009/02/25 01:30:25 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Real Time Strategy (RTS) game involving a brave army of globs"
@@ -16,7 +17,7 @@ IUSE=""
 RDEPEND="virtual/opengl
 	virtual/glu
 	>=dev-libs/boost-1.34
-	media-libs/libsdl
+	media-libs/libsdl[opengl]
 	media-libs/sdl-net
 	media-libs/sdl-ttf
 	media-libs/sdl-image
