@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ucl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.26 2008/02/21 13:58:00 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.27 2009/02/25 12:17:34 drizzt Exp $
+
+  25 Feb 2009; Timothy Redaelli <drizzt@gentoo.org> ucl-1.03.ebuild:
+  Add ~x86-fbsd keyword to upx-ucl (and deps)
 
   21 Feb 2008; Raúl Porcel <armin76@gentoo.org> ucl-1.03.ebuild:
   alpha/ia64/sparc/x86 stable
