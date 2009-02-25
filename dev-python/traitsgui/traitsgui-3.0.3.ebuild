@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/traitsgui-3.0.3.ebuild,v 1.1 2009/01/15 10:12:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsgui/traitsgui-3.0.3.ebuild,v 1.2 2009/02/25 12:03:17 bicatali Exp $
 
 EAPI=2
 inherit distutils
@@ -18,7 +18,8 @@ LICENSE="BSD"
 
 RDEPEND="dev-python/traits
 	qt4? ( dev-python/traitsbackendqt )
-	wxwindows? ( dev-python/traitsbackendwx )"
+	wxwindows? ( dev-python/traitsbackendwx )
+	!wxwindows? ( !qt4? ( dev-python/traitsbackendwx ) )"
 
 DEPEND="dev-python/setuptools
 	test? ( >=dev-python/nose-0.10.3 )"
