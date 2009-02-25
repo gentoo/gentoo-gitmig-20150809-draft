@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/revolution
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/revolution/ChangeLog,v 1.1 2008/03/31 18:42:42 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/revolution/ChangeLog,v 1.2 2009/02/25 14:10:12 josejx Exp $
+
+  25 Feb 2009; Joseph Jezak <josejx@gentoo.org> revolution-0.5.ebuild:
+  Marked ~ppc.
 
 *revolution-0.5 (31 Mar 2008)
 

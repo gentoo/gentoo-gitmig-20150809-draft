@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/imagesize
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imagesize/ChangeLog,v 1.1 2008/04/23 18:10:43 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imagesize/ChangeLog,v 1.2 2009/02/25 14:10:50 josejx Exp $
+
+  25 Feb 2009; Joseph Jezak <josejx@gentoo.org> imagesize-0.1.1.ebuild:
+  Marked ~ppc.
 
 *imagesize-0.1.1 (23 Apr 2008)
 
