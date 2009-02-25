@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/upx-ucl
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.15 2008/07/08 20:34:53 drizzt Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.16 2009/02/25 12:17:26 drizzt Exp $
+
+  25 Feb 2009; Timothy Redaelli <drizzt@gentoo.org> upx-ucl-3.03.ebuild:
+  Add ~x86-fbsd keyword to upx-ucl (and deps)
 
 *upx-ucl-3.03 (08 Jul 2008)
 
