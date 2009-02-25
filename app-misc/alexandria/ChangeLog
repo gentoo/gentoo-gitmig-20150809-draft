@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.24 2009/01/18 10:51:02 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.25 2009/02/25 14:14:26 josejx Exp $
+
+  25 Feb 2009; Joseph Jezak <josejx@gentoo.org> alexandria-0.6.3-r1.ebuild:
+  Marked ~ppc for bug #219053.
 
 *alexandria-0.6.3-r1 (18 Jan 2009)
 
