@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.122 2009/02/17 14:13:43 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.123 2009/02/25 21:05:48 josejx Exp $
+
+  25 Feb 2009; Joseph Jezak <josejx@gentoo.org> ksysguard-3.5.9-r1.ebuild:
+  Marked ppc/ppc64 stable for bug #258257.
 
   17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -ksysguard-4.1.4.ebuild:
   Drop KDE 4.1.4
