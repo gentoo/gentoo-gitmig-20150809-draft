@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/kiax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.15 2009/02/25 21:36:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.16 2009/02/25 21:40:11 maekke Exp $
+
+  25 Feb 2009; Markus Meier <maekke@gentoo.org> -files/configure.patch,
+  -kiax-0.8.5_p1.ebuild:
+  old
 
   25 Feb 2009; Markus Meier <maekke@gentoo.org> kiax-0.8.51-r1.ebuild:
   x86 stable, bug #258813
