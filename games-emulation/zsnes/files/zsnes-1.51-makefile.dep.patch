@@ -1,0 +1,11 @@
+--- zsnes_1_51/src/Makefile.in.orig	2009-02-25 18:02:07.000000000 +0100
++++ zsnes_1_51/src/Makefile.in	2009-02-25 18:02:19.000000000 +0100
+@@ -133,7 +133,7 @@
+ 
+ include makefile.dep
+ makefile.dep: $(TOOL_D)/depbuild Makefile
+-	$(TOOL_D)/depbuild @CC@ "@CFLAGS@" @NASMPATH@ "@NFLAGS@" $(Z_OBJS) > makefile.dep
++	$(TOOL_D)/depbuild "@CC@" "@CFLAGS@" @NASMPATH@ "@NFLAGS@" $(Z_OBJS) > makefile.dep
+ 
+ Makefile: Makefile.in config.status
+ 	./config.status

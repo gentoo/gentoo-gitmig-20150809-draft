@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.39 2009/02/02 16:41:45 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.40 2009/02/25 17:10:09 drizzt Exp $
+
+  25 Feb 2009; Timothy Redaelli <drizzt@gentoo.org>
+  +files/zsnes-1.51-makefile.dep.patch, zsnes-1.51-r2.ebuild:
+  Fix bug #257963 and #260247
 
   02 Feb 2009; <drizzt@gentoo.org> +files/zsnes-1.51-depbuild.patch,
   zsnes-1.51-r2.ebuild:

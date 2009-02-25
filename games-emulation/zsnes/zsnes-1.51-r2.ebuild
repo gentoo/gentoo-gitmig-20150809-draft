@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r2.ebuild,v 1.2 2009/02/02 16:41:45 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r2.ebuild,v 1.3 2009/02/25 17:10:09 drizzt Exp $
 
 inherit eutils autotools flag-o-matic toolchain-funcs multilib games
 
@@ -38,6 +38,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-libao-thread.patch
 	# Fix bug #170108
 	epatch "${FILESDIR}"/${P}-depbuild.patch
+	# Fix bug #260247
+	epatch "${FILESDIR}"/${P}-makefile.dep.patch
 
 	# Remove hardcoded CFLAGS and LDFLAGS
 	sed -i \
@@ -53,6 +55,8 @@ src_compile() {
 	tc-export CC
 	use amd64 && multilib_toolchain_setup x86
 	use custom-cflags || strip-flags
+
+	append-flags -U_FORTIFY_SOURCE	#257963
 
 	egamesconf \
 		$(use_enable ao libao) \
