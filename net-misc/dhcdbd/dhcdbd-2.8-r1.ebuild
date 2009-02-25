@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/dhcdbd-2.8-r1.ebuild,v 1.5 2007/08/28 14:35:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/dhcdbd-2.8-r1.ebuild,v 1.6 2009/02/25 20:55:25 rbu Exp $
 
 inherit eutils
 
@@ -15,24 +15,25 @@ IUSE=""
 
 DEPEND="sys-apps/dbus
 	>=net-misc/dhcp-3.0.3-r7"
+RDEPEND=${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-2.5-fixes.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-2.5-fixes.patch
 	# Commented out for the moment as I need to re-work this to make it cleaner.
-	#use debug && epatch ${FILESDIR}/${PN}-2.5-debug.patch
+	#use debug && epatch "${FILESDIR}"/${PN}-2.5-debug.patch
 
 	# Create a pidfile immediately after daemonizing so we're more robust
 	# with baselayout-2
-	epatch ${FILESDIR}/${P}-daemon.patch
+	epatch "${FILESDIR}"/${P}-daemon.patch
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README include/dhcp_options.h
-	newinitd ${FILESDIR}/dhcdbd.init dhcdbd
-	newconfd ${FILESDIR}/dhcdbd.confd dhcdbd
+	newinitd "${FILESDIR}"/dhcdbd.init dhcdbd
+	newconfd "${FILESDIR}"/dhcdbd.confd dhcdbd
 }
 
 pkg_postinst() {

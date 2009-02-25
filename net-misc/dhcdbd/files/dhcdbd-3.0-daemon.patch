@@ -19,7 +19,7 @@ diff -ruN dhcdbd-3.0.orig/src/dhcdbd.c dhcdbd-3.0/src/dhcdbd.c
 +        if (dhcdbd_daemonize && (daemon (0, 0) == -1))
 +                return errno;
 +               unlink (DHCDBD_PID_FILE);
-+        if ((fd = open (DHCDBD_PID_FILE, O_WRONLY | O_CREAT)) == -1)
++        if ((fd = open (DHCDBD_PID_FILE, O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR)) == -1)
 +                exit (errno);
 +        l = sprintf (path, "%u", getpid ());
 +        l = write (fd, path, l);
