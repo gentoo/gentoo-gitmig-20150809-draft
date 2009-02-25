@@ -7,15 +7,12 @@
     <name>Rajiv Aaron Manglani</name>
   </maintainer>
   <use>
-	<flag name="pri">Enables pri support (>=asterisk-1.0.1)</flag>
-	<flag name="ukcid">Enable UK callerid support</flag>
-	<flag name="zaptel">Enables zaptel support (>=asterisk-1.0.1)</flag>
+	<flag name="pri">Enables pri support</flag>
+	<flag name="zaptel">Enables zaptel support</flag>
     <flag name="bri">Enable ISDN BRI support (bristuff)</flag>
-    <flag name="genericjb">Enable experimental generic jitter buffer</flag>
     <flag name="h323">Build the H.323 channel driver bundled with Asterisk</flag>
     <flag name="lowmem">Build Asterisk for environments with low amounts of memory (embedded devices)</flag>
     <flag name="nosamples">Don't install sample sound and configuration files</flag>
     <flag name="osp">Enable support for the Open Settlement Protocol</flag>
-
   </use>
 </pkgmetadata>

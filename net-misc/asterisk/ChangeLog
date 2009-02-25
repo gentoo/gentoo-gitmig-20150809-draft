@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/asterisk
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.181 2008/08/16 15:58:45 tove Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.182 2009/02/25 23:17:19 rajiv Exp $
+
+  25 Feb 2009; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  -files/1.2.0/asterisk-1.2.0_beta-ukcid.patch,
+  -files/1.2.0/asterisk-1.2.13-memleaks.diff,
+  -files/1.2.0/asterisk-1.2.14-chan_sip.patch,
+  -files/1.2.0/asterisk-1.2.14-chan_sip2.patch,
+  -files/1.2.0/asterisk-1.2.17-h323-dumb-makefile.diff,
+  -asterisk-1.2.13.ebuild, -asterisk-1.2.13-r1.ebuild,
+  -asterisk-1.2.14.ebuild, -asterisk-1.2.14-r1.ebuild,
+  -asterisk-1.2.14-r2.ebuild, -asterisk-1.2.17.ebuild,
+  -asterisk-1.2.17-r1.ebuild, -asterisk-1.2.21.1.ebuild,
+  -asterisk-1.2.21.1-r1.ebuild:
+  remove old asterisk ebuilds.
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove stkn from metadata.xml (#27693)
