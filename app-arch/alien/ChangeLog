@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/alien
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.24 2009/02/22 16:13:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.25 2009/02/25 21:22:09 maekke Exp $
+
+  25 Feb 2009; Markus Meier <maekke@gentoo.org> alien-8.74.ebuild:
+  amd64/x86 stable, bug #249918
 
   22 Feb 2009; Tobias Klausmann <klausman@gentoo.org> alien-8.74.ebuild:
   Stable on alpha, bug #249918
