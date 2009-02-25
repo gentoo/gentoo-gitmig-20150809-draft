@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.229 2009/02/20 17:52:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.230 2009/02/25 20:39:16 maekke Exp $
+
+  25 Feb 2009; Markus Meier <maekke@gentoo.org> squid-2.7.6.ebuild:
+  amd64 stable, bug #257585
 
   20 Feb 2009; Raúl Porcel <armin76@gentoo.org> squid-3.0.13.ebuild:
   Change to ~arm, as it just segfaults on uclibc
