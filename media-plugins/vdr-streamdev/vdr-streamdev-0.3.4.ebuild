@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.3.4.ebuild,v 1.3 2008/06/25 21:38:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.3.4.ebuild,v 1.4 2009/02/25 15:21:31 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -16,6 +16,7 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.3.24
 	!media-plugins/vdr-streamdev-client
 	!media-plugins/vdr-streamdev-server"
+RDEPEND="${DEPEND}"
 
 EXTERNREMUX_PATH=/usr/share/vdr/streamdev/externremux.sh
 
