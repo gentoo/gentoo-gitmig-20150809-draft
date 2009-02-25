@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.53 2009/02/19 19:57:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.54 2009/02/25 15:27:09 ulm Exp $
+
+*org-mode-6.23b (25 Feb 2009)
+
+  25 Feb 2009; Ulrich Mueller <ulm@gentoo.org> org-mode-6.16c.ebuild,
+  org-mode-6.21b.ebuild, org-mode-6.22b.ebuild, +org-mode-6.23b.ebuild:
+  Version bump. Licence of documentation changed to FDL-1.3.
 
   19 Feb 2009; Ulrich Mueller <ulm@gentoo.org> -org-mode-6.05b.ebuild,
   -org-mode-6.20c.ebuild:
