@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.7.34.ebuild,v 1.1 2009/02/12 12:23:00 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.7.38.ebuild,v 1.1 2009/02/26 15:17:34 voxus Exp $
 
 inherit eutils ssl-cert
 
@@ -11,7 +11,7 @@ SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="addition debug fastcgi flv imap pcre perl ssl status sub webdav zlib"
+IUSE="addition debug fastcgi flv imap pcre perl random-index ssl status sub webdav zlib"
 
 DEPEND="dev-lang/perl
 	pcre? ( >=dev-libs/libpcre-4.2 )
@@ -54,6 +54,7 @@ src_compile() {
 	use status	&& myconf="${myconf} --with-http_stub_status_module"
 	use webdav	&& myconf="${myconf} --with-http_dav_module"
 	use sub		&& myconf="${myconf} --with-http_sub_module"
+	use random-index	&& myconf="${myconf} --with-http_random_index_module"
 
 	./configure \
 		--prefix=/usr \
