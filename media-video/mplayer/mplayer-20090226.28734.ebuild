@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-20090226.28734.ebuild,v 1.3 2009/02/26 22:31:11 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-20090226.28734.ebuild,v 1.4 2009/02/26 23:47:29 beandog Exp $
 
 EAPI="1"
 
@@ -480,7 +480,7 @@ src_compile() {
 	# Advanced Options #
 	#################
 	# Platform specific flags, hardcoded on amd64 (see below)
-	if use cpudetection || use bindist; then
+	if use cpudetection; then
 		myconf="${myconf} --enable-runtime-cpudetection"
 	fi
 
