@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ssh-askpass-fullscreen-0.4-r2.ebuild,v 1.1 2009/02/25 22:26:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ssh-askpass-fullscreen-0.4-r3.ebuild,v 1.1 2009/02/26 23:12:48 darkside Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -18,25 +20,21 @@ RDEPEND=">=x11-libs/gtk+-2.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	sed -i -e '2 s/$/$\(LDFLAGS\)/' Makefile || die "sed failed"
+	sed -i -e "s:gcc:$(tc-getCC) ${CFLAGS}:g" Makefile || die "sed failed"
 	epatch "${FILESDIR}/${P}-fix-grab.patch"
-	sed -i -e '2 s/$/$\(LDFLAGS\)/' Makefile
 }
 
 src_compile() {
-
-	sed "s:gcc:$(tc-getCC) ${CFLAGS}:g" \
-	-i Makefile
-
-	emake LDFLAGS="${LDFLAGS}" || \
-	die "compile failed"
+	emake LDFLAGS="${LDFLAGS}" || die "compile failed"
 }
 
 src_install() {
 	dobin ssh-askpass-fullscreen || die "dobin failed"
-	doenvd "${FILESDIR}"/99ssh_askpass || die "doenvd failed"
-	dodoc README AUTHORS
-	#doman debian/gtk2-ssh-askpass.1
+	echo "SSH_ASKPASS=/usr/bin/ssh-askpass-fullscreen" >> "${T}/99ssh_askpass" \
+		|| die "envd file creation failed"
+	doenvd "${T}"/99ssh_askpass || die "doenvd failed"
+	dodoc README AUTHORS ChangeLog || die "missing docs"
+	doman "${FILESDIR}"/ssh-askpass-fullscreen.1 || die "man page failed"
 }
