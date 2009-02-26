@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.63 2009/01/31 20:44:23 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.64 2009/02/26 19:25:08 beandog Exp $
+
+  26 Feb 2009; Steve Dibb <beandog@gentoo.org> package.use.mask:
+  Adjust dvdnav on media-video/mplayer; old versions require external masked
+  dep, newer support internal lib
 
   31 Jan 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   package.use.mask:
