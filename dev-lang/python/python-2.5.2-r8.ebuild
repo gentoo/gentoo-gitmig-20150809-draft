@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.2-r8.ebuild,v 1.8 2009/02/26 05:28:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.2-r8.ebuild,v 1.9 2009/02/26 05:55:39 vapier Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -57,7 +57,8 @@ src_unpack() {
 	cd "${S}"
 
 	if tc-is-cross-compiler ; then
-		epatch "${FILESDIR}"/python-2.4.4-test-cross.patch
+		epatch "${FILESDIR}"/python-2.4.4-test-cross.patch \
+			"${FILESDIR}"/python-2.5-cross-printf.patch
 	else
 		rm "${WORKDIR}/${PV}"/*_all_crosscompile.patch
 	fi
