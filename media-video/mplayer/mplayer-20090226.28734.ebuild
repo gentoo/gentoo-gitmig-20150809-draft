@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-20090226.28734.ebuild,v 1.1 2009/02/26 20:21:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-20090226.28734.ebuild,v 1.2 2009/02/26 20:42:55 beandog Exp $
 
 EAPI="1"
 
@@ -19,7 +19,7 @@ debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav dxr3 +enca +encode esd +
 teletext tga +theora +tremor +truetype unicode v4l v4l2 vdpau vidix +vorbis
 -win32codecs +X +x264 xanim xinerama +xscreensaver +xv +xvid +xvmc zoran"
 
-VIDEO_CARDS="s3virge mga tdfx vesa"
+VIDEO_CARDS="s3virge mga tdfx nvidia vesa"
 
 for x in ${VIDEO_CARDS}; do
 	IUSE="${IUSE} video_cards_${x}"
