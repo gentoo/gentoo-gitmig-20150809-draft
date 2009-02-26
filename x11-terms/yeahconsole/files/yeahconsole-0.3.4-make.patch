@@ -1,5 +1,5 @@
 --- yeahconsole-0.3.4/Makefile.orig	2006-01-14 16:54:05.000000000 +0100
-+++ yeahconsole-0.3.4/Makefile	2009-02-25 17:12:05.000000000 +0100
++++ yeahconsole-0.3.4/Makefile	2009-02-26 16:18:25.000000000 +0100
 @@ -1,6 +1,4 @@
  TARGET = yeahconsole
 -CC = gcc
@@ -7,22 +7,24 @@
  INSTALL = install
  
  PREFIX = /usr/local
-@@ -8,17 +6,15 @@
+@@ -8,17 +6,16 @@
  LIBS = -lX11 
  INCLUDES = -I/usr/X11R6/include 
  LIB_DIRS = -L/usr/X11R6/lib
 -FLAGS = -Os -Wall
++FLAGS = -Wall $(CFLAGS)
  
  OBJECTS := yeahconsole.o
  SOURCES := yeahconsole.c
  
  $(TARGET): $(OBJECTS) 
- 	$(CC) $(DEFINES) $(INCLUDES) $(LIB_DIRS) $(LIBS) -o $@ $<
+-	$(CC) $(DEFINES) $(INCLUDES) $(LIB_DIRS) $(LIBS) -o $@ $<
 -	strip $@
++	$(CC) $(FLAGS) $(LDFLAGS) $(DEFINES) $(INCLUDES) $(LIB_DIRS) $(LIBS) -o $@ $<
  
  $(OBJECTS): $(SOURCES) 
 -	$(CC) $(FLAGS)  $(DEFINES) $(INCLUDES) $(LIB_DIRS) -c -o $@ $<
-+	$(CC) $(CFLAGS) -Wall $(DEFINES) $(INCLUDES) $(LIB_DIRS) -c -o $@ $<
++	$(CC) $(FLAGS) $(DEFINES) $(INCLUDES) $(LIB_DIRS) -c -o $@ $<
  
  clean:
  	rm -rf $(TARGET) $(OBJECTS)
