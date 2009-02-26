@@ -1,6 +1,18 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.143 2009/02/05 04:26:22 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.144 2009/02/26 17:14:48 je_fro Exp $
+
+  26 Feb 2009; Jeff Gardner <je_fro@gentoo.org>
+  +files/8.582/ati-powermode-opt-path-2.patch,
+  +files/8.582/ati-drivers-xen-8.552.patch, +ati-drivers-8.582.ebuild:
+  Add needed files
+
+*ati-drivers-8.582 (26 Feb 2009)
+
+  26 Feb 2009; Jeff Gardner <je_fro@gentoo.org>
+  +files/8.582/ati-powermode-opt-path-2.patch,
+  +files/8.582/ati-drivers-xen-8.552.patch, +ati-drivers-8.582.ebuild:
+  Latest for testing
 
   05 Feb 2009; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
   Add libstdc++-v3 to RDEPEND, close bug #249192.
