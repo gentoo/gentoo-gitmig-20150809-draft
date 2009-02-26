@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.4.3.1.ebuild,v 1.2 2009/02/15 11:05:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.4.3.1.ebuild,v 1.3 2009/02/26 15:48:53 josejx Exp $
 
 inherit python multilib eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://bibus-biblio.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}-biblio/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="mysql sqlite"
 # Most of this mess is designed to give the choice of sqlite or mysql
 # but prefer sqlite. We also need to default to sqlite if neither is requested.
