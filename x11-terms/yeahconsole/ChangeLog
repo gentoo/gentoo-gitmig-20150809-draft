@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/yeahconsole
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/yeahconsole/ChangeLog,v 1.4 2009/02/26 15:20:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/yeahconsole/ChangeLog,v 1.5 2009/02/26 16:49:52 jer Exp $
+
+  26 Feb 2009; Jeroen Roovers <jer@gentoo.org> yeahconsole-0.3.4.ebuild:
+  Clarify terminal emulator requirement better.
 
   26 Feb 2009; Jeroen Roovers <jer@gentoo.org>
   files/yeahconsole-0.3.4-make.patch:
