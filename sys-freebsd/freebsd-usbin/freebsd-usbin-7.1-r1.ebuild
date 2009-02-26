@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.1-r1.ebuild,v 1.1 2009/02/05 20:50:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.1-r1.ebuild,v 1.2 2009/02/26 21:38:08 drizzt Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -130,7 +130,8 @@ EOS
 	doins "${FILESDIR}/pw.conf"
 
 	cd "${WORKDIR}/etc"
-	doins amd.map apmd.conf syslog.conf newsyslog.conf usbd.conf
+	doins amd.map apmd.conf syslog.conf newsyslog.conf 
+	use usb && doins usbd.conf
 
 	insinto /etc/ppp
 	doins ppp/ppp.conf
