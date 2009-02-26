@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4229 2009/02/26 17:27:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4230 2009/02/26 20:27:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1588,22 +1588,29 @@ media-video/mplayer:dirac - Enable Dirac video support (an advanced royalty-free
 media-video/mplayer:dvdnav - Use forked libdvdnav, navigate menus in GUIs
 media-video/mplayer:dxr3 - Enable DXR3/H+ video output
 media-video/mplayer:enca - Enables support for charset discovery and conversion
+media-video/mplayer:faac - Use external faac library for AAC encoding
+media-video/mplayer:faad - Use external faad library for AAC decoding
+media-video/mplayer:gtk - Build gmplayer, a GTK+ MPlayer gui (UNSUPPORTED)
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:md5sum - Enables md5sum video output
 media-video/mplayer:mmxext - Enables mmx2 support
 media-video/mplayer:mng - MNG input support
 media-video/mplayer:mp2 - Enables support for twolame, an MP2 audio library
 media-video/mplayer:nemesi - Enable Nemesi Streaming Media support
+media-video/mplayer:network - Enables network streaming support
 media-video/mplayer:pnm - Add PNM video output option, to create PPM/PGM/PGMYUV images
 media-video/mplayer:pvr - Enable Video4Linux2 MPEG PVR
 media-video/mplayer:radio - Enable V4L2 radio interface and support
 media-video/mplayer:rar - Enable Unique RAR File Library
-media-video/mplayer:real - Adds real video support
+media-video/mplayer:real - Adds real audo/video support
+media-video/mplayer:realcodecs - External Real Player binary codec support (UNSUPPORTED)
 media-video/mplayer:rtc - Enables usage of the linux real time clock. The alternative is software emulation of rtc
 media-video/mplayer:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
 media-video/mplayer:ssse3 - faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)
 media-video/mplayer:teletext - Support for TV teletext interface
 media-video/mplayer:tga - Enables Targa video output
+media-video/mplayer:tremor - Enable internal support for Vorbis
+media-video/mplayer:vdpau - Enables experimental VDPAU support (requires nVidia video cards) to offload MPEG2/MPEG4/VC1/WMV CPU processing to video card
 media-video/mplayer:vidix - Support for vidix video output
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
