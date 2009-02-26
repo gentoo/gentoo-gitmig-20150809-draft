@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.4.7.ebuild,v 1.3 2009/02/26 17:01:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.4.8.ebuild,v 1.1 2009/02/26 17:01:59 pva Exp $
 
 inherit eutils versionator toolchain-funcs linux-mod linux-info
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ipset.netfilter.org/"
 SRC_URI="http://ipset.netfilter.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 RDEPEND=">=net-firewall/iptables-1.4.1"
 DEPEND="${RDEPEND}"
@@ -32,18 +32,17 @@ ERROR_CFG="ipset needs netfilter support in your kernel."
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-
 	sed -i \
 		-e 's/KERNELDIR/(KERNELDIR)/g' \
 		-e 's/^(\?KERNEL_\?DIR.*/KERNELDIR ?= /' \
 		-e '/^all::/iV ?= 0' \
 		-e '/^all::/iKBUILD_OUTPUT ?=' \
 		-e '/$(MAKE)/{s/$@/ V=$(V) KBUILD_OUTPUT=$(KBUILD_OUTPUT) modules/}' \
-			kernel/Makefile
+		"${S}"/kernel/Makefile
 
-	sed -i -e 's/^WARN_FLAGS/DONT_WARN_FLAGS/' Makefile
-	epatch "${FILESDIR}/${P}-LDFLAGS.patch"
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-2.4.7-LDFLAGS.patch"
+	epatch "${FILESDIR}/${PN}-2.4.8-use-new-hash.patch"
 }
 
 pkg_setup() {
@@ -66,6 +65,7 @@ pkg_setup() {
 	myconf="${myconf} BINDIR=/sbin"
 	myconf="${myconf} MANDIR=/usr/share/man"
 	myconf="${myconf} INCDIR=/usr/include"
+	myconf="${myconf} NO_EXTRA_WARN_FLAGS=yes"
 	export myconf
 }
 

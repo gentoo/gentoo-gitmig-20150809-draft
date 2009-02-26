@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.21 2009/02/04 21:42:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.22 2009/02/26 17:01:59 pva Exp $
+
+*ipset-2.4.8 (26 Feb 2009)
+
+  26 Feb 2009; Peter Volkov <pva@gentoo.org>
+  +files/ipset-2.4.8-use-new-hash.patch, ipset-2.4.7.ebuild,
+  +ipset-2.4.8.ebuild:
+  Version bump, bug #260338, thank BoneKracker for report. Disable warnings,
+  fixes bug #259999, thank Aleksey Kunitskiy for report.
 
   04 Feb 2009; Markus Meier <maekke@gentoo.org> ipset-2.4.7.ebuild:
   amd64/x86 stable, bug #257483
