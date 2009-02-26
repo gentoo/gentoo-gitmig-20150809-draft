@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-20090226.28734.ebuild,v 1.2 2009/02/26 20:42:55 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-20090226.28734.ebuild,v 1.3 2009/02/26 22:31:11 beandog Exp $
 
 EAPI="1"
 
@@ -88,7 +88,6 @@ RDEPEND="sys-libs/ncurses
 	jpeg? ( media-libs/jpeg )
 	ladspa? ( media-libs/ladspa-sdk )
 	libcaca? ( media-libs/libcaca )
-	libvorbis? ( media-libs/libvorbis )
 	lirc? ( app-misc/lirc )
 	lzo? ( >=dev-libs/lzo-2 )
 	mad? ( media-libs/libmad )
@@ -113,6 +112,7 @@ RDEPEND="sys-libs/ncurses
 	vdpau? ( >=x11-drivers/nvidia-drivers-180.22 )
 	vidix? ( x11-libs/libXxf86vm
 			 x11-libs/libXext )
+	vorbis? ( media-libs/libvorbis )
 	xanim? ( media-video/xanim )
 	xinerama? ( x11-libs/libXinerama
 		x11-libs/libXxf86vm
