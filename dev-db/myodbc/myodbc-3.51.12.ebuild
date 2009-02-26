@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.12.ebuild,v 1.5 2007/07/02 02:28:00 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.12.ebuild,v 1.6 2009/02/26 15:46:04 josejx Exp $
 
 MY_PN="mysql-connector-odbc"
 MY_P="${MY_PN}-${PV}"
@@ -10,7 +10,7 @@ SRC_URI="mirror://mysql/Downloads/MyODBC3/${MY_P}.tar.gz"
 RESTRICT="primaryuri"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug doc static"
 RDEPEND=">=virtual/mysql-4.0 dev-db/unixODBC sys-devel/m4"
 # perl is required for building docs
