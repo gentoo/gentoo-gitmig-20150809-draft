@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.197 2009/02/26 16:21:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.198 2009/02/26 17:31:07 ranger Exp $
+
+  26 Feb 2009; Brent Baude <ranger@gentoo.org> epiphany-2.22.3-r2.ebuild:
+  Marking epiphany-2.22.3-r2 ppc64 and ppc for bug 257000
 
   26 Feb 2009; Jeroen Roovers <jer@gentoo.org> epiphany-2.22.3-r2.ebuild:
   Stable for HPPA (bug #257000).
