@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw3945
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.40 2008/03/15 17:01:30 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.41 2009/02/26 23:52:04 lack Exp $
+
+  26 Feb 2009; Jim Ramsay <lack@gentoo.org> ChangeLog:
+  Version cleanup, plus added patch for 2.6.27 compatibility (Bug #244756)
 
   15 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   ipw3945-1.2.2-r1.ebuild:
