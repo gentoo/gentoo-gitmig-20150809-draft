@@ -122,3 +122,7 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 # dvdnav support moved internally with newer versions, old ones
 # still depend on external, masked dep
 <media-video/mplayer-20090226.28734 dvdnav
+
+# Steve Dibb <beandog@gentoo.org> (26 Feb 2009)
+# Unmask internal real player codec support on newer mplayer
+>=media-video/mplayer-20090226.28734 -real
