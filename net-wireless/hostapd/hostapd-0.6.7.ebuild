@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.7.ebuild,v 1.2 2009/02/25 21:50:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.7.ebuild,v 1.3 2009/02/26 22:03:01 gurligebis Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ipv6 logwatch madwifi ssl wps"
 
 DEPEND="ssl? ( dev-libs/openssl )
@@ -94,6 +94,7 @@ generate_config() {
 	echo "CONFIG_IAPP=y" >> ${CONFIG}
 	echo "CONFIG_IEEE80211R=y" >> ${CONFIG}
 	echo "CONFIG_IEEE80211W=y" >> ${CONFIG}
+	echo "CONFIG_IEEE80211N=y" >> ${CONFIG}
 	echo "CONFIG_PEERKEY=y" >> ${CONFIG}
 	echo "CONFIG_RSN_PREAUTH=y" >> ${CONFIG}
 

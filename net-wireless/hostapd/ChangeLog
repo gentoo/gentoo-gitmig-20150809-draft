@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.92 2009/02/25 21:50:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.93 2009/02/26 22:03:01 gurligebis Exp $
+
+  27 Feb 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  hostapd-0.6.7.ebuild, hostapd-0.6.8.ebuild:
+  Adding support for 802.11n and removing stable flags from 0.6.7, since it
+  is still from the development branch.
 
   25 Feb 2009; Markus Meier <maekke@gentoo.org> hostapd-0.6.7.ebuild:
   amd64/x86 stable, bug #259285

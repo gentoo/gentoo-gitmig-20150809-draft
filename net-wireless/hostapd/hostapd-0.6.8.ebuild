@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.8.ebuild,v 1.1 2009/02/16 21:58:11 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.8.ebuild,v 1.2 2009/02/26 22:03:01 gurligebis Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -43,6 +43,7 @@ generate_config() {
 	if use wps; then
 		# Enable Wi-Fi Protected Setup
 		echo "CONFIG_WPS=y" >> ${CONFIG}
+		echo "CONFIG_WPS_UPNP=y" >> ${CONFIG}
 		einfo "Enabling Wi-Fi Protected Setup support"
 	fi
 
