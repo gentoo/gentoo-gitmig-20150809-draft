@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-voodoo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-voodoo/ChangeLog,v 1.35 2008/06/10 06:54:18 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-voodoo/ChangeLog,v 1.36 2009/02/26 07:55:01 dberkholz Exp $
+
+*xf86-video-voodoo-1.2.1 (26 Feb 2009)
+
+  26 Feb 2009; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xf86-video-voodoo-1.2.1.ebuild:
+  Version bump.
 
 *xf86-video-voodoo-1.2.0 (10 Jun 2008)
 
