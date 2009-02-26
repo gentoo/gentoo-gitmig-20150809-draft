@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/maqview
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maqview/ChangeLog,v 1.1 2009/02/26 18:22:42 weaver Exp $
+
+*maqview-0.2.5 (26 Feb 2009)
+
+  26 Feb 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +maqview-0.2.5.ebuild:
+  New package, bug 231339. Ebuild written by me.
+
