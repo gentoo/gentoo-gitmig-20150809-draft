@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.83 2009/02/24 19:43:41 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.84 2009/02/26 19:42:29 gentoofan23 Exp $
+
+  26 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org> kbd-1.15.ebuild:
+  Revert stable amd64 keyword due to breakage with kbd moving to /usr/bin from
+  /bin
 
   24 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org> kbd-1.15.ebuild:
   stable amd64, bug 259129
