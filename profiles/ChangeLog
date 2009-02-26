@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2388 2009/02/26 21:31:58 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2389 2009/02/26 22:46:46 zzam Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Feb 2009; Matthias Schwarzott <zzam@gentoo.org> package.mask:
+  Also add sys-fs/udev-139 to masked versions until 135-r4 is stable.
 
   26 Feb 2009; Timothy Redaelli <drizzt@gentoo.org package.mask:
   Mask ~dev-libs/libedit-20090111.3.0 for testing
