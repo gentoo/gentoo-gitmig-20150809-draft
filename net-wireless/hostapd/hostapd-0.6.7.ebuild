@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.7.ebuild,v 1.3 2009/02/26 22:03:01 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.7.ebuild,v 1.4 2009/02/26 22:11:56 gurligebis Exp $
 
 inherit toolchain-funcs linux-info
 
@@ -177,6 +177,9 @@ pkg_postinst() {
 		einfo "madwifi-old, madwifi-ng or madwifi-ng-tools."
 		einfo "You should remerge ${PN} after upgrading these packages."
 		einfo
+		einfo "Since you are using the madwifi-ng driver, you should disable or"
+		einfo "comment out wme_enabled from hostapd.conf, since it will"
+		einfo "cause problems otherwise (see bug #260377"
 	fi
 	#if [ -e "${KV_DIR}"/net/mac80211 ]; then
 	#	einfo "This package now compiles against the headers installed by"
