@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.0.ebuild,v 1.2 2009/02/25 14:00:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.0.ebuild,v 1.3 2009/02/26 15:26:26 fmccor Exp $
 
 EAPI=2
 inherit eutils versionator cmake-utils
@@ -15,7 +15,7 @@ SRC_URI="http://www.openscenegraph.org/downloads/stable_releases/${MY_P_MAJOR}/s
 
 LICENSE="wxWinLL-3 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE="xulrunner"
 
 RDEPEND="virtual/opengl
