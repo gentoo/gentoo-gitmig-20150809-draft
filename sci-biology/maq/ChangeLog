@@ -1,0 +1,7 @@
+# ChangeLog for sci-biology/maq
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/maq/ChangeLog,v 1.1 2009/02/26 17:07:01 weaver Exp $
+
+  26 Feb 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
+  New package, bug 231339. Ebuild written by me.
+
