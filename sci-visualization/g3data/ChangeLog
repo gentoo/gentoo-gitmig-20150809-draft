@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/g3data
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.4 2008/11/27 18:25:22 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.5 2009/02/26 21:04:07 bicatali Exp $
+
+*g3data-1.5.3 (26 Feb 2009)
+
+  26 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/g3data-1.5.3-makefile.patch, +g3data-1.5.3.ebuild:
+  Version bump, fixing more flag propagation in makefile
 
   27 Nov 2008; Sébastien Fabbro <bicatali@gentoo.org>
   +files/g3data-1.5.1-makefile.patch, metadata.xml, g3data-1.5.1.ebuild:
