@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.195 2009/02/25 20:03:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.196 2009/02/26 14:44:35 armin76 Exp $
+
+  26 Feb 2009; Raúl Porcel <armin76@gentoo.org> epiphany-2.22.3-r2.ebuild:
+  alpha/ia64 stable wrt #257000
 
   25 Feb 2009; Markus Meier <maekke@gentoo.org> epiphany-2.22.3-r2.ebuild:
   amd64/x86 stable, bug #257000
