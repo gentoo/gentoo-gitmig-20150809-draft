@@ -1,20 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.2 2009/02/27 18:26:21 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7_p1205.ebuild,v 1.1 2009/02/27 18:26:21 tommy Exp $
 
 EAPI=1
-DATE=20090226
-ESVN_REPO_URI="http://freenet.googlecode.com/svn/trunk/freenet"
-ESVN_OPTIONS="--ignore-externals"
-inherit eutils java-pkg-2 java-ant-2 multilib subversion
+inherit eutils java-pkg-2 java-ant-2 multilib
 
 DESCRIPTION="An encrypted network without censorship"
 HOMEPAGE="http://www.freenetproject.org/"
-SRC_URI="http://dev.gentooexperimental.org/~tommy/distfiles/seednodes-${DATE}.fref"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="freemail"
 
 CDEPEND="dev-db/db-je:3.3
@@ -46,26 +43,13 @@ pkg_setup() {
 }
 
 src_unpack() {
-	subversion_src_unpack
-	subversion_wc_info
-	sed -i -e "s:@custom@:${ESVN_WC_REVISION}:g" src/freenet/node/Version.java || die "sed failed"
-	ESVN_REPO_URI="http://freenet.googlecode.com/svn/trunk/apps/new_installer/res/unix/"
-	ESVN_OPTIONS="-N"
-	subversion_src_unpack
+	unpack ${A}
 	cd "${S}"
 	cp "${FILESDIR}"/wrapper1.conf freenet-wrapper.conf || die
-	sed -i -e 's:./bin/wrapper:/usr/bin/wrapper:g' \
-	-e 's:./wrapper.conf:/etc/freenet-wrapper.conf:g' \
-	-e 's:PIDDIR=".":PIDDIR="/var/freenet/":g' \
-	-e 's:#RUN_AS_USER=:RUN_AS_USER=freenet:g' run.sh || die "sed failed"
-	head -n 133 run.sh >run1.sh
-	tail -n 452 run.sh >>run1.sh
-	mv run1.sh run.sh || die
 	epatch "${FILESDIR}"/ext.patch
 	sed -i -e "s:=/usr/lib:=/usr/$(get_libdir):g" freenet-wrapper.conf || die "sed failed"
 	use freemail && echo "wrapper.java.classpath.12=/usr/share/bcprov/lib/bcprov.jar" >> freenet-wrapper.conf
 	java-ant_rewrite-classpath
-	cp "${DISTDIR}"/seednodes-${DATE}.fref seednodes.fref || die
 }
 
 src_install() {
@@ -84,12 +68,7 @@ src_install() {
 	dosym java-service-wrapper/libwrapper.so /usr/$(get_libdir)/libwrapper.so
 }
 
-pkg_preinst() {
-	java-pkg-2_pkg_preinst
-	subversion_pkg_preinst
-}
-
-pkg_postinst() {
+pkg_postinst () {
 	elog "1. Start freenet with /etc/init.d/freenet start."
 	elog "2. Open localhost:8888 in your browser for the web interface."
 }
