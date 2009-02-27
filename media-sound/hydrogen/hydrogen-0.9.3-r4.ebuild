@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r4.ebuild,v 1.1 2008/10/10 12:56:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r4.ebuild,v 1.2 2009/02/27 09:01:51 aballier Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/hydrogen/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="alsa debug doc flac jack ladspa oss"
+IUSE="alsa debug doc +flac jack ladspa oss"
 
 RDEPEND="dev-libs/libxml2
 	media-libs/libsndfile
