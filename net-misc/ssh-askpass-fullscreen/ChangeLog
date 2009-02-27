@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/ssh-askpass-fullscreen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ChangeLog,v 1.13 2009/02/26 23:12:48 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ChangeLog,v 1.14 2009/02/27 05:28:57 darkside Exp $
 
 *ssh-askpass-fullscreen-0.4-r3 (26 Feb 2009)
 
@@ -10,7 +10,8 @@
   -ssh-askpass-fullscreen-0.4-r2.ebuild,
   +ssh-askpass-fullscreen-0.4-r3.ebuild:
   Fix compiler warning (thanks to ulm) and QA cleanup of the ebuild: added die
-  message, EAPI-2, style changes
+  message, EAPI-2, style changes. Added a man page from debian's patch tracking
+  site.
 
 *ssh-askpass-fullscreen-0.4-r2 (25 Feb 2009)
 
