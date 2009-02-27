@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gmyth
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/ChangeLog,v 1.6 2008/11/02 16:56:26 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/ChangeLog,v 1.7 2009/02/27 20:30:36 josejx Exp $
+
+  27 Feb 2009; Joseph Jezak <josejx@gentoo.org> gmyth-0.7.ebuild:
+  Marked ~ppc.
 
   02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
