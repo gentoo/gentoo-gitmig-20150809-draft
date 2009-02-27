@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/gchemutils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.6 2008/08/27 05:51:18 je_fro Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.7 2009/02/27 18:01:17 je_fro Exp $
+
+*gchemutils-0.10.3 (28 Feb 2009)
+
+  28 Feb 2009; Jeff Gardner <je_fro@gentoo.org> +gchemutils-0.10.3.ebuild:
+  Latest version, includes gchempaint so that will be masked soon.
 
   27 Aug 2008; Jeff Gardner <je_fro@gentoo.org> gchemutils-0.8.7.ebuild:
   goffice and libgsf need to be built with USE=gnome. check in pkg_setup and
