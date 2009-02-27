@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xbiff
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbiff/ChangeLog,v 1.17 2006/10/10 23:55:18 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbiff/ChangeLog,v 1.18 2009/02/27 23:44:53 remi Exp $
+
+*xbiff-1.0.1-r1 (27 Feb 2009)
+
+  27 Feb 2009; Rémi Cardona <remi@gentoo.org> +xbiff-1.0.1-r1.ebuild:
+  remove xprint support (see bug #254874)
 
   10 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; xbiff-1.0.1.ebuild:
   Update description to be less generic.
