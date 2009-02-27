@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/glossaries
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.14 2008/11/12 20:28:24 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.15 2009/02/27 15:42:21 fmccor Exp $
+
+  27 Feb 2009; Ferris McCormick <fmccor@gentoo.org> glossaries-1.16.ebuild:
+  Sparc stable, part of Bug #253551.
 
   12 Nov 2008; Alexis Ballier <aballier@gentoo.org> glossaries-1.16.ebuild:
   We need tl-latexextra 2008, tetex and tl 2007 did not have the xfor
