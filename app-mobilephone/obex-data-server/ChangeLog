@@ -1,6 +1,16 @@
 # ChangeLog for app-mobilephone/obex-data-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.13 2009/02/24 01:40:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.14 2009/02/27 23:53:26 dev-zero Exp $
+
+*obex-data-server-0.4.4 (27 Feb 2009)
+
+  27 Feb 2009; Tiziano Müller <dev-zero@gentoo.org>
+  -obex-data-server-0.4.2.ebuild, +obex-data-server-0.4.4.ebuild:
+  Version bump. Transition to EAPI=2. Added usb USE-flag with optional dep.
+  Use --disable-system-config instead of enabling it to make gvfs
+  obex-mounting really work (results in the well known 'launch helper
+  exited...' otherwise, thanks to Norman Jonas for the hint in bug #236357).
+  Dropped old version.
 
   24 Feb 2009; Joseph Jezak <josejx@gentoo.org>
   obex-data-server-0.3.4.ebuild, obex-data-server-0.4.2.ebuild:
