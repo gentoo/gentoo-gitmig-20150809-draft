@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-3.0.4.ebuild,v 1.7 2009/02/15 13:47:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-3.0.4.ebuild,v 1.8 2009/02/27 23:12:07 jer Exp $
 
 # TODO:
 # * Verify if the parallel compilation problems persist, and if so fix them.
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2"
 # MDB support currently works with CVS only, so disable it in the meantime
 IUSE="berkdb bindist doc firebird freetds ldap mysql oci8 odbc postgres xbase"
 SLOT="3"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 RDEPEND=">=dev-libs/glib-2.8
 	>=dev-libs/libxml2-2
