@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9524 2009/02/27 07:25:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9525 2009/02/27 10:44:49 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (27 Feb 2009)
+# release candidate
+>=media-video/vlc-0.9.9_rc
 
 # Timothy Redaelli <drizzt@gentoo.org> (26 Feb 2009)
 # Masked for testing
