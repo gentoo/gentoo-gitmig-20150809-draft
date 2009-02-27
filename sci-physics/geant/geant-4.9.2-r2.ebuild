@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2-r1.ebuild,v 1.1 2009/01/19 19:59:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2-r2.ebuild,v 1.1 2009/02/27 15:40:17 bicatali Exp $
 
 EAPI="2"
 
@@ -78,6 +78,9 @@ src_prepare() {
 	sed -i \
 		-e 's:$(G4LIB)/$(G4SYSTEM):$(G4TMP):g' \
 		config/common.gmk || die "sed common.gmk failed"
+	sed -i \
+		-e 's:$(G4LIB)/$(G4SYSTEM):$(G4TMP):g' \
+		config/moc.gmk || die "sed moc.gmk failed"
 	sed -i \
 		-e 's:$(G4LIB)/$(G4SYSTEM):$(G4TMP):g' \
 		-e 's:$(G4BIN)/$(G4SYSTEM):$(G4TMP):g' \
@@ -169,7 +172,7 @@ g4_create_env_script() {
 	# detailed data file locations
 	if use data; then
 		G4LEVELGAMMADATA="${G4DATA}/$(basename ${WORKDIR}/PhotonEvaporation*)"
-		G4RADIOACTIVEDATA="${G4DATA}$(basename ${WORKDIR}/RadioactiveDecay*)"
+		G4RADIOACTIVEDATA="${G4DATA}/$(basename ${WORKDIR}/RadioactiveDecay*)"
 		G4LEDATA="${G4DATA}/$(basename ${WORKDIR}/G4EMLOW*)"
 		G4ABLADATA="${G4DATA}/$(basename ${WORKDIR}/G4ABLA*)"
 		G4NEUTRONHPCROSSSECTIONS="${G4DATA}/$(basename ${WORKDIR}/G4NDL*)"
