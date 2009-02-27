@@ -1,0 +1,22 @@
+Make sure desktop/pixmaps dont get thrown into /usr/games.
+
+--- Makefile.in
++++ Makefile.in
+@@ -163,3 +163,3 @@
+ SUBDIRS = data docs src
+-desktopdir = $(datadir)/applications
++desktopdir =/usr/share/applications
+ desktop_DATA = tmw.desktop
+--- data/icons/Makefile.in
++++ data/icons/Makefile.in
+@@ -318,7 +318,7 @@
+ install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(datadir)/pixmaps
+-	$(INSTALL) $(srcdir)/tmw.png $(DESTDIR)$(datadir)/pixmaps/tmw.png
++	$(mkinstalldirs) $(DESTDIR)/usr/share/pixmaps
++	$(INSTALL) $(srcdir)/tmw.png $(DESTDIR)/usr/share/pixmaps/tmw.png
+ 
+ uninstall-local:
+-	rm -f $(DESTDIR)$(datadir)/pixmaps/tmw.png
++	rm -f $(DESTDIR)/usr/share/pixmaps/tmw.png
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
