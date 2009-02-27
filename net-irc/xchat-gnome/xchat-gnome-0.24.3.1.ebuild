@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.24.3.1.ebuild,v 1.1 2009/01/21 23:10:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.24.3.1.ebuild,v 1.2 2009/02/27 20:06:53 josejx Exp $
 
 inherit gnome2 eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://xchat-gnome.navi.cx/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dbus ipv6 libnotify mmx nls perl python sound spell ssl tcl"
 
 RDEPEND=">=dev-libs/glib-2.18.0
