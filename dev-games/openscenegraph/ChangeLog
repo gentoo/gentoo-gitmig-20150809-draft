@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.3 2009/02/26 15:26:26 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.4 2009/02/27 14:47:13 tupone Exp $
+
+  27 Feb 2009; Alfredo Tupone <tupone@gentoo.org> metadata.xml,
+  openscenegraph-2.8.0.ebuild:
+  Added applications as answer to Comment #1 by Ferris McCormick on bug #260342
 
   26 Feb 2009; Ferris McCormick <fmccor@gentoo.org>
   openscenegraph-2.8.0.ebuild:
