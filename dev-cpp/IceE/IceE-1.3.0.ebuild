@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/IceE/IceE-1.3.0.ebuild,v 1.1 2009/01/13 12:28:56 b33fc0d3 Exp ${P}.ebuild,v 1.1 2009/01/07 15:24:59 b33fc0d3 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/IceE/IceE-1.3.0.ebuild,v 1.2 2009/02/27 21:47:03 tove Exp ${P}.ebuild,v 1.1 2009/01/07 15:24:59 b33fc0d3 Exp $
 
 inherit eutils mono multilib toolchain-funcs
 
@@ -38,7 +38,7 @@ src_compile() {
 
 	sed -i "s/DESTDIR_PLACE_HOLDER/${D//\//\\/}\/usr/" cppe/config/Make.rules
 
-	emake configure || 'emake configure failed'
+	emake configure || die 'emake configure failed'
 	emake || die 'emake failed'
 }
 
