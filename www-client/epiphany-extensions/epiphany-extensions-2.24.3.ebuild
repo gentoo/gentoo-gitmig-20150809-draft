@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.24.3.ebuild,v 1.2 2009/02/02 05:58:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.24.3.ebuild,v 1.3 2009/02/27 14:45:52 dang Exp $
 
 inherit autotools eutils gnome2 python versionator
 
@@ -76,6 +76,9 @@ src_unpack() {
 	# Don't remove sessionsaver, please.  -dang
 	epatch "${FILESDIR}"/${PN}-2.21.92-sessionsaver-v4.patch.gz
 	echo "extensions/sessionsaver/ephy-sessionsaver-extension.c" >> po/POTFILES.in
+
+	# Fix building with libtool-1  bug #257337
+	rm m4/lt* m4/libtool.m4 m4/ltmain.m4
 
 	eautoreconf
 }
