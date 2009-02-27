@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.12.ebuild,v 1.10 2009/02/16 19:21:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.12.ebuild,v 1.11 2009/02/27 21:45:35 tove Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -82,7 +82,7 @@ src_test() {
 			|| die "patching help/Makefile for tests failed"
 	fi
 
-	emake -j1 check || "emake check failed"
+	emake -j1 check || die "emake check failed"
 }
 
 src_install() {
