@@ -1,12 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2-r1.ebuild,v 1.3 2008/01/21 08:30:45 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2-r1.ebuild,v 1.4 2009/02/27 00:59:09 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Hover hockey"
 HOMEPAGE="http://home.no.net/munsuun/tuxpuck/"
-SRC_URI="http://home.no.net/munsuun/${PN}/files/${P}.tar.gz"
+SRC_URI="http://home.no.net/munsuun/tuxpuck/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,17 +19,24 @@ RDEPEND="media-libs/libsdl
 	media-libs/jpeg
 	media-libs/libvorbis"
 DEPEND="${RDEPEND}
-	=media-libs/freetype-2*"
+	media-libs/freetype:2"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	unpack ./man/${PN}.6.gz
+	sed -i \
+		-e 's/-Werror//' \
+		-e '/^CC/d' \
+		Makefile \
+		utils/Makefile \
+		data/Makefile \
+		|| die "sed failed"
 }
 
 src_compile() {
+	emake -C utils || die
 	# Note that the Makefiles for tuxpuck are buggy so -j1 is used.
-	emake -j1 CPP_FLAGS="${CPPFLAGS} -I/usr/include/libpng12" || die
+	emake -j1 -C data || die
+	emake || die
 }
 
 src_install() {
