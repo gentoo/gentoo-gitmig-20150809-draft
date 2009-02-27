@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.76 2009/02/01 19:13:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.77 2009/02/27 14:50:35 ranger Exp $
+
+  27 Feb 2009; Brent Baude <ranger@gentoo.org> xsane-0.996.ebuild:
+  stable ppc64, bug 256597
 
   01 Feb 2009; nixnut <nixnut@gentoo.org> xsane-0.996.ebuild:
   ppc stable #256597
