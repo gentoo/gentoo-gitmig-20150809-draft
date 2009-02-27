@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/tftp-hpa
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.35 2008/11/01 06:58:21 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.36 2009/02/27 14:21:02 armin76 Exp $
+
+*tftp-hpa-0.49-r1 (27 Feb 2009)
+
+  27 Feb 2009; Raúl Porcel <armin76@gentoo.org> -tftp-hpa-0.49.ebuild,
+  +tftp-hpa-0.49-r1.ebuild:
+  Revbump to add ipv6 USE-flag, bug #253422
 
 *tftp-hpa-0.49 (01 Nov 2008)
 
