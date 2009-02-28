@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9529 2009/02/28 07:11:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9530 2009/02/28 08:03:17 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -237,10 +237,6 @@ x11-misc/hotkeys
 # xprint is dead, for real (see bug #254874)
 x11-apps/xphelloworld
 
-# Rémi Cardona <remi@gentoo.org> (25 Jan 2009)
-# masked for removal, use x11-base/xorg-server with USE=kdrive instead
-x11-base/kdrive
-
 # Hanno Boeck <hanno@gentoo.org (22 Jan 2009)
 # This has been included in kernel 2.6.27 and shouldn't be used
 # any more. Will remove within a month, please contact me if you
@@ -386,17 +382,6 @@ net-mail/ezmlm-idx-pgsql
 # unmaintained. As requested by solar.
 net-misc/udhcp
 sys-apps/tinylogin
-
-# Rémi Cardona <remi@gentoo.org> (21 Dec 2008)
-# Masked for treecleaning, see bug #228471
-# uses old gtkmm stack
-net-print/omni
-
-# Rémi Cardona <remi@gentoo.org> (21 Dec 2008)
-# Masked for treecleaning, see bug #228471 and bug #244543
-# uses broken and unmaintained gtkmm 2.2
-# other tools can change the X background
-x11-misc/fluxbg
 
 # Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
 # Removed in 60 days, multiple bugs - does not compile with recent kernels.
