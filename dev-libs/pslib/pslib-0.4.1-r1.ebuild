@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/pslib-0.4.1-r1.ebuild,v 1.1 2009/02/08 11:15:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/pslib-0.4.1-r1.ebuild,v 1.2 2009/02/28 13:30:25 aballier Exp $
 
 inherit autotools eutils
 
@@ -18,6 +18,8 @@ RDEPEND="png? ( media-libs/libpng )
 #gif? requires libungif, not in portage
 DEPEND="${RDEPEND}
 	dev-lang/perl
+	>=dev-libs/glib-2
+	dev-util/intltool
 	dev-perl/XML-Parser"
 SLOT="0"
 
