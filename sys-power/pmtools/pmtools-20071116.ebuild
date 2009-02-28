@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/pmtools-20071116.ebuild,v 1.5 2008/11/09 13:50:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/pmtools-20071116.ebuild,v 1.6 2009/02/28 20:04:59 nerdboy Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="ACPI disassembler tools, including acpidump"
 HOMEPAGE="http://ftp.kernel.org/pub/linux/kernel/people/lenb/acpi/"
@@ -22,16 +22,16 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-20071116-acpixtract-pmtools.patch
 
-	# Integrated upstream
-	#epatch "${FILESDIR}"/${PN}-20070714-madt.patch
+	sed -i.orig -e '/^CFLAGS/s, -s , ,' \
+		-i.orig -e "s:-Os::g" \
+		acpidump/Makefile || die "sed failed"
 
-	sed -i.orig \
-		-e '/^CFLAGS/s, -s , ,' \
-		"${S}"/acpidump/Makefile || die "sed failed"
+	strip-unsupported-flags
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed"
+	# respect user's LDFLAGS
+	emake CC="$(tc-getCC)" LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {

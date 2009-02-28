@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/pmtools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.9 2008/11/09 13:50:47 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.10 2009/02/28 20:04:59 nerdboy Exp $
+
+  28 Feb 2009; Steve Arnold <nerdboy@gentoo.org> pmtools-20071116.ebuild:
+  Updated to respect user LDFLAGS (see bug #253087), although I don't
+  think it matters in this case, at least I get no QA warnings...
 
   09 Nov 2008; nixnut <nixnut@gentoo.org> pmtools-20071116.ebuild:
   Stable on ppc wrt bug 236747
