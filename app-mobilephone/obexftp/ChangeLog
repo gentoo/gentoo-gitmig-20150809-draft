@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/obexftp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.44 2008/12/11 20:25:53 mrness Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.45 2009/02/28 00:02:28 dev-zero Exp $
+
+*obexftp-0.23 (28 Feb 2009)
+
+  28 Feb 2009; Tiziano Müller <dev-zero@gentoo.org> +obexftp-0.23.ebuild:
+  Version bump, works perfectly with bluez-4.31.
 
   11 Dec 2008; Alin Năstac <mrness@gentoo.org>
   +files/obexftp-0.22-bluetooth.patch, -obexftp-0.22_rc9.ebuild,
