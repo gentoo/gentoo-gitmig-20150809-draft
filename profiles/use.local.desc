@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4236 2009/02/28 07:07:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4237 2009/02/28 08:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2240,7 +2240,6 @@ net-print/hplip:qt3 - Enable graphical interface using Qt 3 (recommended); when 
 net-print/hplip:qt4 - Enable graphical interface using Qt 4 (experimental); when both qt3 and qt4 USE flags are enabled then qt3 is prioritary over qt4
 net-print/hplip:scanner - Enable scanner on multifunction devices which support it 
 net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this driver to work over networks (both for server and client)
-net-print/omni:epson - include the epson drivers
 net-print/pkpgcounter:psyco - psyco python accelerator
 net-proxy/dansguardian:kaspersky - Adds support for Kaspersky AntiVirus software
 net-proxy/dansguardian:ntlm - Enable support for the NTLM auth plugin
@@ -2707,10 +2706,6 @@ www-servers/resin:admin - Enable Resin admin webapp
 www-servers/shttpd:dmalloc - Enable debugging with the dmalloc library
 www-servers/tomcat:admin - Enable Tomcat admin webapp
 x11-apps/xdpyinfo:dmx - Builds support for Distributed Multiheaded X x11-base/xorg-server
-x11-base/kdrive:fbdev - Enables framebuffer kdrive server
-x11-base/kdrive:font-server - Enables font server support
-x11-base/kdrive:speedo - Enables Speedo font support
-x11-base/kdrive:type1 - Enables Type1 font support
 x11-base/xorg-server:dmx - Build the Distributed Multiheaded X server
 x11-base/xorg-server:kdrive - Build the kdrive X servers
 x11-base/xorg-server:tslib - Build with tslib support for touchscreen devices
