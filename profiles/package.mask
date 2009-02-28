@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9532 2009/02/28 23:40:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9533 2009/02/28 23:44:20 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -202,11 +202,6 @@ media-plugins/mythzoneminder
 # Masked until the deps are put in the tree
 >=kde-base/printer-applet-4.1.96
 >=kde-base/system-config-printer-kde-4.1.96
-
-# Peter Alfredsen <loki_val@gentoo.org> (30 Jan 2009)
-# Nothing uses this anymore, depends on gtk-sharp:1
-# Masked for removal in 30 days.
-dev-dotnet/gtkgl-sharp
 
 # Michael Sterrett <mr_bones_@gentoo.org> (29 Jan 2009)
 # Old and unmaintained.  Used games-action/extreme-tuxracer instead.
