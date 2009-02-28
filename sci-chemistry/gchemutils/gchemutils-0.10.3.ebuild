@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.10.3.ebuild,v 1.1 2009/02/27 18:01:17 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.10.3.ebuild,v 1.2 2009/02/28 00:40:51 je_fro Exp $
 
 inherit gnome2 autotools
 
 MY_P="gnome-chemistry-utils-${PV}"
 DESCRIPTION="C++ classes and Gtk+-2 widgets related to chemistry"
 HOMEPAGE="http://www.nongnu.org/gchemutils/"
-SRC_URI="http://savannah.nongnu.org/download/gchemutils/0.8/${MY_P}.tar.bz2"
+SRC_URI="http://savannah.nongnu.org/download/gchemutils/0.10/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
