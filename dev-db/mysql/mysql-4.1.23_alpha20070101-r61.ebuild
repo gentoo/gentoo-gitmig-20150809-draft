@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.23_alpha20070101-r61.ebuild,v 1.5 2008/12/14 20:17:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.23_alpha20070101-r61.ebuild,v 1.6 2009/02/28 22:42:10 robbat2 Exp $
 
-MY_EXTRAS_VER="latest"
+MY_EXTRAS_VER="20090228-2228Z"
 SERVER_URI="mirror://gentoo/MySQL-${PV%.*}/mysql-${PV//_alpha/-bk-}.tar.bz2"
 
 inherit mysql
