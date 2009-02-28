@@ -1,19 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.20 2009/02/28 23:20:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.4.0-r2.ebuild,v 1.1 2009/02/28 23:20:33 patrick Exp $
 
 EAPI="2"
 
-inherit cmake-utils eutils git
-
-EGIT_REPO_URI="git://git.quassel-irc.org/quassel.git"
-EGIT_BRANCH="master"
+inherit cmake-utils eutils
 
 DESCRIPTION="Qt4/KDE4 IRC client suppporting a remote daemon for 24/7 connectivity."
 HOMEPAGE="http://quassel-irc.org/"
+SRC_URI="http://quassel-irc.org/pub/${P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="dbus debug kde monolithic +oxygen phonon +server +ssl webkit +X"
 
