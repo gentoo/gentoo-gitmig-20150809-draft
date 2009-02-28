@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.192 2009/01/10 13:21:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.193 2009/02/28 14:14:36 fauli Exp $
+
+*lirc-0.8.4a (28 Feb 2009)
+
+  28 Feb 2009; Christian Faulhammer <fauli@gentoo.org> +lirc-0.8.4a.ebuild:
+  version bump for 251703 and fix for 251522
 
   10 Jan 2009; Steve Dibb <beandog@gentoo.org> lirc-0.8.3-r1.ebuild,
   lirc-0.8.3-r2.ebuild, lirc-0.8.4.ebuild:
