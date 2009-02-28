@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.3.0.ebuild,v 1.3 2009/02/05 18:15:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.3.0-r1.ebuild,v 1.1 2009/02/28 06:03:40 scarabeus Exp $
 
 EAPI="2"
 inherit cmake-utils
@@ -36,6 +36,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=kde-base/automoc-0.9.87
 "
+
+PATCHES=( "$FILESDIR/fix_nonascii_chars.patch" )
 
 pkg_setup() {
 	if use !xine && use !gstreamer; then
