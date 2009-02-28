@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.4.8.ebuild,v 1.1 2009/02/26 17:01:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.4.9.ebuild,v 1.1 2009/02/28 14:07:44 pva Exp $
 
 inherit eutils versionator toolchain-funcs linux-mod linux-info
 
@@ -42,7 +42,6 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.4.7-LDFLAGS.patch"
-	epatch "${FILESDIR}/${PN}-2.4.8-use-new-hash.patch"
 }
 
 pkg_setup() {
