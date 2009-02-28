@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9530 2009/02/28 08:03:17 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9531 2009/02/28 10:02:02 mrness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1320,10 +1320,6 @@ net-dns/bind-dns-keygen
 =app-pda/synce-0.9.2
 =app-pda/synce-librapi2-0.9.2
 =app-pda/synce-libsynce-0.9.2
-
-# Tuấn Văn <langthang@gentoo.org> (15 Jul 2006)
-# Initial import. Masked for testing
-mail-filter/sid-milter
 
 # Colin Kingsley <tercel@gentoo.org> (24 Jun 2006)
 # Masked for testing
