@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.107 2009/02/28 10:49:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.108 2009/02/28 10:50:24 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -16,7 +16,7 @@ inherit eutils flag-o-matic gnuconfig autotools mysql_fx versionator
 # and we will run a mysql server during test phase
 S="${WORKDIR}/mysql"
 
-[[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20070108"
+[[ "${MY_EXTRAS_VER}" == "latest" ]] && MY_EXTRAS_VER="20090228-0714Z"
 if [[ "${MY_EXTRAS_VER}" == "live" ]]; then
 	EGIT_PROJECT=mysql-extras
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/mysql-extras.git"
