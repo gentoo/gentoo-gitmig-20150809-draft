@@ -1,6 +1,13 @@
 # ChangeLog for app-laptop/laptop-mode-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.38 2008/06/03 22:45:17 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.39 2009/02/28 06:49:37 tester Exp $
+
+*laptop-mode-tools-1.47 (28 Feb 2009)
+
+  28 Feb 2009; Olivier Crête <tester@gentoo.org>
+  +files/laptop_mode.init-1.4, +files/laptop_mode_tools.pmutils,
+  metadata.xml, +laptop-mode-tools-1.47.ebuild:
+  Version bump, based on work by Alon Bar-Lev, bug #230471
 
   03 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
   laptop-mode-tools-1.31.ebuild, laptop-mode-tools-1.34.ebuild:
