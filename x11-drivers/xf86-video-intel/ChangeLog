@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.13 2009/02/26 23:22:30 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.14 2009/02/28 10:38:34 remi Exp $
+
+  28 Feb 2009; Rémi Cardona <remi@gentoo.org>
+  +files/2.6.2-0002-Disable-fb-resizing-for-DRI1-only-server-so-that-DRI.pat
+  ch, xf86-video-intel-2.6.2.ebuild:
+  add patch to fix bug on DRI1-only servers (fdo bug #20325)
 
 *xf86-video-intel-2.6.2 (26 Feb 2009)
 
