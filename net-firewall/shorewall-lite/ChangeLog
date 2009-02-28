@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.47 2009/02/22 13:53:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.48 2009/02/28 18:41:32 pva Exp $
+
+  28 Feb 2009; Peter Volkov <pva@gentoo.org> -shorewall-lite-3.2.9.ebuild,
+  -shorewall-lite-3.4.6.ebuild, -shorewall-lite-3.4.7.ebuild,
+  shorewall-lite-3.4.8.ebuild, -shorewall-lite-4.0.12.ebuild,
+  -shorewall-lite-4.0.13.ebuild, -shorewall-lite-4.0.14.ebuild,
+  shorewall-lite-4.0.15.ebuild, -shorewall-lite-4.2.0.ebuild,
+  -shorewall-lite-4.2.1.ebuild:
+  Removed old, bug #256064. Fixed RDEPEND repoman warning.
 
 *shorewall-lite-4.2.6 (22 Feb 2009)
 

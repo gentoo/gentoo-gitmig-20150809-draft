@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/shorewall-shell-4.0.15.ebuild,v 1.1 2009/01/22 08:24:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/shorewall-shell-4.0.15.ebuild,v 1.2 2009/02/28 18:44:45 pva Exp $
 
 inherit versionator
 
@@ -24,6 +24,7 @@ IUSE=""
 DEPEND="net-firewall/iptables
 	sys-apps/iproute2
 	!<net-firewall/shorewall-4.0"
+RDEPEND="${DEPEND}"
 
 PDEPEND="=net-firewall/shorewall-common-${MY_PV_BASE}*"
 

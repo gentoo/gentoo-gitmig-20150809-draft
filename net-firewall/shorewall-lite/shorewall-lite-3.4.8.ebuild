@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-3.4.8.ebuild,v 1.6 2008/05/16 13:44:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-3.4.8.ebuild,v 1.7 2009/02/28 18:41:32 pva Exp $
 
 #MY_P_TREE="development/3.9"
 MY_P_TREE="3.4"
@@ -19,6 +19,7 @@ IUSE="doc"
 
 DEPEND="net-firewall/iptables
 	sys-apps/iproute2"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	einfo "Nothing to compile."
