@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9531 2009/02/28 10:02:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9532 2009/02/28 23:40:48 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -207,11 +207,6 @@ media-plugins/mythzoneminder
 # Nothing uses this anymore, depends on gtk-sharp:1
 # Masked for removal in 30 days.
 dev-dotnet/gtkgl-sharp
-
-# Peter Alfredsen <loki_val@gentoo.org> (30 Jan 2009)
-# No longer maintained upstream, depends on gtk-sharp:1
-# Masked for removal in 30 days.
-dev-dotnet/mcatalog
 
 # Michael Sterrett <mr_bones_@gentoo.org> (29 Jan 2009)
 # Old and unmaintained.  Used games-action/extreme-tuxracer instead.
