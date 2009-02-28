@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/gwenview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.19 2009/02/19 23:39:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.20 2009/02/28 10:31:25 maekke Exp $
+
+  28 Feb 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  semantic-desktop is a global USE-flag
 
   19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -gwenview-4.1.4.ebuild:
   Drop stale kde 4.1.4

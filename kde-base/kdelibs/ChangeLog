@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.565 2009/02/17 19:15:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.566 2009/02/28 10:35:56 maekke Exp $
+
+  28 Feb 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  semantic-desktop is a global USE-flag
 
 *kdelibs-4.2.0-r3 (17 Feb 2009)
 
