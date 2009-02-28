@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9534 2009/02/28 23:50:49 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9535 2009/02/28 23:54:18 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -176,13 +176,6 @@ app-emulation/vmware-esx-console
 # net-misc/amazonmp3 to be used by amd64 users.  Once I get around to it.
 # Until then, mask it.
 net-misc/amazonmp3-libcompat
-
-# Peter Alfredsen <loki_val@gentoo.org> (1 Feb 2009)
-# Masked for removal in 30 days.  Old and unmaintained.  Upstream is gone.
-# Does not work with current ipod-sharp versions, see 195746. This
-# removes half of its functionality.
-# Is faily, see bug 256473.
-media-sound/monopod
 
 # Michael Sterrett <mr_bones_@gentoo.org> (01 Feb 2009)
 # mask for removal in 30 days.  Old and unmaintained.  Upstream is gone.

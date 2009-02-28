@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2401 2009/02/28 23:50:49 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2402 2009/02/28 23:54:18 loki_val Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Feb 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
+  Removing monopod package.mask entry since it's been removed from tree per
+  last-rite announcement.
 
   28 Feb 2009; <solar@gentoo.org> categories, info_vars:
   Added gpe-base category and PORTAGE_CONFIGROOT to info_vars
