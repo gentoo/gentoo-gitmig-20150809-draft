@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/epic5
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/ChangeLog,v 1.15 2007/11/14 04:11:38 beandog Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/ChangeLog,v 1.16 2009/02/28 23:35:54 patrick Exp $
+
+*epic5-1.0 (28 Feb 2009)
+
+  28 Feb 2009; Patrick Lauer <patrick@gentoo.org> +epic5-1.0.ebuild:
+  Bump to 1.0, fixes #258144. Small ebuild modifications thanks to Marco
+  Paolone
 
   14 Nov 2007; Steve Dibb <beandog@gentoo.org> epic5-0.3.5.ebuild:
   amd64 stable, bug 198872
