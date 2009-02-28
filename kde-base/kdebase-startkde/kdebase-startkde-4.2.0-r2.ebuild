@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.2.0.ebuild,v 1.4 2009/02/01 06:52:45 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.2.0-r2.ebuild,v 1.1 2009/02/28 06:24:13 scarabeus Exp $
 
 EAPI="2"
 
@@ -16,22 +16,23 @@ DEPEND=""
 # The KDE apps called from the startkde script.
 # These provide the most minimal KDE desktop.
 RDEPEND="${DEPEND}
-	>=kde-base/kcminit-${PV}:${SLOT}
-	>=kde-base/kdebase-desktoptheme-${PV}:${SLOT}
-	>=kde-base/kdebase-kioslaves-${PV}:${SLOT}
-	>=kde-base/kdedglobalaccel-${PV}:${SLOT}
-	>=kde-base/kde-wallpapers-${PV}:${SLOT}
-	>=kde-base/knotify-${PV}:${SLOT}
-	>=kde-base/kreadconfig-${PV}:${SLOT}
-	>=kde-base/krunner-${PV}:${SLOT}
-	>=kde-base/ksmserver-${PV}:${SLOT}
-	>=kde-base/ksplash-${PV}:${SLOT}
-	>=kde-base/kstartupconfig-${PV}:${SLOT}
-	>=kde-base/kstyles-${PV}:${SLOT}
-	>=kde-base/kwin-${PV}:${SLOT}
-	>=kde-base/plasma-apps-${PV}:${SLOT}
-	>=kde-base/plasma-workspace-${PV}:${SLOT}
-	>=kde-base/systemsettings-${PV}:${SLOT}
+	>=kde-base/kcminit-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kdebase-desktoptheme-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kdebase-kioslaves-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kdedglobalaccel-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kde-wallpapers-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/knotify-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kreadconfig-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/krunner-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/ksmserver-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/ksplash-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kstartupconfig-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kstyles-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kwin-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/phonon-kde-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/plasma-apps-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/plasma-workspace-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/systemsettings-${PV}:${SLOT}[kdeprefix=]
 	x11-apps/xmessage
 	x11-apps/xsetroot
 	x11-apps/xset
@@ -101,7 +102,7 @@ src_install() {
 	# freedesktop environment variables
 	cat <<-EOF > "${T}/xdg.sh"
 	export XDG_DATA_DIRS="${KDEDIR}/share:/usr/share"
-	export XDG_CONFIG_DIRS="${KDEDIR}/etc/xdg"
+	export XDG_CONFIG_DIRS="${KDEDIR}/etc/xdg:/etc/xdg"
 	EOF
 	if use kdeprefix; then
 		insinto "${KDEDIR}/env"

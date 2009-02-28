@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.143 2009/02/21 19:07:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.144 2009/02/28 06:24:13 scarabeus Exp $
+
+*kdebase-startkde-4.2.0-r2 (28 Feb 2009)
+
+  28 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -kdebase-startkde-4.2.0.ebuild, -kdebase-startkde-4.2.0-r1.ebuild,
+  +kdebase-startkde-4.2.0-r2.ebuild:
+  Update deps. Add phonon-kde as basic dep (users usualy want the sound).
+  Remove old.
 
 *kdebase-startkde-4.2.0-r1 (21 Feb 2009)
 
