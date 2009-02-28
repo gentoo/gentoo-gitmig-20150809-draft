@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.6.ebuild,v 1.6 2008/11/09 12:16:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.6.ebuild,v 1.7 2009/02/28 22:22:45 dragonheart Exp $
+
+inherit multilib
 
 DESCRIPTION="SmartCard library and applications"
 HOMEPAGE="http://www.opensc-project.org/opensc/"
@@ -32,9 +34,7 @@ src_compile() {
 		$(use_enable pcsc-lite pcsc) \
 		$(use_enable nsplugin) \
 		$(use_enable doc) \
-		--with-plugin-dir=/usr/lib/mozilla/plugins \
-		--with-pin-entry="/usr/bin/pinentry" \
-		|| die
+		--with-pinentry="/usr/bin/pinentry"
 	emake || die
 }
 
