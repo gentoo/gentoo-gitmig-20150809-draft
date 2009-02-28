@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<catmetadata>
+	<longdescription lang="en">
+		The gpe-base category contains libraries, utilities for
+                handheld and other input constrained and resource
+		limited devices.
+	</longdescription>
+</catmetadata>
