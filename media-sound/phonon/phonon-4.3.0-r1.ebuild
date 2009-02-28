@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.3.0-r1.ebuild,v 1.1 2009/02/28 06:03:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/phonon-4.3.0-r1.ebuild,v 1.2 2009/02/28 06:51:07 scarabeus Exp $
 
 EAPI="2"
 inherit cmake-utils
@@ -22,10 +22,10 @@ RDEPEND="
 	>=x11-libs/qt-test-4.4.0:4
 	>=x11-libs/qt-dbus-4.4.0:4
 	>=x11-libs/qt-gui-4.4.0:4
+	>=x11-libs/qt-opengl-4.4.0:4
 	gstreamer? (
 		media-libs/gstreamer
 		media-libs/gst-plugins-base
-		>=x11-libs/qt-opengl-4.4.0:4
 	)
 	xine? (
 		>=media-libs/xine-lib-1.1.15-r1[xcb?]
