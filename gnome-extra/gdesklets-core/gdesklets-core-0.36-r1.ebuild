@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36-r1.ebuild,v 1.6 2008/12/30 03:55:44 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36-r1.ebuild,v 1.7 2009/02/28 17:11:05 nixphoeni Exp $
 
 # We want the latest autoconf and automake (the default)
 inherit gnome2 python eutils autotools multilib
@@ -87,7 +87,7 @@ pkg_postinst() {
 	elog "           ${ROOT}usr/$(get_libdir)/gdesklets/Displays"
 	elog "Additional Displays can be found in -"
 	elog "           x11-plugins/desklet-* ,"
-	elog "at http://www.gdesklets.de, or at http://gdesklets.zencomputer.ca"
+	elog "at http://www.gdesklets.de, or at http://archive.gdesklets.info"
 	elog
 	elog "Next you'll need to start gDesklets using"
 	elog "           ${ROOT}usr/bin/gdesklets start"
