@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.0.1.ebuild,v 1.5 2008/05/09 07:15:03 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.0.1.ebuild,v 1.6 2009/02/28 21:45:39 keri Exp $
 
 MY_PN="XSB"
 MY_P="${MY_PN}-${PV}"
@@ -16,13 +16,15 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="debug iodbc java libwww mysql odbc perl threads xml"
 
-DEPEND="iodbc? ( dev-db/libiodbc )
+RDEPEND="iodbc? ( dev-db/libiodbc )
 	java? ( virtual/jdk )
 	libwww? ( net-libs/libwww )
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	perl? ( dev-lang/perl )
 	xml? ( dev-libs/libxml2 )"
+
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${MY_PN}
 
