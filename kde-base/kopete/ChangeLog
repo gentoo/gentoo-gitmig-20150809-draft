@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.171 2009/02/19 23:32:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.172 2009/02/28 13:46:34 scarabeus Exp $
+
+  28 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org> kopete-4.2.0.ebuild:
+  Update deps to allow fancy moving icons. Per bug #242092.
 
   19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -kopete-4.1.4.ebuild:
   Drop stale kde 4.1.4

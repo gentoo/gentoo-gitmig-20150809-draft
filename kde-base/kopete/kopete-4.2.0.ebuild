@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.2.0.ebuild,v 1.3 2009/02/01 07:45:30 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.2.0.ebuild,v 1.4 2009/02/28 13:46:34 scarabeus Exp $
 
 EAPI="2"
 
@@ -66,6 +66,7 @@ RESTRICT="test"
 COMMONDEPEND="
 	dev-libs/libpcre
 	x11-libs/libXScrnSaver
+	>=x11-libs/qt-gui-4.4.0:4[mng]
 	gadu? ( dev-libs/openssl )
 	groupwise? ( app-crypt/qca:2 )
 	jabber? (
