@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.47.ebuild,v 1.1 2009/02/28 06:49:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.47.ebuild,v 1.2 2009/02/28 18:56:31 dirtyepic Exp $
 
 inherit eutils
 
@@ -32,6 +32,13 @@ RDEPEND="sys-apps/ethtool
 
 S="${WORKDIR}/${MY_P}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-install.patch
+}
+
 src_compile() {
 	:
 }
@@ -43,13 +50,13 @@ src_install() {
 		APM="$(use apm && echo force || echo disabled)" \
 		ACPI="$(use acpi && echo force || echo disabled)" \
 		PMU="$(false && echo force || echo disabled)" \
-		./install.sh
+		./install.sh || die "Install failed."
 
 	dodoc Documentation/laptop-mode.txt README
 	newinitd "${FILESDIR}"/laptop_mode.init-1.4 laptop_mode
 
-	insinto /etc/pm/power.d
-	doexe "${FILESDIR}"/laptop_mode_tools.pmutils laptop_mode_tools
+	exeinto /etc/pm/power.d
+	newexe "${FILESDIR}"/laptop_mode_tools.pmutils laptop_mode_tools
 }
 
 pkg_postinst() {
