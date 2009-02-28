@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.20 2009/02/18 21:44:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.21 2009/02/28 20:49:33 cryos Exp $
+
+*openbabel-2.2.1_beta3-r1 (28 Feb 2009)
+
+  28 Feb 2009; Marcus D. Hanwell <cryos@gentoo.org>
+  -openbabel-2.2.1_beta3.ebuild, +openbabel-2.2.1_beta3-r1.ebuild:
+  Integrated some improvements from My Th <rei4dan@gmail.com> in bug 212212.
 
 *openbabel-2.2.1_beta3 (18 Feb 2009)
 
