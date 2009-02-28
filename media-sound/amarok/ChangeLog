@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.302 2009/02/10 22:09:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.303 2009/02/28 10:41:24 maekke Exp $
+
+  28 Feb 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
+  semantic-desktop is a global USE-flag
 
   10 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org>
   +files/2.0.1.1-ipod.patch, amarok-2.0.1.1.ebuild:
