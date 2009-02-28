@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.86 2009/02/19 15:49:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.87 2009/02/28 09:44:40 mrness Exp $
+
+*gnokii-0.6.27-r2 (28 Feb 2009)
+
+  28 Feb 2009; Alin Năstac <mrness@gentoo.org> -gnokii-0.6.27.ebuild,
+  -gnokii-0.6.27-r1.ebuild, +gnokii-0.6.27-r2.ebuild:
+  Replace use_with sms with use_enable sms (#260252).
 
   19 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   gnokii-0.6.22-r2.ebuild:

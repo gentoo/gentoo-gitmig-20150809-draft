@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.27.ebuild,v 1.2 2008/12/14 12:12:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.27-r2.ebuild,v 1.1 2009/02/28 09:44:40 mrness Exp $
 
-inherit eutils linux-info
+inherit eutils linux-info autotools
 
 DESCRIPTION="user space driver and tools for use with mobile phones"
 HOMEPAGE="http://www.gnokii.org/"
@@ -33,6 +33,16 @@ CONFIG_CHECK="UNIX98_PTYS"
 MY_AVAILABLE_LINGUAS=" cs de et fi fr it nl pl pt sk sl sv zh_CN"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-icon.patch
+	epatch "${FILESDIR}"/${P}-disable-database.patch
+
+	eautoreconf
+}
+
 src_compile() {
 	strip-linguas ${MY_AVAILABLE_LINGUAS}
 
@@ -46,7 +56,9 @@ src_compile() {
 		$(use_enable irda) \
 		$(use_enable bluetooth) \
 		$(use_with X x) \
-		$(use_with sms smsd) \
+		$(use_enable sms smsd) \
+		$(use_enable mysql) \
+		$(use_enable postgres) \
 		$(use_enable debug fulldebug) \
 		${config_xdebug} \
 		$(use_enable debug rlpdebug) \
