@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/snakefood
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakefood/ChangeLog,v 1.1 2009/02/28 20:26:23 patrick Exp $
+
+*snakefood-1.3.1 (28 Feb 2009)
+
+  28 Feb 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +snakefood-1.3.1.ebuild:
+  Initial import. Fixes #207716. Ebuild contributed by Pawel Hajdan Jr.
+
