@@ -1,6 +1,12 @@
 # ChangeLog for games-mud/gnome-mud
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.23 2009/02/17 16:53:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.24 2009/02/28 22:46:04 mr_bones_ Exp $
+
+*gnome-mud-0.11.2 (28 Feb 2009)
+
+  28 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +gnome-mud-0.11.2.ebuild:
+  version bump
 
 *gnome-mud-0.11.1 (17 Feb 2009)
 
