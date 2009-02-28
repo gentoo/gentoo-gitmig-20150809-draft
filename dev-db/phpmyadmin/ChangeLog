@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.358 2009/01/24 11:30:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.359 2009/02/28 11:07:22 robbat2 Exp $
+
+  28 Feb 2009; Robin H. Johnson <robbat2@gentoo.org>
+  phpmyadmin-3.1.2.ebuild:
+  Fix bug #257757 - use virtual/mysql for the dep. We never had 5.0.x
+  versions less than .15 anyway.
 
 *phpmyadmin-3.1.2 (24 Jan 2009)
 

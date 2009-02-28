@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.1.2.ebuild,v 1.1 2009/01/24 11:30:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.1.2.ebuild,v 1.2 2009/02/28 11:07:22 robbat2 Exp $
 
 inherit eutils webapp depend.php
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=dev-db/mysql-5.0.15"
+RDEPEND=">=virtual/mysql-5.0"
 
 need_httpd_cgi
 need_php_httpd
