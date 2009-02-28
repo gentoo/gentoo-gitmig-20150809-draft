@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/ltp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.14 2009/01/05 19:33:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.15 2009/02/28 18:53:38 patrick Exp $
+
+*ltp-20090131 (28 Feb 2009)
+
+  28 Feb 2009; Patrick Lauer <patrick@gentoo.org> +ltp-20090131.ebuild:
+  Bump to 20090131
 
 *ltp-20081231 (05 Jan 2009)
 
