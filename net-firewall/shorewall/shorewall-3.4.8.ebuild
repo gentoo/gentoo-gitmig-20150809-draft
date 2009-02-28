@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.4.8.ebuild,v 1.7 2008/05/16 13:43:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.4.8.ebuild,v 1.8 2009/02/28 18:50:03 pva Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ IUSE="doc"
 
 DEPEND=">=net-firewall/iptables-1.2.4
 	sys-apps/iproute2"
+RDEPEND="${DEPEND}"
 
 # When we're ready for 3.9.x...
 #RDEPEND="|| (
