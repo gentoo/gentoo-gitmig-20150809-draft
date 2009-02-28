@@ -9,8 +9,4 @@
   <email>cardoe@gentoo.org</email>
 </maintainer>
 <longdescription>NVIDIA X11 driver and GLX libraries</longdescription>
-<use>
-	<flag name='custom-cflags'>Build with CFLAGS from /etc/make.conf
-		(unsupported)</flag>
-</use>
 </pkgmetadata>
