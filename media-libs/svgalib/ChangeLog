@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/svgalib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.83 2008/10/28 20:09:27 pauldv Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.84 2009/02/28 00:12:14 fauli Exp $
+
+  28 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
+  +files/svgalib-1.9.25-linux2.6.28.patch, metadata.xml,
+  svgalib-1.9.25.ebuild:
+  add patch from bug 252614 by Marco Leogrande <dark DOT knight DOT ita AT
+  gmail DOT com> to fix compilation with Kernel 2.6.28. Also rename
+  no-helper USE flag to kernel-helper and make it default with EAPI=1
 
   28 Oct 2008; Paul de Vrieze <pauldv@gentoo.org>
   files/svgalib-1.9.25-linux2.6.patch:
