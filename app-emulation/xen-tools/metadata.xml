@@ -3,8 +3,6 @@
 <pkgmetadata>
 <herd>xen</herd>
 <use>
-	<flag name='custom-cflags'>Use CFLAGS from /etc/make.conf rather than the
-		default Xen CFLAGS (not supported)</flag>
 	<flag name='hvm'>Enable support for hardware based virtualization (VT-x,
 		AMD-v</flag>
 	<flag name='pygrub'>Install the pygrub boot loader</flag>

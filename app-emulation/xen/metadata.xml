@@ -3,8 +3,6 @@
 <pkgmetadata>
 <herd>xen</herd>
 <use>
-	<flag name='custom-cflags'>Use CFLAGS from /etc/make.conf rather than the
-		default Xen CFLAGS (not supported)</flag>
 	<flag name='pae'>Enable support for PAE kernels (usually x86-32 with >4GB
 		memory)</flag>
 	<flag name='xsm'>Enable the Xen Security Modules (XSM)</flag>
