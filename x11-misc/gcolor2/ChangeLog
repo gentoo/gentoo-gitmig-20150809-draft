@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gcolor2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.29 2008/10/25 11:08:31 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.30 2009/02/28 11:53:17 eva Exp $
+
+  28 Feb 2009; Gilles Dartiguelongue <eva@gentoo.org> gcolor2-0.4-r3.ebuild:
+  Fix intltool tests, bug #260479.
 
   25 Oct 2008; Gilles Dartiguelongue <eva@gentoo.org> gcolor2-0.4-r3.ebuild:
   Add call to intltoolize, fix bug #244184.

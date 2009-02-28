@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/gcolor2-0.4-r3.ebuild,v 1.8 2008/10/25 11:08:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/gcolor2-0.4-r3.ebuild,v 1.9 2009/02/28 11:53:17 eva Exp $
 
 inherit eutils autotools
 
@@ -26,7 +26,11 @@ src_unpack() {
 		"${FILESDIR}"/${P}-amd64.patch \
 		"${FILESDIR}"/${P}-pkg-config-macro.patch
 
-	intltoolize --force || die "intltoolize failed"
+	# To check at each bump.
+	sed "s/^#.*/[encoding: UTF-8]/" -i po/POTFILES.in || die "sed failed"
+	echo "gcolor2.glade" >> po/POTFILES.in
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
 
