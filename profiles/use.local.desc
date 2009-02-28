@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4234 2009/02/27 18:47:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4235 2009/02/28 00:27:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1293,7 +1293,7 @@ media-libs/spandsp:sse4.2 - Enable SSE4.2 support
 media-libs/spandsp:sse4a - Enable SSE4a support
 media-libs/spandsp:sse5 - Enable SSE5 support
 media-libs/speex:vorbis-psy - Enable Vorbis-style psychoacoustics
-media-libs/svgalib:no-helper - Do not build the helper kernel module
+media-libs/svgalib:kernel-helper - Build the helper kernel module
 media-libs/swfdec:alsa - Use ALSA for audio output
 media-libs/swfdec:doc - Build documentation
 media-libs/swfdec:ffmpeg - Use media-plugins/gst-plugins-ffmpeg to enable Flash video support. Necessary if you want to use sites like youtube
