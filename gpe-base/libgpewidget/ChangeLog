@@ -1,0 +1,9 @@
+# ChangeLog for gpe-base/libgpewidget
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpewidget/ChangeLog,v 1.1 2009/02/28 23:52:44 solar Exp $
+
+*libgpewidget-0.117 (28 Feb 2009)
+
+  28 Feb 2009; <solar@gentoo.org> +metadata.xml, +libgpewidget-0.117.ebuild:
+  Initial commit based on code from Rene Wagner
+
