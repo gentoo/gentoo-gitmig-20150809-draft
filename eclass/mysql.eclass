@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.106 2009/02/11 11:29:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.107 2009/02/28 10:49:50 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -74,7 +74,7 @@ mysql_version_is_at_least "5.1" \
 
 # compile-time-only
 mysql_version_is_at_least "5.1.12" \
-&& DEPEND="${DEPEND} innodb? ( >=dev-util/cmake-2.4.3 )"
+&& DEPEND="${DEPEND} >=dev-util/cmake-2.4.3"
 
 # BitKeeper dependency, compile-time only
 [[ ${IS_BITKEEPER} -eq 90 ]] && DEPEND="${DEPEND} dev-util/bk_client"
@@ -124,9 +124,6 @@ mysql_version_is_at_least "5.0" \
 
 mysql_version_is_at_least "5.0.18" \
 && IUSE="${IUSE} max-idx-128"
-
-mysql_version_is_at_least "5.1" \
-&& IUSE="${IUSE} innodb"
 
 mysql_version_is_at_least "5.1" \
 || IUSE="${IUSE} berkdb"
@@ -441,9 +438,8 @@ configure_51() {
 		elog "http://dev.mysql.com/doc/refman/5.1/en/federated-limitations.html"
 	fi
 
-	if use innodb ; then
-		plugins="${plugins},innobase"
-	fi
+	# Upstream specifically requests that InnoDB always be built.
+	plugins="${plugins},innobase"
 
 	# like configuration=max-no-ndb
 	if use cluster ; then
@@ -584,8 +580,7 @@ mysql_src_unpack() {
 	if mysql_version_is_at_least "5.1.12" ; then
 		rebuilddirlist="."
 		# TODO: check this with a cmake expert
-		use innodb \
-		&& cmake \
+		cmake \
 			-DCMAKE_C_COMPILER=$(type -P $(tc-getCC)) \
 			-DCMAKE_CXX_COMPILER=$(type -P $(tc-getCXX)) \
 			"storage/innobase"
