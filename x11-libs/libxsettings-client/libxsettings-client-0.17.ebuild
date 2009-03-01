@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.17.ebuild,v 1.1 2009/03/01 03:20:33 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.17.ebuild,v 1.2 2009/03/01 06:01:32 mr_bones_ Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 
@@ -30,4 +30,3 @@ src_unpack() {
 		Makefile.in || die "Sed failed"
 	eautoconf
 }
-
