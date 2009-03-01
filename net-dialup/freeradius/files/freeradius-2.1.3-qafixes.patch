@@ -1,0 +1,24 @@
+diff -Nru freeradius-server-2.1.3.orig/src/main/listen.c freeradius-server-2.1.3/src/main/listen.c
+--- freeradius-server-2.1.3.orig/src/main/listen.c	2008-12-05 16:37:56.000000000 +0000
++++ freeradius-server-2.1.3/src/main/listen.c	2009-03-01 12:16:55.000000000 +0000
+@@ -45,6 +45,9 @@
+ #include <fcntl.h>
+ #endif
+ 
++#ifdef WITH_UDPFROMTO
++#include <freeradius-devel/udpfromto.h>
++#endif
+ 
+ /*
+  *	We'll use this below.
+diff -Nru freeradius-server-2.1.3.orig/src/main/radmin.c freeradius-server-2.1.3/src/main/radmin.c
+--- freeradius-server-2.1.3.orig/src/main/radmin.c	2008-12-05 16:37:56.000000000 +0000
++++ freeradius-server-2.1.3/src/main/radmin.c	2009-03-01 12:22:44.000000000 +0000
+@@ -47,6 +47,7 @@
+ #else /* !defined(HAVE_READLINE_H) */
+ extern char *readline ();
+ #endif /* !defined(HAVE_READLINE_H) */
++#include <readline/history.h>
+ char *cmdline = NULL;
+ #else /* !defined(HAVE_READLINE_READLINE_H) */
+   /* no readline */
