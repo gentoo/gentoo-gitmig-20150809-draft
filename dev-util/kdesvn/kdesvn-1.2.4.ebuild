@@ -1,28 +1,30 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.2.3.ebuild,v 1.1 2009/02/05 23:03:14 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.2.4.ebuild,v 1.1 2009/03/01 12:21:19 tampakrap Exp $
 
 EAPI="2"
 
-KDE_MINIMAL="4.1"
 KDE_LINGUAS="cs de es fr ja lt nl ru"
-inherit kde4-base flag-o-matic
+inherit kde4-base
 
 DESCRIPTION="KDESvn is a frontend to the subversion vcs."
 HOMEPAGE="http://www.alwins-world.de/wiki/programs/kdesvn"
 SRC_URI="http://kdesvn.alwins-world.de/downloads/${P}.tar.bz2"
 
-SLOT="1.2"
+SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-RDEPEND="dev-db/sqlite
+RDEPEND="
+	!dev-util/kdesvn:1.2
+	dev-db/sqlite
 	>=dev-util/subversion-1.4
-	kde-base/kdesdk-kioslaves"
-
+	kde-base/kdesdk-kioslaves
+"
 DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.6"
+	>=dev-util/cmake-2.6
+"
 
 src_configure() {
 	append-cppflags -DQT_THREAD_SUPPORT
