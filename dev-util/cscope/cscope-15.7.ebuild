@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.6-r3.ebuild,v 1.2 2009/03/01 09:41:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.7.ebuild,v 1.1 2009/03/01 09:41:40 ulm Exp $
 
 inherit elisp-common eutils
 
 DESCRIPTION="Interactively examine a C program"
 HOMEPAGE="http://cscope.sourceforge.net/"
-SRC_URI="mirror://sourceforge/cscope/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/cscope/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
@@ -21,16 +21,6 @@ DEPEND="${RDEPEND}
 	emacs? ( virtual/emacs )"
 
 SITEFILE="50${PN}-gentoo.el"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# warn users of insecure web frontend, see bug #158831
-	epatch "${FILESDIR}/${PN}-158831-warning_webscope.patch"
-	# fix crash on window resizes, bug 243754 (patch from upstream cvs)
-	epatch "${FILESDIR}/${P}-sigwinch.patch"
-}
 
 src_compile() {
 	STRIP="no"
