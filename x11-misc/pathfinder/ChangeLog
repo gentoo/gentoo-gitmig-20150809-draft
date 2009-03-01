@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/pathfinder
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.19 2008/12/02 06:12:23 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.20 2009/03/01 12:22:41 mabi Exp $
+
+*pathfinder-1.6.35 (01 Mar 2009)
+
+  01 Mar 2009; Matti Bickel <mabi@gentoo.org> -pathfinder-1.6.30.ebuild,
+  -pathfinder-1.6.31.ebuild, +pathfinder-1.6.35.ebuild:
+  removed old builds, added new version using EAPI 1 slot deps, to avoid
+  bumping when nothing really changed in the fox stable api. This will be the
+  last bump for pathfinder-1.6
 
   02 Dec 2008; Jeroen Roovers <jer@gentoo.org> pathfinder-1.6.34.ebuild:
   Stable for HPPA (bug #249286).
