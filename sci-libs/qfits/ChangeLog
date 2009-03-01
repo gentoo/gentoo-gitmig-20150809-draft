@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/qfits
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/qfits/ChangeLog,v 1.2 2007/05/18 15:17:01 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/qfits/ChangeLog,v 1.3 2009/03/01 19:14:03 bicatali Exp $
+
+  01 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/qfits-6.2.0-open.patch, qfits-6.2.0.ebuild:
+  Added fix for _FORTIFY_SOURCE=2, thank loki_val to point to a patch from
+  Fedora folks
 
   18 May 2007; Sébastien Fabbro <bicatali@gentoo.org> qfits-6.2.0.ebuild:
   installs html doc properly
