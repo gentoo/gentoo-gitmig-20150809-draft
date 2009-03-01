@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1-r2.ebuild,v 1.3 2008/05/19 16:16:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1-r2.ebuild,v 1.4 2009/03/01 01:52:37 patrick Exp $
 
 WANT_AUTOCONF='latest'
 WANT_AUTOMAKE='latest'
@@ -118,7 +118,6 @@ pkg_postinst() {
 	elog "A sample configuration file has been installed as"
 	elog "/etc/aide/aide.conf.  Please edit to meet your needs."
 	elog "Read the aide.conf(5) manual page for more information."
-	elog "A cron file has been installed in /etc/cron.daily/aide.cron"
 	elog "A helper script, aideinit, has been installed and can"
 	elog "be used to make AIDE management easier. Please run"
 	elog "aideinit --help for more information"

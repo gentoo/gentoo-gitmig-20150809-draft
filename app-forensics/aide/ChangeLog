@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/aide
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.37 2009/01/08 19:49:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.38 2009/03/01 01:52:37 patrick Exp $
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org> aide-0.13.1-r2.ebuild:
+  Fixing elog messages to reflect changes from #195690. Closes #249793
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -aide-0.13.1-r1.ebuild:
   Removing unneeded old
