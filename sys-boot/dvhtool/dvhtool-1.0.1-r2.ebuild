@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/dvhtool-1.0.1-r2.ebuild,v 1.2 2009/03/01 22:57:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/dvhtool-1.0.1-r2.ebuild,v 1.3 2009/03/01 23:26:14 kumba Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Tool to copy kernel(s) into the volume header on SGI MIPS-based workstations."
 HOMEPAGE="http://packages.debian.org/unstable/utils/dvhtool"
@@ -32,8 +32,11 @@ src_unpack() {
 
 src_compile() {
 	cd "${S}.orig"
-	econf || die "econf failed"
-	emake || die "Failed to compile"
+	CC=$(tc-getCC) LD=$(tc-getLD) \
+		econf || die "econf failed"
+
+	CC=$(tc-getCC) LD=$(tc-getLD) \
+		emake || die "Failed to compile"
 }
 
 src_install() {
