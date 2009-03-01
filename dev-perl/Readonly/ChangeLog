@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Readonly
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.5 2008/07/17 20:11:29 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.6 2009/03/01 14:52:40 nixnut Exp $
+
+  01 Mar 2009; nixnut <nixnut@gentoo.org> Readonly-1.03.ebuild:
+  ppc stable #260621
 
   17 Jul 2008; Raúl Porcel <armin76@gentoo.org> Readonly-1.03.ebuild:
   sparc/x86 stable
