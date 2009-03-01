@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.9.ebuild,v 1.15 2007/04/15 19:49:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.9.ebuild,v 1.16 2009/03/01 17:11:23 loki_val Exp $
 
 DESCRIPTION="ENCA detects the character coding of a file and converts it if desired"
 HOMEPAGE="http://trific.ath.cx/software/enca/"
-SRC_URI="http://trific.ath.cx/Ftp/enca/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
