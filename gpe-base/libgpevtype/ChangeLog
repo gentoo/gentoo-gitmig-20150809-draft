@@ -1,0 +1,9 @@
+# ChangeLog for gpe-base/libgpevtype
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpevtype/ChangeLog,v 1.1 2009/03/01 00:31:48 solar Exp $
+
+*libgpevtype-0.50 (01 Mar 2009)
+
+  01 Mar 2009; <solar@gentoo.org> +metadata.xml, +libgpevtype-0.50.ebuild:
+  Initial commit
+
