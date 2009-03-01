@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsaplayer
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.67 2008/07/05 06:49:43 drac Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.68 2009/03/01 09:39:39 redhatter Exp $
+
+*alsaplayer-0.99.80-r1 (01 Mar 2009)
+
+  01 Mar 2009; Stuart Longland <redhatter@gentoo.org>
+  +files/alsaplayer-0.99.80-enable-libid3tag.patch,
+  +alsaplayer-0.99.80-r1.ebuild:
+  Add id3tag USE flag to alsaplayer (and patch configure.ac accordingly).
+  Resolves bug #210163.
 
   05 Jul 2008; Samuli Suominen <drac@gentoo.org>
   +files/alsaplayer-0.99.80-missing_limits_h.patch,
