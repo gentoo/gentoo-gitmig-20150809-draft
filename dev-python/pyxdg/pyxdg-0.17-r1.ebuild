@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.17.ebuild,v 1.1 2008/12/06 23:41:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.17-r1.ebuild,v 1.1 2009/03/01 09:30:17 neurogeek Exp $
 
 NEED_PYTHON=2.4
 
@@ -13,6 +13,11 @@ LICENSE="LGPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
+
+src_unpack() {
+	distutils_src_unpack
+	epatch "${FILESDIR}/${PN}-subprocess.patch"
+}
 
 src_install () {
 	DOCS="AUTHORS"
