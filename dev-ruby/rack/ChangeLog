@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rack
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.2 2008/10/20 18:54:42 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.3 2009/03/01 13:03:53 a3li Exp $
+
+*rack-0.9.1 (01 Mar 2009)
+
+  01 Mar 2009; Alex Legler <a3li@gentoo.org> +rack-0.9.1.ebuild:
+  Version bump. rack-0.9.1 is not Ruby 1.9 compatbile.
 
 *rack-0.4.0 (20 Oct 2008)
 
