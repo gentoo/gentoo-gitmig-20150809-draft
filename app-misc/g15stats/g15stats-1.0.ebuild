@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/g15stats-1.0.ebuild,v 1.3 2008/10/05 17:52:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/g15stats-1.0.ebuild,v 1.4 2009/03/01 17:27:55 loki_val Exp $
 
-DESCRIPTION="A simple message/alert client for G15daemon"
+DESCRIPTION="CPU, memory, swap, network stats for G15 Keyboard"
 HOMEPAGE="http://g15daemon.sourceforge.net/"
 SRC_URI="mirror://sourceforge/g15daemon/${P}.tar.bz2"
 
