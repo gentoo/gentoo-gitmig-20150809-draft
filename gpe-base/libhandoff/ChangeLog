@@ -1,0 +1,9 @@
+# ChangeLog for gpe-base/libhandoff
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libhandoff/ChangeLog,v 1.1 2009/03/01 01:10:57 solar Exp $
+
+*libhandoff-0.1 (01 Mar 2009)
+
+  01 Mar 2009; <solar@gentoo.org> +metadata.xml, +libhandoff-0.1.ebuild:
+  Initial commit
+
