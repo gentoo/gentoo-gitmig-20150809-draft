@@ -9,8 +9,4 @@
   It's based on a Motorola C350 and C650, but it's also compatible with other
   mobile phones like Nokia, Ericsson and Siemens.
 </longdescription>
-<use>
-  <flag name='gammu'>Enable the Gammu backend</flag>
-  <flag name='obex'>Enable obex transports</flag>
-</use>
 </pkgmetadata>
