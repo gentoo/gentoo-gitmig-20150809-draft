@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.1.ebuild,v 1.10 2009/03/01 16:04:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.3.ebuild,v 1.1 2009/03/01 16:04:24 mrness Exp $
 
+EAPI="2"
 WANT_AUTOMAKE=none
 
 inherit eutils autotools flag-o-matic
@@ -12,16 +13,16 @@ SRC_URI="http://www.kannel.org/download/${PV}/gateway-${PV}.tar.gz"
 
 LICENSE="Kannel"
 SLOT="0"
-KEYWORDS="~amd64 x86"
-IUSE="ssl mysql sqlite sqlite3 postgres pcre doc debug pam"
+KEYWORDS="~amd64 ~x86"
+IUSE="ssl mysql sqlite postgres pcre doc debug pam"
 
-RDEPEND=">=dev-libs/libxml2-2.6.26
+RDEPEND="sys-libs/e2fsprogs-libs
+	>=dev-libs/libxml2-2.6.26
 	>=dev-lang/perl-5.8.8
 	>=sys-libs/zlib-1.2.3
 	ssl? ( >=dev-libs/openssl-0.9.8d )
 	mysql? ( virtual/mysql )
-	sqlite? ( =dev-db/sqlite-2* )
-	sqlite3? ( >=dev-db/sqlite-3.2.1 )
+	sqlite? ( >=dev-db/sqlite-3.2.1 )
 	postgres? ( virtual/postgresql-server )
 	pcre? ( dev-libs/libpcre )
 	doc? ( media-gfx/transfig
@@ -44,6 +45,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-custom-wap-ports.patch"
 	epatch "${FILESDIR}/${P}-nolex.patch" # flex is not used
+	epatch "${FILESDIR}/${P}-external-libuuid.patch"
 
 	#by default, use current directory for logging
 	sed -i -e 's:/tmp/::' doc/examples/kannel.conf
@@ -51,23 +53,21 @@ src_unpack() {
 	eautoconf
 }
 
-src_compile() {
+src_configure() {
 	append-flags -fno-strict-aliasing # some code breaks strict aliasing
 	econf --docdir=/usr/share/doc/${P} \
 		--enable-localtime \
 		--disable-start-stop-daemon \
+		--without-sqlite2 \
 		$(use_enable pam) \
 		$(use_enable debug debug) \
 		$(use_enable pcre) \
 		$(use_enable doc docs) \
 		$(use_enable ssl) \
 		$(use_with mysql) \
-		$(use_with sqlite) \
-		$(use_with sqlite3) \
+		$(use_with sqlite sqlite3) \
 		$(use_with postgres pgsql) \
 		|| die "econf failed"
-
-	emake || die "emake failed"
 }
 
 src_test() {
