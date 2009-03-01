@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.138 2009/01/26 18:37:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.139 2009/03/01 19:16:21 patrick Exp $
+
+*snort-2.6.1.4-r1 (01 Mar 2009)
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/snort-2.6.1.4-server_stats.patch, +snort-2.6.1.4-r1.ebuild:
+  Fixing snort 2.6.1.4 for gcc 4.3.3 / foritfy_sources. Fixes #258487. Patch
+  by Attila Fazekas.
 
   26 Jan 2009; Mike Frysinger <vapier@gentoo.org> snort-2.8.3.1.ebuild:
   Drop usage of USE=pic here.
