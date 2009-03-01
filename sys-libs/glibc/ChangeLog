@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.611 2009/02/24 22:56:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.612 2009/03/01 21:06:22 vapier Exp $
+
+  01 Mar 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/eblits/pkg_postinst.eblit, +files/eblits/pkg_preinst.eblit,
+  +files/eblits/pkg_setup.eblit, glibc-2.9_p20081201-r2.ebuild:
+  Add support for pkg_* funcs with eblits.
 
   24 Feb 2009; Joshua Kinard <kumba@gentoo.org>
   glibc-2.9_p20081201-r2.ebuild:

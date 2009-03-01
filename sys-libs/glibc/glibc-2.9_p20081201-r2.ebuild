@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.9_p20081201-r2.ebuild,v 1.3 2009/02/24 22:56:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.9_p20081201-r2.ebuild,v 1.4 2009/03/01 21:06:22 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -24,7 +24,7 @@ SNAP_VER=""
 fi
 MANPAGE_VER=""                                 # pregenerated manpages
 INFOPAGE_VER=""                                # pregenerated infopages
-PATCH_VER="4"                                  # Gentoo patchset
+PATCH_VER="5"                                  # Gentoo patchset
 PORTS_VER=${RELEASE_VER}                       # version of glibc ports addon
 LIBIDN_VER=""                                  # version of libidn addon
 LT_VER=""                                      # version of linuxthreads addon
@@ -135,6 +135,7 @@ SRC_URI=$(
 eblit-include() {
 	local skipable=false
 	[[ $1 == "--skip" ]] && skipable=true && shift
+	[[ $1 == pkg_* ]] && skipable=true
 
 	local e v func=$1 ver=$2
 	[[ -z ${func} ]] && die "Usage: eblit-include <function> [version]"
@@ -161,7 +162,7 @@ eblit-run() {
 	eblit-include --skip common "${*:2}"
 	eblit-include "$@"
 	eblit-run-maybe eblit-$1-pre
-	eblit-${PN}-$1 || die
+	eblit-${PN}-$1
 	eblit-run-maybe eblit-$1-post
 }
 
@@ -169,6 +170,15 @@ src_unpack()  { eblit-run src_unpack  ; }
 src_compile() { eblit-run src_compile ; }
 src_test()    { eblit-run src_test    ; }
 src_install() { eblit-run src_install ; }
+
+# FILESDIR might not be available during binpkg install
+for x in setup {pre,post}inst ; do
+	e="${FILESDIR}/eblits/pkg_${x}.eblit"
+	if [[ -e ${e} ]] ; then
+		. "${e}"
+		eval "pkg_${x}() { eblit-run pkg_${x} ; }"
+	fi
+done
 
 eblit-src_unpack-post() {
 	if use hardened ; then
@@ -216,148 +226,4 @@ maint_pkg_create() {
 		tar hcf - ${tarball} --exclude-vcs | lzma > "${T}"/${tarball}.tar.lzma
 		du -b "${T}"/${tarball}.tar.lzma
 	done
-}
-
-pkg_setup() {
-	# prevent native builds from downgrading ... maybe update to allow people
-	# to change between diff -r versions ? (2.3.6-r4 -> 2.3.6-r2)
-	if [[ ${ROOT} == "/" ]] && [[ ${CBUILD} == ${CHOST} ]] && [[ ${CHOST} == ${CTARGET} ]] ; then
-		if has_version '>'${CATEGORY}/${PF} ; then
-			eerror "Sanity check to keep you from breaking your system:"
-			eerror " Downgrading glibc is not supported and a sure way to destruction"
-			die "aborting to save your system"
-		fi
-	fi
-
-	# users have had a chance to phase themselves, time to give em the boot
-	if [[ -e ${ROOT}/etc/locale.gen ]] && [[ -e ${ROOT}/etc/locales.build ]] ; then
-		eerror "You still haven't deleted ${ROOT}/etc/locales.build."
-		eerror "Do so now after making sure ${ROOT}/etc/locale.gen is kosher."
-		die "lazy upgrader detected"
-	fi
-
-	if [[ ${CTARGET} == i386-* ]] ; then
-		eerror "i386 CHOSTs are no longer supported."
-		eerror "Chances are you don't actually want/need i386."
-		eerror "Please read http://www.gentoo.org/doc/en/change-chost.xml"
-		die "please fix your CHOST"
-	fi
-
-	if [[ -n ${LT_VER} ]] ; then
-		if use nptlonly && ! use nptl ; then
-			eerror "If you want nptlonly, add nptl to your USE too ;p"
-			die "nptlonly without nptl"
-		fi
-	fi
-
-	if [[ -e /proc/xen ]] && [[ $(tc-arch) == "x86" ]] && ! is-flag -mno-tls-direct-seg-refs ; then
-		ewarn "You are using Xen but don't have -mno-tls-direct-seg-refs in your CFLAGS."
-		ewarn "This will result in a 50% performance penalty, which is probably not what you want."
-	fi
-
-	use hardened && ! gcc-specs-pie && \
-		ewarn "PIE hardening not applied, as your compiler doesn't default to PIE"
-}
-
-fix_lib64_symlinks() {
-	# the original Gentoo/AMD64 devs decided that since 64bit is the native
-	# bitdepth for AMD64, lib should be used for 64bit libraries. however,
-	# this ignores the FHS and breaks multilib horribly... especially
-	# since it wont even work without a lib64 symlink anyways. *rolls eyes*
-	# see bug 59710 for more information.
-	# Travis Tilley <lv@gentoo.org> (08 Aug 2004)
-	if [ -L ${ROOT}/lib64 ] ; then
-		ewarn "removing /lib64 symlink and moving lib to lib64..."
-		ewarn "dont hit ctrl-c until this is done"
-		rm ${ROOT}/lib64
-		# now that lib64 is gone, nothing will run without calling ld.so
-		# directly. luckily the window of brokenness is almost non-existant
-		use amd64 && /lib/ld-linux-x86-64.so.2 /bin/mv ${ROOT}/lib ${ROOT}/lib64
-		use ppc64 && /lib/ld64.so.1 /bin/mv ${ROOT}/lib ${ROOT}/lib64
-		# all better :)
-		ldconfig
-		ln -s lib64 ${ROOT}/lib
-		einfo "done! :-)"
-		einfo "fixed broken lib64/lib symlink in ${ROOT}"
-	fi
-	if [ -L ${ROOT}/usr/lib64 ] ; then
-		rm ${ROOT}/usr/lib64
-		mv ${ROOT}/usr/lib ${ROOT}/usr/lib64
-		ln -s lib64 ${ROOT}/usr/lib
-		einfo "fixed broken lib64/lib symlink in ${ROOT}/usr"
-	fi
-	if [ -L ${ROOT}/usr/X11R6/lib64 ] ; then
-		rm ${ROOT}/usr/X11R6/lib64
-		mv ${ROOT}/usr/X11R6/lib ${ROOT}/usr/X11R6/lib64
-		ln -s lib64 ${ROOT}/usr/X11R6/lib
-		einfo "fixed broken lib64/lib symlink in ${ROOT}/usr/X11R6"
-	fi
-}
-
-pkg_preinst() {
-	# nothing to do if just installing headers
-	just_headers && return
-
-	# PPC64+others may want to eventually be added to this logic if they
-	# decide to be multilib compatible and FHS compliant. note that this
-	# chunk of FHS compliance only applies to 64bit archs where 32bit
-	# compatibility is a major concern (not IA64, for example).
-
-	# amd64's 2005.0 is the first amd64 profile to not need this code.
-	# 2005.0 is setup properly, and this is executed as part of the
-	# 2004.3 -> 2005.0 upgrade script.
-	# It can be removed after 2004.3 has been purged from portage.
-	{ use amd64 || use ppc64; } && [ "$(get_libdir)" == "lib64" ] && ! has_multilib_profile && fix_lib64_symlinks
-
-	# it appears that /lib/tls is sometimes not removed.  See bug
-	# 69258 for more info.
-	if [[ -d ${ROOT}/$(alt_libdir)/tls ]] && [[ ! -d ${D}/$(alt_libdir)/tls ]] ; then
-		ewarn "nptlonly or -nptl in USE, removing /${ROOT}$(alt_libdir)/tls..."
-		rm -r "${ROOT}"/$(alt_libdir)/tls || die
-	fi
-
-	# simple test to make sure our new glibc isnt completely broken.
-	# make sure we don't test with statically built binaries since
-	# they will fail.  also, skip if this glibc is a cross compiler.
-	[[ ${ROOT} != "/" ]] && return 0
-	[[ -d ${D}/$(get_libdir) ]] || return 0
-	cd / #228809
-	local x striptest
-	for x in date env ls true uname ; do
-		x=$(type -p ${x})
-		[[ -z ${x} ]] && continue
-		striptest=$(LC_ALL="C" file -L ${x} 2>/dev/null)
-		[[ -z ${striptest} ]] && continue
-		[[ ${striptest} == *"statically linked"* ]] && continue
-		"${D}"/$(get_libdir)/ld-*.so \
-			--library-path "${D}"/$(get_libdir) \
-			${x} > /dev/null \
-			|| die "simple run test (${x}) failed"
-	done
-}
-
-pkg_postinst() {
-	# nothing to do if just installing headers
-	just_headers && return
-
-	if ! tc-is-cross-compiler && [[ -x ${ROOT}/usr/sbin/iconvconfig ]] ; then
-		# Generate fastloading iconv module configuration file.
-		"${ROOT}"/usr/sbin/iconvconfig --prefix="${ROOT}"
-	fi
-
-	if ! is_crosscompile && [[ ${ROOT} == "/" ]] ; then
-		# Reload init ... if in a chroot or a diff init package, ignore
-		# errors from this step #253697
-		/sbin/telinit U 2>/dev/null
-
-		# if the host locales.gen contains no entries, we'll install everything
-		local locale_list="${ROOT}etc/locale.gen"
-		if [[ -z $(locale-gen --list --config "${locale_list}") ]] ; then
-			ewarn "Generating all locales; edit /etc/locale.gen to save time/space"
-			locale_list="${ROOT}usr/share/i18n/SUPPORTED"
-		fi
-		local x jobs
-		for x in ${MAKEOPTS} ; do [[ ${x} == -j* ]] && jobs=${x#-j} ; done
-		locale-gen -j ${jobs:-1} --config "${locale_list}"
-	fi
 }
