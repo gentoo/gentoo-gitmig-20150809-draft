@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/automoc-0.9.88.ebuild,v 1.2 2009/02/01 22:40:07 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/automoc-0.9.88.ebuild,v 1.3 2009/03/01 11:41:57 patrick Exp $
 
 EAPI="2"
 
 MY_PN="automoc4"
 MY_P="$MY_PN-${PV}"
 
-inherit cmake-utils
+inherit cmake-utils flag-o-matic
 
 DESCRIPTION="KDE Meta Object Compiler"
 HOMEPAGE="http://www.kde.org"
@@ -22,3 +22,10 @@ DEPEND="x11-libs/qt-core:4"
 RDEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	if [[ ${ELIBC} == "uclibc" ]]; then
+		append-flags -pthread
+	fi
+}
+

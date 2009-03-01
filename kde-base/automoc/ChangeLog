@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/automoc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/ChangeLog,v 1.5 2009/02/01 22:40:07 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/ChangeLog,v 1.6 2009/03/01 11:41:57 patrick Exp $
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org> automoc-0.9.84.ebuild,
+  automoc-0.9.88.ebuild:
+  Fixing CFLAGS for uclibc to fix #260418
 
   01 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   automoc-0.9.88.ebuild:
