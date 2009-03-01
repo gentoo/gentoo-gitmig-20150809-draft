@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/clucene
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.19 2009/02/05 03:02:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/ChangeLog,v 1.20 2009/03/01 17:39:56 alexxy Exp $
+
+  01 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> clucene-0.9.21b.ebuild:
+  Add ~mips love
 
   05 Feb 2009; Brent Baude <ranger@gentoo.org> clucene-0.9.21b.ebuild:
   Marking clucene-0.9.21b ppc64 for bug 251643
