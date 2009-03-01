@@ -1,6 +1,12 @@
 # ChangeLog for app-office/osmo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.4 2008/11/24 12:58:39 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/ChangeLog,v 1.5 2009/03/01 18:25:43 patrick Exp $
+
+*osmo-0.2.4 (01 Mar 2009)
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org> metadata.xml,
+  +osmo-0.2.4.ebuild:
+  Bump to 0.2.4, fixes #254289. Modified ebuild by Perttu Luukko
 
   24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
   Remove my old e-mail drac at gentoo.org from metadata.xml and leave this
