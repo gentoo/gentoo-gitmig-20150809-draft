@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.33 2009/02/05 19:44:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.34 2009/03/01 09:05:51 vapier Exp $
 
 EAPI="2"
+
+inherit multilib
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
@@ -88,6 +90,8 @@ src_prepare() {
 
 src_configure() {
 	export LDCONFIG=/bin/true
+
+	use amd64 && ! use win64 && multilib_toolchain_setup x86
 
 	# XXX: should check out these flags too:
 	#	audioio capi fontconfig freetype gphoto
