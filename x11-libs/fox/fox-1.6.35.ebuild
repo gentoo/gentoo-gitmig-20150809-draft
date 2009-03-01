@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.30.ebuild,v 1.9 2009/01/09 13:57:43 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.35.ebuild,v 1.1 2009/03/01 11:54:28 mabi Exp $
 
 inherit fox
 
 LICENSE="LGPL-2.1"
 SLOT="1.6"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="bzip2 cups jpeg opengl png threads tiff truetype zlib"
 
 RDEPEND="x11-libs/libXrandr
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/libXrandr
 	png? ( >=media-libs/libpng-1.2.5 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	truetype? ( =media-libs/freetype-2*
-		x11-libs/libXft )
+		virtual/xft )
 	zlib? ( >=sys-libs/zlib-1.1.4 )"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
