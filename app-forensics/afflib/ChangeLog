@@ -1,0 +1,11 @@
+# ChangeLog for app-forensics/afflib
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.1 2009/03/01 00:59:58 patrick Exp $
+
+*afflib-3.3.4 (01 Mar 2009)
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +afflib-3.3.4.ebuild:
+  Initial import. Fixes #203758. Ebuild by raistlin@s0ftpj.org and
+  aoz.syn@gmail.com.
+
