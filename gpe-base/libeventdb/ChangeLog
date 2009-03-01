@@ -1,0 +1,11 @@
+# ChangeLog for gpe-base/libeventdb
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libeventdb/ChangeLog,v 1.1 2009/03/01 00:23:21 solar Exp $
+
+*libeventdb-0.90 (01 Mar 2009)
+
+  01 Mar 2009; <solar@gentoo.org>
+  +files/libeventdb-unbreak-LIVE-macro.patch, +metadata.xml,
+  +libeventdb-0.90.ebuild:
+  Initial commit
+
