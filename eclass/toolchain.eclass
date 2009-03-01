@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.392 2009/03/01 20:37:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.393 2009/03/01 20:41:26 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1120,10 +1120,7 @@ gcc_src_unpack() {
 	# disable --as-needed from being compiled into gcc specs
 	# natively when using a gcc version < 3.4.4
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992
-	if [[ ${GCCMAJOR} < 3 ]] || \
-	   [[ ${GCCMAJOR}.${GCCMINOR} < 3.4 ]] || \
-	   [[ ${GCCMAJOR}.${GCCMINOR}.${GCCMICRO} < 3.4.4 ]]
-	then
+	if ! tc_version_is_at_least 3.4.4 ; then
 		sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g "${S}"/gcc/config.in
 	fi
 
@@ -1144,7 +1141,7 @@ gcc_src_unpack() {
 	# update configure files
 	local f
 	einfo "Fixing misc issues in configure files"
-	[[ ${GCCMAJOR} -ge 4 ]] && epatch "${GCC_FILESDIR}"/gcc-configure-texinfo.patch
+	tc_version_is_at_least 4.1 && epatch "${GCC_FILESDIR}"/gcc-configure-texinfo.patch
 	for f in $(grep -l 'autoconf version 2.13' $(find "${S}" -name configure)) ; do
 		ebegin "  Updating ${f/${S}\/} [LANG]"
 		patch "${f}" "${GCC_FILESDIR}"/gcc-configure-LANG.patch >& "${T}"/configure-patch.log \
