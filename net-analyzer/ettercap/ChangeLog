@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/ettercap
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.65 2007/09/06 16:31:55 jokey Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.66 2009/03/01 20:20:40 patrick Exp $
+
+*ettercap-0.7.3-r3 (01 Mar 2009)
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/ettercap-0.7.3-open_missing_mode.patch, +ettercap-0.7.3-r3.ebuild:
+  Fix for gcc 4.3.3 / fortify_sources. Patch by Jonathan-Christofer Demay.
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -ettercap-0.7.3.ebuild:
   Cleanup
