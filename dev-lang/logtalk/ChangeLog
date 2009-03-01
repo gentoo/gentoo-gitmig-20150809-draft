@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/logtalk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/ChangeLog,v 1.4 2009/01/17 22:33:41 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/ChangeLog,v 1.5 2009/03/01 14:21:34 miknix Exp $
+
+*logtalk-2.35.1 (01 Mar 2009)
+
+  01 Mar 2009; <miknix@gentoo.org> metadata.xml, +logtalk-2.35.1.ebuild:
+  Version bump. Add support for bundled doc generation scripts.
 
   17 Jan 2009; <keri@gentoo.org> logtalk-2.34.1.ebuild:
   Use doenvd function rather than doins function for /etc/env.d/99logtalk file
