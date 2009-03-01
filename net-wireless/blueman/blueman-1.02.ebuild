@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.02.ebuild,v 1.1 2009/03/01 09:09:17 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.02.ebuild,v 1.2 2009/03/01 09:10:16 dev-zero Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ IUSE="network nls"
 CDEPEND="dev-libs/glib:2
 	>=x11-libs/gtk+-2.12:2
 	x11-libs/startup-notification
-	>=dev-lang/python-2.5	
+	>=dev-lang/python-2.5
 	dev-python/pygobject
 	dev-python/dbus-python
 	dev-python/notify-python
@@ -32,7 +32,6 @@ RDEPEND="${CDEPEND}
 	dev-python/gconf-python
 	sys-apps/dbus
 	network? ( || ( net-dns/dnsmasq =net-misc/dhcp-3* ) )"
-	
 
 src_configure() {
 	econf $(use_enable nls)
