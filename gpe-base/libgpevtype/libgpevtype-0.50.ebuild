@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpevtype/libgpevtype-0.50.ebuild,v 1.1 2009/03/01 00:31:48 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpevtype/libgpevtype-0.50.ebuild,v 1.2 2009/03/01 06:00:17 mr_bones_ Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 inherit gpe
@@ -21,4 +21,3 @@ RDEPEND="${RDEPEND}
 
 DEPEND="${DEPEND}
 	${RDEPEND}"
-
