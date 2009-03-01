@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/etswitch/etswitch-0.1.14.ebuild,v 1.6 2009/02/24 19:08:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/etswitch/etswitch-0.1.14.ebuild,v 1.7 2009/03/01 06:00:01 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	x11-proto/recordproto
 	x11-proto/xf86vidmodeproto"
 
-PATCHES=( "${FILESDIR}"/${P}-desktop-entry.patch "${FILESDIR}"/${P}-glibc.patch ) 
+PATCHES=( "${FILESDIR}"/${P}-desktop-entry.patch "${FILESDIR}"/${P}-glibc.patch )
 
 src_configure() {
 	egamesconf --datadir=/usr/share
