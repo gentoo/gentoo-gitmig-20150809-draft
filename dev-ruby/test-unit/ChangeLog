@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.2 2009/01/18 10:12:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.3 2009/03/01 12:43:57 a3li Exp $
+
+*test-unit-2.0.2-r1 (01 Mar 2009)
+
+  01 Mar 2009; Alex Legler <a3li@gentoo.org> test-unit-2.0.2.ebuild,
+  +test-unit-2.0.2-r1.ebuild:
+  Revbump changing USE_RUBY="any" to explicitly specified versions for Ruby
+  1.9 compatibility. Description adapted.
 
   18 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   test-unit-2.0.2.ebuild:
