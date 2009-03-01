@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-1.0.0.ebuild,v 1.1 2009/02/28 15:13:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-1.0.0-r1.ebuild,v 1.1 2009/03/01 08:46:05 mrness Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/sid-milter/${P}.tar.gz"
 LICENSE="Sendmail-Open-Source"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="ipv6"
 
 RDEPEND="dev-libs/openssl
 	>=sys-libs/db-3.2"
@@ -28,8 +28,11 @@ src_unpack() {
 
 	cd "${S}" || die "source dir not found"
 
+	local ENVDEF=""
+	use ipv6 && ENVDEF="${ENVDEF} -DNETINET6"
 	sed -e "s:@@CFLAGS@@:${CFLAGS}:" \
-		"${FILESDIR}/gentoo.config.m4" > "${S}/devtools/Site/site.config.m4" \
+		-e "s:@@ENVDEF@@:${ENVDEF}:" \
+		"${FILESDIR}/gentoo-config.m4" > "${S}/devtools/Site/site.config.m4" \
 		|| die "failed to generate site.config.m4"
 }
 
