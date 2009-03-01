@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/t-coffee
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.34 2008/09/06 11:29:59 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.35 2009/03/01 17:15:20 patrick Exp $
+
+*t-coffee-7.54 (01 Mar 2009)
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org> +t-coffee-7.54.ebuild:
+  Bump to 7.54. Closes #258081.
 
 *t-coffee-6.82 (06 Sep 2008)
 
