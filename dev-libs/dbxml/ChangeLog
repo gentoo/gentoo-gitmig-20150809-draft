@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dbxml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.3 2009/02/19 05:18:26 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.4 2009/03/01 13:41:04 patrick Exp $
+
+*dbxml-2.4.16.1 (01 Mar 2009)
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org> +dbxml-2.4.16.1.ebuild:
+  Bump to 2.4.16.1, fixes #258939
 
   19 Feb 2009; Serkan Kaba <serkan@gentoo.org> dbxml-2.4.13.2.ebuild:
   Add support for java-pkg-opt-2_pkg_preinst.
