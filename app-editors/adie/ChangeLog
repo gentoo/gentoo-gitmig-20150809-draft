@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/adie
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.23 2008/12/05 10:04:37 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.24 2009/03/01 11:57:07 mabi Exp $
+
+*adie-1.6.35 (01 Mar 2009)
+
+  01 Mar 2009; Matti Bickel <mabi@gentoo.org> metadata.xml,
+  -adie-1.6.30.ebuild, -adie-1.6.31.ebuild, +adie-1.6.35.ebuild:
+  removed old builds, added new version using EAPI 1 slot deps, to avoid
+  bumping when nothing really changed in the fox stable api. This will be the
+  last bump for adie-1.6
 
   05 Dec 2008; Raúl Porcel <armin76@gentoo.org> adie-1.6.34.ebuild:
   sparc stable wrt #249286

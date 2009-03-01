@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/adie-1.6.31.ebuild,v 1.1 2008/02/17 22:13:53 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/adie-1.6.35.ebuild,v 1.1 2009/03/01 11:57:07 mabi Exp $
+
+EAPI="1"
 
 inherit fox
 
@@ -11,6 +13,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="~x11-libs/fox-${PV}"
+DEPEND="x11-libs/fox:1.6"
 
 RDEPEND="${DEPEND}"
