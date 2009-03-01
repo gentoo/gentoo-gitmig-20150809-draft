@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.391 2009/02/15 23:04:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.392 2009/03/01 20:37:50 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1555,11 +1555,28 @@ gcc_do_filter_flags() {
 
 	case ${GCC_BRANCH_VER} in
 	3.2|3.3)
-		replace-cpu-flags k8 athlon64 opteron i686
+		replace-cpu-flags k8 athlon64 opteron i686 x86-64
 		replace-cpu-flags pentium-m pentium3m pentium3
 		case $(tc-arch) in
-			amd64|x86) filter-flags '-mtune=*';;
+			amd64|x86) filter-flags '-mtune=*' ;;
+			# in gcc 3.3 there is a bug on ppc64 where if -mcpu is used,
+			# the compiler wrongly assumes a 32bit target
+			ppc64) filter-flags "-mcpu=*";;
 		esac
+		case $(tc-arch) in
+			amd64) replace-cpu-flags core2 nocona;;
+			x86)   replace-cpu-flags core2 prescott;;
+		esac
+
+		replace-cpu-flags G3 750
+		replace-cpu-flags G4 7400
+		replace-cpu-flags G5 7400
+
+		# XXX: should add a sed or something to query all supported flags
+		#      from the gcc source and trim everything else ...
+		filter-flags -f{no-,}unit-at-a-time -f{no-,}web -mno-tls-direct-seg-refs
+		filter-flags -f{no-,}stack-protector{,-all}
+		filter-flags -fvisibility-inlines-hidden -fvisibility=hidden
 		;;
 	3.4|4.*)
 		case $(tc-arch) in
