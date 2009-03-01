@@ -1,0 +1,9 @@
+# ChangeLog for gpe-base/libmimedir
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libmimedir/ChangeLog,v 1.1 2009/03/01 00:16:31 solar Exp $
+
+*libmimedir-0.4.2 (01 Mar 2009)
+
+  01 Mar 2009; <solar@gentoo.org> +metadata.xml, +libmimedir-0.4.2.ebuild:
+  Initial commit
+
