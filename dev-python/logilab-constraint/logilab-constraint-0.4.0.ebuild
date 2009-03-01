@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.1 2009/02/28 19:19:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.2 2009/03/01 05:59:43 mr_bones_ Exp $
 
 inherit distutils
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-python/logilab-common-0.12.0"
 
 src_install() {
 	distutils_src_install
-	
+
 	# avoid conflict with dev-python/logilab-common:
 	rm -f "${D}"usr/$(get_libdir)/python*/site-packages/logilab/__init__.py
 
