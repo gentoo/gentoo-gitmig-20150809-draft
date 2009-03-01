@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/bluez-hcidump-1.42.ebuild,v 1.1 2008/08/11 13:25:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/bluez-hcidump-1.42.ebuild,v 1.2 2009/03/01 09:45:46 dev-zero Exp $
 
 DESCRIPTION="Bluetooth HCI packet analyzer"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
 IUSE=""
 
-DEPEND=">=net-wireless/bluez-libs-3.14"
+DEPEND="|| ( >=net-wireless/bluez-libs-3.14 net-wireless/bluez )"
 RDEPEND="${DEPEND}"
 
 src_install() {

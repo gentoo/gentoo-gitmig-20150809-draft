@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-hcidump
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.40 2008/08/11 13:25:20 dev-zero Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.41 2009/03/01 09:45:46 dev-zero Exp $
+
+  01 Mar 2009; Tiziano Müller <dev-zero@gentoo.org>
+  bluez-hcidump-1.42.ebuild:
+  Added net-wireless/bluez as possible dep for bluetooth
 
 *bluez-hcidump-1.42 (11 Aug 2008)
 
