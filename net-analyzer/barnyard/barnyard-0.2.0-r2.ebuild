@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r2.ebuild,v 1.7 2008/05/21 18:46:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r2.ebuild,v 1.8 2009/03/01 19:35:21 patrick Exp $
 
 WANT_AUTOMAKE="1.4"
 inherit eutils autotools
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/barnyard/barnyard-${PV/_/-}.tar.gz
 
 SLOT="0"
 LICENSE="QPL"
-KEYWORDS="~x86 -sparc"
+KEYWORDS="~amd64 -sparc ~x86"
 IUSE="mysql postgres sguil"
 
 DEPEND="net-libs/libpcap

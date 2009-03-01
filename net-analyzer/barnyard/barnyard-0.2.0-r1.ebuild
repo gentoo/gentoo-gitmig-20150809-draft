@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r1.ebuild,v 1.5 2008/05/21 18:46:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.2.0-r1.ebuild,v 1.6 2009/03/01 19:35:21 patrick Exp $
 
 DESCRIPTION="Fast output system for Snort"
 SRC_URI="mirror://sourceforge/barnyard/barnyard-${PV/_/-}.tar.gz"
@@ -33,7 +33,7 @@ src_compile() {
 
 src_install () {
 
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc docs/*
 	dodoc AUTHORS README
@@ -51,14 +51,14 @@ src_install () {
 			"${D}/etc/snort/barnyard.conf" || die "sed failed"
 	fi
 
-	newconfd ${FILESDIR}/barnyard.confd barnyard
+	newconfd "${FILESDIR}"/barnyard.confd barnyard
 	if use sguil ; then
 		sed -i -e s:/var/log/snort:/var/lib/sguil/$(hostname): \
 		-e s:/var/run/barnyard.pid:/var/run/sguil/barnyard.pid: \
 			"${D}/etc/conf.d/barnyard" || die "sed failed"
 	fi
 
-	newinitd ${FILESDIR}/barnyard.rc6 barnyard
+	newinitd "${FILESDIR}"/barnyard.rc6 barnyard
 	if use sguil ; then
 		sed -i -e "/start-stop-daemon --start/s:--exec:-c sguil --exec:" \
 			"${D}/etc/init.d/barnyard" || die "sed failed"
