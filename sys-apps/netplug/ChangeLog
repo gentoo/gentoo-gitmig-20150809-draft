@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/netplug
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.16 2008/11/27 22:13:28 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.17 2009/03/01 19:58:55 patrick Exp $
+
+*netplug-1.2.9-r5 (01 Mar 2009)
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/netplug-1.2.9-remove-werror.patch,
+  +files/netplug-1.2.9-warn_unused_result_write_call.patch,
+  +netplug-1.2.9-r5.ebuild:
+  Fix for gcc 4.3.3 / fortify_sources, remove -Werror from Makefile. Patches
+  by Romain Perier and Magnus Granberg.
 
   27 Nov 2008; Raúl Porcel <armin76@gentoo.org> netplug-1.2.9-r4.ebuild:
   sparc/x86 stable
