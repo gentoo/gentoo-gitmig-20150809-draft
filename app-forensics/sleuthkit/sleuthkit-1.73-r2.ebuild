@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-1.73-r2.ebuild,v 1.1 2005/04/29 23:50:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-1.73-r2.ebuild,v 1.2 2009/03/01 01:20:53 patrick Exp $
 
 inherit toolchain-funcs eutils
 
