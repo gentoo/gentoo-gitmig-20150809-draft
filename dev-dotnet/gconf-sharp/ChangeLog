@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gconf-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.59 2009/01/29 22:43:24 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.60 2009/03/01 00:53:33 loki_val Exp $
+
+  01 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -gconf-sharp-1.0.10.ebuild:
+  Clean out -sharp 1.0 ebuilds
 
 *gconf-sharp-2.24.0-r10 (29 Jan 2009)
 
