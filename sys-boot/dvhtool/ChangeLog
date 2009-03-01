@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/dvhtool
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/ChangeLog,v 1.10 2008/03/27 16:41:50 armin76 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/ChangeLog,v 1.11 2009/03/01 22:37:10 kumba Exp $
+
+*dvhtool-1.0.1-r2 (01 Mar 2009)
+
+  01 Mar 2009; Joshua Kinard <kumba@gentoo.org>
+  +files/dvhtool-1.0.1-debian-warn_type_guess.diff,
+  +files/dvhtool-1.0.1-debian-xopen_source.diff, -dvhtool-1.0.1-r1.ebuild,
+  +dvhtool-1.0.1-r2.ebuild:
+  Add two new patches from Debian, fix up some QA issues, and add ~amd64 to
+  KEYWORDS.
 
   27 Mar 2008; Raúl Porcel <armin76@gentoo.org> dvhtool-1.0.1-r1.ebuild:
   Fix debian HOMEPAGE
