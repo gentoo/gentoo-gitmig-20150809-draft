@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.17-r1.ebuild,v 1.1 2009/03/01 09:30:17 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.17-r1.ebuild,v 1.2 2009/03/01 09:54:32 neurogeek Exp $
 
 NEED_PYTHON=2.4
 
@@ -22,6 +22,7 @@ src_unpack() {
 src_install () {
 	DOCS="AUTHORS"
 	distutils_src_install
+	python_need_rebuild
 
 	insinto /usr/share/doc/${P}/test
 	insopts -m 755

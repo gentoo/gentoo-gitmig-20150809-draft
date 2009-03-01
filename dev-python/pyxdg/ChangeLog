@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.46 2009/03/01 09:30:17 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.47 2009/03/01 09:54:32 neurogeek Exp $
+
+  01 Mar 2009; Jesus Rivero <neurogeek@gentoo.org> pyxdg-0.17-r1.ebuild:
+  Added call to python_need_rebuild
 
 *pyxdg-0.17-r1 (01 Mar 2009)
 
