@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.4 2009/01/04 20:09:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.5 2009/03/01 12:47:46 alexxy Exp $
+
+  01 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> libzip-0.9.ebuild:
+  Add ~mips love
 
 *libzip-0.9 (04 Jan 2009)
 
