@@ -1,0 +1,9 @@
+# ChangeLog for gpe-base/libschedule
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libschedule/ChangeLog,v 1.1 2009/03/01 01:00:27 solar Exp $
+
+*libschedule-0.17 (01 Mar 2009)
+
+  01 Mar 2009; <solar@gentoo.org> +metadata.xml, +libschedule-0.17.ebuild:
+  Initial commit
+
