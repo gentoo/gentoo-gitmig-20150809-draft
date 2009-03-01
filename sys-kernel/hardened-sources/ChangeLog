@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.288 2009/03/01 19:34:54 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.289 2009/03/01 19:42:45 gengor Exp $
+
+  01 Mar 2009; Gordon Malm <gengor@gentoo.org>
+  hardened-sources-2.6.27-r8.ebuild:
+  Remove amd64 testing keyword, bug 256226.
 
   01 Mar 2009; Gordon Malm <gengor@gentoo.org>
   hardened-sources-2.6.27-r8.ebuild:
