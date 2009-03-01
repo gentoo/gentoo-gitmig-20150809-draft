@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/pyblosxom
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/ChangeLog,v 1.9 2007/12/18 10:27:55 wrobel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/pyblosxom/ChangeLog,v 1.10 2009/03/01 16:12:41 patrick Exp $
+
+*pyblosxom-1.4.3 (01 Mar 2009)
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org> +pyblosxom-1.4.3.ebuild:
+  Bump to 1.4.3, closes #238275
 
 *pyblosxom-1.4.2 (18 Dec 2007)
 
