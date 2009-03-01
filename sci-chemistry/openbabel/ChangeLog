@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.21 2009/02/28 20:49:33 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.22 2009/03/01 13:26:44 cryos Exp $
+
+  01 Mar 2009; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/openbabel-2.2.0-doxyfile.patch:
+  Added missing patch file, sorry.
 
 *openbabel-2.2.1_beta3-r1 (28 Feb 2009)
 
