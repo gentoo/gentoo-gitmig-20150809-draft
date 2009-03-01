@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libeventdb/libeventdb-0.90.ebuild,v 1.1 2009/03/01 00:23:21 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libeventdb/libeventdb-0.90.ebuild,v 1.2 2009/03/01 00:57:37 miknix Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 
@@ -12,7 +12,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~x86"
 IUSE="${IUSE}"
-DOCS="ChangeLog"
+GPE_DOCS="ChangeLog"
 
 src_unpack() {
 	gpe_src_unpack "$@"
