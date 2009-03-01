@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-reaction/quake3-reaction-3.2.ebuild,v 1.1 2006/10/26 20:59:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-reaction/quake3-reaction-3.2.ebuild,v 1.2 2009/03/01 04:23:14 mr_bones_ Exp $
 
-MOD_DESC="port of Action Quake 2 to Qauke 3: Arena"
+MOD_DESC="port of Action Quake 2 to Quake 3: Arena"
 MOD_NAME="Reaction"
 MOD_DIR="reaction"
 
