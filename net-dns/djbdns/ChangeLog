@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/djbdns
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.101 2008/11/17 21:17:08 flameeyes Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.102 2009/03/01 09:40:26 killerfox Exp $
+
+*djbdns-1.05-r22 (01 Mar 2009)
+
+  01 Mar 2009; René Nussbaumer <killerfox@gentoo.org>
+  +files/CVE2008-4392_0001-dnscache-merge-similar-outgoing-queries.patch,
+  +files/CVE2008-4392_0002-dnscache-cache-soa-records.patch,
+  +djbdns-1.05-r22.ebuild:
+  Fix CVE2008-4392
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/headtail.patch:
