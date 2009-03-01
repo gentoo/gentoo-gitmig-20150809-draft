@@ -1,6 +1,12 @@
 # ChangeLog for app-office/indeview
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/ChangeLog,v 1.13 2006/10/16 15:49:20 kanaka Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/ChangeLog,v 1.14 2009/03/01 12:03:25 patrick Exp $
+
+*indeview-0.6.7 (01 Mar 2009)
+
+  01 Mar 2009; Patrick Lauer <patrick@gentoo.org> +indeview-0.6.7.ebuild:
+  Bump to 0.6.7. Modified ebuild by Peter Gaal and Joel Martin. Adding
+  ~amd64 keyword.
 
   16 Oct 2006; Joel Martin <kanaka@gentoo.org> indeview-0.6.6.ebuild:
   Move qt from RDEPEND to DEPEND since it uses qmake to build
