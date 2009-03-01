@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9536 2009/03/01 09:08:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9537 2009/03/01 10:02:35 tampakrap Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Theo Chatzimichos <tampakrap@gentoo.org> (1 Mar 2009)
+# Mask Beta versions of KDevelop 4 and KDevplatform
+>=dev-util/kdevelop-3.9.91
+>=dev-util/kdevplatform-0.9.91
 
 # Michael Sterrett <mr_bones_@gentoo.org> (28 Feb 2009)
 # mask for removal in 30 days.  Old and unmaintained.  Upstream seems dead.
