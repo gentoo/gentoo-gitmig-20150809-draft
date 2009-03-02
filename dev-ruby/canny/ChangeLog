@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/canny
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/ChangeLog,v 1.7 2007/10/13 06:39:48 tgall Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/canny/ChangeLog,v 1.8 2009/03/02 09:02:33 a3li Exp $
+
+  02 Mar 2009; Alex Legler <a3li@gentoo.org> canny-0.1.0.ebuild:
+  Replace USE_RUBY="any" with explicit version. Not Ruby 1.9 compatible.
+  Adding ~amd64 and cleaning up a little.
 
   13 Oct 2007; Tom Gall <tgall@gentoo.org> canny-0.1.0.ebuild:
   stable on ppc64
