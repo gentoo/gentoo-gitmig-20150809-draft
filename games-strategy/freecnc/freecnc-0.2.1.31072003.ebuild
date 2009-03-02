@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.13 2007/06/13 23:57:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.14 2009/03/02 16:42:08 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
@@ -44,6 +44,16 @@ src_unpack() {
 		-e "s:GENTOO_CONFDIR:${GAMES_SYSCONFDIR}/${PN}/:" \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}/:" \
 		src/{freecnc,vfs/vfs}.cpp tools/audplay/audplay.cpp \
+		|| die "sed failed"
+	sed -i \
+		-e 's/-Werror//' \
+		-e 's/ -j2//' \
+		$(grep -rl Werror .) \
+		|| die "sed failed"
+	sed -i \
+		-e '/^DEBUG_FLAGS/s/$/ -fPIC/' \
+		src/vfs/vfs_tgz/Makefile \
+		src/vfs/vfs_mix/Makefile \
 		|| die "sed failed"
 }
 

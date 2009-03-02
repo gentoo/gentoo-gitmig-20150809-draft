@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freecnc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/ChangeLog,v 1.11 2007/06/13 23:57:51 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/ChangeLog,v 1.12 2009/03/02 16:42:08 mr_bones_ Exp $
+
+  02 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  freecnc-0.2.1.31072003.ebuild:
+  remove Werror for bug #260901
 
   13 Jun 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/freecnc-0.2.1.31072003-gcc42.patch, freecnc-0.2.1.31072003.ebuild:
