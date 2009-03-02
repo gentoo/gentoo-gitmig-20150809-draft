@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/gwaei
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.9 2009/02/13 15:45:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.10 2009/03/02 14:55:11 matsuu Exp $
+
+*gwaei-0.15.1 (02 Mar 2009)
+
+  02 Mar 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +files/gwaei-0.15.1-parallel-install.patch, -gwaei-0.13.2.ebuild,
+  -gwaei-0.14.0.ebuild, +gwaei-0.15.1.ebuild:
+  Version bumped. Added gnome USE flag. Removed old versions.
 
 *gwaei-0.14.0-r1 (13 Feb 2009)
 
