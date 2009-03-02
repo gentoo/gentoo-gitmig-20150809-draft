@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.39 2009/02/27 23:48:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.40 2009/03/02 21:28:34 dang Exp $
+
+  02 Mar 2009; Daniel Gryniewicz <dang@gentoo.org> bluez-gnome-0.28.ebuild:
+  Marked stable on amd64 for bug #230591
 
   27 Feb 2009; Tiziano Müller <dev-zero@gentoo.org> bluez-gnome-1.8.ebuild:
   Change dependency to require gnome-base/gvfs[bluetooth] instead of the
