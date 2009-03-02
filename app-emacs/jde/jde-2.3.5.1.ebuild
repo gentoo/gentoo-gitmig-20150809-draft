@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.3.5.1.ebuild,v 1.7 2008/05/01 19:16:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/jde-2.3.5.1.ebuild,v 1.8 2009/03/02 21:40:12 ulm Exp $
 
 inherit elisp
 
@@ -18,7 +18,7 @@ DEPEND="app-emacs/elib
 RDEPEND="${DEPEND}
 	>=virtual/jdk-1.3"
 
-SITEFILE=70${PN}-gentoo.el
+SITEFILE="70${PN}-gentoo.el"
 
 src_compile() {
 	cd "${S}"/lisp
@@ -26,19 +26,19 @@ src_compile() {
 	(load "${SITELISP}/cedet/common/cedet")
 	(add-to-list 'load-path "$PWD")
 	EOF
-	emacs -batch -l jde-compile-script-init -f batch-byte-compile *.el
+	emacs -batch -l jde-compile-script-init -f batch-byte-compile *.el || die
 }
 
 src_install() {
 	dodir ${SITELISP}/${PN}
-	cp -r java "${D}"/${SITELISP}/${PN}/
+	cp -r java "${D}"/${SITELISP}/${PN}/ || die
 	dodir /usr/share/doc/${P}
-	cp -r doc/* "${D}"/usr/share/doc/${P}/
+	cp -r doc/* "${D}"/usr/share/doc/${P}/ || die
 	cd "${S}"/lisp
-	elisp-install ${PN}/lisp *.el *.elc *.bnf
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	elisp-install ${PN}/lisp *.el *.elc *.bnf || die
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 	dodoc ChangeLog ReleaseNotes.txt
-	find "${D}" -type f -print0 |xargs -0 chmod 644
+	find "${D}" -type f -print0 | xargs -0 chmod 644
 	exeinto /usr/bin
-	doexe jtags*
+	doexe jtags* || die
 }
