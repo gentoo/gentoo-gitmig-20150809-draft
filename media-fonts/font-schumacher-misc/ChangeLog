@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-schumacher-misc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-schumacher-misc/ChangeLog,v 1.21 2007/02/04 18:45:17 joshuabaergen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-schumacher-misc/ChangeLog,v 1.22 2009/03/02 14:28:03 pva Exp $
+
+  02 Mar 2009; Peter Volkov <pva@gentoo.org>
+  font-schumacher-misc-1.0.0.ebuild:
+  ~mips keyworded, bug #237411
 
   04 Feb 2007; Joshua Baergen <joshuabaergen@gentoo.org>
   font-schumacher-misc-1.0.0.ebuild:
