@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p19961-r1.ebuild,v 1.1 2009/02/22 03:55:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p19961-r1.ebuild,v 1.2 2009/03/02 21:45:59 beandog Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python confutils
@@ -8,6 +8,8 @@ inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python confutils
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
+
+SRC_URI="mirrors://gentoo/${P}.tar.bz2"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia"
 IUSE="aac alsa altivec autostart debug directv dvb dvd fftw ieee1394 jack lcd \
@@ -52,8 +54,6 @@ DEPEND="${RDEPEND}
 
 PDEPEND="=x11-themes/mythtv-themes-${MY_PV}*"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
-
 MYTHTV_GROUPS="video,audio,tty,uucp"
 
 pkg_setup() {
@@ -69,7 +69,10 @@ pkg_setup() {
 	usermod -a -G ${MYTHTV_GROUPS} mythtv
 }
 
-src_prepare() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
 	# upstream wants the revision number in their version.cpp
 	# since the subversion.eclass strips out the .svn directory
 	# svnversion in MythTV's build doesn't work
