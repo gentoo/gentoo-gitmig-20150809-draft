@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ventrilo-server-bin
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ChangeLog,v 1.12 2007/04/28 15:00:36 tove Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ChangeLog,v 1.13 2009/03/02 00:22:40 gurligebis Exp $
+
+*ventrilo-server-bin-3.0.3 (02 Mar 2009)
+
+  02 Mar 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  +files/3.0.3-init.d.ventrilo, +files/3.0.3-conf.d.ventrilo, metadata.xml,
+  ventrilo-server-bin-2.3.1.ebuild, +ventrilo-server-bin-3.0.3.ebuild:
+  Taking over ventrilo-server-bin and bumping to 3.0.3
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org>
   ventrilo-server-bin-2.3.1.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ventrilo-server-bin-2.3.1.ebuild,v 1.3 2009/03/02 00:22:40 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ventrilo-server-bin-3.0.3.ebuild,v 1.1 2009/03/02 00:22:40 gurligebis Exp $
+
+inherit eutils
 
 IUSE=""
 DESCRIPTION="The Ventrilo Voice Communication Server"
@@ -9,13 +11,17 @@ SRC_URI="ventrilo_srv-${PV}-Linux-i386.tar.gz"
 
 LICENSE="ventrilo"
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* ~x86 ~amd64"
 RESTRICT="fetch"
 
 S=${WORKDIR}
 
 DEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs )"
 RDEPEND="${DEPEND}"
+pkg_setup() {
+	enewgroup ventrilo 3784
+	enewuser ventrilo 3784 -1 /dev/null ventrilo
+}
 
 pkg_nofetch() {
 	einfo "Please visit http://www.ventrilo.com/download.php"
@@ -24,14 +30,18 @@ pkg_nofetch() {
 }
 
 src_install() {
+	cd "${S}/ventsrv"
+
 	exeinto /opt/ventrilo-server
 	doexe ventrilo_{srv,status}
 
-	newinitd "${FILESDIR}"/init.d.ventrilo ventrilo
-	newconfd "${FILESDIR}"/conf.d.ventrilo ventrilo
+	newinitd "${FILESDIR}"/${PV}-init.d.ventrilo ventrilo
+	newconfd "${FILESDIR}"/${PV}-conf.d.ventrilo ventrilo
 
 	insinto /opt/ventrilo-server
 	doins ventrilo_srv.ini
 
 	dohtml ventrilo_srv.htm
+
+	fowners ventrilo:ventrilo /opt/ventrilo-server
 }
