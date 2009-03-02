@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0-r1.ebuild,v 1.6 2009/02/15 21:55:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-1.0.0-r1.ebuild,v 1.7 2009/03/02 18:48:03 gentoofan23 Exp $
 
 EAPI="1"
 inherit eutils flag-o-matic autotools
@@ -23,7 +23,7 @@ COMMON_DEPEND="ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
 	jpeg2k? ( media-libs/jasper )
 	openexr? ( media-libs/openexr )
 	png? ( media-libs/libpng:1.2 )
-	python? ( >=dev-lang/python-2.3 >=dev-lang/swig-1.3.30 )
+	python? ( >=dev-lang/python-2.3 >=dev-lang/swig-1.3.38 )
 	tiff? ( media-libs/tiff )
 	xine? ( media-libs/xine-lib )
 	zlib? ( sys-libs/zlib )"
