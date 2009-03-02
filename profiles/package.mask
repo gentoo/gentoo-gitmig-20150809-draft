@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9542 2009/03/02 16:51:56 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9543 2009/03/02 17:11:40 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -920,7 +920,7 @@ sys-apps/mindi-busybox
 
 # Jeroen Roovers <jer@gentoo.org> (10 Mar 2008)
 # development version:
->=app-admin/sysstat-8.1.1
+=app-admin/sysstat-8.1.*
 
 # MATSUU Takuto <matsuu@gentoo.org> (8 Mar 2008)
 # Masked for Bug 173467
