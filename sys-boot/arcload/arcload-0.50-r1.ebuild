@@ -1,12 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.43-r1.ebuild,v 1.5 2009/03/02 02:21:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.50-r1.ebuild,v 1.1 2009/03/02 02:21:30 kumba Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs versionator
+
+# Hack until upstream renames from 0.5 to 0.50
+MY_PV="${PV/50/5}"
 
 DESCRIPTION="ARCLoad - SGI Multi-bootloader.  Able to bootload many different SGI Systems."
 HOMEPAGE="http://www.linux-mips.org/wiki/index.php/ARCLoad"
-SRC_URI="ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/${P}.tar.bz2"
+SRC_URI="ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/${PN}-${MY_PV}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~mips"
@@ -14,6 +17,7 @@ IUSE=""
 DEPEND="sys-boot/dvhtool"
 RDEPEND=""
 RESTRICT="strip"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 pkg_setup() {
 	# See if we're on a cobalt system
@@ -28,26 +32,39 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+	# For gcc-4.x, quiet down some of the warnings
+	$(version_is_at_least "4.0" "$(gcc-version)") && \
+		epatch "${FILESDIR}"/${P}-shut-gcc4x-up.patch
 
-	# Adds in detection support for the R14000, and
-	# tweaks detectbaud() in loader/detect.c to return
-	# a default of 9600bps when the function fails
-	epatch "${FILESDIR}"/${P}-tweaks1.patch
+	# Redefine the targets in the primary Makefile to give us
+	# finer control over building the tools.  This is for properly
+	# cross-compiling arcload
+	epatch "${FILESDIR}"/${P}-makefile-targets.patch
 }
 
 src_compile() {
+	# Build the wreckoff tool first.  It converts a 32bit MIPS ELF
+	# into a relocatable ECOFF image.  We call for BUILD_CC
+	# on the offchance that we're cross-compiling.
+	echo -e ""
+	einfo ">>> Building the 'wreckoff' utility with $(tc-getBUILD_CC) ..."
+	make CC=$(tc-getBUILD_CC) tools_clean tools || die
+
+	# 32bit copy (sashARCS for IP22/IP32)
 	echo -e ""
 	einfo ">>> Building 32-bit version (sashARCS) for IP22/IP32 ..."
 	cd "${S}"
-	make MODE=M32 clean || die
-	make CC=$(tc-getCC) LD=$(tc-getLD) MODE=M32 || die
+	make MODE=M32 bootloader_clean || die
+	make CC=$(tc-getCC) LD=$(tc-getLD) MODE=M32 bootloader || die
 	cp "${S}"/arcload.ecoff "${WORKDIR}"/sashARCS
 
+	# 64bit copy (sash64 for IP27/IP28/IP30)
 	echo -e ""
 	einfo ">>> Building 64-bit version (sash64) for IP27/IP28/IP30 ..."
-	make MODE=M64 clean || die
-	make CC=$(tc-getCC) LD=$(tc-getLD) MODE=M64 || die
-	cp $"{S}"/arcload "${WORKDIR}"/sash64
+	make MODE=M64 bootloader_clean || die
+	make CC=$(tc-getCC) LD=$(tc-getLD) MODE=M64 bootloader || die
+	cp "${S}"/arcload "${WORKDIR}"/sash64
 }
 
 src_install() {
@@ -70,7 +87,7 @@ pkg_postinst() {
 	einfo "\t3) Edit /usr/lib/arcload/arc-*.cf to fit your specific system"
 	einfo "\t   (See ${HOMEPAGE} for"
 	einfo "\t    an explanation of the format of the config file)"
-	einfo "\t4) Copy the config file to the volume header with 'dvhtool' (make sure it is copied as 'arc.cf')"
+	einfo "\t4) Copy the config file to the volume header with 'dvhtool' as 'arc.cf'"
 	einfo "\t5) Copy any kernels to the volume header that you want to be bootable"
 	einfo "\t6) Reboot, and enjoy!"
 	echo -e ""
