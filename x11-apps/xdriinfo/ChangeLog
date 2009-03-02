@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdriinfo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.30 2008/09/26 12:37:16 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.31 2009/03/02 16:50:48 pva Exp $
+
+  02 Mar 2009; Peter Volkov <pva@gentoo.org> xdriinfo-1.0.2.ebuild:
+  ~mips keyworded, bug #237411
 
   26 Sep 2008; Jeroen Roovers <jer@gentoo.org> xdriinfo-1.0.2.ebuild:
   Marked ~hppa (bug #237411).
