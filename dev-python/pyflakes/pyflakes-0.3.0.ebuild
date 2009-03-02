@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.3.0.ebuild,v 1.2 2009/03/02 14:36:17 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.3.0.ebuild,v 1.3 2009/03/02 18:16:05 armin76 Exp $
 
 NEED_PYTHON=2.3
 
@@ -12,5 +12,5 @@ SRC_URI="http://pypi.python.org/packages/source/p/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 x86"
 IUSE=""
