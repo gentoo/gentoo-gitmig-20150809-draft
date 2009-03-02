@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r2.ebuild,v 1.3 2009/02/23 20:08:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r2.ebuild,v 1.4 2009/03/02 14:10:35 pva Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -225,6 +225,7 @@ PDEPEND="
 		video_cards_mach64? ( >=x11-drivers/xf86-video-mach64-6.8.0 )
 		video_cards_mga? ( >=x11-drivers/xf86-video-mga-1.4.9 )
 		video_cards_neomagic? ( >=x11-drivers/xf86-video-neomagic-1.2.1 )
+		video_cards_newport? ( x11-drivers/xf86-video-newport )
 		video_cards_nv? ( >=x11-drivers/xf86-video-nv-2.1.12 )
 		video_cards_nvidia? ( x11-drivers/nvidia-drivers )
 		video_cards_fglrx? ( >=x11-drivers/ati-drivers-8.552-r2 )
@@ -255,7 +256,6 @@ PDEPEND="
 
 		!x11-drivers/xf86-video-impact
 		!x11-drivers/xf86-video-imstt
-		!x11-drivers/xf86-video-newport
 		!x11-drivers/xf86-video-sunbw2
 		!x11-drivers/xf86-video-suncg14
 		!x11-drivers/xf86-video-suncg3
