@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/mapm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mapm/ChangeLog,v 1.6 2008/12/31 03:03:17 darkside Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mapm/ChangeLog,v 1.7 2009/03/02 13:39:48 dev-zero Exp $
+
+*mapm-4.9.5 (02 Mar 2009)
+
+  02 Mar 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +files/4.9.5-missing_include.patch, +mapm-4.9.5.ebuild:
+  Version bump (added fix to add #include <stdlib.h>, doing compilation
+  manually since original script ignores LDFLAGS and doesn't set soname).
 
   31 Dec 2008; Jeremy Olexa <darkside@gentoo.org> mapm-4.9.2.ebuild:
   add ~amd64 kw, bug 253126
