@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-2.0.2-r1.ebuild,v 1.1 2009/02/19 19:25:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-2.0.2-r1.ebuild,v 1.2 2009/03/02 14:38:40 scarabeus Exp $
 
 EAPI="2"
 
 KDE_PV="4.2.0"
 SLOT="2"
-KDE_MINIMAL="4.1"
 KDE_LINGUAS="ca cs el es et fr ga gl it nb nl pt ru sv tr uk zh_CN zh_TW"
 inherit kde4-base
 
@@ -20,7 +19,7 @@ IUSE="debug plasma"
 
 RDEPEND="plasma? ( >=kde-base/plasma-workspace-${KDE_MINIMAL} )"
 DEPEND="${RDEPEND}
-		!net-p2p/kmldonkey/kmldonkey:4.1
+		!net-p2p/kmldonkey:4.1
 		sys-devel/gettext"
 
 S="${WORKDIR}"/${P}-kde${KDE_PV}
