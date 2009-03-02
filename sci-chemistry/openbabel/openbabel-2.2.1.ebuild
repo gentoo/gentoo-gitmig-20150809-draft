@@ -1,16 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.1_beta3-r1.ebuild,v 1.1 2009/02/28 20:49:33 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.1.ebuild,v 1.1 2009/03/02 15:52:50 cryos Exp $
 
 EAPI=1
 
 inherit eutils
 
-MY_PV="2.2.1b3-20090215-r2890"
-
 DESCRIPTION="interconverts file formats used in molecular modeling"
 HOMEPAGE="http://openbabel.sourceforge.net/"
-SRC_URI="mirror://sourceforge/openbabel/${PN}-${MY_PV}.tar.gz"
+SRC_URI="mirror://sourceforge/openbabel/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
@@ -25,8 +23,6 @@ DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.33.1
 	dev-lang/perl
 	doc? ( app-doc/doxygen )"
-
-S=${WORKDIR}/${PN}-${MY_PV}
 
 src_unpack() {
 	unpack ${A}
