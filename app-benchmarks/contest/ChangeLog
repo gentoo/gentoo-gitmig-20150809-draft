@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/contest
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/contest/ChangeLog,v 1.8 2008/12/30 17:26:47 angelos Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/contest/ChangeLog,v 1.9 2009/03/02 00:20:32 patrick Exp $
+
+  02 Mar 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/contest-fortify_sources.patch, contest-0.61.ebuild:
+  Fix for gcc 4.3.3 / fortify_sources. Adding ~amd64 keyword. Patch by
+  Magnus Granberg. Closes #260451
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> contest-0.61.ebuild:
   QA: Use correct CC (bug #243514) and respect LDFLAGS

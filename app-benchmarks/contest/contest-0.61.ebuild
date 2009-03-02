@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/contest/contest-0.61.ebuild,v 1.7 2008/12/30 17:26:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/contest/contest-0.61.ebuild,v 1.8 2009/03/02 00:20:32 patrick Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Test system responsiveness to compare different kernels"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/contest/"
@@ -10,7 +10,7 @@ SRC_URI="http://members.optusnet.com.au/ckolivas/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=app-benchmarks/dbench-2.0"
@@ -18,6 +18,8 @@ RDEPEND=">=app-benchmarks/dbench-2.0"
 src_unpack () {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/contest-fortify_sources.patch"
 
 	#Removing -g
 	sed -i "s:-g::" Makefile
