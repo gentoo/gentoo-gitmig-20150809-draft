@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Cache-Cache
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/ChangeLog,v 1.42 2007/04/15 20:28:59 corsair Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Cache/ChangeLog,v 1.43 2009/03/02 21:01:44 robbat2 Exp $
+
+*Cache-Cache-1.06 (02 Mar 2009)
+
+  02 Mar 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +Cache-Cache-1.06.ebuild:
+  Version bump via perl-bump experimental tool.
 
   15 Apr 2007; Markus Rothe <corsair@gentoo.org> Cache-Cache-1.05.ebuild:
   Stable on ppc64
