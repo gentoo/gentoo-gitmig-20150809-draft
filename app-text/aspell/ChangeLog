@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.103 2009/01/10 14:39:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.104 2009/03/02 23:01:50 fmccor Exp $
+
+  02 Mar 2009; Ferris McCormick <fmccor@gentoo.org> aspell-0.60.6.ebuild:
+  Sparc stable, Bug #259542.
 
   10 Jan 2009; Peter Volkov <pva@gentoo.org> aspell-0.60.6.ebuild:
   Fixed LINGUAS handling, bug #245399, thank Michael Laß for report.
