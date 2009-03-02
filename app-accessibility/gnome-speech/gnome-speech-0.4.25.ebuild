@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.21.ebuild,v 1.1 2008/08/14 20:32:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.25.ebuild,v 1.1 2009/03/02 05:04:17 ford_prefect Exp $
 
 JAVA_PKG_OPT_USE="freetts"
 

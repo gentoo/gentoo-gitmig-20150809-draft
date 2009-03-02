@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/gnome-speech
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.128 2008/11/24 20:41:09 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.129 2009/03/02 05:04:17 ford_prefect Exp $
+
+*gnome-speech-0.4.25 (02 Mar 2009)
+
+  02 Mar 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  -gnome-speech-0.4.20-r1.ebuild, -gnome-speech-0.4.21.ebuild,
+  +gnome-speech-0.4.25.ebuild:
+  Bump to 0.4.25 (bug fixes and translation updates), and remove stale
+  versions.
 
 *gnome-speech-0.4.22 (24 Nov 2008)
 
