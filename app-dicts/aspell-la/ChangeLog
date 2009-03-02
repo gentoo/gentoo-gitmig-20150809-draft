@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-la
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-la/ChangeLog,v 1.7 2009/02/10 17:13:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-la/ChangeLog,v 1.8 2009/03/02 13:04:37 pva Exp $
+
+  02 Mar 2009; Peter Volkov <pva@gentoo.org>
+  aspell-la-6.0.20020503.0.ebuild:
+  ~mips keyworded, bug #254425.
 
   10 Feb 2009; Raúl Porcel <armin76@gentoo.org>
   aspell-la-6.0.20020503.0.ebuild:
