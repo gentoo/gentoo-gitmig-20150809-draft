@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.134 2009/02/28 19:40:47 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.135 2009/03/02 16:47:53 ranger Exp $
+
+  02 Mar 2009; Brent Baude <ranger@gentoo.org> rmagick-2.9.0.ebuild:
+  stable ppc64, bug 260601
 
   28 Feb 2009; Ferris McCormick <fmccor@gentoo.org> rmagick-2.9.0.ebuild:
   Sparc stable, Bug #260601.
