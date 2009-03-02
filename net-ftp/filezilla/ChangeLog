@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.36 2009/02/22 20:44:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.37 2009/03/02 16:17:55 voyageur Exp $
+
+  02 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  filezilla-3.2.0.ebuild, filezilla-3.2.1.ebuild, filezilla-3.2.2.1.ebuild:
+  Add missing dbus and cppunit depends, disable automate update check,
+  thanks to Sebastian Pipping <webmaster@hartwork.org> in bug #260585
 
 *filezilla-3.2.2.1 (22 Feb 2009)
 

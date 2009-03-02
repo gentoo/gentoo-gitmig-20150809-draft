@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.2.0.ebuild,v 1.4 2009/02/22 12:06:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.2.0.ebuild,v 1.5 2009/03/02 16:17:55 voyageur Exp $
 
 WX_GTK_VER="2.8"
 
@@ -20,7 +20,8 @@ IUSE="dbus"
 
 RDEPEND="net-dns/libidn
 	>=x11-libs/wxGTK-2.8.9
-	>=app-admin/eselect-wxwidgets-0.7-r1"
+	>=app-admin/eselect-wxwidgets-0.7-r1
+	dbus? ( sys-apps/dbus )"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.4
 	>=sys-devel/gettext-0.11
