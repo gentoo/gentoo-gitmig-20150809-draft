@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/burgerspace
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.15 2008/06/22 15:39:22 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/burgerspace/ChangeLog,v 1.16 2009/03/02 06:58:45 mr_bones_ Exp $
+
+*burgerspace-1.8.3 (02 Mar 2009)
+
+  02 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  files/burgerspace-1.8.2-gcc43.patch, +files/burgerspace-1.8.3-build.patch,
+  +files/burgerspace-1.8.3-gcc43.patch, +burgerspace-1.8.3.ebuild:
+  version bump
 
   22 Jun 2008; Markus Meier <maekke@gentoo.org> burgerspace-1.8.2.ebuild:
   x86 stable, bug #227657
