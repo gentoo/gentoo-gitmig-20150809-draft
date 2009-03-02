@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/STLport
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.70 2008/11/30 19:08:35 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.71 2009/03/02 20:07:44 ranger Exp $
+
+  02 Mar 2009; Brent Baude <ranger@gentoo.org> STLport-5.1.5.ebuild:
+  Marking STLport-5.1.5 ppc64 for bug 240608; fails same tests as current stable
 
   30 Nov 2008; Raúl Porcel <armin76@gentoo.org> STLport-5.1.5.ebuild:
   sparc stable wrt #240608
