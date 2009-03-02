@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9540 2009/03/01 23:16:20 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9541 2009/03/02 01:37:44 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -185,10 +185,6 @@ app-emulation/vmware-esx-console
 # net-misc/amazonmp3 to be used by amd64 users.  Once I get around to it.
 # Until then, mask it.
 net-misc/amazonmp3-libcompat
-
-# Michael Sterrett <mr_bones_@gentoo.org> (01 Feb 2009)
-# mask for removal in 30 days.  Old and unmaintained.  Upstream is gone.
-games-fps/anaglyph-stereo-quake
 
 # Tomas Chvatal <scarabeus@gentoo.org> (1 Feb 2009)
 # mask for removal in 30 days. Not needed anymore integrated in boinc
