@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beanstalkd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.1 2008/08/15 21:24:34 caleb Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/ChangeLog,v 1.2 2009/03/02 00:03:41 patrick Exp $
+
+  02 Mar 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/beanstalkd-werror.patch, beanstalkd-1.0.ebuild:
+  Fixing -Werror failure. Patch by Magnus Granberg.
 
 *beanstalkd-1.0 (15 Aug 2008)
 
