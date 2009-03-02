@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.7 2008/08/19 17:51:19 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.8 2009/03/02 20:17:47 hollow Exp $
 
 inherit multilib
 
@@ -175,6 +175,11 @@ pkg_postinst() {
 		[ -e "${ROOT}etc/${x}" ] && continue
 		[ -e "${ROOT}usr/share/baselayout/${x}" ] || continue
 		cp -p "${ROOT}usr/share/baselayout/${x}" "${ROOT}"etc
+	done
+
+	# fix shadow permissions to not be world-readable
+	for x in shadow ; do
+		[ -e "${ROOT}etc/${x}" ] && chmod 0600 "${ROOT}etc/$x"
 	done
 
 	# This is also written in src_install (so it's in CONTENTS), but
