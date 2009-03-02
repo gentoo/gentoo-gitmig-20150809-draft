@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/syntax
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.16 2008/04/28 15:08:53 ricmm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.17 2009/03/02 08:49:03 a3li Exp $
+
+  02 Mar 2009; Alex Legler <a3li@gentoo.org> syntax-1.0.0.ebuild:
+  Replaced USE_RUBY="any" with explicit versions. Ruby 1.9 compatible. Minor
+  description beautification.
 
   28 Apr 2008; <ricmm@gentoo.org> syntax-1.0.0.ebuild:
   Add ~mips, bug #198864
