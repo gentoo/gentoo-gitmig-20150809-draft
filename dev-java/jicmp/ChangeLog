@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jicmp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jicmp/ChangeLog,v 1.4 2008/12/08 01:57:03 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jicmp/ChangeLog,v 1.5 2009/03/02 21:49:13 serkan Exp $
+
+  02 Mar 2009; Serkan Kaba <serkan@gentoo.org> jicmp-1.0.2.ebuild:
+  Filter out -Werror from compiler flags. Reported by Diego Pettenò
+  <flameeyes@gentoo.org> in bug #260881.
 
   08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
