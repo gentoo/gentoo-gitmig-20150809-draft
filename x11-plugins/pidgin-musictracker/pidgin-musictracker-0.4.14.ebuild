@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-musictracker/pidgin-musictracker-0.4.14.ebuild,v 1.1 2009/02/10 17:59:18 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-musictracker/pidgin-musictracker-0.4.14.ebuild,v 1.2 2009/03/02 21:33:24 serkan Exp $
+
+EAPI="2"
+
+inherit autotools
 
 DESCRIPTION="A Pidgin now playing plugin to publicise the songs you are listening to in your status message"
 HOMEPAGE="http://code.google.com/p/pidgin-musictracker/"
@@ -17,9 +21,13 @@ DEPEND=">=net-im/pidgin-2.0.0
 	>=sys-devel/gettext-0.17"
 RDEPEND="${DEPEND}"
 
-src_compile() {
+src_prepare() {
+	sed -i -e "s/-Werror//g" src/Makefile.am || die "sed failed"
+	eautoreconf
+}
+
+src_configure() {
 	econf $(use_enable debug) || die "econf failure"
-	emake || die "emake failed"
 }
 
 src_install() {
