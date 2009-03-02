@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.1 2009/03/01 09:09:17 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.2 2009/03/02 09:49:03 dev-zero Exp $
+
+  02 Mar 2009; Tiziano Müller <dev-zero@gentoo.org> blueman-1.02.ebuild:
+  Added gnome USE flag for gconf-python dependency. Added
+  pkg_postrm/postinst functions calling mod_python_optimize/cleanup and
+  setting python_need_rebuild.
 
 *blueman-1.02 (01 Mar 2009)
 

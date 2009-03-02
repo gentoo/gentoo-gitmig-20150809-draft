@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.02.ebuild,v 1.2 2009/03/01 09:10:16 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.02.ebuild,v 1.3 2009/03/02 09:49:03 dev-zero Exp $
 
 EAPI="2"
+
+inherit multilib python
 
 DESCRIPTION="GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks."
 HOMEPAGE="http://blueman-project.org/"
@@ -10,7 +12,7 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="network nls"
+IUSE="gnome network nls"
 
 CDEPEND="dev-libs/glib:2
 	>=x11-libs/gtk+-2.12:2
@@ -29,9 +31,15 @@ RDEPEND="${CDEPEND}
 	>=app-mobilephone/obex-data-server-0.4.4
 	gnome-extra/policykit-gnome
 	x11-misc/notification-daemon
-	dev-python/gconf-python
+	gnome? ( dev-python/gconf-python )
 	sys-apps/dbus
 	network? ( || ( net-dns/dnsmasq =net-misc/dhcp-3* ) )"
+
+src_prepare() {
+	# disable pyc compiling
+	rm py-compile
+	ln -s $(type -P true) py-compile
+}
 
 src_configure() {
 	econf $(use_enable nls)
@@ -40,4 +48,19 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README
+
+	if ! use gnome ; then
+		python_version
+		rm "${D}/usr/$(get_libdir)/python${PYVER}/site-packages/blueman/plugins/config/Gconf.py"
+	fi
+}
+
+pkg_postinst() {
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/blueman
+	python_need_rebuild
+}
+
+pkg_postrm() {
+	python_mod_cleanup
 }
