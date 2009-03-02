@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/doxymacs/doxymacs-1.8.0-r2.ebuild,v 1.2 2008/04/02 06:34:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/doxymacs/doxymacs-1.8.0-r2.ebuild,v 1.3 2009/03/02 18:36:22 ulm Exp $
 
 NEED_EMACS=22
 
-inherit elisp
+inherit elisp flag-o-matic
 
 DESCRIPTION="Doxygen editing minor mode"
 HOMEPAGE="http://doxymacs.sourceforge.net/"
@@ -18,10 +18,11 @@ IUSE=""
 DEPEND=">=dev-libs/libxml2-2.6.13"
 RDEPEND="${DEPEND}"
 
-SITEFILE=50${PN}-gentoo.el
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
+	append-flags -Wno-error		#260874
 	econf \
 		--with-datadir="${SITELISP}/${PN}" \
 		--with-lispdir="${SITELISP}/${PN}" \
@@ -38,7 +39,7 @@ src_install() {
 		install \
 		|| die "emake install failed"
 
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 
 	dodoc ${DOCS} || die "dodoc failed"
 }
