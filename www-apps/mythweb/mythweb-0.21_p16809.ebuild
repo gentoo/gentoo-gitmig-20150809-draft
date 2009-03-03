@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_p16809.ebuild,v 1.1 2008/04/01 04:01:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.21_p16809.ebuild,v 1.2 2009/03/03 16:52:27 beandog Exp $
 
 ESVN_PROJECT="mythplugins"
 
@@ -18,7 +18,7 @@ need_php5_httpd
 
 pkg_setup() {
 	webapp_pkg_setup
-	require_php_with_use session mysql pcre posix
+	require_php_with_use session mysql pcre posix json
 }
 
 src_unpack() {
