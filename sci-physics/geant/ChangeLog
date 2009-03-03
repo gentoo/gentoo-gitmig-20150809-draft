@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.20 2009/02/27 15:40:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.21 2009/03/03 17:00:37 fmccor Exp $
+
+  03 Mar 2009; Ferris McCormick <fmccor@gentoo.org> geant-3.21.14-r2.ebuild:
+  Sparc stable, part of Bug #245875.
 
 *geant-4.9.2-r2 (27 Feb 2009)
 
