@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-modules
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.31 2008/12/25 15:46:39 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.32 2009/03/03 06:53:27 patrick Exp $
+
+*virtualbox-modules-2.1.4 (03 Mar 2009)
+
+  03 Mar 2009; Patrick Lauer <patrick@gentoo.org>
+  +virtualbox-modules-2.1.4.ebuild:
+  Bump to 2.1.4. Ebuild by Alessio Cassibba (X-Drum) <swapon@gmail.com>,
+  imported from the jokey overlay. Fixes vboxdrv kernel problems with
+  2.6.29-rc* kernels, thanks to Ben Kohler bug #259688
 
   25 Dec 2008; Markus Meier <maekke@gentoo.org>
   virtualbox-modules-1.6.6-r1.ebuild:
