@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.2.2-r1.ebuild,v 1.10 2008/11/06 02:33:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.2.2-r1.ebuild,v 1.11 2009/03/03 18:16:45 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,6 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.2"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -28,6 +29,10 @@ src_unpack() {
 		-e 's:@SFLAG@::' \
 		-e 's:@STRIP@:true:' \
 		Makefile.in */Makefile.in || die
+}
+src_compile() {
+	LC_ALL="C" econf || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
