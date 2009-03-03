@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.105 2009/02/18 18:40:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.106 2009/03/03 16:26:20 remi Exp $
 #
 # @ECLASS: x-modular.eclass
 # @MAINTAINER:
@@ -393,10 +393,18 @@ x-modular_src_compile() {
 # Creates a ChangeLog from git if using live ebuilds.
 x-modular_src_install() {
 	# Install everything to ${XDIR}
-	make \
-		DESTDIR="${D}" \
-		install \
-		|| die
+	if [[ ${CATEGORY} = x11-proto ]]; then
+		make \
+			${PN/proto/}docdir=/usr/share/doc/${PF} \
+			DESTDIR="${D}" \
+			install \
+			|| die
+	else
+		make \
+			DESTDIR="${D}" \
+			install \
+			|| die
+	fi
 # Shouldn't be necessary in XDIR=/usr
 # einstall forces datadir, so we need to re-force it
 #		datadir=${XDIR}/share \
