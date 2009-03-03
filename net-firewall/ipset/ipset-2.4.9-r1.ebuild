@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.4.2.ebuild,v 1.1 2008/10/24 21:28:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.4.9-r1.ebuild,v 1.1 2009/03/03 13:15:52 pva Exp $
 
 inherit eutils versionator toolchain-funcs linux-mod linux-info
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ipset.netfilter.org/"
 SRC_URI="http://ipset.netfilter.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 RDEPEND=">=net-firewall/iptables-1.4.1"
 DEPEND="${RDEPEND}"
@@ -37,13 +37,12 @@ src_unpack() {
 		-e 's/^(\?KERNEL_\?DIR.*/KERNELDIR ?= /' \
 		-e '/^all::/iV ?= 0' \
 		-e '/^all::/iKBUILD_OUTPUT ?=' \
-		-e 's/$@/ V=$(V) KBUILD_OUTPUT=$(KBUILD_OUTPUT) modules/' \
+		-e '/$(MAKE)/{s/$@/ V=$(V) KBUILD_OUTPUT=$(KBUILD_OUTPUT) modules/}' \
 		"${S}"/kernel/Makefile
-	sed -i \
-		-e '/asm.semaphore.h/d' \
-		"${S}"/kernel/ip_set.c
 
-	epatch "${FILESDIR}"/ipset-2.4.2-glibc28-fix.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-2.4.7-LDFLAGS.patch"
+	epatch "${FILESDIR}/${PN}-2.4.9-gethostbyname-align.patch"
 }
 
 pkg_setup() {
@@ -66,6 +65,7 @@ pkg_setup() {
 	myconf="${myconf} BINDIR=/sbin"
 	myconf="${myconf} MANDIR=/usr/share/man"
 	myconf="${myconf} INCDIR=/usr/include"
+	myconf="${myconf} NO_EXTRA_WARN_FLAGS=yes"
 	export myconf
 }
 
