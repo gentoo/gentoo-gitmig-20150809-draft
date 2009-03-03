@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/df-mode
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/df-mode/ChangeLog,v 1.5 2008/12/06 17:50:57 fauli Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/df-mode/ChangeLog,v 1.6 2009/03/03 06:54:42 ulm Exp $
+
+  03 Mar 2009; Ulrich Mueller <ulm@gentoo.org> df-mode-20050509.ebuild:
+  Regenerate site-init file in pkg_postinst.
 
   06 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
   -files/50df-gentoo.el, -df-mode-1.5.ebuild:
