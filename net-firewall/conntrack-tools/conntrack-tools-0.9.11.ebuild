@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.10.ebuild,v 1.1 2009/01/26 17:22:36 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.11.ebuild,v 1.1 2009/03/03 12:52:49 wschlich Exp $
 
 inherit linux-info eutils
 
