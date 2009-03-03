@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/radiusclient
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.23 2008/12/01 21:22:09 mrness Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/radiusclient/ChangeLog,v 1.24 2009/03/03 21:04:24 mrness Exp $
+
+  03 Mar 2009; Alin Năstac <mrness@gentoo.org> radiusclient-0.3.2.ebuild:
+  Add net-dialup/freeradius-client blocking atom (#234098).
 
   01 Dec 2008; Alin Năstac <mrness@gentoo.org> radiusclient-0.3.2.ebuild:
   Add net-dialup/radiusclient-ng blocking dependency atom (#247950).
