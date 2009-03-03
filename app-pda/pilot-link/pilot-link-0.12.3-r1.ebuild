@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3-r1.ebuild,v 1.2 2009/02/19 05:15:16 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3-r1.ebuild,v 1.3 2009/03/03 18:06:30 serkan Exp $
 
 EAPI=2
 
@@ -118,7 +118,7 @@ src_install() {
 
 pkg_preinst() {
 	perl-module_pkg_preinst
-	java-pkg-2_pkg_preinst
+	java-pkg-opt-2_pkg_preinst
 }
 
 pkg_postinst() {
