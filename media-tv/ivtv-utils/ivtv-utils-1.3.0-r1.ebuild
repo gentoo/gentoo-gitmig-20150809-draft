@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.3.0-r1.ebuild,v 1.2 2009/03/03 16:46:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.3.0-r1.ebuild,v 1.3 2009/03/03 16:48:58 beandog Exp $
 
 inherit eutils linux-mod
 
-DESCRIPTION="ivtv driver for Hauppauge PVR PCI cards"
+DESCRIPTION="IVTV utilities for Hauppauge PVR PCI cards"
 HOMEPAGE="http://www.ivtvdriver.org"
 SRC_URI="http://dl.ivtvdriver.org/ivtv/archive/1.3.x/${P}.tar.gz"
 SLOT="0"
@@ -35,8 +35,8 @@ pkg_setup() {
 		eerror "IVTV driver shipping with kernel 2.6.26 and higher"
 		eerror ""
 		eerror "You will need to either:"
-		eerror "a) emerge a different kernel"
-		eerror "b) emerge ivtv"
+		eerror "a) emerge a 2.6.26.x or higher kernel"
+		eerror "b) emerge media-tv/ivtv"
 		eerror ""
 		eerror "See http://ivtvdriver.org/ for more information"
 		die "This only works on 2.6.26 and newer kernels"
