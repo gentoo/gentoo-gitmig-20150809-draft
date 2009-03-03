@@ -20,7 +20,7 @@
  $(TARGET): $(OBJECTS) 
 -	$(CC) $(DEFINES) $(INCLUDES) $(LIB_DIRS) $(LIBS) -o $@ $<
 -	strip $@
-+	$(CC) $(FLAGS) $(LDFLAGS) $(DEFINES) $(INCLUDES) $(LIB_DIRS) $(LIBS) -o $@ $<
++	$(CC) $(FLAGS) $(LDFLAGS) $(DEFINES) $(INCLUDES) $(LIB_DIRS) -o $@ $< $(LIBS)
  
  $(OBJECTS): $(SOURCES) 
 -	$(CC) $(FLAGS)  $(DEFINES) $(INCLUDES) $(LIB_DIRS) -c -o $@ $<

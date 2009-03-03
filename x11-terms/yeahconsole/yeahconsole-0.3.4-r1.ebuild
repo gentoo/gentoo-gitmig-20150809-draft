@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/yeahconsole/yeahconsole-0.3.4.ebuild,v 1.3 2009/02/26 16:49:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/yeahconsole/yeahconsole-0.3.4-r1.ebuild,v 1.1 2009/03/03 05:17:57 jer Exp $
 
 inherit eutils toolchain-funcs
 
