@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.7 2008/08/04 19:20:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.8 2009/03/03 20:35:41 mr_bones_ Exp $
 
-EAPI=1
+EAPI=2
 inherit autotools eutils gnome2
 
 DESCRIPTION="A Puzzle Bobble clone"
@@ -27,11 +27,16 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/intltool"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	gnome2_src_prepare
 	epatch \
 		"${FILESDIR}"/${P}-asneeded.patch \
 		"${FILESDIR}"/${P}-gnome-doc.patch
+	# bug 260895
+	sed -i \
+		-e 's/ -Werror//' \
+		$(find . -name Makefile.am) \
+		|| die "sed failed"
 	eautoreconf
+	intltoolize --force || die "intltoolize failed" #bug 180458
 }
