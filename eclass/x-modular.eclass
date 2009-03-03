@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.106 2009/03/03 16:26:20 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.107 2009/03/03 16:28:32 remi Exp $
 #
 # @ECLASS: x-modular.eclass
 # @MAINTAINER:
@@ -192,11 +192,19 @@ x-modular_specs_check() {
 x-modular_dri_check() {
 	# (#120057) Enabling DRI in drivers requires that the server was built with
 	# support for it
+	# Starting with xorg-server 1.5.3, DRI support is always enabled unless
+	# USE=minimal is set (see bug #252084)
 	if [[ -n "${DRIVER}" ]]; then
 		if has dri ${IUSE} && use dri; then
 			einfo "Checking for direct rendering capabilities ..."
-			if ! built_with_use --missing true x11-base/xorg-server dri; then
-				die "You must build x11-base/xorg-server with USE=dri."
+			if has_version '>=x11-base/xorg-server-1.5.3'; then
+				if built_with_use x11-base/xorg-server minimal; then
+					die "You must build x11-base/xorg-server with USE=-minimal."
+				fi
+			else
+				if ! built_with_use x11-base/xorg-server dri; then
+					die "You must build x11-base/xorg-server with USE=dri."
+				fi
 			fi
 		fi
 	fi
