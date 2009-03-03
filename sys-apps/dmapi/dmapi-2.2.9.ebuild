@@ -1,13 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.9.ebuild,v 1.1 2009/02/22 18:46:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.9.ebuild,v 1.2 2009/03/03 20:39:50 vapier Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="XFS data management API library"
 HOMEPAGE="http://oss.sgi.com/projects/xfs/"
-SRC_URI="ftp://oss.sgi.com/projects/xfs/cmd_tars/${P}.tar.gz
-	ftp://oss.sgi.com/projects/xfs/previous/cmd_tars/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz" #261019
+#ftp://oss.sgi.com/projects/xfs/cmd_tars/${P}.tar.gz
+#	ftp://oss.sgi.com/projects/xfs/previous/cmd_tars/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
