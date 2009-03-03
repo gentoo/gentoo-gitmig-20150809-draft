@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/vmoconv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/ChangeLog,v 1.6 2008/10/05 22:44:34 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/ChangeLog,v 1.7 2009/03/03 19:37:50 mrness Exp $
+
+*vmoconv-1.0-r1 (03 Mar 2009)
+
+  03 Mar 2009; Alin Năstac <mrness@gentoo.org>
+  +files/vmoconv-1.0-external-libgsm.patch, +files/vmoconv-1.0-flags.patch,
+  +vmoconv-1.0-r1.ebuild:
+  Use system libgsm instead copy included in the tarball (#252886). Remove
+  forced -g from (C|LD)FLAGS.
 
   05 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   files/vmoconv-1.0-glibc28.patch:
