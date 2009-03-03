@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/cernlib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.12 2008/12/09 09:58:26 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.13 2009/03/03 16:51:34 fmccor Exp $
+
+  03 Mar 2009; Ferris McCormick <fmccor@gentoo.org> cernlib-2006-r2.ebuild:
+  Sparc stable, part of Bug #245875.
 
 *cernlib-2006-r2 (09 Dec 2008)
 
