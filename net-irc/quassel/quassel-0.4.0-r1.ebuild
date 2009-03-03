@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.4.0-r1.ebuild,v 1.1 2009/02/20 20:02:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.4.0-r1.ebuild,v 1.2 2009/03/03 11:41:45 tampakrap Exp $
 
 EAPI="2"
 
@@ -62,6 +62,8 @@ pkg_setup() {
 }
 
 src_configure() {
+	epatch "${FILESDIR}/${P}-no-webkit.patch"
+
 	local MY_LANGUAGES=""
 	for i in ${LINGUAS}; do
 		MY_LANGUAGES="${i},${MY_LANGUAGES}"
