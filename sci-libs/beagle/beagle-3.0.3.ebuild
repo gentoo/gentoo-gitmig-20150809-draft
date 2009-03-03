@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/beagle-3.0.3.ebuild,v 1.1 2009/02/15 00:31:08 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/beagle/beagle-3.0.3.ebuild,v 1.2 2009/03/03 17:08:11 armin76 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/beagle/${P}.tar.gz"
 HOMEPAGE="http://www.gel.ulaval.ca/~beagle/index.html"
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND="sys-libs/zlib
 	!app-misc/beagle"
