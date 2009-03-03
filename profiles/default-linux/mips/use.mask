@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.116 2008/12/10 07:10:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.117 2009/03/03 12:46:28 pva Exp $
 
 # Samuli Suominen <ssuominen@gentoo.org>
 # Media cannot be tested for MIPS at the moment.
@@ -25,6 +25,10 @@ esd
 gstreamer
 gtkhtml
 gnome
+
+# Peter Volkov <pva@gentoo.org> MPI was never tested on mips, but
+# some programs with this useflag are useful, e.g #227631
+mpi
 
 # Ryan Hill <dirtyepic@gentoo.org>
 # No version of xulrunner keyworded right now
