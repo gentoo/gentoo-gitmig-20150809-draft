@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.2.0-r2.ebuild,v 1.1 2009/02/28 06:24:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.2.0-r2.ebuild,v 1.2 2009/03/03 21:35:15 scarabeus Exp $
 
 EAPI="2"
 
@@ -47,8 +47,6 @@ KMEXTRACTONLY="
 	kdm/
 	safestartkde.cmake
 "
-KMCOMPILEONLY="kdm/kfrontend/sessions/"
-
 PATCHES=("${FILESDIR}/gentoo-startkde4.patch")
 
 src_configure() {
