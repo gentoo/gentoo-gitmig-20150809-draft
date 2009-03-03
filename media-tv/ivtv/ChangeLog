@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/ivtv
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.110 2008/10/21 21:35:26 cardoe Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.111 2009/03/03 17:25:32 beandog Exp $
+
+  03 Mar 2009; Steve Dibb <beandog@gentoo.org> ivtv-1.0.1.ebuild,
+  ivtv-1.0.2.ebuild, ivtv-1.0.3-r2.ebuild, ivtv-1.2.0-r1.ebuild:
+  Drop stable keywords; Support for ivtv-utils + >=2.6.26 kernels only now
 
   21 Oct 2008; Doug Goldstein <cardoe@gentoo.org> ivtv-1.0.1.ebuild,
   ivtv-1.0.2.ebuild, ivtv-1.0.3-r1.ebuild, ivtv-1.0.3-r2.ebuild,
