@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.63.ebuild,v 1.5 2009/03/03 13:20:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.64.ebuild,v 1.1 2009/03/03 13:20:25 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-9.0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 RESTRICT="mirror strip test"
 
@@ -24,11 +24,12 @@ for MY_LINGUA in ${MY_LINGUAS}; do
 done
 
 O_URI="mirror://opera/"
-O_FTP="/963/final/en/"
-O_SUFF="2474"
+O_VER="964"
+O_FTP="/${O_VER}/final/en/"
+O_SUFF="2480"
 
 SRC_URI="
-	x86-fbsd? ( ${O_URI}unix/freebsd/963/en/intel/shared/${P}-freebsd5-shared-qt3.i386.tar.bz2 )
+	x86-fbsd? ( ${O_URI}unix/freebsd/${O_VER}/en/intel/shared/${P}-freebsd5-shared-qt3.i386.tar.bz2 )
 	ppc? ( ${O_URI}linux${O_FTP}ppc/shared/${P}.gcc4-shared-qt3.ppc.tar.bz2 )
 	qt-static? (
 		qt3-static? (
