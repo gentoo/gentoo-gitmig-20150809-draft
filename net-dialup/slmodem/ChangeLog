@@ -1,6 +1,17 @@
 # ChangeLog for net-dialup/slmodem
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.98 2008/07/06 19:11:56 opfer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.99 2009/03/03 20:08:41 mrness Exp $
+
+*slmodem-2.9.11_pre20080817 (03 Mar 2009)
+
+  03 Mar 2009; Alin Năstac <mrness@gentoo.org>
+  -files/slmodem-2.9.11-amd64.patch,
+  +files/slmodem-2.9.11-create-mode.patch,
+  -files/slmodem-2.9.11-kernel-2.6.24.patch,
+  -files/slmodem-2.9.11-makefile.patch,
+  -slmodem-2.9.11_pre20080126-r1.ebuild, -slmodem-2.9.11_pre20080401.ebuild,
+  +slmodem-2.9.11_pre20080817.ebuild:
+  Version bump. Fix open missing mode compilation error (#260114).
 
   06 Jul 2008; Christian Faulhammer <opfer@gentoo.org>
   slmodem-2.9.11_pre20080417.ebuild:
