@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pdb2pqr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.15 2009/02/07 16:54:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/ChangeLog,v 1.16 2009/03/03 02:50:01 darkside Exp $
+
+  03 Mar 2009; Jeremy Olexa <darkside@gentoo.org> pdb2pqr-1.3.0.ebuild:
+  amd64 stable, bug 245874
 
   07 Feb 2009; Christian Faulhammer <fauli@gentoo.org> pdb2pqr-1.3.0.ebuild:
   stable x86, bug 245874
