@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dmalloc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.41 2008/09/24 12:49:31 b33fc0d3 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.42 2009/03/03 14:22:46 jer Exp $
+
+  03 Mar 2009; Jeroen Roovers <jer@gentoo.org> dmalloc-5.5.2-r2.ebuild:
+  Marked ~hppa too.
 
   24 Sep 2008; <b33fc0d3@gentoo.org> +files/dmalloc-5.5.2-threads.patch,
   metadata.xml, -dmalloc-5.5.2-r1.ebuild, dmalloc-5.5.2-r2.ebuild:
