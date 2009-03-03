@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.1.4.ebuild,v 1.1 2009/03/03 19:23:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.1.4.ebuild,v 1.2 2009/03/03 21:56:39 patrick Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ RDEPEND="!!app-emulation/virtualbox-ose
 	~app-emulation/virtualbox-modules-${PV}
 	!headless? (
 		x11-libs/libXcursor
-		media-libs/libsdl:[X]
+		media-libs/libsdl[X]
 		x11-libs/libXrender
 		x11-libs/libXfixes
 		media-libs/libmng
