@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dawn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/ChangeLog,v 1.4 2009/02/06 21:39:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dawn/ChangeLog,v 1.5 2009/03/03 16:53:53 fmccor Exp $
+
+  03 Mar 2009; Ferris McCormick <fmccor@gentoo.org> dawn-3.88a.ebuild:
+  Sparc stable, part of Bug #245875.
 
   06 Feb 2009; Brent Baude <ranger@gentoo.org> dawn-3.88a.ebuild:
   Marking dawn-3.88a ~ppc for bug 196282
