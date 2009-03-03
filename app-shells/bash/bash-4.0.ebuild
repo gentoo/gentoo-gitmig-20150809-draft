@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0.ebuild,v 1.13 2009/03/03 19:58:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0.ebuild,v 1.14 2009/03/03 22:52:11 vapier Exp $
 
 EAPI="1"
 
@@ -76,6 +76,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/${P}-pipeline-reserved-word.patch
 		epatch "${FILESDIR}"/${P}-associative-array-subscripts.patch
 		epatch "${FILESDIR}"/${P}-comsub-herestring.patch
+		epatch "${FILESDIR}"/${P}-comsub-comments.patch
 		epatch "${FILESDIR}"/${P}-read-timeout-reset.patch
 		epatch "${FILESDIR}"/${PN}-4.0-negative-return.patch
 		# Log bash commands to syslog #91327
