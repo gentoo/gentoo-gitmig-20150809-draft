@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.1.0.20090205.ebuild,v 1.1 2009/02/05 16:18:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.1.0.20090303.ebuild,v 1.1 2009/03/03 14:51:04 matsuu Exp $
 
-inherit eutils
+inherit eutils python
 
 PYDB_TAR="pinyin-database-0.1.10.6.tar.bz2"
 DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
@@ -32,6 +32,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P}.tar.gz
+	cd "${S}"
+	mv py-compile py-compile.orig || die
+	ln -s "$(type -P true)" py-compile || die
 	cp "${DISTDIR}/${PYDB_TAR}" "${S}"/engine
 }
 
@@ -52,4 +55,10 @@ pkg_postinst() {
 	elog
 	elog "You should run ibus-setup and enable IM Engines you want to use!"
 	elog
+
+	python_mod_optimize /usr/share/${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/${PN}
 }
