@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.55 2009/03/03 14:45:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.56 2009/03/03 17:14:39 cardoe Exp $
+
+  03 Mar 2009; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-settings-177.80.ebuild:
+  newer stable version to match stable version of nvidia-drivers. Thanks to
+  <daniel.pielmeier@googlemail.com> for pointing out the issue.
 
   03 Mar 2009; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-settings-169.04.ebuild, -nvidia-settings-169.07.ebuild,
