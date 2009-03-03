@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/spectemu
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.25 2008/12/30 19:17:56 angelos Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.26 2009/03/03 20:37:38 flameeyes Exp $
+
+  03 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  spectemu-0.99.3.ebuild:
+  Add a workaround for a parallel emake install (bug #255777). Needs to be
+  fixed, leave the bug open as long as the workaround is in.
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> -spectemu-0.9.4.ebuild,
   spectemu-0.99.3.ebuild:
