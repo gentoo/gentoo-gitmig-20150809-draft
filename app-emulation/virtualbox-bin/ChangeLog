@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.40 2009/01/04 22:12:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.41 2009/03/03 19:23:27 patrick Exp $
+
+*virtualbox-bin-2.1.4 (03 Mar 2009)
+
+  03 Mar 2009; Patrick Lauer <patrick@gentoo.org>
+  +virtualbox-bin-2.1.4.ebuild:
+  Bump to 2.1.4. Multiple fixes (fix duplicated EOF in
+  virtualbox-bin-2-wrapper thanks to Torbjorn Svensson bug #259629; fix
+  permissions on some binaries bug #260326). Thanks to Alessio Cassibba
+  (X-Drum) <swapon@gmail.com> and the jokey overlay
 
   04 Jan 2009; Ulrich Mueller <ulm@gentoo.org> virtualbox-bin-1.6.6.ebuild,
   virtualbox-bin-2.0.2.ebuild, virtualbox-bin-2.0.4.ebuild,
