@@ -1,6 +1,12 @@
 # ChangeLog for media-video/em8300-modules
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.47 2008/10/30 20:12:32 dertobi123 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/ChangeLog,v 1.48 2009/03/03 10:49:48 zzam Exp $
+
+*em8300-modules-0.17.2 (03 Mar 2009)
+
+  03 Mar 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +em8300-modules-0.17.2.ebuild:
+  Version bumped due to bug #239208.
 
   30 Oct 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   em8300-modules-0.16.0-r1.ebuild:
