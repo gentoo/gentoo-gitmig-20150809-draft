@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.8 2009/03/02 20:17:47 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.0.ebuild,v 1.9 2009/03/03 00:43:20 vapier Exp $
 
 inherit multilib
 
@@ -166,6 +166,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	local x
+
 	# We installed some files to /usr/share/baselayout instead of /etc to stop
 	# (1) overwriting the user's settings
 	# (2) screwing things up when attempting to merge files
@@ -177,9 +179,9 @@ pkg_postinst() {
 		cp -p "${ROOT}usr/share/baselayout/${x}" "${ROOT}"etc
 	done
 
-	# fix shadow permissions to not be world-readable
+	# Force shadow permissions to not be world-readable #260993
 	for x in shadow ; do
-		[ -e "${ROOT}etc/${x}" ] && chmod 0600 "${ROOT}etc/$x"
+		[ -e "${ROOT}etc/${x}" ] && chmod 0600 "${ROOT}etc/${x}"
 	done
 
 	# This is also written in src_install (so it's in CONTENTS), but
