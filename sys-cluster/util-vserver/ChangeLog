@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/util-vserver
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.94 2008/11/17 22:51:53 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.95 2009/03/04 21:20:24 hollow Exp $
+
+*util-vserver-0.30.215-r2 (04 Mar 2009)
+
+  04 Mar 2009; Benedikt Böhm <hollow@gentoo.org>
+  +files/util-vserver-0.30.215-typo.patch, +util-vserver-0.30.215-r2.ebuild:
+  fix typo in gentoo/initpost
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/util-vserver-0.30.215-capget.patch:
