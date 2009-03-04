@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.4.ebuild,v 1.1 2009/03/03 21:05:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.0.4.ebuild,v 1.2 2009/03/04 14:19:45 loki_val Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -109,6 +109,9 @@ src_unpack() {
 
 	# Remove NIS dependencies, see bug #235431
 	epatch "${FILESDIR}/${MY_PN}-1.0.2-noyp.patch"
+
+	#Remove libtool-2 libtool macros, see bug 261167
+	rm m4/libtool.m4 m4/lt*.m4 || die "rm libtool macros failed."
 
 	AT_M4DIR="m4" eautoreconf
 
