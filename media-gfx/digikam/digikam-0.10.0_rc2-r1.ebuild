@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0_rc2.ebuild,v 1.1 2009/02/16 14:46:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0_rc2-r1.ebuild,v 1.1 2009/03/04 20:14:04 scarabeus Exp $
 
 EAPI="2"
 
@@ -39,6 +39,8 @@ DEPEND="
 "
 #liblensfun when added should be also optional dep.
 RDEPEND="${DEPEND}"
+
+PATCHES=( "$FILESDIR/${PV}-browseImages.patch" )
 
 S="${WORKDIR}/${P/_/-}"
 
