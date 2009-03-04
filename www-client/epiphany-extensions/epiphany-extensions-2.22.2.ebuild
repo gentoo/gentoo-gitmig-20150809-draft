@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.22.2.ebuild,v 1.7 2008/09/25 15:57:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.22.2.ebuild,v 1.8 2009/03/04 22:49:39 eva Exp $
 
 inherit autotools eutils gnome2 python versionator
 
@@ -21,7 +21,7 @@ RDEPEND=">=www-client/epiphany-${MY_MAJORV}
 	>=dev-libs/libxml2-2.6
 	>=x11-libs/gtk+-2.11.6
 	>=gnome-base/libglade-2
-	xulrunner? ( net-libs/xulrunner )
+	xulrunner? ( =net-libs/xulrunner-1.8* )
 	!xulrunner? ( =www-client/mozilla-firefox-2* )
 	dbus? ( >=dev-libs/dbus-glib-0.34 )
 	pcre? ( >=dev-libs/libpcre-3.9-r2 )
