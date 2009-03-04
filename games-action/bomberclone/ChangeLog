@@ -1,6 +1,10 @@
 # ChangeLog for games-action/bomberclone
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.29 2009/01/14 19:41:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/ChangeLog,v 1.30 2009/03/04 04:20:09 mr_bones_ Exp $
+
+  04 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  bomberclone-0.11.8.ebuild:
+  avoid -Werror (bug #260894)
 
   14 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   bomberclone-0.11.8.ebuild:
