@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.31.ebuild,v 1.1 2009/02/27 23:42:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.32.ebuild,v 1.1 2009/03/04 21:48:55 dev-zero Exp $
 
 EAPI="2"
 
@@ -34,7 +34,7 @@ DEPEND="sys-devel/flex
 	${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PV}-as_needed.patch"
+	epatch "${FILESDIR}/4.31-as_needed.patch"
 
 	if use cups; then
 		epatch "${FILESDIR}/4.18/cups-location.patch"

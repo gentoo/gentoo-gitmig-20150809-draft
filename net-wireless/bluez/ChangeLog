@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.4 2009/02/27 23:42:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.5 2009/03/04 21:48:55 dev-zero Exp $
+
+*bluez-4.32 (04 Mar 2009)
+
+  04 Mar 2009; Tiziano Müller <dev-zero@gentoo.org> -bluez-4.31.ebuild,
+  +bluez-4.32.ebuild:
+  Version bump (fixes memory leaks and segfaults). Dropping old.
 
 *bluez-4.31 (27 Feb 2009)
 
