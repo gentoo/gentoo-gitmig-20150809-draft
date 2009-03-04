@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.4.ebuild,v 1.4 2009/01/21 01:12:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.4.ebuild,v 1.5 2009/03/04 23:53:29 tester Exp $
 
 EAPI=2
 
@@ -160,10 +160,6 @@ src_configure() {
 		--x-includes=/usr/include/X11 \
 		${myconf} || die "Configuration failed"
 		#$(use_enable mono) \
-}
-
-src_compile() {
-	emake || die "make failed"
 }
 
 src_install() {
