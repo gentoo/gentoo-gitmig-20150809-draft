@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/bioruby
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/ChangeLog,v 1.8 2007/09/16 10:30:38 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/ChangeLog,v 1.9 2009/03/04 18:40:28 weaver Exp $
+
+*bioruby-1.3.0 (04 Mar 2009)
+
+  04 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> +bioruby-1.3.0.ebuild:
+  Version bump.
 
 *bioruby-1.1.0 (16 Sep 2007)
 
