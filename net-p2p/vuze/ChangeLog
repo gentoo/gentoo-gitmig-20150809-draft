@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.7 2009/03/04 19:28:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.8 2009/03/04 20:46:24 caster Exp $
+
+  04 Mar 2009; Vlastimil Babka <caster@gentoo.org> vuze-4.1.0.0.ebuild,
+  vuze-4.1.0.2.ebuild, vuze-4.1.0.4.ebuild:
+  Remove elog calls that got broken after vuze-coreplugins splitted out.
 
 *vuze-4.1.0.4 (04 Mar 2009)
 
