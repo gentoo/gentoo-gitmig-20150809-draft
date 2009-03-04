@@ -1,10 +1,10 @@
 # ChangeLog for net-analyzer/nagios-check_logfiles
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_logfiles/ChangeLog,v 1.7 2009/03/04 20:53:15 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_logfiles/ChangeLog,v 1.8 2009/03/04 22:14:19 fmccor Exp $
 
   04 Mar 2009; Ferris McCormick <fmccor@gentoo.org>
   nagios-check_logfiles-2.3.2.1-r1.ebuild:
-  Sparc stable, part of Bug #256177.
+  Keyword ~sparc as part of Bug #256177.
 
   01 Feb 2009; Tobias Klausmann <klausman@gentoo.org>
   nagios-check_logfiles-2.3.2.1-r1.ebuild:
