@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/powerman-2.3.4.ebuild,v 1.1 2009/03/04 04:26:42 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/powerman-2.3.4-r1.ebuild,v 1.1 2009/03/04 14:12:22 weaver Exp $
 
 EAPI="1"
 
@@ -16,7 +16,9 @@ DEPEND="sys-devel/bison
 RDEPEND=">=sys-libs/freeipmi-0.2.3"
 
 src_compile() {
-	econf \
+	# Powerman stores the pidfile under $localstatedir/run.
+	# It's set to /var/lib in the release, but in gentoo pidfiles live under /var/run.
+	econf --localstatedir="/var" \
 		$(use_with httppower) \
 		$(use_with genders)
 	emake || die
