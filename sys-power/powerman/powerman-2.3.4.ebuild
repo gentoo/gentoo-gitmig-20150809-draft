@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/powerman-2.2.ebuild,v 1.2 2008/10/20 15:08:34 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/powerman-2.3.4.ebuild,v 1.1 2009/03/04 04:26:42 weaver Exp $
 
 EAPI="1"
 
