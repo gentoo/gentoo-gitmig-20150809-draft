@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kpilot
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.76 2008/09/13 23:59:31 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/ChangeLog,v 1.77 2009/03/04 23:12:08 alexxy Exp $
+
+*kpilot-4.2.1 (04 Mar 2009)
+
+  04 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> +kpilot-4.2.1.ebuild:
+  Bump KDE 4.2.1
 
 *kpilot-3.5.10 (13 Sep 2008)
 
