@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2.ebuild,v 1.6 2008/06/03 02:11:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2.ebuild,v 1.7 2009/03/04 13:41:43 loki_val Exp $
 
 inherit fortran eutils gnuconfig toolchain-funcs
 
@@ -379,7 +379,7 @@ src_install() {
 	dosym ../../share/doc/${PF}/html /usr/$(get_libdir)/ccp4/html
 
 	# Fix overlaps with other packages
-	rm ${D}/usr/share/man/man1/rasmol.1.gz
+	rm ${D}/usr/share/man/man1/rasmol.1*
 }
 
 pkg_postinst() {
