@@ -1,11 +1,11 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.24 2009/02/15 00:11:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.25 2009/03/04 20:37:08 yngwin Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
-# Ben de Groot <yngwin@gentoo.org>
-# Markos Chandras <hwoarang@gentoo.org>
+# Ben de Groot <yngwin@gentoo.org>,
+# Markos Chandras <hwoarang@gentoo.org>,
 # Caleb Tennis <caleb@gentoo.org>
 # @BLURB: Eclass for Qt4 split ebuilds.
 # @DESCRIPTION:
@@ -29,12 +29,16 @@ MY_P=qt-x11-${SRCTYPE}-${MY_PV}
 S=${WORKDIR}/${MY_P}
 
 HOMEPAGE="http://www.qtsoftware.com/"
-SRC_URI="ftp://ftp.trolltech.com/qt/source/${MY_P}.tar.bz2"
+SRC_URI="http://download.qtsoftware.com/qt/source/${MY_P}.tar.bz2"
 
 case "${PV}" in
 	4.4.?) SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-headers.tar.bz2" ;;
 	*)     ;;
 esac
+
+if version_is_at_least 4.5 ${PV} ; then
+	LICENSE="|| ( LGPL-2.1 GPL-3 )"
+fi
 
 qt4-build_pkg_setup() {
 	# EAPI=2 ebuilds set use-deps, others need this:
