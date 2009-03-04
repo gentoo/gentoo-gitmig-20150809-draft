@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfio/elfio-1.0.3.ebuild,v 1.1 2007/03/06 16:08:07 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfio/elfio-1.0.3.ebuild,v 1.2 2009/03/04 17:19:25 drizzt Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ S="${WORKDIR}"/${MY_P}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 src_unpack() {
