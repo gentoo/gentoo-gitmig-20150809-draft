@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.59 2009/03/02 15:58:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.60 2009/03/04 19:56:50 dertobi123 Exp $
+
+  04 Mar 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  opensc-0.11.7.ebuild:
+  ppc stable, bug #260514
 
   02 Mar 2009; Brent Baude <ranger@gentoo.org> opensc-0.11.7.ebuild:
   Marking opensc-0.11.7 ppc64 for bug 260514
