@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.1-r1.ebuild,v 1.7 2008/12/07 11:01:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.1-r1.ebuild,v 1.8 2009/03/04 21:51:08 drizzt Exp $
 
-inherit eutils flag-o-matic
+inherit autotools eutils flag-o-matic
 
 IUSE="debug unicode"
 DESCRIPTION="interactive process viewer"
@@ -14,12 +14,13 @@ KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 DEPEND="sys-libs/ncurses"
 
 pkg_setup() {
-	if use elibc_FreeBSD ; then
-		elog
-		elog "htop needs /proc mounted to work, to mount it type"
-		elog "mount -t linprocfs none /proc"
-		elog "or uncomment the example in /etc/fstab"
-		elog
+	if use elibc_FreeBSD && ! [[ -f "${ROOT}"/proc/stat && -f "${ROOT}"/proc/meminfo ]] ; then
+		eerror
+		eerror "htop needs /proc mounted to compile and work, to mount it type"
+		eerror "mount -t linprocfs none /proc"
+		eerror "or uncomment the example in /etc/fstab"
+		eerror
+		die "htop needs /proc mounted"
 	fi
 }
 
@@ -28,6 +29,9 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-desktop-entry.patch
 	epatch "${FILESDIR}"/${P}-non-printable-char-filter.patch
+	epatch "${FILESDIR}"/${P}-no-plpa.patch
+
+	eautoreconf
 }
 
 src_compile() {
