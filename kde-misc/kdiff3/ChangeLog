@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.35 2009/02/25 01:04:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.36 2009/03/04 09:08:22 voyageur Exp $
+
+*kdiff3-0.9.95 (04 Mar 2009)
+
+  04 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +kdiff3-0.9.95.ebuild:
+  Version bump, show line end style for each file, bugfixes
 
   25 Feb 2009; Joseph Jezak <josejx@gentoo.org> kdiff3-0.9.94-r1.ebuild:
   Marked ~ppc for bug #258384.
