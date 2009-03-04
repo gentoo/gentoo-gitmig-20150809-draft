@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.12.ebuild,v 1.1 2009/03/03 06:35:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/gsoap-2.7.12.ebuild,v 1.2 2009/03/04 06:34:48 patrick Exp $
 
 EAPI=1
 
 inherit eutils
 
 MY_P="${PN}-2.7"
-DESCRIPTION="A cross-platfor open source C and C++ SDK to ease the development of SOAP/XML Web services"
+DESCRIPTION="A cross-platform open source C and C++ SDK to ease the development of SOAP/XML Web services"
 HOMEPAGE="http://gsoap2.sourceforge.net"
 SRC_URI="mirror://sourceforge/gsoap2/gsoap_${PV}.tar.gz"
 
