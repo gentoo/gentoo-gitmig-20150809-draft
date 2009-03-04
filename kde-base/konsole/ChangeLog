@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.115 2009/02/17 14:00:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.116 2009/03/04 22:01:08 alexxy Exp $
+
+*konsole-4.2.1 (04 Mar 2009)
+
+  04 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> +konsole-4.2.1.ebuild:
+  Bump KDE 4.2.1
 
   17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -konsole-4.1.4.ebuild:
   Drop KDE 4.1.4

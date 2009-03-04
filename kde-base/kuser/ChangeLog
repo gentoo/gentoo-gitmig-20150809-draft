@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kuser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.102 2009/02/17 14:19:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.103 2009/03/04 22:31:54 alexxy Exp $
+
+*kuser-4.2.1 (04 Mar 2009)
+
+  04 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> +kuser-4.2.1.ebuild:
+  Bump KDE 4.2.1
 
   17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -kuser-4.1.4.ebuild:
   Drop KDE 4.1.4
