@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73.ebuild,v 1.10 2008/03/02 13:46:24 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73.ebuild,v 1.11 2009/03/04 21:31:52 bicatali Exp $
 
 inherit flag-o-matic fortran
 
@@ -25,7 +25,7 @@ DEPEND="virtual/libc
 	blas? ( virtual/blas )
 	mpi? ( virtual/mpi )
 	!=app-text/texi2html-1.70"
-
+RDEPEND="${DEPEND}"
 # NOTE: octave supports blas/lapack from intel but this is not open
 # source nor is it free (as in beer OR speech) Check out...
 # http://developer.intel.com/software/products/mkl/mkl52/index.htm for
@@ -54,25 +54,25 @@ src_compile() {
 	# octave links agains -lmpi by default
 	# mpich needs -lmpich instead
 	if use mpi ; then
-	    if built_with_use sys-cluster/mpich2 cxx ; then
+		if built_with_use sys-cluster/mpich2 cxx ; then
 		elog "mpich2 must be built without C++ support!"
 		die "please rebuild mpich2 with USE=-cxx..."
-	    else
+		else
 		CC="mpicc"
 		if has_version 'sys-cluster/mpich' ; then
-		    CXX="mpiCC"
-		    myconf="${myconf} --with-mpi=mpich"
+			CXX="mpiCC"
+			myconf="${myconf} --with-mpi=mpich"
 		elif has_version 'sys-cluster/mpich2' ; then
-		    F77="mpif77"
-		    myconf="${myconf} --with-mpi=mpich"
+			F77="mpif77"
+			myconf="${myconf} --with-mpi=mpich"
 		else
-		    myconf="${myconf} --with-mpi=mpi"
+			myconf="${myconf} --with-mpi=mpi"
 		fi
-	    fi
+		fi
 	else
-	    CC="$(tc-getCC)"
-	    CXX="$(tc-getCXX)"
-	    myconf="${myconf} --without-mpi"
+		CC="$(tc-getCC)"
+		CXX="$(tc-getCXX)"
+		myconf="${myconf} --without-mpi"
 	fi
 
 	CC="${CC}" CXX="${CXX}" F77="${F77}" \

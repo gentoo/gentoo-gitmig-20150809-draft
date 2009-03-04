@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.0.3.ebuild,v 1.2 2009/02/08 15:56:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.0.3.ebuild,v 1.3 2009/03/04 21:31:52 bicatali Exp $
 
 inherit flag-o-matic fortran xemacs-elisp-common
 
@@ -38,7 +38,6 @@ DEPEND="${RDEPEND}
 	|| ( dev-texlive/texlive-genericrecommended
 		app-text/tetex
 		app-text/ptex )
-	dev-util/dejagnu
 	dev-util/gperf
 	dev-util/pkgconfig"
 
@@ -54,7 +53,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	econf \
 		--localstatedir=/var/state/octave \
 		--enable-shared \
@@ -69,8 +67,7 @@ src_compile() {
 		$(use_with sparse ccolamd) \
 		$(use_with sparse cholmod) \
 		$(use_with sparse cxsparse) \
-		$(use_enable readline) \
-		|| die "econf failed"
+		$(use_enable readline)
 
 	emake || die "emake failed"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.57-r1.ebuild,v 1.11 2008/04/07 13:57:31 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.57-r1.ebuild,v 1.12 2009/03/04 21:31:52 bicatali Exp $
 
 inherit flag-o-matic fortran
 
@@ -23,6 +23,7 @@ DEPEND="virtual/libc
 	hdf5? ( sci-libs/hdf5 )
 	latex? ( virtual/latex-base )
 	blas? ( virtual/blas )"
+RDEPEND="${DEPEND}"
 
 # NOTE: octave supports blas/lapack from intel but this is not open
 # source nor is it free (as in beer OR speech) Check out...
