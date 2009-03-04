@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.252 2009/03/01 09:05:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.253 2009/03/04 10:02:29 loki_val Exp $
+
+  04 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> wine-1.1.16.ebuild:
+  Dropping amd64 keyword w.r.t. bug 260726. This doesn't build on amd64.
 
   01 Mar 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.13.ebuild,
   wine-1.1.14.ebuild, wine-1.1.15.ebuild, wine-1.1.16.ebuild,
