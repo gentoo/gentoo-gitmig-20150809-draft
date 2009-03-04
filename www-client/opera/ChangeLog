@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.322 2009/03/03 13:20:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.323 2009/03/04 18:32:26 keytoaster Exp $
+
+  04 Mar 2009; Tobias Heinlein <keytoaster@gentoo.org> opera-9.64.ebuild:
+  amd64 stable wrt security bug #261032
 
 *opera-9.64 (03 Mar 2009)
 
