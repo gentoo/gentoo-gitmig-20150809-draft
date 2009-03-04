@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-3.0.4.2-r1.ebuild,v 1.2 2009/02/06 12:06:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-3.0.4.2-r1.ebuild,v 1.3 2009/03/04 18:26:43 caster Exp $
 
 ###
 ### @Todo The new Azureus gui requires swt built with embedded mozilla support,
@@ -14,6 +14,7 @@
 ###       script check for swt mozilla support and die...
 ###
 
+EAPI=2
 JAVA_PKG_IUSE="source"
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
@@ -31,7 +32,11 @@ RDEPEND="
 	>=dev-java/bcprov-1.35
 	>=dev-java/commons-cli-1.0
 	>=dev-java/log4j-1.2.8
-	>=dev-java/swt-3.3_pre3
+	|| (
+		>=dev-java/swt-3.3_pre3:3[xulrunner]
+		>=dev-java/swt-3.3_pre3:3[seamonkey]
+		>=dev-java/swt-3.3_pre3:3[firefox]
+	)
 	!net-p2p/azureus-bin
 	>=virtual/jre-1.4"
 
@@ -42,17 +47,6 @@ DEPEND="${RDEPEND}
 JAVA_PKG_FILTER_COMPILER="jikes"
 
 S="${WORKDIR}"
-
-pkg_setup() {
-	if ! built_with_use --missing false -o dev-java/swt firefox seamonkey xulrunner; then
-		eerror
-		eerror "dev-java/swt must be compiled with the firefox, seamonkey or xulrunner USE flag"
-		eerror "(support may vary per swt version) or vuze will hang at startup!"
-		eerror
-		die "recompile dev-java/swt with embedded browser"
-	fi
-	java-pkg-2_pkg_setup
-}
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.5 2009/02/13 22:17:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.6 2009/03/04 18:26:43 caster Exp $
+
+  04 Mar 2009; Vlastimil Babka <caster@gentoo.org> vuze-3.0.4.2-r1.ebuild:
+  Use slot dependency for swt, replace the broken built_with_use checks with
+  EAPI=2 use dependencies, fixes bug #259091.
 
 *vuze-4.1.0.2 (07 Feb 2009)
 
