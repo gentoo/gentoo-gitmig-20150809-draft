@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/flasm-1.6.2.ebuild,v 1.2 2009/02/16 12:05:39 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/flasm-1.6.2.ebuild,v 1.3 2009/03/04 17:50:00 drizzt Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -12,7 +12,7 @@ RESTRICT="mirror"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="sys-libs/zlib"

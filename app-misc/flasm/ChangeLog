@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/flasm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/ChangeLog,v 1.4 2009/02/16 12:05:39 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/ChangeLog,v 1.5 2009/03/04 17:50:00 drizzt Exp $
+
+  04 Mar 2009; Timothy Redaelli <drizzt@gentoo.org> flasm-1.6.2.ebuild:
+  Add ~x86-fbsd keyword
 
   16 Feb 2009; Timothy Redaelli <drizzt@gentoo.org>
   +files/flasm-1.6.2-bison-2.patch, metadata.xml, flasm-1.6.2.ebuild:
