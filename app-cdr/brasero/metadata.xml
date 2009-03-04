@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-optical</herd>
+<herd>gnome</herd>
 <use>
 	<flag name='beagle'>Enable <pkg>app-misc/beagle</pkg> support for
 		searches</flag>
