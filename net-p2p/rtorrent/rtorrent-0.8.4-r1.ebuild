@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.4-r1.ebuild,v 1.5 2009/03/01 19:52:19 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.4-r1.ebuild,v 1.6 2009/03/04 14:39:44 loki_val Exp $
 
 inherit base eutils toolchain-funcs flag-o-matic
 
@@ -23,7 +23,8 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
-PATCHES=( "${FILESDIR}/${PN}-0.8.2-gcc34.patch" )
+PATCHES=( "${FILESDIR}/${PN}-0.8.2-gcc34.patch"
+	"${FILESDIR}/${PN}-0.8.4-gcc44.patch" )
 
 src_compile() {
 	replace-flags -Os -O2
