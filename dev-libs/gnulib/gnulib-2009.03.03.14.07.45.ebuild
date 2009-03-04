@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-2009.03.03.14.07.45.ebuild,v 1.1 2009/03/04 15:34:11 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-2009.03.03.14.07.45.ebuild,v 1.2 2009/03/04 15:37:25 drizzt Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc README COPYING ChangeLog
+	dodoc README ChangeLog
 	if use doc; then
 		dohtml doc/gnulib.html
 		doinfo doc/gnulib.info

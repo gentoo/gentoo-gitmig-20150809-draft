@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-9999-r1.ebuild,v 1.3 2009/02/02 18:55:47 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-9999-r1.ebuild,v 1.4 2009/03/04 15:37:25 drizzt Exp $
 
 EGIT_REPO_URI="git://git.savannah.gnu.org/gnulib.git"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnu.org/software/gnulib"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="doc"
 
 DEPEND=""
 RDEPEND=""
@@ -20,13 +20,17 @@ RDEPEND=""
 S="${WORKDIR}"/${PN}
 
 src_compile() {
-	emake -C doc info html || die "emake failed"
+	if use doc; then
+		emake -C doc info html || die "emake failed"
+	fi
 }
 
 src_install() {
-	dodoc README COPYING ChangeLog
-	dohtml doc/gnulib.html
-	doinfo doc/gnulib.info
+	dodoc README ChangeLog
+	if use doc; then
+		dohtml doc/gnulib.html
+		doinfo doc/gnulib.info
+	fi
 
 	insinto /usr/share/${PN}
 	doins -r lib
@@ -34,9 +38,6 @@ src_install() {
 	doins -r modules
 	doins -r build-aux
 	doins -r top
-
-	# remove CVS dirs
-	#find "${D}" -name CVS -type d -print0 | xargs -0 rm -r
 
 	# install the real script
 	exeinto /usr/share/${PN}
