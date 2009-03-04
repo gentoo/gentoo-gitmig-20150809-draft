@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.6 2009/03/04 18:26:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.7 2009/03/04 19:28:39 caster Exp $
+
+*vuze-4.1.0.4 (04 Mar 2009)
+
+  04 Mar 2009; Vlastimil Babka <caster@gentoo.org> +vuze-4.1.0.4.ebuild:
+  Version bump.
 
   04 Mar 2009; Vlastimil Babka <caster@gentoo.org> vuze-3.0.4.2-r1.ebuild:
   Use slot dependency for swt, replace the broken built_with_use checks with
