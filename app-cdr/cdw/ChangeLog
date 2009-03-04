@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdw
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.22 2008/05/21 18:06:46 drac Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.23 2009/03/04 01:16:55 mr_bones_ Exp $
+
+*cdw-0.3.92 (04 Mar 2009)
+
+  04 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org> +cdw-0.3.92.ebuild:
+  version bump - ebuild submitted by Samuli Suominen via bug #202280
 
   21 May 2008; Samuli Suominen <drac@gentoo.org> cdw-0.2.4.ebuild:
   Move intltool to DEPEND wrt #221507.
