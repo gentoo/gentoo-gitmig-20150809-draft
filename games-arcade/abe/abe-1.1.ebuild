@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/abe/abe-1.1.ebuild,v 1.6 2008/01/05 04:01:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/abe/abe-1.1.ebuild,v 1.7 2009/03/04 21:28:38 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="A scrolling, platform-jumping, key-collecting, ancient pyramid exploring game"
@@ -15,22 +16,25 @@ IUSE=""
 
 DEPEND="media-libs/libsdl
 	x11-libs/libXi
-	media-libs/sdl-mixer"
+	media-libs/sdl-mixer[vorbis]"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	unpack ./images/images.tar
+}
+
+src_prepare() {
 	sed -i \
 		-e "/^TR_CFLAGS/d" \
 		-e "/^TR_CXXFLAGS/d" \
 		configure \
 		|| die "sed failed"
-	unpack ./images/images.tar
+	epatch "${FILESDIR}"/${P}-settings.patch
 }
 
-src_compile() {
-	egamesconf --with-data-dir="${GAMES_DATADIR}"/${PN} || die
-	emake CC=$(tc-getCC) || die "emake failed"
+src_configure() {
+	egamesconf --with-data-dir="${GAMES_DATADIR}"/${PN}
 }
 
 src_install() {
