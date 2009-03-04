@@ -1,6 +1,20 @@
 # ChangeLog for net-print/gutenprint
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.4 2008/04/06 23:42:23 swegener Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.5 2009/03/04 22:54:09 dirtyepic Exp $
+
+*gutenprint-5.2.3 (04 Mar 2009)
+
+  04 Mar 2009; Ryan Hill <dirtyepic@gentoo.org>
+  +files/gutenprint-5.1.7-parallel-build.patch,
+  +files/gutenprint-5.2.3-CFLAGS.patch,
+  +files/gutenprint-5.2.3-parallel-build.patch, gutenprint-5.1.7.ebuild,
+  +gutenprint-5.2.3.ebuild:
+  Version bump.
+    Don't install libtool scripts from the package testsuite (?) (bug #217354)*
+    Fix parallel make error (patch by Martin van Gagern) (bug #254008)*
+    Fixes nasty color regression on Canon Pixma's (bug #223731)
+    Removes stupid CFLAGS from Makefile.
+  * fixed in 5.1.7 too
 
   05 Apr 2008; Tobias Klausmann <klausman@gentoo.org>
   gutenprint-5.1.4.ebuild:
