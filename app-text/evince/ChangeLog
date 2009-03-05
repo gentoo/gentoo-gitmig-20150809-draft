@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.159 2009/03/05 20:06:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.160 2009/03/05 21:40:01 ranger Exp $
+
+  05 Mar 2009; Brent Baude <ranger@gentoo.org> evince-2.24.2.ebuild:
+  Marking evince-2.24.2 ppc64 stable for bug 260063
 
   05 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org> -evince-2.20.2.ebuild,
   -evince-2.24.0.ebuild, -evince-2.24.1.ebuild:
