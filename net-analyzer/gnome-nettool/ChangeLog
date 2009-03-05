@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.75 2009/02/05 21:13:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.76 2009/03/05 21:38:51 ranger Exp $
+
+  05 Mar 2009; Brent Baude <ranger@gentoo.org> gnome-nettool-2.22.1.ebuild:
+  Marking gnome-nettool-2.22.1 ppc64 stable for bug 260063
 
   05 Feb 2009; Alexis Ballier <aballier@gentoo.org>
   gnome-nettool-2.22.1.ebuild:
