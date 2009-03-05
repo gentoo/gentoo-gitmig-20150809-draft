@@ -1,10 +1,10 @@
-# Copyright 2000-2009 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.24.ebuild,v 1.8 2009/03/05 21:13:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.24-r1.ebuild,v 1.1 2009/03/05 21:13:27 swegener Exp $
 
 EAPI="1"
 
-inherit eutils mono python multilib
+inherit autotools eutils mono python multilib
 
 DESCRIPTION="System which facilitates service discovery on a local network"
 HOMEPAGE="http://avahi.org/"
@@ -12,7 +12,7 @@ SRC_URI="http://avahi.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="bookmarks howl-compat mdnsresponder-compat gdbm dbus doc mono gtk python qt3 qt4 autoipd kernel_linux test ipv6"
 
 RDEPEND=">=dev-libs/libdaemon-0.11-r1
@@ -111,6 +111,9 @@ src_unpack() {
 	use ipv6 && sed -i -e s/use-ipv6=no/use-ipv6=yes/ avahi-daemon/avahi-daemon.conf
 
 	sed -i -e "s:\\.\\./\\.\\./\\.\\./doc/avahi-docs/html/:../../../doc/${PF}/html/:" doxygen_to_devhelp.xsl
+
+	epatch "${FILESDIR}"/${P}-*.patch
+	eautoreconf
 }
 
 src_compile() {

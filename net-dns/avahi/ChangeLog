@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/avahi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.155 2008/12/22 18:51:28 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.156 2009/03/05 21:13:28 swegener Exp $
+
+*avahi-0.6.24-r1 (05 Mar 2009)
+
+  05 Mar 2009; Sven Wegener <swegener@gentoo.org>
+  +files/avahi-0.6.24-CVE-2009-0758.patch,
+  +files/avahi-0.6.24-cmsg_space.patch, +files/avahi-0.6.24-libintl.patch,
+  +avahi-0.6.24-r1.ebuild:
+  Add gfbsd patches, bug #184008. Security bump, bug #260971.
 
   22 Dec 2008; Raúl Porcel <armin76@gentoo.org> avahi-0.6.24.ebuild:
   ia64/sparc stable wrt #250913
