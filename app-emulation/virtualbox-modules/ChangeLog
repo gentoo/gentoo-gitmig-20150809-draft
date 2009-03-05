@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.32 2009/03/03 06:53:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.33 2009/03/05 20:17:22 patrick Exp $
+
+  05 Mar 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/virtualbox-modules-2.6.29_rc.patch:
+  Adding missing patch, closes #261314
 
 *virtualbox-modules-2.1.4 (03 Mar 2009)
 
