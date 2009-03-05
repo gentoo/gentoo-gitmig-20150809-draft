@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.175 2009/01/20 11:24:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.176 2009/03/05 21:53:35 ranger Exp $
+
+  05 Mar 2009; Brent Baude <ranger@gentoo.org> at-spi-1.24.1.ebuild:
+  Marking at-spi-1.24.1 ppc64 stable for bug 260063
 
   20 Jan 2009; Raúl Porcel <armin76@gentoo.org> at-spi-1.24.1.ebuild:
   Add ~sh
