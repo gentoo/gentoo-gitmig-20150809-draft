@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.208 2008/11/27 02:50:57 leio Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.209 2009/03/05 21:22:32 ranger Exp $
+
+  05 Mar 2009; Brent Baude <ranger@gentoo.org> libwnck-2.24.2.ebuild:
+  Marking libwnck-2.24.2 ppc64 stable for bug 260063
 
 *libwnck-2.24.2 (27 Nov 2008)
 
