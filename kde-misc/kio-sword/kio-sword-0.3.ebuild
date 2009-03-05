@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-sword/kio-sword-0.3.ebuild,v 1.1 2009/03/02 19:51:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-sword/kio-sword-0.3.ebuild,v 1.2 2009/03/05 16:05:14 mr_bones_ Exp $
 
 inherit kde eutils toolchain-funcs flag-o-matic
 
@@ -30,4 +30,3 @@ pkg_postinst() {
 	elog "Gentoo provides the \"sword-modules\" package for convenience:"
 	elog "\temerge sword-modules"
 }
-
