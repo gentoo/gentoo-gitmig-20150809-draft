@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.1.7.ebuild,v 1.3 2009/03/04 22:54:09 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.1.7.ebuild,v 1.4 2009/03/05 16:26:28 mr_bones_ Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -36,7 +36,6 @@ src_unpack() {
 	# IJS Patch
 	sed -i -e "s:<ijs\([^/]\):<ijs/ijs\1:g" src/ghost/ijsgutenprint.c || die "sed failed"
 }
-
 
 src_compile() {
 	if use cups && use ppds; then
