@@ -1,6 +1,6 @@
-diff -urN keepalived-1.1.16.orig/configure.in keepalived-1.1.16/configure.in
---- keepalived-1.1.16.orig/configure.in	2009-02-15 21:12:21.000000000 +0100
-+++ keepalived-1.1.16/configure.in	2009-02-16 15:07:20.023468087 +0100
+diff -urN keepalived-1.1.17.orig/configure.in keepalived-1.1.17/configure.in
+--- keepalived-1.1.17.orig/configure.in	2009-02-15 21:12:21.000000000 +0100
++++ keepalived-1.1.17/configure.in	2009-03-05 12:24:05.550185436 +0100
 @@ -48,95 +48,20 @@
  AC_CHECK_LIB(popt, poptGetContext,,AC_MSG_ERROR([Popt libraries is required]))
  
