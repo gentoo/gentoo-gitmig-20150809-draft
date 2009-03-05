@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.3.3.ebuild,v 1.2 2009/03/01 19:51:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-1.3.3.ebuild,v 1.3 2009/03/05 16:05:33 mr_bones_ Exp $
 
 inherit linux-mod eutils
 
@@ -21,7 +21,7 @@ SLOT="0"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/fortify_sources_fix.patch" 
+	epatch "${FILESDIR}/fortify_sources_fix.patch"
 }
 
 src_compile() {
