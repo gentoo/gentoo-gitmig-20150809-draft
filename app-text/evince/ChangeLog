@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.158 2008/11/24 20:57:12 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.159 2009/03/05 20:06:03 eva Exp $
+
+  05 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org> -evince-2.20.2.ebuild,
+  -evince-2.24.0.ebuild, -evince-2.24.1.ebuild:
+  Clean up old revisions.
 
 *evince-2.24.2 (24 Nov 2008)
 
