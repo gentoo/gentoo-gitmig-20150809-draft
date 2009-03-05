@@ -1,11 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.3.ebuild,v 1.1 2009/03/01 13:57:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.3-r1.ebuild,v 1.1 2009/03/05 22:50:39 mrness Exp $
 
 EAPI="2"
-WANT_AUTOMAKE="none"
 
-inherit eutils multilib pam
+inherit eutils multilib pam autotools libtool
 
 DESCRIPTION="Highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${PN}-server-${PV}.tar.gz"
@@ -20,6 +19,8 @@ RDEPEND="!net-dialup/cistronradius
 	!net-dialup/gnuradius
 	>=sys-libs/db-3.2
 	sys-libs/gdbm
+	sys-libs/readline
+	net-libs/libpcap
 	dev-lang/perl
 	snmp? ( net-analyzer/net-snmp )
 	mysql? ( virtual/mysql )
@@ -30,8 +31,7 @@ RDEPEND="!net-dialup/cistronradius
 	ldap? ( net-nds/openldap )
 	kerberos? ( virtual/krb5 )
 	frxp? ( dev-lang/python )"
-DEPEND="${RDEPEND}
-	sys-devel/autoconf"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-server-${PV}"
 
@@ -87,6 +87,11 @@ src_unpack() {
 		rm -rf src/modules/rlm_sql/drivers/rlm_sql_firebird
 		sed -i -e '/rlm_sql_firebird/d' src/modules/rlm_sql/stable
 	fi
+
+	# These are needed for fixing libtool-2 related issues (#261189)
+	# Keep these lines even if you don't patch *.{in,am} files!
+	eautoreconf
+	elibtoolize
 }
 
 src_configure() {
