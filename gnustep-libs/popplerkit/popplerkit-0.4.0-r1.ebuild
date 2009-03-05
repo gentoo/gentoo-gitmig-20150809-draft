@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.4.0-r1.ebuild,v 1.1 2008/12/08 14:31:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/popplerkit-0.4.0-r1.ebuild,v 1.2 2009/03/05 14:48:30 voyageur Exp $
 
 inherit gnustep-2
 
@@ -21,8 +21,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
 
+	cd "${WORKDIR}/Etoile-${PV}"
+	sed -i -e "s/-Werror//" etoile.make || die "sed failed"
+
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-config-as-needed.patch
 }
 
