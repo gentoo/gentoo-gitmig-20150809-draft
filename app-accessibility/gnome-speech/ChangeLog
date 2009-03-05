@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.129 2009/03/02 05:04:17 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.130 2009/03/05 21:48:35 ranger Exp $
+
+  05 Mar 2009; Brent Baude <ranger@gentoo.org> gnome-speech-0.4.22.ebuild:
+  Marking gnome-speech-0.4.22 ppc64 stable for bug 260063
 
 *gnome-speech-0.4.25 (02 Mar 2009)
 
