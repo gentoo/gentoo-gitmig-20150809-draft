@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.50 2009/01/27 22:22:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.51 2009/03/05 17:32:11 mr_bones_ Exp $
+
+*ode-0.11 (05 Mar 2009)
+
+  05 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org> +ode-0.11.ebuild:
+  version bump (bug #261247)
 
   27 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> ode-0.10.1.ebuild:
   EAPI=2
