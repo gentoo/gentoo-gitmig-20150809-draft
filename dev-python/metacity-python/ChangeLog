@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/metacity-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.7 2009/03/03 21:01:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.8 2009/03/05 23:39:30 ranger Exp $
+
+  05 Mar 2009; Brent Baude <ranger@gentoo.org>
+  metacity-python-2.22.0.ebuild:
+  Marking metacity-python-2.22.0 ppc stable for bug 258040
 
   03 Mar 2009; Brent Baude <ranger@gentoo.org>
   metacity-python-2.22.0.ebuild:
