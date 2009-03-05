@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/crossover-office-bin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/ChangeLog,v 1.15 2007/10/21 18:42:08 philantrop Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/ChangeLog,v 1.16 2009/03/05 08:38:03 vapier Exp $
+
+  05 Mar 2009; Mike Frysinger <vapier@gentoo.org>
+  crossover-office-bin-6.0.0.ebuild, crossover-office-bin-6.0.1.ebuild,
+  crossover-office-bin-6.1.0.ebuild, crossover-office-bin-6.2.0.ebuild:
+  Drop duplicate libXmu in RDEPEND #258541 by Mr. Anderson.
 
 *crossover-office-bin-6.2.0 (21 Oct 2007)
 *crossover-office-bin-6.1.0 (21 Oct 2007)
