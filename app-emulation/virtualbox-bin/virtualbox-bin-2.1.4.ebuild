@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.1.4.ebuild,v 1.2 2009/03/03 21:56:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.1.4.ebuild,v 1.3 2009/03/05 07:22:54 vapier Exp $
 
 EAPI=2
 
@@ -8,17 +8,19 @@ inherit eutils fdo-mime pax-utils
 
 MY_PV=${PV}-43001
 MY_P=VirtualBox-${MY_PV}-Linux
+SDK_PV=${PV}-42893
 
 DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_amd64.run )
 	x86? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_x86.run )
-	sdk? ( http://download.virtualbox.org/virtualbox/${PV}/VirtualBoxSDK-${PV}-42893.zip )"
+	sdk? ( http://download.virtualbox.org/virtualbox/${PV}/VirtualBoxSDK-${SDK_PV}.zip )"
 
 LICENSE="PUEL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+additions +chm headless sdk vboxwebsrv"
+RESTRICT="strip"
 
 RDEPEND="!!app-emulation/virtualbox-ose
 	!app-emulation/virtualbox-ose-additions
@@ -54,12 +56,14 @@ RDEPEND="!!app-emulation/virtualbox-ose
 
 S=${WORKDIR}
 
+QA_TEXTRELS_amd64="opt/VirtualBox/VBoxVMM.so"
+
 src_unpack() {
 	unpack_makeself ${MY_P}_${ARCH}.run
 	unpack ./VirtualBox.tar.bz2
 
 	if use sdk; then
-		unpack VirtualBoxSDK-${MY_PV}.zip
+		unpack VirtualBoxSDK-${SDK_PV}.zip
 	fi
 }
 
