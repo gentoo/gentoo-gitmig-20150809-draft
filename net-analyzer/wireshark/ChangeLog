@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.152 2009/02/11 17:14:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.153 2009/03/05 17:57:30 pva Exp $
+
+*wireshark-1.0.6-r1 (05 Mar 2009)
+
+  05 Mar 2009; Peter Volkov <pva@gentoo.org>
+  -files/wireshark-1.0.5-glib-1-build.patch,
+  +files/wireshark-1.0-sigpipe.patch, -wireshark-1.0.5.ebuild,
+  +wireshark-1.0.6-r1.ebuild:
+  Fixed freeze on start issue, bug #260457, thank haarp for report.
 
   11 Feb 2009; Tobias Scherbaum <dertobi123@gentoo.org>
   wireshark-1.0.6.ebuild:

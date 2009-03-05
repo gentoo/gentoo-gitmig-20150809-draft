@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.5.ebuild,v 1.10 2008/12/26 09:02:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.6-r1.ebuild,v 1.1 2009/03/05 17:57:30 pva Exp $
 
 EAPI=1
 WANT_AUTOMAKE="1.9"
@@ -17,7 +17,7 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="adns gtk ipv6 lua portaudio gnutls gcrypt zlib kerberos threads profile smi +pcap pcre +caps selinux"
 
 RDEPEND="zlib? ( sys-libs/zlib )
@@ -60,8 +60,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.99.7-asneeded.patch"
 	epatch "${FILESDIR}/${PN}-0.99.8-as-needed.patch"
-	epatch "${FILESDIR}/${P}-glib-1-build.patch"
-	epatch "${FILESDIR}"/${P}-text2pcap-protos.patch
+	epatch "${FILESDIR}/${PN}-1.0.5-text2pcap-protos.patch"
+	epatch "${FILESDIR}/wireshark-1.0-sigpipe.patch" #260457
 
 	cd "${S}/epan"
 	epatch "${FILESDIR}/wireshark-except-double-free.diff"
