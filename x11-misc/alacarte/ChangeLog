@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.69 2009/02/07 00:54:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.70 2009/03/05 21:39:11 ranger Exp $
+
+  05 Mar 2009; Brent Baude <ranger@gentoo.org> alacarte-0.11.8.ebuild:
+  Marking alacarte-0.11.8 ppc64 stable for bug 260063
 
   07 Feb 2009; Jeroen Roovers <jer@gentoo.org> alacarte-0.11.6.ebuild:
   Stable for HPPA (bug #255820).
