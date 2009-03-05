@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.9 2009/02/10 19:54:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.10 2009/03/05 19:20:34 flameeyes Exp $
+
+EAPI=1
 
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/ffmpeg/trunk"
 
@@ -13,12 +15,12 @@ HOMEPAGE="http://ffmpeg.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="3dnow aac alsa altivec amr debug dirac doc ieee1394 jpeg2k encode gsm ipv6 mmx mmxext vorbis
-	  test theora threads x264 xvid network zlib sdl X mp3 oss schroedinger
-	  hardcoded-tables bindist v4l v4l2 speex ssse3 vhook"
+IUSE="+3dnow +3dnowext aac alsa altivec amr custom-cflags debug dirac doc
+	  ieee1394 +encode gsm ipv6 +mmx +mmxext vorbis test theora threads
+	  x264 xvid network zlib sdl X mp3 oss schroedinger +hardcoded-tables
+	  bindist v4l v4l2 speex +ssse3 vhook jpeg2k"
 
-RDEPEND="vhook? ( >=media-libs/imlib2-1.4.0 >=media-libs/freetype-2 )
-	sdl? ( >=media-libs/libsdl-1.2.10 )
+RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10 )
 	alsa? ( media-libs/alsa-lib )
 	encode? (
 		aac? ( media-libs/faac )
@@ -48,9 +50,6 @@ DEPEND="${RDEPEND}
 	v4l2? ( sys-kernel/linux-headers )"
 
 src_compile() {
-	replace-flags -O0 -O2
-	#x86, what a wonderful arch....
-	replace-flags -O1 -O2
 	local myconf="${EXTRA_ECONF}"
 
 	# enabled by default
@@ -64,9 +63,9 @@ src_compile() {
 		myconf="${myconf} --disable-network"
 	fi
 
-	myconf="${myconf} --disable-optimizations"
+	use custom-cflags && myconf="${myconf} --disable-optimizations"
 
-	# disabled by default
+	# enabled by default
 	if use encode
 	then
 		use aac && myconf="${myconf} --enable-libfaac"
@@ -120,6 +119,7 @@ src_compile() {
 	done
 	use mmxext || myconf="${myconf} --disable-mmx2"
 	use 3dnow || myconf="${myconf} --disable-amd3dnow"
+	use 3dnowext || myconf="${myconf} --disable-amd3dnowext"
 	# disable mmx accelerated code if PIC is required
 	# as the provided asm decidedly is not PIC.
 	if gcc-specs-pie ; then
@@ -136,14 +136,10 @@ src_compile() {
 		break
 	done
 
-	# video hooking support. replaced by libavfilter, probably needs to be
-	# dropped at some point.
-	use vhook || myconf="${myconf} --disable-vhook"
-
 	# Mandatory configuration
 	myconf="${myconf} --enable-gpl --enable-postproc \
 			--enable-avfilter --enable-avfilter-lavf \
-			--enable-swscale --disable-stripping"
+			--disable-stripping"
 
 	# cross compile support
 	tc-is-cross-compiler && myconf="${myconf} --enable-cross-compile --arch=$(tc-arch-kernel)"
