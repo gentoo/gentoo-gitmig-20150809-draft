@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.1.4.ebuild,v 1.3 2009/03/05 07:22:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.1.4.ebuild,v 1.4 2009/03/05 08:34:45 vapier Exp $
 
 EAPI=2
 
@@ -78,6 +78,7 @@ src_install() {
 	fi
 
 	insinto /opt/VirtualBox
+	dodir /opt/bin
 
 	doins UserManual.pdf
 
@@ -93,7 +94,7 @@ src_install() {
 		doins vboxwebsrv || die
 		fowners root:vboxusers /opt/VirtualBox/vboxwebsrv
 		fperms 0750 /opt/VirtualBox/vboxwebsrv
-		dosym /opt/VirtualBox/VBox.sh /usr/bin/vboxwebsrv
+		dosym /opt/VirtualBox/VBox.sh /opt/bin/vboxwebsrv
 		newinitd "${FILESDIR}"/vboxwebsrv-initd vboxwebsrv
 		newconfd "${FILESDIR}"/vboxwebsrv-confd vboxwebsrv
 	fi
@@ -138,8 +139,8 @@ src_install() {
 			pax-mark -m "${D}"/opt/VirtualBox/${each}
 		done
 
-		dosym /opt/VirtualBox/VBox.sh /usr/bin/VirtualBox
-		dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxSDL
+		dosym /opt/VirtualBox/VBox.sh /opt/bin/VirtualBox
+		dosym /opt/VirtualBox/VBox.sh /opt/bin/VBoxSDL
 	else
 		# Hardened build: Mark selected binaries set-user-ID-on-execution
 		fowners root:vboxusers /opt/VirtualBox/VBoxHeadless
@@ -152,10 +153,10 @@ src_install() {
 	fowners root:vboxusers /opt/VirtualBox/VBox.sh
 	fperms 0750 /opt/VirtualBox/VBox.sh
 
-	dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxManage
-	dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxVRDP
-	dosym /opt/VirtualBox/VBox.sh /usr/bin/VBoxHeadless
-	dosym /opt/VirtualBox/VBoxTunctl /usr/bin/VBoxTunctl
+	dosym /opt/VirtualBox/VBox.sh /opt/bin/VBoxManage
+	dosym /opt/VirtualBox/VBox.sh /opt/bin/VBoxVRDP
+	dosym /opt/VirtualBox/VBox.sh /opt/bin/VBoxHeadless
+	dosym /opt/VirtualBox/VBoxTunctl /opt/bin/VBoxTunctl
 }
 
 pkg_postinst() {
