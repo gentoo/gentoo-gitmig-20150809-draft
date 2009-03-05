@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bless
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.15 2009/01/15 23:40:50 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bless/ChangeLog,v 1.16 2009/03/05 22:49:06 ikelos Exp $
+
+  05 Mar 2009; Mike Auty <ikelos@gentoo.org> bless-0.6.0.ebuild:
+  Fix up bug 248852, thanks to Kevin.
 
   15 Jan 2009; Mike Auty <ikelos@gentoo.org> metadata.xml:
   Compnerd retired, taking over bless.
