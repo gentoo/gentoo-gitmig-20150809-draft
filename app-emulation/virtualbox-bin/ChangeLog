@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.42 2009/03/03 21:56:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.43 2009/03/05 07:21:00 vapier Exp $
+
+  05 Mar 2009; Mike Frysinger <vapier@gentoo.org>
+  -virtualbox-bin-2.0.2.ebuild, -virtualbox-bin-2.0.4.ebuild,
+  -virtualbox-bin-2.0.6.ebuild:
+  Drop versions with security issues #260331.
 
   03 Mar 2009; Patrick Lauer <patrick@gentoo.org>
   virtualbox-bin-2.1.4.ebuild:
