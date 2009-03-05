@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/automoc-0.9.84.ebuild,v 1.4 2009/03/01 11:41:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/automoc-0.9.84.ebuild,v 1.5 2009/03/05 16:04:56 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -20,10 +20,8 @@ RDEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}4-${PV}"
 
-
 src_prepare() {
 	if [[ ${ELIBC} == "uclibc" ]]; then
 		append-flags -pthread
 	fi
 }
-
