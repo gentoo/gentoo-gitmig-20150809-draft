@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/gtkmozembed-python-2.19.1-r11.ebuild,v 1.5 2009/03/03 21:00:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/gtkmozembed-python-2.19.1-r11.ebuild,v 1.6 2009/03/05 23:38:33 ranger Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnome/sources/${G_PY_PN}/${PVP}/${G_PY_PN}-${PV}.tar.bz2
 DESCRIPTION="Python bindings for the GtkMozEmbed Gecko library"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~ppc ppc64 -sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ~ia64 ppc ppc64 -sparc ~x86"
 IUSE="doc"
 
 RDEPEND="=net-libs/xulrunner-1.9*"
