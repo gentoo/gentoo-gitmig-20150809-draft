@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-netstatus
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.71 2008/10/06 01:15:04 leio Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.72 2009/03/05 21:46:26 ranger Exp $
+
+  05 Mar 2009; Brent Baude <ranger@gentoo.org>
+  gnome-netstatus-2.12.2.ebuild:
+  Marking gnome-netstatus-2.12.2 ppc64 stable for bug 260063
 
 *gnome-netstatus-2.12.2 (06 Oct 2008)
 
