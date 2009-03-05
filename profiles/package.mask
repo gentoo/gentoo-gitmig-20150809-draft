@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9548 2009/03/04 23:14:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9549 2009/03/05 10:34:01 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gmail.com> (5 Mar 2009)
+# Masked pending removal for bug #261288, multiple issues.
+# Removal scheduled for April 5th, 2009.
+dev-ruby/ruby-gdchart
 
 # Doug Goldstein <cardoe@gentoo.org> (3 Mar 2009)
 # After discussing it with NVIDIA, issues with
