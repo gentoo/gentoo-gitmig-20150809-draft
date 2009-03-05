@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.230 2009/01/18 22:51:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.231 2009/03/05 21:46:07 ranger Exp $
+
+  05 Mar 2009; Brent Baude <ranger@gentoo.org> totem-2.24.3.ebuild:
+  Marking totem-2.24.3 ppc64 stable for bug 260063
 
 *totem-2.24.3-r1 (18 Jan 2009)
 
