@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.167 2008/11/13 18:57:22 ranger Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.168 2009/03/05 21:18:53 ranger Exp $
+
+  05 Mar 2009; Brent Baude <ranger@gentoo.org> atk-1.24.0.ebuild:
+  Marking atk-1.24.0 ppc64 stable for bug 260063
 
   13 Nov 2008; Brent Baude <ranger@gentoo.org> atk-1.22.0.ebuild:
   Marking atk-1.22.0 ppc64 stable for bug 236971
