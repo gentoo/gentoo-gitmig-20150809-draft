@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-4.2.1.ebuild,v 1.1 2009/03/04 21:08:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-4.2.1.ebuild,v 1.2 2009/03/05 18:10:50 scarabeus Exp $
 
 EAPI="2"
 
@@ -13,9 +13,9 @@ IUSE="debug"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 DEPEND="
-	kde-base/akonadi:${SLOT}
-	kde-base/libkdepim:${SLOT}
-	kde-base/kaddressbook:${SLOT}
+	>=kde-base/akonadi-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/libkdepim-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kaddressbook-${PV}:${SLOT}[kdeprefix=]
 "
 
 KMEXTRACTONLY="
