@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/sobexsrv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.17 2008/07/12 22:48:54 mrness Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sobexsrv/ChangeLog,v 1.18 2009/03/05 10:11:16 dev-zero Exp $
+
+  05 Mar 2009; Tiziano Müller <dev-zero@gentoo.org> sobexsrv-1.0.1.ebuild:
+  Added net-wireless/bluez as an option for dep/rdep (tested and works
+  fine).
 
   12 Jul 2008; Alin Năstac <mrness@gentoo.org> -sobexsrv-1.0.0_pre4.ebuild:
   Remove obsolete version.
