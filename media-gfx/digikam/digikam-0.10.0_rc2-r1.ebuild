@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0_rc2-r1.ebuild,v 1.1 2009/03/04 20:14:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0_rc2-r1.ebuild,v 1.2 2009/03/05 15:28:19 scarabeus Exp $
 
 EAPI="2"
 
@@ -49,7 +49,7 @@ src_prepare() {
 	# and i hate when upstream forces us to do this :(
 	rm -rf data/icons/oxygen/{16x16,22x22,32x32,64x64,48x48,128x128,scalable\
 }/{actions/{view-object-histogram-linear,transform-crop-and-resize,\
-view-object-histogram-logarithmic},apps/digikam}.{svgz,png}
+view-object-histogram-logarithmic},apps/{digikam,showfoto}}.{svgz,png}
 
 	kde4-base_src_prepare
 }
