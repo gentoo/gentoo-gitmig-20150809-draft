@@ -1,6 +1,13 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-dev
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.27 2009/03/05 11:23:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.28 2009/03/05 22:35:42 robbat2 Exp $
+
+*fortune-mod-gentoo-dev-20090306 (05 Mar 2009)
+
+  05 Mar 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +fortune-mod-gentoo-dev-20090306.ebuild:
+  Some more submissions. Bug #261370: Fix build on non-bash shells. Support
+  for USE=offensive.
 
 *fortune-mod-gentoo-dev-20090305 (05 Mar 2009)
 
