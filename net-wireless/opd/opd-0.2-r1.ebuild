@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/opd-0.2-r1.ebuild,v 1.5 2008/06/29 08:29:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/opd-0.2-r1.ebuild,v 1.6 2009/03/05 10:50:08 dev-zero Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="virtual/libc
 	dev-libs/openobex
-	>=net-wireless/bluez-libs-2.10"
+	|| ( >=net-wireless/bluez-libs-2.10 net-wireless/bluez )"
 
 S=${WORKDIR}
 
