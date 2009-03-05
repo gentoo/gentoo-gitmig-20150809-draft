@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.10 2009/03/04 21:11:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.11 2009/03/05 19:52:32 scarabeus Exp $
+
+  05 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  kdeplasma-addons-4.2.1.ebuild:
+  Fix typo.
 
 *kdeplasma-addons-4.2.1 (04 Mar 2009)
 
