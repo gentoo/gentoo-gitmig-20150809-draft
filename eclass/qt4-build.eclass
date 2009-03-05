@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.25 2009/03/04 20:37:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.26 2009/03/05 09:25:01 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -92,8 +92,13 @@ qt4-build_pkg_setup() {
 }
 
 qt4-build_src_unpack() {
-	local target targets
-	for target in configure LICENSE.{GPL2,GPL3} projects.pro \
+	local target targets licenses
+	if version_is_at_least 4.5 ${PV} ; then
+		licenses="LICENSE.GPL3 LICENSE.LGPL"
+	else
+		licenses="LICENSE.GPL2 LICENSE.GPL3"
+	fi
+	for target in configure ${licenses} projects.pro \
 		src/{qbase,qt_targets,qt_install}.pri bin config.tests mkspecs qmake \
 		${QT4_EXTRACT_DIRECTORIES}; do
 			targets="${targets} ${MY_P}/${target}"
