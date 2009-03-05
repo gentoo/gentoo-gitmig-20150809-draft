@@ -1,17 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2-r2.ebuild,v 1.1 2009/02/27 15:40:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2-r2.ebuild,v 1.2 2009/03/05 19:57:52 bicatali Exp $
 
 EAPI="2"
 
-inherit eutils fortran multilib versionator toolchain-funcs
+inherit eutils fortran versionator toolchain-funcs
 
 PV1=$(get_version_component_range 1 ${PV})
 PV2=$(get_version_component_range 2 ${PV})
 PV3=$(get_version_component_range 3 ${PV})
 MY_P=${PN}$(replace_version_separator 3 .)
 
-DESCRIPTION="CERN's detector description and simulation Tool"
+DESCRIPTION="Toolkit for simulation of passage of particles through matter"
 HOMEPAGE="http://geant4.cern.ch/"
 
 SRC_COM="http://geant4.web.cern.ch/geant4/support/source"
@@ -62,9 +62,9 @@ src_prepare() {
 	# propagate user's flags.
 	sed -i -e 's/-o/$(LDFLAGS) -o/g' source/GNUmakefile || die
 	sed -i \
-		-e "/CXXFLAGS[[:space:]]*.=[[:space:]]-O2/s:=.*:= ${CXXFLAGS}:" \
-		-e "/FCFLAGS[[:space:]]*.=[[:space:]]-O2/s:=.*:= ${FFLAGS:--O2}:" \
-		-e "/CCFLAGS[[:space:]]*.=[[:space:]]-O2/s:=.*:= ${CFLAGS}:" \
+		-e "/CXXFLAGS.*=.*-O2/s:=.*:= ${CXXFLAGS}:" \
+		-e "/FCFLAGS.*=.*-O2/s:=.*:= ${FFLAGS:--O2}:" \
+		-e "/CCFLAGS.*=.*-O2/s:=.*:= ${CFLAGS}:" \
 		-e "s:-Wl,-soname:${LDFLAGS} -Wl,-soname:g" \
 		config/sys/Linux*gmk || die "flag substitution failed"
 
@@ -102,6 +102,7 @@ src_configure() {
 	[[ $(tc-getCXX) = ic*c ]] && export G4SYSTEM=Linux-icc \
 							  || export G4SYSTEM=Linux-g++
 	export G4INSTALL="${S}"
+	export G4WORKDIR="${S}"
 	export G4INCLUDE="${D}/usr/include/${PN}"
 	export CLHEP_BASE_DIR=/usr
 
@@ -112,8 +113,11 @@ src_configure() {
 
 	use motif               && export G4UI_BUILD_XM_SESSION=y
 	use athena              && export G4UI_BUILD_XAW_SESSION=y
-	use qt4                 && export G4UI_BUILD_QT_SESSION=y
-
+	if use qt4; then
+		export G4UI_BUILD_QT_SESSION=y
+		export QTLIBS="-L/usr/$(get_libdir)/qt4  -lQtCore -lQtGui"
+		use opengl && export GLQTLIBS="${QTLIBS} -lQtOpenGL"
+	fi
 	use dawn                && export G4VIS_BUILD_DAWN_DRIVER=y
 	use raytracerx          && export G4VIS_BUILD_RAYTRACERX_DRIVER=y
 	use openinventor        && export G4VIS_BUILD_OI_DRIVER=y
@@ -135,20 +139,22 @@ src_configure() {
 	# with pic flags
 	# avoid that by building it twice and removing temporary objects
 	export G4LIB_BUILD_SHARED=y
-
 }
 
 src_compile() {
 	cd "${S}/source/"
+	einfo "Building shared library"
 	emake || die "Building shared geant failed"
 
 	if use global; then
 		export G4LIB_USE_GRANULAR=y
+		einfo "Building granular libraries"
 		emake global || die "Building global libraries failed"
 		emake || die "Rebuilding shared geant failed"
 	fi
 
 	if use static; then
+		einfo "Building static libraries"
 		rm -rf tmp
 		export G4LIB_BUILD_STATIC=y ; unset G4LIB_BUILD_SHARED
 		emake || die "Building static geant failed"
