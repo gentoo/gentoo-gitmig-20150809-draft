@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.22.0-r10.ebuild,v 1.5 2009/03/03 20:53:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.22.0-r10.ebuild,v 1.6 2009/03/05 23:31:52 ranger Exp $
 
 DESCRIPTION="Meta build which provides python interfacing modules for some GNOME desktop libraries"
 HOMEPAGE="http://pygtk.org/"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="~dev-python/bug-buddy-python-${PV}
