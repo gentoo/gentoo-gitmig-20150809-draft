@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/scamp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/scamp/ChangeLog,v 1.1 2009/02/26 17:22:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/scamp/ChangeLog,v 1.2 2009/03/05 23:30:45 bicatali Exp $
+
+  05 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  files/scamp-1.4.6-autotools.patch:
+  More plplot patching
 
 *scamp-1.4.6 (26 Feb 2009)
 

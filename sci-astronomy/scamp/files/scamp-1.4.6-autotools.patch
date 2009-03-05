@@ -329,3 +329,15 @@ diff -Nur scamp-1.4.6.orig/configure.ac scamp-1.4.6/configure.ac
  fi
  
  # Static linking option
+--- scamp-1.4.6.orig/src/Makefile.am	2008-01-14 21:28:32.000000000 +0000
++++ scamp-1.4.6/src/Makefile.am	2009-03-05 23:24:44.000000000 +0000
+@@ -15,6 +15,8 @@
+ 		  define.h fft.h fgroup.h field.h fitswcs.h globals.h header.h \
+ 		  key.h match.h misc.h mosaic.h photsolve.h preflist.h prefs.h \
+ 		  proper.h samples.h threads.h types.h wcscelsys.h xml.h
++scamp_CPPFLAGS  = @PLPLOT_CFLAGS@
+ scamp_LDADD	= $(top_builddir)/src/fits/libfits.a \
+-		  $(top_builddir)/src/wcs/libwcs_c.a
++		  $(top_builddir)/src/wcs/libwcs_c.a \
++		  @PLPLOT_LIBS@
+ DATE=`date +"%Y-%m-%d"`
