@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.10 2009/03/03 07:11:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.11 2009/03/05 08:31:21 vapier Exp $
+
+*virtualbox-ose-2.1.4-r1 (05 Mar 2009)
+
+  05 Mar 2009; Mike Frysinger <vapier@gentoo.org>
+  -virtualbox-ose-2.1.4.ebuild, +virtualbox-ose-2.1.4-r1.ebuild:
+  Update to the latest 2.1.4 src tarball #260331 and cleanup the ebuild in
+  general.
 
 *virtualbox-ose-2.1.4 (03 Mar 2009)
 
