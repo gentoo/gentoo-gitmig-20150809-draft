@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.133 2009/03/04 02:03:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.134 2009/03/05 02:07:11 vapier Exp $
 
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -80,7 +80,7 @@ prepgamesdirs() {
 	do
 		[[ ! -d ${D}/${dir} ]] && continue
 		(
-			gamesowners -R "${D}/${dir}"
+			gamesowners -h -R "${D}/${dir}"
 			find "${D}/${dir}" -type d -print0 | xargs -0 chmod 750
 			mode=o-rwx,g+r,g-w
 			[[ ${dir} = ${GAMES_STATEDIR} ]] && mode=o-rwx,g+r
