@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.5.ebuild,v 1.1 2009/03/06 09:20:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.5.ebuild,v 1.2 2009/03/06 09:32:03 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -51,11 +51,8 @@ src_compile() {
 	fi
 
 	econf \
-		--mandir=/usr/share/man \
 		--with-statedir=/var/lib/nfs \
-		--disable-rquotad \
 		--enable-nfsv3 \
-		--enable-secure-statd \
 		$(use_with tcpd tcp-wrappers) \
 		$(use_enable !nonfsv4 nfsv4) \
 		${myconf} \
