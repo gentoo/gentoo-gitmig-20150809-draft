@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex3/texlive-latex3-2008.ebuild,v 1.3 2009/02/27 15:29:49 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex3/texlive-latex3-2008.ebuild,v 1.4 2009/03/06 21:23:38 jer Exp $
 
 TEXLIVE_MODULE_CONTENTS="expl3 xpackages collection-latex3
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive LaTeX3 packages"
 
 LICENSE="GPL-2 LPPL-1.3 "
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-latex-2008
 !=dev-texlive/texlive-latexextra-2007*
