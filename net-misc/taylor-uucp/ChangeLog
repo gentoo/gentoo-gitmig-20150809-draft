@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/taylor-uucp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/ChangeLog,v 1.32 2008/06/21 08:53:01 mrness Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/taylor-uucp/ChangeLog,v 1.33 2009/03/06 18:48:28 mrness Exp $
+
+  06 Mar 2009; Alin Năstac <mrness@gentoo.org>
+  files/taylor-uucp-1.07-gentoo.patch, taylor-uucp-1.07-r2.ebuild:
+  Add ~arm keyword and run eautoreconf (#260550).
 
   21 Jun 2008; Alin Năstac <mrness@gentoo.org> taylor-uucp-1.07-r2.ebuild:
   Drop bindnow flags (#227009).

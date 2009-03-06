@@ -1,7 +1,7 @@
-diff -Nru uucp-1.07.orig/Makefile.in uucp-1.07/Makefile.in
---- uucp-1.07.orig/Makefile.in	2003-05-30 04:31:40.000000000 +0300
-+++ uucp-1.07/Makefile.in	2006-01-09 23:38:41.470224750 +0200
-@@ -1017,12 +1017,12 @@
+diff -Nru uucp-1.07.orig/Makefile.am uucp-1.07/Makefile.am
+--- uucp-1.07.orig/Makefile.am	2003-05-30 00:10:23.000000000 +0000
++++ uucp-1.07/Makefile.am	2009-03-06 18:41:48.000000000 +0000
+@@ -78,12 +78,12 @@
  
  install-exec-hook:
  	for f in uucico uuxqt; do \
@@ -16,11 +16,11 @@ diff -Nru uucp-1.07.orig/Makefile.in uucp-1.07/Makefile.in
 +	  chown $(OWNER):uucp $(DESTDIR)$(bindir)/$${f}; \
 +	  chmod 6555 $(DESTDIR)$(bindir)/$${f}; \
  	done
- @HAVE_MKDIR_FALSE@	chown $(OWNER) $(DESTDIR)$(uudirdir)
- @HAVE_MKDIR_FALSE@	chmod 100 $(DESTDIR)$(uudirdir)
+ if HAVE_MKDIR
+ else
 diff -Nru uucp-1.07.orig/policy.h uucp-1.07/policy.h
---- uucp-1.07.orig/policy.h	2003-05-29 09:08:45.000000000 +0300
-+++ uucp-1.07/policy.h	2006-01-09 23:42:14.667548750 +0200
+--- uucp-1.07.orig/policy.h	2003-05-29 06:08:45.000000000 +0000
++++ uucp-1.07/policy.h	2009-03-06 18:41:48.000000000 +0000
 @@ -302,8 +302,7 @@
  /* #define LOCKDIR "/usr/spool/locks" */
  /* #define LOCKDIR "/usr/spool/uucp/LCK" */
