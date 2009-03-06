@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.156 2009/03/05 21:13:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.157 2009/03/06 23:04:33 swegener Exp $
+
+*avahi-0.6.24-r2 (06 Mar 2009)
+
+  06 Mar 2009; Sven Wegener <swegener@gentoo.org> avahi-0.6.24-r1.ebuild,
+  +avahi-0.6.24-r2.ebuild:
+  Split out gfbsd patches to separate revision to allow early security
+  stable marking.
 
 *avahi-0.6.24-r1 (05 Mar 2009)
 
