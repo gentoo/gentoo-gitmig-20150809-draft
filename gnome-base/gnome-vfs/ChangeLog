@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.294 2009/03/05 21:25:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.295 2009/03/06 15:36:08 ranger Exp $
+
+  06 Mar 2009; Brent Baude <ranger@gentoo.org> gnome-vfs-2.24.0.ebuild:
+  Marking gnome-vfs-2.24.0 ppc stable for bug 260063
 
   05 Mar 2009; Brent Baude <ranger@gentoo.org> gnome-vfs-2.24.0.ebuild:
   Marking gnome-vfs-2.24.0 ppc64 stable for bug 260063
