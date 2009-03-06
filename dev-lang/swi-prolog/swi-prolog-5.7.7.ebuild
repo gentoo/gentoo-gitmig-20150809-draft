@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.7.7.ebuild,v 1.2 2009/02/28 19:43:04 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.7.7.ebuild,v 1.3 2009/03/06 07:50:22 keri Exp $
 
 inherit eutils flag-o-matic java-pkg-opt-2
 
@@ -78,7 +78,6 @@ src_compile() {
 		econf \
 			--libdir=/usr/$(get_libdir) \
 			$(use_enable !static shared) \
-			--without-C-sicstus \
 			--with-chr \
 			--with-clib \
 			--with-clpqr \
@@ -86,7 +85,6 @@ src_compile() {
 			--with-cppproxy \
 			$(use_with berkdb db) \
 			--with-http \
-			--without-jasmine \
 			$(use_with java jpl) \
 			${jpltestconf} \
 			--with-nlp \
