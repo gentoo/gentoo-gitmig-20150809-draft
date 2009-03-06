@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.21 2009/03/04 22:55:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.22 2009/03/06 00:24:29 scarabeus Exp $
+
+  05 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> solid-4.2.0.ebuild,
+  solid-4.2.1.ebuild:
+  Update comment, and apply fix for bluetooth even on solid 4.2.1.
 
 *solid-4.2.1 (04 Mar 2009)
 

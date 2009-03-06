@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.2.0.ebuild,v 1.3 2009/02/01 08:36:26 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.2.0.ebuild,v 1.4 2009/03/06 00:24:29 scarabeus Exp $
 
 EAPI="2"
 
@@ -14,9 +14,6 @@ DESCRIPTION="Solid: the KDE hardware library"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="bluetooth debug networkmanager"
 
-# solid/CMakeLists.txt has an add_subdirectory statement that depends on
-# networkmanager-0.7, referring to a non-existant directory, restricted to =0.6*
-# for now.
 DEPEND="
 	>=sys-apps/hal-0.5.9
 	bluetooth? (
