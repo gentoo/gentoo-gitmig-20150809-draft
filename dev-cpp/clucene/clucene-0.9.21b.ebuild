@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.21b.ebuild,v 1.7 2009/03/01 17:39:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.21b.ebuild,v 1.8 2009/03/06 23:01:38 jer Exp $
 
 MY_P=${PN}-core-${PV}
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/clucene/${MY_P}.tar.bz2"
 
 LICENSE="|| ( Apache-2.0 LGPL-2.1 )"
 SLOT="1"
-KEYWORDS="amd64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug doc threads"
 
 DEPEND="doc? ( >=app-doc/doxygen-1.4.2 )"
