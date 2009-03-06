@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9550 2009/03/06 00:57:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9551 2009/03/06 22:45:01 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -224,11 +224,6 @@ media-plugins/mythzoneminder
 # Masked until the deps are put in the tree
 >=kde-base/printer-applet-4.1.96
 >=kde-base/system-config-printer-kde-4.1.96
-
-# Michael Sterrett <mr_bones_@gentoo.org> (29 Jan 2009)
-# Old and unmaintained.  Used games-action/extreme-tuxracer instead.
-# mask for removal in 30 days.
-games-arcade/ppracer
 
 # Torsten Veller <tove@gentoo.org> (28 Jan 2009)
 # Masked for testing (#249629)
