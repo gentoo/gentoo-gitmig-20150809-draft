@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.7.5-r1.ebuild,v 1.7 2008/12/22 16:57:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.7.6-r1.ebuild,v 1.1 2009/03/06 22:42:09 mrness Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -20,7 +20,7 @@ SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="pam ldap samba sasl kerberos nis ssl snmp selinux logrotate \
 	mysql postgres sqlite \
 	zero-penalty-hit \
@@ -48,7 +48,7 @@ pkg_setup() {
 	if use zero-penalty-hit; then
 		ewarn "This version supports natively IP TOS/Priority mangling,"
 		ewarn "but it does not support zph_preserve_miss_tos."
-		ewarn "If you need that, please use squid-3.0.6-r2 or higher."
+		ewarn "If you need that, please use >=${CATEGORY}/${PN}-3 ."
 	fi
 	enewgroup squid 31
 	enewuser squid 31 -1 /var/cache/squid squid
@@ -114,7 +114,7 @@ src_compile() {
 		--libexecdir=/usr/libexec/squid \
 		--localstatedir=/var \
 		--datadir=/usr/share/squid \
-		--enable-auth="basic,digest,ntlm" \
+		--enable-auth="basic,digest,ntlm,negotiate" \
 		--enable-removal-policies="lru,heap" \
 		--enable-digest-auth-helpers="password" \
 		--enable-basic-auth-helpers="${basic_modules}" \
