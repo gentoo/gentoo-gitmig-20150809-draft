@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.7.ebuild,v 1.5 2009/02/25 16:15:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.7.ebuild,v 1.6 2009/03/06 18:28:58 mr_bones_ Exp $
 
 EAPI=2
+inherit autotools
+
 DESCRIPTION="DevIL image library"
 HOMEPAGE="http://openil.sourceforge.net/"
 SRC_URI="mirror://sourceforge/openil/${P}.tar.gz"
@@ -27,6 +29,13 @@ RDEPEND="gif? ( media-libs/giflib )
 DEPEND="${RDEPEND}
 	X? ( x11-proto/xextproto )"
 
+src_prepare() {
+	sed -i \
+		-e '/DEVIL_CHECK_NVIDIA_TEXTOOLS/d' \
+		configure.ac \
+		|| die "sed failed"
+	eautoreconf
+}
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
