@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.176 2009/03/01 15:31:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.177 2009/03/06 01:37:55 jer Exp $
+
+  06 Mar 2009; Jeroen Roovers <jer@gentoo.org> hdparm-9.10.ebuild:
+  Stable for HPPA (bug #260452).
 
   01 Mar 2009; Raúl Porcel <armin76@gentoo.org> hdparm-9.10.ebuild:
   alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #260452
