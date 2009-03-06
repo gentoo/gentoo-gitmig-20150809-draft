@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r2.ebuild,v 1.9 2009/02/19 15:49:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r2.ebuild,v 1.10 2009/03/06 18:56:13 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -17,7 +17,8 @@ IUSE="nls bluetooth ical irda sms postgres mysql usb X debug"
 
 RESTRICT="test" #test fails; maybe it will work in the future, but till then...
 
-RDEPEND="X? ( >=x11-libs/gtk+-2.8.19 )
+RDEPEND="!app-mobilephone/smstools
+	X? ( >=x11-libs/gtk+-2.8.19 )
 	bluetooth? ( >=net-wireless/bluez-libs-2.25 )
 	sms? ( >=dev-libs/glib-2.10.3
 		   postgres? ( >=virtual/postgresql-server-8.0 )
