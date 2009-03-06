@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.124 2009/03/04 22:22:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.125 2009/03/06 01:12:38 jer Exp $
+
+  06 Mar 2009; Jeroen Roovers <jer@gentoo.org> ksysguard-3.5.9-r1.ebuild:
+  Stable for HPPA (bug #258257).
 
 *ksysguard-4.2.1 (04 Mar 2009)
 
