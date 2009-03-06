@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.16.ebuild,v 1.3 2009/03/04 10:02:29 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.16.ebuild,v 1.4 2009/03/06 08:26:30 vapier Exp $
 
 EAPI="2"
 
-inherit multilib
+inherit multilib eutils
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_P="${PN}-${PV/_/-}"
 	SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
-	KEYWORDS="-* -amd64 ~x86 ~x86-fbsd"
+	KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 	S=${WORKDIR}/${MY_P}
 fi
 
@@ -84,6 +84,7 @@ src_unpack() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.1.15-winegcc.patch #260726
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in || die
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
 }
