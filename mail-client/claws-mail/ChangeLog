@@ -1,6 +1,130 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.113 2009/02/01 15:58:54 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.114 2009/03/06 08:42:14 fauli Exp $
+
+*claws-mail-3.7.1 (06 Mar 2009)
+
+  06 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-3.7.1.ebuild:
+  Spell Checking has been added to the Subject in the Compose window.
+
+  The 'Quotation characters' option has been moved from the Compose/
+
+  Writing page of the preferences to the /Message View/Text Options
+
+  page, where it should be.
+
+  When replying to signed and/or encrypted mail and the preference
+
+  to
+
+  sign and/or encrypt is set, the original mail's privacy system is
+
+  automatically used, if available.
+
+  If a text/calendar attachment is present in a message it is
+
+  automatcally selected if a suitable plugin (i.e. vCalendar) is
+
+  available.
+
+  /Tools/List URLs now shows both the link title and URI if
+
+  possible.
+
+  A URI appearing in the statusbar is now only trimmed if necessary.
+
+  When using /Tools/Create filter|procesing rule/Automatically
+
+  the List-Id header is preferred to X-* headers.
+
+  The manual has been updated.
+
+  Updated Brazilian Portuguese, Czech, Dutch, Finnish, French,
+
+  German, Hungarian, Simplified Chinese, Spanish and Swedish
+
+  translations.
+
+  Bug fixes:
+
+  o bug 1432, '&amp; not escaped in links (HTML rendered as
+
+  text)'
+
+  o bug 1506, 'Recursive search in collapsed folders'
+
+  o bug 1799, '"Discard message" deletes manually saved draft'
+
+  o bug 1804, 'attach_save_directory does not default to $HOME'
+
+  o bug 1811, '[mime] Crash when there's no room for filename's
+
+  start on the same line'
+
+  o bug 1817, 'Changing Themes does not update the pixmaps in
+
+  "Select folder" dialog box'
+
+  o bug 1825, 'Unable to fetch messages from IMAP folders named
+
+  with non-ASCII string'
+
+  o bug 1834, '"semi"-selection when collapsing thread'
+
+  o bug 1838, 'Claws-Mail sometimes quits when attempting to
+
+  type a capital Q'
+
+  o bug 1840, 'margins for printing not restored'
+
+  o Launchpad bug 335571: 'claws-mail crashed with SIGSEGV in
+
+  strlen() while deleting large amount of e-mails on IMAP
+
+  account'
+
+  o fix font updating after changing derive_from_normal_font
+
+  o fix build for bison 2.4.1
+
+  o fix bug where if plugin path[0] had same name as plugin
+
+  path[1], (like in the de translation), the plugin path[1]
+
+  page was lost and not shown in the GUI
+
+  o fix updating of summaryview popup menu sensitivity
+
+  o fix crash when right-clicking in summaryview when
+
+  processing is active
+
+  o fix synchronisation dialog that shouldn't appear when
+
+  network goes down (Network Manager)
+
+  o Disable use of disabled privacy keys
+
+  o Win32: bug 1810, 'Pressing 'o' key crashes CM'
+
+  o Win32: bug 1813, 'Installing Theme Creates Error'
+
+  o Win32: bug 1814, 'Windows' WM badly places message view'
+
+  o Win32: bug 1815, 'Drag-n-Drop of files on Compose Window
+
+  does not attach'
+
+  o Win32: bug 1816, 'Attaching files with command-line
+
+  generates error after attaching'
+
+  o Win32: bug 1865, 'IMAP account name changes are not
+
+  followed at filter actions'
+
+  o Win32: fix window placement
 
   01 Feb 2009; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
   Stable on alpha, bug #256165
