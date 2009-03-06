@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.1.ebuild,v 1.4 2009/03/05 18:20:26 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.1.ebuild,v 1.5 2009/03/06 18:12:23 mr_bones_ Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -193,7 +193,6 @@ pkg_setup() {
 		eerror " the openoffice build will break. "
 		die
 	fi
-
 
 	if use nsplugin; then
 		if pkg-config --exists libxul; then
