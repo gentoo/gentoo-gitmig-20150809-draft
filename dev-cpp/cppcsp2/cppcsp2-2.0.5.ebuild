@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppcsp2/cppcsp2-2.0.3.ebuild,v 1.1 2008/01/20 09:56:50 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppcsp2/cppcsp2-2.0.5.ebuild,v 1.1 2009/03/06 15:08:33 dev-zero Exp $
+
+EAPI="2"
 
 DESCRIPTION="C++CSP2 provides easy concurrency for C++"
 HOMEPAGE="http://www.cs.kent.ac.uk/projects/ofa/c++csp/"
@@ -10,13 +12,12 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 
-DEPEND="doc? ( app-doc/doxygen )"
-RDEPEND=""
+RDEPEND="dev-libs/boost"
+DEPEND="doc? ( app-doc/doxygen )
+	${RDEPEND}"
 
 src_compile() {
-	econf || die "econf failed"
-	emake || die "emake failed"
-
+	default
 	if use doc ; then
 		emake docs || die "emake docs failed"
 	fi
