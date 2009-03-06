@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4254 2009/03/05 19:27:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4255 2009/03/06 22:47:53 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -214,7 +214,14 @@ app-emulation/mol:sheep - Support for the sheep net driver
 app-emulation/open-vm-tools:unity - Enable host unity support
 app-emulation/pearpc:jit - Use the JITC-x86 CPU
 app-emulation/point2play:emerald - For people who are in the Transgaming Emerald Club
-app-emulation/qemu-softmmu:kqemu - Enables the kernel acceleration module on a x86 cpu
+app-emulation/qemu-softmmu:alsa - Enable alsa output for sound emulation
+app-emulation/qemu-softmmu:esd - Enable esound output for sound emulation
+app-emulation/qemu-softmmu:gnutls - Enable TLS support for the VNC console server
+app-emulation/qemu-softmmu:kqemu - Enables the kernel acceleration module on a x86/x86-64 cpu
+app-emulation/qemu-softmmu:ncurses - Enable the ncurses-based console
+app-emulation/qemu-softmmu:pulseaudio - Enable pulseaudio output for sound emulation
+app-emulation/qemu-softmmu:sdl - Enable the SDL-based console
+app-emulation/qemu-softmmu:vde - Enable VDE-based networking
 app-emulation/uade:audacious - Enables support for media-sound/audacious
 app-emulation/uae:scsi - Enable the uaescsi.device
 app-emulation/uae:sdl-sound - Use media-sound/sdl-sound for audio output
