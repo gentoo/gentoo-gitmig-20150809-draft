@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.26-r2.ebuild,v 1.4 2009/03/06 18:56:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.26-r2.ebuild,v 1.5 2009/03/06 19:08:39 mrness Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -15,14 +15,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ppc64 ~sparc ~x86"
 IUSE="nls bluetooth ical irda sms postgres mysql usb X debug"
 
-RDEPEND="!app-mobilephone/smstools
-	sys-apps/pcsc-lite
+RDEPEND="sys-apps/pcsc-lite
 	X? ( >=x11-libs/gtk+-2.8.19 )
 	bluetooth? ( >=net-wireless/bluez-libs-2.25 )
-	sms? ( >=dev-libs/glib-2.10.3
-	       postgres? ( >=virtual/postgresql-server-8.0 )
-	       mysql? ( >=virtual/mysql-4.1 )
-	     )
+	sms? (
+		!app-mobilephone/smstools
+		>=dev-libs/glib-2.10.3
+		postgres? ( >=virtual/postgresql-server-8.0 )
+		mysql? ( >=virtual/mysql-4.1 )
+	)
 	ical? ( >=dev-libs/libical-0.26.6 )
 	usb? ( >=dev-libs/libusb-0.1.11 )"
 DEPEND="${RDEPEND}

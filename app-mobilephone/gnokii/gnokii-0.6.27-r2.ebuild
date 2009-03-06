@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.27-r2.ebuild,v 1.2 2009/03/06 18:56:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.27-r2.ebuild,v 1.3 2009/03/06 19:08:39 mrness Exp $
 
 inherit eutils linux-info autotools
 
@@ -13,14 +13,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls bluetooth ical irda sms postgres mysql usb X debug"
 
-RDEPEND="!app-mobilephone/smstools
-	sys-apps/pcsc-lite
+RDEPEND="sys-apps/pcsc-lite
 	X? ( >=x11-libs/gtk+-2 )
 	bluetooth? ( || ( net-wireless/bluez >=net-wireless/bluez-libs-2.25 ) )
-	sms? ( >=dev-libs/glib-2
-	       postgres? ( >=virtual/postgresql-base-8.0 )
-	       mysql? ( >=virtual/mysql-4.1 )
-	     )
+	sms? (
+		!app-mobilephone/smstools
+		>=dev-libs/glib-2
+		postgres? ( >=virtual/postgresql-base-8.0 )
+		mysql? ( >=virtual/mysql-4.1 )
+	)
 	ical? ( dev-libs/libical )
 	usb? ( dev-libs/libusb )"
 DEPEND="${RDEPEND}
