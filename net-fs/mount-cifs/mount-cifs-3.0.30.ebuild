@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/mount-cifs-3.0.30.ebuild,v 1.7 2009/02/25 17:32:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/mount-cifs/mount-cifs-3.0.30.ebuild,v 1.8 2009/03/06 04:08:57 kumba Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://linux-cifs.samba.org/cifs/cifs_download.html"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND="!<net-fs/samba-3.0.25"
