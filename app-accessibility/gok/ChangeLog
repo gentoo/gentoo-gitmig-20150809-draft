@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.114 2009/03/05 21:49:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.115 2009/03/06 15:57:50 ranger Exp $
+
+  06 Mar 2009; Brent Baude <ranger@gentoo.org> gok-2.24.0.ebuild:
+  Marking gok-2.24.0 ppc stable for bug 260063
 
   05 Mar 2009; Brent Baude <ranger@gentoo.org> gok-2.24.0.ebuild:
   Marking gok-2.24.0 ppc64 stable for bug 260063
