@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/wispy-tools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wispy-tools/ChangeLog,v 1.8 2007/03/07 19:08:45 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wispy-tools/ChangeLog,v 1.9 2009/03/06 02:40:06 robbat2 Exp $
+
+*wispy-tools-2009.02.1 (06 Mar 2009)
+
+  06 Mar 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +files/spectools-2009.02.1-udev-rules.patch,
+  +wispy-tools-2009.02.1.ebuild:
+  Bug #197048 - version bump. Sorry it took so long, I lost my WiSpy dongle
+  and couldn't test until I found it again recently.
 
 *wispy-tools-2006.09.1 (07 Mar 2007)
 
