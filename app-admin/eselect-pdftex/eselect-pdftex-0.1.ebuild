@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pdftex/eselect-pdftex-0.1.ebuild,v 1.8 2009/02/27 15:45:10 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-pdftex/eselect-pdftex-0.1.ebuild,v 1.9 2009/03/06 22:06:31 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 
 IUSE=""
 DEPEND=""
