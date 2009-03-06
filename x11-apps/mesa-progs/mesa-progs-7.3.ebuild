@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-7.3.ebuild,v 1.2 2009/02/03 00:08:41 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/mesa-progs-7.3.ebuild,v 1.3 2009/03/06 21:53:11 dberkholz Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ MY_PN="${MY_PN/-progs}"
 MY_P="${MY_PN}-${PV/_/-}"
 LIB_P="${MY_PN}Lib-${PV/_/-}"
 PROG_P="${MY_PN}Demos-${PV/_/-}"
-DESCRIPTION="Mesa's OpenGL utility and demo programs (like glxgears)"
+DESCRIPTION="Mesa's OpenGL utility and demo programs (glxgears and glxinfo)"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 if [[ $PV = *_rc* ]]; then
 	SRC_URI="http://www.mesa3d.org/beta/${LIB_P}.tar.gz
