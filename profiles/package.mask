@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9549 2009/03/05 10:34:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9550 2009/03/06 00:57:49 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Tomas Chvatal <scarabeus@gentoo.org> (6 Mar 2009)
+# Mask for removal per bug #261285
+# Unmaintained, broken, no new releases, don't work
+# due to 6.4.09
+net-misc/kickpim
+
 # Diego E. Pettenò <flameeyes@gmail.com> (5 Mar 2009)
 # Masked pending removal for bug #261288, multiple issues.
 # Removal scheduled for April 5th, 2009.
@@ -42,6 +48,8 @@ dev-ruby/ruby-gdchart
 # to be masked. However, some users my experience
 # better functionality with this driver
 =x11-drivers/nvidia-drivers-180.35
+
+# Tomas Chvatal <scarabeus@gentoo.org> (6 Mar 2009)
 
 # Thomas Sachau <tommy@gentoo.org> (2 Mar 2009)
 # Mask for removal, was merged into dev-java/fec
