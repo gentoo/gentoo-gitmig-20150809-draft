@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/mpg123-el-1.51.ebuild,v 1.1 2009/01/29 08:10:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/mpg123-el-1.51-r1.ebuild,v 1.1 2009/03/06 22:19:36 fauli Exp $
 
 inherit elisp toolchain-funcs
 
 DESCRIPTION="Emacs front-end to mpg123 audio player and OggVorbis audio player"
 HOMEPAGE="http://www.gentei.org/~yuuji/software/mpg123el/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}-r1.tar.bz2"
 
 LICENSE="freedist"
 SLOT="0"
