@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.107 2009/03/03 16:28:32 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.108 2009/03/06 21:00:00 dberkholz Exp $
 #
 # @ECLASS: x-modular.eclass
 # @MAINTAINER:
@@ -385,7 +385,7 @@ x-modular_src_make() {
 	emake || die "emake failed"
 }
 
-# @FUNCTION: x-modular_src_configure
+# @FUNCTION: x-modular_src_compile
 # @USAGE:
 # @DESCRIPTION:
 # Compile a package, performing all X-related tasks.
