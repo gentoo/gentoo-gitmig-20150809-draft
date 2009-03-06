@@ -1,3 +1,7 @@
+# Brent Baude <ranger@gentoo.org>
+# Masking pulseaudio for ppc b/c it requires base2 and dep'd by gnome-2.24
+=media-libs/libcanberra-0.11 pulseaudio
+
 # This file requires >=portage-2.1.1
 
 # Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
