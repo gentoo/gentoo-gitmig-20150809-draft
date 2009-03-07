@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.10.ebuild,v 1.6 2009/03/07 21:13:22 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.10.ebuild,v 1.7 2009/03/07 21:14:47 cla Exp $
 
 EAPI="2"
 
@@ -23,14 +23,6 @@ DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=dev-lang/perl-5.6.1[-ithreads] )
 	ssl? ( >=dev-libs/openssl-0.9.5 )"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	if use perl && built_with_use dev-lang/perl ithreads
-	then
-		error "You need perl compiled with USE=\"-ithreads\" to be able to compile epic4."
-		die "perl with USE=\"-ithreads\" needed"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
