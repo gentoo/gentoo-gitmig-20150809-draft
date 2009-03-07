@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.5.0-r2.ebuild,v 1.4 2008/05/17 11:38:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.5.0-r2.ebuild,v 1.5 2009/03/07 14:37:20 betelgeuse Exp $
 
-EAPI=1
+EAPI=2
 
 inherit autotools eutils flag-o-matic multilib java-vm-2
 
@@ -16,28 +16,15 @@ KEYWORDS="amd64 ppc x86"
 IUSE="debug libffi"
 
 CLASSPATH_SLOT=0.97
-DEPEND="dev-java/gnu-classpath:${CLASSPATH_SLOT}"
+DEPEND="
+	dev-java/gnu-classpath:${CLASSPATH_SLOT}
+	sys-devel/gcc[libffi?]
+	amd64? ( sys-devel/gcc[libffi] )
+	"
 RDEPEND="${DEPEND}"
 PDEPEND="dev-java/ant-eclipse-ecj:3.3 dev-java/gjdoc"
 
-pkg_setup() {
-	if use libffi && ! built_with_use sys-devel/gcc libffi; then
-		eerror "sys-devel/gcc not built with libffi support"
-		eerror "rebuild sys-devel/gcc with USE=\"libffi\" or"
-		eerror "turn off the libffi use flag on on ${PN}"
-		die "Rebuild sys-devel/gcc with libffi support"
-	fi
-	if use amd64 && ! built_with_use sys-devel/gcc libffi; then
-		eerror "sys-devel/gcc not built with libffi support"
-		eerror "rebuild sys-devel/gcc with USE=\"libffi\""
-		die "Rebuild sys-devel/gcc with libffi support"
-	fi
-	java-vm-2_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/classes-location.patch"
 	eautoreconf
 
@@ -51,7 +38,7 @@ src_unpack() {
 
 CLASSPATH_DIR=/opt/gnu-classpath-${CLASSPATH_SLOT}
 
-src_compile() {
+src_configure() {
 	filter-flags "-fomit-frame-pointer"
 
 	local conf="--enable-ffi"
@@ -67,7 +54,6 @@ src_compile() {
 		--with-classpath-install-dir=${CLASSPATH_DIR} \
 		$(use amd64 && echo --enable-ffi) \
 		|| die "configure failed."
-	emake || die "make failed."
 }
 
 create_launcher() {
