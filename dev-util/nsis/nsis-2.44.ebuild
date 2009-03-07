@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.39.ebuild,v 1.3 2008/10/19 14:57:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.44.ebuild,v 1.1 2009/03/07 12:58:43 mrness Exp $
 
 mingw32_variants=$(eval echo {,i{6,5,4,3}86-}mingw32)
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bzip2 config-log doc prebuilt-system zlib"
 
 # NSIS Menu uses wxwindows but it's all broken, so disable for now
@@ -83,7 +83,7 @@ src_install() {
 	do_scons install || die "scons failed"
 	if use prebuilt-system ; then
 		insinto /usr/share/nsis/Plugins
-		doins "${WORKDIR}"/${P}/Plugins/System.dll || die
+		doins "${WORKDIR}"/${P}/Plugins/System.dll || die "failed to install System.dll"
 	fi
 	use doc || rm -rf "${D}"/usr/share/doc/${PF}/{Docs,Examples}
 
