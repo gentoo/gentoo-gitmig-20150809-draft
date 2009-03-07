@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.588 2009/02/20 22:05:05 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.589 2009/03/07 22:09:46 mpagano Exp $
+
+*gentoo-sources-2.6.28-r3 (07 Mar 2009)
+
+  07 Mar 2009; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.28-r3.ebuild:
+  Kernel patches 2.6.28.6 and 2.6.28.7. Removal of redundant ms keyboard
+  patch. fbcondecor version bump to 0.9.5. Regression fix for disks not
+  spinning down in ext3. Race condition fix in crypto api.
 
 *gentoo-sources-2.6.27-r9 (20 Feb 2009)
 
@@ -27,7 +35,7 @@
   gentoo-sources-2.6.27-r8.ebuild:
   Stable on alpha.
 
-  13 Feb 2009; Raúl Porcel <armin76@gentoo.org>
+  13 Feb 2009; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.28-r1.ebuild:
   Add ~sh
 
@@ -39,7 +47,7 @@
   gentoo-sources-2.6.27-r8.ebuild:
   Add s390 love.
 
-  24 Jan 2009; Raúl Porcel <armin76@gentoo.org>
+  24 Jan 2009; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.27-r8.ebuild:
   Add ~sh, arm/ia64/sparc stable
 
@@ -75,7 +83,7 @@
   gentoo-sources-2.6.27-r7.ebuild:
   Stable on alpha, bug #251670
 
-  26 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  26 Dec 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.27-r7.ebuild:
   arm/ia64/sparc stable wrt #251670
 
@@ -115,7 +123,7 @@
   gentoo-sources-2.6.27-r5.ebuild:
   Keyworded on alpha
 
-  10 Dec 2008; Raúl Porcel <armin76@gentoo.org>
+  10 Dec 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.26-r4.ebuild:
   arm/ia64/sparc stable
 
@@ -165,7 +173,7 @@
   gentoo-sources-2.6.26-r2.ebuild:
   Marked ppc/ppc64 stable for bug #245638.
 
-  11 Nov 2008; Raúl Porcel <armin76@gentoo.org>
+  11 Nov 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.26-r2.ebuild, gentoo-sources-2.6.27-r2.ebuild:
   arm/ia64/sparc stable wrt #245638
 
@@ -173,7 +181,7 @@
   gentoo-sources-2.6.26-r2.ebuild:
   Stable on alpha, bug #245638
 
-  08 Nov 2008; Raúl Porcel <armin76@gentoo.org>
+  08 Nov 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.24-r8.ebuild, gentoo-sources-2.6.25-r9.ebuild:
   arm/ia64/sparc/x86 stable
 
@@ -202,7 +210,7 @@
   +gentoo-sources-2.6.27-r1.ebuild:
   Adding linux patches: 2.6.27.1 2.6.27.2 and 2.6.27.3
 
-  15 Oct 2008; Raúl Porcel <armin76@gentoo.org>
+  15 Oct 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.27.ebuild:
   Add ~ia64/~sparc
 
@@ -238,7 +246,7 @@
   +gentoo-sources-2.6.25-r9.ebuild:
   Version bump
 
-  03 Oct 2008; Raúl Porcel <armin76@gentoo.org>
+  03 Oct 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.25-r8.ebuild:
   ia64/sparc/x86 stable
 
@@ -261,7 +269,7 @@
   Makefile. New mount option for FAT filesystems allowing timestamps to be in
   coordinated universal time (UTC)
 
-  23 Jul 2008; Raúl Porcel <armin76@gentoo.org>
+  23 Jul 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.25-r7.ebuild:
   ia64/sparc stable
 
@@ -290,7 +298,7 @@
   gentoo-sources-2.6.26.ebuild:
   Keyworded on alpha
 
-  17 Jul 2008; Raúl Porcel <armin76@gentoo.org>
+  17 Jul 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.26.ebuild:
   Add ~ia64
 
@@ -319,7 +327,7 @@
   gentoo-sources-2.6.25-r6.ebuild:
   Stable on sparc, bug #230285
 
-  03 Jul 2008; Raúl Porcel <armin76@gentoo.org>
+  03 Jul 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.25-r6.ebuild:
   ia64 stable
 
@@ -349,7 +357,7 @@
   gentoo-sources-2.6.24-r8.ebuild:
   Stable on alpha
 
-  12 May 2008; Raúl Porcel <armin76@gentoo.org>
+  12 May 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.24-r8.ebuild:
   ia64/sparc stable
 
@@ -370,7 +378,7 @@
   +gentoo-sources-2.6.24-r8.ebuild:
   Update to Linux 2.6.24.7. Fix utimensat() security issue.
 
-  05 May 2008; Raúl Porcel <armin76@gentoo.org>
+  05 May 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.24-r7.ebuild:
   ia64/sparc stable
 
@@ -391,7 +399,7 @@
   Update to Linux 2.6.24.6. Fix import of default .config on x86/amd64. Fix
   QLA2xxx SCSI regression.
 
-  01 May 2008; Raúl Porcel <armin76@gentoo.org>
+  01 May 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.24-r6.ebuild:
   ia64/sparc stable
 
@@ -411,7 +419,7 @@
   gentoo-sources-2.6.25-r1.ebuild:
   Marked ~hppa too.
 
-  20 Apr 2008; Raúl Porcel <armin76@gentoo.org>
+  20 Apr 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.25-r1.ebuild:
   Add ~ia64
 
@@ -453,7 +461,7 @@
   gentoo-sources-2.6.24-r4.ebuild:
   Fails to boot on HPPA (bug #217030).
 
-  31 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  31 Mar 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.24-r4.ebuild:
   ia64/sparc stable
 
@@ -480,7 +488,7 @@
   gentoo-sources-2.6.24-r3.ebuild:
   amd64 stable - 213283
 
-  15 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  15 Mar 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.24-r3.ebuild:
   ia64/sparc stable wrt #213283
 
@@ -492,7 +500,7 @@
   gentoo-sources-2.6.24-r3.ebuild:
   Stable on ppc64; bug #213283
 
-  13 Mar 2008; Dawid Węgliński <cla@gentoo.org>
+  13 Mar 2008; Dawid WÄgliÅski <cla@gentoo.org>
   gentoo-sources-2.6.24-r3.ebuild:
   Stable on x86 (bug #213283)
 
@@ -511,7 +519,7 @@
   gentoo-sources-2.6.23-r9.ebuild:
   Stable for HPPA (bug #212496).
 
-  29 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  29 Feb 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.23-r9.ebuild:
   alpha/ia64/sparc stable
 
@@ -542,7 +550,7 @@
   gentoo-sources-2.6.23-r8.ebuild:
   ppc stable
 
-  14 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  14 Feb 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.23-r8.ebuild, gentoo-sources-2.6.24-r2.ebuild:
   alpha stable on .23 and add ~alpha on .24
 
@@ -554,11 +562,11 @@
   gentoo-sources-2.6.23-r8.ebuild:
   Stable on ppc64
 
-  13 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  13 Feb 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.23-r8.ebuild:
   ia64 stable
 
-  11 Feb 2008; Raúl Porcel <armin76@gentoo.org>
+  11 Feb 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.23-r8.ebuild:
   sparc stable
 
@@ -611,11 +619,11 @@
   29 Jan 2008; Brent Baude <ranger@gentoo.org> gentoo-sources-2.6.24.ebuild:
   Marking gentoo-sources-2.6.24 ppc and ppc64 stable
 
-  26 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  26 Jan 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.24.ebuild:
   Add ~ia64/~sparc wrt #207599
 
-  26 Jan 2008; Raúl Porcel <armin76@gentoo.org>
+  26 Jan 2008; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.23-r6.ebuild:
   sparc stable
 
@@ -637,7 +645,7 @@
   +gentoo-sources-2.6.23-r6.ebuild:
   Adding linux-2.6.23.13 and linux-2.6.23.14
 
-  23 Dec 2007; Raúl Porcel <armin76@gentoo.org>
+  23 Dec 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.22-r10.ebuild:
   alpha/ia64/sparc/x86 stable
 
@@ -671,7 +679,7 @@
   gentoo-sources-2.6.23-r3.ebuild:
   stable x86, bug 200994
 
-  02 Dec 2007; Olivier Crête <tester@gentoo.org>
+  02 Dec 2007; Olivier CrÃªte <tester@gentoo.org>
   gentoo-sources-2.6.23-r3.ebuild:
   Mark stable on amd64 for bug #200994
 
@@ -708,7 +716,7 @@
   camera. Fix a divide-by-zero crash in the ALSA HDSP driver. Implement NHRP
   over GRE tunnel. Fix a stack overflow due to recursive ACPI thermal checks.
 
-  05 Nov 2007; Raúl Porcel <armin76@gentoo.org>
+  05 Nov 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.22-r9.ebuild:
   alpha stable
 
@@ -721,7 +729,7 @@
   over GRE tunnel. Add Intel ICH9 PCI-Express ethernet support. Fix NFS data
   corruption regression.
 
-  31 Oct 2007; Raúl Porcel <armin76@gentoo.org>
+  31 Oct 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.22-r9.ebuild:
   ia64/sparc stable
 
@@ -729,7 +737,7 @@
   gentoo-sources-2.6.22-r9.ebuild:
   Stable on x86/amd64
 
-  26 Oct 2007; Raúl Porcel <armin76@gentoo.org>
+  26 Oct 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.23.ebuild:
   Add ~ia64/~sparc
 
@@ -750,7 +758,7 @@
   Update to Linux 2.6.22.10. Fix custom keymap compilation. Fix hostap netdev
   type registration.
 
-  14 Oct 2007; Raúl Porcel <armin76@gentoo.org>
+  14 Oct 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.22-r8.ebuild:
   ia64 stable
 
@@ -787,7 +795,7 @@
   gentoo-sources-2.6.22-r5.ebuild:
   Marked ppc stable.
 
-  04 Sep 2007; Raúl Porcel <armin76@gentoo.org>
+  04 Sep 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.22-r5.ebuild:
   ia64 stable
 
@@ -846,7 +854,7 @@
   gentoo-sources-2.6.22-r2.ebuild:
   Marked ~ppc for bug #186953.
 
-  01 Aug 2007; Raúl Porcel <armin76@gentoo.org>
+  01 Aug 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.22-r2.ebuild:
   Add ~ia64
 
@@ -858,7 +866,7 @@
   gentoo-sources-2.6.22-r2.ebuild:
   Keyworded ~sparc
 
-  29 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  29 Jul 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.22-r2.ebuild:
   Add ~alpha
 
@@ -870,7 +878,7 @@
   deadlock. Fix disk detection in pata_hpt37x driver. Fix X on sparc64 Sabre
   systems.
 
-  15 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  15 Jul 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.21-r4.ebuild:
   ia64 stable, thanks to kloeri for testing
 
@@ -888,7 +896,7 @@
   +gentoo-sources-2.6.22-r1.ebuild:
   Update to Linux 2.6.22.1. Add another Logitech QuickCam microphone ID.
 
-  11 Jul 2007; Raúl Porcel <armin76@gentoo.org>
+  11 Jul 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.21-r4.ebuild:
   alpha stable wrt #184203, thanks to Brian Evans for testing
 
@@ -945,7 +953,7 @@
   network interface renaming. Reduce confusion around powernow-k8 ACPI
   configuration.
 
-  07 Jun 2007; Raúl Porcel <armin76@gentoo.org>
+  07 Jun 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.21-r1.ebuild:
   alpha stable as decided
 
@@ -970,7 +978,7 @@
   gentoo-sources-2.6.20-r8.ebuild:
   Stable on amd64
 
-  10 May 2007; Bryan Østergaard <kloeri@gentoo.org>
+  10 May 2007; Bryan Ãstergaard <kloeri@gentoo.org>
   gentoo-sources-2.6.21.ebuild:
   Add ~alpha and ~ia64 keywords.
 
@@ -1057,7 +1065,7 @@
   +gentoo-sources-2.6.20-r4.ebuild:
   Update to Linux 2.6.20.4
 
-  18 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  18 Mar 2007; Bryan Ãstergaard <kloeri@gentoo.org> metadata.xml:
   Remove plasmaroo from metadata.xml due to retirement.
 
 *gentoo-sources-2.6.20-r3 (14 Mar 2007)
@@ -1136,7 +1144,7 @@
   gentoo-sources-2.6.19-r5.ebuild:
   Stable on ppc64; bug #164564
 
-  30 Jan 2007; Raúl Porcel <armin76@gentoo.org>
+  30 Jan 2007; RaÃºl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.19-r5.ebuild:
   x86 stable wrt bug 164564
 
@@ -1190,7 +1198,7 @@
   Update to Linux 2.6.18.6. Fix token ring networking security hole. Fix
   libata status handling.
 
-  16 Dec 2006; Bryan Østergaard <kloeri@gentoo.org>
+  16 Dec 2006; Bryan Ãstergaard <kloeri@gentoo.org>
   gentoo-sources-2.6.19-r2.ebuild:
   Add ~alpha keyword.
 
@@ -1770,7 +1778,7 @@
   gentoo-sources-2.6.15.ebuild:
   Added to ~ppc.
 
-  04 Jan 2006; Petteri Räty <betelgeuse@gentoo.org>
+  04 Jan 2006; Petteri RÃ¤ty <betelgeuse@gentoo.org>
   gentoo-sources-2.6.15.ebuild:
   Added ~x86 keyword.
 
@@ -1840,7 +1848,7 @@
   Fix slowdown on pentium 4 systems. Fix boot hang for various HP/compaq
   laptops. setkeys security fix. inode integer overflow fix.
 
-  28 Nov 2005; Bryan Østergaard <kloeri@gentoo.org>
+  28 Nov 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   gentoo-sources-2.6.14-r3.ebuild:
   ~alpha keyword.
 
