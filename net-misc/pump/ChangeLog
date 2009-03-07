@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.42 2009/02/16 18:15:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.43 2009/03/07 16:03:56 nelchael Exp $
+
+*pump-0.8.24-r3 (07 Mar 2009)
+
+  07 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org> -pump-0.8.24-r2.ebuild,
+  +pump-0.8.24-r3.ebuild:
+  Revision bump: fix bug #260929 (static linking against popt), respect
+  LDFLAGS.
 
   16 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org> Manifest:
   Fix digest.

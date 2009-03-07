@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24-r2.ebuild,v 1.1 2009/02/12 20:37:12 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.24-r3.ebuild,v 1.1 2009/03/07 16:03:56 nelchael Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ DESCRIPTION="This is the DHCP/BOOTP client written by RedHat"
 HOMEPAGE="http://ftp.debian.org/debian/pool/main/p/pump/"
 SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/p/${PN}/${PN}_${PV}-${PATCHLEVEL}.diff.gz
-	mirror://gentoo/${P}-patches.tar.bz2"
+	mirror://gentoo/${P}-1-patches.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,10 +31,6 @@ src_unpack() {
 	for i in "${WORKDIR}/${PV}/"*; do
 		epatch "${i}"
 	done
-
-	sed -i \
-		-e 's,-Werror -g,,' \
-		Makefile || die "sed failed"
 
 	# Only install specific po files if LINGUAS is set
 	if [[ -n ${LINGUAS} ]]; then
