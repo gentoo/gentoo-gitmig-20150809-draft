@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2417 2009/03/07 12:30:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2418 2009/03/07 18:23:46 cla Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Mar 2009; Dawid Węgliński <cla@gentoo.org>
+  default-linux/ppc/package.use.mask, +default/linux/amd64/package.use.mask,
+  +default/linux/powerpc/package.use.mask, hardened/amd64/package.use.mask,
+  hardened/linux/amd64/package.use.mask:
+  Mask amarok2 for net-im/kadu. See bug #238487 for references
 
   07 Mar 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   add mesa 7.3-r1 to p.mask
