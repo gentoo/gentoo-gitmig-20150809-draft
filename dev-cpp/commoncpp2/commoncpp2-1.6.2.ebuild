@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.6.2.ebuild,v 1.1 2008/05/07 05:32:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.6.2.ebuild,v 1.2 2009/03/07 14:57:13 armin76 Exp $
 
 inherit eutils autotools
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://gnu/commoncpp/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/commoncpp/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 IUSE="debug doc examples ipv6 gnutls"
 
 RDEPEND="gnutls? ( dev-libs/libgcrypt
@@ -23,8 +23,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/1.6.1-gcc42_atomicity.patch" \
-		"${FILESDIR}/${PV}-autoconf.patch"
+	epatch "${FILESDIR}/1.6.1-gcc42_atomicity.patch"
+	epatch "${FILESDIR}/${PV}-autoconf.patch"
+	epatch "${FILESDIR}/${PV}-configure_detect_netfilter.patch" # bug 236177
+		
 	AT_M4DIR="m4" eautoreconf
 }
 
