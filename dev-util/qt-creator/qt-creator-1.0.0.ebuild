@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.0.0.ebuild,v 1.1 2009/03/04 21:13:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.0.0.ebuild,v 1.2 2009/03/07 15:45:15 hwoarang Exp $
 
 EAPI="2"
 
@@ -36,6 +36,12 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/docs_gen.patch"
+	# bug #261448
+	for target in src/qworkbench.pri src/qworkbenchlibrary.pri src/qworkbenchplugin.pri;do
+		einfo "Fixing ${target}"
+		sed -i "s/lib\/qtcreator/$(get_libdir)\/qtcreator/" \
+			${target} || die "seding ${target} failed"
+	done
 }
 
 src_configure() {

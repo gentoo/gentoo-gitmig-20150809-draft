@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.4 2009/03/04 21:13:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.5 2009/03/07 15:45:15 hwoarang Exp $
+
+  07 Mar 2009; Markos Chandras <hwoarang@gentoo.org> qt-creator-1.0.0:
+  Fixing multilib-strict issue ( bug #261448 )
 
 *qt-creator-1.0.0 (04 Mar 2009)
 
