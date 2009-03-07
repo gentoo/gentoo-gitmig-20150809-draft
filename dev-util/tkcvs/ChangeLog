@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/tkcvs
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.25 2007/11/21 19:06:38 nixnut Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.26 2009/03/07 16:19:23 patrick Exp $
+
+*tkcvs-8.2 (07 Mar 2009)
+
+  07 Mar 2009; Patrick Lauer <patrick@gentoo.org> +tkcvs-8.2.ebuild:
+  Bump to 8.2. Fixes #259850
 
   21 Nov 2007; nixnut <nixnut@gentoo.org> tkcvs-8.0.4.ebuild:
   Stable on ppc wrt bug 199492
