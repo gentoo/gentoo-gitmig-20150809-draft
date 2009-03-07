@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/curlftpfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/ChangeLog,v 1.14 2009/03/07 09:11:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/curlftpfs/ChangeLog,v 1.15 2009/03/07 09:13:36 fauli Exp $
+
+  07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
+  -curlftpfs-0.9.1.ebuild:
+  clean up
 
   07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
   curlftpfs-0.9.2.ebuild:
