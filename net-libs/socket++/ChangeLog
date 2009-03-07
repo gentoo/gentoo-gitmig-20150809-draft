@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/socket++
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/ChangeLog,v 1.14 2006/11/29 21:45:54 dev-zero Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/ChangeLog,v 1.15 2009/03/07 04:32:06 darkside Exp $
+
+  07 Mar 2009; Jeremy Olexa <darkside@gentoo.org>
+  socket++-1.12.12-r1.ebuild:
+  amd64 stable, bug 259678
 
   29 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
   Set herd as maintainer

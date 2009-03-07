@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.6 2006/10/23 18:44:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.7 2009/03/07 04:32:06 darkside Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -13,7 +13,7 @@ SRC_URI="http://www.linuxhacker.at/linux/downloads/src/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips x86"
+KEYWORDS="~alpha amd64 ~mips x86"
 IUSE="debug doc"
 
 DEPEND="sys-devel/libtool
