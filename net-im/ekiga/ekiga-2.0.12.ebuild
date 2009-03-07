@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.12.ebuild,v 1.11 2009/02/27 21:45:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.12.ebuild,v 1.12 2009/03/07 19:42:46 gentoofan23 Exp $
 
+EAPI="2"
 inherit gnome2 eutils flag-o-matic
 
 DESCRIPTION="H.323 and SIP VoIP softphone"
@@ -12,13 +13,13 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="avahi dbus doc gnome sdl"
 
-RDEPEND="~dev-libs/pwlib-1.10.$[${PV##*.}-2]
+RDEPEND="~dev-libs/pwlib-1.10.$[${PV##*.}-2][ldap]
 	~net-libs/opal-2.2.$[${PV##*.}-1]
 	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/glib-2.0.0
 	sdl? ( >=media-libs/libsdl-1.2.4 )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
-	avahi? ( net-dns/avahi )
+	avahi? ( net-dns/avahi[dbus] )
 	gnome? (
 		>=gnome-base/libbonobo-2.2.0
 		>=gnome-base/libgnomeui-2.2.0
@@ -38,16 +39,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS"
 
 pkg_setup() {
-	if ! built_with_use dev-libs/pwlib ldap; then
-		eerror "You need to build dev-libs/pwlib with USE=ldap enabled."
-		die "Pwlib w/o ldap-support detected."
-	fi
-
-	if use avahi && ! built_with_use net-dns/avahi dbus; then
-		eerror "You need to build net-dns/avahi with USE=dbus enabled."
-		die "Avahi without dbus-support detected."
-	fi
-
 	G2CONF="${G2CONF}
 		$(use_enable dbus)
 		$(use_enable sdl)

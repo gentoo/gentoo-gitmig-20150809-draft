@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.8 2009/01/14 05:23:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-20061202.ebuild,v 1.9 2009/03/07 19:39:17 gentoofan23 Exp $
 
+EAPI="2"
 inherit eutils perl-module autotools
 
 DESCRIPTION="Text based Instant Messenger and IRC client that supports protocols like Jabber and Gadu-Gadu"
@@ -16,7 +17,7 @@ IUSE="gpm jabber ssl spell jpeg gsm python unicode sqlite sqlite3 gif nogg gtk p
 DEPEND="jabber? ( >=dev-libs/expat-1.95.6 )
 	expat? ( >=dev-libs/expat-1.95.6 )
 	gpm? ( >=sys-libs/gpm-1.20.1 )
-	ssl? ( >=dev-libs/openssl-0.9.6m \
+	ssl? ( >=dev-libs/openssl-0.9.6m
 		jabber? ( >=net-libs/gnutls-1.0.17 ) )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	spell? ( >=app-text/aspell-0.50.5 )
@@ -29,14 +30,8 @@ DEPEND="jabber? ( >=dev-libs/expat-1.95.6 )
 	gif? ( media-libs/giflib )
 	gtk? ( >=x11-libs/gtk+-2.4 )
 	xosd? ( x11-libs/xosd )
+	sys-libs/ncurses[unicode?]
 	virtual/libintl"
-
-pkg_setup() {
-	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
-		eerror "Ekg2 requires ncurses built with unicode support for unicode"
-		die
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -50,7 +45,7 @@ src_unpack() {
 	AT_M4DIR=m4 eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--with-pthread \
 		$(use_with !nogg libgadu) \
@@ -69,10 +64,7 @@ src_compile() {
 		$(use_with sqlite3) \
 		$(use_enable unicode) \
 		$(use_enable static) \
-		$(use jabber && use ssl && echo --with-gnutls) \
-		|| die "econf failed"
-
-	emake || die "emake failed"
+		$(use jabber && use ssl && echo --with-gnutls)
 }
 
 src_install() {
