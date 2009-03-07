@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/wklej-0.1.5.ebuild,v 1.2 2008/10/18 14:09:14 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/wklej-0.1.5.ebuild,v 1.3 2009/03/07 14:34:55 gentoofan23 Exp $
 
-EAPI=1
+EAPI="2"
 
 inherit eutils
 
@@ -17,14 +17,7 @@ IUSE="+vim"
 
 DEPEND="${RDEPEND}"
 RDEPEND="dev-lang/python
-	vim? ( app-editors/vim )"
-
-pkg_setup() {
-	if use vim && ! built_with_use app-editors/vim python; then
-		eerror "app-editors/vim must be compiled with USE=python"
-		die "app-editors/vim must be compiled with USE=python"
-	fi
-}
+	vim? ( app-editors/vim[python] )"
 
 src_install() {
 	if use vim; then

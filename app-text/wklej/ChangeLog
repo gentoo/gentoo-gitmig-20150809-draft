@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wklej
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.16 2009/02/24 19:19:06 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.17 2009/03/07 14:34:55 gentoofan23 Exp $
+
+  07 Mar 2009; Thomas Anderson <gentoofan23@gentoo.org> wklej-0.1.5.ebuild:
+  Transition to eapi 2 use deps
 
 *wklej-0.1.6 (24 Feb 2009)
 
