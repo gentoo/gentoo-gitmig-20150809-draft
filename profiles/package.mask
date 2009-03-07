@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9556 2009/03/07 13:33:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9557 2009/03/07 18:29:23 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Volkov <pva@gentoo.org> (7 Mar 2009)
+# Masked for removal, please use app-text/ghostscript-gpl #261434
+app-text/ghostscript-esp
 
 # Rémi Cardona <remi@gentoo.org> (7 Mar 2009)
 # snapshot of the unreleased 7.4 branch, just needs to be tested
