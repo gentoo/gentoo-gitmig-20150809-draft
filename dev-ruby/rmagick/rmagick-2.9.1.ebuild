@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.9.1.ebuild,v 1.1 2009/02/01 16:25:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.9.1.ebuild,v 1.2 2009/03/07 08:00:23 graaff Exp $
 
 inherit ruby
 
@@ -18,8 +18,10 @@ LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples doc"
-DEPEND="virtual/ruby
+RDEPEND="virtual/ruby
 	>=media-gfx/imagemagick-6.3.5.6"
+DEPEND="${RDEPEND}
+	doc? ( virtual/ghostscript media-libs/libwmf )"
 
 S="${WORKDIR}/RMagick-${PV}"
 
