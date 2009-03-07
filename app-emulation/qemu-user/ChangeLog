@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-user
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.32 2008/02/01 20:24:13 lu_zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.33 2009/03/07 14:31:12 lu_zero Exp $
+
+*qemu-user-0.10.0 (07 Mar 2009)
+
+  07 Mar 2009; Luca Barbato <lu_zero@gentoo.org> +qemu-user-0.10.0.ebuild:
+  New version
 
   01 Feb 2008; Luca Barbato <lu_zero@gentoo.org>
   -files/qemu-user-0.7.0-errno.patch, -files/qemu-0.8.0-gcc4-hacks.patch,
