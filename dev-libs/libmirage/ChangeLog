@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmirage
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.6 2008/08/22 22:06:05 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.7 2009/03/07 16:12:52 patrick Exp $
+
+*libmirage-1.1.1 (07 Mar 2009)
+
+  07 Mar 2009; Patrick Lauer <patrick@gentoo.org> +libmirage-1.1.1.ebuild:
+  Bump to 1.1.1. Rearranged deps to be more feng shui. Closes #252671
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> libmirage-1.0.0.ebuild:
   amd64 stable, bug #232566
