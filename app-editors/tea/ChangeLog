@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/tea
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.42 2008/11/14 12:26:43 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/tea/ChangeLog,v 1.43 2009/03/07 15:39:20 patrick Exp $
+
+*tea-22.0.1 (07 Mar 2009)
+
+  07 Mar 2009; Patrick Lauer <patrick@gentoo.org> +tea-22.0.1.ebuild:
+  Bump to 22.0.1. Fixes #246918. Ebuild fixes by Daniel Pielmeier.
 
   14 Nov 2008; Raúl Porcel <armin76@gentoo.org> -tea-17.4.1.ebuild,
   -tea-17.5.0.ebuild, -tea-17.5.1.ebuild, -tea-17.5.4.ebuild,
