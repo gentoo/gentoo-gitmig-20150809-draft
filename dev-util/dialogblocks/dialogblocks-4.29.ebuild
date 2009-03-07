@@ -1,20 +1,20 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.25.ebuild,v 1.1 2008/06/08 08:33:58 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.29.ebuild,v 1.1 2009/03/07 13:47:32 mrness Exp $
 
 inherit eutils
 
 DESCRIPTION="GUI builder tool for wxWidgets"
 HOMEPAGE="http://www.anthemion.co.uk/dialogblocks/"
 SRC_URI="!amd64? ( http://www.anthemion.co.uk/${PN}/DialogBlocks-${PV}-i386.tar.gz )
-	amd64? ( http://www.anthemion.co.uk/${PN}/DialogBlocks-${PV}-i686.tar.gz )"
+	amd64? ( http://www.anthemion.co.uk/${PN}/DialogBlocks-${PV}-x86_64.tar.gz )"
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="app-arch/tar"
 RDEPEND=">=x11-libs/gtk+-2
 	x11-libs/libXinerama
 	>=media-libs/libpng-1.2
@@ -31,7 +31,11 @@ src_install() {
 	fowners -R root:root /opt/dialogblocks
 	dosed 's:/usr/share/:/opt/:' /opt/dialogblocks/dialogblocks.desktop
 
+	local i
 	dosym /opt/dialogblocks/dialogblocks32x32.xpm /usr/share/pixmaps/dialogblocks.xpm
+	for i in 32x32 48x48 128x128; do
+	    dosym /opt/dialogblocks/appicons/dialogblocks${i}.png /usr/share/icons/hicolor/${i}/apps/dialogblocks.png
+	done
 	dosym /opt/dialogblocks/dialogblocks.desktop /usr/share/applications/dialogblocks.desktop
 	newbin "${FILESDIR}/dialogblocks.sh" dialogblocks
 }
