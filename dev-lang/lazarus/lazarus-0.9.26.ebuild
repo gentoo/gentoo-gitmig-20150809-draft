@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26.ebuild,v 1.2 2008/10/17 19:13:56 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26.ebuild,v 1.3 2009/03/07 22:32:52 fauli Exp $
+
+EAPI=2
 
 inherit eutils
 
@@ -17,21 +19,13 @@ HOMEPAGE="http://www.lazarus.freepascal.org/"
 IUSE=""
 SRC_URI="mirror://sourceforge/lazarus/${P}-0.tgz"
 
-DEPEND="~dev-lang/fpc-${FPCVER}
+DEPEND="~dev-lang/fpc-${FPCVER}[source]
 	net-misc/rsync
 	>=x11-libs/gtk+-2.0"
 RDEPEND="${DEPEND}
 	!=gnome-base/librsvg-2.16.1"
 
 S=${WORKDIR}/${PN}
-
-pkg_setup() {
-	if ! built_with_use "dev-lang/fpc" source; then
-	    eerror "You need to build dev-lang/fpc with the 'source' USE flag"
-	    eerror "in order for lazarus to work properly."
-	    die "lazarus needs fpc built with the 'source' USE to work."
-	fi
-}
 
 src_unpack() {
 	# check for broken fpc.cfg
