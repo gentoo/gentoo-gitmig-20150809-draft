@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.72 2009/02/18 23:56:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.73 2009/03/07 20:32:30 patrick Exp $
+
+*eric-4.3.1 (07 Mar 2009)
+
+  07 Mar 2009; Patrick Lauer <patrick@gentoo.org> +eric-4.3.1.ebuild:
+  Bump to 4.3.1.
 
   18 Feb 2009; Jeroen Roovers <jer@gentoo.org> eric-4.3.0.ebuild:
   Marked ~hppa too.
