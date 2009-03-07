@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.13 2008/02/17 18:49:14 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.14 2009/03/07 20:56:55 betelgeuse Exp $
+
+EAPI="2"
 
 inherit depend.apache perl-module webapp
 
@@ -21,7 +23,7 @@ S=${WORKDIR}/${MY_P}
 
 DEPEND="${DEPEND}
 	=dev-lang/perl-5*
-	=www-apache/libapreq2-2*
+	=www-apache/libapreq2-2*[perl]
 	>=media-libs/imlib2-1.0.6-r1
 	dev-perl/URI
 	>=dev-perl/ImageInfo-1.04-r2
@@ -33,18 +35,11 @@ DEPEND="${DEPEND}
 
 need_apache2
 
-pkg_setup() {
-	if ! built_with_use --missing true www-apache/libapreq2 perl; then
-		die "www-apache/libapreq2 needs USE=perl for this package to work"
-	fi
-	webapp_pkg_setup
-}
-
 src_install() {
 	perl-module_src_install
 	webapp_src_preinst
 
-	dodoc Changes INSTALL README TODO UPGRADE
+	dodoc Changes INSTALL README TODO UPGRADE || die
 
 	insinto "${MY_ICONSDIR}"/gallery
 	doins htdocs/*.png

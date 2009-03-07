@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/Apache-Gallery
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.33 2008/02/17 23:33:19 hollow Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/ChangeLog,v 1.34 2009/03/07 20:56:55 betelgeuse Exp $
+
+  07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
+  Apache-Gallery-1.0_rc3.ebuild:
+  Migrate to EAPI 2.
 
   17 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   remove redundant metadata
