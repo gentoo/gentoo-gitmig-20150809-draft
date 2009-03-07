@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.8.3.ebuild,v 1.5 2009/03/07 22:45:38 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.8.3.ebuild,v 1.6 2009/03/07 22:47:27 cla Exp $
 
 EAPI="2"
 
@@ -24,13 +24,6 @@ DEPEND="dev-libs/libpcre
 	crypt? ( app-crypt/gnupg )"
 RDEPEND="${DEPEND}
 	net-misc/urlview"
-
-pkg_setup() {
-	if use unicode && ! built_with_use sys-libs/ncurses unicode
-	then
-		die "For unicode support you need sys-libs/ncurses compiled with unicode support!"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
