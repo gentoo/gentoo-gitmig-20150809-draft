@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0-r1.ebuild,v 1.1 2007/12/31 08:00:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.8.0-r1.ebuild,v 1.2 2009/03/07 20:49:50 betelgeuse Exp $
+
+EAPI="2"
 
 inherit webapp eutils autotools
 
@@ -15,12 +17,10 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
-# These are really run-time dependencies, but we need to make sure they are installed
-# before pkg_setup runs the built_with_use tests
-DEPEND=">=mail-filter/dspam-${PV}
-	dev-perl/GD"
-
-RDEPEND="${DEPEND}
+DEPEND=""
+DEPEND="
+	>=mail-filter/dspam-${PV}[-user-homedirs]
+	dev-perl/GD[png]
 	dev-perl/GD-Graph3d
 	dev-perl/GDGraph
 	dev-perl/GDTextUtil"
@@ -31,29 +31,7 @@ CONFDIR="/etc/mail/dspam"
 
 S="${WORKDIR}/dspam-${PV}"
 
-pkg_setup() {
-	local use_tests_failed=false
-	if built_with_use "mail-filter/dspam" user-homedirs; then
-		echo
-		eerror "The DSPAM web interface requires that mail-filter/dspam be installed without user-homedirs USE flag."
-		eerror "Please disable this flag and re-emerge dspam."
-		use_tests_failed=true
-	fi
-	if ! built_with_use "dev-perl/GD" png; then
-		echo
-		eerror "The DSPAM web interface requires that dev-perl/GD be installed with png USE flag."
-		eerror "Please enable this flag and re-emerge GD."
-		use_tests_failed=true
-	fi
-	${use_tests_failed} && die "Dependency installed with incompatible USE flags"
-
-	webapp_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	EPATCH_SUFFIX="patch"
 	epatch "${WORKDIR}"/patches
 
@@ -61,12 +39,15 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 			--with-dspam-home=${HOMEDIR} \
 			--sysconfdir=${CONFDIR}  || die "econf failed"
+}
+
+src_compile() {
 	cd "${S}/webui"
-	emake || die "emake failed"
+	default
 }
 
 src_install() {
