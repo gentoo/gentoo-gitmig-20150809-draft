@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-opengl
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.30 2009/01/17 14:31:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-opengl/ChangeLog,v 1.31 2009/03/07 09:39:09 graaff Exp $
+
+  07 Mar 2009; Hans de Graaff <graaff@gentoo.org> -ruby-opengl-0.32c.ebuild,
+  -ruby-opengl-0.32d.ebuild, -ruby-opengl-0.32g.ebuild:
+  Remove old versions
 
   17 Jan 2009; nixnut <nixnut@gentoo.org> ruby-opengl-0.60.0.ebuild:
   ppc stable #250933
