@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9555 2009/03/07 12:30:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9556 2009/03/07 13:33:40 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1189,10 +1189,6 @@ app-pda/libopensync-plugin-synce
 # Sorting out media-video/{spca5xx,gspca{,v1}} bug 159176
 media-video/spca5xx
 media-video/gspca
-
-# Steve Dibb <beandog@gentoo.org> (12 Mar 2007)
-# needs testing
->=media-video/transcode-1.1.0_alpha4
 
 # Stefan Cornelius <dercorny@gentoo.org> (7 Mar 2007)
 # Masking net-misc/xsupplicant due to security bug 154995
