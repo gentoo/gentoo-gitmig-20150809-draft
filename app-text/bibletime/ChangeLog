@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibletime
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.51 2009/03/03 17:02:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.52 2009/03/07 14:13:26 gentoofan23 Exp $
+
+  07 Mar 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  bibletime-1.6.5.1-r1.ebuild:
+  Transition to eapi 2 use deps
 
 *bibletime-1.7 (03 Mar 2009)
 

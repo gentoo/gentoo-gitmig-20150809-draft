@@ -1,6 +1,10 @@
 # ChangeLog for app-text/active-dvi
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.26 2008/10/05 10:33:16 aballier Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.27 2009/03/07 14:09:07 gentoofan23 Exp $
+
+  07 Mar 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  active-dvi-1.7.3.ebuild:
+  Transition to eapi 2 use deps
 
   05 Oct 2008; Alexis Ballier <aballier@gentoo.org> active-dvi-1.7.3.ebuild:
   Add missing findlib dep, thanks Patrick, bug #239607

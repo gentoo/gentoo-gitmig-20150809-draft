@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.5.1-r1.ebuild,v 1.4 2008/12/20 20:20:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.5.1-r1.ebuild,v 1.5 2009/03/07 14:13:26 gentoofan23 Exp $
 
+EAPI="2"
 inherit kde eutils versionator
 
 DESCRIPTION="KDE Bible study application using the SWORD library."
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=app-text/sword-1.5.10
+DEPEND=">=app-text/sword-1.5.10[curl]
 	>=dev-cpp/clucene-0.9.16"
 
 LANGS_PKG="${PN}-i18n-1.6.5"
@@ -26,16 +27,3 @@ for X in ${LANGS}; do
 done
 
 need-kde 3.4
-
-pkg_setup() {
-	if ! built_with_use app-text/sword curl; then
-		echo
-		ewarn "The SWORD library may not have been compiled with curl support."
-		ewarn "If you wish to use BibleTime's ability to download modules"
-		ewarn "straight from the SWORD website, please make sure app-text/sword"
-		ewarn "was compiled with USE=\"curl\"."
-		ewarn "Press ctrl+c to abort the merge of BibleTime if you want to"
-		ewarn "recompile SWORD with curl support."
-		echo
-	fi
-}

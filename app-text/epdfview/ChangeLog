@@ -1,6 +1,10 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.30 2009/02/26 19:35:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.31 2009/03/07 14:17:18 gentoofan23 Exp $
+
+  07 Mar 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  epdfview-0.1.6-r1.ebuild:
+  Transition to eapi 2 use deps
 
   26 Feb 2009; Jeroen Roovers <jer@gentoo.org> epdfview-0.1.6-r1.ebuild:
   Stable for HPPA too.

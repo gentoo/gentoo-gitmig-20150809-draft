@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.7.3.ebuild,v 1.7 2008/10/05 10:33:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.7.3.ebuild,v 1.8 2009/03/07 14:09:07 gentoofan23 Exp $
 
-EAPI=1
+EAPI="2"
 
 inherit eutils autotools
 
@@ -19,7 +19,7 @@ IUSE="+ocamlopt tk"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 
-RDEPEND=">=dev-lang/ocaml-3.10.0
+RDEPEND=">=dev-lang/ocaml-3.10.0[ocamlopt?,tk?]
 	>=dev-ml/camlimages-2.20-r2
 	virtual/latex-base
 	virtual/ghostscript
@@ -32,33 +32,6 @@ DEPEND="${RDEPEND}
 
 DOCS="README TODO"
 
-pkg_setup() {
-	# warn those who have USE="tk" but no ocaml tk support
-	# because we cant force ocaml to be build with tk.
-	if use tk; then
-		if [ ! -d /usr/lib/ocaml/labltk ]; then
-			echo ""
-			ewarn "You have requested tk support, but it appears"
-			ewarn "your ocaml wasnt compiled with tk support, "
-			ewarn "so it can't be included for active-dvi."
-			echo ""
-			ewarn "Please stop this build, and emerge ocaml with "
-			ewarn "USE=\"tk\" ocaml"
-			ewarn "before emerging active-dvi if you want tk support."
-			echo ""
-			# give the user some time to read this, but leave the
-			# choice up to them
-			epause 8
-		fi
-	fi
-	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
-		eerror "In order to build ${PN} with native code support from ocaml"
-		eerror "You first need to have a native code ocaml compiler."
-		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
-		die "Please install ocaml with ocamlopt useflag"
-	fi
-}
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -66,9 +39,12 @@ src_unpack() {
 	AT_M4DIR="." eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	export ADVI_LOC="/usr/share/texmf/tex/latex/advi"
 	econf $(use_enable ocamlopt native-program)
+}
+
+src_compile() {
 	emake || die "emake failed"
 	cd doc
 	VARTEXFONTS="${T}/fonts" emake splash.dvi scratch_write_splash.dvi scratch_draw_splash.dvi || die "failed to create documentation"
