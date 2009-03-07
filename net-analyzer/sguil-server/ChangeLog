@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sguil-server
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/ChangeLog,v 1.7 2008/08/16 17:33:38 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/ChangeLog,v 1.8 2009/03/07 23:50:39 cla Exp $
+
+  07 Mar 2009; Dawid Węgliński <cla@gentoo.org>
+  sguil-server-0.6.1-r1.ebuild:
+  Migrate to EAPI 2, keyword ~amd64
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove strerror from metadata.xml (#89719)

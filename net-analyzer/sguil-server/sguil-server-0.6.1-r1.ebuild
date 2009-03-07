@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.6.1-r1.ebuild,v 1.1 2007/12/30 20:08:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.6.1-r1.ebuild,v 1.2 2009/03/07 23:50:39 cla Exp $
+
+EAPI="2"
 
 inherit eutils ssl-cert
 
@@ -10,10 +12,10 @@ HOMEPAGE="http://sguil.sourceforge.net"
 SRC_URI="mirror://sourceforge/sguil/sguil-server-${MY_PV}.tar.gz"
 LICENSE="QPL"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="ssl"
 
-DEPEND=">=dev-lang/tcl-8.3
+DEPEND=">=dev-lang/tcl-8.3[-threads]
 	>=dev-tcltk/tclx-8.3
 	dev-tcltk/tcllib
 	dev-tcltk/mysqltcl
@@ -26,13 +28,6 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/sguil-${MY_PV}"
 
 pkg_setup() {
-	if built_with_use dev-lang/tcl threads ; then
-		eerror
-		eerror "Sguil does not run when tcl was built with threading enabled."
-		eerror "Please rebuild tcl without threads and reemerge this ebuild."
-		eerror
-		die
-	fi
 	enewgroup sguil
 	enewuser sguil -1 -1 /var/lib/sguil sguil
 }
