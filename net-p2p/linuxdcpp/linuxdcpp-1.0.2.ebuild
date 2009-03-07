@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.2.ebuild,v 1.2 2009/02/10 16:56:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.2.ebuild,v 1.3 2009/03/07 02:53:26 darkside Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://linuxdcpp.berlios.de"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="debug"
 
 RDEPEND=">=gnome-base/libglade-2.4
