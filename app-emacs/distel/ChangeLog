@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/distel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/ChangeLog,v 1.4 2009/02/20 18:11:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/ChangeLog,v 1.5 2009/03/07 21:57:25 fauli Exp $
+
+  07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
+  -distel-3.2_p20071103.ebuild:
+  clean up
 
 *distel-4.03 (20 Feb 2009)
 
