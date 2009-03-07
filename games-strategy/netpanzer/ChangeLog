@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/netpanzer
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.28 2008/04/30 17:06:37 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.29 2009/03/07 22:27:08 josejx Exp $
+
+  07 Mar 2009; Joseph Jezak <josejx@gentoo.org> netpanzer-0.8.2.ebuild:
+  Marked ppc stable for bug #245295.
 
   30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/netpanzer-0.8.2-gcc43.patch, netpanzer-0.8.2.ebuild:
