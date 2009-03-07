@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/obby
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.26 2008/11/07 21:15:47 humpback Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.27 2009/03/07 22:29:09 josejx Exp $
+
+  07 Mar 2009; Joseph Jezak <josejx@gentoo.org> obby-0.4.6-r1.ebuild:
+  Marked ppc stable for bug #225519.
 
 *obby-0.4.6-r1 (07 Nov 2008)
 
