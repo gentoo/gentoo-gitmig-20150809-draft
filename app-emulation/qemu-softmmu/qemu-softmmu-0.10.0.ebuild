@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.10.0.ebuild,v 1.1 2009/03/06 22:41:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.10.0.ebuild,v 1.2 2009/03/07 06:35:59 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,7 +8,6 @@ EAPI=1
 
 MY_PN=${PN/-softmmu/}
 MY_P=${P/-softmmu/}
-
 
 SRC_URI="http://savannah.nongnu.org/download/${MY_PN}/${MY_P}.tar.gz"
 
