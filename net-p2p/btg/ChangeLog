@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/btg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.12 2009/02/16 00:26:18 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.13 2009/03/07 14:54:03 betelgeuse Exp $
+
+  07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> -btg-0.9.6-r1.ebuild:
+  Remove old version.
 
   16 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
   +files/btg-0.9.7-gcc43.patch, btg-0.9.7.ebuild:
