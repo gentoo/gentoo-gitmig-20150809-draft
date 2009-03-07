@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.15 2009/03/05 14:02:43 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.16 2009/03/07 12:26:35 remi Exp $
+
+  07 Mar 2009; Rémi Cardona <remi@gentoo.org>
+  -files/2.6.2-0001-clean-up-man-page-generation-and-remove-all-traces-o.pat
+  ch,
+  -files/2.6.2-0002-Disable-fb-resizing-for-DRI1-only-server-so-that-DRI.pat
+  ch, -xf86-video-intel-2.6.2.ebuild:
+  remove broken 2.6.2 release
 
 *xf86-video-intel-2.6.3 (05 Mar 2009)
 
