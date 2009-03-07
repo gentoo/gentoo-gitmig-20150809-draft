@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/ZendFramework
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.51 2009/02/25 20:51:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.52 2009/03/07 11:47:31 gurligebis Exp $
+
+*ZendFramework-1.7.6 (07 Mar 2009)
+
+  07 Mar 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  -ZendFramework-1.7.2.ebuild, ZendFramework-1.7.5.ebuild,
+  +ZendFramework-1.7.6.ebuild:
+  Bumping to 1.7.6, removing old version and fixing typo
 
   25 Feb 2009; Markus Meier <maekke@gentoo.org> ZendFramework-1.7.5.ebuild:
   amd64 stable, bug #259512

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.7.5.ebuild,v 1.6 2009/02/25 20:51:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.7.5.ebuild,v 1.7 2009/03/07 11:47:31 gurligebis Exp $
 
 PHP_LIB_NAME="Zend"
 
@@ -57,10 +57,11 @@ pkg_postinst() {
 
 	if use minimal; then
 		elog "You have installed the minimal version of ZendFramework,"
-		elog "so the Dojo toolkit, demos and tests has not been installed."
+		elog "so the Dojo toolkit, demos and tests have not been installed."
 	else
 		elog "You have installed the full version of ZendFramework, which"
-		elog "includde the Dojo toolkit, demos and tests."
-		elog "To install without there, enable the minimal USE flag"
+		elog "includes the Dojo toolkit, demos and tests."
+		elog "To install ZendFramework without there, enable the"
+		elog "minimal USE flag."
 	fi
 }
