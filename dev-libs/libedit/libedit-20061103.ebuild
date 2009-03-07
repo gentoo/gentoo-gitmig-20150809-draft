@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20061103.ebuild,v 1.4 2009/01/04 22:15:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20061103.ebuild,v 1.5 2009/03/07 12:47:17 drizzt Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="BSD replacement for libreadline"
-HOMEPAGE="http://cvsweb.netbsd.org/bsdweb.cgi/src/lib/libedit/"
+HOMEPAGE="http://www.thrysoee.dk/editline/ http://cvsweb.netbsd.org/bsdweb.cgi/src/lib/libedit/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD"
