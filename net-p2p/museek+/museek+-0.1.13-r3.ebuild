@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.13-r3.ebuild,v 1.2 2008/07/28 21:33:08 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/museek+-0.1.13-r3.ebuild,v 1.3 2009/03/07 15:22:26 betelgeuse Exp $
 
-EAPI=1
+EAPI=2
 
 inherit qt3 eutils distutils multilib
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug fam gtk ncurses qsa qt3 trayicon vorbis"
 
 RDEPEND=">=dev-cpp/libxmlpp-1.0.2
+	dev-lang/python[ncurses?]
 	gtk? ( >=dev-python/pygtk-2.6.1 )
 	qt3? ( x11-libs/qt:3 )
 	qsa? ( >=dev-libs/qsa-1.1.1 )
@@ -26,15 +27,7 @@ DEPEND="${RDEPEND}
 		dev-lang/swig
 		>=dev-util/cmake-2.4.6"
 
-pkg_setup() {
-	if use ncurses && ! built_with_use dev-lang/python ncurses ; then
-		eerror "In order to build Mucous (museek ncurses client)"
-		eerror "you need dev-lang/python built with ncurses USE flag enabled."
-		die "no ncurses support in Python"
-	fi
-}
-
-src_unpack() {
+src_prepare() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-optional-deps.patch"
@@ -48,7 +41,7 @@ my_use() {
 	use $1 && echo "1" || echo "0"
 }
 
-src_compile() {
+src_configure() {
 	# Build museekd, mucous, murmur, python bindings and clients
 	local myconf="-DPREFIX=/usr -DMANDIR=share/man -DBINDINGS=1 -DCLIENTS=1"
 	myconf="${myconf} -DSWIG_DIR='$(swig -swiglib)'" # bug #192594
@@ -64,6 +57,9 @@ src_compile() {
 	fi
 
 	cmake ${myconf} || die "cmake failed"
+}
+
+src_compile() {
 	emake || die "emake failed"
 
 	# Build setup tools
@@ -74,7 +70,7 @@ src_compile() {
 src_install() {
 	# Install main stuff
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README CREDITS CHANGELOG TODO
+	dodoc README CREDITS CHANGELOG TODO || die
 
 	# Install setup tools
 	cd "${S}/setup"

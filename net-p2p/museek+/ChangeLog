@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/museek+
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.16 2008/11/17 21:51:44 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/museek+/ChangeLog,v 1.17 2009/03/07 15:22:26 betelgeuse Exp $
+
+  07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
+  museek+-0.1.13-r3.ebuild:
+  Migreate to EAPI 2.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/museek+-0.1.13-gcc43.patch:
