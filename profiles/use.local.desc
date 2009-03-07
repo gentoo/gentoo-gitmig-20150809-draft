@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4256 2009/03/07 04:47:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4257 2009/03/07 18:27:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1958,14 +1958,20 @@ net-im/gossip:galago - Enable desktop presence with galago
 net-im/gossip:gnome-keyring - Allows Gossip to use gnome-keyring to store passwords.
 net-im/gossip:libnotify - Allows Gossip to show visual notifications concerning various activities via libnotify.
 net-im/jabberd2:memdebug - Enable nad and pool debug. Requires USE="debug" to be set. 
-net-im/kadu:amarok - Enables amarok support in kadu
+net-im/kadu:amarok - Enables media-sound/amarok:0 (amarok1) media player support
+net-im/kadu:amarok2 - Enables media-sound/amarok:2 (amarok2) media player support
+net-im/kadu:audacious - Enables media-sound/audacious media player support
+net-im/kadu:bmpx - Enables media-sound/bmpx media player support
 net-im/kadu:config_wizard - Enables configuration wizard module
+net-im/kadu:dragonplayer - Enables kde-base/dragonplayer KDE4 media player support
 net-im/kadu:extraicons - Enables extra icon set
-net-im/kadu:extramodules - Enables extra module in kadu
-net-im/kadu:mail - Enables mail module in kadu
+net-im/kadu:extramodules - Enables building of extra modules
+net-im/kadu:mail - Enables mail module
 net-im/kadu:powerkadu - Installs extra powerkadu modules
-net-im/kadu:speech - Enables speech module in kadu
-net-im/kadu:voice - Enables voice chat in kadu
+net-im/kadu:sms - Enables SMS sending plugin
+net-im/kadu:speech - Enables speech module
+net-im/kadu:vlc - Enables media-video/vlc media player support
+net-im/kadu:voice - Enables voice chat
 net-im/mcabber:otr -  Enable encrypted conversations using Off-The-Records messaging 
 net-im/naim:screen - Enable screen support
 net-im/pidgin:bonjour - Enable bonjour support
