@@ -1,6 +1,6 @@
-# Copyright 2008-2008 Gentoo Foundation
+# Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.1.119.ebuild,v 1.1 2008/12/15 10:49:04 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.1.119.ebuild,v 1.2 2009/03/07 04:41:54 darkside Exp $
 
 inherit eutils apache-module multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.total-knowledge.com/progs/cppserv"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~x86 ~mips ~amd64"
+KEYWORDS="~alpha amd64 ~mips ~x86"
 IUSE="debug"
 
 APACHE2_MOD_CONF="75_mod_cserv"
