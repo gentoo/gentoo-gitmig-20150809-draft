@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.3-r1.ebuild,v 1.2 2007/12/02 16:57:38 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.3-r1.ebuild,v 1.3 2009/03/07 19:57:16 gentoofan23 Exp $
 
+EAPI="2"
 inherit multilib python eutils
 
 DESCRIPTION="Jabber client written in PyGTK"
@@ -15,7 +16,7 @@ IUSE="avahi dbus gnome idle libnotify nls spell srv trayicon X xhtml"
 
 DEPEND="|| (
 		( <dev-lang/python-2.5 dev-python/pysqlite )
-		>=dev-lang/python-2.5
+		>=dev-lang/python-2.5[sqlite]
 	)
 	dev-python/pygtk
 	sys-devel/gettext
@@ -31,7 +32,7 @@ RDEPEND="gnome? ( dev-python/gnome-python-extras
 	srv? ( net-dns/bind-tools )
 	idle? ( x11-libs/libXScrnSaver )
 	spell? ( app-text/gtkspell )
-	avahi? ( net-dns/avahi )
+	avahi? ( net-dns/avahi[dbus,gtk,python] )
 	dev-python/pyopenssl"
 
 pkg_setup() {
@@ -50,19 +51,6 @@ pkg_setup() {
 				die "USE=\"python\" needed for dbus"
 		fi
 	fi
-
-	if use avahi; then
-		if ! built_with_use net-dns/avahi dbus gtk python; then
-			eerror "The following USE flags are required for correct avahi"
-			eerror "support: dbus gtk python"
-			die "Please rebuild avahi with these use flags enabled."
-		fi
-	fi
-
-	if has_version ">=dev-lang/python-2.5" && ! built_with_use dev-lang/python sqlite; then
-		eerror "Please rebuild python with USE=\"sqlite\""
-		die "USE=\"sqlite\" needed for python"
-	fi
 }
 
 src_unpack() {
@@ -71,7 +59,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PV}-misc-fixes.patch"
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if ! use gnome; then
@@ -86,9 +74,7 @@ src_compile() {
 		--docdir="/usr/share/doc/${PF}" \
 		--prefix="/usr" \
 		--libdir="/usr/$(get_libdir)" \
-		${myconf} || die "econf failed"
-
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install() {
