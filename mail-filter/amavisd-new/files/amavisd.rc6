@@ -9,7 +9,8 @@ depend() {
 
 start() {
 	ebegin "Starting amavisd-new"
-	start-stop-daemon --start --quiet --name amavisd --exec /usr/sbin/amavisd
+	start-stop-daemon --start --quiet --name amavisd --pidfile /var/amavis/amavisd.pid \
+	 --exec /usr/sbin/amavisd
 	eend $?
 }
 
