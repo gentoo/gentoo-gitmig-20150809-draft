@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/pidgin-festival
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/ChangeLog,v 1.6 2008/03/05 19:34:03 tester Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pidgin-festival/ChangeLog,v 1.7 2009/03/07 14:57:31 patrick Exp $
+
+*pidgin-festival-2.2-r1 (07 Mar 2009)
+
+  07 Mar 2009; Patrick Lauer <patrick@gentoo.org>
+  +pidgin-festival-2.2-r1.ebuild:
+  Eapi2ification with use-deps
 
   05 Mar 2008; <tester@gentoo.org> pidgin-festival-2.2.ebuild:
   Inherit eutils, bug #212411
