@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.194 2009/02/28 14:47:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.195 2009/03/07 16:27:11 fauli Exp $
+
+  07 Mar 2009; Christian Faulhammer <fauli@gentoo.org> lirc-0.8.4.ebuild:
+  stable x86, bug 253920
 
   28 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
   -files/lirc-0.8.0-conf-pixelview_bt878.diff,
