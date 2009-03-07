@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/resin-servlet-api
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/ChangeLog,v 1.23 2009/02/02 23:53:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/ChangeLog,v 1.24 2009/03/07 16:20:26 nelchael Exp $
+
+  07 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  resin-servlet-api-3.2.1.ebuild:
+  Rewrite build-common.xml, see bug #260718.
 
   02 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org> ChangeLog:
   Fix ChangeLog entries.
