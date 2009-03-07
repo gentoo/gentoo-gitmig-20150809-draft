@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/geda
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.48 2008/12/10 18:01:53 calchan Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.49 2009/03/07 21:33:57 patrick Exp $
+
+*geda-1.4.3 (07 Mar 2009)
+
+  07 Mar 2009; Patrick Lauer <patrick@gentoo.org> +geda-1.4.3.ebuild:
+  Bump to 1.4.3, second part of bug #254781
 
 *geda-1.4.0-r1 (10 Dec 2008)
 
