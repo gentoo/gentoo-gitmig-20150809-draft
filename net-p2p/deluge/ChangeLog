@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.117 2009/02/19 11:07:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.118 2009/03/07 15:01:00 betelgeuse Exp $
+
+  07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
+  -deluge-1.1.0-r1.ebuild, -deluge-1.1.1.ebuild, -deluge-1.1.2.ebuild:
+  Remove old versions.
 
   19 Feb 2009; Raúl Porcel <armin76@gentoo.org> deluge-9999.ebuild:
   Fix deps
