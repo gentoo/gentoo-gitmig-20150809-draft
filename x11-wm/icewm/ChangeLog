@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.136 2009/01/07 14:52:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.137 2009/03/07 11:05:06 patrick Exp $
+
+*icewm-1.2.37 (07 Mar 2009)
+
+  07 Mar 2009; Patrick Lauer <patrick@gentoo.org> +icewm-1.2.37.ebuild:
+  Bump to 1.2.37. Fixes #246135
 
   07 Jan 2009; Brent Baude <ranger@gentoo.org> icewm-1.2.35.ebuild:
   Marking icewm-1.2.35 ~ppc64 for bug 253304
