@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/splat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/ChangeLog,v 1.7 2008/06/09 09:49:17 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/splat/ChangeLog,v 1.8 2009/03/07 21:18:37 patrick Exp $
+
+*splat-1.2.2-r1 (07 Mar 2009)
+
+  07 Mar 2009; Patrick Lauer <patrick@gentoo.org> +splat-1.2.2-r1.ebuild:
+  ~amd64 keywording, removal of fontdata compilation as of #218578
 
 *splat-1.2.2 (09 Jun 2008)
 
