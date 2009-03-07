@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.3-r1.ebuild,v 1.2 2009/01/18 02:15:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.3-r1.ebuild,v 1.3 2009/03/07 10:26:21 patrick Exp $
 
 EAPI="1"
 
@@ -36,6 +36,7 @@ RDEPEND="sys-libs/zlib
 		x11-libs/libXrender
 		x11-apps/xauth
 		x11-apps/xsetroot
+		x11-proto/glproto
 		media-fonts/font-adobe-100dpi
 		media-fonts/font-adobe-75dpi
 		media-fonts/font-alias
