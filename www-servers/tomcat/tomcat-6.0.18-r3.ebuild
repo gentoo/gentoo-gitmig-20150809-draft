@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.18-r3.ebuild,v 1.1 2009/03/06 18:50:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.18-r3.ebuild,v 1.2 2009/03/07 10:54:41 maekke Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -14,7 +14,7 @@ MY_P="apache-${P}-src"
 SLOT="6"
 SRC_URI="mirror://apache/${PN}/${PN}-6/v${PV/_/-}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://tomcat.apache.org/"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 LICENSE="Apache-2.0"
 
 IUSE="examples test"
