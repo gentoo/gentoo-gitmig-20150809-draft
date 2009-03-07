@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2414 2009/03/06 00:57:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2415 2009/03/07 11:29:36 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Mar 2009; Torsten Veller <tove@gentoo.org> updates/1Q-2009:
+  Move dev-perl/Text-Tabs+Wrap to perl-core/Text-Tabs+Wrap
 
   06 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> package.mask:
   Mask net-misc/kickpim for removal
