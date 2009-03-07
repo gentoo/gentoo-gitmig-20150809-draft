@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.3-r1.ebuild,v 1.4 2009/03/07 11:32:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.3-r2.ebuild,v 1.1 2009/03/07 11:32:55 patrick Exp $
 
 EAPI="1"
 
@@ -21,7 +21,7 @@ SRC_URI="http://ltsp.mirrors.tds.net/pub/ltsp/tarballs/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 -arm ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="server +xorgmodule"
+IUSE="+opengl server +xorgmodule"
 
 RDEPEND="sys-libs/zlib
 	media-libs/freetype
@@ -36,6 +36,9 @@ RDEPEND="sys-libs/zlib
 		x11-libs/libXrender
 		x11-apps/xauth
 		x11-apps/xsetroot
+		x11-proto/dri2proto
+		x11-proto/xf86driproto
+		opengl? ( x11-proto/glproto )
 		media-fonts/font-adobe-100dpi
 		media-fonts/font-adobe-75dpi
 		media-fonts/font-alias
@@ -159,7 +162,7 @@ src_compile() {
 			--with-rgb-path=/usr/share/X11/rgb.txt \
 			--disable-xevie \
 			--disable-dri2 \
-			--enable-glx \
+			$(use_enable opengl glx) \
 			--disable-config-dbus \
 			--disable-config-hal \
 			--with-default-font-path=/usr/share/fonts/misc,/usr/share/fonts/75dpi,/usr/share/fonts/100dpi,/usr/share/fonts/TTF,/usr/share/fonts/Type1 \
