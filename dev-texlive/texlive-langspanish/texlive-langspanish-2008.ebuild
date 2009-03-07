@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langspanish/texlive-langspanish-2008.ebuild,v 1.4 2009/03/06 21:52:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langspanish/texlive-langspanish-2008.ebuild,v 1.5 2009/03/07 11:10:39 fauli Exp $
 
 TEXLIVE_MODULE_CONTENTS="hyphen-spanish hyphen-catalan hyphen-galician spanish-mx collection-langspanish
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive Spanish"
 
 LICENSE="GPL-2 LPPL-1.3 "
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2008
 "
