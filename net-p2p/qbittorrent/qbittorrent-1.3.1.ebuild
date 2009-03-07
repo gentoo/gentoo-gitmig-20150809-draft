@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.3.1.ebuild,v 1.1 2009/03/04 15:58:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.3.1.ebuild,v 1.2 2009/03/07 16:13:27 betelgeuse Exp $
 
 EAPI="1"
 
@@ -18,21 +18,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+# boost version so that we always have thread support
 DEPEND="|| ( x11-libs/qt-gui:4 =x11-libs/qt-4.3* )
 	>=net-libs/rb_libtorrent-0.14.1
-	dev-libs/boost
+	>=dev-libs/boost-1.34.1
 	net-misc/curl
 	dev-cpp/commoncpp2"
 RDEPEND="${DEPEND}
 	>=dev-lang/python-2.3"
-
-pkg_setup() {
-	# We need boost built with threads
-	if ! built_with_use --missing true "dev-libs/boost" threads; then
-		eerror "${PN} needs dev-libs/boost built with threads USE flag"
-		die "dev-libs/boost is built without threads USE flag"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
