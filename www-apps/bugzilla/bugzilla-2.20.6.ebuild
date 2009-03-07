@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.6.ebuild,v 1.5 2008/05/20 16:35:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.6.ebuild,v 1.6 2009/03/07 11:27:57 tove Exp $
 
 inherit webapp depend.apache versionator eutils
 
@@ -31,7 +31,7 @@ RDEPEND="
 	>=dev-perl/PatchReader-0.9.4
 	dev-perl/perl-ldap
 	>=dev-perl/Template-Toolkit-2.08
-	>=dev-perl/Text-Tabs+Wrap-2001.0131
+	>=virtual/perl-Text-Tabs+Wrap-2001.0131
 	>=dev-perl/TimeDate-1.16
 	dev-perl/XML-Parser
 	>=virtual/perl-CGI-2.93

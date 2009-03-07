@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.125 2008/12/07 07:40:22 wrobel Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.126 2009/03/07 11:27:57 tove Exp $
+
+  07 Mar 2009; Torsten Veller <tove@gentoo.org> bugzilla-2.20.6.ebuild,
+  bugzilla-2.22.5.ebuild:
+  Fix: dev-perl/Text-Tabs+Wrap -> virtual/perl-Text-Tabs+Wrap
 
 *bugzilla-3.2 (07 Dec 2008)
 
