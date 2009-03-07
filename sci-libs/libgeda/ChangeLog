@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/libgeda
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.46 2008/12/01 14:18:26 calchan Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.47 2009/03/07 21:33:17 patrick Exp $
+
+*libgeda-1.4.3 (07 Mar 2009)
+
+  07 Mar 2009; Patrick Lauer <patrick@gentoo.org> +libgeda-1.4.3.ebuild:
+  Bump to 1.4.3, part of bug #254781
 
 *libgeda-1.4.1 (30 Nov 2008)
 
