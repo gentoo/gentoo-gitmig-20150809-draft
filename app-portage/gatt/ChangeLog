@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.34 2009/02/12 21:13:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.35 2009/03/07 19:50:41 betelgeuse Exp $
+
+  07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> -gatt-0.6.2.ebuild:
+  Remove old version.
 
   12 Feb 2009; Brent Baude <ranger@gentoo.org> gatt-0.6.3.ebuild:
   stable ppc64, bug 257833
