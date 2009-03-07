@@ -1,19 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.6.ebuild,v 1.2 2009/03/06 18:11:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.6.ebuild,v 1.3 2009/03/07 06:49:31 mr_bones_ Exp $
 
 inherit eutils
 
-IUSE="flac vorbis"
-
 DESCRIPTION="Greg Stein's python streaming audio server for desktop or LAN use"
 HOMEPAGE="http://edna.sourceforge.net/"
-
 SRC_URI="mirror://sourceforge/edna/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="flac ogg"
 
 DEPEND="|| ( >=dev-lang/python-2.5 ( >=dev-lang/python-2.3 >=dev-python/ctypes-1.0.0 ) )
 	flac? ( media-libs/mutagen )
