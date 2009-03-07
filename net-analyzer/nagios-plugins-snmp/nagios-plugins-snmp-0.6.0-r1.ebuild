@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/nagios-plugins-snmp-0.6.0-r1.ebuild,v 1.3 2009/03/04 20:55:58 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/nagios-plugins-snmp-0.6.0-r1.ebuild,v 1.4 2009/03/07 14:37:29 maekke Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://nagios.manubulon.com/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND="net-analyzer/net-snmp"
