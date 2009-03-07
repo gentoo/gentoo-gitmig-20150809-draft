@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.25 2009/02/13 08:57:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.26 2009/03/07 12:57:43 armin76 Exp $
+
+  07 Mar 2009; Raúl Porcel <armin76@gentoo.org> smokeping-2.4.2.ebuild:
+  Re-add ~sparc wrt #258458
 
   13 Feb 2009; Jeroen Roovers <jer@gentoo.org> smokeping-2.4.2.ebuild:
   Marked ~hppa (bug #258458).
