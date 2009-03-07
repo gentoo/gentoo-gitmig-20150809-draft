@@ -1,6 +1,12 @@
 # ChangeLog for app-office/pybliographer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.18 2009/02/07 16:43:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.19 2009/03/07 16:31:50 patrick Exp $
+
+*pybliographer-1.2.12 (07 Mar 2009)
+
+  07 Mar 2009; Patrick Lauer <patrick@gentoo.org>
+  +pybliographer-1.2.12.ebuild:
+  Bump to 1.2.12. Fixes #254628
 
   07 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
   pybliographer-1.2.11.ebuild:
