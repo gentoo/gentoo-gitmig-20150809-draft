@@ -1,6 +1,9 @@
 # ChangeLog for games-action/chromium
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.31 2009/01/29 04:52:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.32 2009/03/07 05:09:30 darkside Exp $
+
+  07 Mar 2009; Jeremy Olexa <darkside@gentoo.org> chromium-0.9.13.3.ebuild:
+  amd64 stable, bug 245293
 
   29 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   chromium-0.9.13.3.ebuild:
