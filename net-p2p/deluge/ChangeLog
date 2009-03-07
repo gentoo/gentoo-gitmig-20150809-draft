@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.118 2009/03/07 15:01:00 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.119 2009/03/07 15:08:33 betelgeuse Exp $
+
+  07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> deluge-0.5.9.3.ebuild,
+  deluge-1.0.7-r1.ebuild, deluge-9999.ebuild:
+  Remove built_with_use calls on boost by depending on new enough versions
+  that always have threads.
 
   07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
   -deluge-1.1.0-r1.ebuild, -deluge-1.1.1.ebuild, -deluge-1.1.2.ebuild:

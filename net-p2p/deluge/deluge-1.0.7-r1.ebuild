@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.0.7-r1.ebuild,v 1.2 2009/01/18 17:11:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.0.7-r1.ebuild,v 1.3 2009/03/07 15:08:33 betelgeuse Exp $
 
 inherit eutils distutils flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="gtk"
 
 DEPEND=">=dev-lang/python-2.4
-	dev-libs/boost
+	>=dev-libs/boost-1.34
 	dev-python/setuptools"
 RDEPEND="${DEPEND}
 	dev-python/pyxdg
@@ -27,11 +27,6 @@ RDEPEND="${DEPEND}
 	)"
 
 pkg_setup() {
-	if ! built_with_use --missing true "dev-libs/boost" threads; then
-		eerror "dev-libs/boost has to be built with threads USE-flag."
-		die "Missing threads USE-flag for dev-libs/boost"
-	fi
-
 	filter-ldflags -Wl,--as-needed
 }
 
