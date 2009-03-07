@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.6.ebuild,v 1.3 2009/03/07 19:32:23 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.6.ebuild,v 1.4 2009/03/07 19:40:25 gentoofan23 Exp $
 
 EAPI="2"
 inherit eutils
@@ -86,7 +86,7 @@ src_unpack() {
 	EOF
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_with ssl) \
 		$(use_enable aim) \
@@ -102,9 +102,7 @@ src_compile() {
 		$(use_enable nls locales-fix) \
 		$(use_enable nls) \
 		$(use_enable rss) \
-		$(use_enable yahoo) \
-		|| die "econf failed"
-	emake || die "emake failed"
+		$(use_enable yahoo)
 }
 
 src_install () {
