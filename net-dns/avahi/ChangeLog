@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.158 2009/03/06 23:29:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.159 2009/03/07 18:13:06 jer Exp $
+
+  07 Mar 2009; Jeroen Roovers <jer@gentoo.org> avahi-0.6.24-r2.ebuild:
+  Stable for HPPA (bug #260971).
 
   06 Mar 2009; Sven Wegener <swegener@gentoo.org> avahi-0.6.24-r2.ebuild:
   Proper fix for libtool problem by loki_val.
