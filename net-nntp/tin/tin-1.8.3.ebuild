@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.8.3.ebuild,v 1.4 2008/09/23 07:22:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.8.3.ebuild,v 1.5 2009/03/07 22:45:38 cla Exp $
+
+EAPI="2"
 
 inherit versionator eutils
 
@@ -13,11 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 arm ia64 ppc sparc x86"
 IUSE="crypt debug idn ipv6 nls unicode"
 
-DEPEND="sys-libs/ncurses
-	dev-libs/libpcre
+DEPEND="dev-libs/libpcre
 	dev-libs/uulib
 	idn? ( net-dns/libidn )
-	unicode? ( dev-libs/icu )
+	unicode? ( dev-libs/icu sys-libs/ncurses[unicode] )
+	!unicode? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
 	crypt? ( app-crypt/gnupg )"
 RDEPEND="${DEPEND}
@@ -37,7 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/1.8.2-various.patch
 }
 
-src_compile() {
+src_configure() {
 	local screen="ncurses"
 
 	use unicode && screen="ncursesw"
