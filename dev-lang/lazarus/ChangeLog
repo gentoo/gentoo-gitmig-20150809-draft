@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/lazarus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.22 2008/10/17 19:13:56 truedfx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.23 2009/03/07 22:29:30 fauli Exp $
+
+  07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
+  -files/lazarus-0.9.20-fpcsrc.patch, -files/lazarus-0.9.24-cputarget.patch,
+  -lazarus-0.9.22-r1.ebuild, -lazarus-0.9.24.ebuild:
+  clean up
 
   17 Oct 2008; Harald van Dĳk <truedfx@gentoo.org> lazarus-0.9.26.ebuild:
   Fix desktop entry icon (#242468 by Renato Caldas)
