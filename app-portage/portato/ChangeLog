@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portato
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.13 2008/09/16 20:07:29 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/ChangeLog,v 1.14 2009/03/07 20:06:20 betelgeuse Exp $
+
+  07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> -portato-0.11.ebuild:
+  Remove old version.
 
 *portato-0.11.1 (16 Sep 2008)
 
@@ -78,13 +81,19 @@
   portato-0.8.1.ebuild:
   no kdesu needed if kdebase is installed
 
+*portato-0.8.1 (04 Aug 2007)
+
   04 Aug 2007; René Neumann (Necoro) <necoro@necoro.net>
   -portato-0.8.0.ebuild, +portato-0.8.1.ebuild:
   Version bump
 
+*portato-0.8.0 (30 Jul 2007)
+
   30 Jul 2007; René Neumann (Necoro) <necoro@necoro.net>
   -portato-0.7.5.ebuild, +portato-0.8.0.ebuild:
   Version bump portato
+
+*portato-0.7.5 (23 Jun 2007)
 
   23 Jun 2007; René Neumann (Necoro) <necoro@necoro.net>
   -portato-0.7.4.2.ebuild, +portato-0.7.5.ebuild:
@@ -98,6 +107,8 @@
   portato-0.7.4.2.ebuild:
   Removed syntax useflag and made the portatosourceview mandatory
 
+*portato-0.7.4.2 (03 Jun 2007)
+
   03 Jun 2007; René Neumann (Necoro) <necoro@necoro.net>
   -portato-0.7.4.1.ebuild, +portato-0.7.4.2.ebuild:
   Version bump
@@ -106,12 +117,16 @@
   -portato-0.7.3.ebuild:
   Drop old
 
+*portato-0.7.4.1 (01 Jun 2007)
+
   01 Jun 2007; René Neumann (Necoro) <necoro@necoro.net>
   +portato-0.7.4.1.ebuild:
   Version bump to 0.7.4.1
 
   25 May 2007; Markus Ullmann <jokey@gentoo.org> portato-0.7.3.ebuild:
   coding style improvement
+
+*portato-0.7.3 (12 May 2007)
 
   12 May 2007; René Neumann (Necoro) <necoro@necoro.net>
   +portato-0.7.3.ebuild, +metadata.xml:
