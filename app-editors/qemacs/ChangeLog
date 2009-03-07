@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/qemacs
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.38 2008/10/24 17:36:11 ulm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.39 2009/03/07 20:33:46 fauli Exp $
+
+*qemacs-0.4.0_pre20080605 (07 Mar 2009)
+
+  07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
+  +files/qemacs-0.4.0_pre20080605-Makefile-gentoo.patch,
+  +files/qemacs-0.4.0_pre20080605-make_backup.patch,
+  +files/qemacs-0.4.0_pre20080605-qemacs-datadir.patch,
+  +qemacs-0.4.0_pre20080605.ebuild:
+  version bump with snapshot from upstream CVS
 
   24 Oct 2008; Ulrich Mueller <ulm@gentoo.org>
   qemacs-0.3.2_pre20070226.ebuild:
