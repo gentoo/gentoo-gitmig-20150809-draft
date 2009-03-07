@@ -2,8 +2,14 @@ http://bugs.gentoo.org/260726
 
 --- wine-1.1.15/tools/winegcc/winegcc.c
 +++ wine-1.1.15/tools/winegcc/winegcc.c
-@@ -215,6 +215,7 @@
+@@ -215,10 +215,13 @@
+     strarray* files;
+ };
+ 
++#undef FORCE_POINTER_SIZE
+ #ifdef __i386__
  static const enum target_cpu build_cpu = CPU_x86;
++#define FORCE_POINTER_SIZE
  #elif defined(__x86_64__)
  static const enum target_cpu build_cpu = CPU_x86_64;
 +#define FORCE_POINTER_SIZE
@@ -22,8 +28,14 @@ http://bugs.gentoo.org/260726
      if (strendswith(argv[0], "winecpp")) opts.processor = proc_cpp;
 --- wine-1.1.15/tools/winebuild/main.c
 +++ wine-1.1.15/tools/winebuild/main.c
-@@ -50,6 +50,7 @@
+@@ -50,10 +50,13 @@
+ int link_ext_symbols = 0;
+ int force_pointer_size = 0;
+ 
++#undef FORCE_POINTER_SIZE
+ #ifdef __i386__
  enum target_cpu target_cpu = CPU_x86;
++#define FORCE_POINTER_SIZE
  #elif defined(__x86_64__)
  enum target_cpu target_cpu = CPU_x86_64;
 +#define FORCE_POINTER_SIZE
