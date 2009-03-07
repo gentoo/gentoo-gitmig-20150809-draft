@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.2.1.ebuild,v 1.1 2009/02/02 23:31:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.2.1.ebuild,v 1.2 2009/03/07 16:22:58 nelchael Exp $
 
 EAPI="2"
 
@@ -52,6 +52,7 @@ src_unpack() {
 	done;
 
 	java-ant_bsfix_one "${S}/build.xml"
+	java-ant_bsfix_one "${S}/build-common.xml"
 
 	sed -i -e 's/256m/384m/' "${S}/build.xml"
 
