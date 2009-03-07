@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.10.ebuild,v 1.2 2008/05/21 18:37:38 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.10.ebuild,v 1.3 2009/03/07 20:08:53 betelgeuse Exp $
 
-EAPI=1
+EAPI="2"
 
 NEED_PYTHON="2.5"
 inherit python eutils distutils
@@ -18,7 +18,7 @@ IUSE="etc-proposals kde +libnotify nls userpriv"
 LANGS="ca de pl tr"
 for LANG in $LANGS; do IUSE="${IUSE} linguas_${LANG}"; done
 
-RDEPEND="x11-libs/vte
+RDEPEND="x11-libs/vte[python]
 		gnome-base/libglade
 		dev-python/pygtksourceview:2
 		app-portage/portage-utils
@@ -45,16 +45,6 @@ LOCALE_DIR="usr/share/locale/"
 PLUGIN_DIR="${DATA_DIR}/plugins"
 ICON_DIR="${DATA_DIR}/icons"
 TEMPLATE_DIR="${DATA_DIR}/templates"
-
-pkg_setup ()
-{
-	if ! built_with_use x11-libs/vte python; then
-		echo
-		eerror "x11-libs/vte has not been built with python support."
-		eerror "Please re-emerge vte with the python use-flag enabled."
-		die "missing python flag for x11-libs/vte"
-	fi
-}
 
 src_compile ()
 {
