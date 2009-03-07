@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/helpblocks-1.21.ebuild,v 1.1 2008/10/19 11:07:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/helpblocks/helpblocks-1.21-r1.ebuild,v 1.1 2009/03/07 13:57:03 mrness Exp $
 
 DESCRIPTION="HTML Help Editor for wxWidgets"
 HOMEPAGE="http://www.helpblocks.com/"
@@ -27,7 +27,10 @@ src_install() {
 	dodir /opt/helpblocks
 	tar -xzf HelpBlocksData.tar.gz -C "${D}/opt/helpblocks" || die "failed to extract data from tarball"
 
-	dosym /opt/helpblocks/helpblocks.xpm /usr/share/pixmaps/helpblocks.xpm
+	local i
+	for i in 32x32 48x48 128x128; do
+	    dosym /opt/helpblocks/appicons/helpblocks${i}.png /usr/share/icons/hicolor/${i}/apps/helpblocks.png
+	done
 	insinto /usr/share/applications
 	doins "${FILESDIR}/helpblocks.desktop"
 	newbin "${FILESDIR}/helpblocks.sh" helpblocks
