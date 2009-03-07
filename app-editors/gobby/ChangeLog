@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gobby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.26 2009/03/07 22:08:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.27 2009/03/07 22:13:02 fauli Exp $
+
+  07 Mar 2009; Christian Faulhammer <fauli@gentoo.org> gobby-0.4.5.ebuild,
+  gobby-0.4.8.ebuild:
+  prune built_with_use and use EAPI 2
 
   07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
   -gobby-0.4.5-r1.ebuild, -gobby-0.4.6.ebuild:

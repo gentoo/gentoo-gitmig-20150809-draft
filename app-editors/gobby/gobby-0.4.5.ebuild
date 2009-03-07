@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.5.ebuild,v 1.7 2008/07/27 13:26:50 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.5.ebuild,v 1.8 2009/03/07 22:13:02 fauli Exp $
 
-EAPI=1
+EAPI=2
 
 inherit base eutils
 
@@ -20,6 +20,7 @@ RDEPEND=">=dev-cpp/glibmm-2.6
 	>=net-libs/obby-0.4.4
 	>=dev-cpp/libxmlpp-2.6
 	x11-libs/gtksourceview:1.0
+	avahi? ( >=net-libs/obby-0.4.4[avahi] )
 	gnome? ( gnome-base/gnome-vfs )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
@@ -28,14 +29,6 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 PATCHES=( "${FILESDIR}/${PN}-0.4.5-gcc43.patch" )
-
-pkg_setup() {
-	if use avahi && ! built_with_use net-libs/obby avahi ; then
-		eerror "Please reinstall net-libs/obby with the avahi USE-flag enabled"
-		eerror "for zeroconf/DNS-SD support or disable it for this package."
-		die "Missing 'avahi' USE-flag for net-libs/obby"
-	fi
-}
 
 src_compile() {
 	econf \
