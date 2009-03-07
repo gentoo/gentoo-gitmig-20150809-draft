@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.7.ebuild,v 1.3 2009/02/17 14:37:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.7.ebuild,v 1.4 2009/03/07 22:20:35 fauli Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,14 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="xterm"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
-RDEPEND="xterm? ( >=x11-terms/xterm-215-r1 )"
-
-pkg_setup() {
-	if use xterm && ! built_with_use --missing true x11-terms/xterm paste64
-	then
-		die "For full xterm clipboard support build x11-terms/xterm with USE=paste64"
-	fi
-}
+RDEPEND="xterm? ( >=x11-terms/xterm-239 )"
 
 src_unpack() {
 	unpack ${A}
