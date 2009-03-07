@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.1.2-r1.ebuild,v 1.1 2007/12/09 13:08:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.1.2-r1.ebuild,v 1.2 2009/03/07 20:58:12 gentoofan23 Exp $
 
+EAPI="2"
 inherit eutils perl-module
 
 IRSSI_PV="0.8.10a"
@@ -18,18 +19,12 @@ IUSE=""
 # All necessary dependencies are pulled in by irssi.
 DEPEND="=dev-libs/glib-1.2*
 	www-client/lynx"	# this is for .html -> .txt docs convert
-RDEPEND=">=net-irc/irssi-${IRSSI_PV%a}
+RDEPEND=">=net-irc/irssi-${IRSSI_PV%a}[perl]
 	>=dev-perl/MIME-tools-5.413
 	dev-perl/File-MMagic
 	dev-perl/MailTools"
 
 S="${WORKDIR}/silc-client-${PV}"
-
-pkg_setup() {
-	if ! built_with_use net-irc/irssi perl ; then
-		die "Irssi was built without perl support, building a perl plugin makes no sense."
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -39,16 +34,12 @@ src_unpack() {
 	use amd64 && sed -i -e 's:felf\([^6]\):felf64\1:g' configure
 }
 
-src_compile() {
-
+src_configure() {
 	econf \
-			${myflags} \
-			--with-silc-plugin \
-			--without-silc-includes \
-			--with-pic \
-			|| die
-
-	emake || die
+		${myflags} \
+		--with-silc-plugin \
+		--without-silc-includes \
+		--with-pic
 }
 
 src_install() {
