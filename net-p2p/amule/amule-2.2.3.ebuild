@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.3.ebuild,v 1.3 2009/02/10 17:08:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.2.3.ebuild,v 1.4 2009/03/07 15:37:22 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils flag-o-matic wxwidgets
 
@@ -19,7 +21,7 @@ IUSE="daemon debug geoip gtk nls remote stats unicode upnp"
 DEPEND="=x11-libs/wxGTK-2.8*
 		>=dev-libs/crypto++-5.5.2
 		>=sys-libs/zlib-1.2.1
-		stats? ( >=media-libs/gd-2.0.26 )
+		stats? ( >=media-libs/gd-2.0.26[jpeg] )
 		geoip? ( dev-libs/geoip )
 		upnp? ( >=net-libs/libupnp-1.6.6 )
 		remote? ( >=media-libs/libpng-1.2.0
@@ -39,10 +41,6 @@ pkg_setup() {
 				einfo "to compile aMule Statistics GUI."
 				einfo "I will now compile console versions only."
 		fi
-
-		if use stats && ! built_with_use media-libs/gd jpeg; then
-				die "media-libs/gd should be compiled with the jpeg use flag when you have the stats use flag set"
-		fi
 }
 
 pkg_preinst() {
@@ -52,15 +50,12 @@ pkg_preinst() {
 	fi
 }
 
-src_unpack () {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/gcc-4.3.patch
 	epatch "${FILESDIR}"/gcc-4.4.patch
 }
 
-src_compile() {
+src_configure() {
 		local myconf
 
 		WX_GTK_VER="2.8"
@@ -100,8 +95,6 @@ src_compile() {
 				$(use_enable stats cas) \
 				$(use_enable stats alcc) \
 				${myconf} || die
-
-		emake || die
 }
 
 src_install() {
