@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/iozone
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.36 2009/01/08 20:25:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.37 2009/03/08 16:21:59 patrick Exp $
+
+*iozone-3.321 (08 Mar 2009)
+
+  08 Mar 2009; Patrick Lauer <patrick@gentoo.org> +iozone-3.321.ebuild:
+  Bump to 3.321
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -iozone-3.308.ebuild,
   -iozone-3.311.ebuild:
