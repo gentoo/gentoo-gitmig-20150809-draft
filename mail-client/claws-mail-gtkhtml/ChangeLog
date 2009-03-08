@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-gtkhtml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.51 2009/01/25 16:27:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.52 2009/03/08 16:49:04 klausman Exp $
+
+  08 Mar 2009; Tobias Klausmann <klausman@gentoo.org>
+  claws-mail-gtkhtml-0.22.ebuild:
+  Keyworded on alpha, bug #256165
 
   25 Jan 2009; Markus Meier <maekke@gentoo.org>
   claws-mail-gtkhtml-0.22.ebuild:

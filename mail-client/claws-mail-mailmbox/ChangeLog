@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-mailmbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.43 2009/01/25 16:28:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-mailmbox/ChangeLog,v 1.44 2009/03/08 16:48:42 klausman Exp $
+
+  08 Mar 2009; Tobias Klausmann <klausman@gentoo.org>
+  claws-mail-mailmbox-1.14.3.ebuild:
+  Keyworded on alpha, bug #256165
 
   25 Jan 2009; Markus Meier <maekke@gentoo.org>
   claws-mail-mailmbox-1.14.3.ebuild:
