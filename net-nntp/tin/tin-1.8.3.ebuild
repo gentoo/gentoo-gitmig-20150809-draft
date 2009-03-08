@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.8.3.ebuild,v 1.6 2009/03/07 22:47:27 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.8.3.ebuild,v 1.7 2009/03/08 10:30:25 cla Exp $
 
 EAPI="2"
 
@@ -52,6 +52,9 @@ src_configure() {
 		$(use_enable crypt pgp-gpg) \
 		$(use_enable nls) \
 		|| die "econf failed"
+}
+
+src_compile() {
 	emake build || die "emake failed"
 }
 
