@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/grip
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.79 2009/03/05 03:19:23 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.80 2009/03/08 20:57:18 vapier Exp $
+
+  08 Mar 2009; Mike Frysinger <vapier@gentoo.org>
+  files/grip-3.3.1-implicit-declaration.patch:
+  Fix more implict decls (some of which cause failures on 64bit systems).
 
 *grip-3.3.1-r2 (05 Mar 2009)
 
