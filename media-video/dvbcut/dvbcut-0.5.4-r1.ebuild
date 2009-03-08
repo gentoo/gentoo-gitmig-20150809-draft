@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.5.4-r1.ebuild,v 1.8 2008/10/19 17:29:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.5.4-r1.ebuild,v 1.9 2009/03/08 17:22:13 aballier Exp $
 
 EAPI=1
 
@@ -45,6 +45,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-avformat-api-changes.patch"
 	epatch "${FILESDIR}/${P}-lavc.patch"
 	epatch "${FILESDIR}/${P}-scons.patch"
+	epatch "${FILESDIR}/${P}-open.patch"
 
 	if has_version ">=media-video/ffmpeg-0.4.9_p20080326"; then
 		epatch "${FILESDIR}/${P}-ffmpeg-0.4.9_p20080326.diff"
