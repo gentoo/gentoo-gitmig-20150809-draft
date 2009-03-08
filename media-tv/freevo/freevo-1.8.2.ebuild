@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.8.2.ebuild,v 1.3 2009/01/09 06:39:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.8.2.ebuild,v 1.4 2009/03/08 14:16:36 betelgeuse Exp $
+
+EAPI="2"
 
 inherit distutils eutils
 
@@ -28,12 +30,17 @@ RDEPEND="dev-python/pygame
 	>=dev-python/kaa-metadata-0.7.3
 	>=dev-python/kaa-imlib2-0.2.3
 
-	media-video/mplayer
-	>=media-libs/libsdl-1.2.5
+	media-video/mplayer[directfb?,fbcon?]
+	>=media-libs/libsdl-1.2.5[directfb?,fbcon?]
+	media-libs/sdl-image[jpeg,png]
 
 	cdparanoia? ( media-sound/cdparanoia )
-	dvd? ( >=media-video/lsdvd-0.10
-		encode? ( media-video/dvdbackup ) )
+	dvd? (
+		>=media-video/lsdvd-0.10
+		directfb? ( media-libs/xine-lib[directfb] )
+		fbcon? ( media-libs/xine-lib[fbcon] )
+		encode? ( media-video/dvdbackup )
+	)
 	flac? ( media-libs/flac )
 	gphoto2? ( media-libs/libgphoto2 )
 	jpeg? ( media-libs/jpeg )
@@ -50,41 +57,12 @@ RDEPEND="dev-python/pygame
 	xmame? ( games-emulation/xmame )"
 
 pkg_setup() {
-	if use directfb ; then
-		use dvd && ! built_with_use media-libs/xine-lib directfb \
-			&& ewarn "media-libs/xine-lib was not built with directfb support"
-		! built_with_use media-video/mplayer directfb \
-			&& ewarn "media-video/mplayer was not built with directfb support"
-		if ! built_with_use media-libs/libsdl directfb ; then
-			eerror "media-libs/libsdl was not built with directdb support"
-			eerror "Please re-emerge libsdl with the directfb use flag"
-			die "directfb use flag specified but no support in libsdl and others"
-		fi
-	fi
-
-	if use fbcon ; then
-		use dvd && ! built_with_use media-libs/xine-lib fbcon \
-			&& ewarn "media-libs/xine-lib was not built with fbcon support"
-		! built_with_use media-video/mplayer fbcon \
-			&& ewarn "media-video/mplayer was not built with fbcon support"
-		if ! built_with_use media-libs/libsdl fbcon ; then
-			eerror "media-libs/libsdl was not built with fbcon support"
-			eerror "Please re-emerge libsdl with the fbcon use flag"
-			die "fbcon use flag specified but no support in media-libs/libsdl and others"
-		fi
-	fi
-
 	if ! { use X || use directfb || use fbcon || use matrox ; } ; then
 		echo
 		ewarn "WARNING - no video support specified in USE flags."
 		ewarn "Please be sure that media-libs/libsdl supports whatever video"
 		ewarn "support (X11, fbcon, directfb, etc) you plan on using."
 		echo
-	fi
-
-	if ! built_with_use -a media-libs/sdl-image jpeg png ; then
-		eerror "media-libs/sdl-image needs more image format support (USE=\"png jpeg\")"
-		die "re-emerge media-libs/sdl-image with the given USE flags"
 	fi
 }
 
