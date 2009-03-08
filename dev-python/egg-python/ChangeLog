@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egg-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.7 2009/03/05 23:37:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.8 2009/03/08 16:00:50 maekke Exp $
+
+  08 Mar 2009; Markus Meier <maekke@gentoo.org> egg-python-2.19.1.ebuild:
+  amd64/x86 stable, bug #258040
 
   05 Mar 2009; Brent Baude <ranger@gentoo.org> egg-python-2.19.1.ebuild:
   Marking egg-python-2.19.1 ppc stable for bug 258040

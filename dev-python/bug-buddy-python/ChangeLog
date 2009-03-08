@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bug-buddy-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/ChangeLog,v 1.7 2009/03/05 23:32:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/ChangeLog,v 1.8 2009/03/08 16:04:35 maekke Exp $
+
+  08 Mar 2009; Markus Meier <maekke@gentoo.org>
+  bug-buddy-python-2.22.0.ebuild:
+  amd64/x86 stable, bug #258040
 
   05 Mar 2009; Brent Baude <ranger@gentoo.org>
   bug-buddy-python-2.22.0.ebuild:
