@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall-shell
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/ChangeLog,v 1.23 2009/02/28 18:44:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/ChangeLog,v 1.24 2009/03/08 14:58:55 maekke Exp $
+
+  08 Mar 2009; Markus Meier <maekke@gentoo.org>
+  shorewall-shell-4.0.15.ebuild:
+  amd64/x86 stable, bug #256064
 
   28 Feb 2009; Peter Volkov <pva@gentoo.org> -shorewall-shell-4.0.12.ebuild,
   -shorewall-shell-4.0.13.ebuild, -shorewall-shell-4.0.13.1.ebuild,
