@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/kdebase-pam-7.ebuild,v 1.8 2007/07/05 22:54:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/kdebase-pam-7.ebuild,v 1.9 2009/03/08 03:02:31 jmbsvicetto Exp $
 
 inherit pam
 
@@ -13,6 +13,7 @@ KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/pam"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	newpamd "${FILESDIR}/kde.pam-${PV}" kde
