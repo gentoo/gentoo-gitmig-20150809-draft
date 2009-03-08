@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/rsstool-1.0.0_rc4.ebuild,v 1.2 2008/06/20 21:13:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rsstool/rsstool-1.0.0_rc4.ebuild,v 1.3 2009/03/08 23:57:18 vapier Exp $
 
 inherit versionator eutils
 MY_PV=$(replace_version_separator 3 '')
@@ -17,6 +17,12 @@ IUSE=""
 
 DEPEND="dev-libs/libxml2"
 RDEPEND="dev-libs/libxml2"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i '1i#!/bin/bash' configure #141906
+}
 
 src_install() {
 	emake DESTDIR="${D}" BINDIR="/usr/bin" install || die "emake install failed"
