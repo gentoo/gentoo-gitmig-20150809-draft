@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.22 2009/01/25 15:14:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.23 2009/03/08 20:56:31 flameeyes Exp $
+
+*libxml-1.0.0 (08 Mar 2009)
+
+  08 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libxml-1.0.0.ebuild:
+  Version bump. While this version supports Ruby 1.9, it causes an rpath
+  issue when enabled, so keep it just for Ruby 1.8 for now.
 
 *libxml-0.9.8 (25 Jan 2009)
 
