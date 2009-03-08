@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/luks-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/luks-tools/ChangeLog,v 1.6 2008/04/14 18:42:19 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/luks-tools/ChangeLog,v 1.7 2009/03/08 22:11:45 hanno Exp $
+
+  08 Mar 2009; Hanno Boeck <hanno@gentoo.org>
+  +files/luks-tools-0.0.12-disable-werror.patch,
+  luks-tools-0.0.12-r1.ebuild:
+  Don't use -Werror.
 
   14 Apr 2008; Doug Goldstein <cardoe@gentoo.org> luks-tools-0.0.12.ebuild,
   luks-tools-0.0.12-r1.ebuild:

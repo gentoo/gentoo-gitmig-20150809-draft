@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/luks-tools/luks-tools-0.0.12-r1.ebuild,v 1.3 2008/04/14 18:42:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/luks-tools/luks-tools-0.0.12-r1.ebuild,v 1.4 2009/03/08 22:11:45 hanno Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="GUI frontend for dm-crypt/luks."
 HOMEPAGE="http://www.flyn.org/projects/luks-tools/"
@@ -21,7 +21,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/luks-tools-0.0.12-pam-config.patch"
+	epatch "${FILESDIR}/${P}-pam-config.patch" || die "epatch failed"
+	epatch "${FILESDIR}/${P}-disable-werror.patch" || die "epatch failed"
+	eautoreconf || die "eautoreconf failed"
 }
 
 src_compile() {
