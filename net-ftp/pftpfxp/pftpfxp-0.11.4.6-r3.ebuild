@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-0.11.4.6-r3.ebuild,v 1.4 2009/01/03 13:25:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-0.11.4.6-r3.ebuild,v 1.5 2009/03/08 03:00:36 dragonheart Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="The powerful curses-based ftp/fxp client, mew edition"
 HOMEPAGE="http://pftpmew.tanesha.net"
-SRC_URI="http://tanesha.net/bigmess/pftpfxp-v0.11.4mew6.tgz"
+SRC_URI="http://www.derijk.org/pftp/pftpfxp-v0.11.4mew6.tgz"
 
 LICENSE="as-is"
 SLOT="0"
