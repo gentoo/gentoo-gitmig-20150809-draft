@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.1-r1.ebuild,v 1.2 2009/03/08 00:24:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.1-r2.ebuild,v 1.1 2009/03/08 00:24:44 patrick Exp $
 
 EAPI="2"
 
@@ -23,7 +23,6 @@ RDEPEND="a52? ( media-libs/a52dec )
 	alsa? ( media-libs/alsa-lib )
 	dv? ( media-libs/libdv )
 	dvdread? ( media-libs/libdvdread )
-	xvid? ( media-libs/xvid )
 	mjpeg? ( media-video/mjpegtools )
 	lzo? ( >=dev-libs/lzo-2 )
 	imagemagick? ( media-gfx/imagemagick )
@@ -51,13 +50,6 @@ DEPEND="${RDEPEND}
 # Remove this once default-linux/amd64/2006.1 is deprecated
 DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
 
-#pkg_setup() {
-#	if use X && ! built_with_use media-libs/libsdl X; then
-#		eerror "media-libs/libsdl must be built with the X use flag."
-#		die "fix use flags"
-#	fi
-#}
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -71,7 +63,6 @@ src_unpack() {
 }
 
 src_configure() {
-	use xvid && myconf="${myconf} --with-default-xvid=xvid4"
 	# NuppelVideo is supported only on x86 platform yet
 	# TODO: mask nuv useflag for all other arches
 	use x86 && myconf="${myconf} $(use_enable nuv)"
@@ -109,8 +100,6 @@ src_configure() {
 
 	econf ${myconf} || die "econf failed"
 }
-#	emake all || die "emake all failed"
-#}
 
 src_install () {
 	make DESTDIR="${D}" install || die "make install failed"
