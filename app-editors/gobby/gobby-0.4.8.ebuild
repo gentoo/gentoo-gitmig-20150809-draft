@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.8.ebuild,v 1.4 2009/03/07 22:30:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.8.ebuild,v 1.5 2009/03/08 21:59:07 maekke Exp $
 
 EAPI=2
 
@@ -28,12 +28,11 @@ DEPEND="${RDEPEND}
 # There's only one test and it needs X
 RESTRICT="test"
 
-src_compile() {
+src_configure() {
 	econf \
 		--with-gtksourceview2 \
 		$(use_with gnome) \
 		 || die "econf failed"
-	emake || die "make failed"
 }
 
 src_install() {

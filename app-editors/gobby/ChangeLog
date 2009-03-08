@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gobby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.28 2009/03/07 22:30:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.29 2009/03/08 21:59:07 maekke Exp $
+
+  08 Mar 2009; Markus Meier <maekke@gentoo.org> gobby-0.4.8.ebuild:
+  correct usage of EAPI=2 functions
 
   07 Mar 2009; Joseph Jezak <josejx@gentoo.org> gobby-0.4.8.ebuild:
   Marked ppc stable for bug #225519.
