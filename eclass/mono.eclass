@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mono.eclass,v 1.12 2009/01/14 17:17:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mono.eclass,v 1.13 2009/03/08 15:46:54 loki_val Exp $
 
 # @ECLASS: mono.eclass
 # @MAINTAINER:
@@ -54,14 +54,16 @@ mono_multilib_comply() {
 		rm -rf "${D}"/usr/lib
 		for dir in "${D}"/usr/"$(get_libdir)"/pkgconfig "${D}"/usr/share/pkgconfig
 		do
-			[[ -d "${dir}" ]] && finddirs=( "${finddirs[@]}" "${dir}" )
+
+			if [[ -d "${dir}" && "$(find "${dir}" -name '*.pc')" != "" ]]
+			then
+				pushd "${dir}" &> /dev/null
+				sed  -i -r -e 's:/(lib)([^a-zA-Z0-9]|$):/'"$(get_libdir)"'\2:g' \
+					*.pc \
+					|| die "Sedding some sense into pkgconfig files failed."
+				popd "${dir}" &> /dev/null
+			fi
 		done
-		if ! [[ -z "${finddirs[@]// /}" ]]
-		then
-			sed  -i -r -e 's:/(lib)([^a-zA-Z0-9]|$):/'"$(get_libdir)"'\2:g' \
-				$(find "${finddirs[@]}" -name '*.pc') \
-				|| die "Sedding some sense into pkgconfig files failed."
-		fi
 		if [[ -d "${D}/usr/bin" ]]
 		then
 			for exe in "${D}/usr/bin"/*
