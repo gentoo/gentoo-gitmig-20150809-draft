@@ -1,6 +1,9 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.38 2009/02/27 14:15:42 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.39 2009/03/08 21:19:00 maekke Exp $
+
+  08 Mar 2009; Markus Meier <maekke@gentoo.org> glabels-2.2.4.ebuild:
+  x86 stable, bug #259936
 
   27 Feb 2009; Ferris McCormick <fmccor@gentoo.org> glabels-2.2.4.ebuild:
   Sparc stable, Bug #259936.
