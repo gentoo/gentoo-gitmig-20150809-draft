@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-4.2.1.ebuild,v 1.1 2009/03/04 22:02:10 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-4.2.1.ebuild,v 1.2 2009/03/08 13:53:48 scarabeus Exp $
 
 EAPI="2"
 
@@ -11,11 +11,14 @@ DESCRIPTION="KDE personal information manager"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
-DEPEND="app-crypt/gnupg
+DEPEND="
 	app-crypt/gpgme
-	>=kde-base/kontactinterfaces-${PV}:${SLOT}
-	>=kde-base/libkdepim-${PV}:${SLOT}"
-RDEPEND="${DEPEND}"
+	>=kde-base/kontactinterfaces-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/libkdepim-${PV}:${SLOT}[kdeprefix=]
+"
+RDEPEND="${DEPEND}
+	app-crypt/gnupg
+"
 
 KMLOADLIBS="libkdepim"
 KMSAVELIBS="true"
@@ -24,7 +27,7 @@ KMSAVELIBS="true"
 # kontact doesn't have to depend on all programs it has plugins for.
 #
 # xml targets from kmail/ are being uncommented by kde4-meta.eclass
-KMEXTRACTONLY="libkdepim/
+KMEXTRACTONLY="
 	kmail/
 	kontact/plugins/akregator/
 	kontact/plugins/kaddressbook/
@@ -37,4 +40,5 @@ KMEXTRACTONLY="libkdepim/
 	kontact/plugins/ktimetracker/
 	kontact/plugins/planner/
 	kontact/plugins/specialdates/
-	kontactinterfaces/"
+	kontactinterfaces/
+"

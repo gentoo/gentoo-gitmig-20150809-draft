@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.2.1.ebuild,v 1.1 2009/03/04 22:51:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.2.1.ebuild,v 1.2 2009/03/08 14:19:35 scarabeus Exp $
 
 EAPI="2"
 
@@ -14,9 +14,12 @@ LICENSE="GPL-3"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
-DEPEND="!kde-base/phonon:${SLOT}
-	!kdeprefix? ( !kde-base/phonon-xine )"
-RDEPEND="${DEPEND}"
+RDEPEND="
+	!kdeprefix? (
+		!kde-base/phonon
+		!kde-base/phonon-xine
+	)
+"
 
 src_prepare() {
 	# Don't build tests - they require OpenGL

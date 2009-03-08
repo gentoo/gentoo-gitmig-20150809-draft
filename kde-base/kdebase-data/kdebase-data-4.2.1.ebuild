@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.2.1.ebuild,v 1.2 2009/03/05 15:12:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.2.1.ebuild,v 1.3 2009/03/08 13:32:09 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,8 +15,9 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 # Some files were moved from dolphin to kdebase-data between the 4.1.85 and the 4.1.87
 # releases. Thus we need to block older versions of dolphin, including the :4.1 versions.
 RDEPEND="
-	!<kde-base/dolphin-4.1.87:4.2[kdeprefix=]
-	!kdeprefix? ( !<kde-base/dolphin-4.1.87[-kdeprefix] )
+	!=media-gfx/digikam-0.10.0_rc2[kdeprefix=]
+	!kdeprefix? ( !<kde-base/dolphin-${PV} )
+	kdeprefix? ( !<kde-base/dolphin-${PV}:${SLOT} )
 	x11-themes/hicolor-icon-theme
 "
 

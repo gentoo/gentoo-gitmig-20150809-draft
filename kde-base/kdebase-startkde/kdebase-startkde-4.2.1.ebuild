@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.2.1.ebuild,v 1.1 2009/03/04 20:55:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.2.1.ebuild,v 1.2 2009/03/08 13:35:44 scarabeus Exp $
 
 EAPI="2"
 
@@ -12,10 +12,9 @@ DESCRIPTION="Startkde script, which starts a complete KDE session, and associate
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-DEPEND=""
 # The KDE apps called from the startkde script.
 # These provide the most minimal KDE desktop.
-RDEPEND="${DEPEND}
+RDEPEND="
 	>=kde-base/kcminit-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/kdebase-desktoptheme-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/kdebase-kioslaves-${PV}:${SLOT}[kdeprefix=]
@@ -34,18 +33,17 @@ RDEPEND="${DEPEND}
 	>=kde-base/plasma-workspace-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/systemsettings-${PV}:${SLOT}[kdeprefix=]
 	x11-apps/xmessage
+	x11-apps/xprop
+	x11-apps/xrandr
 	x11-apps/xsetroot
 	x11-apps/xset
-	x11-apps/xrandr
-	x11-apps/mkfontdir
-	x11-apps/xprop
 "
 
 KMEXTRACTONLY="
-	startkde.cmake
 	ConfigureChecks.cmake
 	kdm/
 	safestartkde.cmake
+	startkde.cmake
 "
 
 PATCHES=("${FILESDIR}/gentoo-startkde4.patch")

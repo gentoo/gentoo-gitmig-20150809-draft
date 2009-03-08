@@ -1,11 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/kinfocenter-4.2.1.ebuild,v 1.1 2009/03/04 21:33:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/kinfocenter-4.2.1.ebuild,v 1.2 2009/03/08 13:44:41 scarabeus Exp $
 
 EAPI="2"
 
-KMNAME="kdebase"
-KMMODULE="apps/${PN}"
+KMNAME="kdebase-apps"
 OPENGL_REQUIRED="optional"
 inherit kde4-meta
 
@@ -13,13 +12,18 @@ DESCRIPTION="The KDE Info Center"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug ieee1394"
 
-DEPEND="ieee1394? ( sys-libs/libraw1394 )
-	opengl? ( virtual/glu virtual/opengl )"
+DEPEND="
+	ieee1394? ( sys-libs/libraw1394 )
+	opengl? ( virtual/glu virtual/opengl )
+"
 RDEPEND="${DEPEND}
 	sys-apps/pciutils
-	sys-apps/usbutils"
+	sys-apps/usbutils
+"
 
-KMEXTRACTONLY="apps/cmake/modules/"
+KMEXTRACTONLY="
+	cmake/modules/
+"
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}

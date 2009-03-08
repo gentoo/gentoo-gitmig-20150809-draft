@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klipper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.105 2009/03/04 21:40:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.106 2009/03/08 13:46:40 scarabeus Exp $
+
+  08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> klipper-4.2.1.ebuild:
+  Semi-automatic merge, Update deps.
 
 *klipper-4.2.1 (04 Mar 2009)
 

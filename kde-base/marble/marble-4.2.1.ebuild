@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.2.1.ebuild,v 1.1 2009/03/04 22:47:26 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.2.1.ebuild,v 1.2 2009/03/08 14:17:23 scarabeus Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ DEPEND="
 	)
 	python? (
 		>=dev-python/PyQt4-4.4.4-r1
-		kde? ( >=kde-base/pykde4-${PV}:${SLOT} )
+		kde? ( >=kde-base/pykde4-${PV}:${SLOT}[kdeprefix=] )
 	)
 "
 RDEPEND="${DEPEND}

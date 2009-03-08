@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.2.1.ebuild,v 1.1 2009/03/04 22:53:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.2.1.ebuild,v 1.2 2009/03/08 14:20:25 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,12 +15,8 @@ IUSE="akonadi debug semantic-desktop"
 
 DEPEND="
 	>=dev-python/PyQt4-4.4.4-r1[webkit]
-	>=kde-base/kdelibs-${PV}:${SLOT}[opengl]
-	akonadi? ( >=kde-base/kdepimlibs-${PV}:${SLOT} )
-	semantic-desktop? (
-		>=kde-base/kdelibs-${PV}:${SLOT}[semantic-desktop]
-		>=kde-base/nepomuk-${PV}:${SLOT}
-	)
+	>=kde-base/kdelibs-${PV}:${SLOT}[kdeprefix=,opengl,semantic-desktop?]
+	akonadi? ( >=kde-base/kdepimlibs-${PV}:${SLOT}[kdeprefix=] )
 "
 RDEPEND="${DEPEND}"
 

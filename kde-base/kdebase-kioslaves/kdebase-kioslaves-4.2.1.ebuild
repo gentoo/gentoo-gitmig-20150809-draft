@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.2.1.ebuild,v 1.1 2009/03/04 20:52:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.2.1.ebuild,v 1.2 2009/03/08 13:34:18 scarabeus Exp $
 
 EAPI="2"
 
@@ -22,8 +22,8 @@ DEPEND="
 	samba? ( net-fs/samba )
 "
 RDEPEND="${DEPEND}
-	>=kde-base/kdesu-${PV}:${SLOT}
-	>=kde-base/kdialog-${PV}:${SLOT}
+	>=kde-base/kdesu-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kdialog-${PV}:${SLOT}[kdeprefix=]
 	virtual/ssh
 "
 

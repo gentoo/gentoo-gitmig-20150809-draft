@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kshisen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.104 2009/03/04 22:16:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.105 2009/03/08 13:58:59 scarabeus Exp $
+
+  08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kshisen-4.2.1.ebuild:
+  Semi-automatic merge, Update deps.
 
 *kshisen-4.2.1 (04 Mar 2009)
 

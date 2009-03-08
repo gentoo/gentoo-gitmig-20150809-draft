@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.2.1.ebuild,v 1.1 2009/03/04 22:05:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.2.1.ebuild,v 1.2 2009/03/08 13:55:26 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,10 +15,11 @@ DEPEND="
 	app-crypt/gpgme
 	>=kde-base/libkdepim-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/libkholidays-${PV}:${SLOT}[kdeprefix=]
-	>=kde-base/ktimezoned-${PV}:${SLOT}[kdeprefix=]
 	kontact? ( >=kde-base/kaddressbook-${PV}:${SLOT}[kdeprefix=] )
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	>=kde-base/ktimezoned-${PV}:${SLOT}[kdeprefix=]
+"
 
 KMLOADLIBS="libkdepim"
 KMEXTRA="kdgantt1"
@@ -28,7 +29,6 @@ KMEXTRACTONLY="
 	kaddressbook/org.kde.KAddressbook.Core.xml
 	kmail/
 	knode/org.kde.knode.xml
-	libkdepim
 	libkholidays
 "
 

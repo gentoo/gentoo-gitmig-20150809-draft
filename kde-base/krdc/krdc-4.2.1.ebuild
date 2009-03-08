@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.2.1.ebuild,v 1.1 2009/03/04 22:10:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.2.1.ebuild,v 1.2 2009/03/08 13:56:00 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,7 +17,13 @@ IUSE="debug jpeg vnc zeroconf"
 DEPEND="
 	jpeg? ( media-libs/jpeg )
 	vnc? ( >=net-libs/libvncserver-0.9 )
-	zeroconf? ( || ( net-dns/avahi net-misc/mDNSResponder ) )"
+	zeroconf? (
+		|| (
+			net-dns/avahi
+			net-misc/mDNSResponder
+		)
+	)
+"
 RDEPEND="${DEPEND}"
 
 src_compile() {
@@ -25,5 +31,6 @@ src_compile() {
 		$(cmake-utils_use_with jpeg JPEG)
 		$(cmake-utils_use_with vnc LibVNCServer)
 		$(cmake-utils_use_with zeroconf DNSSD)"
+
 	kde4-meta_src_compile
 }

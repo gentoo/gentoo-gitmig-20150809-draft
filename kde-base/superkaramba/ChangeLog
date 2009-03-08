@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/superkaramba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.93 2009/03/07 17:26:56 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.94 2009/03/08 14:22:09 scarabeus Exp $
+
+  08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  superkaramba-4.2.1.ebuild:
+  Semi-automatic merge, Update deps.
 
   07 Mar 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   +files/superkaramba-python-2.6.patch, superkaramba-3.5.9.ebuild,

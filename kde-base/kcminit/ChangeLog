@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.92 2009/03/04 20:39:53 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.93 2009/03/08 13:25:01 scarabeus Exp $
+
+  08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kcminit-4.2.1.ebuild:
+  Semi-automatic merge, Update deps.
 
 *kcminit-4.2.1 (04 Mar 2009)
 

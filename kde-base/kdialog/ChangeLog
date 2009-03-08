@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.95 2009/03/04 21:19:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.96 2009/03/08 13:39:13 scarabeus Exp $
+
+  08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kdialog-4.2.1.ebuild:
+  Semi-automatic merge, Update deps.
 
 *kdialog-4.2.1 (04 Mar 2009)
 

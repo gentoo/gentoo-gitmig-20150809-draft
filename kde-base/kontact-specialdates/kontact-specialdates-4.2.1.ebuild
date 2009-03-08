@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/kontact-specialdates-4.2.1.ebuild,v 1.1 2009/03/04 22:02:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/kontact-specialdates-4.2.1.ebuild,v 1.2 2009/03/08 13:54:46 scarabeus Exp $
 
 EAPI="2"
 
@@ -12,19 +12,25 @@ DESCRIPTION="Special Dates plugin for Kontact: displays a summary of important h
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
-DEPEND=">=kde-base/libkdepim-${PV}:${SLOT}
-	>=kde-base/kontact-${PV}:${SLOT}
-	>=kde-base/kaddressbook-${PV}:${SLOT}
-	>=kde-base/korganizer-${PV}:${SLOT}
-	>=kde-base/libkholidays-${PV}:${SLOT}"
+DEPEND="
+	>=kde-base/libkdepim-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/libkholidays-${PV}:${SLOT}[kdeprefix=]
+"
 RDEPEND="${DEPEND}
-	>=kde-base/libkdepim-${PV}:${SLOT}"
-KMEXTRACTONLY="libkholidays
+	>=kde-base/kaddressbook-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/korganizer-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kontact-${PV}:${SLOT}[kdeprefix=]
+"
+
+KMEXTRACTONLY="
 	kontactinterfaces/
 	kaddressbook
 	korganizer
-	libkdepim"
-KMEXTRA="kontact/plugins/specialdates"
+	libkholidays
+"
+KMEXTRA="
+	kontact/plugins/specialdates/
+"
 
 src_prepare() {
 	# Fix target_link_libraries for now

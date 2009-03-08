@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.2.1.ebuild,v 1.2 2009/03/08 03:05:42 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.2.1.ebuild,v 1.3 2009/03/08 13:39:58 scarabeus Exp $
 
 EAPI="2"
 
@@ -11,25 +11,32 @@ DESCRIPTION="KDE login manager, similar to xdm and gdm"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="consolekit debug kerberos pam"
 
-DEPEND="x11-libs/libXau
+DEPEND="
+	x11-libs/libXau
 	x11-libs/libXdmcp
 	x11-libs/libXtst
-	kerberos? ( virtual/krb5 )
-	pam? (
-		>=kde-base/kcheckpass-${PV}:${SLOT}
-		virtual/pam
-	)
 	consolekit? (
 		>=sys-apps/dbus-1.0.2
 		sys-auth/consolekit
-	)"
+	)
+	kerberos? ( virtual/krb5 )
+	pam? (
+		>=kde-base/kcheckpass-${PV}:${SLOT}[kdeprefix=]
+		virtual/pam
+	)
+"
 RDEPEND="${DEPEND}
-	>=kde-base/kdepasswd-${PV}:${SLOT}
+	>=kde-base/kdepasswd-${PV}:${SLOT}[kdeprefix=]
 	>=x11-apps/xinit-1.0.5-r2
-	x11-apps/xmessage"
+	x11-apps/xmessage
+"
 
-KMEXTRACTONLY="kcontrol/kdm/"
-KMEXTRA="libs/kdm/"
+KMEXTRACTONLY="
+	kcontrol/kdm/
+"
+KMEXTRA="
+	libs/kdm/
+"
 
 PATCHES=( "${FILESDIR}/kdebase-4.0.2-pam-optional.patch" )
 
