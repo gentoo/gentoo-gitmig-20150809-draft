@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/aimsniff
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.30 2008/10/21 06:53:13 tove Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.31 2009/03/08 11:33:52 cla Exp $
+
+  08 Mar 2009; Dawid Węgliński <cla@gentoo.org> aimsniff-0.9-r2.ebuild:
+  Migrate to EAPI 2
 
   21 Oct 2008; Torsten Veller <tove@gentoo.org> aimsniff-0.9-r1.ebuild,
   aimsniff-0.9-r2.ebuild:
