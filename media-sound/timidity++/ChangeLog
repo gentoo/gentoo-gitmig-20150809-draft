@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.108 2008/12/26 11:46:46 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.109 2009/03/08 22:11:04 vapier Exp $
+
+  08 Mar 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/timidity++-2.13.2-protos.patch, timidity++-2.13.2-r7.ebuild:
+  Fix implicit decl errors on 64bit systems.
 
   26 Dec 2008; Raúl Porcel <armin76@gentoo.org>
   timidity++-2.13.2-r7.ebuild:

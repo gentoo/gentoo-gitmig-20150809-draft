@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r7.ebuild,v 1.8 2008/12/26 11:46:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r7.ebuild,v 1.9 2009/03/08 22:11:04 vapier Exp $
 
 inherit eutils elisp-common
 
@@ -62,6 +62,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc4.patch"
 	epatch "${FILESDIR}/${P}-flac.patch"
 	epatch "${FILESDIR}/${P}-flac113.patch"
+	epatch "${FILESDIR}"/${P}-protos.patch
 
 	# fix header location of speex
 	sed -i -e "s:#include <speex:#include <speex/speex:g" configure* timidity/speex_a.c
