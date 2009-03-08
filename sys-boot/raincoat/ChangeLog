@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/raincoat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/raincoat/ChangeLog,v 1.4 2007/02/22 00:58:16 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/raincoat/ChangeLog,v 1.5 2009/03/08 19:25:25 vapier Exp $
+
+*raincoat-0.11 (08 Mar 2009)
+
+  08 Mar 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/raincoat-0.11-build.patch, +raincoat-0.11.ebuild:
+  Version bump.
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
