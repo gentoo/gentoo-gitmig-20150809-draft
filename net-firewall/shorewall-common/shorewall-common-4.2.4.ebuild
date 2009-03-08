@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/shorewall-common-4.2.4.ebuild,v 1.1 2009/01/22 08:17:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-common/shorewall-common-4.2.4.ebuild,v 1.2 2009/03/08 14:26:49 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils versionator
 
@@ -24,15 +26,9 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
 DEPEND=">=net-firewall/iptables-1.2.4
-	sys-apps/iproute2
+	sys-apps/iproute2[-minimal]
 	!<net-firewall/shorewall-4.0"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	if built_with_use sys-apps/iproute2 minimal; then
-		die "Shorewall requires sys-apps/iproute2 to be built without the \"minimal\" USE flag."
-	fi
-}
 
 src_compile() {
 	einfo "Nothing to compile."
