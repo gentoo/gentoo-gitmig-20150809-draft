@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-0.12.ebuild,v 1.3 2009/01/13 22:50:12 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-0.12.ebuild,v 1.4 2009/03/08 20:26:06 hanno Exp $
 
 EAPI="1"
 
@@ -17,6 +17,7 @@ DEPEND="x11-libs/qt-webkit:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-svg:4
 	media-gfx/exiv2"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}"
 
