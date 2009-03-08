@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/fec-1.0.3-r1.ebuild,v 1.2 2009/01/28 00:05:29 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fec/fec-1.0.3-r1.ebuild,v 1.3 2009/03/08 20:09:03 tommy Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -47,7 +47,7 @@ src_compile() {
 	java-pkg-2_src_compile
 	if use x86; then
 		cd "${S}"/src/csrc
-		append-flags -fPIC
+		use hardened && append-flags -fPIC
 		emake CC=$(tc-getCC) CFLAGS="${CFLAGS}" || die
 	fi
 }
