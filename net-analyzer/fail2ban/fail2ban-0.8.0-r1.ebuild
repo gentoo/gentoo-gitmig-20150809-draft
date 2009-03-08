@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.0-r1.ebuild,v 1.7 2008/06/15 09:21:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.0-r1.ebuild,v 1.8 2009/03/08 01:26:34 cla Exp $
+
+EAPI="2"
 
 inherit distutils
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 hppa ~ppc ~ppc64 x86"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.4"
+DEPEND=">=dev-lang/python-2.4[readline]"
 RDEPEND=${DEPEND}
 
 src_unpack() {
@@ -48,14 +50,5 @@ pkg_postinst() {
 		elog
 		elog "You are upgrading from version 0.6.x, please see:"
 		elog "http://www.fail2ban.org/wiki/index.php/HOWTO_Upgrade_from_0.6_to_0.8"
-	fi
-}
-
-pkg_setup() {
-	if ! built_with_use dev-lang/python readline ; then
-		echo
-		eerror "dev-lang/python is missing readline support. Please add"
-		eerror "'readline' to your USE flags, and re-emerge dev-lang/python."
-		die "dev-lang/python needs readline support"
 	fi
 }

@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.12.1-r1.ebuild,v 1.5 2007/12/25 15:02:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.12.1-r1.ebuild,v 1.6 2009/03/08 01:21:36 cla Exp $
+
+EAPI="2"
 
 inherit distutils
 
@@ -15,15 +17,9 @@ IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
 	>=dev-python/cheetah-0.9.18
-	>=dev-libs/libprelude-0.9.0
+	>=dev-libs/libprelude-0.9.0[python]
 	>=dev-libs/libpreludedb-0.9.0"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	if ! built_with_use dev-libs/libprelude python ; then
-		die 'requires dev-libs/libprelude to be built with "python" use flag'
-	fi
-}
 
 src_unpack() {
 	unpack ${A}

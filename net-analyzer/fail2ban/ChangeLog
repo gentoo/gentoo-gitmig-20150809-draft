@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.44 2008/07/30 14:40:56 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.45 2009/03/08 01:26:34 cla Exp $
+
+  08 Mar 2009; Dawid Węgliński <cla@gentoo.org> fail2ban-0.8.0-r1.ebuild:
+  Migration to EAPI 2
 
 *fail2ban-0.8.3 (30 Jul 2008)
 
