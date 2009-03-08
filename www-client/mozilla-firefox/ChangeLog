@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.485 2009/03/08 14:04:21 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.486 2009/03/08 15:04:18 maekke Exp $
+
+  08 Mar 2009; Markus Meier <maekke@gentoo.org>
+  mozilla-firefox-3.0.7.ebuild:
+  x86 stable, bug #261585
 
   08 Mar 2009; Richard Freeman <rich0@gentoo.org>
   mozilla-firefox-3.0.7.ebuild:
