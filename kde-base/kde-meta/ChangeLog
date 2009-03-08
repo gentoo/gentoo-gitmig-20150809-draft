@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.117 2009/03/04 21:03:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.118 2009/03/08 19:28:11 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kde-meta-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *kde-meta-4.2.1 (04 Mar 2009)
 

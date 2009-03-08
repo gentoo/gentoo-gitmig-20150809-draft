@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kompare
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.102 2009/03/04 21:59:10 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.103 2009/03/08 20:09:39 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kompare-4.2.0.ebuild,
+  -kompare-4.2.0-r1.ebuild:
+  Drop KDE 4.2.0
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kompare-4.2.0.ebuild,
+  -kompare-4.2.0-r1.ebuild:
+  Drop KDE 4.2.0
 
 *kompare-4.2.1 (04 Mar 2009)
 

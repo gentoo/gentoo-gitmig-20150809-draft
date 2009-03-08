@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.112 2009/03/08 13:42:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.113 2009/03/08 19:48:56 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -khelpcenter-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
   08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   khelpcenter-4.2.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmines
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmines/ChangeLog,v 1.105 2009/03/04 21:49:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmines/ChangeLog,v 1.106 2009/03/08 20:01:03 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kmines-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *kmines-4.2.1 (04 Mar 2009)
 

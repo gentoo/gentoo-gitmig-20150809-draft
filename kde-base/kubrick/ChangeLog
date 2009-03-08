@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.9 2009/03/04 22:29:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.10 2009/03/08 20:36:19 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kubrick-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *kubrick-4.2.1 (04 Mar 2009)
 

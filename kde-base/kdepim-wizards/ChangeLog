@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-wizards
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.97 2009/03/08 13:38:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.98 2009/03/08 19:34:17 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdepim-wizards-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
   08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kdepim-wizards-4.2.1.ebuild:

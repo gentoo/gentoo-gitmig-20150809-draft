@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.567 2009/03/04 21:01:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.568 2009/03/08 19:25:50 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdelibs-4.2.0-r2.ebuild,
+  -kdelibs-4.2.0-r3.ebuild:
+  Drop KDE 4.2.0
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdelibs-4.2.0-r2.ebuild,
+  -kdelibs-4.2.0-r3.ebuild:
+  Drop KDE 4.2.0
 
 *kdelibs-4.2.1 (04 Mar 2009)
 

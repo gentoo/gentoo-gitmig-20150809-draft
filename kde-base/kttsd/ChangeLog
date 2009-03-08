@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.110 2009/03/04 22:27:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.111 2009/03/08 20:34:20 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kttsd-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *kttsd-4.2.1 (04 Mar 2009)
 

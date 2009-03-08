@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.77 2009/03/04 21:13:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.78 2009/03/08 19:35:54 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdesdk-misc-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *kdesdk-misc-4.2.1 (04 Mar 2009)
 

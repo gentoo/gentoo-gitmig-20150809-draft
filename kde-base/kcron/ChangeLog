@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcron
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.100 2009/03/04 20:42:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.101 2009/03/08 19:10:17 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kcron-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *kcron-4.2.1 (04 Mar 2009)
 

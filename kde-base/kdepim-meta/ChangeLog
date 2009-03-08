@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.106 2009/03/04 21:09:53 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.107 2009/03/08 19:33:19 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdepim-meta-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *kdepim-meta-4.2.1 (04 Mar 2009)
 

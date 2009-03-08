@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kstartupconfig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartupconfig/ChangeLog,v 1.19 2009/03/04 22:21:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstartupconfig/ChangeLog,v 1.20 2009/03/08 20:28:45 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kstartupconfig-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *kstartupconfig-4.2.1 (04 Mar 2009)
 

@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.153 2009/03/04 21:45:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.154 2009/03/08 19:58:56 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kmail-4.2.0.ebuild,
+  -kmail-4.2.0-r1.ebuild:
+  Drop KDE 4.2.0
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kmail-4.2.0.ebuild,
+  -kmail-4.2.0-r1.ebuild:
+  Drop KDE 4.2.0
 
 *kmail-4.2.1 (04 Mar 2009)
 

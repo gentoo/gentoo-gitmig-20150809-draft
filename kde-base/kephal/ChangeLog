@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kephal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.3 2009/03/04 21:21:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.4 2009/03/08 19:42:45 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kephal-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *kephal-4.2.1 (04 Mar 2009)
 

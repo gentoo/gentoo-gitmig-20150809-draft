@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knetwalk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.34 2009/03/04 21:53:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.35 2009/03/08 20:04:07 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -knetwalk-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *knetwalk-4.2.1 (04 Mar 2009)
 

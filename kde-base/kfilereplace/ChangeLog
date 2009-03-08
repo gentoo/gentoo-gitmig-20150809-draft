@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kfilereplace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfilereplace/ChangeLog,v 1.99 2009/03/04 21:23:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfilereplace/ChangeLog,v 1.100 2009/03/08 19:43:37 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kfilereplace-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *kfilereplace-4.2.1 (04 Mar 2009)
 

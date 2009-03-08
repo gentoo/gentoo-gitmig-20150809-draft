@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.106 2009/03/08 13:11:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.107 2009/03/08 18:56:41 alexxy Exp $
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kaddressbook-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
   08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kaddressbook-4.2.1.ebuild:
