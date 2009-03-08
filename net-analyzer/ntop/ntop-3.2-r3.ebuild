@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r3.ebuild,v 1.12 2008/07/04 23:44:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.2-r3.ebuild,v 1.13 2009/03/08 10:31:35 cla Exp $
+
+EAPI="2"
 
 inherit eutils autotools
 
@@ -18,7 +20,7 @@ COMMON_DEPEND="sys-apps/gawk
 	net-libs/libpcap
 	>=media-libs/gd-2.0.22
 	>=media-libs/libpng-1.2.5
-	snmp? ( net-analyzer/net-snmp )
+	snmp? ( net-analyzer/net-snmp[ipv6] )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r4 )
 	zlib? ( sys-libs/zlib )"
@@ -41,15 +43,6 @@ pkg_setup() {
 			eerror "snmp plugin has compilation problems without ipv6 support."
 			eerror "For additional information see bug #121497."
 			die "snmp without ipv6 is broken"
-		else
-			if ! built_with_use net-analyzer/net-snmp ipv6 ; then
-				echo
-				eerror "You have both ipv6 and snmp enabled."
-				eerror "This require ipv6 support in net-analyzer/net-snmp."
-				eerror "However, net-analyzer/net-snmp was compiled with ipv6 flag disabled."
-				eerror "Please, re-emerge net-analyzer/net-snmp with USE=\"ipv6\"."
-				die "net-analyzer/net-snmp was build without ipv6."
-			fi
 		fi
 	fi
 	enewgroup ntop
@@ -68,7 +61,7 @@ src_unpack() {
 		-e "s@/usr/local/bin/dot@/usr/bin/dot@" report.c || die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	# force disable xmldumpPlugin
 	export \
 		ac_cv_header_glib_h=no \
@@ -86,7 +79,6 @@ src_compile() {
 		$(use_with tcpd) \
 		$(use_with zlib) \
 		|| die "configure problem"
-	emake || die "compile problem"
 }
 
 src_install() {

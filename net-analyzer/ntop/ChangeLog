@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.68 2009/02/18 21:44:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.69 2009/03/08 10:31:35 cla Exp $
+
+  08 Mar 2009; Dawid Węgliński <cla@gentoo.org> ntop-3.2-r3.ebuild:
+  Migrate to EAPI 2
 
 *ntop-3.3.9-r1 (18 Feb 2009)
 
