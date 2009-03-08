@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0.0.ebuild,v 1.9 2009/01/09 15:03:15 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.0.0.ebuild,v 1.10 2009/03/08 19:47:56 gentoofan23 Exp $
 
+EAPI="2"
 inherit eutils
 
 IUSE="nls xinerama truetype kde gnome imlib disableslit disabletoolbar"
@@ -22,10 +23,10 @@ RDEPEND="x11-libs/libXpm
 	x11-apps/xmessage
 	x11-libs/libXft
 	truetype? ( media-libs/freetype )
-	imlib? ( >=media-libs/imlib2-1.2.0 )
-	!<x11-themes/fluxbox-styles-fluxmod-20040809-r1
-	!<=x11-misc/fluxconf-0.9.9
-	!<=x11-misc/fbdesk-1.2.1"
+	imlib? ( >=media-libs/imlib2-1.2.0[X] )
+	!!<x11-themes/fluxbox-styles-fluxmod-20040809-r1
+	!!<=x11-misc/fluxconf-0.9.9
+	!!<=x11-misc/fbdesk-1.2.1"
 DEPEND="nls? ( sys-devel/gettext )
 	x11-proto/xextproto
 	xinerama? ( x11-proto/xineramaproto )
@@ -35,15 +36,6 @@ PROVIDE="virtual/blackbox"
 SLOT="0"
 LICENSE="MIT"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-
-pkg_setup() {
-	if use imlib && ! built_with_use media-libs/imlib2 X ; then
-			eerror "To build fluxbox with imlib in USE, you need an X enabled"
-			eerror "media-libs/imlib2 . Either recompile imlib2 with the X"
-			eerror "USE flag turned on or disable the imlib USE flag for fluxbox."
-			die "USE=imlib requires imlib2 with USE=X"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -65,7 +57,7 @@ src_unpack() {
 		version.h.in || die "version sed failed"
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable nls) \
 		$(use_enable xinerama) \
@@ -77,9 +69,11 @@ src_compile() {
 		$(use_enable !disabletoolbar toolbar ) \
 		--sysconfdir=/etc/X11/${PN} \
 		--with-style=/usr/share/fluxbox/styles/Emerge \
-		${myconf} || die "configure failed"
+		${myconf}
+}
 
-	emake || die "make failed"
+src_compile() {
+	default
 
 	ebegin "Creating a menu file (may take a while)"
 	mkdir -p "${T}/home/.fluxbox" || die "mkdir home failed"
