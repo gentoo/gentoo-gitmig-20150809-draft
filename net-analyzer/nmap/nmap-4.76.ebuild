@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-4.76.ebuild,v 1.8 2009/03/08 01:09:43 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-4.76.ebuild,v 1.9 2009/03/08 10:35:21 cla Exp $
 
 EAPI="2"
 
@@ -50,7 +50,6 @@ src_configure() {
 		"${myconf}" \
 		$(use_with gtk zenmap) \
 		$(use_with ssl openssl) || die
-	emake || die
 }
 
 src_install() {

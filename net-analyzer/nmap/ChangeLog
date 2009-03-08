@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.192 2009/03/08 01:12:02 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.193 2009/03/08 10:35:21 cla Exp $
+
+  08 Mar 2009; Dawid Węgliński <cla@gentoo.org> nmap-4.76.ebuild:
+  Prevent double emake
 
   08 Mar 2009; Dawid Węgliński <cla@gentoo.org> nmap-4.76.ebuild:
   Migration to EAPI 2

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.3.6.ebuild,v 1.2 2009/03/08 01:43:22 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.3.6.ebuild,v 1.3 2009/03/08 10:39:21 cla Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ pkg_setup() {
 	use perl && perl-module_pkg_setup
 }
 
-src_compile() {
+src_configure() {
 	filter-flags -ffast-math
 
 	export RRDDOCDIR=/usr/share/doc/${PF}
@@ -48,8 +48,6 @@ src_compile() {
 		$(use_enable tcl) \
 		$(use_with tcl tcllib /usr/$(get_libdir)) \
 		$(use_enable python)
-
-	emake || die "make failed"
 }
 
 src_install() {
