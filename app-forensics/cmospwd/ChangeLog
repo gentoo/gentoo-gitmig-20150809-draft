@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/cmospwd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/ChangeLog,v 1.10 2009/01/08 19:49:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/ChangeLog,v 1.11 2009/03/08 16:43:42 patrick Exp $
+
+  08 Mar 2009; Patrick Lauer <patrick@gentoo.org> +cmospwd-5.0.ebuild:
+  Bump to 5.0
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -cmospwd-5.0.ebuild:
   Removing old
