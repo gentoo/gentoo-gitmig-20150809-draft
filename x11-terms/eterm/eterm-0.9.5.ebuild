@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.5.ebuild,v 1.9 2009/01/24 11:33:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.5.ebuild,v 1.10 2009/03/08 20:08:58 gentoofan23 Exp $
 
+EAPI="2"
 inherit eutils autotools
 
 MY_P=Eterm-${PV}
@@ -34,7 +35,7 @@ DEPEND="x11-libs/libX11
 	x11-proto/xextproto
 	x11-proto/xproto
 	>=x11-libs/libast-0.6.1
-	media-libs/imlib2
+	media-libs/imlib2[X]
 	escreen? ( app-misc/screen )"
 
 if [[ ${PV} == "9999" ]] ; then
@@ -43,13 +44,6 @@ else
 	S=${WORKDIR}/${MY_P}
 fi
 
-pkg_setup() {
-	if ! built_with_use media-libs/imlib2 X ; then
-		eerror "media-libs/imlib2 was built without X support."
-		eerror "Please add emerge it with USE=X."
-		die "imlib2 needs USE=X"
-	fi
-}
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
 		cvs_src_unpack
@@ -62,7 +56,7 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	export TIC="true"
 	econf \
 		$(use_enable escreen) \
@@ -72,9 +66,7 @@ src_compile() {
 		$(use_enable sse2) \
 		$(use_enable unicode multi-charset) \
 		--with-delete=execute \
-		--with-backspace=auto \
-		|| die "conf failed"
-	emake || die "make failed"
+		--with-backspace=auto
 }
 
 src_install() {

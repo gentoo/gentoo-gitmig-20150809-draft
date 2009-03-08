@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.70 2009/01/24 11:33:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.71 2009/03/08 20:08:58 gentoofan23 Exp $
+
+  08 Mar 2009; Thomas Anderson <gentoofan23@gentoo.org> eterm-0.9.5.ebuild,
+  eterm-9999.ebuild:
+  Transition to EAPI 2 usedeps
 
   24 Jan 2009; Alexis Ballier <aballier@gentoo.org> eterm-0.9.5.ebuild:
   there is no stable keyword for bsd...
