@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/zemberek-2.1.1.ebuild,v 1.1 2008/10/01 19:17:42 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/zemberek-2.1.1.ebuild,v 1.2 2009/03/08 00:03:15 serkan Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="source doc test"
@@ -27,6 +27,7 @@ DEPEND=">=virtual/jdk-1.5
 	(
 		dev-java/junit:4
 		dev-java/ant-junit4
+		dev-java/hamcrest-core
 	)
 	app-arch/unzip"
 
@@ -60,5 +61,8 @@ src_install() {
 }
 
 src_test() {
-	ANT_TASKS="ant-junit4" eant unit-test
+	# Added hamcrest-core as a workaround
+	# Issue spotted by Markus Meier <maekke@gentoo.org>
+	# See http://bugs.gentoo.org/show_bug.cgi?id=253753#c3
+	ANT_TASKS="ant-junit4 hamcrest-core" eant unit-test
 }
