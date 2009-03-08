@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.6.1-r1.ebuild,v 1.2 2009/03/07 23:50:39 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.6.1-r1.ebuild,v 1.3 2009/03/08 02:33:01 cla Exp $
 
 EAPI="2"
 
@@ -39,6 +39,7 @@ src_unpack(){
 		-e 's:SGUILD_LIB_PATH ./lib:SGUILD_LIB_PATH /usr/lib/sguild:g' \
 		-e 's:/sguild_data/rules:/var/lib/sguil/rules:g' \
 		-e 's:/sguild_data/archive:/var/lib/sguil/archive:g' \
+		-e s:/usr/lib/sguild:/usr/$(get_libdir)/sguild:g \
 		sguild.conf || die "sed failed"
 	sed -i -e 's:set VERSION "SGUIL-0.6.0":set VERSION "SGUIL-0.6.0p1":' \
 		sguild || die "sed failed"
@@ -53,7 +54,7 @@ src_install(){
 	insinto /etc/sguil
 	doins server/{sguild.email,sguild.users,sguild.conf,sguild.queries,sguild.access,autocat.conf}
 
-	insinto /usr/lib/sguild
+	insinto /usr/$(get_libdir)/sguild
 	doins server/lib/*
 	dobin server/sguild
 	newinitd "${FILESDIR}/sguild.initd" sguild
