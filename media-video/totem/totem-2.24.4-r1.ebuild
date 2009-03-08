@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.2.ebuild,v 1.5 2008/12/02 15:58:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.4-r1.ebuild,v 1.1 2009/03/08 21:12:53 eva Exp $
 
 inherit eutils gnome2 multilib python
 
@@ -42,7 +42,9 @@ RDEPEND=">=dev-libs/glib-2.15
 	>=x11-libs/libXrandr-1.1.1
 	>=x11-libs/libXxf86vm-1.0.1
 
-	bluetooth? ( net-wireless/bluez-libs )
+	bluetooth? ( || (
+		net-wireless/bluez
+		net-wireless/bluez-libs ) )
 	galago? ( >=dev-libs/libgalago-0.5.2 )
 	gnome? (
 		>=gnome-base/libgnome-2.14
