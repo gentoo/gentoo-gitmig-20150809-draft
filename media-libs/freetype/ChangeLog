@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.218 2009/03/08 18:03:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.219 2009/03/08 19:05:04 klausman Exp $
+
+  08 Mar 2009; Tobias Klausmann <klausman@gentoo.org> freetype-2.3.8.ebuild:
+  Stable on alpha, bug #260288
 
   08 Mar 2009; Markus Meier <maekke@gentoo.org> freetype-2.3.8.ebuild:
   amd64/x86 stable, bug #260288
