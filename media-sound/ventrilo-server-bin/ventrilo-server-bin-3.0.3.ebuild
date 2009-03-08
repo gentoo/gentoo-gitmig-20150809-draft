@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ventrilo-server-bin-3.0.3.ebuild,v 1.1 2009/03/02 00:22:40 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ventrilo-server-bin-3.0.3.ebuild,v 1.2 2009/03/08 14:38:33 maekke Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ventrilo_srv-${PV}-Linux-i386.tar.gz"
 
 LICENSE="ventrilo"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* amd64 x86"
 RESTRICT="fetch"
 
 S=${WORKDIR}
