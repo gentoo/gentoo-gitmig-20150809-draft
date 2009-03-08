@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/dot2tex
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.6 2008/11/14 11:00:57 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.7 2009/03/08 15:49:37 aballier Exp $
+
+*dot2tex-2.8.5 (08 Mar 2009)
+
+  08 Mar 2009; Alexis Ballier <aballier@gentoo.org> +dot2tex-2.8.5.ebuild:
+  version bump by Alet Roux <alet.roux@gmail.com>, bug #261148
 
   14 Nov 2008; Alexis Ballier <aballier@gentoo.org> dot2tex-2.8.4.ebuild:
   keyword ~ppc64, working fine on a PowerMac 970
