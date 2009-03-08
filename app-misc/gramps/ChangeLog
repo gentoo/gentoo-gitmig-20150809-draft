@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.93 2009/01/30 02:39:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.94 2009/03/08 11:37:38 fauli Exp $
+
+*gramps-3.1.0 (08 Mar 2009)
+
+  08 Mar 2009; Christian Faulhammer <fauli@gentoo.org> +gramps-3.1.0.ebuild:
+  version bump, bug 261636 by David Relson <relson AT osagesoftware DOT
+  com>. Many new dependencies, some clean up and two new USE flags: gnome
+  and spell
 
   30 Jan 2009; Steve Dibb <beandog@gentoo.org> gramps-3.0.4.ebuild:
   amd64 stable, bug 256161
