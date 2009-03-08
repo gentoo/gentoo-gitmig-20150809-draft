@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/autopsy
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/ChangeLog,v 1.14 2009/01/08 19:49:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/autopsy/ChangeLog,v 1.15 2009/03/08 16:46:20 patrick Exp $
+
+*autopsy-2.21 (08 Mar 2009)
+
+  08 Mar 2009; Patrick Lauer <patrick@gentoo.org> +autopsy-2.21.ebuild:
+  Bump to 2.21
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -autopsy-2.01.ebuild,
   -autopsy-2.05.ebuild, -autopsy-2.08.ebuild:
