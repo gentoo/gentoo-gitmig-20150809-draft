@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gd
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.18 2008/11/16 09:30:44 graaff Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.19 2009/03/08 15:16:01 betelgeuse Exp $
+
+  08 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
+  ruby-gd-0.7.4-r1.ebuild:
+  Migrate to EAPI 2.
 
   16 Nov 2008; Hans de Graaff <graaff@gentoo.org>
   files/ruby-gd-0.7.4-fix-interlace.patch:
