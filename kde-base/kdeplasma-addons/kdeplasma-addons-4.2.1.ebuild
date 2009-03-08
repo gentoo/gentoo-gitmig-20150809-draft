@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.2.1.ebuild,v 1.2 2009/03/05 19:52:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.2.1.ebuild,v 1.3 2009/03/08 19:31:46 scarabeus Exp $
 
 EAPI="2"
 
@@ -26,6 +26,8 @@ DEPEND="
 RDEPEND="${DEPEND}
 	xinerama? ( x11-libs/libXinerama )
 "
+
+PATCHES=( "${FILESDIR}/lancelot-qt45.patch" )
 
 src_prepare() {
 	sed -i -e 's/${KDE4WORKSPACE_PLASMACLOCK_LIBRARY}/plasmaclock/g' \
