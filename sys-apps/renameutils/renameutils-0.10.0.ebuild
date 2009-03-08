@@ -1,30 +1,29 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/renameutils-0.8.1.ebuild,v 1.3 2007/07/08 04:46:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/renameutils-0.10.0.ebuild,v 1.1 2009/03/08 20:33:13 dev-zero Exp $
 
-inherit eutils autotools
+EAPI="2"
+
+inherit autotools eutils
 
 DESCRIPTION="Use your favorite text editor to rename files"
 HOMEPAGE="http://www.nongnu.org/renameutils/"
 SRC_URI="http://savannah.nongnu.org/download/renameutils/${P}.tar.gz"
-
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls"
 
 DEPEND=">=sys-libs/readline-5.0-r2"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-build.patch
-	AT_M4DIR="m4" eautoreconf
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.9.0-destdir.patch"
+	eautoreconf
 }
 
-src_compile() {
-	econf $(use_enable nls) || die
-	emake || die "emake failed"
+src_configure() {
+	econf $(use_enable nls)
 }
 
 src_install() {
