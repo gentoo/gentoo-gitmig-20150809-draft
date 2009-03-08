@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.153 2009/03/05 17:57:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.154 2009/03/08 11:54:00 pva Exp $
+
+  08 Mar 2009; Peter Volkov <pva@gentoo.org>
+  +files/wireshark-1.1.2-misc-warnings.patch, wireshark-1.1.2.ebuild:
+  Fixed build failure in function 'dissect_sflow_sample_rawheaderdata'
 
 *wireshark-1.0.6-r1 (05 Mar 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.1.2.ebuild,v 1.1 2009/01/19 09:40:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.1.2.ebuild,v 1.2 2009/03/08 11:54:00 pva Exp $
 
 EAPI=1
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
@@ -71,6 +71,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-1.1.2--as-needed.patch"
+	epatch "${FILESDIR}/${P}-misc-warnings.patch"
 	eautoreconf
 }
 
