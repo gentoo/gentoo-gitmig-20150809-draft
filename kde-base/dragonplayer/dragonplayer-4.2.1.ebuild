@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/dragonplayer-4.2.1.ebuild,v 1.1 2009/03/04 20:23:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/dragonplayer-4.2.1.ebuild,v 1.2 2009/03/08 13:10:11 scarabeus Exp $
 
 EAPI="2"
 
@@ -14,6 +14,9 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND=">=media-libs/xine-lib-1.1.9"
+RDEPEND="
+	>=media-libs/xine-lib-1.1.9
+"
 DEPEND="${RDEPEND}
-	sys-devel/gettext"
+	sys-devel/gettext
+"

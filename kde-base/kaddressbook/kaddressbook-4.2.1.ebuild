@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.2.1.ebuild,v 1.1 2009/03/04 20:26:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.2.1.ebuild,v 1.2 2009/03/08 13:11:02 scarabeus Exp $
 
 EAPI="2"
 
@@ -11,15 +11,18 @@ DESCRIPTION="The KDE Address Book"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug gnokii"
 
-DEPEND=">=kde-base/libkdepim-${PV}:${SLOT}
-	>=kde-base/libkleo-${PV}:${SLOT}
-	gnokii? ( app-mobilephone/gnokii )"
+DEPEND="
+	>=kde-base/libkdepim-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/libkleo-${PV}:${SLOT}[kdeprefix=]
+	gnokii? ( app-mobilephone/gnokii )
+"
 RDEPEND="${DEPEND}"
 
 # xml targets from kmail are being uncommented by kde4-meta.eclass
-KMEXTRACTONLY="kmail/
-	libkdepim/
-	libkleo/"
+KMEXTRACTONLY="
+	kmail/
+	libkleo/
+"
 KMLOADLIBS="libkdepim libkleo"
 
 src_configure() {
