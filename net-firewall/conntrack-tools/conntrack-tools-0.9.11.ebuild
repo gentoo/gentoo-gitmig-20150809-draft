@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.11.ebuild,v 1.1 2009/03/03 12:52:49 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.11.ebuild,v 1.2 2009/03/08 13:47:44 pva Exp $
 
+EAPI="2"
 inherit linux-info eutils
 
 DESCRIPTION="Connection tracking userspace tools"
@@ -39,17 +40,20 @@ pkg_setup() {
 	check_extra_config
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-INT_MAX.patch"
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	newinitd "${FILESDIR}/conntrackd.initd-r1" conntrackd
-	newconfd "${FILESDIR}/conntrackd.confd-r1" conntrackd
+	newinitd "${FILESDIR}/conntrackd.initd-r1" conntrackd || die
+	newconfd "${FILESDIR}/conntrackd.confd-r1" conntrackd || die
 
 	insinto /etc/conntrackd
-	doins doc/stats/conntrackd.conf
+	doins doc/stats/conntrackd.conf || die
 
-	dodoc AUTHORS ChangeLog
-
+	dodoc AUTHORS ChangeLog || die
 	insinto /usr/share/doc/${PF}
-	pushd doc &>/dev/null && doins -r . && popd &>/dev/null
+	doins -r doc/* || die
 }
