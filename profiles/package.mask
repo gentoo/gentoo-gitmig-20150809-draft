@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9559 2009/03/08 16:12:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9560 2009/03/08 21:13:09 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -601,12 +601,6 @@ net-analyzer/rtg
 # Please, upgrade to openrc. removal after openrc goes stable, bug #254519
 sys-apps/baselayout-vserver
 
-# Daniel Gryniewicz <dang@gentoo.org> (07 Jan 2009)
-# Mask gnome-base/gnome-vfs-monikers for removal
-# REASON:
-# Nothing uses it anymore (gnome-vfs used to) and it's depricated. Bug #253826
-gnome-base/gnome-vfs-monikers
-
 # Tomas Chvatal <scarabeus@gentoo.org> (07 Jan 2009)
 # Mask kde-base/pykde-3.5* for removal
 # REASON:
@@ -733,7 +727,7 @@ net-wireless/bluez
 >=net-wireless/bluez-gnome-1.8
 >=app-mobilephone/obex-data-server-0.4
 >=gnome-extra/gnome-user-share-0.41
->=media-video/totem-2.24.3-r1
+=media-video/totem-2.24.4-r1
 =gnome-base/gvfs-1.0.3-r10
 =gnome-base/gvfs-1.0.3-r11
 =gnome-base/gvfs-1.0.3-r12
