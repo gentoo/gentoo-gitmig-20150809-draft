@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/cromwell-2.40-r3.ebuild,v 1.2 2009/01/04 17:52:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell/cromwell-2.40-r3.ebuild,v 1.3 2009/03/08 19:17:09 vapier Exp $
 
 inherit eutils mount-boot
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}"/${PF}-cvs-fixes.patch
+	sed -i 's:-Werror::' Makefile Rules.make
 }
 
 src_compile() {
