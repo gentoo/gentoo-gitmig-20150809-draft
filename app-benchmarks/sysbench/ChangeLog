@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/sysbench
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/ChangeLog,v 1.1 2009/01/17 20:33:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/ChangeLog,v 1.2 2009/03/08 20:36:54 maekke Exp $
+
+  08 Mar 2009; Markus Meier <maekke@gentoo.org> sysbench-0.4.10.ebuild:
+  amd64/x86 stable, bug #261718
 
 *sysbench-0.4.10 (17 Jan 2009)
 
