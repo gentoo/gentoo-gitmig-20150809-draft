@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/tigervnc
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.1 2009/03/08 15:34:44 armin76 Exp $
+
+*tigervnc-0.0.90_p3631 (08 Mar 2009)
+
+  08 Mar 2009; Raúl Porcel <armin76@gentoo.org> +files/tigervnc.confd,
+  +files/tigervnc.initd, +files/vncviewer.png, +metadata.xml,
+  +tigervnc-0.0.90_p3631.ebuild:
+  Initial commit, ebuild by me
+
