@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.9.0.ebuild,v 1.5 2009/03/07 08:00:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.9.0.ebuild,v 1.6 2009/03/08 18:14:25 betelgeuse Exp $
+
+EAPI="2"
 
 inherit ruby
 
@@ -18,22 +20,14 @@ LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ppc64 sparc ~x86"
 IUSE="examples doc"
+# hdri causes extensive changes in the imagemagick internals, and
+# rmagick is not ready to deal with those, see bug 184356.
 RDEPEND="virtual/ruby
-	>=media-gfx/imagemagick-6.3.5.6"
+	>=media-gfx/imagemagick-6.3.5.6[-hdri]"
 DEPEND="${RDEPEND}
 	doc? ( virtual/ghostscript media-libs/libwmf )"
 
 S="${WORKDIR}/RMagick-${PV}"
-
-# hdri causes extensive changes in the imagemagick internals, and
-# rmagick is not ready to deal with those, see bug 184356.
-pkg_setup() {
-	if built_with_use --missing false media-gfx/imagemagick hdri ; then
-		eerror "imagemagick is built with the hdri USE flag, this is not supported by rmagick"
-		eerror "please rebuild imagemagick without hdri support if you want to use rmagick"
-		die "imagemagick is built with the hdri USE flag, this is not supported by rmagick"
-	fi
-}
 
 # Use a custom src_compile because the setup.rb included with RMagick
 # doesn't like extra parameters during the setup phase.
@@ -65,7 +59,7 @@ src_install() {
 	${RUBY} setup.rb install --prefix="${D}" || die "setup.rb install failed"
 
 	cd "${S}"
-	dodoc ChangeLog README.html README-Mac-OSX.txt
+	dodoc ChangeLog README.html README-Mac-OSX.txt || die
 
 	use examples && dodoc examples/*
 }

@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.15.15.ebuild,v 1.6 2008/12/13 16:28:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.15.15.ebuild,v 1.7 2009/03/08 18:14:25 betelgeuse Exp $
+
+EAPI="2"
 
 inherit ruby
 
@@ -17,25 +19,17 @@ LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="examples doc"
-DEPEND="virtual/ruby
-	>=media-gfx/imagemagick-6.0"
-
-S=${WORKDIR}/RMagick-${PV}
-
 # hdri causes extensive changes in the imagemagick internals, and
 # rmagick is not ready to deal with those, see bug 184356.
-pkg_setup() {
-	if built_with_use --missing false media-gfx/imagemagick hdri ; then
-		eerror "imagemagick is built with the hdri USE flag, this is not supported by rmagick"
-		eerror "please rebuild imagemagick without hdri support if you want to use rmagick"
-		die "imagemagick is built with the hdri USE flag, this is not supported by rmagick"
-	fi
-}
+DEPEND="virtual/ruby
+	>=media-gfx/imagemagick-6.0[-hdri]"
+
+S=${WORKDIR}/RMagick-${PV}
 
 # Using a custom src_compile instead of the ruby one because the ruby
 # one gets confused by an additional setup.rb that should not be used
 # here.
-src_compile() {
+src_configure() {
 	myconf="${RUBY_ECONF} ${EXTRA_ECONF}"
 
 	# When documentation is built many examples are also run. Not all
@@ -56,7 +50,9 @@ src_compile() {
 		--with-ruby=${RUBY} \
 		${myconf} \
 		"$@" || die "econf failed"
+}
 
+src_compile() {
 	ruby_emake "$@" || die
 }
 
@@ -72,5 +68,5 @@ src_install() {
 		${RUBY_ECONF} || die "setup.rb install failed"
 
 	cd "${S}"
-	dodoc ChangeLog README.html README-Mac-OSX.txt README.txt
+	dodoc ChangeLog README.html README-Mac-OSX.txt README.txt || die
 }
