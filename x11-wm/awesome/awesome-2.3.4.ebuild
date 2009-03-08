@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-2.3.4.ebuild,v 1.5 2009/02/01 15:16:24 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-2.3.4.ebuild,v 1.6 2009/03/08 19:38:18 gentoofan23 Exp $
 
+EAPI="2"
 inherit toolchain-funcs eutils
 
 DESCRIPTION="A dynamic floating and tiling window manager"
@@ -14,7 +15,7 @@ KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc gtk"
 
 RDEPEND=">=dev-libs/confuse-2.6
-	x11-libs/cairo
+	x11-libs/cairo[X]
 	x11-libs/pango
 	x11-libs/libX11
 	x11-libs/libXrandr
@@ -32,21 +33,14 @@ DEPEND="${RDEPEND}
 		media-gfx/graphviz
 	)"
 
-pkg_setup() {
-	if ! built_with_use --missing false x11-libs/cairo X ; then
-		eerror "Your x11-libs/cairo packagehas been built without X support,"
-		eerror "please enable the 'X' USE flag and re-emerge x11-libs/cairo."
-		elog "You can enable this USE flag either globally in /etc/make.conf,"
-		elog "or just for specific packages in /etc/portage/package.use."
-		die "x11-libs/cairo missing X support"
-	fi
+src_configure() {
+	econf \
+		$(use_with gtk) \
+		--docdir="/usr/share/doc/${PF}"
 }
 
 src_compile() {
-	econf \
-		$(use_with gtk) \
-		--docdir="/usr/share/doc/${PF}" || die
-	emake || die
+	default
 
 	if use doc; then
 		emake doc || die

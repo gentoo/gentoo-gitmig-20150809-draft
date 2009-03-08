@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.14.ebuild,v 1.10 2009/02/21 07:08:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.14.ebuild,v 1.11 2009/03/08 19:34:16 gentoofan23 Exp $
 
+EAPI="2"
 inherit eutils
 
 DESCRIPTION="Enlightenment Window Manager"
@@ -15,8 +16,8 @@ IUSE="doc esd nls xcomposite xinerama xrandr"
 
 RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	=media-libs/freetype-2*
-	>=media-libs/imlib2-1.3.0
-	!<x11-misc/e16keyedit-0.3
+	>=media-libs/imlib2-1.3.0[X]
+	!!<x11-misc/e16keyedit-0.3
 	x11-libs/libSM
 	x11-libs/libICE
 	x11-libs/libX11
@@ -44,11 +45,7 @@ PDEPEND="doc? ( app-doc/edox-data )"
 
 S=${WORKDIR}/e16-${PV/_pre?}
 
-pkg_setup() {
-	built_with_use media-libs/imlib2 X || die "emerge imlib2 with USE=X"
-}
-
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable nls) \
 		$(use_enable esd sound) \
@@ -59,9 +56,7 @@ src_compile() {
 		--enable-hints-ewmh \
 		--enable-fsstd \
 		--enable-zoom \
-		--with-imlib2 \
-		|| die
-	emake || die
+		--with-imlib2
 }
 
 src_install() {
