@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.3.ebuild,v 1.1 2009/01/22 04:14:36 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.3.ebuild,v 1.2 2009/03/08 19:50:46 maekke Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.gromacs.org/pub/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc64 ~sparc x86"
 IUSE="3dnow X altivec blas double-precision gsl lapack mpi +single-precision sse sse2 static xml"
 
 # mopac7 qm/mm is broken until we can get files from
