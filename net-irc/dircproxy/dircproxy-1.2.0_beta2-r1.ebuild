@@ -1,13 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/dircproxy-1.2.0_beta2-r1.ebuild,v 1.1 2007/10/15 13:25:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/dircproxy-1.2.0_beta2-r1.ebuild,v 1.2 2009/03/08 03:10:26 dragonheart Exp $
 
 inherit eutils
 
 MY_P="${P/_/-}"
 DESCRIPTION="an IRC proxy server"
-SRC_URI="http://dircproxy.securiweb.net/pub/1.2/${MY_P}.tar.bz"
-HOMEPAGE="http://dircproxy.securiweb.net/"
+HOMEPAGE="http://code.google.com/p/dircproxy"
+SRC_URI="http://dircproxy.googlecode.com/files/${MY_P}.tar.bz"
+
 
 SLOT="0"
 LICENSE="GPL-2"
