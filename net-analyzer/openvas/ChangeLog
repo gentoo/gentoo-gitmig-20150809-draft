@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/openvas
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.4 2008/12/20 23:55:58 hanno Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.5 2009/03/08 19:44:45 hanno Exp $
+
+*openvas-2.0.1 (08 Mar 2009)
+
+  08 Mar 2009; Hanno Boeck <hanno@gentoo.org> +openvas-2.0.1.ebuild:
+  Update openvas meta-ebuild.
 
 *openvas-2.0.0 (20 Dec 2008)
 
