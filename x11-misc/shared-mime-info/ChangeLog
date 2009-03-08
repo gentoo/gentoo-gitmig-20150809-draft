@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/shared-mime-info
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.143 2009/03/07 14:12:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.144 2009/03/08 00:44:22 eva Exp $
+
+  08 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  shared-mime-info-0.60.ebuild:
+  Update intltool dependency since intltool-*.in are not provided.
 
 *shared-mime-info-0.60 (07 Mar 2009)
 

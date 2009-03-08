@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.60.ebuild,v 1.1 2009/03/07 14:12:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/shared-mime-info-0.60.ebuild,v 1.2 2009/03/08 00:44:22 eva Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=dev-libs/libxml2-2.4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	>=dev-util/intltool-0.35
+	>=dev-util/intltool-0.40
 	sys-devel/gettext"
 
 src_prepare() {
