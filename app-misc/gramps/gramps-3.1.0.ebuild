@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.1.0.ebuild,v 1.1 2009/03/08 11:37:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.1.0.ebuild,v 1.2 2009/03/08 20:51:34 fauli Exp $
 
 EAPI=2
 NEED_PYTHON="2.5"
@@ -20,12 +20,12 @@ IUSE="gnome reports spell"
 
 RDEPEND=">=dev-python/pygtk-2.10.0
 	x11-misc/xdg-utils
-	gnome-base/librsvg
+	gnome-base/librsvg:2
 	gnome? ( || ( dev-python/libgnome-python
 		>=dev-python/gnome-python-2.22.0
 		>=dev-python/gnome-python-desktop-2.6 ) )
 	spell? ( ||
-			( dev-python/gtkspell dev-python/gnome-python-extras )
+			( dev-python/gtkspell-python dev-python/gnome-python-extras )
 		dev-python/pyenchant )
 	reports? ( media-gfx/graphviz )"
 DEPEND="${RDEPEND}
