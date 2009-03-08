@@ -1,11 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.1.ebuild,v 1.1 2009/03/04 21:01:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.1.ebuild,v 1.2 2009/03/08 23:22:16 scarabeus Exp $
 
 EAPI="2"
 
 CPPUNIT_REQUIRED="optional"
 OPENGL_REQUIRED="optional"
+WEBKIT_REQUIRED="always"
 inherit kde4-base fdo-mime
 
 DESCRIPTION="KDE libraries needed by all KDE programs."

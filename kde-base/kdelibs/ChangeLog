@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.568 2009/03/08 19:25:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.569 2009/03/08 23:22:16 scarabeus Exp $
+
+  08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kdelibs-4.2.1.ebuild:
+  Kdelibs:4.* needs allways webkit.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdelibs-4.2.0-r2.ebuild,
   -kdelibs-4.2.0-r3.ebuild:
