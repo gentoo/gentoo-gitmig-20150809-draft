@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dirac
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/ChangeLog,v 1.28 2008/12/22 14:22:53 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/ChangeLog,v 1.29 2009/03/08 07:49:13 kumba Exp $
+
+  08 Mar 2009; Joshua Kinard <kumba@gentoo.org> dirac-1.0.0.ebuild:
+  Added ~mips to KEYWORDS.
 
   22 Dec 2008; Raúl Porcel <armin76@gentoo.org> dirac-1.0.0.ebuild:
   arm stable
