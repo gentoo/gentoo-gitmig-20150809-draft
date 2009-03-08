@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.6.4.ebuild,v 1.1 2009/01/05 21:02:19 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/vdradmin-am-3.6.4.ebuild,v 1.2 2009/03/08 11:04:03 hd_brummy Exp $
 
 inherit eutils
 
@@ -98,7 +98,7 @@ pkg_preinst() {
 		EOF
 		# feed it with newlines
 		yes "" \
-		  | "${D}"/usr/bin/vdradmind.pl --cfgdir "${D}"${ETC_DIR} --config \
+		  | "${D}"/usr/bin/vdradmind --cfgdir "${D}"${ETC_DIR} --config \
 		  |sed -e 's/: /: \n/g'
 
 		[[ ${PIPESTATUS[1]} == "0" ]] || die "Failed to create initial configuration."
@@ -169,6 +169,6 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	/usr/bin/vdradmind.pl -c
+	/usr/bin/vdradmind -c
 	chown ${VDRADMIN_USER}:${VDRADMIN_GROUP} "${ROOT}"${ETC_DIR}/vdradmind.conf
 }

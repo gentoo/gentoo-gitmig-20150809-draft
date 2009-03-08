@@ -1,6 +1,10 @@
 # ChangeLog for net-www/vdradmin-am
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.31 2009/02/15 19:01:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.32 2009/03/08 11:04:03 hd_brummy Exp $
+
+  08 Mar 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdradmin-am-3.6.4.ebuild, vdradmin-am-3.6.4-r1.ebuild:
+  fixed fail on install, changed vdradmin.pl to vdradmin in ebuild
 
   15 Feb 2009; Joerg Bornkessel <hd_brummy@gentoo.org> files/vdradmin-rc-3,
   files/vdradmin-4:
