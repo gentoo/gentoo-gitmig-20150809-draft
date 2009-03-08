@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.104 2009/03/08 15:37:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.105 2009/03/08 19:36:49 killerfox Exp $
+
+  08 Mar 2009; René Nussbaumer <killerfox@gentoo.org>
+  djbdns-1.05-r22.ebuild:
+  Fix patch order
 
   08 Mar 2009; Tobias Klausmann <klausman@gentoo.org>
   djbdns-1.05-r22.ebuild:

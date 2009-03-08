@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r22.ebuild,v 1.3 2009/03/08 15:37:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r22.ebuild,v 1.4 2009/03/08 19:36:49 killerfox Exp $
 
 IUSE="doc ipv6 selinux static"
 
@@ -44,11 +44,6 @@ src_unpack() {
 		"${FILESDIR}/dnsroots.patch" \
 		"${FILESDIR}/dnstracesort.patch"
 
-	# Fix CVE2008-4392
-	epatch \
-		"${FILESDIR}/CVE2008-4392_0001-dnscache-merge-similar-outgoing-queries.patch" \
-		"${FILESDIR}/CVE2008-4392_0002-dnscache-cache-soa-records.patch"
-
 	if use ipv6; then
 		elog "At present dnstrace does NOT support IPv6. It will"\
 		     "be compiled without IPv6 support."
@@ -57,6 +52,11 @@ src_unpack() {
 		epatch "${DISTDIR}/${P}-${IPV6_PATCH}.diff.bz2"
 		cd "${S}-noipv6"
 	fi
+
+	# Fix CVE2008-4392
+	epatch \
+		"${FILESDIR}/CVE2008-4392_0001-dnscache-merge-similar-outgoing-queries.patch" \
+		"${FILESDIR}/CVE2008-4392_0002-dnscache-cache-soa-records.patch"
 
 	epatch "${FILESDIR}/${PV}-errno.patch"
 
