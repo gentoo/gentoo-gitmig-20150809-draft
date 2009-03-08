@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.207 2009/03/07 20:54:16 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.208 2009/03/08 18:05:47 dang Exp $
+
+  08 Mar 2009; Daniel Gryniewicz <dang@gentoo.org>
+  files/evolution-data-server-2.24.5-CVE-2009-0547.patch:
+  Updated patch from upstream
 
 *evolution-data-server-2.24.5-r1 (07 Mar 2009)
 *evolution-data-server-2.22.3-r2 (07 Mar 2009)
