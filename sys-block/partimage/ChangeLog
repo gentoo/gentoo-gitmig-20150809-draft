@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/partimage
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.38 2008/08/08 06:23:54 ulm Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.39 2009/03/08 22:02:16 josejx Exp $
+
+  08 Mar 2009; Joseph Jezak <josejx@gentoo.org> partimage-0.6.7.ebuild:
+  Marked ppc stable for bug #261081.
 
   08 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
