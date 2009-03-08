@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r4.ebuild,v 1.6 2009/02/05 10:18:24 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r4.ebuild,v 1.7 2009/03/08 22:03:59 chainsaw Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
 PATCH_VERSION="3"
 
 DESCRIPTION="Hardware Abstraction Layer"
-HOMEPAGE="http://www.freedesktop.org/Software/hal"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/hal"
 SRC_URI="http://hal.freedesktop.org/releases/${P/_/}.tar.bz2
 		 http://dev.gentoo.org/~compnerd/files/${PN}/${P}-gentoo-patches-${PATCH_VERSION}.tar.bz2"
 

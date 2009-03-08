@@ -1,15 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.11-r6.ebuild,v 1.4 2009/01/21 22:18:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.12_rc1.ebuild,v 1.1 2009/03/08 22:03:59 chainsaw Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
-PATCH_VERSION="3"
+PATCH_VERSION="1"
 
+MY_P=${P/_/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Hardware Abstraction Layer"
-HOMEPAGE="http://www.freedesktop.org/Software/hal"
-SRC_URI="http://hal.freedesktop.org/releases/${P/_/}.tar.bz2
-		 http://dev.gentoo.org/~compnerd/files/${PN}/${P}-gentoo-patches-${PATCH_VERSION}.tar.bz2"
+HOMEPAGE="http://www.freedesktop.org/wiki/Software/hal"
+SRC_URI="http://hal.freedesktop.org/releases/${MY_P}.tar.bz2
+	 http://dev.gentoo.org/~chainsaw/files/${MY_P}-gentoo-patches-${PATCH_VERSION}.tar.bz2"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
@@ -42,7 +44,6 @@ RDEPEND=">=dev-libs/dbus-glib-0.61
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig
 		>=dev-util/intltool-0.35
-		X? ( >=dev-python/pyxf86config-0.3.34-r1 )
 		doc?	(
 					app-text/xmlto
 					dev-libs/libxml2
@@ -50,9 +51,7 @@ DEPEND="${RDEPEND}
 					app-text/docbook-sgml-utils
 				)"
 PDEPEND="|| (
-	=app-misc/hal-info-20080310
-	=app-misc/hal-info-20080508
-	=app-misc/hal-info-20081219 )
+	>=app-misc/hal-info-20081219 )
 	!gnome-extra/hal-device-manager
 	laptop? ( >=sys-power/pm-utils-0.99.3 )"
 
@@ -120,8 +119,6 @@ pkg_setup() {
 	fi
 }
 
-S="${WORKDIR}/${PF/-r*/}"
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
@@ -131,8 +128,6 @@ src_unpack() {
 	EPATCH_SOURCE="${WORKDIR}/${P}-patches/" \
 	EPATCH_FORCE="yes" \
 	epatch
-
-	epatch "${FILESDIR}"/${P}-ppc64.patch
 
 	eautoreconf
 }
@@ -171,6 +166,9 @@ src_compile() {
 		hardware="--with-cpufreq --with-usb-csr --with-keymaps"
 		use arm && hardware="$hardware --with-omap --enable-pmu"
 		use ppc && hardware="$hardware --enable-pmu"
+		if use x86 || use amd64; then
+			hardware="$hardware --with-macbook --with-macbookpro"
+		fi
 
 		if use dell ; then
 			hardware="$hardware --with-dell-backlight"
@@ -237,14 +235,6 @@ src_install() {
 		# New Configuration Snippets
 		dodoc "${WORKDIR}/${PN}-config-examples/"*.fdi || \
 			die "dodoc X examples failed"
-		dobin "${WORKDIR}/${PN}-config-examples/migrate-xorg-to-fdi.py" || \
-			die "dodoc X migration script failed"
-
-		# Automagic conversion!
-		elog "Migrating xorg.conf Core Keyboard configuration to HAL FDI file"
-		"${WORKDIR}/${PN}-config-examples/migrate-xorg-to-fdi.py" 2> /dev/null \
-			> "${D}/etc/hal/fdi/policy/10-x11-input.fdi" || \
-			ewarn "Failed to migrate your keyboard configuration."
 	fi
 
 	# We now create and keep /media here as both gnome-mount and pmount
@@ -293,11 +283,7 @@ pkg_postinst() {
 		echo
 		elog "X Input Hotplugging (if you build xorg-server with the HAL useflag)"
 		elog "reads user specific configuration from /etc/hal/fdi/policy/."
-		if [[ $(cat "${ROOT}etc/hal/fdi/policy/10-x11-input.fdi" | wc -c) -gt 0 ]]
-		then
-			elog "We have converted your existing xorg.conf rules and the FDI is stored"
-			elog "at /etc/hal/fdi/policy/10-x11-input.fdi"
-		fi
+		echo
 		elog "You should remove the Input sections from your xorg.conf once you have"
 		elog "migrated the rules to a HAL fdi file."
 	fi

@@ -1,9 +1,23 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.277 2009/03/08 21:54:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.278 2009/03/08 22:03:59 chainsaw Exp $
 
   08 Mar 2009; Joseph Jezak <josejx@gentoo.org> hal-0.5.11-r8.ebuild:
   Marked ppc64 for bug #259080.
+
+*hal-0.5.12_rc1 (08 Mar 2009)
+
+  08 Mar 2009; <chainsaw@gentoo.org> hal-0.5.9.1-r3.ebuild,
+  -hal-0.5.11-r1.ebuild, hal-0.5.11-r4.ebuild, -hal-0.5.11-r6.ebuild,
+  -hal-0.5.11-r7.ebuild, hal-0.5.11-r8.ebuild, +hal-0.5.12_rc1.ebuild:
+  Update HOMEPAGE, closes bug #261356 by Mr. Anderson <walch.martin@web.de>.
+  Version bump to 0.5.12 release candidate 1 which incorporates some
+  patches. Patchset trimmed and rebased accordingly.
+
+  08 Mar 2009; <chainsaw@gentoo.org> -hal-0.5.11-r1.ebuild,
+  -hal-0.5.11-r6.ebuild, -hal-0.5.11-r7.ebuild:
+  Spring cleaning, -r1, -r6 & -r7 are no longer required. Will have to keep
+  -r4 around until requested PPC64 keywording is completed.
 
   21 Feb 2009; Jeroen Roovers <jer@gentoo.org> hal-0.5.11-r8.ebuild:
   Stable for HPPA (bug #259080).
