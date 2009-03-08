@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.276 2009/02/21 17:07:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.277 2009/03/08 21:54:11 josejx Exp $
+
+  08 Mar 2009; Joseph Jezak <josejx@gentoo.org> hal-0.5.11-r8.ebuild:
+  Marked ppc64 for bug #259080.
 
   21 Feb 2009; Jeroen Roovers <jer@gentoo.org> hal-0.5.11-r8.ebuild:
   Stable for HPPA (bug #259080).
