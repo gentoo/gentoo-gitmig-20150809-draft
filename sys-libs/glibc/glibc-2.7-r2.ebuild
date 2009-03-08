@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7-r2.ebuild,v 1.13 2008/12/29 21:49:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.7-r2.ebuild,v 1.14 2009/03/08 20:32:10 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -25,7 +25,7 @@ LT_VER=""                                      # version of linuxthreads addon
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.9"}        # min kernel version nptl requires
 #LT_KERN_VER=${LT_KERN_VER:-"2.4.1"}           # min kernel version linuxthreads requires
 
-IUSE="debug gd glibc-omitfp glibc-compat20 hardened multilib nls selinux profile vanilla crosscompile_opts_headers-only ${LT_VER:+glibc-compat20 nptl nptlonly}"
+IUSE="debug gd glibc-omitfp hardened multilib nls selinux profile vanilla crosscompile_opts_headers-only ${LT_VER:+glibc-compat20 nptl nptlonly}"
 S=${WORKDIR}/glibc-${RELEASE_VER}
 
 # Here's how the cross-compile logic breaks down ...
