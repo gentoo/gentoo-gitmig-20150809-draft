@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/sid-milter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.9 2009/03/01 08:46:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.10 2009/03/08 18:31:50 mrness Exp $
+
+*sid-milter-1.0.0-r2 (08 Mar 2009)
+
+  08 Mar 2009; Alin Năstac <mrness@gentoo.org>
+  +files/sid-milter-1.0.0-nopra_on_spf1.patch, +sid-milter-1.0.0-r2.ebuild:
+  Ignore SPF policies in SenderID PRA checks when -n argument is passed on
+  command line.
 
 *sid-milter-1.0.0-r1 (01 Mar 2009)
 
