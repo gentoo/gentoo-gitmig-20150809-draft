@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kscreensaver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.105 2009/03/04 22:15:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.106 2009/03/08 03:18:48 jmbsvicetto Exp $
+
+  08 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kscreensaver-3.5.10.ebuild, kscreensaver-4.2.1.ebuild:
+  Changed the harddep on sys-libs/pam for virtual/pam. Assigned DEPEND
+  explicitely to RDEPEND.
 
 *kscreensaver-4.2.1 (04 Mar 2009)
 
