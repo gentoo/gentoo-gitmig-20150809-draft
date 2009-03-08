@@ -1,6 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-4.76.ebuild,v 1.7 2008/11/09 12:13:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-4.76.ebuild,v 1.8 2009/03/08 01:09:43 cla Exp $
+
+EAPI="2"
 
 inherit eutils flag-o-matic
 
@@ -17,20 +19,10 @@ DEPEND="dev-libs/libpcre
 	net-libs/libpcap
 	gtk? ( >=x11-libs/gtk+-2.6
 		   >=dev-python/pygtk-2.6
-		   || ( >=dev-lang/python-2.5
+		   || ( >=dev-lang/python-2.5[sqlite]
 				>=dev-python/pysqlite-2 )
 		 )
 	ssl? ( dev-libs/openssl )"
-
-pkg_setup() {
-	if use gtk && has_version ">=dev-lang/python-2.5" &&
-	   ! has_version ">=dev-python/pysqlite-2" &&
-	   ! built_with_use dev-lang/python sqlite ; then
-		eerror "In order to use the nmap GUI you have to either emerge dev-lang/python"
-		eerror "with the 'sqlite' USE flag, or install dev-python/pysqlite-2*."
-		die "sqlite support missing"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -39,7 +31,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-4.75-nolua.patch"
 }
 
-src_compile() {
+src_configure() {
 	local myconf=""
 
 	if use lua ; then
