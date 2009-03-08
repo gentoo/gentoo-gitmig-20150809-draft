@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r1.ebuild,v 1.6 2008/08/08 20:09:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r1.ebuild,v 1.7 2009/03/08 01:49:52 cla Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -33,7 +35,7 @@ DEPEND_COM="dev-lang/perl
 			virtual/perl-Text-Balanced
 			virtual/perl-Time-HiRes
 			!minimal? ( dev-perl/HTML-Template
-						net-analyzer/rrdtool )"
+						net-analyzer/rrdtool[perl] )"
 			# Sybase isn't supported in Gentoo
 			#munin-sybase? (	 dev-perl/DBD-Sybase )
 
@@ -48,11 +50,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if use !minimal; then
-		if ! built_with_use net-analyzer/rrdtool perl ; then
-			die 'Sorry, munin needs net-analyzer/rrdtool built with USE=perl.'
-		fi
-	fi
 	unpack ${A}
 	# upstream needs a lot of DESTDIR loving
 	# and Gentoo location support
