@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r5.ebuild,v 1.4 2008/12/30 10:04:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r5.ebuild,v 1.5 2009/03/08 12:12:42 cla Exp $
+
+EAPI="2"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,14 +16,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ipv6 suid unicode"
 
-DEPEND=">=sys-libs/ncurses-5.2-r1"
-
-pkg_setup() {
-	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
-		eerror "sys-libs/ncurses must be build with unicode"
-		die "${PN} requires sys-libs/ncurses with USE=unicode"
-	fi
-}
+DEPEND=">=sys-libs/ncurses-5.2-r1
+	unicode? ( >=sys-libs/ncurses-5.2-r1[unicode] )"
 
 src_unpack() {
 	unpack ${P}.tar.gz

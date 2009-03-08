@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iptraf
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.70 2008/12/30 10:04:22 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.71 2009/03/08 12:12:42 cla Exp $
+
+  08 Mar 2009; Dawid Węgliński <cla@gentoo.org> iptraf-3.0.0-r4.ebuild,
+  iptraf-3.0.0-r5.ebuild:
+  Migrate to EAPI 2
 
   30 Dec 2008; Peter Volkov <pva@gentoo.org>
   +files/iptraf-3.0.0-ipv6-glibc24-updated.patch, iptraf-3.0.0-r5.ebuild:
