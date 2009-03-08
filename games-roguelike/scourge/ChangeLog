@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/scourge
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.32 2008/12/30 15:25:56 mr_bones_ Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.33 2009/03/08 06:44:58 mr_bones_ Exp $
+
+  08 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  scourge-0.21.1.ebuild:
+  EAPI=2; add use-based dep; fix bug #257601
 
 *scourge-0.21.1 (30 Dec 2008)
 
