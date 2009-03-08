@@ -1,11 +1,11 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.12 2009/03/08 19:31:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.13 2009/03/08 19:32:36 scarabeus Exp $
 
   08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kdeplasma-addons-4.2.1.ebuild:
   Add back qt4.5 fix for lancelot. Was not applied by upstream. Per bug
-  #261460.
+  #261461.
 
   05 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kdeplasma-addons-4.2.1.ebuild:
