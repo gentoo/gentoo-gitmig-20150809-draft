@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.36 2009/02/18 19:52:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.37 2009/03/08 16:17:02 maekke Exp $
+
+  08 Mar 2009; Markus Meier <maekke@gentoo.org> wammu-0.29.ebuild:
+  amd64/x86 stable, bug #259521
 
   18 Feb 2009; Alin Năstac <mrness@gentoo.org> wammu-0.29.ebuild:
   Fix minor QA warning.
