@@ -1,8 +1,9 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.57 2009/03/08 15:25:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.58 2009/03/08 15:30:37 maekke Exp $
 
-  08 Mar 2009; Markus Meier <maekke@gentoo.org> ChangeLog:
+  08 Mar 2009; Markus Meier <maekke@gentoo.org>
+  nxserver-freenx-0.7.3-r2.ebuild:
   amd64/x86 stable, bug #256414
 
 *nxserver-freenx-0.7.3-r3 (23 Jan 2009)
