@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/cacti-spine
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.10 2008/08/20 05:27:03 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.11 2009/03/08 11:30:16 pva Exp $
+
+*cacti-spine-0.8.7c (08 Mar 2009)
+
+  08 Mar 2009; Peter Volkov <pva@gentoo.org> +cacti-spine-0.8.7c.ebuild:
+  Version bump.
 
   20 Aug 2008; Peter Volkov <pva@gentoo.org> Manifest:
   Fix digest, bug #235206, thank GES for report.
