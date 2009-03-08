@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-9999.ebuild,v 1.5 2008/12/27 22:47:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-9999.ebuild,v 1.6 2009/03/08 22:18:51 ulm Exp $
 
 inherit elisp subversion
 
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE=""
 
-SITEFILE="51${PN}-gentoo.el"
 DOCS="ChangeLog"
+SITEFILE="50${PN}-gentoo.el"
 
 pkg_postinst() {
 	elisp-site-regen
