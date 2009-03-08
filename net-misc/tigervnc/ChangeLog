@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.1 2009/03/08 15:34:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.2 2009/03/08 18:45:17 armin76 Exp $
+
+  08 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  tigervnc-0.0.90_p3631.ebuild:
+  Fix HOMEPAGE
 
 *tigervnc-0.0.90_p3631 (08 Mar 2009)
 
