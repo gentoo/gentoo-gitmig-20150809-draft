@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/monodevelop-java
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-java/ChangeLog,v 1.5 2009/01/25 16:08:30 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-java/ChangeLog,v 1.6 2009/03/08 16:01:04 loki_val Exp $
+
+*monodevelop-java-1.9.2 (08 Mar 2009)
+
+  08 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +monodevelop-java-1.9.2.ebuild:
+  Beta1 of monodevelop-java-2. Bug 260014. Thanks to uzytkownik
+  <uzytkownik2@gmail.com>.
 
   25 Jan 2009; Peter Alfredsen <loki_val@gentoo.org>
   -monodevelop-java-0.18.ebuild, -monodevelop-java-1.0.ebuild:
