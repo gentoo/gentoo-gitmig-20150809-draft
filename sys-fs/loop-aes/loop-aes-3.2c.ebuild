@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2c.ebuild,v 1.4 2008/05/09 22:22:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2c.ebuild,v 1.5 2009/03/08 14:59:19 betelgeuse Exp $
+
+EAPI="2"
 
 inherit linux-mod
 
@@ -14,18 +16,13 @@ SLOT="0"
 IUSE="keyscrub padlock"
 KEYWORDS="amd64 ~hppa ~ppc x86"
 
-RDEPEND=">=sys-apps/util-linux-2.12r"
+UTIL=">=sys-apps/util-linux-2.12r"
+RDEPEND="|| ( ${UTIL}[crypt] ${UTIL}[loop-aes] )"
 DEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	if ! built_with_use sys-apps/util-linux crypt && \
-		! built_with_use sys-apps/util-linux loop-aes; then
-		eerror "loop-aes needs >=util-linux-2.12q-r1 compiled with crypt or loop-aes use-flag enabled!"
-		die "util-linux without crypt detected"
-	fi
-
 	linux-mod_pkg_setup
 
 	CONFIG_CHECK="!BLK_DEV_LOOP"
@@ -43,7 +40,7 @@ pkg_setup() {
 src_install() {
 	linux-mod_src_install
 
-	dodoc README
+	dodoc README || die
 	dobin loop-aes-keygen
 	doman loop-aes-keygen.1
 }

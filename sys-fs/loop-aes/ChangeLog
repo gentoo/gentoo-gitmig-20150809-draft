@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.38 2009/03/08 14:41:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.39 2009/03/08 14:59:19 betelgeuse Exp $
+
+  08 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> loop-aes-3.2c.ebuild,
+  loop-aes-3.2e.ebuild:
+  Migrate to EAPI 2.
 
   08 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> -loop-aes-3.2d.ebuild:
   Remove old version.
