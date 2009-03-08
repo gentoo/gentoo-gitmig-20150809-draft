@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkonq
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.110 2009/03/08 20:47:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkonq/ChangeLog,v 1.111 2009/03/08 22:56:02 scarabeus Exp $
+
+  08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> libkonq-4.2.1.ebuild:
+  Revert wrongly commited new eclass behavior.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -libkonq-4.2.0.ebuild:
   Drop KDE 4.2.0

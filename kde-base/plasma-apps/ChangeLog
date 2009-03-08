@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-apps
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.11 2009/03/08 20:55:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.12 2009/03/08 22:54:15 scarabeus Exp $
+
+  08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  plasma-apps-4.2.1.ebuild:
+  Revert wrongly commited new eclass behavior.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -plasma-apps-4.2.0.ebuild:
