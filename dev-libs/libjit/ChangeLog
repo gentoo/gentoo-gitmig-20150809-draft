@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libjit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/ChangeLog,v 1.11 2008/08/06 09:52:28 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/ChangeLog,v 1.12 2009/03/08 18:41:32 loki_val Exp $
+
+*libjit-0.1.2 (08 Mar 2009)
+
+  08 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/libjit-0.1.2-gcc43.patch, libjit-0.1.0.ebuild,
+  +libjit-0.1.2.ebuild:
+  Bump to 0.1.2. Fix gcc-4.3 compilation, bug 261136. USE=interpreter works
+  in 0.1.2, fixing bug 197986.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.

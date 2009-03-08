@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/libjit-0.1.0.ebuild,v 1.3 2007/09/09 18:32:53 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/libjit-0.1.0.ebuild,v 1.4 2009/03/08 18:41:32 loki_val Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ DEPEND="doc? ( app-text/texi2html )"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch "${FILESDIR}/${PN}-0.1.2-gcc43.patch"
 
 	# Upstream forgot a header fille, bug #190483
 	cp ${FILESDIR}/${P}-jit-rules-interp.h ${S}/jit/jit-rules-interp.h
