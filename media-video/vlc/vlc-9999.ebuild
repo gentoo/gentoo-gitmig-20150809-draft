@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.1 2009/02/27 10:34:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.2 2009/03/08 18:17:28 aballier Exp $
 
 EAPI="1"
 
@@ -55,7 +55,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc139
 	musepack ncurses nsplugin ogg opengl optimisememory oss pda png	pulseaudio pvr +qt4
 	remoteosd rtsp run-as-root samba schroedinger sdl sdl-image seamonkey shine shout skins speex sse stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcdinfo vcdx vlm vorbis win32codecs wma-fixed
-	X x264 xinerama xml xosd xv zvbi"
+	X x264 xcb xinerama xml xosd xv zvbi"
 
 RDEPEND="
 		sys-libs/zlib
@@ -146,6 +146,7 @@ RDEPEND="
 			opengl? ( virtual/opengl )
 		)
 		x264? ( media-libs/x264 )
+		xcb? ( x11-libs/libxcb x11-libs/xcb-util )
 		xml? ( dev-libs/libxml2 )
 		xosd? ( x11-libs/xosd )
 		zvbi? ( >=media-libs/zvbi-0.2.25 )
@@ -160,6 +161,7 @@ DEPEND="${RDEPEND}
 	v4l? ( sys-kernel/linux-headers )
 	v4l2? ( sys-kernel/linux-headers )
 	X? ( xinerama? ( x11-proto/xineramaproto ) )
+	xcb? ( x11-proto/xproto )
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
@@ -333,6 +335,7 @@ src_compile () {
 		$(use_enable wma-fixed) \
 		$(use_enable X x11) $(use_enable X screen) \
 		$(use_enable x264) \
+		$(use_enable xcb) \
 		$(use_enable xinerama) \
 		$(use_enable xml libxml2) \
 		$(use_enable xosd) \
