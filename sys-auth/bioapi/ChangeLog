@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/bioapi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.9 2008/10/26 19:13:05 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/ChangeLog,v 1.10 2009/03/08 19:49:11 vapier Exp $
+
+*bioapi-1.2.3-r2 (08 Mar 2009)
+
+  08 Mar 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/bioapi-1.2.3-no-delete.patch, +bioapi-1.2.3-r2.ebuild:
+  Do not let mod_install delete symlinks as that is the job of portage.
 
   26 Oct 2008; Markus Meier <maekke@gentoo.org> bioapi-1.2.3-r1.ebuild:
   amd64/x86 stable, bug #244447
