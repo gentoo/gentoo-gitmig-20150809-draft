@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/smooth-themes
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smooth-themes/ChangeLog,v 1.12 2008/11/04 00:50:59 jmbsvicetto Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smooth-themes/ChangeLog,v 1.13 2009/03/08 02:57:44 solar Exp $
+
+  08 Mar 2009; <solar@gentoo.org> smooth-themes-0.5.8-r1.ebuild:
+  keyworded ~arm
 
   04 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
