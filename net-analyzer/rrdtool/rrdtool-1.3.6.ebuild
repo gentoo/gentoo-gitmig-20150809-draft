@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.3.6.ebuild,v 1.1 2009/01/22 11:38:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.3.6.ebuild,v 1.2 2009/03/08 01:43:22 cla Exp $
+
+EAPI="2"
 
 inherit eutils flag-o-matic multilib perl-module
 
@@ -17,7 +19,7 @@ IUSE="doc perl python ruby rrdcgi tcl"
 RDEPEND="
 	>=media-libs/libpng-1.2.10
 	>=dev-libs/libxml2-2.6.31
-	>=x11-libs/cairo-1.4.6
+	>=x11-libs/cairo-1.4.6[svg]
 	>=dev-libs/glib-2.12.12
 	>=x11-libs/pango-1.17
 	tcl? ( dev-lang/tcl )
@@ -30,10 +32,6 @@ DEPEND="${RDEPEND}
 	sys-apps/gawk"
 
 pkg_setup() {
-	if ! built_with_use x11-libs/cairo svg; then
-		eerror "${PN} requires x11-libs/cairo to be built with svg USE flag."
-		die "Rebuild x11-libs/cairo with svg USE flag enabled."
-	fi
 	use perl && perl-module_pkg_setup
 }
 

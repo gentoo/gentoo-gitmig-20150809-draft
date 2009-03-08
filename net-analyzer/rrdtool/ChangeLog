@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.174 2009/02/14 18:22:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.175 2009/03/08 01:43:22 cla Exp $
+
+  08 Mar 2009; Dawid Węgliński <cla@gentoo.org> rrdtool-1.3.6.ebuild:
+  Migration to EAPI 2
 
   14 Feb 2009; Brent Baude <ranger@gentoo.org> rrdtool-1.2.29.ebuild:
   stable ppc, bug 255979
