@@ -1,10 +1,11 @@
 --- CMakeLists.txt.old  2009-02-25 10:26:47.000000000 +0100
 +++ CMakeLists.txt      2009-02-25 10:33:07.000000000 +0100
-@@ -287,6 +287,8 @@
+@@ -287,6 +287,9 @@
      INCLUDE(Find3rdPartyDependencies)
  ENDIF(WIN32)
  
 +OPTION(ENABLE_XUL "Enable plugin gecko if xulrunner is available" ON)
++OPTION(ENABLE_PDF "Enable plugin pdf if poppler-glib and cairo are available" ON)
 +
  # Common to all platforms:
  FIND_PACKAGE(FreeType)
@@ -19,3 +20,17 @@
  
  #use pkg-config to find various modues
  INCLUDE(FindPkgConfig OPTIONAL)
+--- src/osgPlugins/CMakeLists.txt.old	2009-03-08 17:02:24.000000000 +0100
++++ src/osgPlugins/CMakeLists.txt	2009-03-08 17:02:56.000000000 +0100
+@@ -211,9 +211,9 @@
+     ADD_SUBDIRECTORY(svg)
+ ENDIF(RSVG_FOUND AND CAIRO_FOUND)
+ 
+-IF   (POPPLER_FOUND AND CAIRO_FOUND)
++IF(ENABLE_PDF AND POPPLER_FOUND AND CAIRO_FOUND)
+     ADD_SUBDIRECTORY(pdf)
+-ENDIF(POPPLER_FOUND AND CAIRO_FOUND)
++ENDIF(ENABLE_PDF AND POPPLER_FOUND AND CAIRO_FOUND)
+ 
+ IF   (LIBVNCSERVER_FOUND)
+     ADD_SUBDIRECTORY(vnc)
