@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/dbench
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.30 2008/11/24 22:37:04 mr_bones_ Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.31 2009/03/08 20:54:47 maekke Exp $
+
+  08 Mar 2009; Markus Meier <maekke@gentoo.org> dbench-4.0.ebuild:
+  amd64/x86 stable, bug #261723
 
   24 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org> dbench-4.0.ebuild:
   inherit goes near the top
