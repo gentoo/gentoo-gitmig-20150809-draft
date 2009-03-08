@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/kscreensaver-4.2.1.ebuild,v 1.2 2009/03/08 03:18:48 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/kscreensaver-4.2.1.ebuild,v 1.3 2009/03/08 19:27:19 scarabeus Exp $
 
 EAPI="2"
 
@@ -13,6 +13,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug pam"
 
 RDEPEND="
+	dev-cpp/eigen:2
 	dev-libs/glib
 	>=kde-base/kcheckpass-${PV}:${SLOT}[kdeprefix=]
 	>=x11-libs/libxklavier-3.2
