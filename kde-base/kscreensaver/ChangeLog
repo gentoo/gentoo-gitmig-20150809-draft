@@ -1,10 +1,14 @@
 # ChangeLog for kde-base/kscreensaver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.107 2009/03/08 19:27:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.108 2009/03/08 21:10:20 alexxy Exp $
 
   08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kscreensaver-4.2.1.ebuild:
   Add eigen to the deps for nice screensavers. Per bug #261629.
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kscreensaver-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
   08 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kscreensaver-3.5.10.ebuild, kscreensaver-4.2.1.ebuild:

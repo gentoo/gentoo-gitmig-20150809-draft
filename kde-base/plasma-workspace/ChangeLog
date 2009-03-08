@@ -1,10 +1,14 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.11 2009/03/08 19:37:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.12 2009/03/08 21:10:53 alexxy Exp $
 
   08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   +files/4.2.1-panelview-crash-fix.patch, plasma-workspace-4.2.1.ebuild:
   Add panelview crash fix per bug #261460.
+
+  08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -plasma-workspace-4.2.0.ebuild:
+  Drop KDE 4.2.0
 
 *plasma-workspace-4.2.1 (04 Mar 2009)
 
