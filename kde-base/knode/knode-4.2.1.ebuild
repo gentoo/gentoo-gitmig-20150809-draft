@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-4.2.1.ebuild,v 1.2 2009/03/08 13:50:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/knode-4.2.1.ebuild,v 1.3 2009/03/09 17:28:58 scarabeus Exp $
 
 EAPI="2"
 
@@ -19,6 +19,7 @@ RDEPEND="${DEPEND}"
 
 KMEXTRACTONLY="
 	libkpgp/
+	libkdepim/
 "
 
 KMLOADLIBS="libkdepim"
