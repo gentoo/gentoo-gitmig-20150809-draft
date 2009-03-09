@@ -1,6 +1,6 @@
-# Copyright 2008-2008 Gentoo Foundation
+# Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/crossdev-wrappers-20081027.ebuild,v 1.2 2008/10/27 18:13:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/crossdev-wrappers-20081027.ebuild,v 1.3 2009/03/09 16:45:11 armin76 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
 
 S="${WORKDIR}/${PN}"
 

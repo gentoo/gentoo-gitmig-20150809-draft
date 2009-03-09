@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/crossdev-wrappers
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/ChangeLog,v 1.1 2008/10/27 04:20:48 solar Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/ChangeLog,v 1.2 2009/03/09 16:45:11 armin76 Exp $
+
+*crossdev-wrappers-9999 (09 Mar 2009)
+
+  09 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  +crossdev-wrappers-9999.ebuild, crossdev-wrappers-20081027.ebuild:
+  Add live cvs version
 
 *crossdev-wrappers-20081027 (27 Oct 2008)
 
