@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/keditbookmarks
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.21 2009/03/08 19:42:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.22 2009/03/09 17:25:19 scarabeus Exp $
+
+  09 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  keditbookmarks-4.2.1.ebuild:
+  Revert wrongly commited new eclass behavior.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -keditbookmarks-4.2.0.ebuild:
