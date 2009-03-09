@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/yagtd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/yagtd/ChangeLog,v 1.1 2009/03/02 14:00:37 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/yagtd/ChangeLog,v 1.2 2009/03/09 01:12:28 dang Exp $
+
+  09 Mar 2009; Daniel Gryniewicz <dang@gentoo.org> yagtd-0.2.4.ebuild:
+  Marked ~amd64
 
 *yagtd-0.2.4 (02 Mar 2009)
 
