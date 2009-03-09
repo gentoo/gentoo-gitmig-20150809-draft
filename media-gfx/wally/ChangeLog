@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.6 2009/03/02 08:38:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.7 2009/03/09 21:58:11 yngwin Exp $
+
+  09 Mar 2009; Ben de Groot <yngwin@gentoo.org> wally-2.0.0, wally-2.0.1:
+  Add needed app-crypt/qca:2 dependency. Fixes bug 247738.
 
   02 Mar 2009; Markos Chandras <hwoarang@gentoo.org> Manifest:
   Updating manifest ( fixes bug #260808 )
