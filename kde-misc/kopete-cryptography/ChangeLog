@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kopete-cryptography
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-cryptography/ChangeLog,v 1.1 2009/02/03 10:51:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-cryptography/ChangeLog,v 1.2 2009/03/09 00:14:45 jmbsvicetto Exp $
+
+  09 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kopete-cryptography-1.3.0.ebuild:
+  Added missing deps and [kdeprefix=] constraint. Fixes bug 261742.
 
 *kopete-cryptography-1.3.0 (03 Feb 2009)
 

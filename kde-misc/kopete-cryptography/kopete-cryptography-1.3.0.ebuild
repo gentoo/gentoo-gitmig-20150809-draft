@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-cryptography/kopete-cryptography-1.3.0.ebuild,v 1.2 2009/02/03 21:41:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-cryptography/kopete-cryptography-1.3.0.ebuild,v 1.3 2009/03/09 00:14:45 jmbsvicetto Exp $
 
 EAPI="2"
 KDE_MINIMAL="4.1"
@@ -20,7 +20,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=kde-base/kopete-${KDE_MINIMAL}"
+DEPEND="
+	>=kde-base/kopete-${KDE_MINIMAL}[kdeprefix=]
+	>=kde-base/libkdepim-${KDE_MINIMAL}[kdeprefix=]
+	>=kde-base/libkleo-${KDE_MINIMAL}[kdeprefix=]
+"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
