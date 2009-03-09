@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/libtomoe-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/ChangeLog,v 1.11 2009/02/22 21:16:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtomoe-gtk/ChangeLog,v 1.12 2009/03/09 23:02:40 eva Exp $
+
+  09 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  files/libtomoe-gtk-0.6.0-gucharmap2.patch:
+  Fix broken documentation, bug #243160.
 
 *libtomoe-gtk-0.6.0-r1 (22 Feb 2009)
 

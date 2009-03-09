@@ -236,3 +236,18 @@
  	$(top_builddir)/src/libtomoe-gtk.la
  
  OVERRIDES =				\
+--- a/doc/reference/Makefile.am	2009-03-09 23:53:04.000000000 +0100
++++ b/doc/reference/Makefile.am	2009-03-09 23:52:30.000000000 +0100
+@@ -27,10 +27,12 @@
+ 	-I$(top_srcdir)/src 	\
+ 	-I$(top_builddir)/src	\
+ 	$(TOMOE_CFLAGS)		\
++	$(GUCHARMAP_CFLAGS)	\
+ 	$(GTK2_CFLAGS)
+ GTKDOC_LIBS = \
+ 	$(top_builddir)/src/libtomoe-gtk.la	\
+ 	$(TOMOE_LIBS)				\
++	$(GUCHARMAP_LIBS)			\
+ 	$(GTK2_LIBS)
+ 
+ # Extra options to supply to gtkdoc-mkdb
