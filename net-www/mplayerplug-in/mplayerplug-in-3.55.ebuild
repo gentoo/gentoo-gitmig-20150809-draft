@@ -1,8 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.55.ebuild,v 1.1 2008/09/19 06:09:01 josejx Exp $
-
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.55.ebuild,v 1.2 2009/03/09 00:19:04 vapier Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -16,29 +14,29 @@ KEYWORDS="~alpha ~amd64 -hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gtk divx firefox gmedia multilib nls quicktime realmedia seamonkey wmp xulrunner"
 
 LANGS="cs da de en_US es fr hu it ja ko nb nl pl pt_BR ru sk se tr wa zh_CN"
-for X in ${LANGS}; do IUSE="${IUSE} linguas_${X}"; done
+IUSE="${IUSE} $(printf 'linguas_%s ' ${LANGS})"
 
 RDEPEND=">=media-video/mplayer-1.0_pre5
-		xulrunner? ( net-libs/xulrunner )
-		!xulrunner? ( firefox? ( www-client/mozilla-firefox ) )
-		!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )
-		x11-libs/libXpm
-		x11-proto/xextproto
-		gtk? (
-			>=x11-libs/gtk+-2.2.0
-			dev-libs/atk
-			>=dev-libs/glib-2.2.0
-			>=x11-libs/pango-1.2.1
-		)"
+	xulrunner? ( net-libs/xulrunner )
+	!xulrunner? ( firefox? ( www-client/mozilla-firefox ) )
+	!xulrunner? ( !firefox? ( seamonkey? ( =www-client/seamonkey-1* ) ) )
+	x11-libs/libXpm
+	x11-proto/xextproto
+	gtk? (
+		>=x11-libs/gtk+-2.2.0
+		dev-libs/atk
+		>=dev-libs/glib-2.2.0
+		>=x11-libs/pango-1.2.1
+	)"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig
-		multilib? (
-				amd64? (
-					app-emulation/emul-linux-x86-xlibs
-					app-emulation/emul-linux-x86-baselibs
-					app-emulation/emul-linux-x86-gtklibs
-				)
-		)"
+	dev-util/pkgconfig
+	multilib? (
+		amd64? (
+			app-emulation/emul-linux-x86-xlibs
+			app-emulation/emul-linux-x86-baselibs
+			app-emulation/emul-linux-x86-gtklibs
+		)
+	)"
 
 pkg_setup() {
 	### Mozilla Firefox 3.0 doesn't install the pkg config files
@@ -60,10 +58,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
-	# Add -fno-strict-aliasing to ensure correct compilation
-	append-flags -fno-strict-aliasing
-
+_src_compile() {
 	local myconf
 
 	# We force gtk2 now because moz only compiles against gtk2
@@ -74,38 +69,10 @@ src_compile() {
 		myconf="${myconf} --enable-x"
 	fi
 
-	# Build the 32bit plugin
-	if use amd64 && has_multilib_profile; then
-		einfo "Building 32-bit plugin"
-		oldabi="${ABI}"
-		ABI="x86"
-		econf \
-			${myconf} \
-			--x-libraries=/usr/lib32/ \
-			--enable-x86_64 \
-			${myconf2} \
-			$(use_enable divx dvx) \
-			$(use_enable gmedia gmp) \
-			$(use_enable realmedia rm) \
-			$(use_enable quicktime qt) \
-			$(use_enable wmp) \
-			|| die "econf failed"
-
-		emake || die "emake failed"
-
-		# Save the 32bit plugins
-		mkdir lib32
-		mv mplayerplug-in*.so lib32
-		mv mplayerplug-in*.xpt lib32
-		ABI="${oldabi}"
-		emake -j1 clean || die "emake clean failed"
-
-		einfo "Building 64-bit plugin"
-	fi
-
 	# Media Playback Support (bug #145517)
 	econf \
 		${myconf} \
+		"$@" \
 		$(use_enable divx dvx) \
 		$(use_enable gmedia gmp) \
 		$(use_enable realmedia rm) \
@@ -114,6 +81,34 @@ src_compile() {
 		|| die "econf failed"
 
 	emake || die "emake failed"
+}
+
+src_compile() {
+	# Add -fno-strict-aliasing to ensure correct compilation
+	append-flags -fno-strict-aliasing
+
+	# Build the 32bit plugin
+	if use amd64 && has_multilib_profile ; then
+		einfo "Building 32-bit plugin"
+
+		local oldabi=${ABI}
+		multilib_toolchain_setup x86
+		_src_compile \
+			--x-libraries=/usr/$(get_libdir) \
+			--enable-force32
+
+		# Save the 32bit plugins
+		mkdir lib32
+		mv mplayerplug-in*.so lib32
+		mv mplayerplug-in*.xpt lib32
+
+		multilib_toolchain_setup ${oldabi}
+		emake -j1 clean || die "emake clean failed"
+
+		einfo "Building 64-bit plugin"
+	fi
+
+	_src_compile
 }
 
 src_install() {
