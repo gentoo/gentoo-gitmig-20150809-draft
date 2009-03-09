@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.17.ebuild,v 1.5 2009/03/07 19:23:13 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/stfl-0.17.ebuild,v 1.6 2009/03/09 21:03:27 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils perl-module python toolchain-funcs
 
 DESCRIPTION="A library which implements a curses-based widget set for text terminals"
@@ -31,7 +32,7 @@ src_unpack() {
 		-e "s!-Os -ggdb!!" \
 		-e "s!^all:.*!all: libstfl.a!" \
 		Makefile
-	
+
 	python_version
 	sed -i -e "s:/usr/lib/python2.4:${D}/usr/lib/python${PYVER}:" \
 		python/Makefile.snippet
