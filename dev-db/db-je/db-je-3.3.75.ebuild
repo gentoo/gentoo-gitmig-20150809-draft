@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/db-je/db-je-3.3.75.ebuild,v 1.1 2009/01/26 20:03:09 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/db-je/db-je-3.3.75.ebuild,v 1.2 2009/03/09 22:33:09 maekke Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.oracle.com/berkeley-db/${P/db-/}.tar.gz"
 
 LICENSE="as-is"
 SLOT="3.3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.5"

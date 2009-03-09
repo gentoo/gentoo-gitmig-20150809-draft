@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/db-je
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/db-je/ChangeLog,v 1.1 2009/01/26 20:03:09 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/db-je/ChangeLog,v 1.2 2009/03/09 22:33:09 maekke Exp $
+
+  09 Mar 2009; Markus Meier <maekke@gentoo.org> db-je-3.3.75.ebuild:
+  amd64/x86 stable, bug #260957
 
 *db-je-3.3.75 (26 Jan 2009)
 
