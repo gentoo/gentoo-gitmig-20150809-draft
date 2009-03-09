@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9561 2009/03/08 21:35:10 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9562 2009/03/09 10:08:27 dev-zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -687,8 +687,8 @@ dev-util/livecd-kconfigs
 dev-util/livecd-specs
 
 # Tiziano Müller <dev-zero@gentoo.org> (26 Jul 2008)
-# Needs testing, no release yet
-dev-db/ctdb
+# Masking live version
+=dev-db/ctdb-9999
 
 # Alexis Ballier <aballier@gentoo.org> (9 Jul 2008)
 # Latest slv2 release has API changes
