@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/cxsparse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.8 2009/02/08 15:42:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.9 2009/03/09 14:39:47 bicatali Exp $
+
+*cxsparse-2.2.2 (09 Mar 2009)
+
+  09 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/cxsparse-2.2.2-autotools.patch, +cxsparse-2.2.2.ebuild:
+  Version bump
 
   08 Feb 2009; Tobias Klausmann <klausman@gentoo.org> cxsparse-2.2.1.ebuild:
   Stable on alpha, bug #245707
