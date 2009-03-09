@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2424 2009/03/09 10:58:47 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2425 2009/03/09 19:05:37 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Mar 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Unmask mutt-1.5.19, since the sidebar patch was updated
 
   09 Mar 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   remove mesa-7.3-r1 from p.mask
