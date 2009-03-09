@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.9.ebuild,v 1.5 2009/02/16 14:10:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/gjdoc-0.7.9.ebuild,v 1.6 2009/03/09 21:29:37 maekke Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="source"
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/classpath/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
 
 # Possible USE flags.
 #
