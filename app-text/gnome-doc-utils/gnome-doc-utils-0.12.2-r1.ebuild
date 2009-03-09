@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.12.2-r1.ebuild,v 1.12 2009/03/07 14:40:24 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.12.2-r1.ebuild,v 1.13 2009/03/09 04:20:45 mr_bones_ Exp $
 
 EAPI="2"
 inherit autotools eutils python gnome2
@@ -38,7 +38,6 @@ src_unpack() {
 	# Beware of first install, bug #224609
 	AT_M4DIR="tools" eautomake
 }
-
 
 pkg_postinst() {
 	python_version
