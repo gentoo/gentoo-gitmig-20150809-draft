@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.159 2009/03/08 19:02:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.160 2009/03/09 00:38:43 tcunha Exp $
+
+  09 Mar 2009; Tiago Cunha <tcunha@gentoo.org>
+  bash-completion-20081219-r1.ebuild:
+  stable sparc, bug 259724
 
   08 Mar 2009; Tobias Klausmann <klausman@gentoo.org>
   bash-completion-20081219-r1.ebuild:
