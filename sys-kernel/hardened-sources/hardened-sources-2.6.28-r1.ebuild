@@ -1,22 +1,21 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.28.ebuild,v 1.1 2009/01/25 08:16:01 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.28-r1.ebuild,v 1.1 2009/03/09 03:29:07 gengor Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="2"
+K_GENPATCHES_VER="4"
 
 inherit kernel-2
 detect_version
 
-HGPV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-1"
+HGPV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-2"
 HGPV_URI="http://dev.gentoo.org/~gengor/distfiles/${CATEGORY}/${PN}/hardened-patches-${HGPV}.extras.tar.bz2
 	mirror://gentoo/hardened-patches-${HGPV}.extras.tar.bz2"
 SRC_URI="${KERNEL_URI} ${HGPV_URI} ${GENPATCHES_URI} ${ARCH_URI}"
 
 UNIPATCH_LIST="${DISTDIR}/hardened-patches-${HGPV}.extras.tar.bz2"
-UNIPATCH_EXCLUDE="2000_sctp-fwd-tsn-overflow.patch 2300_usb-reenable-interface.patch
-	2515_nokia-6300-wrong-capacity.patch 2700_hda-asus-mic-input.patch 4200_fbcondecor-0.9.4.patch"
+UNIPATCH_EXCLUDE="4200_fbcondecor-0.9.5.patch"
 
 DESCRIPTION="Hardened kernel sources (kernel series ${KV_MAJOR}.${KV_MINOR})"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
@@ -27,7 +26,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 pkg_postinst() {
 	kernel-2_pkg_postinst
 
-	local GRADM_COMPAT="sys-apps/gradm-2.1.12*"
+	local GRADM_COMPAT="sys-apps/gradm-2.1.13*"
 
 	ewarn
 	ewarn "As of ${CATEGORY}/${PN}-2.6.24 the predefined"
