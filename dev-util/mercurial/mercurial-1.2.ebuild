@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.1.2.ebuild,v 1.3 2009/01/09 00:18:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.2.ebuild,v 1.1 2009/03/09 20:07:03 nelchael Exp $
 
 inherit bash-completion elisp-common flag-o-matic eutils distutils
 
