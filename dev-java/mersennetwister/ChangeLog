@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/mersennetwister
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mersennetwister/ChangeLog,v 1.1 2009/01/28 21:17:00 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mersennetwister/ChangeLog,v 1.2 2009/03/09 22:37:32 maekke Exp $
+
+  09 Mar 2009; Markus Meier <maekke@gentoo.org>
+  mersennetwister-0_pre23765.ebuild:
+  amd64/x86 stable, bug #260962
 
 *mersennetwister-0_pre23765 (28 Jan 2009)
 
