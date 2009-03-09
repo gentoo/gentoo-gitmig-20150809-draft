@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/sauerbraten
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.10 2008/06/18 07:06:15 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.11 2009/03/09 18:33:04 scarabeus Exp $
+
+  09 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/sauerbraten_unix.patch, -files/wrapper,
+  -sauerbraten-2007.08.29.ebuild, -sauerbraten-2007.12.27.ebuild,
+  sauerbraten-2008.06.17.ebuild:
+  Allow user editable configuration (map editation wont work as it is
+  CANTFIX). Per bug #232028. Remove old.
 
 *sauerbraten-2008.06.17 (18 Jun 2008)
 

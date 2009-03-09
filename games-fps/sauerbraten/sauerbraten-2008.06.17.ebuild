@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2008.06.17.ebuild,v 1.1 2008/06/18 07:06:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2008.06.17.ebuild,v 1.2 2009/03/09 18:33:04 scarabeus Exp $
+
+EAPI=2
 
 inherit eutils multilib games
 
@@ -14,13 +16,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND="sys-libs/glibc
+DEPEND="" # binary
+RDEPEND="sys-libs/glibc
 	x86? (
-		media-libs/libsdl
-		media-libs/sdl-mixer
-		media-libs/sdl-image
-		media-libs/libpng
-		virtual/opengl
+		media-libs/libsdl[opengl]
+		media-libs/sdl-mixer[mp3,vorbis]
+		media-libs/sdl-image[jpeg,png]
 	)
 	amd64? (
 		app-emulation/emul-linux-x86-soundlibs
@@ -34,6 +35,10 @@ src_unpack() {
 	find -name CVS -print0 | xargs -0 rm -rf
 }
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}_unix.patch
+}
+
 src_install() {
 	use amd64 && multilib_toolchain_setup x86
 
@@ -45,11 +50,15 @@ src_install() {
 
 	local x
 	for x in client server ; do
-		newgamesbin "${FILESDIR}"/wrapper ${PN}_${x}-bin || die
+		newgamesbin "${S}"/sauerbraten_unix ${PN}_${x}-bin || die
 		sed -i \
-			-e "s:@GENTOO_GAMESDIR@:${GAMES_DATADIR}/${PN}:g" \
-			-e "s:@GENTOO_EXEC@:$(games_get_libdir)/${PN}/linux_${x}:g" \
-			"${D}/${GAMES_BINDIR}"/${PN}_${x}-bin
+			-e "s:SAUER_DIR=.:SAUER_DIR=$(games_get_libdir)/${PN}:g" \
+			-e "s:bin_unix/::g" \
+			-e "s:client:${x}:g" \
+			-e "s:MACHINE_NAME=\`uname -m\`:MACHINE_NAME=i686:g" \
+			-e "s:SAUER_DATADIR=.:SAUER_DATADIR=${GAMES_DATADIR}/${PN}:g" \
+			"${D}/${GAMES_BINDIR}"/${PN}_${x}-bin \
+			|| die "unable to sed ${D}/${GAMES_BINDIR}/${PN}_${x}-bin"
 	done
 
 	dohtml -r README.html docs

@@ -1,9 +1,0 @@
-#!/bin/bash -e
-
-mkdir -p ~/.sauerbraten
-cd ~/.sauerbraten
-for l in data packages ; do
-	rm -f ${l}
-	ln -s "@GENTOO_GAMESDIR@"/${l} ${l}
-done
-exec "@GENTOO_EXEC@" "$@"
