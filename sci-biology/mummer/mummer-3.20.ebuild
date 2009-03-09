@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.20.ebuild,v 1.4 2009/03/09 15:29:37 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.20.ebuild,v 1.5 2009/03/09 15:48:51 weaver Exp $
 
 inherit eutils
 
@@ -23,6 +23,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	# Warning: package uses CPPFLAGS on c in addition to cpp, despite the name
+	sed -i -e 's/CPPFLAGS =/CPPFLAGS = ${CFLAGS} /' \
+		-e 's/LDFLAGS  =$//' "${S}/Makefile"
 }
 
 src_compile() {
