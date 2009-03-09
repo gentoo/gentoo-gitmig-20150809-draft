@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.6.2_pre1355.ebuild,v 1.2 2009/03/09 20:20:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.6.2_pre1355.ebuild,v 1.3 2009/03/09 22:24:17 betelgeuse Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ DEPEND_COMMON="
 		x11-libs/libXdamage
 		x11-libs/libXft
 		truetype? ( >=media-libs/freetype-2 )
-		audacious? ( >=media-sound/audacious-1.4.0[dbus] )
+		audacious? ( >=media-sound/audacious-1.5 )
 		bmpx? ( media-sound/bmpx
 				>=sys-apps/dbus-0.35
 			)
