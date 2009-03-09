@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/atokx3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.5 2009/03/04 17:56:51 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/ChangeLog,v 1.6 2009/03/09 17:02:49 matsuu Exp $
+
+*atokx3-3.0.0-r2 (09 Mar 2009)
+
+  09 Mar 2009; MATSUU Takuto <matsuu@gentoo.org> +atokx3-3.0.0-r2.ebuild:
+  Fixed dependency, bug #261250.
 
 *atokx3-3.0.0-r1 (04 Mar 2009)
 
