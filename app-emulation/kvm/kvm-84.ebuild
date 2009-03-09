@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-84.ebuild,v 1.1 2009/02/18 18:17:23 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-84.ebuild,v 1.2 2009/03/09 09:23:43 fauli Exp $
+
+EAPI=2
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
-
-EAPI="1"
 
 # Patchset git repo is at http://github.com/dang/kvm-patches/tree/master
 PATCHSET="kvm-patches-20090218"
@@ -27,7 +27,7 @@ RDEPEND="sys-libs/zlib
 	pulseaudio? ( media-sound/pulseaudio )
 	gnutls? ( net-libs/gnutls )
 	ncurses? ( sys-libs/ncurses )
-	sdl? ( >=media-libs/libsdl-1.2.11 )
+	sdl? ( >=media-libs/libsdl-1.2.11[X] )
 	vde? ( net-misc/vde )"
 
 #    bios? (
@@ -81,16 +81,10 @@ pkg_setup() {
 		die "KVM support not detected!"
 	fi
 
-	if use sdl && ! built_with_use media-libs/libsdl X ; then
-		die "You need to rebuild media-libs/libsdl with the X use flag"
-	fi
-
 	enewgroup kvm
 }
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	cd "${S}"
 	# prevent docs to get automatically installed
 	sed -i '/$(DESTDIR)$(docdir)/d' qemu/Makefile
@@ -113,7 +107,7 @@ src_unpack() {
 		qemu/qemu-doc.texi qemu/qemu-img.texi qemu/qemu-nbd.texi
 }
 
-src_compile() {
+src_configure() {
 	local mycc conf_opts audio_opts
 
 	audio_opts="oss"
@@ -130,7 +124,9 @@ src_compile() {
 	#conf_opts="$conf_opts --audio-drv-list=\"$audio_opts\""
 
 	./configure ${conf_opts} --audio-drv-list="$audio_opts" || die "econf failed"
+}
 
+src_compile() {
 	emake libkvm || die "emake libkvm failed"
 
 	if use test; then
