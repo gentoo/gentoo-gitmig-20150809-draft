@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.2_p1-r2.ebuild,v 1.1 2009/03/09 03:42:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.2_p1-r2.ebuild,v 1.2 2009/03/09 04:23:00 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib autotools pam
 
@@ -164,7 +164,7 @@ src_install() {
 			-e "/^#PrintLastLog /s:.*:PrintLastLog no:" \
 			"${D}"/etc/ssh/sshd_config || die "sed of configuration file failed"
 	fi
-	
+
 	# This instruction is from the HPN webpage,
 	# Used for the server logging functionality
 	if [[ -n ${HPN_PATCH} ]] && use hpn; then
