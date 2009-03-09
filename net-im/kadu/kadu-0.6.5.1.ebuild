@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.1.ebuild,v 1.2 2009/03/07 18:28:29 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.1.ebuild,v 1.3 2009/03/09 13:31:28 cla Exp $
 
 inherit base cmake-utils flag-o-matic
 
@@ -20,6 +20,7 @@ COMMON_DEPEND="
 	>=net-libs/libgadu-1.8[threads]
 	>=x11-libs/qt-dbus-4.4:4
 	>=x11-libs/qt-gui-4.4:4
+	>=x11-libs/qt-webkit-4.4:4
 	alsa? ( media-libs/alsa-lib )
 	ao? ( media-libs/libao )
 	spell? ( app-text/aspell )
