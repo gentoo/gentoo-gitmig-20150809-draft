@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/pyicq-t-0.8.1.1.ebuild,v 1.2 2009/03/07 03:43:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyicq-t/pyicq-t-0.8.1.1.ebuild,v 1.3 2009/03/09 14:12:41 armin76 Exp $
 
 NEED_PYTHON=2.3
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="webinterface"
 
 DEPEND="net-im/jabber-base"
