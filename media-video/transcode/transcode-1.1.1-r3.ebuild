@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.1-r3.ebuild,v 1.1 2009/03/08 12:34:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.1-r3.ebuild,v 1.2 2009/03/09 17:36:50 beandog Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ WANT_AUTOMAKE="1.10"
 inherit libtool flag-o-matic eutils multilib autotools
 
 MY_P=${P/_}
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 DESCRIPTION="video stream processing tool"
 HOMEPAGE="http://www.transcoding.org/cgi-bin/transcode"
 SRC_URI="mirror://berlios/tcforge/${MY_P}.tar.bz2"
@@ -47,9 +47,6 @@ RDEPEND="a52? ( media-libs/a52dec )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )"
-# Make sure the assembler USE flags are unmasked on amd64
-# Remove this once default-linux/amd64/2006.1 is deprecated
-DEPEND="${DEPEND} amd64? ( >=sys-apps/portage-2.1.2 )"
 
 src_unpack() {
 	unpack ${A}
