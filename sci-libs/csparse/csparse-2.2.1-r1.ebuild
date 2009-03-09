@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/csparse/csparse-2.2.1.ebuild,v 1.1 2008/02/05 18:44:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/csparse/csparse-2.2.1-r1.ebuild,v 1.1 2009/03/09 16:45:31 bicatali Exp $
 
 inherit autotools eutils
 
@@ -22,6 +22,12 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-autotools.patch
 	eautoreconf
+}
+
+src_compile() {
+	# avoid collision with cxsparse
+	econf --includedir="/usr/include/csparse"
+	emake || die "emake failed"
 }
 
 src_install() {
