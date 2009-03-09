@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.21.ebuild,v 1.2 2009/03/09 15:48:51 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.21.ebuild,v 1.3 2009/03/09 15:55:37 weaver Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="doc"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="app-shells/tcsh"
 
 S="${WORKDIR}/${MY_P}"
 
