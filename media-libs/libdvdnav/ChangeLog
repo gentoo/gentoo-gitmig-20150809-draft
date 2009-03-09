@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvdnav
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.44 2009/03/09 18:04:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.45 2009/03/09 19:00:16 beandog Exp $
+
+  09 Mar 2009; Steve Dibb <beandog@gentoo.org> libdvdnav-4.1.3_p1168.ebuild,
+  libdvdnav-9999.ebuild:
+  Switch to autotools, bug 249638
 
 *libdvdnav-9999 (09 Mar 2009)
 *libdvdnav-4.1.3_p1168 (09 Mar 2009)
