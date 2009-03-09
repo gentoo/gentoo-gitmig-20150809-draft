@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.22.3-r2.ebuild,v 1.1 2009/03/07 20:54:16 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.22.3-r2.ebuild,v 1.2 2009/03/09 04:22:05 mr_bones_ Exp $
 
 inherit db-use eutils flag-o-matic gnome2 autotools
 
@@ -94,7 +94,6 @@ src_unpack() {
 
 	# Fix S/MIME verification.  Bug #258867
 	epatch "${FILESDIR}"/${P}-CVE-2009-0547.patch
-
 
 	# gtk-doc-am and gnome-common needed for this
 	eautoreconf
