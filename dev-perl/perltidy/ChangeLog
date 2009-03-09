@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perltidy
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/ChangeLog,v 1.38 2009/03/09 22:58:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/ChangeLog,v 1.39 2009/03/09 23:26:19 fmccor Exp $
+
+  09 Mar 2009; Ferris McCormick <fmccor@gentoo.org>
+  perltidy-20071205.ebuild:
+  Sparc stable, Bug #261760.
 
   09 Mar 2009; Markus Meier <maekke@gentoo.org> perltidy-20071205.ebuild:
   amd64/x86 stable, bug #261760
