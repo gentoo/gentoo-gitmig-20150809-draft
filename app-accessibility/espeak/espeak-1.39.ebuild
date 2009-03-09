@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.39.ebuild,v 1.7 2009/01/11 14:11:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.39.ebuild,v 1.8 2009/03/09 11:42:26 flameeyes Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ pkg_setup() {
 	if ! use portaudio && ! use pulseaudio; then
 		ewarn
 		ewarn Since portaudio and pulseaudio are not in your use flags,
-		ewarn espeak will only bbe able to create wav files.
+		ewarn espeak will only be able to create wav files.
 		ewarn If this is not what you want, press ctrl-c and put either
 		ewarn portaudio or pulseaudio in your use flags.
 		ebeep
