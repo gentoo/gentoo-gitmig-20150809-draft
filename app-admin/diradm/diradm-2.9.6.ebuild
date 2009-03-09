@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.9.6.ebuild,v 1.1 2008/09/25 05:53:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.9.6.ebuild,v 1.2 2009/03/09 21:14:53 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -26,18 +28,18 @@ DEPEND=">=net-nds/openldap-2.3
 		dev-perl/Crypt-SmbHash
 		>=net-fs/samba-3.0.6
 	)
-	test? ( dev-perl/Crypt-SmbHash >=net-fs/samba-3.0.6 dev-util/dejagnu )"
+	test? (
+		dev-perl/Crypt-SmbHash
+		>=net-fs/samba-3.0.6
+		dev-util/dejagnu
+		net-nds/openldap[-minimal]
+	)"
 
 pkg_setup() {
-	if use test; then
-		if built_with_use net-nds/openldap minimal ; then
-			die "You MUST have a non-minimal build of OpenLDAP to use the testcases!"
-		fi
-		elog "Warning, for test usage, diradm is built with all optional features!"
-	fi
+	use test && elog "Warning, for test usage, diradm is built with all optional features!"
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	if use test; then
 		myconf="--enable-samba --enable-automount --enable-irixpasswd"
@@ -45,12 +47,12 @@ src_compile() {
 		myconf="`use_enable samba` `use_enable automount` `use_enable irixpasswd`"
 	fi
 	econf ${myconf} || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc CHANGES* README AUTHORS ChangeLog NEWS README.prefork THANKS TODO KNOWN-BUGS
+	dodoc CHANGES* README AUTHORS ChangeLog NEWS README.prefork \
+		THANKS TODO KNOWN-BUGS || die
 	if use irixpasswd; then
 		insinto /etc/openldap/schema
 		doins irixpassword.schema
@@ -64,6 +66,5 @@ pkg_postinst() {
 }
 
 src_test() {
-	use test || die "You must build diradm with USE=test to run the testcases!"
 	emake -j1 check
 }

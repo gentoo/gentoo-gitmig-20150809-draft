@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/diradm
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.36 2009/03/09 20:52:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.37 2009/03/09 21:14:53 betelgeuse Exp $
+
+  09 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> diradm-2.9.3.ebuild,
+  diradm-2.9.6.ebuild:
+  Migrate to EAPI 2.
 
   09 Mar 2009; Robin H. Johnson <robbat2@gentoo.org> -diradm-1.1.ebuild,
   -diradm-1.1-r1.ebuild, -diradm-1.2.ebuild, -diradm-2.1.ebuild,
