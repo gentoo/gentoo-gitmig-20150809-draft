@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2008.06.17.ebuild,v 1.2 2009/03/09 18:33:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/sauerbraten-2008.06.17.ebuild,v 1.3 2009/03/09 19:27:37 mr_bones_ Exp $
 
 EAPI=2
 
@@ -30,12 +30,8 @@ RDEPEND="sys-libs/glibc
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	find -name CVS -print0 | xargs -0 rm -rf
-}
-
 src_prepare() {
+	ecvs_clean
 	epatch "${FILESDIR}"/${PN}_unix.patch
 }
 
