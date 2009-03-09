@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.13 2007/04/26 15:39:15 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.14 2009/03/09 17:03:52 mr_bones_ Exp $
 
 inherit eutils multilib games
 
@@ -16,7 +16,7 @@ RESTRICT="strip"
 QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/gish"
 
 RDEPEND="media-libs/libsdl
-	media-libs/openal
+	>=media-libs/openal-1.6.372
 	media-libs/freealut
 	virtual/opengl
 	media-libs/libvorbis
@@ -40,6 +40,11 @@ src_install() {
 	use amd64 && multilib_toolchain_setup x86
 	dosym /$(get_libdir)/libc.so.6 "${dir}"/libssl.so.4
 	dosym /$(get_libdir)/libc.so.6 "${dir}"/libcrypto.so.4
+
+	# it wants libopenal.so.0 but seems to work with libopenal.so.1
+	# (tested with media-libs/openal-1.6.372)
+	dosym /usr/$(get_libdir)/libopenal.so.1 "${dir}"/libopenal.so.0
+
 	exeinto "${dir}"
 	doexe "${FILESDIR}"/gish-wrapper || die "doexe failed"
 
