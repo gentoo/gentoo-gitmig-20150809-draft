@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.26-r1.ebuild,v 1.1 2007/08/13 14:00:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.26-r1.ebuild,v 1.2 2009/03/09 20:21:04 flameeyes Exp $
 
 inherit eutils
 
@@ -20,15 +20,15 @@ DEPEND="sdl? ( media-libs/libsdl
 			 )
 	!sdl? ( X? ( x11-libs/libXext
 				 dga? ( x11-libs/libXxf86dga
-					    x11-libs/libXxf86vm )
+						x11-libs/libXxf86vm )
 				 ui? ( x11-libs/gtk+ )
 			   )
 			!X? ( svga? ( media-libs/svgalib
-				 		  ui? ( sys-libs/ncurses ) )
+						  ui? ( sys-libs/ncurses ) )
 				  !svga? ( aalib? ( media-libs/aalib
-				 		            ui? ( sys-libs/ncurses ) ) )
-				  		   !aalib? ( media-libs/libsdl
-			   						 ui? ( x11-libs/gtk+ ) ) )
+									ui? ( sys-libs/ncurses ) ) )
+						   !aalib? ( media-libs/libsdl
+									 ui? ( x11-libs/gtk+ ) ) )
 			alsa? ( media-libs/alsa-lib )
 		  )
 	scsi? ( app-cdr/cdrtools )"
@@ -122,9 +122,9 @@ pkg_setup() {
 					my_config="${my_config} --disable-ui"
 				fi
 			else
-				elog "You have not enabled sdl or X or svga or ncruses in USE!"
+				elog "You have not enabled sdl or X or svga or ncurses in USE!"
 				elog "Video output is not selected. Falling back on sdl..."
-				my_config="$(use_with sdl) $(use_with sdl sdl-gfx) $(use with sdl-sound)"
+				my_config="$(use_with sdl) $(use_with sdl sdl-gfx) $(use_with sdl-sound)"
 				# SELECT UI
 				if use ui ; then
 					elog "Using GTK+ for UI."
