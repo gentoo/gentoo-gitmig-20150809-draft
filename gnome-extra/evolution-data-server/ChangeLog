@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.209 2009/03/08 20:58:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.210 2009/03/09 21:15:02 maekke Exp $
+
+  09 Mar 2009; Markus Meier <maekke@gentoo.org>
+  evolution-data-server-2.22.3-r2.ebuild:
+  amd64/x86 stable, bug #258867
 
   08 Mar 2009; Daniel Gryniewicz <dang@gentoo.org>
   files/evolution-data-server-2.22.3-CVE-2009-0547.patch:
