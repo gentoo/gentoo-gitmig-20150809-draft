@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/ctdb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.1 2008/07/26 20:23:11 dev-zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.2 2009/03/09 10:07:27 dev-zero Exp $
+
+*ctdb-1.0.73 (09 Mar 2009)
+
+  09 Mar 2009; Tiziano Müller <dev-zero@gentoo.org> +ctdb-1.0.73.ebuild:
+  Added release version of ctdb
 
 *ctdb-9999 (26 Jul 2008)
 
