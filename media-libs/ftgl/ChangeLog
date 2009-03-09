@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ftgl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.24 2009/03/07 05:07:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.25 2009/03/09 16:42:06 armin76 Exp $
+
+  09 Mar 2009; Raúl Porcel <armin76@gentoo.org> ftgl-2.1.3_rc5.ebuild:
+  x86 stable wrt #245293
 
   07 Mar 2009; Jeremy Olexa <darkside@gentoo.org> ftgl-2.1.3_rc5.ebuild:
   amd64 stable, bug 245293
