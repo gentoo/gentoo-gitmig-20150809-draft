@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.9-r1.ebuild,v 1.10 2009/01/02 10:15:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.9-r1.ebuild,v 1.11 2009/03/09 18:42:27 armin76 Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -109,6 +109,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# Fails to compile on SH
+	use sh && replace-flags -O? -O0
+
 	# needed to prevent ghostscript compile failures
 	use kerberos && strip-flags
 
