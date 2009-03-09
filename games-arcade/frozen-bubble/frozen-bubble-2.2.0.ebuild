@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.0.ebuild,v 1.8 2009/01/21 18:11:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.0.ebuild,v 1.9 2009/03/09 17:11:03 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils gnome2-utils perl-module games
@@ -39,7 +39,6 @@ src_install() {
 	local res
 
 	emake DESTDIR="${D}" install || die "make install failed"
-	dosed /usr/games/bin/frozen-bubble
 	dodoc AUTHORS NEWS README TIPS
 	for res in 16x16 32x32 48x48 64x64 ; do
 		insinto /usr/share/icons/hicolor/${res}/apps
