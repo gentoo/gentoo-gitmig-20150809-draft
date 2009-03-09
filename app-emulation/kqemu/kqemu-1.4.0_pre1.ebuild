@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.4.0_pre1.ebuild,v 1.2 2009/03/09 09:01:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/kqemu-1.4.0_pre1.ebuild,v 1.3 2009/03/09 10:36:27 lu_zero Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -44,10 +44,6 @@ src_unpack() {
 }
 
 src_compile() {
-	#Let the application set its cflags
-	unset CFLAGS
-
-	# Switch off hardened tech
 	filter-flags -fpie -fstack-protector
 
 	./configure --kernel-path="${KV_DIR}" \
@@ -57,7 +53,7 @@ src_compile() {
 				--extra-ldflags="${LDFLAGS}" \
 		|| die "could not configure"
 
-	make
+	make || die "Make failed"
 }
 
 src_install() {
