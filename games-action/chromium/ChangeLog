@@ -1,6 +1,9 @@
 # ChangeLog for games-action/chromium
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.33 2009/03/07 05:27:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.34 2009/03/09 16:46:55 armin76 Exp $
+
+  09 Mar 2009; Raúl Porcel <armin76@gentoo.org> chromium-0.9.13.3.ebuild:
+  x86 stable wrt #245293
 
   07 Mar 2009; Jeremy Olexa <darkside@gentoo.org> chromium-0.9.13.3.ebuild:
   revert amd64 kw back to ~amd64, bug 245293 - comment 9
