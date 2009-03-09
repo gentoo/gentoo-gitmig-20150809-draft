@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mummer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/ChangeLog,v 1.5 2009/03/09 15:55:37 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/ChangeLog,v 1.6 2009/03/09 19:57:28 weaver Exp $
+
+  09 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> mummer-3.21.ebuild:
+  QA fixes
 
   09 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> mummer-3.20.ebuild,
   mummer-3.21.ebuild:
