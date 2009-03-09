@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.6.1.ebuild,v 1.10 2008/09/21 16:03:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.6.1.ebuild,v 1.11 2009/03/09 20:20:41 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils
 # used for epause
@@ -15,7 +17,6 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="audacious bmpx debug hddtemp ipv6 mpd nano-syntax nvidia rss truetype vim-syntax smapi wifi X"
 
 DEPEND_COMMON="
-	virtual/libc
 	X? (
 		x11-libs/libICE
 		x11-libs/libXext
@@ -25,7 +26,7 @@ DEPEND_COMMON="
 		x11-libs/libXdamage
 		x11-libs/libXft
 		truetype? ( >=media-libs/freetype-2 )
-		audacious? ( >=media-sound/audacious-1.4.0 )
+		audacious? ( >=media-sound/audacious-1.4.0[dbus] )
 		bmpx? ( media-sound/bmpx
 				>=sys-apps/dbus-0.35
 			)
@@ -50,32 +51,11 @@ DEPEND="
 		x11-proto/xproto
 	)"
 
-pkg_setup() {
-	if use audacious; then
-		if has_version '<media-sound/audacious-1.5.0' && ! built_with_use media-sound/audacious dbus; then
-			eerror "media-sound/audacious is not built with dbus USE flag."
-			eerror "Please add 'dbus' to your USE flags, and re-emerge media-sound/audacious."
-			die "media-sound/audacious needs USE=dbus"
-		fi
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-stdio.patch"
 }
 
 src_compile() {
-	local mymake
-	if useq ipv6 ; then
-		ewarn "You have the ipv6 USE flag enabled.  Please note that using"
-		ewarn "the ipv6 USE flag with Conky disables the port monitor."
-		epause
-	else
-		mymake="MPD_NO_IPV6=noipv6"
-	fi
 	local myconf
 	myconf="--enable-proc-uptime"
 	if useq X; then
@@ -97,13 +77,25 @@ src_compile() {
 		$(use_enable smapi) \
 		$(use_enable wifi wlan) \
 		$(use_enable !ipv6 portmon) || die "econf failed"
+}
+
+src_compile() {
+	local mymake
+	if useq ipv6 ; then
+		ewarn "You have the ipv6 USE flag enabled.  Please note that using"
+		ewarn "the ipv6 USE flag with Conky disables the port monitor."
+		epause
+	else
+		mymake="MPD_NO_IPV6=noipv6"
+	fi
+
 	emake ${mymake} || die "compile failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc ChangeLog AUTHORS README
-	dohtml doc/docs.html doc/config_settings.html doc/variables.html
+	dodoc ChangeLog AUTHORS README || die
+	dohtml doc/docs.html doc/config_settings.html doc/variables.html || die
 
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/ftdetect
