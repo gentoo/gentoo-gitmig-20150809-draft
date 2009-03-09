@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.177 2009/01/26 21:54:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.178 2009/03/09 22:45:32 eva Exp $
+
+*gnumeric-1.8.4-r1 (09 Mar 2009)
+
+  09 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gnumeric-1.8.4-CVE-2009-0318.patch, +gnumeric-1.8.4-r1.ebuild:
+  Bump to 1.8.4-r1. Fix for CVE-2009-0318, bug #257012.
 
 *gnumeric-1.8.4 (26 Jan 2009)
 
