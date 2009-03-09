@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.0.0.ebuild,v 1.5 2009/03/07 15:35:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.0.0.ebuild,v 1.6 2009/03/09 04:23:36 mr_bones_ Exp $
 
 EAPI="2"
 WANT_AUTOCONF=2.5
 
 inherit flag-o-matic eutils autotools toolchain-funcs
-
 
 IUSE="doc fasttrack gd gnutella gtk guionly magic +ocamlopt"
 
