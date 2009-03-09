@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/mell
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/ChangeLog,v 1.16 2007/12/02 15:14:47 opfer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/ChangeLog,v 1.17 2009/03/09 13:01:14 ulm Exp $
+
+*mell-1.0.0-r1 (09 Mar 2009)
+
+  09 Mar 2009; Ulrich Mueller <ulm@gentoo.org> +files/51mell-gentoo.el,
+  +mell-1.0.0-r1.ebuild:
+  Ebuild completely redone, use facilities of elisp.eclass instead of the
+  package's build system. Byte-compile all elisp files. Install Japanese
+  documentation with LINGUAS=ja only.
 
   02 Dec 2007; Christian Faulhammer <opfer@gentoo.org> mell-1.0.0.ebuild:
   only install useful documentation and make dodoc argument readable
