@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.2.ebuild,v 1.1 2009/03/09 20:07:03 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-1.2.ebuild,v 1.2 2009/03/09 20:50:49 nelchael Exp $
 
 inherit bash-completion elisp-common flag-o-matic eutils distutils
 
@@ -79,7 +79,8 @@ src_test() {
 	local testdir="${T}/tests"
 	mkdir -p -m1777 "${testdir}" || die
 	cd "${S}/tests/"
-	rm -f *svn*		# Subversion tests fail with 1.5
+	rm -rf *svn*		# Subversion tests fail with 1.5
+	rm -f test-archive			# Fails due to verbose tar output changes
 	rm -f test-convert-baz*		# GNU Arch baz
 	rm -f test-convert-cvs*		# CVS
 	rm -f test-convert-darcs*	# Darcs
