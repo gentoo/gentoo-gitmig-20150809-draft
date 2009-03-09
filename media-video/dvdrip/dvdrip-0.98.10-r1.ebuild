@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.10.ebuild,v 1.1 2009/03/07 13:51:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.10-r1.ebuild,v 1.1 2009/03/09 20:11:41 beandog Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-perl/Event-ExecFlow-0.63
 	>=dev-perl/gtk2-ex-formfactory-0.65
 	>=dev-perl/libintl-perl-1.16
 	media-gfx/imagemagick
-	media-video/transcode[dvdread]"
+	media-video/transcode[dvdread,jpeg,mp3,mpeg,ogg,vorbis]"
 RDEPEND="${DEPEND}
 	x11-libs/gtk+:2[jpeg]
 	ffmpeg? ( media-video/ffmpeg )
