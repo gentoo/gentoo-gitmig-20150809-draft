@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.9.ebuild,v 1.4 2007/12/26 22:13:14 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.9.ebuild,v 1.5 2009/03/09 11:44:30 flameeyes Exp $
 
 IUSE=""
 
@@ -24,11 +24,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i 's:/etc/es.conf:/etc/eflite/es.conf:g' *
-	econf || die "configuration failed"
-}
-
-src_compile() {
-	emake || die "compile failed"
 }
 
 src_install() {
