@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/mod_vhost_ldap-1.0.0-r1.ebuild,v 1.2 2008/02/07 22:22:16 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/mod_vhost_ldap-1.0.0-r1.ebuild,v 1.3 2009/03/09 20:00:39 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils apache-module
 
@@ -19,22 +21,14 @@ APACHE2_MOD_DEFINE="VHOST_LDAP LDAP"
 
 DOCFILES="AUTHORS ChangeLog INSTALL README"
 
+DEPEND="=www-servers/apache-2.2*[ldap]"
+RDEPEND="${DEPEND}"
+
 need_apache2_2
 
 S="${WORKDIR}/mod-vhost-ldap-${PV}"
 
-pkg_setup() {
-	if ! built_with_use www-servers/apache ldap ; then
-		eerror
-		eerror "Apache2 needs to be built with ldap support to get this module working!"
-		eerror
-		die "Apache2 lacks ldap support"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-apache22.patch
 }
 
