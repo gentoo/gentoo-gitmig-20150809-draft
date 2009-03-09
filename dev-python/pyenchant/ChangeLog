@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyenchant
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.5 2008/03/12 18:10:15 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.6 2009/03/09 13:13:21 fmccor Exp $
+
+  09 Mar 2009; Ferris McCormick <fmccor@gentoo.org> pyenchant-1.1.5.ebuild:
+  Add ~sparc for testing, required by Bug #261672.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Marien Zwart (marienz, #107204) from metadata.xml.
