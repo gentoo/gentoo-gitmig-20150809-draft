@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.56 2009/03/06 22:41:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.57 2009/03/09 17:37:34 lu_zero Exp $
+
+  09 Mar 2009; Luca Barbato <lu_zero@gentoo.org> qemu-softmmu-0.10.0.ebuild:
+  Fix leftover from kvm ebuild import
 
 *qemu-softmmu-0.10.0 (06 Mar 2009)
 
