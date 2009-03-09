@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lzmajio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/ChangeLog,v 1.3 2009/01/26 18:54:49 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lzmajio/ChangeLog,v 1.4 2009/03/09 22:36:39 maekke Exp $
+
+  09 Mar 2009; Markus Meier <maekke@gentoo.org> lzmajio-0.94.ebuild:
+  amd64/x86 stable, bug #260960
 
 *lzmajio-0.94 (26 Jan 2009)
 
