@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/phyml
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/ChangeLog,v 1.3 2008/02/17 11:24:21 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/ChangeLog,v 1.4 2009/03/09 13:41:01 weaver Exp $
+
+*phyml-2.4.5-r1 (09 Mar 2009)
+
+  09 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> +phyml-2.4.5-r1.ebuild:
+  QA fixes
 
   17 Feb 2008; Christian Faulhammer <opfer@gentoo.org> phyml-2.4.5.ebuild:
   stable x86/amd64, bug 207096
