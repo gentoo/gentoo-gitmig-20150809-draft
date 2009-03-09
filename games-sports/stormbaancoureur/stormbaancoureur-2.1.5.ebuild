@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-2.1.5.ebuild,v 1.1 2008/08/01 14:20:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-2.1.5.ebuild,v 1.2 2009/03/09 16:00:21 armin76 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -10,7 +10,7 @@ SRC_URI="http://bram.creative4vision.nl/stormbaancoureur/download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl
