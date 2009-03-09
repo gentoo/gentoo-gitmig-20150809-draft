@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.60 2008/09/03 17:54:12 gentoofan23 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.61 2009/03/09 09:54:50 lu_zero Exp $
+
+*qemu-0.10.0 (09 Mar 2009)
+
+  09 Mar 2009; Luca Barbato <lu_zero@gentoo.org> +qemu-0.10.0.ebuild:
+  New version
 
   03 Sep 2008; Thomas Anderson <gentoofan23@gentoo.org> qemu-0.9.1.ebuild:
   stable amd64, needed to go stable becuase qemu-softmmu went stable, mfi
