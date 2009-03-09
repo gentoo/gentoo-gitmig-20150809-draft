@@ -1,6 +1,6 @@
 # Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/crossdev-wrappers-9999.ebuild,v 1.1 2009/03/09 16:45:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/crossdev-wrappers-9999.ebuild,v 1.2 2009/03/09 17:13:43 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils cvs
 
@@ -35,4 +35,3 @@ pkg_postinst() {
 	einfo "Running emerge-wrapper --init"
 	emerge-wrapper --init
 }
-
