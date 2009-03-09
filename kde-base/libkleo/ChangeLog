@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkleo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkleo/ChangeLog,v 1.10 2009/03/08 20:46:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkleo/ChangeLog,v 1.11 2009/03/09 20:35:58 scarabeus Exp $
+
+  09 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> libkleo-4.2.1.ebuild:
+  update deps for new eclass
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -libkleo-4.2.0.ebuild:
   Drop KDE 4.2.0

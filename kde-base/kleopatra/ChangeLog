@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.10 2009/03/08 19:54:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.11 2009/03/09 20:34:01 scarabeus Exp $
+
+  09 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kleopatra-4.2.1.ebuild:
+  Update deps for new eclass.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kleopatra-4.2.0.ebuild:
   Drop KDE 4.2.0
