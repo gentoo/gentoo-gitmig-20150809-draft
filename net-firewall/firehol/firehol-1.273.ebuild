@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.273.ebuild,v 1.1 2008/10/13 00:54:38 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.273.ebuild,v 1.2 2009/03/09 16:54:00 armin76 Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 
 DEPEND="sys-apps/iproute2"
 RDEPEND="net-firewall/iptables
