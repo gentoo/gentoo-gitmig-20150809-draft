@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/muttprint
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.32 2008/09/03 21:09:48 opfer Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.33 2009/03/09 15:46:27 tove Exp $
+
+*muttprint-0.72d-r1 (09 Mar 2009)
+
+  09 Mar 2009; Torsten Veller <tove@gentoo.org>
+  +files/muttprint-CVE-2008-5368.patch, +files/muttprint-ldflags.patch,
+  +files/muttprint-no_html_docs.patch, +muttprint-0.72d-r1.ebuild:
+  Fixes symlink attack (#250554), sets CC (#243660), CFLAGS (#240078)
+  and installs english docs (#112592).
+  Now maintainer-needed.
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   muttprint-0.72a.ebuild, muttprint-0.72b.ebuild, muttprint-0.72d.ebuild:
