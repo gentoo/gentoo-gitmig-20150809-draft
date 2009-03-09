@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.19 2009/03/09 01:02:13 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.20 2009/03/09 01:11:53 loki_val Exp $
 
 # @ECLASS: gtk-sharp-module.eclass
 # @MAINTAINER:
@@ -103,6 +103,7 @@ case ${GTK_SHARP_MODULE} in
 		case ${PVR} in
 			2.24.1*)
 				SRC_URI="mirror://gentoo/${TARBALL}-2.24.1.patch.bz2"
+				# Upstream bug: https://bugzilla.novell.com/show_bug.cgi?id=483251
 				PATCHES=(
 					"${WORKDIR}/${TARBALL}-2.24.1.patch"
 				)
