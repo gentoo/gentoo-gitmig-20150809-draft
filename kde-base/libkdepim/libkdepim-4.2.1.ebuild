@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.2.1.ebuild,v 1.1 2009/03/04 22:39:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.2.1.ebuild,v 1.2 2009/03/09 20:33:34 scarabeus Exp $
 
 EAPI="2"
 
@@ -11,8 +11,15 @@ DESCRIPTION="Common library for KDE PIM apps"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
-KMEXTRACTONLY="kaddressbook/org.kde.KAddressbook.Core.xml
-	korganizer/korgac/org.kde.korganizer.KOrgac.xml"
+RDEPEND="
+	>=kde-base/kode-${PV}:${SLOT}[kdeprefix=]
+"
+
+KMEXTRACTONLY="
+	kaddressbook/org.kde.KAddressbook.Core.xml
+	korganizer/korgac/org.kde.korganizer.KOrgac.xml
+"
+
 KMSAVELIBS="true"
 
 src_install() {
