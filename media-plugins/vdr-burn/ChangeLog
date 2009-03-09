@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.34 2009/02/24 00:30:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.35 2009/03/09 21:34:37 hd_brummy Exp $
+
+  09 Mar 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-burn-0.1.0_pre21-r4.ebuild, vdr-burn-0.1.0_pre21-r5.ebuild:
+  moved depend projectx to projectx-0.90.4.00-r3
 
 *vdr-burn-0.1.0_pre21-r5 (24 Feb 2009)
 
