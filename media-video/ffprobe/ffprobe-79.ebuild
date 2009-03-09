@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffprobe/ffprobe-79.ebuild,v 1.2 2009/03/01 05:56:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffprobe/ffprobe-79.ebuild,v 1.3 2009/03/09 14:08:14 armin76 Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="perl"
 
 DEPEND="media-video/ffmpeg"
