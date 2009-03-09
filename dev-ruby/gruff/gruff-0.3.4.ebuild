@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.3.4.ebuild,v 1.2 2009/03/08 15:10:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/gruff-0.3.4.ebuild,v 1.3 2009/03/09 04:21:46 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -18,4 +18,3 @@ DEPEND=">=dev-lang/ruby-1.8.2
 	>=dev-ruby/hoe-1.7.0
 	dev-ruby/rmagick
 	media-gfx/imagemagick[truetype]"
-
