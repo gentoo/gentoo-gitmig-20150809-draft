@@ -3,7 +3,4 @@
 <pkgmetadata>
 	<herd>apache</herd>
 	<herd>web-apps</herd>
-	<use>
-		<flag name='opera'>Enable workaround for bug in Opera web browser</flag>
-	</use>
 </pkgmetadata>
