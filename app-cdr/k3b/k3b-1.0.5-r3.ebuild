@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.5-r3.ebuild,v 1.6 2008/12/21 14:54:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.5-r3.ebuild,v 1.7 2009/03/10 20:02:18 beandog Exp $
 
 inherit kde eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
-IUSE="alsa css dvdr dvdread encode ffmpeg flac hal mp3 musepack musicbrainz
+IUSE="alsa css dvd dvdr encode ffmpeg flac hal mp3 musepack musicbrainz
 	sndfile vcd vorbis emovix"
 
 DEPEND="hal? ( dev-libs/dbus-qt3-old sys-apps/hal )
@@ -30,7 +30,7 @@ DEPEND="hal? ( dev-libs/dbus-qt3-old sys-apps/hal )
 	musicbrainz? ( =media-libs/musicbrainz-2* )
 	encode? ( media-sound/lame )
 	alsa? ( media-libs/alsa-lib )
-	dvdread? ( media-libs/libdvdread )"
+	dvd? ( media-libs/libdvdread )"
 
 RDEPEND="${DEPEND}
 	virtual/cdrtools
@@ -67,12 +67,12 @@ pkg_setup() {
 		eerror "but sys-apps/dbus is not built with Qt3 support."
 		die "Please, rebuild sys-apps/dbus with the \"qt3\" USE flag."
 	fi
-	if use encode && ! built_with_use media-video/transcode dvdread; then
+	if use encode && ! built_with_use media-video/transcode dvd; then
 		eerror "You are trying to compile ${CATEGORY}/${PF} with the \"encode\""
 		eerror "USE flag enabled, however media-video/transcode was not built"
 		eerror "with libdvdread support. Also keep in mind that enabling"
-		eerror "the dvdread USE flag will cause k3b to use libdvdread as well."
-		die "Please, rebuild media-video/transcode with the \"dvdread\" USE flag."
+		eerror "the dvd USE flag will cause k3b to use libdvdread as well."
+		die "Please, rebuild media-video/transcode with the \"dvd\" USE flag."
 	fi
 
 	if use flac && ! built_with_use --missing true media-libs/flac cxx; then
@@ -112,7 +112,7 @@ src_compile() {
 			$(use_with mp3 libmad)			\
 			$(use_with musepack)			\
 			$(use_with musicbrainz)			\
-			$(use_with dvdread libdvdread)	\
+			$(use_with dvd libdvdread)	\
 			$(use_with alsa)"
 
 	# Build process of K3b
