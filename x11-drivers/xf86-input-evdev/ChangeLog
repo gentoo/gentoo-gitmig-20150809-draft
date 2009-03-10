@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.96 2009/03/09 23:00:24 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.97 2009/03/10 17:09:08 dberkholz Exp $
+
+*xf86-input-evdev-2.2.0-r1 (10 Mar 2009)
+
+  10 Mar 2009; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/2.2.0-Restore-repeat-filtering-for-server-1.5-and-earlier.patch,
+  +xf86-input-evdev-2.2.0-r1.ebuild:
+  Fix autorepeat for <=xorg-server-1.5.
 
 *xf86-input-evdev-2.2.0 (09 Mar 2009)
 

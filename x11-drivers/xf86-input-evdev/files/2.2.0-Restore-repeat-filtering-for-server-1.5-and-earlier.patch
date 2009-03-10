@@ -1,0 +1,42 @@
+From 7cdb200dbef87d10a455cc4fdc6d29bf3aacc1d8 Mon Sep 17 00:00:00 2001
+From: Peter Hutterer <peter.hutterer@who-t.net>
+Date: Tue, 10 Mar 2009 15:17:53 +1000
+Subject: [PATCH] Restore repeat-filtering for server 1.5 and earlier.
+
+Letting the server deal with key repeats is fine if we have server 1.6. For
+earlier servers, we need to pass on the repeat events (except for modifier
+keys).
+
+Signed-off-by: Peter Hutterer <peter.hutterer@who-t.net>
+Tested-by: Marty Jack <martyj19@comcast.net>
+---
+ src/evdev.c |   13 +++++++++++--
+ 1 files changed, 11 insertions(+), 2 deletions(-)
+
+diff --git a/src/evdev.c b/src/evdev.c
+index 04bce96..bc29ac9 100644
+--- a/src/evdev.c
++++ b/src/evdev.c
+@@ -263,8 +263,17 @@ PostKbdEvent(InputInfoPtr pInfo, struct input_event *ev, int value)
+     static char warned[KEY_CNT];
+ 
+     /* Filter all repeated events from device.
+-       We'll do softrepeat in the server */
+-    if (value == 2)
++       We'll do softrepeat in the server, but only since 1.6 */
++    if (value == 2
++#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) <= 2
++        && (ev->code == KEY_LEFTCTRL || ev->code == KEY_RIGHTCTRL ||
++            ev->code == KEY_LEFTSHIFT || ev->code == KEY_RIGHTSHIFT ||
++            ev->code == KEY_LEFTALT || ev->code == KEY_RIGHTALT ||
++            ev->code == KEY_LEFTMETA || ev->code == KEY_RIGHTMETA ||
++            ev->code == KEY_CAPSLOCK || ev->code == KEY_NUMLOCK ||
++            ev->code == KEY_SCROLLLOCK) /* XXX windows keys? */
++#endif
++            )
+ 	return;
+ 
+     if (code > 255)
+-- 
+1.6.1.3
+
