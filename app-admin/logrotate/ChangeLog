@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.76 2009/01/25 19:42:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.77 2009/03/10 02:01:55 dang Exp $
+
+*logrotate-3.7.8 (10 Mar 2009)
+
+  10 Mar 2009; Daniel Gryniewicz <dang@gentoo.org> +logrotate-3.7.8.ebuild:
+  Bump to logrotate-3.7.8
+
+  - Update to EAPI 2
 
   25 Jan 2009; Daniel Gryniewicz <dang@gentoo.org>
   files/logrotate-3.7.7-fbsd.patch:
