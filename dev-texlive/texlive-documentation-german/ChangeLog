@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-german
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-german/ChangeLog,v 1.21 2009/03/07 10:49:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-german/ChangeLog,v 1.22 2009/03/10 19:10:30 armin76 Exp $
+
+  10 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  texlive-documentation-german-2008.ebuild:
+  Add ~arm/~s390/~sh
 
   07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
   texlive-documentation-german-2008.ebuild:

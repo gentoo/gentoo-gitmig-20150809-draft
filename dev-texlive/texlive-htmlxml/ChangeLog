@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-htmlxml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/ChangeLog,v 1.29 2009/03/07 10:59:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/ChangeLog,v 1.30 2009/03/10 19:23:24 armin76 Exp $
+
+  10 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  texlive-htmlxml-2008.ebuild:
+  Add ~arm/~s390/~sh
 
   07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
   texlive-htmlxml-2008.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langczechslovak
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langczechslovak/ChangeLog,v 1.21 2009/03/07 11:03:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langczechslovak/ChangeLog,v 1.22 2009/03/10 19:29:12 armin76 Exp $
+
+  10 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  texlive-langczechslovak-2008.ebuild:
+  Add ~arm/~s390/~sh
 
   07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
   texlive-langczechslovak-2008.ebuild:
