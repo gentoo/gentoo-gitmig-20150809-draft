@@ -1,6 +1,27 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.182 2009/02/25 23:17:19 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.183 2009/03/10 23:33:28 chainsaw Exp $
+
+*asterisk-1.6.0.6 (10 Mar 2009)
+
+  10 Mar 2009; <chainsaw@gentoo.org>
+  +files/1.6.0/asterisk-1.6.0.6-autoconf-263.patch,
+  +files/1.6.0/asterisk-1.6.0.6-dahdiras.patch,
+  +files/1.6.0/asterisk-1.6.0.6-imap-kerberos.patch,
+  +files/1.6.0/asterisk-1.6.0.6-parallelmake.patch,
+  +files/1.6.0/asterisk-1.6.0-gsm-pic.patch, +files/1.6.0/asterisk.confd,
+  +files/1.6.0/asterisk-1.6.0.6-sip-use-specified-port.patch,
+  +files/1.6.0/asterisk-1.6.0-uclibc.patch,
+  +files/1.6.0/asterisk-1.6.0-var_rundir.patch, +files/1.6.0/asterisk.rc6,
+  +files/1.6.0/asterisk-1.6.0.6-socket-details.patch,
+  +files/1.6.0/asterisk-1.6.0.6-spandsp-api-change.patch, metadata.xml,
+  +asterisk-1.6.0.6.ebuild:
+  Version bump, with a warm thank you to all VoIP overlay contributors,
+  including but not limited to Rambaldi & Volkmar. This is 1.6.0.6 from
+  upstream including the post-release upstream fixes for Digium bugs #14480,
+  #14516, #14620 & #14626. Also thanks to Digium developer Qwell for SVN
+  revision 180946 containing autoconf fixes. Closes bug #215593 by Natanael
+  Copa.
 
   25 Feb 2009; Rajiv Aaron Manglani <rajiv@gentoo.org>
   -files/1.2.0/asterisk-1.2.0_beta-ukcid.patch,

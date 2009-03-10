@@ -3,16 +3,21 @@
 <pkgmetadata>
   <herd>voip</herd>
   <maintainer>
-    <email>rajiv@gentoo.org</email>
-    <name>Rajiv Aaron Manglani</name>
+    <email>chainsaw@gentoo.org</email>
+    <name>Tony Vroon</name>
   </maintainer>
   <use>
-	<flag name="pri">Enables pri support</flag>
-	<flag name="zaptel">Enables zaptel support</flag>
+    <flag name="pri">Enables pri support</flag>
+    <flag name="zaptel">Enables deprecated zaptel support (use dahdi if available)</flag>
     <flag name="bri">Enable ISDN BRI support (bristuff)</flag>
     <flag name="h323">Build the H.323 channel driver bundled with Asterisk</flag>
     <flag name="lowmem">Build Asterisk for environments with low amounts of memory (embedded devices)</flag>
     <flag name="nosamples">Don't install sample sound and configuration files</flag>
     <flag name="osp">Enable support for the Open Settlement Protocol</flag>
+    <flag name="keepsrc">Install sources into /usr/src for custom patching</flag>
+    <flag name="misdn">Build with mISDN (chan_misdn) support for BRI ISDN cards</flag>
+    <flag name="newt">Include additional tools that require redhats windowing toolkit</flag>
+    <flag name="dahdi">Support Digium compatible hardware (formerly known as Zaptel).</flag>
+    <flag name="span">Enable support for the spandsp codec</flag>
   </use>
 </pkgmetadata>

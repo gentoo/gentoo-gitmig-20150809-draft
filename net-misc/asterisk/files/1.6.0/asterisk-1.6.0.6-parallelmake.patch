@@ -1,0 +1,113 @@
+Index: asterisk-1.6.0.6/Makefile
+===================================================================
+--- asterisk-1.6.0.6.orig/Makefile
++++ asterisk-1.6.0.6/Makefile
+@@ -369,15 +369,15 @@ $(MOD_SUBDIRS_EMBED_LIBS):
+ 	@echo "EMBED_LIBS+="`$(SILENTMAKE) -C $(@:-embed-libs=) SUBDIR=$(@:-embed-libs=) __embed_libs` >> makeopts.embed_rules
+ 
+ $(MOD_SUBDIRS_MENUSELECT_TREE):
+-	@$(SUBMAKE) -C $(@:-menuselect-tree=) SUBDIR=$(@:-menuselect-tree=) moduleinfo
+-	@$(SUBMAKE) -C $(@:-menuselect-tree=) SUBDIR=$(@:-menuselect-tree=) makeopts
++	+@$(SUBMAKE) -C $(@:-menuselect-tree=) SUBDIR=$(@:-menuselect-tree=) moduleinfo
++	+@$(SUBMAKE) -C $(@:-menuselect-tree=) SUBDIR=$(@:-menuselect-tree=) makeopts
+ 
+ makeopts.embed_rules: menuselect.makeopts
+ 	@echo "Generating embedded module rules ..."
+ 	@rm -f $@
+-	@$(SUBMAKE) $(MOD_SUBDIRS_EMBED_LDSCRIPT)
+-	@$(SUBMAKE) $(MOD_SUBDIRS_EMBED_LDFLAGS)
+-	@$(SUBMAKE) $(MOD_SUBDIRS_EMBED_LIBS)
++	+@$(SUBMAKE) $(MOD_SUBDIRS_EMBED_LDSCRIPT)
++	+@$(SUBMAKE) $(MOD_SUBDIRS_EMBED_LDFLAGS)
++	+@$(SUBMAKE) $(MOD_SUBDIRS_EMBED_LIBS)
+ 
+ $(SUBDIRS): main/version.c include/asterisk/version.h include/asterisk/build.h include/asterisk/buildopts.h defaults.h makeopts.embed_rules
+ 
+@@ -400,10 +400,10 @@ res:	main
+ endif
+ 
+ $(MOD_SUBDIRS):
+-	@ASTCFLAGS="$(MOD_SUBDIR_CFLAGS) $(ASTCFLAGS)" ASTLDFLAGS="$(ASTLDFLAGS)" $(SUBMAKE) --no-builtin-rules -C $@ SUBDIR=$@ all
++	+@ASTCFLAGS="$(MOD_SUBDIR_CFLAGS) $(ASTCFLAGS)" ASTLDFLAGS="$(ASTLDFLAGS)" $(SUBMAKE) --no-builtin-rules -C $@ SUBDIR=$@ all
+ 
+ $(OTHER_SUBDIRS):
+-	@ASTCFLAGS="$(OTHER_SUBDIR_CFLAGS) $(ASTCFLAGS)" ASTLDFLAGS="$(ASTLDFLAGS)" $(SUBMAKE) --no-builtin-rules -C $@ SUBDIR=$@ all
++	+@ASTCFLAGS="$(OTHER_SUBDIR_CFLAGS) $(ASTCFLAGS)" ASTLDFLAGS="$(ASTLDFLAGS)" $(SUBMAKE) --no-builtin-rules -C $@ SUBDIR=$@ all
+ 
+ defaults.h: makeopts
+ 	@build_tools/make_defaults_h > $@.tmp
+@@ -431,10 +431,10 @@ include/asterisk/build.h:
+ 	@rm -f $@.tmp
+ 
+ $(SUBDIRS_CLEAN):
+-	@$(SUBMAKE) -C $(@:-clean=) clean
++	+@$(SUBMAKE) -C $(@:-clean=) clean
+ 
+ $(SUBDIRS_DIST_CLEAN):
+-	@$(SUBMAKE) -C $(@:-dist-clean=) dist-clean
++	+@$(SUBMAKE) -C $(@:-dist-clean=) dist-clean
+ 
+ clean: $(SUBDIRS_CLEAN) _clean
+ 
+@@ -547,7 +547,7 @@ bininstall: _all installdirs $(SUBDIRS_I
+ 	fi
+ 
+ $(SUBDIRS_INSTALL):
+-	@DESTDIR="$(DESTDIR)" ASTSBINDIR="$(ASTSBINDIR)" $(SUBMAKE) -C $(@:-install=) install
++	+@DESTDIR="$(DESTDIR)" ASTSBINDIR="$(ASTSBINDIR)" $(SUBMAKE) -C $(@:-install=) install
+ 
+ NEWMODS:=$(foreach d,$(MOD_SUBDIRS),$(notdir $(wildcard $(d)/*.so)))
+ OLDMODS=$(filter-out $(NEWMODS),$(notdir $(wildcard $(DESTDIR)$(MODULES_DIR)/*.so)))
+@@ -796,7 +796,7 @@ cleantest:
+ 	@cmp -s .cleancount .lastclean || $(MAKE) clean
+ 
+ $(SUBDIRS_UNINSTALL):
+-	@$(SUBMAKE) -C $(@:-uninstall=) uninstall
++	+@$(SUBMAKE) -C $(@:-uninstall=) uninstall
+ 
+ _uninstall: $(SUBDIRS_UNINSTALL)
+ 	rm -f $(DESTDIR)$(MODULES_DIR)/*
+@@ -842,7 +842,7 @@ gmenuconfig: gmenuselect
+ nmenuconfig: nmenuselect
+ 
+ menuselect: menuselect/cmenuselect menuselect/nmenuselect menuselect/gmenuselect
+-	@if [ -x menuselect/nmenuselect ]; then \
++	+@if [ -x menuselect/nmenuselect ]; then \
+ 		$(MAKE) nmenuselect; \
+ 	elif [ -x menuselect/cmenuselect ]; then \
+ 		$(MAKE) cmenuselect; \
+@@ -867,27 +867,27 @@ nmenuselect: menuselect/nmenuselect menu
+ MAKE_MENUSELECT=CC="$(HOST_CC)" CXX="$(CXX)" LD="" AR="" RANLIB="" CFLAGS="" $(MAKE) -C menuselect CONFIGURE_SILENT="--silent"
+ 
+ menuselect/menuselect: menuselect/makeopts
+-	$(MAKE_MENUSELECT) menuselect
++	+$(MAKE_MENUSELECT) menuselect
+ 
+ menuselect/cmenuselect: menuselect/makeopts
+-	$(MAKE_MENUSELECT) cmenuselect
++	+$(MAKE_MENUSELECT) cmenuselect
+ 
+ menuselect/gmenuselect: menuselect/makeopts
+-	$(MAKE_MENUSELECT) gmenuselect
++	+$(MAKE_MENUSELECT) gmenuselect
+ 
+ menuselect/nmenuselect: menuselect/makeopts
+-	$(MAKE_MENUSELECT) nmenuselect
++	+$(MAKE_MENUSELECT) nmenuselect
+ 
+ menuselect/makeopts: makeopts
+-	$(MAKE_MENUSELECT) makeopts
++	+$(MAKE_MENUSELECT) makeopts
+ 
+ menuselect-tree: $(foreach dir,$(filter-out main,$(MOD_SUBDIRS)),$(wildcard $(dir)/*.c) $(wildcard $(dir)/*.cc)) build_tools/cflags.xml build_tools/cflags-devmode.xml sounds/sounds.xml build_tools/embed_modules.xml configure
+ 	@echo "Generating input for menuselect ..."
+ 	@echo "<?xml version=\"1.0\"?>" > $@
+ 	@echo >> $@
+ 	@echo "<menu name=\"Asterisk Module and Build Option Selection\">" >> $@
+-	@for dir in $(sort $(filter-out main,$(MOD_SUBDIRS))); do $(SILENTMAKE) -C $${dir} SUBDIR=$${dir} moduleinfo >> $@; done
+-	@for dir in $(sort $(filter-out main,$(MOD_SUBDIRS))); do $(SILENTMAKE) -C $${dir} SUBDIR=$${dir} makeopts >> $@; done
++	+@for dir in $(sort $(filter-out main,$(MOD_SUBDIRS))); do $(SILENTMAKE) -C $${dir} SUBDIR=$${dir} moduleinfo >> $@; done
++	+@for dir in $(sort $(filter-out main,$(MOD_SUBDIRS))); do $(SILENTMAKE) -C $${dir} SUBDIR=$${dir} makeopts >> $@; done
+ 	@cat build_tools/cflags.xml >> $@
+ 	@if [ "${AST_DEVMODE}" = "yes" ]; then \
+ 		cat build_tools/cflags-devmode.xml >> $@; \
