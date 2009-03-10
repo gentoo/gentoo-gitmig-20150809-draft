@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0_p10.ebuild,v 1.1 2009/03/10 06:35:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0_p10.ebuild,v 1.2 2009/03/10 19:05:02 cardoe Exp $
 
 EAPI="1"
 
@@ -34,7 +34,7 @@ HOMEPAGE="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"
 SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz $(patches)
 	$(patches ${READLINE_PLEVEL} readline ${READLINE_VER})"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="afs bashlogger examples +net nls plugins vanilla"
