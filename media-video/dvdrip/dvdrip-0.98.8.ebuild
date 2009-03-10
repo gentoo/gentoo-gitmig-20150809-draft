@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.8.ebuild,v 1.7 2008/02/29 20:11:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.98.8.ebuild,v 1.8 2009/03/10 19:56:30 beandog Exp $
 
 inherit eutils flag-o-matic perl-module
 
@@ -41,8 +41,8 @@ pkg_setup() {
 		eerror "Please re-emerge x11-libs/gtk+ with the jpeg use flag"
 		rebuild=1
 	fi
-	if ! built_with_use media-video/transcode dvdread; then
-		eerror "Please re-emerge media-video/transcode with the dvdread"
+	if ! built_with_use media-video/transcode dvd; then
+		eerror "Please re-emerge media-video/transcode with the dvd"
 		eerror "USE flag."
 		rebuild=1
 	fi
