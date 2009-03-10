@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pdftex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.11 2009/03/07 11:31:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.12 2009/03/10 19:59:34 armin76 Exp $
+
+  10 Mar 2009; Raúl Porcel <armin76@gentoo.org> pdftex-1.40.9.ebuild:
+  Add ~arm/~s390/~sh
 
   07 Mar 2009; Christian Faulhammer <fauli@gentoo.org> pdftex-1.40.9.ebuild:
   x86 stable, bug 253551
