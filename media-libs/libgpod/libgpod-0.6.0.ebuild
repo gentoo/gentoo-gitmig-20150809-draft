@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.12 2008/11/30 16:38:47 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.6.0.ebuild,v 1.13 2009/03/10 17:40:52 tester Exp $
 
 inherit eutils libtool
 
@@ -37,19 +37,11 @@ src_unpack() {
 }
 
 src_compile() {
-
-	local myconf
-
-	if use gtk; then
-		myconf="--enable-pygobject"
-	else
-		myconf="--disable-pygobject"
-	fi
-
-	econf ${myconf} \
+	econf \
 		$(use_enable doc gtk-doc) \
 		$(use_enable gtk gdk-pixbuf) \
 		$(use_with hal hal) \
+		$(use_enable python) \
 		$(use_with python) || die "configure failed"
 
 	emake || die "make failed"
