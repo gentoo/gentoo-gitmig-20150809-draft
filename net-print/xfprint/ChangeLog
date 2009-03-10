@@ -1,6 +1,11 @@
 # ChangeLog for net-print/xfprint
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.10 2008/12/22 17:10:10 angelos Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.11 2009/03/10 13:55:36 angelos Exp $
+
+*xfprint-4.6.0 (10 Mar 2009)
+
+  10 Mar 2009; Christoph Mende <angelos@gentoo.org> +xfprint-4.6.0.ebuild:
+  Xfce-4.6 bump
 
   22 Dec 2008; Christoph Mende <angelos@gentoo.org>
   -files/4.4.2/01_all_no_default_printer.patch, -xfprint-4.4.2-r1.ebuild:
