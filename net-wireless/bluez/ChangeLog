@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.5 2009/03/04 21:48:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.6 2009/03/10 21:17:26 dev-zero Exp $
+
+  10 Mar 2009; Tiziano Müller <dev-zero@gentoo.org> bluez-4.32.ebuild:
+  Added pambase[consolekit] to RDEPEND to get at least the basics ready
+  needed to run bluez as user.
 
 *bluez-4.32 (04 Mar 2009)
 

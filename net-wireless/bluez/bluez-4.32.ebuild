@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.32.ebuild,v 1.1 2009/03/04 21:48:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.32.ebuild,v 1.2 2009/03/10 21:17:26 dev-zero Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
 
 IUSE="alsa cups debug doc gstreamer old-daemons test-programs usb"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )
+CDEPEND="alsa? ( media-libs/alsa-lib )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10 )
@@ -31,7 +31,9 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 DEPEND="sys-devel/flex
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )
-	${RDEPEND}"
+	${CDEPEND}"
+RDEPEND="${CDEPEND}
+	sys-auth/pambase[consolekit]"
 
 src_prepare() {
 	epatch "${FILESDIR}/4.31-as_needed.patch"
