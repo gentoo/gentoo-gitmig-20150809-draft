@@ -1,0 +1,10 @@
+# ChangeLog for xfce-base/xfconf
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.1 2009/03/10 13:52:05 angelos Exp $
+
+*xfconf-4.6.0 (10 Mar 2009)
+
+  10 Mar 2009; Christoph Mende <angelos@gentoo.org> +metadata.xml,
+  +xfconf-4.6.0.ebuild:
+  Xfce-4.6 bump
+
