@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.327 2009/03/10 16:46:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.328 2009/03/10 17:01:55 jer Exp $
+
+  10 Mar 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4205.ebuild:
+  Readd ~ppc. Remove redundant media-libs/libpng dependency.
 
 *opera-10.00_pre4205 (10 Mar 2009)
 

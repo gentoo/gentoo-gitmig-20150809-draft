@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4205.ebuild,v 1.1 2009/03/10 16:46:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4205.ebuild,v 1.2 2009/03/10 17:01:55 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-9.0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 RESTRICT="mirror strip test"
 
@@ -26,6 +26,7 @@ O_U="http://snapshot.opera.com/unix/snapshot-${P##*_pre}/"
 O_P="${P/_pre/-}"
 
 SRC_URI="
+	ppc? ( ${O_U}ppc-linux/${O_P}.gcc4-shared-qt3.ppc.tar.bz2 )
 	x86-fbsd? ( ${O_U}intel-freebsd/${O_P}.freebsd6-shared-qt3.i386.tar.bz2 )
 	qt-static? (
 		qt3? (
@@ -77,7 +78,6 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/libSM
 	x11-libs/libICE
-	!qt-static? ( media-libs/libpng )
 	qt-static? ( !qt3? ( x11-libs/libXinerama media-libs/nas ) )
 	x86? ( !qt-static? (
 			qt3? ( =x11-libs/qt-3* )
@@ -88,9 +88,12 @@ RDEPEND="
 		ia32? ( app-emulation/emul-linux-x86-qtlibs )
 		!ia32? ( =x11-libs/qt-3* )
 	)
+	ppc? (
+		=x11-libs/qt-3*
+	)
 	x86-fbsd? (
 		=virtual/libstdc++-3*
-		!qt-static? ( !qt3? ( =x11-libs/qt-3* ) )
+		=x11-libs/qt-3*
 	)
 	"
 
