@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.179 2009/03/10 13:47:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.180 2009/03/10 15:58:20 fmccor Exp $
+
+  10 Mar 2009; Ferris McCormick <fmccor@gentoo.org>
+  gnumeric-1.8.4-r1.ebuild:
+  Sparc stable, security Bug #257012.
 
   10 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
   gnumeric-1.8.4-r1.ebuild:
