@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2425 2009/03/09 19:05:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2426 2009/03/10 15:18:18 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Mar 2009; <chainsaw@gentoo.org> package.mask:
+  Mask Asterisk 1.6 as the migration from 1.2 is long, tedious and not yet
+  documented fully.
 
   09 Mar 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
   Unmask mutt-1.5.19, since the sidebar patch was updated
