@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.5.2.0.ebuild,v 1.1 2008/12/12 05:13:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.5.2.0.ebuild,v 1.2 2009/03/10 22:03:41 beandog Exp $
+
+EAPI="2"
 
 inherit eutils fdo-mime rpm multilib gnome2-utils
 
@@ -17,6 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="x11-libs/libX11
+	x11-libs/pango[X]
 	>=x11-libs/gtk+-2"
 DEPEND=""
 
