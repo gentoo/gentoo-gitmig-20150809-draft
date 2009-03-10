@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.25 2009/03/10 11:08:11 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.26 2009/03/10 11:25:17 angelos Exp $
 
 # @ECLASS: xfce4.eclass
 # @MAINTAINER:
@@ -23,7 +23,7 @@ SLOT="0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-[ ${PV} = 9999 -a -z "${XFCE_VERSION}" ] && XFCE_VERSION="4.5.99"
+[ ${PV} = 9999 -a -z "${XFCE_VERSION}" ] && XFCE_VERSION="4.6.0"
 [ -z ${XFCE_VERSION} ] && XFCE_VERSION=${PV}
 [ -z ${THUNAR_VERSION} ] && THUNAR_VERSION="0.9"
 
