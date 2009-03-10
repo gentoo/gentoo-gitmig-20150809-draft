@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/quodlibet
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.60 2008/12/19 15:23:34 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.61 2009/03/10 21:11:33 beandog Exp $
+
+*quodlibet-2.0-r1 (10 Mar 2009)
+
+  10 Mar 2009; Steve Dibb <beandog@gentoo.org> -quodlibet-2.0.ebuild,
+  +quodlibet-2.0-r1.ebuild:
+  Migrate built_with_use to EAPI2 use dep; add
+  media-plugins/gst-plugins-gconf runtime dep, bug 260196
 
   19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
   +files/quodlibet-2.0-python26.patch, quodlibet-2.0.ebuild:

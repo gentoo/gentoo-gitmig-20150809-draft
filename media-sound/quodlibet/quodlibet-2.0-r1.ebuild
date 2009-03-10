@@ -1,13 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.0.ebuild,v 1.3 2008/12/19 15:23:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.0-r1.ebuild,v 1.1 2009/03/10 21:11:33 beandog Exp $
 
+EAPI="2"
 NEED_PYTHON=2.4.4
 
 inherit distutils python eutils
 
 DESCRIPTION="Quod Libet is a GTK+-based audio player written in Python."
-HOMEPAGE="http://code.google.com/p/${PN}/"
+HOMEPAGE="http://code.google.com/p/quodlibet/"
 SRC_URI="http://quodlibet.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -20,9 +21,9 @@ COMMON_DEPEND=">=dev-python/pygtk-2.12"
 RDEPEND="${COMMON_DEPEND}
 	>=media-libs/mutagen-1.14
 	gstreamer? (
+		>=media-plugins/gst-plugins-gconf-0.10.3
 		>=media-libs/gst-plugins-good-0.10.2
 		>=dev-python/gst-python-0.10.2
-
 		mad? ( >=media-plugins/gst-plugins-mad-0.10.2 )
 		vorbis? ( >=media-plugins/gst-plugins-vorbis-0.10.2
 			>=media-plugins/gst-plugins-ogg-0.10.2 )
@@ -45,7 +46,7 @@ RDEPEND="${COMMON_DEPEND}
 		dev-python/feedparser )
 	hal? ( sys-apps/hal )
 	dbus? ( >=dev-python/dbus-python-0.71 )
-	ipod? ( >=media-libs/libgpod-0.5.2 )"
+	ipod? ( >=media-libs/libgpod-0.5.2[python] )"
 
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool"
@@ -56,11 +57,6 @@ pkg_setup() {
 	if ! use gstreamer && ! use xine; then
 		eerror "You must have either gstreamer or xine USE flag enabled."
 		die "No backend USE flags enabled."
-	fi
-
-	if use ipod && ! built_with_use media-libs/libgpod python; then
-		eerror "media-libs/libgpod must be built with 'python' support."
-		die "Recompile media-libs/libgpod after enabling the 'python' USE flag"
 	fi
 }
 
