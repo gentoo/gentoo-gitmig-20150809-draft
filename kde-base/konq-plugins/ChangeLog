@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.104 2009/03/08 20:10:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.105 2009/03/10 19:05:57 scarabeus Exp $
+
+  10 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +konq-plugins-4.2.0.ebuild:
+  Restore konq-plugins-4.2.0. Removed by accident. 4.2.1 not around for now.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -konq-plugins-4.2.0.ebuild:
