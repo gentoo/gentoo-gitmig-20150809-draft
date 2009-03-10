@@ -1,13 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.8 2008/06/20 23:45:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.4.ebuild,v 1.9 2009/03/10 21:30:52 beandog Exp $
 
+EAPI="1"
 WANT_ATUOMAKE=1.8
 WANT_AUTOCONF=2.5
 
 inherit toolchain-funcs eutils autotools
 
-IUSE="3dnow alsa audiofile cpudetection flac ffmpeg jack lame libsamplerate mmx
+IUSE="3dnow +alsa audiofile cpudetection flac ffmpeg jack lame libsamplerate mmx
 ogg oss sse vorbis"
 
 PATCHLEVEL="2"
