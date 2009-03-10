@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/cpdvd-1.10.ebuild,v 1.10 2007/01/05 20:33:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/cpdvd-1.10.ebuild,v 1.11 2009/03/10 21:32:47 beandog Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND=">=media-video/transcode-0.6.2
 	>=media-video/cpvts-1.2"
 
 pkg_setup() {
-	built_with_use media-video/transcode dvdread || die "Transcode needs dvdread support builtin for this package to work."
+	built_with_use media-video/transcode dvd || die "Transcode needs dvd support builtin for this package to work."
 }
 
 src_install () {

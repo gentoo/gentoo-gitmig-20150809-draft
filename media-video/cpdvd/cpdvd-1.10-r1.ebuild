@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/cpdvd-1.10-r1.ebuild,v 1.1 2008/10/15 11:54:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/cpdvd-1.10-r1.ebuild,v 1.2 2009/03/10 21:32:47 beandog Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=""
 
-RDEPEND=">=media-video/transcode-0.6.2[dvdread]
+RDEPEND=">=media-video/transcode-0.6.2[dvd]
 	>=dev-lang/perl-5.8.0-r12
 	>=media-video/cpvts-1.2"
 
