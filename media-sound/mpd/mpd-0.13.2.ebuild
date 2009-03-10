@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.13.2.ebuild,v 1.9 2008/12/30 21:14:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.13.2.ebuild,v 1.10 2009/03/10 21:00:22 beandog Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -19,7 +21,8 @@ DEPEND="!sys-cluster/mpich2
 	ao? ( >=media-libs/libao-0.8.4 )
 	audiofile? ( media-libs/audiofile )
 	avahi? ( net-dns/avahi )
-	flac? ( media-libs/flac )
+	flac? ( media-libs/flac
+		ogg? ( media-libs/flac[ogg] ) )
 	icecast? ( media-libs/libshout )
 	iconv? ( virtual/libiconv )
 	jack? ( media-sound/jack-audio-connection-kit )
@@ -33,12 +36,6 @@ DEPEND="!sys-cluster/mpich2
 	vorbis? ( media-libs/libvorbis )"
 
 pkg_setup() {
-	if use ogg && use flac && ! built_with_use media-libs/flac ogg; then
-		eerror "To be able to play OggFlac files you need to build"
-		eerror "media-libs/flac with +ogg, to build libOggFLAC."
-		die "Missing libOggFLAC library."
-	fi
-
 	enewuser mpd "" "" "/var/lib/mpd" audio
 }
 
