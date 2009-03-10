@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffprobe/ffprobe-79.ebuild,v 1.3 2009/03/09 14:08:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffprobe/ffprobe-79-r1.ebuild,v 1.1 2009/03/10 18:37:00 beandog Exp $
 
 inherit autotools
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="perl"
 
-DEPEND="media-video/ffmpeg"
-RDEPEND="${DEPEND}
+DEPEND="media-video/ffmpeg
+	app-text/texi2html"
+RDEPEND="media-video/ffmpeg
 	perl? ( virtual/perl-Scalar-List-Utils
 		virtual/perl-Getopt-Long
 		virtual/perl-File-Spec
