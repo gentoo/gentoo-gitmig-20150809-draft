@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.569 2009/03/08 23:22:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.570 2009/03/10 13:34:09 jmbsvicetto Exp $
+
+*kdelibs-4.2.1-r1 (10 Mar 2009)
+
+  10 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +files/kdelibs-4.2.1-qt4.5.patch, +kdelibs-4.2.1-r1.ebuild:
+  Applied upstream revision 934640 that fixes upstream bug 186038 and Gentoo
+  bug 261367.
 
   08 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kdelibs-4.2.1.ebuild:
   Kdelibs:4.* needs allways webkit.
