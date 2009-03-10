@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/rubyripper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.22 2009/01/30 20:00:28 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.23 2009/03/10 21:24:23 beandog Exp $
+
+*rubyripper-0.5.5-r1 (10 Mar 2009)
+
+  10 Mar 2009; Steve Dibb <beandog@gentoo.org> -rubyripper-0.5.5.ebuild,
+  +rubyripper-0.5.5-r1.ebuild:
+  Add support for fr LINGUAS, bug 257400
 
 *rubyripper-0.5.5 (30 Jan 2009)
 

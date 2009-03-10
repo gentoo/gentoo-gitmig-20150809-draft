@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.5.ebuild,v 1.1 2009/01/30 20:00:28 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.5-r1.ebuild,v 1.1 2009/03/10 21:24:23 beandog Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="cli flac +gtk +mp3 normalize +vorbis wav"
-ILINGUAS="de es hu nl ru"
+ILINGUAS="de es fr hu nl ru"
 
 for lingua in $ILINGUAS; do
 	IUSE="${IUSE} linguas_${lingua}"
