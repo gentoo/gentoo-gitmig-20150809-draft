@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.11 2009/02/11 02:36:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.12 2009/03/10 19:07:28 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 DESCRIPTION="A multi-player game of strategy and coordination"
@@ -10,7 +11,7 @@ SRC_URI="ftp://cns-ftp.bu.edu/pub/xbattle/${P}.tar.gz"
 
 LICENSE="xbattle"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXext
@@ -21,17 +22,17 @@ DEPEND="${RDEPEND}
 	app-text/rman
 	x11-misc/imake"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "s:/export/home/lesher/:${GAMES_DATADIR}/${PN}/:" Imakefile \
 		|| die "sed Imakefile failed"
 }
 
-src_compile() {
+src_configure() {
 	xmkmf || die "xmkmf failed"
+}
+
+src_compile() {
 	emake CDEBUGFLAGS="${CFLAGS}" || die "emake failed"
 }
 
