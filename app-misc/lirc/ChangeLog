@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.196 2009/03/10 17:54:41 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.197 2009/03/10 21:02:47 beandog Exp $
+
+  10 Mar 2009; Steve Dibb <beandog@gentoo.org> lirc-0.8.4.ebuild,
+  lirc-0.8.4a.ebuild:
+  Fix amd64 keywords, bug 253920
 
   10 Mar 2009; Steve Dibb <beandog@gentoo.org> lirc-0.8.4a.ebuild:
   amd64 stable, bug 253920
