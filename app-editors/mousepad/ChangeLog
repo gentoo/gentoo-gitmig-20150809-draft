@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mousepad
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.9 2008/12/22 17:08:26 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.10 2009/03/10 13:53:07 angelos Exp $
+
+*mousepad-0.2.16 (10 Mar 2009)
+
+  10 Mar 2009; Christoph Mende <angelos@gentoo.org> +mousepad-0.2.16.ebuild:
+  Xfce-4.6 bump
 
   22 Dec 2008; Christoph Mende <angelos@gentoo.org> -mousepad-0.2.13.ebuild:
   Removed old
