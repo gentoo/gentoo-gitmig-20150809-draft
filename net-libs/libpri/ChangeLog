@@ -1,6 +1,22 @@
 # ChangeLog for net-libs/libpri
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.70 2008/12/08 13:27:14 pva Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.71 2009/03/10 18:51:15 chainsaw Exp $
+
+  10 Mar 2009; <chainsaw@gentoo.org> +files/libpri-1.4.9-multilib.patch,
+  +files/libpri-1.4.9-respect-cflags.patch, libpri-1.0.7-r1.ebuild,
+  libpri-1.0.8.ebuild, libpri-1.0.9-r2.ebuild, libpri-1.2.2-r1.ebuild,
+  libpri-1.2.2-r2.ebuild, libpri-1.2.3.ebuild, libpri-1.2.3-r1.ebuild,
+  libpri-1.2.4.ebuild, libpri-1.2.4-r1.ebuild, libpri-1.2.4-r2.ebuild,
+  +libpri-1.4.9.ebuild:
+  Made repoman a lot happier about the state of this ebuild collection.
+
+*libpri-1.4.9 (10 Mar 2009)
+
+  10 Mar 2009; <chainsaw@gentoo.org> +files/libpri-1.4.9-multilib.patch,
+  +files/libpri-1.4.9-respect-cflags.patch, +libpri-1.4.9.ebuild:
+  Version bump to 1.4 branch, for use with Asterisk 1.6 which is masked.
+  Patches rebased. BRIstuff failed to build/patch correctly after repeated
+  attempts, so dropped for now.
 
   08 Dec 2008; Peter Volkov <pva@gentoo.org>
   +files/libpri-1.2.5-gcc42.patch, libpri-1.2.5.ebuild:
