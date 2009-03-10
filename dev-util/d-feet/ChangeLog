@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/d-feet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.5 2009/01/13 15:56:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.6 2009/03/10 13:57:09 steev Exp $
+
+  10 Mar 2009; <steev@gentoo.org> d-feet-0.1.4.ebuild, d-feet-0.1.6.ebuild,
+  d-feet-0.1.8.ebuild:
+  Update the inherits so that gnome phases get run.  Thanks to Betelgeuse 
+  for pointing this out
 
   13 Jan 2009; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   gentopia is going away
