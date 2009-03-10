@@ -1,6 +1,6 @@
 # Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.10.ebuild,v 1.1 2009/02/20 07:59:28 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.10.ebuild,v 1.2 2009/03/10 12:53:54 flameeyes Exp $
 
 EAPI=1
 
@@ -42,7 +42,7 @@ src_unpack() {
 	sptk_use_enable examples EXAMPLES
 	sptk_use_enable postgres POSTGRESQL
 	sptk_use_enable mysql    MYSQL
-	sptk_use_enable sqlite3  SQLITE3
+	sptk_use_enable sqlite   SQLITE3
 	sptk_use_enable odbc     ODBC
 	sptk_use_enable aspell   ASPELL
 	sptk_use_enable fltk     FLTK
