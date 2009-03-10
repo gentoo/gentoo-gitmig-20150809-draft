@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.7_p72-r10.ebuild,v 1.1 2009/03/07 18:22:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.7_p72-r10.ebuild,v 1.2 2009/03/10 14:43:35 a3li Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -139,6 +139,9 @@ src_test() {
 }
 
 src_install() {
+	# Ruby is involved in the install process, we don't want interference here.
+	unset RUBYOPT
+
 	LD_LIBRARY_PATH="${D}/usr/$(get_libdir)"
 	RUBYLIB="${S}:${LD_LIBRARY_PATH}/ruby/${SLOT}"
 	for d in $(find "${S}/ext" -type d) ; do
