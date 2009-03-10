@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.10 2009/03/05 19:20:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.11 2009/03/10 18:47:43 beandog Exp $
 
 EAPI=1
 
@@ -15,21 +15,21 @@ HOMEPAGE="http://ffmpeg.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="+3dnow +3dnowext aac alsa altivec amr custom-cflags debug dirac doc
-	  ieee1394 +encode gsm ipv6 +mmx +mmxext vorbis test theora threads
-	  x264 xvid network zlib sdl X mp3 oss schroedinger +hardcoded-tables
-	  bindist v4l v4l2 speex +ssse3 vhook jpeg2k"
+IUSE="+3dnow +3dnowext alsa altivec amr custom-cflags debug dirac doc
+	  ieee1394 +encode -faac -faad gsm ipv6 +mmx +mmxext vorbis test theora
+	  threads x264 xvid network zlib sdl X mp3 oss schroedinger
+	  +hardcoded-tables bindist v4l v4l2 speex +ssse3 jpeg2k"
 
 RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10 )
 	alsa? ( media-libs/alsa-lib )
 	encode? (
-		aac? ( media-libs/faac )
+		faac? ( media-libs/faac )
 		mp3? ( media-sound/lame )
 		vorbis? ( media-libs/libvorbis media-libs/libogg )
 		theora? ( media-libs/libtheora media-libs/libogg )
 		x264? ( >=media-libs/x264-0.0.20081006 )
 		xvid? ( >=media-libs/xvid-1.1.0 ) )
-	aac? ( >=media-libs/faad2-2.6.1 )
+	faad? ( >=media-libs/faad2-2.6.1 )
 	zlib? ( sys-libs/zlib )
 	ieee1394? ( media-libs/libdc1394
 				sys-libs/libraw1394 )
@@ -68,7 +68,7 @@ src_compile() {
 	# enabled by default
 	if use encode
 	then
-		use aac && myconf="${myconf} --enable-libfaac"
+		use faac && myconf="${myconf} --enable-libfaac"
 		use mp3 && myconf="${myconf} --enable-libmp3lame"
 		use vorbis && myconf="${myconf} --enable-libvorbis"
 		use theora && myconf="${myconf} --enable-libtheora"
@@ -94,7 +94,7 @@ src_compile() {
 	use threads && myconf="${myconf} --enable-pthreads"
 
 	# Decoders
-	use aac && myconf="${myconf} --enable-libfaad"
+	use faad && myconf="${myconf} --enable-libfaad"
 	use dirac && myconf="${myconf} --enable-libdirac"
 	use schroedinger && myconf="${myconf} --enable-libschroedinger"
 	use speex && myconf="${myconf} --enable-libspeex"
