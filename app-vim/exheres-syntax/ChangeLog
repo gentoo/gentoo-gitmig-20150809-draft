@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/exheres-syntax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/exheres-syntax/ChangeLog,v 1.6 2009/02/18 01:48:35 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/exheres-syntax/ChangeLog,v 1.7 2009/03/10 22:28:09 gentoofan23 Exp $
+
+*exheres-syntax-20090310 (10 Mar 2009)
+
+  10 Mar 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  +exheres-syntax-20090310.ebuild:
+  Version bump for exheres-syntax.
 
   18 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml:
   Pick up maintainership at Santiago's request
