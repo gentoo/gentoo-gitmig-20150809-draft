@@ -1,6 +1,12 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.115 2009/03/09 20:11:41 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.116 2009/03/10 17:34:05 beandog Exp $
+
+*dvdrip-0.98.10-r2 (10 Mar 2009)
+
+  10 Mar 2009; Steve Dibb <beandog@gentoo.org> -dvdrip-0.98.10-r1.ebuild,
+  +dvdrip-0.98.10-r2.ebuild:
+  Fix transcode-1.1.0 use flag deps, bug 261889
 
 *dvdrip-0.98.10-r1 (09 Mar 2009)
 *dvdrip-0.98.9-r1 (09 Mar 2009)
