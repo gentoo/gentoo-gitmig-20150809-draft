@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.178 2009/03/09 22:45:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.179 2009/03/10 13:47:48 eva Exp $
+
+  10 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  gnumeric-1.8.4-r1.ebuild:
+  Fix incorrect USE dependency on libgsf, bug #261971.
 
 *gnumeric-1.8.4-r1 (09 Mar 2009)
 
