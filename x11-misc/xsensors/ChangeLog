@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsensors
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.22 2009/03/09 21:02:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.23 2009/03/10 15:16:34 tcunha Exp $
+
+  10 Mar 2009; Tiago Cunha <tcunha@gentoo.org> xsensors-0.60.ebuild:
+  stable amd64, bug 261912
 
   09 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org> xsensors-0.60.ebuild:
   Remove -Werror, see bug #260947.
