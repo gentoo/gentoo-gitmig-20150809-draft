@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/cuecue-0.2.2-r1.ebuild,v 1.4 2008/10/27 00:30:54 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/cuecue-0.2.2-r1.ebuild,v 1.5 2009/03/10 22:08:00 beandog Exp $
 
+EAPI="1"
 inherit eutils
 
 DESCRIPTION="Cuecue is a suite to convert .cue + [.ogg|.flac|.wav|.mp3] to .cue + .bin."
@@ -11,7 +12,8 @@ SRC_URI="mirror://berlios/cuecue/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="flac mp3 vorbis"
+# Enable one use flag by default, bug 254745"
+IUSE="flac mp3 +vorbis"
 
 DEPEND="mp3? ( media-libs/libmad )
 	flac? ( media-libs/flac )
