@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.44 2009/02/15 12:12:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.45 2009/03/10 15:33:46 betelgeuse Exp $
+
+  10 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
+  dbus-python-0.83.0-r1.ebuild:
+  Add examples use flag.
 
 *dbus-python-0.83.0-r1 (15 Feb 2009)
 
@@ -70,6 +74,8 @@
   07 Sep 2007; Doug Goldstein <cardoe@gentoo.org> dbus-python-0.82.2.ebuild:
   bug #191590. Appears this is an issue with the old python-config. -r5 and
   higher use the new one
+
+*dbus-python-0.82.2 (06 Sep 2007)
 
   06 Sep 2007; Doug Goldstein <cardoe@gentoo.org>
   +dbus-python-0.82.2.ebuild:
