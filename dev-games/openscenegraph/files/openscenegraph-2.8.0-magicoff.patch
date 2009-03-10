@@ -1,16 +1,31 @@
 --- CMakeLists.txt.old  2009-02-25 10:26:47.000000000 +0100
 +++ CMakeLists.txt      2009-02-25 10:33:07.000000000 +0100
-@@ -287,6 +287,9 @@
+@@ -287,14 +287,24 @@
      INCLUDE(Find3rdPartyDependencies)
  ENDIF(WIN32)
  
-+OPTION(ENABLE_XUL "Enable plugin gecko if xulrunner is available" ON)
-+OPTION(ENABLE_PDF "Enable plugin pdf if poppler-glib and cairo are available" ON)
++OPTION(ENABLE_XUL "Enable gecko plugin" ON)
++OPTION(ENABLE_PDF "Enable pdf plugin" ON)
++OPTION(ENABLE_XINE "Enable xine plugin" ON)
++OPTION(ENABLE_JPEG2K "Enable jp2 plugin" ON)
++OPTION(ENABLE_SVG "Enable svg plugin" ON)
 +
  # Common to all platforms:
  FIND_PACKAGE(FreeType)
  FIND_PACKAGE(Inventor)
-@@ -302,7 +304,9 @@
++IF(ENABLE_JPEG2K)
+ FIND_PACKAGE(Jasper)
++ENDIF(ENABLE_JPEG2K)
+ FIND_PACKAGE(OpenEXR)
+ FIND_PACKAGE(COLLADA)
+ FIND_PACKAGE(ZLIB)
++IF(ENABLE_XINE)
+ FIND_PACKAGE(Xine)
++ENDIF(ENABLE_XINE)
+ FIND_PACKAGE(OpenVRML)
+ FIND_PACKAGE(Performer)
+ FIND_PACKAGE(GDAL)
+@@ -302,7 +312,9 @@
  FIND_PACKAGE(ITK)
  FIND_PACKAGE(LibVNCServer)
  FIND_PACKAGE(OurDCMTK)
@@ -20,17 +35,17 @@
  
  #use pkg-config to find various modues
  INCLUDE(FindPkgConfig OPTIONAL)
---- src/osgPlugins/CMakeLists.txt.old	2009-03-08 17:02:24.000000000 +0100
-+++ src/osgPlugins/CMakeLists.txt	2009-03-08 17:02:56.000000000 +0100
-@@ -211,9 +211,9 @@
-     ADD_SUBDIRECTORY(svg)
- ENDIF(RSVG_FOUND AND CAIRO_FOUND)
+@@ -319,9 +331,13 @@
+         KG_CHECK_MODULES(GTKGL gtkglext-x11-1.0)
+     ENDIF(WIN32)
  
--IF   (POPPLER_FOUND AND CAIRO_FOUND)
-+IF(ENABLE_PDF AND POPPLER_FOUND AND CAIRO_FOUND)
-     ADD_SUBDIRECTORY(pdf)
--ENDIF(POPPLER_FOUND AND CAIRO_FOUND)
-+ENDIF(ENABLE_PDF AND POPPLER_FOUND AND CAIRO_FOUND)
++    IF(ENABLE_SVG)
+     PKG_CHECK_MODULES(RSVG librsvg-2.0)
++    ENDIF(ENABLE_SVG)
+     PKG_CHECK_MODULES(CAIRO cairo)
++    IF(ENABLE_PDF)
+     PKG_CHECK_MODULES(POPPLER poppler-glib)
++    ENDIF(ENABLE_PDF)
  
- IF   (LIBVNCSERVER_FOUND)
-     ADD_SUBDIRECTORY(vnc)
+ ENDIF(PKG_CONFIG_FOUND)
+
