@@ -1,6 +1,6 @@
 # Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/crossdev-wrappers-9999.ebuild,v 1.2 2009/03/09 17:13:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/crossdev-wrappers-9999.ebuild,v 1.3 2009/03/10 21:02:06 armin76 Exp $
 
 inherit toolchain-funcs eutils cvs
 
@@ -28,6 +28,7 @@ src_compile() {
 }
 
 src_install() {
+	find -name CVS -print0 | xargs -0 rm -rf
 	emake PREFIX=/usr DESTDIR="${D}" install || die
 }
 
