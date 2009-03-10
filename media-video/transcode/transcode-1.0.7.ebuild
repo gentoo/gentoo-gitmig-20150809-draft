@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.7.ebuild,v 1.6 2009/01/10 16:02:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.7.ebuild,v 1.7 2009/03/10 19:54:58 beandog Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -15,12 +15,12 @@ SRC_URI="http://fromani.exit1.org/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
-IUSE="X 3dnow a52 altivec dv dvdread extrafilters mp3 fame truetype iconv
+IUSE="X 3dnow a52 altivec dv dvd extrafilters mp3 fame truetype iconv
 imagemagick jpeg lzo mjpeg mpeg mmx network nuv ogg oss vorbis quicktime sdl sse sse2 theora v4l2 xvid xml"
 
 RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	dv? ( >=media-libs/libdv-0.99 )
-	dvdread? ( >=media-libs/libdvdread-0.9.0 )
+	dvd? ( >=media-libs/libdvdread-0.9.0 )
 	xvid? ( >=media-libs/xvid-1.0.2 )
 	mjpeg? ( >=media-video/mjpegtools-1.6.2-r3 )
 	lzo? ( =dev-libs/lzo-2* )
@@ -95,7 +95,7 @@ src_compile() {
 		$(use_enable oss) \
 		$(use_enable vorbis) \
 		$(use_enable theora) \
-		$(use_enable dvdread libdvdread) \
+		$(use_enable dvd libdvdread) \
 		$(use_enable dv libdv) \
 		$(use_enable quicktime libquicktime) \
 		$(use_enable lzo) \

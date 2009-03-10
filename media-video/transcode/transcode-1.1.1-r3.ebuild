@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.1-r3.ebuild,v 1.2 2009/03/09 17:36:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.1-r3.ebuild,v 1.3 2009/03/10 19:54:58 beandog Exp $
 
 EAPI="2"
 
@@ -17,12 +17,12 @@ SRC_URI="mirror://berlios/tcforge/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X 3dnow a52 aac alsa altivec dv dvdread iconv imagemagick jpeg lzo mjpeg mp3 mmx nuv ogg oss postproc quicktime sdl sse sse2 theora truetype v4l2 vorbis x264 xml xvid"
+IUSE="X 3dnow a52 aac alsa altivec dv dvd iconv imagemagick jpeg lzo mjpeg mp3 mmx nuv ogg oss postproc quicktime sdl sse sse2 theora truetype v4l2 vorbis x264 xml xvid"
 
 RDEPEND="a52? ( media-libs/a52dec )
 	alsa? ( media-libs/alsa-lib )
 	dv? ( media-libs/libdv )
-	dvdread? ( media-libs/libdvdread )
+	dvd? ( media-libs/libdvdread )
 	mjpeg? ( media-video/mjpegtools )
 	lzo? ( >=dev-libs/lzo-2 )
 	imagemagick? ( media-gfx/imagemagick )
@@ -80,7 +80,7 @@ src_configure() {
 		$(use_enable ogg) \
 		$(use_enable vorbis) \
 		$(use_enable theora) \
-		$(use_enable dvdread libdvdread) \
+		$(use_enable dvd libdvdread) \
 		$(use_enable dv libdv) \
 		$(use_enable quicktime libquicktime) \
 		$(use_enable imagemagick) \

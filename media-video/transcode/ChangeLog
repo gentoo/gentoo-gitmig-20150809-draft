@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.253 2009/03/09 17:36:50 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.254 2009/03/10 19:54:58 beandog Exp $
+
+  10 Mar 2009; Steve Dibb <beandog@gentoo.org> transcode-1.0.7.ebuild,
+  transcode-1.1.1-r3.ebuild:
+  Move dvdread use flag to simpler dvd one
 
   09 Mar 2009; Steve Dibb <beandog@gentoo.org> -transcode-1.0.7_rc1.ebuild,
   -transcode-1.1.1.ebuild, -transcode-1.1.1-r1.ebuild,
