@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.22.ebuild,v 1.1 2009/02/03 01:57:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.22.ebuild,v 1.2 2009/03/10 05:53:28 vapier Exp $
 
 inherit eutils multilib
 
@@ -16,6 +16,7 @@ IUSE="java"
 RDEPEND="sys-libs/zlib
 	media-libs/jpeg
 	dev-libs/openssl
+	dev-lang/tk
 	java? ( virtual/jre )
 	x11-libs/libICE
 	x11-libs/libSM
