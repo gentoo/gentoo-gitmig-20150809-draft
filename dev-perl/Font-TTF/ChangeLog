@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Font-TTF
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.10 2009/03/09 14:12:43 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.11 2009/03/10 04:40:41 cla Exp $
+
+  10 Mar 2009; Dawid Węgliński <cla@gentoo.org> Font-TTF-0.45.ebuild:
+  Stable on amd64 (bug #261824)
 
   09 Mar 2009; Ferris McCormick <fmccor@gentoo.org> Font-TTF-0.45.ebuild:
   Sparc stable, required by Bug #261824.
