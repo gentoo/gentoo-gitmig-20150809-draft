@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.10.0.2-r1.ebuild,v 1.1 2009/01/29 02:52:21 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.10.0.2-r2.ebuild,v 1.1 2009/03/10 05:12:15 darkside Exp $
 
 DESCRIPTION="Free Unix Spectrum Emulator by Philip Kendall"
 HOMEPAGE="http://fuse-emulator.sourceforge.net"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/fuse-emulator/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa ao fbcon gpm gtk joystick libdsk libsamplerate memlimit png sdl svga X xml"
+IUSE="alsa ao fbcon gpm gtk joystick libsamplerate memlimit png sdl svga X xml"
 
 # This build is heavily use dependent. Fuse user interface use flags are, in
 # order of precedence: gtk, sdl, X, svga and fbcon. X version of fuse will
@@ -41,8 +41,6 @@ RDEPEND="|| (
 		joystick? ( media-libs/libjsw ) )
 	)
 	>=app-emulation/libspectrum-0.5
-	libdsk? ( >=app-emulation/libdsk-1.1.5
-		app-emulation/lib765 )
 	>=dev-libs/glib-2
 	png? ( media-libs/libpng )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.0 )
@@ -69,7 +67,6 @@ src_compile() {
 	econf --without-win32 \
 		${guiflag} \
 		$(use_with gpm gpm) \
-		$(use_with libdsk plus3-disk) \
 		$(use_with alsa alsa) \
 		$(use_with ao libao) \
 		$(use_with libsamplerate libsamplerate) \
