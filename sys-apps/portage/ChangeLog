@@ -1,6 +1,28 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.582 2009/02/21 03:28:28 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.583 2009/03/10 09:14:21 zmedico Exp $
+
+*portage-2.2_rc24 (10 Mar 2009)
+
+  10 Mar 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc24.ebuild:
+  2.2_rc24 bump. This fixes bug #199408 (account for current config with
+  emerge --resume), bug #230483 (new option parser for glsa-check), bug
+  #250020 (improve merge order), bug #253904 (avoid slot conflicts), bug
+  #256289 (show normal mask message for use deps when version with
+  required IUSE is masked), bug #256616 (don't do anything else when
+  system packages are merging), bug #258433 (warn about incorrectly defined
+  FETCHCOMMAND for EAPI 2), bug #259124 (apply --color to fetch output),
+  bug #259882 (disable dispatch-conf confmem-like behavior), bug #259954
+  (be careful about system deps with unsatisfied PDEPEND), bug #260331
+  (reject set*id binaries that have DT_RPATH:$ORIGIN), bug #261082 (fetch
+  changed packages with --getbinpkg), bug #261670 (warn if ebuild changes
+  CHOST from initial setting), bug #261675 (avoid interference between
+  FEATURES=digest and concurrent tasks), and bug #261852 (show mod_echo
+  elog output before showing a traceback from an unexpected exception).
+  Bug #210077 tracks all bugs fixed in the 2.2 branch.
+
+  10 Mar 2009; Zac Medico <zmedico@gentoo.org> -portage-2.2_rc20.ebuild:
+  Remove old version.
 
   21 Feb 2009; Jeremy Olexa <darkside@gentoo.org> portage-2.1.6.7.ebuild:
   amd64 stable, bug 259523
