@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.3.6.ebuild,v 1.1 2009/02/09 18:40:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.3.6.ebuild,v 1.2 2009/03/10 07:39:11 aballier Exp $
 
 EAPI=1
 
@@ -50,6 +50,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/mlt-0.2.3-nostrip.patch
+	epatch "${FILESDIR}"/${P}-avutil.patch
 }
 
 src_compile() {
