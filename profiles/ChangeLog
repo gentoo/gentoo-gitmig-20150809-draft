@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2428 2009/03/11 07:48:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2429 2009/03/11 08:10:11 jokey Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Mar 2009; Markus Ullmann <jokey@gentoo.org> arch/amd64/use.mask,
+  arch/x86/use.mask, base/use.mask:
+  Adjust mask/unmask of virtualbox use_expand
 
   11 Mar 2009; Markus Ullmann <jokey@gentoo.org> desc/input_devices.desc:
   Add description for input_devices virtualbox
