@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/rt61-firmware
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61-firmware/ChangeLog,v 1.1 2009/03/11 16:28:37 rbu Exp $
+
+*rt61-firmware-1.2 (11 Mar 2009)
+
+  11 Mar 2009; Robert Buchholz <rbu@gentoo.org> +metadata.xml,
+  +rt61-firmware-1.2.ebuild:
+  Ebuild for rt61pci firmware, based on an ebuild by Davide Pesavento in bug
+  204314
+
