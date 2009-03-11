@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.41 2009/01/19 15:52:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.42 2009/03/11 11:23:11 flameeyes Exp $
+
+*apcupsd-3.14.5-r1 (11 Mar 2009)
+
+  11 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +apcupsd-3.14.5-r1.ebuild:
+  Install .css file in /etc/apcupsd (bug #261549) and enable pcnet driver
+  (bug #260641).
 
   19 Jan 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   apcupsd-3.14.5.ebuild:
