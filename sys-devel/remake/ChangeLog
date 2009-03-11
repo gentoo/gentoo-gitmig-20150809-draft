@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/remake
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/remake/ChangeLog,v 1.5 2009/01/10 20:44:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/remake/ChangeLog,v 1.6 2009/03/11 02:44:58 tcunha Exp $
+
+  11 Mar 2009; Tiago Cunha <tcunha@gentoo.org> remake-3.81.0.2.ebuild:
+  stable amd64, bug 262052
 
 *remake-3.81.0.2 (10 Jan 2009)
 
