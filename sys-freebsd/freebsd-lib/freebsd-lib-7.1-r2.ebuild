@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r2.ebuild,v 1.2 2009/02/23 03:11:54 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r2.ebuild,v 1.3 2009/03/11 18:44:35 drizzt Exp $
 
-inherit bsdmk freebsd flag-o-matic toolchain-funcs
+inherit bsdmk freebsd flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="FreeBSD's base system libraries"
 SLOT="7.0"
@@ -261,7 +261,8 @@ src_install() {
 		dosym "usr/include" "/usr/${CTARGET}/sys-include"
 	else
 		cd "${S}"
-		mkinstall || die "Install failed"
+		# Set SHLIBDIR and LIBDIR for multilib
+		SHLIBDIR="/$(get_libdir)" LIBDIR="/usr/$(get_libdir)" mkinstall || die "Install failed"
 	fi
 
 	# Don't install the rest of the configuration files if crosscompiling
@@ -274,21 +275,21 @@ src_install() {
 
 	# Add symlinks (-> libthr) for legacy threading libraries, since these are
 	# not built by us (they are disabled in FreeBSD-7 anyway).
-	dosym libthr.a /usr/lib/libpthread.a
-	dosym libthr.so /usr/lib/libpthread.so
-	dosym libthr.a /usr/lib/libc_r.a
-	dosym libthr.so /usr/lib/libc_r.so
+	dosym libthr.a /usr/$(get_libdir)/libpthread.a
+	dosym libthr.so /usr/$(get_libdir)/libpthread.so
+	dosym libthr.a /usr/$(get_libdir)/libc_r.a
+	dosym libthr.so /usr/$(get_libdir)/libc_r.so
 
 	# Add symlink (-> libthr) so previously built binaries still work.
-	dosym libthr.so.3 /lib/libpthread.so.2
-	dosym libthr.so.3 /lib/libc_r.so.6
+	dosym libthr.so.3 /$(get_libdir)/libpthread.so.2
+	dosym libthr.so.3 /$(get_libdir)/libc_r.so.6
 
 	# Compatibility symlinks to run FreeBSD 5.x binaries (ABI is mostly
 	# identical, remove when problems will actually happen)
-	dosym /lib/libc.so.7 /usr/lib/libc.so.6
-	dosym /lib/libc.so.6 /usr/lib/libc.so.5
-	dosym /lib/libm.so.4 /usr/lib/libm.so.3
-	dosym /lib/libm.so.5 /usr/lib/libm.so.4
+	dosym /lib/libc.so.7 /usr/$(get_libdir)/libc.so.6
+	dosym /lib/libc.so.6 /usr/$(get_libdir)/libc.so.5
+	dosym /lib/libm.so.4 /usr/$(get_libdir)/libm.so.3
+	dosym /lib/libm.so.5 /usr/$(get_libdir)/libm.so.4
 
 	# install libstand files
 	dodir /usr/include/libstand
@@ -307,7 +308,6 @@ src_install() {
 	fi
 	doins "etc.${MACHINE}"/*
 
-	dodir /etc/sandbox.d
 
 	# Generate ldscripts, otherwise bad thigs are supposed to happen
 	gen_usr_ldscript libalias_cuseeme.so libalias_dummy.so libalias_ftp.so \
@@ -319,6 +319,7 @@ src_install() {
 	#	libipsec.so libipx.so libkiconv.so libkvm.so libmd.so libsbuf.so libufs.so \
 	#	libutil.so
 
+	dodir /etc/sandbox.d
 	cat - > "${D}"/etc/sandbox.d/00freebsd <<EOF
 # /dev/crypto is used mostly by OpenSSL on *BSD platforms
 # leave it available as packages might use OpenSSL commands
