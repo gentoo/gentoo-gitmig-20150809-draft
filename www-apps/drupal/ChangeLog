@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.56 2009/01/16 09:47:51 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.57 2009/03/11 12:23:55 pva Exp $
+
+*drupal-6.10 (11 Mar 2009)
+*drupal-5.16 (11 Mar 2009)
+
+  11 Mar 2009; Peter Volkov <pva@gentoo.org> -drupal-5.13.ebuild,
+  -drupal-5.14.ebuild, +drupal-5.16.ebuild, -drupal-6.7.ebuild,
+  -drupal-6.8.ebuild, +drupal-6.10.ebuild:
+  Version bump, thank Tom Rogie aka Trogie for report in bug #261014.
 
 *drupal-6.9 (16 Jan 2009)
 *drupal-5.15 (16 Jan 2009)

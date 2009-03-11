@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-5.14.ebuild,v 1.1 2008/12/25 18:45:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-5.16.ebuild,v 1.1 2009/03/11 12:23:55 pva Exp $
 
 inherit webapp eutils depend.php
 
