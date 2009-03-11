@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xvidcap
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.47 2009/01/19 23:15:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/ChangeLog,v 1.48 2009/03/11 22:43:18 aballier Exp $
+
+  11 Mar 2009; Alexis Ballier <aballier@gentoo.org>
+  +files/xvidcap-1.1.7-avutil.patch, xvidcap-1.1.7.ebuild:
+  Fix build with libavutil 50.0.0, aka ffmpeg trunk.
 
   19 Jan 2009; Alexis Ballier <aballier@gentoo.org>
   files/xvidcap-1.1.7-ffmpeg-headers.patch:
