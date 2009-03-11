@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.12.ebuild,v 1.3 2009/03/07 21:50:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.12.ebuild,v 1.4 2009/03/11 22:50:09 maekke Exp $
 
 inherit versionator java-vm-2 eutils pax-utils
 
@@ -17,7 +17,7 @@ SRC_URI="x86? ( ${URL_BASE}/${X86_AT} )
 		amd64? ( ${URL_BASE}/${AMD64_AT} )"
 SLOT="1.6"
 LICENSE="dlj-1.1"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 RESTRICT="strip"
 IUSE="X alsa doc examples jce nsplugin odbc"
 
