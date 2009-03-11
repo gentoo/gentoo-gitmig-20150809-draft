@@ -1,6 +1,6 @@
 #!/bin/bash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.3 2009/03/11 14:41:48 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.4 2009/03/11 14:43:09 drizzt Exp $
 
 alias make=gmake
 alias patch=gpatch
@@ -14,7 +14,6 @@ alias awk=gawk
 # http://archives.gentoo.org/gentoo-dev/msg_8cb1805411f37b4eb168a3e680e531f3.xml
 post_src_install()
 {
-	echo cucu
 	if [ "${PN}" != "libiconv" -a -e "${D}"/usr/lib*/charset.alias ] ; then
 		rm -f "${D}"/usr/lib*/charset.alias
 	fi
