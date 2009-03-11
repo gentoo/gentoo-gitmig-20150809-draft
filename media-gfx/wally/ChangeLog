@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.7 2009/03/09 21:58:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.8 2009/03/11 13:07:34 hwoarang Exp $
+
+*wally-2.0.1-r1 (11 Mar 2009)
+
+  11 Mar 2009; Markos Chandras <hwoarang@gentoo.org> +wally-2.0.1-r1.ebuild:
+  Adding kde use flag for building optional kde4 wallyplugin
 
   09 Mar 2009; Ben de Groot <yngwin@gentoo.org> wally-2.0.0, wally-2.0.1:
   Add needed app-crypt/qca:2 dependency. Fixes bug 247738.
