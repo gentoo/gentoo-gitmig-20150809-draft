@@ -1,6 +1,6 @@
 # Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.24.1-r1.ebuild,v 1.3 2009/03/06 15:43:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.24.1-r1.ebuild,v 1.4 2009/03/11 02:07:33 dang Exp $
 
 inherit autotools eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="alsa debug esd gstreamer libnotify pulseaudio"
 
 RDEPEND=">=dev-libs/dbus-glib-0.74

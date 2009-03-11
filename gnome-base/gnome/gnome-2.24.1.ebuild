@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.24.1.ebuild,v 1.2 2009/03/04 21:19:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.24.1.ebuild,v 1.3 2009/03/11 02:04:25 dang Exp $
 EAPI="1"
 
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -11,7 +11,7 @@ SLOT="2.0"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~alpha ~amd64 ~ia64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~x86 ~x86-fbsd"
 
 IUSE="accessibility cdr cups dvdr esd ldap mono"
 
@@ -65,7 +65,7 @@ RDEPEND="
 
 	>=media-libs/gstreamer-0.10.20
 	>=media-libs/gst-plugins-base-0.10.20
-	>=media-libs/gst-plugins-good-0.10.10
+	>=media-libs/gst-plugins-good-0.10.8
 	>=gnome-extra/gnome-media-2.24.0.1
 	>=media-sound/sound-juicer-2.24.0
 	>=dev-libs/totem-pl-parser-2.24.1

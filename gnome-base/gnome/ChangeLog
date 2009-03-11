@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.352 2009/03/04 21:19:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.353 2009/03/11 02:04:25 dang Exp $
+
+  11 Mar 2009; Daniel Gryniewicz <dang@gentoo.org> gnome-2.24.1.ebuild:
+  Marked stable on amd64
 
   04 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org> gnome-2.24.1.ebuild:
   Downgrade gstreamer requirements to 0.10.20 for gnome 2.24 stabilization
