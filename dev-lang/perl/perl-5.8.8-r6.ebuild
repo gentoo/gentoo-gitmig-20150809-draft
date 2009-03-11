@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r6.ebuild,v 1.1 2009/01/28 09:54:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r6.ebuild,v 1.2 2009/03/11 21:47:17 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -123,8 +123,7 @@ src_unpack() {
 	# filter it otherwise configure fails. See #125535.
 	epatch "${FILESDIR}"/perl-hppa-pa7200-configure.patch
 
-	#[[ ${get_libdir} == lib64 ]] && cd ${S} && epatch ${FILESDIR}/${P}-lib64.patch
-	use amd64 || use ppc64 && cd "${S}" && epatch "${FILESDIR}"/${P}-lib64.patch
+	[[ $(get_libdir) == lib64 ]] && cd "${S}" && epatch "${FILESDIR}"/${P}-lib64.patch
 
 	[[ ${CHOST} == *-dragonfly* ]] && cd "${S}" && epatch "${FILESDIR}"/${P}-dragonfly-clean.patch
 	[[ ${CHOST} == *-freebsd* ]] && cd "${S}" && epatch "${FILESDIR}"/${P}-fbsdhints.patch
@@ -344,7 +343,7 @@ EOF
 	# This is to fix a missing c flag for backwards compat
 	for i in `find "${D}"/usr/$(get_libdir)/perl5 -iname "Config.pm"`;do
 		sed -e "s:ccflags=':ccflags='-DPERL5 :" \
-		    -e "s:cppflags=':cppflags='-DPERL5 :" \
+			-e "s:cppflags=':cppflags='-DPERL5 :" \
 			${i} > ${i}.new &&\
 			mv ${i}.new ${i} || die "Sed failed"
 	done
@@ -609,7 +608,7 @@ pkg_postinst() {
 		# Silently remove the now empty dirs
 		for DIR in $INC; do
 		   if [[ -d "${ROOT}"/$DIR ]]; then
-		   	find "${ROOT}"/$DIR -depth -type d | xargs -r rmdir &> /dev/null
+			find "${ROOT}"/$DIR -depth -type d | xargs -r rmdir &> /dev/null
 		   fi
 		done
 		ebegin "Generating ConfigLocal.pm (ignore any error)"
