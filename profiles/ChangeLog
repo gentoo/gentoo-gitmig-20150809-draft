@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2429 2009/03/11 08:10:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2430 2009/03/11 10:59:39 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Add a mask for sudo new betas.
 
   11 Mar 2009; Markus Ullmann <jokey@gentoo.org> arch/amd64/use.mask,
   arch/x86/use.mask, base/use.mask:
