@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.8.0_beta2.ebuild,v 1.1 2009/03/09 23:49:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.8.0_beta2.ebuild,v 1.2 2009/03/11 22:19:19 maekke Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 # TODO ca_ES cs_CZ zn_CN
-LANGS=" bg de es fr hu it ja ko nl pl pt_BR ru sk sv uk"
-IUSE="+sift ${IUSE} $(echo ${LANGS//\ /\ linguas_})"
+LANGS=" bg de en_GB es fr hu it ja ko nl pl pt_BR ru sk sv uk"
+IUSE="+sift $(echo ${LANGS//\ /\ linguas_})"
 
 DEPEND="
 	app-arch/zip
@@ -24,7 +24,7 @@ DEPEND="
 	>=media-gfx/enblend-3.0_p20080807
 	media-gfx/exiv2
 	media-libs/jpeg
-	media-libs/libpano13
+	>=media-libs/libpano13-2.9.14_beta1
 	media-libs/libpng
 	media-libs/openexr
 	media-libs/tiff

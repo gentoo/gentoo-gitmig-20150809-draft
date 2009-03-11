@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.54 2009/03/09 23:49:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.55 2009/03/11 22:19:19 maekke Exp $
+
+  11 Mar 2009; Markus Meier <maekke@gentoo.org> hugin-0.8.0_beta2.ebuild:
+  add en_GB language, fix IUSE assignement and raise libpano13 dep
 
 *hugin-0.8.0_beta2 (09 Mar 2009)
 
