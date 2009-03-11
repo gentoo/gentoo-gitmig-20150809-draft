@@ -1,6 +1,6 @@
  # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.1.ebuild,v 1.2 2009/03/11 10:46:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.1.ebuild,v 1.3 2009/03/11 11:35:51 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -16,9 +16,10 @@ SRC_URI="ftp://alpha.gnu.org/gnu/coreutils/${P}.tar.gz
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="acl nls selinux static xattr vanilla"
+IUSE="acl caps nls selinux static vanilla xattr"
 
-RDEPEND="selinux? ( sys-libs/libselinux )
+RDEPEND="caps? ( sys-libs/libcap )
+	selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl )
 	xattr? ( sys-apps/attr )
 	nls? ( >=sys-devel/gettext-0.15 )
@@ -62,6 +63,7 @@ src_compile() {
 		--enable-install-program="arch" \
 		--enable-no-install-program="groups,hostname,kill,su,uptime" \
 		--enable-largefile \
+		$(use_enable caps libcap) \
 		$(use_enable nls) \
 		$(use_enable acl) \
 		$(use_enable xattr) \
