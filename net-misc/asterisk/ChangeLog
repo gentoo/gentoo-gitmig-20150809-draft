@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.183 2009/03/10 23:33:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.184 2009/03/11 17:47:27 chainsaw Exp $
+
+*asterisk-1.2.31.1 (11 Mar 2009)
+
+  11 Mar 2009; <chainsaw@gentoo.org>
+  +files/1.2.0/asterisk-1.2.31.1-bri-fixups.diff,
+  +files/1.2.0/asterisk-1.2.31.1-comma-is-not-pipe.diff,
+  +files/1.2.0/asterisk-1.2.31.1-svn89254.diff, +asterisk-1.2.31.1.ebuild:
+  Version bump, for security bugs #250748 and #254304. Took a 1.4 build fix
+  that is relevant to 1.2, Digium bug #11238. Wrote patch to fix up typo in
+  open call, a comma is not a pipe sign. Used EAPI 2 for USE-based
+  dependencies instead of calling die. Patch from Mounir Lamouri adding
+  -lspeexdsp closes bug #206463 filed by John Read.
 
 *asterisk-1.6.0.6 (10 Mar 2009)
 
