@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4266 2009/03/11 15:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4267 2009/03/11 21:07:54 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1013,6 +1013,7 @@ kde-base/kalzium:solver - Enable the equation solver
 kde-base/kbugbuster:kcal - Support for kcal (calendar) format
 kde-base/kcontrol:logitech-mouse -  Build the Control Center module to configure logitech mice 
 kde-base/kdeadmin-meta:lilo - Install lilo-config, a frontend for the lilo boot loader
+kde-base/kdeartwork-kscreensaver:eigen - Enable various aritmethic screensavers which use Eigen2 for computations.
 kde-base/kdebase:logitech-mouse - Build the Control Center module to configure logitech mice
 kde-base/kdeedu:kig-scripting - Support Python scripting in kig
 kde-base/kdeedu:solver - Enable Kalzium ocaml equation solver
