@@ -1,6 +1,15 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.57 2009/03/02 22:56:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.58 2009/03/11 18:25:00 yngwin Exp $
+
+*qtcurve-qt4-0.62.0 (11 Mar 2009)
+
+  11 Mar 2009; Ben de Groot <yngwin@gentoo.org>
+  -qtcurve-qt4-0.59.3-r1.ebuild, -qtcurve-qt4-0.59.6-r1.ebuild,
+  -qtcurve-qt4-0.60.0.ebuild, -qtcurve-qt4-0.61.1.ebuild,
+  -qtcurve-qt4-0.61.2.ebuild, +qtcurve-qt4-0.62.0.ebuild:
+  Version bump. Re-add ~alpha and ~sparc now that kde4-base.eclass is fixed.
+  Drop some old versions.
 
   02 Mar 2009; Ben de Groot <yngwin@gentoo.org> qtcurve-qt4-0.61.4.ebuild:
   Add NEED_KDE=none to prevent kde dependency even with USE=-kde. Fixes bug
