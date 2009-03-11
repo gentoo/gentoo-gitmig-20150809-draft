@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/unicode-data-5.1.0.ebuild,v 1.7 2009/03/10 04:39:37 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/unicode-data-5.1.0.ebuild,v 1.8 2009/03/11 16:14:25 ranger Exp $
 
 DESCRIPTION="Unicode data from unicode.org"
 HOMEPAGE="http://unicode.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://debian/pool/main/u/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="unicode"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="app-arch/unzip"
