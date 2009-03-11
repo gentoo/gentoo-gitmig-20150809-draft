@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.10.3.ebuild,v 1.3 2009/02/27 14:41:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/poppler-bindings-0.10.5.ebuild,v 1.1 2009/03/11 23:39:45 loki_val Exp $
 
 EAPI="2"
 
-inherit autotools eutils multilib
+#Inherit qt3 to get QTDIR even if the env file has not yet been sourced.
+
+inherit qt3 autotools eutils multilib
 
 MY_P=${P/-bindings/}
 DESCRIPTION="rendering bindings for GUI toolkits for poppler"
@@ -81,6 +83,7 @@ src_prepare() {
 		-e '/poppler.pc\t/d'					\
 		-e ':$(splash_pc_file):d'				\
 		Makefile.am || die "404"
+	rm m4/lt*.m4 m4/libtool.m4 || die "rm failed"
 
 	eautoreconf
 }
