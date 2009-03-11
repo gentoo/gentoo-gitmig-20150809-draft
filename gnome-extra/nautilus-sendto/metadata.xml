@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>compnerd@gentoo.org</email>
-		<name>Saleem Abdulrasool</name>
-	</maintainer>
+	<herd>gnome</herd>
 	<use>
-		<flag name='gajim'>Enables support for the Gajim
-			(<pkg>net-im/gajim</pkg>) IM client</flag>
-		<flag name='pidgin'>Enables support for the Pidgin
-			(<pkg>net-im/pidgin</pkg>) IM client</flag>
-		<flag name='sylpheed'>Enables support for the Sylpheed
-			(<pkg>mail-client/sylpheed</pkg>) mail client</flag>
-		<flag name='thunderbird'>Enables support for the Mozilla Thunderbird
-			(<pkg>mail-client/mozilla-thunderbird</pkg>) mail client</flag>
+		<flag name='balsa'>Enables support for
+			<pkg>mail-client/balsa</pkg></flag>
+		<flag name='claws'>Enables support for <pkg>mail-client/claws</pkg></flag>
+		<flag name='eds'>Enables support for evolution-sendto using
+			<pkg>gnome-extra/evolution-data-server</pkg></flag>
+		<flag name='empathy'>Enables support for <pkg>net-im/empathy</pkg></flag>
+		<flag name='gajim'>Enables support for <pkg>net-im/gajim</pkg></flag>
+		<flag name='pidgin'>Enables support for <pkg>net-im/pidgin</pkg></flag>
+		<flag name='sylpheed'>Enables support for
+			<pkg>mail-client/sylpheed</pkg></flag>
+		<flag name='thunderbird'>Enables support for
+			<pkg>mail-client/mozilla-thunderbird</pkg></flag>
+		<flag name='upnp'>Enables support for sending files over upnp using
+			<pkg>net-libs/gupnp-av</pkg></flag>
 	</use>
 </pkgmetadata>
 
