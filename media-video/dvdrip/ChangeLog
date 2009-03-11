@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.117 2009/03/10 19:56:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.118 2009/03/11 07:17:40 dev-zero Exp $
+
+  11 Mar 2009; Tiziano Müller <dev-zero@gentoo.org>
+  dvdrip-0.98.10-r2.ebuild:
+  replaced dvd USE flag with dvdread for transcode-1.1
 
   10 Mar 2009; Steve Dibb <beandog@gentoo.org> dvdrip-0.98.8.ebuild,
   dvdrip-0.98.9-r1.ebuild, dvdrip-0.98.10-r2.ebuild:
