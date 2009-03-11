@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pdftex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.12 2009/03/10 19:59:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.13 2009/03/11 22:09:11 maekke Exp $
+
+  11 Mar 2009; Markus Meier <maekke@gentoo.org> pdftex-1.40.9.ebuild:
+  amd64 stable, bug #253551
 
   10 Mar 2009; Raúl Porcel <armin76@gentoo.org> pdftex-1.40.9.ebuild:
   Add ~arm/~s390/~sh
