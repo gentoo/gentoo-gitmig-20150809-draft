@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-htmlxml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/ChangeLog,v 1.30 2009/03/10 19:23:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-htmlxml/ChangeLog,v 1.31 2009/03/11 23:15:03 maekke Exp $
+
+  11 Mar 2009; Markus Meier <maekke@gentoo.org> texlive-htmlxml-2008.ebuild:
+  amd64 stable, bug #253551
 
   10 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   texlive-htmlxml-2008.ebuild:
