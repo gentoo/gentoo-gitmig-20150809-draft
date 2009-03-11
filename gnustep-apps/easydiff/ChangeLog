@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/easydiff
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.17 2008/03/08 13:27:15 coldwind Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.18 2009/03/11 10:42:01 voyageur Exp $
+
+*easydiff-0.4.0 (11 Mar 2009)
+
+  11 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +easydiff-0.4.0.ebuild:
+  New release, by GNUstep team. Cleaned and updated ebuild
 
   08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   easydiff-0.3.1_pre20061115.ebuild:
