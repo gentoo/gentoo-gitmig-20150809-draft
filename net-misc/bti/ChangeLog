@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/bti
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.8 2009/02/14 07:00:19 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bti/ChangeLog,v 1.9 2009/03/11 20:23:01 gregkh Exp $
+
+*bti-015 (11 Mar 2009)
+
+  11 Mar 2009; Greg Kroah-Hartman <gregkh@gentoo.org> +bti-015.ebuild:
+  015 update, now supports getting data from the server
 
   14 Feb 2009; Greg Kroah-Hartman <gregkh@gentoo.org> ChangeLog:
   remove old ebuilds
