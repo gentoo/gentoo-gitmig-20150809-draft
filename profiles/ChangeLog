@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2431 2009/03/11 12:57:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2432 2009/03/11 15:02:28 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Mar 2009; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
+  Mask gnome-base/gnome-power-manager-2.24* due to CPUFreq regression (bug
+  #247614)
 
   11 Mar 2009; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
   Mask nautilus-sendto-1.1.2 (needs bluez-4)
