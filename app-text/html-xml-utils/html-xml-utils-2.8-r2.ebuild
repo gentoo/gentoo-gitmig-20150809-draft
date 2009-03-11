@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.8-r2.ebuild,v 1.6 2009/03/11 22:32:56 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.8-r2.ebuild,v 1.7 2009/03/11 22:34:23 loki_val Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ SLOT="0"
 RDEPEND="virtual/libc
 	!sys-apps/count
 	!media-libs/libextractor
-	!app-shells/fish"
+	!app-shells/fish
+	!dev-perl/HTML-Clean"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
