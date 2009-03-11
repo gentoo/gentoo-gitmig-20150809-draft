@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.100.ebuild,v 1.1 2009/03/10 13:53:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.100.ebuild,v 1.2 2009/03/11 10:53:30 angelos Exp $
 
 EAPI=1
 
@@ -29,6 +29,13 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	XFCE_CONFIG+=" $(use_enable doc gtk-doc) $(use_enable hal)
 	$(use_enable libnotify notifications) $(use_enable python)"
+}
+
+src_unpack() {
+	xfce4_src_unpack
+	cd "${S}"
+	rm py-compile
+	ln -s /bin/true py-compile
 }
 
 pkg_postinst() {
