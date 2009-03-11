@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnfsidmap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.27 2009/03/10 00:08:12 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.28 2009/03/11 22:03:23 klausman Exp $
+
+  11 Mar 2009; Tobias Klausmann <klausman@gentoo.org>
+  libnfsidmap-0.21-r1.ebuild:
+  Stable on alpha, bug #261334
 
   10 Mar 2009; Dawid Węgliński <cla@gentoo.org>
   libnfsidmap-0.21-r1.ebuild:
