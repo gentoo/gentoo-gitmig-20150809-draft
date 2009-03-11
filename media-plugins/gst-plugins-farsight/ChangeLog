@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-farsight
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.20 2009/01/07 21:50:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.21 2009/03/11 13:50:28 nirbheek Exp $
+
+*gst-plugins-farsight-0.12.10 (11 Mar 2009)
+
+  11 Mar 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gst-plugins-farsight-0.12.10.ebuild:
+  Blind bump to 0.12.10 with Olivier's permission (needed for upcoming
+  empathy-2.25*)
 
   07 Jan 2009; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-farsight-0.12.9.ebuild:
