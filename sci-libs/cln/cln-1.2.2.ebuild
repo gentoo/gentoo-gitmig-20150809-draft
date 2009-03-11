@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.2.2.ebuild,v 1.7 2008/11/02 07:58:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.2.2.ebuild,v 1.8 2009/03/11 18:02:00 jer Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gnu/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~hppa ppc ~ppc64 sparc x86"
 IUSE="doc examples"
 
 DEPEND="dev-libs/gmp"
@@ -33,6 +33,7 @@ src_compile () {
 	# ftracer buggy bug #237451
 	filter-flags -ftracer
 	use sparc && append-cppflags "-DNO_ASM"
+	use hppa && append-cppflags "-DNO_ASM"
 	econf  \
 		--libdir=/usr/$(get_libdir) \
 		--datadir=/usr/share/doc/${PF} \
