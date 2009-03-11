@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/step
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.12 2009/03/08 20:58:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.13 2009/03/11 12:13:11 scarabeus Exp $
+
+  11 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> step-4.2.1.ebuild:
+  Update deps for higher versions of packages (althrought the upstream says
+  it works, it is not working)
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -step-4.2.0.ebuild:
   Drop KDE 4.2.0
