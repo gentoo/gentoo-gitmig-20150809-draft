@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.8-r2.ebuild,v 1.5 2006/03/16 14:39:39 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/html-xml-utils-2.8-r2.ebuild,v 1.6 2009/03/11 22:32:56 loki_val Exp $
 
 inherit eutils
 
@@ -13,9 +13,13 @@ IUSE=""
 KEYWORDS="alpha ppc sparc x86"
 SLOT="0"
 
+RDEPEND="virtual/libc
+	!sys-apps/count
+	!media-libs/libextractor
+	!app-shells/fish"
+
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
-DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
