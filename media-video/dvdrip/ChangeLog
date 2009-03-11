@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.118 2009/03/11 07:17:40 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.119 2009/03/11 08:22:20 dev-zero Exp $
+
+  11 Mar 2009; Tiziano Müller <dev-zero@gentoo.org>
+  dvdrip-0.98.10-r2.ebuild:
+  Reverting my change. Transcode got it's USE flags changed without a
+  revision bump, thus confusing certain PM's.
 
   11 Mar 2009; Tiziano Müller <dev-zero@gentoo.org>
   dvdrip-0.98.10-r2.ebuild:
