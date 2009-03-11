@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.5 2009/03/03 06:46:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.6 2009/03/11 09:42:58 jokey Exp $
+
+  11 Mar 2009; Markus Ullmann <jokey@gentoo.org>
+  +files/kbuild-unknown-configure-opt.patch, kbuild-0.1.5.ebuild:
+  Add QA fix for bug #256981
 
 *kbuild-0.1.5 (03 Mar 2009)
 
