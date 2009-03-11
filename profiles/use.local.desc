@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4263 2009/03/10 23:47:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4264 2009/03/11 13:07:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -980,10 +980,15 @@ gnome-extra/gnome-lirc-properties:policykit - Use sys-auth/policykit to gain pri
 gnome-extra/gnome-media:gnomecd - Builds the GNOME CD Player
 gnome-extra/libgda:mdb - Enables Microsoft Access DB support
 gnome-extra/libgda:xbase - Enables support for xbase databases (dBase, FoxPro, etc.)
-gnome-extra/nautilus-sendto:gajim - Enables support for the Gajim (net-im/gajim) IM client
-gnome-extra/nautilus-sendto:pidgin - Enables support for the Pidgin (net-im/pidgin) IM client
-gnome-extra/nautilus-sendto:sylpheed - Enables support for the Sylpheed (mail-client/sylpheed) mail client
-gnome-extra/nautilus-sendto:thunderbird - Enables support for the Mozilla Thunderbird (mail-client/mozilla-thunderbird) mail client
+gnome-extra/nautilus-sendto:balsa - Enables support for mail-client/balsa
+gnome-extra/nautilus-sendto:claws - Enables support for mail-client/claws
+gnome-extra/nautilus-sendto:eds - Enables support for evolution-sendto using gnome-extra/evolution-data-server
+gnome-extra/nautilus-sendto:empathy - Enables support for net-im/empathy
+gnome-extra/nautilus-sendto:gajim - Enables support for net-im/gajim
+gnome-extra/nautilus-sendto:pidgin - Enables support for net-im/pidgin
+gnome-extra/nautilus-sendto:sylpheed - Enables support for mail-client/sylpheed
+gnome-extra/nautilus-sendto:thunderbird - Enables support for mail-client/mozilla-thunderbird
+gnome-extra/nautilus-sendto:upnp - Enables support for sending files over upnp using net-libs/gupnp-av
 gnome-extra/sensors-applet:nvidia - Enables support for sensors on NVidia chips
 gnome-extra/yelp:beagle - Enables support for the Beagle (app-misc/beagle) desktop search tool
 gnome-extra/yelp:lzma - Enables support for LZMA compressed info and man pages
