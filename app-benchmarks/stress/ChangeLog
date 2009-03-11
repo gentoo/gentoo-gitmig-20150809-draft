@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/stress
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.29 2009/01/08 20:28:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.30 2009/03/11 16:12:45 ranger Exp $
+
+  11 Mar 2009; Brent Baude <ranger@gentoo.org> stress-1.0.0.ebuild:
+  stable ppc64, bug 261720
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -stress-0.18.1.ebuild,
   -stress-0.18.4.ebuild, -stress-0.18.8.ebuild:
