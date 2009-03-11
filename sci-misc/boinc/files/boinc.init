@@ -105,7 +105,7 @@ attach() {
 		# we have to work in runtime directory
 		cd $RUNTIMEDIR
 		# boinc does not return 1 when it fails currently
-		$BOINCBIN --attach_project $url $key &> /dev/null
+		$BOINCBIN --chuid ${USER}:${GROUP} --attach_project $url $key &> /dev/null
 	eend $?
 
 	sleep 10
