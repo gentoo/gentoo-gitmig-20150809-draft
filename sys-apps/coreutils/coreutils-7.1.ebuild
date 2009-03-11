@@ -1,6 +1,6 @@
  # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.1.ebuild,v 1.1 2009/02/22 00:12:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.1.ebuild,v 1.2 2009/03/11 10:46:48 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -26,6 +26,9 @@ RDEPEND="selinux? ( sys-libs/libselinux )
 	!sys-apps/stat
 	!net-mail/base64
 	!sys-apps/mktemp
+	!app-forensics/tct
+	!net-fs/netatalk
+	!sci-chemistry/ccp4
 	>=sys-libs/ncurses-5.3-r5"
 DEPEND="${RDEPEND}
 	app-arch/lzma-utils"
