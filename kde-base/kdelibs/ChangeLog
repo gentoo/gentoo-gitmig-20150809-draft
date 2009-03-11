@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.570 2009/03/10 13:34:09 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.571 2009/03/11 14:47:59 jmbsvicetto Exp $
+
+*kdelibs-4.2.1-r2 (11 Mar 2009)
+
+  11 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +files/kdelibs-4.2.1-kcatalog.patch, +kdelibs-4.2.1-r2.ebuild:
+  Added ${FILESDIR}/${P}-kcatalog.patch and bumped to kdelibs-4.2.1-r2 to
+  fix remaining issues on upstream bug 186038 and Gentoo bug 261367 related
+  to gwenview.
 
 *kdelibs-4.2.1-r1 (10 Mar 2009)
 
