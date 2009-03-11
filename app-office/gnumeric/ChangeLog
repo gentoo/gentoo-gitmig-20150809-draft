@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.180 2009/03/10 15:58:20 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.181 2009/03/11 14:59:28 ranger Exp $
+
+  11 Mar 2009; Brent Baude <ranger@gentoo.org> gnumeric-1.8.4-r1.ebuild:
+  Marking gnumeric-1.8.4-r1 ppc64 for bug 257012
 
   10 Mar 2009; Ferris McCormick <fmccor@gentoo.org>
   gnumeric-1.8.4-r1.ebuild:
