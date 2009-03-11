@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.27.ebuild,v 1.4 2008/05/21 19:00:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.27.ebuild,v 1.5 2009/03/11 17:56:12 chainsaw Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -42,7 +42,7 @@ RDEPEND="dev-libs/newt
 	speex? ( media-libs/speex )
 	sqlite? ( <dev-db/sqlite-3.0.0 )
 	zaptel? ( >=net-misc/zaptel-1.2.16 )
-	postgres? ( virtual/postgresql-server )
+	postgres? ( virtual/postgresql-base )
 	osp? ( >=net-libs/osptoolkit-3.3.4 )
 	bri? (  >=net-libs/libpri-1.2.5
 		>=net-misc/zaptel-1.2.18 )"
