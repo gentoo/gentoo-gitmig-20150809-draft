@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeartwork-kscreensaver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.114 2009/03/08 19:14:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.115 2009/03/11 21:04:01 scarabeus Exp $
+
+  11 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
+  kdeartwork-kscreensaver-4.2.1.ebuild:
+  Add egen dep and useflag. Enable sounds in screensavers. Add descritpion
+  of eigen flag. Per bug #261629.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdeartwork-kscreensaver-4.2.0.ebuild:
