@@ -1,0 +1,11 @@
+--- kdialogd4/kdialogd.cpp.orig	2009-02-03 19:49:03.000000000 +0500
++++ kdialogd4/kdialogd.cpp	2009-02-03 19:49:17.000000000 +0500
+@@ -391,7 +391,7 @@
+     // * the dir select dialog doesnt seem to set the QDialog result parameter
+     //   when it is accepted - so for this reason if ok is clicked we store an
+     //   'accepted' value there, and check for that after the dialog is finished.
+-    kDebug() << "finished " << (int)itsDlg << itsAccepted << (itsDlg ? QDialog::Accepted==itsDlg->result() : false);
++    kDebug() << "finished " << itsDlg << itsAccepted << (itsDlg ? QDialog::Accepted==itsDlg->result() : false);
+ 
+     if(itsDlg && !(itsAccepted || QDialog::Accepted==itsDlg->result()))
+         cancel();

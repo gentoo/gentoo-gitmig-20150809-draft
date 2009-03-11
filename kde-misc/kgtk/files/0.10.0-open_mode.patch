@@ -1,0 +1,11 @@
+--- common/common.h	2008-07-08 12:58:27.000000000 +0000
++++ common/common.h	2009-03-11 21:35:23.000000000 +0000
+@@ -205,7 +205,7 @@
+ {
+     do
+     {
+-        lockFd=open(getLockName(), O_WRONLY | O_CREAT | O_EXCL);
++        lockFd=open(getLockName(), O_WRONLY | O_CREAT | O_EXCL, 0644);
+         if (lockFd<0 && errno==EEXIST)
+         {
+             /* Hmm, lock file already exists. Is it stale? */

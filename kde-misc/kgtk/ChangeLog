@@ -1,6 +1,15 @@
 # ChangeLog for kde-misc/kgtk
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.16 2008/08/23 12:14:12 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.17 2009/03/11 21:58:58 scarabeus Exp $
+
+*kgtk-0.10.0-r1 (11 Mar 2009)
+
+  11 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/0.10.0-kde4.patch, +files/0.10.0-open_mode.patch,
+  -kgtk-0.9.1-r1.ebuild, -kgtk-0.9.4.ebuild, -kgtk-0.9.5.ebuild,
+  -kgtk-0.10.0.ebuild, +kgtk-0.10.0-r1.ebuild:
+  Fix FORTIFY_SOURCE=2 issues. Add kde4 support. Use cmake-utils for now.
+  Remove old buggy. Bugs #261276 and #257495.
 
   23 Aug 2008; Carsten Lohrke <carlo@gentoo.org> kgtk-0.10.0.ebuild:
   Adjust CMake dependency, bug #233300.
