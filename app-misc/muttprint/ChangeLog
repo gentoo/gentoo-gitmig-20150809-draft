@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.35 2009/03/11 13:56:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.36 2009/03/11 18:41:13 klausman Exp $
+
+  11 Mar 2009; Tobias Klausmann <klausman@gentoo.org>
+  muttprint-0.72d-r1.ebuild:
+  Stable on alpha, bug #250554
 
   11 Mar 2009; Brent Baude <ranger@gentoo.org> muttprint-0.72d-r1.ebuild:
   Marking muttprint-0.72d-r1 ppc64 for bug 250554
