@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.17 2009/03/10 23:22:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.18 2009/03/11 16:22:51 scarabeus Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -158,7 +158,7 @@ cmake-utils_use_has() { _use_me_now HAVE "$@" ; }
 # @FUNCTION: cmake-utils_has
 # @DESCRIPTION:
 # Deprecated, use cmake-utils_use_has, kept now for backcompat.
-cmake-utils_has() { ewarn "QA: ebuild is using deprecated call. Inform maintainer." ; _use_me_now HAVE "$@" ; }
+cmake-utils_has() { ewarn "QA notice: using deprecated ${FUNCNAME} call, use cmake-utils_use_has instead." ; _use_me_now HAVE "$@" ; }
 
 # @FUNCTION: cmake-utils_use
 # @USAGE: <USE flag> [flag name]
@@ -258,8 +258,7 @@ cmake-utils_src_compile() {
 # @DESCRIPTION:
 # Deprecated
 cmake-utils_src_configurein() {
-	ewarn "QA: This ebuild is using deprecated function call: ${FUNCNAME}"
-	ewarn "QA: Inform ebuild maintainer."
+	ewarn "QA notice: using deprecated ${FUNCNAME} call, set CMAKE_IN_SOURCE_BUILD=1 instead."
 	cmake-utils_src_configure
 }
 
@@ -267,8 +266,7 @@ cmake-utils_src_configurein() {
 # @DESCRIPTION:
 # Deprecated
 cmake-utils_src_configureout() {
-	ewarn "QA: This ebuild is using deprecated function call: ${FUNCNAME}"
-	ewarn "QA: Inform ebuild maintainer."
+	ewarn "QA notice: using deprecated ${FUNCNAME} call, out of source build is enabled by default."
 	cmake-utils_src_configure
 }
 
