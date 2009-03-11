@@ -1,6 +1,16 @@
 # ChangeLog for x11-themes/gtk-engines-qtcurve
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.49 2009/03/02 13:26:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/ChangeLog,v 1.50 2009/03/11 18:39:16 yngwin Exp $
+
+*gtk-engines-qtcurve-0.62.0 (11 Mar 2009)
+
+  11 Mar 2009; Ben de Groot <yngwin@gentoo.org>
+  -gtk-engines-qtcurve-0.59.5.ebuild, -gtk-engines-qtcurve-0.59.6.ebuild,
+  -gtk-engines-qtcurve-0.59.7-r1.ebuild, -gtk-engines-qtcurve-0.60.0.ebuild,
+  -gtk-engines-qtcurve-0.61.1.ebuild, -gtk-engines-qtcurve-0.61.2.ebuild,
+  +gtk-engines-qtcurve-0.62.0.ebuild:
+  Version bump. Eclass provides cmake dependency now. Add dependency on
+  pkgconfig to fix bug 239647. Drop some old versions.
 
 *gtk-engines-qtcurve-0.61.4 (02 Mar 2009)
 
@@ -191,8 +201,8 @@
 
   29 Feb 2008; Ben de Groot <yngwin@gentoo.org> +files/build.patch,
   +gtk-engines-qtcurve-0.56.2.ebuild:
-  And another bugfix release version bump. This one should fix some issues with 
-  Firefox 3 betas. From the website: To aid testing with Firefox 3, edit your 
+  And another bugfix release version bump. This one should fix some issues with
+  Firefox 3 betas. From the website: To aid testing with Firefox 3, edit your
   qtcurvestylerc and add the following line:
   newFirefox=true
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-0.61.1.ebuild,v 1.1 2009/02/20 23:42:46 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-0.62.0.ebuild,v 1.1 2009/03/11 18:39:16 yngwin Exp $
 
 EAPI=1
 inherit eutils cmake-utils
@@ -13,7 +13,7 @@ SRC_URI="http://home.freeuk.com/cpdrummond/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="mozilla firefox3"
 
 RDEPEND="x11-libs/gtk+:2
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/gtk+:2
 		>=www-client/mozilla-firefox-bin-3.0 ) )"
 DEPEND="x11-libs/gtk+:2
 	x11-libs/cairo
-	>=dev-util/cmake-2.4"
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 DOCS="ChangeLog README TODO"
