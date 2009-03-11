@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.380 2009/03/07 11:28:36 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.381 2009/03/11 08:12:14 jokey Exp $
+
+  11 Mar 2009; Markus Ullmann <jokey@gentoo.org>
+  xorg-server-1.5.3-r3.ebuild:
+  Add virtualbox use_expand for bug #238848
 
 *xorg-server-1.5.3-r3 (07 Mar 2009)
 

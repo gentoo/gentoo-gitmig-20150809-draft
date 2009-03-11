@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r3.ebuild,v 1.1 2009/03/07 11:28:36 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r3.ebuild,v 1.2 2009/03/11 08:12:14 jokey Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -41,6 +41,7 @@ IUSE_INPUT_DEVICES="
 	input_devices_tek4957
 	input_devices_tslib
 	input_devices_ur98
+	input_devices_virtualbox
 	input_devices_vmmouse
 	input_devices_void
 
@@ -95,6 +96,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_vesa
 	video_cards_vga
 	video_cards_via
+	video_cards_virtualbox
 	video_cards_vmware
 	video_cards_voodoo
 	video_cards_xgi
@@ -205,6 +207,7 @@ PDEPEND="
 		input_devices_tek4957? ( >=x11-drivers/xf86-input-tek4957-1.2.0 )
 		input_devices_tslib? ( x11-drivers/xf86-input-tslib )
 		input_devices_ur98? ( >=x11-drivers/xf86-input-ur98-1.1.0 )
+		input_devices_virtualbox? ( x11-drivers/xf86-input-virtualbox )
 		input_devices_vmmouse? ( >=x11-drivers/xf86-input-vmmouse-12.5.0 )
 		input_devices_void? ( >=x11-drivers/xf86-input-void-1.1.1 )
 		input_devices_synaptics? ( >=x11-drivers/xf86-input-synaptics-0.15.0 )
@@ -248,6 +251,7 @@ PDEPEND="
 		video_cards_v4l? ( >=x11-drivers/xf86-video-v4l-0.2.0 )
 		video_cards_vesa? ( >=x11-drivers/xf86-video-vesa-2.0.0 )
 		video_cards_via? ( >=x11-drivers/xf86-video-openchrome-0.2.903 )
+		video_cards_virtualbox? ( x11-drivers/xf86-video-virtualbox )
 		video_cards_vmware? ( >=x11-drivers/xf86-video-vmware-10.16.5 )
 		video_cards_voodoo? ( >=x11-drivers/xf86-video-voodoo-1.2.0 )
 		video_cards_xgi? ( >=x11-drivers/xf86-video-xgi-1.5.0 )
