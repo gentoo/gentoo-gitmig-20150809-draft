@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/wmauda-0.7.ebuild,v 1.4 2008/01/15 17:58:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/wmauda-0.7.ebuild,v 1.5 2009/03/11 09:02:42 s4t4n Exp $
 
 inherit eutils toolchain-funcs
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	built_with_use media-sound/audacious dbus || \
+	built_with_use --missing true media-sound/audacious dbus || \
 		die "needs media-sound/audacious with USE dbus."
 }
 
