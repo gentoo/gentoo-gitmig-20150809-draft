@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/captury/captury-0.3.0_pre200712251.ebuild,v 1.2 2007/12/28 21:00:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/captury/captury-0.3.0_pre200712251.ebuild,v 1.3 2009/03/11 15:48:12 flameeyes Exp $
 
 inherit multilib flag-o-matic eutils
 
@@ -28,7 +28,7 @@ EMULTILIB_PKG="true"
 S="${WORKDIR}/captury-${PV}/${PN}"
 
 pkg_setup() {
-	useq has_multilib_profile \
+	has_multilib_profile \
 		&& built_with_use --missing die app-emulation/emul-linux-x86-xlibs opengl
 }
 
