@@ -1,0 +1,10 @@
+--- src/wconfig_layout.cc
++++ src/wconfig_layout.cc
+@@ -23,6 +23,7 @@
+ #include "wconfig.h"
+ #include "worker.h"
+ #include <aguix/acontainerbb.h>
++#include <algorithm>
+ 
+ static struct {
+   WConfig::layoutID_t id;
