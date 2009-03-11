@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-312.ebuild,v 1.2 2009/03/11 17:59:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-319.ebuild,v 1.1 2009/03/11 17:59:05 jer Exp $
 
 inherit qt4
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-312-gentoo.patch
 }
 
 src_compile() {

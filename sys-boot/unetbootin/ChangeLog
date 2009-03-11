@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.5 2009/02/06 06:09:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.6 2009/03/11 17:59:05 jer Exp $
+
+*unetbootin-319 (11 Mar 2009)
+
+  11 Mar 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/unetbootin-312-gentoo.patch, unetbootin-312.ebuild,
+  +unetbootin-319.ebuild:
+  Version bump.
 
 *unetbootin-312 (06 Feb 2009)
 
