@@ -1,0 +1,9 @@
+# ChangeLog for net-zope/zopeskel
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeskel/ChangeLog,v 1.1 2009/03/11 16:23:15 tupone Exp $
+
+*zopeskel-2.11.1 (11 Mar 2009)
+
+  11 Mar 2009; Alfredo Tupone <tupone@gentoo.org> +zopeskel-2.11.1.ebuild:
+  Adding to portage
+
