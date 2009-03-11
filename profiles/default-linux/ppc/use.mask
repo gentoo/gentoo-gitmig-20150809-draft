@@ -153,3 +153,7 @@ video_cards_tga
 video_cards_tseng
 video_cards_vesa
 video_cards_vga
+
+# Virtualbox has no ppc support
+input_devices_virtualbox
+video_cards_virtualbox
