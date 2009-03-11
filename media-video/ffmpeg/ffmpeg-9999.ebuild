@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.11 2009/03/10 18:47:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.12 2009/03/11 23:11:39 beandog Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="+3dnow +3dnowext alsa altivec amr custom-cflags debug dirac doc
-	  ieee1394 +encode -faac -faad gsm ipv6 +mmx +mmxext vorbis test theora
+	  ieee1394 +encode faac faad gsm ipv6 +mmx +mmxext vorbis test theora
 	  threads x264 xvid network zlib sdl X mp3 oss schroedinger
 	  +hardcoded-tables bindist v4l v4l2 speex +ssse3 jpeg2k"
 
