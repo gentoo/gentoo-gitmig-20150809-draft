@@ -53,6 +53,7 @@ R
 octave
 tracker
 xindy
+lyx
 
 # havent tested yet
 scanner

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.24 2009/03/10 20:23:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.25 2009/03/11 18:18:29 armin76 Exp $
+
+  11 Mar 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Add lyx to use.mask
 
   10 Mar 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Add xindy to use.mask
