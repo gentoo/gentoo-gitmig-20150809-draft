@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/dbench
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.32 2009/03/09 12:54:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.33 2009/03/11 16:12:03 ranger Exp $
+
+  11 Mar 2009; Brent Baude <ranger@gentoo.org> dbench-4.0.ebuild:
+  stable ppc64, bug 261723
 
   09 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org> dbench-4.0.ebuild:
   Remove econf call from src_unpack.
