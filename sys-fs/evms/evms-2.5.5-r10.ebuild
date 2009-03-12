@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.10 2008/10/07 07:45:59 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r10.ebuild,v 1.11 2009/03/12 17:16:03 dev-zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs autotools linux-info
 
-PATCHVER="${PV}-1"
+PATCHVER="${PV}-2"
 
 DESCRIPTION="Utilities for the IBM Enterprise Volume Management System"
 HOMEPAGE="http://www.sourceforge.net/projects/evms"
