@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.0-r1.ebuild,v 1.1 2009/03/11 21:58:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.0-r1.ebuild,v 1.2 2009/03/12 00:08:11 scarabeus Exp $
 
 EAPI="2"
 
@@ -64,6 +64,7 @@ src_configure() {
 }
 
 src_install() {
+	kde4-base_src_install
 	dodoc ${S}/{AUTHORS,ChangeLog,TODO,README}
 }
 
