@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.91.ebuild,v 1.2 2009/03/12 01:01:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.91.ebuild,v 1.3 2009/03/12 10:20:26 ulm Exp $
 
 EAPI=2
 WANT_AUTOCONF="latest"
@@ -42,7 +42,6 @@ RDEPEND="sys-libs/ncurses
 	net-libs/liblockfile
 	hesiod? ( net-dns/hesiod )
 	kerberos? ( virtual/krb5 )
-	spell? ( || ( app-text/aspell app-text/ispell ) )
 	alsa? ( media-libs/alsa-lib )
 	gpm? ( sys-libs/gpm )
 	dbus? ( sys-apps/dbus )
@@ -50,7 +49,6 @@ RDEPEND="sys-libs/ncurses
 		x11-libs/libXmu
 		x11-libs/libXt
 		x11-misc/xbitmaps
-		app-emacs/emacs-common-gentoo
 		gif? ( media-libs/giflib )
 		jpeg? ( media-libs/jpeg )
 		png? ( media-libs/libpng )
@@ -76,6 +74,10 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	gzip-el? ( app-arch/gzip )"
+
+RDEPEND="${RDEPEND}
+	>=app-emacs/emacs-common-gentoo-1[X?]
+	spell? ( || ( app-text/aspell app-text/ispell ) )"
 
 EMACS_SUFFIX="emacs-${SLOT}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
@@ -221,7 +223,6 @@ src_install () {
 	rm "${D}"/usr/share/emacs/site-lisp/subdirs.el
 	rm -rf "${D}"/usr/share/{applications,icons}
 	rm "${D}"/var/lib/games/emacs/{snake,tetris}-scores
-	keepdir /usr/share/emacs/site-lisp
 	keepdir /var/lib/games/emacs
 
 	local c=";;"
@@ -270,9 +271,6 @@ emacs-infodir-rebuild() {
 }
 
 pkg_postinst() {
-	[ -f "${ROOT}"/usr/share/emacs/site-lisp/subdirs.el ] \
-		|| cp "${ROOT}"/usr/share/emacs{/${FULL_VERSION},}/site-lisp/subdirs.el
-
 	local f
 	for f in "${ROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
 		[ -e "${f}" ] || touch "${f}"
