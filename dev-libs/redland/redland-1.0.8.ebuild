@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.8.ebuild,v 1.2 2008/08/21 19:36:04 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.8.ebuild,v 1.3 2009/03/12 17:31:50 jer Exp $
 
 DESCRIPTION="High-level interface for the Resource Description Framework"
 HOMEPAGE="http://librdf.org"
@@ -8,7 +8,7 @@ SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="berkdb mysql postgres sqlite ssl threads xml"
 
 RDEPEND="mysql? ( virtual/mysql )

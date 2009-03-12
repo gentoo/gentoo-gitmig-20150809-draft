@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rasqal
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.23 2008/08/21 19:31:44 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.24 2009/03/12 17:27:18 jer Exp $
+
+  12 Mar 2009; Jeroen Roovers <jer@gentoo.org> rasqal-0.9.16.ebuild:
+  Marked ~hppa (bug #260777).
 
   21 Aug 2008; Friedrich Oslage <bluebird@gentoo.org> rasqal-0.9.16.ebuild:
   Add ~sparc keyword at user request, bug #234871
