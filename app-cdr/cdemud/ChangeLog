@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/cdemud
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.6 2008/08/22 22:08:40 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.7 2009/03/12 08:06:39 dev-zero Exp $
+
+*cdemud-1.1.0-r1 (12 Mar 2009)
+
+  12 Mar 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +files/cdemud.conf.d-1.1.0, +files/cdemud.init.d-1.1.0,
+  +files/cdemu-daemon-1.1.0-fix1.diff, +cdemud-1.1.0-r1.ebuild:
+  Added upstream fix1.diff, fixing dependencies (using EAPI=2), ebuild
+  cleanup, updated conf.d/init.d scripts (bugs #255402, #238431, #233904).
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> cdemud-1.0.0.ebuild:
   amd64 stable, bug #232566
