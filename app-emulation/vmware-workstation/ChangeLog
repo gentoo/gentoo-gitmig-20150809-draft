@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.196 2009/02/22 23:10:06 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.197 2009/03/12 11:53:40 flameeyes Exp $
+
+  12 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  vmware-workstation-6.5.1.126130.ebuild:
+  Remove binchecks restriction (package installs binaries!).
 
   22 Feb 2009; Mike Auty <ikelos@gentoo.org>
   -files/6.5.0.118166/vmware-player.py.patch,
