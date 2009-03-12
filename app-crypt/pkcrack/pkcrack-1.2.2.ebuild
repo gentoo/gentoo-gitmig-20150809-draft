@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pkcrack/pkcrack-1.2.2.ebuild,v 1.5 2007/01/24 17:10:15 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pkcrack/pkcrack-1.2.2.ebuild,v 1.6 2009/03/12 17:26:06 tove Exp $
 
 inherit toolchain-funcs
 
@@ -11,9 +11,8 @@ LICENSE="pkcrack"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="test"
-DEPEND="test? ( app-arch/zip )
-	virtual/libc"
-RDEPEND="virtual/libc"
+DEPEND="test? ( app-arch/zip )"
+RDEPEND="!<app-text/html-xml-utils-5.3"
 
 src_unpack() {
 	unpack ${A}
