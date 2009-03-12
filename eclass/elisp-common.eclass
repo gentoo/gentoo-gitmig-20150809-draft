@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.55 2009/02/13 17:15:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.56 2009/03/12 12:08:47 ulm Exp $
 #
 # Copyright 2002-2004 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
 # Copyright 2004-2005 Mamoru Komachi <usata@gentoo.org>
-# Copyright 2007-2008 Christian Faulhammer <opfer@gentoo.org>
+# Copyright 2007-2008 Christian Faulhammer <fauli@gentoo.org>
 # Copyright 2007-2009 Ulrich Müller <ulm@gentoo.org>
 #
 # @ECLASS: elisp-common.eclass
@@ -327,7 +327,7 @@ elisp-site-regen() {
 	[ -e "${ROOT}${SITELISP}"/site-gentoo.el ] || firstrun=t
 
 	if [ "${firstrun}" ] && [ ! -e "${ROOT}${SITELISP}"/site-start.el ]; then
-		einfo "Creating default ${SITELISP}/site-start.el ..."
+		einfo "Creating default site-start.el ..."
 		cat <<-EOF >"${T}"/site-start.el
 		;;; site-start.el
 
@@ -344,7 +344,7 @@ elisp-site-regen() {
 		EOF
 	fi
 
-	einfon "Regenerating ${SITELISP}/site-gentoo.el ..."
+	einfon "Regenerating site-gentoo.el (${EBUILD_PHASE}) ..."
 
 	# remove any auxiliary file (from previous run)
 	rm -f "${ROOT}${SITELISP}"/00site-gentoo.el
