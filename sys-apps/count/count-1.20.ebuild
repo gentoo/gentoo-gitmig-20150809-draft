@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/count/count-1.20.ebuild,v 1.2 2007/07/16 14:48:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/count/count-1.20.ebuild,v 1.3 2009/03/12 17:24:25 tove Exp $
 
 inherit eutils
 
@@ -12,6 +12,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 DEPEND=""
+RDEPEND="!<app-text/html-xml-utils-5.3"
 src_compile() {
 	make
 }
