@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r2.ebuild,v 1.3 2009/03/11 18:44:35 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r2.ebuild,v 1.4 2009/03/12 04:50:37 mr_bones_ Exp $
 
 inherit bsdmk freebsd flag-o-matic multilib toolchain-funcs
 
@@ -307,7 +307,6 @@ src_install() {
 		local MACHINE="$(tc-arch-kernel)"
 	fi
 	doins "etc.${MACHINE}"/*
-
 
 	# Generate ldscripts, otherwise bad thigs are supposed to happen
 	gen_usr_ldscript libalias_cuseeme.so libalias_dummy.so libalias_ftp.so \
