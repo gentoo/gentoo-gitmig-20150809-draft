@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/httpclient
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.7 2008/10/19 13:59:57 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.8 2009/03/12 08:04:49 a3li Exp $
+
+  12 Mar 2009; Alex Legler <a3li@gentoo.org> metadata.xml:
+  Remove flameeyes from metadata.xml, as per his request.
 
   19 Oct 2008; Thomas Anderson <gentoofan23@gentoo.org>
   httpclient-2.1.2.ebuild:

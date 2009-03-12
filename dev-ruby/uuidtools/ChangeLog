@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/uuidtools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.7 2008/12/07 03:07:37 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.8 2009/03/12 08:07:55 a3li Exp $
+
+  12 Mar 2009; Alex Legler <a3li@gentoo.org> metadata.xml:
+  Removing flameeyes from metadata, as per his request.
 
   07 Dec 2008; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Add long description.

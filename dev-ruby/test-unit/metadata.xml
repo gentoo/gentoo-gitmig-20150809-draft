@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>ruby</herd>
-  <maintainer>
-    <email>flameeyes@gentoo.org</email>
-  </maintainer>
   <longdescription lang="en">
     Improved version of the Test::Unit framework as shipped by Ruby
     1.8, compatible with Ruby 1.9.
