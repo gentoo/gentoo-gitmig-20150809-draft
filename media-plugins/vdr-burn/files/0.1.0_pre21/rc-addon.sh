@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/files/0.1.0_pre21/rc-addon.sh,v 1.2 2007/05/22 17:40:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/files/0.1.0_pre21/rc-addon.sh,v 1.3 2009/03/12 02:18:31 hd_brummy Exp $
 #
 # rc-addon-script for plugin burn
 #
@@ -10,6 +10,17 @@
 : ${BURN_DATADIR:=/var/vdr/video}
 : ${BURN_DVDWRITER:=/dev/dvd}
 : ${BURN_ISODIR:=/var/vdr/video/dvd-images}
+
+# be shure BURN_ISODIR is available!
+make_isodir() {
+if [ ! -e "${BURN_ISODIR}" ]; then
+	mkdir "${BURN_ISODIR}"
+	touch "${BURN_ISODIR}"/.keep.rc-burn
+	chown -R vdr:vdr "${BURN_IOSDIR}"
+fi
+}
+
+make_isodir
 
 plugin_pre_vdr_start() {
 
