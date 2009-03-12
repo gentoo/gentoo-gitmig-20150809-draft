@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.305 2009/02/28 17:56:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.306 2009/03/12 01:00:05 ulm Exp $
+
+  12 Mar 2009; Ulrich Mueller <ulm@gentoo.org> emacs-21.4-r17.ebuild,
+  emacs-22.3-r1.ebuild, emacs-22.3-r2.ebuild:
+  Fix dependencies: package x11-misc/emacs-desktop was moved to
+  app-emacs/emacs-common-gentoo.
 
 *emacs-22.3-r2 (28 Feb 2009)
 

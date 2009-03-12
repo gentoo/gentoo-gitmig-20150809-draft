@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r17.ebuild,v 1.16 2009/01/25 17:43:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r17.ebuild,v 1.17 2009/03/12 01:00:05 ulm Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -24,7 +24,7 @@ RDEPEND="sys-libs/ncurses
 		x11-libs/libSM
 		x11-libs/libXmu
 		x11-libs/libXpm
-		x11-misc/emacs-desktop
+		app-emacs/emacs-common-gentoo
 		>=media-libs/giflib-4.1.0.1b
 		>=media-libs/jpeg-6b-r2
 		>=media-libs/tiff-3.5.5-r3
