@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.14 2009/03/12 12:01:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.15 2009/03/12 17:53:05 scarabeus Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -132,7 +132,7 @@ debug-print "line ${LINENO} ${ECLASS}: DEPEND ${DEPEND} - after metapackage-spec
 debug-print "line ${LINENO} ${ECLASS}: RDEPEND ${RDEPEND} - after metapackage-specific dependencies"
 
 # Useful to build kde4-meta style stuff from extragear/playground (plasmoids etc)
-case ${SLOT} in
+case ${BUILD_TYPE} in
 	live)
 		case ${KMNAME} in
 			extragear*|playground*)
@@ -140,6 +140,7 @@ case ${SLOT} in
 				;;
 		esac
 		;;
+	*) ;;
 esac
 
 # @ECLASS-VARIABLE: KMNAME
