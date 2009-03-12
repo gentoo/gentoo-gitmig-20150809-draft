@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.36 2009/03/12 02:18:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.37 2009/03/12 02:23:23 hd_brummy Exp $
+
+  12 Mar 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/0.1.0_pre21/rc-addon.sh:
+  typo
 
   12 Mar 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   files/0.1.0_pre21/rc-addon.sh:

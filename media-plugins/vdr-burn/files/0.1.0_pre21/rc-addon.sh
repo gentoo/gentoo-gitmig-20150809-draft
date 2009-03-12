@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/files/0.1.0_pre21/rc-addon.sh,v 1.3 2009/03/12 02:18:31 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/files/0.1.0_pre21/rc-addon.sh,v 1.4 2009/03/12 02:23:24 hd_brummy Exp $
 #
 # rc-addon-script for plugin burn
 #
@@ -16,7 +16,7 @@ make_isodir() {
 if [ ! -e "${BURN_ISODIR}" ]; then
 	mkdir "${BURN_ISODIR}"
 	touch "${BURN_ISODIR}"/.keep.rc-burn
-	chown -R vdr:vdr "${BURN_IOSDIR}"
+	chown -R vdr:vdr "${BURN_ISODIR}"
 fi
 }
 
