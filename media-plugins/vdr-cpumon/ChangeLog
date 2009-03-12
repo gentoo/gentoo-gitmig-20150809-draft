@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-cpumon
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cpumon/ChangeLog,v 1.4 2008/02/03 18:23:55 hd_brummy Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cpumon/ChangeLog,v 1.5 2009/03/12 20:43:25 zzam Exp $
+
+  12 Mar 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-cpumon-0.0.6.ebuild:
+  Marked stable on x86.
 
 *vdr-cpumon-0.0.6 (03 Feb 2008)
 
