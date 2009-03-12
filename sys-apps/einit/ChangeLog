@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/einit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/ChangeLog,v 1.18 2009/02/19 09:35:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/einit/ChangeLog,v 1.19 2009/03/12 00:50:05 fauli Exp $
+
+  12 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
+  +files/einit-0.40.0-open_mode.patch, einit-0.40.0.ebuild:
+  fix compile failure with _FORTIFY_SOURCE=2, patch by Magnus Granberg
+  <zorry AT ume DOT nu> in bug 261320
 
   19 Feb 2009; Christian Faulhammer <fauli@gentoo.org> einit-0.40.0.ebuild:
   don't use fixed string but use the HOMEPAGE variable in pkg_postinst
