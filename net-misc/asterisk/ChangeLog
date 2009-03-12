@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.185 2009/03/11 17:56:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.186 2009/03/12 17:03:08 fmccor Exp $
+
+  12 Mar 2009; Ferris McCormick <fmccor@gentoo.org>
+  asterisk-1.2.31.1.ebuild:
+  Sparc stable, Security Bug #250748, also addressing security bug #254304.
 
   11 Mar 2009; <chainsaw@gentoo.org> asterisk-1.2.27.ebuild,
   asterisk-1.2.31.1.ebuild:
