@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.60 2009/02/25 21:30:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.61 2009/03/12 14:24:51 ranger Exp $
+
+  12 Mar 2009; Brent Baude <ranger@gentoo.org> prelink-20071009.ebuild:
+  Marking prelink-20071009 ppc64 for bug 254201
 
   25 Feb 2009; Markus Meier <maekke@gentoo.org> prelink-20071009.ebuild:
   amd64/x86 stable, bug #254201
