@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.117 2009/03/03 12:46:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.118 2009/03/12 15:17:54 pva Exp $
 
 # Samuli Suominen <ssuominen@gentoo.org>
 # Media cannot be tested for MIPS at the moment.
@@ -155,6 +155,8 @@ video_cards_tga
 video_cards_tseng
 video_cards_vesa
 video_cards_vga
+video_cards_radeonhd
+video_cards_ast
 
 # Diego Pettenò <flameeyes@gentoo.org>
 # Until xine-lib's keywording can be maintained, please leave it masked.

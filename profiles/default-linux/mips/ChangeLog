@@ -1,6 +1,9 @@
 # ChangeLog for MIPS profile directory
 # Copyright 2007-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.23 2009/03/03 12:46:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/ChangeLog,v 1.24 2009/03/12 15:17:54 pva Exp $
+
+  12 Mar 2009; Peter Volkov <pva@gentoo.org> use.mask:
+  Added unsupported on mips video_cards (radeonhd and ast) to use.mask.
 
   03 Mar 2009; Peter Volkov <pva@gentoo.org> use.mask:
   Masked mpi USE flag, per bug #227631
