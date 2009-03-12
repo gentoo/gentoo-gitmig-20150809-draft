@@ -15,7 +15,11 @@ depend()
 		# on linux we just check if sysfs init-script exists
 		# this is to silence out ugly warnings about not-existing sysfs script
 		provide dev
-		need sysfs udev-mount udev-dev-tarball
+		if yesno "${rc_device_tarball:-no}"; then
+			need sysfs udev-mount udev-dev-tarball
+		else
+			need sysfs udev-mount
+		fi
 		before checkfs fsck
 
 		# udev does not work inside vservers
