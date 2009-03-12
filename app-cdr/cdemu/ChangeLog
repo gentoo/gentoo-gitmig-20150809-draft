@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.17 2009/03/12 07:49:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.18 2009/03/12 08:08:46 dev-zero Exp $
+
+  12 Mar 2009; Tiziano Müller <dev-zero@gentoo.org> cdemu-1.1.0-r1.ebuild:
+  ... fixed bug #255400 as well by changing cdemud-dep to ~cdemud-${PV}
 
 *cdemu-1.1.0-r1 (12 Mar 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-1.1.0-r1.ebuild,v 1.1 2009/03/12 07:49:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-1.1.0-r1.ebuild,v 1.2 2009/03/12 08:08:46 dev-zero Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-lang/python-2.4
 	dev-python/dbus-python
-	app-cdr/cdemud"
+	~app-cdr/cdemud-${PV}"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
 
