@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.6.4.ebuild,v 1.4 2009/03/07 23:10:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.6.4.ebuild,v 1.5 2009/03/12 18:06:53 scarabeus Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ COMMONDEPEND="
 	exif? ( >=media-gfx/exiv2-0.17 )
 	fam? ( virtual/fam )
 	hyperestraier? ( app-text/hyperestraier )
-	log? ( >=dev-libs/log4cxx-0.9.7 )
+	log? ( >=dev-libs/log4cxx-0.10.0 )
 	qt4? (
 		|| ( ( x11-libs/qt-core:4
 			x11-libs/qt-gui:4
