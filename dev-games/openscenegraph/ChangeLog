@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.7 2009/03/10 15:32:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.8 2009/03/12 13:10:54 tupone Exp $
+
+  12 Mar 2009; Alfredo Tupone <tupone@gentoo.org>
+  files/openscenegraph-2.8.0-magicoff.patch, metadata.xml,
+  openscenegraph-2.8.0.ebuild:
+  Enable the following USE flags: curl freetype gif jpeg png tiff xrandr
 
   10 Mar 2009; Alfredo Tupone <tupone@gentoo.org>
   files/openscenegraph-2.8.0-magicoff.patch, openscenegraph-2.8.0.ebuild:
