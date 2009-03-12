@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.118 2009/03/08 19:28:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.119 2009/03/12 11:25:45 scarabeus Exp $
+
+  12 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kde-meta-4.2.1.ebuild:
+  Add webdev to the meta.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kde-meta-4.2.0.ebuild:
   Drop KDE 4.2.0

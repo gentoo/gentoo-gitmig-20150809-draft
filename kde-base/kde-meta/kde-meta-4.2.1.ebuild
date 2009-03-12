@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-4.2.1.ebuild,v 1.1 2009/03/04 21:03:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/kde-meta-4.2.1.ebuild,v 1.2 2009/03/12 11:25:45 scarabeus Exp $
 
 EAPI="2"
 
@@ -27,7 +27,10 @@ RDEPEND="
 	>=kde-base/kdetoys-meta-${PV}:${SLOT}
 	>=kde-base/kdeutils-meta-${PV}:${SLOT}
 	accessibility? ( >=kde-base/kdeaccessibility-meta-${PV}:${SLOT} )
-	mysql? ( >=kde-base/kdepim-meta-${PV}:${SLOT} )
+	mysql? (
+		>=kde-base/kdepim-meta-${PV}:${SLOT}
+		>=kde-base/kdewebdev-meta-${PV}:${SLOT}
+	)
 	nls? ( >=kde-base/kde-l10n-${PV}:${SLOT} )
 "
 # make kdepim-meta optional since it requires long hated mysql which people tend
