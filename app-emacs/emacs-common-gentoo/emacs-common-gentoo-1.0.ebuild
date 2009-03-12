@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.0.ebuild,v 1.1 2009/03/12 09:44:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.0.ebuild,v 1.2 2009/03/12 14:08:22 ulm Exp $
 
 inherit elisp-common eutils fdo-mime gnome2-utils
 
@@ -72,6 +72,24 @@ pkg_postinst() {
 	fi
 
 	if [ ! -e "${ROOT}${SITELISP}/site-start.el" ]; then
+		echo
+		while read line; do elog "${line:- }"; done <<-EOF
+		All site initialisation for Gentoo-installed packages is added to
+		/usr/share/emacs/site-lisp/site-gentoo.el. In order for this site
+		initialisation to be loaded for all users automatically, a default
+		site-start.el is created in the same directory. You are responsible
+		for all further maintenance of this file.
+
+		Alternatively, individual users can add the following command:
+
+		(require 'site-gentoo)
+
+		to their ~/.emacs initialisation files, or, for greater flexibility,
+		users may load single package-specific initialisation files from
+		/usr/share/emacs/site-lisp/site-gentoo.d/.
+		EOF
+		echo
+
 		if [ ! -e "${ROOT}${SITELISP}"/site-gentoo.el ]; then
 			# This seems to be a new install. Create site-gentoo.el and
 			# a default site-start.el, so that Gentoo packages will work.
