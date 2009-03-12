@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.13 2009/03/11 17:41:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.14 2009/03/12 12:01:14 scarabeus Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -33,7 +33,7 @@ esac
 
 # Add dependencies that all packages in a certain module share.
 case ${KMNAME} in
-	kdebase|kdebase-{apps,workspace,runtime})
+	kdebase|kdebase-apps|kdebase-workspace|kdebase-runtime|kdegraphic)
 		DEPEND="${DEPEND}
 			>=kde-base/qimageblitz-0.0.4
 		"
