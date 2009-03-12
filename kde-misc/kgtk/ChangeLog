@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kgtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.19 2009/03/12 15:15:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/ChangeLog,v 1.20 2009/03/12 15:18:39 scarabeus Exp $
+
+  12 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -files/0.10.0-open_mode.patch:
+  Removing unused patch. My deprecated patches search tool faled me :(
 
 *kgtk-0.10.1 (12 Mar 2009)
 
