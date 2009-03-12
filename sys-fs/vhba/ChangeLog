@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/vhba
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.9 2008/11/16 01:24:38 vanquirius Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.10 2009/03/12 07:59:38 dev-zero Exp $
+
+*vhba-1.2.1 (12 Mar 2009)
+
+  12 Mar 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +files/1.2.1-parallel_build.patch, +vhba-1.2.1.ebuild:
+  Version bump (bug #255743, should also fix #233910 and #233102), general
+  ebuild cleanup.
 
   16 Nov 2008; Marcelo Goes <vanquirius@gentoo.org> vhba-1.1.0.ebuild:
   Build against sources in /usr/src/linux instead of /lib/modules/uname -r for
