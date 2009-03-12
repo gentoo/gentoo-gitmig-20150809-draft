@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11-r2.ebuild,v 1.1 2009/01/22 18:12:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/revelation-0.4.11-r2.ebuild,v 1.2 2009/03/12 08:14:28 fauli Exp $
 
 inherit autotools eutils multilib python gnome2
 
@@ -13,6 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
+RESTRICT=test
+
 DEPEND="dev-python/pygtk
 	dev-python/pycrypto
 	dev-python/gnome-applets-python
@@ -21,6 +23,7 @@ DEPEND="dev-python/pygtk
 	dev-python/libbonobo-python
 	dev-python/libgnome-python
 	sys-libs/cracklib"
+RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
