@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.90.ebuild,v 1.2 2009/02/17 19:48:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.90.ebuild,v 1.3 2009/03/12 01:01:24 ulm Exp $
 
 EAPI=2
 WANT_AUTOCONF="latest"
@@ -50,7 +50,7 @@ RDEPEND="sys-libs/ncurses
 		x11-libs/libXmu
 		x11-libs/libXt
 		x11-misc/xbitmaps
-		x11-misc/emacs-desktop
+		app-emacs/emacs-common-gentoo
 		gif? ( media-libs/giflib )
 		jpeg? ( media-libs/jpeg )
 		png? ( media-libs/libpng )
