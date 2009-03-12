@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.96 2009/03/09 13:24:42 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.97 2009/03/12 00:21:45 fauli Exp $
+
+*gramps-3.1.1 (12 Mar 2009)
+
+  12 Mar 2009; Christian Faulhammer <fauli@gentoo.org> +gramps-3.1.1.ebuild:
+  version bump, reported by David Relson via email
 
   09 Mar 2009; Ferris McCormick <fmccor@gentoo.org> gramps-3.1.0.ebuild:
   Put back ~sparc keywrod, Bug #261672.
