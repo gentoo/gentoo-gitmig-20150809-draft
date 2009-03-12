@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/linuxfromscratch-6.4.ebuild,v 1.1 2009/03/12 04:49:50 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/linuxfromscratch-6.4.ebuild,v 1.2 2009/03/12 15:33:05 mr_bones_ Exp $
 
 MY_SRC="http://www.linuxfromscratch.org/lfs/downloads/${PV}"
 
 BOOTSCRIPT_PV="20081031"
 UDEV_PV="20081015"
-
 
 DESCRIPTION="LFS documents building a Linux system entirely from source."
 HOMEPAGE="http://www.linuxfromscratch.org/lfs"
