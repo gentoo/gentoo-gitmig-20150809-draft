@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdemu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.16 2008/08/22 22:11:22 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.17 2009/03/12 07:49:14 dev-zero Exp $
+
+*cdemu-1.1.0-r1 (12 Mar 2009)
+
+  12 Mar 2009; Tiziano Müller <dev-zero@gentoo.org> +cdemu-1.1.0-r1.ebuild:
+  Cleanup of the ebuild (including EAPI=2 usage, adding usage of python
+  eclass)
 
   22 Aug 2008; Markus Meier <maekke@gentoo.org> cdemu-1.0.0.ebuild:
   amd64 stable, bug #232566
