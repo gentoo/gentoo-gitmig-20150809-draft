@@ -1,2 +1,2 @@
 # Force the flag which corresponds to ARCH.
-amd-fbsd
+amd64-fbsd
