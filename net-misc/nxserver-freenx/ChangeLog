@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.58 2009/03/08 15:30:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.59 2009/03/12 19:08:23 voyageur Exp $
+
+*nxserver-freenx-0.7.3_p102 (12 Mar 2009)
+
+  12 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/nxserver-freenx-0.7.3_p102-cflags.patch,
+  +files/nxserver-freenx-0.7.3_p102-nxloadconfig.patch,
+  +nxserver-freenx-0.7.3_p102.ebuild:
+  Update to use freenx-team tarballs, includes some interesting patches and
+  fixes (including fixing keyboard keys for some people, and shadow
+  sessions)
 
   08 Mar 2009; Markus Meier <maekke@gentoo.org>
   nxserver-freenx-0.7.3-r2.ebuild:
