@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kommander
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kommander/ChangeLog,v 1.102 2009/03/08 20:09:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kommander/ChangeLog,v 1.103 2009/03/12 11:36:55 scarabeus Exp $
+
+  12 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kommander-4.2.1.ebuild:
+  Add missing kdepimlibs dep.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kommander-4.2.0.ebuild:
   Drop KDE 4.2.0
