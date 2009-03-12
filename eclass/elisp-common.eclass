@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.56 2009/03/12 12:08:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.57 2009/03/12 14:10:48 ulm Exp $
 #
 # Copyright 2002-2004 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -324,7 +324,8 @@ elisp-site-regen() {
 		return 1
 	fi
 
-	[ -e "${ROOT}${SITELISP}"/site-gentoo.el ] || firstrun=t
+	[ -e "${ROOT}${SITELISP}"/site-gentoo.el ] \
+		|| [ "${PN}" = emacs-common-gentoo ] || firstrun=t
 
 	if [ "${firstrun}" ] && [ ! -e "${ROOT}${SITELISP}"/site-start.el ]; then
 		einfo "Creating default site-start.el ..."
