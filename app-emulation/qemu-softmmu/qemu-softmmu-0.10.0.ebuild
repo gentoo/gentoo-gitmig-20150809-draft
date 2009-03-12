@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.10.0.ebuild,v 1.4 2009/03/12 11:48:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.10.0.ebuild,v 1.5 2009/03/12 16:02:48 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -73,27 +73,9 @@ src_compile() {
 	use pulseaudio && audio_opts="pa $audio_opts"
 	use sdl && audio_opts="sdl $audio_opts"
 
-	./configure ${conf_opts} --audio-drv-list="$audio_opts" || die "econf failed"
-
-	mycc=$(cat config-host.mak | egrep "^CC=" | cut -d "=" -f 2)
-
 	filter-flags -fpie -fstack-protector
 
-	# If using gentoo's compiler set the SPEC to non-hardened
-	if [ ! -z ${GCC_SPECS} -a -f ${GCC_SPECS} ]; then
-		local myccver=$(${mycc} -dumpversion)
-		local gccver=$($(tc-getBUILD_CC) -dumpversion)
-
-		#Is this a SPEC for the right compiler version?
-		myspec="${GCC_SPECS/${gccver}/${myccver}}"
-		if [ "${myspec}" == "${GCC_SPECS}" ]; then
-			shopt -s extglob
-			GCC_SPECS="${GCC_SPECS/%hardened*specs/vanilla.specs}"
-			shopt -u extglob
-		else
-			unset GCC_SPECS
-		fi
-	fi
+	./configure ${conf_opts} --audio-drv-list="$audio_opts" || die "econf failed"
 
 	emake || die "emake qemu failed"
 
