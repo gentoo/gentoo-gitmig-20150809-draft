@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.0-r1.ebuild,v 1.2 2009/03/12 00:08:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.1.ebuild,v 1.1 2009/03/12 15:15:44 scarabeus Exp $
 
 EAPI="2"
 
@@ -35,11 +35,6 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/KGtk-${PV}"
 
-PATCHES=(
-	"${FILESDIR}/${PV}-open_mode.patch"
-	"${FILESDIR}/${PV}-kde4.patch"
-)
-
 src_configure() {
 	if use qt3 && use qt4 ; then
 		elog "You enabled both qt3 and qt4 useflags. Please pick only one you want."
@@ -69,6 +64,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	kde4-base_pkg_postinst
 	elog "To see the kde-file-selector in a gtk-application, just do:"
 	elog "cd /usr/local/bin"
 	elog "ln -s /usr/bin/kgtk-wrapper application(eg. firefox)"
