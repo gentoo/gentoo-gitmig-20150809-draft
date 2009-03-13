@@ -1,14 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.2_rc2.ebuild,v 1.1 2009/02/14 00:01:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.2.ebuild,v 1.1 2009/03/13 12:32:11 matsuu Exp $
 
 EAPI="2"
 inherit cmake-utils eutils
 
-MY_P="${P/_/-}"
 DESCRIPTION="A dynamic floating and tiling window manager"
 HOMEPAGE="http://awesome.naquadah.org/"
-SRC_URI="http://awesome.naquadah.org/download/${MY_P}.tar.bz2"
+SRC_URI="http://awesome.naquadah.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -63,8 +62,6 @@ RDEPEND="${RDEPEND}
 #		media-gfx/qiv (media-gfx/pqiv doesn't work)
 #		x11-misc/chbg #68116
 #	bash-completion? ( app-shells/bash-completion )
-
-S="${WORKDIR}/${MY_P}"
 
 DOCS="AUTHORS BUGS PATCHES README STYLE"
 
