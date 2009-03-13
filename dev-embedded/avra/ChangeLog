@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/avra
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avra/ChangeLog,v 1.5 2008/05/29 06:13:03 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avra/ChangeLog,v 1.6 2009/03/13 22:18:34 bangert Exp $
+
+*avra-1.2.3 (13 Mar 2009)
+
+  13 Mar 2009; Thilo Bangert <bangert@gentoo.org> +avra-1.2.3.ebuild:
+  version bump - bug #246743
 
   29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Lars Weiler (Pylon) from metadata.xml (as per #215644). Assigning
