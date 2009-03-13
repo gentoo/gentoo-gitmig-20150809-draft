@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.0.ebuild,v 1.3 2009/03/13 09:12:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.0.ebuild,v 1.4 2009/03/13 12:02:35 ulm Exp $
 
 inherit elisp-common eutils fdo-mime gnome2-utils
 
@@ -22,6 +22,9 @@ pkg_setup() {
 		ewarn "Removing orphan subdirs.el (installed by old Emacs ebuilds)"
 		rm -f "${ROOT}${SITELISP}/subdirs.el"
 	fi
+
+	NEW_INSTALL=""
+	has_version ${CATEGORY}/${PN} || NEW_INSTALL="true"
 }
 
 src_install() {
@@ -75,6 +78,9 @@ pkg_postinst() {
 		gnome2_icon_cache_update
 	fi
 
+	# make sure that site-gentoo.el exists since site-start.el requires it
+	elisp-site-regen
+
 	if [ ! -e "${ROOT}${SITELISP}/site-start.el" ]; then
 		echo
 		while read line; do elog "${line:- }"; done <<-EOF
@@ -94,16 +100,15 @@ pkg_postinst() {
 		EOF
 		echo
 
-		if [ ! -e "${ROOT}${SITELISP}"/site-gentoo.el ]; then
-			# This seems to be a new install. Create site-gentoo.el and
-			# a default site-start.el, so that Gentoo packages will work.
-			elisp-site-regen
+		if [ "${NEW_INSTALL}" ]; then
+			# This is a new install. Create default site-start.el, so that
+			# Gentoo packages will work.
 			make-site-start
 		else
-			# site-gentoo.el already exists. Give a hint how to
-			# (re-)create the site-start.el file.
+			# This package was already installed, but site-start.el does
+			# not exist. Give a hint how to (re-)create it.
 			elog "If this is a new install, you may want to run:"
-			elog "\"emerge --config =${CATEGORY}/${PF}\""
+			elog "emerge --config =${CATEGORY}/${PF}"
 		fi
 	fi
 }

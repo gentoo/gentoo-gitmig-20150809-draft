@@ -1,10 +1,11 @@
 # ChangeLog for x11-misc/emacs-desktop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.3 2009/03/13 09:12:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.4 2009/03/13 12:02:35 ulm Exp $
 
   13 Mar 2009; Ulrich Mueller <ulm@gentoo.org>
   emacs-common-gentoo-1.0.ebuild:
-  Remove orphan files only if this is not a reinstall.
+  Remove orphan files only if this is not a reinstall. Make logic for creation
+  of site-start.el more predictable.
 
 *emacs-common-gentoo-1.0 (12 Mar 2009)
 *emacs-common-gentoo-0.3 (12 Mar 2009)
