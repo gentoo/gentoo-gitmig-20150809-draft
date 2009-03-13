@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-langcjk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.25 2009/03/11 22:53:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.26 2009/03/13 20:22:56 ranger Exp $
+
+  13 Mar 2009; Brent Baude <ranger@gentoo.org> texlive-langcjk-2008.ebuild:
+  Marking texlive-langcjk-2008 ppc64 stable for bug 235551
 
   11 Mar 2009; Markus Meier <maekke@gentoo.org> texlive-langcjk-2008.ebuild:
   amd64 stable, bug #253551
