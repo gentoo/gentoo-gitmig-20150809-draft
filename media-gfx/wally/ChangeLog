@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.9 2009/03/12 09:51:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.10 2009/03/13 19:02:59 tcunha Exp $
+
+  13 Mar 2009; Tiago Cunha <tcunha@gentoo.org> wally-2.0.1.ebuild:
+  stable amd64, bug 262119
 
   12 Mar 2009; Markos Chandras <hwoarang@gentoo.org> wally-2.0.1-r1:
   Replacing wrong kde4 use flag
