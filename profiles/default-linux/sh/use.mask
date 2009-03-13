@@ -73,6 +73,7 @@ video_cards_i740
 video_cards_i810
 video_cards_imstt
 video_cards_intel
+video_cards_mach64
 video_cards_mga
 video_cards_neomagic
 video_cards_newport
