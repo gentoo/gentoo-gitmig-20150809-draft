@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-2.6.1.ebuild,v 1.4 2008/05/29 18:04:58 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-2.6.1.ebuild,v 1.5 2009/03/13 23:02:48 bangert Exp $
 
 inherit python distutils eutils
 
 DESCRIPTION="Automatic updater and package installer/remover for rpm systems"
-HOMEPAGE="http://linux.duke.edu/projects/yum/"
+HOMEPAGE="http://yum.baseurl.org/"
 SRC_URI="${HOMEPAGE}/download/${PV%.[0-9]}/${P}.tar.gz"
 
 LICENSE="GPL-2"
