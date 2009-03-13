@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-tga
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tga/ChangeLog,v 1.24 2008/09/06 06:55:32 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tga/ChangeLog,v 1.25 2009/03/13 16:06:10 armin76 Exp $
+
+  13 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-tga-1.1.0.ebuild, xf86-video-tga-1.2.0.ebuild:
+  Drop ~sh, its not available there
 
 *xf86-video-tga-1.2.0 (06 Sep 2008)
 

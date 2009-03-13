@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-tseng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tseng/ChangeLog,v 1.29 2009/01/13 05:54:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tseng/ChangeLog,v 1.30 2009/03/13 16:07:54 armin76 Exp $
+
+  13 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-tseng-1.1.0.ebuild, xf86-video-tseng-1.1.1.ebuild,
+  xf86-video-tseng-1.2.0.ebuild, xf86-video-tseng-1.2.1.ebuild:
+  Drop ~sh, its not available there
 
 *xf86-video-tseng-1.2.1 (13 Jan 2009)
 

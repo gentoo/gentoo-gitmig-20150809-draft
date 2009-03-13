@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tseng/xf86-video-tseng-1.2.0.ebuild,v 1.1 2008/06/10 06:52:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tseng/xf86-video-tseng-1.2.0.ebuild,v 1.2 2009/03/13 16:07:54 armin76 Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -9,7 +9,7 @@ XDPVER=4
 inherit x-modular
 
 DESCRIPTION="Tseng Labs video driver"
-KEYWORDS="~amd64 ~ia64 ~sh ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~x86 ~x86-fbsd"
 RDEPEND=">=x11-base/xorg-server-1.0.99"
 DEPEND="${RDEPEND}
 	x11-proto/fontsproto
