@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.98 2009/03/13 08:47:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.99 2009/03/13 08:50:02 fauli Exp $
+
+  13 Mar 2009; Christian Faulhammer <fauli@gentoo.org> -gramps-3.1.0.ebuild:
+  clean up
 
   13 Mar 2009; Christian Faulhammer <fauli@gentoo.org> gramps-3.1.1.ebuild:
   Only USE=berkdb on dev-lang/python is required, sqlite is no alternative
