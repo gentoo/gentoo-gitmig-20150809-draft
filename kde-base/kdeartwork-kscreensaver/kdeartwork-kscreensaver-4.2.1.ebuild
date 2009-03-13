@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.2.1.ebuild,v 1.3 2009/03/11 21:04:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.2.1.ebuild,v 1.4 2009/03/13 22:25:09 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,6 +15,7 @@ IUSE="debug +eigen +opengl +xscreensaver"
 
 DEPEND="
 	>=kde-base/kscreensaver-${PV}:${SLOT}[kdeprefix=,opengl?]
+	>=kde-base/plasma-workspace-${PV}:${SLOT}[kdeprefix=]
 	media-libs/libart_lgpl
 	eigen? ( dev-cpp/eigen:2 )
 	opengl? ( virtual/opengl )

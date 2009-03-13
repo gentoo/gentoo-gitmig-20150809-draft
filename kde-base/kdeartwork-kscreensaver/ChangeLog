@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-kscreensaver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.115 2009/03/11 21:04:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.116 2009/03/13 22:25:09 scarabeus Exp $
+
+  13 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  kdeartwork-kscreensaver-4.2.1.ebuild:
+  Update deps per bug #256606. Add plasma-workspace.
 
   11 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
   kdeartwork-kscreensaver-4.2.1.ebuild:
