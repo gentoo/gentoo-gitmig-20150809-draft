@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-neomagic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/ChangeLog,v 1.25 2009/01/13 05:52:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/ChangeLog,v 1.26 2009/03/13 15:38:12 armin76 Exp $
+
+  13 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-neomagic-1.1.1.ebuild, xf86-video-neomagic-1.2.1.ebuild,
+  xf86-video-neomagic-1.2.2.ebuild:
+  Drop ~sh, its not available there
 
 *xf86-video-neomagic-1.2.2 (13 Jan 2009)
 

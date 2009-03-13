@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-cirrus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-cirrus/ChangeLog,v 1.26 2008/06/06 21:51:30 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-cirrus/ChangeLog,v 1.27 2009/03/13 15:28:41 armin76 Exp $
+
+  13 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-cirrus-1.1.0.ebuild, xf86-video-cirrus-1.2.1.ebuild:
+  Drop ~sh, its not available there
 
 *xf86-video-cirrus-1.2.1 (06 Jun 2008)
 
