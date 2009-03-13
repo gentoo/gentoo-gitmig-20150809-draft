@@ -188,18 +188,13 @@ lesspipe() {
 			exit 0
 		fi
 
-		# Only colorize if user forces it ...
-		if [[ ${LESSCOLOR} == "2" ]]; then
+		# 2: Only colorize if user forces it ...
+		# 1: ... or we know less will handle raw codes -- this will
+		#    not detect -seiRM, so set LESSCOLORIZER yourself
+		if [[ ${LESSCOLOR} == "2" ]] || [[ " ${LESS} " == *" -"[rR]" "* ]] ; then
 			${LESSCOLORIZER} "$1"
 			exit 0
 		fi
-		# ... or we know less will handle raw codes
-		for opt in ${LESS} ; do
-			if [[ ${opt} == "-r" || ${opt} == "-R" ]] ; then
-				${LESSCOLORIZER} "$1"
-				break
-			fi
-		done
 		;;
 
 # May not be such a good idea :)
@@ -234,7 +229,7 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.33 2009/02/09 18:58:10 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.34 2009/03/13 06:06:29 vapier Exp $"
 	cat <<-EOF
 		$cvsid
 		Copyright 2001-2009 Gentoo Foundation
