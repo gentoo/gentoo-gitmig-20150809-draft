@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2436 2009/03/13 10:33:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2437 2009/03/13 11:46:54 angelos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Mar 2009; Christoph Mende <angelos@gentoo.org> updates/1Q-2009:
+  Moved media-plugins/gmpc-lastfm to media-plugins/gmpc-last-fm
 
   13 Mar 2009; Raúl Porcel <armin76@gentoo.org> profiles.desc:
   Sort profiles by arch
