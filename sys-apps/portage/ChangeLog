@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.585 2009/03/13 20:30:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.586 2009/03/13 21:10:35 zmedico Exp $
 
 *portage-2.1.6.8 (13 Mar 2009)
 
@@ -10,7 +10,8 @@
   slot conflicts), bug #256289 (show normal mask message for use deps when
   version with required IUSE is masked), bug #256616 (don't do anything
   else when system packages are merging), bug #258433 (warn about
-  incorrectly defined FETCHCOMMAND for EAPI 2), bug #259124 (apply --color
+  incorrectly defined FETCHCOMMAND for EAPI 2), bug #258773 (mysql pulls
+  in mysql-community and triggers blockers), bug #259124 (apply --color
   to fetch output), bug #259882 (disable dispatch-conf confmem-like
   behavior), bug #259954 (be careful about system deps with unsatisfied
   PDEPEND), bug #260331 (reject set*id binaries that have DT_RPATH:$ORIGIN),
