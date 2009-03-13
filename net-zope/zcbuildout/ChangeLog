@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zcbuildout
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zcbuildout/ChangeLog,v 1.1 2009/03/13 09:11:25 tupone Exp $
+
+*zcbuildout-1.1.1 (13 Mar 2009)
+
+  13 Mar 2009; Alfredo Tupone <tupone@gentoo.org> +metadata.xml,
+  +zcbuildout-1.1.1.ebuild:
+  System for managing development buildouts.
+
