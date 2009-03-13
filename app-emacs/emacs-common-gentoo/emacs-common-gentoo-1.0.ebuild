@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.0.ebuild,v 1.2 2009/03/12 14:08:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.0.ebuild,v 1.3 2009/03/13 09:12:45 ulm Exp $
 
 inherit elisp-common eutils fdo-mime gnome2-utils
 
@@ -16,8 +16,12 @@ IUSE="X"
 PDEPEND="virtual/emacs"
 
 pkg_setup() {
-	# clean up orphan file installed by old Emacs ebuilds
-	rm -f "${ROOT}${SITELISP}/subdirs.el"
+	if [ -e "${ROOT}${SITELISP}/subdirs.el" ] \
+		&& ! has_version ">=${CATEGORY}/${PN}-1"
+	then
+		ewarn "Removing orphan subdirs.el (installed by old Emacs ebuilds)"
+		rm -f "${ROOT}${SITELISP}/subdirs.el"
+	fi
 }
 
 src_install() {
