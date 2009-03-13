@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/bioperl
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.32 2008/07/15 14:26:27 armin76 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.33 2009/03/13 00:41:34 weaver Exp $
+
+*bioperl-1.6.0 (12 Mar 2009)
+
+  12 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> +bioperl-1.6.0.ebuild:
+  Testing release for revision bump
 
   15 Jul 2008; Raúl Porcel <armin76@gentoo.org> bioperl-1.5.1-r1.ebuild:
   x86 stable wrt #222727
