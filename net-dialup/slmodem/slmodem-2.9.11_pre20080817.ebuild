@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20080817.ebuild,v 1.1 2009/03/03 20:08:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20080817.ebuild,v 1.2 2009/03/13 20:09:20 mrness Exp $
 
 inherit eutils linux-mod multilib
 
@@ -136,7 +136,7 @@ pkg_postinst() {
 	# Make some devices if we aren't using devfs or udev
 	if [ -e "${ROOT}/dev/.udev" ]; then
 		ebegin "Reloading udev rules..."
-			udevcontrol reload_rules
+			udevadm control --reload-rules
 		eend $?
 	else
 		cd "${S}/drivers"

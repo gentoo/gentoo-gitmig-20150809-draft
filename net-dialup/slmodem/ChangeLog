@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.99 2009/03/03 20:08:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.100 2009/03/13 20:09:20 mrness Exp $
+
+  13 Mar 2009; Alin Năstac <mrness@gentoo.org>
+  slmodem-2.9.11_pre20080817.ebuild:
+  Replace udevcontrol with udevadm control (#261864).
 
 *slmodem-2.9.11_pre20080817 (03 Mar 2009)
 
