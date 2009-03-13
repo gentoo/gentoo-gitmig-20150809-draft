@@ -1,8 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.17.2.ebuild,v 1.3 2009/03/11 19:16:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/worker-2.17.3.ebuild,v 1.1 2009/03/13 19:32:32 dertobi123 Exp $
 
-EAPI=2
 inherit eutils
 
 DESCRIPTION="Worker Filemanager: Amiga Directory Opus 4 clone"
@@ -22,10 +21,6 @@ src_compile() {
 	econf	$(use_enable unicode utf-8) \
 		$(use_with avfs) || die "./configure failed"
 	emake || die "make failed"
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
 src_install() {
