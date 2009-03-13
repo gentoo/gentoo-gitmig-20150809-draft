@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-1.6.5.ebuild,v 1.3 2008/11/26 23:26:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-1.6.5.ebuild,v 1.4 2009/03/13 15:36:30 armin76 Exp $
 
 inherit x-modular
 
@@ -9,7 +9,7 @@ SRC_URI="http://xorg.freedesktop.org/archive/individual/driver/xf86-video-i810-$
 S="${WORKDIR}/xf86-video-i810-${PV}"
 
 DESCRIPTION="X.Org driver for Intel cards"
-KEYWORDS="amd64 arm ia64 sh x86 ~x86-fbsd"
+KEYWORDS="amd64 ia64 x86 ~x86-fbsd"
 IUSE="dri"
 RDEPEND=">=x11-base/xorg-server-1.0.99
 	x11-libs/libXvMC"

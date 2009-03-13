@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.6.1.ebuild,v 1.2 2009/02/01 23:53:42 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.6.1.ebuild,v 1.3 2009/03/13 15:36:30 armin76 Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -9,7 +9,7 @@ inherit x-modular
 
 DESCRIPTION="X.Org driver for Intel cards"
 
-KEYWORDS="~amd64 ~arm ~ia64 ~sh ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~x86 ~x86-fbsd"
 IUSE="dri"
 
 RDEPEND=">=x11-base/xorg-server-1.5
