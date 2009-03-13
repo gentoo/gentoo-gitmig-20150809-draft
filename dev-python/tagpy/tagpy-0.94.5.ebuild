@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.5.ebuild,v 1.5 2009/02/24 01:37:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.5.ebuild,v 1.6 2009/03/13 16:22:43 tcunha Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://cheeseshop.python.org/packages/source/t/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ia64 ~ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/python

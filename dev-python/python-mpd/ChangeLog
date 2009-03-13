@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-mpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.10 2009/02/24 01:35:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-mpd/ChangeLog,v 1.11 2009/03/13 16:19:58 tcunha Exp $
+
+  13 Mar 2009; Tiago Cunha <tcunha@gentoo.org> python-mpd-0.2.1.ebuild:
+  stable sparc
 
   24 Feb 2009; Joseph Jezak <josejx@gentoo.org> python-mpd-0.2.1.ebuild:
   Marked ~ppc for bug #222011.

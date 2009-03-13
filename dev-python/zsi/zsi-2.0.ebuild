@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.0.ebuild,v 1.7 2009/02/24 01:37:45 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/zsi-2.0.ebuild,v 1.8 2009/03/13 16:26:36 tcunha Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="Web Services for Python"
 HOMEPAGE="http://pywebsvcs.sourceforge.net/zsi.html"
 SRC_URI="mirror://sourceforge/pywebsvcs/${MY_P}.tar.gz"
 
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 SLOT="0"
 LICENSE="PYTHON"
 IUSE="examples doc twisted"
