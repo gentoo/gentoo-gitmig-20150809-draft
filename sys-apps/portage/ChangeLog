@@ -1,6 +1,27 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.584 2009/03/12 09:55:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.585 2009/03/13 20:30:06 zmedico Exp $
+
+*portage-2.1.6.8 (13 Mar 2009)
+
+  13 Mar 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.6.8.ebuild:
+  2.1.6.8 bump. This fixes bug #199408 (account for current config with
+  emerge --resume), bug #250020 (improve merge order), bug #253904 (avoid
+  slot conflicts), bug #256289 (show normal mask message for use deps when
+  version with required IUSE is masked), bug #256616 (don't do anything
+  else when system packages are merging), bug #258433 (warn about
+  incorrectly defined FETCHCOMMAND for EAPI 2), bug #259124 (apply --color
+  to fetch output), bug #259882 (disable dispatch-conf confmem-like
+  behavior), bug #259954 (be careful about system deps with unsatisfied
+  PDEPEND), bug #260331 (reject set*id binaries that have DT_RPATH:$ORIGIN),
+  bug #261082 (fetch changed packages with --getbinpkg), bug #261670 (ensure
+  CHOST metadata reflects the initial CHOST setting), bug #261675 (avoid
+  interference between FEATURES=digest and concurrent tasks), and bug
+  #261852 (show mod_echo elog output before showing a traceback from an
+  unexpected exception), bug #261992 (File name too long exception), bug
+  #262012 (invalid message about --newuse triggered by slot conflict), bug
+  #262096 (add elog binaries for sandbox to call). Bug #261959 tracks all
+  bugs fixed since 2.1.6.7.
 
 *portage-2.2_rc25 (12 Mar 2009)
 
