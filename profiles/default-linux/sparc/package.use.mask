@@ -28,7 +28,7 @@ media-sound/rubyripper wav
 sci-libs/hdf5 mpi
 
 # openct isn't keyworded anymore
-net-misc/kpvnc smartcard
+net-misc/kvpnc smartcard
 
 # xindy requires clisp which does not build
 app-text/texlive	xindy

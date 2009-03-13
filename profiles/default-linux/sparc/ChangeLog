@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.129 2009/02/18 16:46:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.130 2009/03/13 16:50:12 tcunha Exp $
+
+  13 Mar 2009; Tiago Cunha <tcunha@gentoo.org> package.use.mask:
+  Fix package name
 
   18 Feb 2009; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Mask USE=doc for sci-geosciences/gpsbabel as it needs java stuff
