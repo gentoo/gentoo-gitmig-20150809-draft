@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.24.2-r1.ebuild,v 1.5 2009/03/11 02:25:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.24.2-r1.ebuild,v 1.6 2009/03/13 14:26:25 aballier Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/vinagre/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="avahi test"
 
 # FIXME: make gnome-panel applet optional?

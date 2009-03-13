@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.33 2009/03/11 02:25:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.34 2009/03/13 14:26:25 aballier Exp $
+
+  13 Mar 2009; Alexis Ballier <aballier@gentoo.org>
+  vinagre-2.24.2-r1.ebuild:
+  keyword ~x86-fbsd
 
   11 Mar 2009; Daniel Gryniewicz <dang@gentoo.org> vinagre-2.24.2-r1.ebuild:
   Marked stable on amd64
