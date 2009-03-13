@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Data-Stag
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stag/ChangeLog,v 1.1 2009/03/13 00:05:57 weaver Exp $
+
+*Data-Stag-0.11 (12 Mar 2009)
+
+  12 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +Data-Stag-0.11.ebuild:
+  New package, dependency for sci-biology/bioperl-1.6.0, ebuild written by me
+
