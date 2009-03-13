@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/x2goserver
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.1 2009/03/13 12:44:48 voyageur Exp $
+
+*x2goserver-2.0.1.19 (13 Mar 2009)
+
+  13 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/x2goserver.init, +metadata.xml, +x2goserver-2.0.1.19.ebuild:
+  Initial portage commit, from the NX overlay
+
