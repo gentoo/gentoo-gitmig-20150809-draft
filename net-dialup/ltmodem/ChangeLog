@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ltmodem
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.44 2008/11/02 10:26:37 mrness Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.45 2009/03/13 20:25:17 mrness Exp $
+
+  13 Mar 2009; Alin Năstac <mrness@gentoo.org> ltmodem-2.6.9-r1.ebuild:
+  Replace udevcontrol with udevadm control.
 
   02 Nov 2008; Alin Năstac <mrness@gentoo.org>
   -files/ltmodem-2.6.9-kernel-2.6.24.patch,

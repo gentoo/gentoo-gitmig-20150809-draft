@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mwavem
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/ChangeLog,v 1.14 2008/10/18 09:42:16 mrness Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/ChangeLog,v 1.15 2009/03/13 20:26:59 mrness Exp $
+
+  13 Mar 2009; Alin Năstac <mrness@gentoo.org> -mwavem-2.0.ebuild,
+  mwavem-2.0-r1.ebuild:
+  Replace udevcontrol with udevadm control.
 
 *mwavem-2.0-r1 (18 Oct 2008)
 

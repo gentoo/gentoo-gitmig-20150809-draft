@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0-r1.ebuild,v 1.1 2008/10/18 09:42:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0-r1.ebuild,v 1.2 2009/03/13 20:26:59 mrness Exp $
 
 inherit autotools
 
@@ -53,7 +53,7 @@ pkg_postinst() {
 	elif [ -e "${ROOT}/dev/.udev" ]; then
 		#the device should be created by udev
 		ebegin "Restarting udev to reread udev rules"
-			udevcontrol reload_rules
+			udevadm control --reload-rules
 		eend $?
 	else
 		[ ! -d "${ROOT}/dev/modem" ] && mkdir --mode=0755 "${ROOT}/dev/modems"

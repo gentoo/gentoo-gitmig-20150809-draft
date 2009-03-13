@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9-r1.ebuild,v 1.3 2008/11/02 10:26:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-2.6.9-r1.ebuild,v 1.4 2009/03/13 20:25:17 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -67,7 +67,7 @@ pkg_postinst() {
 	# Make some devices if we aren't using udev
 	if [ -e "${ROOT}/dev/.udev" ]; then
 		ebegin "Restarting udev to reread udev rules"
-			udevcontrol reload_rules
+			udevadm control --reload-rules
 		eend $?
 	else
 		mknod --mode=0660 /dev/ttySLTM0 c 62 64 && chgrp dialout /dev/ttySLTM0
