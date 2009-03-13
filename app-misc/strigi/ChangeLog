@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.28 2009/03/12 18:06:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.29 2009/03/13 02:19:30 jer Exp $
+
+  13 Mar 2009; Jeroen Roovers <jer@gentoo.org> strigi-0.6.4.ebuild:
+  Marked ~hppa (bug #260777).
 
   12 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> strigi-0.6.4.ebuild:
   Update log4cxx dependency (now it again compile with it).

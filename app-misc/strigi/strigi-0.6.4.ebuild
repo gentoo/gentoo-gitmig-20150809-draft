@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.6.4.ebuild,v 1.5 2009/03/12 18:06:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.6.4.ebuild,v 1.6 2009/03/13 02:19:30 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.vandenoever.info/software/strigi/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="+clucene +dbus debug exif fam hyperestraier inotify log +qt4 test"
 
 COMMONDEPEND="
