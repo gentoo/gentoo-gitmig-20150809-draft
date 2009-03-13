@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.95 2009/03/05 18:29:31 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.96 2009/03/13 14:18:53 fmccor Exp $
+
+*lilypond-2.12.2 (13 Mar 2009)
+
+  13 Mar 2009; Ferris McCormick <fmccor@gentoo.org> +lilypond-2.12.2.ebuild:
+  Small version bump to lilypond's current stable, dated 20 January 2009.
 
   05 Mar 2009; Ferris McCormick <fmccor@gentoo.org> lilypond-2.12.1.ebuild:
   Sparc stable, Bug #245167.
