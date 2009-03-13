@@ -1,10 +1,10 @@
- # Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.1.ebuild,v 1.4 2009/03/12 13:15:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.1.ebuild,v 1.5 2009/03/13 05:20:59 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-PATCH_VER="2"
+PATCH_VER="3"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="ftp://alpha.gnu.org/gnu/coreutils/${P}.tar.gz
@@ -79,7 +79,7 @@ src_test() {
 	addwrite /dev/full
 	#export RUN_EXPENSIVE_TESTS="yes"
 	#export FETISH_GROUPS="portage wheel"
-	make -k check || die "make check failed"
+	emake -j1 -k check || die "make check failed"
 }
 
 src_install() {
