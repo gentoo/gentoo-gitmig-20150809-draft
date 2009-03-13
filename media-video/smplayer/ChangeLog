@@ -1,6 +1,13 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.65 2009/03/12 15:05:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.66 2009/03/13 19:08:20 yngwin Exp $
+
+*smplayer-0.6.7_p2872 (13 Mar 2009)
+
+  13 Mar 2009; Ben de Groot <yngwin@gentoo.org>
+  +smplayer-0.6.7_p2872.ebuild:
+  Version bump. Again we needed a post-release svn snapshot to work with Qt
+  4.5.
 
   12 Mar 2009; Brent Baude <ranger@gentoo.org> smplayer-0.6.6.ebuild:
   Marking smplayer-0.6.6 ppc64 for bug 257852
