@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/read-edid-1.4.2.ebuild,v 1.6 2009/03/08 18:52:11 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/read-edid-1.4.2.ebuild,v 1.7 2009/03/13 22:26:31 josejx Exp $
 
 DESCRIPTION="Get EDID information from a PnP monitor"
 HOMEPAGE="http://www.polypux.org/projects/read-edid/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.polypux.org/projects/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ppc ~sparc x86"
 IUSE=""
 DEPEND=""
 RDEPEND=""
