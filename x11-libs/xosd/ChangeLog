@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/xosd
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.75 2008/06/21 06:53:07 drac Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.76 2009/03/13 23:36:39 bangert Exp $
+
+  13 Mar 2009; Thilo Bangert <bangert@gentoo.org> -xosd-2.2.8-r1.ebuild,
+  -xosd-2.2.10-r1.ebuild, xosd-2.2.14-r1.ebuild:
+  remove --disable-new-xmms (bug #260268) - add RDEPEND on font-misc-misc (bug
+  #261398) - fix repoman warnings - remove old versions
 
   18 Jun 2008; Jeremy Olexa <darkside@gentoo.org> xosd-2.2.14-r1.ebuild:
   Add missing pkgconfig dep to xosd. Fixes bug #227713

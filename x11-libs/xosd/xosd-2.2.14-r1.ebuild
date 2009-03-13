@@ -1,13 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.20 2008/06/21 06:53:07 drac Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14-r1.ebuild,v 1.21 2009/03/13 23:36:39 bangert Exp $
 
 inherit eutils autotools
 
-DESCRIPTION="Library for overlaying text/glyphs in X-Windows X-On-Screen-Display plus binary for sending text from command line"
+DESCRIPTION="Library for overlaying text in X-Windows X-On-Screen-Display plus binary for sending text from CLI"
 HOMEPAGE="https://sourceforge.net/projects/libxosd/"
 SRC_URI="mirror://debian/pool/main/x/xosd/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/x/xosd/${PN}_${PV}-1.diff.gz
@@ -20,7 +17,8 @@ IUSE="xinerama"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
-	x11-libs/libXt"
+	x11-libs/libXt
+	media-fonts/font-misc-misc"
 DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )
 	x11-proto/xextproto
@@ -38,8 +36,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_enable xinerama) \
-		--disable-new-xmms \
+		$(use_enable xinerama)
 	emake || die "emake failed"
 }
 
