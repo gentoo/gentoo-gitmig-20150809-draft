@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.4a.ebuild,v 1.3 2009/03/10 21:02:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.4a.ebuild,v 1.4 2009/03/13 09:17:24 fauli Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -244,6 +244,7 @@ src_unpack() {
 
 	# Apply patches needed for some special device-types
 	epatch "${FILESDIR}"/${PN}-0.8.4-imon-pad2keys.patch
+	use lirc_devices_audio || epatch "${FILESDIR}"/lirc-0.8.4-portaudio_check.patch
 	use lirc_devices_remote_wonder_plus && epatch "${FILESDIR}"/lirc-0.8.3_pre1-remotewonderplus.patch
 
 	# remove parallel driver on SMP systems
