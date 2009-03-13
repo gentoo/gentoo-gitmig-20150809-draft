@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.6.0.ebuild,v 1.2 2009/03/12 16:19:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.6.0.ebuild,v 1.3 2009/03/13 07:12:14 angelos Exp $
 
 EAPI=1
 
@@ -28,6 +28,14 @@ pkg_setup() {
 src_compile() {
 	xfce4_src_configure
 	emake OTHERLDFLAGS="${LDFLAGS}" || die "emake failed"
+}
+
+src_install() {
+	xfce4_src_install
+
+	# stolen from perl-module.eclass
+	find "${D}" -type f -name perllocal.pod -delete
+	find "${D}" -depth -mindepth 1 -type d -empty -delete
 }
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
