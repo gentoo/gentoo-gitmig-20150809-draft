@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.353 2009/03/13 00:19:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.354 2009/03/13 00:20:12 dang Exp $
+
+  13 Mar 2009; Daniel Gryniewicz <dang@gentoo.org> glib-2.18.4-r1.ebuild:
+  Oops, managed to get ~arch in ebuild
 
 *glib-2.18.4-r1 (13 Mar 2009)
 *glib-2.16.6-r1 (13 Mar 2009)
