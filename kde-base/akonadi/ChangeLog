@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akonadi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.15 2009/03/12 17:44:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.16 2009/03/13 17:51:11 scarabeus Exp $
+
+  13 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> akonadi-4.2.1.ebuild:
+  Hm revert dep on kdepim-kresources. It should be directly inverse.
+  Kdepim-kresources depends on akonadi.
 
   12 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> akonadi-4.2.1.ebuild:
   Add missing dep. Per bug #251906. And krytzz request :]

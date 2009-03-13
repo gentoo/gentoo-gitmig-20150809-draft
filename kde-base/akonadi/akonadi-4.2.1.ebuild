@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.2.1.ebuild,v 1.3 2009/03/12 17:44:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.2.1.ebuild,v 1.4 2009/03/13 17:51:11 scarabeus Exp $
 
 EAPI="2"
 
@@ -23,7 +23,6 @@ DEPEND="
 	dev-libs/libxslt
 	>=kde-base/kdelibs-${PV}:${SLOT}[kdeprefix=,semantic-desktop?]
 	>=kde-base/kdemaildir-${PV}:${SLOT}[kdeprefix=]
-	>=kde-base/kdepim-kresources-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/libkdepim-${PV}:${SLOT}[kdeprefix=]
 	x11-misc/shared-mime-info
 "
