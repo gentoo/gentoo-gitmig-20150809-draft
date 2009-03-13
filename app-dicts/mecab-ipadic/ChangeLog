@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/mecab-ipadic
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/ChangeLog,v 1.22 2008/12/05 09:58:50 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/ChangeLog,v 1.23 2009/03/13 02:15:12 jer Exp $
+
+  13 Mar 2009; Jeroen Roovers <jer@gentoo.org>
+  mecab-ipadic-2.7.0.20070801.ebuild:
+  Marked ~hppa (bug #260777).
 
   05 Dec 2008; Raúl Porcel <armin76@gentoo.org>
   mecab-ipadic-2.7.0.20070801.ebuild:
