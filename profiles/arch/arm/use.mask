@@ -98,6 +98,7 @@ video_cards_newport
 video_cards_nsc
 video_cards_nv
 video_cards_r128
+video_cards_radeon
 video_cards_radeonhd
 video_cards_rendition
 video_cards_s3
