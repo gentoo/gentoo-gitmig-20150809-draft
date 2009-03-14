@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-de-alt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de-alt/ChangeLog,v 1.7 2009/03/02 13:05:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de-alt/ChangeLog,v 1.8 2009/03/14 16:19:05 armin76 Exp $
+
+  14 Mar 2009; Raúl Porcel <armin76@gentoo.org> ispell-de-alt-2.ebuild:
+  alpha/sparc/x86 stable wrt #262361
 
   02 Mar 2009; Peter Volkov <pva@gentoo.org> ispell-de-alt-2.ebuild:
   ~mips keyworded, bug #258611.
