@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.7.ebuild,v 1.3 2009/02/05 09:02:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.7.ebuild,v 1.4 2009/03/14 06:28:32 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
 
-MUSIC_P=SMC_music_4.0_high
+MUSIC_P=SMC_Music_4.1_high
 DESCRIPTION="Secret Maryo Chronicles"
 HOMEPAGE="http://www.secretmaryo.org/"
 SRC_URI="mirror://sourceforge/smclone/${P}.tar.bz2
