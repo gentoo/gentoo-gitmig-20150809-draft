@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/NetPacket
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.18 2009/03/08 20:10:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.19 2009/03/14 16:27:38 armin76 Exp $
+
+  14 Mar 2009; Raúl Porcel <armin76@gentoo.org> NetPacket-0.41.1.ebuild:
+  ia64 stable wrt #261521
 
   08 Mar 2009; Markus Meier <maekke@gentoo.org> NetPacket-0.41.1.ebuild:
   amd64/x86 stable, bug #261521
