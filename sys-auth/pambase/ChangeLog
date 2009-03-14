@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.61 2009/03/14 13:48:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.62 2009/03/14 15:58:56 armin76 Exp $
+
+  14 Mar 2009; Raúl Porcel <armin76@gentoo.org> pambase-20081028.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #261595
 
   14 Mar 2009; nixnut <nixnut@gentoo.org> pambase-20081028.ebuild:
   ppc stable #261595
