@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rt61-firmware
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61-firmware/ChangeLog,v 1.1 2009/03/11 16:28:37 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61-firmware/ChangeLog,v 1.2 2009/03/14 22:18:45 rbu Exp $
+
+  14 Mar 2009; Robert Buchholz <rbu@gentoo.org> rt61-firmware-1.2.ebuild:
+  Add DEPEND on app-arch/unzip (bug #262330 by Jonathan Heaney)
 
 *rt61-firmware-1.2 (11 Mar 2009)
 
