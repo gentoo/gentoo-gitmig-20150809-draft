@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-fetchinfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fetchinfo/ChangeLog,v 1.28 2009/01/29 00:40:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-fetchinfo/ChangeLog,v 1.29 2009/03/14 15:44:05 nixnut Exp $
+
+  14 Mar 2009; nixnut <nixnut@gentoo.org>
+  claws-mail-fetchinfo-0.4.24.ebuild:
+  ~ppc'd
 
   29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-fetchinfo-0.4.23.ebuild:
