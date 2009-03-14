@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/tuxnes-0.75-r1.ebuild,v 1.1 2007/07/02 16:11:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/tuxnes-0.75-r1.ebuild,v 1.2 2009/03/14 08:08:29 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="emulator for the 8-bit Nintendo Entertainment System"
@@ -25,24 +26,21 @@ DEPEND="${RDEPEND}
 		x11-proto/xextproto
 		x11-proto/xproto )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-configure.in.patch \
 		"${FILESDIR}"/${P}-gcc34.patch \
+		"${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-include.patch \
 		"${FILESDIR}"/${P}-exec-stack.patch
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--without-w \
 		$(use_with ggi) \
-		$(use_with X x) \
-		|| die
-	emake || die "emake failed"
+		$(use_with X x)
 }
 
 src_install() {
