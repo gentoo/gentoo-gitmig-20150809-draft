@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/fpc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.45 2008/12/16 19:30:03 truedfx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.46 2009/03/14 17:29:50 truedfx Exp $
+
+*fpc-2.2.2-r1 (10 Mar 2009)
+
+  14 Mar 2009; Harald van Dĳk <truedfx@gentoo.org>
+  +files/fpc-2.2.2-execstack.patch, -fpc-2.0.0-r1.ebuild, -fpc-2.0.2.ebuild,
+  -fpc-2.0.4.ebuild, -fpc-2.2.2.ebuild, +fpc-2.2.2-r1.ebuild:
+  Drop RESTRICT=strip, now that binutils is fixed (#183725)
+  Pick noexecstack bits from upstream (#228867)
+  Remove older versions
 
   16 Dec 2008; Harald van Dĳk <truedfx@gentoo.org> fpc-2.0.4.ebuild,
   fpc-2.2.0.ebuild, fpc-2.2.0-r1.ebuild, fpc-2.2.2.ebuild:

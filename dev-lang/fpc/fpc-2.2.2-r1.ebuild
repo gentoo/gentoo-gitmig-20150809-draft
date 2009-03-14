@@ -1,23 +1,19 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.4.ebuild,v 1.7 2008/12/16 19:30:03 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.2.2-r1.ebuild,v 1.1 2009/03/14 17:29:50 truedfx Exp $
 
 inherit eutils
 
-# bug #183604
-RESTRICT="strip"
-
-PV_BIN="2.0.4"
-S="${WORKDIR}/fpcbuild_${PV}_exp/fpcsrc"
+S="${WORKDIR}/fpcbuild-${PV}/fpcsrc"
 
 HOMEPAGE="http://www.freepascal.org/"
 DESCRIPTION="Free Pascal Compiler"
 SRC_URI="mirror://sourceforge/freepascal/fpcbuild-${PV}.tar.gz
-	x86? ( mirror://sourceforge/freepascal/fpc-${PV_BIN}.i386-linux.tar )
+	x86? ( mirror://sourceforge/freepascal/fpc-2.2.2.i386-linux.tar )
 	sparc? ( mirror://sourceforge/freepascal/fpc-2.0.0.sparc-linux.tar )
-	ppc? ( mirror://sourceforge/freepascal/fpc-${PV_BIN}.powerpc-linux.tar )
-	amd64? ( mirror://sourceforge/freepascal/fpc-${PV_BIN}.x86_64-linux.tar )
-	doc? ( mirror://gentoo/fpcdocs-${PV}.tar.bz2 )"
+	ppc? ( mirror://sourceforge/freepascal/fpc-2.2.0.powerpc-linux.tar )
+	amd64? ( mirror://sourceforge/freepascal/fpc-2.2.2.x86_64-linux.tar )
+	doc? ( mirror://sourceforge/freepascal/fpc-${PV}-doc-pdf.zip )"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 LGPL-2.1-FPC"
@@ -26,13 +22,16 @@ IUSE="doc source"
 
 DEPEND="!dev-lang/fpc-bin
 	!dev-lang/fpc-source"
+RDEPEND="${DEPEND}"
+DEPEND="${DEPEND}
+	>=sys-devel/binutils-2.19.1-r1"
 
 src_unpack() {
 	case ${ARCH} in
-	x86)	FPC_ARCH="i386" ;;
-	ppc)	FPC_ARCH="powerpc" ;;
-	amd64)	FPC_ARCH="x86_64" ;;
-	sparc)	FPC_ARCH="sparc" ;;
+	x86)	FPC_ARCH="i386"    PV_BIN=2.2.2 ;;
+	ppc)	FPC_ARCH="powerpc" PV_BIN=2.2.0 ;;
+	amd64)	FPC_ARCH="x86_64"  PV_BIN=2.2.2 ;;
+	sparc)	FPC_ARCH="sparc"   PV_BIN=2.0.0 ;;
 	*)	die "This ebuild doesn't support ${ARCH}." ;;
 	esac
 
@@ -40,6 +39,11 @@ src_unpack() {
 
 	tar -xf binary.${FPC_ARCH}-linux.tar || die "Unpacking binary.${FPC_ARCH}-linux.tar failed!"
 	tar -xzf base.${FPC_ARCH}-linux.tar.gz || die "Unpacking base.${FPC_ARCH}-linux.tar.gz failed!"
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-unneeded-symbols.patch
+	epatch "${FILESDIR}"/${P}-execstack.patch
+	sed -i -e 's/ -Xs / /g' $(find . -name Makefile) || die "sed failed"
 }
 
 set_pp() {
@@ -52,8 +56,8 @@ set_pp() {
 	esac
 
 	case ${1} in
-	bootstrap)	pp=${WORKDIR}/lib/fpc/${PV_BIN}/ppc${FPC_ARCH} ;;
-	new) 	pp=${S}/compiler/ppc${FPC_ARCH} ;;
+	bootstrap)	pp="${WORKDIR}"/lib/fpc/${PV_BIN}/ppc${FPC_ARCH} ;;
+	new) 	pp="${S}"/compiler/ppc${FPC_ARCH} ;;
 	*)	die "set_pp: unknown argument: ${1}" ;;
 	esac
 }
@@ -80,7 +84,7 @@ src_compile() {
 
 	emake -j1 PP="${pp}" rtl_clean || die "make rtl_clean failed"
 
-	emake -j1 PP="${pp}" rtl packages_base_all fcl fv packages_extra_all utils || die "make failed"
+	emake -j1 PP="${pp}" rtl packages_all utils || die "make failed"
 
 	# Use pregenerated docs to avoid sandbox violations (#146804)
 	#if use doc ; then
@@ -97,10 +101,10 @@ src_install() {
 		INSTALL_PREFIX="${D}"usr \
 		INSTALL_DOCDIR="${D}"usr/share/doc/${P} \
 		INSTALL_MANDIR="${D}"usr/share/man \
-		INSTALL_SOURCEDIR="${D}"/usr/lib/fpc/${PV}/source
+		INSTALL_SOURCEDIR="${D}"usr/lib/fpc/${PV}/source
 
-	emake -j1 "$@" compiler_install rtl_install fcl_install fv_install \
-		packages_install utils_install || die "make install failed!"
+	emake -j1 "$@" compiler_install rtl_install packages_install \
+		utils_install || die "make install failed!"
 
 	dosym ../lib/fpc/${PV}/ppc${FPC_ARCH} /usr/bin/ppc${FPC_ARCH}
 
@@ -116,7 +120,7 @@ src_install() {
 
 	if ! has nodoc ${FEATURES} && use doc ; then
 		insinto /usr/share/doc/${PF}
-		doins "${WORKDIR}"/${P}/*.pdf
+		doins "${WORKDIR}"/doc/*.pdf
 		#cd "${S}"/../fpcdocs
 		#emake -j1 "$@" pdfinstall || die "make pdfinstall failed"
 	fi
@@ -125,6 +129,7 @@ src_install() {
 		cd "${S}"
 		shift
 		emake -j1 PP="${D}"usr/bin/ppc${FPC_ARCH} "$@" sourceinstall || die "make sourceinstall failed!"
+		find "${D}"usr/lib/fpc/${PV}/source -name '*.o' -exec rm {} \;
 	fi
 
 	"${D}"usr/lib/fpc/${PV}/samplecfg /usr/lib/fpc/${PV} "${D}"etc
