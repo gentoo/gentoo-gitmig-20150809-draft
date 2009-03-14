@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.2.ebuild,v 1.1 2009/01/29 18:25:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.2.ebuild,v 1.2 2009/03/14 13:57:15 bicatali Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -13,10 +13,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ada doc examples fortran gd gnome java jpeg latex	octave pdf perl
-	png python qhull svga tcl threads tk truetype wxwindows X"
+IUSE="ada cairo doc examples fortran gd gnome java jpeg latex octave
+	 pdf perl png python qhull svg svga tcl threads tk truetype wxwindows X"
 
 RDEPEND="ada? ( virtual/gnat )
+	cairo? ( x11-libs/cairo[svg?,X?] )
 	java? ( >=virtual/jre-1.5 )
 	gd? ( media-libs/gd[jpeg?,png?] )
 	gnome? ( gnome-base/libgnomeui
@@ -30,8 +31,7 @@ RDEPEND="ada? ( virtual/gnat )
 	svga? ( media-libs/svgalib )
 	tcl? ( dev-lang/tcl dev-tcltk/itcl )
 	tk? ( dev-lang/tk dev-tcltk/itk )
-	truetype? ( media-libs/freetype
-				media-fonts/freefont-ttf
+	truetype? ( media-fonts/freefont-ttf
 				media-libs/lasi
 				gd? ( media-libs/gd[truetype] ) )
 	wxwindows? ( x11-libs/wxGTK:2.8[X] x11-libs/agg )
@@ -95,6 +95,7 @@ src_configure() {
 	cmake-utils_pld() { _use_me_now PLD "$@" ; }
 
 	mycmakeargs="
+		-DUSE_RPATH=OFF
 		-DDEFAULT_ALL_DEVICES=ON
 		-DCMAKE_INSTALL_LIBDIR=/usr/$(get_libdir)
 		$(cmake-utils_has python numpy)
@@ -114,6 +115,7 @@ src_configure() {
 		$(cmake-utils_use_enable tk itk)
 		$(cmake-utils_use_enable wxwindows wxwidgets)
 		$(cmake-utils_pld pdf pdf)
+		$(cmake-utils_pld truetype psttf)
 		$(cmake-utils_pld latex pstex)
 		$(cmake-utils_pld svga linuxvga)"
 
@@ -127,6 +129,26 @@ src_configure() {
 		mycmakeargs="${mycmakeargs}	-DENABLE_pygcw=ON"
 	else
 		mycmakeargs="${mycmakeargs}	-DENABLE_pygcw=OFF"
+	fi
+	if use cairo; then
+		# memcairo buggy, see cmake/modules/drivers-init.cmake
+		mycmakeargs="${mycmakeargs}
+			-DPLD_memcairo=OFF
+			-DPLD_extcairo=OFF
+			-DPLD_pdfcairo=ON
+			-DPLD_pngcairo=ON
+			-DPLD_pscairo=ON
+			$(cmake-utils_pld svg svgcairo)
+			$(cmake-utils_pld X xcairo)"
+	else
+		mycmakeargs="${mycmakeargs}
+			-DPLD_memcairo=OFF
+			-DPLD_extcairo=OFF
+			-DPLD_pdfcairo=OFF
+			-DPLD_pngcairo=OFF
+			-DPLD_pscairo=OFF
+			-DPLD_svgcairo=OFF
+			-DPLD_xcairo=OFF"
 	fi
 	cmake-utils_src_configure
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.20 2009/01/29 18:25:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.21 2009/03/14 13:57:15 bicatali Exp $
+
+  14 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org> -plplot-5.9.0.ebuild,
+  plplot-5.9.2.ebuild:
+  Fixed support for cairo (bug #262001) and some automagic dependencies
 
 *plplot-5.9.2 (29 Jan 2009)
 
