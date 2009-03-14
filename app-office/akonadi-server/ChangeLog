@@ -1,6 +1,10 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.10 2009/02/15 22:02:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.11 2009/03/14 23:06:30 yngwin Exp $
+
+  14 Mar 2009; Ben de Groot <yngwin@gentoo.org> akonadi-server-1.0.0,
+  akonadi-server-1.1.1:
+  Fix eclass inherit order
 
   15 Feb 2009; Tomas Chvatal <scarabeus@gentoo.org>
   akonadi-server-1.1.1.ebuild:

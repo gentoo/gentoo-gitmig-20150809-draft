@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.1.1.ebuild,v 1.4 2009/02/15 22:02:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.1.1.ebuild,v 1.5 2009/03/14 23:06:30 yngwin Exp $
 
 EAPI="2"
 
-inherit cmake-utils qt4
+inherit qt4 cmake-utils
 
 DESCRIPTION="The server part of Akonadi"
 HOMEPAGE="http://pim.kde.org/akonadi"
