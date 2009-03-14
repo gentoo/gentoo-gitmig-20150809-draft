@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.7_p2872.ebuild,v 1.1 2009/03/13 19:08:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.7_p2872-r1.ebuild,v 1.1 2009/03/14 10:27:55 yngwin Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -32,6 +32,12 @@ done
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	# Fix paths in Makefile
+	sed -i -e "/^PREFIX=/s:/usr/local:/usr:" \
+		-e "/^CONF_PREFIX=/s:\$(PREFIX)::" \
+		-e "/^DOC_PATH=/s:packages/smplayer:${PF}:" \
+		"${S}"/Makefile || die "sed failed"
+
 	# Turn debug message flooding off
 	if ! use debug ; then
 		sed -i "s:#DEFINES += NO_DEBUG_ON_CONSOLE:DEFINES += NO_DEBUG_ON_CONSOLE:" \
@@ -72,7 +78,7 @@ src_compile() {
 
 src_install() {
 	# remove unneeded copies of GPL
-	rm Copying.txt docs/en/gpl.html docs/ru/gpl.html
+	rm Copying.txt docs/cs/gpl.html docs/en/gpl.html docs/ru/gpl.html
 	for i in de es ja nl ro ; do
 		rm -rf docs/$i
 	done
