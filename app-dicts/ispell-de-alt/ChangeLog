@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-de-alt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de-alt/ChangeLog,v 1.8 2009/03/14 16:19:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de-alt/ChangeLog,v 1.9 2009/03/14 23:11:02 tcunha Exp $
+
+  14 Mar 2009; Tiago Cunha <tcunha@gentoo.org> ispell-de-alt-2.ebuild:
+  stable amd64, bug 262361
 
   14 Mar 2009; Raúl Porcel <armin76@gentoo.org> ispell-de-alt-2.ebuild:
   alpha/sparc/x86 stable wrt #262361
