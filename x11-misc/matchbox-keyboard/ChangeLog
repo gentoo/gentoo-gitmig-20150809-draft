@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/matchbox-keyboard
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-keyboard/ChangeLog,v 1.7 2008/08/21 22:38:37 yvasilev Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-keyboard/ChangeLog,v 1.8 2009/03/14 03:50:51 solar Exp $
+
+  14 Mar 2009; <solar@gentoo.org> ChangeLog:
+  keyword ~amd64
 
   21 Aug 2008; Yuri Vasilevski <yvasilev@gentoo.org>
   matchbox-keyboard-0.1.ebuild:
