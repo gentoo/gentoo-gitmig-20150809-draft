@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon-xfce
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/ChangeLog,v 1.6 2009/01/18 15:34:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/ChangeLog,v 1.7 2009/03/14 12:19:37 pva Exp $
+
+  14 Mar 2009; Peter Volkov <pva@gentoo.org>
+  notification-daemon-xfce-0.3.7.ebuild:
+  Xfce 4.6 uses xfce-base/xfce4-settings, add it as alternative to RDEPEND.
 
   18 Jan 2009; Christoph Mende <angelos@gentoo.org>
   notification-daemon-xfce-0.3.7.ebuild:
