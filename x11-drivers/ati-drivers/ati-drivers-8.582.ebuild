@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.582.ebuild,v 1.2 2009/03/12 11:57:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.582.ebuild,v 1.3 2009/03/14 23:28:20 mr_bones_ Exp $
 
 IUSE="acpi debug"
 
@@ -36,7 +36,6 @@ DEPEND="${RDEPEND}
 	!<x11-drivers/ati-drivers-8.552-r1"
 
 EMULTILIB_PKG="true"
-
 
 S="${WORKDIR}"
 
