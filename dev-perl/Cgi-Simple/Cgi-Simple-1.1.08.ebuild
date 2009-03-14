@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/Cgi-Simple-1.1.07.ebuild,v 1.1 2009/03/08 13:57:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/Cgi-Simple-1.1.08.ebuild,v 1.1 2009/03/14 10:11:52 tove Exp $
 
 EAPI=2
 
