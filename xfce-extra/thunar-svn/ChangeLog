@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/thunar-svn
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-svn/ChangeLog,v 1.1 2009/03/14 21:36:51 angelos Exp $
+
+*thunar-svn-0.0.3 (14 Mar 2009)
+
+  14 Mar 2009; Christoph Mende <angelos@gentoo.org>
+  +thunar-svn-0.0.3.ebuild:
+  Initial import
+
