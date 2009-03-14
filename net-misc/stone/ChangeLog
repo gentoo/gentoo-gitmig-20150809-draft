@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stone
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.17 2009/02/15 15:56:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stone/ChangeLog,v 1.18 2009/03/14 19:13:49 nixnut Exp $
+
+  14 Mar 2009; nixnut <nixnut@gentoo.org> stone-2.3e.ebuild:
+  ppc stable #258265
 
   15 Feb 2009; Markus Meier <maekke@gentoo.org> stone-2.3e.ebuild:
   x86 stable, bug #258265
