@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.5 2009/01/01 11:24:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.6 2009/03/14 13:28:30 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -28,6 +28,16 @@ PROVIDE="virtual/bootloader"
 export STRIP_MASK="*/grub/*/*.mod"
 QA_EXECSTACK="sbin/grub-probe sbin/grub-setup"
 
+src_unpack() {
+	if [[ ${PV} == "9999" ]] ; then
+		subversion_src_unpack
+	else
+		unpack ${A}
+	fi
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-1.96-genkernel.patch #256335
+}
+
 src_compile() {
 	use custom-cflags || unset CFLAGS CPPFLAGS LDFLAGS
 	use static && append-ldflags -static
@@ -43,6 +53,10 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
+	cat <<-EOF >> "${D}"/lib*/grub/grub-mkconfig_lib
+	GRUB_DISTRIBUTOR="Gentoo"
+	EOF
+	EOF
 	if use multislot ; then
 		sed -i s:grub-install:grub2-install: "${D}"/sbin/grub-install
 		mv "${D}"/sbin/grub{,2}-install || die

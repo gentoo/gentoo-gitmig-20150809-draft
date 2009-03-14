@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.111 2009/02/28 10:26:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.112 2009/03/14 13:28:30 vapier Exp $
+
+  14 Mar 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/grub-1.96-genkernel.patch, grub-9999.ebuild:
+  Locate kernels made by genkernel #256335 and mark Gentoo as the distro.
 
   28 Feb 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
   custom-cflags is a global USE-flag
