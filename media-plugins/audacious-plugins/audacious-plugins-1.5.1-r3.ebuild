@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.5.1-r3.ebuild,v 1.7 2009/02/11 01:07:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.5.1-r3.ebuild,v 1.8 2009/03/14 21:30:04 nixnut Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -12,7 +12,7 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="aac adplug alsa arts chardet esd flac gnome jack lirc modplug mp3 mtp musepack nls oss pulseaudio scrobbler sdl sid sndfile sse2 timidity tta vorbis wavpack wma"
 
 RDEPEND="app-arch/unzip
