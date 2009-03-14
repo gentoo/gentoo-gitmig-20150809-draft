@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.1.0-r1.ebuild,v 1.1 2009/03/12 08:06:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.1.0-r1.ebuild,v 1.2 2009/03/14 23:27:13 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -23,7 +23,6 @@ RDEPEND=">dev-libs/dbus-glib-0.6
 	>=sys-fs/vhba-1.0.0
 	>=sys-fs/sysfsutils-2.1.0"
 DEPEND="${RDEPEND}"
-
 
 src_prepare() {
 	epatch "${FILESDIR}/cdemu-daemon-${PV}-fix1.diff"
