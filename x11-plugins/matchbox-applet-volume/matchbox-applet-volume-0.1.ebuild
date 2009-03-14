@@ -1,6 +1,6 @@
-# Copyright 2006-2008 Gentoo Foundation
+# Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-volume/matchbox-applet-volume-0.1.ebuild,v 1.5 2008/07/13 07:39:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/matchbox-applet-volume/matchbox-applet-volume-0.1.ebuild,v 1.6 2009/03/14 03:51:30 solar Exp $
 
 inherit versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://matchbox-project.org/sources/${MY_PN}/$(get_version_component_ra
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~arm ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/libmatchbox-1.5
