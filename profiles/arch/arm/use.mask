@@ -59,6 +59,7 @@ xindy
 lyx
 
 # havent tested yet
+cupsddk
 gphoto2
 mythtv
 dvb
