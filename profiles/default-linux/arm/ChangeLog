@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.29 2009/03/14 19:03:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.30 2009/03/14 20:05:55 armin76 Exp $
+
+  14 Mar 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask xfs, as xfs doesn't work too well on arm
 
   14 Mar 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask cupsddk
