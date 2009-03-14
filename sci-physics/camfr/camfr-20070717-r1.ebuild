@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r1.ebuild,v 1.2 2008/12/09 15:39:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r1.ebuild,v 1.3 2009/03/14 14:25:38 bicatali Exp $
 
+EAPI=2
 inherit eutils distutils fortran
 
 DESCRIPTION="Full vectorial Maxwell solver based on eigenmode expansion"
@@ -14,10 +15,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="sci-libs/scipy
+	dev-lang/python[tk]
+	dev-python/imaging[tk]
 	dev-python/matplotlib
 	dev-libs/boost
 	dev-libs/blitz
-	dev-python/imaging
 	virtual/lapack"
 
 DEPEND="${RDEPEND}
@@ -26,20 +28,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${P/-/_}"
 
-pkg_setup() {
-	if  ! built_with_use dev-lang/python tk || \
-		! built_with_use dev-python/imaging tk ; then
-		eerror "Python and/or imaging don't have Tk support enabled."
-		eerror "Set the tk USE flag and reinstall python and imaging before continuing."
-		die
-	fi
-	FORTRAN="gfortran ifc g77"
-	fortran_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	cp "${FILESDIR}"/machine_cfg.py.gentoo machine_cfg.py || die
 	local lapack_libs=
