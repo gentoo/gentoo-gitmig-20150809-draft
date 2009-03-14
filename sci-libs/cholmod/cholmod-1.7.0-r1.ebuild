@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.7.0.ebuild,v 1.1 2009/03/09 14:23:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/cholmod-1.7.0-r1.ebuild,v 1.1 2009/03/14 12:04:19 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
