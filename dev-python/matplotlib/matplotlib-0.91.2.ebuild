@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.91.2.ebuild,v 1.6 2008/10/10 08:44:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.91.2.ebuild,v 1.7 2009/03/14 14:21:59 bicatali Exp $
 
 NEED_PYTHON=2.3
 WX_GTK_VER=2.8
-EAPI=1
+EAPI=2
 inherit eutils distutils wxwidgets
 
 DOC_PV=${PV}svn
@@ -25,6 +25,7 @@ DEPEND="dev-python/numpy
 	dev-python/pytz
 	dev-python/python-dateutil
 	gtk? ( dev-python/pygtk )
+	tk? ( dev-lang/python[tk] )
 	wxwindows? ( dev-python/wxpython:2.8 )"
 
 RDEPEND="${DEPEND}
@@ -40,10 +41,6 @@ RDEPEND="${DEPEND}
 
 DOCS="INTERACTIVE API_CHANGES"
 
-pkg_setup() {
-	use tk && distutils_python_tkinter
-}
-
 use_setup() {
 	local uword="${2}"
 	[ -z "${2}" ] && uword="${1}"
@@ -56,9 +53,7 @@ use_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	# create setup.cfg (see setup.cfg.template for any changes)
 	cat > setup.cfg <<-EOF
