@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.20.1-r1.ebuild,v 1.9 2009/03/09 05:13:53 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.20.1-r1.ebuild,v 1.10 2009/03/14 14:37:26 vapier Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/groff/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="X linguas_ja"
 
 DEPEND=">=sys-apps/texinfo-4.7-r1
@@ -41,6 +41,12 @@ src_unpack() {
 			doc/Makefile.in \
 			doc/Makefile.sub || die "cross-compile sed failed"
 	fi
+
+	cat <<-EOF >> tmac/mdoc.local
+	.ds volume-operating-system Gentoo
+	.ds operating-system Gentoo/${KERNEL}
+	.ds default-operating-system Gentoo/${KERNEL}
+	EOF
 
 	if use linguas_ja ; then
 		epatch "${WORKDIR}"/${P}-japanese.patch #255292
