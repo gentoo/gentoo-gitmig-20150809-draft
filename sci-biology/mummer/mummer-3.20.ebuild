@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.20.ebuild,v 1.6 2009/03/09 15:55:37 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/mummer-3.20.ebuild,v 1.7 2009/03/15 17:57:52 maekke Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/mummer/${MY_P}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND=""
 RDEPEND="app-shells/tcsh"
