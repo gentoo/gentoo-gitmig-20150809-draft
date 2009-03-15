@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r2.ebuild,v 1.8 2008/01/21 12:15:55 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r2.ebuild,v 1.9 2009/03/15 00:24:02 betelgeuse Exp $
 
 EAPI=1
 
@@ -20,6 +20,9 @@ KEYWORDS="amd64 ppc x86"
 S="${WORKDIR}"
 
 COMMON_DEP="
+	x11-libs/libX11
+	x11-libs/libXrender
+	x11-libs/libXt
 	>=x11-libs/gtk+-2.2.4
 	seamonkey? ( www-client/seamonkey )
 	gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )
@@ -36,6 +39,8 @@ DEPEND="
 	>=virtual/jdk-1.5
 	>=sys-apps/findutils-4.1.7
 	app-arch/unzip
+	x11-proto/xextproto
+	x11-proto/inputproto
 	app-arch/zip"
 
 # Force 1.4 to be used for building
