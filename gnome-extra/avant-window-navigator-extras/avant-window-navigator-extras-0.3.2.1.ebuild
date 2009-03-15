@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.3.2.1.ebuild,v 1.1 2009/03/10 23:33:54 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.3.2.1.ebuild,v 1.2 2009/03/15 00:18:02 eva Exp $
 
 EAPI="2"
 
@@ -58,7 +58,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.17
 	>=dev-util/intltool-0.35"
 
-DOCS="AUTHORS Changelog NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 S="${WORKDIR}/${MY_P}"
 
