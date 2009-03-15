@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.108 2009/03/07 18:56:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.109 2009/03/15 16:45:36 ranger Exp $
+
+  15 Mar 2009; Brent Baude <ranger@gentoo.org> ktorrent-3.2.ebuild:
+  Marking ktorrent-3.2 ~ppc64 for bug 259689
 
   07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> ktorrent-2.2.8.ebuild:
   Migrate to EAPI 2. Call econf in src_compile until the eclasses are
