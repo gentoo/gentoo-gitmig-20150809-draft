@@ -1,0 +1,4 @@
+#!/bin/sh
+# Dummy gpe-login.setup
+
+PATH=/usr/bin:/bin
