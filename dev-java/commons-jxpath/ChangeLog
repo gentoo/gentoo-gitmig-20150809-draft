@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-jxpath
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.29 2009/03/15 13:20:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.30 2009/03/15 13:23:32 ranger Exp $
+
+  15 Mar 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  stable ppc64, bug 262530
 
   15 Mar 2009; Brent Baude <ranger@gentoo.org> commons-jxpath-1.3.ebuild:
   stable ppc64, bug 262530

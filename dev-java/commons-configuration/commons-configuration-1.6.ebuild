@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/commons-configuration-1.6.ebuild,v 1.1 2009/02/14 23:35:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/commons-configuration-1.6.ebuild,v 1.2 2009/03/15 13:21:08 ranger Exp $
 
 EAPI=1
 
@@ -33,7 +33,7 @@ RDEPEND=">=virtual/jre-1.4
 LICENSE="Apache-2.0"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~x86"
 IUSE=""
 
 S="${WORKDIR}/${P}-src"
