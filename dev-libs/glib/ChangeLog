@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.356 2009/03/15 15:08:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.357 2009/03/15 16:46:15 klausman Exp $
+
+  15 Mar 2009; Tobias Klausmann <klausman@gentoo.org> glib-2.16.6-r1.ebuild:
+  Stable on alpha, bug #249214
 
   15 Mar 2009; Markus Meier <maekke@gentoo.org> glib-2.16.6-r1.ebuild:
   amd64/x86 stable, bug #249214
