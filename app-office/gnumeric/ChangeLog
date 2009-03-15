@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.184 2009/03/15 11:04:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.185 2009/03/15 19:12:25 armin76 Exp $
+
+  15 Mar 2009; Raúl Porcel <armin76@gentoo.org> gnumeric-1.8.4-r1.ebuild:
+  ia64 stable wrt #257012
 
   15 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org> gnumeric-1.8.4.ebuild,
   gnumeric-1.8.4-r1.ebuild:
