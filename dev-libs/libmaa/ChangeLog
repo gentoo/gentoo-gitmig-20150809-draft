@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmaa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.7 2009/03/01 09:25:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.8 2009/03/15 13:35:17 ranger Exp $
+
+  15 Mar 2009; Brent Baude <ranger@gentoo.org> libmaa-1.1.1.ebuild:
+  Marking libmaa-1.1.1 ~ppc64 for bug 250390
 
 *libmaa-1.1.1 (01 Mar 2009)
 
