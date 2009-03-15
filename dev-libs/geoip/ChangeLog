@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.98 2009/03/15 11:07:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.99 2009/03/15 18:20:49 ranger Exp $
+
+  15 Mar 2009; Brent Baude <ranger@gentoo.org> geoip-1.4.6.ebuild:
+  Marking geoip-1.4.6 ~ppc64 for bug 262547
 
 *geoip-1.4.6 (15 Mar 2009)
 
