@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/Test-Tester-0.107.ebuild,v 1.6 2008/12/22 16:33:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/Test-Tester-0.107.ebuild,v 1.7 2009/03/15 13:22:31 ranger Exp $
 
 MODULE_AUTHOR=FDALY
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="Ease testing test modules built with Test::Builder"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"
