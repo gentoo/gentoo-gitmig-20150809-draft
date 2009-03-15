@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.18.0.ebuild,v 1.1 2009/03/13 11:32:45 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.18.0.ebuild,v 1.2 2009/03/15 08:38:43 angelos Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="nls session"
+IUSE="nls session spiff"
 
 RDEPEND=">=dev-libs/glib-2.10:2
 	dev-perl/XML-Parser
