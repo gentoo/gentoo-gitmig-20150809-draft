@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-configuration
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/ChangeLog,v 1.5 2009/02/15 17:30:39 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-configuration/ChangeLog,v 1.6 2009/03/15 13:21:08 ranger Exp $
+
+  15 Mar 2009; Brent Baude <ranger@gentoo.org>
+  commons-configuration-1.6.ebuild:
+  stable ppc64, bug 262530
 
   15 Feb 2009; Vlastimil Babka <caster@gentoo.org>
   commons-configuration-1.4.ebuild:
