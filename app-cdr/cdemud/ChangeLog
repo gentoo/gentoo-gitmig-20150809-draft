@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdemud
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.7 2009/03/12 08:06:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/ChangeLog,v 1.8 2009/03/15 21:40:22 dev-zero Exp $
+
+  15 Mar 2009; Tiziano Müller <dev-zero@gentoo.org>
+  files/cdemud.init.d-1.1.0:
+  Forgot to remove the -d switch (bug #233904).
 
 *cdemud-1.1.0-r1 (12 Mar 2009)
 
