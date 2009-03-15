@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>webmaster@hartwork.org</email>
+		<name>Sebastian Pipping</name>
+	</maintainer>
+	<maintainer>
+		<email>rbu@gentoo.org</email>
+		<name>Robert Buchholz</name>
+		<description>proxy maintainer</description>
+	</maintainer>
+	<longdescription lang="en">
+		CppTest is a portable and powerful, yet simple, unit testing framework for handling
+		automated tests in C++. The focus lies on usability and extendability.
+		Several output formats are supported and new ones are easily added.
+	</longdescription>
+</pkgmetadata>
