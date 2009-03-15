@@ -1,9 +1,9 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.40 2009/03/15 15:58:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.41 2009/03/15 16:00:00 maekke Exp $
 
   15 Mar 2009; Markus Meier <maekke@gentoo.org> k3d-0.6.7.0-r1.ebuild:
-  drop librsvg dep, only needed if you call "make icons"
+  drop librsvg dep, only needed if you call "make icons" wrt bug #258065
 
   27 Jan 2009; Gordon Malm <gengor@gentoo.org> k3d-0.6.7.0-r1.ebuild:
   Disable stack-protector on C++ for <gcc-4, bug #230119.
