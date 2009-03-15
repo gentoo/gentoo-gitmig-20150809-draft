@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.24.3.ebuild,v 1.2 2009/03/11 02:18:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.24.3.ebuild,v 1.3 2009/03/15 22:04:26 maekke Exp $
 
 EAPI="1"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://projecthamster.wordpress.com/"
 # license on homepage is out-of-date, was changed to GPL-2 on 2008-04-16
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="eds"
 
 RDEPEND="

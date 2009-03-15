@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/fast-user-switch-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/ChangeLog,v 1.66 2009/03/11 02:14:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/ChangeLog,v 1.67 2009/03/15 21:56:04 maekke Exp $
+
+  15 Mar 2009; Markus Meier <maekke@gentoo.org>
+  fast-user-switch-applet-2.24.0.ebuild:
+  x86 stable, bug #260063
 
   11 Mar 2009; Daniel Gryniewicz <dang@gentoo.org>
   fast-user-switch-applet-2.24.0.ebuild:
