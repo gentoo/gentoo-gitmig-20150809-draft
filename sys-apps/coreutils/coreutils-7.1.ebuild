@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.1.ebuild,v 1.5 2009/03/13 05:20:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.1.ebuild,v 1.6 2009/03/15 23:17:47 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -27,7 +27,7 @@ RDEPEND="caps? ( sys-libs/libcap )
 	!sys-apps/stat
 	!net-mail/base64
 	!sys-apps/mktemp
-	!app-forensics/tct
+	!<app-forensics/tct-1.18-r1
 	!net-fs/netatalk
 	!sci-chemistry/ccp4
 	>=sys-libs/ncurses-5.3-r5"
