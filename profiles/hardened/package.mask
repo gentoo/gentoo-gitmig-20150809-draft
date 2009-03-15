@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.52 2009/03/08 21:07:14 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.53 2009/03/15 11:29:04 pva Exp $
 
 # supported only by gcc-4, unmask when it's stable wrt #217927
 media-libs/libopenraw
@@ -41,6 +41,10 @@ media-gfx/gnome-raw-thumbnailer
 # Depends on >=sys-libs/glibc-2.7 which is package.masked at this time.
 # 2009-03-08 gengor
 >=sys-apps/iproute2-2.6.25
+
+# Depends on >=sys-libs/glibc-2.7 which is package.masked at this time.
+# 2009-03-15 pva
+>=dev-libs/elfutils-0.140
 
 # These packages do more harm than good w/ hardened.
 # users must now the opensource xorg nv driver with nvidia cards.
