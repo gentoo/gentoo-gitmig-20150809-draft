@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wireless-regdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.9 2009/02/22 16:05:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.10 2009/03/15 13:51:39 ranger Exp $
+
+  15 Mar 2009; Brent Baude <ranger@gentoo.org>
+  wireless-regdb-20090115.ebuild:
+  Marking wireless-regdb-20090115 ppc64 for bug 256245
 
   22 Feb 2009; Raúl Porcel <armin76@gentoo.org>
   wireless-regdb-20090115.ebuild:
