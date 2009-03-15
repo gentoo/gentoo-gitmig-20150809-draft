@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.24.3-r10.ebuild,v 1.4 2009/03/11 02:26:06 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.24.3-r10.ebuild,v 1.5 2009/03/15 22:32:59 maekke Exp $
 
 inherit autotools eutils gnome2 python versionator
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/extensions.html"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc -sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc -sparc x86"
 IUSE="dbus examples pcre python"
 
 RDEPEND=">=www-client/epiphany-${MY_MAJORV}
