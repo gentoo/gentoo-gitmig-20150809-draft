@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.7 2009/03/08 01:53:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.8 2009/03/15 13:59:03 ranger Exp $
+
+  15 Mar 2009; Brent Baude <ranger@gentoo.org> foolscap-0.3.1.ebuild:
+  Marking foolscap-0.3.1 ppc64 for bug 255051
 
   08 Mar 2009; Markus Meier <maekke@gentoo.org> foolscap-0.3.1.ebuild:
   amd64/x86 stable, bug #255051
