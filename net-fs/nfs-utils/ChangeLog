@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.152 2009/03/15 13:31:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.153 2009/03/15 20:53:55 maekke Exp $
+
+  15 Mar 2009; Markus Meier <maekke@gentoo.org> nfs-utils-1.1.4-r1.ebuild:
+  x86 stable, bug #261334
 
   15 Mar 2009; Brent Baude <ranger@gentoo.org> nfs-utils-1.1.4-r1.ebuild:
   Marking nfs-utils-1.1.4-r1 ppc64 for bug 261334
