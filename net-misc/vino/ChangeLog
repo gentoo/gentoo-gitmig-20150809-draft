@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.114 2009/03/11 02:25:22 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.115 2009/03/15 22:26:35 maekke Exp $
+
+  15 Mar 2009; Markus Meier <maekke@gentoo.org> vino-2.24.1.ebuild:
+  x86 stable, bug #260063
 
   11 Mar 2009; Daniel Gryniewicz <dang@gentoo.org> vino-2.24.1.ebuild:
   Marked stable on amd64
