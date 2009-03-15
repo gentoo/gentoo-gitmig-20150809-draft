@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.2.2.ebuild,v 1.14 2009/03/12 22:22:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.2.2.ebuild,v 1.15 2009/03/15 04:56:23 vapier Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam multilib
 
@@ -42,6 +42,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-4.1.2.1+openpam.patch #232586
 	epatch "${FILESDIR}"/${P}-l64a.patch #260001
+	epatch "${FILESDIR}"/${P}-id-types.patch
+	epatch "${FILESDIR}"/${P}-optional-nscd.patch
+	epatch "${FILESDIR}"/${P}-optional-utimes.patch
 
 	eautoconf
 	eautoheader
@@ -61,6 +64,7 @@ src_compile() {
 		$(use_with skey) \
 		$(use_with selinux) \
 		$(use_enable nls) \
+		$(use_with elibc_glibc nscd) \
 		|| die "bad configure"
 	emake || die "compile problem"
 }
