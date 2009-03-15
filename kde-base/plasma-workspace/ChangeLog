@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.13 2009/03/15 14:43:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.14 2009/03/15 18:26:17 scarabeus Exp $
+
+  15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/4.2-fix-quicklaunch.patch:
+  Add missing patch.
 
 *plasma-workspace-4.2.1-r1 (15 Mar 2009)
 
