@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.7 2009/03/08 20:55:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.8 2009/03/15 14:42:16 scarabeus Exp $
+
+  15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> phonon-kde-4.2.1.ebuild:
+  Automatic-merge: merge updates for 4.2.1 from kde-testing.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -phonon-kde-4.2.0.ebuild,
   -phonon-kde-4.2.0-r1.ebuild:

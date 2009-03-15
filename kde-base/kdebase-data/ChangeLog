@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.109 2009/03/08 19:17:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.110 2009/03/15 14:23:46 scarabeus Exp $
+
+  15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  kdebase-data-4.2.1.ebuild:
+  Automatic-merge: merge updates for 4.2.1 from kde-testing.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdebase-data-4.2.0.ebuild:

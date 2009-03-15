@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.107 2009/03/08 20:20:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.108 2009/03/15 14:35:13 scarabeus Exp $
+
+  15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> krfb-4.2.1.ebuild:
+  Automatic-merge: merge updates for 4.2.1 from kde-testing.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -krfb-4.2.0.ebuild:
   Drop KDE 4.2.0

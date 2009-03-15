@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.1-r2.ebuild,v 1.1 2009/03/11 14:47:59 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.1-r2.ebuild,v 1.2 2009/03/15 14:25:03 scarabeus Exp $
 
 EAPI="2"
 
@@ -18,25 +18,7 @@ kerberos mmx nls openexr +semantic-desktop spell sse sse2 ssl zeroconf"
 LICENSE="LGPL-2.1"
 RESTRICT="test"
 
-# Blockers added for !kdeprefix? due to packages from old versions,
-# removed in the meanwhile
-# kde-base/libplasma
-# kde-base/knewsticker
-# kde-base/kpercentage
-# kde-base/ktnef
 COMMONDEPEND="
-	!<=kde-base/kdebase-3.5.9-r4
-	!<=kde-base/kdebase-startkde-3.5.10
-	!<kde-base/kdelibs-3.5.10
-	!x11-libs/qt-phonon
-	!kdeprefix? (
-		!kde-base/kitchensync:4.1[-kdeprefix]
-		!kde-base/knewsticker:4.1[-kdeprefix]
-		!kde-base/kpercentage:4.1[-kdeprefix]
-		!kde-base/ktnef:4.1[-kdeprefix]
-		!kde-base/libplasma[-kdeprefix]
-		!<=kde-misc/kdnssd-avahi-0.1.2:0
-	)
 	>=app-misc/strigi-0.6.3[qt4,dbus]
 	dev-libs/libpcre
 	dev-libs/libxml2
@@ -50,6 +32,7 @@ COMMONDEPEND="
 	media-libs/libpng
 	>=media-sound/phonon-4.3.1[xcb]
 	sys-apps/dbus[X]
+	sys-libs/zlib
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
@@ -67,16 +50,16 @@ COMMONDEPEND="
 		kernel_linux? ( sys-apps/acl )
 	)
 	alsa? ( media-libs/alsa-lib[midi] )
+	bzip2? ( app-arch/bzip2 )
 	fam? ( virtual/fam )
 	jpeg2k? ( media-libs/jasper )
 	kerberos? ( virtual/krb5 )
-	nls? ( virtual/libintl )
 	openexr? (
 		media-libs/openexr
 		media-libs/ilmbase
 	)
 	opengl? ( virtual/opengl )
-	semantic-desktop? ( >=dev-libs/soprano-2.1.64 )
+	semantic-desktop? ( >=dev-libs/soprano-2.2.2[dbus] )
 	spell? (
 		app-dicts/aspell-en
 		app-text/aspell
@@ -90,20 +73,42 @@ COMMONDEPEND="
 		)
 	)
 "
-
 DEPEND="${COMMONDEPEND}
-	sys-devel/gettext
 	doc? ( app-doc/doxygen )
+	nls? ( virtual/libintl )
 "
-
+# Blockers added for !kdeprefix? due to packages from old versions,
+# removed in the meanwhile
+# kde-base/libplasma
+# kde-base/knewsticker
+# kde-base/kpercentage
+# kde-base/ktnef
 RDEPEND="${COMMONDEPEND}
+	!<=kde-base/kdebase-3.5.9-r4
+	!<=kde-base/kdebase-startkde-3.5.10
+	!<kde-base/kdelibs-3.5.10
+	!x11-libs/qt-phonon
+	!kdeprefix? (
+		!kde-base/kitchensync:4.1
+		!kde-base/knewsticker:4.1
+		!kde-base/kpercentage:4.1
+		!kde-base/ktnef:4.1
+		!<kde-base/libkworkspace-${PV}[-kdeprefix]
+		!kde-base/libplasma
+		!<=kde-misc/kdnssd-avahi-0.1.2:0
+	)
+	kdeprefix? (
+		!<kde-base/libkworkspace-${PV}:${SLOT}
+		!<=kde-misc/kdnssd-avahi-0.1.2:0
+	)
 	x11-apps/iceauth
 	x11-apps/rgb
 "
 
 # upstream patches / dist patches
-# {FILESDIR}/${P}-qt4.5.patch is upstream revision 934640 and fixes upstream bug 186038 and
-# Gentoo bug 261367 - ${FILESDIR}/${P}-kcatalog.patch fixes remaining issues on both bugs
+# {FILESDIR}/${P}-qt4.5.patch is upstream revision 934640
+# and fixes upstream bug 186038 and Gentoo bug 261367
+# ${FILESDIR}/${P}-kcatalog.patch fixes remaining issues on both bugs
 PATCHES=(
 	"${FILESDIR}/dist/09_disable_debug_messages_if_not_explicitly_enabled.patch"
 	"${FILESDIR}/dist/20_use_dejavu_as_default_font.patch"
@@ -111,6 +116,14 @@ PATCHES=(
 	"${FILESDIR}/${P}-qt4.5.patch"
 	"${FILESDIR}/${P}-kcatalog.patch"
 )
+
+src_prepare() {
+	sed -i -e 's/find_package(ACL)/macro_optional_find_package(ACL)/' \
+		CMakeLists.txt \
+		|| die "Failed to make ACL disabled even when present in system."
+
+	kde4-base_src_prepare
+}
 
 src_configure() {
 	if use zeroconf; then
@@ -130,11 +143,11 @@ src_configure() {
 	mycmakeargs="${mycmakeargs}
 		-DWITH_HSPELL=OFF
 		-DKDE_DEFAULT_HOME=${HME}
-		$(cmake-utils_has 3dnow X86_3DNOW)
-		$(cmake-utils_has altivec PPC_ALTIVEC)
-		$(cmake-utils_has mmx X86_MMX)
-		$(cmake-utils_has sse X86_SSE)
-		$(cmake-utils_has sse2 X86_SSE2)
+		$(cmake-utils_use_has 3dnow X86_3DNOW)
+		$(cmake-utils_use_has altivec PPC_ALTIVEC)
+		$(cmake-utils_use_has mmx X86_MMX)
+		$(cmake-utils_use_has sse X86_SSE)
+		$(cmake-utils_use_has sse2 X86_SSE2)
 		$(cmake-utils_use_with acl ACL)
 		$(cmake-utils_use_with alsa Alsa)
 		$(cmake-utils_use_with bzip2 BZip2)

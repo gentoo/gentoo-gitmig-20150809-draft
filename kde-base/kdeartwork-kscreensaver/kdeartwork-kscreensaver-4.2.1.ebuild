@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.2.1.ebuild,v 1.4 2009/03/13 22:25:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/kdeartwork-kscreensaver-4.2.1.ebuild,v 1.5 2009/03/15 14:22:50 scarabeus Exp $
 
 EAPI="2"
 
@@ -11,17 +11,17 @@ inherit kde4-meta
 
 DESCRIPTION="Extra screensavers for kde"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="debug +eigen +opengl +xscreensaver"
+IUSE="debug +eigen opengl xscreensaver"
 
-DEPEND="
+RDEPEND="
 	>=kde-base/kscreensaver-${PV}:${SLOT}[kdeprefix=,opengl?]
-	>=kde-base/plasma-workspace-${PV}:${SLOT}[kdeprefix=]
 	media-libs/libart_lgpl
-	eigen? ( dev-cpp/eigen:2 )
 	opengl? ( virtual/opengl )
 	xscreensaver? ( x11-misc/xscreensaver )
 "
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	eigen? ( dev-cpp/eigen:2 )
+"
 
 PATCHES=( "${FILESDIR}/${PN}-xscreensaver.patch" )
 

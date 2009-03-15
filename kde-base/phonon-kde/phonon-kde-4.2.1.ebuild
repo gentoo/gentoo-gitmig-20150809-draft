@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.2.1.ebuild,v 1.2 2009/03/08 14:19:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.2.1.ebuild,v 1.3 2009/03/15 14:42:16 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,10 +15,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
 RDEPEND="
-	!kdeprefix? (
-		!kde-base/phonon
-		!kde-base/phonon-xine
-	)
+	!kdeprefix? ( !kde-base/phonon-xine[-kdeprefix] )
 "
 
 src_prepare() {

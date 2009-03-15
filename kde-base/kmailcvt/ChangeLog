@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kmailcvt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.89 2009/03/08 19:58:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.90 2009/03/15 14:31:57 scarabeus Exp $
+
+*kmailcvt-4.2.1-r1 (15 Mar 2009)
+
+  15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +kmailcvt-4.2.1-r1.ebuild:
+  Automatic-merge: merge updates for 4.2.1 from kde-testing.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kmailcvt-4.2.0.ebuild:
   Drop KDE 4.2.0
