@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/netatalk
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.50 2009/03/14 20:32:21 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.51 2009/03/15 23:43:11 vapier Exp $
+
+*netatalk-2.0.3-r4 (15 Mar 2009)
+
+  15 Mar 2009; Mike Frysinger <vapier@gentoo.org> +netatalk-2.0.3-r4.ebuild:
+  Drop bindnow flags #227001 by Diego E. Pettenò, stop installing the
+  timeout program as coreutils does it now #259870 by Willard Dawson, and
+  cleanup the ebuild in general.
 
   14 Mar 2009; Raúl Porcel <armin76@gentoo.org> netatalk-2.0.3-r3.ebuild:
   Add ~arm wrt wrt #260768
