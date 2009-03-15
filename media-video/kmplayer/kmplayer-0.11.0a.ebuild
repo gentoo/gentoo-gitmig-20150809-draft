@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.0a.ebuild,v 1.3 2009/02/18 10:41:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.0a.ebuild,v 1.4 2009/03/15 15:16:34 scarabeus Exp $
 
 EAPI="2"
 
@@ -30,7 +30,10 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=( "$FILESDIR/${PV}-fix_linking.patch" )
+PATCHES=(
+	"$FILESDIR/${PV}-fix_linking.patch"
+	"$FILESDIR/${PV}-npp.patch"
+)
 
 src_prepare() {
 	# fixup icon install
