@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-netstatus
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.74 2009/03/11 02:24:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.75 2009/03/15 21:52:38 maekke Exp $
+
+  15 Mar 2009; Markus Meier <maekke@gentoo.org>
+  gnome-netstatus-2.12.2.ebuild:
+  x86 stable, bug #260063
 
   11 Mar 2009; Daniel Gryniewicz <dang@gentoo.org>
   gnome-netstatus-2.12.2.ebuild:
