@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.183 2009/03/15 02:18:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.184 2009/03/15 11:04:37 eva Exp $
+
+  15 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org> gnumeric-1.8.4.ebuild,
+  gnumeric-1.8.4-r1.ebuild:
+  TODO does not exist anymore. Thanks to maekke for pointing it out.
 
   15 Mar 2009; Markus Meier <maekke@gentoo.org> gnumeric-1.8.4-r1.ebuild:
   amd64/x86 stable, bug #257012
