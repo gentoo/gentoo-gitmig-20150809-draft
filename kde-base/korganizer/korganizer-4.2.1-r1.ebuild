@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.2.1.ebuild,v 1.2 2009/03/08 13:55:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.2.1-r1.ebuild,v 1.1 2009/03/15 13:11:25 scarabeus Exp $
 
 EAPI="2"
 
@@ -31,6 +31,8 @@ KMEXTRACTONLY="
 	knode/org.kde.knode.xml
 	libkholidays
 "
+
+PATCHES=( "${FILESDIR}/${PV}-r933657_weekview.patch" )
 
 src_unpack() {
 	if use kontact; then

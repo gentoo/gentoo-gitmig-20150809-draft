@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.111 2009/03/08 20:15:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.112 2009/03/15 13:11:25 scarabeus Exp $
+
+*korganizer-4.2.1-r1 (15 Mar 2009)
+
+  15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/4.2.1-r933657_weekview.patch, -korganizer-4.2.1.ebuild,
+  +korganizer-4.2.1-r1.ebuild:
+  Apply upstream requested patch for missing display in weekview. Remove
+  old.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -korganizer-4.2.0.ebuild,
   -korganizer-4.2.0-r1.ebuild:
