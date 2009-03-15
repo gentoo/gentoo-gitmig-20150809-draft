@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.151 2009/03/14 18:43:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.152 2009/03/15 13:31:29 ranger Exp $
+
+  15 Mar 2009; Brent Baude <ranger@gentoo.org> nfs-utils-1.1.4-r1.ebuild:
+  Marking nfs-utils-1.1.4-r1 ppc64 for bug 261334
 
   14 Mar 2009; Mike Frysinger <vapier@gentoo.org> files/rpc.idmapd.initd:
   Add a warning upon failure that DNOTIFY is needed #261697 by Pacho Ramos.
