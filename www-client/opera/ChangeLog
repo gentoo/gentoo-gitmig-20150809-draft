@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.329 2009/03/13 19:46:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.330 2009/03/15 06:02:11 jer Exp $
+
+  15 Mar 2009; Jeroen Roovers <jer@gentoo.org> -opera-10.00_pre4102.ebuild,
+  -opera-10.00_pre4116.ebuild, -opera-10.00_pre4126.ebuild,
+  -opera-10.00_pre4126-r1.ebuild:
+  Remove old.
 
 *opera-10.00_pre4214 (13 Mar 2009)
 
