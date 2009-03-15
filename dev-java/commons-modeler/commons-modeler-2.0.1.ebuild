@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-2.0.1.ebuild,v 1.1 2009/02/15 20:28:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-2.0.1.ebuild,v 1.2 2009/03/15 13:25:09 ranger Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -22,7 +22,7 @@ DEPEND=">=virtual/jdk-1.4
 	source? ( app-arch/zip )
 	test? ( dev-java/junit:0 )"
 
-KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc64 ~x86 ~x86-fbsd"
 IUSE="commons-digester"
 
 S=${WORKDIR}/${P}-src
