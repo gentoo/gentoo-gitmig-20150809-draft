@@ -1,6 +1,14 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.254 2009/03/10 19:54:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.255 2009/03/15 15:40:44 aballier Exp $
+
+*transcode-1.1.1-r4 (15 Mar 2009)
+
+  15 Mar 2009; Alexis Ballier <aballier@gentoo.org>
+  +transcode-1.1.1-r4.ebuild:
+  depend on faac with use aac by gentoobugsie@gmail.com, bug #262565 and
+  give --enable-experimental to configure so that the faac module and a
+  couple of others are actually built.
 
   10 Mar 2009; Steve Dibb <beandog@gentoo.org> transcode-1.0.7.ebuild,
   transcode-1.1.1-r3.ebuild:
