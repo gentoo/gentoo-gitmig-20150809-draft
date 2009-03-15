@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.3.6.ebuild,v 1.2 2009/03/10 07:39:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.3.6.ebuild,v 1.3 2009/03/15 16:10:45 aballier Exp $
 
 EAPI=1
 
-inherit eutils toolchain-funcs qt3
+inherit kde-functions eutils toolchain-funcs multilib
 
 DESCRIPTION="MLT is an open source multimedia framework, designed and developed
 for television broadcasting"
@@ -14,12 +14,11 @@ SRC_URI="mirror://sourceforge/mlt/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="dv xml jack gtk sdl vorbis sox quicktime mmx lame xine lame ogg theora xine ffmpeg libsamplerate qt3 sse"
+IUSE="dv compressed-lumas ffmpeg gtk jack kde libsamplerate mmx qt3 qt4 quicktime sdl sox sse vorbis xine xml"
 
-DEPEND="ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
+RDEPEND="ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
 	dv?	( >=media-libs/libdv-0.104 )
 	xml?	( >=dev-libs/libxml2-2.5 )
-	ogg?	( >=media-libs/libogg-1.1.3 )
 	vorbis?	( >=media-libs/libvorbis-1.1.2 )
 	sdl?	( >=media-libs/libsdl-1.2.10
 		  >=media-libs/sdl-image-1.2.4 )
@@ -32,10 +31,12 @@ DEPEND="ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
 	sox? ( media-sound/sox )
 	quicktime? ( media-libs/libquicktime )
 	xine? ( >=media-libs/xine-lib-1.1.2_pre20060328-r7 )
-	lame? ( >=media-sound/lame-3.97_beta2 )
-	qt3? ( x11-libs/qt:3 )
-	theora? ( >=media-libs/libtheora-1.0_alpha5 )"
-RDEPEND=${DEPEND}
+	qt3? ( x11-libs/qt:3
+		kde? ( kde-base/kdelibs:3.5 ) )
+	!qt3?   ( qt4? ( x11-libs/qt-gui:4 ) )"
+
+DEPEND="${RDEPEND}
+	compressed-lumas? ( media-gfx/imagemagick )"
 
 pkg_setup() {
 	local fail="USE sox needs also USE libsamplerate enabled."
@@ -51,28 +52,24 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/mlt-0.2.3-nostrip.patch
 	epatch "${FILESDIR}"/${P}-avutil.patch
+	epatch "${FILESDIR}"/${P}-qimage.patch
 }
 
 src_compile() {
 	tc-export CC
 
-	local myconf="	--enable-gpl --enable-shared
-			--enable-pp --enable-shared-pp
+	local myconf="	--enable-gpl
 			--enable-motion-est
 			$(use_enable dv)
 			$(use_enable mmx)
 			$(use_enable sse)
 			$(use_enable gtk gtk2)
 			$(use_enable vorbis)
-			$(use_enable ogg)
 			$(use_enable sdl)
 			$(use_enable jack jackrack)
 			$(use_enable sox)
-			$(use_enable theora)
-			$(use_enable lame mp3lame)
 			$(use_enable ffmpeg avformat)
 			$(use_enable libsamplerate resample)
-			$(use_enable qt3 qimage)
 			$(use_enable xml westley)
 			$(use_enable xine)"
 
@@ -80,6 +77,33 @@ src_compile() {
 		myconf="${myconf} --avformat-swscale"
 
 	(use quicktime && use dv) ||  myconf="${myconf} --disable-kino"
+
+	use compressed-lumas && myconf="${myconf} --luma-compress"
+
+	# Waiting for media-plugins/frei0r (bug 255321)
+	myconf="${myconf} --disable-frei0r"
+
+	if use qt3; then
+		myconf="${myconf} --disable-kdenlive"
+	else
+		myconf="${myconf} $(use_enable kde kdenlive)"
+	fi
+
+	if use qt3; then
+		myconf="${myconf} --qimage-libdir=$QTDIR/$(get_libdir)
+			--qimage-includedir=$QTDIR/include"
+		if use kde; then
+			# compile extra image formats using kde
+			set-kdedir 3.5
+			myconf="${myconf} --kde-libdir=$KDEDIR/$(get_libdir)
+				--kde-includedir=$KDEDIR/include"
+		fi
+	elif use qt4; then
+		myconf="${myconf} --qimage-libdir=/usr/$(get_libdir)/qt4
+			--qimage-includedir=/usr/include/qt4"
+	else
+		myconf="${myconf} --disable-qimage"
+	fi
 
 	econf ${myconf} || die "econf failed"
 	sed -i -e s/^OPT/#OPT/ "${S}/config.mak"
