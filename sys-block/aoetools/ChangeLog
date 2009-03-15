@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/aoetools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.32 2009/03/09 23:09:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.33 2009/03/15 17:04:55 ranger Exp $
+
+  15 Mar 2009; Brent Baude <ranger@gentoo.org> aoetools-27.ebuild:
+  Marking aoetools-27 ppc64 for bug 238101
 
 *aoetools-29 (09 Mar 2009)
 
