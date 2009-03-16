@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Math-Random
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random/ChangeLog,v 1.1 2009/03/13 00:04:35 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random/ChangeLog,v 1.2 2009/03/16 08:55:30 tove Exp $
+
+  16 Mar 2009; Torsten Veller <tove@gentoo.org> Math-Random-0.71.ebuild:
+  Remove test useflag. LICENSE change. EAPI=2
 
 *Math-Random-0.71 (12 Mar 2009)
 
