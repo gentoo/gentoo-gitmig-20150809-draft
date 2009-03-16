@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/encfs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.39 2008/12/13 16:50:32 vanquirius Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.40 2009/03/16 08:20:17 dev-zero Exp $
+
+  16 Mar 2009; Tiziano Müller <dev-zero@gentoo.org>
+  files/encfs-1.5-boost-system-and-as-needed.patch:
+  Properly fix --as-needed bug.
 
   13 Dec 2008; Marcelo Goes <vanquirius@gentoo.org> encfs-1.5.ebuild:
   Add autotools magic to deal with broken --as-needed for bug 245782. Thanks
