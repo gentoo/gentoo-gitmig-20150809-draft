@@ -1,6 +1,28 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.124 2009/02/23 21:43:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.125 2009/03/16 06:29:45 kumba Exp $
+
+*mips-sources-2.6.28.7-r1 (16 Mar 2009)
+*mips-sources-2.6.27.18 (16 Mar 2009)
+
+  16 Mar 2009; Joshua Kinard <kumba@gentoo.org>
+  +files/eblits/pkg_setup-v1.eblit, +files/eblits/show_cobalt_info-v1.eblit,
+  +files/eblits/show_ip22_info-v1.eblit,
+  +files/eblits/show_ip27_info-v1.eblit,
+  +files/eblits/err_disabled_mach-v1.eblit,
+  +files/eblits/err_only_one_mach_allowed-v1.eblit,
+  +files/eblits/pkg_postinst-v1.eblit,
+  +files/eblits/show_ip28_info-v1.eblit,
+  +files/eblits/show_ip30_info-v1.eblit,
+  +files/eblits/show_ip32_info-v1.eblit, +files/eblits/src_unpack-v1.eblit,
+  -mips-sources-2.6.20.18.ebuild, -mips-sources-2.6.27.10.ebuild,
+  +mips-sources-2.6.27.18.ebuild, -mips-sources-2.6.28.7.ebuild,
+  +mips-sources-2.6.28.7-r1.ebuild:
+  Modernize mips-sources to use eblit micronization technology and the newer
+  kernel-2 eclass. Guaranteed to be smaller and shinier! Also pull in a
+  newer snapshot from linux-mips git, change the format of the mips-sources
+  patch tarball to reduce its overall size and conform to kernel-2 usage,
+  and update 2.6.27 to latest patch revision.
 
 *mips-sources-2.6.28.7 (23 Feb 2009)
 
