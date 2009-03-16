@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.27 2009/03/16 20:54:46 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.28 2009/03/16 20:56:57 loki_val Exp $
+
+*libisofs-0.6.16 (16 Mar 2009)
+
+  16 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +libisofs-0.6.16.ebuild:
+  Bump
 
   16 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> libisofs-0.6.14.ebuild:
   Drop dep on libburn, no longer needed.
