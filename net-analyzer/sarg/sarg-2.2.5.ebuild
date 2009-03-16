@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.2.5.ebuild,v 1.5 2009/03/08 11:03:33 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.2.5.ebuild,v 1.6 2009/03/16 16:30:01 pva Exp $
 
 EAPI="2"
 
@@ -16,7 +16,8 @@ KEYWORDS="amd64 ppc x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="media-libs/gd[png]"
+DEPEND="media-libs/gd[png,truetype]"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
