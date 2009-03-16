@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4277 2009/03/15 16:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4278 2009/03/16 19:27:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1037,8 +1037,9 @@ kde-base/kget:bittorrent - Enable embedded bittorrent transport plugin
 kde-base/kget:bittorrent-external - Enable external bittorrent transport plugin via ktorrent
 kde-base/kig:kig-scripting - Support Python scripting
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd
-kde-base/konqueror:auth - Add dependency on authentization packages
-kde-base/konqueror:bookmarks - Add dependency on bookmark package.
+kde-base/konqueror:auth -  Add dependency on authentization packages. 
+kde-base/konqueror:bookmarks -  Add dependency on bookmark package. 
+kde-base/konqueror:thumbnail -  Enables video thumbnails generation for kde-base/konqueror file manager. 
 kde-base/kopete:addbookmarks - Automaticaly add incoming urls to bookmarks.
 kde-base/kopete:alias - Enables creating of your own aliases for commands.
 kde-base/kopete:autoreplace - Automaticaly replace selected text
