@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p102.ebuild,v 1.1 2009/03/12 19:08:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p102.ebuild,v 1.2 2009/03/16 15:21:21 voyageur Exp $
 
 EAPI=1
 
@@ -117,7 +117,7 @@ pkg_postinst () {
 	if [[ ${ROOT} == "/" ]]; then
 		usermod -s /usr/bin/nxserver nx || die "Unable to set login shell of nx user!!"
 		usermod -d ${NX_HOME_DIR} nx || die "Unable to set home directory of nx user!!"
-		usermod -G utmp nx || die "Unable to add nx user to utmp group!!"
+		usermod -a -G utmp nx || die "Unable to add nx user to utmp group!!"
 	else
 		elog "If you had another NX server installed before, please make sure"
 		elog "the nx user account is correctly set to:"

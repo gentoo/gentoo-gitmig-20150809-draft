@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.59 2009/03/12 19:08:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.60 2009/03/16 15:21:21 voyageur Exp $
+
+  16 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  nxserver-freenx-0.7.3_p102.ebuild:
+  Append utmp group to nx user, instead of resetting the additional groups
+  (usermod -a option). Thanks Alexander Bezrukov <phmagic@mail.ru> in bug
+  #262481
 
 *nxserver-freenx-0.7.3_p102 (12 Mar 2009)
 
