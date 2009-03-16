@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-settings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.1 2009/03/10 13:51:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.2 2009/03/16 08:01:55 angelos Exp $
+
+  16 Mar 2009; Christoph Mende <angelos@gentoo.org>
+  xfce4-settings-4.6.0.ebuild:
+  Added dependency on xorg-server-1.5.3 for XI 1.4 (bug 262333)
 
 *xfce4-settings-4.6.0 (10 Mar 2009)
 
