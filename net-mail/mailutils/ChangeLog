@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.37 2009/02/15 21:35:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.38 2009/03/16 09:44:22 bangert Exp $
+
+  16 Mar 2009; Thilo Bangert <bangert@gentoo.org> mailutils-0.6-r3.ebuild,
+  mailutils-1.2.ebuild:
+  add blocker on mail-filter/libsieve due to filecollision - bug #248097
 
   15 Feb 2009; Torsten Veller <tove@gentoo.org> mailutils-0.6-r3.ebuild,
   mailutils-1.2.ebuild:
