@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.25.92.ebuild,v 1.1 2009/03/03 09:51:47 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.0.ebuild,v 1.1 2009/03/16 17:39:18 loki_val Exp $
 
 EAPI=1
 
