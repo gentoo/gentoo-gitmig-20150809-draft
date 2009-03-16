@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/wmix-3.1-r1.ebuild,v 1.6 2008/01/14 17:41:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/wmix-3.1-r1.ebuild,v 1.7 2009/03/16 16:37:39 s4t4n Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Dockapp mixer for OSS or ALSA"
-HOMEPAGE="http://www.ne.jp/asahi/linux/timecop"
+HOMEPAGE="http://www.ne.jp/asahi/linux/timecop/"
 SRC_URI="http://www.ne.jp/asahi/linux/timecop/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
