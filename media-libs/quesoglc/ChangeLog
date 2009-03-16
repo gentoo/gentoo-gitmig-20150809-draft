@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quesoglc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/ChangeLog,v 1.8 2009/02/18 16:53:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quesoglc/ChangeLog,v 1.9 2009/03/16 17:30:39 ranger Exp $
+
+  16 Mar 2009; Brent Baude <ranger@gentoo.org> quesoglc-0.7.1.ebuild:
+  Marking quesoglc-0.7.1 ppc for bug 254875
 
   18 Feb 2009; Raúl Porcel <armin76@gentoo.org> quesoglc-0.7.1.ebuild:
   sparc stable wrt #254875
