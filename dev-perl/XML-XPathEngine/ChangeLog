@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/XML-XPathEngine
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPathEngine/ChangeLog,v 1.1 2009/03/16 01:30:58 weaver Exp $
+
+*XML-XPathEngine-0.11 (15 Mar 2009)
+
+  15 Mar 2009; Andrey Kislyuk <weaver@gentoo.org>
+  +XML-XPathEngine-0.11.ebuild:
+  New package, dependency for dev-perl/XML-DOM-XPath. Ebuild written by me.
+
