@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.24 2009/03/08 18:54:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.25 2009/03/16 19:27:19 scarabeus Exp $
+
+*dolphin-4.2.1-r1 (16 Mar 2009)
+
+  16 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
+  +dolphin-4.2.1-r1.ebuild:
+  kde-testing merge: commit not commited stuff due to missing deps.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -dolphin-4.2.0.ebuild:
   Drop KDE 4.2.0
