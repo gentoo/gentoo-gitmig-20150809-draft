@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgrabimage/wmgrabimage-0.72-r1.ebuild,v 1.8 2009/01/14 16:04:46 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmgrabimage/wmgrabimage-0.72-r1.ebuild,v 1.9 2009/03/16 16:34:19 s4t4n Exp $
 
 inherit eutils
 
 MY_P=${PN/grabi/GrabI}
 
 DESCRIPTION="wmGrabImage grabs an image from the WWW and displays it"
-SRC_URI="http://www.dockapps.com/download.php/id/19/${MY_P}-${PV}.tgz"
-HOMEPAGE="http://www.dockapps.com/file.php/id/12"
+SRC_URI="http://dockapps.org/files/12/19/${MY_P}-${PV}.tgz"
+HOMEPAGE="http://dockapps.org/file.php/id/12"
 
 LICENSE="GPL-2"
 SLOT="0"
