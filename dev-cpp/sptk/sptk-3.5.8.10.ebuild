@@ -1,6 +1,6 @@
 # Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.10.ebuild,v 1.2 2009/03/10 12:53:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.10.ebuild,v 1.3 2009/03/16 18:56:21 iluxa Exp $
 
 EAPI=1
 
@@ -38,7 +38,9 @@ sptk_use_enable() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+}
 
+src_compile() {
 	sptk_use_enable examples EXAMPLES
 	sptk_use_enable postgres POSTGRESQL
 	sptk_use_enable mysql    MYSQL
@@ -49,9 +51,6 @@ src_unpack() {
 	sptk_use_enable excel    EXCEL
 
 	cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr -D LIBDIR=$(get_libdir) ${SPTK_OPTIONS} .  || die "Configuration Failed"
-}
-
-src_compile() {
 
 	emake || die "Parallel Make Failed"
 
