@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/shorewall6-4.2.6.ebuild,v 1.2 2009/03/15 15:54:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/shorewall6-4.2.6.ebuild,v 1.3 2009/03/16 12:18:14 pva Exp $
 
 inherit versionator linux-info
 
@@ -25,6 +25,7 @@ IUSE="doc"
 DEPEND=">=net-firewall/iptables-1.4.0
 	sys-apps/iproute2
 	>=net-firewall/shorewall-perl-${MY_PV_BASE}
+	dev-perl/Socket6
 	!<net-firewall/shorewall-4.0"
 RDEPEND="${DEPEND}"
 
