@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.11 2009/03/02 13:30:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.12 2009/03/16 10:24:20 scarabeus Exp $
 
 EAPI="2"
 
@@ -40,10 +40,7 @@ DEPEND=">=app-misc/strigi-0.5.7
 	mp4? ( media-libs/libmp4v2 )
 	mtp? ( >=media-libs/libmtp-0.3.0 )
 	njb? ( >=media-libs/libnjb-2.2.4 )
-	semantic-desktop? ( ||
-						( dev-libs/soprano[redland]
-							dev-libs/soprano[sesame2] )
-					)"
+"
 
 RDEPEND="${DEPEND}
 	app-arch/unzip
