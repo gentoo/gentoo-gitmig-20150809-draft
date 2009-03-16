@@ -1,0 +1,11 @@
+# ChangeLog for sci-biology/bioperl-db
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-db/ChangeLog,v 1.1 2009/03/16 23:24:35 weaver Exp $
+
+*bioperl-db-9999 (16 Mar 2009)
+*bioperl-db-1.6.0 (16 Mar 2009)
+
+  16 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +bioperl-db-1.6.0.ebuild, +bioperl-db-9999.ebuild:
+  New package, dependency for sci-biology/bioperl. Ebuild written by me.
+
