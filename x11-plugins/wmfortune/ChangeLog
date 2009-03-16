@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfortune
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/ChangeLog,v 1.11 2008/11/25 23:56:53 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/ChangeLog,v 1.12 2009/03/16 16:24:36 s4t4n Exp $
+
+  16 Mar 2009; Michele Noberasco <s4t4n@gentoo.org> wmfortune-0.241.ebuild:
+  Updated HOMEPAGE and SRC_URI. Closes bug #259606.
 
   25 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmfortune-0.241.ebuild:
   stable sparc, bug 215651
