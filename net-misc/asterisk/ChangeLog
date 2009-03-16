@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.188 2009/03/15 15:12:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.189 2009/03/16 13:45:00 chainsaw Exp $
+
+  16 Mar 2009; <chainsaw@gentoo.org>
+  +files/1.6.0/asterisk-1.6.0.6-toolcheck-libs-not-ldflags.patch,
+  asterisk-1.6.0.6.ebuild:
+  More Flameeyes-inspired --as-needed fixing, the NET-SNMP configure test
+  was passing libraries in LDFLAGS and failed quite horribly. Patch added
+  without revision bump, if this hit you the software failed to configure
+  entirely. Reported upstream.
 
   15 Mar 2009; Markus Meier <maekke@gentoo.org> asterisk-1.2.31.1.ebuild:
   amd64/x86 stable, bug #250748

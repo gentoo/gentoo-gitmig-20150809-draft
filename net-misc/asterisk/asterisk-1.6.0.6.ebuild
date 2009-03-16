@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.0.6.ebuild,v 1.1 2009/03/10 23:33:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.0.6.ebuild,v 1.2 2009/03/16 13:45:00 chainsaw Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -197,6 +197,13 @@ src_unpack() {
 	# patch credit: Diego E. 'Flameeyes' Pettenò <flameeyes@entoo.org>
 	#
 	epatch "${FILESDIR}"/1.6.0/${P}-parallelmake.patch || die "patch failed"
+
+	#
+	# do not try to pass libraries in ldflags but use libs properly
+	# keeps NET-SNMP configure test from failing horribly on --as-needed
+	# patch credit: Diego E. 'Flameeyes' Pettenò <flameeyes@entoo.org>
+	#
+	epatch "${FILESDIR}"/1.6.0/${P}-toolcheck-libs-not-ldflags.patch || die "patch failed"
 
 	#
 	# the build system didn't handle >= autoconf-2.62 before
