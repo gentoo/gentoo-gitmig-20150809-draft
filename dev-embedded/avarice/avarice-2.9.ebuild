@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avarice/avarice-2.3.ebuild,v 1.1 2005/09/08 01:56:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avarice/avarice-2.9.ebuild,v 1.1 2009/03/16 10:56:37 armin76 Exp $
 
 inherit eutils
 
@@ -16,6 +16,6 @@ IUSE=""
 DEPEND=""
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	emake install DESTDIR="${D}" || die "make install failed"
 	dodoc AUTHORS ChangeLog INSTALL doc/avrIceProtocol.txt doc/running.txt doc/todo.txt
 }
