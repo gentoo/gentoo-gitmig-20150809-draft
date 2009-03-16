@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-3.1_p2.ebuild,v 1.3 2008/11/22 09:18:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-3.1_p2.ebuild,v 1.4 2009/03/16 13:54:33 pva Exp $
 
 inherit autotools kde-functions eutils versionator
 
@@ -65,4 +65,12 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "installation failed"
 	dodoc ChangeLog FAQ DCOP-bingings README || die "installing docs failed"
+}
+
+pkg_postinst() {
+	if [[ -f ${ROOT}/usr/share/services/chm.protocol ]]; then
+		ewarn "kchmviewer and kdevelop's kio_chm don't work together, bug #260134."
+		ewarn "Until we find better solution, if you want to read chm files with ${PN}"
+		ewarn "you need to remove ${ROOT}usr/share/services/chm.protocol file manually."
+	fi
 }
