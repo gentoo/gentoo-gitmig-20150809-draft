@@ -6,4 +6,9 @@
 		<name>Olivier Fisette</name>
 	</maintainer>
 	<herd>sci-biology</herd>
+	<use>
+		<flag name='run'>Install sci-biology/bioperl-run</flag>
+		<flag name='network'>Install sci-biology/bioperl-run</flag>
+		<flag name='db'>Install sci-biology/bioperl-run</flag>
+	</use>
 </pkgmetadata>

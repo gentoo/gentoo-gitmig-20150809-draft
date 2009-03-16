@@ -1,6 +1,14 @@
 # ChangeLog for sci-biology/bioperl
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.33 2009/03/13 00:41:34 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.34 2009/03/16 23:37:10 weaver Exp $
+
+*bioperl-9999 (16 Mar 2009)
+*bioperl-1.6.0-r1 (16 Mar 2009)
+
+  16 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> -bioperl-1.6.0.ebuild,
+  +bioperl-1.6.0-r1.ebuild, +bioperl-9999.ebuild:
+  Rewrite, commit split 1.6.0 packages and live ebuilds for packages in 1.6.0
+  release. Bug 179110.
 
 *bioperl-1.6.0 (12 Mar 2009)
 
