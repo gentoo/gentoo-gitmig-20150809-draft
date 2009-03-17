@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/elogviewer
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.36 2008/07/14 08:06:02 the_paya Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.37 2009/03/17 12:30:14 tcunha Exp $
+
+  17 Mar 2009; Tiago Cunha <tcunha@gentoo.org> elogviewer-0.5.2-r2.ebuild:
+  stable sparc
 
   14 Jul 2008; Javier Villavicencio <the_paya@gentoo.org>
   elogviewer-0.5.2-r2.ebuild:
