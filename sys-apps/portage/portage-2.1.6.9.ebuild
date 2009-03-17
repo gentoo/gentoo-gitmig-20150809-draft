@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc25.ebuild,v 1.1 2009/03/12 09:55:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.9.ebuild,v 1.1 2009/03/17 20:33:52 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -49,7 +49,7 @@ prefix_src_archives() {
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-TARBALL_PV="2.2_rc15"
+TARBALL_PV=2.1.6
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
@@ -119,7 +119,7 @@ src_install() {
 
 	dodir "${portage_share_config}"
 	insinto "${portage_share_config}"
-	doins "${S}/cnf/"{sets.conf,make.globals}
+	doins "${S}/cnf/"make.globals
 	if [ -f "make.conf.${ARCH}".diff ]; then
 		patch make.conf "make.conf.${ARCH}".diff || \
 			die "Failed to patch make.conf.example"
@@ -237,28 +237,10 @@ pkg_preinst() {
 	if [ -f "${ROOT}/etc/make.globals" ]; then
 		rm "${ROOT}/etc/make.globals"
 	fi
-
-	has_version ">=${CATEGORY}/${PN}-2.2_alpha"
-	MINOR_UPGRADE=$?
-
-	has_version "<=${CATEGORY}/${PN}-2.2_pre5"
-	WORLD_MIGRATION_UPGRADE=$?
-
-	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
-	# assume that the NEEDED.ELF.2 files have already been generated.
-	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
-		! ( [ -e "$ROOT"var/lib/portage/preserved_libs_registry ] && \
-		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" )
-	NEEDED_REBUILD_UPGRADE=$?
-
-	has_version "<${CATEGORY}/${PN}-2.2_alpha"
-	ADD_SYSTEM_TO_WORLD=$?
-
-	if [ $ADD_SYSTEM_TO_WORLD != 0 -a "$ROOT" != / ] && \
-		! has_version "${CATEGORY}/${PN}" ; then
-		# building stage 1
-		ADD_SYSTEM_TO_WORLD=0
-	fi
+	has_version ">=${CATEGORY}/${PN}-2.2_pre"
+	DOWNGRADE_FROM_2_2=$?
+	has_version "<${CATEGORY}/${PN}-2.1.6_pre"
+	UPGRADE_FROM_2_1=$?
 }
 
 pkg_postinst() {
@@ -266,55 +248,44 @@ pkg_postinst() {
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
-	if [ $ADD_SYSTEM_TO_WORLD = 0 ] && \
-		[ ! -e "$ROOT"var/lib/portage/world_sets ] ; then
-		einfo "adding @system to world_sets for backward compatibility"
-		echo @system > "$ROOT"var/lib/portage/world_sets
-	fi
-
-	if [ $WORLD_MIGRATION_UPGRADE = 0 ] ; then
-		einfo "moving set references from the worldfile into world_sets"
-		cd "${ROOT}/var/lib/portage/"
-		grep "^@" world >> world_sets
-		sed -i -e '/^@/d' world
-	fi
-
-	if [ $NEEDED_REBUILD_UPGRADE = 0 ] ; then
-		einfo "rebuilding NEEDED.ELF.2 files"
-		for cpv in "${ROOT}/var/db/pkg"/*/*; do
-			if [ -f "${cpv}/NEEDED" ]; then
-				rm -f "${cpv}/NEEDED.ELF.2"
-				while read line; do
-					filename=${line% *}
-					needed=${line#* }
-					needed=${needed//+/++}
-					needed=${needed//#/##}
-					needed=${needed//%/%%}
-					newline=$(scanelf -BF "%a;%F;%S;%r;${needed}" $filename)
-					newline=${newline//  -  }
-					echo "${newline:3}" >> "${cpv}/NEEDED.ELF.2"
-				done < "${cpv}/NEEDED"
-			fi
-		done
-	fi
-
 	einfo
 	einfo "For help with using portage please consult the Gentoo Handbook"
 	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
 	einfo
 
-	if [ $MINOR_UPGRADE = 0 ] ; then
-		elog "If you're upgrading from a pre-2.2 version of portage you might"
-		elog "want to remerge world (emerge -e world) to take full advantage"
-		elog "of some of the new features in 2.2."
-		elog "This is not required however for portage to function properly."
-		elog
+	local warning_shown=0
+	if [ $DOWNGRADE_FROM_2_2 = 0 ] ; then
+		ewarn
+		echo "Since you have downgraded from portage-2.2, do not forget to" \
+		"use revdep-rebuild when appropriate, since the @preserved-rebuild" \
+		"package set is only supported with portage-2.2." | fmt -w 70 | \
+		while read ; do ewarn "$REPLY" ; done
+		warning_shown=1
 	fi
-
-	if [ -z "${PV/*_pre*}" ]; then
-		elog "If you always want to use the latest development version of portage"
-		elog "please read http://www.gentoo.org/proj/en/portage/doc/testing.xml"
-		elog
+	if [ $UPGRADE_FROM_2_1 = 0 ] ; then
+		ewarn
+		echo "In portage-2.1.6, the default behavior has changed for" \
+		"\`emerge world\` and \`emerge system\` commands. These commands" \
+		"will reinstall all packages from the given set unless an option" \
+		"such as --noreplace, --update, or --newuse is specified." \
+		| fmt -w 70 | while read ; do ewarn "$REPLY" ; done
+		ewarn
+		echo "File collision protection is now enabled by default via" \
+		"make.globals with FEATURES=protect-owned. If you want to" \
+		"disable collision protection completely (not recommended), then" \
+		"you need to ensure that neither protect-owned nor collision-protect" \
+		"are enabled." | fmt -w 70 | while read ; do ewarn "$REPLY" ; done
+		ewarn
+		echo "If you have overridden FETCHCOMMAND or RESUMECOMMAND variables," \
+		"for compatibility with EAPI 2, you must ensure that these variables" \
+		"are written such that the downloaded file will be placed at" \
+		"\"\${DISTDIR}/\${FILE}\". Refer to make.conf(5) for" \
+		"information about FETCHCOMMAND and RESUMECOMMAND." | \
+		fmt -w 70 | while read ; do ewarn "$REPLY" ; done
+		warning_shown=1
+	fi
+	if [ $warning_shown = 1 ] ; then
+		ewarn # for symmetry
 	fi
 }
 
