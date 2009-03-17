@@ -1,17 +1,18 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/files/laptop_mode.init-1.4,v 1.1 2009/02/28 06:49:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/files/laptop_mode.init-1.4,v 1.2 2009/03/17 02:16:16 dirtyepic Exp $
 
 opts="${opts} reload"
 
 depend() {
-	use localmount
+	need localmount
+	use acpid hald
 	after bootmisc
 }
 
 checkconfig() {
-	if [[ ! -f /proc/sys/vm/laptop_mode ]] ; then
+	if [ ! -f /proc/sys/vm/laptop_mode ] ; then
 		eerror "Kernel does not support laptop_mode"
 		return 1
 	fi

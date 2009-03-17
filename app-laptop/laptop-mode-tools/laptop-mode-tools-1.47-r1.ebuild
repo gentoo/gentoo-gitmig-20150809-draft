@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.47.ebuild,v 1.2 2009/02/28 18:56:31 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.47-r1.ebuild,v 1.1 2009/03/17 02:16:16 dirtyepic Exp $
 
 inherit eutils
 
