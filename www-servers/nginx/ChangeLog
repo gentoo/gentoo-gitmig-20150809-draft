@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.206 2009/03/04 15:29:49 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.207 2009/03/17 11:57:43 drizzt Exp $
+
+  17 Mar 2009; Timothy Redaelli <drizzt@gentoo.org> nginx-0.7.39.ebuild:
+  QA: Don't abuse ROOT wrt #232969, #258118. Add ~x86-fbsd keyword (with
+  small patch) wrt #155623, #236429. (Maintainer is in devaway status)
 
 *nginx-0.7.39 (04 Mar 2009)
 

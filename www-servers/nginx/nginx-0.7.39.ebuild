@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.7.39.ebuild,v 1.1 2009/03/04 15:29:49 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.7.39.ebuild,v 1.2 2009/03/17 11:57:43 drizzt Exp $
 
 inherit eutils ssl-cert
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://nginx.net/"
 SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="addition debug fastcgi flv imap pcre perl random-index ssl status sub webdav zlib"
 
 DEPEND="dev-lang/perl
@@ -24,6 +24,11 @@ pkg_setup() {
 	enewgroup nginx
 	enewuser nginx -1 -1 /dev/null nginx
 	eend ${?}
+}
+
+src_unpack() {
+	unpack ${A}
+	sed -i 's/ make/ $(MAKE)/' "${S}"/auto/lib/perl/make || die
 }
 
 src_compile() {
@@ -81,8 +86,8 @@ src_install() {
 
 	cp "${FILESDIR}"/nginx.conf-r4 conf/nginx.conf
 
-	dodir "${ROOT}"/etc/${PN}
-	insinto "${ROOT}"/etc/${PN}
+	dodir /etc/${PN}
+	insinto /etc/${PN}
 	doins conf/*
 
 	dodoc CHANGES{,.ru} README
@@ -95,9 +100,9 @@ src_install() {
 
 pkg_postinst() {
 	use ssl && {
-		if [ ! -f "${ROOT}"/etc/ssl/${PN}/${PN}.key ]; then
-			dodir "${ROOT}"/etc/ssl/${PN}
-			insinto "${ROOT}"etc/ssl/${PN}/
+		if [ ! -f /etc/ssl/${PN}/${PN}.key ]; then
+			dodir /etc/ssl/${PN}
+			insinto /etc/ssl/${PN}/
 			insopts -m0644 -o nginx -g nginx
 			install_cert /etc/ssl/nginx/nginx
 		fi
