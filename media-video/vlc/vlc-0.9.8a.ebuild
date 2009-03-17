@@ -1,11 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.8a.ebuild,v 1.8 2009/02/06 09:02:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.8a.ebuild,v 1.9 2009/03/17 07:57:14 aballier Exp $
 
 EAPI="1"
-
-WANT_AUTOMAKE=latest
-WANT_AUTOCONF=latest
 
 inherit eutils multilib autotools toolchain-funcs gnome2 nsplugins qt4 flag-o-matic
 

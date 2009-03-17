@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.425 2009/03/17 07:54:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.426 2009/03/17 07:57:14 aballier Exp $
+
+  17 Mar 2009; Alexis Ballier <aballier@gentoo.org> vlc-0.9.8a.ebuild,
+  vlc-0.9.9_rc2.ebuild, vlc-0.9.9999.ebuild, vlc-9999.ebuild:
+  remove redundant WANT_AUTOFOO=latest
 
   17 Mar 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   Require taglib 1.5.
