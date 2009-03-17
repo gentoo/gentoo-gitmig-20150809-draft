@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.109 2009/03/09 22:24:17 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.110 2009/03/17 01:22:09 omp Exp $
+
+*conky-1.7.0_rc1 (17 Mar 2009)
+
+  17 Mar 2009; David Shakaryan <omp@gentoo.org> +conky-1.7.0_rc1.ebuild:
+  Version bump.
 
   09 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> conky-1.6.1.ebuild,
   conky-1.6.2_pre1355.ebuild:
