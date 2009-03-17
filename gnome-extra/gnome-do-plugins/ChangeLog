@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-do-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/ChangeLog,v 1.7 2009/02/01 17:57:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/ChangeLog,v 1.8 2009/03/17 19:33:51 graaff Exp $
+
+  17 Mar 2009; Hans de Graaff <graaff@gentoo.org>
+  -gnome-do-plugins-0.6.0.1.ebuild:
+  Remove intermediate version that had some issues due to the online plugin
+  system.
 
 *gnome-do-plugins-0.8.0 (01 Feb 2009)
 
