@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4281 2009/03/17 08:47:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4282 2009/03/17 09:47:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -128,6 +128,10 @@ app-crypt/seahorse:gedit - Enable text encryption plugin to integrate into app-e
 app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP server.
 app-crypt/seahorse:nautilus - Enable file encryption plugin to integrate into gnome-base/nautilus context menu.
 app-crypt/seahorse:xulrunner - Selects which gecko engine against which to build the www-client/epiphany plugin.
+app-crypt/seahorse-plugins:applet - Enable seahorse applet for gnome-base/gnome-panel
+app-crypt/seahorse-plugins:epiphany - Enable text encryption plugin to integrate into the www-client/epiphany context menu
+app-crypt/seahorse-plugins:gedit - Enable text encryption plugin to integrate into app-editors/gedit
+app-crypt/seahorse-plugins:nautilus - Enable file encryption plugin to integrate into the gnome-base/nautilus context menu
 app-dicts/aspell-be:classic - Support classic spelling by default
 app-dicts/gwaei:libsexy - Enable support for x11-libs/libsexy
 app-dicts/stardict:espeak - Enable text to speech synthesizer using espeak engine
