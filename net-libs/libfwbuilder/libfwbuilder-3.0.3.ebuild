@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-3.0.3.ebuild,v 1.1 2009/03/17 15:41:46 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-3.0.3.ebuild,v 1.2 2009/03/17 15:43:08 dev-zero Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE="bind snmp stlport"
 
 DEPEND=">=dev-libs/libxml2-2.4.10
 	>=dev-libs/libxslt-1.0.7
-	snmp? ( net-analyzer/net-snmp ) 
+	snmp? ( net-analyzer/net-snmp )
 	stlport? ( dev-libs/STLport )
 	bind? ( net-dns/bind )
 	x11-libs/qt-core"
@@ -31,7 +31,7 @@ src_prepare() {
 
 	sed -i \
 		-e '/\.\/runqmake\.sh$/d' \
-		configure || die "sed configure failed" 
+		configure || die "sed configure failed"
 }
 
 src_configure() {
@@ -41,7 +41,7 @@ src_configure() {
 		$(use_with stlport stlport) \
 		$(use_with bind lwres)
 
-	for pro_file in $(find ${S} -name "*.pro"); do
+	for pro_file in $(find "${S}" -name "*.pro"); do
 		eqmake4 "${pro_file}" -o "$(dirname ${pro_file})/Makefile" || die "running eqmake4 for ${pro_file} failed"
 	done
 }
