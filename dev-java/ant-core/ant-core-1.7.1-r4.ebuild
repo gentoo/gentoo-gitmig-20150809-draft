@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.1-r3.ebuild,v 1.1 2009/03/15 12:18:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.1-r4.ebuild,v 1.1 2009/03/17 12:54:49 betelgeuse Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ src_prepare() {
 	rm -v lib/*.jar || die
 
 	epatch "${FILESDIR}/1.7.1-pkg-info.patch"
+	epatch "${FILESDIR}/1.7.1-jdk4-javadoc.patch"
 
 	# use our split-ant build.xml
 	mv -f "${WORKDIR}/build.xml" . || die
