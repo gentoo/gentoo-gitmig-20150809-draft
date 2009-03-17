@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.77 2009/03/17 15:39:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.78 2009/03/17 15:41:46 dev-zero Exp $
+
+*libfwbuilder-3.0.3 (17 Mar 2009)
+
+  17 Mar 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +libfwbuilder-3.0.3.ebuild:
+  Version bump (bug #228621, thanks to Boian Berberov and Markos Chandras
+  for their work).
 
   17 Mar 2009; Tiziano Müller <dev-zero@gentoo.org>
   -files/libfwbuilder-2.1.13-gcc42.patch, -libfwbuilder-2.1.13-r1.ebuild,
