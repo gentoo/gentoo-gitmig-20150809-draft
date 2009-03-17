@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.10.0.ebuild,v 1.5 2009/03/12 16:02:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.10.0.ebuild,v 1.6 2009/03/17 21:42:52 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -29,8 +29,9 @@ RDEPEND="sys-libs/zlib
 	ncurses? ( sys-libs/ncurses )
 	sdl? ( >=media-libs/libsdl-1.2.11 )
 	vde? ( net-misc/vde )
-	fdt? ( sys-apps/dtc )
+	sys-apps/dtc
 	kqemu? ( >=app-emulation/kqemu-1.4.0_pre1 )"
+#	fdt? ( sys-apps/dtc )
 
 DEPEND="${RDEPEND}
 	gnutls? ( dev-util/pkgconfig )
