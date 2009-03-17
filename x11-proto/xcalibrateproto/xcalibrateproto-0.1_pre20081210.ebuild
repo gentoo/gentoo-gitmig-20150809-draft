@@ -1,6 +1,6 @@
 # Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/xcalibrateproto-0.1_pre20081210.ebuild,v 1.1 2009/03/15 21:26:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/xcalibrateproto-0.1_pre20081210.ebuild,v 1.2 2009/03/17 14:58:34 mr_bones_ Exp $
 
 # git clone git://anongit.freedesktop.org/git/xorg/proto/calibrateproto
 # rm -rf calibrateproto/.git
@@ -19,6 +19,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 LICENSE="GPL-2"
 DEPEND="${RDEPEND}"
 RDEPEND=""
-SRC_URI="mirrors://gentoo/${MY_PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://gentoo/${MY_PN}-${MY_PV}.tar.bz2"
 IUSE="${IUSE}"
 S="${WORKDIR}/${MY_PN}-${MY_PV}"
