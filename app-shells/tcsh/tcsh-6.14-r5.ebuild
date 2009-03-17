@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r5.ebuild,v 1.4 2008/12/04 20:50:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r5.ebuild,v 1.5 2009/03/17 21:14:01 grobian Exp $
 
 inherit eutils
 
 MY_P="${P}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
 HOMEPAGE="http://www.tcsh.org/"
-SRC_URI="ftp://ftp.astron.com/pub/tcsh/${MY_P}.tar.gz
+SRC_URI="ftp://ftp.astron.com/pub/tcsh/old/${MY_P}.tar.gz
 	mirror://gentoo/${P}-conffiles.tar.bz2"
 
 LICENSE="BSD"
