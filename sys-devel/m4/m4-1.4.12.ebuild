@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.12.ebuild,v 1.9 2009/02/24 19:19:49 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.12.ebuild,v 1.10 2009/03/17 10:12:24 armin76 Exp $
 
 DESCRIPTION="GNU macro processor"
 HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.lzma"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="examples"
 
 # remember: cannot dep on autoconf since it needs us
