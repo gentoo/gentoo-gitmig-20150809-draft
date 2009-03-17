@@ -17,6 +17,7 @@ mzscheme
 emacs
 xemacs
 
+gnome-keyring
 afs
 tcl
 tk
