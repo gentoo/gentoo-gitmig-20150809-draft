@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.13_rc1.ebuild,v 1.1 2009/03/15 06:38:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.13.ebuild,v 1.1 2009/03/17 11:35:49 pva Exp $
 
 EAPI=1
 
