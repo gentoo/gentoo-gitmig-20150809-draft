@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.21 2009/03/17 13:39:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.22 2009/03/17 16:33:28 loki_val Exp $
 
 # @ECLASS: gtk-sharp-module.eclass
 # @MAINTAINER:
@@ -187,10 +187,10 @@ case ${PF} in
 		;;
 	gnome-sharp-*)
 		add_depend ">=gnome-base/libgnomeui-${PV_MAJOR}"
-		add_depend ">=gnome-base/gnome-panel-${PV_MAJOR}"
 		add_depend "~dev-dotnet/gnomevfs-sharp-${PV}"
 		add_depend "~dev-dotnet/art-sharp-${PV}"
 		add_depend ">=gnome-base/libgnomecanvas-${GNOMECANVAS_REQUIRED_VERSION}"
+		add_depend ">=x11-libs/gtk+-2.14.0"
 		;;
 	gconf-sharp-*)
 		add_depend ">=gnome-base/gconf-${PV_MAJOR}"
