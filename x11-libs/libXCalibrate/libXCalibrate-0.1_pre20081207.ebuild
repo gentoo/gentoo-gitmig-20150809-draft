@@ -1,6 +1,6 @@
 # Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/libXCalibrate-0.1_pre20081207.ebuild,v 1.1 2009/03/15 21:32:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/libXCalibrate-0.1_pre20081207.ebuild,v 1.2 2009/03/17 14:57:48 mr_bones_ Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -14,6 +14,6 @@ DEPEND="${RDEPEND}"
 
 MY_PV="${PV#*_pre}"
 #SRC_URI="http://www.angstrom-distribution.org/unstable/sources/${PN}_anoncvs.freedesktop.org__${MY_PV}.tar.gz"
-SRC_URI="mirrors://gentoo/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://gentoo/${PN}-${MY_PV}.tar.bz2"
 IUSE="${IUSE}"
 S="${WORKDIR}/${PN}"
