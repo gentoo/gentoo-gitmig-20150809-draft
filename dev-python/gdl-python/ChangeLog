@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdl-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.10 2009/03/08 15:54:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.11 2009/03/17 17:22:52 armin76 Exp $
+
+  17 Mar 2009; Raúl Porcel <armin76@gentoo.org> gdl-python-2.19.1.ebuild:
+  ia64/sparc stable wrt #258040
 
   08 Mar 2009; Markus Meier <maekke@gentoo.org> gdl-python-2.19.1.ebuild:
   amd64/x86 stable, bug #258040
