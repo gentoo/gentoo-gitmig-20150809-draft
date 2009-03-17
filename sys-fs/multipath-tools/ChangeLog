@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.23 2009/03/07 22:56:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.24 2009/03/17 22:48:13 solar Exp $
+
+  17 Mar 2009; <solar@gentoo.org> files/rc-multipathd:
+  - baselayout-1 needed to make sure modules are loaded first
 
   07 Mar 2009; Joseph Jezak <josejx@gentoo.org>
   multipath-tools-0.4.8.ebuild:
