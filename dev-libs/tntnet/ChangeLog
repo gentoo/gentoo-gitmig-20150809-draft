@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tntnet
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.10 2008/06/23 13:26:52 fmccor Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.11 2009/03/17 08:10:51 zzam Exp $
+
+  17 Mar 2009; Matthias Schwarzott <zzam@gentoo.org> tntnet-1.6.0-r1.ebuild,
+  tntnet-1.6.1.ebuild, tntnet-1.6.2.ebuild, tntnet-1.6.3.ebuild:
+  Fix license to be LGPL-2.1 instead of GPL-2, Bug #262671.
 
   23 Jun 2008; Ferris McCormick <fmccor@gentoo.org> tntnet-1.6.3.ebuild:
   Add ~sparc for testing at user request (Guido Winkelmann), Bug #228979.
