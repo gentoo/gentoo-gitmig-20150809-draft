@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.568 2009/03/18 14:34:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.569 2009/03/18 22:15:06 hwoarang Exp $
+
+  18 Mar 2009; Markos Chandras <hwoarang@gentoo.org> -qt-4.3.3.ebuild,
+  -qt-4.3.4-r1.ebuild, -qt-4.3.5.ebuild:
+  Dropping 4.3* packages and 4.5.0_rc1
 
   18 Mar 2009; Raúl Porcel <armin76@gentoo.org> qt-4.5.0.ebuild:
   Add ~arm wrt #262462, re-add ~alpha/~ia64, add -sparc
