@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.87 2009/03/17 21:14:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.88 2009/03/18 18:16:39 ranger Exp $
+
+  18 Mar 2009; Brent Baude <ranger@gentoo.org> tcsh-6.16.ebuild:
+  stable ppc, bug 262849
 
   17 Mar 2009; Fabian Groffen <grobian@gentoo.org> tcsh-6.14-r5.ebuild,
   tcsh-6.15-r2.ebuild:
