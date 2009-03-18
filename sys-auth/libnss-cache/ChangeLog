@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/libnss-cache
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-cache/ChangeLog,v 1.1 2009/03/18 05:33:07 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-cache/ChangeLog,v 1.2 2009/03/18 22:51:47 robbat2 Exp $
+
+  18 Mar 2009; Robin H. Johnson <robbat2@gentoo.org>
+  files/0.1-make-install.patch, libnss-cache-0.1.ebuild:
+  Update the patch and ebuild to use DESTDIR and PREFIX sanely. Add ~x86.
 
 *libnss-cache-0.1 (18 Mar 2009)
 
