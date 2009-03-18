@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.99.ebuild,v 1.4 2009/02/28 20:02:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.99.ebuild,v 1.5 2009/03/18 16:09:18 ulm Exp $
 
 inherit elisp
 
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="virtual/latex-base
 	virtual/ghostscript
-	|| ( dev-tex/mh dev-tex/breqn =dev-texlive/texlive-mathextra-2007* )
+	|| ( dev-tex/mh =dev-texlive/texlive-mathextra-2007* )
 	sci-mathematics/maxima"
 
 SITEFILE="50${PN}-gentoo.el"
