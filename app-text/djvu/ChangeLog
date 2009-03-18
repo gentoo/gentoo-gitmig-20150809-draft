@@ -1,6 +1,10 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.89 2009/03/17 08:07:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.90 2009/03/18 19:46:16 klausman Exp $
+
+  18 Mar 2009; Tobias Klausmann <klausman@gentoo.org>
+  djvu-3.5.21_p20090103.ebuild:
+  Stable on alpha, bug #262776
 
   17 Mar 2009; Peter Volkov <pva@gentoo.org> djvu-3.5.21_p20090103.ebuild:
   Don't make threads optional as it's debugging feature:
