@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/mh-20080903.ebuild,v 1.13 2009/03/13 20:10:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/mh-20080903.ebuild,v 1.14 2009/03/18 18:52:22 armin76 Exp $
 
 inherit latex-package
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.zip"
 LICENSE="LPPL-1.3"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 RDEPEND="!dev-tex/breqn
 	dev-tex/xcolor
