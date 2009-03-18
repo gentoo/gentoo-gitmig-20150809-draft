@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/exempi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.12 2009/03/15 20:55:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.13 2009/03/18 15:00:44 armin76 Exp $
+
+  18 Mar 2009; Raúl Porcel <armin76@gentoo.org> exempi-2.0.2.ebuild:
+  alpha/ia64 stable wrt #260063
 
   15 Mar 2009; Markus Meier <maekke@gentoo.org> exempi-2.0.2.ebuild:
   x86 stable, bug #260063
