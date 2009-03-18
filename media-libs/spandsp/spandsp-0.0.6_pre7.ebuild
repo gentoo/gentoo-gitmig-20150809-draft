@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6_pre3.ebuild,v 1.2 2009/03/18 18:34:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6_pre7.ebuild,v 1.1 2009/03/18 18:34:34 chainsaw Exp $
 
 inherit versionator eutils
 

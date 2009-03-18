@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/spandsp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.15 2008/12/15 23:00:22 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.16 2009/03/18 18:34:34 chainsaw Exp $
+
+*spandsp-0.0.6_pre7 (18 Mar 2009)
+
+  18 Mar 2009; <chainsaw@gentoo.org> metadata.xml,
+  spandsp-0.0.6_pre3.ebuild, +spandsp-0.0.6_pre7.ebuild:
+  Version bump to 0.0.6_pre7 which solves an MMX build bug on AMD64. As this
+  breaks API, it is under the big Asterisk 1.6 mask. With thanks to thansen
+  on IRC for the report. New API affects the following applications:
+  http://tinderbox.dev.gentoo.org/misc/rindex/media-libs/spandsp
 
 *spandsp-0.0.6_pre3 (15 Dec 2008)
 
