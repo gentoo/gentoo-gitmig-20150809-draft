@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.3.ebuild,v 1.5 2009/03/15 22:23:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.3.ebuild,v 1.6 2009/03/18 15:32:23 armin76 Exp $
 
 inherit eutils gnome2 multilib python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gnome.org/projects/totem/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc64 ~sparc x86 ~x86-fbsd"
 
 IUSE="bluetooth debug galago gnome lirc nautilus nsplugin nvtv python tracker"
 
