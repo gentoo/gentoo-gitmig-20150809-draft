@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/c-intercal/c-intercal-28.0-r1.ebuild,v 1.1 2008/12/15 20:57:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/c-intercal/c-intercal-28.0-r1.ebuild,v 1.2 2009/03/18 11:14:38 ulm Exp $
 
 inherit elisp-common eutils multilib versionator
 
@@ -58,4 +58,12 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r pit || die "doins -r pit failed"
 	fi
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }
