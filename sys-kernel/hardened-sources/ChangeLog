@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.296 2009/03/17 03:04:45 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.297 2009/03/18 19:22:49 gengor Exp $
+
+*hardened-sources-2.6.28-r4 (18 Mar 2009)
+
+  18 Mar 2009; Gordon Malm <gengor@gentoo.org>
+  +hardened-sources-2.6.28-r4.ebuild:
+  Bump to Linux 2.6.28.8. PaX update fixes oops in SANITIZE feature,
+  compilation with CPA_DEBUG and more.
 
   17 Mar 2009; Gordon Malm <gengor@gentoo.org>
   hardened-sources-2.6.28-r3.ebuild:
