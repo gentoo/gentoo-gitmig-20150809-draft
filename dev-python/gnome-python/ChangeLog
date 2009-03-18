@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.132 2009/03/17 17:29:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.133 2009/03/18 15:11:58 armin76 Exp $
+
+  18 Mar 2009; Raúl Porcel <armin76@gentoo.org> ChangeLog:
+  alpha/ia64 stable wrt #260063
 
   17 Mar 2009; Raúl Porcel <armin76@gentoo.org> gnome-python-2.22.3.ebuild:
   ia64/sparc stable wrt #258040
