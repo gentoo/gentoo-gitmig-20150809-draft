@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/NetPacket
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.20 2009/03/17 19:35:08 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.21 2009/03/18 07:26:48 josejx Exp $
+
+  18 Mar 2009; Joseph Jezak <josejx@gentoo.org> NetPacket-0.41.1.ebuild:
+  Marked ppc stable for bug #261521.
 
   17 Mar 2009; Tiago Cunha <tcunha@gentoo.org> NetPacket-0.41.1.ebuild:
   stable sparc, bug 261521
