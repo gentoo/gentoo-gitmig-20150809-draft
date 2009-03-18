@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/httperf
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/ChangeLog,v 1.9 2008/04/20 21:48:48 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/ChangeLog,v 1.10 2009/03/18 14:44:02 ricmm Exp $
+
+  18 Mar 2009; <ricmm@gentoo.org> httperf-0.8.ebuild:
+  Drop down to ~mips due to unstable deps
 
   20 Apr 2008; Diego Pettenò <flameeyes@gentoo.org> httperf-0.8.ebuild:
   Run eautoreconf in src_unpack phase, bug #207428.
