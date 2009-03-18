@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/cppserv
 # Copyright 2006-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.39 2009/03/09 16:50:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.40 2009/03/18 16:19:39 iluxa Exp $
+
+*cppserv-0.2.8 (18 Mar 2009)
+
+  18 Mar 2009; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  -cppserv-0.2.6.ebuild, +cppserv-0.2.8.ebuild:
+  Replace cppserv-0.2.6 with cppserv-0.2.8 (contains gcc-4.3 related fixes)
 
   09 Mar 2009; Raúl Porcel <armin76@gentoo.org> cppserv-0.1.119.ebuild:
   x86 stable wrt #259678
