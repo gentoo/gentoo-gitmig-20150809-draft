@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-portuguese
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-portuguese/ChangeLog,v 1.25 2009/03/18 18:12:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-portuguese/ChangeLog,v 1.26 2009/03/18 20:52:44 ranger Exp $
+
+  18 Mar 2009; Brent Baude <ranger@gentoo.org>
+  texlive-documentation-portuguese-2008.ebuild:
+  Marking texlive-documentation-portuguese-2008 ppc stable for bug 253551
 
   18 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   texlive-documentation-portuguese-2008.ebuild:
