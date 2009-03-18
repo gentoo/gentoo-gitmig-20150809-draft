@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.12.0.ebuild,v 1.7 2009/03/15 20:54:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.12.0.ebuild,v 1.8 2009/03/18 14:20:33 armin76 Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular toolchain-funcs versionator
 
 DESCRIPTION="Low-level pixel manipulation routines"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="altivec mmx sse sse2"
 
 CONFIGURE_OPTIONS="$(use_enable altivec vmx) $(use_enable mmx) \
