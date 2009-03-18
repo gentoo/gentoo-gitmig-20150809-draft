@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.229 2009/03/07 15:35:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.230 2009/03/18 22:26:32 ranger Exp $
+
+  18 Mar 2009; Brent Baude <ranger@gentoo.org> mldonkey-3.0.0.ebuild:
+  Marking mldonkey-3.0.0 ppc for bug 260072
 
   07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> mldonkey-3.0.0.ebuild:
   Migrate to EAPI 2.
