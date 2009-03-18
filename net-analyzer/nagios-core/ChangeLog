@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.144 2009/03/07 14:36:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.145 2009/03/18 22:21:25 ranger Exp $
+
+  18 Mar 2009; Brent Baude <ranger@gentoo.org> nagios-core-3.0.6-r1.ebuild:
+  Marking nagios-core-3.0.6-r1 ppc stable for bug 256177
 
   07 Mar 2009; Markus Meier <maekke@gentoo.org> nagios-core-3.0.6-r1.ebuild:
   amd64/x86 stable, bug #256177
