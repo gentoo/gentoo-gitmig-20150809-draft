@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-0.3.6.ebuild,v 1.4 2009/03/11 16:04:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-0.3.6.ebuild,v 1.5 2009/03/18 06:34:45 josejx Exp $
 
 DESCRIPTION="An implementation of Microsoft's Media Transfer Protocol (MTP)."
 HOMEPAGE="http://libmtp.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~hppa ppc ppc64 sparc x86"
 IUSE="doc examples"
 
 RDEPEND="dev-libs/libusb"
