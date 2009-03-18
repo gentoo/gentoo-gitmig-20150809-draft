@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.17-r1.ebuild,v 1.1 2008/09/25 16:09:39 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-1.17-r3.ebuild,v 1.1 2009/03/18 20:35:01 tommy Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="modular and portable cryptographic toolkit"
 HOMEPAGE="http://libtom.org/?page=features&whatfile=crypt"
@@ -23,12 +23,17 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	use doc || sed -i '/^install:/s:docs::' makefile
+	epatch "${FILESDIR}"/libtomcrypt-1.17-r2-libtool-tag-and-make-fix.patch
 }
 
 src_compile() {
-	use libtommath && append-flags -DLTM_DESC
-	use tomsfastmath && append-flags -DTFM_DESC
-	emake -f makefile.shared IGNORE_SPEED=1 || die "emake failed"
+	local extraflags=""
+	use libtommath && append-flags -DLTM_DESC && extraflags="-ltommath"
+	use tomsfastmath && append-flags -DTFM_DESC && extraflags="${extraflags} -ltfm"
+	sed -i -e "s:gcc:$(tc-getCC):g" \
+		-e "s:--mode=link gcc:--mode=link $(tc-getCC) --tag CC $(tc-getCC):g" \
+		{,testprof/}makefile.shared
+	EXTRALIBS="${extraflags}" emake -f makefile.shared IGNORE_SPEED=1 || die "emake failed"
 }
 
 src_install() {

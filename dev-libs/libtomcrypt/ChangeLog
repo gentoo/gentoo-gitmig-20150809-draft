@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libtomcrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.33 2009/03/16 10:45:13 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.34 2009/03/18 20:35:01 tommy Exp $
+
+*libtomcrypt-1.17-r3 (18 Mar 2009)
+
+  18 Mar 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -libtomcrypt-1.17-r1.ebuild, -libtomcrypt-1.17-r2.ebuild,
+  +libtomcrypt-1.17-r3.ebuild:
+  Really fix bug 239583, fix linking against optional deps, fix compiler usage 
+  for cross compile
 
 *libtomcrypt-1.17-r2 (16 Mar 2009)
 
