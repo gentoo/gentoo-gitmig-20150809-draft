@@ -1,17 +1,17 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.333 2009/03/18 16:35:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.334 2009/03/18 16:38:17 jer Exp $
 
   18 Mar 2009; Jeroen Roovers <jer@gentoo.org> -opera-10.00_pre4166.ebuild:
   Remove old.
 
   18 Mar 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4205.ebuild:
-  Same procedure (bug #259381) so ppc and x86-fbsd users may enjoy this
+  Same procedure (bug #227985) so ppc and x86-fbsd users may enjoy this
   enhancement too.
 
   18 Mar 2009; Jeroen Roovers <jer@gentoo.org> opera-9.64.ebuild,
   opera-10.00_pre4214.ebuild:
-  DEPEND on x11-libs/qt-3[-immqt] (bug #259381). Either set -immqt or
+  DEPEND on x11-libs/qt-3[-immqt] (bug #227985). Either set -immqt or
   +immqt-bc for x11-libs/qt-3 in case of USE="!qt-static qt3(-static)".
 
   15 Mar 2009; Jeroen Roovers <jer@gentoo.org> -opera-10.00_pre4102.ebuild,
