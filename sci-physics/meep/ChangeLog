@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/meep
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.8 2009/01/16 15:54:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/ChangeLog,v 1.9 2009/03/18 15:29:31 bicatali Exp $
+
+*meep-0.20.4 (18 Mar 2009)
+
+  18 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org> +meep-0.20.4.ebuild:
+  Version bump
 
   16 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> meep-0.20.3.ebuild:
   Updated libctl dep, closing bug #253423
