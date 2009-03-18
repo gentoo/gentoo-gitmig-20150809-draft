@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.22 2009/03/17 16:33:28 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.23 2009/03/18 11:14:09 loki_val Exp $
 
 # @ECLASS: gtk-sharp-module.eclass
 # @MAINTAINER:
@@ -224,7 +224,7 @@ case ${PF} in
 		add_depend ">=x11-libs/gtksourceview-${GTKSOURCEVIEW_REQUIRED_VERSION}:2.0"
 		;;
 	nautilusburn-sharp-*)
-		add_depend ">=gnome-extra/nautilus-cd-burner-${PV_MAJOR}"
+		add_depend ">=gnome-extra/nautilus-cd-burner-2.24.0"
 		;;
 	rsvg-sharp-*)
 		add_depend ">=gnome-base/librsvg-${RSVG_REQUIRED_VERSION}"
