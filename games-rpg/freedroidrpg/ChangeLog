@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/freedroidrpg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.17 2009/03/09 15:58:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.18 2009/03/18 22:39:34 ranger Exp $
+
+  18 Mar 2009; Brent Baude <ranger@gentoo.org> freedroidrpg-0.11.1.ebuild:
+  stable ppc, bug 261325
 
   09 Mar 2009; Raúl Porcel <armin76@gentoo.org> freedroidrpg-0.11.1.ebuild:
   x86 stable wrt #261325
