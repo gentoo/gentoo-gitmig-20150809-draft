@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/comix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.51 2009/03/07 23:54:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.52 2009/03/18 18:40:32 ranger Exp $
+
+  18 Mar 2009; Brent Baude <ranger@gentoo.org> comix-4.0.1-r1.ebuild:
+  stable ppc, bug 256169
 
 *comix-4.0.3 (07 Mar 2009)
 
