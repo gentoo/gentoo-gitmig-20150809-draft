@@ -1,6 +1,11 @@
 # ChangeLog for app-text/namazu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.32 2009/03/12 16:44:46 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.33 2009/03/18 14:55:35 matsuu Exp $
+
+*namazu-2.0.19-r1 (18 Mar 2009)
+
+  18 Mar 2009; MATSUU Takuto <matsuu@gentoo.org> +namazu-2.0.19-r1.ebuild:
+  Fixed tk USE flag issue, bug #262662.
 
 *namazu-2.0.19 (12 Mar 2009)
 
