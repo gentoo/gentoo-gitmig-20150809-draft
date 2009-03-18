@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.16 2008/10/29 12:16:43 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.7.2-r3.ebuild,v 1.17 2009/03/18 14:48:06 ricmm Exp $
 
 WANT_AUTOMAKE=1.8
 WANT_AUTOCONF=latest
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.pdc.kth.se/pub/heimdal/src/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="ssl berkdb ipv6 ldap X"
 
 RDEPEND="ssl? ( dev-libs/openssl )
