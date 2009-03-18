@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.82 2009/03/07 14:41:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.83 2009/03/18 22:21:02 ranger Exp $
+
+  18 Mar 2009; Brent Baude <ranger@gentoo.org> nagios-3.0.6.ebuild:
+  Marking nagios-3.0.6 ppc stable for bug 256177
 
   07 Mar 2009; Markus Meier <maekke@gentoo.org> nagios-3.0.6.ebuild:
   amd64/x86 stable, bug #256177
