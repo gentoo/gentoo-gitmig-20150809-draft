@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.129.ebuild,v 1.3 2009/03/08 16:19:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.129.ebuild,v 1.4 2009/03/18 22:38:42 ranger Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -19,7 +19,7 @@ SRC_URI="mirror://gentoo/${MY_P}.zip
 # Same as xmame. Should it be renamed to MAME?
 LICENSE="XMAME"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="opengl"
 
 RDEPEND=">=media-libs/libsdl-1.2.10[opengl?]
