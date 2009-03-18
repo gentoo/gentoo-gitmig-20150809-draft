@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.37 2009/01/26 03:29:21 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.38 2009/03/18 11:53:26 lavajoe Exp $
+
+*squeezecenter-7.3.2-r1 (18 Mar 2009)
+
+  18 Mar 2009; Joe Peterson <lavajoe@gentoo.org>
+  -squeezecenter-7.3.2.ebuild, +squeezecenter-7.3.2-r1.ebuild:
+  Remove dev-perl/module-build depend (bug #246942); fix other dependencies
 
 *squeezecenter-7.3.2 (26 Jan 2009)
 

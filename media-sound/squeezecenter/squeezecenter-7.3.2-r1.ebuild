@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.3.2.ebuild,v 1.1 2009/01/26 03:29:21 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.3.2-r1.ebuild,v 1.1 2009/03/18 11:53:26 lavajoe Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.slimdevices.com/downloads/${SRC_DIR}/${MY_P}.tgz
 	mirror://gentoo/SqueezeCenter-Class-XSAccessor-Array-0.05.tar.gz
 	mirror://gentoo/SqueezeCenter-POE-XS-Queue-Array-0.002.tar.gz"
 
-# Note: dev-perl/module-build necessary because of SC bug#5882
+# Note: virtual/perl-Module-Build necessary because of SC bug#5882
 # (http://bugs.slimdevices.com/show_bug.cgi?id=5882).
 DEPEND="
 	dev-perl/File-Which
@@ -32,9 +32,12 @@ DEPEND="
 	"
 # Note: dev-perl/GD necessary because of SC bug#6143
 # (http://bugs.slimdevices.com/show_bug.cgi?id=6143).
-RDEPEND="${DEPEND}
+RDEPEND="
+	dev-perl/File-Which
+	virtual/logger
+	virtual/mysql
+	avahi? ( net-dns/avahi )
 	>=dev-lang/perl-5.8.8
-	>=app-admin/sudo-1.6.8
 	>=dev-perl/GD-2.35
 	>=virtual/perl-Compress-Zlib-2.015
 	>=dev-perl/YAML-Syck-1.05
@@ -65,7 +68,6 @@ RDEPEND="${DEPEND}
 	>=dev-perl/Path-Class-0.16
 	>=dev-perl/SQL-Abstract-1.22
 	>=dev-perl/SQL-Abstract-Limit-0.12
-	>=dev-perl/TimeDate-1.16
 	>=dev-perl/URI-1.35
 	>=dev-perl/XML-Simple-2.18
 	>=perl-core/version-0.76
@@ -82,7 +84,10 @@ RDEPEND="${DEPEND}
 	alac? ( media-sound/alac_decoder )
 	wavpack? ( media-sound/wavpack )
 	bonjour? ( net-misc/mDNSResponder )
-	flac? ( media-libs/flac )
+	flac? (
+		media-libs/flac
+		media-sound/sox
+		)
 	musepack? ( media-sound/musepack-tools )
 	ogg? ( media-sound/sox )
 	aac? ( media-libs/faad2 )
@@ -133,11 +138,18 @@ OLDPLUGINSDIR=/opt/squeezecenter/Plugins
 NEWPLUGINSDIR=/var/lib/squeezecenter/Plugins
 
 pkg_setup() {
-	# Sox has optional OGG support, so make sure it has been built that way
+	# Sox has optional OGG and FLAC support, so make sure it has that included
+	# if required
 	if use ogg; then
 		if ! built_with_use media-sound/sox ogg; then
 			eerror "media-sound/sox not built with USE=ogg"
-			die "media-sound/sox not built with USE=ogg"
+			die "SqueezeCenter needs media-sound/sox to be built with USE=ogg"
+		fi
+	fi
+	if use flac; then
+		if ! built_with_use media-sound/sox flac; then
+			eerror "media-sound/sox not built with USE=flac"
+			die "SqueezeCenter needs media-sound/sox to be built with USE=flac"
 		fi
 	fi
 
