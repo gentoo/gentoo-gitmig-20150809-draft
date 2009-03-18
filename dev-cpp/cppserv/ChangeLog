@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/cppserv
 # Copyright 2006-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.40 2009/03/18 16:19:39 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/ChangeLog,v 1.41 2009/03/18 16:22:44 iluxa Exp $
+
+  18 Mar 2009; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  cppserv-0.1.119.ebuild:
+  Set RDEPEND explicitly
 
 *cppserv-0.2.8 (18 Mar 2009)
 

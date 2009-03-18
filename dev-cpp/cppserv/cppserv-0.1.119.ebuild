@@ -1,6 +1,6 @@
 # Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.1.119.ebuild,v 1.3 2009/03/09 16:50:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.1.119.ebuild,v 1.4 2009/03/18 16:22:44 iluxa Exp $
 
 inherit eutils apache-module multilib
 
@@ -21,6 +21,8 @@ DEPEND="net-libs/socket++
 	>=dev-libs/apr-1.2
 	dev-libs/boost
 "
+
+RDEPEND="${DEPEND}"
 
 need_apache2
 
