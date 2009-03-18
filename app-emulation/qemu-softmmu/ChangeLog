@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.60 2009/03/17 21:42:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.61 2009/03/18 22:27:16 lu_zero Exp $
+
+  18 Mar 2009; Luca Barbato <lu_zero@gentoo.org> qemu-softmmu-0.10.0.ebuild:
+  disable fdt since the current one is broken...
 
   17 Mar 2009; Luca Barbato <lu_zero@gentoo.org> qemu-softmmu-0.10.0.ebuild:
   fdt is a fixed dep for now

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.10.0.ebuild,v 1.6 2009/03/17 21:42:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.10.0.ebuild,v 1.7 2009/03/18 22:27:16 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -29,7 +29,6 @@ RDEPEND="sys-libs/zlib
 	ncurses? ( sys-libs/ncurses )
 	sdl? ( >=media-libs/libsdl-1.2.11 )
 	vde? ( net-misc/vde )
-	sys-apps/dtc
 	kqemu? ( >=app-emulation/kqemu-1.4.0_pre1 )"
 #	fdt? ( sys-apps/dtc )
 
@@ -43,6 +42,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
+	# avoid fdt till an updated release appears
+	sed -i -e 's:fdt="yes":fdt="no"' configure
 	# prevent docs to get automatically installed
 	sed -i '/$(DESTDIR)$(docdir)/d' Makefile
 	# Alter target makefiles to accept CFLAGS set via flag-o
