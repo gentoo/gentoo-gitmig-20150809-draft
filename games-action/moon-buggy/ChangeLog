@@ -1,6 +1,9 @@
 # ChangeLog for games-action/moon-buggy
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.20 2009/03/15 22:12:57 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/moon-buggy/ChangeLog,v 1.21 2009/03/18 22:40:18 ranger Exp $
+
+  18 Mar 2009; Brent Baude <ranger@gentoo.org> moon-buggy-1.0.51.ebuild:
+  stable ppc, bug 261796
 
   15 Mar 2009; Thomas Anderson <gentoofan23@gentoo.org>
   moon-buggy-1.0.51.ebuild:
