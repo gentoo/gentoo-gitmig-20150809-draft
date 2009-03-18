@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.59 2009/02/15 15:27:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.60 2009/03/18 06:47:04 josejx Exp $
+
+  18 Mar 2009; Joseph Jezak <josejx@gentoo.org> hk_classes-0.8.3.ebuild:
+  Marked ppc stable for bug #245549.
 
   15 Feb 2009; Markus Meier <maekke@gentoo.org> hk_classes-0.8.3.ebuild:
   amd64/x86 stable, bug #245549
