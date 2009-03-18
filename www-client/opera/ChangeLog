@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.331 2009/03/18 16:30:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.332 2009/03/18 16:34:00 jer Exp $
+
+  18 Mar 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4205.ebuild:
+  Same procedure (bug #259381) so ppc and x86-fbsd users may enjoy this
+  enhancement too.
 
   18 Mar 2009; Jeroen Roovers <jer@gentoo.org> opera-9.64.ebuild,
   opera-10.00_pre4214.ebuild:
