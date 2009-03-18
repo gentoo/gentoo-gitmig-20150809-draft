@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.203 2009/03/15 22:24:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.204 2009/03/18 15:48:12 armin76 Exp $
+
+  18 Mar 2009; Raúl Porcel <armin76@gentoo.org> epiphany-2.24.3.ebuild:
+  alpha/ia64 stable wrt #260063
 
   15 Mar 2009; Markus Meier <maekke@gentoo.org> epiphany-2.24.3-r10.ebuild:
   x86 stable, bug #260063
