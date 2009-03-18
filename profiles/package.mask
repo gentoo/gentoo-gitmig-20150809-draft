@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9581 2009/03/18 11:35:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9582 2009/03/18 18:19:28 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -86,6 +86,7 @@ net-misc/dahdi
 net-misc/dahdi-tools
 =net-misc/asterisk-1.6*
 =net-libs/libpri-1.4*
+>=media-libs/spandsp-0.0.6_pre7
 
 # Michael Sterrett <mr_bones_@gentoo.org> (09 Mar 2009)
 # Masked for removal in 30 days.
