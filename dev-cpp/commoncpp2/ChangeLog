@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.45 2009/03/12 14:17:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.46 2009/03/18 07:59:20 josejx Exp $
+
+  18 Mar 2009; Joseph Jezak <josejx@gentoo.org> commoncpp2-1.6.2.ebuild:
+  Marked ppc stable for bug #261567.
 
   12 Mar 2009; Brent Baude <ranger@gentoo.org> commoncpp2-1.6.2.ebuild:
   Marking commoncpp2-1.6.2 ppc64 for bug 261567
