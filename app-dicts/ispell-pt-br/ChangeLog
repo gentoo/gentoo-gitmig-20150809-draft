@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-pt-br
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt-br/ChangeLog,v 1.7 2008/11/01 11:43:33 pva Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-pt-br/ChangeLog,v 1.8 2009/03/18 17:42:38 ricmm Exp $
+
+  18 Mar 2009; <ricmm@gentoo.org> ispell-pt-br-2.4-r2.ebuild:
+  Drop down to ~mips due to unstable deps
 
 *ispell-pt-br-2.4-r3 (01 Nov 2008)
 
