@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libnw
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/ChangeLog,v 1.10 2009/02/22 15:49:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/ChangeLog,v 1.11 2009/03/18 22:35:33 ranger Exp $
+
+  18 Mar 2009; Brent Baude <ranger@gentoo.org> libnw-1.30.02.ebuild:
+  stable ppc, bug 256732
 
   22 Feb 2009; Raúl Porcel <armin76@gentoo.org> libnw-1.30.02.ebuild:
   x86 stable wrt #256732
