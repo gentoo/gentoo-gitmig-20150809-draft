@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.42 2009/03/14 18:50:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.43 2009/03/18 18:06:20 ranger Exp $
+
+  18 Mar 2009; Brent Baude <ranger@gentoo.org> tftp-hpa-0.49-r1.ebuild:
+  stable ppc, bug 260516
 
   14 Mar 2009; Raúl Porcel <armin76@gentoo.org> tftp-hpa-0.49-r1.ebuild:
   arm/ia64/s390/sh stable wrt #260516
