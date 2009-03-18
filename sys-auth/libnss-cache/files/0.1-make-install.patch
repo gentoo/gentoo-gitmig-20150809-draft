@@ -1,0 +1,21 @@
+--- libnss-cache/Makefile	2009-03-17 20:42:15.128063498 -0700
++++ libnss-cache/Makefile	2009-03-17 20:38:33.059408526 -0700
+@@ -3,14 +3,16 @@
+ CFLAGS=-Wall -fPIC
+ LIBRARY=libnss_cache.so.2.0
+ LINKS=libnss_cache.so.2 libnss_cache.so
+-PREFIX=/usr
++DESTDIR=/
++PREFIX=$(DESTDIR)/usr
+ BUILD=.libs
+ LIBDIR=$(PREFIX)/lib
++SONAME=libnss_cache.so.2
+ 
+ nss_cache:
+ 	[ -d $(BUILD) ] || mkdir $(BUILD)
+ 	$(CC) $(CFLAGS) -c nss_cache.c -o $(BUILD)/nss_cache.o
+-	$(CC) -shared -o $(BUILD)/$(LIBRARY) $(BUILD)/nss_cache.o
++	$(CC) -shared -Wl,-soname,$(SONAME) -o $(BUILD)/$(LIBRARY) $(BUILD)/nss_cache.o
+ 
+ clean:
+ 	rm -rf $(BUILD)
