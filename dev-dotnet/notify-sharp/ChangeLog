@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/notify-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.4 2009/01/09 13:31:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.5 2009/03/18 07:46:43 josejx Exp $
+
+  18 Mar 2009; Joseph Jezak <josejx@gentoo.org>
+  notify-sharp-0.4.0_pre20080912-r1.ebuild:
+  Marked ~ppc for bug #248908.
 
 *notify-sharp-0.4.0_pre20080912-r1 (09 Jan 2009)
 
