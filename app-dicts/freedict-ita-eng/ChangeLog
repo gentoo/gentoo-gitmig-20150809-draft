@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/freedict-ita-eng
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-ita-eng/ChangeLog,v 1.2 2007/01/25 21:48:33 eroyf Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-ita-eng/ChangeLog,v 1.3 2009/03/18 15:15:33 ricmm Exp $
+
+  18 Mar 2009; <ricmm@gentoo.org> freedict-ita-eng-1.0.ebuild:
+  Drop down to ~mips due to unstable deps
 
   25 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   freedict-ita-eng-1.0.ebuild:

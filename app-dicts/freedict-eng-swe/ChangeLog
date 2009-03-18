@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/freedict-eng-swe
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-eng-swe/ChangeLog,v 1.6 2007/01/25 21:50:55 eroyf Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-eng-swe/ChangeLog,v 1.7 2009/03/18 15:07:57 ricmm Exp $
+
+  18 Mar 2009; <ricmm@gentoo.org> freedict-eng-swe-1.0.ebuild:
+  Drop down to ~mips due to unstable deps
 
   25 Jan 2007; Alexander H. Færøy <eroyf@gentoo.org>
   freedict-eng-swe-1.0.ebuild:
