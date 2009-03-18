@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/last-exit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.19 2009/02/11 19:13:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.20 2009/03/18 07:48:34 josejx Exp $
+
+  18 Mar 2009; Joseph Jezak <josejx@gentoo.org> last-exit-6-r1.ebuild:
+  Marked ~ppc for bug #248908.
 
   11 Feb 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
   Dotnet herd will be maintaining this in cooperation with sound herd.
