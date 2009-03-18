@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/yersinia-0.7.ebuild,v 1.3 2007/04/08 13:13:28 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/yersinia-0.7.ebuild,v 1.4 2009/03/18 19:52:43 rbu Exp $
 
 DESCRIPTION="A layer 2 attack framework"
 HOMEPAGE="http://www.yersinia.net/"
@@ -15,6 +15,7 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5.5 )
 	gtk? ( =x11-libs/gtk+-2* )
 	>=net-libs/libnet-1.1.2
 	>=net-libs/libpcap-0.9.4"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf \
