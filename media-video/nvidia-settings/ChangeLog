@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.59 2009/03/18 09:52:32 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.60 2009/03/18 09:58:28 ricmm Exp $
+
+  18 Mar 2009; <ricmm@gentoo.org> nvidia-settings-173.14.12.ebuild,
+  nvidia-settings-177.80.ebuild, nvidia-settings-180.22.ebuild,
+  nvidia-settings-180.27.ebuild, nvidia-settings-180.37.ebuild:
+  Added -fPIC flag for libXNVCtrl. Bug #246364
 
 *nvidia-settings-173.14.17 (18 Mar 2009)
 

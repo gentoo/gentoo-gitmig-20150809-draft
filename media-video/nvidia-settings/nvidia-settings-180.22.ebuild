@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-180.22.ebuild,v 1.1 2009/01/21 14:49:57 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-180.22.ebuild,v 1.2 2009/03/18 09:58:28 ricmm Exp $
 
-inherit eutils toolchain-funcs multilib
+inherit eutils toolchain-funcs multilib flag-o-matic
 
 MY_P="${PN}-1.0"
 
@@ -39,7 +39,9 @@ src_compile() {
 	einfo "Building libXNVCtrl..."
 	cd "${S}/src/libXNVCtrl"
 	make clean || die "Cleaning old libXNVCtrl failed"
+	append-flags -fPIC
 	emake CDEBUGFLAGS="${CFLAGS}" CC="$(tc-getCC)" libXNVCtrl.a || die "Building libXNVCtrl failed!"
+	filter-flags -fPIC
 
 	cd "${S}"
 	einfo "Building nVidia-Settings..."
