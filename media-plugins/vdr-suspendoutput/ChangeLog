@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-suspendoutput
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-suspendoutput/ChangeLog,v 1.1 2008/04/22 10:04:43 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-suspendoutput/ChangeLog,v 1.2 2009/03/18 10:46:41 hd_brummy Exp $
+
+*vdr-suspendoutput-1.0.1 (18 Mar 2009)
+
+  18 Mar 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-suspendoutput-1.0.1.ebuild:
+  version bump; ~amd64 keyword; thanks to M.Brakemeier on #262805
 
 *vdr-suspendoutput-0.2.5 (22 Apr 2008)
 
