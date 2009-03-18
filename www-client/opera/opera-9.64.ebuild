@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.64.ebuild,v 1.4 2009/03/07 09:03:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.64.ebuild,v 1.5 2009/03/18 16:30:01 jer Exp $
+
+EAPI="2"
 
 GCONF_DEBUG="no"
 
@@ -81,16 +83,16 @@ RDEPEND="media-libs/libexif
 	x11-libs/libSM
 	x11-libs/libICE
 	qt-static? ( !qt3-static? ( x11-libs/libXinerama ) )
-	x86? ( !qt-static? ( !qt3-static? ( =x11-libs/qt-3* ) ) )
+	x86? ( !qt-static? ( !qt3-static? ( =x11-libs/qt-3*[-immqt] ) ) )
 	amd64? (
 		ia32? ( app-emulation/emul-linux-x86-qtlibs )
-		!ia32? ( =x11-libs/qt-3* )
+		!ia32? ( =x11-libs/qt-3*[-immqt] )
 	)
-	ppc? ( =x11-libs/qt-3* )
+	ppc? ( =x11-libs/qt-3*[-immqt] )
 	spell? ( app-text/aspell )
 	x86-fbsd? (
 		=virtual/libstdc++-3*
-		!qt-static? ( !qt3-static? ( =x11-libs/qt-3* ) )
+		!qt-static? ( !qt3-static? ( =x11-libs/qt-3*[-immqt] ) )
 	)
 	"
 
