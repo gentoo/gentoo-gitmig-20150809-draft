@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mplib/mplib-1.110.ebuild,v 1.8 2009/03/18 17:55:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mplib/mplib-1.110.ebuild,v 1.9 2009/03/18 20:48:15 ranger Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="http://foundry.supelec.fr/frs/download.php/696/${PN}-beta-${PV}-src.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 # We enalbe lua by default because it will be needed by luatex
 IUSE="+lua"
 
