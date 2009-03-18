@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.7 2009/03/03 17:00:37 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.8 2009/03/18 16:22:25 bicatali Exp $
 
 DEB_PN=geant321
 DEB_PV=${PV}.dfsg
 DEB_PR=8
 DEB_P=${DEB_PN}_${DEB_PV}
 
-inherit eutils multilib fortran
+inherit eutils fortran
 
 DESCRIPTION="CERN's detector description and simulation Tool"
 HOMEPAGE="http://wwwasd.web.cern.ch/wwwasd/geant/index.html"
@@ -21,7 +21,6 @@ SLOT="3"
 IUSE=""
 
 RDEPEND="x11-libs/openmotif
-	virtual/lapack
 	dev-lang/cfortran
 	sci-physics/cernlib
 	sci-physics/paw"
