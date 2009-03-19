@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0-r1.ebuild,v 1.4 2008/12/02 12:57:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0-r1.ebuild,v 1.5 2009/03/19 19:11:48 maekke Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -28,6 +28,7 @@ DEPEND="
 	sys-libs/zlib
 	x11-libs/wxGTK:2.8
 	sift? ( media-gfx/autopano-sift-C )"
+RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS README TODO"
 
