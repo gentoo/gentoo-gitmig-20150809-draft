@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.77 2009/03/07 14:51:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.78 2009/03/19 18:33:42 serkan Exp $
+
+  19 Mar 2009; Serkan Kaba <serkan@gentoo.org>
+  +files/java-gnome-4.0.10-i18n-javadoc.patch, java-gnome-4.0.10:
+  Add patch to Generate javadoc for
+  org.freedesktop.bindings.Internationalization.
 
   07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
   -java-gnome-4.0.7-r2.ebuild:
