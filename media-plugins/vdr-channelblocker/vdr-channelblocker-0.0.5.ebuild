@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelblocker/vdr-channelblocker-0.0.5.ebuild,v 1.1 2009/03/19 08:33:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelblocker/vdr-channelblocker-0.0.5.ebuild,v 1.2 2009/03/19 17:33:15 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -17,4 +17,3 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.6.0_p2[dvbsetup]"
 RDEPEND="${DEPEND}"
-
