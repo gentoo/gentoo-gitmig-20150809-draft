@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4205.ebuild,v 1.3 2009/03/18 16:34:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4205.ebuild,v 1.4 2009/03/19 17:41:57 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -91,7 +91,7 @@ RDEPEND="
 		!ia32? ( =x11-libs/qt-3*[-immqt] )
 	)
 	ppc? (
-		=x11-libs/qt-3[-immqt]*
+		=x11-libs/qt-3*[-immqt]
 	)
 	x86-fbsd? (
 		=virtual/libstdc++-3*
