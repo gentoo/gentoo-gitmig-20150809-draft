@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.109 2009/03/15 16:45:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.110 2009/03/19 14:29:46 ranger Exp $
+
+  19 Mar 2009; Brent Baude <ranger@gentoo.org> ktorrent-3.2.ebuild:
+  Marking ktorrent-3.2 ~ppc for bug 259689
 
   15 Mar 2009; Brent Baude <ranger@gentoo.org> ktorrent-3.2.ebuild:
   Marking ktorrent-3.2 ~ppc64 for bug 259689
