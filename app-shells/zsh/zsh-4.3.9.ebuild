@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.9.ebuild,v 1.4 2009/03/15 18:16:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.9.ebuild,v 1.5 2009/03/19 14:35:49 ranger Exp $
 
 # doc package for -dev version exists?
 doc_available=true
@@ -37,7 +37,7 @@ SRC_URI="${ZSH_URI}
 
 LICENSE="ZSH gdbm? ( GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="caps debug doc examples gdbm maildir pcre static unicode"
 
 RDEPEND=">=sys-libs/ncurses-5.1
