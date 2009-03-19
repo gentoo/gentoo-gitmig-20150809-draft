@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/glimmerhmm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/ChangeLog,v 1.1 2008/09/07 13:11:13 weaver Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/ChangeLog,v 1.2 2009/03/19 15:12:35 weaver Exp $
+
+  19 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
+  QA, keyword ~amd64
 
 *glimmerhmm-3.0.1 (07 Sep 2008)
 
