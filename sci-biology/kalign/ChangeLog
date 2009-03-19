@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/kalign
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/kalign/ChangeLog,v 1.1 2008/06/20 20:13:05 weaver Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/kalign/ChangeLog,v 1.2 2009/03/19 16:52:35 gentoofan23 Exp $
+
+  19 Mar 2009; Thomas Anderson <gentoofan23@gentoo.org> kalign-2.03.ebuild:
+  stable amd64, bug 263043
 
 *kalign-2.03 (20 Jun 2008)
 
