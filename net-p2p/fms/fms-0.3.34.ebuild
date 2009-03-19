@@ -1,21 +1,24 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.31-r1.ebuild,v 1.1 2009/02/12 18:07:16 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.34.ebuild,v 1.1 2009/03/19 18:46:14 tommy Exp $
+
+EAPI="2"
 
 inherit eutils cmake-utils
 
-DESCRIPTION="A spam-resistant message board application for Freenet"
+DESCRIPTION="A spam-resistant #ssage board application for Freenet"
 HOMEPAGE="http://freenetproject.org/tools.html"
 SRC_URI="mirror://gentoo/${PN}-src-${PV}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="frost"
 
 DEPEND="virtual/libiconv
+	frost? ( >=dev-libs/libtomcrypt-1.17-r3[libtommath] )
 	>=dev-libs/poco-1.2.9
-	=dev-db/sqlite-3.6.6.2*"
+	|| ( =dev-db/sqlite-3.6.6.2* >=dev-db/sqlite-3.6.11 )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
@@ -25,16 +28,23 @@ pkg_setup() {
 	enewuser freenet -1 -1 /var/freenet freenet
 }
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/utf8.patch
+	sed -i "s:LTC_PKCS:LTC_LTC_PKCS:g" src/freenet/frostidentity.cpp
+}
+
+src_configure() {
 	local mycmakeargs="-DI_HAVE_READ_THE_README=ON \
 		-DUSE_BUNDLED_SQLITE=OFF \
-		-DDO_CHARSET_CONVERSION=ON"
-	cmake-utils_src_compile
+		-DDO_CHARSET_CONVERSION=ON \
+		$(cmake-utils_use frost FROST_SUPPORT)"
+	use frost && append-flags -DLTM_DESC
+	cmake-utils_src_configure
 }
 
 src_install() {
-	dobin ${PN}_build/fms || die
 	insinto /var/freenet/fms
+	dobin ${PN}_build/fms || die
 	doins {forum-,}template.htm || die "doinstall failed"
 	insinto /var/freenet/fms/fonts
 	doins fonts/*.bmp || die "doinstall of fonts failed"
@@ -48,12 +58,17 @@ src_install() {
 
 pkg_postinst() {
 	if ! has_version 'net-p2p/freenet' ; then
-		ewarn "FMS needs a freenet node to up-/download messages."
+		ewarn "FMS needs a freenet node to up-/download #ssages."
 		ewarn "Please make sure to have a node you can connect to"
 		ewarn "or install net-p2p/freenet to get FMS working."
 	fi
 	elog "By default, the FMS NNTP server will listen on port 1119,"
 	elog "and the web configuration interface will be running at"
 	elog "http://localhost:8080. For more information, read"
-	elog "${ROOT}/usr/share/doc/${PF}/readme.txt."
+	elog "${ROOT}usr/share/doc/${PF}/readme.txt.bz2"
+	if use frost; then
+		elog " "
+		elog "You need to enable frost on the config page"
+		elog "and restart fms for frost support."
+	fi
 }
