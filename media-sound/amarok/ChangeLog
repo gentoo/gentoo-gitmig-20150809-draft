@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.311 2009/03/16 10:24:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.312 2009/03/19 12:51:12 ranger Exp $
+
+  19 Mar 2009; Brent Baude <ranger@gentoo.org> amarok-1.4.10-r2.ebuild:
+  Marking amarok-1.4.10-r2 ppc for bug 254896
 
   16 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> amarok-2.0.1.1.ebuild:
   Remove redundant dep. Already handled by kdelibs.
