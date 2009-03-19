@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/tuxpaint-stamps
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint-stamps/ChangeLog,v 1.23 2009/03/19 14:17:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint-stamps/ChangeLog,v 1.24 2009/03/19 19:03:41 maekke Exp $
+
+  19 Mar 2009; Markus Meier <maekke@gentoo.org>
+  -tuxpaint-stamps-20071121.ebuild:
+  old
 
   19 Mar 2009; Brent Baude <ranger@gentoo.org>
   tuxpaint-stamps-20080630.ebuild:

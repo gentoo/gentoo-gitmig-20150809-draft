@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/tuxpaint
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.52 2009/03/19 14:10:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.53 2009/03/19 19:01:01 maekke Exp $
+
+  19 Mar 2009; Markus Meier <maekke@gentoo.org>
+  -files/tuxpaint-0.9.19-gentoo.patch, -files/tuxpaint-0.9.19-libpng.patch,
+  -files/tuxpaint-0.9.19-strip.patch, -tuxpaint-0.9.19.ebuild:
+  old
 
   19 Mar 2009; Brent Baude <ranger@gentoo.org> tuxpaint-0.9.20.ebuild:
   Marking tuxpaint-0.9.20 ppc for bug 256179
