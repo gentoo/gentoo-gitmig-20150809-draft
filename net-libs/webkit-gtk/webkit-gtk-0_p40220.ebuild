@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p40220.ebuild,v 1.4 2009/03/19 13:09:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p40220.ebuild,v 1.5 2009/03/19 17:22:01 klausman Exp $
 
-inherit autotools
+inherit autotools flag-o-matic
 
 MY_P="WebKit-r${PV/0\_p}"
 DESCRIPTION="Open source web browser engine"
