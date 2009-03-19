@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/openvas-libnasl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libnasl/ChangeLog,v 1.6 2009/02/13 22:44:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libnasl/ChangeLog,v 1.7 2009/03/19 13:36:17 ranger Exp $
+
+  19 Mar 2009; Brent Baude <ranger@gentoo.org> openvas-libnasl-2.0.1.ebuild:
+  Marking openvas-libnasl-2.0.1 ~ppc for bug 262366
 
 *openvas-libnasl-2.0.1 (13 Feb 2009)
 
