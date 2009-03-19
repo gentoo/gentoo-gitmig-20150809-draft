@@ -1,6 +1,15 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.110 2009/03/18 22:30:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.111 2009/03/19 19:25:17 gengor Exp $
+
+*djbdns-1.05-r23 (19 Mar 2009)
+
+  19 Mar 2009; Gordon Malm <gengor@gentoo.org>
+  +files/CVE2009-0858_0001-check-response-domain-name-length.patch,
+  +files/CVE2008-4392_0001-dnscache-merge-similar-outgoing-queries-ipv6.patc
+  h, +files/CVE2008-4392_0002-dnscache-cache-soa-records-ipv6.patch,
+  +djbdns-1.05-r23.ebuild:
+  Fix bug #260975. Fix bug #260014 when USE="ipv6".
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> djbdns-1.05-r22.ebuild:
   Marking djbdns-1.05-r22 ppc for bug 260014
