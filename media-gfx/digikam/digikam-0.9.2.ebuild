@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.2.ebuild,v 1.11 2008/05/17 19:24:38 armin76 Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.2.ebuild,v 1.12 2009/03/19 10:09:48 scarabeus Exp $
 
 inherit kde eutils
 

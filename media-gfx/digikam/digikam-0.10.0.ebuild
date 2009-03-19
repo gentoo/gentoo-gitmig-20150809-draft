@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0_rc2-r1.ebuild,v 1.2 2009/03/05 15:28:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0.ebuild,v 1.1 2009/03/19 10:09:48 scarabeus Exp $
 
 EAPI="2"
 
 KDE_MINIMAL="4.2"
 KDE_LINGUAS="ar be bg ca cs da de el es et eu fa fi fr ga gl he hi is it ja km
-ko lt lv lb nds ne nl nn pa pl pt pt_BR ro ru se sk sv th tr uk vi zh_CN zh_TW"
+ko lt lv lb nds ne nl nn pa pl pt pt_BR ro ru se sk sl sv th tr uk vi zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="A digital photo management application for KDE."
@@ -39,8 +39,6 @@ DEPEND="
 "
 #liblensfun when added should be also optional dep.
 RDEPEND="${DEPEND}"
-
-PATCHES=( "$FILESDIR/${PV}-browseImages.patch" )
 
 S="${WORKDIR}/${P/_/-}"
 
