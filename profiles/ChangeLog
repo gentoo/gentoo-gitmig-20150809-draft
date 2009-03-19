@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2448 2009/03/19 15:34:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2449 2009/03/19 17:25:51 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Mar 2009; MATSUU Takuto <matsuu@gentoo.org> package.mask:
+  Remove package.mask for =x11-wm/awesome-3.2*
 
   19 Mar 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Mask dev-tex/breqn for removal.

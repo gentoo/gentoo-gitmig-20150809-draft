@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9583 2009/03/19 15:34:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9584 2009/03/19 17:25:51 matsuu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -220,11 +220,6 @@ dev-lang/rubinius
 # I gave away maintainership a while ago nobody took it on. Prepare for remove.
 app-emulation/ganeti
 app-emulation/ganeti-instance-debian-etch
-
-# MATSUU Takuto <matsuu@gentoo.org> (07 Feb 2009)
-# Masked for testing
-=x11-wm/awesome-3.2*
-=x11-libs/xcb-util-0.3.3*
 
 # Hanno Böck <hanno@gentoo.org> (05 Feb 2009)
 # Seems something is broken with crypt mount in 1.17 (bug 257302)
