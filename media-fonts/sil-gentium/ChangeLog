@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sil-gentium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-gentium/ChangeLog,v 1.3 2009/02/13 14:51:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-gentium/ChangeLog,v 1.4 2009/03/19 14:33:48 ranger Exp $
+
+  19 Mar 2009; Brent Baude <ranger@gentoo.org> sil-gentium-1.0.2.ebuild:
+  stable ppc, bug 256159
 
   13 Feb 2009; Raúl Porcel <armin76@gentoo.org> sil-gentium-1.0.2.ebuild:
   Re-add ~s390/~sh
