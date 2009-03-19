@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.189 2009/03/16 13:45:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.190 2009/03/19 13:08:38 ranger Exp $
+
+  19 Mar 2009; Brent Baude <ranger@gentoo.org> asterisk-1.2.31.1.ebuild:
+  Marking asterisk-1.2.31.1 ppc for bug 250748
 
   16 Mar 2009; <chainsaw@gentoo.org>
   +files/1.6.0/asterisk-1.6.0.6-toolcheck-libs-not-ldflags.patch,
