@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.267 2009/01/31 15:26:06 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.268 2009/03/19 14:36:40 ranger Exp $
+
+  19 Mar 2009; Brent Baude <ranger@gentoo.org> eix-0.15.4.ebuild:
+  stable ppc, bug 261569
 
 *eix-0.15.4 (31 Jan 2009)
 
