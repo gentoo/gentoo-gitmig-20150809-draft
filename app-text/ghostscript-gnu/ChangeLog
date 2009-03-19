@@ -1,6 +1,17 @@
 # ChangeLog for app-text/ghostscript-gnu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.38 2008/11/17 20:27:41 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.39 2009/03/19 20:40:22 pva Exp $
+
+*ghostscript-gnu-8.62.0 (19 Mar 2009)
+
+  19 Mar 2009; Peter Volkov <pva@gentoo.org>
+  -files/ghostscript-afpl-8.54-cups-destdir.diff,
+  +files/ghostscript-gnu-8.62.0-CVE-2009-0583.patch,
+  +files/ghostscript-gnu-8.62.0-LDFLAGS-strip.patch, -files/gdevcups.patch,
+  -ghostscript-gnu-8.55.ebuild, -ghostscript-gnu-8.60.0.ebuild,
+  -ghostscript-gnu-8.60.0-r1.ebuild, +ghostscript-gnu-8.62.0.ebuild:
+  Fixed security issue: integer overflows in ICC library, bug #261087, thank
+  Robert Buchholz for report. Respect LDFLAGS. Remove old.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/ghostscript-CVE-2007-2721.patch:

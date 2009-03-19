@@ -1,10 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.60.0-r1.ebuild,v 1.3 2008/10/31 20:26:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.62.0.ebuild,v 1.1 2009/03/19 20:40:22 pva Exp $
 
-WANT_AUTOMAKE=1.9
-
-inherit autotools eutils versionator flag-o-matic
+inherit eutils versionator flag-o-matic
 
 DESCRIPTION="GNU Ghostscript - patched GPL Ghostscript"
 HOMEPAGE="http://www.gnu.org/software/ghostscript/"
@@ -13,14 +11,15 @@ MY_P=gnu-ghostscript-${PV}
 PVM=$(get_version_component_range 1-2)
 SRC_URI="cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200406.tar.gz
 		ftp://ftp.gyve.org/pub/gs-cjk/acro5-cmaps-2001.tar.gz )
-	mirror://gnu/ghostscript/${MY_P}.tar.bz2"
+	mirror://gnu/ghostscript/${MY_P}.tar.bz2
+	mirror://gentoo/ghostscript-gnu-8.62.0-CVE-2009-0583.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="X cups cjk gtk jpeg2k"
 
-DEP="virtual/libc
+DEP="
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.5
 	>=sys-libs/zlib-1.1.4
@@ -50,12 +49,9 @@ src_unpack() {
 		cd "${S}"/Resource
 		unpack adobe-cmaps-200406.tar.gz
 		unpack acro5-cmaps-2001.tar.gz
-		cd "${WORKDIR}"
 	fi
 
 	cd "${S}"
-
-	epatch "${FILESDIR}"/ghostscript-CVE-2007-2721.patch
 
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/${PVM}/$(get_libdir):" \
@@ -64,6 +60,9 @@ src_unpack() {
 		-e "s:docdir=.*:docdir=/usr/share/doc/${PF}/html:" \
 		-e "s:GS_DOCDIR=.*:GS_DOCDIR=/usr/share/doc/${PF}/html:" \
 		Makefile.in src/*.mak || die "sed failed"
+
+	epatch "${WORKDIR}/${P}-CVE-2009-0583.patch" #261087
+	epatch "${FILESDIR}/${P}-LDFLAGS-strip.patch"
 }
 
 src_compile() {
@@ -74,13 +73,12 @@ src_compile() {
 		--with-ijs \
 		--with-jbig2dec \
 		--disable-compile-inits \
-		--enable-dynamic \
-		|| die "econf failed"
+		--enable-dynamic
 
 	emake -j1 so all || die "emake failed"
 
-	cd ijs
-	econf || die "ijs econf failed"
+	cd ijs || die
+	econf
 	emake || die "ijs emake failed"
 }
 
