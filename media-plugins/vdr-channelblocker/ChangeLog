@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-channelblocker
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelblocker/ChangeLog,v 1.1 2009/03/19 08:33:18 zzam Exp $
+
+*vdr-channelblocker-0.0.5 (19 Mar 2009)
+
+  19 Mar 2009; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +vdr-channelblocker-0.0.5.ebuild:
+  Initial import of ebuild written by me.
+
