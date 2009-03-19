@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.590 2009/03/08 09:15:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.591 2009/03/19 14:37:22 josejx Exp $
+
+  19 Mar 2009; Joseph Jezak <josejx@gentoo.org>
+  gentoo-sources-2.6.27-r8.ebuild:
+  Marked ppc/ppc64 stable.
 
 *gentoo-sources-2.6.28-r3 (07 Mar 2009)
 
