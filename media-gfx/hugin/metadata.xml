@@ -4,8 +4,6 @@
 	<herd>graphics</herd>
 	<longdescription>hugin is a panorama stitching program</longdescription>
 	<use>
-		<flag name='enblend'>add support for nice image blending with
-		<pkg>media-gfx/enblend</pkg></flag>
 		<flag name='sift'>automatically align images with
 		<pkg>media-gfx/autopano-sift</pkg> or
 		<pkg>media-gfx/autopano-sift-C</pkg></flag>
