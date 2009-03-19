@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.0.ebuild,v 1.4 2009/01/30 17:41:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.0.ebuild,v 1.5 2009/03/19 13:39:18 ranger Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ SRC_URI="http://goodies.xfce.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="+dbus debug gstreamer hal +xfce"
 
 RDEPEND=">=dev-libs/libburn-0.4.2
