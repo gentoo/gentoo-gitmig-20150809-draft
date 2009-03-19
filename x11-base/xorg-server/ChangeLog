@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.384 2009/03/16 13:22:45 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.385 2009/03/19 17:51:11 solar Exp $
+
+  19 Mar 2009; <solar@gentoo.org> xorg-server-1.5.3-r5.ebuild:
+  - tie in the libXCalibrate to wrap up xtscal support when tslib is enabled
 
 *xorg-server-1.5.3-r5 (16 Mar 2009)
 
