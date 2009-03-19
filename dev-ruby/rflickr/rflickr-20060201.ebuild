@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rflickr/rflickr-20060201.ebuild,v 1.2 2007/03/04 00:13:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rflickr/rflickr-20060201.ebuild,v 1.3 2009/03/19 13:32:03 ranger Exp $
 
 inherit ruby gems
 
@@ -13,7 +13,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${MY_P}.gem"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.4
