@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.616 2009/03/19 09:38:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.617 2009/03/19 15:01:27 ranger Exp $
+
+  19 Mar 2009; Brent Baude <ranger@gentoo.org>
+  glibc-2.8_p20080602-r1.ebuild:
+  Marking glibc-2.8_p20080602-r1 ppc for bug 247553
 
   19 Mar 2009; Mike Frysinger <vapier@gentoo.org>
   files/eblits/pkg_setup.eblit, glibc-2.7-r2.ebuild,
