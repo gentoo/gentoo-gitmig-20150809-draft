@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.130.ebuild,v 1.1 2009/02/18 11:54:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.140.ebuild,v 1.1 2009/03/19 22:43:53 bicatali Exp $
 
 EAPI=2
 inherit eutils fortran autotools
@@ -35,6 +35,7 @@ src_prepare() {
 		mv cfortran.h cfortran.h.disabled
 	fi
 	epatch "${FILESDIR}"/${P}-autotools.patch
+	epatch "${FILESDIR}"/${P}-missing-include.patch
 	eautoreconf
 }
 
@@ -49,8 +50,8 @@ src_install () {
 	doins cookbook.c testprog.c speed.c smem.c || die "install examples failed"
 	use fortran && dodoc fitsio.doc && doins cookbook.f
 	if use doc; then
-		insinto /usr/share/doc/${PF}/
-		doins quick.ps cfitsio.ps fpack.pdf
+		insinto /usr/share/doc/${PF}
+		doins quick.ps cfitsio.ps fpackguide.pdf
 		use fortran && doins fitsio.ps
 	fi
 }
