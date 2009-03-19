@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.2.0_rc2.ebuild,v 1.1 2009/02/20 20:13:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.2.0.ebuild,v 1.1 2009/03/19 10:33:59 scarabeus Exp $
 
 EAPI="2"
 
 KDE_MINIMAL="4.2"
 OPENGL_REQUIRED="optional"
-KDE_LINGUAS="ar be ca cs da de el es et fr ga gl hi is it ja km lv ms nb nds nl
+KDE_LINGUAS="ar be ca cs da de el es et fr ga gl hi is it ja km lt lv ms nb nds nl
 nn oc pa pl pt pt_BR ro ru se sk sv th tr uk zn_CN"
 inherit kde4-base
 
@@ -45,11 +45,6 @@ RDEPEND="${DEPEND}
 	imagemagick? ( media-gfx/imagemagick )
 	mjpeg? ( media-video/mjpegtools )
 "
-
-#bug #259390
-PATCHES=(
-	"${FILESDIR}/playbackwidget-qt45.patch"
-)
 
 S="${WORKDIR}/${MY_P}"
 
