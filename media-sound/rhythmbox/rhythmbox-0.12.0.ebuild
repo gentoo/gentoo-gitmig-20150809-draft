@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.99.3.ebuild,v 1.1 2009/03/18 22:58:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.0.ebuild,v 1.1 2009/03/19 22:10:27 eva Exp $
 
 EAPI="2"
 
 inherit eutils gnome2 python multilib virtualx
 
-SRC_URI="http://methlab42.itee.uq.edu.au/~jonathan/${P}.tar.bz2"
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
@@ -140,11 +139,6 @@ pkg_postinst() {
 	ewarn "If ${PN} doesn't play some music format, please check your"
 	ewarn "USE flags on media-plugins/gst-plugins-meta"
 	ewarn
-
-	elog "The aac flag has been removed from rhythmbox."
-	elog "This is due to stabilization issues with any gst-bad plugins."
-	elog "Please emerge gst-plugins-bad and gst-plugins-faad to be able to play m4a files"
-	elog "See bug #159538 for more information"
 }
 
 pkg_postrm() {
