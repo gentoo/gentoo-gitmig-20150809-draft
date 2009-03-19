@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r5.ebuild,v 1.5 2009/03/03 03:57:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r5.ebuild,v 1.6 2009/03/19 14:27:00 ranger Exp $
 
 inherit flag-o-matic eutils autotools multilib
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ppc ~ppc64 sparc x86"
 IUSE="kde openal xscreensaver"
 
 RDEPEND="${RDEPEND}
