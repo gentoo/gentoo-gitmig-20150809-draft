@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gnome-backgrounds
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.104 2009/03/18 15:10:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.105 2009/03/19 22:43:33 eva Exp $
+
+*gnome-backgrounds-2.24.1 (19 Mar 2009)
+
+  19 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-backgrounds-2.24.1.ebuild:
+  Bump to 2.24.1. Background for gnome 2.26 (no you read well...)
 
   18 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   gnome-backgrounds-2.24.0.ebuild:
