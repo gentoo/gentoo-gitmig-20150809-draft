@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4287 2009/03/19 18:47:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4288 2009/03/19 19:27:39 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1249,7 +1249,6 @@ media-gfx/graphviz:cgraph -  Enables cgraph (PostScript plotting library in C) l
 media-gfx/graphviz:pango -  Enables the rendering of the graphs using pango & cairo (with antialiasing support) 
 media-gfx/gthumb:iptc -  Add support for IPTC metadata 
 media-gfx/gwenview:kipi -  Support for the KDE Image Plugin Interface. 
-media-gfx/hugin:enblend - add support for nice image blending with media-gfx/enblend
 media-gfx/hugin:sift - automatically align images with media-gfx/autopano-sift or media-gfx/autopano-sift-C
 media-gfx/imagemagick:corefonts -  pull in media-fonts/corefonts, which is required for some commands 
 media-gfx/imagemagick:fpx -  enable media-libs/libfpx support 
