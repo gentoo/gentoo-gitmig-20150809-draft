@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9582 2009/03/18 18:19:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9583 2009/03/19 15:34:20 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (19 Mar 2009)
+# No longer maintained as a separate package, use dev-tex/mh instead.
+# Masked for removal in 30 days, bug 262934.
+dev-tex/breqn
 
 # Ulrich Mueller <ulm@gentoo.org> (18 Mar 2009)
 # Depends on teTeX. Fails to build.
