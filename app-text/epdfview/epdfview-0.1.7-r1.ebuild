@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.7.ebuild,v 1.1 2009/03/19 22:37:29 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/epdfview-0.1.7-r1.ebuild,v 1.1 2009/03/19 23:51:39 loki_val Exp $
 
 EAPI="2"
 
-inherit gnome2
+inherit gnome2 flag-o-matic
 
 DESCRIPTION="Lightweight PDF viewer using Poppler and GTK+ libraries."
 HOMEPAGE="http://trac.emma-soft.com/epdfview/"
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	G2CONF=$(use_with cups)
 	DOCS="AUTHORS NEWS README THANKS"
+	append-flags -O0
 }
 
 src_prepare() {
@@ -36,7 +37,6 @@ src_prepare() {
 
 src_install() {
 	gnome2_src_install
-	find "${D}" -name 'icon_epdfview-*.png' -delete
 	for size in 24 32 48
 	do
 		icnsdir="/usr/share/icons/hicolor/${size}x${size}/apps/"
