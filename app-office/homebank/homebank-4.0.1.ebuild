@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.0.1.ebuild,v 1.1 2008/12/27 19:11:17 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.0.1.ebuild,v 1.2 2009/03/19 17:21:13 josejx Exp $
 
 inherit autotools fdo-mime
 
@@ -10,7 +10,7 @@ SRC_URI="http://homebank.free.fr/public/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="ofx"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND=">=x11-libs/gtk+-2.10
 	>=dev-libs/glib-2.12
