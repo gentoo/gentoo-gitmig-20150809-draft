@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.28 2009/03/16 20:56:57 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.29 2009/03/19 13:15:45 ranger Exp $
+
+  19 Mar 2009; Brent Baude <ranger@gentoo.org> libisofs-0.6.12.ebuild:
+  Marking libisofs-0.6.12 ppc for bug 254947
 
 *libisofs-0.6.16 (16 Mar 2009)
 
