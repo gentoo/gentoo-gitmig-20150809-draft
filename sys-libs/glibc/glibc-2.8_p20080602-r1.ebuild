@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.8_p20080602-r1.ebuild,v 1.10 2009/03/08 20:32:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.8_p20080602-r1.ebuild,v 1.11 2009/03/19 09:38:31 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -226,6 +226,17 @@ pkg_setup() {
 			eerror "Sanity check to keep you from breaking your system:"
 			eerror " Downgrading glibc is not supported and a sure way to destruction"
 			die "aborting to save your system"
+		fi
+
+		# Check for broken kernels #262698
+		cd "${T}"
+		printf '#include <pwd.h>\nint main(){return getpwuid(0)==0;}\n' > kern-clo-test.c
+		emake kern-clo-test || die
+		if ! ./kern-clo-test ; then
+			eerror "Your patched vendor kernel is broken.  You need to get an"
+			eerror "update from whoever is providing the kernel to you."
+			eerror "http://sourceware.org/bugzilla/show_bug.cgi?id=5227"
+			die "keeping your system alive, say thank you"
 		fi
 	fi
 
