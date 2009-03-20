@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11.ebuild,v 1.7 2007/07/22 07:54:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11.ebuild,v 1.8 2009/03/20 19:42:29 zmedico Exp $
 
 inherit eutils
 
@@ -32,8 +32,6 @@ findtclver() {
 	[ -n "$*" ] && ACCEPTVER="$*"
 	for i in ${ACCEPTVER}; do
 		use debug && einfo "Testing TCL ${i}"
-		# we support being more specific
-		[ "$(#i)" = "3" ] && i="${i}*"
 		has_version ">=dev-lang/tcl-${i}" && mytclver=${i}
 	done
 	use debug && einfo "Using TCL ${mytclver}"
