@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p102.ebuild,v 1.2 2009/03/16 15:21:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p102.ebuild,v 1.3 2009/03/20 16:39:05 voyageur Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="strip"
-IUSE="arts cups esd +nxclient"
+IUSE="arts cups esd +nxclient rdesktop vnc"
 
 DEPEND="x11-misc/gccmakedep
 	x11-misc/imake"
@@ -38,6 +38,9 @@ RDEPEND="dev-tcltk/expect
 	!nxclient? ( !net-misc/nxclient
 				 || ( x11-misc/xdialog
 					  x11-apps/xmessage ) )
+	rdesktop? ( net-misc/rdesktop )
+	vnc? ( x11-misc/x11vnc
+		   || ( net-misc/tightvnc net-misc/vnc ) )
 	!net-misc/nxserver-freeedition
 	!net-misc/nxserver-2xterminalserver"
 

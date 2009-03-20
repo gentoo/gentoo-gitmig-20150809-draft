@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.60 2009/03/16 15:21:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.61 2009/03/20 16:39:05 voyageur Exp $
+
+  20 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  nxserver-freenx-0.7.3_p102.ebuild:
+  Add rdesktop and vnc USE flags, change depends for vnc as discussed in bug
+  #262147
 
   16 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
   nxserver-freenx-0.7.3_p102.ebuild:
