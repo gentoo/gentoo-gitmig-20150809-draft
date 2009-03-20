@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/nini
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nini/ChangeLog,v 1.7 2009/01/26 20:45:38 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nini/ChangeLog,v 1.8 2009/03/20 03:40:41 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing compnerd as a maintainer since he was retired.
 
 *nini-1.1.0-r2 (26 Jan 2009)
 
