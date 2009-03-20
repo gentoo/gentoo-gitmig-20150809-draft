@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2452 2009/03/20 14:49:38 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2453 2009/03/20 22:11:32 zmedico Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Mar 2009; Zac Medico <zmedico@gentoo.org> license_groups:
+  Add more licenses to GPL-COMPATIBLE and create new FSF-APPROVED and
+  OSI-APPROVED license groups. Thanks to Marek Aaron Sapota
+  <projects.gg.aaron@gmail.com> for submitting these changes (bug #152593).
 
   20 Mar 2009; Alex Legler <a3li@gentoo.org> package.mask:
   Masking Ruby 1.9.1 and a special Rubygems version for testing
