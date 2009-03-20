@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-serverstats
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-serverstats/ChangeLog,v 1.19 2009/02/27 16:57:23 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-serverstats/ChangeLog,v 1.20 2009/03/20 15:54:04 armin76 Exp $
+
+  20 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  gmpc-serverstats-0.17.0.ebuild:
+  x86 stable wrt #259793
 
   27 Feb 2009; Tiago Cunha <tcunha@gentoo.org>
   gmpc-serverstats-0.17.0.ebuild:

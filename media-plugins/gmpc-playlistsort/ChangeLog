@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-playlistsort
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-playlistsort/ChangeLog,v 1.2 2009/02/27 16:55:44 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-playlistsort/ChangeLog,v 1.3 2009/03/20 15:53:27 armin76 Exp $
+
+  20 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  gmpc-playlistsort-0.17.0.ebuild:
+  x86 stable wrt #259793
 
   27 Feb 2009; Tiago Cunha <tcunha@gentoo.org>
   gmpc-playlistsort-0.17.0.ebuild:
