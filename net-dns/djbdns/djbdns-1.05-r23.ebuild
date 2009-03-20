@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r23.ebuild,v 1.1 2009/03/19 19:25:17 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r23.ebuild,v 1.2 2009/03/20 10:36:21 gengor Exp $
 
 IUSE="doc ipv6 selinux static"
 
@@ -44,6 +44,9 @@ src_unpack() {
 		"${FILESDIR}/dnsroots.patch" \
 		"${FILESDIR}/dnstracesort.patch"
 
+	# Fix CVE2009-0858
+	epatch "${FILESDIR}/CVE2009-0858_0001-check-response-domain-name-length.patch"
+
 	if use ipv6; then
 		elog "At present dnstrace does NOT support IPv6. It will"\
 		     "be compiled without IPv6 support."
@@ -56,9 +59,6 @@ src_unpack() {
 			"${FILESDIR}/CVE2008-4392_0001-dnscache-merge-similar-outgoing-queries-ipv6.patch" \
 			"${FILESDIR}/CVE2008-4392_0002-dnscache-cache-soa-records-ipv6.patch"
 
-		# Fix CVE2009-0858
-		epatch "${FILESDIR}/CVE2009-0858_0001-check-response-domain-name-length.patch"
-
 		cd "${S}-noipv6"
 	fi
 
@@ -66,9 +66,6 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}/CVE2008-4392_0001-dnscache-merge-similar-outgoing-queries.patch" \
 		"${FILESDIR}/CVE2008-4392_0002-dnscache-cache-soa-records.patch"
-
-	# Fix CVE2009-0858
-	epatch "${FILESDIR}/CVE2009-0858_0001-check-response-domain-name-length.patch"
 
 	epatch "${FILESDIR}/${PV}-errno.patch"
 
