@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ruby-debug-base-0.10.3.ebuild,v 1.1 2008/12/28 13:18:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ruby-debug-base-0.10.3.ebuild,v 1.2 2009/03/20 05:08:58 josejx Exp $
 
 inherit ruby gems
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://rubyforge.org/projects/ruby-debug/"
 SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="ruby-debug"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.4
