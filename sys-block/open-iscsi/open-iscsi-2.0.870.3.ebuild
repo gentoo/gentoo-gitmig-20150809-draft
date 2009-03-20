@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.870.ebuild,v 1.1 2008/11/17 20:58:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.870.3.ebuild,v 1.1 2009/03/20 16:23:49 dertobi123 Exp $
 
-inherit versionator linux-mod eutils flag-o-matic toolchain-funcs
+inherit versionator linux-mod eutils flag-o-matic
 
 DESCRIPTION="Open-iSCSI is a high performance, transport independent, multi-platform implementation of RFC3720"
 HOMEPAGE="http://www.open-iscsi.org/"
@@ -45,18 +45,18 @@ src_compile() {
 
 	einfo "Building fwparam_ibft"
 	cd "${S}"/utils/fwparam_ibft && \
-	CFLAGS="" emake OPTFLAGS="${CFLAGS}" CC="$(tc-getCC)" \
+	CFLAGS="" emake OPTFLAGS="${CFLAGS}" \
 		|| die "emake failed"
 
 	einfo "Building userspace"
 	cd "${S}"/usr && \
-	CFLAGS="" emake OPTFLAGS="${CFLAGS}" CC="$(tc-getCC)" \
+	CFLAGS="" emake OPTFLAGS="${CFLAGS}" \
 		|| die "emake failed"
 
 	if use utils; then
 		einfo "Building utils"
 		cd "${S}"/utils && \
-		CFLAGS="" emake OPTFLAGS="${CFLAGS}" CC="$(tc-getCC)" \
+		CFLAGS="" emake OPTFLAGS="${CFLAGS}" \
 			|| die "emake failed"
 	fi
 }
@@ -85,10 +85,27 @@ src_install() {
 	einfo "Installing configuration"
 	insinto /etc/iscsi
 	doins etc/iscsid.conf
-	doins "${FILESDIR}"/initiatorname.iscsi
+
+	# only contains iscsi initiatorname, no need to update
+	if [ ! -e /etc/iscsi/initiatorname.iscsi ]; then
+		doins "${FILESDIR}"/initiatorname.iscsi
+	fi
+
+	# if there is a special conf.d for this version, use it
+	# otherwise, use the default: iscsid-conf.d
 	insinto /etc/conf.d
-	newins "${FILESDIR}"/iscsid-${PV}.conf.d iscsid
-	newinitd "${FILESDIR}"/iscsid-${PV}.init.d iscsid
+	if [ -e "${FILESDIR}"/iscsid-${PV}.conf.d ]; then
+		newins "${FILESDIR}"/iscsid-${PV}.conf.d iscsid
+	else
+		newins "${FILESDIR}"/iscsid-conf.d iscsid
+	fi
+
+	# same for init.d	
+	if [ -e "${FILESDIR}"/iscsid-${PV}.init.d ]; then
+		newinitd "${FILESDIR}"/iscsid-${PV}.init.d iscsid
+	else
+		newinitd "${FILESDIR}"/iscsid-init.d iscsid
+	fi
 
 	keepdir /var/db/iscsi
 	fperms 700 /var/db/iscsi
