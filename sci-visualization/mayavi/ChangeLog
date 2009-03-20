@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.6 2009/02/25 12:00:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.7 2009/03/20 21:02:17 bicatali Exp $
+
+  20 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org> mayavi-3.1.0.ebuild:
+  Introduce wxwindows and qt4 flags to enforce opengl, closing bug #261402
 
   25 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org> -mayavi-1.5.ebuild,
   mayavi-1.5-r1.ebuild:
