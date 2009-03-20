@@ -1,8 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.387 2009/03/20 04:58:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.388 2009/03/20 05:00:41 josejx Exp $
 
-  20 Mar 2009; Joseph Jezak <josejx@gentoo.org> ruby-1.8.7_p72-r10.ebuild:
+  20 Mar 2009; Joseph Jezak <josejx@gentoo.org> ruby-1.8.7_p72-r10.ebuild,
+  ruby-1.8.6_p287-r12.ebuild:
   Marked ~ppc for bug #252315.
 
   10 Mar 2009; Alex Legler <a3li@gentoo.org> ruby-1.8.7_p72-r10.ebuild:
@@ -17,7 +18,7 @@
 
 *ruby-1.8.7_p72-r10 (07 Mar 2009)
 
-  07 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  07 Mar 2009; Diego E. PettenÃ² <flameeyes@gentoo.org>
   +ruby-1.8.7_p72-r10.ebuild:
   Add a revision of ruby 1.8.7 using eselect ruby.
 
@@ -28,7 +29,7 @@
   ruby-1.8.6_p287-r5.ebuild:
   ppc stable, bug #260006
 
-  25 Feb 2009; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6_p287-r5.ebuild:
+  25 Feb 2009; RaÃºl Porcel <armin76@gentoo.org> ruby-1.8.6_p287-r5.ebuild:
   arm/ia64/s390/sh/sparc/x86 stable wrt #260006
 
   24 Feb 2009; Alex Legler <a3li@gentoo.org> ruby-1.8.6_p287-r5.ebuild,
@@ -61,7 +62,7 @@
   now before compilation if Tk useflags don't match) and 230748 (adding
   --enable-option-checking=no for newer versions of autoconf).
 
-  10 Feb 2009; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6_p287-r4.ebuild:
+  10 Feb 2009; RaÃºl Porcel <armin76@gentoo.org> ruby-1.8.6_p287-r4.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #254307
 
   25 Jan 2009; Tobias Klausmann <klausman@gentoo.org>
@@ -99,7 +100,7 @@
   29 Dec 2008; Brent Baude <ranger@gentoo.org> ruby-1.8.6_p287-r10.ebuild:
   Marking ruby-1.8.6_p287-r10 ~ppc64 for bug 252315
 
-  26 Dec 2008; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6_p287-r10.ebuild:
+  26 Dec 2008; RaÃºl Porcel <armin76@gentoo.org> ruby-1.8.6_p287-r10.ebuild:
   Add ~alpha/~arm/~ia64/~s390/~sh wrt #251159
 
   24 Dec 2008; Friedrich Oslage <bluebird@gentoo.org>
@@ -173,7 +174,7 @@
   ruby-1.8.6_p287-r1.ebuild:
   amd64 stable wrt security bug #225465
 
-  11 Sep 2008; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6_p287-r1.ebuild:
+  11 Sep 2008; RaÃºl Porcel <armin76@gentoo.org> ruby-1.8.6_p287-r1.ebuild:
   alpha/ia64/x86 stable wrt #225465
 
   11 Sep 2008; Ferris McCormick <fmccor@gentoo.org>
@@ -274,7 +275,7 @@
   ruby-1.8.6_p114.ebuild:
   ppc stable, bug #212264
 
-  05 Mar 2008; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6_p114.ebuild:
+  05 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> ruby-1.8.6_p114.ebuild:
   alpha/ia64 stable wrt #212264
 
   05 Mar 2008; Christian Faulhammer <opfer@gentoo.org>
@@ -296,7 +297,7 @@
   -ruby-1.8.5_p113.ebuild, +ruby-1.8.6_p114.ebuild:
   Version bump for #212264. Remove old ebuilds.
 
-  17 Feb 2008; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6_p111-r1.ebuild:
+  17 Feb 2008; RaÃºl Porcel <armin76@gentoo.org> ruby-1.8.6_p111-r1.ebuild:
   alpha/ia64 stable wrt #208916
 
   17 Feb 2008; nixnut <nixnut@gentoo.org> ruby-1.8.6_p111-r1.ebuild:
@@ -323,7 +324,7 @@
   26 Dec 2007; Peter Weller <welp@gentoo.org> ruby-1.8.6_p111.ebuild:
   Stable on amd64; bug 199191
 
-  24 Dec 2007; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6_p111.ebuild:
+  24 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> ruby-1.8.6_p111.ebuild:
   alpha/ia64/sparc stable wrt #199191
 
   24 Dec 2007; Hans de Graaff <graaff@gentoo.org> ruby-1.8.6_p111-r1.ebuild:
@@ -377,7 +378,7 @@
   08 Oct 2007; Jeroen Roovers <jer@gentoo.org> ruby-1.8.6_p110-r1.ebuild:
   Stable for HPPA (bug #194236).
 
-  08 Oct 2007; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6_p110-r1.ebuild:
+  08 Oct 2007; RaÃºl Porcel <armin76@gentoo.org> ruby-1.8.6_p110-r1.ebuild:
   alpha/ia64/sparc stable wrt security #194236
 
   07 Oct 2007; Tobias Scherbaum <dertobi123@gentoo.org>
@@ -420,7 +421,7 @@
 
 *ruby-1.8.6_p36-r4 (26 Aug 2007)
 
-  26 Aug 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  26 Aug 2007; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   +ruby-1.8.6_p36-r4.ebuild:
   Use user LDFLAGS, #181436
 
@@ -435,7 +436,7 @@
   Remove some older versions that will not be promoted to stable, keeping at
   least one version of each release.
 
-  05 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
+  05 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org>
   ruby-1.8.6_p36-r3.ebuild:
   (QA) RESTRICT clean up.
 
@@ -445,7 +446,7 @@
   +files/ruby-1.8.6-memory-leak.diff, +ruby-1.8.6_p36-r3.ebuild:
   fixed memory leak loading .so bug #182946
 
-  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org> ruby-1.8.4-r3.ebuild,
+  02 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org> ruby-1.8.4-r3.ebuild,
   ruby-1.8.5_p2.ebuild, ruby-1.8.5_p2-r1.ebuild, ruby-1.8.5_p12.ebuild,
   ruby-1.8.5_p35.ebuild, ruby-1.8.6-r1.ebuild, ruby-1.8.6_p36-r1.ebuild,
   ruby-1.8.6_p36-r2.ebuild:
@@ -457,7 +458,7 @@
   21 Jun 2007; Christoph Mende <angelos@gentoo.org> ruby-1.8.6-r1.ebuild:
   Back to ~amd64 wrt bug 181110
 
-  21 Jun 2007; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6-r1.ebuild:
+  21 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> ruby-1.8.6-r1.ebuild:
   Mark 1.8.6 unstable on alpha/ia64/x86 wrt #181110
 
 *ruby-1.8.6_p36-r2 (20 Jun 2007)
@@ -490,7 +491,7 @@
   09 Jun 2007; Jeroen Roovers <jer@gentoo.org> ruby-1.8.6-r1.ebuild:
   Stable for HPPA (bug #181110).
 
-  09 Jun 2007; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6-r1.ebuild:
+  09 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> ruby-1.8.6-r1.ebuild:
   alpha/ia64/x86 stable wrt #181110
 
   07 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> ruby-1.8.6-r1.ebuild:
@@ -531,7 +532,7 @@
   Stable on sparc --- Bug #178346 --- fixes Bug #159922 (uses
   /usr/bin/install).
 
-  13 May 2007; Raúl Porcel <armin76@gentoo.org> ruby-1.8.5_p2-r1.ebuild:
+  13 May 2007; RaÃºl Porcel <armin76@gentoo.org> ruby-1.8.5_p2-r1.ebuild:
   ia64 + x86 stable wrt bug 178346
 
 *ruby-1.8.5_p2-r1 (13 May 2007)
@@ -553,7 +554,7 @@
   ruby-1.8.6_pre1.ebuild, ruby-1.8.6_pre3.ebuild, ruby-1.8.6.ebuild:
   Fix $ROOT usage. Bug #167271
 
-  07 Apr 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  07 Apr 2007; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   ruby-1.8.4-r3.ebuild, ruby-1.8.5_p2.ebuild, ruby-1.8.5_p12.ebuild,
   ruby-1.8.5_p35.ebuild, ruby-1.8.6_pre1.ebuild, ruby-1.8.6_pre3.ebuild,
   ruby-1.8.6.ebuild:
@@ -579,7 +580,7 @@
 
 *ruby-1.8.6_pre1 (17 Feb 2007)
 
-  17 Feb 2007; Diego Pettenò <flameeyes@gentoo.org>
+  17 Feb 2007; Diego PettenÃ² <flameeyes@gentoo.org>
   +ruby-1.8.6_pre1.ebuild:
   Bump to the preview version, but without CJK support for now because
   Onigurama hasn't been updated yet. Thanks to M. Edward Borasky in bug
@@ -596,22 +597,22 @@
   ruby-1.8.5_p2.ebuild, ruby-1.8.5_p12.ebuild:
   Replacing einfo with elog
 
-  28 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  28 Jan 2007; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   ruby-1.8.5_p2.ebuild, ruby-1.8.5_p12.ebuild:
   ruby-1.8.5 should use >=ruby-config-0.3.1 for ri symlink, #164136
 
-  04 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.4-r3.ebuild:
+  04 Jan 2007; Diego PettenÃ² <flameeyes@gentoo.org> ruby-1.8.4-r3.ebuild:
   Get rid of debug.eclass usage.
 
   01 Jan 2007; Fabian Groffen <grobian@gentoo.org> ruby-1.8.4-r3.ebuild,
   ruby-1.8.5_p2.ebuild, ruby-1.8.5_p12.ebuild:
   Dropped ppc-macos keyword, see you in prefix
 
-  29 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  29 Dec 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   ruby-1.8.5_p12.ebuild:
   keepdir /usr/lib/ruby/site_ruby, #90510
 
-  25 Dec 2006; Diego Pettenò <flameeyes@gentoo.org>
+  25 Dec 2006; Diego PettenÃ² <flameeyes@gentoo.org>
   -files/ruby-1.8.5-cgi-dos-1.patch, -files/oniguruma-2.3.1-gentoo.patch,
   -ruby-1.8.4-r1.ebuild, -ruby-1.8.5.ebuild, -ruby-1.8.5-r1.ebuild,
   -ruby-1.8.5-r2.ebuild, -ruby-1.8.5-r3.ebuild:
@@ -619,10 +620,10 @@
 
 *ruby-1.8.5_p12 (25 Dec 2006)
 
-  25 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> +ruby-1.8.5_p12.ebuild:
+  25 Dec 2006; Diego PettenÃ² <flameeyes@gentoo.org> +ruby-1.8.5_p12.ebuild:
   Version bump, thanks to M. Edward Borasky in bug #158458.
 
-  14 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  14 Dec 2006; Nguyá»n ThÃ¡i Ngá»c Duy <pclouds@gentoo.org>
   ruby-1.8.5_p2.ebuild:
   Fixed undefined variable MY_PV causing origuruma silently failed to install.
   Also upgrade to origuruma 2.5.7. Patch by Hannes Wyss <hwyss@ywesee.com> (bug
@@ -638,7 +639,7 @@
   ruby-1.8.5_p2.ebuild:
   ppc stable, bug #157048
 
-  04 Dec 2006; Alexander H. Færøy <eroyf@gentoo.org> ruby-1.8.5_p2.ebuild:
+  04 Dec 2006; Alexander H. FÃ¦rÃ¸y <eroyf@gentoo.org> ruby-1.8.5_p2.ebuild:
   Stable on Alpha; bug #157048
 
   04 Dec 2006; Brent Baude <ranger@gentoo.org> ruby-1.8.5_p2.ebuild:
@@ -652,16 +653,16 @@
 
 *ruby-1.8.5_p2 (04 Dec 2006)
 
-  04 Dec 2006; Diego Pettenò <flameeyes@gentoo.org> +ruby-1.8.5_p2.ebuild:
+  04 Dec 2006; Diego PettenÃ² <flameeyes@gentoo.org> +ruby-1.8.5_p2.ebuild:
   Version bump to fix the new security issue with cgi.rb. Bug #157048.
 
-  25 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> ruby-1.8.5-r3.ebuild:
+  25 Nov 2006; Bryan Ãstergaard <kloeri@gentoo.org> ruby-1.8.5-r3.ebuild:
   Stable on ia64.
 
   15 Nov 2006; Markus Rothe <corsair@gentoo.org> ruby-1.8.5-r3.ebuild:
   Stable on ppc64; bug #153497
 
-  13 Nov 2006; René Nussbaumer <killerfox@gentoo.org> ruby-1.8.5-r3.ebuild:
+  13 Nov 2006; RenÃ© Nussbaumer <killerfox@gentoo.org> ruby-1.8.5-r3.ebuild:
   Stable on hppa. See bug #153497.
 
   08 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> ruby-1.8.5-r3.ebuild:
@@ -674,7 +675,7 @@
   08 Nov 2006; Joshua Jackson <tsunam@gentoo.org> ruby-1.8.5-r3.ebuild:
   Stable x86; bug #153497
 
-  07 Nov 2006; Alexander H. Færøy <eroyf@gentoo.org> ruby-1.8.5-r3.ebuild:
+  07 Nov 2006; Alexander H. FÃ¦rÃ¸y <eroyf@gentoo.org> ruby-1.8.5-r3.ebuild:
   Stable on Alpha. Bug 153497
 
   07 Nov 2006; Ferris McCormick <fmccor@gentoo.org> ruby-1.8.5-r3.ebuild:
@@ -683,11 +684,11 @@
 
 *ruby-1.8.5-r3 (07 Nov 2006)
 
-  07 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  07 Nov 2006; Diego PettenÃ² <flameeyes@gentoo.org>
   +files/ruby-1.8.5-cgi-dos-1.patch, +ruby-1.8.5-r3.ebuild:
   Revision bump adding the patch for CVE-2006-5467. See bug #153497.
 
-  07 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.4-r3.ebuild,
+  07 Nov 2006; Diego PettenÃ² <flameeyes@gentoo.org> ruby-1.8.4-r3.ebuild,
   ruby-1.8.5.ebuild, ruby-1.8.5-r1.ebuild, ruby-1.8.5-r2.ebuild:
   Add WANT_AUTO* variables.
 
@@ -700,19 +701,19 @@
   18 Oct 2006; Roy Marples <uberlord@gentoo.org> ruby-1.8.5-r2.ebuild:
   Added ~sparc-fbsd keyword.
 
-  13 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.4-r1.ebuild,
+  13 Oct 2006; Diego PettenÃ² <flameeyes@gentoo.org> ruby-1.8.4-r1.ebuild,
   ruby-1.8.4-r3.ebuild, ruby-1.8.5.ebuild, ruby-1.8.5-r1.ebuild,
   ruby-1.8.5-r2.ebuild:
   Remove autoconf dependencies, and leave them to autotools eclass.
 
-  12 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.4-r1.ebuild,
+  12 Oct 2006; Diego PettenÃ² <flameeyes@gentoo.org> ruby-1.8.4-r1.ebuild,
   ruby-1.8.4-r3.ebuild, ruby-1.8.5.ebuild, ruby-1.8.5-r1.ebuild,
   ruby-1.8.5-r2.ebuild:
   Remove again gnuconfig calls, please don't add them back again.
 
 *ruby-1.8.5-r2 (09 Oct 2006)
 
-  09 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +ruby-1.8.5-r2.ebuild:
+  09 Oct 2006; Diego PettenÃ² <flameeyes@gentoo.org> +ruby-1.8.5-r2.ebuild:
   Mask again -fomit-frame-poointer as per bug #150413 and #148965
 
 *ruby-1.8.5-r1 (06 Oct 2006)
@@ -744,10 +745,10 @@
   05 Sep 2006; Joshua Kinard <kumba@gentoo.org> ruby-1.8.4-r3.ebuild:
   Marked stable on mips.
 
-  02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.5.ebuild:
+  02 Sep 2006; Diego PettenÃ² <flameeyes@gentoo.org> ruby-1.8.5.ebuild:
   Remove findutils dependency, again.
 
-  02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.5.ebuild:
+  02 Sep 2006; Diego PettenÃ² <flameeyes@gentoo.org> ruby-1.8.5.ebuild:
   Re-add ~x86-fbsd keyword that was removed somehow.
 
   30 Aug 2006; Caleb Tennis <caleb@gentoo.org> -ruby-1.8.4.20060529.ebuild,
@@ -784,7 +785,7 @@
   02 Jul 2006; Daniel Black <dragonheart@gentoo.org> Manifest:
   regen Manifest to not contain missing ruby-1.8.5_pre1.ebuild.orig
 
-  26 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.5_pre1.ebuild:
+  26 Jun 2006; Diego PettenÃ² <flameeyes@gentoo.org> ruby-1.8.5_pre1.ebuild:
   Cleanup by removing deprecated gnuconfig, call autoconf explicitely, update
   dependencies, add -fno-strict-aliasing.
 
@@ -802,15 +803,15 @@
   30 May 2006; Caleb Tennis <caleb@gentoo.org> +ruby-1.8.4.20060529.ebuild:
   Snapshot bump
 
-  28 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  28 May 2006; Diego PettenÃ² <flameeyes@gentoo.org>
   ruby-1.8.4.20060226.ebuild:
   Respect LDFLAGS but filter -Bdirect for some libraries.
 
-  28 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  28 May 2006; Diego PettenÃ² <flameeyes@gentoo.org>
   ruby-1.8.4.20060226.ebuild:
   Fix quoting.
 
-  27 May 2006; Diego Pettenò <flameeyes@gentoo.org>
+  27 May 2006; Diego PettenÃ² <flameeyes@gentoo.org>
   ruby-1.8.4.20060226.ebuild:
   Drop dependency over findutils to avoid dependency on FreeBSD (it's in system).
 
@@ -827,7 +828,7 @@
   29 Apr 2006; Simon Stelling <blubb@gentoo.org> ruby-1.8.4-r1.ebuild:
   stable on amd64 wrt bug 130657
 
-  31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
+  31 Mar 2006; Diego PettenÃ² <flameeyes@gentoo.org>
   ruby-1.8.4.20060226.ebuild:
   Add ~x86-fbsd keyword.
 
@@ -859,7 +860,7 @@
   ruby-1.8.3.ebuild, ruby-1.8.4.ebuild, ruby-1.8.4-r1.ebuild:
   adding RESTRICT=confcache to ebuilds per bug #122966
 
-  04 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.4-r1.ebuild:
+  04 Feb 2006; Diego PettenÃ² <flameeyes@gentoo.org> ruby-1.8.4-r1.ebuild:
   Remove GNUish cp -d call.
 
   31 Jan 2006; Aron Griffis <agriffis@gentoo.org> ruby-1.8.4-r1.ebuild:
@@ -917,7 +918,7 @@
   ruby-1.8.3.ebuild, ruby-1.8.4_pre2.ebuild:
   Patch ebuilds to install ri docs if doc use flag is installed
 
-  07 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.4_pre2.ebuild:
+  07 Dec 2005; Diego PettenÃ² <flameeyes@gentoo.org> ruby-1.8.4_pre2.ebuild:
   Make it multilib-strict capable. It might not be 100% complete for
   non-symlinked profiles, yet, as it installs arch-independent extensions in
   lib64, but currently there's no other way to improve this (sharing the
@@ -962,7 +963,7 @@
   02 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> ruby-1.8.3.ebuild:
   Stable on sh.
 
-  02 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> ruby-1.8.3.ebuild:
+  02 Oct 2005; Bryan Ãstergaard <kloeri@gentoo.org> ruby-1.8.3.ebuild:
   Stable on ia64, bug 106996.
 
   02 Oct 2005; Hardave Riar <hardave@gentoo.org> ruby-1.8.3.ebuild:
@@ -1021,7 +1022,7 @@
   +files/ruby-1.8.2-xmlrpc-ipimethods-fix.diff, +ruby-1.8.2-r2.ebuild:
   Bump with patch for GLSA Bug #96784
 
-  03 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> ruby-1.8.2-r1.ebuild:
+  03 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org> ruby-1.8.2-r1.ebuild:
   Stable on alpha.
 
   01 Jul 2005; Danny van Dyk <kugelfang@gentoo.org> ruby-1.8.2-r1.ebuild,
@@ -1147,7 +1148,7 @@
   10 Nov 2004; Markus Rothe <corsair@gentoo.org> ruby-1.8.2_pre3.ebuild:
   Stable on ppc64; bug #69985
 
-  10 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> ruby-1.8.2_pre3.ebuild:
+  10 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org> ruby-1.8.2_pre3.ebuild:
   Stable on alpha, bug 69985.
 
   10 Nov 2004; <SeJo@gentoo.org> ruby-1.8.2_pre3.ebuild:
@@ -1237,7 +1238,7 @@
   ruby-1.8.2_pre2.ebuild:
   Stable on sparc wrt security bug #60525.
 
-  20 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> ruby-1.6.8-r11.ebuild,
+  20 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org> ruby-1.6.8-r11.ebuild,
   ruby-1.8.2_pre2.ebuild:
   Stable on alpha, bug 60525.
 
