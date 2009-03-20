@@ -3,11 +3,7 @@
 <pkgmetadata>
 <herd>net-fs</herd>
 	<longdescription>Secure Shell File System</longdescription>
-<maintainer>
-	<email>compnerd@gentoo.org</email>
-	<name>Saleem Abdulrasool</name>
-</maintainer>
 <use>
-	<flag name='amd'>Enable automounter support</flag>
+	<flag name="amd">Enable automounter support</flag>
 </use>
 </pkgmetadata>

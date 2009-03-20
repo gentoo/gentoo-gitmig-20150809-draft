@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.35-r3.ebuild,v 1.10 2007/05/08 22:30:25 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.35-r3.ebuild,v 1.11 2009/03/20 04:07:52 jmbsvicetto Exp $
 
 inherit linux-mod eutils
 
@@ -44,26 +44,26 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/0.35/*.patch
+	epatch "${FILESDIR}/0.35/*.patch"
 
 	# Take care of 2.6 Kernels <= 2.6.6
 	if [[ "${KV_MAJOR}.${KV_MINOR}" == "2.6" ]]  ; then
-		convert_to_m ${S}/shfs/Linux-2.6/Makefile
+		convert_to_m "${S}/shfs/Linux-2.6/Makefile"
 	fi
 
 	# 2.6.16 has a modified dentry struct.  Patch by Miroslav Spousta
 	# <qiq@ucw.cz>.  Submitted by Torsten Krah (bug #127092).
 	if kernel_is ge 2 6 16 ; then
-		epatch ${FILESDIR}/${PN}-0.35-2.6.16-dentry.patch
+		epatch "${FILESDIR}/${PN}-0.35-2.6.16-dentry.patch"
 	fi
 }
 
 src_compile() {
 	linux-mod_src_compile
 
-	cd ${S}/shfsmount
+	cd "${S}/shfsmount"
 	emake || die "failed to build userland utilities"
 }
 
@@ -72,17 +72,17 @@ src_install() {
 	linux-mod_src_install
 
 	# Install userland utilities
-	cd ${S}/shfsmount
+	cd "${S}/shfsmount"
 	dobin shfsmount
 	dobin shfsumount
 
 	if use amd ; then
 		insinto /etc/amd
-		doins ${FILESDIR}/amd.conf
-		doins ${FILESDIR}/amd.shfs
+		doins "${FILESDIR}/amd.conf"
+		doins "${FILESDIR}/amd.shfs"
 
 		exeinto /etc/amd
-		doexe ${FILESDIR}/shfs.mount
+		doexe "${FILESDIR}/shfs.mount"
 		dosym /etc/amd/shfs.mount /etc/amd/shfs.unmount
 	fi
 
@@ -97,8 +97,8 @@ src_install() {
 	dosym /usr/bin/shfsmount /sbin/mount.shfs
 
 	# Install docs
-	doman ${S}/docs/manpages/shfsmount.8 ${S}/docs/manpages/shfsumount.8
-	use doc && dohtml -r ${S}/docs/html
+	doman "${S}/docs/manpages/shfsmount.8" "${S}/docs/manpages/shfsumount.8"
+	use doc && dohtml -r "${S}/docs/html"
 }
 
 pkg_postinst() {

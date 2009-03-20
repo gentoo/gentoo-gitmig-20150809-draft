@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/shfs
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.43 2008/08/16 03:53:58 cardoe Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.44 2009/03/20 04:07:52 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, shfs-0.35-r3.ebuild, shfs-0.35-r4.ebuild:
+  Removing compnerd as a maintainer since he was retired. Fixed some QA
+  warnings.
 
   16 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
