@@ -1,15 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.13 2009/02/20 23:01:12 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.14 2009/03/20 12:31:03 armin76 Exp $
 
 # Ben de Groot <yngwin@gentoo.org> (20 Feb 2009)
 # needs kde4 keyworded
 x11-themes/qtcurve-qt4 kde
-
-# Patrick Lauer <patrick@gentoo.org> (23 Nov 2008)
-# needs webkit keyworded
-dev-python/PyQt4 webkit
-# Tobias Klausmann <klausman@gentoo.org) (31 Jan 2009)
-# idem
-x11-libs/qt-assistant webkit
 
 # Raúl Porcel <armin76@gentoo.org> (07 Jul 2008)
 # Make clisp deps minimal
