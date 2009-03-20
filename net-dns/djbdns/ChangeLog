@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.113 2009/03/20 12:50:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.114 2009/03/20 23:38:55 maekke Exp $
+
+  20 Mar 2009; Markus Meier <maekke@gentoo.org> djbdns-1.05-r23.ebuild:
+  amd64/x86 stable, bug #260975
 
   20 Mar 2009; Brent Baude <ranger@gentoo.org> djbdns-1.05-r23.ebuild:
   Marking djbdns-1.05-r23 ppc64 and ppc for bug 260975
