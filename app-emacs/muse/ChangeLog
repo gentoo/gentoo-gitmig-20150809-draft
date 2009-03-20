@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/muse
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.21 2008/10/12 12:13:05 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/muse/ChangeLog,v 1.22 2009/03/20 22:16:34 tcunha Exp $
+
+  20 Mar 2009; Tiago Cunha <tcunha@gentoo.org> muse-3.12.ebuild:
+  stable sparc
 
   12 Oct 2008; Ulrich Mueller <ulm@gentoo.org> muse-3.12.ebuild:
   Add missing SITEFILE definition.
