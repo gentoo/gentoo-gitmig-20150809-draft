@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/email
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.24 2009/03/20 16:52:08 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.25 2009/03/20 16:56:17 deathwing00 Exp $
+
+  20 Mar 2009; Ioannis Aslanidis <iaslanidis@gentoo.org> ChangeLog:
+  Fixed minor syntax problems in the builds.
 
 *email-3.1.2 (20 Mar 2009)
 
