@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/cc-mode
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cc-mode/ChangeLog,v 1.6 2008/08/28 05:53:00 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cc-mode/ChangeLog,v 1.7 2009/03/20 19:40:48 tcunha Exp $
+
+  20 Mar 2009; Tiago Cunha <tcunha@gentoo.org> cc-mode-5.31.3.ebuild:
+  stable sparc
 
   28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> cc-mode-5.31.3.ebuild:
   Use elisp-compile instead of elisp-comp, bug 235442. Add a die command.
