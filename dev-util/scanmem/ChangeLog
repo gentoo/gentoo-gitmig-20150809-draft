@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scanmem
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/ChangeLog,v 1.5 2007/12/25 15:59:22 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/ChangeLog,v 1.6 2009/03/20 13:21:48 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing agorf as a maintainer since he was retired.
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing taviso from metadata.xml as per #202471. Assigning to
