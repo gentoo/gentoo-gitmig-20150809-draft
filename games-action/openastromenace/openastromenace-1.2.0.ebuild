@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.2.0.ebuild,v 1.2 2008/06/03 14:19:32 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.2.0.ebuild,v 1.3 2009/03/20 07:05:01 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Modern 3D space shooter with spaceship upgrade possibilities"
@@ -20,7 +21,7 @@ IUSE="linguas_de linguas_ru"
 
 RDEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl
+	media-libs/libsdl[joystick]
 	media-libs/openal
 	media-libs/freealut
 	media-libs/libogg
@@ -31,9 +32,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/OpenAstroMenaceSVN
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-cmake.patch
 }
 
