@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall-perl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.28 2009/03/15 15:57:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/ChangeLog,v 1.29 2009/03/20 13:29:59 ranger Exp $
+
+  20 Mar 2009; Brent Baude <ranger@gentoo.org> shorewall-perl-4.0.15.ebuild:
+  Marking shorewall-perl-4.0.15 ppc for bug 256064
 
   15 Mar 2009; Brent Baude <ranger@gentoo.org> shorewall-perl-4.0.15.ebuild:
   Marking shorewall-perl-4.0.15 ppc64 for bug 256064
