@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-oracle-bin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/ChangeLog,v 1.5 2008/09/06 13:07:29 caster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-oracle-bin/ChangeLog,v 1.6 2009/03/20 18:59:20 josejx Exp $
+
+  20 Mar 2009; Joseph Jezak <josejx@gentoo.org>
+  jdbc-oracle-bin-10.2.0.3.ebuild:
+  Marked ppc stable for bug #228619.
 
 *jdbc-oracle-bin-10.2.0.4 (06 Sep 2008)
 
