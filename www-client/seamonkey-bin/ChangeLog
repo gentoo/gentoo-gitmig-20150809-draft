@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.61 2009/03/19 14:00:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.62 2009/03/20 20:46:51 keytoaster Exp $
+
+  20 Mar 2009; Tobias Heinlein <keytoaster@gentoo.org>
+  seamonkey-bin-1.1.15.ebuild:
+  amd64 stable wrt security bug #261386
 
 *seamonkey-bin-1.1.15 (19 Mar 2009)
 
