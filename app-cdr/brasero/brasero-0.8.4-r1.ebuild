@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.8.4-r1.ebuild,v 1.3 2009/03/15 20:47:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.8.4-r1.ebuild,v 1.4 2009/03/20 12:59:50 ranger Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/projects/brasero"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="beagle gnome +libburn totem cdrkit cdrtools +nautilus"
 
 RDEPEND=">=dev-libs/glib-2.15.6
