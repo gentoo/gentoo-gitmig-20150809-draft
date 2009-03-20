@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/pe-format-0.ebuild,v 1.9 2009/03/20 03:43:41 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/pe-format-0.ebuild,v 1.10 2009/03/20 23:14:50 jmbsvicetto Exp $
 
 inherit eutils
 
@@ -19,8 +19,8 @@ src_compile() {
 }
 
 src_install() {
-	newinitd "${FILESDIR}/pe-format.init pe-format" || die "failed to install init script"
-	newconfd "${FILESDIR}/pe-format.conf pe-format" || die "failed to install config"
+	newinitd "${FILESDIR}/pe-format.init" pe-format || die "failed to install init script"
+	newconfd "${FILESDIR}/pe-format.conf" pe-format || die "failed to install config"
 }
 
 pkg_postinst() {
