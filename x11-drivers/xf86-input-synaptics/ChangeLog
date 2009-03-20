@@ -1,6 +1,19 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.19 2009/02/03 13:04:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.20 2009/03/20 14:47:19 chainsaw Exp $
+
+  20 Mar 2009; <chainsaw@gentoo.org> -files/0.99.2-fdi-comments.patch,
+  -files/synaptics-fix-xinerama.patch,
+  -xf86-input-synaptics-0.15.2-r2.ebuild,
+  -xf86-input-synaptics-0.99.1.ebuild, -xf86-input-synaptics-0.99.2.ebuild,
+  -xf86-input-synaptics-0.99.2-r1.ebuild,
+  -xf86-input-synaptics-0.99.3.ebuild,
+  -xf86-input-synaptics-0.99.3-r1.ebuild, xf86-input-synaptics-1.0.0.ebuild:
+  Phrasing of the HAL FDI instructions was awkward, now clarified so user
+  changes are not lost. Closes bug #258293 by Scott Stubbs. Remove
+  overelaborate INPUT_EVDEV kernel check and just add an elog instead,
+  closes bug #262000 by cyrillic <cyrilmaley@hotmail.com>. Removed old
+  ebuilds.
 
 *xf86-input-synaptics-1.0.0 (03 Feb 2009)
 

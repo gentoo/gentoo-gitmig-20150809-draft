@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.0.0.ebuild,v 1.1 2009/02/03 13:04:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.0.0.ebuild,v 1.2 2009/03/20 14:47:19 chainsaw Exp $
 
-inherit toolchain-funcs eutils linux-info x-modular
+inherit toolchain-funcs eutils x-modular
 
 DESCRIPTION="Driver for Synaptics touchpads"
 HOMEPAGE="http://cgit.freedesktop.org/xorg/driver/xf86-input-synaptics/"
@@ -16,34 +16,6 @@ DEPEND="${RDEPEND}
 	x11-base/xorg-server
 	x11-proto/inputproto
 	>=sys-apps/sed-4"
-
-evdev-input_check() {
-	# Check kernel config for required event interface support (either
-	# built-in or as a module. Bug #134309.
-
-	ebegin "Checking kernel config for event device support"
-	linux_chkconfig_present INPUT_EVDEV
-	eend $?
-
-	if [[ $? -ne 0 ]] ; then
-		ewarn "Synaptics driver requires event interface support."
-		ewarn "Please enable the event interface in your kernel config."
-		ewarn "The option can be found at:"
-		ewarn
-		ewarn "  Device Drivers"
-		ewarn "    Input device support"
-		ewarn "      -*- Generic input layer"
-		ewarn "        <*> Event interface"
-		ewarn
-		ewarn "Then rebuild the kernel or install the module."
-		epause 5
-	fi
-}
-
-pkg_setup() {
-	linux-info_pkg_setup
-	evdev-input_check
-}
 
 src_install() {
 	DOCS="INSTALL NEWS TODO README"
@@ -60,7 +32,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Synaptics settings are now stored in: "
-	einfo "/usr/share/hal/fdi/policy/10osvendor/11-x11-synaptics.fdi"
-	ewarn "You need to migrate your settings and clear them from xorg.conf"
+	elog "This driver requires event interface support in your kernel: INPUT_EVDEV"
+	if use hal ; then
+		elog "Synaptics settings are now stored in:"
+		elog "/etc/hal/fdi/policy/10osvendor/11-x11-synaptics.fdi"
+		echo
+		ewarn "Please see the examples here for inspiration, but not edit:"
+		ewarn "/usr/share/hal/fdi/policy/10osvendor/11-x11-synaptics.fdi"
+	fi
 }
