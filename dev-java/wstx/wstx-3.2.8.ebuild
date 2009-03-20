@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wstx/wstx-3.2.8.ebuild,v 1.1 2009/02/11 15:27:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wstx/wstx-3.2.8.ebuild,v 1.2 2009/03/20 19:52:47 josejx Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -14,7 +14,7 @@ SRC_URI="http://woodstox.codehaus.org/${PV}/${PN}-src-${PV}.zip"
 
 LICENSE="Apache-2.0"
 SLOT="3.2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~ppc64 ~x86"
 IUSE=""
 
 COMMON_DEP="

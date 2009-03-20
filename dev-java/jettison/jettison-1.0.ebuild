@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jettison/jettison-1.0.ebuild,v 1.3 2009/02/05 16:44:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jettison/jettison-1.0.ebuild,v 1.4 2009/03/20 19:54:19 josejx Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source"
@@ -13,7 +13,7 @@ SRC_URI="http://repository.codehaus.org/org/codehaus/${PN}/${PN}/${PV}/${P}-sour
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~ppc64 ~x86"
 
 IUSE=""
 
