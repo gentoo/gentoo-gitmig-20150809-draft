@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/libsyncml
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.12 2008/08/03 12:55:56 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libsyncml/ChangeLog,v 1.13 2009/03/20 14:42:43 flameeyes Exp $
+
+*libsyncml-0.5.2 (20 Mar 2009)
+
+  20 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libsyncml-0.5.2.ebuild:
+  Version bump so that it can build with net-wireless/bluez instead of
+  net-wireless/bluez-libs.
 
   03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
