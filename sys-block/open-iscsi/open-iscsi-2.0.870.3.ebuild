@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.870.3.ebuild,v 1.1 2009/03/20 16:23:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.870.3.ebuild,v 1.2 2009/03/20 18:36:32 mr_bones_ Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -100,7 +100,7 @@ src_install() {
 		newins "${FILESDIR}"/iscsid-conf.d iscsid
 	fi
 
-	# same for init.d	
+	# same for init.d
 	if [ -e "${FILESDIR}"/iscsid-${PV}.init.d ]; then
 		newinitd "${FILESDIR}"/iscsid-${PV}.init.d iscsid
 	else
