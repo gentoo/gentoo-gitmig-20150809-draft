@@ -1,5 +1,9 @@
 # This file requires >=portage-2.1.1
 
+# Brent Baude <ranger@gentoo.org> (19 Mar 2009)
+# Masking bri from asterisk for compilation issue
+=net-misc/asterisk-1.2.31.1 bri zaptel pri
+
 # Joseph Jezak <josejx@gentoo.org> (Mar 20 2009)
 # Mask Ruby -> Oracle bindings
 dev-ruby/ruby-dbi oracle

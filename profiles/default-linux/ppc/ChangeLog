@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ppc profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.50 2009/03/20 04:45:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ChangeLog,v 1.51 2009/03/20 15:14:22 josejx Exp $
+
+  20 Mar 2009; Joseph Jezak <josejx@gentoo.org> package.use.mask:
+  Put ranger's mask in default-linux/ppc too.
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org> package.use.mask:
   Masked oracle keyword for dev-ruby/ruby-dbi.
