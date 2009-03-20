@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.6.1.ebuild,v 1.1 2008/04/19 17:36:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/deskzilla-1.6.1.ebuild,v 1.2 2009/03/20 18:55:51 josejx Exp $
 
 EAPI=1
 
@@ -18,7 +18,7 @@ LICENSE="ALMWorks-1.2"
 # distfiles...
 RESTRICT="mirror"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=""
 RDEPEND=">=virtual/jre-1.5

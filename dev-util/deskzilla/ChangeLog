@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/deskzilla
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.12 2008/04/19 17:36:34 caster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/deskzilla/ChangeLog,v 1.13 2009/03/20 18:55:51 josejx Exp $
+
+  20 Mar 2009; Joseph Jezak <josejx@gentoo.org> deskzilla-1.6.ebuild,
+  deskzilla-1.6.1.ebuild:
+  Marked ~ppc for bug #215151.
 
 *deskzilla-1.6.1 (19 Apr 2008)
 
