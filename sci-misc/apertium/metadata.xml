@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci</herd>
-<maintainer>
-  <email>anant@gentoo.org</email>
-</maintainer>
 <longdescription lang="en">
   Apertium is an open-source shallow-transfer machine translation
   engine and toolbox.
