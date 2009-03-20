@@ -1,9 +1,11 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.11 2009/03/20 12:29:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.12 2009/03/20 15:30:31 armin76 Exp $
 
-# Raúl Porcel <armin76@gentoo.org> (20 Mar 2008)
-# The version of webkit that qt uses works
-dev-python/PyQt4 -webkit
-x11-libs/qt-assistant -webkit
+# Patrick Lauer <patrick@gentoo.org> (23 Nov 2008)
+# needs webkit keyworded
+dev-python/PyQt4 webkit
+# Tobias Klausmann <klausman@gentoo.org) (31 Jan 2009)
+# idem
+x11-libs/qt-assistant webkit
 
 # Jean-Noel Rivasseau <elvanor@gentoo.org> (28 Jul 2008)
 # icu4j tests need jdk-1.6
