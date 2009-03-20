@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.154 2009/03/20 15:05:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.155 2009/03/20 22:47:33 keytoaster Exp $
+
+  20 Mar 2009; Tobias Heinlein <keytoaster@gentoo.org>
+  enigmail-0.95.7-r4.ebuild:
+  amd64 stable wrt security bug #261386
 
   20 Mar 2009; Brent Baude <ranger@gentoo.org> enigmail-0.95.7-r4.ebuild:
   Marking enigmail-0.95.7-r4 ppc64 and ppc for bug 261386
