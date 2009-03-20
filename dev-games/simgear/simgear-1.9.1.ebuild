@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-1.9.1.ebuild,v 1.1 2009/03/03 14:57:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-1.9.1.ebuild,v 1.2 2009/03/20 14:52:36 josejx Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://simgear/Source/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=media-libs/plib-1.8.5
