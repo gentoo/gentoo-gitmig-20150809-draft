@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-    <pkgmetadata>
-        <herd>tex</herd>
-        <maintainer>
-            <email>joslwah@gentoo.org</email>
-            <name>Joslwah</name>
-        </maintainer>
-        <longdescription lang="en">
-	  Extended version of unicode (La)TeX written by Jonathan Kew
-	  at SIL.  Allows many more languages to be typeset including
-	  those requiring vertical layout and mixed direction layouts.
-        </longdescription>
-    </pkgmetadata>
-
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>tex</herd>
+  <longdescription lang="en">
+    Extended version of unicode (La)TeX written by Jonathan Kew
+    at SIL.  Allows many more languages to be typeset including
+    those requiring vertical layout and mixed direction layouts.
+  </longdescription>
+</pkgmetadata>

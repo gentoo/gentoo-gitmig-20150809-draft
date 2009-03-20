@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xetex
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/ChangeLog,v 1.20 2007/05/20 08:42:43 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/ChangeLog,v 1.21 2009/03/20 13:35:24 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing joslwah as a maintainer since he was retired.
 
   20 May 2007; Christian Faulhammer <opfer@gentoo.org> xetex-0.995.ebuild:
   stable amd64, bug 176895

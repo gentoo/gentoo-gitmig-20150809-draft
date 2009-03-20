@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/xetex-0.995.ebuild,v 1.16 2007/05/20 08:42:43 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/xetex-0.995.ebuild,v 1.17 2009/03/20 13:35:24 jmbsvicetto Exp $
 
 inherit eutils
 
@@ -31,18 +31,18 @@ src_install() {
 	sh -x install-xetex || die
 
 	# Need to softlink xelatex to xetex.
-	cd ${D}/usr/bin
+	cd "${D}/usr/bin"
 	ln -s xetex xelatex
-	mkdir -p ${D}usr/share/texmf-site/tex/generic
-	mv ${D}usr/share/texmf/tex/generic/hyphen ${D}usr/share/texmf-site/tex/generic
+	mkdir -p "${D}usr/share/texmf-site/tex/generic"
+	mv "${D}usr/share/texmf/tex/generic/hyphen" "${D}usr/share/texmf-site/tex/generic"
 
 }
 
 pkg_preinst()
 {
 	pwd
-	cd ${S}
-	mv ${D}usr/share/texmf-site/tex/generic/hyphen ${D}usr/share/texmf/tex/generic/hyphen
+	cd "${S}"
+	mv "${D}usr/share/texmf-site/tex/generic/hyphen" "${D}usr/share/texmf/tex/generic/hyphen"
 	texhash "${D}usr/share/texmf"
 	sh ./rebuild-formats
 
@@ -50,16 +50,16 @@ pkg_preinst()
 	fmtutil=`kpsewhich --format="web2c files" fmtutil.cnf`
 	if [ -L $fmtutil ] ; then
 		fmtutil_real=`readlink "${fmtutil}"`
-		mkdir -p ${D}`dirname "${fmtutil_real}"`
+		mkdir -p "${D}"`dirname "${fmtutil_real}"`
 		mv "${D}${fmtutil}" "${D}${fmtutil_real}"
 	fi
 
-	mv ${D}usr/share/texmf/tex/generic/hyphen ${D}usr/share/texmf-site/tex/generic/hyphen
+	mv "${D}usr/share/texmf/tex/generic/hyphen" "${D}usr/share/texmf-site/tex/generic/hyphen"
 
 	### Add xetex to the search path for xelatex, if not already done.
-	mkdir -p ${D}etc/texmf/web2c
+	mkdir -p "${D}etc/texmf/web2c"
 	egrep -q 'TEXINPUTS.xelatex = .;\$TEXMF/tex/{xelatex,latex,generic,}//' /etc/texmf/web2c/texmf.cnf || \
-		sed -e 's/TEXINPUTS.xelatex = .;$TEXMF\/tex\/{latex,generic,}\/\//TEXINPUTS.xelatex = .;$TEXMF\/tex\/{xelatex,latex,generic,}\/\//' /etc/texmf/web2c/texmf.cnf > ${D}etc/texmf/web2c/texmf.cnf
+		sed -e 's/TEXINPUTS.xelatex = .;$TEXMF\/tex\/{latex,generic,}\/\//TEXINPUTS.xelatex = .;$TEXMF\/tex\/{xelatex,latex,generic,}\/\//' /etc/texmf/web2c/texmf.cnf > "${D}etc/texmf/web2c/texmf.cnf"
 
 }
 
