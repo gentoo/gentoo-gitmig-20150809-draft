@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doc++
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.25 2008/06/28 23:16:12 loki_val Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.26 2009/03/20 16:33:54 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing anant as a maintainer since he was retired.
 
   28 Jun 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/doc++-3.4.10-flex.patch, +files/doc++-3.4.10-gcc43.patch,
