@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/otrs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.40 2008/10/31 06:40:42 wrobel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.41 2009/03/20 23:53:13 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing rl03 as a maintainer since he scaled back to staffer..
 
 *otrs-2.3.3 (31 Oct 2008)
 
