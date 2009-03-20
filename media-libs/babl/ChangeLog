@@ -1,8 +1,8 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.9 2009/03/20 23:29:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.10 2009/03/20 23:31:19 maekke Exp $
 
-  20 Mar 2009; Markus Meier <maekke@gentoo.org> ChangeLog:
+  20 Mar 2009; Markus Meier <maekke@gentoo.org> babl-0.0.22.ebuild:
   amd64/x86 stable, bug #258344
 
   11 Mar 2009; Tobias Klausmann <klausman@gentoo.org> babl-0.0.22.ebuild:
