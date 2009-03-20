@@ -2,14 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>php</herd>
-  <maintainer>
-    <email>anant@gentoo.org</email>
-    <name>Anant Narayanan</name>
-  </maintainer>
   <longdescription>
-		This PHP5 extension wraps the Gtk+ 2 library thereby
-		providing the ability to write GUI applications in PHP.
-	</longdescription>
+    This PHP5 extension wraps the Gtk+ 2 library thereby
+    providing the ability to write GUI applications in PHP.
+  </longdescription>
   <use>
     <flag name="extra">Enable GtkExtra support</flag>
     <flag name="glade">Enable libglade support</flag>

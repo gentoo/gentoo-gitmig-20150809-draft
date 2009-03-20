@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/magickwand
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/ChangeLog,v 1.9 2008/06/12 17:39:18 hoffie Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/magickwand/ChangeLog,v 1.10 2009/03/20 17:31:47 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing anant as a maintainer since he was retired.
 
   12 Jun 2008; Christian Hoffmann <hoffie@gentoo.org>
   files/imagemagick-pre-6.3.8-compat.patch:
