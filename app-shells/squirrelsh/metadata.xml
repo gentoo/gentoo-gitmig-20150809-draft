@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>noherd</herd>
+	<maintainer>
+		<email>ken69267@gentoo.org</email>
+		<name>Kenneth Prugh</name>
+		<description>Proxy Maintainer</description>
+	</maintainer>
+	<maintainer>
+		<email>ed-209@hellburner.com</email>
+		<name>Evan Plumlee</name>
+	</maintainer>
+</pkgmetadata>
+

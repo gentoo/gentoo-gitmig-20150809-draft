@@ -1,0 +1,11 @@
+# ChangeLog for app-shells/squirrelsh
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/squirrelsh/ChangeLog,v 1.1 2009/03/20 04:17:08 ken69267 Exp $
+
+*squirrelsh-1.2.3 (20 Mar 2009)
+
+  20 Mar 2009; Kenneth Prugh <ken69267@gentoo.org> +metadata.xml,
+  +squirrelsh-1.2.3.ebuild:
+  Initial commit. Ebuild written by Evan Plumlee <ed-209@hellburner.com>.
+  Proxied maintainer.
+
