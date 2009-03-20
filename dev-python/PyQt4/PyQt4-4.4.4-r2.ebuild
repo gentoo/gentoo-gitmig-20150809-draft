@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r2.ebuild,v 1.2 2009/03/20 14:21:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r2.ebuild,v 1.3 2009/03/20 15:35:06 armin76 Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/"
 SRC_URI="http://www.riverbankcomputing.com/static/Downloads/PyQt4/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc64 sparc x86"
 IUSE="dbus debug doc examples opengl qt3support svg webkit X"
 
 RDEPEND=">=dev-python/sip-4.7.8
