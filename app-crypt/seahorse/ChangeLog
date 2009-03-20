@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.113 2009/03/17 08:57:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.114 2009/03/20 03:14:02 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing compnerd as a maintainer since he was retired.
 
 *seahorse-2.24.1 (17 Mar 2009)
 
