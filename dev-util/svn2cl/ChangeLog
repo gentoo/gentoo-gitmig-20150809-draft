@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/svn2cl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/ChangeLog,v 1.7 2009/03/01 18:10:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/ChangeLog,v 1.8 2009/03/20 13:52:52 josejx Exp $
+
+  20 Mar 2009; Joseph Jezak <josejx@gentoo.org> svn2cl-0.11.ebuild:
+  Marked ~ppc for bug #256341.
 
 *svn2cl-0.11 (01 Mar 2009)
 
