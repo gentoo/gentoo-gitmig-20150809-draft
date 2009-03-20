@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/dmd-bin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.16 2008/12/29 11:38:49 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/ChangeLog,v 1.17 2009/03/20 17:06:21 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing anant as a maintainer since he was retired.
 
   29 Dec 2008; Santiago M. Mola <coldwind@gentoo.org> dmd-bin-1.016.ebuild,
   dmd-bin-2.008-r1.ebuild:
