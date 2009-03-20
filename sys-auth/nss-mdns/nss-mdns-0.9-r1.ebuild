@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.9-r1.ebuild,v 1.7 2007/06/10 09:50:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.9-r1.ebuild,v 1.8 2009/03/20 04:14:55 jmbsvicetto Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
@@ -21,9 +21,9 @@ RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-0.8-avahi-socket.patch
+	epatch "${FILESDIR}/${PN}-0.8-avahi-socket.patch"
 	eautomake
 }
 
@@ -33,10 +33,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 
 	insinto /etc
-	doins ${FILESDIR}/mdns.allow
+	doins "${FILESDIR}/mdns.allow"
 
 	dodoc README
 }

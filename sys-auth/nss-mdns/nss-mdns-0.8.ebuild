@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.8.ebuild,v 1.7 2006/08/01 14:52:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/nss-mdns-0.8.ebuild,v 1.8 2009/03/20 04:14:55 jmbsvicetto Exp $
 
 inherit eutils
 
@@ -22,10 +22,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 
 	insinto /etc
-	doins ${FILESDIR}/mdns.allow
+	doins "${FILESDIR}/mdns.allow"
 
 	dodoc README
 }

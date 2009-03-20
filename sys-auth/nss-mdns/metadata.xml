@@ -3,9 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>compnerd@gentoo.org</email>
-		<name>Saleem Abdulrasool</name>
-	</maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+		</maintainer>
 	<longdescription lang="en">
 		Name service switch module for multicast dns.
 	</longdescription>
@@ -13,4 +12,3 @@
 		マルチキャスト DNS 向けネーム・サービス・スイッチのモジュールです。
 	</longdescription>
 </pkgmetadata>
-

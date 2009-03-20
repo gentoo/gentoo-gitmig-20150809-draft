@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/nss-mdns
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.29 2007/11/24 04:37:32 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.30 2009/03/20 04:14:55 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, nss-mdns-0.8.ebuild, nss-mdns-0.9-r1.ebuild:
+  Removing compnerd as a maintainer since he was retired. Fixed some QA
+  warnings.
 
   24 Nov 2007; Brent Baude <ranger@gentoo.org> nss-mdns-0.10.ebuild:
   Marking  nss-mdns-0.10 ppc for bug 199967
