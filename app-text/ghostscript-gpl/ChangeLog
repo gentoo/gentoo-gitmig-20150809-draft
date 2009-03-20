@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.67 2009/03/19 20:25:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.68 2009/03/20 15:19:41 ranger Exp $
+
+  20 Mar 2009; Brent Baude <ranger@gentoo.org>
+  ghostscript-gpl-8.64-r2.ebuild:
+  Marking ghostscript-gpl-8.64-r2 ppc64 and ppc for bug 261087
 
 *ghostscript-gpl-8.64-r2 (19 Mar 2009)
 
