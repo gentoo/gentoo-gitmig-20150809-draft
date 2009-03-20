@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.334 2009/03/18 16:38:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.335 2009/03/20 19:42:42 jer Exp $
+
+  20 Mar 2009; Jeroen Roovers <jer@gentoo.org> opera-9.27.ebuild,
+  opera-9.64.ebuild, opera-10.00_pre4205.ebuild, opera-10.00_pre4214.ebuild:
+  Define a dummy src_configure, thanks to Rafal Lalik for reporting (bug
+  #263010).
 
   18 Mar 2009; Jeroen Roovers <jer@gentoo.org> -opera-10.00_pre4166.ebuild:
   Remove old.

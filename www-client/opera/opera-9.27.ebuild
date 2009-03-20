@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.27.ebuild,v 1.7 2008/06/17 15:27:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.27.ebuild,v 1.8 2009/03/20 19:42:42 jer Exp $
 
 GCONF_DEBUG="no"
 
@@ -94,9 +94,15 @@ src_unpack() {
 		install.sh || die "sed failed"
 }
 
+src_configure() {
+	# This workaround is sadly needed because gnome2.eclass doesn't check
+	# whether a configure script exists.
+	true
+}
+
 src_compile() {
 	# This workaround is sadly needed because gnome2.eclass doesn't check
-	# whether a configure script or Makefile exists.
+	# whether a Makefile exists.
 	true
 }
 

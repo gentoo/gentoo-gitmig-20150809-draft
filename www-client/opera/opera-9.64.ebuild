@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.64.ebuild,v 1.5 2009/03/18 16:30:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.64.ebuild,v 1.6 2009/03/20 19:42:42 jer Exp $
 
 EAPI="2"
 
@@ -140,9 +140,15 @@ src_unpack() {
 
 }
 
+src_configure() {
+	# This workaround is sadly needed because gnome2.eclass doesn't check
+	# whether a configure script exists.
+	true
+}
+
 src_compile() {
 	# This workaround is sadly needed because gnome2.eclass doesn't check
-	# whether a configure script or Makefile exists.
+	# whether a Makefile exists.
 	true
 }
 
