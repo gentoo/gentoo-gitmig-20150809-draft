@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ns
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.29 2008/09/03 07:36:41 opfer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ns/ChangeLog,v 1.30 2009/03/20 20:19:14 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing anant as a maintainer since he was retired.
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   -files/ns-2.28-gentoo.diff, -files/ns-2.29-gcc41.patch, -ns-2.29.ebuild,
