@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.74 2009/03/20 13:10:10 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.75 2009/03/20 15:04:07 tcunha Exp $
+
+  20 Mar 2009; Tiago Cunha <tcunha@gentoo.org> uptimed-0.3.16-r3.ebuild:
+  stable sparc, bug 263123
 
   20 Mar 2009; Thomas Anderson <gentoofan23@gentoo.org>
   uptimed-0.3.16-r3.ebuild:
