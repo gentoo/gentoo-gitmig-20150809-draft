@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.10.2.ebuild,v 1.1 2009/02/22 14:35:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.10.2.ebuild,v 1.2 2009/03/20 14:35:29 josejx Exp $
 
 EAPI="2"
 KDE_MINIMAL="4.2"
@@ -13,7 +13,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 SLOT="4.1"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bindist"
 
 DEPEND=">=kde-base/konqueror-${KDE_MINIMAL}"
