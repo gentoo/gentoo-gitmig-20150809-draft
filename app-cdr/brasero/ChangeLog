@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.67 2009/03/20 12:59:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.68 2009/03/20 13:16:31 ranger Exp $
+
+  20 Mar 2009; Brent Baude <ranger@gentoo.org> brasero-2.26.0.ebuild:
+  marking brasero-2.26.0 ~ppc and ~ppc64 for bug 263080
 
   20 Mar 2009; Brent Baude <ranger@gentoo.org> brasero-0.8.4-r1.ebuild:
   Marking brasero-0.8.4-r1 ppc for bug 255257
