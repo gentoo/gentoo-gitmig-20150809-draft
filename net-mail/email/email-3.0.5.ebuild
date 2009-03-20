@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/email-3.0.5.ebuild,v 1.2 2009/03/20 16:55:24 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/email-3.0.5.ebuild,v 1.3 2009/03/20 17:09:40 deathwing00 Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Advanced CLI tool for sending email."
 HOMEPAGE="http://www.cleancode.org/projects/email"
@@ -13,6 +15,10 @@ IUSE=""
 
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	append-ldflags -Wl,--no-as-needed
+}
 
 src_compile() {
 	local myconf=""
