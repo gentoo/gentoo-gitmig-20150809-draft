@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.239 2009/02/26 14:32:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.240 2009/03/20 16:01:28 armin76 Exp $
+
+*dhcpcd-4.99.15 (20 Mar 2009)
+
+  20 Mar 2009; Raúl Porcel <armin76@gentoo.org> +dhcpcd-4.99.15.ebuild:
+  Version bump
 
 *dhcpcd-4.0.12 (26 Feb 2009)
 
