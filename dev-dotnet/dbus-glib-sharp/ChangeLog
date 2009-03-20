@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/dbus-glib-sharp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-glib-sharp/ChangeLog,v 1.6 2008/07/28 15:45:51 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/dbus-glib-sharp/ChangeLog,v 1.7 2009/03/20 03:30:47 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing compnerd as a maintainer since he was retired.
 
   28 Jul 2008; Raúl Porcel <armin76@gentoo.org>
   dbus-glib-sharp-0.4.1.ebuild:
