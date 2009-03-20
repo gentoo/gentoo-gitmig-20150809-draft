@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-spell-el
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-el/ChangeLog,v 1.2 2008/05/02 10:34:21 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-el/ChangeLog,v 1.3 2009/03/20 12:06:05 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing agorf as a maintainer since he was retired.
 
   02 May 2008; Markus Meier <maekke@gentoo.org>
   vim-spell-el-20080402.ebuild:
