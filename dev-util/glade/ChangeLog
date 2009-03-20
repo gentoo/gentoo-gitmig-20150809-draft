@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.110 2009/01/05 23:37:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.111 2009/03/20 03:51:23 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing compnerd as a maintainer since he was retired.
 
   05 Jan 2009; Gilles Dartiguelongue <eva@gentoo.org> -glade-3.4.0.ebuild,
   -glade-3.4.4.ebuild:
