@@ -1,3 +1,7 @@
+# Joseph Jezak <josejx@gentoo.org> (Mar 20 2009)
+# Mask Ruby -> Oracle bindings
+dev-ruby/ruby-dbi oracle
+
 # Brent Baude <ranger@gentoo.org> (September 17 2008)
 # # Masking clisp use from swig
 dev-lang/swig clisp 
