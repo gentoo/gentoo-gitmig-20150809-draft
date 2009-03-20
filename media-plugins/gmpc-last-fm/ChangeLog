@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-last-fm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-last-fm/ChangeLog,v 1.2 2009/03/20 15:49:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-last-fm/ChangeLog,v 1.3 2009/03/20 17:20:30 ranger Exp $
+
+  20 Mar 2009; Brent Baude <ranger@gentoo.org> gmpc-last-fm-0.17.0.ebuild:
+  Marking gmpc-last-fm-0.17.0 ppc stable for bug 259793
 
   20 Mar 2009; Raúl Porcel <armin76@gentoo.org> gmpc-last-fm-0.17.0.ebuild:
   x86 stable wrt #259793
