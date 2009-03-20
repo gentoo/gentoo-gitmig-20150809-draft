@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.5.0.ebuild,v 1.8 2007/02/03 14:40:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.5.0.ebuild,v 1.9 2009/03/20 03:37:47 jmbsvicetto Exp $
 
 inherit eutils mono autotools
 
@@ -31,13 +31,13 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Hard enable/disable tests
-	epatch ${FILESDIR}/${PN}-0.5.0-tests.patch
+	epatch "${FILESDIR}/${PN}-0.5.0-tests.patch"
 
 	# Nasty hack to prevent building of the tests
-	sed -i -e 's/ tests//' ${S}/Makefile.am
+	sed -i -e 's/ tests//' "${S}/Makefile.am"
 
 	einfo "Rebuilding the build environment, this may take a few minutes..."
 	eautoreconf
@@ -49,6 +49,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 }
