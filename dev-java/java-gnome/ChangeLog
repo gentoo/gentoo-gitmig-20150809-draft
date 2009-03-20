@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.78 2009/03/19 18:33:42 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.79 2009/03/20 19:42:54 josejx Exp $
+
+  20 Mar 2009; Joseph Jezak <josejx@gentoo.org> java-gnome-4.0.9-r1.ebuild:
+  Marked ~ppc for bug #241812.
 
   19 Mar 2009; Serkan Kaba <serkan@gentoo.org>
   +files/java-gnome-4.0.10-i18n-javadoc.patch, java-gnome-4.0.10:
