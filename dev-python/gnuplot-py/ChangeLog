@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnuplot-py
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.37 2009/03/20 13:37:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.38 2009/03/20 14:20:12 ranger Exp $
+
+  20 Mar 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  stable ppc, bug 259444
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org> gnuplot-py-1.8.ebuild:
   Marked ppc stable for bug #259444.
