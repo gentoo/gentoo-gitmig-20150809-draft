@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/png
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/ChangeLog,v 1.1 2007/09/21 23:03:01 agorf Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/ChangeLog,v 1.2 2009/03/20 12:13:28 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing agorf as a maintainer since he was retired.
 
 *png-1.1.0 (21 Sep 2007)
 
