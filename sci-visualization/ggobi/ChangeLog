@@ -1,0 +1,15 @@
+# ChangeLog for sci-visualization/ggobi
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/ggobi/ChangeLog,v 1.1 2009/03/20 19:40:05 bicatali Exp $
+
+*ggobi-2.1.8 (20 Mar 2009)
+
+  20 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/ggobi-2.1.8-graphviz.patch, +metadata.xml, +ggobi-2.1.8.ebuild:
+  Initial import from the science overlay to the main tree, with a patch for
+  graphviz > 2.22 from Guillaume Horel, bug #262595
+
+  29 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +sci-visualization/ggobi/metadata.xml:
+  Initial import
+
