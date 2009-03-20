@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.2.1-r2.ebuild,v 1.5 2008/01/11 20:55:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.2.1-r2.ebuild,v 1.6 2009/03/20 03:25:56 jmbsvicetto Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,23 +23,23 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Patches from eradicator submitted upstream.  Fixes amd64 and others...
-	epatch ${FILESDIR}/${PN}-7.2.1-envvar-exception.patch
-	epatch ${FILESDIR}/${PN}-7.2.1-c99.patch
-	epatch ${FILESDIR}/${PN}-7.2.1-ptrsize.patch
-	epatch ${FILESDIR}/${PN}-7.2.1-string-stream.patch
-	epatch ${FILESDIR}/${PN}-7.2.1-multiple-exception.patch
+	epatch "${FILESDIR}/${PN}-7.2.1-envvar-exception.patch"
+	epatch "${FILESDIR}/${PN}-7.2.1-c99.patch"
+	epatch "${FILESDIR}/${PN}-7.2.1-ptrsize.patch"
+	epatch "${FILESDIR}/${PN}-7.2.1-string-stream.patch"
+	epatch "${FILESDIR}/${PN}-7.2.1-multiple-exception.patch"
 
 	# Fix documentation files
-	cd ${S}/Documentation
+	cd "${S}/Documentation"
 	mv spim.man spim.1
 	mv xspim.man xspim.1
 }
 
 src_compile() {
-	cd ${S}/spim
+	cd "${S}/spim"
 
 	./Configure || die "Configure Failed!"
 
@@ -56,7 +56,7 @@ src_compile() {
 	emake CC="$(tc-getCC)" || die
 
 	if use X ; then
-		cd ${S}/xspim
+		cd "${S}/xspim"
 
 		./Configure || die "Configure Failed!"
 
@@ -74,7 +74,7 @@ src_compile() {
 }
 
 src_test() {
-	cd ${S}/spim
+	cd "${S}/spim"
 	make test || die "Failed to pass tests!"
 }
 
@@ -83,21 +83,21 @@ src_install() {
 	dodir /usr/share/man
 	dodir /var/lib/spim
 
-	cd ${S}/spim
-	make install DESTDIR=${D} || die "Unable to install spim"
+	cd "${S}/spim"
+	make install DESTDIR="${D}" || die "Unable to install spim"
 
 	if use X ; then
-		cd ${S}/xspim
-		make DESTDIR=${D} install || die "Unable to install xspim"
+		cd "${S}/xspim"
+		make DESTDIR="${D}" install || die "Unable to install xspim"
 	fi
 
-	cd ${S}/Documentation
+	cd "${S}/Documentation"
 	doman spim.1
 	use X && doman xspim.1
 
 	dohtml SPIM.html
 	dodoc BLURB
 
-	cd ${S}
+	cd "${S}"
 	dodoc README VERSION ChangeLog
 }
