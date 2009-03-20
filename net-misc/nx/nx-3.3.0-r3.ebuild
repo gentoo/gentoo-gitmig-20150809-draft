@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.3.0-r3.ebuild,v 1.1 2009/01/23 09:29:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.3.0-r3.ebuild,v 1.2 2009/03/20 16:31:49 voyageur Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -33,9 +33,7 @@ RDEPEND="x11-libs/libXau
 	x11-libs/libXtst
 	>=media-libs/jpeg-6b-r4
 	>=media-libs/libpng-1.2.8
-	>=sys-libs/zlib-1.2.3
-	rdesktop? ( net-misc/rdesktop )
-	vnc? ( || ( net-misc/vnc[server] net-misc/tightvnc[server] ) )"
+	>=sys-libs/zlib-1.2.3"
 
 DEPEND="${RDEPEND}
 		x11-misc/gccmakedep
