@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>fonts</herd>
-  <maintainer>
-    <email>joslwah@gentoo.org</email>
-    <name>Joshua</name>
-  </maintainer>
   <longdescription lang="en">
     Scheherazade and Lateef are extended Arabic script fonts designed
     by SIL International for modern Unicode-based systems using either

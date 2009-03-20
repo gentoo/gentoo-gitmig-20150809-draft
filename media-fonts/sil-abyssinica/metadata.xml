@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>fonts</herd>
-  <maintainer>
-    <email>joslwah@gentoo.org</email>
-    <name>Joshua</name>
-  </maintainer>
   <longdescription lang="en">
     The Ethiopic script is used for writing many of the languages of
     Ethiopia and Eritrea.  Ethiopic (U+1200..U+137F) was added to

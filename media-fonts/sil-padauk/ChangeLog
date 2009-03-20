@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/sil-padauk
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-padauk/ChangeLog,v 1.7 2008/10/27 05:14:02 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-padauk/ChangeLog,v 1.8 2009/03/20 13:49:24 jmbsvicetto Exp $
+
+  20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing joslwah as a maintainer since he was retired.
 
   27 Oct 2008; Jeroen Roovers <jer@gentoo.org> sil-padauk-2.4.ebuild:
   Stable for HPPA (bug #241722).

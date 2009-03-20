@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>fonts</herd>
-  <maintainer>
-    <email>joslwah@gentoo.org</email>
-    <name>Joshua</name>
-  </maintainer>
   <longdescription lang="en">
     Welcome to the Charis SIL font package. Charis is similar to
     Bitstream Charter, one of the first fonts designed specifically

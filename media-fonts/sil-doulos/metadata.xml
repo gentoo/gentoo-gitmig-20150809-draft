@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>fonts</herd>
-  <maintainer>
-    <email>joslwah@gentoo.org</email>
-    <name>Joshua</name>
-  </maintainer>
   <longdescription lang="en">
     Welcome to the Doulos SIL font package. The goal for this product
     was to provide a single Unicode-based font family that would
