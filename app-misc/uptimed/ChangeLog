@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.72 2009/02/21 10:33:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.73 2009/03/20 13:07:26 josejx Exp $
+
+  20 Mar 2009; Joseph Jezak <josejx@gentoo.org> uptimed-0.3.16-r3.ebuild:
+  Marked ppc/ppc64 stable for bug #263123.
 
 *uptimed-0.3.16-r3 (21 Feb 2009)
 
