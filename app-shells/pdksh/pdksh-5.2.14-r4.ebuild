@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.27 2008/12/30 20:47:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.28 2009/03/21 14:58:19 truedfx Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,6 +29,7 @@ src_compile() {
 	echo 'ksh_cv_dev_fd=${ksh_cv_dev_fd=yes}' > config.cache
 
 	econf
+	date >stamp-h # don't create config.h a second time
 	emake CC="$(tc-getCC)" CPP="$(tc-getCPP)" || die "emake failed"
 }
 
