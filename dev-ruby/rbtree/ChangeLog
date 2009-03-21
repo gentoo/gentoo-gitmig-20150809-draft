@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/rbtree
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbtree/ChangeLog,v 1.1 2009/03/21 16:04:36 drizzt Exp $
+
+*rbtree-0.2.1 (21 Mar 2009)
+
+  21 Mar 2009; Timothy Redaelli <drizzt@gentoo.org> +metadata.xml,
+  +rbtree-0.2.1.ebuild:
+  New ebuild. Thanks to Sergio D. Rodríguez Inclan for ebuild wrt #173341
+
