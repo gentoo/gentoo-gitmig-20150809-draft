@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/skype4py-1.0.31.0.ebuild,v 1.1 2009/03/21 04:59:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/skype4py-1.0.31.0.ebuild,v 1.2 2009/03/21 05:51:26 darkside Exp $
 
 inherit distutils
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="doc"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	net-im/skype"
 
 S="${WORKDIR}/Skype4Py-${PV}"
 
