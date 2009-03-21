@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.0.3-r10.ebuild,v 1.4 2009/01/30 18:52:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.0.3-r13.ebuild,v 1.1 2009/03/21 22:49:22 eva Exp $
 
 inherit autotools bash-completion gnome2 eutils
 
@@ -69,8 +69,20 @@ src_unpack() {
 	# Add support for bluez 4, bug #250615
 	epatch "${FILESDIR}/${P}-bluez4.patch"
 
+	# Remove debug code that turns warnings into crashes, bug #262502
+	epatch "${FILESDIR}/${P}-bluez4-debug.patch"
+
 	# Fix non posixy tests, bug #256305
 	epatch "${FILESDIR}/${P}-posixtest.patch"
+
+	# Fix themed icon for obexftp, bug #256890
+	epatch "${FILESDIR}/${P}-obexftp-icon.patch"
+
+	# Fix HTTP leaks, bug #256892
+	epatch "${FILESDIR}/${P}-http-leak.patch"
+
+	# Fix URL crash, bug #245204
+	epatch "${FILESDIR}/${P}-gmountspec-SIGSEGV.patch"
 
 	eautoreconf
 }
