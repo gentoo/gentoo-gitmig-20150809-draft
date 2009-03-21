@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9591 2009/03/21 16:06:43 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9592 2009/03/21 22:30:49 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -512,9 +512,8 @@ net-wireless/bluez
 >=app-mobilephone/obex-data-server-0.4
 >=gnome-extra/gnome-user-share-0.41
 =media-video/totem-2.24.4-r1
-=gnome-base/gvfs-1.0.3-r10
-=gnome-base/gvfs-1.0.3-r11
 =gnome-base/gvfs-1.0.3-r12
+=gnome-base/gvfs-1.0.3-r13
 >=net-wireless/libbtctl-0.11.0
 >=app-mobilephone/obexftp-0.23
 net-wireless/blueman
