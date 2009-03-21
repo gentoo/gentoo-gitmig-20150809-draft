@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.299 2009/03/20 18:25:25 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.300 2009/03/21 10:56:26 gengor Exp $
+
+*hardened-sources-2.6.28-r6 (21 Mar 2009)
+
+  21 Mar 2009; Gordon Malm <gengor@gentoo.org>
+  -hardened-sources-2.6.28-r5.ebuild, +hardened-sources-2.6.28-r6.ebuild:
+  Minor fix to ensure RTC is properly selected when GRKERNSEC_IO is enabled.
 
 *hardened-sources-2.6.28-r5 (20 Mar 2009)
 
