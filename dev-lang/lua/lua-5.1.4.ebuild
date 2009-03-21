@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.4.ebuild,v 1.1 2008/09/28 10:00:26 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.4.ebuild,v 1.2 2009/03/21 12:42:02 mabi Exp $
 
 EAPI="1"
 
@@ -60,7 +60,6 @@ src_compile() {
 	myflags=
 	# what to link to liblua
 	liblibs="-lm"
-	mycflags="${mycflags} -DLUA_USE_LINUX"
 	liblibs="${liblibs} $(dlopen_lib)"
 
 	# what to link to the executables
@@ -70,7 +69,7 @@ src_compile() {
 	fi
 
 	cd src
-	emake CC="${CC}" CFLAGS="${mycflags} ${CFLAGS}" \
+	emake CC="${CC}" CFLAGS="-DLUA_USE_LINUX ${CFLAGS}" \
 			RPATH="${ROOT}/usr/$(get_libdir)/" \
 			LUA_LIBS="${mylibs}" \
 			LIB_LIBS="${liblibs}" \
