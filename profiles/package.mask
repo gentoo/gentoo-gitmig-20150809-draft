@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9588 2009/03/20 14:49:38 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9589 2009/03/21 00:14:02 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Alfredsen <loki_val@gentoo.org> (21 Mar 2009)
+# Masked till Gnome-2.26 makes it into the tree.
+# A public service for the crazy gnome-overlay people
+# in the meantime. Bug 262863.
+=dev-dotnet/gnome-desktop-sharp-2.26*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (20 mar 2009)
 # New version with net-wireless/bluez instead of bluez-lib
