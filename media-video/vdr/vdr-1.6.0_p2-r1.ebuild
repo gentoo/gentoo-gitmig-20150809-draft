@@ -1,18 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2.ebuild,v 1.4 2009/03/21 13:10:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r1.ebuild,v 1.1 2009/03/21 13:10:41 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
 # Switches supported by extensions-patch
 EXT_PATCH_FLAGS="analogtv atsc cmdsubmenu cutterlimit cutterqueue cuttime ddepgentry
-	dolbyinrec dvbplayer dvbsetup dvdarchive dvdchapjump graphtft hardlinkcutter iptv
-	jumpplay liemikuutio lnbshare mainmenuhooks menuorg noepg osdmaxitems pinplugin
+	dolbyinrec dvbplayer dvbsetup dvdarchive dvdchapjump graphtft hardlinkcutter
+	pluginparam
+	jumpplay liemiext lnbshare mainmenuhooks menuorg noepg osdmaxitems pinplugin
 	rotor settime setup sortrecords sourcecaps livebuffer
 	ttxtsubs timercmd timerinfo validinput yaepg
 	syncearly dvlfriendlyfnames dvlrecscriptaddon dvlvidprefer
 	volctrl wareagleicon lircsettings deltimeshiftrec em84xx
-	cmdreccmdi18n"
+	cmdreccmdi18n softosd"
 
 IUSE="debug vanilla dxr3 ${EXT_PATCH_FLAGS}"
 
@@ -20,7 +21,7 @@ MY_PV="${PV%_p*}"
 MY_P="${PN}-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
 
-EXT_V="64"
+EXT_V="68"
 EXT_P=VDR-Extensions-Patch-${EXT_V}
 EXT_DIR=${WORKDIR}/${EXT_P}/
 EXT_VDR_PV="${PV/_p/-}"
@@ -268,7 +269,7 @@ src_unpack() {
 
 		do_unifdef
 
-		use iptv && sed -i sources.conf -e 's/^#P/P/'
+		use pluginparam && sed -i sources.conf -e 's/^#P/P/'
 	fi
 
 	# apply local patches defined by variable VDR_LOCAL_PATCHES_DIR
