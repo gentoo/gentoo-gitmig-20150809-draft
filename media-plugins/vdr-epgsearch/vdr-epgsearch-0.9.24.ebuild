@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.24.ebuild,v 1.3 2008/06/17 11:45:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-0.9.24.ebuild,v 1.4 2009/03/21 17:43:18 zzam Exp $
 
 inherit vdr-plugin
 
@@ -25,6 +25,7 @@ IUSE="pcre"
 
 DEPEND=">=media-video/vdr-1.3.45
 	pcre? ( dev-libs/libpcre )"
+RDEPEND="${DEPEND}"
 
 PATCHES=("${FILESDIR}/${P}-langinfo.diff")
 

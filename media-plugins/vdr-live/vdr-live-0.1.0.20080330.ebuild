@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.1.0.20080330.ebuild,v 1.2 2008/03/31 01:58:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.1.0.20080330.ebuild,v 1.3 2009/03/21 17:43:15 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -21,6 +21,7 @@ DEPEND="media-video/vdr
 	>=dev-libs/boost-1.33.0
 	dev-libs/tntnet
 	>=dev-libs/cxxtools-1.4.3"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${VDRPLUGIN}"
 
