@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/kflog
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/ChangeLog,v 1.16 2007/02/10 09:48:02 nixnut Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/ChangeLog,v 1.17 2009/03/21 21:42:38 nelchael Exp $
+
+  21 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org> -kflog-2.1.1.ebuild:
+  Remove old versions.
 
   10 Feb 2007; nixnut <nixnut@gentoo.org> kflog-2.1.1-r2.ebuild:
   Stable on ppc wrt bug 165421

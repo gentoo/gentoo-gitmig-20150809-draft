@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.67 2009/03/19 14:27:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.68 2009/03/21 21:54:41 nelchael Exp $
+
+  21 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/rss-glx-0.8.1-r4-gentoo.patch,
+  -files/rss-glx-0.8.1-r4-imagemagick.patch, -rss-glx-0.8.1-r4.ebuild:
+  Remove old versions.
 
   19 Mar 2009; Brent Baude <ranger@gentoo.org> rss-glx-0.8.1-r5.ebuild:
   stable ppc, bug 260088
