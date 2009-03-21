@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bouml
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/ChangeLog,v 1.35 2008/07/27 21:29:16 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/ChangeLog,v 1.36 2009/03/21 15:42:20 jmbsvicetto Exp $
+
+  21 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing ferdy as a maintainer since he was retired.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> bouml-2.27.ebuild,
   bouml-2.30.2.ebuild, bouml-3.3.4.ebuild, bouml-3.4.ebuild:
