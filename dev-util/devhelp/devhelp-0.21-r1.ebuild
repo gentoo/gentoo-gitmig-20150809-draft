@@ -1,8 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.20.ebuild,v 1.2 2009/01/08 16:52:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.1 2009/03/21 22:13:48 eva Exp $
 
-inherit toolchain-funcs gnome2 python
+EAPI="2"
+GCONF_DEBUG="no"
+
+inherit autotools eutils toolchain-funcs gnome2 python
 
 DESCRIPTION="An API documentation browser for GNOME 2"
 HOMEPAGE="http://developer.imendio.com/wiki/Devhelp"
@@ -26,17 +29,27 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-src_unpack() {
-	gnome2_src_unpack
-
+src_prepare() {
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
+
+	# Allow to build against libxul, bug #250306
+	epatch "${FILESDIR}/${P}-xulrunner19.patch"
+
+	eautoreconf
 }
 
 pkg_setup() {
+	if has_version app-editors/gedit && \
+		! built_with_use app-editors/gedit python; then
+		# Add warning per bug #245235
+		ewarn "dev-util/devhelp plugin for app-editors/gedit needs python support"
+	fi
+
 	G2CONF="$(use_with zlib)
-		--with-gecko=libxul-embedding"
+		--with-gecko=libxul
+		--with-gecko-home=/usr/$(get_libdir)/xulrunner-1.9"
 
 	# ICC is crazy, silence warnings (bug #154010)
 	if [[ $(tc-getCC) == "icc" ]] ; then

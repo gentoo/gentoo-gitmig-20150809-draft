@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.83 2009/03/15 22:03:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.84 2009/03/21 22:13:48 eva Exp $
+
+*devhelp-0.21-r1 (21 Mar 2009)
+
+  21 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/devhelp-0.21-xulrunner19.patch, -devhelp-0.20.ebuild,
+  +devhelp-0.21-r1.ebuild:
+  Bump to 0.21-r1. Allow to build against libxul, bug #250306. Add a warning
+  for gedit plugin, bug #245235.
 
   15 Mar 2009; Markus Meier <maekke@gentoo.org> devhelp-0.21.ebuild:
   x86 stable, bug #260063
