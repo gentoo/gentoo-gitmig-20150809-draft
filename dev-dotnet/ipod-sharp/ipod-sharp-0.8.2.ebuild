@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.8.2.ebuild,v 1.2 2009/01/25 11:45:29 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.8.2.ebuild,v 1.3 2009/03/21 21:47:57 loki_val Exp $
 
 EAPI=2
 
@@ -17,7 +17,8 @@ IUSE="doc"
 
 RDEPEND=">=dev-lang/mono-2.0
 	dev-dotnet/dbus-glib-sharp
-	>=dev-dotnet/podsleuth-0.6.4"
+	>=dev-dotnet/podsleuth-0.6.4
+	>=dev-dotnet/gtk-sharp-2.12.0"
 DEPEND="${RDEPEND}
 	doc? ( >=virtual/monodoc-1.1.8 )
 	dev-util/pkgconfig"
