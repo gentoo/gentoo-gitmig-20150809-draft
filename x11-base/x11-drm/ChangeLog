@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.69 2009/02/05 13:36:41 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.70 2009/03/21 00:23:02 battousai Exp $
+
+*x11-drm-20090320 (20 Mar 2009)
+
+  20 Mar 2009; Bryan Stine <battousai@gentoo.org> +x11-drm-20090320.ebuild:
+  Bump to 20090320 with improved version from x11 overlay. Includes various
+  minor ebuild fixes, radeonhd support, xgi support, and nouveau in favor of
+  defunct nv module. Fixes bug #260728, thanks to Tanktalus.
 
   05 Feb 2009; Rémi Cardona <remi@gentoo.org> x11-drm-20080710.ebuild:
   disable tests since they require user intervention (see bug #236845)
