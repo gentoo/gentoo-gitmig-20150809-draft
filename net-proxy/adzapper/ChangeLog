@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/adzapper
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.57 2009/03/18 15:01:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.58 2009/03/21 16:56:08 jer Exp $
+
+  21 Mar 2009; Jeroen Roovers <jer@gentoo.org> adzapper-20080508.ebuild:
+  Stable for HPPA (bug #257531).
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> adzapper-20080508.ebuild:
   stable ppc, bug 257531
