@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.108 2009/03/18 20:39:01 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.109 2009/03/21 21:04:56 nixnut Exp $
+
+  21 Mar 2009; nixnut <nixnut@gentoo.org> gradm-2.1.13.200902232204.ebuild:
+  ppc stable
 
   18 Mar 2009; Gordon Malm <gengor@gentoo.org>
   gradm-2.1.13.200902232204.ebuild:
