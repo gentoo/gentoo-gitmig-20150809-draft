@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/emelfm2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.25 2009/03/18 18:11:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.26 2009/03/21 22:12:15 nelchael Exp $
+
+  21 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org> -emelfm2-0.3.5.ebuild,
+  -emelfm2-0.4.ebuild:
+  Remove old versions.
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> emelfm2-0.4.1.ebuild:
   stable ppc, bug 259212
