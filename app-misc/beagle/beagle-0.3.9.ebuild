@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9.ebuild,v 1.2 2009/01/28 20:37:04 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9.ebuild,v 1.3 2009/03/21 11:11:03 loki_val Exp $
 
 EAPI=2
 
@@ -91,7 +91,7 @@ src_prepare() {
 	epatch "${WORKDIR}/patches/${PN}-0.3.8-gmime-2.4.patch"
 
 	#Fix bug 248703
-	sed -i  -e 's:VALID_EPIPHANY_VERSIONS=":VALID_EPIPHANY_VERSIONS="2.24 :' \
+	sed -i  -e 's:VALID_EPIPHANY_VERSIONS=":VALID_EPIPHANY_VERSIONS="2.26 2.25 2.24 :' \
 		configure.in || die "epiphany sed failed"
 
 	#Fix bugs.gnome.org/556243
