@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4292 2009/03/21 13:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4293 2009/03/21 22:27:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -45,7 +45,6 @@ app-admin/prelude-manager:tcpwrapper - Add support for tcp_wrappers
 app-admin/puppet:rrdtool - Eanble rrdtool support
 app-admin/rsyslog:dbi - Add support for logging into various databases through dev-db/libdbi
 app-admin/rsyslog:relp - Add support for the Reliable Event Logging Protocol using dev-libs/librelp
-app-admin/sdsc-syslog:beep - USe beep libraries net-libs/roadrunner
 app-admin/sshguard:ipfilter - Enable ipfilter firewall support (only for *bsd)
 app-admin/syslog-ng:spoof-source - Enable support for spoofed source addresses
 app-admin/syslog-ng:sql - Enable support for SQL destinations
