@@ -1,6 +1,16 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.76 2009/03/14 05:13:49 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.77 2009/03/21 00:37:30 scarabeus Exp $
+
+*xf86-video-ati-6.12.1 (21 Mar 2009)
+
+  21 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
+  -xf86-video-ati-6.7.197.ebuild, -xf86-video-ati-6.8.0.ebuild,
+  -xf86-video-ati-6.9.0.ebuild, -xf86-video-ati-6.10.0.ebuild,
+  -xf86-video-ati-6.12.0.ebuild, +xf86-video-ati-6.12.1.ebuild:
+  Version bump. Fixes few issues with previous releases (tv-out, bios setup,
+  AGP glitches,...). Remove old which are not stable candidates at any
+  point. Oh and also add /me as maintainer.
 
 *xf86-video-ati-6.12.0 (14 Mar 2009)
 
