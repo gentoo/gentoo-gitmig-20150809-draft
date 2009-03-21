@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2455 2009/03/21 14:58:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2456 2009/03/21 16:06:43 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  package.mask:
+  Masked dev-util/qgit-2.0-r1 waiting for Jokey feedback about the dep on
+  =x11-libs/qt-4.3*:4.
 
   21 Mar 2009; Torsten Veller <tove@gentoo.org> package.mask:
   Mask dev-perl/Java-Inline for removal (#206177,#220491)
