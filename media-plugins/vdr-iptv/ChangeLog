@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-iptv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-iptv/ChangeLog,v 1.7 2009/02/25 15:12:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-iptv/ChangeLog,v 1.8 2009/03/21 13:17:02 zzam Exp $
+
+  21 Mar 2009; Matthias Schwarzott <zzam@gentoo.org> vdr-iptv-0.2.4.ebuild:
+  Make the use dependency also work against the renamed use-flag pluginparam
 
 *vdr-iptv-0.2.4 (25 Feb 2009)
 
