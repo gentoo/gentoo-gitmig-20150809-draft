@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nevow
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.28 2009/02/11 15:19:08 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.29 2009/03/21 16:55:00 patrick Exp $
+
+  21 Mar 2009; Patrick Lauer <patrick@gentoo.org> nevow-0.9.31.ebuild,
+  nevow-0.9.32.ebuild:
+  Adding zopeinterface dep to 0.9.31 and .32. Closes #262622.
 
   11 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org> nevow-0.9.32.ebuild:
   regenerate nevow plugin cache too

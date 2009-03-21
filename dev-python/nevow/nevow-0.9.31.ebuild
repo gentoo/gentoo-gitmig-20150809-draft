@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.9.31.ebuild,v 1.5 2009/02/10 13:36:40 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/nevow-0.9.31.ebuild,v 1.6 2009/03/21 16:55:00 patrick Exp $
 
 NEED_PYTHON="2.4"
 
@@ -17,7 +17,8 @@ KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-python/twisted-2.5
-	>=dev-python/twisted-web-8.1.0"
+	>=dev-python/twisted-web-8.1.0
+	net-zope/zopeinterface"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/docutils )"
 
