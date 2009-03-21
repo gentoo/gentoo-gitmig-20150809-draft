@@ -1,27 +1,29 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.13.3-r1.ebuild,v 1.10 2008/10/25 22:40:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.15.5.ebuild,v 1.1 2009/03/21 22:09:01 darkside Exp $
 
-inherit base
+inherit multilib
 
-DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
+DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext.
+overlays, version changes, and more"
 HOMEPAGE="http://eix.sourceforge.net"
-SRC_URI="mirror://sourceforge/eix/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/eix/${P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="doc sqlite"
 
 RDEPEND="sqlite? ( >=dev-db/sqlite-3 )
 	app-arch/bzip2"
 DEPEND="${RDEPEND}
+	app-arch/lzma-utils
 	doc? ( dev-python/docutils )"
 
-PATCHES=( "${FILESDIR}/${P}-numeric-compare.patch" )
-
 src_compile() {
-	econf --with-bzip2 $(use_with sqlite) $(use_with doc rst) || die "econf failed"
+	econf --with-bzip2 $(use_with sqlite) $(use_with doc rst) \
+		--with-ebuild-sh-default="/usr/$(get_libdir)/portage/bin/ebuild.sh" \
+		--with-portage-rootpath="${ROOTPATH}"
 	emake || die "emake failed"
 }
 
