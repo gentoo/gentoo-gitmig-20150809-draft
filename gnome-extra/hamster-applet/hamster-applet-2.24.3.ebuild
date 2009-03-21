@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.24.3.ebuild,v 1.3 2009/03/15 22:04:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hamster-applet/hamster-applet-2.24.3.ebuild,v 1.4 2009/03/21 12:35:23 eva Exp $
 
-EAPI="1"
+EAPI="2"
 GCONF_DEBUG="no"
 SCROLLKEEPER_UPDATE="no"
 
@@ -18,11 +18,12 @@ KEYWORDS="amd64 x86"
 IUSE="eds"
 
 RDEPEND="
-	|| ( >=dev-lang/python-2.5
+	|| ( >=dev-lang/python-2.5[sqlite]
 		 ( dev-lang/python:2.4
 		   dev-python/pysqlite:2 ) )
-	dev-python/gnome-applets-python
 	dev-python/gconf-python
+	dev-python/libgnome-python
+	dev-python/gnome-applets-python
 	dev-python/dbus-python
 	eds? ( dev-python/evolution-python )
 	>=dev-python/pygobject-2.14
@@ -38,18 +39,7 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-pkg_setup() {
-	local msg="Rebuild dev-lang/python-2.5 with the sqlite USE flag"
-	if has_version ">=dev-lang/python-2.5" && \
-		! built_with_use dev-lang/python sqlite ; then
-		eerror "${msg}"
-		die "${msg}"
-	fi
-}
-
-src_unpack() {
-	gnome2_src_unpack
-
+src_prepare() {
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
