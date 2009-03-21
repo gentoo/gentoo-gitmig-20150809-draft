@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/ast
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ChangeLog,v 1.7 2009/02/25 17:12:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/ast/ChangeLog,v 1.8 2009/03/21 15:46:50 bicatali Exp $
+
+*ast-5.1.0 (21 Mar 2009)
+
+  21 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  files/ast-4.6.2-makefile.in.patch, +files/ast-5.1.0-makefile.in.patch,
+  +ast-5.1.0.ebuild:
+  Version bump and fixed a libtool file (bug #261077)
 
   25 Feb 2009; Sébastien Fabbro <bicatali@gentoo.org> -ast-4.6.2-r1.ebuild:
   Removed buggy version
