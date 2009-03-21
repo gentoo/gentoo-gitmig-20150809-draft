@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/udns-0.0.9.ebuild,v 1.12 2009/01/25 13:51:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/udns-0.0.9.ebuild,v 1.13 2009/03/21 22:32:54 nelchael Exp $
 
 inherit multilib
 
@@ -15,17 +15,15 @@ IUSE="ipv6 static"
 
 # Yes, this doesn't depend on any other library beside "system" set
 DEPEND=""
+RDEPEND=""
 
 src_compile() {
-
 	# Uses non-standard configure script, econf doesn't work
 	./configure $(use_enable ipv6) || die "Configure failed"
 	emake sharedlib staticlib || die "compilation failed"
-
 }
 
 src_install() {
-
 	dolib.so libudns.so.0 || die "dolib.so failed"
 	dosym libudns.so.0 "/usr/$(get_libdir)/libudns.so" || die "dosym failed"
 	dolib.a libudns.a || die "dolib.a failed"
@@ -35,5 +33,4 @@ src_install() {
 
 	doman udns.3 || die "doman failed"
 	dodoc TODO NOTES || die "dodoc failed"
-
 }
