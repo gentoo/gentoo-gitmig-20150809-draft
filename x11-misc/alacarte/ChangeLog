@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.76 2009/03/19 22:49:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.77 2009/03/21 11:13:13 eva Exp $
+
+  21 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -alacarte-0.11.5.ebuild, -alacarte-0.11.7.ebuild, alacarte-0.11.9.ebuild,
+  alacarte-0.11.10.ebuild:
+  Drop libgnome-python dependency per bug #255963.
 
 *alacarte-0.11.10 (19 Mar 2009)
 
