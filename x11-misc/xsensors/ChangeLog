@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsensors
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.25 2009/03/18 18:13:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsensors/ChangeLog,v 1.26 2009/03/21 21:06:16 nelchael Exp $
+
+  21 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org> -xsensors-0.47.ebuild:
+  Remove old version.
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> xsensors-0.60.ebuild:
   stable ppc, bug 261912
