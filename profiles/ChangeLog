@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2454 2009/03/21 00:14:02 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2455 2009/03/21 14:58:40 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Mar 2009; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask dev-perl/Java-Inline for removal (#206177,#220491)
 
   21 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   Mask gnome-desktop-sharp-2.26 till gnome-2.26 is released. Bug 262863.
