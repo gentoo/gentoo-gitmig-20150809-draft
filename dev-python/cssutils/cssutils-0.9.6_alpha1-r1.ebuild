@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.6_alpha1.ebuild,v 1.1 2009/02/10 13:15:01 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.6_alpha1-r1.ebuild,v 1.1 2009/03/21 23:14:41 neurogeek Exp $
 
-inherit distutils eutils
+inherit distutils
 
 MY_P=${P/_alpha/a}
 DESCRIPTION="A Python package to parse and build CSS Cascading Style Sheets."
@@ -14,6 +14,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.4"
+RDEPEND="virtual/python"
+DEPEND=">=dev-python/setuptools-0.6_rc7-r1
+		${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
