@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.17 2008/12/31 03:39:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.18 2009/03/21 01:11:56 arfrever Exp $
 
 EAPI="2"
 
@@ -15,21 +15,25 @@ ESVN_PROJECT="kvirc"
 LICENSE="kvirc"
 SLOT="4"
 KEYWORDS=""
-IUSE="audiofile +crypt +dcc_voice debug doc +gsm +ipc ipv6 kde +nls profile
-+phonon +qt-dbus qt-webkit +ssl +transparency"
+IUSE="audiofile +crypt +dcc_voice debug doc gsm +ipc ipv6 kde +nls +perl +phonon profile +python +qt-dbus qt-webkit +ssl +transparency"
 
 RDEPEND="
 	sys-libs/zlib
+	x11-libs/qt-core
 	x11-libs/qt-gui
 	audiofile? ( media-libs/audiofile )
-	kde? ( >=kde-base/kdelibs-3.9 )
+	kde? ( =kde-base/kdelibs-4* )
+	perl? ( dev-lang/perl )
 	phonon? ( || ( media-sound/phonon x11-libs/qt-phonon ) )
+	python? ( dev-lang/python )
 	qt-dbus? ( x11-libs/qt-dbus )
 	qt-webkit? ( x11-libs/qt-webkit )
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
+RDEPEND="${RDEPEND}
+	gsm? ( media-sound/gsm )"
 
 DOCS="ChangeLog TODO"
 
@@ -40,9 +44,7 @@ src_unpack() {
 	subversion_wc_info
 	VERSIO_PRAESENS="${ESVN_WC_REVISION}"
 	elog "Setting revision number to ${VERSIO_PRAESENS}"
-	sed -i \
-		-e "/#define KVI_DEFAULT_FRAME_CAPTION/s/KVI_VERSION/& \" r${VERSIO_PRAESENS}\"/" \
-		src/kvirc/ui/kvi_frame.cpp || die "Failed to set revision number"
+	sed -e "/#define KVI_DEFAULT_FRAME_CAPTION/s/KVI_VERSION/& \" r${VERSIO_PRAESENS}\"/" -i src/kvirc/ui/kvi_frame.cpp || die "Failed to set revision number"
 }
 
 src_configure() {
@@ -62,8 +64,10 @@ src_configure() {
 		$(cmake-utils_use_want ipv6 IPV6)
 		$(cmake-utils_use_want kde KDE4)
 		$(cmake-utils_use_want nls GETTEXT)
+		$(cmake-utils_use_want perl PERL)
 		$(cmake-utils_use_want phonon PHONON)
 		$(cmake-utils_use_want profile MEMORY_PROFILE)
+		$(cmake-utils_use_want python PYTHON)
 		$(cmake-utils_use_want qt-dbus QTDBUS)
 		$(cmake-utils_use_want qt-webkit QTWEBKIT)
 		$(cmake-utils_use_want ssl OPENSSL)
@@ -74,9 +78,8 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	mv "${D}"/usr/share/man/man1/kvirc.1 \
-		"${D}"/usr/share/man/man1/kvirc4.1 || die "mv kvirc.1 failed"
+	mv "${D}"usr/share/man/man1/kvirc.1 "${D}"usr/share/man/man1/kvirc4.1 || die "mv kvirc.1 failed"
 
-	elog "In order to keep kvirc4 and kvirc3 working both side-by-side"
-	elog "man pages for ${P} are under \"man kvirc4\""
+	elog "In order to keep KVIrc 4 and KVIrc3 working both side-by-side"
+	elog "man page for ${P} is under \"man kvirc4\""
 }

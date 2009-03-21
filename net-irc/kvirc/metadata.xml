@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>net-irc</herd>
   <maintainer restrict="&gt;=net-irc/kvirc-4">
-    <email>Arfrever.FTA@GMail.Com</email>
+    <email>Arfrever@gentoo.org</email>
     <name>Arfrever Frehtes Taifersar Arahesis</name>
   </maintainer>
   <use>
