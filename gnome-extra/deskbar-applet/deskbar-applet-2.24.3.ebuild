@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.24.3.ebuild,v 1.7 2009/03/18 15:39:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.24.3.ebuild,v 1.8 2009/03/21 12:25:37 eva Exp $
 
 GCONF_DEBUG="no"
 
@@ -16,16 +16,19 @@ IUSE="eds spell test"
 
 RDEPEND=">=dev-lang/python-2.4
 	>=x11-libs/gtk+-2.12
-	>=dev-python/pygtk-2.12
-	>=dev-python/pygobject-2.12
 	>=gnome-base/gnome-desktop-2.10
 	>=dev-python/dbus-python-0.80.2
-	dev-python/gnome-desktop-python
+
+	>=dev-python/pygtk-2.12
+	>=dev-python/pygobject-2.12
 	>=dev-python/gconf-python-2.22.1
-	>=dev-python/gnome-vfs-python-2.22.1
 	>=dev-python/libgnome-python-2.22.1
 	>=dev-python/gnome-applets-python-2.22.0
+	>=dev-python/gnome-desktop-python-2.22.0
+	>=dev-python/gnome-keyring-python-2.22.0
+	>=dev-python/gnome-vfs-python-2.22.1
 	>=dev-python/libwnck-python-2.22.0
+
 	>=gnome-base/gconf-2
 	eds? ( >=gnome-extra/evolution-data-server-1.7.92 )
 	spell? ( >=gnome-extra/gnome-utils-2.16.2 )"
