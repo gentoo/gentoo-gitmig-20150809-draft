@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r5.ebuild,v 1.5 2009/03/08 12:12:42 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/iptraf-3.0.0-r5.ebuild,v 1.6 2009/03/21 01:39:45 jer Exp $
 
 EAPI="2"
 
@@ -18,6 +18,7 @@ IUSE="ipv6 suid unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2-r1
 	unicode? ( >=sys-libs/ncurses-5.2-r1[unicode] )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${P}.tar.gz

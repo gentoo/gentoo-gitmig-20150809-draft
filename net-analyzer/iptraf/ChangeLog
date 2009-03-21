@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.71 2009/03/08 12:12:42 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.72 2009/03/21 01:39:45 jer Exp $
+
+  21 Mar 2009; Jeroen Roovers <jer@gentoo.org>
+  -files/iptraf-2.7.0-2.6.patch, -files/iptraf-2.7.0-atheros.patch,
+  -files/iptraf-2.7.0-ipv6-glibc24.patch, files/iptraf-3.0.0-Makefile.patch,
+  -iptraf-2.7.0-r1.ebuild, iptraf-3.0.0-r5.ebuild:
+  Remove ancient version. Fix parallel make thanks to Davide Pesavento (bug
+  #262971). Explicate RDEPEND.
 
   08 Mar 2009; Dawid Węgliński <cla@gentoo.org> iptraf-3.0.0-r4.ebuild,
   iptraf-3.0.0-r5.ebuild:
