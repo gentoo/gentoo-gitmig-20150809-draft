@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2458 2009/03/21 22:43:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2459 2009/03/21 23:24:22 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Mar 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask sci-astronomy/maestro, x11-libs/xclass, net-p2p/knapster2,
+  dev-embedded/gezel, sys-devel/subterfugue, media-sound/cdmp3,
+  x11-misc/jaffm, kde-misc/kgraphspace - see file for bug numbers.
 
   21 Mar 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
   cleanup p.mask file after removing packages from tree
