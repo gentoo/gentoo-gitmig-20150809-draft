@@ -1,6 +1,9 @@
 # ChangeLog for app-office/mozilla-sunbird
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.41 2009/02/15 19:01:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/ChangeLog,v 1.42 2009/03/21 16:05:05 armin76 Exp $
+
+  21 Mar 2009; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.9.ebuild:
+  fix gcc check, bug #263152
 
   15 Feb 2009; Raúl Porcel <armin76@gentoo.org> mozilla-sunbird-0.9.ebuild:
   Bump patchset to fix failure with gcc-4.3, bug #258075

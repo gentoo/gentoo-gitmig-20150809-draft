@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.9.ebuild,v 1.5 2009/02/15 19:01:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird/mozilla-sunbird-0.9.ebuild,v 1.6 2009/03/21 16:05:05 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -144,9 +144,9 @@ src_compile() {
 	# Finalize and report settings
 	mozconfig_final
 
-	# hardened GCC uses -fstack-protector-all by default, which breaks us
-	gcc-specs-ssp && append-flags -fno-stack-protector-all
-	replace-flags -fstack-protector-all -fstack-protector
+	if [[ $(gcc-major-version) -lt 4 ]]; then
+		append-cxxflags -fno-stack-protector
+	fi
 
 	####################################
 	#
