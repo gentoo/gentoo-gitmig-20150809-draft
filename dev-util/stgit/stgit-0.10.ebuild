@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.10.ebuild,v 1.6 2006/09/09 17:33:39 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.10.ebuild,v 1.7 2009/03/21 16:53:14 jmbsvicetto Exp $
 
 inherit distutils
 
@@ -20,6 +20,6 @@ src_install() {
 	sed -i -e 's-\(prefix:\) ~-\1 /usr-' setup.cfg
 	distutils_src_install
 	dodir /usr/share/doc/${PF}
-	mv ${D}/usr/share/${PN}/examples ${D}/usr/share/doc/${PF}
-	rmdir ${D}/usr/share/doc/${PN}
+	mv "${D}/usr/share/${PN}/examples" "${D}/usr/share/doc/${PF}"
+	rmdir "${D}/usr/share/doc/${PN}"
 }

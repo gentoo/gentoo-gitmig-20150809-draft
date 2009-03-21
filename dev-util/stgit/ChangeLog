@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/stgit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.28 2008/10/06 13:05:50 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.29 2009/03/21 16:53:14 jmbsvicetto Exp $
+
+  21 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing ferdy as a maintainer since he was retired.
 
   06 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> stgit-0.14.3.ebuild:
   Fix build-time dependencies.
