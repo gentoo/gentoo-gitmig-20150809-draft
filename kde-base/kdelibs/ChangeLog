@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.573 2009/03/15 14:25:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.574 2009/03/21 17:28:45 jer Exp $
+
+  21 Mar 2009; Jeroen Roovers <jer@gentoo.org> kdelibs-4.2.1-r2.ebuild:
+  Marked ~hppa (bug #260777).
 
   15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kdelibs-4.2.1-r2.ebuild:
   Automatic-merge: merge updates for 4.2.1 from kde-testing.
