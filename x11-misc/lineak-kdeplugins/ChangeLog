@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lineak-kdeplugins
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/ChangeLog,v 1.29 2008/04/22 17:54:45 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/ChangeLog,v 1.30 2009/03/21 23:26:46 mr_bones_ Exp $
+
+  21 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  -lineak-kdeplugins-0.9.0_pre1.ebuild:
+  remove old, dep-broken ebuild
 
   22 Apr 2008; Samuli Suominen <drac@gentoo.org>
   +files/lineak-kdeplugins-0.9.0-gcc43.patch,
