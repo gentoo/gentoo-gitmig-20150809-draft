@@ -1,9 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.4.ebuild,v 1.1 2009/02/15 22:56:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.4.ebuild,v 1.2 2009/03/22 12:34:52 eva Exp $
+
 EAPI="2"
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Suspend and hibernation utilties for HAL"
 HOMEPAGE="http://pm-utils.freedesktop.org/"
@@ -36,6 +37,11 @@ src_prepare() {
 	touch "${S}/gentoo"
 	use debug && echo 'PM_DEBUG="true"' >> "${S}/gentoo"
 	echo "HOOK_BLACKLIST=\"${ignore}\"" >> "${S}/gentoo"
+
+	# Be a bit more future proof, bug #260943
+	sed "s/-Werror//" -i configure.ac || die "sed failed"
+
+	eautoreconf
 }
 
 src_install() {
