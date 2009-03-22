@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gnomecatalog
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnomecatalog/ChangeLog,v 1.1 2008/01/19 17:15:05 bass Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnomecatalog/ChangeLog,v 1.2 2009/03/22 14:27:47 eva Exp $
+
+*gnomecatalog-0.3.4.2 (22 Mar 2009)
+
+  22 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gnomecatalog-0.3.4.2-dbus.patch, +gnomecatalog-0.3.4.2.ebuild:
+  Bump to 0.3.4.2. Fix bug #263001.
 
 *gnomecatalog-0.3.3 (19 Jan 2008)
 
