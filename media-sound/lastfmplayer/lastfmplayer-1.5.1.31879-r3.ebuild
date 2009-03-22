@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.1.31879-r2.ebuild,v 1.1 2009/02/17 20:07:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.1.31879-r3.ebuild,v 1.1 2009/03/22 23:42:49 hwoarang Exp $
 
 EAPI="2"
 
@@ -31,7 +31,12 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+PATCHES=(
+	"${FILESDIR}"/volumeslider_h-qt45.patch
+)
+
 src_prepare() {
+	qt4_src_prepare
 	cd "${WORKDIR}"
 	epatch lastfm_${PV}.dfsg-1.diff
 	cd "${S}"
@@ -44,8 +49,6 @@ src_prepare() {
 }
 
 src_compile() {
-	emake src/Makefile || die "emake src/Makefile failed"
-	epatch "${FILESDIR}/makefile-qt45.patch"
 	emake || die "emake failed"
 	cd i18n; lrelease *.ts
 }
