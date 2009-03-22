@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.0.ebuild,v 1.1 2009/03/22 02:07:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.0.ebuild,v 1.2 2009/03/22 14:40:03 arfrever Exp $
 
 EAPI="1"
 
@@ -75,6 +75,12 @@ pkg_setup() {
 		ewarn
 		ebeep
 	fi
+
+	append-flags -fno-strict-aliasing
+
+	if use debug; then
+		append-cppflags -DSVN_DEBUG -DAP_DEBUG
+	fi
 }
 
 src_unpack() {
@@ -88,6 +94,9 @@ src_unpack() {
 
 	# Fix 2 messages in Polish translation. They will be fixed in 1.6.1.
 	sed -e "7420d;8586d" -i subversion/po/pl.po
+
+	# https://svn.collab.net/viewvc/svn?view=revision&revision=36742
+	sed -e 's/$SVN_APRUTIL_INCLUDES $SVN_DB_INCLUDES/$SVN_DB_INCLUDES $SVN_APRUTIL_INCLUDES/' -i build/ac-macros/berkeley-db.m4
 
 	sed -i \
 		-e "s/\(BUILD_RULES=.*\) bdb-test\(.*\)/\1\2/g" \
@@ -110,16 +119,26 @@ src_compile() {
 		myconf="${myconf} --without-swig"
 	fi
 
-	if use debug; then
-		append-cppflags -DSVN_DEBUG -DAP_DEBUG
+	einfo
+	if [[ -z "${SVN_BDB_VERSION}" ]]; then
+		SVN_BDB_VERSION="$(db_ver_to_slot "$(db_findver sys-libs/db 2>/dev/null)")"
+		einfo "SVN_BDB_VERSION variable isn't set. You can set it to enforce using of specific version of Berkeley DB."
 	fi
+	einfo "Using Berkeley DB ${SVN_BDB_VERSION}"
+	einfo
 
-	append-flags -fno-strict-aliasing
+	local apu_bdb_version="$(scanelf -nq "${ROOT}usr/$(get_libdir)/libaprutil-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
+	if [[ -n "${apu_bdb_version}" && "${SVN_BDB_VERSION}" != "${apu_bdb_version}" ]]; then
+		eerror "APR-Util is linked against Berkeley DB ${apu_bdb_version}, but you are trying"
+		eerror "to build Subversion with support for Berkeley DB ${SVN_BDB_VERSION}."
+		eerror "Aborting to avoid possible run-time crashes."
+		die "Berkeley DB version mismatch"
+	fi
 
 	econf --libdir="/usr/$(get_libdir)" \
 		${myconf} \
 		$(use_with apache2 apxs "${APXS}") \
-		$(use_with berkdb berkeley-db "db.h:$(db_includedir 2>/dev/null)::$(db_libname 2>/dev/null)") \
+		$(use_with berkdb berkeley-db "db.h:/usr/include/db${SVN_BDB_VERSION}::db-${SVN_BDB_VERSION}") \
 		$(use_with ctypes-python ctypesgen /usr) \
 		$(use_enable dso runtime-module-search) \
 		$(use_with gnome-keyring) \
