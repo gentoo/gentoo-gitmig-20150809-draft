@@ -1,6 +1,22 @@
 # ChangeLog for app-editors/screem
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.15 2008/08/04 21:11:36 eva Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/screem/ChangeLog,v 1.16 2009/03/22 02:20:28 eva Exp $
+
+*screem-0.16.1-r1 (22 Mar 2009)
+
+  22 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/screem-0.16.1-add-tag-file.patch,
+  +files/screem-0.16.1-dbus-closing.patch,
+  +files/screem-0.16.1-deprecated.patch,
+  +files/screem-0.16.1-fix-about-dialog.patch,
+  +files/screem-0.16.1-goption.patch, +screem-0.16.1-r1.ebuild:
+  Bump to 0.16.1-r1,
+   * Remove deprecation warnings, bug #127486.
+   * Make add tag file feature work, bug #256611.
+   * About dialog does not close, bug #256803.
+   * Fix error in exit due to old dbus calls, bug #255750.
+   * Port to GOption, fix tests.
+   * Install translations, bug #256611.
 
   04 Aug 2008; Gilles Dartiguelongue <eva@gentoo.org> 
   -files/screem-0.8.1-makefile-fix.patch, -screem-0.16.0.ebuild:
