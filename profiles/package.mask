@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9599 2009/03/22 17:14:28 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9600 2009/03/22 17:57:27 hkbst Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1323,10 +1323,6 @@ net-dns/bind-dns-keygen
 # if you are running on IBM hardware, emerge ibm-powerpc-utils-papr
 # as well.
 sys-apps/ppc64-utils
-
-# Stefan Knoblich <stkn@gentoo.org> (18 Apr 2006)
-# Masking until asterisk-1.2 gets released into the wild
-net-misc/asterisk-app_authenticate_ldap
 
 # Tavis Ormandy <taviso@gentoo.org> (21 Mar 2006)
 # masked pending unresolved security issues #127319
