@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23.ebuild,v 1.1 2009/02/28 00:02:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23.ebuild,v 1.2 2009/03/22 16:52:59 mrness Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.22-ruby-libpath.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
 src_configure() {

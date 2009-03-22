@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.46 2009/03/06 03:08:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.47 2009/03/22 16:52:59 mrness Exp $
+
+  22 Mar 2009; Alin Năstac <mrness@gentoo.org>
+  +files/obexftp-0.23-gentoo.patch, obexftp-0.23.ebuild:
+  Fix compile error when bluetooth support is disabled.
 
   06 Mar 2009; Jeroen Roovers <jer@gentoo.org> obexftp-0.22.ebuild:
   Stable for HPPA (bug #245455).
