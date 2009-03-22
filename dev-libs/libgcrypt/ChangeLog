@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.118 2009/03/22 17:17:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.119 2009/03/22 20:28:43 klausman Exp $
+
+  22 Mar 2009; Tobias Klausmann <klausman@gentoo.org>
+  libgcrypt-1.4.4.ebuild:
+  Stable on alpha, bug #263319
 
   22 Mar 2009; Markus Meier <maekke@gentoo.org> libgcrypt-1.4.4.ebuild:
   amd64/x86 stable, bug #263319
