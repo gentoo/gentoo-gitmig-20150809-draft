@@ -1,0 +1,20 @@
+--- jcc.c	2009/03/08 14:19:23	1.231
++++ jcc.c	2009/03/08 19:29:16	1.232
+@@ -2600,8 +2605,6 @@
+    struct timeval timeout;
+ 
+    memset(buf, 0, sizeof(buf));
+-   memset(&timeout, 0, sizeof(timeout));
+-   timeout.tv_sec = csp->config->socket_timeout;
+ 
+    http = csp->http;
+ 
+@@ -2843,6 +2846,8 @@
+       }
+ #endif  /* FEATURE_CONNECTION_KEEP_ALIVE */
+ 
++      timeout.tv_sec = csp->config->socket_timeout;
++      timeout.tv_usec = 0;
+       n = select((int)maxfd+1, &rfds, NULL, NULL, &timeout);
+ 
+       if (n == 0)

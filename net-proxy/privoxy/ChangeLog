@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.45 2009/03/13 20:00:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.46 2009/03/22 10:55:14 mrness Exp $
+
+*privoxy-3.0.11-r1 (22 Mar 2009)
+
+  22 Mar 2009; Alin Năstac <mrness@gentoo.org>
+  +files/privoxy-3.0.11-timeout.patch, +privoxy-3.0.11-r1.ebuild:
+  Import upstream fix for a bug regarding timeout handling (#262820).
 
 *privoxy-3.0.11 (13 Mar 2009)
 
