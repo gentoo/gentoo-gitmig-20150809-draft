@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpc
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.56 2009/03/21 21:53:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.57 2009/03/22 17:21:06 maekke Exp $
+
+  22 Mar 2009; Markus Meier <maekke@gentoo.org> mpc-0.15.ebuild:
+  x86 stable, bug #262680
 
   21 Mar 2009; Christoph Mende <angelos@gentoo.org> mpc-0.15.ebuild:
   Stable on amd64
