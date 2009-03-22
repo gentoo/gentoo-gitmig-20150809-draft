@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.76 2009/03/21 01:49:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.77 2009/03/22 18:59:02 klausman Exp $
+
+  22 Mar 2009; Tobias Klausmann <klausman@gentoo.org>
+  uptimed-0.3.16-r3.ebuild:
+  Stable on alpha, bug #263123
 
   21 Mar 2009; Jeroen Roovers <jer@gentoo.org> uptimed-0.3.16-r3.ebuild:
   Stable for HPPA (bug #263123).
