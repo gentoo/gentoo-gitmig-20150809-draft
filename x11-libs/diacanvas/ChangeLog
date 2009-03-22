@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/diacanvas
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/diacanvas/ChangeLog,v 1.5 2008/11/24 13:25:36 eva Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/diacanvas/ChangeLog,v 1.6 2009/03/22 17:02:57 eva Exp $
+
+  22 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -diacanvas-0.10.0.ebuild:
+  Clean up old revision.
 
 *diacanvas-0.15.4 (24 Nov 2008)
 
