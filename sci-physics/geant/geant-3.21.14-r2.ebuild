@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.8 2009/03/18 16:22:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.9 2009/03/22 21:41:50 darkside Exp $
 
 DEB_PN=geant321
 DEB_PV=${PV}.dfsg
@@ -16,7 +16,7 @@ LICENSE="GPL-2 LGPL-2 BSD"
 SRC_URI="mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
 	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}-${DEB_PR}.diff.gz"
 
-KEYWORDS="~amd64 ~hppa sparc ~x86"
+KEYWORDS="amd64 ~hppa sparc ~x86"
 SLOT="3"
 IUSE=""
 

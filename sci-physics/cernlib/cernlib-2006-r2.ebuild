@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r2.ebuild,v 1.2 2009/03/03 16:51:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r2.ebuild,v 1.3 2009/03/22 21:41:21 darkside Exp $
 
 inherit eutils fortran
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://wwwasd.web.cern.ch/wwwasd/cernlib"
 SRC_URI="mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
 	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}-${DEB_PR}.diff.gz"
 
-KEYWORDS="~amd64 ~hppa sparc ~x86"
+KEYWORDS="amd64 ~hppa sparc ~x86"
 LICENSE="GPL-2 LGPL-2 BSD"
 
 SLOT="0"
