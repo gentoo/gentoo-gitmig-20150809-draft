@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9596 2009/03/22 10:46:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9597 2009/03/22 16:00:22 matsuu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -645,10 +645,6 @@ app-portage/genflags
 # Keri Harris <keri@gentoo.org> (21 Sep 2008)
 # Development version
 =dev-lang/swi-prolog-5.7*
-
-# MATSUU Takuto <matsuu@gentoo.org> (18 Sep 2008)
-# Masked for removal in 60 days.
-app-i18n/uim-svn
 
 # Doug Goldstein <cardoe@gentoo.org> (17 Sep 2008)
 # under development
