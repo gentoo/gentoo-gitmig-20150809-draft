@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkhotkey
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.4 2008/11/30 14:55:46 serkan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.5 2009/03/22 11:04:02 serkan Exp $
+
+  22 Mar 2009; Serkan Kaba <serkan@gentoo.org> gtkhotkey-0.2.0:
+  Restrict tests per bug #259052 c#3
 
   30 Nov 2008; Serkan Kaba <serkan@gentoo.org> gtkhotkey-0.2.0.ebuild:
   Fix Makefile.in to avoid plain docs to be installed.
