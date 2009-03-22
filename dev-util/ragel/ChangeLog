@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/ragel
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.19 2008/12/14 16:02:25 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.20 2009/03/22 19:06:18 flameeyes Exp $
+
+*ragel-6.4 (22 Mar 2009)
+
+  22 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org> +ragel-6.4.ebuild:
+  Version bump; since the new version tremendously simplified the build
+  system, don't sed it around and simply install the binary by hand. Also
+  download the PDF guide with USE=doc instead of building it from the LaTeX
+  sources.
 
   14 Dec 2008; Alexis Ballier <aballier@gentoo.org> ragel-6.3.ebuild:
   typo: textex -> tetex
