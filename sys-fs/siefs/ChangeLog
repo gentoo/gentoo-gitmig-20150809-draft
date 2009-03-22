@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/siefs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.11 2008/11/08 01:46:50 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.12 2009/03/22 10:41:39 mrness Exp $
+
+*siefs-0.5-r2 (22 Mar 2009)
+
+  22 Mar 2009; Alin Năstac <mrness@gentoo.org>
+  +files/siefs-0.5-external-vmoconv.patch, files/siefs-0.5-qa-fixes.patch,
+  +siefs-0.5-r2.ebuild:
+  Fix collision with app-mobilephone/vmoconv (#256570).
 
   08 Nov 2008; Jeremy Olexa <darkside@gentoo.org> siefs-0.5-r1.ebuild:
   amd64 stable, bug #244348
