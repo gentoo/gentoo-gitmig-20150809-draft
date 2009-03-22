@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.4.ebuild,v 1.1 2008/01/19 22:10:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.4.ebuild,v 1.2 2009/03/22 21:30:38 spock Exp $
 
 inherit mount-boot eutils
 
@@ -43,30 +43,10 @@ pkg_postinst() {
 	einfo "memtest.bin has been installed in /boot/memtest86/"
 	einfo "You may wish to update your bootloader configs"
 	einfo "by adding these lines:"
-	einfo " - For grub:"
+	einfo " - For grub: (replace '?' with correct numbers for your boot partition)"
 	einfo "    > title=Memtest86"
-
-	# a little magic to make users' life as easy as possible ;)
-	bootpart=0
-	root="(hd0,0)"
-	res=`grep /boot /etc/fstab | grep -v "^#" | awk '{print $1}' | grep '/dev/hd[a-z0-9]\+'`
-	if [ -n "${res}" ] ; then
-		bootpart=1
-	else
-		res=`grep -v '^#' /etc/fstab | grep -e '/dev/hd[a-z0-9]\+[[:space:]]\+\/[[:space:]]\+' | awk '{print $1}'`
-	fi
-
-	if [ -n "${res}" ] ; then
-		root=`echo ${res} | grep -o '[a-z][0-9]' | tr -t a-z 0123456789 | sed -e 's/\([0-9]\)\([0-9]\)/\1 \2/' | awk '{print "(hd" $1 "," $2-1 ")" }'`
-	fi
-
-	einfo "    > root ${root}"
-	if [ "${bootpart}" -eq 1 ] ; then
-		einfo "    > kernel /memtest86/memtest.bin"
-	else
-		einfo "    > kernel /boot/memtest86/memtest.bin"
-	fi
-
+	einfo "    > root (hd?,?)"
+	einfo "    > kernel /boot/memtest86/memtest.bin"
 	einfo " - For lilo:"
 	einfo "    > image  = /boot/memtest86/memtest.bin"
 	einfo "    > label  = Memtest86"

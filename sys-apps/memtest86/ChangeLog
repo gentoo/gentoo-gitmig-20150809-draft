@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.34 2008/09/28 11:01:23 spock Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.35 2009/03/22 21:30:38 spock Exp $
+
+  22 Mar 2009; Michał Januszewski <spock@gentoo.org> memtest86-3.3.ebuild,
+  memtest86-3.4.ebuild:
+  Fix bug #260547 (drop the /etc/fstab -> GRUB translation code).
 
   28 Sep 2008; Michał Januszewski <spock@gentoo.org> Manifest:
   Compile memtest86+ with -O1 instead of -Os (bug #217324).
