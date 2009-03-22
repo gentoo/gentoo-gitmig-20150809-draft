@@ -1,6 +1,21 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.125 2009/03/16 06:29:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.126 2009/03/22 03:34:07 kumba Exp $
+
+  22 Mar 2009; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.6.27.18.ebuild, +mips-sources-2.6.27.20.ebuild,
+  -mips-sources-2.6.28.7-r1.ebuild, +mips-sources-2.6.28.8.ebuild:
+  Update to 2.6.27.20 and 2.6.28.8, and include some ext4 fixes from
+  gentoo-sources/lkml, and build fixes from linux-mips.
+
+*mips-sources-2.6.28.8 (18 Mar 2009)
+*mips-sources-2.6.27.20 (18 Mar 2009)
+
+  18 Mar 2009; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.6.27.18.ebuild, +mips-sources-2.6.27.20.ebuild,
+  -mips-sources-2.6.28.7-r1.ebuild, +mips-sources-2.6.28.8.ebuild:
+  Update 2.6.27.18 to 2.6.27.20 and 2.6.28.7 to 2.6.28.8 (lots of ext4
+  fixes).
 
 *mips-sources-2.6.28.7-r1 (16 Mar 2009)
 *mips-sources-2.6.27.18 (16 Mar 2009)
