@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.13.ebuild,v 1.1 2009/03/22 06:38:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.13.ebuild,v 1.2 2009/03/22 21:00:54 truedfx Exp $
 
 inherit java-pkg-opt-2 mono elisp-common
 
@@ -22,7 +22,7 @@ RDEPEND="${COMMON_DEPEND}
 	nls? ( virtual/libintl )
 	java? ( >=virtual/jre-1.4 )"
 
-SITEFILE=50${PN}-gentoo.pl
+SITEFILE=50${PN}-gentoo.el
 
 src_unpack() {
 	unpack ${A}
