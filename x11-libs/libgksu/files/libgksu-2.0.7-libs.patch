@@ -1,3 +1,5 @@
+# https://savannah.nongnu.org/bugs/?25362
+# https://bugs.gentoo.org/show_bug.cgi?id=226837
 diff -Nura a/configure.ac b/configure.ac
 --- a/configure.ac	2009-01-19 22:15:30.000000000 +0100
 +++ b/configure.ac	2009-01-19 22:18:10.000000000 +0100
