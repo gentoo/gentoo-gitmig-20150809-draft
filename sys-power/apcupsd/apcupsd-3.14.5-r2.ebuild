@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.5-r1.ebuild,v 1.1 2009/03/11 11:23:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.5-r2.ebuild,v 1.1 2009/03/22 13:58:12 flameeyes Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 WEBAPP_OPTIONAL="yes"
@@ -89,6 +89,7 @@ src_install() {
 
 	rm "${D}"/etc/init.d/apcupsd
 	newinitd "${FILESDIR}/${PN}.init.2" "${PN}" || die "newinitd failed"
+	newinitd "${FILESDIR}/${PN}.powerfail.init" "${PN}".powerfail || die "newinitd failed"
 }
 
 pkg_postinst() {
@@ -106,6 +107,16 @@ pkg_postinst() {
 	elog "/etc/init.d/apcupsd.something, and it will then load the"
 	elog "configuration file at /etc/apcupsd/something.conf."
 	elog ""
+
+	if [ -d "${ROOT}"/etc/runlevels/shutdown -a \
+			! -e "${ROOT}"/etc/runlevels/shutdown/"${PN}".powerfail ] ; then
+		elog 'If you want apcupsd to power off your UPS when it'
+		elog 'shuts down your system in a power failure, you must'
+		elog 'add apcupsd.powerfail to your shutdown runlevel:'
+		elog ''
+		elog ' \e[01m rc-update add apcupsd.powerfail shutdown \e[0m'
+		elog ''
+	fi
 }
 
 pkg_prerm() {
