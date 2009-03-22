@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.123 2009/03/22 09:46:47 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.124 2009/03/22 15:02:15 klausman Exp $
+
+  22 Mar 2009; Tobias Klausmann <klausman@gentoo.org> lua-5.1.4.ebuild:
+  Stable on alpha, bug #255191
 
   22 Mar 2009; Matti Bickel <mabi@gentoo.org> +files/lua-5.1-make-r1.patch,
   +files/lua-5.1-make_static-r1.patch, +lua-5.1.4-r1.ebuild:
