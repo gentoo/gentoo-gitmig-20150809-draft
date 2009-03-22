@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sshguard
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.9 2008/12/22 02:03:00 vanquirius Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sshguard/ChangeLog,v 1.10 2009/03/22 01:51:51 jmbsvicetto Exp $
+
+  22 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing hawking as a maintainer since he was retired.
 
 *sshguard-1.3 (22 Dec 2008)
 
