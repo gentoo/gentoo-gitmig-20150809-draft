@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.4.ebuild,v 1.6 2009/02/10 00:19:25 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.4.ebuild,v 1.7 2009/03/22 07:51:19 spock Exp $
 
 EAPI=1
 
@@ -84,6 +84,6 @@ pkg_postinst() {
 	elog "Now load the oprofile module by running:"
 	elog "  # opcontrol --init"
 	elog "Then read manpages and this html doc:"
-	elog "  /usr/share/doc/oprofile/oprofile.html"
+	elog "  /usr/share/doc/${PF}/oprofile.html"
 	echo
 }
