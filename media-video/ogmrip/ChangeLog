@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ogmrip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.34 2009/02/03 23:39:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.35 2009/03/22 13:19:43 loki_val Exp $
+
+  22 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/ogmrip-werror.patch, ogmrip-0.12.3.ebuild:
+  Fix bug 260920, ogmrip uses -Werror. Proxy-commit for Olivier Rolland
+  <billl@users.sf.net>. Thanks to Diego E. 'Flameeyes' Pettenò
+  <flameeyes@gentoo.org> for the report.
 
 *ogmrip-0.12.3 (03 Feb 2009)
 
