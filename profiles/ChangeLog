@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2459 2009/03/21 23:24:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2460 2009/03/22 10:46:19 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Mar 2009; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
+  CPUFreq regression has been fixed, no need for p.mask: bug 247614
 
   21 Mar 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask sci-astronomy/maestro, x11-libs/xclass, net-p2p/knapster2,
