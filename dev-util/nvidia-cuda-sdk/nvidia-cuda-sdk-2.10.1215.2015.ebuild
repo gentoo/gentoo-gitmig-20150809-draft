@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-2.10.1215.2015.ebuild,v 1.1 2009/01/21 14:38:52 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-2.10.1215.2015.ebuild,v 1.2 2009/03/22 10:50:32 spock Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack_makeself
 	cd "${S}"
 	sed -i -e 's:CUDA_INSTALL_PATH ?= .*:CUDA_INSTALL_PATH ?= /opt/cuda:' sdk/common/common.mk
+	epatch "${FILESDIR}/nvidia-cuda-sdk-2.10.1215.2015-vararg_inline_fix.patch"
 }
 
 src_compile() {
