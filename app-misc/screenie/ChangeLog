@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screenie
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.15 2008/10/10 13:53:58 hawking Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.16 2009/03/22 03:02:32 jmbsvicetto Exp $
+
+  22 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing hawking as a maintainer since he was retired.
 
   10 Oct 2008; Ali Polatel <hawking@gentoo.org> screenie-1.30.0.ebuild:
   Shorten DESCRIPTION, bug 211377.

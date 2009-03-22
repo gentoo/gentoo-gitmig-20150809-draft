@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>hawking@gentoo.org</email>
-		<name>Ali Polatel</name>
-	</maintainer>
-	<longdescription lang="en">
-		Screenie is a small and lightweight GNU screen(1) frontend that is
-		designed to be a session handler that simplifies the process of
-		administrating detached jobs by providing an interactive menu.
-	</longdescription>
-	<longdescription lang="ja">
-		Screenie「スクリーネ」と言うアップは小さいなGNU 
-		screen(1)フロントエンドです。対話的メニューで
-		プロセス管理を安くなります。
-	</longdescription>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>maintainer-needed@gentoo.org</email>
+  </maintainer>
+  <longdescription lang="en">
+    Screenie is a small and lightweight GNU screen(1) frontend that is
+    designed to be a session handler that simplifies the process of
+    administrating detached jobs by providing an interactive menu.
+  </longdescription>
+  <longdescription lang="ja">
+    Screenie「スクリーネ」と言うアップは小さいなGNU 
+    Screen(1)フロントエンドです。対話的メニューで
+    プロセス管理を安くなります。
+  </longdescription>
 </pkgmetadata>
