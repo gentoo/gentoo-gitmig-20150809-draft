@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.19.2.1.ebuild,v 1.1 2009/03/03 11:06:47 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.19.2.1.ebuild,v 1.2 2009/03/22 01:41:30 loki_val Exp $
 
 EAPI=2
 
@@ -18,16 +18,8 @@ IUSE=""
 
 RDEPEND="
 	|| (
-		=gnome-extra/evolution-data-server-2.25.9*
-		=gnome-extra/evolution-data-server-2.25.8*
-		=gnome-extra/evolution-data-server-2.25.7*
-		=gnome-extra/evolution-data-server-2.25.6*
-		=gnome-extra/evolution-data-server-2.25.5*
-		=gnome-extra/evolution-data-server-2.25.4*
-		=gnome-extra/evolution-data-server-2.25.3*
-		=gnome-extra/evolution-data-server-2.25.2*
-		=gnome-extra/evolution-data-server-2.25.1*
-		=gnome-extra/evolution-data-server-2.25.0*
+		=gnome-extra/evolution-data-server-2.26*
+		=gnome-extra/evolution-data-server-2.25*
 		=gnome-extra/evolution-data-server-2.24*
 	)
 	>=dev-dotnet/glib-sharp-2.12
@@ -36,6 +28,10 @@ DEPEND="${RDEPEND}
 	userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 	>=dev-dotnet/gtk-sharp-gapi-2.12
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-newer-eds.patch
+}
 
 src_configure() {
 	econf --disable-static

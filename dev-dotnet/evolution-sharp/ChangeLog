@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/evolution-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.37 2009/03/19 05:15:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.38 2009/03/22 01:41:30 loki_val Exp $
+
+  22 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -files/evolution-sharp-0.18.0-respectlibdir.patch,
+  +files/evolution-sharp-0.19.2.1-newer-eds.patch,
+  evolution-sharp-0.19.2.1.ebuild:
+  Add patch to build 0.19.2.1 with evolution-data-server-2.26.0, patch
+  snatched from OpenSuse, remove no-longer-used patch.
 
   19 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
   evolution-sharp-0.18.1.ebuild:
