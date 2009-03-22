@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/xtail
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.14 2007/07/15 19:35:04 hawking Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.15 2009/03/22 02:13:09 jmbsvicetto Exp $
+
+  22 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing hawking as a maintainer since he was retired.
 
   15 Jul 2007; Ali Polatel <hawking@gentoo.org> metadata.xml:
   Changed maintainer to hawking
