@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/blat/blat-34.ebuild,v 1.2 2008/05/26 14:33:26 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/blat/blat-34.ebuild,v 1.3 2009/03/22 16:35:06 maekke Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ LICENSE="blat"
 HOMEPAGE="http://www.cse.ucsc.edu/~kent/"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 MY_PN="${PN}Src"
 SRC_URI="http://www.soe.ucsc.edu/~kent/src/${MY_PN}${PV}.zip"

@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/blat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/blat/ChangeLog,v 1.1 2008/05/23 17:28:35 weaver Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/blat/ChangeLog,v 1.2 2009/03/22 16:35:06 maekke Exp $
+
+  22 Mar 2009; Markus Meier <maekke@gentoo.org> blat-34.ebuild:
+  amd64/x86 stable, bug #263045
 
 *blat-34 (23 May 2008)
 
