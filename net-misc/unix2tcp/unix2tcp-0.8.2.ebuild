@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unix2tcp/unix2tcp-0.8.2.ebuild,v 1.7 2005/03/13 03:36:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unix2tcp/unix2tcp-0.8.2.ebuild,v 1.8 2009/03/22 13:29:19 jmbsvicetto Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 arm hppa ia64 ~ppc s390 x86"
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
 
 src_install() {
 	emake DESTDIR="${D}" install || die

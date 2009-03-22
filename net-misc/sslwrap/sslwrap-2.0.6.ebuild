@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6.ebuild,v 1.12 2006/11/22 20:25:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.6.ebuild,v 1.13 2009/03/22 13:27:00 jmbsvicetto Exp $
 
 inherit eutils
 
@@ -15,20 +15,21 @@ KEYWORDS="x86 sparc"
 IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.6"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}${PV//.}
 
 src_unpack () {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s:-O2:${CFLAGS}:" \
 		-e "s:/usr/local/ssl/include:/usr/include/openssl:" \
 		Makefile
 
-	cp ${WORKDIR}/${PN}-gentoo/*.c ${S}
+	cp "${WORKDIR}/${PN}-gentoo/*.c" "${S}"
 	has_version '=dev-libs/openssl-0.9.7*' \
-		&& epatch ${FILESDIR}/${PV}-openssl-0.9.7.patch
+		&& epatch "${FILESDIR}/${PV}"-openssl-0.9.7.patch
 	sed -i \
 		-e "s:OPENSSL\":\"openssl\/:g" \
 		*.h *.c
