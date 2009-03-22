@@ -1,29 +1,36 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.8.ebuild,v 1.1 2008/08/16 09:26:24 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.10_p1.ebuild,v 1.1 2009/03/22 16:40:12 neurogeek Exp $
 
-NEED_PYTHON="2.3"
+EAPI=1
+NEED_PYTHON="2.4"
 
-inherit distutils eutils
+MY_PV="${PV/_p/p}"
+MY_P="${PN}-${MY_PV}"
+
+inherit distutils
 
 DESCRIPTION="A Python system to automate the compile/test cycle to validate code changes"
 HOMEPAGE="http://buildbot.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc irc mail manhole test web"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="doc irc mail manhole test"
 
 CDEPEND=">=dev-python/twisted-2.0.1"
 RDEPEND="${CDEPEND}
 	mail? ( dev-python/twisted-mail )
 	manhole? ( dev-python/twisted-conch )
 	irc? ( dev-python/twisted-words )
-	web? ( dev-python/twisted-web )"
+	dev-python/twisted-web
+	dev-python/twisted-mail"
 DEPEND="${CDEPEND}
 	test? ( dev-python/twisted-web
-		dev-python/twisted-mail )
+		    dev-python/twisted-mail )
 	doc? ( =dev-python/epydoc-2* )"
+
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	enewuser buildbot
@@ -32,7 +39,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}/${PN}-0.7.5-root-skip-tests.patch"
 }
 
@@ -58,6 +64,7 @@ src_install() {
 	dohtml -r docs/buildbot.html docs/images
 
 	insinto /usr/share/doc/${PF}
+	doins -r contrib
 	doins -r docs/examples
 
 	use doc && doins -r docs/reference
