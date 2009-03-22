@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/plt-scheme
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/ChangeLog,v 1.6 2009/03/22 13:03:12 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/ChangeLog,v 1.7 2009/03/22 13:05:35 hkbst Exp $
+
+  22 Mar 2009; Marijn Schouten <hkBst@gentoo.org>
+  -plt-scheme-0.372-r1.ebuild, -plt-scheme-4.0.1.ebuild,
+  -plt-scheme-4.0.2.ebuild:
+  remove old versions
 
 *plt-scheme-4.1.5 (22 Mar 2009)
 
