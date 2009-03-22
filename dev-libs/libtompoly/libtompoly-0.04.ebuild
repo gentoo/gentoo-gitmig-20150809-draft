@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtompoly/libtompoly-0.04.ebuild,v 1.5 2006/10/22 02:25:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtompoly/libtompoly-0.04.ebuild,v 1.6 2009/03/22 12:38:44 jmbsvicetto Exp $
 
 DESCRIPTION="portable ISO C library for polynomial basis arithmetic"
 HOMEPAGE="http://poly.libtomcrypt.org/"
@@ -12,6 +12,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-libs/libtommath"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	emake install DESTDIR="${D}" || die

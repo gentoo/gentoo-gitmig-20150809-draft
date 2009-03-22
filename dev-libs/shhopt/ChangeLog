@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/shhopt
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.12 2008/04/01 22:23:31 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.13 2009/03/22 12:43:03 jmbsvicetto Exp $
+
+  22 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing hawking as a maintainer since he was retired.
 
   01 Apr 2008; Christian Faulhammer <opfer@gentoo.org>
   shhopt-1.1.7-r2.ebuild:
