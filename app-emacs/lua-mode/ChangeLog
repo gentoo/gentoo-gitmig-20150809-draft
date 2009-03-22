@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/lua-mode
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.26 2009/03/22 21:05:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.27 2009/03/22 22:52:42 tcunha Exp $
+
+  22 Mar 2009; Tiago Cunha <tcunha@gentoo.org> lua-mode-20071122.ebuild:
+  keyworded ~arch for sparc, bug 263409
 
   22 Mar 2009; Tobias Klausmann <klausman@gentoo.org>
   lua-mode-20071122.ebuild:
