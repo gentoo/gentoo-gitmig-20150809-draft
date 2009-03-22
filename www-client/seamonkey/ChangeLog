@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.179 2009/03/21 16:06:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.180 2009/03/22 15:25:26 armin76 Exp $
+
+  22 Mar 2009; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.15.ebuild:
+  Bump patchset to fix #263215
 
   21 Mar 2009; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.15.ebuild:
   alpha/arm/ia64/sparc stable, fix gcc check, bug #263152
