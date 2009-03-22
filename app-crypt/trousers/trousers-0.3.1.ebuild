@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.1.ebuild,v 1.5 2009/02/20 12:51:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.1.ebuild,v 1.6 2009/03/22 16:22:19 arfrever Exp $
 
-inherit base eutils linux-info
+inherit autotools base eutils linux-info
 
 DESCRIPTION="An open-source TCG Software Stack (TSS) v1.1 implementation"
 HOMEPAGE="http://trousers.sf.net"
@@ -58,6 +58,13 @@ pkg_setup() {
 	# New user/group for the daemon
 	enewgroup tss
 	enewuser tss -1 -1 /var/lib/tpm tss
+}
+
+src_unpack() {
+	base_src_unpack
+
+	sed -e "s/-Werror //" -i configure.in
+	eautoreconf
 }
 
 src_install() {
