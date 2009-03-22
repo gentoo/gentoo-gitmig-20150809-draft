@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/exiftool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.49 2009/02/20 16:56:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.50 2009/03/22 16:27:28 maekke Exp $
+
+  22 Mar 2009; Markus Meier <maekke@gentoo.org> exiftool-7.67.ebuild:
+  amd64/x86 stable, bug #262417
 
 *exiftool-7.67 (20 Feb 2009)
 
