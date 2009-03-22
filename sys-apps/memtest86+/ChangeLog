@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.47 2009/02/09 21:26:48 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.48 2009/03/22 08:40:40 spock Exp $
+
+  22 Mar 2009; Michał Januszewski <spock@gentoo.org>
+  memtest86+-2.01.ebuild, memtest86+-2.10.ebuild, memtest86+-2.11.ebuild:
+  Remove GRUB device ID translation code (bug #260547).
 
   09 Feb 2009; Michał Januszewski <spock@gentoo.org>
   memtest86+-2.01.ebuild, memtest86+-2.10.ebuild, memtest86+-2.11.ebuild:
