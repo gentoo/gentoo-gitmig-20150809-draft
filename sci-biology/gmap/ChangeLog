@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/gmap
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gmap/ChangeLog,v 1.1 2008/05/23 16:20:53 weaver Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gmap/ChangeLog,v 1.2 2009/03/22 16:32:22 maekke Exp $
+
+  22 Mar 2009; Markus Meier <maekke@gentoo.org> gmap-2007.09.28.ebuild:
+  amd64/x86 stable, bug #263044
 
 *gmap-2007.09.28 (23 May 2008)
 
