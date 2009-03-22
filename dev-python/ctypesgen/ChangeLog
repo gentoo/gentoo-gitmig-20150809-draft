@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ctypesgen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.1 2009/03/22 00:36:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.2 2009/03/22 20:57:52 klausman Exp $
+
+  22 Mar 2009; Tobias Klausmann <klausman@gentoo.org>
+  ctypesgen-0_p72.ebuild:
+  Stable on alpha, bug #263337
 
 *ctypesgen-0_p72 (22 Mar 2009)
 
