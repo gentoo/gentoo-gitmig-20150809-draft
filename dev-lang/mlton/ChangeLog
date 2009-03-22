@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mlton
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/ChangeLog,v 1.8 2008/08/23 05:29:53 jer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/ChangeLog,v 1.9 2009/03/22 17:01:52 hkbst Exp $
+
+  22 Mar 2009; Marijn Schouten <hkBst@gentoo.org> -mlton-20040227.ebuild:
+  rm old ebuild
 
   23 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add GLEP 56 USE flag descriptions.
