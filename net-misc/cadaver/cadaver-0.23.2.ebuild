@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.6 2008/09/07 13:46:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.7 2009/03/22 17:31:00 arfrever Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Command-line WebDAV client."
 HOMEPAGE="http://www.webdav.org/cadaver"
@@ -11,41 +11,32 @@ SRC_URI="http://www.webdav.org/cadaver/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
-IUSE="gnutls nls ssl"
+IUSE="nls"
 
 DEPEND=">=net-misc/neon-0.27.0"
 RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	if use ssl && ! built_with_use net-misc/neon ssl ; then
-		ewarn "SSL support in cadaver requires SSL support in net-misc/neon."
-		ewarn "Please rebuild net-misc/neon with the ssl USE flag if you want to use"
-		ewarn "cadaver with SSL support."
-		die "SSL support in cadaver requires SSL support in net-misc/neon"
-	fi
-
-	if use gnutls && ! built_with_use net-misc/neon gnutls ; then
-		ewarn "SSL support in cadaver requires gnutls support in net-misc/neon."
-		ewarn "Please rebuild net-misc/neon with the gnutls USE flag if you want to use"
-		ewarn "cadaver with gnutls support."
-		die "gnutls support in cadaver requires gnutls support in net-misc/neon"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-disable-nls.patch"
+
+	rm -fr lib/{expat,intl,neon}
+	sed -e "/NE_REQUIRE_VERSIONS/s/28/& 29/" \
+		-e "s:lib/neon/Makefile lib/intl/Makefile ::" -i configure.ac
+	sed -e "s/^\(SUBDIRS.*=\).*/\1/" -i Makefile.in
+	AT_M4DIR="m4 m4/neon" eautoreconf
 }
 
 src_compile() {
-	myconf="--with-libs=/usr $(use_enable nls)"
-	econf $myconf || die "econf failed"
-	emake || die
+	econf \
+		$(use_enable nls) \
+		--with-libs=/usr
+	emake || die "emake failed"
 }
 
 src_install () {
-	einstall || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc BUGS ChangeLog FAQ NEWS README THANKS TODO
 }
