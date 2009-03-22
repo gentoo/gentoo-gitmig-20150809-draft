@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.0.ebuild,v 1.2 2009/03/22 14:40:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.0.ebuild,v 1.3 2009/03/22 18:32:16 arfrever Exp $
 
 EAPI="1"
 
@@ -119,20 +119,22 @@ src_compile() {
 		myconf="${myconf} --without-swig"
 	fi
 
-	einfo
-	if [[ -z "${SVN_BDB_VERSION}" ]]; then
-		SVN_BDB_VERSION="$(db_ver_to_slot "$(db_findver sys-libs/db 2>/dev/null)")"
-		einfo "SVN_BDB_VERSION variable isn't set. You can set it to enforce using of specific version of Berkeley DB."
-	fi
-	einfo "Using Berkeley DB ${SVN_BDB_VERSION}"
-	einfo
+	if use berkdb; then
+		einfo
+		if [[ -z "${SVN_BDB_VERSION}" ]]; then
+			SVN_BDB_VERSION="$(db_ver_to_slot "$(db_findver sys-libs/db 2>/dev/null)")"
+			einfo "SVN_BDB_VERSION variable isn't set. You can set it to enforce using of specific version of Berkeley DB."
+		fi
+		einfo "Using Berkeley DB ${SVN_BDB_VERSION}"
+		einfo
 
-	local apu_bdb_version="$(scanelf -nq "${ROOT}usr/$(get_libdir)/libaprutil-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
-	if [[ -n "${apu_bdb_version}" && "${SVN_BDB_VERSION}" != "${apu_bdb_version}" ]]; then
-		eerror "APR-Util is linked against Berkeley DB ${apu_bdb_version}, but you are trying"
-		eerror "to build Subversion with support for Berkeley DB ${SVN_BDB_VERSION}."
-		eerror "Aborting to avoid possible run-time crashes."
-		die "Berkeley DB version mismatch"
+		local apu_bdb_version="$(scanelf -nq "${ROOT}usr/$(get_libdir)/libaprutil-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
+		if [[ -n "${apu_bdb_version}" && "${SVN_BDB_VERSION}" != "${apu_bdb_version}" ]]; then
+			eerror "APR-Util is linked against Berkeley DB ${apu_bdb_version}, but you are trying"
+			eerror "to build Subversion with support for Berkeley DB ${SVN_BDB_VERSION}."
+			eerror "Aborting to avoid possible run-time crashes."
+			die "Berkeley DB version mismatch"
+		fi
 	fi
 
 	econf --libdir="/usr/$(get_libdir)" \
