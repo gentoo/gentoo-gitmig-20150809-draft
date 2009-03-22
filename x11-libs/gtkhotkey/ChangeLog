@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkhotkey
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.5 2009/03/22 11:04:02 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.6 2009/03/22 15:51:29 serkan Exp $
+
+  22 Mar 2009; Serkan Kaba <serkan@gentoo.org>
+  +files/gtkhotkey-0.2.0-fix-implicit-declaration.patch, gtkhotkey-0.2.0:
+  Fix bug #259052 c#5. Thanks to Markus Meier <maekke@gentoo.org> for
+  spotting the issue.
 
   22 Mar 2009; Serkan Kaba <serkan@gentoo.org> gtkhotkey-0.2.0:
   Restrict tests per bug #259052 c#3
