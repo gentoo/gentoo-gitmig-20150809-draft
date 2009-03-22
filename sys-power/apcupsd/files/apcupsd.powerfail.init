@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/files/apcupsd.powerfail.init,v 1.1 2009/03/22 13:58:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/files/apcupsd.powerfail.init,v 1.2 2009/03/22 15:22:28 flameeyes Exp $
 
 description='Signal the UPS to kill power in a power failure condition'
 
@@ -10,7 +10,7 @@ depend() {
 }
 
 start() {
-	if [[ $(runlevel) == *' 0' && -f /etc/apcupsd/powerfail ]] ; then
+	if [ "$(runlevel | cut -d' ' -f2)" = "0" -a -f /etc/apcupsd/powerfail ] ; then
 		ebegin 'Signaling UPS to kill power'
 		/sbin/apcupsd --killpower
 		eend $?
