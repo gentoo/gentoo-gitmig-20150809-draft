@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/couchdb
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.1 2009/03/22 21:27:43 caleb Exp $
+
+*couchdb-0.8.1 (22 Mar 2009)
+
+  22 Mar 2009; Caleb Tennis <caleb@gentoo.org> +files/couchdb.conf-0.8.1,
+  +files/couchdb.init-0.8.1, +couchdb-0.8.1.ebuild:
+  Initial import, from bug 197176.  Thanks to everyone there who submitted ebuilds and supplemental files.
+
