@@ -48,3 +48,19 @@ djvu
 # Bug #184563, 18 Sep 2007 
 # Robin H. Johnson <robbat2@gentoo.org>
 audit
+
+# Masking this for vim since we don't have a stable libXt and libSM
+vim-with-x
+
+# Masking since dev-db/sqlite is masked
+sqlite
+
+# Masking these globally, since we don't have X
+gnome
+gnome-keyring
+pango
+
+# Masking since net-dns/avahi and net-misc/mDNSResponder are masked
+avahi
+zeroconf
+
