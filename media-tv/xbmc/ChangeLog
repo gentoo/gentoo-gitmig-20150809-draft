@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.10 2009/03/07 20:44:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.11 2009/03/23 00:44:15 vapier Exp $
+
+  23 Mar 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Require audio/video USE flags in libsdl #263349.
 
   07 Mar 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Pull in xdpyinfo #261556 by Michael Lange.
