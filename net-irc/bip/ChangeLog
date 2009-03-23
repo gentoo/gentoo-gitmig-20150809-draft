@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.4 2009/02/23 22:47:21 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.5 2009/03/23 14:43:11 a3li Exp $
+
+  23 Mar 2009; Alex Legler <a3li@gentoo.org> metadata.xml:
+  Taking over maintenance.
 
 *bip-0.8.0_rc1 (24 Feb 2009)
 
