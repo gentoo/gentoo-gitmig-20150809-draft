@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2464 2009/03/23 08:38:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2465 2009/03/23 11:23:05 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Mar 2009; Rémi Cardona <remi@gentoo.org> package.mask:
+  add mesa-7.3-r2 to package.mask
 
   23 Mar 2009; Torsten Veller <tove@gentoo.org> package.mask:
   Masked dev-lang/pugs for removal (#151986,#171649,#239222)
