@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.574 2009/03/21 17:28:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.575 2009/03/23 04:37:11 jmbsvicetto Exp $
+
+*kdelibs-4.2.1-r3 (23 Mar 2009)
+
+  23 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +files/kdelibs-4.2.1-kdialog.patch, +kdelibs-4.2.1-r3.ebuild:
+  Added ${FILESDIR}/${P}-kdialog.patch and bumped to kdelibs-4.2.1-r3 which
+  should hopefully fix for good upstream bug 186038 and Gentoo bug 261367.
+  This last patch addresses the title issue in system settings. Added the
+  >=xorg-server-1.5.3 dep on plasma use as a first step to remove the hard
+  dep from the kde4-base.eclass to allow KDE-4.2.1 to run on arches that
+  don't have xorg-1.5 yet.
 
   21 Mar 2009; Jeroen Roovers <jer@gentoo.org> kdelibs-4.2.1-r2.ebuild:
   Marked ~hppa (bug #260777).
