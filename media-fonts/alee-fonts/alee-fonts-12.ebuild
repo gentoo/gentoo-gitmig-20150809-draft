@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/alee-fonts/alee-fonts-12.ebuild,v 1.1 2009/03/23 15:26:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/alee-fonts/alee-fonts-12.ebuild,v 1.2 2009/03/23 16:28:53 mr_bones_ Exp $
 
 inherit font
 
@@ -17,4 +17,3 @@ FONT_SUFFIX="ttf"
 FONT_S="${WORKDIR}/ttf-alee-${PV}"
 
 S=${FONT_S}
-
