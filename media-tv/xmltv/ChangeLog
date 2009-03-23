@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.83 2009/01/08 22:25:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.84 2009/03/23 21:10:59 mattepiu Exp $
+
+*xmltv-0.5.54 (23 Mar 2009)
+
+  23 Mar 2009; <matteo@gentoo.org> +xmltv-0.5.54.ebuild:
+  Version Bump. Finally fix bug #215537
 
   08 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> xmltv-0.5.53.ebuild:
   move attempt at comment in dep string outside string.
