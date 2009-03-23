@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.6a.ebuild,v 1.1 2009/03/23 02:14:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.6a.ebuild,v 1.2 2009/03/23 05:06:30 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils toolchain-funcs flag-o-matic games
@@ -30,8 +30,6 @@ DEPEND="${RDEPEND}
 		tinygui? ( media-gfx/imagemagick[jpeg,png] )
 	)
 	nls? ( sys-devel/gettext )"
-
-S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
 	if use dedicated || use server ; then
