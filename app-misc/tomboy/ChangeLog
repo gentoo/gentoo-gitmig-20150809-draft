@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.80 2009/03/18 21:56:57 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.81 2009/03/23 12:43:32 loki_val Exp $
+
+  23 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> tomboy-0.14.0.ebuild:
+  Drop libgnomeprint and libgnomeprintui deps from tomboy. Bug 263470,
+  thanks to Andreas Proschofsky <suka@gentoo.org> for the report.
 
 *tomboy-0.14.0 (18 Mar 2009)
 

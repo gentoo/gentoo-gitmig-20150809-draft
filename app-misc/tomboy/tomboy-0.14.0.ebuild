@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.14.0.ebuild,v 1.1 2009/03/18 21:56:57 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.14.0.ebuild,v 1.2 2009/03/23 12:43:32 loki_val Exp $
 
 EAPI=2
 
@@ -29,9 +29,7 @@ RDEPEND=">=dev-lang/mono-2
 		 >=app-text/gtkspell-2.0.9
 		 >=gnome-base/gnome-panel-2.24.0
 		 eds? ( dev-libs/gmime:2.4[mono] )
-		 galago? ( =dev-dotnet/galago-sharp-0.5* )
-		 >=gnome-base/libgnomeprintui-2.18.3
-		 >=gnome-base/libgnomeprint-2.2"
+		 galago? ( =dev-dotnet/galago-sharp-0.5* )"
 DEPEND="${RDEPEND}
 		  app-text/gnome-doc-utils
 		  dev-libs/libxml2[python]
