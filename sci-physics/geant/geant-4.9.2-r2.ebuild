@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2-r2.ebuild,v 1.4 2009/03/22 21:41:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2-r2.ebuild,v 1.5 2009/03/23 18:45:43 bicatali Exp $
 
 EAPI="2"
 
@@ -116,7 +116,10 @@ src_configure() {
 	if use qt4; then
 		export G4UI_BUILD_QT_SESSION=y
 		export QTLIBS="-L/usr/$(get_libdir)/qt4  -lQtCore -lQtGui"
-		use opengl && export GLQTLIBS="${QTLIBS} -lQtOpenGL"
+		if use opengl; then
+			export GLQTLIBS="${QTLIBS} -lQtOpenGL"
+			export G4VIS_BUILD_OPENGLQT_DRIVER=y
+		fi
 	fi
 	use dawn                && export G4VIS_BUILD_DAWN_DRIVER=y
 	use raytracerx          && export G4VIS_BUILD_RAYTRACERX_DRIVER=y
