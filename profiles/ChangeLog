@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2465 2009/03/23 11:23:05 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2466 2009/03/23 13:59:09 tester Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Mar 2009; Olivier Crête <tester@gentoo.org> package.mask:
+  Removed cogito and gitweb
 
   23 Mar 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   add mesa-7.3-r2 to package.mask
