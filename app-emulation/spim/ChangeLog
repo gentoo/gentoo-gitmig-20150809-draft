@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spim
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.45 2009/03/20 03:25:55 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.46 2009/03/23 13:08:21 ricmm Exp $
+
+  23 Mar 2009; <ricmm@gentoo.org> metadata.xml:
+  Adding myself to metadata.
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml, spim-7.2.1-r2.ebuild, spim-7.2.1-r3.ebuild, spim-7.3.ebuild:
