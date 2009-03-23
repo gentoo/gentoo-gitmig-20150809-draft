@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.23 2009/03/20 03:49:51 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.24 2009/03/23 05:00:39 jer Exp $
+
+  23 Mar 2009; Jeroen Roovers <jer@gentoo.org> gdl-2.24.0.ebuild:
+  Stable for HPPA (bug #258040).
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml, gdl-0.7.1.ebuild:
