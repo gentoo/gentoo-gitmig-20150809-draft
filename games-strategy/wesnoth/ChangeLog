@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.139 2009/03/11 15:13:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.140 2009/03/23 02:14:13 mr_bones_ Exp $
+
+*wesnoth-1.6a (23 Mar 2009)
+
+  23 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org> +wesnoth-1.6a.ebuild:
+  version bump
 
   11 Mar 2009; Brent Baude <ranger@gentoo.org> wesnoth-1.4.7-r1.ebuild:
   Marking wesnoth-1.4.7-r1 ppc and ppc64 for bug 255394
