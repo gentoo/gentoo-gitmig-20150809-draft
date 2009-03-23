@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-20090226.28734-r1.ebuild,v 1.1 2009/03/14 09:57:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090226.ebuild,v 1.1 2009/03/23 16:12:05 beandog Exp $
 
 EAPI="1"
 
-inherit eutils flag-o-matic multilib versionator
+inherit eutils flag-o-matic multilib
 
-MPLAYER_REVISION=$( get_version_component_range 2 )
+MPLAYER_REVISION=28734
 
 IUSE="3dnow 3dnowext +a52 +aac -aalib +alsa altivec +amrnb +amrwb -arts +ass
 bidi bindist bl +cddb +cdio cdparanoia -cpudetection -custom-cflags
@@ -106,10 +106,12 @@ RDEPEND="sys-libs/ncurses
 	speex? ( media-libs/speex )
 	svga? ( media-libs/svgalib )
 	theora? ( media-libs/libtheora )
-	live? ( >=media-plugins/live-2007.02.20 )
+	live? ( media-plugins/live )
 	truetype? ( media-libs/freetype:2
 		media-libs/fontconfig )
-	vdpau? ( >=x11-drivers/nvidia-drivers-180.22 )
+	video_cards_nvidia? (
+		vdpau? ( >=x11-drivers/nvidia-drivers-180.22 )
+	)
 	vidix? ( x11-libs/libXxf86vm
 			 x11-libs/libXext )
 	vorbis? ( media-libs/libvorbis )
@@ -224,7 +226,7 @@ src_unpack() {
 	fi
 
 	# Fix polish spelling errors
-	[[ -n ${LINGUAS} ]] && sed -e 's:Zarządano:Zażądano:' -i help/help_mp-pl.h
+	[[ -n ${LINGUAS} ]] && sed -e 's:ZarzÄdano:ZaÅ¼Ädano:' -i help/help_mp-pl.h
 }
 
 src_compile() {
