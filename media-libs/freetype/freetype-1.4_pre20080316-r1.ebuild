@@ -1,8 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r1.ebuild,v 1.7 2008/08/20 17:26:51 vapier Exp $
-
-WANT_AUTOCONF="2.1"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r1.ebuild,v 1.8 2009/03/23 14:51:28 pva Exp $
 
 inherit autotools eutils libtool multilib
 
@@ -42,13 +40,21 @@ src_unpack() {
 	# add DESTDIR support to contrib Makefiles
 	epatch "${FILESDIR}"/freetype-1.4_pre-contrib-destdir.patch
 
-	# Fix for CVE 2008-1808, bug 225851
-	epatch "${FILESDIR}"/${P}-CVE-2008-1808.patch
+	epatch "${FILESDIR}"/${P}-CVE-2008-1808.patch #225851
+	epatch "${FILESDIR}"/${P}-LDLFAGS.patch #263131
 
 	# disable tests (they don't compile)
 	sed -i -e "/^all:/ s:tttest ::" Makefile.in
 
-	eautoreconf
+	rm aclocal.m4 # Force recreation
+	# Copying this code from autotools.eclass but avoid autoheader call...
+	eaclocal
+	if ${LIBTOOLIZE:-libtoolize} -n --install >& /dev/null ; then
+		_elibtoolize --copy --force --install
+	else
+		_elibtoolize --copy --force
+	fi
+	eautoconf
 	elibtoolize
 
 	# contrib isn't compatible with autoconf-2.13
