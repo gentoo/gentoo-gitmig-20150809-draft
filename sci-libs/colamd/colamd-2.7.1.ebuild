@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.1.ebuild,v 1.7 2009/02/08 15:30:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/colamd-2.7.1.ebuild,v 1.8 2009/03/23 03:18:15 darkside Exp $
 
 inherit autotools eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.cise.ufl.edu/research/sparse/${PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND="sci-libs/ufconfig"
 

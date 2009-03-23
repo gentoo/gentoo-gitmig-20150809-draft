@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/camd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.10 2009/03/09 10:43:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.11 2009/03/23 03:21:44 darkside Exp $
+
+  23 Mar 2009; Jeremy Olexa <darkside@gentoo.org> camd-2.2.0.ebuild:
+  amd64 stable, bug 245707
 
   09 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org>
   files/camd-2.2.0-autotools.patch:

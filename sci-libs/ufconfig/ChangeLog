@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ufconfig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.10 2009/03/09 11:20:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ufconfig/ChangeLog,v 1.11 2009/03/23 03:17:59 darkside Exp $
+
+  23 Mar 2009; Jeremy Olexa <darkside@gentoo.org> ufconfig-3.1.0.ebuild:
+  amd64 stable, bug 245707
 
 *ufconfig-3.2.0 (09 Mar 2009)
 
