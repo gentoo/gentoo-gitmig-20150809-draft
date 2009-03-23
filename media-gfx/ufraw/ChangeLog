@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.55 2009/03/23 17:21:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.56 2009/03/23 21:00:18 maekke Exp $
+
+  23 Mar 2009; Markus Meier <maekke@gentoo.org> -ufraw-0.15.ebuild:
+  old
 
   23 Mar 2009; Jeroen Roovers <jer@gentoo.org> ufraw-0.15-r1.ebuild:
   Stable for HPPA (bug #262421).
