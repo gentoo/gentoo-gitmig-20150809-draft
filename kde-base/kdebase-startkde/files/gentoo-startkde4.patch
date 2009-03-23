@@ -22,7 +22,7 @@ diff -Naur kdebase-startkde-4.2.0-orig/startkde.cmake kdebase-startkde-4.2.0/sta
 +# Gentoo: handle the possible home directory layout for config directory
 +# Note that we change the default KDEHOME in kdelibs to .kde4 or .kde${SLOT}
 +# for -kdeprefix and +kdeprefix respectively.
-+if [ "${_KDEDIR}" == "/usr" ]; then
++if [ "${_KDEDIR}" = "/usr" ]; then
 +	# If the directory doesn't exist make it
 +	[ -e "${HOME}/.kde4" ] || mkdir "$HOME/.kde4"
 +else
@@ -42,7 +42,7 @@ diff -Naur kdebase-startkde-4.2.0-orig/startkde.cmake kdebase-startkde-4.2.0/sta
  done
  
 +# Gentoo part for FHS installs
-+if [ "${_KDEDIR}" == "/usr" ]; then
++if [ "${_KDEDIR}" = "/usr" ]; then
 +  for file in "/etc/kde/startup/"*.sh; do
 +    test -r "${file}" && . "${file}"
 +  done
@@ -56,7 +56,7 @@ diff -Naur kdebase-startkde-4.2.0-orig/startkde.cmake kdebase-startkde-4.2.0/sta
  done
  
 +# Gentoo part for FHS installs
-+if [ "${_KDEDIR}" == "/usr" ]; then
++if [ "${_KDEDIR}" = "/usr" ]; then
 +  for file in "/etc/kde/shutdown/"*.sh; do
 +    test -r "${file}" && . "${file}"
 +  done
