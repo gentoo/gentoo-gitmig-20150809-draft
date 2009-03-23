@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/grass
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.66 2008/12/19 05:57:29 nerdboy Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.67 2009/03/23 03:51:42 nerdboy Exp $
+
+  23 Mar 2009; Steve Arnold <nerdboy@gentoo.org>
+  +files/grass-6.3.0-o_creat.patch, grass-6.3.0.ebuild:
+  Updated with fix for fortify_source error and buffer size.  Thanks to
+  Martin von Gagern <Martin.vGagern@gmx.net> for the o_creat patch; it
+  seems cleaner than the upstream equivalent.
 
   19 Dec 2008; Steve Arnold <nerdboy@gentoo.org>
   +files/grass-6.2.1-gcc43.patch, grass-6.2.1.ebuild:

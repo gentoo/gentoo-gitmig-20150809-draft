@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.5 2008/11/08 22:19:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.6 2009/03/23 03:51:42 nerdboy Exp $
 
 inherit eutils distutils fdo-mime versionator wxwidgets
 
@@ -108,6 +108,10 @@ src_unpack() {
 	cd "${S}"
 
 	epatch rpm/fedora/grass-readline.patch
+	# fix the fortify_source and buffer issues (see bug #261283)
+	epatch "${FILESDIR}"/${P}-o_creat.patch
+	sed -i -e "s:buff\[12:buff\[16:g" general/g.parser/main.c \
+	    || die "sed failed"
 
 	if ! use opengl; then
 	    epatch "${FILESDIR}"/${P}-html-nonviz.patch
@@ -214,14 +218,14 @@ src_compile() {
 
 	if use wxwindows; then
 	    # can't use die here since we need to hack the vdigit build
-	    emake
+	    emake -j1
 	    ln -sf "${LIBGDI}" dist.${CHOST}/lib/libgdi.so \
 		|| die "making libgdi link failed"
 	    cd gui/wxpython/vdigit
 	    # now we're OK
 	    make default -j1 || die "make vdigit failed!"
 	else
-	    emake || die "make failed!"
+	    emake -j1 || die "make failed!"
 	fi
 }
 
