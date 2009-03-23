@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.46 2009/03/19 10:33:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.47 2009/03/23 16:26:17 scarabeus Exp $
+
+*kipi-plugins-0.2.0-r1 (23 Mar 2009)
+
+  23 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/0.2.0-picasa.patch, -kipi-plugins-0.2.0.ebuild,
+  +kipi-plugins-0.2.0-r1.ebuild:
+  Revision bump. Fix picasa export. Per bug #263452.
 
 *kipi-plugins-0.2.0 (19 Mar 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.2.0.ebuild,v 1.1 2009/03/19 10:33:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.2.0-r1.ebuild,v 1.1 2009/03/23 16:26:17 scarabeus Exp $
 
 EAPI="2"
 
@@ -47,6 +47,8 @@ RDEPEND="${DEPEND}
 "
 
 S="${WORKDIR}/${MY_P}"
+
+PATCHES=( "${FILESDIR}/${PV}-picasa.patch" )
 
 src_configure() {
 	# This Plugin hard depends on libksane, deactivate it if use flag scanner is
