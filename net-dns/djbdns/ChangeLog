@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.116 2009/03/22 17:54:34 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.117 2009/03/23 05:13:21 jer Exp $
+
+  23 Mar 2009; Jeroen Roovers <jer@gentoo.org> djbdns-1.05-r23.ebuild:
+  Stable for HPPA (bug #260975).
 
   22 Mar 2009; Friedrich Oslage <bluebird@gentoo.org>
   djbdns-1.05-r23.ebuild:
