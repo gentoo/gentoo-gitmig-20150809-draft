@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12.1.ebuild,v 1.8 2009/02/25 16:44:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.12.1.ebuild,v 1.9 2009/03/23 10:11:10 pva Exp $
 
 EAPI="2"
 
@@ -39,6 +39,7 @@ RDEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-qt-4.5-compatibility.patch"
+	epatch "${FILESDIR}/${P}-build-error.patch"
 }
 
 src_configure() {
