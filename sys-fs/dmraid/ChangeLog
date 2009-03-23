@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/dmraid
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.13 2008/02/25 23:39:55 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.14 2009/03/23 21:34:33 genstef Exp $
+
+  05 Mar 2009; Ian Stakenvicius (_AxS_) <ian@aerobiology.ca>
+  +dmraid-1.0.0_rc14.ebuild, +dmraid-1.0.0_rc15.ebuild,
+  +files/dmraid-destdir-fix.patch, +metadata.xml:
+  Trivial version bump (bug 251161), updated metadata with current contact info
 
   25 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   dmraid-1.0.0_rc14.ebuild:
