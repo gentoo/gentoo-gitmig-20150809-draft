@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9602 2009/03/23 01:09:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9603 2009/03/23 08:38:58 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -143,6 +143,8 @@ dev-perl/OpenCA-REQ
 dev-perl/OpenCA-X509
 # Masked for removal (#206177,#220491) (21 Mar 2009)
 dev-perl/Inline-Java
+# Masked for removal (#151986,#171649,#239222) (23 Mar 2009)
+dev-lang/pugs
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Mar 2009)
 # HPN patch contains some breakages with port forwarding.
