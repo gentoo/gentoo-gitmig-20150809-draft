@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.186 2009/03/18 22:14:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.187 2009/03/23 05:17:59 jer Exp $
+
+  23 Mar 2009; Jeroen Roovers <jer@gentoo.org> gnumeric-1.8.4-r1.ebuild:
+  Stable for HPPA (bug #257012).
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> gnumeric-1.8.4-r1.ebuild:
   Marking gnumeric-1.8.4-r1 ppc for bug 257012
