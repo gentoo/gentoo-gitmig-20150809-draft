@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4300 2009/03/23 04:47:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4301 2009/03/23 23:08:07 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1255,7 +1255,10 @@ media-gfx/inkscape:dia -  pull in app-office/dia for dia import extension
 media-gfx/inkscape:inkjar -  enables support for OpenOffice.org SVG jar files 
 media-gfx/inkscape:postscript -  pull in dependencies needed for the postscript import extension 
 media-gfx/jpeg2ps:metric -  Default to A4 paper size 
-media-gfx/k3d:plib -  build plib-based import/export library 
+media-gfx/k3d:3ds - Enable support for 3D Studio models
+media-gfx/k3d:cuda - Use nvidia cuda toolkit for speeding up computations
+media-gfx/k3d:gts - Add Support for the GNU Triangulated Surface Library sci-libs/gts
+media-gfx/k3d:plib - build plib-based import/export library
 media-gfx/maya:bundled-libs -  Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm) 
 media-gfx/maya:maya-shaderlibrary -  Install the maya shader library 
 media-gfx/potrace:metric -  default to a4 paper size and metric measurement 
