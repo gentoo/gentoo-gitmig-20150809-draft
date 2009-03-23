@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.588 2009/03/23 07:16:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.589 2009/03/23 19:10:33 zmedico Exp $
+
+  23 Mar 2009; Zac Medico <zmedico@gentoo.org> -files/05portage.envd,
+  -portage-2.1.1-r2.ebuild:
+  Bug #263521 - Remove 2.1.1-r2 since it only supports EAPI 0 and python-2.4
+  now requires at least EAPI 1.
 
 *portage-2.1.6.10 (23 Mar 2009)
 
