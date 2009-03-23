@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9605 2009/03/23 13:59:09 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9606 2009/03/23 14:01:58 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -285,11 +285,6 @@ sci-calculators/tilp
 sci-libs/libticables
 sci-libs/libticalcs
 sci-libs/libtifiles
-
-# Peter Alfredsen <loki_val@gentoo.org> (15 Feb 2009)
-# Masking for removal in 30 days.
-# Fails to build with gcc-4.3, bug 250712
-media-video/gephex
 
 # Ben de Groot <yngwin@gentoo.org> (14 Feb 2009)
 # Masking because of build failures, bug 258961
