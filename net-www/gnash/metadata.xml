@@ -6,10 +6,6 @@
     <email>genstef@gentoo.org</email>
     <name>Stefan Schweizer</name>
   </maintainer>
-  <maintainer>
-    <email>loki_val@gentoo.org</email>
-    <name>Peter Alfredsen</name>
-  </maintainer>
   <use>
 	  <flag name='agg'>Rendering based on the Anti-Grain Geometry Rendering
 		  Engine library</flag>
