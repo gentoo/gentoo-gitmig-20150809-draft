@@ -3,8 +3,11 @@
 <pkgmetadata>
 <herd>graphics</herd>
 <use>
-	<flag name='plib'>
-		build plib-based import/export library
-	</flag>
+	<flag name='3ds'>Enable support for 3D Studio models</flag>
+	<flag name='cuda'>Use nvidia cuda toolkit for speeding up
+	computations</flag>
+	<flag name='gts'>Add Support for the GNU Triangulated Surface Library
+	<pkg>sci-libs/gts</pkg></flag>
+	<flag name='plib'>build plib-based import/export library</flag>
 </use>
 </pkgmetadata>
