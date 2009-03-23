@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave-forge
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.29 2008/08/06 20:44:05 ulm Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/ChangeLog,v 1.30 2009/03/23 03:48:13 darkside Exp $
+
+  23 Mar 2009; Jeremy Olexa <darkside@gentoo.org>
+  octave-forge-2006.03.17-r1.ebuild:
+  amd64 stable, bug 245707
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
