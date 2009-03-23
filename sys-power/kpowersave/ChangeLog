@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/kpowersave
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.23 2008/11/12 04:07:54 josejx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.24 2009/03/23 21:54:05 genstef Exp $
+
+*kpowersave-0.7.3-r1 (23 Mar 2009)
+
+  23 Mar 2009; Stefan Schweizer <genstef@gentoo.org>
+  +kpowersave-0.7.3-r1.ebuild:
+  Apply Debian's 05-battery_rescan.patch thanks to Ottxor
+  <kleiner_otti@gmx.de> in bug 253776
 
   12 Nov 2008; Joseph Jezak <josejx@gentoo.org> kpowersave-0.7.3.ebuild:
   Marked ~ppc for bug #200266.
