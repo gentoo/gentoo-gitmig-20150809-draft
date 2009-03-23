@@ -5,9 +5,11 @@
   <use>
     <flag name="cdda">Enables libcdda cd audio playback support</flag>
     <flag name="loop-playback">Enable adjustable loop playback support</flag>
-	<flag name="systray">Enable system tray support</flag>
-	<flag name="ifp">Enable support for iRiver iFP portable audio players</flag>
-	<flag name="lua">Enable support for programmable title formatting with
-		<pkg>dev-lang/lua</pkg></flag>
+    <flag name="systray">Enable system tray support</flag>
+    <flag name="ifp">Enable support for iRiver iFP portable audio players</flag>
+    <flag name="lua">Enable support for programmable title formatting with
+      <pkg>dev-lang/lua</pkg>
+    </flag>
+    <flag name="podcast">Enable podcast support</flag>
   </use>
 </pkgmetadata>
