@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090226.ebuild,v 1.1 2009/03/23 16:12:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090226.ebuild,v 1.2 2009/03/23 23:26:37 beandog Exp $
 
 EAPI="1"
 
@@ -12,7 +12,7 @@ IUSE="3dnow 3dnowext +a52 +aac -aalib +alsa altivec +amrnb +amrwb -arts +ass
 bidi bindist bl +cddb +cdio cdparanoia -cpudetection -custom-cflags
 -custom-cpuopts debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav dxr3
 +enca +encode esd +faac +faad +fbcon +ftp -gif ggi -gtk +iconv ipv6 jack
-joystick +jpeg kernel_linux ladspa -libcaca lirc +live lzo +mad +md5sum +mmx
+joystick +jpeg kernel_linux ladspa -libcaca lirc +live lzo mad +md5sum +mmx
 mmxext mng +mp2 +mp3 musepack nas +nemesi +network openal +opengl oss +png +pnm
 pulseaudio -pvr +quicktime radio +rar +real -realcodecs +rtc -samba
 +schroedinger +sdl +speex sse sse2 ssse3 svga teletext tga +theora +tremor
