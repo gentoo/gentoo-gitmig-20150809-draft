@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak-ss/emacspeak-ss-1.9.1.ebuild,v 1.10 2009/01/06 14:44:58 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak-ss/emacspeak-ss-1.9.1.ebuild,v 1.11 2009/03/23 13:45:26 williamh Exp $
 
 inherit eutils
 
@@ -19,6 +19,11 @@ RDEPEND=">=app-accessibility/emacspeak-18"
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/gentoo-apollo-fix.patch
+}
+
+src_compile() {
+	econf || die "Econf failed"
+	emake CC=$(tc-getCC) || die "emake failed"
 }
 
 src_install() {
