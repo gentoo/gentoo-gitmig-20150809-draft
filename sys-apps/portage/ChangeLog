@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.587 2009/03/17 20:33:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.588 2009/03/23 07:16:18 zmedico Exp $
+
+*portage-2.1.6.10 (23 Mar 2009)
+
+  23 Mar 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.6.10.ebuild:
+  2.1.6.10 bump. This fixes bug #263081 (UnicodeDecodeError when using the
+  sqlite cache backend). A regression which causes emerge to reject file
+  path arguments is also fixed. Bug #261959 tracks all bugs fixed since
+  2.1.6.7.
 
 *portage-2.2_rc26 (17 Mar 2009)
 
