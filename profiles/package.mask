@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9601 2009/03/22 23:47:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9602 2009/03/23 01:09:29 tester Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -444,11 +444,11 @@ dev-util/w32api
 # Talk with the actual gstreamer team before unmasking these -
 # we are completely against the notion of monolithic versions, these
 # here should be considered an experimentation
->=media-libs/gstreamer-0.10.21-r10
->=media-libs/gst-plugins-good-0.10.11-r1
->=media-libs/gst-plugins-bad-0.10.9-r1
->=media-libs/gst-plugins-ugly-0.10.10-r1
->=media-libs/gst-plugins-base-0.10.21-r1
+=media-libs/gstreamer-0.10.21-r10
+=media-libs/gst-plugins-good-0.10.11-r1
+=media-libs/gst-plugins-bad-0.10.9-r1
+=media-libs/gst-plugins-ugly-0.10.10-r1
+=media-libs/gst-plugins-base-0.10.21-r1
 
 # Diego Pettenò <flameeyes@gentoo.org> (23 Dec 2008)
 # Mask these for removal, busybox provides those already, and are
