@@ -6,13 +6,17 @@
   <email>nerdboy@gentoo.org</email>
   <name>Steve Arnold</name>
 </maintainer>
-<longdescription>Unbundled GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients, such as GPSDrive, kismet, and pygps.
+<longdescription>Unbundled GPS daemon and library to support USB and serial
+ GPS devices and various GPS/mapping clients, such as GPSDrive, kismet, and
+ pygps.
 </longdescription>
 <use>
+  <flag name='garmin'>Enable support for Garmin simple text protocol</flag>
   <flag name='italk'>Enable iTalk protocol support</flag>
   <flag name='itrax'>Enable iTrax hardware support</flag>
   <flag name='ntp'>Enable <pkg>net-misc/ntp</pkg> shared memory interface
-    for GPS time</flag>
-  <flag name='tntc'>Enable True North Technologies support</flag>
+    and PPS kernel support for GPS time</flag>
+  <flag name='ocean'>Enable OceanServer support</flag>
+  <flag name='tntc'>Enable True North Technologies digital compass support</flag>
 </use>
 </pkgmetadata>
