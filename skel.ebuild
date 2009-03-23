@@ -21,14 +21,14 @@
 
 # inherit lists eclasses to inherit functions from. Almost all ebuilds should
 # inherit eutils, as a large amount of important functionality has been
-# moved there. For example, the $(get_libdir) mentioned below wont work
+# moved there. For example, the epatch call mentioned below wont work
 # without the following line:
 inherit eutils
 # A well-used example of an eclass function that needs eutils is epatch. If
 # your source needs patches applied, it's suggested to put your patch in the
 # 'files' directory and use:
 #
-#   epatch ${FILESDIR}/patch-name-here
+#   epatch "${FILESDIR}"/patch-name-here
 #
 # eclasses tend to list descriptions of how to use their functions properly.
 # take a look at /usr/portage/eclasses/ for more examples.
@@ -96,7 +96,7 @@ IUSE="gnome X"
 # had installed on your system when you tested the package.  Then
 # other users hopefully won't be caught without the right version of
 # a dependency.
-DEPEND=""
+#DEPEND=""
 
 # Run-time dependencies. Must be defined to whatever this depends on to run.
 # The below is valid if the same run-time depends are required to compile.
@@ -108,10 +108,13 @@ RDEPEND="${DEPEND}"
 # to keep it tidy.
 #S="${WORKDIR}/${P}"
 
-src_compile() {
+
+# The following src_compile function is implemented as default by portage, so
+# you only need to call it, if you need a different behaviour.
+#src_compile() {
 	# Most open-source packages use GNU autoconf for configuration.
-	# The quickest (and preferred) way of running configure is:
-	econf || die "econf failed"
+	# The default, quickest (and preferred) way of running configure is:
+	#econf
 	#
 	# You could use something similar to the following lines to
 	# configure your package before compilation.  The "|| die" portion
@@ -135,8 +138,9 @@ src_compile() {
 	# related to parallelism, in these cases, use emake -j1 to limit
 	# make to a single process.  The -j1 is a visual clue to others
 	# that the makefiles have bugs that have been worked around.
-	emake || die "emake failed"
-}
+
+	#emake || die "emake failed"
+#}
 
 src_install() {
 	# You must *personally verify* that this trick doesn't install
