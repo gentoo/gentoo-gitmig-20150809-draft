@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/clustalw-mpi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw-mpi/ChangeLog,v 1.5 2008/08/06 14:56:18 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw-mpi/ChangeLog,v 1.6 2009/03/24 21:12:02 ribosome Exp $
+
+  24 Mar 2009; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
+  Giving up maintainership of this package.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.

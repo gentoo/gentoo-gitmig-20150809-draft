@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/clustalx
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.17 2008/09/09 13:31:31 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.18 2009/03/24 21:19:09 ribosome Exp $
+
+  24 Mar 2009; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
+  Giving up maintainership of this package.
 
   09 Sep 2008; Markus Dittrich <markusle@gentoo.org>
   +files/clustalx-2.0.9-gcc4.3.patch, clustalx-2.0.9.ebuild:
