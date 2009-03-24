@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/capseo-0.3.0_pre200712251-r2.ebuild,v 1.2 2008/11/02 07:15:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/capseo/capseo-0.3.0_pre200712251-r2.ebuild,v 1.3 2009/03/24 03:13:07 jer Exp $
 
 inherit flag-o-matic multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://upstream.rm-rf.in/captury/captury-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="debug theora"
 
 RDEPEND=">=media-libs/libtheora-1.0_alpha6-r1"
