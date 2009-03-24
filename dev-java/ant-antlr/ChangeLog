@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-antlr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.20 2009/03/24 19:34:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.21 2009/03/24 19:45:35 betelgeuse Exp $
+
+  24 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> ant-antlr-1.7.0.ebuild:
+  Add slot dep to built_with_use call.
 
   24 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> ant-antlr-1.7.0.ebuild:
   EAPI 1 for antlr slot dep.
