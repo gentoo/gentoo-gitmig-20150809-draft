@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r1.ebuild,v 1.7 2007/06/18 17:33:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r1.ebuild,v 1.8 2009/03/24 19:11:35 betelgeuse Exp $
 
+EAPI="1"
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils versionator
@@ -19,9 +20,11 @@ LICENSE="werken.xpath"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
+IUSE=""
+
 COMMON_DEP="
-	~dev-java/jdom-1.0_beta9
-	dev-java/antlr"
+	dev-java/jdom:1.0_beta9
+	dev-java/antlr:0"
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
 RDEPEND=">=virtual/jre-1.4
@@ -31,15 +34,15 @@ S="${WORKDIR}/${MY_PN}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Courtesy of JPackages :)
-	epatch ${FILESDIR}/${P}-jpp-compile.patch
-	epatch ${FILESDIR}/${P}-jpp-jdom.patch
-	epatch ${FILESDIR}/${P}-jpp-tests.patch
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch "${FILESDIR}/${P}-jpp-compile.patch"
+	epatch "${FILESDIR}/${P}-jpp-jdom.patch"
+	epatch "${FILESDIR}/${P}-jpp-tests.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 
-	cd ${S}/lib
+	cd "${S}/lib"
 	# In here we have ant starter scripts
 	rm -fr bin
 	rm -f *.jar
