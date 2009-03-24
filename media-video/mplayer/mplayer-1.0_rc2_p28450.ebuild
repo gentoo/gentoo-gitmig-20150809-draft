@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p28450.ebuild,v 1.8 2009/02/12 15:05:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p28450.ebuild,v 1.9 2009/03/24 21:32:35 yngwin Exp $
 
 EAPI="1"
 
@@ -228,7 +228,7 @@ src_unpack() {
 	fi
 
 	# Fix polish spelling errors
-	[[ -n ${LINGUAS} ]] && sed -e 's:ZarzÄdano:ZaÅ¼Ädano:' -i help/help_mp-pl.h
+	[[ -n ${LINGUAS} ]] && sed -e 's:Zarządano:Zażądano:' -i help/help_mp-pl.h
 }
 
 src_compile() {
