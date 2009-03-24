@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.8 2008/09/13 18:33:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.9 2009/03/24 19:24:24 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc"
@@ -39,7 +39,7 @@ COMMON_DEPEND="
 	>=dev-java/xml-commons-1.0_beta2"
 
 RDEPEND=">=virtual/jre-1.5
-	dev-java/antlr
+	dev-java/antlr:0
 	dev-java/commons-beanutils:1.7
 	dev-java/commons-collections
 	dev-java/commons-digester
