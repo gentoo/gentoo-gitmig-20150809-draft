@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/mod_macro-1.1.10.ebuild,v 1.3 2008/03/22 17:11:40 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_macro/mod_macro-1.1.10.ebuild,v 1.4 2009/03/24 10:52:47 hollow Exp $
 
 inherit apache-module
 
@@ -22,3 +22,10 @@ APACHE2_MOD_DEFINE="MACRO"
 DOCFILES="CHANGES INSTALL README mod_macro.html"
 
 need_apache2_2
+
+src_install() {
+	apache-module_src_install
+	keepdir "${APACHE_CONFDIR}"/macros.d/
+	insinto "${APACHE_CONFDIR}"/macros.d/
+	doins "${FILESDIR}"/00_example.conf
+}
