@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/lynis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/ChangeLog,v 1.6 2009/03/10 16:00:13 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/ChangeLog,v 1.7 2009/03/24 17:29:23 idl0r Exp $
+
+*lynis-1.2.4 (24 Mar 2009)
+
+  24 Mar 2009; Christian Ruppert <idl0r@gentoo.org> +lynis-1.2.4.ebuild:
+  Version bump to 1.2.4, using einfo instead of elog.
 
 *lynis-1.2.3-r1 (10 Mar 2009)
 
