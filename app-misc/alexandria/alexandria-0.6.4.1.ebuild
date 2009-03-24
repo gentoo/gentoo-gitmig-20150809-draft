@@ -1,43 +1,36 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.2.ebuild,v 1.1 2008/03/09 10:23:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.4.1.ebuild,v 1.1 2009/03/24 19:25:17 fauli Exp $
 
-inherit ruby gnome2 eutils
-
-IUSE=""
+inherit gnome2 ruby
 
 DESCRIPTION="A GNOME application to help you manage your book collection"
 HOMEPAGE="http://alexandria.rubyforge.org/"
-SRC_URI="http://rubyforge.org/frs/download.php/29501/${P}.tar.gz"
+SRC_URI="mirror://rubyforge/${PN}/${PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="evo"
 
-USE_RUBY="ruby18"
-
-DOCS="COPYING ChangeLog README TODO"
+DOCS="ChangeLog README TODO"
 
 RDEPEND=">=dev-lang/ruby-1.8.0
 	>=dev-ruby/ruby-gettext-0.6.1
-	>=dev-ruby/ruby-gnome2-0.14.0
+	>=dev-ruby/ruby-gnome2-0.16.0
 	>=dev-ruby/ruby-libglade2-0.12.0
 	>=dev-ruby/ruby-gconf2-0.12.0
-	>=dev-ruby/ruby-gdkpixbuf2-0.12.0
-	>=dev-ruby/ruby-amazon-0.8.3
-	>=dev-ruby/ruby-zoom-0.2.0"
+	>=dev-ruby/imagesize-0.1.1
+	dev-ruby/hpricot
+	evo? ( >=dev-ruby/revolution-0.5 )"
 
-DEPEND="${RDEPEND}
+DEPEND=">=dev-lang/ruby-1.8.0
 	app-text/scrollkeeper
 	dev-ruby/rake"
 
-src_unpack() {
-	unpack "${A}"
-	cd "${S}"
-
-	epatch "${FILESDIR}/${PN}-rakefile.patch"
-	epatch "${FILESDIR}/${P}-rake-0.8.1.patch"
-}
+PATCHES=(
+	"${FILESDIR}/${PN}-rakefile.patch"
+)
 
 src_compile() {
 	rake || die
@@ -64,4 +57,15 @@ pkg_postinst() {
 
 	# For the next line see bug #76726
 	"${ROOT}/usr/bin/gconftool-2" --shutdown
+
+	echo
+	elog "To enable some book providers you will need to emerge"
+	elog "additional packages:"
+	echo
+	elog "  For the Deastore book provider:"
+	elog "    dev-ruby/htmlentities"
+	echo
+	elog "  For Z39.50 support and the Library of Congress and"
+	elog "  British Library book proviers:"
+	elog "    dev-ruby/ruby-zoom"
 }
