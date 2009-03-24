@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0.ebuild,v 1.2 2009/03/24 15:02:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0.ebuild,v 1.3 2009/03/24 16:44:52 gengor Exp $
 
 EAPI="2"
 
@@ -72,6 +72,10 @@ src_prepare() {
 }
 
 src_configure() {
+	if [[ $(gcc-major-version) -lt 4 ]]; then
+		append-cxxflags -fno-stack-protector
+	fi
+
 	mycmakeargs="
 		-DK3D_BUILD_SVG_IO_MODULE=ON
 		-DK3D_BUILD_CGAL_MODULE=OFF
