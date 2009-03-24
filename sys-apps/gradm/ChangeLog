@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.109 2009/03/21 21:04:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.110 2009/03/24 18:08:48 gengor Exp $
+
+  24 Mar 2009; Gordon Malm <gengor@gentoo.org>
+  -files/2.1.6.200506131347-non-lazy-bindings.patch,
+  -files/gradm_2.1.8.200601212342-increase_num_pointers.patch,
+  -files/gradm_2.1.8.200601212342-fix_gradm_pam_symlinks.patch,
+  -files/gradm_2.1.8.200601212342-ip_state_interface_fix.patch,
+  -files/gradm_2.1.9.200602141850-fix-admin-role.patch,
+  -files/gradm_2.1.9.200602141850-fix-define-order.patch, -files/grsecurity,
+  -files/grsecurity.rc, -gradm-2.1.9.200602141850.ebuild,
+  -gradm-2.1.10.200702231759.ebuild, -gradm-2.1.11.200803171746.ebuild,
+  -gradm-2.1.11.200804041607.ebuild:
+  Clean out obsolete versions.
 
   21 Mar 2009; nixnut <nixnut@gentoo.org> gradm-2.1.13.200902232204.ebuild:
   ppc stable
