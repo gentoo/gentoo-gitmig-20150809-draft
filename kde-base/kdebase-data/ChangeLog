@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.110 2009/03/15 14:23:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.111 2009/03/24 03:16:07 jer Exp $
+
+  24 Mar 2009; Jeroen Roovers <jer@gentoo.org> kdebase-data-4.2.1.ebuild:
+  Marked ~hppa (bug #260777).
 
   15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kdebase-data-4.2.1.ebuild:
