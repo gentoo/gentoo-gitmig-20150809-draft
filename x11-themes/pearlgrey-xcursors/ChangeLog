@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/pearlgrey-xcursors
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pearlgrey-xcursors/ChangeLog,v 1.1 2009/03/24 00:41:50 yngwin Exp $
+
+*pearlgrey-xcursors-1.0 (24 Mar 2009)
+
+  24 Mar 2009; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +pearlgrey-xcursors-1.0.ebuild:
+  Initial commit. Ebuild by me, based on existing xcursors ebuilds.
+
