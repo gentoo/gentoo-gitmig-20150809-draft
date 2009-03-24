@@ -1,13 +1,13 @@
 # ChangeLog for net-libs/libnids
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.30 2009/03/23 19:47:12 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.31 2009/03/24 14:44:14 rbu Exp $
 
 *libnids-1.23-r1 (23 Mar 2009)
 
   23 Mar 2009; Robert Buchholz <rbu@gentoo.org> -libnids-1.20.ebuild,
   -libnids-1.21.ebuild, -libnids-1.22.ebuild, -libnids-1.23.ebuild,
   +libnids-1.23-r1.ebuild:
-  Add blocker of 1.2 slot to 1.1 slot, bug #253588
+  Add blocker of 1.1 slot to 1.2 slot, bug #253588
 
 *libnids-1.23 (01 Mar 2009)
 
