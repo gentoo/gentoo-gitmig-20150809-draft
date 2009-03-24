@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.28.8.ebuild,v 1.1 2009/03/22 03:34:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.29.ebuild,v 1.1 2009/03/24 05:33:37 kumba Exp $
 
 # INCLUDED:
 # 1) linux sources from kernel.org
@@ -15,8 +15,8 @@
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20090315"			# Date of diff between kernel.org and lmo GIT
-GENPATCHREV="2"				# Tarball revision for patches
+GITDATE="20090324"			# Date of diff between kernel.org and lmo GIT
+GENPATCHREV="1"				# Tarball revision for patches
 
 # Directories
 S="${WORKDIR}/linux-${OKV}-${GITDATE}"
@@ -42,7 +42,7 @@ HOMEPAGE="http://www.linux-mips.org/ http://www.gentoo.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources virtual/alsa"
 KEYWORDS="-* ~mips"
-IUSE="cobalt ip27 ip28 ip30 ip32r10k"
+IUSE="cobalt ip27 ip28 ip30 ip32r10k impactdebug"
 DEPEND=">=sys-devel/gcc-4.1.1"
 RDEPEND=""
 
@@ -157,6 +157,6 @@ eblit-include show_cobalt_info v1
 eblit-pkg setup v1
 eblit-pkg postinst v1
 
-src_unpack() { eblit-run src_unpack v1 ; }
+src_unpack() { eblit-run src_unpack v2 ; }
 
 #//------------------------------------------------------------------------------

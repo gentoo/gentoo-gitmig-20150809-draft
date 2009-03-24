@@ -20,6 +20,8 @@
 			'Speedracer')</flag>
 		<flag name='ip32r10k'>Enables experimental support for IP32 R10K kernels
 			(SGI O2, 'Moosehead')</flag>
+		<flag name='impactdebug'>Enables use of the Impact Early Console Hack.
+			FOR DEBUGGING ONLY!</flag>
 	</use>
 </pkgmetadata>
 

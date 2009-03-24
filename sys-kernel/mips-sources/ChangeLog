@@ -1,6 +1,23 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.126 2009/03/22 03:34:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.127 2009/03/24 05:33:37 kumba Exp $
+
+*mips-sources-2.6.29 (24 Mar 2009)
+*mips-sources-2.6.28.9 (24 Mar 2009)
+*mips-sources-2.6.27.21 (24 Mar 2009)
+
+  24 Mar 2009; Joshua Kinard <kumba@gentoo.org>
+  +files/eblits/src_unpack-v2.eblit, metadata.xml,
+  -mips-sources-2.6.27.20.ebuild, +mips-sources-2.6.27.21.ebuild,
+  -mips-sources-2.6.28.8.ebuild, +mips-sources-2.6.28.9.ebuild,
+  +mips-sources-2.6.29.ebuild:
+  Update to 2.6.27.21, 2.6.28.9, and add the newly-released 2.6.29 ebuild,
+  plus an updated src_unpack eblit to factor in a new local USE flag --
+  impactdebug. USE 'impactdebug' will apply a patch that enables a
+  very-early, direct framebuffer device for Octane and IP28 systems that
+  have an ImpactSR or SolidImpact graphics boardset. It is useful for
+  debugging kernel problems that occur before the console or serial drivers
+  are ready.
 
   22 Mar 2009; Joshua Kinard <kumba@gentoo.org>
   -mips-sources-2.6.27.18.ebuild, +mips-sources-2.6.27.20.ebuild,
