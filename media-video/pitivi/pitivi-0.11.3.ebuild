@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.11.3.ebuild,v 1.2 2009/02/09 16:20:42 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.11.3.ebuild,v 1.3 2009/03/24 18:50:14 hanno Exp $
 
 inherit gnome2 python
 
@@ -17,6 +17,7 @@ RDEPEND=">=media-libs/gstreamer-0.10.4
 	>=dev-lang/python-2.5
 	>=dev-python/pygtk-2.8.0
 	>=dev-python/gnome-python-2.12.0
+	dev-python/dbus-python
 	>=dev-python/gst-python-0.10.0
 	>=media-libs/gnonlin-0.10.10
 	>=media-libs/gst-plugins-base-0.10.0
