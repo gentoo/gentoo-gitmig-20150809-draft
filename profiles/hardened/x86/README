@@ -1,0 +1,7 @@
+This is a hardened profile for 2.6-series kernels on x86.  Note that it inherits from
+hardened, not hardened/x86.  hardened/x86 is for 2.4-series kernel only and masks stuff
+that is only appropriate for 2.6 kernels.  To avoid unnecessary disruption to the 2.4
+profile, and to avoid this 2.6 profile having to undo masks in the 2.4 profile, this
+profile simply inherits from the base hardened profile (parent = ../..).
+
+Kevin F. Quinn <kevquinn@gentoo.org>, 25th June 2006
