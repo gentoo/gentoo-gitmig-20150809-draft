@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.18 2009/01/19 19:53:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9.ebuild,v 1.19 2009/03/24 21:21:23 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -20,10 +20,10 @@ IUSE="debug gtk jpeg mad ffmpeg vorbis force-oss"
 
 RESTRICT="test"
 
-RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
+RDEPEND="gtk? ( x11-libs/gtk+:2 )
 	mad? ( media-libs/libmad )
 	>=dev-lang/lua-5
-	media-libs/libsdl[opengl]
+	media-libs/libsdl[joystick,opengl]
 	jpeg? ( media-libs/jpeg )
 	media-libs/libpng
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
@@ -40,10 +40,10 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gentoo.patch > "${T}"/gentoo.patch
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patches
-	epatch "${T}"/gentoo.patch
-
-	epatch "${FILESDIR}/${P}-newffmpeg.diff"
-	epatch "${FILESDIR}/${P}-newerffmpeg.diff" #Bug 242054
+	epatch \
+		"${T}"/gentoo.patch \
+		"${FILESDIR}/${P}-newffmpeg.diff" \
+		"${FILESDIR}/${P}-newerffmpeg.diff" #Bug 242054
 
 	AT_M4DIR="autoconf/m4"
 	eautoreconf

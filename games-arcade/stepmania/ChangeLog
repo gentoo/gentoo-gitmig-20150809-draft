@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/stepmania
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.27 2009/01/19 19:53:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.28 2009/03/24 21:21:23 mr_bones_ Exp $
+
+  24 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org> stepmania-3.9.ebuild:
+  add joystick use dep for bug #263553
 
   19 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> stepmania-3.9.ebuild:
   EAPI=2; add use-based dep
