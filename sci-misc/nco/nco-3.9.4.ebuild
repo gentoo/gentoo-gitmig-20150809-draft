@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.9.4.ebuild,v 1.2 2009/02/13 20:59:15 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/nco/nco-3.9.4.ebuild,v 1.3 2009/03/24 19:16:47 betelgeuse Exp $
+
+EAPI="1"
 
 DESCRIPTION="Command line utilities for operating on netCDF files"
 SRC_URI="http://dust.ess.uci.edu/nco/src/${P}.tar.gz"
@@ -17,7 +19,7 @@ RDEPEND="sci-libs/netcdf
 	udunits? ( sci-libs/udunits )"
 
 DEPEND="${RDEPEND}
-	ncap2? ( !mpi? ( dev-java/antlr ) )
+	ncap2? ( !mpi? ( dev-java/antlr:0 ) )
 	doc? ( virtual/latex-base )"
 
 pkg_setup() {
