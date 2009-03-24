@@ -1,45 +1,33 @@
-# Copyright 1999-2007 Gentoo Foundation.
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.31 2009/01/11 07:36:55 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/use.mask,v 1.32 2009/03/24 17:26:37 gengor Exp $
 
 -3dnow
 -3dnowext
+-kqemu
 -mmx
 -mmxext
+-nvram
 -sse
 -sse2
--win32codecs
--kqemu
+-svga
 
 # Copied from default-linux/x86 2006-04-02; bug #128490
 # Modular X: unmask for architectures on which they are available
 -input_devices_synaptics
 -input_devices_vmmouse
+-input_devices_wacom
 -video_cards_fglrx
 -video_cards_vmware
+
 # Modular X: mask for architectures on which they aren't available
-input_devices_evdev
 video_cards_newport
 
-nptl
-nptlonly
-hal
-v4l2
-ipod
-uml
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (22 Jun 2006)
-# Masking for bug #136866
-pmount
-
-# Christian Faulhammer <opfer@gentoo.org> (23 Nov 2006)
-# only available for ppc64, see bug #156000
-ibm
-
-#input_devices_wacom
+# codec support
+-win32codecs
 -x264
 
-# Diego Pettenò <flameeyes@gentoo.org> (4 Jan 2007)
+# Diego Petteno <flameeyes@gentoo.org> (4 Jan 2007)
 # Unmask the flags for PHP that are available only on x86
 -fdftk
 -sybase-ct
@@ -61,9 +49,3 @@ ibm
 -oracle7
 -firebird
 -db2
-
-# dev-lang/tcc won't build
--tcc
-
-# mask evo since gnome won't work on 2.4 anymore
-evo

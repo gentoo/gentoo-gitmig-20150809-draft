@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation.
+# Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/packages,v 1.14 2008/12/29 20:19:32 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/packages,v 1.15 2009/03/24 17:26:37 gengor Exp $
 
 # IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
 
@@ -10,18 +10,5 @@
 
 *sys-devel/libtool
 *virtual/dev-manager
-
-# masking 2.6 kernels/headers
-<sys-kernel/linux-headers-2.5
-<sys-kernel/ac-sources-2.5
-<sys-kernel/ck-sources-2.5
-<sys-kernel/gentoo-sources-2.5
-<sys-kernel/grsec-sources-2.5
-<sys-kernel/hardened-sources-2.5
-<sys-kernel/uclinux-sources-2.5
-<sys-kernel/usermode-sources-2.5
-<sys-kernel/vanilla-sources-2.5
-<sys-kernel/win4lin-sources-2.5
-<sys-kernel/xbox-sources-2.5
 
 <virtual/pcmcia-2.5
