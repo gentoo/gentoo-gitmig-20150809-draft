@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables2/libticables2-1.2.0.ebuild,v 1.1 2009/02/03 14:47:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libticables2/libticables2-1.2.0.ebuild,v 1.2 2009/03/24 23:06:30 josejx Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gtktiemu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc nls threads usb"
 
 RDEPEND=">=dev-libs/glib-2
