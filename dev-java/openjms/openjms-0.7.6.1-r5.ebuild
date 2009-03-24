@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r5.ebuild,v 1.1 2008/08/03 22:31:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/openjms-0.7.6.1-r5.ebuild,v 1.2 2009/03/24 19:01:32 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc"
@@ -16,15 +16,15 @@ KEYWORDS="~amd64 ~x86"
 SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz mirror://gentoo/${P}-scripts.tar.gz"
 IUSE=""
 RDEPEND="=virtual/jre-1.4*
-	dev-java/antlr
+	dev-java/antlr:0
 	dev-java/castor:0.9
-	dev-java/commons-dbcp
-	dev-java/commons-logging
-	dev-java/concurrent-util
-	dev-java/exolabcore
-	dev-java/sun-jms
+	dev-java/commons-dbcp:0
+	dev-java/commons-logging:0
+	dev-java/concurrent-util:0
+	dev-java/exolabcore:0
+	dev-java/sun-jms:0
 	java-virtuals/transaction-api
-	dev-java/log4j
+	dev-java/log4j:0
 	dev-java/jakarta-oro:2.0
 	java-virtuals/servlet-api:2.3"
 DEPEND="=virtual/jdk-1.4*
