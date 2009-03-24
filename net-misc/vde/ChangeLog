@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.17 2009/02/01 21:26:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.18 2009/03/24 14:21:12 dang Exp $
+
+  24 Mar 2009; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
+  Taking maintainership for genstef
 
   01 Feb 2009; Markus Meier <maekke@gentoo.org> vde-2.2.2.ebuild:
   x86 stable, bug #245300
