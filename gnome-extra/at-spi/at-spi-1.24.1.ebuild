@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.24.1.ebuild,v 1.7 2009/03/18 15:53:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.24.1.ebuild,v 1.8 2009/03/24 15:55:49 dang Exp $
 
 inherit autotools eutils gnome2 python virtualx
 
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.40
 	doc? ( >=dev-util/gtk-doc-1 )
+	>=gnome-base/gnome-common-2.24
 
 	x11-libs/libXt
 	x11-proto/xextproto

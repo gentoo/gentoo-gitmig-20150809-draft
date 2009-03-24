@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.20.1.ebuild,v 1.9 2008/04/20 02:10:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.20.1.ebuild,v 1.10 2009/03/24 15:55:49 dang Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.35
 	doc? ( >=dev-util/gtk-doc-1 )
+	>=gnome-base/gnome-common-2.20
 
 	x11-libs/libXt
 	x11-proto/xextproto

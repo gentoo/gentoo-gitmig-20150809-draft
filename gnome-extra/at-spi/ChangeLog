@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.180 2009/03/18 15:53:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.181 2009/03/24 15:55:49 dang Exp $
+
+  24 Mar 2009; Daniel Gryniewicz <dang@gentoo.org> at-spi-1.20.1.ebuild,
+  at-spi-1.22.1.ebuild, at-spi-1.24.1.ebuild:
+  Add gnome-common dep; bug #226453
 
   18 Mar 2009; Raúl Porcel <armin76@gentoo.org> at-spi-1.24.1.ebuild:
   alpha/ia64 stable wrt #260063
