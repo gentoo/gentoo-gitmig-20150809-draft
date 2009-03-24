@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/splash-themes-livecd-2007.0-r2.ebuild,v 1.1 2008/09/14 11:38:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/splash-themes-livecd-2007.0-r2.ebuild,v 1.2 2009/03/24 08:57:29 spock Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -16,7 +18,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 RESTRICT="binchecks strip"
 
-DEPEND=">=media-gfx/splashutils-1.5.4"
+RDEPEND=">=media-gfx/splashutils-1.5.4[png]"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
