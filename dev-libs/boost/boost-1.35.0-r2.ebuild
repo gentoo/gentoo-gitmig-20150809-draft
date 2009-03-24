@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r2.ebuild,v 1.2 2009/03/23 23:13:39 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r2.ebuild,v 1.3 2009/03/24 04:28:27 dirtyepic Exp $
 
 inherit python flag-o-matic multilib toolchain-funcs versionator check-reqs
 
@@ -23,7 +23,7 @@ RDEPEND="icu? ( >=dev-libs/icu-3.3 )
 	sys-libs/zlib
 	virtual/python"
 DEPEND="${RDEPEND}
-	>=dev-util/boost-build-${PV}-r1"
+	=dev-util/boost-build-${PV}-r1"
 
 S=${WORKDIR}/${MY_P}
 
