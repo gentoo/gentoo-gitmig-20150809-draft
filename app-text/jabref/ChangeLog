@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.68 2008/12/23 11:35:31 caster Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.69 2009/03/24 18:41:08 betelgeuse Exp $
+
+  24 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> jabref-2.3.1.ebuild:
+  Add slot dep for antlr.
 
 *jabref-2.4.2 (23 Dec 2008)
 
