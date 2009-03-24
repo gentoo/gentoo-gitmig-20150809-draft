@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.21_alpha-r1.ebuild,v 1.2 2009/02/24 18:05:21 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.1.21_alpha-r1.ebuild,v 1.3 2009/03/24 18:02:58 hd_brummy Exp $
 
 EAPI="2"
 MY_PV="${PV/_alpha/.alpha}"
@@ -26,6 +26,7 @@ DEPEND=">=media-video/vdr-1.4.7-r9[graphtft]
 		>=media-video/ffmpeg-0.4.8
 		directfb? ( dev-libs/DirectFB )
 		graphtft-fe? ( x11-libs/qt-gui:4 )"
+RDEPEND="${DEPEND}"
 
 PATCHES=("${FILESDIR}/${P}-gentoo.diff
 		${FILESDIR}/gcc-4.3-missing_includes.diff")
