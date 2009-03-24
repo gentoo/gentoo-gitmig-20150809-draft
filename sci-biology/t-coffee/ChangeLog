@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.35 2009/03/01 17:15:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.36 2009/03/24 21:32:36 ribosome Exp $
+
+  24 Mar 2009; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
+  Giving up maintainership of this package.
 
 *t-coffee-7.54 (01 Mar 2009)
 
