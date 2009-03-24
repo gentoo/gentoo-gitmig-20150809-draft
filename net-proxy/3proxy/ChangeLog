@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/3proxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.29 2009/03/21 12:15:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.30 2009/03/24 19:30:59 mrness Exp $
+
+*3proxy-0.6-r1 (24 Mar 2009)
+
+  24 Mar 2009; Alin Năstac <mrness@gentoo.org>
+  files/3proxy-0.6-gentoo.patch, -3proxy-0.6.ebuild, +3proxy-0.6-r1.ebuild:
+  Fix QA issues. Install countersutil.
 
 *3proxy-0.6 (21 Mar 2009)
 
