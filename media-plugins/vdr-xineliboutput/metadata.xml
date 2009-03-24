@@ -12,5 +12,7 @@
 	<use>
 		<flag name='libextractor'>Use <pkg>media-libs/libextract</pkg> to gather
 			files' metadata in media-player</flag>
+		<flag name='vdr'>Compile the vdr output plugin to use local or remote xine as output</flag>
+		<flag name='xine'>Compile the xine input plugin for displaying vdr video and OSD</flag>
 	</use>
 </pkgmetadata>
