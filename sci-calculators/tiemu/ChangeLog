@@ -1,6 +1,11 @@
 # ChangeLog for sci-calculators/tiemu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.1 2009/02/03 15:49:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tiemu/ChangeLog,v 1.2 2009/03/24 12:22:37 bicatali Exp $
+
+*tiemu-3.03 (24 Mar 2009)
+
+  24 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org> +tiemu-3.03.ebuild:
+  Version bump
 
 *tiemu-3.02 (03 Feb 2009)
 
