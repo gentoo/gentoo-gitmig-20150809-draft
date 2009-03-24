@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/struts
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.42 2009/02/15 17:36:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.43 2009/03/24 19:04:44 betelgeuse Exp $
+
+  24 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> struts-1.2.9-r2.ebuild:
+  Add SLOT deps for SLOT 0 deps.
 
   15 Feb 2009; Vlastimil Babka <caster@gentoo.org> -struts-1.2.9-r1.ebuild:
   Cleanup.

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r2.ebuild,v 1.4 2008/04/30 15:17:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r2.ebuild,v 1.5 2009/03/24 19:04:44 betelgeuse Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source"
@@ -15,12 +15,12 @@ HOMEPAGE="http://jakarta.apache.org/struts/index.html"
 LICENSE="Apache-2.0"
 SLOT="1.2"
 COMMON_DEPS="
-	dev-java/antlr
+	dev-java/antlr:0
 	dev-java/commons-beanutils:1.7
-	>=dev-java/commons-collections-2.1
-	>=dev-java/commons-digester-1.5
-	>=dev-java/commons-fileupload-1.0
-	>=dev-java/commons-logging-1.0.4
+	>=dev-java/commons-collections-2.1:0
+	>=dev-java/commons-digester-1.5:0
+	>=dev-java/commons-fileupload-1.0:0
+	>=dev-java/commons-logging-1.0.4:0
 	>=dev-java/commons-validator-1.1.4:0
 	dev-java/jakarta-oro:2.0
 	java-virtuals/servlet-api:2.3"
