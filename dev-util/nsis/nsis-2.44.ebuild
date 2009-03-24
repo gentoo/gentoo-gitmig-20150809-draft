@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.44.ebuild,v 1.1 2009/03/07 12:58:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.44.ebuild,v 1.2 2009/03/24 18:12:27 mrness Exp $
 
-mingw32_variants=$(eval echo {,i{6,5,4,3}86-}mingw32)
+mingw32_variants=$(eval echo {,i{6,5,4,3}86-{,pc-}}mingw32)
 
 DESCRIPTION="Nullsoft Scriptable Install System"
 HOMEPAGE="http://nsis.sourceforge.net/"
