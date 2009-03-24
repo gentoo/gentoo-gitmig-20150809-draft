@@ -2,8 +2,8 @@
 # Joerg Bornkessel <hd_brummy@g.o> 24 Mar 2009
 
 diff -Naur graphtft-0.2.2.orig/dfbrenderer/dfbrenderer.c graphtft-0.2.2/dfbrenderer/dfbrenderer.c
---- graphtft-0.2.2.orig/dfbrenderer/dfbrenderer.c	2009-03-24 18:15:02.000000000 +0100
-+++ graphtft-0.2.2/dfbrenderer/dfbrenderer.c	2009-03-24 18:17:04.000000000 +0100
+--- graphtft-0.2.2.orig/dfbrenderer/dfbrenderer.c	2009-03-24 23:27:27.000000000 +0100
++++ graphtft-0.2.2/dfbrenderer/dfbrenderer.c	2009-03-24 23:35:19.000000000 +0100
 @@ -231,7 +231,7 @@
        {
           // make path relative to the themes directory
@@ -41,8 +41,8 @@ diff -Naur graphtft-0.2.2.orig/dfbrenderer/dfbrenderer.c graphtft-0.2.2/dfbrende
  
     tell(4,"creating imageprovider for %s\n", fpath);
 diff -Naur graphtft-0.2.2.orig/dspitems.c graphtft-0.2.2/dspitems.c
---- graphtft-0.2.2.orig/dspitems.c	2009-03-24 18:15:02.000000000 +0100
-+++ graphtft-0.2.2/dspitems.c	2009-03-24 18:18:06.000000000 +0100
+--- graphtft-0.2.2.orig/dspitems.c	2009-03-24 23:27:27.000000000 +0100
++++ graphtft-0.2.2/dspitems.c	2009-03-24 23:31:38.000000000 +0100
 @@ -108,7 +108,7 @@
        if (p[0] != '/')
        {
@@ -53,8 +53,8 @@ diff -Naur graphtft-0.2.2.orig/dspitems.c graphtft-0.2.2/dspitems.c
              + "/" + p;
        }
 diff -Naur graphtft-0.2.2.orig/graphtft.c graphtft-0.2.2/graphtft.c
---- graphtft-0.2.2.orig/graphtft.c	2009-03-24 18:15:02.000000000 +0100
-+++ graphtft-0.2.2/graphtft.c	2009-03-24 18:20:06.000000000 +0100
+--- graphtft-0.2.2.orig/graphtft.c	2009-03-24 23:27:27.000000000 +0100
++++ graphtft-0.2.2/graphtft.c	2009-03-24 23:40:20.000000000 +0100
 @@ -21,6 +21,8 @@
  #include <graphtft.h>
  #include <span.h>
@@ -64,7 +64,7 @@ diff -Naur graphtft-0.2.2.orig/graphtft.c graphtft-0.2.2/graphtft.c
  //***************************************************************************
  // cGraphTFTMenu
  //***************************************************************************
-@@ -261,14 +263,7 @@
+@@ -261,14 +263,8 @@
  
  #endif
  
@@ -74,13 +74,13 @@ diff -Naur graphtft-0.2.2.orig/graphtft.c graphtft-0.2.2/graphtft.c
 -      return false;
 -
 -   // init 
--
+ 
 -   GraphTFTSetup.PluginConfPath = strdup(ConfigDirectory());
 +   GraphTFTSetup.PluginConfPath = strdup(DATA_DIR);
  
  #if APIVERSNUM < 10507
     RegisterI18n(Phrases);
-@@ -284,7 +279,7 @@
+@@ -284,7 +280,7 @@
     if (loadThemes() != 0)
        return false;
  
@@ -89,18 +89,20 @@ diff -Naur graphtft-0.2.2.orig/graphtft.c graphtft-0.2.2/graphtft.c
     {
        tell(0, "Error: Initializing graphTFT device faild, aborting!");
  
-@@ -308,7 +303,7 @@
+@@ -307,8 +303,8 @@
+ 
     // look for the themes in the config directory
  
-    asprintf(&buffer, "find %s/graphTFT/themes -follow -type f -name '*.theme' | sort", 
+-   asprintf(&buffer, "find %s/graphTFT/themes -follow -type f -name '*.theme' | sort", 
 -            ConfigDirectory());
++   asprintf(&buffer, "find %s/themes -follow -type f -name '*.theme' | sort", 
 +            DATA_DIR);
  
     p = popen(buffer, "r");
  
 diff -Naur graphtft-0.2.2.orig/imlibrenderer/imlibrenderer.c graphtft-0.2.2/imlibrenderer/imlibrenderer.c
---- graphtft-0.2.2.orig/imlibrenderer/imlibrenderer.c	2009-03-24 18:15:02.000000000 +0100
-+++ graphtft-0.2.2/imlibrenderer/imlibrenderer.c	2009-03-24 18:21:03.000000000 +0100
+--- graphtft-0.2.2.orig/imlibrenderer/imlibrenderer.c	2009-03-24 23:27:27.000000000 +0100
++++ graphtft-0.2.2/imlibrenderer/imlibrenderer.c	2009-03-24 23:36:06.000000000 +0100
 @@ -107,7 +107,7 @@
        {
           // make path relative to the themes directory
