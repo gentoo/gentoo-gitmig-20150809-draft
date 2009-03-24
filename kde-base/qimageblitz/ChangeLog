@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qimageblitz
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.5 2008/11/02 07:36:39 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.6 2009/03/24 03:10:22 jer Exp $
+
+  24 Mar 2009; Jeroen Roovers <jer@gentoo.org> qimageblitz-0.0.4.ebuild:
+  Marked ~hppa (bug #260777).
 
   02 Nov 2008; Mike Frysinger <vapier@gentoo.org> qimageblitz-0.0.4.ebuild:
   Add ppc64 love for KDE 4.
