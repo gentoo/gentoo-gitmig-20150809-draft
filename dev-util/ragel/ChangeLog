@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ragel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.20 2009/03/22 19:06:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ChangeLog,v 1.21 2009/03/24 09:39:55 lu_zero Exp $
+
+  24 Mar 2009; Luca Barbato <lu_zero@gentoo.org> ragel-6.4.ebuild:
+  Call econf, as reported in bug #263498
 
 *ragel-6.4 (22 Mar 2009)
 

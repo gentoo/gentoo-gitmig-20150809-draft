@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.4.ebuild,v 1.1 2009/03/22 19:06:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.4.ebuild,v 1.2 2009/03/24 09:39:55 lu_zero Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ DEPEND=""
 RDEPEND=""
 
 src_compile() {
+	econf || die "econf failed"
 	emake || die "emake failed"
 	emake -C doc ragel.1 || die "emake manpage failed"
 }
