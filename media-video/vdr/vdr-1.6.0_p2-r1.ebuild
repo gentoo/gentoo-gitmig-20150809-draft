@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r1.ebuild,v 1.1 2009/03/21 13:10:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r1.ebuild,v 1.2 2009/03/24 19:28:04 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -267,7 +267,7 @@ src_unpack() {
 		emake .dependencies >/dev/null
 		eend $? "make depend failed"
 
-		do_unifdef
+		[[ -z "$NO_UNIFDEF" ]] && do_unifdef
 
 		use pluginparam && sed -i sources.conf -e 's/^#P/P/'
 	fi
