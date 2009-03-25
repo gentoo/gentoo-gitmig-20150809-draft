@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.93 2009/03/25 03:28:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.94 2009/03/25 19:10:38 armin76 Exp $
+
+  25 Mar 2009; Raúl Porcel <armin76@gentoo.org> meld-1.2.1.ebuild:
+  ia64/sparc stable wrt #263618
 
   25 Mar 2009; Joseph Jezak <josejx@gentoo.org> meld-1.2.1.ebuild:
   Marked ppc stable for bug #263316.
