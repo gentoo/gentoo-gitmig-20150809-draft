@@ -1,10 +1,10 @@
 # ChangeLog for app-laptop/tp_smapi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.29 2009/03/25 19:57:23 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.30 2009/03/25 20:00:25 chutzpah Exp $
 
 *tp_smapi-0.40 (25 Mar 2009)
 
-  25 Mar 2009; Patrick McLean <chutz@gentoo.org> +tp_smapi-0.40.ebuild:
+  25 Mar 2009; Patrick McLean <chutzpah@gentoo.org> +tp_smapi-0.40.ebuild:
   Version bump (bug #254043). Use updated ebuild provided by Anton Bolshakov
   <anton.bugs@gmail.com>.
 
