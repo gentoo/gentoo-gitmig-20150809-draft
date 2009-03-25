@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.4.16.1.ebuild,v 1.2 2009/03/03 18:12:37 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.4.16.1.ebuild,v 1.3 2009/03/25 11:40:54 loki_val Exp $
 
 EAPI="1"
 
@@ -69,6 +69,7 @@ src_unpack() {
 	cd "${S}"
 
 	for patch in $(get_patches) ; do
+		edos2unix "${DISTDIR}/${patch}"
 		epatch "${DISTDIR}/${patch}"
 	done
 
