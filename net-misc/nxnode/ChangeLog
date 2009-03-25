@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.40 2009/03/08 15:19:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.41 2009/03/25 23:00:20 voyageur Exp $
+
+*nxnode-3.3.0.17 (25 Mar 2009)
+
+  25 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +nxnode-3.3.0.17.ebuild:
+  Version bump, third maintenance release. Bugfixes and a memory leak with
+  PNG compression
 
   08 Mar 2009; Markus Meier <maekke@gentoo.org> nxnode-3.3.0.3.ebuild:
   x86 stable, bug #256414
