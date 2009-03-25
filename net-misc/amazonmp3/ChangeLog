@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/amazonmp3
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/amazonmp3/ChangeLog,v 1.5 2008/09/29 16:34:45 lack Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/amazonmp3/ChangeLog,v 1.6 2009/03/25 09:59:09 remi Exp $
+
+  25 Mar 2009; Rémi Cardona <remi@gentoo.org> amazonmp3-1.0.3-r2.ebuild:
+  gtkmm's accessibility is now always enabled (see bug #247249)
 
 *amazonmp3-1.0.3-r2 (29 Sep 2008)
 
