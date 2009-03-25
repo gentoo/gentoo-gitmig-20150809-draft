@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/crow-designer-2.11.3.ebuild,v 1.1 2008/04/19 20:05:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/crow-designer-2.11.3.ebuild,v 1.2 2009/03/25 09:55:06 remi Exp $
 
 inherit eutils
 
@@ -21,11 +21,6 @@ DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 
 S=${WORKDIR}/crow-${PV}
-
-pkg_setup() {
-	built_with_use dev-cpp/gtkmm accessibility || die \
-		"${PN} requires dev-cpp/gtkmm built with accessibility USE flag."
-}
 
 src_compile() {
 	econf || die "configuration failed"

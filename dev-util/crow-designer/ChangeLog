@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/crow-designer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.11 2009/02/12 21:49:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/ChangeLog,v 1.12 2009/03/25 09:55:06 remi Exp $
+
+  25 Mar 2009; Rémi Cardona <remi@gentoo.org> crow-designer-2.11.3.ebuild,
+  crow-designer-2.13.0.ebuild:
+  gtkmm's accessibility is now always enabled (see bug #247249)
 
 *crow-designer-2.13.0 (12 Feb 2009)
 
