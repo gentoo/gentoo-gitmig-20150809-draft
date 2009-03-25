@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628.ebuild,v 1.2 2008/02/26 19:13:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628.ebuild,v 1.3 2009/03/25 23:07:48 spock Exp $
+
+inherit autotools
 
 DESCRIPTION="A collection of Polish translations of Linux manual pages."
 HOMEPAGE="http://ptm.linux.pl/"
@@ -14,11 +16,11 @@ IUSE=""
 RDEPEND=""
 DEPEND=""
 
-S=${WORKDIR}/pl_PL
+S="${WORKDIR}/pl_PL"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# missing manpages
 	sed -i -e '/\tpasswd.1/ d' man1/Makefile.am
@@ -31,15 +33,12 @@ src_unpack() {
 	for page in ${mans} ; do
 		sed -i -e "/\\t${page}/ d" man${page: -1}/Makefile.am
 	done
+
+	eautoreconf || die
 }
 
 src_compile() {
-	./autogen.sh \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		|| die "./configure failed"
+	econf || die
 	emake || die
 }
 
