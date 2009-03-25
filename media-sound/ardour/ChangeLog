@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.84 2009/01/14 09:08:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.85 2009/03/25 07:50:45 aballier Exp $
+
+  25 Mar 2009; Alexis Ballier <aballier@gentoo.org>
+  -files/ardour-2.3.1-soundtouch.patch, -files/ardour-2.5-gcc43.patch,
+  -ardour-2.5.ebuild, -ardour-2.5-r1.ebuild, -ardour-2.6.1_p4010.ebuild,
+  -ardour-2.7_p4225.ebuild, ardour-2.7.1.ebuild:
+  remove usedep on gtkmm[accessibility] now that its always enabled and
+  remove old
 
   14 Jan 2009; Alexis Ballier <aballier@gentoo.org> ardour-2.7.1.ebuild:
   require at least gnomecanvas 2.20, by Jimmy.Jazz@gmx.net, bug #254692
