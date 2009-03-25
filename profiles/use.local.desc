@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4308 2009/03/25 06:47:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4309 2009/03/25 07:27:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -379,6 +379,7 @@ app-office/grisbi:print - Enable printing support
 app-office/imposter:iksemel - Enable external dev-libs/iksemel parsing support
 app-office/kmymoney2:hbci - Add HBCI online banking support
 app-office/kmymoney2:qtdesigner - Installs KMyMoney specific widget library for Qt-designer
+app-office/lyx:dia - Add support for diagrams (app-office/dia)
 app-office/lyx:docbook - Add support for docbook export
 app-office/lyx:dot - Add support for DOT import (media-gfx/graphviz) 
 app-office/lyx:html - Add support for HTML import
