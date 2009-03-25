@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.1.126130.ebuild,v 1.5 2009/03/12 11:51:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.1.126130.ebuild,v 1.6 2009/03/25 10:18:52 ikelos Exp $
 
 inherit eutils versionator fdo-mime gnome2-utils
 
@@ -52,11 +52,6 @@ pkg_setup() {
 		MY_P="${MY_PN}.i386"
 	elif use amd64; then
 		MY_P="${MY_PN}.x86_64"
-	fi
-
-	if ! built_with_use ">=dev-cpp/gtkmm-2.4" accessibility ; then
-		eerror "Rebuild dev-cpp/gtkmm with USE=\"accessibility\""
-		die "VMware workstation only works with gtkmm built with USE=\"accessibility\"."
 	fi
 
 	if ! built_with_use -a '>=dev-lang/python-2.5' sqlite ncurses; then
