@@ -13,6 +13,7 @@
 </maintainer>
 <use>
   <flag name='docbook'>Add support for docbook export</flag>
+  <flag name='dia'>Add support for diagrams (<pkg>app-office/dia</pkg>)</flag>
   <flag name='dot'>Add support for DOT import (<pkg>media-gfx/graphviz</pkg>)
     </flag>
   <flag name='html'>Add support for HTML import</flag>
