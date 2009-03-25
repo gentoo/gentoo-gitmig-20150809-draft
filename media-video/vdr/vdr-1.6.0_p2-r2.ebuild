@@ -1,21 +1,26 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r1.ebuild,v 1.2 2009/03/24 19:28:04 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r2.ebuild,v 1.1 2009/03/25 20:42:56 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
 # Switches supported by extensions-patch
 EXT_PATCH_FLAGS="analogtv atsc cmdsubmenu cutterlimit cutterqueue cuttime ddepgentry
 	dolbyinrec dvbplayer dvbsetup dvdarchive dvdchapjump graphtft hardlinkcutter
-	pluginparam
-	jumpplay liemiext lnbshare mainmenuhooks menuorg noepg osdmaxitems pinplugin
+	jumpplay lnbshare mainmenuhooks menuorg noepg osdmaxitems pinplugin
 	rotor settime setup sortrecords sourcecaps livebuffer
 	ttxtsubs timercmd timerinfo validinput yaepg
 	syncearly dvlfriendlyfnames dvlrecscriptaddon dvlvidprefer
 	volctrl wareagleicon lircsettings deltimeshiftrec em84xx
 	cmdreccmdi18n softosd"
 
-IUSE="debug vanilla dxr3 ${EXT_PATCH_FLAGS}"
+# names of the use-flags
+EXT_PATCH_FLAGS_RENAMED="iptv liemikuutio"
+
+# names ext-patch uses internally, here only used for maintainer checks
+EXT_PATCH_FLAGS_RENAMED_EXT_NAME="pluginparam liemiext"
+
+IUSE="debug vanilla dxr3 ${EXT_PATCH_FLAGS} ${EXT_PATCH_FLAGS_RENAMED}"
 
 MY_PV="${PV%_p*}"
 MY_P="${PN}-${MY_PV}"
@@ -241,7 +246,9 @@ src_unpack() {
 			local IGNORE_PATCHES="channelscan pluginapi pluginmissing"
 
 			extensions_all_defines > "${T}"/new.IUSE
-			echo $EXT_PATCH_FLAGS $IGNORE_PATCHES|tr ' ' '\n' |sort > "${T}"/old.IUSE
+			echo $EXT_PATCH_FLAGS $EXT_PATCH_FLAGS_RENAMED_EXT_NAME \
+					$IGNORE_PATCHES | \
+				tr ' ' '\n' |sort > "${T}"/old.IUSE
 			local DIFFS=$(diff -u "${T}"/old.IUSE "${T}"/new.IUSE|grep '^[+-][^+-]')
 			if [[ -z ${DIFFS} ]]; then
 				einfo "EXT_PATCH_FLAGS is up to date."
@@ -259,6 +266,8 @@ src_unpack() {
 		for flag in $EXT_PATCH_FLAGS; do
 			use $flag && enable_patch ${flag}
 		done
+		use iptv && enable_patch pluginparam
+		use liemikuutio && enable_patch liemiext
 		eend 0
 
 		extensions_add_make_conf
@@ -269,7 +278,7 @@ src_unpack() {
 
 		[[ -z "$NO_UNIFDEF" ]] && do_unifdef
 
-		use pluginparam && sed -i sources.conf -e 's/^#P/P/'
+		use iptv && sed -i sources.conf -e 's/^#P/P/'
 	fi
 
 	# apply local patches defined by variable VDR_LOCAL_PATCHES_DIR
