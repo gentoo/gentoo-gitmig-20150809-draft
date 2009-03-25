@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.17.ebuild,v 1.3 2009/03/25 15:19:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-0.4.17.ebuild,v 1.4 2009/03/25 15:20:37 flameeyes Exp $
 
 inherit linux-mod eutils flag-o-matic
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl"
+RDEPEND="${DEPEND}"
 
 MODULE_NAMES="iscsi_trgt(misc:${S}/kernel)"
 CONFIG_CHECK="CRYPTO_CRC32C"
