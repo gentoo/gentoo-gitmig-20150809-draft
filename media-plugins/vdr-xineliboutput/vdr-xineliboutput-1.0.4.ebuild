@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.4.ebuild,v 1.1 2009/03/24 21:27:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.4.ebuild,v 1.2 2009/03/25 06:03:04 mr_bones_ Exp $
 
 GENTOO_VDR_CONDITIONAL=yes
 
@@ -47,7 +47,6 @@ RDEPEND="${COMMON_DEPEND}
 		x11-proto/xproto
 		x11-proto/renderproto
 	)"
-
 
 S=${WORKDIR}/${MY_P#vdr-}
 
@@ -148,4 +147,3 @@ src_install() {
 pkg_config() {
 	einfo "emerge --config is not supported"
 }
-
