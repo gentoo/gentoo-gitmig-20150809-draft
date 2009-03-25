@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.2.3-r1.ebuild,v 1.2 2009/02/23 20:41:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.2.3-r1.ebuild,v 1.3 2009/03/25 07:04:16 yngwin Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+alsa +dbus ffmpeg flac jack libsamplerate +mad modplug musepack oss
 	pulseaudio scrobbler sndfile +vorbis wavpack"
 
-RDEPEND="|| ( x11-libs/qt-gui:4 =x11-libs/qt-4.3*:4 )
+RDEPEND="x11-libs/qt-gui:4
 	media-libs/taglib
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( sys-apps/dbus )
@@ -34,8 +34,7 @@ RDEPEND="|| ( x11-libs/qt-gui:4 =x11-libs/qt-4.3*:4 )
 	wavpack? ( media-sound/wavpack )
 	scrobbler? ( net-misc/curl )
 	sndfile? ( media-libs/libsndfile )"
-DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.4.8"
+DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog README"
 

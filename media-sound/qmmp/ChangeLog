@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.4 2009/02/23 20:41:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.5 2009/03/25 07:04:16 yngwin Exp $
+
+  25 Mar 2009; Ben de Groot <yngwin@gentoo.org> -qmmp-0.2.3.ebuild,
+  qmmp-0.2.3-r1:
+  Drop old buggy revision. Drop monolithic Qt dep alternative.
 
   23 Feb 2009; Markos Chandras <hwoarang@gentoo.org> qmmp-0.2.3,
   qmmp-0.2.3-r1:
