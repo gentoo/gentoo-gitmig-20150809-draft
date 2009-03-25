@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4310 2009/03/25 11:27:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4311 2009/03/25 20:47:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1713,10 +1713,9 @@ media-video/vdr:dxr3-audio-denoise - Mutes audio noise occurring with dxr3-cards
 media-video/vdr:em84xx - Add support for em84xx plugin
 media-video/vdr:graphtft - support for grapftft plugin up from vdr-graphtft-0.1.7
 media-video/vdr:hardlinkcutter - Speed up cutting by hardlinking unchanged files
-media-video/vdr:iptv - Enables support for vdr-iptv
+media-video/vdr:iptv - Enables channel parameters for vdr-iptv and other input plugins
 media-video/vdr:jumpplay - Enables automatic jumping over cut marks while watching a recording
-media-video/vdr:liemiext - Formerly known as AIO (all-in-one) patch, with additional changes from extensions patch
-media-video/vdr:liemikuutio - Formerly known as AIO (all-in-one) patch, adds some nice must haves
+media-video/vdr:liemikuutio - Formerly known as AIO (all-in-one) patch, adds some nice must haves, plus changes from extensions patch
 media-video/vdr:lircsettings - Allows to change lirc settings delay, freq and timeout values in OSD
 media-video/vdr:livebuffer - does timeshifting/background recording all the time, allows to rewind live TV
 media-video/vdr:lnbshare - Enables support for two or more dvb cards sharing the same cable to the lnb
@@ -1726,7 +1725,6 @@ media-video/vdr:menuorg - Enables support for the menuorg-plugin
 media-video/vdr:noepg - Adds code to selectively disable epg-reception for specific channels
 media-video/vdr:osdmaxitems - Support for text2skin
 media-video/vdr:pinplugin - Support for pin plugin
-media-video/vdr:pluginparam - Enables parameter support for vdr-iptv and maybe also other plugins
 media-video/vdr:rotor - Enable support for plugin vdr-rotor for dish-positioner.
 media-video/vdr:settime - set system time per script instead of via syscal
 media-video/vdr:setup - Enable support for the plugin vdr-setup
