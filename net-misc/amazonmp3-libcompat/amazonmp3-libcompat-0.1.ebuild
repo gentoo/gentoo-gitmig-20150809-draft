@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/amazonmp3-libcompat/amazonmp3-libcompat-0.1.ebuild,v 1.2 2009/01/05 18:27:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/amazonmp3-libcompat/amazonmp3-libcompat-0.1.ebuild,v 1.3 2009/03/25 10:00:51 remi Exp $
 
 EAPI="1"
 
@@ -33,11 +33,6 @@ RDEPEND="x86? (
 S="${WORKDIR}/amazonmp3-boost-${BOOST_VERSION}"
 
 pkg_setup() {
-	if use x86 && ! built_with_use dev-cpp/gtkmm accessibility; then
-		eerror "Please recompile dev-cpp/gtkmm with USE=\"accessibility\""
-		die "dev-cpp/gtkmm needs accessibility USE flag"
-	fi
-
 	# 32-bit binary libs
 	has_multilib_profile && ABI="x86"
 }
