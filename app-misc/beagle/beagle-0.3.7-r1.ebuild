@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.7-r1.ebuild,v 1.7 2008/12/16 22:06:00 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.7-r1.ebuild,v 1.8 2009/03/25 22:51:17 loki_val Exp $
 
 EAPI=1
 
@@ -79,6 +79,17 @@ pkg_setup() {
 		if ! built_with_use www-client/epiphany-extensions python; then
 			eerror "${fail_epiphany}"
 			die "${fail_epiphany}"
+		fi
+	fi
+
+	if use thunderbird
+	then
+		if ! use inotify
+		then
+			eerror "You have enabled the thunderbird use flag. This use-flag depends on the inotify use-flag."
+			eerror "Please enable the inotify use-flag also."
+			eerror "See http://bugs.gentoo.org/263781 for more information."
+			die "Please enable inotify use-flag."
 		fi
 	fi
 

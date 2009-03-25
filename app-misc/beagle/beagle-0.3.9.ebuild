@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9.ebuild,v 1.3 2009/03/21 11:11:03 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9.ebuild,v 1.4 2009/03/25 22:51:17 loki_val Exp $
 
 EAPI=2
 
@@ -85,6 +85,16 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	enewgroup beagleindex
 	enewuser beagleindex -1 -1 /var/lib/cache/beagle beagleindex
+	if use thunderbird
+	then
+		if ! use inotify
+		then
+			eerror "You have enabled the thunderbird use flag. This use-flag depends on the inotify use-flag."
+			eerror "Please enable the inotify use-flag also."
+			eerror "See http://bugs.gentoo.org/263781 for more information."
+			die "Please enable inotify use-flag."
+		fi
+	fi
 }
 
 src_prepare() {

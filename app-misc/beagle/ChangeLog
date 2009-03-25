@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.92 2009/03/21 11:11:03 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.93 2009/03/25 22:51:17 loki_val Exp $
+
+  25 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> -beagle-0.2.18.ebuild,
+  -beagle-0.2.18-r1.ebuild, beagle-0.3.7-r1.ebuild, -beagle-0.3.8-r2.ebuild,
+  beagle-0.3.9.ebuild:
+  Check for inotify useflag if thunderbird useflag is enabled. Bug 263781.
+  Thanks to Felix Salfner <salfner@informatik.hu-berlin.de> for reporting.
 
   21 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> beagle-0.3.9.ebuild:
   Make beagle build with epiphany-2.26
