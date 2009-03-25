@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.0_pre20080324.ebuild,v 1.1 2009/03/25 09:26:07 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.0_pre20090324.ebuild,v 1.1 2009/03/25 18:09:20 zmedico Exp $
 
 inherit toolchain-funcs
 
