@@ -19,6 +19,6 @@ NetBeans IDE and NetBeans Platform. Both products are free for commercial and no
 to anyone, to reuse as they see fit, under the terms of use.
 	</longdescription>
   <use>
-    <flag name="c++">Adds Netbeans C/C++ Pack</flag>
+    <flag name="cxx">Adds Netbeans C/C++ Pack</flag>
   </use>
 </pkgmetadata>
