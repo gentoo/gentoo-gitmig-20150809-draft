@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r1.ebuild,v 1.1 2009/03/22 10:42:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r1.ebuild,v 1.2 2009/03/25 21:32:51 eva Exp $
 
-inherit eutils gnome2 virtualx
+inherit autotools eutils gnome2 virtualx
 
 DESCRIPTION="Gnome Power Manager"
 HOMEPAGE="http://www.gnome.org/projects/gnome-power-manager/"
@@ -71,7 +71,7 @@ src_unpack() {
 	if ! use doc; then
 		# Remove the docbook2man rules here since it's not handled by a proper
 		# parameter in configure.in.
-		sed -i -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' "${S}/man/Makefile.in"
+		sed -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' -i "${S}/man/Makefile.in" || die "sed 1 failed"
 	fi
 
 	# Fix cpufreq-regression bug #247614
@@ -79,8 +79,10 @@ src_unpack() {
 	epatch "${WORKDIR}/${P}-cpufreq-support.patch"
 	epatch "${WORKDIR}/${P}-cpufreq-ui.patch"
 
+	eautoreconf
+
 	# glibc splits this out, whereas other libc's do not tend to
-	use elibc_glibc || sed -i -e 's/-lresolv//' configure
+	use elibc_glibc || sed -e 's/-lresolv//' -i configure || die "sed 2 failed"
 }
 
 src_test() {
