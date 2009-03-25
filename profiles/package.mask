@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9608 2009/03/24 14:17:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9609 2009/03/25 13:11:33 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,9 +36,10 @@
 >=media-video/mplayer-9999
 
 # Rémi Cardona <remi@gentoo.org> (23 Mar 2009)
-# 120 patches, overhauled ebuild from the x11 overlay
-# it _needs_ more testing
+# overhauled ebuilds from the x11 overlay which _need_ more testing
+# both have 120+ patches since 7.3
 =media-libs/mesa-7.3-r2
+=media-libs/mesa-7.4_rc1
 
 # Jeremy Olexa <darkside@gentoo.org> (23 Mar 2009)
 # Masked for removal in 60 days. Broken with gcc-4.3, other issue, unmaintained.
