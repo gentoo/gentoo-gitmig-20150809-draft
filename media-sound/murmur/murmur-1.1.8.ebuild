@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.1.8.ebuild,v 1.1 2009/03/25 06:03:03 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.1.8.ebuild,v 1.2 2009/03/25 18:54:46 tgurr Exp $
 
 EAPI="2"
 
@@ -19,6 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug +ice pch"
 
 RDEPEND="
+	>=sys-libs/libcap-2.15
 	x11-libs/qt-core:4[ssl]
 	x11-libs/qt-dbus:4
 	|| ( x11-libs/qt-sql:4[sqlite] x11-libs/qt-sql:4[mysql] )
