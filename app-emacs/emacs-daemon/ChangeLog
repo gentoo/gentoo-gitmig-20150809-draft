@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.9 2009/03/18 19:51:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.10 2009/03/25 22:55:59 tcunha Exp $
+
+  25 Mar 2009; Tiago Cunha <tcunha@gentoo.org> emacs-daemon-0.14.ebuild:
+  keyworded ~arch for sparc, bug 263222
 
 *emacs-daemon-0.14 (18 Mar 2009)
 
