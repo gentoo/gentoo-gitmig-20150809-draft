@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.4.3.1.ebuild,v 1.2 2008/06/29 10:21:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.4.3.1.ebuild,v 1.3 2009/03/25 21:51:19 loki_val Exp $
 
 inherit gnome2 mono autotools
 
@@ -48,7 +48,19 @@ src_unpack() {
 
 	# Disable Beagle
 	sed -i -e '/PKG_CHECK_MODULES.*BEAGLE/,/AC_SUBST.*LINK_BEAGLE/ d' configure.in || die "sed failed"
+	#Fix compile failure with new gtk+
+	sed -i -e 's/-DGTK_DISABLE_DEPRECATED//' libfspot/Makefile.am || die "sed makefile failed"
 
 	eautoreconf
 	intltoolize --force || die "intltoolize --force failed"
+
+	# Sandbox failure
+	# http://bugs.gentoo.org/show_bug.cgi?id=252636
+	# http://bugzilla.gnome.org/565733
+	sed -i -e '/rm \-f $(pl/d' \
+		$(
+			grep -lr --include='Makefile.in' \
+			'rm -f \$(pl' "${S}"/extensions/
+		) || die "sed failed"
+
 }
