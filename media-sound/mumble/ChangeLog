@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mumble
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.15 2009/03/25 05:58:32 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.16 2009/03/25 06:40:08 tgurr Exp $
+
+  25 Mar 2009; Timo Gurr <tgurr@gentoo.org> mumble-1.1.8.ebuild:
+  Install the shipped .desktop file instead of creating our own.
 
 *mumble-1.1.8 (25 Mar 2009)
 

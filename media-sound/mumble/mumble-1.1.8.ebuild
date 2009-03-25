@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.1.8.ebuild,v 1.1 2009/03/25 05:58:32 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.1.8.ebuild,v 1.2 2009/03/25 06:40:08 tgurr Exp $
 
 EAPI="2"
 
@@ -77,8 +77,7 @@ src_install() {
 
 	newicon icons/mumble.64x64.png mumble.png || die "Installing icon failed."
 
-	make_desktop_entry ${PN} "Mumble" mumble "Qt;KDE;Network;Telephony;" \
-		|| die "Installing menu entry failed."
+	domenu scripts/mumble.desktop || die "Installing menu entry failed."
 
 	doman man/mumble-overlay.1 || die "Installing mumble-overlay manpage failed."
 	doman man/mumble.1 || die "Installing mumble manpage failed."
