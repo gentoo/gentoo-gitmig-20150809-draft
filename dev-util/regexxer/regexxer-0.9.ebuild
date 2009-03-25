@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.9.ebuild,v 1.2 2007/05/02 15:43:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.9.ebuild,v 1.3 2009/03/25 09:57:15 remi Exp $
 
 GCONF_DEBUG="no"
 
@@ -22,14 +22,6 @@ RDEPEND=">=dev-cpp/libglademm-2.4.0
 	>=dev-cpp/gconfmm-2.6.1"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
-
-pkg_setup() {
-	if has_version ">=dev-cpp/gtkmm-2.10.2" && ! built_with_use dev-cpp/gtkmm accessibility; then
-		eerror "In order to compile regexxer you need to recompile gtkmm with"
-		eerror "accessibility USE flag enabled."
-		die "Recompile gtkmm with accessibility USE flag enabled."
-	fi
-}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."

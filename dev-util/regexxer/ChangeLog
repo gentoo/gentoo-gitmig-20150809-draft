@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/regexxer
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.18 2007/05/02 15:43:22 armin76 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.19 2009/03/25 09:57:15 remi Exp $
+
+  25 Mar 2009; Rémi Cardona <remi@gentoo.org> regexxer-0.9.ebuild:
+  gtkmm's accessibility is now always enabled (see bug #247249)
 
   02 May 2007; Raúl Porcel <armin76@gentoo.org> regexxer-0.9.ebuild:
   x86 stable since 0.8 doesn't work
