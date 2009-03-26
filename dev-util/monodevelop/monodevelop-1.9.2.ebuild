@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-1.9.2.ebuild,v 1.1 2009/03/08 15:55:03 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-1.9.2.ebuild,v 1.2 2009/03/26 22:52:07 loki_val Exp $
 
 EAPI=2
 
@@ -19,8 +19,8 @@ RDEPEND="sys-apps/dbus[X]
 	>=dev-lang/mono-2.0
 	>=virtual/monodoc-2.0
 	||	(
-		~dev-dotnet/mono-addins-0.3.1
 		>=dev-dotnet/mono-addins-0.4[gtk]
+		~dev-dotnet/mono-addins-0.3.1
 	)
 	>=dev-dotnet/gtk-sharp-2.12.6
 	>=dev-dotnet/glade-sharp-2.12.6
