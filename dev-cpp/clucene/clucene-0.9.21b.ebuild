@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.21b.ebuild,v 1.8 2009/03/06 23:01:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-0.9.21b.ebuild,v 1.9 2009/03/26 05:21:41 dirtyepic Exp $
+
+inherit eutils
 
 MY_P=${PN}-core-${PV}
 
@@ -17,6 +19,12 @@ DEPEND="doc? ( >=app-doc/doxygen-1.4.2 )"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc44.patch #254254
+}
 
 src_compile() {
 	econf $(use_enable debug) \
