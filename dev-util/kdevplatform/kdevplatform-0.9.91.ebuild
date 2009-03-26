@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.91.ebuild,v 1.3 2009/03/25 09:31:05 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-0.9.91.ebuild,v 1.4 2009/03/26 20:20:25 scarabeus Exp $
 
 EAPI="2"
 
 inherit kde4-base versionator
 
-KDEVELOP_PV="`expr $(get_major_version) + 3`.$(get_after_major_version)"
+KDEVELOP_PV="$(($(get_major_version)+3)).$(get_after_major_version)"
 DESCRIPTION="KDE development support libraries and apps"
 HOMEPAGE="http://www.kde.org/"
 SRC_URI="mirror://kde/unstable/kdevelop/${KDEVELOP_PV}/src/${P}.tar.bz2"
