@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/glade-2006.0.ebuild,v 1.5 2009/03/26 10:05:49 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/glade-2006.0.ebuild,v 1.6 2009/03/26 11:55:54 george Exp $
 
 inherit gnat
 
@@ -39,7 +39,7 @@ lib_compile()
 # NOTE: we are using $1 - the passed gnat profile name
 lib_install()
 {
-	# This package expands the libs and sources rovided by compiler. Therefore
+	# This package expands the libs and sources provided by compiler. Therefore
 	# we install in yet another local location, to bypass gnat's automation.
 	# The compiler specific stuf is then moved to ${D} directly.  Not ideal, as
 	# this hook is called from within src_compile, but alternatives are more
@@ -58,6 +58,16 @@ lib_install()
 	mkdir -p "${DN}/${Gnat_Incdir}"
 	mv "${DN}/lib/garlic"/*.ad? "${DN}/${Gnat_Incdir}"
 	rm -rf "${DN}/lib"
+
+	# remove files already provided by compiler
+	pushd "${DN}"
+	for fn in "${Gnat_Libdir:1}"/*.ali "${Gnat_Incdir:1}"/*.ad?; do
+		#  Gnat_Lib/Incdir are global, need to remove leading /
+		if [[ -e /${fn} ]]; then
+			rm -f ${fn}
+		fi
+	done
+	popd
 }
 
 src_install ()
