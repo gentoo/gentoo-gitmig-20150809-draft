@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-99999999.ebuild,v 1.4 2008/09/29 13:31:18 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-99999999.ebuild,v 1.5 2009/03/26 18:04:10 gentoofan23 Exp $
 
 inherit git
 
@@ -13,7 +13,7 @@ SRC_URI=""
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc"
-IUSE="all-options html kdebuild"
+IUSE="all-options eapi3-draft html kdebuild"
 
 DEPEND="html? ( dev-tex/tex4ht )
 	dev-texlive/texlive-latex
@@ -21,6 +21,15 @@ DEPEND="html? ( dev-tex/tex4ht )
 	dev-texlive/texlive-latexextra
 	dev-texlive/texlive-science"
 RDEPEND=""
+
+src_unpack() {
+	if use eapi3-draft; then
+		EGIT_REPO_URI="git://github.com/ciaranm/pms.git"
+		EGIT_BRANCH="eapi-3"
+		EGIT_TREE="${EGIT_BRANCH}"
+	fi
+	git_src_unpack
+}
 
 set_conditional() {
 	local boolname=ENABLE-$(tr '[[:lower:]]' '[[:upper:]]' <<<${1})
