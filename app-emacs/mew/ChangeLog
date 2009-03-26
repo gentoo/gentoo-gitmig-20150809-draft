@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.67 2009/02/23 23:18:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.68 2009/03/26 18:20:46 ranger Exp $
+
+  26 Mar 2009; Brent Baude <ranger@gentoo.org> mew-6.2.ebuild:
+  stable ppc, bug 263773
 
 *mew-6.2 (23 Feb 2009)
 
