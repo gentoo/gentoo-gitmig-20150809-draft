@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.29 2009/03/13 02:19:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.30 2009/03/26 05:23:00 dirtyepic Exp $
+
+  26 Mar 2009; Ryan Hill <dirtyepic@gentoo.org>
+  +files/strigi-0.6.4-gcc44.patch, strigi-0.6.4.ebuild:
+  Fix GCC 4.4 build errors (bug 254256).
 
   13 Mar 2009; Jeroen Roovers <jer@gentoo.org> strigi-0.6.4.ebuild:
   Marked ~hppa (bug #260777).
