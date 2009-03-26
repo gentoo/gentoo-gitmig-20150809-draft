@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bnfc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.10 2009/02/09 06:14:49 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.11 2009/03/26 21:26:49 kolmodin Exp $
+
+  26 Mar 2009; Lennart Kolmodin <kolmodin@gentoo.org> bnfc-2.4_beta.ebuild:
+  Add missing dep dev-haskell/mtl.
+  Spotted and patched by Maciej Zielenkiewicz <mzielenkiewicz@gmail.com>.
+  See bug #263904.
 
 *bnfc-2.4_beta (09 Feb 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/bnfc-2.4_beta.ebuild,v 1.1 2009/02/09 06:14:49 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/bnfc-2.4_beta.ebuild,v 1.2 2009/03/26 21:26:49 kolmodin Exp $
 
 inherit base ghc-package eutils
 
@@ -20,7 +20,8 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 
 DEPEND=">=dev-lang/ghc-6.6
-	doc? ( virtual/latex-base )"
+	doc? ( virtual/latex-base )
+	dev-haskell/mtl"
 
 RDEPEND="virtual/libc"
 
