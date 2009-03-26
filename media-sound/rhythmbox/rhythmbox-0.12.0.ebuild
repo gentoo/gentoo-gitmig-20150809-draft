@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.0.ebuild,v 1.1 2009/03/19 22:10:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.0.ebuild,v 1.2 2009/03/26 00:34:14 eva Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils gnome2 python multilib virtualx
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+brasero cdr daap doc hal ipod gnome-keyring libnotify lirc musicbrainz mtp nsplugin python test"
 
 # FIXME: double check what to do with fm-radio plugin
@@ -68,7 +68,7 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/check )"
 
 DOCS="AUTHORS ChangeLog DOCUMENTERS INTERNALS \
-	  MAINTAINERS NEWS README README.iPod THANKS TODO"
+	  MAINTAINERS NEWS README THANKS TODO"
 
 pkg_setup() {
 	if ! use hal && use ipod; then
