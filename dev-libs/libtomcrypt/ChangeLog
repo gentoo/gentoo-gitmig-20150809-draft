@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libtomcrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.34 2009/03/18 20:35:01 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.35 2009/03/26 19:57:31 jmbsvicetto Exp $
+
+  22 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing hawking as a maintainer since he was retired.
 
 *libtomcrypt-1.17-r3 (18 Mar 2009)
 
