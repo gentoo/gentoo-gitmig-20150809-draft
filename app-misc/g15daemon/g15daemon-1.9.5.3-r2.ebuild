@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r2.ebuild,v 1.2 2009/02/01 16:21:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r2.ebuild,v 1.3 2009/03/26 11:35:20 scarabeus Exp $
 
 EAPI=2
 
-inherit eutils linux-info perl-module python multilib
+inherit eutils linux-info perl-module python multilib base
 
 DESCRIPTION="G15daemon takes control of the G15 keyboard, through the linux kernel uinput device driver"
 HOMEPAGE="http://g15daemon.sourceforge.net/"
@@ -24,6 +24,7 @@ DEPEND="dev-libs/libusb
 RDEPEND="${DEPEND}
 	perl? ( dev-perl/GDGraph )"
 
+PATCHES=( "${FILESDIR}/${P}-forgotten-open-mode.patch" )
 uinput_check() {
 	ebegin "Checking for uinput support"
 	linux_chkconfig_present INPUT_UINPUT
@@ -54,10 +55,6 @@ src_unpack() {
 	if use python; then
 		unpack "./${P}/lang-bindings/pyg15daemon-0.0.tar.bz2"
 	fi
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-forgotten-open-mode.patch
 }
 
 src_compile() {

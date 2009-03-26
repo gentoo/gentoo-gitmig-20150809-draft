@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.24 2009/02/01 16:21:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.25 2009/03/26 11:35:20 scarabeus Exp $
+
+  26 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  g15daemon-1.9.5.3-r2.ebuild:
+  Make the ebuild actualy work. I dont see how it could be marked stable
+  since it was not able to compile at-all.
 
   01 Feb 2009; <jokey@gentoo.org> -g15daemon-1.2.7.ebuild,
   g15daemon-1.2.7-r1.ebuild, -g15daemon-1.9.5.3-r1.ebuild,
