@@ -4,9 +4,10 @@
 <herd>base-system</herd>
 <maintainer>
 	<email>spock@gentoo.org</email>
-	<name>Michal Januszewski</name>
+	<name>Michał Januszewski</name>
 </maintainer>
 <use>
 	<flag name='serial'>Compile with serial console support</flag>
+	<flag name='floppy'>Install a script to create floppy disks containing memtest86+ binaries.</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-2.11.ebuild,v 1.3 2009/03/22 08:40:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-2.11.ebuild,v 1.4 2009/03/26 08:42:03 spock Exp $
 
 inherit mount-boot eutils
 
@@ -11,11 +11,11 @@ SRC_URI="http://www.memtest.org/download/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="serial"
+IUSE="floppy serial"
 RESTRICT="test"
 
-DEPEND=""
-RDEPEND=""
+RDEPEND="floppy? ( >=sys-boot/grub-0.95 sys-fs/mtools )"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -37,6 +37,11 @@ src_install() {
 	insinto /boot/memtest86plus
 	doins memtest.bin || die
 	dodoc README README.build-process
+
+	if use floppy ; then
+		dobin "${FILESDIR}"/make-memtest86+-boot-floppy
+		doman "${FILESDIR}"/make-memtest86+-boot-floppy.1
+	fi
 }
 
 pkg_postinst() {
