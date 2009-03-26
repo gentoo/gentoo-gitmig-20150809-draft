@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.36 2009/03/25 08:38:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.37 2009/03/26 21:20:12 jmbsvicetto Exp $
+
+  26 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Removing hawking as a maintainer since he was retired.
 
   24 Mar 2009; Joseph Jezak <josejx@gentoo.org> pyparsing-1.5.1.ebuild:
   Marked ppc/ppc64 stable for bug #263618.
