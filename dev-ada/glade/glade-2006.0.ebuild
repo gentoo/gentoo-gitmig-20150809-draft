@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/glade-2006.0.ebuild,v 1.4 2008/01/27 00:11:43 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/glade-2006.0.ebuild,v 1.5 2009/03/26 10:05:49 george Exp $
 
 inherit gnat
 
@@ -14,7 +14,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
-DEPEND="virtual/ada"
+DEPEND="=virtual/ada-1995*"
+RDEPEND="${DEPEND}"
 
 # temporary install pool
 DN="${WORKDIR}/LocalD"

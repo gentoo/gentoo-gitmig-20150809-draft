@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/glade
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/ChangeLog,v 1.3 2008/01/27 00:11:43 george Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/glade/ChangeLog,v 1.4 2009/03/26 10:05:49 george Exp $
+
+  26 Mar 2009; George Shapovalov <george@gentoo.org> glade-2006.0.ebuild:
+  limited DEPEND to Ada-95 compilers (#250064)
 
   27 Jan 2008; George Shapovalov <george@gentoo.org> glade-2006.0.ebuild:
   adjusted DEPEND to use new virtual/ada, minor cleanups
