@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.17 2009/03/23 00:47:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.18 2009/03/26 21:04:31 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -26,7 +26,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="alsa debug joystick opengl profile pulseaudio"
+IUSE="alsa debug joystick opengl profile pulseaudio vdpau"
 
 RDEPEND="opengl? ( virtual/opengl )
 	app-arch/bzip2
@@ -123,7 +123,8 @@ src_configure() {
 		$(use_enable joystick) \
 		$(use_enable opengl gl) \
 		$(use_enable profile profiling) \
-		$(use_enable pulseaudio pulse)
+		$(use_enable pulseaudio pulse) \
+		$(use_enable vdpau)
 }
 
 src_install() {
