@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.18 2009/03/26 21:04:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.19 2009/03/26 23:51:52 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -98,6 +98,9 @@ src_unpack() {
 	# Fix case sensitivity
 	mv media/Fonts/{a,A}rial.ttf
 	mv media/{S,s}plash.png
+
+	# Do not use termcap #262822
+	sed -i 's:-ltermcap::' xbmc/lib/libPython/Python/configure
 
 	# Clean up XBMC's wrapper script
 	#  - dont muck with gnome screensaver stuff, make user do it
