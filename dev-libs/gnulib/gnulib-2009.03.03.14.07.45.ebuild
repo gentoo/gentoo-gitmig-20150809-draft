@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-2009.03.03.14.07.45.ebuild,v 1.2 2009/03/04 15:37:25 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-2009.03.03.14.07.45.ebuild,v 1.3 2009/03/26 14:24:48 drizzt Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Gnulib is a library of common routines intended to be shared at the source level."
 HOMEPAGE="http://www.gnu.org/software/gnulib"
@@ -32,8 +32,17 @@ DEPEND=""
 RDEPEND=""
 
 S="${WORKDIR}"/${PN}
+MY_S="${WORKDIR}"/${P}
 
 src_unpack() {
+	local requested_gnulib_modules
+
+	case ${CHOST} in
+		*-freebsd*)
+			requested_gnulib_modules="mathl strndup"
+			;;
+	esac
+
 	unpack ${A}
 	cd "${S}" || die
 	epatch "${FILESDIR}"/${PN}-2008.07.23-rpl_getopt.patch
@@ -41,12 +50,36 @@ src_unpack() {
 
 	# Remove the broken pxref
 	sed -i '$d' doc/ld-version-script.texi || die "cannot fix ld-version-script.texi"
+
+	[[ -z "$requested_gnulib_modules" ]] && return
+
+	"${S}"/gnulib-tool --create-testdir --dir="${MY_S}" \
+	${requested_gnulib_modules} || die
+
+	cd "${MY_S}" || die
+
+	# define both libgnu.a and the headers as to-be-installed
+	LANG=C \
+	sed -e '
+		s,noinst_HEADERS,include_HEADERS,;
+		s,noinst_LIBRARIES,lib_LIBRARIES,;
+		s,noinst_LTLIBRARIES,lib_LTLIBRARIES,;
+		s,EXTRA_DIST =$,&\
+EXTRA_HEADERS =,;
+		s,BUILT_SOURCES += \([/a-zA-Z0-9_-][/a-zA-Z0-9_-]*\.h\|\$([_A-Z0-9][_A-Z0-9]*_H)\)$,&\
+include_HEADERS += \1,;
+	' -i gllib/Makefile.am || die "cannot fix gllib/Makefile.am"
+
+	eautoreconf
 }
 
 src_compile() {
 	if use doc; then
 		emake -C doc info html || die "emake failed"
 	fi
+	cd "${MY_S}" || return
+	econf --prefix=/usr/$(get_libdir)/${PN}
+	emake || die "cannot make ${P}"
 }
 
 src_install() {
@@ -69,4 +102,7 @@ src_install() {
 
 	# create and install the wrapper
 	dosym /usr/share/${PN}/gnulib-tool /usr/bin/gnulib-tool
+
+	cd "${MY_S}" || return
+	emake install DESTDIR="${D}" || die "make install failed"
 }
