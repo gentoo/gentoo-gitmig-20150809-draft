@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/agg
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.15 2008/11/30 18:48:35 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.16 2009/03/26 14:00:32 scarabeus Exp $
+
+*agg-2.5-r1 (26 Mar 2009)
+
+  26 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/2.5/02_maintainer_mode.patch, +files/2.5/03_pkg_config_pic.patch,
+  +files/2.5/04_no_rpath.patch, metadata.xml, +agg-2.5-r1.ebuild:
+  Apply patches from debian. Clean up deps. Move to eapi2. Remove sdl
+  useflag and introduce new gpc useflag.
 
   30 Nov 2008; Raúl Porcel <armin76@gentoo.org> agg-2.5.ebuild:
   sparc stable wrt #244336
