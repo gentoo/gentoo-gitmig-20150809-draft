@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/mock-0.9.10-r2.ebuild,v 1.1 2009/03/27 16:48:31 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/mock-0.9.10-r2.ebuild,v 1.2 2009/03/27 18:06:43 mr_bones_ Exp $
 
 inherit eutils
 
@@ -25,7 +25,6 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-chroot-fix.patch"
 }
 
-
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 }
@@ -36,4 +35,3 @@ pkg_postinst() {
 		groupadd mock
 	fi
 }
-

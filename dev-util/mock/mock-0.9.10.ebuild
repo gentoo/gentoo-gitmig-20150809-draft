@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/mock-0.9.10.ebuild,v 1.4 2009/03/27 16:03:38 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/mock-0.9.10.ebuild,v 1.5 2009/03/27 18:06:43 mr_bones_ Exp $
 
 DESCRIPTION="Mock creates chroots and builds packages in them for Fedora and
 RedHat."
@@ -28,4 +28,3 @@ pkg_postinst() {
 		groupadd mock
 	fi
 }
-
