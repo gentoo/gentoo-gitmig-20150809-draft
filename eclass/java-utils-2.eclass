@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.123 2009/03/27 18:52:27 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.124 2009/03/27 19:40:38 betelgeuse Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -1817,9 +1817,9 @@ java-utils-2_src_prepare() {
 		echo "Searching for bundled classes (no output if none found):"
 		find "${WORKDIR}" -name "*.class"
 		echo "Search done."
+		java-pkg_func-exists "java_prepare" && java_prepare
 	fi
 	touch "${T}/java-utils-2_src_prepare-run"
-	java-pkg_func-exists "java_prepare" && java_prepare
 }
 
 # ------------------------------------------------------------------------------
