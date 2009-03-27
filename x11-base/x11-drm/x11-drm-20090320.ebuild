@@ -1,13 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20090320.ebuild,v 1.1 2009/03/21 00:23:02 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20090320.ebuild,v 1.2 2009/03/27 22:24:25 battousai Exp $
 
 inherit eutils x11 linux-mod autotools
 
 IUSE_VIDEO_CARDS="
 	video_cards_mach64
 	video_cards_mga
-	video_cards_nv
 	video_cards_r128
 	video_cards_radeon
 	video_cards_radeonhd
@@ -46,6 +45,9 @@ DEPEND="kernel_linux? ( virtual/linux-sources )
 RDEPEND=""
 
 pkg_setup() {
+	ewarn "The intel DRM module has been removed from x11-drm. Please use the in-kernel"
+	ewarn "DRM module. This package is no longer useful for intel video cards."
+
 	# Setup the kernel's stuff.
 	kernel_setup
 
@@ -131,8 +133,6 @@ kernel_setup() {
 		K_RV=${CHOST/*-freebsd/}
 	elif use kernel_linux
 	then
-		linux-mod_pkg_setup
-
 		if kernel_is 2 4
 		then
 			eerror "Upstream support for 2.4 kernels has been removed, so this package will no"
@@ -140,11 +140,11 @@ kernel_setup() {
 			die "Please use in-kernel DRM or switch to a 2.6 kernel."
 		fi
 
-		linux_chkconfig_builtin "DRM" && \
-			die "Please disable or modularize DRM in the kernel config. (CONFIG_DRM = n or m)"
-
-		CONFIG_CHECK="AGP"
+		CONFIG_CHECK="!DRM AGP"
+		ERROR_DRM="Please disable DRM in the kernel config. (CONFIG_DRM = n)"
 		ERROR_AGP="AGP support is not enabled in your kernel config (CONFIG_AGP)"
+
+		linux-mod_pkg_setup
 	fi
 }
 
@@ -156,8 +156,6 @@ set_vidcards() {
 			VIDCARDS="${VIDCARDS} mach64.${KV_OBJ}"
 		use video_cards_mga && \
 			VIDCARDS="${VIDCARDS} mga.${KV_OBJ}"
-		use video_cards_nv && \
-			VIDCARDS="${VIDCARDS} nouveau.${KV_OBJ}"
 		use video_cards_r128 && \
 			VIDCARDS="${VIDCARDS} r128.${KV_OBJ}"
 		use video_cards_radeon || use video_cards_radeonhd && \
