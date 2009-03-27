@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.2.2-r1.ebuild,v 1.1 2009/03/25 09:10:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.2.2-r1.ebuild,v 1.2 2009/03/27 14:34:38 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -11,7 +11,6 @@ HOMEPAGE="http://www.vdr-wiki.de/wiki/index.php/Graphtft-plugin"
 SRC_URI="http://www.jwendel.de/vdr/${P}.tar.bz2
 		http://www.jwendel.de/vdr/DeepBlue-horchi-0.0.11.tar.bz2"
 #		http://www.jwendel.de/vdr/alien-vs-predator-0.0.11.tar.bz2"
-
 
 KEYWORDS="~x86 ~amd64"
 SLOT="0"
