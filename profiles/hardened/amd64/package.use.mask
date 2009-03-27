@@ -1,6 +1,12 @@
+# This file requires >=portage-2.1.1
+
 # Bernard Cafarelli <voyageur@gentoo.org> (20 Mar 2009)
 # Depends on packages not yet keyworded for amd64, cf bug #22042
 app-backup/backup-manager s3
+
+# 26 Mar 2009: Gordon Malm <gengor@gentoo.org>
+# This version fails if <gcc-4.2, subsequent versions do not
+=x11-libs/pixman-0.12.0 sse2
 
 # Thomas Sachau <tommy@gentoo.org> (09 Mar 2009)
 # copy mask from arch/amd64
