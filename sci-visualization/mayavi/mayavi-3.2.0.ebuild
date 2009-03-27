@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.1.0.ebuild,v 1.3 2009/03/27 10:55:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.2.0.ebuild,v 1.1 2009/03/27 10:55:03 bicatali Exp $
 
 EAPI=2
 inherit eutils distutils
@@ -9,7 +9,7 @@ MY_PN="Mayavi"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="VTK based scientific data visualizer"
 HOMEPAGE="http://code.enthought.com/projects/mayavi"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
 IUSE="doc examples qt4 wxwindows"
 SLOT="2"
@@ -17,10 +17,10 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
 
 RDEPEND="dev-python/apptools
-	dev-python/enthoughtbase
-	dev-python/envisagecore
-	dev-python/envisageplugins
-	dev-python/traitsgui
+	>=dev-python/enthoughtbase-3.0.2
+	>=dev-python/envisagecore-3.1.0
+	>=dev-python/envisageplugins-3.1.0
+	>=dev-python/traitsgui-3.0.4
 	dev-python/configobj
 	dev-python/ipython
 	>=dev-python/numpy-1.1
@@ -32,8 +32,10 @@ RDEPEND="dev-python/apptools
 DEPEND="dev-python/setuptools
 	>=dev-python/numpy-1.1
 	>=sci-libs/vtk-5[python]"
-# doc needs X display
+# doc and test needs  display
 #	doc? ( dev-python/setupdocs )"
+#	test? ( >=dev-python/nose-0.10.3 ){{
+RESTRICT=test
 
 S="${WORKDIR}/${MY_P}"
 
@@ -53,6 +55,10 @@ src_compile() {
 	#	${python} setup.py build_docs --formats=html,pdf \
 	#		|| die "doc building failed"
 	#fi
+}
+
+src_test() {
+	PYTHONPATH=$(dir -d build/lib*) "${python}" setup.py test || die "tests failed"
 }
 
 src_install() {
