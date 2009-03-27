@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.2.ebuild,v 1.1 2009/03/25 07:09:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.6.2.ebuild,v 1.2 2009/03/27 19:03:30 aballier Exp $
 
 EAPI=1
 
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.devel.lyx.org/pub/lyx/stable/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cups debug nls latex monolithic-build html rtf dot docbook dia"
+IUSE="cups debug nls latex html rtf dot docbook dia"
 RESTRICT="test"
 
 LANGS="ar ca cs de en es eu fi fr gl he hu it ja nb nn pl pt ro ru tr uk zh_CN zh_TW"
@@ -89,17 +89,9 @@ src_compile() {
 	#bug 221921
 	export VARTEXFONTS=${T}/fonts
 
-	if use monolithic-build ; then
-		MONOLITHIC=" --enable-monolithic-boost --enable-monolithic-client \
-			--enable-monolithic-insets 	--enable-monolithic-mathed \
-			--enable-monolithic-core --enable-monolithic-tex2lyx \
-			--enable-monolithic-frontend-qt4 "
-	fi
-
 	econf \
 		$(use_enable nls) \
 		$(use_enable debug) \
-		$MONOLITHIC  \
 		--with-aspell --without-included-boost --disable-stdlib-debug
 	emake || die "emake failed"
 }
