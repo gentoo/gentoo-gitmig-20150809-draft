@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1-r5.ebuild,v 1.1 2009/03/25 23:54:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.1-r5.ebuild,v 1.2 2009/03/27 14:34:55 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -62,7 +62,7 @@ src_install() {
 	else
 		emake DESTDIR="${D}" install || die "emake install failed."
 	fi
-	
+
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/slim.logrotate" slim || die "newins failed"
 
