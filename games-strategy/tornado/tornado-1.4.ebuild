@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.3.ebuild,v 1.8 2009/03/27 02:04:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.4.ebuild,v 1.1 2009/03/27 02:04:04 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://kiza.kcore.de/software/tornado/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
@@ -20,6 +20,7 @@ src_prepare() {
 	sed -i \
 		-e "s:PREFIX/bin:${GAMES_BINDIR}:" \
 		-e "s:PREFIX/man:/usr/man:" \
+		-e "s:/var/games:${GAMES_STATEDIR}:" \
 		-e "s:/usr/local:/usr:" \
 		doc/man/tornado.6.in \
 		|| die "sed failed"
