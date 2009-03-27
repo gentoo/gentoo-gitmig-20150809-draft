@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ia64/make.defaults,v 1.3 2008/10/22 14:49:33 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ia64/make.defaults,v 1.4 2009/03/27 22:33:47 solar Exp $
 
 ARCH="ia64"
 ACCEPT_KEYWORDS="ia64"
@@ -25,3 +25,4 @@ ALSA_CARDS="ali5451 als4000 atiixp atiixp-modem bt87x ca0106 cmipci emu10k1x \
         ens1370 ens1371 es1938 es1968 fm801 hda-intel intel8x0 intel8x0m maestro3 \
         trident usb-audio via82xx via82xx-modem ymfpci"
 
+PORTAGE_BINHOST="http://tinderbox.dev.gentoo.org/hardened/ia64/"
