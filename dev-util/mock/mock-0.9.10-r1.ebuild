@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/mock-0.9.10.ebuild,v 1.4 2009/03/27 16:03:38 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mock/mock-0.9.10-r1.ebuild,v 1.1 2009/03/27 16:03:38 deathwing00 Exp $
 
 DESCRIPTION="Mock creates chroots and builds packages in them for Fedora and
 RedHat."
@@ -23,8 +23,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [[ ! $(egrep -q mock /etc/group) ]]; then
-		einfo "Creating group `mock`"
+	if ! [[ $(grep -q mock /etc/group && echo $?) ]]; then
+		einfo "Creating group 'mock'"
 		groupadd mock
 	fi
 }
