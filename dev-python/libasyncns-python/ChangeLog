@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/libasyncns-python
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libasyncns-python/ChangeLog,v 1.1 2009/03/27 17:00:13 hanno Exp $
+
+*libasyncns-python-0.7.1 (27 Mar 2009)
+
+  27 Mar 2009; Hanno Boeck <hanno@gentoo.org>
+  +libasyncns-python-0.7.1.ebuild:
+  Add python bindings for libasyncns.
+
