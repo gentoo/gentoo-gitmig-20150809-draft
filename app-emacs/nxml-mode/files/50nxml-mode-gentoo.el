@@ -1,5 +1,5 @@
 
-;;; nxml site-lisp configuration
+;;; nxml-mode site-lisp configuration
 
 (add-to-list 'load-path "@SITELISP@")
 (load "rng-auto" nil t)
