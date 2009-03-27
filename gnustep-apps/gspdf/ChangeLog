@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/gspdf
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gspdf/ChangeLog,v 1.1 2009/03/27 12:08:56 voyageur Exp $
+
+*gspdf-0.2 (27 Mar 2009)
+
+  27 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org> +metadata.xml,
+  +gspdf-0.2.ebuild:
+  Initial commit
+
