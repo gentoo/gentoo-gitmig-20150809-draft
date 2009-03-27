@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pupynere
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pupynere/ChangeLog,v 1.1 2008/12/11 18:55:51 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pupynere/ChangeLog,v 1.2 2009/03/27 11:51:27 bicatali Exp $
+
+*pupynere-1.0.9 (27 Mar 2009)
+
+  27 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +pupynere-1.0.9.ebuild:
+  Version bump
 
 *pupynere-1.0.6 (11 Dec 2008)
 
