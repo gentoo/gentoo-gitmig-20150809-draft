@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.3.ebuild,v 1.2 2009/03/22 16:54:53 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.3.ebuild,v 1.3 2009/03/27 05:23:43 loki_val Exp $
 
 EAPI=2
 
 inherit eutils mono gnome2-utils fdo-mime
 
-GVER=0.10.9
+GVER=0.10.7
 
 DESCRIPTION="Import, organize, play, and share your music using a simple and powerful interface."
 HOMEPAGE="http://banshee-project.org"
