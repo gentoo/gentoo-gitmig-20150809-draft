@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/sreadahead
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sreadahead/ChangeLog,v 1.1 2009/01/23 05:57:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sreadahead/ChangeLog,v 1.2 2009/03/27 12:59:24 darkside Exp $
+
+*sreadahead-1.0 (27 Mar 2009)
+
+  27 Mar 2009; Jeremy Olexa <darkside@gentoo.org>
+  +files/0001-kernel-trace-open.patch, +files/sreadahead_iter_ctrl.patch,
+  +sreadahead-1.0.ebuild:
+  Version bump, with patch from upstream - experimental and may not work yet.
+  bug 257207
 
 *sreadahead-0.04 (23 Jan 2009)
 
