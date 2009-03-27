@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-embedded
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.26 2009/03/27 18:11:07 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.27 2009/03/27 23:54:53 yngwin Exp $
+
+  27 Mar 2009; Ben de Groot <yngwin@gentoo.org>
+  +files/qt-embedded-3.3.8-castfix.patch, qt-embedded-3.3.8b:
+  Add patch to fix bug 164113. Re-adding ~amd64 keyword.
 
 *qt-embedded-3.3.8b (27 Mar 2009)
 

@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8b.ebuild,v 1.1 2009/03/27 18:11:07 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8b.ebuild,v 1.2 2009/03/27 23:54:53 yngwin Exp $
 
 DESCRIPTION="Embedded Linux port of Qt"
 HOMEPAGE="http://www.qtsoftware.com/products/platform/qt-for-embedded-linux"
 SRC_URI="ftp://ftp.qtsoftware.com/qt/source/qt-embedded-free-${PV}.tar.gz"
-LICENSE="|| ( QPL-1.0 GPL-2 )"
+LICENSE="|| ( QPL-1.0 GPL-2 GPL-3 )"
 
 SLOT="3"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="cups debug doc firebird gif ipv6 mysql nis odbc opengl postgres sqlite"
 
 DEPEND="media-libs/libpng
@@ -60,6 +60,9 @@ src_unpack() {
 
 	# avoid using -rpath
 	find mkspecs/ -name qmake.conf -exec sed -i -e "s:QMAKE_RPATH.*:QMAKE_RPATH =:" {} \;
+
+	# patch to fix invalid type casts with gcc-4 on amd64 (bug 164113)
+	epatch "${FILESDIR}"/${PN}-3.3.8-castfix.patch
 }
 
 src_compile() {
