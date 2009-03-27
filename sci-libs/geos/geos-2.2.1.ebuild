@@ -1,9 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.1.ebuild,v 1.9 2008/05/29 17:51:17 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.1.ebuild,v 1.10 2009/03/27 12:30:19 bicatali Exp $
 
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
 inherit eutils autotools
 
 DESCRIPTION="Geometry Engine - Open Source"
@@ -42,7 +40,7 @@ src_compile() {
 src_install(){
 	into /usr
 	make DESTDIR="${D}" install
-	dodoc AUTHORS COPYING INSTALL NEWS README TODO
+	dodoc AUTHORS INSTALL NEWS README TODO
 	if use doc; then
 		cd "${S}"/doc
 		make doxygen-html
