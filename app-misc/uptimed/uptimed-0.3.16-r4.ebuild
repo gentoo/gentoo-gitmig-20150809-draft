@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.16-r3.ebuild,v 1.6 2009/03/22 18:59:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.16-r4.ebuild,v 1.1 2009/03/27 10:54:15 armin76 Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://podgorny.cz/uptimed/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 pkg_setup() {
@@ -40,6 +40,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo "Fixing permissions in /var/spool/${PN}"
+	chown -R uptimed:uptimed /var/spool/${PN}
 	echo
 	elog "Start uptimed with '/etc/init.d/uptimed start'"
 	elog "To view your uptime records, use the command 'uprecords'."
