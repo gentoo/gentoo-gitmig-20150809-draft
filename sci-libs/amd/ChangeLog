@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/amd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.13 2009/03/23 03:18:48 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.14 2009/03/27 12:26:09 fmccor Exp $
+
+  27 Mar 2009; Ferris McCormick <fmccor@gentoo.org> amd-2.2.0.ebuild:
+  Sparc stable, preparation for bug #245707.
 
   23 Mar 2009; Jeremy Olexa <darkside@gentoo.org> amd-2.2.0.ebuild:
   amd64 stable, bug 245707
