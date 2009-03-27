@@ -7,7 +7,9 @@
 	<name>Christoph Mende</name>
   </maintainer>
   <use>
+	<flag name="curl">Support for web streams</flag>
 	<flag name="icecast">Enable support for Icecast2</flag>
 	<flag name="id3">Support for ID3 tags</flag>
+	<flag name="lame">Support for MP3 streaming via Icecast2</flag>
   </use>
 </pkgmetadata>
