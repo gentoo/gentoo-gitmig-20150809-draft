@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2477 2009/03/27 18:09:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2478 2009/03/27 21:13:34 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Mar 2009; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Masking media-sound/ermixer pending removal in 30 days. Bug 207324.
 
   27 Mar 2009; Ben de Groot <yngwin@gentoo.org> package.mask:
   Masking qt{,-embedded,-unixODBC}-3.3.8 pending removal
