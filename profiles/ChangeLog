@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2475 2009/03/27 17:23:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2476 2009/03/27 17:27:06 zmedico Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,7 +8,7 @@
 
   27 Mar 2009; Zac Medico <zmedico@gentoo.org> arch/m68k/packages,
   +default/linux/m68k/2008.0/packages:
-  Move ->=sys-devel/binutils-2.18-r1 unmask atom from arch/m68k/packages to
+  Move ->=sys-libs/glibc-2.4-r4 unmask atom from arch/m68k/packages to
   default/linux/m68k/2008.0/packages, for correct inheritance order. Thanks
   to Raúl Porcel <armin76@gentoo.org> for reporting.
 
