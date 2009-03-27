@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.8 2009/03/04 20:46:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.9 2009/03/27 19:39:41 caster Exp $
+
+*vuze-4.2.0.0 (19 Mar 2009)
+
+  19 Mar 2009; Vlastimil Babka <caster@gentoo.org>
+  +files/patches-4.2.0.0/0001-remove-osx-platform.patch,
+  +files/patches-4.2.0.0/0002-use-jdk-cipher-only.patch,
+  -vuze-4.1.0.0.ebuild, -vuze-4.1.0.2.ebuild, +vuze-4.2.0.0.ebuild:
+  Version bump.
 
   04 Mar 2009; Vlastimil Babka <caster@gentoo.org> vuze-4.1.0.0.ebuild,
   vuze-4.1.0.2.ebuild, vuze-4.1.0.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.1.0.0.ebuild,v 1.2 2009/03/04 20:46:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.2.0.0.ebuild,v 1.1 2009/03/27 19:39:41 caster Exp $
 
 EAPI=2
 
@@ -44,9 +44,8 @@ src_unpack() {
 	[[ -f build.xml ]] && die "upstream has build.xml again, don't overwrite"
 	cp "${FILESDIR}/build.xml" . || die "failed to copy build.xml"
 
-	epatch "${FILESDIR}/patches-4.1.0.0/use-jdk-cipher-only.diff"
-	epatch "${FILESDIR}/patches-4.1.0.0/remove-osx-platform.diff"
-	epatch "${FILESDIR}/patches-4.1.0.0/tableimpl-remove-win32-import.diff"
+	epatch "${FILESDIR}/patches-4.2.0.0/0001-remove-osx-platform.patch"
+	epatch "${FILESDIR}/patches-4.2.0.0/0002-use-jdk-cipher-only.patch"
 
 	### Removes OS X files and entries.
 	rm -rv "org/gudy/azureus2/platform/macosx" \
