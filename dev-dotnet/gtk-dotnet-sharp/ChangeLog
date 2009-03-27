@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtk-dotnet-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-dotnet-sharp/ChangeLog,v 1.3 2009/02/08 17:21:50 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-dotnet-sharp/ChangeLog,v 1.4 2009/03/27 15:53:36 ranger Exp $
+
+  27 Mar 2009; Brent Baude <ranger@gentoo.org>
+  gtk-dotnet-sharp-2.12.8.ebuild:
+  Marking gtk-dotnet-sharp-2.12.8 ppc stable for bug 234305
 
 *gtk-dotnet-sharp-2.12.8 (08 Feb 2009)
 
