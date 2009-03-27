@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dbunit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.19 2009/01/13 15:54:02 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.20 2009/03/27 19:09:21 betelgeuse Exp $
+
+  27 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> dbunit-2.4.1.ebuild:
+  Use java_prepare.
 
   13 Jan 2009; Serkan Kaba <serkan@gentoo.org> dbunit-2.4.1.ebuild:
   Use mirror syntax for SourceForge.

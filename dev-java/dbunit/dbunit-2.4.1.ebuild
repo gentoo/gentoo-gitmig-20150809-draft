@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.4.1.ebuild,v 1.3 2009/01/13 15:54:02 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.4.1.ebuild,v 1.4 2009/03/27 19:09:21 betelgeuse Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -33,7 +33,7 @@ DEPEND=">=virtual/jdk-1.4
 #instead of making a folder
 S="${WORKDIR}"
 
-src_prepare(){
+java_prepare() {
 	#Upstream no longer provides a build file.
 	cp -v "${FILESDIR}"/build-2.4.xml "${S}/build.xml" || die
 }
