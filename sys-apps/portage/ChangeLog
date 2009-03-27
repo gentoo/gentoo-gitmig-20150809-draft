@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.591 2009/03/26 12:34:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.592 2009/03/27 20:19:15 zmedico Exp $
+
+*portage-2.2_rc28 (27 Mar 2009)
+
+  27 Mar 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc28.ebuild:
+  2.2_rc28 bump. This fixes bug #227265 (make package name validation allow
+  more possibilities). Bug #210077 tracks all bugs fixed in the 2.2 branch.
+
+*portage-2.1.6.11 (27 Mar 2009)
+
+  27 Mar 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.6.11.ebuild:
+  2.1.6.11 bump. This fixes bug #227265 (make package name validation allow
+  more possibilities). The experimental parse-eapi-* FEATURES are also
+  included (see the make.conf(5) man page for more info). Bug #261959 tracks
+  all bugs fixed since 2.1.6.7.
 
   26 Mar 2009; Raúl Porcel <armin76@gentoo.org> portage-2.1.6.7.ebuild:
   m68k love, thanks to kolla for testing
