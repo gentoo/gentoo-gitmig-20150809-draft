@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12-r5.ebuild,v 1.1 2009/03/28 11:12:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12-r5.ebuild,v 1.2 2009/03/28 11:30:42 vapier Exp $
 
 inherit eutils libtool autotools toolchain-funcs
 
@@ -52,7 +52,5 @@ src_install() {
 	use doc && dohtml doc/html/*.html
 
 	gen_usr_ldscript -a usb
-	use nocxx \
-		&& rm -f "${D}"/usr/include/usbpp.h \
-		|| gen_usr_ldscript -a usbpp
+	use nocxx && rm -f "${D}"/usr/include/usbpp.h
 }
