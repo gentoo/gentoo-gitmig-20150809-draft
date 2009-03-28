@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.596 2009/03/24 19:41:37 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.597 2009/03/28 18:24:31 armin76 Exp $
+
+  28 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  gentoo-sources-2.6.29.ebuild:
+  Re-add ~sh, and mark ~alpha, since this compiles now
 
 *gentoo-sources-2.6.29 (24 Mar 2009)
 
