@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schoca/schoca-0.3.0.ebuild,v 1.2 2008/01/17 19:35:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schoca/schoca-0.3.0.ebuild,v 1.3 2009/03/28 18:25:11 vadimk Exp $
 
 EAPI="1"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://home.arcor.de/chr_bauer/schoca.html
 SRC_URI="mirror://sourceforge/chesslib/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+ocamlopt"
 
 DEPEND="dev-ml/findlib"
@@ -36,6 +36,7 @@ src_unpack() {
 	cp OCaml.mk OCaml.mk.old
 	sed "s:\$(CFLAGS):\$(CCFLAGS):g" -i OCaml.mk
 	sed "s:CCFLAGS= -ccopt -O2:CCFLAGS= -ccopt \"${CFLAGS}\":" -i OCaml.mk
+	sed -i -e "s:\$(LDFLAGS):-cclib \"${LDFLAGS}\":" OCaml.mk
 	sed -i -e "s:DESTDURFLAG:DESTDIRFLAG:" OCaml.mk
 	if ! use ocamlopt; then
 		sed -i -e 's/ \$(PROGRAM)\.opt/ \$(PROGRAM)/' OCaml.mk || die "sed failed"
