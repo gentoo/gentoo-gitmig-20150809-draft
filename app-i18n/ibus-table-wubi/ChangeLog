@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/ibus-table-wubi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-wubi/ChangeLog,v 1.4 2009/03/16 14:20:16 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-wubi/ChangeLog,v 1.5 2009/03/28 17:49:21 matsuu Exp $
+
+*ibus-table-wubi-1.1.0.20090327 (28 Mar 2009)
+
+  28 Mar 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-wubi-1.1.0.20090327.ebuild:
+  Version bumped.
 
 *ibus-table-wubi-1.1.0.20090316 (16 Mar 2009)
 
