@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.28 2009/03/16 08:21:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.29 2009/03/28 00:21:13 gengor Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -135,7 +135,6 @@ qt4-build_src_prepare() {
 		replace-flags -O3 -O2
 	fi
 
-	# Bug 253127
 	# Unsupported old gcc versions - hardened needs this :(
 	if [[ $(gcc-major-version) -lt "4" ]] ; then
 		ewarn "Appending -fno-stack-protector to CXXFLAGS"
@@ -146,6 +145,12 @@ qt4-build_src_prepare() {
 	if [[ "$(gcc-major-version)" == "3" ]] && use amd64; then
 		ewarn "Appending -fno-gcse to CFLAGS/CXXFLAGS"
 		append-flags -fno-gcse
+	fi
+
+	# Bug 253127
+	if [[ $(gcc-major-version) -lt "4" ]] ; then
+		sed -e "/^QMAKE_CFLAGS\t/ s:$: -fno-stack-protector-all:" \
+		-i "${S}"/mkspecs/common/g++.conf || die "sed ${S}/mkspecs/common/g++.conf failed"
 	fi
 
 	# Bug 172219
