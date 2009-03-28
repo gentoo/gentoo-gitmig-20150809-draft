@@ -1,6 +1,10 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.39 2009/01/04 20:24:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.40 2009/03/28 10:17:12 ulm Exp $
+
+  28 Mar 2009; Ulrich Mueller <ulm@gentoo.org> files/50magicpoint-gentoo.el,
+  -files/50mgp-mode-gentoo.el:
+  Use add-to-list instead of cons in Emacs site-init file. Remove unused file.
 
   04 Jan 2009; Ulrich Mueller <ulm@gentoo.org> magicpoint-1.12a-r1.ebuild,
   magicpoint-1.13a.ebuild:
