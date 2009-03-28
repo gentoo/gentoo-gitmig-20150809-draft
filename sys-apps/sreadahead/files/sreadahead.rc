@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sreadahead/files/sreadahead.rc,v 1.1 2009/01/23 05:57:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sreadahead/files/sreadahead.rc,v 1.2 2009/03/28 03:13:02 darkside Exp $
 
 description="Start sreadahead daemon"
 
@@ -11,14 +11,6 @@ depend() {
 }
 
 start() {
-	PACKFILE="/etc/readahead.packed"
-
-	if ! [ -f $PACKFILE ]
-	then
-		ewarn "Cannot find sreadahead pack file $PACKFILE"
-		return 1
-	fi
-
 	ebegin "Starting sreadahead"
 	/sbin/sreadahead
 	eend $?
