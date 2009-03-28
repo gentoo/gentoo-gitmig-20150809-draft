@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upm/upm-0.85.ebuild,v 1.11 2005/11/29 03:01:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upm/upm-0.85.ebuild,v 1.12 2009/03/28 13:59:08 flameeyes Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake
+	emake || die "emake failed"
 }
 
 src_install() {
