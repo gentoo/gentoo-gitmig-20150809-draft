@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/num-utils
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/ChangeLog,v 1.6 2008/06/17 09:17:49 bicatali Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/ChangeLog,v 1.7 2009/03/28 19:28:58 bicatali Exp $
+
+  28 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org> num-utils-0.5.ebuild:
+  Renamed normalize to nnormalize, bug #248324
 
   17 Jun 2008; Sébastien Fabbro <bicatali@gentoo.org> num-utils-0.5.ebuild:
   Added ~amd64 and cleaned-up ebuild

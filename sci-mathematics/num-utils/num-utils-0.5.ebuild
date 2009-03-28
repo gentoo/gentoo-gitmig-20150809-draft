@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/num-utils-0.5.ebuild,v 1.3 2008/06/17 09:17:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/num-utils-0.5.ebuild,v 1.4 2009/03/28 19:28:58 bicatali Exp $
 
 IUSE=""
 
@@ -15,15 +15,22 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 
 src_compile() {
+	# bug #248324
+	mv normalize nnormalize || die
 	sed -i \
 		-e 's/^RPMDIR/#RPMDIR/' \
 		-e 's/COPYING//' \
 		-e '/^DOCS/s/MANIFEST//' \
+		-e 's/normalize/nnormalize/' \
 		Makefile || die "sed Makefile failed"
-
 	emake || die "emake failed"
 }
 
 src_install () {
 	emake ROOT="${D}" install || die "emake install failed"
 }
+
+pkg_postinst() {
+	elog "normalize has been renamed nnormalize"
+}
+
