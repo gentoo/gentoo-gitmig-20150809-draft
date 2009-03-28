@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ganglia
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.27 2009/02/22 17:39:58 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ChangeLog,v 1.28 2009/03/28 15:33:40 nixnut Exp $
+
+  28 Mar 2009; nixnut <nixnut@gentoo.org> ganglia-3.1.2.ebuild:
+  ppc stable #263916
 
   22 Feb 2009; Justin Bronder <jsbronder@gentoo.org> ganglia-3.1.2.ebuild:
   Use in pkg_postrm, thanks to dberkholz for pointing out my mistake.
