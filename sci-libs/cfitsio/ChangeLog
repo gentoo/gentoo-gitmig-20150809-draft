@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.29 2009/03/20 14:00:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.30 2009/03/28 13:31:17 bluebird Exp $
+
+  28 Mar 2009; Friedrich Oslage <bluebird@gentoo.org>
+  cfitsio-3.100-r1.ebuild:
+  Stable on sparc, bug #256681
 
   20 Mar 2009; Brent Baude <ranger@gentoo.org> cfitsio-3.100-r1.ebuild:
   stable ppc, bug 256681
