@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20090320.ebuild,v 1.2 2009/03/27 22:24:25 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20090320.ebuild,v 1.3 2009/03/28 00:34:08 battousai Exp $
 
 inherit eutils x11 linux-mod autotools
 
@@ -140,9 +140,8 @@ kernel_setup() {
 			die "Please use in-kernel DRM or switch to a 2.6 kernel."
 		fi
 
-		CONFIG_CHECK="!DRM AGP"
+		CONFIG_CHECK="!DRM"
 		ERROR_DRM="Please disable DRM in the kernel config. (CONFIG_DRM = n)"
-		ERROR_AGP="AGP support is not enabled in your kernel config (CONFIG_AGP)"
 
 		linux-mod_pkg_setup
 	fi
@@ -258,11 +257,6 @@ src_compile_linux() {
 	BUILD_TARGETS="modules"
 	BUILD_PARAMS="DRM_MODULES='${VIDCARDS}' LINUXDIR='${KERNEL_DIR}' M='${SRC_BUILD}'"
 	ECONF_PARAMS='' S="${SRC_BUILD}" linux-mod_src_compile
-
-	if linux_chkconfig_present DRM
-	then
-		ewarn "Please disable in-kernel DRM support to use this package."
-	fi
 }
 
 src_compile_freebsd() {
