@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/webcdwriter
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/ChangeLog,v 1.16 2008/06/07 11:13:50 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/ChangeLog,v 1.17 2009/03/28 18:12:03 serkan Exp $
+
+  28 Mar 2009; Serkan Kaba <serkan@gentoo.org> webcdwriter-2.8.2:
+  Add openjnlp to DEPEND as well. Fixes bug #264069 reported by Diego E.
+  Pettenò <flameeyes@gentoo.org>
 
 *webcdwriter-2.8.2 (07 Jun 2008)
 
