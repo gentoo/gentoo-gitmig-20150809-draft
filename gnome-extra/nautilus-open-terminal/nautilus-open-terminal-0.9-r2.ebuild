@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/nautilus-open-terminal-0.9-r1.ebuild,v 1.1 2009/03/22 12:20:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/nautilus-open-terminal-0.9-r2.ebuild,v 1.1 2009/03/28 22:40:07 eva Exp $
 
 EAPI="2"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Nautilus Plugin for Opening Terminals"
 HOMEPAGE="http://manny.cluecoder.org/packages/nautilus-open-terminal/"
@@ -35,7 +35,10 @@ src_prepare() {
 	# Be a bit more future proof, bug #260903
 	sed "s/-Werror//" -i src/Makefile.am src/Makefile.in || die "sed failed"
 
+	# Fix compilation with gnome 2.26 libs, bug #261914
+	epatch "${FILESDIR}/${P}-gnomevfs.patch"
+
 	# Respect LINGUAS
 	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautomake
+	eautoreconf
 }
