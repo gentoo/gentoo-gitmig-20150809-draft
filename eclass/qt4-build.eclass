@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.30 2009/03/28 00:33:33 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.31 2009/03/28 02:29:24 gengor Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -76,7 +76,7 @@ qt4-build_pkg_setup() {
 	if ! version_is_at_least 4.1 $(gcc-version) ; then
 		ewarn "Using a GCC version lower than 4.1 is not supported!"
 		echo
-		ebeep 5
+		ebeep 3
 	fi
 
 	if use custom-cxxflags; then
