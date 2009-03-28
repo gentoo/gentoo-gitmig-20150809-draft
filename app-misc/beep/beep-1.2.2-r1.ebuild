@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2-r1.ebuild,v 1.11 2008/10/27 05:48:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2-r1.ebuild,v 1.12 2009/03/28 05:39:33 solar Exp $
 
 inherit eutils base toolchain-funcs
 
@@ -13,15 +13,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ppc ppc64 sparc x86"
 IUSE=""
 
-PATCHES="${FILESDIR}/${P}-nosuid.patch"
+PATCHES=( ${FILESDIR}/${P}-{Makefile,nosuid}.patch )
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e 's/CC=gcc/CC?=gcc/' Makefile || ewarn "Have I been fixed?"
-}
-src_compile() {
-	emake CC=$(tc-getCC) FLAGS="${CFLAGS}" || die "compile problem"
+pkg_setup() {
+	tc-export CC
 }
 
 src_install() {

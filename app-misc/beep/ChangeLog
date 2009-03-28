@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/beep
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.25 2008/05/10 23:18:43 solar Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/ChangeLog,v 1.26 2009/03/28 05:39:33 solar Exp $
+
+  28 Mar 2009; <solar@gentoo.org> +files/beep-1.2.2-Makefile.patch,
+  beep-1.2.2-r1.ebuild:
+  - make beep respect LDFLAGS via basic Makefile cleanups
 
   10 May 2008; <solar@gentoo.org> beep-1.2.2-r1.ebuild:
   - cross compile fix and keyworded for ~arm
