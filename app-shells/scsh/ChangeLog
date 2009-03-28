@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/scsh
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.28 2008/08/03 16:10:31 pchrist Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.29 2009/03/28 22:24:00 vadimk Exp $
+
+  28 Mar 2009; Vadim Kuznetsov vadimk@gentoo.org scsh-0.6.7.ebuild:
+  Bug 234691. Using multilib_toolchain_setup to enable amd64
 
   03 Aug 2008; Panagiotis Christopoulos <pchrist@gentoo.org>
   scsh-0.6.6.ebuild, scsh-0.6.7.ebuild:
