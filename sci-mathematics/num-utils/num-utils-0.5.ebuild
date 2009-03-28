@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/num-utils-0.5.ebuild,v 1.4 2009/03/28 19:28:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/num-utils/num-utils-0.5.ebuild,v 1.5 2009/03/28 20:17:08 mr_bones_ Exp $
 
 IUSE=""
 
@@ -33,4 +33,3 @@ src_install () {
 pkg_postinst() {
 	elog "normalize has been renamed nnormalize"
 }
-
