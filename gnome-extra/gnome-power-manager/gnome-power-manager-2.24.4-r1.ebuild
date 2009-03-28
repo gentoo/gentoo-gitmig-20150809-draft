@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r1.ebuild,v 1.2 2009/03/25 21:32:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r1.ebuild,v 1.3 2009/03/28 23:15:21 eva Exp $
 
 inherit autotools eutils gnome2 virtualx
 
@@ -79,6 +79,8 @@ src_unpack() {
 	epatch "${WORKDIR}/${P}-cpufreq-support.patch"
 	epatch "${WORKDIR}/${P}-cpufreq-ui.patch"
 
+	# Make it libtool-1 compatible
+	rm -v m4/lt* m4/libtool.m4 || die "removing libtool macros failed"
 	eautoreconf
 
 	# glibc splits this out, whereas other libc's do not tend to
