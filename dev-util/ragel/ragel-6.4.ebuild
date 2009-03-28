@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.4.ebuild,v 1.2 2009/03/24 09:39:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.4.ebuild,v 1.3 2009/03/28 00:06:30 flameeyes Exp $
 
 inherit eutils
 
@@ -16,6 +16,13 @@ IUSE="doc vim-syntax"
 
 DEPEND=""
 RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-solaris.patch
+}
 
 src_compile() {
 	econf || die "econf failed"
