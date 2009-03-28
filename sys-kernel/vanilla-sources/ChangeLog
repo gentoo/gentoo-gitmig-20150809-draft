@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.615 2009/03/24 10:09:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.616 2009/03/28 16:13:08 jer Exp $
+
+  28 Mar 2009; Jeroen Roovers <jer@gentoo.org>
+  vanilla-sources-2.6.29.ebuild:
+  Mask 2.6.29 for HPPA - all the rc's I tested were fine, but not the final.
 
 *vanilla-sources-2.6.29 (24 Mar 2009)
 
