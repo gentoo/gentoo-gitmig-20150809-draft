@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.8-r1.ebuild,v 1.2 2007/11/13 07:48:15 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.8-r1.ebuild,v 1.3 2009/03/28 22:55:13 eva Exp $
 
 inherit gnome2 eutils autotools
 
@@ -39,5 +39,7 @@ src_unpack() {
 	# The replace to GTK_ENABLE_DEPRECATED is to not have to deal with the previous line containing a backslash
 	sed -e 's/-DGTK_DISABLE_DEPRECATED \\/-DGTK_ENABLE_DEPRECATED/g' -e 's/-DGDK_DISABLE_DEPRECATED \\//g' -e 's/-DG_DISABLE_DEPRECATED//g' \
 		-i "${S}/libegg/libegg/Makefile.am" "${S}/libegg/libegg/iconlist/Makefile.am" "${S}/libegg/libegg/tray/Makefile.am"
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
