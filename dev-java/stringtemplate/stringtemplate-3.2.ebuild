@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/stringtemplate-3.2.ebuild,v 1.1 2009/03/29 00:13:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/stringtemplate-3.2.ebuild,v 1.2 2009/03/29 16:46:42 betelgeuse Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -22,7 +22,7 @@ IUSE=""
 
 # no junit targets in build.xml, but unconditional compile and jar of test
 # classes, oh well
-COMMON_DEPEND="dev-java/antlr:0
+COMMON_DEPEND=">=dev-java/antlr-2.7.7:0[java]
 	dev-java/junit:0"
 
 RDEPEND=">=virtual/jre-1.4

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/stringtemplate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/ChangeLog,v 1.1 2009/03/29 00:13:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/ChangeLog,v 1.2 2009/03/29 16:46:42 betelgeuse Exp $
+
+  29 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
+  stringtemplate-3.2.ebuild:
+  Require java use flag on dev-java/antlr:0.
 
 *stringtemplate-3.2 (29 Mar 2009)
 
