@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.69 2009/03/29 10:27:24 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.70 2009/03/29 15:52:24 josejx Exp $
+
+  29 Mar 2009; Joseph Jezak <josejx@gentoo.org> abs-guide-5.5.ebuild:
+  Marked ppc stable for bug #264143.
 
   29 Mar 2009; Ferris McCormick <fmccor@gentoo.org> abs-guide-5.5.ebuild:
   Sparc stable, Bug #264143.
