@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-3.0.3.ebuild,v 1.3 2009/03/19 21:35:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-3.0.3.ebuild,v 1.4 2009/03/29 18:03:43 betelgeuse Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+pch"
 
 DEPEND="~net-libs/libfwbuilder-${PV}
-	~dev-java/antlr-2.7.7[cxx]
+	>=dev-java/antlr-2.7.7:0[cxx]
 	x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}"
 
