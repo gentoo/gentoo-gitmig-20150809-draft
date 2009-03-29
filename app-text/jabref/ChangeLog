@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.69 2009/03/24 18:41:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.70 2009/03/29 16:43:24 betelgeuse Exp $
+
+  29 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> jabref-2.3.1.ebuild:
+  Migrate to EAPI 2 in order to fix bug #239835.
 
   24 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> jabref-2.3.1.ebuild:
   Add slot dep for antlr.

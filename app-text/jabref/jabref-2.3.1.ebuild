@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.3.1.ebuild,v 1.6 2009/03/24 18:41:08 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.3.1.ebuild,v 1.7 2009/03/29 16:43:24 betelgeuse Exp $
 
-EAPI="1"
+EAPI="2"
 JAVA_PKG_IUSE="doc"
 
 inherit eutils java-pkg-2 java-ant-2
@@ -18,14 +18,14 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-CDEPEND="dev-java/spin
-	>=dev-java/glazedlists-1.5.0
-	>=dev-java/antlr-2.7.3:0
-	>=dev-java/jgoodies-forms-1.1.0
-	>=dev-java/jgoodies-looks-2.0
-	>=dev-java/microba-0.4.3
-	dev-java/jempbox
-	dev-java/pdfbox"
+CDEPEND="dev-java/spin:0
+	>=dev-java/glazedlists-1.5.0:0
+	>=dev-java/antlr-2.7.7:0[java]
+	>=dev-java/jgoodies-forms-1.1.0:0
+	>=dev-java/jgoodies-looks-2.0:2.0
+	>=dev-java/microba-0.4.3:0
+	dev-java/jempbox:0
+	dev-java/pdfbox:0"
 
 RDEPEND=">=virtual/jre-1.5
 	${CDEPEND}"
@@ -35,10 +35,7 @@ DEPEND=">=virtual/jdk-1.5
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+java_prepare() {
 	# moves jarbundler definition to where it's needed (not by us)
 	# don't call unjarlib, don't want to absorb deps
 	epatch "${FILESDIR}/${PN}-2.2-build.xml.patch"
