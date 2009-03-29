@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.2.ebuild,v 1.1 2009/03/29 14:12:11 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.2.ebuild,v 1.2 2009/03/29 15:43:01 tommy Exp $
 
 EAPI="2"
 
@@ -57,7 +57,7 @@ CONFIG_CHECK="PARPORT PPDEV"
 ERROR_PARPORT="Please make sure parallel port support is enabled in your kernel (PARPORT and PPDEV)."
 
 pkg_setup() {
-	! use qt3 && ! use qt4 && ewarn "You need USE=qt3 (recommended) or USE=qt4 for the hplip GUI."
+	! use qt3 && ! use qt4 && ewarn "You need USE=qt3 or USE=qt4 for the hplip GUI."
 
 	use scanner && ! use gtk && ewarn "You need USE=gtk for the scanner GUI."
 

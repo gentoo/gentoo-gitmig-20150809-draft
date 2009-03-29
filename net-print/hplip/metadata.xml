@@ -24,12 +24,10 @@
     it</flag>
     <flag name='ppds'>Use precompiled PPD files (obsolete, use cupsddk 
     instead)</flag>
-    <flag name='qt3'>Enable graphical interface using Qt 3 (recommended); when 
-    both qt3 and qt4 USE flags are enabled then qt3 has priority over 
-    qt4</flag>
-    <flag name='qt4'>Enable graphical interface using Qt 4 (experimental); when 
-    both qt3 and qt4 USE flags are enabled then qt3 is prioritary over 
-    qt4</flag>
+    <flag name='qt3'>Enable graphical interface using Qt 3; when both qt3 and
+	qt4 USE flags are enabled then qt4 has priority over qt3</flag>
+    <flag name='qt4'>Enable graphical interface using Qt 4; when both qt3 and
+	qt4 USE flags are enabled then qt4 has priority over qt3</flag>
     <flag name='scanner'>Enable scanner on multifunction devices which support 
     it </flag>
     <flag name='snmp'>Add support for <pkg>net-analyzer/net-snmp</pkg> 
