@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/gtk-gnutella
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.89 2008/07/27 08:24:39 graaff Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.90 2009/03/29 18:47:44 graaff Exp $
+
+*gtk-gnutella-0.96.6 (29 Mar 2009)
+
+  29 Mar 2009; Hans de Graaff <graaff@gentoo.org>
+  +gtk-gnutella-0.96.6.ebuild:
+  Version bump. The currently stable 0.96.5 version will timeout on April 1st,
+  meaning that it won't be possible to bootstrap (e.g. use for the first time)
+  with that version.
 
   27 Jul 2008; Hans de Graaff <graaff@gentoo.org>
   gtk-gnutella-0.96.5.ebuild:
