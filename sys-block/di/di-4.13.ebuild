@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/di/di-4.13.ebuild,v 1.1 2008/12/19 21:08:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/di/di-4.13.ebuild,v 1.2 2009/03/29 01:04:08 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -18,7 +18,7 @@ RDEPEND=""
 
 src_compile() {
 	tc-export CC
-	SHELL=/bin/bash prefix="${D}" ./Build || die
+	SHELL=/bin/bash prefix="${D}" ${SHELL} ./Build || die
 }
 
 src_install() {
