@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/ZendFramework
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.52 2009/03/07 11:47:31 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.53 2009/03/29 08:52:04 pva Exp $
+
+*ZendFramework-1.7.7 (29 Mar 2009)
+
+  29 Mar 2009; Peter Volkov <pva@gentoo.org> +ZendFramework-1.7.7.ebuild:
+  Version bump.
 
 *ZendFramework-1.7.6 (07 Mar 2009)
 
