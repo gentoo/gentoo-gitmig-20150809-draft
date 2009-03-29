@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.9 2009/03/24 19:24:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-5.5.1-r1.ebuild,v 1.10 2009/03/29 17:48:38 betelgeuse Exp $
 
-EAPI=1
+EAPI="2"
 JAVA_PKG_IUSE="doc"
 WANT_ANT_TASKS="ant-nodeps ant-trax"
 
@@ -39,7 +39,7 @@ COMMON_DEPEND="
 	>=dev-java/xml-commons-1.0_beta2"
 
 RDEPEND=">=virtual/jre-1.5
-	dev-java/antlr:0
+	>=dev-java/antlr-2.7.7:0[java]
 	dev-java/commons-beanutils:1.7
 	dev-java/commons-collections
 	dev-java/commons-digester
@@ -104,7 +104,9 @@ JAVA_PKG_BSFIX="off"
 src_unpack () {
 	unpack "${FILE_IDE}"
 	use cxx && unpack_extra ${FILE_CPP} cpp
-	cd "${S}"
+}
+
+java_prepare() {
 	find -name "*.jar" | grep "/test/" | xargs rm -v
 	find -name "*.class" -delete
 

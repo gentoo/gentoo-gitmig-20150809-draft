@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r4.ebuild,v 1.2 2008/12/31 03:25:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.5-r4.ebuild,v 1.3 2009/03/29 17:48:38 betelgeuse Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -80,7 +80,7 @@ RDEPEND=">=virtual/jdk-1.5
 		>=dev-util/subversion-1.5:0[java]
 	)
 	netbeans_modules_j2ee? (
-		>=dev-java/antlr-2.7.6:0
+		>=dev-java/antlr-2.7.7:0[java]
 		>=dev-java/asm-3.1:3
 		dev-java/commons-beanutils:1.7
 		dev-java/commons-collections:0
@@ -96,7 +96,7 @@ RDEPEND=">=virtual/jdk-1.5
 	)
 	netbeans_modules_java? (
 		>=dev-java/ant-1.7:0
-		>=dev-java/antlr-2.7.6:0
+		>=dev-java/antlr-2.7.7:0[java]
 		dev-java/asm:2.2
 		>=dev-java/beansbinding-1.2.1:0
 		>=dev-java/cglib-2.1:2.1
