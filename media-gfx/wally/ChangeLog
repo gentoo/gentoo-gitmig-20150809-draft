@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.12 2009/03/29 11:46:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.13 2009/03/29 21:28:32 hwoarang Exp $
+
+  29 Mar 2009; Markos Chandras <hwoarang@gentoo.org> wally-2.0.2:
+  Adding qt-svg as dependency. Removing qt-gui as qt-svg pulls it anyway.
+  Fixes bug (#264205)
 
 *wally-2.0.2 (29 Mar 2009)
 
