@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4318 2009/03/28 22:27:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4319 2009/03/29 14:27:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2306,7 +2306,7 @@ net-print/hplip:gtk - Enable GTK+ dependencies, currently only the scanner GUI w
 net-print/hplip:minimal - Only build internal hpijs driver (not recommended at all, make sure you know what you are doing)
 net-print/hplip:parport - Enable parallel port for devices which require it
 net-print/hplip:ppds - Use precompiled PPD files (obsolete, use cupsddk instead)
-net-print/hplip:qt3 - Enable graphical interface using Qt 3 (recommended); when both qt3 and qt4 USE flags are enabled then qt3 is prioritary over qt4
+net-print/hplip:qt3 - Enable graphical interface using Qt 3 (recommended); when both qt3 and qt4 USE flags are enabled then qt3 has priority over qt4
 net-print/hplip:qt4 - Enable graphical interface using Qt 4 (experimental); when both qt3 and qt4 USE flags are enabled then qt3 is prioritary over qt4
 net-print/hplip:scanner - Enable scanner on multifunction devices which support it 
 net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this driver to work over networks (both for server and client)
