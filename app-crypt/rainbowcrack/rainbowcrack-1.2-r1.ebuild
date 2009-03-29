@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2-r1.ebuild,v 1.7 2009/01/03 14:52:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/rainbowcrack/rainbowcrack-1.2-r1.ebuild,v 1.8 2009/03/29 13:46:35 patrick Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Hash cracker that precomputes plaintext - ciphertext pairs in advance"
-HOMEPAGE="http://www.antsight.com/zsl/rainbowcrack/"
+HOMEPAGE="http://project-rainbowcrack.com/"
 
-SRC_URI="http://www.antsight.com/zsl/rainbowcrack/${P}-src.zip
-	http://www.antsight.com/zsl/rainbowcrack/${P}-src-algorithmpatch.zip"
+SRC_URI="http://project-rainbowcrack.com/${P}-src.zip
+	http://http://project-rainbowcrack.com/${P}-src-algorithmpatch.zip"
 
 LICENSE="as-is"
 SLOT="0"
