@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta6-r1.ebuild,v 1.4 2008/05/12 16:05:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0_beta6-r1.ebuild,v 1.5 2009/03/29 21:23:38 ulm Exp $
 
-inherit elisp eutils
+inherit elisp
 
 DESCRIPTION="A chess client and library for Emacs"
 HOMEPAGE="http://emacs-chess.sourceforge.net/"
@@ -22,16 +22,10 @@ RDEPEND="|| ( games-board/gnuchess
 		games-board/sjeng )"
 
 S="${WORKDIR}/${PN}"
-
-SITEFILE=50${PN}-gentoo.el
 DOCS="ChangeLog EPD.txt PGN.txt PLAN README TODO"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PV}-chess-pos-move-gentoo.patch"
-	epatch "${FILESDIR}/${PV}-chess-common-handler-gentoo.patch"
-}
+ELISP_PATCHES="${PV}-chess-pos-move-gentoo.patch
+	${PV}-chess-common-handler-gentoo.patch"
+SITEFILE="50${PN}-gentoo.el"
 
 # this is needed; elisp.eclass redefines src_compile() from portage default
 src_compile() {
