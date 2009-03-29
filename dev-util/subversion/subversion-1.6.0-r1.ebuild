@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.0-r1.ebuild,v 1.1 2009/03/28 19:37:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.0-r1.ebuild,v 1.2 2009/03/29 13:19:45 arfrever Exp $
 
 EAPI="1"
 
 WANT_AUTOMAKE="none"
 
-inherit autotools bash-completion db-use depend.apache elisp-common eutils flag-o-matic java-pkg-opt-2 libtool multilib perl-module python
+inherit bash-completion db-use depend.apache elisp-common eutils flag-o-matic java-pkg-opt-2 libtool multilib perl-module python
 
 DESCRIPTION="Advanced version control system"
 HOMEPAGE="http://subversion.tigris.org/"
@@ -125,7 +125,7 @@ src_unpack() {
 		-e "s:@bindir@/svn-tools:@libdir@/subversion/bin:" \
 		-i Makefile.in
 
-	eautoconf
+	./autogen.sh || die "autogen.sh failed"
 	elibtoolize
 }
 
