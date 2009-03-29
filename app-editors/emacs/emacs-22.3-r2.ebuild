@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r2.ebuild,v 1.3 2009/03/12 10:19:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r2.ebuild,v 1.4 2009/03/29 09:36:44 ulm Exp $
 
 EAPI=2
 
@@ -209,6 +209,9 @@ src_install () {
 	elisp-site-file-install "${SITEFILE}" || die
 
 	dodoc AUTHORS BUGS CONTRIBUTE README || die "dodoc failed"
+
+	stamp_simple_el=$(stat --format=%Y \
+		"${D}/usr/share/emacs/${FULL_VERSION}/lisp/simple.el")
 }
 
 emacs-infodir-rebuild() {
@@ -249,6 +252,16 @@ pkg_postinst() {
 	elog "the Emacs eselect module, which also redirects man and info pages."
 	elog "Therefore, several Emacs versions can be installed at the same time."
 	elog "\"man emacs.eselect\" for details."
+
+	local stamp=$(stat --format=%Y \
+		"${ROOT}/usr/share/emacs/${FULL_VERSION}/lisp/simple.el")
+	if [ "${stamp}" != "${stamp_simple_el}" ]; then
+		echo
+		ewarn "Your package manager does not preserve file modification times"
+		ewarn "when merging. This is a known issue with some package managers"
+		ewarn "and can trigger spurious warnings in Emacs at run time. These"
+		ewarn "warnings can be safely ignored."
+	fi
 }
 
 pkg_postrm() {

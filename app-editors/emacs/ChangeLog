@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.307 2009/03/12 10:19:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.308 2009/03/29 09:36:44 ulm Exp $
+
+  29 Mar 2009; Ulrich Mueller <ulm@gentoo.org> emacs-21.4-r18.ebuild,
+  emacs-22.3-r2.ebuild:
+  Warn about possible problems if the package manager does not preserve file
+  modification times, bugs 181021 and 264130.
 
 *emacs-21.4-r18 (12 Mar 2009)
 
