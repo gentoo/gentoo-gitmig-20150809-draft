@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/calc/calc-2.02f.ebuild,v 1.6 2007/12/01 01:02:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/calc/calc-2.02f.ebuild,v 1.7 2009/03/29 21:16:30 ulm Exp $
 
-inherit elisp eutils versionator
+inherit elisp versionator
 
 DESCRIPTION="Advanced calculator and mathematical tool within Emacs"
 HOMEPAGE="http://www.gnu.org/software/emacs/calc.html"
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
+ELISP_PATCHES="${P}-emacs-21.patch ${P}-info-dir.patch"
 SITEFILE="50calc-gentoo.el"
 
 pkg_setup() {
@@ -22,13 +23,6 @@ pkg_setup() {
 		elog "later, so ${CATEGORY}/${PN} is only needed for lower versions."
 		elog "You may select the active Emacs version with \"eselect emacs\"."
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-emacs-21.patch"
-	epatch "${FILESDIR}/${P}-info-dir.patch"
 }
 
 src_compile() {
