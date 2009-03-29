@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/quadkonsole
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/ChangeLog,v 1.4 2008/04/28 15:59:38 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/ChangeLog,v 1.5 2009/03/29 13:56:21 patrick Exp $
+
+*quadkonsole-2.0.3 (29 Mar 2009)
+
+  29 Mar 2009; Patrick Lauer <patrick@gentoo.org> +quadkonsole-2.0.3.ebuild:
+  Bump to 2.0.3. Fixes #232920
 
   28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Remove Wulf C. Krueger (philantrop) from metadata.xml (as per #168573).
