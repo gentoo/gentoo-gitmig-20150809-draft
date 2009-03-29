@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.14.2.ebuild,v 1.1 2009/03/28 14:46:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.14.2.ebuild,v 1.2 2009/03/29 16:55:21 armin76 Exp $
 
 inherit eutils autotools
 
@@ -24,13 +24,6 @@ DEPEND="
 	sys-libs/zlib
 	!net-libs/libtorrent"
 RDEPEND="${DEPEND}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-ax_python_path.patch
-	eautoreconf
-}
 
 src_compile() {
 	#use multi-threading versions of boost libs

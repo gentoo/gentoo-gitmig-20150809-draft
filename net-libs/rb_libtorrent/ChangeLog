@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.54 2009/03/28 14:46:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.55 2009/03/29 16:55:21 armin76 Exp $
+
+  29 Mar 2009; Raúl Porcel <armin76@gentoo.org>
+  rb_libtorrent-0.14.2.ebuild:
+  Remove epatch line, its not needed
 
 *rb_libtorrent-0.14.2 (28 Mar 2009)
 
