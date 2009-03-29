@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/libtelepathy-0.3.3.ebuild,v 1.5 2009/02/23 15:46:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/libtelepathy-0.3.3.ebuild,v 1.6 2009/03/29 15:50:52 solar Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://telepathy.freedesktop.org"
 SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~arm ~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.10
