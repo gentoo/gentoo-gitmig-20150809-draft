@@ -1,6 +1,14 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.112 2009/03/14 19:04:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.113 2009/03/29 14:12:11 tommy Exp $
+
+*hplip-3.9.2 (29 Mar 2009)
+
+  29 Mar 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +files/hplip-3.9.2-high_cpu_utilization_logout.patch, metadata.xml,
+  +hplip-3.9.2.ebuild:
+  Version bump for bug 245136, thanks to Yar Odin and Daniel Pielmeier and
+  fix bug 242498 thanks Daniel Santos for reporting
 
   14 Mar 2009; Raúl Porcel <armin76@gentoo.org> hplip-2.8.7.ebuild:
   Add ~arm wrt #261391

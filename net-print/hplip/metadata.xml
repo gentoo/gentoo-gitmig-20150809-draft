@@ -25,7 +25,7 @@
     <flag name='ppds'>Use precompiled PPD files (obsolete, use cupsddk 
     instead)</flag>
     <flag name='qt3'>Enable graphical interface using Qt 3 (recommended); when 
-    both qt3 and qt4 USE flags are enabled then qt3 is prioritary over 
+    both qt3 and qt4 USE flags are enabled then qt3 has priority over 
     qt4</flag>
     <flag name='qt4'>Enable graphical interface using Qt 4 (experimental); when 
     both qt3 and qt4 USE flags are enabled then qt3 is prioritary over 
