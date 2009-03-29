@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.40 2009/03/29 19:49:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.41 2009/03/29 20:27:19 ulm Exp $
 #
 # Copyright 2002-2003 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -83,7 +83,8 @@ elisp_src_unpack() {
 	fi
 
 	case "${EAPI:-0}" in
-		0|1) elisp_src_prepare ;;
+		0|1) [ -d "${S}" ] && cd "${S}"
+			elisp_src_prepare ;;
 	esac
 }
 
