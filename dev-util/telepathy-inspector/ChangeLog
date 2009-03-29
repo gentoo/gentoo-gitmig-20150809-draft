@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/telepathy-inspector
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/telepathy-inspector/ChangeLog,v 1.7 2008/08/21 10:43:53 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/telepathy-inspector/ChangeLog,v 1.8 2009/03/29 15:41:50 solar Exp $
+
+  29 Mar 2009; <solar@gentoo.org> telepathy-inspector-0.5.3.ebuild:
+  - keyword ~arm
 
 *telepathy-inspector-0.5.3 (21 Aug 2008)
 
