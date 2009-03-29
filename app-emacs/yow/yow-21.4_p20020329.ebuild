@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.4 2008/06/16 20:11:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.5 2009/03/29 20:39:57 ulm Exp $
 
-inherit elisp eutils
+inherit elisp
 
 MY_P="emacs-${PV%_p*}"
 DESCRIPTION="Zippy the pinhead data base"
@@ -18,13 +18,8 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}/etc"
-SITEFILE=50${PN}-gentoo.el
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-fix-misspellings.patch"
-}
+ELISP_PATCHES="${PN}-fix-misspellings.patch"
+SITEFILE="50${PN}-gentoo.el"
 
 src_compile() { :; }
 
