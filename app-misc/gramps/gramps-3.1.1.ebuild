@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.1.1.ebuild,v 1.3 2009/03/19 17:07:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.1.1.ebuild,v 1.4 2009/03/29 20:15:15 fauli Exp $
 
 EAPI=2
 NEED_PYTHON="2.5"
@@ -47,6 +47,27 @@ src_unpack() {
 	# file system
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
+
+	python_version
+
+	# Fix install path.
+	einfo "Fix installation path"
+	find . -iname 'Makefile.in' | xargs \
+		sed "s;\(pkgdatadir = \)\(\$(datadir)\);\1$(python_get_sitedir);" -i \
+		|| die
+
+	sed "s;\$(prefix)/share/gramps;/$(python_get_sitedir)/@PACKAGE@;" \
+		-i src/Makefile.in || die
+
+	sed "s;\$(prefix)/share/gramps;/$(python_get_sitedir)/@PACKAGE@;" \
+	-i src/docgen/Makefile.in || die
+
+	einfo "Fix wrapper script"
+	sed "s;@datadir@;$(python_get_sitedir);" \
+		-i gramps.sh.in || die
+
+	einfo "Fix icon location"
+	sed "s;gramps/;pixmap/;g" -i data/gramps.keys.in || die
 }
 
 src_install() {
@@ -56,10 +77,12 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	python_mod_optimize /usr/share/${PN}
+	python_version
+	python_mod_optimize $(python_get_sitedir)/${PN}
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/share/${PN}
+	python_version
+	python_mod_cleanup $(python_get_sitedir)/${PN}
 }
