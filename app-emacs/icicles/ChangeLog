@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/icicles
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/icicles/ChangeLog,v 1.4 2009/01/29 02:02:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/icicles/ChangeLog,v 1.5 2009/03/29 22:30:30 ulm Exp $
+
+  29 Mar 2009; Ulrich Mueller <ulm@gentoo.org> icicles-20081210.ebuild:
+  Use autopatch feature of elisp.eclass.
 
   29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
   -icicles-20071205.ebuild:
