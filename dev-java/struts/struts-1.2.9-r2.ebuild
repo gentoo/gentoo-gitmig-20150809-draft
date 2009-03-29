@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r2.ebuild,v 1.5 2009/03/24 19:04:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.9-r2.ebuild,v 1.6 2009/03/29 17:03:50 betelgeuse Exp $
 
-EAPI=1
+EAPI="2"
 JAVA_PKG_IUSE="doc examples source"
 WANT_ANT_TASKS="ant-trax"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://jakarta.apache.org/struts/index.html"
 LICENSE="Apache-2.0"
 SLOT="1.2"
 COMMON_DEPS="
-	dev-java/antlr:0
+	>=dev-java/antlr-2.7.7:0[java]
 	dev-java/commons-beanutils:1.7
 	>=dev-java/commons-collections-2.1:0
 	>=dev-java/commons-digester-1.5:0
@@ -33,9 +33,7 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-
+java_prepare() {
 	# the build.xml expects this directory to exist
 	mkdir "${S}/lib"
 	cd "${S}/lib"

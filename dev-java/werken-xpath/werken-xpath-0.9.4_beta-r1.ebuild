@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r1.ebuild,v 1.8 2009/03/24 19:11:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/werken-xpath/werken-xpath-0.9.4_beta-r1.ebuild,v 1.9 2009/03/29 16:58:34 betelgeuse Exp $
 
-EAPI="1"
+EAPI="2"
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2 eutils versionator
@@ -22,9 +22,10 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
 IUSE=""
 
+# need the versioned atom to get keep ensure dep happy
 COMMON_DEP="
-	dev-java/jdom:1.0_beta9
-	dev-java/antlr:0"
+	~dev-java/jdom-1.0_beta9:1.0_beta9
+	>=dev-java/antlr-2.7.7:0[java]"
 DEPEND=">=virtual/jdk-1.4
 	${COMMON_DEP}"
 RDEPEND=">=virtual/jre-1.4
@@ -32,10 +33,7 @@ RDEPEND=">=virtual/jre-1.4
 
 S="${WORKDIR}/${MY_PN}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+java_prepare() {
 	# Courtesy of JPackages :)
 	epatch "${FILESDIR}/${P}-jpp-compile.patch"
 	epatch "${FILESDIR}/${P}-jpp-jdom.patch"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/openjms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.22 2009/03/24 19:01:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.23 2009/03/29 17:02:01 betelgeuse Exp $
+
+  29 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
+  openjms-0.7.6.1-r5.ebuild:
+  Migrate to EAPI 2 for bug #239835.
 
   24 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
   openjms-0.7.6.1-r5.ebuild:

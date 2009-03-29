@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3-r2.ebuild,v 1.1 2008/08/03 22:35:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-3.1.3-r2.ebuild,v 1.2 2009/03/29 16:57:17 betelgeuse Exp $
 
-EAPI=1
+EAPI="2"
 WANT_ANT_TASKS="ant-antlr ant-swing ant-junit"
 JAVA_PKG_IUSE="doc source"
 
@@ -18,7 +18,7 @@ SLOT="3.1"
 KEYWORDS="~x86 ~amd64"
 
 COMMON_DEPEND="
-	dev-java/antlr:0
+	>=dev-java/antlr-2.7.7:0[java]
 	dev-java/c3p0:0
 	dev-java/cglib:2.2
 	dev-java/commons-collections:0
@@ -43,10 +43,7 @@ DEPEND="|| (
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+java_prepare() {
 	# this depends on jboss
 	rm src/org/hibernate/cache/JndiBoundTreeCacheProvider.java \
 		src/org/hibernate/cache/TreeCache.java \
