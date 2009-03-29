@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20050128-r1.ebuild,v 1.4 2009/02/05 06:07:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20050128-r1.ebuild,v 1.5 2009/03/29 16:03:20 solar Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~arm alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE=""
 DEPEND=">=sys-apps/sed-4"
@@ -18,7 +18,7 @@ RDEPEND=">=x11-wm/fluxbox-0.9.11"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# comment out every rootcommand
 	find . -name '*.cfg' -exec \
 		sed -i "{}" -e 's-^\(rootcommand\)-!!! \1-i' \;
@@ -27,12 +27,11 @@ src_unpack() {
 }
 
 src_install() {
-	cd ${S}
-	mkdir -p ${D}/usr/share/fluxbox/fluxmod/styles/ || die "mkdir eeked"
+	mkdir -p "${D}"/usr/share/fluxbox/fluxmod/styles/ || die "mkdir eeked"
 	insinto /usr/share/fluxbox/fluxmod/styles
 	doins -r * || die "doins failed"
 	insinto /usr/share/fluxbox/menu.d/styles
-	doins ${FILESDIR}/styles-menu-fluxmod
+	doins "${FILESDIR}"/styles-menu-fluxmod
 }
 
 pkg_postinst() {

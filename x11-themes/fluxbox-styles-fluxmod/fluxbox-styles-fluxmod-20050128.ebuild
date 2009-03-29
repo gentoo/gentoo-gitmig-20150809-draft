@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20050128.ebuild,v 1.12 2009/02/05 06:07:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20050128.ebuild,v 1.13 2009/03/29 16:03:19 solar Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=x11-wm/fluxbox-0.9.11"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# comment out every rootcommand
 	find . -name '*.cfg' -exec \
 		sed -i "{}" -e 's-^\(rootcommand\)-!!! \1-i' \;
@@ -27,11 +27,10 @@ src_unpack() {
 }
 
 src_install() {
-	cd ${S}
-	mkdir -p ${D}/usr/share/fluxbox/fluxmod/styles/ || die "mkdir eeked"
-	cp -R ./ ${D}/usr/share/fluxbox/fluxmod/styles/ || die "cp croaked"
+	mkdir -p "${D}"/usr/share/fluxbox/fluxmod/styles/ || die "mkdir eeked"
+	cp -R ./ "${D}"/usr/share/fluxbox/fluxmod/styles/ || die "cp croaked"
 	insinto /usr/share/fluxbox/menu.d/styles
-	doins ${FILESDIR}/styles-menu-fluxmod
+	doins "${FILESDIR}"/styles-menu-fluxmod
 }
 
 pkg_postinst() {

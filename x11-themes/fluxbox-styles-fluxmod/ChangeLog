@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/fluxbox-styles-fluxmod
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.30 2009/02/05 06:07:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.31 2009/03/29 16:03:20 solar Exp $
+
+  29 Mar 2009; <solar@gentoo.org> fluxbox-styles-fluxmod-20040809.ebuild,
+  fluxbox-styles-fluxmod-20041024.ebuild,
+  fluxbox-styles-fluxmod-20050128.ebuild,
+  fluxbox-styles-fluxmod-20050128-r1.ebuild:
+  - keyword ~arm, and make repoman happy
 
   05 Feb 2009; Jeremy Olexa <darkside@gentoo.org>
   fluxbox-styles-fluxmod-20040809.ebuild,
