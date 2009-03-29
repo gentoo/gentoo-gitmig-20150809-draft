@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.9.5.ebuild,v 1.1 2009/03/29 09:00:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.9.5.ebuild,v 1.2 2009/03/29 09:21:07 swegener Exp $
 
 inherit linux-info eutils
 
@@ -50,7 +50,7 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "make install failed"
-	dodoc AUTHORS ChangeLog HACKING NEWS README
+	dodoc AUTHORS HACKING NEWS README
 }
 
 pkg_postinst() {
