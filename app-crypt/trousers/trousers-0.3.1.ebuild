@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.1.ebuild,v 1.6 2009/03/22 16:22:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/trousers-0.3.1.ebuild,v 1.7 2009/03/29 15:19:32 arfrever Exp $
 
 inherit autotools base eutils linux-info
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://trousers.sf.net"
 SRC_URI="mirror://sourceforge/trousers/${P}.tar.gz"
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2

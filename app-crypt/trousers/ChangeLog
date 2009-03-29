@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.20 2009/03/22 16:22:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.21 2009/03/29 15:19:32 arfrever Exp $
+
+  29 Mar 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  trousers-0.3.1.ebuild:
+  Add ~amd64 keyword.
 
   22 Mar 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   trousers-0.3.1.ebuild:
