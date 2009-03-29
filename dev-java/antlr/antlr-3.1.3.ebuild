@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-3.1.3.ebuild,v 1.1 2009/03/29 16:26:25 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-3.1.3.ebuild,v 1.2 2009/03/29 16:48:01 betelgeuse Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="source"
@@ -18,7 +18,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 COMMON_DEPEND=">=dev-java/stringtemplate-3.2
-	 dev-java/antlr:0"
+	 >=dev-java/antlr-2.7.7:0[java]"
 
 RDEPEND=">=virtual/jre-1.5
 	${COMMON_DEPEND}"
