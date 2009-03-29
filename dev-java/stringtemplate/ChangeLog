@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/stringtemplate
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/stringtemplate/ChangeLog,v 1.1 2009/03/29 00:13:43 betelgeuse Exp $
+
+*stringtemplate-3.2 (29 Mar 2009)
+
+  29 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
+  +files/stringtemplate-3.1_beta1-javadoc.patch, +metadata.xml,
+  +stringtemplate-3.2.ebuild:
+  Moving stringtemplate to the main tree from java-experimental. Several Java
+  team members showed in the logs. Part of bug #146952.
+
