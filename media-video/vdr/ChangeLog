@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vdr
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.127 2009/03/25 20:42:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.128 2009/03/29 16:34:41 hd_brummy Exp $
+
+  29 Mar 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-1.6.0_p2-r2.ebuild:
+  fixed wrong header include dvdread -> dvdnav; thanks to R.Hertell for
+  reporting on #263840
 
 *vdr-1.6.0_p2-r2 (25 Mar 2009)
 
