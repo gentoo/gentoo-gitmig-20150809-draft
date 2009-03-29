@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.68 2009/03/29 05:41:21 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.69 2009/03/29 10:27:24 fmccor Exp $
+
+  29 Mar 2009; Ferris McCormick <fmccor@gentoo.org> abs-guide-5.5.ebuild:
+  Sparc stable, Bug #264143.
 
 *abs-guide-6.0 (29 Mar 2009)
 
