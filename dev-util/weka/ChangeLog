@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.32 2009/03/28 20:08:48 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.33 2009/03/29 16:34:28 serkan Exp $
+
+  29 Mar 2009; Serkan Kaba <serkan@gentoo.org>
+  files/weka-3.6.0-build.xml.patch:
+  Fix 3.6.0 patch.
 
   28 Mar 2009; Serkan Kaba <serkan@gentoo.org>
   +files/weka-3.6.0-build.xml.patch:
