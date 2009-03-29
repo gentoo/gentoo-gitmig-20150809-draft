@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.5 2007/02/13 12:58:34 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.6 2009/03/29 12:20:42 patrick Exp $
 
 inherit kde
 
 DESCRIPTION="Abakus is a simple calculator for kde, similar to bc with a nice gui."
-HOMEPAGE="http://grammarian.homelinux.net/abakus/"
+HOMEPAGE="http://purinchu.net/abakus/"
 SRC_URI="http://www.kde-apps.org/content/files/16751-${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -38,7 +38,7 @@ src_install() {
 	DESTDIR="${D}/usr" scons install
 	dodoc AUTHORS README
 
-	rm -fR ${D}/usr/share/applnk/
-	newicon ${S}/src/hi64-app-abakus.png ${PN}.png
-	domenu ${S}/src/${PN}.desktop
+	rm -fR "${D}"/usr/share/applnk/
+	newicon "${S}"/src/hi64-app-abakus.png ${PN}.png
+	domenu "${S}"/src/${PN}.desktop
 }
