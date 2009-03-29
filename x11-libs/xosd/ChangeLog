@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.76 2009/03/13 23:36:39 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.77 2009/03/29 00:05:53 solar Exp $
+
+  29 Mar 2009; <solar@gentoo.org> xosd-2.2.14-r1.ebuild:
+  - keyword ~arm
 
   13 Mar 2009; Thilo Bangert <bangert@gentoo.org> -xosd-2.2.8-r1.ebuild,
   -xosd-2.2.10-r1.ebuild, xosd-2.2.14-r1.ebuild:
