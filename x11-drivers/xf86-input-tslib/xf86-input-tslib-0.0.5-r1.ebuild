@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.5-r1.ebuild,v 1.1 2009/03/19 21:36:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.5-r1.ebuild,v 1.2 2009/03/30 01:00:02 solar Exp $
 
 # Based on xf86-input-synaptics ebuild
 
@@ -16,10 +16,8 @@ SRC_URI="http://www.pengutronix.de/software/${PN}/download/${P}.tar.bz2
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 LICENSE="GPL-2"
 IUSE=""
-RDEPEND="x11-libs/tslib"
-DEPEND="${RDEPEND}
-	x11-base/xorg-server
-	x11-proto/inputproto"
+RDEPEND="x11-base/xorg-server x11-libs/tslib"
+DEPEND="x11-proto/inputproto"
 
 evdev-input_check() {
 	# Check kernel config for required event interface support (either
