@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-poppler
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.6 2008/06/04 06:48:53 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.7 2009/03/30 15:18:25 loki_val Exp $
+
+  30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
+  ruby-poppler-0.16.0.ebuild, ruby-poppler-0.16.0-r1.ebuild:
+  Update dependencies w.r.t. bug 264230, fully-split-out poppler transition.
 
 *ruby-poppler-0.16.0-r1 (04 Jun 2008)
 
