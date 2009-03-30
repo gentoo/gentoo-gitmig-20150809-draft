@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libservicelog/libservicelog-1.0.1.ebuild,v 1.2 2008/10/28 02:12:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libservicelog/libservicelog-1.0.1.ebuild,v 1.3 2009/03/30 20:22:23 ranger Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://linux-diag.sourceforge.net/servicelog/"
 
 SLOT="0"
 LICENSE="IPL-1"
-KEYWORDS="~ppc ~ppc64"
+KEYWORDS="ppc ~ppc64"
 IUSE=""
 
 DEPEND="virtual/libc
