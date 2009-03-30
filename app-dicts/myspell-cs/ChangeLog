@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-cs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.12 2008/03/12 10:57:35 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.13 2009/03/30 14:32:04 armin76 Exp $
+
+  30 Mar 2009; Raúl Porcel <armin76@gentoo.org> myspell-cs-20060316.ebuild:
+  Add ~arm/~sh wrt #261064
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Kevin Quinn (kevquinn, #93689) from metadata.xml.
