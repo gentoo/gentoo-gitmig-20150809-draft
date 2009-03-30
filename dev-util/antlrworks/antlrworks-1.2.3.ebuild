@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/antlrworks/antlrworks-1.2.3.ebuild,v 1.1 2009/03/30 09:09:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/antlrworks/antlrworks-1.2.3.ebuild,v 1.2 2009/03/30 16:02:12 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -57,4 +57,3 @@ src_install() {
 	java-pkg_dojar "${PN}.jar"
 	java-pkg_dolauncher ${PN} --main "org.antlr.works.IDE"
 }
-
