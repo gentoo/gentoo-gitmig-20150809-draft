@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/qpopper
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.26 2009/03/30 16:05:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.27 2009/03/30 16:35:52 pva Exp $
+
+*qpopper-4.0.16 (30 Mar 2009)
+
+  30 Mar 2009; Peter Volkov <pva@gentoo.org> +qpopper-4.0.16.ebuild:
+  Version bump, bug #147182.
 
 *qpopper-4.0.14 (30 Mar 2009)
 
