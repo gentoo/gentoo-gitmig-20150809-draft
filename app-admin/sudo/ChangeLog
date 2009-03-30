@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.167 2009/03/27 18:38:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.168 2009/03/30 15:09:51 flameeyes Exp $
+
+*sudo-1.7.1_beta5 (30 Mar 2009)
+
+  30 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -sudo-1.7.1_beta4.ebuild, +sudo-1.7.1_beta5.ebuild:
+  Bump development version.
 
   27 Mar 2009; Raúl Porcel <armin76@gentoo.org> sudo-1.7.0.ebuild:
   m68k stable, thanks to kolla for testing
