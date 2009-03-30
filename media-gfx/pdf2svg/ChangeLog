@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pdf2svg
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pdf2svg/ChangeLog,v 1.1 2008/06/27 13:05:44 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pdf2svg/ChangeLog,v 1.2 2009/03/30 13:40:33 loki_val Exp $
+
+  30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> pdf2svg-0.2.1.ebuild:
+  Update dependencies w.r.t. bug 264230, fully-split-out poppler transition.
+  Also use EAPI=2.
 
 *pdf2svg-0.2.1 (27 Jun 2008)
 
