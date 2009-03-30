@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.60 2009/01/07 18:47:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.61 2009/03/30 16:03:05 armin76 Exp $
+
+  30 Mar 2009; Raúl Porcel <armin76@gentoo.org> c-client-2007e.ebuild:
+  arm/s390/sh stable wrt #252567
 
   07 Jan 2009; Raúl Porcel <armin76@gentoo.org> c-client-2007e.ebuild:
   alpha/ia64 stable wrt #252567
