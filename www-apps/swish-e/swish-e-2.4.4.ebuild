@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/swish-e-2.4.4.ebuild,v 1.2 2007/07/13 06:13:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/swish-e-2.4.4.ebuild,v 1.3 2009/03/30 16:21:43 loki_val Exp $
 
 inherit perl-module eutils
 
@@ -15,7 +15,7 @@ IUSE="doc perl pdf mp3"
 
 DEPEND=">=sys-libs/zlib-1.1.3
 	dev-libs/libxml2
-	pdf?  ( app-text/poppler )
+	pdf?  ( virtual/poppler-utils )
 	perl? (	dev-perl/libwww-perl
 			dev-perl/HTML-Parser
 			dev-perl/HTML-Tagset
