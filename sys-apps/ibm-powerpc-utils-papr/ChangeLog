@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ibm-powerpc-utils-papr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ChangeLog,v 1.13 2008/07/09 19:44:08 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils-papr/ChangeLog,v 1.14 2009/03/30 20:57:37 ranger Exp $
+
+*ibm-powerpc-utils-papr-1.1.2 (30 Mar 2009)
+
+  30 Mar 2009; Brent Baude <ranger@gentoo.org>
+  +files/ibm-powerpc-utils-papr-1.1.2-removeinitandvscsis.patch,
+  +ibm-powerpc-utils-papr-1.1.2.ebuild:
+  Add new ibm-powerpc-utils-papr-1.1.2
 
   09 Jul 2008; Brent Baude <ranger@gentoo.org>
   -files/ibm-powerpc-utils-papr-1.0.3-remove-doc.patch,
