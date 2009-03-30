@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zaaplugins/zaaplugins-2.12.ebuild,v 1.5 2008/05/27 21:27:22 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zaaplugins/zaaplugins-2.12.ebuild,v 1.6 2009/03/30 14:02:02 loki_val Exp $
 
 inherit zproduct
 
@@ -14,7 +14,7 @@ KEYWORDS="~ppc ~x86"
 DEPEND=">=net-zope/zattachmentattribute-2.12
 	>=app-text/wv-1.0.0
 	>=app-text/xlhtml-0.5
-	>=app-text/poppler-0.5"
+	>=virtual/poppler-utils-0.5"
 
 ZPROD_LIST="ZAAPlugins"
 
