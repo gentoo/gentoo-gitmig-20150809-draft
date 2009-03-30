@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/monodevelop-boo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-boo/ChangeLog,v 1.8 2009/03/17 12:53:45 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-boo/ChangeLog,v 1.9 2009/03/30 18:57:05 loki_val Exp $
+
+*monodevelop-boo-2.0 (30 Mar 2009)
+
+  30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -monodevelop-boo-1.9.1.ebuild, -monodevelop-boo-1.9.2.ebuild,
+  -monodevelop-boo-1.9.3.ebuild, +monodevelop-boo-2.0.ebuild:
+  Bump to monodevelop-2.0 version. Punt old.
 
 *monodevelop-boo-1.9.3 (17 Mar 2009)
 

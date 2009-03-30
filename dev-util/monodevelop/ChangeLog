@@ -1,6 +1,21 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.72 2009/03/26 22:52:07 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.73 2009/03/30 18:56:43 loki_val Exp $
+
+*monodevelop-2.0 (30 Mar 2009)
+
+  30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -files/monodevelop-0.18.1-configure.patch,
+  -files/monodevelop-0.18.1-libstetic.patch,
+  -files/monodevelop-0.19-exuberant-ctags.patch,
+  -files/monodevelop-0.19-parallel-build.patch,
+  -files/monodevelop-1.0-configure.patch,
+  -files/monodevelop-1.0-libstetic.patch,
+  -files/monodevelop-1.0-parallel-build.patch,
+  -files/monodevelop-exuberant-ctags.patch, -monodevelop-1.9.1.ebuild,
+  -monodevelop-1.9.2.ebuild, -monodevelop-1.9.3.ebuild,
+  +monodevelop-2.0.ebuild:
+  Bump to monodevelop-2.0 version. Punt old.
 
   26 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
   monodevelop-1.9.1.ebuild, monodevelop-1.9.2.ebuild,
