@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r1.ebuild,v 1.3 2009/03/30 13:54:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r1.ebuild,v 1.4 2009/03/30 14:00:41 scarabeus Exp $
 
 #
 # Don't forget to keep things in sync with binary boinc package!
@@ -21,6 +21,7 @@ IUSE="X cuda server"
 
 RDEPEND="
 	!sci-misc/boinc-bin
+	!app-admin/quickswitch
 	>=app-misc/ca-certificates-20080809
 	dev-libs/openssl
 	net-misc/curl
