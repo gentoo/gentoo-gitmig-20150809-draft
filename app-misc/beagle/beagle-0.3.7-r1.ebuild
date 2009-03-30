@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.7-r1.ebuild,v 1.8 2009/03/25 22:51:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.7-r1.ebuild,v 1.9 2009/03/30 01:42:43 loki_val Exp $
 
 EAPI=1
 
@@ -43,7 +43,7 @@ RDEPEND="!sci-libs/beagle
 		>=dev-dotnet/gsf-sharp-0.8
 		>=app-office/gnumeric-1.4.3-r3 )
 	chm? ( dev-libs/chmlib )
-	pdf? ( >=app-text/poppler-0.5.1 )
+	pdf? ( >=virtual/poppler-utils-0.8 )
 	galago? ( >=dev-dotnet/galago-sharp-0.5.0 )
 	thunderbird? ( || ( >=mail-client/mozilla-thunderbird-1.5
 			>=mail-client/mozilla-thunderbird-bin-1.5 ) )
