@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/wxdfast
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/ChangeLog,v 1.4 2008/01/28 16:17:00 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wxdfast/ChangeLog,v 1.5 2009/03/30 00:04:03 dirtyepic Exp $
+
+*wxdfast-0.6.0-r1 (30 Mar 2009)
+
+  30 Mar 2009; Ryan Hill <dirtyepic@gentoo.org> -wxdfast-0.6.0.ebuild,
+  +wxdfast-0.6.0-r1.ebuild:
+  Update dependency to wxGTK-2.8. Add ~amd64.
 
   28 Jan 2008; Raúl Porcel <armin76@gentoo.org> metadata.xml:
   Replace wxwindows with wxwidgets in metadata
