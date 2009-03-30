@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.0.4.ebuild,v 1.7 2008/05/27 21:23:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/portaltransforms-1.0.4.ebuild,v 1.8 2009/03/30 14:07:53 loki_val Exp $
 
 inherit zproduct
 
@@ -16,7 +16,7 @@ KEYWORDS="ppc x86"
 
 DEPEND_BOTH="dev-python/docutils
 	www-client/lynx
-	app-text/poppler"
+	virtual/poppler-utils"
 
 RDEPEND="app-text/htmltidy
 	app-text/wv
