@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/farsight-0.1.28.ebuild,v 1.3 2009/01/07 17:07:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/farsight-0.1.28-r1.ebuild,v 1.1 2009/03/30 03:37:32 tester Exp $
 
 DESCRIPTION="FarSight is an audio/video conferencing framework specifically designed for Instant Messengers."
 HOMEPAGE="http://farsight.freedesktop.org/"
@@ -22,6 +22,8 @@ COMMON_DEPEND="=media-libs/gstreamer-0.10*
 
 RDEPEND="${COMMON_DEPEND}
 	>=media-plugins/gst-plugins-farsight-0.12.7
+	|| ( ( >=media-libs/gst-plugins-bad-0.10.11 >=media-plugins/gst-plugins-farsight-0.12.11 )
+		 =media-plugins/gst-plugins-farsight-0.12.10 )
 	!<net-voip/telepathy-stream-engine-0.5.0
 	=media-libs/gst-plugins-good-0.10*
 	=media-plugins/gst-plugins-ffmpeg-0.10*"
