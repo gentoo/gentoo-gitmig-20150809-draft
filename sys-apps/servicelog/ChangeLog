@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/servicelog
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/servicelog/ChangeLog,v 1.1 2008/10/21 20:26:55 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/servicelog/ChangeLog,v 1.2 2009/03/30 20:24:40 ranger Exp $
+
+  30 Mar 2009; Brent Baude <ranger@gentoo.org> servicelog-1.0.1.ebuild:
+  marking ppc
 
 *servicelog-1.0.1 (21 Oct 2008)
 
