@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/adie
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.24 2009/03/01 11:57:07 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.25 2009/03/30 20:14:04 ranger Exp $
+
+  30 Mar 2009; Brent Baude <ranger@gentoo.org> adie-1.6.35.ebuild:
+  Marking adie-1.6.35 ppc for bug 263795
 
 *adie-1.6.35 (01 Mar 2009)
 
