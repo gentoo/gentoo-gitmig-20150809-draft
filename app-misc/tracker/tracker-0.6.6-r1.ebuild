@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.6-r1.ebuild,v 1.9 2009/01/10 16:36:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.6-r1.ebuild,v 1.10 2009/03/30 02:02:05 loki_val Exp $
 
 inherit autotools eutils flag-o-matic linux-info
 
@@ -40,7 +40,8 @@ RDEPEND=">=dev-libs/glib-2.14.0
 		 !kernel_linux? ( >=app-admin/gamin-0.1.7 )
 		 pdf?	(
 					>=x11-libs/cairo-1.0
-					>=app-text/poppler-bindings-0.5.0
+					>=virtual/poppler-glib-0.5
+					>=virtual/poppler-utils-0.5
 				)
 		 xine? ( >=media-libs/xine-lib-1.0 )"
 DEPEND="${RDEPEND}
@@ -75,11 +76,6 @@ pkg_setup() {
 	if ! built_with_use 'media-gfx/imagemagick' 'png' ; then
 		ewarn "You must build imagemagick with png"
 		die "imagemagick needs png support"
-	fi
-
-	if use pdf && ! built_with_use 'app-text/poppler-bindings' 'gtk' ; then
-		ewarn "You must build poppler-bindings with gtk to get support for PDFs"
-		die "poppler-bindings needs gtk support"
 	fi
 
 	if use jpeg && ! built_with_use 'media-gfx/imagemagick' 'jpeg' ; then
