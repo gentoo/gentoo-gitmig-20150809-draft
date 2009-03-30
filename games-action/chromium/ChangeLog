@@ -1,6 +1,11 @@
 # ChangeLog for games-action/chromium
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.35 2009/03/22 20:51:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.36 2009/03/30 16:10:53 scarabeus Exp $
+
+*chromium-0.9.14 (30 Mar 2009)
+
+  30 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> +chromium-0.9.14.ebuild:
+  Version bump. New nls support, replace ftgl with quesoglc.
 
   22 Mar 2009; Jeremy Olexa <darkside@gentoo.org> chromium-0.9.13.3.ebuild:
   amd64 stable, bug 245293
