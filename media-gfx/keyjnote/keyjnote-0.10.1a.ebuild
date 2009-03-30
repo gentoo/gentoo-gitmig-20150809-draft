@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/keyjnote/keyjnote-0.10.1a.ebuild,v 1.2 2007/12/13 19:31:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/keyjnote/keyjnote-0.10.1a.ebuild,v 1.3 2009/03/30 13:49:40 loki_val Exp $
 
 DESCRIPTION="Pdf viewer and presentation program"
 HOMEPAGE="http://keyjnote.sf.net"
@@ -17,7 +17,7 @@ DEPEND=">=dev-lang/python-2.3
 		dev-python/pyopengl
 		dev-python/pygame
 		dev-python/imaging
-		|| ( app-text/poppler virtual/ghostscript )
+		|| ( virtual/poppler-utils virtual/ghostscript )
 		app-text/pdftk"
 
 src_install() {
