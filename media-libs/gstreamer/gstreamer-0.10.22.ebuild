@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.22.ebuild,v 1.1 2009/03/30 00:26:28 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.22.ebuild,v 1.2 2009/03/30 04:01:11 tester Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="http://${PN}.freedesktop.org/src/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT=${PV_MAJ_MIN}
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="+debug +nls test"
+IUSE="+nls test"
 
 RDEPEND=">=dev-libs/glib-2.12:2
 	dev-libs/libxml2
@@ -32,7 +32,6 @@ src_configure() {
 		--disable-static \
 		--disable-dependency-tracking \
 		$(use_enable nls) \
-		$(use_enable debug) \
 		--disable-valgrind \
 		--disable-examples \
 		$(use_enable test tests) \

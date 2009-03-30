@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.217 2009/03/30 00:26:28 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.218 2009/03/30 04:01:11 tester Exp $
+
+  30 Mar 2009; Olivier Crête <tester@gentoo.org> gstreamer-0.10.22.ebuild:
+  The debug use flag just enabled -g, use CFLAGS if you want that
 
 *gstreamer-0.10.22 (30 Mar 2009)
 
