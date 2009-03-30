@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplay-sh/mplay-sh-0.5.3-r1.ebuild,v 1.2 2007/07/17 09:17:25 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplay-sh/mplay-sh-0.5.3-r1.ebuild,v 1.3 2009/03/30 22:19:32 hd_brummy Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.vdr-portal.de/board/thread.php?threadid=62306"
 SRC_URI="mirror://gentoo/${MY_P}.tgz
 	http://dev.gentoo.org/~zzam/distfiles/${MY_P}.tgz"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
@@ -22,7 +22,7 @@ RDEPEND=">=media-video/mplayer-0.90_rc4"
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	sed -i mplay.sh \
 		-e 's#$CONFDIR/silence.wav#/usr/share/vdr/mplay-sh/silence.wav#'
