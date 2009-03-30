@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.9.ebuild,v 1.8 2008/05/18 21:13:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/kpdf-3.5.9.ebuild,v 1.9 2009/03/30 13:01:09 loki_val Exp $
 
 KMNAME=kdegraphics
 EAPI="1"
@@ -13,20 +13,9 @@ KMEXTRA="kfile-plugins/pdf"
 
 DEPEND=">=media-libs/freetype-2.3
 	media-libs/t1lib
-	>=app-text/poppler-0.6.1
-	>=app-text/poppler-bindings-0.6.1"
+	>=virtual/poppler-qt3-0.6.1"
 RDEPEND="${DEPEND}
 	|| ( >=kde-base/kdeprint-${PV}:${SLOT} >=kde-base/kdebase-${PV}:${SLOT} )"
-
-pkg_setup() {
-	kde_pkg_setup
-	# check for qt still until it had a revision bump in both ~arch and stable.
-	if ! built_with_use app-text/poppler-bindings qt3; then
-		eerror "This package requires app-text/poppler-bindings compiled with Qt 3.x support."
-		eerror "Please reemerge app-text/poppler-bindings with USE=\"qt3\"."
-		die "Please reemerge app-text/poppler-bindings with USE=\"qt3\"."
-	fi
-}
 
 src_compile() {
 	local myconf="--with-poppler"

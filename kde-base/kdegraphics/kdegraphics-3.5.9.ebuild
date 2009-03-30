@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.9.ebuild,v 1.9 2008/09/02 23:16:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.5.9.ebuild,v 1.10 2009/03/30 13:03:21 loki_val Exp $
 
 EAPI="1"
 inherit kde-dist eutils
@@ -24,8 +24,8 @@ DEPEND="~kde-base/kdebase-${PV}
 	openexr? ( >=media-libs/openexr-1.2 )
 	povray? ( media-gfx/povray
 				virtual/opengl )
-	pdf? ( >=app-text/poppler-0.6.1
-			>=app-text/poppler-bindings-0.6.1 )"
+	pdf? ( >=virtual/poppler-qt3-0.6.1 )
+	"
 
 RDEPEND="${DEPEND}
 	kpathsea? ( virtual/tex-base )"
@@ -39,11 +39,6 @@ pkg_setup() {
 			die "Please reemerge ${ghostscript} with USE=\"X\"."
 		fi
 	done
-	if use pdf && ! built_with_use app-text/poppler-bindings qt3; then
-		eerror "This package requires app-text/poppler-bindings compiled with Qt 3.x support."
-		eerror "Please reemerge app-text/poppler-bindings with USE=\"qt3\"."
-		die "Please reemerge app-text/poppler-bindings with USE=\"qt3\"."
-	fi
 }
 
 src_compile() {
