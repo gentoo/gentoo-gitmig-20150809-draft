@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.140 2009/03/08 01:32:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.141 2009/03/30 09:52:35 armin76 Exp $
+
+  30 Mar 2009; Raúl Porcel <armin76@gentoo.org> bluez-utils-3.36.ebuild:
+  arm/sh stable wrt #264222
 
   08 Mar 2009; Markus Meier <maekke@gentoo.org> bluez-utils-3.36.ebuild:
   x86 stable, bug #230591
