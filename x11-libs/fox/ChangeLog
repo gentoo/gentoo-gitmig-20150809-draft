@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.130 2009/03/27 17:53:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.131 2009/03/30 20:12:47 ranger Exp $
+
+  30 Mar 2009; Brent Baude <ranger@gentoo.org> fox-1.6.35.ebuild:
+  Marking fox-1.6.35 ppc for bug 263795
 
   27 Mar 2009; Brent Baude <ranger@gentoo.org> fox-1.6.36.ebuild:
   Marking fox-1.6.36 ppc for bug 263795
