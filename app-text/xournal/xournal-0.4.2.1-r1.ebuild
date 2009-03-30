@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.2.1-r1.ebuild,v 1.1 2009/02/11 18:21:45 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/xournal-0.4.2.1-r1.ebuild,v 1.2 2009/03/30 02:11:18 loki_val Exp $
 
 EAPI=2
 inherit gnome2 autotools
@@ -20,7 +20,7 @@ DEPEND="${DEPEND}
 	>=gnome-base/libgnomeprint-2.2
 	>=gnome-base/libgnomeprintui-2.2"
 RDEPEND="${DEPEND}
-	pdf? ( app-text/poppler virtual/ghostscript )"
+	pdf? ( virtual/poppler-utils virtual/ghostscript )"
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 

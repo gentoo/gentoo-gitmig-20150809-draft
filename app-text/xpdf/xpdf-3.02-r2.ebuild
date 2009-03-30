@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02-r2.ebuild,v 1.1 2009/03/29 18:43:55 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02-r2.ebuild,v 1.2 2009/03/30 02:06:40 loki_val Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="nodrm linguas_ar linguas_zh_CN linguas_zh_TW linguas_ru linguas_el linguas_he linguas_ja linguas_ko linguas_la linguas_th linguas_tr"
 
-RDEPEND=">=app-text/poppler-0.6.1
+RDEPEND=">=virtual/poppler-0.6.1
 	x11-libs/openmotif
 	x11-libs/libX11
 	x11-libs/libXpm"
@@ -42,7 +42,7 @@ pkg_setup() {
 src_prepare() {
 	use nodrm && \
 		epatch "${FILESDIR}"/${P}-poppler-nodrm.patch
-	has_version '>=app-text/poppler-0.10.0' && \
+	has_version '>=virtual/poppler-0.10.0' && \
 		epatch "${FILESDIR}"/poppler-0.10.0.patch
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 }
