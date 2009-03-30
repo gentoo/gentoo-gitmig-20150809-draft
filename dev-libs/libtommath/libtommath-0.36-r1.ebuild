@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.36-r1.ebuild,v 1.9 2008/06/10 03:39:59 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.36-r1.ebuild,v 1.10 2009/03/30 16:28:55 armin76 Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.libtom.org/files/ltm-${PV}.tar.bz2"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="sys-devel/libtool"
