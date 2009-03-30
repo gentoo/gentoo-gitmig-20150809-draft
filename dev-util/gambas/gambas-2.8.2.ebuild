@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.8.2.ebuild,v 1.4 2008/10/01 17:35:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.8.2.ebuild,v 1.5 2009/03/30 15:24:41 loki_val Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ RDEPEND="bzip2?	( >=app-arch/bzip2-1.0.5 )
 	odbc?	( >=dev-db/unixODBC-2.2.12 )
 	opengl?	( >=media-libs/mesa-7.0.2 )
 	pcre?	( >=dev-libs/libpcre-7.6-r1 )
-	pdf?	( >=app-text/poppler-0.5.3 )
+	pdf?	( >=virtual/poppler-0.5.3 )
 	postgres?	( >=virtual/postgresql-base-8.2 )
 	qt3?	( >=x11-libs/qt-3.2:3 )
 	sdl?	( >=media-libs/sdl-image-1.2.6-r1 >=media-libs/sdl-mixer-1.2.7 )
