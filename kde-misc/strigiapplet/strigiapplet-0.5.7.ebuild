@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/strigiapplet/strigiapplet-0.5.7.ebuild,v 1.3 2009/02/22 22:15:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/strigiapplet/strigiapplet-0.5.7.ebuild,v 1.4 2009/03/30 13:22:08 loki_val Exp $
 
 inherit kde multilib cmake-utils
 
@@ -14,7 +14,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="<app-misc/strigi-9999
-		>=app-text/poppler-0.5.3
 		>=media-libs/libextractor-0.5.15"
 RDEPEND="${DEPEND}
 		|| ( =kde-base/kdebase-3.5* =kde-base/kicker-3.5* )"
