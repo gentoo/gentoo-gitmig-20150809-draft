@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.76 2009/02/12 16:21:24 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.77 2009/03/30 17:18:08 chutzpah Exp $
+
+*ntfs3g-2009.3.8 (30 Mar 2009)
+
+  30 Mar 2009; Patrick McLean <chutzpah@gentoo.org> +ntfs3g-2009.3.8.ebuild:
+  Version bump.
 
 *ntfs3g-2009.2.1 (12 Feb 2009)
 
