@@ -1,6 +1,14 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.62 2009/03/15 01:00:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.63 2009/03/30 15:01:03 loki_val Exp $
+
+  30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
+  abiword-plugins-2.4.6.ebuild, abiword-plugins-2.6.4.ebuild,
+  abiword-plugins-2.6.5.ebuild, abiword-plugins-2.6.6.ebuild,
+  abiword-plugins-2.6.8.ebuild:
+  Update dependencies w.r.t. bug 264230, fully-split-out poppler transition.
+  Go EAPI=2 so abiword-plugins can depend on poppler-utils[abiword]. Also
+  convert built_with_use checks for x11-libs/goffice[gnome] to USE deps.
 
 *abiword-plugins-2.6.8 (15 Mar 2009)
 

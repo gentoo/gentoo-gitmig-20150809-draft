@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.15 2009/01/04 22:54:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.4.6.ebuild,v 1.16 2009/03/30 15:01:03 loki_val Exp $
+
+EAPI=2
 
 inherit eutils
 
@@ -31,7 +33,7 @@ RDEPEND="=app-office/abiword-${PV}*
 		=gnome-extra/libgnomedb-1* )
 	math? ( >=x11-libs/gtkmathview-0.7.5 )
 	!ia64? ( !ppc64? ( !sparc? ( ots? ( =app-text/ots-0.4* ) ) ) )
-	pdf? ( >=app-text/poppler-0.5.0-r1 )
+	pdf? ( >=virtual/poppler-utils-0.5.0-r1[abiword] )
 	readline? ( sys-libs/readline )
 	thesaurus? ( >=app-text/aiksaurus-1.2 )
 	wordperfect? ( >=app-text/libwpd-0.8 )
@@ -43,18 +45,12 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/abiword-${PV}/${PN}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/poppler_abi_change.patch"
-
-	# Fix use of poppler API
-	if has_version '>=app-text/poppler-0.6'; then
-		epatch "${FILESDIR}"/${P}-poppler-0.6-api.patch
-	fi
+	epatch "${FILESDIR}"/${P}-poppler-0.6-api.patch
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--enable-all \
 		--with-abiword="${WORKDIR}/abiword-${PV}/abi" \
 		$(use_enable debug) \
@@ -74,7 +70,9 @@ src_compile() {
 		--without-psion"
 
 	econf $myconf || die "./configure failed"
+}
 
+src_compile() {
 	emake || die "Compilation failed"
 }
 

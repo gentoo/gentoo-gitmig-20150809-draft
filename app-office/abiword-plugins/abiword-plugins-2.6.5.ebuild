@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.5.ebuild,v 1.2 2009/01/04 22:54:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.5.ebuild,v 1.3 2009/03/30 15:01:03 loki_val Exp $
 
-EAPI="1"
+EAPI=2
 
 inherit eutils
 
@@ -28,7 +28,7 @@ RDEPEND="=app-office/abiword-${PV}*
 	>=gnome-base/libglade-2
 	>=gnome-extra/libgsf-1.14.4
 	cxx? ( >=dev-libs/boost-1.33.1 )
-	gnome? ( >=x11-libs/goffice-0.4:0.4 )
+	gnome? ( >=x11-libs/goffice-0.4:0.4[gnome] )
 	grammar? ( >=dev-libs/link-grammar-4.2.2 )
 	!alpha? ( !ia64? ( jabber? (
 		>=dev-libs/libxml2-2.4
@@ -39,7 +39,7 @@ RDEPEND="=app-office/abiword-${PV}*
 		=gnome-extra/libgnomedb-1* )
 	math? ( >=x11-libs/gtkmathview-0.7.5 )
 	!ia64? ( !ppc64? ( !sparc? ( ots? ( >=app-text/ots-0.5 ) ) ) )
-	pdf? ( >=app-text/poppler-0.5.0-r1 )
+	pdf? ( >=virtual/poppler-utils-0.5.0-r1[abiword] )
 	readline? ( sys-libs/readline )
 	thesaurus? ( >=app-text/aiksaurus-1.2 )
 	wordperfect? ( >=app-text/libwpd-0.8 )
@@ -50,19 +50,13 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 pkg_setup() {
-	if use gnome && ! built_with_use x11-libs/goffice gnome; then
-		eerror "abiword-plugin requires x11-libs/goffice to be compiled"
-		eerror "with USE=\"gnome\""
-		die "gnome support missing in x11-libs/goffice"
-	fi
-
 	if use jabber && ! use cxx; then
 		eerror "AbiCollab needs dev-libs/boost to be build"
 		die "Add USE=\"cxx\" to build AbiCollab plugin"
 	fi
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--enable-all \
 		--with-abiword="${WORKDIR}/abiword-${PV}" \
 		$(use_with cxx boost) \
@@ -85,7 +79,9 @@ src_compile() {
 		--without-psion"
 
 	econf ${myconf}
+}
 
+src_compile() {
 	emake || die "Compilation failed"
 }
 
