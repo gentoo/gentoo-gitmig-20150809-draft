@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2480 2009/03/28 22:35:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2481 2009/03/30 13:10:20 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Mar 2009; <chainsaw@gentoo.org> package.mask:
+  Widen net-misc/dhcp mask for v4, clarify reason. 4.0.1 is going in and
+  4.0.0 is being deleted.
 
   28 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Mask dev-util/intltool-0.40.6, bug #264114.
