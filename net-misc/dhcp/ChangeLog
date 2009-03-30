@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dhcp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.152 2008/10/26 03:45:20 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.153 2009/03/30 13:13:28 chainsaw Exp $
+
+*dhcp-4.0.1 (30 Mar 2009)
+
+  30 Mar 2009; <chainsaw@gentoo.org>
+  +files/dhcp-4.0.1-dhclient-stdin-conf.patch, -dhcp-4.0.0.ebuild,
+  +dhcp-4.0.1.ebuild:
+  Version bump to 4.0.1, stdin config support for dhclient has been rediffed
+  due to upstream changes. Still masked, deleting old ebuild.
 
   26 Oct 2008; Mike Frysinger <vapier@gentoo.org> dhcp-4.0.0.ebuild:
   Pull in app-vim/dhcpd-syntax with USE=vim-syntax #240192 by Dan Wallis.

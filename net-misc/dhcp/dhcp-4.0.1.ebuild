@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.0.0.ebuild,v 1.2 2008/10/26 03:45:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.0.1.ebuild,v 1.1 2009/03/30 13:13:28 chainsaw Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -50,7 +50,7 @@ src_unpack() {
 	# Quiet the isc blurb
 	epatch "${FILESDIR}/${PN}"-4.0-no_isc_blurb.patch
 	# Enable dhclient to get extra configuration from stdin
-	epatch "${FILESDIR}/${PN}"-4.0-dhclient-stdin-conf.patch
+	epatch "${FILESDIR}/${PN}"-4.0.1-dhclient-stdin-conf.patch
 	# Disable fallback interfaces when using BPF
 	# This allows more than one dhclient instance on the BSD's
 	epatch "${FILESDIR}/${PN}"-3.0.5-bpf-nofallback.patch
