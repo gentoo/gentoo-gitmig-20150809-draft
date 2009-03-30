@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/qpopper
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.25 2008/06/04 04:46:21 darkside Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.26 2009/03/30 16:05:46 pva Exp $
+
+*qpopper-4.0.14 (30 Mar 2009)
+
+  30 Mar 2009; Peter Volkov <pva@gentoo.org>
+  +files/qpopper-4.0.14-parallel-build.patch, +files/qpopper.conf,
+  +files/qpopper.init.d, +files/qpopper.xinetd, metadata.xml,
+  +qpopper-4.0.14.ebuild:
+  Version bump, bug #147182, thank Mike Lundy for lot's of improvments: apop
+  USE flag, init script, xinetd config file, config file and misc cleanups.
+  Also build with --enable-shy, bug #145069, thank Icebird for report. Now
+  fail on dobin functions, bug #248087, thank Diego E. 'Flameeyes' Pettenò
+  for report. New drac USE flag.
 
   04 Jun 2008; Jeremy Olexa <darkside@gentoo.org> qpopper-4.0.5-r3.ebuild:
   break out --enable-apop into a USE flag. Closes bug #106367, thanks to
