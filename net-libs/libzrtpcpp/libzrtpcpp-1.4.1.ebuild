@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/libzrtpcpp-1.4.1.ebuild,v 1.1 2009/01/27 17:54:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/libzrtpcpp-1.4.1.ebuild,v 1.2 2009/03/31 05:39:49 dragonheart Exp $
 
-DESCRIPTION="GNU RTP stack for the zrtp protocol specification developed by Phil Zimmermen"
+DESCRIPTION="GNU RTP stack for the zrtp protocol developed by Phil Zimmermann"
 HOMEPAGE="http://www.gnutelephony.org/index.php/GNU_ZRTP"
 SRC_URI="mirror://gnu/ccrtp/${P}.tar.gz"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
