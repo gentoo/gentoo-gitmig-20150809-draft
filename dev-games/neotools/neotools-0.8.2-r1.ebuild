@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.2.ebuild,v 1.5 2009/03/31 05:09:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.2-r1.ebuild,v 1.1 2009/03/31 05:11:59 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools

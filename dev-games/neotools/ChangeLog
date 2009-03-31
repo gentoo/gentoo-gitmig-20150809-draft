@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/neotools
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/ChangeLog,v 1.15 2009/03/31 05:09:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/ChangeLog,v 1.16 2009/03/31 05:11:59 mr_bones_ Exp $
+
+*neotools-0.8.2-r1 (31 Mar 2009)
+
+  31 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  -neotools-0.8.2.ebuild, +neotools-0.8.2-r1.ebuild:
+  rev bump to force out the linking with the system libbz2
 
   31 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
   neotools-0.8.2.ebuild:
