@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr311-api/jsr311-api-1.0.ebuild,v 1.2 2009/02/24 17:45:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr311-api/jsr311-api-1.0.ebuild,v 1.3 2009/03/31 17:33:10 betelgeuse Exp $
 
-JAVA_PKG_IUSE="doc source"
-JAVA_PKG_STRICT=1
+EAPI="2"
+JAVA_PKG_IUSE="doc source test"
 
-inherit java-pkg-2 java-ant-2 eutils
+inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="JAX-RS: Java API for RESTful Web Services"
 HOMEPAGE="https://jsr311.dev.java.net/"
@@ -14,10 +14,10 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="CDDL"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="test"
+IUSE=""
 
 DEPEND=">=virtual/jdk-1.5
-		test? ( dev-java/ant-junit =dev-java/junit-3* )"
+		test? ( dev-java/ant-junit:0 dev-java/junit:0 )"
 RDEPEND=">=virtual/jre-1.5"
 
 # Helper to generate the tarball :-)
@@ -32,25 +32,18 @@ src_tarball() {
 	echo "New tarball located at ${P}.tar.bz2"
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+java_prepare() {
 	for i in build.xml maven-build.xml manifest ; do
 		cp -f "${FILESDIR}"/"${P}-${i}" "${i}" \
 			|| die "Unable to find ${P}-${i}"
 	done
-	cd "${S}"/lib
-	java-pkg_jar-from --build-only junit
 }
 
 src_install() {
-	dodoc README.txt
+	dodoc README.txt || die
 	java-pkg_newjar target/${P}.jar jsr311-api.jar
-	use doc \
-		&& java-pkg_dojavadoc target/site/apidocs/ \
-		|| die "Failed javadoc"
-	use source \
-		&& java-pkg_dosrc src/javax/*
+	use doc	&& java-pkg_dojavadoc target/site/apidocs
+	use source && java-pkg_dosrc src/javax
 }
 
 src_test() {
