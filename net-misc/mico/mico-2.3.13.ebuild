@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13.ebuild,v 1.2 2009/02/10 08:12:59 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13.ebuild,v 1.3 2009/03/31 12:13:18 haubi Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -82,7 +82,7 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTDIR="${D}"/usr SHARED_INSTDIR="${D}"/usr install || die "install failed"
+	emake INSTDIR="${D}"/usr SHARED_INSTDIR="${D}"/usr install LDCONFIG=: || die "install failed"
 
 	dodir /usr/share || die
 	mv "${D}"/usr/man "${D}"/usr/share || die

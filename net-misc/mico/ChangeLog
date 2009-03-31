@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mico
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.17 2009/03/20 04:29:17 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.18 2009/03/31 12:13:18 haubi Exp $
+
+  31 Mar 2009; Michael Haubenwallner <haubi@gentoo.org> mico-2.3.13.ebuild:
+  no need to call ldconfig during src_install
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
