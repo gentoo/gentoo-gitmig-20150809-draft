@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.11.ebuild,v 1.1 2009/03/01 02:56:38 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.11.ebuild,v 1.2 2009/03/31 23:53:11 vapier Exp $
 
 EAPI="1"
 
-inherit autotools eutils flag-o-matic libtool versionator
+inherit eutils flag-o-matic multilib versionator
 
 DESCRIPTION="an SQL Database Engine in a C Library"
 HOMEPAGE="http://www.sqlite.org/"
@@ -24,13 +24,12 @@ DEPEND="${RDEPEND}
 	doc? ( app-arch/unzip )"
 
 pkg_setup() {
-	# test
-	if has test ${FEATURES}; then
-		if ! has userpriv ${FEATURES}; then
+	if has test ${FEATURES} ; then
+		if ! has userpriv ${FEATURES} ; then
 			ewarn "The userpriv feature must be enabled to run tests."
 			eerror "Testsuite will not be run."
 		fi
-		if ! use tcl; then
+		if ! use tcl ; then
 			ewarn "You must enable the tcl use flag if you want to run the testsuite."
 			eerror "Testsuite will not be run."
 		fi
@@ -41,16 +40,18 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	# note: this sandbox fix is no longer needed with sandbox-1.3+
 	epatch "${FILESDIR}"/sandbox-fix2.patch
 	epatch "${FILESDIR}"/${P}-reference.patch
 
-	eautoreconf
+	# avoid having to run autotools
+	sed -i 's:3\.6\.10:3.6.11:g' configure
 	epunt_cxx
 }
 
 src_compile() {
 	# not available via configure and requested in bug #143794
-	use soundex && append-flags -DSQLITE_SOUNDEX=1
+	use soundex && append-cppflags -DSQLITE_SOUNDEX=1
 
 	econf \
 		$(use_enable debug) \
@@ -61,7 +62,7 @@ src_compile() {
 }
 
 src_test() {
-	if has userpriv ${FEATURES}; then
+	if has userpriv ${FEATURES} ; then
 		local test=test
 		use debug && tets=fulltest
 		emake ${test} || die "some test(s) failed"
@@ -77,7 +78,7 @@ src_install() {
 
 	doman sqlite3.1 || die
 
-	if use doc; then
+	if use doc ; then
 		# Naming scheme changes randomly between - and _ in releases
 		# http://www.sqlite.org/cvstrac/tktview?tn=3523
 		dohtml -r "${WORKDIR}"/${PN}-${DOC_PV}-docs/* || die
