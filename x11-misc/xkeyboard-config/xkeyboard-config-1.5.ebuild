@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-1.5.ebuild,v 1.1 2009/01/28 10:19:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-1.5.ebuild,v 1.2 2009/03/31 14:15:43 jsbronder Exp $
 
 inherit eutils multilib
 
@@ -9,7 +9,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/XKeyboardConfig"
 SRC_URI="http://xlibs.freedesktop.org/xkbdesc/${P}.tar.bz2"
 
-LICENSE="MIT"
+LICENSE="xkeyboard-config"
 SLOT="0"
 
 IUSE=""
