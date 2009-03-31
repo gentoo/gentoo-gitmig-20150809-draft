@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.19 2009/03/31 16:55:31 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.20 2009/03/31 18:29:14 fmccor Exp $
+
+  31 Mar 2009; Ferris McCormick <fmccor@gentoo.org> at-3.1.10.2-r1.ebuild:
+  Sparc stable, Bug #263707 (can schedule simple jobs at least).
 
   31 Mar 2009; Richard Freeman <rich0@gentoo.org> at-3.1.10.2-r1.ebuild:
   amd64 stable - 263707
