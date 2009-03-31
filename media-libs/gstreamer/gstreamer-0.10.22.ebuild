@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.22.ebuild,v 1.3 2009/03/30 04:40:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.22.ebuild,v 1.4 2009/03/31 20:01:44 tester Exp $
 
 EAPI=2
 
@@ -49,7 +49,4 @@ src_install() {
 	for gst_bins in $(ls *-${PV_MAJ_MIN}); do
 		rm -f ${gst_bins/-${PV_MAJ_MIN}/}
 	done
-
-	# Drop unnecessary libtool files
-	find "${D}"/usr/$(get_libdir) -name '*.la' -delete || die "find and delete failed."
 }
