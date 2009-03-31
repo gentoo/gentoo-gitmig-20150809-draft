@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.12 2009/03/11 23:11:39 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.13 2009/03/31 19:28:15 armin76 Exp $
 
 EAPI=1
 
@@ -64,6 +64,7 @@ src_compile() {
 	fi
 
 	use custom-cflags && myconf="${myconf} --disable-optimizations"
+	use arm && myconf="--disable-armv5te --disable-armv6"
 
 	# enabled by default
 	if use encode
