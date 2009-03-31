@@ -1,6 +1,24 @@
 # ChangeLog for sys-cluster/vzctl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.60 2008/11/15 13:01:30 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.61 2009/03/31 09:16:33 pva Exp $
+
+*vzctl-3.0.23-r1 (31 Mar 2009)
+
+  31 Mar 2009; Peter Volkov <pva@gentoo.org>
+  +files/vzctl-3.0.23-UBC-parameter-swappages.patch,
+  +files/vzctl-3.0.23-cronjobs-issue-warning.patch,
+  +files/vzctl-3.0.23-cronjobs-typo-fix.patch,
+  +files/vzctl-3.0.23-debian-CT-ipv6-fix.patch,
+  +files/vzctl-3.0.23-forwarding-issue-warning.patch,
+  -files/vzctl-3.0.23-ipforwarding-on-start.patch,
+  +files/vzctl-3.0.23-ppp-feature.patch,
+  -files/vzctl-3.0.23-set-cron-jobs.patch,
+  files/vzctl-3.0.23-ve-unlimited.conf-sample.patch,
+  +files/vzctl-3.0.23-vzarp-on-ifup.patch,
+  +files/vzctl-3.0.23-vznetaddbr.in-no-bashisms.patch,
+  vzctl-3.0.22-r2.ebuild, -vzctl-3.0.23.ebuild, +vzctl-3.0.23-r1.ebuild:
+  Backport some fixes from git, update patches to be likely included (or
+  already included) by upstream. Remove old. Stabilize 3.0.22-r2.
 
 *vzctl-3.0.23 (15 Nov 2008)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.23.ebuild,v 1.1 2008/11/15 13:01:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.23-r1.ebuild,v 1.1 2009/03/31 09:16:33 pva Exp $
 
 inherit bash-completion eutils autotools
 
@@ -29,9 +29,15 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-ipforwarding-on-start.patch"
+	epatch "${FILESDIR}/${P}-vznetaddbr.in-no-bashisms.patch"
 	epatch "${FILESDIR}/${P}-ve-unlimited.conf-sample.patch"
-	epatch "${FILESDIR}/${P}-set-cron-jobs.patch"
+	epatch "${FILESDIR}/${P}-debian-CT-ipv6-fix.patch"
+	epatch "${FILESDIR}/${P}-cronjobs-typo-fix.patch"
+	epatch "${FILESDIR}/${P}-cronjobs-issue-warning.patch"
+	epatch "${FILESDIR}/${P}-vzarp-on-ifup.patch"
+	epatch "${FILESDIR}/${P}-ppp-feature.patch"
+	epatch "${FILESDIR}/${P}-UBC-parameter-swappages.patch"
+	epatch "${FILESDIR}/${P}-forwarding-issue-warning.patch"
 	eautomake
 }
 
@@ -80,12 +86,4 @@ pkg_postinst() {
 	ewarn
 	ewarn "The old vzctl behavior can be restored by setting NEIGHBOUR_DEVS to any"
 	ewarn 'value other than "detect" in /etc/vz/vz.conf.'
-	einfo
-	ewarn "NOTE2: Starting with vzctl-3.0.22-r10 we support openrc inside VE."
-	ewarn "Regretfully openrc has bug which cause broken networking if you rely"
-	ewarn "on iputils to setup network inside container. To solve this issue"
-	ewarn "either install iproute2 inside container or use patch provided in:"
-	ewarn "http://bugs.gentoo.org/245810 . This patch will be included in"
-	ewarn ">=openrc-0.3.0-r1 so upgrading openrc (if available) fixes this"
-	ewarn "issue too."
 }
