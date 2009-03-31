@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.1.0.20090306.ebuild,v 1.1 2009/03/07 02:38:35 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.1.0.20090331.ebuild,v 1.1 2009/03/31 15:14:18 matsuu Exp $
 
 EAPI="1"
 inherit autotools eutils multilib python
