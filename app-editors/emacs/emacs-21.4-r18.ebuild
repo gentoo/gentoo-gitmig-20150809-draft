@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r18.ebuild,v 1.3 2009/03/31 06:14:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r18.ebuild,v 1.4 2009/03/31 16:38:13 ulm Exp $
 
 EAPI=2
 WANT_AUTOCONF="2.1"
@@ -145,9 +145,6 @@ src_install() {
 	keepdir /usr/share/emacs/${PV}/leim
 
 	dodoc BUGS ChangeLog README
-
-	stamp_subdirs_el=$(stat --format=%Y \
-		"${D}/usr/share/emacs/${FULL_VERSION}/lisp/subdirs.el")
 }
 
 emacs-infodir-rebuild() {
@@ -180,16 +177,6 @@ pkg_postinst() {
 	if ! use sendmail && ! has_version "virtual/mta"; then
 		elog "You disabled sendmail support for Emacs. If you later install"
 		elog "a MTA then you will need to recompile Emacs. See Bug #11104."
-	fi
-
-	local stamp=$(stat --format=%Y \
-		"${ROOT}/usr/share/emacs/${FULL_VERSION}/lisp/subdirs.el")
-	if [ "${stamp}" != "${stamp_subdirs_el}" ]; then
-		echo
-		ewarn "Your package manager does not preserve file modification times"
-		ewarn "when merging. This is a known issue with some package managers"
-		ewarn "and can trigger spurious warnings in Emacs at run time. These"
-		ewarn "warnings can be safely ignored."
 	fi
 }
 
