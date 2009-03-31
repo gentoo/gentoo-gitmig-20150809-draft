@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.14.ebuild,v 1.1 2008/12/07 10:22:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.14.ebuild,v 1.2 2009/03/31 21:15:55 patrick Exp $
 
 inherit distutils
 
@@ -33,11 +33,6 @@ DEPEND="virtual/opengl
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
-
-src_compile() {
-	use openal || sed -i -e 's/^USE_OPENAL.*/USE_OPENAL = 0/' setup.py
-	distutils_src_compile
-}
 
 src_install() {
 	distutils_src_install
