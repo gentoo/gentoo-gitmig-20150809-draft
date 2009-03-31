@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.47 2009/03/03 11:41:45 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.48 2009/03/31 16:10:29 patrick Exp $
+
+*quassel-0.4.1 (31 Mar 2009)
+
+  31 Mar 2009; Patrick Lauer <patrick@gentoo.org> +files/quassel.logrotate,
+  +quassel-0.4.1.ebuild, quassel-9999.ebuild:
+  Bump to 0.4.1, small improvements to -9999 ebuild. Thanks to Daniel
+  Pielmeier.
 
   03 Mar 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   +files/quassel-0.4.0-no-webkit.patch, quassel-0.4.0-r1.ebuild,

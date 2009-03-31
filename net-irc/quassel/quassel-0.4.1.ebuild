@@ -1,21 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.21 2009/03/31 16:10:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.4.1.ebuild,v 1.1 2009/03/31 16:10:29 patrick Exp $
 
 EAPI="2"
 
-inherit cmake-utils eutils git
-
-EGIT_REPO_URI="git://git.quassel-irc.org/quassel.git"
-EGIT_BRANCH="master"
+inherit cmake-utils eutils
 
 DESCRIPTION="Qt4/KDE4 IRC client suppporting a remote daemon for 24/7 connectivity."
 HOMEPAGE="http://quassel-irc.org/"
+SRC_URI="http://quassel-irc.org/pub/${P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="dbus debug kde monolithic +oxygen phonon postgres +server +ssl webkit +X"
+IUSE="dbus debug kde monolithic +oxygen phonon +server +ssl webkit +X"
 
 LANGS="cs da de fr hu nb_NO ru sl tr"
 for l in ${LANGS}; do
@@ -25,8 +23,8 @@ done
 RDEPEND="
 	dbus? ( x11-libs/qt-dbus:4 )
 	monolithic? (
-		!postgres? ( x11-libs/qt-sql:4[sqlite] dev-db/sqlite[threadsafe] )
-		postgres? ( x11-libs/qt-sql:4[postgres] >=virtual/postgresql-base-8.3 )
+		dev-db/sqlite[threadsafe]
+		x11-libs/qt-sql:4[sqlite]
 		x11-libs/qt-script:4
 		x11-libs/qt-gui:4
 		kde? ( >=kde-base/kdelibs-4.1 )
@@ -35,8 +33,8 @@ RDEPEND="
 	)
 	!monolithic? (
 		server? (
-			!postgres? ( x11-libs/qt-sql:4[sqlite] dev-db/sqlite[threadsafe] )
-			postgres? ( x11-libs/qt-sql:4[postgres] )
+			dev-db/sqlite[threadsafe]
+			x11-libs/qt-sql:4[sqlite]
 			x11-libs/qt-script:4
 		)
 		X? (
@@ -92,6 +90,9 @@ src_install() {
 
 		insinto /etc/logrotate.d
 		newins "${FILESDIR}/quassel.logrotate" quassel
+
+		insinto /usr/share/doc/${PF}
+		doins "${S}"/scripts/manageusers.py || die "installing manageusers.py failed"
 	fi
 }
 
@@ -102,6 +103,15 @@ pkg_postinst() {
 		ewarn "QUASSEL_USER variable in ${ROOT%/}/etc/conf.d/quasselcore to your username."
 		ewarn "Note: This is the user who runs the quasselcore and is independent"
 		ewarn "from the users you set up in the quasselclient."
+		elog
+		elog "Adding more than one user or changing username/password is not"
+		elog "possible via the quasselclient yet. If you need to do these things"
+		elog "you have to use the manageusers.py script, which has been installed in"
+		elog "${ROOT%/}/usr/share/doc/${PF}".
+		elog "http://bugs.quassel-irc.org/wiki/quassel-irc/Manage_core_users provides"
+		elog "some information on using the script."
+		elog "To be sure nothing bad will happen you need to stop the quasselcore"
+		elog "before adding more users."
 	fi
 
 	if ( use server || use monolithic ) && use ssl ; then
