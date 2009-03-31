@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.61 2009/03/31 09:16:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.62 2009/03/31 09:47:14 pva Exp $
+
+  31 Mar 2009; Peter Volkov <pva@gentoo.org> vzctl-3.0.23-r1.ebuild:
+  Nuke logrotate USE flag, bug #258174.
 
 *vzctl-3.0.23-r1 (31 Mar 2009)
 

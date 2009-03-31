@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.23-r1.ebuild,v 1.1 2009/03/31 09:16:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.23-r1.ebuild,v 1.2 2009/03/31 09:47:14 pva Exp $
 
 inherit bash-completion eutils autotools
 
@@ -11,9 +11,9 @@ SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc64 ~sparc ~x86"
-IUSE="bash-completion logrotate"
+IUSE="bash-completion"
 
-RDEPEND="logrotate? ( app-admin/logrotate )
+RDEPEND="
 	net-firewall/iptables
 	sys-apps/ed
 	sys-apps/iproute2
@@ -46,7 +46,7 @@ src_compile() {
 		--enable-cron \
 		--enable-udev \
 		$(use_enable bash-completion bashcomp) \
-		$(use_enable logrotate)
+		--enable-logrotate
 
 	emake || die "emake failed!"
 }
