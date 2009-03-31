@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/shutterbug
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/ChangeLog,v 1.18 2009/03/30 20:17:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/ChangeLog,v 1.19 2009/03/31 16:48:10 jer Exp $
+
+  31 Mar 2009; Jeroen Roovers <jer@gentoo.org> shutterbug-1.6.34.ebuild,
+  shutterbug-1.6.35.ebuild:
+  Stable for HPPA (bug #263795).
 
   30 Mar 2009; Brent Baude <ranger@gentoo.org> shutterbug-1.6.35.ebuild:
   Marking shutterbug-1.6.35 ppc for bug 263795
