@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.11.0.ebuild,v 1.2 2009/03/13 15:25:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.12.1-r1.ebuild,v 1.1 2009/03/31 15:03:50 scarabeus Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -11,6 +11,10 @@ DESCRIPTION="ATI video driver"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="dri"
+
+SRC_PATCHES="http://dev.gentooexperimental.org/~scarabeus/${PV}-patches-01.tar.bz2"
+SRC_URI="${SRC_URI}
+	${SRC_PATCHES}"
 
 RDEPEND=">=x11-base/xorg-server-1.2"
 DEPEND="${RDEPEND}
@@ -29,6 +33,16 @@ DEPEND="${RDEPEND}
 CONFIGURE_OPTIONS="$(use_enable dri)"
 
 PATCHES=""
+
+src_unpack() {
+	x-modular_src_unpack
+	if [[ -n "${SRC_PATCHES}" ]]; then
+		EPATCH_FORCE="yes" \
+		EPATCH_SOURCE="${WORKDIR}/patches" \
+		EPATCH_SUFFIX="patch" \
+		epatch
+	fi
+}
 
 pkg_postinst() {
 	x-modular_pkg_postinst
