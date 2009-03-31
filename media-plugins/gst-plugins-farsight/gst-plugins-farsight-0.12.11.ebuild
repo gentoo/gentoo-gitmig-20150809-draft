@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.11.ebuild,v 1.1 2009/03/30 04:49:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.12.11.ebuild,v 1.2 2009/03/31 15:58:53 mr_bones_ Exp $
 
 inherit gst-plugins10
 
@@ -13,7 +13,7 @@ SLOT=${GST_MAJOR}
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
-IUSE="jpeg2k gsm jingle yahoo"
+IUSE="jpeg2k gsm jingle msn yahoo"
 
 DEPEND=">=media-libs/gstreamer-0.10.22
 	>=media-libs/gst-plugins-base-0.10.22
