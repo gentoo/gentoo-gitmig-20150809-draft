@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.110 2009/03/31 11:44:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.111 2009/03/31 11:56:19 vapier Exp $
+
+*sandbox-1.6-r1 (31 Mar 2009)
+
+  31 Mar 2009; Mike Frysinger <vapier@gentoo.org>
+  +files/sandbox-1.6-disable-qa-static.patch,
+  +files/0001-libsandbox-handle-more-at-functions.patch,
+  +sandbox-1.6-r1.ebuild:
+  Backport a fix or two so we can stabilize this version.
 
 *sandbox-1.7 (31 Mar 2009)
 
