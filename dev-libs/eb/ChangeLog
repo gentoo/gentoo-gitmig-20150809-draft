@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/eb
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/ChangeLog,v 1.37 2008/06/21 13:57:30 dirtyepic Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/ChangeLog,v 1.38 2009/03/31 15:48:06 matsuu Exp $
+
+*eb-4.4.1 (31 Mar 2009)
+
+  31 Mar 2009; MATSUU Takuto <matsuu@gentoo.org> -eb-3.3.4.ebuild,
+  -eb-4.2.ebuild, -eb-4.2.1.ebuild, +eb-4.4.1.ebuild:
+  Version bumped. Fixed dependency. Removed old versions.
 
   21 Jun 2008; Ryan Hill <dirtyepic@gentoo.org>
   +files/eb-4.2.2-as-needed.patch, eb-4.2.2.ebuild:
