@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/s3fs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.1 2008/08/15 12:30:33 caleb Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.2 2009/03/31 22:43:57 caleb Exp $
+
+  31 Mar 2009; Caleb Tennis <caleb@gentoo.org> s3fs-177.ebuild:
+  x86/amd64 stable
 
 *s3fs-177 (15 Aug 2008)
 
