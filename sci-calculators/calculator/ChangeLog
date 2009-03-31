@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/calculator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.24 2009/03/30 20:15:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.25 2009/03/31 16:46:50 jer Exp $
+
+  31 Mar 2009; Jeroen Roovers <jer@gentoo.org> calculator-1.6.35.ebuild:
+  Stable for HPPA (bug #263795).
 
   30 Mar 2009; Brent Baude <ranger@gentoo.org> calculator-1.6.35.ebuild:
   Marking calculator-1.6.35 ppc for bug 263795
