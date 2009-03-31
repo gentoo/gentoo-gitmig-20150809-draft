@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ps2-packer/ps2-packer-0.4.4.ebuild,v 1.3 2009/03/31 04:05:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ps2-packer/ps2-packer-0.4.4.ebuild,v 1.4 2009/03/31 06:34:27 vapier Exp $
 
 inherit games
 
@@ -13,12 +13,13 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="strip"
+
 QA_TEXTRELS="
 	${GAMES_PREFIX_OPT:1}/ps2-packer/n2e-packer.so
 	${GAMES_PREFIX_OPT:1}/ps2-packer/n2d-packer.so
 	${GAMES_PREFIX_OPT:1}/ps2-packer/n2b-packer.so"
 
-QA_EXECSTACK="
+QA_WX_LOAD="
 	${GAMES_PREFIX_OPT:1}/ps2-packer/stub/n2e-0088-stub
 	${GAMES_PREFIX_OPT:1}/ps2-packer/stub/lzo-0088-stub
 	${GAMES_PREFIX_OPT:1}/ps2-packer/stub/n2e-asm-1d00-stub
