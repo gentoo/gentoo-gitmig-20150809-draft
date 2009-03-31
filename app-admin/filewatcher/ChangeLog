@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/filewatcher
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.9 2008/04/21 16:00:34 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.10 2009/03/31 21:28:36 bangert Exp $
+
+*filewatcher-2.4.6 (31 Mar 2009)
+
+  31 Mar 2009; Thilo Bangert <bangert@gentoo.org> +filewatcher-2.4.6.ebuild:
+  version bump - bug #264204
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
