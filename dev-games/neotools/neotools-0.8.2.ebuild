@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.2.ebuild,v 1.4 2009/01/23 10:58:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/neotools-0.8.2.ebuild,v 1.5 2009/03/31 05:09:32 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils autotools
 
 DESCRIPTION="Various development tools for NeoEngine"
@@ -13,29 +14,38 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-DEPEND=">=dev-games/neoengine-${PV}"
+DEPEND=">=dev-games/neoengine-${PV}
+	app-arch/bzip2"
 
-S="${WORKDIR}/neotools"
+S=${WORKDIR}/neotools
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e 's/BUILD_STATIC/BUILD_DYNAMIC/g' \
 		-e 's/_static//g' \
-		nscemake/Makefile.am || die "makefile sed failed"
+		nscemake/Makefile.am \
+		|| die "sed failed"
+	sed -i \
+		-e 's:"bzip2/bzlib.h":<bzlib.h>:' \
+		npacmake/main.cpp \
+		|| die "sed failed"
+	sed -i \
+		-e '/npacmake_SOURCES/s/main.cpp.*/main.cpp/' \
+		-e '/npacmake_LDADD/s/$/ -lbz2/' \
+		npacmake/Makefile.am \
+		|| die "sed failed"
 	sed -i \
 		-e 's/ -Werror//' \
-		configure.in
+		configure.in \
+		|| die "sed failed"
 
 	epatch "${FILESDIR}"/${P}-errno.patch \
 		"${FILESDIR}"/${P}-gcc43.patch
 
-	eautoreconf || die "eautoreconf failed"
+	eautoreconf
 }
 
 src_install() {
-	einstall || die "Installation failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog*
 }
