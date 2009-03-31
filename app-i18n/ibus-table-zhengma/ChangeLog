@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus-table-zhengma
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-zhengma/ChangeLog,v 1.3 2009/02/25 17:14:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-zhengma/ChangeLog,v 1.4 2009/03/31 15:00:18 matsuu Exp $
+
+  31 Mar 2009; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-table-zhengma-0.1.2.20090101.ebuild:
+  Removed old version.
 
 *ibus-table-zhengma-1.1.0.20090219 (25 Feb 2009)
 
