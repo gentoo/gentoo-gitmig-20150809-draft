@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.2-r3.ebuild,v 1.3 2009/03/30 04:19:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.2-r3.ebuild,v 1.4 2009/03/31 11:20:57 armin76 Exp $
 
 PATCH_VER="1.6"
 UCLIBC_VER="1.0"
@@ -75,6 +75,8 @@ src_unpack() {
 	gcc_src_unpack
 
 	use vanilla && return 0
+
+	sed -i 's/use_fixproto=yes/:/' gcc/config.gcc #PR33200
 
 	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
 
