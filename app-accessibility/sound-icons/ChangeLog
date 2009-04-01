@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/sound-icons
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sound-icons/ChangeLog,v 1.1 2007/09/12 06:01:35 williamh Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sound-icons/ChangeLog,v 1.2 2009/04/01 18:11:40 williamh Exp $
+
+  01 Apr 2009; William Hubbs <williamh@gentoo.org> sound-icons-0.1.ebuild:
+  Stable on x86.
+
+  01 Apr 2009; William Hubbs <williamh@gentoo.org> sound-icons-0.1.ebuild:
+  Stable on x86.
 
 *sound-icons-0.1 (12 Sep 2007)
 
