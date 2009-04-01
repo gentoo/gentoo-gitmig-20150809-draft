@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.8 2008/11/19 15:42:56 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.9 2009/04/01 12:26:44 patrick Exp $
 
 inherit eutils git
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="acl"
 
-DEPEND="acl? (
+DEPEND="dev-python/matplotlib
+	acl? (
 			sys-apps/acl
 			sys-fs/e2fsprogs
 		)"
