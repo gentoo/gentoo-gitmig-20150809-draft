@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-2.1.4.ebuild,v 1.1 2009/03/18 03:21:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-2.1.4.ebuild,v 1.2 2009/04/01 20:00:50 mr_bones_ Exp $
 
 EAPI=2
-inherit autotools fixheadtails eutils
+inherit fixheadtails eutils
 
 MY_PV=${PV/_/}
 DESCRIPTION="syslog replacement with advanced filtering features"
