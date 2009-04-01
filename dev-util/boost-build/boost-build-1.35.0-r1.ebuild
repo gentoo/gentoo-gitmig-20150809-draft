@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.35.0-r1.ebuild,v 1.4 2009/03/29 01:11:52 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.35.0-r1.ebuild,v 1.5 2009/04/01 18:16:03 josejx Exp $
 
 inherit flag-o-matic toolchain-funcs versionator
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.boost.org/doc/tools/build/index.html"
 SRC_URI="mirror://sourceforge/boost/boost_${MY_PV}.tar.bz2"
 LICENSE="Boost-1.0"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="examples python"
 
 DEPEND="!<dev-libs/boost-1.34.0
