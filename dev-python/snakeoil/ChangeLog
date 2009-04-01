@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.16 2009/03/31 15:34:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.17 2009/04/01 15:05:35 fmccor Exp $
+
+  01 Apr 2009; Ferris McCormick <fmccor@gentoo.org> snakeoil-0.3.2.ebuild:
+  Sparc stable --- bug #208942 --- tests are fine.
 
   31 Mar 2009; Raúl Porcel <armin76@gentoo.org> snakeoil-0.3.ebuild,
   snakeoil-0.3.1.ebuild, snakeoil-0.3.2.ebuild:
