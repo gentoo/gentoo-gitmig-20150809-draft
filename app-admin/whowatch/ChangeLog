@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/whowatch
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.25 2008/11/27 17:57:32 jer Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.26 2009/04/01 15:06:53 jer Exp $
+
+  01 Apr 2009; Jeroen Roovers <jer@gentoo.org> whowatch-1.6.0.ebuild:
+  Stable for HPPA (bug #264512).
 
   27 Nov 2008; Jeroen Roovers <jer@gentoo.org> whowatch-1.6.0.ebuild:
   Fix quoting too.
