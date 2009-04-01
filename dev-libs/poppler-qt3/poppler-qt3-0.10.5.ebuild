@@ -1,11 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poppler-qt3/poppler-qt3-0.10.5.ebuild,v 1.1 2009/04/01 14:44:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poppler-qt3/poppler-qt3-0.10.5.ebuild,v 1.2 2009/04/01 18:02:20 loki_val Exp $
 
 EAPI=2
 
 POPPLER_MODULE=qt
 POPPLER_PKGCONFIG=poppler-qt.pc
+POPPLER_CONF="--enable-poppler-qt"
 
 inherit qt3 poppler
 
