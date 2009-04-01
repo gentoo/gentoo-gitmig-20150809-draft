@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4326 2009/03/30 21:47:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4327 2009/04/01 10:08:31 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1677,7 +1677,6 @@ media-video/totem:bluetooth - Enable support for user-presence detection via the
 media-video/totem:galago - Enable the galago plugin
 media-video/totem:lirc - Enable support for controlling Totem with a remote control using app-misc/lirc
 media-video/totem:nautilus - Enable the nautilus extension
-media-video/totem:nsplugin - Build media plugin for Mozilla-based browsers such as www-client/mozilla-firefox
 media-video/totem:nvtv - Support for nvtv to use tv in on nvidia cards
 media-video/totem:python - Build support for dev-lang/python plugins
 media-video/totem:seamonkey - same as nsplugin description but build against www-client/seamonkey
