@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.0.0-r1.ebuild,v 1.1 2009/03/24 18:43:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.0.0-r1.ebuild,v 1.2 2009/04/01 04:59:18 josejx Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.qtsoftware.com/${MY_PN}/${MY_P}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+cmake debug +debugger +designer doc fakevim git perforce subversion"
 
 DEPEND=">=x11-libs/qt-assistant-4.5.0_rc1
