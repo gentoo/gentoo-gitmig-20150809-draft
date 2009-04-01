@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/whowatch
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.26 2009/04/01 15:06:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.27 2009/04/01 15:35:50 bluebird Exp $
+
+  01 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> whowatch-1.6.0.ebuild:
+  Stable on sparc, bug #264512
 
   01 Apr 2009; Jeroen Roovers <jer@gentoo.org> whowatch-1.6.0.ebuild:
   Stable for HPPA (bug #264512).
