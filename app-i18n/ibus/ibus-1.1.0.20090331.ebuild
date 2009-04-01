@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.1.0.20090331.ebuild,v 1.1 2009/03/31 15:14:18 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.1.0.20090331.ebuild,v 1.2 2009/04/01 14:50:37 matsuu Exp $
 
 EAPI="1"
 inherit autotools eutils multilib python
@@ -75,13 +75,18 @@ pkg_postinst() {
 	elog "1. Get input engines from sunrise overlay."
 	elog "   Run \"emerge -s ibus-\" in your favorite terminal"
 	elog "   for a list of packages we already have."
-	elog "2. Set the following in your"
-	elog "   user startup scripts such as .xinitrc or .bashrc"
+	elog
+	elog "2. Setup ibus:"
+	elog
+	elog "   $ ibus-setup"
+	elog
+	elog "3. Set the following in your"
+	elog "   user startup scripts such as .xinitrc, .xsession or .xprofile"
 	elog
 	elog "   export XMODIFIERS=\"@im=ibus\""
 	elog "   export GTK_IM_MODULE=\"ibus\""
 	elog "   export QT_IM_MODULE=\"${qt_im_module}\""
-	elog "   ibus &"
+	elog "   ibus-daemon -d -x"
 
 	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-query-immodules-2.0 ] && \
 		gtk-query-immodules-2.0 > "${ROOT}/${GTK2_CONFDIR}/gtk.immodules"
