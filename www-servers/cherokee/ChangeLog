@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.48 2009/04/01 12:50:05 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.49 2009/04/01 12:52:31 bass Exp $
+
+  01 Apr 2009; J. Alberto Suárez López <bass@gentoo.org>
+  -files/cherokee-0.5.6-epoll-crosscompile.patch,
+  -files/cherokee-0.5.6-gnutls-pkgconfig.patch,
+  -files/cherokee-0.5.6-replace-with-sed.patch,
+  -files/cherokee-0.5.6-sendfile-crosscompile.patch,
+  -files/cherokee-initd-0.6,
+  -files/cherokee-0.7.2-signed_unsigned_char.patch:
+  Cleaning old files.
 
 *cherokee-0.99.8 (01 Apr 2009)
 
