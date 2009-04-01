@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.5.14-r1.ebuild,v 1.1 2009/04/01 00:47:27 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.5.14-r1.ebuild,v 1.2 2009/04/01 01:02:31 nerdboy Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -39,8 +39,9 @@ pkg_setup() {
 src_unpack(){
 	unpack ${A}
 	cd "${S}"
-	sed -i -e "s:(prefix)/lib64:(prefix)/$(get_libdir):g" Makefile
-	#sed -i -e "s:share/doc/duma:share/doc/${P}:g" Makefile
+	sed -i -e "s:(prefix)/lib:(prefix)/$(get_libdir):g" \
+	    -i -e "s:share/doc/duma:share/doc/${P}:g" \
+	    Makefile || die "sed failed"
 }
 
 src_compile(){
