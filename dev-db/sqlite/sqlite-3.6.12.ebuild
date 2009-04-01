@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.12.ebuild,v 1.1 2009/04/01 00:01:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.12.ebuild,v 1.2 2009/04/01 07:19:03 vapier Exp $
 
 EAPI="1"
 
@@ -43,8 +43,6 @@ src_unpack() {
 	# note: this sandbox fix is no longer needed with sandbox-1.3+
 	epatch "${FILESDIR}"/sandbox-fix2.patch
 
-	# avoid having to run autotools
-	sed -i 's:3\.6\.11:3.6.12:g' configure
 	epunt_cxx
 }
 
