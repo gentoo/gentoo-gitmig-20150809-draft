@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.5.ebuild,v 1.1 2009/03/31 22:28:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.5.ebuild,v 1.2 2009/04/01 19:01:51 ulm Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -30,7 +30,9 @@ RDEPEND="
 	doc? ( virtual/latex-base
 		virtual/ghostscript )
 	latex? ( virtual/latex-base
-		lua? ( dev-tex/pgf ) )
+		lua? ( dev-tex/pgf
+			|| ( >=dev-texlive/texlive-latexrecommended-2008-r2
+				=dev-texlive/texlive-xetex-2007* ) ) )
 	X? ( x11-libs/libXaw )
 	svga? ( media-libs/svgalib )
 	readline? ( >=sys-libs/readline-4.2 )
