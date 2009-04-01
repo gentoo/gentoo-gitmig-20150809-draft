@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pysvn
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.1 2009/04/01 14:57:02 patrick Exp $
+
+*pysvn-1.6.3-r1 (01 Apr 2009)
+
+  01 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/skip-root-test.patch, +metadata.xml, +pysvn-1.6.3-r1.ebuild:
+  Initial import, ebuild from sunrise overlay. Thanks to idl0r and all the
+  others who worked on this in the last 2 years.
+
