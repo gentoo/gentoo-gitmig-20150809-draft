@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.8.ebuild,v 1.1 2009/02/15 14:34:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbogears/turbogears-1.0.8.ebuild,v 1.2 2009/04/01 11:49:33 patrick Exp $
 
 NEED_PYTHON=2.4
 
@@ -18,7 +18,9 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="test"
 
-RDEPEND=">=dev-python/turbojson-1.1.3
+# this package is not yet py2.6 ready. Keep deps at =py-2.{4,5} for now.
+
+RDEPEND=">=dev-python/turbojson-1.1.4
 	>=dev-python/turbocheetah-1.0
 	>=dev-python/turbokid-1.0.4
 	=dev-python/cherrypy-2.3*
