@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/speechd-el-2.2.ebuild,v 1.1 2008/01/21 00:10:37 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-el/speechd-el-2.2.ebuild,v 1.2 2009/04/01 17:40:47 williamh Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.freebsoft.org/pub/projects/speechd-el/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND=">=app-emacs/cedet-1.0_pre4-r2
