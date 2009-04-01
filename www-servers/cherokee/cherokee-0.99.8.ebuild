@@ -1,11 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.99.8.ebuild,v 1.1 2009/04/01 12:50:05 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.99.8.ebuild,v 1.2 2009/04/01 19:19:01 bangert Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-
-inherit eutils pam versionator libtool autotools
+inherit eutils pam versionator libtool
 
 DESCRIPTION="An extremely fast and tiny web server."
 SRC_URI="http://www.cherokee-project.com/download/$(get_version_component_range 1-2)/${PV}/${P}.tar.gz"
@@ -16,10 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="ipv6 ssl static pam coverpage threads kernel_linux admin debug geoip ldap mysql ffmpeg"
 
-# lighttpd block should be resolved properly
-# http://bugs.gentoo.org/show_bug.cgi?id=224781
 RDEPEND="
-	!www-servers/lighttpd
 	>=sys-libs/zlib-1.1.4-r1
 	ssl? ( dev-libs/openssl )
 	pam? ( virtual/pam )
@@ -117,7 +111,7 @@ pkg_postinst() {
 		echo  ""
 	else
 		echo  ""
-		elog "Try USE=admin if you want a easy way to configure cherokee."
+		elog "Try USE=admin if you want an easy way to configure cherokee."
 		echo  ""
 	fi
 }
