@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.2.2.ebuild,v 1.8 2009/03/11 18:02:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.2.2.ebuild,v 1.9 2009/04/01 12:05:53 bicatali Exp $
 
-inherit eutils flag-o-matic multilib
+EAPI=2
+inherit eutils flag-o-matic
 
 DESCRIPTION="Class library (C++) for numbers"
 HOMEPAGE="http://www.ginac.de/CLN/"
@@ -16,29 +17,32 @@ KEYWORDS="amd64 ~hppa ppc ~ppc64 sparc x86"
 IUSE="doc examples"
 
 DEPEND="dev-libs/gmp"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+pkg_setup() {
+	# -Os causes segmentation faults (see bug #174576)
+	# checked for 1.2.2, gcc-4.3.3
+	replace-flags -Os -O2
+	# ftracer buggy bug #237451
+	filter-flags -ftracer
+	# -fdirectives-only also buggy bug #263257
+	filter-flags -fdirectives-only
+	use sparc && append-cppflags "-DNO_ASM"
+	use hppa && append-cppflags "-DNO_ASM"
+}
+
+
+src_prepare() {
 	# avoid building tests and examples by default
 	epatch "${FILESDIR}"/${P}-examples.patch
 	# avoid installing dvi and html docs by default
 	epatch "${FILESDIR}"/${P}-docs.patch
 }
 
-src_compile () {
-	# -Os causes segmentation faults (see bug #174576)
-	# checked for 1.2.1, gcc-4.2.3
-	replace-flags -Os -O2
-	# ftracer buggy bug #237451
-	filter-flags -ftracer
-	use sparc && append-cppflags "-DNO_ASM"
-	use hppa && append-cppflags "-DNO_ASM"
+src_configure () {
 	econf  \
 		--libdir=/usr/$(get_libdir) \
-		--datadir=/usr/share/doc/${PF} \
-		|| die "econf failed"
-	emake || die "emake failed"
+		--datadir=/usr/share/doc/${PF}
 }
 
 src_install () {
@@ -46,10 +50,10 @@ src_install () {
 	dodoc README ChangeLog TODO* NEWS
 	if use doc; then
 		dodoc doc/cln.ps
-		dohtml doc/cln/*
+		dohtml doc/cln/* || die
 	fi
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples
+		doins -r examples || die
 	fi
 }
