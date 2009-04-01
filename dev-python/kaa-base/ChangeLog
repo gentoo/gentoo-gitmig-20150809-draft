@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kaa-base
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.15 2008/08/23 11:49:55 rbu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.16 2009/04/01 14:00:43 patrick Exp $
+
+*kaa-base-0.4.0-r1 (01 Apr 2009)
+
+  01 Apr 2009; Patrick Lauer <patrick@gentoo.org> +kaa-base-0.4.0-r1.ebuild:
+  Adding dev-lang/python[threads] dep. Fixes #264471
 
   23 Aug 2008; Robert Buchholz <rbu@gentoo.org> kaa-base-0.4.0.ebuild:
   Pull avahi and others into DEPEND, and check for avahi before checking for
