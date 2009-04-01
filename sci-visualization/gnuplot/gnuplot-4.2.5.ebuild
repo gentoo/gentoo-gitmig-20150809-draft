@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.5.ebuild,v 1.2 2009/04/01 19:01:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.5.ebuild,v 1.3 2009/04/01 20:26:54 ulm Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -53,16 +53,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Texinfo source is already shipped, so separate preparation not needed
-	# and error-prone, see bug 194216
-	epatch "${FILESDIR}"/${PN}-4.2.2-disable_texi_generation.patch
-	# Don't store resource files in deprecated location, reported upstream:
-	# http://sourceforge.net/tracker/index.php?func=detail&aid=1953742&group_id=2055&atid=102055
-	epatch "${FILESDIR}"/${PN}-4.2.3-app-defaults.patch
-	# Disable texhash to prevent sandbox violation, bug 201871
-	epatch "${FILESDIR}"/${PN}-4.2.3-disable-texhash.patch
-	# Support for lua/TikZ terminal
-	epatch "${WORKDIR}"/${P}-lua-term.patch
+	epatch "${FILESDIR}"/${PN}-4.2.2-disable_texi_generation.patch #194216
+	epatch "${FILESDIR}"/${PN}-4.2.3-app-defaults.patch #219323
+	epatch "${FILESDIR}"/${PN}-4.2.3-disable-texhash.patch #201871
+	epatch "${WORKDIR}"/${P}-lua-term.patch #233475
+	epatch "${FILESDIR}"/${P}-configure-pkgconfig.patch #233475 c9
 	# Add Gentoo version identification since the licence requires it
 	epatch "${FILESDIR}"/${PN}-gentoo-version.patch
 

@@ -1,9 +1,11 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.100 2009/04/01 19:01:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.101 2009/04/01 20:26:54 ulm Exp $
 
-  01 Apr 2009; Ulrich Mueller <ulm@gentoo.org> gnuplot-4.2.5.ebuild:
-  Add proper texlive dependency for ifxetex.sty.
+  01 Apr 2009; Ulrich Mueller <ulm@gentoo.org>
+  +files/gnuplot-4.2.5-configure-pkgconfig.patch, gnuplot-4.2.5.ebuild:
+  Add proper texlive dependency for ifxetex.sty. Fix USE="wxwindows -lua"
+  build issue, bug 233475 comment #9; thanks to Ottxor <kleiner_otti@gmx.de>.
 
 *gnuplot-4.2.5 (31 Mar 2009)
 
