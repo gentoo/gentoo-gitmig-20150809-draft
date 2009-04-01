@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de-alt/myspell-de-alt-20060124.ebuild,v 1.2 2009/03/30 14:32:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de-alt/myspell-de-alt-20060124.ebuild,v 1.3 2009/04/01 10:29:34 josejx Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "de,DE,de_DE_1901,German (traditional orthography),de_DE_1901.zip"
@@ -19,7 +19,7 @@ DESCRIPTION="German dictionaries (traditional orthography) for myspell/hunspell"
 HOMEPAGE="http://www.j3e.de/myspell/"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~sh ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sh ~x86"
 IUSE=""
 
 # override myspell.eclass function, to avoid file collision
