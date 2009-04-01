@@ -14,8 +14,6 @@ Totem is movie player for the GNOME desktop. It features a playlist, fullscreen 
 		is playing in fullscreen using <pkg>dev-libs/libgalago</pkg></flag>
     <flag name="lirc">Enable support for controlling Totem with a remote control
 		using <pkg>app-misc/lirc</pkg></flag>
-    <flag name="nsplugin">Build media plugin for Mozilla-based browsers such as
-		<pkg>www-client/mozilla-firefox</pkg></flag>
     <flag name="nvtv">Enable support for TV-output with <pkg>media-tv/nvtv</pkg></flag>
     <flag name="python">Build support for <pkg>dev-lang/python</pkg> plugins</flag>
     <flag name="seamonkey">same as nsplugin description but build against
