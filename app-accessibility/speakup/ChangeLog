@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speakup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.15 2009/02/22 22:30:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.16 2009/04/01 16:52:31 williamh Exp $
+
+  01 Apr 2009; William Hubbs <williamh@gentoo.org>
+  speakup-3.0.3_p200902221539.ebuild:
+  Marked stable x86.
 
   22 Feb 2009; William Hubbs <williamh@gentoo.org>
   -speakup-3.0.3_p20080802.ebuild:
