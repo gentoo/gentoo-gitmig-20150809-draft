@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9622 2009/03/31 22:26:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9623 2009/04/01 12:27:24 ikelos Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -368,12 +368,6 @@ app-emacs/emacs-daemon
 # Masked because it's broken in current form. Several issues, see
 # tracker bug 224951
 dev-ruby/qt4-qtruby
-
-# Mike Auty <ikelos@gentoo.org> (1 Feb 2009)
-# Masked for removal in 30 days.  Old and unmaintained.
-# Vmware herd has no access to the product, and it's
-# for a very old version.  See bug 143232.
-app-emulation/vmware-esx-console
 
 # Jim Ramsay <lack@gentoo.org> (1 Feb 2008)
 # This isn't actually used by anyone, but hopefully will be soon to allow
