@@ -1,0 +1,54 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.confd,v 1.1 2009/04/01 10:12:17 bangert Exp $
+
+# DO NOT MODIFY THIS FILE DIRECTLY! CREATE A COPY AND MODIFY THAT INSTEAD!
+
+# One of the following options must be enabled. The filename specified by
+# FCGI_SOCKET will be suffixed with a number for each child process, for
+# example, fcgi.socket-1. The port specified by FCGI_PORT is the port used
+# by the first child process. If this is set to 1234 then subsequent child
+# processes will use 1235, 1236, etc.
+#
+FCGI_SOCKET=
+FCGI_PORT=1234
+
+# When using FCGI_PORT, connections will only be accepted from the following
+# address. The default is 127.0.0.1. Use 0.0.0.0 to bind to all addresses.
+#
+FCGI_ADDRESS=127.0.0.1
+
+# The path to your FastCGI application. These sometimes carry the .fcgi
+# extension but not always. For PHP, you should usually point this to
+# /usr/bin/php-cgi.
+#
+FCGI_PROGRAM=/path/to/application.fcgi
+
+# The number of child processes to spawn. The default is 1. For PHP
+# applications, set this to 1 and use PHP_FCGI_CHILDREN instead.
+#
+FCGI_CHILDREN=1
+
+# If you want to run your application inside a chroot then specify the
+# directory here. Leave this blank otherwise.
+#
+FCGI_CHROOT=
+
+# The user and group to run your application as. If you do not specify these,
+# the application will be run as root:root.
+#
+FCGI_USER=
+FCGI_GROUP=
+
+# If your application requires additional environment variables, you need to
+# allow them here. Only the variables specified here, plus a few others
+# mentioned in the init script are passed to the application.
+#
+ALLOWED_ENV=""
+
+# PHP ONLY :: These two options are specific to PHP. The first is the number
+# of child processes to spawn. The second is the number of requests to be
+# served by a single PHP process before it is restarted.
+#
+PHP_FCGI_CHILDREN=5
+PHP_FCGI_MAX_REQUESTS=500
