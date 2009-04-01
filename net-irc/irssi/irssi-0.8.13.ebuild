@@ -1,14 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.13_rc1.ebuild,v 1.1 2009/03/22 12:04:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.13.ebuild,v 1.1 2009/04/01 08:19:09 swegener Exp $
 
 inherit perl-module
 
-MY_P="${P/_/-}"
-
 DESCRIPTION="A modular textUI IRC client with IPv6 support"
 HOMEPAGE="http://irssi.org/"
-SRC_URI="http://irssi.org/files/${MY_P}.tar.bz2"
+SRC_URI="http://irssi.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,8 +23,6 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	perl? ( !net-im/silc-client )
 	!net-irc/irssi-svn"
-
-S="${WORKDIR}"/${MY_P}
 
 src_unpack() {
 	unpack ${A}
