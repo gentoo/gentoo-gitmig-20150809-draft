@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.7.1.ebuild,v 1.3 2009/03/25 07:50:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.7.1.ebuild,v 1.4 2009/04/01 21:33:24 loki_val Exp $
 
 EAPI=2
 
@@ -51,12 +51,10 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P%_p*}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.0.3-sndfile-external.patch"
 	epatch "${FILESDIR}/${PN}-2.4-cflags.patch"
+	epatch "${FILESDIR}/${PN}-2.7.1-gcc44.patch"
 }
 
 ardour_use_enable() {
