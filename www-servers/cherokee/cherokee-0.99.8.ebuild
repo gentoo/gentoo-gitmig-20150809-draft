@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.9.0.ebuild,v 1.1 2008/09/28 17:16:23 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.99.8.ebuild,v 1.1 2009/04/01 12:50:05 bass Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -13,33 +13,34 @@ HOMEPAGE="http://www.cherokee-project.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="ipv6 ssl gnutls static pam coverpage threads kernel_linux admin"
+KEYWORDS="~x86"
+IUSE="ipv6 ssl static pam coverpage threads kernel_linux admin debug geoip ldap mysql ffmpeg"
 
-RDEPEND=">=sys-libs/zlib-1.1.4-r1
-	ssl? (
-		gnutls? ( net-libs/gnutls )
-		!gnutls? ( dev-libs/openssl )
-	)
+# lighttpd block should be resolved properly
+# http://bugs.gentoo.org/show_bug.cgi?id=224781
+RDEPEND="
+	!www-servers/lighttpd
+	>=sys-libs/zlib-1.1.4-r1
+	ssl? ( dev-libs/openssl )
 	pam? ( virtual/pam )
-	admin? ( dev-lang/python )"
+	admin? ( dev-lang/python )
+	geoip? ( dev-libs/geoip )
+	ldap? ( net-nds/openldap )
+	mysql? ( virtual/mysql )
+	ffmpeg? ( media-video/ffmpeg )"
 DEPEND="${RDEPEND}"
 
 src_compile() {
 	local myconf
 
-	if use ssl && use gnutls ; then
-		myconf="${myconf} --enable-tls=gnutls"
-	elif use ssl && ! use gnutls ; then
-		myconf="${myconf}  --enable-tls=openssl"
-	else
-		myconf="${myconf} --disable-tls"
-	fi
-
 	if use static ; then
 		myconf="${myconf} --enable-static --enable-static-module=all"
 	else
 		myconf="${myconf} --disable-static"
+	fi
+
+	if use debug ; then
+		myconf="${myconf} --enable-trace"
 	fi
 
 	local os="Unknown"
@@ -54,12 +55,17 @@ src_compile() {
 			os="Linux" ;;
 	esac
 
+	# No options to enable or disable ssl since Cherokee 0.11
 	econf \
 		${myconf} \
 		$(use_enable pam) \
 		$(use_enable ipv6) \
 		$(use_enable threads pthread) \
 		$(use_enable kernel_linux epoll) \
+		$(use_with geoip) \
+		$(use_with ldap) \
+		$(use_with mysql) \
+		$(use_with ffmpeg) \
 		--disable-dependency-tracking \
 		--enable-os-string="Gentoo ${os}" \
 		--with-wwwroot=/var/www/localhost/htdocs \
@@ -73,15 +79,17 @@ src_compile() {
 
 src_install () {
 	emake -j1 DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install || die "make install failed"
-	dodoc AUTHORS ChangeLog TODO
+	dodoc AUTHORS ChangeLog
 
-	newpamd pam.d_cherokee ${PN} || die "newpamd failed"
-	newinitd "${FILESDIR}/${PN}-initd-0.6" ${PN} || die "newinitd failed"
+	use pam && pamd_mimic system-auth cherokee auth account session
+	newinitd "${FILESDIR}/${PN}-initd-0.11" ${PN} || die "newinitd failed"
 
 	dodir /usr/share/doc/${PF}/contrib
 	insinto /usr/share/${PF}/contrib
-	doins contrib/05to06.py
-	doins contrib/06to07.py
+	doins contrib/07to08.py
+	doins contrib/08to09.py
+	doins contrib/09to010.py
+	doins contrib/011to098.py
 
 	keepdir /etc/cherokee/mods-enabled /etc/cherokee/sites-enabled /var/www/localhost/htdocs
 
@@ -93,6 +101,15 @@ src_install () {
 pkg_postinst() {
 	enewgroup cherokee
 	enewuser cherokee -1 -1 /var/www/localhost cherokee
+
+	# check if user/group was defined if not add it
+	gr="/bin/grep -q"
+	ec="/bin/echo"
+	$gr server\!user /etc/cherokee/cherokee.conf ; rtu=$?
+	$gr server\!group /etc/cherokee/cherokee.conf ; rtg=$?
+
+	[[ "x$rtu" == "x1" ]] && $ec server\!user = cherokee >> /etc/cherokee/cherokee.conf
+	[[ "x$rtg" == "x1" ]] && $ec server\!group = cherokee >> /etc/cherokee/cherokee.conf
 
 	if use admin ; then
 		echo  ""
