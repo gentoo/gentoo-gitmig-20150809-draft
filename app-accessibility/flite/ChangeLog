@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/flite
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.25 2008/11/02 07:37:44 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.26 2009/04/01 18:57:37 williamh Exp $
+
+  01 Apr 2009; William Hubbs <williamh@gentoo.org> flite-1.3.ebuild:
+  Stable on x86
 
   02 Nov 2008; Mike Frysinger <vapier@gentoo.org> flite-1.3.ebuild:
   Add ppc64 love for KDE 4.
