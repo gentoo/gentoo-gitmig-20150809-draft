@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.55.ebuild,v 1.1 2009/04/01 06:30:38 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.55.ebuild,v 1.2 2009/04/01 14:57:59 mr_bones_ Exp $
 
 inherit eutils perl-module
 
@@ -160,7 +160,6 @@ src_unpack() {
 
 src_compile() {
 	sed -i "s:\$VERSION = '${PV}':\$VERSION = '${PVR}':" Makefile.PL || die
-
 
 	# latest per-module eclass seems to not allow a real use of pm_echovar,
 	# so instead of the default method below we're forced to skip perl-module_src_compile
