@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/editra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.1 2009/02/21 22:37:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.2 2009/04/01 03:23:38 dirtyepic Exp $
+
+*editra-0.4.75 (01 Apr 2009)
+
+  01 Apr 2009; Ryan Hill <dirtyepic@gentoo.org> +editra-0.4.75.ebuild:
+  Version bump.
+  - new plugin manager dialog
+  - better session support
 
 *editra-0.4.65 (21 Feb 2009)
 
