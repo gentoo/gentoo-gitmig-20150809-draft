@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ooextras
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.9 2008/02/25 03:02:01 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.10 2009/04/01 11:14:56 josejx Exp $
+
+  01 Apr 2009; Joseph Jezak <josejx@gentoo.org> ooextras-20060909.ebuild:
+  Marked ppc stable for bug #258126.
 
   25 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   ooextras-20050216.ebuild, ooextras-20060909.ebuild:
