@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.18-r1.ebuild,v 1.7 2009/03/25 10:22:28 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.18-r1.ebuild,v 1.8 2009/04/01 04:58:49 jer Exp $
 
 RUBY_BUG_145222=yes
 inherit ruby
@@ -13,7 +13,7 @@ SRC_URI="mirror://rubyforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="1.6"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="examples doc"
 
 DEPEND="=x11-libs/fox-1.6*
@@ -48,7 +48,7 @@ src_install() {
 
 		insinto ${rdbase}
 		[ -n "${rdfiles}" ] && doins ${rdfiles}
-		rmdir ${D}${rdbase} 2>/dev/null || true
+		rmdir "${D}"${rdbase} 2>/dev/null || true
 		if [ -d doc -o -d docs ] ; then
 			dohtml -x html -r {doc,docs}/*
 			dohtml -r {doc,docs}/html/*
