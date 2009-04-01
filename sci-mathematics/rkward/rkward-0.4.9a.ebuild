@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.4.9a.ebuild,v 1.3 2008/09/06 15:24:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.4.9a.ebuild,v 1.4 2009/04/01 11:56:42 bicatali Exp $
 
 ARTS_REQUIRED="never"
 
-inherit kde
+inherit eutils kde
 
 DESCRIPTION="An IDE/GUI for the R-project"
 HOMEPAGE="http://rkward.sourceforge.net/"
@@ -17,7 +17,8 @@ IUSE=""
 
 DEPEND="dev-lang/R"
 RDEPEND="${DEPEND}
-	dev-lang/php"
+	dev-lang/php
+	!>=sci-mathematics/rkward-0.5"
 
 need-kde 3
 
