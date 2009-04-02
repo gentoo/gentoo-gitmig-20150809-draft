@@ -1,6 +1,15 @@
 # ChangeLog for app-antivirus/f-prot
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.52 2008/05/30 06:28:15 phreak Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.53 2009/04/02 15:34:16 grobian Exp $
+
+*f-prot-6.0.2 (02 Apr 2009)
+*f-prot-6.0.1 (02 Apr 2009)
+
+  02 Apr 2009; Fabian Groffen <grobian@gentoo.org> metadata.xml,
+  f-prot-4.6.7.ebuild, +f-prot-6.0.1.ebuild, +f-prot-6.0.2.ebuild:
+  Bump. Add version 6.0.1 for ppc and x86-fbsd, 6.0.2 for x86 and amd64.
+  Version 6 features totally different binaries with different options. Bug
+  #189319
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).

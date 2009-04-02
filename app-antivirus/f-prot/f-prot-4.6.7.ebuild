@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.7.ebuild,v 1.4 2007/01/23 15:28:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.7.ebuild,v 1.5 2009/04/02 15:34:16 grobian Exp $
 
 inherit eutils
 
@@ -25,9 +25,7 @@ LICENSE="F-PROT"
 KEYWORDS="amd64 -ppc -sparc x86"
 
 src_install() {
-	cd ${S}
-
-	dobin ${FILESDIR}/f-prot.sh
+	dobin "${FILESDIR}"/f-prot.sh
 	dosym /usr/bin/f-prot.sh /usr/bin/f-prot
 
 	dodir /opt/f-prot/tools /var/tmp/f-prot
