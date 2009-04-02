@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdb/sdb-1.0.2.ebuild,v 1.7 2008/04/30 22:07:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdb/sdb-1.0.2.ebuild,v 1.8 2009/04/02 19:23:15 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="a 2D top-down action game; escape a facility full of walking death machines"
@@ -15,12 +16,10 @@ IUSE=""
 
 DEPEND="virtual/opengl
 	media-libs/libsdl
-	media-libs/sdl-image
+	media-libs/sdl-image[png]
 	media-libs/sdl-mixer"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s:models/:${GAMES_DATADIR}/${PN}/models/:" \
 		-e "s:snd/:${GAMES_DATADIR}/${PN}/snd/:" \
