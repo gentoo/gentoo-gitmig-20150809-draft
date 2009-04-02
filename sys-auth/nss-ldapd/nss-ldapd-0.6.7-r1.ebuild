@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-ldapd/nss-ldapd-0.6.7.ebuild,v 1.3 2009/01/03 22:37:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-ldapd/nss-ldapd-0.6.7-r1.ebuild,v 1.1 2009/04/02 18:50:35 cardoe Exp $
 
 inherit multilib
 
@@ -41,6 +41,8 @@ src_install() {
 	# make an example copy
 	insinto /usr/share/nss-ldapd
 	doins nss-ldapd.conf
+
+	fperms o-r /etc/nss-ldapd.conf
 }
 
 pkg_postinst() {
