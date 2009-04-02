@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.84 2009/03/21 22:13:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.85 2009/04/02 05:06:56 tester Exp $
+
+  02 Apr 2009; Olivier Crête <tester@gentoo.org> devhelp-0.21-r1.ebuild:
+  Stable on amd64, bug #250306
 
 *devhelp-0.21-r1 (21 Mar 2009)
 
