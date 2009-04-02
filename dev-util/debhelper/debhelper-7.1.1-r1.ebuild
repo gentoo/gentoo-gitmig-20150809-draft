@@ -1,6 +1,6 @@
-# Copyright 2008-2008 Gentoo Foundation
+# Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-7.1.1.ebuild,v 1.1 2008/12/18 16:58:40 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/debhelper-7.1.1-r1.ebuild,v 1.1 2009/04/02 16:59:48 yvasilev Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ IUSE="nls linguas_es linguas_fr"
 
 RDEPEND="app-arch/dpkg
 	dev-perl/TimeDate
+	virtual/perl-Getopt-Long
 	dev-lang/perl"
 
 DEPEND="${RDEPEND}

@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/debhelper
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.10 2008/12/18 16:58:40 yvasilev Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.11 2009/04/02 16:59:48 yvasilev Exp $
+
+*debhelper-7.1.1-r1 (02 Apr 2009)
+
+  02 Apr 2009; <yvasilev@gentoo.org> -debhelper-7.1.1.ebuild,
+  +debhelper-7.1.1-r1.ebuild:
+  Added virtual/perl-Getopt-Long to RDEPEND, dependency introduced in 7.1.x
+  (Closes bug #264643).
 
 *debhelper-7.1.1 (18 Dec 2008)
 
