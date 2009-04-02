@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/Babel-0.9.3.ebuild,v 1.1 2008/07/23 18:06:08 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/Babel-0.9.3.ebuild,v 1.2 2009/04/02 15:51:05 armin76 Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.edgewall.com/pub/babel/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE=""
 
 DEPEND=""

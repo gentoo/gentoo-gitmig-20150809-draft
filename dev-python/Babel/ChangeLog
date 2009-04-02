@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Babel
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.4 2008/11/02 06:57:46 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.5 2009/04/02 15:51:05 armin76 Exp $
+
+  02 Apr 2009; Raúl Porcel <armin76@gentoo.org> Babel-0.9.3.ebuild:
+  Add ~ia64 wrt #263948
 
   02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:

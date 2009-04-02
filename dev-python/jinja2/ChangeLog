@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.4 2009/01/24 17:03:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.5 2009/04/02 15:52:05 armin76 Exp $
+
+  02 Apr 2009; Raúl Porcel <armin76@gentoo.org> jinja2-2.1.1.ebuild:
+  Add ~ia64 wrt #263948
 
 *jinja2-2.1.1 (24 Jan 2009)
 
