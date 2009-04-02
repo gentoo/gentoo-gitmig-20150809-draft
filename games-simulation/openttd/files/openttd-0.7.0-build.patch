@@ -1,0 +1,75 @@
+--- config.lib	2009-04-01 16:36:05.000000000 +0200
++++ config.lib.new	2009-04-02 13:08:50.000000000 +0200
+@@ -1389,7 +1389,8 @@
+ 		CFLAGS="$CFLAGS -DWITH_SHARED_DIR -DSHARED_DIR=\\\\\"$shared_dir\\\\\""
+ 	fi
+ 
+-	CFLAGS="$CFLAGS -DGLOBAL_DATA_DIR=\\\\\"$prefix_dir/$data_dir\\\\\""
++	[[ $data_dir = "/"* ]] || data_dir="$prefix_dir/$data_dir"
++	CFLAGS="$CFLAGS -DGLOBAL_DATA_DIR=\\\\\"$data_dir\\\\\""
+ 
+ 	log 1 "using CFLAGS... $CFLAGS $CC_CFLAGS"
+ 	log 1 "using LDFLAGS... $LIBS $LDFLAGS"
+@@ -2532,6 +2533,16 @@
+ 
+ 	SRC_OBJS_DIR="$BASE_SRC_OBJS_DIR/$OBJS_SUBDIR"
+ 
++	# we have to replace all prefix/x_dir with x_dir 
++	# and append prefix only when needed
++	[[ $data_dir = "/"* ]] || data_dir="$prefix_dir/$data_dir"
++	[[ $binary_dir = "/"* ]] || binary_dir="$prefix_dir/$binary_dir"
++	[[ $doc_dir = "/"* ]] || doc_dir="$prefix_dir/$doc_dir"
++	[[ $man_dir = "/"* ]] || man_dir="$prefix_dir/$man_dir"
++	[[ $icon_dir = "/"* ]] || icon_dir="$prefix_dir/$icon_dir"
++	[[ $icon_theme_dir = "/"* ]] || icon_theme_dir="$prefix_dir/$icon_theme_dir"
++	[[ $menu_dir = "/"* ]] || menu_dir="$prefix_dir/$menu_dir"
++
+ 	# All the data needed to compile a single target
+ 	#  Make sure if you compile multiple targets to
+ 	#  use multiple OBJS_DIR, because all in-between
+@@ -2561,12 +2572,12 @@
+ 		s~!!OSXAPP!!~$OSXAPP~g;
+ 		s~!!LANG_DIR!!~$LANG_DIR~g;
+ 		s~!!TTD!!~$TTD~g;
+-		s~!!BINARY_DIR!!~$prefix_dir/$binary_dir~g;
+-		s~!!DATA_DIR!!~$prefix_dir/$data_dir~g;
+-		s~!!DOC_DIR!!~$prefix_dir/$doc_dir~g;
+-		s~!!MAN_DIR!!~$prefix_dir/$man_dir~g;
+-		s~!!ICON_DIR!!~$prefix_dir/$icon_dir~g;
+-		s~!!ICON_THEME_DIR!!~$prefix_dir/$icon_theme_dir~g;
++		s~!!BINARY_DIR!!~$binary_dir~g;
++		s~!!DATA_DIR!!~$data_dir~g;
++		s~!!DOC_DIR!!~$doc_dir~g;
++		s~!!MAN_DIR!!~$man_dir~g;
++		s~!!ICON_DIR!!~$icon_dir~g;
++		s~!!ICON_THEME_DIR!!~$icon_theme_dir~g;
+ 		s~!!PERSONAL_DIR!!~$personal_dir~g;
+ 		s~!!SHARED_DIR!!~$shared_dir~g;
+ 		s~!!INSTALL_DIR!!~$install_dir~g;
+@@ -2601,7 +2612,7 @@
+ 
+ 	if [ "$icon_theme_dir" != "" ]; then
+ 		SRC_REPLACE="$SRC_REPLACE
+-			s#!!ICON_THEME_DIR!!#$prefix_dir/$icon_theme_dir#g;
++			s#!!ICON_THEME_DIR!!#$icon_theme_dir#g;
+ 		"
+ 	else
+ 		SRC_REPLACE="$SRC_REPLACE
+@@ -2611,7 +2622,7 @@
+ 
+ 	if [ "$man_dir" != "" ]; then
+ 		SRC_REPLACE="$SRC_REPLACE
+-			s#!!MAN_DIR!!#$prefix_dir/$man_dir#g;
++			s#!!MAN_DIR!!#$man_dir#g;
+ 		"
+ 	else
+ 		SRC_REPLACE="$SRC_REPLACE
+@@ -2621,7 +2632,7 @@
+ 
+ 	if [ "$menu_dir" != "" ]; then
+ 		SRC_REPLACE="$SRC_REPLACE
+-			s#!!MENU_DIR!!#$prefix_dir/$menu_dir#g;
++			s#!!MENU_DIR!!#$menu_dir#g;
+ 		"
+ 	else
+ 		SRC_REPLACE="$SRC_REPLACE
