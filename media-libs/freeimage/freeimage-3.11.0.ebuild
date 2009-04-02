@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.11.0.ebuild,v 1.3 2009/04/01 18:31:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.11.0.ebuild,v 1.4 2009/04/02 23:07:43 nyhm Exp $
 
 inherit toolchain-funcs multilib
 
@@ -30,7 +30,7 @@ src_unpack() {
 		-e "/^AR = /s:ar:$(tc-getAR):" \
 		-e "/^INCDIR = /s:/usr/include:${D}/usr/include:" \
 		-e "/^INSTALLDIR = /s:/usr/lib:${D}/usr/$(get_libdir):" \
-		-e '/^COMPILERFLAGS =/s:-O3::' \
+		-e '/^COMPILERFLAGS =/s:-O3:-fPIC:' \
 		-e "/\$(CC) -s /s: -s : ${LDFLAGS} :" \
 		Makefile.{gnu,fip} \
 		|| die "sed failed"

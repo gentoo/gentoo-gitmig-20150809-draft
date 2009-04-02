@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeimage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/ChangeLog,v 1.7 2009/04/01 18:31:01 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/ChangeLog,v 1.8 2009/04/02 23:07:43 nyhm Exp $
+
+  02 Apr 2009; Tristan Heaven <nyhm@gentoo.org> freeimage-3.11.0.ebuild:
+  Build with -fPIC, bug #252766
 
   01 Apr 2009; Joseph Jezak <josejx@gentoo.org> freeimage-3.11.0.ebuild:
   Marked ppc stable for bug #252766.
