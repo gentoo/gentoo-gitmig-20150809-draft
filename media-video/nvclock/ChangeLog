@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvclock
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.28 2009/04/02 06:02:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.29 2009/04/02 07:29:22 jer Exp $
+
+*nvclock-0.8_beta4-r2 (02 Apr 2009)
+
+  02 Apr 2009; Jeroen Roovers <jer@gentoo.org>
+  files/nvclock-0.8_beta4-flags.patch, -nvclock-0.8_beta4-r1.ebuild,
+  +nvclock-0.8_beta4-r2.ebuild:
+  Use emake and econf (but with a --bindir= hack because ./configure sucks).
 
 *nvclock-0.8_beta4-r1 (02 Apr 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta4-r1.ebuild,v 1.1 2009/04/02 06:02:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta4-r2.ebuild,v 1.1 2009/04/02 07:29:22 jer Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -41,25 +41,27 @@ src_compile() {
 
 	local myconf
 
+	myconf="--bindir=/usr/bin" 
+
 	# Qt3 package doesn't install symlinks from ${QTDIR}/lib64 to ${QTDIR}/lib
 	use amd64 && myconf="${myconf} --with-qt-libs=${QTDIR}/lib64"
 
-	./configure $(use_enable qt3 qt) $(use_enable gtk) ${myconf} || die
+	econf $(use_enable qt3 qt) $(use_enable gtk) ${myconf} || die
 
-	make || die
+	emake -j1 || die
 }
 
 src_install() {
 	dodir /usr/bin
-	einstall || die
-	dodoc AUTHORS README
+	emake DESTDIR="${D}" install || die
+	#dodoc AUTHORS README
 
 	newinitd "${FILESDIR}"/nvclock_initd nvclock
 	newconfd "${FILESDIR}"/nvclock_confd nvclock
 
-	insinto /usr/share/applications
-	doins nvclock.desktop
-	validate_desktop_entries /usr/share/applications/nvclock.desktop
+	#insinto /usr/share/applications
+	#doins nvclock.desktop
+	#validate_desktop_entries /usr/share/applications/nvclock.desktop
 }
 
 pkg_postinst() {
