@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.174 2009/04/02 11:50:32 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.175 2009/04/02 17:01:01 jer Exp $
+
+  02 Apr 2009; Jeroen Roovers <jer@gentoo.org> xpdf-3.02-r2.ebuild:
+  Stable for HPPA too.
 
   02 Apr 2009; Ferris McCormick <fmccor@gentoo.org> xpdf-3.02-r2.ebuild:
   Sparc stable --- works fine for me.
