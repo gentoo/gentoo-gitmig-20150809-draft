@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta4-r2.ebuild,v 1.2 2009/04/02 07:30:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta4-r2.ebuild,v 1.3 2009/04/02 07:41:26 jer Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -29,6 +29,9 @@ src_unpack() {
 
 	# Bug #240846:
 	epatch "${FILESDIR}"/${P}-flags.patch
+
+	sed -i Makefile.in -e "s:/share/doc/nvclock:/share/doc/${PF}:g" || \
+		die "sed failed"
 
 	eautoreconf
 }
