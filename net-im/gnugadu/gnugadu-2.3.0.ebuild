@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.8 2008/05/18 13:52:21 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.3.0.ebuild,v 1.9 2009/04/02 11:49:28 spock Exp $
 
 IUSE="debug dbus tlen esd oss xosd arts jabber perl spell gnutls"
 
@@ -24,7 +24,7 @@ RDEPEND="net-libs/libgadu
 	arts? ( >=kde-base/arts-0.9.5 )
 	esd? ( media-sound/esound )
 	tlen? ( net-libs/libtlen )
-	spell? ( app-text/gtkspell )
+	spell? ( app-text/gtkspell app-text/aspell )
 	gnutls? ( net-libs/gnutls )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	x11-libs/libXScrnSaver"
