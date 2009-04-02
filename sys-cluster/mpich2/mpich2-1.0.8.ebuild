@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.4 2009/02/12 03:05:39 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.5 2009/04/02 18:35:45 jsbronder Exp $
 
 EAPI=1
 inherit python eutils fortran
@@ -193,6 +193,8 @@ src_install() {
 	sed -i "s,@MPD_CONF_FILE_DIR@,${MPD_CONF_FILE_DIR}," \
 		"${T}"/${PN}.envd
 
+	ln -s ../$(get_libdir)/python${PYVER}/site-packages/mpich2/mpdgdbdrv.py \
+		"${D}"/usr/bin/mpdgdbdrv.py
 	newenvd "${FILESDIR}"/${PN}.envd 25mpich2
 }
 
