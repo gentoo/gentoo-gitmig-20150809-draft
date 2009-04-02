@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.53 2009/04/02 01:39:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.54 2009/04/02 01:45:01 robbat2 Exp $
+
+*dnetc-2.9103.509 (02 Apr 2009)
+
+  02 Apr 2009; Robin H. Johnson <robbat2@gentoo.org>
+  -dnetc-2.9101.509.ebuild, +dnetc-2.9103.509.ebuild:
+  Typod the version number.
 
 *dnetc-2.9101.509 (02 Apr 2009)
 
