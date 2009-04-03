@@ -1,0 +1,11 @@
+--- src/tcp.cc	2003-11-08 23:00:00.000000000 +0000
++++ src/tcp.cc	2009-03-11 22:26:49.000000000 +0000
+@@ -1176,7 +1176,7 @@
+     this->size = 0;
+ 
+     if ((outfile_fd =
+-             open(name, O_CREAT | O_TRUNC | O_RDWR | O_BINARY)) == -1) {
++             open(name, O_CREAT | O_TRUNC | O_RDWR | O_BINARY, 0644)) == -1) {
+         this->error = E_BAD_LOCALFILE;
+         return (FALSE);
+     }

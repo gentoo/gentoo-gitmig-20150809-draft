@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-1.11.ebuild,v 1.1 2009/03/08 03:00:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/pftpfxp-1.11.ebuild,v 1.2 2009/04/03 15:17:32 patrick Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -15,6 +15,10 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ssl"
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )"
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "$FILESDIR/1.11-gcc43.patch"
+}
 
 src_configure() {
 	#fix permissions of configure script
