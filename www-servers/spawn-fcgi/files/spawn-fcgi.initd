@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.1 2009/04/01 10:12:17 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.2 2009/04/03 18:18:13 bangert Exp $
 
 PROGNAME=${SVCNAME/spawn\-fcgi./}
 SPAWNFCGI=/usr/bin/spawn-fcgi
@@ -26,7 +26,7 @@ start() {
 	fi
 
 	if [[ ! -z "${FCGI_SOCKET}" ]] && [[ ! -z "${FCGI_PORT}" ]]; then
-		eerror "Only one of both must be defined:"
+		eerror "Only one of the two may be defined:"
 		eerror "  FCGI_SOCKET=${FCGI_SOCKET}"
 		eerror "  FCGI_PORT=${FCGI_PORT}"
 		return 1
@@ -70,10 +70,10 @@ start() {
 		local P
 		P=${PIDFILE}-${X}.pid
 		[[ -n "${FCGI_SOCKET}" ]] && SOCKET_OPTION="-s ${FCGI_SOCKET}-${X}"
-		[[ -n "${FCGI_PORT}" ]] && PORT_OPTION="-a ${FCGI_ADDRESS} -p $((${FCGI_PORT} + ${X} - 1))"
+		[[ -n "${FCGI_PORT}" ]] && INET_OPTION="-a ${FCGI_ADDRESS} -p $((${FCGI_PORT} + ${X} - 1))"
 
 		start-stop-daemon --start --pidfile ${P} ${E} --exec ${SPAWNFCGI} -- \
-			${SOCKET_OPTION} ${PORT_OPTION} -f ${FCGI_PROGRAM} -P ${P} ${OPTIONS}
+			${SOCKET_OPTION} ${INET_OPTION} -P ${P} ${OPTIONS} -- ${FCGI_PROGRAM}
 		RETVAL=$?
 		
 		# Stop on error. Don't want to spawn a mess!

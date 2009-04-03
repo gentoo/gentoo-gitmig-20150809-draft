@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/spawn-fcgi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.1 2009/04/01 10:12:17 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.2 2009/04/03 18:18:12 bangert Exp $
+
+  03 Apr 2009; Thilo Bangert <bangert@gentoo.org> files/spawn-fcgi.confd,
+  files/spawn-fcgi.initd:
+  improve documentation in conf.d - use a different exec approach in init.d
 
 *spawn-fcgi-1.6.1 (01 Apr 2009)
 
