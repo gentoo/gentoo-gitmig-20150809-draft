@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20090215.ebuild,v 1.1 2009/03/27 15:31:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20090215.ebuild,v 1.2 2009/04/03 02:38:39 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -37,9 +37,9 @@ src_unpack() {
 	unpack ./bullet-2.73-sp1.tgz
 }
 
-xsrc_prepare() {
+src_prepare() {
 	sed -i \
-		-e '/-O1/ s/\(\[.*\]\)/[]/' \
+		-e "s/'-O1',\?//" \
 		SConstruct \
 		|| die "sed failed"
 }
