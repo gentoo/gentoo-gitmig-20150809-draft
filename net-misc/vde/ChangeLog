@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.18 2009/03/24 14:21:12 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.19 2009/04/03 17:17:21 jmbsvicetto Exp $
+
+  03 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Added myself to vde metadata.xml.
 
   24 Mar 2009; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
   Taking maintainership for genstef
