@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.193 2009/04/02 11:28:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.194 2009/04/03 15:03:25 chainsaw Exp $
+
+*asterisk-1.2.32 (03 Apr 2009)
+
+  03 Apr 2009; <chainsaw@gentoo.org>
+  +files/1.2.0/asterisk-1.2.32-comma-is-not-pipe.diff,
+  +files/1.2.0/asterisk-1.2.32-svn89254.diff, +asterisk-1.2.32.ebuild:
+  Version bump for security bug #237476. BRIstuff, which already seemed
+  fragile to me just plain broke this time. Unless you include a patch to
+  make it work, or link to something newer then 0.3.0-PRE-1y-w, a bug report
+  will not be accepted.
 
 *asterisk-1.6.0.7 (02 Apr 2009)
 
