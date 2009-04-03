@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.24.3.1.ebuild,v 1.7 2009/03/19 15:56:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.24.3.1.ebuild,v 1.8 2009/04/03 15:48:31 josejx Exp $
 
 inherit gnome2 python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="acpi apm doc gnome gstreamer hal ipv6"
 
 # TODO: configure says python stuff is optional
