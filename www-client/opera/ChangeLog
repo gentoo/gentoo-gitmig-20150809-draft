@@ -1,6 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.335 2009/03/20 19:42:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.336 2009/04/03 19:00:53 jer Exp $
+
+*opera-10.00_pre4268 (03 Apr 2009)
+
+  03 Apr 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/opera-10.00-pluginpath.patch,
+  +files/opera-10.00-pluginpath-fbsd.patch, +opera-10.00_pre4268.ebuild:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/2009/04/03/turbo-in-10>.
 
   20 Mar 2009; Jeroen Roovers <jer@gentoo.org> opera-9.27.ebuild,
   opera-9.64.ebuild, opera-10.00_pre4205.ebuild, opera-10.00_pre4214.ebuild:
