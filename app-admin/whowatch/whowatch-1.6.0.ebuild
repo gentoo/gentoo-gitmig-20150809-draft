@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.6.0.ebuild,v 1.8 2009/04/03 16:07:15 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.6.0.ebuild,v 1.9 2009/04/03 23:50:02 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,6 +16,7 @@ KEYWORDS="~alpha amd64 hppa ppc sparc ~x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
