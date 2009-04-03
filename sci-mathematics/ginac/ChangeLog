@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.24 2009/03/27 22:48:22 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.25 2009/04/03 09:44:58 bicatali Exp $
+
+*ginac-1.5.1 (03 Apr 2009)
+
+  03 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/ginac-1.4.1-gcc4.3.patch, +files/ginac-1.5.1-lexer_cpp.patch,
+  +files/ginac-1.5.1-pkgconfig.patch, +ginac-1.5.1.ebuild:
+  Version bump
 
   27 Mar 2009; Ferris McCormick <fmccor@gentoo.org> ginac-1.4.3.ebuild:
   Sparc stable, dependency for bug #245707.
