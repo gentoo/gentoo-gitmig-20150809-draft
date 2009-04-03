@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.237 2009/04/01 09:49:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.238 2009/04/03 15:50:17 josejx Exp $
+
+  03 Apr 2009; Joseph Jezak <josejx@gentoo.org> totem-2.24.3.ebuild:
+  Marked ppc/ppc64 stable for bug #262744.
 
   01 Apr 2009; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   remove USE=nsplugin description, as the global description has been
