@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/driconf
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.16 2008/01/31 04:36:40 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/ChangeLog,v 1.17 2009/04/03 14:30:56 ranger Exp $
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org> driconf-0.9.1.ebuild:
+  Marking driconf-0.9.1 ppc64 stable for bug 251832
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -driconf-0.2.7.ebuild:
