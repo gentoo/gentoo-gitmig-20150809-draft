@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/p3scan-2.3.2.ebuild,v 1.1 2007/04/09 20:42:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/p3scan-2.3.2.ebuild,v 1.2 2009/04/03 15:52:44 patrick Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -13,8 +15,12 @@ RDEPEND="net-firewall/iptables"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
+
+src_prepare() {
+	epatch "${FILESDIR}/p3scan-ocreat.patch"
+}
 
 src_compile() {
 	emake || die
