@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.195 2009/04/03 15:16:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.196 2009/04/03 15:23:44 chainsaw Exp $
+
+  03 Apr 2009; <chainsaw@gentoo.org>
+  -files/1.6.0/asterisk-1.6.0.6-dahdiras.patch,
+  -files/1.6.0/asterisk-1.6.0.6-sip-use-specified-port.patch,
+  -files/1.6.0/asterisk-1.6.0.6-socket-details.patch,
+  -files/1.6.0/asterisk-1.6.0.6-spandsp-api-change.patch,
+  -asterisk-1.6.0.6.ebuild:
+  Remove vulnerable 1.6 branch ebuild and now obsolete patches.
 
 *asterisk-1.6.0.8 (03 Apr 2009)
 
