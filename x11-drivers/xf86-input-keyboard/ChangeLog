@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-keyboard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-keyboard/ChangeLog,v 1.55 2009/01/13 03:00:24 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-keyboard/ChangeLog,v 1.56 2009/04/03 13:34:38 ranger Exp $
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking xf86-input-keyboard-1.3.2 ppc stable for bug 251832
 
 *xf86-input-keyboard-1.3.2 (13 Jan 2009)
 
