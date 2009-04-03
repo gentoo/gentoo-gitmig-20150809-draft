@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/iprutils
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.27 2008/10/20 20:15:27 ranger Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/ChangeLog,v 1.28 2009/04/03 13:44:25 ranger Exp $
+
+*iprutils-2.2.13 (03 Apr 2009)
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org> iprutils-2.2.11.ebuild,
+  +iprutils-2.2.13.ebuild:
+  Adding iprutils-2.2.13 and stablizing 2.2.13
 
 *iprutils-2.2.11 (20 Oct 2008)
 
