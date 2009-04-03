@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/twm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.35 2008/03/10 02:46:29 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.36 2009/04/03 14:00:05 ranger Exp $
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org> twm-1.0.4.ebuild:
+  Marking twm-1.0.4 ppc stable for bug 251832
 
 *twm-1.0.4 (10 Mar 2008)
 
