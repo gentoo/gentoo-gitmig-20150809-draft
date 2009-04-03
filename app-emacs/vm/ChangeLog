@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vm
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.64 2009/04/03 17:15:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.65 2009/04/03 22:42:48 tcunha Exp $
+
+  03 Apr 2009; Tiago Cunha <tcunha@gentoo.org> vm-8.0.12-r2.ebuild:
+  stable amd64, bug 256837
 
   03 Apr 2009; Ulrich Mueller <ulm@gentoo.org> -vm-8.0.12-r1.ebuild:
   Remove intermediate revision.
