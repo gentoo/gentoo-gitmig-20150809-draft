@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.4.2.ebuild,v 1.3 2008/10/16 10:11:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.4.2.ebuild,v 1.4 2009/04/03 17:32:59 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 MY_PN=Nexuiz
@@ -55,27 +56,34 @@ src_unpack() {
 		cd "${WORKDIR}"/${MY_PN}
 		unpack ${MAPS}.zip
 	fi
+}
 
-	cd "${S}"
+src_prepare() {
 	# Make the game automatically look in the correct data directory
-	sed -i "s:gamedirname1:\"${PN}\":" fs.c \
-		|| die "sed fs.c failed"
+	sed -i \
+		-e "s:gamedirname1:\"${PN}\":" \
+		fs.c \
+		|| die "sed failed"
 
 	sed -i \
 		-e "/^CC=/s:gcc:$(tc-getCC):" \
 		-e "s:-O2:${CFLAGS}:" \
 		-e "/-lm/s:$: ${LDFLAGS}:" \
-		-e 's/strip/true/' \
+		-e '/^STRIP/s/strip/true/' \
 		makefile.inc \
-		|| die "sed makefile.inc failed"
+		|| die "sed failed"
 
 	# This is the right dir, so that e.g. "darkplaces -game nexuiz" will work
-	sed -i "s:ifdef DP_.*:DP_FS_BASEDIR=${GAMES_DATADIR}/quake1\n&:" makefile \
-		|| die "sed makefile failed"
+	sed -i \
+		-e "s:ifdef DP_.*:DP_FS_BASEDIR=${GAMES_DATADIR}/quake1\n&:" \
+		makefile \
+		|| die "sed failed"
 
 	if ! use alsa ; then
-		sed -i "/DEFAULT_SNDAPI/s:ALSA:OSS:" makefile \
-			|| die "sed makefile failed"
+		sed -i \
+			-e "/DEFAULT_SNDAPI/s:ALSA:OSS:" \
+			makefile \
+			|| die "sed failed"
 	fi
 }
 
@@ -86,7 +94,6 @@ src_compile() {
 			emake sdl-${PN} || die "emake sdl-${PN} failed"
 		fi
 	fi
-
 	if use dedicated ; then
 		emake sv-${PN} || die "emake sv-${PN} failed"
 	fi
