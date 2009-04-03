@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.37 2009/02/19 19:33:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.38 2009/04/03 10:59:31 jmbsvicetto Exp $
+
+*compiz-0.8.2 (03 Apr 2009)
+
+  03 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compiz-0.8.2.ebuild:
+  Bumped compiz to the 0.8.2 release.
 
   19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org> -compiz-0.7.8.ebuild:
   Drop compiz-0.7.8 since it doesnt support kde 4.2
