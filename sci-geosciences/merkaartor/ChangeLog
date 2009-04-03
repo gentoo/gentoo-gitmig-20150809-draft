@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/merkaartor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.13 2009/03/08 20:26:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.14 2009/04/03 10:37:40 hanno Exp $
+
+*merkaartor-0.13.1 (03 Apr 2009)
+
+  03 Apr 2009; Hanno Boeck <hanno@gentoo.org> metadata.xml,
+  +merkaartor-0.13.1.ebuild, merkaartor-9999.ebuild:
+  Version bump, add more use-flags, sync with live svn ebuild.
 
   08 Mar 2009; Hanno Boeck <hanno@gentoo.org> merkaartor-9999.ebuild:
   Sync live with versioned ebuild.

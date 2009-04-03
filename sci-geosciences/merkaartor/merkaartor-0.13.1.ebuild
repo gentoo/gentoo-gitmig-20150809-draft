@@ -1,19 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.6 2009/04/03 10:37:40 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-0.13.1.ebuild,v 1.1 2009/04/03 10:37:40 hanno Exp $
 
 EAPI="1"
 
-inherit eutils qt4 subversion
-
-ESVN_REPO_URI="http://svn.openstreetmap.org/applications/editors/merkaartor/"
+inherit eutils qt4
 
 DESCRIPTION="A Qt4 based map editor for the openstreetmap.org project"
 HOMEPAGE="http://www.merkaartor.org"
-SRC_URI=""
+SRC_URI="http://www.merkaartor.org/downloads/source/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="nls webkit exif proj gdal"
 DEPEND="x11-libs/qt-gui:4
 	x11-libs/qt-svg:4
@@ -23,7 +21,7 @@ DEPEND="x11-libs/qt-gui:4
 	gdal? ( sci-libs/gdal )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${P}"
 
 src_compile() {
 	local myconf
