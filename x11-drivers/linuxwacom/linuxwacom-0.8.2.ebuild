@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.8.2.ebuild,v 1.2 2009/01/06 07:25:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.8.2.ebuild,v 1.3 2009/04/03 13:32:17 ranger Exp $
 
 inherit eutils autotools toolchain-funcs linux-mod
 
@@ -12,7 +12,7 @@ IUSE="gtk tcl tk usb module"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ppc ~ppc64 ~x86"
 
 RDEPEND="x11-proto/inputproto
 	x11-base/xorg-server
