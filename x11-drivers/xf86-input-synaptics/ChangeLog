@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.20 2009/03/20 14:47:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.21 2009/04/03 13:35:29 ranger Exp $
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking xf86-input-synaptics-1.0.0 ppc stable for bug 251832
 
   20 Mar 2009; <chainsaw@gentoo.org> -files/0.99.2-fdi-comments.patch,
   -files/synaptics-fix-xinerama.patch,
