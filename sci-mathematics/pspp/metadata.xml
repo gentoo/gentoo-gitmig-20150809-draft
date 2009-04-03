@@ -10,7 +10,4 @@
   statistical procedure support is limited but growing.	
   PSPP has both text-based and a GTK+ based graphical user interfaces.
 </longdescription>
-<use>
-  <flag name='psppire'>Enable GTK psppire GUI</flag>
-</use>
 </pkgmetadata>
