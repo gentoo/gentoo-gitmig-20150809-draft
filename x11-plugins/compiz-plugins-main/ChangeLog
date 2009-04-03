@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/compiz-plugins-main
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.1 2009/04/03 11:10:31 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/ChangeLog,v 1.2 2009/04/03 16:57:43 jmbsvicetto Exp $
+
+  03 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +files/compiz-plugins-main-0.8.2-xdamage-race.patch:
+  Added missing patch.
 
 *compiz-plugins-main-0.8.2 (03 Apr 2009)
 
