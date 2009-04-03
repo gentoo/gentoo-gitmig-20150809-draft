@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xvinfo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.26 2008/09/24 10:27:10 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.27 2009/04/03 13:30:38 ranger Exp $
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org> xvinfo-1.0.2.ebuild:
+  Marking xvinfo-1.0.2 ppc stable for bug 251832
 
   24 Sep 2008; Alexis Ballier <aballier@gentoo.org> xvinfo-1.0.2.ebuild:
   keyword ~x86-fbsd
