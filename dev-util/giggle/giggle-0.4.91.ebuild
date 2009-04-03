@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/giggle/giggle-0.4.91.ebuild,v 1.1 2009/04/03 09:49:28 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/giggle/giggle-0.4.91.ebuild,v 1.2 2009/04/03 12:36:50 ikelos Exp $
 
 EAPI="1"
 
@@ -23,7 +23,8 @@ RDEPEND=">=dev-util/git-1.4.4.3
 DEPEND="${RDEPEND}
 		  sys-devel/gettext
 		>=dev-util/pkgconfig-0.15
-		>=dev-util/intltool-0.35"
+		>=dev-util/intltool-0.35
+		>=sys-devel/libtool-2"
 
 G2CONF="$(use_enable eds evolution-data-server)"
 
