@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libtomcrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.35 2009/03/26 19:57:31 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/ChangeLog,v 1.36 2009/04/03 19:33:54 tommy Exp $
+
+  03 Apr 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  libtomcrypt-1.17-r3.ebuild:
+  Add version dep (fixes bug 264581)
 
   22 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
