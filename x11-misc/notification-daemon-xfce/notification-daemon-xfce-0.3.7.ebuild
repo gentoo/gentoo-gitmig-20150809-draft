@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/notification-daemon-xfce-0.3.7.ebuild,v 1.7 2009/03/14 12:19:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/notification-daemon-xfce-0.3.7.ebuild,v 1.8 2009/04/03 11:05:20 chainsaw Exp $
 
 EAPI=1
 
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
 	dev-util/xfce4-dev-tools
-	!x11-misc/notification-daemon"
+	!x11-misc/notification-daemon
+	!x11-misc/xfce4-notifyd"
 
 src_unpack() {
 	unpack ${A}

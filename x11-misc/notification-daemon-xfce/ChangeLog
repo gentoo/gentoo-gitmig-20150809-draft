@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon-xfce
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/ChangeLog,v 1.7 2009/03/14 12:19:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/ChangeLog,v 1.8 2009/04/03 11:05:20 chainsaw Exp $
+
+  03 Apr 2009; <chainsaw@gentoo.org> notification-daemon-xfce-0.3.7.ebuild:
+  Block x11-misc/xfce4-notifyd as it provides the same D-Bus service. A
+  prerequisite to resolving bug #260686 by Joshua Rich.
 
   14 Mar 2009; Peter Volkov <pva@gentoo.org>
   notification-daemon-xfce-0.3.7.ebuild:
