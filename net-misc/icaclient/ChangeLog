@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.61 2009/03/30 17:20:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.62 2009/04/03 23:59:40 fauli Exp $
+
+  03 Apr 2009; Christian Faulhammer <fauli@gentoo.org>
+  icaclient-10.6-r4.ebuild, icaclient-11.0.ebuild:
+  add media-fonts/font-adobe-100dpi as dependency, as both plugin and front
+  end wont work. This fixes bug 264660 by Erik Quaeghebeur <equaeghe AT
+  nospammail DOT net>
 
 *icaclient-11.0 (30 Mar 2009)
 

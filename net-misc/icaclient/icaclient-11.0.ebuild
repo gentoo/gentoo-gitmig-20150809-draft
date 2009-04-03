@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0.ebuild,v 1.1 2009/03/30 17:20:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0.ebuild,v 1.2 2009/04/03 23:59:40 fauli Exp $
 
 EAPI=1
 
@@ -31,6 +31,7 @@ QA_EXECSTACK="opt/ICAClient/wfica.bin
 	opt/ICAClient/libctxssl.so"
 
 RDEPEND="x11-terms/xterm
+	media-fonts/font-adobe-100dpi
 	x86? (
 		x11-libs/libXp
 		x11-libs/libXaw
