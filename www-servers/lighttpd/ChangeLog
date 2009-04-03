@@ -1,6 +1,37 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.195 2009/04/03 18:46:53 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.196 2009/04/03 18:58:12 bangert Exp $
+
+  03 Apr 2009; Thilo Bangert <bangert@gentoo.org>
+  -files/1.4.16/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  -files/1.4.18/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  -files/1.4.18-r1/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  -files/1.4.18-r2/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  -files/1.4.18-r3/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  -files/1.4.19/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  -files/1.4.19-r1/03_all_lighttpd-1.4.11-errorlog-pipe.diff,
+  -files/1.4.16/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  -files/1.4.18-r2/05_all_lighttpd-fix-DoS.diff,
+  -files/1.4.18-r3/05_all_lighttpd-fix-DoS.diff,
+  -files/1.4.18/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  -files/1.4.18-r1/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  -files/1.4.18-r3/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  -files/1.4.19/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  -files/1.4.19-r1/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  -files/1.4.18-r2/06_all_lighttpd-1.4.18-mod_cgi_source_disclosure-changese
+  t-211956.diff,
+  -files/1.4.18-r3/06_all_lighttpd-1.4.18-mod_cgi_source_disclosure-changese
+  t-211956.diff,
+  -files/1.4.18-r3/07_all_lighttpd-1.4.18-mod_userdir-information_disclosure
+  .diff, -files/1.4.18-r1/05_all_lighttpd-fix-DoS.diff,
+  -files/1.4.18-r2/04_all_lighttpd-1.4.13-deprecated-ldap-api.diff,
+  -files/1.4.19-r1/06_all_lighttpd-1.4.19-closing_foreign_ssl_connections-do
+  s.diff,
+  -files/1.4.19/05_all_lighttpd-1.4.19-force_lowercase_filenames_in_mod_user
+  dir.diff,
+  -files/1.4.19-r1/05_all_lighttpd-1.4.19-force_lowercase_filenames_in_mod_u
+  serdir.diff, -lighttpd-1.4.19-r1.ebuild:
+  remove obsolete ebuilds/files
 
   03 Apr 2009; Thilo Bangert <bangert@gentoo.org>
   files/conf/mime-types.conf:
