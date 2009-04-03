@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xtermcontrol
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.21 2008/06/21 11:05:53 drac Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.22 2009/04/03 13:54:37 ranger Exp $
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org> xtermcontrol-2.9.ebuild:
+  Marking xtermcontrol-2.9 ppc stable for bug 251832
 
   21 Jun 2008; Samuli Suominen <drac@gentoo.org> -xtermcontrol-2.7.ebuild,
   -xtermcontrol-2.8.ebuild, xtermcontrol-2.9.ebuild:
