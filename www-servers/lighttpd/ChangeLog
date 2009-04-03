@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.196 2009/04/03 18:58:12 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.197 2009/04/03 20:59:34 bangert Exp $
+
+  03 Apr 2009; Thilo Bangert <bangert@gentoo.org>
+  files/conf/mod_fastcgi.conf, files/lighttpd.initd:
+  prepare for 1.4.22 - copy mod_fastcgi.conf-1.4.13-r2 to mod_fastcgi.conf
+  and lighttpd.initd-1.4.13-r2 to lighttpd.initd
 
   03 Apr 2009; Thilo Bangert <bangert@gentoo.org>
   -files/1.4.16/03_all_lighttpd-1.4.11-errorlog-pipe.diff,

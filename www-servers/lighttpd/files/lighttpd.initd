@@ -1,19 +1,19 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.12 2007/10/12 20:54:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.13 2009/04/03 20:59:34 bangert Exp $
 
-opts="depend checkconfig start stop reload"
+opts="reload graceful"
 
 depend() {
 	need net
-	use mysql logger spawn-fcgi ldap slapd
+	use mysql logger spawn-fcgi ldap slapd netmount dns
 	after famd
 	after sshd
 }
 
 checkconfig() {
-	if [[ ! -f ${LIGHTTPD_CONF} ]] ; then
+	if [ ! -f "${LIGHTTPD_CONF}" ] ; then
 		ewarn "${LIGHTTPD_CONF} does not exist."
 		return 1
 	fi
@@ -25,31 +25,43 @@ start() {
 	checkconfig || return 1
 
 	ebegin "Starting lighttpd"
-	start-stop-daemon --start --quiet \
-		--background --pidfile ${LIGHTTPD_PID} \
-		--exec /usr/sbin/lighttpd -- -f ${LIGHTTPD_CONF}
+	start-stop-daemon --start --quiet --exec /usr/sbin/lighttpd \
+		--pidfile "${LIGHTTPD_PID}" -- -f "${LIGHTTPD_CONF}"
 	eend $?
 }
 
 stop() {
 	local rv=0
 	ebegin "Stopping lighttpd"
-	if start-stop-daemon --stop --quiet --pidfile ${LIGHTTPD_PID} \
-			--signal 2 ; then
-		rm -f ${LIGHTTPD_PID} 
-	else
-		rv=1
-	fi
-	eend $rv
+	start-stop-daemon --stop --quiet --pidfile "${LIGHTTPD_PID}"
+	eend $?
 }
 
 reload() {
-	if [ ! -f ${LIGHTTPD_PID} ]; then
-		eerror "lighttpd isn't running"
+	if ! service_started "${SVCNAME}" ; then
+		eerror "${SVCNAME} isn't running"
 		return 1
 	fi
 	checkconfig || return 1
+
 	ebegin "Re-opening lighttpd log files"
-	kill -HUP `cat ${LIGHTTPD_PID}` &>/dev/null
+	start-stop-daemon --stop --oknodo --quiet --pidfile "${LIGHTTPD_PID}" \
+		--signal HUP
 	eend $?
+}
+
+graceful() {
+	if ! service_started "${SVCNAME}" ; then
+		eerror "${SVCNAME} isn't running"
+		return 1
+	fi
+	checkconfig || return 1
+
+	ebegin "Gracefully stopping lighttpd"
+	start-stop-daemon --stop --oknodo --quiet --pidfile "${LIGHTTPD_PID}" \
+		--signal INT
+	if eend $? ; then
+		rm -f "${LIGHTTPD_PID}"
+		start
+	fi
 }
