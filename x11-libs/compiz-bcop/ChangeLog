@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/compiz-bcop
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/ChangeLog,v 1.9 2008/11/15 02:03:52 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compiz-bcop/ChangeLog,v 1.10 2009/04/03 10:54:53 jmbsvicetto Exp $
+
+*compiz-bcop-0.8.2 (03 Apr 2009)
+
+  03 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compiz-bcop-0.8.2.ebuild:
+  Bumped compiz to the 0.8.2 release.
 
   15 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   compiz-bcop-0.7.8.ebuild:
