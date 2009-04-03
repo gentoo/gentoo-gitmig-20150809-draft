@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/lpairs
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/ChangeLog,v 1.17 2009/04/02 21:22:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/ChangeLog,v 1.18 2009/04/03 02:38:11 josejx Exp $
+
+  03 Apr 2009; Joseph Jezak <josejx@gentoo.org> lpairs-1.0.4.ebuild:
+  Marked ppc stable for bug #264700.
 
   02 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> lpairs-1.0.4.ebuild:
   EAPI=2
