@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.7_p72-r11.ebuild,v 1.1 2009/04/03 12:26:26 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.7_p72-r11.ebuild,v 1.2 2009/04/03 18:19:18 mr_bones_ Exp $
 
 #PATCHES APPLY, DOESN'T COMPILE THOUGH
 #ONIGURUMA="onigd2_5_9"
@@ -72,7 +72,6 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-mkconfig.patch"
 	epatch "${FILESDIR}/${PN}-ossl_ocsp-verification.patch"
 	epatch "${FILESDIR}/${PN}${MY_SUFFIX}-mkmf-parallel-install.patch"
-
 
 	# Fix a hardcoded lib path in configure script
 	sed -i -e "s:\(RUBY_LIB_PREFIX=\"\${prefix}/\)lib:\1$(get_libdir):" \
