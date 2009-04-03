@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libspt
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libspt/ChangeLog,v 1.5 2007/02/09 02:33:54 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libspt/ChangeLog,v 1.6 2009/04/03 15:35:05 patrick Exp $
+
+*libspt-1.1-r1 (03 Apr 2009)
+
+  03 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/libspt-werror.patch, +libspt-1.1-r1.ebuild:
+  Patch to fix compilation with gcc43 from Magnus Granberg. EAPI2ified.
+  Fixes #260886
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
