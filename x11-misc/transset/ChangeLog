@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/transset
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.13 2008/01/07 22:47:22 omp Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/transset/ChangeLog,v 1.14 2009/04/03 14:29:53 ranger Exp $
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org>
+  transset-0.1_pre20040821.ebuild:
+  Marking transset-0.1_pre20040821 ppc64 stable for bug 251832
 
   07 Jan 2008; David Shakaryan <omp@gentoo.org>
   transset-0.1_pre20040821.ebuild:
