@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.324 2009/03/23 23:16:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.325 2009/04/03 06:12:33 robbat2 Exp $
+
+  03 Apr 2009; Robin H. Johnson <robbat2@gentoo.org>
+  files/20090305-git-1.6.2-noperl.patch:
+  Fix testsuite functionality with USE=-perl, the add-interactive test uses
+  perl and was not excluded.
 
   23 Mar 2009; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Update metadata, ricmm is joining as a maintainer.
