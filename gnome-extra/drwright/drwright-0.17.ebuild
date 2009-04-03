@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.13 2008/05/05 21:39:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.14 2009/04/03 16:00:48 patrick Exp $
 
-inherit gnome2 flag-o-matic toolchain-funcs
+inherit gnome2 flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="A GNOME2 Applet that forces you to take regular breaks to prevent RSI."
 HOMEPAGE="http://www.imendio.com/projects/drwright/"
@@ -31,4 +31,6 @@ src_unpack() {
 
 	# get rid of strict-aliasing warnings
 	sed -i -e 's/-Wall//' src/Makefile.{in,am}
+	cd "${S}"
+	epatch "${FILESDIR}/drwright-remowe-Werror.patch"
 }
