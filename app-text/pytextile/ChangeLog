@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pytextile
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.17 2008/05/28 19:22:35 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.18 2009/04/03 18:48:35 patrick Exp $
+
+*pytextile-2.1.3 (03 Apr 2009)
+
+  03 Apr 2009; Patrick Lauer <patrick@gentoo.org> +pytextile-2.1.3.ebuild:
+  Bump to 2.1.3, fixes #264567
 
   28 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Julien Allanos (dju) from metadata.xml (as per #87168). Assigning
