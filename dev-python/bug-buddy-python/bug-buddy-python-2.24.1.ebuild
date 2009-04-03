@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/bug-buddy-python-2.24.1.ebuild,v 1.4 2009/03/18 16:10:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/bug-buddy-python-2.24.1.ebuild,v 1.5 2009/04/03 15:43:07 josejx Exp $
 
 G_PY_PN="gnome-python-desktop"
 G_PY_BINDINGS="bugbuddy"
@@ -10,7 +10,7 @@ inherit gnome-python-common
 DESCRIPTION="Python bindings for Bug Buddy"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=gnome-extra/bug-buddy-2.16
