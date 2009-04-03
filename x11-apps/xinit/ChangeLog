@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.118 2009/02/10 02:49:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.119 2009/04/03 13:29:16 ranger Exp $
+
+  03 Apr 2009; Brent Baude <ranger@gentoo.org> xinit-1.0.8-r4.ebuild:
+  Marking xinit-1.0.8-r4 ppc stable for bug 251832
 
 *xinit-1.0.8-r4 (10 Feb 2009)
 
