@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.7.0.ebuild,v 1.5 2009/01/12 22:03:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.7.0.ebuild,v 1.6 2009/04/03 02:51:14 josejx Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -11,7 +11,7 @@ SRC_URI="http://simh.trailing-edge.com/sources/${MY_P}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="net-libs/libpcap"
