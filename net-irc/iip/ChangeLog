@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/iip
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/ChangeLog,v 1.10 2007/02/09 04:24:54 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/ChangeLog,v 1.11 2009/04/03 15:44:28 patrick Exp $
+
+  03 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/iip_open_mode.patch, iip-1.2.ebuild:
+  GCC 4.3 compile fix from Magnus Granberg, fixes #260983. Adding ~amd64
+  keyword.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

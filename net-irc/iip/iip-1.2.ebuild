@@ -1,6 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/iip-1.2.ebuild,v 1.8 2004/07/27 17:27:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/iip-1.2.ebuild,v 1.9 2009/04/03 15:44:28 patrick Exp $
+
+EAPI="2"
+
+inherit eutils
 
 MY_P="${P}-dev1"
 
@@ -9,7 +13,7 @@ HOMEPAGE="http://www.invisiblenet.net/iip/"
 SRC_URI="mirror://sourceforge/invisibleip/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 
 RDEPEND="virtual/libc
@@ -20,17 +24,21 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+src_prepare() {
+	epatch "${FILESDIR}/iip_open_mode.patch"
+}
+
 src_compile() {
 	econf || die "econf failed"
 
 	sed -i \
-		-e "s:-Werror::" ${S}/src/Makefile || \
+		-e "s:-Werror::" "${S}"/src/Makefile || \
 		die "sed Makefile failed"
 
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS README
 }
