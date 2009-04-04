@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jupidator
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/ChangeLog,v 1.3 2008/12/20 18:23:24 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/ChangeLog,v 1.4 2009/04/04 15:19:40 maekke Exp $
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> jupidator-0.2.0.ebuild:
+  amd64/x86 stable, bug #263071
 
   20 Dec 2008; Markus Meier <maekke@gentoo.org> jupidator-0.2.0.ebuild:
   add ~x86, bug #251722
