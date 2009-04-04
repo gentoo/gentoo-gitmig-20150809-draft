@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.228 2009/04/04 16:14:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.229 2009/04/04 18:24:40 arfrever Exp $
+
+  04 Apr 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sqlite-3.6.11.ebuild, sqlite-3.6.12.ebuild:
+  Fix typo in src_test().
 
   04 Apr 2009; Brent Baude <ranger@gentoo.org> sqlite-3.6.11.ebuild:
   Marking sqlite-3.6.11 ppc for bug 264514
