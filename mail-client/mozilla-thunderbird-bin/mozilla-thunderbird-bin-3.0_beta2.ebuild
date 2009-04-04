@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0_beta2.ebuild,v 1.1 2009/03/12 18:25:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0_beta2.ebuild,v 1.2 2009/04/04 17:35:41 armin76 Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -162,7 +162,7 @@ pkg_postinst() {
 		einfo
 		einfo "NB: You just installed a 32-bit thunderbird"
 		einfo
-                einfo "Crashreporter won't work on amd64"
+		einfo "Crashreporter won't work on amd64"
 		einfo
 	fi
 	update_mozilla_launcher_symlinks
