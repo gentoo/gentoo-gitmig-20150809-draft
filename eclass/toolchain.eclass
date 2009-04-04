@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.395 2009/03/15 07:13:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.396 2009/04/04 16:52:40 grobian Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1285,6 +1285,12 @@ gcc_do_configure() {
 		--mandir=${DATAPATH}/man \
 		--infodir=${DATAPATH}/info \
 		--with-gxx-include-dir=${STDCXX_INCDIR}"
+	# On Darwin we need libdir to be set in order to get correct install names
+	# for things like libobjc-gnu, libgcj and libfortran.  If we enable it on
+	# non-Darwin we screw up the behaviour this eclass relies on.  We in
+	# particular need this over --libdir for bug #255315.
+	[[ ${CHOST} == *-darwin* ]] && \
+		confgcc="${confgcc} --enable-version-specific-runtime-libs"
 
 	# All our cross-compile logic goes here !  woo !
 	confgcc="${confgcc} --host=${CHOST}"
@@ -1378,6 +1384,8 @@ gcc_do_configure() {
 		confgcc="${confgcc} --enable-__cxa_atexit"
 		confgcc="${confgcc} --enable-clocale=gnu"
 	elif [[ ${CTARGET} == *-freebsd* ]]; then
+		confgcc="${confgcc} --enable-__cxa_atexit"
+	elif [[ ${CTARGET} == *-solaris* ]]; then
 		confgcc="${confgcc} --enable-__cxa_atexit"
 	fi
 	[[ ${GCCMAJOR}.${GCCMINOR} < 3.4 ]] && confgcc="${confgcc} --disable-libunwind-exceptions"
@@ -1580,6 +1588,11 @@ gcc_do_filter_flags() {
 	3.4|4.*)
 		case $(tc-arch) in
 			x86|amd64) filter-flags '-mcpu=*';;
+			*-macos)
+				# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=25127
+				[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER}  == 4.1 ]] && \
+					filter-flags '-mcpu=*' '-march=*' '-mtune=*'
+			;;
 		esac
 		;;
 	esac
@@ -2487,6 +2500,8 @@ is_multilib() {
 	case ${CTARGET} in
 		mips64*|powerpc64*|s390x*|sparc*|x86_64*)
 			has_multilib_profile || use multilib ;;
+		*-*-solaris*) use multilib ;;
+		*-apple-darwin*) use multilib ;;
 		*)	false ;;
 	esac
 }
