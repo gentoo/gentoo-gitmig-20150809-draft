@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.93 2009/04/04 14:56:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.94 2009/04/04 16:11:10 ranger Exp $
+
+  04 Apr 2009; Brent Baude <ranger@gentoo.org> lcms-1.18.ebuild:
+  Marking lcms-1.18 ppc for bug 260269
 
   04 Apr 2009; Markus Meier <maekke@gentoo.org> lcms-1.18.ebuild:
   x86 stable, bug #260269
