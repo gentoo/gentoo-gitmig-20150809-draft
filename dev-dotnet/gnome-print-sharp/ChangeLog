@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gnome-print-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-print-sharp/ChangeLog,v 1.5 2009/03/27 16:04:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-print-sharp/ChangeLog,v 1.6 2009/04/04 14:32:15 maekke Exp $
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org>
+  gnome-print-sharp-2.24.0-r10.ebuild:
+  amd64/x86 stable, bug #234305
 
   27 Mar 2009; Brent Baude <ranger@gentoo.org>
   gnome-print-sharp-2.24.0-r10.ebuild:

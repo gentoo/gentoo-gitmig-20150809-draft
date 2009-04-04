@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gnome-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.64 2009/03/27 15:55:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-sharp/ChangeLog,v 1.65 2009/04/04 14:29:55 maekke Exp $
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> gnome-sharp-2.24.1.ebuild:
+  amd64/x86 stable, bug #234305
 
   27 Mar 2009; Brent Baude <ranger@gentoo.org> gnome-sharp-2.24.1.ebuild:
   Marking gnome-sharp-2.24.1 ppc stable for bug 234305

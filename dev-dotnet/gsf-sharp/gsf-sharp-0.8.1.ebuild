@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/gsf-sharp-0.8.1.ebuild,v 1.2 2009/03/27 15:58:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gsf-sharp/gsf-sharp-0.8.1.ebuild,v 1.3 2009/04/04 14:40:09 maekke Exp $
 
 inherit eutils mono autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="LGPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 RDEPEND="dev-lang/mono
 	>=gnome-extra/libgsf-1.14.1
