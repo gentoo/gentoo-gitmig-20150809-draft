@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.10.5.ebuild,v 1.1 2009/03/21 17:09:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.10.7.ebuild,v 1.1 2009/04/04 10:06:38 alexxy Exp $
 
 EAPI=2
 
