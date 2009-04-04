@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.2 2009/04/03 18:18:13 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.3 2009/04/04 10:40:24 bangert Exp $
 
-PROGNAME=${SVCNAME/spawn\-fcgi./}
+PROGNAME=${SVCNAME#*.}
 SPAWNFCGI=/usr/bin/spawn-fcgi
 PIDPATH=/var/run/spawn-fcgi
 PIDFILE=${PIDPATH}/${PROGNAME}
@@ -13,7 +13,7 @@ depend() {
 }
 
 start() {
-	if [[ "${SVCNAME}" == "spawn-fcgi" ]]; then
+	if [ "${SVCNAME}" = "spawn-fcgi" ]; then
 		eerror "You are not supposed to run this script directly. Create a symlink"
 		eerror "for the FastCGI application you want to run as well as a copy of the"
 		eerror "configuration file and modify it appropriately like so..."
@@ -25,7 +25,7 @@ start() {
 		return 1
 	fi
 
-	if [[ ! -z "${FCGI_SOCKET}" ]] && [[ ! -z "${FCGI_PORT}" ]]; then
+	if [ ! -z "${FCGI_SOCKET}" ] && [ ! -z "${FCGI_PORT}" ]; then
 		eerror "Only one of the two may be defined:"
 		eerror "  FCGI_SOCKET=${FCGI_SOCKET}"
 		eerror "  FCGI_PORT=${FCGI_PORT}"
@@ -34,27 +34,27 @@ start() {
 
 	local X E OPTIONS SOCKET_OPTION PORT_OPTION RETVAL
 	
-	if [[ -z "${FCGI_ADDRESS}" ]]; then
+	if [ -z "${FCGI_ADDRESS}" ]; then
 		FCGI_ADDRESS=127.0.0.1
 	fi
 
-	if [[ -z "${FCGI_CHILDREN}" ]]; then
+	if [ -z "${FCGI_CHILDREN}" ]; then
 		FCGI_CHILDREN=1
 	fi
 
-	if [[ -n "${PHP_FCGI_CHILDREN}" ]]; then
+	if [ -n "${PHP_FCGI_CHILDREN}" ]; then
 		OPTIONS="${OPTIONS} -C ${PHP_FCGI_CHILDREN}"
 	fi
 
-	if [[ -n "${FCGI_CHROOT}" ]]; then
+	if [ -n "${FCGI_CHROOT}" ]; then
 		OPTIONS="${OPTIONS} -c ${FCGI_CHROOT}"
 	fi
 
-	if [[ -n "${FCGI_USER}" ]] && [[ "${FCGI_USER}" != "root" ]]; then
+	if [ -n "${FCGI_USER}" ] && [ "${FCGI_USER}" != "root" ]; then
 		OPTIONS="${OPTIONS} -u ${FCGI_USER}"
 	fi
 
-	if [[ -n "${FCGI_GROUP}" ]] && [[ "${FCGI_GROUP}" != "root" ]]; then
+	if [ -n "${FCGI_GROUP}" ] && [ "${FCGI_GROUP}" != "root" ]; then
 		OPTIONS="${OPTIONS} -g ${FCGI_GROUP}"
 	fi
 
@@ -62,22 +62,25 @@ start() {
 	unset E
 
 	for i in ${ALLOWED_ENV}; do
-		[[ -n "${!i}" ]] && E="${E} -e ${i}=${!i}"
+		eval j='"$i"'
+		[ -n "${j}" ] && E="${E} -e ${i}=${j}"
 	done
 
 	ebegin "Starting FastCGI application ${PROGNAME}"
-	for X in `seq 1 ${FCGI_CHILDREN}`; do
+	X=0
+	while [ $X -lt ${FCGI_CHILDREN} ]; do
+		X=$(($X+1))
 		local P
 		P=${PIDFILE}-${X}.pid
-		[[ -n "${FCGI_SOCKET}" ]] && SOCKET_OPTION="-s ${FCGI_SOCKET}-${X}"
-		[[ -n "${FCGI_PORT}" ]] && INET_OPTION="-a ${FCGI_ADDRESS} -p $((${FCGI_PORT} + ${X} - 1))"
+		[ -n "${FCGI_SOCKET}" ] && SOCKET_OPTION="-s ${FCGI_SOCKET}-${X}"
+		[ -n "${FCGI_PORT}" ] && INET_OPTION="-a ${FCGI_ADDRESS} -p $((${FCGI_PORT} + ${X} - 1))"
 
 		start-stop-daemon --start --pidfile ${P} ${E} --exec ${SPAWNFCGI} -- \
 			${SOCKET_OPTION} ${INET_OPTION} -P ${P} ${OPTIONS} -- ${FCGI_PROGRAM}
 		RETVAL=$?
 		
 		# Stop on error. Don't want to spawn a mess!
-		[[ "${RETVAL}" != "0" ]] && break
+		[ "${RETVAL}" != "0" ] && break
 	done
 	eend ${RETVAL}
 }
