@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.25 2009/03/20 13:47:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.26 2009/04/04 09:11:22 pva Exp $
+
+*ipset-2.5.0 (04 Apr 2009)
+
+  04 Apr 2009; Peter Volkov <pva@gentoo.org> +ipset-2.5.0.ebuild:
+  Version bump.
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org> ipset-2.4.7.ebuild:
   Marked ppc stable for bug #257483.
