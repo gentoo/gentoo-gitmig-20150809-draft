@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.82 2009/01/04 16:54:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.83 2009/04/04 17:45:42 grobian Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -80,7 +80,7 @@ AT_GNUCONF_UPDATE="no"
 # Should do a full autoreconf - normally what most people will be interested in.
 # Also should handle additional directories specified by AC_CONFIG_SUBDIRS.
 eautoreconf() {
-	local pwd=$(pwd) x auxdir
+	local pwd=$(pwd) x auxdir g=
 
 	if [[ -z ${AT_NO_RECURSIVE} ]]; then
 		# Take care of subdirs
@@ -98,7 +98,8 @@ eautoreconf() {
 	einfo "Running eautoreconf in '$(pwd)' ..."
 	[[ -n ${auxdir} ]] && mkdir -p ${auxdir}
 	eaclocal
-	if ${LIBTOOLIZE:-libtoolize} -n --install >& /dev/null ; then
+	[[ ${CHOST} == *-darwin* ]] && g=g
+	if ${LIBTOOLIZE:-${g}libtoolize} -n --install >& /dev/null ; then
 		_elibtoolize --copy --force --install
 	else
 		_elibtoolize --copy --force
@@ -157,7 +158,7 @@ eaclocal() {
 # Runs libtoolize.  Note the '_' prefix .. to not collide with elibtoolize() from
 # libtool.eclass.
 _elibtoolize() {
-	local opts
+	local opts g=
 
 	# Check if we should run libtoolize (AM_PROG_LIBTOOL is an older macro,
 	# check for both it and the current AC_PROG_LIBTOOL)
@@ -165,8 +166,8 @@ _elibtoolize() {
 
 	[[ -f GNUmakefile.am || -f Makefile.am ]] && opts="--automake"
 
-	[[ "${USERLAND}" == "Darwin" ]] && LIBTOOLIZE="glibtoolize"
-	autotools_run_tool ${LIBTOOLIZE:-libtoolize} "$@" ${opts}
+	[[ ${CHOST} == *-darwin* ]] && g=g
+	autotools_run_tool ${LIBTOOLIZE:-${g}libtoolize} "$@" ${opts}
 
 	# Need to rerun aclocal
 	eaclocal
