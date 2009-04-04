@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fxload
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/ChangeLog,v 1.16 2008/04/21 18:13:13 phreak Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/ChangeLog,v 1.17 2009/04/04 08:52:38 bangert Exp $
+
+*fxload-20081013 (04 Apr 2009)
+
+  04 Apr 2009; Thilo Bangert <bangert@gentoo.org> +fxload-20081013.ebuild:
+  version bump - bug #252846
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
