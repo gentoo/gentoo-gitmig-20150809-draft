@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.0-r2.ebuild,v 1.10 2008/03/05 19:50:19 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-2.0-r2.ebuild,v 1.11 2009/04/04 23:13:10 betelgeuse Exp $
 
+EAPI="2"
 JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2
@@ -18,6 +19,10 @@ KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}/${P}-src"
+
+java_prepare() {
+	rm -v *.jar || die
+}
 
 src_install() {
 	java-pkg_newjar dist/${P}.jar ${PN}.jar
