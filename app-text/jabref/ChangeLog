@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.70 2009/03/29 16:43:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.71 2009/04/04 19:17:05 maekke Exp $
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> jabref-2.4.2.ebuild:
+  amd64/x86 stable, bug #263647
 
   29 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> jabref-2.3.1.ebuild:
   Migrate to EAPI 2 in order to fix bug #239835.
