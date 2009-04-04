@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/pingus
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.22 2008/09/04 16:31:25 mr_bones_ Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.23 2009/04/04 00:53:00 mr_bones_ Exp $
+
+  04 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/pingus-0.7.2-gcc44.patch, pingus-0.7.2.ebuild:
+  EAPI=2; add gcc44 patch from Paul Mulders (bug #264739)
 
   04 Sep 2008; Michael Sterrett <mr_bones_@gentoo.org> pingus-0.7.2.ebuild:
   Attempt at using a less-ugly icon (bug #236596)

@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.2.ebuild,v 1.8 2008/09/04 16:31:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.2.ebuild,v 1.9 2009/04/04 00:53:00 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="free Lemmings clone"
@@ -21,12 +22,11 @@ RDEPEND="media-libs/libsdl
 DEPEND="${RDEPEND}
 	>=dev-util/scons-0.97"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-paths.patch \
-		"${FILESDIR}/${P}+gcc-4.3.patch"
+		"${FILESDIR}"/${P}+gcc-4.3.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 	sed -i \
 		-e "s:GENTOO_BINDIR:${GAMES_BINDIR}:" \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
@@ -34,15 +34,18 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
-	local sconsopts=$(echo "${MAKEOPTS}" | sed -e "s/.*\(-j[0-9]\+\).*/\1/")
-	[[ ${MAKEOPTS/-s/} != ${MAKEOPTS} ]] && sconsopts="${sconsopts} -s"
-
+src_configure() {
 	scons configure \
 		CXX="$(tc-getCXX)" \
 		CCFLAGS="${CXXFLAGS}" \
 		LINKFLAGS="${LDFLAGS}" \
 		|| die "scons configure failed"
+}
+
+src_compile() {
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -e "s/.*\(-j[0-9]\+\).*/\1/")
+	[[ ${MAKEOPTS/-s/} != ${MAKEOPTS} ]] && sconsopts="${sconsopts} -s"
+
 	scons ${sconsopts} || die "scons failed"
 }
 
