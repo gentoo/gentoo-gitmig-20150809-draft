@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.72 2009/02/20 23:20:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.73 2009/04/04 18:02:33 grobian Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -518,18 +518,20 @@ create_ml_includes-sym_for_dir() {
 # @FUNCTION: get_libname
 # @USAGE: [version]
 # @DESCRIPTION:
-# Returns libname with proper suffix {.so,.dylib} and optionally supplied version
-# for ELF/MACH-O shared objects
+# Returns libname with proper suffix {.so,.dylib,.dll,etc} and optionally
+# supplied version for the current platform identified by CHOST.
 #
 # Example:
 #     get_libname libfoo ${PV}
-#     Returns: libfoo.so.${PV} (ELF) || libfoo.${PV}.dylib (MACH)
+#     Returns: libfoo.so.${PV} (ELF) || libfoo.${PV}.dylib (MACH) || ...
 get_libname() {
 	local libname
 	local ver=$1
 	case ${CHOST} in
 		*-cygwin|mingw*|*-mingw*) libname="dll";;
 		*-darwin*)                libname="dylib";;
+		*-aix*)                   libname="a";;
+		*-mint*)                  libname="irrelevant";;
 		*)                        libname="so";;
 	esac
 
@@ -539,6 +541,8 @@ get_libname() {
 		for ver in "$@" ; do
 			case ${CHOST} in
 				*-darwin*) echo ".${ver}.${libname}";;
+				*-aix*)    echo ".${libname}";;
+				*-mint*)   echo ".${libname}";;
 				*)         echo ".${libname}.${ver}";;
 			esac
 		done
