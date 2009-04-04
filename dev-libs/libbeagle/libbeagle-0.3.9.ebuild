@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/libbeagle-0.3.9.ebuild,v 1.2 2009/03/27 15:59:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/libbeagle-0.3.9.ebuild,v 1.3 2009/04/04 14:51:54 maekke Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://beagle-project.org/"
 
 LICENSE="MIT Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="debug doc +python"
 
 RDEPEND=">=dev-libs/glib-2.6
