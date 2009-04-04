@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/zeus-jscl
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zeus-jscl/ChangeLog,v 1.1 2009/04/04 18:34:24 weaver Exp $
+
+*zeus-jscl-1.60 (04 Apr 2009)
+
+  04 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +zeus-jscl-1.60.ebuild:
+  New package, bug 260501, ebuild written by Ralph Sennhauser and me
+
