@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1_p10.ebuild,v 1.2 2008/06/09 20:09:57 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1_p10.ebuild,v 1.3 2009/04/04 01:23:43 gengor Exp $
+
+EAPI=2
 
 inherit eutils
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk"
 
-RDEPEND=">=media-video/transcode-1.0.2-r2
+RDEPEND=">=media-video/transcode-1.0.2-r2[dvd]
 	>=media-video/mjpegtools-1.8.0-r1
 	>=media-video/subtitleripper-0.3.4-r1
 	>=media-video/dvdauthor-0.6.11
@@ -24,13 +26,6 @@ RDEPEND=">=media-video/transcode-1.0.2-r2
 DEPEND=""
 
 S=${WORKDIR}/${PN}
-
-pkg_setup() {
-	if ! built_with_use media-video/transcode dvdread; then
-		eerror "Please re-emerge transcode with the dvdread USE flag."
-		die  "transcode needs dvdread support"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}

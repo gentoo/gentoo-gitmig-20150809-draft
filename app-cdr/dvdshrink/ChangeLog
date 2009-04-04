@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/dvdshrink
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/ChangeLog,v 1.11 2008/06/09 20:09:57 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/ChangeLog,v 1.12 2009/04/04 01:23:43 gengor Exp $
+
+  04 Apr 2009; Gordon Malm <gengor@gentoo.org> dvdshrink-2.6.1_p10.ebuild:
+  Convert to EAPI=2, fix USE="dvdread" is now USE="dvd". Bug #239952.
 
   09 Jun 2008; Samuli Suominen <drac@gentoo.org> dvdshrink-2.6.1_p10.ebuild:
   Desktop entry for bug 225631 by Chris Mayo.
