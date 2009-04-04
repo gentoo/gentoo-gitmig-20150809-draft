@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-6.0.2.ebuild,v 1.1 2009/04/02 15:34:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-6.0.2.ebuild,v 1.2 2009/04/04 14:43:18 maekke Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ SLOT="0"
 LICENSE="F-PROT-AV
 	elibc_glibc? ( LGPL-2.1 )
 	elibc_FreeBSD? ( BSD-2 )"
-KEYWORDS="~amd64 -ppc -sparc ~x86 -x86-fbsd"
+KEYWORDS="amd64 -ppc -sparc x86 -x86-fbsd"
 
 src_install() {
 	insinto /opt/f-prot
