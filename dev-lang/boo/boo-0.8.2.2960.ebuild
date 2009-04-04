@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.8.2.2960.ebuild,v 1.3 2009/03/27 15:58:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.8.2.2960.ebuild,v 1.4 2009/04/04 14:46:25 maekke Exp $
 
 inherit mono fdo-mime eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://dist.codehaus.org/${PN}/distributions/${P}.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/mono-1.1.4
