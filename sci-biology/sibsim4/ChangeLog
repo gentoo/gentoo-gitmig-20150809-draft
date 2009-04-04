@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/sibsim4
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/sibsim4/ChangeLog,v 1.1 2008/12/27 05:23:56 weaver Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/sibsim4/ChangeLog,v 1.2 2009/04/04 19:21:04 maekke Exp $
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> sibsim4-0.17.ebuild:
+  amd64/x86 stable, bug #263770
 
 *sibsim4-0.17 (27 Dec 2008)
 
