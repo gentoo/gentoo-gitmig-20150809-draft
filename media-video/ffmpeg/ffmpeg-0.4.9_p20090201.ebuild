@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20090201.ebuild,v 1.9 2009/03/31 19:28:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20090201.ebuild,v 1.10 2009/04/04 15:05:05 armin76 Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -77,7 +77,6 @@ src_compile() {
 	fi
 
 	myconf="${myconf} --disable-optimizations"
-	use arm && myconf="--disable-armv5te --disable-armv6"
 
 	# disabled by default
 	if use encode
