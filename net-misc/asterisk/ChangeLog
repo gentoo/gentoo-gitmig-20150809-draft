@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.196 2009/04/03 15:23:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.197 2009/04/04 13:41:31 maekke Exp $
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> asterisk-1.2.32.ebuild:
+  amd64/x86 stable, bug #237476
 
   03 Apr 2009; <chainsaw@gentoo.org>
   -files/1.6.0/asterisk-1.6.0.6-dahdiras.patch,
