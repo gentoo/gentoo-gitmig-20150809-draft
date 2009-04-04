@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.7.ebuild,v 1.1 2008/11/27 19:29:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.7.ebuild,v 1.2 2009/04/04 20:23:05 solar Exp $
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="image file loading library"
@@ -9,7 +9,7 @@ SRC_URI="http://www.libsdl.org/projects/SDL_image/release/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~arm ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gif jpeg tiff png"
 
 DEPEND="sys-libs/zlib
@@ -17,6 +17,7 @@ DEPEND="sys-libs/zlib
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( media-libs/tiff )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
