@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chromium
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.36 2009/03/30 16:10:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.37 2009/04/04 21:17:52 mr_bones_ Exp $
+
+  04 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  chromium-0.9.14.ebuild:
+  fix desktop entry with patch from Chris Mayo (bug #264902)
 
 *chromium-0.9.14 (30 Mar 2009)
 
