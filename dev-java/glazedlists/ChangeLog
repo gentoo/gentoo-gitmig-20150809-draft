@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/glazedlists
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.14 2008/11/09 10:22:18 caster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.15 2009/04/04 19:16:14 maekke Exp $
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> glazedlists-1.7.0.ebuild:
+  amd64/x86 stable, bug #263647
 
   09 Nov 2008; Vlastimil Babka <caster@gentoo.org> glazedlists-1.7.0.ebuild:
   Add back missing DESCRIPTION, thanks mr_bones.

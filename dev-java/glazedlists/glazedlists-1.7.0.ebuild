@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-1.7.0.ebuild,v 1.2 2008/11/09 10:22:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-1.7.0.ebuild,v 1.3 2009/04/04 19:16:14 maekke Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -14,7 +14,7 @@ SRC_URI="java5? ( https://${PN}.dev.java.net/files/documents/${SRC_DOCUMENT_ID_J
 	!java5? ( https://${PN}.dev.java.net/files/documents/${SRC_DOCUMENT_ID_JAVA4}/${P}-source_java14.zip )"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 # TODO: there are extensions, some supported in the java-experimental ebuild
 IUSE="java5"
 
