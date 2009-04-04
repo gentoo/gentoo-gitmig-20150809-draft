@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/hourglass-0.7.2.ebuild,v 1.1 2009/01/07 05:41:51 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/hourglass-0.7.2.ebuild,v 1.2 2009/04/04 01:28:58 ali_bush Exp $
 
 JAVA_PKG_IUSE="doc source"
 EAPI="1"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="dev-java/log4j
