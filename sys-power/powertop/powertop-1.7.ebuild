@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.7.ebuild,v 1.7 2007/08/25 14:44:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.7.ebuild,v 1.8 2009/04/04 02:39:04 gengor Exp $
 
 inherit toolchain-funcs eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="amd64 arm ~ppc sparc x86"
 IUSE="unicode"
 
 DEPEND="sys-libs/ncurses"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
