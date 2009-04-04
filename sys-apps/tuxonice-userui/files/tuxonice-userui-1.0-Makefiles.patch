@@ -1,0 +1,26 @@
+--- tuxonice-userui-1.0.vanilla/Makefile	2009-04-04 12:37:13.000000000 +0100
++++ tuxonice-userui-1.0/Makefile	2009-04-04 12:37:54.000000000 +0100
+@@ -32,10 +32,10 @@
+ all: $(TARGETS)
+ 
+ fbsplash:
+-	make -C $@ all
++	$(MAKE) -C $@ all
+ 
+ usplash:
+-	make -C $@ all
++	$(MAKE) -C $@ all
+ 
+ tuxoniceui_text: $(CORE_OBJECTS) userui_text.o
+ 	$(CC) $(LDFLAGS) -static $^ -o $@
+@@ -48,8 +48,8 @@
+ 
+ clean:
+ 	$(RM) *.o $(TARGETS)
+-	make -C fbsplash clean
+-	make -C usplash clean
++	$(MAKE) -C fbsplash clean
++	$(MAKE) -C usplash clean
+ 
+ $(INSTDIR)/%: %
+ 	strip $<
