@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jubler
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.29 2008/12/20 18:25:59 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.30 2009/04/04 15:20:19 maekke Exp $
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> jubler-4.0.ebuild:
+  amd64/x86 stable, bug #263071
 
   20 Dec 2008; Markus Meier <maekke@gentoo.org> jubler-4.0.ebuild:
   add ~x86, bug #251722
