@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.127 2009/03/30 16:46:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.128 2009/04/04 08:58:48 mabi Exp $
+
+  04 Apr 2009; Matti Bickel <mabi@gentoo.org>
+  files/lua-5.1-make_static.patch:
+  fixed missing $(LDFLAGS) that was added to make.patch but not make_static.patch
 
   30 Mar 2009; Raúl Porcel <armin76@gentoo.org> lua-5.1.4.ebuild:
   arm/ia64/s390/sh/sparc/x86 stable wrt #255191
