@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.13 2009/03/31 19:28:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.14 2009/04/04 14:35:15 aballier Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="+3dnow +3dnowext alsa altivec amr custom-cflags debug dirac doc
-	  ieee1394 +encode faac faad gsm ipv6 +mmx +mmxext vorbis test theora
+	  ieee1394 +encode faac faad gsm ipv6 jack +mmx +mmxext vorbis test theora
 	  threads x264 xvid network zlib sdl X mp3 oss schroedinger
 	  +hardcoded-tables bindist v4l v4l2 speex +ssse3 jpeg2k"
 
@@ -38,6 +38,7 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10 )
 	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
 	schroedinger? ( media-libs/schroedinger )
 	speex? ( >=media-libs/speex-1.2_beta3 )
+	jack? ( media-sound/jack-audio-connection-kit )
 	X? ( x11-libs/libX11 x11-libs/libXext )
 	amr? ( media-libs/amrnb media-libs/amrwb )"
 
@@ -82,7 +83,7 @@ src_compile() {
 	# libavdevice options
 	use ieee1394 && myconf="${myconf} --enable-libdc1394"
 	# Demuxers
-	for i in v4l v4l2 alsa oss ; do
+	for i in v4l v4l2 alsa oss jack ; do
 		use $i || myconf="${myconf} --disable-demuxer=$i"
 	done
 	# Muxers
