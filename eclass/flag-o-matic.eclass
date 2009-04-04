@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.132 2009/01/21 00:42:20 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.133 2009/04/04 17:57:54 grobian Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -52,6 +52,12 @@ setup-allowed-flags() {
 		-m32 -m64 -mabi -mlittle-endian -mbig-endian -EL -EB -fPIC \
 		-mlive-g0 -mcmodel -mstack-bias -mno-stack-bias \
 		-msecure-plt -m*-toc -D* -U*"
+	
+	# killing these two on OSX/Intel will disable SSE, resulting in failing
+	# compilations, as the headers expect SSE to be enabled (Apple knows what
+	# hardware they run on afterall, don't they?)
+	[[ ${CHOST} == i?86-apple-darwin* ]] \
+		&& ALLOWED_FLAGS="${ALLOWED_FLAGS} -march=prescott -march=nocona"
 
 	# {C,CXX,F,FC}FLAGS that we are think is ok, but needs testing
 	# NOTE:  currently -Os have issues with gcc3 and K6* arch's
