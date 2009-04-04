@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.82 2009/03/27 17:11:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.83 2009/04/04 14:51:08 maekke Exp $
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> tomboy-0.12.2.ebuild:
+  amd64/x86 stable, bug #234305
 
   27 Mar 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking tomboy-0.12.2 ~ppc for bug 234305

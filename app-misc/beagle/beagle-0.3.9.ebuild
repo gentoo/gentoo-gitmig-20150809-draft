@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9.ebuild,v 1.6 2009/03/30 01:42:43 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9.ebuild,v 1.7 2009/04/04 14:52:55 maekke Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/${PN}-0.3.8-patches.tar.lzma"
 LICENSE="MIT Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="avahi chm debug doc epiphany eds firefox +galago gtk +pdf +inotify +ole thunderbird +google  +xscreensaver"
 
 #See bug 248331 for blocker reason.
