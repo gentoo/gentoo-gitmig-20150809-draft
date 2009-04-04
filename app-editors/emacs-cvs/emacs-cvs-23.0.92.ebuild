@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.92.ebuild,v 1.1 2009/03/31 04:52:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.92.ebuild,v 1.2 2009/04/04 20:57:58 ulm Exp $
 
 EAPI=2
 
@@ -93,6 +93,8 @@ src_prepare() {
 		echo
 	fi
 
+	epatch "${FILESDIR}/emacs-${PV}-sh.patch" #262359
+
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
 		"${S}"/src/s/freebsd.h || die "unable to sed freebsd.h settings"
@@ -118,7 +120,11 @@ src_configure() {
 	ALLOWED_FLAGS=""
 	strip-flags
 	#unset LDFLAGS
-	replace-flags -O[3-9] -O2
+	if use sh; then
+		replace-flags -O[1-9] -O0		#262359
+	else
+		replace-flags -O[3-9] -O2
+	fi
 
 	local myconf
 
