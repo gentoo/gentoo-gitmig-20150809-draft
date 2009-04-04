@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/weechat
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.62 2009/03/24 18:53:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.63 2009/04/04 13:43:11 maekke Exp $
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> weechat-0.2.6.1.ebuild:
+  x86 stable, bug #262997
 
   24 Mar 2009; Brent Baude <ranger@gentoo.org> weechat-0.2.6.1.ebuild:
   Marking weechat-0.2.6.1 ppc for bug 262997
