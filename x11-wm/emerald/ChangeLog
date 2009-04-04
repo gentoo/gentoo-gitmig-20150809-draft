@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/emerald
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.22 2009/04/03 11:01:02 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.23 2009/04/04 13:30:45 jmbsvicetto Exp $
+
+  04 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  emerald-0.8.2.ebuild:
+  The russian patch is no longer needed with emerald-0.8.2.
 
 *emerald-0.8.2 (03 Apr 2009)
 
