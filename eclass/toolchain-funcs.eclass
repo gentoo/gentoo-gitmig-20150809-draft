@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.88 2009/03/28 11:09:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.89 2009/04/04 17:17:56 grobian Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -165,6 +165,43 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 	[[ -z ${host} ]] && host=${CTARGET:-${CHOST}}
 
 	case ${host} in
+		powerpc-apple-darwin*)
+					echo ppc-macos;;
+		powerpc64-apple-darwin*)
+					echo ppc64-macos;;
+		i?86-apple-darwin*)
+					echo x86-macos;;
+		x86_64-apple-darwin*)
+					echo x64-macos;;
+		sparc-sun-solaris*)
+					echo sparc-solaris;;
+		sparcv9-sun-solaris*)
+					echo sparc64-solaris;;
+		i?86-pc-solaris*)
+					echo x86-solaris;;
+		x86_64-pc-solaris*)
+					echo x64-solaris;;
+		powerpc-ibm-aix*)
+					echo ppc-aix;;
+		mips-sgi-irix*)
+					echo mips-irix;;
+		ia64-hp-hpux*)
+					echo ia64-hpux;;
+		i?86-pc-freebsd*)
+					echo x86-freebsd;;
+		x86_64-pc-freebsd*)
+					echo x64-freebsd;;
+		i?86-pc-netbsd*)
+					echo x86-netbsd;;
+		i?86-pc-interix*)
+					echo x86-interix;;
+		i?86-pc-winnt*)
+					echo x86-winnt;;
+		i*-pc-freebsd*)
+					echo x86-freebsd;;
+		x86_64-pc-freebsd*)
+					echo x64-freebsd;;
+
 		alpha*)		echo alpha;;
 		arm*)		echo arm;;
 		avr*)		ninj avr32 avr;;
@@ -418,11 +455,60 @@ gen_usr_ldscript() {
 	[[ -n ${output_format} ]] && output_format="OUTPUT_FORMAT ( ${output_format} )"
 
 	for lib in "$@" ; do
-		if [[ ${USERLAND} == "Darwin" ]] ; then
-			ewarn "Not creating fake dynamic library for $lib on Darwin;"
-			ewarn "making a symlink instead."
-			dosym "/${libdir}/${lib}" "/usr/${libdir}/${lib}"
-		else
+
+		# Ensure /lib/${lib} exists to avoid dangling scripts/symlinks.
+		# This especially is for AIX where $(get_libname) can return ".a",
+		# so /lib/${lib} might be moved to /usr/lib/${lib} (by accident).
+		[[ -r "${ED}"/${libdir}/${lib} ]] || continue
+
+		case ${CHOST} in
+		*-darwin*)
+			# Mach-O files have an id, which is like a soname, it tells how
+			# another object linking against this lib should reference it.
+			# Since we moved the lib from usr/lib into lib this reference is
+			# wrong.  Hence, we update it here.  We don't configure with
+			# libdir=/lib because that messes up libtool files.
+			# Make sure we don't lose the specific version, so just modify the
+			# existing install_name
+			install_name=$(otool -DX "${ED}"/${libdir}/${lib})
+			[[ -z ${install_name} ]] && die "No install name found for ${ED}/${libdir}/${lib}"
+			install_name_tool \
+				-id "${EPREFIX}"/${libdir}/${install_name##*/} \
+				"${ED}"/${libdir}/${lib}
+			# Now as we don't use GNU binutils and our linker doesn't
+			# understand linker scripts, just create a symlink.
+			pushd "${ED}/usr/${libdir}" > /dev/null
+			ln -snf "../../${libdir}/${lib}" "${lib}"
+			popd > /dev/null
+			;;
+		*-aix*|*-irix*|*-hpux*)
+			# we don't have GNU binutils on these platforms, so we symlink
+			# instead, which seems to work fine.  Keep it relative, otherwise
+			# we break some QA checks in Portage
+			pushd "${ED}/usr/${libdir}" > /dev/null
+			ln -snf "../../${libdir}/${lib}" "${lib}"
+			popd > /dev/null
+			;;
+		*-interix*|*-winnt*)
+			# on interix, the linker scripts would work fine in _most_
+			# situations. if a library links to such a linker script the
+			# absolute path to the correct library is inserted into the binary,
+			# which is wrong, since anybody linking _without_ libtool will miss
+			# some dependencies, since the stupid linker cannot find libraries
+			# hardcoded with absolute paths (as opposed to the loader, which
+			# seems to be able to do this).
+			# this has been seen while building shared-mime-info which needs
+			# libxml2, but links without libtool (and does not add libz to the
+			# command line by itself).
+			pushd "${ED}/usr/${libdir}" > /dev/null
+			ln -snf "../../${libdir}/${lib}" "${lib}"
+			popd > /dev/null
+			;;
+		*-mint*)
+			# do nothing
+			return
+			;;
+		*)	
 			local tlib
 			if ${auto} ; then
 				lib="lib${lib}${suffix}"
@@ -450,7 +536,93 @@ gen_usr_ldscript() {
 			${output_format}
 			GROUP ( /${libdir}/${tlib} )
 			END_LDSCRIPT
-			fperms a+x "/usr/${libdir}/${lib}" || die "could not change perms on ${lib}"
-		fi
+			;;
+		esac
+		fperms a+x "/usr/${libdir}/${lib}" || die "could not change perms on ${lib}"
 	done
+}
+
+# This function is for AIX only.
+#
+# Showing a sample IMO is the best description:
+#
+# First, AIX has its own /usr/lib/libiconv.a containing 'shr.o' and 'shr4.o'.
+# Both of them are shared-objects packed into an archive, thus /usr/lib/libiconv.a
+# is a shared library (!), even it is called lib*.a.
+# This is the default layout on aix for shared libraries.
+# Read the ld(1) manpage for more information.
+#
+# But now, we want to install GNU libiconv (sys-libs/libiconv) both as
+# shared and static library.
+# AIX (since 4.3) can create shared libraries if '-brtl' or '-G' linker flags
+# are used.
+#
+# Now assume we have GNU tar installed while GNU libiconv was not.
+# This tar now has a runtime dependency on "libiconv.a(shr4.o)".
+# With our ld-wrapper (from sys-devel/binutils-config) we add EPREFIX/usr/lib
+# as linker path, thus it is recorded as loader path into the binary.
+#
+# When having libiconv.a (the static GNU libiconv) in prefix, the loader finds
+# that one and claims that it does not contain an 'shr4.o' object file:
+#
+#     Could not load program tar:
+#           Dependent module EPREFIX/usr/lib/libiconv.a(shr4.o) could not be loaded.
+#           Member shr4.o is not found in archive
+#
+# According to gcc's "host/target specific installation notes" for *-ibm-aix* [1],
+# we can extract that 'shr4.o' from /usr/lib/libiconv.a, mark it as
+# non-linkable, and include it in our new static library.
+#
+# [1] http://gcc.gnu.org/install/specific.html#x-ibm-aix
+#
+# usage:
+# keep_aix_runtime_object <target-archive inside EPREFIX> <source-archive(objects)>
+# keep_aix_runtime_object "/usr/lib/libiconv.a "/usr/lib/libiconv.a(shr4.o,...)"
+keep_aix_runtime_objects() {
+	[[ ${CHOST} == *-*-aix* ]] || return 0
+
+	local target=$1
+	shift
+	local sources="$@"
+
+	# strip possible ${ED} prefixes
+	target=${target##/}
+	target=${target#${D##/}}
+	target=${target#${EPREFIX##/}}
+	target=${target##/}
+
+	if ! $(tc-getAR) -t "${ED}${target}" &>/dev/null; then
+		if [[ -e ${ED}${target} ]]; then
+			ewarn "${target} is not an archive."
+		fi
+		return 0
+	fi
+
+	local tmpdir=${TMP}/keep_aix_runtime_object-$$
+	mkdir ${tmpdir} || die
+
+	local origdir=$(pwd)
+	local s
+	for s in ${sources}; do
+		local sourcelib sourceobjs so
+		# format of $s: "/usr/lib/libiconv.a(shr4.o,shr.o)"
+		sourcelib=${s%%(*}
+		sourceobjs=${s#*(}
+		sourceobjs=${sourceobjs%)}
+		sourceobjs=${sourceobjs//,/ }
+		cd ${tmpdir} || die
+		for so in ${sourceobjs}; do
+			ebegin "keeping aix runtime object '${sourcelib}(${so})' in '${EPREFIX}/${target}'"
+			if ! $(tc-getAR) -x "${sourcelib}" ${so}; then
+				eend 1
+			   	continue
+			fi
+			chmod +w ${so} &&
+			$(tc-getSTRIP) -e ${so} &&
+			$(tc-getAR) -q "${ED}${target}" ${so} &&
+			eend 0 ||
+			eend 1
+		done
+	done
+	cd "${origdir}"
 }
