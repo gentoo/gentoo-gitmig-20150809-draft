@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.15 2008/12/10 01:15:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.16 2009/04/04 17:50:51 grobian Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -400,6 +400,24 @@ apache-2_src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	# 03_all_gentoo-apache-tools.patch injects -Wl,-z,now, which is not a good
+	# idea for everyone
+	case ${CHOST} in
+		*-linux-gnu|*-solaris*|*-freebsd*)
+			# do nothing, these use GNU binutils
+			:
+		;;
+		*-darwin*)
+			sed -i -e 's/-Wl,-z,now/-Wl,-bind_at_load/g' \
+				"${GENTOO_PATCHDIR}"/patches/03_all_gentoo_apache-tools.patch
+		;;
+		*)
+			# patch it out to be like upstream
+			sed -i -e 's/-Wl,-z,now//g' \
+				"${GENTOO_PATCHDIR}"/patches/03_all_gentoo_apache-tools.patch
+		;;
+	esac
+
 	# Use correct multilib libdir in gentoo patches
 	sed -i -e "s:/usr/lib:/usr/$(get_libdir):g" \
 		"${GENTOO_PATCHDIR}"/{conf/httpd.conf,init/*,patches/config.layout} \
@@ -428,7 +446,12 @@ apache-2_src_unpack() {
 apache-2_src_compile() {
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
 	# Thanks to Harald van Dijk
-	append-ldflags -Wl,--no-as-needed
+	# ... but only on platforms that use a GNU linker!
+	case ${CHOST} in
+		*-solaris* | *-*bsd* | *-linux-gnu)
+			append-ldflags -Wl,--no-as-needed
+		;;
+	esac
 
 	# peruser MPM debugging with -X is nearly impossible
 	if has peruser ${IUSE_MPMS} && use apache2_mpms_peruser ; then
