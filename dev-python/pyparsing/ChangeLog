@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.38 2009/04/04 19:13:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.39 2009/04/04 19:28:07 fmccor Exp $
+
+  04 Apr 2009; Ferris McCormick <fmccor@gentoo.org> pyparsing-1.5.1.ebuild:
+  Sparc stable --- Bug #263618 --- examples are fine.
 
   04 Apr 2009; Markus Meier <maekke@gentoo.org> pyparsing-1.5.1.ebuild:
   amd64/x86 stable, bug #263618
