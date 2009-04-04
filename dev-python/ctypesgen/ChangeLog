@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ctypesgen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.8 2009/04/04 13:40:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.9 2009/04/04 13:49:33 maekke Exp $
+
+  04 Apr 2009; Markus Meier <maekke@gentoo.org> ChangeLog:
+  add ~x86, bug #263337
 
   04 Apr 2009; Brent Baude <ranger@gentoo.org> ctypesgen-0_p72.ebuild:
   Marking ctypesgen-0_p72 ~ppc64 for bug 263337
