@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/pam_abl-0.2.3-r1.ebuild,v 1.5 2007/11/21 16:28:40 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_abl/pam_abl-0.2.3-r1.ebuild,v 1.6 2009/04/05 16:19:52 jokey Exp $
+
+EAPI=2
 
 inherit flag-o-matic pam toolchain-funcs
 
@@ -23,9 +25,9 @@ S=${WORKDIR}/${PN}
 # restrict tests as they're broken badly
 RESTRICT="test"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	# fix as-needed per bug # 248403
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 
 	# fix hardcoded values in Makefile
 	sed -i -e "s:-Wall -fPIC:${CFLAGS} -Wall:" \
