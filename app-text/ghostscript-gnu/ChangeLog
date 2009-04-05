@@ -1,6 +1,14 @@
 # ChangeLog for app-text/ghostscript-gnu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.40 2009/03/20 15:29:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.41 2009/04/05 20:08:06 pva Exp $
+
+*ghostscript-gnu-8.62.0-r1 (05 Apr 2009)
+
+  05 Apr 2009; Peter Volkov <pva@gentoo.org>
+  +files/ghostscript-gnu-8.62.0-CVE-misc.patch,
+  +ghostscript-gnu-8.62.0-r1.ebuild:
+  Fixed multiple vulnerabilities, bug #264614, thank Robert Buchholz for
+  report.
 
   20 Mar 2009; Brent Baude <ranger@gentoo.org>
   ghostscript-gnu-8.62.0.ebuild:
