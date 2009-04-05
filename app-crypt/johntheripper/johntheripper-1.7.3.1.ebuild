@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.3.1.ebuild,v 1.2 2009/03/03 13:54:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.3.1.ebuild,v 1.3 2009/04/05 04:55:22 arfrever Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pax-utils
 
@@ -90,7 +90,7 @@ src_unpack() {
 		epatch "${FILESDIR}/${P}-${p}.patch"
 	done
 
-	sed -i "s/LDFLAGS  *=  */override LDFLAGS += /" Makefile
+	sed -e "s/LDFLAGS  *=  */override LDFLAGS += /" -e "/LDFLAGS/s/-s//" -i Makefile || die "sed Makefile failed"
 }
 
 src_compile() {
@@ -104,12 +104,11 @@ src_compile() {
 	use mpi && CPP=mpicxx CC=mpicc AS=mpicc LD=mpicc
 	emake \
 		CPP=${CPP} CC=${CC} AS=${AS} LD=${LD} \
-		CFLAGS="-c -Wall ${CFLAGS} -DJOHN_SYSTEMWIDE \
-			-DJOHN_SYSTEMWIDE_HOME=\"\\\"/etc/john\\\"\"" \
+		CFLAGS="-c -Wall ${CFLAGS} -DJOHN_SYSTEMWIDE -DJOHN_SYSTEMWIDE_HOME=\"\\\"/etc/john\\\"\"" \
 		LDFLAGS="${LDFLAGS}" \
 		OPT_NORMAL="" \
 		$(get_target) \
-		|| die "make failed"
+		|| die "emake failed"
 }
 
 src_test() {
