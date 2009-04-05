@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-spaceorb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-spaceorb/ChangeLog,v 1.31 2008/02/24 02:24:27 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-spaceorb/ChangeLog,v 1.32 2009/04/05 19:07:59 tester Exp $
+
+  05 Apr 2009; Olivier Crête <tester@gentoo.org>
+  xf86-input-spaceorb-1.1.1.ebuild:
+  Stable on amd64, bug #251832
 
   24 Feb 2008; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update my email.

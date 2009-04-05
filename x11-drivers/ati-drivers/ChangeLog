@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.145 2009/03/12 11:57:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.146 2009/04/05 19:01:59 tester Exp $
+
+  05 Apr 2009; Olivier Crête <tester@gentoo.org>
+  ati-drivers-8.552-r2.ebuild:
+  Stable on amd64, bug #251832
 
   12 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   ati-drivers-8.561.ebuild, ati-drivers-8.573.ebuild,
