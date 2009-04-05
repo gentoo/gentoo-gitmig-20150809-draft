@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/gtg-0.1.ebuild,v 1.1 2009/04/05 00:35:23 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/gtg-0.1.1.ebuild,v 1.1 2009/04/05 00:48:24 leio Exp $
 
 inherit fdo-mime gnome2-utils distutils
 
