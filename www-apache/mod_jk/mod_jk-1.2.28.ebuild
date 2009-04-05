@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.28.ebuild,v 1.1 2009/04/05 19:55:20 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.28.ebuild,v 1.2 2009/04/05 19:56:55 betelgeuse Exp $
 
 EAPI="2"
 
@@ -28,6 +28,7 @@ CONF_DIR="${WORKDIR}/${MY_P}/conf"
 need_apache
 
 DEPEND=">=virtual/jdk-1.4"
+RDEPEND=""
 
 src_configure() {
 	econf \
