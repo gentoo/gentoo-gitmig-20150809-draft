@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.4.ebuild,v 1.1 2009/01/28 05:47:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.4.ebuild,v 1.2 2009/04/05 03:15:53 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -49,9 +49,7 @@ src_unpack() {
 src_compile() {
 	# Keep the package from doing silly things
 	addwrite /var/cache/fonts
-	export LDCONFIG=:
 	export CC=$(tc-getCC)
-	export STRIP=:
 
 	# We want to use the "bsd" libraries while building on Darwin, but while
 	# building on other Gentoo/*BSD we prefer elf-naming scheme.
@@ -95,8 +93,7 @@ pkg_preinst() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	emake DESTDIR="${D}" install-libs || die
+	emake LDCONFIG=true STRIP=: DESTDIR="${D}" install install-libs || die
 	dodoc README RELEASE-NOTES
 
 	# Move shared libraries to /lib/, install static libraries to /usr/lib/,
