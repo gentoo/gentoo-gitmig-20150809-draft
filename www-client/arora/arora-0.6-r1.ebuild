@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.6.ebuild,v 1.1 2009/03/31 05:46:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.6-r1.ebuild,v 1.1 2009/04/05 20:25:17 yngwin Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -50,7 +50,7 @@ src_prepare() {
 }
 
 src_configure() {
-	eqmake4 arora.pro PREFIX="${D}/usr"
+	eqmake4 arora.pro PREFIX=/usr
 }
 
 src_compile() {
@@ -61,6 +61,6 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die 'make install failed'
+	emake -j1 INSTALL_ROOT="${D}" install || die 'make install failed'
 	dodoc AUTHORS ChangeLog README
 }
