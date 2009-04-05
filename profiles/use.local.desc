@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4334 2009/04/05 00:47:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4335 2009/04/05 07:07:54 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -782,7 +782,7 @@ dev-python/visual:numeric - enable support for numeric
 dev-python/wxpython:doc - Install HTML wxWidgets docs and wxpython API reference.
 dev-python/wxpython:examples - Install interactive demo module browser and sample applets.
 dev-python/zsi:twisted - add support for dev-python/twisted
-dev-ruby/camping:mongrel - Also install dev-ruby/mongrel
+dev-ruby/camping:mongrel - Also install www-servers/mongrel
 dev-ruby/nitro:lighttpd - Also install www-servers/lighttpd
 dev-ruby/nitro:xslt - Enable dev-libs/libxslt support
 dev-ruby/og:kirbybase - Enable dev-ruby/kirbybase support
