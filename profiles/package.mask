@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9632 2009/04/05 19:16:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9633 2009/04/05 22:25:15 betelgeuse Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -328,14 +328,6 @@ x11-plugins/desklet-sidecandyrhythmbox
 x11-plugins/desklet-calendar
 x11-plugins/desklet-clock
 =gnome-extra/gdesklets-core-0.35.4
-
-# Petteri Räty <betelgeuse@gentoo.org> (19 Feb 2009)
-# The newer versions of the driver found in
-# dev-java/jdbc-postgresql also work with PostgreSQL
-# version >=7.2 so there is no need to keep these old
-# versions around any more. See bug #259559 for more
-# information
-dev-java/jdbc2-postgresql
 
 # Ben de Groot <yngwin@gentoo.org> (14 Feb 2009)
 # Masking because of build failures, bug 258961
