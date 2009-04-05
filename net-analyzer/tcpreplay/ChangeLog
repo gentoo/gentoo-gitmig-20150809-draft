@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/tcpreplay
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.30 2008/08/17 19:47:40 gentoofan23 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.31 2009/04/05 19:14:22 pva Exp $
+
+*tcpreplay-3.4.1 (05 Apr 2009)
+
+  05 Apr 2009; Peter Volkov <pva@gentoo.org>
+  +files/tcpreplay-3.4.1-errx-exit.patch, metadata.xml,
+  +tcpreplay-3.4.1.ebuild:
+  Version bump, bug #261201, thank DrChandra the Gentoo Person for report.
+  Fixes statical linking with libpcap and make sure we don't use bundled
+  libopts, bug #252940, thank Diego E. 'Flameeyes' Pettenò for report.
 
   17 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org>
   tcpreplay-3.3.2.ebuild:
