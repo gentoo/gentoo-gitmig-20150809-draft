@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.7.0.ebuild,v 1.1 2009/04/02 18:14:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.7.0.ebuild,v 1.2 2009/04/05 17:38:04 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -60,8 +60,8 @@ src_configure() {
 	# always built instead.
 	myopts="${myopts} --without-allegro"
 
-	# configure is a hand-written sh-script, so econf will not work
-	./configure \
+	# configure is a hand-written bash-script, so econf will not work
+	bash ./configure \
 		--disable-strip \
 		--prefix-dir=/usr \
 		--binary-dir="${GAMES_BINDIR}" \

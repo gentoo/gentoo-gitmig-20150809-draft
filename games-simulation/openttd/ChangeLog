@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.68 2009/04/02 18:14:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.69 2009/04/05 17:38:04 mr_bones_ Exp $
+
+  05 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> openttd-0.7.0.ebuild:
+  configure is a bash script (bug #264963)
 
 *openttd-0.7.0 (02 Apr 2009)
 
