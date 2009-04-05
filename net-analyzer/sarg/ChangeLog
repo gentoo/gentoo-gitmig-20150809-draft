@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.47 2009/03/24 18:54:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.48 2009/04/05 20:39:17 pva Exp $
+
+*sarg-2.2.5-r2 (05 Apr 2009)
+
+  05 Apr 2009; Peter Volkov <pva@gentoo.org> +sarg-2.2.5-r2.ebuild:
+  Small rework of getword-boundary-limit.patch, now we issue warning instead
+  of exit(1) in case a limit at getword was not enough to handle word. Add
+  fix for bug #263802, thank cpa for report and Dmitriy Bogun for usefull
+  backtrace.
 
   24 Mar 2009; Brent Baude <ranger@gentoo.org> sarg-2.2.5-r1.ebuild:
   Marking sarg-2.2.5-r1 ppc for bug 222121
