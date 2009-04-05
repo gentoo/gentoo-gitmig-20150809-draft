@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.23-r1.ebuild,v 1.2 2009/03/31 09:47:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.23-r2.ebuild,v 1.1 2009/04/05 19:34:37 pva Exp $
 
 inherit bash-completion eutils autotools
 
@@ -30,13 +30,17 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-vznetaddbr.in-no-bashisms.patch"
-	epatch "${FILESDIR}/${P}-ve-unlimited.conf-sample.patch"
 	epatch "${FILESDIR}/${P}-debian-CT-ipv6-fix.patch"
-	epatch "${FILESDIR}/${P}-cronjobs-typo-fix.patch"
-	epatch "${FILESDIR}/${P}-cronjobs-issue-warning.patch"
-	epatch "${FILESDIR}/${P}-vzarp-on-ifup.patch"
+	epatch "${FILESDIR}/${P}-ve-unlimited.conf-sample.patch"
 	epatch "${FILESDIR}/${P}-ppp-feature.patch"
 	epatch "${FILESDIR}/${P}-UBC-parameter-swappages.patch"
+	epatch "${FILESDIR}/${P}-cronjobs-wightspace.patch"
+	epatch "${FILESDIR}/${P}-cronjobs-multiple-cron-jobs.patch"
+	epatch "${FILESDIR}/${P}-cronjobs-dstdir-check.patch"
+	
+	epatch "${FILESDIR}/${P}-cronjobs-issue-warning.patch"
+
+	epatch "${FILESDIR}/${P}-vzarp-on-ifup.patch"
 	epatch "${FILESDIR}/${P}-forwarding-issue-warning.patch"
 	eautomake
 }
