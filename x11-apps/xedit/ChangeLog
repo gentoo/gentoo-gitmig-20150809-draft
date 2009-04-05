@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.23 2009/01/14 13:49:06 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.24 2009/04/05 17:03:09 tester Exp $
+
+  05 Apr 2009; Olivier Crête <tester@gentoo.org> xedit-1.1.2.ebuild:
+  Stable on amd64, bug #264982
 
   14 Jan 2009; Rémi Cardona <remi@gentoo.org> xedit-1.1.2.ebuild:
   remove xprint support (see bug #254874)

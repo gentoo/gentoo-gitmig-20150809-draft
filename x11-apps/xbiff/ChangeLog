@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xbiff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbiff/ChangeLog,v 1.18 2009/02/27 23:44:53 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbiff/ChangeLog,v 1.19 2009/04/05 17:01:46 tester Exp $
+
+  05 Apr 2009; Olivier Crête <tester@gentoo.org> xbiff-1.0.1-r1.ebuild:
+  Stable on amd64, bug #264982
 
 *xbiff-1.0.1-r1 (27 Feb 2009)
 
