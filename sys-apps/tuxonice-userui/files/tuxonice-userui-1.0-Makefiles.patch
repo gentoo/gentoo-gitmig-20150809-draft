@@ -1,6 +1,7 @@
---- tuxonice-userui-1.0.vanilla/Makefile	2009-04-04 12:37:13.000000000 +0100
-+++ tuxonice-userui-1.0/Makefile	2009-04-04 12:37:54.000000000 +0100
-@@ -32,10 +32,10 @@
+diff -Nru tuxonice-userui-1.0.vanilla/Makefile tuxonice-userui-1.0/Makefile
+--- tuxonice-userui-1.0.vanilla/Makefile	2009-04-04 13:37:13.000000000 +0200
++++ tuxonice-userui-1.0/Makefile	2009-04-05 14:13:23.000000000 +0200
+@@ -32,15 +32,15 @@
  all: $(TARGETS)
  
  fbsplash:
@@ -13,6 +14,12 @@
  
  tuxoniceui_text: $(CORE_OBJECTS) userui_text.o
  	$(CC) $(LDFLAGS) -static $^ -o $@
+ 
+-tuxoniceui_fbsplash: fbsplash $(CORE_OBJECTS) fbsplash/userui_fbsplash.o
++tuxoniceui_fbsplash: fbsplash $(CORE_OBJECTS)
+ 	$(CC) $(LDFLAGS) -static $(CORE_OBJECTS) fbsplash/userui_fbsplash.o -o $@ $(FBSPLASH_LIBS)
+ 
+ tuxoniceui_usplash: usplash $(CORE_OBJECTS) usplash/userui_usplash.o
 @@ -48,8 +48,8 @@
  
  clean:
@@ -24,3 +31,15 @@
  
  $(INSTDIR)/%: %
  	strip $<
+diff -Nru tuxonice-userui-1.0.vanilla/fbsplash/Makefile tuxonice-userui-1.0/fbsplash/Makefile
+--- tuxonice-userui-1.0.vanilla/fbsplash/Makefile	2009-04-04 13:37:13.000000000 +0200
++++ tuxonice-userui-1.0/fbsplash/Makefile	2009-04-05 14:14:53.000000000 +0200
+@@ -6,7 +6,7 @@
+ 		parse.o mng_callbacks.o mng_render.o render.o ttf.o
+ SOURCES = $(patsubst %.o,%.c,$(OBJECTS))
+ 
+-all: $(TARGET)
++all: $(TARGET) $(OBJECTS)
+ 
+ userui_fbsplash.o: $(OBJECTS)
+ 	$(CC) $(LDFLAGS) -r -nostdlib -nostartfiles $(SPLASH_LDLIBS) $^ -o $@
