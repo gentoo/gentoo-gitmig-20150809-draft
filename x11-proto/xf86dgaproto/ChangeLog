@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86dgaproto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.31 2009/04/03 13:58:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.32 2009/04/05 18:56:54 tester Exp $
+
+  05 Apr 2009; Olivier Crête <tester@gentoo.org> ChangeLog:
+  Stable on amd64, bug #251832
 
   03 Apr 2009; Brent Baude <ranger@gentoo.org> xf86dgaproto-2.0.3.ebuild:
   Marking xf86dgaproto-2.0.3 ppc stable for bug 251832
