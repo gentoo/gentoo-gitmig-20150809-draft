@@ -1,12 +1,6 @@
 # ChangeLog for x11-apps/xvinfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.29 2009/04/05 21:33:32 maekke Exp $
-
-  05 Apr 2009; Markus Meier <maekke@gentoo.org> ChangeLog:
-  x86 stable, bug #251832
-
-  05 Apr 2009; Olivier Crête <tester@gentoo.org> ChangeLog:
-  Stable on amd64, bug #251832
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.30 2009/04/05 21:34:08 maekke Exp $
 
   03 Apr 2009; Brent Baude <ranger@gentoo.org> xvinfo-1.0.2.ebuild:
   Marking xvinfo-1.0.2 ppc stable for bug 251832
