@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4333 2009/04/03 18:14:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4334 2009/04/05 00:47:57 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2385,6 +2385,7 @@ sci-biology/biopython:kdtree - Do not build KDTree module and its dependencies (
 sci-biology/clustalw-mpi:mpi_njtree - Use MPI (as opposed to serial) code for computing neighbor-joining trees
 sci-biology/clustalw-mpi:static_pairalign - Use static (as opposed to dynamic) scheduling for pair alignments
 sci-biology/hmmer:pvm - Add support for parallel virtual machine (sys-cluster/pvm)
+sci-biology/mcl:blast -  add support for NCBI BLAST data 
 sci-biology/plink:webcheck -  add support for online update checking every time the program starts 
 sci-biology/vienna-rna:no-readseq - Do not include the modified version of Don Gilbert's readseq program
 sci-biology/vienna-rna:no-utils - Do not include sequence format conversion and representation utilities
