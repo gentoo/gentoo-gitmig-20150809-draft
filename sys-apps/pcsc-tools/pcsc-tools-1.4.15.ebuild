@@ -1,16 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.15.ebuild,v 1.1 2009/01/23 07:37:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/pcsc-tools-1.4.15.ebuild,v 1.2 2009/04/05 17:00:48 nerdboy Exp $
 
 inherit eutils fdo-mime multilib
 
 DESCRIPTION="PC/SC Architecture smartcard tools"
 HOMEPAGE="http://ludovic.rousseau.free.fr/softwares/pcsc-tools/"
-SRC_URI="http://ludovic.rousseau.free.fr/softwares/${PN}/${P}.tar.gz"
+SRC_URI="http://ludovic.rousseau.free.fr/softwares/${PN}/${P}.tar.gz
+	mirror://gentoo/smartcard_list.txt"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+## ~arm waiting for keywords
 IUSE="debug usb"
 
 RDEPEND="usb? ( app-crypt/ccid )
@@ -36,7 +38,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}usr" install || die
 
-	prepalldocs
+	# prepalldocs isn't supported any more?
 	dodoc README Changelog
 
 	doicon "${FILESDIR}"/smartcard.svg

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pcsc-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.2 2009/01/23 07:37:40 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-tools/ChangeLog,v 1.3 2009/04/05 17:00:48 nerdboy Exp $
+
+  05 Apr 2009; Steve Arnold <nerdboy@gentoo.org> pcsc-tools-1.4.15.ebuild:
+  Fixed some QA issues and updated the smartcart_list file.
+
+  05 Apr 2009; Steve Arnold <nerdboy@gentoo.org> pcsc-tools-1.4.15.ebuild:
+  Temporarily dropping ~arm for some additional platform testing (see bug 
+  #264983).
 
 *pcsc-tools-1.4.15 (23 Jan 2009)
 
