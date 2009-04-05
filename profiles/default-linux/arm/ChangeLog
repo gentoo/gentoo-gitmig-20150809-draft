@@ -1,12 +1,12 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.33 2009/04/05 17:26:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.34 2009/04/05 17:27:51 armin76 Exp $
 
   05 Apr 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask gnomecd
 
   04 Apr 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
-  Use.mask libupnp, zvbi, kate, v4l, v4l2, dvd, fluidsynth
+  Use.mask zvbi, kate, v4l, v4l2, dvd, fluidsynth
 
   30 Mar 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Add madwifi to use.mask
