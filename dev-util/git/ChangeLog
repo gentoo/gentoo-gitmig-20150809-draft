@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.328 2009/04/05 00:04:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.329 2009/04/05 21:17:42 robbat2 Exp $
+
+  05 Apr 2009; Robin H. Johnson <robbat2@gentoo.org> git-9999.ebuild:
+  Forgot a bit.
 
   05 Apr 2009; Robin H. Johnson <robbat2@gentoo.org> git-1.6.2.2-r1.ebuild:
   Refix bug #237210, missed a part.
@@ -11,7 +14,8 @@
   03 Apr 2009; Robin H. Johnson <robbat2@gentoo.org> +git-1.6.2.2-r1.ebuild,
   +git-9999.ebuild:
   Bug #238023 - add an scm-capable ebuild for Git, use it to tidy up the
-  ebuild a bit too.
+  ebuild a bit too. Based on the work by Sebastian Pipping
+  <webmaster@hartwork.org>.
 
 *git-1.6.2.2 (03 Apr 2009)
 
