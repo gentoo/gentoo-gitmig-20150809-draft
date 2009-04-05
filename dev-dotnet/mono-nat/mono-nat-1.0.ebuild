@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-nat/mono-nat-1.0.ebuild,v 1.2 2009/04/05 12:17:10 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-nat/mono-nat-1.0.ebuild,v 1.3 2009/04/05 12:18:58 loki_val Exp $
 
 EAPI=2
 
@@ -36,6 +36,6 @@ src_install() {
 		-e 's;@LIBS@;-r:${libdir}/mono/mono-nat/Mono.Nat.dll;' \
 		"${FILESDIR}"/${PN}.pc.in > "${D}"/usr/$(get_libdir)/pkgconfig/mono.nat.pc \
 		|| die "sed failed"
-	PKG_CONFIG_PATH="${D}/usr/lib64/pkgconfig/" pkg-config --exists mono.nat || die ".pc file failed to validate."
+	PKG_CONFIG_PATH="${D}/usr/$(get_libdir)/pkgconfig/" pkg-config --exists mono.nat || die ".pc file failed to validate."
 	eend $?
 }

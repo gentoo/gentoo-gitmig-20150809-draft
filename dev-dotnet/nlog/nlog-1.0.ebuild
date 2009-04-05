@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nlog/nlog-1.0.ebuild,v 1.1 2009/04/05 11:59:26 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nlog/nlog-1.0.ebuild,v 1.2 2009/04/05 12:20:24 loki_val Exp $
 
 EAPI=2
 
@@ -48,7 +48,7 @@ src_install() {
 		-e "s:@VERSION@:${PV}:" \
 		-e 's;@LIBS@;-r:${libdir}/mono/nlog/NLog.dll;' \
 		"${FILESDIR}"/${PN}.pc.in > "${D}"/usr/$(get_libdir)/pkgconfig/${PN}.pc
-	PKG_CONFIG_PATH="${D}/usr/lib64/pkgconfig/" pkg-config --exists ${PN} || die ".pc file failed to validate."
+	PKG_CONFIG_PATH="${D}/usr/$(get_libdir)/pkgconfig/" pkg-config --exists ${PN} || die ".pc file failed to validate."
 	eend $?
 	dodoc README.txt || die "dodoc failed"
 }
