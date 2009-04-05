@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.10.ebuild,v 1.6 2009/04/05 17:19:23 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.10.ebuild,v 1.7 2009/04/05 21:39:24 loki_val Exp $
 
 EAPI=2
 
@@ -36,7 +36,6 @@ RDEPEND="x11-themes/gnome-icon-theme
 		=media-libs/gst-plugins-good-0.10*
 		=media-plugins/gst-plugins-gconf-0.10*
 		=media-plugins/gst-plugins-gnomevfs-0.10*
-		aac? ( =media-plugins/gst-plugins-faad-0.10* )
 		flac? ( =media-plugins/gst-plugins-flac-0.10* )
 		mad? ( =media-plugins/gst-plugins-mad-0.10* )
 		vorbis? ( =media-plugins/gst-plugins-ogg-0.10*
