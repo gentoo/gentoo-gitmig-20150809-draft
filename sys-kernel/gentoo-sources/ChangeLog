@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.597 2009/03/28 18:24:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.598 2009/04/05 01:43:54 mpagano Exp $
+
+*gentoo-sources-2.6.29-r1 (05 Apr 2009)
+
+  05 Apr 2009; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.29-r1.ebuild:
+  Linux 2.6.29.1 patch, ext4 filesystem patches, fbcondecor version bump to
+  0.9.6.
 
   28 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.29.ebuild:
