@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.197 2009/04/04 13:41:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.198 2009/04/05 14:19:24 ranger Exp $
+
+  05 Apr 2009; Brent Baude <ranger@gentoo.org> asterisk-1.2.32.ebuild:
+  Marking asterisk-1.2.32 ppc for bug 237476
 
   04 Apr 2009; Markus Meier <maekke@gentoo.org> asterisk-1.2.32.ebuild:
   amd64/x86 stable, bug #237476
