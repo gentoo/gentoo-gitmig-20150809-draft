@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-elographics
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-elographics/ChangeLog,v 1.36 2009/04/05 19:03:11 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-elographics/ChangeLog,v 1.37 2009/04/05 22:29:56 maekke Exp $
+
+  05 Apr 2009; Markus Meier <maekke@gentoo.org>
+  xf86-input-elographics-1.2.2.ebuild:
+  x86 stable, bug #251832
 
   05 Apr 2009; Olivier Crête <tester@gentoo.org>
   xf86-input-elographics-1.2.2.ebuild:
