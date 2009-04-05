@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.4.ebuild,v 1.2 2009/04/05 12:50:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.4.ebuild,v 1.3 2009/04/05 21:28:12 mr_bones_ Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -112,7 +112,6 @@ src_configure() {
 	einfo "Enabled camera drivers: ${cameras}"
 	[ "${cameras}" != "all" ] && \
 		ewarn "Upstream will not support you if you do not compile all camera drivers first"
-
 
 	econf \
 		--disable-docs \
