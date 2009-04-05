@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.90.3.ebuild,v 1.1 2009/04/05 12:47:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.90.3.ebuild,v 1.2 2009/04/05 12:48:11 jokey Exp $
 
 EAPI=2
-
-inherit eutils autotools
 
 MY_P=${P/gtk-engines-//}
 
