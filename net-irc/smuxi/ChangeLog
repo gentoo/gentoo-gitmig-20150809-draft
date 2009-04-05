@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/smuxi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.1 2009/01/31 22:19:26 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.2 2009/04/05 21:20:02 loki_val Exp $
+
+  05 Apr 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/smuxi-0.6.3-infinite-loop.patch, smuxi-0.6.3.ebuild:
+  Fix bug 259434, smuxi enters an infinite loop when compiling on
+  milli-second-precision FSes, suchs as tmpfs or XFS.
 
 *smuxi-0.6.3 (31 Jan 2009)
 
