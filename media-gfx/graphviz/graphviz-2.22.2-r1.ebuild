@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.22.2.ebuild,v 1.2 2009/04/05 20:00:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.22.2-r1.ebuild,v 1.1 2009/04/05 20:00:13 maekke Exp $
 
 EAPI="2"
 
@@ -12,8 +12,8 @@ SRC_URI="http://www.graphviz.org/pub/graphviz/ARCHIVE/${P}.tar.gz"
 
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="cairo doc examples gnome gtk java jpeg nls perl png python ruby tcl"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~s390 ~sh ~sparc-fbsd ~x86 ~x86-fbsd"
+IUSE="cairo doc examples gnome gtk java jpeg lasi nls perl png python ruby tcl"
 
 # Requires ksh
 RESTRICT="test"
@@ -27,20 +27,21 @@ RDEPEND="
 	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.10
 	virtual/libiconv
-	cairo?  (
+	cairo?	(
 		x11-libs/libXaw
 		>=x11-libs/pango-1.12
 		>=x11-libs/cairo-1.1.10[svg]
 	)
-	ruby?	( dev-lang/ruby )
-	tcl?	( >=dev-lang/tcl-8.3 )
 	gtk?	(
 		>=x11-libs/gtk+-2
 		x11-libs/libXaw
 		>=x11-libs/pango-1.12
 		>=x11-libs/cairo-1.1.10
 		gnome? ( gnome-base/libgnomeui )
-	)"
+	)
+	lasi?	( media-libs/lasi )
+	ruby?	( dev-lang/ruby )
+	tcl?	( >=dev-lang/tcl-8.3 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20
@@ -142,14 +143,14 @@ src_configure() {
 	myconf="${myconf}
 		$(use_with cairo pangocairo)
 		$(use_with gtk)
+		$(use_with lasi)
 		--with-digcola
 		--with-fontconfig
 		--with-freetype2
 		--with-ipsepcola
 		--with-libgd
 		--without-gdk-pixbuf
-		--without-ming
-		--without-lasi"
+		--without-ming"
 
 	# new/experimental features, to be tested, disable for now
 	myconf="${myconf}

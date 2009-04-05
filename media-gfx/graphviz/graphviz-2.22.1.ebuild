@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.22.1.ebuild,v 1.2 2009/03/12 06:03:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.22.1.ebuild,v 1.3 2009/04/05 20:00:13 maekke Exp $
 
 EAPI="2"
 
@@ -148,7 +148,8 @@ src_configure() {
 		--with-ipsepcola
 		--with-libgd
 		--without-gdk-pixbuf
-		--without-ming"
+		--without-ming
+		--without-lasi"
 
 	# new/experimental features, to be tested, disable for now
 	myconf="${myconf}
