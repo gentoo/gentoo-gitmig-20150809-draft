@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.4-r1.ebuild,v 1.10 2009/03/23 05:17:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.4-r1.ebuild,v 1.11 2009/04/05 21:27:04 eva Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RESTRICT="test"
 RDEPEND="sys-libs/zlib
 	app-arch/bzip2
 	>=dev-libs/glib-2.6
-	>=gnome-extra/libgsf-1.14.6[gnome=]
+	>=gnome-extra/libgsf-1.14.6[gnome?]
 	>=x11-libs/goffice-0.6.3
 	>=dev-libs/libxml2-2.4.12
 	>=x11-libs/pango-1.8.1
