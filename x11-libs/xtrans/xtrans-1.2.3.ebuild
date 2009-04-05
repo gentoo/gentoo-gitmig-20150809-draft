@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/xtrans-1.2.3.ebuild,v 1.4 2009/04/05 18:52:17 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/xtrans-1.2.3.ebuild,v 1.5 2009/04/05 21:09:35 maekke Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -9,7 +9,7 @@ inherit x-modular
 
 DESCRIPTION="X.Org xtrans library"
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}"
