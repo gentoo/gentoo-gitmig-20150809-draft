@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/renderproto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/renderproto/ChangeLog,v 1.36 2009/04/05 18:56:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/renderproto/ChangeLog,v 1.37 2009/04/05 21:06:16 maekke Exp $
+
+  05 Apr 2009; Markus Meier <maekke@gentoo.org> renderproto-0.9.3.ebuild:
+  x86 stable, bug #251832
 
   05 Apr 2009; Olivier Crête <tester@gentoo.org> renderproto-0.9.3.ebuild:
   Stable on amd64, bug #251832
