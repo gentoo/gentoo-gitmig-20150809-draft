@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.0-r1.ebuild,v 1.5 2009/04/04 13:51:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.0-r1.ebuild,v 1.6 2009/04/05 11:28:00 arfrever Exp $
 
 EAPI="1"
 
@@ -74,6 +74,7 @@ pkg_setup() {
 		if [[ -n "${apu_bdb_version}" && "${SVN_BDB_VERSION}" != "${apu_bdb_version}" ]]; then
 			eerror "APR-Util is linked against Berkeley DB ${apu_bdb_version}, but you are trying"
 			eerror "to build Subversion with support for Berkeley DB ${SVN_BDB_VERSION}."
+			eerror "Rebuild dev-libs/apr-util or set SVN_BDB_VERSION=\"${apu_bdb_version}\"."
 			eerror "Aborting to avoid possible run-time crashes."
 			die "Berkeley DB version mismatch"
 		fi
