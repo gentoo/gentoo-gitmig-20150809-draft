@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.163 2009/02/07 14:50:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.164 2009/04/05 03:21:42 vapier Exp $
+
+  05 Apr 2009; Mike Frysinger <vapier@gentoo.org>
+  files/pciutils-2.2.7-update-pciids-both-forms.patch:
+  Make sure the id files are world readable #264812 by Redeeman.
 
   07 Feb 2009; Raúl Porcel <armin76@gentoo.org> pciutils-3.0.2.ebuild:
   ia64/sparc stable wrt #256377
