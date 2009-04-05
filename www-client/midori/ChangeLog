@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.10 2009/04/05 15:37:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.11 2009/04/05 15:57:11 jokey Exp $
+
+  05 Apr 2009; Markus Ullmann <jokey@gentoo.org> midori-0.1.5.ebuild,
+  midori-9999.ebuild:
+  Updating dependency, bug #258671
 
 *midori-0.1.5 (05 Apr 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.1.5.ebuild,v 1.1 2009/04/05 15:37:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.1.5.ebuild,v 1.2 2009/04/05 15:57:11 jokey Exp $
 
 EAPI=2
 
@@ -13,16 +13,17 @@ SRC_URI="http://goodies.xfce.org/releases/midori/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nls soup sqlite"
+IUSE=""
 
-DEPEND=">=dev-lang/python-2.4
-	x11-libs/gtk+
+RDEPEND=">=dev-lang/python-2.4
 	>=net-libs/webkit-gtk-0_p42000
-	dev-libs/libxml2
-	nls? ( sys-devel/gettext )
 	soup? ( >=net-libs/libsoup-0.9 )
 	sqlite? ( >=dev-db/sqlite-3.0 )"
-RDEPEND="${DEPEND}"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	dev-util/intltool
+	sys-devel/gettext"
 
 src_configure() {
 	./waf \

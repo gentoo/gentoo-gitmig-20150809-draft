@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.9 2009/01/04 16:18:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-9999.ebuild,v 1.10 2009/04/05 15:57:11 jokey Exp $
 
 inherit git eutils multilib
 
@@ -12,13 +12,16 @@ EGIT_PROJECT="midori"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="nls soup sqlite"
+IUSE=""
 
-DEPEND="x11-libs/gtk+
-	net-libs/webkit-gtk
-	nls? ( sys-devel/gettext )
-	soup? ( net-libs/libsoup )
-	sqlite? ( dev-db/sqlite )"
+RDEPEND="net-libs/webkit-gtk
+	net-libs/libsoup
+	dev-db/sqlite"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	dev-util/intltool
+	sys-devel/gettext"
 
 pkg_setup() {
 	ewarn "Note: this software is not yet in a too mature status so expect some minor things to break"
