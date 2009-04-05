@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.1.ebuild,v 1.2 2008/06/07 20:51:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.1.ebuild,v 1.3 2009/04/05 18:13:19 arfrever Exp $
+
+inherit autotools
 
 DESCRIPTION="TrouSerS' support tools for the Trusted Platform Modules"
 HOMEPAGE="http://trousers.sf.net"
@@ -17,12 +19,20 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -e "s/-Werror //" -i configure.in
+	eautoreconf
+}
+
 src_compile() {
-	econf $(use_enable nls) || die "econf failed"
+	econf $(use_enable nls)
 	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README
 }
