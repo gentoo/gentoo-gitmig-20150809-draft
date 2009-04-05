@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.95 2009/04/05 11:11:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.96 2009/04/05 12:16:54 bluebird Exp $
+
+  05 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> lcms-1.18.ebuild:
+  Stable on sparc, security bug #260269
 
   05 Apr 2009; Tobias Klausmann <klausman@gentoo.org> lcms-1.18.ebuild:
   Stable on alpha, bug #260269
