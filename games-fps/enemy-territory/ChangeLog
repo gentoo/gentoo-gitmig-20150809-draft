@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.43 2008/02/29 19:27:30 carlo Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.44 2009/04/05 03:02:00 mr_bones_ Exp $
+
+  05 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  enemy-territory-2.60b.ebuild:
+  PROPERTIES="interactive" for bug #264860
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
   enemy-territory-2.60b.ebuild:
