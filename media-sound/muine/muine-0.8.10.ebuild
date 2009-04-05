@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.10.ebuild,v 1.5 2009/04/04 14:53:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.10.ebuild,v 1.6 2009/04/05 17:19:23 loki_val Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.gnome.org/sources/muine/0.8/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="aac flac mad vorbis xine"
+IUSE="flac mad vorbis xine"
 
 RDEPEND="x11-themes/gnome-icon-theme
 	>=dev-lang/mono-2
@@ -29,7 +29,6 @@ RDEPEND="x11-themes/gnome-icon-theme
 	>=media-libs/flac-1.1.2
 	>=media-libs/libvorbis-1
 	>=media-libs/libid3tag-0.15.0b
-	aac? ( >=media-libs/faad2-2.0-r4 )
 	xine? ( >=media-libs/xine-lib-1 )
 	!xine? (
 		=media-libs/gstreamer-0.10*
@@ -57,8 +56,6 @@ PATCHES=( "${FILESDIR}/${P}-buttons.patch" )
 # The build is not parallel safe
 MAKEOPTS="${MAKEOPTS} -j1"
 
-G2CONF="$(use_enable aac faad2) $(use_enable xine)"
-
 src_unpack() {
 	gnome2_src_unpack
 }
@@ -69,8 +66,7 @@ src_prepare() {
 }
 
 src_configure() {
-	append-flags -Wno-error
-	gnome2_src_configure
+	gnome2_src_configure --enable-compile-warnings=yes --disable-faad2  $(use_enable xine)
 }
 
 src_compile() {
