@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.1.ebuild,v 1.1 2009/04/05 19:14:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.1.ebuild,v 1.2 2009/04/05 21:28:30 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="debug pcapnav +tcpdump"
 
 DEPEND="
 	>=sys-devel/autogen-5.9.7
-	dev-libs/libdnet	
+	dev-libs/libdnet
 	>=net-libs/libpcap-0.9
 	tcpdump? ( net-analyzer/tcpdump )
 	pcapnav? ( net-libs/libpcapnav )"
