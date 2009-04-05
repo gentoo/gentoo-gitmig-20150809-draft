@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ivtv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/ChangeLog,v 1.7 2008/12/12 05:03:01 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtv/ChangeLog,v 1.8 2009/04/05 18:41:48 tester Exp $
+
+  05 Apr 2009; Olivier Crête <tester@gentoo.org>
+  xf86-video-ivtv-1.0.1.ebuild:
+  Stable on amd64, bug #251832
 
   12 Dec 2008; Steve Dibb <beandog@gentoo.org> xf86-video-ivtv-1.0.0.ebuild,
   xf86-video-ivtv-1.0.1.ebuild:

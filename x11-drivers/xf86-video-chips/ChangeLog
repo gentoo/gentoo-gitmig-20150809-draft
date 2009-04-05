@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-chips
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.28 2009/04/03 13:37:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.29 2009/04/05 18:40:13 tester Exp $
+
+  05 Apr 2009; Olivier Crête <tester@gentoo.org>
+  xf86-video-chips-1.2.1.ebuild:
+  Stable on amd64, bug #251832
 
   03 Apr 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking xf86-video-chips-1.2.1 ppc stable for bug 251832

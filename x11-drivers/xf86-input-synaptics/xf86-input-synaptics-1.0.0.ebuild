@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.0.0.ebuild,v 1.4 2009/04/03 14:29:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.0.0.ebuild,v 1.5 2009/04/05 18:38:40 tester Exp $
 
 inherit toolchain-funcs eutils x-modular
 
 DESCRIPTION="Driver for Synaptics touchpads"
 HOMEPAGE="http://cgit.freedesktop.org/xorg/driver/xf86-input-synaptics/"
-KEYWORDS="~amd64 ppc ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 ~x86"
 LICENSE="MIT"
 IUSE="hal"
 RDEPEND="x11-libs/libXext
