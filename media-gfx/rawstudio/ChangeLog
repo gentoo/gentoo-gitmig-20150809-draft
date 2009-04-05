@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/rawstudio
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.11 2008/11/22 17:37:14 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/ChangeLog,v 1.12 2009/04/05 12:26:34 maekke Exp $
+
+*rawstudio-1.1.1-r1 (05 Apr 2009)
+
+  05 Apr 2009; Markus Meier <maekke@gentoo.org>
+  +files/rawstudio-1.1.1-exiv2-0.18.patch, +rawstudio-1.1.1-r1.ebuild:
+  revision bump to fix nikon raw files with media-gfx/exiv2-0.18, bug
+  #258058
 
   22 Nov 2008; Markus Meier <maekke@gentoo.org>
   -files/rawstudio-1.0-desktop-entry-and-pixmaps-directory.patch,

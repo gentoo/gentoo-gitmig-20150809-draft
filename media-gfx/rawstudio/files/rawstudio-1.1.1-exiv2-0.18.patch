@@ -1,0 +1,22 @@
+In Exiv2 v.0.18 the Nikon maker EXIF tag was renamed from NEFThumbnailSize to
+RawImageCenter. This makes rawstudio crash when exporting RAW images.
+
+http://bugzilla.rawstudio.org/show_bug.cgi?id=258
+
+diff -Naur rawstudio.orig/src/rs-exif.cc rawstudio/src/rs-exif.cc
+--- rawstudio.orig/src/rs-exif.cc	2009-01-10 19:30:36.262484000 +0100
++++ rawstudio/src/rs-exif.cc	2009-03-26 19:14:56.277628371 +0100
+@@ -58,7 +58,12 @@
+ #if EXIV2_TEST_VERSION(0,13,0)
+ 	"Exif.Nikon3.Preview",
+ #endif
+-	"Exif.Nikon3.NEFThumbnailSize",
++
++#if EXIV2_TEST_VERSION(0,18,0)
++        "Exif.Nikon3.RawImageCenter",
++#else
++        "Exif.Nikon3.NEFThumbnailSize",
++#endif
+ 
+ #if EXIV2_TEST_VERSION(0,17,91)
+ 	"Exif.NikonPreview.JPEGInterchangeFormat",
