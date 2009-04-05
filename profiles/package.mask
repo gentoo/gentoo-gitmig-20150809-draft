@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9627 2009/04/04 13:37:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9628 2009/04/05 15:26:19 jokey Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markus Ullmann <jokey@gentoo.org> (5 Apr 2009)
+# mask until gnome 2.26 is in-tree (needs libsoup 2.26)
+>=net-libs/webkit-gtk-0_p42000
 
 # Ulrich Mueller <ulm@gentoo.org> (2 Apr 2009)
 # De-supported by upstream since three years, see http://tug.org/teTeX/
