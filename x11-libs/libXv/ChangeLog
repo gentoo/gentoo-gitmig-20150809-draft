@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.41 2009/04/03 14:30:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/ChangeLog,v 1.42 2009/04/05 18:50:54 tester Exp $
+
+  05 Apr 2009; Olivier Crête <tester@gentoo.org> libXv-1.0.4.ebuild:
+  Stable on amd64, bug #251832
 
   03 Apr 2009; Brent Baude <ranger@gentoo.org> libXv-1.0.4.ebuild:
   Marking libXv-1.0.4 ppc64 stable for bug 251832

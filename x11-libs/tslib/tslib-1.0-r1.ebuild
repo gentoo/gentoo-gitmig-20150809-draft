@@ -1,11 +1,11 @@
 # Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/tslib-1.0-r1.ebuild,v 1.3 2009/04/03 14:30:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/tslib-1.0-r1.ebuild,v 1.4 2009/04/05 18:52:00 tester Exp $
 
 inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="Touchscreen Access Library"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 #extras arctic2 collie corgi h3600 linear-h2200 mk712 ucb1x00"
 DEPEND=""
