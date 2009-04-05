@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.1.2.ebuild,v 1.1 2009/02/06 11:09:28 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.1.2.ebuild,v 1.2 2009/04/05 16:01:13 jokey Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ DEPEND=">=dev-lang/python-2.4
 	net-libs/webkit-gtk
 	dev-libs/libxml2
 	nls? ( sys-devel/gettext )
-	soup? ( >=net-libs/libsoup-0.9 )
+	soup? ( >=net-libs/libsoup-2.4 )
 	sqlite? ( >=dev-db/sqlite-3.0 )"
 RDEPEND="${DEPEND}"
 
