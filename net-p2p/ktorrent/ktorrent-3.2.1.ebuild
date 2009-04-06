@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2.ebuild,v 1.4 2009/03/19 14:29:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2.1.ebuild,v 1.1 2009/04/06 11:32:41 scarabeus Exp $
 
 EAPI="2"
 
-KDE_MINIMAL="4.2"
 KDE_LINGUAS="ar be bg ca cs da de el en_GB es et fr ga gl hi it ja
 	km lt lv nb nds nl nn oc pl pt pt_BR ro ru se sk sl sr sv
 	tr uk zh_CN zh_TW"
@@ -22,14 +21,15 @@ IUSE="+bwscheduler debug +downloadorder +infowidget +ipfilter +kross +logviewer 
 DEPEND="app-crypt/qca:2
 	dev-libs/gmp
 	sys-devel/gettext
-	!kdeprefix? ( !net-p2p/ktorrent:0 )
-	plasma? ( >=kde-base/libtaskmanager-${KDE_MINIMAL}[kdeprefix=] )
+	plasma? ( >=kde-base/libtaskmanager-${KDE_MINIMAL} )
 	rss? (
 		dev-libs/boost
-		>=kde-base/kdepimlibs-${KDE_MINIMAL}[kdeprefix=] )"
+		>=kde-base/kdepimlibs-${KDE_MINIMAL}
+	)"
 RDEPEND="${DEPEND}
+	!net-p2p/ktorrent:0
 	infowidget? ( >=dev-libs/geoip-1.4.4 )
-	ipfilter? ( >=kde-base/kdebase-kioslaves-${KDE_MINIMAL}[kdeprefix=] )"
+	ipfilter? ( >=kde-base/kdebase-kioslaves-${KDE_MINIMAL} )"
 
 src_prepare() {
 	if ! use plasma; then
