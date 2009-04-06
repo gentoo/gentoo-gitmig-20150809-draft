@@ -1,6 +1,10 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.11 2009/03/16 13:54:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.12 2009/04/06 11:36:00 scarabeus Exp $
+
+  06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  kchmviewer-4.0-r1.ebuild:
+  Preparation for new eclass. Unprefixing misc apps.
 
   16 Mar 2009; Peter Volkov <pva@gentoo.org> kchmviewer-3.1_p2.ebuild,
   -kchmviewer-4.0.ebuild:

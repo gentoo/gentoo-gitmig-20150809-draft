@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-4.0-r1.ebuild,v 1.2 2009/02/24 19:31:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-4.0-r1.ebuild,v 1.3 2009/04/06 11:36:00 scarabeus Exp $
 
 EAPI="2"
 NEED_KDE="none"
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/chmlib
 		=x11-libs/qt-4.3*:4 )
 	!kde? ( || ( x11-libs/qt-gui:4
 		=x11-libs/qt-4.3*:4 ) )
-	kde? ( >=kde-base/kdelibs-4.1[kdeprefix=]
+	kde? ( >=kde-base/kdelibs-4.1
 			!kde-base/okular[chm] )"
 DEPEND="${RDEPEND}
 		kde? ( dev-util/cmake )"
@@ -89,10 +89,6 @@ src_install() {
 pkg_postinst() {
 	use kde && kde4-base_pkg_postinst
 	fdo-mime_desktop_database_update
-	if use kde && use kdeprefix; then
-		elog "Note: after each major kde update, which happens with SLOT change,"
-		elog "you need to rebuild kchmviewer."
-	fi
 }
 
 pkg_postrm() {
