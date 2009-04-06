@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.8 2009/03/25 21:43:41 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.9 2009/04/06 19:18:43 spock Exp $
 
 EAPI="1"
 
@@ -94,6 +94,7 @@ src_unpack() {
 		fi
 	fi
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-fix_rc_var.patch
+	epatch "${FILESDIR}"/splashutils-1.5.4.3-openrc-umount-fix.patch
 	cd "${S}"
 
 	rm -f m4/*
@@ -116,7 +117,8 @@ src_compile() {
 		--with-freetype2-src=${FT2SRC} \
 		--with-jpeg-src=${JPEGSRC} \
 		--with-lpng-src=${LPNGSRC} \
-		--with-zlib-src=${ZLIBSRC} || die "failed to configure splashutils"
+		--with-zlib-src=${ZLIBSRC} \
+		--with-essential-libdir=/$(get_libdir) || die "failed to configure splashutils"
 
 	emake CC="${CC}" STRIP="true" || die "failed to build splashutils"
 

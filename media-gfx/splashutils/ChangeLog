@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.155 2009/03/25 21:43:41 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.156 2009/04/06 19:18:43 spock Exp $
+
+  06 Apr 2009; Michał Januszewski <spock@gentoo.org>
+  +files/splashutils-1.5.4.3-openrc-umount-fix.patch,
+  splashutils-1.5.4.3.ebuild:
+  Fix the problem of the progress bar not reaching 100% during reboot.
 
   25 Mar 2009; Michał Januszewski <spock@gentoo.org>
   +files/splashutils-openrc-0.4.3-runlevel-fix.patch,
