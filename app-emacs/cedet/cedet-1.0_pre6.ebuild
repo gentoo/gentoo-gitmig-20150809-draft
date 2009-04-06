@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre6.ebuild,v 1.4 2009/04/04 15:55:21 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre6.ebuild,v 1.5 2009/04/06 14:11:10 ranger Exp $
 
 NEED_EMACS=22
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/cedet/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc ~x86"
+KEYWORDS="amd64 ppc sparc ~x86"
 IUSE=""
 
 DEPEND=""
