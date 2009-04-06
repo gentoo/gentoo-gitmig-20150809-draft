@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-7.0.0.ebuild,v 1.2 2009/01/02 10:35:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-7.0.0.ebuild,v 1.3 2009/04/06 15:01:51 hollow Exp $
 
 inherit qmail
 
@@ -56,7 +56,7 @@ src_compile() {
 
 src_install () {
 	dodir /usr/bin /usr/lib/ezmlm /etc/ezmlm /usr/share/man
-	dobin ezmlm-cgi
+	dobin ezmlm-{cgi,checksub}
 
 	make DESTDIR="${D}" setup || die "make setup failed"
 }
