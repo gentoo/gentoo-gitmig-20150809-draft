@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-resindvd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.1 2009/03/30 05:53:58 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/ChangeLog,v 1.2 2009/04/06 02:19:37 tester Exp $
+
+  06 Apr 2009; Olivier Crête <tester@gentoo.org>
+  gst-plugins-resindvd-0.10.11.ebuild:
+  Marking ~amd64
 
 *gst-plugins-resindvd-0.10.11 (30 Mar 2009)
 
