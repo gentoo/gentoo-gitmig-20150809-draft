@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.2.0-r1.ebuild,v 1.1 2009/03/23 16:26:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.2.0-r1.ebuild,v 1.2 2009/04/06 12:02:02 scarabeus Exp $
 
 EAPI="2"
 
@@ -25,19 +25,19 @@ DEPEND="
 	>=dev-libs/expat-2.0.1
 	dev-libs/libxml2
 	dev-libs/libxslt
-	>=kde-base/libkdcraw-${KDE_MINIMAL}[kdeprefix=]
-	>=kde-base/libkexiv2-${KDE_MINIMAL}[kdeprefix=]
-	>=kde-base/libkipi-${KDE_MINIMAL}[kdeprefix=]
+	>=kde-base/libkdcraw-${KDE_MINIMAL}
+	>=kde-base/libkexiv2-${KDE_MINIMAL}
+	>=kde-base/libkipi-${KDE_MINIMAL}
 	media-libs/jpeg
 	media-libs/libpng
 	>=media-libs/tiff-3.5
-	calendar? ( >=kde-base/kdepimlibs-${KDE_MINIMAL}[kdeprefix=] )
+	calendar? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} )
 	ipod? ( media-libs/libgpod )
 	opengl? ( virtual/opengl )
 	redeyes? ( media-libs/opencv )
 	scanner? (
 		media-gfx/sane-backends
-		>=kde-base/libksane-${KDE_MINIMAL}[kdeprefix=]
+		>=kde-base/libksane-${KDE_MINIMAL}
 	)
 "
 RDEPEND="${DEPEND}

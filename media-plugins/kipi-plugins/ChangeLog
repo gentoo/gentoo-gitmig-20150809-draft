@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.47 2009/03/23 16:26:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.48 2009/04/06 12:02:02 scarabeus Exp $
+
+  06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  kipi-plugins-0.2.0-r1.ebuild:
+  Preparation for new eclass. Unprefixing misc apps.
 
 *kipi-plugins-0.2.0-r1 (23 Mar 2009)
 
