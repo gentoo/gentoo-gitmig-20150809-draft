@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundationq
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xxv-skins/xxv-skins-1.2.1359.ebuild,v 1.1 2008/10/27 22:11:30 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xxv-skins/xxv-skins-1.2.1402.ebuild,v 1.1 2009/04/06 01:01:02 hd_brummy Exp $
 
 inherit eutils
 
