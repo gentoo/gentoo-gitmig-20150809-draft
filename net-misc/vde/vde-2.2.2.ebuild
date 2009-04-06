@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.2.2.ebuild,v 1.4 2009/03/06 22:36:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.2.2.ebuild,v 1.5 2009/04/06 19:02:06 jmbsvicetto Exp $
 
 inherit base eutils
 
@@ -15,8 +15,11 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 DEPEND=""
+RDEPEND=""
 
-PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
+# The slirpvde-buffer-overflow patch was made by Ludwig Nussel and submitted upstream at
+# http://sourceforge.net/tracker/?func=detail&aid=2138410&group_id=95403&atid=611248
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" "${FILESDIR}/${P}-slirpvde-buffer-overflow.patch" )
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
