@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0.ebuild,v 1.1 2009/03/19 10:09:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0.ebuild,v 1.2 2009/04/06 12:03:37 scarabeus Exp $
 
 EAPI="2"
 
@@ -19,12 +19,11 @@ SLOT="0.10"
 IUSE="addressbook debug geolocation +gphoto2"
 
 DEPEND="
-	!kdeprefix? ( !media-gfx/digikam:0 )
 	dev-db/sqlite:3
-	>=kde-base/libkdcraw-${KDE_MINIMAL}[kdeprefix=]
-	>=kde-base/libkexiv2-${KDE_MINIMAL}[kdeprefix=]
-	>=kde-base/libkipi-${KDE_MINIMAL}[kdeprefix=]
-	>=kde-base/solid-${KDE_MINIMAL}[kdeprefix=]
+	>=kde-base/libkdcraw-${KDE_MINIMAL}
+	>=kde-base/libkexiv2-${KDE_MINIMAL}
+	>=kde-base/libkipi-${KDE_MINIMAL}
+	>=kde-base/solid-${KDE_MINIMAL}
 	>=media-libs/jasper-1.701.0
 	media-libs/jpeg
 	>=media-libs/lcms-1.17
@@ -33,12 +32,14 @@ DEPEND="
 	sys-devel/gettext
 	x11-libs/qt-core[qt3support]
 	x11-libs/qt-sql[sqlite]
-	addressbook? ( >=kde-base/kdepimlibs-${KDE_MINIMAL}[kdeprefix=] )
-	geolocation? ( >=kde-base/marble-${KDE_MINIMAL}[kde,kdeprefix=] )
+	addressbook? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} )
+	geolocation? ( >=kde-base/marble-${KDE_MINIMAL}[kde] )
 	gphoto2? ( >=media-libs/libgphoto2-2.4.1-r1 )
 "
 #liblensfun when added should be also optional dep.
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!media-gfx/digikam:0
+"
 
 S="${WORKDIR}/${P/_/-}"
 
