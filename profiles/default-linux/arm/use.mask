@@ -59,6 +59,7 @@ tracker
 xindy
 lyx
 mpi
+lasi
 
 # havent tested yet
 cupsddk
