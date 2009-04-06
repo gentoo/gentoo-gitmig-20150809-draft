@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.5.1.ebuild,v 1.1 2009/04/03 09:44:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.5.1.ebuild,v 1.2 2009/04/06 12:21:32 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -32,12 +32,12 @@ src_prepare() {
 src_compile() {
 	emake || die "emake failed"
 	if use doc; then
-		# need to run twice to get the references right (you know, latex)
-		# do not add die function at the first one
-		make pdf
-		emake pdf || die "emake pdf failed"
-		cd doc/reference
-		emake html || die "emake html failed"
+		cd "${S}/doc/reference"
+		#pdf generation for reference failed (1.5.1), bug #264774
+		#emake html pdf || die "emake doc reference failed"
+		emake html || die "emake ref failed"
+		cd "${S}/doc/tutorial"
+		emake ginac.pdf ginac.html || die "emake doc tutorial failed"
 	fi
 }
 
@@ -48,12 +48,12 @@ src_install() {
 	if use doc; then
 		cd doc
 		insinto /usr/share/doc/${PF}
-		doins \
-			examples/ginac-examples.pdf \
-			reference/reference.pdf \
-			tutorial/ginac.pdf \
-			|| die "pdf doc install failed"
-		dohtml -r reference/html_files/*
+		newins tutorial/ginac.pdf tutorial.pdf || die "tutorial install failed"
+		#newins reference/ginac.pdf reference.pdf || die "ref install failed"
+		insinto /usr/share/doc/${PF}/html/reference
+		doins -r reference/html_files/* || die
+		insinto /usr/share/doc/${PF}/html
+		newins tutorial/ginac.html tutorial.html
 		insinto /usr/share/doc/${PF}/examples
 		doins examples/*.cpp examples/ginac-examples.txt
 	fi

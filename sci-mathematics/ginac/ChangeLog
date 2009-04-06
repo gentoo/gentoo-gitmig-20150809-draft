@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.25 2009/04/03 09:44:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.26 2009/04/06 12:21:32 bicatali Exp $
+
+  06 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org> ginac-1.5.1.ebuild:
+  Removed reference pdf doxygen generation, see bug #264774
 
 *ginac-1.5.1 (03 Apr 2009)
 
