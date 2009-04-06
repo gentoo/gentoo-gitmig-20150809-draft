@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.2.0.ebuild,v 1.2 2009/02/25 19:46:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.1.ebuild,v 1.1 2009/04/06 11:53:07 scarabeus Exp $
 
 EAPI="2"
 
@@ -21,11 +21,10 @@ IUSE=""
 DEPEND="media-libs/libdvdread
 	>=media-libs/libmpeg2-0.5.1
 	media-libs/xine-lib
-	>=media-video/ffmpeg-0.4.9_p20081014
-	x11-libs/qt-dbus:4
-	!kdeprefix? ( !app-cdr/k9copy:0 )"
-
+	>=media-video/ffmpeg-0.5
+	x11-libs/qt-dbus:4"
 RDEPEND="${DEPEND}
+	!app-cdr/k9copy:0
 	media-video/dvdauthor
 	media-video/mplayer"
 
@@ -34,6 +33,5 @@ S="${WORKDIR}/${MY_P}"
 pkg_postinst() {
 	echo
 	elog "If you want K3b burning support in ${P}, please install app-cdr/k3b separately."
-	elog "If you want phonon media playback in ${P}, please install media-sound/phonon separately."
 	echo
 }
