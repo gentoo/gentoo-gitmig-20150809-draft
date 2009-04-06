@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9635 2009/04/06 04:58:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9636 2009/04/06 11:17:19 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -619,11 +619,6 @@ app-portage/genflags
 # Alexis Ballier <aballier@gentoo.org> (15 Oct 2008)
 # Breaks ocamlduce
 >=dev-lang/ocaml-3.11.0_beta1
-
-# Peter Volkov <pva@gentoo.org> (13 Oct 2008)
-# Does not work with sys-apps/net-tools inside container
-# Trying to resolve issue inside openrc
->=sys-cluster/vzctl-3.0.22-r10
 
 # Rémi Cardona <remi@gentoo.org> (11 Oct 2008)
 # Old versions, those are no longer maintained and
