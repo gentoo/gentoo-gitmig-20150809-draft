@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/gnuchess-5.07.ebuild,v 1.12 2009/04/06 17:30:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/gnuchess-5.07.ebuild,v 1.13 2009/04/06 17:35:57 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit flag-o-matic eutils games
 
 DESCRIPTION="Console based chess interface"
 HOMEPAGE="http://www.gnu.org/software/chess/chess.html"
@@ -19,6 +19,7 @@ DEPEND="readline? ( sys-libs/readline )"
 PATCHES=( "${FILESDIR}"/gnuchess-gcc4.patch )
 
 src_configure() {
+	strip-flags # bug #199097
 	egamesconf \
 		--disable-dependency-tracking \
 		$(use_with readline)
