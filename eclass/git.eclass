@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.17 2009/04/05 20:22:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.18 2009/04/06 00:00:47 robbat2 Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -56,7 +56,7 @@ EGIT_UPDATE_CMD="git fetch -f -u"
 # @ECLASS-VARIABLE: EGIT_DIFFSTAT_CMD
 # @DESCRIPTION:
 # Git command for diffstat.
-EGIT_DIFFSTAT_CMD="git diff --stat"
+EGIT_DIFFSTAT_CMD="git --no-pager diff --stat"
 
 # @ECLASS-VARIABLE: EGIT_OPTIONS
 # @DESCRIPTION:
@@ -224,7 +224,7 @@ git_fetch() {
 			${elogcmd} "   at the commit: 		${cursha1}"
 		fi
 		# piping through cat is needed to avoid a stupid Git feature
-		${EGIT_DIFFSTAT_CMD} ${oldsha1}..${EGIT_BRANCH} | cat
+		${EGIT_DIFFSTAT_CMD} ${oldsha1}..${EGIT_BRANCH}
 	fi
 
 	if ${EGIT_REPACK} || ${EGIT_PRUNE} ; then
