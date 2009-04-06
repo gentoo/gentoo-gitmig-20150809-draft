@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayerthumbs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayerthumbs/ChangeLog,v 1.13 2009/03/16 19:25:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayerthumbs/ChangeLog,v 1.14 2009/04/06 11:57:55 scarabeus Exp $
+
+  06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -mplayerthumbs-1.1.ebuild, mplayerthumbs-1.2.ebuild:
+  Preparation for new eclass. Unprefixing misc apps.
 
   16 Mar 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking mplayerthumbs-1.2 ~ppc for bug 258454

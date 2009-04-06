@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.ebuild,v 1.3 2009/02/27 12:35:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.ebuild,v 1.4 2009/04/06 11:59:41 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,8 +17,8 @@ SLOT="0.7"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-DEPEND="!kdeprefix? ( !media-video/kplayer:0 )"
 RDEPEND="${DEPEND}
+	!media-video/kplayer:0
 	>=media-video/mplayer-1.0_rc1"
 
 CMAKE_IN_SOURCE_BUILD="1"
