@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.1.2.ebuild,v 1.1 2009/02/05 21:13:39 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.3.0.ebuild,v 1.1 2009/04/06 15:35:59 dev-zero Exp $
 
 EAPI="2"
-
-inherit eutils
 
 DESCRIPTION="A download utility with resuming and segmented downloading with HTTP/HTTPS/FTP/BitTorrent support."
 HOMEPAGE="http://aria2.sourceforge.net/"
@@ -12,21 +10,21 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
-IUSE="ares bittorrent expat gnutls metalink nls sqlite3 ssl test"
+IUSE="ares bittorrent expat gnutls metalink nls sqlite ssl test"
 
 CDEPEND="sys-libs/zlib
 	ssl? (
 		gnutls? ( >=net-libs/gnutls-1.2.9 )
 		!gnutls? ( dev-libs/openssl ) )
-	ares? ( >=net-dns/c-ares-1.3.1 )
+	ares? ( >=net-dns/c-ares-1.5.0 )
 	bittorrent? (
-		gnutls? ( >=net-libs/gnutls-1.2.9 >=dev-libs/libgcrypt-1.2.0 )
+		gnutls? ( >=net-libs/gnutls-1.2.9 >=dev-libs/libgcrypt-1.2.2 )
 		!gnutls? ( dev-libs/openssl ) )
 	metalink? (
 		!expat? ( >=dev-libs/libxml2-2.6.26 )
 		expat? ( dev-libs/expat )
 	)
-	sqlite3? ( dev-db/sqlite:3 )"
+	sqlite? ( dev-db/sqlite:3 )"
 DEPEND="${CDEPEND}
 	nls? ( sys-devel/gettext )
 	test? ( >=dev-util/cppunit-1.12.0 )"
@@ -34,7 +32,6 @@ RDEPEND="${CDEPEND}
 	nls? ( virtual/libiconv virtual/libintl )"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PV}-testRetrieveCookie-testfix.patch"
 	sed -i -e "s|/tmp|${T}|" test/*.cc test/*.txt || die "sed failed"
 }
 
@@ -57,7 +54,7 @@ src_configure() {
 		$(use_enable metalink) \
 		$(use_with expat libexpat) \
 		$(use_with !expat libxml2) \
-		$(use_with sqlite3) \
+		$(use_with sqlite sqlite3) \
 		$(use_enable bittorrent) \
 		$(use_with ares libcares) \
 		${myconf} \
