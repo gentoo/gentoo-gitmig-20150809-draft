@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.10 2007/02/14 01:40:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.11 2009/04/06 05:20:44 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="an OpenGL billards game"
@@ -22,14 +23,15 @@ DEPEND="x11-libs/libXi
 
 S=${WORKDIR}/BillardGL-${PV}/src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s:/usr/share/BillardGL/:${GAMES_DATADIR}/${PN}/:" \
 		Namen.h \
 		|| die "sed Namen.h failed"
 	sed -i \
+		-e '/^LINK/s:g++:$(CXX):' \
+		-e '/^CXX[[:space:]]/d' \
+		-e '/^CC[[:space:]]/d' \
 		-e '/^CXXFLAGS/s:=.*\(-D.*\)-.*:+=\1:' \
 		-e "/^LFLAGS/s:=:=${LDFLAGS}:" \
 		Makefile \

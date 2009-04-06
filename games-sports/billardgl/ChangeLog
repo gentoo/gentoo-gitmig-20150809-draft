@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/billardgl
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/ChangeLog,v 1.10 2007/02/14 01:40:34 nyhm Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/ChangeLog,v 1.11 2009/04/06 05:20:44 mr_bones_ Exp $
+
+  06 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  billardgl-1.75-r1.ebuild:
+  EAPI=2; honor CXX
 
   14 Feb 2007; Tristan Heaven <nyhm@gentoo.org> -files/billardgl.png,
   billardgl-1.75-r1.ebuild:
