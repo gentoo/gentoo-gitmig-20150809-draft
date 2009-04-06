@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ogle
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.54 2009/04/06 13:02:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ChangeLog,v 1.55 2009/04/06 15:16:51 a3li Exp $
+
+  06 Apr 2009; Alex Legler <a3li@gentoo.org> -ogle-0.9.2-r1.ebuild,
+  ogle-0.9.2-r2.ebuild:
+  amd64 stable and removing vulnerable version, bug #245921.
 
   06 Apr 2009; Raúl Porcel <armin76@gentoo.org> ogle-0.9.2-r2.ebuild:
   ia64/sparc/x86 stable wrt #245291
