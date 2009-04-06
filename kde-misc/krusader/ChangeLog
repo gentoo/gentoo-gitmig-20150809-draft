@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.78 2009/02/25 21:38:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.79 2009/04/06 11:47:35 scarabeus Exp $
+
+  06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  krusader-2.0.0_beta2-r1.ebuild:
+  Preparation for new eclass. Unprefixing misc apps.
 
   25 Feb 2009; Markos Chandras <hwoarang@gentoo.org>
   +files/actionproperty-qt45.patch, krusader-2.0.0_beta2-r1:

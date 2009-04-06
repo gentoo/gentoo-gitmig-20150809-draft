@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.95.ebuild,v 1.1 2009/03/04 09:08:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.95.ebuild,v 1.2 2009/04/06 11:40:43 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,9 +17,9 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug htmlhandbook"
 
-RDEPEND=">=kde-base/libkonq-${KDE_MINIMAL}[kdeprefix=]
+RDEPEND=">=kde-base/libkonq-${KDE_MINIMAL}
 	sys-apps/diffutils
-	!kdeprefix? ( !kde-misc/kdiff3:0 )"
+	!kde-misc/kdiff3:0"
 
 src_prepare() {
 	# fix handbook

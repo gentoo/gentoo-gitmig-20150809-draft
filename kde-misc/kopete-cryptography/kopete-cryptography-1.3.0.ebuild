@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-cryptography/kopete-cryptography-1.3.0.ebuild,v 1.3 2009/03/09 00:14:45 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-cryptography/kopete-cryptography-1.3.0.ebuild,v 1.4 2009/04/06 11:38:33 scarabeus Exp $
 
 EAPI="2"
 KDE_MINIMAL="4.1"
@@ -21,15 +21,15 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	>=kde-base/kopete-${KDE_MINIMAL}[kdeprefix=]
-	>=kde-base/libkdepim-${KDE_MINIMAL}[kdeprefix=]
-	>=kde-base/libkleo-${KDE_MINIMAL}[kdeprefix=]
+	>=kde-base/kopete-${KDE_MINIMAL}
+	>=kde-base/libkdepim-${KDE_MINIMAL}
+	>=kde-base/libkleo-${KDE_MINIMAL}
 "
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_postinst() {
-	elog "You can now enable and set up the Cryptography   plugin in Kopete."
+	elog "You can now enable and set up the Cryptography plugin in Kopete."
 	elog "It can be reached in the Kopete Plugin dialog."
 }

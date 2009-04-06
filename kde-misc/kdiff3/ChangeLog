@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.36 2009/03/04 09:08:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.37 2009/04/06 11:40:43 scarabeus Exp $
+
+  06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -kdiff3-0.9.94-r1.ebuild, kdiff3-0.9.95.ebuild:
+  Preparation for new eclass. Unprefixing misc apps.
 
 *kdiff3-0.9.95 (04 Mar 2009)
 

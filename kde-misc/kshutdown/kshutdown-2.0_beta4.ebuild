@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/kshutdown-2.0_beta4.ebuild,v 1.1 2009/02/05 19:16:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/kshutdown-2.0_beta4.ebuild,v 1.2 2009/04/06 11:43:04 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=kde-base/libkworkspace-${KDE_MINIMAL}[kdeprefix=]"
+DEPEND=">=kde-base/libkworkspace-${KDE_MINIMAL}"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"/"${P/_/}"
