@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9637 2009/04/06 11:48:18 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9638 2009/04/06 16:05:02 fuzzyray Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Paul Varner <fuzzyray@gentoo.org> (06 Apr 2009)
+# Dead upstream and has issues with newer portages.
+# Due to popular demand and no suitable replacement, it will stay in the tree
+# in a masked status until it completely breaks or is replaced.
+app-portage/udept
 
 # Markus Ullmann <jokey@gentoo.org> (5 Apr 2009)
 # mask until gnome 2.26 is in-tree (needs libsoup 2.26)
@@ -498,10 +504,6 @@ app-admin/eselect-boost
 # Peter Volkov <pva@gentoo.org> (16 Dec 2008)
 # Fails to build, bug #247946. Somebody needs to port it to new spandsp interface
 net-dialup/ivcall
-
-# Paul Varner <fuzzyray@gentoo.org> (14 Dec 2008)
-# Dead upstream, masked for removal in ~30 to 60 days.
-app-portage/udept
 
 # Alin Năstac <mrness@gentoo.org> (14 Dec 2008)
 # Dead upstream, masked for removal in ~60 days.
