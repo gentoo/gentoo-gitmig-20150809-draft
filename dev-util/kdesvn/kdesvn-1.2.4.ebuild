@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.2.4.ebuild,v 1.1 2009/03/01 12:21:19 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.2.4.ebuild,v 1.2 2009/04/06 12:06:14 scarabeus Exp $
 
 EAPI="2"
 
@@ -21,9 +21,6 @@ RDEPEND="
 	dev-db/sqlite
 	>=dev-util/subversion-1.4
 	kde-base/kdesdk-kioslaves
-"
-DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.6
 "
 
 src_configure() {

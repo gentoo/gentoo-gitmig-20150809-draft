@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.58 2009/03/01 12:21:19 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.59 2009/04/06 12:06:14 scarabeus Exp $
+
+  06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> kdesvn-1.2.4.ebuild:
+  Remove unneded depend.
 
 *kdesvn-1.2.4 (01 Mar 2009)
 
