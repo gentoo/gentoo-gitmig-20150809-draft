@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/files/xxv.utf8,v 1.2 2009/01/05 00:07:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/files/xxv.utf8-v2,v 1.1 2009/04/06 01:05:51 hd_brummy Exp $
 
-RUNAS_USER="root"
+RUNAS_USER="vdr"
 
 # Set Verbose Level 0 -> 5 
 VERBOSE="1"
@@ -25,10 +25,14 @@ kill_vdradmin() {
 
 	# Check at first, is VDR-Admin running
 	# Stopping, while running on same ports
-	# You can comment the next 4 Lines if you running VDR-Admind on different Ports
-	if [ -f /var/run/vdradmind.pid ] ; then
-		ebegin "VDR-Admin will Stop at first now"
-		/etc/init.d/vdradmind stop
+	if [ -n "`netstat -anp | grep vdradmin | grep 8080`" ] ; then
+		echo
+		eerror "VDR-Admin will Stop at first now"
+		eerror "vdradmin and xxv can not run on the same port"
+		echo
+		/etc/init.d/vdradmin stop
+		logger -t xxv "vdradmin stopped by xxv initscript" 
+		logger -t xxv "xxv and vdradmin can not run on same port"
 	fi
 }
 
@@ -61,9 +65,10 @@ set_utf8_charset() {
 }
 	
 start() {
-	ebegin "Start xxv"
-#	kill_vdradmin
+	kill_vdradmin
 	set_utf8_charset
+
+	ebegin "Start xxv"
 	
 	start-stop-daemon  --nicelevel 15 --pidfile ${PIDFILE} --start -c ${RUNAS_USER} --exec ${XXV_BIN} -- \
 	${XXV_UTF8} -configfile=${CONFIGFILE} -verbose=${VERBOSE} -pidfile=${PIDFILE}

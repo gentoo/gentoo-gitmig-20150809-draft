@@ -1,11 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.2.1383.ebuild,v 1.1 2009/01/05 00:07:45 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/xxv/xxv-1.2.1402.ebuild,v 1.1 2009/04/06 01:05:50 hd_brummy Exp $
+
+EAPI="2"
 
 inherit eutils versionator
 
-MY_PV=$(get_version_component_range 3)
-MY_P="${PN}-${MY_PV}"
+#MY_PV=$(get_version_component_range 3)
+#MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="WWW Admin for the VDR (Video Disk Recorder)"
 HOMEPAGE="http://xxv.berlios.de/content/view/40/1/"
@@ -29,7 +31,7 @@ RDEPEND=">=media-video/vdr-1.2.6
 	dev-perl/Config-Tiny
 	dev-perl/Digest-HMAC
 	dev-perl/Encode-Detect
-	dev-perl/GD
+	dev-perl/GD[png,gif]
 	dev-perl/DateManip
 	dev-perl/DBD-mysql
 	dev-perl/DBI
@@ -68,6 +70,7 @@ db_update_check() {
 		elog "run ./update-xxv -h for more info"
 		echo
 	else
+		echo
 		elog "If this is a new install"
 		elog "You have to create an empty DB for XXV"
 		echo
@@ -89,16 +92,9 @@ db_update_check() {
 
 pkg_setup() {
 
-	if ! built_with_use dev-perl/GD png gif ; then
-		echo
-		eerror "Please recompile dev-perl/GD with"
-		eerror "USE=\"png gif\""
-		die "dev-perl/GD need png and gif support"
-	fi
-
 	if ! has_version "net-www/${PN}"; then
 		echo
-		einfo	"Before you install xxv at first time you should read"
+		einfo	"After you install xxv at first time you should read"
 		einfo	"http://www.vdr-wiki.de/wiki/index.php/Xxv  German only available"
 		echo
 	fi
@@ -124,18 +120,15 @@ src_unpack() {
 		-e "s:\$RealBin/../lib/XXV/OUTPUT:${LIBDIR}/XXV/OUTPUT:" \
 		-e "s:\$RealBin/../share/news:${SHAREDIR}/news:" \
 		-e "s:\$RealBin/../contrib:${SHAREDIR}/contrib:" \
-		-e "s:\$RealBin/../share/fonts/:/usr/share/fonts/:"
+		-e "s:\$RealBin/../share/fonts/:/usr/share/fonts/:" \
+		-e "s:\$RealBin/../share/xmltv:${SHAREDIR}/xmltv:"
 
 	sed -i "s:\$RealBin/../lib:${LIBDIR}:" ./locale/xgettext.pl
 }
 
-src_compile() {
-:
-}
-
 src_install() {
 
-	newinitd "${FILESDIR}"/xxv.utf8 xxv
+	newinitd "${FILESDIR}"/xxv.utf8-v2 xxv
 
 	dobin	bin/xxvd
 
@@ -154,7 +147,7 @@ src_install() {
 	doins -r "${S}"/lib/*
 
 	insinto "${SHAREDIR}"
-	doins -r "${S}"/share/news
+	doins -r "${S}"/share/{news,xmltv}
 
 	insinto "${SHAREDIR}"/locale
 	doins -r "${S}"/locale/*
