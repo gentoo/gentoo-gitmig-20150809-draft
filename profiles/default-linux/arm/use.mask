@@ -58,6 +58,7 @@ octave
 tracker
 xindy
 lyx
+mpi
 
 # havent tested yet
 cupsddk
