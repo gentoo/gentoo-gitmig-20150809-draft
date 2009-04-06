@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-sunleo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sunleo/ChangeLog,v 1.18 2008/09/06 06:52:47 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sunleo/ChangeLog,v 1.19 2009/04/06 18:27:23 bluebird Exp $
+
+  06 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  xf86-video-sunleo-1.2.0.ebuild:
+  Stable on sparc, bug #251832
 
 *xf86-video-sunleo-1.2.0 (06 Sep 2008)
 
