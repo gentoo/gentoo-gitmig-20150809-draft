@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.9.91.ebuild,v 1.3 2009/03/26 20:18:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.9.91.ebuild,v 1.4 2009/04/06 12:07:40 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,10 +17,10 @@ SLOT="4"
 IUSE="+cmake +cxx debug +qmake"
 
 DEPEND="
-	>=dev-util/${KDEVPLATFORM_P}[kdeprefix=]
+	>=dev-util/${KDEVPLATFORM_P}
 "
 RDEPEND="${DEPEND}
-	>=kde-base/kapptemplate-${KDE_MINIMAL}[kdeprefix=]
+	>=kde-base/kapptemplate-${KDE_MINIMAL}
 "
 
 src_configure() {

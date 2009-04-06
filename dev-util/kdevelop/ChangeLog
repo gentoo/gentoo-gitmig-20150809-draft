@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.173 2009/03/26 20:18:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.174 2009/04/06 12:07:40 scarabeus Exp $
+
+  06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> kdevelop-3.9.91.ebuild:
+  Preparation for new eclass. Unprefixing misc apps.
 
   26 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kdevelop-3.9.91.ebuild:
   Dont call external stuff in global scope.
