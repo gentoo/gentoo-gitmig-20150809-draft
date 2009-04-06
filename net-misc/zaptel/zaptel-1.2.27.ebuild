@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.27.ebuild,v 1.2 2008/12/15 11:26:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.27.ebuild,v 1.3 2009/04/06 14:59:26 chainsaw Exp $
 
 inherit toolchain-funcs eutils linux-mod flag-o-matic multilib
 
@@ -175,6 +175,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/zaptel-1.2.25-xpputils.diff
 	epatch "${FILESDIR}"/zaptel-1.2.27-kernel.patch
 	epatch "${FILESDIR}"/zaptel-1.2.27-semaphore.patch
+	epatch "${FILESDIR}"/zaptel-1.2.27-hrtimer.patch
 
 	# try to apply bristuff patch
 	if use bri; then
