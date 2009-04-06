@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9633 2009/04/05 22:25:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9634 2009/04/06 01:08:13 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -451,12 +451,6 @@ sys-apps/baselayout-vserver
 # package sets and preserve-libs features.
 >=sys-apps/portage-2.2_pre
 
-# Joerg Bornkessel <hd_brummy@gentoo.org> (05 Jan 2009)
-# masked for testing
-# http://www.vdr-portal.de/board/thread.php?threadid=74833 (german)
-=net-www/xxv-1.2.1383
-=x11-themes/xxv-skins-1.2.1383
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (03 Jan 2009)
 # These packages are not supposed to be merged directly, instead
 # please use sys-devel/crossdev to install them.
@@ -610,12 +604,6 @@ app-crypt/truecrypt
 # glitch with Qt-4.4.2 that needs to be looked at (bug #243362)
 # Qt-4.3 users should probably be fine.
 =sci-visualization/paraview-3.4.0
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (27 Oct 2008)
-# masked for testing
-# http://www.vdr-portal.de/board/thread.php?threadid=74833 (german)
-=net-www/xxv-1.2.1359
-=x11-themes/xxv-skins-1.2.1359
 
 # Federico Ferri <mescalinum@gentoo.org> (27 Oct 2008)
 # Until Tcl-8.5 gets unmasked
