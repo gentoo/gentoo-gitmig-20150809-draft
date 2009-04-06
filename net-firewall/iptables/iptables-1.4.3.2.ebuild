@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.3.1.ebuild,v 1.1 2009/03/24 13:46:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.3.2.ebuild,v 1.1 2009/04/06 18:47:54 pva Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,8 +19,6 @@ RDEPEND=""
 src_unpack() {
 	unpack ${P}.tar.bz2
 	cd "${S}"
-
-	epatch "${FILESDIR}"/${PN}-1.4.2-no-ldconfig.patch
 
 	local check base=${PORTAGE_CONFIGROOT}/etc/portage/patches
 	for check in {${CATEGORY}/${PF},${CATEGORY}/${P},${CATEGORY}/${PN}}; do
@@ -53,6 +51,8 @@ src_install() {
 
 	insinto /usr/include
 	doins include/iptables.h include/ip6tables.h || die
+	insinto /usr/include/iptables
+	doins include/iptables/internal.h || die
 
 	keepdir /var/lib/iptables
 	newinitd "${FILESDIR}"/${PN}-1.3.2.init iptables || die
