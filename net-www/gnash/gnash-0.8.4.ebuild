@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.4.ebuild,v 1.4 2008/10/20 05:18:09 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.8.4.ebuild,v 1.5 2009/04/06 17:09:53 bluebird Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="+agg -cairo dbus -fbcon -ffmpeg +gstreamer +gtk +kde +nsplugin -opengl -qt3 -sdl video_cards_i810"
 
 RDEPEND="
