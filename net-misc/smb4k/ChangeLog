@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.77 2009/03/20 14:35:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.78 2009/04/06 11:28:39 scarabeus Exp $
+
+  06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> smb4k-0.10.2.ebuild:
+  Preparation for new eclass. Unprefixing misc apps.
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org> smb4k-0.10.2.ebuild:
   Marked ~ppc for bug #252999.
