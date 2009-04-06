@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.2.ebuild,v 1.4 2009/04/02 12:24:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.2.ebuild,v 1.5 2009/04/06 01:58:26 vapier Exp $
 
 inherit toolchain-funcs eutils
 
@@ -16,6 +16,7 @@ IUSE=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	sed -i -e 's:\[\[:[:' -e 's:\]\]:]:' Makefile
 }
 
 src_compile() {
