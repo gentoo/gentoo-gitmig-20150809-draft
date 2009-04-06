@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/jde
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.35 2009/04/06 20:44:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.36 2009/04/06 21:00:11 ulm Exp $
+
+  06 Apr 2009; Ulrich Mueller <ulm@gentoo.org> -jde-2.3.5.1.ebuild:
+  Remove old.
 
   06 Apr 2009; Markus Meier <maekke@gentoo.org> jde-2.3.5.1-r2.ebuild:
   amd64/x86 stable, bug #264803
