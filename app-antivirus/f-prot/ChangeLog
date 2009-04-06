@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/f-prot
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.55 2009/04/04 16:14:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/ChangeLog,v 1.56 2009/04/06 14:05:44 ranger Exp $
+
+  06 Apr 2009; Brent Baude <ranger@gentoo.org> f-prot-6.0.1.ebuild:
+  keyworded ~arch for ppc, bug 264893
 
   04 Apr 2009; Fabian Groffen <grobian@gentoo.org> -files/f-prot.sh,
   -f-prot-4.6.7.ebuild:
