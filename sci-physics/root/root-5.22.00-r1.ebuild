@@ -1,29 +1,31 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r3.ebuild,v 1.6 2009/04/06 22:33:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.22.00-r1.ebuild,v 1.1 2009/04/06 22:33:43 bicatali Exp $
 
-EAPI=1
-inherit versionator eutils qt4 fortran elisp-common fdo-mime
+EAPI=2
+inherit versionator eutils qt4 fortran elisp-common fdo-mime toolchain-funcs
 
-DOC_PV=$(get_major_version)_$(get_version_component_range 2)
-ROOFIT_DOC_PV=2.07-29
+#DOC_PV=$(get_major_version)_$(get_version_component_range 2)
+DOC_PV=5_21
+ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4
+PATCH_PV=p01
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
-	mirror://gentoo/${P}-patches.tar.bz2
+	mirror://gentoo/${P}-patches-${PATCH_PV}.tar.bz2
 	doc? ( ftp://root.cern.ch/root/doc/Users_Guide_${DOC_PV}.pdf
 		ftp://root.cern.ch/root/doc/RooFit_Users_Manual_${ROOFIT_DOC_PV}.pdf
-		http://tmva.sourceforge.net/docu/TMVAUsersGuide_v${TMVA_DOC_PV}.pdf )"
+		http://tmva.sourceforge.net/docu/TMVAUsersGuide.pdf -> TMVAUsersGuide-v${TMVA_DOC_PV}.pdf )"
 
 HOMEPAGE="http://root.cern.ch/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="amd64 ~hppa sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 
-IUSE="afs cern clarens doc emacs examples fftw geant4 kerberos ldap
-	+math mysql	odbc oracle postgres pythia6 pythia8 python +reflex
+IUSE="afs cern cint7 clarens doc emacs examples fftw geant4 kerberos ldap
+	+math mysql	odbc openmp oracle postgres pythia6 pythia8 python +reflex
 	ruby qt4 ssl xml xinetd xrootd"
 
 # libafterimage ignored, to check every version
@@ -31,7 +33,7 @@ IUSE="afs cern clarens doc emacs examples fftw geant4 kerberos ldap
 #	|| ( >=media-libs/libafterimage-1.15 x11-wm/afterstep )
 CDEPEND=">=dev-lang/cfortran-4.4-r2
 	dev-libs/libpcre
-	media-libs/ftgl
+	>=media-libs/ftgl-2.1.3_rc5
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/giflib
@@ -50,17 +52,17 @@ CDEPEND=">=dev-lang/cfortran-4.4-r2
 	ldap? ( net-nds/openldap )
 	math? ( >=sci-libs/gsl-1.8 )
 	mysql? ( virtual/mysql )
-	odbc? ( dev-db/libiodbc )
+	odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) )
 	oracle? ( dev-db/oracle-instantclient-basic )
 	postgres? ( virtual/postgresql-base )
 	pythia6? ( sci-physics/pythia:6 )
 	pythia8? ( sci-physics/pythia:8 )
 	python? ( dev-lang/python )
 	qt4? ( || ( ( x11-libs/qt-gui:4
-			x11-libs/qt-opengl:4
-			x11-libs/qt-qt3support:4
-			x11-libs/qt-xmlpatterns:4 )
-			x11-libs/qt:4 ) )
+				  x11-libs/qt-opengl:4
+				  x11-libs/qt-qt3support:4
+				  x11-libs/qt-xmlpatterns:4 )
+			x11-libs/qt:4[qt3support,opengl] ) )
 	ruby? ( dev-lang/ruby )
 	ssl? ( dev-libs/openssl )
 	xml? ( dev-libs/libxml2 )"
@@ -72,8 +74,6 @@ RDEPEND="${CDEPEND}
 	xinetd? ( sys-apps/xinetd )"
 
 S="${WORKDIR}/${PN}"
-
-QT4_BUILT_WITH_USE_CHECK="qt3support opengl"
 
 pkg_setup() {
 	elog
@@ -90,33 +90,34 @@ pkg_setup() {
 	else
 		unset F77
 	fi
-	use qt4 && qt4_pkg_setup
 	enewgroup rootd
 	enewuser rootd -1 -1 /var/spool/rootd rootd
+
+	if use openmp &&
+		[[ $(tc-getCC)$ == *gcc* ]] &&
+		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
+			! built_with_use sys-devel/gcc openmp ); then
+		ewarn "You are using gcc and OpenMP is available with gcc >= 4.2"
+		ewarn "If you want to build this package with OpenMP, abort now,"
+		ewarn "and set CC to an OpenMP capable compiler"
+		epause 5
+	elif use openmp; then
+		export USE_OPENMP=1
+		use math && export USE_PARALLEL_MINUIT2=1
+	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+
+	epatch "${WORKDIR}"/${P}-svn28086.patch
 	epatch "${WORKDIR}"/${P}-prop-flags.patch
 	epatch "${WORKDIR}"/${P}-as-needed.patch
 	epatch "${WORKDIR}"/${P}-xrootd-shared.patch
 	epatch "${WORKDIR}"/${P}-xrootd-prop-flags.patch
 	epatch "${WORKDIR}"/${P}-configure-paths.patch
 
-	epatch "${WORKDIR}"/${P}-ftgl.patch
-	# root bug; reported at https://savannah.cern.ch/bugs/?40816, fixed in svn
-	epatch "${WORKDIR}"/${P}-include-defines-file.patch
-	# various patches from upstream branch
-	epatch "${WORKDIR}"/${P}-upstream.patch
-
 	# use system cfortran
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc
-
-	# adjust header names only for older ftgl versions
-	if has_version '<media-libs/ftgl-2.1.3_rc5'; then
-		epatch "${WORKDIR}"/${P}-ftgl_header.patch
-	fi
 
 	# take a more descriptive name for ruby libs
 	sed -i \
@@ -142,7 +143,7 @@ src_unpack() {
 	unset QTDIR
 }
 
-src_compile() {
+src_configure() {
 	# the configure script is not the standard autotools
 	./configure \
 		--fail-on-missing \
@@ -171,6 +172,7 @@ src_compile() {
 		--enable-table \
 		--enable-xft \
 		$(use_enable afs) \
+		$(use_enable cint7) \
 		$(use_enable clarens) \
 		$(use_enable clarens peac) \
 		$(use_enable fftw fftw3) \
@@ -199,7 +201,9 @@ src_compile() {
 		$(use_enable xrootd) \
 		${EXTRA_ECONF} \
 		|| die "configure failed"
+}
 
+src_compile() {
 	emake OPT="" || die "emake failed"
 	emake cintdlls || die "emake cintdlls failed"
 	if use emacs; then

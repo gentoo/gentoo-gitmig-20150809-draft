@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.43 2009/03/22 21:56:16 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.44 2009/04/06 22:33:43 bicatali Exp $
+
+*root-5.22.00-r1 (06 Apr 2009)
+
+  06 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  root-5.20.00-r3.ebuild, +root-5.22.00-r1.ebuild:
+  Fixed hicolor icons, thanks ulm, added new upstream patch and fixed doc
+  name for TMVA, thanks Ben Bannier
 
   22 Mar 2009; Jeremy Olexa <darkside@gentoo.org> root-5.20.00-r3.ebuild:
   amd64 stable, bug 245875
