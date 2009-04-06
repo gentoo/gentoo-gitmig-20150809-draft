@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9634 2009/04/06 01:08:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9635 2009/04/06 04:58:01 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -276,11 +276,6 @@ net-libs/fec
 # Mask Beta versions of KDevelop 4 and KDevplatform
 >=dev-util/kdevelop-3.9.91
 >=dev-util/kdevplatform-0.9.91
-
-# Michael Sterrett <mr_bones_@gentoo.org> (28 Feb 2009)
-# mask for removal in 30 days.  Old and unmaintained.  Upstream seems dead.
-# Segfaults after the opening menu.
-games-action/parsec
 
 # Jeffrey Gardner <je_fro@gentoo.org> (27 Feb 2009)
 # Masked while we switch to sci-chemistry/gchemutils
