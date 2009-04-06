@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xtermcontrol
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.25 2009/04/05 21:02:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.26 2009/04/06 18:49:56 bluebird Exp $
+
+  06 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  xtermcontrol-2.9.ebuild:
+  Add ~sparc keyword, bug #251832
 
   03 Apr 2009; Brent Baude <ranger@gentoo.org> xtermcontrol-2.9.ebuild:
   Marking xtermcontrol-2.9 ppc stable for bug 251832
