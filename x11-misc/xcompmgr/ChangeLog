@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.35 2009/04/05 21:34:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.36 2009/04/06 19:24:29 bluebird Exp $
+
+  06 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> xcompmgr-1.1.4.ebuild:
+  Stable on sparc, bug #251832
 
   05 Apr 2009; Markus Meier <maekke@gentoo.org> xcompmgr-1.1.4.ebuild:
   x86 stable, bug #251832
