@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9636 2009/04/06 11:17:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9637 2009/04/06 11:48:18 hollow Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -835,11 +835,6 @@ media-sound/lastfmproxy
 # Masked for testing
 #>=mail-client/mozilla-thunderbird-3.0_alpha1
 >=mail-client/mozilla-thunderbird-bin-3.0_alpha1
-
-# Benedikt Böhm <hollow@gentoo.org> (6 Apr 2008)
-# Mask ebuilds using new qmail.eclass for testing
-=mail-mta/netqmail-1.06
-=mail-mta/qmail-ldap-1.03-r8
 
 # Christian Faulhammer <fauli@gentoo.org> (01 Apr 2008)
 # Masked for security reasons: bug 215699
