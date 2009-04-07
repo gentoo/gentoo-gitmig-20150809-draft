@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/whowatch
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.30 2009/04/03 23:50:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.31 2009/04/07 18:41:43 klausman Exp $
+
+  07 Apr 2009; Tobias Klausmann <klausman@gentoo.org> whowatch-1.6.0.ebuild:
+  Stable on alpha, bug #264512
 
   03 Apr 2009; Jeroen Roovers <jer@gentoo.org> whowatch-1.6.0.ebuild:
   Set RDEPEND too.
