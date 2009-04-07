@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.6 2009/03/10 21:17:26 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.7 2009/04/07 09:03:39 dev-zero Exp $
+
+*bluez-4.34 (07 Apr 2009)
+
+  07 Apr 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +files/4.34-conditional_libsbc.patch, +bluez-4.34.ebuild:
+  Version bump, fixed build problems with --disable{alsa,gstreamer}. Bug
+  #260374 has already been solved in an earlier bump.
 
   10 Mar 2009; Tiziano Müller <dev-zero@gentoo.org> bluez-4.32.ebuild:
   Added pambase[consolekit] to RDEPEND to get at least the basics ready
