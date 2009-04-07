@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>dev-zero@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		wdfs is a webdav filesystem that makes it possible to mount a webdav
