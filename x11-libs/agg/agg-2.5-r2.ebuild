@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5-r1.ebuild,v 1.1 2009/03/26 14:00:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/agg-2.5-r2.ebuild,v 1.1 2009/04/07 10:34:58 bicatali Exp $
 
 EAPI="2"
 
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 # taken from debian
 PATCHES=(
 	"${FILESDIR}/${PV}/02_maintainer_mode.patch"
-	"${FILESDIR}/${PV}/03_pkg_config_pic.patch"
 	"${FILESDIR}/${PV}/04_no_rpath.patch"
 )
 
