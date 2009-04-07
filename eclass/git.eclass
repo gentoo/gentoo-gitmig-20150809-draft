@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.19 2009/04/06 20:47:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.20 2009/04/07 14:39:32 scarabeus Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
 # Tomas Chvatal <scarabeus@gentoo.org>
 # Donnie Berkholz <dberkholz@gentoo.org>
-# @BLURB: This eclass provides functions for fetch and unpack git repozitories
+# @BLURB: This eclass provides functions for fetch and unpack git repositories
 # @DESCRIPTION:
 # The eclass is based on subversion eclass.
 # If you use this eclass, the ${S} is ${WORKDIR}/${P}.
