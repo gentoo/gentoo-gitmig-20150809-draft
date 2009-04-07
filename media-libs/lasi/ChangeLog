@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lasi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.4 2009/03/25 12:55:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.5 2009/04/07 19:46:49 klausman Exp $
+
+  07 Apr 2009; Tobias Klausmann <klausman@gentoo.org> lasi-1.1.0-r1.ebuild:
+  Keyworded on alpha, bug #265013
 
   25 Mar 2009; Sébastien Fabbro <bicatali@gentoo.org> -lasi-1.1.0.ebuild,
   lasi-1.1.0-r1.ebuild:
