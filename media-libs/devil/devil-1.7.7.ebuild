@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.7.ebuild,v 1.6 2009/03/06 18:28:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.7.ebuild,v 1.7 2009/04/07 15:08:07 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools
@@ -45,7 +45,7 @@ src_configure() {
 		$(use_enable jpeg) \
 		$(use_enable lcms) \
 		$(use_enable mng) \
-		$(use_enable openexr) \
+		$(use_enable openexr exr) \
 		$(use_enable png) \
 		$(use_enable tiff) \
 		$(use_enable xpm) \
@@ -56,8 +56,8 @@ src_configure() {
 		$(use_enable X x11) \
 		$(use_enable X shm) \
 		$(use_enable X render) \
-		--disable-directx \
-		--disable-win32
+		--disable-directx8 \
+		--disable-directx9
 }
 
 src_install() {

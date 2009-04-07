@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.37 2009/03/06 18:28:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.38 2009/04/07 15:08:07 mr_bones_ Exp $
+
+  07 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> devil-1.7.7.ebuild:
+  correct parameters passed to configure (bug #265228)
 
   06 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org> devil-1.7.7.ebuild:
   Avoid user-installed NVIDIA TEXTOOLS install (bug #261474)
