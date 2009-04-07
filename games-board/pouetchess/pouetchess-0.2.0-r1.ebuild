@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.6 2008/07/20 20:49:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pouetchess/pouetchess-0.2.0-r1.ebuild,v 1.7 2009/04/07 01:21:05 mr_bones_ Exp $
 
-inherit base eutils toolchain-funcs games
+EAPI=2
+inherit eutils games
 
 MY_PN=${PN/c/C}
 DESCRIPTION="3D and open source chess game"
@@ -15,31 +16,20 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE="debug"
 
 RDEPEND="media-libs/libsdl
-	media-libs/sdl-image
+	media-libs/sdl-image[jpeg,png]
 	virtual/glu
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	dev-util/scons"
 
 S=${WORKDIR}/${PN}_src_${PV}
-PATCHES=(	"${FILESDIR}/${P}-sconstruct-sandbox.patch"
-		"${FILESDIR}/${P}-nvidia_glext.patch"
-		"${FILESDIR}/${P}-segfaults.patch"
-		"${FILESDIR}/${P}-gcc43.patch"	)
+PATCHES=( "${FILESDIR}/${P}-sconstruct-sandbox.patch"
+	"${FILESDIR}/${P}-nvidia_glext.patch"
+	"${FILESDIR}/${P}-segfaults.patch"
+	"${FILESDIR}/${P}-gcc43.patch" )
 
-pkg_setup() {
-	games_pkg_setup
-	einfo "If you experience problems building pouetchess with nvidia drivers,"
-	einfo "you can try:"
-	einfo "eselect opengl set xorg-x11"
-	einfo "emerge pouetchess"
-	einfo "eselect opengl set nvidia"
-}
-
-src_unpack() {
-	base_src_unpack
-
-	cd "${S}"
+src_prepare() {
+	epatch "${PATCHES[@]}"
 	# Fix for LibSDL >= 1.2.10 detection
 	sed -i \
 		-e "s:sdlver.split('.') >= \['1','2','8'\]:sdlver.split('.') >= [1,2,8]:" \
@@ -47,9 +37,7 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
-	tc-export CC CXX
-
+src_configure() {
 	# turn off the hackish optimization setting code (bug #230127)
 	scons configure \
 		strip=false \
@@ -58,7 +46,12 @@ src_compile() {
 		datadir="${GAMES_DATADIR}"/${PN} \
 		$(use debug && echo debug=1) \
 		|| die "scons configure failed"
-	scons || die "scons failed"
+}
+
+src_compile() {
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -e "s/.*\(-j[0-9]\+\).*/\1/")
+
+	scons ${sconsopts} || die "scons failed"
 }
 
 src_install() {
