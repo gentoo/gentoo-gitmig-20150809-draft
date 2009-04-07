@@ -63,6 +63,7 @@ xindy
 lyx
 mpi
 lasi
+fusion
 
 # havent tested yet
 cupsddk
