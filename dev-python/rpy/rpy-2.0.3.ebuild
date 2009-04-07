@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.0.1.ebuild,v 1.1 2009/01/23 18:27:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.0.3.ebuild,v 1.1 2009/04/07 07:56:55 bicatali Exp $
 
 EAPI=2
 NEED_PYTHON=2.4
@@ -28,7 +28,7 @@ PYTHON_MODNAME="${MYPN}"
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-setup.patch
+	epatch "${FILESDIR}"/${PN}-2.0.1-setup.patch
 }
 
 src_test() {
