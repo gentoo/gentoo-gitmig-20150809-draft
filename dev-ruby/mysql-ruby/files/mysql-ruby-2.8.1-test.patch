@@ -1,11 +1,10 @@
-diff -u mysql-ruby-2.7.4/test.rb mysql-ruby-2.7.4.new/test.rb
---- mysql-ruby-2.7.4/test.rb	2006-12-20 05:31:52.000000000 +0000
-+++ mysql-ruby-2.7.4.new/test.rb	2007-04-16 11:34:43.000000000 +0100
-@@ -1,16 +1,22 @@
+--- mysql-ruby-2.8.1/test.rb.0	2008-06-17 07:36:44.000000000 +0200
++++ mysql-ruby-2.8.1/test.rb	2008-09-11 20:42:19.000000000 +0200
+@@ -1,12 +1,17 @@
 -#!/usr/local/bin/ruby
 +#!/usr/bin/env ruby
- # $Id: test.rb,v 1.24 2007-08-21 23:29:37 tommy Exp $
-
+ # $Id: test.rb 244 2009-02-01 08:43:39Z tommy $
+ 
  require "test/unit"
 -require "./mysql.o"
 +require "mysql"
@@ -22,12 +21,7 @@ diff -u mysql-ruby-2.7.4/test.rb mysql-ruby-2.7.4.new/test.rb
      @db = db || "test"
      @port = port.to_i
      @sock = sock.nil? || sock.empty? ? nil : sock
-     @flag = flag.to_i
-+
-   end
-   def teardown()
-   end
-@@ -95,7 +101,7 @@
+@@ -95,7 +100,7 @@
  
  class TC_Mysql2 < Test::Unit::TestCase
    def setup()
@@ -36,7 +30,7 @@ diff -u mysql-ruby-2.7.4/test.rb mysql-ruby-2.7.4.new/test.rb
      @db = db || "test"
      @port = port.to_i
      @sock = sock.nil? || sock.empty? ? nil : sock
-@@ -203,7 +209,7 @@
+@@ -211,7 +216,7 @@
  
  class TC_MysqlRes < Test::Unit::TestCase
    def setup()
@@ -45,7 +39,7 @@ diff -u mysql-ruby-2.7.4/test.rb mysql-ruby-2.7.4.new/test.rb
      @db = db || "test"
      @port = port.to_i
      @sock = sock.nil? || sock.empty? ? nil : sock
-@@ -403,7 +409,7 @@
+@@ -411,7 +416,7 @@
  
  class TC_MysqlStmt < Test::Unit::TestCase
    def setup()
@@ -54,7 +48,7 @@ diff -u mysql-ruby-2.7.4/test.rb mysql-ruby-2.7.4.new/test.rb
      @db = db || "test"
      @port = port.to_i
      @sock = sock.nil? || sock.empty? ? nil : sock
-@@ -433,7 +439,7 @@
+@@ -441,7 +446,7 @@
  
  class TC_MysqlStmt2 < Test::Unit::TestCase
    def setup()

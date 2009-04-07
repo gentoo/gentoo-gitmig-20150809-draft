@@ -1,21 +1,22 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.4.ebuild,v 1.11 2008/09/13 08:23:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.8.1.ebuild,v 1.1 2009/04/07 20:04:49 a3li Exp $
 
 inherit ruby
 
 DESCRIPTION="A Ruby extension library to use MySQL"
 HOMEPAGE="http://www.tmtm.org/en/mysql/ruby/"
-SRC_URI="http://www.tmtm.org/downloads/mysql/ruby/${P}.tar.gz"
+SRC_URI="mirror://rubyforge/${PN}/${P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ruby19"
 DEPEND="virtual/ruby
 	virtual/mysql"
+RDEPEND="${DEPEND}"
 
 TEST_DIR="/usr/share/${PN}/test/"
 
@@ -44,11 +45,11 @@ src_install() {
 
 src_test() {
 	elog
-	elog "To test the programme you need to start mysql first."
+	elog "To test the library you need to start MySQL first."
 	elog "Then run:"
 	elog
-	elog "	% ruby ${TEST_DIR}test.rb hostname user password"
+	elog "	% ruby ${TEST_DIR}test.rb <hostname> <user> <password>"
 	elog
-	elog "See /usr/share/doc/${PF}/html/README.html for detail."
+	elog "See /usr/share/doc/${PF}/html/README.html for details."
 	elog
 }
