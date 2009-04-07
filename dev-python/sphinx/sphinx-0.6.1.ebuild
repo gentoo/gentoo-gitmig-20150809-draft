@@ -1,30 +1,28 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.5.1.ebuild,v 1.2 2009/03/27 09:57:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.1.ebuild,v 1.1 2009/04/07 08:07:15 bicatali Exp $
 
 inherit distutils
 
 MY_PN="Sphinx"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="A tool that makes it easy to create intelligent and beautiful documentation for Python projects."
+DESCRIPTION="Tool to create documentation for Python projects"
 HOMEPAGE="http://sphinx.pocoo.org/"
 SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="doc test"
 
 RDEPEND=">=dev-python/pygments-0.8
-	>=dev-python/jinja-1.1
+	>=dev-python/jinja2-2.1
 	>=dev-python/docutils-0.4"
 
 DEPEND="${RDEPEND}
 	dev-python/setuptools
 	test? ( dev-python/nose )"
 
-# tests buggy - bug #262608
-RESTRICT=test
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
@@ -33,14 +31,16 @@ src_compile() {
 
 	if use doc ; then
 		cd doc
-		PYTHONPATH="../" emake SPHINXBUILD="${python} ../sphinx-build.py" html || die "making docs failed"
+		PYTHONPATH="../" emake \
+			SPHINXBUILD="${python} ../sphinx-build.py" \
+			html || die "making docs failed"
 	fi
 }
 
 src_install() {
 	distutils_src_install
 	if use doc ; then
-		dohtml -A txt -r doc/_build/html/*
+		dohtml -A txt -r doc/_build/html/* || die
 	fi
 }
 
