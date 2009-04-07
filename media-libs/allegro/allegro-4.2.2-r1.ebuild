@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2-r1.ebuild,v 1.5 2008/09/11 09:32:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2-r1.ebuild,v 1.6 2009/04/07 02:20:29 mr_bones_ Exp $
 
 inherit autotools multilib eutils
 
@@ -63,7 +63,6 @@ src_compile() {
 		$(use_with X x) \
 		$(use_enable X xwin-shm) \
 		$(use_enable X xwin-vidmode) \
-		$(use_enable X xwin-dga) \
 		$(use_enable X xwin-dga2) \
 		$(use_enable fbcon) \
 		$(use_enable svga svgalib) \
