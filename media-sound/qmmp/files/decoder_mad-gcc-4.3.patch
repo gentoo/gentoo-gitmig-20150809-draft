@@ -1,0 +1,15 @@
+Index: qmmp-0.2.4/src/plugins/Input/mad/decoder_mad.cpp
+===================================================================
+--- qmmp-0.2.4.orig/src/plugins/Input/mad/decoder_mad.cpp
++++ qmmp-0.2.4/src/plugins/Input/mad/decoder_mad.cpp
+@@ -264,8 +264,8 @@ bool DecoderMAD::findHeader()
+             if (stream.error == MAD_ERROR_LOSTSYNC)
+             {
+                 //skip ID3v2 tag
+-                uint tagSize = findID3v2((uchar *)stream.this_frame,
+-                                         (uint) stream.bufend - (uint) stream.this_frame);
++                ulong tagSize = findID3v2((uchar *)stream.this_frame,
++                                         (ulong) stream.bufend - (ulong) stream.this_frame);
+                 if (tagSize > 0)
+                 {
+                     mad_stream_skip(&stream, tagSize);
