@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.20 2009/04/07 14:39:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.21 2009/04/07 15:03:32 scarabeus Exp $
 
 # @ECLASS: git.eclass
 # @MAINTAINER:
@@ -46,7 +46,7 @@ EGIT_STORE_DIR="${PORTAGE_ACTUAL_DISTDIR-${DISTDIR}}/git-src"
 # @ECLASS-VARIABLE: EGIT_FETCH_CMD
 # @DESCRIPTION:
 # Command for cloning the repository.
-EGIT_FETCH_CMD="git clone --bare"
+: ${EGIT_FETCH_CMD:="git clone --bare"}
 
 # @ECLASS-VARIABLE: EGIT_UPDATE_CMD
 # @DESCRIPTION:
@@ -144,7 +144,7 @@ git_fetch() {
 
 	# If we have same branch and the tree we can do --depth 1 clone
 	# which outputs into really smaller data transfers.
-	# Sadly we can do shallow copy for now because quite few packages need .git
+	# Sadly we can do shallow copy for now because quite a few packages need .git
 	# folder.
 	#[[ ${EGIT_TREE} = ${EGIT_BRANCH} ]] && \
 	#	EGIT_FETCH_CMD="${EGIT_FETCH_CMD} --depth 1"
@@ -182,6 +182,13 @@ git_fetch() {
 	debug-print "${FUNCNAME}: EGIT_OPTIONS = \"${EGIT_OPTIONS}\""
 
 	export GIT_DIR="${EGIT_STORE_DIR}/${EGIT_CLONE_DIR}"
+
+	# we also have to remove all shallow copied repositories
+	# and fetch them again
+	if [[ -e "${EGIT_STORE_DIR}/${EGIT_CLONE_DIR}/shallow" ]]; then
+		rm -rf "${EGIT_STORE_DIR}/${EGIT_CLONE_DIR}"
+		einfo "The ${EGIT_CLONE_DIR} was shallow copy. Refetching."
+	fi
 
 	if [[ ! -d ${EGIT_CLONE_DIR} ]] ; then
 		# first clone
@@ -223,7 +230,6 @@ git_fetch() {
 		else
 			${elogcmd} "   at the commit: 		${cursha1}"
 		fi
-		# piping through cat is needed to avoid a stupid Git feature
 		${EGIT_DIFFSTAT_CMD} ${oldsha1}..${EGIT_BRANCH}
 	fi
 
