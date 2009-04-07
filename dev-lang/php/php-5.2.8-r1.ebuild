@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.8-r1.ebuild,v 1.10 2009/03/18 10:41:03 armin76 Exp $
-
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.8-r1.ebuild,v 1.11 2009/04/07 11:03:16 fauli Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -31,6 +29,7 @@ CONCURRENTMODPHP_PATCH="${MY_PHP_PV}/opt/concurrent_apache_modules.patch"
 # kolab patch - http://kolab.org/cgi-bin/viewcvs-kolab.cgi/server/patches/php/
 # bugs about this go to wrobel@gentoo.org
 KOLAB_PATCH="${MY_PHP_PV}/opt/kolab-imap-annotations.patch"
+
 inherit versionator php5_2-sapi apache-module
 
 SRC_URI="http://home.hoffie.info/php-patchset-${PV}-r${PHP_PATCHSET_REV}.tar.bz2
@@ -43,7 +42,7 @@ DESCRIPTION="The PHP language runtime engine: CLI, CGI and Apache2 SAPIs."
 
 DEPEND="app-admin/php-toolkit
 	imap? ( >=virtual/imap-c-client-2006k )
-	pcre? ( >=dev-libs/libpcre-7.8[unicode] )"
+	pcre? ( >=dev-libs/libpcre-7.8 )"
 RDEPEND="${DEPEND}"
 if [[ -n "${KOLAB_PATCH}" ]] ; then
 	IUSE="${IUSE} kolab"
@@ -99,6 +98,11 @@ pkg_setup() {
 		ewarn "derives from 'fastbuild', please file a bug in"
 		ewarn "Gentoo's Bugzilla only."
 		ewarn
+	fi
+
+	if use pcre ; then
+		built_with_use dev-libs/libpcre unicode || \
+			die "Please rebuild dev-libs/libpcre with USE=unicode"
 	fi
 
 	php5_2-sapi_pkg_setup
