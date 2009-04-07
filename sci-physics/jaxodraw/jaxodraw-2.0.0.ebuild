@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/jaxodraw-2.0.0.ebuild,v 1.1 2009/02/22 12:53:13 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/jaxodraw/jaxodraw-2.0.0.ebuild,v 1.2 2009/04/07 19:35:48 serkan Exp $
 
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-trax"
@@ -31,7 +31,7 @@ src_install() {
 	doicon etc/OS/Linux/*.png
 	domenu etc/OS/Linux/${PN}.desktop
 
-	use source && java-pkg_dosrc src/main/java/JaxoDraw
+	use source && java-pkg_dosrc src/main/java/net
 
 	dodoc src/doc/BUGS src/doc/CHANGELOG src/doc/README src/doc/TODO || die
 	use doc && java-pkg_dojavadoc build/javadoc
