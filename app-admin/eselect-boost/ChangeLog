@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-boost
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.3 2009/02/24 19:24:24 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.4 2009/04/07 09:39:39 dev-zero Exp $
+
+*eselect-boost-0.3 (07 Apr 2009)
+
+  07 Apr 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +files/boost.eselect-0.3, +eselect-boost-0.3.ebuild:
+  Version bump for new boost versions: full profile support using profile
+  files.
 
   24 Feb 2009; Ferris McCormick <fmccor@gentoo.org>
   eselect-boost-0.2.ebuild:
