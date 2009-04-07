@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.29.ebuild,v 1.2 2008/07/23 17:35:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.37.ebuild,v 1.1 2009/04/07 09:00:36 bicatali Exp $
 
+EAPI=2
 inherit flag-o-matic
 
 DESCRIPTION="GNU Linear Programming Kit"
@@ -20,7 +21,7 @@ RDEPEND="odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {
+src_configure() {
 	local myconf="--disable-dl"
 	if use mysql || use odbc; then
 		myconf="--enable-dl"
@@ -34,14 +35,12 @@ src_compile() {
 		$(use_with gmp) \
 		$(use_enable odbc) \
 		$(use_enable mysql) \
-		${myconf} || die "econf failed"
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	# INSTALL include some usage docs
 	dodoc AUTHORS ChangeLog NEWS README || \
 		die "failed to install docs"
 
@@ -52,7 +51,7 @@ src_install() {
 	fi
 	if use doc; then
 		cd "${S}"/doc
-		doins memo/gomory.djvu || die "failed to instal memo"
-		dodoc *.ps *.txt || die "failed to install manual files"
+		doins *.pdf notes/gomory.djvu || die "failed to instal djvu and pdf"
+		dodoc *.txt || die "failed to install manual files"
 	fi
 }
