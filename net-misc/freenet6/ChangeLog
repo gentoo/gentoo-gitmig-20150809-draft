@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/freenet6
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.40 2009/04/06 11:09:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/ChangeLog,v 1.41 2009/04/07 06:57:13 voyageur Exp $
+
+  07 Apr 2009; Bernard Cafarelli <voyageur@gentoo.org> freenet6-6.0.ebuild:
+  Commit the correct ebuild this time, fixes bug #265115
 
 *freenet6-6.0 (06 Apr 2009)
 

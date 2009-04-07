@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-6.0.ebuild,v 1.1 2009/04/06 11:09:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-6.0.ebuild,v 1.2 2009/04/07 06:57:13 voyageur Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -21,13 +21,13 @@ DEPEND="dev-libs/openssl
 	radvd? ( net-misc/radvd )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${MY_P}-RELEASE"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-5.1-gcc43.patch
+	#epatch "${FILESDIR}"/${PN}-5.1-gcc43.patch
 	epatch "${FILESDIR}"/${PN}-6.0_beta4-no-template-validation.patch
 
 	for i in gw6c-config gw6c-messaging ; do
