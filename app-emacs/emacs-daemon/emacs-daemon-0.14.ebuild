@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/emacs-daemon-0.14.ebuild,v 1.2 2009/03/25 22:55:59 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/emacs-daemon-0.14.ebuild,v 1.3 2009/04/07 17:29:52 klausman Exp $
 
 NEED_EMACS=23
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/openrc-0.4"
