@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/flamerobin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.13 2008/12/08 02:48:18 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.14 2009/04/07 11:05:14 fauli Exp $
+
+  07 Apr 2009; Christian Faulhammer <fauli@gentoo.org>
+  flamerobin-0.8.3.ebuild, flamerobin-0.8.6.ebuild:
+  Raise dependency for wxGTK, see bug 234817
 
   08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
