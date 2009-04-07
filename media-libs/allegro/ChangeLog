@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.83 2009/04/07 02:20:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.84 2009/04/07 21:08:59 mr_bones_ Exp $
+
+  07 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  allegro-4.2.2-r1.ebuild:
+  EAPI=2; avoid running ldconfig (bug #265144)
 
   07 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
   allegro-4.2.2-r1.ebuild:

@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2-r1.ebuild,v 1.6 2009/04/07 02:20:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2-r1.ebuild,v 1.7 2009/04/07 21:08:59 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools multilib eutils
 
 DESCRIPTION="cross-platform multimedia library"
@@ -36,9 +37,7 @@ DEPEND="${RDEPEND}
 		x11-proto/xproto
 	)"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-exec-stack.patch \
 		"${FILESDIR}"/${P}-flags.patch \
@@ -46,7 +45,8 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
+	LDCONFIG=/bin/true \
 	econf \
 		--enable-linux \
 		--enable-static \
@@ -67,8 +67,10 @@ src_compile() {
 		$(use_enable fbcon) \
 		$(use_enable svga svgalib) \
 		$(use_enable vga) \
-		$(use_enable jack jackdigi) \
-		|| die
+		$(use_enable jack jackdigi)
+}
+
+src_compile() {
 	emake -j1 || die "emake failed"
 }
 
