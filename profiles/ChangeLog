@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2501 2009/04/07 04:07:36 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2502 2009/04/07 10:37:25 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Apr 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  mask dev-lang/erlang 13A beta version to give some users a test
+  possibility
 
   07 Apr 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask app-shells/bash-completion-config for removal - bug 253878

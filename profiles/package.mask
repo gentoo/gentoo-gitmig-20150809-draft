@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9640 2009/04/07 04:07:36 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9641 2009/04/07 10:37:25 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Faulhammer <fauli@gentoo.org> (07 Apr 2009)
+# Mask for testing, is a beta version
+~dev-lang/erlang-13.1
 
 # Jeremy Olexa <darkside@gentoo.org> (07 Apr 2009)
 # Not supported in Gentoo anymore, use 'eselect bashcomp' now
