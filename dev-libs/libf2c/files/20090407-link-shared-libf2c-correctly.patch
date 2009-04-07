@@ -4,8 +4,8 @@
  ## of "cc -shared".
  
  libf2c.so: $(OFILES)
--	cc -shared -o libf2c.so $(OFILES)
-+	$(CC) -shared $(LDFLAGS) -Wl,-soname,libf2c.so.2 -lm $(OFILES) -o libf2c.so.2 
+-	$(CC) -shared -o libf2c.so $(OFILES)
++	$(CC) -shared $(LDFLAGS) -Wl,-soname,libf2c.so.2 -lm $(OFILES) -o libf2c.so.2
  
  ### If your system lacks ranlib, you don't need it; see README.
  
