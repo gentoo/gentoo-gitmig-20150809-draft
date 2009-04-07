@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/tree-2.62.ebuild,v 1.1 2009/04/07 20:45:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/tree-2.62.ebuild,v 1.2 2009/04/07 22:43:40 bicatali Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -25,7 +25,7 @@ src_test() {
 }
 
 src_install() {
-	insinto /usr/include/tree
+	insinto /usr/include
 	doins tree.hh tree_util.hh || die
 	insinto /usr/share/doc/${PF}
 	doins tree_example.cc || die
