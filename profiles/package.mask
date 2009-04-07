@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9639 2009/04/06 16:49:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9640 2009/04/07 04:07:36 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (07 Apr 2009)
+# Not supported in Gentoo anymore, use 'eselect bashcomp' now
+# Comments on bug 253878 - removed in 30 days.
+app-shells/bash-completion-config
 
 # Michael Sterrett <mr_bones_@gentoo.org> (06 Apr 2009)
 # Masked for removal in 30 days.
