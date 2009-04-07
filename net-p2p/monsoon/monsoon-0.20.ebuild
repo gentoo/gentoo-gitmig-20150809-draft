@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/monsoon/monsoon-0.20.ebuild,v 1.1 2009/04/05 13:05:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/monsoon/monsoon-0.20.ebuild,v 1.2 2009/04/07 09:46:22 loki_val Exp $
 
 EAPI=2
 
 inherit mono multilib autotools
 
-DESCRIPTION="Monosoon is an open source Gtk# bittorrent client"
+DESCRIPTION="Monsoon is an open source Gtk# bittorrent client"
 HOMEPAGE="http://www.monsoon-project.org/"
 SRC_URI="http://monotorrent.com/Files/${P}.tar.gz"
 
