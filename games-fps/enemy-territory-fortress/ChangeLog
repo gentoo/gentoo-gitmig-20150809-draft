@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory-fortress
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/ChangeLog,v 1.13 2007/11/06 21:49:16 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/ChangeLog,v 1.14 2009/04/07 17:12:03 mr_bones_ Exp $
+
+  07 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  enemy-territory-fortress-1.6-r2.ebuild:
+  make QA_TEXTRELS match what's actually installed (bug #265162)
 
   06 Nov 2007; Chris Gianelloni <wolf31o2@gentoo.org>
   enemy-territory-fortress-1.6-r2.ebuild:

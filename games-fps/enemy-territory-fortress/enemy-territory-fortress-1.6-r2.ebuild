@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/enemy-territory-fortress-1.6-r2.ebuild,v 1.4 2007/11/06 21:49:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/enemy-territory-fortress-1.6-r2.ebuild,v 1.5 2009/04/07 17:12:03 mr_bones_ Exp $
 
 MOD_DESC="a class-based teamplay modification"
 MOD_NAME="Fortress"
@@ -19,7 +19,8 @@ SRC_URI="http://www.sonnensturm.net/download/etf_${PV}-english-2.run
 
 RDEPEND="games-fps/${GAME}"
 
-QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/${GAME}/etf/omnibot_etf.so"
+QA_TEXTRELS="${GAMES_DATADIR:1}/${GAME}/etf/omnibot_etf.so
+	${GAMES_DATADIR:1}/${GAME}/omnibot_etf.so"
 
 src_unpack() {
 	# This is a prime example of how we should do our src_unpack for a mod that
