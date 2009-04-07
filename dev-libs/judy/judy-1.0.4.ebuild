@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/judy-1.0.4.ebuild,v 1.11 2009/03/07 13:10:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/judy-1.0.4.ebuild,v 1.12 2009/04/07 01:08:46 gentoofan23 Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/judy/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
