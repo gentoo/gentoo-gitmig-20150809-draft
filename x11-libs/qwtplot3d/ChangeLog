@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qwtplot3d
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.14 2008/07/28 21:54:21 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.15 2009/04/07 18:51:30 bicatali Exp $
+
+*qwtplot3d-0.2.7-r1 (07 Apr 2009)
+
+  07 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/qwtplot3d-sys-gl2ps.patch, -qwtplot3d-0.2.7.ebuild,
+  +qwtplot3d-0.2.7-r1.ebuild:
+  Removed bundled gl2ps and fixed some QA
 
   28 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qwtplot3d-0.2.6-r2.ebuild:
   QA: Get rid of deprecated qt_min_version(). Quoting issues.

@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7.ebuild,v 1.5 2008/07/27 14:23:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7-r1.ebuild,v 1.1 2009/04/07 18:51:30 bicatali Exp $
 
-EAPI=1
-inherit multilib qt4
+EAPI=2
+inherit eutils qt4
 
 DESCRIPTION="Qt4/OpenGL-based 3D widget library for C++"
 HOMEPAGE="http://qwtplot3d.sourceforge.net/"
@@ -15,28 +15,32 @@ IUSE="doc examples"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 RDEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 )
-		<x11-libs/qt-4.4:4 )"
+		<x11-libs/qt-4.4:4[opengl] )
+	x11-libs/gl2ps"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-QT4_BUILT_WITH_USE_CHECK="opengl"
-
 S="${WORKDIR}/${PN}"
 
-src_unpack () {
-	unpack ${A}
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-profile.patch
 	epatch "${FILESDIR}"/${PN}-examples.patch
 	epatch "${FILESDIR}"/${PN}-doxygen.patch
+	epatch "${FILESDIR}"/${PN}-sys-gl2ps.patch
+	cat >> ${PN}.pro <<-EOF
+		target.path = /usr/$(get_libdir)
+		headers.path = /usr/include/${PN}
+		headers.files = \$\$HEADERS
+		INSTALLS = target headers
+	EOF
+	qt4_src_prepare
 }
 
-src_compile () {
-	echo >> ${PN}.pro "target.path = /usr/$(get_libdir)"
-	echo >> ${PN}.pro "headers.path = /usr/include/${PN}"
-	echo >> ${PN}.pro "headers.files = \$\$HEADERS"
-	echo >> ${PN}.pro "INSTALLS = target headers"
+src_configure() {
+	eqmake4
+}
 
-	eqmake4 ${PN}.pro || die "eqmake4 failed"
+src_compile() {
 	emake || die "emake failed"
 	 if use doc ; then
 		 cd doc
@@ -50,5 +54,8 @@ src_install () {
 		insinto /usr/share/doc/${PF}
 		doins -r examples || die "doins examples failed"
 	fi
-	use doc && dohtml -r doc/web/doxygen/*
+	if use doc; then
+		insinto /usr/share/doc/${PF}/html
+		doins -r doc/web/doxygen/* || die
+	fi
 }
