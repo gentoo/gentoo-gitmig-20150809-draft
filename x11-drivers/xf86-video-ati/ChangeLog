@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.83 2009/04/06 18:23:15 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.84 2009/04/08 21:34:07 scarabeus Exp $
+
+*xf86-video-ati-6.12.2 (08 Apr 2009)
+
+  08 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +xf86-video-ati-6.12.2.ebuild:
+  Version bump. Quite few issues were fixed. Nothing shiny. Now dvi should
+  work correctly. Few fixes for dualhead. Some Apple quirk updates.
 
   06 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   xf86-video-ati-6.12.1-r1.ebuild:
