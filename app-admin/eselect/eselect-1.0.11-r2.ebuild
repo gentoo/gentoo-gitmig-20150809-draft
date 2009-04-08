@@ -1,15 +1,17 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.2.ebuild,v 1.16 2007/02/28 21:52:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.11-r2.ebuild,v 1.1 2009/04/08 05:23:54 darkside Exp $
+
+inherit eutils
 
 DESCRIPTION="Modular -config replacement utility"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://dev.gentooexperimental.org/~peper/distfiles/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="doc bash-completion"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+IUSE="doc bash-completion vim-syntax"
 
 DEPEND="sys-apps/sed
 	doc? ( dev-python/docutils )
@@ -21,6 +23,17 @@ DEPEND="sys-apps/sed
 RDEPEND="sys-apps/sed
 	sys-apps/file"
 
+PDEPEND="vim-syntax? ( app-vim/eselect-syntax )"
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-fix-paludis-command.patch"
+	pwd
+	epatch "${FILESDIR}/${P}-parent-profiles.patch"
+}
+
 src_compile() {
 	econf || die "econf failed"
 	emake || die "emake failed"
@@ -31,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/*.txt
 	use doc && dohtml *.html doc/*
 
@@ -45,10 +58,14 @@ src_install() {
 
 pkg_postinst() {
 	if use bash-completion ; then
-		elog
 		elog "To enable command-line completion for eselect, run:"
 		elog
 		elog "  eselect bashcomp enable eselect"
 		elog
+		elog "to install locally, or"
+		elog
+		elog "  eselect bashcomp enable --global eselect"
+		elog
+		elog "to install system-wide."
 	fi
 }
