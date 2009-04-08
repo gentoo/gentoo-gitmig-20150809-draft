@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2505 2009/04/08 07:12:02 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2506 2009/04/08 17:20:50 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Remove ruby-gdchart masking (it has been removed).
 
   08 Apr 2009; Andreas Proschofsky <suka@gentoo.org> package.mask:
   Mask pre-releases of OpenOffice.org 3.1 for testing
