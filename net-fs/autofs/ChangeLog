@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.82 2009/03/15 14:47:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.83 2009/04/08 13:14:10 armin76 Exp $
+
+  08 Apr 2009; Raúl Porcel <armin76@gentoo.org> autofs-5.0.3-r6.ebuild:
+  arm/ia64/sparc stable wrt #257097
 
   15 Mar 2009; Brent Baude <ranger@gentoo.org> autofs-5.0.3-r6.ebuild:
   Marking autofs-5.0.3-r6 ppc64 for bug 257097

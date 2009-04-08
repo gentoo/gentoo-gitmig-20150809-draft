@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r6.ebuild,v 1.4 2009/03/15 14:47:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.3-r6.ebuild,v 1.5 2009/04/08 13:14:10 armin76 Exp $
 
 inherit eutils multilib autotools
 
@@ -69,7 +69,7 @@ DEPEND="virtual/libc
 			# currently, sasl code assumes the presence of kerberosV
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ~ppc ppc64 sparc x86"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
