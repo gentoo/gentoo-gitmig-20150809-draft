@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.173 2009/04/08 08:11:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.174 2009/04/08 13:14:50 ranger Exp $
+
+  08 Apr 2009; Brent Baude <ranger@gentoo.org> mpg123-1.7.2.ebuild:
+  Marking mpg123-1.7.2 ppc64 and ppc for bug 265342
 
 *mpg123-1.7.2 (08 Apr 2009)
 
