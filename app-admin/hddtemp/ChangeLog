@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.73 2008/09/11 10:06:32 armin76 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.74 2009/04/08 23:11:06 spock Exp $
+
+  08 Apr 2009; Michał Januszewski <spock@gentoo.org> -files/hddtemp.db,
+  hddtemp-0.3_beta15-r3.ebuild:
+  Fix bug #248945 by moving the hddtemp.db file to the Gentoo mirrors.
 
   11 Sep 2008; Raúl Porcel <armin76@gentoo.org>
   hddtemp-0.3_beta15-r3.ebuild:

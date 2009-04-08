@@ -1,14 +1,15 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r3.ebuild,v 1.9 2008/10/25 21:35:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r3.ebuild,v 1.10 2009/04/08 23:11:06 spock Exp $
 
 inherit eutils autotools
 
 MY_P=${P/_beta/-beta}
+DBV=20080531
 
 DESCRIPTION="A simple utility to read the temperature of SMART capable hard drives"
 HOMEPAGE="http://www.guzu.net/linux/hddtemp.php"
-SRC_URI="http://www.guzu.net/files/${MY_P}.tar.bz2"
+SRC_URI="http://www.guzu.net/files/${MY_P}.tar.bz2 mirror://gentoo/hddtemp-${DBV}.db.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -45,7 +46,7 @@ src_install() {
 	dodoc README TODO ChangeLog
 
 	insinto /usr/share/hddtemp
-	doins "${FILESDIR}"/hddtemp.db
+	newins "${WORKDIR}/hddtemp-${DBV}.db" hddtemp.db
 	doins "${FILESDIR}"/hddgentoo.db
 
 	update_db "${D}/usr/share/hddtemp/hddgentoo.db" "${D}/usr/share/hddtemp/hddtemp.db"
