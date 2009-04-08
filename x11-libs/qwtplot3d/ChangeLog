@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwtplot3d
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.15 2009/04/07 18:51:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.16 2009/04/08 07:57:55 bicatali Exp $
+
+  08 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  files/qwtplot3d-sys-gl2ps.patch:
+  Fixed a syntax error in the gl2ps patch
 
 *qwtplot3d-0.2.7-r1 (07 Apr 2009)
 

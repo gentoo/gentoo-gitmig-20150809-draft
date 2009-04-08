@@ -14,7 +14,7 @@
 -         3rdparty/gl2ps/gl2ps.c
 -
 +SOURCES+=src/qwt3d_io_gl2ps.cpp
-+unix:LIBS += -lg2ps
++unix:LIBS += -lgl2ps
  # zlib support for gl2ps
  zlib {
    DEFINES += GL2PS_HAVE_ZLIB
