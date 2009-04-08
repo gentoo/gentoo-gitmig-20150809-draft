@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2508 2009/04/08 18:00:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2509 2009/04/08 19:41:37 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Apr 2009; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Removing python 2.6 mask
 
   08 Apr 2009; MATSUU Takuto <matsuu@gentoo.org> package.mask:
   Mask for testing, bug #265385
