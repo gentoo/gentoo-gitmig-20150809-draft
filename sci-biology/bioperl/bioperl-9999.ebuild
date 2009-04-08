@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-9999.ebuild,v 1.1 2009/03/16 23:37:10 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-9999.ebuild,v 1.2 2009/04/08 20:45:57 weaver Exp $
 
 EAPI="2"
 
@@ -17,8 +17,6 @@ LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="-minimal graphviz ${SUBPROJECTS}"
-
-# TODO: SVG::Graph, Convert::Binary::C
 
 DEPEND="virtual/perl-Module-Build
 	dev-perl/Data-Stag
@@ -47,6 +45,8 @@ DEPEND="virtual/perl-Module-Build
 		dev-perl/Data-Stag
 		dev-perl/Math-Random
 		dev-perl/PostScript
+		dev-perl/Convert-Binary-C
+		dev-perl/SVG-Graph
 	)
 	graphviz? ( dev-perl/GraphViz )"
 
