@@ -1,0 +1,22 @@
+--- CMakeLists.txt	2009-04-04 16:20:16.000000000 +0200
++++ CMakeLists.txt.new	2009-04-08 15:42:06.000000000 +0200
+@@ -294,10 +294,15 @@
+ 		INCLUDE_DIRECTORIES(libs/libtommath)
+ 	ENDIF(TOMMATH_LIBRARY)
+ 	
+-	# Force use of bundled tomcrypt, as the system library may have been compiled without the features we need
+-	ADD_SUBDIRECTORY(libs/libtomcrypt)
+-	TARGET_LINK_LIBRARIES(fms tomcrypt)
+-	INCLUDE_DIRECTORIES(libs/libtomcrypt/headers)
++	FIND_LIBRARY(TOMCRYPT_LIBRARY NAMES tomcrypt libtomcrypt)
++	
++	IF(TOMCRYPT_LIBRARY)
++		TARGET_LINK_LIBRARIES(fms ${TOMCRYPT_LIBRARY})
++	ELSE(TOMCRYPT_LIBRARY)
++		ADD_SUBDIRECTORY(libs/libtomcrypt)
++		TARGET_LINK_LIBRARIES(fms tomcrypt)
++		INCLUDE_DIRECTORIES(libs/libtomcrypt/headers)
++	ENDIF(TOMCRYPT_LIBRARY)
+ 
+ 	
+ 	ADD_DEFINITIONS(-DFROST_SUPPORT)
