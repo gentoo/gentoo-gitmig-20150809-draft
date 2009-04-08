@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-1.2.0-r1.ebuild,v 1.3 2009/04/07 18:54:12 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-1.2.0-r1.ebuild,v 1.4 2009/04/08 15:16:40 jer Exp $
 
 EAPI=2
 inherit distutils
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.scons.org/"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="doc"
 DEPEND=">=dev-lang/python-2.5[threads]"
 DOCS="RELEASE.txt CHANGES.txt"
