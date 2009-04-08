@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.11-r1.ebuild,v 1.8 2009/03/17 10:00:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.11-r1.ebuild,v 1.9 2009/04/08 04:35:10 darkside Exp $
 
 inherit eutils
 
@@ -60,5 +60,10 @@ pkg_postinst() {
 		elog
 		elog "  eselect bashcomp enable eselect"
 		elog
+		elog "to install locally, or"
+		elog
+		elog "  eselect bashcomp enable --global eselect"
+		elog
+		elog "to install system-wide."
 	fi
 }
