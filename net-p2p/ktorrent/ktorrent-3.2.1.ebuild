@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2.1.ebuild,v 1.2 2009/04/07 16:34:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2.1.ebuild,v 1.3 2009/04/08 22:20:11 scarabeus Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ IUSE="+bwscheduler debug +downloadorder +infowidget +ipfilter +kross +logviewer 
 
 COMMONDEPEND="app-crypt/qca:2
 	dev-libs/gmp
-	>=media-libs/taglib-1.5
+	mediaplayer? ( >=media-libs/taglib-1.5 )
 	plasma? ( >=kde-base/libtaskmanager-${KDE_MINIMAL} )
 	rss? (
 		dev-libs/boost
@@ -36,8 +36,9 @@ RDEPEND="${COMMONDEPEND}
 
 src_prepare() {
 	if ! use plasma; then
-		sed -i -e 's/add_subdirectory([[:space:]]*plasma[[:space:]]*)//' \
-		CMakeLists.txt || die "Failed to make plasmoid optional"
+		sed -i \
+			-e "s:add_subdirectory(plasma):#nada:g" \
+			CMakeLists.txt || die "Failed to make plasmoid optional"
 	fi
 
 	kde4-base_src_prepare
