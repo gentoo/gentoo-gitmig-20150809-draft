@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.49 2009/04/06 07:02:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.50 2009/04/08 14:52:58 pva Exp $
+
+*sarg-2.2.5-r4 (08 Apr 2009)
+
+  08 Apr 2009; Peter Volkov <pva@gentoo.org> -sarg-2.2.5-r3.ebuild,
+  +sarg-2.2.5-r4.ebuild:
+  Add more large files support into sarg, bug #245627, thank Kunszt Arpad
+  for report and Janos FARAGO for this patch.
 
 *sarg-2.2.5-r3 (06 Apr 2009)
 
