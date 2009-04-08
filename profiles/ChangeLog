@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2509 2009/04/08 19:41:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2510 2009/04/08 23:11:37 volkmar Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> package.mask:
+  Add net-libs/zapata for removal
 
   08 Apr 2009; Patrick Lauer <patrick@gentoo.org> package.mask:
   Removing python 2.6 mask
