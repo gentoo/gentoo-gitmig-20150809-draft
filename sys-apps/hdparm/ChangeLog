@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.186 2009/03/30 16:04:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.187 2009/04/08 22:21:02 vapier Exp $
+
+*hdparm-9.14 (08 Apr 2009)
+
+  08 Apr 2009; Mike Frysinger <vapier@gentoo.org> +hdparm-9.14.ebuild:
+  Version bump.
 
   30 Mar 2009; Raúl Porcel <armin76@gentoo.org> hdparm-9.12.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #263421
