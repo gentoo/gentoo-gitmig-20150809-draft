@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Convert-Binary-C
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-Binary-C/ChangeLog,v 1.1 2009/04/08 16:07:08 weaver Exp $
+
+*Convert-Binary-C-0.71 (08 Apr 2009)
+
+  08 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +Convert-Binary-C-0.71.ebuild:
+  New package, dependency of sci-biology/bioperl. Ebuild written by me.
+
