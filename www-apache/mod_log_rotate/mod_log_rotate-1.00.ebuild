@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_rotate/mod_log_rotate-1.00.ebuild,v 1.1 2008/02/08 15:10:13 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_rotate/mod_log_rotate-1.00.ebuild,v 1.2 2009/04/08 14:16:47 hollow Exp $
 
 inherit eutils apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
