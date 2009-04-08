@@ -1,88 +1,10 @@
 # ChangeLog for app-forensics/air
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/ChangeLog,v 1.15 2007/01/24 03:13:42 genone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/ChangeLog,v 1.16 2009/04/08 17:23:18 patrick Exp $
 
-  24 Jan 2007; Marius Mauch <genone@gentoo.org> air-1.2.7.ebuild,
-  air-1.2.8.ebuild:
-  Replacing einfo with elog
+*air-1.2.8-r1 (08 Apr 2009)
 
-*air-1.2.8 (28 Sep 2005)
-
-  28 Sep 2005; Daniel Black <dragonheart@gentoo.org>
-  -files/air-1.2.5-installfix.patch, -files/air-1.2.5-r1-installfix.patch,
-  -air-1.2.5-r1.ebuild, +air-1.2.8.ebuild:
-  version bump
-
-  24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> air-1.2.7.ebuild:
-  Changed root:root -> root:0 permissions and made sharutils and coreutils
-  conditional to GNU userland.
-
-  27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> air-1.2.7.ebuild:
-  Stable on ppc.
-
-  31 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> air-1.2.7.ebuild:
-  Marked stable on x86.
-
-*air-1.2.7 (04 Dec 2004)
-
-  04 Dec 2004; Daniel Black <dragonheart@gentoo.org>
-  -files/air-1.2.3_beta3-installfix.patch, -air-1.2.3_beta3.ebuild,
-  air-1.2.5-r1.ebuild, -air-1.2.5.ebuild, +air-1.2.7.ebuild:
-  version bump. keywords x86 and ppc to air-1.2.5-r1.
-
-  14 Oct 2004; David Holm <dholm@gentoo.org> air-1.2.5-r1.ebuild:
-  Added to ~ppc.
-
-  18 Sep 2004; Sven Wegener <swegener@gentoo.org> :
-  Fixed ChangeLog header.
-
-  16 Sep 2004; Daniel Black <dragonheart@gentoo.org>
-  files/air-1.2.5-r1-installfix.patch, air-1.2.5-r1.ebuild:
-  Commented out automail line in install. Thanks to  
-  Daniel Webert <rockoo@rockoo.homelinux.org> in bug #64143.
-  also fixed permission on /usr/bin/air
-
-*air-1.2.5-r1 (13 Sep 2004)
-
-  13 Sep 2004; Daniel Black <dragonheart@gentoo.org>
-  +files/air-1.2.5-r1-installfix.patch, +air-1.2.5-r1.ebuild:
-  More flexable patch and a few more checks
-
-  12 Sep 2004; Daniel Black <dragonheart@gentoo.org> air-1.2.5.ebuild:
-  changed to remove /usr/bin/split which is installed by coreutils
-
-*air-1.2.5 (12 Sep 2004)
-
-  12 Sep 2004; Daniel Black <dragonheart@gentoo.org>
-  +files/air-1.2.5-installfix.patch, +air-1.2.5.ebuild:
-  version bump
-
-  12 Sep 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml:
-  metadata.xml update
-
-*air-1.2.3_beta3 (12 Sep 2004)
-
-  12 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
-  +files/air-1.2.3_beta3-installfix.patch, +air-1.2.3_beta3.ebuild:
-  Moved from sys-apps/air to app-forensics/air.
-
-  18 Jul 2004; Daniel Black <dragonheart@gentoo.org> air-1.2.3_beta3.ebuild:
-  x86 stable
-
-  24 May 2004; Daniel Black <dragonheart@gentoo.org> air-1.2.3_beta3.ebuild:
-  Perl-tk no longer accepts '-col' as a synonym for '-column.' Replaced in
-  executable as per bug #51451. Thankyou to Daniel Webert <daniel_webert@web.de>
-  for the bug report and Doug Weimer <dweimer@socal.rr.com> for the solution.
-
-  18 May 2004; Daniel Black <dragonheart@gentoo.org> air-1.2.3_beta3.ebuild:
-  added fifo
-
-  18 May 2004; Daniel Black <dragonheart@gentoo.org> air-1.2.3_beta3.ebuild:
-  fix permissions
-
-*air-1.2.3_beta3 (18 May 2004)
-
-  18 May 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
-  +files/air-1.2.3_beta3-installfix.patch, +air-1.2.3_beta3.ebuild:
-  Initial ebuild thanks to Doug Weimer <dweimer@socal.rr.com> in bug #47095
+  08 Apr 2009; Patrick Lauer <patrick@gentoo.org> +air-1.2.8-r1.ebuild:
+  Small fixups for 1.2.8. Thanks to RB for the help, fixes #180123. ~amd64
+  added.
 
