@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4268.ebuild,v 1.1 2009/04/03 19:00:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4268.ebuild,v 1.2 2009/04/08 04:11:35 jer Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 
 RESTRICT="mirror strip test"
 
-IUSE="elibc_FreeBSD gnome qt-static"
+IUSE="elibc_FreeBSD gnome ia32 qt-static"
 MY_LINGUAS="be bg cs da de el en en-GB es-ES es-LA et fi fr fr-CA fy hi hr hu id it ja ka ko lt mk nb nl nn pl pt pt-BR ru sv ta te tr uk zh-CN zh-TW"
 
 for MY_LINGUA in ${MY_LINGUAS}; do
@@ -28,8 +28,20 @@ O_U="http://snapshot.opera.com/unix/snapshot-${P##*_pre}/"
 O_P="${P/_pre/-}"
 
 SRC_URI="
-	qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-static-qt3.i386.tar.bz2 )
-	!qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-shared-qt3.i386.tar.bz2 )
+	qt-static? (
+		x86? ( ${O_U}intel-linux/${O_P}.gcc4-static-qt3.i386.tar.bz2 )
+		amd64? (
+			ia32? ( ${O_U}intel-linux/${O_P}.gcc4-static-qt3.i386.tar.bz2 )
+			!ia32? ( ${O_U}x86_64-linux/${O_P}.gcc4-shared-qt3.x86_64.tar.bz2 )
+		)
+	)
+	!qt-static? (
+		x86? ( ${O_U}intel-linux/${O_P}.gcc4-shared-qt3.i386.tar.bz2 )
+		amd64? (
+			ia32? ( ${O_U}intel-linux/${O_P}.gcc4-shared-qt3.i386.tar.bz2 )
+			!ia32? ( ${O_U}x86_64-linux/${O_P}.gcc4-shared-qt3.x86_64.tar.bz2 )
+		)
+	)
 	"
 
 DEPEND=">=sys-apps/sed-4"
@@ -49,6 +61,7 @@ RDEPEND="
 	x11-libs/libSM
 	x11-libs/libICE
 	!qt-static? ( =x11-libs/qt-3*[-immqt] )
+	amd64? ( ia32? ( !qt-static? ( =x11-libs/qt-3*[-immqt] ) ) )
 	"
 
 opera_cd() {
