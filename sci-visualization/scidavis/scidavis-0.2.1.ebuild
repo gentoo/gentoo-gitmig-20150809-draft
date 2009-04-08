@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.1.ebuild,v 1.1 2009/04/08 08:50:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.1.ebuild,v 1.2 2009/04/08 13:56:16 bicatali Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime
@@ -41,6 +41,11 @@ src_prepare() {
 	sed -i \
 		-e "s:doc/${PN}:doc/${PF}:g" \
 		${PN}/${PN}.pro || die "sed doc dir failed"
+	# the libsuff thingy does not work
+	sed -i \
+		-e "s|/usr/lib\$\${libsuff}|/usr/$(get_libdir)|g" \
+		-i fit*/*/*.pro || die "sed plugins failed"
+
 	if use python; then
 		sed -i \
 			-e '/^include( python.pri )$/d' \
