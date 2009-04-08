@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.431 2009/04/08 07:54:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.432 2009/04/08 08:06:52 aballier Exp $
+
+*vlc-0.9.9a (08 Apr 2009)
+
+  08 Apr 2009; Alexis Ballier <aballier@gentoo.org> -vlc-0.9.9.ebuild,
+  +vlc-0.9.9a.ebuild:
+  bump to 0.9.9a, no big change, mainly for macosx and a build fix for
+  latest x264
 
   08 Apr 2009; Alexis Ballier <aballier@gentoo.org> vlc-0.9.9.ebuild,
   vlc-0.9.9999.ebuild, vlc-1.0.0_pre1.ebuild, vlc-9999.ebuild:
