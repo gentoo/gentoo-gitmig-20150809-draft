@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/SVG-Graph
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG-Graph/ChangeLog,v 1.1 2009/04/08 20:33:59 weaver Exp $
+
+*SVG-Graph-0.02 (08 Apr 2009)
+
+  08 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +SVG-Graph-0.02.ebuild:
+  New package, dependency of sci-biology/bioperl. Ebuild written by me.
+

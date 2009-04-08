@@ -1,0 +1,7 @@
+# ChangeLog for dev-perl/Math-Spline
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Spline/ChangeLog,v 1.1 2009/04/08 20:32:47 weaver Exp $
+
+  08 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
+  New package, dependency of sci-biology/bioperl. Ebuild written by me.
+
