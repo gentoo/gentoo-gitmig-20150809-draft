@@ -1,0 +1,11 @@
+diff -Nru openswan-2.4.14.orig/programs/pluto/fetch.c openswan-2.4.14/programs/pluto/fetch.c
+--- openswan-2.4.14.orig/programs/pluto/fetch.c	2004-06-14 02:01:32.000000000 +0000
++++ openswan-2.4.14/programs/pluto/fetch.c	2009-04-08 23:14:29.000000000 +0000
+@@ -28,6 +28,7 @@
+ #include <openswan.h>
+ 
+ #ifdef LDAP_VER
++#define LDAP_DEPRECATED 1
+ #include <ldap.h>
+ #endif
+ 
