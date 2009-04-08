@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libxdg-basedir
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.8 2008/11/13 02:05:07 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.9 2009/04/08 17:15:57 flameeyes Exp $
+
+*libxdg-basedir-0.3.0 (08 Apr 2009)
+
+  08 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libxdg-basedir-0.3.0.ebuild:
+  Version bump, thanks to matsuu in bug #265467.
 
 *libxdg-basedir-0.2.0 (13 Nov 2008)
 
