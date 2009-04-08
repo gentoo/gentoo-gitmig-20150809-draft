@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/havp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.29 2008/08/15 18:16:56 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.30 2009/04/08 23:46:25 mrness Exp $
+
+*havp-0.90 (08 Apr 2009)
+
+  08 Apr 2009; Alin Năstac <mrness@gentoo.org> -havp-0.88.ebuild,
+  +havp-0.90.ebuild:
+  Version bump that adds clamav-0.95 support (#264440 and #265440).
 
   15 Aug 2008; Markus Meier <maekke@gentoo.org> havp-0.89.ebuild:
   amd64/x86 stable, bug #234715
