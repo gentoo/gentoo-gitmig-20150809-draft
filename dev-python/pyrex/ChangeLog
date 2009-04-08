@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.65 2008/10/06 04:43:19 neurogeek Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.66 2009/04/08 17:35:33 klausman Exp $
+
+  08 Apr 2009; Tobias Klausmann <klausman@gentoo.org> pyrex-0.9.8.5.ebuild:
+  Stable on alpha, bug #208945
 
   06 Oct 2008; Jesus Rivero <neurogeek@gentoo.org> -pyrex-0.9.8.3.ebuild:
   Removed old version.
