@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/flamerobin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.14 2009/04/07 11:05:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.15 2009/04/08 22:37:46 fauli Exp $
+
+  08 Apr 2009; Christian Faulhammer <fauli@gentoo.org>
+  flamerobin-0.8.3.ebuild, flamerobin-0.8.6.ebuild:
+  use EAPI 1 to select a specific slot (2.8) of wxGTK
 
   07 Apr 2009; Christian Faulhammer <fauli@gentoo.org>
   flamerobin-0.8.3.ebuild, flamerobin-0.8.6.ebuild:
