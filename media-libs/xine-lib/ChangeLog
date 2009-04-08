@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.589 2009/04/04 13:24:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.590 2009/04/08 13:17:40 ranger Exp $
+
+  08 Apr 2009; Brent Baude <ranger@gentoo.org> xine-lib-1.1.16.3.ebuild:
+  Marking xine-lib-1.1.16.3 ppc64 and ppc for bug 265250
 
 *xine-lib-1.1.16.3 (04 Apr 2009)
 
