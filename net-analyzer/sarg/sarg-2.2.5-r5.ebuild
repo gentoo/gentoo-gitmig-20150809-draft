@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.2.5-r4.ebuild,v 1.1 2009/04/08 14:52:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-2.2.5-r5.ebuild,v 1.1 2009/04/08 19:17:29 pva Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils autotools
 DESCRIPTION="Squid Analysis Report Generator"
 HOMEPAGE="http://sarg.sourceforge.net/sarg.php"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-		mirror://gentoo/${P}-patchset-4.tar.bz2"
+		mirror://gentoo/${P}-patchset-5.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
