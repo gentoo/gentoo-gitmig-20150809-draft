@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.593 2009/04/08 19:47:57 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.594 2009/04/08 20:30:48 bluebird Exp $
+
+  08 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  xine-lib-1.1.16.3.ebuild:
+  Stable on sparc, security bug #265250
 
   08 Apr 2009; Tobias Heinlein <keytoaster@gentoo.org>
   xine-lib-1.1.16.3.ebuild:
