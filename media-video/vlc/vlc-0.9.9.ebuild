@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9.ebuild,v 1.1 2009/04/04 13:35:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9.ebuild,v 1.2 2009/04/08 07:54:24 aballier Exp $
 
 EAPI="1"
 
@@ -115,14 +115,14 @@ RDEPEND="
 		pda? ( x11-libs/gtk+:2 )
 		png? ( media-libs/libpng )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.8 )
-		qt4? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 ) )
+		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )
 		remoteosd? ( >=dev-libs/libgcrypt-1.2.0 )
 		samba? ( net-fs/samba )
 		schroedinger? ( >=media-libs/schroedinger-1.0 )
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image ) )
 		shout? ( media-libs/libshout )
-		skins? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 ) )
+		skins? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )
 		speex? ( media-libs/speex )
 		svg? ( >=gnome-base/librsvg-2.9.0 )
 		svga? ( media-libs/svgalib )
@@ -162,7 +162,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-# Dispalys a warning if the first use flag is set but not the second
+# Displays a warning if the first use flag is set but the second is not
 vlc_use_needs() {
 	use $1 && use !$2 && ewarn "USE=$1 requires $2, $1 will be disabled."
 }
@@ -194,8 +194,8 @@ pkg_setup() {
 	vlc_use_needs fontconfig truetype
 	vlc_use_needs libv4l2 v4l2
 	use cddb && use !cdda && use !cddax && ewarn "USE=cddb requires either cdda or cddax, cddb will be disabled."
-	if ( use qt4 || use skins ) ; then
-		QT4_BUILT_WITH_USE_CHECK="png" qt4_pkg_setup
+	if use qt4 || use skins ; then
+		qt4_pkg_setup
 	else
 		ewarn "You have disabled the qt4 useflag, ${PN} will not have any"
 		ewarn "graphical interface. Maybe that is not what you want..."

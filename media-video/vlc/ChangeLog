@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.430 2009/04/04 13:37:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.431 2009/04/08 07:54:24 aballier Exp $
+
+  08 Apr 2009; Alexis Ballier <aballier@gentoo.org> vlc-0.9.9.ebuild,
+  vlc-0.9.9999.ebuild, vlc-1.0.0_pre1.ebuild, vlc-9999.ebuild:
+  Allow only qt >=4.4 and simplify qt deps; by Davide Pesavento
+  <davidepesa@gmail.com>, bug #264974
 
   04 Apr 2009; Alexis Ballier <aballier@gentoo.org> -vlc-0.9.9_rc2.ebuild:
   remove rc
