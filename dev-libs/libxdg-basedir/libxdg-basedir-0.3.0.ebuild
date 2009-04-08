@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-0.3.0.ebuild,v 1.1 2009/04/08 17:15:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-0.3.0.ebuild,v 1.2 2009/04/08 17:18:28 flameeyes Exp $
 
 inherit libtool
 
@@ -37,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	if use doc; then
 		dohtml -r doc/html/*
