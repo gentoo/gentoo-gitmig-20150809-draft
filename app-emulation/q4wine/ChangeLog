@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/q4wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.2 2009/03/25 23:59:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.3 2009/04/08 23:57:55 hwoarang Exp $
+
+  09 Apr 2009; Markos Chandras <hwoarang@gentoo.org> q4wine-0.111:
+  Fixing DEPEND,RDEPEND
 
   25 Mar 2009; Markos Chandras <hwoarang@gentoo.org> ChangeLog:
   Removing obsolete make_desktop_entry function, using default cmake-utils install function
