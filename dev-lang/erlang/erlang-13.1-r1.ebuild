@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.1.ebuild,v 1.1 2009/04/07 10:46:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.1-r1.ebuild,v 1.1 2009/04/08 23:11:56 fauli Exp $
 
 EAPI=2
 
@@ -50,6 +50,7 @@ src_prepare() {
 		sed -i 's: wx : :' lib/Makefile
 		rm -rf lib/wx
 	fi
+	epatch "${FILESDIR}"/${P}-LDFLAGS.patch # bug 263129
 	if use hipe; then
 		ewarn
 		ewarn "You enabled High performance Erlang. Be aware that this extension"
@@ -58,7 +59,6 @@ src_prepare() {
 		ewarn
 	fi
 	eautoreconf
-
 }
 
 src_configure() {
