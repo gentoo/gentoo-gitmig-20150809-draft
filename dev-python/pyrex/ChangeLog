@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.66 2009/04/08 17:35:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.67 2009/04/08 19:24:29 fmccor Exp $
+
+  08 Apr 2009; Ferris McCormick <fmccor@gentoo.org> pyrex-0.9.8.5.ebuild:
+  Sparc stable --- Bug #208945.
 
   08 Apr 2009; Tobias Klausmann <klausman@gentoo.org> pyrex-0.9.8.5.ebuild:
   Stable on alpha, bug #208945
