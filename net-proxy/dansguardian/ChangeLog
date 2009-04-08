@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.43 2009/02/17 23:04:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.44 2009/04/08 23:54:36 mrness Exp $
+
+  08 Apr 2009; Alin Năstac <mrness@gentoo.org>
+  dansguardian-2.10.0.3.ebuild:
+  Remove libclamav support, broken by clamav-0.95 (#264820).
 
 *dansguardian-2.10.0.3 (17 Feb 2009)
 
