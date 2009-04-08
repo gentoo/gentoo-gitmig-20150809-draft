@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/gnugk-2.2.7.ebuild,v 1.1 2009/02/12 04:47:00 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/gnugk-2.2.7.ebuild,v 1.2 2009/04/08 17:18:49 volkmar Exp $
 
 EAPI="2"
 
@@ -60,8 +60,9 @@ src_compile() {
 	# `make debugdepend debugshared` and `make debug` failed (so no debug)
 	# `make optdepend optnoshared` also failed (so no static)
 
-	# fails with -j2
-	emake -j1 optdepend optshared || die "emake failed"
+	# splitting emake calls fixes parallel build issue
+	emake optdepend || die "emake optdepend failed"
+	emake optshared || die "emake optshared failed"
 
 	# build tool addpasswd
 	emake addpasswd || die "emake addpasswd failed"
