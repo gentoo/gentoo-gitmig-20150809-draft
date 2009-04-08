@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.1_rc1.ebuild,v 1.1 2009/04/08 17:28:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.1_rc1.ebuild,v 1.2 2009/04/08 17:35:40 flameeyes Exp $
 
 inherit eutils pam confutils
 
@@ -19,7 +19,9 @@ esac
 DESCRIPTION="Allows users or groups to run commands as other users"
 HOMEPAGE="http://www.sudo.ws/"
 SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${uri_prefix}${MY_P}.tar.gz"
-LICENSE="Sudo"
+# Basic license is ISC-style as-is, some files are released under
+# 3-clause BSD license
+LICENSE="as-is BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="pam skey offensive ldap selinux"
