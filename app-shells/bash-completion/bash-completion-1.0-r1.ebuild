@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.0-r1.ebuild,v 1.1 2009/04/09 13:24:07 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.0-r1.ebuild,v 1.2 2009/04/09 16:36:29 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -80,7 +80,6 @@ pkg_postinst() {
 	elog
 	elog "If you use non-login shells you still need to source"
 	elog "/etc/profile.d/bash-completion.sh in your ~/.bashrc."
-
 
 	if has_version 'app-shells/zsh' ; then
 		elog "If you are interested in using the provided bash completion functions with"
