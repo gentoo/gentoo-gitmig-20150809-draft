@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.6.ebuild,v 1.1 2009/04/09 09:22:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.6.ebuild,v 1.2 2009/04/09 17:14:46 scarabeus Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -18,7 +18,16 @@ RESTRICT="test" # see bug #236845
 RDEPEND="dev-libs/libpthread-stubs"
 DEPEND="${RDEPEND}"
 
+PATCHES=(
+	"${FILESDIR}"/${PV}-makefile.patch
+)
 # FIXME, we should try to see how we can fit the --enable-udev configure flag
+
+src_unpack() {
+	x-modular_src_unpack
+	eautoreconf
+	elibtoolize
+}
 
 pkg_postinst() {
 	x-modular_pkg_postinst
