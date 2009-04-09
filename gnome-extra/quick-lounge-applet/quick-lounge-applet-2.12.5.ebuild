@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/quick-lounge-applet-2.12.5.ebuild,v 1.1 2008/07/27 18:05:34 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/quick-lounge-applet-2.12.5.ebuild,v 1.2 2009/04/09 21:14:56 eva Exp $
 
 inherit autotools gnome2
 
@@ -33,7 +33,13 @@ DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
 src_unpack() {
 	gnome2_src_unpack
+
 	# some fixes to configure.in from upstream
 	epatch "${FILESDIR}/${P}-configure-fixes.patch"
+
+	# fix tests, bug #265220
+	echo "src/GNOME_QuickLoungeApplet_Factory.server.in" >> po/POTFILES.in
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
