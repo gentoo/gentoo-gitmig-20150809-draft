@@ -1,0 +1,13 @@
+diff --git Init/Services.pm Init/Services.pm
+index c1d2620..07ed2cd 100644
+--- Init/Services.pm
++++ Init/Services.pm
+@@ -802,7 +802,7 @@ sub set_gentoo_service_status
+ 
+   return if ($status == $old_status);
+ 
+-  if ($action == $SERVICE_START)
++  if ($status == $SERVICE_START)
+   {
+     &Utils::File::run ("rc-update add $script $rl");
+     &run_gentoo_script ($script, "start");
