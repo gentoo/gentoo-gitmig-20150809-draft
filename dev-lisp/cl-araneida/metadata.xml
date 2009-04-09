@@ -30,8 +30,4 @@ application.
   supported in CVS. This makes Araneida the most portable Common Lisp
   web server. 
 </longdescription>
-<use>
-	<flag name='standalone'>tired of waiting for the lisp team to add
-		this</flag>
-</use>
 </pkgmetadata>

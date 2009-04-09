@@ -18,7 +18,7 @@ isn't really required while you develop with Araneida.  Nonetheless, the choice
 between two reverse web proxy servers has been included in the runtime
 dependency list:
 
-    net-www/apache
+    www-servers/apache
     www-servers/pound
 
 See the CLiki at http://www.cliki.net/Araneida for more information on this.
