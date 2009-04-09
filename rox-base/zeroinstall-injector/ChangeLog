@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/zeroinstall-injector
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.10 2008/08/31 17:58:14 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.11 2009/04/09 13:34:38 lack Exp $
+
+  09 Apr 2009; Jim Ramsay <lack@gentoo.org>
+  zeroinstall-injector-0.33.ebuild:
+  Fix pkg_postinst by setting PYTHON_MODNAME properly
 
   31 Aug 2008; Raúl Porcel <armin76@gentoo.org>
   zeroinstall-injector-0.33.ebuild:

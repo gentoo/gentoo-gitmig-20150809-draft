@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.33.ebuild,v 1.5 2008/08/31 17:58:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-0.33.ebuild,v 1.6 2009/04/09 13:34:38 lack Exp $
 
 inherit distutils
 
@@ -16,6 +16,8 @@ IUSE=""
 DEPEND="!<=rox-base/rox-session-0.30"
 RDEPEND=">=dev-python/pygtk-2.0
 	app-crypt/gnupg"
+
+PYTHON_MODNAME="zeroinstall"
 
 src_unpack() {
 	unpack ${A}
