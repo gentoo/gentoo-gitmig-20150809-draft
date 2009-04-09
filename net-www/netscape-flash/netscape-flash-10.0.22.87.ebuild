@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-10.0.22.87.ebuild,v 1.4 2009/03/08 14:39:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-10.0.22.87.ebuild,v 1.5 2009/04/09 22:04:32 ulm Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib
@@ -96,7 +96,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use amd64 && has_version 'net-www/nspluginwrapper'; then
+	if use amd64 && has_version 'www-plugins/nspluginwrapper'; then
 		# TODO: Perhaps parse the output of 'nspluginwrapper -l'
 		#       However, the 64b flash plugin makes 'nspluginwrapper -l' segfault.
 		local FLASH_WRAPPER="${ROOT}/usr/lib64/nsbrowser/plugins/npwrapper.libflashplayer.so"
