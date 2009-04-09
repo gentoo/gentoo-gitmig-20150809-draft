@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/nexuiz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.29 2009/04/03 17:32:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.30 2009/04/09 04:52:54 mr_bones_ Exp $
+
+*nexuiz-2.5 (09 Apr 2009)
+
+  09 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/nexuiz-2.5-memory-leak.patch, +nexuiz-2.5.ebuild:
+  version bump - ebuild submitted by Merlijn Hofstra and Tomáš Chvátal (bug
+  #264794)
 
   03 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> nexuiz-2.4.2.ebuild:
   EAPI=2; tidy; handle strip more precisely
