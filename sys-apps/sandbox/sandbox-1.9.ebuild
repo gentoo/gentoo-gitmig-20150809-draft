@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.9.ebuild,v 1.1 2009/04/09 11:15:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.9.ebuild,v 1.2 2009/04/09 20:30:16 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -88,4 +88,8 @@ pkg_preinst() {
 		elog ${old//${ROOT}}
 		find "${ROOT}"/lib* -maxdepth 1 -name 'libsandbox*' -exec rm -fv {} \;
 	fi
+}
+
+pkg_postinst() {
+	chown 0755 "${D}"/etc/sandbox.d #265376
 }
