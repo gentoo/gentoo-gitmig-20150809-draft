@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.24.3.1.ebuild,v 1.9 2009/03/18 15:14:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.24.3.1.ebuild,v 1.10 2009/04/09 21:19:10 eva Exp $
 
 inherit eutils gnome2 autotools
 
@@ -38,7 +38,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.17
-	doc? ( >=dev-util/gtk-doc-1.10 )"
+	doc? ( >=dev-util/gtk-doc-1.10 )
+	>=dev-util/gtk-doc-am-1.10"
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"
 
