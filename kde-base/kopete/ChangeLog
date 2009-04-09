@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.174 2009/03/08 20:15:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.175 2009/04/09 20:17:08 dirtyepic Exp $
+
+  09 Apr 2009; Ryan Hill <dirtyepic@gentoo.org> kopete-3.5.9.ebuild:
+  Fix 3.5.9 to build with GCC 4.3 too.
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kopete-4.2.0.ebuild:
   Drop KDE 4.2.0
