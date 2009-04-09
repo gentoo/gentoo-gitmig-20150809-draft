@@ -1,18 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2512 2009/04/09 17:49:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2513 2009/04/09 19:07:27 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
-  09 Apr 2009; Ulrich Mueller <ulm@gentoo.org> updates/1Q-2009,
+  09 Apr 2009; Ulrich Mueller <ulm@gentoo.org> categories, updates/1Q-2009,
   +updates/2Q-2009:
-  Move entry from April from 1Q-2009 to 2Q-2009. Package move
-  kaffeine-mozilla-plugin to www-plugins.
-
-  09 Apr 2009; Ulrich Mueller <ulm@gentoo.org> categories:
-  Add www-plugins category.
+  Add www-plugins category. Move entry from April from 1Q-2009 to 2Q-2009.
+  Package move awstats to www-misc. Package move kaffeine-mozilla-plugin to
+  www-plugins.
 
   08 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> package.mask:
   Add net-libs/zapata for removal

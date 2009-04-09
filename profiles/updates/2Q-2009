@@ -1,2 +1,3 @@
+move net-www/awstats www-misc/awstats
 move net-www/kaffeine-mozilla-plugin www-plugins/kaffeine-mozilla-plugin
 move net-www/moonlight www-plugins/moonlight
