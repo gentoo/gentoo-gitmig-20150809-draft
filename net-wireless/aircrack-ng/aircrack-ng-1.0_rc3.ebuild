@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.0_rc3.ebuild,v 1.1 2009/03/29 12:15:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.0_rc3.ebuild,v 1.2 2009/04/09 22:02:44 arfrever Exp $
 
 EAPI=2
 inherit versionator eutils toolchain-funcs
@@ -33,6 +33,8 @@ src_prepare() {
 		sed -i -e "s:^\(SCRIPTS.*\)airmon-ng:\1:g" Makefile
 		sed -i -e "s:airmon-ng.1::g" manpages/Makefile
 	fi
+
+	epatch "${FILESDIR}/${P}-respect_LDFLAGS.patch"
 }
 
 src_compile() {
