@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.27 2009/04/04 17:50:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.28 2009/04/09 22:46:16 tester Exp $
+
+*telepathy-glib-0.7.29 (09 Apr 2009)
+
+  09 Apr 2009; Olivier Crête <tester@gentoo.org>
+  +telepathy-glib-0.7.29.ebuild:
+  Version bump
 
   04 Apr 2009; <solar@gentoo.org> telepathy-glib-0.7.25.ebuild:
   - Keyword ~arm
