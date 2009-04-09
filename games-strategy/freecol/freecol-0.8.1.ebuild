@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.7.4.ebuild,v 1.2 2009/04/09 17:39:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.8.1.ebuild,v 1.1 2009/04/09 17:39:39 mr_bones_ Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 inherit eutils java-pkg-2 java-ant-2 games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND="dev-java/higlayout"

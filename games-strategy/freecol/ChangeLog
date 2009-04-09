@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/freecol
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.30 2008/06/16 20:48:23 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.31 2009/04/09 17:39:39 mr_bones_ Exp $
+
+*freecol-0.8.1 (09 Apr 2009)
+
+  09 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/freecol-0.8.1-home.patch, freecol-0.7.4.ebuild,
+  +freecol-0.8.1.ebuild:
+  version bump (bug #255139)
 
 *freecol-0.7.4 (16 Jun 2008)
 
