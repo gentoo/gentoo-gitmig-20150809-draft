@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.confd,v 1.2 2009/04/03 18:18:13 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.confd,v 1.3 2009/04/09 18:56:04 bangert Exp $
 
 # DO NOT MODIFY THIS FILE DIRECTLY! CREATE A COPY AND MODIFY THAT INSTEAD!
 
@@ -31,10 +31,10 @@ FCGI_PORT=1234
 # extension but not always. For PHP, you should usually point this to
 # /usr/bin/php-cgi.
 #
-FCGI_PROGRAM=/path/to/application.fcgi
+#FCGI_PROGRAM=/usr/bin/php-cgi
+FCGI_PROGRAM=
 
-# The number of child processes to spawn. The default is 1. For PHP
-# applications, set this to 1 and use PHP_FCGI_CHILDREN instead.
+# The number of child processes to spawn. The default is 1.
 #
 FCGI_CHILDREN=1
 
@@ -49,11 +49,10 @@ FCGI_CHROOT=
 FCGI_USER=
 FCGI_GROUP=
 
-# If your application requires additional environment variables, you need to
-# allow them here. Only the variables specified here, plus a few others
-# mentioned in the init script are passed to the application.
+# If your application requires additional environment variables, you may
+# specify them here. See PHP example below.
 #
-ALLOWED_ENV=""
+ALLOWED_ENV=
 
 # PHP ONLY :: These two options are specific to PHP. The first is the number
 # of child processes to spawn. The second is the number of requests to be
@@ -61,3 +60,6 @@ ALLOWED_ENV=""
 #
 #PHP_FCGI_CHILDREN=5
 #PHP_FCGI_MAX_REQUESTS=500
+#
+# For this to work you would set
+# ALLOWED_ENV="PHP_FCGI_CHILDREN PHP_FCGI_MAX_REQUESTS"

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.4 2009/04/07 08:39:00 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.5 2009/04/09 18:56:04 bangert Exp $
 
 PROGNAME=${SVCNAME#*.}
 SPAWNFCGI=/usr/bin/spawn-fcgi
@@ -32,7 +32,14 @@ start() {
 		return 1
 	fi
 
-	local X E OPTIONS SOCKET_OPTION PORT_OPTION RETVAL
+	if [ -z "${FCGI_PROGRAM}" ]; then
+		eerror "You need to specify which FCGI program you want"
+		eerror "spawn-fcgi to start."
+		eerror "Look at /etc/conf.d/spawn-fcgi.${PROGNAME}"
+		return 1
+	fi
+
+	local X E OPTIONS i RETVAL
 
 	if [ -z "${FCGI_ADDRESS}" ]; then
 		FCGI_ADDRESS=127.0.0.1
@@ -40,10 +47,6 @@ start() {
 
 	if [ -z "${FCGI_CHILDREN}" ]; then
 		FCGI_CHILDREN=1
-	fi
-
-	if [ -n "${PHP_FCGI_CHILDREN}" ]; then
-		OPTIONS="${OPTIONS} -C ${PHP_FCGI_CHILDREN}"
 	fi
 
 	if [ -n "${FCGI_CHROOT}" ]; then
@@ -58,27 +61,23 @@ start() {
 		OPTIONS="${OPTIONS} -g ${FCGI_GROUP}"
 	fi
 
-	ALLOWED_ENV="$ALLOWED_ENV USER GROUPS PHP_FCGI_MAX_REQUESTS RAILS_ENV TRAC_ENV_PARENT_DIR TRAC_ENV"
 	unset E
-
 	for i in ${ALLOWED_ENV}; do
-		eval j='"$i"'
+		local j
+		eval j=$(echo \$"$i")
 		[ -n "${j}" ] && E="${E} -e ${i}=${j}"
 	done
-
-	#make sure pidfile dir exists
-	install -d "${PIDPATH}" -m 0700 -o root
 
 	ebegin "Starting FastCGI application ${PROGNAME}"
 	X=0
 	while [ $X -lt ${FCGI_CHILDREN} ]; do
 		X=$(($X+1))
-		local P
+		local P SOCKET_OPTION INET_OPTION 
 		P=${PIDFILE}-${X}.pid
 		[ -n "${FCGI_SOCKET}" ] && SOCKET_OPTION="-s ${FCGI_SOCKET}-${X}"
 		[ -n "${FCGI_PORT}" ] && INET_OPTION="-a ${FCGI_ADDRESS} -p $((${FCGI_PORT} + ${X} - 1))"
 
-		start-stop-daemon --start --pidfile ${P} ${E} --exec ${SPAWNFCGI} -- \
+		start-stop-daemon --start --pidfile ${P} ${E} --exec ${SPAWNFCGI} --name ${FCGI_PROGRAM} -- \
 			${SOCKET_OPTION} ${INET_OPTION} -P ${P} ${OPTIONS} -- ${FCGI_PROGRAM}
 		RETVAL=$?
 

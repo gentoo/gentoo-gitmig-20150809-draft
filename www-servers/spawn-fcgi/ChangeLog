@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/spawn-fcgi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.4 2009/04/07 08:39:00 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.5 2009/04/09 18:56:03 bangert Exp $
+
+  09 Apr 2009; Thilo Bangert <bangert@gentoo.org> files/spawn-fcgi.confd,
+  files/spawn-fcgi.initd, spawn-fcgi-1.6.1:
+  keepdir - fix init script for old baselayout (bug #265454)- some minor
+  cleanups
 
   07 Apr 2009; Thilo Bangert <bangert@gentoo.org> files/spawn-fcgi.initd:
   make sure pidpath is available
