@@ -1,6 +1,6 @@
-# ChangeLog for net-www/moonlight
+# ChangeLog for www-plugins/moonlight
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/ChangeLog,v 1.1 2009/04/09 17:31:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/ChangeLog,v 1.2 2009/04/09 17:42:52 ulm Exp $
 
   09 Apr 2009; Peter Alfredsen <loki_val@gentoo.org> +metadata.xml,
   +moonlight-1.0.ebuild, +moonlight-1.0.1.ebuild:
