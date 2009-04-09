@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/spawn-fcgi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.5 2009/04/09 18:56:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.6 2009/04/09 19:48:39 bangert Exp $
+
+  09 Apr 2009; Thilo Bangert <bangert@gentoo.org> files/spawn-fcgi.initd:
+  make multiple environment variables work with stable start-stop-daemon
 
   09 Apr 2009; Thilo Bangert <bangert@gentoo.org> files/spawn-fcgi.confd,
   files/spawn-fcgi.initd, spawn-fcgi-1.6.1:

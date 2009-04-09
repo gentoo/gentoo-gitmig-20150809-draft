@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.5 2009/04/09 18:56:04 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.6 2009/04/09 19:48:39 bangert Exp $
 
 PROGNAME=${SVCNAME#*.}
 SPAWNFCGI=/usr/bin/spawn-fcgi
@@ -65,7 +65,7 @@ start() {
 	for i in ${ALLOWED_ENV}; do
 		local j
 		eval j=$(echo \$"$i")
-		[ -n "${j}" ] && E="${E} -e ${i}=${j}"
+		[ -n "${j}" ] && E="${E} ${i}=${j}"
 	done
 
 	ebegin "Starting FastCGI application ${PROGNAME}"
@@ -77,7 +77,7 @@ start() {
 		[ -n "${FCGI_SOCKET}" ] && SOCKET_OPTION="-s ${FCGI_SOCKET}-${X}"
 		[ -n "${FCGI_PORT}" ] && INET_OPTION="-a ${FCGI_ADDRESS} -p $((${FCGI_PORT} + ${X} - 1))"
 
-		start-stop-daemon --start --pidfile ${P} ${E} --exec ${SPAWNFCGI} --name ${FCGI_PROGRAM} -- \
+		env ${E} start-stop-daemon --start --pidfile ${P} --exec ${SPAWNFCGI} --name ${FCGI_PROGRAM} -- \
 			${SOCKET_OPTION} ${INET_OPTION} -P ${P} ${OPTIONS} -- ${FCGI_PROGRAM}
 		RETVAL=$?
 
