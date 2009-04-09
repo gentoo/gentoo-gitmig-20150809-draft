@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.4.ebuild,v 1.2 2009/04/08 19:14:56 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.4.ebuild,v 1.3 2009/04/09 21:35:14 ulm Exp $
 
 inherit eutils gnome2-utils nsplugins
 
@@ -248,7 +248,8 @@ pkg_postinst () {
 	if use nsplugin ; then
 		echo
 		elog "If you're running a 64bit browser you may also want to install"
-		elog "\"net-www/nspluginwrapper\" to be able to use the Adobe Reader browser plugin."
+		elog "\"www-plugins/nspluginwrapper\" to be able to use the Adobe Reader"
+		elog "browser plugin."
 		echo
 	fi
 
