@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.6-r2.ebuild,v 1.2 2009/04/09 20:30:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.6-r2.ebuild,v 1.3 2009/04/09 21:28:18 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -99,5 +99,5 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	chown 0755 "${D}"/etc/sandbox.d #265376
+	chmod 0755 "${ROOT}"/etc/sandbox.d #265376
 }
