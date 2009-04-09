@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2513 2009/04/09 19:07:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2514 2009/04/09 22:13:40 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Apr 2009; Ulrich Mueller <ulm@gentoo.org>
+  arch/amd64/no-multilib/package.mask,
+  default-linux/amd64/2007.0/no-multilib/package.mask,
+  features/64bit-native/package.mask, updates/2Q-2009:
+  Package move nspluginwrapper to www-plugins. Update masks accordingly.
 
   09 Apr 2009; Ulrich Mueller <ulm@gentoo.org> categories, updates/1Q-2009,
   +updates/2Q-2009:

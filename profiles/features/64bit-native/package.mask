@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.12 2008/12/30 15:58:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.13 2009/04/09 22:13:41 ulm Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -188,7 +188,6 @@ net-misc/icaclient
 net-p2p/pandodl
 net-p2p/sancho-bin
 <net-www/netscape-flash-10.0.20.7_alpha
-net-www/nspluginwrapper
 net-voip/wengophone-bin
 sci-biology/foldingathome
 sys-apps/memtest86
@@ -198,6 +197,7 @@ sys-libs/lib-compat-loki
 www-client/mozilla-bin
 www-client/mozilla-firefox-bin
 www-client/seamonkey-bin
+www-plugins/nspluginwrapper
 x11-drivers/ati-drivers
 x11-apps/ati-drivers-extra
 x11-misc/googleearth
