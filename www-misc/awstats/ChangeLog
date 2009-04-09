@@ -1,8 +1,9 @@
 # ChangeLog for www-misc/awstats
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.1 2009/04/09 19:00:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.2 2009/04/09 19:18:04 ulm Exp $
 
-  09 Apr 2009; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
+  09 Apr 2009; Ulrich Mueller <ulm@gentoo.org>
+  +files/awstats-6.3-gentoo.diff, +files/postinst-en-r1.txt, +metadata.xml,
   +awstats-6.9-r1.ebuild:
   Package moved from net-www to www-misc, bug 265569.
 
