@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.164 2009/04/07 04:20:22 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.165 2009/04/09 04:38:24 darkside Exp $
+
+*bash-completion-1.0 (09 Apr 2009)
+
+  09 Apr 2009; Jeremy Olexa <darkside@gentoo.org>
+  +files/bash-completion-1.0-gentoo.patch, +bash-completion-1.0.ebuild:
+  Version bump, bug 265240. Big thanks to ColdWind for re-working the awk
+  split in the ebuild
 
   07 Apr 2009; Jeremy Olexa <darkside@gentoo.org>
   -files/20050121/01_all_gkrellm.diff, -files/20050121/03_all_timidity.diff,
