@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4345 2009/04/08 20:07:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4346 2009/04/09 19:27:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -869,8 +869,6 @@ dev-util/strace:aio - Enable libaio support
 dev-util/subversion:ctypes-python - Build and install ctypes python bindings
 dev-util/subversion:dso - Enable runtime module search
 dev-util/subversion:extras - Install extras scripts (examples, tools, hooks)
-dev-util/subversion:nowebdav - Disables WebDAV support via neon library
-dev-util/subversion:svnserve - Install scripts for svnserve
 dev-util/subversion:webdav-neon - Enable WebDAV support using net-misc/neon
 dev-util/subversion:webdav-serf - Enable WebDAV support using net-libs/serf
 dev-util/svk:log4p - Enable perl logger support
