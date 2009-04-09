@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gnome-system-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.82 2008/10/13 21:26:52 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.83 2009/04/09 22:16:26 eva Exp $
+
+*gnome-system-tools-2.22.2 (09 Apr 2009)
+
+  09 Apr 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/gnome-system-tools-2.22.2-automagic-polkit.patch,
+  +gnome-system-tools-2.22.2.ebuild:
+  Bump to 2.22.2.
 
 *gnome-system-tools-2.22.1-r1 (13 Oct 2008)
 
