@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.198 2009/04/05 14:19:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.199 2009/04/09 19:58:56 chainsaw Exp $
+
+*asterisk-1.6.0.9 (09 Apr 2009)
+
+  09 Apr 2009; <chainsaw@gentoo.org> +asterisk-1.6.0.9.ebuild:
+  Version bump, upstream reports a merge issue crept into 1.6.0.7 and
+  1.6.0.8 that resulted in memory being freed erroneously. This version
+  resolves that.
 
   05 Apr 2009; Brent Baude <ranger@gentoo.org> asterisk-1.2.32.ebuild:
   Marking asterisk-1.2.32 ppc for bug 237476
