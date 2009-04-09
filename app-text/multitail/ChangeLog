@@ -1,6 +1,9 @@
 # ChangeLog for app-text/multitail
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.65 2008/08/26 18:40:08 jer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.66 2009/04/09 13:55:09 jer Exp $
+
+  09 Apr 2009; Jeroen Roovers <jer@gentoo.org> multitail-5.2.2.ebuild:
+  Stable for HPPA (bug #264947).
 
   26 Aug 2008; Jeroen Roovers <jer@gentoo.org> Manifest:
   Fix Manifest (bug #235791).
