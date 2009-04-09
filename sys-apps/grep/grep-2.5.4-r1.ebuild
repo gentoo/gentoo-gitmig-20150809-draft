@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.4.ebuild,v 1.4 2009/04/09 16:09:35 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.4-r1.ebuild,v 1.1 2009/04/09 16:09:35 loki_val Exp $
+
+EAPI=2
 
 inherit eutils
 
@@ -12,31 +14,25 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~amd64-fbsd ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="nls pcre static"
+IUSE="nls pcre"
 
-RDEPEND="nls? ( virtual/libintl )"
+RDEPEND="nls? ( virtual/libintl )
+	pcre? ( >=dev-libs/libpcre-7.8-r1 )"
 DEPEND="${RDEPEND}
-	pcre? ( <=dev-libs/libpcre-7.8 )
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.5.3-po-builddir-fix.patch
 	epatch "${FILESDIR}"/${PN}-2.5.3-nls.patch
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--bindir=/bin \
 		$(use_enable nls) \
 		$(use_enable pcre perl-regexp) \
 		$(use elibc_FreeBSD || echo --without-included-regex) \
 		|| die "econf failed"
-
-	use static || sed -i 's:-lpcre:-Wl,-Bstatic -lpcre -Wl,-Bdynamic:g' src/Makefile
-
-	emake || die "emake failed"
 }
 
 src_install() {
