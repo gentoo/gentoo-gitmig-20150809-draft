@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.1_p2-r1.ebuild,v 1.5 2009/04/09 05:40:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.5.ebuild,v 1.1 2009/04/09 05:40:39 pva Exp $
 
 inherit eutils multilib
 
@@ -9,15 +9,15 @@ JABBER_RUN="/var/run/jabber"
 JABBER_SPOOL="/var/spool/jabber"
 JABBER_LOG="/var/log/jabber"
 
-MY_PV=${PV/_p2/}
+MY_PV=${PV}
 MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="The Erlang Jabber Daemon"
 HOMEPAGE="http://www.ejabberd.im/"
-SRC_URI="http://process-one.net/en/projects/${PN}/download/${MY_PV}/${P/p/}.tar.gz"
+SRC_URI="http://www.process-one.net/downloads/ejabberd/${PV}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug mod_irc mod_muc mod_pubsub ldap odbc pam ssl web zlib"
 
 DEPEND=">=net-im/jabber-base-0.01
@@ -27,19 +27,15 @@ DEPEND=">=net-im/jabber-base-0.01
 	ldap? ( =net-nds/openldap-2* )
 	ssl? ( >=dev-libs/openssl-0.9.8e )
 	zlib? ( sys-libs/zlib )"
+RDEPEND="${DEPEND}"
 
 PROVIDE="virtual/jabber-server"
+
 S=${WORKDIR}/${MY_P}/src
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	# Bug #171427
-	epatch "${FILESDIR}/2.0.0-missing-declaration.patch"
-
-	# Bug #225565
-	epatch "${FILESDIR}/2.0.1-parallel-make.patch"
 
 	# get rid of the prefix
 	sed -i -e "s/\\@prefix\\@//" "${S}/Makefile.in" \
@@ -99,7 +95,7 @@ src_install() {
 	fi
 
 	cd "${WORKDIR}/${MY_P}/doc"
-	dodoc "release_notes_${PV}.txt"
+	dodoc "release_notes_${MY_PV}.txt"
 	dohtml *.{html,png}
 
 	# set up /usr/sbin/ejabberd wrapper
@@ -147,7 +143,7 @@ pkg_postinst() {
 	fi
 	elog "===================================================================="
 	elog 'Quick Start Guide:'
-	elog '1) Add output of `hostname -s` to /etc/jabber/ejabberd.cfg line 89'
+	elog '1) Add output of `hostname -f` to /etc/jabber/ejabberd.cfg line 89'
 	elog '   {hosts, ["localhost", "thehost"]}.'
 	elog '2) Add an admin user to /etc/jabber/ejabberd.cfg line 324'
 	elog '   {acl, admin, {user, "theadmin", "thehost"}}.'

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/files/ejabberd-2.0.4.initd,v 1.2 2009/03/27 19:40:57 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/files/ejabberd-2.initd,v 1.1 2009/04/09 05:40:39 pva Exp $
 
 opts="${opts} reload"
 
