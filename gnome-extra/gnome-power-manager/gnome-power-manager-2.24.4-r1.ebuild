@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r1.ebuild,v 1.3 2009/03/28 23:15:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r1.ebuild,v 1.4 2009/04/09 20:38:04 eva Exp $
 
 inherit autotools eutils gnome2 virtualx
 
@@ -78,6 +78,9 @@ src_unpack() {
 	epatch "${WORKDIR}/${P}-cpufreq-libhal-glib.patch"
 	epatch "${WORKDIR}/${P}-cpufreq-support.patch"
 	epatch "${WORKDIR}/${P}-cpufreq-ui.patch"
+
+	# Remove stupid gcc flags, bug #265317
+	sed "s:-Werror::g" -i configure.ac || die "sed 3 failed"
 
 	# Make it libtool-1 compatible
 	rm -v m4/lt* m4/libtool.m4 || die "removing libtool macros failed"
