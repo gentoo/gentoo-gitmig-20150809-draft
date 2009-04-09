@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.46 2009/03/22 10:55:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.47 2009/04/09 00:15:38 mrness Exp $
+
+*privoxy-3.0.12 (09 Apr 2009)
+
+  09 Apr 2009; Alin Năstac <mrness@gentoo.org>
+  +files/privoxy-3.0.12-gentoo.patch, +privoxy-3.0.12.ebuild:
+  Version bump. Add IPv6 support, thanks to Petr Pisar <petr dot pisar at
+  atlas dot cz> (#265354).
 
 *privoxy-3.0.11-r1 (22 Mar 2009)
 
