@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.0.ebuild,v 1.1 2009/04/09 04:38:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.0.ebuild,v 1.2 2009/04/09 04:40:52 darkside Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	
+
 	# Upstream will soon be splitting this for us.
 	# split /etc/bash_completion into three parts:
 	# 1. /usr/share/bash-completion/.pre    -- hidden from eselect
@@ -38,20 +38,20 @@ src_install() {
 	# 3. /usr/share/bash-completion/.post   -- hidden from eselect
 	dodir /usr/share/bash-completion
 	awk -v D="$D" '
-    BEGIN { out=".pre" }
-    /^# A lot of the following one-liners/ { out="base" }
-    /^# start of section containing completion functions called by other functions/ { out=".pre" }
-    /^# start of section containing completion functions for bash built-ins/ { out="base" }
-    /^# source completion directory/ { out="" }
-    /^unset -f have/ { out=".post" }
-    out != "" { print > D"/usr/share/bash-completion/"out }' \
+	BEGIN { out=".pre" }
+	/^# A lot of the following one-liners/ { out="base" }
+	/^# start of section containing completion functions called by other functions/ { out=".pre" }
+	/^# start of section containing completion functions for bash built-ins/ { out="base" }
+	/^# source completion directory/ { out="" }
+	/^unset -f have/ { out=".post" }
+	out != "" { print > D"/usr/share/bash-completion/"out }' \
 	bash_completion || die "failed to split bash_completion"
 
 	dodir /etc/profile.d
 	cp bash_completion.sh "${D}/etc/profile.d/" || die "cp failed"
 
 	dodoc AUTHORS CHANGES README TODO || die "dodocs failes"
-	
+
 	# bug 146726
 	rm "${D}/etc/bash_completion.d/svk" || die "rm failed"
 
