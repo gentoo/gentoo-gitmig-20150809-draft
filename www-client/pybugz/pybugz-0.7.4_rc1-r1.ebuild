@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.7.4_rc1.ebuild,v 1.1 2009/03/28 22:17:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.7.4_rc1-r1.ebuild,v 1.1 2009/04/09 23:53:17 williamh Exp $
 
 EAPI=2
 
@@ -23,6 +23,6 @@ src_install() {
 
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions
-		newins contrib/zsh-completion zsh_completion _pybugz
+		newins contrib/zsh-completion _pybugz
 	fi
 }
