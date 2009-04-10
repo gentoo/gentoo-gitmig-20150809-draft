@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>mozilla</herd>
+<maintainer>
+  <email>josejx@gentoo.org</email>
+  <name>Joseph Jezak</name>
+</maintainer>
+<use>
+	<flag name='divx'>Divx Playback Support</flag>
+	<flag name='gmedia'>Google Media Playback Support</flag>
+	<flag name='realmedia'>Real Media Playback Support</flag>
+	<flag name='wmp'>Windows Media Playback Support</flag>
+</use>
+</pkgmetadata>
