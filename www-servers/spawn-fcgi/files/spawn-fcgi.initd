@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.6 2009/04/09 19:48:39 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.7 2009/04/10 09:30:25 bangert Exp $
 
 PROGNAME=${SVCNAME#*.}
 SPAWNFCGI=/usr/bin/spawn-fcgi
@@ -39,7 +39,7 @@ start() {
 		return 1
 	fi
 
-	local X E OPTIONS i RETVAL
+	local X E OPTIONS i RETVAL FCGI_PROGRAM_NAME
 
 	if [ -z "${FCGI_ADDRESS}" ]; then
 		FCGI_ADDRESS=127.0.0.1
@@ -69,16 +69,18 @@ start() {
 	done
 
 	ebegin "Starting FastCGI application ${PROGNAME}"
+	FCGI_PROGRAM_NAME=(${FCGI_PROGRAM})
 	X=0
 	while [ $X -lt ${FCGI_CHILDREN} ]; do
 		X=$(($X+1))
-		local P SOCKET_OPTION INET_OPTION 
+		local P SOCKET_OPTION INET_OPTION
 		P=${PIDFILE}-${X}.pid
 		[ -n "${FCGI_SOCKET}" ] && SOCKET_OPTION="-s ${FCGI_SOCKET}-${X}"
 		[ -n "${FCGI_PORT}" ] && INET_OPTION="-a ${FCGI_ADDRESS} -p $((${FCGI_PORT} + ${X} - 1))"
 
-		env ${E} start-stop-daemon --start --pidfile ${P} --exec ${SPAWNFCGI} --name ${FCGI_PROGRAM} -- \
-			${SOCKET_OPTION} ${INET_OPTION} -P ${P} ${OPTIONS} -- ${FCGI_PROGRAM}
+		env ${E} start-stop-daemon --start --pidfile ${P} --exec ${SPAWNFCGI} \ 
+			--name ${FCGI_PROGRAM_NAME} -- ${SOCKET_OPTION} ${INET_OPTION} \ 
+			-P ${P} ${OPTIONS} -- ${FCGI_PROGRAM}
 		RETVAL=$?
 
 		# Stop on error. Don't want to spawn a mess!
