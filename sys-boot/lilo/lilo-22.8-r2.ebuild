@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.8-r2.ebuild,v 1.3 2008/08/18 16:07:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.8-r2.ebuild,v 1.4 2009/04/10 16:31:20 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -22,7 +22,9 @@ LICENSE="BSD GPL-2"
 KEYWORDS="-* x86 amd64"
 
 DEPEND=">=sys-devel/bin86-0.15.5"
-RDEPEND="device-mapper? ( >=sys-fs/device-mapper-1.02.12 )"
+RDEPEND="device-mapper? ( || (
+	>=sys-fs/lvm2-2.02.45
+	>=sys-fs/device-mapper-1.02.12 ) )"
 
 PROVIDE="virtual/bootloader"
 
