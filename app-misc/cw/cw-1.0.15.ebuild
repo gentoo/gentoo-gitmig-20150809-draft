@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.15.ebuild,v 1.6 2008/05/11 09:33:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cw/cw-1.0.15.ebuild,v 1.7 2009/04/10 03:42:47 darkside Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="A non-intrusive real-time ANSI color wrapper for common unix-based commands"
 HOMEPAGE="http://cwrapper.sourceforge.net/"
@@ -21,6 +23,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	econf || die "econf failed"
 	emake local || die "emake failed"
 }
