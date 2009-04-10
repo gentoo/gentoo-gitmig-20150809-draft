@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.7.5.ebuild,v 1.1 2009/03/21 23:56:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.7.5.ebuild,v 1.2 2009/04/10 23:44:40 arfrever Exp $
 
 inherit elisp-common
 
@@ -21,7 +21,7 @@ DEPEND="${DEPEND}
 SITEFILE=50gtags-gentoo.el
 
 src_compile() {
-	econf || die "econf failed"
+	econf
 
 	if use doc; then
 		texi2pdf -q -o doc/global.pdf doc/global.texi
@@ -39,7 +39,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	if use doc; then
 		dohtml doc/global.html
-		dodoc  doc/global.pdf
+		[[ -f doc/global.pdf ]] && dodoc doc/global.pdf
 	fi
 	dodoc AUTHORS FAQ NEWS README THANKS
 
