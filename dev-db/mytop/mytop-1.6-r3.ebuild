@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.6-r3.ebuild,v 1.1 2009/04/10 07:54:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.6-r3.ebuild,v 1.2 2009/04/10 07:56:24 robbat2 Exp $
 
 inherit perl-app
 
@@ -13,16 +13,18 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-perl/DBD-mysql
+RDEPEND="dev-perl/DBD-mysql
 	virtual/perl-Getopt-Long
 	dev-perl/TermReadKey
 	virtual/perl-Term-ANSIColor
-	virtual/perl-Time-HiRes
+	virtual/perl-Time-HiRes"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-PATCHES="${FILESDIR}/${PN}-1.6-global-status.patch
-		 ${FILESDIR}/${PN}-1.6-queries-vs-questions-mysql-5.0.76.patch
-		 ${FILESDIR}/${PN}-1.6-getopt-long-2.38-fixup.patch"
+PATCHES=( "${FILESDIR}/${PN}-1.6-global-status.patch"
+		  "${FILESDIR}/${PN}-1.6-queries-vs-questions-mysql-5.0.76.patch"
+		  "${FILESDIR}/${PN}-1.6-getopt-long-2.38-fixup.patch"
+		)
 
 src_install() {
 	perl-module_src_install

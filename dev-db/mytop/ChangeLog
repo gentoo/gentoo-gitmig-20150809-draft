@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mytop
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.21 2009/04/10 07:54:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/ChangeLog,v 1.22 2009/04/10 07:56:24 robbat2 Exp $
+
+  10 Apr 2009; Robin H. Johnson <robbat2@gentoo.org> mytop-1.6-r3.ebuild:
+  Make repoman happy.
 
 *mytop-1.6-r3 (10 Apr 2009)
 
