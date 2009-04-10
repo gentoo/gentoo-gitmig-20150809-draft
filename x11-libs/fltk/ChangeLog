@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.112 2009/02/24 12:51:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.113 2009/04/10 15:09:02 yngwin Exp $
+
+*fltk-2.0_pre6671 (10 Apr 2009)
+
+  10 Apr 2009; Ben de Groot <yngwin@gentoo.org> +files/fltk2-gcc43.patch,
+  -fltk-2.0_pre6525.ebuild, +fltk-2.0_pre6671.ebuild:
+  Version bump to latest snapshot. Drop old. Add patch for missing C
+  includes.
 
   24 Feb 2009; Raúl Porcel <armin76@gentoo.org> fltk-1.1.7-r2.ebuild,
   fltk-1.1.7-r3.ebuild, fltk-1.1.9.ebuild, fltk-2.0_pre6525.ebuild:

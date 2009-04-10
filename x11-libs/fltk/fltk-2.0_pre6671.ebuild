@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6525.ebuild,v 1.8 2009/02/24 12:51:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6671.ebuild,v 1.1 2009/04/10 15:09:02 yngwin Exp $
 
-EAPI="1"
+EAPI="2"
 inherit multilib autotools flag-o-matic
 
 MY_P=${P/_pre/.x-r}
@@ -10,7 +10,7 @@ DESCRIPTION="C++ user interface toolkit for X and OpenGL"
 HOMEPAGE="http://www.fltk.org/"
 SRC_URI="mirror://easysw/fltk/snapshots/${MY_P}.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 LICENSE="FLTK LGPL-2"
 SLOT="2"
 IUSE="cairo debug doc +jpeg +png opengl +xft xinerama zlib"
@@ -34,16 +34,15 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/fltk2-config.patch
+	epatch "${FILESDIR}"/fltk2-gcc43.patch
 	sed -i "/STRIP/d" fluid/Makefile  # don't pre-strip, bug 246694
 	use opengl || epatch "${FILESDIR}"/fltk2-nogl.patch
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	append-flags -fno-strict-aliasing
 
 	CPPFLAGS="${CPPFLAGS} -DFLTK_DOCDIR=\"/usr/share/doc/${PF}\"" \
@@ -56,7 +55,9 @@ src_compile() {
 		$(use_enable png) \
 		$(use_enable xinerama) \
 		$(use_enable zlib)
+}
 
+src_compile() {
 	emake || die "make failed"
 
 	if use doc; then
