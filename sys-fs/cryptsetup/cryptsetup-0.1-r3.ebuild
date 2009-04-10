@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r3.ebuild,v 1.12 2008/03/26 03:37:41 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r3.ebuild,v 1.13 2009/04/10 16:51:56 caleb Exp $
 
 inherit linux-info multilib eutils
 
@@ -13,7 +13,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-RDEPEND=">=sys-fs/device-mapper-1.00.07-r1
+RDEPEND="|| (
+		>=sys-fs/lvm2-2.02.45
+		>=sys-fs/device-mapper-1.00.07-r1
+	)
 	!sys-fs/cryptsetup-luks"
 DEPEND="dev-libs/popt
 	>=dev-libs/libgcrypt-1.1.42
