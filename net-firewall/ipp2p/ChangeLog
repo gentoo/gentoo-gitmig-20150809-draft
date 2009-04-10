@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipp2p
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ChangeLog,v 1.39 2009/02/16 22:38:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ChangeLog,v 1.40 2009/04/10 22:25:36 mrness Exp $
+
+  10 Apr 2009; Alin Năstac <mrness@gentoo.org>
+  +files/ipp2p-0.8.2-iptables-1.4.3.patch, ipp2p-0.8.2-r4.ebuild:
+  Fix incompatibility with iptables-1.4.3 (#265460).
 
   16 Feb 2009; Alin Năstac <mrness@gentoo.org>
   +files/ipp2p-0.8.2-iptables-1.4.1.patch, ipp2p-0.8.2-r4.ebuild:

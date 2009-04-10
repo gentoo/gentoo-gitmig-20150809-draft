@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r4.ebuild,v 1.8 2009/02/16 22:38:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r4.ebuild,v 1.9 2009/04/10 22:25:36 mrness Exp $
+
+EAPI="2"
 
 inherit linux-mod eutils
 
@@ -27,23 +29,23 @@ pkg_setup() {
 	linux-mod_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-kernel-2.6.22.patch
 	convert_to_m Makefile
 
 	sed -i -e "s/^IPTABLES_VERSION/#IPTABLES_VERSION/" Makefile
-	if has_version '>=net-firewall/iptables-1.3.6' ; then
-	    sed -i -e "s/ld -shared/\$\(CC\) -shared/" Makefile
-		if has_version '>=net-firewall/iptables-1.4.0' ; then
-			epatch "${FILESDIR}"/${P}-iptables-1.4.0.patch
-			if has_version '>=net-firewall/iptables-1.4.1' ; then
-				epatch "${FILESDIR}"/${P}-iptables-1.4.1.patch
-			fi
-		fi
-	fi
+
+	has_version '>=net-firewall/iptables-1.3.6' || return 0
+	sed -i -e "s/ld -shared/\$\(CC\) -shared/" Makefile
+
+	has_version '>=net-firewall/iptables-1.4.0' || return 0
+	epatch "${FILESDIR}"/${P}-iptables-1.4.0.patch
+
+	has_version '>=net-firewall/iptables-1.4.1' || return 0
+	epatch "${FILESDIR}"/${P}-iptables-1.4.1.patch
+
+	has_version '>=net-firewall/iptables-1.4.3' || return 0
+	epatch "${FILESDIR}"/${P}-iptables-1.4.3.patch
 }
 
 src_compile() {
