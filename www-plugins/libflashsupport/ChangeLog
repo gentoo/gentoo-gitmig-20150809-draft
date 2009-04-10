@@ -1,0 +1,21 @@
+# ChangeLog for www-plugins/libflashsupport
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/libflashsupport/ChangeLog,v 1.1 2009/04/10 13:15:11 ulm Exp $
+
+  10 Apr 2009; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
+  +libflashsupport-1.2.ebuild:
+  Package moved from net-www to www-plugins, bug 265569.
+
+  30 Nov 2008; Markus Meier <maekke@gentoo.org> libflashsupport-1.2.ebuild:
+  add ~amd64, bug #249073
+
+  26 Apr 2008; Jim Ramsay <lack@gentoo.org> libflashsupport-1.2.ebuild:
+  Changed socket path (Bug #203141)
+
+*libflashsupport-1.2 (14 May 2007)
+
+  14 May 2007; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +libflashsupport-1.2.ebuild:
+  Libflashsupport - Adds optional features such as pulseaudio, esd, oss, and
+  ssl to the netscape-flash binary.
+
