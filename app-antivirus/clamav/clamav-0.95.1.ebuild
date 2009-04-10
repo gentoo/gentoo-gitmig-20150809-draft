@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.95.1.ebuild,v 1.1 2009/04/09 11:52:01 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.95.1.ebuild,v 1.2 2009/04/10 07:49:54 dertobi123 Exp $
 
 inherit autotools eutils flag-o-matic fixheadtails multilib versionator
 
@@ -133,7 +133,7 @@ pkg_postinst() {
 		elog "read /usr/share/doc/${PF}/clamav-milter.README.gentoo.gz"
 		echo
 	fi
-	ewarn "The soname for libclamav has changed in clamav-0.94."
+	ewarn "The soname for libclamav has changed in clamav-0.95."
 	ewarn "If you have upgraded from that or earlier version, it is"
 	ewarn "recommended to run revdep-rebuild, in order to fix anything"
 	ewarn "that links against libclamav.so library."
