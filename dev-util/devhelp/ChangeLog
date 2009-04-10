@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.85 2009/04/02 05:06:56 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.86 2009/04/10 20:46:55 bluebird Exp $
+
+  10 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  devhelp-0.21-r1.ebuild:
+  Re-add ~sparc keyword, bug #253541
 
   02 Apr 2009; Olivier Crête <tester@gentoo.org> devhelp-0.21-r1.ebuild:
   Stable on amd64, bug #250306
