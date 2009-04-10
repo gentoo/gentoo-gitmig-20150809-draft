@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/asedriveiiie-usb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/ChangeLog,v 1.4 2008/06/01 03:39:04 dragonheart Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/ChangeLog,v 1.5 2009/04/10 20:28:30 arfrever Exp $
+
+*asedriveiiie-usb-3.5 (10 Apr 2009)
+
+  10 Apr 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +asedriveiiie-usb-3.5.ebuild:
+  Version bump (bug #263299).
 
   01 Jun 2008; Daniel Black <dragonheart@gentoo.org>
   asedriveiiie-usb-3.4.ebuild:
