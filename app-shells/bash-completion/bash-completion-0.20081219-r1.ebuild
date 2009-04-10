@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20081219-r1.ebuild,v 1.10 2009/04/09 05:27:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-0.20081219-r1.ebuild,v 1.1 2009/04/10 01:36:29 darkside Exp $
 
 EAPI="2"
 
 DESCRIPTION="Programmable Completion for bash"
 HOMEPAGE="http://bash-completion.alioth.debian.org/"
 #SRC_URI="mirror://debian/pool/main/b/${PN}/${PN}_${PV}.tar.gz"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${PN}-${PV#0.}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
