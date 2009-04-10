@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.258 2009/03/31 09:34:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.259 2009/04/10 04:26:28 beandog Exp $
+
+*alsa-utils-1.0.19-r2 (10 Apr 2009)
+
+  10 Apr 2009; Steve Dibb <beandog@gentoo.org> +alsa-utils-1.0.19-r2.ebuild:
+  Make xmlto an optional dep, bug 246526
 
   31 Mar 2009; Raúl Porcel <armin76@gentoo.org> alsa-utils-1.0.16.ebuild,
   alsa-utils-1.0.17.ebuild:
