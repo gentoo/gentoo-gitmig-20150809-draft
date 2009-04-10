@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/delay-1.6.ebuild,v 1.17 2009/04/10 03:40:30 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/delay-1.6.ebuild,v 1.18 2009/04/10 15:51:42 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc"
 src_compile() {
 	sed -i -e "s/#include <stdio.h>/&\n#include <stdlib.h>/" delay.c
 	tc-export CC
-	econf 
+	econf
 	emake || die
 }
 
