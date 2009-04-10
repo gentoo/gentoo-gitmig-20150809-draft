@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-1.5.ebuild,v 1.4 2008/05/12 16:36:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-1.5.ebuild,v 1.5 2009/04/10 13:21:27 ulm Exp $
 
 inherit kde eutils
 
@@ -38,6 +38,6 @@ pkg_postinst() {
 
 	echo
 	elog "KMess can use the following optional packages:"
-	elog "- net-www/netscape-flash		provides support for winks"
+	elog "- www-plugins/adobe-flash		provides support for winks"
 	echo
 }
