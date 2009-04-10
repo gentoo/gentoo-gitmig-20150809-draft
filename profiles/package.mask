@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9654 2009/04/10 15:09:41 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9655 2009/04/10 23:12:39 mrness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alin Năstac <mrness@gentoo.org> (10 Apr 2009)
+# Homepage no longer available (#264785)
+# To be removed by the tree cleaners after 30 days.
+net-dialup/qlcr
 
 # Thomas Anderson <gentoofan23@gentoo.org> (10 Apr 2009)
 # Lvm2 ships with device mapper internally and thus blocks against the
