@@ -1,0 +1,63 @@
+# ChangeLog for www-plugins/gecko-mediaplayer
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.1 2009/04/10 15:18:02 ulm Exp $
+
+  10 Apr 2009; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
+  +gecko-mediaplayer-0.6.3.ebuild:
+  Package moved from net-www to www-plugins, bug 265569.
+
+  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  Re-assign to media-video herd.
+
+*gecko-mediaplayer-0.6.3 (30 Jul 2008)
+
+  30 Jul 2008; Samuli Suominen <drac@gentoo.org>
+  -gecko-mediaplayer-0.6.1.ebuild, +gecko-mediaplayer-0.6.3.ebuild:
+  Version bump.
+
+*gecko-mediaplayer-0.6.2 (28 May 2008)
+
+  28 May 2008; Samuli Suominen <drac@gentoo.org>
+  -gecko-mediaplayer-0.6.0.ebuild, +gecko-mediaplayer-0.6.2.ebuild:
+  Version bump.
+
+*gecko-mediaplayer-0.6.1 (20 Apr 2008)
+
+  20 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  +gecko-mediaplayer-0.6.1.ebuild:
+  Version bump wrt #218351, thanks to Robt W Fletcher Jr
+
+  14 Mar 2008; Raúl Porcel <armin76@gentoo.org>
+  gecko-mediaplayer-0.6.0.ebuild:
+  Fix deps on =net-libs/xulrunner-1.8* and =www-client/mozilla-firefox-2.0*
+  wrt #213296
+
+*gecko-mediaplayer-0.6.0 (16 Feb 2008)
+
+  16 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  -gecko-mediaplayer-0.5.2.ebuild, -gecko-mediaplayer-0.5.4.ebuild,
+  +gecko-mediaplayer-0.6.0.ebuild:
+  Version bump.
+
+*gecko-mediaplayer-0.5.4 (12 Feb 2008)
+
+  12 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  -gecko-mediaplayer-0.5.0.ebuild, +gecko-mediaplayer-0.5.4.ebuild:
+  Version bump.
+
+*gecko-mediaplayer-0.5.2 (05 Nov 2007)
+
+  05 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  +gecko-mediaplayer-0.5.2.ebuild:
+  Version bump.
+
+  30 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  gecko-mediaplayer-0.5.0.ebuild:
+  Keyword ~amd64, thanks to Ken Prugh for testing.
+
+*gecko-mediaplayer-0.5.0 (30 Sep 2007)
+
+  30 Sep 2007; Samuli Suominen <drac@gentoo.org>
+  +gecko-mediaplayer-0.5.0.ebuild:
+  Initial commit for bug 185876, thanks to Frittella Laurento.
+
