@@ -9,3 +9,4 @@ move net-www/mplayerplug-in www-plugins/mplayerplug-in
 move net-www/netscape-flash www-plugins/adobe-flash
 move net-www/nspluginwrapper www-plugins/nspluginwrapper
 move net-www/swfdec-mozilla www-plugins/swfdec-mozilla
+move net-www/diamondx www-plugins/diamondx
