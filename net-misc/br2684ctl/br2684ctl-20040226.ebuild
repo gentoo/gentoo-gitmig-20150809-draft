@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.9 2007/07/12 02:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.10 2009/04/10 22:48:22 mrness Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND=">=net-dialup/linux-atm-2.4.1"
+RDEPEND="=net-dialup/linux-atm-2.4.1*"
 DEPEND="virtual/os-headers
 		${RDEPEND}"
 

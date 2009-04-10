@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/br2684ctl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/ChangeLog,v 1.7 2007/01/18 05:32:35 mrness Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/ChangeLog,v 1.8 2009/04/10 22:48:22 mrness Exp $
+
+  10 Apr 2009; Alin Năstac <mrness@gentoo.org> br2684ctl-20040226.ebuild:
+  Update linux-atm dependency atom (#264626).
 
   18 Jan 2007; Alin Năstac <mrness@gentoo.org> br2684ctl-20040226.ebuild:
   Stable on amd64.
