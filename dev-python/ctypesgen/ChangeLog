@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ctypesgen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.10 2009/04/04 13:51:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.11 2009/04/10 17:28:58 armin76 Exp $
+
+  10 Apr 2009; Raúl Porcel <armin76@gentoo.org> ctypesgen-0_p72.ebuild:
+  Add ~arm/~s390/~sh wrt #263337
 
   04 Apr 2009; Brent Baude <ranger@gentoo.org> ctypesgen-0_p72.ebuild:
   Marking ctypesgen-0_p72 ~ppc64 for bug 263337
