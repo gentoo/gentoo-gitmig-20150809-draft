@@ -1,6 +1,12 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.69 2009/02/27 12:23:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.70 2009/04/10 15:57:12 yngwin Exp $
+
+*dillo-9999 (10 Apr 2009)
+
+  10 Apr 2009; Ben de Groot <yngwin@gentoo.org> +dillo-9999.ebuild:
+  Add live ebuild to follow current development, which has interesting
+  features as initial CSS and JavaScript support.
 
   27 Feb 2009; Raúl Porcel <armin76@gentoo.org> dillo-2.0.ebuild:
   Re-add ~arm wrt #253083
