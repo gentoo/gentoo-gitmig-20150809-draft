@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/mell-1.0.0-r1.ebuild,v 1.1 2009/03/09 13:01:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/mell-1.0.0-r1.ebuild,v 1.2 2009/04/10 06:32:32 ulm Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="linguas_ja"
 
-SITEFILE="51${PN}-gentoo.el"
+SITEFILE="50${PN}-gentoo.el"
 
 src_compile() {
 	cd src

@@ -1,5 +1,1 @@
-
-;;; mell site-lisp configuration
-
-(require 'init-mell)
-
+(add-to-list 'load-path "@SITELISP@")
