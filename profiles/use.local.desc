@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4352 2009/04/10 15:48:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4353 2009/04/10 21:07:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2781,6 +2781,7 @@ www-client/seamonkey:xforms - XForms is a standard to split up XHTML into XForms
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/zoneminder:X10 - Enable support for X10 devices
 www-plugins/adobe-flash:32bit - For amd64-multilib, installs the 32-bit plugin alongside the native 64-bit plugin
+www-plugins/gnash:agg - Rendering based on the Anti-Grain Geometry Rendering Engine library
 www-plugins/mplayerplug-in:divx - Divx Playback Support
 www-plugins/mplayerplug-in:gmedia - Google Media Playback Support
 www-plugins/mplayerplug-in:realmedia - Real Media Playback Support
