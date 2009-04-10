@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.4.7.ebuild,v 1.2 2009/03/30 13:28:41 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.4.7.ebuild,v 1.3 2009/04/10 23:19:10 loki_val Exp $
+
+EAPI=2
 
 inherit gnome2 fdo-mime flag-o-matic multilib python eutils autotools
 
@@ -27,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2.12.3
 	x11-misc/xdg-utils
 	x11-themes/hicolor-icon-theme
 	aalib? ( media-libs/aalib )
-	alsa? ( >=media-libs/alsa-lib-1.0.14a-r1 )
+	alsa? ( >=media-libs/alsa-lib-1.0.14a-r1[midi] )
 	curl? ( net-misc/curl )
 	dbus? ( dev-libs/dbus-glib )
 	hal? ( sys-apps/hal )
@@ -39,7 +41,7 @@ RDEPEND=">=dev-libs/glib-2.12.3
 	exif? ( >=media-libs/libexif-0.6.15 )
 	lcms? ( media-libs/lcms )
 	mng? ( media-libs/libmng )
-	pdf? ( >=virtual/poppler-glib-0.3.1 )
+	pdf? ( >=virtual/poppler-glib-0.3.1[cairo] )
 	png? ( >=media-libs/libpng-1.2.2 )
 	python?	( >=dev-lang/python-2.2.1
 		>=dev-python/pygtk-2.10.4 )
@@ -55,10 +57,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog* HACKING NEWS README*"
 
 pkg_setup() {
-	if use alsa && ! built_with_use media-libs/alsa-lib midi; then
-		eerror "This package requires media-libs/alsa-lib compiled with midi support."
-		die "Please reemerge media-libs/alsa-lib with USE=\"midi\"."
-	fi
 
 	G2CONF="--enable-default-binary \
 		--with-x \
@@ -85,8 +83,8 @@ pkg_setup() {
 		$(use_with wmf)"
 }
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 	epatch "${FILESDIR}/gimp-web-browser.patch"
 
 	# Workaround for MIME-type, this is fixed in gimp trunk, so we can
@@ -96,7 +94,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	# workaround portage variable leakage
 	local AA=
 
@@ -108,8 +106,16 @@ src_compile() {
 		append-flags "-fsigned-char"
 	fi
 
+	gnome2_src_configure
+}
+
+src_compile() {
+	# workaround portage variable leakage
+	local AA=
+
 	gnome2_src_compile
 }
+
 
 pkg_postinst() {
 	gnome2_pkg_postinst
