@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.7-r1.ebuild,v 1.1 2006/09/28 08:55:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.7-r1.ebuild,v 1.2 2009/04/10 16:54:46 caleb Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=sys-fs/device-mapper-1.00.19
+RDEPEND="|| (
+		>=sys-fs/lvm2-2.02.45
+		>=sys-fs/device-mapper-1.00.19-r1
+	)
 	sys-fs/udev
 	sys-fs/sysfsutils"
 DEPEND="${RDEPEND}"

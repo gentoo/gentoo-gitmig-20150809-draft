@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.24 2009/03/17 22:48:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.25 2009/04/10 16:54:46 caleb Exp $
+
+  10 Apr 2009; Caleb Tennis <caleb@gentoo.org>
+  multipath-tools-0.4.7-r1.ebuild, multipath-tools-0.4.7-r2.ebuild,
+  multipath-tools-0.4.8.ebuild:
+  Fix device-mapper dep for new lvm2, see bug #265599
 
   17 Mar 2009; <solar@gentoo.org> files/rc-multipathd:
   - baselayout-1 needed to make sure modules are loaded first
