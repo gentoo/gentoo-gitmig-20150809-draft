@@ -1,5 +1,6 @@
 move net-www/awstats www-misc/awstats
 move net-www/gecko-mediaplayer www-plugins/gecko-mediaplayer
+move net-www/gnash www-plugins/gnash
 move net-www/kaffeine-mozilla-plugin www-plugins/kaffeine-mozilla-plugin
 move net-www/libflashsupport www-plugins/libflashsupport
 move net-www/moonlight www-plugins/moonlight

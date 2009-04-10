@@ -26,7 +26,7 @@ games-fps/freedoom doomsday
 
 # Ben de Groot <yngwin@gentoo.org> (22 Jun 2008)
 # does not work with ffmpeg new headers yet
-<net-www/gnash-0.8.3 ffmpeg
+<www-plugins/gnash-0.8.3 ffmpeg
 
 # Steve Dibb <beandog@gentoo.org> (28 Oct 2008)
 # Mask realplayer binary codec support for security issues, bug 232999, 240341

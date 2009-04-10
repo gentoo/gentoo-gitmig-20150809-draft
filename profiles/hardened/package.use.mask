@@ -19,5 +19,5 @@ media-tv/mythtv opengl-xvmc
 
 # Ben de Groot <yngwin@gentoo.org> (22 Jun 2008)
 # does not work with ffmpeg new headers
-<net-www/gnash-0.8.3 ffmpeg
+<www-plugins/gnash-0.8.3 ffmpeg
 
