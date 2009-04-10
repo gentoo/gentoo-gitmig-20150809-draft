@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.162 2009/04/09 15:43:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.163 2009/04/10 08:12:45 keytoaster Exp $
+
+  10 Apr 2009; Tobias Heinlein <keytoaster@gentoo.org>
+  wireshark-1.0.7.ebuild:
+  amd64 stable wrt security bug #264571
 
   09 Apr 2009; Brent Baude <ranger@gentoo.org> wireshark-1.0.7.ebuild:
   Marking wireshark-1.0.7 ppc64 and ppc for bug 264571
