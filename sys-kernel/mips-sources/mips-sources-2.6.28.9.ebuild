@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.28.9.ebuild,v 1.1 2009/03/24 05:33:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.28.9.ebuild,v 1.2 2009/04/10 15:53:05 mr_bones_ Exp $
 
 # INCLUDED:
 # 1) linux sources from kernel.org
@@ -62,12 +62,10 @@ SV_IP30=""				# 	    DO_IP30 == "no", 			   IP30
 SV_IP32=""				# 	    DO_IP32 == "no", 			   IP32
 SV_CBLT=""				# 	    DO_CBLT == "no", 			   Cobalt
 
-
 DESCRIPTION="Linux-Mips GIT sources for MIPS-based machines, dated ${GITDATE}"
 SRC_URI="${KERNEL_URI}
 	 mirror://gentoo/mipsgit-${F_KV}${KVE}-${GITDATE}.diff.bz2
 	 mirror://gentoo/${PN}-${F_KV}-patches-v${GENPATCHREV}.tar.bz2"
-
 
 UNIPATCH_STRICTORDER="1"
 UNIPATCH_LIST="${DISTDIR}/mipsgit-${F_KV}${KVE}-${GITDATE}.diff.bz2"
