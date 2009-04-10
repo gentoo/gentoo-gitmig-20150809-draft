@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.64.ebuild,v 1.6 2009/03/20 19:42:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.64.ebuild,v 1.7 2009/04/10 13:26:17 ulm Exp $
 
 EAPI="2"
 
@@ -254,7 +254,7 @@ pkg_postinst() {
 	fi
 
 	elog "The current Opera builds may still have issues with plugins, notably"
-	elog "net-www/netscape-flash. See also https://bugs.gentoo.org/198162"
+	elog "www-plugins/adobe-flash. See also https://bugs.gentoo.org/198162"
 }
 
 pkg_postrm() {

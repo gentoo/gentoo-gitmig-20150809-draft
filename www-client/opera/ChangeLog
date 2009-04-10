@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.337 2009/04/08 04:11:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.338 2009/04/10 13:26:17 ulm Exp $
+
+  10 Apr 2009; Ulrich Mueller <ulm@gentoo.org> opera-9.64.ebuild,
+  opera-10.00_pre4205.ebuild, opera-10.00_pre4214.ebuild,
+  opera-10.00_pre4268.ebuild:
+  Update elog message to reflect package move of net-www/netscape-flash to
+  www-plugins/adobe-flash, bug 265569.
 
   08 Apr 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4268.ebuild:
   Add late amd64 snapshots (bug #265377).
