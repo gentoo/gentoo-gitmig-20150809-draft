@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.3.0.ebuild,v 1.1 2008/12/20 01:24:43 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.3.0.ebuild,v 1.2 2009/04/10 05:41:46 lavajoe Exp $
 
 inherit eutils
 
@@ -87,7 +87,7 @@ src_unpack() {
 
 	# Apply patches
 	epatch "${FILESDIR}/mDNSResponder-gentoo.patch"
-	epatch "${FILESDIR}/build-perl-modules-gentoo.patch"
+	epatch "${FILESDIR}/${P}-build-perl-modules-gentoo.patch"
 
 	# Prune GD from the SqueezeCenter local CPAN. This is due to
 	# SC bug#5882 which means we need to bring in Portage's version of GD,
