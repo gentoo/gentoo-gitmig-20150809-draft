@@ -1,9 +1,0 @@
-# ChangeLog for net-www/diamondx
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/diamondx/ChangeLog,v 1.1 2007/12/05 02:06:59 jer Exp $
-
-*diamondx-0.1 (05 Dec 2007)
-
-  05 Dec 2007; Jeroen Roovers <jer@gentoo.org> +diamondx-0.1.ebuild:
-  Initial import (bug #178582).
-
