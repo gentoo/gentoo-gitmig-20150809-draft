@@ -1,11 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.9_rc2.ebuild,v 1.1 2009/04/09 16:08:21 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.9_rc2.ebuild,v 1.2 2009/04/10 15:52:19 mr_bones_ Exp $
 
 EAPI=2
 
 inherit libtool eutils
-
 
 DESCRIPTION="Perl-compatible regular expression library"
 HOMEPAGE="http://www.pcre.org/"
