@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.126 2009/04/06 16:33:46 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.127 2009/04/10 14:45:56 armin76 Exp $
+
+  10 Apr 2009; Raúl Porcel <armin76@gentoo.org> cdrdao-1.2.2-r3.ebuild:
+  arm/ia64/sh stable wrt #264173
 
   06 Apr 2009; Ferris McCormick <fmccor@gentoo.org> cdrdao-1.2.2-r3.ebuild:
   Sparc stable, Bug #264173.
