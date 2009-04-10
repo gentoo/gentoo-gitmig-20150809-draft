@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.7.ebuild,v 1.9 2009/03/09 19:26:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.11.7.ebuild,v 1.10 2009/04/10 21:51:20 arfrever Exp $
 
 inherit multilib
 
@@ -44,7 +44,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "This package is a security fix to CVE-2009-0368. If you have private keys on your"
-	elog "smart card intialised by this package they may stored with improper access restrictions."
+	elog "smart card intialised by this package they may be stored with improper access restrictions."
 	elog "See advisory http://thread.gmane.org/gmane.comp.encryption.opensc.announce/22 for"
 	elog "full details and mitigation advice"
 }
