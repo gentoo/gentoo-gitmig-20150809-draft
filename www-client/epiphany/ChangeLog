@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.204 2009/03/18 15:48:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.205 2009/04/10 20:46:26 bluebird Exp $
+
+  10 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  epiphany-2.24.3-r10.ebuild:
+  Re-add ~sparc keyword, bug #253541
 
   18 Mar 2009; Raúl Porcel <armin76@gentoo.org> epiphany-2.24.3.ebuild:
   alpha/ia64 stable wrt #260063
