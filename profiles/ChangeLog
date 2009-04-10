@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2518 2009/04/10 14:01:28 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2519 2009/04/10 15:09:41 gentoofan23 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Apr 2009; Thomas Anderson <gentoofan23@gentoo.org> package.mask:
+  p.mask lvm2-2.02.45 to avoid issues with internal device-mapper
 
   10 Apr 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask >=bash-completion-20000000 to force a downgrade to the proper naming
