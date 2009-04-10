@@ -5,3 +5,4 @@ move net-www/moonlight www-plugins/moonlight
 move net-www/mozplugger www-plugins/mozplugger
 move net-www/netscape-flash www-plugins/adobe-flash
 move net-www/nspluginwrapper www-plugins/nspluginwrapper
+move net-www/swfdec-mozilla www-plugins/swfdec-mozilla
