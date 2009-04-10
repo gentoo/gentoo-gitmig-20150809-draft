@@ -1,6 +1,6 @@
 diff -Nru openswan-2.6.21.orig/lib/libdns/Makefile openswan-2.6.21/lib/libdns/Makefile
 --- openswan-2.6.21.orig/lib/libdns/Makefile	2009-03-30 13:11:28.000000000 +0000
-+++ openswan-2.6.21/lib/libdns/Makefile	2009-04-08 23:23:13.000000000 +0000
++++ openswan-2.6.21/lib/libdns/Makefile	2009-04-10 21:20:46.000000000 +0000
 @@ -30,8 +30,8 @@
  		-I${srcdir}../libisc/nothreads/include \
  		-I. -I./include -I${srcdir}include \
@@ -14,7 +14,7 @@ diff -Nru openswan-2.6.21.orig/lib/libdns/Makefile openswan-2.6.21/lib/libdns/Ma
  
 diff -Nru openswan-2.6.21.orig/lib/libisc/Makefile openswan-2.6.21/lib/libisc/Makefile
 --- openswan-2.6.21.orig/lib/libisc/Makefile	2009-03-30 13:11:28.000000000 +0000
-+++ openswan-2.6.21/lib/libisc/Makefile	2009-04-08 23:23:01.000000000 +0000
++++ openswan-2.6.21/lib/libisc/Makefile	2009-04-10 21:20:46.000000000 +0000
 @@ -22,8 +22,8 @@
  		-I${srcdir}nothreads/include \
  		-I. -I./include -I${srcdir}include \
@@ -28,7 +28,7 @@ diff -Nru openswan-2.6.21.orig/lib/libisc/Makefile openswan-2.6.21/lib/libisc/Ma
  
 diff -Nru openswan-2.6.21.orig/lib/liblwres/Makefile openswan-2.6.21/lib/liblwres/Makefile
 --- openswan-2.6.21.orig/lib/liblwres/Makefile	2009-03-30 13:11:28.000000000 +0000
-+++ openswan-2.6.21/lib/liblwres/Makefile	2009-04-08 23:22:53.000000000 +0000
++++ openswan-2.6.21/lib/liblwres/Makefile	2009-04-10 21:20:46.000000000 +0000
 @@ -22,8 +22,8 @@
  		-I${srcdir}../libisc/${ISCARCH}/include \
  		-I${srcdir}../libisc/include \
@@ -42,7 +42,7 @@ diff -Nru openswan-2.6.21.orig/lib/liblwres/Makefile openswan-2.6.21/lib/liblwre
  
 diff -Nru openswan-2.6.21.orig/Makefile.inc openswan-2.6.21/Makefile.inc
 --- openswan-2.6.21.orig/Makefile.inc	2009-03-30 13:11:28.000000000 +0000
-+++ openswan-2.6.21/Makefile.inc	2009-04-08 23:21:42.000000000 +0000
++++ openswan-2.6.21/Makefile.inc	2009-04-10 21:20:46.000000000 +0000
 @@ -49,7 +49,7 @@
  DESTDIR?=
  
@@ -63,7 +63,7 @@ diff -Nru openswan-2.6.21.orig/Makefile.inc openswan-2.6.21/Makefile.inc
  FINALDOCDIR?=${INC_USRLOCAL}/${INC_DOCDIR}/openswan
 diff -Nru openswan-2.6.21.orig/programs/Makefile.program openswan-2.6.21/programs/Makefile.program
 --- openswan-2.6.21.orig/programs/Makefile.program	2009-03-30 13:11:28.000000000 +0000
-+++ openswan-2.6.21/programs/Makefile.program	2009-04-08 23:23:28.000000000 +0000
++++ openswan-2.6.21/programs/Makefile.program	2009-04-10 21:20:46.000000000 +0000
 @@ -53,7 +53,6 @@
  WERROR:= -Werror
  endif
@@ -74,7 +74,7 @@ diff -Nru openswan-2.6.21.orig/programs/Makefile.program openswan-2.6.21/program
  LDFLAGS=-L$(LD_LIBRARY_PATH)
 diff -Nru openswan-2.6.21.orig/programs/setup/Makefile openswan-2.6.21/programs/setup/Makefile
 --- openswan-2.6.21.orig/programs/setup/Makefile	2009-03-30 13:11:28.000000000 +0000
-+++ openswan-2.6.21/programs/setup/Makefile	2009-04-08 23:21:42.000000000 +0000
++++ openswan-2.6.21/programs/setup/Makefile	2009-04-10 21:20:47.000000000 +0000
 @@ -18,7 +18,6 @@
  
  # this dance is because setup has to get installed as /etc/rc.d/init.d/ipsec
@@ -118,7 +118,7 @@ diff -Nru openswan-2.6.21.orig/programs/setup/Makefile openswan-2.6.21/programs/
  # $Log: not supported by cvs2svn $
 diff -Nru openswan-2.6.21.orig/testing/utils/make-uml.sh openswan-2.6.21/testing/utils/make-uml.sh
 --- openswan-2.6.21.orig/testing/utils/make-uml.sh	2009-03-30 13:11:28.000000000 +0000
-+++ openswan-2.6.21/testing/utils/make-uml.sh	2009-04-08 23:23:48.000000000 +0000
++++ openswan-2.6.21/testing/utils/make-uml.sh	2009-04-10 21:20:47.000000000 +0000
 @@ -262,7 +262,7 @@
  
  cd $OPENSWANSRCDIR || exit 1

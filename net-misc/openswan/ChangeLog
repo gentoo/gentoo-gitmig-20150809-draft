@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.58 2009/04/08 23:30:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.59 2009/04/10 21:36:21 mrness Exp $
+
+  10 Apr 2009; Alin Năstac <mrness@gentoo.org>
+  files/openswan-2.6.21-gentoo.patch, metadata.xml:
+  Add -kb flag to gentoo patch (#265612). Remove secure-tunneling herd (#265655).
 
 *openswan-2.6.21 (08 Apr 2009)
 *openswan-2.4.14 (08 Apr 2009)
