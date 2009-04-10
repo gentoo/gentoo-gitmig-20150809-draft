@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.6.4.ebuild,v 1.8 2009/03/30 13:19:49 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.6.4.ebuild,v 1.9 2009/04/10 23:23:51 scarabeus Exp $
 
 EAPI="2"
 
@@ -78,11 +78,12 @@ src_configure() {
 
 src_test() {
 	mycmakeargs="${mycmakeargs} -DENABLE_CPPUNIT=ON"
+	cmake-utils_src_configure
 	cmake-utils_src_compile
 
-	pushd "${WORKDIR}/${PN}_build"
+	pushd "${CMAKE_BUILD_DIR}" > /dev/null
 	ctest --extra-verbose || die "Tests failed."
-	popd
+	popd > /dev/null
 }
 
 pkg_postinst() {

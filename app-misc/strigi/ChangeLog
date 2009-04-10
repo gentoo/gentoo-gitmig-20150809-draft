@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.31 2009/03/30 13:19:49 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.32 2009/04/10 23:23:51 scarabeus Exp $
+
+  10 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> strigi-0.6.4.ebuild:
+  Fix tests.
 
   30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> strigi-0.6.4.ebuild:
   Strigi needs poppler-utils for pdftotext util.
