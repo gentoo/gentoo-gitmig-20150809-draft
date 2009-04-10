@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.27 2009/04/02 11:19:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.28 2009/04/10 19:38:24 spock Exp $
+
+  10 Apr 2009; Michał Januszewski <spock@gentoo.org>
+  +files/mprime-25.9.bpatch, gimps-25.9.ebuild:
+  Fix bug #265628 (x86 patch for 25.9).
 
 *gimps-25.9 (02 Apr 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-25.9.ebuild,v 1.1 2009/04/02 11:19:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-25.9.ebuild,v 1.2 2009/04/10 19:38:24 spock Exp $
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -28,7 +28,7 @@ src_unpack() {
 	cd "${S}"
 
 	if use x86 ; then
-		bspatch mprime mprime.fixed "${FILESDIR}/mprime-25.7.bpatch" || \
+		bspatch mprime mprime.fixed "${FILESDIR}/mprime-25.9.bpatch" || \
 			die "failed to apply binary patch for libcurl.so.4"
 		mv mprime.fixed mprime
 	fi
