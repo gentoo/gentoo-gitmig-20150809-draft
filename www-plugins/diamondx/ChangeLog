@@ -1,6 +1,6 @@
-# ChangeLog for net-www/diamondx
+# ChangeLog for www-plugins/diamondx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/diamondx/ChangeLog,v 1.1 2009/04/10 22:35:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/diamondx/ChangeLog,v 1.2 2009/04/10 22:42:04 ulm Exp $
 
   10 Apr 2009; Jeroen Roovers <jer@gentoo.org> +metadata.xml,
   +diamondx-0.1.ebuild:
