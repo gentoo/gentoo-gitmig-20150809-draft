@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.10 2009/03/30 01:39:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.11 2009/04/10 23:19:37 loki_val Exp $
+
+  10 Apr 2009; Peter Alfredsen <loki_val@gentoo.org>
+  openscenegraph-2.8.0.ebuild:
+  Updating dev-games/openscenegraph for virtual/poppler-glib update; cairo
+  is the superior backend, always enable it anywhere it can be used.
 
   30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
   openscenegraph-2.8.0.ebuild:
