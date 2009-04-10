@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ifd-gempc
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.12 2007/11/11 06:25:53 alonbl Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.13 2009/04/10 00:39:41 arfrever Exp $
+
+*ifd-gempc-1.0.4 (10 Apr 2009)
+
+  10 Apr 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +files/ifd-gempc-1.0.4-respect_LDFLAGS.patch, files/reader.conf,
+  ifd-gempc-1.0.3.ebuild, +ifd-gempc-1.0.4.ebuild:
+  Version bump.
 
   11 Nov 2007; Alon Bar-Lev <alonbl@gentoo.org> ifd-gempc-1.0.3.ebuild:
   Cleanups
