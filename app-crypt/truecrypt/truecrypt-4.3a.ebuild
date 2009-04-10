@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3a.ebuild,v 1.7 2008/11/03 17:24:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3a.ebuild,v 1.8 2009/04/10 16:28:05 caleb Exp $
 
 #
 # NOTES:
@@ -24,7 +24,8 @@ KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror fetch bindist"
 
-RDEPEND="sys-fs/device-mapper"
+RDEPEND="|| ( >=sys-fs/lvm2-2.02.45
+	sys-fs/device-mapper )"
 DEPEND="virtual/linux-sources
 	${RDEPEND}"
 
