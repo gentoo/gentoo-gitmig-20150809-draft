@@ -1,5 +1,7 @@
 move net-www/awstats www-misc/awstats
 move net-www/kaffeine-mozilla-plugin www-plugins/kaffeine-mozilla-plugin
+move net-www/libflashsupport www-plugins/libflashsupport
 move net-www/moonlight www-plugins/moonlight
 move net-www/mozplugger www-plugins/mozplugger
+move net-www/netscape-flash www-plugins/adobe-flash
 move net-www/nspluginwrapper www-plugins/nspluginwrapper
