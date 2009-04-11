@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2009e.ebuild,v 1.1 2009/04/09 09:42:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2009e.ebuild,v 1.2 2009/04/11 15:26:42 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -72,7 +72,7 @@ pkg_config() {
 	else
 		src="/etc/timezone"
 		if [[ -e ${ROOT}/etc/timezone ]] ; then
-			tz=$(<"${ROOT}"/etc/timezone)
+			tz=$(sed -e 's:#.*::' -e 's:[[:space:]]*::g' -e '/^$/d' "${ROOT}"/etc/timezone)
 		else
 			tz="FOOKABLOIE"
 		fi
