@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.13-r1.ebuild,v 1.1 2008/12/29 18:02:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.14.ebuild,v 1.1 2009/04/11 16:09:05 dertobi123 Exp $
 
 EAPI=1
 
-inherit autotools eutils ssl-cert fixheadtails pam
+inherit autotools eutils ssl-cert fixheadtails pam multilib
 
 MY_P=${P/_/}
 
@@ -16,7 +16,7 @@ LIBWRAP_PATCH_VER="2.2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="drac idled kerberos kolab nntp pam replication +sieve snmp ssl tcpd"
+IUSE="idled kerberos nntp pam replication +sieve snmp ssl tcpd"
 
 PROVIDE="virtual/imapd"
 RDEPEND=">=sys-libs/db-3.2
@@ -29,9 +29,7 @@ RDEPEND=">=sys-libs/db-3.2
 	snmp? ( >=net-analyzer/net-snmp-5.2.2-r1 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	drac? ( >=mail-client/drac-1.12-r1 )
-	nntp? ( !net-nntp/leafnode )
-	kolab? ( net-nds/openldap )"
+	nntp? ( !net-nntp/leafnode )"
 
 DEPEND="$RDEPEND
 	sys-devel/libtool
@@ -108,19 +106,6 @@ src_unpack() {
 	# Fix prestripped binaries
 	epatch "${FILESDIR}/${PN}-strip.patch"
 
-	if use drac ; then
-			 epatch "${S}/contrib/drac_auth.patch"
-	fi
-
-	# KOLAB support
-	if use kolab ; then
-		EPATCH_SOURCE="${FILESDIR}/kolab/${PV}" EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" epatch
-		# These files are being created automatically and need to be updated
-		# # after the patches used above
-		rm -f lib/imapopts.h lib/imapopts.c
-	fi
-
 	# Add libwrap defines as we don't have a dynamicly linked library.
 	use tcpd && epatch "${FILESDIR}/${PN}-${LIBWRAP_PATCH_VER}-libwrap.patch"
 
@@ -142,10 +127,6 @@ src_unpack() {
 
 	# When linking with rpm, you need to link with more libraries.
 	sed -i -e "s:lrpm:lrpm -lrpmio -lrpmdb:" configure || die "sed failed"
-
-	if use kolab ; then
-		sed -i -e "s/{LIB_SASL}/{LIB_SASL} -lldap -llber /" configure || die "sed failed"
-	fi
 }
 
 src_compile() {
@@ -155,32 +136,24 @@ src_compile() {
 	myconf="${myconf} $(use_with tcpd libwrap)"
 	myconf="${myconf} $(use_enable kerberos gssapi) $(use_enable kerberos krb5afspts)"
 	myconf="${myconf} $(use_enable idled)"
-	myconf="${myconf} $(use_enable nntp nntp)"
+	myconf="${myconf} $(use_enable nntp)"
 	myconf="${myconf} $(use_enable replication)"
 
-	if use drac; then
-		myconf="${myconf} --with-drac=/usr/$(get_libdir)"
-	else
-		myconf="${myconf} --without-drac"
-	fi
-
 	if use kerberos; then
-		myconf="${myconf} --with-auth=krb5"
+		myconf="${myconf} --with-krb=$(krb5-config --prefix) --with-krbdes=no"
 	else
-		myconf="${myconf} --with-auth=unix"
+		myconf="${myconf} --with-krb=no"
 	fi
 
 	econf \
 		--enable-murder \
 		--enable-listext \
 		--enable-netscapehack \
-		--with-extraident=Gentoo \
-		--with-service-path=/usr/lib/cyrus \
+		--with-service-path=/usr/$(get_libdir)/cyrus \
 		--with-cyrus-user=cyrus \
 		--with-cyrus-group=mail \
 		--with-com_err=yes \
 		--without-perl \
-		--disable-cyradm \
 		${myconf} || die "econf failed"
 
 	# needed for parallel make. Bug #72352.
