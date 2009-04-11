@@ -1,12 +1,12 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.33 2009/04/11 18:34:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.34 2009/04/11 18:40:16 armin76 Exp $
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Unmask webkit on determinated packages
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
-  Add semantic-desktop, tunepimp, captury to use.mask
+  Add semantic-desktop, tunepimp, captury, bittorrent-external to use.mask
 
   06 Apr 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Add lasi to use.mask

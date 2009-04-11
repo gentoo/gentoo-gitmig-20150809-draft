@@ -50,6 +50,7 @@ timidity
 semantic-desktop
 tunepimp
 captury
+bittorrent-external
 
 # Stuff that doesn't compile on ia64
 chicken
