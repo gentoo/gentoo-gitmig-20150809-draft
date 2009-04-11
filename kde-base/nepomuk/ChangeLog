@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nepomuk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.24 2009/03/15 14:41:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk/ChangeLog,v 1.25 2009/04/11 05:49:56 jer Exp $
+
+  11 Apr 2009; Jeroen Roovers <jer@gentoo.org> nepomuk-4.2.1.ebuild:
+  Marked ~hppa (bug #260777).
 
   15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> nepomuk-4.2.1.ebuild:
   Automatic-merge: merge updates for 4.2.1 from kde-testing.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/solid-hardware
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-hardware/ChangeLog,v 1.10 2009/03/08 20:57:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-hardware/ChangeLog,v 1.11 2009/04/11 05:56:17 jer Exp $
+
+  11 Apr 2009; Jeroen Roovers <jer@gentoo.org> solid-hardware-4.2.1.ebuild:
+  Marked ~hppa (bug #260777).
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -solid-hardware-4.2.0.ebuild:

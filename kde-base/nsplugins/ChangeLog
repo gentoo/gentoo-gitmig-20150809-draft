@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nsplugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.131 2009/03/15 14:41:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.132 2009/04/11 05:52:15 jer Exp $
+
+  11 Apr 2009; Jeroen Roovers <jer@gentoo.org> nsplugins-4.2.1-r1.ebuild:
+  Marked ~hppa (bug #260777).
 
 *nsplugins-4.2.1-r1 (15 Mar 2009)
 
