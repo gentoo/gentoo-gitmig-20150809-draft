@@ -49,6 +49,7 @@ oracle
 timidity
 semantic-desktop
 tunepimp
+captury
 
 # Stuff that doesn't compile on ia64
 chicken
