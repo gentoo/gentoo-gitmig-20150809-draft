@@ -1,34 +1,33 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r5.ebuild,v 1.9 2008/07/20 09:36:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.3_p2.ebuild,v 1.1 2009/04/11 17:02:23 dertobi123 Exp $
 
-inherit eutils libtool autotools
+inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
-DLZ_VERSION="9.3.2b1"
-MY_P="${P}-P1"
-MY_PV="${PV}-P1"
+DLZ_VERSION="9.3.3"
+MY_PV="${PV/_p2/-P2}"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
-	doc? ( mirror://gentoo/dyndns-samples.tbz2 )
-	dlz? ( http://dev.gentoo.org/~voxus/bind/ctrix_dlz_${DLZ_VERSION}.patch.bz2 )"
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${PN}-${MY_PV}.tar.gz
+	doc? ( mirror://gentoo/dyndns-samples.tbz2 )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~x86 ~x86-fbsd"
-IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf urandom"
 
-DEPEND="!net-dns/idnkit
-	ssl? ( >=dev-libs/openssl-0.9.6g )
+DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
-	ldap? ( net-nds/openldap )"
+	ldap? ( net-nds/openldap )
+	idn? ( net-dns/idnkit )"
 
 RDEPEND="${DEPEND}
-	selinux? ( sec-policy/selinux-bind )"
+	selinux? ( sec-policy/selinux-bind )
+	resolvconf? ( net-dns/openresolv )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 pkg_setup() {
 	use threads && {
@@ -57,30 +56,33 @@ src_unpack() {
 			"${i}"
 	done
 
-	use dlz && {
-		epatch "${DISTDIR}"/ctrix_dlz_${DLZ_VERSION}.patch.bz2
-		epatch "${FILESDIR}"/${PN}-dlzbdb-includes.patch
+	use dlz && epatch "${FILESDIR}"/${PN}-9.4.0-dlzbdb-close_cursor.patch
 
-		use odbc && epatch "${FILESDIR}"/${P}-missing_odbc_test.patch
-	}
-
-	use idn && epatch "${S}"/contrib/idn/idnkit-1.0-src/patch/bind9/${P}-patch
+	# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
+	# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
+	use dlz && use mysql && epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
 
 	# should be installed by bind-tools
 	sed -e "s:nsupdate ::g" -i "${S}"/bin/Makefile.in
 
-	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf || die "eautoreconf failed"
+	# bug #220361
+	rm "${S}"/aclocal.m4 "${S}"/libtool.m4
+	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf
 
 	# bug #151839
-	sed \
-		-e 's:CDEFINES = :CDEFINES = -USO_BSDCOMPAT:' \
-		-i lib/isc/unix/Makefile.in
+	sed -e \
+		's:struct isc_socket {:#undef SO_BSDCOMPAT\n\nstruct isc_socket {:' \
+		-i lib/isc/unix/socket.c
+
+	# remove useless c++ checks
+	epunt_cxx
 }
 
 src_compile() {
 	local myconf=""
 
 	use ssl && myconf="${myconf} --with-openssl"
+	use idn && myconf="${myconf} --with-idn"
 
 	use dlz && {
 		myconf="${myconf} --with-dlz-filesystem --with-dlz-stub"
@@ -115,6 +117,15 @@ src_compile() {
 		myconf="${myconf} --disable-linux-caps --disable-threads"
 	fi
 
+	if use urandom; then
+		myconf="${myconf} --with-randomdev=/dev/urandom"
+	else
+		myconf="${myconf} --with-randomdev=/dev/random"
+	fi
+
+	# bug #158664
+	gcc-specs-ssp && replace-flags -O[23s] -O
+	export BUILD_CC="${CBUILD}-gcc"
 	econf \
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
@@ -123,12 +134,6 @@ src_compile() {
 		${myconf} || die "econf failed"
 
 	emake -j1 || die "failed to compile bind"
-
-	use idn && {
-		cd "${S}"/contrib/idn/idnkit-1.0-src
-		econf || die "idn econf failed"
-		emake || die "idn emake failed"
-	}
 }
 
 src_install() {
@@ -154,8 +159,8 @@ src_install() {
 			contrib/nanny/nanny.pl
 
 		# some handy-dandy dynamic dns examples
-		cd $"{D}"/usr/share/doc/${PF}
-		tar pjxf "${DISTFILES}"/dyndns-samples.tbz2
+		cd "${D}"/usr/share/doc/${PF}
+		tar pjxf ${DISTFILES}/dyndns-samples.tbz2
 	}
 
 	newenvd "${FILESDIR}"/10bind.env 10bind
@@ -169,26 +174,20 @@ src_install() {
 	insinto /var/bind ; doins "${FILESDIR}"/named.ca
 
 	insinto /var/bind/pri
-	doins "${FILESDIR}"/127.zone
-	newins "${FILESDIR}"/localhost.zone-r1 localhost.zone
+	newins "${FILESDIR}"/127.zone-r1 127.zone
+	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone
 
-	newinitd "${FILESDIR}"/named.init-r4 named
-	newconfd "${FILESDIR}"/named.confd-r1 named
+	newinitd "${FILESDIR}"/named.init-r5 named
+	newconfd "${FILESDIR}"/named.confd-r2 named
 
 	dosym ../../var/bind/named.ca /var/bind/root.cache
 	dosym ../../var/bind/pri /etc/bind/pri
 	dosym ../../var/bind/sec /etc/bind/sec
 
-	if use idn; then
-		cd "${S}"/contrib/idn/idnkit-1.0-src
-		einstall || die "failed to install idn kit"
-		docinto idn
-		dodoc ChangeLog INSTALL{,.ja} README{,.ja} NEWS
-	fi
-
 	# Let's get rid of those tools and their manpages since they're provided by bind-tools
-	rm -f "${D}"/usr/share/man/man1/{dig.1,host.1,nslookup.1}
-	rm -f "${D}"/usr/bin/{dig,host,nslookup}
+	rm -f "${D}"/usr/share/man/man1/{dig.1,host.1,nslookup.1,nsupdate.1}
+	rm -f "${D}"/usr/share/man/man8/dnssec-keygen.8
+	rm -f "${D}"/usr/bin/{dig,host,nslookup,dnssec-keygen,nsupdate}
 }
 
 pkg_postinst() {
@@ -262,8 +261,20 @@ pkg_config() {
 		cp -R /var/bind ${CHROOT}/var/
 		chown -R named:named ${CHROOT}/var/
 		mknod ${CHROOT}/dev/zero c 1 5
-		mknod ${CHROOT}/dev/random c 1 8
-		chmod 666 ${CHROOT}/dev/{random,zero}
+		chmod 666 ${CHROOT}/dev/zero
+		if use urandom; then
+			mknod ${CHROOT}/dev/urandom c 1 9
+			chmod 666 ${CHROOT}/dev/urandom
+		else
+			mknod ${CHROOT}/dev/random c 1 8
+			chmod 666 ${CHROOT}/dev/random
+		fi
+		echo "none    ${CHROOT}/proc    proc    defaults    0 0" >>/etc/fstab
+		mkdir ${CHROOT}/proc
+		mount -t proc none ${CHROOT}/proc
+		if [ -f '/etc/syslog-ng/syslog-ng.conf' ]; then
+			echo "source jail { unix-stream(\"${CHROOT}/dev/log\"); };" >>/etc/syslog-ng/syslog-ng.conf
+		fi
 		chown root:named ${CHROOT}
 		chmod 0750 ${CHROOT}
 

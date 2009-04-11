@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.225 2009/01/10 16:42:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.226 2009/04/11 17:02:23 dertobi123 Exp $
+
+*bind-9.5.1_p2 (11 Apr 2009)
+*bind-9.4.3_p2 (11 Apr 2009)
+
+  11 Apr 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  -bind-9.3.2-r5.ebuild, -bind-9.4.1_p1.ebuild, +bind-9.4.3_p2.ebuild,
+  -bind-9.5.1_p1.ebuild, +bind-9.5.1_p2.ebuild:
+  Version bump(s), #265095, #264301
 
   10 Jan 2009; Raúl Porcel <armin76@gentoo.org> bind-9.4.3_p1.ebuild:
   ia64/sparc stable wrt #254134

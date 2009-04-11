@@ -1,32 +1,36 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.4.1_p1.ebuild,v 1.13 2008/11/03 13:03:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.5.1_p2.ebuild,v 1.1 2009/04/11 17:02:23 dertobi123 Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
-DLZ_VERSION="9.3.3"
+MY_PV="${PV/_p2/-P2}"
+SDB_LDAP_VER="1.1.0"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_p1/-P1}/${P/_p1/-P1}.tar.gz
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${PN}-${MY_PV}.tar.gz
+	sdb-ldap? ( mirror://gentoo/bind-sdb-ldap-${SDB_LDAP_VER}.tar.bz2 )
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf urandom"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads resolvconf urandom sdb-ldap"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
 	ldap? ( net-nds/openldap )
 	idn? ( net-dns/idnkit )
-	resolvconf? ( net-dns/openresolv )"
+	postgres? ( virtual/postgresql-base )
+	threads? ( >=sys-libs/libcap-2.1.0 )"
 
 RDEPEND="${DEPEND}
-	selinux? ( sec-policy/selinux-bind )"
+	selinux? ( sec-policy/selinux-bind )
+	resolvconf? ( net-dns/openresolv )"
 
-S="${WORKDIR}/${P/_p1/-P1}"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 pkg_setup() {
 	use threads && {
@@ -57,15 +61,28 @@ src_unpack() {
 
 	use dlz && epatch "${FILESDIR}"/${PN}-9.4.0-dlzbdb-close_cursor.patch
 
+	# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
+	# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
+	use dlz && use mysql && has_version ">=dev-db/mysql-5" && epatch "${FILESDIR}"/bind-dlzmysql5-reconnect.patch
+
 	# should be installed by bind-tools
 	sed -e "s:nsupdate ::g" -i "${S}"/bin/Makefile.in
 
-	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf || die "eautoreconf failed"
+	# sdb-ldap patch as per  bug #160567
+	# Upstream URL: http://bind9-ldap.bayour.com/
+	use sdb-ldap && epatch "${WORKDIR}"/sdb-ldap/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
+
+	# bug #220361
+	rm "${S}"/aclocal.m4 "${S}"/libtool.m4
+	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf
 
 	# bug #151839
 	sed -e \
 		's:struct isc_socket {:#undef SO_BSDCOMPAT\n\nstruct isc_socket {:' \
 		-i lib/isc/unix/socket.c
+
+	# remove useless c++ checks
+	epunt_cxx
 }
 
 src_compile() {
@@ -113,9 +130,12 @@ src_compile() {
 		myconf="${myconf} --with-randomdev=/dev/random"
 	fi
 
+	# bug #227333
+	append-flags -D_GNU_SOURCE
+
 	# bug #158664
 	gcc-specs-ssp && replace-flags -O[23s] -O
-
+	export BUILD_CC="${CBUILD}-gcc"
 	econf \
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
@@ -150,7 +170,7 @@ src_install() {
 
 		# some handy-dandy dynamic dns examples
 		cd "${D}"/usr/share/doc/${PF}
-		tar pjxf "${DISTFILES}"/dyndns-samples.tbz2
+		tar pjxf ${DISTFILES}/dyndns-samples.tbz2
 	}
 
 	newenvd "${FILESDIR}"/10bind.env 10bind
@@ -164,8 +184,8 @@ src_install() {
 	insinto /var/bind ; doins "${FILESDIR}"/named.ca
 
 	insinto /var/bind/pri
-	doins "${FILESDIR}"/127.zone
-	newins "${FILESDIR}"/localhost.zone-r2 localhost.zone
+	newins "${FILESDIR}"/127.zone-r1 127.zone
+	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone
 
 	newinitd "${FILESDIR}"/named.init-r5 named
 	newconfd "${FILESDIR}"/named.confd-r2 named
@@ -176,12 +196,8 @@ src_install() {
 
 	# Let's get rid of those tools and their manpages since they're provided by bind-tools
 	rm -f "${D}"/usr/share/man/man1/{dig.1,host.1,nslookup.1}
-	rm -f "${D}"/usr/bin/{dig,host,nslookup}
-
-	use resolvconf && {
-		exeinto /etc/resolvconf/update.d
-		newexe "${FILESDIR}"/resolvconf.bind bind
-	}
+	rm -f "${D}"/usr/share/man/man8/{dnssec-keygen.8,nsupdate.8}
+	rm -f "${D}"/usr/bin/{dig,host,nslookup,dnssec-keygen,nsupdate}
 }
 
 pkg_postinst() {
@@ -255,8 +271,20 @@ pkg_config() {
 		cp -R /var/bind ${CHROOT}/var/
 		chown -R named:named ${CHROOT}/var/
 		mknod ${CHROOT}/dev/zero c 1 5
-		mknod ${CHROOT}/dev/random c 1 8
-		chmod 666 ${CHROOT}/dev/{random,zero}
+		chmod 666 ${CHROOT}/dev/zero
+		if use urandom; then
+			mknod ${CHROOT}/dev/urandom c 1 9
+			chmod 666 ${CHROOT}/dev/urandom
+		else
+			mknod ${CHROOT}/dev/random c 1 8
+			chmod 666 ${CHROOT}/dev/random
+		fi
+		echo "none    ${CHROOT}/proc    proc    defaults    0 0" >>/etc/fstab
+		mkdir ${CHROOT}/proc
+		mount -t proc none ${CHROOT}/proc
+		if [ -f '/etc/syslog-ng/syslog-ng.conf' ]; then
+			echo "source jail { unix-stream(\"${CHROOT}/dev/log\"); };" >>/etc/syslog-ng/syslog-ng.conf
+		fi
 		chown root:named ${CHROOT}
 		chmod 0750 ${CHROOT}
 
