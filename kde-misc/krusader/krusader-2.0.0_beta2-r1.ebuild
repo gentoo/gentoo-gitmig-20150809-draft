@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.0.0_beta2-r1.ebuild,v 1.3 2009/04/06 11:47:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.0.0_beta2-r1.ebuild,v 1.4 2009/04/11 15:37:55 scarabeus Exp $
 
 EAPI="2"
 
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}/actionproperty-qt45.patch"
+	"${FILESDIR}/${PV}-gcc44.patch"
 )
 
 S="${WORKDIR}/${MY_P}"
