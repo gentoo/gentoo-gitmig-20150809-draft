@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc29.ebuild,v 1.1 2009/04/11 04:12:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc29.ebuild,v 1.2 2009/04/11 04:17:36 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -198,7 +198,7 @@ src_install() {
 	use epydoc && dohtml -r "${WORKDIR}"/api
 
 	dodir /usr/bin
-	for x in ebuild emerge portageq repoman xpak; do
+	for x in ebuild egencache emerge portageq repoman xpak; do
 		dosym ../${libdir}/portage/bin/${x} /usr/bin/${x}
 	done
 

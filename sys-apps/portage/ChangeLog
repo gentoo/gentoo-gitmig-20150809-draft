@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.594 2009/04/11 04:12:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.595 2009/04/11 04:17:36 zmedico Exp $
+
+  11 Apr 2009; Zac Medico <zmedico@gentoo.org> portage-2.2_rc29.ebuild:
+  Add a symlink to egencache in /usr/bin.
 
 *portage-2.2_rc29 (11 Apr 2009)
 
