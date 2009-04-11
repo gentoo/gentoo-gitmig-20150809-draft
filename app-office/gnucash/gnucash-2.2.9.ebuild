@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.9.ebuild,v 1.3 2009/03/26 18:15:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.9.ebuild,v 1.4 2009/04/11 20:51:50 loki_val Exp $
 
 EAPI=2
 
@@ -57,12 +57,6 @@ DOCS="doc/README.OFX doc/README.HBCI"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
-	local diemessage=""
-	if ! built_with_use gnome-extra/libgsf gnome ; then
-		diemessage="${diemessage}gnome-extra/libgsf must be built with gnome use flag. "
-	fi
-	[ -n "${diemessage}" ] && die ${diemessage}
-
 	G2CONF="${G2CONF}
 		$(use_enable debug)
 		$(use_enable ofx)

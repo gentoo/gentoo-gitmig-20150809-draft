@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.8.ebuild,v 1.2 2009/01/30 18:26:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.8.ebuild,v 1.3 2009/04/11 20:51:50 loki_val Exp $
 
-EAPI=1
+EAPI=2
 
 inherit eutils gnome2
 
@@ -21,7 +21,7 @@ IUSE="+doc ofx hbci chipcard debug quotes"
 # FIXME: rdepend on dev-libs/qof when upstream fix their mess (see configure.in)
 
 RDEPEND=">=dev-libs/glib-2.6.3
-	>=dev-scheme/guile-1.8.3
+	>=dev-scheme/guile-1.8.3[deprecated,regex]
 	>=dev-scheme/slib-3.1.4
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/popt-1.5
@@ -31,9 +31,9 @@ RDEPEND=">=dev-libs/glib-2.6.3
 	>=gnome-extra/gtkhtml-3.14
 	>=dev-libs/libxml2-2.5.10
 	>=gnome-base/gconf-2
-	>=x11-libs/goffice-0.6
+	>=x11-libs/goffice-0.6[gnome]
 	ofx? ( >=dev-libs/libofx-0.7.0 )
-	hbci? ( net-libs/aqbanking
+	hbci? ( net-libs/aqbanking[qt3]
 		chipcard? ( sys-libs/libchipcard )
 	)
 	quotes? ( dev-perl/DateManip
@@ -57,23 +57,6 @@ DOCS="doc/README.OFX doc/README.HBCI"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
-	local diemessage=""
-	local flags="deprecated regex"
-	if use hbci && \
-		! built_with_use net-libs/aqbanking qt3 ; then
-		diemessage="net-libs/aqbanking must be built with qt3 use flag. "
-	fi
-	if ! built_with_use --missing true dev-scheme/guile ${flags} ; then
-		diemessage="${diemessage}dev-scheme/guile must be built with \"${flags}\" use flags. "
-	fi
-	if ! built_with_use gnome-extra/libgsf gnome ; then
-		diemessage="${diemessage}gnome-extra/libgsf must be built with gnome use flag. "
-	fi
-	if ! built_with_use x11-libs/goffice gnome ; then
-		diemessage="${diemessage}x11-libs/goffice must be built with gnome use flag. "
-	fi
-	[ -n "${diemessage}" ] && die ${diemessage}
-
 	G2CONF="${G2CONF}
 		$(use_enable debug)
 		$(use_enable ofx)
