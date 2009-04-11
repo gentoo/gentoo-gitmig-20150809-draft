@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsmbios
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.19 2008/11/01 16:24:32 cedk Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/ChangeLog,v 1.20 2009/04/11 16:46:12 loki_val Exp $
+
+  11 Apr 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/libsmbios-2.0.3-gcc44.patch, libsmbios-2.0.3.ebuild:
+  Fix bug 256777, failure with gcc-4.4. Thanks to Kent Fredric
+  <kentfredric@gmail.com> for the patch.
 
 *libsmbios-2.0.3 (01 Nov 2008)
 
