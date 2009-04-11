@@ -1,6 +1,10 @@
 # ChangeLog for net-www/vdradmin-am
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.1 2009/04/11 23:23:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/vdradmin-am/ChangeLog,v 1.2 2009/04/11 23:24:47 hd_brummy Exp $
+
+  11 Apr 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdradmin-am-3.6.2.ebuild:
+  stabel again after move
 
   11 Apr 2009; Joerg Bornkessel <hd_brummy@gentoo.org> +files/confd-2,
   +files/vdradmin-rc-3, +files/vdradmin-4,
