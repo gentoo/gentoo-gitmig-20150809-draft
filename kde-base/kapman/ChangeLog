@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kapman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.6 2009/04/11 19:03:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kapman/ChangeLog,v 1.7 2009/04/11 22:07:06 alexxy Exp $
+
+*kapman-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> +kapman-4.2.2.ebuild:
+  Add KDE 4.2.2
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kapman-4.2.1.ebuild:
   Add ~alpha/~ia64 wrt #260777

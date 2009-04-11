@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/keditbookmarks
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.25 2009/04/11 18:20:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.26 2009/04/11 23:03:03 alexxy Exp $
+
+*keditbookmarks-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +keditbookmarks-4.2.2.ebuild:
+  Add KDE 4.2.2
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   keditbookmarks-4.2.1.ebuild:

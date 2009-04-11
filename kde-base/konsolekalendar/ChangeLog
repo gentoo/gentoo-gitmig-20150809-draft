@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/konsolekalendar
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.91 2008/09/13 23:59:18 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.92 2009/04/11 23:42:01 alexxy Exp $
+
+*konsolekalendar-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +konsolekalendar-4.2.2.ebuild:
+  Add KDE 4.2.2
 
 *konsolekalendar-3.5.10 (13 Sep 2008)
 

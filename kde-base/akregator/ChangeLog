@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.114 2009/04/11 19:55:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.115 2009/04/11 21:54:29 alexxy Exp $
+
+*akregator-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> +akregator-4.2.2.ebuild:
+  Add KDE 4.2.2
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> akregator-4.2.1.ebuild:
   Add ~alpha/~ia64 wrt #260777

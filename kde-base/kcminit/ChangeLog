@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.96 2009/04/11 18:20:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.97 2009/04/11 22:17:39 alexxy Exp $
+
+*kcminit-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> +kcminit-4.2.2.ebuild:
+  Add KDE 4.2.2
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kcminit-4.2.1.ebuild:
   Add ~alpha/~ia64 wrt #260777

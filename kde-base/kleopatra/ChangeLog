@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.13 2009/04/11 19:35:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.14 2009/04/11 23:19:44 alexxy Exp $
+
+*kleopatra-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> +kleopatra-4.2.2.ebuild:
+  Add KDE 4.2.2
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kleopatra-4.2.1-r1.ebuild:
   Add ~alpha/~ia64 wrt #260777
