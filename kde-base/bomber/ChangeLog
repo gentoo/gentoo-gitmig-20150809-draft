@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/bomber
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bomber/ChangeLog,v 1.5 2009/03/08 18:52:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bomber/ChangeLog,v 1.6 2009/04/11 19:04:46 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> bomber-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -bomber-4.2.0.ebuild:
   Drop KDE 4.2.0

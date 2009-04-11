@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.104 2009/03/08 19:03:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.105 2009/04/11 19:00:09 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kbounce-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kbounce-4.2.0.ebuild:
   Drop KDE 4.2.0

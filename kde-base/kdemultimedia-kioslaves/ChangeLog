@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-kioslaves
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.115 2009/03/08 19:28:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.116 2009/04/11 18:42:34 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  kdemultimedia-kioslaves-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdemultimedia-kioslaves-4.2.0.ebuild:

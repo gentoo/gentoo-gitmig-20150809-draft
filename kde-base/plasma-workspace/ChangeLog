@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.15 2009/04/11 06:28:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.16 2009/04/11 19:31:11 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  plasma-workspace-4.2.1-r1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   11 Apr 2009; Jeroen Roovers <jer@gentoo.org>
   plasma-workspace-4.2.1-r1.ebuild:

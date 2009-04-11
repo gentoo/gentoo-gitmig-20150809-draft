@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.144 2009/03/24 03:19:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.145 2009/04/11 18:35:26 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kwin-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   24 Mar 2009; Jeroen Roovers <jer@gentoo.org> kwin-4.2.1.ebuild:
   Marked ~hppa (bug #260777).

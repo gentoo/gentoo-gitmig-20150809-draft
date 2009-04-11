@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwallet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/ChangeLog,v 1.22 2009/03/08 20:38:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwallet/ChangeLog,v 1.23 2009/04/11 18:37:50 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kwallet-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kwallet-4.2.0.ebuild:
   Drop KDE 4.2.0

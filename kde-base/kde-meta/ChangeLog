@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.119 2009/03/12 11:25:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.120 2009/04/11 20:07:19 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kde-meta-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   12 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kde-meta-4.2.1.ebuild:
   Add webdev to the meta.

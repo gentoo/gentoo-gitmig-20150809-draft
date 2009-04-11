@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.107 2009/03/08 20:17:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.108 2009/04/11 18:50:41 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kpat-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kpat-4.2.0.ebuild:
   Drop KDE 4.2.0
