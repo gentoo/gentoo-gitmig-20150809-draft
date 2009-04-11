@@ -1,8 +1,10 @@
-# Copyright 2006-2008 Gentoo Foundation
+# Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.16 2008/04/16 12:59:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.17 2009/04/11 16:28:25 loki_val Exp $
 
-inherit eutils
+EAPI=2
+
+inherit base eutils flag-o-matic
 
 DESCRIPTION="Open Fingerprint Architecture"
 HOMEPAGE="http://code.google.com/p/musicip-libofa/"
@@ -19,16 +21,14 @@ RDEPEND="dev-libs/expat
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-pkg_setup() {
-	[[ "${CXXFLAGS}" != "${CXXFLAGS/-ffast-math/}" ]] && \
-		die "Correct your C[XX]FLAGS. Using -ffast-math is unsafe and not supported."
-}
+PATCHES=(
+	"${FILESDIR}"/${P}-gcc-4.patch
+	"${FILESDIR}"/${P}-gcc-4.3.patch
+	"${FILESDIR}"/${P}-gcc-4.4.patch
+)
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc-4.patch \
-		"${FILESDIR}"/${P}-gcc-4.3.patch
+pkg_setup() {
+	is-flag -ffast-math && append-flags -fno-fast-math
 }
 
 src_install() {
