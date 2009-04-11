@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.16 2009/04/11 16:26:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.17 2009/04/11 20:22:42 armin76 Exp $
+
+# Raúl Porcel <armin76@gentoo.org> (11 Apr 2009)
+# Keep kde4 deps minimal
+kde-base/kalzium editor solver
 
 # Ben de Groot <yngwin@gentoo.org> (20 Feb 2009)
 # needs kde4 keyworded
