@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/plasma-apps
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.13 2009/03/15 14:42:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.14 2009/04/11 04:59:23 jer Exp $
+
+  11 Apr 2009; Jeroen Roovers <jer@gentoo.org> plasma-apps-4.2.1.ebuild:
+  Marked ~hppa (bug #260777).
 
   15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   plasma-apps-4.2.1.ebuild:

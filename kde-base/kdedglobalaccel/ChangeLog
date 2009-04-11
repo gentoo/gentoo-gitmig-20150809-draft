@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdedglobalaccel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdedglobalaccel/ChangeLog,v 1.4 2009/03/08 19:21:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdedglobalaccel/ChangeLog,v 1.5 2009/04/11 05:11:14 jer Exp $
+
+  11 Apr 2009; Jeroen Roovers <jer@gentoo.org> kdedglobalaccel-4.2.1.ebuild:
+  Marked ~hppa (bug #260777).
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdedglobalaccel-4.2.0.ebuild:

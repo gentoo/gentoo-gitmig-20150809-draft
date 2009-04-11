@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.2.1.ebuild,v 1.2 2009/03/08 13:57:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.2.1.ebuild,v 1.3 2009/04/11 05:09:47 jer Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="KDE Command Runner"
 IUSE="debug xcomposite xscreensaver"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 
 COMMONDEPEND="
 	>=kde-base/ksmserver-${PV}:${SLOT}[kdeprefix=]
