@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/xca
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.15 2008/08/11 17:37:24 yngwin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.16 2009/04/11 16:03:29 nixnut Exp $
+
+  11 Apr 2009; nixnut <nixnut@gentoo.org> xca-0.6.4.ebuild:
+  ppc stable #247555
 
   11 Aug 2008; Ben de Groot <yngwin@gentoo.org> xca-0.6.4.ebuild:
   Fix split qt4 deps wrt bug 217161.
