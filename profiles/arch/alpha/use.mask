@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.15 2009/02/11 22:56:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.16 2009/04/11 15:37:29 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -59,6 +59,10 @@ mono
 ocamlopt
 
 # Other
+
+# Raúl Porcel <armin76@gentoo.org> (11 Apr 2009)
+# Keep kde depends minimal
+semantic-desktop
 
 # Ben de Groot <yngwin@gentoo.org> 11 Feb 2009
 # both x11-libs/qt-phonon and media-sound/phonon are unkeyworded

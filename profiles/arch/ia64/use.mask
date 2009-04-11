@@ -47,6 +47,7 @@ networkmanager
 octave
 oracle
 timidity
+semantic-desktop
 
 # Stuff that doesn't compile on ia64
 chicken
