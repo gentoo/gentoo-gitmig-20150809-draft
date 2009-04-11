@@ -1,0 +1,88 @@
+# ChangeLog for net-www/xxv
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.1 2009/04/11 23:02:00 hd_brummy Exp $
+
+  11 Apr 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/xxv-1.0-logerror.patch, +files/xxvd-1.0.cfg, +files/xxv,
+  +files/xxv.utf8-v2, +files/xxvd-logrotate, +metadata.xml,
+  +xxv-1.0.1-r1.ebuild, +xxv-1.2-r1.ebuild, +xxv-1.2.1402.ebuild:
+  packed moved net-www/xxv - www-misc/xxv #265569
+
+*xxv-1.2.1402 (06 Apr 2009)
+
+  06 Apr 2009; Joerg Bornkessel <hd_brummy@gentoo.org> -files/xxv.utf8,
+  +files/xxv.utf8-v2, -xxv-1.2.1359.ebuild, -xxv-1.2.1383.ebuild,
+  +xxv-1.2.1402.ebuild:
+  new (unmasked) snapshot; utf-8 support; cleanup hardmasked versions
+
+  05 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org> -xxv-1.2.1308.ebuild,
+  -xxv-1.2.1315.ebuild:
+  cleanup next try
+
+*xxv-1.2.1383 (05 Jan 2009)
+
+  05 Jan 2009; Joerg Bornkessel <hd_brummy@gentoo.org> files/xxv.utf8,
+  xxv-1.0.1-r1.ebuild, xxv-1.2-r1.ebuild, +xxv-1.2.1383.ebuild:
+  new test snap, new utf8 initscript, cleanup, fixed src_uri to berlios
+  mirror
+
+  18 Nov 2008; Torsten Veller <tove@gentoo.org> xxv-1.0.1-r1.ebuild,
+  xxv-1.2-r1.ebuild, xxv-1.2.1308.ebuild, xxv-1.2.1315.ebuild,
+  xxv-1.2.1359.ebuild:
+  New virtuals: Compress-Zlib
+
+*xxv-1.2.1359 (27 Oct 2008)
+
+  27 Oct 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +xxv-1.2.1359.ebuild:
+  svn 1359 snapshot added, masked by package.mask
+
+  23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  add GLEP 56 USE flag desc from use.local.desc
+
+*xxv-1.2.1315 (24 Mar 2008)
+
+  24 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +xxv-1.2.1315.ebuild:
+  svn snapshot r1315 added for testing utf8 handling, masked by package.mask
+
+*xxv-1.2.1308 (11 Mar 2008)
+
+  11 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +files/xxv.utf8,
+  +xxv-1.2.1308.ebuild:
+  svn snapshot r1308 added for testing utf8 handling, masked by package.mask
+
+*xxv-1.2-r1 (01 Mar 2008)
+
+  01 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org> -xxv-1.0.ebuild,
+  -xxv-1.0.1.ebuild, xxv-1.0.1-r1.ebuild, -xxv-1.2.ebuild,
+  +xxv-1.2-r1.ebuild:
+  clean up; moved perl-core to virtual stuff, bug 211623
+
+*xxv-1.2 (24 Feb 2008)
+
+  24 Feb 2008; Joerg Bornkessel <hd_brummy@gentoo.org> +xxv-1.2.ebuild:
+  version bump
+
+*xxv-1.0.1-r1 (05 Dec 2007)
+
+  05 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> +xxv-1.0.1-r1.ebuild:
+  Version include new use-flag themes; this will support an extra package with
+  more skins
+
+  03 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-1.0.1.ebuild:
+  added missing perl modul
+
+  03 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-1.0.1.ebuild:
+  fixed/updated perl modul depencies
+
+*xxv-1.0.1 (02 Dec 2007)
+
+  02 Dec 2007; Joerg Bornkessel <hd_brummy@gentoo.org> +xxv-1.0.1.ebuild:
+  version bump
+
+*xxv-1.0 (11 Nov 2007)
+
+  11 Nov 2007; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/xxv-1.0-logerror.patch, +files/xxvd-1.0.cfg, +files/xxv,
+  +files/xxvd-logrotate, +metadata.xml, +xxv-1.0.ebuild:
+  initial ebuild; find older versions on overlay vdr-testing
+
