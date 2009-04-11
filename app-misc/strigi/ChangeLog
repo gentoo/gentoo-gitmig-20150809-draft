@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.32 2009/04/10 23:23:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.33 2009/04/11 00:12:35 scarabeus Exp $
+
+  11 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -files/strigi-0.5.8-gcc-4.3.patch, strigi-0.6.4.ebuild:
+  Update homepage. Remove unneeded patch.
 
   10 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> strigi-0.6.4.ebuild:
   Fix tests.
