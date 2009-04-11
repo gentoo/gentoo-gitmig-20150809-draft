@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.20 2009/04/11 18:39:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.21 2009/04/11 19:08:34 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -17,6 +17,7 @@ chipcard
 dvb
 dxr3
 gnokii
+gps
 hbci
 ipod
 ivtv

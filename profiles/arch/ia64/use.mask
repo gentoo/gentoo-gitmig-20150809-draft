@@ -10,6 +10,7 @@ dvb
 dxr3
 gnokii
 gphoto2
+gps
 ivtv
 lirc
 mythtv
