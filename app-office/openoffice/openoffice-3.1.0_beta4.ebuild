@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.0_beta4.ebuild,v 1.1 2009/04/11 21:53:25 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.0_beta4.ebuild,v 1.2 2009/04/11 21:56:02 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -352,15 +352,14 @@ src_install() {
 
 	# record java libraries
 	if use java; then
-        	java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/${BASIS}/program/classes/*.jar
-        	java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/ure/share/java/*.jar
+			java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/${BASIS}/program/classes/*.jar
+			java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/ure/share/java/*.jar
 	fi
 
 	# Upstream places the bash-completion module in /etc. Gentoo places them in
 	# /usr/share/bash-completion. bug 226061
 	dobashcompletion "${D}"/etc/bash_completion.d/ooffice.sh ooffice
 	rm -rf "${D}"/etc/bash_completion.d/ || die "rm failed"
-
 
 }
 
