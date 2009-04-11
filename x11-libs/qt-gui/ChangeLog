@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.44 2009/04/09 15:25:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.45 2009/04/11 17:17:16 nixnut Exp $
+
+  11 Apr 2009; nixnut <nixnut@gentoo.org> qt-gui-4.4.2-r3.ebuild:
+  ppc stable #263945
 
   09 Apr 2009; Raúl Porcel <armin76@gentoo.org> qt-gui-4.4.2-r3.ebuild:
   ia64/sparc stable wrt #263945
