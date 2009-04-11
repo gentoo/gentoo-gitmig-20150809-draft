@@ -48,6 +48,7 @@ octave
 oracle
 timidity
 semantic-desktop
+tunepimp
 
 # Stuff that doesn't compile on ia64
 chicken
