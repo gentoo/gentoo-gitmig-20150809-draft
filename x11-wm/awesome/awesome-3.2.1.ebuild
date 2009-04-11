@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.2.1.ebuild,v 1.1 2009/04/05 03:55:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.2.1.ebuild,v 1.2 2009/04/11 00:10:01 matsuu Exp $
 
 EAPI="2"
 inherit cmake-utils eutils
@@ -85,9 +85,11 @@ src_install() {
 
 	if use doc ; then
 		(
-			cd "${WORKDIR}"/${PN}_build/doc/html/ && dohtml -r * || die
-			mv "${D}"/usr/share/doc/${PN}/luadoc "${D}"/usr/share/doc/${PF}/html/luadoc || die
+			cd "${WORKDIR}"/${PN}_build/doc
+			mv html doxygen
+			dohtml -r doxygen || die
 		)
+		mv "${D}"/usr/share/doc/${PN}/luadoc "${D}"/usr/share/doc/${PF}/html/luadoc || die
 	fi
 	rm -rf "${D}"/usr/share/doc/${PN} || die
 
