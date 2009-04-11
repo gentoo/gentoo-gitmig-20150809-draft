@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9655 2009/04/10 23:12:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9656 2009/04/11 15:44:34 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Volkov <pva@gentoo.org> (11 Apr 2009)
+# Mask bzr prerelease candidate and dependent bzrtools
+=dev-util/bzr-1.14*
+=dev-util/bzrtools-1.14*
 
 # Alin Năstac <mrness@gentoo.org> (10 Apr 2009)
 # Homepage no longer available (#264785)
