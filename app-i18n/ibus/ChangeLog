@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.25 2009/04/01 14:50:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.26 2009/04/11 00:03:04 matsuu Exp $
+
+*ibus-1.1.0.20090407 (11 Apr 2009)
+
+  11 Apr 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-1.1.0.20090407.ebuild:
+  Version bumped. Removed qt4 USE flag.
 
   01 Apr 2009; MATSUU Takuto <matsuu@gentoo.org> ibus-1.1.0.20090311.ebuild,
   ibus-1.1.0.20090331.ebuild:
