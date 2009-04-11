@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.32 2009/04/01 12:05:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.33 2009/04/11 15:53:42 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> cln-1.2.2.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   01 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org> cln-1.2.2.ebuild:
   Filtered CFLAGS=-fdirectives-only and minor QA fixes, switch to EAPI=2
