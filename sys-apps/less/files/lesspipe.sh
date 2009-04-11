@@ -229,7 +229,7 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.34 2009/03/13 06:06:29 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.35 2009/04/11 23:20:51 vapier Exp $"
 	cat <<-EOF
 		$cvsid
 		Copyright 2001-2009 Gentoo Foundation
@@ -246,7 +246,7 @@ elif [[ $1 == "-h" || $1 == "--help" ]] ; then
 		Usage: lesspipe.sh <file>
 
 		lesspipe.sh specific settings:
-		  LESSCOLOR env     - toggle colorizing of output
+		  LESSCOLOR env     - toggle colorizing of output (no/yes/always)
 		  LESSCOLORIZER env - program used to colorize output (default: code2color)
 		  LESSIGNORE        - list of extensions to ignore (don't do anything fancy)
 
