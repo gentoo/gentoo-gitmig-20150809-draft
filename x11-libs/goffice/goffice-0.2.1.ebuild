@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.2.1.ebuild,v 1.9 2007/12/10 23:11:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.2.1.ebuild,v 1.10 2009/04/11 20:05:12 loki_val Exp $
+
+EAPI=2
 
 inherit eutils gnome2 flag-o-matic
 
@@ -14,7 +16,7 @@ IUSE="gnome"
 #cairo support broken and -gtk broken
 
 RDEPEND=">=dev-libs/glib-2.6.3
-	>=gnome-extra/libgsf-1.13.3
+	>=gnome-extra/libgsf-1.13.3[gnome?]
 	>=dev-libs/libxml2-2.4.12
 	>=x11-libs/pango-1.8.1
 	>=x11-libs/gtk+-2.6
@@ -34,18 +36,7 @@ USE_DESTDIR="1"
 
 pkg_setup() {
 	G2CONF="$(use_with gnome)"
-
-	if use gnome && ! built_with_use gnome-extra/libgsf gnome; then
-		eerror "Please rebuild gnome-extra/libgsf with gnome support enabled"
-		eerror "USE=\"gnome\" emerge gnome-extra/libgsf"
-		eerror "or add  \"gnome\" to your USE string in /etc/make.conf"
-		die "No Gnome support found in libgsf"
-	fi
-}
-
-src_compile() {
 	filter-flags -ffast-math
-	gnome2_src_compile
 }
 
 pkg_postinst() {
