@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-gnupg
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/ChangeLog,v 1.14 2008/09/20 10:04:21 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/ChangeLog,v 1.15 2009/04/11 00:10:07 arfrever Exp $
+
+  11 Apr 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  qca-gnupg-2.0.0_beta3.ebuild:
+  Add missing dependency on x11-libs/qt-core (bug #257775).
 
   20 Sep 2008; Raúl Porcel <armin76@gentoo.org>
   qca-gnupg-2.0.0_beta2.ebuild:

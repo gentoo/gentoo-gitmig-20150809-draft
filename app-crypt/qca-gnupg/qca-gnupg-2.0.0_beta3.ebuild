@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/qca-gnupg-2.0.0_beta3.ebuild,v 1.3 2008/09/17 16:11:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/qca-gnupg-2.0.0_beta3.ebuild,v 1.4 2009/04/11 00:10:07 arfrever Exp $
 
 inherit eutils qt4
 
@@ -16,7 +16,8 @@ SLOT="2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug"
 
-DEPEND=">=app-crypt/qca-${QCA_VER}"
+DEPEND=">=app-crypt/qca-${QCA_VER}
+	x11-libs/qt-core"
 RDEPEND="${DEPEND}
 	app-crypt/gnupg"
 
