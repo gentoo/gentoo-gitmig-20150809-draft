@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.1-r3.ebuild,v 1.2 2009/03/26 21:54:05 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.1-r3.ebuild,v 1.3 2009/04/11 02:16:29 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -32,6 +32,7 @@ COMMONDEPEND="
 	media-libs/libpng
 	>=media-sound/phonon-4.3.1[xcb]
 	sys-apps/dbus[X]
+	sys-libs/libutempter
 	sys-libs/zlib
 	x11-libs/libICE
 	x11-libs/libSM

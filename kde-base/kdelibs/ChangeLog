@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.576 2009/03/26 21:54:05 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.577 2009/04/11 02:16:29 jmbsvicetto Exp $
+
+  11 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kdelibs-4.2.1-r3.ebuild:
+  Adding missing dep on syslibs/libutempter - fixes bug 207714.
 
   26 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdelibs-4.2.1-r3.ebuild:
