@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.39 2009/03/07 20:33:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.40 2009/04/11 17:53:58 nixnut Exp $
+
+  11 Apr 2009; nixnut <nixnut@gentoo.org> qemacs-0.4.0_pre20080605.ebuild:
+  ppc stable #265309
 
 *qemacs-0.4.0_pre20080605 (07 Mar 2009)
 
