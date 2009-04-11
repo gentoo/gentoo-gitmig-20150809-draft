@@ -52,6 +52,7 @@ semantic-desktop
 tunepimp
 captury
 bittorrent-external
+fits
 
 # Stuff that doesn't compile on ia64
 chicken
