@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/compizconfig-backend-gconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-gconf/ChangeLog,v 1.9 2009/04/03 11:03:50 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-gconf/ChangeLog,v 1.10 2009/04/11 19:01:00 jmbsvicetto Exp $
+
+  11 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -compizconfig-backend-gconf-0.7.8.ebuild:
+  Removing old compiz 0.7.8 ebuilds - affected by bug 263678.
 
 *compizconfig-backend-gconf-0.8.2 (03 Apr 2009)
 
