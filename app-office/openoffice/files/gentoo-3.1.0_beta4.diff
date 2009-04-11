@@ -10,6 +10,16 @@
      chmod 755 $1
 --- patches/dev300/apply 
 +++ patches/dev300/apply
+
+@@ -106,7 +106,7 @@
+ # openmamba
+ openmamba: LinuxCommon, GlobalDesktopFiles
+ #Gentoo
+-GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, CairoFonts, BerkeleyDB43, Gcc43, IntegrateExtensions
++GentooBase : LinuxCommon, GentooOnly, NotDebian, Lockdown, CairoFonts, BerkeleyDB43, Gcc43, IntegrateExtensions, OOXMLExport
+ GentooUnstable: GentooBase, GentooExperimental
+ Gentoo : GentooBase
+ Gentoo64: GentooBase
 @@ -1439,8 +1439,6 @@
  
  # jemalloc, FreeBSD 7 allocator

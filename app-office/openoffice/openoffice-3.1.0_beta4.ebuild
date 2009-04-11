@@ -1,18 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.0_beta3.ebuild,v 1.1 2009/04/08 07:23:46 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.0_beta4.ebuild,v 1.1 2009/04/11 21:53:25 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
 
-inherit check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
+inherit bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
 IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap mono nsplugin odk opengl pam templates"
 
-MY_PV=3.0.99.3
+MY_PV=3.0.99.4
 PATCHLEVEL=OOO310
 SRC=OOo_${PV}_src
-MST=ooo310-m7
+MST=ooo310-m9
 DEVPATH=http://download.go-oo.org/${PATCHLEVEL}/${MST}
 S=${WORKDIR}/ooo
 S_OLD=${WORKDIR}/ooo-build-${MY_PV}
@@ -100,7 +100,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	app-arch/unzip
 	>=app-text/hunspell-1.1.4-r1
 	dev-libs/expat
-	>=dev-libs/icu-3.8
+	>=dev-libs/icu-4.0
 	>=sys-libs/db-4.3
 	>=app-text/libwpd-0.8.8
 	>=media-libs/vigra-1.4
@@ -227,6 +227,7 @@ src_unpack() {
 	epatch "${FILESDIR}/gentoo-${PV}.diff"
 	epatch "${FILESDIR}/ooo-env_log.diff"
 	cp -f "${FILESDIR}/buildfix-mono-2-2.diff" "${S}/patches/dev300" || die
+	cp -f "${FILESDIR}/base64.diff" "${S}/patches/hotfixes" || die
 
 	#Use flag checks
 	if use java ; then
@@ -350,7 +351,16 @@ src_install() {
 #	chown -RP root:0 "${D}"
 
 	# record java libraries
-	use java && java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/${BASIS}/program/classes/*.jar
+	if use java; then
+        	java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/${BASIS}/program/classes/*.jar
+        	java-pkg_regjar "${D}"/usr/$(get_libdir)/openoffice/ure/share/java/*.jar
+	fi
+
+	# Upstream places the bash-completion module in /etc. Gentoo places them in
+	# /usr/share/bash-completion. bug 226061
+	dobashcompletion "${D}"/etc/bash_completion.d/ooffice.sh ooffice
+	rm -rf "${D}"/etc/bash_completion.d/ || die "rm failed"
+
 
 }
 
@@ -358,6 +368,7 @@ pkg_postinst() {
 
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+	bash-completion_pkg_postinst
 
 	[[ -x /sbin/chpax ]] && [[ -e /usr/$(get_libdir)/openoffice/${BASIS}/program/soffice.bin ]] && chpax -zm /usr/$(get_libdir)/openoffice/${BASIS}/program/soffice.bin
 
