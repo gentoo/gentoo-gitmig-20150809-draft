@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.0.ebuild,v 1.2 2009/03/26 00:34:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.0.ebuild,v 1.3 2009/04/11 10:11:52 eva Exp $
 
 EAPI="2"
 
@@ -68,7 +68,7 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/check )"
 
 DOCS="AUTHORS ChangeLog DOCUMENTERS INTERNALS \
-	  MAINTAINERS NEWS README THANKS TODO"
+	  MAINTAINERS MAINTAINERS.old NEWS README THANKS"
 
 pkg_setup() {
 	if ! use hal && use ipod; then
@@ -114,6 +114,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	gnome2_src_prepare
+
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
