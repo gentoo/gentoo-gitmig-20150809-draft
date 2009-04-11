@@ -10,4 +10,5 @@ Exec=/usr/bin/conkeror %u
 Terminal=false
 Categories=Network;WebBrowser;
 MimeType=text/html;text/xml;
+StartupNotify=true
 StartupWMClass=Conkeror
