@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.28 2009/03/30 13:05:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.29 2009/04/11 17:29:14 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> okular-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> okular-4.2.1.ebuild:
   Update dependencies w.r.t. bug 264230, fully-split-out poppler transition.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.95 2009/04/11 05:08:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.96 2009/04/11 18:20:02 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kcminit-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   11 Apr 2009; Jeroen Roovers <jer@gentoo.org> kcminit-4.2.1.ebuild:
   Marked ~hppa (bug #260777).

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.140 2009/04/11 04:39:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.141 2009/04/11 18:19:11 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  kdebase-kioslaves-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   11 Apr 2009; Jeroen Roovers <jer@gentoo.org>
   kdebase-kioslaves-4.2.1.ebuild:
