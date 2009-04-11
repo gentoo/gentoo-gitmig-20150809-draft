@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.25 2009/04/11 04:52:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.26 2009/04/11 16:02:55 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> libkworkspace-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   11 Apr 2009; Jeroen Roovers <jer@gentoo.org> libkworkspace-4.2.1.ebuild:
   Marked ~hppa (bug #260777).

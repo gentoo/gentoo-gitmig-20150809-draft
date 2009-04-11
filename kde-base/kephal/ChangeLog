@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kephal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.5 2009/03/24 03:18:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.6 2009/04/11 16:08:57 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kephal-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   24 Mar 2009; Jeroen Roovers <jer@gentoo.org> kephal-4.2.1.ebuild:
   Marked ~hppa (bug #260777).

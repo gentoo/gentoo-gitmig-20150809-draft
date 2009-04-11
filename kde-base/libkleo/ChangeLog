@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkleo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkleo/ChangeLog,v 1.12 2009/03/15 14:39:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkleo/ChangeLog,v 1.13 2009/04/11 16:04:56 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org> libkleo-4.2.1-r1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
 *libkleo-4.2.1-r1 (15 Mar 2009)
 

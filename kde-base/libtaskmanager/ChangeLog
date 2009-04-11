@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libtaskmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/ChangeLog,v 1.24 2009/04/11 06:02:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libtaskmanager/ChangeLog,v 1.25 2009/04/11 16:08:18 armin76 Exp $
+
+  11 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  libtaskmanager-4.2.1.ebuild:
+  Add ~alpha/~ia64 wrt #260777
 
   11 Apr 2009; Jeroen Roovers <jer@gentoo.org> libtaskmanager-4.2.1.ebuild:
   Marked ~hppa (bug #260777).
