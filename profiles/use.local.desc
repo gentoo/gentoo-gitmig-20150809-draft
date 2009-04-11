@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4354 2009/04/10 21:27:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4355 2009/04/11 23:07:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2778,6 +2778,7 @@ www-client/seamonkey:moznopango - Disable x11-libs/pango during runtime
 www-client/seamonkey:moznoroaming - sroaming extension support
 www-client/seamonkey:xforms - XForms is a standard to split up XHTML into XForms, instance data, and user interface
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
+www-misc/xxv:themes - Enable more themes via x11-themes/xxv-skins
 www-misc/zoneminder:X10 - Enable support for X10 devices
 www-plugins/adobe-flash:32bit - For amd64-multilib, installs the 32-bit plugin alongside the native 64-bit plugin
 www-plugins/gnash:agg - Rendering based on the Anti-Grain Geometry Rendering Engine library
