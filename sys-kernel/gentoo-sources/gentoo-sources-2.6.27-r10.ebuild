@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.27-r10.ebuild,v 1.1 2009/03/21 18:42:12 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.27-r10.ebuild,v 1.2 2009/04/11 18:52:29 armin76 Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -9,7 +9,7 @@ inherit kernel-2
 detect_version
 detect_arch
 
-KEYWORDS="~alpha ~amd64 ~arm -hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm -hppa ia64 ~ppc ~ppc64 ~s390 sh sparc x86"
 IUSE=""
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches"
 
