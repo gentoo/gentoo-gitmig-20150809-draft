@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.128 2009/03/25 05:18:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.129 2009/04/11 08:17:15 kumba Exp $
+
+*mips-sources-2.6.29.1 (11 Apr 2009)
+*mips-sources-2.6.28.9-r1 (11 Apr 2009)
+*mips-sources-2.6.27.21-r1 (11 Apr 2009)
+
+  11 Apr 2009; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.6.27.21.ebuild, +mips-sources-2.6.27.21-r1.ebuild,
+  -mips-sources-2.6.28.9.ebuild, +mips-sources-2.6.28.9-r1.ebuild,
+  -mips-sources-2.6.29-r1.ebuild, +mips-sources-2.6.29.1.ebuild:
+  Update to 2.6.29.1, and add in patches to address a problem on o32
+  binaries with the llseek() system call.
 
 *mips-sources-2.6.29-r1 (25 Mar 2009)
 
