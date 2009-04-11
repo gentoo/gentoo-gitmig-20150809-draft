@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kioclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.20 2009/03/08 19:52:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.21 2009/04/11 06:25:36 jer Exp $
+
+  11 Apr 2009; Jeroen Roovers <jer@gentoo.org> kioclient-4.2.1.ebuild:
+  Marked ~hppa (bug #260777).
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kioclient-4.2.0.ebuild:
   Drop KDE 4.2.0

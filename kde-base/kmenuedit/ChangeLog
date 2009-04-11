@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmenuedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.101 2009/03/08 20:00:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmenuedit/ChangeLog,v 1.102 2009/04/11 06:36:33 jer Exp $
+
+  11 Apr 2009; Jeroen Roovers <jer@gentoo.org> kmenuedit-4.2.1.ebuild:
+  Marked ~hppa (bug #260777).
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kmenuedit-4.2.0.ebuild:
   Drop KDE 4.2.0

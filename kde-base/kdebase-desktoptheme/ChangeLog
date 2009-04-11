@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-desktoptheme
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.7 2009/03/15 14:24:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.8 2009/04/11 06:33:22 jer Exp $
+
+  11 Apr 2009; Jeroen Roovers <jer@gentoo.org>
+  kdebase-desktoptheme-4.2.1.ebuild:
+  Marked ~hppa (bug #260777).
 
   15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kdebase-desktoptheme-4.2.1.ebuild:

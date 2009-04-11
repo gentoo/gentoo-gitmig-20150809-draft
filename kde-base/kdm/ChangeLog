@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.153 2009/03/08 19:41:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.154 2009/04/11 06:38:42 jer Exp $
+
+  11 Apr 2009; Jeroen Roovers <jer@gentoo.org> kdm-4.2.1.ebuild:
+  Marked ~hppa (bug #260777).
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdm-4.2.0.ebuild,
   -kdm-4.2.0-r1.ebuild:

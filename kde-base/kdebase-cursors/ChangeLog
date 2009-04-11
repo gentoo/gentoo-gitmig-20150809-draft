@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-cursors
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-cursors/ChangeLog,v 1.10 2009/03/08 19:17:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-cursors/ChangeLog,v 1.11 2009/04/11 06:43:38 jer Exp $
+
+  11 Apr 2009; Jeroen Roovers <jer@gentoo.org> kdebase-cursors-4.2.1.ebuild:
+  Marked ~hppa (bug #260777).
 
   08 Mar 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdebase-cursors-4.2.0.ebuild:

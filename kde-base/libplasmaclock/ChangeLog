@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libplasmaclock
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.6 2009/03/15 14:40:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.7 2009/04/11 06:26:42 jer Exp $
+
+  11 Apr 2009; Jeroen Roovers <jer@gentoo.org> libplasmaclock-4.2.1.ebuild:
+  Marked ~hppa (bug #260777).
 
   15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   libplasmaclock-4.2.1.ebuild:
