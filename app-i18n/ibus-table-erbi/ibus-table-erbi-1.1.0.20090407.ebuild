@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-erbi/ibus-table-erbi-1.1.0.20090220.ebuild,v 1.1 2009/02/25 17:13:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-erbi/ibus-table-erbi-1.1.0.20090407.ebuild,v 1.1 2009/04/12 02:57:12 matsuu Exp $
 
 DESCRIPTION="The ErBi for IBus Tables"
 HOMEPAGE="http://code.google.com/p/ibus/"
