@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.80 2009/03/18 15:15:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.81 2009/04/12 21:01:31 bluebird Exp $
+
+  12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  gnome-nettool-2.22.1.ebuild:
+  Stable on sparc, bug #260063
 
   18 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   gnome-nettool-2.22.1.ebuild:
