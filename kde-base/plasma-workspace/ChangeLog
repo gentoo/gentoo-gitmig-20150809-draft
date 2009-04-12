@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.17 2009/04/12 06:41:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.18 2009/04/12 11:38:48 alexxy Exp $
+
+  12 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +files/plasma-workspace-fake-panel-transparency.patch:
+  add missing patches; thanks to winterheart
 
 *plasma-workspace-4.2.2 (11 Apr 2009)
 
