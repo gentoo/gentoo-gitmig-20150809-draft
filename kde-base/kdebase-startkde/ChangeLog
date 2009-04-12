@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.152 2009/04/11 22:34:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.153 2009/04/12 23:29:33 scarabeus Exp $
+
+  12 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  files/gentoo-startkde4.patch:
+  Add missing update for starkde.patch.
 
 *kdebase-startkde-4.2.2 (11 Apr 2009)
 
