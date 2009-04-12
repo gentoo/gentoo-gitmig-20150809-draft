@@ -1,9 +1,14 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.117 2009/04/11 20:25:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.118 2009/04/12 08:33:43 alexxy Exp $
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kalzium-4.2.1.ebuild:
   Add ~alpha/~ia64
+
+*kalzium-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> +kalzium-4.2.2.ebuild:
+  Add KDE 4.2.2
 
   15 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> kalzium-4.2.1.ebuild:
   Merge missed ebuild from kde-testing.
