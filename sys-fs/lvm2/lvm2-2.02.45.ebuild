@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.45.ebuild,v 1.4 2009/04/12 20:23:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.45.ebuild,v 1.5 2009/04/12 20:34:30 robbat2 Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -94,8 +94,10 @@ src_compile() {
 		--libdir=/usr/$(get_libdir) \
 		${myconf} \
 		CLDFLAGS="${LDFLAGS}" || die
-
-	MAKEOPTS="${MAKEOPTS} -j1"
+	
+	pushd include
+	emake || die "Failed to prepare symlinks"
+	popd
 	emake || die "compile problem"
 }
 

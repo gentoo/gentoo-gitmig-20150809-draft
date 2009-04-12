@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.153 2009/04/12 20:23:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.154 2009/04/12 20:34:30 robbat2 Exp $
+
+  12 Apr 2009; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.45.ebuild:
+  Bug #265593: Provide better workaround for the symlink parallel make bug.
+  Real fix needs upstream to change chunks of the build setup.
 
   12 Apr 2009; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.01.13.ebuild,
   lvm2-2.02.33.ebuild, lvm2-2.02.33-r1.ebuild, lvm2-2.02.36.ebuild,
