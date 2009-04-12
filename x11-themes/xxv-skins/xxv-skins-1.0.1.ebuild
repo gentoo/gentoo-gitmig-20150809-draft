@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundationq
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xxv-skins/xxv-skins-1.0.1.ebuild,v 1.2 2008/05/04 14:18:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xxv-skins/xxv-skins-1.0.1.ebuild,v 1.3 2009/04/12 06:57:03 ulm Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND=">=net-www/xxv-${PV}
+RDEPEND=">=www-misc/xxv-${PV}
 		!x11-themes/xxv-xstyle"
 
 #S=${WORKDIR}
