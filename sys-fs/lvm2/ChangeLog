@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.152 2009/04/09 23:00:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.153 2009/04/12 20:23:03 robbat2 Exp $
+
+  12 Apr 2009; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.01.13.ebuild,
+  lvm2-2.02.33.ebuild, lvm2-2.02.33-r1.ebuild, lvm2-2.02.36.ebuild,
+  lvm2-2.02.37.ebuild, lvm2-2.02.39.ebuild, lvm2-2.02.42.ebuild,
+  lvm2-2.02.45.ebuild:
+  Bug #265772: Update SRC_URI to check the /old/ directory upstream for
+  files as they are moved.
 
 *lvm2-2.02.45 (09 Apr 2009)
 
