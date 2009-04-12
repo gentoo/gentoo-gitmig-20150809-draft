@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.8-r1.ebuild,v 1.2 2009/04/10 15:52:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-7.8-r1.ebuild,v 1.3 2009/04/12 11:03:12 loki_val Exp $
 
 EAPI=2
 
@@ -49,9 +49,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodir /$(get_libdir)
-	mv "${D}"/usr/$(get_libdir)/libpcre.so* "${D}"/$(get_libdir)/ || die "moving libpcre failed"
-	dosym ../../$(get_libdir)/$(readlink "${D}"/$(get_libdir)/libpcre.so) /usr/$(get_libdir)/libpcre.so || die "Creating symlink failed"
+	gen_usr_ldscript -a pcre
 
 	dodoc doc/*.txt AUTHORS
 	use doc && dohtml doc/html/*
