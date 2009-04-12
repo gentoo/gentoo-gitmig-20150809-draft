@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.0.1-r1.ebuild,v 1.1 2009/04/11 23:02:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.0.1-r1.ebuild,v 1.2 2009/04/12 09:31:46 hd_brummy Exp $
 
 inherit eutils
 
@@ -61,7 +61,7 @@ pkg_setup() {
 		die "dev-perl/GD need png and gif support"
 	fi
 
-	if ! has_version "net-www/${PN}"; then
+	if ! has_version "www-misc/${PN}"; then
 		echo
 		einfo	"Before you install xxv at first time you should read"
 		einfo	"http://www.vdr-wiki.de/wiki/index.php/Xxv  German only available"

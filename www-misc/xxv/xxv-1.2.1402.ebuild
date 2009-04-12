@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.2.1402.ebuild,v 1.1 2009/04/11 23:02:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.2.1402.ebuild,v 1.2 2009/04/12 09:31:46 hd_brummy Exp $
 
 EAPI="2"
 
@@ -92,7 +92,7 @@ db_update_check() {
 
 pkg_setup() {
 
-	if ! has_version "net-www/${PN}"; then
+	if ! has_version "www-misc/${PN}"; then
 		echo
 		einfo	"After you install xxv at first time you should read"
 		einfo	"http://www.vdr-wiki.de/wiki/index.php/Xxv  German only available"

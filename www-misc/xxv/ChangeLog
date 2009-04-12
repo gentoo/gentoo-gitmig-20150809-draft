@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/xxv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.2 2009/04/12 06:36:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.3 2009/04/12 09:31:46 hd_brummy Exp $
+
+  12 Apr 2009; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-1.0.1-r1.ebuild,
+  xxv-1.2-r1.ebuild, xxv-1.2.1402.ebuild:
+  fixed has_version to the right category
 
   11 Apr 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/xxv-1.0-logerror.patch, +files/xxvd-1.0.cfg, +files/xxv,
