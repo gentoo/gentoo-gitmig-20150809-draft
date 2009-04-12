@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.79 2009/04/04 16:06:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.80 2009/04/12 09:03:52 klausman Exp $
+
+  12 Apr 2009; Tobias Klausmann <klausman@gentoo.org>
+  kvirc-4.0_pre3154.ebuild:
+  Keyworded on alpha, bug #263240
 
   04 Apr 2009; Brent Baude <ranger@gentoo.org> kvirc-4.0_pre3154.ebuild:
   Marking kvirc-4.0_pre3154 ~ppc for bug 263240
