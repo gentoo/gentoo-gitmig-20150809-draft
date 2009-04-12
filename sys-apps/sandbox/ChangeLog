@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.117 2009/04/12 10:57:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.118 2009/04/12 18:10:00 ranger Exp $
+
+  12 Apr 2009; Brent Baude <ranger@gentoo.org> sandbox-1.6-r2.ebuild:
+  stable ppc64, bug 265376
 
   12 Apr 2009; Tobias Klausmann <klausman@gentoo.org> sandbox-1.6-r2.ebuild:
   Stable on alpha, bug #265376
