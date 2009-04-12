@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.2.ebuild,v 1.1 2009/04/12 01:50:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.2.ebuild,v 1.2 2009/04/12 02:44:58 mr_bones_ Exp $
 
 EAPI=2
 inherit multilib eutils autotools flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ogre/ogre-v${PV//./-}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc cegui cg devil double-precision examples freeimage gtk threads"
+IUSE="doc cg devil double-precision examples freeimage gtk threads"
 RESTRICT="test" #139905
 
 RDEPEND="dev-libs/zziplib
@@ -23,7 +23,6 @@ RDEPEND="dev-libs/zziplib
 	x11-libs/libXaw
 	x11-libs/libXrandr
 	x11-libs/libX11
-	cegui? ( >=dev-games/cegui-0.5 )
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	devil? ( media-libs/devil )
 	freeimage? ( media-libs/freeimage )
@@ -61,7 +60,6 @@ src_configure() {
 		--enable-static \
 		--with-platform=GLX \
 		--with-gui=$(usev gtk || echo Xt) \
-		$(use_enable cegui) \
 		$(use_enable cg) \
 		$(use_enable devil) \
 		$(use_enable double-precision double) \
