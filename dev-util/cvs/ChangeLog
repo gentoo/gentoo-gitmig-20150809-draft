@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.128 2009/02/01 18:04:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.129 2009/04/12 13:14:28 klausman Exp $
+
+  12 Apr 2009; Tobias Klausmann <klausman@gentoo.org> cvs-1.12.12-r6.ebuild:
+  Stable on alpha, bug #265780
 
 *cvs-1.12.12-r6 (01 Feb 2009)
 
