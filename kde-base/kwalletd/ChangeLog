@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.7 2009/04/11 16:17:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.8 2009/04/12 06:18:48 alexxy Exp $
+
+*kwalletd-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> +kwalletd-4.2.2.ebuild:
+  Add KDE 4.2.2
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kwalletd-4.2.1.ebuild:
   Add ~alpha/~ia64 wrt #260777

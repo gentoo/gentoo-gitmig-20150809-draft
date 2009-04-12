@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/solid-hardware
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-hardware/ChangeLog,v 1.12 2009/04/11 17:42:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid-hardware/ChangeLog,v 1.13 2009/04/12 06:43:48 alexxy Exp $
+
+*solid-hardware-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +solid-hardware-4.2.2.ebuild:
+  Add KDE 4.2.2
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   solid-hardware-4.2.1.ebuild:

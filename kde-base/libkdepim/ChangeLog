@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.114 2009/04/11 18:16:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.115 2009/04/12 06:27:00 alexxy Exp $
+
+*libkdepim-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> +libkdepim-4.2.2.ebuild:
+  Add KDE 4.2.2
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> libkdepim-4.2.1-r1.ebuild:
   Add ~alpha/~ia64 wrt #260777

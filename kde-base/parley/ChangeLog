@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.25 2009/04/11 19:05:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.26 2009/04/12 06:39:47 alexxy Exp $
+
+*parley-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> +parley-4.2.2.ebuild:
+  Add KDE 4.2.2
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> parley-4.2.1.ebuild:
   Add ~alpha/~ia64 wrt #260777

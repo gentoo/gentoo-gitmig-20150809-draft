@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krossruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.6 2009/03/15 16:35:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.7 2009/04/12 05:54:42 alexxy Exp $
+
+*krossruby-4.2.2 (11 Apr 2009)
+
+  11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> +krossruby-4.2.2.ebuild:
+  Add KDE 4.2.2
 
   15 Mar 2009; Brent Baude <ranger@gentoo.org> krossruby-4.2.1.ebuild:
   Marking krossruby-4.2.1 ~ppc64 for bug 257457
