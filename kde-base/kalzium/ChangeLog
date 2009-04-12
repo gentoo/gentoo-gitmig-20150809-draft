@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.118 2009/04/12 08:33:43 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.119 2009/04/12 15:14:59 alexxy Exp $
+
+  12 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +files/kalzium-4.2.2-include-order.patch:
+  add missing patch (bug #265846)
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kalzium-4.2.1.ebuild:
   Add ~alpha/~ia64
