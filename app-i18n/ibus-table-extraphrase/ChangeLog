@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/ibus-table-extraphrase
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-extraphrase/ChangeLog,v 1.5 2009/04/02 16:00:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-extraphrase/ChangeLog,v 1.6 2009/04/12 02:57:06 matsuu Exp $
+
+*ibus-table-extraphrase-1.1.0.20090406 (12 Apr 2009)
+
+  12 Apr 2009; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-table-extraphrase-1.1.0.20090219.ebuild,
+  +ibus-table-extraphrase-1.1.0.20090406.ebuild:
+  Version bumped. Removed old versions.
 
 *ibus-table-extraphrase-1.1.0.20090327 (02 Apr 2009)
 
