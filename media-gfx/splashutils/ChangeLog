@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.156 2009/04/06 19:18:43 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.157 2009/04/12 17:50:42 solar Exp $
+
+  12 Apr 2009; <solar@gentoo.org> splashutils-1.5.4.2.ebuild,
+  splashutils-1.5.4.3.ebuild:
+  - This packge works fine when KLCC is overridden to use the cross compilers
+  CC. But breaks elsewhere. So we need to remove ~arm keyword till klibc deps
+  can be worked out
 
   06 Apr 2009; Michał Januszewski <spock@gentoo.org>
   +files/splashutils-1.5.4.3-openrc-umount-fix.patch,
