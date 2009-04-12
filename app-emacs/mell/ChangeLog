@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mell
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/ChangeLog,v 1.19 2009/04/11 17:00:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mell/ChangeLog,v 1.20 2009/04/12 12:46:52 klausman Exp $
+
+  12 Apr 2009; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
+  Keyworded on alpha, bug #265618
 
   11 Apr 2009; nixnut <nixnut@gentoo.org> mell-1.0.0-r1.ebuild:
   ppc stable #265618
