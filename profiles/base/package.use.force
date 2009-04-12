@@ -1,0 +1,8 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.1 2009/04/12 17:12:08 loki_val Exp $
+
+# Peter Alfredsen <loki_val@gentoo.org> (11 Apr 2009)
+# Forcing w.r.t. bug 265336. When unicode use-flag is
+# turned off, ABI is broken without a .so bump.
+dev-libs/pcre unicode
