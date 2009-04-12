@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/x86info
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.22 2009/02/11 00:13:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.23 2009/04/12 20:39:04 robbat2 Exp $
+
+*x86info-1.24-r1 (12 Apr 2009)
+
+  12 Apr 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +x86info-1.24-r1.ebuild:
+  Bug #214034: modprobe.d conversion, patch thanks to Victor Ostorga
+  <vostorga@gmail.com>.
 
 *x86info-1.24 (11 Feb 2009)
 
