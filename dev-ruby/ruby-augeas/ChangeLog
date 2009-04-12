@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-augeas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.2 2009/03/24 23:22:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.3 2009/04/12 12:43:27 bluebird Exp $
+
+  12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  ruby-augeas-0.2.0.ebuild:
+  Add ~sparc keyword, bug #263622
 
   24 Mar 2009; Joseph Jezak <josejx@gentoo.org> ruby-augeas-0.2.0.ebuild:
   Marked ~ppc for bug #263622.
