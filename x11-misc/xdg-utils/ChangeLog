@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.48 2009/04/12 22:54:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.49 2009/04/12 23:52:17 eva Exp $
+
+  12 Apr 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  xdg-utils-1.0.2-r3.ebuild:
+  Fix test logic, thanks to ikelos for pointing it out.
 
 *xdg-utils-1.0.2-r3 (12 Apr 2009)
 

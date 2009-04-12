@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.0.2-r3.ebuild,v 1.1 2009/04/12 22:54:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.0.2-r3.ebuild,v 1.2 2009/04/12 23:52:17 eva Exp $
 
 inherit eutils
 
@@ -34,7 +34,10 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc ChangeLog README RELEASE_NOTES TODO || die "dodoc failed."
 	newdoc scripts/README README.scripts || die "newdoc failed."
-	use doc && dohtml -r scripts/html || die "dohtml failed."
+	
+	if use doc; then
+		dohtml -r scripts/html || die "dohtml failed."
+	fi
 
 	# Install default XDG_DATA_DIRS, bug #264647
 	echo 'XDG_DATA_DIRS="/usr/local/share"' > 30xdg-data-local
