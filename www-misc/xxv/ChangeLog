@@ -1,6 +1,6 @@
-# ChangeLog for net-www/xxv
+# ChangeLog for www-misc/xxv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.1 2009/04/11 23:02:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.2 2009/04/12 06:36:28 ulm Exp $
 
   11 Apr 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/xxv-1.0-logerror.patch, +files/xxvd-1.0.cfg, +files/xxv,
