@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/prelude-manager
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.52 2009/04/10 20:06:56 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/ChangeLog,v 1.53 2009/04/12 21:02:02 halcy0n Exp $
+
+  12 Apr 2009; Mark Loeser <halcy0n@gentoo.org> files/gentoo.init:
+  Alter init script so it doesn't cause errors when evaluating service
+  dependencies; bug #219153
 
 *prelude-manager-0.9.14.2 (10 Apr 2009)
 
