@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpreludedb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.40 2009/04/10 20:00:45 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpreludedb/ChangeLog,v 1.41 2009/04/12 21:45:40 halcy0n Exp $
+
+  12 Apr 2009; Mark Loeser <halcy0n@gentoo.org>
+  libpreludedb-0.9.15.1.ebuild:
+  Change sqlite3 flag to sqlite; bug #251399
 
 *libpreludedb-0.9.15.1 (10 Apr 2009)
 
