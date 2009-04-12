@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.247 2009/04/12 07:25:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.248 2009/04/12 10:45:38 klausman Exp $
+
+  12 Apr 2009; Tobias Klausmann <klausman@gentoo.org> coreutils-7.1.ebuild:
+  Stable on alpha, bug #265614
 
   12 Apr 2009; Mike Frysinger <vapier@gentoo.org> coreutils-7.1.ebuild,
   coreutils-7.2.ebuild:
