@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.0.ebuild,v 1.11 2009/04/04 16:18:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.0.ebuild,v 1.12 2009/04/12 13:40:21 ulm Exp $
 
 inherit elisp-common eutils fdo-mime gnome2-utils
 
@@ -70,6 +70,10 @@ pkg_config() {
 	else
 		einfo "site-start.el for GNU Emacs already exists."
 	fi
+}
+
+pkg_preinst() {
+	use X && gnome2_icon_savelist
 }
 
 pkg_postinst() {

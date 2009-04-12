@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-0.3.ebuild,v 1.1 2009/03/12 00:59:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-0.3.ebuild,v 1.2 2009/04/12 13:40:21 ulm Exp $
 
 inherit eutils fdo-mime gnome2-utils
 
@@ -25,6 +25,10 @@ src_install() {
 		insinto /usr/share/icons/hicolor/${i}x${i}/apps
 		newins emacs_${i}.png emacs.png
 	done
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {
