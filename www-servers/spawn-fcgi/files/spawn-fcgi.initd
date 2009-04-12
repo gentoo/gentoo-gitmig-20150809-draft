@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.7 2009/04/10 09:30:25 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.8 2009/04/12 18:00:42 bangert Exp $
 
 PROGNAME=${SVCNAME#*.}
 SPAWNFCGI=/usr/bin/spawn-fcgi
@@ -13,6 +13,9 @@ depend() {
 }
 
 start() {
+	local X E OPTIONS i RETVAL FCGI_PROGRAM_EXEC
+	FCGI_PROGRAM_EXEC=(${FCGI_PROGRAM})
+
 	if [ "${SVCNAME}" = "spawn-fcgi" ]; then
 		eerror "You are not supposed to run this script directly. Create a symlink"
 		eerror "for the FastCGI application you want to run as well as a copy of the"
@@ -33,13 +36,18 @@ start() {
 	fi
 
 	if [ -z "${FCGI_PROGRAM}" ]; then
-		eerror "You need to specify which FCGI program you want"
-		eerror "spawn-fcgi to start."
-		eerror "Look at /etc/conf.d/spawn-fcgi.${PROGNAME}"
+		eerror "You need to specify which \$FCGI_PROGRAM"
+		eerror "you want to start."
+		eerror "Please adjust /etc/conf.d/spawn-fcgi.${PROGNAME}"
 		return 1
 	fi
 
-	local X E OPTIONS i RETVAL FCGI_PROGRAM_NAME
+	if [ ! -x "${FCGI_PROGRAM_EXEC}" ]; then
+		eerror "The file specified as \$FCGI_PROGRAM"
+		eerror "does not exist or is not executable."
+		eerror "Please adjust /etc/conf.d/spawn-fcgi.${PROGNAME}"
+		return 1
+	fi
 
 	if [ -z "${FCGI_ADDRESS}" ]; then
 		FCGI_ADDRESS=127.0.0.1
@@ -69,7 +77,6 @@ start() {
 	done
 
 	ebegin "Starting FastCGI application ${PROGNAME}"
-	FCGI_PROGRAM_NAME=(${FCGI_PROGRAM})
 	X=0
 	while [ $X -lt ${FCGI_CHILDREN} ]; do
 		X=$(($X+1))
@@ -78,8 +85,8 @@ start() {
 		[ -n "${FCGI_SOCKET}" ] && SOCKET_OPTION="-s ${FCGI_SOCKET}-${X}"
 		[ -n "${FCGI_PORT}" ] && INET_OPTION="-a ${FCGI_ADDRESS} -p $((${FCGI_PORT} + ${X} - 1))"
 
-		env ${E} start-stop-daemon --start --pidfile ${P} --exec ${SPAWNFCGI} \ 
-			--name ${FCGI_PROGRAM_NAME} -- ${SOCKET_OPTION} ${INET_OPTION} \ 
+		env ${E} start-stop-daemon --start --pidfile ${P} --exec ${SPAWNFCGI} \
+			--name ${FCGI_PROGRAM_EXEC} -- ${SOCKET_OPTION} ${INET_OPTION} \
 			-P ${P} ${OPTIONS} -- ${FCGI_PROGRAM}
 		RETVAL=$?
 
