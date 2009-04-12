@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pkcs11-helper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.25 2009/04/11 17:06:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pkcs11-helper/ChangeLog,v 1.26 2009/04/12 12:55:40 klausman Exp $
+
+  12 Apr 2009; Tobias Klausmann <klausman@gentoo.org>
+  pkcs11-helper-1.06.ebuild:
+  Stable on alpha, bug #265702
 
   11 Apr 2009; nixnut <nixnut@gentoo.org> pkcs11-helper-1.06.ebuild:
   ppc stable #265702
