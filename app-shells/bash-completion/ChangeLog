@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.168 2009/04/10 01:36:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.169 2009/04/12 04:25:40 darkside Exp $
+
+*bash-completion-1.0-r2 (12 Apr 2009)
+
+  12 Apr 2009; Jeremy Olexa <darkside@gentoo.org>
+  -bash-completion-1.0-r1.ebuild, +bash-completion-1.0-r2.ebuild:
+  Fix inconsistent file name change during upgrade path. Do not break existing
+  setups. bug 265807
 
 *bash-completion-0.20081219-r1 (10 Apr 2009)
 

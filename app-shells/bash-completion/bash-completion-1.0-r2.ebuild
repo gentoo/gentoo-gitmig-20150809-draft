@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.0-r1.ebuild,v 1.2 2009/04/09 16:36:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.0-r2.ebuild,v 1.1 2009/04/12 04:25:40 darkside Exp $
 
 EAPI="2"
 
@@ -50,7 +50,8 @@ src_install() {
 	bash_completion || die "failed to split bash_completion"
 
 	dodir /etc/profile.d
-	cp bash_completion.sh "${D}/etc/profile.d/" || die "cp failed"
+	cp bash_completion.sh "${D}/etc/profile.d/bash-completion.sh" \
+		|| die "cp failed"
 
 	dodoc AUTHORS CHANGES README TODO || die "dodocs failes"
 
