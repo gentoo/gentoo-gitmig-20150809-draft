@@ -1,6 +1,9 @@
 # ChangeLog for www-client/surfraw
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/ChangeLog,v 1.33 2009/04/11 16:48:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/ChangeLog,v 1.34 2009/04/12 15:22:05 tcunha Exp $
+
+  12 Apr 2009; Tiago Cunha <tcunha@gentoo.org> surfraw-2.2.4.ebuild:
+  stable amd64/sparc, bug 265459
 
   11 Apr 2009; nixnut <nixnut@gentoo.org> surfraw-2.2.4.ebuild:
   ppc stable #265459
