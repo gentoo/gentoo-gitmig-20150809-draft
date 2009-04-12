@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.83 2009/04/04 17:45:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.84 2009/04/12 07:38:33 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -111,8 +111,8 @@ eautoreconf() {
 	[[ ${AT_NOELIBTOOLIZE} == "yes" ]] && return 0
 
 	# Call it here to prevent failures due to elibtoolize called _before_
-	# eautoreconf.
-	elibtoolize
+	# eautoreconf.  We set $S because elibtoolize runs on that #265319
+	S=${pwd} elibtoolize
 
 	return 0
 }
