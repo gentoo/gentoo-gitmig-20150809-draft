@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.2_p1-r1.ebuild,v 1.9 2009/04/12 20:10:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.2_p1-r1.ebuild,v 1.10 2009/04/12 22:39:03 vapier Exp $
 
 inherit eutils flag-o-matic multilib autotools pam
 
@@ -171,12 +171,11 @@ src_install() {
 }
 
 src_test() {
-	local t failed passwd
+	local t tests skipped failed passed shell
 	tests="interop-tests compat-tests"
 	skipped=""
-	portage_shell="$(getent passwd portage |cut -d: -f7)"
-	if [ "${portage_shell/nologin}" != ${portage_shell}" -o
-		"${portage_shell/false}" != ${portage_shell}" ]; then
+	shell=$(getent passwd ${UID} | cut -d: -f7)
+	if [[ ${shell} == */nologin ]] || [[ ${shell} == */false ]] ; then
 		elog "Running the full OpenSSH testsuite"
 		elog "requires a usable shell for the 'portage'"
 		elog "user, so we will run a subset only."
