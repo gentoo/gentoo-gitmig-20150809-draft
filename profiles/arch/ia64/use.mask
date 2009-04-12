@@ -53,7 +53,7 @@ tunepimp
 captury
 bittorrent-external
 fits
-kttsd
+ktts
 
 # Stuff that doesn't compile on ia64
 chicken

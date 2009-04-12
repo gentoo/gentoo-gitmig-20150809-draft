@@ -1,9 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.34 2009/04/12 16:47:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.35 2009/04/12 16:50:06 armin76 Exp $
 
   12 Apr 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
-  Add kttsd to use.mask
+  Add ktts to use.mask
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   Mask editor and solver for kde-base/kalzium to keep deps minimal
