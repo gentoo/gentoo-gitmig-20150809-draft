@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.238 2009/04/09 21:19:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.239 2009/04/12 21:00:33 bluebird Exp $
+
+  12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> eog-2.24.3.1.ebuild:
+  Stable on sparc, bug #260063
 
   09 Apr 2009; Gilles Dartiguelongue <eva@gentoo.org> eog-2.24.3.1.ebuild:
   Add missing gtk-doc-am DEPEND, bug #265514.
