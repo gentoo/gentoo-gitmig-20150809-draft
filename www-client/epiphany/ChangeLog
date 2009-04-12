@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.205 2009/04/10 20:46:26 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.206 2009/04/12 20:34:25 bluebird Exp $
+
+  12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  epiphany-2.24.3.ebuild, epiphany-2.24.3-r10.ebuild:
+  Stable on sparc, bug #260063
 
   10 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   epiphany-2.24.3-r10.ebuild:
