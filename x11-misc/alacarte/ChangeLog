@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.77 2009/03/21 11:13:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.78 2009/04/12 21:01:29 bluebird Exp $
+
+  12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  alacarte-0.11.8.ebuild:
+  Stable on sparc, bug #260063
 
   21 Mar 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -alacarte-0.11.5.ebuild, -alacarte-0.11.7.ebuild, alacarte-0.11.9.ebuild,
