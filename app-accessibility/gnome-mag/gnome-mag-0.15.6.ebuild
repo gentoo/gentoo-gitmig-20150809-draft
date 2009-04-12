@@ -1,15 +1,15 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.15.0.ebuild,v 1.5 2008/08/12 14:01:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.15.6.ebuild,v 1.1 2009/04/12 23:47:40 eva Exp $
 
-inherit virtualx gnome2
+inherit gnome2 virtualx
 
 DESCRIPTION="Gnome magnification service definition"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.11.1
@@ -18,8 +18,12 @@ RDEPEND=">=dev-libs/glib-2.11.1
 # python deps are for applets
 RDEPEND="${RDEPEND}
 	>=dev-python/pygtk-2.6
-	>=dev-python/gnome-python-2.10
-	>=gnome-base/gnome-desktop-2.10
+	dev-python/pygobject
+
+	>=dev-python/gconf-python-2.10
+	>=dev-python/libgnome-python-2.10
+	>=dev-python/gnome-applets-python-2.10
+
 	>=gnome-base/libbonobo-1.107
 	>=gnome-extra/at-spi-1.5.2
 	>=gnome-base/orbit-2.3.100
@@ -41,5 +45,6 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 src_test() {
-	Xemake check || die
+	Xemake check || die "emake check failed"
+
 }
