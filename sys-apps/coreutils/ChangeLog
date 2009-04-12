@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.246 2009/04/11 16:35:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.247 2009/04/12 07:25:24 vapier Exp $
+
+  12 Apr 2009; Mike Frysinger <vapier@gentoo.org> coreutils-7.1.ebuild,
+  coreutils-7.2.ebuild:
+  Allow mtab to be writable when running tests with mount #265725 by Nick
+  Fortino.
 
   11 Apr 2009; nixnut <nixnut@gentoo.org> coreutils-7.1.ebuild:
   ppc stable #265614
