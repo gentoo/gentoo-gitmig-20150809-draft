@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.14.ebuild,v 1.3 2009/04/04 21:26:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.14.ebuild,v 1.4 2009/04/12 14:17:42 nyhm Exp $
 
 EAPI=2
-inherit eutils games
+inherit autotools eutils games
 
 MY_P="${PN}-bsu-${PV}"
 DESCRIPTION="Chromium B.S.U. - an arcade game"
@@ -26,6 +26,7 @@ RDEPEND="media-fonts/dejavu
 		media-libs/freealut
 		media-libs/openal
 	)
+	nls? ( virtual/libintl )
 	sdl? (
 		media-libs/libsdl[X]
 		media-libs/sdl-image[png]
@@ -34,7 +35,12 @@ RDEPEND="media-fonts/dejavu
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-pkgconfig.patch
+	eautoreconf
+}
 
 src_configure() {
 	egamesconf \
