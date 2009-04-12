@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.123 2009/03/28 07:42:56 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.124 2009/04/12 21:26:27 bluebird Exp $
+
+  12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  libxklavier-3.8.ebuild:
+  Stable on sparc, bug #260063
 
   27 Mar 2009; Rémi Cardona <remi@gentoo.org> libxklavier-3.8.ebuild:
   drop stable keywords on 3.8 until xorg-server 1.5.3 goes stable (see bug
