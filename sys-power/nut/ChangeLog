@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.60 2009/03/07 20:30:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.61 2009/04/12 21:18:27 robbat2 Exp $
+
+*nut-2.4.1 (12 Apr 2009)
+
+  12 Apr 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +files/nut-2.4.1-no-libdummy.patch, +nut-2.4.1.ebuild:
+  Version bump per bug #261366. Fixes HAL support with new HAL per bug
+  #195165. Fixes --as-needed compile per bug #231772.
 
   07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> nut-2.2.2.ebuild:
   Migrate to EAPI 2.
