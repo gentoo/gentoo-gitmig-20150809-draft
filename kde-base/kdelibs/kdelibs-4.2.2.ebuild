@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.2.ebuild,v 1.2 2009/04/12 23:22:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.2.ebuild,v 1.3 2009/04/12 23:26:16 scarabeus Exp $
 
 EAPI="2"
 
@@ -188,10 +188,6 @@ src_compile() {
 
 src_install() {
 	kde4-base_src_install
-
-	# FIXME Remove some kate styles conflicting with kile
-	rm -f "${D}/${PREFIX}"/share/apps/katepart/syntax/{bibtex,latex}.xml \
-		|| ewarn "QA Notice: failed to remove some colliding files, not being installed anymore? contact ebuild maintainer"
 
 	if use doc; then
 		einfo "Installing API documentation. This could take a bit of time."
