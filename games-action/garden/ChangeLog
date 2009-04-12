@@ -1,0 +1,10 @@
+# ChangeLog for games-action/garden
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.1 2009/04/12 01:51:57 mr_bones_ Exp $
+
+*garden-1.0.6 (12 Apr 2009)
+
+  12 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +garden-1.0.6.ebuild:
+  initial commit - ebuild submitted by David Valentim Dias via bug #265726
+
