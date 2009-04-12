@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.63 2009/04/11 00:10:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.64 2009/04/12 04:32:13 matsuu Exp $
+
+*awesome-3.2.1-r1 (12 Apr 2009)
+
+  12 Apr 2009; MATSUU Takuto <matsuu@gentoo.org> +awesome-3.2.1-r1.ebuild:
+  define SYSCONFDIR, bug #265718.
 
   11 Apr 2009; MATSUU Takuto <matsuu@gentoo.org> -awesome-3.2-r1.ebuild,
   awesome-3.2.1.ebuild:
