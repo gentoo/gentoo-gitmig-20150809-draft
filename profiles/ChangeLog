@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2524 2009/04/11 20:32:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2525 2009/04/12 14:27:32 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Apr 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Mask net-www/adobesvg for removal, bug 265066.
 
   11 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   mask kde 4.2.2
