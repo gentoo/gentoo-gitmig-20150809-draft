@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.0.0_beta2-r1.ebuild,v 1.4 2009/04/11 15:37:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.0.0.ebuild,v 1.1 2009/04/12 20:28:12 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug htmlhandbook"
+IUSE="debug doc"
 
 RDEPEND="
 	!kde-misc/krusader:0
@@ -27,14 +27,13 @@ DEPEND="${RDEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}/actionproperty-qt45.patch"
-	"${FILESDIR}/${PV}-gcc44.patch"
+	"${FILESDIR}/2.0.0_beta2-gcc44.patch"
 )
 
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	if ! use htmlhandbook; then
+	if ! use doc; then
 		sed -i \
 			-e "s:^add_subdirectory([[:space:]]doc[[:space:]]):#nodoc:g" \
 			CMakeLists.txt || die "removing docs failed"
