@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.113 2009/04/12 06:13:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.114 2009/04/12 16:51:13 armin76 Exp $
+
+  12 Apr 2009; Raúl Porcel <armin76@gentoo.org> kttsd-4.2.1.ebuild:
+  Add ~alpha/~ia64
 
 *kttsd-4.2.2 (11 Apr 2009)
 
