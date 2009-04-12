@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bug-buddy-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/ChangeLog,v 1.15 2009/04/06 16:09:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bug-buddy-python/ChangeLog,v 1.16 2009/04/12 21:19:28 bluebird Exp $
+
+  12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  bug-buddy-python-2.24.1.ebuild:
+  Stable on sparc, bug #260063
 
   06 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   bug-buddy-python-2.24.1.ebuild:

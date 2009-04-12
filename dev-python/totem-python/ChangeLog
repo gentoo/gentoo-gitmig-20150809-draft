@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/totem-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/ChangeLog,v 1.13 2009/04/03 15:46:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/ChangeLog,v 1.14 2009/04/12 21:25:29 bluebird Exp $
+
+  12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  totem-python-2.24.1.ebuild:
+  Stable on sparc, bug #260063
 
   03 Apr 2009; Joseph Jezak <josejx@gentoo.org> totem-python-2.24.1.ebuild:
   Marked ppc/ppc64 stable for bug #262744.

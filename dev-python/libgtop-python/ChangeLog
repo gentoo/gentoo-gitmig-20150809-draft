@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libgtop-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libgtop-python/ChangeLog,v 1.13 2009/04/03 15:44:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libgtop-python/ChangeLog,v 1.14 2009/04/12 21:23:28 bluebird Exp $
+
+  12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
+  libgtop-python-2.24.1.ebuild:
+  Stable on sparc, bug #260063
 
   03 Apr 2009; Joseph Jezak <josejx@gentoo.org>
   libgtop-python-2.24.1.ebuild:
