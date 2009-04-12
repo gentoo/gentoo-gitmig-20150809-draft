@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0-r3.ebuild,v 1.6 2008/07/06 18:00:09 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0-r3.ebuild,v 1.7 2009/04/12 20:48:19 robbat2 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -24,7 +24,7 @@ DEPEND="sys-devel/gcc
 
 src_unpack() {
 	unpack ${DEBIANPKG_TARBALL}
-	EPATCH_OPTS="-d ${S} -p1" epatch ${DISTDIR}/${DEBIANPKG_PATCH}
+	EPATCH_OPTS="-d ${S} -p1" epatch "${DISTDIR}"/${DEBIANPKG_PATCH}
 }
 
 src_compile() {
@@ -32,13 +32,13 @@ src_compile() {
 }
 
 src_install() {
-	doman ${S}/${PN}.8
+	doman ${PN}.8
 	into /
 	dosbin ${PN}
 	# there really is no better documentation than the sourcecode :-)
 	dodoc ${PN}.c
 	insinto /etc/modules.d
-	newins ${FILESDIR}/modules.d-bond-1.1.0-r3 bond
+	newins "${FILESDIR}"/modules.d-bond-1.1.0-r3 bond
 }
 
 pkg_postinst() {

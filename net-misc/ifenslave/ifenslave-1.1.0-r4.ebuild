@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0-r4.ebuild,v 1.1 2009/04/12 20:44:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0-r4.ebuild,v 1.2 2009/04/12 20:48:19 robbat2 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -24,7 +24,7 @@ DEPEND="sys-devel/gcc
 
 src_unpack() {
 	unpack ${DEBIANPKG_TARBALL}
-	EPATCH_OPTS="-d ${S} -p1" epatch ${DISTDIR}/${DEBIANPKG_PATCH}
+	EPATCH_OPTS="-d ${S} -p1" epatch "${DISTDIR}"/${DEBIANPKG_PATCH}
 }
 
 src_compile() {
@@ -32,20 +32,20 @@ src_compile() {
 }
 
 src_install() {
-	doman ${S}/${PN}.8
+	doman ${PN}.8
 	into /
 	dosbin ${PN}
 	# there really is no better documentation than the sourcecode :-)
 	dodoc ${PN}.c
 	insinto /etc/modprobe.d
-	newins ${FILESDIR}/modules.d-bond-1.1.0-r3 bond
+	newins "${FILESDIR}"/modules.d-bond-1.1.0-r3 bond
 }
 
 pkg_preinst() {
 	if [[ -a /etc/modules.d/bond ]] && [[ ! -a /etc/modprobe.d/bond ]]; then
 		elog "Moving old bond configuration in modules.d to new"
 		elog "location in modprobe.d in /etc/"
-		mv "${ROOT}/etc/modules.d/bond" "${ROOT}/etc/modprobe.d/bond"
+		mv "${ROOT}"/etc/{modules,modprobe}.d/bond
 	fi
 }
 

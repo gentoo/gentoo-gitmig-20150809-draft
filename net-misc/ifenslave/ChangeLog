@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ifenslave
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.17 2009/04/12 20:44:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.18 2009/04/12 20:48:19 robbat2 Exp $
+
+  12 Apr 2009; Robin H. Johnson <robbat2@gentoo.org>
+  ifenslave-1.1.0-r3.ebuild, ifenslave-1.1.0-r4.ebuild:
+  Make repoman happy.
 
 *ifenslave-1.1.0-r4 (12 Apr 2009)
 
