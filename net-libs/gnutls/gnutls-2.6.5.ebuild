@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.6.3.ebuild,v 1.2 2009/01/10 01:33:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.6.5.ebuild,v 1.1 2009/04/12 18:07:52 arfrever Exp $
 
 EAPI="2"
-inherit eutils libtool autotools
+inherit autotools eutils libtool
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -44,10 +44,9 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	for dir in gl/m4 m4 lib/gl/m4 lib/m4 libextra/gl/m4 libextra/m4 ; do
+src_prepare() {
+	local dir
+	for dir in m4 lib/m4 libextra/m4 ; do
 		rm -f ${dir}/lt* ${dir}/libtool.m4
 	done
 	find . -name ltmain.sh -exec rm {} \;
@@ -56,7 +55,9 @@ src_unpack() {
 	# https://savannah.gnu.org/support/?106542
 	epatch "${FILESDIR}"/gnutls-2.6.0-cxx-configure.in.patch
 	epatch "${FILESDIR}"/gnutls-2.6.0-openpgp-selftest.patch
+
 	eautoreconf
+
 	elibtoolize # for sane .so versioning on FreeBSD
 }
 
@@ -64,11 +65,11 @@ src_configure() {
 	local myconf
 	use bindist && myconf="--without-lzo" || myconf="$(use_with lzo)"
 	econf  \
-		$(use_with zlib) \
-		$(use_enable nls) \
-		$(use_enable guile) \
 		$(use_enable cxx) \
 		$(use_enable doc gtk-doc) \
+		$(use_enable guile) \
+		$(use_enable nls) \
+		$(use_with zlib) \
 		${myconf}
 }
 
