@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2529 2009/04/13 04:11:12 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2530 2009/04/13 09:10:04 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Apr 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  mask live version of app-doc/pms
 
   13 Apr 2009; Jeff Gardner <je_fro@gentoo.org> package.mask:
   p.mask several ati-drivers versions before cleanup
