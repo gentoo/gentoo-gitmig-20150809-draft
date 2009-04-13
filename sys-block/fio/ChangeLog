@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/fio
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.16 2008/12/07 02:37:16 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.17 2009/04/13 01:58:42 robbat2 Exp $
+
+*fio-1.25.1 (13 Apr 2009)
+
+  13 Apr 2009; Robin H. Johnson <robbat2@gentoo.org> +fio-1.25.1.ebuild:
+  Version bump.
 
 *fio-1.23 (07 Dec 2008)
 
