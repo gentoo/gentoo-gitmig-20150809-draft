@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.149 2009/04/13 02:21:46 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.150 2009/04/13 03:42:48 je_fro Exp $
+
+  13 Apr 2009; Jeff Gardner <je_fro@gentoo.org>
+  -files/8.476/ati-powermode-opt-path-2.patch:
+  More cleanup
 
   13 Apr 2009; Jeff Gardner <je_fro@gentoo.org>
   -files/8.542/ati-drivers-2.6.27.patch,
