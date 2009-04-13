@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/root
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.44 2009/04/06 22:33:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.45 2009/04/13 11:32:58 bicatali Exp $
+
+  13 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  root-5.20.00-r3.ebuild, -root-5.22.00.ebuild, root-5.22.00-r1.ebuild:
+  Applied a patch from Ben Bannier to fix cint7 without ROOTSYS (bug
+  #263332) and allow cross-compiling (thanks jer, bug #265482)
 
 *root-5.22.00-r1 (06 Apr 2009)
 

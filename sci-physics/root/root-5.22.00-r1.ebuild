@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.22.00-r1.ebuild,v 1.1 2009/04/06 22:33:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.22.00-r1.ebuild,v 1.2 2009/04/13 11:32:58 bicatali Exp $
 
 EAPI=2
 inherit versionator eutils qt4 fortran elisp-common fdo-mime toolchain-funcs
@@ -9,7 +9,7 @@ inherit versionator eutils qt4 fortran elisp-common fdo-mime toolchain-funcs
 DOC_PV=5_21
 ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4
-PATCH_PV=p01
+PATCH_PV=p02
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
@@ -110,6 +110,7 @@ pkg_setup() {
 src_prepare() {
 
 	epatch "${WORKDIR}"/${P}-svn28086.patch
+	epatch "${WORKDIR}"/${P}-cint7-libdir.patch
 	epatch "${WORKDIR}"/${P}-prop-flags.patch
 	epatch "${WORKDIR}"/${P}-as-needed.patch
 	epatch "${WORKDIR}"/${P}-xrootd-shared.patch
@@ -146,6 +147,9 @@ src_prepare() {
 src_configure() {
 	# the configure script is not the standard autotools
 	./configure \
+		--with-cc=$(tc-getCC) \
+		--with-cxx=$(tc-getCXX) \
+		--with-f77=${FORTRANC} \
 		--fail-on-missing \
 		--prefix=/usr \
 		--libdir=/usr/$(get_libdir)/${PN} \

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r3.ebuild,v 1.6 2009/04/06 22:33:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r3.ebuild,v 1.7 2009/04/13 11:32:58 bicatali Exp $
 
 EAPI=1
 inherit versionator eutils qt4 fortran elisp-common fdo-mime
@@ -145,6 +145,9 @@ src_unpack() {
 src_compile() {
 	# the configure script is not the standard autotools
 	./configure \
+		--with-cc=$(tc-getCC) \
+		--with-cxx=$(tc-getCXX) \
+		--with-f77=${FORTRANC} \
 		--fail-on-missing \
 		--prefix=/usr \
 		--libdir=/usr/$(get_libdir)/${PN} \
