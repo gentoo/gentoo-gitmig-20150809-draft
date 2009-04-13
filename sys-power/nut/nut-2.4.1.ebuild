@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.1.ebuild,v 1.1 2009/04/12 21:18:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.1.ebuild,v 1.2 2009/04/13 01:06:31 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -133,7 +133,7 @@ src_install() {
 	newins scripts/udev/nut-usbups.rules 70-nut-usbups.rules
 
 	keepdir /var/lib/nut
-	
+
 	einfo "Setting up permissions on files and directories"
 	fperms 0700 /var/lib/nut
 	fowners nut:nut /var/lib/nut
