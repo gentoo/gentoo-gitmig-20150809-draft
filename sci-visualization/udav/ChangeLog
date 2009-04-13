@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/udav
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/ChangeLog,v 1.2 2008/12/13 06:49:48 grozin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/udav/ChangeLog,v 1.3 2009/04/13 13:23:44 grozin Exp $
+
+*udav-0.5.1 (13 Apr 2009)
+
+  13 Apr 2009; Andrey Grozin <grozin@gentoo.org>
+  +files/udav-0.5.1-pro.patch, -files/udav-0.5-pro.patch, metadata.xml,
+  -udav-0.5.ebuild, +udav-0.5.1.ebuild:
+  Version bump
 
   13 Dec 2008; Andrey Grozin <grozin@gentoo.org> udav-0.5.ebuild:
   Dependencies fixed
