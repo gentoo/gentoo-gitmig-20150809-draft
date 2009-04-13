@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/btrace
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.15 2008/09/03 21:01:12 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.16 2009/04/13 00:59:54 robbat2 Exp $
+
+*btrace-1.0.0 (13 Apr 2009)
+
+  13 Apr 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +files/btrace-1.0.0-parallel-make.patch, +btrace-1.0.0.ebuild:
+  Version bump per bug #254611. Parallel make fix per bug #233389.
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   btrace-0.0.20060428050322.ebuild, btrace-0.0.20060614042007.ebuild,
