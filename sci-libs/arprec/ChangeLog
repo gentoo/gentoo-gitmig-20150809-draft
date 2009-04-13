@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/arprec
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.1 2009/04/13 21:48:34 grozin Exp $
+
+*arprec-2.2.2 (14 Apr 2009)
+
+  14 Apr 2009; Andrey Grozin <grozin@gentoo.org> +metadata.xml,
+  +arprec-2.2.2.ebuild:
+  Initial import
+
