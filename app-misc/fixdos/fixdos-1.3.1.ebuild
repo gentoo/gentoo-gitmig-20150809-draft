@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/fixdos-1.3.1.ebuild,v 1.17 2006/09/03 19:55:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/fixdos-1.3.1.ebuild,v 1.18 2009/04/13 02:39:18 darkside Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Set of utilities such as crlf which converts files between UNIX and DOS newlines"
 HOMEPAGE="http://e.co.za/marius/"
@@ -27,7 +27,8 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die
+	tc-export CC
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
