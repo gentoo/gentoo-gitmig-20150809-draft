@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.27 2009/04/12 06:47:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.28 2009/04/13 22:56:02 gengor Exp $
+
+  13 Apr 2009; Gordon Malm <gengor@gentoo.org>
+  +files/systemsettings-4.2.1-kxkb-strip-hot_plugging-support.patch,
+  systemsettings-4.2.1-r1.ebuild:
+  Add patch to enable compile with <gcc-4.1.2.
 
 *systemsettings-4.2.2 (11 Apr 2009)
 
