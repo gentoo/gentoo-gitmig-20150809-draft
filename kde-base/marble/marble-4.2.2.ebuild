@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.2.2.ebuild,v 1.1 2009/04/12 06:36:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.2.2.ebuild,v 1.2 2009/04/13 00:08:29 scarabeus Exp $
 
 EAPI="2"
 
@@ -46,6 +46,10 @@ src_configure() {
 		$(cmake-utils_use_with python PyQt4)
 		$(cmake-utils_use_with python PythonLibrary)
 		$(cmake-utils_use_with python SIP)"
+
+	sed -i \
+		-e 's:add_subdirectory(cmake):#dontwantit:g' \
+		CMakeLists.txt || die "sed to disable file collisions failed"
 
 	find "${S}/marble/src/bindings/python/sip" -name "*.sip" | xargs -- sed -i 's/#include <marble\//#include </'
 

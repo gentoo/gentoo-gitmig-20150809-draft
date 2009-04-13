@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.28 2009/04/12 06:36:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.29 2009/04/13 00:08:29 scarabeus Exp $
+
+  13 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> marble-4.2.2.ebuild:
+  Fix collision. Per bug #265842.
 
 *marble-4.2.2 (11 Apr 2009)
 
