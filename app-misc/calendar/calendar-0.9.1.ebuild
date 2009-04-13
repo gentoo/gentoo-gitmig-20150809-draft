@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/calendar/calendar-0.9.1.ebuild,v 1.17 2008/03/26 18:23:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/calendar/calendar-0.9.1.ebuild,v 1.18 2009/04/13 03:04:40 darkside Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Standard unix calendar program for Linux, ported from OpenBSD"
 HOMEPAGE="http://bsdcalendar.sourceforge.net/"
@@ -14,6 +16,7 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_compile() {
+	tc-export CC
 	emake || die "emake failed"
 }
 
