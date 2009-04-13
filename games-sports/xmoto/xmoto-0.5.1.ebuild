@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.1.ebuild,v 1.1 2009/04/13 17:37:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.1.ebuild,v 1.2 2009/04/13 17:58:24 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -64,7 +64,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README TODO NEWS ChangeLog
 
-	rm -f "${GAMES_DATADIR}/${PN}"/Textures/Fonts/DejaVuSans.ttf
+	rm -f "${D}${GAMES_DATADIR}/${PN}"/Textures/Fonts/DejaVuSans.ttf
 	dosym /usr/share/fonts/dejavu/DejaVuSans.ttf "${GAMES_DATADIR}/${PN}"/Textures/Fonts/
 	doicon extra/xmoto.xpm
 	make_desktop_entry ${PN} Xmoto
