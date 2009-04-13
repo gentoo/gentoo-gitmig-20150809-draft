@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.141 2009/03/24 21:34:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.142 2009/04/13 01:58:54 mr_bones_ Exp $
+
+*wesnoth-1.6.1 (13 Apr 2009)
+
+  13 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/config.h.cmake, +wesnoth-1.6.1.ebuild:
+  version bump
 
   24 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org> wesnoth-1.6a.ebuild:
   touchups; install desktop files (bug #263666)
