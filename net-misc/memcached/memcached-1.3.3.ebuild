@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.3.3.ebuild,v 1.1 2009/04/12 21:00:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.3.3.ebuild,v 1.2 2009/04/13 02:28:41 robbat2 Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_PV="${PV/_rc/-rc}"
 MY_P="${PN}-${MY_PV}"
@@ -28,6 +28,8 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-1.2.2-fbsd.patch"
+	sed -i -e 's,-Werror,,g' configure.ac || die "sed failed"
+	eautoreconf
 }
 
 src_compile() {
