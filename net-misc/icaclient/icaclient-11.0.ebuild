@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0.ebuild,v 1.2 2009/04/03 23:59:40 fauli Exp $
-
-EAPI=1
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0.ebuild,v 1.3 2009/04/13 15:34:19 fauli Exp $
 
 inherit eutils multilib rpm
 
@@ -14,7 +12,7 @@ SRC_URI="ICAClient-11.0-1.i386.rpm"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE="linguas_de linguas_ja +motif nsplugin"
+IUSE="linguas_de linguas_ja"
 RESTRICT="mirror strip userpriv fetch"
 
 QA_TEXTRELS="opt/ICAClient/VDSCARD.DLL
@@ -32,13 +30,15 @@ QA_EXECSTACK="opt/ICAClient/wfica.bin
 
 RDEPEND="x11-terms/xterm
 	media-fonts/font-adobe-100dpi
+	media-fonts/font-misc-misc
+	media-fonts/font-cursor-misc
 	x86? (
 		x11-libs/libXp
 		x11-libs/libXaw
 		x11-libs/libX11
 		x11-libs/libSM
 		x11-libs/libICE
-		motif? ( >=x11-libs/openmotif-2.3.1 )
+		>=x11-libs/openmotif-2.3.1
 		)
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-20080316 )"
 DEPEND=""
@@ -47,10 +47,6 @@ S="${WORKDIR}/usr/lib/ICAClient"
 pkg_setup() {
 	# Binary x86 package
 	has_multilib_profile && ABI="x86"
-	if ! use motif && ! use nsplugin; then
-		eerror "At least one USE flag out of nsplugin and motif must be enabled"
-		die
-	fi
 }
 
 pkg_nofetch() {
@@ -109,23 +105,21 @@ src_install() {
 
 	doenvd "${FILESDIR}"/10ICAClient
 
-	use nsplugin && dosym /opt/ICAClient/npica.so /usr/$(get_libdir)/nsbrowser/plugins/npica.so
+	dosym /opt/ICAClient/npica.so /usr/$(get_libdir)/nsbrowser/plugins/npica.so
 
-	if use motif; then
-		# wfica has libxcb locking bugs, so provide a wrapper.  It needs to be in
-		# /opt/ICAClient to ensure it gets called, so rename wfica to wfica.bin.
-		exeinto /opt/ICAClient
-		doexe wfcmgr.bin wfica_assoc.sh wfica.sh util/wfcmgr
-		newexe wfica wfica.bin
-		make_wrapper wfica 'env LC_ALL="" LANG="" LIBXCB_ALLOW_SLOPPY_LOCK=1 /opt/ICAClient/wfica.bin' . /opt/ICAClient /opt/ICAClient
+	# wfica has libxcb locking bugs, so provide a wrapper.  It needs to be in
+	# /opt/ICAClient to ensure it gets called, so rename wfica to wfica.bin.
+	exeinto /opt/ICAClient
+	doexe wfcmgr.bin wfica_assoc.sh wfica.sh util/wfcmgr
+	newexe wfica wfica.bin
+	make_wrapper wfica 'env LC_ALL="" LANG="" LIBXCB_ALLOW_SLOPPY_LOCK=1 /opt/ICAClient/wfica.bin' . /opt/ICAClient /opt/ICAClient
 
-		# The .desktop file included in the rpm links to /usr/lib, so we
-		# make a new one.  The program gives errors and has slowdowns if
-		# the locale is not English, so strip it since it has no
-		# translations anyway
-		doicon icons/*
-		make_wrapper wfcmgr /opt/ICAClient/wfcmgr . /opt/ICAClient
-		sed -e  's:^\# Configuration items.*:. /opt/ICAClient/nls/en/wfcmgr.msg:g' -i "${D}"/opt/ICAClient/wfcmgr
-		make_desktop_entry wfcmgr 'Citrix ICA Client' manager
-	fi
+	# The .desktop file included in the rpm links to /usr/lib, so we
+	# make a new one.  The program gives errors and has slowdowns if
+	# the locale is not English, so strip it since it has no
+	# translations anyway
+	doicon icons/*
+	make_wrapper wfcmgr /opt/ICAClient/wfcmgr . /opt/ICAClient
+	sed -e  's:^\# Configuration items.*:. /opt/ICAClient/nls/en/wfcmgr.msg:g' -i "${D}"/opt/ICAClient/wfcmgr
+	make_desktop_entry wfcmgr 'Citrix ICA Client' manager
 }

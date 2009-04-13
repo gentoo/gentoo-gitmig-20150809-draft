@@ -12,7 +12,7 @@
 <longdescription lang="ja">
 	ICAClient は Citrix Metaframe Server への Linux 用クライアントです。
 </longdescription>
-<use>
-  <flag name='motif'>Provide the motif based connection manager</flag>
-</use>
+<longdescription lang="de">
+	ICAClient ist ein Programm zum Zugriff auf Citrix Metaframe Server.
+</longdescription>
 </pkgmetadata>
