@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.9 2009/04/02 17:21:56 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.10 2009/04/13 19:41:17 hncaldwell Exp $
+
+*anki-0.9.9.7.4 (13 Apr 2009)
+
+  13 Apr 2009; Heath Caldwell <hncaldwell@gentoo.org> -anki-0.9.9.4.ebuild,
+  -anki-0.9.9.5.ebuild, -anki-0.9.9.6.ebuild, anki-0.9.9.7.1.ebuild,
+  +anki-0.9.9.7.4.ebuild:
+  Added svg USE dependency for PyQt4 (fixes bug #265999). Version bump.
+  Removed some old ebuilds.
 
 *anki-0.9.9.7.1 (02 Apr 2009)
 
