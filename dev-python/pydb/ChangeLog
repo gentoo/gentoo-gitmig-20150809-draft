@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pydb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/ChangeLog,v 1.1 2009/03/14 20:38:39 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/ChangeLog,v 1.2 2009/04/13 17:51:36 grozin Exp $
+
+*pydb-1.26 (14 Apr 2009)
+
+  14 Apr 2009; Andrey Grozin <grozin@gentoo.org> +pydb-1.26.ebuild:
+  Version bump
 
 *pydb-1.25 (15 Mar 2009)
 
