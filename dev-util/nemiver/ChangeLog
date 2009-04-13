@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/nemiver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.21 2009/02/05 05:36:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nemiver/ChangeLog,v 1.22 2009/04/13 10:08:47 eva Exp $
+
+*nemiver-0.6.6 (13 Apr 2009)
+
+  13 Apr 2009; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  +nemiver-0.6.6.ebuild:
+  Bump to 0.6.6. Add memoryview widget support, bug #234002.
 
   05 Feb 2009; Jeremy Olexa <darkside@gentoo.org> nemiver-0.6.1.ebuild,
   nemiver-0.6.4.ebuild:
