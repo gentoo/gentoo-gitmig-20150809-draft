@@ -1,6 +1,6 @@
 # Copyright 2003-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ignuit-0.0.13.ebuild,v 1.1 2009/04/12 05:42:11 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ignuit-0.0.13.ebuild,v 1.2 2009/04/13 00:13:56 ken69267 Exp $
 
 DESCRIPTION="memorization aid based on the Leitner flashcard system"
 HOMEPAGE="http://homepages.ihug.co.nz/~trmusson/programs.html#ignuit"
@@ -9,7 +9,7 @@ SRC_URI="http://homepages.ihug.co.nz/~trmusson/stuff/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="examples"
 
 RDEPEND=">=gnome-base/libgnomeui-2.22.1
 	gnome-base/gconf
@@ -30,4 +30,9 @@ DEPEND="${RDEPEND}
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS NEWS README TODO || die "dodoc failed"
+
+	if use examples; then
+		insinto /usr/share/doc/${PF}
+		doins -r examples
+	fi
 }
