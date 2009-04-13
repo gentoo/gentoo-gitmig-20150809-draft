@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/boxes
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.20 2008/03/27 19:25:08 nixnut Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.21 2009/04/13 03:06:29 darkside Exp $
+
+  13 Apr 2009; Jeremy Olexa <darkside@gentoo.org> boxes-1.1.ebuild:
+  QA: respect CC, bug 243614
 
   27 Mar 2008; nixnut <nixnut@gentoo.org> boxes-1.1.ebuild:
   Stable on ppc wrt bug 214931
