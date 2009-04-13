@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.2.2.ebuild,v 1.1 2009/04/11 23:08:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.2.2.ebuild,v 1.2 2009/04/13 12:45:52 scarabeus Exp $
 
 EAPI="2"
 
@@ -14,6 +14,8 @@ IUSE="debug doc +plasma bittorrent bittorrent-external +semantic-desktop sqlite"
 DEPEND="
 	dev-libs/libpcre
 	>=kde-base/kdelibs-${PV}:${SLOT}[kdeprefix=,semantic-desktop?]
+	>=kde-base/libkonq-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/libkworkspace-${PV}:${SLOT}[kdeprefix=]
 	bittorrent? (
 		app-crypt/qca:2
 		dev-libs/gmp
