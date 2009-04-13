@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.4.ebuild,v 1.1 2008/06/15 10:55:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.6.ebuild,v 1.1 2009/04/13 17:27:38 bicatali Exp $
 
-inherit elisp-common flag-o-matic toolchain-funcs bash-completion
+EAPI=2
+inherit elisp-common bash-completion autotools
 
 DESCRIPTION="2- and 3-D plotter for creating images (to be used in LaTeX)"
 HOMEPAGE="http://mathcs.holycross.edu/~ahwang/current/ePiX.html"
@@ -11,30 +12,29 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="emacs"
+IUSE="doc emacs examples"
 
 DEPEND="virtual/latex-base
 		|| ( ( dev-texlive/texlive-pstricks
-				dev-texlive/texlive-pictures
-				dev-texlive/texlive-latexextra
-				dev-tex/xcolor )
+			   dev-texlive/texlive-pictures
+			   dev-texlive/texlive-latexextra
+			   dev-tex/xcolor )
 			app-text/tetex
 			app-text/ptex )
 		emacs? ( virtual/emacs )"
-
+RDEPEND="${DEPEND}"
 SITEFILE=50${PN}-gentoo.el
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-1.1.17-doc-gentoo.patch
-	sed -e 's:doc/${PACKAGE_TARNAME}:doc/${PACKAGE_TARNAME}-${PACKAGE_VERSION}:' \
-	-i configure || die "sed on configure failed"
+src_prepare() {
+	# disable automatic install of doc and examples
+	epatch "${FILESDIR}"/${P}-doc-gentoo.patch
+	eautoreconf
 }
 
-src_compile() {
-	econf --disable-epix-el || die "configure failed"
-	emake || die "compile failed"
+src_configure() {
+	econf \
+		--docdir=/usr/share/doc/${PF} \
+		--disable-epix-el
 }
 
 src_install() {
@@ -48,6 +48,15 @@ src_install() {
 	fi
 	dobashcompletion bash_completions \
 		|| die "install of bash completions failed"
+	if use doc; then
+		insinto /usr/share/doc/${PF}
+		doins doc/*gz || die
+	fi
+	if use examples; then
+		cd samples
+		insinto /usr/share/doc/${PF}/examples
+		doins *.xp *.flx *c *h README || die
+	fi
 }
 
 pkg_postinst() {
