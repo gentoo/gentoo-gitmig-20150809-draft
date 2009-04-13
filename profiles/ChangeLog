@@ -1,13 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2527 2009/04/13 02:36:35 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2528 2009/04/13 02:49:28 je_fro Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
-  13 Apr 2009; Jeff Gardner <je_fro@gentoo.org> package.mask:
+  13 Apr 2009; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
   Removed ati-drivers versions from p.mask that are no longer in the tree.
+
+  12 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> package.mask:
+  Update mask for kde4. Block for change older than 4.2.2 due to eclass
+  update that is comming next.
 
   12 Apr 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Mask net-www/adobesvg for removal, bug 265066.
