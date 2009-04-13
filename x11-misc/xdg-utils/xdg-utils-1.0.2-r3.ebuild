@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.0.2-r3.ebuild,v 1.2 2009/04/12 23:52:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.0.2-r3.ebuild,v 1.3 2009/04/13 06:14:11 mr_bones_ Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
 	dodoc ChangeLog README RELEASE_NOTES TODO || die "dodoc failed."
 	newdoc scripts/README README.scripts || die "newdoc failed."
-	
+
 	if use doc; then
 		dohtml -r scripts/html || die "dohtml failed."
 	fi
