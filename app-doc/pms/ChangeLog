@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.10 2009/04/12 18:48:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.11 2009/04/13 08:45:32 fauli Exp $
+
+*pms-2 (13 Apr 2009)
+
+  13 Apr 2009; Christian Faulhammer <fauli@gentoo.org> +pms-2.ebuild:
+  add an ebuild which installs the approved EAPI 2 version of the PMS
 
   12 Apr 2009; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   add ulm and myself as maintainers
