@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD-Barcode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Barcode/ChangeLog,v 1.4 2009/03/12 17:20:46 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Barcode/ChangeLog,v 1.5 2009/04/13 10:25:30 tcunha Exp $
+
+  13 Apr 2009; Tiago Cunha <tcunha@gentoo.org> GD-Barcode-1.15.ebuild:
+  stable amd64
 
   12 Mar 2009; Tiago Cunha <tcunha@gentoo.org> GD-Barcode-1.15.ebuild:
   keyworded ~arch for amd64, bug 262162
