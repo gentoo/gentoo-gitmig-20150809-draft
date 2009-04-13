@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9660 2009/04/13 00:02:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9661 2009/04/13 02:36:35 je_fro Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -891,11 +891,6 @@ net-wireless/blueman
 # Peter Volkov <pva@gentoo.org> (16 Nov 2008)
 # This is developemnt version. Why it was not masked from the beginning?
 >=net-misc/socat-2.0.0_beta1
-
-# Luca Barbato <lu_zero@gentoo.org> (15 Nov 2008)
-# Partially broken
-=x11-drivers/ati-drivers-8.552
-=x11-drivers/ati-drivers-8.552-r1
 
 # Mike Doty <kingtaco@gentoo.org> (9 Nov 2008)
 # Masked for testing
