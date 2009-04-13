@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-9999.ebuild,v 1.5 2009/04/12 08:19:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-9999.ebuild,v 1.6 2009/04/13 02:49:39 robbat2 Exp $
 
 EAPI=2
 
@@ -244,6 +244,10 @@ src_install() {
 		docinto /
 		newdoc  "${S}"/gitweb/INSTALL INSTALL.gitweb
 		newdoc  "${S}"/gitweb/README README.gitweb
+
+		find "${D}"/usr/lib64/perl5/ \
+			-name .packlist \
+			-exec rm \{\} \;
 	fi
 	if ! use subversion ; then
 		rm -f "${D}"/usr/libexec/git-core/git-svn \
