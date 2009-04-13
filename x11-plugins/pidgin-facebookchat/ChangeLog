@@ -1,6 +1,15 @@
 # ChangeLog for x11-plugins/pidgin-facebookchat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.15 2008/12/31 07:12:28 voyageur Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.16 2009/04/13 16:50:43 voyageur Exp $
+
+*pidgin-facebookchat-1.50 (13 Apr 2009)
+
+  13 Apr 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -pidgin-facebookchat-1.38.ebuild, -pidgin-facebookchat-1.39.ebuild,
+  -pidgin-facebookchat-1.41.ebuild, -pidgin-facebookchat-1.43.ebuild,
+  -pidgin-facebookchat-1.44.ebuild, +pidgin-facebookchat-1.50.ebuild:
+  Version bump, fixes a bandwidth issue, and a crash-on-quit one. Also
+  remove some older versions
 
 *pidgin-facebookchat-1.47 (31 Dec 2008)
 

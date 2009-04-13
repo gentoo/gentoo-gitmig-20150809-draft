@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.38.ebuild,v 1.1 2008/10/27 15:29:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.50.ebuild,v 1.1 2009/04/13 16:50:43 voyageur Exp $
 
 inherit toolchain-funcs multilib
 
@@ -15,17 +15,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="net-im/pidgin"
+RDEPEND=">=net-im/pidgin-2.3.0"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
-S=${WORKDIR}
+S=${WORKDIR}/${PN}
 
 src_compile() {
+	# Grabbed from makefile
+	FACEBOOK_SOURCES="libfacebook.c fb_blist.c fb_connection.c fb_info.c fb_managefriends.c fb_messages.c fb_notifications.c fb_search.c"
 	# Remove NO_ZLIB when it's working
 	$(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} `pkg-config --cflags purple` \
 		-DPURPLE_PLUGINS -DENABLE_NLS -DNO_ZLIB -shared -fPIC -DPIC \
-		libfacebook.c -o libfacebook.so || die "compilation failed"
+		${FACEBOOK_SOURCES} -o libfacebook.so || die "compilation failed"
 }
 
 src_install() {
