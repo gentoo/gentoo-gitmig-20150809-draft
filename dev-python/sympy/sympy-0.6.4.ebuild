@@ -1,7 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.2.ebuild,v 1.2 2008/10/25 13:20:22 pvdabeel Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.4.ebuild,v 1.1 2009/04/13 18:34:07 grozin Exp $
+EAPI=2
 NEED_PYTHON=2.4
 inherit distutils
 
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples gtk imaging ipython latex mathml opengl pdf png test texmacs"
 
-RDEPEND="mathml? ( dev-libs/libxml2
-		dev-libs/libxslt
-		gtk? ( x11-libs/gtkmathview ) )
+RDEPEND="mathml? ( dev-libs/libxml2[python]
+		dev-libs/libxslt[python]
+		gtk? ( x11-libs/gtkmathview[gtk] ) )
 	latex? ( virtual/latex-base
 		png? ( app-text/dvipng )
 		pdf? ( virtual/ghostscript ) )
@@ -28,25 +28,6 @@ RDEPEND="mathml? ( dev-libs/libxml2
 	>=dev-python/pexpect-2.0"
 DEPEND="doc? ( dev-python/sphinx )
 	test? ( >=dev-python/py-0.9.0 )"
-
-pkg_setup() {
-	if use mathml; then
-		if ! built_with_use dev-libs/libxml2 python; then
-			eerror "dev-libs/libxml2 has to be compiled with 'python' USE-flag."
-			die "Needed USE-flag for dev-libs/libxml2 not found."
-		fi
-
-		if ! built_with_use dev-libs/libxslt python; then
-			eerror "dev-libs/libxslt has to be compiled with 'python' USE-flag."
-			die "Needed USE-flag for dev-libs/libxslt not found."
-		fi
-
-		if use gtk && ! built_with_use x11-libs/gtkmathview gtk; then
-			eerror "x11-libs/gtkmathview has to be compiled with 'gtk' USE-flag."
-			die "Needed USE-flag for x11-libs/gtkmathview not found."
-		fi
-	fi
-}
 
 src_unpack() {
 	distutils_src_unpack
