@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.6.1.ebuild,v 1.1 2009/04/13 01:58:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.6.1.ebuild,v 1.2 2009/04/13 02:10:47 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils toolchain-funcs flag-o-matic games
@@ -90,7 +90,5 @@ src_install() {
 		keepdir "${GAMES_STATEDIR}/run/wesnothd"
 		doinitd "${T}"/wesnothd || die "doinitd failed"
 	fi
-	#doicon icons/{wesnoth-icon.png,wesnoth_editor-icon.png}
-	#domenu icons/*desktop
 	prepgamesdirs
 }
