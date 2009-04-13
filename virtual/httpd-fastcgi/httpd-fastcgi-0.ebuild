@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-fastcgi/httpd-fastcgi-0.ebuild,v 1.1 2007/10/20 14:38:10 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-fastcgi/httpd-fastcgi-0.ebuild,v 1.2 2009/04/13 08:30:43 hollow Exp $
 
 DESCRIPTION="Virtual for FastCGI-enabled webservers"
 HOMEPAGE="http://gentoo.org/"
@@ -18,5 +18,6 @@ RDEPEND="|| (
 	www-servers/nginx
 	www-servers/resin
 	www-servers/skunkweb
+	www-servers/cherokee
 	)"
 DEPEND=""
