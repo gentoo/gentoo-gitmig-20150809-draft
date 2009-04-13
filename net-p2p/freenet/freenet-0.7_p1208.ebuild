@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7_p1205.ebuild,v 1.1 2009/02/27 18:26:21 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7_p1208.ebuild,v 1.1 2009/04/13 13:06:33 tommy Exp $
 
 EAPI=1
 inherit eutils java-pkg-2 java-ant-2 multilib
@@ -71,6 +71,9 @@ src_install() {
 pkg_postinst () {
 	elog "1. Start freenet with /etc/init.d/freenet start."
 	elog "2. Open localhost:8888 in your browser for the web interface."
+	#workaround for previously existing freenet user
+	[[ $(stat --format="%U" /var/freenet) == "freenet" ]] || chown \
+		freenet:freenet /var/freenet
 }
 
 pkg_postrm() {
