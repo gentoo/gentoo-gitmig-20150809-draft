@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.17 2008/09/03 08:51:22 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/tdl-1.5.2.ebuild,v 1.18 2009/04/13 02:32:19 darkside Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Command line To Do List manager"
 HOMEPAGE="http://www.rc0.org.uk/tdl/"
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 	doc? ( virtual/texi2dvi )"
 
 src_compile() {
+	tc-export CC
 	local myconf="--prefix=/usr"
 
 	if ! use readline; then
