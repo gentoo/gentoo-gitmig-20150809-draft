@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/dotur
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/dotur/ChangeLog,v 1.1 2009/04/13 01:06:44 weaver Exp $
+
+  12 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> +ChangeLog, +Manifest:
+  Import from Science overlay
+
+  04 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
+  New package, ebuild written by me
+
