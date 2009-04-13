@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kphone
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.42 2007/02/11 18:17:30 flameeyes Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.43 2009/04/13 23:05:55 darkside Exp $
+
+  13 Apr 2009; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  move to m-needed, bug 194364
 
   11 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> kphone-4.1.0.ebuild:
   Remove virtual/alsa dependency.
