@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-0.3.6.ebuild,v 1.1 2009/02/09 18:42:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-0.3.6.ebuild,v 1.2 2009/04/13 19:20:37 loki_val Exp $
+
+EAPI=2
 
 inherit eutils toolchain-funcs
 
@@ -15,21 +17,16 @@ IUSE=""
 
 DEPEND=">=media-libs/mlt-0.3.6"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.3.4-asneeded.patch"
+	sed -i -e '/ldconfig/d' src/Makefile || die
 }
 
 src_compile() {
-	tc-export CXX
-	econf
-	emake CC="$(tc-getCXX)" || die "emake failed"
+	emake CXX="$(tc-getCXX)" CC="$(tc-getCXX)" || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-
 	dodoc README CUSTOMISING HOWTO
 }
