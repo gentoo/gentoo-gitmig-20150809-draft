@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bfr
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.17 2007/03/12 14:47:44 armin76 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.18 2009/04/13 02:29:32 mr_bones_ Exp $
+
+  13 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> bfr-1.6-r1.ebuild:
+  respect CC (bug #243610)
 
   12 Mar 2007; Raúl Porcel <armin76@gentoo.org> bfr-1.6-r1.ebuild:
   x86 stable
