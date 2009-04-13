@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9665 2009/04/13 09:10:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9666 2009/04/13 11:09:40 caleb Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -328,12 +328,6 @@ net-www/adobesvg
 # Homepage no longer available (#264785)
 # To be removed by the tree cleaners after 30 days.
 net-dialup/qlcr
-
-# Thomas Anderson <gentoofan23@gentoo.org> (10 Apr 2009)
-# Lvm2 ships with device mapper internally and thus blocks against the
-# in-tree device-mapper. Unfortunately some packages still need to be fixed
-# to handle this transition.
-=sys-fs/lvm2-2.02.45
 
 # Jeremy Olexa <darkside@gentoo.org> (10 Apr 2009)
 # The bash-completion upstream naming scheme has drastically changed. As such,
