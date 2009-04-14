@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.0.0.72.ebuild,v 1.2 2009/03/25 23:48:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.0.0.72.ebuild,v 1.3 2009/04/14 09:38:40 armin76 Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="!qt-static? ( http://download.skype.com/linux/${DFILENAME} )
 
 LICENSE="skype-eula"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="qt-static"
 RESTRICT="mirror strip"
 
