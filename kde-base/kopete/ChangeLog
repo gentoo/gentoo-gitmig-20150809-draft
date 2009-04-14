@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.177 2009/04/11 23:45:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.178 2009/04/14 22:43:32 scarabeus Exp $
+
+*kopete-4.2.2-r1 (14 Apr 2009)
+
+  14 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> +kopete-4.2.2-r1.ebuild:
+  Update kopete ebuild to reflect wlm/msn changes. Deprecate msn, and put
+  wlm under msn useflag.
 
 *kopete-4.2.2 (11 Apr 2009)
 
