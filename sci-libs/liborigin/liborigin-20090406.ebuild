@@ -1,15 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20090326.ebuild,v 1.1 2009/04/07 20:54:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20090406.ebuild,v 1.1 2009/04/14 11:27:58 bicatali Exp $
 
 EAPI=2
 inherit eutils qt4
 
-MYP=${PN}2-${PV}
+# hardcoded for now until it's back in sourceforge
+MYP=${PN}2-06042009
 S="${WORKDIR}/${MYP}"
 
 DESCRIPTION="Library for reading OriginLab OPJ project files"
-SRC_URI="mirror://sourceforge/${PN}/${MYP}.tar.gz"
+SRC_URI="mirror://berlios/qtiplot/${MYP}.zip"
 HOMEPAGE="http://sourceforge.net/projects/liborigin/"
 
 LICENSE="GPL-3"
@@ -50,7 +51,7 @@ src_compile() {
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	dodoc README FORMAT
+	dodoc readme FORMAT
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		doins -r doc/html || die "doc install failed"
