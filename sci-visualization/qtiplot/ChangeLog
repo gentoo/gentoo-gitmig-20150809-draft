@@ -1,6 +1,18 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.41 2009/04/08 08:53:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.42 2009/04/14 11:58:42 bicatali Exp $
+
+*qtiplot-0.9.7.7 (14 Apr 2009)
+
+  14 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/qtiplot-0.9.7.4-gcc4.3.patch,
+  -files/qtiplot-0.9.7.4-liborigin-gcc4.3.patch,
+  -files/qtiplot-0.9.7.4-no-python.patch, -files/qtiplot-0.9.7.4-pro.patch,
+  -files/qtiplot-0.9.7.4-sip.patch, +files/qtiplot-0.9.7.7-docbuild.patch,
+  +files/qtiplot-0.9.7.7-syslibs.patch, -qtiplot-0.9.7.4.ebuild,
+  +qtiplot-0.9.7.7.ebuild:
+  Version bump, fixing bug #256543, bug #262939, bug #263675, bug #265623.
+  Removed old version.
 
   08 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
   -qtiplot-0.8.5.ebuild, -qtiplot-0.9.7.2.ebuild, -qtiplot-0.9.7.3.ebuild:
