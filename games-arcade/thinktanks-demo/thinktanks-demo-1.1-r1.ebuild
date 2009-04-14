@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/thinktanks-demo-1.1-r1.ebuild,v 1.3 2008/06/25 16:33:42 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/thinktanks-demo-1.1-r1.ebuild,v 1.4 2009/04/14 07:26:15 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -12,6 +12,7 @@ LICENSE="THINKTANKS"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 RESTRICT="strip"
+PROPERTIES="interactive"
 IUSE=""
 
 DEPEND=""
