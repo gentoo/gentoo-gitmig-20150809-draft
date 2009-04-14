@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/osptoolkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.9 2009/02/17 05:08:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.10 2009/04/14 09:57:59 armin76 Exp $
+
+  14 Apr 2009; Raúl Porcel <armin76@gentoo.org> osptoolkit-3.3.6-r1.ebuild:
+  x86 stable wrt #265494
 
 *osptoolkit-3.3.6-r1 (17 Feb 2009)
 
