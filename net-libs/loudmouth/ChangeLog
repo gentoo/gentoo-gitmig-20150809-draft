@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.82 2009/04/13 21:16:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.83 2009/04/14 04:15:30 jer Exp $
+
+  14 Apr 2009; Jeroen Roovers <jer@gentoo.org> loudmouth-1.4.3.ebuild:
+  Stable for HPPA (bug #265960).
 
   13 Apr 2009; Brent Baude <ranger@gentoo.org> loudmouth-1.4.3.ebuild:
   Marking loudmouth-1.4.3 ppc64 for bug 265960
