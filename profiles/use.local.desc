@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4363 2009/04/14 03:39:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4364 2009/04/14 13:27:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1474,10 +1474,20 @@ media-sound/mixxx:vinylcontrol - Enable vinylcontrol feature
 media-sound/moc:sid - Build with SID (Commodore 64 Audio) support
 media-sound/mp3blaster:sid - Build with SID (Commodore 64 Audio) support
 media-sound/mp3splt-gtk:audacious - Include media-sound/audacious support.
-media-sound/mpd:curl - Support for web streams
-media-sound/mpd:icecast - Enable support for Icecast2
+media-sound/mpd:cdio - Use libcdio for CD support
+media-sound/mpd:curl - Support for web stream listening
+media-sound/mpd:fifo - Support writing audio to a FIFO
+media-sound/mpd:fluidsynth - Enables Fluidsynth MIDI software synthesis
+media-sound/mpd:gprof - Build with profiling support
+media-sound/mpd:http-stream - Support streaming via built-in HTTP server
+media-sound/mpd:icecast - Support for Icecast2 streaming
 media-sound/mpd:id3 - Support for ID3 tags
 media-sound/mpd:lame - Support for MP3 streaming via Icecast2
+media-sound/mpd:lastfmradio - Support listening to last.fm radio stations
+media-sound/mpd:libmms - Support for Microsoft Media Server (MMS) streams via libmms
+media-sound/mpd:pipe - Support writing audio to a pipe
+media-sound/mpd:sid - Build with SID (Commodore 64 Audio) support
+media-sound/mpd:zip - Support for ZIP files
 media-sound/mpfc:cdaudio - Enable cd audio playback support
 media-sound/mpfc:wav - Enable wav audio codec support
 media-sound/mpg123:3dnowext - Enable 3dnowext cpu instructions
