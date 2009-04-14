@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-0.0.90_p3751.ebuild,v 1.2 2009/04/14 15:51:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-0.0.90_p3751.ebuild,v 1.3 2009/04/14 16:40:42 armin76 Exp $
 
 EAPI="1"
 
@@ -13,9 +13,7 @@ OPENGL_DIR="xorg-x11"
 DESCRIPTION="Remote desktop viewer display system"
 HOMEPAGE="http://www.tigervnc.org"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://dev.gentoo.org/~armin76/dist/${P}.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2
-	http://dev.gentoo.org/~armin76/dist/${PATCH}.tar.bz2
 	server? ( ftp://ftp.freedesktop.org/pub/xorg/individual/xserver/xorg-server-${XSERVER_VERSION}.tar.bz2	)"
 
 LICENSE="GPL-2"
@@ -155,27 +153,20 @@ src_install() {
 	make_desktop_entry vncviewer vncviewer vncviewer Network
 
 	if use server ; then
-		dobin vncserver || die "dobin failed"
-		for f in vncviewer/vncviewer vncpasswd/vncpasswd \
-			vncconfig/vncconfig vncserver x0vncserver/x0vncserver; do
-			mv $f.man $f.1
-			doman $f.1
-		done
 		cd xserver/hw/vnc
 		emake DESTDIR="${D}" install || die "emake install failed"
 		! use xorgmodule && rm -rf "${D}"/usr/$(get_libdir)/xorg
 
-		newman Xvnc.man Xvnc.1
 		newconfd "${FILESDIR}"/${PN}.confd ${PN}
 		newinitd "${FILESDIR}"/${PN}.initd ${PN}
 
 		rm "${D}"/usr/$(get_libdir)/xorg/modules/extensions/libvnc.la
 	else
 		cd "${D}"
-		rm usr/bin/vncconfig
-		rm usr/bin/vncpasswd
-		rm usr/bin/vncserver
-		rm usr/bin/x0vncserver
+		for f in vncserver vncpasswd x0vncserver vncconfig; do
+			rm usr/bin/$f
+			rm usr/share/man/man1/$f.1
+		done
 	fi
 }
 

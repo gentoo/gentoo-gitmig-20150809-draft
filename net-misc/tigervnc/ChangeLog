@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.5 2009/04/14 15:51:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.6 2009/04/14 16:40:42 armin76 Exp $
+
+  14 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  tigervnc-0.0.90_p3751.ebuild:
+  Remove some useless code, and remove the man entries if server is not
+  built
 
   14 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   tigervnc-0.0.90_p3751.ebuild:
