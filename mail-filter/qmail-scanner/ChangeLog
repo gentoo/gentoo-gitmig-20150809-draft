@@ -1,6 +1,6 @@
 # ChangeLog for mail-filter/qmail-scanner
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.50 2009/04/14 09:30:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.51 2009/04/14 10:01:53 tove Exp $
 
   14 Apr 2009; Alfredo Tupone <tupone@gentoo.org>
   qmail-scanner-1.25-r1.ebuild, -qmail-scanner-2.01.ebuild,
@@ -68,9 +68,9 @@
   bug #151801 by Michail Baikov
   bug #135636 by Peter Gantner (a.k.a. nephros)
   Adding instruction to make clamav working with qmail-scanner:
-  bug #73001 by David RÃ¶hr <david@rohr.se>
+  bug #73001 by David Röhr <david@rohr.se>
 
-  02 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   qmail-scanner-1.25-r1.ebuild, qmail-scanner-2.01.ebuild:
   (QA) RESTRICT clean up.
 
@@ -78,7 +78,7 @@
   qmail-scanner-1.25-r1.ebuild, qmail-scanner-2.01.ebuild:
   Replacing einfo with elog
 
-  22 Feb 2007; Piotr JaroszyÅski <peper@gentoo.org> ChangeLog:
+  22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
 
   20 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
