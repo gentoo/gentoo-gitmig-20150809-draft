@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/archive-tar-minitar
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.4 2008/03/24 19:04:56 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.5 2009/04/14 20:48:03 gentoofan23 Exp $
+
+  14 Apr 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  archive-tar-minitar-0.5.1.ebuild:
+  stable amd64, bug 265435
 
   24 Mar 2008; Raúl Porcel <armin76@gentoo.org>
   archive-tar-minitar-0.5.2.ebuild:

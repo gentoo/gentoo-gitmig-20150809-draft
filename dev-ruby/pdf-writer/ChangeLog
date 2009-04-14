@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/pdf-writer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.16 2009/04/14 17:04:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.17 2009/04/14 20:50:30 gentoofan23 Exp $
+
+  14 Apr 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  pdf-writer-1.1.8.ebuild:
+  stable amd64, bug 265435
 
   14 Apr 2009; Hans de Graaff <graaff@gentoo.org> pdf-writer-1.1.8.ebuild:
   Add a USE_RUBY statement.
