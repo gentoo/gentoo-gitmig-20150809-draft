@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/devel-logger
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/ChangeLog,v 1.15 2008/11/26 22:16:34 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/devel-logger/ChangeLog,v 1.16 2009/04/14 17:18:30 graaff Exp $
+
+  14 Apr 2009; Hans de Graaff <graaff@gentoo.org>
+  -devel-logger-1.0.1.ebuild:
+  Remove old version.
 
   26 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   devel-logger-1.0.1.ebuild, devel-logger-1.0.1-r1.ebuild:
