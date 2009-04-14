@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.8.ebuild,v 1.1 2009/04/08 15:38:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/smc-1.8.ebuild,v 1.2 2009/04/14 15:24:51 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -22,7 +22,7 @@ RDEPEND="dev-games/cegui[opengl,devil]
 	virtual/glu
 	dev-libs/libpcre[unicode]
 	media-libs/libpng
-	media-libs/libsdl
+	media-libs/libsdl[joystick]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf"
