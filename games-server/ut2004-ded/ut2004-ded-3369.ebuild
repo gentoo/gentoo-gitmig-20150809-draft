@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.11 2007/04/28 16:06:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.12 2009/04/14 07:30:35 mr_bones_ Exp $
 
 inherit games
 
@@ -21,6 +21,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror strip"
+PROPERTIES="interactive"
 
 DEPEND="app-arch/unzip"
 RDEPEND="=virtual/libstdc++-3.3"

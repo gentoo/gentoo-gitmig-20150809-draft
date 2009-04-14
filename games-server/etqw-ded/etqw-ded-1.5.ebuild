@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/etqw-ded/etqw-ded-1.5.ebuild,v 1.1 2008/09/03 21:18:57 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/etqw-ded/etqw-ded-1.5.ebuild,v 1.2 2009/04/14 07:30:20 mr_bones_ Exp $
 
 inherit games
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 RESTRICT="fetch strip"
+PROPERTIES="interactive"
 
 DEPEND="app-arch/unzip"
 RDEPEND="sys-libs/glibc
