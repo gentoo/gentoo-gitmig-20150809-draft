@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-2008.09.07.ebuild,v 1.1 2008/10/04 18:34:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-2008.09.07.ebuild,v 1.2 2009/04/14 18:15:03 zzam Exp $
 inherit vdr-plugin eutils
 
 IUSE="yaepg"
@@ -13,7 +13,7 @@ HOMEPAGE="http://drseltsam.device.name/vdr/pvr/src/pvr350/"
 SRC_URI="http://drseltsam.device.name/vdr/pvr/src/pvr350/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 S="${WORKDIR}/${MY_P#vdr-}"
 
