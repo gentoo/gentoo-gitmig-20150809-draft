@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2535 2009/04/14 06:41:14 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2536 2009/04/14 13:13:47 angelos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Apr 2009; Christoph Mende <angelos@gentoo.org> package.mask:
+  Masked media-sound/mpd pre-releases
 
   14 Apr 2009; Jeff Gardner <je_fro@gentoo.org> package.mask:
   Unmask ati-drivers-8.32.5 so that ati-drivers-extra can live again.
