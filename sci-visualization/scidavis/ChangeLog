@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/scidavis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/ChangeLog,v 1.3 2009/04/14 11:21:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/ChangeLog,v 1.4 2009/04/14 18:29:26 bicatali Exp $
+
+*scidavis-0.2.1-r1 (14 Apr 2009)
+
+  14 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/scidavis-0.2.1-lupdate.patch, -scidavis-0.2.1.ebuild,
+  +scidavis-0.2.1-r1.ebuild:
+  Fixed for docs (bug #265878) and rev bump for all previous changes
 
   14 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
   files/scidavis-0.2.1-profile.patch, scidavis-0.2.1.ebuild:
