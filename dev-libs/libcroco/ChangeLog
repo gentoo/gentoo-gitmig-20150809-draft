@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcroco
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.46 2009/04/12 21:02:35 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/ChangeLog,v 1.47 2009/04/14 11:39:30 armin76 Exp $
+
+  14 Apr 2009; Raúl Porcel <armin76@gentoo.org> libcroco-0.6.2.ebuild:
+  arm/m68k/s390/sh stable
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> libcroco-0.6.2.ebuild:
   Stable on sparc, bug #260063
