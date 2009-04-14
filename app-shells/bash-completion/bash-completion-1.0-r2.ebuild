@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.0-r2.ebuild,v 1.1 2009/04/12 04:25:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.0-r2.ebuild,v 1.2 2009/04/14 15:38:31 darkside Exp $
 
 EAPI="2"
 
@@ -22,7 +22,8 @@ RDEPEND="app-admin/eselect
 		>=app-shells/bash-2.05a
 		app-shells/zsh
 	)
-	sys-apps/miscfiles"
+	sys-apps/miscfiles
+	!<=games-misc/cowsay-3.03-r1"
 PDEPEND="app-shells/gentoo-bashcomp"
 
 src_prepare() {
