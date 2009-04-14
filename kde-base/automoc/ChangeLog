@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/automoc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/ChangeLog,v 1.8 2009/04/11 15:52:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/ChangeLog,v 1.9 2009/04/14 23:02:29 scarabeus Exp $
+
+  14 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> automoc-0.9.84.ebuild,
+  automoc-0.9.88.ebuild:
+  Bashism--
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> automoc-0.9.88.ebuild:
   Add ~alpha/~ia64 wrt #260777
