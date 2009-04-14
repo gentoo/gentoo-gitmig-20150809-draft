@@ -1,6 +1,14 @@
 # ChangeLog for media-video/pitivi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.14 2009/03/24 18:50:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.15 2009/04/14 18:50:19 hanno Exp $
+
+  14 Apr 2009; Hanno Boeck <hanno@gentoo.org>
+  +files/pitivi-0.11.3-reserved-word.patch, pitivi-0.11.3.ebuild:
+  Fix for python 2.6.
+
+  14 Apr 2009; Hanno Boeck <hanno@gentoo.org>
+  +files/pitivi-0.11.3-reserved-word.patch, pitivi-0.11.3.ebuild:
+  Fix for python 2.6.
 
   24 Mar 2009; Hanno Boeck <hanno@gentoo.org> pitivi-0.11.3.ebuild:
   Add dep to dbus-pyhton, fixes #263587.

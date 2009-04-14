@@ -1,0 +1,39 @@
+diff --git a/pitivi/timeline/timeline.py b/pitivi/timeline/timeline.py
+index 0a8e6c2..8bce91e 100644
+--- a/pitivi/timeline/timeline.py
++++ b/pitivi/timeline/timeline.py
+@@ -194,22 +194,22 @@ class Timeline(Serializable, Signallable):
+         self.emit("start-duration-changed", self.start, self.duration)
+ 
+     def getAutoSettings(self):
+-        vs = self.videocomp._getAutoSettings()
+-        as = self.audiocomp._getAutoSettings()
+-        if not vs and not as:
++        vcvs = self.videocomp._getAutoSettings()
++        acas = self.audiocomp._getAutoSettings()
++        if not vcvs and not acas:
+             return None
+         # return an ExportSettings containing the combination of
+         # the autosettings from the audio and video composition.
+         settings = ExportSettings()
+-        if vs:
+-            settings.videowidth = vs.videowidth
+-            settings.videoheight = vs.videoheight
+-            settings.videorate = vs.videorate
+-            settings.videopar = vs.videopar
+-        if as:
+-            settings.audiochannels = as.audiochannels
+-            settings.audiorate = as.audiorate
+-            settings.audiodepth = as.audiodepth
++        if vcvs:
++            settings.videowidth = vcvs.videowidth
++            settings.videoheight = vcvs.videoheight
++            settings.videorate = vcvs.videorate
++            settings.videopar = vcvs.videopar
++        if acas:
++            settings.audiochannels = acas.audiochannels
++            settings.audiorate = acas.audiorate
++            settings.audiodepth = acas.audiodepth
+         return settings
+ 
+     def getDuration(self):
