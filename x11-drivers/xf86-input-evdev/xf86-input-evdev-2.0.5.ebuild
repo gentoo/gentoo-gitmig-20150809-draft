@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/xf86-input-evdev-2.0.5.ebuild,v 1.3 2009/03/29 18:05:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/xf86-input-evdev-2.0.5.ebuild,v 1.4 2009/04/14 18:54:11 scarabeus Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -27,7 +27,7 @@ pkg_info() {
 	if use hal; then
 		elog "If your XKB (keyboard settings) stopped working,"
 		elog "you may uninstall this driver or move your XKB configuration."
-		elog "Download an example from http://dev.gentoo.org/~compnerd/temp/hal-config-examples/"
+		elog "Download an example from http://dev.gentoo.org/~scarabeus/hal-config-examples/"
 		elog "(these will be installed with sys-apps/hal soon),"
 		elog "and drop it into /etc/hal/fdi/policy/"
 	fi
