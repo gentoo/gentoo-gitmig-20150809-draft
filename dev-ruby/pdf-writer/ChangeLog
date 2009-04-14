@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-writer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.15 2009/04/08 12:02:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.16 2009/04/14 17:04:45 graaff Exp $
+
+  14 Apr 2009; Hans de Graaff <graaff@gentoo.org> pdf-writer-1.1.8.ebuild:
+  Add a USE_RUBY statement.
 
   08 Apr 2009; Hans de Graaff <graaff@gentoo.org> -pdf-writer-1.1.7.ebuild:
   Remove intermediate version.
