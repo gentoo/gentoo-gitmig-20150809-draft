@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.37.0-r1.ebuild,v 1.1 2009/04/07 09:43:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.37.0-r1.ebuild,v 1.2 2009/04/14 11:44:10 dev-zero Exp $
 
 EAPI="2"
 
@@ -259,15 +259,27 @@ src_install () {
 
 	# The threading libs obviously always gets the "-mt" (multithreading) tag
 	# some packages seem to have a problem with it. Creating symlinks...
-	for lib in libboost_thread-mt-${MAJOR_PV}{,-debug}{.a,.so} ; do
+	for lib in libboost_thread-mt-${MAJOR_PV}{.a,.so} ; do
 		dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
 	done
 
 	# The same goes for the mpi libs
 	if use mpi ; then
-		for lib in libboost_mpi-mt-${MAJOR_PV}{,-debug}{.a,.so} ; do
+		for lib in libboost_mpi-mt-${MAJOR_PV}{.a,.so} ; do
 			dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
 		done
+	fi
+
+	if use debug ; then
+		for lib in libboost_thread-mt-${MAJOR_PV}-debug{.a,.so} ; do
+			dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
+		done
+
+		if use mpi ; then
+			for lib in libboost_mpi-mt-${MAJOR_PV}-debug{.a,.so} ; do
+				dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
+			done
+		fi
 	fi
 
 	# Create a subdirectory with completely unversioned symlinks

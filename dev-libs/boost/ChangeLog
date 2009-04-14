@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.153 2009/04/07 09:43:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.154 2009/04/14 11:44:10 dev-zero Exp $
+
+  14 Apr 2009; Tiziano Müller <dev-zero@gentoo.org> boost-1.37.0-r1.ebuild:
+  Correct non-mt symlink creation for debug libs (bug #256697)
 
 *boost-1.37.0-r1 (07 Apr 2009)
 *boost-1.36.0-r1 (07 Apr 2009)
