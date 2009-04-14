@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.10 2008/03/25 14:58:18 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.11 2009/04/14 22:32:08 nyhm Exp $
 
-inherit eutils games
+EAPI=2
+inherit autotools eutils games
 
 DESCRIPTION="a funny multiplayer game about cute little fluffy bunnies"
 HOMEPAGE="http://www.jumpbump.mine.nu/"
@@ -26,11 +27,10 @@ RDEPEND="${DEPEND}
 		dev-lang/tcl
 		dev-lang/tk )"
 
-src_unpack() {
-	unpack ${P}.tar.gz
-	epatch "${DISTDIR}/${P}-autotool.patch.bz2"
-	cd "${S}"
-	chmod +x configure
+src_prepare() {
+	epatch ../${P}-autotool.patch
+	rm -f configure
+	eautoreconf
 	sed -i \
 		-e "/PREFIX/ s:PREFIX.*:\"${GAMES_DATADIR}/${PN}/jumpbump.dat\":" \
 		globals.h \
@@ -45,6 +45,6 @@ src_install() {
 	use svga || rm -f "${D}${GAMES_BINDIR}/jumpnbump.svgalib"
 	use tk || rm -f "${D}${GAMES_BINDIR}/jnbmenu.tcl"
 	newicon sdl/jumpnbump64.xpm ${PN}.xpm
-	make_desktop_entry jumpnbump "Jump n Bump" ${PN}
+	make_desktop_entry ${PN} "Jump n Bump"
 	prepgamesdirs
 }
