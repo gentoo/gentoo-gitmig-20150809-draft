@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.11 2008/05/15 13:12:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.12 2009/04/14 07:31:38 mr_bones_ Exp $
 
 #	[x] Base Install Required (+4 MB)
 #	[x] Scenarios (+7 MB)
@@ -39,6 +39,7 @@ IUSE="nocd maps music sounds videos"
 #linguas_en linguas_es linguas_pl linguas_de"
 KEYWORDS="~ppc x86"
 RESTRICT="strip"
+PROPERTIES="interactive"
 
 DEPEND="=dev-util/xdelta-1*
 	games-util/loki_patch"

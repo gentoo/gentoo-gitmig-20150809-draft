@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.3.0.ebuild,v 1.7 2008/06/23 17:44:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.3.0.ebuild,v 1.8 2009/04/14 07:31:06 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="mirror strip"
+PROPERTIES="interactive"
 
 RDEPEND="sys-libs/glibc
 	virtual/opengl
