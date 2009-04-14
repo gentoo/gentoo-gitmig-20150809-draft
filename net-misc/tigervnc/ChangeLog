@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.3 2009/03/12 17:27:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.4 2009/04/14 15:43:29 armin76 Exp $
+
+*tigervnc-0.0.90_p3751 (14 Apr 2009)
+
+  14 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  +tigervnc-0.0.90_p3751.ebuild:
+  Version bump
 
   12 Mar 2009; Raúl Porcel <armin76@gentoo.org> files/vncviewer.png:
   Change the vncviewer icon
