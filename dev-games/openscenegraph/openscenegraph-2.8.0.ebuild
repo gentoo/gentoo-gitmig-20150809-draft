@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.0.ebuild,v 1.11 2009/04/10 23:19:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.0.ebuild,v 1.12 2009/04/14 17:37:21 nyhm Exp $
 
 EAPI=2
 inherit eutils versionator cmake-utils
@@ -16,7 +16,7 @@ SRC_URI="http://www.openscenegraph.org/downloads/stable_releases/${MY_P_MAJOR}/s
 LICENSE="wxWinLL-3 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="curl freetype gif jpeg jpeg2k osgapps pdf png svg tiff xine xrandr xulrunner"
+IUSE="curl gif jpeg jpeg2k osgapps pdf png svg tiff truetype xine xrandr xulrunner"
 
 RDEPEND="virtual/opengl
 	virtual/glu
@@ -24,7 +24,7 @@ RDEPEND="virtual/opengl
 	jpeg? ( media-libs/jpeg )
 	gif? ( media-libs/giflib )
 	tiff? ( media-libs/tiff )
-	freetype? ( media-libs/freetype )
+	truetype? ( media-libs/freetype:2 )
 	x11-libs/libSM
 	x11-libs/libXext
 	xrandr? ( x11-libs/libXrandr )
@@ -56,7 +56,7 @@ src_configure() {
 	mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable xine XINE)"
 	mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable jpeg2k JPEG2K)"
 	mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable svg SVG)"
-	mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable freetype FREETYPE)"
+	mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable truetype FREETYPE)"
 	mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable curl CURL)"
 	mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable gif GIF)"
 	mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable png PNG)"

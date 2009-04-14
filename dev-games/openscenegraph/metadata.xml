@@ -13,9 +13,6 @@ The OpenSceneGraph is an open source high performance 3D graphics toolkit, used 
     <flag name="osgapps">
 	  Build osg applications
 	</flag>
-    <flag name="freetype">
-	  Enable osg to use the <pkg>media-libs/freetype</pkg> based plugin 
-	</flag>
     <flag name="xrandr">
 	  Enable support for the X xrandr extension
 	</flag>

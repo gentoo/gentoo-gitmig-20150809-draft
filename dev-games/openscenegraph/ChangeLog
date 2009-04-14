@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.11 2009/04/10 23:19:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.12 2009/04/14 17:37:21 nyhm Exp $
+
+  14 Apr 2009; Tristan Heaven <nyhm@gentoo.org> metadata.xml,
+  openscenegraph-2.8.0.ebuild:
+  Rename freetype USE flag to truetype
 
   10 Apr 2009; Peter Alfredsen <loki_val@gentoo.org>
   openscenegraph-2.8.0.ebuild:
