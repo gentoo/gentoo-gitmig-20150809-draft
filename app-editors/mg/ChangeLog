@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.16 2009/04/11 17:04:51 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.17 2009/04/14 10:04:50 armin76 Exp $
+
+  14 Apr 2009; Raúl Porcel <armin76@gentoo.org> mg-20090107.ebuild:
+  x86 stable wrt #265307
 
   11 Apr 2009; Tiago Cunha <tcunha@gentoo.org> mg-20090107.ebuild:
   stable amd64, bug 265307
