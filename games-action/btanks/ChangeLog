@@ -1,6 +1,9 @@
 # ChangeLog for games-action/btanks
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.17 2009/03/31 13:22:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.18 2009/04/14 09:42:18 armin76 Exp $
+
+  14 Apr 2009; Raúl Porcel <armin76@gentoo.org> btanks-0.8.7686.ebuild:
+  x86 stable wrt #263975
 
   31 Mar 2009; Jeremy Olexa <darkside@gentoo.org> btanks-0.8.7686.ebuild:
   amd64 stable, bug 263975
