@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.2.2.ebuild,v 1.1 2009/04/12 06:47:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.2.2.ebuild,v 1.2 2009/04/14 15:55:43 gengor Exp $
 
 EAPI="2"
 
@@ -68,6 +68,16 @@ src_prepare() {
 	sed -i -e 's/systemsettingsrc DESTINATION ${SYSCONF_INSTALL_DIR}/systemsettingsrc DESTINATION ${CONFIG_INSTALL_DIR}/' \
 		systemsettings/CMakeLists.txt \
 		|| die "Failed to fix systemsettingsrc install location"
+
+	if ! version_is_at_least 4.1.2 "$(gcc-fullversion)" ; then
+		ewarn
+		ewarn "The kxkb module will be built without keyboard hot-plugging"
+		ewarn "support.  GCC version 4.1.2 or greater is required to build"
+		ewarn "kxkb's keyboard hot-plugging code."
+		ewarn
+		ebeep 5
+		epatch "$FILESDIR/${PN}-4.2.1-kxkb-strip-hot_plugging-support.patch"
+	fi
 
 	kde4-meta_src_prepare
 }
