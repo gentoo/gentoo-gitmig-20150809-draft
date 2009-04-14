@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdtool
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.29 2007/07/08 07:52:51 graaff Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.30 2009/04/14 17:26:02 graaff Exp $
+
+  14 Apr 2009; Hans de Graaff <graaff@gentoo.org> -rdtool-0.6.14-r2.ebuild:
+  Remove old version.
 
 *rdtool-0.6.20 (08 Jul 2007)
 
