@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4366 2009/04/14 17:47:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4367 2009/04/14 21:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -825,6 +825,7 @@ dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/ctags:ada - Enable Ada support
 dev-util/cvs:server - Enable server support
 dev-util/debootstrap:nodpkg - Disable support for app-arch/dpkg (useful for building a non-debian system)
+dev-util/dialog:minimal - Disable library, install command-line program only
 dev-util/eric:idl - Enable omniorb support
 dev-util/gambas:corba - Enable CORBA 2 ORB (net-misc/omniORB)
 dev-util/gambas:smtp - Enable smtp support.
