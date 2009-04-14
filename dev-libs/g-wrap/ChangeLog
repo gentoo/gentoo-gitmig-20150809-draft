@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/g-wrap
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.62 2008/10/04 18:57:53 mabi Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.63 2009/04/14 01:04:19 darkside Exp $
+
+  14 Apr 2009; Jeremy Olexa <darkside@gentoo.org> -g-wrap-1.9.7-r3.ebuild:
+  remove masked version, newer versions exist
 
   04 Oct 2008; Matti Bickel <mabi@gentoo.org> g-wrap-1.9.11.ebuild:
   fixing messed up RDEPEND, sorry
