@@ -1,6 +1,10 @@
 # ChangeLog for app-text/calibre
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.7 2008/07/17 01:18:59 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.8 2009/04/14 09:48:41 armin76 Exp $
+
+  14 Apr 2009; Raúl Porcel <armin76@gentoo.org> calibre-0.4.76.ebuild,
+  calibre-0.4.77.ebuild:
+  Add ~x86 wrt #265022
 
 *calibre-0.4.77 (17 Jul 2008)
 
