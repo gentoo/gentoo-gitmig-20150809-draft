@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01-r3.ebuild,v 1.6 2009/04/07 18:51:29 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01-r3.ebuild,v 1.7 2009/04/14 09:55:30 armin76 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/gcal/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ppc sparc ~x86"
+KEYWORDS="alpha amd64 ~arm ppc sparc x86"
 IUSE="ncurses nls"
 
 DEPEND="nls? ( >=sys-devel/gettext-0.17 )"
