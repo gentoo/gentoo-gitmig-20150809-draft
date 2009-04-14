@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.11 2008/02/29 18:09:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.12 2009/04/14 07:25:29 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,6 +13,7 @@ LICENSE="POMPOM"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 RESTRICT="strip"
+PROPERTIES="interactive"
 IUSE=""
 
 RDEPEND="virtual/opengl

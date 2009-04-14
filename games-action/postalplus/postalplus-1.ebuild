@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/postalplus/postalplus-1.ebuild,v 1.1 2009/01/31 03:45:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/postalplus/postalplus-1.ebuild,v 1.2 2009/04/14 07:25:14 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 RESTRICT="strip"
+PROPERTIES="interactive"
 
 DEPEND="virtual/libc"
 

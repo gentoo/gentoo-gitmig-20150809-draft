@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.14 2008/03/06 03:17:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.15 2009/04/14 07:23:44 mr_bones_ Exp $
 
 inherit eutils multilib games
 
@@ -14,6 +14,7 @@ LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
 RESTRICT="strip"
+PROPERTIES="interactive"
 
 DEPEND=""
 RDEPEND="sys-libs/glibc

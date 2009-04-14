@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.16 2008/05/15 12:31:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.17 2009/04/14 07:23:58 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,6 +13,7 @@ LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="x86"
 RESTRICT="strip"
+PROPERTIES="interactive"
 
 RDEPEND="virtual/opengl"
 

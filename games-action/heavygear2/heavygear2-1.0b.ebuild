@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.18 2008/02/29 18:45:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.19 2009/04/14 07:24:13 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="3dfx videos"
 RESTRICT="strip"
+PROPERTIES="interactive"
 
 DEPEND="games-util/loki_patch"
 RDEPEND="=media-libs/freetype-1*
