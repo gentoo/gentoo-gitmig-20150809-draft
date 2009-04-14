@@ -1,0 +1,12 @@
+Index: fluidsynth-1.0.9/configure.ac
+===================================================================
+--- fluidsynth-1.0.9.orig/configure.ac
++++ fluidsynth-1.0.9/configure.ac
+@@ -150,6 +150,7 @@ dnl 
+ dnl Check support for all the drivers
+ dnl
+ 
++PKG_PROG_PKG_CONFIG
+ 
+ dnl - Sound file support check
+ dnl AUFILE_SUPPORT=0
