@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-1.0.0.ebuild,v 1.1 2008/03/25 06:19:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/rubymail-1.0.0.ebuild,v 1.2 2009/04/14 17:43:43 graaff Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/30221/rmail-${PV}.tgz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-USE_RUBY="any"
+USE_RUBY="ruby18"
 IUSE=""
 DEPEND="virtual/ruby"
 S="${WORKDIR}/rmail-${PV}"
