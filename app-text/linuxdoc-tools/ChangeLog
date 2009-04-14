@@ -1,6 +1,10 @@
 # ChangeLog for app-text/linuxdoc-tools
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/ChangeLog,v 1.13 2009/04/11 16:02:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/ChangeLog,v 1.14 2009/04/14 10:03:33 armin76 Exp $
+
+  14 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  linuxdoc-tools-0.9.21_p11.ebuild:
+  x86 stable wrt #247555
 
   11 Apr 2009; nixnut <nixnut@gentoo.org> linuxdoc-tools-0.9.21_p11.ebuild:
   ppc stable #247555
