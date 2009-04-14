@@ -25,8 +25,8 @@
  ### instead of the one provided in "3rdparty", uncomment the following 2 lines:
  # CONFIG += dynamic_liborigin
 -# LIBS += -lorigin
-+LIBS += -lorigin2
-+INCLUDEPATH  += /usr/include/liborigin2
++#LIBS += -lorigin2
++#INCLUDEPATH  += /usr/include/liborigin2
  ### Unfortunately, due to liborigin being in alpha stage, we cannot promise
  ### that SciDAVis works with any other version that the one in "3rdparty".
  ################### end of liborigin block 

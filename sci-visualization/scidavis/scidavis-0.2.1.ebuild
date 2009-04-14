@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.1.ebuild,v 1.2 2009/04/08 13:56:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.1.ebuild,v 1.3 2009/04/14 11:21:56 bicatali Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime
@@ -23,8 +23,9 @@ CDEPEND="sys-libs/zlib
 	=x11-libs/qwt-5.1*[svg]
 	>=x11-libs/qwtplot3d-0.2.7
 	>=dev-cpp/muParser-1.30
-	>=sci-libs/gsl-1.8
-	sci-libs/liborigin:2"
+	>=sci-libs/gsl-1.8"
+# remove because unsupported for now
+#	sci-libs/liborigin:2"
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
