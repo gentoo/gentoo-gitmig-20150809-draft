@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.161 2009/04/14 13:14:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.162 2009/04/14 18:06:00 angelos Exp $
+
+  14 Apr 2009; Christoph Mende <angelos@gentoo.org>
+  +files/0.14.2-mpdconf.patch, +files/0.15_alpha1-mpdconf.patch,
+  +files/0.13.2-mpdconf.patch, -files/mpdconf.patch, -files/mpdconf1.patch,
+  mpd-0.13.2.ebuild, mpd-0.14.2.ebuild, mpd-0.15_alpha1.ebuild:
+  Fixed $S and mpdconf.patch
 
 *mpd-0.15_alpha1 (14 Apr 2009)
 

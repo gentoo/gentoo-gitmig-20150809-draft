@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.2.ebuild,v 1.9 2009/04/14 13:14:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.2.ebuild,v 1.10 2009/04/14 18:06:00 angelos Exp $
 
 EAPI=2
 
@@ -55,7 +55,7 @@ pkg_setup() {
 
 src_prepare() {
 	cp doc/mpdconf.example doc/mpdconf.dist
-	epatch "${FILESDIR}"/mpdconf1.patch
+	epatch "${FILESDIR}"/${PV}-mpdconf.patch
 }
 
 src_configure() {

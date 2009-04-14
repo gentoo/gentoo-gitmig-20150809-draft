@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15_alpha1.ebuild,v 1.1 2009/04/14 13:14:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15_alpha1.ebuild,v 1.2 2009/04/14 18:06:00 angelos Exp $
 
 EAPI=2
 
@@ -53,10 +53,12 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
 		app-text/xmlto )"
 
+S="${WORKDIR}/${P/_/~}"
+
 pkg_setup() {
-	if use icecast || use http; then
+	if use icecast || use http-stream; then
 		if ! use lame && ! use vorbis; then
-			eerror "Icecast or http output streaming is enabled,"
+			eerror "Icecast or http-stream output streaming is enabled,"
 			eerror "but there is no encoding enabled (lame and"
 			eerror "vorbis are both disabled)."
 		fi
@@ -76,14 +78,20 @@ pkg_setup() {
 
 src_prepare() {
 	cp doc/mpdconf.example doc/mpdconf.dist
-	epatch "${FILESDIR}"/mpdconf1.patch
+	epatch "${FILESDIR}"/${PV}-mpdconf.patch
 }
 
 src_configure() {
-	if use icecast || use http; then
+	if use icecast || use http-stream; then
 		myconf="$(use_enable lame lame-encoder) $(use_enable vorbis vorbis-encoder)"
 	else
 		myconf="--disable-lame-encoder --disable-vorbis-encoder"
+	fi
+
+	if use ogg && use flac; then
+		myconf+=" --enable-oggflac --enable-libOggFLACtest"
+	else
+		myconf+=" --disable-oggflac --disable-libOggFLACtest"
 	fi
 
 	append-lfs-flags
@@ -103,7 +111,7 @@ src_configure() {
 		$(use_enable ffmpeg) \
 		$(use_enable flac) \
 		$(use_enable gprof) \
-		$(use_enable http httpd-output) \
+		$(use_enable http-stream httpd-output) \
 		$(use_enable id3) \
 		$(use_enable ipv6) \
 		$(use_enable jack) \

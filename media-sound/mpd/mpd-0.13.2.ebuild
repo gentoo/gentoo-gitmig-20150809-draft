@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.13.2.ebuild,v 1.10 2009/03/10 21:00:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.13.2.ebuild,v 1.11 2009/04/14 18:06:00 angelos Exp $
 
 EAPI="2"
 
@@ -42,7 +42,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/mpdconf.patch || die "epatch for config file failed"
+	epatch "${FILESDIR}"/${PV}-mpdconf.patch || die "epatch for config file failed"
 }
 
 src_compile() {
