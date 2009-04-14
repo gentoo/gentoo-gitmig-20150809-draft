@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.3c-r1.ebuild,v 1.2 2009/04/08 16:35:25 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.3c-r1.ebuild,v 1.3 2009/04/14 11:24:02 armin76 Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://www.kaoriya.net/dist/var/${MY_P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc ~x86"
+KEYWORDS="alpha ~amd64 ~ppc x86"
 IUSE="emacs unicode vim-syntax"
 
 DEPEND="dev-lang/perl
