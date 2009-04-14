@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9668 2009/04/14 00:57:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9669 2009/04/14 01:11:53 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1551,11 +1551,6 @@ dev-tex/floatflt
 # Masked to security problems, use 1.23-r1 until I fix it
 >=app-admin/ulogd-1.24
 
-# Seemant Kulleen <seemant@gentoo.org> (02 Feb 2007)
-# Masked because it causes breakages with guile-1.8 and gnucash-2.
-# See Marijn's comment below
-~dev-libs/g-wrap-1.9.7
-
 # Michael Sterrett <mr_bones_@gentoo.org> (28 Jan 2007)
 # masked pending new beta due to bug #164186
 games-strategy/ufo2000
@@ -1591,10 +1586,6 @@ games-action/armagetronad
 # Mike Frysinger <vapier@gentoo.org> (28 Dec 2006)
 # Build failure on big-endian #154294 and breaks non-default journals #154974
 ~sys-fs/reiserfsprogs-3.6.20
-
-# Marcus D. Hanwell <cryos@gentoo.org> (03 Nov 2006)
-# 5.5.6 does not work with all projects, please use 5.4 or >=5.8
-=sci-misc/boinc-5.5.6
 
 # Stefaan De Roeck <stefaan@gentoo.org> (09 Sep 2006)
 # 1.5.x is a development branch, people should test 1.4.x by default
