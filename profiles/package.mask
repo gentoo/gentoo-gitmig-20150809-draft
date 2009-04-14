@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9670 2009/04/14 03:37:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9671 2009/04/14 06:41:14 je_fro Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -65,7 +65,14 @@ dev-util/ctmkit
 
 # Jeffrey Gardner <je_fro@gentoo.org> (27 Feb 2009)
 # Masked for spring cleaning. Removal soon if there's no objections.
-<=x11-drivers/ati-drivers-8.471.3
+=x11-drivers/ati-drivers-8.471.3
+=x11-drivers/ati-drivers-8.27.10-r1
+=x11-drivers/ati-drivers-8.35.5
+=x11-drivers/ati-drivers-8.36.5
+=x11-drivers/ati-drivers-8.39.4
+=x11-drivers/ati-drivers-8.40.4
+=x11-drivers/ati-drivers-8.452
+=x11-drivers/ati-drivers-8.471.3
 
 # Christian Hoffmann <hoffie@gentoo.org> (12 Apr 2009)
 # Masked for security (bug 265756), unmaintained upstream (last release two
