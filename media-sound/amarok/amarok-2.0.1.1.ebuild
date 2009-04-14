@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.12 2009/03/16 10:24:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.1.1.ebuild,v 1.13 2009/04/14 03:05:15 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -19,15 +19,19 @@ SLOT="2"
 IUSE="daap debug ifp ipod mp3tunes mp4 mtp njb +semantic-desktop"
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 
-DEPEND=">=app-misc/strigi-0.5.7
+# Blocking amarok:0 until the KDE3 eclasses are updated
+# to move misc apps to /usr/kde/3.5
+DEPEND="
+	!media-sound/amarok:0
+	>=app-misc/strigi-0.5.7
 	|| (
 		>=dev-db/mysql-5.0[embedded,-minimal]
 		>=dev-db/mysql-community-5.0[embedded,-minimal]
 	)
-	>=media-libs/taglib-1.5
-	|| ( media-sound/phonon x11-libs/qt-phonon:4 )
 	>=kde-base/kdelibs-${KDE_MINIMAL}[opengl?,semantic-desktop?]
 	>=kde-base/plasma-workspace-${KDE_MINIMAL}
+	>=media-libs/taglib-1.5
+	|| ( media-sound/phonon x11-libs/qt-phonon:4 )
 	x11-libs/qt-webkit:4
 	ifp? ( media-libs/libifp )
 	ipod? ( >=media-libs/libgpod-0.7.0 )
@@ -44,26 +48,10 @@ DEPEND=">=app-misc/strigi-0.5.7
 
 RDEPEND="${DEPEND}
 	app-arch/unzip
-	daap? ( www-servers/mongrel )"
+	daap? ( www-servers/mongrel )
+"
 
 PATCHES=( "${FILESDIR}/${PV}-ipod.patch" )
-
-pkg_setup() {
-	if use amd64 ; then
-		ewarn
-		ewarn "Compilation will fail if dev-db/mysql[-community] is built without -fPIC in your CFLAGS!"
-		ewarn "Related bug: http://bugs.gentoo.org/show_bug.cgi?id=238487"
-		ewarn
-		ewarn "To fix this, and to avoid using -fPIC globally in your make.conf	(which is not recommended),"
-		ewarn "put the following into /etc/portage/env/dev-db/mysql (or	mysql-community, depending on which you use;"
-		ewarn "create dirs and the file if they don't exist):"
-		ewarn
-		ewarn "CFLAGS=\"${CFLAGS} -DPIC -fPIC\""
-		ewarn "CXXFLAGS=\"${CXXFLAGS} -DPIC -fPIC\""
-		ewarn
-	fi
-	kde4-base_pkg_setup
-}
 
 src_configure() {
 	if use debug; then

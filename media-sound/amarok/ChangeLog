@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.312 2009/03/19 12:51:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.313 2009/04/14 03:05:15 jmbsvicetto Exp $
+
+*amarok-1.4.10-r3 (14 Apr 2009)
+
+  14 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, -amarok-1.4.8.ebuild, -amarok-1.4.9.1.ebuild,
+  -amarok-1.4.9.1-r1.ebuild, -amarok-1.4.10.ebuild,
+  -amarok-1.4.10-r1.ebuild, +amarok-1.4.10-r3.ebuild,
+  -amarok-1.4.10_p20090130.ebuild, amarok-1.4.10_p20090130-r1.ebuild,
+  -amarok-1.4.9999-r2.ebuild, amarok-2.0.1.1.ebuild:
+  Removed old versions of amarok-1.4 and the 1.4.9999 version as upstream
+  work on 1.4 has been stopped. Added blockers for other versions of amarok
+  to prevent the merge process from dying for colisions - fixes bug 241134.
 
   19 Mar 2009; Brent Baude <ranger@gentoo.org> amarok-1.4.10-r2.ebuild:
   Marking amarok-1.4.10-r2 ppc for bug 254896

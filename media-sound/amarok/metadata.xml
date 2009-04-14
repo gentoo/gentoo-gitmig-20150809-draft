@@ -3,6 +3,9 @@
 <pkgmetadata>
   <herd>kde</herd>
   <herd>sound</herd>
+  <maintainer>
+    <email>jmbsvicetto@gentoo.org</email>
+  </maintainer>
   <use>
     <flag name="amazon">Enable support for downloading covers from amazon.com</flag>
     <flag name="daap">

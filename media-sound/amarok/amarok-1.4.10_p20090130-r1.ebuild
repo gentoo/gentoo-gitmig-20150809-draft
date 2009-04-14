@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10_p20090130-r1.ebuild,v 1.1 2009/01/30 15:35:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10_p20090130-r1.ebuild,v 1.2 2009/04/14 03:05:15 jmbsvicetto Exp $
 
 ARTS_REQUIRED="never"
 
@@ -35,31 +35,45 @@ visualization ipod ifp real njb mtp musicbrainz daap
 python"
 # kde: enables compilation of the konqueror sidebar plugin
 
-RDEPEND="kde? ( || ( =kde-base/konqueror-3.5* =kde-base/kdebase-3.5* ) )
-	>=media-libs/xine-lib-1.1.2_pre20060328-r8
+# Blocking amarok:2 until the KDE3 eclasses are updated
+# to move misc apps to /usr/kde/3.5
+RDEPEND="
+	!>=media-sound/amarok-2.0.0
+	=dev-lang/ruby-1.8*
 	>=media-libs/taglib-1.4
-	mysql? ( >=virtual/mysql-4.0 )
-	postgres? ( virtual/postgresql-base )
-	opengl? ( virtual/opengl )
-	visualization? ( media-libs/libsdl
-		=media-plugins/libvisual-plugins-0.4* )
-	ipod? ( >=media-libs/libgpod-0.5.2 )
-	mp4? ( media-libs/libmp4v2 )
+	>=media-libs/xine-lib-1.1.2_pre20060328-r8
 	ifp? ( media-libs/libifp )
-	real? (
-		media-video/realplayer
-		media-libs/alsa-lib )
-	njb? ( >=media-libs/libnjb-2.2.4 )
+	ipod? ( >=media-libs/libgpod-0.5.2 )
+	kde? (
+		|| (
+			=kde-base/kdebase-3.5*
+			=kde-base/konqueror-3.5*
+		)
+	)
+	mp4? ( media-libs/libmp4v2 )
 	mtp? ( >=media-libs/libmtp-0.3.0 )
 	musicbrainz? ( media-libs/tunepimp )
-	=dev-lang/ruby-1.8*"
+	mysql? ( >=virtual/mysql-4.0 )
+	njb? ( >=media-libs/libnjb-2.2.4 )
+	opengl? ( virtual/opengl )
+	postgres? ( virtual/postgresql-base )
+	real? (
+		media-libs/alsa-lib
+		media-video/realplayer
+	)
+	visualization? (
+		media-libs/libsdl
+		=media-plugins/libvisual-plugins-0.4*
+	)
+"
 
 DEPEND="${RDEPEND}"
 
 RDEPEND="${RDEPEND}
 	app-arch/unzip
+	daap? ( www-servers/mongrel )
 	python? ( dev-python/PyQt )
-	daap? ( www-servers/mongrel )"
+"
 
 PATCHES=( "${FILESDIR}/amarok-1.4.9.1-libmtp-0.3.0-API.patch"
 	"${FILESDIR}/amarok-1.4.10-gcc-4.3.patch"
@@ -70,20 +84,23 @@ need-kde 3.5
 
 src_compile() {
 	# Extra, unsupported engines are forcefully disabled.
-	local myconf="$(use_enable mysql) $(use_enable postgres postgresql)
-				  $(use_with opengl)
-				  $(use_with visualization libvisual)
-				  $(use_enable amazon)
-				  $(use_with ipod libgpod)
-				  $(use_with mp4 mp4v2)
-				  $(use_with ifp)
-				  $(use_with real helix)
-				  $(use_with njb libnjb)
-				  $(use_with mtp libmtp)
-				  $(use_with musicbrainz)
-				  $(use_with daap)
-				  --with-xine
-				  --without-nmm"
+	local myconf="
+		$(use_enable amazon)
+		$(use_enable mysql)
+		$(use_enable postgres postgresql)
+		$(use_with daap)
+		$(use_with ifp)
+		$(use_with ipod libgpod)
+		$(use_with mp4 mp4v2)
+		$(use_with mtp libmtp)
+		$(use_with musicbrainz)
+		$(use_with njb libnjb)
+		$(use_with opengl)
+		$(use_with real helix)
+		$(use_with visualization libvisual)
+		--with-xine
+		--without-nmm
+	"
 
 	kde_src_compile
 }
