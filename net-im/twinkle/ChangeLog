@@ -1,6 +1,11 @@
 # ChangeLog for net-im/twinkle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.46 2009/02/17 07:07:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.47 2009/04/14 23:07:44 dragonheart Exp $
+
+*twinkle-1.4.2 (14 Apr 2009)
+
+  14 Apr 2009; Daniel Black <dragonheart@gentoo.org> +twinkle-1.4.2.ebuild:
+  version bump
 
   17 Feb 2009; Daniel Black <dragonheart@gentoo.org> twinkle-1.4.1.ebuild:
   bad use of kde eclass in EAPI=2. Used a couple of workarounds to fix bug
