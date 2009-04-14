@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.8 2008/02/29 19:09:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.9 2009/04/14 07:28:14 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -16,6 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="opengl dedicated"
 RESTRICT="strip mirror"
+PROPERTIES="interactive"
 
 UIDEPEND="virtual/opengl
 	x86? (

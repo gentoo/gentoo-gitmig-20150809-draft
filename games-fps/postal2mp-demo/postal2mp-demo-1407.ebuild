@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407.ebuild,v 1.10 2008/02/29 19:18:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1407.ebuild,v 1.11 2009/04/14 07:27:53 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror strip"
+PROPERTIES="interactive"
 
 RDEPEND="x11-libs/libXext
 	sys-libs/glibc

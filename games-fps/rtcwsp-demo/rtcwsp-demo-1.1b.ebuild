@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwsp-demo/rtcwsp-demo-1.1b.ebuild,v 1.8 2007/03/12 15:16:42 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwsp-demo/rtcwsp-demo-1.1b.ebuild,v 1.9 2009/04/14 07:28:49 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -16,6 +16,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="strip mirror"
+PROPERTIES="interactive"
 
 RDEPEND="sys-libs/glibc
 	virtual/opengl

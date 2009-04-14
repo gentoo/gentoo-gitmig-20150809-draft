@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.19 2009/02/05 16:56:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.20 2009/04/14 07:30:05 mr_bones_ Exp $
 
 # To use system libraries, uncomment the following line and comment the one
 # below it.
@@ -23,6 +23,7 @@ QA_EXECSTACK_x86="${GAMES_PREFIX_OPT:1}/ut2004/System/ut2004-bin
 QA_EXECSTACK_amd64="${GAMES_PREFIX_OPT:1}/ut2004/System/ut2004-bin
 	${GAMES_PREFIX_OPT:1}/ut2004/System/ucc-bin"
 RESTRICT="mirror strip"
+PROPERTIES="interactive"
 IUSE="dedicated opengl"
 
 RDEPEND=">=games-fps/ut2004-data-3186-r2

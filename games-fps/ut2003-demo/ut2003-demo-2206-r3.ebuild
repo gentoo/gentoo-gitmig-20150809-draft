@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.22 2008/02/29 19:12:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.23 2009/04/14 07:29:49 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="strip"
+PROPERTIES="interactive"
 
 DEPEND="app-arch/unzip"
 RDEPEND="virtual/opengl

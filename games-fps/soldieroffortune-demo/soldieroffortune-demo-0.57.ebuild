@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.5 2006/12/05 18:01:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57.ebuild,v 1.6 2009/04/14 07:29:04 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="strip"
+PROPERTIES="interactive"
 
 DEPEND="games-util/loki_patch"
 RDEPEND="virtual/opengl

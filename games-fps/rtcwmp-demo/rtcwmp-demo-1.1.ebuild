@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/rtcwmp-demo-1.1.ebuild,v 1.9 2007/04/28 18:08:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/rtcwmp-demo-1.1.ebuild,v 1.10 2009/04/14 07:28:29 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -16,6 +16,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="dedicated opengl"
 RESTRICT="strip mirror"
+PROPERTIES="interactive"
 
 RDEPEND="sys-libs/glibc
 	dedicated? (

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.24 2008/02/29 19:20:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.25 2009/04/14 07:29:19 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -12,6 +12,7 @@ LICENSE="LOKI-EULA"
 SLOT="0"
 KEYWORDS="amd64 x86"
 RESTRICT="strip"
+PROPERTIES="interactive"
 IUSE=""
 
 DEPEND="sys-libs/glibc
