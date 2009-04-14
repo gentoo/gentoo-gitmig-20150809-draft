@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-82.ebuild,v 1.1 2009/01/05 01:30:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-82.ebuild,v 1.2 2009/04/14 17:36:03 dang Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	http://apollo.fprintf.net/downloads/${PATCHSET}.tar.gz"
 
 DESCRIPTION="Kernel-based Virtual Machine userland tools"
-HOMEPAGE="http://kvm.qumranet.com/kvmwiki"
+HOMEPAGE="http://www.linux-kvm.org"
 
 LICENSE="GPL-2"
 SLOT="0"

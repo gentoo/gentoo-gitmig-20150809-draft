@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.30 2009/04/13 14:08:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.31 2009/04/14 17:36:03 dang Exp $
+
+  14 Apr 2009; Daniel Gryniewicz <dang@gentoo.org> -kvm-75.ebuild,
+  -kvm-77.ebuild, -kvm-78.ebuild, -kvm-79.ebuild, -kvm-79-r1.ebuild,
+  kvm-81.ebuild, kvm-82.ebuild, kvm-83.ebuild, kvm-84.ebuild:
+  Update homepage and clean really old versions
 
   13 Apr 2009; Daniel Gryniewicz <dang@gentoo.org> kvm-84.ebuild:
   Add support for 32bit userland
