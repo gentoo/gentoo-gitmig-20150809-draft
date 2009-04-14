@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/unscd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/ChangeLog,v 1.4 2009/04/10 04:58:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/ChangeLog,v 1.5 2009/04/14 09:59:50 armin76 Exp $
+
+  14 Apr 2009; Raúl Porcel <armin76@gentoo.org> unscd-0.35.ebuild:
+  x86 stable wrt #265571
 
   10 Apr 2009; Mike Frysinger <vapier@gentoo.org> unscd-0.35.ebuild:
   Make sure correct version is reported #265571 by Jeremy Olexa.
