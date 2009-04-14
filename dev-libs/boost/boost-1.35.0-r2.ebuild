@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r2.ebuild,v 1.9 2009/04/04 14:25:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.35.0-r2.ebuild,v 1.10 2009/04/14 20:01:17 ranger Exp $
 
 inherit python flag-o-matic multilib toolchain-funcs versionator check-reqs
 
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
 
 MY_P=${PN}_$(replace_all_version_separators _)
 PATCHSET_VERSION="${PV}-3"
