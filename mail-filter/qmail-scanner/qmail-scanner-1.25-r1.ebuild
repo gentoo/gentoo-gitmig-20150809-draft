@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25-r1.ebuild,v 1.15 2008/12/05 08:06:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25-r1.ebuild,v 1.16 2009/04/14 09:30:09 tupone Exp $
 
 inherit fixheadtails toolchain-funcs eutils
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 RESTRICT="userpriv"
 
-DEPEND=">=dev-lang/perl-5.6.1-r1
+RDEPEND=">=dev-lang/perl-5.6.1-r1
 	>=virtual/perl-Time-HiRes-01.20-r2
 	>=net-mail/tnef-1.1.1
 	>=virtual/perl-DB_File-1.803-r2
@@ -26,6 +26,7 @@ DEPEND=">=dev-lang/perl-5.6.1-r1
 	>=app-arch/unzip-5.42-r1
 	virtual/antivirus
 	spamassassin? ( >=mail-filter/spamassassin-2.64 )"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	enewgroup qscand 210
