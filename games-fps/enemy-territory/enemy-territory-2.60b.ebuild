@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.14 2009/04/05 03:55:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.15 2009/04/14 06:47:22 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -64,6 +64,7 @@ src_install() {
 	doicon ET.xpm
 
 	cp -r Docs pb etmain "${Ddir}" || die "cp failed"
+	chmod og+x "${Ddir}"/pb/pbweb.x86 || die "chmod failed"
 
 	games_make_wrapper et ./et.x86 "${dir}" "${dir}"
 
@@ -71,12 +72,13 @@ src_install() {
 		doexe "Enemy Territory 2.60b"/linux/etded.x86 || die "doexe failed"
 		games_make_wrapper et-ded ./etded.x86 "${dir}"
 		newinitd "${S}"/et-ded.rc et-ded || die "newinitd failed"
-		dosed "s:GAMES_USER_DED:${GAMES_USER_DED}:" /etc/init.d/et-ded
-		dosed "s:GENTOO_DIR:${GAMES_BINDIR}:" /etc/init.d/et-ded
+		sed -i
+			-e "s:GAMES_USER_DED:${GAMES_USER_DED}:" \
+			-e "s:GENTOO_DIR:${GAMES_BINDIR}:" \
+			"${D}"/etc/init.d/et-ded \
+			|| die "sed failed"
 		newconfd "${S}"/et-ded.conf.d et-ded || die "newconfd failed"
-#		newenvd "${S}"/et-ded.env.d et-ded || die "newenvd failed"
 		# TODO: move this to /var/ perhaps ?
-		dodir "${dir}/etwolf-homedir"
 		keepdir "${dir}/etwolf-homedir"
 		chmod g+rw "${Ddir}/etwolf-homedir"
 		dosym "${dir}/etwolf-homedir" "${GAMES_PREFIX}/.etwolf"
