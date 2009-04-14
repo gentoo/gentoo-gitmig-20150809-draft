@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tesseract
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.17 2008/11/09 16:00:03 klausman Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.18 2009/04/14 20:47:29 ranger Exp $
+
+  14 Apr 2009; Brent Baude <ranger@gentoo.org> tesseract-2.03.ebuild:
+  Marking tesseract-2.03 ppc64 for bug 245230
 
   09 Nov 2008; Tobias Klausmann <klausman@gentoo.org> tesseract-2.03.ebuild:
   Stable on alpha, bug #245230

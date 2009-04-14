@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-2.03.ebuild,v 1.5 2008/11/09 16:00:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-2.03.ebuild,v 1.6 2009/04/14 20:47:29 ranger Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ SRC_URI="http://tesseract-ocr.googlecode.com/files/${P}.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="alpha amd64 ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~mips ppc ppc64 sparc x86"
 IUSE="tiff linguas_de linguas_de_FR linguas_en linguas_fr linguas_it linguas_nl \
 linguas_es linguas_pt linguas_vi"
 
