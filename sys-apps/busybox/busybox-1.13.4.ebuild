@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.13.2.ebuild,v 1.10 2009/04/15 02:44:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.13.4.ebuild,v 1.1 2009/04/15 02:44:42 solar Exp $
 
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
@@ -56,7 +56,7 @@ else
 fi
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="debug make-symlinks pam selinux static"
 RESTRICT="test"
 
@@ -86,7 +86,7 @@ src_unpack() {
 
 	# patches go here!
 	epatch "${FILESDIR}"/busybox-1.11.1-bb.patch
-	epatch "${FILESDIR}"/busybox-${PV}-*.patch
+	#epatch "${FILESDIR}"/busybox-${PV}-*.patch
 
 	epatch "${FILESDIR}"/busybox-1.12.0-mdev-exec.patch
 
