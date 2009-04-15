@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.34 2009/04/15 04:59:55 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.35 2009/04/15 19:56:41 ranger Exp $
+
+  15 Apr 2009; Brent Baude <ranger@gentoo.org> ortp-0.15.0.ebuild:
+  Marking ortp-0.15.0 ~ppc64 for bug 266193
 
 *ortp-0.15.0 (15 Apr 2009)
 
