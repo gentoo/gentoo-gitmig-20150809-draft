@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.129 2008/12/29 22:22:06 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.130 2009/04/15 05:44:38 aballier Exp $
+
+  15 Apr 2009; Alexis Ballier <aballier@gentoo.org>
+  +files/libquicktime-1.1.1-libavutil50.patch, libquicktime-1.1.1.ebuild:
+  add a fix from upstream to build with ffmpeg trunk
 
   29 Dec 2008; Mike Frysinger <vapier@gentoo.org>
   +files/libquicktime-1.1.1-headers.patch, libquicktime-1.1.1.ebuild:

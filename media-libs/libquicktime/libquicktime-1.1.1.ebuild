@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.1.1.ebuild,v 1.3 2008/12/29 22:22:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.1.1.ebuild,v 1.4 2009/04/15 05:44:38 aballier Exp $
 
 inherit libtool eutils
 
@@ -50,6 +50,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-headers.patch
+	epatch "${FILESDIR}"/${P}-libavutil50.patch
 
 	# Needed for sane .so versionning on g/fbsd
 	elibtoolize
