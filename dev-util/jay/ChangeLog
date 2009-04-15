@@ -1,0 +1,24 @@
+# ChangeLog for dev-util/jay
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jay/ChangeLog,v 1.1 2009/04/15 11:20:50 ali_bush Exp $
+
+*jay-1.1.1-r2 (15 Apr 2009)
+
+  15 Apr 2009; Alistair Bush <ali_bush@gentoo.org> +metadata.xml,
+  +jay-1.1.1-r2.ebuild:
+  Move jay from java-overlay
+
+  13 Apr 2009; James Le Cuirot <chewi@aura-online.co.uk> -jay-1.1.1-r1.ebuild,
+  +jay-1.1.1-r2.ebuild:
+  I forgot about LDFLAGS. Fixes bug #265993.
+
+  12 Apr 2009; James Le Cuirot <chewi@aura-online.co.uk> -jay-1.1.1.ebuild,
+  +jay-1.1.1-r1.ebuild:
+  Use java_prepare. Fix makefiles to respect CC, CFLAGS and JAVACFLAGS.
+
+*jay-1.1.1 (22 Mar 2009)
+
+  22 Mar 2009; James Le Cuirot <chewi@aura-online.co.uk> +jay-1.1.1.ebuild:
+  Initial import. Only builds jay binary and yydebug.jar, not jay.jar or any of
+  the C# stuff, for the sake of my sanity.
+
