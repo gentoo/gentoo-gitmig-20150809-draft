@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xcalibrateproto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/ChangeLog,v 1.6 2009/04/06 19:53:02 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/ChangeLog,v 1.7 2009/04/15 14:28:07 armin76 Exp $
+
+  15 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  xcalibrateproto-0.1_pre20081210.ebuild:
+  ia64/sh stable wrt #251832
 
   06 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   xcalibrateproto-0.1_pre20081210.ebuild:
