@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.15 2009/03/18 15:06:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.16 2009/04/15 12:43:47 chainsaw Exp $
+
+  15 Apr 2009; <chainsaw@gentoo.org> crda-1.0.1-r1.ebuild:
+  libgcrypt is a runtime dependency, not just build-time. As pointed out by
+  Wolfram Schlich <wschlich@gentoo.org> in (reopened) bug #262914.
 
   18 Mar 2009; <chainsaw@gentoo.org> -crda-0.9.5.ebuild, -crda-1.0.1.ebuild,
   crda-1.0.1-r1.ebuild:
