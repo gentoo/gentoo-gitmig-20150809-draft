@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.2.2-r1.ebuild,v 1.2 2009/04/15 12:57:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.2.2-r1.ebuild,v 1.3 2009/04/15 19:56:18 scarabeus Exp $
 
 EAPI="2"
 
@@ -97,14 +97,13 @@ PDEPEND="
 "
 
 src_configure() {
-	local x
-	# Xmms isn't in portage, thus forcefully disabled.
-	# Also disable old msn support.
-	mycmakeargs="${mycmakeargs} -DWITH_Xmms=OFF -DWITH_msn=OFF"
+	local x x2
+	# Disable old msn support.
+	mycmakeargs="${mycmakeargs} -DWITH_msn=OFF"
 	# enable protocols
 	for x in ${PROTOCOLS}; do
-		[[ ${x/+/} = msn ]] && ${x/+/} = wlm
-		mycmakeargs="${mycmakeargs} $(cmake-utils_use_with ${x/+/})"
+		[[ ${x/+/} = msn ]] && x2=wlm || x2=""
+		mycmakeargs="${mycmakeargs} $(cmake-utils_use_with ${x/+/} ${x2})"
 	done
 	# enable plugins
 	for x in ${PLUGINS}; do
