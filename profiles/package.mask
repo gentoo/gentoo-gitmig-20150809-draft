@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9676 2009/04/15 06:49:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9677 2009/04/15 22:35:25 volkmar Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mounir Lamouri <volkmar@gentoo.org> (15 Apr 2009)
+# >www-plugins/mozilla-weaver-0.2.104 needs masked versions of ff (ie. 3.1_beta)
+>www-plugins/mozilla-weaver-0.2.104
 
 # Torsten Veller <tove@gentoo.org> (15 Apr 2009)
 # Mask net-mail/gotmail for removal (#266204)
