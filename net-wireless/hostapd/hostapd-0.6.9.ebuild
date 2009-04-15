@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.9.ebuild,v 1.1 2009/03/24 23:23:30 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.9.ebuild,v 1.2 2009/04/15 22:25:11 gurligebis Exp $
 
-inherit toolchain-funcs linux-info
+EAPI="2"
+
+inherit toolchain-funcs
 
 DESCRIPTION="IEEE 802.11 wireless LAN Host AP daemon"
 HOMEPAGE="http://hostap.epitest.fi"
@@ -11,7 +13,7 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="ipv6 logwatch madwifi ssl wps"
+IUSE="ipv6 logwatch madwifi +ssl +wps"
 
 DEPEND="ssl? ( dev-libs/openssl )
 	>=dev-libs/libnl-1.1
@@ -22,7 +24,12 @@ RDEPEND="${RDEPEND}"
 
 S="${S}/hostapd"
 
-generate_config() {
+src_prepare() {
+	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
+		"${S}/hostapd.conf"
+}
+
+src_configure() {
 	local CONFIG="${S}/.config"
 
 	# toolchain setup
@@ -75,19 +82,10 @@ generate_config() {
 		einfo "  Madwifi driver disabled"
 	fi
 
-	if [[ ${KV_MAJOR} -ge 2 && ${KV_MINOR} -ge 6 && ${KV_PATCH} -ge 26 ]] ; then
-		# Test if header version is new enough (2.6.26+)
-		if [ "$(grep NL80211_MNTR_FLAG_COOK_FRAMES /usr/include/linux/nl80211.h)" ]; then
-			einfo "  nl80211 driver enabled"
-			echo "CONFIG_DRIVER_NL80211=y" >> ${CONFIG}
-			echo "CFLAGS += -I/usr/include/netlink" >> ${CONFIG}
-			echo "LIBS += -L/usr/lib" >> ${CONFIG}
-		else
-			einfo "  nl80211 driver disabled (due to header version below 2.6.26)"
-		fi
-	else
-		einfo "  nl80211 driver disabled (due to kernel version below 2.6.26)"
-	fi
+	einfo "  nl80211 driver enabled"
+	echo "CONFIG_DRIVER_NL80211=y" >> ${CONFIG}
+	echo "CFLAGS += -I/usr/include/netlink" >> ${CONFIG}
+	echo "LIBS += -L/usr/lib" >> ${CONFIG}
 
 	# misc
 	echo "CONFIG_PKCS12=y" >> ${CONFIG}
@@ -105,21 +103,14 @@ generate_config() {
 	fi
 
 	# TODO: Add support for BSD drivers
-}
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-
-	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
-		"${S}/hostapd.conf"
-
-	generate_config
+	default_src_configure
 }
 
 src_compile() {
-	emake || die "emake failed"
+	default_src_compile
+
+	#emake || die "emake failed"
 
 	if use ssl; then
 		emake nt_password_hash || die "emake nt_password_hash failed"

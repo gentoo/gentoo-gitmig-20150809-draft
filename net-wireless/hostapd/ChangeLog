@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.98 2009/04/05 11:12:27 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.99 2009/04/15 22:25:11 gurligebis Exp $
+
+  16 Apr 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  hostapd-0.6.9.ebuild:
+  Porting ebuild to EAPI 2
 
   05 Apr 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
   -files/hostapd-0.5.10-conf.d, -files/hostapd-0.5.10-init.d,
