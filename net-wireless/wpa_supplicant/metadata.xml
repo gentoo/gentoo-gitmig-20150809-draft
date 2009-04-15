@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<maintainer>
+		<email>gurligebis@gentoo.org</email>
+		<name>Bjarke Istrup Pedersen</name>
+	</maintainer>
 	<herd>mobile</herd>
 	<use>
 		<flag name='gsm'>Add support for EAP-SIM authentication algorithm</flag>
 		<flag name='madwifi'>Add support for madwifi (Atheros chipset)</flag>
 		<flag name='ps3'>Add support for ps3 hypervisor driven gelic wifi</flag>
+		<flag name='wps'>Add support for Wi-Fi Protected Setup</flag>
 	</use>
 </pkgmetadata>
