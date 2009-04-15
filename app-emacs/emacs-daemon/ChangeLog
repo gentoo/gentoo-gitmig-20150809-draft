@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.12 2009/04/10 18:37:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.13 2009/04/15 22:51:11 ulm Exp $
+
+  15 Apr 2009; Ulrich Mueller <ulm@gentoo.org> emacs-daemon-0.13.ebuild,
+  emacs-daemon-0.14.ebuild:
+  Revert change of 25 Feb 2009 wrt bug 266262.
 
   10 Apr 2009; Raúl Porcel <armin76@gentoo.org> emacs-daemon-0.14.ebuild:
   Add ~arm/~ia64/~s390/~sh wrt #263222
