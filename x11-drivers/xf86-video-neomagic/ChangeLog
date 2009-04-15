@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-neomagic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/ChangeLog,v 1.28 2009/04/05 21:59:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-neomagic/ChangeLog,v 1.29 2009/04/15 15:35:27 armin76 Exp $
+
+  15 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-neomagic-1.2.2.ebuild:
+  ia64 stable wrt #251832
 
   05 Apr 2009; Markus Meier <maekke@gentoo.org>
   xf86-video-neomagic-1.2.2.ebuild:
