@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/libsrtp-1.4.4.ebuild,v 1.1 2009/04/14 00:45:27 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/libsrtp-1.4.4-r1.ebuild,v 1.1 2009/04/15 04:17:53 volkmar Exp $
 
 EAPI="2"
+
+inherit eutils
 
 MY_PN="srtp"
 MY_P="${MY_PN}-${PV}"
@@ -16,11 +18,12 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE="aesicm console debug doc syslog"
 
-# NOTES:
-# kernel_linux USE flag has been disabled because compilation fails with
-# only generating a static lib, no dynamic lib
-
 S=${WORKDIR}/${MY_PN}
+
+src_prepare() {
+	# generate a shared lib
+	epatch "${FILESDIR}"/${P}-shared.patch
+}
 
 src_configure() {
 	# stdout: default error output for messages in debug
@@ -38,7 +41,7 @@ src_configure() {
 
 src_compile() {
 	# target all is building test
-	emake ${PN}.a || die "emake failed"
+	emake ${PN}.a ${PN}.so || die "emake failed"
 }
 
 src_test() {

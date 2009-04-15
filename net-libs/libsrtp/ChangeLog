@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libsrtp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.1 2009/04/14 00:45:27 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.2 2009/04/15 04:17:53 volkmar Exp $
+
+*libsrtp-1.4.4-r1 (15 Apr 2009)
+
+  15 Apr 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/libsrtp-1.4.4-shared.patch, -libsrtp-1.4.4.ebuild,
+  +libsrtp-1.4.4-r1.ebuild:
+	Adding shared lib generation with loki_val patch. Thanks also to solar.
 
 *libsrtp-1.4.4 (14 Apr 2009)
 
