@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.7.0.ebuild,v 1.1 2009/01/27 17:52:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ccrtp-1.7.0.ebuild,v 1.2 2009/04/15 21:28:50 maekke Exp $
 
 inherit multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNU ccRTP is an implementation of RTP, the real-time transport prot
 HOMEPAGE="http://www.gnu.org/software/ccrtp/"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 LICENSE="GPL-2"
 IUSE="doc"
 SLOT="0"
