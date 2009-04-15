@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.14.ebuild,v 1.1 2009/04/08 23:30:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.14.ebuild,v 1.2 2009/04/15 21:02:17 mrness Exp $
 
 EAPI="2"
 
@@ -52,7 +52,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gentoo-fixed.patch
 	epatch "${FILESDIR}"/${P}-deprecated-ldap.patch
 
 	find . -regex '.*[.][1-8]' -exec sed -i \

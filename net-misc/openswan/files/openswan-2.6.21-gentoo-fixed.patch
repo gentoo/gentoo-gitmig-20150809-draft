@@ -115,7 +115,7 @@ diff -Nru openswan-2.6.21.orig/programs/setup/Makefile openswan-2.6.21/programs/
 -	@rm -f setup
  
  #
- # $Log: not supported by cvs2svn $
+ # $Log: Makefile,v $
 diff -Nru openswan-2.6.21.orig/testing/utils/make-uml.sh openswan-2.6.21/testing/utils/make-uml.sh
 --- openswan-2.6.21.orig/testing/utils/make-uml.sh	2009-03-30 13:11:28.000000000 +0000
 +++ openswan-2.6.21/testing/utils/make-uml.sh	2009-04-10 21:20:47.000000000 +0000

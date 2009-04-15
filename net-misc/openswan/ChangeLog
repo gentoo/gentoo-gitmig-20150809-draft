@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.60 2009/04/10 21:41:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.61 2009/04/15 21:02:17 mrness Exp $
+
+  15 Apr 2009; Alin Năstac <mrness@gentoo.org>
+  -files/openswan-2.4.14-gentoo.patch,
+  +files/openswan-2.4.14-gentoo-fixed.patch,
+  -files/openswan-2.6.21-gentoo.patch,
+  +files/openswan-2.6.21-gentoo-fixed.patch, openswan-2.4.14.ebuild,
+  openswan-2.6.21.ebuild:
+  Replace gentoo patches with with gentoo-fixed patches, added to cvs using
+  -kb flag (#264346).
 
   10 Apr 2009; Alin Năstac <mrness@gentoo.org>
   metadata.xml:

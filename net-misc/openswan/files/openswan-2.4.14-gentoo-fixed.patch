@@ -38,7 +38,7 @@ diff -Nru openswan-2.4.14.orig/programs/_confread/_confread.in openswan-2.4.14/p
 +++ openswan-2.4.14/programs/_confread/_confread.in	2009-04-08 23:06:04.000000000 +0000
 @@ -14,7 +14,7 @@
  #
- # RCSID $Id: openswan-2.4.14-gentoo.patch,v 1.1 2009/04/08 23:30:45 mrness Exp $
+ # RCSID $Id: _confread.in,v 1.81.2.5 2006-04-12 19:55:42 mcr Exp $
  #
 -# Extract configuration info from /etc/ipsec.conf, repackage as assignments
 +# Extract configuration info from /etc/ipsec/ipsec.conf, repackage as assignments
@@ -51,7 +51,7 @@ diff -Nru openswan-2.4.14.orig/programs/_confread/ipsec.conf.in openswan-2.4.14/
 @@ -1,4 +1,4 @@
 -# /etc/ipsec.conf - Openswan IPsec configuration file
 +# /etc/ipsec/ipsec.conf - Openswan IPsec configuration file
- # RCSID $Id: openswan-2.4.14-gentoo.patch,v 1.1 2009/04/08 23:30:45 mrness Exp $
+ # RCSID $Id: ipsec.conf.in,v 1.15.2.6 2006-10-19 03:49:46 paul Exp $
  
  # This file:  @FINALEXAMPLECONFDIR@/ipsec.conf-sample
 diff -Nru openswan-2.4.14.orig/programs/examples/l2tp-psk.conf.in openswan-2.4.14/programs/examples/l2tp-psk.conf.in
