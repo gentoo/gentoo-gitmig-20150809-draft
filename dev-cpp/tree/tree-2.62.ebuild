@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/tree-2.62.ebuild,v 1.2 2009/04/07 22:43:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tree/tree-2.62.ebuild,v 1.3 2009/04/15 18:20:05 bicatali Exp $
 
 EAPI=2
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="An STL-like tree class"
 HOMEPAGE="http://www.aei.mpg.de/~peekas/tree/"
@@ -16,6 +16,11 @@ IUSE="doc"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	# test was buggy, reported upstream
+	epatch "${FILESDIR}"/${P}-test.patch
+}
 
 src_test() {
 	$(tc-getCXX) ${CXXFLAGS} test_tree.cc -o test_tree \
