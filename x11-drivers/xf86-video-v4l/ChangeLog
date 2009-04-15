@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-v4l
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-v4l/ChangeLog,v 1.29 2009/04/06 20:08:20 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-v4l/ChangeLog,v 1.30 2009/04/15 15:12:10 armin76 Exp $
+
+  15 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  xf86-video-v4l-0.2.0.ebuild:
+  ia64/sh stable wrt #251832
 
   06 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   xf86-video-v4l-0.2.0.ebuild:
