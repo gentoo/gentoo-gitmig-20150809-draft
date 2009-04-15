@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Pluggable
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/ChangeLog,v 1.3 2009/03/18 09:34:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Pluggable/ChangeLog,v 1.4 2009/04/15 16:42:25 ranger Exp $
+
+  15 Apr 2009; Brent Baude <ranger@gentoo.org>
+  perl-Module-Pluggable-3.9.ebuild:
+  Marking perl-Module-Pluggable-3.9 ppc64 for bug 266103
 
 *perl-Module-Pluggable-3.9 (18 Mar 2009)
 
