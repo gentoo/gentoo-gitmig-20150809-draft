@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/xblast-2.10.4.ebuild,v 1.4 2008/07/27 07:58:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/xblast-2.10.4.ebuild,v 1.5 2009/04/15 22:00:30 nyhm Exp $
 
-inherit games
+EAPI=2
+inherit autotools games
 
 # Change these as releases changes
 IMAGES="images-2005-01-06"
@@ -31,19 +32,21 @@ RDEPEND="x11-libs/libICE
 DEPEND="${RDEPEND}
 	x11-libs/libXt"
 
-src_compile() {
-	export MY_DATADIR="${GAMES_DATADIR}/${PN}"
+src_prepare() {
+	eautoreconf #255857
+}
+
+src_configure() {
 	egamesconf \
-		--with-otherdatadir="${MY_DATADIR}" \
+		--with-otherdatadir="${GAMES_DATADIR}"/${PN} \
 		--enable-sound \
 		|| die
-	emake || die "emake failed"
 }
 
 src_install() {
 	local IMAGE_INSTALL_DIR="${GAMES_DATADIR}/${PN}/image"
 
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 
 	# Images
