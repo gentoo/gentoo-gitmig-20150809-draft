@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/conntrack-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.30 2009/04/03 10:27:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.31 2009/04/15 21:46:58 cedk Exp $
+
+  15 Apr 2009; Cédric Krier <cedk@gentoo.org>
+  conntrack-tools-0.9.12.ebuild:
+  Check NF_CONNTRACK_IPV4 or NF_CONNTRACK_IPV6 for bug #254271
 
 *conntrack-tools-0.9.12 (03 Apr 2009)
 
