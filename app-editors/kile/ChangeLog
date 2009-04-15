@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.110 2009/02/22 17:02:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.111 2009/04/15 18:19:59 tampakrap Exp $
+
+*kile-2.0.3-r1 (15 Apr 2009)
+
+  15 Apr 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kile-2.0.3-r1.ebuild:
+  fix collisions with kdelibs 4, bug 239521
 
 *kile-2.0.3 (22 Feb 2009)
 
