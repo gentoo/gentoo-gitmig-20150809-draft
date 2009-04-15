@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.238 2009/04/15 20:07:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.239 2009/04/15 21:33:00 mrness Exp $
+
+*squid-3.0.14 (15 Apr 2009)
+
+  15 Apr 2009; Alin Năstac <mrness@gentoo.org>
+  +files/squid-3.0.14-adapted-zph.patch, +files/squid-3.0.14-gentoo.patch,
+  +files/squid-3.0.14-heimdal.patch, +squid-3.0.14.ebuild:
+  Version bump (#266169).
 
   15 Apr 2009; Markus Meier <maekke@gentoo.org> squid-3.0.13.ebuild:
   amd64/x86 stable, bug #245681

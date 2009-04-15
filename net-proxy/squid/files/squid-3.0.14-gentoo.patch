@@ -1,0 +1,293 @@
+diff -Nru squid-3.0.STABLE14.orig/acinclude.m4 squid-3.0.STABLE14/acinclude.m4
+--- squid-3.0.STABLE14.orig/acinclude.m4	2009-04-11 08:35:27.000000000 +0000
++++ squid-3.0.STABLE14/acinclude.m4	2009-04-15 21:14:50.000000000 +0000
+@@ -73,7 +73,7 @@
+   AC_MSG_CHECKING([whether compiler accepts -fhuge-objects])
+   AC_CACHE_VAL([ac_cv_test_checkforhugeobjects],[
+     ac_cv_test_checkforhugeobjects=`echo "int foo;" > conftest.cc
+-${CXX} -Werror -fhuge-objects -c conftest.cc 2>/dev/null
++${CXX} -fhuge-objects -c conftest.cc 2>/dev/null
+ res=$?
+ rm -f conftest.*
+ echo yes
+diff -Nru squid-3.0.STABLE14.orig/configure.in squid-3.0.STABLE14/configure.in
+--- squid-3.0.STABLE14.orig/configure.in	2009-04-11 08:35:42.000000000 +0000
++++ squid-3.0.STABLE14/configure.in	2009-04-15 21:14:50.000000000 +0000
+@@ -15,9 +15,9 @@
+ PRESET_LDFLAGS="$LDFLAGS"
+ 
+ dnl Set default LDFLAGS
+-if test -z "$LDFLAGS"; then
+-        LDFLAGS="-g"
+-fi
++dnl if test -z "$LDFLAGS"; then
++dnl         LDFLAGS="-g"
++dnl fi
+ 
+ dnl Check for GNU cc
+ AC_PROG_CC
+@@ -177,13 +177,13 @@
+ dnl TODO: check if the problem will be present in any other newer MinGW release.
+     case "$host_os" in
+     mingw|mingw32)
+-        SQUID_CFLAGS="-Werror -Wall -Wpointer-arith -Wwrite-strings -Wcomments"
++        SQUID_CFLAGS="-Wall -Wpointer-arith -Wwrite-strings"
+ 	;;
+     *)
+-        SQUID_CFLAGS="-Werror -Wall -Wpointer-arith -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wcomments"
++        SQUID_CFLAGS="-Wall -Wpointer-arith -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations"
+ 	;;
+     esac
+-    SQUID_CXXFLAGS="-Werror -Wall -Wpointer-arith -Wwrite-strings -Wcomments"
++    SQUID_CXXFLAGS="-Wall -Wpointer-arith -Wwrite-strings"
+ else
+     SQUID_CFLAGS=
+     SQUID_CXXFLAGS=
+diff -Nru squid-3.0.STABLE14.orig/helpers/basic_auth/MSNT/confload.c squid-3.0.STABLE14/helpers/basic_auth/MSNT/confload.c
+--- squid-3.0.STABLE14.orig/helpers/basic_auth/MSNT/confload.c	2009-04-11 08:35:32.000000000 +0000
++++ squid-3.0.STABLE14/helpers/basic_auth/MSNT/confload.c	2009-04-15 21:14:50.000000000 +0000
+@@ -27,7 +27,7 @@
+ 
+ /* Path to configuration file */
+ #ifndef SYSCONFDIR
+-#define SYSCONFDIR "/usr/local/squid/etc"
++#define SYSCONFDIR "/etc/squid"
+ #endif
+ #define CONFIGFILE   SYSCONFDIR "/msntauth.conf"
+ 
+diff -Nru squid-3.0.STABLE14.orig/helpers/basic_auth/MSNT/msntauth.conf.default squid-3.0.STABLE14/helpers/basic_auth/MSNT/msntauth.conf.default
+--- squid-3.0.STABLE14.orig/helpers/basic_auth/MSNT/msntauth.conf.default	2009-04-11 08:35:33.000000000 +0000
++++ squid-3.0.STABLE14/helpers/basic_auth/MSNT/msntauth.conf.default	2009-04-15 21:14:50.000000000 +0000
+@@ -8,6 +8,6 @@
+ server other_PDC	other_BDC	otherdomain
+ 
+ # Denied and allowed users. Comment these if not needed.
+-#denyusers	/usr/local/squid/etc/msntauth.denyusers
+-#allowusers	/usr/local/squid/etc/msntauth.allowusers
++#denyusers	/etc/squid/msntauth.denyusers
++#allowusers	/etc/squid/msntauth.allowusers
+ 
+diff -Nru squid-3.0.STABLE14.orig/helpers/basic_auth/SMB/Makefile.am squid-3.0.STABLE14/helpers/basic_auth/SMB/Makefile.am
+--- squid-3.0.STABLE14.orig/helpers/basic_auth/SMB/Makefile.am	2009-04-11 08:35:33.000000000 +0000
++++ squid-3.0.STABLE14/helpers/basic_auth/SMB/Makefile.am	2009-04-15 21:14:50.000000000 +0000
+@@ -14,7 +14,7 @@
+ ## FIXME: autoconf should test for the samba path.
+ 
+ SMB_AUTH_HELPER	= smb_auth.sh
+-SAMBAPREFIX=/usr/local/samba
++SAMBAPREFIX=/usr
+ SMB_AUTH_HELPER_PATH = $(libexecdir)/$(SMB_AUTH_HELPER)
+ 
+ libexec_SCRIPTS	= $(SMB_AUTH_HELPER)
+diff -Nru squid-3.0.STABLE14.orig/helpers/basic_auth/SMB/smb_auth.sh squid-3.0.STABLE14/helpers/basic_auth/SMB/smb_auth.sh
+--- squid-3.0.STABLE14.orig/helpers/basic_auth/SMB/smb_auth.sh	2009-04-11 08:35:33.000000000 +0000
++++ squid-3.0.STABLE14/helpers/basic_auth/SMB/smb_auth.sh	2009-04-15 21:14:50.000000000 +0000
+@@ -24,7 +24,7 @@
+ read AUTHSHARE
+ read AUTHFILE
+ read SMBUSER
+-read SMBPASS
++read -r SMBPASS
+ 
+ # Find domain controller
+ echo "Domain name: $DOMAINNAME"
+@@ -47,7 +47,7 @@
+   addropt=""
+ fi
+ echo "Query address options: $addropt"
+-dcip=`$SAMBAPREFIX/bin/nmblookup $addropt "$PASSTHROUGH#1c" | awk '/^[0-9.]+ / { print $1 ; exit }'`
++dcip=`$SAMBAPREFIX/bin/nmblookup $addropt "$PASSTHROUGH#1c" | awk '/^[0-9.]+\..+ / { print $1 ; exit }'`
+ echo "Domain controller IP address: $dcip"
+ [ -n "$dcip" ] || exit 1
+ 
+diff -Nru squid-3.0.STABLE14.orig/helpers/external_acl/session/squid_session.8 squid-3.0.STABLE14/helpers/external_acl/session/squid_session.8
+--- squid-3.0.STABLE14.orig/helpers/external_acl/session/squid_session.8	2009-04-11 08:35:34.000000000 +0000
++++ squid-3.0.STABLE14/helpers/external_acl/session/squid_session.8	2009-04-15 21:14:50.000000000 +0000
+@@ -35,7 +35,7 @@
+ .P
+ Configuration example using the default automatic mode
+ .IP
+-external_acl_type session ttl=300 negative_ttl=0 children=1 concurrency=200 %LOGIN /usr/local/squid/libexec/squid_session
++external_acl_type session ttl=300 negative_ttl=0 children=1 concurrency=200 %LOGIN /usr/libexec/squid/squid_session
+ .IP
+ acl session external session
+ .IP
+diff -Nru squid-3.0.STABLE14.orig/helpers/external_acl/unix_group/squid_unix_group.8 squid-3.0.STABLE14/helpers/external_acl/unix_group/squid_unix_group.8
+--- squid-3.0.STABLE14.orig/helpers/external_acl/unix_group/squid_unix_group.8	2009-04-11 08:35:34.000000000 +0000
++++ squid-3.0.STABLE14/helpers/external_acl/unix_group/squid_unix_group.8	2009-04-15 21:14:50.000000000 +0000
+@@ -27,7 +27,7 @@
+ This squid.conf example defines two Squid acls. usergroup1 matches users in group1, and usergroup2
+ matches users in group2 or group3
+ .IP
+-external_acl_type unix_group %LOGIN /usr/local/squid/libexec/squid_unix_group -p
++external_acl_type unix_group %LOGIN /usr/libexec/squid/squid_unix_group -p
+ .IP
+ acl usergroup1 external unix_group group1
+ .IP
+diff -Nru squid-3.0.STABLE14.orig/helpers/negotiate_auth/squid_kerb_auth/do.sh squid-3.0.STABLE14/helpers/negotiate_auth/squid_kerb_auth/do.sh
+--- squid-3.0.STABLE14.orig/helpers/negotiate_auth/squid_kerb_auth/do.sh	2009-04-11 08:35:34.000000000 +0000
++++ squid-3.0.STABLE14/helpers/negotiate_auth/squid_kerb_auth/do.sh	2009-04-15 21:14:50.000000000 +0000
+@@ -7,7 +7,7 @@
+ #
+ CC=gcc
+ #CFLAGS="-Wall -Wextra -Werror -Wcomment -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -Wshadow -O2"
+-CFLAGS="-Wall -Werror -Wcomment -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wshadow -O2"
++CFLAGS="-Wall -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wshadow -O2"
+ if [ "$1" = "HEIMDAL" ]; then
+   DEFINE="-DHEIMDAL -D__LITTLE_ENDIAN__"
+   INCLUDE="-I/usr/include/heimdal -Ispnegohelp"
+diff -Nru squid-3.0.STABLE14.orig/lib/libTrie/acinclude.m4 squid-3.0.STABLE14/lib/libTrie/acinclude.m4
+--- squid-3.0.STABLE14.orig/lib/libTrie/acinclude.m4	2009-04-11 08:35:38.000000000 +0000
++++ squid-3.0.STABLE14/lib/libTrie/acinclude.m4	2009-04-15 21:14:50.000000000 +0000
+@@ -9,7 +9,7 @@
+   AC_MSG_CHECKING([whether compiler accepts -fhuge-objects])
+   AC_CACHE_VAL([ac_cv_test_checkforhugeobjects],[
+     ac_cv_test_checkforhugeobjects=`echo "int foo;" > conftest.cc
+-${CXX} -Werror -fhuge-objects -c conftest.cc 2>/dev/null
++${CXX} -fhuge-objects -c conftest.cc 2>/dev/null
+ res=$?
+ rm -f conftest.*
+ echo yes
+diff -Nru squid-3.0.STABLE14.orig/lib/libTrie/configure.in squid-3.0.STABLE14/lib/libTrie/configure.in
+--- squid-3.0.STABLE14.orig/lib/libTrie/configure.in	2009-04-11 08:35:38.000000000 +0000
++++ squid-3.0.STABLE14/lib/libTrie/configure.in	2009-04-15 21:14:50.000000000 +0000
+@@ -58,8 +58,8 @@
+ 
+ dnl set useful flags
+ if test "$GCC" = "yes"; then
+-   TRIE_CFLAGS="-Werror -Wall -Wpointer-arith -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wcomments"
+-   TRIE_CXXFLAGS="-Werror -Wall -Wpointer-arith -Wwrite-strings -Wcomments"
++   TRIE_CFLAGS="-Wall -Wpointer-arith -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations"
++   TRIE_CXXFLAGS="-Wall -Wpointer-arith -Wwrite-strings"
+ else
+    TRIE_CFLAGS=
+    TRIE_CXXFLAGS=
+diff -Nru squid-3.0.STABLE14.orig/src/cf.data.pre squid-3.0.STABLE14/src/cf.data.pre
+--- squid-3.0.STABLE14.orig/src/cf.data.pre	2009-04-11 08:35:40.000000000 +0000
++++ squid-3.0.STABLE14/src/cf.data.pre	2009-04-15 21:14:50.000000000 +0000
+@@ -652,6 +652,8 @@
+ acl Safe_ports port 488		# gss-http
+ acl Safe_ports port 591		# filemaker
+ acl Safe_ports port 777		# multiling http
++acl Safe_ports port 901		# SWAT
++acl purge method PURGE
+ acl CONNECT method CONNECT
+ NOCOMMENT_END
+ DOC_END
+@@ -685,6 +687,9 @@
+ # Only allow cachemgr access from localhost
+ http_access allow manager localhost
+ http_access deny manager
++# Only allow purge requests from localhost
++http_access allow purge localhost
++http_access deny purge
+ # Deny requests to unknown ports
+ http_access deny !Safe_ports
+ # Deny CONNECT to other than SSL ports
+@@ -702,6 +707,9 @@
+ # from where browsing should be allowed
+ http_access allow localnet
+ 
++# Allow the localhost to have access by default
++http_access allow localhost
++
+ # And finally deny all other access to this proxy
+ http_access deny all
+ NOCOMMENT_END
+@@ -3264,11 +3272,11 @@
+ 
+ NAME: cache_mgr
+ TYPE: string
+-DEFAULT: webmaster
++DEFAULT: root
+ LOC: Config.adminEmail
+ DOC_START
+ 	Email-address of local cache manager who will receive
+-	mail if the cache dies.  The default is "webmaster."
++	mail if the cache dies.  The default is "root".
+ DOC_END
+ 
+ NAME: mail_from
+@@ -5218,6 +5226,9 @@
+ 	If you disable this, it will appear as
+ 
+ 		X-Forwarded-For: unknown
++NOCOMMENT_START
++forwarded_for off
++NOCOMMENT_END
+ DOC_END
+ 
+ NAME: cachemgr_passwd
+diff -Nru squid-3.0.STABLE14.orig/src/debug.cc squid-3.0.STABLE14/src/debug.cc
+--- squid-3.0.STABLE14.orig/src/debug.cc	2009-04-11 08:35:41.000000000 +0000
++++ squid-3.0.STABLE14/src/debug.cc	2009-04-15 21:14:50.000000000 +0000
+@@ -465,7 +465,7 @@
+ #if HAVE_SYSLOG && defined(LOG_LOCAL4)
+ 
+     if (opt_syslog_enable)
+-        openlog(appname, LOG_PID | LOG_NDELAY | LOG_CONS, syslog_facility);
++        openlog(appname, LOG_PID | LOG_NDELAY, syslog_facility);
+ 
+ #endif /* HAVE_SYSLOG */
+ 
+diff -Nru squid-3.0.STABLE14.orig/src/defines.h squid-3.0.STABLE14/src/defines.h
+--- squid-3.0.STABLE14.orig/src/defines.h	2009-04-11 08:35:41.000000000 +0000
++++ squid-3.0.STABLE14/src/defines.h	2009-04-15 21:14:50.000000000 +0000
+@@ -218,7 +218,7 @@
+ 
+ /* were to look for errors if config path fails */
+ #ifndef DEFAULT_SQUID_ERROR_DIR
+-#define DEFAULT_SQUID_ERROR_DIR "/usr/local/squid/etc/errors"
++#define DEFAULT_SQUID_ERROR_DIR "/usr/share/squid/errors/English"
+ #endif
+ 
+ /* handy to determine the #elements in a static array */
+diff -Nru squid-3.0.STABLE14.orig/src/main.cc squid-3.0.STABLE14/src/main.cc
+--- squid-3.0.STABLE14.orig/src/main.cc	2009-04-11 08:35:41.000000000 +0000
++++ squid-3.0.STABLE14/src/main.cc	2009-04-15 21:14:50.000000000 +0000
+@@ -1490,7 +1490,7 @@
+     if (*(argv[0]) == '(')
+         return;
+ 
+-    openlog(appname, LOG_PID | LOG_NDELAY | LOG_CONS, LOG_LOCAL4);
++    openlog(appname, LOG_PID | LOG_NDELAY, LOG_DAEMON);
+ 
+     if ((pid = fork()) < 0)
+         syslog(LOG_ALERT, "fork failed: %s", xstrerror());
+@@ -1534,7 +1534,7 @@
+ 
+         if ((pid = fork()) == 0) {
+             /* child */
+-            openlog(appname, LOG_PID | LOG_NDELAY | LOG_CONS, LOG_LOCAL4);
++            openlog(appname, LOG_PID | LOG_NDELAY, LOG_DAEMON);
+             prog = xstrdup(argv[0]);
+             argv[0] = xstrdup("(squid)");
+             execvp(prog, argv);
+@@ -1542,7 +1542,7 @@
+         }
+ 
+         /* parent */
+-        openlog(appname, LOG_PID | LOG_NDELAY | LOG_CONS, LOG_LOCAL4);
++        openlog(appname, LOG_PID | LOG_NDELAY, LOG_DAEMON);
+ 
+         syslog(LOG_NOTICE, "Squid Parent: child process %d started", pid);
+ 
+diff -Nru squid-3.0.STABLE14.orig/src/Makefile.am squid-3.0.STABLE14/src/Makefile.am
+--- squid-3.0.STABLE14.orig/src/Makefile.am	2009-04-11 08:35:40.000000000 +0000
++++ squid-3.0.STABLE14/src/Makefile.am	2009-04-15 21:14:50.000000000 +0000
+@@ -991,12 +991,12 @@
+ DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
+ DEFAULT_MIME_TABLE	= $(sysconfdir)/mime.conf
+ DEFAULT_DNSSERVER       = $(libexecdir)/`echo dnsserver | sed '$(transform);s/$$/$(EXEEXT)/'`
+-DEFAULT_LOG_PREFIX	= $(localstatedir)/logs
++DEFAULT_LOG_PREFIX	= $(localstatedir)/log/squid
+ DEFAULT_CACHE_LOG       = $(DEFAULT_LOG_PREFIX)/cache.log
+ DEFAULT_ACCESS_LOG      = $(DEFAULT_LOG_PREFIX)/access.log
+ DEFAULT_STORE_LOG       = $(DEFAULT_LOG_PREFIX)/store.log
+-DEFAULT_PID_FILE        = $(DEFAULT_LOG_PREFIX)/squid.pid
+-DEFAULT_SWAP_DIR        = $(localstatedir)/cache
++DEFAULT_PID_FILE        = $(localstatedir)/run/squid.pid
++DEFAULT_SWAP_DIR        = $(localstatedir)/cache/squid
+ DEFAULT_PINGER		= $(libexecdir)/`echo pinger | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_UNLINKD		= $(libexecdir)/`echo unlinkd | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_DISKD		= $(libexecdir)/`echo diskd | sed '$(transform);s/$$/$(EXEEXT)/'`
