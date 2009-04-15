@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-4.0.0.ebuild,v 1.1 2009/04/06 12:13:42 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-4.0.0.ebuild,v 1.2 2009/04/15 23:21:32 hkbst Exp $
 
 inherit multilib elisp-common
 
@@ -30,7 +30,8 @@ src_unpack() {
 src_compile() {
 	OPTIONS="PLATFORM=linux PREFIX=/usr"
 	echo $OPTIONS
-	emake ${OPTIONS} C_COMPILER_OPTIMIZATION_OPTIONS="${CFLAGS}" || die
+	#upstream does not support parallel builds, bug 265881
+	emake -j1 ${OPTIONS} C_COMPILER_OPTIMIZATION_OPTIONS="${CFLAGS}" || die
 
 	if use emacs; then
 		elisp-compile hen.el || die

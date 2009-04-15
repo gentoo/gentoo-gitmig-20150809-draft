@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/chicken
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.34 2009/04/15 17:56:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.35 2009/04/15 23:21:32 hkbst Exp $
+
+  15 Apr 2009; Marijn Schouten <hkBst@gentoo.org> chicken-4.0.0.ebuild:
+  force non-parallel build (bug 265881)
 
   15 Apr 2009; Brent Baude <ranger@gentoo.org> chicken-3.3.0.ebuild:
   Marking chicken-3.3.0 ppc64 for bug 265097
