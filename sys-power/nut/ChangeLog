@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.61 2009/04/12 21:18:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.62 2009/04/15 12:27:43 ranger Exp $
+
+  15 Apr 2009; Brent Baude <ranger@gentoo.org> nut-2.2.2.ebuild:
+  Marking nut-2.2.2 ppc64 for bug 264897
 
 *nut-2.4.1 (12 Apr 2009)
 
