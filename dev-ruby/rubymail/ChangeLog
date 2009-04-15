@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubymail
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.30 2009/04/14 17:43:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.31 2009/04/15 20:04:47 ranger Exp $
+
+  15 Apr 2009; Brent Baude <ranger@gentoo.org> rubymail-1.0.0.ebuild:
+  Marking rubymail-1.0.0 ppc64 for bug 266138
 
   14 Apr 2009; Hans de Graaff <graaff@gentoo.org> rubymail-1.0.0.ebuild:
   Fix deprecated use of USE_RUBY="any".
