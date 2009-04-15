@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/qtscriptgenerator
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.1 2009/04/15 05:40:01 jmbsvicetto Exp $
+
+*qtscriptgenerator-0.1.0 (15 Apr 2009)
+
+  15 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +metadata.xml, +qtscriptgenerator-0.1.0.ebuild:
+  Initial import to the tree of qtscriptgenerator from the kde-testing
+  overlay. Thanks to hwoarang and reavertm for their work on the ebuild.
+
