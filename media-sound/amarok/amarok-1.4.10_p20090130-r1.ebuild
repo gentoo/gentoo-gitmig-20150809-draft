@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10_p20090130-r1.ebuild,v 1.2 2009/04/14 03:05:15 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10_p20090130-r1.ebuild,v 1.3 2009/04/15 00:47:45 dirtyepic Exp $
 
 ARTS_REQUIRED="never"
 
@@ -77,6 +77,7 @@ RDEPEND="${RDEPEND}
 
 PATCHES=( "${FILESDIR}/amarok-1.4.9.1-libmtp-0.3.0-API.patch"
 	"${FILESDIR}/amarok-1.4.10-gcc-4.3.patch"
+	"${FILESDIR}/amarok-1.4.10-gcc44.patch"
 	"${WORKDIR}/amarok-1.4.10-post20090130.diff"
 	"${WORKDIR}/amarok-1.4.10-desktop-entry.diff" )
 
