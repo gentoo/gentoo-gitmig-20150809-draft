@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/qsynth
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.44 2008/10/10 12:29:34 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.45 2009/04/15 20:02:37 flameeyes Exp $
+
+*qsynth-0.3.3-r2 (15 Apr 2009)
+
+  15 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +qsynth-0.3.3-r2.ebuild:
+  Add a new qsynth ebuild that allows to specify the pulseaudio output as
+  default, to go with the new fluidsynth.
 
 *qsynth-0.3.3-r1 (10 Oct 2008)
 
