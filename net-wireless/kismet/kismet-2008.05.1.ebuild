@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2008.05.1.ebuild,v 1.3 2009/02/12 18:14:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2008.05.1.ebuild,v 1.4 2009/04/15 13:43:25 hanno Exp $
 
 inherit toolchain-funcs linux-info eutils
 
@@ -15,12 +15,13 @@ SRC_URI="http://www.kismetwireless.net/code/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="ncurses"
+IUSE="dbus ncurses"
 
 DEPEND="${RDEPEND}"
 RDEPEND="net-wireless/wireless-tools
 	net-libs/libpcap
-	ncurses? ( sys-libs/ncurses )"
+	ncurses? ( sys-libs/ncurses )
+	dbus? ( sys-apps/dbus )"
 
 src_unpack() {
 	unpack ${A}
@@ -42,6 +43,9 @@ src_compile() {
 
 	if ! use ncurses; then
 		myconf="${myconf} --disable-curses --disable-panel"
+	fi
+	if ! use dbus; then
+		myconf="${myconf} --disable-dbus"
 	fi
 
 	econf ${myconf} \
