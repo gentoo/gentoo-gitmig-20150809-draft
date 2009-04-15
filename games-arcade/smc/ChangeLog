@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/smc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.18 2009/04/14 15:24:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.19 2009/04/15 20:08:08 gentoofan23 Exp $
+
+  15 Apr 2009; Thomas Anderson <gentoofan23@gentoo.org> smc-1.7.ebuild:
+  stable amd64, bug 255540
 
   14 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org> smc-1.8.ebuild:
   add joystick use flag dep for libsdl (bug #266097)
