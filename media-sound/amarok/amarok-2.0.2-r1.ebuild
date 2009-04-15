@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.2-r1.ebuild,v 1.1 2009/04/14 03:29:43 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.2-r1.ebuild,v 1.2 2009/04/15 05:43:18 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ DEPEND="
 	>=kde-base/kdelibs-${KDE_MINIMAL}[opengl?,semantic-desktop?]
 	>=kde-base/phonon-kde-${KDE_MINIMAL}
 	>=kde-base/plasma-workspace-${KDE_MINIMAL}
+	x11-libs/qtscriptgenerator
 	cdaudio? (
 		>=kde-base/libkcompactdisc-${KDE_MINIMAL}
 		>=kde-base/libkcddb-${KDE_MINIMAL}
@@ -65,6 +66,10 @@ src_configure() {
 	sed -e 's/ -DQT_WEBKIT//g' \
 		-i "${S}"/src/scriptengine/generator/generator/CMakeLists.txt \
 		|| die "Removing unnecessary -DQT_WEBKIT failed."
+	# Remove qtscript-generator
+	sed -e 's:add_subdirectory( src/scriptengine/generator )::g' \
+		-i "${S}"/CMakeLists.txt \
+		|| die "Removing qtscriptgenerator failed."
 
 	mycmakeargs="${mycmakeargs}
 		$(cmake-utils_use_with cdaudio KdeMultimedia)
