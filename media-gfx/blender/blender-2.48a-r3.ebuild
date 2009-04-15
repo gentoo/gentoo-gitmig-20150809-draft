@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48a-r3.ebuild,v 1.9 2008/12/21 14:41:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.48a-r3.ebuild,v 1.10 2009/04/15 21:47:11 maekke Exp $
+
+EAPI="2"
 
 inherit multilib flag-o-matic eutils python
 
@@ -30,6 +32,7 @@ RDEPEND=">=dev-libs/openssl-0.9.6
 	png? ( media-libs/libpng )
 	quicktime? ( media-libs/libquicktime )
 	>=media-libs/libsdl-1.2
+	blender-game? ( >=media-libs/libsdl-1.2[joystick] )
 	virtual/opengl"
 
 DEPEND=">=dev-util/scons-0.98
@@ -51,17 +54,16 @@ blend_with() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.37-dirs.patch
 	epatch "${FILESDIR}"/${PN}-2.44-scriptsdir.patch
 	epatch "${FILESDIR}"/${PN}-2.46-ffmpeg.patch
 	epatch "${FILESDIR}"/${PN}-2.46-cve-2008-1103-1.patch
 	epatch "${FILESDIR}"/${PN}-2.48-ffmpeg-20081014.patch
 	epatch "${FILESDIR}"/${P}-CVE-2008-4863.patch
+}
 
+src_configure() {
 	if use ffmpeg ; then
 #		cd "${S}"/extern
 #		rm -rf ffmpeg libmp3lame x264
@@ -88,9 +90,7 @@ src_unpack() {
 		echo "WITH_BF_OPENMP=0" >> "${S}"/user-config.py
 		elog "disabling openmp"
 	fi
-}
 
-src_compile() {
 	for arg in \
 			'blender-game gameengine' \
 			'ffmpeg' \
@@ -103,7 +103,9 @@ src_compile() {
 			'verse' ; do
 		blend_with ${arg}
 	done
+}
 
+src_compile() {
 	# scons uses -l differently -> remove it
 	scons ${MAKEOPTS/-l[0-9]} || die \
 	"!!! Please add ${S}/scons.config when filing bugs reports to bugs.gentoo.org"
