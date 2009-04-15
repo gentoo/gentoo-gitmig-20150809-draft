@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.2.2-r1.ebuild,v 1.1 2009/04/14 22:43:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.2.2-r1.ebuild,v 1.2 2009/04/15 12:57:32 scarabeus Exp $
 
 EAPI="2"
 
@@ -103,7 +103,7 @@ src_configure() {
 	mycmakeargs="${mycmakeargs} -DWITH_Xmms=OFF -DWITH_msn=OFF"
 	# enable protocols
 	for x in ${PROTOCOLS}; do
-		[[ ${x/+/} = msn ]] && x="wlm"
+		[[ ${x/+/} = msn ]] && ${x/+/} = wlm
 		mycmakeargs="${mycmakeargs} $(cmake-utils_use_with ${x/+/})"
 	done
 	# enable plugins

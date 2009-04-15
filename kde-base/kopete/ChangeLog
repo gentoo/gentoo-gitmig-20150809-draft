@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.178 2009/04/14 22:43:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.179 2009/04/15 12:57:32 scarabeus Exp $
+
+  15 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> kopete-4.2.2-r1.ebuild:
+  Fix variable definition. Per bug 266178. Thanks to fedux for reporting.
 
 *kopete-4.2.2-r1 (14 Apr 2009)
 
