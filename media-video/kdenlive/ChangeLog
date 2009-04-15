@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.38 2009/02/23 11:38:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.39 2009/04/15 18:42:35 aballier Exp $
+
+*kdenlive-0.7.3 (15 Apr 2009)
+
+  15 Apr 2009; Alexis Ballier <aballier@gentoo.org> +kdenlive-0.7.3.ebuild:
+  version bump
 
   23 Feb 2009; Alexis Ballier <aballier@gentoo.org> kdenlive-0.7.2.1.ebuild:
   we still need xml useflag on mlt; again by Flyser
