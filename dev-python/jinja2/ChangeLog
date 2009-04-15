@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.5 2009/04/02 15:52:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.6 2009/04/15 21:11:38 maekke Exp $
+
+  15 Apr 2009; Markus Meier <maekke@gentoo.org> jinja2-2.1.1.ebuild:
+  amd64/x86 stable, bug #261887
 
   02 Apr 2009; Raúl Porcel <armin76@gentoo.org> jinja2-2.1.1.ebuild:
   Add ~ia64 wrt #263948
