@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.392 2009/04/15 16:45:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.393 2009/04/15 23:31:16 gengor Exp $
+
+  15 Apr 2009; Gordon Malm <gengor@gentoo.org> xorg-server-1.4.2.ebuild,
+  xorg-server-1.5.3-r4.ebuild, xorg-server-1.5.3-r5.ebuild:
+  Filter SSP when building with <GCC4, bug #244352
 
   15 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   xorg-server-1.5.3-r5.ebuild:
