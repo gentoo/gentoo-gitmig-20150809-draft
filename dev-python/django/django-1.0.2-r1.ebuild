@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.0.2-r1.ebuild,v 1.1 2009/02/15 17:25:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.0.2-r1.ebuild,v 1.2 2009/04/15 17:29:43 ranger Exp $
 EAPI=2
 
 inherit bash-completion subversion distutils multilib versionator webapp
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.djangoproject.com/"
 SRC_URI="http://media.djangoproject.com/releases/${PV}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc examples mysql postgres sqlite3 test"
 
 RDEPEND="dev-python/imaging
