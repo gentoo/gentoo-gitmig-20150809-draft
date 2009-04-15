@@ -1,8 +1,15 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.33 2009/04/15 02:55:45 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.34 2009/04/15 04:59:55 volkmar Exp $
 
-  15 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> ortp-0.13.1-r1.ebuild:
+*ortp-0.15.0 (15 Apr 2009)
+
+  15 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> metadata.xml,
+  +ortp-0.15.0.ebuild:
+  Version bump to 0.15.0. See bug 257798.
+
+  15 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> metadata.xml,
+	ortp-0.13.1-r1.ebuild:
   Fix examples management. See bug 226247.
 
   15 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> ortp-0.7.1-r1.ebuild:
