@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.82 2009/04/05 09:53:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.83 2009/04/15 19:43:20 maekke Exp $
+
+  15 Apr 2009; Markus Meier <maekke@gentoo.org> fwbuilder-3.0.3.ebuild:
+  amd64/x86 stable, bug #235809
 
 *fwbuilder-3.0.4 (05 Apr 2009)
 
