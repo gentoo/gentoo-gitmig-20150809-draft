@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/phpsyslogng-2.8.ebuild,v 1.3 2006/11/23 15:09:00 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/phpsyslogng/phpsyslogng-2.8.ebuild,v 1.4 2009/04/15 07:46:17 hoffie Exp $
 
 inherit webapp
 
@@ -23,11 +23,11 @@ src_install() {
 	rm LICENSE README CHANGELOG
 	dodoc scripts/*
 
-	cp -r . ${D}${MY_HTDOCSDIR}
+	cp -r . "${D}${MY_HTDOCSDIR}"
 
-	webapp_configfile ${MY_HTDOCSDIR}/config/config.php
+	webapp_configfile "${MY_HTDOCSDIR}"/config/config.php
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 
 	webapp_src_install
 }
