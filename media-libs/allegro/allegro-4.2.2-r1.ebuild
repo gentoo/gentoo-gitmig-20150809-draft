@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2-r1.ebuild,v 1.7 2009/04/07 21:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2-r1.ebuild,v 1.8 2009/04/15 07:58:04 tupone Exp $
 
 EAPI=2
 inherit autotools multilib eutils
@@ -41,7 +41,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-exec-stack.patch \
 		"${FILESDIR}"/${P}-flags.patch \
-		"${FILESDIR}"/${P}-autoconf.patch
+		"${FILESDIR}"/${P}-autoconf.patch \
+		"${FILESDIR}"/${P}-deplib.patch
 	eautoreconf
 }
 

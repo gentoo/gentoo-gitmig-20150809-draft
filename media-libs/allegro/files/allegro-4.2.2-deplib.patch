@@ -1,0 +1,11 @@
+--- misc/deplib.sh.old	2009-04-15 09:30:10.000000000 +0200
++++ misc/deplib.sh	2009-04-15 09:31:13.000000000 +0200
+@@ -152,7 +152,7 @@
+         includes1=`grep '^[ 	]*#[ 	]*include[ 	]*[a-zA-Z0-9_][a-zA-Z0-9_]*' $dep | \
+           sed 's,^[ 	]*#[ 	]*include[ 	]*\([a-zA-Z0-9_]*\),\1,'`
+         includes2=`grep '^[ 	]*#[ 	]*include[ 	]*".*"' $dep | \
+-          sed 's,^[ 	]*#[ 	]*include[ 	]*"\(.*\)",\1,'`
++          sed 's,^[ 	]*#[ 	]*include[ 	]*"\(.*\)".*,\1,'`
+         if test -n "$includes1"; then
+           for include in $includes1; do
+ 	    includes="$includes \$($include)"

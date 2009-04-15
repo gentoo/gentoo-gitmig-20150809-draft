@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.84 2009/04/07 21:08:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.85 2009/04/15 07:58:04 tupone Exp $
+
+  15 Apr 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/allegro-4.2.2-deplib.patch, allegro-4.2.2-r1.ebuild:
+  Dependency computing fixed. Bug #264560 by Zdenek Sojka
 
   07 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
   allegro-4.2.2-r1.ebuild:
