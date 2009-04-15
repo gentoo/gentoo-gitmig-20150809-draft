@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.81 2009/04/12 20:28:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.82 2009/04/15 18:51:07 ranger Exp $
+
+  15 Apr 2009; Brent Baude <ranger@gentoo.org> krusader-2.0.0.ebuild:
+  Marking krusader-2.0.0 ~ppc and ~ppc64 as requested by scarabeus
 
 *krusader-2.0.0 (12 Apr 2009)
 
