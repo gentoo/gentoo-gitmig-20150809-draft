@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/PHP-Serialization
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PHP-Serialization/ChangeLog,v 1.6 2009/01/17 22:28:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PHP-Serialization/ChangeLog,v 1.7 2009/04/15 12:23:31 tove Exp $
+
+*PHP-Serialization-0.31 (15 Apr 2009)
+
+  15 Apr 2009; Torsten Veller <tove@gentoo.org>
+  -PHP-Serialization-0.29.ebuild, -PHP-Serialization-0.30.ebuild,
+  +PHP-Serialization-0.31.ebuild:
+  Version bump. Cleanup
 
   17 Jan 2009; Robin H. Johnson <robbat2@gentoo.org>
   PHP-Serialization-0.30.ebuild:
