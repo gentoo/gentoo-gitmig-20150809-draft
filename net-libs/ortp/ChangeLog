@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.32 2009/04/15 02:22:43 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.33 2009/04/15 02:55:45 volkmar Exp $
+
+  15 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> ortp-0.13.1-r1.ebuild:
+  Fix examples management. See bug 226247.
 
   15 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> ortp-0.7.1-r1.ebuild:
   Fix examples management for bug 226247. EAPI 2 bump and fix die messages.
