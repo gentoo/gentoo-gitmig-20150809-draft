@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/camlidl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlidl/ChangeLog,v 1.3 2008/01/03 19:33:58 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlidl/ChangeLog,v 1.4 2009/04/15 04:55:39 aballier Exp $
+
+  15 Apr 2009; Alexis Ballier <aballier@gentoo.org> +files/includes.patch,
+  +files/tests.patch, camlidl-1.05.ebuild:
+  Fix tests build and implicit declarations of functions for bug #263305
 
   03 Jan 2008; Alexis Ballier <aballier@gentoo.org> camlidl-1.05.ebuild:
   ocamlopt is required here, there is no option to disable it
