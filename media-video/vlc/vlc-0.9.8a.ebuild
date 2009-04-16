@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.8a.ebuild,v 1.10 2009/03/29 15:39:31 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.8a.ebuild,v 1.11 2009/04/16 11:07:56 aballier Exp $
 
 EAPI="1"
 
@@ -116,7 +116,7 @@ RDEPEND="
 		svg? ( >=gnome-base/librsvg-2.9.0 )
 		svga? ( media-libs/svgalib )
 		taglib? ( media-libs/taglib )
-		theora? ( media-libs/libtheora )
+		theora? ( >=media-libs/libtheora-1.0_beta3 )
 		truetype? ( media-libs/freetype
 			media-fonts/ttf-bitstream-vera )
 		twolame? ( media-sound/twolame )
