@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.95.1.ebuild,v 1.2 2009/04/10 07:49:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.95.1.ebuild,v 1.3 2009/04/16 14:28:29 lordvan Exp $
 
 inherit autotools eutils flag-o-matic fixheadtails multilib versionator
 
@@ -47,6 +47,12 @@ pkg_setup() {
 
 	enewgroup clamav
 	enewuser clamav -1 -1 /dev/null clamav
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-nls.patch"
 }
 
 src_compile() {
@@ -107,6 +113,20 @@ src_install() {
 		-e "s:^\#\(ScriptedUpdates\).*:\1 yes:" \
 		-e "s:^\#\(AllowSupplementaryGroups\).*:\1 yes:" \
 		"${D}"/etc/freshclam.conf
+
+	if use milter; then
+	   # And again same for /etc/clamav-milter.conf
+	   # MilterSocket one to include ' /' because there is a 2nd line for
+	   # inet: which we want to leave
+	   sed -i -e "s:^\(Example\):\# \1:" \
+	       -e "s:.*\(PidFile\) .*:\1 /var/run/clamav/clamav-milter.pid:" \
+	       -e "s:^\#\(ClamdSocket\) .*:\1 /var/run/clamav/clamd.sock:" \
+	       -e "s:.*\(User\) .*:\1 clamav:" \
+	       -e "s:^\#\(MilterSocket\) /.*:\1 /var/run/clamav/clamav-milter.sock:" \
+	       -e "s:^\#\(AllowSupplementaryGroups\).*:\1 yes:" \
+	       -e "s:^\#\(LogFile\) .*:\1 /var/log/clamav/clamav-milter.log:" \
+	       "${D}"/etc/clamav-milter.conf
+	fi
 
 	if use milter ; then
 		echo "
