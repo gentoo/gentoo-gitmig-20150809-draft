@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXCalibrate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/ChangeLog,v 1.7 2009/04/15 14:33:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/ChangeLog,v 1.8 2009/04/16 03:24:04 jer Exp $
+
+  16 Apr 2009; Jeroen Roovers <jer@gentoo.org>
+  libXCalibrate-0.1_pre20081207.ebuild:
+  Stable for HPPA (bug #251832).
 
   15 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   libXCalibrate-0.1_pre20081207.ebuild:
