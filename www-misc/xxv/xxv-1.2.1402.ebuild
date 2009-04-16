@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.2.1402.ebuild,v 1.2 2009/04/12 09:31:46 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.2.1402.ebuild,v 1.3 2009/04/16 00:31:36 hd_brummy Exp $
 
 EAPI="2"
 
@@ -60,7 +60,7 @@ DB_VERS="31"
 
 db_update_check() {
 
-	DB_VERS_OLD="`cat /var/db/pkg/net-www/xxv-*/xxv-*.ebuild | grep DB_VERS | head -n 1 | cut -c10-11`"
+	DB_VERS_OLD="`cat /var/db/pkg/www-misc/xxv-*/xxv-*.ebuild | grep DB_VERS | head -n 1 | cut -c10-11`"
 
 	if [ "${DB_VERS_OLD}" -lt "${DB_VERS}" ]; then
 		echo
