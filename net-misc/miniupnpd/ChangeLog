@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/miniupnpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.4 2009/01/30 00:05:18 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.5 2009/04/16 17:33:31 gurligebis Exp $
+
+*miniupnpd-20090214 (16 Apr 2009)
+
+  16 Apr 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  -files/miniupnpd-20090129-conf.d, -files/miniupnpd-20090129-init.d,
+  -files/miniupnpd-20090129-iptables.diff,
+  -files/miniupnpd-20090129-iptables_path.diff,
+  +files/miniupnpd-20090214-conf.d, +files/miniupnpd-20090214-init.d,
+  +files/miniupnpd-20090214-iptables.diff,
+  +files/miniupnpd-20090214-iptables_compile.diff,
+  +files/miniupnpd-20090214-iptables_path.diff, -miniupnpd-20090129.ebuild,
+  +miniupnpd-20090214.ebuild:
+  Bumping to 20090214
 
 *miniupnpd-20090129 (30 Jan 2009)
 
