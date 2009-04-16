@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mp3gain
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.33 2009/03/18 07:54:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.34 2009/04/16 16:39:07 chainsaw Exp $
+
+*mp3gain-1.4.6-r3 (16 Apr 2009)
+
+  16 Apr 2009; <chainsaw@gentoo.org> -mp3gain-1.4.6-r1.ebuild,
+  +mp3gain-1.4.6-r3.ebuild:
+  Patch by Joshua Rich to respect LDFLAGS, closes bug #264134. Remove old
+  ebuild.
 
   18 Mar 2009; Joseph Jezak <josejx@gentoo.org> mp3gain-1.4.6-r2.ebuild:
   Marked ppc stable for bug #255516.

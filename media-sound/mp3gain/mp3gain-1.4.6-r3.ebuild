@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/mp3gain-1.4.6-r1.ebuild,v 1.8 2008/09/10 14:48:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/mp3gain-1.4.6-r3.ebuild,v 1.1 2009/04/16 16:39:07 chainsaw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,23 +15,22 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}-src.zip"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha amd64 ~hppa ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
-RDEPEND="virtual/libc"
-DEPEND="${RDEPEND}
-	app-arch/unzip"
+DEPEND="app-arch/unzip"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	filter-flags -O*
-	sed -i -e "s:-Wall -O3 -DHAVE_MEMCPY:-Wall ${CFLAGS} -DHAVE_MEMCPY:" "${S}"/Makefile
+	sed -i -e "s:CC=.*:CC=$(tc-getCC):" \
+		-e "s:CFLAGS= -Wall -O3 -DHAVE_MEMCPY:CFLAGS+= -Wall -DHAVE_MEMCPY:" \
+		-e "s:LIBS=.*:LIBS= ${LDFLAGS} -lm:" \
+		"${S}"/Makefile \
+		|| die "Unable to adjust build system compiler/flags."
 	epatch "${FILESDIR}"/${PV}-option-parser.patch
-}
-
-src_compile() {
-	emake CC="$(tc-getCC)" || die "Compile failed"
 }
 
 src_install () {
