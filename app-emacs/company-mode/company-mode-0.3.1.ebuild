@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.3.ebuild,v 1.1 2009/04/14 15:06:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.3.1.ebuild,v 1.1 2009/04/16 08:42:38 ulm Exp $
 
 EAPI=2
 NEED_EMACS=22
@@ -27,7 +27,7 @@ SITEFILE="50${PN}-gentoo.el"
 src_configure() {
 	# Disable semantic backend, unless selected by its USE flag
 	if ! use semantic; then
-		elog "Disabling semantic backend"
+		elog "Disabling semantic backend, as requested by USE=-semantic"
 		rm "company-semantic.el" || die
 		sed -i -e "s/company-semantic *//" company.el || die
 	fi
