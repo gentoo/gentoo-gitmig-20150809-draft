@@ -1,0 +1,30 @@
+diff -ur dcoppython-3.5.10.orig/dcoppython/shell/gen_marshal_code.py dcoppython-3.5.10/dcoppython/shell/gen_marshal_code.py
+--- dcoppython-3.5.10.orig/dcoppython/shell/gen_marshal_code.py	2005-09-10 10:16:13.000000000 +0200
++++ dcoppython-3.5.10/dcoppython/shell/gen_marshal_code.py	2009-01-03 15:44:08.000000000 +0100
+@@ -120,12 +120,12 @@
+     def __init__(self, type):
+         self.type = type
+         self.demarshal_as = None
+-        self.as = []
++        self.as_list = []
+         self.info = []
+ 
+-    def add_as(self, as):
+-        if self.demarshal_as == None: self.demarshal_as = as
+-        self.as += [as]
++    def add_as(self, _as):
++        if self.demarshal_as == None: self.demarshal_as = _as
++        self.as_list += [_as]
+ 
+     def add_info(self,info):
+         self.info += [info]
+@@ -133,7 +133,7 @@
+     def xml(self):
+         return ['<type dcoptype="%s">' % self.type,
+                 '  <demarshal-as>%s</demarshal-as>' % self.demarshal_as] + \
+-               ['  <marshal-as>%s</marshal-as>' % as for as in self.as ] + \
++               ['  <marshal-as>%s</marshal-as>' % _as for _as in self.as_list ] + \
+                ['  <info>%s</info>' % info for info in self.info ] + \
+                ['</type>']
+ 
+

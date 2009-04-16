@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/dcoppython-3.5.10.ebuild,v 1.1 2008/09/13 23:57:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/dcoppython-3.5.10.ebuild,v 1.2 2009/04/16 19:19:41 tampakrap Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
@@ -16,10 +16,10 @@ DEPEND="virtual/python"
 # and it installs into /usr entirely
 SLOT="0"
 
-PATCHES="$FILESDIR/no-gtk-glib-check.diff"
+PATCHES="$FILESDIR/no-gtk-glib-check.diff
+	 $FILESDIR/${P}-python-2.6.patch"
 
 src_compile() {
-	kde_src_compile myconf
-	myconf="$myconf --prefix=/usr"
-	kde_src_compile configure make
+	myconf="${myconf} --prefix=/usr"
+	kde_src_compile
 }
