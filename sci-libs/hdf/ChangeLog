@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.10 2009/04/16 20:24:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.11 2009/04/16 22:16:12 bicatali Exp $
+
+  16 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Re-manifesting for good patch this time - Also updated description.
 
 *hdf-4.2_p4 (16 Apr 2009)
 
