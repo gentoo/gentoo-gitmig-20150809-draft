@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.115 2009/04/11 21:54:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.116 2009/04/16 19:59:46 alexxy Exp $
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -akregator-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
 *akregator-4.2.2 (11 Apr 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.25 2009/04/11 22:05:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.26 2009/04/16 20:08:56 alexxy Exp $
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kalgebra-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
 *kalgebra-4.2.2 (11 Apr 2009)
 
