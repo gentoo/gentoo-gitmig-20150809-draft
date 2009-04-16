@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/pdsh-2.18.ebuild,v 1.1 2009/04/16 20:50:43 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/pdsh-2.18.ebuild,v 1.2 2009/04/16 22:27:34 mr_bones_ Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}"
 # by hand instead of using pdsh.exp seems to print out
 # what is expected, so the error is most likely in the
 # testsuite itself.
-# You'll also need dev-util/dejagnu 
+# You'll also need dev-util/dejagnu
 RESTRICT="test"
 
 pkg_setup() {
