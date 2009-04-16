@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/liborigin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.13 2009/04/14 11:27:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.14 2009/04/16 17:39:58 bicatali Exp $
+
+*liborigin-20080225-r1 (16 Apr 2009)
+
+  16 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/liborigin-20080225-makefile.patch, -liborigin-20080225.ebuild,
+  +liborigin-20080225-r1.ebuild:
+  Bunch of QA fixes, removed tree.hh now in main tree
 
 *liborigin-20090406 (14 Apr 2009)
 
