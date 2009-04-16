@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pymol
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.40 2008/12/19 02:02:38 je_fro Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.41 2009/04/16 13:42:53 bicatali Exp $
+
+  16 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  pymol-0.99_rc10.ebuild, pymol-1.1-r2.ebuild:
+  Proxying for jlec: removing numeric dependencies
 
   19 Dec 2008; Jeff Gardner <je_fro@gentoo.org> ChangeLog:
   Rename patches
