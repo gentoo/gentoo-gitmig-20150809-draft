@@ -1,6 +1,17 @@
 # ChangeLog for sci-libs/hdf
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.9 2007/08/18 12:07:07 bicatali Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.10 2009/04/16 20:24:04 bicatali Exp $
+
+*hdf-4.2_p4 (16 Apr 2009)
+
+  16 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/hdf-4.2.1_p4-maxavailfiles.patch,
+  -files/hdf-4.2.1_p4-shared-libs.patch, +hdf-4.2_p4.ebuild,
+  -hdf-4.2.1_p4.ebuild:
+  Version bump (4.2.1_p4 was wrongly named. Many patches applied for
+  fortran, fixing as-needed, and for ppc, s390 and sparc to work (some taken
+  from Fedora). Added netcdf flag which will install the ncdump and ncgen
+  but renamed to nc*-hdf.
 
 *hdf-4.2.1_p4 (18 Aug 2007)
 
