@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.7.ebuild,v 1.1 2009/04/14 11:58:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.7.ebuild,v 1.2 2009/04/16 22:28:22 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime python
@@ -94,7 +94,6 @@ src_compile() {
 		emake || die "html docbook building failed"
 	fi
 }
-
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die 'emake install failed'
