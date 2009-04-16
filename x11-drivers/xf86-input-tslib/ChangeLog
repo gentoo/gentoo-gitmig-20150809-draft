@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-tslib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/ChangeLog,v 1.11 2009/04/16 06:12:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/ChangeLog,v 1.12 2009/04/16 23:43:26 solar Exp $
+
+  16 Apr 2009; <solar@gentoo.org> xf86-input-tslib-0.0.5-r1.ebuild:
+  Remove stupid evdev checks. Never die cuz a kernel.src does not exist.
+  linux-info.eclass must die
 
   16 Apr 2009; Jeroen Roovers <jer@gentoo.org>
   xf86-input-tslib-0.0.5-r1.ebuild:

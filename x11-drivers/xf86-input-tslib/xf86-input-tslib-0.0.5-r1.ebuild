@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.5-r1.ebuild,v 1.9 2009/04/16 06:12:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/xf86-input-tslib-0.0.5-r1.ebuild,v 1.10 2009/04/16 23:43:26 solar Exp $
 
 # Based on xf86-input-synaptics ebuild
 
@@ -19,33 +19,8 @@ IUSE=""
 RDEPEND="x11-base/xorg-server x11-libs/tslib"
 DEPEND="x11-proto/inputproto"
 
-evdev-input_check() {
-	# Check kernel config for required event interface support (either
-	# built-in or as a module. Bug #134309.
-
-	ebegin "Checking kernel config for event device support"
-	linux_chkconfig_present INPUT_EVDEV
-	eend $?
-
-	if [[ $? -ne 0 ]] ; then
-		ewarn "tslib x11 input driver requires event interface support."
-		ewarn "Please enable the event interface in your kernel config."
-		ewarn "The option can be found at:"
-		ewarn
-		ewarn "  Device Drivers"
-		ewarn "    Input device support"
-		ewarn "      -*- Generic input layer"
-		ewarn "        <*> Event interface"
-		ewarn
-		ewarn "Then rebuild the kernel or install the module."
-		epause 5
-	fi
-}
-
-pkg_setup() {
-	linux-info_pkg_setup
-	evdev-input_check
-}
+# Remove stupid evdev checks.
+# Never die simply cuz kernel sources do not exist.
 
 src_unpack() {
 	x-modular_unpack_source
