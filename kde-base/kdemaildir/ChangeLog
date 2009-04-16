@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemaildir
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemaildir/ChangeLog,v 1.12 2009/04/11 22:41:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemaildir/ChangeLog,v 1.13 2009/04/16 21:16:38 alexxy Exp $
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdemaildir-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
 *kdemaildir-4.2.2 (11 Apr 2009)
 

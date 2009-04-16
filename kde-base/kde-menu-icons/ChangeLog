@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-menu-icons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-menu-icons/ChangeLog,v 1.24 2009/04/11 22:42:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-menu-icons/ChangeLog,v 1.25 2009/04/16 21:17:21 alexxy Exp $
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kde-menu-icons-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
 *kde-menu-icons-4.2.2 (11 Apr 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.104 2009/04/11 22:59:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.105 2009/04/16 22:00:26 alexxy Exp $
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Drop KDE 4.2.1
 
 *kdf-4.2.2 (11 Apr 2009)
 

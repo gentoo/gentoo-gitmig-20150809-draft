@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.111 2009/04/11 22:39:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.112 2009/04/16 21:07:54 alexxy Exp $
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdeedu-meta-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> kdeedu-meta-4.2.1.ebuild:
   Add ~alpha/~ia64
