@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xvinfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.31 2009/04/15 14:52:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.32 2009/04/16 02:10:55 jer Exp $
+
+  16 Apr 2009; Jeroen Roovers <jer@gentoo.org> xvinfo-1.0.2.ebuild:
+  Stable for HPPA (bug #251832).
 
   15 Apr 2009; Raúl Porcel <armin76@gentoo.org> xvinfo-1.0.2.ebuild:
   ia64/sh stable wrt #251832

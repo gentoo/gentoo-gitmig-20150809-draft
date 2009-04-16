@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.59 2009/04/15 14:54:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.60 2009/04/16 02:05:35 jer Exp $
+
+  16 Apr 2009; Jeroen Roovers <jer@gentoo.org> mesa-progs-7.3.ebuild:
+  Stable for HPPA (bug #251832).
 
   15 Apr 2009; Raúl Porcel <armin76@gentoo.org> mesa-progs-7.3.ebuild:
   ia64/sh stable wrt #251832
