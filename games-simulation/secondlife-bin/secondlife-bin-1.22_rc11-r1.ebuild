@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.22_rc10.ebuild,v 1.1 2009/03/02 02:07:11 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.22_rc11-r1.ebuild,v 1.1 2009/04/16 19:42:28 lavajoe Exp $
 
 inherit eutils multilib games versionator
 
-SECONDLIFE_REVISION=112620
+SECONDLIFE_REVISION=113976
 SECONDLIFE_MAJOR_VER=$(get_version_component_range 1-2)
 SECONDLIFE_MINOR_VER=$(get_version_component_range 3)
 SECONDLIFE_MINOR_VER=${SECONDLIFE_MINOR_VER/rc/}
@@ -17,30 +17,30 @@ RESTRICT="mirror strip"
 
 LICENSE="GPL-2-with-Linden-Lab-FLOSS-exception"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 # Note, used to RDEPEND on:
 # media-fonts/kochi-substitute
 RDEPEND="sys-libs/glibc
-	x86? (
-		x11-libs/libX11
-		x11-libs/libXau
-		x11-libs/libXdmcp
-		x11-libs/libXext
-		dev-libs/libgcrypt
-		dev-libs/libgpg-error
-		dev-libs/openssl
-		media-libs/freetype
-		media-libs/libogg
-		media-libs/libsdl
-		media-libs/libvorbis
-		net-libs/gnutls
-		net-misc/curl
-		sys-libs/zlib
-		virtual/glu
-		virtual/opengl
-	)
+	sys-apps/dbus
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	x11-libs/libXext
+	dev-libs/libgcrypt
+	dev-libs/libgpg-error
+	dev-libs/openssl
+	media-libs/freetype
+	media-libs/libogg
+	media-libs/libsdl
+	media-libs/libvorbis
+	media-libs/gstreamer
+	net-libs/gnutls
+	net-misc/curl
+	sys-libs/zlib
+	virtual/glu
+	virtual/opengl
 	amd64? (
 		app-emulation/emul-linux-x86-sdl
 		app-emulation/emul-linux-x86-gtklibs
@@ -64,8 +64,19 @@ QA_EXECSTACK="${SECONDLIFE_HOME:1}/bin/do-not-directly-run-secondlife-bin
 	${SECONDLIFE_HOME:1}/app_settings/mozilla-runtime-linux-i686/libxul.so"
 
 pkg_setup() {
+	games_pkg_setup
+
 	# x86 binary package, ABI=x86
 	has_multilib_profile && ABI="x86"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# On 64-bit systems, we need to uncomment LL_BAD_OPENAL_DRIVER=x
+	# to fix streaming audio.
+	use amd64 && epatch "${FILESDIR}"/${P}-amd64-audio-streaming-fix.patch
 }
 
 src_install() {
