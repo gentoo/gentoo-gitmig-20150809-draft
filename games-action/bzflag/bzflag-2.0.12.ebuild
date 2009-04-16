@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.12.ebuild,v 1.9 2009/02/22 23:46:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.0.12.ebuild,v 1.10 2009/04/16 00:55:29 nyhm Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -45,6 +45,7 @@ src_configure() {
 		myconf="--disable-client --without-SDL"
 	fi
 	egamesconf \
+		--disable-ccachetest \
 		--disable-dependency-tracking \
 		--without-regex \
 		${myconf}

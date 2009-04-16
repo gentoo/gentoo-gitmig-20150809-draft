@@ -1,6 +1,9 @@
 # ChangeLog for games-action/bzflag
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.43 2009/02/22 23:46:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.44 2009/04/16 00:55:29 nyhm Exp $
+
+  16 Apr 2009; Tristan Heaven <nyhm@gentoo.org> bzflag-2.0.12.ebuild:
+  Disable forced ccache usage
 
   22 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org> bzflag-2.0.12.ebuild:
   remove GAMES_USE_SDL; now handled by use-based deps
