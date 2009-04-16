@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.128 2009/04/13 21:06:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.129 2009/04/16 07:30:27 jer Exp $
+
+  16 Apr 2009; Jeroen Roovers <jer@gentoo.org> vnc-4.1.3-r2.ebuild:
+  Stable for HPPA (bug #264897).
 
   13 Apr 2009; Brent Baude <ranger@gentoo.org> vnc-4.1.3-r1.ebuild,
   vnc-4.1.3-r2.ebuild:
