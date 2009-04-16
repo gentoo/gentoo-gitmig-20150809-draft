@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.6.1.ebuild,v 1.2 2009/04/13 02:10:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.6.1.ebuild,v 1.3 2009/04/16 06:23:39 mr_bones_ Exp $
 
 EAPI=2
 inherit cmake-utils eutils toolchain-funcs flag-o-matic games
@@ -41,7 +41,14 @@ src_prepare() {
 			> "${T}"/wesnothd \
 			|| die "sed failed"
 	fi
+
+	# FIXME: remove this bit in the next version
 	cp "${FILESDIR}"/config.h.cmake . || die "cp failed"
+	sed -i \
+		-e '/Version/s/1.6/1.0/' \
+		-e '/Icon/s/\.png//' \
+		icons/*desktop \
+		|| die "sed failed"
 }
 
 src_configure() {
@@ -90,5 +97,10 @@ src_install() {
 		keepdir "${GAMES_STATEDIR}/run/wesnothd"
 		doinitd "${T}"/wesnothd || die "doinitd failed"
 	fi
+
+	# FIXME: remove this bit in the next version
+	rm -rf "${D}"/usr/share/applications/*desktop
+	domenu icons/*desktop
+
 	prepgamesdirs
 }
