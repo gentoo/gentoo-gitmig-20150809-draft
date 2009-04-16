@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/company-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.4 2009/04/16 22:35:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.5 2009/04/16 23:03:16 ulm Exp $
+
+  16 Apr 2009; Ulrich Mueller <ulm@gentoo.org> company-mode-0.3.1.ebuild:
+  Fix dependency on nxml-mode.
 
   16 Apr 2009; Christian Faulhammer <fauli@gentoo.org> company-mode-0.3.1:
   add app-emacs/nxml-mode to dependencies as requested on bug 266406 Adam
