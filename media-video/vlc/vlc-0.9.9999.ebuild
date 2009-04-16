@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9999.ebuild,v 1.4 2009/04/16 11:07:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9999.ebuild,v 1.5 2009/04/16 17:25:23 aballier Exp $
 
 EAPI="1"
 
@@ -206,9 +206,8 @@ src_unpack() {
 	unpack ${A}
 	if [ "${PV%9999}" != "${PV}" ] ; then
 		git_src_unpack
-	else
-		cd "${S}"
 	fi
+	cd "${S}"
 
 	# Make it build with libtool 1.5
 	rm -f m4/lt* m4/libtool.m4
