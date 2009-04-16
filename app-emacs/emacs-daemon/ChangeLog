@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.13 2009/04/15 22:51:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.14 2009/04/16 01:38:08 jer Exp $
+
+  16 Apr 2009; Jeroen Roovers <jer@gentoo.org> emacs-daemon-0.14.ebuild:
+  Marked ~hppa (bug #263222).
 
   15 Apr 2009; Ulrich Mueller <ulm@gentoo.org> emacs-daemon-0.13.ebuild,
   emacs-daemon-0.14.ebuild:
