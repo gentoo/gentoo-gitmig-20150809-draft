@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.457 2009/04/09 10:29:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.458 2009/04/16 08:58:23 zzam Exp $
+
+*udev-124-r2 (16 Apr 2009)
+
+  16 Apr 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +files/udev-124-encoding-overflow.patch,
+  +files/udev-124-netlink-owner-check.patch, +udev-124-r2.ebuild:
+  Fix Bug #266290. CVE-2009-1185 and CVE-2009-1186
 
 *udev-141 (09 Apr 2009)
 
