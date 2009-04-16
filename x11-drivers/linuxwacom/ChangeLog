@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.32 2009/04/05 22:09:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.33 2009/04/16 06:08:27 jer Exp $
+
+  16 Apr 2009; Jeroen Roovers <jer@gentoo.org> linuxwacom-0.8.2_p2.ebuild:
+  Marked ~hppa too.
 
   05 Apr 2009; Markus Meier <maekke@gentoo.org> linuxwacom-0.8.2.ebuild:
   x86 stable, bug #251832
