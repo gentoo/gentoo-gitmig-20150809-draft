@@ -1,6 +1,14 @@
 # ChangeLog for app-forensics/aide
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.38 2009/03/01 01:52:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.39 2009/04/16 14:59:20 matsuu Exp $
+
+*aide-0.13.1-r3 (16 Apr 2009)
+
+  16 Apr 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +files/aide-0.13.1-equ-matching.patch,
+  +files/aide-0.13.1-libgrypt_init.patch, +aide-0.13.1-r3.ebuild:
+  Fixed equal match issue, bug #204217. Fixed libgcrypt issue, bug #266175.
+  RESTRICT="test" Removed --with-extra-lib.
 
   01 Mar 2009; Patrick Lauer <patrick@gentoo.org> aide-0.13.1-r2.ebuild:
   Fixing elog messages to reflect changes from #195690. Closes #249793
