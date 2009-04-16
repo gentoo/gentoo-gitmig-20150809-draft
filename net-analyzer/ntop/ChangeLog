@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.72 2009/04/12 18:04:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.73 2009/04/16 16:51:33 rich0 Exp $
+
+  16 Apr 2009; Richard Freeman <rich0@gentoo.org> ntop-3.3.9-r1.ebuild:
+  amd64 stable - 265704
 
   12 Apr 2009; Brent Baude <ranger@gentoo.org> ntop-3.3.9-r1.ebuild:
   stable ppc64, bug 265704
