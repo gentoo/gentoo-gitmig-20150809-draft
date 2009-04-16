@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.327 2009/04/16 14:39:05 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.328 2009/04/16 16:10:00 jer Exp $
+
+  16 Apr 2009; Jeroen Roovers <jer@gentoo.org> clamav-0.95.1.ebuild:
+  Stable for HPPA (bug #265545).
 
   16 Apr 2009; Thomas Raschbacher <lordvan@gentoo.org> ChangeLog:
   Fix for bug #260786 Thanks to Victor Ostorga <vostorga@gmail.com>
