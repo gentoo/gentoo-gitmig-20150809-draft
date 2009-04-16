@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xproxymanagementprotocol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproxymanagementprotocol/ChangeLog,v 1.20 2009/04/05 21:13:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproxymanagementprotocol/ChangeLog,v 1.21 2009/04/16 07:24:50 jer Exp $
+
+  16 Apr 2009; Jeroen Roovers <jer@gentoo.org>
+  xproxymanagementprotocol-1.0.2.ebuild:
+  Stable for HPPA (bug #251832).
 
   05 Apr 2009; Markus Meier <maekke@gentoo.org> ChangeLog:
   x86 stable, bug #251832
