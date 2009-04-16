@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/pdsh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.13 2009/02/05 00:24:58 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.14 2009/04/16 20:50:43 jsbronder Exp $
+
+*pdsh-2.18 (16 Apr 2009)
+
+  16 Apr 2009; Justin Bronder <jsbronder@gentoo.org> +pdsh-2.18.ebuild:
+  Bump pdsh-2.18 (#263993). Remove patches that are applied upstream. Add
+  support for building extra modules with PDSH_MODULE_LIST.
 
 *pdsh-2.17 (05 Feb 2009)
 
