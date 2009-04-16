@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.3.1.ebuild,v 1.1 2009/04/16 08:42:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.3.1.ebuild,v 1.2 2009/04/16 22:35:44 fauli Exp $
 
 EAPI=2
 NEED_EMACS=22
@@ -18,7 +18,8 @@ IUSE="semantic"
 
 # Note: company-mode supports many backends, and we refrain from including
 # them all in RDEPEND. Only depend on things that are needed at build time.
-DEPEND="semantic? ( app-emacs/cedet )"
+DEPEND="semantic? ( app-emacs/cedet )
+	app-emacs/nxml-mode"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"
