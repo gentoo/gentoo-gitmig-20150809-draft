@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.599 2009/04/11 18:52:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.600 2009/04/16 20:28:34 mpagano Exp $
+
+*gentoo-sources-2.6.28-r5 (16 Apr 2009)
+
+  16 Apr 2009; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.28-r5.ebuild:
+  Linux 2.6.28.9. Fix for performance regression when WRITE_SYNC writes and
+  writes submitted without sync flag caused excession idling in IO +scheduler.
+  Fix for print hanging in some printers (e.g. Canon BJC-3000). Revert null
+  dereference check in jbd2_journal_being_ordered_truncate for ocfs2
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.27-r10.ebuild:
