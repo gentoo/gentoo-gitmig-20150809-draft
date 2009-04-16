@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-4.1.ebuild,v 1.1 2006/05/03 16:36:57 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-4.1-r1.ebuild,v 1.1 2009/04/16 19:13:18 mescalinum Exp $
 
 inherit distutils toolchain-funcs
 
@@ -18,7 +18,9 @@ DEPEND=">=dev-lang/tcl-8.0
 
 src_compile() {
 	distutils_python_version
-	$(tc-getCC) -shared -o tclpython.so.${PV} -fPIC ${CFLAGS} -Wall -I/usr/include/python${PYVER} tcl{python,thread}.c `python-config` -lpthread -lutil || die
+	$(tc-getCC) -shared -o tclpython.so.${PV} -fPIC ${CFLAGS} -Wall \
+		-I/usr/include/python${PYVER} tcl{python,thread}.c \
+		`python-config --libs` -lpthread -lutil || die
 }
 
 src_install() {
