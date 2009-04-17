@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tix
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.23 2008/04/27 20:09:05 maekke Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.24 2009/04/17 20:22:49 mescalinum Exp $
+
+*tix-8.4.2-r2 (17 Apr 2009)
+
+  17 Apr 2009; Federico Ferri <mescalinum@gentoo.org>
+  +files/tix-8.4.2-tcl85.patch, +tix-8.4.2-r2.ebuild:
+  add tcl85 patch. fixes bug #250354
 
   27 Apr 2008; Markus Meier <maekke@gentoo.org> tix-8.4.2-r1.ebuild:
   amd64 stable, bug #211972
