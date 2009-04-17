@@ -1,0 +1,37 @@
+diff -Naur nilfs-utils-2.0.12.orig/lib/Makefile.am nilfs-utils-2.0.12/lib/Makefile.am
+--- nilfs-utils-2.0.12.orig/lib/Makefile.am	2009-04-02 18:28:27.000000000 +0900
++++ nilfs-utils-2.0.12/lib/Makefile.am	2009-04-18 01:34:06.000000000 +0900
+@@ -23,6 +23,3 @@
+ libnilfs_la_CPPFLAGS = -I$(top_srcdir)/include
+ libnilfs_la_LDFLAGS = -version-info $(VERSIONINFO)
+ libnilfs_la_LIBADD = libnilfsmisc.la
+-
+-install-exec-hook:
+-	$(LDCONFIG) $(DESTDIR)$(libdir)
+diff -Naur nilfs-utils-2.0.12.orig/sbin/cleanerd/Makefile.am nilfs-utils-2.0.12/sbin/cleanerd/Makefile.am
+--- nilfs-utils-2.0.12.orig/sbin/cleanerd/Makefile.am	2009-04-02 18:28:27.000000000 +0900
++++ nilfs-utils-2.0.12/sbin/cleanerd/Makefile.am	2009-04-18 01:43:03.000000000 +0900
+@@ -19,5 +19,4 @@
+ 	list='$(sbin_PROGRAMS)'; \
+ 	for p in $$list; do \
+ 		chown root $(DESTDIR)$(sbindir)/$$p$(EXEEXT); \
+-		chmod u+s $(DESTDIR)$(sbindir)/$$p$(EXEEXT); \
+ 	done
+diff -Naur nilfs-utils-2.0.12.orig/sbin/mkfs/Makefile.am nilfs-utils-2.0.12/sbin/mkfs/Makefile.am
+--- nilfs-utils-2.0.12.orig/sbin/mkfs/Makefile.am	2009-04-02 18:28:27.000000000 +0900
++++ nilfs-utils-2.0.12/sbin/mkfs/Makefile.am	2009-04-18 01:43:40.000000000 +0900
+@@ -15,5 +15,4 @@
+ 	list='$(sbin_PROGRAMS)'; \
+ 	for p in $$list; do \
+ 		chown root $(DESTDIR)$(sbindir)/$$p$(EXEEXT); \
+-		chmod u+s $(DESTDIR)$(sbindir)/$$p$(EXEEXT); \
+ 	done
+diff -Naur nilfs-utils-2.0.12.orig/sbin/mount/Makefile.am nilfs-utils-2.0.12/sbin/mount/Makefile.am
+--- nilfs-utils-2.0.12.orig/sbin/mount/Makefile.am	2009-04-02 18:28:27.000000000 +0900
++++ nilfs-utils-2.0.12/sbin/mount/Makefile.am	2009-04-18 01:43:24.000000000 +0900
+@@ -25,5 +25,4 @@
+ 	list='$(sbin_PROGRAMS)'; \
+ 	for p in $$list; do \
+ 		chown root $(DESTDIR)$(sbindir)/$$p$(EXEEXT); \
+-		chmod u+s $(DESTDIR)$(sbindir)/$$p$(EXEEXT); \
+ 	done
