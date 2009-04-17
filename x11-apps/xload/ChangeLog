@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xload
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xload/ChangeLog,v 1.34 2009/04/11 18:22:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xload/ChangeLog,v 1.35 2009/04/17 18:39:01 jer Exp $
+
+  17 Apr 2009; Jeroen Roovers <jer@gentoo.org> xload-1.0.2-r1.ebuild:
+  Stable for HPPA (bug #264982).
 
   11 Apr 2009; nixnut <nixnut@gentoo.org> xload-1.0.2-r1.ebuild:
   ppc stable #264982

@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xkbutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbutils/ChangeLog,v 1.25 2009/04/17 08:16:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbutils/ChangeLog,v 1.26 2009/04/17 18:39:43 jer Exp $
+
+  17 Apr 2009; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  Stable for HPPA (bug #264982).
 
   17 Apr 2009; Jeroen Roovers <jer@gentoo.org> xkbutils-1.0.1-r1.ebuild:
   Stable for HPPA (bug #264982).
