@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/cernlib-montecarlo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.5 2008/09/05 07:46:26 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.6 2009/04/17 18:02:42 bicatali Exp $
+
+*cernlib-montecarlo-2006-r2 (17 Apr 2009)
+
+  17 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/cernlib-montecarlo-2006-noherwig.pach, metadata.xml,
+  -cernlib-montecarlo-2006.ebuild, +cernlib-montecarlo-2006-r2.ebuild:
+  New use flag to trigger external herwig library
 
   05 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   cernlib-montecarlo-2006.ebuild:

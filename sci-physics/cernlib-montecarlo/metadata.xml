@@ -9,4 +9,8 @@
   The libraries of Ariadne, Fritiof, Jetset, Lepto, and Pythia are not
   available for Gentoo: see cernlib Debian packaging for explanation.
 </longdescription>
+<use>
+    <flag name="herwig">Build Herwig internal event generator, newer version
+    available in <pkg>sci-physics/herwig</pkg></flag>
+</use>
 </pkgmetadata>
