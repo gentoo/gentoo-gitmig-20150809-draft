@@ -1,6 +1,25 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.458 2009/04/16 08:58:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.459 2009/04/17 07:21:26 zzam Exp $
+
+  17 Apr 2009; Matthias Schwarzott <zzam@gentoo.org>
+  -files/udev-125-cdrom-autoclose-bug.diff,
+  -files/udev-125-rules-update.diff, -files/udev-start-126.sh,
+  -files/udev-stop-126.sh, -files/udev-postmount-130-r2.initd,
+  -files/udev-133-rules-update.diff,
+  -files/udev-133-silence-physdev-warnings.diff, -files/udev-start-133.sh,
+  -files/udev-135-fix-capi.diff, -files/udev-135-fix-dri-perms.diff,
+  -files/udev-135-r2.confd, -files/udev-135-r2.initd,
+  -files/udev-dev-tarball-135-r2.initd, -files/udev-mount-135-r2.initd,
+  -files/udev-postmount-135-r2.initd, -files/udev-start-135-r2.sh,
+  -files/udev-stop-135-r2.sh, -files/udev-135-r3.confd,
+  -files/udev-mount-135-r3.initd, -files/udev-start-135-r3.sh,
+  -files/udev-135-rules-update.diff, -files/udev-fix-udevinfo-in-doc.diff,
+  -udev-122-r1.ebuild, -udev-125-r2.ebuild, -udev-130-r1.ebuild,
+  -udev-133.ebuild, -udev-135.ebuild, -udev-135-r1.ebuild,
+  -udev-135-r2.ebuild, -udev-135-r3.ebuild, -udev-135-r4.ebuild,
+  -udev-138.ebuild, -udev-139.ebuild, -udev-140.ebuild:
+  Remove all buggy old versions.
 
 *udev-124-r2 (16 Apr 2009)
 
