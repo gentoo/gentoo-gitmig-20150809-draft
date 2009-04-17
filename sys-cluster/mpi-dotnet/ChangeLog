@@ -1,0 +1,11 @@
+# ChangeLog for sys-cluster/mpi-dotnet
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpi-dotnet/ChangeLog,v 1.1 2009/04/17 13:07:20 mabi Exp $
+
+*mpi-dotnet-1.0.0 (17 Apr 2009)
+
+  17 Apr 2009; Matti Bickel <mabi@gentoo.org> +files/Makefile.am.patch,
+  +files/Unsafe.pl.patch, +files/configure.ac.patch, +metadata.xml,
+  +mpi-dotnet-1.0.0.ebuild:
+  initial commit, restricting tests as they currently hang for me
+

@@ -1,0 +1,11 @@
+--- mpi.net-1.0.0.orig/MPI/Unsafe.pl	2009-02-03 23:55:48.000000000 +0100
++++ mpi.net-1.0.0/MPI/Unsafe.pl	2009-02-07 08:24:01.000000000 +0100
+@@ -96,7 +96,7 @@
+ }
+ 
+ # Grab the command-line arguments
+-$mpi_header=shift @ARGV;
++$mpi_header = (@ARGV > 3) ? shift @ARGV : "/usr/include/mpi.h";
+ $unsafe_input = shift @ARGV;
+ $unsafe_output = shift @ARGV;
+ $cbridge_output = shift @ARGV;
