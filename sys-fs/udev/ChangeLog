@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.459 2009/04/17 07:21:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.460 2009/04/17 18:48:06 jer Exp $
+
+  17 Apr 2009; Jeroen Roovers <jer@gentoo.org> udev-124-r2.ebuild:
+  Stable for HPPA (bug #266290).
 
   17 Apr 2009; Matthias Schwarzott <zzam@gentoo.org>
   -files/udev-125-cdrom-autoclose-bug.diff,
