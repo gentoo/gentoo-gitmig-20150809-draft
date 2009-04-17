@@ -1,6 +1,17 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.166 2009/04/01 09:58:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.167 2009/04/17 18:37:46 swegener Exp $
+
+  17 Apr 2009; Sven Wegener <swegener@gentoo.org>
+  -files/avahi-0.6.1-no-ipv6.patch,
+  -files/avahi-0.6.19-assert-security.patch,
+  -files/avahi-0.6.19-ui-sharp-automake.patch,
+  -files/avahi-0.6.19-ui-sharp-gtk.patch, -files/avahi-0.6.20-autoipd.patch,
+  -files/avahi-0.6.22-gobject.patch, -files/avahi-0.6.22-vncviewer.patch,
+  -files/avahi-start-after-netmount.patch, -files/avahi-vncviewer.patch,
+  -avahi-0.6.19-r2.ebuild, -avahi-0.6.22-r1.ebuild, -avahi-0.6.23.ebuild,
+  -avahi-0.6.24.ebuild, -avahi-0.6.24-r1.ebuild:
+  Cleanup.
 
   01 Apr 2009; Sven Wegener <swegener@gentoo.org> files/autoipd-openrc.sh:
   Use absolute path to avahi-autoipd in openrc support script.
