@@ -1,0 +1,13 @@
+# ChangeLog for dev-ruby/mislav-will_paginate
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mislav-will_paginate/ChangeLog,v 1.1 2009/04/17 12:37:41 flameeyes Exp $
+
+*mislav-will_paginate-2.3.7 (17 Apr 2009)
+
+  17 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +mislav-will_paginate-2.3.7.ebuild:
+  Initial import of mislav-will_paginate (new name of will_paginate).
+  Loosely based on Wim Muskee work on bug #256077. Uses the github-produced
+  tarball (renamed), has proper dependencies and an src_test function and
+  installs a fake gemspec file.
+
