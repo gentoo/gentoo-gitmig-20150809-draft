@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.17 2009/02/11 05:35:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.18 2009/04/17 09:53:46 bicatali Exp $
+
+  17 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org> coot-0.4_pre2-r549:
+  Fixed license, thanks jlec
 
   11 Feb 2009; Donnie Berkholz <dberkholz@gentoo.org>; coot-0.1.2.ebuild,
   coot-0.3.1.ebuild, coot-0.3.3.ebuild:
