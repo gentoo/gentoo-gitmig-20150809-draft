@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/aws-s3
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/ChangeLog,v 1.1 2009/04/17 14:20:29 flameeyes Exp $
+
+*aws-s3-0.5.1 (17 Apr 2009)
+
+  17 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/aws-s3.gemspec, +metadata.xml, +aws-s3-0.5.1.ebuild:
+  Initial import of Ruby library for Amazon S3 access.
+
