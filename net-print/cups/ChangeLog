@@ -1,6 +1,17 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.345 2009/03/30 14:25:12 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.346 2009/04/17 01:14:40 tgurr Exp $
+
+*cups-1.3.10 (17 Apr 2009)
+
+  17 Apr 2009; Timo Gurr <tgurr@gentoo.org>
+  -files/cups-1.3.8-CVE-2008-3639.patch,
+  -files/cups-1.3.8-CVE-2008-3640.patch,
+  -files/cups-1.3.8-CVE-2008-3641.patch,
+  -files/cups-1.3.8-str2892-1.3.patch, -files/cups-1.3.8-str2924.patch,
+  -cups-1.3.8-r2.ebuild, +cups-1.3.10.ebuild:
+  Version bump including security fixes, see bug #263070. Drop 3rd party
+  pdftops perl wrapper in favor of the brand new upstream filter.
 
   30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> cups-1.3.8-r2.ebuild,
   cups-1.3.9-r1.ebuild:
