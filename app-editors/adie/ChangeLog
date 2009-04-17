@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/adie
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.29 2009/04/10 15:07:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.30 2009/04/17 16:54:38 mabi Exp $
+
+  17 Apr 2009; Matti Bickel <mabi@gentoo.org> -adie-1.6.34.ebuild:
+  cleanup
 
   10 Apr 2009; Raúl Porcel <armin76@gentoo.org> adie-1.6.35.ebuild:
   sparc stable wrt #263795
