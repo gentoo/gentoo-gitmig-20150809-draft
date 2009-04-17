@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.6-r2.ebuild,v 1.2 2009/04/17 19:47:20 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.6-r2.ebuild,v 1.3 2009/04/17 20:45:34 jsbronder Exp $
 
 EAPI="2"
 inherit eutils
@@ -24,10 +24,11 @@ DEPEND=">=dev-util/acgmake-1.4
 
 src_prepare() {
 	use qt4 || sed -i "s:Apps::" ACGMakefile
-	# gcc-4.3 fix.  Need string.h for memcpy
+	# gcc-4.3 fixs.
 	sed -i \
 		'N;s,\(OPENMESH_VECTOR_HH )\n\),\1#include <string.h>\n,' \
 		Core/Geometry/VectorT_inc.hh || die
+	epatch "${FILESDIR}/QGLViewerWidget-hh-gcc-4.3-include-fix.patch" || die
 }
 
 src_compile() {

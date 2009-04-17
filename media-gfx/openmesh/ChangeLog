@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/openmesh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.13 2009/04/17 19:47:20 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/ChangeLog,v 1.14 2009/04/17 20:45:34 jsbronder Exp $
+
+  17 Apr 2009; Justin Bronder <jsbronder@gentoo.org>
+  +files/QGLViewerWidget-hh-gcc-4.3-include-fix.patch,
+  openmesh-1.9.6-r2.ebuild:
+  More gcc-4.3 fixes. #264355
 
   17 Apr 2009; Justin Bronder <jsbronder@gentoo.org>
   openmesh-1.9.6-r2.ebuild:
