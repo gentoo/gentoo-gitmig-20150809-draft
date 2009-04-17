@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/btrfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/ChangeLog,v 1.19 2009/04/17 15:16:51 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/ChangeLog,v 1.20 2009/04/17 15:23:36 lavajoe Exp $
+
+  17 Apr 2009; Joe Peterson <lavajoe@gentoo.org> btrfs-0.17.ebuild,
+  btrfs-9999.ebuild:
+  Add checks for CONFIG_ZLIB_INFLATE and CONFIG_ZLIB_DEFLATE to version
+  9999; minor whitespace cleanup
 
 *btrfs-0.17 (17 Apr 2009)
 

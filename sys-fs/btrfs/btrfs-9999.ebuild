@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-9999.ebuild,v 1.8 2009/04/17 15:16:51 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/btrfs-9999.ebuild,v 1.9 2009/04/17 15:23:36 lavajoe Exp $
 
 inherit eutils linux-mod git
 
@@ -35,6 +35,16 @@ pkg_setup()
 	if ! linux_chkconfig_present LIBCRC32C; then
 		eerror "You need to enable LIBCRC32C in your kernel!"
 		die "You need to enable LIBCRC32C in your kernel!"
+	fi
+
+	if ! linux_chkconfig_present ZLIB_INFLATE; then
+		eerror "You need to enable ZLIB_INFLATE in your kernel!"
+		die "You need to enable ZLIB_INFLATE in your kernel!"
+	fi
+
+	if ! linux_chkconfig_present ZLIB_DEFLATE; then
+		eerror "You need to enable ZLIB_DEFLATE in your kernel!"
+		die "You need to enable ZLIB_DEFLATE in your kernel!"
 	fi
 }
 
