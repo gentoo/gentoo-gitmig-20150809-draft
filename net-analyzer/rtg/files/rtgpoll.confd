@@ -1,9 +1,0 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rtg/files/rtgpoll.confd,v 1.2 2004/07/14 23:10:55 agriffis Exp $
-
-# RTGPOLL_TARGETS defines the targets file to run the poller on. The default
-# should be fine.
-
-RTGPOLL_TARGETS=/etc/rtg/targets.cfg
-
