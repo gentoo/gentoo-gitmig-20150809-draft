@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/perl-PBS
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-PBS/ChangeLog,v 1.7 2008/01/31 06:45:40 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-PBS/ChangeLog,v 1.8 2009/04/17 21:12:25 jsbronder Exp $
+
+*perl-PBS-0.33 (17 Apr 2009)
+
+  17 Apr 2009; Justin Bronder <jsbronder@gentoo.org> +perl-PBS-0.33.ebuild:
+  Version bump, fixes compilation error in #249444. Also enabled src_test().
 
   31 Jan 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   -perl-PBS-0.23.ebuild:
