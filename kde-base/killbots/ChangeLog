@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/killbots
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.8 2009/04/11 23:14:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.9 2009/04/17 05:01:24 alexxy Exp $
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -killbots-4.2.1.ebuild,
+  -killbots-4.2.1-r1.ebuild:
+  Drop KDE 4.2.1
 
 *killbots-4.2.2 (11 Apr 2009)
 

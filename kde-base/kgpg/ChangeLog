@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.111 2009/04/11 23:10:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.112 2009/04/17 04:57:39 alexxy Exp $
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kgpg-4.2.1.ebuild,
+  -kgpg-4.2.1-r1.ebuild:
+  Drop KDE 4.2.1
 
 *kgpg-4.2.2 (11 Apr 2009)
 

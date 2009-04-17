@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knetattach
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/ChangeLog,v 1.108 2009/04/11 23:31:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/ChangeLog,v 1.109 2009/04/17 05:16:36 alexxy Exp $
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -knetattach-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
 *knetattach-4.2.2 (11 Apr 2009)
 
