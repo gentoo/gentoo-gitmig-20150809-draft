@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9680 2009/04/16 15:10:30 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9681 2009/04/17 04:22:35 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -795,12 +795,6 @@ app-misc/sdricoh_cs
 # Masked pending unmasking of guile-gnome-platform 2.16
 >=sci-chemistry/burrow-owl-1.4
 
-# Tobias Scherbaum <dertobi123@gentoo.org> (11 Jan 2009)
-# bundles *very* outdated versions of gd, zlib and libpng libraries, static
-# links, upstream seems dead, removal in 30 days.
-# bug 247958 and bug #251425
-net-analyzer/rtg
-
 # Daniel Black <dragonheart@gentoo.org> (10 Jan 2009)
 # package masking to allow dependant packages to resolve
 # bug #253709
@@ -857,6 +851,7 @@ sys-apps/tinylogin
 # Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
 # Removed in 60 days, multiple bugs - does not compile with recent kernels.
 # bug 251795
+# Update, user is working on this in stated bug.
 sys-fs/cloop
 
 # Mike Pagano <mpagano@gentoo.org> (17 Dec 2008)
@@ -868,10 +863,6 @@ sys-fs/cloop
 app-admin/eselect-boost
 >=dev-util/boost-build-1.35.0-r2
 >=dev-libs/boost-1.35.0-r3
-
-# Peter Volkov <pva@gentoo.org> (16 Dec 2008)
-# Fails to build, bug #247946. Somebody needs to port it to new spandsp interface
-net-dialup/ivcall
 
 # Alin Năstac <mrness@gentoo.org> (14 Dec 2008)
 # Dead upstream, masked for removal in ~60 days.
@@ -955,10 +946,6 @@ media-libs/realcodecs
 # Legal problems #241650 causing distribution problems #245322 and build problems #237493
 app-crypt/truecrypt
 
-# Daniel Gryniewicz <dang@gentoo.org> (2 Nov 2008)
-# Feed counts and updates seem to be broken
-=net-news/liferea-1.4.21b
-
 # Markus Dittrich <markusle@gentoo.org> (28 Oct 2008)
 # New upstream version is currently masked due to an interface
 # glitch with Qt-4.4.2 that needs to be looked at (bug #243362)
@@ -968,18 +955,6 @@ app-crypt/truecrypt
 # Federico Ferri <mescalinum@gentoo.org> (27 Oct 2008)
 # Until Tcl-8.5 gets unmasked
 >=dev-libs/newt-0.52.10
-
-# Jesus Rivero <neurogeek@gentoo.org> (26 Oct 2008)
-# Masked for removal in 30 days. This package is
-# unmaintained/deprecated.
-# See bug #239978 for reference.
-dev-python/pyframer
-
-# Robin H. Johnson <robbat2@gentoo.org> (20 Oct 2008)
-# Masked for removal in 30 days (see bugs #120220, #137998, #170782)
-# genflags should never have been born.  Output needs to be specific per GCC
-# version, and that's a big change.
-app-portage/genflags
 
 # Alexis Ballier <aballier@gentoo.org> (15 Oct 2008)
 # Breaks ocamlduce
@@ -993,7 +968,6 @@ app-portage/genflags
 # Alexis Ballier <aballier@gentoo.org> (06 Oct 2008)
 # API changes, the only reverse dep fails to build against it.
 >=media-libs/libspiff-1.0.0
-
 
 # Christian Parpart <trapni@gentoo.org> (04 Oct 2008)
 # for testing/experienced users only
@@ -1028,10 +1002,6 @@ gnome-extra/gnome-lirc-properties
 # Development version, but yet nice :)
 =net-analyzer/wireshark-1.1*
 
-# Carsten Lohrke <carlo@gentoo.org> (05 Sep 2008)
-# Masked for removal. It's broken and abandoned.
-app-portage/kuroo
-
 # Michael Marineau <marineam@gentoo.org> (03 Sep 2008)
 # Unmaintained and out of date security wise,
 # Please use 2.6.18 instead if it supports your hardware.
@@ -1049,21 +1019,6 @@ dev-tcltk/tclgpgme
 # Tiziano Müller <dev-zero@gentoo.org> (15 Aug 2008)
 # Masked for testing (works with >=dev-libs/xerces-c-3.0.0)
 =dev-libs/xqilla-9999
-
-# Jesus Rivero <neurogeek@gentoo.org> (11 Aug 2008)
-# Masked for removal in 30 days. These packages are
-# unmaintained/deprecated and break stable tree.
-# See bug #231675 for reference.
-dev-python/twisted-xish
-dev-python/twisted-pair
-dev-python/twisted-flow
-
-# Jesus Rivero <neurogeek@gentoo.org> (11 Aug 2008)
-# Masked for removal in 30 days. Twibber is
-# unmaintained and depends on dev-python/twisted-xish
-# that is to be removed from the tree
-# See bug #231675 for reference.
-dev-python/twibber
 
 # Mike Doty <kingtaco@gentoo.org> (11 Aug 2008)
 # Masked due to build failure, bug 234448
@@ -1347,11 +1302,6 @@ dev-libs/liboobs
 # see bug #205829
 >sys-libs/libraw1394-1.3.0
 
-# Saleem Abdulrasool <compnerd@gentoo.org> (22 Jan 2008)
-# Never was stabled, and will not work with future versions of HAL.  Remove when
-# HAL 0.5.10 is stabled on all arches.
-gnome-extra/hal-device-manager
-
 # Michael Sterrett <mr_bones_@gentoo.org> (15 Jan 2008)
 # Security mask (bug #190835)
 # https://bugs.gentoo.org/show_bug.cgi?id=190835
@@ -1370,21 +1320,10 @@ games-fps/doomsday-resources
 # Live Subversion ebuild until pending first upstream release
 =games-mud/wxmud-9999
 
-# MATSUU Takuto <matsuu@gentoo.org> (27 Dec 2007)
-# Upstream gone, nothing depends on this.
-# pending removal. Remove in 30 days
-# https://bugs.gentoo.org/show_bug.cgi?id=177912
-dev-tcltk/Tk_Theme
-
 # Christian Hoffmann <hoffie@gentoo.org> (27 Dec 2007)
 # broken (leads to random segfaults); masked until someone steps up to
 # maintain it or it will finally get removed
 dev-php5/php-java-bridge
-
-# Carsten Lohrke <carlo@gentoo.org> (23 Dec 2007)
-# Abandonware. Masked for removal.
-net-misc/fsh
-dev-lang/entity
 
 # Ulrich Mueller <ulm@gentoo.org> (21 Dec 2007)
 # Christian Faulhammer <fauli@gentoo.org>
@@ -1546,6 +1485,7 @@ net-misc/xsupplicant
 
 # Stefan Cornelius <dercorny@gentoo.org> (2 Mar 2007)
 # Masked because it's affected by 7 GLSAs or so, nobody should use it
+# However, keep around for data migration purposes.
 <=dev-db/mysql-3.23.58-r1
 
 # Alexandre Buisse <nattfodd@gentoo.org> (21 Feb 2007)
@@ -1705,11 +1645,6 @@ net-mail/mailer-config
 # Tihs package is conflict with postgresql at the moment
 # and waiting on implementing virtual/postgresql.
 dev-db/pgcluster
-
-# <mkennedy@gentoo.org> (08 Aug 2004)
-# won't build for now
-dev-lisp/cl-rsm-gen-prog
-dev-lisp/cl-rsm-genetic-alg
 
 # <klieber@gentoo.org> (01 Apr 2004)
 # The following packages contain a remotely-exploitable
