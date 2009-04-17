@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4370 2009/04/17 12:27:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4371 2009/04/17 13:07:53 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2634,6 +2634,8 @@ sys-cluster/heartbeat:management - Adds support for management GUI.
 sys-cluster/lam-mpi:pbs - Add support for the Portable Batch System (PBS)
 sys-cluster/lam-mpi:romio - Enable romio, a high-performance portable MPI-IO implementation
 sys-cluster/lam-mpi:xmpi - Build support for the external XMPI debugging GUI
+sys-cluster/mpi-dotnet:doc - Install tutorials for C# and IronPython (requires a Word document reader)
+sys-cluster/mpi-dotnet:examples - Install small, illustrative projects using MPI.Net
 sys-cluster/mpich2:fast - Enabling fast turns off error checking and timing collection
 sys-cluster/mpich2:mpe - Add mpe support
 sys-cluster/mpich2:mpe-sdk - Include additional SDK support, jar files
