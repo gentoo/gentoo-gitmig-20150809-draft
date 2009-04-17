@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.20 2007/10/31 13:22:01 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.21 2009/04/17 20:07:20 caster Exp $
 
-inherit java-pkg
+inherit java-pkg-2
 
 DESCRIPTION="Helium (for learning Haskell)"
 HOMEPAGE="http://www.cs.uu.nl/helium"
@@ -17,7 +17,7 @@ IUSE="readline"
 DEPEND="<dev-lang/ghc-6.4
 	!>=dev-lang/ghc-6.4
 	readline? ( sys-libs/readline )"
-RDEPEND="virtual/jdk
+RDEPEND=">=virtual/jre-1.4
 	dev-libs/gmp
 	readline? ( sys-libs/readline )"
 
@@ -33,6 +33,8 @@ src_unpack() {
 	cd ${S}/parsec
 	mv ParsecPerm.hs ParsecPerm.hs.orig
 	sed -e 's/(\$/(\$ /' ParsecPerm.hs.orig > ParsecPerm.hs
+
+	cp "${DISTDIR}/Hint.jar" "${WORKDIR}"
 }
 
 src_compile() {
@@ -56,7 +58,7 @@ src_install() {
 		demodir=${D}/usr/lib/helium/demo \
 		install || die
 	# install hint
-	java-pkg_dojar ${DISTDIR}/Hint.jar
+	java-pkg_dojar "${WORKDIR}/Hint.jar"
 	# create wrappers
 	dobin ${FILESDIR}/helium-wrapper
 	dosym /usr/bin/helium-wrapper /usr/bin/helium

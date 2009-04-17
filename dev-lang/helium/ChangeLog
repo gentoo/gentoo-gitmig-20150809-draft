@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/helium
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.22 2008/03/12 12:57:36 phreak Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.23 2009/04/17 20:07:20 caster Exp $
+
+  17 Apr 2009; Vlastimil Babka <caster@gentoo.org> helium-1.1,
+  helium-1.2-r1:
+  Migrate to gen-2 java eclasses, bug #161426.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andres Loeh (kosmikus, #200333) from metadata.xml.
