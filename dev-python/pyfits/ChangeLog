@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyfits
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.6 2008/05/27 11:23:01 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.7 2009/04/17 13:17:09 bicatali Exp $
+
+*pyfits-2.1 (17 Apr 2009)
+
+  17 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org> +pyfits-2.1.ebuild:
+  Bump
 
   27 May 2008; Sébastien Fabbro <bicatali@gentoo.org> -pyfits-1.1.ebuild:
   Removed older version, numarray dependent
