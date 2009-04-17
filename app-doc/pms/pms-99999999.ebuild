@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-99999999.ebuild,v 1.8 2009/04/16 22:02:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-99999999.ebuild,v 1.9 2009/04/17 20:50:49 gentoofan23 Exp $
 
 inherit git
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="all-options eapi3-draft html kdebuild"
 
-DEPEND="html? ( dev-tex/tex4ht )
+DEPEND="html? ( >=dev-tex/tex4ht-20090115_p0029 )
 	eapi3-draft? ( dev-texlive/texlive-bibtexextra dev-tex/leaflet )
 	dev-texlive/texlive-latex
 	dev-texlive/texlive-latexrecommended

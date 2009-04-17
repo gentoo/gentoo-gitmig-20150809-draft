@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.14 2009/04/16 22:02:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.15 2009/04/17 20:50:49 gentoofan23 Exp $
+
+  17 Apr 2009; Thomas Anderson <gentoofan23@gentoo.org> pms-99999999.ebuild:
+  Fix Build Dependencies, USE=html needs >=dev-tex/tex4ht-20090115_p0029
 
   16 Apr 2009; Christian Faulhammer <fauli@gentoo.org> pms-99999999.ebuild:
   add dev-tex/leaflet as the EAPI 3 branch now needs that
