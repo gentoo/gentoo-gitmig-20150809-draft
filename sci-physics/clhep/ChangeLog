@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/clhep
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.9 2009/03/22 21:51:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.10 2009/04/17 13:34:37 bicatali Exp $
+
+  17 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  -clhep-2.0.4.0.ebuild:
+  Removed old version
 
   22 Mar 2009; Jeremy Olexa <darkside@gentoo.org> clhep-2.0.4.2.ebuild
   amd64 stable, bug 245875
