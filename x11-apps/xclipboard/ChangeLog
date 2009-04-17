@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xclipboard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclipboard/ChangeLog,v 1.22 2009/04/11 18:10:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclipboard/ChangeLog,v 1.23 2009/04/17 18:30:18 jer Exp $
+
+  17 Apr 2009; Jeroen Roovers <jer@gentoo.org> xclipboard-1.0.1-r1.ebuild:
+  Marked ~hppa too.
 
   11 Apr 2009; nixnut <nixnut@gentoo.org> xclipboard-1.0.1-r1.ebuild:
   ppc stable #264982

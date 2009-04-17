@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.27 2009/04/11 18:25:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.28 2009/04/17 18:42:10 jer Exp $
+
+  17 Apr 2009; Jeroen Roovers <jer@gentoo.org> xman-1.0.2-r1.ebuild:
+  Marked ~hppa too.
 
   11 Apr 2009; nixnut <nixnut@gentoo.org> xman-1.0.2-r1.ebuild:
   ppc stable #264982
