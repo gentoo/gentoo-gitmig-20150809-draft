@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2545 2009/04/17 12:09:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2546 2009/04/17 16:24:02 kolmodin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Apr 2009; Lennart Kolmodin <kolmodin@gentoo.org> package.mask:
+  Mask dev-haskell/ghc-6.8.2-r1 for testing. It includes a precompiled
+  readline version, fixing bug #259867.
 
   17 Apr 2009; <chainsaw@gentoo.org> package.mask:
   Mask Audacious 2.0 alpha developer previews.
