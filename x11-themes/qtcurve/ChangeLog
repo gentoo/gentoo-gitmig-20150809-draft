@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/qtcurve
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.56 2009/04/10 01:32:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.57 2009/04/17 10:11:55 yngwin Exp $
+
+*qtcurve-0.62.7 (17 Apr 2009)
+
+  17 Apr 2009; Ben de Groot <yngwin@gentoo.org> +qtcurve-0.62.7.ebuild:
+  Version bump
 
 *qtcurve-0.62.6 (10 Apr 2009)
 
