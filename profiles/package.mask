@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9681 2009/04/17 04:22:35 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9682 2009/04/17 12:09:51 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tony Vroon <chainsaw@gentoo.org> (17 Apr 2009)
+# Alpha-quality developer preview. Feel free to give it a go, but bugs go upstream.
+# Use this tracker: http://www.atheme.org/projects/audacious/issues
+=media-sound/audacious-2.0_alpha*
+=media-plugins/audacious-plugins-2.0_alpha*
 
 # Mounir Lamouri <volkmar@gentoo.org> (15 Apr 2009)
 # >www-plugins/mozilla-weaver-0.2.104 needs masked versions of ff (ie. 3.1_beta)
