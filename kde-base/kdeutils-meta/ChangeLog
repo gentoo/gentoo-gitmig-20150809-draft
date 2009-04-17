@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.108 2009/04/16 21:56:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils-meta/ChangeLog,v 1.109 2009/04/17 06:45:40 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> kdeutils-meta-4.2.2:
+  Restore ~hppa keywords
 
   16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdeutils-meta-4.2.1.ebuild:

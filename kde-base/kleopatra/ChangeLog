@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.15 2009/04/17 05:06:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.16 2009/04/17 06:25:35 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> kleopatra-4.2.2:
+  Restore ~hppa keywords
 
   16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kleopatra-4.2.1.ebuild,
   -kleopatra-4.2.1-r1.ebuild:

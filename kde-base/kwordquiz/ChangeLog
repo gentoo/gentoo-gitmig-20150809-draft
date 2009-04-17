@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kwordquiz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.110 2009/04/12 06:21:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.111 2009/04/17 06:17:23 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kwordquiz-4.2.1.ebuild,
+  kwordquiz-4.2.2:
+  Restore ~hppa keywords
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kwordquiz-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
 *kwordquiz-4.2.2 (11 Apr 2009)
 

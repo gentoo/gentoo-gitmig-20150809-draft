@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfloppy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.99 2009/04/17 04:53:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.100 2009/04/17 06:09:23 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> kfloppy-4.2.2:
+  Restore ~hppa keywords
 
   16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kfloppy-4.2.1.ebuild:
   Drop KDE 4.2.1

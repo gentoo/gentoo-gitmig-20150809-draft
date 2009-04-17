@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-colorschemes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-colorschemes/ChangeLog,v 1.23 2009/04/16 20:36:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-colorschemes/ChangeLog,v 1.24 2009/04/17 06:40:54 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  kdeartwork-colorschemes-4.2.2:
+  Restore ~hppa keywords
 
   16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdeartwork-colorschemes-4.2.1.ebuild:

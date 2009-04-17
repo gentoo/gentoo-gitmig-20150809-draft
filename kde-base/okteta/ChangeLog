@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/okteta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.12 2009/04/12 06:38:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.13 2009/04/17 06:38:57 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -okteta-4.2.1.ebuild,
+  okteta-4.2.2:
+  Restore ~hppa keywords
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -okteta-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
 *okteta-4.2.2 (11 Apr 2009)
 

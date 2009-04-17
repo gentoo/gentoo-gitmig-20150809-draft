@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.19 2009/04/14 15:38:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.20 2009/04/17 06:42:19 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -plasma-workspace-4.2.1.ebuild, -plasma-workspace-4.2.1-r1.ebuild,
+  plasma-workspace-4.2.2:
+  Restore ~hppa keywords
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -plasma-workspace-4.2.1.ebuild, -plasma-workspace-4.2.1-r1.ebuild:
+  Drop KDE 4.2.1
 
   14 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml:
   Update metadata.

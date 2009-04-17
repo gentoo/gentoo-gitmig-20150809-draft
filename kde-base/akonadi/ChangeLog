@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akonadi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.19 2009/04/16 19:58:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.20 2009/04/17 06:03:22 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> akonadi-4.2.2:
+  Restore ~hppa keywords
 
   16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -akonadi-4.2.1.ebuild:
   Drop KDE 4.2.1

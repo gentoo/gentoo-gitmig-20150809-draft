@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.115 2009/04/17 05:00:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.116 2009/04/17 06:18:41 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> kig-4.2.2:
+  Restore ~hppa keywords
 
   16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kig-4.2.1.ebuild:
   Drop KDE 4.2.1

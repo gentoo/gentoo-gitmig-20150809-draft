@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kreversi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.108 2009/04/11 23:52:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.109 2009/04/17 06:23:47 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kreversi-4.2.1.ebuild,
+  kreversi-4.2.2:
+  Restore ~hppa keywords
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kreversi-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
 *kreversi-4.2.2 (11 Apr 2009)
 

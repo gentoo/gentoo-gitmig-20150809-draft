@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdessh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdessh/ChangeLog,v 1.24 2009/04/16 21:49:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdessh/ChangeLog,v 1.25 2009/04/17 06:43:26 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> kdessh-4.2.2:
+  Restore ~hppa keywords
 
   16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdessh-4.2.1.ebuild:
   Drop KDE 4.2.1

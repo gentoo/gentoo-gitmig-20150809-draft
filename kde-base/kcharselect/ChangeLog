@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.96 2009/04/16 20:26:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.97 2009/04/17 06:31:28 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> kcharselect-4.2.2:
+  Restore ~hppa keywords
 
   16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kcharselect-4.2.1.ebuild:

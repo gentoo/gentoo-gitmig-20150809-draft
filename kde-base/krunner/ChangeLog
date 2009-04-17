@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.27 2009/04/13 13:07:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.28 2009/04/17 06:27:20 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -krunner-4.2.1.ebuild,
+  krunner-4.2.2:
+  Restore ~hppa keywords
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -krunner-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
   13 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> krunner-4.2.2.ebuild:
   Fix deps. Per bug #265974.

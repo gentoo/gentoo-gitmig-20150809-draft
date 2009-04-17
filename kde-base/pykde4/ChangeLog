@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.14 2009/04/15 13:13:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.15 2009/04/17 06:43:36 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -pykde4-4.2.1.ebuild,
+  pykde4-4.2.2, pykde4-4.2.2-r1:
+  Restore ~hppa keywords
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -pykde4-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
 *pykde4-4.2.2-r1 (15 Apr 2009)
 

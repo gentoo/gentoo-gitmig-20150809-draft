@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.8 2009/04/12 06:18:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.9 2009/04/17 06:14:44 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kwalletd-4.2.1.ebuild,
+  kwalletd-4.2.2:
+  Restore ~hppa keywords
+
+  16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kwalletd-4.2.1.ebuild:
+  Drop KDE 4.2.1
 
 *kwalletd-4.2.2 (11 Apr 2009)
 

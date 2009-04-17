@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.81 2009/04/16 21:45:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.82 2009/04/17 06:41:21 alexxy Exp $
+
+  17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> kdesdk-misc-4.2.2:
+  Restore ~hppa keywords
 
   16 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdesdk-misc-4.2.1.ebuild, -kdesdk-misc-4.2.1-r1.ebuild:
