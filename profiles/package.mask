@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9686 2009/04/17 18:12:53 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9687 2009/04/17 21:19:41 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,28 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (17 Apr 2009)
+# Masks for new IO-Compress which includes
+# Compress-Zlib, IO-Compress-Zlib, IO-Compress-Bzip2, IO-Compress-Base
+perl-core/IO-Compress
+virtual/perl-IO-Compress
+=virtual/perl-Compress-Zlib-2.017
+=virtual/perl-IO-Compress-Zlib-2.017
+=virtual/perl-IO-Compress-Bzip2-2.017
+=virtual/perl-IO-Compress-Base-2.017
+# new versions
+=perl-core/Compress-Raw-Zlib-2.017
+=virtual/perl-Compress-Raw-Zlib-2.017
+=perl-core/Compress-Raw-Bzip2-2.017
+=virtual/perl-IO-Compress-Bzip2-2.017
+# Move dev-perl/IO-Compress-Bzip2 -> perl-core/IO-Compress-Bzip2
+# and  dev-perl/Compress-Raw-Bzip2 -> perl-core/Compress-Raw-Bzip2
+=virtual/perl-IO-Compress-Bzip2-2.015
+=perl-core/IO-Compress-Bzip2-2.015
+=virtual/perl-Compress-Raw-Bzip2-2.015
+=perl-core/Compress-Raw-Bzip2-2.015
+
 
 # Justin Bronder <jsbronder@gentoo.org> (17 Apr 2009)
 # Mask sys-cluster/mpich for removal. (#266565)
