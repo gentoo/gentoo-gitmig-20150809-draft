@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-3.0.2.ebuild,v 1.4 2007/07/15 07:14:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/netlogo-bin-3.0.2.ebuild,v 1.5 2009/04/17 20:03:22 caster Exp $
 
-inherit eutils java-pkg
+inherit eutils java-pkg-2
 #RESTRICT="fetch"
 MY_PN="netlogo"
 MY_P=${MY_PN}-${PV}
