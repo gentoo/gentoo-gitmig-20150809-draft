@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/powerpc-utils-1.1.3.18-r1.ebuild,v 1.1 2009/03/31 21:34:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/powerpc-utils-1.1.3.18-r1.ebuild,v 1.2 2009/04/17 14:47:46 ranger Exp $
 
 inherit eutils versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://http.us.debian.org/debian/pool/main/p/powerpc-utils/${PN}_${BASE
 	mirror://gentoo/${PN}-cleanup.patch.bz2"
 
 HOMEPAGE="http://http.us.debian.org/debian/pool/main/p/powerpc-utils/"
-KEYWORDS="-* ~ppc ~ppc64"
+KEYWORDS="-* ppc ppc64"
 IUSE=""
 DEPEND="virtual/libc"
 RDEPEND=""
