@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4371 2009/04/17 13:07:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4372 2009/04/17 15:08:03 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -211,6 +211,7 @@ app-emulation/libvirt:iscsi - Add support for iSCSI (Internet SCSI) remote stora
 app-emulation/libvirt:kvm - Add support for app-emulation/kvm based virtual machines
 app-emulation/libvirt:lvm - Add support for the Logical Volume Manager sys-apps/lvm2
 app-emulation/libvirt:lxc - Add support for the Linux Containers
+app-emulation/libvirt:network - Enable networking support for guests
 app-emulation/libvirt:openvz - Add support for sys-kernel/openvz-sources OpenVZ-based virtual machines
 app-emulation/libvirt:parted - Add support for the sys-apps/parted partition editor
 app-emulation/libvirt:qemu - Add support for app-emulation/qemu based virtual machines
