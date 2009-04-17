@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4373 2009/04/17 16:47:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4374 2009/04/17 18:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2516,6 +2516,7 @@ sci-misc/h5utils:octave - Build Octave plugins
 sci-misc/nco:ncap2 - Build next generation netcdf arithmetic processor (needs dev-java/antlr)
 sci-misc/nco:udunits - Add sci-libs/udunits files support
 sci-misc/ncview:udunits - Add sci-libs/udunits files support
+sci-physics/cernlib-montecarlo:herwig - Build Herwig internal event generator, newer version available in sci-physics/herwig
 sci-physics/clhep:exceptions - Enable zoom exceptions for user intervention
 sci-physics/geant:athena - Enable the MIT Athena (x11-libs/libXaw) widget set (default is Motif)
 sci-physics/geant:data - Add a lot of standard physics data files for geant4
