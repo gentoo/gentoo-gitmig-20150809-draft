@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/libarchive
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.49 2009/04/16 22:58:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libarchive/ChangeLog,v 1.50 2009/04/17 10:58:00 flameeyes Exp $
+
+  17 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org> libarchive-2.7.0:
+  Append -Wno-error to avoid -Werror hitting. Closes bug #266463.
 
 *libarchive-2.7.0 (16 Apr 2009)
 
