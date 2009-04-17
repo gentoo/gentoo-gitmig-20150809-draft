@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.11-r1.ebuild,v 1.9 2009/04/08 04:35:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.11-r1.ebuild,v 1.10 2009/04/17 13:50:26 ulm Exp $
 
 inherit eutils
 
@@ -56,7 +56,8 @@ src_install() {
 
 pkg_postinst() {
 	if use bash-completion ; then
-		elog "To enable command-line completion for eselect, run:"
+		elog "In case you have not yet enabled command-line completion"
+		elog "for eselect, you can run:"
 		elog
 		elog "  eselect bashcomp enable eselect"
 		elog
