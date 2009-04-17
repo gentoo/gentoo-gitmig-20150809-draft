@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.167 2009/04/17 18:37:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.168 2009/04/17 18:41:14 swegener Exp $
+
+*avahi-0.6.25 (17 Apr 2009)
+
+  17 Apr 2009; Sven Wegener <swegener@gentoo.org> +avahi-0.6.25.ebuild:
+  Version bump.
 
   17 Apr 2009; Sven Wegener <swegener@gentoo.org>
   -files/avahi-0.6.1-no-ipv6.patch,
