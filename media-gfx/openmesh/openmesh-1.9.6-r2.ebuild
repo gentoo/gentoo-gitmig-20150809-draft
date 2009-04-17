@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.6-r2.ebuild,v 1.1 2009/02/26 17:39:18 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openmesh/openmesh-1.9.6-r2.ebuild,v 1.2 2009/04/17 19:47:20 jsbronder Exp $
 
 EAPI="2"
 inherit eutils
@@ -16,8 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="qt4 debug"
 
-RDEPEND="qt4? (
-		|| ( x11-libs/qt-gui:4 =x11-libs/qt-4.3*[opengl] )
+RDEPEND="qt4? ( =x11-libs/qt-4.4*[opengl]
 		virtual/glut )"
 DEPEND=">=dev-util/acgmake-1.4
 	>=sys-apps/findutils-4.3.0
