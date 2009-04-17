@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.9 2009/03/22 21:41:34 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.10 2009/04/17 17:52:58 bicatali Exp $
 
-inherit eutils multilib fortran
+EAPI=2
+inherit eutils toolchain-funcs
 
 DEB_PN=paw
 DEB_PV=${PV}.dfsg.2
@@ -32,26 +33,23 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${DEB_PN}-${DEB_PV}.orig"
 
-FORTRAN="gfortran g77 ifc"
-
-src_unpack() {
-	unpack ${A}
-	epatch "${DEB_P}-${DEB_PR}".diff
-
+src_prepare() {
+	cd "${WORKDIR}"
+	epatch "${WORKDIR}/${DEB_P}-${DEB_PR}.diff"
 	cd "${S}"
 	cp debian/add-ons/Makefile .
-	export DEB_BUILD_OPTIONS="${FORTRANC} nostrip nocheck"
+	export DEB_BUILD_OPTIONS="$(tc-getFC) nostrip nocheck"
 
 	# fix some path stuff and collision for comis.h,
 	# already installed by cernlib and replace hardcoded fortran compiler
 	sed -i \
 		-e 's:/usr/local:/usr:g' \
 		-e '/comis.h/d' \
-		-e "s/gfortran/${FORTRANC}/g" \
+		-e "s/gfortran/$(tc-getFC)/g" \
 		Makefile || die "sed'ing the Makefile failed"
 
 	einfo "Applying Debian patches"
-	emake -j1 patch || die "make patch failed"
+	emake -j1 patch || die "applying patch failed"
 
 	# since we depend on cfortran, do not use the one from cernlib
 	rm -f src/include/cfortran/cfortran.h
@@ -67,11 +65,4 @@ src_install() {
 	cd "${S}"/debian
 	dodoc changelog README.* deadpool.txt copyright || die "dodoc failed"
 	newdoc add-ons/README README.add-ons || die "newdoc failed"
-}
-
-pkg_postinst() {
-	if use amd64; then
-		elog "Please see the possible warnings in using ${PN} on 64 bits:"
-		elog "${ROOT}/usr/share/doc/${PF}/README.*64*"
-	fi
 }
