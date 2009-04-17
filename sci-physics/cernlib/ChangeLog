@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/cernlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.14 2009/03/22 21:51:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.15 2009/04/17 17:49:58 bicatali Exp $
+
+*cernlib-2006-r3 (17 Apr 2009)
+
+  17 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  -cernlib-2006-r1.ebuild, +cernlib-2006-r3.ebuild:
+  Revision bump to include new Debian patches and some ebuild cleanup
 
   22 Mar 2009; Jeremy Olexa <darkside@gentoo.org> cernlib-2006-r2.ebuild:
   amd64 stable, bug 245875

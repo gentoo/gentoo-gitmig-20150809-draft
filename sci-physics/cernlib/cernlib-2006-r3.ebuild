@@ -1,12 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r1.ebuild,v 1.4 2008/06/27 10:39:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.1 2009/04/17 17:49:58 bicatali Exp $
 
-inherit eutils multilib fortran
+EAPI=2
+inherit eutils toolchain-funcs
 
 DEB_PN=cernlib
 DEB_PV=${PV}.dfsg.2
-DEB_PR=11
+DEB_PR=14
 DEB_P=${DEB_PN}_${DEB_PV}
 
 DESCRIPTION="CERN program library for High Energy Physics"
@@ -19,31 +20,24 @@ LICENSE="GPL-2 LGPL-2 BSD"
 
 SLOT="0"
 
-DEPEND="x11-libs/openmotif
-	virtual/lapack
-	virtual/latex-base
-	dev-lang/cfortran
-	x11-misc/imake
-	x11-misc/makedepend
-	dev-util/pkgconfig"
-
 RDEPEND="x11-libs/openmotif
 	virtual/lapack
 	dev-lang/cfortran"
+
+DEPEND="${RDEPEND}
+	x11-misc/imake
+	x11-misc/makedepend
+	dev-util/pkgconfig"
 
 IUSE=""
 
 S="${WORKDIR}/${DEB_PN}-${DEB_PV}.orig"
 
-FORTRAN="gfortran g77 ifc"
-
-src_unpack() {
-
-	unpack ${A}
-	epatch "${DEB_P}-${DEB_PR}".diff
+src_prepare() {
+	cd "${WORKDIR}"
+	epatch "${WORKDIR}/${DEB_P}-${DEB_PR}.diff"
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-nogfortran.patch
-
+	epatch "${FILESDIR}/${P}-nogfortran.patch"
 	# set some default paths
 	sed -i \
 		-e "s:/usr/local:/usr:g" \
@@ -61,7 +55,7 @@ src_unpack() {
 		debian/add-ons/bin/cernlib.in || die "sed failed"
 
 	cp debian/add-ons/Makefile .
-	export DEB_BUILD_OPTIONS="${FORTRANC} nostrip nocheck"
+	export DEB_BUILD_OPTIONS="$(tc-getFC) nostrip nocheck"
 
 	einfo "Applying Debian patches"
 	emake -j1 patch || die "debian patch failed"
@@ -73,12 +67,23 @@ src_unpack() {
 	sed -i \
 		-e 's/-O3/-O2/g' \
 		-e "s/-O2/${CFLAGS}/g" \
-		src/config/linux.cf	|| die "sed linux.cf failed"
+		src/config/linux.cf	\
+		|| die "sed linux.cf failed"
+	sed -i \
+		-e 's/\$(FCLINK)/\$(FCLINK) $(LDFLAGS)/' \
+		-e 's/\$(CCLINK)/\$(CCLINK) $(LDFLAGS)/' \
+		src/config/{biglib,fortran,Imake}.rules \
+		src/patchy/Imakefile \
+		|| die "sed for ldflags propagation failed"
+
+	# add missing headers for implicit
+	sed -i \
+		-e '0,/^#include/i#include <stdlib.h>' \
+		src/kernlib/kerngen/ccgen*/*.c || die
 }
 
 src_compile() {
-	# create local LaTeX cache dir
-	mkdir -p .texmf-var
+	# parallel make breaks and complex patched imake system, hard to debug
 	emake -j1 cernlib-indep cernlib-arch || die "emake libs failed"
 }
 
@@ -99,8 +104,4 @@ pkg_postinst() {
 	elog "Serious cernlib users might want to check:"
 	elog "http://people.debian.org/~kmccarty/cernlib/"
 	elog "for the changes and licensing from the original package"
-	if use amd64; then
-		elog "Please see the possible warnings for ${PN} on 64 bits:"
-		elog "${ROOT}/usr/share/doc/${PF}/README.*64*"
-	fi
 }
