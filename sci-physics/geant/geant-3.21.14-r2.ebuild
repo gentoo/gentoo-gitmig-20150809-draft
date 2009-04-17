@@ -1,13 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.9 2009/03/22 21:41:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.10 2009/04/17 18:04:28 bicatali Exp $
+
+EAPI=2
+inherit eutils
 
 DEB_PN=geant321
 DEB_PV=${PV}.dfsg
 DEB_PR=8
 DEB_P=${DEB_PN}_${DEB_PV}
-
-inherit eutils fortran
 
 DESCRIPTION="CERN's detector description and simulation Tool"
 HOMEPAGE="http://wwwasd.web.cern.ch/wwwasd/geant/index.html"
@@ -32,15 +33,12 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${DEB_PN}-${DEB_PV}.orig"
 
-FORTRAN="gfortran g77 ifc"
-
-src_unpack() {
-	unpack ${A}
-	epatch "${DEB_P}-${DEB_PR}".diff
-	rm -f ${DEB_P}-${DEB_PR}.diff
+src_prepare() {
+	cd "${WORKDIR}"
+	epatch "${WORKDIR}/${DEB_P}-${DEB_PR}.diff"
 	cd "${S}"
 	cp debian/add-ons/Makefile .
-	export DEB_BUILD_OPTIONS="${FORTRANC} nostrip nocheck"
+	export DEB_BUILD_OPTIONS="$(tc-getFC) nostrip nocheck"
 	sed -i \
 		-e 's:/usr/local:/usr:g' \
 		Makefile || die "sed'ing the Makefile failed"
@@ -54,7 +52,7 @@ src_unpack() {
 
 src_compile() {
 	# create local LaTeX cache directory
-	mkdir -p .texmf-var
+	VARTEXFONTS="${T}"/fonts
 	emake -j1 cernlib-indep cernlib-arch || die "emake failed"
 }
 
