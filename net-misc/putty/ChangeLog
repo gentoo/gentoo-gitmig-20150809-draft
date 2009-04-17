@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.41 2008/12/14 14:39:19 mrness Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.42 2009/04/17 14:55:50 jsbronder Exp $
+
+  17 Apr 2009; Justin Bronder <jsbronder@gentoo.org> putty-0.60.ebuild:
+  Add blocker against x11-terms/pssh, #211995
 
   14 Dec 2008; Alin Năstac <mrness@gentoo.org> putty-0.60.ebuild:
   Add !net-proxy/sshproxy dependency atom (#248193).
