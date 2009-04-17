@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2546 2009/04/17 16:24:02 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2547 2009/04/17 18:12:53 jsbronder Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Apr 2009; Justin Bronder <jsbronder@gentoo.org> package.mask:
+  pmask sys-cluster/mpich for removal (#266565)
 
   17 Apr 2009; Lennart Kolmodin <kolmodin@gentoo.org> package.mask:
   Mask dev-haskell/ghc-6.8.2-r1 for testing. It includes a precompiled

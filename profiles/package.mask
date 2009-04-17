@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9685 2009/04/17 16:24:02 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9686 2009/04/17 18:12:53 jsbronder Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Bronder <jsbronder@gentoo.org> (17 Apr 2009)
+# Mask sys-cluster/mpich for removal. (#266565)
+# No release since 2005, multiple bugs, easily replaced with
+# openmpi, mpich2 or lam-mpi
+sys-cluster/mpich
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (17 Apr 2009)
 # Add patched dev-lang/ghc for testing.
