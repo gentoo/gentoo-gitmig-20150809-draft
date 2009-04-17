@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15.ebuild,v 1.1 2009/04/14 20:22:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15.ebuild,v 1.2 2009/04/17 11:49:44 flameeyes Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ IUSE="alsa avahi caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetoot
 RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE )
 	caps? ( sys-libs/libcap )
 	libsamplerate? ( >=media-libs/libsamplerate-0.1.1-r1 )
-	alsa? ( >=media-libs/alsa-lib-1.0.17-r1 )
+	alsa? ( >=media-libs/alsa-lib-1.0.19 )
 	glib? ( >=dev-libs/glib-2.4.0 )
 	avahi? ( >=net-dns/avahi-0.6.12[dbus] )
 	>=dev-libs/liboil-0.3.0
@@ -89,7 +89,7 @@ src_configure() {
 
 	econf \
 		--enable-largefile \
-		$(use_enable glib) \
+		$(use_enable glib glib2) \
 		--disable-solaris \
 		$(use_enable asyncns) \
 		$(use_enable oss) \
