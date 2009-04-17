@@ -1,17 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-9999.ebuild,v 1.2 2009/04/17 15:11:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-2.0-r1.ebuild,v 1.1 2009/04/17 15:11:02 yngwin Exp $
 
 EAPI="2"
-inherit eutils flag-o-matic multilib mercurial
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="Lean FLTK2-based web browser"
 HOMEPAGE="http://www.dillo.org/"
-EHG_REPO_URI="http://hg.dillo.org/dillo"
+SRC_URI="http://www.dillo.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~sparc ~x86"
 IUSE="doc +gif ipv6 +jpeg +png ssl"
 
 RDEPEND="x11-libs/fltk:2[-cairo,jpeg=,png=]
@@ -22,11 +22,9 @@ RDEPEND="x11-libs/fltk:2[-cairo,jpeg=,png=]
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-S="${WORKDIR}/${PN}"
-
 src_prepare() {
 	epatch "${FILESDIR}"/dillo2-inbuf.patch
-	./autogen.sh
+	use ssl && epatch "${FILESDIR}"/${P}-enable-ssl.patch
 }
 
 src_configure() {

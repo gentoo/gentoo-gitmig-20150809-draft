@@ -1,0 +1,10 @@
+--- ./dpi/https.c.orig	2009-04-17 17:56:15.000000000 +0900
++++ ./dpi/https.c	2009-04-17 17:56:28.000000000 +0900
+@@ -69,7 +69,6 @@
+ 
+ 
+ #define ENABLE_SSL
+-#undef ENABLE_SSL
+ #ifdef ENABLE_SSL
+ 
+ #include <openssl/ssl.h>
