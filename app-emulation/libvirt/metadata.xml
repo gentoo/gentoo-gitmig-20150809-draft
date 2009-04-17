@@ -28,5 +28,6 @@
 			virtual machines</flag>
 		<flag name='xen'>Add support for <pkg>app-emulation/xen</pkg> based
 			virtual machines</flag>
+		<flag name='network'>Enable networking support for guests</flag>
 	</use>
 </pkgmetadata>

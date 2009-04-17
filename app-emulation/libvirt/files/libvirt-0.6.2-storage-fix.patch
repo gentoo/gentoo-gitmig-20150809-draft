@@ -1,0 +1,11 @@
+--- src/storage_backend_fs.c.old	2009-04-03 14:57:21.000000000 -0500
++++ src/storage_backend_fs.c	2009-04-03 14:57:54.000000000 -0500
+@@ -1152,7 +1152,7 @@
+                                   vol->target.format);
+             return -1;
+         }
+-        if (vol->backingStore.path != NULL) {
++        if (vol->target.path != NULL) {
+             virStorageReportError(conn, VIR_ERR_NO_SUPPORT,
+                                   _("copy-on-write image not supported with "
+                                     "qcow-create"));
