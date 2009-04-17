@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<maintainer>
+  <email>patrick@gentoo.org</email>
+  <name>Patrick Lauer</name>
+</maintainer>
+
 <herd>netmon</herd>
 <longdescription>Libpcap-based packet sniffer/logger/lightweight IDS</longdescription>
 <use>
-<flag name='aruba'>Enable Aruba support</flag>
-<flag name='community-rules'>Include Community rules</flag>
+
+<flag name='aruba'>Enable Aruba support</flag>                                                   
+<flag name='community-rules'>Include Community rules</flag>                                      
 <flag name='decoder-preprocessor-rules'></flag>
 <flag name='dynamicplugin'>Enable ability to dynamically load preprocessors, detection engine, and rules library</flag>
 <flag name='flexresp'>Enable new connection tearing (not recommended)</flag>
 <flag name='flexresp2'>Enable new connection tearing</flag>
 <flag name='gre'>Enable GRE support</flag>
-<flag name='inline'>Enable snort-inline for accepting packets from <pkg>net-firewall/iptables</pkg>, via libipq, rather than <pkg>net-libs/libpcap</pkg>.</flag>
+<flag name='inline'>Enable snort-inline for accepting packets from <pkg>net-firewall/iptables</pkg>, via libipq, rather than 
+	<pkg>net-libs/libpcap</pkg>.</flag>
 <flag name='inline-init-failopen'>Enable inline-init-failopen support</flag>
 <flag name='linux-smp-stats'>Enable statistics reporting through proc on smp systems</flag>
 <flag name='memory-cleanup'>Enable memory-cleanup support</flag>

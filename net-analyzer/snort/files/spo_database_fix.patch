@@ -1,0 +1,18 @@
+diff -ru snort-2.8.4.orig/src/output-plugins/spo_database.c snort-2.8.4/src/output-plugins/spo_database.c
+--- snort-2.8.4.orig/src/output-plugins/spo_database.c	2009-01-26 16:50:26.000000000 -0500
++++ snort-2.8.4/src/output-plugins/spo_database.c	2009-04-14 10:43:28.000000000 -0400
+@@ -2798,6 +2798,14 @@
+                     {
+                         result = atoi(data->m_row[0]);
+                     }
++		      else
++		      {
++		    	result = 0;
++		      }
++		    }
++		    else
++		    {
++		      result = 0;
+                 }
+             }
+             mysql_free_result(data->m_result);

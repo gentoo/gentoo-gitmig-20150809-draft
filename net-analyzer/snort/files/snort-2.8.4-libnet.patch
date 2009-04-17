@@ -1,0 +1,221 @@
+diff -ru snort-2.8.4.rc1/configure.in snort-2.8.4.rc1_gentoo/configure.in
+--- snort-2.8.4.rc1/configure.in	2009-04-06 08:54:54.000000000 -0400
++++ snort-2.8.4.rc1_gentoo/configure.in	2009-04-06 09:08:37.000000000 -0400
+@@ -1214,19 +1214,19 @@
+          else
+             libnet_dir="/usr/include /usr/local/include /sw/include"
+         fi
+-        AC_MSG_CHECKING("for libnet.h version 1.0.x")
++        AC_MSG_CHECKING("for libnet-1.0.h version 1.0.x")
+         for i in $libnet_dir; do
+-            if test -r "$i/libnet.h"; then
++            if test -r "$i/libnet-1.0.h"; then
+                 LIBNET_INC_DIR="$i"
+             fi
+         done
+ 
+         if test "$LIBNET_INC_DIR" != ""; then
+-            if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet.h | grep -v 1.0 >/dev/null"; then
+-                FAIL_MESSAGE("libnet 1.0.x (libnet.h)", $LIBNET_INC_DIR)
++            if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet-1.0.h | grep -v 1.0 >/dev/null"; then
++                FAIL_MESSAGE("libnet 1.0.x (libnet-1.0.h)", $LIBNET_INC_DIR)
+             fi
+-            CFLAGS="${CFLAGS} `libnet-config --defines` `libnet-config --cflags`"
+-            LIBS="${LIBS} `libnet-config --libs`"
++            CFLAGS="${CFLAGS} `libnet-1.0-config --defines` `libnet-1.0-config --cflags`"
++            LIBS="${LIBS} `libnet-1.0-config --libs`"
+             CPPFLAGS="${CPPFLAGS} -I${LIBNET_INC_DIR}"
+             AC_MSG_RESULT($i)
+         else
+@@ -1248,8 +1248,8 @@
+ [  --enable-flexresp        Flexible Responses on hostile connection attempts],
+        enable_flexresp="$enableval", enable_flexresp="no")
+ if test "x$enable_flexresp" = "xyes"; then
+-    CPPFLAGS="${CPPFLAGS} -DENABLE_RESPONSE `libnet-config --defines --cflags`"
+-    LDFLAGS="${LDFLAGS} `libnet-config --libs`"
++    CPPFLAGS="${CPPFLAGS} -DENABLE_RESPONSE `libnet-1.0-config --defines --cflags`"
++    LDFLAGS="${LDFLAGS} `libnet-1.0-config --libs`"
+ fi
+                 
+ if test "x$enable_flexresp" != "xno" -a "x$enable_flexresp" = "xyes"; then
+@@ -1259,21 +1259,21 @@
+         exit
+     fi
+ 
+-    if test `libnet-config --cflags | wc -c` = "1"; then
++    if test `libnet-1.0-config --cflags | wc -c` = "1"; then
+         CPPFLAGS="${CPPFLAGS} -I/usr/local/include -I/sw/include"
+         LIBNET_CONFIG_BROKEN_CFLAGS="yes"
+     fi
+ 
+-    if test `libnet-config --libs | wc -c` = "1"; then
+-        AC_MSG_WARN(libnet-config --libs is broken on your system.  If you)
++    if test `libnet-1.0-config --libs | wc -c` = "1"; then
++        AC_MSG_WARN(libnet-1.0-config --libs is broken on your system.  If you)
+         AC_MSG_WARN(are using a precompiled package please notify the) 
+         AC_MSG_WARN(maintainer.)
+         LDFLAGS="${LDFLAGS} -L/usr/local/lib -L/sw/lib"
+-        LIBS="${LIBS} -lnet"
++        LIBS="${LIBS} -lnet-1.0"
+     fi
+ 
+     LNET=""
+-    AC_CHECK_HEADERS(libnet.h,, LNET="no")
++    AC_CHECK_HEADERS(libnet-1.0.h,, LNET="no")
+     if test "x$LNET" = "xno"; then
+         echo
+         echo "   ERROR!  Libnet header not found, go get it from"
+@@ -1291,33 +1291,33 @@
+             libnet_dir="/usr/include /usr/local/include /sw/include"
+         fi
+     else
+-        libnet_dir=`libnet-config --cflags | cut -dI -f2`
++        libnet_dir=`libnet-1.0-config --cflags | cut -dI -f2`
+     fi
+ 
+     LIBNET_INC_DIR=""
+     for i in $libnet_dir; do
+-        if test -r "$i/libnet.h"; then
++        if test -r "$i/libnet-1.0.h"; then
+             LIBNET_INC_DIR="$i"
+         fi
+     done
+ 
+     if test "x$LIBNET_INC_DIR" != "x"; then
+-        if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet.h | grep -v 1.0.2a >/dev/null"; then
++        if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet-1.0.h | grep -v 1.0.2a >/dev/null"; then
+             AC_MSG_RESULT(no)
+             echo
+             echo "   ERROR!  Snort with --enable-flexresp will *only* work with"
+             echo "   libnet version 1.0.2a, go get it from"
+             echo "   http://www.packetfactory.net/projects/libnet/"
+-            FAIL_MESSAGE("libnet 1.0.2a (libnet.h)", $LIBNET_INC_DIR)
++            FAIL_MESSAGE("libnet 1.0.2a (libnet-1.0.h)", $LIBNET_INC_DIR)
+         fi
+         AC_MSG_RESULT(yes)
+     else
+         AC_MSG_RESULT(no)
+-        FAIL_MESSAGE("libnet 1.0.2a (libnet.h)", $libnet_dir)
++        FAIL_MESSAGE("libnet 1.0.2a (libnet-1.0.h)", $libnet_dir)
+     fi
+ 
+     LNET=""
+-    AC_CHECK_LIB(net, libnet_build_ip,, LNET="no")
++    AC_CHECK_LIB(net-1.0, libnet_build_ip,, LNET="no")
+     if test "x$LNET" = "xno"; then
+         echo
+         echo "   ERROR!  Libnet library not found, go get it from"
+@@ -1368,8 +1368,8 @@
+ [  --enable-react           Intercept and terminate offending HTTP accesses],
+        enable_react="$enableval", enable_react="no")
+ if test "x$enable_react" = "xyes"; then
+-    CPPFLAGS="${CPPFLAGS} -DENABLE_REACT `libnet-config --defines --cflags`"
+-    LDFLAGS="${LDFLAGS} `libnet-config --libs`"
++    CPPFLAGS="${CPPFLAGS} -DENABLE_REACT `libnet-1.0-config --defines --cflags`"
++    LDFLAGS="${LDFLAGS} `libnet-1.0-config --libs`"
+ fi
+ 
+ if test "x$enable_react" != "xno" -a "x$enable_react" = "xyes"; then
+@@ -1380,13 +1380,13 @@
+         exit
+     fi
+ 
+-    if test `libnet-config --cflags | wc -c` = "1"; then
++    if test `libnet-1.0-config --cflags | wc -c` = "1"; then
+         CPPFLAGS="${CPPFLAGS} -I/usr/local/include -I/sw/include"
+         LIBNET_CONFIG_BROKEN_CFLAGS="yes"
+     fi
+ 
+-    if test `libnet-config --libs | wc -c` = "1"; then
+-        AC_MSG_WARN(libnet-config --libs is broken on your system.  If you)
++    if test `libnet-1.0-config --libs | wc -c` = "1"; then
++        AC_MSG_WARN(libnet-1.0-config --libs is broken on your system.  If you)
+         AC_MSG_WARN(are using a precompiled package please notify the)
+         AC_MSG_WARN(maintainer.)
+         LDFLAGS="${LDFLAGS} -L/usr/local/lib -L/sw/lib"
+@@ -1394,7 +1394,7 @@
+     fi
+ 
+     LNET=""
+-    AC_CHECK_HEADERS(libnet.h,, LNET="no")
++    AC_CHECK_HEADERS(libnet-1.0.h,, LNET="no")
+     if test "x$LNET" = "xno"; then
+         echo
+         echo "   ERROR!  Libnet header not found, go get it from"
+@@ -1412,33 +1412,33 @@
+             libnet_dir="/usr/include /usr/local/include /sw/include"
+         fi
+     else
+-        libnet_dir=`libnet-config --cflags | cut -dI -f2`
++        libnet_dir=`libnet-1.0-config --cflags | cut -dI -f2`
+     fi
+ 
+     LIBNET_INC_DIR=""
+     for i in $libnet_dir; do
+-        if test -r "$i/libnet.h"; then
++        if test -r "$i/libnet-1.0.h"; then
+             LIBNET_INC_DIR="$i"
+         fi
+     done
+ 
+     if test "x$LIBNET_INC_DIR" != "x"; then
+-        if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet.h | grep -v 1.0.2a >/dev/null"; then
++        if eval "grep LIBNET_VERSION $LIBNET_INC_DIR/libnet-1.0.h | grep -v 1.0.2a >/dev/null"; then
+             AC_MSG_RESULT(no)
+             echo
+             echo "   ERROR!  Snort with --enable-react will *only* work with"
+             echo "   libnet version 1.0.2a, go get it from"
+             echo "   http://www.packetfactory.net/projects/libnet/"
+-            FAIL_MESSAGE("libnet 1.0.2a (libnet.h)", $LIBNET_INC_DIR)
++            FAIL_MESSAGE("libnet 1.0.2a (libnet-1.0.h)", $LIBNET_INC_DIR)
+         fi
+         AC_MSG_RESULT(yes)
+     else
+         AC_MSG_RESULT(no)
+-        FAIL_MESSAGE("libnet 1.0.2a (libnet.h)", $libnet_dir)
++        FAIL_MESSAGE("libnet 1.0.2a (libnet-1.0.h)", $libnet_dir)
+     fi
+ 
+     LNET=""
+-    AC_CHECK_LIB(net, libnet_build_ip,, LNET="no")
++    AC_CHECK_LIB(net-1.0, libnet_build_ip,, LNET="no")
+     if test "x$LNET" = "xno"; then
+         echo
+         echo "   ERROR!  Libnet library not found, go get it from"
+Only in snort-2.8.4.rc1_gentoo/: configure.in.orig
+diff -ru snort-2.8.4.rc1/src/detection-plugins/sp_react.c snort-2.8.4.rc1_gentoo/src/detection-plugins/sp_react.c
+--- snort-2.8.4.rc1/src/detection-plugins/sp_react.c	2009-04-06 08:54:54.000000000 -0400
++++ snort-2.8.4.rc1_gentoo/src/detection-plugins/sp_react.c	2009-04-06 09:08:37.000000000 -0400
+@@ -59,7 +59,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <ctype.h>
+-#include <libnet.h>
++#include <libnet-1.0.h>
+ 
+ #include "rules.h"
+ #include "decode.h"
+diff -ru snort-2.8.4.rc1/src/detection-plugins/sp_respond.c snort-2.8.4.rc1_gentoo/src/detection-plugins/sp_respond.c
+--- snort-2.8.4.rc1/src/detection-plugins/sp_respond.c	2009-04-06 08:54:54.000000000 -0400
++++ snort-2.8.4.rc1_gentoo/src/detection-plugins/sp_respond.c	2009-04-06 09:08:37.000000000 -0400
+@@ -36,7 +36,7 @@
+ 
+ 
+ #if defined(ENABLE_RESPONSE) && !defined(ENABLE_RESPONSE2)
+-#include <libnet.h>
++#include <libnet-1.0.h>
+ 
+ #include "decode.h"
+ #include "rules.h"
+diff -ru snort-2.8.4.rc1/src/inline.c snort-2.8.4.rc1_gentoo/src/inline.c
+--- snort-2.8.4.rc1/src/inline.c	2009-04-06 08:54:54.000000000 -0400
++++ snort-2.8.4.rc1_gentoo/src/inline.c	2009-04-06 09:08:37.000000000 -0400
+@@ -20,7 +20,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <pcap.h>
+-#include <libnet.h>
++#include <libnet-1.0.h>
+ 
+ #include "decode.h"
+ #include "inline.h"
