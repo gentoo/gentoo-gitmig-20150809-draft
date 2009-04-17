@@ -6,4 +6,7 @@
 		<email>marineam@gentoo.org</email>
 		<name>Michael Marineau</name>
 	</maintainer>
+	<use>
+		<flag name='network'>Add support for creating guest networks</flag>
+	</use>
 </pkgmetadata>
