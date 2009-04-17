@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/btrfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/ChangeLog,v 1.18 2009/02/24 05:41:09 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs/ChangeLog,v 1.19 2009/04/17 15:16:51 lavajoe Exp $
+
+*btrfs-0.17 (17 Apr 2009)
+
+  17 Apr 2009; Joe Peterson <lavajoe@gentoo.org> btrfs-0.16-r2.ebuild,
+  +btrfs-0.17.ebuild, btrfs-9999.ebuild:
+  Add version 0.17 for kernels later than 2.6.27 (contributed by David
+  ____); minor fixes
 
   24 Feb 2009; Joe Peterson <lavajoe@gentoo.org> btrfs-0.16-r2.ebuild:
   Do not allow 0.16 to build on kernels beyond 2.6.27; bug #259341
