@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-2.2.ebuild,v 1.1 2009/01/18 17:46:53 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-2.2.ebuild,v 1.2 2009/04/17 15:47:40 ranger Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ EAPI=2
 
 inherit apache-module eutils go-mono mono
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DESCRIPTION="Apache module for Mono."
 HOMEPAGE="http://www.go-mono.com/"
