@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9692 2009/04/18 14:43:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9693 2009/04/18 16:08:33 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -49,14 +49,6 @@ virtual/perl-IO-Compress
 =virtual/perl-Compress-Raw-Zlib-2.017
 =perl-core/Compress-Raw-Bzip2-2.017
 =virtual/perl-Compress-Raw-Bzip2-2.017
-# Move dev-perl/IO-Compress-Bzip2 -> perl-core/IO-Compress-Bzip2
-# and  dev-perl/Compress-Raw-Bzip2 -> perl-core/Compress-Raw-Bzip2
-=virtual/perl-IO-Compress-Bzip2-2.015
-=perl-core/IO-Compress-Bzip2-2.015
-=virtual/perl-Compress-Raw-Bzip2-2.015
-=perl-core/Compress-Raw-Bzip2-2.015
-
-
 
 # Justin Bronder <jsbronder@gentoo.org> (17 Apr 2009)
 # Mask sys-cluster/mpich for removal. (#266565)
