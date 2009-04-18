@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.119 2009/04/14 01:31:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.120 2009/04/18 13:22:11 maekke Exp $
+
+  18 Apr 2009; Markus Meier <maekke@gentoo.org> claws-mail-3.7.1:
+  amd64/x86 stable, bug #265105
 
   14 Apr 2009; Brent Baude <ranger@gentoo.org> claws-mail-3.7.1.ebuild:
   Marking claws-mail-3.7.1 ppc64 for bug 265105
