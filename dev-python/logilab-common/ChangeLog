@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.38 2009/04/18 18:46:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.39 2009/04/18 21:20:34 patrick Exp $
+
+*logilab-common-0.39.0-r1 (18 Apr 2009)
+
+  18 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/logilab-common-0.39.0-recursion.patch,
+  +logilab-common-0.39.0-r1.ebuild:
+  Small fix by idl0r. Now astng and pylint shouldn't hit recursion limits
+  anymore.
 
 *logilab-common-0.39.0 (18 Apr 2009)
 
