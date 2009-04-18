@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-virtualbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.9 2009/03/03 07:38:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.10 2009/04/18 17:00:03 patrick Exp $
+
+*xf86-input-virtualbox-2.2.0 (18 Apr 2009)
+
+  18 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +xf86-input-virtualbox-2.2.0.ebuild:
+  Bump to 2.2.0. Many thanks to Alessio Cassibba for the ebuilds. Part of
+  #265510
 
 *xf86-input-virtualbox-2.1.4 (03 Mar 2009)
 
