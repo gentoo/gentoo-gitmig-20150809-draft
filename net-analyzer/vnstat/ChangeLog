@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/vnstat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.32 2008/06/27 21:15:23 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.33 2009/04/18 15:30:14 patrick Exp $
+
+*vnstat-1.7 (18 Apr 2009)
+
+  18 Apr 2009; Patrick Lauer <patrick@gentoo.org> +vnstat-1.7.ebuild:
+  Bump to 1.7. Fixes #266116
 
   27 Jun 2008; Raúl Porcel <armin76@gentoo.org>
   -files/vnstat-1.4-dbdir.patch, -files/vnstat-1.4-long_iface_name.patch,
