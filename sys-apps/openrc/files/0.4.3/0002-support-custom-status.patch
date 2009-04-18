@@ -2,12 +2,13 @@ Index: openrc-0.4.3/sh/runscript.sh.in
 ===================================================================
 --- openrc-0.4.3.orig/sh/runscript.sh.in
 +++ openrc-0.4.3/sh/runscript.sh.in
-@@ -45,6 +45,31 @@ describe()
+@@ -45,7 +45,32 @@ describe()
  	done
  }
  
+-# Template start / stop functions
 +# Report status
-+status()
++_status()
 +{
 +	if service_stopping; then
 +		ewarn "status: stopping"
@@ -31,10 +32,23 @@ Index: openrc-0.4.3/sh/runscript.sh.in
 +	fi
 +}
 +
- # Template start / stop functions
++# Template start / stop / status functions
  start()
  {
-@@ -134,7 +159,7 @@ unset _f
+ 	[ -n "${command}" ] || return 0
+@@ -85,6 +110,11 @@ stop()
+ 	eend $? "Failed to stop ${RC_SVCNAME}"
+ }
+ 
++status()
++{
++	_status
++}
++
+ yesno ${RC_DEBUG} && set -x
+ 
+ _conf_d=${RC_SERVICE%/*}/../conf.d
+@@ -134,7 +164,7 @@ unset _f
  
  while [ -n "$1" ]; do
  	# See if we have the required function and run it
@@ -75,7 +89,15 @@ Index: openrc-0.4.3/src/rc/runscript.c
 ===================================================================
 --- openrc-0.4.3.orig/src/rc/runscript.c
 +++ openrc-0.4.3/src/rc/runscript.c
-@@ -412,11 +412,10 @@ write_prefix(const char *buffer, size_t 
+@@ -34,6 +34,7 @@
+ #include <sys/file.h>
+ #include <sys/param.h>
+ #include <sys/stat.h>
++#include <sys/wait.h>
+ 
+ #include <ctype.h>
+ #include <dlfcn.h>
+@@ -412,11 +413,10 @@ write_prefix(const char *buffer, size_t 
  	return ret;
  }
  
@@ -89,7 +111,7 @@ Index: openrc-0.4.3/src/rc/runscript.c
  	struct termios tt;
  	struct winsize ws;
  	int i;
-@@ -527,13 +526,13 @@ svc_exec(const char *arg1, const char *a
+@@ -527,13 +527,13 @@ svc_exec(const char *arg1, const char *a
  		master_tty = -1;
  	}
  
@@ -107,7 +129,47 @@ Index: openrc-0.4.3/src/rc/runscript.c
  }
  
  static bool
-@@ -881,7 +880,7 @@ svc_start(bool deps)
+@@ -584,39 +584,6 @@ svc_wait(const char *svc)
+ 	return retval;
+ }
+ 
+-static RC_SERVICE
+-svc_status(void)
+-{
+-	char status[10];
+-	int (*e) (const char *fmt, ...) EINFO_PRINTF(1, 2) = einfo;
+-	RC_SERVICE state = rc_service_state(service);
+-
+-	if (state & RC_SERVICE_STOPPING) {
+-		snprintf(status, sizeof(status), "stopping");
+-		e = ewarn;
+-	} else if (state & RC_SERVICE_STARTING) {
+-		snprintf(status, sizeof(status), "starting");
+-		e = ewarn;
+-	} else if (state & RC_SERVICE_INACTIVE) {
+-		snprintf(status, sizeof(status), "inactive");
+-		e = ewarn;
+-	} else if (state & RC_SERVICE_STARTED) {
+-		errno = 0;
+-		if (_rc_can_find_pids() &&
+-		    rc_service_daemons_crashed(service) &&
+-		    errno != EACCES)
+-		{
+-			snprintf(status, sizeof(status), "crashed");
+-			e = eerror;
+-		} else
+-			snprintf(status, sizeof(status), "started");
+-	} else
+-		snprintf(status, sizeof(status), "stopped");
+-
+-	e("status: %s", status);
+-	return state;
+-}
+-
+ static void
+ make_exclusive(void)
+ {
+@@ -881,7 +848,7 @@ svc_start(bool deps)
  		setenv("IN_BACKGROUND", ibsave, 1);
  	hook_out = RC_HOOK_SERVICE_START_DONE;
  	rc_plugin_run(RC_HOOK_SERVICE_START_NOW, applet);
@@ -116,7 +178,7 @@ Index: openrc-0.4.3/src/rc/runscript.c
  	if (ibsave)
  		unsetenv("IN_BACKGROUND");
  
-@@ -1058,7 +1057,7 @@ svc_stop(bool deps)
+@@ -1058,7 +1025,7 @@ svc_stop(bool deps)
  		setenv("IN_BACKGROUND", ibsave, 1);
  	hook_out = RC_HOOK_SERVICE_STOP_DONE;
  	rc_plugin_run(RC_HOOK_SERVICE_STOP_NOW, applet);
@@ -125,7 +187,7 @@ Index: openrc-0.4.3/src/rc/runscript.c
  	if (ibsave)
  		unsetenv("IN_BACKGROUND");
  
-@@ -1383,10 +1382,10 @@ runscript(int argc, char **argv)
+@@ -1383,10 +1350,10 @@ runscript(int argc, char **argv)
  			rc_stringlist_free(services);
  			services = NULL;
  		} else if (strcmp (optarg, "status") == 0) {
