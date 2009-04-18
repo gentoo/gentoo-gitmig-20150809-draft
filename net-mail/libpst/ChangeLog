@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/libpst
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.10 2009/04/02 12:13:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.11 2009/04/18 15:33:52 patrick Exp $
+
+*libpst-0.5.3 (18 Apr 2009)
+
+  18 Apr 2009; Patrick Lauer <patrick@gentoo.org> +libpst-0.5.3.ebuild:
+  Bump to 0.5.3
 
   02 Apr 2009; Caleb Tennis <caleb@gentoo.org> libpst-0.5.2.ebuild:
   x86/amd64 stable
