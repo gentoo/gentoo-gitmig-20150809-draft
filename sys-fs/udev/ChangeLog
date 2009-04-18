@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.460 2009/04/17 18:48:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.461 2009/04/18 01:23:26 keytoaster Exp $
+
+  18 Apr 2009; Tobias Heinlein <keytoaster@gentoo.org> udev-124-r2.ebuild:
+  amd64 stable wrt security bug #266290
 
   17 Apr 2009; Jeroen Roovers <jer@gentoo.org> udev-124-r2.ebuild:
   Stable for HPPA (bug #266290).
