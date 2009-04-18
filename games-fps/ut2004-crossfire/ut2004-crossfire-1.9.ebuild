@@ -1,7 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
-# /var/cvsroot/gentoo-x86/games-fps/ut2004-crossfire/ut2004-crossfire-1.9a.ebuild Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-crossfire/ut2004-crossfire-1.9.ebuild,v 1.2 2009/04/18 00:06:21 nyhm Exp $
 
 MOD_NAME="Crossfire"
 MOD_DESC="Special Forces vs Terrorists"
