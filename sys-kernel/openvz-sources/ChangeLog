@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.108 2009/04/16 16:11:41 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.109 2009/04/18 20:10:36 bangert Exp $
+
+*openvz-sources-2.6.27.2.1 (18 Apr 2009)
+*openvz-sources-2.6.26.3.1 (18 Apr 2009)
+*openvz-sources-2.6.24.009.1-r2 (18 Apr 2009)
+
+  18 Apr 2009; Thilo Bangert <bangert@gentoo.org>
+  +openvz-sources-2.6.24.009.1-r2.ebuild, +openvz-sources-2.6.26.3.1.ebuild,
+  +openvz-sources-2.6.27.2.1.ebuild:
+  new upstream releases - now with sane KV and EXTRAVERSION
 
 *openvz-sources-2.6.24.009.1 (16 Apr 2009)
 
