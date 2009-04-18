@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/eugene-3.5d.ebuild,v 1.2 2009/01/04 07:08:03 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/eugene-3.5d.ebuild,v 1.3 2009/04/18 12:36:09 maekke Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://mulcyber.toulouse.inra.fr/gf/download/frsrelease/220/3675/${P}-1
 LICENSE="Artistic"
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="media-libs/gd[png]
 	media-libs/libpng
