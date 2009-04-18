@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.7 2009/03/29 09:47:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.8 2009/04/18 15:46:18 patrick Exp $
+
+*kbuild-0.1.5-r1 (18 Apr 2009)
+
+  18 Apr 2009; Patrick Lauer <patrick@gentoo.org> +kbuild-0.1.5-r1.ebuild:
+  Small fix for the missing svn revision, fixes #265537 and allows
+  virtualbox-2.2 to install. Thanks to Alessio Cassibba.
 
 *kbuild-9999 (29 Mar 2009)
 
