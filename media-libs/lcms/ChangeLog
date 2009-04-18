@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.100 2009/04/18 12:37:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.101 2009/04/18 13:14:19 ranger Exp $
+
+  18 Apr 2009; Brent Baude <ranger@gentoo.org> lcms-1.18-r1.ebuild:
+  Marking lcms-1.18-r1 ppc64 and ppc for bug 264604
 
   18 Apr 2009; Markus Meier <maekke@gentoo.org> lcms-1.18-r1:
   amd64/x86 stable, bug #264604
