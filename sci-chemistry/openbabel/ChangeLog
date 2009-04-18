@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.23 2009/03/02 15:52:50 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.24 2009/04/18 15:02:22 jer Exp $
+
+  18 Apr 2009; Jeroen Roovers <jer@gentoo.org> openbabel-2.2.1:
+  Marked ~hppa (bug #260777).
 
 *openbabel-2.2.1 (02 Mar 2009)
 
