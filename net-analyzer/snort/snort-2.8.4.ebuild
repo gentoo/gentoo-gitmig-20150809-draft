@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.4.ebuild,v 1.1 2009/04/17 12:05:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.4.ebuild,v 1.2 2009/04/18 06:22:00 mr_bones_ Exp $
 
 AT_M4DIR=m4
 
@@ -131,7 +131,7 @@ src_compile() {
 	#are used. Here is the error...
 	#ERROR!  --enable-react cannot be used with --enable-flexresp
 	#because it is AUTOMATICALLY enabled with --enable-flexresp
-	#Given that --enable-flexresp is enable we know that 
+	#Given that --enable-flexresp is enable we know that
 	#--disable-flexresp2 should be used
 	if use react; then
 		myconf="${myconf} --enable-react --disable-flexresp2"
@@ -144,7 +144,6 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-dynamicplugin"
 	fi
-
 
 	# USE flages 'targetbased' and 'inline-init-failopen' require threads
 	#Only 'threads' is set here. 'targetbased' and 'inline-init-failopen' are set below via econf.
@@ -166,7 +165,7 @@ src_compile() {
 		myconf="${myconf} --disable-inline"
 	fi
 
-#The --enable-<feature> options... 
+#The --enable-<feature> options...
 #'static' 'threads' 'react' 'flexresp' 'flexresp2' 'inline' 'dynamicplugin'
 # are configured above due to dependancy/conflict issues.
 
