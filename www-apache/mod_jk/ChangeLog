@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.56 2009/04/05 19:56:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.57 2009/04/18 08:18:16 nixnut Exp $
+
+  18 Apr 2009; nixnut <nixnut@gentoo.org> mod_jk-1.2.27.ebuild:
+  ppc stable #265455
 
   05 Apr 2009; Petteri Räty <betelgeuse@gentoo.org> mod_jk-1.2.28.ebuild:
   Add empty RDEPEND.
