@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.37 2009/03/23 03:25:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.38 2009/04/18 02:15:28 jer Exp $
+
+  18 Apr 2009; Jeroen Roovers <jer@gentoo.org> gpsd-2.38:
+  Marked ~hppa (bug #260777).
 
 *gpsd-2.38 (23 Mar 2009)
 
