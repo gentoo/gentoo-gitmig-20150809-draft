@@ -1,0 +1,10 @@
+# ChangeLog for net-voip/telepathy-salut
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/ChangeLog,v 1.1 2009/04/18 20:58:31 eva Exp $
+
+*telepathy-salut-0.3.8 (18 Apr 2009)
+
+  18 Apr 2009; Gilles Dartiguelongue <eva@gentoo.org> +metadata.xml,
+  +telepathy-salut-0.3.8.ebuild:
+  Initial ebuild.
+
