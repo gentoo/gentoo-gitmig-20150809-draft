@@ -1,6 +1,11 @@
 # ChangeLog for app-office/taskcoach
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.22 2009/04/05 18:46:14 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.23 2009/04/18 23:40:55 caster Exp $
+
+*taskcoach-0.72.6 (18 Apr 2009)
+
+  18 Apr 2009; Vlastimil Babka <caster@gentoo.org> +taskcoach-0.72.6.ebuild:
+  Version bump. Fixes lockfile.py problems with python 2.6.
 
 *taskcoach-0.72.5 (05 Apr 2009)
 
