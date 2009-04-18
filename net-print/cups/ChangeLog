@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.349 2009/04/18 13:14:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.350 2009/04/18 17:05:28 jer Exp $
+
+  18 Apr 2009; Jeroen Roovers <jer@gentoo.org> cups-1.3.10:
+  Stable for HPPA (bug #263070).
 
   18 Apr 2009; Brent Baude <ranger@gentoo.org> cups-1.3.10.ebuild:
   Marking cups-1.3.10 ppc64 and ppc for bug 263070
