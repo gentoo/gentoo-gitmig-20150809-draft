@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.133 2009/03/07 13:19:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.134 2009/04/18 17:39:16 armin76 Exp $
+
+  18 Apr 2009; Raúl Porcel <armin76@gentoo.org> tightvnc-1.3.10.ebuild:
+  alpha/arm/sh/sparc/x86 stable wrt #266660
 
   07 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   +files/tightvnc-1.3.10-java-build.patch, tightvnc-1.3.10.ebuild:
