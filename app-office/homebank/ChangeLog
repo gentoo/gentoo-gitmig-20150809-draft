@@ -1,6 +1,9 @@
 # ChangeLog for app-office/homebank
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.7 2009/04/18 00:18:12 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/ChangeLog,v 1.8 2009/04/18 02:00:07 calchan Exp $
+
+  18 Apr 2009; Denis Dupeyron <calchan@gentoo.org> homebank-4.0.2:
+  Fixed deps, bug #238971. Fixed econf does by itself.
 
 *homebank-4.0.2 (18 Apr 2009)
 

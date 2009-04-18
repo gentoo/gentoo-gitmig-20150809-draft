@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.0.2.ebuild,v 1.1 2009/04/18 00:18:12 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.0.2.ebuild,v 1.2 2009/04/18 02:00:07 calchan Exp $
 
 inherit autotools fdo-mime
 
@@ -12,8 +12,8 @@ SLOT="0"
 IUSE="ofx"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND=">=x11-libs/gtk+-2.10
-	>=dev-libs/glib-2.12
+RDEPEND=">=x11-libs/gtk+-2.14
+	>=dev-libs/glib-2.14
 	sys-libs/zlib
 	ofx? ( >=dev-libs/libofx-0.7 )"
 DEPEND="${RDEPEND}
@@ -35,7 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_with ofx) || die "Configuration failed"
+	econf $(use_with ofx)
 	emake || die "Compilation failed"
 }
 
