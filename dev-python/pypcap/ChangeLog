@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pypcap
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/ChangeLog,v 1.3 2007/06/23 07:25:58 lucass Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypcap/ChangeLog,v 1.4 2009/04/18 14:24:14 patrick Exp $
+
+*pypcap-1.1-r1 (18 Apr 2009)
+
+  18 Apr 2009; Patrick Lauer <patrick@gentoo.org> +files/include_path.patch,
+  +pypcap-1.1-r1.ebuild:
+  Small patch to fix compilation issues, thanks to Mike Kazantsev. Closes
+  #247145
 
   23 Jun 2007; Lukasz Strzygowski <lucass@gentoo.org> pypcap-1.1.ebuild:
   Marked ~amd64.
