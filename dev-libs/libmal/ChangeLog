@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmal
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.24 2008/05/15 14:37:29 corsair Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/ChangeLog,v 1.25 2009/04/18 06:17:00 jer Exp $
+
+  18 Apr 2009; Jeroen Roovers <jer@gentoo.org> libmal-0.44:
+  Marked ~hppa (bug #260777).
 
   15 May 2008; Markus Rothe <corsair@gentoo.org> libmal-0.44.ebuild:
   Stable on ppc64; bug #221063
