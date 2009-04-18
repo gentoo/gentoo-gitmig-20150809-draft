@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2.1.ebuild,v 1.3 2009/04/08 22:20:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2.1.ebuild,v 1.4 2009/04/18 01:01:54 jer Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://ktorrent.org/"
 SRC_URI="http://ktorrent.org/downloads/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 SLOT="3"
 IUSE="+bwscheduler debug +downloadorder +infowidget +ipfilter +kross +logviewer +mediaplayer plasma rss +scanfolder +search +stats +upnp webinterface +zeroconf"
 
