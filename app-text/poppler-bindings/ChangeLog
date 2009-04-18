@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler-bindings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.134 2009/04/18 05:29:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.135 2009/04/18 12:06:33 maekke Exp $
+
+  18 Apr 2009; Markus Meier <maekke@gentoo.org> poppler-bindings-0.10.5-r1:
+  amd64/x86 stable, bug #263028
 
   18 Apr 2009; Jeroen Roovers <jer@gentoo.org> poppler-bindings-0.10.5-r1:
   Stable for HPPA (bug #263028).
