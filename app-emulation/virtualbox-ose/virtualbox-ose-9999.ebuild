@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.5 2008/12/18 12:47:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.6 2009/04/18 16:25:22 patrick Exp $
 
 EAPI=1
 
@@ -28,7 +28,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 		media-libs/libsdl
 		x11-libs/libXt )"
 DEPEND="${RDEPEND}
-	dev-util/kbuild
+	>dev-util/kbuild-0.1.5
 	>=dev-lang/yasm-0.6.2
 	sys-devel/bin86
 	sys-devel/dev86
