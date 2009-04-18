@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-2.0_alpha1.ebuild,v 1.1 2009/04/17 12:13:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-2.0_alpha1.ebuild,v 1.2 2009/04/18 06:21:40 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -39,7 +39,7 @@ src_compile() {
 	# Building without D-Bus is *unsupported* and a USE-flag
 	# will not be added due to the bug reports that will result.
 	# Bugs #197894, #199069, #207330, #208606
-	# Disabling XSPF playlists would make startup *very* slow as 
+	# Disabling XSPF playlists would make startup *very* slow as
 	# all plugins will then have to re-probed each time.
 	econf \
 		--enable-dbus \
