@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.6-r2.ebuild,v 1.9 2009/04/18 14:18:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.6-r2.ebuild,v 1.10 2009/04/18 17:07:27 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -19,7 +19,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ~ia64 m68k ~mips ~ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="app-arch/lzma-utils"
+DEPEND="app-arch/lzma-utils
+	>=app-misc/pax-utils-0.1.19" #265376
 RDEPEND=""
 
 EMULTILIB_PKG="true"
