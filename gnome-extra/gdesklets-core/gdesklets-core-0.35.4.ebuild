@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.4.ebuild,v 1.15 2009/02/28 17:11:05 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.4.ebuild,v 1.16 2009/04/18 01:39:25 nixphoeni Exp $
+
+# desklets don't run with USE=debug
+GCONF_DEBUG="no"
 
 # We want the latest autoconf and automake (the default)
 inherit gnome2 eutils multilib
@@ -102,9 +105,5 @@ pkg_postinst() {
 	elog "           ${ROOT}usr/$(get_libdir)/gdesklets/gdesklets-migration-tool"
 	elog "after the first time you run gDesklets"
 	echo
-
-	# This stuff is important, especially the migration-tool
-	# information which flies by on an update.
-	epause 9
 
 }
