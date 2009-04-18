@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/pydb-1.26.ebuild,v 1.1 2009/04/13 17:51:36 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/pydb-1.26.ebuild,v 1.2 2009/04/18 21:27:42 patrick Exp $
 
 DESCRIPTION="Extended python debugger"
 HOMEPAGE="http://bashdb.sourceforge.net/pydb/"
 SRC_URI="mirror://sourceforge/bashdb/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 # emacs support could be made optional with some extra work
 # sorry, I was too lazy

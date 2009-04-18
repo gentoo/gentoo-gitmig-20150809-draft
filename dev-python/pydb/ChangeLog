@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pydb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/ChangeLog,v 1.2 2009/04/13 17:51:36 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/ChangeLog,v 1.3 2009/04/18 21:27:42 patrick Exp $
+
+  18 Apr 2009; Patrick Lauer <patrick@gentoo.org> pydb-1.26:
+  Adding ~amd64 keyword
 
 *pydb-1.26 (14 Apr 2009)
 
