@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.31 2009/04/15 20:03:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.32 2009/04/18 17:47:06 klausman Exp $
+
+  18 Apr 2009; Tobias Klausmann <klausman@gentoo.org> rdtool-0.6.20.ebuild:
+  Stable on alpha, bug #266138
 
   15 Apr 2009; Brent Baude <ranger@gentoo.org> rdtool-0.6.20.ebuild:
   Marking rdtool-0.6.20 ppc64 for bug 266138
