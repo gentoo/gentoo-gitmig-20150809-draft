@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r6.ebuild,v 1.1 2009/03/12 03:15:34 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r6.ebuild,v 1.2 2009/04/18 22:45:16 zzam Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ DESCRIPTION="VDR: DVD Burn Plugin"
 HOMEPAGE="http://www.xeatre.de/community/burn"
 SRC_URI="http://www.magoa.net/linux/contrib/${MY_P}.tgz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="projectx"

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.38 2009/03/12 03:15:34 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.39 2009/04/18 22:45:16 zzam Exp $
+
+  18 Apr 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-burn-0.1.0_pre21-r6.ebuild:
+  Marked stable on x86.
 
 *vdr-burn-0.1.0_pre21-r6 (12 Mar 2009)
 
