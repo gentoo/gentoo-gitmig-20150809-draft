@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3.1_pre20080417.ebuild,v 1.1 2009/04/17 19:29:42 mescalinum Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-3.3.1_pre20090417.ebuild,v 1.1 2009/04/18 09:02:24 mescalinum Exp $
 
 MY_PN="incrTcl"
 MY_P="${MY_PN}-${PV}"
@@ -15,7 +13,8 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
-DEPEND="dev-lang/tcl"
+DEPEND="dev-lang/tk
+	~dev-tcltk/itcl-${PV}"
 
 S="${WORKDIR}/${MY_PN}/${PN}"
 

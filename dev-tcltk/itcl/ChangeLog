@@ -1,11 +1,11 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.36 2009/04/17 19:29:42 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.37 2009/04/18 08:59:59 mescalinum Exp $
 
-*itcl-3.3.1_pre20080417 (17 Apr 2009)
+*itcl-3.3.1_pre20090417 (17 Apr 2009)
 
   17 Apr 2009; Federico Ferri <mescalinum@gentoo.org>
-  +itcl-3.3.1_pre20080417.ebuild:
+  +itcl-3.3.1_pre20090417.ebuild:
   adding prerelease of incrTcl-3.3.1 suite. fixes bug #210765
 
   22 Sep 2006; MATSUU Takuto <matsuu@gentoo.org>
