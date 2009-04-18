@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.5.ebuild,v 1.1 2009/04/17 21:44:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.5.ebuild,v 1.2 2009/04/18 06:22:22 mr_bones_ Exp $
 
 EAPI="2"
 GCONF_DEBUG=no
@@ -43,4 +43,3 @@ src_install() {
 	rm -rf "${D}"/usr/$(get_libdir)/nspr
 	rm -rf "${D}"/var
 }
-
