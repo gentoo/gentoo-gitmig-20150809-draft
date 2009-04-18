@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0.ebuild,v 1.3 2009/04/13 15:34:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0.ebuild,v 1.4 2009/04/18 22:08:37 fauli Exp $
 
 inherit eutils multilib rpm
 
@@ -122,4 +122,7 @@ src_install() {
 	make_wrapper wfcmgr /opt/ICAClient/wfcmgr . /opt/ICAClient
 	sed -e  's:^\# Configuration items.*:. /opt/ICAClient/nls/en/wfcmgr.msg:g' -i "${D}"/opt/ICAClient/wfcmgr
 	make_desktop_entry wfcmgr 'Citrix ICA Client' manager
+
+	dodir /etc/revdep-rebuild/
+	echo "SEARCH_DIRS_MASK=/opt/ICAClient" > "${D}"/etc/revdep-rebuild/70icaclient
 }
