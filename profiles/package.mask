@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9687 2009/04/17 21:19:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9688 2009/04/18 08:26:33 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (18 Apr 2009)
+# Live ebuild for testing and debugging.
+~app-admin/eselect-9999
 
 # Torsten Veller <tove@gentoo.org> (17 Apr 2009)
 # Masks for new IO-Compress which includes
