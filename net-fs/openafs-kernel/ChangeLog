@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.117 2009/04/15 06:38:13 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.118 2009/04/18 12:00:23 maekke Exp $
+
+  18 Apr 2009; Markus Meier <maekke@gentoo.org> openafs-kernel-1.4.9.ebuild:
+  amd64/x86 stable, bug #265538
 
 *openafs-kernel-1.4.9 (15 Apr 2009)
 
