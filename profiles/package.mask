@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9691 2009/04/18 11:30:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9692 2009/04/18 14:43:10 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1428,10 +1428,6 @@ dev-lang/ghc-bin
 # the Asterisk is coming! the Asterisk is coming!
 >=net-misc/zaptel-1.4.0
 >=net-misc/asterisk-1.4.0
-
-# Markus Ullmann <jokey@gentoo.org> (05 Sept 2007)
-# masked for testing
->=net-analyzer/snort-2.7
 
 # Doug Goldstein <cardoe@gentoo.org> (30 Aug 2007)
 # upstream has declared this module dead and broken
