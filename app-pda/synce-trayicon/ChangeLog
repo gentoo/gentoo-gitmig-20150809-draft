@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-trayicon
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/ChangeLog,v 1.21 2009/01/21 11:48:09 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/ChangeLog,v 1.22 2009/04/18 19:29:27 mescalinum Exp $
+
+  18 Apr 2009; Federico Ferri <mescalinum@gentoo.org>
+  synce-trayicon-0.13.ebuild:
+  add gnome-keyring dependency version. fixes bug #258948
 
   21 Jan 2009; Federico Ferri <mescalinum@gentoo.org>
   synce-trayicon-0.13.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.13.ebuild,v 1.3 2009/01/21 11:48:09 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.13.ebuild,v 1.4 2009/04/18 19:29:27 mescalinum Exp $
 
 inherit eutils gnome2 versionator
 
@@ -21,7 +21,7 @@ DEPEND="sys-apps/dbus
 		gnome-base/libgnomeui
 		gnome-base/libgtop
 		gnome-base/libglade
-		gnome-base/gnome-keyring
+		>=gnome-base/gnome-keyring-2.20.3
 		gnome-base/gnome-common
 		=app-pda/synce-libsynce-${synce_PV}*
 		=app-pda/synce-librra-${synce_PV}*
