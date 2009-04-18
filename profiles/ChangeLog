@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2549 2009/04/18 08:26:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2550 2009/04/18 20:33:11 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> base/package.use.mask,
+  package.mask:
+  Unmask NetworkManager (and its kde parts). Since pkit is unmasked :]
 
   18 Apr 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Mask live ebuild for app-admin/eselect.

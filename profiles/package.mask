@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9693 2009/04/18 16:08:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9694 2009/04/18 20:33:11 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -933,14 +933,6 @@ net-proxy/squirm
 # Jeroen Roovers <jer@gentoo.org> (5 Dec 2008)
 # Snapshots, alphas and betas of Opera may delete kittens
 =www-client/opera-10*
-
-# Tomas Chvatal <scarabeus@gentoo.org> (04 Dec 2008)
-# new version, needs policykit which is masked
->=gnome-extra/nm-applet-0.7.0
->=net-misc/networkmanager-0.7.0
->=net-misc/networkmanager-vpnc-0.7.0
->=net-misc/networkmanager-pptp-0.7.0
->=net-misc/networkmanager-openvpn-0.7.0
 
 # Tiziano Müller <dev-zero@gentoo.org> (28 Nov 2008)
 # mask for testing/transition
